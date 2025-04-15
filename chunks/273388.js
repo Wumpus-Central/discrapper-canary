@@ -1,15 +1,15 @@
 n.d(t, {
-    C: () => i,
-    L: () => o
+    C: () => s,
+    L: () => a
 });
-var l = n(818083),
-    r = n(987338);
-let i = (0, l.B)({
+var r = n(818083),
+    i = n(987338);
+let s = (0, r.B)({
         kind: 'user',
         id: '2025-04_unread_dm_dots_desktop',
         label: 'Unread DM Dots (Desktop)',
         defaultConfig: { showUnreadDots: !1 },
-        commonTriggerPoint: r.$P.CONNECTION_OPEN,
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -18,4 +18,4 @@ let i = (0, l.B)({
             }
         ]
     }),
-    o = (e) => i.useExperiment({ location: e }, { autoTrackExposure: !1 }).showUnreadDots;
+    a = (e) => s.useExperiment({ location: e }, { autoTrackExposure: !1 }).showUnreadDots;

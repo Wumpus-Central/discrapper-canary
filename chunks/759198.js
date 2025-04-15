@@ -1,11 +1,11 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(200651);
 n(192379);
 var i = n(120356),
     l = n.n(i),
     o = n(481060),
-    a = n(482107);
-function s(e) {
+    s = n(482107);
+function a(e) {
     var { className: t, color: n } = e,
         i = (function (e, t) {
             if (null == e) return {};
@@ -54,7 +54,7 @@ function s(e) {
             return e;
         })(
             {
-                className: l()({ [a.text]: null == n }, t),
+                className: l()({ [s.text]: null == n }, t),
                 color: n
             },
             i

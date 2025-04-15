@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -14,9 +14,9 @@ var r = n(200651),
     h = n(498646),
     f = n(981631),
     b = n(921944),
-    N = n(622802),
-    x = n(388032),
-    _ = n(631587),
+    _ = n(622802),
+    N = n(388032),
+    x = n(631587),
     E = n(394637);
 function j() {
     let e = (0, i.useRef)(null),
@@ -35,7 +35,7 @@ function j() {
         }, [t]),
         (0, r.jsx)(p.ZP, {
             children: (0, r.jsxs)(c.P3F, {
-                className: a()(_.wrapper, { [_.wrapperHovered]: t }),
+                className: a()(x.wrapper, { [x.wrapperHovered]: t }),
                 onMouseEnter: () => n(!0),
                 onMouseLeave: () => n(!1),
                 onClick: () => {
@@ -43,27 +43,27 @@ function j() {
                 },
                 children: [
                     (0, r.jsxs)('div', {
-                        className: _.hiddenWhileNotHovered,
+                        className: x.hiddenWhileNotHovered,
                         children: [
                             (0, r.jsxs)(c.P3F, {
-                                className: _.dismiss,
+                                className: x.dismiss,
                                 onClick: (e) => {
                                     e.stopPropagation(), h(b.L.USER_DISMISS);
                                 },
                                 children: [
                                     (0, r.jsx)(c.P$X, {
-                                        className: _.dismissIcon,
+                                        className: x.dismissIcon,
                                         color: 'currentColor'
                                     }),
                                     (0, r.jsx)(l.xv, {
                                         color: 'currentColor',
                                         variant: 'text-xs/bold',
-                                        children: x.NW.string(N.Z.AsH93d)
+                                        children: N.NW.string(_.Z.AsH93d)
                                     })
                                 ]
                             }),
                             (0, r.jsx)('iframe', {
-                                className: _.video,
+                                className: x.video,
                                 src: 'https://www.youtube.com/embed/'.concat('h-9SUgIeJnY', '?rel=0&showinfo=0&controls=1&origin=https://').concat(f.$R1),
                                 allowFullScreen: !0,
                                 sandbox: 'allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'
@@ -71,34 +71,34 @@ function j() {
                         ]
                     }),
                     (0, r.jsx)('div', {
-                        className: _.background,
-                        children: (0, r.jsx)('div', { className: _.backgroundGradient })
+                        className: x.background,
+                        children: (0, r.jsx)('div', { className: x.backgroundGradient })
                     }),
                     (0, r.jsxs)('div', {
-                        className: _.foreground,
+                        className: x.foreground,
                         children: [
                             (0, r.jsx)('img', {
-                                className: _.icon,
+                                className: x.icon,
                                 src: E,
                                 alt: ''
                             }),
                             (0, r.jsxs)('div', {
-                                className: _.text,
+                                className: x.text,
                                 children: [
                                     (0, r.jsx)(l.xv, {
                                         variant: 'text-md/bold',
                                         color: 'always-white',
-                                        children: x.NW.string(N.Z['7qZdOz'])
+                                        children: N.NW.string(_.Z['7qZdOz'])
                                     }),
                                     (0, r.jsx)(l.xv, {
                                         variant: 'text-sm/medium',
                                         color: 'always-white',
-                                        children: x.NW.string(N.Z.orfMLS)
+                                        children: N.NW.string(_.Z.orfMLS)
                                     })
                                 ]
                             }),
                             (0, r.jsx)(c.d4D, {
-                                className: _.arrow,
+                                className: x.arrow,
                                 color: 'black'
                             })
                         ]
@@ -108,7 +108,7 @@ function j() {
         })
     );
 }
-function O() {
+function C() {
     let e = (0, g.wE)(o.z.CLICKER_COACHMARK),
         { enableGame: t } = h.C.getCurrentConfig({ location: 'Coachmark' });
     return e || !t ? null : (0, r.jsx)(j, {});

@@ -1,7 +1,7 @@
 n.d(t, {
     Es: () => O,
-    Eu: () => h,
-    bt: () => y
+    Eu: () => y,
+    bt: () => h
 }),
     n(388685),
     n(539854);
@@ -61,7 +61,7 @@ function O(e, t) {
         [n, t, O]
     );
 }
-function y(e, t) {
+function h(e, t) {
     let n = (0, i.e7)([p.Z, f.Z], () => (e === f.Z.getChannelId() ? p.Z.getDesyncedParticipants() : null));
     return r.useMemo(
         () =>
@@ -82,7 +82,7 @@ function y(e, t) {
         [n, t]
     );
 }
-function h(e, t) {
+function y(e, t) {
     let n = (0, i.e7)([c.default], () => c.default.getId() === t),
         l = (0, i.e7)([f.Z], () => f.Z.getChannelId()),
         o = r.useRef(null),

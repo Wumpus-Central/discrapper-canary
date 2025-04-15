@@ -1,4 +1,4 @@
-n.d(t, { P: () => N }), n(290780);
+n.d(t, { P: () => _ }), n(290780);
 var r = n(200651);
 n(192379);
 var i = n(524437),
@@ -15,11 +15,11 @@ var i = n(524437),
     h = n(981631),
     f = n(388032),
     b = n(298136);
-function N() {
+function _() {
     var e;
     let t = null == (e = (0, d.Z)()) || e,
-        { explicitContentGuilds: n, explicitContentFriendDm: N, explicitContentNonFriendDm: x } = (0, c.B)(),
-        _ = (e) => {
+        { explicitContentGuilds: n, explicitContentFriendDm: _, explicitContentNonFriendDm: N } = (0, c.B)(),
+        x = (e) => {
             let t = Object.values(e);
             if ((0, o.Ks)() && t.includes(i.Q4.SHOW)) return void a.Z.showAgeVerificationGetStartedModal(l.cU.SENSITIVE_MEDIA_FILTER_SETTINGS);
             (0, o.zj)(e);
@@ -40,12 +40,12 @@ function N() {
                 label: f.NW.string(f.t.S49UaW)
             }
         ],
-        O = {
+        C = {
             value: i.Q4.SHOW,
             label: f.NW.string(f.t['5k5OFh'])
         };
     return (
-        t && (E.unshift(O), j.unshift(O)),
+        t && (E.unshift(C), j.unshift(C)),
         (0, r.jsxs)(m.U, {
             setting: p.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: g.FY.EXPLICIT_MEDIA_REDACTION_V2,
@@ -60,8 +60,8 @@ function N() {
                     titleClassName: b.selectItemTitle,
                     children: (0, r.jsx)(s.q4e, {
                         options: E,
-                        value: N,
-                        onChange: (e) => _({ explicitContentFriendDm: e })
+                        value: _,
+                        onChange: (e) => x({ explicitContentFriendDm: e })
                     })
                 }),
                 (0, r.jsx)(s.xJW, {
@@ -70,8 +70,8 @@ function N() {
                     titleClassName: b.selectItemTitle,
                     children: (0, r.jsx)(s.q4e, {
                         options: E,
-                        value: x,
-                        onChange: (e) => _({ explicitContentNonFriendDm: e })
+                        value: N,
+                        onChange: (e) => x({ explicitContentNonFriendDm: e })
                     })
                 }),
                 t &&
@@ -82,7 +82,7 @@ function N() {
                         children: (0, r.jsx)(s.q4e, {
                             options: j,
                             value: n,
-                            onChange: (e) => _({ explicitContentGuilds: e })
+                            onChange: (e) => x({ explicitContentGuilds: e })
                         })
                     })
             ]

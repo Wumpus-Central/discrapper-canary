@@ -127,7 +127,7 @@ let F = function () {
                                   (0, v.Y)({
                                       pageType: k.ZY5.GLOBAL_DISCOVERY_QUESTS,
                                       sectionType: k.jXE.ORBS_BALANCE_MENU,
-                                      ctaObject: k.qAy.ORBS_QUESTS_BALANCE_MENU_CTA
+                                      ctaObject: k.qAy.CTA_TO_ORBS_SHOP
                                   }),
                                       (0, h.mK)({
                                           openInLayer: !1,

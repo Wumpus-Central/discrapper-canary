@@ -17,11 +17,11 @@ function f() {
         t = i.useRef(!1),
         n = (0, s.e7)([m.Z], () => m.Z.getVideoDeviceId()),
         [f, b] = i.useState((0, o.P)(g.default.getCurrentUser())),
-        N = i.useRef(f);
+        _ = i.useRef(f);
     return (
         i.useEffect(
             () => () => {
-                t.current && (0, c.Up)(N.current);
+                t.current && (0, c.Up)(_.current);
             },
             []
         ),
@@ -30,7 +30,7 @@ function f() {
             children: (0, r.jsx)(u.Z, {
                 selectedBackgroundOption: f,
                 onSelectBackgroundOption: (n) => {
-                    (t.current = !0), (N.current = n), b(n), (0, d.wG)(n, { location: e.location }).catch(h.dG4);
+                    (t.current = !0), (_.current = n), b(n), (0, d.wG)(n, { location: e.location }).catch(h.dG4);
                 },
                 currentDeviceId: n,
                 smallerBackgroundOptions: !1

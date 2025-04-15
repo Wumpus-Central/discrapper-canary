@@ -33,7 +33,7 @@ function m(e) {
     let { children: n } = e,
         { springConfig: p, isExpanded: m } = o.useContext(u),
         f = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        { ref: g, height: x = null } = (0, l.Z)(),
+        { ref: g, height: x = null } = (0, l.ZP)(),
         h = null != (t = (0, c.Z)(x)) ? t : null,
         [{ height: b }, j] = (0, i.q_F)(() => ({
             from: { height: 0 },

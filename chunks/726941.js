@@ -3,8 +3,8 @@ var r = n(200651),
     a = n(192379),
     i = n(442837),
     l = n(322665),
-    o = n(17845),
-    s = n(374939),
+    s = n(17845),
+    o = n(374939),
     c = n(283293),
     d = n(493646),
     u = n(678694),
@@ -26,12 +26,12 @@ let g = function (e) {
         onScroll: _,
         ref: f,
         children: [
-            (0, r.jsx)(o.Z, {
+            (0, r.jsx)(s.Z, {
                 title: null != (t = null == v ? void 0 : v.name) ? t : '',
                 description: C,
                 children: (0, r.jsx)(l.Z, {})
             }),
-            (0, r.jsx)(s.Z, {
+            (0, r.jsx)(o.Z, {
                 children:
                     null == v
                         ? (0, r.jsx)('div', {

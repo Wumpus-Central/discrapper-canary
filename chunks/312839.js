@@ -1,5 +1,5 @@
 n.d(t, {
-    P: () => u,
+    P: () => d,
     R: () => c
 }),
     n(35282);
@@ -7,18 +7,18 @@ var i = n(13245),
     r = n(556296),
     s = n(237997),
     o = n(13140),
-    l = n(981631),
-    a = n(987650);
+    a = n(981631),
+    l = n(987650);
 function c(e, t) {
     return {
         trackView() {
-            i.Z.track(l.rMx.NOTIFICATION_VIEWED, t), i.Z.notificationEvent(e, a.bv.Viewed);
+            i.Z.track(a.rMx.NOTIFICATION_VIEWED, t), i.Z.notificationEvent(e, l.bv.Viewed);
         },
         trackClick(n) {
             var r, o;
-            let c = s.default.isInstanceLocked() ? l.Sbl.LOCKED_OVERLAY : l.Sbl.UNLOCKED_OVERLAY;
+            let c = s.default.isInstanceLocked() ? a.Sbl.LOCKED_OVERLAY : a.Sbl.UNLOCKED_OVERLAY;
             i.Z.track(
-                l.rMx.NOTIFICATION_CLICKED,
+                a.rMx.NOTIFICATION_CLICKED,
                 ((r = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,11 +63,11 @@ function c(e, t) {
                       }),
                 r)
             ),
-                i.Z.notificationEvent(e, a.bv.Clicked);
+                i.Z.notificationEvent(e, l.bv.Clicked);
         }
     };
 }
-function u() {
+function d() {
     let e = r.ZP.getOverlayKeybind();
     return null != e ? (0, o.BB)(e.shortcut, !0).split(' + ') : ['???'];
 }

@@ -1,25 +1,25 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => o });
 var r = n(200651),
     l = n(192379),
     s = n(481060),
     a = n(412899),
-    o = n(231338);
-function i(e) {
+    i = n(231338);
+function o(e) {
     var t;
-    let { guildId: n, role: i, className: E, canRemove: c = !1, onRemove: u = o.dG } = e,
+    let { guildId: n, role: o, className: E, canRemove: u = !1, onRemove: c = i.dG } = e,
         _ = (0, s.dQu)(s.TVs.unsafe_rawColors.PRIMARY_300).hex(),
-        d = null != (t = null == i ? void 0 : i.colorString) ? t : _,
+        d = null != (t = null == o ? void 0 : o.colorString) ? t : _,
         A = l.useMemo(() => ({ backgroundColor: ''.concat(d, '27') }), [d]);
-    return null == i
+    return null == o
         ? null
         : (0, r.jsx)(s.P3F, {
               children: (0, r.jsx)(a.UB, {
                   className: E,
                   style: A,
-                  role: i,
+                  role: o,
                   guildId: n,
-                  canRemove: c,
-                  onRemove: u
+                  canRemove: u,
+                  onRemove: c
               })
           });
 }

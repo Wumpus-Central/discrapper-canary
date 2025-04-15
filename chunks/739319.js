@@ -45,7 +45,7 @@ function m(e) {
                                   size: o.zxk.Sizes.SMALL,
                                   className: u.__invalid_trailingButton,
                                   onClick: () => {
-                                      (0, c.JG)(i) && p(!0);
+                                      (0, c.JG)(i, () => p(!0));
                                   },
                                   color: o.zxk.Colors.PRIMARY,
                                   children: x ? d.NW.string(d.t['t5VZ8/']) : d.NW.string(d.t.OpuAlJ)

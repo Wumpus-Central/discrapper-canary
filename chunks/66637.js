@@ -3,16 +3,16 @@ var r = n(200651),
     a = n(192379),
     i = n(120356),
     l = n.n(i),
-    o = n(481060),
-    s = n(66418);
+    s = n(481060),
+    o = n(66418);
 let c = a.memo(
     a.forwardRef(function (e, t) {
         let { onClick: n, onContextMenu: a, className: i, disabled: c, children: d, 'aria-label': u } = e;
-        return (0, r.jsx)(o.kL8, {
+        return (0, r.jsx)(s.kL8, {
             ref: t,
-            className: l()(s.card, i, {
-                [s.clickable]: null != n,
-                [s.disabled]: c
+            className: l()(o.card, i, {
+                [o.clickable]: null != n,
+                [o.disabled]: c
             }),
             onContextMenu: a,
             onClick: c ? void 0 : n,

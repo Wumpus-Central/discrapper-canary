@@ -3,8 +3,8 @@ var r = n(200651),
     a = n(192379),
     i = n(120356),
     l = n.n(i),
-    o = n(392711),
-    s = n(442837),
+    s = n(392711),
+    o = n(442837),
     c = n(481060),
     d = n(456100),
     u = n(114851),
@@ -40,7 +40,7 @@ var r = n(200651),
     B = n(691133);
 function W(e) {
     let { applicationId: t, hideDetailHeaderButtons: n, onClickBack: i } = e,
-        o = (0, s.e7)([N.Z], () => N.Z.getApplication(t)),
+        s = (0, o.e7)([N.Z], () => N.Z.getApplication(t)),
         [d, u] = a.useState(n),
         p = a.useCallback(() => {
             u(n);
@@ -60,7 +60,7 @@ function W(e) {
                 color: 'header-primary',
                 className: B.detailHeader,
                 lineClamp: 1,
-                children: null == o ? void 0 : o.name
+                children: null == s ? void 0 : s.name
             }),
             (0, r.jsx)('div', {
                 className: l()(B.detailHeaderSection, B.detailHeaderButtonsContainer, {
@@ -70,9 +70,9 @@ function W(e) {
                 }),
                 onTransitionEnd: p,
                 children:
-                    null != o
+                    null != s
                         ? (0, r.jsx)(k.Z, {
-                              application: o,
+                              application: s,
                               size: 'sm'
                           })
                         : null
@@ -123,29 +123,29 @@ function U() {
 }
 let F = function () {
     var e, t;
-    let n = (0, s.e7)([v.default], () => !v.default.isAuthenticated()),
+    let n = (0, o.e7)([v.default], () => !v.default.isAuthenticated()),
         { onScroll: i, scrollPosition: N, resetScrollPosition: k } = (0, u.M)(),
         F = (0, A.Xh)(),
         V = (0, S.nu)(),
         H = (null == F ? void 0 : F.type) === A.m_.CATEGORY ? F.categoryId : void 0,
         { applicationId: Y, section: X } = (null == F ? void 0 : F.type) === A.m_.APPLICATION ? F : {},
         { query: q, categoryId: K } = (null == F ? void 0 : F.type) === A.m_.SEARCH ? F : {},
-        Q = (0, s.e7)([O.Z], () => O.Z.getCategories()),
+        Q = (0, o.e7)([O.Z], () => O.Z.getCategories()),
         J = a.useMemo(() => [(0, P.KQ)(), ...Q], [Q]),
         $ = a.useMemo(() => J.find((e) => e.id === Number(K)), [J, K]),
         { tabs: ee, selectedTab: et, onSelectTab: en } = (0, T.i)(null == H ? void 0 : H.toString()),
         [er, ea] = a.useState(!0),
         ei = A.z8.useField('trackedOpenedFromExternalEntrypoint'),
         el = A.z8.useField('sessionId'),
-        eo = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
-        { enabled: es } = (0, x.W)({ location: 'global_discovery_apps' });
+        es = (0, o.e7)([C.default], () => C.default.getCurrentUser()),
+        { enabled: eo } = (0, x.W)({ location: 'global_discovery_apps' });
     a.useEffect(() => {
         if (!ei && null == el) {
             let e = (0, f.PM)();
             j.default.track(G.rMx.APP_DIRECTORY_OPENED, {
                 source: A.xF.EXTERNAL,
                 session_id: e,
-                user_id: null == eo ? void 0 : eo.id
+                user_id: null == es ? void 0 : es.id
             }),
                 A.z8.setState({
                     trackedOpenedFromExternalEntrypoint: !0,
@@ -154,7 +154,7 @@ let F = function () {
                     guildId: null
                 });
         }
-    }, [el, ei, null == eo ? void 0 : eo.id]),
+    }, [el, ei, null == es ? void 0 : es.id]),
         a.useEffect(() => {
             y.CP();
         }, []),
@@ -188,7 +188,7 @@ let F = function () {
         ey = a.useCallback(() => {
             null != (0, A.Uc)() ? (0, b.op)() : (0, L.Yp)();
         }, []),
-        eI = (0, o.debounce)((e) => {
+        eI = (0, s.debounce)((e) => {
             let { scrollTop: t, offsetHeight: n, scrollHeight: r, location: a } = e;
             t > 0 &&
                 (0, S.zZ)(G.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
@@ -216,7 +216,7 @@ let F = function () {
             (0, r.jsxs)('div', {
                 className: B.innerContainer,
                 children: [
-                    es
+                    eo
                         ? (0, r.jsxs)(h.a, {
                               selectedTabId: et,
                               handleTransition: ev,

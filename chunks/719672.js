@@ -1,11 +1,11 @@
-n.d(t, { Z: () => _ }), n(388685);
-var r = n(200651);
+n.d(t, { Z: () => v }), n(388685);
+var a = n(200651);
 n(192379);
-var a = n(913527),
-    l = n.n(a),
+var r = n(913527),
+    l = n.n(r),
     i = n(442837),
-    o = n(704215),
-    s = n(481060),
+    s = n(704215),
+    o = n(481060),
     c = n(713284),
     d = n(883904),
     u = n(211644),
@@ -29,7 +29,7 @@ let p = (e) => {
             key: 'events',
             render(e) {
                 let { event: t, dismissibleContent: n } = e;
-                return ''.concat(t, ' ').concat(o.z[n]);
+                return ''.concat(t, ' ').concat(s.z[n]);
             }
         }
     ],
@@ -38,17 +38,17 @@ let p = (e) => {
             key: 'candidates',
             render(e) {
                 let { dismissibleContent: t } = e;
-                return ''.concat(o.z[t]);
+                return ''.concat(s.z[t]);
             }
         }
     ];
-function _() {
+function v() {
     let e = (0, i.e7)([c.Z], () => c.Z.getDCFEvents()),
         t = (0, u.ZP)((e) => e.candidates),
         n = (0, u.ZP)((e) => e.lastWinnerTime),
-        a = 0 !== n ? l()(n).fromNow() : 'n/a',
-        _ = (0, u.ZP)((e) => e.recentlyShown[0]),
-        g = e.map((e) => {
+        r = 0 !== n ? l()(n).fromNow() : 'n/a',
+        v = (0, u.ZP)((e) => e.recentlyShown[0]),
+        j = e.map((e) => {
             let { eventType: t, dismissibleContent: n } = e;
             return {
                 key: p(t) + n.toString(),
@@ -56,56 +56,56 @@ function _() {
                 dismissibleContent: n
             };
         }),
-        v = Array.from(t.keys()).map((e) => ({
+        g = Array.from(t.keys()).map((e) => ({
             key: e.toString(),
             dismissibleContent: e
         }));
-    return (0, r.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: h.panelContainer,
         children: [
-            (0, r.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: h.buttonContainer,
                 children: [
-                    (0, r.jsx)(s.zxk, {
+                    (0, a.jsx)(o.zxk, {
                         className: h.button,
                         onClick: () => (0, d.EG)(),
                         children: 'Reset Daily Cap'
                     }),
-                    (0, r.jsx)(s.zxk, {
+                    (0, a.jsx)(o.zxk, {
                         className: h.button,
                         onClick: m.sr,
                         children: 'Clear All Dismissed Contents'
                     }),
-                    (0, r.jsx)(s.zxk, {
+                    (0, a.jsx)(o.zxk, {
                         className: h.button,
                         onClick: m.bE,
                         children: 'Check All Dismissed Contents'
                     })
                 ]
             }),
-            (0, r.jsx)('br', {}),
-            (0, r.jsxs)('div', {
+            (0, a.jsx)('br', {}),
+            (0, a.jsxs)('div', {
                 className: h.info,
-                children: ['Last winner time: ', a]
+                children: ['Last winner time: ', r]
             }),
-            (0, r.jsx)('br', {}),
-            (0, r.jsxs)('div', {
+            (0, a.jsx)('br', {}),
+            (0, a.jsxs)('div', {
                 className: h.info,
-                children: ['Last winner: ', null != _ ? o.z[_] : 'None']
+                children: ['Last winner: ', null != v ? s.z[v] : 'None']
             }),
-            (0, r.jsx)('br', {}),
-            (0, r.jsx)('div', {
+            (0, a.jsx)('br', {}),
+            (0, a.jsx)('div', {
                 className: h.candidatesTableContainer,
-                children: (0, r.jsx)(x.Z, {
+                children: (0, a.jsx)(x.Z, {
                     className: h.candidatesTable,
                     columns: f,
-                    data: v
+                    data: g
                 })
             }),
-            (0, r.jsx)('br', {}),
-            (0, r.jsx)(x.Z, {
+            (0, a.jsx)('br', {}),
+            (0, a.jsx)(x.Z, {
                 columns: b,
-                data: g
+                data: j
             })
         ]
     });

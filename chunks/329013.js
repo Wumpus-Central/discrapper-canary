@@ -17,13 +17,13 @@ var r = n(200651),
     h = n(514361),
     f = n(705262),
     b = n(540059),
-    N = n(605236),
-    x = n(104494),
-    _ = n(639119),
+    _ = n(605236),
+    N = n(104494),
+    x = n(639119),
     E = n(311476),
     j = n(165583),
-    O = n(197115),
-    C = n(504983),
+    C = n(197115),
+    O = n(504983),
     S = n(626135),
     v = n(210887),
     T = n(981631),
@@ -32,7 +32,7 @@ var r = n(200651),
     A = n(388032),
     P = n(967655);
 let R = () => {
-        (0, N.EW)(a.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
+        (0, _.EW)(a.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
             dismissAction: I.L.PRIMARY,
             forceTrack: !0
         }),
@@ -43,9 +43,9 @@ let R = () => {
         var e, t;
         let { analyticsLocations: n } = (0, g.ZP)(m.Z.USER_SETTINGS),
             a = (0, s.e7)([h.Z], () => h.Z.isPreview),
-            l = (null == (t = (0, _.N)()) || null == (e = t.subscription_trial) ? void 0 : e.sku_id) === y.Si.TIER_2,
-            c = (0, x.Ng)(),
-            d = (0, x.Wp)(c, y.Si.TIER_2),
+            l = (null == (t = (0, x.N)()) || null == (e = t.subscription_trial) ? void 0 : e.sku_id) === y.Si.TIER_2,
+            c = (0, N.Ng)(),
+            d = (0, N.Wp)(c, y.Si.TIER_2),
             u = !a || l,
             { enabled: p } = E.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceClientThemes' },
@@ -54,7 +54,7 @@ let R = () => {
                     disable: u
                 }
             ),
-            N = (0, b.Q3)('UserSettingsAppearanceClientThemes'),
+            _ = (0, b.Q3)('UserSettingsAppearanceClientThemes'),
             v = () =>
                 !a || l
                     ? null
@@ -67,7 +67,7 @@ let R = () => {
                                   onClick: () => R(),
                                   children: p ? A.NW.string(A.t.SKNnqq) : A.NW.string(A.t['E+COuL'])
                               }),
-                              (0, r.jsx)(O.Z, {
+                              (0, r.jsx)(C.Z, {
                                   showGradient: p,
                                   subscriptionTier: y.Si.TIER_2,
                                   buttonText: p ? A.NW.string(A.t.pj0XBA) : d ? A.NW.formatToPlainString(A.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount }) : A.NW.string(A.t.mr4K7O),
@@ -94,17 +94,17 @@ let R = () => {
                                           className: P.basicThemeSelectors,
                                           renderCTAButtons: v
                                       }),
-                                      N && (0, r.jsx)(Z, {})
+                                      _ && (0, r.jsx)(Z, {})
                                   ]
                               })
                             : (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)(f.ZP.Basic, { className: P.basicThemeSelectors }),
-                                      N && (0, r.jsx)(Z, {}),
-                                      (0, r.jsxs)(C.Z, {
+                                      _ && (0, r.jsx)(Z, {}),
+                                      (0, r.jsxs)(O.Z, {
                                           className: P.featureBorder,
                                           isShown: a,
-                                          type: C.Y.PREMIUM,
+                                          type: O.Y.PREMIUM,
                                           children: [
                                               (0, r.jsx)(f.ZP.Gradient, {
                                                   disabled: a,

@@ -6,8 +6,8 @@ var i = n(377171),
 function o(e) {
     var t,
         n,
-        { width: o = 24, height: a = 24 } = e,
-        s = (function (e, t) {
+        { width: o = 24, height: s = 24 } = e,
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -52,11 +52,11 @@ function o(e) {
                     });
             }
             return e;
-        })({}, (0, l.Z)(s))),
+        })({}, (0, l.Z)(a))),
         (n = n =
             {
                 width: o,
-                height: a,
+                height: s,
                 viewBox: '0 0 24 24',
                 children: [
                     (0, r.jsx)('path', {

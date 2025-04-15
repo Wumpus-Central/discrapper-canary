@@ -1,28 +1,28 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => I });
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    l = n(442837),
-    s = n(481060),
+    s = n(120356),
+    l = n.n(s),
+    o = n(442837),
+    a = n(481060),
     c = n(812206),
     u = n(388905),
     d = n(925329),
-    p = n(479446),
-    h = n(981632),
+    h = n(479446),
+    p = n(981632),
     g = n(594174),
-    m = n(509545),
-    f = n(55563),
+    f = n(509545),
+    m = n(55563),
     _ = n(296848),
-    b = n(981631),
+    N = n(981631),
     x = n(474936),
-    N = n(388032),
-    v = n(378027),
-    E = n(893354),
-    I = n(20493);
-let j = l.ZP.connectStores([f.Z, c.Z, m.Z, g.default], (e) => {
+    b = n(388032),
+    E = n(378027),
+    v = n(893354),
+    j = n(20493);
+let I = o.ZP.connectStores([m.Z, c.Z, f.Z, g.default], (e) => {
     let { giftCode: t } = e,
-        n = f.Z.get(t.skuId),
+        n = m.Z.get(t.skuId),
         { subscriptionPlanId: r } = t;
     return {
         sku: n,
@@ -31,46 +31,46 @@ let j = l.ZP.connectStores([f.Z, c.Z, m.Z, g.default], (e) => {
         gifter: g.default.getUser(t.userId)
     };
 })((e) => {
-    let { error: t, giftCode: n, gifter: o, sku: l, application: c, subscriptionPlan: g } = e,
-        m = null == o ? N.NW.string(N.t.lTGZAg) : N.NW.formatToPlainString(N.t.TjWdPT, { username: o.username }),
-        f = l.name;
+    let { error: t, giftCode: n, gifter: s, sku: o, application: c, subscriptionPlan: g } = e,
+        f = null == s ? b.NW.string(b.t.lTGZAg) : b.NW.formatToPlainString(b.t.TjWdPT, { username: s.username }),
+        m = o.name;
     return (
         null != g &&
-            (f = N.NW.formatToPlainString(g.interval === x.rV.MONTH ? N.t.CTpcCQ : N.t.rgPWGx, {
-                skuName: l.name,
+            (m = b.NW.formatToPlainString(g.interval === x.rV.MONTH ? b.t.CTpcCQ : b.t.rgPWGx, {
+                skuName: o.name,
                 intervalCount: g.intervalCount
             })),
         (0, r.jsxs)(i.Fragment, {
             children: [
                 null != n.giftStyle
-                    ? (0, r.jsx)(h.Z, {
-                          defaultAnimationState: p.SR.LOOP,
+                    ? (0, r.jsx)(p.Z, {
+                          defaultAnimationState: h.SR.LOOP,
                           giftStyle: n.giftStyle,
-                          className: v.seasonalIcon
+                          className: E.seasonalIcon
                       })
                     : (0, r.jsx)(u.qE, {
-                          src: null != o ? o.getAvatarURL(void 0, 100) : null,
-                          size: s.EFr.DEPRECATED_SIZE_100,
-                          className: I.marginBottom20
+                          src: null != s ? s.getAvatarURL(void 0, 100) : null,
+                          size: a.EFr.DEPRECATED_SIZE_100,
+                          className: j.marginBottom20
                       }),
                 null != t
                     ? (0, r.jsxs)(i.Fragment, {
-                          children: [(0, r.jsx)(u.DK, { children: N.NW.string(N.t.mDFGFh) }), (0, r.jsx)(u.Dx, { children: t })]
+                          children: [(0, r.jsx)(u.DK, { children: b.NW.string(b.t.mDFGFh) }), (0, r.jsx)(u.Dx, { children: t })]
                       })
                     : (0, r.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)(u.DK, { children: m }),
+                              (0, r.jsx)(u.DK, { children: f }),
                               (0, r.jsxs)(u.Dx, {
-                                  className: a()(I.marginTop8, E.flexCenter),
+                                  className: l()(j.marginTop8, v.flexCenter),
                                   children: [
-                                      l.productLine !== b.POd.COLLECTIBLES &&
+                                      o.productLine !== N.POd.COLLECTIBLES &&
                                           (0, r.jsx)(d.Z, {
                                               size: d.Z.Sizes.MEDIUM,
-                                              className: v.applicationIcon,
+                                              className: E.applicationIcon,
                                               game: c,
-                                              skuId: l.id
+                                              skuId: o.id
                                           }),
-                                      f
+                                      m
                                   ]
                               })
                           ]

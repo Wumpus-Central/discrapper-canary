@@ -3,8 +3,8 @@ var r = n(200651),
     a = n(192379),
     i = n(120356),
     l = n.n(i),
-    o = n(481060),
-    s = n(49898),
+    s = n(481060),
+    o = n(49898),
     c = n(109188);
 function d(e) {
     let { state: t, query: n, placeholder: i, onTextChange: d, onCollapsedClick: u, onClear: p, onBlur: m, onSubmit: h } = e,
@@ -22,19 +22,19 @@ function d(e) {
                     return null == (e = g.current) ? void 0 : e.focus();
                 });
         }, [u]);
-    return t === s.GlobalDiscoverySearchBarState.COLLAPSED
-        ? (0, r.jsx)(o.P3F, {
+    return t === o.GlobalDiscoverySearchBarState.COLLAPSED
+        ? (0, r.jsx)(s.P3F, {
               className: c.searchIcon,
               onClick: f,
-              children: (0, r.jsx)(o._Ve, {
+              children: (0, r.jsx)(s._Ve, {
                   size: 'md',
-                  color: o.TVs.colors.INTERACTIVE_NORMAL
+                  color: s.TVs.colors.INTERACTIVE_NORMAL
               })
           })
-        : (0, r.jsx)(o.E1j, {
+        : (0, r.jsx)(s.E1j, {
               ref: g,
-              className: l()(c.searchBar, { [c.searchFloating]: t === s.GlobalDiscoverySearchBarState.FLOATING }),
-              size: o.E1j.Sizes.MEDIUM,
+              className: l()(c.searchBar, { [c.searchFloating]: t === o.GlobalDiscoverySearchBarState.FLOATING }),
+              size: s.E1j.Sizes.MEDIUM,
               query: n,
               placeholder: i,
               onChange: d,

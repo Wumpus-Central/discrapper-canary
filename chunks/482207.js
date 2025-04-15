@@ -1,8 +1,8 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r,
     i,
-    o,
-    l = n(442837),
+    l,
+    o = n(442837),
     s = n(570140);
 let a = () => ({
         isFetching: !1,
@@ -11,7 +11,7 @@ let a = () => ({
     }),
     c = [],
     u = a();
-class d extends (o = l.ZP.Store) {
+class d extends (l = o.ZP.Store) {
     get isFetching() {
         return u.isFetching;
     }
@@ -35,7 +35,7 @@ class d extends (o = l.ZP.Store) {
               writable: !0
           })
         : (d[r] = i);
-let p = new d(s.Z, {
+let h = new d(s.Z, {
     RECENT_AVATARS_FETCH_START: function () {
         (u.isFetching = !0), (u.error = null);
     },

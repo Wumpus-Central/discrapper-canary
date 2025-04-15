@@ -174,11 +174,11 @@ function H(e) {
     let { text: t } = e,
         [n, o] = i.useState(!1),
         a = () => {
-            try {
-                (0, S.JG)(t), o(!0);
-            } catch (e) {
-                o(!1);
-            }
+            (0, S.JG)(
+                t,
+                () => o(!0),
+                () => o(!1)
+            );
         };
     return (0, r.jsx)(l.P3F, {
         onClick: a,

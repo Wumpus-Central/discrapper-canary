@@ -1,10 +1,10 @@
-s.d(t, { Z: () => o });
-var r = s(200651);
-s(192379);
-var n = s(346497),
-    i = s(227140);
+r.d(t, { Z: () => o });
+var n = r(200651);
+r(192379);
+var i = r(346497),
+    s = r(227140);
 function o() {
-    let e = (0, n.Vi)(),
-        t = (0, n.W1)();
-    return e ? (0, r.jsx)(i.Z, { copy: t }) : null;
+    let e = (0, i.Vi)(),
+        t = (0, i.W1)();
+    return e ? (0, n.jsx)(s.Z, { copy: t }) : null;
 }

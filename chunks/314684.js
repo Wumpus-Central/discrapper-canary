@@ -24,13 +24,13 @@ var r = n(192379),
     h = n(243778),
     f = n(594174),
     b = n(580130),
-    N = n(626135),
-    x = n(823379),
-    _ = n(111361),
+    _ = n(626135),
+    N = n(823379),
+    x = n(111361),
     E = n(595878),
     j = n(944880),
-    O = n(513785),
-    C = n(106255),
+    C = n(513785),
+    O = n(106255),
     S = n(474936),
     v = n(735825),
     T = n(981631);
@@ -80,7 +80,7 @@ function y(e, t) {
 function A() {
     var e;
     let t = (function () {
-            let e = (0, a.cj)([O.Z], () => O.Z.getState());
+            let e = (0, a.cj)([C.Z], () => C.Z.getState());
             if (null != e) return e.userTenureRewardStatusByRewardId[v.Ft.FREE_AVATAR_DECO_1_MONTH];
         })(),
         n = (function () {
@@ -92,13 +92,13 @@ function A() {
                         return null != (e = b.Z.getForApplication(S.CL)) ? e : R;
                     },
                     [],
-                    x.OL
+                    N.OL
                 ),
                 n = (0, a.e7)([f.default], () => {
                     let e = f.default.getCurrentUser();
-                    return null != e && (0, _.M5)(e, S.p9.TIER_2);
+                    return null != e && (0, x.M5)(e, S.p9.TIER_2);
                 });
-            if (null != (0, C.kG)(t) || n) return (0, C.MR)(e, t);
+            if (null != (0, O.kG)(t) || n) return (0, O.MR)(e, t);
         })(),
         i = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
         l = null != n,
@@ -110,17 +110,17 @@ function A() {
                     return null != (e = b.Z.getForApplication(T.XAJ)) ? e : R;
                 },
                 [],
-                x.OL
+                N.OL
             );
-            return (0, C.Cl)(v.qY, e);
+            return (0, O.Cl)(v.qY, e);
         })(),
-        c = l && null != o && (0, C.C3)(o.skuId, i),
+        c = l && null != o && (0, O.C3)(o.skuId, i),
         d = null != (e = null == t ? void 0 : t.next_tenure_reward_id) ? e : null == n ? void 0 : n.skuId;
     return r.useMemo(() => {
         let e = {
             redeemableAt: null == t ? void 0 : t.redeemable_at,
             tenureRewardStatusId: null == t ? void 0 : t.id,
-            tenureRewardType: (0, C.Xs)(d)
+            tenureRewardType: (0, O.Xs)(d)
         };
         if (c)
             return y(I({}, e), {
@@ -136,7 +136,7 @@ function A() {
                 showNotification: !0,
                 showCard: !0
             });
-        if (!(null != t && (0, C.u7)(t))) return null;
+        if (!(null != t && (0, O.u7)(t))) return null;
         {
             if (null == t.redeemable_at || null == t.next_tenure_reward_id) return null;
             let n = s()(t.redeemable_at).diff(s().utc(), 'days'),
@@ -192,7 +192,7 @@ let R = new Set(),
             !1 !== i && n(D(e));
         }, [e, i]);
         let [s] = (0, h.US)(i ? t : []);
-        return i && null != e && !0 === e.showNotification && (s === l.z.TENURE_REWARD_REDEEMABLE || s === l.z.TENURE_REWARD_PENDING) ? (0, C.Wb)(e.nitroTenureStatus) : null;
+        return i && null != e && !0 === e.showNotification && (s === l.z.TENURE_REWARD_REDEEMABLE || s === l.z.TENURE_REWARD_PENDING) ? (0, O.Wb)(e.nitroTenureStatus) : null;
     },
     w = () => {
         var e;
@@ -213,7 +213,7 @@ let R = new Set(),
                 ((0, g.EW)(n),
                 n === l.z.TENURE_REWARD_PENDING &&
                     !1 === i.current &&
-                    (N.default.track(T.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
+                    (_.default.track(T.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
                         user_tenure_reward_id: null == e ? void 0 : e.tenureRewardStatusId,
                         tenure_reward_id: e.tenureRewardSkuId,
                         reward_type: null == e ? void 0 : e.tenureRewardType,
@@ -228,7 +228,7 @@ function W() {
         n = (0, a.e7)([b.Z], () => b.Z.isFetchingForApplication(e)),
         i = (0, a.e7)([f.default], () => {
             let e = f.default.getCurrentUser();
-            return null != e && (0, _.M5)(e, S.p9.TIER_2);
+            return null != e && (0, x.M5)(e, S.p9.TIER_2);
         }),
         s = r.useRef(!1);
     r.useEffect(() => {

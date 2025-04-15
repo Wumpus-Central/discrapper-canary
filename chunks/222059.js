@@ -3,13 +3,13 @@ var r = n(200651),
     i = n(192379),
     l = n(91192),
     o = n(442837),
-    a = n(433517),
-    s = n(481060),
+    s = n(433517),
+    a = n(481060),
     c = n(339149),
     u = n(327943),
     d = n(864682),
-    p = n(540059),
-    h = n(899740),
+    h = n(540059),
+    p = n(899740),
     f = n(849862),
     g = n(460181),
     m = n(155409),
@@ -18,19 +18,19 @@ var r = n(200651),
     y = n(431),
     v = n(774343),
     O = n(417363),
-    j = n(941128),
-    C = n(780570),
-    x = n(278464),
-    S = n(276952),
-    P = n(682662),
-    I = n(662146),
-    N = n(674552),
-    Z = n(981631),
-    E = n(474936),
-    w = n(871465),
+    C = n(941128),
+    S = n(780570),
+    j = n(278464),
+    E = n(276952),
+    x = n(682662),
+    N = n(662146),
+    I = n(674552),
+    P = n(981631),
+    w = n(474936),
+    Z = n(871465),
     T = n(388032),
     A = n(823306);
-let D = {
+let R = {
     origin: {
         x: -16,
         y: 0
@@ -42,37 +42,37 @@ let D = {
         y: 0
     }
 };
-function R(e) {
+function D(e) {
     var t, n;
-    let { selected: h, user: f, badge: b, link: _, showProgressBadge: y } = e,
+    let { selected: p, user: f, badge: b, link: _, showProgressBadge: y } = e,
         v = (0, o.e7)([u.Z], () => u.Z.isEditorOpen),
-        [O, j] = i.useState(!1),
-        [C, x] = i.useState(!1),
-        [E, R] = i.useState(null),
+        [O, C] = i.useState(!1),
+        [S, j] = i.useState(!1),
+        [w, D] = i.useState(null),
         [L, k] = i.useState(0),
         M = (0, l.Ie)('home'),
-        G = (0, p.Q3)('DefaultHomeButton'),
-        B = () => {
-            R(null), k(0), clearTimeout(E);
+        U = (0, h.Q3)('DefaultHomeButton'),
+        G = () => {
+            D(null), k(0), clearTimeout(w);
         };
     if (null == f) return null;
-    let U = T.NW.string(T.t.YUU0RE);
-    C && (U = a.K.get(Z.wli) ? T.NW.string(T.t.nkq1l5) : T.NW.string(T.t.Be8Q5O));
+    let B = T.NW.string(T.t.YUU0RE);
+    S && (B = s.K.get(P.wli) ? T.NW.string(T.t.nkq1l5) : T.NW.string(T.t.Be8Q5O));
     let W = null;
-    !h &&
+    !p &&
         y &&
         (W = (0, r.jsx)(c.Z, {
             className: A.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let V = h || O || v,
-        F = (0, r.jsx)(s.aRk, {
-            selected: G || V,
-            lowerBadge: b > 0 ? (0, N.Ne)(b) : null,
+    let V = p || O || v,
+        H = (0, r.jsx)(a.aRk, {
+            selected: U || V,
+            lowerBadge: b > 0 ? (0, I.Ne)(b) : null,
             upperBadge: W,
-            lowerBadgeSize: { width: (0, s.OVM)(b) },
+            lowerBadgeSize: { width: (0, a.OVM)(b) },
             children: (0, r.jsx)(
-                s.LYs,
+                a.LYs,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -99,18 +99,18 @@ function R(e) {
                     return e;
                 })(
                     {
-                        onMouseEnter: () => j(!0),
-                        onMouseLeave: () => j(!1),
+                        onMouseEnter: () => C(!0),
+                        onMouseLeave: () => C(!1),
                         onClick: () => {
-                            if (!__OVERLAY__ && (null != E && clearTimeout(E), R(setTimeout(B, 500)), k(L + 1), 15 === L)) {
-                                B();
-                                let e = !a.K.get(Z.wli);
-                                a.K.set(Z.wli, e),
-                                    e && a.K.set(w.O5, !0),
+                            if (!__OVERLAY__ && (null != w && clearTimeout(w), D(setTimeout(G, 500)), k(L + 1), 15 === L)) {
+                                G();
+                                let e = !s.K.get(P.wli);
+                                s.K.set(P.wli, e),
+                                    e && s.K.set(Z.O5, !0),
                                     e ? (0, g.GN)('discodo') : (0, g.GN)('user_leave'),
-                                    x(!0),
+                                    j(!0),
                                     setTimeout(() => {
-                                        x(!1);
+                                        j(!1);
                                     }, 1000);
                             }
                         },
@@ -125,9 +125,9 @@ function R(e) {
                             pathname: _,
                             state: {
                                 analyticsSource: {
-                                    page: Z.ZY5.GUILD_CHANNEL,
-                                    section: Z.jXE.NAVIGATION,
-                                    object: Z.qAy.BUTTON_HOME
+                                    page: P.ZY5.GUILD_CHANNEL,
+                                    section: P.jXE.NAVIGATION,
+                                    object: P.qAy.BUTTON_HOME
                                 }
                             }
                         },
@@ -151,22 +151,22 @@ function R(e) {
     return (0, r.jsx)('div', {
         className: A.tutorialContainer,
         children: (0, r.jsx)(m.Z, {
-            inlineSpecs: D,
+            inlineSpecs: R,
             tutorialId: 'friends-list',
             position: 'right',
-            children: (0, r.jsxs)(P.H, {
+            children: (0, r.jsxs)(x.H, {
                 children: [
-                    (0, r.jsx)(S.Z, {
-                        selected: h,
+                    (0, r.jsx)(E.Z, {
+                        selected: p,
                         hovered: O,
                         className: A.pill
                     }),
-                    (0, r.jsx)(I.Z, {
-                        color: s.ua7.Colors.PRIMARY,
+                    (0, r.jsx)(N.Z, {
+                        color: a.ua7.Colors.PRIMARY,
                         hideOnClick: !0,
-                        text: U,
-                        selected: h,
-                        children: F
+                        text: B,
+                        selected: p,
+                        children: H
                     })
                 ]
             })
@@ -174,32 +174,32 @@ function R(e) {
     });
 }
 function L() {
-    let e = (0, x.n)(),
-        t = (0, o.e7)([j.Z, O.Z], () => {
-            let e = (0, c.E)(j.Z.activeItems, O.Z),
-                { total: t, progress: n } = C.lK(e),
-                r = C.xI(n, t);
+    let e = (0, j.n)(),
+        t = (0, o.e7)([C.Z, O.Z], () => {
+            let e = (0, c.E)(C.Z.activeItems, O.Z),
+                { total: t, progress: n } = S.lK(e),
+                r = S.xI(n, t);
             return r > 0 && r < 100;
         }),
         n = (0, f.If)(),
-        i = Object.keys(E.nG),
-        { unviewedTrialCount: l, unviewedDiscountCount: a } = (0, o.cj)([y.Z], () => ({
+        i = Object.keys(w.nG),
+        { unviewedTrialCount: l, unviewedDiscountCount: s } = (0, o.cj)([y.Z], () => ({
             unviewedTrialCount: y.Z.getUnacknowledgedOffers(i).length,
             unviewedDiscountCount: y.Z.getUnacknowledgedDiscountOffers().length
         })),
-        s = l + a,
+        a = l + s,
         u = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
-        d = (0, h.q)(),
-        p = n + s + d,
-        g = p === s && s > 0 && n + d === 0,
+        d = (0, p.q)(),
+        h = n + a + d,
+        g = h === a && a > 0 && n + d === 0,
         m = v.Z.getHomeLink();
     return (
-        g && (m = Z.Z5c.APPLICATION_STORE),
-        (0, r.jsx)(R, {
+        g && (m = P.Z5c.APPLICATION_STORE),
+        (0, r.jsx)(D, {
             selected: e,
             user: u,
-            selectedChannelId: b.Z.getChannelId(Z.ME),
-            badge: p,
+            selectedChannelId: b.Z.getChannelId(P.ME),
+            badge: h,
             link: m,
             showProgressBadge: t
         })

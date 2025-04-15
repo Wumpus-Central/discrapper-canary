@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => x });
 var r = n(200651),
     i = n(192379),
     s = n(399606),
@@ -14,7 +14,7 @@ var r = n(200651),
     h = n(981631),
     f = n(388032),
     b = n(122039);
-function N(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function N(e) {
     }
     return e;
 }
-function x(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,13 +57,13 @@ function x(e, t) {
         e
     );
 }
-let _ = function () {
+let x = function () {
     let e = i.useRef(null),
         { analyticsLocations: t } = (0, l.ZP)(),
-        _ = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
+        x = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         { fractionalState: E } = (0, o.Z)(),
-        j = (0, u.y)('guild_boosting_boost_cta', _, E);
-    function O(n) {
+        j = (0, u.y)('guild_boosting_boost_cta', x, E);
+    function C(n) {
         null != e.current && (0, a.Mr3)(e.current),
             (0, d.u)({
                 analyticsLocation: {
@@ -76,11 +76,11 @@ let _ = function () {
                 guild: n
             });
     }
-    async function C() {
+    async function O() {
         e.current = await (0, a.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
-                return (t) => (0, r.jsx)(e, x(N({}, t), { onSelectGuild: O }));
+                return (t) => (0, r.jsx)(e, N(_({}, t), { onSelectGuild: C }));
             },
             {
                 onCloseRequest: () => {
@@ -112,7 +112,7 @@ let _ = function () {
                                     disabled: n,
                                     color: a.zxk.Colors.LINK,
                                     look: a.zxk.Looks.LINK,
-                                    onClick: n ? void 0 : C,
+                                    onClick: n ? void 0 : O,
                                     children: e
                                 },
                                 t
@@ -123,7 +123,7 @@ let _ = function () {
                                   {
                                       text: S,
                                       'aria-label': S.toString(),
-                                      children: (e) => (0, r.jsx)('span', x(N({}, e), { children: i }))
+                                      children: (e) => (0, r.jsx)('span', N(_({}, e), { children: i }))
                                   },
                                   t
                               )

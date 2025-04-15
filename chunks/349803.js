@@ -15,10 +15,10 @@ var i = n(120356),
     h = n(993229);
 let f = function (e) {
     var t, n;
-    let { isVisible: i, isFullscreen: f, subscriptionTier: b, isMarketingPageV2: N } = e,
-        x = null == (t = (0, d.N)()) ? void 0 : t.subscription_trial,
-        _ = (0, c.Ng)(),
-        E = (0, c.Wp)(_, g.Si.TIER_2) ? g.Si.TIER_2 : void 0,
+    let { isVisible: i, isFullscreen: f, subscriptionTier: b, isMarketingPageV2: _ } = e,
+        N = null == (t = (0, d.N)()) ? void 0 : t.subscription_trial,
+        x = (0, c.Ng)(),
+        E = (0, c.Wp)(x, g.Si.TIER_2) ? g.Si.TIER_2 : void 0,
         j = (0, l.q_F)({
             transform: i ? 'translateY(-100%)' : 'translateY(0%)',
             opacity: +!!i,
@@ -27,9 +27,9 @@ let f = function (e) {
                 friction: 12
             }
         }),
-        O = { section: p.jXE.MARKETING_FLOATING_CTA },
-        C = (0, o.ZP)(),
-        S = (0, l.wjy)(C);
+        C = { section: p.jXE.MARKETING_FLOATING_CTA },
+        O = (0, o.ZP)(),
+        S = (0, l.wjy)(O);
     return (0, r.jsx)(a.animated.div, {
         className: s()(h.wrapper, {
             [h.fullscreenWrapper]: f,
@@ -37,17 +37,17 @@ let f = function (e) {
         }),
         style: j,
         children: (0, r.jsxs)('div', {
-            className: N ? h.innerWrapperV2 : h.innerWrapperV1,
+            className: _ ? h.innerWrapperV2 : h.innerWrapperV1,
             children: [
                 (0, r.jsx)(m.Z, {
                     className: s()(h.button, { [h.subButton]: S }),
-                    subscriptionTier: null != (n = null != b ? b : null == x ? void 0 : x.sku_id) ? n : E,
-                    premiumModalAnalyticsLocation: O,
+                    subscriptionTier: null != (n = null != b ? b : null == N ? void 0 : N.sku_id) ? n : E,
+                    premiumModalAnalyticsLocation: C,
                     isPersistentCTA: !0
                 }),
                 (0, r.jsx)(u.Z, {
                     className: h.button,
-                    premiumModalAnalyticsLocation: O
+                    premiumModalAnalyticsLocation: C
                 })
             ]
         })

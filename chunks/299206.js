@@ -11,7 +11,7 @@ function c(e) {
         _ = s.Sb.useSetting();
     function p(e) {
         let n = null != c && e.shiftKey ? c : t;
-        o()(null != n, 'cannot copy null text'), (0, l.JG)(n), null == i || i();
+        o()(null != n, 'cannot copy null text'), (0, l.JG)(n, i);
     }
     let h = d || _;
     if (__OVERLAY__ || !h || !l.wS || null == t) return null;

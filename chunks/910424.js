@@ -15,7 +15,7 @@ var l = n(442837),
     g = n(981631),
     b = n(388032),
     O = n(128746);
-function y(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function y(e) {
     }
     return e;
 }
-function h(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,27 +59,27 @@ function h(e, t) {
     );
 }
 function v(e) {
-    let { isCurrentUser: t, color: n, look: v, applicationStream: j, onAction: S } = e,
-        { activeStream: P, watchingOtherStream: N } = (0, l.cj)([d.Z], () => ({
-            activeStream: d.Z.getActiveStreamForApplicationStream(j),
+    let { isCurrentUser: t, color: n, look: v, applicationStream: S, onAction: j } = e,
+        { activeStream: N, watchingOtherStream: P } = (0, l.cj)([d.Z], () => ({
+            activeStream: d.Z.getActiveStreamForApplicationStream(S),
             watchingOtherStream:
-                null != j &&
-                d.Z.getAllActiveStreamsForChannel(j.channelId).filter((e) => {
+                null != S &&
+                d.Z.getAllActiveStreamsForChannel(S.channelId).filter((e) => {
                     let { ownerId: t } = e;
-                    return t !== j.ownerId;
+                    return t !== S.ownerId;
                 }).length > 0
         })),
-        I = (0, l.e7)([p.Z], () => p.Z.getChannel(null == j ? void 0 : j.channelId)),
-        [E, Z] = (0, u.wq)(I),
+        E = (0, l.e7)([p.Z], () => p.Z.getChannel(null == S ? void 0 : S.channelId)),
+        [Z, I] = (0, u.wq)(E),
         x = (0, c.Aq)(),
-        C = null != P && null != j && P.state !== g.jm8.ENDED && P.ownerId === j.ownerId,
+        C = null != N && null != S && N.state !== g.jm8.ENDED && N.ownerId === S.ownerId,
         T = (e) => {
-            null != j && (null == S || S(), a.default.selectVoiceChannel(j.channelId), C || (0, s.iV)(j, { forceMultiple: e }), x.dispatch(g.CkL.POPOUT_CLOSE), f.S.dispatch(g.CkL.MODAL_CLOSE), o.Z.popAll());
+            null != S && (null == j || j(), a.default.selectVoiceChannel(S.channelId), C || (0, s.iV)(S, { forceMultiple: e }), x.dispatch(g.CkL.POPOUT_CLOSE), f.S.dispatch(g.CkL.MODAL_CLOSE), o.Z.popAll());
         };
-    if (null == j) return null;
-    let w = (0, u.P9)(Z);
-    t ? (w = b.NW.string(b.t.XvBdeX)) : C && (w = b.NW.string(b.t.JH1SJy));
-    let A = {
+    if (null == S) return null;
+    let A = (0, u.P9)(I);
+    t ? (A = b.NW.string(b.t.XvBdeX)) : C && (A = b.NW.string(b.t.JH1SJy));
+    let w = {
         color: n,
         look: v
     };
@@ -87,13 +87,13 @@ function v(e) {
         children: [
             (0, r.jsxs)(
                 m.Z,
-                h(
-                    y(
+                y(
+                    h(
                         {
-                            disabled: t || C || !E,
+                            disabled: t || C || !Z,
                             onClick: () => T(!1)
                         },
-                        A
+                        w
                     ),
                     {
                         fullWidth: !0,
@@ -103,27 +103,27 @@ function v(e) {
                                 color: 'currentColor',
                                 className: O.streamIcon
                             }),
-                            w
+                            A
                         ]
                     }
                 ),
                 'play'
             ),
-            N && !C
+            P && !C
                 ? (0, r.jsx)(i.ua7, {
                       text: b.NW.string(b.t.wCrzur),
                       children: (e) =>
                           (0, r.jsx)(
                               m.Z,
-                              h(
-                                  y(
-                                      h(y({}, e), {
+                              y(
+                                  h(
+                                      y(h({}, e), {
                                           onClick: () => {
                                               var t;
                                               null == (t = e.onClick) || t.call(e), T(!0);
                                           }
                                       }),
-                                      A
+                                      w
                                   ),
                                   {
                                       className: O.iconButton,

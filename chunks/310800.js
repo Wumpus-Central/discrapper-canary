@@ -1,10 +1,10 @@
 n.d(t, { Z: () => b });
 var r = n(200651);
 n(192379);
-var i = n(852229),
-    s = n(481060),
-    l = n(724598),
-    a = n(674180),
+var i = n(481060),
+    s = n(724598),
+    l = n(674180),
+    a = n(572004),
     o = n(495437),
     c = n(267101),
     d = n(863663),
@@ -17,16 +17,16 @@ let f = 'guild-product-listings-header';
 function x(e) {
     let { guildId: t, handleCreateOrEditProduct: u } = e,
         x = (0, c.ue)(t, { publishedOnly: !1 }),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: b } = (0, a.gX)(t),
+        { shouldRestrictUpdatingCreatorMonetizationSettings: b } = (0, l.gX)(t),
         j = (e) => {
             (0, o.Je)(t, e, { published: !1 });
         },
-        N = (e, i) => {
-            (0, s.ZDy)(async () => {
-                let { default: s } = await n.e('95925').then(n.bind(n, 673078));
+        N = (e, s) => {
+            (0, i.ZDy)(async () => {
+                let { default: i } = await n.e('95925').then(n.bind(n, 673078));
                 return (n) =>
                     (0, r.jsx)(
-                        s,
+                        i,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -55,7 +55,7 @@ function x(e) {
                             {
                                 guildId: t,
                                 productId: e,
-                                productName: i
+                                productName: s
                             },
                             n
                         )
@@ -63,12 +63,12 @@ function x(e) {
             });
         },
         _ = (e, t) => {
-            (0, i.J)((0, d.ar)(e, t));
+            (0, a.JG)((0, d.ar)(e, t));
         },
         v = x.length > 0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(s.vwX, {
+            (0, r.jsx)(i.vwX, {
                 className: h.productListingsHeader,
                 id: f,
                 children: v ? p.NW.string(p.t.RwuStb) : p.NW.string(p.t.WKMcMT)
@@ -101,7 +101,7 @@ function x(e) {
                           )
                       )
                   })
-                : (0, r.jsx)(l.Z, {
+                : (0, r.jsx)(s.Z, {
                       guildId: t,
                       showCTA: !1,
                       responsive: !1
@@ -111,36 +111,36 @@ function x(e) {
 }
 function b(e) {
     let { guildId: t } = e,
-        { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, a.gX)(t),
-        i = (e) => {
+        { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, l.gX)(t),
+        s = (e) => {
             u.h(t, e);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)(s.zxk, {
+            (0, r.jsxs)(i.zxk, {
                 className: h.addButton,
                 innerClassName: h.addButtonInner,
-                onClick: () => i(null),
+                onClick: () => s(null),
                 disabled: n,
                 children: [
-                    (0, r.jsx)(s.qJs, {
+                    (0, r.jsx)(i.qJs, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 20,
                         height: 20,
                         'aria-hidden': !0
                     }),
-                    (0, r.jsx)(s.LZC, {
+                    (0, r.jsx)(i.LZC, {
                         size: 6,
                         horizontal: !0
                     }),
                     p.NW.string(p.t.riG6DQ)
                 ]
             }),
-            (0, r.jsx)(s.LZC, { size: 24 }),
+            (0, r.jsx)(i.LZC, { size: 24 }),
             (0, r.jsx)(x, {
                 guildId: t,
-                handleCreateOrEditProduct: i
+                handleCreateOrEditProduct: s
             })
         ]
     });

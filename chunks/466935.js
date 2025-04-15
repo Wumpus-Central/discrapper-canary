@@ -3,13 +3,13 @@ var r = n(200651),
     i = n(192379),
     l = n(442837),
     o = n(481060),
-    a = n(970606),
-    s = n(693546),
+    s = n(970606),
+    a = n(693546),
     c = n(826581),
     u = n(246364),
     d = n(98493),
-    p = n(703656),
-    h = n(496675),
+    h = n(703656),
+    p = n(496675),
     f = n(785195),
     g = n(434479),
     m = n(981631),
@@ -17,13 +17,13 @@ var r = n(200651),
     _ = n(388032);
 function y(e) {
     let { guild: t, selected: n } = e,
-        y = (0, l.e7)([h.Z], () => h.Z.can(m.Plq.KICK_MEMBERS, t)),
+        y = (0, l.e7)([p.Z], () => p.Z.can(m.Plq.KICK_MEMBERS, t)),
         v = (0, l.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
         O = y && null != v ? v : 0;
     return (
         i.useEffect(() => {
             y &&
-                s.Z.fetchGuildJoinRequests({
+                a.Z.fetchGuildJoinRequests({
                     guildId: t.id,
                     status: u.wB.SUBMITTED,
                     limit: d.p
@@ -40,12 +40,12 @@ function y(e) {
             text: _.NW.string(_.t.tcvVXF),
             selected: n,
             onClick: () => {
-                (0, a.Q2)({
+                (0, s.Q2)({
                     guildId: t.id,
                     source: m.jXE.CHANNEL_LIST,
                     tab: b.oC.MEMBER_APPLICATIONS
                 }),
-                    (0, p.uL)(m.Z5c.CHANNEL(t.id, b.oC.MEMBER_APPLICATIONS));
+                    (0, h.uL)(m.Z5c.CHANNEL(t.id, b.oC.MEMBER_APPLICATIONS));
             },
             trailing: O > 0 ? (0, r.jsx)(o.mAB, { count: O }) : null
         })

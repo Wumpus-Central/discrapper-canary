@@ -14,7 +14,7 @@ var r,
     h = n(532901),
     f = n(204227),
     b = n(283574);
-function N(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function N(e, t, n) {
         e
     );
 }
-function x(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +38,12 @@ function x(e) {
                 })
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,8 +65,8 @@ let E = new RegExp('https?://'.concat(null != (r = window.GLOBAL_ENV.CDN_HOST) ?
 function j(e) {
     return 'string' == typeof e.content ? e.content : S(e.content);
 }
-let O = _(x({}, d().defaultRules), {
-        heading: _(x({}, d().defaultRules.heading), {
+let C = x(N({}, d().defaultRules), {
+        heading: x(N({}, d().defaultRules.heading), {
             react(e, t, n) {
                 let r = 'h'.concat(e.level);
                 return (0, s.jsx)(
@@ -79,7 +79,7 @@ let O = _(x({}, d().defaultRules), {
                 );
             }
         }),
-        paragraph: _(x({}, d().defaultRules.paragraph), {
+        paragraph: x(N({}, d().defaultRules.paragraph), {
             react: (e, t, n) =>
                 (0, s.jsx)(
                     'div',
@@ -90,12 +90,12 @@ let O = _(x({}, d().defaultRules), {
                     n.key
                 )
         }),
-        strong: _(x({}, d().defaultRules.strong), { order: 6 }),
-        em: _(x({}, d().defaultRules.em), { order: 6 }),
-        u: _(x({}, d().defaultRules.u), { order: 5 }),
-        del: _(x({}, d().defaultRules.del), { order: 6 }),
-        link: _(x({}, g.ZP, (0, h.Z)({ enableBuildOverrides: !1 })), { order: 6 }),
-        blockQuote: _(x({}, d().defaultRules.blockQuote), {
+        strong: x(N({}, d().defaultRules.strong), { order: 6 }),
+        em: x(N({}, d().defaultRules.em), { order: 6 }),
+        u: x(N({}, d().defaultRules.u), { order: 5 }),
+        del: x(N({}, d().defaultRules.del), { order: 6 }),
+        link: x(N({}, g.ZP, (0, h.Z)({ enableBuildOverrides: !1 })), { order: 6 }),
+        blockQuote: x(N({}, d().defaultRules.blockQuote), {
             react: (e, t, n) =>
                 (0, s.jsx)(
                     'blockquote',
@@ -106,7 +106,7 @@ let O = _(x({}, d().defaultRules), {
                     n.key
                 )
         }),
-        image: _(x({}, d().defaultRules.image), {
+        image: x(N({}, d().defaultRules.image), {
             order: 6,
             match(e, t, n) {
                 let r = d().defaultRules.image;
@@ -119,7 +119,7 @@ let O = _(x({}, d().defaultRules), {
                 return !1;
             }
         }),
-        inlineCode: _(x({}, p.Z.RULES.inlineCode), {
+        inlineCode: x(N({}, p.Z.RULES.inlineCode), {
             order: 6,
             react: (e, t, n) =>
                 (0, s.jsx)(
@@ -131,7 +131,7 @@ let O = _(x({}, d().defaultRules), {
                     n.key
                 )
         }),
-        codeBlock: _(x({}, d().defaultRules.codeBlock), {
+        codeBlock: x(N({}, d().defaultRules.codeBlock), {
             react(e, t, r) {
                 let i = () =>
                     (0, s.jsx)(
@@ -174,21 +174,21 @@ let O = _(x({}, d().defaultRules), {
             }
         })
     }),
-    C = d().parserFor(O),
-    S = d().reactFor(d().ruleOutput(O, 'react'));
+    O = d().parserFor(C),
+    S = d().reactFor(d().ruleOutput(C, 'react'));
 class v extends (i = a.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: r, output: i } = this.props,
-            a = i(r(''.concat(t, '\n\n'), x({ inline: !1 }, n)));
+            a = i(r(''.concat(t, '\n\n'), N({ inline: !1 }, n)));
         return (0, s.jsx)('div', {
             className: o()(f.markdown, e),
             children: a
         });
     }
 }
-N(v, 'rules', O),
-    N(v, 'defaultProps', {
-        parser: C,
+_(v, 'rules', C),
+    _(v, 'defaultProps', {
+        parser: O,
         output: S
     });
 let T = v;

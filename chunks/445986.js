@@ -9,8 +9,8 @@ var r = n(200651),
     a = n(192379),
     i = n(481060),
     l = n(33122),
-    o = n(761705),
-    s = n(9807),
+    s = n(761705),
+    o = n(9807),
     c = n(843445),
     d = n(981631),
     u = n(388032);
@@ -88,21 +88,21 @@ let f = (e) => {
         a = g(e, ['index', 'items']);
     let i = n[t],
         l = 0,
-        s = [];
+        o = [];
     for (let e of n)
         if (e.type === d.s9s.IMG) {
             let { width: t, height: n, src: r } = e;
-            e === i && (l = s.length),
-                s.push({
+            e === i && (l = o.length),
+                o.push({
                     src: _(r),
                     width: t,
                     height: n
                 });
         }
     return (0, r.jsx)(
-        o.Z,
+        s.Z,
         h(m({}, a), {
-            items: s,
+            items: o,
             startWith: l
         })
     );
@@ -112,7 +112,7 @@ class b extends a.Component {
         let e = this.props,
             { pageSize: t } = e,
             n = g(e, ['pageSize']),
-            a = t === c.b.SMALL ? s.Z : l.Z;
+            a = t === c.b.SMALL ? o.Z : l.Z;
         return (0, r.jsx)(a, h(m({}, n), { onCurrentItemClick: this.handleCurrentItemClick }));
     }
     constructor(...e) {

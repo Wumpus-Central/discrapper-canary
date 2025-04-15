@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(570140),
-    l = n(468026),
+    l = n(570140),
+    o = n(468026),
     s = n(317770),
     a = n(981631),
     c = n(388032);
@@ -33,24 +33,24 @@ function u(e) {
     return e;
 }
 let d = 'ActivityInviteManager',
-    p = () => {
-        o.Z.dispatch({ type: 'ACTIVITY_INVITE_MODAL_CLOSE' });
+    h = () => {
+        l.Z.dispatch({ type: 'ACTIVITY_INVITE_MODAL_CLOSE' });
     };
-class h extends s.Z {
+class p extends s.Z {
     _initialize() {
-        o.Z.subscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), o.Z.subscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
+        l.Z.subscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), l.Z.subscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
     }
     _terminate() {
-        o.Z.unsubscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), o.Z.unsubscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
+        l.Z.unsubscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), l.Z.unsubscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
     }
     handleModalOpen(e) {
-        let { activity: t, isPrivate: o, context: s } = e,
-            h = s === a.IlC.POPOUT ? i.u1M : i.z1l;
-        o
+        let { activity: t, isPrivate: l, context: s } = e,
+            p = s === a.IlC.POPOUT ? i.u1M : i.z1l;
+        l
             ? (0, i.h7j)(
                   (e) =>
                       (0, r.jsx)(
-                          l.default,
+                          o.default,
                           u(
                               {
                                   title: c.NW.formatToPlainString(c.t['2tN7io'], { name: t.name }),
@@ -61,10 +61,10 @@ class h extends s.Z {
                           )
                       ),
                   {
-                      onCloseCallback: p,
+                      onCloseCallback: h,
                       modalKey: d
                   },
-                  h
+                  p
               )
             : (0, i.ZDy)(
                   async () => {
@@ -72,9 +72,9 @@ class h extends s.Z {
                       return (t) => (0, r.jsx)(e, u({}, t));
                   },
                   {
-                      onCloseCallback: p,
+                      onCloseCallback: h,
                       modalKey: d,
-                      contextKey: h
+                      contextKey: p
                   }
               );
     }
@@ -82,4 +82,4 @@ class h extends s.Z {
         (0, i.Mr3)(d);
     }
 }
-let f = new h();
+let f = new p();

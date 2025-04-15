@@ -14,17 +14,17 @@ let p = (e) => {
     let { userId: t, children: n, isLast: s, className: p } = e,
         [h, f] = i.useState(!1),
         { analyticsLocations: b } = (0, d.ZP)(),
-        N = i.useCallback(() => {
+        _ = i.useCallback(() => {
             (0, u.openUserProfileModal)({
                 userId: t,
                 sourceAnalyticsLocations: b,
                 analyticsLocation: { section: m.jXE.FAMILY_CENTER }
             });
         }, [t, b]),
-        x = () => {
+        N = () => {
             f(!0);
         },
-        _ = () => {
+        x = () => {
             f(!1);
         };
     return (0, r.jsx)(c.mh, {
@@ -69,9 +69,9 @@ let p = (e) => {
                                 [g.last]: s,
                                 [g.active]: h
                             }),
-                            onMouseEnter: x,
-                            onMouseLeave: _,
-                            onClick: N
+                            onMouseEnter: N,
+                            onMouseLeave: x,
+                            onClick: _
                         },
                         e
                     )),

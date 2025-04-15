@@ -14,41 +14,41 @@ var r = n(200651),
     h = n(32173),
     f = n(391110),
     b = n(75077),
-    N = n(320319),
-    x = n(847408);
-let _ = (e) => {
+    _ = n(320319),
+    N = n(847408);
+let x = (e) => {
         let { showAllPerksButton: t, leftAlignHeaders: n, title: i, headerClassname: s } = e,
             a = (0, r.jsx)(o.X6q, {
                 variant: 'heading-xxl/extrabold',
                 color: 'header-primary',
-                className: null != s ? s : x.heading,
+                className: null != s ? s : N.heading,
                 children: i
             });
         return null == t
             ? a
             : n
               ? (0, r.jsxs)('div', {
-                    className: x.sectionHeader,
+                    className: N.sectionHeader,
                     children: [
                         a,
                         null != t &&
                             (0, r.jsx)('div', {
-                                className: x.showAllPerksButton,
+                                className: N.showAllPerksButton,
                                 children: t
                             })
                     ]
                 })
               : (0, r.jsx)('div', {
-                    className: x.container,
+                    className: N.container,
                     children: (0, r.jsx)('div', {
-                        className: x.sectionHeaderSeeAll,
+                        className: N.sectionHeaderSeeAll,
                         children: a
                     })
                 });
     },
     E = (e) => {
         var t;
-        let { className: n, variant: s = f.R0.PERKS_DISCOVERABILITY, noBackground: E = !1, leftAlignHeaders: j = !1, showAllPerksButton: O, headerClassname: C, isFullScreen: S = !0, shouldAutoScroll: v = !1 } = e,
+        let { className: n, variant: s = f.R0.PERKS_DISCOVERABILITY, noBackground: E = !1, leftAlignHeaders: j = !1, showAllPerksButton: C, headerClassname: O, isFullScreen: S = !0, shouldAutoScroll: v = !1 } = e,
             T = i.useRef(null),
             I = (0, u.Er)(),
             y = (0, m.v)(I),
@@ -90,54 +90,54 @@ let _ = (e) => {
                 (null == k || null == (t = k.tenureRewardCollectible) ? void 0 : t.name) === h.u.TENURE_REWARD_COLLECTIBLE &&
                     (0, r.jsx)(l.O_, {
                         ref: G,
-                        className: x.confettiCanvas,
+                        className: N.confettiCanvas,
                         environment: F.current
                     }),
                 (0, r.jsxs)('div', {
                     ref: T,
                     className: a()(
-                        x.section,
+                        N.section,
                         {
-                            [x.centerAlignSection]: !j,
-                            [x.leftAlignSection]: j
+                            [N.centerAlignSection]: !j,
+                            [N.leftAlignSection]: j
                         },
                         n
                     ),
                     children: [
-                        (0, r.jsx)(_, {
-                            showAllPerksButton: O,
+                        (0, r.jsx)(x, {
+                            showAllPerksButton: C,
                             leftAlignHeaders: j,
                             title: w.title,
-                            headerClassname: C
+                            headerClassname: O
                         }),
                         (0, r.jsx)(o.Text, {
                             variant: 'text-lg/normal',
                             color: 'header-primary',
-                            className: a()(x.subtitle, {
-                                [x.subtitle]: null == O || j,
-                                [x.subtitleWithButton]: null != O && !j,
-                                [x.fullWidth]: A || j,
-                                [x.moreSubtitleMargin]: U,
-                                [x.leftAlignSubtitle]: j,
-                                [x.centerAlignSubtitle]: !j
+                            className: a()(N.subtitle, {
+                                [N.subtitle]: null == C || j,
+                                [N.subtitleWithButton]: null != C && !j,
+                                [N.fullWidth]: A || j,
+                                [N.moreSubtitleMargin]: U,
+                                [N.leftAlignSubtitle]: j,
+                                [N.centerAlignSubtitle]: !j
                             }),
                             children: w.subtitle
                         }),
                         !j &&
-                            null != O &&
+                            null != C &&
                             (0, r.jsx)('div', {
-                                className: x.showAllPerksButtonCenter,
-                                children: O
+                                className: N.showAllPerksButtonCenter,
+                                children: C
                             }),
                         (0, r.jsx)('div', {
                             className: a()({
-                                [x.cardContainer]: S,
-                                [x.cardContainerNarrowWidth]: !S
+                                [N.cardContainer]: S,
+                                [N.cardContainerNarrowWidth]: !S
                             }),
                             children: M.map((e, t) => {
                                 var n, i;
                                 return (0, r.jsx)(
-                                    N.Z,
+                                    _.Z,
                                     ((n = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},

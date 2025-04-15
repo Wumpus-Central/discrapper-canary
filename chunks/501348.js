@@ -14,13 +14,13 @@ var r = n(200651),
     h = n(714338),
     f = n(857595),
     b = n(607070),
-    N = n(627845),
-    x = n(514361),
-    _ = n(600164),
+    _ = n(627845),
+    N = n(514361),
+    x = n(600164),
     E = n(313201),
     j = n(540059),
-    O = n(605236),
-    C = n(786761),
+    C = n(605236),
+    O = n(786761),
     S = n(3148),
     v = n(739566),
     T = n(753206),
@@ -94,16 +94,16 @@ let Y = {
     K = (0, E.hQ)(),
     q = (0, E.hQ)(),
     X = (0, E.hQ)(),
-    J = '1337',
-    Q = (e) => {
+    Q = '1337',
+    J = (e) => {
         let t = 0;
         return [
-            (0, C.e5)(
+            (0, O.e5)(
                 z(
                     H(
                         {},
                         (0, S.ZP)({
-                            channelId: J,
+                            channelId: Q,
                             content: U.NW.string(U.t.oZxkEh)
                         })
                     ),
@@ -113,12 +113,12 @@ let Y = {
                     }
                 )
             ),
-            (0, C.e5)(
+            (0, O.e5)(
                 z(
                     H(
                         {},
                         (0, S.ZP)({
-                            channelId: J,
+                            channelId: Q,
                             content: (0, d.wj)(e) ? U.NW.string(U.t['WGb/v7']) : U.NW.string(U.t['62m4m5'])
                         })
                     ),
@@ -128,12 +128,12 @@ let Y = {
                     }
                 )
             ),
-            (0, C.e5)(
+            (0, O.e5)(
                 z(
                     H(
                         {},
                         (0, S.ZP)({
-                            channelId: J,
+                            channelId: Q,
                             content: U.NW.string(U.t.a0Byo6)
                         })
                     ),
@@ -143,12 +143,12 @@ let Y = {
                     }
                 )
             ),
-            (0, C.e5)(
+            (0, O.e5)(
                 z(
                     H(
                         {},
                         (0, S.ZP)({
-                            channelId: J,
+                            channelId: Q,
                             content: U.NW.string(U.t.bmwEWF)
                         })
                     ),
@@ -158,12 +158,12 @@ let Y = {
                     }
                 )
             ),
-            (0, C.e5)(
+            (0, O.e5)(
                 z(
                     H(
                         {},
                         (0, S.ZP)({
-                            channelId: J,
+                            channelId: Q,
                             content: U.NW.string(U.t.hK9QW1)
                         })
                     ),
@@ -177,7 +177,7 @@ let Y = {
     },
     $ = () => {
         let e = (0, j.Q3)('ThemeTitle'),
-            t = (0, l.e7)([x.Z], () => x.Z.isPreview),
+            t = (0, l.e7)([N.Z], () => N.Z.isPreview),
             { enabled: n } = I.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
@@ -263,8 +263,8 @@ class ee extends i.Component {
                         className: V.subtext,
                         children: 'Increase or decrease the size of the chat font'
                     }),
-                (0, r.jsx)(_.Z, {
-                    align: _.Z.Align.CENTER,
+                (0, r.jsx)(x.Z, {
+                    align: x.Z.Align.CENTER,
                     children: (0, r.jsx)(u.iRW, {
                         className: a()({
                             [G.marginTop20]: !e,
@@ -359,7 +359,7 @@ class ee extends i.Component {
                   children: (0, r.jsx)(u.R94, {
                       type: u.R94.Types.DEFAULT,
                       className: V.forcedColorsWarning,
-                      children: (0, N.b)()
+                      children: (0, _.b)()
                           ? U.NW.format(U.t.Jae48P, {
                                 onClick: () => {
                                     g.Z.open(L.oAB.ACCESSIBILITY);
@@ -576,8 +576,8 @@ class ee extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            F(this, 'darkMessages', Q(L.BRd.DARK)),
-            F(this, 'lightMessages', Q(L.BRd.LIGHT)),
+            F(this, 'darkMessages', J(L.BRd.DARK)),
+            F(this, 'lightMessages', J(L.BRd.LIGHT)),
             F(this, 'handleDisplayCompactAvatarsChanged', (e) => {
                 m.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
             }),
@@ -737,8 +737,8 @@ class et extends ee {
     }
 }
 let en = (e) => {
-    (0, O.un)(e) ||
-        (0, O.EW)(e, {
+    (0, C.un)(e) ||
+        (0, C.EW)(e, {
             dismissAction: B.L.AUTO,
             forceTrack: !0
         });
@@ -753,7 +753,7 @@ function er() {
     (0, p.ZP)(() => {
         en(o.z.CLIENT_THEMES_SETTINGS_BADGE), en(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), en(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     });
-    let c = (0, l.cj)([R.Z, D.ZP, b.Z, A.default, x.Z], () => {
+    let c = (0, l.cj)([R.Z, D.ZP, b.Z, A.default, N.Z], () => {
             var e, t;
             return {
                 theme: R.Z.theme,
@@ -765,7 +765,7 @@ function er() {
                 messageGroupSpacing: b.Z.messageGroupSpacing,
                 displayCompactAvatars: D.ZP.displayCompactAvatars,
                 isStaff: null != (t = null == (e = A.default.getCurrentUser()) ? void 0 : e.isStaff) && t,
-                gradientPreset: x.Z.gradientPreset
+                gradientPreset: N.Z.gradientPreset
             };
         }),
         d = (0, j.o9)('UserSettingsAppearance'),

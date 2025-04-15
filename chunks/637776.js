@@ -1,103 +1,103 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(442837),
-    a = n(231239),
-    l = n(129293),
-    s = n(388905),
+    s = n(442837),
+    l = n(231239),
+    o = n(129293),
+    a = n(388905),
     c = n(703656),
     u = n(108427),
     d = n(844800),
-    p = n(580497),
-    h = n(981631),
+    h = n(580497),
+    p = n(981631),
     g = n(388032),
-    m = n(742834);
-function f(e) {
+    f = n(742834);
+function m(e) {
     let { location: t } = e,
-        [f, _] = i.useState(!1),
-        { verifySuccess: b, verifyErrors: x, redirectGuildId: N } = (0, o.e7)([d.Z], () => d.Z.getState());
+        [m, _] = i.useState(!1),
+        { verifySuccess: N, verifyErrors: x, redirectGuildId: b } = (0, s.e7)([d.Z], () => d.Z.getState());
     i.useEffect(() => {
-        let e = (0, l.Z)(t);
-        a.Z.verify(e), (0, u.e)('verify_hub_email');
+        let e = (0, o.Z)(t);
+        l.Z.verify(e), (0, u.e)('verify_hub_email');
     }, [t]);
-    let v = () => {
-        (0, p.Z)(N), _(!0);
+    let E = () => {
+        (0, h.Z)(b), _(!0);
     };
-    return f
-        ? (0, r.jsxs)(s.ZP, {
+    return m
+        ? (0, r.jsxs)(a.ZP, {
               children: [
-                  (0, r.jsx)(s.Dx, {
-                      className: m.title,
+                  (0, r.jsx)(a.Dx, {
+                      className: f.title,
                       children: g.NW.string(g.t.csrAMD)
                   }),
-                  (0, r.jsx)(s.DK, {
-                      className: m.subtitle,
+                  (0, r.jsx)(a.DK, {
+                      className: f.subtitle,
                       children: g.NW.string(g.t['m1+IBg'])
                   }),
-                  (0, r.jsx)(s.zx, {
-                      className: m.spacedButton,
-                      onClick: () => (0, c.uL)(h.Z5c.CHANNEL(N)),
+                  (0, r.jsx)(a.zx, {
+                      className: f.spacedButton,
+                      onClick: () => (0, c.uL)(p.Z5c.CHANNEL(b)),
                       children: g.NW.string(g.t.fIv16O)
                   })
               ]
           })
-        : b
-          ? (0, r.jsxs)(s.ZP, {
+        : N
+          ? (0, r.jsxs)(a.ZP, {
                 children: [
-                    (0, r.jsx)(s.Ee, {
-                        className: m.image,
+                    (0, r.jsx)(a.Ee, {
+                        className: f.image,
                         src: n(73962)
                     }),
-                    (0, r.jsx)(s.Dx, {
-                        className: m.title,
+                    (0, r.jsx)(a.Dx, {
+                        className: f.title,
                         children: g.NW.string(g.t.dAfGb2)
                     }),
-                    (0, r.jsx)(s.zx, {
-                        onClick: v,
+                    (0, r.jsx)(a.zx, {
+                        onClick: E,
                         children: g.NW.string(g.t.uJWIj4)
                     })
                 ]
             })
           : null != x
-            ? (0, r.jsxs)(s.ZP, {
+            ? (0, r.jsxs)(a.ZP, {
                   children: [
-                      (0, r.jsx)(s.Ee, {
-                          className: m.image,
+                      (0, r.jsx)(a.Ee, {
+                          className: f.image,
                           src: n(375673)
                       }),
-                      (0, r.jsx)(s.Dx, {
-                          className: m.title,
+                      (0, r.jsx)(a.Dx, {
+                          className: f.title,
                           children: g.NW.string(g.t.PCgG39)
                       }),
-                      (0, r.jsx)(s.DK, {
-                          className: m.subtitle,
+                      (0, r.jsx)(a.DK, {
+                          className: f.subtitle,
                           children: g.NW.string(g.t.tQpeAw)
                       }),
-                      (0, r.jsx)(s.zx, {
-                          onClick: v,
+                      (0, r.jsx)(a.zx, {
+                          onClick: E,
                           children: g.NW.string(g.t.uJWIj4)
                       })
                   ]
               })
-            : (0, r.jsxs)(s.ZP, {
+            : (0, r.jsxs)(a.ZP, {
                   children: [
-                      (0, r.jsx)(s.Ee, {
-                          className: m.image,
+                      (0, r.jsx)(a.Ee, {
+                          className: f.image,
                           src: n(892235)
                       }),
-                      (0, r.jsx)(s.Dx, {
-                          className: m.title,
+                      (0, r.jsx)(a.Dx, {
+                          className: f.title,
                           children: g.NW.string(g.t['0c8+5u'])
                       }),
-                      (0, r.jsx)(s.DK, {
-                          className: m.subtitle,
+                      (0, r.jsx)(a.DK, {
+                          className: f.subtitle,
                           children: g.NW.string(g.t.ULTCBA)
                       }),
-                      (0, r.jsx)(s.zx, {
+                      (0, r.jsx)(a.zx, {
                           submitting: !0,
-                          color: s.zx.Colors.PRIMARY
+                          color: a.zx.Colors.PRIMARY
                       })
                   ]
               });
 }
-o.ZP.initialize();
+s.ZP.initialize();

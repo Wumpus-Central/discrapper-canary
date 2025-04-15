@@ -4,7 +4,7 @@ n.d(t, {
     mM: () => o
 });
 var r = (function (e) {
-        return (e.UNSET = 'UNSET'), (e.IN_PROCESS_V2 = 'IN_PROCESS_V2'), (e.OUT_OF_PROCESS_V2 = 'OUT_OF_PROCESS_V2'), (e.OUT_OF_PROCESS_V3 = 'OUT_OF_PROCESS_V3'), (e.OUT_OF_PROCESS_V3_LIMITED_INTERACTION = 'OUT_OF_PROCESS_V3_LIMITED_INTERACTION'), e;
+        return (e.UNSET = 'UNSET'), (e.IN_PROCESS_V2 = 'IN_PROCESS_V2'), (e.OUT_OF_PROCESS_V3 = 'OUT_OF_PROCESS_V3'), (e.OUT_OF_PROCESS_V3_LIMITED_INTERACTION = 'OUT_OF_PROCESS_V3_LIMITED_INTERACTION'), e;
     })({}),
     i = (function (e) {
         return (e[(e.Disabled = 0)] = 'Disabled'), (e[(e.Hook = 1)] = 'Hook'), (e[(e.OutOfProcess = 2)] = 'OutOfProcess'), (e[(e.OutOfProcessLimitedInteraction = 3)] = 'OutOfProcessLimitedInteraction'), e;

@@ -3,26 +3,26 @@ var r = n(200651),
     a = n(192379),
     i = n(120356),
     l = n.n(i),
-    o = n(477660),
-    s = n.n(o),
+    s = n(477660),
+    o = n.n(s),
     c = n(481060),
     d = n(241209),
     u = n(547563),
     p = n(388032),
     m = n(582735);
-let h = s().parserFor(u.Z),
-    g = s().reactFor(s().ruleOutput(u.Z, 'react'));
+let h = o().parserFor(u.Z),
+    g = o().reactFor(o().ruleOutput(u.Z, 'react'));
 function _(e) {
     let { description: t, supportsMarkdown: n } = e,
-        [i, o] = a.useState(!1),
-        s = a.useRef(null);
+        [i, s] = a.useState(!1),
+        o = a.useRef(null);
     a.useEffect(() => {
-        if (null == s.current) return;
+        if (null == o.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, r;
-            o((null != (n = null == (e = s.current) ? void 0 : e.scrollHeight) ? n : 0) - (null != (r = null == (t = s.current) ? void 0 : t.clientHeight) ? r : 0) > 1);
+            s((null != (n = null == (e = o.current) ? void 0 : e.scrollHeight) ? n : 0) - (null != (r = null == (t = o.current) ? void 0 : t.clientHeight) ? r : 0) > 1);
         });
-        return e.observe(s.current), () => e.disconnect();
+        return e.observe(o.current), () => e.disconnect();
     }, []);
     let [u, p] = a.useState(!1),
         _ = a.useCallback(() => {
@@ -31,7 +31,7 @@ function _(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                ref: s,
+                ref: o,
                 className: l()({
                     [m.descriptionClamp]: !u,
                     [m.descriptionClampSafari]: !u && 'Safari' === platform.name
@@ -96,23 +96,23 @@ let b = function (e) {
     var t, n;
     let { application: i } = e,
         l = null == (t = i.directory_entry) ? void 0 : t.detailed_description,
-        o = null == (n = i.directory_entry) ? void 0 : n.short_description,
-        s = a.useMemo(
+        s = null == (n = i.directory_entry) ? void 0 : n.short_description,
+        o = a.useMemo(
             () =>
                 null != l && l.length > 0
                     ? (0, r.jsx)(_, {
                           description: l,
                           supportsMarkdown: !0
                       })
-                    : null != o && o.length > 0
+                    : null != s && s.length > 0
                       ? (0, r.jsx)(_, {
-                            description: o,
+                            description: s,
                             supportsMarkdown: !1
                         })
                       : null,
-            [l, o]
+            [l, s]
         );
-    return null == s
+    return null == o
         ? null
         : (0, r.jsxs)('div', {
               className: m.overviewContainer,
@@ -122,7 +122,7 @@ let b = function (e) {
                       color: 'header-primary',
                       children: p.NW.string(p.t.txraKS)
                   }),
-                  s
+                  o
               ]
           });
 };

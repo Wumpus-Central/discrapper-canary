@@ -8,8 +8,8 @@ var r,
     a = n(200651),
     i = n(192379),
     l = n(120356),
-    o = n.n(l),
-    s = n(481060),
+    s = n.n(l),
+    o = n(481060),
     c = n(768762),
     d = n(265072);
 function u(e, t, n) {
@@ -37,9 +37,9 @@ class m extends (r = i.PureComponent) {
     render() {
         let { renderItem: e, items: t, vertical: n, paginationContainerClass: r, align: l } = this.props,
             c = n ? d.verticalPaginationItemContainer : d.horizontalPaginationItemContainer;
-        return (0, a.jsx)(s.yWw, {
+        return (0, a.jsx)(o.yWw, {
             orientation: n ? 'vertical' : 'horizontal',
-            className: o()(c, r, l),
+            className: s()(c, r, l),
             ref: this.handleSetScrollerRef,
             children: t.map((t, n) =>
                 i.cloneElement(e(t, n), {
@@ -89,10 +89,10 @@ u(m, 'Align', p),
 class h extends i.PureComponent {
     render() {
         let { className: e } = this.props;
-        return (0, a.jsx)(s.zxk, {
-            look: s.zxk.Looks.BLANK,
-            size: s.zxk.Sizes.NONE,
-            className: o()(d.prevButtonContainer, e),
+        return (0, a.jsx)(o.zxk, {
+            look: o.zxk.Looks.BLANK,
+            size: o.zxk.Sizes.NONE,
+            className: s()(d.prevButtonContainer, e),
             onClick: this.handlePrevClick,
             children: (0, a.jsx)(c.Z, {
                 className: d.arrow,
@@ -112,10 +112,10 @@ class h extends i.PureComponent {
 class g extends i.PureComponent {
     render() {
         let { className: e } = this.props;
-        return (0, a.jsx)(s.zxk, {
-            look: s.zxk.Looks.BLANK,
-            size: s.zxk.Sizes.NONE,
-            className: o()(d.nextButtonContainer, e),
+        return (0, a.jsx)(o.zxk, {
+            look: o.zxk.Looks.BLANK,
+            size: o.zxk.Sizes.NONE,
+            className: s()(d.nextButtonContainer, e),
             onClick: this.handleNextClick,
             children: (0, a.jsx)(c.Z, {
                 className: d.arrow,

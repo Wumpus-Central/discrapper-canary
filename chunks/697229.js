@@ -19,7 +19,7 @@ function u(e) {
               label: s.NW.string(s.t['6uDHk5']),
               action: function () {
                   (0, o.ZDy)(async () => {
-                      let { default: t } = await n.e('29608').then(n.bind(n, 178125));
+                      let { default: t } = await n.e('95257').then(n.bind(n, 178125));
                       return (n) => {
                           var i, o;
                           return (0, r.jsx)(

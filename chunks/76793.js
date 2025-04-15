@@ -1,4 +1,4 @@
-n.d(t, { q: () => N });
+n.d(t, { q: () => _ });
 var r = n(200651),
     i = n(192379),
     s = n(442837),
@@ -21,7 +21,7 @@ function f(e) {
         b = i.useCallback(() => {
             (0, c.Zn)(t);
         }, [t]),
-        N = i.useCallback(() => (0, u.openUserProfileModal)({ userId: t }), [t]);
+        _ = i.useCallback(() => (0, u.openUserProfileModal)({ userId: t }), [t]);
     return (
         i.useEffect(() => {
             (0, l.PR)(t);
@@ -40,7 +40,7 @@ function f(e) {
                     children: [
                         (0, r.jsx)(a.P3F, {
                             className: h.username,
-                            onClick: N,
+                            onClick: _,
                             children: (0, r.jsx)(a.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'interactive-active',
@@ -98,7 +98,7 @@ function b(e) {
         ]
     });
 }
-function N(e) {
+function _(e) {
     let { userId: t } = e,
         n = (0, d._)(t);
     return (0, r.jsxs)(r.Fragment, {

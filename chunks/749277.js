@@ -1,4 +1,4 @@
-n.d(t, { A: () => U });
+n.d(t, { A: () => b });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -8,32 +8,32 @@ var i = n(442837),
     s = n(230711),
     c = n(726542),
     u = n(100527),
-    E = n(231757),
-    d = n(674525),
+    d = n(231757),
+    E = n(674525),
     _ = n(963249),
     I = n(346585),
-    N = n(303172),
-    O = n(463230),
+    O = n(303172),
+    N = n(463230),
     T = n(246965),
     S = n(703656),
     p = n(706454),
-    R = n(933429),
-    A = n(395361),
+    A = n(933429),
+    R = n(395361),
     P = n(626135),
-    C = n(243778),
-    f = n(921944),
+    f = n(243778),
+    C = n(921944),
     D = n(981631),
     g = n(801461),
-    m = n(474936),
-    y = n(388032),
+    y = n(474936),
+    m = n(388032),
     h = n(131715);
-let U = (e) => {
-    let { dismissibleContent: t, noticeType: U } = e,
-        b = (0, i.e7)([R.ZP], () => R.ZP.getNotice()),
+let b = (e) => {
+    let { dismissibleContent: t, noticeType: b } = e,
+        U = (0, i.e7)([A.ZP], () => A.ZP.getNotice()),
         M = (0, i.e7)([p.default], () => p.default.locale);
-    return (0, r.jsx)(C.ZP, {
+    return (0, r.jsx)(f.ZP, {
         contentTypes: [t],
-        groupName: f.R.NOTICE_BAR,
+        groupName: C.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e;
@@ -43,15 +43,15 @@ let U = (e) => {
                         color: o.DM8.DEFAULT,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(f.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(C.L.UNKNOWN),
+                                noticeType: b
                             }),
-                            y.NW.string(y.t['+xn1o6']),
+                            m.NW.string(m.t['+xn1o6']),
                             (0, r.jsx)('i', { className: h.iconApple }),
                             (0, r.jsx)('i', { className: h.iconAndroid }),
                             (0, r.jsx)('i', { className: h.iconWindows }),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: U,
+                                noticeType: b,
                                 onClick: () => {
                                     (0, o.ZDy)(async () => {
                                         let { default: e } = await Promise.resolve().then(n.bind(n, 431583));
@@ -86,7 +86,7 @@ let U = (e) => {
                                             );
                                     });
                                 },
-                                children: y.NW.string(y.t['1WjMbG'])
+                                children: m.NW.string(m.t['1WjMbG'])
                             })
                         ]
                     });
@@ -95,19 +95,19 @@ let U = (e) => {
                         color: o.DM8.SPOTIFY,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(f.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(C.L.UNKNOWN),
+                                noticeType: b
                             }),
-                            (0, r.jsx)(A.Z, { className: h.platformIcon }),
-                            y.NW.string(y.t['5NUVHB']),
+                            (0, r.jsx)(R.Z, { className: h.platformIcon }),
+                            m.NW.string(m.t['5NUVHB']),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () =>
-                                    (0, E.Z)({
+                                    (0, d.Z)({
                                         platformType: D.ABu.SPOTIFY,
                                         location: 'Notice Bar'
                                     }),
-                                noticeType: U,
-                                children: y.NW.string(y.t.S0W8Z2)
+                                noticeType: b,
+                                children: m.NW.string(m.t.S0W8Z2)
                             })
                         ]
                     });
@@ -115,20 +115,20 @@ let U = (e) => {
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.PLAYSTATION,
                         children: [
-                            (0, r.jsx)(o.RyX, { onClick: () => i(f.L.UNKNOWN) }),
+                            (0, r.jsx)(o.RyX, { onClick: () => i(C.L.UNKNOWN) }),
                             (0, r.jsx)('img', {
                                 alt: '',
                                 className: h.platformIcon,
                                 src: c.Z.get(D.ABu.PLAYSTATION).icon.whiteSVG
                             }),
-                            y.NW.string(y.t.WHWgoa),
+                            m.NW.string(m.t.WHWgoa),
                             (0, r.jsx)(o.EyT, {
                                 onClick: () =>
-                                    (0, E.Z)({
+                                    (0, d.Z)({
                                         platformType: D.ABu.PLAYSTATION,
                                         location: 'Notice Bar'
                                     }),
-                                children: y.NW.string(y.t.S0W8Z2)
+                                children: m.NW.string(m.t.S0W8Z2)
                             })
                         ]
                     });
@@ -137,14 +137,14 @@ let U = (e) => {
                         color: o.DM8.DEFAULT,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(f.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(C.L.UNKNOWN),
+                                noticeType: b
                             }),
-                            y.NW.string(y.t.B2hnhY),
+                            m.NW.string(m.t.B2hnhY),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () => s.Z.open(D.oAB.ACCOUNT),
-                                noticeType: U,
-                                children: y.NW.string(y.t['50KYxs'])
+                                noticeType: b,
+                                children: m.NW.string(m.t['50KYxs'])
                             })
                         ]
                     });
@@ -155,11 +155,11 @@ let U = (e) => {
                             (0, r.jsx)('span', { className: h.premiumLogo }),
                             (0, r.jsx)('span', {
                                 className: h.premiumText,
-                                children: y.NW.string(y.t['+urf7+'])
+                                children: m.NW.string(m.t['+urf7+'])
                             }),
                             (0, r.jsx)(o.NoS, {
                                 className: h.premiumAction,
-                                noticeType: U,
+                                noticeType: b,
                                 onClick: () => {
                                     P.default.track(D.rMx.PREMIUM_PROMOTION_OPENED, {
                                         location_section: D.jXE.NOTIFICATION_BAR,
@@ -167,84 +167,84 @@ let U = (e) => {
                                     }),
                                         s.Z.open(D.oAB.PREMIUM);
                                 },
-                                children: y.NW.string(y.t['8JC5e3'])
+                                children: m.NW.string(m.t['8JC5e3'])
                             }),
                             (0, r.jsx)(o.RyX, {
                                 onClick: () => {
-                                    i(f.L.UNKNOWN), (0, a.mB)(D.xW$.PREMIUM_PROMO_DISMISSED, !0);
+                                    i(C.L.UNKNOWN), (0, a.mB)(D.xW$.PREMIUM_PROMO_DISMISSED, !0);
                                 },
-                                noticeType: U
+                                noticeType: b
                             })
                         ]
                     });
                 case l.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
                     return (0, r.jsx)(T.Z, {
-                        dismissCurrentNotice: () => i(f.L.UNKNOWN),
-                        subscriptionTier: m.Si.TIER_2
+                        dismissCurrentNotice: () => i(C.L.UNKNOWN),
+                        subscriptionTier: y.Si.TIER_2
                     });
                 case l.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
                     return (0, r.jsx)(T.Z, {
-                        dismissCurrentNotice: () => i(f.L.UNKNOWN),
-                        subscriptionTier: m.Si.TIER_0
+                        dismissCurrentNotice: () => i(C.L.UNKNOWN),
+                        subscriptionTier: y.Si.TIER_0
                     });
                 case l.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.PREMIUM_TIER_2,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                noticeType: U,
-                                onClick: () => i(f.L.UNKNOWN)
+                                noticeType: b,
+                                onClick: () => i(C.L.UNKNOWN)
                             }),
-                            y.NW.string(y.t['0KFB2N']),
+                            m.NW.string(m.t['0KFB2N']),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: U,
+                                noticeType: b,
                                 onClick: () => {
-                                    i(f.L.UNKNOWN), s.Z.open(D.oAB.PREMIUM);
+                                    i(C.L.UNKNOWN), s.Z.open(D.oAB.PREMIUM);
                                 },
-                                children: y.NW.string(y.t.pyYSiI)
+                                children: m.NW.string(m.t.pyYSiI)
                             })
                         ]
                     });
                 case l.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
-                    return (0, r.jsx)(O.Z, {
-                        notice: b,
-                        noticeType: U,
-                        dismissCurrentNotice: () => i(f.L.UNKNOWN)
+                    return (0, r.jsx)(N.Z, {
+                        notice: U,
+                        noticeType: b,
+                        dismissCurrentNotice: () => i(C.L.UNKNOWN)
                     });
                 case l.z.NAGBAR_BOUNCED_EMAIL_NOTICE:
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.DANGER,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(f.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(C.L.UNKNOWN),
+                                noticeType: b
                             }),
-                            y.NW.string(y.t['7490vb']),
+                            m.NW.string(m.t['7490vb']),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: U,
+                                noticeType: b,
                                 onClick: () => {
                                     (0, S.uL)(D.Z5c.SETTINGS('account'));
                                 },
-                                children: y.NW.string(y.t.Vm8akJ)
+                                children: m.NW.string(m.t.Vm8akJ)
                             })
                         ]
                     });
                 case l.z.NAGBAR_ACTIVATE_SERVER_SUBSCRIPTION:
-                    let p = d.Z.getEligibleGuildsForNagActivate();
+                    let p = E.Z.getEligibleGuildsForNagActivate();
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.DEFAULT,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(f.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(C.L.UNKNOWN),
+                                noticeType: b
                             }),
-                            y.NW.string(y.t.pJ4hJC),
+                            m.NW.string(m.t.pJ4hJC),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: U,
+                                noticeType: b,
                                 onClick: () => {
-                                    i(f.L.PRIMARY), (0, S.uL)(1 === p.length ? D.Z5c.GUILD_SETTINGS(p[0], 'role-subscriptions') : D.Z5c.PICK_GUILD_SETTINGS('role-subscriptions', void 0, 'server-subscriptions-finish-setting-up'));
+                                    i(C.L.PRIMARY), (0, S.uL)(1 === p.length ? D.Z5c.GUILD_SETTINGS(p[0], 'role-subscriptions') : D.Z5c.PICK_GUILD_SETTINGS('role-subscriptions', void 0, 'server-subscriptions-finish-setting-up'));
                                 },
-                                children: y.NW.string(y.t['74s74O'])
+                                children: m.NW.string(m.t['74s74O'])
                             })
                         ]
                     });
@@ -253,14 +253,14 @@ let U = (e) => {
                         color: o.DM8.WARNING,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(f.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(C.L.UNKNOWN),
+                                noticeType: b
                             }),
-                            y.NW.format(y.t.pdYZys, {}),
+                            m.NW.format(m.t.pdYZys, {}),
                             (0, r.jsx)(o.NoS, {
-                                onClick: () => (0, N.Z)(g.Kq.NOTICE),
-                                noticeType: U,
-                                children: y.NW.string(y.t.LhlgY2)
+                                onClick: () => (0, O.Z)(g.Kq.NOTICE),
+                                noticeType: b,
+                                children: m.NW.string(m.t.LhlgY2)
                             })
                         ]
                     });
@@ -269,14 +269,14 @@ let U = (e) => {
                         color: o.DM8.WARNING,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(f.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(C.L.UNKNOWN),
+                                noticeType: b
                             }),
-                            y.NW.format(y.t.zT1hgo, { date: (0, I.IE)(M) }),
+                            m.NW.format(m.t.zT1hgo, { date: (0, I.IE)(M) }),
                             (0, r.jsx)(o.NoS, {
-                                onClick: () => (0, N.Z)(g.Kq.NOTICE),
-                                noticeType: U,
-                                children: y.NW.string(y.t.LhlgY2)
+                                onClick: () => (0, O.Z)(g.Kq.NOTICE),
+                                noticeType: b,
+                                children: m.NW.string(m.t.LhlgY2)
                             })
                         ]
                     });
@@ -285,21 +285,21 @@ let U = (e) => {
                         color: o.DM8.PREMIUM_TIER_2,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(f.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(C.L.UNKNOWN),
+                                noticeType: b
                             }),
-                            y.NW.string(y.t['O9GI+v']),
+                            m.NW.string(m.t['O9GI+v']),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () => {
                                     (0, _.Z)({
-                                        subscriptionTier: m.Si.TIER_2,
+                                        subscriptionTier: y.Si.TIER_2,
                                         analyticsLocations: [u.Z.CHECKOUT_RECOVERY_NAGBAR],
                                         analyticsLocation: D.Sbl.CHECKOUT_RECOVERY_NAGBAR,
-                                        onClose: () => i(f.L.UNKNOWN)
+                                        onClose: () => i(C.L.UNKNOWN)
                                     });
                                 },
-                                noticeType: U,
-                                children: y.NW.string(y.t.Zi69Dw)
+                                noticeType: b,
+                                children: m.NW.string(m.t.Zi69Dw)
                             })
                         ]
                     });

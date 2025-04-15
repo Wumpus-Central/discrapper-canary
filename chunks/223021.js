@@ -1,4 +1,4 @@
-r.d(t, { Z: () => a }), r(35282);
+r.d(t, { Z: () => o }), r(35282);
 var n = r(848697);
 let l = {
         LATIN12: n.latin12CompactTimeStamp,
@@ -6,6 +6,6 @@ let l = {
         ASIAN: n.asianCompactTimeStamp
     },
     i = /(AM|PM)$/;
-function a(e) {
+function o(e) {
     return null != e.match(i) ? l.LATIN24 : e.length <= 5 ? l.LATIN12 : l.ASIAN;
 }

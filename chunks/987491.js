@@ -14,14 +14,14 @@ var r = n(200651),
     j = n(826581),
     b = n(246364),
     f = n(98493),
-    p = n(328977),
-    N = n(412222),
+    N = n(328977),
+    p = n(412222),
     g = n(223312),
     _ = n(768762),
-    C = n(171368),
-    v = n(598077),
-    E = n(430824),
-    T = n(51144),
+    v = n(171368),
+    C = n(598077),
+    T = n(430824),
+    E = n(51144),
     I = n(388032),
     S = n(555405),
     P = n(710931),
@@ -117,7 +117,7 @@ let w = l.memo(function (e) {
                 (e) => {
                     e.stopPropagation(),
                         e.preventDefault(),
-                        (0, C.openUserProfileModal)({
+                        (0, v.openUserProfileModal)({
                             userId: n.id,
                             joinRequestId: i
                         });
@@ -160,7 +160,7 @@ let w = l.memo(function (e) {
                         children: (0, r.jsx)(d.P3F, {
                             onClick: s,
                             tag: 'span',
-                            children: T.ZP.getUserTag(n)
+                            children: E.ZP.getUserTag(n)
                         })
                     })
                 })
@@ -170,10 +170,10 @@ let w = l.memo(function (e) {
     M = l.memo(function (e) {
         let { joinRequest: t, onSelect: i } = e,
             { guildId: s, createdAt: m, applicationStatus: x } = t,
-            h = l.useMemo(() => new v.Z(t.user), [t.user]),
-            j = (0, p.L)({ guildId: s }),
-            f = (0, c.e7)([E.Z], () => E.Z.getGuild(s)),
-            N = x === b.wB.SUBMITTED,
+            h = l.useMemo(() => new C.Z(t.user), [t.user]),
+            j = (0, N.L)({ guildId: s }),
+            f = (0, c.e7)([T.Z], () => T.Z.getGuild(s)),
+            p = x === b.wB.SUBMITTED,
             g = (e) => {
                 (0, u.jW)(
                     e,
@@ -258,7 +258,7 @@ let w = l.memo(function (e) {
                       (0, r.jsx)('td', {
                           className: S.moreOptionsCol,
                           children:
-                              N &&
+                              p &&
                               (0, r.jsx)(d.ua7, {
                                   text: I.NW.string(I.t.x8Nn4O),
                                   children: (e) => {
@@ -324,8 +324,8 @@ let w = l.memo(function (e) {
 function k(e) {
     let { guildId: t, currentTab: n } = e,
         i = l.useRef(null),
-        a = (0, c.e7)([E.Z], () => E.Z.getGuild(t)),
-        s = (0, N.C)({ guildId: t }),
+        a = (0, c.e7)([T.Z], () => T.Z.getGuild(t)),
+        s = (0, p.C)({ guildId: t }),
         o = (0, c.e7)([j.Z], () => j.Z.isFetching()),
         { guildJoinRequests: u } = (0, g.j)({
             guildId: t,

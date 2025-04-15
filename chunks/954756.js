@@ -42,13 +42,13 @@ function h() {
             }
             p && (0, a.b9)(), h(!1);
         }, []),
-        N = i.useCallback(() => {
+        _ = i.useCallback(() => {
             (0, a.W3)();
         }, []);
     return (0, r.jsx)(l.Z, {
         submitting: n,
         onSave: b,
-        onReset: N,
+        onReset: _,
         disabled: e,
         errorMessage: null != f ? f : void 0
     });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(481060),
@@ -14,16 +14,16 @@ var r = n(200651),
     h = n(51331),
     f = n(922628),
     b = n(703115),
-    N = n(526761),
-    x = n(726985),
-    _ = n(736530),
+    _ = n(526761),
+    N = n(726985),
+    x = n(736530),
     E = n(981631),
     j = n(388032);
-function O(e) {
+function C(e) {
     let { ingress: t, guildId: n } = e,
-        N = (0, g.c_)(),
-        O = u.h2.useSetting().includes(n),
-        C = (0, d.q)(),
+        _ = (0, g.c_)(),
+        C = u.h2.useSetting().includes(n),
+        O = (0, d.q)(),
         S = (0, m.r)(),
         v = i.useCallback(
             (e) => {
@@ -61,29 +61,29 @@ function O(e) {
         },
         y = S ? j.NW.string(j.t.PMsfcH) : j.NW.string(j.t.RAQUSE);
     return (0, r.jsx)(p.U, {
-        setting: x.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
+        setting: N.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
         children:
-            n === _.T
+            n === x.T
                 ? (0, r.jsx)(h.Z, {
                       title: y,
                       note: S ? j.NW.string(j.t.XXGmuL) : j.NW.string(j.t.wbYDfX),
-                      value: !C,
+                      value: !O,
                       onChange: (e) => {
                           I(!e);
                       }
                   })
                 : (0, r.jsx)(h.Z, {
                       title: y,
-                      note: N ? j.NW.string(j.t.V0ka0d) : S ? j.NW.string(j.t.F9WY3d) : j.NW.string(j.t.G7c3Xl),
-                      value: !O,
+                      note: _ ? j.NW.string(j.t.V0ka0d) : S ? j.NW.string(j.t.F9WY3d) : j.NW.string(j.t.G7c3Xl),
+                      value: !C,
                       onChange: v
                   })
     });
 }
-function C(e) {
-    let { ingress: t = N.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
+function O(e) {
+    let { ingress: t = _.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
         i = (0, g.is)();
-    return (0, r.jsx)(O, {
+    return (0, r.jsx)(C, {
         ingress: t,
         guildId: null != n ? n : i
     });

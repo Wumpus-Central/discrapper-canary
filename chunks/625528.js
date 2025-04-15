@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => N });
 var r = n(200651);
 n(192379);
 var i = n(100527),
@@ -15,8 +15,8 @@ var i = n(100527),
     h = n(154784),
     f = n(267006),
     b = n(726985),
-    N = n(388032);
-function x() {
+    _ = n(388032);
+function N() {
     let e = (0, o.Z)(),
         { analyticsLocations: t } = (0, s.ZP)([i.Z.USER_SETTINGS_VIDEO_TAB]);
     return (0, r.jsxs)(s.Gt, {
@@ -32,14 +32,14 @@ function x() {
                 ]
             }),
             (0, r.jsx)(a.Z, {
-                title: N.NW.string(N.t.KDdjoq),
+                title: _.NW.string(_.t.KDdjoq),
                 webSetting: b.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
                 children: (0, r.jsxs)(l.Z, {
                     children: [(0, r.jsx)(p.Z, { refreshStyles: !0 }), e && (0, r.jsx)(g.Z, { refreshStyles: !0 }), (0, r.jsx)(m.Z, { refreshStyles: !0 })]
                 })
             }),
             (0, r.jsx)(a.Z, {
-                title: N.NW.string(N.t['8/udY2']),
+                title: _.NW.string(_.t['8/udY2']),
                 webSetting: b.s6.VOICE_AND_VIDEO_VIDEO_ADVANCED,
                 children: (0, r.jsx)(l.Z, { children: (0, r.jsx)(f.Z, { refreshStyles: !0 }) })
             })

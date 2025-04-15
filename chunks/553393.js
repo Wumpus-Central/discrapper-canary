@@ -84,7 +84,7 @@ function V(e) {
         q = (0, s.e7)([g.Z], () => g.Z.getState().theme),
         Q = (0, l.wj)(q) ? D.BR.DARK : D.BR.LIGHT,
         X = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
-        { ref: J, height: $ } = (0, f.Z)(),
+        { ref: J, height: $ } = (0, f.ZP)(),
         [ee, et] = i.useState(X),
         en = (0, _.Aq)(),
         er = (0, a.eg)();

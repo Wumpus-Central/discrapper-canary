@@ -3,8 +3,8 @@ var r = n(200651),
     a = n(192379),
     i = n(481060),
     l = n(881294),
-    o = n(258971),
-    s = n(133743),
+    s = n(258971),
+    o = n(133743),
     c = n(981631),
     d = n(388032),
     u = n(462057);
@@ -14,9 +14,9 @@ function p(e) {
             (0, l.zZ)(c.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                 category: e.name,
                 category_id: e.id,
-                current_page: o.m_.APPLICATION
+                current_page: s.m_.APPLICATION
             }),
-                (0, s.pR)({ categoryId: e.id });
+                (0, o.pR)({ categoryId: e.id });
         }, []);
     return null == t.categories || 0 === t.categories.length
         ? null

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(704826), n(35282), n(539854), n(49124), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { Z: () => O }), n(388685), n(704826), n(35282), n(539854), n(49124), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -14,9 +14,9 @@ var r = n(200651),
     h = n(489495),
     f = n(189),
     b = n(662583),
-    N = n(346537),
-    x = n(830318);
-function _(e) {
+    _ = n(346537),
+    N = n(830318);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,11 +64,11 @@ let j = {
         [h.cq.STATIC]: null,
         [h.cq.REDUCED_MOTION]: null
     },
-    O = 'debug',
-    C = (e) => {
+    C = 'debug',
+    O = (e) => {
         let { effect: t, back: n } = e,
             { upsertConfig: s } = (0, p.n6)(),
-            C = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+            O = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
             [S, v] = i.useState(!0),
             T = i.useRef(null),
             [I, y] = i.useState(!1),
@@ -81,11 +81,11 @@ let j = {
             M = i.useMemo(
                 () => ({
                     type: l.Z.PROFILE_EFFECT,
-                    id: O,
-                    skuId: O,
-                    title: O,
-                    description: O,
-                    accessibilityLabel: O,
+                    id: C,
+                    skuId: C,
+                    title: C,
+                    description: C,
+                    accessibilityLabel: C,
                     reducedMotionSrc: '',
                     effects: R,
                     animationType: 0
@@ -100,7 +100,7 @@ let j = {
                 let n = U(t);
                 null != n &&
                     (0, h.i0)(n, (t) => {
-                        w((r) => E(_({}, r), { [e]: (0, h.z)(t, n) }));
+                        w((r) => E(x({}, r), { [e]: (0, h.z)(t, n) }));
                     });
             },
             G = (e, t) => {
@@ -111,7 +111,7 @@ let j = {
                             let i = [...r],
                                 s = r[t];
                             if (null == s) return r;
-                            let a = _({}, s);
+                            let a = x({}, s);
                             return (
                                 null == a.randomizedSources && (a.randomizedSources = []),
                                 a.randomizedSources.push({
@@ -125,7 +125,7 @@ let j = {
                     });
             },
             F = (e) => {
-                w((t) => E(_({}, t), { [e]: null }));
+                w((t) => E(x({}, t), { [e]: null }));
             };
         i.useEffect(() => {
             let e = t.config.effects;
@@ -144,7 +144,7 @@ let j = {
                         let [t, n] = e;
                         if (null != n) {
                             let e = (0, h.$j)(n.base64);
-                            (n.src = e), k.current.push(e), w((e) => E(_({}, e), { [t]: n }));
+                            (n.src = e), k.current.push(e), w((e) => E(x({}, e), { [t]: n }));
                         }
                     });
             }, [t.config.stillFrames]);
@@ -176,7 +176,7 @@ let j = {
             },
             []
         ),
-        null == C)
+        null == O)
             ? (0, r.jsx)('div', {})
             : (0, r.jsxs)('div', {
                   className: b.root,
@@ -195,7 +195,7 @@ let j = {
                                   className: a()(b.col, b.preview),
                                   children: [
                                       (0, r.jsx)('img', {
-                                          src: I ? N : x,
+                                          src: I ? _ : N,
                                           alt: '',
                                           width: 450
                                       }),
@@ -367,9 +367,9 @@ let j = {
                                                       (0, r.jsx)(d.Z, {
                                                           fileContents: () =>
                                                               JSON.stringify(
-                                                                  E(_({}, t), {
+                                                                  E(x({}, t), {
                                                                       name: W,
-                                                                      config: E(_({}, t.config), {
+                                                                      config: E(x({}, t.config), {
                                                                           effects: R,
                                                                           stillFrames: Z
                                                                       })
@@ -451,7 +451,7 @@ let j = {
                                                   className: a()(b.userProfilePreview, b.preview),
                                                   children: [
                                                       (0, r.jsx)(m.Z, {
-                                                          user: C,
+                                                          user: O,
                                                           pendingAvatar: void 0,
                                                           pendingProfileEffectId: null,
                                                           canUsePremiumCustomization: !0,

@@ -21,18 +21,18 @@ var r = n(200651),
     h = n(920321),
     f = n(921801),
     b = n(695346),
-    N = n(938117),
-    x = n(131951),
-    _ = n(626135),
+    _ = n(938117),
+    N = n(131951),
+    x = n(626135),
     E = n(358085),
     j = n(981631),
-    O = n(726985),
-    C = n(388032),
+    C = n(726985),
+    O = n(388032),
     S = n(602985);
 let v = /\{65E8773D-8F56-11D0-A3B9-00A0C9223196\}/i;
 function T() {
     let [e, t] = i.useState(!1),
-        n = (0, c.e7)([x.Z], () => x.Z.isMediaFilterSettingLoading());
+        n = (0, c.e7)([N.Z], () => N.Z.isMediaFilterSettingLoading());
     return (i.useEffect(() => {
         let e = new d.V7();
         return (
@@ -54,9 +54,9 @@ function T() {
 function I(e) {
     let { hideDeviceSelector: t = !1, hideDeviceHeader: n = !1, hideCameraSettingsLink: i = !1, onLearnMore: s, selectedBackgroundOption: l, onSelectBackgroundOption: d, renderCamera: T, hidePreviewToggle: I = !1, showSmallBackgroundOptions: y = !1, onCancelPreview: A } = e,
         { analyticsLocations: P } = (0, p.ZP)(),
-        { currentDeviceId: R, isVideoAvailable: D } = (0, c.cj)([x.Z], () => ({
-            currentDeviceId: x.Z.getVideoDeviceId(),
-            isVideoAvailable: x.Z.isVideoAvailable()
+        { currentDeviceId: R, isVideoAvailable: D } = (0, c.cj)([N.Z], () => ({
+            currentDeviceId: N.Z.getVideoDeviceId(),
+            isVideoAvailable: N.Z.isVideoAvailable()
         })),
         Z = (0, h.Z)(),
         w = b.qF.useSetting(),
@@ -70,43 +70,43 @@ function I(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             T(R),
-            x.Z.isEnabled()
+            N.Z.isEnabled()
                 ? null
                 : (0, r.jsx)(u.Text, {
                       className: S.permissionWarning,
                       color: 'interactive-normal',
                       variant: 'text-sm/normal',
-                      children: C.NW.format(C.t.stagfH, { onEnableClick: () => m.Z.enable(!0) })
+                      children: O.NW.format(O.t.stagfH, { onEnableClick: () => m.Z.enable(!0) })
                   }),
             I
                 ? null
                 : (0, r.jsx)(u.j7V, {
                       className: S.previewToggle,
-                      note: C.NW.string(C.t.WNbX4O),
+                      note: O.NW.string(O.t.WNbX4O),
                       onChange: (e) => {
-                          b.qF.updateSetting(e), _.default.track(j.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                          b.qF.updateSetting(e), x.default.track(j.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
                       },
                       value: w,
                       hideBorder: !0,
                       children: (0, r.jsx)('div', {
                           className: S.cameraPreviewTitle,
-                          children: C.NW.string(C.t['3Ppr1t'])
+                          children: O.NW.string(O.t['3Ppr1t'])
                       })
                   }),
             !t &&
                 (0, r.jsx)(f.F, {
-                    setting: O.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW,
+                    setting: C.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW,
                     children: (0, r.jsxs)(u.xJW, {
-                        title: n ? null : C.NW.string(C.t.FsQ3OT),
+                        title: n ? null : O.NW.string(O.t.FsQ3OT),
                         children: [
                             (0, r.jsx)(u.q4e, {
-                                placeholder: C.NW.string(C.t['t9eQ/v']),
+                                placeholder: O.NW.string(O.t['t9eQ/v']),
                                 className: a()(S.selector, { [S.selectorNoHeader]: n }),
                                 options: k,
                                 value: R,
                                 isDisabled: !D,
                                 onChange: (e) => m.Z.setVideoDevice(e),
-                                'aria-label': C.NW.string(C.t['t9eQ/v'])
+                                'aria-label': O.NW.string(O.t['t9eQ/v'])
                             }),
                             !i &&
                                 !!(0, E.isWindows)() &&
@@ -114,9 +114,9 @@ function I(e) {
                                 o().satisfies(g.Z.os.release, '>=10.0.22000') &&
                                 (0, r.jsx)(u.R94, {
                                     className: S.cameraDeeplink,
-                                    children: C.NW.format(C.t.aJYgRk, {
+                                    children: O.NW.format(O.t.aJYgRk, {
                                         onCameraSettingsClick: () => {
-                                            null == A || A(), window.open((0, E.getPlatform)() === E.PlatformTypes.WINDOWS ? 'ms-settings:camera' + (null != R ? '?cameraId='.concat(encodeURIComponent(R.replace(v, '{E5323777-F976-4f5b-9B55-B94699C46E44}'))) : '') : ''), _.default.track(j.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: P });
+                                            null == A || A(), window.open((0, E.getPlatform)() === E.PlatformTypes.WINDOWS ? 'ms-settings:camera' + (null != R ? '?cameraId='.concat(encodeURIComponent(R.replace(v, '{E5323777-F976-4f5b-9B55-B94699C46E44}'))) : '') : ''), x.default.track(j.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: P });
                                         }
                                     })
                                 })
@@ -124,8 +124,8 @@ function I(e) {
                     })
                 }),
             (0, r.jsx)(f.F, {
-                setting: O.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
-                children: (0, r.jsx)(N.Z, {
+                setting: C.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
+                children: (0, r.jsx)(_.Z, {
                     className: S.spacingTop24,
                     onLearnMore: s,
                     selectedBackgroundOption: l,

@@ -26,13 +26,13 @@ var r = n(192379),
     h = n(880257),
     f = n(631885),
     b = n(223639),
-    N = n(160913),
-    x = n(725727),
-    _ = n(977156),
+    _ = n(160913),
+    N = n(725727),
+    x = n(977156),
     E = n(921157),
     j = n(667172),
-    O = n(237292),
-    C = n(314897),
+    C = n(237292),
+    O = n(314897),
     S = n(906467),
     v = n(283595),
     T = n(699516),
@@ -93,8 +93,8 @@ function M(e) {
 }
 function U() {
     var e, t, n, a;
-    let S = (0, x.YO)().length,
-        P = (0, N.U)(),
+    let S = (0, N.YO)().length,
+        P = (0, _.U)(),
         k = (0, i.e7)([I.Z], () => I.Z.getProps().impressionSource),
         W = (0, f.gU)(),
         B = (0, w.bC)(),
@@ -112,13 +112,13 @@ function U() {
     let { shouldMergeGameSettings: G } = A.b.useExperiment({ location: 'settings' }),
         F = (0, g.Xo)({ location: 'settings' }),
         H = null != (n = null == (e = y.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
-        z = (0, O.y0)({ location: 'settings' }),
+        z = (0, C.y0)({ location: 'settings' }),
         Y = (0, j.v4)({ location: 'settings' }),
         K = (0, o.Q)(),
-        q = (0, _.Zy)({ location: L.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        q = (0, x.Zy)({ location: L.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         { enabled: X } = b.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
-        J = (0, i.e7)([v.Z], () => v.Z.hasLibraryApplication()),
-        Q = (0, i.e7)([C.default], () => C.default.hasTOTPEnabled()),
+        Q = (0, i.e7)([v.Z], () => v.Z.hasLibraryApplication()),
+        J = (0, i.e7)([O.default], () => O.default.hasTOTPEnabled()),
         $ = R.Sb.useSetting(),
         ee = (0, p.Z)(),
         { hypeSquadRemoved: et } = m.Z.useExperiment({ location: 'settings' }),
@@ -151,8 +151,8 @@ function U() {
                 isEligibleForQuests: q,
                 showGiftNitro: X,
                 isStricterMessageRequestsEnabled: ee,
-                hasLibraryApplication: J,
-                hasTOTPEnabled: Q,
+                hasLibraryApplication: Q,
+                hasTOTPEnabled: J,
                 developerMode: $,
                 isAdultUser: en,
                 hasSecureFramesVerifiedUserIds: er,
@@ -162,7 +162,7 @@ function U() {
                 useRefreshedVoiceAndVideo: ea,
                 isEligibleForSensitiveContentDefaults: el
             }),
-        [$, U, ei, es, J, er, Q, et, k, en, q, Y, z, F, B, H, ee, W, K, G, X, P, S, ea, el]
+        [$, U, ei, es, Q, er, J, et, k, en, q, Y, z, F, B, H, ee, W, K, G, X, P, S, ea, el]
     );
 }
 function V(e) {

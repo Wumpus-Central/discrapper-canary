@@ -2,16 +2,16 @@ n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(570140),
-    l = n(317770),
+    l = n(570140),
+    o = n(317770),
     s = n(175281),
     a = n(285371);
-class c extends l.Z {
+class c extends o.Z {
     _initialize() {
-        o.Z.subscribe('SHOW_KEYBOARD_SHORTCUTS', this.showKeyboardShortcuts), o.Z.subscribe('HIDE_KEYBOARD_SHORTCUTS', this.hideKeyboardShortcuts);
+        l.Z.subscribe('SHOW_KEYBOARD_SHORTCUTS', this.showKeyboardShortcuts), l.Z.subscribe('HIDE_KEYBOARD_SHORTCUTS', this.hideKeyboardShortcuts);
     }
     _terminate() {
-        o.Z.unsubscribe('SHOW_KEYBOARD_SHORTCUTS', this.showKeyboardShortcuts), o.Z.unsubscribe('HIDE_KEYBOARD_SHORTCUTS', this.hideKeyboardShortcuts);
+        l.Z.unsubscribe('SHOW_KEYBOARD_SHORTCUTS', this.showKeyboardShortcuts), l.Z.unsubscribe('HIDE_KEYBOARD_SHORTCUTS', this.hideKeyboardShortcuts);
     }
     showKeyboardShortcuts() {
         (0, i.h7j)(

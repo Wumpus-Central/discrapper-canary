@@ -1,7 +1,7 @@
 n.d(t, { Ns: () => m }), n(388685);
-var a = n(192379),
-    r = n(392711),
-    i = n.n(r),
+var r = n(192379),
+    a = n(392711),
+    i = n.n(a),
     o = n(876215),
     l = n(442837),
     c = n(146282),
@@ -15,7 +15,7 @@ function m(e) {
     let { entries: t } = (function () {
         let e = (0, u.Z)(d.YN.GAME_PROFILE_FEED),
             t = (0, u.Z)(d.YN.GLOBAL_FEED),
-            n = a.useMemo(
+            n = r.useMemo(
                 () =>
                     i()(t)
                         .unionBy(e, (e) => e.id)
@@ -30,5 +30,5 @@ function m(e) {
             entries: n
         };
     })();
-    return a.useMemo(() => (null == t ? void 0 : t.filter((t) => ((0, s.dX)(t) || (0, s.Mq)(t)) && t.extra.application_id === e)), [t, e]);
+    return r.useMemo(() => (null == t ? void 0 : t.filter((t) => ((0, s.dX)(t) || (0, s.Mq)(t)) && t.extra.application_id === e)), [t, e]);
 }

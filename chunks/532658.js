@@ -170,7 +170,7 @@ function G(e, t) {
 let U = i.memo(function (e) {
         let { nick: t, connectedOn: n, isSettingsPreview: l, voiceBackgroundWidth: u, rightAlign: d = !1 } = e,
             { showConnectedAnimation: p, recentlyConnected: f, hideConnectedAnimation: O, setHideConnectedAnimation: m } = G(n, l),
-            { ref: y, width: v } = (0, g.Z)(),
+            { ref: y, width: v } = (0, g.ZP)(),
             h = (0, s.e7)([b.Z], () => b.Z.useReducedMotion),
             j = f ? 'entering' : 'exiting',
             { width: P } = (0, a.useSpring)(_(A({}, L[j]), { width: p ? v : u })),
@@ -249,7 +249,7 @@ let U = i.memo(function (e) {
     Y = i.memo(function (e) {
         let { channel: t, flipped: n = !1, locked: l = !1, user: a, nick: u, displayNameMode: d, displayUserMode: p, size: m = V.ipw.LARGE, onClick: b, onContextMenu: y, context: j, guildId: x, isSettingsPreview: C = !1, voiceState: k, showStreamPreview: A, onShowStreamPreview: _, onWatchStream: T, connectedOn: L } = e,
             R = (0, s.e7)([w.default], () => w.default.getId() === a.id, [a.id]),
-            { ref: Y, width: Q } = (0, g.Z)(),
+            { ref: Y, width: Q } = (0, g.ZP)(),
             { showConnectedAnimation: B } = G(L, C),
             K = null == k ? void 0 : k.sessionId,
             q = t.id,

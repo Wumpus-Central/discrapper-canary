@@ -1,45 +1,45 @@
-s.d(t, {
+r.d(t, {
     W: () => a,
     Z: () => c
 });
-var r = s(200651);
-s(192379);
-var n = s(120356),
-    i = s.n(n),
-    o = s(481060),
-    l = s(956542);
+var n = r(200651);
+r(192379);
+var i = r(120356),
+    s = r.n(i),
+    o = r(481060),
+    l = r(956542);
 let a = {
     RED: l.redMessageBlock,
     YELLOW: l.yellowMessageBlock,
     BROWN: l.brownMessageBlock
 };
 function c(e) {
-    let { color: t, icon: s, children: n, className: a } = e;
-    return (0, r.jsx)(o.kzN, {
+    let { color: t, icon: r, children: i, className: a } = e;
+    return (0, n.jsx)(o.kzN, {
         icon: (e) =>
-            (0, r.jsx)(
-                s,
+            (0, n.jsx)(
+                r,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var s = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(s);
+                        var r = null != arguments[t] ? arguments[t] : {},
+                            n = Object.keys(r);
                         'function' == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(s).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(s, e).enumerable;
+                            (n = n.concat(
+                                Object.getOwnPropertySymbols(r).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                 })
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = s[t]),
+                            n.forEach(function (t) {
+                                var n;
+                                (n = r[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: n,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = n);
                             });
                     }
                     return e;
@@ -52,7 +52,7 @@ function c(e) {
                 )
             ),
         iconClassName: l.messageBlockIcon,
-        className: i()(t, a),
-        children: n
+        className: s()(t, a),
+        children: i
     });
 }

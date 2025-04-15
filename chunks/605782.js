@@ -1,9 +1,9 @@
 n.d(t, { Z: () => d }), n(35282);
 var r = n(200651),
     i = n(192379),
-    o = n(512969),
-    a = n(215569);
-function l(e) {
+    s = n(512969),
+    l = n(215569);
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,7 +28,7 @@ function l(e) {
     }
     return e;
 }
-function s(e, t) {
+function a(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,43 +55,43 @@ function c(e, t) {
             var n,
                 r,
                 i = {},
-                o = Object.keys(e);
-            for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                s = Object.keys(e);
+            for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var s = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
 class u extends i.Component {
     render() {
         let e = this.props,
-            { children: t, location: n, history: u, staticContext: d, match: p } = e,
-            h = c(e, ['children', 'location', 'history', 'staticContext', 'match']),
+            { children: t, location: n, history: u, staticContext: d, match: h } = e,
+            p = c(e, ['children', 'location', 'history', 'staticContext', 'match']),
             g = null,
-            m = null;
+            f = null;
         return (
             i.Children.forEach(t, (e) => {
                 if (null == g && i.isValidElement(e)) {
                     let t = e.props,
-                        { component: r, render: a } = t,
-                        p = c(t, ['component', 'render']),
-                        h = p.path || p.from;
-                    null != (g = null != h ? (0, o.LX)(n.pathname, s(l({}, p), { path: h })) : null) &&
-                        ((p = s(l({}, p), {
-                            key: h,
+                        { component: r, render: l } = t,
+                        h = c(t, ['component', 'render']),
+                        p = h.path || h.from;
+                    null != (g = null != p ? (0, s.LX)(n.pathname, a(o({}, h), { path: p })) : null) &&
+                        ((h = a(o({}, h), {
+                            key: p,
                             location: n,
                             match: g,
                             history: u,
                             staticContext: d
                         })),
-                        null != r ? (m = i.createElement(r, p)) : null != a && (m = a(p)));
+                        null != r ? (f = i.createElement(r, h)) : null != l && (f = l(h)));
                 }
             }),
-            (0, r.jsx)(a.W, s(l({}, h), { children: m }))
+            (0, r.jsx)(l.W, a(o({}, p), { children: f }))
         );
     }
 }
-let d = (0, o.EN)(u);
+let d = (0, s.EN)(u);

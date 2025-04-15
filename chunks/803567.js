@@ -15,26 +15,26 @@ var i = n(120356),
     h = n(626135),
     f = n(63063),
     b = n(210887),
-    N = n(738486),
-    x = n(726985),
-    _ = n(981631),
+    _ = n(738486),
+    N = n(726985),
+    x = n(981631),
     E = n(388032),
     j = n(20493);
-let O = n(775322),
-    C = n(853453),
+let C = n(775322),
+    O = n(853453),
     S = (0, u.hQ)(),
     v = {
-        page: _.ZY5.USER_SETTINGS,
-        section: _.jXE.SETTINGS_VOICE_AND_VIDEO
+        page: x.ZY5.USER_SETTINGS,
+        section: x.jXE.SETTINGS_VOICE_AND_VIDEO
     };
 function T(e) {
     let t = e.currentTarget;
-    h.default.track(_.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
+    h.default.track(x.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
         text: t.text,
         href: t.href,
         location: {
-            page: _.ZY5.USER_SETTINGS,
-            section: _.jXE.SETTINGS_VOICE_AND_VIDEO
+            page: x.ZY5.USER_SETTINGS,
+            section: x.jXE.SETTINGS_VOICE_AND_VIDEO
         }
     });
 }
@@ -95,13 +95,13 @@ function I(e) {
                         className: j.marginBottom8,
                         type: o.Dd5.PRIMARY,
                         imageData: {
-                            src: (0, l.ap)(n) ? O : C,
+                            src: (0, l.ap)(n) ? C : O,
                             width: 70,
                             height: 40
                         },
                         align: d.Z.Align.CENTER,
                         body: (0, r.jsx)(o.eee, {
-                            href: f.Z.getArticleURL(_.BhN.NOISE_SUPPRESSION),
+                            href: f.Z.getArticleURL(x.BhN.NOISE_SUPPRESSION),
                             onClick: T,
                             children: E.NW.string(E.t.hvVgAQ)
                         })
@@ -131,7 +131,7 @@ function y(e) {
         {
             hasEchoCancellation: f,
             hasNoiseSuppression: b,
-            hasAutomaticGainControl: O
+            hasAutomaticGainControl: C
         } = (0, a.cj)(
             [g.Z],
             () => ({
@@ -141,24 +141,24 @@ function y(e) {
             }),
             [i]
         ),
-        C = n === _.pM4.VOICE_ACTIVITY && u,
-        S = (0, r.jsxs)(N.Z, {
+        O = n === x.pM4.VOICE_ACTIVITY && u,
+        S = (0, r.jsxs)(_.Z, {
             children: [
-                (f || b || O) &&
+                (f || b || C) &&
                     (0, r.jsx)(o.R94, {
                         className: t ? void 0 : j.marginBottom20,
                         type: o.R94.Types.DESCRIPTION,
                         children: E.NW.string(E.t['/Whuzs'])
                     }),
                 (0, r.jsx)(m.F, {
-                    setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
+                    setting: N.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
                     children: (0, r.jsx)(o.j7V, {
                         className: t ? void 0 : s()(j.marginTop8, j.marginBottom20),
                         value: l,
                         onChange: (e) =>
                             c.Z.setEchoCancellation(e, {
-                                page: _.ZY5.USER_SETTINGS,
-                                section: _.jXE.SETTINGS_VOICE_AND_VIDEO
+                                page: x.ZY5.USER_SETTINGS,
+                                section: x.jXE.SETTINGS_VOICE_AND_VIDEO
                             }),
                         disabled: f,
                         hideBorder: t,
@@ -166,31 +166,31 @@ function y(e) {
                     })
                 }),
                 (0, r.jsx)(m.F, {
-                    setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
+                    setting: N.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
                     children: (0, r.jsx)(I, { refreshStyles: t })
                 }),
                 (0, r.jsx)(m.F, {
-                    setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
+                    setting: N.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
                     children: (0, r.jsx)(o.j7V, {
                         value: h,
                         onChange: (e) => c.Z.setMode(n, { vadUseKrisp: e }),
                         note: E.NW.string(E.t.LoOB1N),
-                        disabled: !C,
+                        disabled: !O,
                         hideBorder: t,
                         children: E.NW.string(E.t.BbESsr)
                     })
                 }),
                 (0, r.jsx)(m.F, {
-                    setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
+                    setting: N.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
                     children: (0, r.jsx)(o.j7V, {
                         value: d,
                         onChange: (e) =>
                             c.Z.setAutomaticGainControl(e, {
-                                page: _.ZY5.USER_SETTINGS,
-                                section: _.jXE.SETTINGS_VOICE_AND_VIDEO
+                                page: x.ZY5.USER_SETTINGS,
+                                section: x.jXE.SETTINGS_VOICE_AND_VIDEO
                             }),
                         note: E.NW.string(E.t['6EjbvL']),
-                        disabled: O,
+                        disabled: C,
                         hideBorder: t,
                         children: E.NW.string(E.t.cUMdHx)
                     })

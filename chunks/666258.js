@@ -272,33 +272,33 @@ function V(e) {
         X = (0, I.Dt)(),
         J = i.useMemo(() => (x && null != r.vanityURLCode ? (0, b.Z)(r.vanityURLCode, !1) : null), [r, x]),
         Q = i.useCallback(async () => {
+            var e, t;
             if (N) return;
             null !== H.current && clearTimeout(H.current);
-            let e = !1;
-            try {
-                var t, n;
-                let l = await p();
-                o()(null != l, 'Invite key could not be determined.');
-                let i = (0, b.Z)(l);
-                (0, S.JG)(i),
-                    _.default.track(y.rMx.COPY_INSTANT_INVITE, {
-                        server: r.id,
-                        channel: null != (t = null == a ? void 0 : a.id) ? t : null,
-                        channel_type: null != (n = null == a ? void 0 : a.type) ? n : null,
-                        location: U,
-                        code: l,
-                        application_id: m
-                    }),
-                    (e = !0);
-            } catch (e) {
-                V(e);
-            }
+            let n = await p();
+            o()(null != n, 'Invite key could not be determined.');
+            let l = (0, b.Z)(n);
             return (
-                e &&
-                    (B(!0),
-                    (H.current = setTimeout(() => {
-                        B(!1);
-                    }, 1000))),
+                (0, S.JG)(
+                    l,
+                    () => {
+                        B(!0),
+                            (H.current = setTimeout(() => {
+                                B(!1), (H.current = null);
+                            }, 1000));
+                    },
+                    (e) => {
+                        V(e);
+                    }
+                ),
+                _.default.track(y.rMx.COPY_INSTANT_INVITE, {
+                    server: r.id,
+                    channel: null != (e = null == a ? void 0 : a.id) ? e : null,
+                    channel_type: null != (t = null == a ? void 0 : a.type) ? t : null,
+                    location: U,
+                    code: n,
+                    application_id: m
+                }),
                 () => {
                     null !== H.current && clearTimeout(H.current);
                 }

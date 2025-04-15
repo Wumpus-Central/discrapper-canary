@@ -8,17 +8,17 @@ var i = n(120356),
     s = n(481060),
     c = n(430824),
     u = n(914010),
-    E = n(693546),
-    d = n(305325),
+    d = n(693546),
+    E = n(305325),
     _ = n(246364),
     I = n(983736),
-    N = n(937111),
-    O = n(981631),
+    O = n(937111),
+    N = n(981631),
     T = n(176505),
     S = n(388032),
     p = n(246752),
-    R = n(240211);
-function A(e) {
+    A = n(240211);
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,30 +47,30 @@ let P = () => {
     var e, t;
     let i = (0, a.e7)([u.Z], () => u.Z.getGuildId(), []),
         P = (0, a.e7)([c.Z], () => c.Z.getGuild(i), [i]),
-        C = (0, a.e7)([N.Z], () => (null != i ? N.Z.getRequest(i) : null), [i]),
-        f = (0, o.TH)(),
-        D = (null == (e = (0, o.LX)(f.pathname, O.Z5c.CHANNEL(null == P ? void 0 : P.id, T.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+        f = (0, a.e7)([O.Z], () => (null != i ? O.Z.getRequest(i) : null), [i]),
+        C = (0, o.TH)(),
+        D = (null == (e = (0, o.LX)(C.pathname, N.Z5c.CHANNEL(null == P ? void 0 : P.id, T.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
     if (null == P || !(0, I.Dc)(P) || D) return null;
-    let g = null != (t = null == C ? void 0 : C.applicationStatus) ? t : _.wB.STARTED,
-        m = null,
+    let g = null != (t = null == f ? void 0 : f.applicationStatus) ? t : _.wB.STARTED,
         y = null,
+        m = null,
         h = null,
-        U = [p.notice, R.notice];
+        b = [p.notice, A.notice];
     switch (g) {
         case _.wB.SUBMITTED:
-            (m = S.NW.string(S.t['5iLvS0'])),
-                (y = S.NW.string(S.t.mqtdmZ)),
+            (y = S.NW.string(S.t['5iLvS0'])),
+                (m = S.NW.string(S.t.mqtdmZ)),
                 (h = () => {
                     (0, s.h7j)((e) => {
                         var t, n;
                         return (0, r.jsx)(
                             s.ConfirmModal,
-                            ((t = A(
+                            ((t = R(
                                 {
                                     header: S.NW.string(S.t.aIz1oa),
                                     confirmText: S.NW.string(S.t['cY+Ooa']),
                                     cancelText: S.NW.string(S.t['ETE/oK']),
-                                    onConfirm: () => E.Z.removeGuildJoinRequest(P.id),
+                                    onConfirm: () => d.Z.removeGuildJoinRequest(P.id),
                                     confirmButtonColor: s.zxk.Colors.BRAND
                                 },
                                 e
@@ -100,30 +100,30 @@ let P = () => {
                 });
             break;
         case _.wB.REJECTED:
-            (m = S.NW.string(S.t.lk30cX)),
-                (y = S.NW.string(S.t['8RrsHh'])),
+            (y = S.NW.string(S.t.lk30cX)),
+                (m = S.NW.string(S.t['8RrsHh'])),
                 (h = () => {
                     (0, s.ZDy)(async () => {
                         let { default: e } = await n.e('3378').then(n.bind(n, 76075));
-                        return (t) => (0, r.jsx)(e, A({ guildId: P.id }, t));
+                        return (t) => (0, r.jsx)(e, R({ guildId: P.id }, t));
                     });
                 }),
-                U.push(p.error);
+                b.push(p.error);
             break;
         default:
-            (m = S.NW.string(S.t.G5YKXF)),
-                (y = S.NW.string(S.t['r8/DT0'])),
+            (y = S.NW.string(S.t.G5YKXF)),
+                (m = S.NW.string(S.t['r8/DT0'])),
                 (h = () => {
-                    (0, d.hk)(P.id);
+                    (0, E.hk)(P.id);
                 });
     }
     return (0, r.jsxs)('div', {
-        className: l()(...U),
+        className: l()(...b),
         children: [
             (0, r.jsx)(s.Text, {
                 className: p.header,
                 variant: 'text-sm/normal',
-                children: m
+                children: y
             }),
             (0, r.jsx)(s.zxk, {
                 className: p.button,
@@ -131,7 +131,7 @@ let P = () => {
                 color: s.zxk.Colors.WHITE,
                 size: s.zxk.Sizes.NONE,
                 onClick: h,
-                children: y
+                children: m
             })
         ]
     });

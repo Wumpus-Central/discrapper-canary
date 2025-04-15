@@ -3,20 +3,20 @@ var r = n(200651),
     i = n(192379),
     l = n(399606),
     o = n(704215),
-    a = n(481060),
-    s = n(377171),
+    s = n(481060),
+    a = n(377171),
     c = n(706140),
     u = n(645041),
     d = n(823379),
-    p = n(267642),
-    h = n(608949),
+    h = n(267642),
+    p = n(608949),
     f = n(905128),
     g = n(326660),
     m = n(317169),
     b = n(19394),
     _ = n(535396);
 function y(e) {
-    let t = (0, l.e7)([h.Z], () => h.Z.getNotificationStateForGuild(e), [e]),
+    let t = (0, l.e7)([p.Z], () => p.Z.getNotificationStateForGuild(e), [e]),
         n = (0, l.e7)([f.Z], () => f.Z.getStateForGuild(e)),
         { trailing: y, showUnread: v } = (function (e, t, n) {
             let l = (0, m.Z)(e).available;
@@ -30,21 +30,21 @@ function y(e) {
                 let { unlocked: c } = t,
                     u = (0, b.h)(c),
                     d = null != (i = null == n ? void 0 : n.lastSeenWarningNotification) ? i : Date.now(),
-                    p = new Date(null == (e = u[u.length - 1]) ? void 0 : e.ends_at).getTime(),
-                    h = null != (o = null == n ? void 0 : n.lastBoostCount) ? o : 0;
-                return u.length > 0 && d < p
+                    h = new Date(null == (e = u[u.length - 1]) ? void 0 : e.ends_at).getTime(),
+                    p = null != (o = null == n ? void 0 : n.lastBoostCount) ? o : 0;
+                return u.length > 0 && d < h
                     ? {
-                          trailing: (0, r.jsx)(a.P4T, {
-                              color: a.TVs.colors.STATUS_WARNING,
+                          trailing: (0, r.jsx)(s.P4T, {
+                              color: s.TVs.colors.STATUS_WARNING,
                               size: 'sm'
                           }),
                           showUnread: !0
                       }
-                    : l !== h && l - h > 0
+                    : l !== p && l - p > 0
                       ? {
-                            trailing: (0, r.jsx)(a.mAB, {
-                                count: l - h,
-                                color: s.Z.BACKGROUND_ACCENT
+                            trailing: (0, r.jsx)(s.mAB, {
+                                count: l - p,
+                                color: a.Z.BACKGROUND_ACCENT
                             }),
                             showUnread: !0
                         }
@@ -57,10 +57,10 @@ function y(e) {
         O = (function (e, t) {
             let [n, r] = (0, c.cv)(null != t ? [o.z.GUILD_POWERUP_PERKS_COACHMARK] : []),
                 { available: l } = (0, m.Z)(e),
-                a = i.useMemo(() => {
+                s = i.useMemo(() => {
                     if (null == t || n === o.z.GUILD_POWERUP_PERKS_COACHMARK) return;
                     let r = (function (e, t) {
-                        let n = p.Oe.find((e) => {
+                        let n = h.Oe.find((e) => {
                             let n = _.Cp[e],
                                 r = null != n ? t.unlocked.get(n) : void 0;
                             return null != r && r.user_id !== _.Fq;
@@ -112,7 +112,7 @@ function y(e) {
                     })(e, t, l);
                     if (null != i) return i;
                 }, [e, t, n, l]),
-                [s, h] = (0, c.Tt)(null != a ? o.z.GUILD_POWERUP_NOTIFICATION : null, { cooldownDurationMs: g.d });
+                [a, p] = (0, c.Tt)(null != s ? o.z.GUILD_POWERUP_NOTIFICATION : null, { cooldownDurationMs: g.d });
             return i.useMemo(() => {
                 if (null != t) {
                     if (n === o.z.GUILD_POWERUP_PERKS_COACHMARK)
@@ -120,7 +120,7 @@ function y(e) {
                             type: g.J.PERKS_AVAILABLE,
                             markAsDismissed: r
                         };
-                    if (s === o.z.GUILD_POWERUP_NOTIFICATION && null != a) {
+                    if (a === o.z.GUILD_POWERUP_NOTIFICATION && null != s) {
                         var e, i;
                         return (
                             (e = (function (e) {
@@ -147,11 +147,11 @@ function y(e) {
                                         });
                                 }
                                 return e;
-                            })({}, a)),
+                            })({}, s)),
                             (i = i =
                                 {
                                     markAsDismissed: (e) => {
-                                        h(e, !0), a.markAsDismissed(e);
+                                        p(e, !0), s.markAsDismissed(e);
                                     }
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -170,7 +170,7 @@ function y(e) {
                         );
                     }
                 }
-            }, [t, n, r, a, s, h]);
+            }, [t, n, r, s, a, p]);
         })(e, n);
     if (null !== n && (null != y || v || null != O))
         return {

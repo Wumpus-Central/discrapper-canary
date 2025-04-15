@@ -39,7 +39,7 @@ function c(e) {
     });
 }
 function d(e) {
-    let { icon: t, title: n, titleVariant: l = 'text-md/semibold', description: s, descriptionVariant: c = 'text-xs/medium', iconClassName: d, color: u, buttonText: m, buttonColor: x = a.zxk.Colors.PRIMARY, buttonSize: p = a.zxk.Sizes.SMALL, buttonLook: b = a.zxk.Looks.FILLED, buttonDisabled: f, buttonIcon: h, buttonIconColor: _, buttonLoading: g, onButtonPress: v, listType: j = 'icon', index: N } = e,
+    let { icon: t, title: n, titleVariant: l = 'text-md/semibold', description: s, descriptionVariant: c = 'text-xs/medium', iconClassName: d, color: u, buttonText: m, buttonColor: x = a.zxk.Colors.PRIMARY, buttonSize: p = a.zxk.Sizes.SMALL, buttonLook: b = a.zxk.Looks.FILLED, buttonDisabled: h, buttonIcon: _, buttonIconColor: f, buttonLoading: g, onButtonPress: v, listType: j = 'icon', index: N } = e,
         y =
             null != m
                 ? (0, r.jsx)(a.zxk, {
@@ -47,7 +47,7 @@ function d(e) {
                       size: p,
                       color: x,
                       look: b,
-                      disabled: f,
+                      disabled: h,
                       'aria-label': m,
                       onClick: v,
                       submitting: g,
@@ -55,9 +55,9 @@ function d(e) {
                           className: o.buttonContainer,
                           children: [
                               m,
-                              null != h &&
-                                  (0, r.jsx)(h, {
-                                      color: null != _ ? _ : 'currentColor',
+                              null != _ &&
+                                  (0, r.jsx)(_, {
+                                      color: null != f ? f : 'currentColor',
                                       className: o.buttonIcon
                                   })
                           ]

@@ -1,15 +1,15 @@
-n.d(t, { m: () => x });
+n.d(t, { m: () => j });
 var r = n(200651),
     i = n(192379),
     l = n(399606),
     o = n(704215),
-    a = n(692547),
-    s = n(481060),
+    s = n(692547),
+    a = n(481060),
     c = n(239091),
     u = n(605236),
     d = n(45966),
-    p = n(31445),
-    h = n(22082),
+    h = n(31445),
+    p = n(22082),
     f = n(703656),
     g = n(306680),
     m = n(709054),
@@ -18,25 +18,25 @@ var r = n(200651),
     y = n(981631),
     v = n(176505),
     O = n(490897),
-    j = n(388032),
-    C = n(990252);
-function x(e) {
-    let { guild: t, selected: x } = e,
-        S = (0, p.Z)(t),
-        P = (0, u.wE)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
-        I = (0, l.Wu)([h.Z], () => Array.from(h.Z.getNewChannelIds(t.id)).filter((e) => h.Z.shouldIndicateNewChannel(t.id, e))),
-        N = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, O.W.GUILD_ONBOARDING_QUESTION)),
-        Z = I.length > b.Cb,
-        E = (0, l.e7)([d.Z, g.ZP], () => {
+    C = n(388032),
+    S = n(990252);
+function j(e) {
+    let { guild: t, selected: j } = e,
+        E = (0, h.Z)(t),
+        x = (0, u.wE)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
+        N = (0, l.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
+        I = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, O.W.GUILD_ONBOARDING_QUESTION)),
+        P = N.length > b.Cb,
+        w = (0, l.e7)([d.Z, g.ZP], () => {
             let e = d.Z.lastFetchedAt(t.id),
                 n = g.ZP.lastMessageId(t.id, O.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
             let r = m.default.extractTimestamp(n);
             return null != e && e > r;
         }),
-        w = i.useCallback(() => {
-            (0, f.uL)(y.Z5c.CHANNEL(t.id, S ? v.oC.CUSTOMIZE_COMMUNITY : v.oC.CHANNEL_BROWSER));
-        }, [t.id, S]),
+        Z = i.useCallback(() => {
+            (0, f.uL)(y.Z5c.CHANNEL(t.id, E ? v.oC.CUSTOMIZE_COMMUNITY : v.oC.CHANNEL_BROWSER));
+        }, [t.id, E]),
         T = i.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
@@ -92,25 +92,25 @@ function x(e) {
         ),
         A = null;
     return (
-        (P && !N && !Z) ||
-            x ||
-            E ||
-            (A = (0, r.jsx)(s.IGR, {
-                color: a.Z.colors.BADGE_BRAND_BG.css,
-                text: j.NW.string(j.t.y2b7CA),
-                className: C.newChannel
+        (x && !I && !P) ||
+            j ||
+            w ||
+            (A = (0, r.jsx)(a.IGR, {
+                color: s.Z.colors.BADGE_BRAND_BG.css,
+                text: C.NW.string(C.t.y2b7CA),
+                className: S.newChannel
             })),
         (0, r.jsx)(_.m, {
             id: 'channels-'.concat(t.id),
             renderIcon: (e) =>
-                (0, r.jsx)(s.H$4, {
+                (0, r.jsx)(a.H$4, {
                     size: 'md',
                     color: 'currentColor',
                     className: e
                 }),
-            text: S ? j.NW.string(j.t.h9mGOD) : j.NW.string(j.t.et6wam),
-            selected: x,
-            onClick: w,
+            text: E ? C.NW.string(C.t.h9mGOD) : C.NW.string(C.t.et6wam),
+            selected: j,
+            onClick: Z,
             onContextMenu: T,
             trailing: A
         })

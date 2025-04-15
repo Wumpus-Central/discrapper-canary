@@ -44,7 +44,7 @@ let b = [
             label: () => h.NW.string(h.t['46dqJS'])
         }
     ],
-    N = [
+    _ = [
         {
             duration: u.Z.Millis.HOUR,
             label: () => h.NW.formatToPlainString(h.t.rhY1Rk, { hours: 1 })
@@ -62,15 +62,15 @@ let b = [
             label: () => h.NW.string(h.t['46dqJS'])
         }
     ];
-function x(e, t) {
+function N(e, t) {
     return e.getFullYear() === t.getFullYear() && e.getMonth() === t.getMonth() && e.getDate() === t.getDate();
 }
-function _(e) {
+function x(e) {
     let { status: t, currentStatus: n, description: s } = e,
         { showTempStatusOptions: o, hasDefaultClickOption: c, hasButtonStyling: d } = l.Y.useExperiment({ location: 'AccountProfilePopout' }),
         h = o && t !== p.Skl.ONLINE,
-        [x, _] = i.useState(void 0),
-        E = void 0 !== x && t === n,
+        [N, x] = i.useState(void 0),
+        E = void 0 !== N && t === n,
         j = (0, r.jsx)(r.Fragment, {
             children: b.map((e) => {
                 let { duration: i, label: s } = e;
@@ -91,9 +91,9 @@ function _(e) {
                 );
             })
         }),
-        O = (0, r.jsx)('div', {
+        C = (0, r.jsx)('div', {
             className: f.durationButtons,
-            children: N.map((e) => {
+            children: _.map((e) => {
                 let { duration: i, label: s } = e;
                 return (0, r.jsx)(
                     a.zxk,
@@ -101,7 +101,7 @@ function _(e) {
                         id: ''.concat(t, '-').concat(i),
                         onClick: (e) => {
                             e.stopPropagation(),
-                                _(i),
+                                x(i),
                                 (0, g.Z)({
                                     nextStatus: t,
                                     prevStatus: n,
@@ -109,7 +109,7 @@ function _(e) {
                                 });
                         },
                         className: f.durationButton,
-                        color: x === i ? a.Ttl.BRAND : a.Ttl.PRIMARY,
+                        color: N === i ? a.Ttl.BRAND : a.Ttl.PRIMARY,
                         size: a.PhG.NONE,
                         grow: !1,
                         children: s()
@@ -143,12 +143,12 @@ function _(e) {
                             className: f.description,
                             children: s
                         }),
-                    h && d && E ? O : void 0
+                    h && d && E ? C : void 0
                 ]
             });
         },
         action: () => {
-            _(h ? u.Z.Millis.DAY : null),
+            x(h ? u.Z.Millis.DAY : null),
                 (0, g.Z)({
                     nextStatus: t,
                     prevStatus: n,
@@ -162,10 +162,10 @@ function _(e) {
 function E(e) {
     if (null == e || '0' === e) return;
     let t = new Date(Number(e)),
-        n = x(t, new Date()),
+        n = N(t, new Date()),
         r = new Date();
     r.setDate(r.getDate() + 1);
-    let i = x(t, r);
+    let i = N(t, r);
     return n
         ? h.NW.formatToPlainString(h.t.ZxxHIC, { timeString: h.NW.data.formatTime(t, { format: 'short' }) })
         : h.NW.formatToPlainString(h.t['9OFjSU'], {
@@ -180,7 +180,7 @@ function j(e) {
         u = c.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || i,
         m = d.fv.useSetting(),
         g = e === p.Skl.DND,
-        N = (r) => {
+        _ = (r) => {
             let i = E(n);
             if (e === r && null != i) return i;
             switch (r) {
@@ -192,7 +192,7 @@ function j(e) {
                     return;
             }
         },
-        x = (0, r.jsx)(r.Fragment, {
+        N = (0, r.jsx)(r.Fragment, {
             children: b.map((t) => {
                 let { duration: n, label: i } = t;
                 return (0, r.jsx)(
@@ -209,31 +209,31 @@ function j(e) {
                 );
             })
         }),
-        j = _({
+        j = x({
             status: p.Skl.ONLINE,
             currentStatus: e
         }),
-        O = _({
+        C = x({
             status: p.Skl.IDLE,
             currentStatus: e,
-            description: N(p.Skl.IDLE)
+            description: _(p.Skl.IDLE)
         }),
-        C = _({
+        O = x({
             status: p.Skl.DND,
             currentStatus: e,
-            description: N(p.Skl.DND)
+            description: _(p.Skl.DND)
         }),
-        S = _({
+        S = x({
             status: p.Skl.INVISIBLE,
             currentStatus: e,
-            description: N(p.Skl.INVISIBLE)
+            description: _(p.Skl.INVISIBLE)
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             j,
             (0, r.jsx)(a.Clw, {}, 'menu-separator-statuses'),
-            O,
             C,
+            O,
             S,
             u || i
                 ? (0, r.jsxs)(r.Fragment, {
@@ -285,7 +285,7 @@ function j(e) {
                                       (0, o.oW)(!i);
                                   },
                                   dontCloseOnAction: !0,
-                                  children: x
+                                  children: N
                               },
                               'quiet-mode'
                           )

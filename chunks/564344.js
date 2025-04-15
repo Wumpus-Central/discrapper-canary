@@ -14,32 +14,32 @@ var r = n(200651),
     h = n(839469),
     f = n(25990),
     b = n(594174),
-    N = n(585483),
-    x = n(16703),
-    _ = n(785145),
+    _ = n(585483),
+    N = n(16703),
+    x = n(785145),
     E = n(981631),
     j = n(526761),
-    O = n(726985),
-    C = n(388032),
+    C = n(726985),
+    O = n(388032),
     S = n(545784);
 function v() {
     c.Z.useExperiment({ location: 'profile_customization_auto' });
     let e = (0, s.e7)([u.Z], () => u.Z.getGuild()),
-        t = (0, x.Z)(),
+        t = (0, N.Z)(),
         n = (0, s.e7)([u.Z, f.Z], () => u.Z.showNotice() || f.Z.showNotice()),
         v = null != e ? e : t,
         T = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
-        { subsection: I, setSubsection: y } = (0, _.Z)(),
+        { subsection: I, setSubsection: y } = (0, x.Z)(),
         { analyticsLocations: A } = (0, o.ZP)(),
         { hasSearchResults: P, searchResults: R } = (0, h.E)();
     function D(t) {
         if (I !== t) {
             if (n) {
-                N.S.dispatch(E.CkL.SHAKE_APP, {
+                _.S.dispatch(E.CkL.SHAKE_APP, {
                     duration: 300,
                     intensity: l.$x
                 }),
-                    N.S.dispatch(E.CkL.EMPHASIZE_NOTICE);
+                    _.S.dispatch(E.CkL.EMPHASIZE_NOTICE);
                 return;
             }
             t === j.NB.GUILD && null == e && null != v && (0, d.Fq)(v, A), y(t);
@@ -51,13 +51,13 @@ function v() {
     let Z = !0,
         w = !0;
     return (
-        P && 1 === R.length && (R.includes(O.s6.PROFILE_SERVER_PROFILES) ? (D(j.NB.GUILD), (w = !1)) : R.includes(O.s6.PROFILE_USER_PROFILE) && (D(j.NB.USER_PROFILE), (Z = !1))),
+        P && 1 === R.length && (R.includes(C.s6.PROFILE_SERVER_PROFILES) ? (D(j.NB.GUILD), (w = !1)) : R.includes(C.s6.PROFILE_USER_PROFILE) && (D(j.NB.USER_PROFILE), (Z = !1))),
         (0, r.jsx)(o.Gt, {
             value: A,
             children: (0, r.jsxs)(a.y5t, {
                 component: (0, r.jsx)(a.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: C.NW.string(C.t['vi7f+v'])
+                    children: O.NW.string(O.t['vi7f+v'])
                 }),
                 children: [
                     (0, r.jsxs)(a.njP, {
@@ -73,7 +73,7 @@ function v() {
                                       {
                                           className: S.tabBarItem,
                                           id: j.NB.USER_PROFILE,
-                                          children: C.NW.string(C.t['OU3/Pj'])
+                                          children: O.NW.string(O.t['OU3/Pj'])
                                       },
                                       j.NB.USER_PROFILE
                                   )
@@ -84,7 +84,7 @@ function v() {
                                       {
                                           className: S.tabBarItem,
                                           id: j.NB.GUILD,
-                                          children: C.NW.string(C.t.kPHroa)
+                                          children: O.NW.string(O.t.kPHroa)
                                       },
                                       j.NB.GUILD
                                   )

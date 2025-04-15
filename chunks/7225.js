@@ -68,7 +68,7 @@ function P(t) {
                                     'aria-label': N.NW.string(N.t.WqhZsr),
                                     onClick: () => {
                                         let t = ''.concat(location.protocol, '//').concat(location.host).concat(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(P, T.GlobalDiscoveryAppsSections.STORE));
-                                        (0, _.JG)(t), (0, l.showToast)((0, l.createToast)(N.NW.string(N.t['L/PwZW']), l.ToastType.SUCCESS)), (0, d.X)(P, d.B.STORE_MODAL);
+                                        (0, _.JG)(t, () => (0, l.showToast)((0, l.createToast)(N.NW.string(N.t['L/PwZW']), l.ToastType.SUCCESS))), (0, d.X)(P, d.B.STORE_MODAL);
                                     },
                                     children: (0, n.jsx)(l.xPt, { size: 'sm' })
                                 }),

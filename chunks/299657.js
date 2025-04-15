@@ -14,13 +14,13 @@ var r = n(200651),
     h = n(100527),
     f = n(906732),
     b = n(211242),
-    N = n(15640),
-    x = n(89057),
-    _ = n(605236),
+    _ = n(15640),
+    N = n(89057),
+    x = n(605236),
     E = n(433811),
     j = n(214852),
-    O = n(621853),
-    C = n(484459),
+    C = n(621853),
+    O = n(484459),
     S = n(246946),
     v = n(594174),
     T = n(78839),
@@ -48,15 +48,15 @@ let V = function (e) {
         H = null == F ? void 0 : F.id,
         z = (0, Z.N)(),
         Y = (0, D.Ng)(),
-        K = (0, N.V)(),
+        K = (0, _.V)(),
         [q, X] = i.useState(!0),
-        J = i.useRef(0),
-        Q = (0, y.M5)(F, L.p9.TIER_2);
-    !0 !== (0, _.wE)(o.z.Q1_2025_MARKETING_MOMENT_OFFER_BADGE) && (0, _.EW)(o.z.Q1_2025_MARKETING_MOMENT_OFFER_BADGE, { dismissAction: M.L.TAKE_ACTION });
+        Q = i.useRef(0),
+        J = (0, y.M5)(F, L.p9.TIER_2);
+    !0 !== (0, x.wE)(o.z.Q1_2025_MARKETING_MOMENT_OFFER_BADGE) && (0, x.EW)(o.z.Q1_2025_MARKETING_MOMENT_OFFER_BADGE, { dismissAction: M.L.TAKE_ACTION });
     let $ = (0, R.n)(),
         ee = null == $ ? void 0 : $.countryCode,
         { enabled: et } = (0, w.D)(),
-        en = (0, l.e7)([O.Z], () => (null != F ? O.Z.getUserProfile(F.id) : null)),
+        en = (0, l.e7)([C.Z], () => (null != F ? C.Z.getUserProfile(F.id) : null)),
         er = (0, l.e7)([A.Z], () => A.Z.hasFetched);
     return (i.useEffect(() => {
         er || u.MH();
@@ -64,9 +64,9 @@ let V = function (e) {
     i.useEffect(() => {
         d.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([u.jg(), (0, m.X8)(), u.tZ(), (0, g.Y2)(ee, null, B.JjL.DISCOVERY), null != H && et && Q && (0, C.Z)(H)]), (J.current = Date.now() - e), X(!1);
+            await Promise.all([u.jg(), (0, m.X8)(), u.tZ(), (0, g.Y2)(ee, null, B.JjL.DISCOVERY), null != H && et && J && (0, O.Z)(H)]), (Q.current = Date.now() - e), X(!1);
         });
-    }, [ee, H, et, Q]),
+    }, [ee, H, et, J]),
     i.useEffect(() => {
         n && (null != z || null != Y) && (0, P.a)(z, Y);
     }, [n, z, Y]),
@@ -74,14 +74,14 @@ let V = function (e) {
         q ||
             I.default.track(B.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                 location_stack: s,
-                load_duration_ms: J.current
+                load_duration_ms: Q.current
             });
     }, [s, q]),
     (0, l.e7)([S.Z], () => S.Z.enabled))
         ? (0, r.jsx)(p.Z, {})
         : n
-          ? (0, r.jsx)(x.c8, {})
-          : t === L.EZ.ApplicationStoreHome && Q
+          ? (0, r.jsx)(N.c8, {})
+          : t === L.EZ.ApplicationStoreHome && J
             ? et && null == en
                 ? (0, r.jsx)('div', {
                       className: a()(U.container, U.loading),

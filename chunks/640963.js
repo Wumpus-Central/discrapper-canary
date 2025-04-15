@@ -15,14 +15,14 @@ function s(e) {
             s && (null == n || n(c.current), l(!1));
         }, [n, s]),
         f = r.useCallback(
-            async (e, t) => {
+            async (e, t, n) => {
                 l(!0), (c.current = t);
                 try {
-                    await o.Z.setWallpaper(e, t);
-                    let n = setTimeout(() => d(), 5000);
-                    return () => clearTimeout(n);
+                    (await o.Z.setWallpaper(e, t)).ok || null == n || n();
+                    let r = setTimeout(() => d(), 5000);
+                    return () => clearTimeout(r);
                 } catch (e) {
-                    l(!1);
+                    null == n || n(), l(!1);
                 }
             },
             [l, d]

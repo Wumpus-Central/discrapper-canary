@@ -15,7 +15,7 @@ let m = (e) => {
         p = (0, c.Z)(),
         [g] = s._T(t),
         [h] = s.d9(t, p),
-        [b] = s.H9(t);
+        [v] = s.H9(t);
     return (0, r.jsxs)('div', {
         className: _.container,
         children: [
@@ -32,12 +32,12 @@ let m = (e) => {
                                 variant: 'text-xs/normal',
                                 className: _.tierPrice,
                                 children: [
-                                    (0, o.T4)(b.price, b.currency),
+                                    (0, o.T4)(v.price, v.currency),
                                     ' ',
                                     u.NW.format(u.t.isLGyc, {
                                         period: (0, l.JE)({
-                                            interval: b.interval,
-                                            interval_count: b.interval_count
+                                            interval: v.interval,
+                                            interval_count: v.interval_count
                                         })
                                     })
                                 ]

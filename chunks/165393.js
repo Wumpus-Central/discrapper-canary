@@ -1,15 +1,15 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
     o = n.n(l),
-    a = n(866442),
-    s = n(481060),
+    s = n(866442),
+    a = n(481060),
     c = n(686546),
     u = n(629998);
 let d = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367];
-function p(e) {
-    return (0, a.Rf)(
+function h(e) {
+    return (0, s.Rf)(
         d[
             (function (e) {
                 let t = 5381,
@@ -20,13 +20,13 @@ function p(e) {
         ]
     );
 }
-function h(e) {
+function p(e) {
     var t;
-    let { title: n, className: l, icon: a } = e,
-        [d, h] = i.useState(p(n));
+    let { title: n, className: l, icon: s } = e,
+        [d, p] = i.useState(h(n));
     return (
         i.useEffect(() => {
-            h(p(n));
+            p(h(n));
         }, [n]),
         (0, r.jsxs)('div', {
             className: o()(u.wrapper, l),
@@ -36,7 +36,7 @@ function h(e) {
                     width: 32,
                     height: 32,
                     children:
-                        null == a || 0 === a.length
+                        null == s || 0 === s.length
                             ? (0, r.jsx)('div', {
                                   className: u.icon,
                                   style: { backgroundColor: d },
@@ -44,11 +44,11 @@ function h(e) {
                               })
                             : (0, r.jsx)('img', {
                                   alt: '',
-                                  src: a,
+                                  src: s,
                                   className: u.icon
                               })
                 }),
-                (0, r.jsx)(s.Odl, {
+                (0, r.jsx)(a.Odl, {
                     size: 'md',
                     color: 'currentColor',
                     className: u.badge

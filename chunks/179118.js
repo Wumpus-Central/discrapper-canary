@@ -64,15 +64,15 @@ function M(e) {
                         maxUses: 1
                     }),
                     o
-                );
-            try {
-                (0, T.JG)(e), S(u.kO8.Modes.SUCCESS);
-            } catch (e) {
-                S(u.kO8.Modes.ERROR);
-            }
-            setTimeout(() => {
-                S(u.kO8.Modes.DEFAULT);
-            }, x);
+                ),
+                (0, T.JG)(
+                    e,
+                    () => S(u.kO8.Modes.SUCCESS),
+                    () => S(u.kO8.Modes.ERROR)
+                ),
+                setTimeout(() => {
+                    S(u.kO8.Modes.DEFAULT);
+                }, x);
         },
         z = () => {
             let e;

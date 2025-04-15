@@ -14,13 +14,13 @@ var r = n(200651),
     h = n(429789),
     f = n(726763),
     b = n(208113),
-    N = n(894939),
-    x = n(710808),
-    _ = n(625205),
+    _ = n(894939),
+    N = n(710808),
+    x = n(625205),
     E = n(325808),
     j = n(823087),
-    O = n(232388),
-    C = n(546997),
+    C = n(232388),
+    O = n(546997),
     S = n(186934),
     v = n(716210),
     T = n(520384),
@@ -56,7 +56,7 @@ function U() {
                 children: [
                     (0, r.jsx)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_DEVICES,
-                        children: (0, r.jsx)(_.Z, {})
+                        children: (0, r.jsx)(x.Z, {})
                     }),
                     (0, r.jsx)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
@@ -94,7 +94,7 @@ function U() {
             }),
             (0, r.jsx)(c.F, {
                 setting: w.s6.VOICE_AND_VIDEO_SOUNDS,
-                children: (0, r.jsx)(N.Z, {})
+                children: (0, r.jsx)(_.Z, {})
             }),
             (0, r.jsxs)(c.F, {
                 setting: w.s6.VOICE_AND_VIDEO_VIDEO,
@@ -122,17 +122,17 @@ function U() {
                             children: (0, r.jsx)(P.Z, {})
                         }),
                         (0, r.jsx)(T.Z, {}),
-                        (0, r.jsx)(O.Z, {}),
+                        (0, r.jsx)(C.Z, {}),
                         (0, r.jsx)(h.Z, {}),
                         k && (0, r.jsx)(S.Z, {}),
                         (0, r.jsx)(b.Z, {}),
-                        (0, r.jsx)(C.Z, {}),
+                        (0, r.jsx)(O.Z, {}),
                         (0, r.jsx)(v.Z, {}),
                         (0, r.jsx)(I.Z, { refreshStyles: !0 }),
                         (0, r.jsx)(a.$i$, { className: B.marginBottom40 }),
                         (0, r.jsx)(c.F, {
                             setting: w.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                            children: (0, r.jsx)(x.Z, {})
+                            children: (0, r.jsx)(N.Z, {})
                         }),
                         (0, r.jsx)(c.F, {
                             setting: w.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,

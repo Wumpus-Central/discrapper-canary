@@ -95,7 +95,7 @@ let D = (e) => {
     let { mimeType: t, downloadURL: n, onRemoveItem: r, showDownload: s, showImageAppPicker: c, isVisualMediaType: d, channelId: h } = e,
         g = o.useRef(null),
         [f, y] = o.useState(0);
-    (0, u.P)(g, (e) => {
+    (0, u.PM)(g, (e) => {
         let { width: t } = e;
         null != t && y(Math.floor((t - 8) / 32));
     });

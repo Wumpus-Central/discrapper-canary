@@ -14,13 +14,13 @@ var r = n(200651),
     h = n(906732),
     f = n(70097),
     b = n(433811),
-    N = n(214852),
-    x = n(594174),
-    _ = n(78839),
+    _ = n(214852),
+    N = n(594174),
+    x = n(78839),
     E = n(626135),
     j = n(526167),
-    O = n(74538),
-    C = n(140465),
+    C = n(74538),
+    O = n(140465),
     S = n(278605),
     v = n(585612),
     T = n(286961),
@@ -47,8 +47,8 @@ var r = n(200651),
     K = n(179984),
     q = n(706542),
     X = n(851001),
-    J = n(304576),
-    Q = n(409100),
+    Q = n(304576),
+    J = n(409100),
     $ = n(391110),
     ee = n(71363),
     et = n(781800),
@@ -123,20 +123,20 @@ let ep = (e) => {
     eb = (e) => {
         var t, n, s;
         let { isFullscreen: L, entrypoint: V } = e;
-        (0, N.z)(b.X);
+        (0, _.z)(b.X);
         let F = V === en.EZ.ApplicationStoreHome,
             H = i.useRef(null),
             z = i.useRef(null),
             et = i.useRef(null),
             eb = i.useRef(null),
+            e_ = i.useRef(null),
             eN = i.useRef(null),
             ex = i.useRef(null),
-            e_ = i.useRef(null),
             eE = (0, l.e7)([g.Z], () => g.Z.useReducedMotion),
             ej = (0, m.ZP)(),
-            eO = (0, c.wj)(ej),
-            eC = x.default.getCurrentUser(),
-            eS = (0, O.I5)(eC),
+            eC = (0, c.wj)(ej),
+            eO = N.default.getCurrentUser(),
+            eS = (0, C.I5)(eO),
             ev = (0, S.xP)('PremiumMarketingHome'),
             eT = (0, v.C)('PremiumMarketingHome'),
             eI = ((ev && !eS) || (eS && eT)) && F,
@@ -146,19 +146,19 @@ let ep = (e) => {
             [ew, ek] = i.useState(!1),
             eW = (0, j.rO)(),
             [eL, eB] = i.useState(!1),
-            eM = (0, l.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
-            eU = null != eM ? (0, O.Af)(eM) : null,
-            eV = null != eU ? O.ZP.getSkuIdForPlan(eU.planId) : null,
+            eM = (0, l.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription()),
+            eU = null != eM ? (0, C.Af)(eM) : null,
+            eV = null != eU ? C.ZP.getSkuIdForPlan(eU.planId) : null,
             eG = null !== eV && eV !== en.Si.TIER_2 ? en.Si.TIER_2 : null,
             eF = (0, y.n)(),
             eH = null != eF,
             [ez, eY] = i.useState(!1),
             eK = (0, A.N)(),
             eq = null == eK || null == (t = eK.subscription_trial) ? void 0 : t.sku_id,
-            eX = (0, C.Nx)(),
-            eJ = (0, w.Vi)(),
-            eQ = (0, I.m)({ location: 'PremiumMarketingHome' }),
-            e$ = null != (s = eJ || eQ) && s,
+            eX = (0, O.Nx)(),
+            eQ = (0, w.Vi)(),
+            eJ = (0, I.m)({ location: 'PremiumMarketingHome' }),
+            e$ = null != (s = eQ || eJ) && s,
             e0 = null == (n = (0, T.Z)()) ? void 0 : n.billingSettingsMarketingBanner,
             { analyticsLocations: e1 } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
             e2 = 'PremiumMarketingHome';
@@ -188,15 +188,15 @@ let ep = (e) => {
                         variant: eI ? W.NN.MARKETING_PAGE_V2 : W.NN.DEFAULT,
                         showWumpus: !eI,
                         tier0CTAButton: eI
-                            ? (0, r.jsx)(Q.Z, {
-                                  forceInverted: eO && !eI,
+                            ? (0, r.jsx)(J.Z, {
+                                  forceInverted: eC && !eI,
                                   showIcon: !1,
                                   subscriptionTier: en.Si.TIER_0,
                                   className: ea.marginTopForButtons,
                                   buttonTextClassName: eI ? ea.v2SubButtonText : ea.subButtonText,
                                   buttonShineClassName: ea.buttonShine
                               })
-                            : (0, r.jsx)(Q.Z, {
+                            : (0, r.jsx)(J.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
                                   subscriptionTier: en.Si.TIER_0,
@@ -207,7 +207,7 @@ let ep = (e) => {
                               }),
                         tier2CTAButton:
                             eq !== en.Si.TIER_0 || eI
-                                ? (0, r.jsx)(Q.Z, {
+                                ? (0, r.jsx)(J.Z, {
                                       forceInverted: !eI,
                                       showIcon: !1,
                                       subscriptionTier: en.Si.TIER_2,
@@ -215,10 +215,10 @@ let ep = (e) => {
                                       hasActivePromotion: e$,
                                       buttonTextClassName: eI ? ea.v2SubButtonText : ea.subButtonText,
                                       buttonShineClassName: ea.buttonShine,
-                                      confirmationFooter: eQ ? (0, r.jsx)(B.Z, {}) : void 0,
-                                      paymentModalBanner: eQ ? (0, r.jsx)(M.Z, {}) : void 0
+                                      confirmationFooter: eJ ? (0, r.jsx)(B.Z, {}) : void 0,
+                                      paymentModalBanner: eJ ? (0, r.jsx)(M.Z, {}) : void 0
                                   })
-                                : (0, r.jsx)(Q.Z, {
+                                : (0, r.jsx)(J.Z, {
                                       forceInverted: !0,
                                       showIcon: !1,
                                       subscriptionTier: en.Si.TIER_2,
@@ -233,7 +233,7 @@ let ep = (e) => {
             e6 = (0, r.jsxs)('div', {
                 className: a()(ea.container, {
                     [ea.settingsContainer]: !L,
-                    [ea.containerBackground]: eI && eO
+                    [ea.containerBackground]: eI && eC
                 }),
                 'data-cy': 'tier-0-marketing-page',
                 children: [
@@ -264,20 +264,20 @@ let ep = (e) => {
                               className: a()({ [ea.heroHeadingV2Container]: eI }),
                               children: [
                                   (0, r.jsx)(o.$, {
-                                      innerRef: eI ? eb : eN,
+                                      innerRef: eI ? eb : e_,
                                       onChange: (e) => eA(e),
                                       threshold: 0,
                                       active: !0,
                                       children: eI
-                                          ? (0, r.jsx)(J.Z, {
+                                          ? (0, r.jsx)(Q.Z, {
                                                 ref: eb,
                                                 subscriptionTier: eG,
                                                 isFullscreen: L || eX,
                                                 entrypoint: V,
-                                                isDarkMode: eO
+                                                isDarkMode: eC
                                             })
                                           : (0, r.jsx)(G.ZP, {
-                                                ref: eN,
+                                                ref: e_,
                                                 subscriptionTier: eG,
                                                 isFullscreen: L || eX,
                                                 isMarketingPageV2Enabled: eI,
@@ -285,16 +285,16 @@ let ep = (e) => {
                                                     [ea.fullscreenHero]: L,
                                                     [ea.settingsHeroNoBackground]: !L && eX,
                                                     [ea.trialMarketingMargin]: eX,
-                                                    [ea.settingsHeroBogoHeight]: !L && eJ,
-                                                    [ea.settingsHeroBogoMarginFullscreen]: L && eJ,
+                                                    [ea.settingsHeroBogoHeight]: !L && eQ,
+                                                    [ea.settingsHeroBogoMarginFullscreen]: L && eQ,
                                                     [ea.noTopPaddingOverride]: null != eM
                                                 }),
                                                 entrypoint: V,
-                                                isDarkMode: eO
+                                                isDarkMode: eC
                                             })
                                   }),
                                   !eI &&
-                                      !0 === eQ &&
+                                      !0 === eJ &&
                                       (0, r.jsx)(P.W, {
                                           isFullScreen: L,
                                           analyticsLocations: e1
@@ -378,12 +378,12 @@ let ep = (e) => {
                         isMarketingPageV2: eI
                     }),
                     (0, r.jsx)(o.$, {
-                        innerRef: ex,
+                        innerRef: eN,
                         onChange: (e) => {
                             e && !ew && (E.default.track(er.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: e1 }), ek(!0));
                         },
                         children: (0, r.jsx)('div', {
-                            ref: ex,
+                            ref: eN,
                             className: ea.bottomOfPageVisibilitySensor
                         })
                     }),
@@ -397,14 +397,14 @@ let ep = (e) => {
                         }),
                     eI &&
                         (0, r.jsx)(o.$, {
-                            innerRef: e_,
+                            innerRef: ex,
                             onChange: (e) => {
                                 eR(e);
                             },
                             children: (0, r.jsx)(X.Z, {
-                                ref: e_,
+                                ref: ex,
                                 isFooterVisible: eP,
-                                isDarkMode: eO,
+                                isDarkMode: eC,
                                 isReducedMotion: eE,
                                 subscriptionTier: eG
                             })

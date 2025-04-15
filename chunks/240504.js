@@ -1,8 +1,8 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var r,
     i = n(442837),
-    o = n(570140);
-function l(e, t, n) {
+    l = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ let s = 12 * n(70956).Z.Millis.HOUR,
     c = { hasFetchedRelevance: !1 },
     u = a,
     d = c;
-class p extends (r = i.ZP.PersistedStore) {
+class h extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         (d = c), (u = a);
         let t = new Date();
@@ -39,8 +39,8 @@ class p extends (r = i.ZP.PersistedStore) {
         return u;
     }
 }
-l(p, 'displayName', 'PerksRelevanceStore'), l(p, 'persistKey', 'PerksRelevanceStore');
-let h = new p(o.Z, {
+o(h, 'displayName', 'PerksRelevanceStore'), o(h, 'persistKey', 'PerksRelevanceStore');
+let p = new h(l.Z, {
     BILLING_PERKS_RELEVANCE_FETCH_START: function () {
         d.hasFetchedRelevance = !0;
     },

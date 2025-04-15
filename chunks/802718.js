@@ -3,13 +3,13 @@ var r = n(200651),
     i = n(192379),
     l = n(91192),
     o = n(481060),
-    a = n(442837),
-    s = n(239091),
+    s = n(442837),
+    a = n(239091),
     c = n(410030),
     u = n(377171),
     d = n(682662),
-    p = n(662146),
-    h = n(678513),
+    h = n(662146),
+    p = n(678513),
     f = n(981631),
     g = n(388032),
     m = n(975812);
@@ -58,8 +58,8 @@ function _(e, t) {
 }
 function y(e) {
     let { target: t } = e,
-        a = (0, l.Ie)('fakedoor'),
-        h = i.useCallback(() => {
+        s = (0, l.Ie)('fakedoor'),
+        p = i.useCallback(() => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('22862'), n.e('20404')]).then(n.bind(n, 646202));
                 return (n) => (0, r.jsx)(e, _(b({}, n), { target: t }));
@@ -67,7 +67,7 @@ function y(e) {
         }, [t]),
         y = i.useCallback(
             (e) => {
-                (0, s.jW)(e, async () => {
+                (0, a.jW)(e, async () => {
                     let { default: e } = await n.e('39612').then(n.bind(n, 761624));
                     return (n) => (0, r.jsx)(e, _(b({}, n), { signupTarget: t }));
                 });
@@ -92,17 +92,17 @@ function y(e) {
                 })
             ]
         }),
-        j = (0, c.Fg)();
+        C = (0, c.Fg)();
     return (0, r.jsxs)(d.H, {
         children: [
             (0, r.jsx)(o.ze6, {
                 theme: f.BRd.DARK,
-                children: (0, r.jsx)(p.Z, {
+                children: (0, r.jsx)(h.Z, {
                     text: O,
                     tooltipClass: m.tooltip,
                     tooltipContentClass: m.tooltipContent,
                     children: (0, r.jsx)(o.ze6, {
-                        theme: j,
+                        theme: C,
                         children: (0, r.jsx)(o.aRk, {
                             lowerBadge: (0, r.jsx)(o.mAB, {
                                 count: 1,
@@ -110,8 +110,8 @@ function y(e) {
                             }),
                             children: (0, r.jsx)(
                                 o.LYs,
-                                _(b({}, a), {
-                                    onClick: h,
+                                _(b({}, s), {
+                                    onClick: p,
                                     onContextMenu: y,
                                     children: (0, r.jsx)(o.Dkj, { color: u.Z.TEXT_NORMAL })
                                 })
@@ -131,6 +131,6 @@ function y(e) {
     });
 }
 function v() {
-    let e = (0, a.e7)([h.Z], () => h.Z.getActiveUserSignUp());
+    let e = (0, s.e7)([p.Z], () => p.Z.getActiveUserSignUp());
     return null == e ? null : (0, r.jsx)(y, { target: e });
 }

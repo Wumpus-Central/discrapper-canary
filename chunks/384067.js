@@ -33,13 +33,13 @@ let m = (e) => {
         );
     }, []);
     let y = null != C ? C : '',
-        { handleCardVisibilityChange: k } = (0, d.E)(y, 'home', 'marketing wide banner'),
-        S = m.bannerUrl;
-    return null == S
+        { handleCardVisibilityChange: S } = (0, d.E)(y, 'home', 'marketing wide banner'),
+        k = m.bannerUrl;
+    return null == k
         ? null
         : (0, r.jsx)(i.$, {
               innerRef: v,
-              onChange: k,
+              onChange: S,
               threshold: 0,
               children: (0, r.jsxs)('div', {
                   ref: v,
@@ -49,7 +49,7 @@ let m = (e) => {
                           className: g.wideBannerBackgroundImg,
                           children: (0, r.jsx)('img', {
                               ref: x,
-                              src: S,
+                              src: k,
                               alt: m.title,
                               style: {
                                   width: '100%',

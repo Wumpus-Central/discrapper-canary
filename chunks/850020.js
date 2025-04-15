@@ -24,18 +24,18 @@ function u(e) {
             return e || t || n;
         }),
         O = p && null != m && (f || (g && !b)) && !d ? m : void 0,
-        [y, h] = (0, r.useState)(O);
+        [h, y] = (0, r.useState)(O);
     return (
         (0, r.useEffect)(() => {
             if (f) return;
             let e = setTimeout(
                 () => {
-                    h(O);
+                    y(O);
                 },
                 g ? 100 : 1000
             );
             return () => clearTimeout(e);
         }, [O, g, f]),
-        f ? O : y
+        f ? O : h
     );
 }

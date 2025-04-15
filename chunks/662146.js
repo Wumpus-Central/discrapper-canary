@@ -3,8 +3,8 @@ var r = n(200651),
     i = n(192379),
     l = n(120356),
     o = n.n(l),
-    a = n(481060),
-    s = n(540059),
+    s = n(481060),
+    a = n(540059),
     c = n(991315);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -32,14 +32,14 @@ function u(e) {
     return e;
 }
 function d(e) {
-    let { children: t, text: n, color: l, disableWrapper: d = !1, disabled: p = !1, hideOnClick: h = !0, shouldShow: f, forceOpen: g, selected: m = !1, tooltipClass: b, tooltipContentClass: _ } = e,
-        y = (0, s.Q3)('ListItemTooltip');
-    return (0, r.jsx)(a.ua7, {
+    let { children: t, text: n, color: l, disableWrapper: d = !1, disabled: h = !1, hideOnClick: p = !0, shouldShow: f, forceOpen: g, selected: m = !1, tooltipClass: b, tooltipContentClass: _ } = e,
+        y = (0, a.Q3)('ListItemTooltip');
+    return (0, r.jsx)(s.ua7, {
         shouldShow: f,
         forceOpen: g,
         spacing: y ? 12 : 20,
-        hideOnClick: h,
-        text: p ? null : n,
+        hideOnClick: p,
+        text: h ? null : n,
         position: 'right',
         color: l,
         'aria-label': !1,

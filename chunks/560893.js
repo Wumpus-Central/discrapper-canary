@@ -3,8 +3,8 @@ var r = n(200651),
     a = n(192379),
     i = n(793030),
     l = n(442837),
-    o = n(445986),
-    s = n(9807),
+    s = n(445986),
+    o = n(9807),
     c = n(312097),
     d = n(451478),
     u = n(981631),
@@ -42,7 +42,7 @@ function g(e) {
                     r = t.findIndex((t) => t === e);
                 if (r < 0) return;
                 let a = t.map((e) => ({
-                    url: (0, o.Q)(e.src),
+                    url: (0, s.Q)(e.src),
                     original: e.src,
                     width: e.width,
                     height: e.height,
@@ -60,7 +60,7 @@ function g(e) {
     );
     return 0 === n.length
         ? null
-        : (0, r.jsx)(s.Z, {
+        : (0, r.jsx)(o.Z, {
               className: m.carousel,
               themedPagination: !0,
               items: n,

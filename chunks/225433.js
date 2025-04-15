@@ -1,21 +1,21 @@
-s.d(t, { Z: () => u });
-var r = s(200651);
-s(192379);
-var n = s(120356),
-    i = s.n(n),
-    o = s(481060),
-    l = s(388032),
-    a = s(622680);
+r.d(t, { Z: () => h });
+var n = r(200651);
+r(192379);
+var i = r(120356),
+    s = r.n(i),
+    o = r(481060),
+    l = r(388032),
+    a = r(622680);
 let c = Object.freeze({
     DEFAULT: a.default,
     FILLED: a.filled
 });
-function u(e) {
-    let { className: t, onClick: s, 'aria-label': n, look: u = c.DEFAULT } = e;
-    return (0, r.jsx)(o.P3F, {
-        'aria-label': null != n ? n : l.NW.string(l.t.N86XcH),
-        className: i()(a.button, u, t),
-        onClick: s
+function h(e) {
+    let { className: t, onClick: r, 'aria-label': i, look: h = c.DEFAULT } = e;
+    return (0, n.jsx)(o.P3F, {
+        'aria-label': null != i ? i : l.NW.string(l.t.N86XcH),
+        className: s()(a.button, h, t),
+        onClick: r
     });
 }
-u.Looks = c;
+h.Looks = c;

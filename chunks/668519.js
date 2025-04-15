@@ -1,6 +1,6 @@
 n.d(t, {
     a: () => o,
-    s: () => a
+    s: () => s
 });
 var r = n(818083),
     i = n(984134);
@@ -42,6 +42,6 @@ function o(e) {
         }
     );
 }
-function a(e) {
+function s(e) {
     i.h.getCurrentConfig({ location: e }).isInHoldout || l.trackExposure({ location: e });
 }

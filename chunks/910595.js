@@ -4,8 +4,8 @@ n(192379);
 var i = n(481060),
     l = n(703656),
     o = n(434479),
-    a = n(981631),
-    s = n(176505),
+    s = n(981631),
+    a = n(176505),
     c = n(388032);
 function u(e) {
     let { guild: t, selected: n } = e;
@@ -20,7 +20,7 @@ function u(e) {
         text: c.NW.string(c.t.VbpLyc),
         selected: n,
         onClick: function () {
-            (0, l.uL)(a.Z5c.CHANNEL(t.id, s.oC.GUILD_HOME));
+            (0, l.uL)(s.Z5c.CHANNEL(t.id, a.oC.GUILD_HOME));
         }
     });
 }

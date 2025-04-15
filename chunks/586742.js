@@ -215,7 +215,7 @@ function D(e) {
         n = null == t ? void 0 : t.id,
         [o, l] = (0, a.e7)([p.Z], () => (null == n ? [[], 0] : [p.Z.getVideoParticipants(n), p.Z.getParticipantsVersion(n)]), [n], b.Q),
         s = 'boolean' != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
-        { width: c, height: h, ref: f } = (0, d.Z)(e.locked, e.widget.pinned),
+        { width: c, height: h, ref: f } = (0, d.ZP)(e.locked, e.widget.pinned),
         { participantTileWidth: y, visibleParticipants: v } = (0, m.ZB)(s ? (null != c ? c : e.width) : null != h ? h : e.height, o, {
             tileWidth: I.vZ,
             tileMinWidth: I.mo,

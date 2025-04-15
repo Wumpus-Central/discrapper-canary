@@ -3,8 +3,8 @@ var r = n(200651),
     a = n(192379),
     i = n(120356),
     l = n.n(i),
-    o = n(873546),
-    s = n(442837),
+    s = n(873546),
+    o = n(442837),
     c = n(481060),
     d = n(782568),
     u = n(317381),
@@ -104,7 +104,7 @@ function Z(e) {
     });
 }
 function k(e) {
-    let { application: t, variant: n, size: i, color: s } = e,
+    let { application: t, variant: n, size: i, color: o } = e,
         { onClickInstallApplication: d, canInstall: u } = (function (e) {
             let t = (0, O.nu)(),
                 n = a.useCallback(() => {
@@ -130,7 +130,7 @@ function k(e) {
                 }, [t, n]),
                 {
                     onClickInstallApplication: a.useCallback(() => {
-                        if (((0, O.zZ)(E.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }), (o.tq || o.Em) && null == e.custom_install_url)) {
+                        if (((0, O.zZ)(E.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }), (s.tq || s.Em) && null == e.custom_install_url)) {
                             let t = (0, N.E)({
                                 applicationId: e.id,
                                 customInstallUrl: e.custom_install_url,
@@ -147,7 +147,7 @@ function k(e) {
                                 guild_id: t,
                                 auth_type: null != e.custom_install_url ? 'custom_url' : 'in_app',
                                 source: 'product_page',
-                                device_platform: o.tq ? 'mobile_web' : 'desktop_web'
+                                device_platform: s.tq ? 'mobile_web' : 'desktop_web'
                             }),
                                 (0, O.rf)({ [L]: 'true' });
                         }
@@ -168,7 +168,7 @@ function k(e) {
         ? (0, r.jsx)(c.zxk, {
               look: c.zxk.Looks.FILLED,
               size: c.zxk.Sizes.ICON,
-              color: s,
+              color: o,
               className: l()(A.iconButton, { [A.small]: 'sm' === i }),
               onClick: d,
               'aria-label': T.NW.string(T.t.NgXl3N),
@@ -181,7 +181,7 @@ function k(e) {
           })
         : (0, r.jsx)(c.zxk, {
               size: 'sm' === i ? c.zxk.Sizes.SMALL : c.zxk.Sizes.MEDIUM,
-              color: s,
+              color: o,
               onClick: d,
               disabled: !u,
               children: 'small' === n ? T.NW.string(T.t.qRZ35u) : T.NW.string(T.t.NgXl3N)
@@ -214,13 +214,13 @@ function w(e) {
 }
 let D = a.forwardRef(function (e, t) {
     let { application: n, size: i } = e,
-        o = h.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
+        s = h.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
         f = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(E.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
         { analyticsLocations: y } = (0, m.ZP)(),
         N = a.useCallback(() => {
-            (0, O.zZ)(E.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, I.JG)(f(n.id)), (0, c.showToast)((0, c.createToast)(T.NW.string(T.t['L/PwZW']), c.ToastType.SUCCESS));
+            (0, O.zZ)(E.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, I.JG)(f(n.id), () => (0, c.showToast)((0, c.createToast)(T.NW.string(T.t['L/PwZW']), c.ToastType.SUCCESS)));
         }, [n.id]),
-        P = (0, s.e7)([C.default], () => C.default.locale),
+        P = (0, o.e7)([C.default], () => C.default.locale),
         L = a.useCallback(() => {
             (0, d.Z)(
                 (0, S.G)({
@@ -249,7 +249,7 @@ let D = a.forwardRef(function (e, t) {
                     onClose: t,
                     onSelect: void 0,
                     children: [
-                        o && (0, r.jsx)(c.kSQ, { children: M }),
+                        s && (0, r.jsx)(c.kSQ, { children: M }),
                         e
                             ? (0, r.jsx)(c.kSQ, {
                                   children: (0, r.jsx)(c.sNh, {
@@ -271,17 +271,17 @@ let D = a.forwardRef(function (e, t) {
                         null != D ? (0, r.jsx)(c.kSQ, { children: D }) : null
                     ]
                 }),
-            [D, L, N, o, M]
+            [D, L, N, s, M]
         ),
         { onClickLaunchActivity: z, isSubmitting: B } = (function (e, t) {
             var n;
             let r = e.id,
                 i = null == e || null == (n = e.bot) ? void 0 : n.id,
                 l = null != i && (0, _.BQ)(e) && (0, _.ye)(e),
-                [o, c] = a.useState(!1),
+                [s, c] = a.useState(!1),
                 d = (0, O.nu)(),
-                m = (0, s.e7)([j.default], () => j.default.getCurrentUser()),
-                h = (0, s.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
+                m = (0, o.e7)([j.default], () => j.default.getCurrentUser()),
+                h = (0, o.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
                 f = a.useCallback(
                     async (t, n, r) => {
                         if (null != h && h.applicationId === e.id) {
@@ -318,7 +318,7 @@ let D = a.forwardRef(function (e, t) {
             }, [i, r, t, d, f]);
             return {
                 onClickLaunchActivity: l ? b : void 0,
-                isSubmitting: o
+                isSubmitting: s
             };
         })(n, y),
         W = null != z,

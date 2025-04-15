@@ -1,12 +1,12 @@
-s.d(t, { Z: () => f }), s(388685);
-var r = s(200651),
-    n = s(192379),
-    i = s(780384),
-    o = s(410030),
-    l = s(119269),
-    a = s(3504);
+r.d(t, { Z: () => f }), r(388685);
+var n = r(200651),
+    i = r(192379),
+    s = r(780384),
+    o = r(410030),
+    l = r(119269),
+    a = r(3504);
 let c = 'url(#gradient)',
-    u = (e, t) => {
+    h = (e, t) => {
         switch (e) {
             case l.Qo.NITRO_LOGO:
                 return t ? '0.3' : '0.2';
@@ -16,7 +16,7 @@ let c = 'url(#gradient)',
                 return;
         }
     },
-    d = (e) => {
+    v = (e) => {
         switch (e) {
             case l.Qo.NITRO_GEM:
             case l.Qo.AVATAR_DECO:
@@ -27,7 +27,7 @@ let c = 'url(#gradient)',
                 return;
         }
     },
-    p = (e, t) => {
+    u = (e, t) => {
         switch (t) {
             case l.Qo.NITRO_GEM:
             case l.Qo.AVATAR_DECO:
@@ -39,73 +39,73 @@ let c = 'url(#gradient)',
         }
     },
     f = (e) => {
-        let { percentage: t = 0, children: s, animationClassName: c, initialPercentage: f = 0, progressCircleStrokeSize: b = 2, progressCircleVariation: g, progressCircleStroke: O } = e,
-            x = 43 + b / 2,
-            m = 2 * Math.PI * x,
-            [h, j] = n.useState(f);
-        n.useEffect(() => {
+        let { percentage: t = 0, children: r, animationClassName: c, initialPercentage: f = 0, progressCircleStrokeSize: p = 2, progressCircleVariation: d, progressCircleStroke: b } = e,
+            g = 43 + p / 2,
+            Z = 2 * Math.PI * g,
+            [j, M] = i.useState(f);
+        i.useEffect(() => {
             let e = setTimeout(() => {
-                j(t);
+                M(t);
             }, 200);
             return () => clearTimeout(e);
         }, [t]);
-        let y = (0, o.ZP)(),
-            C = (0, i.ap)(y),
-            v = d(g),
-            P = u(g, C),
-            S = null != O ? O : p(C, g);
-        return (0, r.jsxs)('div', {
+        let O = (0, o.ZP)(),
+            y = (0, s.ap)(O),
+            m = v(d),
+            H = h(d, y),
+            x = null != b ? b : u(y, d);
+        return (0, n.jsxs)('div', {
             className: a.circleContainer,
             children: [
-                (0, r.jsxs)('svg', {
+                (0, n.jsxs)('svg', {
                     viewBox: '0 0 100 100',
                     className: a.circleSVG,
                     children: [
-                        (0, r.jsx)('circle', {
-                            className: g === l.Qo.NITRO_GEM || g === l.Qo.AVATAR_DECO ? a.baseProgressCircle : void 0,
+                        (0, n.jsx)('circle', {
+                            className: d === l.Qo.NITRO_GEM || d === l.Qo.AVATAR_DECO ? a.baseProgressCircle : void 0,
                             fill: 'transparent',
-                            strokeWidth: b,
-                            r: ''.concat(x),
+                            strokeWidth: p,
+                            r: ''.concat(g),
                             cx: '50%',
                             cy: '50%',
-                            stroke: v,
-                            strokeOpacity: P
+                            stroke: m,
+                            strokeOpacity: H
                         }),
-                        (0, r.jsx)('circle', {
-                            stroke: S,
-                            strokeWidth: b,
+                        (0, n.jsx)('circle', {
+                            stroke: x,
+                            strokeWidth: p,
                             strokeLinecap: 'round',
-                            strokeDasharray: ''.concat(m, ' ').concat(m),
+                            strokeDasharray: ''.concat(Z, ' ').concat(Z),
                             className: c,
-                            style: { strokeDashoffset: (1 - h / 100) * m },
-                            r: ''.concat(x),
+                            style: { strokeDashoffset: (1 - j / 100) * Z },
+                            r: ''.concat(g),
                             cx: '50%',
                             cy: '50%'
                         })
                     ]
                 }),
-                (0, r.jsxs)('svg', {
+                (0, n.jsxs)('svg', {
                     width: '0',
                     height: '0',
                     children: [
-                        (0, r.jsxs)('linearGradient', {
+                        (0, n.jsxs)('linearGradient', {
                             id: 'gradient',
                             x1: '0%',
                             y1: '0%',
                             x2: '100%',
                             y2: '100%',
                             children: [
-                                (0, r.jsx)('stop', {
+                                (0, n.jsx)('stop', {
                                     offset: '0%',
                                     style: { stopColor: '#FFBDF2' }
                                 }),
-                                (0, r.jsx)('stop', {
+                                (0, n.jsx)('stop', {
                                     offset: '100%',
                                     style: { stopColor: '#E742E1' }
                                 })
                             ]
                         }),
-                        (0, r.jsxs)('linearGradient', {
+                        (0, n.jsxs)('linearGradient', {
                             id: 'gradient_nitro_logo',
                             x1: '2.99995',
                             y1: '67.6298',
@@ -113,28 +113,28 @@ let c = 'url(#gradient)',
                             y2: '67.6298',
                             gradientUnits: 'userSpaceOnUse',
                             children: [
-                                (0, r.jsx)('stop', { stopColor: '#F9A0E8' }),
-                                (0, r.jsx)('stop', {
+                                (0, n.jsx)('stop', { stopColor: '#F9A0E8' }),
+                                (0, n.jsx)('stop', {
                                     offset: '1',
                                     stopColor: '#E742E1'
                                 })
                             ]
                         }),
-                        (0, r.jsxs)('linearGradient', {
+                        (0, n.jsxs)('linearGradient', {
                             id: 'dark-purple-gradient',
                             x1: '0%',
                             y1: '0%',
                             x2: '100%',
                             y2: '0%',
                             children: [
-                                (0, r.jsx)('stop', {
+                                (0, n.jsx)('stop', {
                                     offset: '0%',
                                     style: {
                                         stopColor: '#241731',
                                         stopOpacity: 1
                                     }
                                 }),
-                                (0, r.jsx)('stop', {
+                                (0, n.jsx)('stop', {
                                     offset: '100%',
                                     style: {
                                         stopColor: '#241731',
@@ -145,9 +145,9 @@ let c = 'url(#gradient)',
                         })
                     ]
                 }),
-                (0, r.jsx)('div', {
+                (0, n.jsx)('div', {
                     className: a.childrenContainer,
-                    children: s
+                    children: r
                 })
             ]
         });

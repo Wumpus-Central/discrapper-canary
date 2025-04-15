@@ -64,7 +64,7 @@ function O(e) {
             month: 'numeric',
             day: 'numeric'
         }),
-        { isClaiming: I, isEnrolling: W } = (0, i.cj)([m.Z], () => ({
+        { isClaiming: W, isEnrolling: I } = (0, i.cj)([m.Z], () => ({
             isClaiming: m.Z.isClaimingReward(w.id) || m.Z.isFetchingRewardCode(w.id),
             isEnrolling: m.Z.isEnrolling(w.id)
         })),
@@ -120,7 +120,7 @@ function O(e) {
     return (V && Z
         ? (ei = (0, r.jsx)(l.zxk, {
               color: l.Ttl.BRAND,
-              submitting: I,
+              submitting: W,
               onClick: null != er ? er : void 0,
               className: y.button,
               children: en
@@ -165,7 +165,7 @@ function O(e) {
             ? Q && Z
                 ? (ei = (0, r.jsx)(l.zxk, {
                       color: l.Ttl.BRAND,
-                      submitting: I,
+                      submitting: W,
                       onClick: null != er ? er : void 0,
                       className: y.button,
                       children: en
@@ -222,7 +222,7 @@ function O(e) {
                   : Q &&
                     !M &&
                     (ei = (0, r.jsx)(l.zxk, {
-                        submitting: W,
+                        submitting: I,
                         color: l.Ttl.BRAND,
                         onClick: null != er ? er : void 0,
                         className: y.button,

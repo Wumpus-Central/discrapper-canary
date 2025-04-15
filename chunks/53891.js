@@ -14,8 +14,8 @@ var r = n(200651),
     h = n(299929),
     f = n(921944),
     b = n(388032);
-let N = new c.Z('GuildTagCoachmark');
-function x(e) {
+let _ = new c.Z('GuildTagCoachmark');
+function N(e) {
     let t = (0, s.e7)([g.Z], () => {
         var t;
         return null == (t = g.Z.getGuild(e.guildId)) ? void 0 : t.name;
@@ -45,7 +45,7 @@ function x(e) {
         children: e.children
     });
 }
-function _(e) {
+function x(e) {
     let t = (0, s.e7)([g.Z], () => {
         var t;
         return null == (t = g.Z.getGuild(e.guildId)) ? void 0 : t.name;
@@ -76,20 +76,20 @@ function E(e) {
         null !== e.guildId && s === u.a.NOT_FETCHED && n();
     }, [e.guildId, n, s]),
     null === e.guildId || null === t)
-        ? (N.error('GuildTagCoachmark rendered without guildId or coachmark type.'),
+        ? (_.error('GuildTagCoachmark rendered without guildId or coachmark type.'),
           (0, r.jsx)(l.yRy, {
               position: 'top',
               renderPopout: () => (0, r.jsx)('div', {}),
               children: e.children
           }))
         : 'changed' === t
-          ? (0, r.jsx)(x, {
+          ? (0, r.jsx)(N, {
                 guildId: e.guildId,
                 guildProfile: a,
                 onDismiss: e.onDismiss,
                 children: e.children
             })
-          : (0, r.jsx)(_, {
+          : (0, r.jsx)(x, {
                 guildId: e.guildId,
                 guildProfile: a,
                 onDismiss: e.onDismiss,

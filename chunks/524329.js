@@ -1,8 +1,8 @@
 n.d(t, {
-    Es: () => u,
-    RM: () => o,
-    VP: () => c,
-    Xb: () => i,
+    Es: () => c,
+    RM: () => i,
+    VP: () => u,
+    Xb: () => o,
     sm: () => E,
     y0: () => a
 }),
@@ -18,7 +18,7 @@ let a = function (e) {
             isLurking: t
         });
     },
-    o = async (e) => {
+    i = async (e) => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_FETCH_START' });
         try {
             let t = await r.tn.get({
@@ -38,19 +38,19 @@ let a = function (e) {
             l.Z.dispatch({ type: 'WELCOME_SCREEN_FETCH_FAIL' });
         }
     },
-    i = () => {
+    o = () => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_SETTINGS_RESET' });
     },
     E = () => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_SETTINGS_CLEAR' });
     },
-    c = (e) => {
+    u = (e) => {
         l.Z.dispatch({
             type: 'WELCOME_SCREEN_SETTINGS_UPDATE',
             settings: e
         });
     },
-    u = async (e, t) => {
+    c = async (e, t) => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_SUBMIT' });
         try {
             let n = await r.tn.patch({

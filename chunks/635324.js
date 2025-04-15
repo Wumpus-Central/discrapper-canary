@@ -1,9 +1,9 @@
 n(388685);
 var i = n(200651),
     r = n(149765),
-    a = n(481060),
+    s = n(481060),
     o = n(570140),
-    s = n(700785);
+    a = n(700785);
 __OVERLAY__ &&
     o.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', function (e) {
         var {
@@ -19,18 +19,18 @@ __OVERLAY__ &&
                         var n,
                             i,
                             r = {},
-                            a = Object.keys(e);
-                        for (i = 0; i < a.length; i++) (n = a[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                            s = Object.keys(e);
+                        for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var a = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < a.length; i++) (n = a[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                    var s = Object.getOwnPropertySymbols(e);
+                    for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
                 return r;
             })(e.authorizeProps, ['authorizations', 'permissions']);
-        let _ = 'OAuth2Authorize_'.concat(t, '_').concat(d.guildId, '_').concat(d.channelId);
-        function u(e) {
+        let u = 'OAuth2Authorize_'.concat(t, '_').concat(d.guildId, '_').concat(d.channelId);
+        function h(e) {
             let { location: n } = e;
             o.Z.dispatch({
                 type: 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE',
@@ -38,11 +38,11 @@ __OVERLAY__ &&
                 location: n
             });
         }
-        let f = s.Hn;
+        let p = a.Hn;
         try {
-            f = r.vB(null != c ? c : 0);
+            p = r.vB(null != c ? c : 0);
         } catch (e) {}
-        (0, a.ZDy)(
+        (0, s.ZDy)(
             async () => {
                 let { OAuth2AuthorizeModal: e } = await Promise.resolve().then(n.bind(n, 69580));
                 return (t) => {
@@ -77,8 +77,8 @@ __OVERLAY__ &&
                         (r = r =
                             {
                                 authorizations: new Map(l),
-                                permissions: f,
-                                callback: u
+                                permissions: p,
+                                callback: h
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -97,9 +97,9 @@ __OVERLAY__ &&
                 };
             },
             {
-                modalKey: _,
+                modalKey: u,
                 onCloseRequest: () => {
-                    (0, a.Mr3)(_), u({});
+                    (0, s.Mr3)(u), h({});
                 }
             }
         );

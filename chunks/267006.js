@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => N });
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -14,7 +14,7 @@ var r = n(200651),
     h = n(726985),
     f = n(388032),
     b = n(20493);
-function N(e) {
+function _(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, l.e7)([u.Z], () => u.Z.getExperimentalEncoders());
     return (0, r.jsx)(d.F, {
@@ -28,15 +28,15 @@ function N(e) {
         })
     });
 }
-function x(e) {
+function N(e) {
     let { refreshStyles: t = !1 } = e,
         { openH264: n, hardwareEncoding: s } = (0, l.cj)([u.Z], () => ({
             openH264: u.Z.getOpenH264(),
             hardwareEncoding: u.Z.getHardwareEncoding()
         })),
-        x = i.useRef(null);
-    (0, m.Z)(x, p.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
-    let _ = i.useCallback((e) => {
+        N = i.useRef(null);
+    (0, m.Z)(N, p.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
+    let x = i.useCallback((e) => {
             e
                 ? c.Z.setHardwareEncoding(!0)
                 : (0, o.h7j)((e) => {
@@ -117,10 +117,10 @@ function x(e) {
                         children: [
                             (0, r.jsx)(o.j7V, {
                                 style: { scrollMarginTop: '48px' },
-                                containerRef: x,
+                                containerRef: N,
                                 className: t ? null : a()(b.marginTop8, b.marginBottom20),
                                 value: s,
-                                onChange: _,
+                                onChange: x,
                                 note: f.NW.string(f.t.P1UKqq),
                                 hideBorder: t,
                                 children: f.NW.string(f.t.Sln58f)
@@ -133,7 +133,7 @@ function x(e) {
                         ]
                     })
                 }),
-                (0, r.jsx)(N, { refreshStyles: t })
+                (0, r.jsx)(_, { refreshStyles: t })
             ]
         });
     return (0, r.jsx)(d.F, {

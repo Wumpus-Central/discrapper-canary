@@ -3,21 +3,21 @@ var r = n(200651),
     i = n(192379),
     l = n(120356),
     o = n.n(l),
-    a = n(442837),
-    s = n(481060),
+    s = n(442837),
+    a = n(481060),
     c = n(540059),
     u = n(592125),
     d = n(938475),
-    p = n(823379),
-    h = n(734190),
+    h = n(823379),
+    p = n(734190),
     f = n(388032),
     g = n(995453);
 let m = i.memo(function (e) {
     let { channel: t, selectedChannel: n, selectedVoiceChannelId: i, sortedThreadIds: l, withGuildIcon: m } = e,
-        { density: b } = (0, s.TCT)(),
+        { density: b } = (0, a.TCT)(),
         _ = (0, c.Q3)('GuildSidebarThreadList'),
-        y = (0, a.Wu)([u.Z], () => l.map((e) => u.Z.getChannel(e)).filter(p.lm), [l]),
-        v = (0, a.e7)([d.ZP], () => {
+        y = (0, s.Wu)([u.Z], () => l.map((e) => u.Z.getChannel(e)).filter(h.lm), [l]),
+        v = (0, s.e7)([d.ZP], () => {
             let e = y[y.length - 1];
             if (null == e) return 0;
             let t = d.ZP.getVoiceStates(e.guild_id)[e.id];
@@ -35,7 +35,7 @@ let m = i.memo(function (e) {
                 }),
                 y.map((e, t) =>
                     (0, r.jsx)(
-                        h.Z,
+                        p.Z,
                         {
                             thread: e,
                             isSelectedChannel: (null == n ? void 0 : n.id) === e.id,

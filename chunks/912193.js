@@ -1,4 +1,4 @@
-n.d(t, { b: () => E });
+n.d(t, { b: () => d });
 var r = n(200651);
 n(192379);
 var i = n(481060),
@@ -12,7 +12,7 @@ function c() {
 function u() {
     l.Z.setSilenceWarning(!1), c();
 }
-function E() {
+function d() {
     s = (0, i.h7j)((e) =>
         (0, r.jsx)(
             o.default,

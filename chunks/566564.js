@@ -21,8 +21,8 @@ var r = n(200651),
     O = n(384067),
     j = n(215023),
     y = n(388032),
-    k = n(806734);
-let S = (e) => {
+    S = n(806734);
+let k = (e) => {
         let { handleTransition: t, numVisibleItems: n, isFetchingCategories: a, tab: s } = e,
             { noCache: c, includeUnpublished: u } = (0, h.Z)(),
             {
@@ -46,7 +46,7 @@ let S = (e) => {
             });
         if (d || 0 === p.length)
             return (0, r.jsxs)('div', {
-                className: k.loadingContainer,
+                className: S.loadingContainer,
                 children: [
                     (0, r.jsx)(v.Z, {
                         isLoading: d,
@@ -135,7 +135,7 @@ let S = (e) => {
             return (0, r.jsx)(
                 'div',
                 {
-                    className: o()(k.blockContainer, { [k.topBlockContainer]: 0 === l }),
+                    className: o()(S.blockContainer, { [S.topBlockContainer]: 0 === l }),
                     children: c
                 },
                 l
@@ -149,8 +149,8 @@ let S = (e) => {
             { isFetchingCategories: _, fetchCategoriesError: C, fetchPurchasesError: v, claimError: x, refreshCategories: O } = (0, f.ZP)({ location: 'CollectiblesFeedShop' }),
             P = null != (t = null != C ? C : v) ? t : x,
             E = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
-            w = (0, b.b)('Collectibles Shop Button'),
-            B = (0, p.R)('CollectiblesFeedShop'),
+            B = (0, b.b)('Collectibles Shop Button'),
+            w = (0, p.R)('CollectiblesFeedShop'),
             { noCache: I, includeUnpublished: T } = (0, h.Z)(),
             N = l.useCallback(() => {
                 O();
@@ -162,7 +162,7 @@ let S = (e) => {
                 d.Z.captureMessage(e.join('\n'), {
                     tags: {
                         isStaff: E.isStaff().toString(),
-                        preloadEnabled: w.toString(),
+                        preloadEnabled: B.toString(),
                         disableCache: I.toString(),
                         includeUnpublished: T.toString()
                     }
@@ -175,27 +175,27 @@ let S = (e) => {
                   errorMessage: C.message
               })
             : (0, r.jsx)('div', {
-                  className: o()(k.shop, { [k.shopFullscreen]: n }),
+                  className: o()(S.shop, { [S.shopFullscreen]: n }),
                   children: (0, r.jsxs)('div', {
-                      className: o()(k.content, k.mainContent),
+                      className: o()(S.content, S.mainContent),
                       children: [
-                          (0, r.jsx)(S, {
+                          (0, r.jsx)(k, {
                               handleTransition: a,
                               numVisibleItems: i,
                               isFetchingCategories: _,
                               tab: g
                           }),
                           g !== j.AW.CATALOG &&
-                              i >= B &&
+                              i >= w &&
                               (0, r.jsxs)('div', {
-                                  className: k.endOfFeed,
+                                  className: S.endOfFeed,
                                   children: [
                                       (0, r.jsx)(c.X6q, {
                                           variant: 'heading-md/semibold',
                                           children: y.NW.string(y.t.Yr70c3)
                                       }),
                                       (0, r.jsx)(c.zxk, {
-                                          className: k.endOfFeedButton,
+                                          className: S.endOfFeedButton,
                                           onClick: () => {
                                               a('shop all bottom', void 0, !0);
                                           },

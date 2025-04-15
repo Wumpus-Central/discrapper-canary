@@ -1,14 +1,14 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(388905),
-    l = n(414718);
-function s(e) {
+    s = n.n(i),
+    l = n(388905),
+    o = n(414718);
+function a(e) {
     var t,
         n,
-        { children: i, className: s } = e,
+        { children: i, className: a } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -18,19 +18,19 @@ function s(e) {
                     var n,
                         r,
                         i = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        s = Object.keys(e);
+                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var s = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ['children', 'className']);
     let u = i();
     return (0, r.jsx)(
-        a.ZP,
+        l.ZP,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -58,13 +58,13 @@ function s(e) {
         })({}, c)),
         (n = n =
             {
-                className: o()(s, l.container),
-                contentClassName: l.content,
+                className: s()(a, o.container),
+                contentClassName: o.content,
                 children: u.map((e, t) =>
                     (0, r.jsx)(
                         'div',
                         {
-                            className: l.column,
+                            className: o.column,
                             style: { flexBasis: ''.concat(100 / u.length, '%') },
                             children: e
                         },

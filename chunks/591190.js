@@ -4,8 +4,8 @@ n(192379);
 var i = n(120356),
     l = n.n(i),
     o = n(113087);
-let a = () => (0, r.jsx)('div', { className: o.spacer }),
-    s = () => (0, r.jsx)('div', { className: o.category }),
+let s = () => (0, r.jsx)('div', { className: o.spacer }),
+    a = () => (0, r.jsx)('div', { className: o.category }),
     c = (e) => {
         let { width: t } = e;
         return (0, r.jsxs)('div', {
@@ -23,6 +23,6 @@ let a = () => (0, r.jsx)('div', { className: o.spacer }),
         let { withBannerPadding: t } = e;
         return (0, r.jsxs)('div', {
             className: l()(o.container, { [o.bannerPadding]: t }),
-            children: [(0, r.jsx)(s, {}), (0, r.jsx)(c, { width: 100 }), (0, r.jsx)(c, { width: 74 }), (0, r.jsx)(c, { width: 100 }), (0, r.jsx)(c, { width: 70 }), (0, r.jsx)(c, { width: 112 }), (0, r.jsx)(c, { width: 175 }), (0, r.jsx)(a, {}), (0, r.jsx)(s, {}), (0, r.jsx)(c, { width: 100 }), (0, r.jsx)(c, { width: 74 }), (0, r.jsx)(c, { width: 100 }), (0, r.jsx)(c, { width: 70 }), (0, r.jsx)(c, { width: 112 }), (0, r.jsx)(c, { width: 56 })]
+            children: [(0, r.jsx)(a, {}), (0, r.jsx)(c, { width: 100 }), (0, r.jsx)(c, { width: 74 }), (0, r.jsx)(c, { width: 100 }), (0, r.jsx)(c, { width: 70 }), (0, r.jsx)(c, { width: 112 }), (0, r.jsx)(c, { width: 175 }), (0, r.jsx)(s, {}), (0, r.jsx)(a, {}), (0, r.jsx)(c, { width: 100 }), (0, r.jsx)(c, { width: 74 }), (0, r.jsx)(c, { width: 100 }), (0, r.jsx)(c, { width: 70 }), (0, r.jsx)(c, { width: 112 }), (0, r.jsx)(c, { width: 56 })]
         });
     };

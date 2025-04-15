@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(442837),
@@ -14,7 +14,7 @@ var r = n(200651),
     h = n(294206),
     f = n(388032),
     b = n(517058);
-function N(e) {
+function _(e) {
     let { onSelect: t } = e,
         [n, a] = i.useState(!1),
         o = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
@@ -99,7 +99,7 @@ function N(e) {
         }
     });
 }
-function x(e) {
+function N(e) {
     let { sound: t } = e,
         { previewSound: n } = (0, m.Z)(t, null),
         i =
@@ -119,7 +119,7 @@ function x(e) {
         })
     });
 }
-function _(e) {
+function x(e) {
     let { sound: t, isGlobal: n, onSelect: i } = e,
         s = null != t,
         c = null == t ? void 0 : t.emojiId,
@@ -158,7 +158,7 @@ function _(e) {
                                   : t.name
                     }),
                     s
-                        ? (0, r.jsx)(x, { sound: t })
+                        ? (0, r.jsx)(N, { sound: t })
                         : (0, r.jsx)(l.gj8, {
                               size: 'md',
                               color: 'currentColor',
@@ -169,7 +169,7 @@ function _(e) {
             (0, r.jsxs)('div', {
                 className: b.container,
                 children: [
-                    (0, r.jsx)(N, { onSelect: i }),
+                    (0, r.jsx)(_, { onSelect: i }),
                     s &&
                         !n &&
                         (0, r.jsx)(h.hU, {

@@ -4,8 +4,8 @@ n(192379);
 var a = n(120356),
     i = n.n(a),
     l = n(481060),
-    o = n(410030),
-    s = n(686546),
+    s = n(410030),
+    o = n(686546),
     c = n(565138),
     d = n(372769),
     u = n(134432),
@@ -18,7 +18,7 @@ var a = n(120356),
     b = n(330065);
 function x(e) {
     let { guild: t, className: n, onClick: a } = e,
-        x = (0, o.ZP)(),
+        x = (0, s.ZP)(),
         v = new p.ZP({
             name: t.name,
             icon: t.icon
@@ -59,8 +59,8 @@ function x(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: _.guildIcon,
-                        children: (0, r.jsx)(s.ZP, {
-                            mask: s.ZP.Masks.AVATAR_DEFAULT,
+                        children: (0, r.jsx)(o.ZP, {
+                            mask: o.ZP.Masks.AVATAR_DEFAULT,
                             width: 58,
                             height: 58,
                             children: (0, r.jsx)('div', {

@@ -4,8 +4,8 @@ n.r(t),
         useOverlayInitialFocus: () => y
     }),
     n(388685);
-var a = n(200651),
-    r = n(192379),
+var r = n(200651),
+    a = n(192379),
     i = n(442837),
     o = n(13245),
     l = n(615287),
@@ -20,26 +20,26 @@ var p = n(998502),
     m = n(145597);
 n(371467);
 var g = n(554370),
-    I = n(371651),
-    h = n(610394),
-    v = n(757744),
-    b = n(981631);
+    h = n(371651),
+    v = n(610394),
+    b = n(757744),
+    I = n(981631);
 function y(e, t) {
     let n = (0, i.e7)([s.Z], () => {
             var t;
             return null != (t = s.Z.getWindow(e)) ? t : window;
         }),
-        a = (0, i.e7)([h.ZP], () => {
-            let e = h.ZP.getFocusedPID();
+        r = (0, i.e7)([v.ZP], () => {
+            let e = v.ZP.getFocusedPID();
             return !f.isPlatformEmbedded || (null != e && e !== m.UNSET_PID);
         }),
-        [u, g] = r.useState(a);
+        [u, g] = a.useState(r);
     (0, c.Ng)(() => {
         let e = (e) => {
-            e.data === h.Il &&
+            e.data === v.Il &&
                 n.requestAnimationFrame(() => {
                     n.requestAnimationFrame(() => {
-                        window.parent.postMessage(h.A8, '*');
+                        window.parent.postMessage(v.A8, '*');
                     });
                 });
         };
@@ -50,7 +50,7 @@ function y(e, t) {
             }
         );
     });
-    let v = r.useCallback(() => {
+    let b = a.useCallback(() => {
         n.requestAnimationFrame(() => {
             try {
                 o.Z.successfullyShown((0, m.getPID)()), p.ZP.showInactive(e);
@@ -63,18 +63,18 @@ function y(e, t) {
         });
     }, [e, n]);
     return (
-        r.useEffect(() => {
-            !u && a && a && (g(!0), v());
-        }, [v, u, a, e]),
+        a.useEffect(() => {
+            !u && r && r && (g(!0), b());
+        }, [b, u, r, e]),
         (0, c.Ng)(() => {
             var e;
-            u && v();
-            let n = null != (e = h.ZP.getFocusedPID()) ? e : (0, m.getPID)(),
-                a = null != d.Z.getVoiceChannelId();
-            o.Z.track(b.rMx.OVERLAY_INITIALIZED, {
-                voice_widget_connected: a,
-                text_widget_connected: h.ZP.isPinned(b.Odu.TEXT),
-                overlay_render_method: l.gl[I.default.getOverlayMethod(n)],
+            u && b();
+            let n = null != (e = v.ZP.getFocusedPID()) ? e : (0, m.getPID)(),
+                r = null != d.Z.getVoiceChannelId();
+            o.Z.track(I.rMx.OVERLAY_INITIALIZED, {
+                voice_widget_connected: r,
+                text_widget_connected: v.ZP.isPinned(I.Odu.TEXT),
+                overlay_render_method: l.gl[h.default.getOverlayMethod(n)],
                 unpinned_widget_types: _.Z.getAllUnpinnedPinnedWidgets(t)
             });
         }),
@@ -83,12 +83,12 @@ function y(e, t) {
 }
 function S(e) {
     let { withTitleBar: t, windowKey: n } = e;
-    return y(n, v.$)
-        ? (0, a.jsx)(u.Z, {
+    return y(n, b.$)
+        ? (0, r.jsx)(u.Z, {
               withTitleBar: t,
               windowKey: n,
               title: 'Discord Overlay',
-              children: (0, a.jsx)(g.Z, {})
+              children: (0, r.jsx)(g.Z, {})
           })
         : null;
 }

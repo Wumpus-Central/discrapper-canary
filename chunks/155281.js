@@ -1,11 +1,11 @@
 r.d(t, { G: () => d });
-var n = r(573654),
-    o = r(556841),
-    i = r(717435),
-    a = r(875256),
-    s = r(670543),
-    c = r(674493),
-    u = r(829180);
+var n = r(573654);
+if (12633 == r.j) var o = r(556841);
+if (12633 == r.j) var i = r(717435);
+if (12633 == r.j) var a = r(875256);
+if (12633 == r.j) var s = r(670543);
+if (12633 == r.j) var c = r(674493);
+if (12633 == r.j) var u = r(829180);
 function d(e, t, r) {
     var d = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     (0, s.U9)('DropTarget', 'type, spec, collect[, options]', e, t, r, d);

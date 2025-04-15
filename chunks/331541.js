@@ -1,4 +1,4 @@
-n.d(t, { Z: () => J });
+n.d(t, { Z: () => Q });
 var r = n(200651),
     i = n(192379),
     s = n(873546),
@@ -14,13 +14,13 @@ var r = n(200651),
     h = n(734934),
     f = n(300284),
     b = n(680295),
-    N = n(785717),
-    x = n(687158),
-    _ = n(899007),
+    _ = n(785717),
+    N = n(687158),
+    x = n(899007),
     E = n(648052),
     j = n(867176),
-    O = n(537006),
-    C = n(483517),
+    C = n(537006),
+    O = n(483517),
     S = n(483424),
     v = n(681837),
     T = n(502762),
@@ -71,20 +71,20 @@ function X(e) {
     }
     return e;
 }
-function J(e) {
-    let { currentUser: t, onClose: n, setPopoutRef: J, highlightBadge: Q, openedAt: $ } = e,
+function Q(e) {
+    let { currentUser: t, onClose: n, setPopoutRef: Q, highlightBadge: J, openedAt: $ } = e,
         ee = __OVERLAY__,
-        et = (0, x.ZP)(t.id),
+        et = (0, N.ZP)(t.id),
         { analyticsLocations: en } = (0, u.ZP)(d.Z.ACCOUNT_PROFILE_POPOUT),
-        er = (0, N.ZB)({
+        er = (0, _.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: t.id
         }),
-        { ref: ei } = (0, o.Z)(),
+        { ref: ei } = (0, o.ZP)(),
         es = (0, c.Z)(ei);
     i.useEffect(() => {
-        null == J || J(ei.current);
-    }, [ei, J]),
+        null == Q || Q(ei.current);
+    }, [ei, Q]),
         i.useEffect(() => (B.a.setState({ isOpen: !0 }), () => B.a.setState({ isOpen: !1 })), []);
     let ea = (0, a.e7)([Z.Z], () => Z.Z.getStatus(t.id)),
         el = D.Cr.useSetting(),
@@ -98,13 +98,13 @@ function J(e) {
         eh = (0, f.Z)({ analyticsLocations: en }),
         ef = (0, L.I5)(t),
         eb = (0, m.p)({ location: 'AccountProfilePopout' }),
-        eN = i.useMemo(() => (0, g.Z)(), []),
-        ex = (e) => {
+        e_ = i.useMemo(() => (0, g.Z)(), []),
+        eN = (e) => {
             null == n || n(),
                 (0, P.openUserProfileModal)(
                     X(
                         {
-                            customStatusPrompt: eN,
+                            customStatusPrompt: e_,
                             sourceAnalyticsLocations: en
                         },
                         er,
@@ -114,7 +114,7 @@ function J(e) {
         };
     return (0, r.jsx)(u.Gt, {
         value: en,
-        children: (0, r.jsx)(N.Mt, {
+        children: (0, r.jsx)(_.Mt, {
             value: er,
             openedAt: $,
             fetchStartedAt: null == et ? void 0 : et.fetchStartedAt,
@@ -137,18 +137,18 @@ function J(e) {
                                     displayProfile: et,
                                     profileType: z.y0.BITE_SIZE
                                 }),
-                                (0, r.jsx)(_.Z, {
+                                (0, r.jsx)(x.Z, {
                                     user: t,
                                     displayProfile: et,
                                     profileType: z.y0.BITE_SIZE,
-                                    onOpenProfile: ee ? void 0 : ex
+                                    onOpenProfile: ee ? void 0 : eN
                                 }),
                                 (0, r.jsx)(A.Z, {
                                     location: 'AccountProfilePopout',
                                     user: t,
                                     profileType: z.y0.BITE_SIZE,
                                     onCloseProfile: n,
-                                    prompt: eb ? eN : null
+                                    prompt: eb ? e_ : null
                                 })
                             ]
                         }),
@@ -165,13 +165,13 @@ function J(e) {
                                     className: K.username,
                                     profileType: z.y0.BITE_SIZE,
                                     nickname: W.ZP.getName(null, null, t),
-                                    onOpenProfile: ee ? void 0 : ex,
+                                    onOpenProfile: ee ? void 0 : eN,
                                     pronouns: null == et ? void 0 : et.pronouns,
                                     tags: (0, r.jsx)(E.Z, {
                                         displayProfile: et,
                                         profileType: z.y0.BITE_SIZE,
                                         onClose: n,
-                                        shouldOpenBadgeTooltip: null != Q ? (e) => e === Q : void 0
+                                        shouldOpenBadgeTooltip: null != J ? (e) => e === J : void 0
                                     }),
                                     nicknameIcons: (0, r.jsxs)(r.Fragment, {
                                         children: [
@@ -189,7 +189,7 @@ function J(e) {
                                     hidePersonalInformation: ed,
                                     onClose: n
                                 }),
-                                (0, r.jsx)(O.Z, {
+                                (0, r.jsx)(C.Z, {
                                     isPremiumUser: ef,
                                     onInteraction: n
                                 }),
@@ -216,7 +216,7 @@ function J(e) {
                                                             eh(), n();
                                                         }
                                                     }),
-                                                    (0, r.jsx)(C.Z, { className: K.menuDivider }),
+                                                    (0, r.jsx)(O.Z, { className: K.menuDivider }),
                                                     (0, r.jsx)(U.Mv, {
                                                         id: 'set-status',
                                                         action: 'PRESS_SET_STATUS',
@@ -346,7 +346,7 @@ function J(e) {
                                                         em &&
                                                         (0, r.jsxs)(r.Fragment, {
                                                             children: [
-                                                                (0, r.jsx)(C.Z, { className: K.menuDivider }),
+                                                                (0, r.jsx)(O.Z, { className: K.menuDivider }),
                                                                 (0, r.jsx)(U.Mv, {
                                                                     id: 'copy-user-id',
                                                                     action: 'COPY_USER_ID',

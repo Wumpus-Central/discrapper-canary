@@ -1,33 +1,33 @@
 n.d(t, { Z: () => d });
 var r = n(192379),
     i = n(46973),
-    o = n(846519),
-    l = n(763520),
+    l = n(846519),
+    o = n(763520),
     s = n(798681),
     a = n(70956),
     c = n(878001);
 let u = 20 * a.Z.Millis.SECOND;
 function d(e) {
-    let { streamId: t, userId: n, videoSpinnerContext: a, streamKey: d, loading: p, paused: h = !1 } = e,
-        f = r.useRef(new o.V7()),
-        _ = a === l.m.SELF_STREAM || a === l.m.REMOTE_STREAM ? i.Yn.STREAM : i.Yn.DEFAULT;
+    let { streamId: t, userId: n, videoSpinnerContext: a, streamKey: d, loading: h, paused: p = !1 } = e,
+        f = r.useRef(new l.V7()),
+        g = a === o.m.SELF_STREAM || a === o.m.REMOTE_STREAM ? i.Yn.STREAM : i.Yn.DEFAULT;
     return (
         r.useEffect(() => {
-            if (!p || h || !s.w.isIncomingVideoEnabled()) return;
+            if (!h || p || !s.w.isIncomingVideoEnabled()) return;
             let e = f.current;
             return (
                 e.start(u, () => {
-                    (0, c.K)(t, n, _, d);
+                    (0, c.K)(t, n, g, d);
                 }),
                 () => {
                     e.stop();
                 }
             );
-        }, [h, t, p, _, d, n]),
+        }, [p, t, h, g, d, n]),
         {
             onReady: r.useCallback(() => {
-                f.current.stop(), (0, c.w)(_, n);
-            }, [n, _])
+                f.current.stop(), (0, c.w)(g, n);
+            }, [n, g])
         }
     );
 }

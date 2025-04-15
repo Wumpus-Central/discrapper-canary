@@ -10,7 +10,7 @@ let u = (e) => {
     let { guild: t, onAddGuild: u } = e,
         d = i.useCallback(() => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('7654'), n.e('96814')]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(

@@ -26,8 +26,8 @@ var r = n(200651),
     N = n(557256),
     P = n(582425),
     Z = n(345554),
-    E = n(88490),
-    k = n(466674);
+    k = n(88490),
+    E = n(466674);
 function R() {
     let e = (0, s.e7)([f.Z], () => f.Z.useReducedMotion),
         [t, n] = a.useState(!e),
@@ -36,7 +36,7 @@ function R() {
         m = (0, u.ZP)(),
         y = (0, i.apv)(m),
         h = y ? Z.Z : P.Z,
-        O = y ? k.Z : E.Z;
+        O = y ? E.Z : k.Z;
     a.useEffect(() => {
         if (!t && !e) {
             var n;
@@ -235,7 +235,7 @@ function A(e) {
                 (0, y.Y)({
                     pageType: x.ZY5.GLOBAL_DISCOVERY_QUESTS,
                     sectionType: x.jXE.ORBS_REWARD_MODAL,
-                    ctaObject: x.qAy.ORBS_QUESTS_REWARD_MODAL_SHOP_CTA
+                    ctaObject: x.qAy.CTA_TO_ORBS_SHOP
                 }),
                 (0, m.mK)({
                     openInLayer: !1,

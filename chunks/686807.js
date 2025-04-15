@@ -1,43 +1,43 @@
-n.d(t, { Z: () => p });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    l = n(201895),
-    o = n(471445),
-    a = n(823379),
-    s = n(303737),
-    u = n(293810),
-    c = n(388032),
-    d = n(310045);
-function f(e) {
+r.d(t, { Z: () => f });
+var n = r(200651);
+r(192379);
+var i = r(481060),
+    s = r(201895),
+    o = r(471445),
+    l = r(823379),
+    a = r(303737),
+    c = r(293810),
+    h = r(388032),
+    v = r(310045);
+function u(e) {
     let { channelId: t } = e,
-        n = (0, s.m7)(t);
-    if (null == n) return '['.concat(c.NW.string(c.t.bz1PZW), ']');
-    let a = n.isMediaChannel() ? i.XBm : (0, o.Th)(n.type);
-    return (0, r.jsxs)(r.Fragment, {
+        r = (0, a.m7)(t);
+    if (null == r) return '['.concat(h.NW.string(h.t.bz1PZW), ']');
+    let l = r.isMediaChannel() ? i.XBm : (0, o.Th)(r.type);
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, r.jsx)(i.nn4, { children: (0, l.ZP)({ channel: n }) }),
-            (0, r.jsxs)('div', {
+            (0, n.jsx)(i.nn4, { children: (0, s.ZP)({ channel: r }) }),
+            (0, n.jsxs)('div', {
                 'aria-hidden': !0,
                 children: [
-                    null != a &&
-                        (0, r.jsx)(a, {
-                            className: d.icon,
+                    null != l &&
+                        (0, n.jsx)(l, {
+                            className: v.icon,
                             'aria-hidden': !0
                         }),
-                    n.name
+                    r.name
                 ]
             })
         ]
     });
 }
-function p(e) {
+function f(e) {
     switch (e.ref_type) {
-        case u.Qs.CHANNEL:
-            return (0, r.jsx)(f, { channelId: e.ref_id });
-        case u.Qs.INTANGIBLE:
+        case c.Qs.CHANNEL:
+            return (0, n.jsx)(u, { channelId: e.ref_id });
+        case c.Qs.INTANGIBLE:
             return e.name;
         default:
-            (0, a.vE)(e);
+            (0, l.vE)(e);
     }
 }

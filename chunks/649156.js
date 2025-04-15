@@ -1,21 +1,21 @@
-n.d(t, { Z: () => l }), n(35282);
+n.d(t, { Z: () => o }), n(35282);
 var r = n(200651);
 n(192379);
 var i = n(3570),
-    o = n(685311),
-    a = n(186901);
-let l = function (e) {
+    s = n(685311),
+    l = n(186901);
+let o = function (e) {
     let { match: t, location: n } = e,
-        l = async (e, t) => {
-            await (0, i.s)(a.jE.PICK_GUILD_SETTINGS, {
+        o = async (e, t) => {
+            await (0, i.s)(l.jE.PICK_GUILD_SETTINGS, {
                 section: e.params.section,
                 subsection: e.params.subsection,
                 search: t.search
             });
         };
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(s.Z, {
         match: t,
         location: n,
-        attemptDeepLink: l
+        attemptDeepLink: o
     });
 };

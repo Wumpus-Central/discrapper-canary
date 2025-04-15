@@ -4,13 +4,13 @@ n(192379);
 var i = n(120356),
     l = n.n(i),
     o = n(481060),
-    a = n(40614),
-    s = n(925329),
+    s = n(40614),
+    a = n(925329),
     c = n(810568),
     u = n(168524),
     d = n(115530),
-    p = n(388032),
-    h = n(270861);
+    h = n(388032),
+    p = n(270861);
 function f(e) {
     let { name: t, applicationId: n } = e,
         i = (0, u.Z)({
@@ -21,24 +21,24 @@ function f(e) {
         });
     return (0, r.jsx)(o.P3F, {
         onClick: i,
-        className: l()(null != i && h.clickableGameName),
+        className: l()(null != i && p.clickableGameName),
         children: (0, r.jsx)(d.Z, {
-            className: h.gameName,
+            className: p.gameName,
             children: t
         })
     });
 }
 function g(e) {
     let { isStreaming: t, application: n, game: i, onClickNotSharing: l } = e,
-        c = null != n ? n.name : null != i ? i.name : p.NW.string(p.t['UQMV/P']);
+        c = null != n ? n.name : null != i ? i.name : h.NW.string(h.t['UQMV/P']);
     return (0, r.jsxs)('div', {
-        className: h.gameWrapper,
+        className: p.gameWrapper,
         children: [
             (0, r.jsxs)('div', {
-                className: h.gameIconWrapper,
+                className: p.gameIconWrapper,
                 children: [
-                    (0, r.jsx)(s.Z, {
-                        className: h.gameIcon,
+                    (0, r.jsx)(a.Z, {
+                        className: p.gameIcon,
                         game: n,
                         pid: null == i ? void 0 : i.pid
                     }),
@@ -46,13 +46,13 @@ function g(e) {
                         ? (0, r.jsx)(o.Odl, {
                               size: 'md',
                               color: 'currentColor',
-                              className: h.liveBadge
+                              className: p.liveBadge
                           })
                         : null
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: h.info,
+                className: p.info,
                 children: [
                     null != c
                         ? (0, r.jsx)(f, {
@@ -60,7 +60,7 @@ function g(e) {
                               applicationId: null == n ? void 0 : n.id
                           })
                         : null,
-                    (0, r.jsx)(a.V, { onClick: l })
+                    (0, r.jsx)(s.V, { onClick: l })
                 ]
             })
         ]

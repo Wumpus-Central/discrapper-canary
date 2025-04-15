@@ -16,18 +16,18 @@ let h = (e) => {
     let t,
         n,
         { premiumSubscription: i, className: h, isFullscreen: f = !1, textColor: b } = e,
-        N = (0, d.Nx)();
+        _ = (0, d.Nx)();
     if (null == i) return null;
-    let x = null != i ? c.ZP.getPremiumPlanItem(i) : null;
-    if ((c.ZP.isBoostOnlySubscription(i) ? (t = g.NW.string(g.t.Uj0md3)) : null != x && (t = c.ZP.getDisplayPremiumType(x.planId)), null == t)) return null;
-    let _ = () => l.Z.open(m.oAB.SUBSCRIPTIONS),
-        E = (null != x ? c.ZP.getSkuIdForPlan(x.planId) : null) === u.Si.TIER_1;
+    let N = null != i ? c.ZP.getPremiumPlanItem(i) : null;
+    if ((c.ZP.isBoostOnlySubscription(i) ? (t = g.NW.string(g.t.Uj0md3)) : null != N && (t = c.ZP.getDisplayPremiumType(N.planId)), null == t)) return null;
+    let x = () => l.Z.open(m.oAB.SUBSCRIPTIONS),
+        E = (null != N ? c.ZP.getSkuIdForPlan(N.planId) : null) === u.Si.TIER_1;
     return (
-        (n = null != b ? b : N || f ? 'always-white' : 'text-normal'),
+        (n = null != b ? b : _ || f ? 'always-white' : 'text-normal'),
         (0, r.jsxs)(a.Zbd, {
             className: s()(p.container, h, {
                 [p.lightTextLink]: f,
-                [p.centerText]: N
+                [p.centerText]: _
             }),
             type: a.Zbd.Types.CUSTOM,
             children: [
@@ -36,7 +36,7 @@ let h = (e) => {
                     width: 20,
                     height: 20,
                     color: 'currentColor',
-                    className: s()(p.icon, { [p.lightThemeColorOnly]: N || f })
+                    className: s()(p.icon, { [p.lightThemeColorOnly]: _ || f })
                 }),
                 (0, r.jsx)(a.Text, {
                     variant: 'text-sm/medium',
@@ -44,11 +44,11 @@ let h = (e) => {
                     children: E
                         ? g.NW.format(g.t['tYuv+f'], {
                               helpdeskArticle: o.Z.getArticleURL(m.BhN.PREMIUM_DETAILS),
-                              onSubscriptionsClick: _
+                              onSubscriptionsClick: x
                           })
                         : g.NW.format(g.t.xHRgU1, {
                               subscriptionName: t,
-                              onSubscriptionsClick: _
+                              onSubscriptionsClick: x
                           })
                 })
             ]

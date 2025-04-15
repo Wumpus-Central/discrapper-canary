@@ -4,13 +4,13 @@ n(192379);
 var i = n(442837),
     l = n(704215),
     o = n(481060),
-    a = n(239091),
-    s = n(605236),
+    s = n(239091),
+    a = n(605236),
     c = n(554747),
     u = n(306680),
     d = n(9156),
-    p = n(434479),
-    h = n(490897),
+    h = n(434479),
+    p = n(490897),
     f = n(388032),
     g = n(768107);
 function m(e) {
@@ -61,22 +61,22 @@ function _(e) {
         { hasUnread: y, mentionCount: v } = (0, i.cj)(
             [u.ZP],
             () => ({
-                hasUnread: u.ZP.hasUnread(t.id, h.W.GUILD_EVENT),
-                mentionCount: u.ZP.getMentionCount(t.id, h.W.GUILD_EVENT)
+                hasUnread: u.ZP.hasUnread(t.id, p.W.GUILD_EVENT),
+                mentionCount: u.ZP.getMentionCount(t.id, p.W.GUILD_EVENT)
             }),
             [t.id]
         ),
         O = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
-    async function j() {
+    async function C() {
         await (0, o.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('79010')]).then(n.bind(n, 17671));
             return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
         }),
-            (0, s.EW)(l.z.GUILD_HEADER_EVENT_UPSELL);
+            (0, a.EW)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
-    let C = (0, c.ZP)(t.id),
-        x = C.length > 0 ? f.NW.formatToPlainString(f.t.IBdqSk, { number: C.length }) : f.NW.string(f.t.tlopTE);
-    return (0, r.jsx)(p.m, {
+    let S = (0, c.ZP)(t.id),
+        j = S.length > 0 ? f.NW.formatToPlainString(f.t.IBdqSk, { number: S.length }) : f.NW.string(f.t.tlopTE);
+    return (0, r.jsx)(h.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
             (0, r.jsx)(o.Que, {
@@ -84,11 +84,11 @@ function _(e) {
                 color: 'currentColor',
                 className: e
             }),
-        text: x,
+        text: j,
         selected: _,
-        onClick: j,
+        onClick: C,
         onContextMenu: (e) => {
-            (0, a.jW)(e, async () => {
+            (0, s.jW)(e, async () => {
                 let { default: e } = await n.e('95307').then(n.bind(n, 867757));
                 return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
             });

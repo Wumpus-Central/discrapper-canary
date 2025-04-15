@@ -15,8 +15,8 @@ let p = (e) => {
     let { className: t, imageClassName: n, textContainerOverrideStyles: i, location: p, analyticsLocation: h } = e,
         { analyticsLocations: f } = (0, l.ZP)(p),
         b = (0, o.rK)(),
-        { enabled: N } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: b }),
-        x = N && b;
+        { enabled: _ } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: b }),
+        N = _ && b;
     return (0, r.jsx)(l.Gt, {
         value: f,
         children: (0, r.jsxs)('div', {
@@ -29,11 +29,11 @@ let p = (e) => {
                         (0, r.jsx)(a.X6q, {
                             variant: 'heading-lg/extrabold',
                             className: u.heading,
-                            children: x ? d.NW.string(d.t.LB3bJC) : d.NW.string(d.t.Ve9Ge3)
+                            children: N ? d.NW.string(d.t.LB3bJC) : d.NW.string(d.t.Ve9Ge3)
                         }),
                         (0, r.jsx)(a.Text, {
                             variant: 'text-sm/medium',
-                            children: x ? d.NW.string(d.t.u49cn5) : d.NW.string(d.t.yQ06u7)
+                            children: N ? d.NW.string(d.t.u49cn5) : d.NW.string(d.t.yQ06u7)
                         }),
                         (0, r.jsx)(c.Z, {
                             isGift: !0,
@@ -47,7 +47,7 @@ let p = (e) => {
                     ]
                 }),
                 (0, r.jsx)('img', {
-                    src: x ? g : m,
+                    src: N ? g : m,
                     className: s()(u.bannerImage, n),
                     alt: 'gift nitro banner'
                 })

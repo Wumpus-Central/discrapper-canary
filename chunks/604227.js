@@ -13,12 +13,12 @@ var i = n(525654),
 function g() {
     var e, t, n, i, g;
     let p = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        h = '389950',
-        f = '6c9fe4b3ddce2f5cb7ffb668008666e1a2990552'.substring(0, 7),
+        h = '390179',
+        f = '98cb86c281db36d9d0461aadb56bd15b71bda433'.substring(0, 7),
         b = null === l.Z || void 0 === l.Z ? void 0 : l.Z.remoteApp.getVersion(),
-        N = null === l.Z || void 0 === l.Z || null == (e = (t = l.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
-        x = null === l.Z || void 0 === l.Z || null == (n = (i = l.Z.remoteApp).getAppArch) ? void 0 : n.call(i),
-        _ = null == (g = o.C.getCurrentBuildOverride().overrides) ? void 0 : g.discord_web,
+        _ = null === l.Z || void 0 === l.Z || null == (e = (t = l.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
+        N = null === l.Z || void 0 === l.Z || null == (n = (i = l.Z.remoteApp).getAppArch) ? void 0 : n.call(i),
+        x = null == (g = o.C.getCurrentBuildOverride().overrides) ? void 0 : g.discord_web,
         E = (function () {
             var e;
             let t = null === s() || void 0 === s() || null == (e = s().os) ? void 0 : e.toString();
@@ -29,8 +29,8 @@ function g() {
         })(),
         j = [p, h, '('.concat(f, ')')];
     return (
-        null != b && (j.push('Host '.concat(b)), null != x && j.push(x.toLowerCase()), null != N && j.push('('.concat(N, ')'))),
-        j.push('Build Override: '.concat(null != _ ? _.id : 'N/A')),
+        null != b && (j.push('Host '.concat(b)), null != N && j.push(N.toLowerCase()), null != _ && j.push('('.concat(_, ')'))),
+        j.push('Build Override: '.concat(null != x ? x.id : 'N/A')),
         null != E && j.push(E),
         (0, r.jsx)(c.Z, {
             copyValue: j.join(' '),
@@ -90,7 +90,7 @@ function g() {
                                         ]
                                     }),
                                     ' ',
-                                    null != _ &&
+                                    null != x &&
                                         (0, r.jsx)(a.Text, {
                                             tag: 'span',
                                             className: m.line,
@@ -98,7 +98,7 @@ function g() {
                                             color: 'text-muted',
                                             children: (0, r.jsxs)('span', {
                                                 className: m.versionHash,
-                                                children: ['Build Override: ', _.id]
+                                                children: ['Build Override: ', x.id]
                                             })
                                         }),
                                     null != b
@@ -113,15 +113,15 @@ function g() {
                                                           'Host ',
                                                           b,
                                                           ' ',
-                                                          null != x
-                                                              ? (0, r.jsxs)('span', {
-                                                                    className: m.appArch,
-                                                                    children: [x.toLowerCase(), ' ']
-                                                                })
-                                                              : null,
                                                           null != N
                                                               ? (0, r.jsxs)('span', {
-                                                                    children: ['(', N, ')']
+                                                                    className: m.appArch,
+                                                                    children: [N.toLowerCase(), ' ']
+                                                                })
+                                                              : null,
+                                                          null != _
+                                                              ? (0, r.jsxs)('span', {
+                                                                    children: ['(', _, ')']
                                                                 })
                                                               : null
                                                       ]

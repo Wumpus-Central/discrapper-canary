@@ -3,13 +3,13 @@ var r = n(200651),
     i = n(192379),
     l = n(481060),
     o = n(460562),
-    a = n(768581),
-    s = n(682662),
+    s = n(768581),
+    a = n(682662),
     c = n(662146),
     u = n(138439);
 function d(e) {
     let [t, d] = i.useState(!1);
-    return (0, r.jsx)(s.H, {
+    return (0, r.jsx)(a.H, {
         children: (0, r.jsx)(c.Z, {
             text: e.name,
             children: (0, r.jsx)(l.aRk, {
@@ -70,7 +70,7 @@ function d(e) {
                     },
                     icon:
                         null != e.icon
-                            ? a.ZP.getGuildIconURL({
+                            ? s.ZP.getGuildIconURL({
                                   id: e.id,
                                   icon: e.icon,
                                   canAnimate: !1,

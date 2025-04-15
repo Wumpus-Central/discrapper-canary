@@ -1,5 +1,5 @@
 n.d(t, {
-    hs: () => N,
+    hs: () => _,
     oF: () => b
 }),
     n(388685);
@@ -41,7 +41,7 @@ function b() {
         count: t
     };
 }
-function N() {
+function _() {
     let e = (0, s.e7)([u.Z], () => u.Z.getAccounts()),
         t = (0, l.ZP)(),
         n = e.length;

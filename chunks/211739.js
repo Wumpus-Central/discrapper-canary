@@ -1,30 +1,30 @@
 n.d(t, {
     N5: () => i,
-    c4: () => a,
-    lc: () => o,
+    c4: () => r,
+    lc: () => s,
     mJ: () => l
 });
-var r = n(570140);
-function a(e) {
-    r.Z.dispatch({
+var a = n(570140);
+function r(e) {
+    a.Z.dispatch({
         type: 'CATEGORY_COLLAPSE',
         id: e
     });
 }
 function l(e) {
-    r.Z.dispatch({
+    a.Z.dispatch({
         type: 'CATEGORY_EXPAND',
         id: e
     });
 }
 function i(e) {
-    r.Z.dispatch({
+    a.Z.dispatch({
         type: 'CATEGORY_COLLAPSE_ALL',
         guildId: e
     });
 }
-function o(e) {
-    r.Z.dispatch({
+function s(e) {
+    a.Z.dispatch({
         type: 'CATEGORY_EXPAND_ALL',
         guildId: e
     });

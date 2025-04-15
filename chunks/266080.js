@@ -16,7 +16,7 @@ let m = (e) => {
     l.useEffect(() => {
         x(!b);
     }, [b]);
-    let f = l.useCallback(() => {
+    let h = l.useCallback(() => {
         x(!0),
             a.ZP.trackWithMetadata(d.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
                 guild_id: t,
@@ -66,7 +66,7 @@ let m = (e) => {
                                   header: u.NW.formatToPlainString(u.t['1GX6Pz'], { name: p.name }),
                                   confirmText: u.NW.string(u.t.J2TBi4),
                                   cancelText: u.NW.string(u.t['ETE/oK']),
-                                  onConfirm: f
+                                  onConfirm: h
                               },
                               e
                           )),

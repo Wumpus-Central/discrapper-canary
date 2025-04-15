@@ -33,7 +33,7 @@ var r = n(200651),
     k = n(701488),
     q = n(388032),
     D = n(92503);
-function I(e) {
+function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,7 +58,7 @@ function I(e) {
     }
     return e;
 }
-function W(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -224,7 +224,7 @@ let L = o.forwardRef(function (e, t) {
                                           children: (e) =>
                                               (0, r.jsx)(
                                                   u.P3F,
-                                                  W(I({}, e), {
+                                                  I(W({}, e), {
                                                       className: D.submenuWrapper,
                                                       'aria-label': q.NW.string(q.t.DEoVWV),
                                                       children: (0, r.jsx)(u.xhG, {
@@ -278,7 +278,7 @@ let L = o.forwardRef(function (e, t) {
                                                   children: (e) =>
                                                       (0, r.jsx)(
                                                           u.P3F,
-                                                          W(I({}, e), {
+                                                          I(W({}, e), {
                                                               className: D.submenuWrapper,
                                                               'aria-label': q.NW.string(q.t.DEoVWV),
                                                               children: (0, r.jsx)(u.xhG, {

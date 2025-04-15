@@ -1,58 +1,58 @@
-s.d(t, { Z: () => o });
-var r = s(200651);
-s(192379);
-var n = s(325767);
-function i(e) {
+r.d(t, { Z: () => o });
+var n = r(200651);
+r(192379);
+var i = r(325767);
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var s = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(s);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(s).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(s, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = s[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = n);
             });
     }
     return e;
 }
 let o = (e) => {
     var t,
-        s,
+        r,
         { className: o, backgroundColor: l, backgroundCircleSize: a } = e,
         c = (function (e, t) {
             if (null == e) return {};
-            var s,
-                r,
-                n = (function (e, t) {
+            var r,
+                n,
+                i = (function (e, t) {
                     if (null == e) return {};
-                    var s,
-                        r,
-                        n = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (s = i[r]), t.indexOf(s) >= 0 || (n[s] = e[s]);
-                    return n;
+                    var r,
+                        n,
+                        i = {},
+                        s = Object.keys(e);
+                    for (n = 0; n < s.length; n++) (r = s[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) (s = i[r]), !(t.indexOf(s) >= 0) && Object.prototype.propertyIsEnumerable.call(e, s) && (n[s] = e[s]);
+                var s = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < s.length; n++) (r = s[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
-            return n;
+            return i;
         })(e, ['className', 'backgroundColor', 'backgroundCircleSize']);
-    return (0, r.jsxs)(
+    return (0, n.jsxs)(
         'svg',
-        ((t = i(
+        ((t = s(
             {
                 width: '100%',
                 height: '100%',
@@ -61,30 +61,30 @@ let o = (e) => {
                 style: { overflow: 'visible' },
                 xmlns: 'http://www.w3.org/2000/svg'
             },
-            (0, n.Z)(i({}, c))
+            (0, i.Z)(s({}, c))
         )),
-        (s = s =
+        (r = r =
             {
                 children: [
-                    (0, r.jsx)('circle', {
+                    (0, n.jsx)('circle', {
                         r: null != a ? a : '40%',
                         cx: '50%',
                         cy: '50%',
                         className: l
                     }),
-                    (0, r.jsxs)('g', {
+                    (0, n.jsxs)('g', {
                         transform: 'translate(50, 50) scale(0.6) translate(-51, -52)',
                         children: [
-                            (0, r.jsx)('path', {
+                            (0, n.jsx)('path', {
                                 d: 'M52.0002 11.7556L28.3402 35.4156V68.6956L52.0002 92.3556L75.6602 68.6956V35.4156L52.0002 11.7556ZM63.8302 63.7556L52.0002 75.6289L40.1702 63.7989V40.3122L52.0002 28.4822L63.8302 40.3122V63.7556Z',
                                 fill: '#FF6BFA',
                                 className: o
                             }),
-                            (0, r.jsx)('path', {
+                            (0, n.jsx)('path', {
                                 d: 'M40.1702 40.3122V63.7989L52.0002 75.6289L63.8302 63.7989V40.3122L52.0002 28.4822L40.1702 40.3122Z',
                                 fill: '#FFDEF9'
                             }),
-                            (0, r.jsx)('path', {
+                            (0, n.jsx)('path', {
                                 d: 'M52.0002 11.7556V28.4822L63.8302 40.3122L75.6602 35.4156L52.0002 11.7556Z',
                                 fill: '#FFB0FF'
                             })
@@ -93,16 +93,16 @@ let o = (e) => {
                 ]
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(s))
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
             : (function (e, t) {
-                  var s = Object.keys(e);
+                  var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      s.push.apply(s, r);
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
                   }
-                  return s;
-              })(Object(s)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(s, e));
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
               }),
         t)
     );

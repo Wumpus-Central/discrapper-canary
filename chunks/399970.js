@@ -17,18 +17,18 @@ function b(e) {
     let { onClose: t, transitionState: n } = e,
         {
             authorizedApplicationId: b,
-            authorizationError: N,
-            authorizing: x
+            authorizationError: _,
+            authorizing: N
         } = (0, s.cj)([m.Z], () => ({
             authorizedApplicationId: m.Z.testModeApplicationId,
             authorizationError: m.Z.error,
             authorizing: m.Z.isFetchingAuthorization
         })),
-        [_, E] = i.useState(null != b ? b : ''),
-        [j, O] = i.useState('8080'),
-        [C, S] = i.useState('localhost'),
+        [x, E] = i.useState(null != b ? b : ''),
+        [j, C] = i.useState('8080'),
+        [O, S] = i.useState('localhost'),
         v = (0, u.Dt)(),
-        T = f.test(_);
+        T = f.test(x);
     async function I() {
         o.q$();
         let e = (function (e, t, n) {
@@ -39,11 +39,11 @@ function b(e) {
                 case 'proxy':
                     return (0, c.ZP)(n);
             }
-        })(C, j, _);
-        null != (await o.Wt(_, e)) && t();
+        })(O, j, x);
+        null != (await o.Wt(x, e)) && t();
     }
     i.useEffect(() => () => l.Z.wait(() => o.q$()), []);
-    let y = null != b && b === _,
+    let y = null != b && b === x,
         A = y
             ? function () {
                   o.mc(), E(''), S(null);
@@ -74,11 +74,11 @@ function b(e) {
                         type: a.R94.Types.DESCRIPTION,
                         children: g.NW.string(g.t.a6Vilp)
                     }),
-                    null == N
+                    null == _
                         ? null
                         : (0, r.jsx)(a.kzN, {
                               className: h.marginBottom20,
-                              children: N
+                              children: _
                           }),
                     (0, r.jsx)('form', {
                         onSubmit: (e) => {
@@ -93,21 +93,21 @@ function b(e) {
                                     title: g.NW.string(g.t.P6TzgI),
                                     required: !0,
                                     children: (0, r.jsx)(a.oil, {
-                                        value: _,
+                                        value: x,
                                         maxLength: 19,
                                         error: T ? null : g.NW.string(g.t.gPNgKC),
                                         onChange: function (e) {
                                             E(e);
                                         },
-                                        disabled: x
+                                        disabled: N
                                     })
                                 }),
                                 (0, r.jsx)(a.xJW, {
                                     className: p.inputWrapper,
                                     title: g.NW.string(g.t['/GTqXF']),
                                     children: (0, r.jsx)(a.q4e, {
-                                        isDisabled: !T || '' === _,
-                                        value: C,
+                                        isDisabled: !T || '' === x,
+                                        value: O,
                                         options: [
                                             {
                                                 value: 'localhost',
@@ -126,7 +126,7 @@ function b(e) {
                                         placeholder: 'URL Origin Type'
                                     })
                                 }),
-                                'localhost' !== C
+                                'localhost' !== O
                                     ? null
                                     : (0, r.jsx)(a.xJW, {
                                           className: p.inputWrapper,
@@ -135,14 +135,14 @@ function b(e) {
                                           children: (0, r.jsx)(a.oil, {
                                               value: j,
                                               maxLength: 5,
-                                              onChange: (e) => O(e),
-                                              disabled: x
+                                              onChange: (e) => C(e),
+                                              disabled: N
                                           })
                                       }),
                                 (0, r.jsx)(a.zxk, {
-                                    submitting: x,
+                                    submitting: N,
                                     type: 'submit',
-                                    disabled: !T || 0 === _.length || ('localhost' === C && 0 === j.length),
+                                    disabled: !T || 0 === x.length || ('localhost' === O && 0 === j.length),
                                     color: y ? a.zxk.Colors.RED : a.zxk.Colors.GREEN,
                                     children: y ? g.NW.string(g.t.d6TR3N) : g.NW.string(g.t.qwuK5O)
                                 })

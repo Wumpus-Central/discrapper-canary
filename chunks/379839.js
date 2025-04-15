@@ -28,47 +28,47 @@ function _(e) {
         n
     );
 }
-function p(e, t, n, o, a) {
-    let s = (0, i.ZP)(),
-        l = (0, r.useMemo)(
+function p(e, t, n, o, a, s) {
+    let l = (0, i.ZP)(),
+        c = (0, r.useMemo)(
             () =>
                 null == t
                     ? null
                     : h({
                           palette: t.palette,
-                          theme: s,
+                          theme: l,
                           hover: n,
                           selected: o,
-                          placement: a
+                          placement: a,
+                          updatedOpacity: s
                       }),
-            [t, n, o, s, a]
+            [t, n, o, l, a, s]
         ),
-        [c, u] = (0, r.useState)(null != l ? { background: l } : {});
+        [u, d] = (0, r.useState)(null != c ? { background: c } : {});
     return (
         (0, r.useEffect)(() => {
-            if (null == l) return;
-            if (null == e || null == e.current) return void u({ background: l });
+            if (null == c) return;
+            if (null == e || null == e.current) return void d({ background: c });
             let t = new ResizeObserver((e) => {
                 let t = e[0].contentRect.width,
                     n = 0.8 * t,
                     r = 1.1 * t;
-                u({
-                    background: l,
+                d({
+                    background: c,
                     maskImage: 'linear-gradient(to right, rgba(0, 0, 0, .2) '.concat(n, 'px, rgba(0, 0, 0, 1) ').concat(r, 'px)')
                 });
             });
             return t.observe(e.current), () => t.disconnect();
-        }, [e, l]),
-        c
+        }, [e, c]),
+        u
     );
 }
 function h(e) {
-    let { palette: t, theme: n, hover: r, selected: i, placement: _ } = e;
+    let { palette: t, theme: n, hover: r, selected: i, placement: _, updatedOpacity: p } = e;
     if (!(0, a.ic)(t)) return;
-    let p = n === s.BR.LIGHT ? t.lightBackground : t.darkBackground,
-        h = r || i;
-    if (_ === o.i.ACCOUNT) return n === s.BR.LIGHT ? 'linear-gradient(90deg, '.concat(p).concat(l, ' 0%, ').concat(p).concat(u, ' 100%)') : 'linear-gradient(90deg, '.concat(p).concat(l, ' 0%, ').concat(p).concat(d, ' 100%)');
-    if (_ === o.i.PREVIEW) return 'linear-gradient(90deg, '.concat(p).concat(l, ' 0%, ').concat(p).concat(u, ' 100%)');
-    let m = ''.concat(p).concat(h ? (n !== s.BR.LIGHT ? f : u) : c);
+    let h = n === s.BR.LIGHT ? t.lightBackground : t.darkBackground;
+    if (_ === o.i.ACCOUNT) return n === s.BR.LIGHT ? 'linear-gradient(90deg, '.concat(h).concat(l, ' 0%, ').concat(h).concat(u, ' 100%)') : 'linear-gradient(90deg, '.concat(h).concat(l, ' 0%, ').concat(h).concat(d, ' 100%)');
+    if (_ === o.i.PREVIEW) return 'linear-gradient(90deg, '.concat(h).concat(l, ' 0%, ').concat(h).concat(u, ' 100%)');
+    let m = !0 === p ? ''.concat(h).concat(i ? f : r && _ === o.i.MEMBER_LIST ? u : c) : ''.concat(h).concat(r || i ? (n !== s.BR.LIGHT ? f : u) : c);
     return 'linear-gradient(90deg, transparent 0%, '.concat(m, ' 100%)');
 }

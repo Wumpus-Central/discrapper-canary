@@ -426,7 +426,7 @@ function ej(e, t) {
     let ta = (0, U.Nt)(),
         ts = (0, S.h9)(eo.id),
         [tl, tc] = i.useState(!ts);
-    (0, g.P)(tt, (e) => {
+    (0, g.PM)(tt, (e) => {
         let { width: t } = e;
         return tc(!ts && (null == t || t > ey));
     });

@@ -62,7 +62,7 @@ let u = {
     };
 function m(e) {
     var { role: t = 'button', variant: n = 'primary', size: i = 'md', text: m, icon: f, iconPosition: p = 'end', iconOpticalOffsetMargin: g = 0, focusProps: h } = e,
-        b = (function (e, t) {
+        v = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -81,7 +81,7 @@ function m(e) {
             }
             return i;
         })(e, ['role', 'variant', 'size', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'focusProps']);
-    function v() {
+    function b() {
         if (null == f) return;
         let e = (function () {
             if (0 === g) return {};
@@ -110,11 +110,11 @@ function m(e) {
                             role: t,
                             className: a()(s.button, s[i], s[n])
                         },
-                        b
+                        v
                     ),
                     {
                         children: [
-                            null != f && 'start' === p && (0, r.jsx)(v, {}),
+                            null != f && 'start' === p && (0, r.jsx)(b, {}),
                             (0, r.jsx)(l.x, {
                                 tag: 'span',
                                 variant: u[i],
@@ -123,7 +123,7 @@ function m(e) {
                                 lineClamp: 1,
                                 children: m
                             }),
-                            null != f && 'end' === p && (0, r.jsx)(v, {})
+                            null != f && 'end' === p && (0, r.jsx)(b, {})
                         ]
                     }
                 )

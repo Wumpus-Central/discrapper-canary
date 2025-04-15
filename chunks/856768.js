@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => b,
-    q: () => N
+    q: () => _
 }),
     n(290780);
 var r = n(200651),
@@ -24,7 +24,7 @@ function b(e) {
         title: h.NW.string(h.t.ref7Ki),
         hideDivider: s,
         forcedDivider: !0,
-        children: (0, r.jsx)(N, {
+        children: (0, r.jsx)(_, {
             guildId: t,
             onChange: l,
             renderOptionSuffix: o,
@@ -32,15 +32,15 @@ function b(e) {
         })
     });
 }
-function N(e) {
+function _(e) {
     let { guildId: t, globalOption: n, onChange: s, renderOptionSuffix: a } = e,
         d = (0, l.e7)([p.Z], () => p.Z.showNotice()),
         b = (0, l.e7)([m.ZP], () => m.ZP.getFlattenedGuildIds()),
-        N = (0, l.e7)([u.Z], () => u.Z.getGuilds()),
-        x = i.useMemo(() => {
+        _ = (0, l.e7)([u.Z], () => u.Z.getGuilds()),
+        N = i.useMemo(() => {
             let e = b
                 .map((e) => {
-                    let t = N[e];
+                    let t = _[e];
                     return null == t
                         ? null
                         : {
@@ -50,31 +50,31 @@ function N(e) {
                 })
                 .filter(g.lm);
             return null != n && e.unshift(n), e;
-        }, [b, N, n]),
-        _ = i.useCallback(
+        }, [b, _, n]),
+        x = i.useCallback(
             (e) => {
                 let t = (null == e ? void 0 : e.label) === (null == n ? void 0 : n.label) && (null == e ? void 0 : e.value) === (null == n ? void 0 : n.value);
                 return null == e || '' === e.value || t
                     ? null
                     : (0, r.jsx)(c.Z, {
                           className: f.guildSelectOptionIcon,
-                          guild: N[e.value],
+                          guild: _[e.value],
                           size: c.Z.Sizes.SMOL,
                           active: !0
                       });
             },
-            [N, n]
+            [_, n]
         );
     return (0, r.jsx)(o.VcW, {
         isDisabled: d,
         onChange: (e) => {
             if ('' === e || e === (null == n ? void 0 : n.value)) return void s(null);
-            let t = N[e];
+            let t = _[e];
             null != t && s(t);
         },
         value: t,
-        options: x,
-        renderOptionPrefix: _,
+        options: N,
+        renderOptionPrefix: x,
         renderOptionSuffix: a,
         placeholder: h.NW.string(h.t['kMgj+f'])
     });

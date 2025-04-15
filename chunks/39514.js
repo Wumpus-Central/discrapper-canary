@@ -1,32 +1,32 @@
 n.d(t, { Z: () => Z }), n(35282), n(388685), n(415506);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    l = n(442837),
-    s = n(570140),
+    s = n(120356),
+    l = n.n(s),
+    o = n(442837),
+    a = n(570140),
     c = n(893776),
     u = n(533307),
     d = n(978085),
-    p = n(232567),
-    h = n(388905),
+    h = n(232567),
+    p = n(388905),
     g = n(362762),
-    m = n(108427),
-    f = n(314897),
+    f = n(108427),
+    m = n(314897),
     _ = n(896797),
-    b = n(82142),
+    N = n(82142),
     x = n(283595),
-    N = n(55563),
-    v = n(669079),
-    E = n(63063),
-    I = n(51144),
-    j = n(481153),
-    S = n(781428),
-    O = n(423527),
-    C = n(981631),
-    y = n(388032),
-    T = n(20493);
-function P(e, t, n) {
+    b = n(55563),
+    E = n(669079),
+    v = n(63063),
+    j = n(51144),
+    I = n(481153),
+    O = n(781428),
+    S = n(423527),
+    y = n(981631),
+    C = n(388032),
+    P = n(20493);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,16 +39,16 @@ function P(e, t, n) {
         e
     );
 }
-l.ZP.initialize();
-class A extends i.PureComponent {
+o.ZP.initialize();
+class T extends i.PureComponent {
     componentDidMount() {
         let { authenticated: e, isResolved: t } = this.props;
-        e && this.handleAuthenticated(), t || this.resolveGiftCode(), (0, m.e)('gift_code');
+        e && this.handleAuthenticated(), t || this.resolveGiftCode(), (0, f.e)('gift_code');
     }
     componentDidUpdate(e) {
         let { authenticated: t, isResolved: n } = this.props;
         n ||
-            s.Z.wait(() => {
+            a.Z.wait(() => {
                 this.resolveGiftCode();
             }),
             t && !e.authenticated && this.handleAuthenticated(),
@@ -74,105 +74,105 @@ class A extends i.PureComponent {
         let { libraryApplication: t, sku: n } = this.props,
             { error: r } = this.state,
             i = null != r ? r.code : null;
-        return i === C.evJ.INVALID_GIFT_SELF_REDEMPTION ? y.NW.string(y.t.wa9h7O) : i === C.evJ.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === C.POd.COLLECTIBLES ? y.NW.string(y.t.mdLtb2) : null != t || i === C.evJ.INVALID_GIFT_REDEMPTION_OWNED ? y.NW.format(y.t.PIdmg4, { libraryLink: C.Z5c.APPLICATION_LIBRARY }) : e.isClaimed || i === C.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED ? y.NW.string(y.t.ilcBeX) : i === C.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? y.NW.string(y.t.ypuSd3) : void 0;
+        return i === y.evJ.INVALID_GIFT_SELF_REDEMPTION ? C.NW.string(C.t.wa9h7O) : i === y.evJ.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === y.POd.COLLECTIBLES ? C.NW.string(C.t.mdLtb2) : null != t || i === y.evJ.INVALID_GIFT_REDEMPTION_OWNED ? C.NW.format(C.t.PIdmg4, { libraryLink: y.Z5c.APPLICATION_LIBRARY }) : e.isClaimed || i === y.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED ? C.NW.string(C.t.ilcBeX) : i === y.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? C.NW.string(C.t.ypuSd3) : void 0;
     }
     renderSpinner(e) {
-        return (0, r.jsxs)(h.ZP, {
-            children: [(0, r.jsx)(h.Dx, { children: e }), (0, r.jsx)(h.Hh, {})]
+        return (0, r.jsxs)(p.ZP, {
+            children: [(0, r.jsx)(p.Dx, { children: e }), (0, r.jsx)(p.Hh, {})]
         });
     }
     renderExpiredInvite() {
         let { defaultRoute: e, transitionTo: t } = this.props;
-        return (0, r.jsxs)(h.ZP, {
+        return (0, r.jsxs)(p.ZP, {
             children: [
-                (0, r.jsx)(h.Ee, {
+                (0, r.jsx)(p.Ee, {
                     src: n(167969),
-                    className: T.marginBottom8
+                    className: P.marginBottom8
                 }),
-                (0, r.jsx)(h.Dx, {
-                    className: a()(T.marginTop8, T.marginBottom8),
-                    children: y.NW.string(y.t.KPowgo)
+                (0, r.jsx)(p.Dx, {
+                    className: l()(P.marginTop8, P.marginBottom8),
+                    children: C.NW.string(C.t.KPowgo)
                 }),
-                (0, r.jsx)(h.DK, { children: y.NW.string(y.t.j8734e) }),
-                (0, r.jsx)(h.zx, {
-                    className: a()(T.marginTop40, T.marginBottom8),
+                (0, r.jsx)(p.DK, { children: C.NW.string(C.t.j8734e) }),
+                (0, r.jsx)(p.zx, {
+                    className: l()(P.marginTop40, P.marginBottom8),
                     onClick: () => t(e),
-                    children: y.NW.string(y.t.fIv16O)
+                    children: C.NW.string(C.t.fIv16O)
                 }),
-                (0, r.jsx)(h.zx, {
-                    onClick: () => window.open(E.Z.getArticleURL(C.BhN.GIFTING), '_blank'),
-                    look: h.zx.Looks.LINK,
-                    color: h.zx.Colors.LINK,
-                    children: y.NW.string(y.t['/CjuXF'])
+                (0, r.jsx)(p.zx, {
+                    onClick: () => window.open(v.Z.getArticleURL(y.BhN.GIFTING), '_blank'),
+                    look: p.zx.Looks.LINK,
+                    color: p.zx.Colors.LINK,
+                    children: C.NW.string(C.t['/CjuXF'])
                 })
             ]
         });
     }
     renderAppOpened() {
-        return (0, r.jsxs)(h.ZP, {
+        return (0, r.jsxs)(p.ZP, {
             children: [
-                (0, r.jsx)(h.Dx, {
-                    className: T.marginBottom8,
-                    children: y.NW.string(y.t.csrAMD)
+                (0, r.jsx)(p.Dx, {
+                    className: P.marginBottom8,
+                    children: C.NW.string(C.t.csrAMD)
                 }),
-                (0, r.jsx)(h.DK, { children: y.NW.string(y.t['m1+IBg']) }),
-                (0, r.jsx)(h.zx, {
-                    className: T.marginTop40,
+                (0, r.jsx)(p.DK, { children: C.NW.string(C.t['m1+IBg']) }),
+                (0, r.jsx)(p.zx, {
+                    className: P.marginTop40,
                     onClick: () => this.setState({ continueOnWeb: !0 }),
-                    children: y.NW.string(y.t['qsI+EB'])
+                    children: C.NW.string(C.t['qsI+EB'])
                 })
             ]
         });
     }
     renderVerification(e) {
         let { sentVerification: t } = this.state;
-        return (0, r.jsxs)(h.ZP, {
+        return (0, r.jsxs)(p.ZP, {
             children: [
-                (0, r.jsx)(h.Ee, {
+                (0, r.jsx)(p.Ee, {
                     src: n(892235),
-                    className: T.marginBottom8
+                    className: P.marginBottom8
                 }),
-                (0, r.jsx)(h.Dx, { children: y.NW.format(y.t.ivLUf3, { username: e.username }) }),
-                (0, r.jsx)(h.DK, {
-                    className: T.marginTop20,
-                    children: y.NW.string(y.t['8Su18/'])
+                (0, r.jsx)(p.Dx, { children: C.NW.format(C.t.ivLUf3, { username: e.username }) }),
+                (0, r.jsx)(p.DK, {
+                    className: P.marginTop20,
+                    children: C.NW.string(C.t['8Su18/'])
                 }),
-                (0, r.jsx)(h.zx, {
+                (0, r.jsx)(p.zx, {
                     disabled: t,
-                    className: T.marginTop40,
+                    className: P.marginTop40,
                     onClick: this.handleResendVerification,
-                    children: t ? y.NW.string(y.t.CMa9Rk) : y.NW.string(y.t.lm1UKi)
+                    children: t ? C.NW.string(C.t.CMa9Rk) : C.NW.string(C.t.lm1UKi)
                 }),
-                (0, r.jsx)(h.zx, {
-                    look: h.zx.Looks.LINK,
-                    color: h.zx.Colors.LINK,
+                (0, r.jsx)(p.zx, {
+                    look: p.zx.Looks.LINK,
+                    color: p.zx.Colors.LINK,
                     onClick: this.refreshUser,
-                    className: T.marginTop8,
-                    children: y.NW.string(y.t.Po9eBQ)
+                    className: P.marginTop8,
+                    children: C.NW.string(C.t.Po9eBQ)
                 })
             ]
         });
     }
     renderAuthenticated(e, t) {
         let n = this.getErrorMessage(e);
-        return (0, r.jsxs)(h.ZP, {
+        return (0, r.jsxs)(p.ZP, {
             children: [
-                (0, r.jsx)(j.Z, { giftCode: e }),
-                (0, r.jsx)(h.zx, {
+                (0, r.jsx)(I.Z, { giftCode: e }),
+                (0, r.jsx)(p.zx, {
                     disabled: null != n,
-                    className: T.marginTop40,
+                    className: P.marginTop40,
                     onClick: this.handleAccept,
-                    children: y.NW.string(y.t.n6I6k5)
+                    children: C.NW.string(C.t.n6I6k5)
                 }),
                 null != n
-                    ? (0, r.jsx)(h.DK, {
-                          className: T.marginTop20,
+                    ? (0, r.jsx)(p.DK, {
+                          className: P.marginTop20,
                           children: n
                       })
-                    : (0, r.jsx)(h.i_, {
-                          className: T.marginTop20,
-                          children: y.NW.format(y.t.NYM08v, {
-                              userTag: I.ZP.getUserTag(t),
+                    : (0, r.jsx)(p.i_, {
+                          className: P.marginTop20,
+                          children: C.NW.format(C.t.NYM08v, {
+                              userTag: j.ZP.getUserTag(t),
                               onLogoutClick: this.handleLogout
                           })
                       })
@@ -180,45 +180,45 @@ class A extends i.PureComponent {
         });
     }
     render() {
-        let { nativeAppState: e, sku: t, authenticated: n, giftCode: i, isResolved: o, isAccepting: a, transitionTo: l, location: s } = this.props,
+        let { nativeAppState: e, sku: t, authenticated: n, giftCode: i, isResolved: s, isAccepting: l, transitionTo: o, location: a } = this.props,
             { fetchingUser: c, continueOnWeb: u } = this.state;
-        if (e === C.kEZ.OPEN && !u) return this.renderAppOpened();
-        if (e === C.kEZ.OPENING) return this.renderSpinner(y.NW.string(y.t['Z+hCVV']));
-        if (a) return this.renderSpinner(y.NW.string(y.t.bhJseH));
-        if (null == i) return o ? this.renderExpiredInvite() : this.renderSpinner(y.NW.string(y.t.b3lf1d));
-        if (o) {
+        if (e === y.kEZ.OPEN && !u) return this.renderAppOpened();
+        if (e === y.kEZ.OPENING) return this.renderSpinner(C.NW.string(C.t['Z+hCVV']));
+        if (l) return this.renderSpinner(C.NW.string(C.t.bhJseH));
+        if (null == i) return s ? this.renderExpiredInvite() : this.renderSpinner(C.NW.string(C.t.b3lf1d));
+        if (s) {
             if (n) {
                 let e = this.state.currentUser;
-                return c || null == e ? this.renderSpinner(y.NW.string(y.t.bYb2nZ)) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(i, e);
+                return c || null == e ? this.renderSpinner(C.NW.string(C.t.bYb2nZ)) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(i, e);
             }
             return 'login' === this.getMode()
-                ? (0, r.jsx)(S.Z, {
+                ? (0, r.jsx)(O.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
-                      transitionTo: l,
-                      location: s
+                      transitionTo: o,
+                      location: a
                   })
-                : (0, r.jsx)(O.Z, {
+                : (0, r.jsx)(S.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
-                      transitionTo: l,
-                      location: s
+                      transitionTo: o,
+                      location: a
                   });
         }
         return null;
     }
     constructor(...e) {
         super(...e),
-            P(this, 'state', {
+            A(this, 'state', {
                 error: null,
                 continueOnWeb: !1,
                 currentUser: null,
                 sentVerification: !1,
                 fetchingUser: !1
             }),
-            P(this, 'refreshUser', () => {
+            A(this, 'refreshUser', () => {
                 this.setState({ fetchingUser: !0 }),
-                    p
+                    h
                         .k({ withAnalyticsToken: !0 })
                         .then((e) =>
                             this.setState({
@@ -228,45 +228,45 @@ class A extends i.PureComponent {
                         )
                         .catch(() => this.setState({ fetchingUser: !1 }));
             }),
-            P(this, 'handleLogout', () => {
+            A(this, 'handleLogout', () => {
                 let e = this.props.match.params.giftCode;
-                c.Z.logout('gift_code', C.Z5c.GIFT_CODE_LOGIN(e));
+                c.Z.logout('gift_code', y.Z5c.GIFT_CODE_LOGIN(e));
             }),
-            P(this, 'handleResendVerification', () => {
+            A(this, 'handleResendVerification', () => {
                 c.Z.verifyResend(), this.setState({ sentVerification: !0 });
             }),
-            P(this, 'handleAccept', async () => {
+            A(this, 'handleAccept', async () => {
                 let { transitionTo: e, giftCode: t } = this.props;
                 if (null == t) throw Error('Trying to accept gift before resolve');
                 let n = this.getCode();
                 try {
-                    this.setState({ error: null }), await u.Z.redeemGiftCode({ code: n }), e(C.Z5c.APP);
+                    this.setState({ error: null }), await u.Z.redeemGiftCode({ code: n }), e(y.Z5c.APP);
                 } catch (e) {
                     this.setState({ error: e });
                 }
             }),
-            P(this, 'resolveGiftCode', () => {
+            A(this, 'resolveGiftCode', () => {
                 let { transitionTo: e } = this.props,
                     t = this.getCode();
                 u.Z.resolveGiftCode(t, !0, !0).then((n) => {
-                    null != n && null != n.giftCode.promotion && e(C.Z5c.BILLING_PROMOTION_REDEMPTION(t));
+                    null != n && null != n.giftCode.promotion && e(y.Z5c.BILLING_PROMOTION_REDEMPTION(t));
                 });
             });
     }
 }
-let Z = l.ZP.connectStores([b.Z, x.Z, f.default, N.Z, _.Z, g.Z], (e) => {
+let Z = o.ZP.connectStores([N.Z, x.Z, m.default, b.Z, _.Z, g.Z], (e) => {
     let t = e.match.params.giftCode,
-        n = b.Z.get(t),
-        r = null != n ? N.Z.get(n.skuId) : null;
+        n = N.Z.get(t),
+        r = null != n ? b.Z.get(n.skuId) : null;
     return {
         giftCode: n,
         sku: r,
-        libraryApplication: null != r && (null == n ? void 0 : n.entitlementBranches) != null ? v.z2(n.entitlementBranches, r, x.Z) : null,
-        authenticated: f.default.isAuthenticated(),
+        libraryApplication: null != r && (null == n ? void 0 : n.entitlementBranches) != null ? E.z2(n.entitlementBranches, r, x.Z) : null,
+        authenticated: m.default.isAuthenticated(),
         defaultRoute: _.Z.defaultRoute,
-        isResolved: b.Z.getIsResolved(t),
-        isAccepting: b.Z.getIsAccepting(t),
+        isResolved: N.Z.getIsResolved(t),
+        isAccepting: N.Z.getIsAccepting(t),
         libraryApplicationsFetched: x.Z.fetched,
         nativeAppState: g.Z.getState(t)
     };
-})(A);
+})(T);

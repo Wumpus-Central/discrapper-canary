@@ -3,28 +3,28 @@ var n = r(200651);
 r(192379);
 var l = r(913527),
     i = r.n(l),
-    a = r(481060),
-    o = r(925329),
+    o = r(481060),
+    a = r(925329),
     c = r(388032),
     s = r(965935);
 function u(e) {
     let { application: t, timestamp: r } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(o.Z, {
-                size: o.Z.Sizes.LARGE,
+            (0, n.jsx)(a.Z, {
+                size: a.Z.Sizes.LARGE,
                 game: t
             }),
             (0, n.jsxs)('div', {
                 className: s.textContainer,
                 children: [
-                    (0, n.jsx)(a.Text, {
+                    (0, n.jsx)(o.Text, {
                         className: s.timestamp,
                         variant: 'text-xs/medium',
                         color: 'text-muted',
                         children: i()(r).format('LLLL')
                     }),
-                    (0, n.jsx)(a.Text, {
+                    (0, n.jsx)(o.Text, {
                         variant: 'text-md/normal',
                         color: 'interactive-active',
                         children: c.NW.format(c.t.J3s8JC, { applicationName: t.name })
@@ -36,7 +36,7 @@ function u(e) {
 }
 function m(e) {
     let { application: t, timestamp: r, children: l } = e;
-    return (0, n.jsx)(a.ua7, {
+    return (0, n.jsx)(o.ua7, {
         hideOnClick: !0,
         position: 'top',
         'aria-label': c.NW.string(c.t['5nMcv7']),
@@ -49,7 +49,7 @@ function m(e) {
         children: (e) => {
             var t, r;
             return (0, n.jsx)(
-                a.P3F,
+                o.P3F,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
@@ -101,7 +101,7 @@ function p(e) {
         children: [
             l
                 ? null
-                : (0, n.jsx)(a.iWm, {
+                : (0, n.jsx)(o.iWm, {
                       className: s.gameIcon,
                       size: 'custom',
                       width: 14,

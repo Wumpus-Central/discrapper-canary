@@ -5,8 +5,8 @@ var o = n(442837),
     a = n(481060),
     i = n(493773),
     s = n(367907),
-    c = n(111028),
-    l = n(91218),
+    l = n(111028),
+    c = n(91218),
     u = n(829883),
     d = n(623624),
     p = n(973542),
@@ -107,7 +107,7 @@ let N = (e) => {
                             (0, r.jsx)('div', {
                                 className: x.roleIconContainer,
                                 children: (0, r.jsx)(
-                                    l.Z,
+                                    c.Z,
                                     P(C({}, I), {
                                         enableTooltip: !1,
                                         className: x.__invalid_roleIcon,
@@ -121,7 +121,7 @@ let N = (e) => {
                                     (0, r.jsx)(a.X6q, {
                                         variant: 'heading-md/semibold',
                                         className: x.roleName,
-                                        children: (0, r.jsx)(c.Z, { children: N })
+                                        children: (0, r.jsx)(l.Z, { children: N })
                                     }),
                                     (0, r.jsx)(a.Text, {
                                         variant: 'text-sm/normal',

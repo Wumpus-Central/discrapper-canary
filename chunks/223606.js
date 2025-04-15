@@ -45,7 +45,7 @@ function h(e) {
     let { messageData: t, errorResponseBody: n } = e;
     return g(t, n), !0;
 }
-function C(e) {
+function N(e) {
     var t;
     let { channelId: n, messages: r } = e,
         i = null == (t = u.Z.getChannel(n)) ? void 0 : t.getGuildId();
@@ -67,7 +67,7 @@ function C(e) {
         }, l);
     return null != o && I[i] !== o && ((I[i] = o), !0);
 }
-class N extends (r = i.ZP.PersistedStore) {
+class C extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(c.Z), null != e && ((_ = e.automodFailedMessages), (O = e.mentionRaidDetectionByGuild));
     }
@@ -94,13 +94,13 @@ class N extends (r = i.ZP.PersistedStore) {
         return null != (t = I[e]) ? t : null;
     }
 }
-f(N, 'displayName', 'GuildAutomodMessageStore'), f(N, 'persistKey', 'GuildAutomodMessages');
-let y = new N(l.Z, {
+f(C, 'displayName', 'GuildAutomodMessageStore'), f(C, 'persistKey', 'GuildAutomodMessages');
+let y = new C(l.Z, {
     CONNECTION_OPEN: function (e) {
         return (_ = {}), S++, !0;
     },
-    LOAD_MESSAGES_SUCCESS: C,
-    LOCAL_MESSAGES_LOADED: C,
+    LOAD_MESSAGES_SUCCESS: N,
+    LOCAL_MESSAGES_LOADED: N,
     MESSAGE_CREATE: function (e) {
         let { guildId: t, message: n } = e;
         if (null == t || n.type !== E.uaV.AUTO_MODERATION_ACTION) return !1;

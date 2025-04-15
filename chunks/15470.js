@@ -9,8 +9,8 @@ var r = n(200651),
     a = n(192379),
     i = n(120356),
     l = n.n(i),
-    o = n(477660),
-    s = n.n(o),
+    s = n(477660),
+    o = n.n(s),
     c = n(481060),
     d = n(770146),
     u = n(241209),
@@ -110,8 +110,8 @@ let b = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
                 )
         }
     }),
-    v = s().parserFor(x),
-    C = s().reactFor(s().ruleOutput(x, 'react'));
+    v = o().parserFor(x),
+    C = o().reactFor(o().ruleOutput(x, 'react'));
 class j extends a.PureComponent {
     componentDidMount() {
         if (null != this._container) {
@@ -121,12 +121,12 @@ class j extends a.PureComponent {
     }
     render() {
         let { applicationId: e, description: t, blurb: n, className: a, assets: i } = this.props,
-            { collapsed: o, collapsable: s } = this.state;
+            { collapsed: s, collapsable: o } = this.state;
         return (0, r.jsxs)('div', {
             className: a,
             children: [
                 (0, r.jsx)('div', {
-                    className: l()({ [h.collapsed]: s && o }),
+                    className: l()({ [h.collapsed]: o && s }),
                     children: (0, r.jsxs)('div', {
                         ref: this.setContentContainerRef,
                         children: [
@@ -147,12 +147,12 @@ class j extends a.PureComponent {
                         ]
                     })
                 }),
-                s
+                o
                     ? (0, r.jsx)(c.zxk, {
                           className: h.toggleCollapseButton,
                           onClick: this.handleToggleCollapse,
                           color: c.zxk.Colors.PRIMARY,
-                          children: o ? m.NW.string(m.t.DxcOXF) : m.NW.string(m.t.rD6EaG)
+                          children: s ? m.NW.string(m.t.DxcOXF) : m.NW.string(m.t.rD6EaG)
                       })
                     : null
             ]

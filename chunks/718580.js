@@ -136,7 +136,7 @@ function T(e) {
         properties: L,
         _stackContext: { isSlide: !0 }
     });
-    let { ref: x, width: M = 0, height: k = 0 } = (0, u.Z)(A),
+    let { ref: x, width: M = 0, height: k = 0 } = (0, u.ZP)(A),
         j = m({}, v, S.springConfig, P.enabled ? { clamp: !0 } : null),
         U = (0, c.q_F)(
             {

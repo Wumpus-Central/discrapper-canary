@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => N });
 var r = n(200651);
 n(192379);
 var i = n(704215),
@@ -15,16 +15,16 @@ var i = n(704215),
     h = n(921944),
     f = n(388032),
     b = n(963748);
-function N(e) {
+function _(e) {
     let { dismissibleContent: t } = e,
         n = m.Z.useIsEligible(),
         u = (0, c.wE)(t),
-        { analyticsLocations: N } = (0, o.ZP)(l.Z.HOLIDAY_COACHMARK),
-        x = (e) => {
+        { analyticsLocations: _ } = (0, o.ZP)(l.Z.HOLIDAY_COACHMARK),
+        N = (e) => {
             (0, c.EW)(i.z.HOLIDAY_COACHMARK_HALLOWEEN_2024, { dismissAction: e });
         },
-        _ = () => {
-            a.Z.open(p.oAB.NOTIFICATIONS, null, { analyticsLocations: N }), x(h.L.SECONDARY);
+        x = () => {
+            a.Z.open(p.oAB.NOTIFICATIONS, null, { analyticsLocations: _ }), N(h.L.SECONDARY);
         };
     return n && !u
         ? (0, r.jsx)(d.ZP, {
@@ -63,7 +63,7 @@ function N(e) {
                                                       {
                                                           tag: 'span',
                                                           className: b.specialTextLink,
-                                                          onClick: _,
+                                                          onClick: x,
                                                           children: e
                                                       },
                                                       t
@@ -74,7 +74,7 @@ function N(e) {
                               }),
                               (0, r.jsx)(s.P3F, {
                                   className: b.closeClickable,
-                                  onClick: () => x(h.L.USER_DISMISS),
+                                  onClick: () => N(h.L.USER_DISMISS),
                                   children: (0, r.jsx)(s.Dio, {
                                       color: 'currentColor',
                                       size: 'xs'
@@ -87,6 +87,6 @@ function N(e) {
           })
         : null;
 }
-function x() {
-    return null == u.Z.coachmarkDismissibleContent ? null : (0, r.jsx)(N, { dismissibleContent: u.Z.coachmarkDismissibleContent });
+function N() {
+    return null == u.Z.coachmarkDismissibleContent ? null : (0, r.jsx)(_, { dismissibleContent: u.Z.coachmarkDismissibleContent });
 }

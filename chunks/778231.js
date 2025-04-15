@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => _ });
 var r = n(200651),
     l = n(192379),
     i = n(442837),
@@ -12,17 +12,17 @@ var r = n(200651),
     x = n(709054),
     p = n(388032),
     b = n(711845),
-    f = n(970952);
-let h = (e) => {
+    h = n(970952);
+let _ = (e) => {
     var t, n;
-    let { entry: h } = e,
-        { name: _ } = h,
+    let { entry: _ } = e,
+        { name: f } = _,
         g = (0, i.e7)([m.Z], () => {
             let e = m.Z.getApps();
-            return null != e ? e.find((e) => e.application.id === h.id) : null;
+            return null != e ? e.find((e) => e.application.id === _.id) : null;
         }),
-        v = null != (n = h.getIconURL(40)) ? n : f,
-        j = (0, d.Z)({ application: h }),
+        v = null != (n = _.getIconURL(40)) ? n : h,
+        j = (0, d.Z)({ application: _ }),
         N = l.useRef(!1);
     l.useEffect(() => {
         N.current || (o.Z.fetch(), (N.current = !0));
@@ -58,7 +58,7 @@ let h = (e) => {
                                 (0, r.jsx)(a.Text, {
                                     color: 'header-primary',
                                     variant: 'text-md/medium',
-                                    children: _
+                                    children: f
                                 }),
                                 j.length > 0
                                     ? (0, r.jsxs)(r.Fragment, {
@@ -80,7 +80,7 @@ let h = (e) => {
                                               (0, r.jsx)(a.Text, {
                                                   color: 'text-normal',
                                                   variant: 'text-md/normal',
-                                                  children: null == (t = h.bot) ? void 0 : t.tag
+                                                  children: null == (t = _.bot) ? void 0 : t.tag
                                               }),
                                               null != y &&
                                                   (0, r.jsx)(a.Text, {

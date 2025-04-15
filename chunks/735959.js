@@ -1,10 +1,10 @@
 n.d(t, { Z: () => b }), n(388685);
-var r = n(200651),
-    a = n(192379),
+var a = n(200651),
+    r = n(192379),
     l = n(164484),
     i = n(913527),
-    o = n.n(i),
-    s = n(330711),
+    s = n.n(i),
+    o = n(330711),
     c = n(442837),
     d = n(481060),
     u = n(665149),
@@ -14,60 +14,60 @@ var r = n(200651),
     p = n(388032);
 function b() {
     let e = (0, c.e7)([m.default], () => m.default.locale),
-        [t, n] = a.useState(),
+        [t, n] = r.useState(),
         i = (0, l.runtimeHashMessageKey)(null != t ? t : ''),
-        b = a.useMemo(() => p.t[i], [i]);
-    return (0, r.jsxs)('div', {
+        b = r.useMemo(() => p.t[i], [i]);
+    return (0, a.jsxs)('div', {
         children: [
-            (0, r.jsxs)(u.ZP, {
+            (0, a.jsxs)(u.ZP, {
                 children: [
-                    (0, r.jsx)(u.ZP.Icon, {
+                    (0, a.jsx)(u.ZP.Icon, {
                         icon: d.os0,
                         tooltip: 'Locale'
                     }),
-                    (0, r.jsx)(u.ZP.Title, { children: 'Locale' })
+                    (0, a.jsx)(u.ZP.Title, { children: 'Locale' })
                 ]
             }),
-            (0, r.jsxs)(h.E, {
+            (0, a.jsxs)(h.E, {
                 children: [
-                    (0, r.jsx)(h.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: 'Active System',
                         children: '@discord/intl'
                     }),
-                    (0, r.jsx)(h.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: 'App',
                         children: e
                     }),
-                    (0, r.jsx)(h.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: '@discord/intl',
                         children: p.NW.currentLocale
                     }),
-                    (0, r.jsx)(h.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: 'common i18n',
-                        children: s.Z.getLocale()
+                        children: o.Z.getLocale()
                     }),
-                    (0, r.jsx)(h.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: 'Moment',
-                        children: o().locale()
+                        children: s().locale()
                     })
                 ]
             }),
-            (0, r.jsxs)(u.ZP, {
+            (0, a.jsxs)(u.ZP, {
                 children: [
-                    (0, r.jsx)(u.ZP.Icon, {
+                    (0, a.jsx)(u.ZP.Icon, {
                         icon: d.os0,
                         tooltip: 'Messages'
                     }),
-                    (0, r.jsx)(u.ZP.Title, { children: 'New System Messages' })
+                    (0, a.jsx)(u.ZP.Title, { children: 'New System Messages' })
                 ]
             }),
-            (0, r.jsx)(h.E, {
-                children: (0, r.jsx)(h.Z9, {
+            (0, a.jsx)(h.E, {
+                children: (0, a.jsx)(h.Z9, {
                     name: 'Unique Rendered Main Messages',
                     children: Object.keys(p.t).length
                 })
             }),
-            (0, r.jsx)(d.oil, {
+            (0, a.jsx)(d.oil, {
                 onChange: function (e) {
                     n(e);
                 },
@@ -75,19 +75,19 @@ function b() {
                 style: { margin: 16 },
                 placeholder: 'Find a message'
             }),
-            (0, r.jsxs)(h.E, {
+            (0, a.jsxs)(h.E, {
                 children: [
-                    (0, r.jsx)(h.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: 'Hashed key',
                         children: i
                     }),
-                    (0, r.jsx)(h.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: 'Exists?',
                         children: null != b ? 'yes' : 'no'
                     })
                 ]
             }),
-            (0, r.jsx)(x.Z, { data: null == b ? void 0 : b(e) })
+            (0, a.jsx)(x.Z, { data: null == b ? void 0 : b(e) })
         ]
     });
 }

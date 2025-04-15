@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(442837),
@@ -14,9 +14,9 @@ var r = n(200651),
     h = n(636188),
     f = n(678916),
     b = n(981631),
-    N = n(869783),
-    x = n(388032),
-    _ = n(635968);
+    _ = n(869783),
+    N = n(388032),
+    x = n(635968);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,8 +60,8 @@ function j(e, t) {
         e
     );
 }
-function O(e) {
-    let { onLearnMore: t, selectedBackgroundOption: O, onSelectBackgroundOption: C, currentDeviceId: S, smallerBackgroundOptions: v, className: T } = e,
+function C(e) {
+    let { onLearnMore: t, selectedBackgroundOption: C, onSelectBackgroundOption: O, currentDeviceId: S, smallerBackgroundOptions: v, className: T } = e,
         I = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
         [y, A] = i.useState(null),
         P = (0, p.Z)(),
@@ -74,8 +74,8 @@ function O(e) {
         w = (0, l.O)(),
         k = {
             isVideoBackgroundSupported: P,
-            onSelectBackgroundOption: C,
-            selectedBackgroundOption: O
+            onSelectBackgroundOption: O,
+            selectedBackgroundOption: C
         },
         W = i.useRef(k);
     i.useEffect(() => {
@@ -86,28 +86,28 @@ function O(e) {
             e ? (0, g.FU)(n, S, { track: !1 }).catch(() => t(null)) : null != n && t(null);
         }, [S]);
     let L = (e) => {
-        C(e),
+        O(e),
             (0, g.FU)(e, S, { location: w.location })
                 .then(() => A(null))
                 .catch(() => {
-                    A(x.NW.string(x.t.ejrSLS)), (0, g.FU)(null, S, { location: w.location });
+                    A(N.NW.string(N.t.ejrSLS)), (0, g.FU)(null, S, { location: w.location });
                 });
     };
     return P
         ? (0, r.jsxs)(a.xJW, {
-              title: x.NW.string(x.t.lZTUPj),
+              title: N.NW.string(N.t.lZTUPj),
               className: T,
               children: [
                   null != y
                       ? (0, r.jsx)(a.kzN, {
-                            className: _.videoBackgroundError,
+                            className: x.videoBackgroundError,
                             children: y
                         })
                       : null,
                   (0, r.jsx)(h.Z, {
                       canUseCustomBackgrounds: R,
                       customBackgroundOptions: Z,
-                      selectedOption: O,
+                      selectedOption: C,
                       onSelectOption: L,
                       onUpsellClick: () => {
                           (0, a.ZDy)(async () => {
@@ -127,7 +127,7 @@ function O(e) {
                           return new Promise(async (r) => {
                               try {
                                   let r = await (0, d.Ff)(e, f.xV.BACKGROUND);
-                                  L(r), (0, m.g5)(r, t.type === N.m.MP4, n), A(null);
+                                  L(r), (0, m.g5)(r, t.type === _.m.MP4, n), A(null);
                               } catch (e) {
                                   A(e.message);
                               }

@@ -66,8 +66,8 @@ function C() {
 }
 function w(e) {
     let { className: t, windowKey: n } = e,
-        { ref: o, width: m, height: g } = (0, c.Z)(),
-        { ref: O, height: w } = (0, c.Z)(),
+        { ref: o, width: m, height: g } = (0, c.ZP)(),
+        { ref: O, height: w } = (0, c.ZP)(),
         E = (0, i.e7)([p.Z], () => p.Z.lifetimePoints > 0),
         S = (0, i.e7)([u.Z, l.Z], () => {
             let e = l.Z.getWindow(n);

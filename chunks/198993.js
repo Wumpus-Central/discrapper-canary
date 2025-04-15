@@ -1,18 +1,18 @@
 n.d(t, {
     ZP: () => x,
-    c2: () => b,
+    c2: () => N,
     cK: () => g
 });
 var r,
     i,
-    o,
-    a = n(200651),
-    l = n(192379),
-    s = n(120356),
-    c = n.n(s),
+    s,
+    l = n(200651),
+    o = n(192379),
+    a = n(120356),
+    c = n.n(a),
     u = n(512092),
     d = n(634715);
-function p(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,18 +36,18 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
 var g = (((r = {}).SIZE_40 = 'SIZE_40'), (r.SIZE_60 = 'SIZE_60'), r);
-let m = Object.freeze({
+let f = Object.freeze({
         SIZE_40: 'size-40',
         SIZE_60: 'size-60'
     }),
-    f = n(515695);
-class _ extends (i = l.PureComponent) {
+    m = n(515695);
+class _ extends (i = o.PureComponent) {
     render() {
         let e = this.props,
             { className: t, text: n } = e,
@@ -60,26 +60,26 @@ class _ extends (i = l.PureComponent) {
                         var n,
                             r,
                             i = {},
-                            o = Object.keys(e);
-                        for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            s = Object.keys(e);
+                        for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var o = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    var s = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
             })(e, ['className', 'text']);
-        return (0, a.jsx)('div', {
+        return (0, l.jsx)('div', {
             style: {
                 width: r.size,
                 height: r.size,
                 backgroundColor: r.bgColor
             },
             className: c()(d.qrCodeContainer, t),
-            children: (0, a.jsx)(
+            children: (0, l.jsx)(
                 u.default,
-                h(
+                p(
                     {
                         value: n,
                         level: 'M'
@@ -90,24 +90,24 @@ class _ extends (i = l.PureComponent) {
         });
     }
 }
-p(_, 'defaultProps', {
+h(_, 'defaultProps', {
     size: 128,
     bgColor: '#ffffff',
     fgColor: '#000000'
 });
-class b extends (o = l.PureComponent) {
+class N extends (s = o.PureComponent) {
     render() {
         let { overlaySize: e } = this.props,
-            t = m[null != e ? e : 'SIZE_40'];
-        return (0, a.jsxs)('div', {
+            t = f[null != e ? e : 'SIZE_40'];
+        return (0, l.jsxs)('div', {
             className: d.qrCodeOverlayContainer,
             children: [
-                (0, a.jsx)(_, h({}, this.props)),
-                (0, a.jsx)('div', {
+                (0, l.jsx)(_, p({}, this.props)),
+                (0, l.jsx)('div', {
                     className: d.qrCodeOverlay,
-                    children: (0, a.jsx)('img', {
+                    children: (0, l.jsx)('img', {
                         className: d[t],
-                        src: f,
+                        src: m,
                         alt: ''
                     })
                 })
@@ -115,7 +115,7 @@ class b extends (o = l.PureComponent) {
         });
     }
 }
-p(b, 'defaultProps', {
+h(N, 'defaultProps', {
     size: 144,
     bgColor: '#ffffff',
     fgColor: '#000000'

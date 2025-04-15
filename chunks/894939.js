@@ -14,13 +14,13 @@ var r = n(200651),
     h = n(763296),
     f = n(242291),
     b = n(893663),
-    N = n(331642),
-    x = n(63063),
-    _ = n(581883),
+    _ = n(331642),
+    N = n(63063),
+    x = n(581883),
     E = n(738486),
     j = n(918257),
-    O = n(970813),
-    C = n(726985),
+    C = n(970813),
+    O = n(726985),
     S = n(981631),
     v = n(710111),
     T = n(388032),
@@ -38,11 +38,11 @@ function P(e) {
         n = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(g.F, {
-                    setting: C.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                    children: [(0, r.jsx)(j.Z, { refreshStyles: t }), (0, r.jsx)(O.Z, { refreshStyles: t })]
+                    setting: O.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+                    children: [(0, r.jsx)(j.Z, { refreshStyles: t }), (0, r.jsx)(C.Z, { refreshStyles: t })]
                 }),
                 (0, r.jsxs)(g.F, {
-                    setting: C.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
+                    setting: O.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
                     children: [t ? null : (0, r.jsx)(o.$i$, { className: I.callSoundsDivider }), (0, r.jsx)(R, { refreshStyles: t })]
                 })
             ]
@@ -62,16 +62,16 @@ function R(e) {
         { analyticsLocations: n } = (0, d.ZP)(),
         [s, c] = i.useState(v.hY),
         g = (0, b.tT)(s),
-        _ = A(g),
+        x = A(g),
         j = (null == g ? void 0 : g.type) === b.zx.GLOBAL,
-        O = (0, l.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != g && null == _;
+        C = (0, l.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != g && null == x;
     i.useEffect(() => {
-        O && (0, f.tt)({ location: n });
-    }, [O, n]),
+        C && (0, f.tt)({ location: n });
+    }, [C, n]),
         i.useEffect(() => {
             (0, p.w)();
         }, []);
-    let C = i.useCallback((e, t) => {
+    let O = i.useCallback((e, t) => {
             let { inDropdown: n } = t;
             return null == e ? null : n ? (0, r.jsx)(D, { guildId: e.value }) : null;
         }, []),
@@ -79,7 +79,7 @@ function R(e) {
             children: [
                 (0, r.jsx)(o.xJW, {
                     title: T.NW.string(T.t.nzUc3N),
-                    children: (0, r.jsx)(o.R94, { children: T.NW.format(T.t.u9RWmp, { helpdeskArticle: x.Z.getArticleURL(S.BhN.SOUNDBOARD) }) })
+                    children: (0, r.jsx)(o.R94, { children: T.NW.format(T.t.u9RWmp, { helpdeskArticle: N.Z.getArticleURL(S.BhN.SOUNDBOARD) }) })
                 }),
                 (0, r.jsx)(u.Z, {
                     guildId: s,
@@ -91,7 +91,7 @@ function R(e) {
                     onChange: (e) => {
                         c(null == e ? v.hY : e.id);
                     },
-                    renderOptionSuffix: C,
+                    renderOptionSuffix: O,
                     hideDivider: !0
                 }),
                 (0, r.jsxs)(m.Z, {
@@ -106,14 +106,14 @@ function R(e) {
                     }),
                     forcedDivider: !t,
                     children: [
-                        (0, r.jsx)(N.Z, {
-                            sound: _,
+                        (0, r.jsx)(_.Z, {
+                            sound: x,
                             isGlobal: j,
                             onSelect: (e) => {
                                 null == e ? (0, f.aC)(s, n) : (0, f.SZ)(s, e, n);
                             }
                         }),
-                        O &&
+                        C &&
                             (0, r.jsx)(o.Wn, {
                                 className: I.notice,
                                 messageType: o.QYI.WARNING,
@@ -127,9 +127,9 @@ function R(e) {
 }
 function D(e) {
     let { guildId: t } = e,
-        n = (0, l.e7)([_.Z], () => {
+        n = (0, l.e7)([x.Z], () => {
             var e, n, r;
-            return null == (r = _.Z.settings.guilds) || null == (n = r.guilds) || null == (e = n[t]) ? void 0 : e.joinSound;
+            return null == (r = x.Z.settings.guilds) || null == (n = r.guilds) || null == (e = n[t]) ? void 0 : e.joinSound;
         }),
         i = A(n);
     if (null == n || null == i) return null;

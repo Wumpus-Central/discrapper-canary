@@ -3,8 +3,8 @@ var r = n(200651),
     a = n(192379),
     i = n(442837),
     l = n(283836),
-    o = n(374939),
-    s = n(233374),
+    s = n(374939),
+    o = n(233374),
     c = n(283293),
     d = n(471518),
     u = n(370210),
@@ -111,7 +111,7 @@ let P = function (e) {
     return (0, r.jsx)(c.Z, {
         onScroll: P,
         ref: T,
-        children: (0, r.jsx)(o.Z, {
+        children: (0, r.jsx)(s.Z, {
             children:
                 null == A
                     ? null == L || L === u.M.FETCHING
@@ -139,7 +139,7 @@ let P = function (e) {
                                               R &&
                                                   (0, r.jsx)('div', {
                                                       className: O.contentTabs,
-                                                      children: (0, r.jsx)(s.Z, {
+                                                      children: (0, r.jsx)(o.Z, {
                                                           tabs: U,
                                                           onTabSelect: V,
                                                           selectedTab: Z

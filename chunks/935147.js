@@ -14,13 +14,13 @@ var r = n(200651),
     h = n(175756),
     f = n(104494),
     b = n(639119),
-    N = n(402567),
-    x = n(629654),
-    _ = n(53691),
+    _ = n(402567),
+    N = n(629654),
+    x = n(53691),
     E = n(165583),
     j = n(267717),
-    O = n(643879),
-    C = n(350327),
+    C = n(643879),
+    O = n(350327),
     S = n(996073),
     v = n(25990),
     T = n(626135),
@@ -48,8 +48,8 @@ function V(e) {
             tryItOutThemeColors: K,
             tryItOutAvatar: q,
             tryItOutBanner: X,
-            tryItOutProfileEffectId: J,
-            tryItOutAvatarDecoration: Q
+            tryItOutProfileEffectId: Q,
+            tryItOutAvatarDecoration: J
         } = (0, s.cj)([v.Z], () => {
             var e, t;
             let n = v.Z.getAllPending(),
@@ -96,16 +96,16 @@ function V(e) {
                 e
             );
         }),
-        $ = (0, h.Z)(J),
-        { preset: ee, onShuffle: et } = (0, N.Z)(),
+        $ = (0, h.Z)(Q),
+        { preset: ee, onShuffle: et } = (0, _.Z)(),
         en = i.useRef(null);
     (0, S.Z)(en, B.Y_.TRY_IT_OUT);
     let { analyticsLocations: er, sourceAnalyticsLocations: ei } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
         es = (e) => {
             if (e) {
-                if (((0, l.I5)(q), (0, C.z5)(K), (0, C.ho)(X), null != Q)) {
-                    let e = m.Z.getProduct(Q.skuId);
-                    null != e && (0, p.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, l.cV)(Q)) : null != g.Z.getPurchase(Q.skuId) && (0, l.cV)(Q);
+                if (((0, l.I5)(q), (0, O.z5)(K), (0, O.ho)(X), null != J)) {
+                    let e = m.Z.getProduct(J.skuId);
+                    null != e && (0, p.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, l.cV)(J)) : null != g.Z.getPurchase(J.skuId) && (0, l.cV)(J);
                 }
                 T.default.track(W.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: ee });
             }
@@ -154,7 +154,7 @@ function V(e) {
                           }),
                           profilePreview: (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(x.Z, {
+                                  (0, r.jsx)(N.Z, {
                                       preset: ee,
                                       onShuffle: et
                                   }),
@@ -180,12 +180,12 @@ function V(e) {
                                   (0, r.jsx)(w.Z, {
                                       className: U.customizationSection,
                                       user: V,
-                                      pendingAvatarSrc: (0, O.SD)({
+                                      pendingAvatarSrc: (0, C.SD)({
                                           userId: V.id,
                                           image: null != q ? q : z
                                       }),
                                       pendingColors: null != K ? K : Y,
-                                      onThemeColorsChange: C.rf,
+                                      onThemeColorsChange: O.rf,
                                       showPremiumIcon: !1,
                                       preventDisabled: !0
                                   }),
@@ -193,13 +193,13 @@ function V(e) {
                                       className: U.customizationSection,
                                       isTryItOutFlow: !0,
                                       showRemoveBannerButton: null != X,
-                                      onBannerChange: C.f4,
+                                      onBannerChange: O.f4,
                                       showPremiumIcon: !1
                                   }),
                                   (0, r.jsx)(P.Z, {
                                       className: U.customizationSection,
                                       isTryItOutFlow: !0,
-                                      onAvatarChange: C.c_,
+                                      onAvatarChange: O.c_,
                                       showRemoveAvatarButton: !1,
                                       changeAvatarButtonText: M.NW.string(M.t['7z0D1d']),
                                       sectionTitle: M.NW.string(M.t.vtFfPT)
@@ -234,7 +234,7 @@ function V(e) {
                           })
                       }),
                       !ea &&
-                          (0, r.jsx)(_.p, {
+                          (0, r.jsx)(x.p, {
                               onSubscribeModalClose: es,
                               className: U.floatingUpsell,
                               showUpsell: !0,

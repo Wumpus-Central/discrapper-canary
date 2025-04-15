@@ -1,12 +1,12 @@
-n.d(t, { s: () => o });
+n.d(t, { s: () => s });
 var r = n(200651),
-    a = n(481060),
+    i = n(481060),
     l = n(388032),
-    i = n(752740);
-let o = (e) => {
+    o = n(752740);
+let s = (e) => {
     var t, n;
     return (0, r.jsx)(
-        a.zxk,
+        i.zxk,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -35,13 +35,13 @@ let o = (e) => {
         (n = n =
             {
                 'aria-label': l.NW.string(l.t.cpT0Cg),
-                look: a.zxk.Looks.BLANK,
-                size: a.zxk.Sizes.NONE,
-                wrapperClassName: i.closeButton,
-                innerClassName: i.closeButtonInner,
-                children: (0, r.jsx)(a.Uz9, {
+                look: i.zxk.Looks.BLANK,
+                size: i.zxk.Sizes.NONE,
+                wrapperClassName: o.closeButton,
+                innerClassName: o.closeButtonInner,
+                children: (0, r.jsx)(i.Uz9, {
                     size: 'refresh_sm',
-                    className: i.closeButtonIcon
+                    className: o.closeButtonIcon
                 })
             }),
         Object.getOwnPropertyDescriptors

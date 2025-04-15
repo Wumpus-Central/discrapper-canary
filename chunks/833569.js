@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => H,
-    default: () => Q
+    default: () => J
 }),
     n(388685),
     n(415506);
@@ -19,13 +19,13 @@ var r,
     h = n(410030),
     f = n(100527),
     b = n(906732),
-    N = n(211242),
-    x = n(600164),
-    _ = n(509545),
+    _ = n(211242),
+    N = n(600164),
+    x = n(509545),
     E = n(626135),
     j = n(122289),
-    O = n(63063),
-    C = n(74538),
+    C = n(63063),
+    O = n(74538),
     S = n(937615),
     v = n(374649),
     T = n(140465),
@@ -78,7 +78,7 @@ async function z(e) {
         else {
             var l, o;
             let e = null != (o = null == (l = t.renewalMutations) ? void 0 : l.items) ? o : t.items;
-            await (0, p.Mg)(t, { items: (0, C.Ue)(e) }, s, a);
+            await (0, p.Mg)(t, { items: (0, O.Ue)(e) }, s, a);
         }
         n();
     } catch (e) {
@@ -88,9 +88,9 @@ async function z(e) {
 function Y(e) {
     var t;
     let { premiumSubscription: n, premiumType: r, setStep: a, onClose: l, whatYouLoseExperienceEnabled: o, analyticsLocation: c } = e,
-        d = (0, N.Q)(),
+        d = (0, _.Q)(),
         [u, p] = s.useState(!1),
-        [f, _] = s.useState(!1),
+        [f, x] = s.useState(!1),
         E = (0, h.ZP)(),
         { analyticsLocations: j } = (0, b.ZP)(),
         S = null;
@@ -106,7 +106,7 @@ function Y(e) {
                     S = d
                         ? V.NW.format(V.t['l+A50N'], {
                               date: n.currentPeriodEnd,
-                              helpdeskArticle: O.Z.getArticleURL(U.BhN.BLOCKED_PAYMENTS)
+                              helpdeskArticle: C.Z.getArticleURL(U.BhN.BLOCKED_PAYMENTS)
                           })
                         : V.NW.format(V.t.Y6Wfa2, { date: n.currentPeriodEnd });
                     break;
@@ -114,7 +114,7 @@ function Y(e) {
                     S = d
                         ? V.NW.format(V.t.QN7eIi, {
                               date: n.currentPeriodEnd,
-                              helpdeskArticle: O.Z.getArticleURL(U.BhN.BLOCKED_PAYMENTS)
+                              helpdeskArticle: C.Z.getArticleURL(U.BhN.BLOCKED_PAYMENTS)
                           })
                         : V.NW.format(V.t.X7i9Dw, { date: n.currentPeriodEnd });
                     break;
@@ -122,7 +122,7 @@ function Y(e) {
                     S = d
                         ? V.NW.format(V.t.vuSNho, {
                               date: n.currentPeriodEnd,
-                              helpdeskArticle: O.Z.getArticleURL(U.BhN.BLOCKED_PAYMENTS)
+                              helpdeskArticle: C.Z.getArticleURL(U.BhN.BLOCKED_PAYMENTS)
                           })
                         : V.NW.format(V.t.fCdmNj, { date: n.currentPeriodEnd });
             }
@@ -148,7 +148,7 @@ function Y(e) {
                       disabled: u,
                       onClick: async () => {
                           await z({
-                              setHasError: _,
+                              setHasError: x,
                               onClose: l,
                               premiumSubscription: n,
                               setIsCancelling: p,
@@ -156,7 +156,7 @@ function Y(e) {
                               analyticsLocation: c
                           });
                       },
-                      children: o ? V.NW.string(V.t['cY+Ooa']) : V.NW.formatToPlainString(V.t['V3+Rpa'], { planPremiumType: C.ZP.getDisplayPremiumType(n.planId) })
+                      children: o ? V.NW.string(V.t['cY+Ooa']) : V.NW.formatToPlainString(V.t['V3+Rpa'], { planPremiumType: O.ZP.getDisplayPremiumType(n.planId) })
                   }),
         T = (0, i.jsx)(g.zxk, {
             look: g.zxk.Looks.LINK,
@@ -177,7 +177,7 @@ function Y(e) {
                       children: [
                           (0, i.jsx)(g.vwX, {
                               tag: g.RB0.H4,
-                              children: V.NW.format(V.t.ZpiGy8, { planPremiumType: C.ZP.getDisplayPremiumType(n.planId) })
+                              children: V.NW.format(V.t.ZpiGy8, { planPremiumType: O.ZP.getDisplayPremiumType(n.planId) })
                           }),
                           (0, i.jsx)(g.olH, { onClick: l })
                       ]
@@ -196,7 +196,7 @@ function Y(e) {
                 ]
             }),
             (0, i.jsxs)(g.mzw, {
-                justify: x.Z.Justify.START,
+                justify: N.Z.Justify.START,
                 children: [v, T]
             })
         ]
@@ -208,14 +208,14 @@ function K(e) {
         { analyticsLocations: s } = (0, b.ZP)(),
         [a] = (0, v.ED)({
             subscriptionId: r.id,
-            items: (0, C.Ue)(null != (n = null == (t = r.renewalMutations) ? void 0 : t.items) ? n : r.items),
+            items: (0, O.Ue)(null != (n = null == (t = r.renewalMutations) ? void 0 : t.items) ? n : r.items),
             renewal: !0,
             analyticsLocations: s,
             analyticsLocation: f.Z.CANCEL_INVOICE_PREVIEW
         }),
-        l = (0, u.e7)([_.Z], () => _.Z.get(r.planId));
+        l = (0, u.e7)([x.Z], () => x.Z.get(r.planId));
     if (null == a || null == l) return (0, i.jsx)(g.$jN, { className: G.loading });
-    let { intervalType: o, intervalCount: c } = C.ZP.getIntervalForInvoice(a);
+    let { intervalType: o, intervalCount: c } = O.ZP.getIntervalForInvoice(a);
     return (0, i.jsxs)('div', {
         className: G.__invalid_bodyText,
         children: [
@@ -233,8 +233,8 @@ function K(e) {
                 children: [
                     (0, i.jsx)(y.Z9, { children: V.NW.string(V.t.iqhIp6) }),
                     (0, i.jsx)(y.B1, {
-                        label: V.NW.formatToPlainString(V.t.r3jVZm, { planName: C.ZP.getDisplayName(l.id) }),
-                        value: (0, C.PK)(l),
+                        label: V.NW.formatToPlainString(V.t.r3jVZm, { planName: O.ZP.getDisplayName(l.id) }),
+                        value: (0, O.PK)(l),
                         className: G.invoiceCancelRow
                     }),
                     (0, i.jsx)(y.UN, {}),
@@ -272,8 +272,8 @@ function q(e) {
                 ]
             }),
             (0, i.jsxs)(g.mzw, {
-                align: x.Z.Align.CENTER,
-                justify: x.Z.Justify.BETWEEN,
+                align: N.Z.Align.CENTER,
+                justify: N.Z.Justify.BETWEEN,
                 children: [
                     (0, i.jsx)(g.zxk, {
                         color: g.zxk.Colors.RED,
@@ -288,7 +288,7 @@ function q(e) {
                                 analyticsLocation: o
                             });
                         },
-                        children: V.NW.format(V.t['V3+Rpa'], { planPremiumType: C.ZP.getDisplayPremiumType(t.planId) })
+                        children: V.NW.format(V.t['V3+Rpa'], { planPremiumType: O.ZP.getDisplayPremiumType(t.planId) })
                     }),
                     (0, i.jsx)(Z.Z, { onClick: r })
                 ]
@@ -301,12 +301,12 @@ function X(e) {
     return {
         subscription_id: e.id,
         subscription_type: e.type,
-        subscription_plan_id: null == (t = (0, C.Af)(e)) ? void 0 : t.id,
+        subscription_plan_id: null == (t = (0, O.Af)(e)) ? void 0 : t.id,
         subscription_plan_gateway_plan_id: e.paymentGatewayPlanId,
         subscription_status: e.status
     };
 }
-let J = {
+let Q = {
     1: "What You're Losing",
     2: 'Confirm Cancellation',
     3: 'Preview Updated Subscription',
@@ -315,17 +315,17 @@ let J = {
     6: 'Select Pause Duration',
     7: 'Confirm Pause Duration'
 };
-function Q(e) {
+function J(e) {
     var t;
     let n,
         { premiumSubscription: r, transitionState: a, onClose: l, analyticsLocations: c, analyticsLocation: u, initialStep: p } = e,
-        N = s.useRef(new o.qA()),
-        [x, _] = s.useState(null),
-        O = (0, I.Er)(),
-        S = (null == O ? void 0 : O.showCard) === !0,
-        v = (null == O ? void 0 : O.tenureRewardType) === M.nW.AVATAR_DECO,
-        y = null == (t = (0, C.Af)(r)) ? void 0 : t.planId,
-        Z = null != y ? C.ZP.getPremiumType(y) : null;
+        _ = s.useRef(new o.qA()),
+        [N, x] = s.useState(null),
+        C = (0, I.Er)(),
+        S = (null == C ? void 0 : C.showCard) === !0,
+        v = (null == C ? void 0 : C.tenureRewardType) === M.nW.AVATAR_DECO,
+        y = null == (t = (0, O.Af)(r)) ? void 0 : t.planId,
+        Z = null != y ? O.ZP.getPremiumType(y) : null;
     d()(null != Z, 'Should not be cancelling Nitro without premiumType');
     let w = (0, h.ZP)();
     s.useEffect(() => {
@@ -334,7 +334,7 @@ function Q(e) {
     let k = Z === B.p9.TIER_0 || Z === B.p9.TIER_1 || Z === B.p9.TIER_2;
     null == p && (p = k ? 1 : 2);
     let { analyticsLocations: H } = (0, b.ZP)(c, f.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
-        [z, K, Q, $] = (function (e, t, n) {
+        [z, K, J, $] = (function (e, t, n) {
             let [r, i] = s.useState(e),
                 [a, l] = s.useState(Date.now()),
                 [o] = s.useState(Date.now()),
@@ -344,8 +344,8 @@ function Q(e) {
                             U.rMx.CANCELLATION_FLOW_STEP,
                             F(
                                 {
-                                    from_step: J[r],
-                                    to_step: J[e],
+                                    from_step: Q[r],
+                                    to_step: Q[e],
                                     step_duration_ms: Date.now() - a,
                                     flow_duration_ms: Date.now() - o,
                                     location_stack: n
@@ -368,9 +368,9 @@ function Q(e) {
                     U.rMx.CANCELLATION_FLOW_STEP,
                     F(
                         {
-                            from_step: J[e],
+                            from_step: Q[e],
                             to_step: null,
-                            step_duration_ms: Date.now() - Q,
+                            step_duration_ms: Date.now() - J,
                             flow_duration_ms: Date.now() - $,
                             location_stack: c
                         },
@@ -510,7 +510,7 @@ function Q(e) {
                 premiumSubscription: r,
                 premiumType: Z,
                 onClose: () => en(z),
-                confettiCanvas: x,
+                confettiCanvas: N,
                 userDiscountOffer: ei
             });
             break;
@@ -521,9 +521,9 @@ function Q(e) {
         value: H,
         children: [
             (0, i.jsx)(o.O_, {
-                ref: _,
+                ref: x,
                 className: G.confettiCanvas,
-                environment: N.current
+                environment: _.current
             }),
             (0, i.jsx)(g.Y0X, {
                 transitionState: a,

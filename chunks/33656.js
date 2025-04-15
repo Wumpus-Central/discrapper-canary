@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => N });
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -14,7 +14,7 @@ var r = n(200651),
     h = n(388032),
     f = n(495288),
     b = n(20493);
-function N(e) {
+function _(e) {
     let { label: t, onChange: n, enabled: i, subLabel: s } = e;
     return (0, r.jsx)(o.j7V, {
         value: !!i,
@@ -23,7 +23,7 @@ function N(e) {
         children: t
     });
 }
-function x() {
+function N() {
     let e = (0, l.e7)([d.Z], () => d.Z.getSubsection()),
         t = i.createRef(),
         { categories: n, initialized: s } = (0, l.cj)([m.Z], () => m.Z.getEmailSettings());
@@ -34,8 +34,8 @@ function x() {
             null == t || null == (n = t.current) || n.scrollIntoView(!0);
         }
     }, [s, t, e]);
-    let x = g.M0.reduce((e, t) => e || !!n[t], !1),
-        _ = {
+    let N = g.M0.reduce((e, t) => e || !!n[t], !1),
+        x = {
             [g.$Z.COMMUNICATION]: p.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
             [g.$Z.SOCIAL]: p.s6.NOTIFICATIONS_EMAILS_SOCIAL,
             [g.$Z.UPDATES_AND_ANNOUNCEMENTS]: p.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
@@ -54,9 +54,9 @@ function x() {
                       children: [
                           g.Od.map((e) => {
                               let { category: t, label: i, subLabel: s } = e,
-                                  a = _[t],
+                                  a = x[t],
                                   l = (0, r.jsx)(
-                                      N,
+                                      _,
                                       {
                                           label: i(),
                                           subLabel: s(),
@@ -83,7 +83,7 @@ function x() {
                               children: [
                                   (0, r.jsx)(o.zxk, {
                                       className: f.marketingUnsubscribeButton,
-                                      disabled: !x,
+                                      disabled: !N,
                                       look: o.iLD.LINK,
                                       color: o.Ttl.LINK,
                                       onClick: u.oc,

@@ -1,8 +1,8 @@
 n.d(t, {
     BV: () => j,
-    FW: () => O,
+    FW: () => C,
     Kt: () => E,
-    ZC: () => C
+    ZC: () => O
 });
 var r = n(442837),
     i = n(493683),
@@ -19,17 +19,17 @@ var r = n(442837),
     h = n(592125),
     f = n(626135),
     b = n(823379),
-    N = n(728345),
-    x = n(812206),
-    _ = n(981631);
+    _ = n(728345),
+    N = n(812206),
+    x = n(981631);
 async function E(e, t, n) {
     t(e.id);
     let r = e.bot;
     if (null == r)
         try {
             var s;
-            if (((r = null == (s = x.Z.getApplication(e.id)) ? void 0 : s.bot), null == r)) {
-                let t = await (0, N.UM)(e.id);
+            if (((r = null == (s = N.Z.getApplication(e.id)) ? void 0 : s.bot), null == r)) {
+                let t = await (0, _.UM)(e.id);
                 (e = t), (r = p.ZP.createFromServer(t).bot);
             }
         } catch (e) {
@@ -45,7 +45,7 @@ async function E(e, t, n) {
             t(void 0);
         }
         if (
-            (f.default.track(_.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (f.default.track(x.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
                 is_new_dm: d,
                 channel_id: s
@@ -70,14 +70,14 @@ async function E(e, t, n) {
     } else t(void 0);
 }
 function j(e, t) {
-    s.ZP.updatedUnsyncedSettings({ showPlayAgain: e }), e || f.default.track(_.rMx.APP_DMS_QUICK_LAUNCHER_HIDDEN, { source: t });
-}
-function O() {
-    let e = (0, r.e7)([g.ZP], () => g.ZP.showPlayAgain),
-        { frecentApps: t } = C();
-    return e && t.length > 0;
+    s.ZP.updatedUnsyncedSettings({ showPlayAgain: e }), e || f.default.track(x.rMx.APP_DMS_QUICK_LAUNCHER_HIDDEN, { source: t });
 }
 function C() {
+    let e = (0, r.e7)([g.ZP], () => g.ZP.showPlayAgain),
+        { frecentApps: t } = O();
+    return e && t.length > 0;
+}
+function O() {
     let { frecentApps: e, loading: t } = (0, d.f)({
         context: { type: 'contextless' },
         onlyActivityApps: !0,

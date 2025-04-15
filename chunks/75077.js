@@ -1,12 +1,12 @@
 n.d(t, {
     Dp: () => g,
     Gw: () => h,
-    Op: () => _,
+    Op: () => x,
     gx: () => b,
     iG: () => f,
     mN: () => E,
     oo: () => p,
-    sP: () => x
+    sP: () => N
 }),
     n(539854),
     n(314940);
@@ -66,7 +66,7 @@ function f(e, t) {
     }
 }
 let b = (e, t, n) => ((0, s.wj)(e) ? t : n),
-    N = (e) => {
+    _ = (e) => {
         let { cards: t, perksCards: n, isFullScreen: r, showTenureCard: i } = e,
             s = r ? 3 : 2,
             a = (e) => {
@@ -79,7 +79,7 @@ let b = (e, t, n) => ((0, s.wj)(e) ? t : n),
             o = j();
         return null != n.collectibleDeco && a({ card: n.collectibleDeco }), null != n.tenureBadge && a({ card: n.tenureBadge }), null != n.tenureRewardCollectible && !0 === i && a({ card: n.tenureRewardCollectible }), a({ card: n.permadecos }), r && o ? (0 === t.length && l(), a({ card: n.newAppStylesUpdateJune2024 }), a({ card: n.serverProfiles })) : r && !o && (a({ card: n.referralProgram }), a({ card: n.newAppStylesUpdateJune2024 }), a({ card: n.serverProfiles })), a({ card: n.earlyAccess }), l(), a({ card: n.unlimitedSuperReactions }), t;
     },
-    x = (e) => {
+    N = (e) => {
         let { perksCards: t, variant: n, isFullScreen: i, showTenureCard: s, isPremiumSubscriber: a, fractionalState: l, isInReverseTrial: o } = e,
             u = [];
         switch (n) {
@@ -93,7 +93,7 @@ let b = (e, t, n) => ((0, s.wj)(e) ? t : n),
                     .otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
                 break;
             case c.R0.WHATS_NEW:
-                u = N({
+                u = _({
                     cards: u,
                     perksCards: t,
                     isFullScreen: i,
@@ -121,7 +121,7 @@ let b = (e, t, n) => ((0, s.wj)(e) ? t : n),
         }
         return i || (u = u.filter((e) => !e.hideOnNarrowScreen)), u;
     },
-    _ = (e) => {
+    x = (e) => {
         let t = (0, i.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
             n = null != t ? o.ZP.getPremiumPlanItem(t) : null,
             r = (null != n ? o.ZP.getSkuIdForPlan(n.planId) : null) === d.Si.TIER_2;

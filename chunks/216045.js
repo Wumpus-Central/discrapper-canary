@@ -14,13 +14,13 @@ var r = n(200651),
     h = n(100527),
     f = n(906732),
     b = n(475977),
-    N = n(605236),
-    x = n(243778),
-    _ = n(957730),
+    _ = n(605236),
+    N = n(243778),
+    x = n(957730),
     E = n(442933),
     j = n(53691),
-    O = n(267717),
-    C = n(296810),
+    C = n(267717),
+    O = n(296810),
     S = n(921813),
     v = n(610794),
     T = n(935147),
@@ -72,17 +72,17 @@ function G() {
             image: H
         }),
         K = (0, l.e7)([P.Z], () => P.Z.showNotice()),
-        q = k.dN.useSetting() && null != F ? _.ZP.parse(void 0, F).content : F,
+        q = k.dN.useSetting() && null != F ? x.ZP.parse(void 0, F).content : F,
         X = Z.ZP.canUsePremiumProfileCustomization(n),
-        { analyticsLocations: J } = (0, f.ZP)(h.Z.PROFILE),
-        Q = (0, y.T)({ location: 'UserSettingsProfileCustomization' }),
-        $ = (0, N.wE)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
-        ee = Q && !$;
+        { analyticsLocations: Q } = (0, f.ZP)(h.Z.PROFILE),
+        J = (0, y.T)({ location: 'UserSettingsProfileCustomization' }),
+        $ = (0, _.wE)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
+        ee = J && !$;
     i.useEffect(() => {
-        ee && (0, N.EW)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
+        ee && (0, _.EW)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
     }, [ee]);
     let et = (0, E.H)('UserSettingsProfileCustomization'),
-        [en, er] = (0, x.US)(et ? [o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE] : []),
+        [en, er] = (0, N.US)(et ? [o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE] : []),
         ei = en === o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE;
     i.useEffect(() => {
         ei && er(M.L.TAKE_ACTION);
@@ -104,10 +104,10 @@ function G() {
     return s
         ? (0, r.jsx)(g.Z, {})
         : (0, r.jsxs)(f.Gt, {
-              value: J,
+              value: Q,
               children: [
                   (0, r.jsx)(b.Z, {}),
-                  (0, r.jsx)(C.Z, {
+                  (0, r.jsx)(O.Z, {
                       profilePreview: (0, r.jsx)(
                           S.Z,
                           ((e = (function (e) {
@@ -184,7 +184,7 @@ function G() {
                       (0, r.jsx)(j.p, {
                           className: V.floatingNitroUpsell,
                           showUpsell: ec && !ea,
-                          text: U.NW.format(U.t.TmfgIy, { onClick: () => (0, O.y)() }),
+                          text: U.NW.format(U.t.TmfgIy, { onClick: () => (0, C.y)() }),
                           textVariant: 'heading-md/medium',
                           button: (0, r.jsxs)(d.gtL, {
                               className: V.floatingNitroButton,

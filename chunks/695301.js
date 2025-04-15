@@ -3,13 +3,13 @@ var r = n(200651),
     i = n(192379),
     l = n(442837),
     o = n(481060),
-    a = n(746916),
-    s = n(965638),
+    s = n(746916),
+    a = n(965638),
     c = n(905423),
     u = n(486472),
     d = n(888369),
-    p = n(430824),
-    h = n(451478),
+    h = n(430824),
+    p = n(451478),
     f = n(61634),
     g = n(325257),
     m = n(240848);
@@ -17,27 +17,27 @@ let b = i.memo(function (e) {
     var t, n;
     let { guildNode: b, lowerBadge: _ } = e,
         y = b.id,
-        v = (0, l.e7)([p.Z], () => p.Z.getGuild(y)),
-        O = (0, a.E)(v),
-        j = (0, l.e7)([h.Z], () => h.Z.isFocused()),
-        C = (0, l.e7)([u.Z], () => u.Z.isUnavailable(y)),
-        x = (0, c.Z)((e) => e.guildId),
-        S = (0, f.Z)(y),
+        v = (0, l.e7)([h.Z], () => h.Z.getGuild(y)),
+        O = (0, s.E)(v),
+        C = (0, l.e7)([p.Z], () => p.Z.isFocused()),
+        S = (0, l.e7)([u.Z], () => u.Z.isUnavailable(y)),
+        j = (0, c.Z)((e) => e.guildId),
+        E = (0, f.Z)(y),
         {
-            badge: P,
-            unread: I,
-            isMentionLowImportance: N
+            badge: x,
+            unread: N,
+            isMentionLowImportance: I
         } = (0, l.cj)([d.default], () => ({
             badge: d.default.getMentionCount(y),
             isMentionLowImportance: d.default.getIsMentionLowImportance(y),
             unread: d.default.hasUnread(y)
         })),
-        Z = (0, s.Ij)(v) && 0 === P,
-        E = i.useMemo(
+        P = (0, a.Ij)(v) && 0 === x,
+        w = i.useMemo(
             () =>
                 null != _
                     ? _
-                    : Z
+                    : P
                       ? (0, r.jsx)('div', {
                             className: m.pauseBackground,
                             children: (0, r.jsx)(o.fpf, {
@@ -49,7 +49,7 @@ let b = i.memo(function (e) {
                             })
                         })
                       : null,
-            [_, Z]
+            [_, P]
         );
     return (0, r.jsx)(
         g.Z,
@@ -81,14 +81,14 @@ let b = i.memo(function (e) {
         (n = n =
             {
                 guild: v,
-                unavailable: C,
-                animatable: j,
-                selected: x === y,
-                badge: P,
-                isMentionLowImportance: N,
-                lowerBadge: E,
-                unread: I,
-                mediaState: S,
+                unavailable: S,
+                animatable: C,
+                selected: j === y,
+                badge: x,
+                isMentionLowImportance: I,
+                lowerBadge: w,
+                unread: N,
+                mediaState: E,
                 guildJoinRequestStatus: O
             }),
         Object.getOwnPropertyDescriptors

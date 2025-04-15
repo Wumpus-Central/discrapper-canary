@@ -30,7 +30,7 @@ var r = n(200651),
     w = n(113728);
 function D(e) {
     let { guildId: t } = e,
-        { ref: n, width: o, height: D } = (0, m.Z)(),
+        { ref: n, width: o, height: D } = (0, m.ZP)(),
         T = (0, p.Q3)('GuildOnboardingPage'),
         R = (0, a.Wu)([O.Z], () => O.Z.getOnboardingPromptsForOnboarding(t)),
         M = (0, a.e7)([O.Z], () => O.Z.getEnabled(t)),

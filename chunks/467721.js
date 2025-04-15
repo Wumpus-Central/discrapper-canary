@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r,
     i = n(442837),
-    o = n(570140);
-function l(e, t, n) {
+    l = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ class c extends (r = i.ZP.PersistedStore) {
                         })
                     )),
                     r.forEach(function (t) {
-                        l(e, t, n[t]);
+                        o(e, t, n[t]);
                     });
             }
             return e;
@@ -45,8 +45,8 @@ class c extends (r = i.ZP.PersistedStore) {
         return a.lastTriggered >= Date.now() - 172800000;
     }
 }
-l(c, 'displayName', 'HDStreamingViewerStore'), l(c, 'persistKey', 'HDStreamingViewerStore');
-let u = new c(o.Z, {
+o(c, 'displayName', 'HDStreamingViewerStore'), o(c, 'persistKey', 'HDStreamingViewerStore');
+let u = new c(l.Z, {
     LOGOUT: function () {
         a = s();
     },

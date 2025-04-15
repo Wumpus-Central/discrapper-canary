@@ -1,11 +1,11 @@
-n.d(t, { k: () => r });
-let r = {
+r.d(t, { k: () => n });
+let n = {
     id: '0',
     name: '',
     mentionable: !1,
     position: 0,
     hoist: !1,
-    permissions: n(981631).Plq.SEND_MESSAGES,
+    permissions: r(981631).Plq.SEND_MESSAGES,
     color: 0,
     colors: {
         primary_color: 0,

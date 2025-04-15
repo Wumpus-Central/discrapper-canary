@@ -1,8 +1,8 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r,
     i = n(442837),
-    o = n(570140);
-function l(e, t, n) {
+    l = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -72,9 +72,9 @@ class d extends (r = i.ZP.DeviceSettingsStore) {
         return u;
     }
 }
-l(d, 'displayName', 'TTSStore'), l(d, 'persistKey', 'TTSStore'), l(d, 'migrations', []);
-let p = new d(
-    o.Z,
+o(d, 'displayName', 'TTSStore'), o(d, 'persistKey', 'TTSStore'), o(d, 'migrations', []);
+let h = new d(
+    l.Z,
     __OVERLAY__
         ? {}
         : {

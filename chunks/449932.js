@@ -1,16 +1,16 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => S });
 var r = n(200651);
 n(192379);
 var i = n(120356),
     l = n.n(i),
     o = n(442837),
-    a = n(481060),
-    s = n(717881),
+    s = n(481060),
+    a = n(717881),
     c = n(503438),
     u = n(850827),
     d = n(540059),
-    p = n(952164),
-    h = n(237583),
+    h = n(952164),
+    p = n(237583),
     f = n(131704),
     g = n(314897),
     m = n(594174),
@@ -21,13 +21,13 @@ var i = n(120356),
 function O(e) {
     let { guildId: t, member: n, className: i } = e,
         o = null != n.member ? (0, b.CA)(n.member) : null;
-    return (0, r.jsx)(a.ua7, {
+    return (0, r.jsx)(s.ua7, {
         text: n.nick,
         position: 'bottom',
         children: (e) => {
-            var s;
+            var a;
             return (0, r.jsx)(
-                a.qEK,
+                s.qEK,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,9 +55,9 @@ function O(e) {
                 })(
                     {
                         src: null != o ? o : n.user.getAvatarURL(t, 16),
-                        size: a.EFr.SIZE_16,
+                        size: s.EFr.SIZE_16,
                         className: l()(i, v.partyAvatar),
-                        'aria-label': null != (s = n.nick) ? s : _.ZP.getName(n.user)
+                        'aria-label': null != (a = n.nick) ? a : _.ZP.getName(n.user)
                     },
                     e
                 )
@@ -65,9 +65,9 @@ function O(e) {
         }
     });
 }
-function j(e) {
+function C(e) {
     let { members: t, guildId: n } = e;
-    return (0, r.jsx)(h.Z, {
+    return (0, r.jsx)(p.Z, {
         className: v.partyMembers,
         guildId: n,
         users: t,
@@ -93,47 +93,47 @@ function j(e) {
             )
     });
 }
-let C = (e) => {
-    let { channel: t, presenceActivity: n, members: i, embeddedApp: l, onAction: h } = e,
+let S = (e) => {
+    let { channel: t, presenceActivity: n, members: i, embeddedApp: l, onAction: p } = e,
         b = (0, d.Q3)('ChannelActivityRow'),
         _ = null != l,
         O = _ ? Array.from(l.embeddedActivity.userIds) : [],
-        C = (0, o.e7)([m.default, g.default], () => {
+        S = (0, o.e7)([m.default, g.default], () => {
             if (_) return m.default.getUser(O[0]);
             if (null != i) {
                 var e, t;
                 return i.length <= 0 ? null : null != (t = null == (e = i.find((e) => e.user.id !== g.default.getId())) ? void 0 : e.user) ? t : i[0].user;
             }
         });
-    if (null == C) return null;
-    let x = _ || (0, c.Z)(n),
-        S = (0, f.vd)(t.type);
+    if (null == S) return null;
+    let j = _ || (0, c.Z)(n),
+        E = (0, f.vd)(t.type);
     return (0, r.jsxs)('div', {
         className: v.activity,
         children: [
             (0, r.jsx)('div', {
                 className: v.channelActivityContainer,
-                children: x
+                children: j
                     ? (0, r.jsx)(y.Z, {
                           activity: n,
                           embeddedApp: l,
-                          user: C,
+                          user: S,
                           channel: t,
                           sortedVoiceStates: i,
-                          onOpenSpotifyTrack: S ? p.aG : void 0,
-                          onOpenSpotifyArtist: S ? p.d$ : void 0,
-                          onOpenSpotifyAlbum: S ? p.Z5 : void 0
+                          onOpenSpotifyTrack: E ? h.aG : void 0,
+                          onOpenSpotifyArtist: E ? h.d$ : void 0,
+                          onOpenSpotifyAlbum: E ? h.Z5 : void 0
                       })
-                    : (0, r.jsx)(s.Z, {
-                          type: s.P.VOICE_CHANNEL,
+                    : (0, r.jsx)(a.Z, {
+                          type: a.P.VOICE_CHANNEL,
                           activity: n,
-                          user: C,
+                          user: S,
                           guildId: t.getGuildId(),
                           channelId: t.id,
                           renderHeaderAccessory:
                               null != i
                                   ? () =>
-                                        (0, r.jsx)(j, {
+                                        (0, r.jsx)(C, {
                                             guildId: t.guild_id,
                                             members: i
                                         })
@@ -143,15 +143,15 @@ let C = (e) => {
             (0, r.jsx)('div', {
                 className: v.activityActionsContainer,
                 children: (0, r.jsx)(u.Z, {
-                    type: s.P.VOICE_CHANNEL,
+                    type: a.P.VOICE_CHANNEL,
                     activity: n,
                     embeddedActivity: null == l ? void 0 : l.embeddedActivity,
-                    user: C,
+                    user: S,
                     guildId: t.getGuildId(),
                     channelId: t.id,
-                    color: b ? a.zxk.Colors.PRIMARY : v.button,
-                    look: b ? a.zxk.Looks.FILLED : void 0,
-                    onAction: h
+                    color: b ? s.zxk.Colors.PRIMARY : v.button,
+                    look: b ? s.zxk.Looks.FILLED : void 0,
+                    onAction: p
                 })
             })
         ]

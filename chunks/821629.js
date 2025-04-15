@@ -1,28 +1,28 @@
-s.d(t, { Z: () => a });
-var r = s(774078),
-    n = s(706454),
-    i = s(55935),
-    o = s(388032);
+r.d(t, { Z: () => a });
+var n = r(774078),
+    i = r(706454),
+    s = r(55935),
+    o = r(388032);
 function l(e) {
-    return e.toLocaleString(n.default.locale, {
+    return e.toLocaleString(i.default.locale, {
         minimumIntegerDigits: 2,
         useGrouping: !1
     });
 }
 let a = function (e) {
     let { endDate: t } = e,
-        s = Date.now(),
-        n = (0, i.TD)(s, t),
-        a = s > t.getTime(),
-        c = n.days > 0 ? 3600000 : 1000,
-        u = (0, r.Z)(t, c, void 0, a);
-    return a || Object.values(u).every((e) => 0 === e)
+        r = Date.now(),
+        i = (0, s.TD)(r, t),
+        a = r > t.getTime(),
+        c = i.days > 0 ? 3600000 : 1000,
+        h = (0, n.Z)(t, c, void 0, a);
+    return a || Object.values(h).every((e) => 0 === e)
         ? null
-        : u.days > 0
-          ? o.NW.formatToPlainString(o.t.f0QaSU, { days: u.days })
+        : h.days > 0
+          ? o.NW.formatToPlainString(o.t.f0QaSU, { days: h.days })
           : o.NW.formatToPlainString(o.t['3MT4MT'], {
-                hours: l(u.hours),
-                minutes: l(u.minutes),
-                seconds: l(u.seconds)
+                hours: l(h.hours),
+                minutes: l(h.minutes),
+                seconds: l(h.seconds)
             });
 };

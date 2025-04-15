@@ -7,8 +7,8 @@ var r,
     a = n(200651),
     i = n(192379),
     l = n(120356),
-    o = n.n(l),
-    s = n(748780),
+    s = n.n(l),
+    o = n(748780),
     c = n(481060),
     d = n(112724),
     u = n(446411),
@@ -110,7 +110,7 @@ let N = {
         let t,
             n,
             r,
-            { item: i, size: l, onPlay: o, onEnded: s, onClick: d, playable: m, volume: h, isMuted: g, onVolumeChange: _, onMute: f } = e;
+            { item: i, size: l, onPlay: s, onEnded: o, onClick: d, playable: m, volume: h, isMuted: g, onVolumeChange: _, onMute: f } = e;
         if (i.type === v.s9s.YOUTUBE_VIDEO) (t = y({ url: (0, v.n8r)(i.youtubeVideoId) }, O)), (n = y({ url: ''.concat((0, v.ivE)(i.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1') }, P)), (r = p.pn.YOUTUBE);
         else {
             let e = null != i.width ? i.width : 0,
@@ -135,8 +135,8 @@ let N = {
             allowFullScreen: !0,
             maxHeight: l.height,
             maxWidth: l.width,
-            onPlay: o,
-            onEnded: s,
+            onPlay: s,
+            onEnded: o,
             playable: m,
             className: C.video,
             volume: h,
@@ -176,15 +176,15 @@ class L extends (r = i.PureComponent) {
         let n = t.interpolate({
             inputRange: [0, 1],
             outputRange: [1, 0],
-            extrapolate: s.Z.Extrapolate.CLAMP
+            extrapolate: o.Z.Extrapolate.CLAMP
         });
         return {
             opacity: t.interpolate({
                 inputRange: [0, 1],
                 outputRange: [0.3, 1],
-                extrapolate: s.Z.Extrapolate.CLAMP
+                extrapolate: o.Z.Extrapolate.CLAMP
             }),
-            filter: s.Z.template(I(), n)
+            filter: o.Z.template(I(), n)
         };
     }
     handleCurrentItemClick(e, t) {
@@ -214,11 +214,11 @@ class L extends (r = i.PureComponent) {
                       l,
                       (0, a.jsx)(h.am, {
                           onClick: this.manualPrevious,
-                          className: o()(C.arrow, { [C.arrowHovered]: r })
+                          className: s()(C.arrow, { [C.arrowHovered]: r })
                       }),
                       (0, a.jsx)(h.Pz, {
                           onClick: this.manualNext,
-                          className: o()(C.arrow, { [C.arrowHovered]: i })
+                          className: s()(C.arrow, { [C.arrowHovered]: i })
                       })
                   ]
               });
@@ -228,13 +228,13 @@ class L extends (r = i.PureComponent) {
     }
     render() {
         let { items: e, className: t, autoplayInterval: n, paused: r } = this.props,
-            { currentIndex: i, playingVideo: l, hasInteracted: o } = this.state;
+            { currentIndex: i, playingVideo: l, hasInteracted: s } = this.state;
         return (0, a.jsxs)(m.Z, {
             pauseOnHover: !0,
             onInterval: this.autoNext,
             interval: n,
             className: t,
-            disable: l || o || r,
+            disable: l || s || r,
             children: [
                 this.renderCarousel(),
                 (0, a.jsx)('div', {
@@ -276,11 +276,11 @@ class L extends (r = i.PureComponent) {
                     } = this,
                     i = (0, g.gN)(a, n.length),
                     l = (0, g.gN)(e, n.length),
-                    o = 1 === Math.abs(e - i) || (e === n.length - 1 && 0 === i) || (0 === e && i === n.length - 1);
+                    s = 1 === Math.abs(e - i) || (e === n.length - 1 && 0 === i) || (0 === e && i === n.length - 1);
                 this.setState({
                     playingVideo: !1,
                     currentIndex: l,
-                    animate: o,
+                    animate: s,
                     hasInteracted: t
                 }),
                     t && null != r && r(n[l], i, l);
@@ -349,8 +349,8 @@ class L extends (r = i.PureComponent) {
             j(this, 'renderItem', (e, t, n) => {
                 let { currentIndex: r, volume: i, isMuted: l } = this.state,
                     c = t === (0, g.gN)(r, this.props.items.length);
-                return (0, a.jsx)(s.Z.div, {
-                    className: o()(C.item, { [C.currentItem]: c }),
+                return (0, a.jsx)(o.Z.div, {
+                    className: s()(C.item, { [C.currentItem]: c }),
                     style: null != n ? this.getStyle(t, n) : null,
                     onMouseEnter: c ? null : () => this.handleEdgeItemMouseEnter(t),
                     onMouseLeave: c ? null : this.handleEdgeItemMouseLeave,
@@ -377,7 +377,7 @@ class L extends (r = i.PureComponent) {
                 return (0, a.jsxs)(
                     'div',
                     {
-                        className: o()(C.paginationItem, r ? C.selectedStorePaginationItem : C.unselectedStorePaginationItem),
+                        className: s()(C.paginationItem, r ? C.selectedStorePaginationItem : C.unselectedStorePaginationItem),
                         children: [
                             (0, a.jsx)('img', {
                                 alt: null == e.alt ? t : e.alt,

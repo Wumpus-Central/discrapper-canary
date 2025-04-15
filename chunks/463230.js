@@ -8,16 +8,16 @@ var i = n(481060),
     s = n(222727),
     c = n(981631),
     u = n(921944),
-    E = n(388032),
-    d = n(131715);
+    d = n(388032),
+    E = n(131715);
 let _ = (e) => {
     let { notice: t, noticeType: n, dismissCurrentNotice: _ } = e,
         I = (null == t ? void 0 : t.metadata.premiumSubscription) != null,
-        N = (0, a.n)();
-    if (((0, s.U)(c.jXE.NOTIFICATION_BAR, null == N ? void 0 : N.countryCode), null == N)) return null;
-    let O = N.countryCode,
-        T = N.currency,
-        S = N.paymentSourceTypes.length > 0;
+        O = (0, a.n)();
+    if (((0, s.U)(c.jXE.NOTIFICATION_BAR, null == O ? void 0 : O.countryCode), null == O)) return null;
+    let N = O.countryCode,
+        T = O.currency,
+        S = O.paymentSourceTypes.length > 0;
     return (0, r.jsxs)(i.qXd, {
         color: I ? i.DM8.BRAND : i.DM8.PREMIUM_TIER_2,
         children: [
@@ -29,15 +29,15 @@ let _ = (e) => {
                 (0, r.jsx)(i.SrA, {
                     size: 'md',
                     color: 'currentColor',
-                    className: d.premiumIcon
+                    className: E.premiumIcon
                 }),
-            (0, o.Gv)(O, T, S, I),
+            (0, o.Gv)(N, T, S, I),
             (0, r.jsx)(i.NoS, {
                 onClick: () => {
                     _(u.L.UNKNOWN), l.Z.open(c.oAB.PREMIUM);
                 },
                 noticeType: n,
-                children: E.NW.string(E.t.hvVgAQ)
+                children: d.NW.string(d.t.hvVgAQ)
             })
         ]
     });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => x });
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -14,12 +14,12 @@ var r = n(200651),
     h = n(853872),
     f = n(78839),
     b = n(783739),
-    N = n(981631),
-    x = n(117527);
-function _() {
+    _ = n(981631),
+    N = n(117527);
+function x() {
     i.useEffect(() => {
         c.Z.wait(() => {
-            d.jg(), d.tZ(), (0, u.X8)(), (0, m.Y2)(null, null, N.JjL.DISCOVERY), (0, u.tH)(!0);
+            d.jg(), d.tZ(), (0, u.X8)(), (0, m.Y2)(null, null, _.JjL.DISCOVERY), (0, u.tH)(!0);
         });
     }, []);
     let { hasFetchedSubscriptions: e, premiumSubscription: t } = (0, l.cj)([f.ZP], () => ({
@@ -28,20 +28,20 @@ function _() {
         })),
         n = (0, g.V)(),
         s = (0, l.e7)([h.Z], () => h.Z.hasFetchedPaymentSources),
-        _ = (0, l.e7)([p.Z], () => p.Z.isFetchingCurrentUserAppliedBoosts);
-    return e && n && s && !_
+        x = (0, l.e7)([p.Z], () => p.Z.isFetchingCurrentUserAppliedBoosts);
+    return e && n && s && !x
         ? (0, r.jsxs)('div', {
-              className: x.container,
+              className: N.container,
               children: [
-                  (0, r.jsx)('div', { className: x.background }),
+                  (0, r.jsx)('div', { className: N.background }),
                   (0, r.jsx)('div', {
-                      className: x.content,
+                      className: N.content,
                       children: (0, r.jsx)(b.Z, { premiumSubscription: t })
                   })
               ]
           })
         : (0, r.jsx)('div', {
-              className: a()(x.container, x.loading),
+              className: a()(N.container, N.loading),
               children: (0, r.jsx)(o.$jN, {})
           });
 }

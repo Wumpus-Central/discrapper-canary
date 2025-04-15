@@ -114,7 +114,7 @@ function U(e, t, n, r) {
 }
 function G(e) {
     let { className: t, waveform: n, currentTime: o, duration: s, played: l, playing: d, onDrag: f, onDragStart: p, onDragEnd: m } = e,
-        { ref: g, width: E } = (0, c.Z)(),
+        { ref: g, width: E } = (0, c.ZP)(),
         b = i.useMemo(() => P(s), [s]),
         y = i.useRef(void 0),
         v = M(n, E),

@@ -1,68 +1,68 @@
-n.d(t, { Z: () => h }), n(388685);
-var l = n(200651),
-    r = n(192379),
-    i = n(120356),
-    o = n.n(i),
-    a = n(481060),
-    s = n(981631),
-    u = n(388032),
-    c = n(937848),
-    d = n(20493);
-let E = 0,
-    f = () => 'notification-position-selector-'.concat(E++),
-    C = (e) => {
+n.d(t, { Z: () => b }), n(388685);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
+    o = n(981631),
+    c = n(388032),
+    d = n(937848),
+    u = n(20493);
+let m = 0,
+    g = () => 'notification-position-selector-'.concat(m++),
+    p = (e) => {
         switch (e) {
-            case s._vf.TOP_LEFT:
-                return u.NW.string(u.t.xlchpa);
-            case s._vf.TOP_RIGHT:
-                return u.NW.string(u.t['4uHRHB']);
-            case s._vf.BOTTOM_LEFT:
-                return u.NW.string(u.t.ovWFnJ);
-            case s._vf.BOTTOM_RIGHT:
-                return u.NW.string(u.t['M/9V7+']);
+            case o._vf.TOP_LEFT:
+                return c.NW.string(c.t.xlchpa);
+            case o._vf.TOP_RIGHT:
+                return c.NW.string(c.t['4uHRHB']);
+            case o._vf.BOTTOM_LEFT:
+                return c.NW.string(c.t.ovWFnJ);
+            case o._vf.BOTTOM_RIGHT:
+                return c.NW.string(c.t['M/9V7+']);
             default:
-                return u.NW.string(u.t.AlY4ZW);
+                return c.NW.string(c.t.AlY4ZW);
         }
     },
-    _ = [s._vf.DISABLED, s._vf.TOP_LEFT, s._vf.TOP_RIGHT, s._vf.BOTTOM_LEFT, s._vf.BOTTOM_RIGHT];
-function p(e) {
+    h = [o._vf.DISABLED, o._vf.TOP_LEFT, o._vf.TOP_RIGHT, o._vf.BOTTOM_LEFT, o._vf.BOTTOM_RIGHT];
+function f(e) {
     let { position: t, onChange: n } = e,
-        [i] = r.useState(() => f()),
-        E = t === s._vf.DISABLED ? u.NW.string(u.t.R6LxVV) : u.NW.formatToPlainString(u.t.XXHDMz, { position: C(t) });
-    return (0, l.jsxs)('div', {
+        [s] = i.useState(() => g()),
+        m = t === o._vf.DISABLED ? c.NW.string(c.t.R6LxVV) : c.NW.formatToPlainString(c.t.XXHDMz, { position: p(t) });
+    return (0, r.jsxs)('div', {
         children: [
-            (0, l.jsx)(a.tEY, {
+            (0, r.jsx)(l.tEY, {
                 within: !0,
                 offset: -2,
-                children: (0, l.jsx)('div', {
-                    className: o()(c.wrapper, { [c.disabledSelected]: t === s._vf.DISABLED }),
-                    children: _.map((e) =>
-                        (0, l.jsxs)(
+                children: (0, r.jsx)('div', {
+                    className: a()(d.wrapper, { [d.disabledSelected]: t === o._vf.DISABLED }),
+                    children: h.map((e) =>
+                        (0, r.jsxs)(
                             'label',
                             {
-                                className: o()({
-                                    [c.selected]: e === t,
-                                    [c.disabled]: e === s._vf.DISABLED,
-                                    [c.topRight]: e === s._vf.TOP_RIGHT,
-                                    [c.topLeft]: e === s._vf.TOP_LEFT,
-                                    [c.bottomRight]: e === s._vf.BOTTOM_RIGHT,
-                                    [c.bottomLeft]: e === s._vf.BOTTOM_LEFT
+                                className: a()({
+                                    [d.selected]: e === t,
+                                    [d.disabled]: e === o._vf.DISABLED,
+                                    [d.topRight]: e === o._vf.TOP_RIGHT,
+                                    [d.topLeft]: e === o._vf.TOP_LEFT,
+                                    [d.bottomRight]: e === o._vf.BOTTOM_RIGHT,
+                                    [d.bottomLeft]: e === o._vf.BOTTOM_LEFT
                                 }),
                                 children: [
-                                    C(e),
-                                    e === s._vf.DISABLED
-                                        ? (0, l.jsx)(a.t6m, {
+                                    p(e),
+                                    e === o._vf.DISABLED
+                                        ? (0, r.jsx)(l.t6m, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: c.disabledIcon
+                                              className: d.disabledIcon
                                           })
                                         : null,
-                                    (0, l.jsx)('input', {
+                                    (0, r.jsx)('input', {
                                         type: 'radio',
-                                        name: i,
+                                        name: s,
                                         value: e,
                                         onChange: (t) => n(t, e),
-                                        className: c.hiddenInput
+                                        className: d.hiddenInput
                                     })
                                 ]
                             },
@@ -71,13 +71,13 @@ function p(e) {
                     )
                 })
             }),
-            (0, l.jsx)(a.R94, {
-                type: a.geA.DESCRIPTION,
-                className: d.marginTop8,
-                children: E
+            (0, r.jsx)(l.R94, {
+                type: l.geA.DESCRIPTION,
+                className: u.marginTop8,
+                children: m
             })
         ]
     });
 }
-p.Positions = s._vf;
-let h = p;
+f.Positions = o._vf;
+let b = f;

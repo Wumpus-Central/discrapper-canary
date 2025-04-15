@@ -1,11 +1,11 @@
-e.d(t, { $: () => a });
-var v = e(200651);
-e(192379);
-var r = e(331595),
-    n = e(249849);
-let i = ['#ffb84b', '#ffe361', '#f0f0f0'],
+r.d(t, { $: () => c });
+var n = r(200651);
+r(192379);
+var i = r(331595),
+    s = r(249849);
+let o = ['#ffb84b', '#ffe361', '#f0f0f0'],
     l = [0.15, 0.5, 0.9],
-    o = [
+    a = [
         {
             base: 5,
             tint: 1
@@ -19,135 +19,135 @@ let i = ['#ffb84b', '#ffe361', '#f0f0f0'],
             tint: 1
         }
     ],
-    a = (h) => {
+    c = (e) => {
         var t,
-            e,
-            { width: a = 24, height: s = 24, primaryTintColor: Z } = h,
-            f = (function (h, t) {
-                if (null == h) return {};
-                var e,
-                    v,
-                    r = (function (h, t) {
-                        if (null == h) return {};
-                        var e,
-                            v,
-                            r = {},
-                            n = Object.keys(h);
-                        for (v = 0; v < n.length; v++) (e = n[v]), t.indexOf(e) >= 0 || (r[e] = h[e]);
-                        return r;
-                    })(h, t);
+            r,
+            { width: c = 24, height: h = 24, primaryTintColor: v } = e,
+            u = (function (e, t) {
+                if (null == e) return {};
+                var r,
+                    n,
+                    i = (function (e, t) {
+                        if (null == e) return {};
+                        var r,
+                            n,
+                            i = {},
+                            s = Object.keys(e);
+                        for (n = 0; n < s.length; n++) (r = s[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        return i;
+                    })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var n = Object.getOwnPropertySymbols(h);
-                    for (v = 0; v < n.length; v++) (e = n[v]), !(t.indexOf(e) >= 0) && Object.prototype.propertyIsEnumerable.call(h, e) && (r[e] = h[e]);
+                    var s = Object.getOwnPropertySymbols(e);
+                    for (n = 0; n < s.length; n++) (r = s[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
                 }
-                return r;
-            })(h, ['width', 'height', 'primaryTintColor']);
-        let { primaryColorsTransformed: M } = (0, n.s)({
-            primaryBaseColors: i,
-            primaryTintColor: Z,
+                return i;
+            })(e, ['width', 'height', 'primaryTintColor']);
+        let { primaryColorsTransformed: f } = (0, s.s)({
+            primaryBaseColors: o,
+            primaryTintColor: v,
             primaryTintLuminances: l,
-            primaryLuminanceWeights: o
+            primaryLuminanceWeights: a
         });
-        return (0, v.jsxs)(
+        return (0, n.jsxs)(
             'svg',
-            ((t = (function (h) {
+            ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
-                    var e = null != arguments[t] ? arguments[t] : {},
-                        v = Object.keys(e);
+                    var r = null != arguments[t] ? arguments[t] : {},
+                        n = Object.keys(r);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (v = v.concat(
-                            Object.getOwnPropertySymbols(e).filter(function (h) {
-                                return Object.getOwnPropertyDescriptor(e, h).enumerable;
+                        (n = n.concat(
+                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
                             })
                         )),
-                        v.forEach(function (t) {
-                            var v;
-                            (v = e[t]),
-                                t in h
-                                    ? Object.defineProperty(h, t, {
-                                          value: v,
+                        n.forEach(function (t) {
+                            var n;
+                            (n = r[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: n,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (h[t] = v);
+                                    : (e[t] = n);
                         });
                 }
-                return h;
-            })({}, (0, r.Z)(f))),
-            (e = e =
+                return e;
+            })({}, (0, i.Z)(u))),
+            (r = r =
                 {
-                    width: a,
-                    height: s,
+                    width: c,
+                    height: h,
                     viewBox: '0 0 16 16',
                     fill: 'none',
                     xmlns: 'http://www.w3.org/2000/svg',
                     children: [
-                        (0, v.jsx)('path', {
+                        (0, n.jsx)('path', {
                             d: 'M5 6H4v1H2v2h6v2H7v1H6v1H5v1H4v1h2v-1h1v-1h1v-1h1v-1h2v-1h1V9h2V7H7V6h1V5h1V4h1V3H8v1H7v1H5v1Z',
-                            fill: M[1]
+                            fill: f[1]
                         }),
-                        (0, v.jsx)('path', {
+                        (0, n.jsx)('path', {
                             d: 'M1 7H0v2h1V7Z',
                             fill: '#000'
                         }),
-                        (0, v.jsx)('path', {
+                        (0, n.jsx)('path', {
                             d: 'M2 7H1v2h1V7Z',
-                            fill: M[2]
+                            fill: f[2]
                         }),
-                        (0, v.jsx)('path', {
+                        (0, n.jsx)('path', {
                             d: 'M16 7h-1v2h1V7ZM3 6H1v1h2V6ZM6 4H4v1h2V4ZM4 5H3v1h1V5Z',
                             fill: '#000'
                         }),
-                        (0, v.jsx)('path', {
+                        (0, n.jsx)('path', {
                             d: 'M4 6H3v1h1V6ZM5 5H4v1h1V5ZM6 6H5v1h1V6ZM7 4H6v1h1V4ZM8 3H7v1h1V3ZM8 10H7v1h1v-1ZM7 11H6v1h1v-1ZM6 12H5v1h1v-1ZM5 13H4v1h1v-1ZM4 14H3v1h1v-1Z',
-                            fill: M[2]
+                            fill: f[2]
                         }),
-                        (0, v.jsx)('path', {
+                        (0, n.jsx)('path', {
                             d: 'M12 2h-1v1h1V2ZM13 9h-1v1h1V9ZM12 10h-1v1h1v-1ZM10 11H9v1h1v-1ZM9 12H8v1h1v-1ZM15 8h-1v1h1V8Z',
-                            fill: M[0]
+                            fill: f[0]
                         }),
-                        (0, v.jsx)('path', {
+                        (0, n.jsx)('path', {
                             d: 'M15 7h-1v1h1V7Z',
-                            fill: M[2]
+                            fill: f[2]
                         }),
-                        (0, v.jsx)('path', {
+                        (0, n.jsx)('path', {
                             d: 'M11 3h-1v1h1V3ZM10 4H9v1h1V4ZM9 5H8v1h1V5ZM8 6H7v1h1V6Z',
-                            fill: M[0]
+                            fill: f[0]
                         }),
-                        (0, v.jsx)('path', {
+                        (0, n.jsx)('path', {
                             d: 'M10 2H9v1h1V2Z',
-                            fill: M[2]
+                            fill: f[2]
                         }),
-                        (0, v.jsx)('path', {
+                        (0, n.jsx)('path', {
                             d: 'M9 2H7v1h2V2ZM7 3H6v1h1V3ZM13 0h-3v1h3V0Z',
                             fill: '#000'
                         }),
-                        (0, v.jsx)('path', {
+                        (0, n.jsx)('path', {
                             d: 'M13 1h-3v1h3V1Z',
-                            fill: M[2]
+                            fill: f[2]
                         }),
-                        (0, v.jsx)('path', {
+                        (0, n.jsx)('path', {
                             d: 'M15 6H8v1h7V6ZM10 1H9v1h1V1ZM14 1h-1v1h1V1ZM13 2h-1v1h1V2ZM12 3h-1v1h1V3ZM11 4h-1v1h1V4ZM10 5H9v1h1V5ZM15 9h-2v1h2V9ZM12 11h-2v1h2v-1ZM13 10h-1v1h1v-1ZM9 13H7v1h2v-1ZM10 12H9v1h1v-1ZM6 15H3v1h3v-1ZM8 9H1v1h7V9ZM7 14H6v1h1v-1ZM3 14H2v1h1v-1ZM4 13H3v1h1v-1ZM5 12H4v1h1v-1ZM6 11H5v1h1v-1ZM7 10H6v1h1v-1Z',
                             fill: '#000'
                         }),
-                        (0, v.jsx)('path', {
+                        (0, n.jsx)('path', {
                             d: 'M11 2h-1v1h1V2Z',
-                            fill: M[1]
+                            fill: f[1]
                         })
                     ]
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
-                : (function (h, t) {
-                      var e = Object.keys(h);
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                : (function (e, t) {
+                      var r = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var v = Object.getOwnPropertySymbols(h);
-                          e.push.apply(e, v);
+                          var n = Object.getOwnPropertySymbols(e);
+                          r.push.apply(r, n);
                       }
-                      return e;
-                  })(Object(e)).forEach(function (h) {
-                      Object.defineProperty(t, h, Object.getOwnPropertyDescriptor(e, h));
+                      return r;
+                  })(Object(r)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                   }),
             t)
         );

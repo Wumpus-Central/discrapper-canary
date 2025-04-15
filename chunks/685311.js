@@ -1,61 +1,61 @@
-n.d(t, { Z: () => h }), n(35282), n(388685);
+n.d(t, { Z: () => p }), n(35282), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    l = n(536285),
-    s = n(857458),
+    s = n(120356),
+    l = n.n(s),
+    o = n(536285),
+    a = n(857458),
     c = n(388905),
     u = n(703656),
     d = n(388032),
-    p = n(20493);
-let h = function (e) {
-    let { match: t, location: n, attemptDeepLink: o } = e,
-        [h, g] = i.useState(0);
+    h = n(20493);
+let p = function (e) {
+    let { match: t, location: n, attemptDeepLink: s } = e,
+        [p, g] = i.useState(0);
     i.useEffect(() => {
-        l.default.once('connected', () => {
+        o.default.once('connected', () => {
             g(1);
         }),
-            l.default.once('disconnected', () => {
-                (0, u.uL)((0, s.M)());
+            o.default.once('disconnected', () => {
+                (0, u.uL)((0, a.M)());
             }),
-            l.default.connect();
+            o.default.connect();
     }, []),
         i.useEffect(() => {
-            if (0 !== h) return;
-            let e = setTimeout(() => (0, u.uL)((0, s.M)()), 3000);
+            if (0 !== p) return;
+            let e = setTimeout(() => (0, u.uL)((0, a.M)()), 3000);
             return () => clearTimeout(e);
-        }, [h]);
-    let m = i.useCallback(
+        }, [p]);
+    let f = i.useCallback(
         async (e, t) => {
             try {
-                g(2), await o(e, t), g(3);
+                g(2), await s(e, t), g(3);
             } catch (e) {
                 console.error('Error opening deeplink', e);
             }
         },
-        [o]
+        [s]
     );
     if ((0, u.DB)()) return null;
-    switch (h) {
+    switch (p) {
         case 1:
             return (0, r.jsxs)(c.ZP, {
                 children: [
                     (0, r.jsx)(c.Dx, {
-                        className: p.marginBottom8,
+                        className: h.marginBottom8,
                         children: d.NW.string(d.t.qllnGh)
                     }),
                     (0, r.jsx)(c.DK, { children: d.NW.string(d.t.SXCxyc) }),
                     (0, r.jsx)(c.zx, {
-                        className: p.marginTop40,
-                        onClick: () => m(t, n),
+                        className: h.marginTop40,
+                        onClick: () => f(t, n),
                         children: d.NW.string(d.t.UQvCf3)
                     }),
                     (0, r.jsx)(c.zx, {
-                        className: a()(p.marginTop8, p.marginCenterHorz),
+                        className: l()(h.marginTop8, h.marginCenterHorz),
                         color: c.zx.Colors.LINK,
                         look: c.zx.Looks.LINK,
-                        onClick: () => (0, u.uL)((0, s.M)()),
+                        onClick: () => (0, u.uL)((0, a.M)()),
                         children: d.NW.string(d.t['2ixEBg'])
                     })
                 ]
@@ -69,7 +69,7 @@ let h = function (e) {
             return (0, r.jsxs)(c.ZP, {
                 children: [
                     (0, r.jsx)(c.Dx, {
-                        className: p.marginBottom8,
+                        className: h.marginBottom8,
                         children: d.NW.string(d.t.csrAMD)
                     }),
                     (0, r.jsx)(c.DK, { children: d.NW.string(d.t.ghBJz8) })

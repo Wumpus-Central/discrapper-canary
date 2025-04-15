@@ -206,7 +206,7 @@ function G(e) {
             (0, f.Y)({
                 pageType: A.ZY5.GLOBAL_DISCOVERY_QUESTS,
                 sectionType: A.jXE.QUEST_TILE_CTA,
-                ctaObject: A.qAy.ORBS_QUESTS_TILE_SHOP_CTA
+                ctaObject: A.qAy.CTA_TO_ORBS_SHOP
             }),
                 (0, c.mK)({
                     openInLayer: !1,

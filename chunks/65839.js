@@ -19,7 +19,7 @@ var r = n(200651),
     C = n(725060);
 let x = (e) => {
     let { searchQuery: t, setSearchQuery: n, handleClearSearch: i, handleSearchKeyPress: l } = e,
-        { ref: a, width: u } = (0, c.Z)(),
+        { ref: a, width: u } = (0, c.ZP)(),
         d = null != u && u <= 800;
     return (0, r.jsxs)('div', {
         ref: a,

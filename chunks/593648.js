@@ -14,13 +14,13 @@ var r = n(200651),
     h = n(419363),
     f = n(818083),
     b = n(688465),
-    N = n(487419),
-    x = n(197344),
-    _ = n(476756),
+    _ = n(487419),
+    N = n(197344),
+    x = n(476756),
     E = n(734934),
     j = n(223683),
-    O = n(312400),
-    C = n(115345),
+    C = n(312400),
+    O = n(115345),
     S = n(392888),
     v = n(106371),
     T = n(995774),
@@ -226,7 +226,7 @@ function K(e) {
                 sound: 'reconnect'
             }
         ],
-        p = null != x.Z.useHolidaySoundpack();
+        p = null != N.Z.useHolidaySoundpack();
     return (0, r.jsx)(I.F, {
         setting: L.s6.NOTIFICATIONS_SOUNDS,
         children: (0, r.jsxs)(u.hjN, {
@@ -238,7 +238,7 @@ function K(e) {
                                   className: G.marginBottom20,
                                   children: U.NW.string(U.t.fgSHf3)
                               }),
-                              (0, r.jsx)(_.Z, {})
+                              (0, r.jsx)(x.Z, {})
                           ]
                       })
                     : null,
@@ -278,7 +278,7 @@ function K(e) {
     });
 }
 function q() {
-    let e = (0, c.e7)([N.Z], () => N.Z.getGuildAlertSettings()),
+    let e = (0, c.e7)([_.Z], () => _.Z.getGuildAlertSettings()),
         [t, n] = i.useState(null),
         s = Z.default.keys(e).map((t) => {
             let n = e[t];
@@ -409,7 +409,7 @@ class X extends i.PureComponent {
                         children: U.NW.string(U.t['/0WClp'])
                     })
                 }),
-                (0, r.jsx)(Q, {}),
+                (0, r.jsx)(J, {}),
                 (0, r.jsx)(I.F, {
                     setting: L.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                     children: (0, r.jsx)(u.j7V, {
@@ -512,7 +512,7 @@ class X extends i.PureComponent {
             });
     }
 }
-let J = (0, f.B)({
+let Q = (0, f.B)({
     kind: 'user',
     id: '2024-01_mention_on_all_messages',
     label: 'Mention on all messages',
@@ -525,8 +525,8 @@ let J = (0, f.B)({
         }
     ]
 });
-function Q() {
-    let e = J.useExperiment({ location: 'settings' }, { autoTrackExposure: !1 }).enabled,
+function J() {
+    let e = Q.useExperiment({ location: 'settings' }, { autoTrackExposure: !1 }).enabled,
         t = (0, c.e7)([P.ZP], () => P.ZP.mentionOnAllMessages);
     return e
         ? (0, r.jsx)(I.F, {
@@ -544,8 +544,8 @@ function Q() {
         : null;
 }
 function $() {
-    let e = O.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
-        { manuallyOpen: t } = O.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
+    let e = C.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
+        { manuallyOpen: t } = C.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
         n = (0, c.e7)([P.ZP], () => P.ZP.useNewNotifications),
         [s, l] = i.useState(!1);
     return e && (n || t)
@@ -630,13 +630,13 @@ async function ee(e) {
     e(!0);
     let t = await (0, j.Tn)();
     0 === t.length
-        ? await (0, C.oL)()
+        ? await (0, O.oL)()
         : m.Z.show({
               title: U.NW.string(U.t['cY+Ooa']),
               body: U.NW.format(U.t['7zTJJS'], { date: new Date(t[t.length - 1].recorded_at) }),
               cancelText: U.NW.string(U.t['ETE/oK']),
               confirmText: U.NW.string(U.t.Rm96T0),
-              onConfirm: C.oL
+              onConfirm: O.oL
           }),
         e(!1);
 }

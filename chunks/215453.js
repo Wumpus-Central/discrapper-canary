@@ -3,17 +3,17 @@ var r = n(200651),
     a = n(192379),
     i = n(481060),
     l = n(860719),
-    o = n(63063),
-    s = n(49012),
+    s = n(63063),
+    o = n(49012),
     c = n(981631),
     d = n(388032),
     u = n(924902);
-let p = o.Z.getArticleURL(c.BhN.BOT_DATA_ACCESS);
+let p = s.Z.getArticleURL(c.BhN.BOT_DATA_ACCESS);
 function m(e) {
     let { application: t } = e,
-        { hasMessageContent: n, hasGuildPresences: o, hasGuildMembers: c, hasIntents: m } = (0, l.w)({ flags: null == t ? void 0 : t.flags }),
+        { hasMessageContent: n, hasGuildPresences: s, hasGuildMembers: c, hasIntents: m } = (0, l.w)({ flags: null == t ? void 0 : t.flags }),
         g = a.useCallback(() => {
-            null != t.privacy_policy_url && (0, s.q)({ href: t.privacy_policy_url });
+            null != t.privacy_policy_url && (0, o.q)({ href: t.privacy_policy_url });
         }, [t.privacy_policy_url]);
     return (0, r.jsxs)('div', {
         className: u.sectionContainer,
@@ -41,7 +41,7 @@ function m(e) {
                                         heading: d.NW.string(d.t.gJpBOz),
                                         body: d.NW.string(d.t['L+QVbm'])
                                     }),
-                                o &&
+                                s &&
                                     (0, r.jsx)(h, {
                                         icon: i.z65,
                                         heading: d.NW.string(d.t.jo0oj4),

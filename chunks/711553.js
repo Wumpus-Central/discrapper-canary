@@ -1,37 +1,37 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
 var r = n(120356),
     s = n.n(r),
     o = n(481060),
-    l = n(518084),
-    a = n(981631),
+    a = n(518084),
+    l = n(981631),
     c = n(388032),
-    u = n(905763);
-let d = function (e) {
+    d = n(905763);
+let u = function (e) {
     let t,
-        { title: n, header: r, children: d, renderSettings: h, onDragStart: p } = e;
+        { title: n, header: r, children: u, renderSettings: h, onDragStart: p } = e;
     return (
         (t =
             null != n
-                ? (0, i.jsxs)(l.ZP.Bar, {
-                      className: s()(u.header, u.draggableStartArea),
+                ? (0, i.jsxs)(a.ZP.Bar, {
+                      className: s()(d.header, d.draggableStartArea),
                       onMouseDown: p,
                       children: [
-                          (0, i.jsx)(l.ZP.Content, {
-                              className: s()(u.headerTitle, u.draggableStartArea),
+                          (0, i.jsx)(a.ZP.Content, {
+                              className: s()(d.headerTitle, d.draggableStartArea),
                               dynamicSize: !0,
                               children: n
                           }),
-                          (0, i.jsx)(l.ZP.Content, {
+                          (0, i.jsx)(a.ZP.Content, {
                               children: (0, i.jsx)(o.yRy, {
                                   position: 'right',
-                                  renderPopout: null != h ? h : a.dG4,
+                                  renderPopout: null != h ? h : l.dG4,
                                   autoInvert: !1,
                                   children: (e) => {
                                       var t, n;
                                       return (0, i.jsx)(
-                                          l.ZP.Icon,
+                                          a.ZP.Icon,
                                           ((t = (function (e) {
                                               for (var t = 1; t < arguments.length; t++) {
                                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -83,12 +83,12 @@ let d = function (e) {
                   })
                 : r),
         (0, i.jsxs)('div', {
-            className: u.sidebar,
+            className: d.sidebar,
             children: [
                 t,
                 (0, i.jsx)('div', {
-                    className: u.children,
-                    children: d
+                    className: d.children,
+                    children: u
                 })
             ]
         })

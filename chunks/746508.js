@@ -283,9 +283,9 @@ function eY(e) {
                 {
                     enabled: !l && m.enabled,
                     children: (e) => {
-                        var { unavailable: t, isActive: n, label: i, iconComponent: l } = e,
-                            u = eV(e, ['unavailable', 'isActive', 'label', 'iconComponent']);
-                        let p = (0, r.jsx)(P, {
+                        var { unavailable: t, isActive: n, label: i, iconComponent: l, iconColor: u } = e,
+                            p = eV(e, ['unavailable', 'isActive', 'label', 'iconComponent', 'iconColor']);
+                        let g = (0, r.jsx)(P, {
                             size: c ? 'md' : 'sm',
                             className: a()(ek.buttonIcon, { [ek.withText]: !T }),
                             color: 'currentColor'
@@ -305,21 +305,21 @@ function eY(e) {
                             animation: f.yRy.Animation.FADE,
                             children: (e, l) => {
                                 var { onClick: s } = e,
-                                    h = eV(e, ['onClick']),
-                                    { isShown: g } = l;
+                                    u = eV(e, ['onClick']),
+                                    { isShown: h } = l;
                                 return (0, r.jsx)(f.ua7, {
                                     text: i,
                                     children: (e) =>
                                         (0, r.jsx)(
                                             f.zxk,
-                                            eW(eG({ buttonRef: o }, u, e, h), {
+                                            eW(eG({ buttonRef: o }, p, e, u), {
                                                 onClick: (t) => {
                                                     var n;
-                                                    u.onClick(t), null == (n = e.onClick) || n.call(e), g && s(t);
+                                                    p.onClick(t), null == (n = e.onClick) || n.call(e), h && s(t);
                                                 },
                                                 onMouseEnter: () => {
                                                     var t, n;
-                                                    null == (t = e.onMouseEnter) || t.call(e), null == (n = h.onMouseEnter) || n.call(h), Z.onMouseEnter();
+                                                    null == (t = e.onMouseEnter) || t.call(e), null == (n = u.onMouseEnter) || n.call(u), Z.onMouseEnter();
                                                 },
                                                 onMouseLeave: () => {
                                                     var t;
@@ -333,17 +333,17 @@ function eY(e) {
                                                 className: a()(d ? ek.experimentButton : ek.button, ek.buttonColor, {
                                                     [ek.buttonActive]: n,
                                                     [ek.fauxDisabled]: t,
-                                                    [ek.disabled]: u.disabled
+                                                    [ek.disabled]: p.disabled
                                                 }),
                                                 innerClassName: ek.buttonContents,
                                                 wrapperClassName: ek.button,
                                                 fullWidth: !0,
                                                 focusProps: eB,
                                                 children: T
-                                                    ? p
+                                                    ? g
                                                     : (0, r.jsxs)(D.Z, {
                                                           align: D.Z.Align.CENTER,
-                                                          children: [p, eD.NW.string(eD.t.FlNoSU)]
+                                                          children: [g, eD.NW.string(eD.t.FlNoSU)]
                                                       })
                                             })
                                         )

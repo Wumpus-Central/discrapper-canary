@@ -12,7 +12,7 @@ var r = n(200651),
     x = n(388032);
 let p = (e) => {
     let { user: t, channelId: n, reportId: p } = e,
-        { isIgnored: b, isBlocked: f } = (0, i.cj)(
+        { isIgnored: b, isBlocked: h } = (0, i.cj)(
             [d.Z],
             () => ({
                 isIgnored: d.Z.isIgnored(t.id),
@@ -20,8 +20,8 @@ let p = (e) => {
             }),
             [t]
         ),
-        h = (0, i.e7)([c.Z], () => c.Z.getChannel(n), [n]),
-        _ = l.useMemo(() => u.ZP.getName(null == h ? void 0 : h.guild_id, null == h ? void 0 : h.id, t), [h, t]),
+        _ = (0, i.e7)([c.Z], () => c.Z.getChannel(n), [n]),
+        f = l.useMemo(() => u.ZP.getName(null == _ ? void 0 : _.guild_id, null == _ ? void 0 : _.id, t), [_, t]),
         g = l.useCallback(() => {
             o.ZP.trackWithMetadata(m.rMx.IAR_IGNORE_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
@@ -29,9 +29,9 @@ let p = (e) => {
             }),
                 a.Z.ignoreUser(t.id, 'web_iar_ignore_user_element', n);
         }, [t, p, n]),
-        v = l.useMemo(() => b || f, [b, f]);
+        v = l.useMemo(() => b || h, [b, h]);
     return (0, r.jsx)(s.ZP, {
-        title: x.NW.formatToPlainString(x.t.U3yyFh, { username: _ }),
+        title: x.NW.formatToPlainString(x.t.U3yyFh, { username: f }),
         description: x.NW.string(x.t.naWE6e),
         buttonText: v ? x.NW.string(x.t.nDdxOD) : x.NW.string(x.t.ICYEfX),
         buttonDisabled: v,

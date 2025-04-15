@@ -54,7 +54,7 @@ function b() {
     let { profileEffects: e, upsertConfig: t } = (0, u.n6)(),
         [n, s] = i.useState(),
         b = i.useRef(null),
-        N = i.useCallback(
+        _ = i.useCallback(
             (e, n) => {
                 if (null == n || !e.type.startsWith('text/')) return (0, d.Eo)(p);
                 let [r, i] = n.split(',');
@@ -64,13 +64,13 @@ function b() {
             },
             [t]
         ),
-        x = i.useCallback(
+        N = i.useCallback(
             (e) => {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null) return void (0, d.Eo)('Error uploading file. Try again!');
-                (0, d.Kr)(e.currentTarget.files, N, d.Eo);
+                (0, d.Kr)(e.currentTarget.files, _, d.Eo);
             },
-            [N]
+            [_]
         );
     return (0, r.jsxs)('div', {
         className: g.root,
@@ -118,7 +118,7 @@ function b() {
                                         }),
                                         (0, r.jsx)(c.Z, {
                                             ref: b,
-                                            onChange: x,
+                                            onChange: N,
                                             multiple: !1
                                         })
                                     ]

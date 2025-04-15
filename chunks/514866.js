@@ -1,11 +1,11 @@
-n.d(t, { Z: () => g });
-var r = n(200651);
+n.d(t, { Z: () => j });
+var a = n(200651);
 n(192379);
-var a = n(120356),
-    l = n.n(a),
+var r = n(120356),
+    l = n.n(r),
     i = n(668757),
-    o = n(481060),
-    s = n(168107),
+    s = n(481060),
+    o = n(168107),
     c = n(480916),
     d = n(963886),
     u = n(110478),
@@ -15,7 +15,7 @@ var a = n(120356),
     p = n(594174),
     b = n(994331),
     f = n(20493);
-let _ = () => {
+let v = () => {
     Promise.all([n.e('52030'), n.e('58717')])
         .then(n.bind(n, 24031))
         .then((e) => {
@@ -41,64 +41,64 @@ let _ = () => {
             );
         });
 };
-function g() {
+function j() {
     let e = p.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
         n = x.Rt.useSetting();
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, r.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: l()(b.buttonsContainer, f.marginBottom20),
-                children: (0, r.jsx)(h.S, { isDevTools: !0 })
+                children: (0, a.jsx)(h.S, { isDevTools: !0 })
             }),
-            (0, r.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: l()(b.buttonsContainer, f.marginBottom20),
-                children: (0, r.jsx)(o.zxk, {
-                    onClick: _,
+                children: (0, a.jsx)(s.zxk, {
+                    onClick: v,
                     children: 'Launch MFA'
                 })
             }),
-            (0, r.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: l()(b.buttonsContainer, f.marginBottom20),
-                children: (0, r.jsx)(o.zxk, {
+                children: (0, a.jsx)(s.zxk, {
                     onClick: () => (0, m.Z)(),
                     children: 'Launch Vibing Wumpus'
                 })
             }),
             t &&
-                (0, r.jsxs)(r.Fragment, {
+                (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, r.jsx)('div', {
+                        (0, a.jsx)('div', {
                             className: l()(b.buttonsContainer, f.marginBottom20),
-                            children: (0, r.jsx)(o.zxk, {
+                            children: (0, a.jsx)(s.zxk, {
                                 onClick: () => (0, u.N)(),
                                 children: 'Launch Captcha Test Tool'
                             })
                         }),
-                        (0, r.jsx)('div', {
+                        (0, a.jsx)('div', {
                             className: l()(b.buttonsContainer, f.marginBottom20),
-                            children: (0, r.jsx)(o.zxk, {
+                            children: (0, a.jsx)(s.zxk, {
                                 onClick: () => (0, d.E)(),
                                 children: 'Launch Age Verification Test Tool'
                             })
                         }),
-                        (0, r.jsx)('div', {
+                        (0, a.jsx)('div', {
                             className: l()(b.buttonsContainer, f.marginBottom20),
-                            children: (0, r.jsx)(o.zxk, {
-                                onClick: () => s.Z.showAgeVerificationGetStartedModal(c.cU.DEV_TOOLS_QUICK_ACTIONS),
+                            children: (0, a.jsx)(s.zxk, {
+                                onClick: () => o.Z.showAgeVerificationGetStartedModal(c.cU.DEV_TOOLS_QUICK_ACTIONS),
                                 children: 'Launch Age Verification Modal'
                             })
                         }),
-                        (0, r.jsx)('div', {
+                        (0, a.jsx)('div', {
                             className: l()(b.buttonsContainer, f.marginBottom20),
-                            children: (0, r.jsx)(o.zxk, {
+                            children: (0, a.jsx)(s.zxk, {
                                 onClick: i.$R,
                                 children: 'Force libdiscore Crash'
                             })
                         }),
-                        (0, r.jsx)('div', {
+                        (0, a.jsx)('div', {
                             className: l()(b.buttonsContainer, f.marginBottom20),
-                            children: (0, r.jsx)(o.j7V, {
+                            children: (0, a.jsx)(s.j7V, {
                                 value: n,
                                 onChange: (e) => x.Rt.updateSetting(e),
                                 hideBorder: !0,

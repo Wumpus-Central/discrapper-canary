@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -15,14 +15,14 @@ var i = n(120356),
     h = n(388032),
     f = n(700195),
     b = n(20493);
-function N() {
+function _() {
     let {
             enabled: e,
             autoToggle: t,
             hideInstantInvites: i,
-            hidePersonalInformation: N,
-            disableSounds: x,
-            disableNotifications: _,
+            hidePersonalInformation: _,
+            disableSounds: N,
+            disableNotifications: x,
             enableContentProtection: E
         } = (0, a.cj)([u.Z], () =>
             (function (e) {
@@ -108,7 +108,7 @@ function N() {
                     (0, r.jsx)(d.F, {
                         setting: g.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
                         children: (0, r.jsx)(l.j7V, {
-                            value: N,
+                            value: _,
                             onChange: (e) => j('hidePersonalInformation', e),
                             note: h.NW.string(h.t['+9Lra2']),
                             children: h.NW.string(h.t.UpQziI)
@@ -126,7 +126,7 @@ function N() {
                     (0, r.jsx)(d.F, {
                         setting: g.s6.STREAMER_MODE_DISABLE_SOUNDS,
                         children: (0, r.jsx)(l.j7V, {
-                            value: x,
+                            value: N,
                             onChange: (e) => j('disableSounds', e),
                             note: h.NW.string(h.t.eAkaio),
                             children: h.NW.string(h.t.o56OZm)
@@ -135,7 +135,7 @@ function N() {
                     (0, r.jsx)(d.F, {
                         setting: g.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
                         children: (0, r.jsx)(l.j7V, {
-                            value: _,
+                            value: x,
                             onChange: (e) => j('disableNotifications', e),
                             note: h.NW.string(h.t.ZAmpQ0),
                             children: h.NW.string(h.t.qmYiYW)

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s });
-var r = n(192379),
-    i = n(442837),
-    l = n(339085),
-    o = n(889564);
-let a = [];
-function s(e) {
-    let t = (0, i.e7)([l.ZP], () => l.ZP.getGuildEmoji(e), [e]);
-    return r.useMemo(() => (null == t ? a : t.filter((t) => (0, o.Kt)(t, e))), [t, e]);
+r.d(t, { Z: () => a });
+var n = r(192379),
+    i = r(442837),
+    s = r(339085),
+    o = r(889564);
+let l = [];
+function a(e) {
+    let t = (0, i.e7)([s.ZP], () => s.ZP.getGuildEmoji(e), [e]);
+    return n.useMemo(() => (null == t ? l : t.filter((t) => (0, o.Kt)(t, e))), [t, e]);
 }

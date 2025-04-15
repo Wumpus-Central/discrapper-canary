@@ -14,13 +14,13 @@ var r = n(200651),
     h = n(89057),
     f = n(921801),
     b = n(246946),
-    N = n(594174),
-    x = n(351402),
-    _ = n(853872),
+    _ = n(594174),
+    N = n(351402),
+    x = n(853872),
     E = n(78839),
     j = n(706454),
-    O = n(726985),
-    C = n(981631),
+    C = n(726985),
+    O = n(981631),
     S = n(388032),
     v = n(189435);
 class T extends i.PureComponent {
@@ -30,7 +30,7 @@ class T extends i.PureComponent {
         });
     }
     handleRedemptionRedirect() {
-        u.Z.setSection(C.oAB.INVENTORY);
+        u.Z.setSection(O.oAB.INVENTORY);
     }
     render() {
         let { syncing: e, hide: t, paymentSources: n, defaultPaymentSourceId: i, locale: s, premiumSubscription: a, isRemovingPaymentSource: l, isUpdatingPaymentSource: c } = this.props;
@@ -45,18 +45,18 @@ class T extends i.PureComponent {
                                 children: (0, r.jsx)(o.$jN, {})
                             })
                           : (0, r.jsx)(f.F, {
-                                setting: O.s6.BILLING_PAYMENT_METHODS,
+                                setting: C.s6.BILLING_PAYMENT_METHODS,
                                 children: (0, r.jsx)(p.Z, {
                                     paymentSources: n,
                                     defaultPaymentSourceId: i,
-                                    premiumSubscriptionPaymentSourceId: null != a && a.status !== C.O0b.CANCELED ? a.paymentSourceId : null,
+                                    premiumSubscriptionPaymentSourceId: null != a && a.status !== O.O0b.CANCELED ? a.paymentSourceId : null,
                                     locale: s,
                                     removing: l,
                                     submitting: c
                                 })
                             }),
                       (0, r.jsx)(f.F, {
-                          setting: O.s6.BILLING_TRANSACTION_HISTORY,
+                          setting: C.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, r.jsx)('div', {
                               className: v.paymentHistory,
                               children: (0, r.jsxs)(o.y5t, {
@@ -78,9 +78,9 @@ class T extends i.PureComponent {
     }
 }
 function I() {
-    let e = (0, l.cj)([j.default, x.Z, _.Z, N.default, b.Z, E.ZP], () => {
+    let e = (0, l.cj)([j.default, N.Z, x.Z, _.default, b.Z, E.ZP], () => {
         let e = E.ZP.getPremiumTypeSubscription(),
-            t = N.default.getCurrentUser();
+            t = _.default.getCurrentUser();
         return (
             a()(null != t, 'UserSettingsBilling: currentUser cannot be undefined'),
             {
@@ -89,11 +89,11 @@ function I() {
                 isClaimed: t.isClaimed(),
                 isVerified: t.verified,
                 premiumSubscription: e,
-                defaultPaymentSourceId: _.Z.defaultPaymentSourceId,
-                paymentSources: _.Z.paymentSources,
-                syncing: x.Z.isSyncing,
-                isRemovingPaymentSource: x.Z.isRemovingPaymentSource,
-                isUpdatingPaymentSource: x.Z.isUpdatingPaymentSource
+                defaultPaymentSourceId: x.Z.defaultPaymentSourceId,
+                paymentSources: x.Z.paymentSources,
+                syncing: N.Z.isSyncing,
+                isRemovingPaymentSource: N.Z.isRemovingPaymentSource,
+                isUpdatingPaymentSource: N.Z.isUpdatingPaymentSource
             }
         );
     });

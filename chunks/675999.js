@@ -1,10 +1,10 @@
 n.d(t, {
-    PU: () => a,
-    _m: () => i,
-    lr: () => o
+    PU: () => l,
+    _m: () => s,
+    lr: () => a
 });
-var l,
-    r,
-    i = (((l = {}).GUILD_TEMPLATES = 'guild-templates'), (l.CUSTOMIZE_GUILD = 'customize-guild'), (l.CHANNEL_PROMPT = 'channel-prompt'), (l.JOIN_GUILD = 'join-guild'), (l.CREATION_INTENT = 'creation-intent'), l),
-    o = (((r = {}).FRIENDS = 'FRIENDS'), (r.COMMUNITY = 'COMMUNITY'), (r.CLAN = 'CLAN'), r);
-let a = 'create-guild';
+var r,
+    i,
+    s = (((r = {}).GUILD_TEMPLATES = 'guild-templates'), (r.CUSTOMIZE_GUILD = 'customize-guild'), (r.CHANNEL_PROMPT = 'channel-prompt'), (r.JOIN_GUILD = 'join-guild'), (r.CREATION_INTENT = 'creation-intent'), r),
+    a = (((i = {}).FRIENDS = 'FRIENDS'), (i.COMMUNITY = 'COMMUNITY'), (i.CLAN = 'CLAN'), i);
+let l = 'create-guild';

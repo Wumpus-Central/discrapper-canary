@@ -34,7 +34,7 @@ let P = (0, i.memo)(function (e) {
         U = (0, i.useRef)(null),
         G = (0, i.useRef)(null),
         W = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
-        { ref: V, height: B = 0 } = (0, p.Z)(),
+        { ref: V, height: B = 0 } = (0, p.ZP)(),
         H = (0, h.ZP)(),
         F = (0, E.B6)(null == (t = Z.userStatus) ? void 0 : t.claimedAt, {
             month: 'numeric',
@@ -47,7 +47,7 @@ let P = (0, i.memo)(function (e) {
         Q = (null == Y ? void 0 : Y.type) === s.w.VIRTUAL_CURRENCY,
         X = null == Y || null == (P = Y.collectibleProduct) || null == (l = P.items) ? void 0 : l[0],
         J = (null == X ? void 0 : X.type) === o.Z.AVATAR_DECORATION ? X : null;
-    (0, p.P)(M, (e) => {
+    (0, p.PM)(M, (e) => {
         let { height: t } = e;
         if (!q || null == t || null == U.current || null == M.current || null == G.current) return;
         let n = M.current.getBoundingClientRect(),

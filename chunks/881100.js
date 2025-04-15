@@ -14,13 +14,13 @@ var r = n(399606),
     h = n(101732),
     f = n(450598),
     b = n(633030),
-    N = n(97942),
-    x = n(269987),
-    _ = n(548629),
+    _ = n(97942),
+    N = n(269987),
+    x = n(548629),
     E = n(507084),
     j = n(680313),
-    O = n(926433),
-    C = n(302036),
+    C = n(926433),
+    O = n(302036),
     S = n(994554),
     v = n(1549),
     T = n(13327),
@@ -87,7 +87,7 @@ let B = (e, t, n) => ((0, i.wj)(e) ? t : n),
                     };
                     return i ? g.NW.format(g.t.aj1pfX, { onCheckItOutClick: t }) : g.NW.format(g.t.d2oYS0, { onTryItOutClick: t });
                 },
-                imageSource: N,
+                imageSource: _,
                 imageClassName: t.perGuildProfilesImage
             },
             longerMessages: {
@@ -111,14 +111,14 @@ let B = (e, t, n) => ((0, i.wj)(e) ? t : n),
             remix: {
                 title: g.NW.string(g.t.ZvulDg),
                 description: g.NW.string(g.t['8GwCPT']),
-                imageSource: B(n, x, _),
+                imageSource: B(n, N, x),
                 imageClassName: t.remixingImage,
                 isEarlyAccess: !0
             },
             soundboard: {
                 title: g.NW.string(g.t['lGcW+f']),
                 description: g.NW.string(g.t['/fDyOz']),
-                imageSource: B(n, O, C),
+                imageSource: B(n, C, O),
                 imageClassName: t.soundboardImage
             },
             stickers: {

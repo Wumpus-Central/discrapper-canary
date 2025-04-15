@@ -176,14 +176,14 @@ function I(e) {
     });
 }
 function g(e) {
-    let { product: t, guildId: n, onEditProduct: i, onUnpublishProduct: g, onDeleteProduct: T, onCopyProductLink: b, onTestDownload: h, disabled: C = !1 } = e,
-        N = (0, u.U)(t, 600),
+    let { product: t, guildId: n, onEditProduct: i, onUnpublishProduct: g, onDeleteProduct: T, onCopyProductLink: b, onTestDownload: h, disabled: N = !1 } = e,
+        C = (0, u.U)(t, 600),
         y = null !== t.price_tier ? (0, c.T4)(t.price_tier, p.pK.USD) : void 0,
         P = (0, s.C)(t);
     return (0, r.jsxs)(o.kL8, {
         tag: 'article',
-        className: l()(f.productCardClickable, f.productCard, { [f.disabled]: C }),
-        onClick: C ? void 0 : i,
+        className: l()(f.productCardClickable, f.productCard, { [f.disabled]: N }),
+        onClick: N ? void 0 : i,
         onContextMenu: function (e) {
             (0, a.jW)(e, () =>
                 Promise.resolve((e) =>
@@ -214,7 +214,7 @@ function g(e) {
         children: [
             (0, r.jsx)('img', {
                 alt: '',
-                src: N,
+                src: C,
                 className: f.productThumbnail
             }),
             (0, r.jsxs)('div', {
@@ -256,7 +256,7 @@ function g(e) {
                             t.published ? (0, r.jsx)(d.t, {}) : (0, r.jsx)(d.b, {})
                         ]
                     }),
-                    !C &&
+                    !N &&
                         (0, r.jsx)(I, {
                             product: t,
                             guildId: n,

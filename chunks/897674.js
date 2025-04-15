@@ -3,8 +3,8 @@ n.d(t, {
     g: () => s
 }),
     n(388685);
-var a = n(192379),
-    r = n(442837),
+var r = n(192379),
+    a = n(442837),
     i = n(146282),
     o = n(327220),
     l = n(959580),
@@ -14,11 +14,11 @@ function s(e, t) {
     return null == n || !!n.has(t.content_type);
 }
 function u(e) {
-    let { feed: t, filters: n } = (0, r.cj)([i.Z], () => ({
+    let { feed: t, filters: n } = (0, a.cj)([i.Z], () => ({
             feed: i.Z.getFeed(e),
             filters: i.Z.getFilters()
         })),
-        u = a.useMemo(() => {
+        u = r.useMemo(() => {
             let e = null == t ? void 0 : t.entries.map((e) => e.content);
             return null != n ? (null == e ? void 0 : e.filter((e) => s(n, e))) : e;
         }, [t, n]);

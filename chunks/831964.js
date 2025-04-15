@@ -18,13 +18,13 @@ var r,
     h = n(985443),
     f = n(612253),
     b = n(872532),
-    N = n(91342),
-    x = n(181708),
-    _ = n(290650),
+    _ = n(91342),
+    N = n(181708),
+    x = n(290650),
     E = n(751125),
     j = n(357003),
-    O = n(904505),
-    C = n(712626),
+    C = n(904505),
+    O = n(712626),
     S = n(386014),
     v = n(845571),
     T = n(220046),
@@ -41,7 +41,7 @@ let D = () => {
                 title: m.NW.string(m.t.zY5PPT),
                 description: m.NW.string(m.t.R5Xag4),
                 previewImage: g,
-                videoUrl: e ? N.ZP : x.ZP,
+                videoUrl: e ? _.ZP : N.ZP,
                 isCompact: !0
             },
             noLimits: {
@@ -49,7 +49,7 @@ let D = () => {
                 title: m.NW.string(m.t['6b3ydH']),
                 description: m.NW.string(m.t['Y+IJys']),
                 previewImage: p,
-                videoUrl: e ? _.ZP : E.ZP,
+                videoUrl: e ? x.ZP : E.ZP,
                 isCompact: !0
             }
         };
@@ -85,11 +85,11 @@ let D = () => {
                     name: 'referralProgram',
                     title: m.NW.string(m.t.tPY4o6),
                     description: m.NW.format(m.t.jRPQUF, { learnMoreLink: g }),
-                    previewImage: C.Z,
-                    videoUrl: r ? O.ZP : S.ZP
+                    previewImage: O.Z,
+                    videoUrl: r ? C.ZP : S.ZP
                 }
             },
-            N = {
+            _ = {
                 showYourStyle: {
                     name: 'showYourStyle',
                     title: m.NW.string(m.t.Ij3Zmp),
@@ -114,5 +114,5 @@ let D = () => {
                     videoUrl: r ? A.Z : P.Z
                 }
             };
-        return e ? N : p;
+        return e ? _ : p;
     };

@@ -14,13 +14,13 @@ var r = n(200651),
     h = n(594174),
     f = n(314884),
     b = n(74538),
-    N = n(199778),
-    x = n(296533),
-    _ = n(901750),
+    _ = n(199778),
+    N = n(296533),
+    x = n(901750),
     E = n(112863),
     j = n(701157),
-    O = n(912152),
-    C = n(615603),
+    C = n(912152),
+    O = n(615603),
     S = n(474936),
     v = n(551084);
 function T(e) {
@@ -44,35 +44,35 @@ function T(e) {
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsx)(l.oQ, { className: v.blockedPaymentsWarning }),
-            (0, r.jsx)(_.Z, {
+            (0, r.jsx)(x.Z, {
                 hasGuildBoostSlots: D,
                 hasAppliedGuildBoosts: w,
                 hasBoostPerk: U,
                 canAddBoosts: M
             }),
             !(0, u.y)('guild_boosting_settings', I, L) &&
-                (0, r.jsx)(O.Z, {
+                (0, r.jsx)(C.Z, {
                     hasAppliedGuildBoosts: w,
                     hasBoostPerk: U,
                     hasGuildAffinitiesOrInGuild: R,
                     subscriptionIsPausedOrPausePending: B
                 }),
-            (0, r.jsx)(N.Z, {
+            (0, r.jsx)(_.Z, {
                 hide: k,
                 containerClassName: v.FPContainer,
                 pillClassName: v.FPPill
             }),
             !R && (0, r.jsx)(E.Z, {}),
             (null == t ? void 0 : t.isPaused) && L !== S.a$.FP_SUB_PAUSED
-                ? (0, r.jsx)(x.r, {
+                ? (0, r.jsx)(N.r, {
                       appliedGuildBoosts: W,
                       premiumSubscription: t
                   })
-                : (0, r.jsx)(x.Z, {
+                : (0, r.jsx)(N.Z, {
                       guildBoostSlots: n,
                       premiumSubscription: t
                   }),
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(O.Z, {
                 guildBoostSlots: T,
                 fractionalPremiumState: L
             }),

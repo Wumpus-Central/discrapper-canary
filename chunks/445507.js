@@ -2,11 +2,11 @@ n.d(t, {
     Q3: () => d,
     Zl: () => u,
     mC: () => o,
-    mU: () => a,
-    qJ: () => s,
+    mU: () => s,
+    qJ: () => a,
     u9: () => l,
     xQ: () => c,
-    z5: () => p
+    z5: () => h
 }),
     n(49124);
 var r = n(704215),
@@ -17,14 +17,14 @@ function l(e) {
 function o(e) {
     return 'guild' === e.type;
 }
-function a(e) {
+function s(e) {
     return JSON.stringify({
         playstyle: e.playstyle,
         acknowledgeCap: e.acknowledgeCap,
         acknowledgeScreen: e.acknowledgeScreen
     });
 }
-let s = {
+let a = {
         key: 'valorant-user',
         type: 'user',
         title: 'Preview new features for Valorant players on Discord',
@@ -160,7 +160,7 @@ let s = {
             }
         ]
     };
-function p() {
+function h() {
     return [
         {
             value: 'very-casual',

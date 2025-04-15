@@ -1,11 +1,11 @@
 n.d(t, {
-    IE: () => A,
+    IE: () => R,
     K9: () => p,
     NX: () => T,
     R_: () => S,
     e$: () => _,
-    ti: () => R,
-    zV: () => d
+    ti: () => A,
+    zV: () => E
 }),
     n(704826),
     n(35282),
@@ -19,8 +19,8 @@ var r = n(913527),
     s = n(624138),
     c = n(219496),
     u = n(801461),
-    E = n(388032);
-function d(e) {
+    d = n(388032);
+function E(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return o.ZP.getUserAvatarURL(
         {
@@ -38,8 +38,8 @@ function _(e) {
     return ''.concat(t).concat(e.discriminator).substring(0, 32);
 }
 let I = ['@', '#', ':'],
-    N = ['```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage', 'clyde'],
-    O = ['discordtag', 'everyone', 'here', 'discord nitro', 'discord', 'snowsgiving'];
+    O = ['```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage', 'clyde'],
+    N = ['discordtag', 'everyone', 'here', 'discord nitro', 'discord', 'snowsgiving'];
 function T(e) {
     var t;
     let n = e.username.toLowerCase();
@@ -52,8 +52,8 @@ function T(e) {
     )
         return !0;
     for (let e of I) if (n.includes(e)) return !0;
-    for (let e of O) if (n === e.toLowerCase()) return !0;
-    for (let e of N) if (n.includes(e.toLowerCase())) return !0;
+    for (let e of N) if (n === e.toLowerCase()) return !0;
+    for (let e of O) if (n.includes(e.toLowerCase())) return !0;
     return !1;
 }
 function S(e) {
@@ -66,11 +66,11 @@ function p(e) {
     } catch (e) {}
     return null;
 }
-function R(e) {
+function A(e) {
     return (0, l.EQ)(e)
         .with({ rateLimited: !0 }, () => ({
             type: c.K.RATE_LIMIT,
-            message: E.NW.string(E.t.T15lqq)
+            message: d.NW.string(d.t.T15lqq)
         }))
         .with({ error: l.P.not(l.P.nullish) }, (e) => {
             let { error: t } = e;
@@ -81,11 +81,11 @@ function R(e) {
         })
         .with({ taken: !1 }, () => ({
             type: c.K.AVAILABLE,
-            message: E.NW.string(E.t.PgfBS0)
+            message: d.NW.string(d.t.PgfBS0)
         }))
         .with({ taken: !0 }, () => ({
             type: c.K.ERROR,
-            message: E.NW.string(E.t.mCrAUV)
+            message: d.NW.string(d.t.mCrAUV)
         }))
         .with({ error: l.P.nullish }, () => ({
             type: c.K.INTERNAL_ERROR,
@@ -93,7 +93,7 @@ function R(e) {
         }))
         .otherwise(() => void 0);
 }
-function A(e) {
+function R(e) {
     return new Date(2024, 2, 4).toLocaleDateString(e, {
         month: 'long',
         day: 'numeric',

@@ -3,9 +3,9 @@ var r,
     a = n(200651),
     i = n(192379),
     l = n(120356),
-    o = n.n(l),
-    s = n(299608),
-    c = n.n(s),
+    s = n.n(l),
+    o = n(299608),
+    c = n.n(o),
     d = n(748780),
     u = n(215569),
     p = n(376641),
@@ -96,7 +96,7 @@ class j extends i.Component {
         return (0, a.jsx)(d.Z.img, {
             src: e.src,
             alt: '',
-            className: o()(b.slide, t),
+            className: s()(b.slide, t),
             style: this.getStyle()
         });
     }
@@ -147,12 +147,12 @@ class y extends (r = i.Component) {
             { currentIndex: n, directionHistory: r } = this.state,
             { modalCarouselItemClassName: i } = this.props,
             l = this.props.items[n],
-            s = this.props.items;
+            o = this.props.items;
         return (0, a.jsxs)(u.W, {
             component: 'div',
-            className: o()(b.wrapper, t),
+            className: s()(b.wrapper, t),
             children: [
-                s.length > 1
+                o.length > 1
                     ? (0, a.jsx)(g.am, {
                           className: b.navPrev,
                           onClick: this.gotoPrev
@@ -169,7 +169,7 @@ class y extends (r = i.Component) {
                           },
                           l.src
                       ),
-                s.length > 1
+                o.length > 1
                     ? (0, a.jsx)(g.Pz, {
                           className: b.navNext,
                           onClick: this.gotoNext

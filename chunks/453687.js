@@ -1,8 +1,8 @@
 n.d(t, {
-    Dv: () => l,
+    Dv: () => c,
     Gq: () => s,
     Gx: () => g,
-    XX: () => c,
+    XX: () => l,
     bX: () => d,
     bY: () => u,
     iG: () => p,
@@ -18,11 +18,11 @@ function i(e) {
 function s(e) {
     return 'message-reply-context-'.concat(e.id);
 }
-function c(e, t) {
+function l(e, t) {
     let n = null != t ? t : e.id;
     return 'message-username-'.concat(n);
 }
-function l(e) {
+function c(e) {
     return 'message-timestamp-'.concat(e.id);
 }
 function u(e) {
@@ -43,7 +43,7 @@ function p(e, t, n) {
         _ = e.type !== a.uaV.DEFAULT || (!y && '' !== e.content),
         O = (0, o.Z)(e),
         v = !O && (null == n ? void 0 : n.hasTimestamp) !== !1,
-        j = c(e, t),
+        j = l(e, t),
         x = s(e),
         C = O ? '' : ''.concat(u ? x : j, ' ').concat(r.Z0);
     if (_) {
@@ -55,7 +55,7 @@ function p(e, t, n) {
         C += ' '.concat(t);
     }
     if (v) {
-        let t = l(e);
+        let t = c(e);
         C += ' '.concat(r.fy, ' ').concat(t);
     }
     return C.trim();

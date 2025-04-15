@@ -33,7 +33,7 @@ function C(e) {
             height: 'number' == typeof n.height ? n.height : 144
         },
         W = (0, o.e7)([y.Z], () => y.Z.getVoiceChannelId()),
-        { width: M, height: V, ref: z } = (0, c.Z)(),
+        { width: M, height: V, ref: z } = (0, c.ZP)(),
         U = (0, o.e7)(
             [g.Z],
             () => {

@@ -128,10 +128,10 @@ let b = ['#51BC9D'],
                     );
                 }
             }, [v, P, q, S]),
-            I = (0, u.Z)(y);
+            W = (0, u.Z)(y);
         return (o.useEffect(() => {
-            O && y && !I && (C(), D());
-        }, [y, O, C, D, I]),
+            O && y && !W && (C(), D());
+        }, [y, O, C, D, W]),
         o.useEffect(() => {
             O &&
                 !E &&

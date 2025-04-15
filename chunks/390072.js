@@ -1,44 +1,44 @@
 n.d(t, { Z: () => d });
 var r = n(200651),
     i = n(192379),
-    o = n(481060),
-    a = n(725436),
-    l = n(11868),
-    s = n(217804),
+    s = n(481060),
+    l = n(725436),
+    o = n(11868),
+    a = n(217804),
     c = n(765305),
     u = n(244231);
 function d(e) {
     let { guildScheduledEvent: t, channel: n, onClose: d } = e,
-        p = t.entity_type === c.WX.EXTERNAL,
-        h = i.useCallback((e) => (0, l.Qt)(t, d)(e), [t, d]),
-        g = (0, s.u)(t, n);
+        h = t.entity_type === c.WX.EXTERNAL,
+        p = i.useCallback((e) => (0, o.Qt)(t, d)(e), [t, d]),
+        g = (0, a.u)(t, n);
     if (null == g) return null;
-    let { IconComponent: m, locationName: f } = g,
+    let { IconComponent: f, locationName: m } = g,
         _ = (0, r.jsxs)(r.Fragment, {
             children: [
-                null != m &&
-                    (0, r.jsx)(m, {
+                null != f &&
+                    (0, r.jsx)(f, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 20,
                         height: 20,
                         className: u.channelIcon
                     }),
-                (0, r.jsx)(o.Text, {
+                (0, r.jsx)(s.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     className: u.locationText,
-                    children: (0, a.m)(f, !0)
+                    children: (0, l.m)(m, !0)
                 })
             ]
         });
     return (0, r.jsx)('div', {
         className: u.row,
         children:
-            null != h
-                ? (0, r.jsx)(o.P3F, {
-                      className: p ? u.externalLocation : u.channelLocation,
-                      onClick: h,
+            null != p
+                ? (0, r.jsx)(s.P3F, {
+                      className: h ? u.externalLocation : u.channelLocation,
+                      onClick: p,
                       children: _
                   })
                 : _

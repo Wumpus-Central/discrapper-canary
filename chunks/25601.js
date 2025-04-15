@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(200651);
 n(192379);
 var i = n(831209),
     l = n(481060),
     o = n(646094);
-function a(e) {
+function s(e) {
     let { mentionsCount: t, isMentionLowImportance: n } = e;
     return (0, r.jsx)('div', {
         className: o.mentionsBadge,

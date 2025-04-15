@@ -121,7 +121,7 @@ let ea = 72,
                 threadId: t,
                 overrideMedia: s
             }),
-            { ref: x, height: T } = (0, b.Z)(),
+            { ref: x, height: T } = (0, b.ZP)(),
             S = (0, J.xH)((e) => e.setCardHeight, d.X);
         r.useEffect(() => {
             null != T && S(t, T);

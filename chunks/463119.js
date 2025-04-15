@@ -297,8 +297,8 @@ let k = (e) => {
             n = D(e, ['listScrollerRef']);
         let l = i.useRef(null),
             a = (0, _.EQ)({ listScrollerRef: t }),
-            { positionControlRef: o } = a,
-            s = D(a, ['positionControlRef']);
+            { positionControlRef: o, onShopButtonClick: s } = a,
+            c = D(a, ['positionControlRef', 'onShopButtonClick']);
         return (0, r.jsx)(
             _.Rg,
             R(
@@ -307,7 +307,7 @@ let k = (e) => {
                         targetElementRef: l,
                         positionControlRef: o
                     },
-                    s
+                    c
                 ),
                 {
                     children: (0, r.jsx)(
@@ -315,7 +315,7 @@ let k = (e) => {
                         R(L({}, n), {
                             listItemRef: l,
                             collectibleShopTab: j.AW.ORBS,
-                            onClick: s.onClose
+                            onClick: s
                         })
                     )
                 }

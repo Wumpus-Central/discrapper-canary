@@ -33,8 +33,8 @@ var r = n(200651),
     k = n(710235),
     q = n(694802),
     D = n(95985),
-    I = n(50476),
-    W = n(46140),
+    W = n(50476),
+    I = n(46140),
     M = n(743294),
     L = n(388032),
     Z = n(921183);
@@ -149,7 +149,7 @@ function H(e) {
         learnMoreStyle: 'text',
         quest: t,
         questContent: h.jn.QUEST_BAR_V2,
-        location: W.dr.QUESTS_BAR
+        location: I.dr.QUESTS_BAR
     });
 }
 function F(e) {
@@ -163,7 +163,7 @@ function F(e) {
                 variant: 'text-xs/normal',
                 children: (0, y.DD)({
                     quest: t,
-                    location: W.dr.QUESTS_BAR,
+                    location: I.dr.QUESTS_BAR,
                     questContent: h.jn.QUEST_BAR_V2,
                     taskDetails: n
                 })
@@ -183,7 +183,7 @@ function z(e) {
         variant: 'text-xs/normal',
         children: (0, y.DD)({
             quest: e.quest,
-            location: W.dr.QUESTS_BAR,
+            location: I.dr.QUESTS_BAR,
             questContent: h.jn.QUEST_BAR_V2,
             taskDetails: e.taskDetails
         })
@@ -197,12 +197,12 @@ function X(e) {
     o.useEffect(() => {
         null != C.current && (d && f ? (C.current.pause(), (C.current.currentTime = 0)) : !d && f && C.current.play());
     }, [d, f]);
-    let O = (0, v.j)({ location: W.dr.QUESTS_BAR }),
+    let O = (0, v.j)({ location: I.dr.QUESTS_BAR }),
         S = (0, b.Kr)(t.config),
         E = (0, y.mK)(t.config),
         N = (0, y.CR)({
             quest: t,
-            location: W.dr.QUESTS_BAR
+            location: I.dr.QUESTS_BAR
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -342,7 +342,7 @@ function K(e) {
         Y = o.useCallback(() => {
             (0, N.openVideoQuestModal)(n);
         }, [n]),
-        G = (0, v.j)({ location: W.dr.QUESTS_BAR }),
+        G = (0, v.j)({ location: I.dr.QUESTS_BAR }),
         J = null != K ? K.percentComplete : s.percentComplete;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -414,9 +414,9 @@ function K(e) {
                             !(0, b.Gd)(n) &&
                             (0, l.EQ)(w)
                                 .with(h.LI.SELECT, () =>
-                                    (0, r.jsx)(I.Z, {
-                                        onConsole: () => P(W.cd.CONSOLE),
-                                        onDesktop: () => P(W.cd.DESKTOP)
+                                    (0, r.jsx)(W.Z, {
+                                        onConsole: () => P(I.cd.CONSOLE),
+                                        onDesktop: () => P(I.cd.DESKTOP)
                                     })
                                 )
                                 .with(h.LI.DESKTOP, () =>
@@ -477,7 +477,7 @@ let Y = o.forwardRef(function (e, t) {
         S = (0, b.Vl)(_),
         { launchInGameActivity: P } = (0, g.zB)(_),
         E = o.useCallback(() => {
-            let e = _.config.features.includes(W.S7.START_QUEST_CTA),
+            let e = _.config.features.includes(I.S7.START_QUEST_CTA),
                 t = e ? m.jZ.START_QUEST : m.jZ.ACCEPT_QUEST;
             (0, f.AH)(_.id, {
                 questContent: h.jn.QUEST_BAR_V2,

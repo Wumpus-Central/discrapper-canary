@@ -3,17 +3,17 @@ var r,
     i,
     l,
     o = n(442837),
-    a = n(570140),
-    s = n(131704),
+    s = n(570140),
+    a = n(131704),
     c = n(251625),
     u = n(592125),
     d = n(306680),
-    p = n(944486),
-    h = n(55589);
+    h = n(944486),
+    p = n(55589);
 let f = [],
     g = new Set();
 function m() {
-    let e = h.Z.getPrivateChannelIds().filter((e) => d.ZP.getMentionCount(e) > 0);
+    let e = p.Z.getPrivateChannelIds().filter((e) => d.ZP.getMentionCount(e) > 0);
     return e.length > 20 && (e.length = 20), !(0, c.EF)(e, f) && ((f = e), (g = new Set(e)), !0);
 }
 function b() {
@@ -22,11 +22,11 @@ function b() {
 function _(e) {
     let { channelId: t } = e,
         n = u.Z.getChannel(t);
-    return null != n && !!(0, s.hv)(n.type) && m();
+    return null != n && !!(0, a.hv)(n.type) && m();
 }
 class y extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, u.Z, p.Z, d.ZP);
+        this.waitFor(p.Z, u.Z, h.Z, d.ZP);
     }
     getUnreadPrivateChannelIds() {
         return f;
@@ -41,7 +41,7 @@ class y extends (r = o.ZP.Store) {
               writable: !0
           })
         : (y[i] = l);
-let v = new y(a.Z, {
+let v = new y(s.Z, {
     CONNECTION_OPEN: b,
     OVERLAY_INITIALIZE: b,
     MESSAGE_CREATE: _,
@@ -49,7 +49,7 @@ let v = new y(a.Z, {
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e,
             n = u.Z.getChannel(t);
-        return null != n && !!(0, s.hv)(n.type) && m();
+        return null != n && !!(0, a.hv)(n.type) && m();
     },
     CHANNEL_DELETE: function (e) {
         let {
@@ -58,22 +58,22 @@ let v = new y(a.Z, {
         return !!g.has(t) && m();
     },
     WINDOW_FOCUS: function () {
-        let e = u.Z.getChannel(p.Z.getChannelId());
-        return null != e && !!(0, s.hv)(e.type) && m();
+        let e = u.Z.getChannel(h.Z.getChannelId());
+        return null != e && !!(0, a.hv)(e.type) && m();
     },
     CHANNEL_CREATE: function (e) {
         let {
                 channel: { id: t }
             } = e,
             n = u.Z.getChannel(t);
-        return null != n && !!(0, s.hv)(n.type) && m();
+        return null != n && !!(0, a.hv)(n.type) && m();
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e,
             n = !1;
         for (let { id: e } of t) {
             let t = u.Z.getChannel(e);
-            null != t && (0, s.hv)(t.type) && (n = !0);
+            null != t && (0, a.hv)(t.type) && (n = !0);
         }
         return !!n && m();
     }

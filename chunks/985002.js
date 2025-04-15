@@ -11,13 +11,13 @@ function o(e) {
         [m, g] = r.useState(!1),
         [p, h] = r.useState(!1),
         [f, b] = r.useState(!1),
-        [N, x] = r.useState(!1),
-        [_, E] = r.useState(!1),
-        [j, O] = r.useState(!1),
-        C = o || d || m || p || N || j,
+        [_, N] = r.useState(!1),
+        [x, E] = r.useState(!1),
+        [j, C] = r.useState(!1),
+        O = o || d || m || p || _ || j,
         S = r.useCallback(
             async (e) => {
-                if (!C) {
+                if (!O) {
                     c(!0);
                     try {
                         await (0, s.Yw)(e.id, l.ne.ACTIVE), null == n || n();
@@ -29,11 +29,11 @@ function o(e) {
                     }
                 }
             },
-            [C, t, n]
+            [O, t, n]
         ),
         v = r.useCallback(
             async (e) => {
-                if (!C) {
+                if (!O) {
                     u(!0);
                     try {
                         await (0, s.Yw)(e.id, l.ne.DECLINED), null == n || n();
@@ -45,11 +45,11 @@ function o(e) {
                     }
                 }
             },
-            [C, t, n]
+            [O, t, n]
         ),
         T = r.useCallback(
             async (e) => {
-                if (!C) {
+                if (!O) {
                     g(!0);
                     try {
                         await (0, s.Yw)(e.id, l.ne.INACTIVE), null == n || n();
@@ -61,11 +61,11 @@ function o(e) {
                     }
                 }
             },
-            [C, t, n]
+            [O, t, n]
         ),
         I = r.useCallback(
             async (e) => {
-                if (!C) {
+                if (!O) {
                     h(!0);
                     try {
                         await (0, s.fc)(e.id), null == n || n();
@@ -77,7 +77,7 @@ function o(e) {
                     }
                 }
             },
-            [C, t, n]
+            [O, t, n]
         ),
         y = r.useCallback(async () => {
             if (!f) {
@@ -94,7 +94,7 @@ function o(e) {
         }, [f, t, n]),
         A = r.useCallback(
             async (e) => {
-                if (!_) {
+                if (!x) {
                     E(!0);
                     try {
                         await s.ZP.fetchTeenActivity(e), null == n || n();
@@ -106,7 +106,7 @@ function o(e) {
                     }
                 }
             },
-            [_, t, n]
+            [x, t, n]
         );
     return {
         acceptLinkRequest: S,
@@ -117,19 +117,19 @@ function o(e) {
         getLinkCode: y,
         requestLink: r.useCallback(
             async (e, r) => {
-                if (!N) {
-                    x(!0);
+                if (!_) {
+                    N(!0);
                     try {
                         await s.ZP.requestLink(e, r), null == n || n();
                     } catch (n) {
                         let e = new i.Hx(n);
                         null == t || t(e);
                     } finally {
-                        x(!1);
+                        N(!1);
                     }
                 }
             },
-            [N, t, n]
+            [_, t, n]
         ),
         loadMore: r.useCallback(
             async (e) => {
@@ -138,14 +138,14 @@ function o(e) {
                     l = a.Z.getStartId(),
                     o = a.Z.getSelectedTeenId();
                 if (!j && null != l && null != o) {
-                    O(!0);
+                    C(!0);
                     try {
                         await s.ZP.fetchMoreTeenActivity(o, e, l, r.event_id);
                     } catch (n) {
                         let e = new i.Hx(n);
                         null == t || t(e);
                     } finally {
-                        O(!1);
+                        C(!1);
                     }
                 }
             },
@@ -156,8 +156,8 @@ function o(e) {
         isDisconnectLoading: m,
         isCancelLoading: p,
         isGetLinkCodeLoading: f,
-        isSelectTeenUserLoading: _,
-        isRequestingLink: N,
+        isSelectTeenUserLoading: x,
+        isRequestingLink: _,
         isMoreLoading: j
     };
 }

@@ -12,9 +12,9 @@ var r = n(200651),
     g = n(132709);
 function p(e) {
     var t, n, p, h;
-    let { transitionState: f, onSuccess: b, onClose: N, requirementsUpdated: x, noSkip: _ = !1 } = e,
+    let { transitionState: f, onSuccess: b, onClose: _, requirementsUpdated: N, noSkip: x = !1 } = e,
         [E, j] = i.useState(''),
-        [O, C] = i.useState(''),
+        [C, O] = i.useState(''),
         [S, v] = i.useState(''),
         [T, I] = i.useState(null),
         [y, A] = i.useState(null),
@@ -24,10 +24,10 @@ function p(e) {
     async function Z(e) {
         e.preventDefault(), (0, l.b9)();
         let t = !1;
-        if (('' === O ? (I(m.NW.string(m.t['/7/oPT'])), (t = !0)) : I(null), O !== S ? (A(m.NW.string(m.t.IEKYZ2)), (t = !0)) : A(null), t)) return;
+        if (('' === C ? (I(m.NW.string(m.t['/7/oPT'])), (t = !0)) : I(null), C !== S ? (A(m.NW.string(m.t.IEKYZ2)), (t = !0)) : A(null), t)) return;
         let n = await (0, l.Mn)({
             password: E,
-            newPassword: O
+            newPassword: C
         });
         if (null == n ? void 0 : n.ok) b();
         else {
@@ -59,11 +59,11 @@ function p(e) {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
                             className: g.subtitle,
-                            children: x ? m.NW.string(m.t['37iHbW']) : m.NW.string(m.t.iOurYm)
+                            children: N ? m.NW.string(m.t['37iHbW']) : m.NW.string(m.t.iOurYm)
                         }),
-                        !0 !== _ &&
+                        !0 !== x &&
                             (0, r.jsx)(a.olH, {
-                                onClick: N,
+                                onClick: _,
                                 className: g.modalCloseButton
                             })
                     ]
@@ -90,8 +90,8 @@ function p(e) {
                                     error: null != (h = null != (p = null == P || null == (n = P.new_password) ? void 0 : n[0]) ? p : T) ? h : void 0,
                                     children: (0, r.jsx)(a.oil, {
                                         type: 'password',
-                                        value: O,
-                                        onChange: C
+                                        value: C,
+                                        onChange: O
                                     })
                                 }),
                                 (0, r.jsx)(a.xJW, {
@@ -115,12 +115,12 @@ function p(e) {
                                     submitting: R === u.QZA.SUBMITTING,
                                     children: m.NW.string(m.t.i4jeWV)
                                 }),
-                                !0 !== _ &&
+                                !0 !== x &&
                                     (0, r.jsx)(a.zxk, {
                                         className: g.cancel,
                                         look: a.zxk.Looks.LINK,
                                         color: a.zxk.Colors.PRIMARY,
-                                        onClick: N,
+                                        onClick: _,
                                         children: m.NW.string(m.t['ETE/oK'])
                                     })
                             ]

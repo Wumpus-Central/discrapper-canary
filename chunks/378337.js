@@ -4,8 +4,8 @@ function i(e) {
     let n = [];
     for (let l = 0; l < e._categories.length; l++) {
         let i = e._categories[l].channel,
-            o = e[i.id].map((e) => e.channel).filter((e) => t.iR.has(e.type));
-        if (null != o && 0 !== o.length) for (let e of ('null' !== i.id && n.push(i), o)) n.push(e);
+            a = e[i.id].map((e) => e.channel).filter((e) => t.iR.has(e.type));
+        if (null != a && 0 !== a.length) for (let e of ('null' !== i.id && n.push(i), a)) n.push(e);
     }
     return n;
 }

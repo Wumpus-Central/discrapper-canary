@@ -14,7 +14,7 @@ var r = n(200651),
     h = n(727785),
     f = n(388032),
     b = n(484671);
-function N(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function N(e) {
     }
     return e;
 }
-function x(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,20 +57,20 @@ function x(e, t) {
         e
     );
 }
-function _() {}
+function x() {}
 let E = [h.h8.VOICE_CHANNEL];
 function j(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function O(e) {
+function C(e) {
     let { height: t } = e;
     return (0, r.jsx)('div', { style: { height: t } });
 }
-function C() {
-    return (0, r.jsx)(O, { height: 16 }, 'footer');
+function O() {
+    return (0, r.jsx)(C, { height: 16 }, 'footer');
 }
 function S() {
-    return (0, r.jsx)(O, { height: 8 }, 'header');
+    return (0, r.jsx)(C, { height: 8 }, 'header');
 }
 function v() {
     return (0, r.jsx)('div', {
@@ -96,9 +96,9 @@ function T(e) {
                 async () => (e) =>
                     (0, r.jsx)(
                         I,
-                        x(N({}, e), {
+                        N(_({}, e), {
                             onSelect: (e) => {
-                                u(e), l.Z.setKeybind(x(N({}, o.current), { params: { channelId: e } }));
+                                u(e), l.Z.setKeybind(N(_({}, o.current), { params: { channelId: e } }));
                             }
                         })
                     )
@@ -129,11 +129,11 @@ function T(e) {
 function I(e) {
     let { transitionState: t, onClose: n, onSelect: l } = e,
         c = i.useId(),
-        N = i.useRef(null),
+        _ = i.useRef(null),
         {
-            mouseFocusEnabled: x,
-            enableMouseFocus: _,
-            disableMouseFocus: O
+            mouseFocusEnabled: N,
+            enableMouseFocus: x,
+            disableMouseFocus: C
         } = (function () {
             let e = i.useRef(!1),
                 t = i.useCallback(() => {
@@ -190,7 +190,7 @@ function I(e) {
             );
         })(T);
     i.useEffect(() => {
-        let { current: e } = N;
+        let { current: e } = _;
         null == e ||
             e.isItemVisible(0, P, !0) ||
             e.scrollToIndex({
@@ -209,7 +209,7 @@ function I(e) {
         })();
     return (0, r.jsx)('div', {
         className: b.voiceModalContainer,
-        onMouseMove: _,
+        onMouseMove: x,
         children: (0, r.jsxs)(a.Y0X, {
             transitionState: t,
             size: a.CgR.MEDIUM,
@@ -221,7 +221,7 @@ function I(e) {
                         value: T,
                         onChange: I,
                         onKeyDown: function (e) {
-                            O();
+                            C();
                             let t = e.key.toLowerCase();
                             if ('arrowdown' === t || 'arrowup' === t || 'enter' === t || 'escape' === t)
                                 switch ((e.preventDefault(), t)) {
@@ -259,7 +259,7 @@ function I(e) {
                         innerId: c,
                         innerRole: 'listbox',
                         'aria-label': f.NW.string(f.t['+N3fW1']),
-                        ref: N,
+                        ref: _,
                         sections: [D],
                         renderRow: function (e) {
                             let { row: t } = e,
@@ -278,7 +278,7 @@ function I(e) {
                                     channel: i,
                                     category: s,
                                     focused: P === t,
-                                    onMouseEnter: () => x.current && R(t),
+                                    onMouseEnter: () => N.current && R(t),
                                     onClick: () => {
                                         l(i.id), n();
                                     },
@@ -295,7 +295,7 @@ function I(e) {
                             );
                         },
                         renderListHeader: S,
-                        renderFooter: C,
+                        renderFooter: O,
                         sectionHeight: 0,
                         rowHeight: 34,
                         className: b.voiceChannelList,
@@ -337,9 +337,9 @@ function y(e) {
               channel: n,
               id: n.id,
               category: i,
-              onClick: _,
-              onFocus: _,
-              onMouseEnter: _,
+              onClick: x,
+              onFocus: x,
+              onMouseEnter: x,
               focused: !1,
               children:
                   null != l

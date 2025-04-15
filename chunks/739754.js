@@ -8,8 +8,8 @@ var r = n(200651),
     a = n(120356),
     i = n.n(a),
     s = n(931609),
-    c = n(442837),
-    l = n(481060),
+    l = n(442837),
+    c = n(481060),
     u = n(292419),
     d = n(282397),
     p = n(188597),
@@ -19,7 +19,7 @@ var r = n(200651),
 function b(e) {
     return {
         text: e,
-        icon: (0, r.jsx)(l.bbz, {
+        icon: (0, r.jsx)(c.bbz, {
             className: f.icon,
             dotRadius: 3.5,
             themed: !0
@@ -30,7 +30,7 @@ function h(e) {
     return {
         text: null != e ? e : m.NW.string(m.t.VCsUJi),
         color: 'text-danger',
-        icon: (0, r.jsx)(l.P4T, {
+        icon: (0, r.jsx)(c.P4T, {
             size: 'xs',
             color: 'currentColor',
             className: i()(f.icon, f.errorIcon)
@@ -43,7 +43,7 @@ function y(e) {
         className: i()(f.wrapper, t),
         children: [
             n,
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: 'text-md/normal',
                 color: a,
                 scaleFontToUserSetting: !0,
@@ -55,17 +55,17 @@ function y(e) {
 let _ = o.memo(function (e) {
     let { message: t, className: n, component: a } = e,
         i = (0, s.Z)(),
-        l = (0, c.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
+        c = (0, l.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
     o.useEffect(() => {
         let e = null;
-        if (t.hasFlag(g.iLy.LOADING) && null != l) {
+        if (t.hasFlag(g.iLy.LOADING) && null != c) {
             let n = (0, p.ow)(t.id) - Date.now();
             n > 0 && (e = setTimeout(() => i(), 1000 + n));
         }
         return () => {
             clearTimeout(e);
         };
-    }, [i, l, t]);
+    }, [i, c, t]);
     let f = null;
     if (null == a)
         f = (function (e, t) {
@@ -79,9 +79,9 @@ let _ = o.memo(function (e) {
                 case p.rQ.FAILED:
                     return h(t.interactionError);
             }
-        })(l, t);
+        })(c, t);
     else {
-        let e = (0, u.SD)(l, t, a);
+        let e = (0, u.SD)(c, t, a);
         null != e && (f = h(e));
     }
     if (null == f) return null;

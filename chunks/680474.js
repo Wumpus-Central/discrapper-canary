@@ -3,8 +3,8 @@ var r = n(200651),
     a = n(192379),
     i = n(793030),
     l = n(823379),
-    o = n(216780),
-    s = n(560893),
+    s = n(216780),
+    o = n(560893),
     c = n(405411),
     d = n(215453),
     u = n(796150),
@@ -16,14 +16,14 @@ function _(e) {
     let { application: t } = e,
         n = a.useMemo(() => {
             var e, n, r;
-            return null != (r = (null != (n = null == (e = t.directory_entry) ? void 0 : e.carousel_items) ? n : []).map(o.RF).filter(l.lm)) ? r : [];
+            return null != (r = (null != (n = null == (e = t.directory_entry) ? void 0 : e.carousel_items) ? n : []).map(s.RF).filter(l.lm)) ? r : [];
         }, [t]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
                 className: g.aboutContainer,
                 children: [
-                    (0, r.jsx)(s.Z, {
+                    (0, r.jsx)(o.Z, {
                         application: t,
                         carouselItems: n
                     }),

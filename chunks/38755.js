@@ -1,10 +1,10 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => l }), n(388685);
 var r = n(192379),
     i = n(763520);
-function o(e) {
-    let { location: t, videoSpinnerContext: n, userId: o, streamId: l, loading: s, paused: a = !1 } = e,
+function l(e) {
+    let { location: t, videoSpinnerContext: n, userId: l, streamId: o, loading: s, paused: a = !1 } = e,
         [c] = r.useState(() => new i.o(t));
     r.useEffect(() => {
-        a || (s ? c.onSpinnerStarted() : null != l && c.trackSpinnerDuration(n, o, l));
-    }, [s, a, l, c, n, o]);
+        a || (s ? c.onSpinnerStarted() : null != o && c.trackSpinnerDuration(n, l, o));
+    }, [s, a, o, c, n, l]);
 }

@@ -14,14 +14,14 @@ var r = n(200651),
     j = n(246364),
     b = n(328977),
     f = n(666233),
-    p = n(360328),
-    N = n(171368),
+    N = n(360328),
+    p = n(171368),
     g = n(598077),
     _ = n(430824),
-    C = n(709054),
-    v = n(51144),
-    E = n(981631),
-    T = n(308083),
+    v = n(709054),
+    C = n(51144),
+    T = n(981631),
+    E = n(308083),
     I = n(388032),
     S = n(145870),
     P = n(157092);
@@ -29,7 +29,7 @@ function O(e) {
     let { icon: t, label: n, onClick: l, disabled: i } = e;
     return (0, r.jsxs)(d.P3F, {
         className: a()(S.actionButton, { [S.disabled]: i }),
-        onClick: i ? E.dG4 : l,
+        onClick: i ? T.dG4 : l,
         'aria-label': n,
         children: [
             (0, r.jsx)(t, {
@@ -50,13 +50,13 @@ function R(e) {
     let { user: t, guildId: n, joinRequest: l } = e,
         { analyticsLocations: i } = (0, u.ZP)(),
         s = () => {
-            (0, N.openUserProfileModal)({
+            (0, p.openUserProfileModal)({
                 userId: t.id,
                 joinRequestId: l.joinRequestId,
                 sourceAnalyticsLocations: i,
                 analyticsLocation: {
-                    section: E.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-                    object: E.qAy.JOIN_REQUEST
+                    section: T.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+                    object: T.qAy.JOIN_REQUEST
                 }
             });
         };
@@ -93,7 +93,7 @@ function R(e) {
                                         primaryGuild: null == t ? void 0 : t.primaryGuild,
                                         userId: null == t ? void 0 : t.id,
                                         contextGuildId: n,
-                                        badgeSize: T.NC.SIZE_16,
+                                        badgeSize: E.NC.SIZE_16,
                                         textVariant: 'heading-md/semibold',
                                         className: P.memberClanTag,
                                         containerClassName: P.memberClanTagContainer
@@ -106,7 +106,7 @@ function R(e) {
                                 children: (0, r.jsx)(d.Text, {
                                     variant: 'text-md/medium',
                                     color: 'text-normal',
-                                    children: v.ZP.getUserTag(t)
+                                    children: C.ZP.getUserTag(t)
                                 })
                             })
                         ]
@@ -126,7 +126,7 @@ function R(e) {
 }
 function y(e) {
     let { user: t, guildId: n, joinRequest: l } = e,
-        { approveRequest: i, rejectRequest: a, handleOpenInterview: s, submitting: o } = (0, p.s)(n, t.id, l.joinRequestId, l.interviewChannelId);
+        { approveRequest: i, rejectRequest: a, handleOpenInterview: s, submitting: o } = (0, N.s)(n, t.id, l.joinRequestId, l.interviewChannelId);
     return (0, r.jsxs)('div', {
         className: S.actionRow,
         children: [
@@ -183,7 +183,7 @@ function A(e) {
                                   (0, r.jsx)(d.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'text-muted',
-                                      children: o()(C.default.extractTimestamp(l)).format('ll')
+                                      children: o()(v.default.extractTimestamp(l)).format('ll')
                                   })
                               ]
                           })
@@ -231,7 +231,7 @@ function w(e) {
                                   (0, r.jsx)(d.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'text-muted',
-                                      children: o()(C.default.extractTimestamp(l)).format('ll')
+                                      children: o()(v.default.extractTimestamp(l)).format('ll')
                                   })
                               ]
                           })
@@ -265,7 +265,7 @@ function M(e) {
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
-                                children: o()(C.default.extractTimestamp(t.id)).format('ll')
+                                children: o()(v.default.extractTimestamp(t.id)).format('ll')
                             })
                         ]
                     }),

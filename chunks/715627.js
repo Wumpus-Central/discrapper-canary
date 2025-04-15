@@ -12,13 +12,13 @@ let o = {
     },
     c = (e, t, n) => (null == n ? t : (e * n) / 100),
     d = i.memo(function (e) {
-        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: u, particlesPerBurst: m, offsetXPercentageMax: g, offsetXPercentageMin: p, offsetYPercentageMax: h, offsetYPercentageMin: f, customConfettiCanvas: b, speedValues: N = o, dragCoefficientValue: x = 1.66, onAnimationEnd: _ } = e,
+        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: u, particlesPerBurst: m, offsetXPercentageMax: g, offsetXPercentageMin: p, offsetYPercentageMax: h, offsetYPercentageMin: f, customConfettiCanvas: b, speedValues: _ = o, dragCoefficientValue: N = 1.66, onAnimationEnd: x } = e,
             [E, j] = i.useState(null),
-            { confettiCanvas: O } = i.useContext(a.h),
-            C = (0, s.uR)(null != b ? b : O, E),
+            { confettiCanvas: C } = i.useContext(a.h),
+            O = (0, s.uR)(null != b ? b : C, E),
             [S, v] = i.useState(!1);
         i.useEffect(() => {
-            S && (null == _ || _());
+            S && (null == x || x());
         });
         let T = i.useMemo(() => {
             if (null != d)
@@ -36,7 +36,7 @@ let o = {
                 return (
                     (e = e.map((n, r) =>
                         setTimeout(() => {
-                            C.createMultipleConfetti(
+                            O.createMultipleConfetti(
                                 (function (e, t, n, r, i) {
                                     var s, a;
                                     let d = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
@@ -45,7 +45,7 @@ let o = {
                                         g = c(e.height, 75, i),
                                         p = c(e.width, 350, t),
                                         h = c(e.height, 75, r),
-                                        { xMin: f, xMax: b, yMin: N, yMax: x } = d;
+                                        { xMin: f, xMax: b, yMin: _, yMax: N } = d;
                                     return (
                                         (s = (function (e) {
                                             for (var t = 1; t < arguments.length; t++) {
@@ -89,11 +89,11 @@ let o = {
                                                     type: 'static-random',
                                                     minValue: {
                                                         x: f,
-                                                        y: N
+                                                        y: _
                                                     },
                                                     maxValue: {
                                                         x: b,
-                                                        y: x
+                                                        y: N
                                                     }
                                                 },
                                                 size: {
@@ -120,17 +120,17 @@ let o = {
                                               }),
                                         s
                                     );
-                                })(t.getBoundingClientRect(), g, p, h, f, N, x),
+                                })(t.getBoundingClientRect(), g, p, h, f, _, N),
                                 null != m ? m : 50
                             ),
-                                r === e.length - 1 && null != _ && v(!0);
+                                r === e.length - 1 && null != x && v(!0);
                         }, 60 * r)
                     )),
                     () => {
                         for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [C, t, u, m, g, p, h, f, N, x, _]),
+            }, [O, t, u, m, g, p, h, f, _, N, x]),
             (0, r.jsx)(s.Ji, {
                 ref: j,
                 sprites: null != T ? T : l.CA,

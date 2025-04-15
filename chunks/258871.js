@@ -3,13 +3,13 @@ var r = n(200651),
     i = n(192379),
     l = n(442837),
     o = n(481060),
-    a = n(554747),
-    s = n(434479),
+    s = n(554747),
+    a = n(434479),
     c = n(593364),
     u = n(703656),
     d = n(944486),
-    p = n(147754),
-    h = n(688438),
+    h = n(147754),
+    p = n(688438),
     f = n(981631),
     g = n(388032);
 function m(e) {
@@ -114,7 +114,7 @@ let _ = [
             getName: () => g.NW.string(g.t.MJQOuL),
             handler: (e, t) =>
                 (0, o.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e('7654'), n.e('96814')]).then(n.bind(n, 560114));
+                    let { default: i } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             i,
@@ -129,14 +129,14 @@ let _ = [
     ],
     y = (e) => {
         let { guild: t, channel: n } = e,
-            o = (0, a.ZP)(t.id);
+            o = (0, s.ZP)(t.id);
         i.useEffect(() => {
-            p.Z.trackExposure({
+            h.Z.trackExposure({
                 guildId: t.id,
                 location: '543af8_1'
             });
         }, [t.id]);
-        let { showHubEventsList: u } = p.Z.useExperiment(
+        let { showHubEventsList: u } = h.Z.useExperiment(
                 {
                     guildId: t.id,
                     location: '543af8_2'
@@ -145,17 +145,17 @@ let _ = [
             ),
             f = (0, l.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id),
             g = i.useMemo(() => ({ numEvents: o.length }), [o.length]),
-            m = (0, h.t)(n);
+            m = (0, p.t)(n);
         return (0, r.jsx)(r.Fragment, {
             children: _.map((e) => {
-                let { key: i, getName: l, handler: o, renderIcon: a } = e;
+                let { key: i, getName: l, handler: o, renderIcon: s } = e;
                 if (!u && 'EVENTS' === i) return null;
                 let d = ''.concat(i, '-').concat(t.id);
                 return (0, r.jsx)(
-                    s.m,
+                    a.m,
                     {
                         id: d,
-                        renderIcon: a,
+                        renderIcon: s,
                         text: l(g),
                         selected: f && 'JOIN_SERVERS' === i,
                         onClick: null != n ? () => o(t, n) : void 0,

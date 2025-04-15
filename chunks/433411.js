@@ -14,22 +14,22 @@ var r = n(200651),
     h = n(388032),
     f = n(142436);
 function b(e) {
-    let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: b = !1, withTutorial: x = !1, isTryItOutFlow: _ = !1 } = e,
+    let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: b = !1, withTutorial: N = !1, isTryItOutFlow: x = !1 } = e,
         { analyticsLocations: E } = (0, o.ZP)(),
         j = null != n,
-        { userAvatarDecoration: O, guildAvatarDecoration: C, pendingAvatarDecoration: S, pendingErrors: v } = (0, g.$U)(t, n),
+        { userAvatarDecoration: C, guildAvatarDecoration: O, pendingAvatarDecoration: S, pendingErrors: v } = (0, g.$U)(t, n),
         T = (0, u.Z)('enable_avatar_decoration_uploads'),
         I = i.useCallback(
             () =>
                 (0, d.ps)({
                     analyticsLocations: E,
-                    isTryItOutFlow: _,
+                    isTryItOutFlow: x,
                     guild: n
                 }),
-            [E, _, n]
+            [E, x, n]
         ),
-        y = _ || void 0 !== S ? null != S : (j ? C : O) != null,
-        A = x ? l.gtL : l.zxk;
+        y = x || void 0 !== S ? null != S : (j ? O : C) != null,
+        A = N ? l.gtL : l.zxk;
     return (0, r.jsxs)(p.Z, {
         className: s,
         forcedDivider: b,
@@ -43,7 +43,7 @@ function b(e) {
                     (0, r.jsx)(A, {
                         size: l.zxk.Sizes.SMALL,
                         onClick: I,
-                        className: a()({ [f.buttonHighlighted]: x }),
+                        className: a()({ [f.buttonHighlighted]: N }),
                         children: h.NW.string(h.t['Tna/TU'])
                     }),
                     y &&
@@ -59,11 +59,11 @@ function b(e) {
                         })
                 ]
             }),
-            t.isStaff() && T && (0, r.jsx)(N, { user: t })
+            t.isStaff() && T && (0, r.jsx)(_, { user: t })
         ]
     });
 }
-let N = (e) => {
+let _ = (e) => {
     let { user: t } = e;
     return (0, r.jsxs)('div', {
         className: f.overrideButtonsContainer,

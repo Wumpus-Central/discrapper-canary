@@ -1,40 +1,40 @@
-n.d(t, { Z: () => d }), n(388685);
-var l = n(200651);
+n.d(t, { Z: () => u }), n(388685);
+var r = n(200651);
 n(192379);
-var r = n(442837),
-    i = n(481060),
-    o = n(607070),
-    a = n(600164),
-    s = n(122890),
-    u = n(110818),
-    c = n(523726);
-function d(e) {
-    let { purchaseState: t, currentStep: n, onClose: d } = e,
-        [E, f] = (0, s.z)({
+var i = n(442837),
+    s = n(481060),
+    a = n(607070),
+    l = n(600164),
+    o = n(122890),
+    c = n(110818),
+    d = n(523726);
+function u(e) {
+    let { purchaseState: t, currentStep: n, onClose: u } = e,
+        [m, g] = (0, o.z)({
             purchaseState: t,
             currentStep: n,
-            initialScene: u.fe.Scenes.ENTRY,
-            purchaseScene: u.fe.Scenes.STARS,
-            errorScene: u.fe.Scenes.ERROR,
-            successScene: u.fe.Scenes.SUCCESS
+            initialScene: c.fe.Scenes.ENTRY,
+            purchaseScene: c.fe.Scenes.STARS,
+            errorScene: c.fe.Scenes.ERROR,
+            successScene: c.fe.Scenes.SUCCESS
         }),
-        C = (0, r.e7)([o.Z], () => o.Z.useReducedMotion);
-    return (0, l.jsxs)(i.xBx, {
-        align: a.Z.Align.START,
-        className: c.header,
+        p = (0, i.e7)([a.Z], () => a.Z.useReducedMotion);
+    return (0, r.jsxs)(s.xBx, {
+        align: l.Z.Align.START,
+        className: d.header,
         separator: !1,
         children: [
-            (0, l.jsx)(u.fe, {
-                className: c.animation,
-                nextScene: E,
-                onScenePlay: (e) => f(u.fe.getNextScene(e)),
+            (0, r.jsx)(c.fe, {
+                className: d.animation,
+                nextScene: m,
+                onScenePlay: (e) => g(c.fe.getNextScene(e)),
                 pauseWhileUnfocused: !1,
-                pause: C
+                pause: p
             }),
-            (0, l.jsx)('div', { className: c.headerTitle }),
-            (0, l.jsx)(i.olH, {
-                onClick: d,
-                className: c.closeButton
+            (0, r.jsx)('div', { className: d.headerTitle }),
+            (0, r.jsx)(s.olH, {
+                onClick: u,
+                className: d.closeButton
             })
         ]
     });

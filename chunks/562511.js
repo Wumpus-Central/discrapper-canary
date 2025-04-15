@@ -1,23 +1,23 @@
 n.d(t, {
     A2: () => m,
-    S3: () => _
+    S3: () => g
 });
 var r = n(192379),
     i = n(442837),
-    o = n(704215),
-    l = n(645041),
+    l = n(704215),
+    o = n(645041),
     s = n(314852),
     a = n(65361),
     c = n(271383),
     u = n(430824),
     d = n(594174),
-    p = n(731722),
-    h = n(864133),
+    h = n(731722),
+    p = n(864133),
     f = n(981631);
-function _(e) {
-    let { fetchGuildProfile: t, fetchStatus: n, guildProfile: _ } = (0, a.u)(e),
+function g(e) {
+    let { fetchGuildProfile: t, fetchStatus: n, guildProfile: g } = (0, a.u)(e),
         m = (function (e) {
-            let t = (0, l.FT)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : f.lds);
+            let t = (0, o.FT)(l.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : f.lds);
             return (
                 (0, i.e7)(
                     [u.Z, d.default, c.ZP],
@@ -25,7 +25,7 @@ function _(e) {
                         var t;
                         if (null === e) return !1;
                         let n = u.Z.getGuild(e);
-                        if (void 0 === n || !(0, p.u)(n) || null == n.profile || null === n.profile.tag) return !1;
+                        if (void 0 === n || !(0, h.u)(n) || null == n.profile || null === n.profile.tag) return !1;
                         let r = d.default.getCurrentUser();
                         if (void 0 === r || (null == (t = r.primaryGuild) ? void 0 : t.identityGuildId) === n.id) return !1;
                         let i = c.ZP.getMember(e, r.id);
@@ -36,20 +36,20 @@ function _(e) {
             );
         })(e),
         b = (function (e, t) {
-            let n = (0, i.e7)([h.Z], () => (null === e ? null : h.Z.getGuildLastSeenInfo(e))),
+            let n = (0, i.e7)([p.Z], () => (null === e ? null : p.Z.getGuildLastSeenInfo(e))),
                 r = (0, i.e7)([d.default], () => {
                     var e;
                     return null == (e = d.default.getCurrentUser()) ? void 0 : e.primaryGuild;
                 });
             if (null === t || null === t.tag) return !1;
-            let o = (null == r ? void 0 : r.identityGuildId) === e && (null == r ? void 0 : r.tag) === null,
-                l = null !== n && n.tag === t.tag;
-            return o && !l;
-        })(e, _);
+            let l = (null == r ? void 0 : r.identityGuildId) === e && (null == r ? void 0 : r.tag) === null,
+                o = null !== n && n.tag === t.tag;
+            return l && !o;
+        })(e, g);
     return (r.useEffect(() => {
         n === s.a.NOT_FETCHED && t();
     }, [t, n]),
-    null === _)
+    null === g)
         ? null
         : b
           ? 'changed'
@@ -58,5 +58,5 @@ function _(e) {
             : null;
 }
 function m(e) {
-    return null !== _(e);
+    return null !== g(e);
 }

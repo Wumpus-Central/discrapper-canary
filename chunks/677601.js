@@ -780,9 +780,9 @@ class eX extends i.PureComponent {
 let eQ = function (e) {
     var t;
     let { channel: n, renderExternalHeader: l, maxHeight: o } = e,
-        { width: a = 0, ref: s } = (0, O.Z)(),
-        { width: c = 0, height: u = 0, ref: h } = (0, O.Z)(),
-        { ref: f } = (0, O.Z)(),
+        { width: a = 0, ref: s } = (0, O.ZP)(),
+        { width: c = 0, height: u = 0, ref: h } = (0, O.ZP)(),
+        { ref: f } = (0, O.ZP)(),
         g = (0, N.bp)(),
         b = (0, U.Z)(),
         y = (0, d.e7)([ey.Z], () => {

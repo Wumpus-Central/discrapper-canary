@@ -14,19 +14,19 @@ var r = n(200651),
     h = n(639119),
     f = n(105759),
     b = n(346497),
-    N = n(422034),
-    x = n(710220),
-    _ = n(318747),
+    _ = n(422034),
+    N = n(710220),
+    x = n(318747),
     E = n(635921),
     j = n(474936),
-    O = n(388032),
-    C = n(909176);
+    C = n(388032),
+    O = n(909176);
 let S = (e) => {
         let t,
             { trialOffer: n, discountOffer: i } = e;
-        if ((null != n ? (t = O.NW.string(O.t.IBYG5e)) : null != i && (t = O.NW.formatToPlainString(O.t.iiLbvr, { percent: i.discount.amount })), null != t))
+        if ((null != n ? (t = C.NW.string(C.t.IBYG5e)) : null != i && (t = C.NW.formatToPlainString(C.t.iiLbvr, { percent: i.discount.amount })), null != t))
             return (0, r.jsx)('div', {
-                className: C.premiumOfferPill,
+                className: O.premiumOfferPill,
                 children: (0, r.jsx)(o.Text, {
                     variant: 'redesign/heading-18/bold',
                     color: 'always-white',
@@ -52,10 +52,10 @@ let S = (e) => {
             value: P,
             children: (0, r.jsx)('div', {
                 ref: t,
-                className: a()(C.container, C.marketingPageV2Container, v),
+                className: a()(O.container, O.marketingPageV2Container, v),
                 'data-testid': 'v2-marketing-page-hero-header',
                 children: (0, r.jsxs)('div', {
-                    className: C.marketingPageV2TextContainer,
+                    className: O.marketingPageV2TextContainer,
                     children: [
                         k &&
                             (0, r.jsx)(S, {
@@ -63,20 +63,20 @@ let S = (e) => {
                                 discountOffer: D
                             }),
                         (0, r.jsx)(o.X6q, {
-                            className: C.marketingPageV2Heading,
+                            className: O.marketingPageV2Heading,
                             variant: 'display-sm',
                             color: 'header-primary',
-                            children: O.NW.string(O.t.YCZldH)
+                            children: C.NW.string(C.t.YCZldH)
                         }),
                         M
-                            ? (0, r.jsx)(x.Z, {
+                            ? (0, r.jsx)(N.Z, {
                                   referrer: B,
                                   isMarketingPageV2Enabled: !0
                               })
                             : U &&
                               (0, r.jsx)('div', {
-                                  className: C.affinityDescriptionV2,
-                                  children: (0, r.jsx)(N.Z, {
+                                  className: O.affinityDescriptionV2,
+                                  children: (0, r.jsx)(_.Z, {
                                       textColor: 'text-normal',
                                       smallerText: !s,
                                       isMarketingPageV2Enabled: !0
@@ -84,16 +84,16 @@ let S = (e) => {
                               }),
                         W || R
                             ? (0, r.jsx)('div', {
-                                  className: a()(C.buttonContainer, C.marketingPageV2CTAContainer, { [C.marketingPageV2CTAMargin]: !(U || M) }),
-                                  children: (0, r.jsx)(_.Z, {
-                                      className: a()(C.button, T),
+                                  className: a()(O.buttonContainer, O.marketingPageV2CTAContainer, { [O.marketingPageV2CTAMargin]: !(U || M) }),
+                                  children: (0, r.jsx)(x.Z, {
+                                      className: a()(O.button, T),
                                       forceWhite: !0
                                   })
                               })
                             : (0, r.jsx)(E.PK, {
                                   subscriptionTier: null != (i = null != I ? I : null == w || null == (n = w.subscription_trial) ? void 0 : n.sku_id) ? i : Z,
                                   inOfferExperience: k,
-                                  containerClassName: a()(C.marketingPageV2CTAContainer, { [C.marketingPageV2CTAMargin]: !(U || M) }),
+                                  containerClassName: a()(O.marketingPageV2CTAContainer, { [O.marketingPageV2CTAMargin]: !(U || M) }),
                                   buttonClassName: T,
                                   isMarketingPageV2Enabled: !0,
                                   isDarkMode: A

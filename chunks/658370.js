@@ -17,7 +17,7 @@ var i = n(120356),
 let b = (e) => {
     var t;
     let n,
-        { title: i, titleClassName: b = '', buttonClassName: N = '', subtitle: x = '', description: _ = '', descriptionCta: E = '', isPremiumGetCta: j, onCtaClick: O, cardVariant: C } = e,
+        { title: i, titleClassName: b = '', buttonClassName: _ = '', subtitle: N = '', description: x = '', descriptionCta: E = '', isPremiumGetCta: j, onCtaClick: C, cardVariant: O } = e,
         S = (0, d.N)(),
         v = null == S ? void 0 : S.subscription_trial,
         T = (0, c.Ng)(),
@@ -32,7 +32,7 @@ let b = (e) => {
             onTier0TrialOffer: I,
             onDiscountOffer: h.NW.formatToPlainString(h.t.bkQ4bG, { percent: null == T ? void 0 : T.discount.amount })
         }),
-        A = (0, u._)(C);
+        A = (0, u._)(O);
     return (0, r.jsxs)('div', {
         className: s()(f.cardDescription, null == A || null == (t = A.description) ? void 0 : t.className),
         children: [
@@ -40,12 +40,12 @@ let b = (e) => {
                 title: i,
                 cardVariantStyleInfo: A,
                 titleClassName: b,
-                subtitle: x,
-                description: _
+                subtitle: N,
+                description: x
             }),
             j &&
                 (0, r.jsx)(g.Z, {
-                    className: N,
+                    className: _,
                     look: a.zxk.Looks.BLANK,
                     color: a.zxk.Colors.CUSTOM,
                     subscriptionTier: p.Si.TIER_2,
@@ -54,10 +54,10 @@ let b = (e) => {
                 }),
             0 !== E.length &&
                 (null == (n = null == A ? void 0 : A.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
-                null != O &&
+                null != C &&
                 (0, r.jsx)(a.zxk, {
-                    className: N,
-                    onClick: O,
+                    className: _,
+                    onClick: C,
                     children: E
                 })
         ]

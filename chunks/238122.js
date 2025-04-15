@@ -10,9 +10,9 @@ var r = n(200651),
 let u = (e) => {
         var t, n;
         let {
-                data: { title: u, subtitle: m, placeholder: x, rows: p, character_limit: b, pattern: f },
-                onChange: h,
-                initialText: _,
+                data: { title: u, subtitle: m, placeholder: x, rows: p, character_limit: b, pattern: h },
+                onChange: _,
+                initialText: f,
                 isRequired: g
             } = e,
             v = l.useRef(
@@ -59,29 +59,29 @@ let u = (e) => {
                 )
             ),
             [j, N] = l.useState(''),
-            [y, Z] = l.useState('');
+            [y, O] = l.useState('');
         l.useEffect(() => {
             var e;
-            N(null != (e = null == _ ? void 0 : _.value) ? e : '');
-        }, [_]);
-        let O = l.useCallback(
+            N(null != (e = null == f ? void 0 : f.value) ? e : '');
+        }, [f]);
+        let Z = l.useCallback(
             (e) => {
-                let t = null != f ? new RegExp(f) : null;
+                let t = null != h ? new RegExp(h) : null;
                 null != t && null == t.exec(e)
-                    ? (Z(s.NW.string(s.t['24xrGR'])),
-                      h({
+                    ? (O(s.NW.string(s.t['24xrGR'])),
+                      _({
                           value: e,
                           isValid: !1
                       }))
                     : null != e &&
-                      (Z(''),
+                      (O(''),
                       N(e),
-                      h({
+                      _({
                           value: e,
                           isValid: !0
                       }));
             },
-            [h, f]
+            [_, h]
         );
         return (0, r.jsxs)('div', {
             className: d.marginBottom8,
@@ -103,7 +103,7 @@ let u = (e) => {
                     }),
                 (0, r.jsx)(i.Kx8, {
                     maxLength: b,
-                    onChange: O,
+                    onChange: Z,
                     value: j,
                     error: y,
                     rows: p,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => N });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -15,18 +15,18 @@ var i = n(120356),
     h = n(726985),
     f = n(981631),
     b = n(388032),
-    N = n(20493);
-function x() {
+    _ = n(20493);
+function N() {
     let e = (0, c.pR)(),
         t = (0, c.Ju)(),
         n = p.fq.useSetting(),
         i = p.eR.useSetting(),
-        x = (0, u.V2)({ location: 'UserSettingsTextImages' }),
-        _ = p.R$.useSetting(),
+        N = (0, u.V2)({ location: 'UserSettingsTextImages' }),
+        x = p.R$.useSetting(),
         E = p.cC.useSetting(),
         j = p.vF.useSetting(),
-        O = p.H1.useSetting(),
-        C = p.ev.useSetting(),
+        C = p.H1.useSetting(),
+        O = p.ev.useSetting(),
         S = p.x4.useSetting(),
         v = p.RS.useSetting(),
         T = p.NA.useSetting(),
@@ -40,13 +40,13 @@ function x() {
                 setting: h.s6.CHAT_INLINE_MEDIA,
                 children: [
                     (0, r.jsx)(a.vwX, {
-                        className: N.marginBottom8,
+                        className: _.marginBottom8,
                         children: b.NW.string(b.t.U68Dgo)
                     }),
                     (0, r.jsx)(m.F, {
                         setting: h.s6.CHAT_INLINE_MEDIA_LINKS,
                         children: (0, r.jsx)(a.j7V, {
-                            className: s()(N.marginTop8, N.marginBottom20),
+                            className: s()(_.marginTop8, _.marginBottom20),
                             value: v,
                             onChange: p.RS.updateSetting,
                             children: b.NW.string(b.t.U47N1t)
@@ -55,7 +55,7 @@ function x() {
                     (0, r.jsx)(m.F, {
                         setting: h.s6.CHAT_INLINE_MEDIA_UPLOADS,
                         children: (0, r.jsx)(a.j7V, {
-                            className: s()(N.marginTop8, N.marginBottom20),
+                            className: s()(_.marginTop8, _.marginBottom20),
                             value: S,
                             note: b.NW.formatToPlainString(b.t.qjjvqK, { maxSize: 10 }),
                             onChange: p.x4.updateSetting,
@@ -65,8 +65,8 @@ function x() {
                     (0, r.jsx)(m.F, {
                         setting: h.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
                         children: (0, r.jsx)(a.j7V, {
-                            className: s()(N.marginTop8, N.marginBottom40),
-                            value: O,
+                            className: s()(_.marginTop8, _.marginBottom40),
+                            value: C,
                             note: b.NW.string(b.t.T0rbtL),
                             onChange: p.H1.updateSetting,
                             children: b.NW.string(b.t['w8j+yc'])
@@ -78,13 +78,13 @@ function x() {
                 setting: h.s6.CHAT_EMBEDS,
                 children: [
                     (0, r.jsx)(a.vwX, {
-                        className: N.marginBottom8,
+                        className: _.marginBottom8,
                         children: b.NW.string(b.t.PWZOn5)
                     }),
                     (0, r.jsx)(m.F, {
                         setting: h.s6.CHAT_EMBEDS_LINK_PREVIEWS,
                         children: (0, r.jsx)(a.j7V, {
-                            className: s()(N.marginTop8, N.marginBottom40),
+                            className: s()(_.marginTop8, _.marginBottom40),
                             value: T,
                             onChange: p.NA.updateSetting,
                             children: b.NW.string(b.t.xX0ZTE)
@@ -96,13 +96,13 @@ function x() {
                 setting: h.s6.CHAT_EMOJI,
                 children: [
                     (0, r.jsx)(a.vwX, {
-                        className: N.marginBottom8,
+                        className: _.marginBottom8,
                         children: b.NW.string(b.t.sMOuub)
                     }),
                     (0, r.jsx)(m.F, {
                         setting: h.s6.CHAT_EMOJI_REACTIONS,
                         children: (0, r.jsx)(a.j7V, {
-                            className: s()(N.marginTop8, N.marginBottom20),
+                            className: s()(_.marginTop8, _.marginBottom20),
                             value: I,
                             onChange: p.nc.updateSetting,
                             children: b.NW.string(b.t.Iv24sr)
@@ -111,8 +111,8 @@ function x() {
                     (0, r.jsx)(m.F, {
                         setting: h.s6.CHAT_EMOJI_EMOTICONS,
                         children: (0, r.jsx)(a.j7V, {
-                            className: N.marginBottom40,
-                            value: C,
+                            className: _.marginBottom40,
+                            value: O,
                             note: d.Z.parse(b.NW.string(b.t['20dvub'])),
                             onChange: p.ev.updateSetting,
                             children: b.NW.string(b.t['79qal5'])
@@ -123,10 +123,10 @@ function x() {
             (0, r.jsx)(m.F, {
                 setting: h.s6.CHAT_STICKERS,
                 children: (0, r.jsxs)(a.hjN, {
-                    className: N.marginBottom8,
+                    className: _.marginBottom8,
                     children: [
                         (0, r.jsx)(a.vwX, {
-                            className: N.marginBottom8,
+                            className: _.marginBottom8,
                             children: b.NW.string(b.t['6NtAuL'])
                         }),
                         t
@@ -134,7 +134,7 @@ function x() {
                             : (0, r.jsx)(m.F, {
                                   setting: h.s6.CHAT_STICKERS_SUGGESTIONS,
                                   children: (0, r.jsx)(a.j7V, {
-                                      className: s()(N.marginTop8, N.marginBottom20),
+                                      className: s()(_.marginTop8, _.marginBottom20),
                                       value: e,
                                       note: b.NW.string(b.t.r3uQUV),
                                       onChange: (t) => {
@@ -151,7 +151,7 @@ function x() {
                         (0, r.jsx)(m.F, {
                             setting: h.s6.CHAT_STICKERS_AUTOCOMPLETE,
                             children: (0, r.jsx)(a.j7V, {
-                                className: N.marginBottom40,
+                                className: _.marginBottom40,
                                 value: n,
                                 note: b.NW.string(b.t['/eVrj4']),
                                 onChange: (e) => {
@@ -168,20 +168,20 @@ function x() {
                     ]
                 })
             }),
-            x &&
+            N &&
                 (0, r.jsx)(m.F, {
                     setting: h.s6.CHAT_SOUNDMOJI,
                     children: (0, r.jsxs)(a.hjN, {
-                        className: N.marginBottom8,
+                        className: _.marginBottom8,
                         children: [
                             (0, r.jsx)(a.vwX, {
-                                className: N.marginBottom8,
+                                className: _.marginBottom8,
                                 children: b.NW.string(b.t.EHlAMT)
                             }),
                             (0, r.jsx)(m.F, {
                                 setting: h.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE,
                                 children: (0, r.jsx)(a.j7V, {
-                                    className: N.marginBottom40,
+                                    className: _.marginBottom40,
                                     value: i,
                                     note: b.NW.string(b.t.hrSIhI),
                                     onChange: (e) => {
@@ -200,17 +200,17 @@ function x() {
             (0, r.jsx)(m.F, {
                 setting: h.s6.CHAT_TEXT_BOX,
                 children: (0, r.jsxs)(a.hjN, {
-                    className: N.marginBottom8,
+                    className: _.marginBottom8,
                     children: [
                         (0, r.jsx)(a.vwX, {
-                            className: N.marginBottom8,
+                            className: _.marginBottom8,
                             children: b.NW.string(b.t.afR0pK)
                         }),
                         (0, r.jsx)(m.F, {
                             setting: h.s6.CHAT_TEXT_BOX_PREVIEW,
                             children: (0, r.jsx)(a.j7V, {
-                                className: s()(N.marginTop8, N.marginBottom40),
-                                value: _,
+                                className: s()(_.marginTop8, _.marginBottom40),
+                                value: x,
                                 onChange: (e) => {
                                     g.default.track(f.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                                         enabled: e,
@@ -227,16 +227,16 @@ function x() {
             (0, r.jsx)(m.F, {
                 setting: h.s6.CHAT_THREADS,
                 children: (0, r.jsxs)(a.hjN, {
-                    className: N.marginBottom40,
+                    className: _.marginBottom40,
                     children: [
                         (0, r.jsx)(a.vwX, {
-                            className: N.marginBottom8,
+                            className: _.marginBottom8,
                             children: b.NW.string(b.t.B2panJ)
                         }),
                         (0, r.jsx)(m.F, {
                             setting: h.s6.CHAT_THREADS_SPLIT_VIEW,
                             children: (0, r.jsx)(a.j7V, {
-                                className: N.marginTop8,
+                                className: _.marginTop8,
                                 value: j,
                                 onChange: p.vF.updateSetting,
                                 children: b.NW.string(b.t.AInv5u)
@@ -252,7 +252,7 @@ function x() {
                     children: [
                         (0, r.jsx)(a.R94, {
                             type: a.R94.Types.DESCRIPTION,
-                            className: N.marginBottom8,
+                            className: _.marginBottom8,
                             children: b.NW.string(b.t.TYnRkZ)
                         }),
                         (0, r.jsx)(a.FXm, {

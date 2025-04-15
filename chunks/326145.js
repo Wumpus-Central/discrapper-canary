@@ -20,7 +20,7 @@ var r = n(200651),
     N = n(113728);
 function y(e) {
     let { guildId: t, channelId: n } = e,
-        { ref: l, width: y, height: I } = (0, c.Z)(),
+        { ref: l, width: y, height: I } = (0, c.ZP)(),
         v = (0, p.Q3)('GuildOnboardingBlockedPage'),
         C = i.useCallback(() => {
             null != t &&

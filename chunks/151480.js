@@ -33,23 +33,23 @@ let _ = async () => {
     }
 };
 async function p(e, t, n) {
-    let { shouldClear: i } = n;
+    let { shouldClear: i, onError: d } = n;
     o.Z.dispatch({
         type: 'UPDATE_CHAT_WALLPAPER_FLAG_START',
         channelId: e.id
     });
     try {
-        var d;
+        var _;
         c.default.track(f.rMx.CHAT_WALLPAPER_USER_SIDE_CLEAR_TOGGLED, {
             is_hidden: i,
             wallpaper_id: t,
             channel_id: e.id
         });
-        let n = (0, u.mB)(null != (d = e.recipientFlags) ? d : 0, r.V.DISMISSED_CURRENT_CHAT_WALLPAPER, i);
-        await l.Z.updatePrivateChannelRecipientFlags(e.id, n);
+        let n = (0, u.mB)(null != (_ = e.recipientFlags) ? _ : 0, r.V.DISMISSED_CURRENT_CHAT_WALLPAPER, i);
+        (await l.Z.updatePrivateChannelRecipientFlags(e.id, n)).ok || null == d || d();
     } catch (t) {
         let e = new a.Hx(t);
-        (0, s.G)(e);
+        (0, s.G)(e), null == d || d();
     } finally {
         o.Z.dispatch({
             type: 'UPDATE_CHAT_WALLPAPER_FLAG_COMPLETE',

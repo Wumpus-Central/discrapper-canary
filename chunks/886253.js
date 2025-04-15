@@ -126,7 +126,7 @@ function j(e) {
                                           innerClassName: v.innerLinkButton,
                                           onClick: () => {
                                               let e = ''.concat(location.protocol, '//').concat(location.host).concat(x.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(n, l));
-                                              (0, c.JG)(e), (0, s.showToast)((0, s.createToast)(h.NW.string(h.t['L/PwZW']), s.ToastType.SUCCESS)), (0, u.X)(n, u.B.DETAILS_MODAL, l);
+                                              (0, c.JG)(e, () => (0, s.showToast)((0, s.createToast)(h.NW.string(h.t['L/PwZW']), s.ToastType.SUCCESS))), (0, u.X)(n, u.B.DETAILS_MODAL, l);
                                           },
                                           children: (0, t.jsx)(s.xPt, {
                                               size: 'xs',

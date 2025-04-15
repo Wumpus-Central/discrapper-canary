@@ -13,12 +13,12 @@ var i = n(442837),
     f = n(388032);
 function b(e, t) {
     let b = (0, i.e7)([u.Z], () => u.Z.can(Z.Plq.MANAGE_CHANNELS, t)),
-        O = (0, c.ZP)(e),
-        j = (0, s.W)(e),
+        j = (0, c.ZP)(e),
+        O = (0, s.W)(e),
         g = (0, i.e7)([d.Z], () => d.Z.getChannelStatus(e)),
         p = null != g && g.length > 0;
-    return e.isGuildVoice() && (b || O)
-        ? !j && b && p
+    return e.isGuildVoice() && (b || j)
+        ? !O && b && p
             ? (0, r.jsx)(l.sNh, {
                   id: 'clear-status',
                   label: f.NW.string(f.t['22CYiY']),
@@ -26,7 +26,7 @@ function b(e, t) {
                       o.ZP.updateVoiceChannelStatus(e.id, '');
                   }
               })
-            : j && O
+            : O && j
               ? (0, r.jsx)(l.sNh, {
                     id: 'set-status',
                     label: f.NW.string(f.t.Mgpxi4),

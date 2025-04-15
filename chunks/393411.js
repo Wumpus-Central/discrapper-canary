@@ -19,13 +19,13 @@ var i = n(120356),
     h = n(963249),
     f = n(301766),
     b = n(594174),
-    N = n(509545),
-    x = n(931331),
-    _ = n(754347),
+    _ = n(509545),
+    N = n(931331),
+    x = n(754347),
     E = n(122289),
     j = n(74538),
-    O = n(212895),
-    C = n(296848),
+    C = n(212895),
+    O = n(296848),
     S = n(140465),
     v = n(695349),
     T = n(404380),
@@ -171,7 +171,7 @@ function F() {
     return (0, r.jsxs)('div', {
         className: k.wordMark,
         children: [
-            (0, r.jsx)(_.Z, {
+            (0, r.jsx)(x.Z, {
                 className: k.discordWordmark,
                 'aria-label': w.NW.string(w.t['FSOz7+'])
             }),
@@ -208,10 +208,10 @@ let z = function (e) {
         K = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
         { fractionalState: q } = (0, g.Z)({ forceFetch: !1 }),
         X = q === D.a$.FP_SUB_PAUSED,
-        { enabled: J } = (0, I.ZP)({ location: z });
-    (D.pj.has(i.planId) && Z.JwP.ALL_PAUSEABLE.has(i.status) && !X) || (J = !1);
-    let Q = (0, y.Ng)(),
-        $ = null == Q || null == (t = Q.discount) ? void 0 : t.amount,
+        { enabled: Q } = (0, I.ZP)({ location: z });
+    (D.pj.has(i.planId) && Z.JwP.ALL_PAUSEABLE.has(i.status) && !X) || (Q = !1);
+    let J = (0, y.Ng)(),
+        $ = null == J || null == (t = J.discount) ? void 0 : t.amount,
         ee = (0, S.t7)(),
         et = (0, S.lr)(),
         en = (0, v.W)(),
@@ -241,12 +241,12 @@ let z = function (e) {
         },
         el = () => {
             if (null != i && null != i.premiumPlanIdFromItems) {
-                let e = N.Z.get(i.premiumPlanIdFromItems);
+                let e = _.Z.get(i.premiumPlanIdFromItems);
                 if (null == e) return void B.info('Plan not fetched for plan id: '.concat(i.premiumPlanIdFromItems));
-                let t = (0, O.DE)(e, null == p ? void 0 : p.id, !1),
+                let t = (0, C.DE)(e, null == p ? void 0 : p.id, !1),
                     n = t.length > 0 ? t[0] : i.currency,
                     r = !1;
-                1 === t.length && (null == p ? void 0 : p.id) === i.paymentSourceId && (0, O.tD)(e.id, n, null == p ? void 0 : p.id) && (r = !0),
+                1 === t.length && (null == p ? void 0 : p.id) === i.paymentSourceId && (0, C.tD)(e.id, n, null == p ? void 0 : p.id) && (r = !0),
                     r
                         ? d.O5(i, Y)
                         : (0, h.Z)({
@@ -303,7 +303,7 @@ let z = function (e) {
             eh = (0, r.jsxs)('div', {
                 className: k.wordMark,
                 children: [
-                    (0, r.jsx)(_.Z, {
+                    (0, r.jsx)(x.Z, {
                         className: k.discordWordmark,
                         'aria-label': w.NW.string(w.t['t9uG/v'])
                     }),
@@ -315,7 +315,7 @@ let z = function (e) {
             eh = (0, r.jsx)(F, {});
             break;
         case D.p9.TIER_2:
-            eh = (0, r.jsx)(x.Z, {
+            eh = (0, r.jsx)(N.Z, {
                 className: k.planName,
                 'aria-label': w.NW.string(w.t.lpNrPj)
             });
@@ -361,7 +361,7 @@ let z = function (e) {
                 return (0, r.jsxs)('div', {
                     className: k.toolsButtons,
                     children: [
-                        J
+                        Q
                             ? (0, r.jsx)(c.zxk, {
                                   className: k.toolsButton,
                                   size: c.zxk.Sizes.SMALL,
@@ -447,7 +447,7 @@ let z = function (e) {
                     });
                 case Z.O0b.PAUSED:
                     if (X) return t();
-                    let { durations: n } = (0, C.AT)(i);
+                    let { durations: n } = (0, O.AT)(i);
                     return (0, r.jsxs)('div', {
                         className: k.toolsButtons,
                         children: [

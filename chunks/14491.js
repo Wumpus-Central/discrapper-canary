@@ -51,7 +51,7 @@ function p(e) {
                   referrerId: null == m ? void 0 : m.id
               })
             : (0, u.J)(_({ id: t.id }, g));
-        null != n && ((0, l.JG)(n), null == f || f());
+        null != n && (0, l.JG)(n, f);
     }
     let b = 'copy-app-link-'.concat(t.id);
     return (0, r.jsx)(

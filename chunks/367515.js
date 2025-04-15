@@ -1,4 +1,4 @@
-n.d(t, { B: () => _ });
+n.d(t, { B: () => x });
 var r = n(200651),
     i = n(192379),
     s = n(512722),
@@ -14,7 +14,7 @@ var r = n(200651),
     h = n(332495),
     f = n(388032),
     b = n(708734);
-function N(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function N(e) {
     }
     return e;
 }
-function x(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,10 +57,10 @@ function x(e, t) {
         e
     );
 }
-function _(e) {
+function x(e) {
     let { user: t } = e,
         s = (0, d.Z)(),
-        _ = (0, u.VM)(),
+        x = (0, u.VM)(),
         E = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         j = i.useCallback(() => {
             a()(void 0 !== E, 'User must be logged in to accept a link request'),
@@ -69,21 +69,7 @@ function _(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            x(N({}, n), {
-                                currentUser: E,
-                                otherUser: t
-                            })
-                        );
-                });
-        }, [E, t]),
-        O = i.useCallback(() => {
-            a()(void 0 !== E, 'User must be logged in to decline a link request'),
-                (0, o.ZDy)(async () => {
-                    let { default: e } = await n.e('958').then(n.bind(n, 4526));
-                    return (n) =>
-                        (0, r.jsx)(
-                            e,
-                            x(N({}, n), {
+                            N(_({}, n), {
                                 currentUser: E,
                                 otherUser: t
                             })
@@ -93,11 +79,25 @@ function _(e) {
         C = i.useCallback(() => {
             a()(void 0 !== E, 'User must be logged in to decline a link request'),
                 (0, o.ZDy)(async () => {
+                    let { default: e } = await n.e('958').then(n.bind(n, 4526));
+                    return (n) =>
+                        (0, r.jsx)(
+                            e,
+                            N(_({}, n), {
+                                currentUser: E,
+                                otherUser: t
+                            })
+                        );
+                });
+        }, [E, t]),
+        O = i.useCallback(() => {
+            a()(void 0 !== E, 'User must be logged in to decline a link request'),
+                (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('69015').then(n.bind(n, 247265));
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            x(N({}, n), {
+                            N(_({}, n), {
                                 currentUser: E,
                                 otherUser: t
                             })
@@ -121,11 +121,11 @@ function _(e) {
                           icon: o.Dio,
                           className: b.__invalid_actionDeny,
                           tooltip: f.NW.string(h.Z.e5iHmZ),
-                          onClick: C
+                          onClick: O
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              _
+                              x
                                   ? null
                                   : (0, r.jsx)(m.Z, {
                                         icon: o.dz2,
@@ -137,7 +137,7 @@ function _(e) {
                                   icon: o.Dio,
                                   className: b.__invalid_actionDeny,
                                   tooltip: f.NW.string(h.Z.bBDeND),
-                                  onClick: O
+                                  onClick: C
                               })
                           ]
                       })

@@ -5,8 +5,8 @@ r.d(t, {
 var n,
     l = r(200651),
     i = r(192379),
-    a = r(120356),
-    o = r.n(a),
+    o = r(120356),
+    a = r.n(o),
     c = r(873546),
     s = r(442837),
     u = r(481060),
@@ -77,17 +77,17 @@ function R(e) {
 }
 function T(e) {
     var t;
-    let { author: r, message: n, channel: a, userOverride: f, compact: w = !1, withMentionPrefix: T = !1, showPopout: C = !1, className: E, onClick: Z, onContextMenu: k, onPopoutRequestClose: I, renderPopout: A, renderRemixTag: D = !1, decorations: _, previewGuildId: F } = e,
-        L = i.useRef(null),
-        M = i.useContext(y.Z),
-        G = null != (t = null == a ? void 0 : a.guild_id) ? t : M,
+    let { author: r, message: n, channel: o, userOverride: f, compact: w = !1, withMentionPrefix: T = !1, showPopout: C = !1, className: E, onClick: Z, onContextMenu: k, onPopoutRequestClose: I, renderPopout: A, renderRemixTag: D = !1, decorations: M, previewGuildId: _ } = e,
+        F = i.useRef(null),
+        L = i.useContext(y.Z),
+        G = null != (t = null == o ? void 0 : o.guild_id) ? t : L,
         { analyticsLocations: B } = (0, d.ZP)(p.Z.USERNAME),
         z = T ? '@' : '',
         { nick: U, colorString: W, colorStrings: H, colorRoleName: J } = r,
         V = (0, s.e7)([m.Z], () => m.Z.roleStyle),
         X = 'username' === V,
         Y = (0, O.X$)(),
-        $ = (0, g.Z)(null != F ? F : G, 'BaseUsername'),
+        $ = (0, g.Z)(null != _ ? _ : G, 'BaseUsername'),
         q = (0, x.Z)(n),
         Q = $ && null != H && null != H.primaryColor && null != H.secondaryColor,
         K = X && Q,
@@ -99,9 +99,9 @@ function T(e) {
                   gradient: {}
               },
         en = {
-            className: o()([P.username, K && et.gradientClassName, K && er.gradientClassName]),
+            className: a()([P.username, K && et.gradientClassName, K && er.gradientClassName]),
             style: (() => {
-                if (X) return K && null != H ? S({}, et.gradientStyle) : null != W ? { color: W } : void 0;
+                if (X) return K && null != H ? N(S({}, et.gradientStyle), { textDecorationColor: null == H ? void 0 : H.primaryColor }) : null != W ? { color: W } : void 0;
             })(),
             onClick: Z,
             onContextMenu: k,
@@ -121,10 +121,10 @@ function T(e) {
             [w, r.primaryGuild, G, n.author.id]
         ),
         ei = null != f ? f : n.author,
-        ea =
+        eo =
             null != A && null != C
                 ? (0, l.jsx)(j.Z, {
-                      targetElementRef: L,
+                      targetElementRef: F,
                       user: ei,
                       renderPopout: A,
                       shouldShow: C,
@@ -170,12 +170,12 @@ function T(e) {
                                           S(
                                               {
                                                   tag: 'span',
-                                                  innerRef: L
+                                                  innerRef: F
                                               },
                                               r,
                                               en
                                           ),
-                                          { className: o()(en.className, P.clickable, E) }
+                                          { className: a()(en.className, P.clickable, E) }
                                       )
                                   ),
                                   el
@@ -184,16 +184,16 @@ function T(e) {
                       }
                   })
                 : (0, l.jsxs)(l.Fragment, {
-                      children: [(0, l.jsx)(u.P3F, N(S({}, en), { className: o()(en.className, E) })), el]
+                      children: [(0, l.jsx)(u.P3F, N(S({}, en), { className: a()(en.className, E) })), el]
                   }),
-        eo = null != _ ? _[0] : null,
-        ec = null != _ ? _[1] : null;
+        ea = null != M ? M[0] : null,
+        ec = null != M ? M[1] : null;
     return (0, l.jsxs)(d.Gt, {
         value: B,
         children: [
-            null != eo && w
+            null != ea && w
                 ? (0, l.jsxs)(l.Fragment, {
-                      children: [' ', eo, ' ']
+                      children: [' ', ea, ' ']
                   })
                 : null,
             'dot' === V
@@ -204,7 +204,7 @@ function T(e) {
                       className: P.roleDot
                   })
                 : null,
-            ea,
+            eo,
             !w &&
                 (0, l.jsx)(b.ZP, {
                     primaryGuild: r.primaryGuild,
@@ -213,7 +213,7 @@ function T(e) {
                     className: P.clanTagChiplet
                 }),
             null != ec ? ec : null,
-            null == eo || w ? null : eo,
+            null == ea || w ? null : ea,
             null != n && (0, h.f)(n) && Y && D ? (0, l.jsx)(R, {}) : null
         ]
     });

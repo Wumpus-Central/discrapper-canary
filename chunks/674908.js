@@ -23,7 +23,7 @@ var r = n(200651),
     C = n(388032),
     N = n(935032),
     k = n(413135).Buffer;
-function O(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function O(e) {
     }
     return e;
 }
-function P(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function S(e) {
         try {
             let e = await (0, g.rO)(
                 t,
-                P(O({}, T), {
+                O(P({}, T), {
                     applicationAudio: I,
                     voiceAudio: F
                 })
@@ -95,7 +95,7 @@ function S(e) {
                 return (t) =>
                     (0, r.jsx)(
                         l,
-                        P(O({}, t), {
+                        O(P({}, t), {
                             showGuildPicker: !0,
                             guildId: o ? (null == a ? void 0 : a.guild_id) : void 0,
                             sourceFile: {
@@ -116,7 +116,7 @@ function S(e) {
         try {
             let e = await (0, g.rO)(
                     t,
-                    P(O({}, T), {
+                    O(P({}, T), {
                         applicationAudio: I,
                         voiceAudio: F
                     })
@@ -136,7 +136,7 @@ function S(e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        P(O({ clip: t }, n), {
+                        O(P({ clip: t }, n), {
                             onClose: async () => {
                                 await n.onClose();
                             },
@@ -205,7 +205,7 @@ function S(e) {
                         wrapperClassName: N.clipFormFooterButton,
                         onClick: () =>
                             M({
-                                clip: P(O({}, t), { name: S }),
+                                clip: O(P({}, t), { name: S }),
                                 cropData: T,
                                 applicationAudioEnabled: I,
                                 voiceAudioEnabled: F,
@@ -237,7 +237,7 @@ function S(e) {
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
-                                        P(O({}, t), {
+                                        O(P({}, t), {
                                             onExportToSoundboard: W,
                                             onExportToFile: z,
                                             onDelete: H,

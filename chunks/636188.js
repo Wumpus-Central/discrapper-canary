@@ -14,13 +14,13 @@ var r = n(200651),
     h = n(142497),
     f = n(810788),
     b = n(626135),
-    N = n(768581),
-    x = n(709054),
-    _ = n(647177),
+    _ = n(768581),
+    N = n(709054),
+    x = n(647177),
     E = n(63985),
     j = n(678916),
-    O = n(981631),
-    C = n(190378),
+    C = n(981631),
+    O = n(190378),
     S = n(486324),
     v = n(474936),
     T = n(388032),
@@ -120,7 +120,7 @@ function R(e) {
             className: I.backgroundImageOption,
             style: { backgroundImage: 'url('.concat(n, ')') }
         });
-    let o = (0, N.rI)({
+    let o = (0, _.rI)({
         userId: t.user_id,
         assetId: t.id,
         assetHash: t.asset,
@@ -136,7 +136,7 @@ function R(e) {
     });
 }
 function D(e) {
-    var { option: t, source: i, selected: s = !1, onSelectOption: u, isAnimatedImage: N, isVideo: x, hotspotLocation: E } = e,
+    var { option: t, source: i, selected: s = !1, onSelectOption: u, isAnimatedImage: _, isVideo: N, hotspotLocation: E } = e,
         j = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -156,10 +156,10 @@ function D(e) {
             }
             return i;
         })(e, ['option', 'source', 'selected', 'onSelectOption', 'isAnimatedImage', 'isVideo', 'hotspotLocation']);
-    let C = (0, d.O)(),
+    let O = (0, d.O)(),
         { analyticsLocations: S } = (0, g.ZP)(m.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
         P = (0, l.e7)([f.Z], () => null != E && f.Z.hasHotspot(E)),
-        D = x
+        D = N
             ? (0, r.jsx)(p.Z, {
                   className: I.backgroundImageOption,
                   src: i,
@@ -168,17 +168,17 @@ function D(e) {
                   muted: !0
               })
             : (0, r.jsx)(R, {
-                  isAnimated: N,
-                  option: (0, _.rD)(t) ? t : void 0,
+                  isAnimated: _,
+                  option: (0, x.rD)(t) ? t : void 0,
                   source: i
               });
     function Z() {
         null != E &&
             P &&
             (h.Kw(E),
-            b.default.track(O.rMx.PREMIUM_UPSELL_VIEWED, {
+            b.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: v.cd.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
-                location: C.location,
+                location: O.location,
                 location_stack: S
             }));
     }
@@ -207,7 +207,7 @@ function D(e) {
                     className: I.backgroundOptionInner,
                     children: D
                 }),
-                x || N
+                N || _
                     ? (0, r.jsx)('div', {
                           className: I.playIcon,
                           children: (0, r.jsx)(o.o1U, {
@@ -243,9 +243,9 @@ function Z() {
 }
 function w(e) {
     let { onClick: t, tooltipText: n, disabled: i = !1 } = e,
-        s = (0, l.e7)([f.Z], () => f.Z.hasHotspot(C.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
+        s = (0, l.e7)([f.Z], () => f.Z.hasHotspot(O.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
     function a() {
-        h.Kw(C.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
+        h.Kw(O.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
     }
     let c = s ? T.NW.string(T.t['5TUJOj']) : n;
     return (0, r.jsxs)(o.DY3, {
@@ -289,7 +289,7 @@ function k(e) {
         { analyticsLocations: i } = (0, g.ZP)(m.Z.VIDEO_BACKGROUND_CUSTOM_UPSELL);
     return (
         (0, u.ZP)(() => {
-            b.default.track(O.rMx.PREMIUM_UPSELL_VIEWED, {
+            b.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: v.cd.VIDEO_BACKGROUNDS_INLINE,
                 location: n.location,
                 location_stack: i
@@ -346,7 +346,7 @@ function W(e) {
 }
 function L(e) {
     let { canUseCustomBackgrounds: t, customBackgroundOptions: n, selectedOption: s, onSelectOption: a, onUpsellClick: l, onAddBackgroundImage: c, smallerOptions: d } = e,
-        u = i.useMemo(() => n.sort((e, t) => (null == e.last_used || null == t.last_used ? x.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime())), [n]),
+        u = i.useMemo(() => n.sort((e, t) => (null == e.last_used || null == t.last_used ? N.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime())), [n]),
         p = u.length >= 25,
         { analyticsLocations: h } = (0, g.ZP)(m.Z.VIDEO_BACKGROUND_OPTIONS),
         f = Object.values((0, E.Z)()).sort((e, t) => j.E1[e.id] - j.E1[t.id]);
@@ -382,7 +382,7 @@ function L(e) {
                             text: (0, r.jsx)(Z, {}),
                             'aria-label': T.NW.string(T.t['T+yRY2']),
                             children: (t) => {
-                                let n = (0, N.rI)({
+                                let n = (0, _.rI)({
                                     userId: e.user_id,
                                     assetId: e.id,
                                     assetHash: e.asset,
@@ -396,10 +396,10 @@ function L(e) {
                                               key: e.id,
                                               option: e,
                                               source: n,
-                                              selected: (0, _.rD)(s) && s.id === e.id,
+                                              selected: (0, x.rD)(s) && s.id === e.id,
                                               onSelectOption: a,
-                                              isVideo: (0, N.ay)(e.asset),
-                                              isAnimatedImage: (0, N.xR)(e.asset)
+                                              isVideo: (0, _.ay)(e.asset),
+                                              isAnimatedImage: (0, _.xR)(e.asset)
                                           })
                                       );
                             }

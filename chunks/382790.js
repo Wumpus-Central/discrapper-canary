@@ -1,21 +1,21 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var i,
     r = n(200651),
     s = n(192379),
     o = n(120356),
-    l = n.n(o),
-    a = n(442837),
+    a = n.n(o),
+    l = n(442837),
     c = n(552062),
-    u = n(416568),
-    d = n(914010),
+    d = n(416568),
+    u = n(914010),
     h = n(518084),
     p = n(178528),
     f = n(669083),
     g = n(483962),
     m = n(711553),
     y = n(388032),
-    O = n(708132);
-function v(e, t, n) {
+    v = n(708132);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function v(e, t, n) {
         e
     );
 }
-function x(e) {
+function O(e) {
     let { closePopout: t } = e;
     return (0, r.jsx)(f.Z, { onClose: t });
 }
@@ -47,15 +47,15 @@ class b extends (i = s.PureComponent) {
                       )
                     : (0, r.jsx)(m.Z, {
                           title: y.NW.string(y.t.YUU0RE),
-                          renderSettings: x,
+                          renderSettings: O,
                           onDragStart: this.onDragStart,
                           children: (0, r.jsx)(g.Z, {})
                       }),
             o = n ? 'div' : h.ZP;
         return (0, r.jsxs)(o, {
-            className: l()(O.base, { [O.widget]: !n }, i),
+            className: a()(v.base, { [v.widget]: !n }, i),
             children: [
-                (0, r.jsx)(u.Z, {
+                (0, r.jsx)(d.Z, {
                     isOverlay: !0,
                     disableAppDownload: !0,
                     isVisible: !t
@@ -66,11 +66,11 @@ class b extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            v(this, 'onDragStart', (e) => {
+            _(this, 'onDragStart', (e) => {
                 let { dragStart: t } = this.props;
                 t(c.B.MOVE, e.clientX, e.clientY);
             });
     }
 }
-v(b, 'defaultProps', { contained: !1 });
-let S = a.ZP.connectStores([d.Z], () => ({ selectedGuildId: d.Z.getGuildId() }))(b);
+_(b, 'defaultProps', { contained: !1 });
+let x = l.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(b);

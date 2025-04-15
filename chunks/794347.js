@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => N,
+    Z: () => _,
     _: () => h
 });
 var r,
@@ -22,20 +22,20 @@ let f = {
 function b(e) {
     return Math.round(e / p) * p;
 }
-function N(e) {
+function _(e) {
     let { notchBackground: t, progress: n, gradientStart: r = o.Z.unsafe_rawColors.YELLOW_260.css, gradientEnd: a = o.Z.unsafe_rawColors.GREEN_360.css, className: c, children: m } = e,
-        { ref: p, width: h } = (0, d.Z)(),
-        N = s.useMemo(() => (null != h ? b(h) : 0), [h]),
-        x = s.useMemo(() => {
-            let e = Math.abs(b((N * (100 - Math.max(0, Math.min(100, n)))) / 100) - N);
+        { ref: p, width: h } = (0, d.ZP)(),
+        _ = s.useMemo(() => (null != h ? b(h) : 0), [h]),
+        N = s.useMemo(() => {
+            let e = Math.abs(b((_ * (100 - Math.max(0, Math.min(100, n)))) / 100) - _);
             return { transform: 'translateX('.concat(e, 'px)') };
-        }, [n, N]),
-        _ = s.useMemo(
+        }, [n, _]),
+        x = s.useMemo(
             () => ({
-                width: ''.concat(N, 'px'),
+                width: ''.concat(_, 'px'),
                 background: n <= 0 ? 'none' : 'linear-gradient(to right, '.concat(r, ', ').concat(a, ')')
             }),
-            [a, r, n, N]
+            [a, r, n, _]
         );
     return (0, i.jsxs)('div', {
         className: g.wrapper,
@@ -43,15 +43,15 @@ function N(e) {
         children: [
             (0, i.jsxs)('div', {
                 className: l()(g.container, c),
-                style: _,
+                style: x,
                 children: [
                     (0, i.jsx)('div', {
                         className: g.progress,
-                        style: x
+                        style: N
                     }),
-                    0 !== N &&
+                    0 !== _ &&
                         (0, i.jsx)(u.Z, {
-                            width: N,
+                            width: _,
                             className: l()(g.notches, f[t])
                         })
                 ]

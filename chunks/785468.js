@@ -1,28 +1,28 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => R }), n(388685);
 var r = n(200651),
     l = n(192379),
-    i = n(913527),
-    a = n.n(i),
+    a = n(913527),
+    i = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(933557),
     u = n(592125),
     d = n(430824),
     m = n(496675),
-    h = n(699516),
-    x = n(594174),
-    g = n(924301),
-    p = n(518756),
+    x = n(699516),
+    g = n(594174),
+    h = n(924301),
+    v = n(518756),
     f = n(545165),
-    v = n(884746),
-    b = n(274311),
-    j = n(230900),
-    y = n(366815),
-    N = n(765305),
+    p = n(884746),
+    j = n(274311),
+    N = n(230900),
+    b = n(366815),
+    y = n(765305),
     O = n(981631),
     E = n(388032),
-    S = n(230384);
-function C(e) {
+    C = n(230384);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,62 +47,62 @@ function C(e) {
     }
     return e;
 }
-let P = (e) => e === N.WX.EXTERNAL,
-    I = (e, t) => {
+let S = (e) => e === y.WX.EXTERNAL,
+    T = (e, t) => {
         let n = u.Z.getChannel(e);
         if (null == n) return null;
         let l = n.type === O.d4z.GUILD_STAGE_VOICE,
-            i = (0, b.Q)(n, t),
-            a = i ? o.gj8 : o.gjC,
-            s = i ? o.ewx : o.pki;
-        return (0, r.jsx)(l ? s : a, {
+            a = (0, j.Q)(n, t),
+            i = a ? o.gj8 : o.gjC,
+            s = a ? o.ewx : o.pki;
+        return (0, r.jsx)(l ? s : i, {
             color: 'currentColor',
             size: 'md',
-            className: S.channelOptionIcon
+            className: C.channelOptionIcon
         });
     },
-    T = (e) => {
-        let { guildId: t, channelType: n, channel: l, onSelectChannel: i, disabled: a, entityType: s } = e,
+    P = (e) => {
+        let { guildId: t, channelType: n, channel: l, onSelectChannel: a, disabled: i, entityType: s } = e,
             u = n === O.d4z.GUILD_STAGE_VOICE,
-            d = (0, b.Q)(l, s),
+            d = (0, j.Q)(l, s),
             m = (0, f.sR)(t, n);
         return (0, r.jsxs)(o.xJW, {
             title: u ? E.NW.string(E.t.S7GjDw) : E.NW.string(E.t['7RYWCA']),
-            className: S.options,
-            disabled: a,
+            className: C.options,
+            disabled: i,
             required: !0,
             children: [
                 (0, r.jsx)(o.VcW, {
                     value: null == l ? void 0 : l.id,
                     options: m.map((e) => ({
                         value: e.id,
-                        label: (0, c.F6)(e, x.default, h.Z, !0)
+                        label: (0, c.F6)(e, g.default, x.Z, !0)
                     })),
                     onChange: (e) => {
                         let t = m.find((t) => t.id === e);
-                        i(null != t ? t : void 0);
+                        a(null != t ? t : void 0);
                     },
-                    renderOptionPrefix: (e) => I(null == e ? void 0 : e.value, s),
-                    isDisabled: a
+                    renderOptionPrefix: (e) => T(null == e ? void 0 : e.value, s),
+                    isDisabled: i
                 }),
                 !d &&
                     (0, r.jsx)(o.Text, {
                         color: 'header-secondary',
-                        className: S.channelPrivate,
+                        className: C.channelPrivate,
                         variant: 'text-sm/normal',
                         children: E.NW.string(E.t.F3bDaW)
                     })
             ]
         });
     };
-function w(e, t, n, r) {
+function W(e, t, n, r) {
     return t
         ? {
               disabled: !0,
               tooltipText: E.NW.string(E.t.yutP5e)
           }
         : n
-          ? 0 === r && e !== N.WX.EXTERNAL
+          ? 0 === r && e !== y.WX.EXTERNAL
               ? {
                     disabled: !0,
                     tooltipText: E.NW.string(E.t['DkY+cH'])
@@ -116,7 +116,7 @@ function w(e, t, n, r) {
                 tooltipText: E.NW.string(E.t.HeF1kZ)
             };
 }
-let W = (e) => (t) => {
+let w = (e) => (t) => {
         e({ entityMetadata: { location: t } });
     },
     Z = (e) => (t) => {
@@ -129,164 +129,164 @@ let W = (e) => (t) => {
                 entityType: r,
                 scheduledEndTime: void 0
             };
-        if (P(r)) {
-            var i;
-            l.scheduledEndTime = (null != (i = a()(t.scheduledStartTime)) ? i : a()()).add(2, 'hour').toISOString();
+        if (S(r)) {
+            var a;
+            l.scheduledEndTime = (null != (a = i()(t.scheduledStartTime)) ? a : i()()).add(2, 'hour').toISOString();
         }
         e(l);
     };
-function D(e) {
-    let { guildId: t, guildEvent: n, onChange: i, isFocusReady: a } = e,
+function _(e) {
+    let { guildId: t, guildEvent: n, onChange: a, isFocusReady: i } = e,
         { entityType: c, channelId: d } = n,
         m = (0, s.e7)([u.Z], () => u.Z.getChannel(d), [d]),
-        h = l.useRef(null);
+        x = l.useRef(null);
     l.useEffect(() => {
-        if (a && P(c)) {
+        if (i && S(c)) {
             var e;
-            null == (e = h.current) || e.focus();
+            null == (e = x.current) || e.focus();
         }
-    }, [a, c]);
-    let x = W(i),
-        p = Z(i),
-        f = (0, j.xV)(n),
-        v = (0, j.xC)(c),
-        b = (0, g.xt)(n);
-    return null == c || c === N.WX.NONE
+    }, [i, c]);
+    let g = w(a),
+        v = Z(a),
+        f = (0, N.xV)(n),
+        p = (0, N.xC)(c),
+        j = (0, h.xt)(n);
+    return null == c || c === y.WX.NONE
         ? null
-        : P(c)
+        : S(c)
           ? (0, r.jsx)(o.xJW, {
                 title: E.NW.string(E.t.yx785O),
-                className: S.options,
+                className: C.options,
                 required: !0,
                 children: (0, r.jsx)(o.oil, {
-                    className: S.__invalid_textInput,
-                    onChange: x,
+                    className: C.__invalid_textInput,
+                    onChange: g,
                     placeholder: E.NW.string(E.t.mkCMiY),
-                    maxLength: N.gG,
+                    maxLength: y.gG,
                     value: null != f ? f : '',
-                    inputRef: h
+                    inputRef: x
                 })
             })
-          : null == v
+          : null == p
             ? null
-            : (0, r.jsx)(T, {
+            : (0, r.jsx)(P, {
                   guildId: t,
-                  channelType: v,
-                  onSelectChannel: p,
+                  channelType: p,
+                  onSelectChannel: v,
                   channel: m,
                   entityType: c,
-                  disabled: b
+                  disabled: j
               });
 }
-function R(e) {
-    let { guildId: t, guildEvent: n, onChange: i } = e,
-        a = (0, s.e7)([d.Z], () => d.Z.getGuild(t), [t]),
-        c = (0, p.Z)(t, void 0),
-        u = (0, p.Z)(t, O.d4z.GUILD_VOICE),
-        m = (0, p.Z)(t, O.d4z.GUILD_STAGE_VOICE),
-        h = (0, f.sR)(t, O.d4z.GUILD_VOICE),
-        x = (0, v.q)(a),
-        b = null == a ? void 0 : a.hasFeature(O.oNc.COMMUNITY),
-        j = (0, g.xt)(n),
-        y = k(i, n),
-        P = l.useMemo(() => {
+function D(e) {
+    let { guildId: t, guildEvent: n, onChange: a } = e,
+        i = (0, s.e7)([d.Z], () => d.Z.getGuild(t), [t]),
+        c = (0, v.Z)(t, void 0),
+        u = (0, v.Z)(t, O.d4z.GUILD_VOICE),
+        m = (0, v.Z)(t, O.d4z.GUILD_STAGE_VOICE),
+        x = (0, f.sR)(t, O.d4z.GUILD_VOICE),
+        g = (0, p.q)(i),
+        j = null == i ? void 0 : i.hasFeature(O.oNc.COMMUNITY),
+        N = (0, h.xt)(n),
+        b = k(a, n),
+        S = l.useMemo(() => {
             let e = [
-                C(
+                I(
                     {
                         name: E.NW.string(E.t.BVZqJi),
-                        value: N.WX.VOICE,
+                        value: y.WX.VOICE,
                         desc: E.NW.string(E.t['EV//4e']),
                         icon: o.gj8
                     },
-                    w(N.WX.VOICE, j, u, h.length)
+                    W(y.WX.VOICE, N, u, x.length)
                 ),
-                C(
+                I(
                     {
                         name: E.NW.string(E.t.w7ipb2),
-                        value: N.WX.EXTERNAL,
+                        value: y.WX.EXTERNAL,
                         desc: E.NW.string(E.t.DYxrHh),
                         icon: o._tJ
                     },
-                    w(N.WX.EXTERNAL, j, c, 0)
+                    W(y.WX.EXTERNAL, N, c, 0)
                 )
             ];
-            return b
+            return j
                 ? [
-                      C(
+                      I(
                           {
                               name: E.NW.string(E.t.EErMzM),
-                              value: N.WX.STAGE_INSTANCE,
+                              value: y.WX.STAGE_INSTANCE,
                               desc: E.NW.string(E.t.LgALpq),
                               icon: o.ewx
                           },
-                          w(N.WX.STAGE_INSTANCE, j, m, x.length)
+                          W(y.WX.STAGE_INSTANCE, N, m, g.length)
                       ),
                       ...e
                   ]
                 : e;
-        }, [c, u, m, b, h.length, x.length, j]);
+        }, [c, u, m, j, x.length, g.length, N]);
     return (0, r.jsx)(o.FXm, {
         value: n.entityType,
-        options: P,
-        onChange: y,
-        className: S.options
+        options: S,
+        onChange: b,
+        className: C.options
     });
 }
-function _(e) {
-    let { guildId: t, guildEvent: l, validationErrorMessage: i, onChange: a, isSlideReady: c = !1 } = e,
+function R(e) {
+    let { guildId: t, guildEvent: l, validationErrorMessage: a, onChange: i, isSlideReady: c = !1 } = e,
         { entityType: u } = l,
-        h = (0, s.e7)([d.Z], () => d.Z.getGuild(t), [t]),
-        x = (0, v.q)(h),
-        g = (0, s.e7)([m.Z], () => m.Z.can(O.Plq.MANAGE_CHANNELS, h)),
-        p = null == h ? void 0 : h.hasFeature(O.oNc.COMMUNITY),
-        f = k(a, l),
-        b = p && !P(u) && 0 === x.length && g && null != u;
+        x = (0, s.e7)([d.Z], () => d.Z.getGuild(t), [t]),
+        g = (0, p.q)(x),
+        h = (0, s.e7)([m.Z], () => m.Z.can(O.Plq.MANAGE_CHANNELS, x)),
+        v = null == x ? void 0 : x.hasFeature(O.oNc.COMMUNITY),
+        f = k(i, l),
+        j = v && !S(u) && 0 === g.length && h && null != u;
     return (0, r.jsxs)('div', {
-        className: S.container,
+        className: C.container,
         children: [
             (0, r.jsx)(o.X6q, {
                 variant: 'heading-xl/semibold',
-                className: S.header,
+                className: C.header,
                 children: E.NW.string(E.t['DC+Qm5'])
             }),
             (0, r.jsx)(o.Text, {
                 color: 'header-secondary',
-                className: S.text,
+                className: C.text,
                 variant: 'text-sm/normal',
                 children: E.NW.string(E.t.IwmXLC)
-            }),
-            (0, r.jsx)(R, {
-                guildId: t,
-                guildEvent: l,
-                onChange: a
             }),
             (0, r.jsx)(D, {
                 guildId: t,
                 guildEvent: l,
-                isFocusReady: c,
-                onChange: a
+                onChange: i
             }),
-            b
-                ? (0, r.jsx)(y.Z, {
+            (0, r.jsx)(_, {
+                guildId: t,
+                guildEvent: l,
+                isFocusReady: c,
+                onChange: i
+            }),
+            j
+                ? (0, r.jsx)(b.Z, {
                       onClick: () => {
                           f({
-                              value: N.WX.STAGE_INSTANCE,
+                              value: y.WX.STAGE_INSTANCE,
                               name: E.NW.string(E.t.EErMzM)
                           }),
                               (0, o.ZDy)(async () => {
                                   let { default: e } = await Promise.all([n.e('25292'), n.e('90508'), n.e('80284'), n.e('7590'), n.e('45094'), n.e('76916')]).then(n.bind(n, 218613));
                                   return (n) => {
-                                      var l, i;
+                                      var l, a;
                                       return (0, r.jsx)(
                                           e,
-                                          ((l = C({}, n)),
-                                          (i = i =
+                                          ((l = I({}, n)),
+                                          (a = a =
                                               {
                                                   channelType: O.d4z.GUILD_STAGE_VOICE,
                                                   guildId: t
                                               }),
                                           Object.getOwnPropertyDescriptors
-                                              ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
+                                              ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                                               : (function (e, t) {
                                                     var n = Object.keys(e);
                                                     if (Object.getOwnPropertySymbols) {
@@ -294,8 +294,8 @@ function _(e) {
                                                         n.push.apply(n, r);
                                                     }
                                                     return n;
-                                                })(Object(i)).forEach(function (e) {
-                                                    Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
+                                                })(Object(a)).forEach(function (e) {
+                                                    Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                                                 }),
                                           l)
                                       );

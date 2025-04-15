@@ -14,8 +14,8 @@ function f(e, t) {
     let n = (0, i.e7)([s.Z], () => s.Z.can(d.Plq.CONNECT, e), [e]),
         f = (0, i.e7)([u.Z], () => u.Z.getVoiceChannelId()),
         b = (0, a.tT)(t),
-        O = f === e.id;
-    return e.isGuildVocal() && n && null != b && !O
+        j = f === e.id;
+    return e.isGuildVocal() && n && null != b && !j
         ? (0, r.jsx)(l.sN, {
               id: 'join-muted-custom-join-sound',
               label: Z.NW.string(Z.t.saLMWV),

@@ -1,4 +1,4 @@
-n.d(t, { default: () => P });
+n.d(t, { default: () => N });
 var r = n(200651);
 n(192379);
 var l = n(990547),
@@ -15,25 +15,25 @@ var l = n(990547),
     g = n(131951),
     b = n(358085),
     O = n(947150),
-    y = n(488021),
-    h = n(822556),
+    h = n(488021),
+    y = n(822556),
     v = n(981631),
-    j = n(388032),
-    S = n(292538);
-function P(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: P = !1, renderInputModes: N = !1, renderInputVolume: I = !1, renderOutputVolume: E = !1, renderDeafen: Z = !1, simplified: x = !1, onSelect: C, appContext: T, onInteraction: w } = e,
-        { analyticsLocations: A } = (0, u.ZP)();
+    S = n(388032),
+    j = n(292538);
+function N(e) {
+    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: N = !1, renderInputModes: P = !1, renderInputVolume: E = !1, renderOutputVolume: Z = !1, renderDeafen: I = !1, simplified: x = !1, onSelect: C, appContext: T, onInteraction: A } = e,
+        { analyticsLocations: w } = (0, u.ZP)();
     (0, d.Z)({
         type: l.ImpressionTypes.MENU,
         name: l.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: A }
+        properties: { location_stack: w }
     });
-    let D = (0, h.Z)(T),
-        _ = (0, O.Z)(A, x),
-        k = (0, y.Z)(A, x),
-        L = (0, p.Z)(A),
-        W = (0, f.Z)(A),
-        M = (0, m.Z)(A),
+    let D = (0, y.Z)(T),
+        _ = (0, O.Z)(w, x),
+        L = (0, h.Z)(w, x),
+        W = (0, p.Z)(w),
+        k = (0, f.Z)(w),
+        M = (0, m.Z)(w),
         U = o.Yn.DEFAULT,
         R = g.Z.isSelfDeaf(U),
         V = (0, i.e7)([g.Z], () => g.Z.getMode()),
@@ -42,31 +42,31 @@ function P(e) {
         object: v.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(a.v2r, {
             onSelect: C,
-            onInteraction: w,
-            className: S.menu,
+            onInteraction: A,
+            className: j.menu,
             onClose: t,
             navId: 'audio-device-context',
-            'aria-label': j.NW.string(j.t.ZR1Ss7),
+            'aria-label': S.NW.string(S.t.ZR1Ss7),
             children: [
-                P ? _ : null,
-                n ? k : null,
-                !x && N
+                N ? _ : null,
+                n ? L : null,
+                !x && P
                     ? (0, r.jsx)(a.kSQ, {
-                          label: j.NW.string(j.t['pS+K2N']),
-                          children: L
+                          label: S.NW.string(S.t['pS+K2N']),
+                          children: W
                       })
                     : null,
                 (0, r.jsxs)(a.kSQ, {
                     children: [
-                        I ? W : null,
-                        E ? M : null,
+                        E ? k : null,
+                        Z ? M : null,
                         x ? (0, r.jsx)(a.Clw, {}) : null,
-                        x && Z
+                        x && I
                             ? (0, r.jsx)(
                                   a.S89,
                                   {
                                       id: 'deafen',
-                                      label: j.NW.string(j.t.wjcRFR),
+                                      label: S.NW.string(S.t.wjcRFR),
                                       action: () =>
                                           s.Z.toggleSelfDeaf({
                                               context: U,
@@ -77,12 +77,12 @@ function P(e) {
                                   'self-deafen'
                               )
                             : null,
-                        x && P && b.isPlatformEmbedded
+                        x && N && b.isPlatformEmbedded
                             ? (0, r.jsx)(a.S89, {
                                   checked: V === v.pM4.PUSH_TO_TALK,
                                   id: 'input-mode',
-                                  label: j.NW.string(j.t.Q8gkVF),
-                                  action: () => s.Z.setMode(F, void 0, void 0, { analyticsLocations: A })
+                                  label: S.NW.string(S.t.Q8gkVF),
+                                  action: () => s.Z.setMode(F, void 0, void 0, { analyticsLocations: w })
                               })
                             : null,
                         D

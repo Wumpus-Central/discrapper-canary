@@ -14,16 +14,16 @@ var r = n(200651),
     h = n(65154),
     f = n(388032),
     b = n(979385),
-    N = n(251574),
-    x = n(893354),
-    _ = n(20493);
+    _ = n(251574),
+    N = n(893354),
+    x = n(20493);
 let E = (0, g.hQ)();
 function j() {
     let [e, t] = i.useState(-100),
         [n, s] = i.useState(!1),
-        { threshold: j, autoThreshold: O } = (0, l.cj)([p.Z], () => p.Z.getModeOptions()),
+        { threshold: j, autoThreshold: C } = (0, l.cj)([p.Z], () => p.Z.getModeOptions()),
         {
-            inputMode: C,
+            inputMode: O,
             automaticVADSupported: S,
             isEnabled: v
         } = (0, l.cj)([p.Z], () => ({
@@ -35,7 +35,7 @@ function j() {
         t(e), s((n & h.Dg.VOICE) === h.Dg.VOICE);
     }
     function I(e, t) {
-        m.Z.setMode(C, {
+        m.Z.setMode(O, {
             threshold: e,
             autoThreshold: t
         });
@@ -56,12 +56,12 @@ function j() {
         children: (0, r.jsx)(u.iRW, {
             initialValue: j + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-            onValueChange: (e) => I(-((100 - e) * 1), O),
+            onValueChange: (e) => I(-((100 - e) * 1), C),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
             'aria-labelledby': E,
             children: (0, r.jsxs)('div', {
-                className: a()(b.sliderBar, b.microphone, b.inputSensitivityBar, N.bar),
+                className: a()(b.sliderBar, b.microphone, b.inputSensitivityBar, _.bar),
                 children: [
                     (0, r.jsx)('div', {
                         className: a()(b.fill, b.inputSensitivityBarFill),
@@ -73,7 +73,7 @@ function j() {
         })
     });
     return (
-        O &&
+        C &&
             (y = (0, r.jsxs)('section', {
                 className: b.inputSensitivityToggle,
                 children: [
@@ -83,7 +83,7 @@ function j() {
                     }),
                     (0, r.jsx)(u.R94, {
                         type: u.R94.Types.DESCRIPTION,
-                        className: _.marginBottom8,
+                        className: x.marginBottom8,
                         children: f.NW.string(f.t.W3K5Ii)
                     })
                 ]
@@ -97,11 +97,11 @@ function j() {
                     (0, r.jsx)(g.FG, {
                         children: (e) =>
                             (0, r.jsxs)('div', {
-                                className: a()(x.horizontal, _.marginBottom4),
+                                className: a()(N.horizontal, x.marginBottom4),
                                 children: [
                                     (0, r.jsx)(u.vwX, {
                                         tag: u.RB0.H3,
-                                        className: _.marginReset,
+                                        className: x.marginReset,
                                         children: (0, r.jsx)('label', {
                                             htmlFor: e,
                                             children: f.NW.string(f.t.I1Zuq6)
@@ -109,7 +109,7 @@ function j() {
                                     }),
                                     (0, r.jsx)(u.rsf, {
                                         id: e,
-                                        checked: O,
+                                        checked: C,
                                         onChange: (e) => I(j, e)
                                     })
                                 ]
@@ -119,7 +119,7 @@ function j() {
                 !v &&
                     (0, r.jsx)(u.R94, {
                         type: u.R94.Types.DESCRIPTION,
-                        className: a()(b.inputDisabledWarning, _.marginBottom8),
+                        className: a()(b.inputDisabledWarning, x.marginBottom8),
                         children: f.NW.format(f.t['O13I+P'], { onEnableClick: () => m.Z.enable(!0) })
                     })
             ]

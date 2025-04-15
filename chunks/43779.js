@@ -28,9 +28,9 @@ function w(e) {
         k = o.useMemo(() => g.r.build(P.config), [P.config]),
         q = k.defaultReward.messages.name,
         D = k.defaultReward.messages.nameWithArticle,
-        I = B ? q : D,
-        W = (null == (t = P.userStatus) ? void 0 : t.enrolledAt) != null,
-        { ref: M, scrollHeight: L } = (0, d.Z)(),
+        W = B ? q : D,
+        I = (null == (t = P.userStatus) ? void 0 : t.enrolledAt) != null,
+        { ref: M, scrollHeight: L } = (0, d.kE)(),
         Z = 104 !== L,
         { expansionSpring: V } = (0, c.q_F)({
             expansionSpring: +!!N,
@@ -94,7 +94,7 @@ function w(e) {
                 ),
             [P.id]
         ),
-        K = o.useMemo(() => (U ? X(q) : _.NW.format(_.t['0IUT4e'], { rewardWithArticleHook: () => X(I) })), [q, U, X, I]),
+        K = o.useMemo(() => (U ? X(q) : _.NW.format(_.t['0IUT4e'], { rewardWithArticleHook: () => X(W) })), [q, U, X, W]),
         Y = o.useMemo(() => {
             if (null != z)
                 return (0, r.jsx)(c.Text, {
@@ -118,7 +118,7 @@ function w(e) {
                         className: C.assetWrapper,
                         children: [
                             !U && Q && (0, r.jsx)('div', { className: C.completionAnimation }),
-                            W && !U
+                            I && !U
                                 ? (0, r.jsxs)('div', {
                                       className: C.progressWrapper,
                                       children: [

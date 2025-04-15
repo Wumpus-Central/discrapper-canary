@@ -1,14 +1,14 @@
-n.d(t, { Z: () => h }), n(953529);
+n.d(t, { Z: () => p }), n(953529);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     s = n(481060),
     a = n(955204),
     c = n(818765),
     u = n(674680),
     d = n(127058);
-let p = (e) => {
+let h = (e) => {
     let { color: t } = e;
     return (0, r.jsxs)('svg', {
         width: '48',
@@ -64,9 +64,9 @@ let p = (e) => {
         ]
     });
 };
-function h(e) {
+function p(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: o, description: h, rarity: f, hideDescriptionUntilUnlock: _, onAction: m } = t,
+        { name: l, description: p, rarity: f, hideDescriptionUntilUnlock: g, onAction: m } = t,
         { color: b } = (0, a.F7)(f);
     i.useEffect(() => {
         let e = setTimeout(() => {
@@ -76,12 +76,12 @@ function h(e) {
             clearTimeout(e);
         };
     }, []);
-    let g = null != m && n,
-        E = g ? s.P3F : 'div';
-    return (0, r.jsxs)(E, {
-        className: l()(d.container, g && d.actionable),
+    let _ = null != m && n,
+        y = _ ? s.P3F : 'div';
+    return (0, r.jsxs)(y, {
+        className: o()(d.container, _ && d.actionable),
         onClick: () => {
-            g && m();
+            _ && m();
         },
         children: [
             (0, r.jsx)('div', {
@@ -98,18 +98,18 @@ function h(e) {
                     (0, r.jsx)(s.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: o()
+                        children: l()
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
-                        children: _ && !n ? '?????' : h()
+                        children: g && !n ? '?????' : p()
                     })
                 ]
             }),
             (0, r.jsx)('div', {
                 className: d.flair,
-                children: (0, r.jsx)(p, { color: b })
+                children: (0, r.jsx)(h, { color: b })
             })
         ]
     });

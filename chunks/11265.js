@@ -13,8 +13,8 @@ let m = i.memo(function (e) {
     let { renderHeader: s, children: m, isExpanded: g, isStuck: p, onExpand: h, disableAnimation: f, disableBackground: x } = e,
         [b, j] = i.useState(!0),
         [N, _] = i.useState(!1),
-        { ref: v, height: O = 0 } = (0, c.Z)(),
-        { ref: C, height: y = 0 } = (0, c.Z)(),
+        { ref: v, height: O = 0 } = (0, c.ZP)(),
+        { ref: C, height: y = 0 } = (0, c.ZP)(),
         [I, E] = i.useState(g),
         S = (0, o.q_F)(
             {

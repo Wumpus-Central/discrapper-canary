@@ -17,13 +17,13 @@ var r = n(200651),
     h = n(100527),
     f = n(906732),
     b = n(252618),
-    N = n(313201),
-    x = n(605236),
-    _ = n(984370),
+    _ = n(313201),
+    N = n(605236),
+    x = n(984370),
     E = n(797614),
     j = n(108427),
-    O = n(210887),
-    C = n(695346),
+    C = n(210887),
+    O = n(695346),
     S = n(594174),
     v = n(626135),
     T = n(260722),
@@ -94,27 +94,27 @@ function H(e) {
 }
 function z(e) {
     let { theme: t, section: n, handleItemSelect: i } = e,
-        s = (0, N.Dt)(),
+        s = (0, _.Dt)(),
         o = (0, R.gU)();
     return (0, r.jsx)(u.f6W, {
         theme: t,
         children: (e) =>
-            (0, r.jsxs)(_.Z, {
+            (0, r.jsxs)(x.Z, {
                 className: a()(e, V.sidebarTabBar),
                 scrollable: l.tq,
                 role: 'navigation',
                 'aria-labelledby': s,
                 toolbar: !0,
                 children: [
-                    (0, r.jsx)(_.Z.Icon, {
+                    (0, r.jsx)(x.Z.Icon, {
                         icon: u.BFJ,
                         'aria-hidden': !0
                     }),
-                    (0, r.jsx)(_.Z.Title, {
+                    (0, r.jsx)(x.Z.Title, {
                         id: s,
                         children: U.NW.string(M.Z.RZqaJi)
                     }),
-                    (0, r.jsx)(_.Z.Divider, {}),
+                    (0, r.jsx)(x.Z.Divider, {}),
                     (0, r.jsxs)(u.njP, {
                         'aria-label': U.NW.string(M.Z.RZqaJi),
                         selectedItem: n,
@@ -150,35 +150,35 @@ function z(e) {
 function Y() {
     let e = (0, P.Z)(),
         t = (0, R.M8)(),
-        n = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
+        n = (0, N.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         s = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
         a = (0, A.M)(),
         { selectedTab: l, handleTabChange: m } = (0, y.Z)(),
-        h = (0, N.Dt)(),
+        h = (0, _.Dt)(),
         f = S.default.getCurrentUser(),
-        _ = null != e,
-        O = s && null != f && !_;
+        x = null != e,
+        C = s && null != f && !x;
     (0, g.ZP)(() => {
         (0, j.e)('family-center'),
             T.ZP.initialPageLoad(),
             n ||
-                (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+                (0, N.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: B.L.AUTO,
                     forceTrack: !0
                 });
     });
-    let C = {
+    let O = {
             isConsideredAdult: e,
             numOfAcceptedRequests: t,
             selectedTab: l,
             selectedTeenId: a
         },
-        D = i.useRef(C);
+        D = i.useRef(O);
     return (i.useEffect(() => {
-        D.current = C;
+        D.current = O;
     }),
     i.useEffect(() => {
-        if (s && _) {
+        if (s && x) {
             let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: r } = D.current;
             v.default.track(W.rMx.FAMILY_CENTER_VIEWED, {
                 is_considered_adult: e,
@@ -189,11 +189,11 @@ function Y() {
             }),
                 E.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
         }
-    }, [s, _]),
+    }, [s, x]),
     i.useEffect(() => {
-        O && (0, p.mN)(L.L0.FAMILY_CENTER);
-    }, [O]),
-    O)
+        C && (0, p.mN)(L.L0.FAMILY_CENTER);
+    }, [C]),
+    C)
         ? null
         : (0, r.jsxs)('main', {
               className: V.container,
@@ -219,12 +219,12 @@ function K() {
     let { analyticsLocations: e } = (0, f.ZP)(h.Z.FAMILY_CENTER),
         t = (0, P.Z)(),
         n = (0, R.M8)(),
-        s = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
+        s = (0, N.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         l = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
-        _ = (0, A.M)(),
-        D = (0, c.e7)([O.Z], () => O.Z.theme),
+        x = (0, A.M)(),
+        D = (0, c.e7)([C.Z], () => C.Z.theme),
         { selectedTab: Z, handleTabChange: w } = (0, y.Z)(),
-        G = (0, N.Dt)(),
+        G = (0, _.Dt)(),
         H = S.default.getCurrentUser(),
         Y = null != t,
         K = l && null != H && !Y;
@@ -233,7 +233,7 @@ function K() {
             (0, j.e)('family-center'),
             !I.Z.isLoading() && I.Z.canRefetch() && T.ZP.initialPageLoad(),
             s ||
-                (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+                (0, N.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: B.L.AUTO,
                     forceTrack: !0
                 });
@@ -242,7 +242,7 @@ function K() {
             isConsideredAdult: t,
             numOfAcceptedRequests: n,
             selectedTab: Z,
-            selectedTeenId: _
+            selectedTeenId: x
         },
         X = i.useRef(q);
     if (
@@ -263,8 +263,8 @@ function K() {
             }
         }, [l, Y]),
         i.useEffect(() => {
-            let e = C.Ex.getSetting();
-            l && t && void 0 === e && C.Ex.updateSetting(!0);
+            let e = O.Ex.getSetting();
+            l && t && void 0 === e && O.Ex.updateSetting(!0);
         }, [l, t]),
         i.useEffect(() => {
             K && (0, p.mN)(L.L0.FAMILY_CENTER);
@@ -272,8 +272,8 @@ function K() {
         K)
     )
         return null;
-    let J = Z !== k.dG.SETTINGS ? Z : k.dG.ACTIVITY,
-        Q = F[J];
+    let Q = Z !== k.dG.SETTINGS ? Z : k.dG.ACTIVITY,
+        J = F[Q];
     return (0, r.jsx)(f.Gt, {
         value: e,
         children: (0, r.jsxs)('main', {
@@ -283,19 +283,19 @@ function K() {
                 (0, r.jsx)(b.yY, { location: U.NW.string(M.Z.RZqaJi) }),
                 (0, r.jsx)(z, {
                     theme: D,
-                    section: J,
+                    section: Q,
                     handleItemSelect: (e) => {
                         w(e);
                     }
                 }),
                 (0, r.jsx)(u.njP.Panel, {
-                    id: J,
+                    id: Q,
                     'aria-labelledby': G,
                     className: V.contentPanel,
                     children: (0, r.jsx)(u.Ttm, {
                         children: (0, r.jsx)('div', {
                             className: V.sideNavContent,
-                            children: Q()
+                            children: J()
                         })
                     })
                 })

@@ -1,10 +1,10 @@
-n.d(t, { g: () => a });
+n.d(t, { g: () => s });
 var r = n(200651);
 n(192379);
 var i = n(120356),
     l = n.n(i),
     o = n(353372);
-function a(e) {
+function s(e) {
     let { hideGradient: t, children: n } = e;
     return (0, r.jsxs)('div', {
         className: o.footer,

@@ -4,8 +4,8 @@ var r = n(200651),
     a = n(481060),
     i = n(100527),
     s = n(873128),
-    c = n(704041),
-    l = n(986398),
+    l = n(704041),
+    c = n(986398),
     u = n(463031),
     d = n(791644);
 function p(e) {
@@ -43,14 +43,14 @@ function p(e) {
                   position: 'top',
                   shouldShow: p,
                   renderPopout: () =>
-                      (0, r.jsx)(c.Z, {
+                      (0, r.jsx)(l.Z, {
                           guildId: t.id,
                           previewMode: !0,
                           source: i.Z.MEMBER_LIST,
                           leaderboardId: f.leaderboard_id
                       }),
                   children: () =>
-                      (0, r.jsx)(l.Z, {
+                      (0, r.jsx)(c.Z, {
                           leaderboard: f,
                           className: d.image
                       })

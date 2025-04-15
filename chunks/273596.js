@@ -59,22 +59,22 @@ function j(e) {
             },
             [Z, h, s.length, M, j]
         ),
-        B = (0, u.y)((e) => {
-            let t = null == e ? void 0 : e.getBoundingClientRect();
-            if (null == t) return;
-            let n = t.width;
-            n < 1024 && k.current ? ((k.current = !1), D(!1)) : n > 1024 && !k.current && ((k.current = !0), D(!0));
-            let r = 1;
-            for (n -= 450 * !!R, n -= 280; n > 0; ) (n -= 264), (r += 1);
-            r !== G.current && ((G.current = r), U(r)), V(t);
-        });
-    i.useLayoutEffect(() => {
-        var e;
-        V(null == (e = B.current) ? void 0 : e.getBoundingClientRect());
-    }, [B, V]),
-        i.useEffect(() => {
-            L((0, m.PM)());
-        }, [I]),
+        B = i.useCallback(
+            (e) => {
+                let t = e.contentRect;
+                if (null == t) return;
+                let n = t.width;
+                n < 1024 && k.current ? ((k.current = !1), D(!1)) : n > 1024 && !k.current && ((k.current = !0), D(!0));
+                let r = 1;
+                for (n -= 450 * !!R, n -= 280; n > 0; ) (n -= 264), (r += 1);
+                r !== G.current && ((G.current = r), U(r)), V(t);
+            },
+            [R, V]
+        ),
+        H = (0, u.y)(B, [R, V]);
+    i.useEffect(() => {
+        L((0, m.PM)());
+    }, [I]),
         i.useEffect(() => {
             P({
                 loadId: t,
@@ -85,9 +85,9 @@ function j(e) {
                 categoryId: A
             });
         }, [x, s, t, A, w, I]);
-    let H = i.useCallback((e) => n(e, A), [n, A]),
-        F = i.useMemo(() => (h ? [s.length, 0] : [s.length]), [s.length, h]),
-        z = i.useCallback(
+    let F = i.useCallback((e) => n(e, A), [n, A]),
+        z = i.useMemo(() => (h ? [s.length, 0] : [s.length]), [s.length, h]),
+        Y = i.useCallback(
             (e, n, i) => {
                 switch (e) {
                     case 0:
@@ -116,7 +116,7 @@ function j(e) {
             },
             [Z, R, t]
         ),
-        Y = i.useCallback(
+        K = i.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
@@ -130,7 +130,7 @@ function j(e) {
             },
             [Z, R]
         ),
-        K = i.useCallback(
+        q = i.useCallback(
             (e, t) => {
                 switch (e) {
                     case 0:
@@ -143,7 +143,7 @@ function j(e) {
             },
             [s]
         ),
-        q = i.useCallback((e) => {
+        Q = i.useCallback((e) => {
             switch (e) {
                 case 0:
                     return 320;
@@ -153,7 +153,7 @@ function j(e) {
                     throw Error('[getItemHeight] Failed for section: '.concat(e));
             }
         }, []),
-        Q = i.useCallback(
+        X = i.useCallback(
             async (e, t, n, r) => {
                 var i, a;
                 await l(e, t, n, r);
@@ -162,7 +162,7 @@ function j(e) {
             },
             [l]
         ),
-        X = i.useCallback(
+        J = i.useCallback(
             (e, t, n, i) => {
                 if (0 !== e) return null;
                 {
@@ -173,15 +173,15 @@ function j(e) {
                             style: n,
                             children: (0, r.jsx)(y.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await Q(e, t, A, T),
-                                onView: (e) => H(e)
+                                onClick: async (e) => await X(e, t, A, T),
+                                onView: (e) => F(e)
                             })
                         },
                         i
                     );
                 }
             },
-            [s, Q, H, A]
+            [s, X, F, A]
         );
     i.useEffect(() => {
         let e = W.current;
@@ -206,7 +206,7 @@ function j(e) {
                         });
                 });
         }, []);
-    let J = i.useMemo(
+    let $ = i.useMemo(
             () =>
                 (0, o.debounce)(
                     () => {
@@ -221,24 +221,24 @@ function j(e) {
                 ),
             [j]
         ),
-        $ = R ? C : S;
+        ee = R ? C : S;
     return (0, r.jsx)('div', {
         className: v.container,
-        ref: B,
+        ref: H,
         children: (0, r.jsx)(c.GMG, {
             ref: W,
             className: v.masonryList,
-            sections: F,
+            sections: z,
             columns: M,
             itemGutter: 16,
-            padding: $,
-            renderItem: X,
-            renderSection: z,
-            getSectionHeight: Y,
-            getItemKey: K,
-            getItemHeight: q,
+            padding: ee,
+            renderItem: J,
+            renderSection: Y,
+            getSectionHeight: K,
+            getItemKey: q,
+            getItemHeight: Q,
             chunkSize: 24,
-            onScroll: J,
+            onScroll: $,
             renderAccessory: (e) =>
                 R
                     ? (0, r.jsx)('div', {

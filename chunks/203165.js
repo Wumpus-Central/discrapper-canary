@@ -1,5 +1,5 @@
-n.d(t, { b: () => r });
-let r = {
+n.d(t, { b: () => a });
+let a = {
     'red.100': { hex: '#fef8f9' },
     'red.130': { hex: '#fef4f4' },
     'red.160': { hex: '#feeaea' },

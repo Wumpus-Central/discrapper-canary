@@ -7,13 +7,13 @@ var r,
     i = n(200651),
     l = n(192379),
     o = n(793030),
-    a = n(442837),
-    s = n(381499),
+    s = n(442837),
+    a = n(381499),
     c = n(481060),
     u = n(230711),
     d = n(100527),
-    p = n(906732),
-    h = n(695346),
+    h = n(906732),
+    p = n(695346),
     f = n(675478),
     g = n(885110),
     m = n(63063),
@@ -22,18 +22,18 @@ var r,
     y = n(388032),
     v = n(22275),
     O = n(204794);
-async function j(e) {
+async function C(e) {
     await f.hW.updateAsync(
         'status',
         (t) => {
-            (t.status = s.Gm.create({ value: e })), (t.statusExpiresAtMs = '0');
+            (t.status = a.Gm.create({ value: e })), (t.statusExpiresAtMs = '0');
         },
         f.fy.INFREQUENT_USER_ACTION
     );
 }
-function C(e) {
+function S(e) {
     let { showCurrentGame: t, shouldShowStatus: n = !1 } = e,
-        r = (0, a.e7)([g.Z], () => g.Z.getStatus());
+        r = (0, s.e7)([g.Z], () => g.Z.getStatus());
     return (0, i.jsxs)('div', {
         className: v.toggleContainer,
         children: [
@@ -64,14 +64,14 @@ function C(e) {
             }),
             (0, i.jsx)(c.rsf, {
                 onChange: (e) => {
-                    h.G6.updateSetting(e), n && j(e ? c.Skl.ONLINE : c.Skl.INVISIBLE);
+                    p.G6.updateSetting(e), n && C(e ? c.Skl.ONLINE : c.Skl.INVISIBLE);
                 },
                 checked: t
             })
         ]
     });
 }
-function x(e) {
+function j(e) {
     let { children: t, closePopout: n } = e,
         r = (0, l.useRef)(null);
     return (
@@ -118,11 +118,11 @@ function x(e) {
         })
     );
 }
-function S(e) {
+function E(e) {
     let { closePopout: t } = e,
-        { analyticsLocations: n } = (0, p.ZP)(d.Z.SHARING_CONTROLS_COACHMARK),
-        r = h.G6.useSetting();
-    return (0, i.jsxs)(x, {
+        { analyticsLocations: n } = (0, h.ZP)(d.Z.SHARING_CONTROLS_COACHMARK),
+        r = p.G6.useSetting();
+    return (0, i.jsxs)(j, {
         closePopout: t,
         children: [
             (0, i.jsx)(c.Text, {
@@ -137,16 +137,16 @@ function S(e) {
             }),
             (0, i.jsx)('div', {
                 className: v.toggleContainerWrapper,
-                children: (0, i.jsx)(C, { showCurrentGame: r })
+                children: (0, i.jsx)(S, { showCurrentGame: r })
             })
         ]
     });
 }
-function P(e) {
+function x(e) {
     let { closePopout: t } = e,
-        { analyticsLocations: n } = (0, p.ZP)(d.Z.SHARING_CONTROLS_COACHMARK),
-        r = h.G6.useSetting();
-    return (0, i.jsxs)(x, {
+        { analyticsLocations: n } = (0, h.ZP)(d.Z.SHARING_CONTROLS_COACHMARK),
+        r = p.G6.useSetting();
+    return (0, i.jsxs)(j, {
         children: [
             (0, i.jsx)(o.X6, {
                 variant: 'heading-sm/semibold',
@@ -165,34 +165,15 @@ function P(e) {
             }),
             (0, i.jsx)('div', {
                 className: v.toggleContainerWrapper,
-                children: (0, i.jsx)(C, { showCurrentGame: r })
-            })
-        ]
-    });
-}
-function I(e) {
-    let { closePopout: t } = e,
-        n = h.G6.useSetting();
-    return (0, i.jsxs)(x, {
-        closePopout: t,
-        children: [
-            (0, i.jsx)(c.Text, {
-                variant: 'text-xs/normal',
-                color: 'text-secondary',
-                className: v.nuxContent,
-                children: y.NW.format(y.t.fF2TbW, { helpDeskUrl: m.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS) })
-            }),
-            (0, i.jsx)('div', {
-                className: v.toggleContainerWrapper,
-                children: (0, i.jsx)(C, { showCurrentGame: n })
+                children: (0, i.jsx)(S, { showCurrentGame: r })
             })
         ]
     });
 }
 function N(e) {
     let { closePopout: t } = e,
-        n = h.G6.useSetting();
-    return (0, i.jsxs)(x, {
+        n = p.G6.useSetting();
+    return (0, i.jsxs)(j, {
         closePopout: t,
         children: [
             (0, i.jsx)(c.Text, {
@@ -203,7 +184,26 @@ function N(e) {
             }),
             (0, i.jsx)('div', {
                 className: v.toggleContainerWrapper,
-                children: (0, i.jsx)(C, {
+                children: (0, i.jsx)(S, { showCurrentGame: n })
+            })
+        ]
+    });
+}
+function I(e) {
+    let { closePopout: t } = e,
+        n = p.G6.useSetting();
+    return (0, i.jsxs)(j, {
+        closePopout: t,
+        children: [
+            (0, i.jsx)(c.Text, {
+                variant: 'text-xs/normal',
+                color: 'text-secondary',
+                className: v.nuxContent,
+                children: y.NW.format(y.t.fF2TbW, { helpDeskUrl: m.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS) })
+            }),
+            (0, i.jsx)('div', {
+                className: v.toggleContainerWrapper,
+                children: (0, i.jsx)(S, {
                     showCurrentGame: n,
                     shouldShowStatus: !0
                 })
@@ -211,11 +211,11 @@ function N(e) {
         ]
     });
 }
-function Z() {
-    let e = h.G6.useSetting();
-    return (0, i.jsxs)(x, {
+function P() {
+    let e = p.G6.useSetting();
+    return (0, i.jsxs)(j, {
         children: [
-            (0, i.jsx)(C, { showCurrentGame: e }),
+            (0, i.jsx)(S, { showCurrentGame: e }),
             (0, i.jsx)(c.$i$, { className: v.divider }),
             (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
@@ -225,9 +225,9 @@ function Z() {
         ]
     });
 }
-function E(e) {
+function w(e) {
     let { closePopout: t } = e;
-    return (0, i.jsxs)(x, {
+    return (0, i.jsxs)(j, {
         children: [
             (0, i.jsx)(o.X6, {
                 variant: 'heading-sm/semibold',
@@ -246,7 +246,7 @@ function E(e) {
                 size: c.zxk.Sizes.SMALL,
                 color: c.zxk.Colors.GREEN,
                 onClick: () => {
-                    t(), j(c.Skl.ONLINE);
+                    t(), C(c.Skl.ONLINE);
                 },
                 fullWidth: !0,
                 children: y.NW.string(_.Z.Poezn5)
@@ -254,11 +254,11 @@ function E(e) {
         ]
     });
 }
-function w() {
-    let e = h.G6.useSetting();
-    return (0, i.jsxs)(x, {
+function Z() {
+    let e = p.G6.useSetting();
+    return (0, i.jsxs)(j, {
         children: [
-            (0, i.jsx)(C, {
+            (0, i.jsx)(S, {
                 showCurrentGame: e,
                 shouldShowStatus: !0
             }),
@@ -282,19 +282,19 @@ function A(e) {
         o)
     ) {
         case 0:
-            return (0, i.jsx)(S, { closePopout: n });
-        case 1:
-            return (0, i.jsx)(I, { closePopout: n });
-        case 2:
-            return (0, i.jsx)(N, { closePopout: n });
-        case 3:
-            return (0, i.jsx)(P, { closePopout: n });
-        case 4:
-            return (0, i.jsx)(Z, {});
-        case 5:
             return (0, i.jsx)(E, { closePopout: n });
+        case 1:
+            return (0, i.jsx)(N, { closePopout: n });
+        case 2:
+            return (0, i.jsx)(I, { closePopout: n });
+        case 3:
+            return (0, i.jsx)(x, { closePopout: n });
+        case 4:
+            return (0, i.jsx)(P, {});
+        case 5:
+            return (0, i.jsx)(w, { closePopout: n });
         case 6:
-            return (0, i.jsx)(w, {});
+            return (0, i.jsx)(Z, {});
         default:
             return null;
     }

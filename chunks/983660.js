@@ -1,23 +1,23 @@
-n.d(t, { Z: () => u }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var i = n(200651),
     r = n(192379),
-    a = n(704215),
+    s = n(704215),
     o = n(481060),
-    s = n(243778),
+    a = n(243778),
     l = n(921944),
     c = n(388032),
     d = n(63791),
-    _ = n(215916);
-function u(e) {
+    u = n(215916);
+function h(e) {
     let { locked: t } = e,
-        [n, u] = (0, s.US)(t ? [] : [a.z.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX], void 0, !0);
+        [n, h] = (0, a.US)(t ? [] : [s.z.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX], void 0, !0);
     return (r.useEffect(() => {
-        if (!t && n === a.z.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX)
+        if (!t && n === s.z.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX)
             return () => {
-                n === a.z.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX && u(l.L.AUTO_DISMISS);
+                n === s.z.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX && h(l.L.AUTO_DISMISS);
             };
-    }, [t, u, n]),
-    t || n !== a.z.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX)
+    }, [t, h, n]),
+    t || n !== s.z.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX)
         ? null
         : (0, i.jsx)('div', {
               className: d.overlayInprocessBackgroundNux,
@@ -92,7 +92,7 @@ function u(e) {
                       }),
                       (0, i.jsx)('div', {
                           children: (0, i.jsx)('img', {
-                              src: _.Z,
+                              src: u.Z,
                               alt: c.NW.string(c.t.mdXZh4),
                               className: d.nuxImage
                           })

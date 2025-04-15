@@ -18,7 +18,7 @@ var r = n(200651),
     b = n(138339);
 function j(e) {
     var t, n, j, y, _, w, C, N;
-    let { clip: k, channelId: O, transitionState: P, onClose: S } = e,
+    let { clip: k, channelId: P, transitionState: O, onClose: S } = e,
         [E, R] = a.useState(!0),
         [L, T] = a.useState(null),
         [F, D] = a.useState(null),
@@ -134,7 +134,7 @@ function j(e) {
         impression: { impressionName: l.ImpressionNames.CLIP_EDITOR_VIEWED },
         size: i.CgR.DYNAMIC,
         className: b.modalRoot,
-        transitionState: P,
+        transitionState: O,
         children: (0, r.jsx)(c.Gt, {
             value: I,
             children: (0, r.jsx)(i.hzk, {
@@ -154,11 +154,11 @@ function j(e) {
                                           isLoading: E,
                                           onDoneLoading: () => R(!1),
                                           audioURL: F,
-                                          transitionState: P
+                                          transitionState: O
                                       }),
                                       !E &&
                                           (0, r.jsx)(h.Z, {
-                                              channelId: O,
+                                              channelId: P,
                                               onSetClipName: U,
                                               clipName: H,
                                               clip: k,

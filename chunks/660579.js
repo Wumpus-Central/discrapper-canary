@@ -51,40 +51,40 @@ function c(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function u(e) {
-    var { children: t, className: n, onShowToolbar: a } = e,
-        c = l(e, ['children', 'className', 'onShowToolbar']);
-    let u = i.useRef(null),
-        [d, f] = i.useState(!1),
-        _ = () => {
-            null == a || a(), f(!0);
-        },
+let u = i.forwardRef(function (e, t) {
+    var { children: n, className: a, onShowToolbar: c } = e,
+        u = l(e, ['children', 'className', 'onShowToolbar']);
+    let d = t,
+        [f, _] = i.useState(!1),
         p = () => {
-            f(!1);
+            null == c || c(), _(!0);
+        },
+        h = () => {
+            _(!1);
         };
     return (0, r.jsxs)('div', {
-        className: n,
-        onMouseEnter: _,
-        onMouseLeave: p,
-        onFocus: _,
+        className: a,
+        onMouseEnter: p,
+        onMouseLeave: h,
+        onFocus: p,
         onBlur: (e) => {
             var t;
-            (null == (t = u.current) ? void 0 : t.contains(e.relatedTarget)) || p();
+            (null == (t = d.current) ? void 0 : t.contains(e.relatedTarget)) || h();
         },
-        ref: u,
+        ref: d,
         children: [
-            t,
+            n,
             (0, r.jsx)(
                 o.ZP,
                 s(
                     {
-                        targetRef: u,
-                        isVisible: d,
+                        targetRef: d,
+                        isVisible: f,
                         isExpandable: !1
                     },
-                    c
+                    u
                 )
             )
         ]
     });
-}
+});

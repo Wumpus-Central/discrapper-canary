@@ -9,8 +9,8 @@ var l = n(120356),
     c = n(862863);
 function u(e) {
     let { activity: t, user: n, channelId: l, guildId: u, source: d, size: p, look: f, color: m, className: g, onAction: b } = e,
-        { tooltip: O, loading: y, disabled: h, onClick: v } = (0, s.Fe)(t, n, d, a.ZP.getNickname(u, l, n)),
-        j = () => {
+        { tooltip: O, loading: h, disabled: y, onClick: v } = (0, s.Fe)(t, n, d, a.ZP.getNickname(u, l, n)),
+        S = () => {
             null == b || b(), v();
         };
     return (0, r.jsx)(o.ua7, {
@@ -23,11 +23,11 @@ function u(e) {
                 innerClassName: c.syncButtonInner,
                 look: f,
                 color: m,
-                onClick: j,
+                onClick: S,
                 onMouseEnter: n,
                 onMouseLeave: l,
-                disabled: h,
-                submitting: y,
+                disabled: y,
+                submitting: h,
                 'aria-label': null != O ? O : t.name,
                 children: (0, r.jsx)(o.iOO, {
                     size: 'xs',

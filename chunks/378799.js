@@ -214,7 +214,7 @@ class v {
     addEvent(e) {
         var t, n;
         let r = b(e);
-        null == this._internalKeyLayoutMap && this._initializeInternalLayoutMap(), this._hasExactMatch(r) || ('dead' !== e.key.toLowerCase() && (null == this.keyMap[e.key] ? (this.keyMap[e.key] = e.keyCode) : this.keyMap[e.key] !== e.keyCode && d.error('KeyboardMapper - Key code mismatch for key '.concat(e.key, ': ').concat(this.keyMap[e.key], ' !== ').concat(e.keyCode)), (this.keyCodeMap[e.keyCode] = null != (n = this.keyCodeMap[e.keyCode]) ? n : []), this.keyCodeMap[e.keyCode].push(r), null == (t = this._internalKeyLayoutMap) || t.set(e.code, e.key), d.verbose('KeyboardMapper - Key added', { event: e }), this.updateCaches(), this.save()));
+        null == this._internalKeyLayoutMap && this._initializeInternalLayoutMap(), this._hasExactMatch(r) || ('dead' !== r.key.toLowerCase() && (null == this.keyMap[r.key] ? (this.keyMap[r.key] = r.keyCode) : this.keyMap[r.key] !== r.keyCode && d.error('KeyboardMapper - Key code mismatch for key '.concat(r.key, ': ').concat(this.keyMap[r.key], ' !== ').concat(r.keyCode)), (this.keyCodeMap[r.keyCode] = null != (n = this.keyCodeMap[r.keyCode]) ? n : []), this.keyCodeMap[r.keyCode].push(r), null == (t = this._internalKeyLayoutMap) || t.set(r.code, r.key), this.updateCaches(), this.save()));
     }
     save() {
         a.K.set(_, this.keyMap);

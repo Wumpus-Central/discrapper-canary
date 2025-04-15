@@ -48,8 +48,8 @@ let g = (e, t) =>
         if (null == t) return null;
         let i = (0, c.J)(t.id),
             { id: d, nameUnformatted: h, tenureReqNumMonths: f, hasWideArt: b } = t,
-            N = u.NW.string(h),
-            x = (0, l.q)(d, f);
+            _ = u.NW.string(h),
+            N = (0, l.q)(d, f);
         return (0, r.jsxs)('div', {
             className: s()(m.container, p(d)),
             children: [
@@ -57,7 +57,7 @@ let g = (e, t) =>
                 ' ',
                 (0, r.jsx)('img', {
                     src: i,
-                    alt: N,
+                    alt: _,
                     className: s()(m.badgeImage, m.badgeImageV2, {
                         [m.upcomingBadge]: t.status === o.Vq.UPCOMING,
                         [m.wide]: b
@@ -69,12 +69,12 @@ let g = (e, t) =>
                         (0, r.jsx)(a.xv, {
                             variant: 'text-lg/semibold',
                             className: m.badgeText,
-                            children: N
+                            children: _
                         }),
                         (0, r.jsx)(a.xv, {
                             variant: 'text-md/normal',
                             className: m.badgeText,
-                            children: x
+                            children: N
                         }),
                         (0, r.jsx)(a.xv, {
                             variant: 'text-xs/normal',

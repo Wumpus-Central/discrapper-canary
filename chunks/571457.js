@@ -1,6 +1,6 @@
 n.d(t, {
     RI: () => l,
-    k5: () => a,
+    k5: () => s,
     kR: () => o
 });
 var r = n(626135),
@@ -13,7 +13,7 @@ function o(e) {
     let { selectedCategoryId: t } = e;
     r.default.track(i.rMx.GLOBAL_DISCOVERY_SERVERS_VIEWED, { selected_category_id: t });
 }
-function a(e) {
+function s(e) {
     let { source: t } = e;
     r.default.track(i.rMx.GLOBAL_DISCOVERY_ENTRYPOINT_CLICKED, { source: t });
 }

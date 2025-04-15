@@ -4,12 +4,12 @@ n(192379);
 var i = n(120356),
     l = n.n(i),
     o = n(91192),
-    a = n(589440),
-    s = n(481060),
+    s = n(589440),
+    a = n(481060),
     c = n(440185),
     u = n(915887),
     d = n(768107);
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +34,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,18 +74,18 @@ function f(e) {
             }
             return i;
         })(e, ['id', 'className', 'innerClassName', 'renderIcon', 'text', 'selected', 'trailing', 'background', 'showUnread']);
-    let j = (0, o.JA)(n),
-        C = null != (t = (0, a.qg)(m)) ? t : '';
+    let C = (0, o.JA)(n),
+        S = null != (t = (0, s.qg)(m)) ? t : '';
     return (0, r.jsx)('li', {
         children: (0, r.jsxs)(
-            s.kL8,
-            h(p({}, O), {
-                buttonProps: h(p({}, j), {
+            a.kL8,
+            p(h({}, O), {
+                buttonProps: p(h({}, C), {
                     id: n,
                     role: 'button'
                 }),
                 tag: 'div',
-                'aria-label': C,
+                'aria-label': S,
                 focusProps: {
                     offset: {
                         top: 1,

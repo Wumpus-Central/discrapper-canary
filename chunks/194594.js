@@ -7,8 +7,8 @@ var r,
     a = n(200651),
     i = n(192379),
     l = n(120356),
-    o = n.n(l),
-    s = n(442837),
+    s = n.n(l),
+    o = n(442837),
     c = n(477690),
     d = n(481060),
     u = n(686546),
@@ -72,7 +72,7 @@ let v = {
 function j(e) {
     var t, n, r;
     let { application: l, mutualGuilds: c, mutualGuildShownMax: h = 4, className: j, textVariant: y = 'text-sm/normal', compact: I, guildIconSize: N = x.LARGE, guildsClassName: O } = e,
-        P = (0, s.e7)([p.default], () => p.default.locale),
+        P = (0, o.e7)([p.default], () => p.default.locale),
         S = new Intl.ListFormat(P),
         E = null != (n = null == (t = l.directory_entry) ? void 0 : t.guild_count) ? n : 0,
         T = null != (r = null == c ? void 0 : c.length) ? r : 0,
@@ -110,10 +110,10 @@ function j(e) {
     return 0 === L.length && null == k
         ? null
         : (0, a.jsxs)('div', {
-              className: o()(j, _.wrapper),
+              className: s()(j, _.wrapper),
               children: [
                   (0, a.jsx)('div', {
-                      className: o()(_.icons, O),
+                      className: s()(_.icons, O),
                       children:
                           L.length > 0
                               ? (0, a.jsxs)(a.Fragment, {
@@ -133,7 +133,7 @@ function j(e) {
                                                         (0, a.jsx)(
                                                             'img',
                                                             b(f({}, e), {
-                                                                className: o()(_.icon, C[N]),
+                                                                className: s()(_.icon, C[N]),
                                                                 src: r,
                                                                 alt: ''
                                                             })
@@ -161,7 +161,7 @@ function j(e) {
                                                       (0, a.jsxs)(
                                                           'div',
                                                           b(f({}, e), {
-                                                              className: o()(_.moreGuilds, v[N]),
+                                                              className: s()(_.moreGuilds, v[N]),
                                                               children: ['+', Z]
                                                           })
                                                       )

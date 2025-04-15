@@ -58,22 +58,22 @@ function p(e) {
         b = () => {
             h({ route: c.j.HOME });
         },
-        N = (e) => {
+        _ = (e) => {
             h(m({ route: c.j.SWITCH_APP_PLANS }, e)), n(u.NW.string(u.t.VFqtkJ), b);
         },
-        [x, _] = i.useState({});
+        [N, x] = i.useState({});
     i.useEffect(() => {
         for (let n of t) {
             var e;
             let t = null == (e = n.items[0]) ? void 0 : e.planId;
             null != t &&
-                (_((e) => g(m({}, e), { [n.id]: o.G.LOADING })),
+                (x((e) => g(m({}, e), { [n.id]: o.G.LOADING })),
                 (0, a.vY)(t)
                     .then(() => {
-                        _((e) => g(m({}, e), { [n.id]: o.G.DONE }));
+                        x((e) => g(m({}, e), { [n.id]: o.G.DONE }));
                     })
                     .catch(() => {
-                        _((e) => g(m({}, e), { [n.id]: o.G.ERROR }));
+                        x((e) => g(m({}, e), { [n.id]: o.G.ERROR }));
                     }));
         }
     }, [t]);
@@ -88,16 +88,16 @@ function p(e) {
                         o.Z,
                         {
                             subscription: e,
-                            navigateToSwitchPlan: N,
-                            loadingState: j ? o.G.LOADING : null != (t = x[e.id]) ? t : o.G.LOADING
+                            navigateToSwitchPlan: _,
+                            loadingState: j ? o.G.LOADING : null != (t = N[e.id]) ? t : o.G.LOADING
                         },
                         e.id
                     );
                 })
             });
         case c.j.SWITCH_APP_PLANS:
-            let { route: O } = p,
-                C = (function (e, t) {
+            let { route: C } = p,
+                O = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
@@ -116,7 +116,7 @@ function p(e) {
                     }
                     return i;
                 })(p, ['route']);
-            return (0, r.jsx)(d.Z, g(m({}, C), { navigateToHome: b }));
+            return (0, r.jsx)(d.Z, g(m({}, O), { navigateToHome: b }));
         default:
             (0, s.vE)(f);
     }

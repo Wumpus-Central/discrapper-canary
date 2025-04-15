@@ -1,14 +1,14 @@
-s.d(t, {
-    Lk: () => n,
-    Ps: () => r,
+r.d(t, {
+    Lk: () => i,
+    Ps: () => n,
     We: () => a,
-    _H: () => i,
+    _H: () => s,
     e: () => o,
     xB: () => l
 });
-let r = 'https://support.discord.com/hc/articles/29488603380887',
-    n = '2025-03-18T23:59:59Z',
-    i = '2025-04-17T23:59:59Z',
+let n = 'https://support.discord.com/hc/articles/29488603380887',
+    i = '2025-03-18T23:59:59Z',
+    s = '2025-04-17T23:59:59Z',
     o = {
         skuId: '1336506386296864839',
         assetId: '0b76bdeec7f2dc447844a98d799c24c4106a3a2ccdcde01adc267cbf28e85e27',

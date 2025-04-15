@@ -4,8 +4,8 @@ n(192379);
 var a = n(120356),
     i = n.n(a),
     l = n(793030),
-    o = n(194594),
-    s = n(359993),
+    s = n(194594),
+    o = n(359993),
     c = n(424472),
     d = n(682807),
     u = n(691703),
@@ -15,7 +15,7 @@ var a = n(120356),
 function g(e) {
     let { className: t, view: n, application: a } = e,
         g = 'embedded' === n,
-        _ = (0, s.Z)({ application: a });
+        _ = (0, o.Z)({ application: a });
     return (0, r.jsxs)('div', {
         className: i()(t, {
             [h.sideContainer]: !g,
@@ -33,12 +33,12 @@ function g(e) {
                                 color: 'header-primary',
                                 children: m.NW.string(m.t['3NxHCw'])
                             }),
-                            (0, r.jsx)(o.Z, {
+                            (0, r.jsx)(s.Z, {
                                 application: a,
                                 mutualGuilds: _,
                                 mutualGuildShownMax: 3,
                                 className: h.guildCountContainer,
-                                guildIconSize: o.x.SMALL,
+                                guildIconSize: s.x.SMALL,
                                 guildsClassName: h.guildsIconContainer,
                                 compact: !0
                             })

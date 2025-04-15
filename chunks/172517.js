@@ -1,9 +1,9 @@
 n.d(t, {
-    FW: () => h,
-    Pk: () => s,
-    Rq: () => m,
-    W_: () => a,
-    dK: () => l,
+    FW: () => p,
+    Pk: () => a,
+    Rq: () => f,
+    W_: () => l,
+    dK: () => o,
     qd: () => g
 }),
     n(410992),
@@ -28,8 +28,8 @@ n.d(t, {
     n(415506);
 var r = n(512722),
     i = n.n(r),
-    o = n(598077);
-function a() {
+    s = n(598077);
+function l() {
     return window.crypto.subtle.generateKey(
         {
             name: 'RSA-OAEP',
@@ -41,10 +41,10 @@ function a() {
         ['decrypt']
     );
 }
-async function l(e) {
+async function o(e) {
     return i()(null != e.publicKey, 'public key cannot be null'), btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.exportKey('spki', e.publicKey))));
 }
-async function s(e) {
+async function a(e) {
     return i()(null != e.publicKey, 'public key cannot be null'), d(await window.crypto.subtle.exportKey('spki', e.publicKey));
 }
 function c(e) {
@@ -59,7 +59,7 @@ function u(e) {
 async function d(e) {
     return c(await window.crypto.subtle.digest({ name: 'SHA-256' }, e));
 }
-function p(e, t) {
+function h(e, t) {
     return (
         i()(null != e.privateKey, 'private key cannot be null'),
         window.crypto.subtle.decrypt(
@@ -72,22 +72,22 @@ function p(e, t) {
         )
     );
 }
-async function h(e, t) {
+async function p(e, t) {
     let n = new TextDecoder(),
-        r = await p(e, u(t));
+        r = await h(e, u(t));
     return n.decode(r);
 }
 async function g(e, t) {
-    return c(await p(e, u(t)));
+    return c(await h(e, u(t)));
 }
-async function m(e, t) {
-    let n = (t = await h(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
+async function f(e, t) {
+    let n = (t = await p(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
     if (null == n) throw Error('Invalid encoded user record.');
-    let [, r, i, a, l] = n;
-    return new o.Z({
+    let [, r, i, l, o] = n;
+    return new s.Z({
         id: r,
         discriminator: i,
-        avatar: '0' === a ? null : a,
-        username: l
+        avatar: '0' === l ? null : l,
+        username: o
     });
 }

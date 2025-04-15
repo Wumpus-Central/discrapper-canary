@@ -3,8 +3,8 @@ var r = n(200651),
     a = n(192379),
     i = n(622535),
     l = n(481060),
-    o = n(783097),
-    s = n(66637),
+    s = n(783097),
+    o = n(66637),
     c = n(768581),
     d = n(956965),
     u = n(388032),
@@ -18,7 +18,7 @@ let m = function (e) {
         C = a.useCallback((e) => {
             e && v(!0);
         }, []),
-        j = (0, o.lf)(h),
+        j = (0, s.lf)(h),
         y = a.useCallback(() => {
             g(h.id);
         }, [g, h.id]),
@@ -41,7 +41,7 @@ let m = function (e) {
         children: (0, r.jsx)('div', {
             ref: f,
             className: p.container,
-            children: (0, r.jsxs)(s.Z, {
+            children: (0, r.jsxs)(o.Z, {
                 className: p.card,
                 onClick: y,
                 onContextMenu: () => {},

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => h,
-    f: () => C
+    f: () => N
 }),
     n(388685);
 var r,
@@ -64,16 +64,16 @@ function T(e, t) {
 }
 var b = (((r = b || {})[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), r);
 function h(e) {
-    let { tag: t, size: r = 1, disabled: o, className: b, onClick: h, onRemove: C, selected: N, ariaLabel: y } = e,
+    let { tag: t, size: r = 1, disabled: o, className: b, onClick: h, onRemove: N, selected: C, ariaLabel: y } = e,
         { name: P, emojiId: m, emojiName: A } = t,
-        v = null != C,
+        v = null != N,
         [L, j] = l.useState(!1),
-        D = (0, c.e7)([f.ZP], () => (null != m ? f.ZP.getUsableCustomEmojiById(m) : null)),
-        F = v || null != h,
+        F = (0, c.e7)([f.ZP], () => (null != m ? f.ZP.getUsableCustomEmojiById(m) : null)),
+        D = v || null != h,
         R = (!v || !L) && (null != m || null != A),
         w = 0 === r,
-        U = l.useRef(null),
-        M = (0, c.e7)([E.Z], () => E.Z.keyboardModeEnabled),
+        M = l.useRef(null),
+        U = (0, c.e7)([E.Z], () => E.Z.keyboardModeEnabled),
         G = (e) => {
             let r = _.Sb.getSetting();
             S.wS &&
@@ -90,7 +90,7 @@ function h(e) {
                           className: a()(I.emoji, { [I.small]: w }),
                           emojiId: m,
                           emojiName: A,
-                          animated: !!(null == D ? void 0 : D.animated),
+                          animated: !!(null == F ? void 0 : F.animated),
                           size: 'reaction'
                       })
                     : null,
@@ -118,31 +118,31 @@ function h(e) {
                 I.pill,
                 {
                     [I.disabled]: o,
-                    [I.clickable]: F,
+                    [I.clickable]: D,
                     [I.small]: w,
-                    [I.selected]: N
+                    [I.selected]: C
                 },
                 b
             ),
             onClick: (e) => {
-                null == h || h(e), null == C || C(t), M || null == U.current || U.current.blur();
+                null == h || h(e), null == N || N(t), U || null == M.current || M.current.blur();
             },
             onContextMenu: (e) => G(e),
             onMouseEnter: () => v && j(!0),
             onMouseLeave: () => v && j(!1)
         },
         H = (0, u.JA)('forum-tag-'.concat(t.id));
-    return F
+    return D
         ? (0, i.jsx)(
               s.P3F,
               T(
                   g(
                       T(g({}, H), {
-                          innerRef: U,
-                          focusProps: { ringTarget: U },
+                          innerRef: M,
+                          focusProps: { ringTarget: M },
                           'aria-label': null != y ? y : O.NW.formatToPlainString(O.t.iyRTLi, { tagName: P }),
                           role: 'button',
-                          'aria-pressed': N
+                          'aria-pressed': C
                       }),
                       x
                   ),
@@ -151,7 +151,7 @@ function h(e) {
           )
         : (0, i.jsx)('div', T(g({}, x), { children: Z }));
 }
-function C(e) {
+function N(e) {
     let { tags: t, count: n, size: r = 1 } = e,
         l = 0 === r;
     return (0, i.jsx)(s.ua7, {

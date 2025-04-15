@@ -2,7 +2,7 @@ n.d(t, { Z: () => a }), n(388685);
 var r = n(192379),
     i = n(393238);
 function a() {
-    let { ref: e, width: t } = (0, i.Z)(),
+    let { ref: e, width: t } = (0, i.ZP)(),
         [n, a] = r.useState();
     return (
         r.useEffect(() => {

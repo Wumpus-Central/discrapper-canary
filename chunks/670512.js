@@ -1,17 +1,17 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r,
     i = n(200651),
-    o = n(192379),
-    l = n(120356),
-    s = n.n(l),
+    l = n(192379),
+    o = n(120356),
+    s = n.n(o),
     a = n(748780),
     c = n(846519),
     u = n(481060),
     d = n(585483),
-    p = n(981631),
-    h = n(388032),
+    h = n(981631),
+    p = n(388032),
     f = n(762447);
-function _(e, t, n) {
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,12 +28,12 @@ let m = {
     friction: 15,
     tension: 100
 };
-class b extends (r = o.PureComponent) {
+class b extends (r = l.PureComponent) {
     componentDidMount() {
-        this.setState({ shown: !0 }), d.S.subscribe(p.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.setState({ shown: !0 }), d.S.subscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentWillUnmount() {
-        this.focusTimeout.stop(), d.S.unsubscribe(p.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.focusTimeout.stop(), d.S.unsubscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentDidUpdate() {
         let { hasQuery: e } = this.props;
@@ -55,7 +55,7 @@ class b extends (r = o.PureComponent) {
                                 })
                             )),
                             r.forEach(function (t) {
-                                _(e, t, n[t]);
+                                g(e, t, n[t]);
                             });
                     }
                     return e;
@@ -100,11 +100,11 @@ class b extends (r = o.PureComponent) {
             children: [
                 (0, i.jsx)('div', {
                     className: f.searchMessage,
-                    children: h.NW.string(h.t.Mp0IGB)
+                    children: p.NW.string(p.t.Mp0IGB)
                 }),
                 (0, i.jsx)('div', {
                     className: f.selectMessage,
-                    children: h.NW.string(h.t['3CbpwM'])
+                    children: p.NW.string(p.t['3CbpwM'])
                 })
             ]
         });
@@ -140,13 +140,13 @@ class b extends (r = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'state', {
+            g(this, 'state', {
                 shown: !1,
                 translateY: new a.Z.Value(0)
             }),
-            _(this, 'rootRef', o.createRef()),
-            _(this, 'focusTimeout', new c.V7()),
-            _(this, 'handleResultFocus', (e) => {
+            g(this, 'rootRef', l.createRef()),
+            g(this, 'focusTimeout', new c.V7()),
+            g(this, 'handleResultFocus', (e) => {
                 let { node: t } = e;
                 this.focusTimeout.start(1, () => {
                     if (this.props.hasQuery && null != t && null != this.rootRef.current) {
@@ -159,5 +159,5 @@ class b extends (r = o.PureComponent) {
             });
     }
 }
-_(b, 'contextType', u.Sfi);
-let g = b;
+g(b, 'contextType', u.Sfi);
+let _ = b;

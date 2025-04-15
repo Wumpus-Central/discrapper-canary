@@ -95,7 +95,7 @@ function N(e) {
                       'aria-label': b.NW.string(b.t.WqhZsr),
                       className: x.linkIcon,
                       onClick: () => {
-                          (0, h.JG)(T), (0, c.showToast)((0, c.createToast)(b.NW.string(b.t['L/PwZW']), c.ToastType.SUCCESS)), (0, g.Yu)(A.id, A.linkType);
+                          (0, h.JG)(T, () => (0, c.showToast)((0, c.createToast)(b.NW.string(b.t['L/PwZW']), c.ToastType.SUCCESS))), (0, g.Yu)(A.id, A.linkType);
                       },
                       children: (0, i.jsx)(c.xPt, {
                           size: 'xs',

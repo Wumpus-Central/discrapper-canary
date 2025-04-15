@@ -1,19 +1,19 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(570140),
-    l = n(317770),
+    l = n(570140),
+    o = n(317770),
     s = n(51596),
     a = n(823385),
     c = n(900085);
 let u = 'QUICK_SWITCHER_MODAL_KEY';
-class d extends l.Z {
+class d extends o.Z {
     _initialize() {
-        o.Z.subscribe('QUICKSWITCHER_SHOW', this.handleShow), o.Z.subscribe('QUICKSWITCHER_HIDE', this.handleHide);
+        l.Z.subscribe('QUICKSWITCHER_SHOW', this.handleShow), l.Z.subscribe('QUICKSWITCHER_HIDE', this.handleHide);
     }
     _terminate() {
-        o.Z.unsubscribe('QUICKSWITCHER_SHOW', this.handleShow), o.Z.unsubscribe('QUICKSWITCHER_HIDE', this.handleHide);
+        l.Z.unsubscribe('QUICKSWITCHER_SHOW', this.handleShow), l.Z.unsubscribe('QUICKSWITCHER_HIDE', this.handleHide);
     }
     handleShow() {
         a.Z.isOpen() &&
@@ -59,4 +59,4 @@ class d extends l.Z {
         (0, i.Mr3)(u);
     }
 }
-let p = new d();
+let h = new d();

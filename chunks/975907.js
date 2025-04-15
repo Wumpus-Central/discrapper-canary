@@ -3,8 +3,8 @@ var r = n(192379),
     a = n(31569),
     i = n(493646),
     l = n(881294),
-    o = n(258971),
-    s = n(133743),
+    s = n(258971),
+    o = n(133743),
     c = n(981631);
 function d(e) {
     let { initialQuery: t = '' } = e,
@@ -21,10 +21,10 @@ function d(e) {
             (0, l.zZ)(c.rMx.APP_DIRECTORY_SEARCH_STARTED, {
                 search_term: n,
                 category: e.name,
-                current_page: o.m_.HOME,
+                current_page: s.m_.HOME,
                 category_id: e.id
             }),
-                (0, s.pR)({ query: n });
+                (0, o.pR)({ query: n });
         }, [n]);
     return {
         searchQuery: n,
