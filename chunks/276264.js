@@ -240,8 +240,7 @@ let j = (0, N.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   voiceChannel: s,
                   animate: u,
                   hideEmoji: h,
-                  hasQuest: null != f,
-                  textClassName: D.activityText
+                  hasQuest: null != f
               });
     }),
     Y = i.memo(function (e) {

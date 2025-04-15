@@ -4,7 +4,6 @@ e.exports = {
     header: 'header_e73f2a',
     chevronIcon: 'chevronIcon_e73f2a',
     sectionCollapsible: 'sectionCollapsible_e73f2a',
-    activityText: 'activityText_e73f2a',
     controlButtons: 'controlButtons_e73f2a',
     controlButton: 'controlButton_e73f2a',
     searchContainer: 'searchContainer_e73f2a',

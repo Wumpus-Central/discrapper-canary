@@ -13209,7 +13209,6 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 }
 
 .text_c9d15c {
-    color: var(--text-muted);
     overflow: hidden
 }
 
@@ -15718,9 +15717,9 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     opacity: 1
 }
 
-.active__91a9d.container__91a9d,
 .clickable__91a9d.container__91a9d:active,
-.highlighted__91a9d.container__91a9d {
+.highlighted__91a9d.container__91a9d,
+.selected__91a9d.container__91a9d {
     color: var(--interactive-active)
 }
 
@@ -18455,21 +18454,18 @@ div.modalHeader_c28af8 {
 }
 
 .username__5d473 {
-    display: flex;
+    display: flex
+}
+
+.name__5d473,
+.username__5d473 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
-}
-
-.activityText__5d473 {
-    color: var(--channels-default)
 }
 
 .name__5d473 {
-    flex: 1 1 auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
+    flex: 1 1 auto
 }
 
 span.clanTag__5d473 {
@@ -18486,10 +18482,6 @@ span.clanTag__5d473 {
     box-sizing: border-box;
     height: auto;
     padding: var(--space-xxs) var(--space-16) var(--space-xxs) var(--space-xs)
-}
-
-.visual-refresh .activityText__5d473 {
-    color: var(--text-secondary)
 }
 
 .heading-sm\/normal__13cf1 {

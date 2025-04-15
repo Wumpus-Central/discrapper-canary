@@ -9,7 +9,6 @@ e.exports = {
     placeholder: 'placeholder__5d473 member__5d473',
     botTag: 'botTag__5d473',
     username: 'username__5d473',
-    activityText: 'activityText__5d473',
     name: 'name__5d473',
     clanTag: 'clanTag__5d473'
 };
