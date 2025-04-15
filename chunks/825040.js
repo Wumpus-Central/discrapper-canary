@@ -55,7 +55,7 @@ function f(e, t) {
     return i;
 }
 function _(e) {
-    var { streamId: t, paused: n, onReady: o, onResize: c, className: f } = e,
+    var { streamId: t, paused: n = !1, onReady: o, onResize: c, className: f } = e,
         _ = d(e, ['streamId', 'paused', 'onReady', 'onResize', 'className']);
     let p = i.useRef(null),
         h = i.useRef({
@@ -123,4 +123,3 @@ function _(e) {
         )
     );
 }
-_.defaultProps = { paused: !1 };

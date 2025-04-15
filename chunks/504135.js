@@ -100,13 +100,7 @@ function b(e) {
                         null != h &&
                             (0, r.jsx)('div', {
                                 className: a()(p.iconContainerLeft, { [p.iconContainerLarge]: 'lg' === g }),
-                                children: (0, r.jsx)(
-                                    h,
-                                    E(m({ color: 'currentColor' }, x), {
-                                        className: a()(p.icon, null == x ? void 0 : x.className),
-                                        isFocused: S
-                                    })
-                                )
+                                children: (0, r.jsx)(h, E(m({ color: 'currentColor' }, x), { className: a()(p.icon, null == x ? void 0 : x.className) }))
                             }),
                         (0, r.jsxs)('div', {
                             className: p.label,
@@ -131,13 +125,7 @@ function b(e) {
                             : null != o &&
                               (0, r.jsx)('div', {
                                   className: p.iconContainer,
-                                  children: (0, r.jsx)(
-                                      o,
-                                      E(m({ color: 'currentColor' }, x), {
-                                          className: a()(p.icon, null == x ? void 0 : x.className),
-                                          isFocused: S
-                                      })
-                                  )
+                                  children: (0, r.jsx)(o, E(m({ color: 'currentColor' }, x), { className: a()(p.icon, null == x ? void 0 : x.className) }))
                               }),
                         O &&
                             (0, r.jsxs)('div', {
