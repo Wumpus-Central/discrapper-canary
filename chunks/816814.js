@@ -1,45 +1,17 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => l });
 var r = n(544891),
     i = n(570140),
     s = n(325067),
     a = n(981631);
-function l(e, t) {
-    return (
-        i.Z.dispatch({ type: 'MFA_SMS_TOGGLE' }),
-        r.tn
-            .post({
-                url: e,
-                body: { password: t },
-                oldFormErrors: !0,
-                rejectWithError: !1
-            })
-            .then(
-                (e) => (i.Z.dispatch({ type: 'MFA_SMS_TOGGLE_COMPLETE' }), e),
-                (e) => {
-                    throw (i.Z.dispatch({ type: 'MFA_SMS_TOGGLE_COMPLETE' }), e);
-                }
-            )
-    );
-}
-let o = {
-    enableMFAStart: async (e) =>
-        (
-            await r.tn.post({
-                url: a.ANM.MFA_TOTP_ENABLE,
-                body: { password: e },
-                oldFormErrors: !0,
-                rejectWithError: !1
-            })
-        ).body,
+let l = {
     enable(e) {
-        let { password: t, code: n, secret: s } = e;
+        let { code: t, secret: n } = e;
         return r.tn
             .post({
                 url: a.ANM.MFA_TOTP_ENABLE,
                 body: {
-                    code: n,
-                    secret: s,
-                    password: t
+                    code: t,
+                    secret: n
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -69,8 +41,37 @@ let o = {
                 });
             });
     },
-    enableSMS: (e) => l(a.ANM.MFA_SMS_ENABLE, e),
-    disableSMS: (e) => l(a.ANM.MFA_SMS_DISABLE, e),
+    enableSMS: () => (
+        i.Z.dispatch({ type: 'MFA_SMS_TOGGLE' }),
+        r.tn
+            .post({
+                url: a.ANM.MFA_SMS_ENABLE,
+                oldFormErrors: !0,
+                rejectWithError: !1
+            })
+            .then(
+                (e) => (i.Z.dispatch({ type: 'MFA_SMS_TOGGLE_COMPLETE' }), e),
+                (e) => {
+                    throw (i.Z.dispatch({ type: 'MFA_SMS_TOGGLE_COMPLETE' }), e);
+                }
+            )
+    ),
+    disableSMS: (e) => (
+        i.Z.dispatch({ type: 'MFA_SMS_TOGGLE' }),
+        r.tn
+            .post({
+                url: a.ANM.MFA_SMS_DISABLE,
+                body: { password: e },
+                oldFormErrors: !0,
+                rejectWithError: !1
+            })
+            .then(
+                (e) => (i.Z.dispatch({ type: 'MFA_SMS_TOGGLE_COMPLETE' }), e),
+                (e) => {
+                    throw (i.Z.dispatch({ type: 'MFA_SMS_TOGGLE_COMPLETE' }), e);
+                }
+            )
+    ),
     sendMFABackupCodesVerificationKeyEmail: (e) =>
         r.tn
             .post({

@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(600164),
     h = n(144114),
     f = n(921801),
-    b = n(607018),
-    _ = n(778764),
+    _ = n(607018),
+    b = n(778764),
     N = n(314897),
     x = n(325067),
     E = n(594174),
@@ -117,75 +117,77 @@ class k extends i.PureComponent {
         let e,
             t,
             { revealed: n } = this.state,
-            { currentUser: i, togglingSMS: s } = this.props,
-            a = null != i.phone,
-            l = i.hasFlag(T.xW$.MFA_SMS);
-        if (a || l) {
-            let e = n ? i.phone : this.maskPhoneNumber(i.phone);
-            t = (0, r.jsxs)(o.R94, {
-                type: o.R94.Types.DESCRIPTION,
-                className: P.marginBottom8,
-                children: [
-                    y.NW.format(y.t.PXVoEB, { phoneNumber: e }),
-                    (0, r.jsx)(o.eee, {
-                        onClick: this.togglePhoneNumberVisibility,
-                        className: A.phoneRevealer,
-                        children: n ? y.NW.string(y.t.FfltIC) : y.NW.string(y.t.llArAg)
-                    })
-                ]
-            });
-        }
-        if (l)
-            e = (0, r.jsx)(p.Z, {
-                className: a ? '' : P.marginTop8,
-                children: (0, r.jsx)(o.zxk, {
-                    color: o.zxk.Colors.RED,
-                    look: o.zxk.Looks.OUTLINED,
-                    size: o.zxk.Sizes.SMALL,
-                    submitting: s,
-                    onClick: this.handleDisableSMS,
-                    children: y.NW.string(y.t.KLWnio)
-                })
-            });
-        else {
-            let t = (0, O.c)(i);
-            e = (0, r.jsxs)(p.Z, {
-                className: a ? '' : P.marginTop8,
-                children: [
-                    (0, r.jsx)(o.zxk, {
-                        onClick: this.handleEnableSMS,
+            { currentUser: i, togglingSMS: s, hasTOTPEnabled: a } = this.props,
+            l = null != i.phone,
+            c = i.hasFlag(T.xW$.MFA_SMS);
+        if (a) {
+            if (l || c) {
+                let e = n ? i.phone : this.maskPhoneNumber(i.phone);
+                t = (0, r.jsxs)(o.R94, {
+                    type: o.R94.Types.DESCRIPTION,
+                    className: P.marginBottom8,
+                    children: [
+                        y.NW.format(y.t.PXVoEB, { phoneNumber: e }),
+                        (0, r.jsx)(o.eee, {
+                            onClick: this.togglePhoneNumberVisibility,
+                            className: A.phoneRevealer,
+                            children: n ? y.NW.string(y.t.FfltIC) : y.NW.string(y.t.llArAg)
+                        })
+                    ]
+                });
+            }
+            if (c)
+                e = (0, r.jsx)(p.Z, {
+                    className: l ? '' : P.marginTop8,
+                    children: (0, r.jsx)(o.zxk, {
+                        color: o.zxk.Colors.RED,
+                        look: o.zxk.Looks.OUTLINED,
                         size: o.zxk.Sizes.SMALL,
                         submitting: s,
-                        disabled: null != t,
-                        children: null != t ? t : y.NW.string(y.t.DZQe29)
-                    }),
-                    a
-                        ? (0, r.jsx)(o.zxk, {
-                              onClick: this.handleChangePhoneNumber,
-                              color: o.zxk.Colors.PRIMARY,
-                              size: o.zxk.Sizes.SMALL,
-                              look: o.zxk.Looks.LINK,
-                              children: y.NW.string(y.t.Ulqq6O)
-                          })
-                        : null
-                ]
+                        onClick: this.handleDisableSMS,
+                        children: y.NW.string(y.t.KLWnio)
+                    })
+                });
+            else {
+                let t = (0, O.c)(i);
+                e = (0, r.jsxs)(p.Z, {
+                    className: l ? '' : P.marginTop8,
+                    children: [
+                        (0, r.jsx)(o.zxk, {
+                            onClick: this.handleEnableSMS,
+                            size: o.zxk.Sizes.SMALL,
+                            submitting: s,
+                            disabled: null != t,
+                            children: null != t ? t : y.NW.string(y.t.DZQe29)
+                        }),
+                        l
+                            ? (0, r.jsx)(o.zxk, {
+                                  onClick: this.handleChangePhoneNumber,
+                                  color: o.zxk.Colors.PRIMARY,
+                                  size: o.zxk.Sizes.SMALL,
+                                  look: o.zxk.Looks.LINK,
+                                  children: y.NW.string(y.t.Ulqq6O)
+                              })
+                            : null
+                    ]
+                });
+            }
+            return (0, r.jsx)(f.F, {
+                setting: v.s6.ACCOUNT_SMS_BACKUP,
+                children: (0, r.jsxs)(o.hjN, {
+                    className: P.marginTop40,
+                    title: y.NW.string(y.t.uHAJ5u),
+                    children: [
+                        (0, r.jsx)(o.R94, {
+                            type: o.R94.Types.DESCRIPTION,
+                            children: y.NW.string(y.t.fspJ4O)
+                        }),
+                        t,
+                        e
+                    ]
+                })
             });
         }
-        return (0, r.jsx)(f.F, {
-            setting: v.s6.ACCOUNT_SMS_BACKUP,
-            children: (0, r.jsxs)(o.hjN, {
-                className: P.marginTop40,
-                title: y.NW.string(y.t.uHAJ5u),
-                children: [
-                    (0, r.jsx)(o.R94, {
-                        type: o.R94.Types.DESCRIPTION,
-                        children: y.NW.string(y.t.fspJ4O)
-                    }),
-                    t,
-                    e
-                ]
-            })
-        });
     }
     renderEnabled() {
         let e,
@@ -291,7 +293,7 @@ class k extends i.PureComponent {
                 this.renderMFASMS(),
                 (0, r.jsx)(f.F, {
                     setting: v.s6.ACCOUNT_SECURITY_KEYS,
-                    children: (0, r.jsx)(_.Z, {})
+                    children: (0, r.jsx)(b.Z, {})
                 })
             ]
         });
@@ -312,7 +314,7 @@ class k extends i.PureComponent {
                         children: y.NW.string(y.t.cDgKtb)
                     })
                 }),
-                (0, r.jsx)(_.Z, {})
+                (0, r.jsx)(b.Z, {})
             ]
         });
     }
@@ -340,7 +342,7 @@ class k extends i.PureComponent {
     }
     openPhoneVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, o.h7j)((t) => (0, r.jsx)(b.default, D({ reason: h.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: I.M });
+        (0, o.h7j)((t) => (0, r.jsx)(_.default, D({ reason: h.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: I.M });
     }
     constructor(...e) {
         super(...e),
@@ -366,7 +368,7 @@ class k extends i.PureComponent {
             R(this, 'sendMFABackupCodesVerificationKeyEmail', () => {
                 (0, o.h7j)((e) =>
                     (0, r.jsx)(
-                        g.default,
+                        g.Z,
                         Z(D({}, e), {
                             handleSubmit: (e) =>
                                 c.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
@@ -414,24 +416,13 @@ class k extends i.PureComponent {
                 this.openPhoneVerificationModal();
             }),
             R(this, 'handleEnableSMS', () => {
-                let { currentUser: e } = this.props,
-                    t = () => {
-                        (0, o.h7j)((e) =>
-                            (0, r.jsx)(
-                                g.default,
-                                Z(D({}, e), {
-                                    handleSubmit: c.Z.enableSMS,
-                                    title: y.NW.string(y.t.DZQe29)
-                                })
-                            )
-                        );
-                    };
-                null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: t }) : t();
+                let { currentUser: e } = this.props;
+                null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: c.Z.enableSMS }) : c.Z.enableSMS();
             }),
             R(this, 'handleDisableSMS', () => {
                 (0, o.h7j)((e) =>
                     (0, r.jsx)(
-                        g.default,
+                        g.Z,
                         Z(D({}, e), {
                             handleSubmit: c.Z.disableSMS,
                             title: y.NW.string(y.t.KLWnio),
