@@ -2228,6 +2228,7 @@ var N =
     (r.COLLECTIBLES_EXPIRY_MODAL_CLOSED = 'collectibles_expiry_modal_closed'),
     (r.COLLECTIBLES_TILE_IMPRESSION = 'collectibles_tile_impression'),
     (r.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED = 'collectibles_share_link_button_clicked'),
+    (r.COLLECTIBLES_SHOP_PERF_TRACKED = 'collectibles_shop_perf_tracked'),
     (r.CONSUMABLE_HD_STREAMING_ENTRYPOINT = 'consumable_hd_streaming_entrypoint'),
     (r.CONFETTI_POTION_TRIGGERED = 'confetti_potion_triggered'),
     (r.CONFETTI_POTION_ENTRYPOINT_CLICKED = 'confetti_potion_entrypoint_clicked'),
