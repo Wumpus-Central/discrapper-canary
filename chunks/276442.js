@@ -5,11 +5,11 @@ var r = n(512722),
     a = n(639119),
     s = n(3409),
     l = n(626135),
-    c = n(987209),
-    u = n(563132),
-    d = n(409813),
-    f = n(45572),
-    _ = n(737143),
+    c = n(358085),
+    u = n(987209),
+    d = n(563132),
+    f = n(409813),
+    _ = n(45572),
     p = n(981631),
     h = n(474936);
 function m(e, t, n) {
@@ -65,9 +65,9 @@ function b(e, t) {
     );
 }
 function y(e) {
-    let { analyticsData: t, initialPlanId: n, breadcrumbSteps: r, handleStepChange: m, referralTrialOfferId: E, onReturn: y, continueSessionToInitialStep: v } = e,
-        { contextMetadata: O, step: I, paymentSources: S, paymentSourceId: T, setPaymentSourceId: N, purchaseError: A, setPurchaseError: C, purchaseErrorBlockRef: R, paymentAuthenticationState: P, selectedSkuId: w, activeSubscription: D, previousStepRef: L, setPurchaseState: x } = (0, u.JL)(),
-        { isGift: M } = (0, c.wD)(),
+    let { analyticsData: t, initialPlanId: n, breadcrumbSteps: r, handleStepChange: c, referralTrialOfferId: m, onReturn: E, continueSessionToInitialStep: y } = e,
+        { contextMetadata: O, step: I, paymentSources: S, paymentSourceId: T, setPaymentSourceId: N, purchaseError: A, setPurchaseError: C, purchaseErrorBlockRef: R, paymentAuthenticationState: P, selectedSkuId: w, activeSubscription: D, previousStepRef: L, setPurchaseState: x } = (0, d.JL)(),
+        { isGift: M } = (0, u.wD)(),
         k = b(g({}, (0, s.fL)()), {
             paymentSources: S,
             paymentSourceId: T,
@@ -79,26 +79,26 @@ function y(e) {
             selectedSkuId: w,
             isGift: M
         }),
-        j = (0, a.N)(E),
+        j = (0, a.N)(m),
         U = !M && null != j && null != w && h.nG[j.trial_id].skus.includes(w),
         G = () => {
-            m(Object.values(S).length < 1 && null == n ? d.h8.PLAN_SELECT : d.h8.REVIEW, { trackedFromStep: d.h8.PAYMENT_TYPE });
+            c(Object.values(S).length < 1 && null == n ? f.h8.PLAN_SELECT : f.h8.REVIEW, { trackedFromStep: f.h8.PAYMENT_TYPE });
         },
-        B = null != y ? y : G;
+        B = null != E ? E : G;
     i()(I, 'Step should be set here');
     let F = (0, o.Z)(() => Date.now(), [I]),
-        V = null != v && null == L.current ? v : d.h8.PAYMENT_TYPE;
+        V = null != y && null == L.current ? y : f.h8.PAYMENT_TYPE;
     return (0, s.vP)({
         paymentModalArgs: k,
         initialStep: V,
-        prependSteps: [d.h8.PROMOTION_INFO],
-        appendSteps: [d.h8.REVIEW, d.h8.CONFIRM],
+        prependSteps: [f.h8.PROMOTION_INFO],
+        appendSteps: [f.h8.REVIEW, f.h8.CONFIRM],
         breadcrumpSteps: r,
         currentBreadcrumpStep: I,
         usePaymentModalStep: !0,
         onReturn: B,
         onComplete: (e) => {
-            d.Nj.has(e) ? (x(f.A.COMPLETED), m(d.h8.CONFIRM, { trackedFromStep: e })) : m(d.h8.REVIEW, { trackedFromStep: e });
+            f.Nj.has(e) ? (x(_.A.COMPLETED), c(f.h8.CONFIRM, { trackedFromStep: e })) : c(f.h8.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
             let { currentStep: n, toStep: r } = e,
@@ -114,6 +114,9 @@ function y(e) {
             );
         },
         isEligibleForTrial: U,
-        allowDesktopRedirectPurchase: (0, _.tr)(w, M, D)
+        allowDesktopRedirectPurchase: v(w, M, D)
     });
+}
+function v(e, t, n) {
+    return (0, c.isDesktop)() && null != e && [h.Si.TIER_0, h.Si.TIER_2].includes(e) && !t && null == n;
 }

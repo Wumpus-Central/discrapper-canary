@@ -1,6 +1,6 @@
 n.d(t, {
-    M: () => N,
-    a: () => A
+    M: () => I,
+    a: () => S
 }),
     n(190126),
     n(368063),
@@ -23,25 +23,22 @@ var r = n(200651),
     _ = n(987209),
     p = n(563132),
     h = n(409813),
-    m = n(620824),
-    g = n(737143),
-    E = n(926841),
-    b = n(362755),
-    y = n(981631),
-    v = n(474936),
-    O = n(388032),
-    I = n(940667);
-let S = 1000;
-function T(e, t, n, r, i) {
-    let s = y.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, i),
-        l = new URL(f.Z.makeUrl(y.Z5c.BILLING_LOGIN_HANDOFF)),
+    m = n(362755),
+    g = n(981631),
+    E = n(474936),
+    b = n(388032),
+    y = n(940667);
+let v = 1000;
+function O(e, t, n, r, i) {
+    let s = g.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, i),
+        l = new URL(f.Z.makeUrl(g.Z5c.BILLING_LOGIN_HANDOFF)),
         c = (0, o.Z)();
     return (
         l.searchParams.append('handoff_key', c),
         l.searchParams.append('redirect_to', s),
         a.tn
             .post({
-                url: y.ANM.HANDOFF,
+                url: g.ANM.HANDOFF,
                 body: { key: c },
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -56,54 +53,47 @@ function T(e, t, n, r, i) {
             )
     );
 }
-let N = (e) => {
+let I = (e) => {
         let t,
-            n,
-            { step: o, onPurchaseComplete: a, onHandoffFailure: u } = e,
-            { selectedPlan: d, setSelectedPlanId: f, setSelectedSkuId: N, browserCheckoutState: A, browserCheckoutStateLoadId: C, browserCheckoutStateSkuId: R, browserCheckoutStatePlanId: P, contextMetadata: w } = (0, p.JL)(),
-            { isGift: D } = (0, _.wD)(),
-            [L, x] = i.useState(!1);
-        switch (o) {
+            { step: n, onPurchaseComplete: o, onHandoffFailure: a } = e,
+            { selectedPlan: u, setSelectedPlanId: d, setSelectedSkuId: f, browserCheckoutState: I, browserCheckoutStateLoadId: S, browserCheckoutStateSkuId: T, browserCheckoutStatePlanId: N, contextMetadata: A } = (0, p.JL)(),
+            { isGift: C } = (0, _.wD)(),
+            [R, P] = i.useState(!1);
+        switch (n) {
             case h.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
-                (t = y.i$l.GOOGLE_PAY), (n = (0, E.a)());
+                t = g.i$l.GOOGLE_PAY;
                 break;
             case h.h8.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
-                (t = y.i$l.APPLE_PAY), (n = (0, m.b)());
-                break;
-            default:
-                n = (0, g.q1)();
+                t = g.i$l.APPLE_PAY;
         }
         return (
             i.useEffect(() => {
-                let e = setTimeout(
-                    () => {
-                        var e;
-                        L || (x(!0), (0, l.r5)(w.loadId), T(null != (e = null == d ? void 0 : d.id) ? e : v.Xh.PREMIUM_MONTH_TIER_2, D, w.loadId, u, t));
-                    },
-                    n.delay ? S : 0
-                );
+                let e = setTimeout(() => {
+                    var e;
+                    R || (P(!0), (0, l.r5)(A.loadId), O(null != (e = null == u ? void 0 : u.id) ? e : E.Xh.PREMIUM_MONTH_TIER_2, C, A.loadId, a, t));
+                }, v);
                 return () => clearTimeout(e);
-            }, [d, D, w, u, x, L, t, n.delay]),
+            }, [u, C, A, a, P, R, t]),
             i.useEffect(() => {
-                null !== R && (v.YQ.includes(R) && ((0, c.GZ)(R), (0, l.jg)()), N(R)), null !== P && f(P), C === w.loadId && A === b.Y.DONE && a();
-            }, [N, f, A, C, R, P, w, a]),
+                null !== T && (E.YQ.includes(T) && ((0, c.GZ)(T), (0, l.jg)()), f(T)), null !== N && d(N), S === A.loadId && I === m.Y.DONE && o();
+            }, [f, d, I, S, T, N, A, o]),
             (0, r.jsxs)('div', {
-                className: I.body,
+                className: y.body,
                 children: [
                     (0, r.jsx)(s.X6q, {
                         variant: 'heading-xl/bold',
-                        children: O.NW.string(O.t.C4HYf3)
+                        children: b.NW.string(b.t.C4HYf3)
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: 'text-md/normal',
-                        className: I.description,
-                        children: O.NW.string(O.t.xfG7Ji)
+                        className: y.description,
+                        children: b.NW.string(b.t.xfG7Ji)
                     })
                 ]
             })
         );
     },
-    A = (e) => {
+    S = (e) => {
         let { onPrimaryClick: t, onBackClick: n } = e;
         return (0, r.jsx)('div', {
             children: (0, r.jsxs)(s.mzw, {
@@ -112,7 +102,7 @@ let N = (e) => {
                 children: [
                     (0, r.jsx)(d.y, {
                         onClick: t,
-                        children: O.NW.string(O.t['4Qvmmp'])
+                        children: b.NW.string(b.t['4Qvmmp'])
                     }),
                     (0, r.jsx)(d.Z, { onClick: n })
                 ]
