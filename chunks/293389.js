@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(320724),
     h = n(297700),
     f = n(77498),
-    b = n(283595),
-    _ = n(626135),
+    _ = n(283595),
+    b = n(626135),
     N = n(251625),
     x = n(358085),
     E = n(210887),
@@ -124,7 +124,7 @@ function D(e) {
 function Z(e) {
     var t;
     let { rawGame: n, nowPlaying: s = !1, isOverride: p } = e,
-        N = (0, l.cj)([g.ZP, f.Z, b.Z], () => (0, g.FZ)(n, [g.ZP, f.Z, b.Z])),
+        N = (0, l.cj)([g.ZP, f.Z, _.Z], () => (0, g.FZ)(n, [g.ZP, f.Z, _.Z])),
         [x, E] = i.useState(!1),
         [S, I] = i.useState(null != (t = N.name) ? t : '???'),
         P = a()(v.flexCenter, {
@@ -139,7 +139,7 @@ function Z(e) {
     function Z() {
         if (x) return;
         let e = null != N.id ? f.Z.getDetectableGame(N.id) : null;
-        _.default.track(j.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
+        b.default.track(j.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
             game_name: N.name
         }),

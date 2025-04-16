@@ -52,7 +52,7 @@ let E = i.forwardRef(function (e, t) {
             [n, E, y, R, f, g]
         );
     return null != y
-        ? (0, s.jsx)(o.default, {
+        ? (0, s.jsx)(o.Z, {
               onClose: E,
               transitionState: m,
               title: p.NW.string(p.t.ZtCDc3),

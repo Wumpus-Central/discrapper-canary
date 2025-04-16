@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(208049),
     h = n(763296),
     f = n(242291),
-    b = n(893663),
-    _ = n(331642),
+    _ = n(893663),
+    b = n(331642),
     N = n(63063),
     x = n(581883),
     E = n(738486),
@@ -61,9 +61,9 @@ function R(e) {
     let { refreshStyles: t } = e,
         { analyticsLocations: n } = (0, d.ZP)(),
         [s, c] = i.useState(v.hY),
-        g = (0, b.tT)(s),
+        g = (0, _.tT)(s),
         x = A(g),
-        j = (null == g ? void 0 : g.type) === b.zx.GLOBAL,
+        j = (null == g ? void 0 : g.type) === _.zx.GLOBAL,
         C = (0, l.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != g && null == x;
     i.useEffect(() => {
         C && (0, f.tt)({ location: n });
@@ -106,7 +106,7 @@ function R(e) {
                     }),
                     forcedDivider: !t,
                     children: [
-                        (0, r.jsx)(_.Z, {
+                        (0, r.jsx)(b.Z, {
                             sound: x,
                             isGlobal: j,
                             onSelect: (e) => {

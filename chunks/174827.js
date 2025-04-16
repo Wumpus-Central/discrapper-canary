@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(987209),
     b = n(563132),
     T = n(409813),
-    M = n(107998),
-    P = n(51499),
+    P = n(107998),
+    M = n(51499),
     O = n(456251),
     Z = n(614277),
     v = n(435020),
@@ -42,7 +42,7 @@ function H(e) {
     let { handleStepChange: W, initialPlanId: G, planGroup: D, subscriptionTier: Y, trialId: z, referralTrialOfferId: K, handleClose: X } = e,
         { activeSubscription: V, hasFetchedSubscriptions: Q, paymentSourceId: q, paymentSources: J, selectedSkuId: $, selectedPlan: ee, step: et, defaultPlanId: en, priceOptions: er, isPremium: ei } = (0, b.JL)(),
         { isGift: el, giftRecipient: es, giftMessage: eo, claimableRewards: ea } = (0, N.wD)(),
-        { paymentModalBanner: eC } = (0, M.zb)(),
+        { paymentModalBanner: eC } = (0, P.zb)(),
         ed = (0, p.a5)(ee),
         ec = (null == (t = (0, _.Z)()) ? void 0 : t.planSelectionBanner) != null,
         eu = el && ed && null != ea && ea.length > 0 && ec,
@@ -76,7 +76,7 @@ function H(e) {
             }
         ],
         [eb, eT] = i.useState(eS),
-        [eM, eP] = (0, u.ED)({
+        [eP, eM] = (0, u.ED)({
             items: eN,
             renewal: !1,
             preventFetch: !eS,
@@ -86,23 +86,23 @@ function H(e) {
             currency: er.currency
         });
     i.useEffect(() => {
-        eS && eT((null == eM ? void 0 : eM.subscriptionPeriodEnd) == null);
-    }, [eM, eS]),
+        eS && eT((null == eP ? void 0 : eP.subscriptionPeriodEnd) == null);
+    }, [eP, eS]),
         (0, C.Z)(
             'Payment Modal Plan Select Step',
             eb,
             5,
             {
-                proratedInvoicePreview: eM,
-                proratedInvoiceError: eP,
+                proratedInvoicePreview: eP,
+                proratedInvoiceError: eM,
                 isEligibleForOffer: eS
             },
             { tags: { app_context: 'billing' } }
         );
-    let eO = null != (H = null == eP ? void 0 : eP.message) ? H : F.NW.string(F.t.R0RpRU),
-        eZ = eS && null == eP,
-        ev = eS && null != eP,
-        eA = eZ && null == V && !!eS && (null == eM ? void 0 : eM.subscriptionPeriodEnd) == null,
+    let eO = null != (H = null == eM ? void 0 : eM.message) ? H : F.NW.string(F.t.R0RpRU),
+        eZ = eS && null == eM,
+        ev = eS && null != eM,
+        eA = eZ && null == V && !!eS && (null == eP ? void 0 : eP.subscriptionPeriodEnd) == null,
         ek = !el && (null == eI ? void 0 : eI.skuId) === R.Si.TIER_2 && (null == ef ? void 0 : ef.referrer_id) != null,
         eU = null;
     return ((eU = null != eC ? eC : ek ? (0, r.jsx)(m.Z, {}) : (0, r.jsx)(j.Z, {})), eA)
@@ -112,7 +112,7 @@ function H(e) {
           (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(A.P, { giftMessage: eo }),
-                  !(el && (0, E.pO)(es)) && (0, r.jsx)(P.Z, { isEligibleForTrial: ej }),
+                  !(el && (0, E.pO)(es)) && (0, r.jsx)(M.Z, { isEligibleForTrial: ej }),
                   (0, r.jsxs)(Z.C3, {
                       children: [
                           eZ && (0, r.jsx)('hr', { className: B.planSelectSeparatorUpper }),
@@ -127,8 +127,8 @@ function H(e) {
                                     referralTrialOfferId: K,
                                     selectedPlanId: null == ee ? void 0 : ee.id,
                                     planGroup: D,
-                                    subscriptionPeriodEnd: null == eM ? void 0 : eM.subscriptionPeriodEnd,
-                                    discountInvoiceItems: eg ? (null == eM ? void 0 : eM.invoiceItems) : void 0,
+                                    subscriptionPeriodEnd: null == eP ? void 0 : eP.subscriptionPeriodEnd,
+                                    discountInvoiceItems: eg ? (null == eP ? void 0 : eP.invoiceItems) : void 0,
                                     useCompactGiftComponents: eu,
                                     handleClose: X
                                 }),

@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(780771),
     h = n(4242),
     f = n(996746),
-    b = n(711325),
-    _ = n(852630),
+    _ = n(711325),
+    b = n(852630),
     N = n(731994),
     x = n(396921);
 function E(e) {
@@ -66,7 +66,7 @@ function C() {
         [s, a] = (0, i.useState)(!1),
         [l, c] = (0, i.useState)(null),
         m = (0, g.ZP)((e) => e.toolsCache),
-        { setToolsCache: f, removeToolsCache: _ } = (0, g.L3)(),
+        { setToolsCache: f, removeToolsCache: b } = (0, g.L3)(),
         { setImgCache: C } = (0, g.W_)(),
         A = (0, i.useCallback)(
             (e) => {
@@ -104,9 +104,9 @@ function C() {
         }, []),
         R = (0, i.useCallback)(
             (e) => {
-                _(e);
+                b(e);
             },
-            [_]
+            [b]
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -142,7 +142,7 @@ function C() {
                             t && (0, r.jsx)(u.i, {}),
                             ' ',
                             s &&
-                                (0, r.jsx)(b.Z, {
+                                (0, r.jsx)(_.Z, {
                                     selected: null == l || null == (e = l.palette) ? void 0 : e.name,
                                     onSelect: (e) => {
                                         (null == l ? void 0 : l.src) != null && f(l.src, l.src, e), P(e);
@@ -352,7 +352,7 @@ function I(e) {
                     variant: 'text-sm/semibold',
                     children: 'DEFAULT'
                 }),
-                (0, r.jsx)(_.Z, { nameplate: t }),
+                (0, r.jsx)(b.Z, { nameplate: t }),
                 (0, r.jsx)(o.Text, {
                     className: x.label,
                     variant: 'text-sm/semibold',
@@ -360,11 +360,11 @@ function I(e) {
                 }),
                 (0, r.jsxs)('div', {
                     children: [
-                        (0, r.jsx)(_.Z, {
+                        (0, r.jsx)(b.Z, {
                             selected: !0,
                             nameplate: t
                         }),
-                        (0, r.jsx)(_.Z, { selected: !0 })
+                        (0, r.jsx)(b.Z, { selected: !0 })
                     ]
                 })
             ]

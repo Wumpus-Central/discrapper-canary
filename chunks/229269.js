@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(439021),
     h = n(450272),
     f = n(388032),
-    b = n(296576),
-    _ = n(423931);
+    _ = n(296576),
+    b = n(423931);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,7 +68,7 @@ function E() {
                 (0, r.jsx)(o.Text, {
                     variant: 'text-md/normal',
                     color: 'info-help-text',
-                    className: b.labelSpacing,
+                    className: _.labelSpacing,
                     children: 'Payment-method-specific components and views may not appear for you unless your browser is supported for that payment method and they have been configured on your browser.'
                 }),
                 (0, r.jsx)(j, {}),
@@ -142,16 +142,16 @@ function C(e) {
 function O(e) {
     let { children: t, footer: n, className: i } = e;
     return (0, r.jsx)('div', {
-        className: l()(_.root, _.focusLock, _.small, _.rootWithShadow, b.modal, i),
+        className: l()(b.root, b.focusLock, b.small, b.rootWithShadow, _.modal, i),
         'aria-label': f.NW.string(f.t.eQ2bLi),
         children: (0, r.jsxs)('form', {
-            className: b.form,
+            className: _.form,
             onSubmit: (e) => {
                 e.preventDefault();
             },
             children: [
                 (0, r.jsx)(o.hzk, {
-                    className: b.scrollerContent,
+                    className: _.scrollerContent,
                     children: t
                 }),
                 n
@@ -186,9 +186,9 @@ function S(e) {
 function v(e) {
     let { children: t } = e;
     return (0, r.jsx)(O, {
-        className: b.choosePaymentTypeModal,
+        className: _.choosePaymentTypeModal,
         children: (0, r.jsx)('div', {
-            className: b.choosePaymentTypeContainer,
+            className: _.choosePaymentTypeContainer,
             children: t
         })
     });
@@ -301,7 +301,7 @@ function D() {
         [l, c] = i.useState(R(P)),
         [d, m] = i.useState(P),
         [g, p] = i.useState(null),
-        [f, _] = i.useState(
+        [f, b] = i.useState(
             (0, r.jsx)(h.DS, {
                 errorLabel: I.CONFIGURABLE,
                 elementOptions: A,
@@ -317,16 +317,16 @@ function D() {
         children: [
             (0, r.jsxs)(o.Text, {
                 variant: 'text-md/normal',
-                className: b.labelSpacing,
+                className: _.labelSpacing,
                 children: ['Try configuring options for the Stripe Element container and Express Checkout Element here. Not all settings will change the appearance or functionality of the checkout button - use this to figure out the customizability of the Express Checkout Element.', (0, r.jsx)('br', {}), (0, r.jsx)('br', {}), 'Start by changing the `borderRadius` or `buttonHeight` as a test!']
             }),
             (0, r.jsxs)(o.Text, {
                 variant: 'text-md/normal',
-                className: b.labelSpacing,
+                className: _.labelSpacing,
                 children: [(0, r.jsx)('b', { children: 'elements.options:' }), (0, r.jsx)('br', {}), (0, r.jsx)(h.lD, { href: 'https://github.com/stripe/stripe-js/blob/master/types/stripe-js/elements-group.d.ts#L632' })]
             }),
             (0, r.jsx)(o.Kx8, {
-                className: b.textarea,
+                className: _.textarea,
                 placeholder: 'Stripe Elements Container Options',
                 showCharacterCount: !0,
                 value: e,
@@ -334,11 +334,11 @@ function D() {
             }),
             (0, r.jsxs)(o.Text, {
                 variant: 'text-md/normal',
-                className: b.labelSpacing,
+                className: _.labelSpacing,
                 children: [(0, r.jsx)('b', { children: 'expressCheckoutElement.options:' }), (0, r.jsx)('br', {}), (0, r.jsx)(h.lD, { href: 'https://github.com/stripe/stripe-js/blob/master/types/stripe-js/elements/express-checkout.d.ts#L314' }), (0, r.jsx)('br', {}), (0, r.jsx)(h.lD, { href: 'https://docs.stripe.com/elements/express-checkout-element/migration#customize-express-checkout-element' })]
             }),
             (0, r.jsx)(o.Kx8, {
-                className: b.textarea,
+                className: _.textarea,
                 placeholder: 'Stripe Express Checkout Element Options',
                 showCharacterCount: !0,
                 value: l,
@@ -351,7 +351,7 @@ function D() {
                     children: g
                 }),
             (0, r.jsx)(o.zxk, {
-                className: b.applyChangesButton,
+                className: _.applyChangesButton,
                 color: o.zxk.Colors.BRAND,
                 look: o.zxk.Looks.FILLED,
                 size: o.zxk.Sizes.SMALL,
@@ -359,13 +359,13 @@ function D() {
                     try {
                         let t = JSON.parse(e),
                             n = JSON.parse(l);
-                        _(null),
-                            _(
+                        b(null),
+                            b(
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsxs)(o.Text, {
                                             variant: 'text-md/normal',
-                                            className: b.labelSpacing,
+                                            className: _.labelSpacing,
                                             children: ['Element updated at: ', new Date().toString()]
                                         }),
                                         (0, r.jsx)(h.DS, {
@@ -392,20 +392,20 @@ function D() {
             }),
             (0, r.jsx)(o.Text, {
                 variant: 'text-md/normal',
-                className: b.labelSpacing,
+                className: _.labelSpacing,
                 children: 'Current Element Options:'
             }),
             (0, r.jsx)(u.Z, {
-                className: b.markdown,
+                className: _.markdown,
                 children: ''.concat('``', ' ').concat(R(n), ' ').concat('``')
             }),
             (0, r.jsx)(o.Text, {
                 variant: 'text-md/normal',
-                className: b.labelSpacing,
+                className: _.labelSpacing,
                 children: 'Current Express Checkout Element Options:'
             }),
             (0, r.jsx)(u.Z, {
-                className: b.markdown,
+                className: _.markdown,
                 children: ''.concat('``', ' ').concat(R(d), ' ').concat('``')
             }),
             f
@@ -443,11 +443,11 @@ function Z() {
                             children: [
                                 (0, r.jsx)(o.Text, {
                                     variant: 'text-md/normal',
-                                    className: b.labelSpacing,
+                                    className: _.labelSpacing,
                                     children: 'expressCheckoutElement.options:'
                                 }),
                                 (0, r.jsx)(u.Z, {
-                                    className: b.markdown,
+                                    className: _.markdown,
                                     children: ''.concat('``').concat(R(y[e]), ' ').concat('``')
                                 }),
                                 (0, r.jsx)(h.DS, {

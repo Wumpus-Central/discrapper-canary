@@ -43,7 +43,7 @@ function u(e) {
 let m = function (e) {
     let { onClose: t, onClaim: n, code: m, outboundPromotion: g, transitionState: p } = e,
         [h, f] = i.useState(null),
-        b = (0, l.Dt)();
+        _ = (0, l.Dt)();
     return (
         i.useEffect(() => {
             null == m &&
@@ -56,7 +56,7 @@ let m = function (e) {
         }, [m, g.id, n]),
         (0, r.jsx)(s.Y0X, {
             transitionState: p,
-            'aria-labelledby': b,
+            'aria-labelledby': _,
             children:
                 null != h
                     ? (0, r.jsx)(u, { onClose: t })

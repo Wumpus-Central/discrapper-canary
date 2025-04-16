@@ -14,8 +14,8 @@ var l = n(149765),
     p = n(795513),
     h = n(685736),
     f = n(266750),
-    b = n(768910),
-    _ = n(632093),
+    _ = n(768910),
+    b = n(632093),
     N = n(347994),
     x = n(591526),
     E = n(261875),
@@ -83,8 +83,8 @@ async function G(e, t, n) {
         h = O.Z.fetchGuildCache.measureAsync(() => z(e, n)),
         f = null != e ? a.Z.timeAsync('\uD83D\uDCBE', 'cache: private_channels', () => x.Z.getAsync(e, null)) : Promise.resolve([]),
         E = null == e ? Promise.resolve({}) : a.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => N.Z.getAll(e)),
-        j = null == e ? Promise.resolve([]) : a.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => b.Z.getAll(e)),
-        S = null == e ? Promise.resolve([]) : a.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => _.Z.getAll(e)),
+        j = null == e ? Promise.resolve([]) : a.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => _.Z.getAll(e)),
+        S = null == e ? Promise.resolve([]) : a.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => b.Z.getAll(e)),
         [[I, y], A, R, Z, w, k, W] = await Promise.all([g, p, h, f, E, j, S]),
         L = performance.now() - m;
     if ((D.verbose('cache loaded in '.concat(L, 'ms (channel_history ').concat(I, 'ms)')), null == y)) return (0, P.Z)('database:history_cache_null'), D.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0];
@@ -280,8 +280,8 @@ async function Y(e, t, n, r) {
                 let [n, r] = t;
                 return e + r.length;
             }, 0),
-            b = p - f,
-            _ = 0 === o.stale.length ? '' : ' \xB7 '.concat(o.stale.join(', '));
+            _ = p - f,
+            b = 0 === o.stale.length ? '' : ' \xB7 '.concat(o.stale.join(', '));
         D.verbose(
             'lazy_cache_summary: (\n        ok: true\n        meta:\n          auth_user_id: '
                 .concat(t, '\n          initial_guild: ')
@@ -292,9 +292,9 @@ async function Y(e, t, n, r) {
                 .concat(s.length, '\n            basic_channels:\n              total: ')
                 .concat(p, ' (')
                 .concat(o.channels.length, ' guilds)\n              stale: ')
-                .concat(b, ' (')
+                .concat(_, ' (')
                 .concat(o.stale.length, ' guilds')
-                .concat(_, ')\n              unstale: ')
+                .concat(b, ')\n              unstale: ')
                 .concat(f, '\n            full_channels (guilds_with_stale_basic_channels):\n              total: ')
                 .concat(m, ' (')
                 .concat(c.length, ' guilds)\n      )')
@@ -303,7 +303,7 @@ async function Y(e, t, n, r) {
                 guilds: s.length,
                 privateChannels: r,
                 basicChannels: p,
-                basicChannelsStale: b,
+                basicChannelsStale: _,
                 fullChannels: m,
                 fullChannelGuilds: g
             });

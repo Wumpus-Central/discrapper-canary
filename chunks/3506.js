@@ -14,8 +14,8 @@ var i = n(512722),
     p = n(594190),
     h = n(212632),
     f = n(444295),
-    b = n(486016),
-    _ = n(809357),
+    _ = n(486016),
+    b = n(809357),
     N = n(371651),
     x = n(624864),
     E = n(957148),
@@ -39,7 +39,7 @@ function P(e) {
         enabled: C.default.enabled,
         notifications_enabled: r,
         notifications_position: r ? n : null,
-        text_notifications_mode: x.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT) ? 'DISABLED' : 'ENABLED',
+        text_notifications_mode: x.Z.isNotificationDisabled(_.OverlayNotificationDisabledSetting.TEXT_CHAT) ? 'DISABLED' : 'ENABLED',
         hotkey: null != i ? (0, v.BB)(i.shortcut) : null,
         text_activation_hotkey: null != s ? (0, v.BB)(s.shortcut) : null,
         text_opacity_slider: O.default.getTextWidgetOpacity(),
@@ -70,10 +70,10 @@ function D(e) {
             displayUserMode: O.default.getDisplayUserMode(),
             notificationPositionMode: O.default.getNotificationPositionMode(),
             shouldShowKeybindIndicators: O.default.showKeybindIndicators,
-            textChatDisabled: x.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT)
+            textChatDisabled: x.Z.isNotificationDisabled(_.OverlayNotificationDisabledSetting.TEXT_CHAT)
         })),
         W = (0, o.e7)([j.ZP], () => j.ZP.getOverlayKeybind()),
-        L = (0, _.Z)({ location: 'overlay_user_settings' }),
+        L = (0, b.Z)({ location: 'overlay_user_settings' }),
         B = (0, g.$1)(),
         M = P(A);
     return (
@@ -257,8 +257,8 @@ function D(e) {
                                 value: w !== T._vf.DISABLED && !Z,
                                 disabled: w === T._vf.DISABLED,
                                 onChange: function () {
-                                    let e = x.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT);
-                                    u.Z.setNotificationDisabledSetting(b.OverlayNotificationDisabledSetting.TEXT_CHAT, !e);
+                                    let e = x.Z.isNotificationDisabled(_.OverlayNotificationDisabledSetting.TEXT_CHAT);
+                                    u.Z.setNotificationDisabledSetting(_.OverlayNotificationDisabledSetting.TEXT_CHAT, !e);
                                 },
                                 hideBorder: !0,
                                 children: I.NW.string(I.t.Fy5kPj)

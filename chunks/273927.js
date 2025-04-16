@@ -18,8 +18,8 @@ var r = n(200651),
     p = n(63063),
     h = n(838436),
     f = n(526761),
-    b = n(726985),
-    _ = n(981631),
+    _ = n(726985),
+    b = n(981631),
     N = n(388032),
     x = n(569834);
 function E(e) {
@@ -55,15 +55,15 @@ function j(e) {
     let { userId: n, last: s } = e,
         p = (0, l.e7)([m.Z], () => m.Z.isBlocked(n)),
         h = (0, l.e7)([g.default], () => g.default.getUser(n)),
-        [f, b] = i.useState(!1),
-        _ = i.useCallback(() => {
-            b(!0),
+        [f, _] = i.useState(!1),
+        b = i.useCallback(() => {
+            _(!0),
                 p
                     ? c.Z.unblockUser(n).catch(() => {
-                          b(!1);
+                          _(!1);
                       })
                     : c.Z.unignoreUser(n, u.Z.USER_SETTINGS).catch(() => {
-                          b(!1);
+                          _(!1);
                       });
         }, [p, n]);
     return null == h
@@ -97,7 +97,7 @@ function j(e) {
                   }),
                   (0, r.jsx)(o.zxk, {
                       color: o.Ttl.PRIMARY,
-                      onClick: _,
+                      onClick: b,
                       submitting: f,
                       children: N.NW.string(p ? N.t.XyHpKC : N.t['8wXU9P'])
                   })
@@ -152,7 +152,7 @@ function C(e) {
 function O() {
     let e = (0, l.Wu)([m.Z], () => m.Z.getBlockedIDs());
     return (0, r.jsx)(C, {
-        setting: b.s6.BLOCKED_USERS,
+        setting: _.s6.BLOCKED_USERS,
         userIds: e,
         listType: 'blocked'
     });
@@ -160,20 +160,20 @@ function O() {
 function S() {
     let e = (0, l.Wu)([m.Z], () => m.Z.getIgnoredIDs());
     return (0, r.jsx)(C, {
-        setting: b.s6.IGNORED_USERS,
+        setting: _.s6.IGNORED_USERS,
         userIds: e,
         listType: 'ignored'
     });
 }
 function v() {
     return (0, r.jsxs)(h.U, {
-        setting: b.s6.RESTRICTED_USERS,
+        setting: _.s6.RESTRICTED_USERS,
         scrollPosition: f.FY.RESTRICTED_ACCOUNTS,
         scrollHighlightDelay: 900,
         children: [
             (0, r.jsx)(h.H, {
                 header: N.NW.string(N.t['3wRorq']),
-                description: N.NW.format(N.t['0aNQo6'], { helpArticle: p.Z.getArticleURL(_.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
+                description: N.NW.format(N.t['0aNQo6'], { helpArticle: p.Z.getArticleURL(b.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
             }),
             (0, r.jsx)(O, {}),
             (0, r.jsx)(S, {})

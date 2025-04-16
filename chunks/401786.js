@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(600164),
     h = n(374649),
     f = n(431369),
-    b = n(811334),
-    _ = n(55610),
+    _ = n(811334),
+    b = n(55610),
     N = n(311821),
     x = n(42818),
     E = n(314884),
@@ -54,7 +54,7 @@ function R(e) {
                 }),
                 (0, r.jsxs)(o.hzk, {
                     className: P.body,
-                    children: [(0, r.jsx)('div', { className: P.cancelImage }), (0, r.jsx)('div', { children: l }), (0, r.jsx)(_.Z, { fromBoostCancelModal: !0 })]
+                    children: [(0, r.jsx)('div', { className: P.cancelImage }), (0, r.jsx)('div', { children: l }), (0, r.jsx)(b.Z, { fromBoostCancelModal: !0 })]
                 }),
                 t.isPurchasedExternally
                     ? null
@@ -93,7 +93,7 @@ async function D(e, t, n, r) {
 }
 function Z(e) {
     var t, n, s;
-    let { premiumSubscription: a, guildBoostSlotId: c, fractionalPremiumInfo: d, onBack: g, onNext: _, onClose: E } = e,
+    let { premiumSubscription: a, guildBoostSlotId: c, fractionalPremiumInfo: d, onBack: g, onNext: b, onClose: E } = e,
         [C, O] = i.useState(!1),
         [y, R] = i.useState(null),
         [Z, w] = i.useMemo(() => {
@@ -168,11 +168,11 @@ function Z(e) {
                                 children: y
                             }),
                         (0, r.jsx)('div', { children: K }),
-                        (0, r.jsxs)(b.aO, {
+                        (0, r.jsxs)(_.aO, {
                             className: P.invoiceTable,
                             children: [
-                                (0, r.jsx)(b.Z9, { children: A.NW.string(A.t.iqhIp6) }),
-                                (0, r.jsx)(b.B1, {
+                                (0, r.jsx)(_.Z9, { children: A.NW.string(A.t.iqhIp6) }),
+                                (0, r.jsx)(_.B1, {
                                     label: A.NW.format(A.t['Vg+LRk'], { subscriptionCount: 1 }),
                                     value: (0, v.og)((0, v.T4)(H, a.currency), z, Y),
                                     className: P.invoiceCancelRow
@@ -180,7 +180,7 @@ function Z(e) {
                                 null != U && U.length > 0
                                     ? (0, r.jsxs)('div', {
                                           children: [
-                                              (0, r.jsx)(b.UN, {}),
+                                              (0, r.jsx)(_.UN, {}),
                                               (0, r.jsx)(x.nd, {
                                                   premiumSubscription: a,
                                                   renewalInvoice: V,
@@ -202,7 +202,7 @@ function Z(e) {
                             disabled: C,
                             onClick: async () => {
                                 try {
-                                    O(!0), R(null), await D(a, Z, B, c), _();
+                                    O(!0), R(null), await D(a, Z, B, c), b();
                                 } catch (e) {
                                     R(A.NW.string(A.t['5mlOCQ'])), O(!1);
                                 }
@@ -256,7 +256,7 @@ function k(e) {
     let d = (0, l.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()),
         p = (0, g.Z)(),
         [h, f] = i.useState(1),
-        { analyticsLocations: b } = (0, m.ZP)(u.Z.GUILD_BOOST_CANCELLATION_MODAL);
+        { analyticsLocations: _ } = (0, m.ZP)(u.Z.GUILD_BOOST_CANCELLATION_MODAL);
     if (null == d) t = (0, r.jsx)(o.hzk, { children: (0, r.jsx)(o.$jN, {}) });
     else
         switch (h) {
@@ -290,7 +290,7 @@ function k(e) {
                 throw Error('Unexpected step: '.concat(h));
         }
     return (0, r.jsx)(m.Gt, {
-        value: b,
+        value: _,
         children: (0, r.jsx)(o.Y0X, {
             transitionState: s,
             children: t

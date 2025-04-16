@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -13,7 +13,7 @@ var r = n(200651),
     p = n(65154),
     h = n(388032),
     f = n(20493);
-function b() {
+function _() {
     return (0, r.jsx)(o.ToO, {
         type: o.sje.PRIMARY,
         title: h.NW.string(h.t.XLw6FB),
@@ -26,11 +26,11 @@ function b() {
         })
     });
 }
-function _(e) {
+function b(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, l.e7)([d.Z], () => d.Z.supports(p.AN.VIDEO)),
         [s, u] = i.useState(!1),
-        _ = (0, r.jsxs)(r.Fragment, {
+        b = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.F, {
                     setting: g.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
@@ -40,11 +40,11 @@ function _(e) {
                         onCancelPreview: () => u(!1)
                     })
                 }),
-                !n && (0, r.jsx)(b, {})
+                !n && (0, r.jsx)(_, {})
             ]
         });
     return t
-        ? _
+        ? b
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(o.y5t, {
@@ -53,7 +53,7 @@ function _(e) {
                           className: f.marginBottom20,
                           children: h.NW.string(h.t.LKzQSE)
                       }),
-                      children: _
+                      children: b
                   }),
                   (0, r.jsx)(o.$i$, { className: a()(f.marginBottom40, f.marginTop40) })
               ]

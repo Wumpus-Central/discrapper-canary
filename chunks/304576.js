@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(104494),
     h = n(639119),
     f = n(105759),
-    b = n(346497),
-    _ = n(422034),
+    _ = n(346497),
+    b = n(422034),
     N = n(710220),
     x = n(318747),
     E = n(635921),
@@ -43,7 +43,7 @@ let S = (e) => {
             Z = (0, p.Wp)(D, j.Si.TIER_2) ? j.Si.TIER_2 : void 0,
             w = (0, h.N)(),
             k = (0, m.Nx)(),
-            W = (0, b.Vi)(),
+            W = (0, _.Vi)(),
             L = (0, l.e7)([u.Z], () => u.Z.affinities),
             B = (0, f.Z)(),
             M = y === j.EZ.ApplicationStoreHome && null != B,
@@ -76,7 +76,7 @@ let S = (e) => {
                             : U &&
                               (0, r.jsx)('div', {
                                   className: O.affinityDescriptionV2,
-                                  children: (0, r.jsx)(_.Z, {
+                                  children: (0, r.jsx)(b.Z, {
                                       textColor: 'text-normal',
                                       smallerText: !s,
                                       isMarketingPageV2Enabled: !0

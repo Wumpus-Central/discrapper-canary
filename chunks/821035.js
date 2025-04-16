@@ -1,4 +1,4 @@
-n.d(t, { P: () => _ }), n(290780);
+n.d(t, { P: () => b }), n(290780);
 var r = n(200651);
 n(192379);
 var i = n(524437),
@@ -14,11 +14,11 @@ var i = n(524437),
     p = n(726985),
     h = n(981631),
     f = n(388032),
-    b = n(298136);
-function _() {
+    _ = n(298136);
+function b() {
     var e;
     let t = null == (e = (0, d.Z)()) || e,
-        { explicitContentGuilds: n, explicitContentFriendDm: _, explicitContentNonFriendDm: N } = (0, c.B)(),
+        { explicitContentGuilds: n, explicitContentFriendDm: b, explicitContentNonFriendDm: N } = (0, c.B)(),
         x = (e) => {
             let t = Object.values(e);
             if ((0, o.Ks)() && t.includes(i.Q4.SHOW)) return void a.Z.showAgeVerificationGetStartedModal(l.cU.SENSITIVE_MEDIA_FILTER_SETTINGS);
@@ -57,17 +57,17 @@ function _() {
                 (0, r.jsx)(s.xJW, {
                     tag: s.RB0.H3,
                     title: f.NW.string(f.t['6k0AgI']),
-                    titleClassName: b.selectItemTitle,
+                    titleClassName: _.selectItemTitle,
                     children: (0, r.jsx)(s.q4e, {
                         options: E,
-                        value: _,
+                        value: b,
                         onChange: (e) => x({ explicitContentFriendDm: e })
                     })
                 }),
                 (0, r.jsx)(s.xJW, {
                     tag: s.RB0.H3,
                     title: f.NW.string(f.t.D2EGSk),
-                    titleClassName: b.selectItemTitle,
+                    titleClassName: _.selectItemTitle,
                     children: (0, r.jsx)(s.q4e, {
                         options: E,
                         value: N,
@@ -78,7 +78,7 @@ function _() {
                     (0, r.jsx)(s.xJW, {
                         tag: s.RB0.H3,
                         title: f.NW.string(f.t['FP+a4+']),
-                        titleClassName: b.selectItemTitle,
+                        titleClassName: _.selectItemTitle,
                         children: (0, r.jsx)(s.q4e, {
                             options: j,
                             value: n,

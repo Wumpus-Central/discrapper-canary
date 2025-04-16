@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(925329),
     h = n(981632),
     f = n(314897),
-    b = n(82142),
-    _ = n(246946),
+    _ = n(82142),
+    b = n(246946),
     N = n(509545),
     x = n(55563),
     E = n(259580),
@@ -259,18 +259,18 @@ class A extends i.PureComponent {
             });
     }
 }
-let P = l.ZP.connectStores([x.Z, _.Z, b.Z, m.Z, N.Z, f.default], (e) => {
+let P = l.ZP.connectStores([x.Z, b.Z, _.Z, m.Z, N.Z, f.default], (e) => {
     let { skuId: t, subscriptionPlanId: n, giftStyle: r } = e,
         i = x.Z.get(t);
     if (null == i) throw Error('SKU was unavailable while rendering gift.');
-    let s = b.Z.getForGifterSKUAndPlan(f.default.getId(), t, n)
+    let s = _.Z.getForGifterSKUAndPlan(f.default.getId(), t, n)
         .filter((e) => !e.isClaimed)
         .filter((e) => e.giftStyle === r);
     return {
         sku: i,
-        hideCodes: _.Z.enabled,
-        isFetching: b.Z.getUserGiftCodesFetchingForSKUAndPlan(t, n),
-        loadedAt: b.Z.getUserGiftCodesLoadedAtForSKUAndPlan(t, n),
+        hideCodes: b.Z.enabled,
+        isFetching: _.Z.getUserGiftCodesFetchingForSKUAndPlan(t, n),
+        loadedAt: _.Z.getUserGiftCodesLoadedAtForSKUAndPlan(t, n),
         application: m.Z.getApplication(i.applicationId),
         subscriptionPlan: null != n ? (0, O.oE)(n) : null,
         giftCodes: s

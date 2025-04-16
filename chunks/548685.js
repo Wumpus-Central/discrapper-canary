@@ -12,8 +12,8 @@ var r = n(200651),
     p = n(937510),
     f = n(38900),
     g = n(709999),
-    m = n(619899),
-    h = n(957058),
+    h = n(619899),
+    m = n(957058),
     _ = n(215023),
     C = n(388032),
     v = n(806734);
@@ -21,11 +21,11 @@ let x = (e) => {
     let { isLoading: t, rankedSkuIds: n, handleTransition: a, numVisibleItems: x, tab: O } = e,
         j = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
         y = l.createRef(),
-        S = (0, h.u)(),
+        S = (0, m.u)(),
         k = l.useMemo(() => S(n), [t, S, n]),
-        P = (0, b.a)()(k),
-        E = (0, p.l)(P),
-        B = (0, m.St)(E);
+        E = (0, b.a)()(k),
+        P = (0, p.l)(E),
+        w = (0, h.St)(P);
     return null == j
         ? null
         : (0, r.jsxs)('div', {
@@ -53,7 +53,7 @@ let x = (e) => {
                       children: t
                           ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(f.K, {}, t + 1)) })
                           : (0, r.jsx)(r.Fragment, {
-                                children: B.slice(0, x).map((e, t) => {
+                                children: w.slice(0, x).map((e, t) => {
                                     let n = d.Z.getCategoryForProduct(e.skuId);
                                     return null == e || null == n
                                         ? null

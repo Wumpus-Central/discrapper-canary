@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(290780);
+n.d(t, { Z: () => _ }), n(388685), n(290780);
 var r = n(358230),
     i = n(931261),
     s = n(355298),
@@ -16,7 +16,7 @@ let f = () => {
     let e = s.Z.getMessageRequestsCount() > 0 || a.Z.getSpamChannelsCount() > 0;
     return [p.Z5c.FRIENDS, e ? p.Z5c.MESSAGE_REQUESTS : null, c.Z.hasLibraryApplication() && !o.bm.getSetting() ? p.Z5c.APPLICATION_LIBRARY : null, p.Z5c.APPLICATION_STORE, p.Z5c.COLLECTIBLES_SHOP, o.Ex.getSetting() ? p.Z5c.FAMILY_CENTER : null].filter(m.lm);
 };
-function b() {
+function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
         t = l.Z.getState().guildId;
     null == t

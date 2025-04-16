@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(410030),
     h = n(726542),
     f = n(116841),
-    b = n(295377),
-    _ = n(921801),
+    _ = n(295377),
+    b = n(921801),
     N = n(553795),
     x = n(430824),
     E = n(63063),
@@ -118,7 +118,7 @@ function D() {
                 label: y.NW.string(y.t.MIgNPD)
             }
         ];
-    return (0, r.jsx)(_.F, {
+    return (0, r.jsx)(b.F, {
         setting: T.s6.ACTIVITY_PRIVACY_STATUS,
         children: (0, r.jsxs)(m.hjN, {
             children: [
@@ -165,7 +165,7 @@ function D() {
 function Z() {
     let e = v.cP.useSetting(),
         t = v.Ou.useSetting();
-    return (0, r.jsx)(_.F, {
+    return (0, r.jsx)(b.F, {
         setting: T.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
         children: (0, r.jsxs)(m.hjN, {
             className: P.marginBottom40,
@@ -192,7 +192,7 @@ function Z() {
     });
 }
 function w() {
-    return (0, r.jsx)(_.F, {
+    return (0, r.jsx)(b.F, {
         setting: T.s6.ACTIVITY_PRIVACY_TOS,
         children: (0, r.jsx)(m.hjN, {
             className: P.marginBottom40,
@@ -271,7 +271,7 @@ function L() {
         }, [t, n]);
     return 0 === t.length
         ? null
-        : (0, r.jsx)(_.F, {
+        : (0, r.jsx)(b.F, {
               setting: T.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
               children: (0, r.jsxs)(m.hjN, {
                   className: P.marginBottom40,
@@ -297,7 +297,7 @@ function B(e) {
         { showRedesign: i } = S.b.useExperiment({ location: 'activity privacy tab' }),
         { showPerGuildActivityStatusSetting: s } = (0, f.c)('activity privacy tab');
     return s
-        ? (0, r.jsx)(b.Z, {})
+        ? (0, r.jsx)(_.Z, {})
         : (0, r.jsxs)(m.hjN, {
               className: t,
               tag: m.RB0.H1,

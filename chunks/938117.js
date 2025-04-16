@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(898531),
     h = n(636188),
     f = n(678916),
-    b = n(981631),
-    _ = n(869783),
+    _ = n(981631),
+    b = n(869783),
     N = n(388032),
     x = n(635968);
 function E(e) {
@@ -117,7 +117,7 @@ function C(e) {
                                       e,
                                       j(E({}, n), {
                                           onLearnMore: t,
-                                          analyticsSource: j(E({}, w.location), { object: b.qAy.BUTTON_CTA })
+                                          analyticsSource: j(E({}, w.location), { object: _.qAy.BUTTON_CTA })
                                       })
                                   );
                           });
@@ -127,7 +127,7 @@ function C(e) {
                           return new Promise(async (r) => {
                               try {
                                   let r = await (0, d.Ff)(e, f.xV.BACKGROUND);
-                                  L(r), (0, m.g5)(r, t.type === _.m.MP4, n), A(null);
+                                  L(r), (0, m.g5)(r, t.type === b.m.MP4, n), A(null);
                               } catch (e) {
                                   A(e.message);
                               }

@@ -18,8 +18,8 @@ var r,
     p = n(355467),
     h = n(410030),
     f = n(100527),
-    b = n(906732),
-    _ = n(211242),
+    _ = n(906732),
+    b = n(211242),
     N = n(600164),
     x = n(509545),
     E = n(626135),
@@ -88,11 +88,11 @@ async function z(e) {
 function Y(e) {
     var t;
     let { premiumSubscription: n, premiumType: r, setStep: a, onClose: l, whatYouLoseExperienceEnabled: o, analyticsLocation: c } = e,
-        d = (0, _.Q)(),
+        d = (0, b.Q)(),
         [u, p] = s.useState(!1),
         [f, x] = s.useState(!1),
         E = (0, h.ZP)(),
-        { analyticsLocations: j } = (0, b.ZP)(),
+        { analyticsLocations: j } = (0, _.ZP)(),
         S = null;
     switch (n.status) {
         case U.O0b.PAST_DUE:
@@ -205,7 +205,7 @@ function Y(e) {
 function K(e) {
     var t, n;
     let { premiumSubscription: r } = e,
-        { analyticsLocations: s } = (0, b.ZP)(),
+        { analyticsLocations: s } = (0, _.ZP)(),
         [a] = (0, v.ED)({
             subscriptionId: r.id,
             items: (0, O.Ue)(null != (n = null == (t = r.renewalMutations) ? void 0 : t.items) ? n : r.items),
@@ -252,7 +252,7 @@ function q(e) {
     let { premiumSubscription: t, premiumType: n, onBack: r, onClose: a, analyticsLocation: o } = e,
         [c, d] = s.useState(!1),
         [u, m] = s.useState(!1),
-        { analyticsLocations: p } = (0, b.ZP)();
+        { analyticsLocations: p } = (0, _.ZP)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(k.Z, {
@@ -319,7 +319,7 @@ function J(e) {
     var t;
     let n,
         { premiumSubscription: r, transitionState: a, onClose: l, analyticsLocations: c, analyticsLocation: u, initialStep: p } = e,
-        _ = s.useRef(new o.qA()),
+        b = s.useRef(new o.qA()),
         [N, x] = s.useState(null),
         C = (0, I.Er)(),
         S = (null == C ? void 0 : C.showCard) === !0,
@@ -333,7 +333,7 @@ function J(e) {
     }, [r]);
     let k = Z === B.p9.TIER_0 || Z === B.p9.TIER_1 || Z === B.p9.TIER_2;
     null == p && (p = k ? 1 : 2);
-    let { analyticsLocations: H } = (0, b.ZP)(c, f.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
+    let { analyticsLocations: H } = (0, _.ZP)(c, f.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
         [z, K, J, $] = (function (e, t, n) {
             let [r, i] = s.useState(e),
                 [a, l] = s.useState(Date.now()),
@@ -517,13 +517,13 @@ function J(e) {
         default:
             throw Error('Unexpected step: '.concat(z));
     }
-    return (0, i.jsxs)(b.Gt, {
+    return (0, i.jsxs)(_.Gt, {
         value: H,
         children: [
             (0, i.jsx)(o.O_, {
                 ref: x,
                 className: G.confettiCanvas,
-                environment: _.current
+                environment: b.current
             }),
             (0, i.jsx)(g.Y0X, {
                 transitionState: a,

@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(119850),
     h = n(32173),
     f = n(391110),
-    b = n(75077),
-    _ = n(320319),
+    _ = n(75077),
+    b = n(320319),
     N = n(847408);
 let x = (e) => {
         let { showAllPerksButton: t, leftAlignHeaders: n, title: i, headerClassname: s } = e,
@@ -68,12 +68,12 @@ let x = (e) => {
             onScrollEnd: D,
             onCleanup: D
         });
-        let w = (0, b.Op)(A),
+        let w = (0, _.Op)(A),
             k = (0, h.Z)(),
-            W = (0, b.mN)(),
+            W = (0, _.mN)(),
             { fractionalState: L } = (0, c.Z)(),
             B = (0, d.W)(),
-            M = (0, b.sP)({
+            M = (0, _.sP)({
                 perksCards: k,
                 variant: s,
                 isFullScreen: S,
@@ -137,7 +137,7 @@ let x = (e) => {
                             children: M.map((e, t) => {
                                 var n, i;
                                 return (0, r.jsx)(
-                                    _.Z,
+                                    b.Z,
                                     ((n = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},

@@ -14,8 +14,8 @@ var i = n(442837),
     p = n(197115),
     h = n(626135),
     f = n(981631),
-    b = n(474936),
-    _ = n(388032),
+    _ = n(474936),
+    b = n(388032),
     N = n(614467);
 let x = () => {
         (0, d.nJ)(), (0, a.xf)();
@@ -34,7 +34,7 @@ let x = () => {
             (0, l.ZP)(() => {
                 t &&
                     h.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: b.cd.APP_ICON_UPSELL,
+                        type: _.cd.APP_ICON_UPSELL,
                         location_stack: e
                     });
             }),
@@ -51,14 +51,14 @@ let x = () => {
                                         size: s.zxk.Sizes.MEDIUM,
                                         color: !n && t ? s.zxk.Colors.PRIMARY : s.zxk.Colors.BRAND,
                                         onClick: () => x(),
-                                        children: n ? _.NW.string(_.t.SKNnqq) : _.NW.string(_.t['hb/wEx'])
+                                        children: n ? b.NW.string(b.t.SKNnqq) : b.NW.string(b.t['hb/wEx'])
                                     }),
                                     t
                                         ? (0, r.jsx)(p.Z, {
                                               className: N.tryItOutButton,
                                               showGradient: n,
-                                              subscriptionTier: b.Si.TIER_2,
-                                              buttonText: n ? _.NW.string(_.t.pj0XBA) : _.NW.string(_.t.mr4K7O)
+                                              subscriptionTier: _.Si.TIER_2,
+                                              buttonText: n ? b.NW.string(b.t.pj0XBA) : b.NW.string(b.t.mr4K7O)
                                           })
                                         : null
                                 ]

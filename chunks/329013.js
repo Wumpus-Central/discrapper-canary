@@ -16,8 +16,8 @@ var r = n(200651),
     p = n(238302),
     h = n(514361),
     f = n(705262),
-    b = n(540059),
-    _ = n(605236),
+    _ = n(540059),
+    b = n(605236),
     N = n(104494),
     x = n(639119),
     E = n(311476),
@@ -32,7 +32,7 @@ var r = n(200651),
     A = n(388032),
     P = n(967655);
 let R = () => {
-        (0, _.EW)(a.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
+        (0, b.EW)(a.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
             dismissAction: I.L.PRIMARY,
             forceTrack: !0
         }),
@@ -54,7 +54,7 @@ let R = () => {
                     disable: u
                 }
             ),
-            _ = (0, b.Q3)('UserSettingsAppearanceClientThemes'),
+            b = (0, _.Q3)('UserSettingsAppearanceClientThemes'),
             v = () =>
                 !a || l
                     ? null
@@ -94,13 +94,13 @@ let R = () => {
                                           className: P.basicThemeSelectors,
                                           renderCTAButtons: v
                                       }),
-                                      _ && (0, r.jsx)(Z, {})
+                                      b && (0, r.jsx)(Z, {})
                                   ]
                               })
                             : (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)(f.ZP.Basic, { className: P.basicThemeSelectors }),
-                                      _ && (0, r.jsx)(Z, {}),
+                                      b && (0, r.jsx)(Z, {}),
                                       (0, r.jsxs)(O.Z, {
                                           className: P.featureBorder,
                                           isShown: a,
@@ -165,7 +165,7 @@ function Z() {
 }
 let w = () => {
     let e = (0, s.e7)([h.Z], () => h.Z.isPreview),
-        t = (0, b.Q3)('ClientThemesSidebarButton');
+        t = (0, _.Q3)('ClientThemesSidebarButton');
     return e
         ? null
         : (0, r.jsx)(o.zxk, {

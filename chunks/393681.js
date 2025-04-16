@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(497321),
     h = n(279837),
     f = n(952306),
-    b = n(600164),
-    _ = n(690221),
+    _ = n(600164),
+    b = n(690221),
     N = n(346585),
     x = n(347649),
     E = n(332473),
@@ -161,7 +161,7 @@ class X extends i.PureComponent {
                       this.props.forceMigrationExperiment ? H.NW.format(H.t.zT1hgo, { date: (0, N.IE)(this.props.locale) }) : H.NW.format(H.t.pdYZys, {}),
                       ' ',
                       '',
-                      (0, r.jsx)(_.Z, {
+                      (0, r.jsx)(b.Z, {
                           className: z.noticeTextButton,
                           onClick: () => (0, j.Z)(F.Kq.USER_SETTINGS),
                           children: H.NW.string(H.t.LhlgY2)
@@ -219,17 +219,17 @@ class X extends i.PureComponent {
                 }),
                 (0, r.jsx)(O.F, {
                     setting: V.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                    children: (0, r.jsxs)(b.Z, {
-                        align: b.Z.Align.STRETCH,
+                    children: (0, r.jsxs)(_.Z, {
+                        align: _.Z.Align.STRETCH,
                         children: [
-                            (0, r.jsx)(b.Z.Child, {
+                            (0, r.jsx)(_.Z.Child, {
                                 wrap: !0,
                                 children: (0, r.jsx)(L.Z, { backupCodes: e })
                             }),
                             t.mfaEnabled
                                 ? null
-                                : (0, r.jsx)(b.Z, {
-                                      align: b.Z.Align.CENTER,
+                                : (0, r.jsx)(_.Z, {
+                                      align: _.Z.Align.CENTER,
                                       basis: '323px',
                                       grow: 0,
                                       children: (0, r.jsx)('img', {
@@ -373,7 +373,7 @@ class X extends i.PureComponent {
         t.isClaimed()
             ? (0, u.h7j)((t) =>
                   (0, r.jsx)(
-                      h.default,
+                      h.Z,
                       q(K({}, t), {
                           handleSubmit: (t) => this.handleSubmitDisableAccount(t, e),
                           title: e ? H.NW.string(H.t['8lQ2ra']) : H.NW.string(H.t.jf5GGR),

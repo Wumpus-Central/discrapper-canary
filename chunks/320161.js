@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(392711),
@@ -13,8 +13,8 @@ let g = d.Z.Millis.SECOND,
     p = 2 * g,
     h = d.Z.Millis.HALF_SECOND,
     f = [() => m.NW.string(m.t.MSaeTU), () => m.NW.string(m.t.UmrCw8), () => m.NW.string(m.t.gKE0Ji), () => m.NW.string(m.t['4DSKbm']), () => m.NW.string(m.t['+8ENdX']), () => m.NW.string(m.t.GlWHv7), () => m.NW.string(m.t.hIzxU1), () => m.NW.string(m.t['26uMPD']), () => m.NW.string(m.t.uFs7R0), () => m.NW.string(m.t.bLXdcX), () => m.NW.string(m.t.gPg9fX)];
-function b(e) {
-    let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': b, delay: _ = h } = e,
+function _(e) {
+    let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': _, delay: b = h } = e,
         [N, x] = i.useState(0),
         [E, j] = i.useState(!1),
         [C, O] = i.useState(!1),
@@ -47,8 +47,8 @@ function b(e) {
                 children: i()
             });
         })(),
-        delay: _,
-        'aria-label': b,
+        delay: b,
+        'aria-label': _,
         color: y,
         forceOpen: C,
         onAnimationRest: (e, t) => {

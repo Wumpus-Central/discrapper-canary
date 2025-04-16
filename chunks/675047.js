@@ -14,27 +14,27 @@ var i = n(924628),
     p = n(230341),
     h = n(893996),
     f = n(266132),
-    b = n(726985),
-    _ = n(388032);
+    _ = n(726985),
+    b = n(388032);
 function N() {
     return (0, r.jsxs)(h.Z, {
-        title: _.NW.string(_.t.WWaFn5),
-        description: _.NW.format(_.t['/6sFWV'], { helpArticle: (0, a.uV)() }),
-        webSetting: b.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
+        title: b.NW.string(b.t.WWaFn5),
+        description: b.NW.format(b.t['/6sFWV'], { helpArticle: (0, a.uV)() }),
+        webSetting: _.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
         children: [(0, r.jsx)(p.Z, {}), (0, r.jsx)(f.Z, {})]
     });
 }
 function x() {
     return (0, r.jsx)(h.Z, {
-        title: _.NW.string(_.t.BG7Qsb),
-        webSetting: b.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
+        title: b.NW.string(b.t.BG7Qsb),
+        webSetting: _.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
         children: (0, r.jsx)(c.Z, {})
     });
 }
 function E() {
     return (0, r.jsxs)(h.Z, {
-        title: _.NW.string(_.t.SRZyHh),
-        webSetting: b.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
+        title: b.NW.string(b.t.SRZyHh),
+        webSetting: _.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
         children: [(0, r.jsx)(g.Z, {}), (0, r.jsx)(m.Z, {}), (0, r.jsx)(u.Z, {}), (0, r.jsx)(d.Z, {})]
     });
 }
@@ -44,7 +44,7 @@ function j() {
             (0, i.I)(), (0, l.A)();
         }),
         (0, r.jsxs)(o.N, {
-            header: _.NW.string(_.t.OAuOHB),
+            header: b.NW.string(b.t.OAuOHB),
             children: [(0, r.jsx)(E, {}), (0, r.jsx)(x, {}), (0, r.jsx)(N, {})]
         })
     );

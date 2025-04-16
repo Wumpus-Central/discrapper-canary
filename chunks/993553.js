@@ -31,8 +31,8 @@ function u(e) {
             return i;
         })(e, ['children', 'lineClamp']);
     let [p, h] = i.useState(!1),
-        [f, b] = i.useState(null),
-        _ =
+        [f, _] = i.useState(null),
+        b =
             null != f &&
             (0, r.jsx)('button', {
                 className: d.button,
@@ -60,7 +60,7 @@ function u(e) {
             if (null == N) return;
             let { scrollHeight: e, clientHeight: t } = N;
             e > t &&
-                b({
+                _({
                     truncatedHeight: t,
                     expandedHeight: e
                 });
@@ -122,7 +122,7 @@ function u(e) {
                           }),
                     t)
                 ),
-                _
+                b
             ]
         })
     );

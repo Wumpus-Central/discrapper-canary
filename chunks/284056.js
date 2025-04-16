@@ -18,8 +18,8 @@ var r = n(200651),
     p = n(131951),
     h = n(19780),
     f = n(626135),
-    b = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    b = n(388032),
     N = n(283806);
 function x(e, t, n) {
     return (
@@ -52,7 +52,7 @@ class E extends i.PureComponent {
                 isDetectingInput: !0,
                 didDeafenUser: d
             }),
-            f.default.track(b.rMx.MIC_TESTING_STARTED, {
+            f.default.track(_.rMx.MIC_TESTING_STARTED, {
                 input_device_name: t,
                 input_device_volume: n,
                 output_device_name: r,
@@ -73,7 +73,7 @@ class E extends i.PureComponent {
                 isMicTesting: !1,
                 didDeafenUser: !1
             }),
-            null != this._micTestStartTime && f.default.track(b.rMx.MIC_TESTING_STOPPED, { testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1000) }));
+            null != this._micTestStartTime && f.default.track(_.rMx.MIC_TESTING_STOPPED, { testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1000) }));
     }
     renderCaption() {
         let { captionVoice: e, captionNoVoice: t } = this.props,
@@ -87,9 +87,9 @@ class E extends i.PureComponent {
     render() {
         let { isVoiceConnected: e, title: t, description: n, notchBackground: i, buttonTest: s, buttonStop: a, buttonClassName: l, buttonColor: o, isDeafened: c, buttonMinWidth: u, measureButtonRef: m } = this.props,
             { isMicTesting: p, volume: h } = this.state,
-            f = e && !p ? _.NW.string(_.t['9viE2N']) : null;
+            f = e && !p ? b.NW.string(b.t['9viE2N']) : null;
         p && e && !c && this._micTestStop();
-        let b = a.length >= s.length ? a : s;
+        let _ = a.length >= s.length ? a : s;
         return (0, r.jsxs)('div', {
             className: N.container,
             children: [
@@ -117,7 +117,7 @@ class E extends i.PureComponent {
                                     size: d.zxk.Sizes.SMALL,
                                     className: l,
                                     color: o,
-                                    children: b
+                                    children: _
                                 }),
                                 (0, r.jsx)('div', { className: N.buttonSizerSpacer })
                             ]
@@ -222,7 +222,7 @@ function j(e) {
             };
         }),
         f = (0, l.e7)([h.Z], () => h.Z.isConnected()),
-        { ref: b, width: _ } = (0, m.ZP)();
+        { ref: _, width: b } = (0, m.ZP)();
     return (0, r.jsx)(
         E,
         (function (e) {
@@ -251,8 +251,8 @@ function j(e) {
                 vadAutoThreshold: o.autoThreshold,
                 inputDeviceName: null != (t = null == i ? void 0 : i.name) ? t : '',
                 outputDeviceName: null != (n = null == s ? void 0 : s.name) ? n : '',
-                measureButtonRef: b,
-                buttonMinWidth: _
+                measureButtonRef: _,
+                buttonMinWidth: b
             },
             e
         )

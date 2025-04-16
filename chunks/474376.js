@@ -14,8 +14,8 @@ var i = n(442837),
     p = n(51144),
     h = n(480387),
     f = n(726745),
-    b = n(251423),
-    _ = n(383832),
+    _ = n(251423),
+    b = n(383832),
     N = n(981631),
     x = n(388032),
     E = n(965695);
@@ -24,7 +24,7 @@ function j(e) {
         n = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
         j = (0, i.e7)([c.Z], () => (0, s.wj)(c.Z.theme)),
         C = (0, o.R6)('useMultiAccountMenuItems'),
-        { multiAccountUsers: O } = (0, b.L)(),
+        { multiAccountUsers: O } = (0, _.L)(),
         S = (e) => {
             e !== (null == t ? void 0 : t.id) && (g.default.track(N.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: N.jXE.USER_PROFILE } }), h.yD(e));
         },
@@ -85,7 +85,7 @@ function j(e) {
                         });
                     },
                     action: () => {
-                        null == e || e(), c ? (0, _.Z)() : S(s.id);
+                        null == e || e(), c ? (0, b.Z)() : S(s.id);
                     }
                 },
                 s.id
@@ -100,7 +100,7 @@ function j(e) {
                         id: 'manage-accounts',
                         label: x.NW.string(x.t.WbFpq6),
                         action: () => {
-                            null == e || e(), (0, _.Z)();
+                            null == e || e(), (0, b.Z)();
                         }
                     })
                 ]

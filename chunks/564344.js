@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(216045),
     h = n(839469),
     f = n(25990),
-    b = n(594174),
-    _ = n(585483),
+    _ = n(594174),
+    b = n(585483),
     N = n(16703),
     x = n(785145),
     E = n(981631),
@@ -28,18 +28,18 @@ function v() {
         t = (0, N.Z)(),
         n = (0, s.e7)([u.Z, f.Z], () => u.Z.showNotice() || f.Z.showNotice()),
         v = null != e ? e : t,
-        T = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
+        T = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
         { subsection: I, setSubsection: y } = (0, x.Z)(),
         { analyticsLocations: A } = (0, o.ZP)(),
         { hasSearchResults: P, searchResults: R } = (0, h.E)();
     function D(t) {
         if (I !== t) {
             if (n) {
-                _.S.dispatch(E.CkL.SHAKE_APP, {
+                b.S.dispatch(E.CkL.SHAKE_APP, {
                     duration: 300,
                     intensity: l.$x
                 }),
-                    _.S.dispatch(E.CkL.EMPHASIZE_NOTICE);
+                    b.S.dispatch(E.CkL.EMPHASIZE_NOTICE);
                 return;
             }
             t === j.NB.GUILD && null == e && null != v && (0, d.Fq)(v, A), y(t);

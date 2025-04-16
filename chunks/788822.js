@@ -11,7 +11,7 @@ var r = n(200651),
 let b = (e) => {
     var t, n, b;
     let p,
-        { category: f, subblock: g, badgeText: m, handleTransition: h } = e;
+        { category: f, subblock: g, badgeText: h, handleTransition: m } = e;
     null != g && (p = null == (t = i.Z.getCategoryByStoreListingId(null == g ? void 0 : g.categoryStoreListingId)) ? void 0 : t.skuId);
     let _ = null != (n = null != p ? p : null == f ? void 0 : f.skuId) ? n : '',
         { handleCardVisibilityChange: C } = (0, s.E)(_, 'home', 'marketing featured block'),
@@ -25,12 +25,12 @@ let b = (e) => {
             className: d.featuredBlock,
             innerRef: x,
             style: { backgroundImage: 'url('.concat(v, ')') },
-            onClick: () => h('shop marketing tile', _),
+            onClick: () => m('shop marketing tile', _),
             children: [
-                null != m &&
+                null != h &&
                     (0, r.jsx)(o.IGR, {
                         disableColor: !0,
-                        text: m,
+                        text: h,
                         className: d.featuredBlockBadge
                     }),
                 (null == g ? void 0 : g.bodyText) != null &&

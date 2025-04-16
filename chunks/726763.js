@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -14,7 +14,7 @@ var i = n(120356),
     p = n(20493);
 let h = n(651714),
     f = n(297166);
-function b(e) {
+function _(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, a.e7)([u.Z], () => u.Z.theme);
     return (0, r.jsx)(d.F, {

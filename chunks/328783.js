@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(981631),
     h = n(526761),
     f = n(388032),
-    b = n(989966);
-let _ = (0, l.hQ)(),
+    _ = n(989966);
+let b = (0, l.hQ)(),
     N = i.memo(function (e) {
         let { availableClans: t } = e,
             n = i.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
@@ -73,17 +73,17 @@ let _ = (0, l.hQ)(),
             (0, c.Z)(v, h.Y_.GUILD_TAG),
             (0, r.jsxs)(o.Z, {
                 title: f.NW.string(f.t.Pdd1nZ),
-                titleId: _,
+                titleId: b,
                 ref: v,
                 children: [
                     (0, r.jsx)(a.Text, {
-                        className: b.subtitle,
+                        className: _.subtitle,
                         variant: 'text-sm/normal',
                         children: f.NW.string(f.t.mlZ6Jy)
                     }),
                     (0, r.jsx)(a.PhF, {
-                        className: b.select,
-                        optionClassName: b.selectPopout,
+                        className: _.select,
+                        optionClassName: _.selectPopout,
                         isSelected: C,
                         options: N,
                         select: j,

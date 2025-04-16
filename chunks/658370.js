@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(953529);
+n.d(t, { Z: () => _ }), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -14,10 +14,10 @@ var i = n(120356),
     p = n(474936),
     h = n(388032),
     f = n(344253);
-let b = (e) => {
+let _ = (e) => {
     var t;
     let n,
-        { title: i, titleClassName: b = '', buttonClassName: _ = '', subtitle: N = '', description: x = '', descriptionCta: E = '', isPremiumGetCta: j, onCtaClick: C, cardVariant: O } = e,
+        { title: i, titleClassName: _ = '', buttonClassName: b = '', subtitle: N = '', description: x = '', descriptionCta: E = '', isPremiumGetCta: j, onCtaClick: C, cardVariant: O } = e,
         S = (0, d.N)(),
         v = null == S ? void 0 : S.subscription_trial,
         T = (0, c.Ng)(),
@@ -39,13 +39,13 @@ let b = (e) => {
             (0, r.jsx)(m.Z, {
                 title: i,
                 cardVariantStyleInfo: A,
-                titleClassName: b,
+                titleClassName: _,
                 subtitle: N,
                 description: x
             }),
             j &&
                 (0, r.jsx)(g.Z, {
-                    className: _,
+                    className: b,
                     look: a.zxk.Looks.BLANK,
                     color: a.zxk.Colors.CUSTOM,
                     subscriptionTier: p.Si.TIER_2,
@@ -56,7 +56,7 @@ let b = (e) => {
                 (null == (n = null == A ? void 0 : A.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
                 null != C &&
                 (0, r.jsx)(a.zxk, {
-                    className: _,
+                    className: b,
                     onClick: C,
                     children: E
                 })

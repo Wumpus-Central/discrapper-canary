@@ -11,10 +11,10 @@ var r = n(200651),
 let m = i.memo(function (e) {
     let { guildId: t, guildProfile: n, title: m, description: g, onClose: p } = e,
         h = (0, o.Z)({ scrollPosition: c.Y_.GUILD_TAG }),
-        [f, b] = i.useState(!1);
+        [f, _] = i.useState(!1);
     if (null === n) return null;
-    async function _() {
-        b(!0), await (0, a.nE)(t, !0), b(!1), null == p || p();
+    async function b() {
+        _(!0), await (0, a.nE)(t, !0), _(!1), null == p || p();
     }
     return (0, r.jsxs)('div', {
         className: u.container,
@@ -60,7 +60,7 @@ let m = i.memo(function (e) {
             (0, r.jsx)(s.zxk, {
                 className: u.adoptButton,
                 submitting: f,
-                onClick: _,
+                onClick: b,
                 children: d.NW.string(d.t.jwEaiY)
             }),
             (0, r.jsx)(s.zxk, {

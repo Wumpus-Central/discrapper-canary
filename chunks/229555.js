@@ -47,8 +47,8 @@ let g = (e, t) =>
             n = null != (e = (0, o.GG)()) ? e : new Date();
         if (null == t) return null;
         let i = (0, c.J)(t.id),
-            { id: d, nameUnformatted: h, tenureReqNumMonths: f, hasWideArt: b } = t,
-            _ = u.NW.string(h),
+            { id: d, nameUnformatted: h, tenureReqNumMonths: f, hasWideArt: _ } = t,
+            b = u.NW.string(h),
             N = (0, l.q)(d, f);
         return (0, r.jsxs)('div', {
             className: s()(m.container, p(d)),
@@ -57,10 +57,10 @@ let g = (e, t) =>
                 ' ',
                 (0, r.jsx)('img', {
                     src: i,
-                    alt: _,
+                    alt: b,
                     className: s()(m.badgeImage, m.badgeImageV2, {
                         [m.upcomingBadge]: t.status === o.Vq.UPCOMING,
-                        [m.wide]: b
+                        [m.wide]: _
                     })
                 }),
                 (0, r.jsxs)('div', {
@@ -69,7 +69,7 @@ let g = (e, t) =>
                         (0, r.jsx)(a.xv, {
                             variant: 'text-lg/semibold',
                             className: m.badgeText,
-                            children: _
+                            children: b
                         }),
                         (0, r.jsx)(a.xv, {
                             variant: 'text-md/normal',

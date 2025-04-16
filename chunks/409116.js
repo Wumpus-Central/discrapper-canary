@@ -18,12 +18,12 @@ let u = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
                 discount: f = s.f_,
                 variant: g = 'heading-md/semibold'
             } = e,
-            m = u((0, i.T4)(n, l)),
-            h =
+            h = u((0, i.T4)(n, l)),
+            m =
                 f !== s.f_ && f.discountPercentage >= 5
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              m,
+                              h,
                               (0, r.jsx)(o.X6q, {
                                   variant: g,
                                   color: 'text-positive',
@@ -32,10 +32,10 @@ let u = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
                               })
                           ]
                       })
-                    : m;
+                    : h;
         return (0, r.jsxs)(o.X6q, {
             variant: g,
             className: a()(c.container, p),
-            children: [b, null != (t = null == d ? void 0 : d(h)) ? t : h]
+            children: [b, null != (t = null == d ? void 0 : d(m)) ? t : m]
         });
     };

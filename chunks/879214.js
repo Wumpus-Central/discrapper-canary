@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(111361),
     h = n(821629),
     f = n(114625),
-    b = n(72623),
-    _ = n(780525),
+    _ = n(72623),
+    b = n(780525),
     N = n(474936),
     x = n(388032),
     E = n(731670);
@@ -23,7 +23,7 @@ let j = (e) => {
         i = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
         j = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         C = (0, p.M5)(i, N.p9.TIER_0) || (0, p.M5)(i, N.p9.TIER_1),
-        O = new Date(_.Lk);
+        O = new Date(b.Lk);
     return (0, r.jsx)(u.O, {
         newLocations: [d.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, r.jsx)('div', {
@@ -47,7 +47,7 @@ let j = (e) => {
                     (0, r.jsx)(a.xv, {
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        children: x.NW.format(x.t.ESckJy, { termsLink: _.Ps })
+                        children: x.NW.format(x.t.ESckJy, { termsLink: b.Ps })
                     }),
                     (0, r.jsx)(o.gtL, {
                         color: 'white',
@@ -58,7 +58,7 @@ let j = (e) => {
                                 analyticsLocations: n,
                                 subscriptionTier: N.Si.TIER_2,
                                 confirmationFooter: (0, r.jsx)(f.Z, {}),
-                                paymentModalBanner: (0, r.jsx)(b.Z, {})
+                                paymentModalBanner: (0, r.jsx)(_.Z, {})
                             });
                         },
                         children: (0, r.jsx)(a.xv, {

@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(52647),
     h = n(822857),
     f = n(317257),
-    b = n(120786),
-    _ = n(775451),
+    _ = n(120786),
+    b = n(775451),
     N = n(970815),
     x = n(275388),
     E = n(720463),
@@ -56,7 +56,7 @@ function I() {
             }),
             (0, r.jsx)(C.E_, {
                 label: 'Balance Widget Menu',
-                children: (0, r.jsx)(_.V9, {
+                children: (0, r.jsx)(b.V9, {
                     ctaText: S.NW.string(S.t['J+vlIS']),
                     ctaOnClick: O.dG4,
                     isCoachmarkEnabled: !1
@@ -210,7 +210,7 @@ function I() {
             }),
             (0, r.jsx)(C.E_, {
                 label: 'Balance Widget Card',
-                children: (0, r.jsx)(b.L, {
+                children: (0, r.jsx)(_.L, {
                     ctaText: S.NW.string(S.t['H57f4+']),
                     linkText: S.NW.string(S.t['7f4H7O']),
                     ctaOnClick: O.dG4

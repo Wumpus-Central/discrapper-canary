@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(279837),
     h = n(168107),
     f = n(480916),
-    b = n(81643),
-    _ = n(952306),
+    _ = n(81643),
+    b = n(952306),
     N = n(299206),
     x = n(295474),
     E = n(144114),
@@ -91,12 +91,12 @@ function z(e) {
         g = (0, C.b)(),
         p = (0, x.gS)(),
         h = null != (s = null == p || null == (t = p.nick) ? void 0 : t[0]) ? s : null,
-        [f, b] = i.useState(!1);
+        [f, _] = i.useState(!1);
     i.useEffect(() => {
-        b(null != c.current && c.current.scrollWidth > c.current.clientWidth);
+        _(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [o.username]);
-    let _ = !o.isClaimed(),
-        N = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || _,
+    let b = !o.isClaimed(),
+        N = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || b,
         E = N ? U.NW.string(U.t['7Ngnys']) : void 0;
     return (0, r.jsxs)('div', {
         className: a()(V.field, l),
@@ -337,7 +337,7 @@ function q(e) {
             buttonAriaLabel: U.NW.string(U.t.BleMPD),
             buttonColor: u.zxk.Colors.BRAND,
             valueMessage: U.NW.string(U.t.qxk9zs),
-            handleClick: () => _.Z.openClaimAccountModal()
+            handleClick: () => b.Z.openClaimAccountModal()
         };
     return (0, r.jsxs)('div', {
         className: a()(V.field, i),
@@ -422,7 +422,7 @@ function X(e) {
                                   onClick: function () {
                                       (0, u.h7j)((e) =>
                                           (0, r.jsx)(
-                                              p.default,
+                                              p.Z,
                                               F(G({}, e), {
                                                   title: U.NW.string(U.t['3CTiKi']),
                                                   children: s.hasFlag(L.xW$.MFA_SMS) ? U.NW.string(U.t.jrhJys) : void 0,
@@ -496,8 +496,8 @@ function J() {
 }
 function $(e) {
     let { className: t } = e,
-        n = (0, b.l6)(),
-        s = (0, b.Jm)(),
+        n = (0, _.l6)(),
+        s = (0, _.Jm)(),
         l = !n || s,
         o = i.useMemo(() => (n ? (s ? U.NW.string(U.t.dJOmCw) : U.NW.string(U.t['Y0A/1N'])) : U.NW.string(U.t.Qdv3DA)), [n, s]);
     return (0, r.jsxs)('div', {

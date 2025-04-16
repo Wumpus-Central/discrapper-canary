@@ -13,8 +13,8 @@ var r,
     p = n(428595),
     h = n(532901),
     f = n(204227),
-    b = n(283574);
-function _(e, t, n) {
+    _ = n(283574);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function N(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
@@ -138,7 +138,7 @@ let C = x(N({}, d().defaultRules), {
                         'pre',
                         {
                             children: (0, s.jsx)('code', {
-                                className: o()(b.scrollbarGhostHairline, 'hljs'),
+                                className: o()(_.scrollbarGhostHairline, 'hljs'),
                                 children: j(e)
                             })
                         },
@@ -160,7 +160,7 @@ let C = x(N({}, d().defaultRules), {
                                           'pre',
                                           {
                                               children: (0, s.jsx)('code', {
-                                                  className: o()(b.scrollbarGhostHairline, 'hljs', n.language),
+                                                  className: o()(_.scrollbarGhostHairline, 'hljs', n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value }
                                               })
                                           },
@@ -186,8 +186,8 @@ class v extends (i = a.PureComponent) {
         });
     }
 }
-_(v, 'rules', C),
-    _(v, 'defaultProps', {
+b(v, 'rules', C),
+    b(v, 'defaultProps', {
         parser: O,
         output: S
     });

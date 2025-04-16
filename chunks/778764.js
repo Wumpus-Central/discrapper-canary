@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(998502),
     h = n(365007),
     f = n(15980),
-    b = n(755733),
-    _ = n(981631),
+    _ = n(755733),
+    b = n(981631),
     N = n(388032),
     x = n(49149);
 function E(e) {
@@ -65,20 +65,20 @@ function C(e) {
         f = (0, c.Dt)(),
         [E, j] = i.useState(''),
         [C, O] = i.useState(!0),
-        [S, v] = i.useState(b.x.INIT),
+        [S, v] = i.useState(_.x.INIT),
         [T, I] = i.useState(''),
         [y, A] = i.useState(null),
         P = async () => {
             let e;
-            v(b.x.REGISTER);
-            let t = m.isPlatformEmbedded && p.ZP.supportsFeature(_.eRX.WEBAUTHN) ? p.ZP.webAuthnRegister(u) : s.Ue(JSON.parse(u)).then((e) => JSON.stringify(e));
+            v(_.x.REGISTER);
+            let t = m.isPlatformEmbedded && p.ZP.supportsFeature(b.eRX.WEBAUTHN) ? p.ZP.webAuthnRegister(u) : s.Ue(JSON.parse(u)).then((e) => JSON.stringify(e));
             try {
                 e = await t;
             } catch (e) {
-                g.Z.captureException(e), A(N.NW.string(N.t.xSCvBQ)), v(b.x.INIT);
+                g.Z.captureException(e), A(N.NW.string(N.t.xSCvBQ)), v(_.x.INIT);
                 return;
             }
-            I(e), v(b.x.NAME);
+            I(e), v(_.x.NAME);
         };
     return (0, r.jsxs)(l.Y0X, {
         transitionState: t,
@@ -91,7 +91,7 @@ function C(e) {
                     (0, r.jsxs)(l.X6q, {
                         id: f,
                         variant: 'heading-lg/semibold',
-                        children: [S === b.x.INIT && N.NW.string(N.t.vrOCCg), S === b.x.REGISTER && N.NW.string(N.t.wePEBA), S === b.x.NAME && N.NW.string(N.t['cY/IOj'])]
+                        children: [S === _.x.INIT && N.NW.string(N.t.vrOCCg), S === _.x.REGISTER && N.NW.string(N.t.wePEBA), S === _.x.NAME && N.NW.string(N.t['cY/IOj'])]
                     }),
                     (0, r.jsx)(l.olH, {
                         onClick: a,
@@ -104,7 +104,7 @@ function C(e) {
                 width: 440,
                 children: [
                     (0, r.jsxs)(l.Mi4, {
-                        id: b.x.INIT,
+                        id: _.x.INIT,
                         children: [
                             (0, r.jsxs)(l.hzk, {
                                 className: x.content,
@@ -142,7 +142,7 @@ function C(e) {
                         ]
                     }),
                     (0, r.jsxs)(l.Mi4, {
-                        id: b.x.REGISTER,
+                        id: _.x.REGISTER,
                         children: [
                             (0, r.jsxs)(l.hzk, {
                                 className: x.content,
@@ -166,7 +166,7 @@ function C(e) {
                         ]
                     }),
                     (0, r.jsx)(l.Mi4, {
-                        id: b.x.NAME,
+                        id: _.x.NAME,
                         children: (0, r.jsxs)('form', {
                             onSubmit: (e) => {
                                 e.preventDefault(),
@@ -176,7 +176,7 @@ function C(e) {
                                         })
                                         .then(() => a())
                                         .catch(() => {
-                                            A(N.NW.string(N.t.fEptJC)), v(b.x.INIT);
+                                            A(N.NW.string(N.t.fEptJC)), v(_.x.INIT);
                                         });
                             },
                             children: [
@@ -221,7 +221,7 @@ function C(e) {
                                             look: l.zxk.Looks.LINK,
                                             color: l.zxk.Colors.PRIMARY,
                                             onClick: () => {
-                                                v(b.x.INIT);
+                                                v(_.x.INIT);
                                             },
                                             children: N.NW.string(N.t['13/7kZ'])
                                         })

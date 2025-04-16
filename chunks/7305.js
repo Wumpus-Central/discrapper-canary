@@ -30,8 +30,8 @@ var r = n(200651),
     N = n(174827),
     b = n(846464),
     T = n(184160),
-    M = n(48175),
-    P = n(981631),
+    P = n(48175),
+    M = n(981631),
     O = n(474936),
     Z = n(388032),
     v = n(236691);
@@ -62,7 +62,7 @@ function A(e) {
 }
 let k = [h.h8.PLAN_SELECT, h.h8.ADD_PAYMENT_STEPS, h.h8.REVIEW, h.h8.CONFIRM];
 function U(e) {
-    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: l, onComplete: a, transitionState: d, initialPlanId: u, subscriptionTier: f, onClose: m, trialId: L, trialFooterMessageOverride: g, reviewWarningMessage: S, openInvoiceId: E, onSubscriptionConfirmation: y, renderPurchaseConfirmation: I, postSuccessGuild: N, followupSKUInfo: b, renderHeader: T, applicationId: M, guildId: Z, referralTrialOfferId: v, skuId: A, returnRef: k, skipConfirm: U = !1, continueSessionToInitialStep: w } = e,
+    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: l, onComplete: a, transitionState: d, initialPlanId: u, subscriptionTier: f, onClose: m, trialId: L, trialFooterMessageOverride: g, reviewWarningMessage: S, openInvoiceId: E, onSubscriptionConfirmation: y, renderPurchaseConfirmation: I, postSuccessGuild: N, followupSKUInfo: b, renderHeader: T, applicationId: P, guildId: Z, referralTrialOfferId: v, skuId: A, returnRef: k, skipConfirm: U = !1, continueSessionToInitialStep: w } = e,
         { analyticsLocations: R } = (0, C.ZP)();
     i.useEffect(() => {
         c.Z.isLoadedForPremiumSKUs() || s.Z.wait(() => (0, o.Y2)());
@@ -75,7 +75,7 @@ function U(e) {
         analyticsLocation: t,
         analyticsObject: n,
         analyticsSourceLocation: l,
-        analyticsSubscriptionType: P.NYc.PREMIUM,
+        analyticsSubscriptionType: M.NYc.PREMIUM,
         onComplete: a,
         transitionState: d,
         initialPlanId: u,
@@ -93,7 +93,7 @@ function U(e) {
         postSuccessGuild: N,
         followupSKUInfo: b,
         renderHeader: T,
-        applicationId: M,
+        applicationId: P,
         guildId: Z,
         referralTrialOfferId: v,
         skuId: A,
@@ -120,7 +120,7 @@ function R(e) {
         { paymentSources: o, selectedSkuId: a, selectedPlan: C } = (0, x.JL)(),
         { isGift: c, claimableRewards: u } = (0, _.wD)(),
         p = w(
-            (0, M.Z)({
+            (0, P.Z)({
                 isGift: c,
                 skuId: a,
                 referralTrialOfferId: s

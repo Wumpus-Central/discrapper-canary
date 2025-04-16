@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(562511),
     h = n(299929),
     f = n(921944),
-    b = n(388032);
-let _ = new c.Z('GuildTagCoachmark');
+    _ = n(388032);
+let b = new c.Z('GuildTagCoachmark');
 function N(e) {
     let t = (0, s.e7)([g.Z], () => {
         var t;
@@ -38,8 +38,8 @@ function N(e) {
             (0, r.jsx)(h.Z, {
                 guildId: e.guildId,
                 guildProfile: e.guildProfile,
-                title: b.NW.formatToPlainString(b.t['m/Tc3t'], { guildName: t }),
-                description: b.NW.string(b.t.DrAXIi),
+                title: _.NW.formatToPlainString(_.t['m/Tc3t'], { guildName: t }),
+                description: _.NW.string(_.t.DrAXIi),
                 onClose: () => n(f.L.TAKE_ACTION)
             }),
         children: e.children
@@ -62,8 +62,8 @@ function x(e) {
             (0, r.jsx)(h.Z, {
                 guildId: e.guildId,
                 guildProfile: e.guildProfile,
-                title: b.NW.formatToPlainString(b.t.VFqnyc, { guildName: t }),
-                description: b.NW.string(b.t.DrAXIi),
+                title: _.NW.formatToPlainString(_.t.VFqnyc, { guildName: t }),
+                description: _.NW.string(_.t.DrAXIi),
                 onClose: () => n(f.L.TAKE_ACTION)
             }),
         children: e.children
@@ -76,7 +76,7 @@ function E(e) {
         null !== e.guildId && s === u.a.NOT_FETCHED && n();
     }, [e.guildId, n, s]),
     null === e.guildId || null === t)
-        ? (_.error('GuildTagCoachmark rendered without guildId or coachmark type.'),
+        ? (b.error('GuildTagCoachmark rendered without guildId or coachmark type.'),
           (0, r.jsx)(l.yRy, {
               position: 'top',
               renderPopout: () => (0, r.jsx)('div', {}),

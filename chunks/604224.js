@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(100527),
@@ -14,7 +14,7 @@ var i = n(100527),
     p = n(726985),
     h = n(981631),
     f = n(388032);
-function b() {
+function _() {
     let { analyticsLocations: e } = (0, s.ZP)([i.Z.USER_SETTINGS_VOICE_AND_VIDEO]),
         { showRefreshedSettings: t } = (0, o.F)({ location: 'UserSettingsVoiceAndVideo' });
     if (!t) return (0, r.jsx)(u.Z, {});

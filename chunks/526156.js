@@ -12,12 +12,12 @@ let d = (e) => {
     let { tabs: n, settingsSection: i, parentSetting: d, panelClassName: u, defaultTabIndex: m, onTabChange: g } = e,
         { viewableTabs: p, filteredTab: h } = (0, o.a)(n, d),
         f = null != m ? n[m] : null,
-        b = null != (t = null != f ? f : h) ? t : p[0];
+        _ = null != (t = null != f ? f : h) ? t : p[0];
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.njP, {
                 className: c.tabBar,
-                selectedItem: b.setting,
+                selectedItem: _.setting,
                 onItemSelect: (e) => {
                     l.Z.setSection(i, e), null == g || g(e);
                 },
@@ -38,13 +38,13 @@ let d = (e) => {
                 )
             }),
             (0, r.jsx)(a.njP.Panel, {
-                id: b.setting,
-                'aria-labelledby': b.title,
+                id: _.setting,
+                'aria-labelledby': _.title,
                 className: s()(c.tabBarPanel, u),
                 children: ((e) => {
                     let t = e.component;
                     return 'function' == typeof t ? (0, r.jsx)(t, {}) : t;
-                })(b)
+                })(_)
             })
         ]
     });

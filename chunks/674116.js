@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(58765),
     h = n(429789),
     f = n(726763),
-    b = n(208113),
-    _ = n(894939),
+    _ = n(208113),
+    b = n(894939),
     N = n(710808),
     x = n(625205),
     E = n(325808),
@@ -94,7 +94,7 @@ function U() {
             }),
             (0, r.jsx)(c.F, {
                 setting: w.s6.VOICE_AND_VIDEO_SOUNDS,
-                children: (0, r.jsx)(_.Z, {})
+                children: (0, r.jsx)(b.Z, {})
             }),
             (0, r.jsxs)(c.F, {
                 setting: w.s6.VOICE_AND_VIDEO_VIDEO,
@@ -125,7 +125,7 @@ function U() {
                         (0, r.jsx)(C.Z, {}),
                         (0, r.jsx)(h.Z, {}),
                         k && (0, r.jsx)(S.Z, {}),
-                        (0, r.jsx)(b.Z, {}),
+                        (0, r.jsx)(_.Z, {}),
                         (0, r.jsx)(O.Z, {}),
                         (0, r.jsx)(v.Z, {}),
                         (0, r.jsx)(I.Z, { refreshStyles: !0 }),

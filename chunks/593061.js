@@ -39,7 +39,7 @@ function g(e) {
         },
         h = null != t.paymentSource && t.status === c.Py.COMPLETED,
         f = null == n ? void 0 : n.invoiceLink,
-        b = null == n ? void 0 : n.refundInvoiceLinks;
+        _ = null == n ? void 0 : n.refundInvoiceLinks;
     return t.hasInvoiceURL && null == n
         ? (0, r.jsxs)('div', {
               className: u.downloadInvoice,
@@ -70,8 +70,8 @@ function g(e) {
                         href: f,
                         children: d.NW.string(d.t.R0xzCA)
                     }),
-                    null != b
-                        ? b.map((e, t) =>
+                    null != _
+                        ? _.map((e, t) =>
                               (0, r.jsx)(
                                   a.eee,
                                   {

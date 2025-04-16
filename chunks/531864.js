@@ -102,8 +102,8 @@ let p = {
     g = (e) => {
         let { peaking: t, transitioning: n, style: a } = e,
             p = window.innerHeight,
-            [g, m] = l.useState(!1),
-            h = f.map((e) => {
+            [g, h] = l.useState(!1),
+            m = f.map((e) => {
                 let { skuId: t } = e;
                 return c.Z.getProduct(t);
             });
@@ -111,7 +111,7 @@ let p = {
             l.useEffect(() => {
                 n &&
                     setTimeout(() => {
-                        m(!0);
+                        h(!0);
                     }, d.lb);
             }, [n]),
             (0, r.jsx)('div', {
@@ -122,9 +122,9 @@ let p = {
                 }),
                 children: f.map((e, t) => {
                     var l, a;
-                    let { top: o, left: c, rotation: f, size: g, skuId: m } = e,
-                        _ = null == (l = h[t]) ? void 0 : l.items[0],
-                        C = null == (a = h[t]) ? void 0 : a.type,
+                    let { top: o, left: c, rotation: f, size: g, skuId: h } = e,
+                        _ = null == (l = m[t]) ? void 0 : l.items[0],
+                        C = null == (a = m[t]) ? void 0 : a.type,
                         v = C === i.Z.AVATAR_DECORATION ? 384 : 512;
                     return (0, r.jsxs)(
                         'div',
@@ -150,7 +150,7 @@ let p = {
                                     })
                             ]
                         },
-                        m + t
+                        h + t
                     );
                 })
             })

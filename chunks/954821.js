@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(305342),
     h = n(293810),
     f = n(388032),
-    b = n(637158);
-let _ = (e) => {
+    _ = n(637158);
+let b = (e) => {
         let [t, n] = i.useState(!1),
             [r, s] = i.useState(null);
         return {
@@ -38,7 +38,7 @@ let _ = (e) => {
             j = (0, g.YB)(s),
             C = (null == j || null == (t = j.cover_image_asset) ? void 0 : t.application_id) != null ? (0, m._W)(j.cover_image_asset.application_id, j.cover_image_asset, 440) : void 0,
             { analyticsLocations: O } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: S, error: v, submitting: T } = _(O),
+            { cancelSubscription: S, error: v, submitting: T } = b(O),
             I = async () => {
                 (await S(N.id)) && x();
             },
@@ -52,7 +52,7 @@ let _ = (e) => {
             });
         return (0, r.jsxs)(l.Y0X, {
             transitionState: n,
-            className: b.__invalid_modal,
+            className: _.__invalid_modal,
             'aria-labelledby': E,
             children: [
                 (0, r.jsxs)('div', {
@@ -60,39 +60,39 @@ let _ = (e) => {
                         (0, r.jsx)('img', {
                             src: C,
                             alt: '',
-                            className: b.headerImage
+                            className: _.headerImage
                         }),
                         (0, r.jsx)(l.olH, {
                             withCircleBackground: !0,
-                            className: b.closeButton,
+                            className: _.closeButton,
                             onClick: x
                         })
                     ]
                 }),
                 null != v ? (0, r.jsx)(l.kzN, { children: v.message }) : null,
                 (0, r.jsxs)(l.hzk, {
-                    className: b.content,
+                    className: _.content,
                     children: [
                         (0, r.jsx)(l.X6q, {
                             id: E,
                             variant: 'text-md/medium',
-                            className: b.title,
+                            className: _.title,
                             children: f.NW.string(f.t.O6l5tL)
                         }),
                         (0, r.jsx)(l.Text, {
-                            className: b.description,
+                            className: _.description,
                             variant: 'text-sm/normal',
                             children: R
                         }),
                         (0, r.jsx)(p.c, {
                             listingId: o.id,
                             guildId: i.guild_id,
-                            className: b.benefits
+                            className: _.benefits
                         })
                     ]
                 }),
                 (0, r.jsxs)(l.mzw, {
-                    className: b.footer,
+                    className: _.footer,
                     children: [
                         (0, r.jsx)(l.zxk, {
                             color: l.zxk.Colors.RED,
@@ -103,7 +103,7 @@ let _ = (e) => {
                         (0, r.jsx)(l.zxk, {
                             look: l.zxk.Looks.LINK,
                             color: l.zxk.Colors.WHITE,
-                            className: b.goBackButton,
+                            className: _.goBackButton,
                             onClick: x,
                             children: f.NW.string(f.t.EP6EPT)
                         })

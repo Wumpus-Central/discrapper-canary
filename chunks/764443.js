@@ -18,7 +18,7 @@ var r = n(200651),
     p = n(981631),
     h = n(388032),
     f = n(659233);
-let b = [
+let _ = [
         {
             duration: 15 * u.Z.Millis.MINUTE,
             label: () => h.NW.string(h.t['8ot6go'])
@@ -44,7 +44,7 @@ let b = [
             label: () => h.NW.string(h.t['46dqJS'])
         }
     ],
-    _ = [
+    b = [
         {
             duration: u.Z.Millis.HOUR,
             label: () => h.NW.formatToPlainString(h.t.rhY1Rk, { hours: 1 })
@@ -72,7 +72,7 @@ function x(e) {
         [N, x] = i.useState(void 0),
         E = void 0 !== N && t === n,
         j = (0, r.jsx)(r.Fragment, {
-            children: b.map((e) => {
+            children: _.map((e) => {
                 let { duration: i, label: s } = e;
                 return (0, r.jsx)(
                     a.sNh,
@@ -93,7 +93,7 @@ function x(e) {
         }),
         C = (0, r.jsx)('div', {
             className: f.durationButtons,
-            children: _.map((e) => {
+            children: b.map((e) => {
                 let { duration: i, label: s } = e;
                 return (0, r.jsx)(
                     a.zxk,
@@ -180,7 +180,7 @@ function j(e) {
         u = c.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || i,
         m = d.fv.useSetting(),
         g = e === p.Skl.DND,
-        _ = (r) => {
+        b = (r) => {
             let i = E(n);
             if (e === r && null != i) return i;
             switch (r) {
@@ -193,7 +193,7 @@ function j(e) {
             }
         },
         N = (0, r.jsx)(r.Fragment, {
-            children: b.map((t) => {
+            children: _.map((t) => {
                 let { duration: n, label: i } = t;
                 return (0, r.jsx)(
                     a.sNh,
@@ -216,17 +216,17 @@ function j(e) {
         C = x({
             status: p.Skl.IDLE,
             currentStatus: e,
-            description: _(p.Skl.IDLE)
+            description: b(p.Skl.IDLE)
         }),
         O = x({
             status: p.Skl.DND,
             currentStatus: e,
-            description: _(p.Skl.DND)
+            description: b(p.Skl.DND)
         }),
         S = x({
             status: p.Skl.INVISIBLE,
             currentStatus: e,
-            description: _(p.Skl.INVISIBLE)
+            description: b(p.Skl.INVISIBLE)
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [

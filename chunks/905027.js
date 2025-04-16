@@ -16,7 +16,7 @@ function p() {
         n = (0, s.e7)([m.Z], () => m.Z.getErrors()),
         [p, h] = i.useState(!1),
         f = i.useMemo(() => ((null == n ? void 0 : n.message) != null ? (null == n ? void 0 : n.message) : Object.keys(null != n ? n : {}).length > 0 ? g.NW.string(g.t.s35OuL) : null), [n]),
-        b = i.useCallback(async () => {
+        _ = i.useCallback(async () => {
             var e, n, r;
             h(!0);
             let i = m.Z.getAllPending(),
@@ -43,13 +43,13 @@ function p() {
             }
             g && (0, u.b9)(), h(!1);
         }, [null == t ? void 0 : t.id]),
-        _ = i.useCallback(() => {
+        b = i.useCallback(() => {
             (0, u.W3)();
         }, []);
     return (0, r.jsx)(a.Z, {
         submitting: p,
-        onSave: b,
-        onReset: _,
+        onSave: _,
+        onReset: b,
         disabled: e,
         errorMessage: null != f ? f : void 0
     });

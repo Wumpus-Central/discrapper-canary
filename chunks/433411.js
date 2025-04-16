@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(993413),
     h = n(388032),
     f = n(142436);
-function b(e) {
-    let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: b = !1, withTutorial: N = !1, isTryItOutFlow: x = !1 } = e,
+function _(e) {
+    let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: _ = !1, withTutorial: N = !1, isTryItOutFlow: x = !1 } = e,
         { analyticsLocations: E } = (0, o.ZP)(),
         j = null != n,
         { userAvatarDecoration: C, guildAvatarDecoration: O, pendingAvatarDecoration: S, pendingErrors: v } = (0, g.$U)(t, n),
@@ -32,7 +32,7 @@ function b(e) {
         A = N ? l.gtL : l.zxk;
     return (0, r.jsxs)(p.Z, {
         className: s,
-        forcedDivider: b,
+        forcedDivider: _,
         hasBackground: !0,
         title: m,
         errors: v,
@@ -59,11 +59,11 @@ function b(e) {
                         })
                 ]
             }),
-            t.isStaff() && T && (0, r.jsx)(_, { user: t })
+            t.isStaff() && T && (0, r.jsx)(b, { user: t })
         ]
     });
 }
-let _ = (e) => {
+let b = (e) => {
     let { user: t } = e;
     return (0, r.jsxs)('div', {
         className: f.overrideButtonsContainer,

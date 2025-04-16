@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(493773),
     h = n(714338),
     f = n(857595),
-    b = n(607070),
-    _ = n(627845),
+    _ = n(607070),
+    b = n(627845),
     N = n(514361),
     x = n(600164),
     E = n(313201),
@@ -359,7 +359,7 @@ class ee extends i.Component {
                   children: (0, r.jsx)(u.R94, {
                       type: u.R94.Types.DEFAULT,
                       className: V.forcedColorsWarning,
-                      children: (0, _.b)()
+                      children: (0, b.b)()
                           ? U.NW.format(U.t.Jae48P, {
                                 onClick: () => {
                                     g.Z.open(L.oAB.ACCESSIBILITY);
@@ -753,16 +753,16 @@ function er() {
     (0, p.ZP)(() => {
         en(o.z.CLIENT_THEMES_SETTINGS_BADGE), en(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), en(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     });
-    let c = (0, l.cj)([R.Z, D.ZP, b.Z, A.default, N.Z], () => {
+    let c = (0, l.cj)([R.Z, D.ZP, _.Z, A.default, N.Z], () => {
             var e, t;
             return {
                 theme: R.Z.theme,
-                useForcedColors: b.Z.useForcedColors,
+                useForcedColors: _.Z.useForcedColors,
                 useSystemTheme: D.ZP.useSystemTheme,
                 darkSidebar: R.Z.darkSidebar,
-                fontSize: b.Z.fontSize,
-                zoom: b.Z.zoom,
-                messageGroupSpacing: b.Z.messageGroupSpacing,
+                fontSize: _.Z.fontSize,
+                zoom: _.Z.zoom,
+                messageGroupSpacing: _.Z.messageGroupSpacing,
                 displayCompactAvatars: D.ZP.displayCompactAvatars,
                 isStaff: null != (t = null == (e = A.default.getCurrentUser()) ? void 0 : e.isStaff) && t,
                 gradientPreset: N.Z.gradientPreset

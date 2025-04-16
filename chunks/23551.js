@@ -14,10 +14,10 @@ var i = n(120356),
     p = n(286990);
 let h = (e) => {
     let { disabled: t = !1, type: n, className: i, innerClassName: h, onConnect: f } = e,
-        b = (0, o.ZP)(),
-        _ = c.Z.get((0, d.rR)(n));
+        _ = (0, o.ZP)(),
+        b = c.Z.get((0, d.rR)(n));
     return (0, r.jsx)(l.ua7, {
-        text: _.name,
+        text: b.name,
         children: (e) => {
             let { onMouseEnter: o, onMouseLeave: d } = e;
             return (0, r.jsx)('div', {
@@ -29,7 +29,7 @@ let h = (e) => {
                         className: s()(p.inner, h),
                         type: 'button',
                         disabled: t,
-                        style: { backgroundImage: "url('".concat((0, a.wj)(b) ? _.icon.darkSVG : _.icon.lightSVG, "')") },
+                        style: { backgroundImage: "url('".concat((0, a.wj)(_) ? b.icon.darkSVG : b.icon.lightSVG, "')") },
                         onClick:
                             null != f
                                 ? f
@@ -46,7 +46,7 @@ let h = (e) => {
                                                   platform_type: t.type
                                               });
                                       })(n),
-                        'aria-label': _.name
+                        'aria-label': b.name
                     })
                 })
             });

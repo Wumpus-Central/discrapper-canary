@@ -13,8 +13,8 @@ var r,
     p = n(981631);
 let h = { status: '' },
     f = [],
-    b = ['discord.com', 'discordapp.com', 'discordapp.net', 'dl.discordapp.net', 'discordcdn.com', 'discord.gg', 'discord.media'];
-class _ extends (r = l.ZP.Store) {
+    _ = ['discord.com', 'discordapp.com', 'discordapp.net', 'dl.discordapp.net', 'discordcdn.com', 'discord.gg', 'discord.media'];
+class b extends (r = l.ZP.Store) {
     initialize() {
         this.updateState(), this.addListener();
     }
@@ -86,7 +86,7 @@ class _ extends (r = l.ZP.Store) {
         try {
             let t = await this.runCommand('tunnel', 'host', 'list');
             if ((null == t ? void 0 : t.mode) === 'exclude')
-                for (let n of b) {
+                for (let n of _) {
                     var e;
                     (null == t || null == (e = t.hosts) ? void 0 : e.indexOf(n)) === -1 && (await this.runCommand('tunnel', 'host', 'add', n));
                 }
@@ -134,12 +134,12 @@ class _ extends (r = l.ZP.Store) {
     }
 }
 (s = 'WarpClientStore'),
-    (i = 'displayName') in _
-        ? Object.defineProperty(_, i, {
+    (i = 'displayName') in b
+        ? Object.defineProperty(b, i, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (_[i] = s);
-let N = new _(c.Z, {});
+        : (b[i] = s);
+let N = new b(c.Z, {});

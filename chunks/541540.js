@@ -25,7 +25,7 @@ function f(e, t, n) {
         e
     );
 }
-function b(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function b(e) {
     }
     return e;
 }
-function _(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,7 +64,7 @@ class N extends i.Component {
         let {
             analyticsContext: { location: e }
         } = this.props;
-        return _(b({}, e), { object: g.qAy.BUTTON_CTA });
+        return b(_({}, e), { object: g.qAy.BUTTON_CTA });
     }
     render() {
         let { obscureInput: e } = this.props,
@@ -134,7 +134,7 @@ class N extends i.Component {
                     if (null != e && null != e.giftCode.promotion) throw (this.setState({ isPromoCode: !0 }), Error('Cannnot redeem promotion code as gift'));
                     u.default.track(g.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
-                        location: _(b({}, this.analyticsLocation), { object: g.qAy.BUTTON_CTA })
+                        location: b(_({}, this.analyticsLocation), { object: g.qAy.BUTTON_CTA })
                     }),
                         (0, c.V)({ processedCode: n }),
                         this.setState({ codeInput: '' });

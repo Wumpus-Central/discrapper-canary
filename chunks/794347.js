@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => _,
+    Z: () => b,
     _: () => h
 });
 var r,
@@ -19,23 +19,23 @@ let f = {
     BLACK: g.black,
     GRAY: g.gray
 };
-function b(e) {
+function _(e) {
     return Math.round(e / p) * p;
 }
-function _(e) {
+function b(e) {
     let { notchBackground: t, progress: n, gradientStart: r = o.Z.unsafe_rawColors.YELLOW_260.css, gradientEnd: a = o.Z.unsafe_rawColors.GREEN_360.css, className: c, children: m } = e,
         { ref: p, width: h } = (0, d.ZP)(),
-        _ = s.useMemo(() => (null != h ? b(h) : 0), [h]),
+        b = s.useMemo(() => (null != h ? _(h) : 0), [h]),
         N = s.useMemo(() => {
-            let e = Math.abs(b((_ * (100 - Math.max(0, Math.min(100, n)))) / 100) - _);
+            let e = Math.abs(_((b * (100 - Math.max(0, Math.min(100, n)))) / 100) - b);
             return { transform: 'translateX('.concat(e, 'px)') };
-        }, [n, _]),
+        }, [n, b]),
         x = s.useMemo(
             () => ({
-                width: ''.concat(_, 'px'),
+                width: ''.concat(b, 'px'),
                 background: n <= 0 ? 'none' : 'linear-gradient(to right, '.concat(r, ', ').concat(a, ')')
             }),
-            [a, r, n, _]
+            [a, r, n, b]
         );
     return (0, i.jsxs)('div', {
         className: g.wrapper,
@@ -49,9 +49,9 @@ function _(e) {
                         className: g.progress,
                         style: N
                     }),
-                    0 !== _ &&
+                    0 !== b &&
                         (0, i.jsx)(u.Z, {
-                            width: _,
+                            width: b,
                             className: l()(g.notches, f[t])
                         })
                 ]

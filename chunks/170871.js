@@ -10,7 +10,7 @@ var r = n(200651),
     u = n(308083),
     m = n(580273);
 function g(e) {
-    let { className: t, clanTag: n, clanBadge: s, onTagClick: g, guildId: p, guildName: h, guildIcon: f, guildIconSize: b, memberCount: _ } = e,
+    let { className: t, clanTag: n, clanBadge: s, onTagClick: g, guildId: p, guildName: h, guildIcon: f, guildIconSize: _, memberCount: b } = e,
         N = i.useRef(null),
         [x, E] = i.useState(!1);
     return (
@@ -28,7 +28,7 @@ function g(e) {
                             guildId: p,
                             guildName: h,
                             guildIcon: f,
-                            iconSize: b,
+                            iconSize: _,
                             className: m.guildPrefixIcon,
                             animate: !1
                         }),
@@ -89,7 +89,7 @@ function g(e) {
                                         );
                                     }
                                 }),
-                                null != _ && (0, r.jsx)(c.Z, { count: _ })
+                                null != b && (0, r.jsx)(c.Z, { count: b })
                             ]
                         })
                     ]

@@ -1,70 +1,70 @@
-n.d(t, { Z: () => v });
-var l = n(200651);
+n.d(t, { Z: () => N });
+var r = n(200651);
 n(192379);
-var i = n(442837),
-    r = n(481060),
+var l = n(442837),
+    i = n(481060),
     o = n(749210),
     a = n(287734),
-    s = n(933557),
-    u = n(314897),
-    d = n(592125),
-    c = n(984933),
-    f = n(271383),
+    u = n(933557),
+    s = n(314897),
+    c = n(592125),
+    d = n(984933),
+    b = n(271383),
     g = n(430824),
     Z = n(496675),
-    b = n(699516),
-    O = n(594174),
-    m = n(979651),
-    N = n(934415),
-    h = n(700785),
+    f = n(699516),
+    p = n(594174),
+    O = n(979651),
+    h = n(934415),
+    m = n(700785),
     j = n(981631),
-    E = n(388032);
-function v(e, t) {
-    let n = (0, i.e7)([c.ZP], () => c.ZP.getChannels(t)[c.Zb], [t]),
-        v = (0, i.e7)(
-            [m.Z, d.Z],
+    P = n(388032);
+function N(e, t) {
+    let n = (0, l.e7)([d.ZP], () => d.ZP.getChannels(t)[d.Zb], [t]),
+        N = (0, l.e7)(
+            [O.Z, c.Z],
             () => {
-                let n = m.Z.getUserVoiceChannelId(t, e.id);
-                return d.Z.getChannel(n);
+                let n = O.Z.getUserVoiceChannelId(t, e.id);
+                return c.Z.getChannel(n);
             },
             [t, e.id]
         );
-    if ((0, i.e7)([f.ZP], () => f.ZP.isGuestOrLurker(t, e.id), [t, e.id]) || null == v) return null;
-    let p = e.id === u.default.getId();
-    if (!p && !Z.Z.can(j.Plq.MOVE_MEMBERS, v)) return null;
-    let P = n.filter((t) => {
+    if ((0, l.e7)([b.ZP], () => b.ZP.isGuestOrLurker(t, e.id), [t, e.id]) || null == N) return null;
+    let y = e.id === s.default.getId();
+    if (!y && !Z.Z.can(j.Plq.MOVE_MEMBERS, N)) return null;
+    let E = n.filter((t) => {
         let { channel: n } = t;
         return (
-            n.id !== v.id &&
-            (p
-                ? Z.Z.can(j.Plq.CONNECT, n) && !(0, N.rY)(n, m.Z, g.Z)
+            n.id !== N.id &&
+            (y
+                ? Z.Z.can(j.Plq.CONNECT, n) && !(0, h.rY)(n, O.Z, g.Z)
                 : Z.Z.can(j.Plq.MOVE_MEMBERS, n) &&
                   (Z.Z.can(j.Plq.CONNECT, n) ||
-                      h.BT({
+                      m.BT({
                           permission: j.Plq.CONNECT,
                           user: e,
                           context: n
                       })) &&
-                  !(0, N.rY)(n, m.Z, g.Z))
+                  !(0, h.rY)(n, O.Z, g.Z))
         );
     });
-    return 0 === P.length
+    return 0 === E.length
         ? null
-        : (0, l.jsx)(r.sNh, {
+        : (0, r.jsx)(i.sNh, {
               id: 'voice-move',
-              label: E.NW.string(E.t.FAplmp),
-              children: P.map((n) => {
-                  let { channel: i } = n;
-                  return (0, l.jsx)(
-                      r.sNh,
+              label: P.NW.string(P.t.FAplmp),
+              children: E.map((n) => {
+                  let { channel: l } = n;
+                  return (0, r.jsx)(
+                      i.sNh,
                       {
-                          id: i.id,
+                          id: l.id,
                           action: () => {
-                              e.id === u.default.getId() ? a.default.selectVoiceChannel(i.id) : o.Z.setChannel(t, e.id, i.id);
+                              e.id === s.default.getId() ? a.default.selectVoiceChannel(l.id) : o.Z.setChannel(t, e.id, l.id);
                           },
-                          label: (0, s.F6)(i, O.default, b.Z)
+                          label: (0, u.F6)(l, p.default, f.Z)
                       },
-                      i.id
+                      l.id
                   );
               })
           });

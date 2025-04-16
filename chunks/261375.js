@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(539854);
+n.d(t, { Z: () => _ }), n(388685), n(539854);
 var r = n(768433),
     i = n(710845),
     s = n(38618),
@@ -27,7 +27,7 @@ let h = new i.Z('GuildBasicChannels');
 function f(e, t) {
     return null == e || e.type !== t.type || e.parent_id !== t.parent_id || d.Z.computeBasicPermissions(e) !== d.Z.computeBasicPermissions(t);
 }
-let b = new (class {
+let _ = new (class {
     async getAsync(e) {
         let t = performance.now(),
             [n, r] = await Promise.all([m.Z.basicChannels(e).getKvEntries(), m.Z.syncedBasicChannels(e).getKvEntries()]),

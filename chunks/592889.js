@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(906732),
     h = n(975298),
     f = n(600164),
-    b = n(210887),
-    _ = n(301766),
+    _ = n(210887),
+    b = n(301766),
     N = n(509545),
     x = n(74538),
     E = n(937615),
@@ -23,7 +23,7 @@ var r = n(200651),
     O = n(169000);
 function S(e) {
     let { subscription: t, renewalMutations: n, transitionState: i, onClose: s, analyticsLocation: a } = e,
-        l = (0, c.e7)([b.Z], () => b.Z.theme),
+        l = (0, c.e7)([_.Z], () => _.Z.theme),
         { analyticsLocations: h } = (0, p.ZP)(g.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
     async function j() {
         await (0, m.dP)(t, t.planId, h, a), s();
@@ -52,7 +52,7 @@ function S(e) {
             }),
             (0, r.jsx)(u.hzk, {
                 className: O.modalBody,
-                children: (0, _.Q0)(t.planId)
+                children: (0, b.Q0)(t.planId)
                     ? C.NW.format(C.t.GMp54O, {
                           downgradedPlan: x.ZP.getDisplayName(n.planId),
                           existingRate: T

@@ -1,71 +1,71 @@
-r.d(t, { default: () => h }), r(953529);
-var n = r(200651),
-    i = r(192379),
-    o = r(481060),
-    l = r(651711),
-    c = r(434404),
-    a = r(202858),
-    s = r(587431),
-    d = r(400842),
-    u = r(271267),
-    b = r(981631),
-    y = r(388032),
-    p = r(280086),
-    _ = r(653904);
+i.d(t, { default: () => j }), i(953529);
+var n = i(200651),
+    r = i(192379),
+    l = i(481060),
+    c = i(651711),
+    o = i(434404),
+    a = i(202858),
+    s = i(587431),
+    d = i(400842),
+    b = i(271267),
+    u = i(981631),
+    g = i(388032),
+    y = i(280086),
+    h = i(653904);
 function f() {
     return (0, n.jsxs)('div', {
-        className: p.eligibilityHeader,
+        className: y.eligibilityHeader,
         children: [
-            (0, n.jsx)(o.X6q, {
-                className: p.eligibilityHeaderText,
+            (0, n.jsx)(l.X6q, {
+                className: y.eligibilityHeaderText,
                 variant: 'heading-lg/extrabold',
                 color: 'header-primary',
-                children: y.NW.string(y.t['3s47iI'])
+                children: g.NW.string(g.t['3s47iI'])
             }),
             (0, n.jsx)('img', {
-                className: p.eligibilityHeaderImage,
-                src: _,
+                className: y.eligibilityHeaderImage,
+                src: h,
                 alt: ''
             }),
-            (0, n.jsx)(o.olH, {
-                className: p.eligibilityHeaderCloseButton,
+            (0, n.jsx)(l.olH, {
+                className: y.eligibilityHeaderCloseButton,
                 onClick: () => {
-                    (0, o.Mr3)(u.Q);
+                    (0, l.Mr3)(b.Q);
                 }
             })
         ]
     });
 }
-function g(e) {
-    let { eligibility: t, eligibilityLoading: r, eligibilityError: y, guildId: _, onEligibilityBecameStale: f } = e,
-        g = i.useMemo(
+function p(e) {
+    let { eligibility: t, eligibilityLoading: i, eligibilityError: g, guildId: h, onEligibilityBecameStale: f } = e,
+        p = r.useMemo(
             () => ({
                 onEligibilityBecameStale: f,
                 sortedByIneligible: !0,
                 actions: {
                     onEnableMFAClick: a.ZP.enableMFA,
                     onRequireModeratorMFAClick: () => {
-                        (0, o.Mr3)(u.Q), c.Z.open(_, b.pNK.SAFETY, void 0, b.KsC.SAFETY_PERMISSIONS);
+                        (0, l.Mr3)(b.Q), o.Z.open(h, u.pNK.SAFETY, void 0, u.KsC.SAFETY_PERMISSIONS);
                     }
                 }
             }),
-            [_, f]
+            [h, f]
         ),
-        h = (0, l.Z)(t, g);
-    return null != y
+        j = (0, c.Z)(t, p);
+    return null != g
         ? (0, n.jsx)('div', {
-              className: p.paddedContainer,
-              children: (0, n.jsx)(s.Z, { children: y.message })
+              className: y.paddedContainer,
+              children: (0, n.jsx)(s.Z, { children: g.message })
           })
-        : null == h || r
+        : null == j || i
           ? (0, n.jsx)('div', {
-                className: p.paddedContainer,
-                children: (0, n.jsx)(o.$jN, {})
+                className: y.paddedContainer,
+                children: (0, n.jsx)(l.$jN, {})
             })
           : (0, n.jsx)('div', {
-                children: h.map((e, t) =>
+                children: j.map((e, t) =>
                     (0, n.jsxs)(
-                        i.Fragment,
+                        r.Fragment,
                         {
                             children: [
                                 (0, n.jsx)(d.d, {
@@ -75,7 +75,7 @@ function g(e) {
                                     actionLabel: e.actionLabel,
                                     actionHandler: e.actionHandler
                                 }),
-                                t < h.length - 1 ? (0, n.jsx)(o.$i$, {}) : null
+                                t < j.length - 1 ? (0, n.jsx)(l.$i$, {}) : null
                             ]
                         },
                         e.checkedLabel
@@ -83,21 +83,21 @@ function g(e) {
                 )
             });
 }
-function h(e) {
-    let { eligibility: t, eligibilityLoading: r, eligibilityError: i, refreshEligibility: l, guildId: c, transitionState: a } = e;
-    return (0, n.jsxs)(o.Y0X, {
-        className: p.eligibilityModal,
-        size: o.CgR.MEDIUM,
+function j(e) {
+    let { eligibility: t, eligibilityLoading: i, eligibilityError: r, refreshEligibility: c, guildId: o, transitionState: a } = e;
+    return (0, n.jsxs)(l.Y0X, {
+        className: y.eligibilityModal,
+        size: l.CgR.MEDIUM,
         transitionState: a,
         children: [
             (0, n.jsx)(f, {}),
-            (0, n.jsx)(o.hzk, {
-                children: (0, n.jsx)(g, {
+            (0, n.jsx)(l.hzk, {
+                children: (0, n.jsx)(p, {
                     eligibility: t,
-                    eligibilityLoading: r,
-                    eligibilityError: i,
-                    guildId: c,
-                    onEligibilityBecameStale: l
+                    eligibilityLoading: i,
+                    eligibilityError: r,
+                    guildId: o,
+                    onEligibilityBecameStale: c
                 })
             })
         ]

@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(100527),
     h = n(906732),
     f = n(600164),
-    b = n(431369),
-    _ = n(210887),
+    _ = n(431369),
+    b = n(210887),
     N = n(78839),
     x = n(74538),
     E = n(388032),
@@ -25,7 +25,7 @@ async function C(e, t, n, r) {
 function O(e) {
     let { premiumSubscription: t, guildBoostSlotId: n, onNext: s, onClose: d } = e,
         [u, p] = i.useState(!1),
-        N = (0, l.e7)([_.Z], () => _.Z.theme),
+        N = (0, l.e7)([b.Z], () => b.Z.theme),
         { analyticsLocations: O } = (0, h.ZP)(),
         [S, v] = i.useState(null);
     return (0, r.jsxs)(r.Fragment, {
@@ -58,7 +58,7 @@ function O(e) {
                         onClick: async () => {
                             try {
                                 p(!0), v(null);
-                                let e = (0, b.g)(t, 1);
+                                let e = (0, _.g)(t, 1);
                                 a()((0, x.uV)(e) <= (0, x.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await C(t, e, n, O), s();
                             } catch (t) {
                                 let e = t instanceof m.HF ? t : new m.HF(t, t.code);

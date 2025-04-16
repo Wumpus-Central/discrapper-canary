@@ -14,15 +14,15 @@ var r = n(200651),
 let h = () => {
     let { analyticsLocations: e } = (0, l.ZP)(a.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
         t = i.useRef(null),
-        { asset: n, popoutAsset: h, title: f, body: b, version: _, revertTextColor: N } = (0, d.W)();
+        { asset: n, popoutAsset: h, title: f, body: _, version: b, revertTextColor: N } = (0, d.W)();
     return (
         i.useEffect(() => {
             o.default.track(u.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: m.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                 location_stack: e,
-                version: _
+                version: b
             });
-        }, [e, _]),
+        }, [e, b]),
         (0, r.jsxs)('div', {
             ref: t,
             className: p.container,
@@ -50,7 +50,7 @@ let h = () => {
                         (0, r.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: N ? 'redesign-button-overlay-text' : 'currentColor',
-                            children: b
+                            children: _
                         })
                     ]
                 }),

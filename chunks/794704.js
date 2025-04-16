@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(704215),
     h = n(481060),
     f = n(224706),
-    b = n(660216),
-    _ = n(765250),
+    _ = n(660216),
+    b = n(765250),
     N = n(13245),
     x = n(825209),
     E = n(615287),
@@ -108,8 +108,8 @@ function eh(e, t) {
     );
 }
 let ef = eN(null),
-    eb = 'voice-widget-display-users',
-    e_ = [0, 5, 10, 15, 20, 25];
+    e_ = 'voice-widget-display-users',
+    eb = [0, 5, 10, 15, 20, 25];
 function eN(e) {
     var t;
     let n = ee.default.getNotificationPositionMode(),
@@ -291,11 +291,11 @@ function eS(e) {
             [a, d]
         ),
         p = (0, g.e7)([I.ZP, K.Z, X.Z], () => (null == a ? null : (0, I.FZ)(a, [I.ZP, K.Z, X.Z])), [a], o()),
-        [b, _] = i.useState(m),
+        [_, b] = i.useState(m),
         [x, S] = i.useState(u),
         [v, T] = i.useState(!1);
     i.useEffect(() => {
-        _(m), S(u);
+        b(m), S(u);
     }, [m, u]);
     let y = (0, O.$1)(),
         D = !(0, es.supportsOutOfProcess)(),
@@ -307,10 +307,10 @@ function eS(e) {
                 o = !1;
             switch (t) {
                 case R.AE.LEGACY_GAME:
-                    S(e), f.Z.toggleOverlay(a, e, b), (l = !e && x);
+                    S(e), f.Z.toggleOverlay(a, e, _), (l = !e && x);
                     break;
                 case R.AE.OOP_GAME:
-                    _(e), f.Z.toggleOverlay(a, x, e), (o = !e && b);
+                    b(e), f.Z.toggleOverlay(a, x, e), (o = !e && _);
                     break;
                 case R.AE.LEGACY:
                     N.Z.setEnabled(e, w), (0, R.ou)(e, R.AE.LEGACY, null != (r = a.id) ? r : null);
@@ -322,9 +322,9 @@ function eS(e) {
         },
         L = (e, t) => {
             let n = !t && e,
-                r = !w && b,
+                r = !w && _,
                 i = !Z && x,
-                s = !b && w,
+                s = !_ && w,
                 a = !x && Z;
             switch (!0) {
                 case n && (r || i) && (s || a):
@@ -341,13 +341,13 @@ function eS(e) {
                 i = !1;
             switch (t) {
                 case 'game':
-                    f.Z.toggleOverlay(a, e, e), S(e), _(e), (r = !e && x), (i = !e && b);
+                    f.Z.toggleOverlay(a, e, e), S(e), b(e), (r = !e && x), (i = !e && _);
                     break;
                 case 'global':
                     N.Z.setEnabled(e, e), (r = !e && Z), (i = !e && w);
                     break;
                 case 'both':
-                    N.Z.setEnabled(e, e), f.Z.toggleOverlay(a, e, e), S(e), _(e), (r = (!e && Z) || (!e && x)), (i = (!e && w) || (!e && b));
+                    N.Z.setEnabled(e, e), f.Z.toggleOverlay(a, e, e), S(e), b(e), (r = (!e && Z) || (!e && x)), (i = (!e && w) || (!e && _));
             }
             let s = null;
             if ((r ? (s = 'game' === t ? R.AE.LEGACY_GAME : R.AE.LEGACY) : i && (s = 'game' === t ? R.AE.OOP_GAME : R.AE.OOP), null != s)) {
@@ -357,8 +357,8 @@ function eS(e) {
         },
         U = y && D,
         V = !Z && !w,
-        G = !b && !Z && x && !y,
-        F = !x && !w && b && !D,
+        G = !_ && !Z && x && !y,
+        F = !x && !w && _ && !D,
         H = (null == d ? void 0 : d.overlayMethod) === E.gl.Disabled,
         z = (null == d ? void 0 : d.state) === E.mM.OVERLAY_RENDERING && !H,
         Y = (null == d ? void 0 : d.state) != null && eC.has(d.state) && !H,
@@ -366,7 +366,7 @@ function eS(e) {
         Q = (null == d ? void 0 : d.overlayMethod) === E.gl.OutOfProcessLimitedInteraction,
         J = (null == d ? void 0 : d.overlayMethod) === E.gl.Hook,
         $ = (null == d ? void 0 : d.state) === E.mM.OVERLAY_CRASHED || (null == d ? void 0 : d.state) === E.mM.OVERLAY_CRASHED_DISABLED,
-        ee = !b && !x,
+        ee = !_ && !x,
         [et, en] = (() => {
             switch (!0) {
                 case z && q:
@@ -530,10 +530,10 @@ function eS(e) {
               action: (0, r.jsx)(h.P3F, {
                   onClick: (e) => eO(e),
                   children: (0, r.jsx)(h.rsf, {
-                      checked: (b && w) || (x && Z),
+                      checked: (_ && w) || (x && Z),
                       disabled: U,
                       onChange: (e, t) => {
-                          B(e, L(e, (b && w) || (x && Z)), t);
+                          B(e, L(e, (_ && w) || (x && Z)), t);
                       }
                   })
               }),
@@ -546,7 +546,7 @@ function eS(e) {
                       action: (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(h.rsf, {
-                                  checked: b && w,
+                                  checked: _ && w,
                                   disabled: D,
                                   onChange: (e, t) => {
                                       e && !w ? W(e, R.AE.OOP, t) : W(e, R.AE.OOP_GAME, t);
@@ -596,7 +596,7 @@ function eT(e) {
     i.useEffect(() => {
         f(m);
     }, [m]);
-    let b = (e, n) => {
+    let _ = (e, n) => {
         let r = !e && p;
         if ((eO(n), f(e), l(e, d, u), r)) {
             var i, s;
@@ -615,7 +615,7 @@ function eT(e) {
                 (0, r.jsx)(h.rsf, {
                     checked: p,
                     disabled: s,
-                    onChange: (e, t) => b(e, t)
+                    onChange: (e, t) => _(e, t)
                 }),
                 (0, r.jsx)('div', { className: eu.emptySpacer })
             ]
@@ -821,7 +821,7 @@ function eA() {
                             disabled: t && n,
                             defaultValue: null != e ? e.shortcut : [],
                             onChange: function (t) {
-                                d()(null != e, 'Keybind should never be undefined'), b.Z.setKeybind(eh(ep({}, e), { shortcut: t }));
+                                d()(null != e, 'Keybind should never be undefined'), _.Z.setKeybind(eh(ep({}, e), { shortcut: t }));
                             }
                         })
                     })
@@ -1083,7 +1083,7 @@ function eZ() {
             }),
             (0, r.jsx)(ex, {
                 title: ed.NW.string(ed.t['X/Uyzc']),
-                titleId: eb,
+                titleId: e_,
                 children: (0, r.jsx)('div', {
                     className: eu.sliderContainer,
                     children: (0, r.jsx)(h.iRW, {
@@ -1092,12 +1092,12 @@ function eZ() {
                         minValue: 0,
                         maxValue: 25,
                         onValueChange: function (e) {
-                            null != u && (e < 1 ? (0, _.zG)(u.id, { voiceStatesMaxShown: ec.Og }) : (0, _.zG)(u.id, { voiceStatesMaxShown: Math.floor(e) }));
+                            null != u && (e < 1 ? (0, b.zG)(u.id, { voiceStatesMaxShown: ec.Og }) : (0, b.zG)(u.id, { voiceStatesMaxShown: Math.floor(e) }));
                         },
-                        markers: e_,
+                        markers: eb,
                         barStyles: { background: h.TVs.colors.BG_MOD_STRONG.css },
                         fillStyles: { background: h.TVs.colors.BG_BRAND.css },
-                        'aria-labelledby': eb,
+                        'aria-labelledby': e_,
                         onMarkerRender: (e) => (e < 1 ? ed.NW.string(ed.t.nrUzFB) : ''.concat(Math.floor(e)))
                     })
                 })

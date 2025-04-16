@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(726985),
     h = n(388032),
     f = n(495288),
-    b = n(20493);
-function _(e) {
+    _ = n(20493);
+function b(e) {
     let { label: t, onChange: n, enabled: i, subLabel: s } = e;
     return (0, r.jsx)(o.j7V, {
         value: !!i,
@@ -48,7 +48,7 @@ function N() {
               children: [
                   (0, r.jsx)('div', { ref: t }),
                   (0, r.jsxs)(o.hjN, {
-                      className: b.marginTop40,
+                      className: _.marginTop40,
                       tag: o.RB0.H1,
                       title: h.NW.string(h.t.TPchzM),
                       children: [
@@ -56,7 +56,7 @@ function N() {
                               let { category: t, label: i, subLabel: s } = e,
                                   a = x[t],
                                   l = (0, r.jsx)(
-                                      _,
+                                      b,
                                       {
                                           label: i(),
                                           subLabel: s(),
@@ -93,7 +93,7 @@ function N() {
                                       type: o.geA.DESCRIPTION,
                                       children: h.NW.string(h.t.iYjQ8f)
                                   }),
-                                  (0, r.jsx)(o.$i$, { className: a()(b.marginTop40, b.marginBottom40) })
+                                  (0, r.jsx)(o.$i$, { className: a()(_.marginTop40, _.marginBottom40) })
                               ]
                           })
                       ]

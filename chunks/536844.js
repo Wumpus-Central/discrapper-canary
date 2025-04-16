@@ -14,9 +14,9 @@ var i = n(120356),
 let p = (e) => {
     let { className: t, imageClassName: n, textContainerOverrideStyles: i, location: p, analyticsLocation: h } = e,
         { analyticsLocations: f } = (0, l.ZP)(p),
-        b = (0, o.rK)(),
-        { enabled: _ } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: b }),
-        N = _ && b;
+        _ = (0, o.rK)(),
+        { enabled: b } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: _ }),
+        N = b && _;
     return (0, r.jsx)(l.Gt, {
         value: f,
         children: (0, r.jsxs)('div', {

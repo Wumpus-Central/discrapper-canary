@@ -19,8 +19,8 @@ var r = n(200651),
     p = n(493683),
     h = n(239091),
     f = n(420660),
-    b = n(468363),
-    _ = n(326255),
+    _ = n(468363),
+    b = n(326255),
     N = n(956221),
     x = n(747017),
     E = n(385499),
@@ -179,15 +179,15 @@ let er = X.ZP.getEnableHardwareAcceleration() ? g.Xo$ : g.qEK,
             className: $.favoriteIcon
         }),
     ec = (e) => {
-        var { route: t, selected: n, icon: i, iconClassName: s, avatarWithTextClassName: l, interactiveClassName: o, text: d, children: m, locationState: p, onClick: h, className: f, role: b, 'aria-posinset': _, 'aria-setsize': N, listItemRef: x } = e,
+        var { route: t, selected: n, icon: i, iconClassName: s, avatarWithTextClassName: l, interactiveClassName: o, text: d, children: m, locationState: p, onClick: h, className: f, role: _, 'aria-posinset': b, 'aria-setsize': N, listItemRef: x } = e,
             E = en(e, ['route', 'selected', 'icon', 'iconClassName', 'avatarWithTextClassName', 'interactiveClassName', 'text', 'children', 'locationState', 'onClick', 'className', 'role', 'aria-posinset', 'aria-setsize', 'listItemRef']);
         let C = (0, A.Q3)('PrivateChannelLinkButton');
         return (0, r.jsx)(I.Z, {
             className: a()($.channel, { [$.fullWidth]: u.tq }, f),
             onClick: h,
-            role: b,
+            role: _,
             focusProps: ee({ within: !0 }, ei),
-            'aria-posinset': _,
+            'aria-posinset': b,
             'aria-setsize': N,
             ref: x,
             children: (0, r.jsx)(g.vjx, {
@@ -228,7 +228,7 @@ let er = X.ZP.getEnableHardwareAcceleration() ? g.Xo$ : g.qEK,
         });
     };
 function ed(e) {
-    let { channel: t, isGDMFacepileEnabled: s, selected: l = !1, user: u, activities: b, applicationStream: N, voiceChannel: A, isTyping: R, status: w, isMobile: k, nameplate: V, 'aria-posinset': G, 'aria-setsize': z } = e,
+    let { channel: t, isGDMFacepileEnabled: s, selected: l = !1, user: u, activities: _, applicationStream: N, voiceChannel: A, isTyping: R, status: w, isMobile: k, nameplate: V, 'aria-posinset': G, 'aria-setsize': z } = e,
         [K, q] = i.useState(!1),
         X = i.useRef(null),
         ec = i.useRef(null),
@@ -245,15 +245,15 @@ function ed(e) {
         ep = t.isSystemDM(),
         eh = (0, M.Q)(),
         ef = !eg && !ep && t.type === Q.d4z.DM,
-        eb = ef && (null == u ? void 0 : u.primaryGuild) != null,
-        e_ = (0, m.e7)([Y.ZP], () => Y.ZP.isChannelMuted(t.getGuildId(), t.id)),
+        e_ = ef && (null == u ? void 0 : u.primaryGuild) != null,
+        eb = (0, m.e7)([Y.ZP], () => Y.ZP.isChannelMuted(t.getGuildId(), t.id)),
         { ignored: eN, blocked: ex } = (0, m.cj)([H.Z], () => ({
             ignored: H.Z.isIgnored(t.getRecipientId()),
             blocked: H.Z.isBlocked(t.getRecipientId())
         })),
         eE = ef && eN,
         ej = ef && ex,
-        eC = (e_ || eE || ej) && !(l || K),
+        eC = (eb || eE || ej) && !(l || K),
         eO = (0, m.e7)([F.ZP], () => F.ZP.getMentionCount(t.id) > 0),
         eS = (0, v.ZP)(t),
         ev = (0, m.e7)([P.Z], () => P.Z.isFavorite(t.id)),
@@ -343,15 +343,15 @@ function ed(e) {
                         className: $.subtext,
                         children: J.NW.format(J.t.CxSA5O, { members: t.recipients.length + 1 })
                     })
-                  : (0, _.Z)({
-                          activities: b,
+                  : (0, b.Z)({
+                          activities: _,
                           status: w,
                           applicationStream: N,
                           voiceChannel: A
                       })
                     ? (0, r.jsx)(x.Z, {
                           user: u,
-                          activities: b,
+                          activities: _,
                           voiceChannel: A,
                           applicationStream: N,
                           animate: K,
@@ -384,7 +384,7 @@ function ed(e) {
             o()(null != u, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let n = null;
             return (
-                u.isSystemUser() || (n = (0, f.Z)(b) ? Q.Skl.STREAMING : w),
+                u.isSystemUser() || (n = (0, f.Z)(_) ? Q.Skl.STREAMING : w),
                 (0, r.jsx)(
                     er,
                     et(ee({}, em), {
@@ -400,7 +400,7 @@ function ed(e) {
                 )
             );
         },
-        eB = eb
+        eB = e_
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       eS,
@@ -533,7 +533,7 @@ let eu =
                       },
                       [t, c, a]
                   ),
-                  { voiceActivityStatusEnabled: u } = (0, b.U)({ location: 'PrivateChannel' }),
+                  { voiceActivityStatusEnabled: u } = (0, _.U)({ location: 'PrivateChannel' }),
                   { voiceChannel: g } = (0, N.Z)({ userId: c }),
                   p = (0, w.K)({
                       location: 'PrivateChannel',

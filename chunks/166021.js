@@ -27,13 +27,13 @@ let u = (e) => {
         i.useEffect(() => {
             g((e) => (f > p && e > f - p ? f - p : f <= p ? 0 : e));
         }, [f, p]);
-    let b = m > 0,
-        _ = i.useCallback((e) => ({ x: (e - m) * 100 }), [m]),
-        [N, x] = (0, o.bYB)(t.length, _);
+    let _ = m > 0,
+        b = i.useCallback((e) => ({ x: (e - m) * 100 }), [m]),
+        [N, x] = (0, o.bYB)(t.length, b);
     return (
         i.useEffect(() => {
-            x(_);
-        }, [x, _]),
+            x(b);
+        }, [x, b]),
         (0, r.jsx)('div', {
             className: n,
             children: (0, r.jsxs)('div', {
@@ -41,14 +41,14 @@ let u = (e) => {
                 children: [
                     f > p &&
                         (0, r.jsx)(o.P3F, {
-                            onClick: b
+                            onClick: _
                                 ? () => {
                                       g((e) => (0 === e ? f - p : e - 1));
                                   }
                                 : void 0,
                             className: a()({
-                                [d.leftArrow]: b,
-                                [d.inactiveArrow]: !b
+                                [d.leftArrow]: _,
+                                [d.inactiveArrow]: !_
                             }),
                             children: (0, r.jsx)(o.whL, {
                                 className: d.arrowIcon,

@@ -12,25 +12,25 @@ var r = n(200651),
     p = n(506800),
     f = n(788822),
     g = n(215023),
-    m = n(388032),
-    h = n(806734);
+    h = n(388032),
+    m = n(806734);
 let _ = (e) => {
         let { handleTransition: t, featuredBlockRecord: n } = e,
             a = b.Z.getCategory(i.T.ROBERT),
             u = (0, p.c)('CollectiblesFeedShop') && null != a,
             d = (0, c.H)('CollectiblesFeedShop'),
             _ = b.Z.getCategory(i.T.ANIME_V2),
-            C = l.useMemo(() => m.NW.string(new Date() > g.gJ ? m.t.l0CjbW : m.t.uPewb2), []);
+            C = l.useMemo(() => h.NW.string(new Date() > g.gJ ? h.t.l0CjbW : h.t.uPewb2), []);
         return (0, r.jsx)('div', {
-            className: o()(h.col2, h.centeredSection),
+            className: o()(m.col2, m.centeredSection),
             children:
                 null == n
                     ? void 0
                     : n.subblocks.map((e, n) => {
                           if (e.type === s.O.CATEGORY) {
-                              let l = null != e.unpublishedAt ? m.NW.string(m.t['h/uBCQ']) : '1341506445245415424' === e.categoryStoreListingId ? m.NW.string(m.t.PsL3bW) : e.categoryStoreListingId === (null == _ ? void 0 : _.storeListingId) ? m.NW.string(m.t['o/oRJC']) : void 0,
+                              let l = null != e.unpublishedAt ? h.NW.string(h.t['h/uBCQ']) : '1341506445245415424' === e.categoryStoreListingId ? h.NW.string(h.t.PsL3bW) : e.categoryStoreListingId === (null == _ ? void 0 : _.storeListingId) ? h.NW.string(h.t['o/oRJC']) : void 0,
                                   o = u && e.categoryStoreListingId === (null == a ? void 0 : a.storeListingId) ? C : l,
-                                  i = 0 === n ? (d ? m.NW.string(m.t['x41/V1']) : l) : o;
+                                  i = 0 === n ? (d ? h.NW.string(h.t['x41/V1']) : l) : o;
                               return (0, r.jsx)(
                                   f.q,
                                   {
@@ -50,11 +50,11 @@ let _ = (e) => {
             l = (0, p.c)('CollectiblesFeedShop') && null != b.Z.getCategory(i.T.ROBERT);
         if (null == n || n.length < 2) return u.Z.captureMessage('Collectible Featured Block requires at least 2 categories'), null;
         let [a, s] = n,
-            c = (null == a ? void 0 : a.unpublishedAt) != null ? m.NW.string(m.t['h/uBCQ']) : void 0,
-            _ = m.NW.string(new Date() > g.gJ ? m.t.l0CjbW : m.t.uPewb2),
-            C = l ? _ : m.NW.string(m.t['o/oRJC']);
+            c = (null == a ? void 0 : a.unpublishedAt) != null ? h.NW.string(h.t['h/uBCQ']) : void 0,
+            _ = h.NW.string(new Date() > g.gJ ? h.t.l0CjbW : h.t.uPewb2),
+            C = l ? _ : h.NW.string(h.t['o/oRJC']);
         return (0, r.jsx)('div', {
-            className: o()(h.col2, h.centeredSection),
+            className: o()(m.col2, m.centeredSection),
             children: (0, r.jsxs)(d.k0, {
                 newValue: {
                     categoryPosition: 1,
@@ -81,15 +81,15 @@ let _ = (e) => {
         let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: a } = e;
         return t
             ? (0, r.jsxs)('div', {
-                  className: o()(h.col2, h.centeredSection),
+                  className: o()(m.col2, m.centeredSection),
                   children: [
                       (0, r.jsx)('div', {
-                          className: o()(h.skeleton, h.featuredBlock),
-                          children: (0, r.jsx)('div', { className: h.skeletonBody })
+                          className: o()(m.skeleton, m.featuredBlock),
+                          children: (0, r.jsx)('div', { className: m.skeletonBody })
                       }),
                       (0, r.jsx)('div', {
-                          className: o()(h.skeleton, h.featuredBlock),
-                          children: (0, r.jsx)('div', { className: h.skeletonBody })
+                          className: o()(m.skeleton, m.featuredBlock),
+                          children: (0, r.jsx)('div', { className: m.skeletonBody })
                       })
                   ]
               })

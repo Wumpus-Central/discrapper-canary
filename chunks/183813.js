@@ -41,9 +41,9 @@ function S(e) {
                 t
             );
         },
-        M = (0, c.Q3)('PremiumPaymentFreeSKUSelectStep');
+        P = (0, c.Q3)('PremiumPaymentFreeSKUSelectStep');
     s()(null != l, 'Expected plan to selected'), s()(null != S, 'Expected selectedSkuId'), s()(null != E, 'Step should be set');
-    let P = null == N ? void 0 : N.map((e) => T(e)),
+    let M = null == N ? void 0 : N.map((e) => T(e)),
         O =
             null != I && null != b
                 ? (0, r.jsx)(C.Z, {
@@ -79,7 +79,7 @@ function S(e) {
             color: 'header-primary',
             children: L.NW.string(L.t['Rp0+ZG'])
         });
-    return M
+    return P
         ? (0, r.jsxs)('div', {
               className: g.container,
               children: [
@@ -101,7 +101,7 @@ function S(e) {
                               (0, r.jsx)(a.Kqy, {
                                   gap: 8,
                                   padding: { top: 12 },
-                                  children: P
+                                  children: M
                               })
                           ]
                       })
@@ -119,7 +119,7 @@ function S(e) {
                               className: g.header,
                               children: v
                           }),
-                          P
+                          M
                       ]
                   }),
                   (0, r.jsx)(a.olH, {

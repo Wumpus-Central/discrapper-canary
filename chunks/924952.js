@@ -1,32 +1,32 @@
-n.d(t, { Z: () => Z });
+n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
-var i = n(442837),
-    l = n(481060),
+var l = n(442837),
+    i = n(481060),
     o = n(357156),
     c = n(471253),
     a = n(924301),
-    s = n(482241),
-    u = n(765305),
+    u = n(482241),
+    s = n(765305),
     d = n(388032);
-function Z(e, t, n) {
-    let { canManageGuildEvent: Z } = (0, o.XJ)(null != n ? n : t),
-        f = (0, i.e7)([a.ZP], () => a.ZP.isActive(e)),
-        b = (0, i.e7)([a.ZP], () => a.ZP.getGuildScheduledEvent(e), [e]),
-        j = Z(b);
-    if (null == e || !j || !f || (null == b ? void 0 : b.entity_type) === u.WX.EXTERNAL) return null;
-    let O = () => {
+function g(e, t, n) {
+    let { canManageGuildEvent: g } = (0, o.XJ)(null != n ? n : t),
+        f = (0, l.e7)([a.ZP], () => a.ZP.isActive(e)),
+        b = (0, l.e7)([a.ZP], () => a.ZP.getGuildScheduledEvent(e), [e]),
+        p = g(b);
+    if (null == e || !p || !f || (null == b ? void 0 : b.entity_type) === s.WX.EXTERNAL) return null;
+    let v = () => {
         if (null == n ? void 0 : n.isGuildStageVoice()) return void (0, c.NZ)(n);
-        null != e && s.Z.endEvent(e, t.id), (0, l.pTH)();
+        null != e && u.Z.endEvent(e, t.id), (0, i.pTH)();
     };
-    return (0, r.jsx)(l.sNh, {
+    return (0, r.jsx)(i.sNh, {
         id: d.NW.string(d.t.qaYzPD),
         label: d.NW.string(d.t.qaYzPD),
         action: function () {
-            (0, l.h7j)((e) => {
+            (0, i.h7j)((e) => {
                 var t, n;
                 return (0, r.jsx)(
-                    l.ConfirmModal,
+                    i.ConfirmModal,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -57,8 +57,8 @@ function Z(e, t, n) {
                             header: d.NW.string(d.t.qaYzPD),
                             confirmText: d.NW.string(d.t.mjB9pa),
                             cancelText: d.NW.string(d.t['ETE/oK']),
-                            onConfirm: O,
-                            children: (0, r.jsx)(l.Text, {
+                            onConfirm: v,
+                            children: (0, r.jsx)(i.Text, {
                                 variant: 'text-md/normal',
                                 children: d.NW.string(d.t.bnDQ7O)
                             })

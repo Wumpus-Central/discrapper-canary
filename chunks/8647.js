@@ -14,8 +14,8 @@ var i = n(120356),
     p = n(346497),
     h = n(409100),
     f = n(725727),
-    b = n(474936),
-    _ = n(981631),
+    _ = n(474936),
+    b = n(981631),
     N = n(388032),
     x = n(669792);
 let E = function (e) {
@@ -55,14 +55,14 @@ let E = function (e) {
                                 (0, r.jsx)(l.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'always-white',
-                                    children: N.NW.format(N.t['j/x4GB'], { helpCenterLink: u.Z.getArticleURL(_.BhN.SUMMER_BOGO_2024) })
+                                    children: N.NW.format(N.t['j/x4GB'], { helpCenterLink: u.Z.getArticleURL(b.BhN.SUMMER_BOGO_2024) })
                                 })
                             ]
                         }),
                         (0, r.jsx)(h.Z, {
                             buttonText: N.NW.string(N.t.J61px8),
                             buttonTextClassName: x.subscribeButtonText,
-                            subscriptionTier: b.Si.TIER_2,
+                            subscriptionTier: _.Si.TIER_2,
                             showIcon: !1,
                             className: null != i ? i : x.subscribeButton,
                             forceInverted: !0

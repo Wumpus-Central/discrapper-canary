@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r,
     i = n(442837),
     s = n(570140),
@@ -59,7 +59,7 @@ function h() {
 function f() {
     return h() - m.pointsSpent;
 }
-class b extends (r = i.ZP.PersistedStore) {
+class _ extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t, n;
         null != e &&
@@ -148,8 +148,8 @@ class b extends (r = i.ZP.PersistedStore) {
         return m.isMuted;
     }
 }
-c(b, 'displayName', 'ClickerGameStore'), c(b, 'persistKey', 'ClickerGameStore');
-let _ = new b(s.Z, {
+c(_, 'displayName', 'ClickerGameStore'), c(_, 'persistKey', 'ClickerGameStore');
+let b = new _(s.Z, {
     CLICKER_GAME_ADD_POINTS: function (e) {
         let { numPoints: t, itemId: n } = e;
         if (-1 !== m.endTime) return;

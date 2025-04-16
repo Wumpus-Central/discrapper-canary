@@ -7,16 +7,16 @@ var i = n(200651),
     l = n(692547),
     c = n(481060),
     d = n(388905),
-    u = n(434404),
-    _ = n(764260),
+    _ = n(434404),
+    u = n(764260),
     p = n(422559),
     f = n(430824),
     N = n(768581),
     m = n(700785),
     E = n(645041),
-    I = n(981631),
-    h = n(921944),
-    S = n(135899),
+    S = n(981631),
+    I = n(921944),
+    h = n(135899),
     O = n(388032),
     T = n(800830);
 function x(e) {
@@ -122,8 +122,8 @@ function b(e) {
         ]
     });
 }
-let y = (e) => (e.toString() === I.Plq.MENTION_EVERYONE.toString() ? O.NW.string(O.t.yCpsQ0) : (0, p.wt)(e));
-function C(e) {
+let y = (e) => (e.toString() === S.Plq.MENTION_EVERYONE.toString() ? O.NW.string(O.t.yCpsQ0) : (0, p.wt)(e));
+function R(e) {
     let { permissions: t, step: n } = e;
     return 2 === n
         ? null
@@ -159,11 +159,11 @@ function C(e) {
               ]
           });
 }
-function R(e) {
+function C(e) {
     let { permissions: t, step: n } = e;
     return 0 === t.length && 2 !== n
         ? null
-        : (2 === n && (t = S.$X),
+        : (2 === n && (t = h.$X),
           (0, i.jsxs)('div', {
               className: T.tableContainer,
               children: [
@@ -205,12 +205,12 @@ function j(e) {
               className: T.table,
               children: [
                   2 !== n
-                      ? (0, i.jsx)(C, {
+                      ? (0, i.jsx)(R, {
                             permissions: a,
                             step: n
                         })
                       : null,
-                  (0, i.jsx)(R, {
+                  (0, i.jsx)(C, {
                       permissions: o,
                       step: n
                   })
@@ -316,7 +316,7 @@ function U(e) {
             let e = [],
                 n = [];
             return (
-                S.$X.map((i) => {
+                h.$X.map((i) => {
                     m.oz(i, t) ? e.push(i) : n.push(i);
                 }),
                 {
@@ -330,8 +330,8 @@ function U(e) {
             var e, n;
             let i = f.Z.getRole(t.id, t.getEveryoneRoleId());
             if (null == i) return;
-            let a = o.Od(i.permissions, S.mu);
-            (0, _.Gf)(t.id, [
+            let a = o.Od(i.permissions, h.mu);
+            (0, u.Gf)(t.id, [
                 ((e = x({}, i)),
                 (n = n = { permissions: a }),
                 Object.getOwnPropertyDescriptors
@@ -349,11 +349,11 @@ function U(e) {
                 e)
             ]);
         },
-        C = () => {
-            u.Z.updateGuild({ defaultMessageNotifications: I.bL.ONLY_MENTIONS }), u.Z.saveGuild(t.id, { defaultMessageNotifications: I.bL.ONLY_MENTIONS });
-        },
         R = () => {
-            n && y(), s && C();
+            _.Z.updateGuild({ defaultMessageNotifications: S.bL.ONLY_MENTIONS }), _.Z.saveGuild(t.id, { defaultMessageNotifications: S.bL.ONLY_MENTIONS });
+        },
+        C = () => {
+            n && y(), s && R();
         };
     return (0, i.jsxs)(c.Y0X, {
         transitionState: l,
@@ -376,10 +376,10 @@ function U(e) {
             (0, i.jsx)(v, {
                 onConfirm: () => {
                     var e, i;
-                    n || (R(), d(), (0, E.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (e = null == t ? void 0 : t.id) ? e : '', !0, h.L.PRIMARY)), 0 === p ? (N(1), setTimeout(() => N(2), 3000)) : 2 === p && (R(), d(), (0, E.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (i = null == t ? void 0 : t.id) ? i : '', !0, h.L.PRIMARY));
+                    n || (C(), d(), (0, E.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (e = null == t ? void 0 : t.id) ? e : '', !0, I.L.PRIMARY)), 0 === p ? (N(1), setTimeout(() => N(2), 3000)) : 2 === p && (C(), d(), (0, E.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (i = null == t ? void 0 : t.id) ? i : '', !0, I.L.PRIMARY));
                 },
                 onDismiss: () => {
-                    d(), (0, E.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, t.id, !0, h.L.DISMISS);
+                    d(), (0, E.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, t.id, !0, I.L.DISMISS);
                 },
                 step: p,
                 canEveryoneModerate: n

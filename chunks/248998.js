@@ -16,8 +16,8 @@ function g(e) {
     if (null == i) return null;
     let a = null != n,
         { name: g, description: p, hideDescriptionUntilUnlock: h, onAction: f } = i,
-        b = h && !a,
-        _ = a ? 'header-primary' : 'text-muted',
+        _ = h && !a,
+        b = a ? 'header-primary' : 'text-muted',
         N = a ? 'header-secondary' : 'text-muted',
         x = l()(n),
         E = null != f && a,
@@ -48,13 +48,13 @@ function g(e) {
                         }),
                     (0, r.jsx)(o.Text, {
                         variant: 'text-md/medium',
-                        color: _,
+                        color: b,
                         children: g()
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: 'text-xs/normal',
                         color: N,
-                        children: b ? '?????' : p()
+                        children: _ ? '?????' : p()
                     })
                 ]
             })
