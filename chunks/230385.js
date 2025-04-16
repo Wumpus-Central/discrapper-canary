@@ -69,8 +69,9 @@ class y extends i.Z {
         (0, f.r5)();
     }
     handleVoiceFilterRequestSwitch(e) {
-        let { newVoiceFilterId: t, analyticsContext: n } = e,
-            r = null != t ? d.Z.getVoiceFilter(t) : void 0;
+        let { newVoiceFilterId: t, analyticsContext: n } = e;
+        if (__OVERLAY__) return;
+        let r = null != t ? d.Z.getVoiceFilter(t) : void 0;
         if (null == r && null != t) return void b.error('requested Voice Filter is missing in VoiceFilterStore');
         if ((null == r ? void 0 : r.modelIds) != null) {
             let e = d.Z.getVoiceFilterModels(),
