@@ -1,16 +1,16 @@
 n.d(t, { Z: () => a });
-var l = n(913527),
-    r = n.n(l),
+var r = n(913527),
+    l = n.n(r),
     i = n(749210);
 let a = {
-    async setCommunicationDisabledDuration(e, t, n, l, a) {
-        let o = null != n ? r()().add(n, 's').toISOString() : null;
+    async setCommunicationDisabledDuration(e, t, n, r, a) {
+        let o = null != n ? l()().add(n, 's').toISOString() : null;
         await i.Z.setCommunicationDisabledUntil({
             guildId: e,
             userId: t,
             communicationDisabledUntilTimestamp: o,
             duration: n,
-            reason: l,
+            reason: r,
             location: a
         });
     }

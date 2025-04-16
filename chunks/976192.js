@@ -1,56 +1,56 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => p });
 var r = n(200651),
     l = n(192379),
     i = n(442837),
-    o = n(481060),
-    a = n(616780),
+    a = n(481060),
+    o = n(616780),
     u = n(40851),
-    s = n(300284),
-    c = n(484459),
+    c = n(300284),
+    s = n(484459),
     d = n(314897),
-    b = n(271383),
-    g = n(430824),
-    Z = n(496675),
-    f = n(594174),
-    p = n(981631),
-    O = n(388032),
-    h = n(965385);
-function m(e) {
-    let { guildId: t, userId: m, analyticsLocation: j, analyticsLocations: P, context: N, icon: y } = e,
-        E = g.Z.getGuild(t),
-        x = d.default.getId(),
-        v = (0, i.e7)([f.default], () => f.default.getUser(m)),
-        _ = (0, i.e7)([b.ZP], () => b.ZP.isGuestOrLurker(t, m), [t, m]);
-    (0, i.e7)([Z.Z], () => Z.Z.getGuildVersion(t), [t]);
-    let C = l.useMemo(() => ({ [t]: [m] }), [t, m]);
-    (0, a.$)(C);
-    let S = N === p.IlC.POPOUT,
-        M = (0, s.Z)({
-            guild: E,
-            analyticsLocation: j
+    f = n(271383),
+    O = n(430824),
+    E = n(496675),
+    g = n(594174),
+    b = n(981631),
+    y = n(388032),
+    _ = n(965385);
+function p(e) {
+    let { guildId: t, userId: p, analyticsLocation: m, analyticsLocations: N, context: j, icon: M } = e,
+        P = O.Z.getGuild(t),
+        S = d.default.getId(),
+        A = (0, i.e7)([g.default], () => g.default.getUser(p)),
+        v = (0, i.e7)([f.ZP], () => f.ZP.isGuestOrLurker(t, p), [t, p]);
+    (0, i.e7)([E.Z], () => E.Z.getGuildVersion(t), [t]);
+    let Z = l.useMemo(() => ({ [t]: [p] }), [t, p]);
+    (0, o.$)(Z);
+    let I = j === b.IlC.POPOUT,
+        h = (0, c.Z)({
+            guild: P,
+            analyticsLocation: m
         }),
         T = (0, u.Aq)();
-    if (null == E || S) return null;
-    let I = x === m && (Z.Z.can(p.Plq.CHANGE_NICKNAME, E) || Z.Z.can(p.Plq.MANAGE_NICKNAMES, E)),
-        w = x === m,
-        R = Z.Z.canManageUser(p.Plq.MANAGE_NICKNAMES, m, E);
-    if (!(I || R || w) || null == v || _) return null;
-    let A = E.hasFeature(p.oNc.HUB) ? O.NW.string(O.t['+MWrWl']) : O.NW.string(O.t['PKQB/P']),
-        U = w ? A : O.NW.string(O.t.dilOFx);
-    return (0, r.jsx)(o.sNh, {
+    if (null == P || I) return null;
+    let D = S === p && (E.Z.can(b.Plq.CHANGE_NICKNAME, P) || E.Z.can(b.Plq.MANAGE_NICKNAMES, P)),
+        C = S === p,
+        U = E.Z.canManageUser(b.Plq.MANAGE_NICKNAMES, p, P);
+    if (!(D || U || C) || null == A || v) return null;
+    let R = P.hasFeature(b.oNc.HUB) ? y.NW.string(y.t['+MWrWl']) : y.NW.string(y.t['PKQB/P']),
+        L = C ? R : y.NW.string(y.t.dilOFx);
+    return (0, r.jsx)(a.sNh, {
         id: 'change-nickname',
         label: (0, r.jsx)('div', {
-            className: h.labelWrapper,
+            className: _.labelWrapper,
             children: (0, r.jsx)('span', {
-                className: h.label,
-                children: U
+                className: _.label,
+                children: L
             })
         }),
-        icon: y,
+        icon: M,
         action: () => {
-            w
-                ? ((0, c.Z)(v.id, v.getAvatarURL(t, 80), { guildId: t }), M(), T.dispatch(p.CkL.POPOUT_CLOSE), (0, o.pTH)())
-                : (0, o.ZDy)(async () => {
+            C
+                ? ((0, s.Z)(A.id, A.getAvatarURL(t, 80), { guildId: t }), h(), T.dispatch(b.CkL.POPOUT_CLOSE), (0, a.pTH)())
+                : (0, a.ZDy)(async () => {
                       let { default: e } = await n.e('17712').then(n.bind(n, 620021));
                       return (n) => {
                           var l, i;
@@ -84,9 +84,9 @@ function m(e) {
                               (i = i =
                                   {
                                       guildId: t,
-                                      user: v,
-                                      analyticsSource: j,
-                                      analyticsLocations: P
+                                      user: A,
+                                      analyticsSource: m,
+                                      analyticsLocations: N
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))

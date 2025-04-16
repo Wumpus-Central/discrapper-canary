@@ -305,7 +305,7 @@ let ep = (e) => {
                                           children: (0, r.jsx)(f.Z, {
                                               autoPlay: !eE,
                                               playsInline: !0,
-                                              preload: 'auto',
+                                              preload: eE ? 'none' : 'auto',
                                               poster: em.Z,
                                               loop: !0,
                                               className: ea.heroHeadingV2Art,

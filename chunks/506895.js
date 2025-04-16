@@ -25,9 +25,9 @@ function s(e) {
         canLaunchInChannel: u
     };
 }
-function l(e) {
-    let t = a.Z.getChannelId();
-    if (null == t)
+function l(e, t) {
+    let n = null != t ? t : a.Z.getChannelId();
+    if (null == n)
         return {
             currentChannelId: null,
             instanceId: null,
@@ -35,17 +35,17 @@ function l(e) {
             isCurrentlyInInstance: !1,
             canLaunchInChannel: !1
         };
-    let n = (null != t ? (0, o.Hn)(t) : o.jy.NO_CHANNEL) === o.jy.CAN_LAUNCH,
-        r = i.ZP.getEmbeddedActivitiesForChannel(t).filter((t) => t.applicationId === e),
-        s = r.length > 0 ? r[0] : void 0,
-        l = null == s ? void 0 : s.compositeInstanceId,
-        c = null == s ? void 0 : s.location,
-        u = i.ZP.getCurrentEmbeddedActivity();
+    let r = (null != n ? (0, o.Hn)(n) : o.jy.NO_CHANNEL) === o.jy.CAN_LAUNCH,
+        s = i.ZP.getEmbeddedActivitiesForChannel(n).filter((t) => t.applicationId === e),
+        l = s.length > 0 ? s[0] : void 0,
+        c = null == l ? void 0 : l.compositeInstanceId,
+        u = null == l ? void 0 : l.location,
+        d = i.ZP.getCurrentEmbeddedActivity();
     return {
-        currentChannelId: t,
-        instanceId: l,
-        instanceLocation: c,
-        isCurrentlyInInstance: null != l && (null == u ? void 0 : u.compositeInstanceId) === l,
-        canLaunchInChannel: n
+        currentChannelId: n,
+        instanceId: c,
+        instanceLocation: u,
+        isCurrentlyInInstance: null != c && (null == d ? void 0 : d.compositeInstanceId) === c,
+        canLaunchInChannel: r
     };
 }
