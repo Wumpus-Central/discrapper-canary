@@ -8,12 +8,13 @@ n.r(t),
         OVERLAY_VERSION: () => s,
         UNSET_PID: () => f,
         getPID: () => p,
-        getRPCAuthToken: () => m,
-        log: () => g,
-        setOutOfProcessSupport: () => b,
+        getRPCAuthToken: () => g,
+        isValidGamePID: () => m,
+        log: () => E,
+        setOutOfProcessSupport: () => y,
         setPID: () => h,
-        supportsOutOfProcess: () => y,
-        validResolution: () => E
+        supportsOutOfProcess: () => v,
+        validResolution: () => b
     }),
     n(65234),
     n(111804),
@@ -46,23 +47,26 @@ function p() {
 function h(e) {
     r = e;
 }
-function m() {
+function m(e) {
+    return null != e && 0 !== e && e !== f;
+}
+function g() {
     return new URLSearchParams(window.location.search).get('rpc_auth_token');
 }
-function g(e) {
+function E(e) {
     (0, i.lW)({
         type: a.BmY.LOG_MESSAGES,
         pid: p(),
-        token: m(),
+        token: g(),
         payload: e
     });
 }
-function E(e) {
+function b(e) {
     return !o.isPlatformEmbedded || (e.width >= c.width && e.height >= c.height);
 }
-function b(e) {
+function y(e) {
     _ = e;
 }
-function y() {
+function v() {
     return _;
 }
