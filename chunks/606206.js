@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => T }), n(388685), n(539854), n(781311), n(415506), n(35282);
+n.d(t, { Z: () => T }), n(388685), n(539854), n(781311), n(35282);
 var l,
     i = n(442837),
     o = n(570140),
@@ -9,8 +9,8 @@ var l,
     c = n(592125),
     d = n(430824),
     h = n(293273),
-    p = n(158776),
-    f = n(699516),
+    f = n(158776),
+    p = n(699516),
     g = n(594174),
     y = n(55589),
     O = n(981631);
@@ -31,10 +31,10 @@ let b = [s.h8.TEXT_CHANNEL, s.h8.GROUP_DM, s.h8.USER],
     v = null,
     m = null,
     x = [],
-    E = [];
-function C(e) {
+    C = [];
+function E(e) {
     (x = [...x, e]),
-        (E = E.map((e) => {
+        (C = C.map((e) => {
             var t, n;
             return (
                 (t = (function (e) {
@@ -71,12 +71,12 @@ function C(e) {
         })),
         S.emitChange();
 }
-function I() {
+function j() {
     (v = null), null != r && (r.destroy(), (r = null)), null != m && m();
 }
-function j() {
+function I() {
     let e = null != v && null != v.application_id ? h.Z.getApplicationActivity(v.application_id) : null;
-    if (null != v && (null == e || null == e.party || null == e.party.id)) return I();
+    if (null != v && (null == e || null == e.party || null == e.party.id)) return j();
 }
 class P extends (l = i.ZP.Store) {
     initialize() {
@@ -90,7 +90,7 @@ class P extends (l = i.ZP.Store) {
         return null != (e = null == r ? void 0 : r.query) ? e : '';
     }
     getResults() {
-        return E;
+        return C;
     }
 }
 N(P, 'displayName', 'ActivityInviteModalStore');
@@ -102,7 +102,7 @@ let S = new P(o.Z, {
                 null == r &&
                     (r = new s.ZP(
                         (e, t) => {
-                            (E = (
+                            (C = (
                                 '' === t.trim()
                                     ? (function () {
                                           let e = [];
@@ -131,41 +131,43 @@ let S = new P(o.Z, {
                                           );
                                       })()
                                     : e
-                            ).map((e) => {
-                                switch (e.type) {
-                                    case s.h8.USER: {
-                                        let { record: t } = e;
-                                        return {
-                                            type: s.h8.USER,
-                                            sent: x.includes(t.id),
-                                            status: p.Z.getStatus(t.id),
-                                            data: e
-                                        };
+                            )
+                                .map((e) => {
+                                    switch (e.type) {
+                                        case s.h8.USER: {
+                                            let { record: t } = e;
+                                            return {
+                                                type: s.h8.USER,
+                                                sent: x.includes(t.id),
+                                                status: f.Z.getStatus(t.id),
+                                                data: e
+                                            };
+                                        }
+                                        case s.h8.TEXT_CHANNEL: {
+                                            let { record: t } = e,
+                                                n = c.Z.getChannel(t.parent_id),
+                                                r = d.Z.getGuild(t.guild_id);
+                                            return {
+                                                type: s.h8.TEXT_CHANNEL,
+                                                sent: x.includes(t.id),
+                                                categoryName: null != n ? (0, u.F6)(n, g.default, p.Z) : '',
+                                                guildName: null != r ? r.toString() : '',
+                                                data: e
+                                            };
+                                        }
+                                        case s.h8.GROUP_DM: {
+                                            let { record: t } = e;
+                                            return {
+                                                type: s.h8.GROUP_DM,
+                                                sent: x.includes(t.id),
+                                                data: e
+                                            };
+                                        }
+                                        default:
+                                            return null;
                                     }
-                                    case s.h8.TEXT_CHANNEL: {
-                                        let { record: t } = e,
-                                            n = c.Z.getChannel(t.parent_id),
-                                            r = d.Z.getGuild(t.guild_id);
-                                        return {
-                                            type: s.h8.TEXT_CHANNEL,
-                                            sent: x.includes(t.id),
-                                            categoryName: null != n ? (0, u.F6)(n, g.default, f.Z) : '',
-                                            guildName: null != r ? r.toString() : '',
-                                            data: e
-                                        };
-                                    }
-                                    case s.h8.GROUP_DM: {
-                                        let { record: t } = e;
-                                        return {
-                                            type: s.h8.GROUP_DM,
-                                            sent: x.includes(t.id),
-                                            data: e
-                                        };
-                                    }
-                                    default:
-                                        throw Error('Unknown Result Type: '.concat(e.type));
-                                }
-                            })),
+                                })
+                                .filter((e) => null != e)),
                                 S.emitChange();
                         },
                         b,
@@ -187,21 +189,21 @@ let S = new P(o.Z, {
                       type: O.mFx.JOIN,
                       activity: v,
                       location: 'Channel Text Area - Invite to Join Modal'
-                  }).then(() => C(t))
+                  }).then(() => E(t))
                 : null != n &&
                   a.Z.sendActivityInviteUser({
                       userId: n,
                       type: O.mFx.JOIN,
                       activity: v,
                       location: 'Channel Text Area - Invite to Join Modal'
-                  }).then(() => C(n));
+                  }).then(() => E(n));
         },
-        ACTIVITY_INVITE_MODAL_CLOSE: I,
+        ACTIVITY_INVITE_MODAL_CLOSE: j,
         OVERLAY_SET_INPUT_LOCKED: function (e) {
             let { locked: t } = e;
-            return !!t && null != v && (I(), !0);
+            return !!t && null != v && (j(), !0);
         },
-        LOCAL_ACTIVITY_UPDATE: j,
-        RPC_APP_DISCONNECTED: j
+        LOCAL_ACTIVITY_UPDATE: I,
+        RPC_APP_DISCONNECTED: I
     }),
     T = 12633 == n.j ? S : null;
