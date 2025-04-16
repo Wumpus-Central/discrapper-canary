@@ -8,8 +8,8 @@ var l = n(200651),
     u = n(990547),
     d = n(91192),
     c = n(442837),
-    h = n(481060),
-    g = n(447543),
+    g = n(481060),
+    h = n(447543),
     m = n(247272),
     p = n(700582),
     v = n(493773),
@@ -19,10 +19,10 @@ var l = n(200651),
     f = n(906732),
     j = n(447003),
     _ = n(933557),
-    E = n(259473),
-    S = n(600164),
-    T = n(687516),
-    b = n(266076),
+    S = n(259473),
+    b = n(600164),
+    E = n(687516),
+    T = n(266076),
     O = n(227672),
     y = n(810123),
     C = n(448486),
@@ -40,8 +40,8 @@ var l = n(200651),
     U = n(51144),
     F = n(264229),
     B = n(601953),
-    G = n(277364),
-    z = n(666258),
+    z = n(277364),
+    G = n(666258),
     H = n(530436),
     q = n(895976),
     Y = n(245335),
@@ -80,7 +80,7 @@ let { INVITE_OPTIONS_7_DAYS: $, INVITE_OPTIONS_UNLIMITED: ee } = V.ZP,
     };
 function en(e) {
     let { icon: t, label: n, subLabel: i, onClick: r, isSelected: s, disabled: a } = e;
-    return (0, l.jsxs)(h.P3F, {
+    return (0, l.jsxs)(g.P3F, {
         'aria-disabled': a,
         className: J.recipientRow,
         onClick: r,
@@ -92,14 +92,14 @@ function en(e) {
             (0, l.jsxs)('div', {
                 className: J.recipientLabels,
                 children: [
-                    (0, l.jsx)(h.Text, {
+                    (0, l.jsx)(g.Text, {
                         className: J.recipientLabel,
                         variant: 'text-md/medium',
                         lineClamp: 1,
                         children: n
                     }),
                     void 0 !== i
-                        ? (0, l.jsx)(h.Text, {
+                        ? (0, l.jsx)(g.Text, {
                               className: J.recipientSublabel,
                               variant: 'text-xs/normal',
                               color: 'text-muted',
@@ -108,8 +108,8 @@ function en(e) {
                         : null
                 ]
             }),
-            (0, l.jsx)(h.XZJ, {
-                type: h.XZJ.Types.INVERTED,
+            (0, l.jsx)(g.XZJ, {
+                type: g.XZJ.Types.INVERTED,
                 displayOnly: !0,
                 size: 24,
                 value: s,
@@ -123,17 +123,17 @@ function el(e) {
         a = U.ZP.useName(t),
         o = U.ZP.useUserTag(t, { decoration: 'never' }),
         [u, d] = (0, c.Wu)([L.Z, D.Z], () => [L.Z.getNickname(t.id), D.Z.getStatus(t.id)], [t]),
-        g = i.useCallback(() => n(t.id), [n, t.id]);
+        h = i.useCallback(() => n(t.id), [n, t.id]);
     return (0, l.jsx)(en, {
         icon: (0, l.jsx)(p.Z, {
             'aria-hidden': !0,
-            size: h.EFr.SIZE_32,
+            size: g.EFr.SIZE_32,
             user: t,
             status: d
         }),
         label: null != u ? u : a,
         subLabel: o,
-        onClick: g,
+        onClick: h,
         isSelected: r,
         disabled: s
     });
@@ -145,9 +145,9 @@ function ei(e) {
         d = null != (t = (0, _.ZP)(r)) ? t : '',
         c = null != (n = (0, C._)(r)) ? n : '';
     return (0, l.jsx)(en, {
-        icon: (0, l.jsx)(b.Z, {
+        icon: (0, l.jsx)(T.Z, {
             'aria-hidden': !0,
-            size: h.EFr.SIZE_32,
+            size: g.EFr.SIZE_32,
             channel: r,
             experimentLocation: 'instant_invite_modal'
         }),
@@ -163,16 +163,16 @@ function er(e) {
     let { channel: r, onToggle: s, isSelected: a, disabled: o } = e,
         u = (0, c.e7)([A.Z], () => A.Z.getGuild(null == r ? void 0 : r.guild_id)),
         d = i.useCallback(() => s(r.id), [s, r.id]),
-        h = null != (t = (0, _.ZP)(r)) ? t : '',
-        g = null != (n = null == u ? void 0 : u.name) ? n : '';
+        g = null != (t = (0, _.ZP)(r)) ? t : '',
+        h = null != (n = null == u ? void 0 : u.name) ? n : '';
     return (0, l.jsx)(en, {
         icon: (0, l.jsx)(y.Z, {
             size: y.E.SMALL_32,
             guild: u,
             channel: r
         }),
-        label: h,
-        subLabel: g,
+        label: g,
+        subLabel: h,
         onClick: d,
         isSelected: a,
         disabled: o
@@ -188,26 +188,26 @@ function es(e) {
                 let u,
                     { section: d, row: c } = e;
                 if (d > 0) return;
-                let h = t[c];
-                switch (h.type) {
+                let g = t[c];
+                switch (g.type) {
                     case V.bm.FRIEND:
                     case V.bm.DM:
-                        let g = h.item;
+                        let h = g.item;
                         return (
-                            (u = null != (i = r.includes(g.id)) && i),
+                            (u = null != (i = r.includes(h.id)) && i),
                             (0, l.jsx)(
                                 el,
                                 {
-                                    user: g,
+                                    user: h,
                                     isSelected: u,
                                     onToggle: n,
                                     disabled: a
                                 },
-                                g.id
+                                h.id
                             )
                         );
                     case V.bm.GROUP_DM:
-                        let m = h.item;
+                        let m = g.item;
                         return (
                             (u = null != (s = r.includes(m.id)) && s),
                             (0, l.jsx)(
@@ -222,7 +222,7 @@ function es(e) {
                             )
                         );
                     case V.bm.CHANNEL:
-                        let p = h.item;
+                        let p = g.item;
                         return (
                             (u = null != (o = r.includes(p.id)) && o),
                             (0, l.jsx)(
@@ -242,9 +242,9 @@ function es(e) {
             },
             [t, r, n, a]
         ),
-        g = i.useCallback(() => 48, []);
+        h = i.useCallback(() => 48, []);
     return 0 === t.length
-        ? (0, l.jsx)(h.OZU, { children: X.NW.string(X.t.ojoWgY) })
+        ? (0, l.jsx)(g.OZU, { children: X.NW.string(X.t.ojoWgY) })
         : (0, l.jsx)(d.bG, {
               navigator: u,
               children: (0, l.jsx)(d.SJ, {
@@ -272,7 +272,7 @@ function es(e) {
                               return i;
                           })(e, ['ref']);
                       return (0, l.jsx)(
-                          h.YAO,
+                          g.YAO,
                           ((t = Q(
                               {
                                   className: J.recipientList,
@@ -288,7 +288,7 @@ function es(e) {
                                   sections: o,
                                   sectionHeight: 0,
                                   renderRow: c,
-                                  rowHeight: g
+                                  rowHeight: h
                               }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -310,20 +310,20 @@ function es(e) {
 }
 function ea(e) {
     let { transitionState: t, onClose: n, guild: r, channel: a, source: d, streamUserId: p, applicationId: I, analyticsLocation: _ } = e,
-        b = null;
-    null != I ? (b = Y.Iq.EMBEDDED_APPLICATION) : null != p && (b = Y.Iq.STREAM);
-    let y = (0, E.Z)({ guildId: r.id }),
+        T = null;
+    null != I ? (T = Y.Iq.EMBEDDED_APPLICATION) : null != p && (T = Y.Iq.STREAM);
+    let y = (0, S.Z)({ guildId: r.id }),
         [C, A] = i.useState([]),
         [L, U] = i.useState(''),
-        { current: $ } = i.useRef(Q({}, et, null == y ? {} : { max_age: y }, null == I ? {} : { target_application_id: I }, null == b ? {} : { target_type: b }, null == p ? {} : { target_user_id: p })),
+        { current: $ } = i.useRef(Q({}, et, null == y ? {} : { max_age: y }, null == I ? {} : { target_application_id: I }, null == T ? {} : { target_type: T }, null == p ? {} : { target_user_id: p })),
         [ee, en] = i.useState($),
         [el, ei] = i.useState(!1),
         [er, ea] = i.useState(!1),
         [eo, eu] = i.useState(null),
         ed = i.useRef(null),
         ec = i.useRef(null),
-        { analyticsLocations: eh } = (0, f.ZP)(N.Z.INSTANT_INVITE_MODAL),
-        eg = i.useCallback(
+        { analyticsLocations: eg } = (0, f.ZP)(N.Z.INSTANT_INVITE_MODAL),
+        eh = i.useCallback(
             (e) => {
                 var t;
                 null == (t = ec.current) || t.scrollTo({ to: 0 }), U(e), (0, m.C)(e);
@@ -331,8 +331,8 @@ function ea(e) {
             [U]
         ),
         em = i.useCallback(() => {
-            eg('');
-        }, [eg]),
+            eh('');
+        }, [eh]),
         ep = i.useCallback((e) => en((t) => Q({}, t, e)), [en]),
         ev = i.useCallback(() => {
             A([]), en($), em(), ea(!1), eu(null);
@@ -359,16 +359,16 @@ function ea(e) {
             },
             { autoTrackExposure: ej }
         ),
-        { canCreateApplicationBypassInvites: eE, isManualApprovalGuild: eS } = (0, G.R)(r),
-        eT = e_ && ej,
+        { canCreateApplicationBypassInvites: eS, isManualApprovalGuild: eb } = (0, z.R)(r),
+        eE = e_ && ej,
         {
-            rows: eb,
+            rows: eT,
             showFriends: eO,
             initialCounts: ey
         } = (0, q.B)({
             guild: r,
             inviteChannel: eI,
-            inviteTargetType: b,
+            inviteTargetType: T,
             applicationId: I
         });
     (0, v.ZP)(() => {
@@ -376,14 +376,14 @@ function ea(e) {
             (eO &&
                 W.default.track(K.rMx.INVITE_SUGGESTION_OPENED, {
                     location: d,
-                    num_suggestions: eb.length,
+                    num_suggestions: eT.length,
                     num_friends: ey.numFriends,
                     num_dms: ey.numDms,
                     num_group_dms: ey.numGroupDms,
                     guild_id: r.id,
                     application_id: I
                 }),
-            b)
+            T)
         ) {
             case Y.Iq.EMBEDDED_APPLICATION:
                 W.default.track(K.rMx.OPEN_MODAL, {
@@ -396,7 +396,7 @@ function ea(e) {
             case Y.Iq.STREAM:
                 if (null == p) break;
                 let e = Z.Z.getStreamForUser(p, r.id),
-                    t = (0, T.L2)(e, D.Z);
+                    t = (0, E.L2)(e, D.Z);
                 W.default.track(K.rMx.OPEN_MODAL, {
                     type: 'Send Stream Invite',
                     source: d,
@@ -437,7 +437,7 @@ function ea(e) {
                         ? t
                         : null;
                 (null !== e && (0, B.m)(e, ee)) ||
-                    (await g.ZP.createInvite(eI.id, ee, d),
+                    (await h.ZP.createInvite(eI.id, ee, d),
                     (e =
                         null !=
                         (n = k.Z.getInvite(eI.id, {
@@ -458,12 +458,12 @@ function ea(e) {
             try {
                 let t = await eP();
                 o()(null != t, 'Invite key could not be determined.');
-                let n = eb
+                let n = eT
                     .filter((e) => C.includes(e.item.id))
                     .map((e) => {
                         var n;
                         let l,
-                            i = eh[0],
+                            i = eg[0],
                             r = null != (n = R.Z.getSelectedInviteMetadata(e)) ? n : null;
                         switch (e.type) {
                             case V.bm.FRIEND:
@@ -505,18 +505,18 @@ function ea(e) {
                     });
                 if ((await Promise.allSettled(n), n.length > 0)) {
                     let e = C.length > 1 ? X.NW.string(X.t['4pl/xs']) : X.NW.string(X.t.sVwWdX);
-                    (0, h.showToast)((0, h.createToast)(e, h.ToastType.INVITE));
+                    (0, g.showToast)((0, g.createToast)(e, g.ToastType.INVITE));
                 }
                 e = !0;
             } catch (e) {
                 eu(e), ea(!1);
             }
             e && eC();
-        }, [er, el, ea, C, eb, eP, eh, eC]),
+        }, [er, el, ea, C, eT, eP, eg, eC]),
         ew = er || el;
     return (0, l.jsx)(f.Gt, {
-        value: eh,
-        children: (0, l.jsxs)(h.Y0X, {
+        value: eg,
+        children: (0, l.jsxs)(g.Y0X, {
             className: s()(J.modal, { [J.disabled]: ew }),
             transitionState: t,
             impression: {
@@ -527,7 +527,7 @@ function ea(e) {
                 }
             },
             children: [
-                (0, l.jsxs)(h.xBx, {
+                (0, l.jsxs)(g.xBx, {
                     className: J.header,
                     children: [
                         (0, l.jsxs)('div', {
@@ -535,22 +535,22 @@ function ea(e) {
                             children: [
                                 (0, l.jsx)('div', {
                                     className: J.title,
-                                    children: (0, l.jsx)(h.X6q, {
+                                    children: (0, l.jsx)(g.X6q, {
                                         variant: 'heading-lg/semibold',
                                         children: X.NW.string(X.t.BN75l5)
                                     })
                                 }),
-                                (0, l.jsx)(h.olH, {
+                                (0, l.jsx)(g.olH, {
                                     className: J.closeButton,
                                     onClick: eC
                                 })
                             ]
                         }),
-                        (0, l.jsx)(h.E1j, {
+                        (0, l.jsx)(g.E1j, {
                             ref: ed,
-                            size: h.E1j.Sizes.MEDIUM,
+                            size: g.E1j.Sizes.MEDIUM,
                             query: L,
-                            onChange: eg,
+                            onChange: eh,
                             onClear: em,
                             placeholder: X.NW.string(X.t['5h0QOD']),
                             'aria-label': X.NW.string(X.t['5h0QOD']),
@@ -558,21 +558,21 @@ function ea(e) {
                         })
                     ]
                 }),
-                (0, l.jsx)(h.hzk, {
-                    className: s()(J.body, { [J.empty]: 0 === eb.length }),
+                (0, l.jsx)(g.hzk, {
+                    className: s()(J.body, { [J.empty]: 0 === eT.length }),
                     children: (0, l.jsx)(es, {
-                        rows: eb,
+                        rows: eT,
                         onToggle: ex,
                         scrollerRef: ec,
                         selection: C,
                         disabled: ew
                     })
                 }),
-                (0, l.jsxs)(h.mzw, {
-                    direction: S.Z.Direction.VERTICAL,
+                (0, l.jsxs)(g.mzw, {
+                    direction: b.Z.Direction.VERTICAL,
                     className: J.footer,
                     children: [
-                        (0, l.jsx)(z.f, {
+                        (0, l.jsx)(G.f, {
                             className: J.footerContent,
                             guild: r,
                             channel: null != a ? a : null,
@@ -584,11 +584,11 @@ function ea(e) {
                             hasSelection: C.length > 0,
                             options: ee,
                             setOptions: ep,
-                            isGuestInviteAllowed: eT,
-                            isTemporaryInviteAllowed: !eT && !eS,
-                            isApplicationBypassAllowed: eE,
+                            isGuestInviteAllowed: eE,
+                            isTemporaryInviteAllowed: !eE && !eb,
+                            isApplicationBypassAllowed: eS,
                             setError: eu,
-                            analyticsLocation: eh[0]
+                            analyticsLocation: eg[0]
                         }),
                         null !== eo &&
                             (0, l.jsx)(H.W, {

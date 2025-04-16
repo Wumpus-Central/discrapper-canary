@@ -62,7 +62,7 @@ let f = {
         let l = s.Z.getChannel(t);
         null != l &&
             (0, i.jW)(a, async () => {
-                let { default: t } = await Promise.all([n.e('94342'), n.e('79695'), n.e('13351'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('20204')]).then(n.bind(n, 757387));
+                let { default: t } = await Promise.all([n.e('94342'), n.e('79695'), n.e('13351'), n.e('4040'), n.e('98693'), n.e('7717'), n.e('20204')]).then(n.bind(n, 757387));
                 return (n) =>
                     (0, r.jsx)(
                         t,

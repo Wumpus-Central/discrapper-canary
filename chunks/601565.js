@@ -1,16 +1,16 @@
-n.d(t, { Z: () => s }), n(388685), n(35282), n(781311);
-var r = n(192379),
-    l = n(211266),
-    i = n(212819);
-function s(e) {
+n.d(t, { Z: () => i }), n(388685), n(35282), n(781311);
+var l = n(192379),
+    r = n(211266),
+    a = n(212819);
+function i(e) {
     let { searchOptions: t } = e,
-        [n, s] = r.useState({
+        [n, i] = l.useState({
             results: [],
             query: ''
         }),
-        a = (0, l.Z)(() => {
-            let e = new i.ZP((e, t) => {
-                s({
+        s = (0, r.Z)(() => {
+            let e = new a.ZP((e, t) => {
+                i({
                     results: e,
                     query: t
                 });
@@ -18,43 +18,43 @@ function s(e) {
             return e.setLimit(20), e.search(''), e;
         });
     return (
-        r.useEffect(() => () => a.destroy(), [a]),
-        r.useEffect(() => {
-            null != t && t !== a.options && a.setOptions(t);
-        }, [a, t]),
+        l.useEffect(() => () => s.destroy(), [s]),
+        l.useEffect(() => {
+            null != t && t !== s.options && s.setOptions(t);
+        }, [s, t]),
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+                    l = Object.keys(n);
                 'function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
+                    (l = l.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
+                    l.forEach(function (t) {
+                        var l;
+                        (l = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: r,
+                                      value: l,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
+                                : (e[t] = l);
                     });
             }
             return e;
         })(
             {
-                search: r.useCallback(
+                search: l.useCallback(
                     (e) => {
                         var t;
-                        let { query: n, resultTypes: r } = e;
-                        (null != a.resultTypes && ((t = a.resultTypes), r.length === t.size && r.every((e) => t.has(e)))) || (a.setResultTypes(r), a.setLimit(1 === r.length ? 50 : 20)), a.search('' === n.trim() ? '' : n);
+                        let { query: n, resultTypes: l } = e;
+                        (null != s.resultTypes && ((t = s.resultTypes), l.length === t.size && l.every((e) => t.has(e)))) || (s.setResultTypes(l), s.setLimit(1 === l.length ? 50 : 20)), s.search('' === n.trim() ? '' : n);
                     },
-                    [a]
+                    [s]
                 )
             },
             n

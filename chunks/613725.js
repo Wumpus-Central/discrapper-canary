@@ -24,9 +24,9 @@ function m() {
         m = (0, l.e7)([u.Z], () => (null == n ? u.Z.getChannel(t) : null)),
         g = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         b = null != m ? (0, a.x)(m) : null,
-        y = null != g ? g.getAvatarURL(e, 80) : h.pK['0'],
-        _ = (0, r.jsx)(o.qEK, {
-            src: y,
+        _ = null != g ? g.getAvatarURL(e, 80) : h.pK['0'],
+        y = (0, r.jsx)(o.qEK, {
+            src: _,
             'aria-hidden': !0,
             size: o.EFr.SIZE_80,
             className: f.avatarSizeOverride
@@ -43,13 +43,13 @@ function m() {
                         size: o.EFr.SIZE_80,
                         className: f.avatarSizeOverride
                     })
-                  : _),
+                  : y),
         (0, r.jsxs)('div', {
             className: f.container,
             children: [
                 (0, r.jsx)('div', {
                     className: f.personAvatar,
-                    children: _
+                    children: y
                 }),
                 (0, r.jsx)('div', {
                     className: f.guildAvatar,

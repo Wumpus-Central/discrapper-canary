@@ -56,7 +56,7 @@ function g(e) {
             })
           : null;
 }
-function v(e) {
+function b(e) {
     let { src: t, size: n } = e;
     return (0, r.jsx)('img', {
         className: d.circularImage,
@@ -66,7 +66,7 @@ function v(e) {
         height: n
     });
 }
-let b = {
+let v = {
         [s.EFr.SIZE_16]: {
             default: u.QS.DIAGONAL_FACEPILE_16,
             typing: u.QS.DIAGONAL_FACEPILE_TYPING_16,
@@ -161,7 +161,7 @@ let b = {
                           return (f[n] = c), c;
                       })(c, m, t);
             }, [S, m, c]),
-            A = ((t = null != p), m ? b[c].typing : t ? b[c].status : b[c].default);
+            A = ((t = null != p), m ? v[c].typing : t ? v[c].status : v[c].default);
         return (0, r.jsxs)('div', {
             style: (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -215,7 +215,7 @@ let b = {
                                 top: C,
                                 left: C
                             },
-                            children: (0, r.jsx)(v, {
+                            children: (0, r.jsx)(b, {
                                 src: i,
                                 size: O,
                                 isTyping: m,

@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(12779),
     g = n(450369),
     b = n(388032),
-    y = n(816395);
-let _ = {
+    _ = n(816395);
+let y = {
         singleSpeaker: 424,
         twoSpeakers: 624,
         threeSpeakers: 824
@@ -28,14 +28,14 @@ let _ = {
             speakerTileHeight: r
         };
     },
-    x = (e, t) => (e < _.singleSpeaker ? 1 : e < _.twoSpeakers ? 2 : e < _.threeSpeakers || t ? 3 : 4),
+    x = (e, t) => (e < y.singleSpeaker ? 1 : e < y.twoSpeakers ? 2 : e < y.threeSpeakers || t ? 3 : 4),
     v = (e) => Math.floor((e - 32) / 102);
 function j(e) {
     return e.type === u.Ui.VOICE;
 }
 let O = (0, o.Z)((e) => {
     var t, n;
-    let { channel: o, width: _, onScroll: O } = e,
+    let { channel: o, width: y, onScroll: O } = e,
         {
             selectedParticipantId: E,
             largeStream: N,
@@ -55,8 +55,8 @@ let O = (0, o.Z)((e) => {
         T = (0, c.w8)(o.id, u.pV.SPEAKER),
         A = T.filter(j),
         w = null != T.find((e) => e.type === u.Ui.STREAM),
-        R = v(_),
-        k = x(_, I),
+        R = v(y),
+        k = x(y, I),
         M = {
             [u.pV.SPEAKER]: k,
             [u.pV.AUDIENCE]: R,
@@ -65,8 +65,8 @@ let O = (0, o.Z)((e) => {
         L = (0, d.Dx)(o.id),
         [D, W] = (0, d.aP)(o.id, M, L),
         U = [Math.max(null != (t = D[0]) ? t : 1, 1), Math.max(null != (n = D[1]) ? n : 1, 1), D[2]],
-        { speakerTileWidth: B, speakerTileHeight: G } = C(_, k),
-        F = N ? _ - 32 : Math.min(_ - 64, 3 * B + 8),
+        { speakerTileWidth: B, speakerTileHeight: G } = C(y, k),
+        F = N ? y - 32 : Math.min(y - 64, 3 * B + 8),
         H = (e) => e === D.length - 1 || (0 === S && 1 === e),
         [V, z] = i.useState(!1),
         [Y, q] = i.useState(!1);
@@ -82,7 +82,7 @@ let O = (0, o.Z)((e) => {
                           {
                               participantCount: P,
                               label: b.NW.string(b.t.CduOk5),
-                              className: y.header,
+                              className: _.header,
                               onClick: () => z(!V),
                               collapsed: V,
                               speakers: A,
@@ -99,7 +99,7 @@ let O = (0, o.Z)((e) => {
                             {
                                 participantCount: S,
                                 label: b.NW.string(b.t['3foUu7']),
-                                className: y.header,
+                                className: _.header,
                                 onClick: () => q(!Y),
                                 collapsed: Y,
                                 channel: o
@@ -119,7 +119,7 @@ let O = (0, o.Z)((e) => {
                     return (0, r.jsx)(
                         'div',
                         {
-                            className: y.focusedRow,
+                            className: _.focusedRow,
                             children: (0, r.jsx)(g.Z, {
                                 channel: o,
                                 participant: l[0],
@@ -160,10 +160,10 @@ let O = (0, o.Z)((e) => {
         rowHeight: (e) => (null == W[e][0] ? 0 : 0 === e ? F / g.Q + 8 : 1 === e ? (V ? 0 : G) : 98 * !Y),
         renderFooter: (e) => {
             let { section: t } = e;
-            return H(t) ? (0, r.jsx)('div', { className: y.spacer }, 'bottom-spacer') : null;
+            return H(t) ? (0, r.jsx)('div', { className: _.spacer }, 'bottom-spacer') : null;
         },
         footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : 88 * !!H(e)),
-        className: y.scroller,
+        className: _.scroller,
         chunkSize: 60,
         onScroll: O
     });

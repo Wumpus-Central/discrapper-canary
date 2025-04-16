@@ -24,7 +24,7 @@ var s = r(120356),
     v = r(388032),
     S = r(974149);
 let w = (e, t) => {
-        u.Z.hasLayers() && (0, x.xf)(), c.Z.openPrivateChannel(e), t();
+        u.Z.hasLayers() && (0, x.xf)(), c.Z.openPrivateChannel({ recipientIds: e }), t();
     },
     b = (e) => {
         let { user: t, trialCreationResult: r, onClose: s } = e,

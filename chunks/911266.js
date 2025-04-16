@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -14,10 +14,10 @@ var r = n(200651),
     m = n(111810),
     g = n(287941),
     b = n(235894),
-    y = n(675479);
-let _ = (e) => {
+    _ = n(675479);
+let y = (e) => {
     let { message: t, hovering: n, compact: l } = e,
-        _ = i.useRef((0, a.random)(-6, 24)).current,
+        y = i.useRef((0, a.random)(-6, 24)).current,
         C = (0, s.e7)([h.Z], () => h.Z.confettiMode),
         x = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         v = i.useRef(0),
@@ -67,7 +67,7 @@ let _ = (e) => {
     if (null == P) return null;
     if (l)
         return (0, r.jsx)('span', {
-            className: y.hidden,
+            className: _.hidden,
             'aria-hidden': 'true'
         });
     let S = P.emoji[0],
@@ -82,25 +82,25 @@ let _ = (e) => {
                   });
     return (0, r.jsxs)('div', {
         ref: O,
-        className: y.emojiWrapper,
-        style: { right: ''.concat(256 + _, 'px') },
+        className: _.emojiWrapper,
+        style: { right: ''.concat(256 + y, 'px') },
         children: [
             (0, r.jsx)('img', {
                 alt: '',
                 src: Z,
-                className: o()([y.emoji, y.left, I && y.shy, C && y.confettiMode]),
+                className: o()([_.emoji, _.left, I && _.shy, C && _.confettiMode]),
                 width: 28
             }),
             (0, r.jsx)('img', {
                 alt: '',
                 src: Z,
-                className: o()([y.emoji, y.right, I && y.shy, C && y.confettiMode]),
+                className: o()([_.emoji, _.right, I && _.shy, C && _.confettiMode]),
                 width: 26
             }),
             (0, r.jsx)('img', {
                 alt: '',
                 src: Z,
-                className: o()([y.emoji, y.center, I && y.shy, C && y.confettiMode]),
+                className: o()([_.emoji, _.center, I && _.shy, C && _.confettiMode]),
                 width: 32
             })
         ]

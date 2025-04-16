@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => _,
+    Z: () => y,
     r: () => C
 });
 var r = n(200651),
@@ -17,8 +17,8 @@ var r = n(200651),
     m = n(403182),
     g = n(928477),
     b = n(981631),
-    y = n(388032);
-function _(e) {
+    _ = n(388032);
+function y(e) {
     let { parentChannel: t, parentMessageId: n, threadSettings: r, privateThreadMode: l, location: o, onThreadCreated: a, useDefaultThreadName: s } = e,
         u = i.useCallback((e, t, n, r) => {
             c.Z.uploadFiles({
@@ -123,14 +123,14 @@ function C(e) {
                     } else if (i === b.evJ.ENTITY_TOO_LARGE) {
                         let e = (0, m.dg)(t.getGuildId());
                         s.Z.show({
-                            title: y.NW.string(y.t['/tGlcn']),
-                            body: y.NW.formatToPlainString(y.t.fxEKdX, { maxSize: (0, m.Ng)(e) })
+                            title: _.NW.string(_.t['/tGlcn']),
+                            body: _.NW.formatToPlainString(_.t.fxEKdX, { maxSize: (0, m.Ng)(e) })
                         });
                     } else
                         i === b.evJ.TOO_MANY_ATTACHMENTS &&
                             s.Z.show({
-                                title: y.NW.string(y.t.wOr6hI),
-                                body: y.NW.formatToPlainString(y.t['qqyp/f'], { limit: b.dN1 })
+                                title: _.NW.string(_.t.wOr6hI),
+                                body: _.NW.formatToPlainString(_.t['qqyp/f'], { limit: b.dN1 })
                             });
                     d({ body: l });
                 }),

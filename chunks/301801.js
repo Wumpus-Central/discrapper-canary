@@ -28,7 +28,7 @@ function o(e, t, r, a) {
                 }, t),
                 r
             );
-        })(t.map(h), [t, h]),
+        })(t.map(h), [t, h, ...o]),
         p = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                 [r, a] = n.useState(e),

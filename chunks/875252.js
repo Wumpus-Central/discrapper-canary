@@ -1,29 +1,29 @@
-t.d(e, { H: () => c });
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    r = t(481060),
-    d = t(378298),
-    s = t(359119),
-    a = t(832239),
-    u = t(594174),
-    o = t(388032);
-function c(n) {
-    let e = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
-        t = (0, l.e7)([s.ZP], () => s.ZP.getChannelSafetyWarnings(n.id));
-    return (null == e ? void 0 : e.isStaff()) !== !0 || null == t || 0 === t.length
+n.d(t, { H: () => c });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    l = n(481060),
+    s = n(378298),
+    a = n(359119),
+    d = n(832239),
+    o = n(594174),
+    u = n(388032);
+function c(e) {
+    let t = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
+        n = (0, r.e7)([a.ZP], () => a.ZP.getChannelSafetyWarnings(e.id));
+    return (null == t ? void 0 : t.isStaff()) !== !0 || null == n || 0 === n.length
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(r.sNh, {
+                  (0, i.jsx)(l.sNh, {
                       id: 'delete-safety-warnings',
-                      label: o.NW.string(o.t.g7o9bm),
-                      action: () => (0, a.Vp)(n.id)
+                      label: u.NW.string(u.t.g7o9bm),
+                      action: () => (0, d.Vp)(e.id)
                   }),
-                  (0, i.jsx)(r.sNh, {
+                  (0, i.jsx)(l.sNh, {
                       id: 'clear-safety-warnings',
-                      label: o.NW.string(o.t.VuSvGh),
-                      action: () => (0, d.wS)(n.id)
+                      label: u.NW.string(u.t.VuSvGh),
+                      action: () => (0, s.wS)(e.id)
                   })
               ]
           });

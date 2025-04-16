@@ -1,4 +1,4 @@
-n.d(t, { N: () => _ }), n(388685);
+n.d(t, { N: () => y }), n(388685);
 var r = n(200651),
     i = n(442837),
     l = n(704215),
@@ -36,7 +36,7 @@ let b = (e) => {
             ]
         });
     },
-    y = (e) => {
+    _ = (e) => {
         let { user: t, markAsDismissed: n } = e;
         return (0, r.jsx)(c.ZP, {
             asset: (0, r.jsx)(b, {
@@ -58,7 +58,7 @@ let b = (e) => {
             }
         });
     };
-function _(e) {
+function y(e) {
     let { children: t } = e,
         n = [l.z.LEADERBOARD_NUX_COACHMARK],
         [a, c] = (0, s.US)(n, void 0),
@@ -67,7 +67,7 @@ function _(e) {
         ? t
         : (0, r.jsx)(o.yRy, {
               renderPopout: () =>
-                  y({
+                  _({
                       user: d,
                       markAsDismissed: c
                   }),

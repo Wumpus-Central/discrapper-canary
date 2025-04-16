@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(111583),
     g = n(459273),
     b = n(880831),
-    y = n(774168),
-    _ = n(871499),
+    _ = n(774168),
+    y = n(871499),
     C = n(981631),
     x = n(388032);
 function v(e) {
@@ -39,7 +39,7 @@ function v(e) {
 function j(e) {
     let { className: t, channelId: n } = e,
         { unreadCount: i, mentionCount: l, isTyping: o, voiceChannelIsSelected: a } = v(n);
-    return (0, r.jsx)(y.Z, {
+    return (0, r.jsx)(_.Z, {
         className: t,
         unreadCount: i,
         mentionCount: l,
@@ -49,7 +49,7 @@ function j(e) {
 }
 function O(e) {
     let t;
-    var { channelId: n, className: l, showingClassName: a, onClick: h, inPopout: f, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: y } = e,
+    var { channelId: n, className: l, showingClassName: a, onClick: h, inPopout: f, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: _ } = e,
         O = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -98,8 +98,8 @@ function O(e) {
             );
         })(n),
         A = i.useCallback(() => {
-            (0, p.v)(E, p.d.CHAT, !P), null == h || h(), !P && m && (null == y || y()), c.Z.updateChatOpen(n, !P);
-        }, [n, P, h, m, y, E]),
+            (0, p.v)(E, p.d.CHAT, !P), null == h || h(), !P && m && (null == _ || _()), c.Z.updateChatOpen(n, !P);
+        }, [n, P, h, m, _, E]),
         w = i.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -143,7 +143,7 @@ function O(e) {
         T > 0 && D.push(x.NW.formatToPlainString(x.t['3l1GOz'], { mentionCount: T })),
         Z > 0 && D.push(x.NW.string(x.t.x5zAGR)),
         (0, r.jsx)(
-            _.Z,
+            y.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

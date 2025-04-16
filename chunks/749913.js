@@ -38,8 +38,8 @@ var r = n(200651),
     F = n(838440),
     D = n(127654),
     z = n(681154),
-    B = n(883429),
-    H = n(945141),
+    H = n(883429),
+    B = n(945141),
     U = n(456269),
     V = n(228392),
     G = n(259637),
@@ -177,7 +177,7 @@ function el(e) {
             return a.useCallback(
                 async (t, a, l) => {
                     let { setNameError: s, setMessageError: o, setSubmitting: c, resetFormState: d, formOpen: u, setFormOpen: m, setPreviewing: h, setFormOpenFromUserAction: g, setGuidelinesOpen: f } = n.getState(),
-                        p = H.Z.hasSeen(e.id);
+                        p = B.Z.hasSeen(e.id);
                     if (!u)
                         return (
                             (0, V.P_)({
@@ -214,12 +214,12 @@ function el(e) {
                         let n = await r(x, b, j);
                         return (
                             (0, I.ok)(n),
-                            B.Z.resort(e.id),
+                            H.Z.resort(e.id),
                             (0, P.qB)(e.id, ei.drafts.type),
                             d(),
                             m(!1),
                             h(!1),
-                            H.Z.markAsSeen(e.id),
+                            B.Z.markAsSeen(e.id),
                             f(!1),
                             {
                                 shouldClear: !0,
@@ -411,7 +411,7 @@ let es = a.memo(function (e) {
             }, c.X),
             p = (0, X.AF)(),
             x = null != t.topic && 0 !== t.topic.length,
-            b = H.Z.hasSeen(t.id),
+            b = B.Z.hasSeen(t.id),
             j = (0, U.ql)(t),
             v = (0, h.e7)([L.default], () => L.default.getCurrentUser());
         o()(null != v, 'current user cannot be null'),
@@ -456,7 +456,7 @@ let es = a.memo(function (e) {
                               let r = 0 === n.trim().length,
                                   a = 0 === m.textValue.trim().length,
                                   i = m.textValue.trim() === j;
-                              r && (a || i) && p.getState().setHasClickedForm(!1), s || B.Z.updateForumSearchQuery(t.id, n);
+                              r && (a || i) && p.getState().setHasClickedForm(!1), s || H.Z.updateForumSearchQuery(t.id, n);
                           },
                           onFocus: () => {
                               p.getState().setTitleFocused(!0), p.getState().setBodyFocused(!1);
@@ -464,7 +464,7 @@ let es = a.memo(function (e) {
                           onBlur: () => {
                               p.getState().setTitleFocused(!1);
                               let e = (0, T.Z)(u, !0);
-                              e !== u && (p.getState().setName(e), s || B.Z.updateForumSearchQuery(t.id, e));
+                              e !== u && (p.getState().setName(e), s || H.Z.updateForumSearchQuery(t.id, e));
                           },
                           onKeyDown: (e) => {
                               var r, a;

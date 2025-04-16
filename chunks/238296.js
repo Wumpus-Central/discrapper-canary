@@ -1,131 +1,131 @@
 n.d(t, {
-    E: () => x,
+    E: () => P,
     Y: () => S,
-    default: () => E
+    default: () => x
 });
 var r = n(200651);
 n(192379);
 var i = n(481060),
     o = n(239091),
-    l = n(883385),
-    c = n(108843),
-    a = n(100527),
-    u = n(167675),
+    c = n(883385),
+    l = n(108843),
+    u = n(100527),
+    a = n(167675),
     s = n(737013),
-    d = n(607783),
-    f = n(589049),
+    f = n(607783),
+    d = n(589049),
     b = n(299206),
-    g = n(314897),
+    p = n(314897),
     O = n(389052),
-    p = n(158508),
-    j = n(88966),
-    y = n(991307),
+    y = n(158508),
+    g = n(88966),
+    j = n(991307),
     v = n(37258),
-    m = n(700994),
-    Z = n(981631),
-    h = n(388032);
+    Z = n(700994),
+    h = n(981631),
+    m = n(388032);
 function S(e) {
-    let { isOwnSettings: t, userId: n, channelId: o, guildId: l, context: c } = e,
-        a = (0, v.Z)({
+    let { isOwnSettings: t, userId: n, channelId: o, guildId: c, context: l } = e,
+        u = (0, v.Z)({
             userId: n,
-            guildId: l,
+            guildId: c,
             channelId: o,
             showGuildProfile: !0,
             icon: (0, r.jsx)(i.tBG, { size: 'sm' }),
-            label: h.NW.string(h.t.iXAna2)
+            label: m.NW.string(m.t.iXAna2)
         }),
-        d = (0, j.Z)(n, c, i.kBi),
-        b = (0, m.Z)(n),
-        g = (0, y.Z)(n),
-        O = (0, u.Z)(n),
-        p = (0, s.Z)(n),
-        Z = (0, f.Z)();
+        f = (0, g.Z)(n, l, i.kBi),
+        b = (0, Z.Z)(n),
+        p = (0, j.Z)(n),
+        O = (0, a.Z)(n),
+        y = (0, s.Z)(n),
+        h = (0, d.Z)();
     return [
         (0, r.jsxs)(i.kSQ, {
-            children: [a, d]
+            children: [u, f]
         }),
         (0, r.jsxs)(i.kSQ, {
-            children: [b, g, O, p, t && Z]
+            children: [b, p, O, y, t && h]
         })
     ];
 }
-function x(e, t, n) {
-    let o = (0, d.B)({
+function P(e, t, n) {
+    let o = (0, f.B)({
             userId: e.id,
             channelId: t,
             guildId: n,
             simplified: !0
         }),
-        l = (0, b.Z)({
+        c = (0, b.Z)({
             id: e.id,
-            label: h.NW.string(h.t['/AXYnJ'])
+            label: m.NW.string(m.t['/AXYnJ'])
         }),
-        c = (0, p.Z)({
+        l = (0, y.Z)({
             user: e,
             guildId: n,
             channelId: t,
             location: 'GuildVoiceUserContextMenu'
         }),
-        a = (0, O.Z)({
+        u = (0, O.Z)({
             user: e,
             guildId: n,
             channelId: t,
             location: 'GuildVoiceUserContextMenu'
         }),
-        u = (0, r.jsxs)(i.kSQ, {
-            children: [o, l]
+        a = (0, r.jsxs)(i.kSQ, {
+            children: [o, c]
         });
     return [
         (0, r.jsxs)(i.kSQ, {
-            children: [c, a]
+            children: [l, u]
         }),
-        u
+        a
     ];
 }
-let E = (0, c.Z)(
-    (0, l.Z)(
+let x = (0, l.Z)(
+    (0, c.Z)(
         function (e) {
-            let { user: t, channel: n, onSelect: l, onInteraction: c, context: a } = e,
-                u = n.id,
+            let { user: t, channel: n, onSelect: c, onInteraction: l, context: u } = e,
+                a = n.id,
                 s = t.isNonUserBot(),
-                d = t.id === g.default.getId(),
-                f = S({
-                    isOwnSettings: d,
+                f = t.id === p.default.getId(),
+                d = S({
+                    isOwnSettings: f,
                     userId: t.id,
-                    channelId: u,
-                    context: a
+                    channelId: a,
+                    context: u
                 }),
-                O = x(t, u),
-                p = (0, b.Z)({
+                O = P(t, a),
+                y = (0, b.Z)({
                     id: t.id,
-                    label: h.NW.string(h.t['/AXYnJ'])
+                    label: m.NW.string(m.t['/AXYnJ'])
                 });
             return (0, r.jsx)(i.v2r, {
                 navId: 'user-context',
                 onClose: o.Zy,
-                'aria-label': h.NW.string(h.t.liqwPD),
-                onSelect: l,
-                onInteraction: c,
+                'aria-label': m.NW.string(m.t.liqwPD),
+                onSelect: c,
+                onInteraction: l,
                 variant: 'fixed',
                 children:
                     !s &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            f,
-                            !d &&
+                            d,
+                            !f &&
                                 (0, r.jsx)(i.kSQ, {
                                     children: (0, r.jsx)(i.sNh, {
                                         id: 'more-options',
-                                        label: h.NW.string(h.t.PdRCRk),
+                                        label: m.NW.string(m.t.PdRCRk),
                                         children: O
                                     })
                                 }),
-                            d && (0, r.jsx)(i.kSQ, { children: p })
+                            f && (0, r.jsx)(i.kSQ, { children: y })
                         ]
                     })
             });
         },
-        { object: Z.qAy.CONTEXT_MENU }
+        { object: h.qAy.CONTEXT_MENU }
     ),
-    [a.Z.VOICE_USER]
+    [u.Z.VOICE_USER]
 );

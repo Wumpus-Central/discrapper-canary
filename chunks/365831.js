@@ -58,13 +58,13 @@ function y(e, t) {
         e
     );
 }
-let j = {
+let x = {
         mass: 2,
         friction: 30,
         tension: 500,
         clamp: !0
     },
-    x = {
+    j = {
         mass: 1,
         friction: 28,
         tension: 700,
@@ -120,19 +120,19 @@ function N(e) {
     let Z = null != n,
         D = !Z,
         A = Z && null != a,
-        M = null == n && null != a,
-        W = (0, c.q_F)(
+        W = null == n && null != a,
+        F = (0, c.q_F)(
             {
                 opacity: +!!Z,
                 height: 72 * !!Z,
                 pointerEvents: Z ? 'auto' : 'none',
                 backgroundColor: null != (t = null == N ? void 0 : N.baseColor) ? t : w,
-                config: j,
-                delay: A ? 150 : 100 * !!M
+                config: x,
+                delay: A ? 150 : 100 * !!W
             },
             'respect-motion-settings'
         ),
-        F = (0, c.Yzy)(
+        M = (0, c.Yzy)(
             null == N ? void 0 : N.id,
             {
                 key: k,
@@ -148,7 +148,7 @@ function N(e) {
                     opacity: 0,
                     delay: 50
                 },
-                config: j
+                config: x
             },
             'respect-motion-settings'
         ),
@@ -187,7 +187,7 @@ function N(e) {
                                 }
                             ],
                 config: C,
-                delay: M ? 100 - 50 * e : 150 + 50 * e
+                delay: W ? 100 - 50 * e : 150 + 50 * e
             }),
             'respect-motion-settings',
             [n]
@@ -213,7 +213,7 @@ function N(e) {
                     translateX: 32 * (null != n),
                     delay: 0
                 },
-                config: j
+                config: x
             },
             'respect-motion-settings'
         ),
@@ -232,14 +232,14 @@ function N(e) {
                     translateX: 0,
                     translateY: 0,
                     delay: null == a ? 100 : 275,
-                    config: null == a ? C : x
+                    config: null == a ? C : j
                 },
                 leave: {
                     opacity: 0,
                     translateX: 40 * (null != n),
                     translateY: 16 * (null == n),
-                    delay: M ? 200 : 150,
-                    config: null == a ? C : x
+                    delay: W ? 200 : 150,
+                    config: null == a ? C : j
                 },
                 config: C
             },
@@ -249,12 +249,12 @@ function N(e) {
     return (0, r.jsxs)(l.animated.div, {
         className: v.voiceFilterHero,
         'aria-hidden': D,
-        style: W,
+        style: F,
         children: [
             (0, r.jsx)('div', {
                 className: o()([v.bgGradient, v.bgGradientHighlight])
             }),
-            F((e) =>
+            M((e) =>
                 (0, r.jsx)(l.animated.div, {
                     className: v.bgGradient,
                     style: e

@@ -1,5 +1,5 @@
 n.d(t, {
-    W: () => _,
+    W: () => y,
     Z: () => C
 });
 var r = n(200651);
@@ -42,7 +42,7 @@ function b(e) {
     }
     return e;
 }
-function y(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,7 +60,7 @@ function y(e, t) {
         e
     );
 }
-function _(e) {
+function y(e) {
     let { guild: t, channel: i, streamUserId: l, applicationId: o, appContext: a, exitFullScreen: s, analyticsLocation: u, guildScheduledEvent: d } = e;
     null == s || s(),
         (0, c.ZDy)(
@@ -69,7 +69,7 @@ function _(e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        y(b({}, n), {
+                        _(b({}, n), {
                             guild: t,
                             channel: i,
                             streamUserId: l,
@@ -120,7 +120,7 @@ function C(e) {
             children: [
                 (0, r.jsx)(
                     c.zxk,
-                    y(
+                    _(
                         b(
                             {
                                 size: null != (t = O.size) ? t : c.zxk.Sizes.SMALL,
@@ -128,7 +128,7 @@ function C(e) {
                                 onClick: () => {
                                     a()(null != I, 'guild cannot be null'),
                                         a()(null != o, 'channel cannot be null'),
-                                        _({
+                                        y({
                                             guild: I,
                                             channel: o,
                                             streamUserId: null == n ? void 0 : n.ownerId,

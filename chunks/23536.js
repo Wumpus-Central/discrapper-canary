@@ -15,7 +15,7 @@ var r = n(200651),
 let g = [];
 function b(e) {
     let { channel: t, onJump: b } = e,
-        { messages: y, loading: _ } = (0, l.cj)([d.Z], () => {
+        { messages: _, loading: y } = (0, l.cj)([d.Z], () => {
             let e = d.Z.getPinnedMessages(t.id),
                 n = null != e ? e.messages : g;
             return {
@@ -26,7 +26,7 @@ function b(e) {
         C = (0, l.e7)([p.ZP], () => p.ZP.hasUnreadPins(t.id));
     return (
         (0, c.ZP)(() => {
-            y.some(u.k5) && s.Z.fetchPins(t.id, !0);
+            _.some(u.k5) && s.Z.fetchPins(t.id, !0);
         }),
         i.useEffect(() => {
             C && s.Z.ackPins(t.id);
@@ -38,8 +38,8 @@ function b(e) {
                     s.Z.ackPins(t.id), s.Z.fetchPins(t.id);
                 },
                 channel: t,
-                messages: y,
-                loading: _,
+                messages: _,
+                loading: y,
                 analyticsName: 'Channel Pins',
                 onCloseMessage: function (e, n) {
                     null != e && (n.shiftKey ? s.Z.unpinMessage(t, e.id) : f.Z.confirmUnpin(t, e));

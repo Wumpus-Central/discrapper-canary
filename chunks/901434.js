@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(546247),
     g = n(823379),
     b = n(5192),
-    y = n(501655),
-    _ = n(856393),
+    _ = n(501655),
+    y = n(856393),
     C = n(388032),
     x = n(761325);
 let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
@@ -26,7 +26,7 @@ let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
             O = i.useCallback(() => {
                 j ? (0, p.hk)(n.guild_id, () => c.default.selectVoiceChannel(n.id)) : c.default.selectVoiceChannel(n.id);
             }, [n.id, n.guild_id, j]),
-            E = t.filter((e) => e.type === y.Ui.VOICE),
+            E = t.filter((e) => e.type === _.Ui.VOICE),
             N = 4 === E.length ? 2 : 3,
             I = (0, a.Wu)([u.Z], () => E.map((e) => u.Z.getParticipant(n.id, e.id)).filter(g.lm), [n.id, E]);
         return (0, r.jsxs)('div', {
@@ -94,7 +94,7 @@ let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
                             size: s.zxk.Sizes.MEDIUM,
                             children: l ? C.NW.string(C.t['7vb2cX']) : C.NW.string(C.t.TVBCKS)
                         }),
-                        b && (0, r.jsx)(_.e, { channel: n })
+                        b && (0, r.jsx)(y.e, { channel: n })
                     ]
                 })
             ]

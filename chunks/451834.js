@@ -37,7 +37,7 @@ let g = (e) => {
                             variant: 'text-sm/semibold',
                             children: p.NW.format(p.t.QEW8Mj, {
                                 onClick: () => {
-                                    a({ action: 'PRESS_REACT_REPLY_TOAST' }), null == i || i(), c.Z.openPrivateChannel(n);
+                                    a({ action: 'PRESS_REACT_REPLY_TOAST' }), null == i || i(), c.Z.openPrivateChannel({ recipientIds: n });
                                 }
                             })
                         })

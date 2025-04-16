@@ -6,8 +6,8 @@ var i = n(481060),
     l = n(410575),
     o = n(108843),
     a = n(100527),
-    u = n(299206),
-    s = n(88966),
+    s = n(299206),
+    u = n(88966),
     d = n(37258),
     f = n(981631),
     b = n(388032);
@@ -15,11 +15,11 @@ let p = (0, o.Z)(
     function (e) {
         let { user: t, analyticsContext: n, onSelect: o } = e,
             a = (0, d.Z)({ userId: t.id }),
-            p = (0, u.Z)({
+            p = (0, s.Z)({
                 id: t.id,
                 label: b.NW.string(b.t['/AXYnJ'])
             }),
-            O = (0, s.Z)(t.id),
+            O = (0, u.Z)(t.id),
             h = t.isNonUserBot();
         return (0, r.jsx)(l.Z, {
             context: n,

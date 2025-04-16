@@ -1,19 +1,19 @@
-t.d(n, { Z: () => g });
-var r = t(200651);
-t(192379);
-var i = t(442837),
-    l = t(692547),
-    o = t(481060),
-    a = t(493683),
-    s = t(129861),
-    c = t(700582),
-    u = t(594174),
-    d = t(388032),
-    f = t(837014);
-function p(e) {
-    let { color: n, className: t } = e;
+n.d(t, { Z: () => m });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    o = n(692547),
+    l = n(481060),
+    s = n(493683),
+    a = n(129861),
+    d = n(700582),
+    c = n(594174),
+    u = n(388032),
+    g = n(837014);
+function f(e) {
+    let { color: t, className: n } = e;
     return (0, r.jsx)('svg', {
-        className: t,
+        className: n,
         height: '16',
         width: '80',
         viewBox: '0 0 80 16',
@@ -25,7 +25,7 @@ function p(e) {
             children: [
                 (0, r.jsx)('path', { d: 'm0 0h80v16h-80z' }),
                 (0, r.jsxs)('g', {
-                    stroke: n,
+                    stroke: t,
                     strokeLinecap: 'round',
                     strokeLinejoin: 'round',
                     strokeWidth: '2',
@@ -43,113 +43,113 @@ function p(e) {
         })
     });
 }
-function g(e, n) {
-    let t = (0, i.e7)([u.default], () => u.default.getCurrentUser());
-    return null == t || n.ownerId !== t.id || e.id === t.id
+function m(e, t) {
+    let n = (0, i.e7)([c.default], () => c.default.getCurrentUser());
+    return null == n || t.ownerId !== n.id || e.id === n.id
         ? null
-        : (0, r.jsx)(o.sNh, {
+        : (0, r.jsx)(l.sNh, {
               id: 'make-dm-owner',
               color: 'danger',
-              label: d.NW.string(d.t['6t3CyM']),
+              label: u.NW.string(u.t['6t3CyM']),
               action: () => {
-                  (0, o.h7j)((i) => {
-                      var u, g;
+                  (0, l.h7j)((i) => {
+                      var c, m;
                       return (0, r.jsxs)(
-                          o.ConfirmModal,
-                          ((u = (function (e) {
-                              for (var n = 1; n < arguments.length; n++) {
-                                  var t = null != arguments[n] ? arguments[n] : {},
-                                      r = Object.keys(t);
+                          l.ConfirmModal,
+                          ((c = (function (e) {
+                              for (var t = 1; t < arguments.length; t++) {
+                                  var n = null != arguments[t] ? arguments[t] : {},
+                                      r = Object.keys(n);
                                   'function' == typeof Object.getOwnPropertySymbols &&
                                       (r = r.concat(
-                                          Object.getOwnPropertySymbols(t).filter(function (e) {
-                                              return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                           })
                                       )),
-                                      r.forEach(function (n) {
+                                      r.forEach(function (t) {
                                           var r;
-                                          (r = t[n]),
-                                              n in e
-                                                  ? Object.defineProperty(e, n, {
+                                          (r = n[t]),
+                                              t in e
+                                                  ? Object.defineProperty(e, t, {
                                                         value: r,
                                                         enumerable: !0,
                                                         configurable: !0,
                                                         writable: !0
                                                     })
-                                                  : (e[n] = r);
+                                                  : (e[t] = r);
                                       });
                               }
                               return e;
                           })(
                               {
-                                  bodyClassName: f.confirmModal,
-                                  header: d.NW.string(d.t.WZoUsr),
-                                  confirmText: d.NW.string(d.t['cY+Ooa']),
-                                  cancelText: d.NW.string(d.t['ETE/oK']),
-                                  onConfirm: () => a.Z.setDMOwner(n.id, e.id)
+                                  bodyClassName: g.confirmModal,
+                                  header: u.NW.string(u.t.WZoUsr),
+                                  confirmText: u.NW.string(u.t['cY+Ooa']),
+                                  cancelText: u.NW.string(u.t['ETE/oK']),
+                                  onConfirm: () => s.Z.setDMOwner(t.id, e.id)
                               },
                               i
                           )),
-                          (g = g =
+                          (m = m =
                               {
                                   children: [
-                                      (0, r.jsx)(p, { color: l.Z.unsafe_rawColors.PRIMARY_300.css }),
+                                      (0, r.jsx)(f, { color: o.Z.unsafe_rawColors.PRIMARY_300.css }),
                                       (0, r.jsxs)('div', {
-                                          className: f.fromToWrapper,
+                                          className: g.fromToWrapper,
                                           children: [
                                               (0, r.jsx)('div', {
-                                                  className: f.from,
-                                                  children: (0, r.jsx)(c.Z, {
-                                                      user: t,
-                                                      size: o.EFr.SIZE_80
+                                                  className: g.from,
+                                                  children: (0, r.jsx)(d.Z, {
+                                                      user: n,
+                                                      size: l.EFr.SIZE_80
                                                   })
                                               }),
                                               (0, r.jsx)('div', {
-                                                  className: f.to,
-                                                  children: (0, r.jsx)(c.Z, {
+                                                  className: g.to,
+                                                  children: (0, r.jsx)(d.Z, {
                                                       user: e,
-                                                      size: o.EFr.SIZE_80
+                                                      size: l.EFr.SIZE_80
                                                   })
                                               })
                                           ]
                                       }),
-                                      (0, r.jsx)(o.Text, {
+                                      (0, r.jsx)(l.Text, {
                                           variant: 'text-md/normal',
-                                          children: d.NW.format(d.t.gsBb3N, {
-                                              usernameHook: (n, t) =>
+                                          children: u.NW.format(u.t.gsBb3N, {
+                                              usernameHook: (t, n) =>
                                                   (0, r.jsx)(
-                                                      s.Z,
+                                                      a.Z,
                                                       {
-                                                          usernameIcon: (0, r.jsx)(o.qEK, {
-                                                              className: f.avatarIcon,
+                                                          usernameIcon: (0, r.jsx)(l.qEK, {
+                                                              className: g.avatarIcon,
                                                               src: e.getAvatarURL(void 0, 16),
-                                                              size: o.EFr.SIZE_16,
+                                                              size: l.EFr.SIZE_16,
                                                               'aria-hidden': !0
                                                           }),
-                                                          className: f.discordTag,
-                                                          usernameClass: f.username,
-                                                          discriminatorClass: f.discriminator,
+                                                          className: g.discordTag,
+                                                          usernameClass: g.username,
+                                                          discriminatorClass: g.discriminator,
                                                           user: e
                                                       },
-                                                      t
+                                                      n
                                                   )
                                           })
                                       })
                                   ]
                               }),
                           Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(u, Object.getOwnPropertyDescriptors(g))
-                              : (function (e, n) {
-                                    var t = Object.keys(e);
+                              ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(m))
+                              : (function (e, t) {
+                                    var n = Object.keys(e);
                                     if (Object.getOwnPropertySymbols) {
                                         var r = Object.getOwnPropertySymbols(e);
-                                        t.push.apply(t, r);
+                                        n.push.apply(n, r);
                                     }
-                                    return t;
-                                })(Object(g)).forEach(function (e) {
-                                    Object.defineProperty(u, e, Object.getOwnPropertyDescriptor(g, e));
+                                    return n;
+                                })(Object(m)).forEach(function (e) {
+                                    Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(m, e));
                                 }),
-                          u)
+                          c)
                       );
                   });
               }

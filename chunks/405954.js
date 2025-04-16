@@ -15,18 +15,18 @@ var r = n(200651),
     g = n(388032);
 let b = function (e) {
     let { channel: t } = e,
-        { activePickerChannelId: n, openPickerForChannel: b, closePicker: y } = (0, s.B)(),
-        { canAccessPicker: _, entryPoint: C } = (0, c.m)({
+        { activePickerChannelId: n, openPickerForChannel: b, closePicker: _ } = (0, s.B)(),
+        { canAccessPicker: y, entryPoint: C } = (0, c.m)({
             location: 'channel_header_toolbar',
             selectedChannelId: t.id
         }),
         x = (0, u.wE)(l.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
-        v = _ && C === a.FN.TOOLBAR && x,
+        v = y && C === a.FN.TOOLBAR && x,
         [j, O] = (0, d.US)(v ? [l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE] : []),
         E = j === l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE,
         N = i.useCallback(() => {
-            E && O(m.L.TAKE_ACTION), n === t.id ? (y(), p.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: 'close' })) : (b(t.id), p.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: 'open' }));
-        }, [n, t.id, y, b, E, O]);
+            E && O(m.L.TAKE_ACTION), n === t.id ? (_(), p.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: 'close' })) : (b(t.id), p.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: 'open' }));
+        }, [n, t.id, _, b, E, O]);
     return v
         ? (0, r.jsx)(h.JO, {
               onClick: N,

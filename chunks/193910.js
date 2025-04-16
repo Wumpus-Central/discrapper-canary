@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(243778),
     g = n(618857),
     b = n(488131),
-    y = n(375954),
-    _ = n(626135),
+    _ = n(375954),
+    y = n(626135),
     C = n(585483),
     x = n(403182),
     v = n(127654),
@@ -28,7 +28,7 @@ var r = n(200651),
     S = n(725776);
 let Z = RegExp('(.*)```(\\w+)\\n(.*)```(.*)', 's');
 function T() {
-    let e = (0, o.e7)([y.Z], () => y.Z.hasCurrentUserSentMessageSinceAppStart()),
+    let e = (0, o.e7)([_.Z], () => _.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
     e && t.push(a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
     let [n] = (0, f.cv)(t);
@@ -54,14 +54,14 @@ function T() {
     );
 }
 function A(e) {
-    let { channel: t, options: o, onFileUpload: f, onClose: m, onSelect: y, draftType: A, editorTextContent: w, setValue: R, openClips: k } = e,
+    let { channel: t, options: o, onFileUpload: f, onClose: m, onSelect: _, draftType: A, editorTextContent: w, setValue: R, openClips: k } = e,
         { analyticsLocations: M } = (0, p.ZP)(),
         L = (0, g.Dt)({ channel: t });
     function D() {
         (0, b.R6)(t, void 0, 'Plus Button');
     }
     function W() {
-        _.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, j.JM)('/'));
+        y.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, j.JM)('/'));
     }
     function U() {
         k();
@@ -121,7 +121,7 @@ function A(e) {
             );
     }
     function G() {
-        _.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+        y.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id
@@ -142,14 +142,14 @@ function A(e) {
     }
     return (
         i.useEffect(() => {
-            _.default.track(E.rMx.OPEN_POPOUT, {
+            y.default.track(E.rMx.OPEN_POPOUT, {
                 type: 'Send Attachment',
                 channel_id: t.id,
                 guild_id: t.guild_id
             });
         }, [t.guild_id, t.id]),
         (0, r.jsx)(s.v2r, {
-            onSelect: y,
+            onSelect: _,
             navId: 'channel-attach',
             onClose: m,
             'aria-label': P.NW.string(P.t.Xm41aW),

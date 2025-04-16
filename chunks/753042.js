@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => _ });
 var r = n(200651),
     i = n(192379),
     l = n(399606),
@@ -14,11 +14,11 @@ var r = n(200651),
     m = n(981631),
     g = n(388032),
     b = n(12740);
-function y(e) {
+function _(e) {
     let { member: t } = e,
         n = (0, l.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]),
-        y = (0, c.mh)(t.userId, t.guildId),
-        _ = (0, c.mV)(t.userId, t.guildId),
+        _ = (0, c.mh)(t.userId, t.guildId),
+        y = (0, c.mV)(t.userId, t.guildId),
         C = (0, c.LD)(t.userId),
         x = (0, c.wi)(t.userId, t.guildId);
     return (i.useEffect(() => {
@@ -42,7 +42,7 @@ function y(e) {
                               color: 'text-normal',
                               children: g.NW.string(g.t.nzGai4)
                           }),
-                          description: y
+                          description: _
                               ? (0, r.jsx)(o.sV5, {
                                     size: 'custom',
                                     width: f.Mn,
@@ -56,7 +56,7 @@ function y(e) {
                                     color: o.TVs.colors.INFO_DANGER_FOREGROUND
                                 })
                       }),
-                      _ !== c.qc.NO_GATE &&
+                      y !== c.qc.NO_GATE &&
                           (0, r.jsx)(f._2, {
                               icon: (0, r.jsx)(o.snC, {
                                   size: 'custom',
@@ -69,7 +69,7 @@ function y(e) {
                                   children: g.NW.string(g.t['93hqlp'])
                               }),
                               description:
-                                  _ === c.qc.AGREED
+                                  y === c.qc.AGREED
                                       ? (0, r.jsx)(o.sV5, {
                                             size: 'custom',
                                             width: f.Mn,

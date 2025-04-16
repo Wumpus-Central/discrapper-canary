@@ -15,13 +15,13 @@ function u(e) {
     null == (t = document.getElementById(e)) || t.focus();
 }
 function d(e) {
-    let { navId: t, itemCount: n, focusedIndex: d = 0, onSelect: p, setFocus: h, getNewFocusIndex: f, maintainFocusPosition: m = !0, includeSetSizes: g = !0, focusOnMount: b = !0, enabled: y = !0, onDispatch: _ } = e,
+    let { navId: t, itemCount: n, focusedIndex: d = 0, onSelect: p, setFocus: h, getNewFocusIndex: f, maintainFocusPosition: m = !0, includeSetSizes: g = !0, focusOnMount: b = !0, enabled: _ = !0, onDispatch: y } = e,
         C = r.useCallback(
             (e, t) => {
                 let n = (0, i.Z)(e, t);
-                return null != _ && _(e, n, t), n;
+                return null != y && y(e, n, t), n;
             },
-            [_]
+            [y]
         ),
         [x, v] = r.useReducer(C, {
             focusedIndex: d,
@@ -37,14 +37,14 @@ function d(e) {
             });
         }, [n]),
         (function (e) {
-            let { navId: t, itemCount: n, focusedIndex: d, onSelect: p, setFocus: h = u, getNewFocusIndex: f, dispatch: m, maintainFocusPosition: g, includeSetSizes: b, focusOnMount: y, enabled: _, makeId: C = o.qR, getIndexFromId: x } = e,
+            let { navId: t, itemCount: n, focusedIndex: d, onSelect: p, setFocus: h = u, getNewFocusIndex: f, dispatch: m, maintainFocusPosition: g, includeSetSizes: b, focusOnMount: _, enabled: y, makeId: C = o.qR, getIndexFromId: x } = e,
                 v = r.useRef(n),
                 j = r.useRef(x);
             (j.current = x), (v.current = n);
-            let O = r.useRef(_);
+            let O = r.useRef(y);
             r.useEffect(() => {
-                O.current = _;
-            }, [_]);
+                O.current = y;
+            }, [y]);
             let [E, N] = r.useState(!1),
                 [I] = r.useState(
                     () =>
@@ -67,7 +67,7 @@ function d(e) {
                 ),
                 [S, Z] = r.useState(!0);
             r.useEffect(() => {
-                if (S && !y) return void Z(!1);
+                if (S && !_) return void Z(!1);
                 P(C(t, d), d);
             }, [d]);
             let T = r.useCallback(
@@ -193,7 +193,7 @@ function d(e) {
             maintainFocusPosition: m,
             includeSetSizes: g,
             focusOnMount: b,
-            enabled: y
+            enabled: _
         })
     );
 }

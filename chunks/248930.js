@@ -12,8 +12,8 @@ var r = t(200651),
     p = t(660579),
     b = t(652853),
     m = t(64621),
-    g = t(382405),
-    I = t(386019),
+    I = t(382405),
+    g = t(386019),
     y = t(228168),
     h = t(227832);
 function j(e) {
@@ -55,14 +55,14 @@ function j(e) {
                               renderMoreButtonPopout: x
                                   ? void 0
                                   : (e) =>
-                                        (0, r.jsx)(I.Z, {
+                                        (0, r.jsx)(g.Z, {
                                             display: 'recent',
                                             entry: t,
                                             user: n,
                                             onClose: v,
                                             children: e
                                         }),
-                              children: (0, r.jsx)(g.Z, {
+                              children: (0, r.jsx)(I.Z, {
                                   entry: t,
                                   user: n,
                                   onClose: v,

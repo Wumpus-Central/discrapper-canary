@@ -10,8 +10,8 @@ var i = n(192379),
     r = n(442837),
     l = n(835473),
     o = n(158776),
-    c = n(594174),
-    a = n(823379),
+    a = n(594174),
+    c = n(823379),
     u = n(317381),
     d = n(16609);
 function p(e, t) {
@@ -42,10 +42,10 @@ function f(e, t) {
         u = new Set([]);
     for (let t of e) for (let e of t.userIds) u.add(e);
     let d = (0, r.Wu)(
-        [c.default],
+        [a.default],
         () => {
             let e = [];
-            for (let t of u) e.push(c.default.getUser(t));
+            for (let t of u) e.push(a.default.getUser(t));
             return e;
         },
         [u]
@@ -76,7 +76,7 @@ function f(e, t) {
                               userParticipantAvatarUrls: l
                           };
                 })
-                .filter(a.lm)
+                .filter(c.lm)
         );
     }, [e, o, d, t]);
 }

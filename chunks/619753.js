@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(471445),
     g = n(95398),
     b = n(905405),
-    y = n(255269),
-    _ = n(937889),
+    _ = n(255269),
+    y = n(937889),
     C = n(703656),
     x = n(359110),
     v = n(695346),
@@ -77,15 +77,15 @@ function L(e, t) {
 }
 function D(e) {
     var t;
-    let { search: n, searchId: l, renderEmbeds: o, scrollTo: f, searchResults: m, blockCount: g, ignoreCount: b, onChangePage: y } = e,
-        { offset: _, totalResults: x, isSearching: v, showBlockedResults: j } = n,
+    let { search: n, searchId: l, renderEmbeds: o, scrollTo: f, searchResults: m, blockCount: g, ignoreCount: b, onChangePage: _ } = e,
+        { offset: y, totalResults: x, isSearching: v, showBlockedResults: j } = n,
         E = i.useCallback(
             (e) => {
                 if (v) return;
                 let t = e - 1;
-                null == y || y(t), d.oO(l, t);
+                null == _ || _(t), d.oO(l, t);
             },
-            [l, v, y]
+            [l, v, _]
         ),
         N = i.useCallback(
             (e) => {
@@ -176,7 +176,7 @@ function D(e) {
                     scrollTo: f,
                     searchId: l,
                     renderEmbeds: o,
-                    offset: _,
+                    offset: y,
                     jumpToMessage: N,
                     listNavigator: B,
                     favoriteSearch: F
@@ -218,7 +218,7 @@ function D(e) {
                 !F &&
                 (0, r.jsx)(T.Z, {
                     changePage: E,
-                    offset: _,
+                    offset: y,
                     totalResults: x,
                     pageLength: w.vpv
                 })
@@ -274,7 +274,7 @@ function U(e) {
         z = null != (n = null == V ? void 0 : V.name) ? n : null,
         Y = null != (l = (0, m.KS)(o)) ? l : s.VL1,
         q = N.Z.can(w.Plq.MANAGE_MESSAGES, o),
-        { content: K } = (0, _.ZP)(
+        { content: K } = (0, y.ZP)(
             {
                 content: F,
                 embeds: []
@@ -292,7 +292,7 @@ function U(e) {
     }, []);
     let $ = [F, z, H].filter((e) => null != e).join(', ');
     return (0, r.jsx)(g.aQ.Provider, {
-        value: (0, y.Z)(U, q),
+        value: (0, _.Z)(U, q),
         children: (0, r.jsxs)('ul', {
             role: 'group',
             className: k.searchResultGroup,

@@ -14,8 +14,8 @@ function f(e) {
     let { userId: t, guildId: n } = e,
         f = (0, l.e7)([a.ZP], () => a.ZP.getGuildSidebarState(n), [n]),
         { messagesCount: m, linksCount: g, mediaCount: b } = (0, c.P2)(t, n),
-        y = new Intl.NumberFormat(p.NW.currentLocale).format(m),
-        _ = new Intl.NumberFormat(p.NW.currentLocale).format(g),
+        _ = new Intl.NumberFormat(p.NW.currentLocale).format(m),
+        y = new Intl.NumberFormat(p.NW.currentLocale).format(g),
         C = new Intl.NumberFormat(p.NW.currentLocale).format(b),
         x = i.useCallback(
             async (e) => {
@@ -54,7 +54,7 @@ function f(e) {
                             : (0, r.jsx)(o.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'interactive-normal',
-                                  children: y
+                                  children: _
                               }),
                     onNavigate: m > 0 ? () => x(c.mw.MESSAGES) : void 0
                 }),
@@ -78,7 +78,7 @@ function f(e) {
                             : (0, r.jsx)(o.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'interactive-normal',
-                                  children: _
+                                  children: y
                               }),
                     onNavigate: g > 0 ? () => x(c.mw.LINKS) : void 0
                 }),

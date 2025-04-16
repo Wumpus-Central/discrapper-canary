@@ -95,7 +95,7 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
                 (e) => {
                     null != g &&
                         (0, f.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('70675')]).then(n.bind(n, 654663));
+                            let { default: e } = await Promise.all([n.e('79695'), n.e('4040'), n.e('78180')]).then(n.bind(n, 654663));
                             return (n) => {
                                 var i, l;
                                 return (0, r.jsx)(

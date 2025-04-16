@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(352736),
     g = n(937889),
     b = n(739566),
-    y = n(267128),
-    _ = n(507418),
+    _ = n(267128),
+    y = n(507418),
     C = n(348238),
     x = n(981631),
     v = n(388032);
@@ -151,7 +151,7 @@ let E = i.memo(function (e) {
             });
         }, [Z]),
         V = (0, b.Uj)(n);
-    return (0, r.jsx)(y.Z, {
+    return (0, r.jsx)(_.Z, {
         repliedAuthor: R,
         baseMessage: n,
         channel: N,
@@ -163,7 +163,7 @@ let E = i.memo(function (e) {
         isReplyAuthorIgnored: W,
         showAvatarPopout: S,
         showUsernamePopout: P,
-        renderPopout: _.Z,
+        renderPopout: y.Z,
         onClickAvatar: F,
         onClickUsername: G,
         onClickReply: B,

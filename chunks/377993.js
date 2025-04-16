@@ -60,10 +60,10 @@ function R(e) {
         f = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
         v = (0, o.e7)([_.Z], () => _.Z.isMobileOnline(t.id)),
         O = (0, o.e7)([y.Z], () => y.Z.getNickname(t.id)),
-        N = (0, h.Z)(t.id, 'private-channel-recipient'),
+        N = (0, h.Z)(t.id),
         Z = (e) => {
             (0, s.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('14126')]).then(n.bind(n, 354589));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('4040'), n.e('60677'), n.e('40835')]).then(n.bind(n, 354589));
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(

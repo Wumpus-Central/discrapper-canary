@@ -14,7 +14,7 @@ var r,
     d = n(388032),
     p = (((r = {}).UPLOAD_A_FILE = 'UPLOAD_A_FILE'), (r.UPLOAD_TEXT_AS_FILE = 'UPLOAD_TEXT_AS_FILE'), (r.INVITE_TO_PLAY_GAME = 'INVITE_TO_GAME'), (r.INVITE_TO_LISTEN = 'INVITE_TO_LISTEN'), (r.INVITE_TO_WATCH = 'INVITE_TO_WATCH'), (r.CREATE_THREAD = 'CREATE_THREAD'), (r.SLASH_COMMAND = 'SLASH_COMMAND'), (r.CLIPS = 'CLIPS'), (r.POLL = 'POLL'), (r.ACTIVITY = 'ACTIVITY'), (r.SCHEDULED_MESSAGE = 'SCHEDULED_MESSAGE'), r);
 function h(e) {
-    let { canAttachFiles: t, canStartThreads: n, useSlate: r, canUseApplicationCommands: p, hasClips: h, channel: f, activities: m, newClipsCount: g, canPostPolls: b, canLaunchActivities: y, appContext: _, canSendScheduledMessages: C } = e,
+    let { canAttachFiles: t, canStartThreads: n, useSlate: r, canUseApplicationCommands: p, hasClips: h, channel: f, activities: m, newClipsCount: g, canPostPolls: b, canLaunchActivities: _, appContext: y, canSendScheduledMessages: C } = e,
         x = [];
     return (
         t &&
@@ -30,7 +30,7 @@ function h(e) {
             })),
         h &&
             t &&
-            _ !== u.IlC.POPOUT &&
+            y !== u.IlC.POPOUT &&
             x.push({
                 type: 'CLIPS',
                 icon: i.AlX,
@@ -57,7 +57,7 @@ function h(e) {
                 icon: i.jje,
                 display: d.NW.string(d.t.Bbvp6O)
             }),
-        y &&
+        _ &&
             x.push({
                 type: 'ACTIVITY',
                 icon: i.nG3,

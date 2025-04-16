@@ -1,8 +1,8 @@
 n.d(t, {
-    M9: () => y,
+    M9: () => _,
     Pb: () => b,
     XX: () => m,
-    ZP: () => _,
+    ZP: () => y,
     ZT: () => p,
     iv: () => g,
     pk: () => f
@@ -144,8 +144,8 @@ let f = 44,
     m = 22,
     g = 26,
     b = 26,
-    y = 6;
-function _(e) {
+    _ = 6;
+function y(e) {
     let { messages: t, groupSpacing: n = 0, compact: i = !1, attachmentSpecs: l, className: o } = e,
         s = null != l ? (l.last ? t - 1 : a().random(0, t - 1)) : -1,
         c = a().random(80, 120),

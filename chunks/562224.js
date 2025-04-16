@@ -9,42 +9,42 @@ var r = n(268146),
     c = n(430824),
     d = n(131951),
     h = n(944486),
-    p = n(594174),
-    f = n(358085),
+    f = n(594174),
+    p = n(358085),
     g = n(451467),
     y = n(537413),
     O = n(143135),
     N = n(37113),
     b = n(761274);
 async function v(e, t) {
-    var n, v, m, x, E, C, I, j, P, S;
-    let T = p.default.getCurrentUser(),
-        w = h.Z.getVoiceChannelId(),
-        Z = u.Z.getChannel(w),
-        _ = null == Z ? void 0 : Z.getGuildId(),
-        A = null == (n = c.Z.getGuild(_)) ? void 0 : n.premiumTier;
-    if (null == T || null == Z || null == w) return [!1, 'no user or channel'];
+    var n, v, m, x, C, E, j, I, P, S;
+    let T = f.default.getCurrentUser(),
+        Z = h.Z.getVoiceChannelId(),
+        _ = u.Z.getChannel(Z),
+        w = null == _ ? void 0 : _.getGuildId(),
+        A = null == (n = c.Z.getGuild(w)) ? void 0 : n.premiumTier;
+    if (null == T || null == _ || null == Z) return [!1, 'no user or channel'];
     let R = null;
     if (null == (R = 'number' == typeof e ? i.ZP.getGameForPID(e) : e)) return [!1, 'no source'];
     if (!d.Z.getUseSystemScreensharePicker() && !(await o.Z.hasPermission(b.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) return [!1, 'no permission'];
     let { preset: D, resolution: W, fps: k, soundshareEnabled: M } = s.Z.getState(),
         U = null != (m = null == t ? void 0 : t.preset) ? m : D,
         [L, B] = null != (x = (0, y.Z)(U, T, A)) ? x : [],
-        V = null != (E = null != L ? L : null == t ? void 0 : t.resolution) ? E : W,
-        G = null != (C = null != B ? B : null == t ? void 0 : t.fps) ? C : k,
-        F = null != (I = null == t ? void 0 : t.previewDisabled) ? I : a.I0.getSetting(),
-        K = null != (j = null == t ? void 0 : t.soundshareEnabled) ? j : M;
+        G = null != (C = null != L ? L : null == t ? void 0 : t.resolution) ? C : W,
+        V = null != (E = null != B ? B : null == t ? void 0 : t.fps) ? E : k,
+        F = null != (j = null == t ? void 0 : t.previewDisabled) ? j : a.I0.getSetting(),
+        K = null != (I = null == t ? void 0 : t.soundshareEnabled) ? I : M;
     return (
-        (0, g.Z)(U, V, G, T, A, Z) || ((U = N.tI.PRESET_VIDEO), (V = N.LY.RESOLUTION_720), (G = N.ws.FPS_30)),
+        (0, g.Z)(U, G, V, T, A, _) || ((U = N.tI.PRESET_VIDEO), (G = N.LY.RESOLUTION_720), (V = N.ws.FPS_30)),
         (0, l.Rc)({
             preset: U,
-            resolution: V,
-            frameRate: G,
+            resolution: G,
+            frameRate: V,
             soundshareEnabled: K
         }),
         (0, l.WH)(
-            _,
             w,
+            Z,
             ((P = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -74,7 +74,7 @@ async function v(e, t) {
                 (function (e) {
                     if (e.hasOwnProperty('pid')) return { pid: e.pid };
                     let t = (0, O.Z)(void 0, e, i.ZP.getRunningGames()),
-                        n = !(0, f.isWindows)() || null == t || (null == e ? void 0 : e.id.startsWith(r.vA.CAMERA)) || null == t ? null : t.pid;
+                        n = !(0, p.isWindows)() || null == t || (null == e ? void 0 : e.id.startsWith(r.vA.CAMERA)) || null == t ? null : t.pid;
                     return null != n
                         ? { pid: n }
                         : {

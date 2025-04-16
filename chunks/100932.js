@@ -1,17 +1,17 @@
-t.d(e, { x: () => a });
-var i = t(442837),
-    l = t(594174),
-    r = t(359119),
-    d = t(237292),
-    s = t(13279);
-let a = (n) => {
-    let e = (0, d.y0)({ location: 'context-menu-item' }),
-        t = (0, i.e7)([l.default], () => l.default.getCurrentUser()),
-        a = (0, s.z)(n.id, 'context-menu-item');
-    return (null == t ? void 0 : t.isStaff()) === !0 && e && n.isDM()
+n.d(t, { x: () => d });
+var i = n(442837),
+    r = n(594174),
+    l = n(359119),
+    s = n(237292),
+    a = n(13279);
+let d = (e) => {
+    let t = (0, s.y0)({ location: 'context-menu-item' }),
+        n = (0, i.e7)([r.default], () => r.default.getCurrentUser()),
+        d = (0, a.z)(e.id, 'context-menu-item');
+    return (null == n ? void 0 : n.isStaff()) === !0 && t && e.isDM()
         ? {
-              isTier1: (null == a ? void 0 : a.type) === r.pj.INAPPROPRIATE_CONVERSATION_TIER_1,
-              isTier2: (null == a ? void 0 : a.type) === r.pj.INAPPROPRIATE_CONVERSATION_TIER_2
+              isTier1: (null == d ? void 0 : d.type) === l.pj.INAPPROPRIATE_CONVERSATION_TIER_1,
+              isTier2: (null == d ? void 0 : d.type) === l.pj.INAPPROPRIATE_CONVERSATION_TIER_2
           }
         : null;
 };

@@ -9,8 +9,8 @@ var r = n(200651),
     c = n(675478),
     d = n(19780),
     h = n(709054),
-    p = n(208049),
-    f = n(763296),
+    f = n(208049),
+    p = n(763296),
     g = n(242291),
     y = n(174470),
     O = n(549771),
@@ -19,9 +19,9 @@ var r = n(200651),
     v = n(710111),
     m = n(840558);
 function x(e) {
-    let { guildId: t, channel: n, width: x, height: E, keepOpen: C, interactive: I = !0, analyticsSource: j, onClose: P } = e,
+    let { guildId: t, channel: n, width: x, height: C, keepOpen: E, interactive: j = !0, analyticsSource: I, onClose: P } = e,
         S = (function (e) {
-            let [t, n] = (0, o.Wu)([f.Z], () => [f.Z.getSounds(), f.Z.getFavorites()]);
+            let [t, n] = (0, o.Wu)([p.Z], () => [p.Z.getSounds(), p.Z.getFavorites()]);
             return l.useMemo(() => {
                 let r = [],
                     l = [...e, v.X8],
@@ -36,8 +36,8 @@ function x(e) {
             }, [t, n, e]);
         })((0, O.h)(n, !0)),
         T = (0, y.j)(),
-        w = l.useRef(null),
-        [Z, _] = l.useState(void 0),
+        Z = l.useRef(null),
+        [_, w] = l.useState(void 0),
         A = (0, o.e7)([d.Z], () => d.Z.getMediaSessionId()),
         { analyticsLocations: R } = (0, s.ZP)(a.Z.SOUNDBOARD_WHEEL),
         D = l.useCallback(
@@ -47,32 +47,32 @@ function x(e) {
             [R, n.id, P]
         );
     l.useEffect(() => {
-        p.w(), c.DZ.loadIfNecessary();
+        f.w(), c.DZ.loadIfNecessary();
     }, []),
         l.useEffect(() => {
             0 === S.length && 0 === T.length && P();
         }, [S.length, T, P]),
         l.useEffect(
             () => () => {
-                let e = w.current;
-                C || null == e || D(e);
+                let e = Z.current;
+                E || null == e || D(e);
             },
-            [C, D]
+            [E, D]
         ),
         (0, u.Z)(
             {
                 type: i.ImpressionTypes.POPOUT,
                 name: i.ImpressionNames.SOUNDBOARD_POPOUT,
                 properties: {
-                    source: j,
+                    source: I,
                     guild_id: t,
                     media_session_id: A
                 }
             },
-            { disableTrack: !I }
+            { disableTrack: !j }
         );
     let W = l.useCallback((e) => {
-            (w.current = e), _(null == e ? void 0 : e.soundId);
+            (Z.current = e), w(null == e ? void 0 : e.soundId);
         }, []),
         k = l.useCallback(
             (e) => {
@@ -96,16 +96,16 @@ function x(e) {
                     (0, r.jsx)(
                         b.ZP,
                         {
-                            interactive: I,
+                            interactive: j,
                             className: m.soundButton,
                             sound: e,
-                            focused: Z === e.soundId,
+                            focused: _ === e.soundId,
                             channel: n
                         },
                         e.soundId
                     )
                 ),
-            [Z, n, I, S]
+            [_, n, j, S]
         );
     return 0 === S.length
         ? null
@@ -113,15 +113,15 @@ function x(e) {
               value: R,
               children: (0, r.jsx)(N.Z, {
                   wheelWidth: x,
-                  wheelHeight: E,
+                  wheelHeight: C,
                   itemWidth: 96,
                   itemHeight: 52,
-                  showDeadZoneIndicator: !C,
-                  activeItem: Z,
+                  showDeadZoneIndicator: !E,
+                  activeItem: _,
                   onItemSelect: k,
                   onItemAction: M,
                   onClose: P,
-                  interactive: I,
+                  interactive: j,
                   children: U
               })
           });

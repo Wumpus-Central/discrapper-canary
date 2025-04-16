@@ -146,10 +146,10 @@ let E = (e) => {
         z = () => {
             b.Z.open(i.guild_id, _.pNK.ROLE_SUBSCRIPTIONS);
         },
-        B = null != (t = null == k ? void 0 : k.hasFeature(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t ? y.NW.string(y.t.n0q7sL) : y.NW.string(y.t.QoYdiY),
-        H = null != (n = (null == k ? void 0 : k.hasFeature(_.oNc.CREATOR_MONETIZABLE)) || (null == k ? void 0 : k.hasFeature(_.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
-        U = H ? y.NW.string(y.t['G/7ciY']) : y.NW.string(y.t.IFOiio),
-        V = H ? y.NW.string(y.t.GjgQOz) : y.NW.string(y.t.E7AO6u);
+        H = null != (t = null == k ? void 0 : k.hasFeature(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t ? y.NW.string(y.t.n0q7sL) : y.NW.string(y.t.QoYdiY),
+        B = null != (n = (null == k ? void 0 : k.hasFeature(_.oNc.CREATOR_MONETIZABLE)) || (null == k ? void 0 : k.hasFeature(_.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
+        U = B ? y.NW.string(y.t['G/7ciY']) : y.NW.string(y.t.IFOiio),
+        V = B ? y.NW.string(y.t.GjgQOz) : y.NW.string(y.t.E7AO6u);
     return (0, r.jsx)(r.Fragment, {
         children: A((e, t) =>
             t
@@ -179,7 +179,7 @@ let E = (e) => {
                               className: N.contentContainer,
                               children: [
                                   (0, r.jsxs)('div', {
-                                      className: l()(N.contentRow, H && N.contentRowOne),
+                                      className: l()(N.contentRow, B && N.contentRowOne),
                                       children: [
                                           (0, r.jsx)('div', {
                                               className: N.contentMediaContainer,
@@ -268,7 +268,7 @@ let E = (e) => {
                                           })
                                       ]
                                   }),
-                                  H &&
+                                  B &&
                                       (0, r.jsxs)('div', {
                                           className: l()(N.contentRow, N.contentRowTwo),
                                           children: [
@@ -342,7 +342,7 @@ let E = (e) => {
                                                               onClick: z,
                                                               className: N.addChannelButton,
                                                               color: d.zxk.Colors.CUSTOM,
-                                                              children: B
+                                                              children: H
                                                           })
                                                   ]
                                               })

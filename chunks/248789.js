@@ -1,4 +1,4 @@
-n.d(t, { Y: () => y }), n(388685);
+n.d(t, { Y: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(286379),
@@ -55,20 +55,20 @@ function b(e, t) {
         e
     );
 }
-function y(e) {
-    let { channelId: t, warningId: y, senderId: _ } = e,
+function _(e) {
+    let { channelId: t, warningId: _, senderId: y } = e,
         C = i.useCallback(() => {
-            (0, u.T)(t, [y]);
-        }, [t, y]),
-        x = (0, o.e7)([c.Z], () => c.Z.isBlocked(_)),
+            (0, u.T)(t, [_]);
+        }, [t, _]),
+        x = (0, o.e7)([c.Z], () => c.Z.isBlocked(y)),
         v = i.useMemo(
             () => ({
                 channelId: t,
-                warningId: y,
-                senderId: _,
+                warningId: _,
+                senderId: y,
                 warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2
             }),
-            [t, y, _]
+            [t, _, y]
         );
     i.useEffect(() => {
         (0, p.KQ)(b(g({}, v), { viewName: p.pb.SAFETY_WARNING_BANNER })), s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
@@ -86,9 +86,9 @@ function y(e) {
                     return (n) => {
                         let { transitionState: i, onClose: l } = n;
                         return (0, r.jsx)(e, {
-                            otherUserId: _,
+                            otherUserId: y,
                             channelId: t,
-                            warningId: y,
+                            warningId: _,
                             warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
                             transitionState: i,
                             onClose: l
@@ -98,7 +98,7 @@ function y(e) {
                 { modalKey: f.X_ }
             ),
                 j(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
-        }, [t, _, y, j]),
+        }, [t, y, _, j]),
         E = i.useCallback(() => {
             C(), j(p.NM.USER_BANNER_BLOCK_CONFIRM);
         }, [C, j]),
@@ -118,16 +118,16 @@ function y(e) {
                             null == l || l(), j(p.NM.USER_BANNER_BLOCK_CANCEL);
                         },
                         onClose: l,
-                        userId: _,
+                        userId: y,
                         channelId: t
                     });
                 };
             });
-        }, [E, N, _, t, j]);
+        }, [E, N, y, t, j]);
     return (0, r.jsx)(h.Q, {
         channelId: t,
-        warningId: y,
-        senderId: _,
+        warningId: _,
+        senderId: y,
         warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
         header: m.NW.string(m.t.ZzlB5u),
         description: m.NW.string(m.t['D1aU+v']),

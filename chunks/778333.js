@@ -28,7 +28,7 @@ function x(e) {
         }),
         j = i.useCallback(() => {
             let e = 'noop';
-            null != n.inviter && null != m.Z.getDMFromUserId(n.inviter.id) && ((e = 'transition'), l.Z.openPrivateChannel([n.inviter.id])), (0, o.r$)(n, e, N);
+            null != n.inviter && null != m.Z.getDMFromUserId(n.inviter.id) && ((e = 'transition'), l.Z.openPrivateChannel({ recipientIds: [n.inviter.id] })), (0, o.r$)(n, e, N);
         }, [n, N]),
         C = i.useCallback(() => {
             (0, o.r$)(n, 'accept', N);

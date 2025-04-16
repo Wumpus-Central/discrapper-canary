@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(243778),
     g = n(590293),
     b = n(970731),
-    y = n(560688),
-    _ = n(173507),
+    _ = n(560688),
+    y = n(173507),
     C = n(523746),
     x = n(819640),
     v = n(131951),
@@ -77,7 +77,7 @@ class k extends i.PureComponent {
         let f = u.isManaged(),
             g = !1;
         h ? ((g = !0), (e = A.NW.string(A.t.izMR7u)), (t = a.ua7.Colors.RED)) : s ? ((e = f ? A.NW.string(A.t.LW2Gho) : A.NW.string(A.t.rF7lNz)), (t = a.ua7.Colors.RED), (g = !0)) : c ? ((e = A.NW.string(A.t.PHzjvb)), (t = a.ua7.Colors.RED), (g = !0)) : (e = l ? (f ? A.NW.string(A.t.S0W8Z2) : A.NW.string(A.t.fdEeb2)) : f ? A.NW.string(A.t.S0W8Z2) : A.NW.string(A.t.focH1t));
-        let y = (0, r.jsx)(P.ZP.Icon, {
+        let _ = (0, r.jsx)(P.ZP.Icon, {
             icon: a.Csw,
             onClick: this.handleVoiceClick,
             disabled: g,
@@ -122,9 +122,9 @@ class k extends i.PureComponent {
                                   className: w.tooltip
                               });
                           },
-                          children: () => y
+                          children: () => _
                       })
-                    : y;
+                    : _;
             }
         });
     }
@@ -139,7 +139,7 @@ class k extends i.PureComponent {
                 let { channel: n, notFriend: r, appContext: i } = this.props,
                     l = r ? n.getRecipientId() : null,
                     o = () => s.Z.call(n.id, t, !r && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), l);
-                t ? (0, _.Z)(o, i) : o();
+                t ? (0, y.Z)(o, i) : o();
             }),
             R(this, 'handleJoinCall', (e) => {
                 c.default.selectVoiceChannel(this.props.channel.id, e);
@@ -155,10 +155,10 @@ class k extends i.PureComponent {
             }),
             R(this, 'handleJoinVideoCall', () => {
                 let { appContext: e } = this.props;
-                (0, _.Z)(() => this.handleJoinCall(!0), e);
+                (0, y.Z)(() => this.handleJoinCall(!0), e);
             }),
             R(this, 'handleBrowserNotSupported', () => {
-                (0, y.Z)();
+                (0, _.Z)();
             });
     }
 }
@@ -173,12 +173,12 @@ function M(e) {
             callActive: C.Z.isCallActive(n.id),
             callUnavailable: C.Z.isCallUnavailable(n.id)
         })),
-        y = n.getRecipientId(),
-        { notFriend: _, isBlocked: v } = (0, l.cj)([j.Z], () => ({
-            notFriend: n.type === S.d4z.DM && null != y && !j.Z.isFriend(y),
-            isBlocked: n.type === S.d4z.DM && null != y && j.Z.isBlocked(y)
+        _ = n.getRecipientId(),
+        { notFriend: y, isBlocked: v } = (0, l.cj)([j.Z], () => ({
+            notFriend: n.type === S.d4z.DM && null != _ && !j.Z.isFriend(_),
+            isBlocked: n.type === S.d4z.DM && null != _ && j.Z.isBlocked(_)
         })),
-        N = (0, l.e7)([O.default], () => O.default.getUser(y)),
+        N = (0, l.e7)([O.default], () => O.default.getUser(_)),
         I = (0, u.bp)(),
         P = [],
         Z = (0, p.Z)(n.id),
@@ -200,7 +200,7 @@ function M(e) {
               callActive: m,
               isProvisional: null != (t = null == N ? void 0 : N.isProvisional) && t,
               callUnavailable: b,
-              notFriend: _,
+              notFriend: y,
               isBlocked: v,
               appContext: I,
               canShowTooltip: A,

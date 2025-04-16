@@ -1,4 +1,4 @@
-n.d(t, { W: () => h });
+n.d(t, { W: () => g });
 var l = n(200651),
     i = n(192379),
     r = n(481060),
@@ -8,12 +8,12 @@ var l = n(200651),
     u = n(981631),
     d = n(388032),
     c = n(821022);
-function h(e) {
-    let { guild: t, error: n, onClose: h } = e,
-        g = t.id,
+function g(e) {
+    let { guild: t, error: n, onClose: g } = e,
+        h = t.id,
         m = i.useCallback(() => {
-            h(), a.Z.open(g, u.pNK.INSTANT_INVITES);
-        }, [g, h]),
+            g(), a.Z.open(h, u.pNK.INSTANT_INVITES);
+        }, [h, g]),
         p = i.useCallback(
             (e) =>
                 (0, l.jsx)(r.P3F, {

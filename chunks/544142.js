@@ -15,8 +15,8 @@ var i = n(120356),
     m = n(594174),
     g = n(51144),
     b = n(967128),
-    y = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    y = n(388032),
     C = n(128337);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -64,36 +64,36 @@ function v(e, t) {
 function j(e) {
     var t, i;
     let { userId: d, channel: b } = e,
-        { analyticsLocations: y } = (0, u.ZP)(c.Z.USERNAME),
-        _ = (0, o.e7)([m.default], () => m.default.getUser(d)),
+        { analyticsLocations: _ } = (0, u.ZP)(c.Z.USERNAME),
+        y = (0, o.e7)([m.default], () => m.default.getUser(d)),
         j = (0, o.e7)([f.ZP], () => (null != d ? f.ZP.getMember(b.guild_id, d) : null)),
         O = (0, p.X)(b.guild_id, null == j ? void 0 : j.colorStrings);
     function E(e) {
-        if (null == _) return null;
+        if (null == y) return null;
         (0, s.jW)(e, async () => {
-            let { default: e } = await Promise.all([n.e('79695'), n.e('70675')]).then(n.bind(n, 654663));
+            let { default: e } = await Promise.all([n.e('79695'), n.e('4040'), n.e('78180')]).then(n.bind(n, 654663));
             return (t) =>
                 (0, r.jsx)(
                     e,
                     v(x({}, t), {
-                        user: _,
+                        user: y,
                         guildId: b.guild_id,
                         channel: b
                     })
                 );
         });
     }
-    let N = null != (i = null != (t = null == j ? void 0 : j.nick) ? t : g.ZP.getName(_)) ? i : '???',
+    let N = null != (i = null != (t = null == j ? void 0 : j.nick) ? t : g.ZP.getName(y)) ? i : '???',
         I = null == j ? void 0 : j.colorString;
-    return null == _
+    return null == y
         ? (0, r.jsx)('span', {
               className: l()(C.threadCreatorName, C.unknownCreatorName),
               children: N
           })
         : (0, r.jsx)(u.Gt, {
-              value: y,
+              value: _,
               children: (0, r.jsx)(h.Z, {
-                  user: _,
+                  user: y,
                   guildId: b.guild_id,
                   channelId: b.id,
                   roleId: null == j ? void 0 : j.colorRoleId,
@@ -127,7 +127,7 @@ function O(e) {
                       color: 'header-secondary',
                       children: (0, r.jsx)('div', {
                           className: C.subtitle,
-                          children: _.NW.format(_.t.imPXd3, {
+                          children: y.NW.format(y.t.imPXd3, {
                               usernameHook: (e, n) =>
                                   (0, r.jsx)(
                                       j,
@@ -140,11 +140,11 @@ function O(e) {
                           })
                       })
                   }),
-                  t.type === y.d4z.PRIVATE_THREAD
+                  t.type === _.d4z.PRIVATE_THREAD
                       ? (0, r.jsx)(a.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: _.NW.string(_.t['1awbZG'])
+                            children: y.NW.string(y.t['1awbZG'])
                         })
                       : null
               ]

@@ -93,8 +93,8 @@ let h = [
             y: 0.2
         }
     ],
-    p = h.length;
-function f(e, t, n) {
+    f = h.length;
+function p(e, t, n) {
     let r = e * t;
     return e > 0.5 ? r - n : e < 0.5 ? r : r - n / 2;
 }
@@ -108,27 +108,27 @@ let g = (e, t) => {
         };
     },
     y = l.memo(function (e) {
-        let { wheelWidth: t, wheelHeight: n, itemWidth: y, itemHeight: O, showDeadZoneIndicator: N, activeItem: b, onItemSelect: v, onItemAction: m, interactive: x = !0, onClose: E, children: C } = e,
-            I = l.useRef(null),
-            j = l.useRef([]),
+        let { wheelWidth: t, wheelHeight: n, itemWidth: y, itemHeight: O, showDeadZoneIndicator: N, activeItem: b, onItemSelect: v, onItemAction: m, interactive: x = !0, onClose: C, children: E } = e,
+            j = l.useRef(null),
+            I = l.useRef([]),
             P = l.useRef(!1),
             S = l.useRef(null),
-            [T, w] = l.useState(0),
-            [Z, _] = l.useState({
+            [T, Z] = l.useState(0),
+            [_, w] = l.useState({
                 x: 0,
                 y: 0
             }),
-            A = Math.abs(Z.x) + Math.abs(Z.y) > 0,
-            R = l.useMemo(() => o().chunk(C, p), [C]),
+            A = Math.abs(_.x) + Math.abs(_.y) > 0,
+            R = l.useMemo(() => o().chunk(E, f), [E]),
             D = l.useCallback(
                 (e, t) => {
-                    null == j.current[T] ? (j.current[T] = []) : (j.current[T][t] = e);
+                    null == I.current[T] ? (I.current[T] = []) : (I.current[T][t] = e);
                 },
                 [T]
             ),
             W = l.useCallback(
                 (e, t) => {
-                    (S.current = t), v(p * e + t);
+                    (S.current = t), v(f * e + t);
                 },
                 [v]
             ),
@@ -143,7 +143,7 @@ let g = (e, t) => {
             ),
             U = l.useCallback((e, t, n) => {
                 if (P.current)
-                    return void _({
+                    return void w({
                         x: 0,
                         y: 0
                     });
@@ -154,22 +154,22 @@ let g = (e, t) => {
                     l = r.x < 0,
                     i = r.y < 0,
                     o = g(n, r);
-                _({
+                w({
                     x: (l ? Math.max(r.x, -o.x) : Math.min(r.x, o.x)) / 2,
                     y: (i ? Math.max(r.y, -o.y) : Math.min(r.y, o.y)) / 2
                 });
             }, []),
             L = l.useCallback(
                 (e) => {
-                    null != S.current && (e.preventDefault(), e.stopPropagation(), null == m || m(p * T + S.current));
+                    null != S.current && (e.preventDefault(), e.stopPropagation(), null == m || m(f * T + S.current));
                 },
                 [m, T]
             ),
             B = l.useMemo(
                 () =>
                     (0, i.throttle)((e) => {
-                        if (null == I.current) return;
-                        let r = I.current.getBoundingClientRect(),
+                        if (null == j.current) return;
+                        let r = j.current.getBoundingClientRect(),
                             l = {
                                 x: r.left + r.width / 2,
                                 y: r.top + r.height / 2
@@ -183,8 +183,8 @@ let g = (e, t) => {
                             return;
                         }
                         let o = (0, s.ld)(l, i, Math.max(t, n));
-                        for (let e = 0; e < j.current[T].length; e++) {
-                            let t = j.current[T][e];
+                        for (let e = 0; e < I.current[T].length; e++) {
+                            let t = I.current[T][e];
                             if (null == t) continue;
                             let n = t.getBoundingClientRect();
                             if ((0, s.Vr)(l, o, n)) return void W(T, e);
@@ -193,21 +193,21 @@ let g = (e, t) => {
                     }, 16),
                 [b, U, k, W, T, n, t]
             ),
-            V = l.useCallback(
+            G = l.useCallback(
                 (e) => {
                     if (!x) return;
                     let t = T + (e.deltaY > 0 ? 1 : -1);
-                    t >= 0 && t < R.length && (null != S.current && (R[t].length > S.current ? W(t, S.current) : k()), w(t));
+                    t >= 0 && t < R.length && (null != S.current && (R[t].length > S.current ? W(t, S.current) : k()), Z(t));
                 },
                 [x, T, R, W, k]
             ),
-            G = l.useMemo(
+            V = l.useMemo(
                 () =>
                     R[T].map((e, l) => {
                         let i = h[l];
-                        if (null == i) throw Error('Too many items supplied '.concat(C.length, ' expected max of ').concat(h.length));
-                        let o = f(i.x, t, y),
-                            a = f(i.y, n, O);
+                        if (null == i) throw Error('Too many items supplied '.concat(E.length, ' expected max of ').concat(h.length));
+                        let o = p(i.x, t, y),
+                            a = p(i.y, n, O);
                         return (0, r.jsx)(
                             'div',
                             {
@@ -224,15 +224,15 @@ let g = (e, t) => {
                             l
                         );
                     }),
-                [R, T, t, y, n, O, C.length, D]
+                [R, T, t, y, n, O, E.length, D]
             );
         return (0, r.jsx)(a.P3F, {
             className: c.chatWheelMouseInput,
             onMouseMove: B,
-            onWheel: V,
+            onWheel: G,
             onClick: L,
             children: (0, r.jsxs)('div', {
-                ref: I,
+                ref: j,
                 className: c.chatWheel,
                 style: {
                     width: t,
@@ -298,8 +298,8 @@ let g = (e, t) => {
                                     A &&
                                         (0, r.jsx)('circle', {
                                             className: c.chatWheelCenter,
-                                            cx: 144 + Z.x,
-                                            cy: 144 + Z.y,
+                                            cx: 144 + _.x,
+                                            cy: 144 + _.y,
                                             r: 28.8
                                         })
                                 ]
@@ -322,7 +322,7 @@ let g = (e, t) => {
                             N &&
                                 (0, r.jsx)(a.P3F, {
                                     className: c.chatWheelDeadZoneIcon,
-                                    onClick: E,
+                                    onClick: C,
                                     children: (0, r.jsx)(d, { className: c.chatWheelDeadZoneIcon })
                                 }),
                             x && R.length > 1
@@ -333,7 +333,7 @@ let g = (e, t) => {
                                 : null
                         ]
                     }),
-                    G
+                    V
                 ]
             })
         });

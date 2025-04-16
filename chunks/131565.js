@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(788900),
@@ -63,7 +63,7 @@ function b(e) {
           })
         : null;
 }
-function y(e) {
+function _(e) {
     let { channel: t } = e,
         n = (0, h.Z)(t.id);
     return null == n || !n.isViewable || (!t.isDM() && !t.isMultiUserDM() && !t.isGroupDM()) || (d.t(t) && !n.isPreview) ? null : (0, r.jsx)(b, { chatWallpaperState: n });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -15,16 +15,16 @@ var i = n(442837),
     m = n(981631),
     g = n(388032),
     b = n(679848);
-function y(e) {
-    let { channelId: t, showProfile: n = !1, showTrailingDivider: y = !1 } = e,
-        _ = d.default.cast(t),
+function _(e) {
+    let { channelId: t, showProfile: n = !1, showTrailingDivider: _ = !1 } = e,
+        y = d.default.cast(t),
         {
             joinRequest: C,
             isModmin: x,
             guildId: v,
             maxMembers: j
         } = (0, i.cj)([p.Z, c.Z, u.Z], () => {
-            let e = p.Z.getRequest(_),
+            let e = p.Z.getRequest(y),
                 t = c.Z.getGuild(null == e ? void 0 : e.guildId);
             return {
                 joinRequest: e,
@@ -120,7 +120,7 @@ function y(e) {
                           size: l.PhG.SMALL,
                           children: g.NW.string(g.t.iXAna2)
                       }),
-                  y && (0, r.jsx)(o.ZP.Divider, {})
+                  _ && (0, r.jsx)(o.ZP.Divider, {})
               ]
           })
         : null;

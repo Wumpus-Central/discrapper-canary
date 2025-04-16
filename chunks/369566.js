@@ -16,7 +16,7 @@ let h = [],
 function g(e) {
     let { recentActivityTabEnabled: t } = (0, _.O)({ location: 'useUserProfileActivity' }),
         n = (0, o.e7)([d.default], () => d.default.getId() === e),
-        g = (0, a.Z)(e, 'use-user-profile-activity'),
+        g = (0, a.Z)(e),
         E = (0, o.e7)([f.Z], () => f.Z.getActivities(e)),
         b = (0, o.e7)([s.Z], () => (n || t ? s.Z.getUserOutbox(e) : void 0)),
         { live: y, recent: v } = (0, r.useMemo)(() => {

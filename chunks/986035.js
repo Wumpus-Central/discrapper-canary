@@ -8,16 +8,16 @@ var r = n(200651),
     c = n(352075),
     u = n(20493);
 let d = function (e) {
-    let { title: t, description: n, agreement: l, disagreement: d, onAgree: p, onDisagree: h, imageClassName: f, agreementButtonColor: m = a.zxk.Colors.RED, modalType: g, channelId: b, guildId: y } = e;
+    let { title: t, description: n, agreement: l, disagreement: d, onAgree: p, onDisagree: h, imageClassName: f, agreementButtonColor: m = a.zxk.Colors.RED, modalType: g, channelId: b, guildId: _ } = e;
     i.useEffect(() => {
-        (0, s.YT)(g, b, y);
-    }, [g, b, y]);
-    let _ = i.useCallback(() => {
-            (0, s.qd)(s.iP.NSFW_CHANNEL_DISAGREE_CTA, g, b, y), null == h || h();
-        }, [h, g, b, y]),
+        (0, s.YT)(g, b, _);
+    }, [g, b, _]);
+    let y = i.useCallback(() => {
+            (0, s.qd)(s.iP.NSFW_CHANNEL_DISAGREE_CTA, g, b, _), null == h || h();
+        }, [h, g, b, _]),
         C = i.useCallback(() => {
-            (0, s.qd)(s.iP.NSFW_CHANNEL_AGREE_CTA, g, b, y), null == p || p();
-        }, [p, g, b, y]);
+            (0, s.qd)(s.iP.NSFW_CHANNEL_AGREE_CTA, g, b, _), null == p || p();
+        }, [p, g, b, _]);
     return (0, r.jsxs)(a.Kqy, {
         className: c.gatedContent,
         justify: 'center',
@@ -43,7 +43,7 @@ let d = function (e) {
                     null != d && null != h
                         ? (0, r.jsx)(a.zxk, {
                               color: a.Ttl.PRIMARY,
-                              onClick: _,
+                              onClick: y,
                               children: d
                           })
                         : null,

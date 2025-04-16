@@ -20,11 +20,11 @@ let b = (0, s.Z)(
                 guildId: n
             }),
             Z = (0, f.Z)(l.id, n),
-            O = (0, d.Z)({
+            p = (0, d.Z)({
                 id: l.id,
                 label: h.NW.string(h.t['/AXYnJ'])
             }),
-            p = (0, u.Z)(l.id),
+            O = (0, u.Z)(l.id),
             j = l.isNonUserBot();
         return (0, t.jsx)(o.Z, {
             context: s,
@@ -36,10 +36,10 @@ let b = (0, s.Z)(
                 onSelect: c,
                 children: [
                     (0, t.jsxs)(r.kSQ, {
-                        children: [!j && b, !j && p]
+                        children: [!j && b, !j && O]
                     }),
                     (0, t.jsx)(r.kSQ, { children: !j && Z }),
-                    (0, t.jsx)(r.kSQ, { children: O })
+                    (0, t.jsx)(r.kSQ, { children: p })
                 ]
             })
         });

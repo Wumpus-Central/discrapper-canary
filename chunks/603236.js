@@ -1,5 +1,5 @@
 n.d(t, {
-    I: () => E,
+    I: () => S,
     S: () => _
 }),
     n(997841);
@@ -12,8 +12,8 @@ var l = n(200651),
     u = n(481060),
     d = n(484614),
     c = n(914010),
-    h = n(246946),
-    g = n(626135),
+    g = n(246946),
+    h = n(626135),
     m = n(630388),
     p = n(971130),
     v = n(530436),
@@ -22,7 +22,7 @@ var l = n(200651),
     N = n(388032),
     f = n(821022),
     j = n(20493);
-let _ = o.ZP.connectStores([h.Z], () => ({ hideValue: h.Z.hideInstantInvites }))((e) => {
+let _ = o.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))((e) => {
         let { value: t, autoFocus: n, hideValue: i, onCopy: r, disabled: s } = e;
         return (0, l.jsx)(d.Z, {
             value: i ? N.NW.string(N.t['6HzNgY']) : t,
@@ -32,36 +32,36 @@ let _ = o.ZP.connectStores([h.Z], () => ({ hideValue: h.Z.hideInstantInvites }))
             disabled: s
         });
     }),
-    E = (e) => {
-        let { guild: t, noInvitesAvailable: n, showFriends: r, onClose: o, modalState: d, isApplicationBypassToggleEnabled: h, setInviteFlags: E, copyValue: S, changePage: T, inviteChannel: b, source: O, code: y, guildScheduledEvent: C, disabled: P, application: Z } = e,
+    S = (e) => {
+        let { guild: t, noInvitesAvailable: n, showFriends: r, onClose: o, modalState: d, isApplicationBypassToggleEnabled: g, setInviteFlags: S, copyValue: b, changePage: E, inviteChannel: T, source: O, code: y, guildScheduledEvent: C, disabled: P, application: Z } = e,
             { maxAge: w, maxUses: A, networkError: k, showVanityURL: R, flags: M } = d,
             D = i.useCallback(() => {
-                g.default.track(I.rMx.COPY_INSTANT_INVITE, {
+                h.default.track(I.rMx.COPY_INSTANT_INVITE, {
                     server: c.Z.getGuildId(),
-                    channel: null == b ? void 0 : b.id,
-                    channel_type: null == b ? void 0 : b.type,
+                    channel: null == T ? void 0 : T.id,
+                    channel_type: null == T ? void 0 : T.type,
                     location: O,
                     code: y,
                     guild_scheduled_event_id: null == C ? void 0 : C.id,
                     application_id: null == Z ? void 0 : Z.id
                 });
-            }, [null == Z ? void 0 : Z.id, b, O, y, C]);
+            }, [null == Z ? void 0 : Z.id, T, O, y, C]);
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(_, {
-                    value: S,
+                    value: b,
                     autoFocus: r,
                     onCopy: D,
                     disabled: P
                 }),
-                h &&
+                g &&
                     (0, l.jsxs)(l.Fragment, {
                         children: [
                             (0, l.jsx)('div', { className: f.divider }),
                             (0, l.jsx)(u.j7V, {
                                 className: f.toggle,
                                 value: (0, m.yE)(M, a.$.IS_APPLICATION_BYPASS),
-                                onChange: (e) => E((0, m.mB)(M, a.$.IS_APPLICATION_BYPASS, e)),
+                                onChange: (e) => S((0, m.mB)(M, a.$.IS_APPLICATION_BYPASS, e)),
                                 disabled: P,
                                 hideBorder: !0,
                                 children: (0, l.jsxs)('div', {
@@ -124,7 +124,7 @@ let _ = o.ZP.connectStores([h.Z], () => ({ hideValue: h.Z.hideInstantInvites }))
                               ' ',
                               r
                                   ? (0, l.jsx)(u.eee, {
-                                        onClick: () => T(x.RV.SETTINGS),
+                                        onClick: () => E(x.RV.SETTINGS),
                                         children: N.NW.string(N.t.VNe8Pz)
                                     })
                                   : null

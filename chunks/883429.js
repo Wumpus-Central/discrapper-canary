@@ -90,22 +90,22 @@ let p = {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.cs.IMMEDIATE_WITH_COOLDOWN;
         (0, s.rS)((0, c.UP)(e), t);
     },
-    async searchForumPosts(e, t, n, r) {
+    async searchForumPosts(e, t, n, r, o) {
         i.Z.dispatch({
             type: 'FORUM_SEARCH_START',
             channelId: t
         });
         try {
-            let o = await a.Z.searchThreads(e, t, n, r);
+            let s = await a.Z.searchThreads(e, t, n, r, o);
             (0, u.Js)({
                 guildId: e,
                 channelId: t,
-                numSearchResults: o.length
+                numSearchResults: s.length
             }),
                 i.Z.dispatch({
                     type: 'FORUM_SEARCH_SUCCESS',
                     channelId: t,
-                    threadIds: o
+                    threadIds: s
                 });
         } catch (e) {
             i.Z.dispatch({

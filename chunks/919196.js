@@ -18,8 +18,8 @@ var r = n(200651),
     j = n(725875),
     O = n(981631),
     N = n(388032),
-    v = n(704526);
-function y(e) {
+    y = n(704526);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,7 +69,7 @@ function _(e) {
         })(e, ['application', 'guild', 'integration']);
     return (0, r.jsx)(
         o.ConfirmModal,
-        ((t = y({}, d)),
+        ((t = v({}, d)),
         (n = n =
             {
                 header: N.NW.formatToPlainString(N.t['rL9d//'], { applicationName: i.name }),
@@ -106,7 +106,7 @@ function _(e) {
 function C(e) {
     var t;
     let { guild: n, applicationIntegration: a, selectableWebhookChannels: c, editedWebhook: C, errors: I, canNavigate: S } = e,
-        { application: E, integration: w, webhooks: P } = a,
+        { application: E, integration: P, webhooks: w } = a,
         [T, Z] = (0, l.Wu)([p.Z], () => [p.Z.can(O.Plq.MANAGE_ROLES, n), null == E.bot || p.Z.canManageUser(O.Plq.MANAGE_GUILD, E.bot.id, n)], [E.bot, n]),
         W = (0, l.e7)([p.Z], () => p.Z.can(O.Plq.MANAGE_WEBHOOKS, n), [n]),
         k = i.useCallback(() => {
@@ -114,33 +114,33 @@ function C(e) {
                 (0, o.h7j)((e) =>
                     (0, r.jsx)(
                         _,
-                        y(
+                        v(
                             {
                                 guild: n,
                                 application: E,
-                                integration: w
+                                integration: P
                             },
                             e
                         )
                     )
                 );
-        }, [E, S, n, w]),
+        }, [E, S, n, P]),
         A = i.useMemo(() => {
             let e = [
                 {
                     icon: o.T39,
-                    text: N.NW.formatToPlainString(N.t.gcdJ8P, { timestamp: b.default.extractTimestamp(w.id) })
+                    text: N.NW.formatToPlainString(N.t.gcdJ8P, { timestamp: b.default.extractTimestamp(P.id) })
                 }
             ];
             return (
-                null != w.user &&
+                null != P.user &&
                     e.push({
                         icon: o.tBG,
-                        text: N.NW.formatToPlainString(N.t.qE7oqq, { user: g.ZP.getUserTag(w.user) })
+                        text: N.NW.formatToPlainString(N.t.qE7oqq, { user: g.ZP.getUserTag(P.user) })
                     }),
                 e
             );
-        }, [w.id, w.user]),
+        }, [P.id, P.user]),
         D = i.useMemo(
             () =>
                 null != E.bot
@@ -149,7 +149,7 @@ function C(e) {
                           applicationIntegration: a
                       })
                     : (0, r.jsx)(o.Zbd, {
-                          className: v.emptyCard,
+                          className: y.emptyCard,
                           editable: !0,
                           children: (0, r.jsx)(o.Text, {
                               color: 'text-muted',
@@ -170,7 +170,7 @@ function C(e) {
             (null == E ? void 0 : E.description) != null
                 ? (0, r.jsx)(u.Z, {
                       userBio: E.description,
-                      className: v.headerDescription
+                      className: y.headerDescription
                   })
                 : null,
             T
@@ -180,10 +180,10 @@ function C(e) {
                       guildId: n.id
                   })
                 : null,
-            (0, r.jsx)(o.$i$, { className: v.headerDivider }),
+            (0, r.jsx)(o.$i$, { className: y.headerDivider }),
             null != E.bot
                 ? (0, r.jsxs)('div', {
-                      className: v.section,
+                      className: y.section,
                       children: [
                           (0, r.jsx)(h.Z, {
                               icon: (0, r.jsx)(o.wGt, {
@@ -197,7 +197,7 @@ function C(e) {
                   })
                 : null,
             (0, r.jsxs)('div', {
-                className: v.section,
+                className: y.section,
                 children: [
                     (0, r.jsx)(h.Z, {
                         icon: (0, r.jsx)(o.tYf, {
@@ -206,16 +206,16 @@ function C(e) {
                         }),
                         title: N.NW.string(N.t['t9ZX/P'])
                     }),
-                    P.length > 0
+                    w.length > 0
                         ? (0, r.jsx)(j.Z, {
-                              webhooks: P,
+                              webhooks: w,
                               editedWebhook: C,
                               selectableWebhookChannels: c,
                               errors: I,
                               canNavigate: S
                           })
                         : (0, r.jsx)(o.Zbd, {
-                              className: v.emptyCard,
+                              className: y.emptyCard,
                               editable: !0,
                               children: (0, r.jsx)(o.Text, {
                                   color: 'text-muted',
@@ -225,9 +225,9 @@ function C(e) {
                           })
                 ]
             }),
-            (0, r.jsx)(o.$i$, { className: v.headerDivider }),
+            (0, r.jsx)(o.$i$, { className: y.headerDivider }),
             (0, r.jsxs)(s.Z, {
-                className: v.section,
+                className: y.section,
                 justify: s.Z.Justify.BETWEEN,
                 align: s.Z.Align.CENTER,
                 children: [

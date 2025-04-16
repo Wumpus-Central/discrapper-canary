@@ -17,8 +17,8 @@ var i = n(481060),
     m = n(933409),
     N = n(389052),
     h = n(24311),
-    E = n(158508),
-    j = n(710631),
+    j = n(158508),
+    E = n(710631),
     v = n(297047),
     p = n(88966),
     P = n(712301),
@@ -68,7 +68,7 @@ let U = (0, a.Z)(
                     user: t,
                     guildId: n
                 }),
-                H = (0, j.Z)({
+                H = (0, E.Z)({
                     user: t,
                     guildId: n
                 }),
@@ -81,7 +81,7 @@ let U = (0, a.Z)(
                     guildId: n,
                     location: 'GuildUserContextMenu'
                 }),
-                $ = (0, E.Z)({
+                $ = (0, j.Z)({
                     user: t,
                     guildId: n,
                     location: 'GuildUserContextMenu'

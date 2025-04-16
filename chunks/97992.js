@@ -6,8 +6,8 @@ var r = n(442837),
 function l() {
     return (0, r.Wu)([s.Z, i.ZP], () =>
         Object.values(s.Z.getGuilds()).filter((e) => {
-            var t;
-            return (0, a.up)(e) && (null == (t = i.ZP.getSelfMember(e.id)) ? void 0 : t.joinedAt) != null;
+            var t, n;
+            return (0, a.up)(e) && (null == (t = i.ZP.getSelfMember(e.id)) ? void 0 : t.joinedAt) != null && (null == (n = e.profile) ? void 0 : n.tag) != null;
         })
     );
 }

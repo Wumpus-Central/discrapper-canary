@@ -8,8 +8,8 @@ var r = n(200651),
     c = n(388032);
 function u(e) {
     let t, n;
-    var { hasPermission: u, streamActive: d, isSelfStream: p, centerButton: h, onMouseEnter: f, onMouseLeave: m, premiumGlow: g, renderNUXHighlight: b, buttonRef: y } = e,
-        _ = (function (e, t) {
+    var { hasPermission: u, streamActive: d, isSelfStream: p, centerButton: h, onMouseEnter: f, onMouseLeave: m, premiumGlow: g, renderNUXHighlight: b, buttonRef: _ } = e,
+        y = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -63,7 +63,7 @@ function u(e) {
                 return e;
             })(
                 {
-                    buttonRef: y,
+                    buttonRef: _,
                     label: t,
                     disabled: !u,
                     iconComponent: O,
@@ -78,7 +78,7 @@ function u(e) {
                     },
                     premiumGlow: g
                 },
-                _
+                y
             )
         )
     );

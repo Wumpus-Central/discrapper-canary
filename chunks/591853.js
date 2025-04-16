@@ -250,7 +250,7 @@ function ev(e) {
             let r;
             if (((0, I.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), E)) l()(null != t, 'shareToChannelMode should only be true if a valid channel is passed'), (r = t);
             else {
-                let e = await _.Z.openPrivateChannel(n.id, !1, !1),
+                let e = await _.Z.openPrivateChannel({ recipientIds: n.id }),
                     t = U.Z.getChannel(e);
                 l()(null != t, 'DM channel must be defined'), (r = t);
             }

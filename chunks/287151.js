@@ -47,8 +47,8 @@ var i,
     F = n(451478),
     W = n(626135),
     V = n(74538),
-    G = n(960020),
-    H = n(566006),
+    H = n(960020),
+    G = n(566006),
     z = n(886132),
     K = n(183023),
     J = n(524444),
@@ -122,7 +122,7 @@ function ec(e, t, n) {
     );
 }
 function eu(e, t, n) {
-    return (n === H.O.BURST && t) || (n === H.O.NORMAL && e);
+    return (n === G.O.BURST && t) || (n === G.O.NORMAL && e);
 }
 class ed extends (i = o.PureComponent) {
     componentWillAppear(e) {
@@ -275,7 +275,7 @@ class ed extends (i = o.PureComponent) {
             eo(this, 'timeout', new m.V7()),
             eo(this, 'hideTimeout', new m.V7()),
             eo(this, 'ctaRef', o.createRef()),
-            eo(this, 'type', H.O.NORMAL),
+            eo(this, 'type', G.O.NORMAL),
             eo(this, 'colors', {
                 backgroundColor: void 0,
                 borderColor: void 0,
@@ -327,7 +327,7 @@ class ed extends (i = o.PureComponent) {
             }),
             eo(this, 'handleEnter', (e) => {
                 let { emoji: t, message: n, type: i, reduceMotion: r, animateEmoji: o, autoUnfurlReactionTooltip: a } = this.props,
-                    s = i === H.O.BURST;
+                    s = i === G.O.BURST;
                 s &&
                     !this.isReactionEventActive &&
                     !r &&
@@ -336,7 +336,7 @@ class ed extends (i = o.PureComponent) {
                         channelId: n.getChannelId(),
                         messageId: n.id,
                         emoji: t,
-                        key: G.I.HOVER
+                        key: H.I.HOVER
                     }),
                     (this.isReactionEventActive = !0),
                     (this.isKeyboardNavigation = 'focus' === e.type),
@@ -407,7 +407,7 @@ class ed extends (i = o.PureComponent) {
                             (this.handleLeave(),
                             ec(i, t, {
                                 emoji: e,
-                                reactionType: o ? H.O.BURST : H.O.NORMAL
+                                reactionType: o ? G.O.BURST : G.O.NORMAL
                             }));
                     },
                     u = 'string' == typeof a ? '' === a.trim() : null == a,
@@ -420,7 +420,7 @@ class ed extends (i = o.PureComponent) {
                                   'aria-label': l,
                                   children: a
                               });
-                return n === H.O.BURST
+                return n === G.O.BURST
                     ? (0, r.jsxs)('div', {
                           className: er.reactionTooltip,
                           onMouseEnter: this.handleEnterTooltip,
@@ -549,7 +549,7 @@ class ed extends (i = o.PureComponent) {
                 let { emoji: e, message: t, type: n } = this.props,
                     i = U.default.getCurrentUser(),
                     r = k.Z.getChannel(t.getChannelId()),
-                    o = n === H.O.BURST,
+                    o = n === G.O.BURST,
                     a = (0, V.I5)(i),
                     s = o ? Q.cd.EMOJI_IN_BURST_REACTION_HOVER : Q.cd.EMOJI_IN_REACTION_HOVER;
                 !o || this.userCanBurstReact() || a || (s = Q.cd.EMOJI_IN_BURST_REACTION_HOVER_UPSELL),
@@ -579,14 +579,14 @@ class ed extends (i = o.PureComponent) {
 eo(ed, 'defaultProps', { emojiSizeTooltip: 'jumbo' });
 let eh = o.memo((e) => {
         let { type: t, burst_colors: n, message: i, emoji: o } = e,
-            a = t === H.O.BURST,
+            a = t === G.O.BURST,
             s = (0, _.v)(a && null != n ? n : []),
-            l = (0, p.e7)([G.Z], () => void 0 !== G.Z.getEffectForEmojiId(i.getChannelId(), i.id, o)),
+            l = (0, p.e7)([H.Z], () => void 0 !== H.Z.getEffectForEmojiId(i.getChannelId(), i.id, o)),
             c = (0, p.e7)([j.Z], () => j.Z.useReducedMotion),
             u = M.Yk.useSetting(),
             d = U.default.getCurrentUser(),
             h = (0, V.I5)(d),
-            m = (0, p.e7)([G.Z], () => G.Z.getReactionPickerAnimation(i.id, o.name, o.id)),
+            m = (0, p.e7)([H.Z], () => H.Z.getReactionPickerAnimation(i.id, o.name, o.id)),
             f = a && (l || null != m);
         return (0, r.jsx)(
             ed,

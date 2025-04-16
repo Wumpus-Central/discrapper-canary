@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(619753),
     g = n(433355),
     b = n(271383),
-    y = n(594174),
-    _ = n(189432),
+    _ = n(594174),
+    y = n(189432),
     C = n(356778),
     x = n(370595),
     v = n(50493),
@@ -32,7 +32,7 @@ function E(e) {
             addtionalQuery: A,
             shouldDispatch: !0
         }),
-        k = (0, s.e7)([y.default], () => y.default.getUser(l), [l]),
+        k = (0, s.e7)([_.default], () => _.default.getUser(l), [l]),
         M = (0, s.e7)([b.ZP], () => b.ZP.getMember(E, l), [E, l]);
     (0, u.Ng)(() => {
         let e = null == Z ? void 0 : Z.details.scrollOffset;
@@ -49,7 +49,7 @@ function E(e) {
             (e) => {
                 null != Z &&
                     ((T.current = e.target.scrollTop),
-                    (0, _.r)(E, l, Z.baseChannelId, {
+                    (0, y.r)(E, l, Z.baseChannelId, {
                         modViewPanel: v.k.MESSAGE_HISTORY,
                         additionalSearchQuery: A,
                         scrollOffset: T.current
@@ -103,7 +103,7 @@ function E(e) {
                           }),
                     t);
                 w(r),
-                    (0, _.r)(E, l, Z.baseChannelId, {
+                    (0, y.r)(E, l, Z.baseChannelId, {
                         modViewPanel: v.k.MESSAGE_HISTORY,
                         additionalSearchQuery: r,
                         scrollOffset: T.current

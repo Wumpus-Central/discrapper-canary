@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(189156),
     g = n(878857),
     b = n(621853),
-    y = n(484459),
-    _ = n(131704),
+    _ = n(484459),
+    y = n(131704),
     C = n(881998),
     x = n(984933),
     v = n(496675),
@@ -44,7 +44,7 @@ function G(e) {
         o = (0, l.e7)([x.ZP], () => null != n.guild_id && n === x.ZP.getDefaultChannel(n.guild_id), [n]);
     if ((0, h.Z)(n.id)) return null;
     if (n.isForumPost()) return (0, r.jsx)(I.Z, { channel: n });
-    if (_.Ec.has(n.type)) return (0, r.jsx)(k.Z, { channel: n });
+    if (y.Ec.has(n.type)) return (0, r.jsx)(k.Z, { channel: n });
     if (o) return (0, r.jsx)(M.Z, { channel: n });
     if (i) return (0, r.jsx)(A.Z, { channel: n });
     return (0, r.jsx)(R.Z, { channel: n });
@@ -52,7 +52,7 @@ function G(e) {
 function F(e) {
     var t, n;
     let { channel: p, showingBanner: h } = e,
-        _ = (0, d.ZP)(p),
+        y = (0, d.ZP)(p),
         { type: x } = p,
         I = (0, l.e7)([j.default], () => (p.isPrivate() ? j.default.getUser(p.getRecipientId()) : null)),
         A = O.ZP.useUserTag(I),
@@ -73,7 +73,7 @@ function F(e) {
         Y = c.Z.useExperiment({ location: 'EmptyMessages' }).enabledDesktop;
     if (
         (i.useEffect(() => {
-            x === L.d4z.DM && null == M && null != I && a.Z.wait(() => (0, y.Z)(p.getRecipientId(), I.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
+            x === L.d4z.DM && null == M && null != I && a.Z.wait(() => (0, _.Z)(p.getRecipientId(), I.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
         }, [M, x, p, I]),
         i.useEffect(() => {
             (null == I ? void 0 : I.bot) && z === C.M.NOT_FETCHED && s.Z.fetch();
@@ -130,7 +130,7 @@ function F(e) {
                             className: B.marginBottom20,
                             children: A
                         }),
-                    W.NW.format(W.t['Qvg+6+'], { username: _ }),
+                    W.NW.format(W.t['Qvg+6+'], { username: y }),
                     (null == I ? void 0 : I.isProvisional) && (0, r.jsx)(m.qE, { userId: I.id }),
                     e
                 ]
@@ -141,13 +141,13 @@ function F(e) {
         if (p.isManaged())
             return (0, r.jsxs)(N.ZP, {
                 channelId: p.id,
-                children: [(0, r.jsx)(N.Ot, { children: W.NW.format(W.t.I3R7Vl, { channelName: _ }) }), (0, r.jsx)(N.jz, { children: W.NW.string(W.t.M8Ao6O) })]
+                children: [(0, r.jsx)(N.Ot, { children: W.NW.format(W.t.I3R7Vl, { channelName: y }) }), (0, r.jsx)(N.jz, { children: W.NW.string(W.t.M8Ao6O) })]
             });
         else if (p.hasFlag(D.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) return (0, r.jsx)(P.Z, { channel: p });
         else
             return (0, r.jsx)(T.Z, {
                 channel: p,
-                children: W.NW.format(W.t.MFwcqK, { name: _ })
+                children: W.NW.format(W.t.MFwcqK, { name: y })
             });
     return k
         ? (0, r.jsx)(G, {
@@ -156,6 +156,6 @@ function F(e) {
           })
         : (0, r.jsx)(N.ZP, {
               channelId: p.id,
-              children: (0, r.jsx)(N.jz, { children: W.NW.format(W.t.hPVEQE, { channelName: _ }) })
+              children: (0, r.jsx)(N.jz, { children: W.NW.format(W.t.hPVEQE, { channelName: y }) })
           });
 }

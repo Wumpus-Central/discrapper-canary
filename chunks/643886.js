@@ -58,20 +58,20 @@ function g(e) {
             }
             return r;
         }, [x, e, t, n]),
-        [v, y] = r.useState(''),
+        [y, v] = r.useState(''),
         _ = r.useMemo(() => {
             var t;
-            let n = (t = v).startsWith('@') ? t.substr(1) : t,
-                r = v.startsWith('@') ? N.filter((t) => t.id === e) : N;
+            let n = (t = y).startsWith('@') ? t.substr(1) : t,
+                r = y.startsWith('@') ? N.filter((t) => t.id === e) : N;
             return {
                 members: (0, m.B)(j, f, n),
                 roles: (0, m.B)(r, h, n)
             };
-        }, [e, j, v, N]);
+        }, [e, j, y, N]);
     return {
-        query: v,
+        query: y,
         results: _,
-        setQuery: y,
+        setQuery: v,
         unfilteredCount: _.members.length + _.roles.length
     };
 }

@@ -38,7 +38,7 @@ function b(e) {
     }
     return e;
 }
-function y(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,9 +56,9 @@ function y(e, t) {
         e
     );
 }
-function _(e) {
+function y(e) {
     let { channel: t, speaker: l, className: f } = e,
-        { newestAnalyticsLocation: _ } = (0, d.ZP)(),
+        { newestAnalyticsLocation: y } = (0, d.ZP)(),
         C = (0, u.bp)(),
         { reducedMotion: x } = i.useContext(a.Sfi),
         v = (0, c.Z)({ userId: l.id }),
@@ -67,18 +67,18 @@ function _(e) {
             (0, s.jW)(
                 e,
                 async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('4040'), n.e('98693'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            y(b({}, n), {
+                            _(b({}, n), {
                                 user: l.user,
                                 guildId: t.guild_id,
                                 channel: t,
                                 showMediaItems: !0,
                                 showStageChannelItems: !0,
                                 showChatItems: !1,
-                                onInteraction: (0, p.u)('GuildChannelUserContextMenu', _)
+                                onInteraction: (0, p.u)('GuildChannelUserContextMenu', y)
                             })
                         );
                 },
@@ -97,7 +97,7 @@ function _(e) {
                 children: (n) =>
                     (0, r.jsx)(
                         a.P3F,
-                        y(b({}, n, e), {
+                        _(b({}, n, e), {
                             onClick: (t) => {
                                 t.stopPropagation(), e.onClick(t);
                             },
@@ -123,7 +123,7 @@ function C(e) {
         max: 10,
         renderUser: (e, t, i) =>
             (0, r.jsx)(
-                _,
+                y,
                 {
                     channel: n,
                     speaker: e,

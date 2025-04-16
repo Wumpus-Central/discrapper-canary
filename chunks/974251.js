@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(435064),
     g = n(712114),
     b = n(540059),
-    y = n(605236),
-    _ = n(536442),
+    _ = n(605236),
+    y = n(536442),
     C = n(79390),
     x = n(216789),
     v = n(665906),
@@ -90,7 +90,7 @@ let G = i.memo(function (e) {
         $ = (0, a.Wu)([m.Z], () => m.Z.getNewClipIds()),
         ee = (0, a.e7)([O.ZP], () => null == O.ZP.getCurrentSidebarChannelId(F.id)),
         { showClipsHeaderEntrypoint: et } = f.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
-        en = (0, a.e7)([_.qc], () => _.qc.hasHotspot(_.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
+        en = (0, a.e7)([y.qc], () => y.qc.hasHotspot(y.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
         er = (0, c.s9z)((e) => (0, c.DEQ)(e, M.Qr)),
         ei = (0, a.e7)([E.Z], () => E.Z.hasLayers()),
         el = (0, a.e7)([m.Z], () => m.Z.hasClips()),
@@ -135,8 +135,8 @@ let G = i.memo(function (e) {
     let em = (0, v.NE)(F),
         eg = (0, v.Xu)(F),
         eb = !j.dN.useSetting() && !(0, Z.isAndroidWeb)() && null != window.ResizeObserver,
-        ey = (0, C.UI)(null != F ? F : void 0),
-        e_ = (0, h.qB)(),
+        e_ = (0, C.UI)(null != F ? F : void 0),
+        ey = (0, h.qB)(),
         eC = (0, x.Us)({ location: 'ChannelAttachButton' }),
         ex = null != (l = null == $ ? void 0 : $.length) ? l : 0,
         ev = (0, R.Z)({
@@ -148,8 +148,8 @@ let G = i.memo(function (e) {
             channel: F,
             activities: X,
             newClipsCount: ex,
-            canPostPolls: ey,
-            canLaunchActivities: e_,
+            canPostPolls: e_,
+            canLaunchActivities: ey,
             appContext: q,
             canSendScheduledMessages: eC
         }),
@@ -178,10 +178,10 @@ let G = i.memo(function (e) {
             position: 'top',
             positionKey: null != eo ? eo : 'null',
             onRequestOpen: () => {
-                eh && (0, y.EW)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: L.L.TAKE_ACTION }), ea('attachMenu');
+                eh && (0, _.EW)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: L.L.TAKE_ACTION }), ea('attachMenu');
             },
             onRequestClose: () => {
-                (0, c.$sL)() || (eh && (0, y.EW)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: L.L.TAKE_ACTION }), ea(null));
+                (0, c.$sL)() || (eh && (0, _.EW)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: L.L.TAKE_ACTION }), ea(null));
             },
             renderPopout: (e) => {
                 switch (eo) {
@@ -259,7 +259,7 @@ let G = i.memo(function (e) {
                     channel: F,
                     isOmniMenuOpen: 'attachMenu' === eo,
                     openOmniMenu: () => ea('attachMenu'),
-                    enabled: e_,
+                    enabled: ey,
                     animationContainerClassName: W.buttonAnimation,
                     glowClassName: W.buttonAnimationGlow,
                     trinketsClassName: W.buttonAnimationTrinkets,

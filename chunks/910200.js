@@ -96,7 +96,7 @@ function y(e) {
             : a ||
               (u = (0, r.jsx)(d.Z, {
                   profile: t,
-                  onClose: c
+                  onComplete: c
               })),
         (0, r.jsxs)('div', {
             className: o()(m.container, i),

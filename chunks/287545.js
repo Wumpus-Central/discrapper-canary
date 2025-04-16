@@ -94,58 +94,58 @@ function $(e) {
     });
 }
 async function ee(e) {
-    var t;
-    let { applicationId: n, location: r, instanceId: i } = e,
-        a = D.ZP.getEmbeddedActivityDurationMs(r.id, n),
-        s = y.default.getSessionId();
-    null != i &&
-        null != s &&
+    var t, n;
+    let { applicationId: r, location: i, instanceId: a } = e,
+        s = D.ZP.getEmbeddedActivityDurationMs(i.id, r),
+        l = y.default.getSessionId();
+    null != a &&
+        null != l &&
         (await o.tn.post({
-            url: V.ANM.ACTIVITY_LEAVE(n, r.id, i),
-            body: { session_id: s },
+            url: V.ANM.ACTIVITY_LEAVE(r, i.id, a),
+            body: { session_id: l },
             retries: 2,
             rejectWithError: !1
         }));
-    let l = Y[n],
-        c = v.Z.getChannel((0, U.pY)(r)),
-        u = S.default.getCurrentUser();
-    if (null == l || null == u) return;
-    let d = null == c ? void 0 : c.getGuildId(),
-        f = D.ZP.getShelfActivities(d),
-        _ = (0, L.Z)({
-            applicationId: n,
-            activityConfigs: f
+    let c = Y[r],
+        u = v.Z.getChannel(null != (n = (0, U.pY)(i)) ? n : (0, U.wq)(i)),
+        d = S.default.getCurrentUser();
+    if (null == c || null == d) return;
+    let f = null == u ? void 0 : u.getGuildId(),
+        _ = D.ZP.getShelfActivities(f),
+        h = (0, L.Z)({
+            applicationId: r,
+            activityConfigs: _
         }),
-        { releasePhase: h } = q(_),
-        m = p.Z.getRawThermalState();
+        { releasePhase: m } = q(h),
+        g = p.Z.getRawThermalState();
     T.default.track(V.rMx.ACTIVITY_SESSION_LEFT, {
-        channel_id: null == c ? void 0 : c.id,
-        guild_id: d,
-        media_session_id: l.mediaSessionIds[0],
-        activity_session_id: l.activitySessionId,
-        application_id: n,
-        duration_ms: a,
-        user_premium_tier: u.premiumType,
-        raw_thermal_state: m,
-        release_phase: h,
-        shelf_rank: null == _ || null == (t = _.activity) ? void 0 : t.shelf_rank,
-        activity_user_session_id: l.activityUserSessionId,
-        channel_type: null == c ? void 0 : c.type,
-        media_session_ids: l.mediaSessionIds,
-        embedded_activity_location_kind: r.kind
+        channel_id: null == u ? void 0 : u.id,
+        guild_id: f,
+        media_session_id: c.mediaSessionIds[0],
+        activity_session_id: c.activitySessionId,
+        application_id: r,
+        duration_ms: s,
+        user_premium_tier: d.premiumType,
+        raw_thermal_state: g,
+        release_phase: m,
+        shelf_rank: null == h || null == (t = h.activity) ? void 0 : t.shelf_rank,
+        activity_user_session_id: c.activityUserSessionId,
+        channel_type: null == u ? void 0 : u.type,
+        media_session_ids: c.mediaSessionIds,
+        embedded_activity_location_kind: i.kind
     }),
         T.default.track(V.rMx.ACTIVITY_IFRAME_UNMOUNT, {
-            channel_id: null == c ? void 0 : c.id,
-            guild_id: d,
-            application_id: n,
-            instance_ids: null != l.launchId ? [l.launchId] : void 0,
-            media_session_ids: l.mediaSessionIds,
-            activity_user_session_id: l.activityUserSessionId,
-            raw_thermal_state: m,
-            duration_ms: a,
-            embedded_activity_location_kind: r.kind
+            channel_id: null == u ? void 0 : u.id,
+            guild_id: f,
+            application_id: r,
+            instance_ids: null != c.launchId ? [c.launchId] : void 0,
+            media_session_ids: c.mediaSessionIds,
+            activity_user_session_id: c.activityUserSessionId,
+            raw_thermal_state: g,
+            duration_ms: s,
+            embedded_activity_location_kind: i.kind
         }),
-        delete Y[n];
+        delete Y[r];
 }
 function et(e) {
     var t, n, r;

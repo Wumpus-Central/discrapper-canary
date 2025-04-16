@@ -19,18 +19,18 @@ var i = n(512722),
     m = n(775666),
     g = n(423589),
     b = n(592125),
-    y = n(496675),
-    _ = n(881824),
+    _ = n(496675),
+    y = n(881824),
     C = n(146085),
     x = n(427679),
     v = n(354459),
     j = n(388032);
 function O(e) {
     let t = (0, o.e7)([b.Z], () => b.Z.getChannel(e), [e]),
-        n = (0, o.e7)([y.Z], () => y.Z.can(C.yP, t)),
+        n = (0, o.e7)([_.Z], () => _.Z.can(C.yP, t)),
         i = (0, o.e7)([x.Z], () => x.Z.getStageInstanceByChannel(e), [e]),
         l = (0, s.bp)(),
-        c = () => null != t && (0, _.T)(t, l);
+        c = () => null != t && (0, y.T)(t, l);
     return (null == t ? void 0 : t.isGuildStageVoice()) && n
         ? null != i
             ? (0, r.jsx)(a.sNh, {

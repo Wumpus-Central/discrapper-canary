@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var l = n(200651);
 n(192379);
 var i = n(533800),
@@ -9,11 +9,11 @@ var i = n(533800),
     u = n(842515);
 let d = a.ZP.getMaxAgeOptions,
     c = a.ZP.getMaxUsesOptions;
-function h(e) {
+function g(e) {
     var t;
-    let { shouldHideTemporaryInviteToggle: n, maxAge: a, maxUses: h, temporary: g, onGenerateNewLink: m, onToggleTemporary: p, onSelectMaxAge: v, onSelectMaxUses: x, isGuestInviteCreationToggleEnabled: I, inviteFlags: N, onSetInviteFlags: f } = e,
+    let { shouldHideTemporaryInviteToggle: n, maxAge: a, maxUses: g, temporary: h, onGenerateNewLink: m, onToggleTemporary: p, onSelectMaxAge: v, onSelectMaxUses: x, isGuestInviteCreationToggleEnabled: I, inviteFlags: N, onSetInviteFlags: f } = e,
         j = d.find((e) => e.value === a),
-        _ = c.find((e) => e.value === h);
+        _ = c.find((e) => e.value === g);
     return (0, l.jsx)('div', {
         className: u.settingsContent,
         children: (0, l.jsxs)('form', {
@@ -40,7 +40,7 @@ function h(e) {
                     (0, l.jsx)(r.xJW, {
                         children: (0, l.jsx)(r.j7V, {
                             className: u.switch,
-                            value: g,
+                            value: h,
                             onChange: (e) => p(e),
                             note: o.NW.string(o.t.UN5IRU),
                             hideBorder: !0,

@@ -242,7 +242,7 @@ let w = {
                                 let a = await b.ZP.fetchApplication(n.applicationId),
                                     o = null == a || null == (r = a.bot) ? void 0 : r.id;
                                 if (null == o) return;
-                                let s = await c.Z.openPrivateChannel(o),
+                                let s = await c.Z.openPrivateChannel({ recipientIds: o }),
                                     u = new URL(t),
                                     d = null != (i = u.searchParams.get('referrer_id')) ? i : void 0,
                                     { customId: p } = await (0, g.ur)(e, u.searchParams.get('link_id'), u.searchParams.get('custom_id'));

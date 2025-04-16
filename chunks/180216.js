@@ -19,16 +19,16 @@ function b(e) {
             guildId: t,
             channelId: n
         }),
-        y = (0, c.GG)(t),
-        _ = (0, c.YB)(t),
+        _ = (0, c.GG)(t),
+        y = (0, c.YB)(t),
         C = (0, l.e7)([s.Z], () => s.Z.getGuild(t), [t]),
         x = null == C ? void 0 : C.name,
         v = (0, l.e7)([a.Z], () => a.Z.getChannel(n)),
         j = i.useMemo(() => {
             let e = {};
-            for (let t of y) for (let n of t.subscription_listings_ids) e[n] = t.id;
+            for (let t of _) for (let n of t.subscription_listings_ids) e[n] = t.id;
             return e;
-        }, [y]);
+        }, [_]);
     return ((0, d.Z)({
         guildId: t,
         location: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
@@ -54,7 +54,7 @@ function b(e) {
                       className: g.joinCtaSubtitle,
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: null == _ ? void 0 : _.description
+                      children: null == y ? void 0 : y.description
                   }),
                   (0, r.jsx)(p.Z, {
                       guildId: t,

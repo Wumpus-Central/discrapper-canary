@@ -29,18 +29,18 @@ function d(e) {
             return l;
         })(e, ['chunks', 'className', 'onCopy']);
     let h = l.useMemo(() => (null == t ? void 0 : t.join(' ')), [t]),
-        [p, f] = l.useState(!1),
+        [f, p] = l.useState(!1),
         g = l.useCallback(() => {
             (0, s.JG)(h, () => {
-                f(!0), null == i || i();
+                p(!0), null == i || i();
             });
         }, [i, h]),
-        y = p ? a.owK : a.TIy;
+        y = f ? a.owK : a.TIy;
     return (0, r.jsx)(a.P3F, {
         className: o()(c.container, n),
         onClick: g,
         children: (0, r.jsx)(a.ua7, {
-            text: p ? u.NW.string(u.t['t5VZ8/']) : u.NW.string(u.t.OpuAlJ),
+            text: f ? u.NW.string(u.t['t5VZ8/']) : u.NW.string(u.t.OpuAlJ),
             children: (e) => {
                 var t, n;
                 return (0, r.jsx)(
@@ -73,7 +73,7 @@ function d(e) {
                     (n = n =
                         {
                             size: 'xxs',
-                            color: p ? a.TVs.colors.TEXT_POSITIVE : a.TVs.colors.INTERACTIVE_NORMAL
+                            color: f ? a.TVs.colors.TEXT_POSITIVE : a.TVs.colors.INTERACTIVE_NORMAL
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

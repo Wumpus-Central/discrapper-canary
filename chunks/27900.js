@@ -19,8 +19,8 @@ var l = n(481060),
     v = n(494439),
     h = n(991307),
     Z = n(700994),
-    m = n(332031),
-    p = n(981631),
+    p = n(332031),
+    m = n(981631),
     S = n(388032);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -66,10 +66,10 @@ function N(e, t) {
     );
 }
 function P(e) {
-    let { user: t, guildId: n, channelId: o, mediaEngineContext: a, onSelect: c, onShowProfile: p, onWatchStream: j, appContext: N } = e,
+    let { user: t, guildId: n, channelId: o, mediaEngineContext: a, onSelect: c, onShowProfile: m, onWatchStream: j, appContext: N } = e,
         P = (0, v.Z)({
             onAction: () => {
-                null == p || p();
+                null == m || m();
             }
         }),
         A = (0, E.Z)({
@@ -80,10 +80,10 @@ function P(e) {
             user: t,
             appContext: N
         }),
-        I = (0, m.Z)(t.id, j),
+        I = (0, p.Z)(t.id, j),
         M = (0, Z.Z)(t.id),
-        D = (0, h.Z)(t.id, a),
-        C = (0, y.Z)({ user: t }),
+        C = (0, h.Z)(t.id, a),
+        D = (0, y.Z)({ user: t }),
         w = (0, u.Z)(null, t),
         x = (0, f.Z)({
             user: t,
@@ -120,7 +120,7 @@ function P(e) {
                         (0, r.jsx)(l.kSQ, { children: M }),
                         (0, r.jsx)(l.kSQ, { children: w }),
                         (0, r.jsxs)(l.kSQ, {
-                            children: [D, C, x, k, U]
+                            children: [C, D, x, k, U]
                         }),
                         (0, r.jsx)(l.kSQ, { children: L })
                     ]
@@ -131,7 +131,7 @@ function P(e) {
 }
 function A(e) {
     let { user: t, mediaEngineContext: n, onSelect: o, onShowProfile: a, onWatchStream: c, appContext: b } = e,
-        p = (0, v.Z)({
+        m = (0, v.Z)({
             onAction: () => {
                 null == a || a();
             }
@@ -144,16 +144,16 @@ function A(e) {
             user: t,
             appContext: b
         }),
-        P = (0, m.Z)(t.id, c),
+        P = (0, p.Z)(t.id, c),
         A = (0, Z.Z)(t.id),
         T = (0, h.Z)(t.id, n),
         I = (0, y.Z)({ user: t }),
         M = (0, u.Z)(null, t),
-        D = (0, f.Z)({
+        C = (0, f.Z)({
             user: t,
             appContext: b
         }),
-        C = (0, O.Z)({
+        D = (0, O.Z)({
             user: t,
             appContext: b
         }),
@@ -178,12 +178,12 @@ function A(e) {
                     children: [
                         (0, r.jsx)(l.kSQ, { children: U }),
                         (0, r.jsxs)(l.kSQ, {
-                            children: [p, j, N, P]
+                            children: [m, j, N, P]
                         }),
                         (0, r.jsx)(l.kSQ, { children: A }),
                         (0, r.jsx)(l.kSQ, { children: M }),
                         (0, r.jsxs)(l.kSQ, {
-                            children: [T, I, D, w, C]
+                            children: [T, I, C, w, D]
                         })
                     ]
                 }),
@@ -230,7 +230,7 @@ let T = (0, a.Z)(
                       })
                   );
         },
-        { object: p.qAy.CONTEXT_MENU }
+        { object: m.qAy.CONTEXT_MENU }
     ),
     [c.Z.CONTEXT_MENU, c.Z.USER_OVERLAY_CONTEXT_MENU]
 );

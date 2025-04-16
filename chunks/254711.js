@@ -711,7 +711,7 @@ let L = n(227419).Z,
                 let o = x(e, 'user'),
                     a = null != (n = x(e, 'message')) ? n : '';
                 (async () => {
-                    await c.Z.openPrivateChannel(o).then((e) => {
+                    await c.Z.openPrivateChannel({ recipientIds: o }).then((e) => {
                         let t = b.Z.getChannel(e);
                         i()(null != t, 'Newly created PrivateChannel is null'), d.Z.sendMessage(t.id, p.ZP.parse(t, a));
                     });

@@ -28,7 +28,7 @@ function g(e) {
                     try {
                         var e;
                         let t = new URL(location.href),
-                            n = await a.Z.openPrivateChannel(O),
+                            n = await a.Z.openPrivateChannel({ recipientIds: O }),
                             r = null != (e = t.searchParams.get('referrer_id')) ? e : void 0,
                             { customId: i } = await (0, h.ur)(_, t.searchParams.get('link_id'), t.searchParams.get('custom_id'));
                         await (0, p.Z)({

@@ -15,8 +15,8 @@ var i = n(410030),
     m = n(389190),
     g = n(428927),
     b = n(638785),
-    y = n(388032),
-    _ = n(490312);
+    _ = n(388032),
+    y = n(490312);
 function C(e) {
     let { user: t } = e,
         { analyticsLocations: n } = (0, o.ZP)(),
@@ -28,13 +28,13 @@ function C(e) {
         I = null != E && E.length > 0;
     return N || I
         ? (0, r.jsxs)(h.Z.Overlay, {
-              className: _.overlay,
+              className: y.overlay,
               children: [
                   I &&
                       (0, r.jsx)(b.Z, {
                           section: 'MUTUAL_GUILDS',
-                          header: y.NW.string(y.t['4lTDZm']),
-                          listClassName: _.list,
+                          header: _.NW.string(_.t['4lTDZm']),
+                          listClassName: y.list,
                           items: E.map((e) => {
                               let { guild: n, nick: i } = e;
                               return (0, r.jsx)(
@@ -50,12 +50,12 @@ function C(e) {
                               );
                           })
                       }),
-                  I && N && (0, r.jsx)(p.Z, { className: _.divider }),
+                  I && N && (0, r.jsx)(p.Z, { className: y.divider }),
                   N &&
                       (0, r.jsx)(b.Z, {
                           section: 'MUTUAL_FRIENDS',
-                          header: y.NW.string(y.t['0mTJ3t']),
-                          listClassName: _.list,
+                          header: _.NW.string(_.t['0mTJ3t']),
+                          listClassName: y.list,
                           onExpand: () => (0, d.Z)(t.id, v),
                           items:
                               null == O
@@ -63,7 +63,7 @@ function C(e) {
                                         (0, r.jsxs)(
                                             'div',
                                             {
-                                                className: _.loadingMutualFriend,
+                                                className: y.loadingMutualFriend,
                                                 children: [
                                                     (0, r.jsx)(a.ZT, {
                                                         width: 40,

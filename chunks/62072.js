@@ -14,8 +14,8 @@ var r = n(192379),
     m = n(271383),
     g = n(607744),
     b = n(375954),
-    y = n(496675),
-    _ = n(572004),
+    _ = n(496675),
+    y = n(572004),
     C = n(585483),
     x = n(358085),
     v = n(709054),
@@ -25,7 +25,7 @@ var r = n(192379),
     N = n(996861),
     I = n(981631);
 function P(e) {
-    return y.Z.can(I.Plq.MANAGE_MESSAGES, e);
+    return _.Z.can(I.Plq.MANAGE_MESSAGES, e);
 }
 let S = function (e, t, n) {
     let S = r.useRef(n);
@@ -48,7 +48,7 @@ let S = function (e, t, n) {
                         r && (P(k) || R.canDeleteOwnMessage(M)) && (n.preventDefault(), (0, N.$Z)(k, R, n));
                         break;
                     case 'c':
-                        ((0, x.isMac)() ? A : T) && _.wS && (n.preventDefault(), (0, _.JG)(R.content));
+                        ((0, x.isMac)() ? A : T) && y.wS && (n.preventDefault(), (0, y.JG)(R.content));
                         break;
                     case 'e':
                         r && !k.isSystemDM() && (0, j.Z)(R, M) && (n.preventDefault(), (0, N.Hd)(k, R));
@@ -65,7 +65,7 @@ let S = function (e, t, n) {
                                         channel: e,
                                         canChat: t,
                                         renderReactions: n,
-                                        canAddNewReactions: t && y.Z.can(I.Plq.ADD_REACTIONS, e),
+                                        canAddNewReactions: t && _.Z.can(I.Plq.ADD_REACTIONS, e),
                                         isLurking: null != e.guild_id && a.Z.isLurking(e.guild_id),
                                         isGuest: null != e.guild_id && m.ZP.isCurrentUserGuest(e.guild_id),
                                         isActiveChannelOrUnarchivableThread: (0, c.RG)(e)

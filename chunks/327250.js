@@ -15,8 +15,8 @@ var i = n(120356),
     m = n(910693),
     g = n(314897),
     b = n(271383),
-    y = n(430824),
-    _ = n(496675),
+    _ = n(430824),
+    y = n(496675),
     C = n(158776),
     x = n(885110),
     v = n(594174),
@@ -177,17 +177,17 @@ function A(e) {
 }
 function w(e) {
     let { user: t, member: i, guildId: l } = e,
-        u = (0, o.e7)([y.Z], () => y.Z.getGuild(l)),
+        u = (0, o.e7)([_.Z], () => _.Z.getGuild(l)),
         {
             canKickUser: b,
             canBanUser: C,
             canModerateMembers: x
         } = (0, o.cj)(
-            [_.Z, v.default, y.Z],
+            [y.Z, v.default, _.Z],
             () => ({
                 canKickUser: (0, f.BK)(t, u),
                 canBanUser: (0, f.mm)(t, u),
-                canModerateMembers: null != u && (0, h.F)(u.id, t.id, [v.default, y.Z, _.Z])
+                canModerateMembers: null != u && (0, h.F)(u.id, t.id, [v.default, _.Z, y.Z])
             }),
             [t, u]
         ),
@@ -206,7 +206,7 @@ function w(e) {
                 disabled: w,
                 text: I.NW.string(I.t['g33r/P']),
                 onClick: () => {
-                    s.Z.openPrivateChannel(t.id);
+                    s.Z.openPrivateChannel({ recipientIds: t.id });
                 },
                 children: (0, r.jsx)(a.kBi, {
                     size: 'custom',

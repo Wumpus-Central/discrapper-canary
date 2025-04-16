@@ -126,7 +126,7 @@ function k(e) {
                                             ? ((0, y.uL)(T.Z5c.FRIENDS), m.Z.setSection(T.pJs.ALL))
                                             : W === I.X2.SEND_MESSAGE &&
                                               ((0, j.PV)(r.id),
-                                              p.Z.openPrivateChannel(r.id).then(() => {
+                                              p.Z.openPrivateChannel({ recipientIds: r.id }).then(() => {
                                                   setTimeout(() => {
                                                       (0, b.PG)(A.X1.GIF, _.Ie.NORMAL),
                                                           setTimeout(() => {

@@ -23,14 +23,14 @@ var r = n(200651),
     y = n(388032),
     P = n(915298);
 function C(e) {
-    return e.isActiveThread() ? (0, r.jsx)(w, { channel: e }) : (0, r.jsx)(S, { channel: e });
+    return e.isActiveThread() ? (0, r.jsx)(I, { channel: e }) : (0, r.jsx)(S, { channel: e });
 }
-function w(e) {
+function I(e) {
     let { channel: t } = e,
         n = (0, l.e7)([p.Z], () => p.Z.getMostRecentMessage(t.id));
     return null == n
         ? (0, r.jsx)(O, { channel: t })
-        : (0, r.jsx)(I, {
+        : (0, r.jsx)(w, {
               channel: t,
               message: n
           });
@@ -45,7 +45,7 @@ function O(e) {
         children: [y.NW.string(y.t.Jmh6n5), '\xA0 \u2022 \xA0', (0, b.Ye)(n)]
     });
 }
-function I(e) {
+function w(e) {
     let { channel: t, message: n } = e;
     (0, o.$)({ [t.guild_id]: [n.author.id] });
     let c = (0, l.e7)([v.default], () => {
@@ -62,13 +62,13 @@ function I(e) {
             }),
             [n]
         ),
-        w = (0, d.p)(),
+        I = (0, d.p)(),
         O = a.useMemo(() => {
             let e =
                     null != n.content && '' !== n.content
                         ? (0, u.ZP)(n, {
                               formatInline: !0,
-                              shouldFilterKeywords: w
+                              shouldFilterKeywords: I
                           }).content
                         : null,
                 {
@@ -84,7 +84,7 @@ function I(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [s, null != a ? a : (0, r.jsx)('span', { children: t }), l]
             });
-        }, [n, y, C, w]);
+        }, [n, y, C, I]);
     return (0, r.jsxs)(s.Text, {
         className: P.subtext,
         variant: 'text-sm/normal',

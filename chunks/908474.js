@@ -21,10 +21,10 @@ function f(e) {
             let t = new Date(e).getTime();
             return (0, c.fv)(t, c.jq.JOINED_AT);
         }, []),
-        y = i.useMemo(() => (null == t ? null : b(g)), [t, b, g]),
-        _ = i.useMemo(() => (0, s.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
+        _ = i.useMemo(() => (null == t ? null : b(g)), [t, b, g]),
+        y = i.useMemo(() => (0, s.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
         C = i.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
-    return null != g || _
+    return null != g || y
         ? (0, r.jsx)(o.xJW, {
               title: p.NW.string(p.t['7V375+']),
               titleClassName: h.infoTitle,
@@ -46,10 +46,10 @@ function f(e) {
                               description: (0, r.jsx)(o.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
-                                  children: y
+                                  children: _
                               })
                           }),
-                      _ &&
+                      y &&
                           null != C &&
                           (0, r.jsx)(d._2, {
                               icon: (0, r.jsx)(o.YlB, {

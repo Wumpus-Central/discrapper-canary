@@ -73,7 +73,7 @@ function v() {
                                       {
                                           className: S.tabBarItem,
                                           id: j.NB.USER_PROFILE,
-                                          children: O.NW.string(O.t['OU3/Pj'])
+                                          children: O.NW.string(O.t['2p07FR'])
                                       },
                                       j.NB.USER_PROFILE
                                   )

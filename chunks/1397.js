@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(881952),
     g = n(305325),
     b = n(246364),
-    y = n(983736),
-    _ = n(937111),
+    _ = n(983736),
+    y = n(937111),
     C = n(270801),
     x = n(652730),
     v = n(41776),
@@ -93,7 +93,7 @@ class F extends i.PureComponent {
         r || e.shouldShowLurkerModeSuccessPopout || !t || null == n || this.setState({ shouldShowLurkerModeSuccessPopout: !0 });
     }
     render() {
-        let { isFollowable: e, isLurking: t, notClaimed: l, notPhoneVerified: o, notEmailVerified: a, newMember: c, memberDeadline: u, newAccount: d, accountDeadline: p, theme: h, children: f, canSendMessages: m, channelFollowingUsersSeen: g, showLurkerModeUpsellPopout: y, showMemberVerificationModal: _, useReducedMotion: C, isStaff: x, guildJoinRequest: v } = this.props,
+        let { isFollowable: e, isLurking: t, notClaimed: l, notPhoneVerified: o, notEmailVerified: a, newMember: c, memberDeadline: u, newAccount: d, accountDeadline: p, theme: h, children: f, canSendMessages: m, channelFollowingUsersSeen: g, showLurkerModeUpsellPopout: _, showMemberVerificationModal: y, useReducedMotion: C, isStaff: x, guildJoinRequest: v } = this.props,
             { shouldShowLurkerModeUpsellPopout: j, shouldShowLurkerModeSuccessPopout: O } = this.state,
             E = {
                 theme: h,
@@ -105,8 +105,8 @@ class F extends i.PureComponent {
                 E.subtitle = D.NW.formatToPlainString(D.t.C5bgrK, { count: e.toLocaleString() });
             }
             (E.buttonText = D.NW.string(D.t['3aOv+v'])), (E.onButtonClick = this.handleFollowAnnouncement), (E.imageSrc = n(485195)), t && ((E.onSecondaryButtonClick = this.handleJoinServer), (E.secondaryButtonText = D.NW.string(D.t['RLch7+'])));
-        } else if (l) (E.message = D.NW.string(D.t['Eg3/c3'])), (E.buttonText = D.NW.string(D.t.fiNVio)), (E.onButtonClick = _ ? this.handleShowMemberVerification : this.handleClaimAccount), (E.imageSrc = n(102811));
-        else if (_)
+        } else if (l) (E.message = D.NW.string(D.t['Eg3/c3'])), (E.buttonText = D.NW.string(D.t.fiNVio)), (E.onButtonClick = y ? this.handleShowMemberVerification : this.handleClaimAccount), (E.imageSrc = n(102811));
+        else if (y)
             switch (null == v ? void 0 : v.applicationStatus) {
                 case b.wB.SUBMITTED:
                     (E.message = D.NW.string(D.t['5iLvS0'])), (E.subtitle = D.NW.string(D.t.FdsK4u)), (E.buttonText = D.NW.string(D.t.mqtdmZ)), (E.onButtonClick = this.handleCancelApplication), (E.imageSrc = n(281958));
@@ -142,7 +142,7 @@ class F extends i.PureComponent {
                         children: (0, r.jsxs)(i.Fragment, {
                             children: [
                                 this.renderMemberVerificationSuccessModal(),
-                                y
+                                _
                                     ? (0, r.jsx)(s.yRy, {
                                           targetElementRef: this.upsellTargetRef,
                                           renderPopout: this.renderLurkerModeUpsellPopout,
@@ -328,11 +328,11 @@ function H(e) {
             var e, t;
             return null != f && null != (t = null == (e = S.ZP.getMember(o, f.id)) ? void 0 : e.isPending) && t;
         }),
-        C = !!(0, y.Dc)(s),
+        C = !!(0, _.Dc)(s),
         j = (g || c.notClaimed) && C,
         O = (0, a.e7)([x.Z], () => x.Z.shouldShowPopout(o)),
         E = (0, a.e7)([A.Z], () => A.Z.can(M.Plq.SEND_MESSAGES, i)),
-        N = (0, a.e7)([_.Z], () => _.Z.getRequest(o)),
+        N = (0, a.e7)([y.Z], () => y.Z.getRequest(o)),
         k = G(B({}, c), {
             guild: s,
             isLurking: h,

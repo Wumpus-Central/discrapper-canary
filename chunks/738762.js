@@ -47,7 +47,7 @@ function h(e) {
         ? (0, r.jsx)(l.sNh, {
               id: 'message',
               action: function () {
-                  a.Z.openPrivateChannel(g).then((t) => {
+                  a.Z.openPrivateChannel({ recipientIds: g }).then((t) => {
                       var n, r;
                       return o.ZP.trackWithMetadata(
                           u.rMx.ACTIVITY_FEED_DM_VISITED,

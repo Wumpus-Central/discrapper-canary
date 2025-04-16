@@ -40,8 +40,8 @@ var i = n(200651),
     F = n(91047),
     W = n(981631),
     V = n(388032),
-    G = n(111932),
-    H = n(20493);
+    H = n(111932),
+    G = n(20493);
 function z(e, t, n) {
     return (
         t in e
@@ -103,7 +103,7 @@ let Y = (e) => {
                 messageId: o
             });
             return (0, i.jsx)(T.Z, {
-                className: G.__invalid_effect,
+                className: H.__invalid_effect,
                 effect: e,
                 emojiSize: T.M.LARGE,
                 onComplete: () => l(!1)
@@ -124,11 +124,11 @@ let Y = (e) => {
             );
         }, [t]),
         (0, i.jsxs)('div', {
-            className: G.burstEmojiSection,
+            className: H.burstEmojiSection,
             children: [
                 d,
                 (0, i.jsx)(p.Z, {
-                    className: a()(G.burstEmoji, { [G.hideEmoji]: s }),
+                    className: a()(H.burstEmoji, { [H.hideEmoji]: s }),
                     emojiId: t.id,
                     emojiName: t.name,
                     animated: t.animated,
@@ -165,7 +165,7 @@ class q extends r.PureComponent {
                           className: r,
                           children: e.name
                       });
-            })(e, 0, G.emoji, a()(G.emoji, G.emojiText)),
+            })(e, 0, H.emoji, a()(H.emoji, H.emojiText)),
             d = o === x.O.BURST,
             p = d ? V.t.VmiNjY : V.t.cNfs19,
             m = V.NW.formatToPlainString(p, {
@@ -188,8 +188,8 @@ class q extends r.PureComponent {
                 let { onMouseEnter: l, onMouseLeave: c } = s;
                 return (0, i.jsxs)(h.P3F, {
                     className: a()({
-                        [G.reactionDefault]: !n,
-                        [G.reactionSelected]: n
+                        [H.reactionDefault]: !n,
+                        [H.reactionSelected]: n
                     }),
                     'aria-label': m,
                     onClick: () =>
@@ -221,7 +221,7 @@ function $(e) {
         j = (0, u.e7)([A.Z], () => A.Z.can(W.Plq.MANAGE_MESSAGES, o) && g) || d === n.id,
         v = (0, u.e7)([I.ZP, E.Z, M.Z], () => B.ZP.getName(a, o.id, n));
     return (0, i.jsxs)(b.Z, {
-        className: G.reactorDefault,
+        className: H.reactorDefault,
         onContextMenu: (e) => (0, F.Pv)(e, n, o),
         align: b.Z.Align.CENTER,
         children: [
@@ -229,7 +229,7 @@ function $(e) {
                 wrap: !0,
                 grow: 0,
                 shrink: 0,
-                className: H.marginReset,
+                className: G.marginReset,
                 children: (0, i.jsx)(f.Z, {
                     user: null != p ? p : n,
                     size: h.EFr.SIZE_24
@@ -239,19 +239,19 @@ function $(e) {
                 children: (0, i.jsxs)(h.Text, {
                     tag: 'strong',
                     variant: 'text-md/normal',
-                    className: G.name,
+                    className: H.name,
                     children: [
                         null != v &&
                             '' !== v &&
                             (0, i.jsx)('span', {
-                                className: n.isPomelo() ? '' : G.nickname,
+                                className: n.isPomelo() ? '' : H.nickname,
                                 children: v
                             }),
                         (0, i.jsx)(m.Z, {
                             user: n,
-                            className: null != v && '' !== v ? G.tagFaded : null,
-                            usernameClass: G.username,
-                            discriminatorClass: G.discriminator,
+                            className: null != v && '' !== v ? H.tagFaded : null,
+                            usernameClass: H.username,
+                            discriminatorClass: H.discriminator,
                             forceUsername: !0
                         })
                     ]
@@ -274,7 +274,7 @@ function $(e) {
                     children: (0, i.jsx)(h.Dio, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: G.remove
+                        className: H.remove
                     })
                 })
         ]
@@ -322,7 +322,7 @@ class Q extends r.PureComponent {
         return (
             0 === t.length && this.state.loadingMore ? a.push(length) : (a.push(t.length), e && a.push(1)),
             (0, i.jsxs)('div', {
-                className: G.reactorsContainer,
+                className: H.reactorsContainer,
                 children: [
                     o === x.O.BURST &&
                         (0, i.jsx)(Y, {
@@ -331,7 +331,7 @@ class Q extends r.PureComponent {
                             messageId: r.id
                         }),
                     (0, i.jsx)(h.aVo, {
-                        className: G.reactors,
+                        className: H.reactors,
                         fade: !0,
                         ref: this.scrollerRef,
                         sections: a,
@@ -373,10 +373,10 @@ class Q extends r.PureComponent {
                     d = l[n];
                 return 1 === t
                     ? 0 === n
-                        ? (0, i.jsx)(h.$jN, { className: G.spinnerMore }, 'hasMore')
+                        ? (0, i.jsx)(h.$jN, { className: H.spinnerMore }, 'hasMore')
                         : null
                     : 0 === l.length && this.state.loadingMore
-                      ? (0, i.jsx)(h.$jN, { className: G.spinner }, 'loadingMore')
+                      ? (0, i.jsx)(h.$jN, { className: H.spinner }, 'loadingMore')
                       : null != d &&
                         (0, i.jsx)(
                             $,
@@ -481,12 +481,12 @@ function et(e) {
             'aria-label': c,
             transitionState: l,
             size: h.CgR.DYNAMIC,
-            className: G.container,
+            className: H.container,
             children: [
                 a
                     ? null
                     : (0, i.jsx)(h.Ttm, {
-                          className: G.scroller,
+                          className: H.scroller,
                           fade: !0,
                           children: b.map((e) => {
                               var t;

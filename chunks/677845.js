@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(159300),
     g = n(800329),
     b = n(470956),
-    y = n(430824),
-    _ = n(496675),
+    _ = n(430824),
+    y = n(496675),
     C = n(434488),
     x = n(27457),
     v = n(251564),
@@ -25,7 +25,7 @@ var r = n(200651),
 function N(e) {
     let { participants: t, onClick: n, onDoubleClick: N, onContextMenu: I, channel: P, className: S, inCall: Z, totalNumberOfParticipants: T, paused: A = !1 } = e,
         w = (0, c.bp)() === O.IlC.POPOUT,
-        R = (0, a.e7)([y.Z], () => y.Z.getGuild(P.guild_id), [P.guild_id]),
+        R = (0, a.e7)([_.Z], () => _.Z.getGuild(P.guild_id), [P.guild_id]),
         { dismissedActivityEntryPointTileChannel: k } = (0, v.d)(),
         M = (0, a.e7)([h.Z], () => h.Z.getUserParticipantCount(P.id), [P]),
         L = (0, b.bt)(P.id, t),
@@ -41,7 +41,7 @@ function N(e) {
                 v.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [P.id, k]);
-    let W = (0, a.e7)([_.Z], () => P.isPrivate() || (0, m.b)(_.Z, R, P), [R, P]),
+    let W = (0, a.e7)([y.Z], () => P.isPrivate() || (0, m.b)(y.Z, R, P), [R, P]),
         U = (null == R ? void 0 : R.afkChannelId) === P.id,
         B = P.userLimit <= 0 || P.userLimit > 1,
         G = (0, a.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(P.id).length <= 0),

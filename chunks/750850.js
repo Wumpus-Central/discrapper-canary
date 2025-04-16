@@ -1,20 +1,20 @@
-t.d(e, { e: () => o });
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    r = t(481060),
-    d = t(378712),
-    s = t(605984),
-    a = t(594174),
-    u = t(388032);
-function o(n) {
-    let e = (0, l.e7)([a.default], () => a.default.getCurrentUser()),
-        t = (0, s.k)(n.id);
-    return (null == e ? void 0 : e.isStaff()) === !0 && n.isDM() && null == t
-        ? (0, i.jsx)(r.sNh, {
+n.d(t, { e: () => u });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    l = n(481060),
+    s = n(378712),
+    a = n(605984),
+    d = n(594174),
+    o = n(388032);
+function u(e) {
+    let t = (0, r.e7)([d.default], () => d.default.getCurrentUser()),
+        n = (0, a.k)(e.id);
+    return (null == t ? void 0 : t.isStaff()) === !0 && e.isDM() && null == n
+        ? (0, i.jsx)(l.sNh, {
               id: 'mark-as-likely-ato',
-              label: u.NW.string(u.t.AWKKgY),
-              action: () => (0, d.J)(n.id)
+              label: o.NW.string(o.t.AWKKgY),
+              action: () => (0, s.J)(e.id)
           })
         : null;
 }

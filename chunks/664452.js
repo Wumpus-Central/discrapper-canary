@@ -1,4 +1,4 @@
-n.d(t, { default: () => v }), n(388685);
+n.d(t, { default: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(831209),
@@ -59,22 +59,22 @@ function N(e, t) {
         e
     );
 }
-function v(e) {
-    let { guildId: t, transitionState: n, onClose: v, analyticsData: y } = e,
+function y(e) {
+    let { guildId: t, transitionState: n, onClose: y, analyticsData: v } = e,
         _ = (0, o.e7)([c.Z], () => c.Z.getGuild(t), [t]),
         C = !!(null == _ ? void 0 : _.hasFeature(h.oNc.INVITES_DISABLED)),
         [I] = i.useState(!1),
         [S, E] = i.useState(f.Fl),
-        w = (0, o.e7)([b.Z], () => b.Z.getGuildIncident(t)),
-        P = (0, p.BT)(_),
-        T = (0, m.SG)(w) || C,
-        Z = (0, m.sN)(w),
+        P = (0, o.e7)([b.Z], () => b.Z.getGuildIncident(t)),
+        w = (0, p.BT)(_),
+        T = (0, m.SG)(P) || C,
+        Z = (0, m.sN)(P),
         [W, k] = i.useState(T),
         [A, D] = i.useState(Z),
         [R, L] = i.useState(!1),
         M = W !== T || A !== Z || R,
-        B = C && !P;
-    if (null == _) return v(), null;
+        B = C && !w;
+    if (null == _) return y(), null;
     function U() {
         k((e) => !e);
     }
@@ -184,7 +184,7 @@ function v(e) {
                     (0, r.jsx)(a.zxk, {
                         onClick: () => {
                             (T || Z) && !W && !A ? ((0, u.n)(_.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, N(O({}, e), { guildId: t }))))) : (0, u.n)(_.id, W, A, S);
-                            let { source: e, alertType: n, messageId: i } = y;
+                            let { source: e, alertType: n, messageId: i } = v;
                             d.default.track(h.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                                 guild_id: t,
                                 source: e,
@@ -194,7 +194,7 @@ function v(e) {
                                 intervention_type_disabled: (0, m.lk)(W, A),
                                 duration: 60 * S
                             }),
-                                v();
+                                y();
                         },
                         color: a.zxk.Colors.BRAND,
                         look: a.zxk.Looks.FILLED,
@@ -203,7 +203,7 @@ function v(e) {
                         children: x.NW.string(x.t['pwm/z8'])
                     }),
                     (0, r.jsx)(a.zxk, {
-                        onClick: v,
+                        onClick: y,
                         color: a.zxk.Colors.PRIMARY,
                         look: a.zxk.Looks.LINK,
                         disabled: I,

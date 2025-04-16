@@ -29,8 +29,8 @@ var l = t(200651),
     m = t(388032),
     Z = t(417254),
     H = t(138715),
-    x = t(979770);
-function p(n) {
+    p = t(979770);
+function x(n) {
     let { channel: e, ChannelIcon: t, selected: i, onClick: r } = n,
         E = (0, C.ZP)(e);
     return (0, l.jsxs)(_.P3F, {
@@ -86,7 +86,7 @@ function v(n) {
                           return null == a
                               ? null
                               : (0, l.jsx)(
-                                    p,
+                                    x,
                                     {
                                         channel: E,
                                         ChannelIcon: a,
@@ -116,7 +116,7 @@ function b(n) {
                   (0, l.jsx)(_.oxh, {
                       width: 415,
                       height: 75,
-                      lightSrc: x,
+                      lightSrc: p,
                       darkSrc: H
                   }),
                   (0, l.jsx)(_.OZU, { note: m.NW.string(m.t['+Zg0lZ']) })
@@ -183,7 +183,7 @@ function M(n) {
         ),
         G = (0, a.e7)([U.Z], () => U.Z.getGuildId()),
         { analyticsLocations: H } = (0, c.ZP)(s.Z.CLIPS_SHARE_MODAL);
-    async function x(n) {
+    async function p(n) {
         let l = null != n ? n : N;
         if (null != l) {
             L(!0);
@@ -201,9 +201,9 @@ function M(n) {
             }
         }
     }
-    async function p(n) {
-        let e = await o.Z.openPrivateChannel(n);
-        await x(e);
+    async function x(n) {
+        let e = await o.Z.openPrivateChannel({ recipientIds: n });
+        await p(e);
     }
     return (0, l.jsxs)(_.Y0X, {
         size: _.CgR.SMALL,
@@ -235,7 +235,7 @@ function M(n) {
             (0, l.jsx)(b, {
                 searchQuery: C,
                 friends: f,
-                onShareClip: p,
+                onShareClip: x,
                 disabled: T
             }),
             null != G &&
@@ -250,7 +250,7 @@ function M(n) {
                         disabled: null == N,
                         submitting: T,
                         color: _.zxk.Colors.BRAND,
-                        onClick: () => x(),
+                        onClick: () => p(),
                         children: m.NW.string(m.t.I8lglZ)
                     }),
                     (0, l.jsx)(_.zxk, {

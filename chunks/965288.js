@@ -17,8 +17,8 @@ var r = n(200651),
     m = n(100527),
     g = n(906732),
     b = n(213609),
-    y = n(795318),
-    _ = n(670188),
+    _ = n(795318),
+    y = n(670188),
     C = n(314897),
     x = n(271383),
     v = n(709586),
@@ -169,7 +169,7 @@ let S = i.memo(function (e) {
                     (0, h.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
+                            let { default: e } = await Promise.all([n.e('79695'), n.e('4040'), n.e('98693'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
@@ -180,7 +180,7 @@ let S = i.memo(function (e) {
                                         showMediaItems: !0,
                                         showStageChannelItems: !0,
                                         showChatItems: !1,
-                                        onInteraction: (0, y.u)('GuildChannelUserContextMenu', O, {
+                                        onInteraction: (0, _.u)('GuildChannelUserContextMenu', O, {
                                             targetUserId: a.id,
                                             tileType: E.TH.USER
                                         })
@@ -192,7 +192,7 @@ let S = i.memo(function (e) {
             },
             [a, j, S, v, l, O]
         );
-        return (0, r.jsx)(_.Z, {
+        return (0, r.jsx)(y.Z, {
             user: a,
             guildId: l.guild_id,
             channelId: l.id,

@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(526846),
     g = n(119315),
     b = n(403404),
-    y = n(906732),
-    _ = n(522651),
+    _ = n(906732),
+    y = n(522651),
     C = n(243778),
     x = n(579185),
     v = n(301076),
@@ -47,9 +47,9 @@ function Z(e) {
             [D]
         ),
         q = (0, c.bp)() === N.IlC.POPOUT,
-        { analyticsLocations: K, parentAnalyticsLocation: X } = (0, y.ZP)(),
+        { analyticsLocations: K, parentAnalyticsLocation: X } = (0, _.ZP)(),
         Q = i.useCallback(() => {
-            (0, _.v)(X, _.d.ACTIVITY),
+            (0, y.v)(X, y.d.ACTIVITY),
                 (0, b.Z)({
                     channel: t,
                     openInPopout: q,

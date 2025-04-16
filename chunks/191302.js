@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(865238),
     g = n(576645),
     b = n(921944),
-    y = n(388032),
-    _ = n(32709);
+    _ = n(388032),
+    y = n(32709);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,8 +45,8 @@ function x(e) {
     let { channel: t } = e,
         l = (0, a.e7)([f.default], () => f.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
         [o, d] = (0, i.useState)(!1),
-        [h, y] = (0, i.useState)(!1),
-        _ = (0, g.bK)(),
+        [h, _] = (0, i.useState)(!1),
+        y = (0, g.bK)(),
         [x, j] = (0, i.useState)(!1);
     (0, u.ZP)(() => {
         t.isHDStreamSplashed && j(!0);
@@ -79,13 +79,13 @@ function x(e) {
         d(!1);
     };
     (0, g.J)(t, () => {
-        if (_) {
-            y(!0), O();
+        if (y) {
+            _(!0), O();
             return;
         }
         d(!0);
         let e = setTimeout(() => {
-            y(!0);
+            _(!0);
         }, 25000);
         return () => clearTimeout(e);
     });
@@ -106,7 +106,7 @@ function x(e) {
                           buyer: l,
                           streaming: !0,
                           onClose: () => {
-                              y(!1), x && I(b.L.DISMISS);
+                              _(!1), x && I(b.L.DISMISS);
                           }
                       })
               ]
@@ -140,11 +140,11 @@ function v(e) {
         animateOnHover: !0
     });
     return (0, r.jsxs)('div', {
-        className: _.trigger,
+        className: y.trigger,
         children: [
             (0, r.jsx)(d.Z, {
                 ref: l,
-                className: _.video,
+                className: y.video,
                 autoPlay: !0,
                 onEnded: t,
                 children: (0, r.jsx)('source', {
@@ -154,7 +154,7 @@ function v(e) {
             }),
             (0, r.jsxs)('div', {
                 ref: a,
-                className: o()(_.content, { [_.masked]: s }),
+                className: o()(y.content, { [y.masked]: s }),
                 children: [
                     (0, r.jsx)(
                         c.qEK,
@@ -168,17 +168,17 @@ function v(e) {
                         )
                     ),
                     (0, r.jsxs)('div', {
-                        className: _.text,
+                        className: y.text,
                         children: [
                             !p &&
                                 (0, r.jsx)(c.Text, {
                                     variant: 'text-sm/normal',
-                                    children: y.NW.string(y.t['i/nliI'])
+                                    children: _.NW.string(_.t['i/nliI'])
                                 }),
                             (0, r.jsx)(c.Text, {
-                                className: _.premium,
+                                className: y.premium,
                                 variant: 'text-sm/normal',
-                                children: y.NW.string(y.t['Fh/mk5'])
+                                children: _.NW.string(_.t['Fh/mk5'])
                             })
                         ]
                     })

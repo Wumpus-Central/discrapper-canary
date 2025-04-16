@@ -12,8 +12,8 @@ var l = n(200651),
     u = n(933557),
     d = n(210887),
     c = n(430824),
-    h = n(751771),
-    g = n(699516),
+    g = n(751771),
+    h = n(699516),
     m = n(594174),
     p = n(768581),
     v = n(624138),
@@ -44,7 +44,7 @@ class _ extends i.Component {
             n,
             { user: i, channel: r } = this.props;
         if (null != i) (t = i.getAvatarURL(null == r ? void 0 : r.guild_id, 32)), (n = x.ZP.getName(i));
-        else if (null != r && ((t = (0, o.x)(r)), (n = (0, u.F6)(r, m.default, g.Z)), null == t && null != r.guild_id)) {
+        else if (null != r && ((t = (0, o.x)(r)), (n = (0, u.F6)(r, m.default, h.Z)), null == t && null != r.guild_id)) {
             let n = c.Z.getGuild(r.guild_id);
             null != n &&
                 (null != n.icon
@@ -104,7 +104,7 @@ class _ extends i.Component {
                             this.renderUserOrChannel(),
                             (0, l.jsxs)('div', {
                                 className: N.inviteRowName,
-                                children: [x.ZP.getName(t), null != n ? (0, u.F6)(n, m.default, g.Z, !0) : null]
+                                children: [x.ZP.getName(t), null != n ? (0, u.F6)(n, m.default, h.Z, !0) : null]
                             })
                         ]
                     }),
@@ -129,7 +129,7 @@ class _ extends i.Component {
             f(this, 'getSuggestedProps', () => {
                 var e;
                 let { row: t } = this.props;
-                return null != (e = null != t ? h.Z.getSelectedInviteMetadata(t) : null) ? e : null;
+                return null != (e = null != t ? g.Z.getSelectedInviteMetadata(t) : null) ? e : null;
             }),
             f(this, 'handleClickInvite', () => {
                 let { user: e, channel: t, inviteKey: n, location: l } = this.props;

@@ -17,7 +17,7 @@ function b(e) {
     let { threadId: t } = e,
         n = (0, l.e7)([s.Z], () => s.Z.getChannel(t)),
         b = (0, l.e7)([s.Z], () => s.Z.getChannel(null == n ? void 0 : n.parent_id)),
-        y = i.useCallback(() => {
+        _ = i.useCallback(() => {
             null != n && null != b && ((0, a.yw)(f.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, u.JG)((0, c.EO)(n, b)));
         }, [n, b]);
     return (0, r.jsxs)('div', {
@@ -41,7 +41,7 @@ function b(e) {
                     (0, r.jsxs)(o.zxk, {
                         className: g.sharePromptCta,
                         innerClassName: g.ctaContent,
-                        onClick: y,
+                        onClick: _,
                         children: [
                             (0, r.jsx)(o.xPt, {
                                 color: 'currentColor',

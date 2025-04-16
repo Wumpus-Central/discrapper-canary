@@ -17,13 +17,13 @@ function m(e) {
         n = (0, u.r_)(t),
         m = (0, i.e7)([o.Z], () => o.Z.hasHidden(t.id)),
         g = (0, d.c)(t.id),
-        { sortOrder: b, tagFilter: y } = (0, c.H)(t.id),
-        _ = (0, i.e7)([s.Z, p.Z], () => !!(s.Z.getThreadIds(t.id, b, y).length > 0) || !!(p.Z.getThreads(t.id, b, y).length > 0), [t.id, b, y]),
-        C = t.isMediaChannel();
-    if (!n || g || (C && _)) return null;
-    let x = m ? (C ? f.NW.string(f.t['WP/IEx']) : f.NW.string(f.t.zfq9V1)) : C ? f.NW.string(f.t.p60yFx) : f.NW.string(f.t.SNOqYG);
+        { sortOrder: b, tagFilter: _, tagSetting: y } = (0, c.H)(t.id),
+        C = (0, i.e7)([s.Z, p.Z], () => !!(s.Z.getThreadIds(t.id, b, _, y).length > 0) || !!(p.Z.getThreads(t.id, b, _, y).length > 0), [t.id, b, _, y]),
+        x = t.isMediaChannel();
+    if (!n || g || (x && C)) return null;
+    let v = m ? (x ? f.NW.string(f.t['WP/IEx']) : f.NW.string(f.t.zfq9V1)) : x ? f.NW.string(f.t.p60yFx) : f.NW.string(f.t.SNOqYG);
     return (0, r.jsx)(h.JO, {
-        tooltip: x,
+        tooltip: v,
         icon: l.d3s,
         onClick: () => a.Z.hideAdminOnboarding(t.id, !m),
         selected: !m

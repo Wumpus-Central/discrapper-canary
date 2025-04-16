@@ -1,114 +1,114 @@
-t.d(n, { Z: () => h });
-var l = t(200651),
-    r = t(192379),
-    i = t(442837),
-    a = t(481060),
-    o = t(616780),
-    u = t(438536),
-    s = t(946273),
-    c = t(346479),
-    d = t(665906),
-    g = t(592125),
-    Z = t(430824),
-    b = t(496675),
-    f = t(594174),
-    p = t(981631),
-    m = t(388032);
-function O(e) {
-    for (var n = 1; n < arguments.length; n++) {
-        var t = null != arguments[n] ? arguments[n] : {},
-            l = Object.keys(t);
+n.d(t, { Z: () => j });
+var r = n(200651),
+    l = n(192379),
+    i = n(442837),
+    o = n(481060),
+    a = n(616780),
+    u = n(438536),
+    s = n(946273),
+    c = n(346479),
+    d = n(665906),
+    b = n(592125),
+    g = n(430824),
+    Z = n(496675),
+    f = n(594174),
+    p = n(981631),
+    O = n(388032);
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(t).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            l.forEach(function (n) {
-                var l;
-                (l = t[n]),
-                    n in e
-                        ? Object.defineProperty(e, n, {
-                              value: l,
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = l);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function N(e, n) {
+function m(e, t) {
     return (
-        (n = null != n ? n : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-            : (function (e, n) {
-                  var t = Object.keys(e);
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, l);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return t;
-              })(Object(n)).forEach(function (t) {
-                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, n, h) {
-    let j = r.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
-    (0, o.$)(j), (0, i.e7)([b.Z], () => b.Z.getGuildVersion(n), [n]);
-    let P = (0, i.e7)([g.Z], () => g.Z.getChannel(h)),
-        x = (0, i.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
-        v = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
-        y = (0, u.Z)(P, 'Context Menu'),
-        _ = (0, d.Xb)(P);
-    if ((null == v ? void 0 : v.id) === e.id) return [y];
-    if (null == x || null == P || null == v) return [];
-    let E = _ || (P.ownerId === v.id && P.type === p.d4z.PRIVATE_THREAD);
+function j(e, t, j) {
+    let P = l.useMemo(() => ({ [t]: [e.id] }), [t, e.id]);
+    (0, a.$)(P), (0, i.e7)([Z.Z], () => Z.Z.getGuildVersion(t), [t]);
+    let N = (0, i.e7)([b.Z], () => b.Z.getChannel(j)),
+        y = (0, i.e7)([g.Z], () => g.Z.getGuild(t), [t]),
+        E = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
+        x = (0, u.Z)(N, 'Context Menu'),
+        v = (0, d.Xb)(N);
+    if ((null == E ? void 0 : E.id) === e.id) return [x];
+    if (null == y || null == N || null == E) return [];
+    let _ = v || (N.ownerId === E.id && N.type === p.d4z.PRIVATE_THREAD);
     return [
-        E
-            ? (0, l.jsx)(a.sNh, {
+        _
+            ? (0, r.jsx)(o.sNh, {
                   id: 'remove',
-                  label: P.isForumPost() ? m.NW.formatToPlainString(m.t.v2KNNz, { user: e.username }) : m.NW.formatToPlainString(m.t['27xWaW'], { user: e.username }),
+                  label: N.isForumPost() ? O.NW.formatToPlainString(O.t.v2KNNz, { user: e.username }) : O.NW.formatToPlainString(O.t['27xWaW'], { user: e.username }),
                   color: 'danger',
-                  action: () => c.Z.removeMember(P, e.id, 'Context Menu')
+                  action: () => c.Z.removeMember(N, e.id, 'Context Menu')
               })
             : null,
-        (0, s.BK)(e, x)
-            ? (0, l.jsx)(a.sNh, {
+        (0, s.BK)(e, y)
+            ? (0, r.jsx)(o.sNh, {
                   id: 'kick',
-                  label: E ? m.NW.formatToPlainString(m.t['1Ie87u'], { user: e.username }) : m.NW.formatToPlainString(m.t['9l/iTU'], { user: e.username }),
+                  label: _ ? O.NW.formatToPlainString(O.t['1Ie87u'], { user: e.username }) : O.NW.formatToPlainString(O.t['9l/iTU'], { user: e.username }),
                   color: 'danger',
                   action: () =>
-                      (0, a.ZDy)(async () => {
-                          let { default: n } = await t.e('5454').then(t.bind(t, 854360));
-                          return (t) =>
-                              (0, l.jsx)(
-                                  n,
-                                  N(O({}, t), {
-                                      guildId: x.id,
+                      (0, o.ZDy)(async () => {
+                          let { default: t } = await n.e('5454').then(n.bind(n, 854360));
+                          return (n) =>
+                              (0, r.jsx)(
+                                  t,
+                                  m(h({}, n), {
+                                      guildId: y.id,
                                       user: e
                                   })
                               );
                       })
               })
             : null,
-        (0, s.mm)(e, x)
-            ? (0, l.jsx)(a.sNh, {
+        (0, s.mm)(e, y)
+            ? (0, r.jsx)(o.sNh, {
                   id: 'ban',
-                  label: E ? m.NW.formatToPlainString(m.t.i62APT, { user: e.username }) : m.NW.formatToPlainString(m.t.WnpUBg, { user: e.username }),
+                  label: _ ? O.NW.formatToPlainString(O.t.i62APT, { user: e.username }) : O.NW.formatToPlainString(O.t.WnpUBg, { user: e.username }),
                   color: 'danger',
                   action: () =>
-                      (0, a.ZDy)(async () => {
-                          let { default: n } = await t.e('43350').then(t.bind(t, 98746));
-                          return (t) =>
-                              (0, l.jsx)(
-                                  n,
-                                  N(O({}, t), {
-                                      guildId: x.id,
+                      (0, o.ZDy)(async () => {
+                          let { default: t } = await n.e('43350').then(n.bind(n, 98746));
+                          return (n) =>
+                              (0, r.jsx)(
+                                  t,
+                                  m(h({}, n), {
+                                      guildId: y.id,
                                       user: e
                                   })
                               );

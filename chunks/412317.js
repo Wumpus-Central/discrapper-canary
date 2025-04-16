@@ -37,7 +37,7 @@ function m(e) {
     }
     return e;
 }
-function g(e, n) {
+function I(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -55,7 +55,7 @@ function g(e, n) {
         e
     );
 }
-function I(e) {
+function g(e) {
     var { user: n, analyticsLocation: t } = e,
         o = (function (e, n) {
             if (null == e) return {};
@@ -81,10 +81,10 @@ function I(e) {
         analyticsLocation: t
     });
     return 0 === i.length
-        ? (0, r.jsx)(s.ef, g(m({}, o), { disabled: !0 }))
+        ? (0, r.jsx)(s.ef, I(m({}, o), { disabled: !0 }))
         : (0, r.jsx)(a.Z, {
               menuItems: i,
-              children: (e) => (0, r.jsx)('div', g(m({}, e), { children: (0, r.jsx)(s.ef, m({}, o)) }))
+              children: (e) => (0, r.jsx)('div', I(m({}, e), { children: (0, r.jsx)(s.ef, m({}, o)) }))
           });
 }
 function y(e) {
@@ -99,7 +99,7 @@ function y(e) {
             hasIncomingPendingGameFriends: t,
             hasOutgoingPendingGameFriends: o
         });
-    return (0, r.jsx)(I, {
+    return (0, r.jsx)(g, {
         tooltipText: a,
         ariaLabel: c,
         icon: u,
@@ -110,7 +110,7 @@ function y(e) {
 }
 function h(e) {
     let { isCurrentUser: n, user: t, relationshipType: a, friendToken: d, onClose: m } = e,
-        { newestAnalyticsLocation: g } = (0, l.ZP)(),
+        { newestAnalyticsLocation: I } = (0, l.ZP)(),
         { gameFriends: h, hasOutgoingPendingGameFriends: j, hasIncomingPendingGameFriends: v } = (0, u.H)({ userId: t.id }),
         x = h.length > 0 || j || v;
     return n || a === f.OGo.BLOCKED
@@ -129,7 +129,7 @@ function h(e) {
                   children: [
                       (0, r.jsx)(y, {
                           user: t,
-                          analyticsLocation: g,
+                          analyticsLocation: I,
                           gameFriends: h,
                           hasIncomingPendingGameFriends: v,
                           hasOutgoingPendingGameFriends: j
@@ -144,11 +144,11 @@ function h(e) {
               ? (0, r.jsxs)('div', {
                     className: b.multipleButtons,
                     children: [
-                        (0, r.jsx)(I, {
+                        (0, r.jsx)(g, {
                             icon: o.iHX,
                             tooltipText: p.NW.string(p.t.zz2i8v),
                             user: t,
-                            analyticsLocation: g
+                            analyticsLocation: I
                         }),
                         (0, r.jsx)(c.c, {
                             userId: t.id,
@@ -160,11 +160,11 @@ function h(e) {
                 ? (0, r.jsxs)('div', {
                       className: b.multipleButtons,
                       children: [
-                          (0, r.jsx)(I, {
+                          (0, r.jsx)(g, {
                               icon: o.iHX,
                               tooltipText: p.NW.string(p.t.ZOFd1N),
                               user: t,
-                              analyticsLocation: g
+                              analyticsLocation: I
                           }),
                           (0, r.jsx)(c.c, {
                               userId: t.id,
@@ -187,7 +187,7 @@ function h(e) {
                               onClick: () => {
                                   i.Z.addRelationship({
                                       userId: t.id,
-                                      context: { location: g },
+                                      context: { location: I },
                                       friendToken: d
                                   });
                               }

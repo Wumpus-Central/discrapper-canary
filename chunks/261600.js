@@ -1,4 +1,4 @@
-n.d(t, { U: () => p });
+n.d(t, { U: () => f });
 var r = n(200651),
     l = n(192379),
     i = n(399606),
@@ -11,14 +11,14 @@ var r = n(200651),
 function h(e) {
     var t, n;
     let { activity: h } = e,
-        { channelId: p } = null != (t = (0, u.rq)(h)) ? t : {},
-        f = (0, i.e7)([c.Z], () => c.Z.getStageInstanceByChannel(p), [p]),
+        { channelId: f } = null != (t = (0, u.rq)(h)) ? t : {},
+        p = (0, i.e7)([c.Z], () => c.Z.getStageInstanceByChannel(f), [f]),
         g = l.useRef(null),
         y = l.useCallback(() => {
-            let e = a.Z.getChannel(p);
+            let e = a.Z.getChannel(f);
             null != e && s.Cq(e);
-        }, [p]),
-        O = null != (n = null == f ? void 0 : f.topic) ? n : h.name,
+        }, [f]),
+        O = null != (n = null == p ? void 0 : p.topic) ? n : h.name,
         N = d.NW.formatToPlainString(d.t['T+DNAA'], { channel: O });
     return (0, r.jsx)('div', {
         ref: g,
@@ -32,7 +32,7 @@ function h(e) {
         })
     });
 }
-class p {
+class f {
     shouldShow(e) {
         return (0, u.JE)(e);
     }

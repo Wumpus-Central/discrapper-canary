@@ -240,7 +240,7 @@ j(ed, 'displayName', 'NotificationStore'),
                                       playSoundIfDisabled: !1,
                                       volume: 0.4,
                                       onClick() {
-                                          u.Z.openPrivateChannel(t);
+                                          u.Z.openPrivateChannel({ recipientIds: t });
                                       },
                                       isUserAvatar: !0
                                   }

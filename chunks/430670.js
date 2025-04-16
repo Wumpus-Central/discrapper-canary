@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(512722),
@@ -14,7 +14,7 @@ var r = n(200651),
     m = n(432958),
     g = n(792379),
     b = n(177222);
-function y(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function y(e) {
     }
     return e;
 }
-function _(e) {
+function y(e) {
     var { channel: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -62,7 +62,7 @@ function _(e) {
         })(e, ['channel']);
     let l = (0, h.Z)();
     (0, s.t)();
-    let { withMutualFriendsCount: _ } = (0, p.j)({ location: 'UserProfilePanelWrapper' }),
+    let { withMutualFriendsCount: y } = (0, p.j)({ location: 'UserProfilePanelWrapper' }),
         [C] = t.recipients,
         x = (0, a.e7)([d.default], () => d.default.getUser(C));
     o()(null != x, 'UserProfilePanelWrapper: user cannot be undefined');
@@ -71,12 +71,12 @@ function _(e) {
         i.useEffect(() => {
             (0, f.Z)(x, {
                 type: 'panel',
-                withMutualFriendsCount: !x.bot && _,
-                withMutualFriends: !x.bot && !_,
+                withMutualFriendsCount: !x.bot && y,
+                withMutualFriends: !x.bot && !y,
                 withMutualGuilds: !0,
                 channelId: t.id
             });
-        }, [x, t.id, _]);
+        }, [x, t.id, y]);
     let { isBlocked: j, isIgnored: O } = (0, a.cj)([u.Z], () => ({
             isBlocked: u.Z.isBlocked(x.id),
             isIgnored: u.Z.isIgnored(x.id)
@@ -91,7 +91,7 @@ function _(e) {
         : E && !(O && I)
           ? (0, r.jsx)(
                 m.A,
-                y(
+                _(
                     {
                         user: x,
                         currentUser: v,
@@ -104,7 +104,7 @@ function _(e) {
           : x.isNonUserBot()
             ? (0, r.jsx)(
                   g.Z,
-                  y(
+                  _(
                       {
                           user: x,
                           currentUser: v,
@@ -115,7 +115,7 @@ function _(e) {
               )
             : (0, r.jsx)(
                   b.Z,
-                  y(
+                  _(
                       {
                           user: x,
                           currentUser: v,

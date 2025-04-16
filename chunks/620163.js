@@ -282,7 +282,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
             },
             [eG.s6.PROFILE_USER_PROFILE]: {
                 section: eH.oAB.PROFILE_CUSTOMIZATION,
-                searchableTitles: [eK.NW.string(eK.t['OU3/Pj'])],
+                searchableTitles: [eK.NW.string(eK.t['2p07FR']), eK.NW.string(eK.t['7vhiqq'])],
                 parent: eG.s6.PROFILE_CUSTOMIZATION
             },
             [eG.s6.PROFILE_SERVER_PROFILES]: {

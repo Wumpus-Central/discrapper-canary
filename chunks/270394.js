@@ -18,15 +18,15 @@ var r = n(200651),
     j = n(410030),
     O = n(933557),
     N = n(346486),
-    v = n(600164),
-    y = n(666657),
+    y = n(600164),
+    v = n(666657),
     _ = n(664452),
     C = n(560114),
     I = n(699516),
     S = n(594174),
     E = n(630388),
-    w = n(965638),
-    P = n(757539),
+    P = n(965638),
+    w = n(757539),
     T = n(981631),
     Z = n(388032),
     W = n(541056),
@@ -93,13 +93,13 @@ function B(e) {
         s = n.uses;
     return (
         n.maxUses > 0 && (s = ''.concat(n.uses, '/').concat(n.maxUses)),
-        (0, r.jsxs)(v.Z, {
+        (0, r.jsxs)(y.Z, {
             className: o()(W.inviteSettingsInviteRow, k.card, { [W.inviteDisabledRow]: l }),
             children: [
-                (0, r.jsxs)(v.Z, {
+                (0, r.jsxs)(y.Z, {
                     grow: L.INVITER,
                     basis: 0,
-                    align: v.Z.Align.CENTER,
+                    align: y.Z.Align.CENTER,
                     className: W.text,
                     children: [
                         null != n.inviter &&
@@ -125,11 +125,11 @@ function B(e) {
                         })
                     ]
                 }),
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(y.Z, {
                     grow: L.INVITE_CODE,
                     shrink: 1,
                     basis: 0,
-                    align: v.Z.Align.CENTER,
+                    align: y.Z.Align.CENTER,
                     className: W.text,
                     children: (0, r.jsxs)('div', {
                         children: [
@@ -171,10 +171,10 @@ function B(e) {
                         ]
                     })
                 }),
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(y.Z, {
                     grow: L.USES,
                     basis: 0,
-                    align: v.Z.Align.CENTER,
+                    align: y.Z.Align.CENTER,
                     className: W.text,
                     children: (0, r.jsx)(m.Text, {
                         className: W.uses,
@@ -182,10 +182,10 @@ function B(e) {
                         children: s
                     })
                 }),
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(y.Z, {
                     grow: L.EXPIRES,
                     basis: 0,
-                    align: v.Z.Align.CENTER,
+                    align: y.Z.Align.CENTER,
                     className: o()(W.text, W.countdownColumn),
                     children: (0, r.jsx)(m.Text, {
                         className: W.countdown,
@@ -207,8 +207,8 @@ function U(e) {
     let { invites: t, guild: l, hide: o, canCreateInvites: a, withV2Actions: c, channel: u = null, showChannel: b = !1, loading: g = !1 } = e;
     s()(null != l, 'guild is required');
     let f = (0, j.ZP)(),
-        x = (0, w.MQ)(l),
-        O = (0, w.O4)(l),
+        x = (0, P.MQ)(l),
+        O = (0, P.O4)(l),
         N = i.useMemo(
             () =>
                 null == t || g
@@ -236,7 +236,7 @@ function U(e) {
         },
         [S, E] = i.useState(62),
         k = () => {
-            let e = { source: y.Zu.GUILD_SETTINGS };
+            let e = { source: v.Zu.GUILD_SETTINGS };
             (0, m.ZDy)(
                 async () => (t) =>
                     (0, r.jsx)(
@@ -272,26 +272,26 @@ function U(e) {
                         })
                     });
                 else
-                    return (0, r.jsxs)(v.Z, {
+                    return (0, r.jsxs)(y.Z, {
                         children: [
-                            (0, r.jsx)(v.Z.Child, {
+                            (0, r.jsx)(y.Z.Child, {
                                 grow: L.INVITER,
                                 basis: 0,
                                 className: A.marginReset,
                                 children: (0, r.jsx)(m.vwX, { children: Z.NW.string(Z.t.EgHyKy) })
                             }),
-                            (0, r.jsx)(v.Z.Child, {
+                            (0, r.jsx)(y.Z.Child, {
                                 basis: 0,
                                 grow: L.INVITE_CODE,
                                 className: A.marginReset,
                                 children: (0, r.jsx)(m.vwX, { children: Z.NW.string(Z.t.LBlFEB) })
                             }),
-                            (0, r.jsx)(v.Z.Child, {
+                            (0, r.jsx)(y.Z.Child, {
                                 grow: L.USES,
                                 basis: 0,
                                 children: (0, r.jsx)(m.vwX, { children: Z.NW.string(Z.t.erWrmJ) })
                             }),
-                            (0, r.jsx)(v.Z.Child, {
+                            (0, r.jsx)(y.Z.Child, {
                                 grow: L.EXPIRES,
                                 basis: 0,
                                 children: (0, r.jsx)(m.vwX, { children: Z.NW.string(Z.t['1aM27e']) })
@@ -354,7 +354,7 @@ function U(e) {
                     'header'
                 );
             if (t === M.ACTIONS_V2)
-                return (0, r.jsx)(P.Y, {
+                return (0, r.jsx)(w.Y, {
                     hasInvites: N.length > 0,
                     setHeight: E,
                     onShowDisableInvites: k,
