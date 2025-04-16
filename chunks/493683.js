@@ -20,40 +20,41 @@ var r = n(544891),
     v = n(388032);
 let O = {
     async openPrivateChannel(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = arguments.length > 3 ? arguments[3] : void 0,
-            o = arguments.length > 4 ? arguments[4] : void 0,
-            a = this._getRecipients(e),
-            s = (e) => {
-                t && E.Z.call(e.id, n, !0, e.isDM() ? e.getRecipientId() : null);
+        let { recipientIds: t, joinCall: n = !1, joinCallVideo: i = !1, location: o, onBeforeTransition: a, navigateToChannel: s = !0 } = e,
+            l = this._getRecipients(t),
+            c = (e) => {
+                n && E.Z.call(e.id, i, !0, e.isDM() ? e.getRecipientId() : null);
             };
-        if (1 === a.length) {
-            let [e] = a,
-                t = this._openCachedDMChannel(e, o);
-            if (null != t) return s(t), Promise.resolve(t.id);
+        if (1 === l.length) {
+            let [e] = l,
+                t = this._openCachedDMChannel(e, a, s);
+            if (null != t) return c(t), Promise.resolve(t.id);
         }
         try {
             let e = await r.tn.post({
                 url: y.ANM.USER_CHANNELS,
-                body: { recipients: a },
-                context: { location: i },
+                body: { recipients: l },
+                context: { location: o },
                 oldFormErrors: !0,
                 retries: 3,
                 rejectWithError: !1
             });
-            null == o || o();
-            let t = this._openPrivateChannel(e.body);
-            return s(t), e.body.id;
+            if (s) {
+                null == a || a();
+                let t = this._openPrivateChannel(e.body);
+                c(t);
+            }
+            return e.body.id;
         } catch (e) {
-            var l;
-            throw ((null == e || null == (l = e.body) ? void 0 : l.code) === y.evJ.QUARANTINED && (0, u.default)(), e);
+            var d;
+            throw ((null == e || null == (d = e.body) ? void 0 : d.code) === y.evJ.QUARANTINED && (0, u.default)(), e);
         }
     },
     _openCachedDMChannel(e, t) {
-        let n = p.Z.getDMFromUserId(e),
-            r = null != n ? p.Z.getChannel(n) : null;
-        return null == r ? null : (null == t || t(), null != (0, c.D)() ? (0, f.Kh)(r.id, { navigationReplace: !0 }) : b.default.selectPrivateChannel(r.id), r);
+        let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+            r = p.Z.getDMFromUserId(e),
+            i = null != r ? p.Z.getChannel(r) : null;
+        return null == i ? null : (n && (null == t || t(), null != (0, c.D)() ? (0, f.Kh)(i.id, { navigationReplace: !0 }) : b.default.selectPrivateChannel(i.id)), i);
     },
     async ensurePrivateChannel(e) {
         let t = this._getRecipients(e),

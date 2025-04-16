@@ -72,10 +72,17 @@ function P(e, t) {
 function j(e) {
     let { user: t, applicationId: n, isGameRelationship: l, onSelect: a } = e,
         d = i.useCallback(() => {
-            c.Z.openPrivateChannel(t.id, !0);
+            c.Z.openPrivateChannel({
+                recipientIds: t.id,
+                joinCall: !0
+            });
         }, [t.id]),
         p = i.useCallback(() => {
-            c.Z.openPrivateChannel(t.id, !0, !0);
+            c.Z.openPrivateChannel({
+                recipientIds: t.id,
+                joinCall: !0,
+                joinCallVideo: !0
+            });
         }, [t.id]),
         h = i.useCallback(() => {
             b.Z.removeFriend({
@@ -212,7 +219,7 @@ class A extends i.PureComponent {
                 let { user: t } = this.props;
                 e.stopPropagation();
                 let n = a().find(h.Z.getMutablePrivateChannels(), (e) => e.type === y.d4z.DM && e.getRecipientId() === t.id);
-                null != n ? (0, p.uL)(y.Z5c.CHANNEL(y.ME, n.id)) : c.Z.openPrivateChannel(t.id);
+                null != n ? (0, p.uL)(y.Z5c.CHANNEL(y.ME, n.id)) : c.Z.openPrivateChannel({ recipientIds: t.id });
             }),
             S(this, 'handleOpenActionsMenu', (e) => {
                 let { user: t, isGameRelationship: n, applicationId: i } = this.props;

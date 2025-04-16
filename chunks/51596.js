@@ -192,7 +192,11 @@ function k(e) {
                 }));
             break;
         case c.h8.USER:
-            i.Z.openPrivateChannel([_.id], !1, !1, 'Quickswitcher'), a.Z.channelListScrollTo(C.ME, f.Z.getDMFromUserId(_.id));
+            i.Z.openPrivateChannel({
+                recipientIds: [_.id],
+                location: 'Quickswitcher'
+            }),
+                a.Z.channelListScrollTo(C.ME, f.Z.getDMFromUserId(_.id));
             break;
         case c.h8.GROUP_DM:
             (0, m.Kh)(_.id, { navigationReplace: !0 }), a.Z.channelListScrollTo(C.ME, _.id);
