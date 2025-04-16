@@ -51163,6 +51163,12 @@ img.thumbnail__0f2e8 {
     text-align: center
 }
 
+.previewLoadingSpinner_f86e69 {
+    background-color: rgba(0, 0, 0, .4);
+    inset: 0;
+    position: absolute
+}
+
 [data-popout-root],
 html {
     --brand-05a: hsla(var(--brand-500-hsl)/0.05);
