@@ -5,6 +5,7 @@ e.exports = {
     buttonContents: 'buttonContents_e6e74f',
     channelAppLauncher: 'channelAppLauncher_e6e74f',
     appLauncherCircleMask: 'appLauncherCircleMask_e6e74f',
+    channelAppLauncherWordlePromo: 'channelAppLauncherWordlePromo_e6e74f',
     appLauncherGlow: 'appLauncherGlow_e6e74f',
     entrypointAnimation: 'entrypointAnimation_e6e74f',
     animationGlow: 'animationGlow_e6e74f',

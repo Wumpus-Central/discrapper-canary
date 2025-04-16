@@ -89,6 +89,7 @@ let U = i.forwardRef(function (e, t) {
         switch (I) {
             case f.O.WORDLE_LOGO_ANIMATION:
                 return (0, r.jsx)('div', {
+                    className: D.channelAppLauncherWordlePromo,
                     children: (0, r.jsx)(U, {
                         size: G ? 'refresh_sm' : void 0,
                         useLottieDefaultColors: !0
