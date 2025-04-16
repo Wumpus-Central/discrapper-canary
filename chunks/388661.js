@@ -1,4 +1,4 @@
-B.d(g, { Z: () => t });
+B.d(g, { Z: () => n });
 var C = B(200651),
     Q = B(120356),
     w = B.n(Q),
@@ -6,63 +6,65 @@ var C = B(200651),
     f = B(481060),
     E = B(550271),
     v = B(494620),
-    I = B(434404),
-    P = B(999382),
-    r = B(817239),
-    e = B(388032),
-    o = B(602268);
-let t = function (A) {
-    let { className: g, guildId: B, tag: Q, badge: t, primaryColor: d, secondaryColor: n, isDisabled: M = !1 } = A,
-        s = (0, D.e7)([P.Z], () => P.Z.getProps().originalProfile),
-        L = null != s && s.tag !== Q;
+    I = B(63063),
+    P = B(434404),
+    r = B(999382),
+    e = B(981631),
+    o = B(817239),
+    t = B(388032),
+    d = B(602268);
+let n = function (A) {
+    let { className: g, guildId: B, tag: Q, badge: n, primaryColor: M, secondaryColor: s, isDisabled: L = !1 } = A,
+        X = (0, D.e7)([r.Z], () => r.Z.getProps().originalProfile),
+        c = null != X && X.tag !== Q;
     return (0, C.jsxs)('div', {
         className: g,
         children: [
             (0, C.jsx)(f.vwX, {
-                className: o.sectionTitle,
-                children: e.NW.string(r.Z['tN+8pK'])
+                className: d.sectionTitle,
+                children: t.NW.string(o.Z['tN+8pK'])
             }),
             (0, C.jsxs)('div', {
-                className: o.tagContainer,
+                className: d.tagContainer,
                 children: [
                     (0, C.jsx)('div', {
-                        className: o.tagInputContainer,
+                        className: d.tagInputContainer,
                         children: (0, C.jsx)(f.oil, {
-                            className: o.tagInputWrapper,
-                            inputClassName: w()(o.tagInput, 'heading-sm/semibold'),
+                            className: d.tagInputWrapper,
+                            inputClassName: w()(d.tagInput, 'heading-sm/semibold'),
                             maxLength: 4,
                             autoFocus: !0,
                             placeholder: 'WUMP',
                             prefixElement: (0, C.jsx)(E.A, {
-                                badge: t,
+                                badge: n,
                                 width: 40,
                                 height: 40,
-                                primaryTintColor: d,
-                                secondaryTintColor: n
+                                primaryTintColor: M,
+                                secondaryTintColor: s
                             }),
-                            disabled: M,
+                            disabled: L,
                             value: null != Q ? Q : '',
                             onChange: function (A) {
-                                I.Z.updateGuildProfile(B, { tag: A });
+                                P.Z.updateGuildProfile(B, { tag: A });
                             }
                         })
                     }),
                     (0, C.jsx)('div', {
-                        className: o.tagTooltip,
+                        className: d.tagTooltip,
                         children: (0, C.jsx)(f.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-muted',
-                            children: e.NW.string(r.Z.UbC8y8)
+                            children: t.NW.string(o.Z.UbC8y8)
                         })
                     })
                 ]
             }),
-            L &&
+            c &&
                 (0, C.jsx)(v.Z, {
-                    className: o.tagChangeInfoBox,
+                    className: d.tagChangeInfoBox,
                     children: (0, C.jsx)(f.Text, {
                         variant: 'text-xs/medium',
-                        children: e.NW.format(r.Z['4ZKDXl'], { articleUrl: '/' })
+                        children: t.NW.format(o.Z['4ZKDXl'], { articleUrl: I.Z.getArticleURL(e.BhN.SERVER_TAGS) })
                     })
                 })
         ]
