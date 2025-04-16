@@ -1419,6 +1419,12 @@ W(
             user_status: e.user_status
         });
     }),
+    H(['QUESTS_USER_COMPLETION_UPDATE'], (e) => {
+        K({
+            type: 'QUESTS_USER_COMPLETION_UPDATE',
+            quest_enrollment_blocked_until: e.quest_enrollment_blocked_until
+        });
+    }),
     H(['APPLICATION_COMMAND_PERMISSIONS_UPDATE'], (e, t) => {
         K({
             type: t,
