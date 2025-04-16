@@ -1,10 +1,11 @@
-n.r(t), n.d(t, { default: () => _ });
+n.r(t), n.d(t, { default: () => p });
 var r,
     i = n(442837),
     o = n(570140),
     a = n(241601),
-    s = n(581883);
-function l(e, t, n) {
+    s = n(581883),
+    l = n(388032);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,28 +18,31 @@ function l(e, t, n) {
         e
     );
 }
-let c = n(388032).NW.currentLocale;
-function u() {
+let u = l.NW.currentLocale;
+function d() {
     var e, t;
     let n = null == (t = s.Z.settings.localization) || null == (e = t.locale) ? void 0 : e.value;
-    return null != n && '' !== n && n !== c && ((c = n), (0, a._2)(c), !0);
+    return null != n && '' !== n && n !== u && ((u = n), (0, a._2)(u), !0);
 }
-function d(e) {
-    (c = e.locale), (0, a._2)(c);
+function f(e) {
+    (u = e.locale), (0, a._2)(u);
 }
-class f extends (r = i.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z), u(), (0, a._2)(c);
+        this.waitFor(s.Z), d(), (0, a._2)(u);
     }
     get locale() {
-        return c;
+        return u;
+    }
+    get systemLocale() {
+        return l.Kj;
     }
 }
-l(f, 'displayName', 'LocaleStore');
-let _ = new f(o.Z, {
-    OVERLAY_INITIALIZE: u,
-    CACHE_LOADED: u,
-    CONNECTION_OPEN: u,
-    USER_SETTINGS_PROTO_UPDATE: u,
-    USER_SETTINGS_LOCALE_OVERRIDE: d
+c(_, 'displayName', 'LocaleStore');
+let p = new _(o.Z, {
+    OVERLAY_INITIALIZE: d,
+    CACHE_LOADED: d,
+    CONNECTION_OPEN: d,
+    USER_SETTINGS_PROTO_UPDATE: d,
+    USER_SETTINGS_LOCALE_OVERRIDE: f
 });
