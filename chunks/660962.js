@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => ei }), n(388685);
+n.d(t, { ZP: () => es }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -42,8 +42,9 @@ var r = n(200651),
     F = n(275302),
     z = n(877248),
     H = n(179517),
-    V = n(79829);
-function Y(e) {
+    V = n(79829),
+    Y = n(540167);
+function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -68,12 +69,12 @@ function Y(e) {
     }
     return e;
 }
-let K = (0, x.Un)({
+let X = (0, x.Un)({
         createPromise: () => n.e('4848').then(n.bind(n, 797967)),
         webpackId: 797967
     }),
-    X = o().debounce((e, t) => (0, w.Uv)(e, t), 200);
-function q(e) {
+    q = o().debounce((e, t) => (0, w.Uv)(e, t), 200);
+function J(e) {
     let { role: t, disabled: n } = e,
         [s, l] = i.useState(t.name);
     return (
@@ -88,14 +89,14 @@ function q(e) {
                 value: s,
                 maxLength: M.VKK,
                 onChange: function (e) {
-                    l(e), X(t.id, e);
+                    l(e), q(t.id, e);
                 },
                 disabled: n
             })
         })
     );
 }
-let J = [
+let Q = [
     {
         id: R.g.SOLID,
         colors: { primary_color: M.p6O },
@@ -112,10 +113,10 @@ let J = [
         labelString: U.t.QTKppa
     }
 ];
-function Q(e) {
+function $(e) {
     let { role: t, guildId: n, selectedStyle: i, disabled: s, shouldShowUpsell: a } = e,
         o = (e) => s || (a && [R.g.HOLOGRAPHIC, R.g.GRADIENT].includes(e)),
-        d = et(U.NW.string(U.t.Mi9KbW)),
+        d = en(U.NW.string(U.t.Mi9KbW)),
         h = (0, p.ZP)(),
         f = (0, j.oC)(n, t),
         x = {
@@ -133,7 +134,7 @@ function Q(e) {
         children: [
             (0, r.jsx)('div', {
                 className: F.roleStyleContainer,
-                children: J.map((e) => {
+                children: Q.map((e) => {
                     let { id: s, colors: a, labelString: g } = e;
                     return (0, r.jsxs)(
                         'button',
@@ -188,7 +189,7 @@ function Q(e) {
                                 (0, r.jsx)(m.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'button-outline-primary-text',
-                                    children: U.NW.format(B.Z.VpEDJS, { magical: (0, r.jsx)($, {}) })
+                                    children: U.NW.format(B.Z.VpEDJS, { magical: (0, r.jsx)(ee, {}) })
                                 }),
                                 (0, r.jsx)(m.Text, {
                                     variant: 'text-xs/medium',
@@ -221,17 +222,17 @@ function Q(e) {
         ]
     });
 }
-function $() {
+function ee() {
     let e = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         { text: t, gradient: n } = (0, m.JUn)((0, c.Rf)(G.SK.primary_color), (0, c.Rf)(G.SK.secondary_color), (0, c.Rf)(G.SK.tertiary_color), e, 'username');
     return (0, r.jsx)('span', {
-        style: Y({}, t.gradientStyle),
+        style: K({}, t.gradientStyle),
         className: l()(n.gradientClassName, t.gradientClassName),
         'data-text': 'magical',
         children: U.NW.string(B.Z['+/IHLi'])
     });
 }
-function ee(e) {
+function et(e) {
     var t, n;
     let { role: i, disabled: s, currentStyle: l, hasEnhancedRoleColors: a } = e;
     return (0, r.jsxs)(m.xJW, {
@@ -243,7 +244,7 @@ function ee(e) {
                 className: F.colorDescription,
                 children: U.NW.string(U.t['9UCxlZ'])
             }),
-            (0, r.jsx)(K, {
+            (0, r.jsx)(X, {
                 defaultColor: M.p6O,
                 colors: l === R.g.GRADIENT && a ? G.tl : M.pmI,
                 value: i.color,
@@ -267,24 +268,24 @@ function ee(e) {
         ]
     });
 }
-function et(e) {
+function en(e) {
     return i.useMemo(() => {
-        var t, r;
-        let i = (0, N.e5)(
-            ((t = Y(
+        var t, n;
+        let r = (0, N.e5)(
+            ((t = K(
                 {},
                 (0, _.ZP)({
                     channelId: '1337',
                     content: e
                 })
             )),
-            (r = r =
+            (n = n =
                 {
                     state: M.yb.SENT,
                     id: '31337'
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -292,27 +293,27 @@ function et(e) {
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(r)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                  })(Object(n)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
             t)
         );
         return (
-            (i.author = new S.Z({
+            (r.author = new S.Z({
                 id: '313337',
                 username: U.NW.string(U.t.cqpybG),
                 discriminator: '0000',
                 bot: !1
             })),
-            (i.author.getAvatarURL = () => n(52008)),
-            i
+            (r.author.getAvatarURL = () => Y.Z),
+            r
         );
     }, [e]);
 }
-function en(e) {
+function er(e) {
     var t, n, i, s;
     let { role: a, guildId: o, disableInteraction: c } = e,
-        d = et(U.NW.string(U.t.Mi9KbW)),
+        d = en(U.NW.string(U.t.Mi9KbW)),
         g = {
             nick: d.author.username,
             colorStrings: {
@@ -363,7 +364,7 @@ function en(e) {
         })
     });
 }
-function er(e) {
+function ei(e) {
     let { role: t, disabled: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -386,7 +387,7 @@ function er(e) {
         ]
     });
 }
-function ei(e) {
+function es(e) {
     let { guild: t, role: n, locked: i, setSelectedSection: s } = e,
         a = (0, I.Z)(t.id, 'GuildSettingsRolesEditDisplay'),
         o = (0, d.e7)([R.Z], () => R.Z.getRoleStyleData(n.id)),
@@ -414,7 +415,7 @@ function ei(e) {
                         setSelectedSection: s
                     })
                 }),
-                (0, r.jsx)(q, {
+                (0, r.jsx)(J, {
                     role: n,
                     disabled: p
                 }),
@@ -425,7 +426,7 @@ function ei(e) {
                 (0, r.jsx)(m.$i$, { className: F.divider }),
                 (a || u) &&
                     null != c &&
-                    (0, r.jsx)(Q, {
+                    (0, r.jsx)($, {
                         role: n,
                         guildId: t.id,
                         selectedStyle: c,
@@ -434,7 +435,7 @@ function ei(e) {
                     }),
                 c !== R.g.HOLOGRAPHIC &&
                     null != c &&
-                    (0, r.jsx)(ee, {
+                    (0, r.jsx)(et, {
                         role: n,
                         disabled: p,
                         currentStyle: c,
@@ -453,13 +454,13 @@ function ei(e) {
                     disabled: p,
                     role: n
                 }),
-                (0, r.jsx)(en, {
+                (0, r.jsx)(er, {
                     role: n,
                     guildId: t.id,
                     disableInteraction: !a
                 }),
                 (0, r.jsx)(m.$i$, { className: F.divider }),
-                (0, r.jsx)(er, {
+                (0, r.jsx)(ei, {
                     role: n,
                     disabled: p
                 }),
