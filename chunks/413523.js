@@ -217,16 +217,11 @@ class D {
     _getEmbeddedActivities() {
         var e, t;
         let n = l.ZP.getEmbeddedActivitiesForChannel(this.channelId).concat(l.ZP.getEmbeddedActivitiesForStartingChannel(this.channelId)),
-            o = new Set(Object.keys(this.participants)),
-            a = n.filter((e) => {
-                var t;
-                null == (t = e.participants) || t.some((e) => o.has(e.userId));
-            }),
-            c = null != (e = l.ZP.getSelfEmbeddedActivityForChannel(this.channelId)) ? e : l.ZP.getSelfEmbeddedActivityForStartingChannel(this.channelId);
-        if (null == c) return a;
+            o = null != (e = l.ZP.getSelfEmbeddedActivityForChannel(this.channelId)) ? e : l.ZP.getSelfEmbeddedActivityForStartingChannel(this.channelId);
+        if (null == o) return n;
         {
-            let e = (0, r.uniqBy)([...a, c], (e) => e.compositeInstanceId);
-            return (null == (t = c.participants) ? void 0 : t.some((e) => e.sessionId === d.default.getSessionId())) && (0, s.R)({ isContextless: c.location.kind === i.E.CONTEXTLESS }) ? e.filter((e) => e.applicationId !== c.applicationId && e.compositeInstanceId !== c.compositeInstanceId) : e;
+            let e = (0, r.uniqBy)([...n, o], (e) => e.compositeInstanceId);
+            return (null == (t = o.participants) ? void 0 : t.some((e) => e.sessionId === d.default.getSessionId())) && (0, s.R)({ isContextless: o.location.kind === i.E.CONTEXTLESS }) ? e.filter((e) => e.applicationId !== o.applicationId && e.compositeInstanceId !== o.compositeInstanceId) : e;
         }
     }
     _getParticipantsForEmbeddedActivities() {
