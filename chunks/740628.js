@@ -12,13 +12,13 @@ var r = t(200651),
     p = t(384816),
     b = t(389190),
     m = t(428927),
-    g = t(228168),
-    I = t(388032),
+    I = t(228168),
+    g = t(388032),
     y = t(301150),
     h = t(923243);
 function j(e) {
     let { section: n, subsection: t, user: o, currentUser: i, displayProfile: l, guildId: s, onClose: c } = e;
-    return n === g.oh.ACTIVITY
+    return n === I.oh.ACTIVITY
         ? (0, r.jsx)(f.Z, {
               user: o,
               currentUser: i,
@@ -26,23 +26,24 @@ function j(e) {
               guildId: s,
               onClose: c
           })
-        : n === g.oh.MUTUAL_FRIENDS
+        : n === I.oh.MUTUAL_FRIENDS
           ? (0, r.jsx)(b.Z, {
                 user: o,
                 onClose: c
             })
-          : n === g.oh.MUTUAL_GUILDS
+          : n === I.oh.MUTUAL_GUILDS
             ? (0, r.jsx)(m.Z, {
                   user: o,
                   onClose: c
               })
-            : n === g.oh.BOT_DATA_ACCESS
+            : n === I.oh.BOT_DATA_ACCESS
               ? (0, r.jsx)(d.Z, { user: o })
-              : n === g.oh.BOT_INFO
+              : n === I.oh.BOT_INFO
                 ? (0, r.jsx)(u.Z, {
                       user: o,
                       currentUser: i,
                       displayProfile: l,
+                      guildId: s,
                       subsection: t,
                       onClose: c
                   })
@@ -56,7 +57,7 @@ function j(e) {
 }
 function v(e) {
     var n, t, d;
-    let { user: u, currentUser: f, displayProfile: p, guildId: b, items: m, initialSection: v = g.oh.USER_INFO, initialSubsection: x, onClose: _ } = e,
+    let { user: u, currentUser: f, displayProfile: p, guildId: b, items: m, initialSection: v = I.oh.USER_INFO, initialSubsection: x, onClose: _ } = e,
         { trackUserProfileAction: O } = (0, a.KZ)(),
         Z = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
         [{ section: N, subsection: P }, E] = o.useState({
@@ -105,7 +106,7 @@ function v(e) {
                       (0, r.jsx)('div', { className: y.emptyIconStreamerMode }),
                       (0, r.jsx)('div', {
                           className: y.emptyText,
-                          children: I.NW.string(I.t.Br1ls7)
+                          children: g.NW.string(g.t.Br1ls7)
                       })
                   ]
               })
