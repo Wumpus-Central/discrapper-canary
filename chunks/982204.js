@@ -32,23 +32,24 @@ let _ = (e) => {
 };
 function p(e) {
     let { sku: t, skuPricePreview: n } = e;
-    o()(null != n.amount, 'SKU must have a price set.');
-    let i = n.amount - n.tax,
-        p = (0, a.ed)('SKUInvoicePreview'),
-        h = t.productLine === u.POd.COLLECTIBLES && p;
+    o()(null != n.amount, 'SKU must have a price set.'), o()(null != n.invoice_items && 1 === n.invoice_items.length, 'SKU preview must have single line item');
+    let i = n.invoice_items[0],
+        p = null != i.unit_price ? i.unit_price.amount : n.subtotal,
+        h = (0, a.ed)('SKUInvoicePreview'),
+        m = t.productLine === u.POd.COLLECTIBLES && h;
     return !n.tax_inclusive && n.tax > 0
         ? (0, r.jsxs)(s.aO, {
               className: f.invoice,
               children: [
-                  h
+                  m
                       ? (0, r.jsx)(l.C, {
                             sku: t,
-                            value: (0, c.T4)(i, n.currency),
+                            value: (0, c.T4)(p, n.currency),
                             className: f.subscriptionCostRow
                         })
                       : (0, r.jsx)(s.B1, {
                             label: t.name,
-                            value: (0, c.T4)(i, n.currency),
+                            value: (0, c.T4)(p, n.currency),
                             className: f.subscriptionCostRow
                         }),
                   (0, r.jsx)(s.B1, {
@@ -67,6 +68,6 @@ function p(e) {
         : (0, r.jsx)(_, {
               sku: t,
               value: (0, c.T4)(n.amount, n.currency),
-              shouldShowProductPreview: h
+              shouldShowProductPreview: m
           });
 }
