@@ -1,55 +1,55 @@
-n.d(t, { Z: () => u }), n(388685);
-var r = n(200651);
+n.d(t, { Z: () => s }), n(388685);
+var i = n(200651);
 n(192379);
 var l = n(442837),
-    i = n(481060),
+    r = n(481060),
     o = n(699516),
     a = n(388032);
-function u(e) {
-    let { user: t, onAction: u, appContext: c } = e,
-        s = t.id,
-        [d, f] = (0, l.Wu)(
+function s(e) {
+    let { user: t, onAction: s, appContext: u } = e,
+        d = t.id,
+        [c, f] = (0, l.Wu)(
             [o.Z],
             () => {
                 var e;
-                return [o.Z.isFriend(s), null != (e = o.Z.getNickname(s)) ? e : null];
+                return [o.Z.isFriend(d), null != (e = o.Z.getNickname(d)) ? e : null];
             },
-            [s]
+            [d]
         );
-    if (!d) return null;
-    let g = null == f ? a.NW.string(a.t.BGYkaG) : a.NW.string(a.t['8pOYUF']);
-    return (0, r.jsx)(i.sNh, {
+    if (!c) return null;
+    let Z = null == f ? a.NW.string(a.t.BGYkaG) : a.NW.string(a.t['8pOYUF']);
+    return (0, i.jsx)(r.sNh, {
         id: null == f ? 'add-friend-nickname' : 'edit-friend-nickname',
-        label: g,
+        label: Z,
         action: () => {
-            null == u || u(),
-                (0, i.ZDy)(
+            null == s || s(),
+                (0, r.ZDy)(
                     async () => {
                         let { default: e } = await n.e('25070').then(n.bind(n, 670794));
                         return (n) =>
-                            (0, r.jsx)(
+                            (0, i.jsx)(
                                 e,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
+                                            i = Object.keys(n);
                                         'function' == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
+                                            (i = i.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                 })
                                             )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                (r = n[t]),
+                                            i.forEach(function (t) {
+                                                var i;
+                                                (i = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
-                                                              value: r,
+                                                              value: i,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r);
+                                                        : (e[t] = i);
                                             });
                                     }
                                     return e;
@@ -62,7 +62,7 @@ function u(e) {
                                 )
                             );
                     },
-                    { contextKey: null != c ? (0, i.VnL)(c) : void 0 }
+                    { contextKey: null != u ? (0, r.VnL)(u) : void 0 }
                 );
         }
     });

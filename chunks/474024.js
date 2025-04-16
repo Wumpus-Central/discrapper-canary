@@ -73,7 +73,7 @@ function x(e) {
                 className: l()(f.column, { [f.profileViewDisabled]: b }),
                 children: (0, r.jsx)(m.Z, {
                     guildId: x,
-                    name: n.name
+                    name: null
                 })
             })
         ]
