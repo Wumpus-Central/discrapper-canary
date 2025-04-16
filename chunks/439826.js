@@ -149,24 +149,19 @@ function q(e) {
 }
 function D(e) {
     var t;
-    let { asset: n, visible: s } = e,
-        i = o.useRef(null);
+    let { asset: n, reducedMotionEnabled: s, visible: i } = e,
+        l = o.useRef(null);
     return (
         o.useEffect(() => {
-            if (null != i.current)
-                if (s) i.current.play();
-                else {
-                    var e;
-                    null == (e = i.current) || e.pause();
-                }
-        }, [s]),
+            null != l.current && i && l.current.play();
+        }, [i]),
         (0, r.jsx)(f.Z, {
-            ref: i,
-            autoPlay: !1,
+            ref: l,
+            autoPlay: !s,
             loop: !0,
             muted: !0,
             playsInline: !0,
-            className: a()(R.videoOverlay, { [R.videoOverlayVisible]: s }),
+            className: a()(R.videoOverlay, { [R.videoOverlayVisible]: i }),
             controls: !1,
             children: (0, r.jsx)('source', {
                 src: n.url,
@@ -261,6 +256,7 @@ function W(e) {
                         !$ &&
                         (0, r.jsx)(D, {
                             asset: et,
+                            reducedMotionEnabled: H,
                             visible: C
                         })
                 ]
