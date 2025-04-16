@@ -3,6 +3,7 @@ n.d(t, {
     GY: () => m,
     R4: () => h,
     oE: () => g,
+    qH: () => b,
     yb: () => p
 }),
     n(388685),
@@ -67,4 +68,7 @@ function E(e) {
             currentDaysPaused: r
         };
     }
+}
+function b(e) {
+    return null != e && a().isMoment(e) && e.isSameOrAfter(a()());
 }
