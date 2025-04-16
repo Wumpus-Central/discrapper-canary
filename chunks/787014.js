@@ -38,7 +38,7 @@ function _(e) {
     });
 }
 function p(e) {
-    let { name: t, type: n, topic: r, bitrate: o, userLimit: a, nsfw: s, flags: l, rateLimitPerUser: c, defaultThreadRateLimitPerUser: u, defaultAutoArchiveDuration: d, template: f, defaultReactionEmoji: _, rtcRegion: p, videoQualityMode: h, autoArchiveDuration: m, locked: g, invitable: E, availableTags: b, defaultSortOrder: y, defaultForumLayout: v, iconEmoji: O, themeColor: I } = e;
+    let { name: t, type: n, topic: r, bitrate: o, userLimit: a, nsfw: s, flags: l, rateLimitPerUser: c, defaultThreadRateLimitPerUser: u, defaultAutoArchiveDuration: d, template: f, defaultReactionEmoji: _, rtcRegion: p, videoQualityMode: h, autoArchiveDuration: m, locked: g, invitable: E, availableTags: b, defaultSortOrder: y, defaultForumLayout: v, defaultTagSetting: O, iconEmoji: I, themeColor: S } = e;
     i.Z.dispatch({
         type: 'CHANNEL_SETTINGS_UPDATE',
         name: t,
@@ -61,13 +61,14 @@ function p(e) {
         availableTags: b,
         defaultSortOrder: y,
         defaultForumLayout: v,
-        iconEmoji: O,
-        themeColor: I
+        defaultTagSetting: O,
+        iconEmoji: I,
+        themeColor: S
     });
 }
 async function h(e, t) {
-    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: v, rtcRegion: O, videoQualityMode: I, autoArchiveDuration: S, locked: T, invitable: N, availableTags: A, defaultSortOrder: C, defaultForumLayout: R, iconEmoji: P, themeColor: w } = t,
-        D = s.Z.getChannel(e);
+    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: v, rtcRegion: O, videoQualityMode: I, autoArchiveDuration: S, locked: T, invitable: N, availableTags: A, defaultSortOrder: C, defaultForumLayout: R, defaultTagSetting: P, iconEmoji: w, themeColor: D } = t,
+        L = s.Z.getChannel(e);
     return (
         i.Z.dispatch({ type: 'CHANNEL_SETTINGS_SUBMIT' }),
         await a.Z.unarchiveThreadIfNecessary(e),
@@ -114,16 +115,17 @@ async function h(e, t) {
                               })),
                     default_sort_order: C,
                     default_forum_layout: R,
+                    default_tag_setting: P,
                     icon_emoji:
-                        null != P
+                        null != w
                             ? {
-                                  id: P.id,
-                                  name: P.name
+                                  id: w.id,
+                                  name: w.name
                               }
-                            : null === P
+                            : null === w
                               ? null
                               : void 0,
-                    theme_color: w
+                    theme_color: D
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -134,8 +136,8 @@ async function h(e, t) {
                         type: 'CHANNEL_SETTINGS_SUBMIT_SUCCESS',
                         channelId: e
                     });
-                    let n = null == D ? void 0 : D.getGuildId();
-                    return null == n || (null == D ? void 0 : D.isThread()) || o.Z.checkGuildTemplateDirty(n), t;
+                    let n = null == L ? void 0 : L.getGuildId();
+                    return null == n || (null == L ? void 0 : L.isThread()) || o.Z.checkGuildTemplateDirty(n), t;
                 },
                 (e) => (
                     i.Z.dispatch({
