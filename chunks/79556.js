@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(873696),
     m = n(66999),
     b = n(340541),
-    _ = n(22082),
-    y = n(665906),
+    y = n(22082),
+    _ = n(665906),
     v = n(592125),
     O = n(430824),
     C = n(496675),
@@ -94,7 +94,7 @@ class k extends N.ZP {
               });
     }
     render() {
-        let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: m, isSubscriptionGated: _, isFavoriteSuggestion: y, subtitle: v, forceTopLevelThread: O, embeddedApps: C, resolvedUnreadSetting: S, withGuildIcon: j, enableActivities: E } = this.props,
+        let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: m, isSubscriptionGated: y, isFavoriteSuggestion: _, subtitle: v, forceTopLevelThread: O, embeddedApps: C, resolvedUnreadSetting: S, withGuildIcon: j, enableActivities: E } = this.props,
             x = (0, b.jW)({ location: 'text_channel' }).entrypoints,
             N = E && null != C && C.length > 0,
             I = (0, g.D)(v),
@@ -119,7 +119,7 @@ class k extends N.ZP {
                             className: A.iconVisibility,
                             channel: e,
                             guild: t,
-                            selected: !y && n,
+                            selected: !_ && n,
                             muted: i,
                             unread: l,
                             mentionCount: u,
@@ -129,7 +129,7 @@ class k extends N.ZP {
                             onMouseDown: this.handleMouseDown,
                             onContextMenu: this.handleContextMenu,
                             connectDragPreview: m ? p : null,
-                            isFavoriteSuggestion: y,
+                            isFavoriteSuggestion: _,
                             channelTypeOverride: O ? Z.d4z.GUILD_TEXT : void 0,
                             resolvedUnreadSetting: S,
                             withGuildIcon: j,
@@ -137,14 +137,14 @@ class k extends N.ZP {
                                 channel: e,
                                 unread: l,
                                 mentionCount: u,
-                                isSubscriptionGated: _
+                                isSubscriptionGated: y
                             }),
                             children: [
-                                y &&
+                                _ &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [this.renderAcceptSuggestionButton(), this.renderRemoveSuggestionButton()]
                                     }),
-                                !y &&
+                                !_ &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             this.renderChannelInfo(),
@@ -258,7 +258,7 @@ class k extends N.ZP {
 let M = (0, d.B)(k);
 function U(e) {
     let { channel: t, guild: n, disableSorting: i, isFavoriteCategory: l, muted: o, selected: a } = e,
-        { hasActiveThreads: c, hasMoreActiveThreads: u } = (0, y.JQ)(t),
+        { hasActiveThreads: c, hasMoreActiveThreads: u } = (0, _.JQ)(t),
         d = (0, s.cj)([S.ZP], () => ({
             unread: S.ZP.hasUnread(t.id),
             ackMessageId: S.ZP.ackMessageId(t.id),
@@ -272,7 +272,7 @@ function U(e) {
                 canReorderChannel: !0 !== i && (n.id === T._ || (null != e ? C.Z.can(Z.Plq.MANAGE_CHANNELS, e) : C.Z.can(Z.Plq.MANAGE_CHANNELS, n)))
             };
         }),
-        b = (0, s.e7)([_.Z], () => _.Z.shouldIndicateNewChannel(n.id, t.id)),
+        b = (0, s.e7)([y.Z], () => y.Z.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: O, isSubscriptionGated: x } = (0, m.Z)(t.id),
         N = (0, s.e7)([j.ZP], () => j.ZP.isFavorite(n.id, t.id)),
         P = (0, s.e7)(

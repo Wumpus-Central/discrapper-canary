@@ -54,7 +54,7 @@ function p(e, t) {
 }
 function f(e) {
     var t,
-        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: _, background: y, showUnread: v = !1 } = e,
+        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: y, background: _, showUnread: v = !1 } = e,
         O = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -101,7 +101,7 @@ function f(e) {
                           },
                 className: l()(u.containerDefault, d.wrapper, { [d.modeSelected]: b }, i),
                 children: [
-                    y,
+                    _,
                     v ? (0, r.jsx)('div', { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)('div', {
                         className: l()([d.link, d.basicChannelRowLink, f]),
@@ -117,7 +117,7 @@ function f(e) {
                                     'aria-hidden': !0,
                                     children: m
                                 }),
-                                _
+                                y
                             ]
                         })
                     })

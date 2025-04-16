@@ -84,7 +84,7 @@ class b {
                             sortOrder: t.getDefaultSortOrder(),
                             tagFilter: f,
                             scrollPosition: 0,
-                            tagSetting: s.z.MATCH_SOME
+                            tagSetting: t.getDefaultTagSetting()
                         });
                 }
                 return n;

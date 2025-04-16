@@ -38,8 +38,8 @@ var r = n(200651),
     F = n(961675),
     D = n(883429),
     z = n(238349),
-    H = n(109434),
-    B = n(456269),
+    B = n(109434),
+    H = n(456269),
     U = n(90372),
     V = n(985518),
     G = n(228392),
@@ -222,8 +222,8 @@ function e_(e) {
             isSearchLoading: M,
             layoutType: A
         } = (function (e) {
-            let { sortOrder: t, tagFilter: n, layoutType: r, tagSetting: a } = (0, H.H)(e.id),
-                i = (0, B.vP)({
+            let { sortOrder: t, tagFilter: n, layoutType: r, tagSetting: a } = (0, B.H)(e.id),
+                i = (0, H.vP)({
                     channel: e,
                     sortOrder: t,
                     tagFilter: n,
@@ -236,9 +236,9 @@ function e_(e) {
                     return !t && !n;
                 }),
                 { threadIds: s, canLoadMore: o, loadMore: c, loading: d } = (0, T.qQ)(e, t, n, a),
-                { searchResults: u, isSearchLoading: m } = (0, B.XZ)({ channelId: e.id });
+                { searchResults: u, isSearchLoading: m } = (0, H.XZ)({ channelId: e.id });
             return (
-                (0, B.ES)(e, t, n, a),
+                (0, H.ES)(e, t, n, a),
                 {
                     activeThreadIds: i,
                     archivedThreadIds: s,
@@ -256,10 +256,10 @@ function e_(e) {
         L = m.length > 0,
         W = L || f.length > 0,
         z = (0, O.Z)(t),
-        { tagFilter: X, tagSetting: K } = (0, H.H)(t.id);
-    (0, B.ku)(t, X, K, u);
-    let Q = (0, B.jR)(t),
-        ee = (0, B.eZ)(t),
+        { tagFilter: X, tagSetting: K } = (0, B.H)(t.id);
+    (0, H.ku)(t, X, K, u);
+    let Q = (0, H.jR)(t),
+        ee = (0, H.eZ)(t),
         et = a.useRef(null),
         { observePostVisibilityAnalytics: er } = (function (e) {
             let { guildId: t, channelId: n, scrollerRef: r } = e;
@@ -409,19 +409,19 @@ function e_(e) {
             editorHeight: i,
             isGridLayout: eg
         },
-        eH = a.useRef(ez);
+        eB = a.useRef(ez);
     a.useEffect(() => {
-        eH.current = ez;
+        eB.current = ez;
     }),
         a.useEffect(() => {
             var e, t;
-            let { editorHeight: n, isGridLayout: r } = eH.current,
+            let { editorHeight: n, isGridLayout: r } = eB.current,
                 a = r ? eX : et,
                 i = null == (e = a.current) ? void 0 : e.getScrollerState();
             null != i && !eD && i.scrollTop > n && (null == (t = a.current) || t.scrollTo({ to: 0 }));
         }, [eD]);
     let {
-            updateListScrollerRef: eB,
+            updateListScrollerRef: eH,
             renderListSection: eU,
             renderListItem: eV,
             getListSectionHeight: eG,
@@ -776,7 +776,7 @@ function e_(e) {
                                               em(
                                                   eu(
                                                       {
-                                                          ref: eB(n),
+                                                          ref: eH(n),
                                                           className: ed.list,
                                                           sections: eZ,
                                                           sectionHeight: eG,
@@ -872,11 +872,11 @@ function eS(e) {
                 setEditorAdditionRowHeight: s
             };
         }, c.X),
-        { tagFilter: U, layoutType: V } = (0, H.H)(s.id),
+        { tagFilter: U, layoutType: V } = (0, B.H)(s.id),
         q = (0, Y.AF)(),
-        J = (0, H.v)(),
+        J = (0, B.v)(),
         $ = (0, g.e7)([M.Z], () => M.Z.canChatInGuild(s.guild_id)),
-        ee = (0, B.r_)(s),
+        ee = (0, H.r_)(s),
         en = (0, I.cD)(s),
         [ea, ei] = a.useState(en),
         [, el] = (0, _.AB)(null != (i = s.getGuildId()) ? i : void 0),
@@ -900,7 +900,7 @@ function eS(e) {
             handler: ex
         });
     let eb = (0, g.e7)([A.Z], () => A.Z.getUploads(s.id, Z.d.FirstThreadMessage)),
-        ej = (0, B.ql)(s),
+        ej = (0, H.ql)(s),
         ev = a.useRef(null),
         eC = a.useRef(null),
         [e_, ey] = a.useState(0),

@@ -17,8 +17,8 @@ var r = n(200651),
     g = n(311352),
     m = n(668519),
     b = n(562224),
-    _ = n(803647),
-    y = n(131704),
+    y = n(803647),
+    _ = n(131704),
     v = n(944486),
     O = n(626135),
     C = n(870569),
@@ -62,10 +62,10 @@ let N = i.memo(function (e) {
             [G]
         ),
         H = i.useCallback(() => {
-            (0, _.Z)(I);
+            (0, y.Z)(I);
         }, [I]),
         F = i.useCallback(() => {
-            let e = null != T && (0, y.vd)(T.type) ? T : null,
+            let e = null != T && (0, _.vd)(T.type) ? T : null,
                 t = null != e ? e.getGuildId() : w;
             if (U && null != R && null != v.Z.getVoiceChannelId()) {
                 (0, m.s)('Activity Panel'), (0, b.Z)(R.pid);
@@ -142,7 +142,7 @@ let N = i.memo(function (e) {
                           }),
                           (d = a.hGI),
                           (N = null != R ? j.NW.formatToPlainString(j.t.AB5gT0, { game: R.name }) : j.NW.string(j.t.FeUKeH)))
-                        : ((t = !0), (l = null), (d = a.hGI), (N = null != T && (0, y.vd)(T.type) ? j.NW.string(j.t.uQn9Bw) : null != w ? j.NW.string(j.t.fBXEoK) : j.NW.string(j.t.n3feND))),
+                        : ((t = !0), (l = null), (d = a.hGI), (N = null != T && (0, _.vd)(T.type) ? j.NW.string(j.t.uQn9Bw) : null != w ? j.NW.string(j.t.fBXEoK) : j.NW.string(j.t.n3feND))),
                   (0, r.jsx)('div', {
                       className: E.panelButtonContainer,
                       children: (0, r.jsx)(C.Z, {

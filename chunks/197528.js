@@ -1,6 +1,6 @@
 n.r(t), n.d(t, { default: () => E }), n(388685), n(35282);
-var a = n(200651),
-    r = n(192379),
+var r = n(200651),
+    a = n(192379),
     o = n(593473),
     l = n(512969),
     i = n(399606),
@@ -23,7 +23,7 @@ let y = n(575703);
 function j() {
     let e,
         t = (0, l.TH)(),
-        [n, d] = r.useState(() => {
+        [n, d] = a.useState(() => {
             if (t.pathname === g.Z5c.ACTIVATE_HANDOFF) {
                 let { user_code: e } = o.parse(window.location.search);
                 return {
@@ -37,15 +37,15 @@ function j() {
             };
         }),
         j = (0, i.e7)([f.Z], () => f.Z.hasLoadedExperiments);
-    r.useEffect(() => {
+    a.useEffect(() => {
         h.default.isAuthenticated() && !j && s.Z.getExperiments();
     }, [j]),
         (0, c.Z)(),
         (0, x.Y)(n);
-    let w = r.useCallback(() => {
+    let w = a.useCallback(() => {
             d({ type: 'user-code-input' });
         }, [d]),
-        E = r.useCallback(
+        E = a.useCallback(
             (e) => {
                 d({
                     type: 'authorization',
@@ -54,7 +54,7 @@ function j() {
             },
             [d]
         ),
-        k = r.useCallback(
+        k = a.useCallback(
             (e) => {
                 d({
                     type: 'success',
@@ -63,7 +63,7 @@ function j() {
             },
             [d]
         ),
-        T = r.useCallback(
+        T = a.useCallback(
             (e) => {
                 d({
                     type: 'error',
@@ -75,16 +75,16 @@ function j() {
         I = !0;
     switch (n.type) {
         case 'handoff':
-            (e = (0, a.jsx)(v.c, { code: n.code })), (I = !1);
+            (e = (0, r.jsx)(v.c, { code: n.code })), (I = !1);
             break;
         case 'user-code-input':
-            e = (0, a.jsx)(C.v, {
+            e = (0, r.jsx)(C.v, {
                 usePrefilledCode: n.usePrefilledCode || !1,
                 onUserCodeAccepted: E
             });
             break;
         case 'authorization':
-            (e = (0, a.jsx)(m.B, {
+            (e = (0, r.jsx)(m.B, {
                 data: n.userCodeData,
                 onDenied: w,
                 onError: T,
@@ -93,31 +93,31 @@ function j() {
                 (I = !1);
             break;
         case 'success':
-            e = (0, a.jsx)(_.u, {
+            e = (0, r.jsx)(_.u, {
                 onComplete: () => (0, p.uL)(g.Z5c.ME),
                 data: n.userCodeData
             });
             break;
         case 'error':
-            e = (0, a.jsx)(b.c, { onTryAgain: w });
+            e = (0, r.jsx)(b.c, { onTryAgain: w });
             break;
         default:
             e = null;
     }
-    return (0, a.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: N.activatePage,
         children: [
-            (0, a.jsx)('img', {
+            (0, r.jsx)('img', {
                 className: N.artwork,
                 src: y,
                 alt: ''
             }),
-            (0, a.jsx)(u.Z, {
+            (0, r.jsx)(u.Z, {
                 show: !0,
                 className: N.logo
             }),
             I
-                ? (0, a.jsx)('div', {
+                ? (0, r.jsx)('div', {
                       className: N.content,
                       children: e
                   })
@@ -127,5 +127,5 @@ function j() {
 }
 let w = (0, d.e)(j),
     E = function () {
-        return (0, l.TH)().pathname !== g.Z5c.ACTIVATE_HANDOFF ? (0, a.jsx)(w, {}) : (0, a.jsx)(j, {});
+        return (0, l.TH)().pathname !== g.Z5c.ACTIVATE_HANDOFF ? (0, r.jsx)(w, {}) : (0, r.jsx)(j, {});
     };

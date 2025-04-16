@@ -8,12 +8,12 @@ var n = r(192379),
     s = r(823961);
 let o = (e) => {
     let { update: t, draw: r, emit: o, tickRate: d, improvePerformance: f, shouldTick: m } = (0, l.Z)(e),
-        p = n.useMemo(() => new i.ZP(), []),
-        h = n.useCallback(
+        h = n.useMemo(() => new i.ZP(), []),
+        p = n.useCallback(
             (e) => {
-                (e.assetMap = p), r(e);
+                (e.assetMap = h), r(e);
             },
-            [p, r]
+            [h, r]
         ),
         [y, w] = n.useState(!1),
         v = n.useRef(null),
@@ -34,7 +34,7 @@ let o = (e) => {
                                   size: 64,
                                   forcePNG: !0
                               });
-                await p.loadRemoteImage(i, l),
+                await h.loadRemoteImage(i, l),
                     o(i, n),
                     w(!0),
                     null != x.current && clearTimeout(x.current),
@@ -50,7 +50,7 @@ let o = (e) => {
             }
             let t = E.current;
             return null != t && ((E.current = void 0), e(t)), a.Z.subscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e), () => a.Z.unsubscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e);
-        }, [p, o]),
+        }, [h, o]),
         n.useEffect(
             () => () => {
                 null != x.current &&
@@ -80,7 +80,7 @@ let o = (e) => {
         }, [y, m]),
         {
             update: t,
-            draw: h,
+            draw: p,
             tickRate: d,
             improvePerformance: f,
             playing: y

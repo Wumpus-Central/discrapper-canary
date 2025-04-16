@@ -1,6 +1,6 @@
 n.d(t, {
     Qo: () => m,
-    ZP: () => _
+    ZP: () => y
 });
 var r,
     i = n(200651),
@@ -31,8 +31,8 @@ let b = (e) => {
             })
         });
     },
-    _ = (e) => {
-        let { showAnimations: t = !0, iconClassName: n, staticPercentage: r, innerCircleClassName: l, progressCircleStrokeSize: o, backgroundCircleSize: c, percentage: d, initialPercentage: m, progressCircleVariation: _ = 0, avatarDecoAssetId: y, avatarDecoAssetDescription: v, ellipseOpacity: O, customAnimationClassName: C, circleColor: S, circleStroke: j } = e,
+    y = (e) => {
+        let { showAnimations: t = !0, iconClassName: n, staticPercentage: r, innerCircleClassName: l, progressCircleStrokeSize: o, backgroundCircleSize: c, percentage: d, initialPercentage: m, progressCircleVariation: y = 0, avatarDecoAssetId: _, avatarDecoAssetDescription: v, ellipseOpacity: O, customAnimationClassName: C, circleColor: S, circleStroke: j } = e,
             E = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
             x = t && !E;
         return (0, i.jsx)('div', {
@@ -46,9 +46,9 @@ let b = (e) => {
                 progressCircleStrokeSize: o,
                 percentage: null != r ? r : d,
                 initialPercentage: null != r ? r : m,
-                progressCircleVariation: _,
+                progressCircleVariation: y,
                 children: (() => {
-                    switch (_) {
+                    switch (y) {
                         case 0:
                             return (0, i.jsx)(h.Z, {
                                 className: x ? g.nitroGemAnimation : void 0,
@@ -61,9 +61,9 @@ let b = (e) => {
                                 ellipseOpacity: O
                             });
                         case 2:
-                            if (null != y)
+                            if (null != _)
                                 return (0, i.jsx)(b, {
-                                    avatarDecoAssetId: y,
+                                    avatarDecoAssetId: _,
                                     avatarDecoAssetDescription: v
                                 });
                             return null;

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => v });
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     l = n(120356),
     s = n.n(l),
     a = n(442837),
@@ -18,24 +18,24 @@ var r = n(200651),
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
@@ -48,8 +48,8 @@ function N(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -63,14 +63,14 @@ function v(e) {
         l = (0, a.e7)([g.Z], () => g.Z.can(f.Plq.MANAGE_CHANNELS, t), [t]),
         u = t.availableTags.length >= p.pC,
         m = t.availableTags.length > 0,
-        v = i.useCallback(() => {
+        v = r.useCallback(() => {
             let e = t.availableTags.length >= p.pC;
             l &&
                 !e &&
                 (0, c.ZDy)(async () => {
                     let { default: e } = await n.e('21971').then(n.bind(n, 201049));
                     return (n) =>
-                        (0, r.jsx)(
+                        (0, i.jsx)(
                             e,
                             N(b({}, n), {
                                 channelId: t.id,
@@ -79,14 +79,14 @@ function v(e) {
                         );
                 });
         }, [t, l]),
-        C = i.useCallback(
+        C = r.useCallback(
             (e) => {
                 l &&
                     (0, c.ZDy)(async () => {
-                        let { default: i } = await n.e('21971').then(n.bind(n, 201049));
+                        let { default: r } = await n.e('21971').then(n.bind(n, 201049));
                         return (n) =>
-                            (0, r.jsx)(
-                                i,
+                            (0, i.jsx)(
+                                r,
                                 N(b({}, n), {
                                     channelId: t.id,
                                     guildId: t.guild_id,
@@ -100,23 +100,23 @@ function v(e) {
         {
             handleDragStart: S,
             handleDragReset: w,
-            handleDragComplete: Z
+            handleDragComplete: O
         } = (0, h.Z)(t.availableTags, (e) => {
             (0, d.pW)({ availableTags: e });
         });
-    return (0, r.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: j.tags,
         children: [
             m
                 ? t.availableTags.map((e) =>
-                      (0, r.jsx)(
+                      (0, i.jsx)(
                           y,
                           {
                               tag: e,
                               availableTags: t.availableTags,
                               canManageChannels: l,
                               onTagClick: C,
-                              onDragComplete: Z,
+                              onDragComplete: O,
                               onDragReset: w,
                               onDragStart: S
                           },
@@ -125,10 +125,10 @@ function v(e) {
                   )
                 : null,
             m
-                ? (0, r.jsx)(c.P3F, {
+                ? (0, i.jsx)(c.P3F, {
                       onClick: v,
                       className: s()(j.addTags, { [j.disabled]: !l || u }),
-                      children: (0, r.jsx)(c.qJs, {
+                      children: (0, i.jsx)(c.qJs, {
                           size: 'custom',
                           'aria-label': x.NW.string(x.t['/jubeH']),
                           color: o.Z.unsafe_rawColors.WHITE_500.css,
@@ -136,7 +136,7 @@ function v(e) {
                           height: 20
                       })
                   })
-                : (0, r.jsx)(c.zxk, {
+                : (0, i.jsx)(c.zxk, {
                       disabled: !l,
                       onClick: v,
                       children: x.NW.string(x.t['/jubeH'])
@@ -145,7 +145,7 @@ function v(e) {
     });
 }
 function y(e) {
-    let { tag: t, availableTags: n, canManageChannels: i, onTagClick: l, onDragComplete: a, onDragStart: o, onDragReset: c } = e,
+    let { tag: t, availableTags: n, canManageChannels: r, onTagClick: l, onDragComplete: a, onDragStart: o, onDragReset: c } = e,
         d = n.findIndex((e) => e.id === t.id),
         {
             drag: h,
@@ -160,7 +160,7 @@ function y(e) {
             onDragComplete: a,
             onDragReset: c
         });
-    return (0, r.jsx)('div', {
+    return (0, i.jsx)('div', {
         className: s()(j.container, {
             [j.dropIndicatorBefore]: null != g && d < g,
             [j.dropIndicatorAfter]: null != g && d > g
@@ -168,13 +168,13 @@ function y(e) {
         ref: (e) => {
             h(p(e));
         },
-        onMouseEnter: () => f(i),
+        onMouseEnter: () => f(r),
         onMouseLeave: () => f(!1),
-        children: (0, r.jsx)(m.Z, {
+        children: (0, i.jsx)(m.Z, {
             tag: t,
-            disabled: !i,
+            disabled: !r,
             ariaLabel: x.NW.formatToPlainString(x.t.jhSvBw, { name: t.name }),
-            onClick: i ? () => l(t) : void 0
+            onClick: r ? () => l(t) : void 0
         })
     });
 }

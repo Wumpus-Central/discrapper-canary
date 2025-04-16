@@ -19,8 +19,8 @@ var i = n(120356),
     g = n(795338),
     m = n(279604),
     b = n(981631),
-    _ = n(921944),
-    y = n(680278),
+    y = n(921944),
+    _ = n(680278),
     v = n(388032),
     O = n(423151);
 function C(e) {
@@ -30,8 +30,8 @@ function C(e) {
             powerups: n,
             markAsDismissed: i
         }),
-        header: v.NW.formatToPlainString(y.Z['Zg/m9P'], { perkName: n.title }),
-        content: v.NW.formatToPlainString(y.Z['1EGXSE'], { perkName: n.title }),
+        header: v.NW.formatToPlainString(_.Z['Zg/m9P'], { perkName: n.title }),
+        content: v.NW.formatToPlainString(_.Z['1EGXSE'], { perkName: n.title }),
         buttonCTA: v.NW.string(v.t.RzWDqa),
         onClick: () => (0, f.Z)(t, n.skuId),
         markAsDismissed: i
@@ -48,8 +48,8 @@ function S(e) {
             powerups: l,
             markAsDismissed: n
         }),
-        header: v.NW.string(y.Z.xyE2AQ),
-        content: i ? v.NW.formatToPlainString(y.Z.IJP4YG, { perks: o }) : v.NW.formatToPlainString(y.Z['6kywho'], { perks: o }),
+        header: v.NW.string(_.Z.xyE2AQ),
+        content: i ? v.NW.formatToPlainString(_.Z.IJP4YG, { perks: o }) : v.NW.formatToPlainString(_.Z['6kywho'], { perks: o }),
         buttonCTA: v.NW.string(v.t.RzWDqa),
         onClick: () =>
             i
@@ -77,9 +77,9 @@ function j(e) {
             powerups: n,
             markAsDismissed: i
         }),
-        header: v.NW.formatToPlainString(y.Z.LmpChI, { guildName: l }),
-        content: n.length > 1 ? v.NW.formatToPlainString(y.Z.wcQOqK, { perks: a }) : v.NW.formatToPlainString(y.Z.ZF8NT0, { perk: a }),
-        buttonCTA: c ? v.NW.string(y.Z.gSxlHR) : v.NW.string(v.t.RzWDqa),
+        header: v.NW.formatToPlainString(_.Z.LmpChI, { guildName: l }),
+        content: n.length > 1 ? v.NW.formatToPlainString(_.Z.wcQOqK, { perks: a }) : v.NW.formatToPlainString(_.Z.ZF8NT0, { perk: a }),
+        buttonCTA: c ? v.NW.string(_.Z.gSxlHR) : v.NW.string(v.t.RzWDqa),
         onClick: (e) => (c ? o(e) : (0, f.Z)(t)),
         markAsDismissed: i
     });
@@ -97,7 +97,7 @@ function E(e) {
                 : (0, r.jsx)(g.g, { className: O.image }),
             (0, r.jsx)(a.olH, {
                 className: O.close,
-                onClick: () => n(_.L.USER_DISMISS)
+                onClick: () => n(y.L.USER_DISMISS)
             })
         ]
     });

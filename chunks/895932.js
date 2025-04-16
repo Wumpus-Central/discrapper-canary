@@ -116,7 +116,7 @@ function m(e) {
                             children: d.NW.string(d.t['3b//lJ'])
                         }),
                         action: () => {
-                            x(t.getDefaultSortOrder()), b(t.getDefaultLayout()), j(i.z.MATCH_SOME);
+                            x(t.getDefaultSortOrder()), b(t.getDefaultLayout()), j(t.getDefaultTagSetting());
                         }
                     })
                 })

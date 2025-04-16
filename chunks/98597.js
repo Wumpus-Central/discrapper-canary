@@ -20,8 +20,8 @@ var r,
     g = n(427679),
     m = n(155409),
     b = n(131704),
-    _ = n(199902),
-    y = n(430824),
+    y = n(199902),
+    _ = n(430824),
     v = n(496675),
     O = n(914010),
     C = n(281029),
@@ -136,7 +136,7 @@ function T(e) {
 function A(e) {
     let { channel: t, isDefaultChannel: r = !1, locked: o, tabIndex: u, forceShowButtons: f, hasChannelInfo: b = !1 } = e,
         { entrypoints: O } = (0, h._k)({ location: 'channel_base' }),
-        C = (0, a.e7)([y.Z], () => y.Z.getGuild(t.getGuildId())),
+        C = (0, a.e7)([_.Z], () => _.Z.getGuild(t.getGuildId())),
         x = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
         P = (0, a.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(t.id), [t.id]),
         w = (0, a.e7)([v.Z], () => (0, p.b)(v.Z, C, t, x)),
@@ -146,7 +146,7 @@ function A(e) {
     if (o || !w) return null;
     function R() {
         if (null != C) {
-            let e = _.Z.getAllActiveStreams().filter((e) => e.state !== S.jm8.ENDED && e.channelId === t.id);
+            let e = y.Z.getAllActiveStreams().filter((e) => e.state !== S.jm8.ENDED && e.channelId === t.id);
             (0, c.ZDy)(async () => {
                 let { default: r } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
                 return (n) =>

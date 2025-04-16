@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(594174),
     m = n(40153),
     b = n(603592),
-    _ = n(981631),
-    y = n(675999),
+    y = n(981631),
+    _ = n(675999),
     v = n(388032),
     O = n(176330);
 let C = {
@@ -70,7 +70,7 @@ function j(e) {
         j = i.useMemo(() => Object.values(s), [s]),
         E = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
         x = i.useMemo(() => j.some((e) => e.isOwner(E)), [j, E]),
-        N = (0, o.s9z)((e) => (0, o.DEQ)(e, y.PU)),
+        N = (0, o.s9z)((e) => (0, o.DEQ)(e, _.PU)),
         { analyticsLocations: I } = (0, a.ZP)(),
         P = (0, u.Q3)('CreateJoinGuildButton'),
         w = (0, r.jsx)(b.Z, {
@@ -79,10 +79,10 @@ function j(e) {
             onClick: () => {
                 (0, d.yU)()
                     ? (0, h.Z)({
-                          analyticsSource: { page: _.Sbl.CREATE_JOIN_GUILD_MODAL },
+                          analyticsSource: { page: y.Sbl.CREATE_JOIN_GUILD_MODAL },
                           analyticsLocation: {
-                              page: _.Sbl.CREATE_JOIN_GUILD_MODAL,
-                              section: _.jXE.GUILD_CAP_UPSELL_MODAL
+                              page: y.Sbl.CREATE_JOIN_GUILD_MODAL,
+                              section: y.jXE.GUILD_CAP_UPSELL_MODAL
                           },
                           analyticsLocations: I
                       })

@@ -83,7 +83,7 @@ let z = a.memo(function (e) {
         m = (0, o.e7)([_.Z], () => _.Z.getChannel(n));
     return null == m
         ? null
-        : (0, r.jsx)(H, {
+        : (0, r.jsx)(B, {
               id: t,
               channel: m,
               goToThread: a,
@@ -95,14 +95,14 @@ let z = a.memo(function (e) {
               gridSectionBoundaries: d
           });
 });
-function H(e) {
+function B(e) {
     let { id: t, channel: n, goToThread: i, overrideMedia: u, className: m, coords: h, gridCoords: g, gridSectionBoundaries: f, observePostVisibilityAnalytics: p } = e,
         b = (0, o.e7)([_.Z], () => _.Z.getChannel(n.parent_id)),
         j = n.id,
         S = a.useRef(null),
         I = (0, o.e7)([C.ZP], () => C.ZP.getCurrentSidebarChannelId(n.parent_id) === n.id),
         { firstMessage: D, loaded: z } = (0, O.cl)(n),
-        { firstMedia: H } = (0, N.mX)({
+        { firstMedia: B } = (0, N.mX)({
             firstMessage: D,
             formatInline: !1,
             noStyleAndInteraction: !1
@@ -126,7 +126,7 @@ function H(e) {
         [er, ea] = (0, T.rI)(h.width - 2 * T.LT),
         ei = (0, N.xw)(n, s.z.CREATION_DATE, M.R6.POSTED_DURATION_AGO),
         el = (0, P.NN)(n),
-        es = (null == D ? void 0 : D.blocked) || null == (null != u ? u : H),
+        es = (null == D ? void 0 : D.blocked) || null == (null != u ? u : B),
         eo = (0, R.nX)({
             id: t,
             row: g.row,
@@ -255,7 +255,7 @@ function H(e) {
             (0, r.jsx)('div', {
                 className: W.footer,
                 children: (0, r.jsx)(d.Rny, {
-                    children: (0, r.jsx)(B, {
+                    children: (0, r.jsx)(H, {
                         channel: n,
                         firstMessage: D,
                         facepileRef: K
@@ -265,7 +265,7 @@ function H(e) {
         ]
     });
 }
-function B(e) {
+function H(e) {
     let { channel: t, facepileRef: n, firstMessage: a } = e,
         i = (0, m.Q)(t.id),
         l = (null == a ? void 0 : a.reactions) != null && a.reactions.length > 0;

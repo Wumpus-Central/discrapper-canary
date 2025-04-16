@@ -32,19 +32,19 @@ function u(e) {
     return e;
 }
 function d(e) {
-    let { children: t, text: n, color: l, disableWrapper: d = !1, disabled: h = !1, hideOnClick: p = !0, shouldShow: f, forceOpen: g, selected: m = !1, tooltipClass: b, tooltipContentClass: _ } = e,
-        y = (0, a.Q3)('ListItemTooltip');
+    let { children: t, text: n, color: l, disableWrapper: d = !1, disabled: h = !1, hideOnClick: p = !0, shouldShow: f, forceOpen: g, selected: m = !1, tooltipClass: b, tooltipContentClass: y } = e,
+        _ = (0, a.Q3)('ListItemTooltip');
     return (0, r.jsx)(s.ua7, {
         shouldShow: f,
         forceOpen: g,
-        spacing: y ? 12 : 20,
+        spacing: _ ? 12 : 20,
         hideOnClick: p,
         text: h ? null : n,
         position: 'right',
         color: l,
         'aria-label': !1,
         tooltipClassName: o()(c.listItemTooltip, b),
-        tooltipContentClassName: _,
+        tooltipContentClassName: y,
         children: (e) => {
             var n, l;
             return d

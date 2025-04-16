@@ -1,12 +1,12 @@
-t.d(n, { Z: () => a });
+t.d(n, { Z: () => i });
 var r = t(200651);
 t(192379);
-var i = t(906732);
-function a(e, n) {
+var l = t(906732);
+function i(e, n) {
     return function (t) {
-        let { analyticsLocations: a } = (0, i.ZP)(n);
-        return (0, r.jsx)(i.Gt, {
-            value: a,
+        let { analyticsLocations: i } = (0, l.ZP)(n);
+        return (0, r.jsx)(l.Gt, {
+            value: i,
             children: (0, r.jsx)(
                 e,
                 (function (e) {

@@ -9,4 +9,4 @@ let r = 'hello',
     i = 'version',
     o = 'force-resync-version',
     a = 3,
-    s = 'stable-53';
+    s = 'stable-54';

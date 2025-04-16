@@ -19,8 +19,8 @@ var r = n(200651),
     g = n(906732),
     m = n(540059),
     b = n(434404),
-    _ = n(151494),
-    y = n(496675),
+    y = n(151494),
+    _ = n(496675),
     v = n(259580),
     O = n(267642),
     C = n(624138),
@@ -80,7 +80,7 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         let { guild: t, onSelect: n } = e,
             [l, o] = i.useState(t.premiumProgressBarEnabled),
             [s, a] = i.useState(!1),
-            u = (0, c.e7)([y.Z], () => y.Z.can(N.Plq.MANAGE_GUILD, t)),
+            u = (0, c.e7)([_.Z], () => _.Z.can(N.Plq.MANAGE_GUILD, t)),
             p = async () => {
                 u && (a(!0), await b.Z.saveGuild(t.id, { premiumProgressBarEnabled: !l }), o(!l), a(!1));
             };
@@ -109,7 +109,7 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             l = (0, m.Q3)('GuildBoostingSidebarDisplay'),
             { analyticsLocations: u } = (0, g.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
             b = (0, O.Jh)(t.id),
-            C = (0, _.Z)(t.id),
+            C = (0, y.Z)(t.id),
             A = (0, O.FZ)(b),
             D = null == A,
             L = null != A ? A : b,
@@ -117,7 +117,7 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 var e;
                 return null != (e = j.Z.getCountForGuild(t.id)) ? e : 0;
             }),
-            U = (0, c.e7)([y.Z], () => y.Z.can(N.Plq.MANAGE_GUILD, t));
+            U = (0, c.e7)([_.Z], () => _.Z.can(N.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
             M !== C && (0, S.v)(t.id, C);
         }, [t.id, M, C]);

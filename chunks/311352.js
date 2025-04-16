@@ -15,8 +15,8 @@ var i = n(399606),
     g = n(924557),
     m = n(435064),
     b = n(39604),
-    _ = n(981631),
-    y = n(388032),
+    y = n(981631),
+    _ = n(388032),
     v = n(856587);
 function O(e) {
     (0, s.jW)(e, async () => {
@@ -71,7 +71,7 @@ let C = (e) => {
                     position: 'top',
                     header: (0, r.jsx)('div', {
                         className: v.header,
-                        children: y.NW.format(y.t['o+srEx'], {
+                        children: _.NW.format(_.t['o+srEx'], {
                             keybind: t,
                             keybindHook: () =>
                                 (0, r.jsx)('span', {
@@ -88,7 +88,7 @@ let C = (e) => {
                         variant: 'text-sm/normal',
                         color: 'always-white',
                         className: v.bodyText,
-                        children: y.NW.format(y.t.DWeRm5, {
+                        children: _.NW.format(_.t.DWeRm5, {
                             keybindHook: () =>
                                 (0, r.jsx)('div', {
                                     className: v.keyCombo,
@@ -113,14 +113,14 @@ let C = (e) => {
                 clipsEnabled: m.Z.getSettings().clipsEnabled,
                 isAtMaxSavingClipsOperations: m.Z.getIsAtMaxSaveClipOperations()
             })),
-            u = (0, i.e7)([p.ZP], () => p.ZP.getKeybindForAction(_.kg4.SAVE_CLIP));
+            u = (0, i.e7)([p.ZP], () => p.ZP.getKeybindForAction(y.kg4.SAVE_CLIP));
         if (!(n && l) || null == u || t) return null;
         let v = f.BB(u.shortcut, !0);
         return (0, r.jsx)(C, {
             keybindString: v,
             children: (0, r.jsx)(d.Z, {
                 disabled: s,
-                tooltipText: null != u ? y.NW.formatToPlainString(y.t.HIMcv7, { hotkey: f.BB(null == u ? void 0 : u.shortcut, !0) }) : y.NW.string(y.t.s52pjo),
+                tooltipText: null != u ? _.NW.formatToPlainString(_.t.HIMcv7, { hotkey: f.BB(null == u ? void 0 : u.shortcut, !0) }) : _.NW.string(_.t.s52pjo),
                 onClick: () => {
                     (0, b.C1)(), (0, c.v)(e, c.d.CLIP);
                 },

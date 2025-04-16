@@ -1,7 +1,7 @@
 n.d(t, { Z: () => l });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(325767);
+var r = n(325767);
 function l(e) {
     var t,
         n,
@@ -9,49 +9,49 @@ function l(e) {
         o = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                i = (function (e, t) {
+                i,
+                r = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        i = {},
+                        i,
+                        r = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (i = 0; i < l.length; i++) (n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
-            return i;
+            return r;
         })(e, ['color', 'foreground', 'backgroundColor']);
-    return (0, r.jsxs)(
+    return (0, i.jsxs)(
         'svg',
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+                    i = Object.keys(n);
                 'function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
+                    (i = i.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
+                    i.forEach(function (t) {
+                        var i;
+                        (i = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: r,
+                                      value: i,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
+                                : (e[t] = i);
                     });
             }
             return e;
-        })({}, (0, i.Z)(o))),
+        })({}, (0, r.Z)(o))),
         (n = n =
             {
                 width: '272',
@@ -60,7 +60,7 @@ function l(e) {
                 fill: 'none',
                 xmlns: 'http://www.w3.org/2000/svg',
                 children: [
-                    (0, r.jsx)('rect', {
+                    (0, i.jsx)('rect', {
                         className: s,
                         y: '15.5',
                         width: '272',
@@ -68,7 +68,7 @@ function l(e) {
                         rx: '12',
                         fill: a
                     }),
-                    (0, r.jsx)('rect', {
+                    (0, i.jsx)('rect', {
                         className: s,
                         opacity: '0.5',
                         x: '12',
@@ -78,7 +78,7 @@ function l(e) {
                         rx: '4',
                         fill: l
                     }),
-                    (0, r.jsx)('rect', {
+                    (0, i.jsx)('rect', {
                         className: s,
                         opacity: '0.5',
                         x: '12',
@@ -88,7 +88,7 @@ function l(e) {
                         rx: '4',
                         fill: l
                     }),
-                    (0, r.jsx)('rect', {
+                    (0, i.jsx)('rect', {
                         className: s,
                         opacity: '0.5',
                         x: '12',
@@ -98,7 +98,7 @@ function l(e) {
                         rx: '4',
                         fill: l
                     }),
-                    (0, r.jsx)('rect', {
+                    (0, i.jsx)('rect', {
                         className: s,
                         opacity: '0.5',
                         x: '12',
@@ -108,7 +108,7 @@ function l(e) {
                         rx: '4',
                         fill: l
                     }),
-                    (0, r.jsx)('rect', {
+                    (0, i.jsx)('rect', {
                         className: s,
                         opacity: '0.5',
                         x: '196',
@@ -118,14 +118,14 @@ function l(e) {
                         rx: '8',
                         fill: l
                     }),
-                    (0, r.jsx)('path', {
+                    (0, i.jsx)('path', {
                         className: s,
                         fillRule: 'evenodd',
                         clipRule: 'evenodd',
                         d: 'M222 49.5C219.791 49.5 218 51.2909 218 53.5V65.5C218 67.7091 219.791 69.5 222 69.5H234C236.209 69.5 238 67.7091 238 65.5V53.5C238 51.2909 236.209 49.5 234 49.5H222ZM226 55.5C226 54.3952 225.103 53.5 224 53.5C222.894 53.5 222 54.3952 222 55.5C222 56.6056 222.894 57.5 224 57.5C225.103 57.5 226 56.6056 226 55.5ZM225 61.5L222 65.5H234L231 58.5L227 63.5L225 61.5Z',
                         fill: '#C4C4C4'
                     }),
-                    (0, r.jsx)('rect', {
+                    (0, i.jsx)('rect', {
                         className: s,
                         opacity: '0.5',
                         x: '12',
@@ -135,7 +135,7 @@ function l(e) {
                         rx: '4',
                         fill: l
                     }),
-                    (0, r.jsx)('circle', {
+                    (0, i.jsx)('circle', {
                         className: s,
                         opacity: '0.5',
                         cx: '54',
@@ -144,7 +144,7 @@ function l(e) {
                         fill: l,
                         fillOpacity: '0.48'
                     }),
-                    (0, r.jsx)('rect', {
+                    (0, i.jsx)('rect', {
                         className: s,
                         opacity: '0.5',
                         x: '64',
@@ -154,7 +154,7 @@ function l(e) {
                         rx: '4',
                         fill: l
                     }),
-                    (0, r.jsx)('rect', {
+                    (0, i.jsx)('rect', {
                         className: s,
                         x: '0.5',
                         y: '16',
@@ -171,8 +171,8 @@ function l(e) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(n)).forEach(function (e) {

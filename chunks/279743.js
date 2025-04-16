@@ -17,7 +17,7 @@ function f(e) {
         g = (0, c.dQu)(h).spring({ opacity: 0.1 }),
         m = (0, c.dQu)(h).spring({ opacity: 0 }),
         b = (0, c.dQu)(h).spring({ opacity: 1 }),
-        [_, y] = (0, c.q_F)(
+        [y, _] = (0, c.q_F)(
             () => ({
                 from: {
                     backgroundColor: f,
@@ -45,7 +45,7 @@ function f(e) {
             let { startColor: e, handleRest: t, endColor: n, targetBorderColor: r, targetColor: i, animationDelay: l } = O.current,
                 { useReducedMotion: o } = d.Z,
                 s = 200 * !o;
-            y({
+            _({
                 reset: !0,
                 immediate: !1,
                 to: {
@@ -57,7 +57,7 @@ function f(e) {
                     easing: a.Z.Easing.ease
                 }
             }),
-                y({
+                _({
                     delay: l,
                     immediate: o,
                     to: [
@@ -71,7 +71,7 @@ function f(e) {
                         easing: a.Z.Easing.ease
                     }
                 }),
-                y({
+                _({
                     delay: l + 200 + 200,
                     immediate: o,
                     to: [
@@ -86,9 +86,9 @@ function f(e) {
                     },
                     onRest: t
                 });
-        }, [y]),
+        }, [_]),
         (0, r.jsx)(s.animated.div, {
-            style: _,
+            style: y,
             className: o()(p.settingsItemHighlight, n),
             children: t
         })

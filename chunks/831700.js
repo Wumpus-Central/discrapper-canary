@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(117358),
     m = n(201895),
     b = n(718589),
-    _ = n(933557),
-    y = n(557135),
+    y = n(933557),
+    _ = n(557135),
     v = n(873696),
     O = n(446226),
     C = n(305325),
@@ -179,7 +179,7 @@ class en extends V.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: s, locked: a, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: _, canMoveMembers: y, showTutorial: v, hasActiveEvent: O, embeddedApps: C, isSubscriptionGated: S, isFavoriteSuggestion: j, withGuildIcon: E } = this.props,
+        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: s, locked: a, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: y, canMoveMembers: _, showTutorial: v, hasActiveEvent: O, embeddedApps: C, isSubscriptionGated: S, isFavoriteSuggestion: j, withGuildIcon: E } = this.props,
             { shouldShowActivities: x, shouldShowGuildVerificationPopout: P } = this.state,
             w = (0, N.jW)({ location: 'voice_channel' }).entrypoints,
             T = this.getVoiceStatesCount(),
@@ -288,8 +288,8 @@ class en extends V.ZP {
                 ]
             });
         return (
-            y && (A = f(A)),
-            _ && (A = h(p(A))),
+            _ && (A = f(A)),
+            y && (A = h(p(A))),
             v &&
                 (A = (0, r.jsx)(Z.Z, {
                     childRef: this.ref,
@@ -317,7 +317,7 @@ class en extends V.ZP {
             $(this, 'handleVoiceConnect', () => {
                 let { locked: e, connected: t, channel: n, unverifiedAccount: r, needSubscriptionToAccess: i } = this.props;
                 r && this.setState({ shouldShowGuildVerificationPopout: !0 }),
-                    y.Z.handleVoiceConnect({
+                    _.Z.handleVoiceConnect({
                         channel: n,
                         connected: t,
                         needSubscriptionToAccess: i,
@@ -443,9 +443,9 @@ function ei(e) {
         }),
         p = (0, s.e7)([G.Z], () => G.Z.hasVideo(n.id)),
         g = (0, f.ZP)(n),
-        m = (0, _.ZP)(n),
+        m = (0, y.ZP)(n),
         b = (0, E.qY)(n.id),
-        { isSubscriptionGated: y, needSubscriptionToAccess: v } = (0, j.Z)(n.id),
+        { isSubscriptionGated: _, needSubscriptionToAccess: v } = (0, j.Z)(n.id),
         C = (0, O.Z)(),
         S = (0, s.e7)([U.ZP], () => U.ZP.isFavorite(t.id, n.id)),
         x = e.connected || (null == C ? void 0 : C.channelId) === n.id,
@@ -454,7 +454,7 @@ function ei(e) {
             isChannelSelected: o,
             isChannelCollapsed: a,
             voiceStates: c,
-            isSubscriptionGated: y,
+            isSubscriptionGated: _,
             needSubscriptionToAccess: v,
             enableConnectedUserLimit: !0,
             enableActivities: !0
@@ -470,7 +470,7 @@ function ei(e) {
                     embeddedActivityType: q.IIU.PLAYING,
                     video: p,
                     hasActiveEvent: null != b,
-                    isSubscriptionGated: y,
+                    isSubscriptionGated: _,
                     needSubscriptionToAccess: v
                 },
                 u,

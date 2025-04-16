@@ -17,8 +17,8 @@ var n = r(200651),
     N = r(644941),
     h = r(388032),
     x = r(263930),
-    j = r(276220);
-function v(e) {
+    v = r(276220);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -52,17 +52,17 @@ let b = (e) => {
             var l, s;
             return (0, n.jsx)(
                 u.P3F,
-                ((l = v({}, e)),
+                ((l = j({}, e)),
                 (s = s =
                     {
-                        className: j.similarGameImageClickable,
+                        className: v.similarGameImageClickable,
                         onClick: async () => {
                             a(f.as.ClickSimilarGame, t.applicationId),
                                 (0, u.ZDy)(() =>
                                     Promise.resolve((e) =>
                                         (0, n.jsx)(
                                             N.default,
-                                            v(
+                                            j(
                                                 {
                                                     applicationId: t.applicationId,
                                                     source: f.m1.SimilarGames
@@ -78,7 +78,7 @@ let b = (e) => {
                         children: (0, n.jsx)(E.C, {
                             game: t,
                             application: i,
-                            className: j.similarGameImage,
+                            className: v.similarGameImage,
                             size: E.Z.SMALL
                         })
                     }),
@@ -119,12 +119,12 @@ function I(e) {
     f && null == m)
         ? (0, n.jsxs)('div', {
               children: [
-                  (0, n.jsx)('div', { className: l()(j.loadingHeading, x.sectionHeader) }),
+                  (0, n.jsx)('div', { className: l()(v.loadingHeading, x.sectionHeader) }),
                   (0, n.jsx)('div', {
                       className: l()(x.row, x.gapLg),
                       children: o()
                           .range(0, 5)
-                          .map((e) => (0, n.jsx)('div', { className: j.loadingArtwork }, e))
+                          .map((e) => (0, n.jsx)('div', { className: v.loadingArtwork }, e))
                   })
               ]
           })
@@ -138,7 +138,7 @@ function I(e) {
                         children: h.NW.string(h.t['6rLyQE'])
                     }),
                     (0, n.jsx)('div', {
-                        className: j.similarGames,
+                        className: v.similarGames,
                         style: {},
                         children: E.map((e) =>
                             (0, n.jsx)(

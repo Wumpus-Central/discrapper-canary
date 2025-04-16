@@ -15,8 +15,8 @@ var i = n(120356),
     g = n(199902),
     m = n(592125),
     b = n(594174),
-    _ = n(938475),
-    y = n(823379),
+    y = n(938475),
+    _ = n(823379),
     v = n(709054),
     O = n(853856),
     C = n(981631),
@@ -46,16 +46,16 @@ function N() {
             v.default
                 .keys(O.Z.getFavoriteChannels())
                 .map((e) => m.Z.getChannel(e))
-                .filter(y.lm)
+                .filter(_.lm)
         ),
         t = e.map((e) => e.id),
         n = e.filter((e) => e.type === C.d4z.GUILD_VOICE),
         i = e.filter((e) => e.type === C.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
         l = (0, a.Wu)(
-            [_.ZP],
+            [y.ZP],
             () =>
                 s().flatMap(n, (e) =>
-                    _.ZP.getVoiceStatesForChannel(e).map((e) => {
+                    y.ZP.getVoiceStatesForChannel(e).map((e) => {
                         let { user: t } = e;
                         return t;
                     })

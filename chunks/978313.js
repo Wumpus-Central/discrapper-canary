@@ -17,13 +17,13 @@ function E(e) {
     let { detectedGame: t, trackAction: r } = e,
         [i, E] = a.useState((null == t ? void 0 : t.summaryLocalized) != null),
         [N, h] = a.useState(!0),
-        [x, j] = a.useState(!1),
-        v = a.useRef(null),
+        [x, v] = a.useState(!1),
+        j = a.useRef(null),
         { width: b, height: I } = (0, d.Z)();
     return (a.useEffect(() => {
-        let e = v.current;
-        null != e && j(e.scrollHeight - e.clientHeight > 1 || !N);
-    }, [v, b, I, N]),
+        let e = j.current;
+        null != e && v(e.scrollHeight - e.clientHeight > 1 || !N);
+    }, [j, b, I, N]),
     null == t.summary)
         ? null
         : (0, n.jsxs)('div', {
@@ -45,7 +45,7 @@ function E(e) {
                           ]
                       }),
                   (0, n.jsx)(o.xv, {
-                      ref: v,
+                      ref: j,
                       lineClamp: N ? 8 : void 0,
                       variant: 'text-sm/normal',
                       children: i ? t.summaryLocalized : t.summary

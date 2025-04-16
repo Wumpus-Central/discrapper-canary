@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(289090),
     m = n(727258),
     b = n(234383),
-    _ = n(179809),
-    y = n(588275),
+    y = n(179809),
+    _ = n(588275),
     v = n(388032),
     O = n(315268);
 function C(e) {
@@ -158,7 +158,7 @@ function S(e) {
               onActivate: t,
               children: (0, r.jsx)('div', {
                   className: o()({ [O.folderWrapperCollapsed]: !l }),
-                  children: (0, r.jsx)(_.Z, {
+                  children: (0, r.jsx)(y.Z, {
                       folderNode: I,
                       expanded: l,
                       useCircleMask: !l && !P,
@@ -178,7 +178,7 @@ function S(e) {
                           return e.type !== m.eD.GUILD
                               ? null
                               : (0, r.jsx)(
-                                    y.Z,
+                                    _.Z,
                                     {
                                         guildNode: e,
                                         height: t

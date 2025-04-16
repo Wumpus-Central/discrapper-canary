@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(460181),
     m = n(155409),
     b = n(944486),
-    _ = n(594174),
-    y = n(431),
+    y = n(594174),
+    _ = n(431),
     v = n(774343),
     O = n(417363),
     C = n(941128),
@@ -44,7 +44,7 @@ let R = {
 };
 function D(e) {
     var t, n;
-    let { selected: p, user: f, badge: b, link: _, showProgressBadge: y } = e,
+    let { selected: p, user: f, badge: b, link: y, showProgressBadge: _ } = e,
         v = (0, o.e7)([u.Z], () => u.Z.isEditorOpen),
         [O, C] = i.useState(!1),
         [S, j] = i.useState(!1),
@@ -60,7 +60,7 @@ function D(e) {
     S && (B = s.K.get(P.wli) ? T.NW.string(T.t.nkq1l5) : T.NW.string(T.t.Be8Q5O));
     let W = null;
     !p &&
-        y &&
+        _ &&
         (W = (0, r.jsx)(c.Z, {
             className: A.downloadProgress,
             determineOwnVisibility: !1
@@ -122,7 +122,7 @@ function D(e) {
                 (n = n =
                     {
                         to: {
-                            pathname: _,
+                            pathname: y,
                             state: {
                                 analyticsSource: {
                                     page: P.ZY5.GUILD_CHANNEL,
@@ -183,12 +183,12 @@ function L() {
         }),
         n = (0, f.If)(),
         i = Object.keys(w.nG),
-        { unviewedTrialCount: l, unviewedDiscountCount: s } = (0, o.cj)([y.Z], () => ({
-            unviewedTrialCount: y.Z.getUnacknowledgedOffers(i).length,
-            unviewedDiscountCount: y.Z.getUnacknowledgedDiscountOffers().length
+        { unviewedTrialCount: l, unviewedDiscountCount: s } = (0, o.cj)([_.Z], () => ({
+            unviewedTrialCount: _.Z.getUnacknowledgedOffers(i).length,
+            unviewedDiscountCount: _.Z.getUnacknowledgedDiscountOffers().length
         })),
         a = l + s,
-        u = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
+        u = (0, o.e7)([y.default], () => y.default.getCurrentUser()),
         d = (0, p.q)(),
         h = n + a + d,
         g = h === a && a > 0 && n + d === 0,

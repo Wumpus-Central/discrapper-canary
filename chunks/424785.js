@@ -15,8 +15,8 @@ var i = n(120356),
     g = n(281956),
     m = n(66999),
     b = n(378844),
-    _ = n(359110),
-    y = n(922482),
+    y = n(359110),
+    _ = n(922482),
     v = n(431328),
     O = n(501655),
     C = n(427679),
@@ -120,7 +120,7 @@ class z extends R.ZP {
         return this.props.channelInfo;
     }
     render() {
-        let { channel: e, selected: t, connected: n, locked: i, connectChannelDropTarget: o, connectChannelDragSource: a, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: f, isSubscriptionGated: g, needSubscriptionToAccess: m, unread: b, resolvedUnreadSetting: _, mentionCount: y, isFavoriteSuggestion: v } = this.props,
+        let { channel: e, selected: t, connected: n, locked: i, connectChannelDropTarget: o, connectChannelDragSource: a, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: f, isSubscriptionGated: g, needSubscriptionToAccess: m, unread: b, resolvedUnreadSetting: y, mentionCount: _, isFavoriteSuggestion: v } = this.props,
             { shouldShowGuildVerificationPopout: O } = this.state,
             C = this.getVoiceStatesCount(),
             S = (0, r.jsxs)('li', {
@@ -168,8 +168,8 @@ class z extends R.ZP {
                                                     selected: !v && t,
                                                     connected: n,
                                                     unread: n ? b : void 0,
-                                                    resolvedUnreadSetting: _,
-                                                    mentionCount: y,
+                                                    resolvedUnreadSetting: y,
+                                                    mentionCount: _,
                                                     locked: i,
                                                     onClick: () => {
                                                         this.handleClick(), null == s || s();
@@ -183,7 +183,7 @@ class z extends R.ZP {
                                                     'aria-label': (0, h.ZP)({
                                                         channel: e,
                                                         unread: b,
-                                                        mentionCount: y,
+                                                        mentionCount: _,
                                                         userCount: C,
                                                         isSubscriptionGated: g,
                                                         needSubscriptionToAccess: m
@@ -213,11 +213,11 @@ class z extends R.ZP {
             V(this, 'handleClick', () => {
                 let { channel: e, locked: t, connected: n, unverifiedAccount: r } = this.props,
                     i = e.getGuildId();
-                null != i && (0, g.n)(i) && (0, f.hk)(i), r && this.setState({ shouldShowGuildVerificationPopout: !0 }), t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, y.Cq)(e), __OVERLAY__ || (0, _.Kh)(e.id);
+                null != i && (0, g.n)(i) && (0, f.hk)(i), r && this.setState({ shouldShowGuildVerificationPopout: !0 }), t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, _.Cq)(e), __OVERLAY__ || (0, y.Kh)(e.id);
             }),
             V(this, 'handleClickChat', () => {
                 let { channel: e, locked: t } = this.props;
-                __OVERLAY__ || t || (0, _.Kh)(e.id);
+                __OVERLAY__ || t || (0, y.Kh)(e.id);
             }),
             V(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
@@ -307,8 +307,8 @@ function K(e) {
         p = (0, j.ZP)(n.id),
         f = (0, o.e7)([C.Z], () => C.Z.getStageInstanceByChannel(n.id), [n.id]),
         g = (0, v.Rk)(n.id, O.pV.AUDIENCE),
-        { isSubscriptionGated: b, needSubscriptionToAccess: _ } = (0, m.Z)(n.id),
-        y = (0, o.e7)([Z.ZP], () => Z.ZP.isFavorite(t.id, n.id)),
+        { isSubscriptionGated: b, needSubscriptionToAccess: y } = (0, m.Z)(n.id),
+        _ = (0, o.e7)([Z.ZP], () => Z.ZP.isFavorite(t.id, n.id)),
         N = (0, S.xJ)(n.id),
         T = (0, D.Z)({
             channel: n,
@@ -316,7 +316,7 @@ function K(e) {
             isChannelCollapsed: s,
             voiceStates: a,
             isSubscriptionGated: b,
-            needSubscriptionToAccess: _,
+            needSubscriptionToAccess: y,
             enableConnectedUserLimit: N || (n.userLimit > 0 && n.userLimit < M.xGv)
         }),
         A = e.connected && null == T;
@@ -330,14 +330,14 @@ function K(e) {
                     numAudience: g,
                     stageInstance: f,
                     isSubscriptionGated: b,
-                    needSubscriptionToAccess: _
+                    needSubscriptionToAccess: y
                 },
                 c,
                 d,
                 e
             ),
             {
-                isFavoriteSuggestion: l && !y,
+                isFavoriteSuggestion: l && !_,
                 forceShowButtons: A,
                 channelInfo: T,
                 resolvedUnreadSetting: u

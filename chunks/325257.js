@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(153867),
     m = n(377171),
     b = n(540059),
-    _ = n(35225),
-    y = n(703656),
+    y = n(35225),
+    _ = n(703656),
     v = n(769654),
     O = n(271383),
     C = n(771845),
@@ -115,16 +115,16 @@ let M = i.memo(function (e) {
         [ep, ef] = i.useState(!1),
         eg = !ee && ep,
         [em, eb] = i.useState(!1),
-        [e_, ey] = i.useState(!1),
-        [ev] = i.useState(() => new d.sW(70, () => ey(!0)));
+        [ey, e_] = i.useState(!1),
+        [ev] = i.useState(() => new d.sW(70, () => e_(!0)));
     i.useEffect(() => () => ev.cancel(), [ev]);
     let eO = i.useCallback(() => {
-            if (null != V) return void (0, y.uL)(V, { state: L });
+            if (null != V) return void (0, _.uL)(V, { state: L });
             (0, v.X)(ei, { state: L });
         }, [ei, V]),
         eC = i.useCallback(() => {
             if (null != V || null == H || q || !et) return;
-            let e = (0, _.V)(H.id);
+            let e = (0, y.V)(H.id);
             null != e && p.Z.preload(H.id, e);
         }, [V, H, q, et]),
         eS = (0, u.e7)([O.ZP], () => O.ZP.isCurrentUserGuest(ei)),
@@ -146,7 +146,7 @@ let M = i.memo(function (e) {
         ex = i.useCallback(
             (e) => {
                 if (e) return void ev.delay();
-                ev.cancel(), ey(!1);
+                ev.cancel(), e_(!1);
             },
             [ev]
         ),
@@ -159,16 +159,16 @@ let M = i.memo(function (e) {
         eI = (0, h.dQu)(h.TVs.modules.guildbar.AVATAR_SIZE);
     if (null == H) return null;
     let eP =
-            e_ || em
+            ey || em
                 ? (0, r.jsx)(E.Z, {
                       guild: H,
-                      show: e_,
+                      show: ey,
                       active: z,
                       onAnimationStart: function () {
-                          eb(e_);
+                          eb(ey);
                       },
                       onAnimationRest: function () {
-                          e_ || eb(!1);
+                          ey || eb(!1);
                       }
                   })
                 : (0, r.jsx)(
@@ -209,14 +209,14 @@ let M = i.memo(function (e) {
                       : void 0,
                   'data-dnd-name': H.toString(),
                   style: { scale: null == er ? 1 : er },
-                  'data-drop-hovering': e_,
+                  'data-drop-hovering': ey,
                   className: o()(A.blobContainer, {
                       [A.sorting]: ee,
-                      [A.wobble]: e_,
-                      [A.selected]: e_ || z
+                      [A.wobble]: ey,
+                      [A.selected]: ey || z
                   }),
                   children: (0, r.jsx)(h.aRk, {
-                      selected: !!eo || e_ || z || eg,
+                      selected: !!eo || ey || z || eg,
                       upperBadge: es,
                       lowerBadge: ea,
                       lowerBadgeSize: ec,

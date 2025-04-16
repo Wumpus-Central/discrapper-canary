@@ -17,8 +17,8 @@ var n = r(200651),
     N = r(926921);
 function h(e) {
     let { detectedGame: t, trackClick: r, onInviteResolved: i, closeModal: h } = e,
-        [x, j] = a.useState(),
-        v = (0, o.e7)([m.Z], () => {
+        [x, v] = a.useState(),
+        j = (0, o.e7)([m.Z], () => {
             var e, t;
             return (null == x || null == (e = x.guild) ? void 0 : e.id) != null && m.Z.isMember(null == x || null == (t = x.guild) ? void 0 : t.id);
         }),
@@ -38,7 +38,7 @@ function h(e) {
                 if (null != t) {
                     if (null != x && x.code.toLowerCase() === t.toLowerCase()) return;
                     let e = await (0, d.Z)(t);
-                    !0 !== e.banned && (j(e.invite), null != e.invite && (null == i || i(e.invite)));
+                    !0 !== e.banned && (v(e.invite), null != e.invite && (null == i || i(e.invite)));
                 }
             };
             null != b && e(b.url);
@@ -96,7 +96,7 @@ function h(e) {
                             context: p.IlC.APP
                         });
                 },
-                children: v ? O.NW.string(O.t.cEnaW1) : O.NW.string(O.t.XpeFYm)
+                children: j ? O.NW.string(O.t.cEnaW1) : O.NW.string(O.t.XpeFYm)
             })
         ]
     });
