@@ -54,9 +54,10 @@ let l = new Set(['943265993613008967']),
     }),
     u = () => (0, s.isWindows)() || (0, s.isMac)();
 function d(e) {
-    let { location: t, autoTrackExposure: n } = e,
-        { enabled: r } = c.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return r && u();
+    let { location: t, autoTrackExposure: n } = e;
+    if (__OVERLAY__ || !u()) return !1;
+    let { enabled: r } = c.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+    return r;
 }
 function f(e) {
     let { location: t, autoTrackExposure: n } = e,
