@@ -1600,6 +1600,7 @@ var N =
     (r.SEARCH_V2_FILTERS_APPLIED = 'search_v2_filters_applied'),
     (r.SEARCH_V2_TAB_SELECTED = 'search_v2_tab_selected'),
     (r.SEARCH_V2_JUMP_TO_MESSAGE = 'search_v2_jump_to_message'),
+    (r.SEARCH_V2_STARTED = 'search_v2_started'),
     (r.GLOBAL_DISCOVERY_VIEWED = 'global_discovery_viewed'),
     (r.GLOBAL_DISCOVERY_ENTRYPOINT_CLICKED = 'global_discovery_entrypoint_clicked'),
     (r.GLOBAL_DISCOVERY_SERVERS_CARD_CLICKED = 'global_discovery_servers_card_clicked'),
