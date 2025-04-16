@@ -1,63 +1,63 @@
-l.d(s, { default: () => A }), l(388685);
-var t = l(200651),
-    r = l(192379),
-    a = l(120356),
-    n = l.n(a),
-    u = l(442837),
-    c = l(481060),
-    i = l(24124),
-    o = l(461745),
-    d = l(212819),
-    h = l(43267),
-    m = l(447003),
-    _ = l(933557),
-    x = l(606206),
-    N = l(592125),
-    p = l(944486),
-    g = l(585483),
-    k = l(5192),
-    C = l(51144),
-    v = l(981631),
-    S = l(388032),
-    E = l(944801),
-    j = l(20493);
-function L(e, s, l) {
+t.d(s, { default: () => A }), t(388685);
+var l = t(200651),
+    r = t(192379),
+    a = t(120356),
+    n = t.n(a),
+    u = t(442837),
+    c = t(481060),
+    i = t(24124),
+    o = t(461745),
+    d = t(212819),
+    h = t(43267),
+    m = t(447003),
+    _ = t(933557),
+    x = t(606206),
+    N = t(592125),
+    p = t(944486),
+    g = t(585483),
+    k = t(5192),
+    C = t(51144),
+    v = t(981631),
+    S = t(388032),
+    E = t(944801),
+    j = t(20493);
+function L(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
-                  value: l,
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = l),
+            : (e[s] = t),
         e
     );
 }
 let b = (e) => {
-        let { channel: s, categoryName: l, guildName: r } = e,
+        let { channel: s, categoryName: t, guildName: r } = e,
             a = c.VL1;
         return (
             (0, m.Z)(s) ? (a = c.W4G) : s.isNSFW() && (a = c.z0B),
-            (0, t.jsxs)('div', {
+            (0, l.jsxs)('div', {
                 className: E.result,
                 children: [
-                    (0, t.jsx)(a, {
+                    (0, l.jsx)(a, {
                         className: E.resultIcon,
                         colorClass: E.resultIconBackground,
                         size: 'xs'
                     }),
-                    (0, t.jsxs)('div', {
+                    (0, l.jsxs)('div', {
                         className: E.resultText,
                         children: [
-                            (0, t.jsx)('span', { children: s.name }),
-                            (0, t.jsx)('span', {
+                            (0, l.jsx)('span', { children: s.name }),
+                            (0, l.jsx)('span', {
                                 className: E.resultCategoryName,
-                                children: l
+                                children: t
                             })
                         ]
                     }),
-                    (0, t.jsx)('div', {
+                    (0, l.jsx)('div', {
                         className: E.resultGuildName,
                         children: r
                     })
@@ -67,25 +67,25 @@ let b = (e) => {
     },
     f = (e) => {
         let { channel: s } = e,
-            l = (0, _.ZP)(s);
-        return (0, t.jsxs)('div', {
+            t = (0, _.ZP)(s);
+        return (0, l.jsxs)('div', {
             className: E.result,
             children: [
-                (0, t.jsx)(c.qEK, {
+                (0, l.jsx)(c.qEK, {
                     src: (0, h.x)(s),
-                    'aria-label': null != l ? l : '',
+                    'aria-label': null != t ? t : '',
                     className: E.resultAvatar,
                     size: c.EFr.SIZE_32
                 }),
-                (0, t.jsx)('div', {
+                (0, l.jsx)('div', {
                     className: E.resultText,
-                    children: l
+                    children: t
                 })
             ]
         });
     },
     R = (e) => {
-        let { user: s, status: l } = e,
+        let { user: s, status: t } = e,
             r = (0, u.e7)([p.Z, N.Z], () => {
                 var e;
                 let s = null != (e = p.Z.getVoiceChannelId()) ? e : p.Z.getChannelId();
@@ -95,21 +95,21 @@ let b = (e) => {
             n = null == r ? void 0 : r.id,
             i = k.ZP.useName(a, n, s),
             o = C.ZP.useName(s);
-        return (0, t.jsxs)('div', {
+        return (0, l.jsxs)('div', {
             className: E.result,
             children: [
-                (0, t.jsx)(c.qEK, {
+                (0, l.jsx)(c.qEK, {
                     src: s.getAvatarURL(void 0, 32),
                     'aria-label': s.username,
                     className: E.resultAvatar,
                     size: c.EFr.SIZE_32,
-                    status: l
+                    status: t
                 }),
-                (0, t.jsxs)('div', {
+                (0, l.jsxs)('div', {
                     className: E.resultText,
                     children: [
-                        (0, t.jsx)('span', { children: i }),
-                        (0, t.jsx)('span', {
+                        (0, l.jsx)('span', { children: i }),
+                        (0, l.jsx)('span', {
                             className: E.resultUsername,
                             children: o
                         })
@@ -122,15 +122,15 @@ class z extends r.Component {
     render() {
         let e,
             s,
-            { result: l, selected: r, sending: a } = this.props;
-        switch (l.type) {
+            { result: t, selected: r, sending: a } = this.props;
+        switch (t.type) {
             case d.h8.GROUP_DM:
-                e = (0, t.jsx)(f, { channel: l.data.record });
+                e = (0, l.jsx)(f, { channel: t.data.record });
                 break;
             case d.h8.TEXT_CHANNEL: {
-                let { categoryName: s, guildName: r } = l;
-                e = (0, t.jsx)(b, {
-                    channel: l.data.record,
+                let { categoryName: s, guildName: r } = t;
+                e = (0, l.jsx)(b, {
+                    channel: t.data.record,
                     categoryName: s,
                     guildName: r
                 });
@@ -140,8 +140,8 @@ class z extends r.Component {
                 let {
                     data: { comparator: s, record: r },
                     status: a
-                } = l;
-                e = (0, t.jsx)(R, {
+                } = t;
+                e = (0, l.jsx)(R, {
                     comparator: s,
                     user: r,
                     status: a
@@ -149,8 +149,8 @@ class z extends r.Component {
             }
         }
         return (
-            (s = l.sent
-                ? (0, t.jsx)(c.zxk, {
+            (s = t.sent
+                ? (0, l.jsx)(c.zxk, {
                       className: E.inviteButton,
                       look: c.zxk.Looks.LINK,
                       size: c.zxk.Sizes.SMALL,
@@ -158,16 +158,15 @@ class z extends r.Component {
                       color: c.zxk.Colors.WHITE,
                       children: S.NW.string(S.t.i6A1X1)
                   })
-                : (0, t.jsx)(c.zxk, {
+                : (0, l.jsx)(c.zxk, {
                       color: c.zxk.Colors.GREEN,
                       look: r ? c.zxk.Looks.FILLED : c.zxk.Looks.OUTLINED,
                       className: E.inviteButton,
                       size: c.zxk.Sizes.SMALL,
                       submitting: a,
-                      onClick: this.handleClick,
                       children: S.NW.string(S.t['6F9ivr'])
                   })),
-            (0, t.jsxs)(c.P3F, {
+            (0, l.jsxs)(c.P3F, {
                 className: n()(E.resultWrapper, { [E.resultWrapperSelected]: r }),
                 onMouseEnter: this.handleMouseEnter,
                 onClick: this.handleClick,
@@ -188,7 +187,7 @@ class z extends r.Component {
     }
 }
 function A(e) {
-    let { transitionState: s, onClose: l } = e,
+    let { transitionState: s, onClose: t } = e,
         {
             results: a,
             query: n,
@@ -234,8 +233,8 @@ function A(e) {
             [A]
         ),
         r.useEffect(() => {
-            null == h && l();
-        }, [l, h]),
+            null == h && t();
+        }, [t, h]),
         r.useEffect(() => {
             var e;
             null == (e = f.current) || e.scrollToTop(), p(0);
@@ -245,11 +244,11 @@ function A(e) {
                 let {
                     data: s,
                     data: {
-                        record: { id: l }
+                        record: { id: t }
                     }
                 } = a[e];
-                if (!(null == l || k.includes(l)))
-                    switch ((C([...k, l]), s.type)) {
+                if (!(null == t || k.includes(t)))
+                    switch ((C([...k, t]), s.type)) {
                         case d.h8.GROUP_DM:
                         case d.h8.TEXT_CHANNEL:
                             (0, i.GG)(s.record.id);
@@ -274,28 +273,28 @@ function A(e) {
         };
     return null == h
         ? null
-        : (0, t.jsxs)(c.Y0X, {
+        : (0, l.jsxs)(c.Y0X, {
               transitionState: s,
               size: c.CgR.SMALL,
               'aria-label': S.NW.formatToPlainString(S.t['2tN7io'], { name: h.name }),
               children: [
-                  (0, t.jsxs)(c.xBx, {
+                  (0, l.jsxs)(c.xBx, {
                       separator: L,
                       className: E.modalHeader,
                       children: [
-                          (0, t.jsx)(c.olH, {
+                          (0, l.jsx)(c.olH, {
                               className: E.closeButton,
-                              onClick: l
+                              onClick: t
                           }),
-                          (0, t.jsxs)('div', {
+                          (0, l.jsxs)('div', {
                               className: E.header,
                               children: [
-                                  (0, t.jsx)(c.vwX, {
+                                  (0, l.jsx)(c.vwX, {
                                       tag: 'h2',
                                       className: j.marginBottom8,
                                       children: S.NW.format(S.t['2tN7io'], { name: h.name })
                                   }),
-                                  (0, t.jsx)(o.ZP, {
+                                  (0, l.jsx)(o.ZP, {
                                       size: o.ZP.Sizes.MEDIUM,
                                       query: m,
                                       selectedSection: 0,
@@ -306,10 +305,10 @@ function A(e) {
                                           null == s ? T() : I(s);
                                       },
                                       onSelectionChange: (e, s) => {
-                                          var l;
+                                          var t;
                                           p(s),
-                                              null == (l = f.current) ||
-                                                  l.scrollIntoViewRect({
+                                              null == (t = f.current) ||
+                                                  t.scrollIntoViewRect({
                                                       start: 48 * s,
                                                       end: 48 * s + 48
                                                   });
@@ -323,7 +322,7 @@ function A(e) {
                           })
                       ]
                   }),
-                  (0, t.jsx)(c.YAO, {
+                  (0, l.jsx)(c.YAO, {
                       scrollerRef: f,
                       className: 0 === a.length ? E.noResults : E.results,
                       paddingBottom: 12,
@@ -332,18 +331,18 @@ function A(e) {
                       renderSection: v.VqG,
                       rowHeight: (e, s) => (e > 0 ? 0 : 48 * (null != a[s])),
                       renderRow: (e) => {
-                          let { section: s, row: l } = e;
+                          let { section: s, row: t } = e;
                           if (s > 0) return null;
-                          let r = a[l];
+                          let r = a[t];
                           return null == r
                               ? null
-                              : (0, t.jsx)(
+                              : (0, l.jsx)(
                                     z,
                                     {
-                                        row: l,
+                                        row: t,
                                         result: r,
                                         sending: null != r.data.record.id && k.includes(r.data.record.id),
-                                        selected: l === N,
+                                        selected: t === N,
                                         onMouseEnter: P,
                                         onInvite: I
                                     },
