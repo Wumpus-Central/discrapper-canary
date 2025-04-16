@@ -44,7 +44,7 @@ function f(e) {
                 'disable-forced-colors': !b && 'active' === y,
                 'enable-forced-colors': b,
                 'visual-refresh': !0,
-                'hardware-acceleration': I,
+                'hardware-acceleration-disabled': !I,
                 'visual-refresh-chat-input': !1
             },
             t

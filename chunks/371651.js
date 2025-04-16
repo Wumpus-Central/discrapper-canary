@@ -563,7 +563,7 @@ function eO() {
     return em(), !0;
 }
 function eI(e) {
-    x = e.pid;
+    return (x = e.pid), !(0, m.isValidGamePID)(e.pid) || ((0, m.setPID)(e.pid), !0);
 }
 function eS() {
     d.Z.hasLoadedExperiments && !L && ((L = !0), eu(g.v.legacyEnabled, g.v.oopEnabled));

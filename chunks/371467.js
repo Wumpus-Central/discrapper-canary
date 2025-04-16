@@ -30,14 +30,14 @@ var i,
     P = n(486016),
     T = n(32300),
     k = n(371651),
-    D = n(624864),
-    A = n(610394),
+    A = n(624864),
+    D = n(610394),
     L = n(340101),
     R = n(388627),
     W = n(996050),
     M = n(609626),
-    V = n(421824),
-    z = n(777036),
+    z = n(421824),
+    V = n(777036),
     U = n(955978),
     G = n(333727),
     F = n(585708),
@@ -180,7 +180,7 @@ function eh(e, t) {
     return ei || ((en = a), o.timer.start()), i;
 }
 function ef() {
-    if (!(0, T.Yo)('OverlayNotificationStore') || D.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.NOW_PLAYING)) return !1;
+    if (!(0, T.Yo)('OverlayNotificationStore') || A.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.NOW_PLAYING)) return !1;
     let e = v.Z.usersPlaying,
         t = new Set(),
         n = (function () {
@@ -246,7 +246,7 @@ function ef() {
             t.add(n);
     let r = new Set();
     for (let e of n) t.has(e) || r.add(e);
-    let o = A.ZP.isOverlayV3EnabledForPID((0, w.getPID)()) || null != A.ZP.getFocusedPID();
+    let o = D.ZP.isOverlayV3EnabledForPID((0, w.getPID)()) || null != D.ZP.getFocusedPID();
     for (let e of r)
         if (
             !(function (e) {
@@ -285,7 +285,7 @@ function em(e) {
         return !1;
     let o = en.find((e) => e.type === L.kL.TEXT && e.channelId === t && e.messageType === H.uaV.CALL);
     null != o && ed(o.id),
-        eh((0, z.Z)(r), {
+        eh((0, V.Z)(r), {
             priority: L.Tu.HIGH,
             expirationExternallyManaged: !0,
             type: L.kL.INCOMING_CALL,
@@ -294,7 +294,7 @@ function em(e) {
 }
 class eg extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, j.default, v.Z, D.Z), this.syncWith([v.Z], ef);
+        this.waitFor(g.Z, j.default, v.Z, A.Z), this.syncWith([v.Z], ef);
     }
     getNotifications() {
         return en;
@@ -310,7 +310,7 @@ let ey = new eg(s.Z, {
         var t;
         let { nudges: n } = e;
         eu(0);
-        let i = null != (t = A.ZP.getFocusedPID()) ? t : w.UNSET_PID;
+        let i = null != (t = D.ZP.getFocusedPID()) ? t : w.UNSET_PID;
         if (k.default.hasChangedRenderMode(i)) return;
         let r = (0, B.Z)((0, R.pL)(), n);
         null != r &&
@@ -369,7 +369,7 @@ let ey = new eg(s.Z, {
             })(s, a, c);
             if (!1 !== e) return e;
         }
-        if (D.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.TEXT_CHAT) || I.Z.disableNotifications || !(0, p.eF)(a, l)) return !1;
+        if (A.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.TEXT_CHAT) || I.Z.disableNotifications || !(0, p.eF)(a, l)) return !1;
         let u = !O.Z.isSoundDisabled(S.Ay),
             h = null != (r = y.Z.getMessage(l, a.id)) ? r : (0, d.e5)(a);
         eh((0, F.Z)(s, h, c, u), {
@@ -427,16 +427,16 @@ let ey = new eg(s.Z, {
         );
     },
     CLIPS_SAVE_CLIP_START: function () {
-        eh((0, V.f)(Y.NW.string(Y.t.NBMK9v)));
+        eh((0, z.f)(Y.NW.string(Y.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        eh((0, V.f)(Y.NW.format(Y.t.KLhk6u, { duration: (0, Z.A)(u.Z.getSettings().clipsLength / 1000, !0) })));
+        eh((0, z.f)(Y.NW.format(Y.t.KLhk6u, { duration: (0, Z.A)(u.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
-        eh((0, V.f)(Y.NW.string(Y.t['1ZbZur'])));
+        eh((0, z.f)(Y.NW.string(Y.t['1ZbZur'])));
     },
     STREAM_START: function (e) {
-        let t = (0, V.y)();
+        let t = (0, z.y)();
         null != t && eh(t);
     }
 });

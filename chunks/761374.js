@@ -26,14 +26,14 @@ function j(e, t, n, i) {
     return e === _.C5.HORIZONTAL ? Math.min(Math.max((t - r) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - r) / i) * 16) / 9, 256));
 }
 function C(e) {
-    let { id: t, size: n, locked: C, padding: S, borderWidth: N, opacity: Z, horizontal: w, pinned: P, anchorTop: T, anchorLeft: k, showEmpty: D = !0 } = e,
-        A = 2 * S + 2 * N,
+    let { id: t, size: n, locked: C, padding: S, borderWidth: N, opacity: Z, horizontal: w, pinned: P, anchorTop: T, anchorLeft: k, showEmpty: A = !0 } = e,
+        D = 2 * S + 2 * N,
         { width: L, height: R } = {
             width: 'number' == typeof n.width ? n.width : 256,
             height: 'number' == typeof n.height ? n.height : 144
         },
         W = (0, o.e7)([y.Z], () => y.Z.getVoiceChannelId()),
-        { width: M, height: V, ref: z } = (0, c.ZP)(),
+        { width: M, height: z, ref: V } = (0, c.ZP)(),
         U = (0, o.e7)(
             [g.Z],
             () => {
@@ -112,12 +112,12 @@ function C(e) {
                     tileWidth: c
                 }
             );
-        })(!1, X.length, null != M ? M : L - A, null != V ? V : R - A, $),
+        })(!1, X.length, null != M ? M : L - D, null != z ? z : R - D, $),
         en = {
             id: t,
             width: L,
             height: R,
-            sizeOffset: A,
+            sizeOffset: D,
             layout: et,
             padding: S,
             participants: X.length
@@ -218,7 +218,7 @@ function C(e) {
     (q || !P) && C)
         ? null
         : q && !C
-          ? D
+          ? A
               ? C
                   ? null
                   : (0, i.jsx)(O.E, {
@@ -230,7 +230,7 @@ function C(e) {
           : (0, i.jsx)('div', {
                 className: x.goLiveGridContainer,
                 style: { opacity: Z },
-                ref: z,
+                ref: V,
                 children: (0, i.jsx)(v.Z, {
                     widgetId: t,
                     tileWidth: ee,

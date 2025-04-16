@@ -39,14 +39,14 @@ var i = n(200651),
     P = n(879815),
     T = n(189771),
     k = n(294629),
-    D = n(67844),
-    A = n(544384),
+    A = n(67844),
+    D = n(544384),
     L = n(890828),
     R = n(560688),
     W = n(871499),
     M = n(199902),
-    V = n(314897),
-    z = n(430824),
+    z = n(314897),
+    V = n(430824),
     U = n(131951),
     G = n(19780),
     F = n(944486),
@@ -184,7 +184,7 @@ function ei(e) {
                         (0, Q.Ws)(J.Odu.QUICK_ACTIONS, {
                             type: Q.Qu.MICROPHONE,
                             value: c ? Q.bk.ENABLED : Q.bk.DISABLED,
-                            userId: V.default.getId()
+                            userId: z.default.getId()
                         });
                 },
                 onPopoutClick: g(n),
@@ -216,7 +216,7 @@ function er(e) {
                 (0, Q.Ws)(J.Odu.QUICK_ACTIONS, {
                     type: Q.Qu.AUDIO,
                     value: l ? Q.bk.ENABLED : Q.bk.DISABLED,
-                    userId: V.default.getId()
+                    userId: z.default.getId()
                 });
         },
         g = (e) => (t) => {
@@ -284,7 +284,7 @@ function eo(e) {
                 (0, Q.Ws)(J.Odu.QUICK_ACTIONS, {
                     type: Q.Qu.CAMERA,
                     value: a ? Q.bk.DISABLED : Q.bk.ENABLED,
-                    userId: V.default.getId()
+                    userId: z.default.getId()
                 });
         },
         {
@@ -294,7 +294,7 @@ function eo(e) {
         } = (0, d.o)(a ? 'disable' : 'enable'),
         I =
             null != n
-                ? (0, D.X)({
+                ? (0, A.X)({
                       enabled: a,
                       cameraUnavailable: c,
                       hasPermission: f,
@@ -347,7 +347,7 @@ function el(e) {
                 (0, Q.Ws)(J.Odu.QUICK_ACTIONS, {
                     type: Q.Qu.GO_LIVE,
                     value: Q.bk.ENABLED,
-                    userId: V.default.getId()
+                    userId: z.default.getId()
                 });
         },
         m = null != d;
@@ -362,7 +362,7 @@ function el(e) {
                     (0, Q.Ws)(J.Odu.QUICK_ACTIONS, {
                         type: Q.Qu.GO_LIVE,
                         value: Q.bk.DISABLED,
-                        userId: V.default.getId()
+                        userId: z.default.getId()
                     }),
                     (0, C.Z)(d, !1)
                 );
@@ -385,7 +385,7 @@ function el(e) {
     return (0, i.jsx)(p.yRy, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(A.Z, {
+            return (0, i.jsx)(D.Z, {
                 channel: n,
                 currentUser: a,
                 activeStreams: m ? [d] : [],
@@ -453,7 +453,7 @@ function ea(e) {
             events: { onClick: v, onMouseEnter: b, onMouseLeave: _ }
         } = (0, u.j)(),
         E = et(l),
-        x = (0, o.e7)([Z.Z, V.default], () => Z.Z.isUserPlayingSounds(V.default.getId()), []) ? 'green' : void 0;
+        x = (0, o.e7)([Z.Z, z.default], () => Z.Z.isUserPlayingSounds(z.default.getId()), []) ? 'green' : void 0;
     return (0, i.jsx)(p.yRy, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -480,7 +480,7 @@ function ea(e) {
                         (0, Q.Ws)(J.Odu.QUICK_ACTIONS, {
                             type: Q.Qu.SOUNDBOARD,
                             value: Q.bk.PANEL_OPENED,
-                            userId: V.default.getId()
+                            userId: z.default.getId()
                         }),
                         n(e);
                 },
@@ -503,7 +503,7 @@ function es(e) {
             (0, Q.Ws)(J.Odu.QUICK_ACTIONS, {
                 type: Q.Qu.CALL_BUTTON,
                 value: Q.bk.DISABLED,
-                userId: V.default.getId()
+                userId: z.default.getId()
             }),
                 a && m.default.disconnect();
         },
@@ -512,7 +512,7 @@ function es(e) {
                 (0, Q.Ws)(J.Odu.QUICK_ACTIONS, {
                     type: Q.Qu.CALL_BUTTON,
                     value: Q.bk.ENABLED,
-                    userId: V.default.getId()
+                    userId: z.default.getId()
                 });
         },
         [u, d] = r.useTransition(),
@@ -563,7 +563,7 @@ function es(e) {
 }
 function ec(e) {
     let { voiceChannel: t } = e,
-        n = (0, o.e7)([z.Z], () => z.Z.getGuild(t.getGuildId()), [t]);
+        n = (0, o.e7)([V.Z], () => V.Z.getGuild(t.getGuildId()), [t]);
     switch (!0) {
         case t.isGroupDM() || t.isDM():
         case t.isDM():

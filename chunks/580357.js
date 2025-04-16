@@ -1,20 +1,20 @@
-n.d(l, { Z: () => t });
-var a = n(200651);
-n(192379);
-var r = n(481060),
-    s = n(388032),
-    o = n(696824);
-function t() {
-    return (0, a.jsxs)(a.Fragment, {
+t.d(r, { Z: () => s });
+var n = t(200651);
+t(192379);
+var l = t(481060),
+    a = t(388032),
+    o = t(696824);
+function s() {
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, a.jsx)(r.Text, {
+            (0, n.jsx)(l.Text, {
                 className: o.marker,
                 tag: 'span',
                 variant: 'text-md/semibold',
                 color: 'text-danger',
                 children: '*'
             }),
-            (0, a.jsx)(r.nn4, { children: s.NW.string(s.t.EkokLy) })
+            (0, n.jsx)(l.nn4, { children: a.NW.string(a.t.EkokLy) })
         ]
     });
 }

@@ -71,7 +71,7 @@ function k(e, t) {
         e
     );
 }
-function D(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         i,
@@ -90,7 +90,7 @@ function D(e, t) {
     }
     return r;
 }
-function A(e) {
+function D(e) {
     let { participant: t } = e,
         n = t.user.id,
         o = (0, a.e7)(
@@ -111,7 +111,7 @@ function A(e) {
         text: p ? w.NW.string(w.t.YqAjX1) : w.NW.string(w.t['w4m94+']),
         children: (e) => {
             var { onClick: n } = e,
-                r = D(e, ['onClick']);
+                r = A(e, ['onClick']);
             return (0, i.jsx)(
                 c.P3F,
                 k(T({}, r), {
@@ -258,12 +258,12 @@ function R(e) {
                             t &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsx)(A, { participant: n }),
+                                    (0, i.jsx)(D, { participant: n }),
                                     (0, i.jsx)(c.ua7, {
                                         text: w.NW.string(w.t['3D5yo6']),
                                         children: (e) => {
                                             var { onClick: t } = e,
-                                                r = D(e, ['onClick']);
+                                                r = A(e, ['onClick']);
                                             return (0, i.jsx)(
                                                 c.P3F,
                                                 k(T({}, r), {

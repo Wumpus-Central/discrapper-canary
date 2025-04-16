@@ -149,17 +149,17 @@ let v = 8,
                 n !== N ? 'animate-never' : 'respect-motion-settings'
             ),
             k = (0, p.ee)(() => new Set(x.map((e) => e.user.id)), [x, I]),
-            D = (0, p.ee)(() => new Set(x.filter((e) => E.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [x, E, I]);
+            A = (0, p.ee)(() => new Set(x.filter((e) => E.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [x, E, I]);
         return (
             r.useEffect(() => {
                 0 !== k.size &&
                     (0, p.zi)(m.Odu.GO_LIVE, {
                         locked: d.default.isInstanceLocked(),
                         shownUserIds: Array.from(k),
-                        liveUserIds: Array.from(D),
+                        liveUserIds: Array.from(A),
                         contentInventoryIds: []
                     });
-            }, [k, D]),
+            }, [k, A]),
             (0, i.jsx)('div', {
                 className: l()({
                     [g.gridContainer]: !0,

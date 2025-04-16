@@ -39,7 +39,7 @@ let k = (e) => [
             return Array.from(new Set([n, i.nick, ...Object.values(i.names)].flat().filter(N.lm)));
         })(e)
     ],
-    D = {
+    A = {
         searchType: y.S.FUZZY,
         sortType: y.E.JARO_WINKLER,
         searchStringGenerator: (e) => {
@@ -49,7 +49,7 @@ let k = (e) => [
         },
         throttleMs: 100
     },
-    A = {
+    D = {
         searchType: y.S.FUZZY,
         sortType: y.E.JARO_WINKLER,
         searchStringGenerator: k,
@@ -59,7 +59,7 @@ let k = (e) => [
         let { channel: t, query: n } = e,
             [o] = (0, a.e7)([S.Z], () => [S.Z.getVoiceStatesForChannel(t.id), S.Z.getVoiceStateVersion()], [t.id], Z.Q),
             [l, c] = r.useState([]);
-        (0, O.BO)(n, Object.values(o), c, A);
+        (0, O.BO)(n, Object.values(o), c, D);
         let u = (0, a.Wu)(
                 [S.Z, C.default, b.Z, j.Z],
                 () =>
@@ -198,7 +198,7 @@ let k = (e) => [
             })
         });
     }),
-    V = r.memo(function (e) {
+    z = r.memo(function (e) {
         let { sectionHeader: t, channelIds: n, currentVoiceChannel: o, onSelect: l, hasQuery: a, query: c, scrollable: u = !0 } = e,
             [d, p] = r.useState(null),
             h = (e) => {
@@ -245,7 +245,7 @@ let k = (e) => [
             ]
         });
     });
-function z(e) {
+function V(e) {
     let { searchQuery: t, currentVoiceChannel: n, onSelect: r } = e,
         { recentVoiceChannelIds: o, friendVoiceChannelIds: c } = (function () {
             let e = (function () {
@@ -305,7 +305,7 @@ function z(e) {
               className: l()(T.channelList, T.channelListWrapper),
               children: [
                   o.length > 0 &&
-                      (0, i.jsx)(V, {
+                      (0, i.jsx)(z, {
                           sectionHeader: P.NW.string(P.t.lnk2NT),
                           channelIds: o.slice(0, 3),
                           hasQuery: !1,
@@ -315,7 +315,7 @@ function z(e) {
                           scrollable: !1
                       }),
                   c.length > 0 &&
-                      (0, i.jsx)(V, {
+                      (0, i.jsx)(z, {
                           sectionHeader: P.NW.string(P.t['0lvb9P']),
                           channelIds: c.slice(0, 8),
                           hasQuery: !1,
@@ -358,7 +358,7 @@ function G(e) {
         ),
         [d, p] = r.useState(''),
         [h, f] = r.useState([]);
-    (0, O.BO)(d, u, f, D);
+    (0, O.BO)(d, u, f, A);
     let m = r.useCallback(
             (e) => {
                 'Escape' === e.key && l();
@@ -442,7 +442,7 @@ function G(e) {
                         })
                     }),
                     y
-                        ? (0, i.jsx)(V, {
+                        ? (0, i.jsx)(z, {
                               sectionHeader: v ? P.NW.format(P.t.qdXiQ0, b) : P.NW.format(P.t['Aq+8wM'], b),
                               channelIds: h
                                   .map((e) => {
@@ -455,7 +455,7 @@ function G(e) {
                               currentVoiceChannel: o,
                               onSelect: g
                           })
-                        : (0, i.jsx)(z, {
+                        : (0, i.jsx)(V, {
                               searchQuery: d,
                               currentVoiceChannel: o,
                               onSelect: g

@@ -30,14 +30,14 @@ var i = n(200651),
     P = n(32300),
     T = n(681603),
     k = n(915614),
-    D = n(268861),
-    A = n(690336),
+    A = n(268861),
+    D = n(690336),
     L = n(333031),
     R = n(371651),
     W = n(624864),
     M = n(610394),
-    V = n(388627),
-    z = n(319414),
+    z = n(388627),
+    V = n(319414),
     U = n(561064),
     G = n(987650),
     F = n(757744),
@@ -177,7 +177,7 @@ function er(e) {
                     i = (0, N.getPID)();
                 return {
                     locked: M.ZP.isInputLocked(i),
-                    focused: i === N.DEV_PID ? x.default.isFocused(i) : M.ZP.isFocused((0, N.getPID)()),
+                    focused: M.ZP.isFocused(i),
                     incompatibleApp: x.default.incompatibleApp,
                     hasZeroSizeDimension: 0 === e.height || 0 === e.width,
                     keybind: null != t ? (0, S.BB)(t.shortcut, !0) : '???'
@@ -217,7 +217,7 @@ function er(e) {
         ),
         !(function () {
             let e = r.useRef(!1),
-                t = (0, V.pL)(),
+                t = (0, z.pL)(),
                 n = b.Z.getVoiceChannelId(),
                 i = y.Z.getChannel(n),
                 o = null != i ? O.Z.getGuild(i.guild_id) : null,
@@ -289,13 +289,13 @@ function er(e) {
                                           keybind: k,
                                           onClick: ee
                                       }),
-                                      (0, i.jsx)(A.Z, {
+                                      (0, i.jsx)(D.Z, {
                                           className: l()({
                                               [H.layoutLocked]: o,
                                               [H.layoutUnlocked]: !o
                                           })
                                       }),
-                                      (0, i.jsx)(z.Z, {}),
+                                      (0, i.jsx)(V.Z, {}),
                                       !t &&
                                           Y &&
                                           (0, i.jsx)($, {
@@ -303,7 +303,7 @@ function er(e) {
                                               focused: u
                                           }),
                                       (0, i.jsx)(T.Z, {}),
-                                      (0, i.jsx)(D.Z, { locked: o }),
+                                      (0, i.jsx)(A.Z, { locked: o }),
                                       (0, i.jsx)(c.Ixi, {})
                                   ]
                               })

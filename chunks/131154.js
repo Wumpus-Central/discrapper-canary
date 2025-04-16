@@ -1,33 +1,33 @@
-n.d(t, { Z: () => s });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    l = n.n(i),
-    a = n(481060),
-    o = n(388032),
-    c = n(449774);
+t.d(n, { Z: () => s });
+var r = t(200651);
+t(192379);
+var i = t(120356),
+    l = t.n(i),
+    o = t(481060),
+    c = t(388032),
+    a = t(449774);
 function s(e) {
-    let { guild: t, speakers: n, speakerCount: i, className: s } = e,
-        d = n.slice(0, 5),
-        u = d.map((e) => {
-            var n, i;
+    let { guild: n, speakers: t, speakerCount: i, className: s } = e,
+        u = t.slice(0, 5),
+        d = u.map((e) => {
+            var t, i;
             return (0, r.jsxs)(
                 'div',
                 {
-                    className: c.speakerContainer,
+                    className: a.speakerContainer,
                     children: [
-                        (0, r.jsx)(a.qEK, {
-                            src: null == e || null == (n = e.user) ? void 0 : n.getAvatarURL(t.id, 20),
-                            size: a.EFr.SIZE_20,
-                            className: c.avatar,
+                        (0, r.jsx)(o.qEK, {
+                            src: null == e || null == (t = e.user) ? void 0 : t.getAvatarURL(n.id, 20),
+                            size: o.EFr.SIZE_20,
+                            className: a.avatar,
                             'aria-label': ''.concat(null == e ? void 0 : e.userNick, '-avatar')
                         }),
                         (0, r.jsx)('div', {
-                            className: c.textInGridContainer,
-                            children: (0, r.jsx)(a.Text, {
+                            className: a.textInGridContainer,
+                            children: (0, r.jsx)(o.Text, {
                                 color: 'header-secondary',
                                 variant: 'text-sm/normal',
-                                className: c.textInGrid,
+                                className: a.textInGrid,
                                 children: null == e ? void 0 : e.userNick
                             })
                         })
@@ -36,28 +36,28 @@ function s(e) {
                 null == e || null == (i = e.user) ? void 0 : i.id
             );
         }),
-        h = i - d.length;
+        g = i - u.length;
     return (0, r.jsxs)('div', {
-        className: l()(c.grid, s),
+        className: l()(a.grid, s),
         children: [
-            u,
-            h > 0 &&
+            d,
+            g > 0 &&
                 (0, r.jsxs)('div', {
-                    className: c.speakerContainer,
+                    className: a.speakerContainer,
                     children: [
                         (0, r.jsx)('div', {
-                            className: c.iconMicrophone,
-                            children: (0, r.jsx)(a.S6n, {
+                            className: a.iconMicrophone,
+                            children: (0, r.jsx)(o.S6n, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 height: 12
                             })
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(o.Text, {
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
-                            className: c.textInGrid,
-                            children: o.NW.format(o.t['185ggI'], { count: h })
+                            className: a.textInGrid,
+                            children: c.NW.format(c.t['185ggI'], { count: g })
                         })
                     ]
                 })

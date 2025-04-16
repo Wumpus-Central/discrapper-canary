@@ -44,8 +44,8 @@ var j = n(392750),
     V = n(264603),
     H = n(678639),
     W = n(351930),
-    X = n(771751),
-    K = n(596768),
+    K = n(771751),
+    X = n(596768),
     Y = n(56706),
     q = n(621060),
     J = n(388032),
@@ -79,7 +79,7 @@ function et() {
                     id: 'triggers',
                     name: 'Triggers',
                     group: q.v0.EXPERIMENTS,
-                    render: () => (0, a.jsx)(K.Z, {})
+                    render: () => (0, a.jsx)(X.Z, {})
                 },
                 {
                     id: 'stores',
@@ -222,7 +222,7 @@ function et() {
                         id: 'trials',
                         name: 'Trials',
                         group: q.v0.PREMIUM,
-                        render: () => (0, a.jsx)(X.Z, {})
+                        render: () => (0, a.jsx)(K.Z, {})
                     }),
                     e.push({
                         id: 'payments',
