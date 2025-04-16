@@ -23,12 +23,13 @@ var n = r(200651),
     O = r(606217),
     h = r(183375);
 function C() {
-    let e = o.useMemo(() => Math.floor(Math.random() * b.tl.length), []),
-        [t, r] = o.useState({
-            primary_color: b.tl[e].start,
-            secondary_color: b.tl[e].end
+    var e;
+    let t = o.useMemo(() => Math.floor(Math.random() * b.tl.length), []),
+        [r, a] = o.useState({
+            primary_color: b.tl[t].start,
+            secondary_color: b.tl[t].end
         }),
-        a = (0, s.Icv)((0, l.Rf)(t.primary_color), (0, l.Rf)(t.secondary_color), void 0, 'username');
+        u = (0, s.Icv)((0, l.Rf)(r.primary_color), (0, l.Rf)(r.secondary_color), void 0, 'username');
     return (0, n.jsxs)('div', {
         className: O.container,
         children: [
@@ -37,20 +38,20 @@ function C() {
                 children: (0, n.jsx)(f.l, {
                     avatar: c.Z,
                     username: 'Cherry',
-                    usernameStyle: a.text.gradientStyle,
-                    usernameClassName: i()(a.text.gradientClassName, a.gradient.gradientClassName, h.gradientAlwaysAnimate),
+                    usernameStyle: u.text.gradientStyle,
+                    usernameClassName: i()(u.text.gradientClassName, u.gradient.gradientClassName, h.gradientAlwaysAnimate),
                     message: y.NW.string(j.Z.eTHkQU)
                 })
             }),
             (0, n.jsx)(d.default, {
                 defaultColor: m.p6O,
                 colors: b.tl,
-                value: t.primary_color,
-                secondaryValue: t.secondary_color,
+                value: r.primary_color,
+                secondaryValue: null != (e = r.secondary_color) ? e : void 0,
                 onChange: (e) => {
-                    var n, o;
-                    return r(
-                        ((n = (function (e) {
+                    var t, n;
+                    return a(
+                        ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var r = null != arguments[t] ? arguments[t] : {},
                                     n = Object.keys(r);
@@ -74,10 +75,10 @@ function C() {
                                     });
                             }
                             return e;
-                        })({}, t)),
-                        (o = o = { primary_color: e }),
+                        })({}, r)),
+                        (n = n = { primary_color: e }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
+                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                             : (function (e, t) {
                                   var r = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -85,14 +86,14 @@ function C() {
                                       r.push.apply(r, n);
                                   }
                                   return r;
-                              })(Object(o)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
+                              })(Object(n)).forEach(function (e) {
+                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                               }),
-                        n)
+                        t)
                     );
                 },
                 onChangeGradientColors: (e) =>
-                    r({
+                    a({
                         primary_color: e[0],
                         secondary_color: e[1],
                         tertiary_color: void 0

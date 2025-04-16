@@ -1,15 +1,16 @@
 n.d(t, {
-    Gf: () => f,
+    Gf: () => x,
+    Jf: () => g,
     OW: () => u,
     S1: () => a,
     TW: () => m,
     TY: () => c,
     Uv: () => d,
-    _l: () => p,
-    d_: () => h,
+    _l: () => h,
+    d_: () => f,
     lO: () => o,
     sI: () => l,
-    we: () => g
+    we: () => p
 }),
     n(953529),
     n(388685);
@@ -53,14 +54,22 @@ function u(e, t) {
         color: t
     });
 }
-function m(e, t) {
+function m(e, t, n) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_COLORS',
         id: e,
-        colors: t
+        colors: t,
+        currentStyle: n
     });
 }
-function g(e, t, n) {
+function g(e, t) {
+    r.Z.dispatch({
+        type: 'GUILD_SETTINGS_ROLES_ROLE_STYLE_UPDATE',
+        id: e,
+        currentStyle: t
+    });
+}
+function p(e, t, n) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_SETTINGS',
         id: e,
@@ -68,7 +77,7 @@ function g(e, t, n) {
         mentionable: n
     });
 }
-function p(e, t, n) {
+function h(e, t, n) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON',
         id: e,
@@ -76,14 +85,14 @@ function p(e, t, n) {
         unicodeEmoji: n
     });
 }
-function h(e, t) {
+function f(e, t) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS',
         roleId: e,
         roleConnectionConfigurations: t
     });
 }
-async function f(e, t, n, l, a) {
+async function x(e, t, n, l, a) {
     r.Z.dispatch({ type: 'GUILD_SETTINGS_ROLES_SUBMITTING' });
     try {
         let r = async () => {
