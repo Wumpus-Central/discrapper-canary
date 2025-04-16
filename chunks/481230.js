@@ -141,11 +141,18 @@ function m(e) {
                 u.default.track(p.rMx.REGISTER_SUBMIT_ERRORED, {
                     is_unique_username_registration: !0,
                     email_error_reason: t.getFirstFieldErrorMessage('email'),
-                    phone_error_reason: t.getFirstFieldErrorMessage('phone'),
+                    phone_error_reason: t.getFirstFieldErrorMessage('phone_token'),
                     password_error_reason: t.getFirstFieldErrorMessage('password'),
                     username_error_reason: t.getFirstFieldErrorMessage('username'),
                     global_name_error_reason: t.getFirstFieldErrorMessage('global_name'),
-                    date_of_birth_error_reason: t.getFirstFieldErrorMessage('date_of_birth')
+                    date_of_birth_error_reason: t.getFirstFieldErrorMessage('date_of_birth'),
+                    promotional_email_opt_in_error_reason: t.getFirstFieldErrorMessage('promotional_email_opt_in'),
+                    fingerprint_error_reason: t.getFirstFieldErrorMessage('fingerprint'),
+                    invite_error_reason: t.getFirstFieldErrorMessage('invite'),
+                    gift_code_sku_id_error_reason: t.getFirstFieldErrorMessage('gift_code_sku_id'),
+                    guild_template_code_error_reason: t.getFirstFieldErrorMessage('guild_template_code'),
+                    consent_error_reason: t.getFirstFieldErrorMessage('consent'),
+                    generic_error_reason: t.getAnyErrorMessage()
                 }),
                 t)
             );
