@@ -9515,7 +9515,7 @@
   "HHCdvb": "Level !!{boostLevel}!! - {slots, plural, one {1 Slot} other { Slots} } of !!{totalSlots}!! available",
   "lLFvlZ": "Name",
   "85qMS0": "Uploaded By",
-  "F7bbrq": "This image will display in server invite embeds, invite in browser, and invite confirmation modal.",
+  "F7bbrq": "This image will display when your server invite is viewed in a browser, as well as in invite confirmation screens and Server Onboarding.",
   "FEFkkJ": "This image will display when users receive an invite to the server.",
   "ZYA9PT": "The recommended minimum size is 1920x1080 and recommended aspect ratio is 16:9. [Learn more](Learn more)",
   "R5nQkZ": "Stickers",
