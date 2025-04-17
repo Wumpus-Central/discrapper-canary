@@ -91,10 +91,10 @@ function A(e) {
             (e) => {
                 var i;
                 let { row: s } = e;
-                if (0 === x.length) return (0, r.jsx)(W, {}, 'empty-role');
+                if (0 === x.length) return (0, r.jsx)(k, {}, 'empty-role');
                 let o = x[s];
                 return (0, r.jsx)(
-                    k,
+                    W,
                     {
                         role: o,
                         guild: n,
@@ -122,7 +122,7 @@ function A(e) {
         renderRow: P
     });
 }
-function W() {
+function k() {
     return (0, r.jsxs)('div', {
         className: P.emptyRoles,
         children: [
@@ -140,11 +140,11 @@ function W() {
         ]
     });
 }
-function k(e) {
+function W(e) {
     var t, s, c;
     let { role: d, guild: g, highestRole: h, currentPosition: b, memberCount: N, onDragStart: _, onDragReset: v, onDragComplete: O, disableHover: C, disableDrag: I, setEditRoleId: S, setSelectedSection: A } = e,
-        W = (0, y.T)(g, h, d),
-        k = null != W,
+        k = (0, y.T)(g, h, d),
+        W = null != k,
         [M, G] = i.useState(!1),
         U = i.useMemo(
             () => ({
@@ -156,7 +156,7 @@ function k(e) {
                         position: b
                     }
                 ),
-                canDrag: () => M && !k,
+                canDrag: () => M && !W,
                 collect: (e) => ({ isDragging: e.isDragging() }),
                 end: (e, t) => {
                     let n = t.getDropResult();
@@ -164,20 +164,20 @@ function k(e) {
                     O(n.roleId);
                 }
             }),
-            [d, _, v, O, k, M, b]
+            [d, _, v, O, W, M, b]
         ),
         [{ isDragging: B }, F] = (0, a.c)(U),
         z = i.useMemo(
             () => ({
                 accept: D,
-                canDrop: () => !k,
+                canDrop: () => !W,
                 collect: (e) => {
                     let t = e.getItem();
                     return null != t && e.isOver() && e.canDrop() ? { dragSourcePosition: t.position } : { dragSourcePosition: null };
                 },
                 drop: () => ({ roleId: d.id })
             }),
-            [k, d]
+            [W, d]
         ),
         [{ dragSourcePosition: H }, V] = (0, o.L)(z),
         Y = i.useCallback(
@@ -226,7 +226,7 @@ function k(e) {
         }),
         children: [
             (0, r.jsx)('div', {
-                className: l()(P.dragIcon, w.dragSpacing, { [P.dragIconHidden]: k || I }),
+                className: l()(P.dragIcon, w.dragSpacing, { [P.dragIconHidden]: W || I }),
                 onMouseEnter: () => G(!0),
                 onMouseLeave: () => G(!1),
                 children: (0, r.jsx)(u.Vni, {
@@ -250,10 +250,10 @@ function k(e) {
                               className: P.roleIcon,
                               defaultIconClassName: P.shield
                           }),
-                    null != W
+                    null != k
                         ? (0, r.jsx)(y.Z, {
                               className: P.lock,
-                              tooltipText: W
+                              tooltipText: k
                           })
                         : null,
                     (0, r.jsx)(u.Text, {
@@ -302,10 +302,10 @@ function k(e) {
                 children: [
                     (0, r.jsx)(u.M0o, {
                         className: l()(P.circleButton, P.editButton),
-                        tooltip: k ? T.NW.string(T.t['HO/oXl']) : T.NW.string(T.t.bt75u7),
+                        tooltip: W ? T.NW.string(T.t['HO/oXl']) : T.NW.string(T.t.bt75u7),
                         color: u.YX$.SECONDARY,
                         size: u.tT7.SIZE_36,
-                        icon: k
+                        icon: W
                             ? (0, r.jsx)(u.tEF, {
                                   size: 'custom',
                                   color: 'currentColor',

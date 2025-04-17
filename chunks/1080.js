@@ -224,7 +224,7 @@ class A extends i.PureComponent {
             });
     }
 }
-let W = i.forwardRef(function (e, t) {
+let k = i.forwardRef(function (e, t) {
     let { guild: n, sortedBans: s, bans: l } = e,
         c = (0, a.e7)([j.Z], () => j.Z.hidePersonalInformation, []),
         d = i.useCallback(
@@ -274,7 +274,7 @@ let W = i.forwardRef(function (e, t) {
         ref: t
     });
 });
-function k(e) {
+function W(e) {
     let { guildId: t, storedSearchQuery: n } = e,
         [s, l] = i.useState(null != n ? n : ''),
         [a, c] = i.useState(!1),
@@ -424,7 +424,7 @@ function L() {
         : (0, r.jsxs)('div', {
               className: P.container,
               children: [
-                  (0, r.jsx)(k, {
+                  (0, r.jsx)(W, {
                       guildId: O,
                       storedSearchQuery: u
                   }),
@@ -432,7 +432,7 @@ function L() {
                       className: P.scrollerContainer,
                       children: [
                           !L &&
-                              (0, r.jsx)(W, {
+                              (0, r.jsx)(k, {
                                   guild: c,
                                   bans: x,
                                   sortedBans: H,

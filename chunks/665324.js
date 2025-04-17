@@ -32,7 +32,7 @@ var r = n(200651),
     Z = n(710111),
     D = n(388032),
     A = n(832183);
-function W(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function W(e) {
     }
     return e;
 }
-function k(e, t) {
+function W(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -123,7 +123,7 @@ function U(e) {
                                   });
                               },
                               tabIndex: -1,
-                              children: (0, r.jsx)(y.Z, W({}, e))
+                              children: (0, r.jsx)(y.Z, k({}, e))
                           })
                   }),
                   D.NW.format(D.t.HHCdvb, {
@@ -165,8 +165,8 @@ let B = (e) => {
             }, [o]);
         return (0, r.jsx)(
             u.yRy,
-            k(
-                W(
+            W(
+                k(
                     {
                         shouldShow: l,
                         renderPopout: (e) =>
@@ -194,7 +194,7 @@ let B = (e) => {
             renderPopoutChildren: (e) =>
                 (0, r.jsx)(
                     u.zxk,
-                    k(W({}, e), {
+                    W(k({}, e), {
                         disabled: !0,
                         children: D.NW.string(D.t['/uNYPD'])
                     })
@@ -238,7 +238,7 @@ function z(e) {
               onClick: function () {
                   (0, u.ZDy)(async () => {
                       let { default: e } = await Promise.all([n.e('56035'), n.e('15878')]).then(n.bind(n, 758961));
-                      return (n) => (0, r.jsx)(e, k(W({}, n), { guildId: t.id }));
+                      return (n) => (0, r.jsx)(e, W(k({}, n), { guildId: t.id }));
                   });
               },
               disabled: g <= 0 || !a,
@@ -423,7 +423,7 @@ function H(e) {
                                           return (n) =>
                                               (0, r.jsx)(
                                                   e,
-                                                  k(W({}, n), {
+                                                  W(k({}, n), {
                                                       guildId: o.id,
                                                       existingSound: t
                                                   })
@@ -444,8 +444,8 @@ function H(e) {
                                       (0, u.h7j)((e) =>
                                           (0, r.jsx)(
                                               u.ConfirmModal,
-                                              k(
-                                                  W(
+                                              W(
+                                                  k(
                                                       {
                                                           header: D.NW.formatToPlainString(D.t['PR/VbG'], { soundName: p }),
                                                           confirmText: D.NW.string(D.t.oyYWHB),

@@ -48,7 +48,7 @@ let y = new Set(),
     Z = new Map(),
     D = new Map(),
     A = new Map();
-function W() {
+function k() {
     if (null == r || null == T) return [];
     let e = c()(f.Z.getRoles(r.id))
         .values()
@@ -72,7 +72,7 @@ function W() {
         ascending: !1
     });
 }
-function k(e) {
+function W(e) {
     let { section: t } = e;
     if (null != r || t !== _.pNK.ROLES) return !1;
     L();
@@ -145,7 +145,7 @@ function M(e) {
 }
 let G = c().debounce(() => {
     let e = !1;
-    S && ((S = W().length > 0) || (e = !0)),
+    S && ((S = k().length > 0) || (e = !0)),
         [...y].forEach((t) => {
             var n;
             c().isEqual(
@@ -262,7 +262,7 @@ class z extends (l = m.ZP.Store) {
         return I;
     }
     getSortDeltas() {
-        return W();
+        return k();
     }
     showNotice() {
         return this.hasChanges();
@@ -284,8 +284,8 @@ let H = new z(
             ? {}
             : {
                   GUILD_SETTINGS_ROLES_INIT: () => L(),
-                  GUILD_SETTINGS_INIT: k,
-                  GUILD_SETTINGS_SET_SECTION: k,
+                  GUILD_SETTINGS_INIT: W,
+                  GUILD_SETTINGS_SET_SECTION: W,
                   GUILD_SETTINGS_ROLES_SORT_UPDATE: function (e) {
                       let { roles: t } = e;
                       if (null != T && t.length !== T.length) return !1;

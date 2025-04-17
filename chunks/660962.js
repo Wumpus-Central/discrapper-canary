@@ -32,8 +32,8 @@ var r = n(200651),
     Z = n(764260),
     D = n(946724),
     A = n(95242),
-    W = n(541575),
-    k = n(420966),
+    k = n(541575),
+    W = n(420966),
     L = n(337344),
     M = n(275296),
     G = n(203377),
@@ -416,7 +416,7 @@ function ea(e) {
         p = i || m,
         h = (0, d.e7)([w.Z], () => w.Z.canImpersonateRole(t, n)),
         { headerHeight: f, headerRef: b } = (0, A.Z)(0),
-        { scrolledToTop: j, handleScroll: N } = (0, k.V)();
+        { scrolledToTop: j, handleScroll: N } = (0, W.V)();
     return (0, r.jsx)(g.yWw, {
         className: H.scroller,
         style: { scrollPaddingTop: f },
@@ -427,7 +427,7 @@ function ea(e) {
                 (0, r.jsx)('div', {
                     className: l()(V.header, V.stickyHeader, { [V.stickyHeaderElevated]: !j }),
                     ref: b,
-                    children: (0, r.jsx)(k.Z, {
+                    children: (0, r.jsx)(W.Z, {
                         guild: t,
                         role: n,
                         selectedSection: G.ZI.DISPLAY,
@@ -468,7 +468,7 @@ function ea(e) {
                             children: F.NW.string(z.Z.tBhCys)
                         })
                     }),
-                (0, r.jsx)(W.Z, {
+                (0, r.jsx)(k.Z, {
                     guild: t,
                     disabled: p,
                     role: n

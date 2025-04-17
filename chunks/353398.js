@@ -350,14 +350,14 @@ function D(e) {
                       className: a()(C.marginTop20, O.buttonContainer),
                       children: [
                           n.isDirty &&
-                              (0, i.jsx)(W, {
+                              (0, i.jsx)(k, {
                                   guild: t,
                                   guildTemplate: n
                               }),
                           (0, i.jsxs)('div', {
                               className: O.rightButtonContainer,
                               children: [
-                                  (0, i.jsx)(k, {
+                                  (0, i.jsx)(W, {
                                       guild: t,
                                       guildTemplate: n
                                   }),
@@ -395,7 +395,7 @@ function A(e) {
         children: v.NW.string(v.t.Wxdi8P)
     });
 }
-function W(e) {
+function k(e) {
     let { guild: t, guildTemplate: n } = e,
         [r, l] = s.useState(!1),
         a = async () => {
@@ -414,7 +414,7 @@ function W(e) {
         children: v.NW.string(v.t['Nw+0Y2'])
     });
 }
-function k(e) {
+function W(e) {
     let { guild: t, guildTemplate: n } = e,
         [r, l] = s.useState(!1),
         a = async () => {

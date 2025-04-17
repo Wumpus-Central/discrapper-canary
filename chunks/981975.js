@@ -95,12 +95,12 @@ function w(e) {
             var e;
             return null != (e = x.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
         }),
-        W = A.length > 1 ? m.O1.OR : m.O1.AND,
-        k = i.useMemo(() => (W === m.O1.OR ? A.flat() : null != A && A.length > 0 ? A[0] : []), [W, A]),
-        L = i.useMemo(() => new Set(k.map((e) => e.connectionType)), [k]);
+        k = A.length > 1 ? m.O1.OR : m.O1.AND,
+        W = i.useMemo(() => (k === m.O1.OR ? A.flat() : null != A && A.length > 0 ? A[0] : []), [k, A]),
+        L = i.useMemo(() => new Set(W.map((e) => e.connectionType)), [W]);
     function M(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            r = [...k];
+            r = [...W];
         r.push({
             connectionType: e,
             connectionMetadataField: void 0,
@@ -108,7 +108,7 @@ function w(e) {
             operator: void 0,
             value: void 0
         }),
-            (0, f.d_)(n.id, T(r, W));
+            (0, f.d_)(n.id, T(r, k));
     }
     function G() {
         u.Z.dispatch({
@@ -120,15 +120,15 @@ function w(e) {
         });
     }
     let U = null;
-    if (0 === k.length)
+    if (0 === W.length)
         U = (0, r.jsx)(P, {
             handleAddVerificationClicked: G,
             locked: s
         });
-    else if (k.length > 0) {
+    else if (W.length > 0) {
         var B;
         let e = null;
-        k.length < 10 &&
+        W.length < 10 &&
             (e = (0, r.jsx)(d.zxk, {
                 className: l()(y.addVerificationButton, y.addVerificationButtonAppend),
                 size: d.zxk.Sizes.LARGE,
@@ -201,7 +201,7 @@ function w(e) {
                                 'aria-labelledby': S
                             })
                         });
-                    })(s, n.id, W, k, (e, t) => (0, f.d_)(n.id, T(e, t))),
+                    })(s, n.id, k, W, (e, t) => (0, f.d_)(n.id, T(e, t))),
                     (function (e, t, n, i, s) {
                         function l(n, r) {
                             let i = [];
@@ -281,7 +281,7 @@ function w(e) {
                                 )
                             )
                         });
-                    })(k, (e) => (0, f.d_)(n.id, T(e, W)), s, n.id, o),
+                    })(W, (e) => (0, f.d_)(n.id, T(e, k)), s, n.id, o),
                     e
                 ]
             }));

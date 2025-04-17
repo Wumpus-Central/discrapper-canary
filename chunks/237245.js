@@ -71,10 +71,10 @@ function I(e) {
         [R, Z] = i.useState(null),
         D = I.hasFeature(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         A = null != (t = (0, g.A)({ guildId: I.id })) ? t : 0,
-        W = i.useCallback(() => {
+        k = i.useCallback(() => {
             Z(null), h.Z.init(T, _.pNK.ACCESS);
         }, [T]),
-        k = i.useCallback(async (e) => {
+        W = i.useCallback(async (e) => {
             try {
                 w(!0), await e(), Z(null);
             } finally {
@@ -122,7 +122,7 @@ function I(e) {
             if (s.joinType === j.A.INVITE) {
                 let { requireTerms: e, termRules: t = [] } = s,
                     n = t.map((e) => e.value.trim()).filter((e) => '' !== e);
-                k(async () => {
+                W(async () => {
                     if (I.hasFeature(_.oNc.DISCOVERABLE)) {
                         let e = new Set(I.features);
                         e.delete(_.oNc.DISCOVERABLE), await L({ features: e });
@@ -132,7 +132,7 @@ function I(e) {
             } else if (s.joinType === j.A.APPLY) {
                 let { pendingVerificationFields: e } = s;
                 if (null == e) return;
-                k(async () => {
+                W(async () => {
                     if (I.hasFeature(_.oNc.DISCOVERABLE)) {
                         let e = new Set(I.features);
                         e.delete(_.oNc.DISCOVERABLE), await L({ features: e });
@@ -142,7 +142,7 @@ function I(e) {
             } else if (s.joinType === j.A.DISCOVERABLE) {
                 let { requireTerms: e, termRules: t = [] } = s,
                     n = t.map((e) => e.value.trim()).filter((e) => '' !== e);
-                k(async () => {
+                W(async () => {
                     if ((f.verificationDirty && (await G(e, n)), f.guildDirty)) {
                         (0, x.UA)(I, b);
                         let e = new Set(I.features);
@@ -162,7 +162,7 @@ function I(e) {
                     }
                 });
             }
-        }, [s, k, I, f, L, G, S, M, b, E]),
+        }, [s, W, I, f, L, G, S, M, b, E]),
         B = i.useCallback(() => {
             var e;
             let t = (e) => {
@@ -210,7 +210,7 @@ function I(e) {
         onSaveText: F ? O.NW.string(O.t['qjtt/v']) : void 0,
         submitting: P,
         errorMessage: R,
-        onReset: W,
+        onReset: k,
         onSave: B,
         disabled: F && !z
     });

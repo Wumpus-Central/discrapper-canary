@@ -35,16 +35,16 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
             [w, R] = i.useState(null != (t = null == c ? void 0 : c.store_page_primary_color) ? t : T),
             [Z, D] = i.useState(null == c ? void 0 : c.store_page_trailer_url),
             A = null == Z || null != Z.match(S),
-            [W, k] = i.useState(null != (n = null == c ? void 0 : c.store_page_show_subscriber_count) && n),
+            [k, W] = i.useState(null != (n = null == c ? void 0 : c.store_page_show_subscriber_count) && n),
             L = i.useRef(null == c ? void 0 : c.store_page_slug).current,
-            M = v !== s.hasFeature(C.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color)) || Z !== (null == c ? void 0 : c.store_page_trailer_url) || (null != W && W !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
+            M = v !== s.hasFeature(C.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color)) || Z !== (null == c ? void 0 : c.store_page_trailer_url) || (null != k && k !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
             G = async () => {
                 o()(null != c, 'Settings must be defined');
                 let e = {};
                 v !== s.hasFeature(C.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = v),
                     (((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = w),
                     Z !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = Z),
-                    W !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = W),
+                    k !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = k),
                     !d().isEmpty(e) &&
                         (await N(s.id, e),
                         'store_page_enabled' in e &&
@@ -198,9 +198,9 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                         }),
                         (0, r.jsx)(p.j7V, {
                             className: I.premiumMemberCountSwitchContainer,
-                            value: W,
+                            value: k,
                             hideBorder: !0,
-                            onChange: (e) => k(e),
+                            onChange: (e) => W(e),
                             disabled: F,
                             children: (0, r.jsxs)('div', {
                                 className: I.iconSwitchLabel,
@@ -244,7 +244,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                 submitting: u,
                                 onReset: () => {
                                     var e, t;
-                                    P(s.hasFeature(C.oNc.CREATOR_STORE_PAGE)), R(null != (e = null == c ? void 0 : c.store_page_primary_color) ? e : T), D(null == c ? void 0 : c.store_page_trailer_url), k(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t);
+                                    P(s.hasFeature(C.oNc.CREATOR_STORE_PAGE)), R(null != (e = null == c ? void 0 : c.store_page_primary_color) ? e : T), D(null == c ? void 0 : c.store_page_trailer_url), W(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t);
                                 },
                                 onSave: G,
                                 disabled: z
