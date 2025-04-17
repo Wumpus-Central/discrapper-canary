@@ -1,20 +1,18 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(200651),
     i = n(192379),
-    l = n(512722),
-    o = n.n(l),
-    a = n(442837),
-    s = n(911367),
-    c = n(695346),
-    u = n(699516),
-    d = n(594174),
-    p = n(212321),
-    h = n(646915),
-    f = n(184301),
-    m = n(432958),
-    g = n(792379),
-    b = n(177222);
-function _(e) {
+    l = n(442837),
+    o = n(911367),
+    a = n(695346),
+    s = n(699516),
+    c = n(594174),
+    u = n(212321),
+    d = n(646915),
+    p = n(184301),
+    h = n(432958),
+    f = n(792379),
+    m = n(177222);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,65 +37,63 @@ function _(e) {
     }
     return e;
 }
-function y(e) {
+function b(e) {
     let { channel: t } = e,
-        n = (0, h.Z)();
-    (0, s.t)();
-    let { withMutualFriendsCount: l } = (0, p.j)({ location: 'UserProfilePanelRenderer' }),
-        [y] = t.recipients,
-        C = (0, a.e7)([d.default], () => d.default.getUser(y));
-    o()(null != C, 'UserProfilePanelRenderer: user cannot be undefined');
-    let x = (0, a.e7)([d.default], () => d.default.getCurrentUser());
-    o()(null != x, 'UserProfilePanelRenderer: currentUser cannot be undefined'),
-        i.useEffect(() => {
-            (0, f.Z)(C, {
-                type: 'panel',
-                withMutualFriendsCount: !C.bot && l,
-                withMutualFriends: !C.bot && !l,
-                withMutualGuilds: !0,
-                channelId: t.id
-            });
-        }, [C, t.id, l]);
-    let { isBlocked: v, isIgnored: j } = (0, a.cj)([u.Z], () => ({
-            isBlocked: u.Z.isBlocked(C.id),
-            isIgnored: u.Z.isIgnored(C.id)
+        n = (0, d.Z)();
+    (0, o.t)();
+    let { withMutualFriendsCount: b } = (0, u.j)({ location: 'UserProfilePanelRenderer' }),
+        [_] = t.recipients,
+        y = (0, l.e7)([c.default], () => c.default.getUser(_)),
+        C = (0, l.e7)([c.default], () => c.default.getCurrentUser());
+    i.useEffect(() => {
+        (0, p.Z)(null != y ? y : _, {
+            type: 'panel',
+            withMutualFriendsCount: (null == y ? void 0 : y.bot) !== !0 && b,
+            withMutualFriends: (null == y ? void 0 : y.bot) !== !0 && !b,
+            withMutualGuilds: !0,
+            channelId: t.id
+        });
+    }, [y, _, t.id, b]);
+    let { isBlocked: x, isIgnored: v } = (0, l.cj)([s.Z], () => ({
+            isBlocked: s.Z.isBlocked(_),
+            isIgnored: s.Z.isIgnored(_)
         })),
-        [O, E] = i.useState(v || j),
-        N = c.Rt.useSetting();
+        [j, O] = i.useState(x || v),
+        E = a.Rt.useSetting();
     return (i.useEffect(() => {
-        E(v || j);
-    }, [v, j]),
-    n)
+        O(x || v);
+    }, [x, v]),
+    null == y || null == C || n)
         ? null
-        : O && !(j && N)
+        : j && !(v && E)
           ? (0, r.jsx)(
-                m.A,
-                _(
+                h.A,
+                g(
                     {
-                        user: C,
-                        currentUser: x,
-                        onViewBlockedProfileClick: () => E(!1)
+                        user: y,
+                        currentUser: C,
+                        onViewBlockedProfileClick: () => O(!1)
                     },
                     e
                 )
             )
-          : C.isNonUserBot()
+          : y.isNonUserBot()
             ? (0, r.jsx)(
-                  g.Z,
-                  _(
+                  f.Z,
+                  g(
                       {
-                          user: C,
-                          currentUser: x
+                          user: y,
+                          currentUser: C
                       },
                       e
                   )
               )
             : (0, r.jsx)(
-                  b.Z,
-                  _(
+                  m.Z,
+                  g(
                       {
-                          user: C,
-                          currentUser: x
+                          user: y,
+                          currentUser: C
                       },
                       e
                   )
