@@ -92,8 +92,8 @@ let T = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFoc
 function N(e) {
     var t,
         n,
-        { src: o, alt: s, className: c, emojiId: f, emojiName: p, channelId: g, messageId: b, animated: v, size: S = 'default', isInteracting: N = !1, shouldAnimate: A, onMouseEnter: C, onMouseLeave: R, canSelect: P = !0, autoplay: w, registerAnimatedElementRef: D, registerInnerRef: L } = e,
-        x = I(e, ['src', 'alt', 'className', 'emojiId', 'emojiName', 'channelId', 'messageId', 'animated', 'size', 'isInteracting', 'shouldAnimate', 'onMouseEnter', 'onMouseLeave', 'canSelect', 'autoplay', 'registerAnimatedElementRef', 'registerInnerRef']);
+        { src: o, alt: s, className: c, emojiId: f, emojiName: p, channelId: g, messageId: b, animated: v, size: S = 'default', isInteracting: N = !1, shouldAnimate: A, onMouseEnter: C, onMouseLeave: R, canSelect: P = !0, autoplay: w, registerInnerRef: D, registerAnimatedElementRef: L } = e,
+        x = I(e, ['src', 'alt', 'className', 'emojiId', 'emojiName', 'channelId', 'messageId', 'animated', 'size', 'isInteracting', 'shouldAnimate', 'onMouseEnter', 'onMouseLeave', 'canSelect', 'autoplay', 'registerInnerRef', 'registerAnimatedElementRef']);
     let [M, k] = i.useState(!1),
         [j, U] = i.useState(void 0),
         G = i.useRef(void 0),
@@ -159,9 +159,9 @@ function N(e) {
     );
     let J = i.useCallback(
             (e) => {
-                (Y.current = e), null == D || D(e);
+                (Y.current = e), null == D || D(e), null == L || L(e);
             },
-            [D]
+            [D, L]
         ),
         $ = (0, l.Z)(Y);
     return null == K || '' === K
@@ -208,22 +208,14 @@ function N(e) {
           });
 }
 function A(e) {
-    var { registerInnerRef: t } = e,
-        n = I(e, ['registerInnerRef']);
-    let { useThoughtfullyAnimated: o } = i.useContext(f.q),
-        { animate: a, registerRef: s } = o(),
-        { disableAnimations: l } = i.useContext(c.G),
-        u = i.useCallback(
-            (e) => {
-                s(e), null == t || t(e);
-            },
-            [t, s]
-        );
+    let { useThoughtfullyAnimated: t } = i.useContext(f.q),
+        { animate: n, registerRef: o } = t(),
+        { disableAnimations: a } = i.useContext(c.G);
     return (0, r.jsx)(
         N,
-        O(y({}, n), {
-            registerAnimatedElementRef: u,
-            shouldAnimate: a && !l
+        O(y({}, e), {
+            registerAnimatedElementRef: o,
+            shouldAnimate: n && !a
         })
     );
 }
