@@ -234,41 +234,43 @@ let V = (e) => {
             requiredFirstCharacters: ['<'],
             match: (e) => /^<@&(\d+)>/.exec(e),
             parse(e, t, n) {
-                var r, i, o;
-                let [a, s] = e;
+                var r, i, o, a, s, l;
+                let [u, d] = e;
                 if (n.returnMentionIds)
                     return {
                         type: 'roleMention',
-                        id: s
+                        id: d
                     };
-                let l = Z(n),
-                    u = null != l ? f.Z.getRole(l.id, s) : null;
-                if (null == u)
+                let _ = Z(n),
+                    p = null != _ ? f.Z.getRole(_.id, d) : null;
+                if (null == p)
                     return {
                         type: 'text',
                         content: '@'.concat(w.NW.string(w.t['YV4F/v']))
                     };
-                let d = (0, c.OC)(null == l ? void 0 : l.id, 'parse');
+                let h = (0, c.OC)(null == _ ? void 0 : _.id, 'parse'),
+                    m = (null == (r = p.colors) ? void 0 : r.primary_color) === 0 && (null == (i = p.colors) ? void 0 : i.secondary_color) == null && (null == (o = p.colors) ? void 0 : o.tertiary_color) == null;
                 return {
                     type: 'mention',
                     channelId: n.channelId,
-                    guildId: null != l ? l.id : null,
-                    roleId: s,
-                    roleColor: u.color,
-                    roleColors: d
-                        ? {
-                              primaryColor: null == (r = u.colors) ? void 0 : r.primary_color,
-                              secondaryColor: null == (i = u.colors) ? void 0 : i.secondary_color,
-                              tertiaryColor: null == (o = u.colors) ? void 0 : o.tertiary_color
-                          }
-                        : null,
-                    roleName: '@'.concat(u.name),
-                    color: u.color,
-                    colorString: u.colorString,
+                    guildId: null != _ ? _.id : null,
+                    roleId: d,
+                    roleColor: p.color,
+                    roleColors:
+                        h && !m
+                            ? {
+                                  primaryColor: null == (a = p.colors) ? void 0 : a.primary_color,
+                                  secondaryColor: null == (s = p.colors) ? void 0 : s.secondary_color,
+                                  tertiaryColor: null == (l = p.colors) ? void 0 : l.tertiary_color
+                              }
+                            : null,
+                    roleName: '@'.concat(p.name),
+                    color: p.color,
+                    colorString: p.colorString,
                     content: [
                         {
                             type: 'text',
-                            content: '@'.concat(u.name)
+                            content: '@'.concat(p.name)
                         }
                     ]
                 };
