@@ -539,13 +539,20 @@ class eu extends i.Component {
                     .slice(0, n + 1)
                     .filter(Y.lm);
                 if (0 === r.length) return;
-                let i = r.reduce((e, t) => (t.type !== U.so.MEMBER || (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some((e) => e.type === X.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++), e), {
-                    num_users_visible: 0,
-                    num_users_visible_with_mobile_indicator: 0,
-                    num_users_visible_with_game_activity: 0,
-                    num_users_visible_with_activity: 0,
-                    num_users_visible_with_avatar_decoration: 0
-                });
+                let i = r.reduce(
+                    (e, t) => {
+                        var n;
+                        return t.type !== U.so.MEMBER || (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some((e) => e.type === X.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, (null == (n = t.user.collectibles) ? void 0 : n.nameplate) != null && e.num_users_visible_with_nameplate++), e;
+                    },
+                    {
+                        num_users_visible: 0,
+                        num_users_visible_with_mobile_indicator: 0,
+                        num_users_visible_with_game_activity: 0,
+                        num_users_visible_with_activity: 0,
+                        num_users_visible_with_avatar_decoration: 0,
+                        num_users_visible_with_nameplate: 0
+                    }
+                );
                 (this.lastReportedAnalyticsChannel = this.props.channel.id), x.ZP.trackWithMetadata(X.rMx.MEMBER_LIST_VIEWED, ee({}, i));
             });
     }
