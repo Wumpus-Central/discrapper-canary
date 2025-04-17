@@ -900,7 +900,6 @@ function eg(e, t, n) {
                     text: l
                 };
             let o = s.ZP.getEmbeddedActivitiesForChannel(e.id)
-                .concat(s.ZP.getEmbeddedActivitiesForStartingChannel(e.id))
                 .map((e) => {
                     var t;
                     return null == (t = a.Z.getApplication(e.applicationId)) ? void 0 : t.name;

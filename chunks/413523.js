@@ -145,8 +145,8 @@ class D {
     updateParticipant(e) {
         let t = this.participants[e],
             n = e === C ? this._getParticipantsForEmbeddedActivities() : this._getParticipantsForUser(e);
-        return (
-            (null != t || 0 !== n.length) &&
+        if (null == t && 0 === n.length) return !1;
+        if (
             (null == t ||
                 t.forEach((e) => {
                     this.participantByIndex.delete(e.id);
@@ -155,8 +155,14 @@ class D {
                 this.participantByIndex.set(e.id, e);
             }),
             (this.participants[e] = n),
-            !0)
-        );
+            e !== C)
+        ) {
+            var r, i;
+            let e = null != (r = null == t ? void 0 : t.length) ? r : 0,
+                o = null != (i = null == n ? void 0 : n.length) ? i : 0;
+            ((e < 1 && o > 0) || (e > 0 && o < 1)) && this.updateEmbeddedActivities();
+        }
+        return !0;
     }
     updateParticipantSpeaking(e) {
         var t, n;
@@ -217,11 +223,20 @@ class D {
     _getEmbeddedActivities() {
         var e, t;
         let n = l.ZP.getEmbeddedActivitiesForChannel(this.channelId).concat(l.ZP.getEmbeddedActivitiesForStartingChannel(this.channelId)),
-            o = null != (e = l.ZP.getSelfEmbeddedActivityForChannel(this.channelId)) ? e : l.ZP.getSelfEmbeddedActivityForStartingChannel(this.channelId);
-        if (null == o) return n;
+            o = new Set();
+        Object.entries(this.participants).forEach((e) => {
+            let [t, n] = e;
+            n.length > 0 && o.add(t);
+        });
+        let a = n.filter((e) => {
+                var t;
+                return null == (t = e.participants) ? void 0 : t.some((e) => o.has(e.userId));
+            }),
+            c = null != (e = l.ZP.getSelfEmbeddedActivityForChannel(this.channelId)) ? e : l.ZP.getSelfEmbeddedActivityForStartingChannel(this.channelId);
+        if (null == c) return a;
         {
-            let e = (0, r.uniqBy)([...n, o], (e) => e.compositeInstanceId);
-            return (null == (t = o.participants) ? void 0 : t.some((e) => e.sessionId === d.default.getSessionId())) && (0, s.R)({ isContextless: o.location.kind === i.E.CONTEXTLESS }) ? e.filter((e) => e.applicationId !== o.applicationId && e.compositeInstanceId !== o.compositeInstanceId) : e;
+            let e = (0, r.uniqBy)([...a, c], (e) => e.compositeInstanceId);
+            return (null == (t = c.participants) ? void 0 : t.some((e) => e.sessionId === d.default.getSessionId())) && (0, s.R)({ isContextless: c.location.kind === i.E.CONTEXTLESS }) ? e.filter((e) => e.applicationId !== c.applicationId && e.compositeInstanceId !== c.compositeInstanceId) : e;
         }
     }
     _getParticipantsForEmbeddedActivities() {
