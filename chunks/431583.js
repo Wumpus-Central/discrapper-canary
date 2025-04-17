@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { default: () => S }), n(388685);
 var r = n(200651),
     i = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(525654),
     s = n.n(o),
     c = n(873546),
@@ -64,22 +64,22 @@ let N = [
     ],
     j = (e) => {
         let { url: t, text: n, onClick: i } = e,
-            l = (0, h.Q3)('DownloadButton'),
+            a = (0, h.Q3)('DownloadButton'),
             o = (0, p.nYM)({ grow: !0 });
         return (0, r.jsx)(p.eee, {
             useDefaultUnderlineStyles: !1,
             href: t,
-            className: l ? a()(o, v.refreshDownloadButton) : v.downloadButton,
+            className: a ? l()(o, v.refreshDownloadButton) : v.downloadButton,
             onClick: i,
             children: n
         });
     },
     C = (e) => {
         let t,
-            { platform: n, onClick: i, onMouseEnter: l, isActive: o, claimed: s } = e,
+            { platform: n, onClick: i, onMouseEnter: a, isActive: o, claimed: s } = e,
             { getOs: c, icon: u, url: d, platformKey: m } = n,
             f = c(),
-            h = a()(v.icon, u);
+            h = l()(v.icon, u);
         if (Array.isArray(d))
             t = d.map((e, t) => {
                 let n = s ? e.url() : '';
@@ -102,14 +102,14 @@ let N = [
             });
         }
         return (0, r.jsx)('li', {
-            className: a()(v.platform, { [v.active]: o }),
-            onMouseEnter: () => l(m),
+            className: l()(v.platform, { [v.active]: o }),
+            onMouseEnter: () => a(m),
             children: (0, r.jsxs)('div', {
                 className: v.contentWrapper,
                 children: [
                     (0, r.jsxs)('div', {
                         className: v.iconWrap,
-                        children: [(0, r.jsx)('div', { className: h }), (0, r.jsx)('div', { className: a()(v.active, h) })]
+                        children: [(0, r.jsx)('div', { className: h }), (0, r.jsx)('div', { className: l()(v.active, h) })]
                     }),
                     (0, r.jsxs)('div', {
                         children: [
@@ -119,7 +119,7 @@ let N = [
                                 children: f
                             }),
                             (0, r.jsx)('div', {
-                                className: a()(v.downloadButtons, { [v.list]: Array.isArray(t) }),
+                                className: l()(v.downloadButtons, { [v.list]: Array.isArray(t) }),
                                 children: t
                             })
                         ]
@@ -129,7 +129,7 @@ let N = [
         });
     };
 function S(e) {
-    let { source: t, onClose: n, transitionState: l } = e,
+    let { source: t, onClose: n, transitionState: a } = e,
         o = (0, d.e7)([_.default], () => _.default.getCurrentUser()),
         x = (0, d.e7)([g.default], () => g.default.getFingerprint()),
         j = null == o || o.isClaimed(),
@@ -184,8 +184,8 @@ function S(e) {
         theme: y.BRd.LIGHT,
         children: (e) =>
             (0, r.jsxs)(p.Y0X, {
-                className: a()(v.downloadApps, w ? void 0 : e),
-                transitionState: l,
+                className: l()(v.downloadApps, w ? void 0 : e),
+                transitionState: a,
                 'aria-labelledby': A,
                 children: [
                     (0, r.jsx)(p.olH, {

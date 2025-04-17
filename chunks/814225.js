@@ -8,9 +8,9 @@ n.d(t, {
     n(388685);
 var r = n(913527),
     i = n.n(r);
-if (12633 == n.j) var l = n(512969);
+if (12633 == n.j) var a = n(512969);
 n(358085), n(73346);
-var a = n(981631),
+var l = n(981631),
     o = n(388032);
 let s = {},
     c = {},
@@ -39,151 +39,151 @@ let s = {},
                     });
             }
             return e;
-        })({ ALL: -1 }, a.EKQ)
+        })({ ALL: -1 }, l.EKQ)
     );
 function d(e) {
-    let t = (0, l.LX)(e, { path: a.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug') });
+    let t = (0, a.LX)(e, { path: l.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug') });
     return null != t ? t.params.skuId : null;
 }
 function p(e) {
     switch (e) {
-        case a.EKQ.ACTION:
+        case l.EKQ.ACTION:
             return o.NW.string(o.t['1o2/IC']);
-        case a.EKQ.ACTION_RPG:
+        case l.EKQ.ACTION_RPG:
             return o.NW.string(o.t.e9Yo4O);
-        case a.EKQ.BRAWLER:
+        case l.EKQ.BRAWLER:
             return o.NW.string(o.t.WCkEjY);
-        case a.EKQ.HACK_AND_SLASH:
+        case l.EKQ.HACK_AND_SLASH:
             return o.NW.string(o.t.xQ4VmJ);
-        case a.EKQ.PLATFORMER:
+        case l.EKQ.PLATFORMER:
             return o.NW.string(o.t['WA318/']);
-        case a.EKQ.STEALTH:
+        case l.EKQ.STEALTH:
             return o.NW.string(o.t['6UPFd3']);
-        case a.EKQ.SURVIVAL:
+        case l.EKQ.SURVIVAL:
             return o.NW.string(o.t.SVPCt7);
-        case a.EKQ.ADVENTURE:
+        case l.EKQ.ADVENTURE:
             return o.NW.string(o.t['15p8oq']);
-        case a.EKQ.ACTION_ADVENTURE:
+        case l.EKQ.ACTION_ADVENTURE:
             return o.NW.string(o.t.AxkUBg);
-        case a.EKQ.METROIDVANIA:
+        case l.EKQ.METROIDVANIA:
             return o.NW.string(o.t.Iwr38v);
-        case a.EKQ.OPEN_WORLD:
+        case l.EKQ.OPEN_WORLD:
             return o.NW.string(o.t['2HRHJC']);
-        case a.EKQ.PSYCHOLOGICAL_HORROR:
+        case l.EKQ.PSYCHOLOGICAL_HORROR:
             return o.NW.string(o.t['/IwK3t']);
-        case a.EKQ.SANDBOX:
+        case l.EKQ.SANDBOX:
             return o.NW.string(o.t['2+Vu4e']);
-        case a.EKQ.SURVIVAL_HORROR:
+        case l.EKQ.SURVIVAL_HORROR:
             return o.NW.string(o.t.CCzRiI);
-        case a.EKQ.VISUAL_NOVEL:
+        case l.EKQ.VISUAL_NOVEL:
             return o.NW.string(o.t.FE7rnp);
-        case a.EKQ.DRIVING_RACING:
+        case l.EKQ.DRIVING_RACING:
             return o.NW.string(o.t.ErzgcX);
-        case a.EKQ.VEHICULAR_COMBAT:
+        case l.EKQ.VEHICULAR_COMBAT:
             return o.NW.string(o.t.YQHhoq);
-        case a.EKQ.MASSIVELY_MULTIPLAYER:
+        case l.EKQ.MASSIVELY_MULTIPLAYER:
             return o.NW.string(o.t['5CNg1t']);
-        case a.EKQ.MMORPG:
+        case l.EKQ.MMORPG:
             return o.NW.string(o.t.c4NuOz);
-        case a.EKQ.ROLE_PLAYING:
+        case l.EKQ.ROLE_PLAYING:
             return o.NW.string(o.t.yayVgo);
-        case a.EKQ.DUNGEON_CRAWLER:
+        case l.EKQ.DUNGEON_CRAWLER:
             return o.NW.string(o.t.qicemZ);
-        case a.EKQ.ROGUELIKE:
+        case l.EKQ.ROGUELIKE:
             return o.NW.string(o.t.zWzaCg);
-        case a.EKQ.SHOOTER:
+        case l.EKQ.SHOOTER:
             return o.NW.string(o.t['+pk6sb']);
-        case a.EKQ.LIGHT_GUN:
+        case l.EKQ.LIGHT_GUN:
             return o.NW.string(o.t['TDS96+']);
-        case a.EKQ.SHOOT_EM_UP:
+        case l.EKQ.SHOOT_EM_UP:
             return o.NW.string(o.t.wltDUF);
-        case a.EKQ.FPS:
+        case l.EKQ.FPS:
             return o.NW.string(o.t.olTaq6);
-        case a.EKQ.DUAL_JOYSTICK_SHOOTER:
+        case l.EKQ.DUAL_JOYSTICK_SHOOTER:
             return o.NW.string(o.t['SN+NS0']);
-        case a.EKQ.SIMULATION:
+        case l.EKQ.SIMULATION:
             return o.NW.string(o.t.sxMPdn);
-        case a.EKQ.FLIGHT_SIMULATOR:
+        case l.EKQ.FLIGHT_SIMULATOR:
             return o.NW.string(o.t.Q7msr6);
-        case a.EKQ.TRAIN_SIMULATOR:
+        case l.EKQ.TRAIN_SIMULATOR:
             return o.NW.string(o.t.ZtECf3);
-        case a.EKQ.LIFE_SIMULATOR:
+        case l.EKQ.LIFE_SIMULATOR:
             return o.NW.string(o.t.byt5Fh);
-        case a.EKQ.FISHING:
+        case l.EKQ.FISHING:
             return o.NW.string(o.t.BKwiwc);
-        case a.EKQ.SPORTS:
+        case l.EKQ.SPORTS:
             return o.NW.string(o.t.O0B7XF);
-        case a.EKQ.BASEBALL:
+        case l.EKQ.BASEBALL:
             return o.NW.string(o.t['jPYb//']);
-        case a.EKQ.BASKETBALL:
+        case l.EKQ.BASKETBALL:
             return o.NW.string(o.t['o+D1Bg']);
-        case a.EKQ.BILLIARDS:
+        case l.EKQ.BILLIARDS:
             return o.NW.string(o.t.PJ5o4O);
-        case a.EKQ.BOWLING:
+        case l.EKQ.BOWLING:
             return o.NW.string(o.t['82afJy']);
-        case a.EKQ.BOXING:
+        case l.EKQ.BOXING:
             return o.NW.string(o.t.DQvfen);
-        case a.EKQ.FOOTBALL:
+        case l.EKQ.FOOTBALL:
             return o.NW.string(o.t.slOYkp);
-        case a.EKQ.GOLF:
+        case l.EKQ.GOLF:
             return o.NW.string(o.t.aeQPlJ);
-        case a.EKQ.HOCKEY:
+        case l.EKQ.HOCKEY:
             return o.NW.string(o.t.g7oe5e);
-        case a.EKQ.SKATEBOARDING_SKATING:
+        case l.EKQ.SKATEBOARDING_SKATING:
             return o.NW.string(o.t.yBDEPz);
-        case a.EKQ.SNOWBOARDING_SKIING:
+        case l.EKQ.SNOWBOARDING_SKIING:
             return o.NW.string(o.t.GVaAcn);
-        case a.EKQ.SOCCER:
+        case l.EKQ.SOCCER:
             return o.NW.string(o.t.KPznxs);
-        case a.EKQ.TRACK_FIELD:
+        case l.EKQ.TRACK_FIELD:
             return o.NW.string(o.t.hJ62Q0);
-        case a.EKQ.SURFING_WAKEBOARDING:
+        case l.EKQ.SURFING_WAKEBOARDING:
             return o.NW.string(o.t.PSh0CQ);
-        case a.EKQ.WRESTLING:
+        case l.EKQ.WRESTLING:
             return o.NW.string(o.t['3y9hAQ']);
-        case a.EKQ.STRATEGY:
+        case l.EKQ.STRATEGY:
             return o.NW.string(o.t.KovTDw);
-        case a.EKQ.FOUR_X:
+        case l.EKQ.FOUR_X:
             return o.NW.string(o.t['19h4dX']);
-        case a.EKQ.ARTILLERY:
+        case l.EKQ.ARTILLERY:
             return o.NW.string(o.t.sBqLsL);
-        case a.EKQ.RTS:
+        case l.EKQ.RTS:
             return o.NW.string(o.t.yS4ddn);
-        case a.EKQ.TOWER_DEFENSE:
+        case l.EKQ.TOWER_DEFENSE:
             return o.NW.string(o.t.SULyIC);
-        case a.EKQ.TURN_BASED_STRATEGY:
+        case l.EKQ.TURN_BASED_STRATEGY:
             return o.NW.string(o.t.VDsbrq);
-        case a.EKQ.WARGAME:
+        case l.EKQ.WARGAME:
             return o.NW.string(o.t.YDCIrK);
-        case a.EKQ.MOBA:
+        case l.EKQ.MOBA:
             return o.NW.string(o.t.i1m1t7);
-        case a.EKQ.FIGHTING:
+        case l.EKQ.FIGHTING:
             return o.NW.string(o.t.KepcSE);
-        case a.EKQ.PUZZLE:
+        case l.EKQ.PUZZLE:
             return o.NW.string(o.t.rm7Ggo);
-        case a.EKQ.CARD_GAME:
+        case l.EKQ.CARD_GAME:
             return o.NW.string(o.t.kX85v7);
-        case a.EKQ.EDUCATION:
+        case l.EKQ.EDUCATION:
             return o.NW.string(o.t['klIi6+']);
-        case a.EKQ.FITNESS:
+        case l.EKQ.FITNESS:
             return o.NW.string(o.t.GOaaFR);
-        case a.EKQ.GAMBLING:
+        case l.EKQ.GAMBLING:
             return o.NW.string(o.t['X8/Ee3']);
-        case a.EKQ.MUSIC_RHYTHM:
+        case l.EKQ.MUSIC_RHYTHM:
             return o.NW.string(o.t.qPgrg4);
-        case a.EKQ.PARTY_MINI_GAME:
+        case l.EKQ.PARTY_MINI_GAME:
             return o.NW.string(o.t.diBclJ);
-        case a.EKQ.PINBALL:
+        case l.EKQ.PINBALL:
             return o.NW.string(o.t['1+ott7']);
-        case a.EKQ.TRIVIA_BOARD_GAME:
+        case l.EKQ.TRIVIA_BOARD_GAME:
             return o.NW.string(o.t.aLlxjI);
-        case a.EKQ.TACTICAL:
+        case l.EKQ.TACTICAL:
             return o.NW.string(o.t.LRPgbm);
-        case a.EKQ.INDIE:
+        case l.EKQ.INDIE:
             return o.NW.string(o.t.hz9Xvr);
-        case a.EKQ.ARCADE:
+        case l.EKQ.ARCADE:
             return o.NW.string(o.t.Sbxows);
-        case a.EKQ.POINT_AND_CLICK:
+        case l.EKQ.POINT_AND_CLICK:
             return o.NW.string(o.t.vcerEh);
         default:
             return o.NW.string(o.t['9b4eUl']);
@@ -207,8 +207,8 @@ function f(e) {
     if (null == n) return null;
     for (let e = 0; e < m.length; e++) {
         let [t, r] = m[e],
-            l = i()(n, t, !0);
-        if (l.isValid()) return l.format(r);
+            a = i()(n, t, !0);
+        if (a.isValid()) return a.format(r);
     }
     return n;
 }

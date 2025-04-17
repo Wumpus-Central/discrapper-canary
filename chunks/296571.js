@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    l = n(481060),
-    a = n(592125),
+    a = n(481060),
+    l = n(592125),
     o = n(739566),
     s = n(834129),
     c = n(388032),
@@ -13,9 +13,9 @@ function d(e) {
     let { message: n, compact: d, usernameHook: p, onClickThread: m, onClickViewThreads: f, onContextMenuThread: h } = e,
         g = (0, o.ZP)(n),
         _ = p(g),
-        b = (0, i.e7)([a.Z], () => {
+        b = (0, i.e7)([l.Z], () => {
             var e;
-            return a.Z.getChannel(null == (e = n.messageReference) ? void 0 : e.channel_id);
+            return l.Z.getChannel(null == (e = n.messageReference) ? void 0 : e.channel_id);
         }),
         x = c.NW.format(c.t.cZ9Uf3, {
             actorName: g.nick,
@@ -28,7 +28,7 @@ function d(e) {
             viewThreadsOnClick: f
         });
     return (0, r.jsx)(s.Z, {
-        iconNode: (0, r.jsx)(l.or_, {
+        iconNode: (0, r.jsx)(a.or_, {
             size: 'md',
             color: 'currentColor',
             className: u.icon

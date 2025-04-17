@@ -2,14 +2,14 @@ n.d(t, { g: () => b });
 var r = n(200651);
 n(192379);
 var i = n(913527),
-    l = n.n(i),
-    a = n(692547),
+    a = n.n(i),
+    l = n(692547),
     o = n(481060),
     s = n(788080),
     c = n(800530),
     u = n(388032),
     d = n(94740);
-let p = (e) => l()().diff(l().unix(e), 'days');
+let p = (e) => a()().diff(a().unix(e), 'days');
 function m(e) {
     let { classificationId: t } = e;
     return (0, r.jsx)(o.eee, {
@@ -55,9 +55,9 @@ function g(e) {
         n = {
             default: (0, r.jsx)(o.MqZ, {
                 size: 'xs',
-                color: a.Z.colors.TEXT_LINK.css
+                color: l.Z.colors.TEXT_LINK.css
             }),
-            danger: (0, r.jsx)(o.aNP, { color: a.Z.colors.STATUS_DANGER })
+            danger: (0, r.jsx)(o.aNP, { color: l.Z.colors.STATUS_DANGER })
         };
     return null != t && t in n
         ? (0, r.jsx)('div', {

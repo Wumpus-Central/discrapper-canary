@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(200651),
     i = n(192379),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     o = n(782568),
     s = n(31336),
     c = n(906467),
@@ -10,7 +10,7 @@ var r = n(200651),
     d = n(665149),
     p = n(388032);
 let m = () =>
-    (0, a.ZDy)(async () => {
+    (0, l.ZDy)(async () => {
         let { default: e } = await n.e('83051').then(n.bind(n, 115072));
         return (t) =>
             (0, r.jsx)(
@@ -44,7 +44,7 @@ let m = () =>
     });
 function f(e) {
     let { className: t } = e,
-        n = (0, l.e7)([c.Z], () => c.Z.isDeveloper),
+        n = (0, a.e7)([c.Z], () => c.Z.isDeveloper),
         [f, h] = i.useState(!1),
         [g, _] = i.useState(0),
         b = (e) => {
@@ -58,9 +58,9 @@ function f(e) {
     return (0, r.jsx)('div', {
         onMouseEnter: () => b(!0),
         onMouseLeave: () => b(!1),
-        children: (0, r.jsx)(a.yRy, {
+        children: (0, r.jsx)(l.yRy, {
             shouldShow: f,
-            animation: a.yRy.Animation.NONE,
+            animation: l.yRy.Animation.NONE,
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
@@ -69,31 +69,31 @@ function f(e) {
             renderPopout: () =>
                 (function (e) {
                     let { onClose: t, isDiscordDeveloper: n } = e;
-                    return (0, r.jsx)(a.v2r, {
+                    return (0, r.jsx)(l.v2r, {
                         onSelect: () => {},
                         navId: 'staff-help-popout',
                         variant: 'fixed',
                         onClose: t,
                         'aria-label': p.NW.string(p.t.HpQykZ),
-                        children: (0, r.jsxs)(a.kSQ, {
+                        children: (0, r.jsxs)(l.kSQ, {
                             children: [
-                                (0, r.jsx)(a.sNh, {
+                                (0, r.jsx)(l.sNh, {
                                     id: 'staff-help-bug-reporter',
                                     label: p.NW.string(p.t['5Lqopa']),
-                                    icon: a.nnZ,
+                                    icon: l.nnZ,
                                     action: m
                                 }),
                                 n &&
-                                    (0, r.jsx)(a.sNh, {
+                                    (0, r.jsx)(l.sNh, {
                                         id: 'staff-devtools',
                                         label: 'Toggle DevTools',
-                                        icon: a.Ymb,
+                                        icon: l.Ymb,
                                         action: () => (0, s.SO)()
                                     }),
-                                (0, r.jsx)(a.sNh, {
+                                (0, r.jsx)(l.sNh, {
                                     id: 'staff-help-center',
                                     label: 'Go to Help Center',
-                                    icon: a.rgF,
+                                    icon: l.rgF,
                                     action: () => (0, o.Z)(u.w)
                                 })
                             ]
@@ -107,7 +107,7 @@ function f(e) {
                 let { isShown: i } = n;
                 return (0, r.jsx)(d.JO, {
                     onClick: m,
-                    icon: a.nnZ,
+                    icon: l.nnZ,
                     'aria-label': p.NW.string(p.t.cqEoj4),
                     selected: i,
                     className: t

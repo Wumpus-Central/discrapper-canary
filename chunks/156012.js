@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r,
     i = n(442837),
-    l = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
@@ -70,8 +70,8 @@ class f extends (r = i.ZP.Store) {
         return c;
     }
 }
-a(f, 'displayName', 'scheduledMessageStore');
-let h = new f(l.Z, {
+l(f, 'displayName', 'scheduledMessageStore');
+let h = new f(a.Z, {
     SCHEDULED_MESSAGES_CREATE_SUCCESS: function (e) {
         let { channelId: t, scheduledMessageSend: n } = e;
         (u = s(o({}, u), { [n.scheduledMessageId]: n })), (p = o({}, p)), delete p[t];

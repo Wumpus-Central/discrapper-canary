@@ -2,8 +2,8 @@ n.d(t, { Z: () => o });
 var r = n(200651);
 n(192379);
 var i = n(739566),
-    l = n(834129),
-    a = n(388032);
+    a = n(834129),
+    l = n(388032);
 function o(e) {
     let { message: t, compact: o, missed: s, joinable: c, usernameHook: u, onClickJoinCall: d } = e,
         p = (0, i.ZP)(t),
@@ -14,41 +14,41 @@ function o(e) {
             return null != t ? t.humanize() : null;
         })(t);
     return s
-        ? (0, r.jsx)(l.Z, {
+        ? (0, r.jsx)(a.Z, {
               icon: n(154239),
               timestamp: t.timestamp,
               compact: o,
               children:
                   null != h
-                      ? a.NW.format(a.t.AcqBmJ, {
+                      ? l.NW.format(l.t.AcqBmJ, {
                             username: m,
                             usernameHook: f,
                             callDuration: h
                         })
-                      : a.NW.format(a.t['43phHx'], {
+                      : l.NW.format(l.t['43phHx'], {
                             username: m,
                             usernameHook: f
                         })
           })
-        : (0, r.jsxs)(l.Z, {
+        : (0, r.jsxs)(a.Z, {
               icon: n(344163),
               timestamp: t.timestamp,
               compact: o,
               children: [
                   null != h
-                      ? a.NW.format(a.t['7TeC1N'], {
+                      ? l.NW.format(l.t['7TeC1N'], {
                             username: m,
                             usernameHook: f,
                             callDuration: h
                         })
-                      : a.NW.format(a.t.LuB5RE, {
+                      : l.NW.format(l.t.LuB5RE, {
                             username: m,
                             usernameHook: f
                         }),
                   c
-                      ? (0, r.jsx)(l.Z.Action, {
+                      ? (0, r.jsx)(a.Z.Action, {
                             onClick: d,
-                            children: a.NW.string(a.t.oa9mvb)
+                            children: l.NW.string(l.t.oa9mvb)
                         })
                       : null
               ]

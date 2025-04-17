@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c }), n(388685);
 var r = n(200651),
     i = n(192379),
-    l = n(481060),
-    a = n(298213),
+    a = n(481060),
+    l = n(298213),
     o = n(388032),
     s = n(884492);
 function c(e) {
@@ -13,7 +13,7 @@ function c(e) {
             async (e) => {
                 e.stopPropagation(), p(!0);
                 try {
-                    await a.Z.cancelFriendRequest({
+                    await l.Z.cancelFriendRequest({
                         userId: t,
                         applicationId: n,
                         location: 'ActionButtonFriendRequest'
@@ -28,7 +28,7 @@ function c(e) {
             async (e) => {
                 e.stopPropagation(), u(!0);
                 try {
-                    await a.Z.maybeConfirmFriendRequestAccept({
+                    await l.Z.maybeConfirmFriendRequestAccept({
                         userId: t,
                         applicationId: n,
                         location: 'ActionButtonFriendRequest'
@@ -42,29 +42,29 @@ function c(e) {
     return (0, r.jsxs)('div', {
         className: s.friendRequestContainer,
         children: [
-            (0, r.jsx)(l.zxk, {
+            (0, r.jsx)(a.zxk, {
                 className: s.acceptButton,
-                look: l.zxk.Looks.FILLED,
-                color: l.zxk.Colors.GREEN,
-                size: l.zxk.Sizes.NONE,
+                look: a.zxk.Looks.FILLED,
+                color: a.zxk.Colors.GREEN,
+                size: a.zxk.Sizes.NONE,
                 submitting: c,
                 disabled: d,
                 onClick: f,
-                children: (0, r.jsx)(l.Text, {
+                children: (0, r.jsx)(a.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
                     children: o.NW.string(o.t.ZcibdX)
                 })
             }),
-            (0, r.jsx)(l.zxk, {
+            (0, r.jsx)(a.zxk, {
                 className: s.ignoreButton,
-                look: l.zxk.Looks.FILLED,
-                color: l.zxk.Colors.PRIMARY,
-                size: l.zxk.Sizes.NONE,
+                look: a.zxk.Looks.FILLED,
+                color: a.zxk.Colors.PRIMARY,
+                size: a.zxk.Sizes.NONE,
                 submitting: d,
                 disabled: c,
                 onClick: m,
-                children: (0, r.jsx)(l.Text, {
+                children: (0, r.jsx)(a.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
                     children: o.NW.string(o.t.xuio0N)

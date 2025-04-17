@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(993192),
     i = n(731965),
-    l = n(902704);
-function a(e) {
+    a = n(902704);
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ let s = {},
             (0, i.j)(() => {
                 e((e) => {
                     var i;
-                    return { polls: o(a({}, e.polls), { [t]: o(a({}, e.polls[t]), { [n]: r(null == (i = e.polls[t]) ? void 0 : i[n]) }) }) };
+                    return { polls: o(l({}, e.polls), { [t]: o(l({}, e.polls[t]), { [n]: r(null == (i = e.polls[t]) ? void 0 : i[n]) }) }) };
                 });
             });
         }
@@ -65,7 +65,7 @@ function u(e) {
     return c((t) => {
         var n;
         return null != (n = t.polls[e]) ? n : s;
-    }, l.Z);
+    }, a.Z);
 }
 function d(e, t, n) {
     c.getState().updatePollState(e, t, n);

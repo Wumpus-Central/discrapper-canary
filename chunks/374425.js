@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(388685);
 var r = n(200651),
     i = n(192379),
-    l = n(477690),
-    a = n(481060),
+    a = n(477690),
+    l = n(481060),
     o = n(100527),
     s = n(367907),
     c = n(906732),
@@ -58,7 +58,7 @@ function y(e, t) {
         e
     );
 }
-let E = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+let E = (0, d.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
     v = (e) => {
         null != e &&
             s.ZP.trackWithMetadata(g.rMx.EXPRESSION_TOOLTIP_VIEWED, {
@@ -70,16 +70,16 @@ let E = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
             });
     },
     N = (e) => {
-        let { renderableSticker: t, channel: n, isInteracting: l } = e,
+        let { renderableSticker: t, channel: n, isInteracting: a } = e,
             s = i.useRef(null),
             [d, m] = i.useState(!0),
             [g, _] = i.useState(String(Date.now())),
-            [N] = (0, p.XW)(t, l),
+            [N] = (0, p.XW)(t, a),
             { analyticsLocations: O } = (0, c.ZP)(o.Z.STICKER_MESSAGE),
             j = (0, r.jsxs)('span', {
                 className: b.stickerName,
                 children: [
-                    (0, r.jsx)(a.B7q, {
+                    (0, r.jsx)(l.B7q, {
                         size: 'xs',
                         color: 'currentColor',
                         className: b.stickerIcon
@@ -89,9 +89,9 @@ let E = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
             });
         return (0, r.jsx)(c.Gt, {
             value: O,
-            children: (0, r.jsx)(a.yRy, {
+            children: (0, r.jsx)(l.yRy, {
                 align: 'center',
-                animation: a.yRy.Animation.TRANSLATE,
+                animation: l.yRy.Animation.TRANSLATE,
                 positionKey: g,
                 onRequestClose: () => {
                     m(!0);
@@ -109,7 +109,7 @@ let E = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                 children: (e) => {
                     let { onClick: n } = e;
                     return (0, r.jsx)(
-                        a.ua7,
+                        l.ua7,
                         y(x({}, u.b_), {
                             shouldShow: d,
                             text: (0, u.Y)(j),
@@ -119,7 +119,7 @@ let E = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                             },
                             children: (e) =>
                                 (0, r.jsx)(
-                                    a.P3F,
+                                    l.P3F,
                                     y(x({}, e), {
                                         innerRef: s,
                                         className: b.clickableSticker,
@@ -128,7 +128,7 @@ let E = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                                         },
                                         tag: 'span',
                                         children: (0, r.jsx)(f.Z, {
-                                            isInteracting: l,
+                                            isInteracting: a,
                                             size: E,
                                             sticker: null != N ? N : t
                                         })

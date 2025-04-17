@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(525654),
     s = n.n(o),
     c = n(91192),
@@ -29,7 +29,7 @@ var r = n(200651),
     C = n(388032),
     S = n(128406);
 function I(e) {
-    var t, n, l, o, I, P, A;
+    var t, n, a, o, I, P, A;
     let { setTab: w, onJump: Z, showTutorial: R, setSeenTutorial: k, closePopout: D, badgeState: L } = e,
         M = i.useRef(null),
         [W, U] = (0, O.ZP)(M),
@@ -37,16 +37,16 @@ function I(e) {
         { maybeLoadMore: G, markAllRead: H } = U;
     (t = M),
         (n = W),
-        (l = U),
+        (a = U),
         i.useLayoutEffect(() => {
             var e;
             let { scrollToChannelIndex: r } = n;
-            l.clearScrollToChannelIndex();
+            a.clearScrollToChannelIndex();
             let { current: i } = t;
             if (null == i || null == r) return;
-            let a = null == (e = i.getScrollerNode()) ? void 0 : e.children;
-            if (null == a) return;
-            let o = a[r];
+            let l = null == (e = i.getScrollerNode()) ? void 0 : e.children;
+            if (null == l) return;
+            let o = l[r];
             if (null == o) return;
             let { scrollTop: s, offsetHeight: c } = i.getScrollerState();
             (o.offsetTop < s || o.offsetTop > s + c) && i.scrollTo({ to: o.offsetTop });
@@ -94,7 +94,7 @@ function I(e) {
         K = (0, h.Z)('unreads', M);
     if (0 === B.length) {
         return (0, r.jsxs)('div', {
-            className: a()(S.container, { [S.widerInbox]: z }),
+            className: l()(S.container, { [S.widerInbox]: z }),
             children: [
                 (0, r.jsx)(v.Z, {
                     tab: d.X.UNREADS,
@@ -111,7 +111,7 @@ function I(e) {
         });
     }
     return (0, r.jsxs)('div', {
-        className: a()(S.container, 'group-spacing-'.concat(V), { [S.widerInbox]: z }),
+        className: l()(S.container, 'group-spacing-'.concat(V), { [S.widerInbox]: z }),
         'aria-label': C.NW.string(C.t.sRUdBw),
         children: [
             (0, r.jsx)(v.Z, {
@@ -131,7 +131,7 @@ function I(e) {
                         var t,
                             n,
                             { ref: i } = e,
-                            l = (function (e, t) {
+                            a = (function (e, t) {
                                 if (null == e) return {};
                                 var n,
                                     r,
@@ -140,13 +140,13 @@ function I(e) {
                                         var n,
                                             r,
                                             i = {},
-                                            l = Object.keys(e);
-                                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                            a = Object.keys(e);
+                                        for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                         return i;
                                     })(e, t);
                                 if (Object.getOwnPropertySymbols) {
-                                    var l = Object.getOwnPropertySymbols(e);
-                                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                    var a = Object.getOwnPropertySymbols(e);
+                                    for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                                 }
                                 return i;
                             })(e, ['ref']);
@@ -183,7 +183,7 @@ function I(e) {
                                         (M.current = e), (i.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     }
                                 },
-                                l
+                                a
                             )),
                             (n = n =
                                 {

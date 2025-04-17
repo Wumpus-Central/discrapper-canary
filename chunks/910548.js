@@ -1,9 +1,9 @@
 n.d(t, { ZP: () => U }), n(388685);
 var r,
     i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    a = n(192379),
+    l = n(120356),
+    o = n.n(l),
     s = n(995899),
     c = n(772848),
     u = n(468194),
@@ -163,10 +163,10 @@ function M() {
         });
 }
 function W(e) {
-    let { onAnimationComplete: t, onClick: n, position: r, size: a } = e,
-        u = l.useRef(null),
-        [d, m] = l.useState(null),
-        [h] = l.useState(
+    let { onAnimationComplete: t, onClick: n, position: r, size: l } = e,
+        u = a.useRef(null),
+        [d, m] = a.useState(null),
+        [h] = a.useState(
             null != r
                 ? r
                 : (function () {
@@ -182,8 +182,8 @@ function W(e) {
                       }
                   })()
         ),
-        { createMultipleConfettiAt: g, confettiCanvas: _ } = l.useContext(f.h),
-        [b, x] = l.useState(null),
+        { createMultipleConfettiAt: g, confettiCanvas: _ } = a.useContext(f.h),
+        [b, x] = a.useState(null),
         y = (0, s.uR)(_, b),
         E = (function (e, t) {
             if (null == e) return 'enter';
@@ -203,17 +203,17 @@ function W(e) {
         })(d, h),
         v = T.includes(h),
         N = v && 'exit' === d,
-        j = l.useCallback((e) => {
+        j = a.useCallback((e) => {
             m(e);
         }, []),
-        C = l.useCallback(() => {
+        C = a.useCallback(() => {
             'exit' === d && (null == t || t());
         }, [t, d]),
-        A = l.useCallback((e) => {
+        A = a.useCallback((e) => {
             u.current = e;
         }, []);
     return (
-        l.useEffect(() => {
+        a.useEffect(() => {
             if ('confetti' === d) {
                 let { confettiVelocityDirection: e } = w[h],
                     t = (function (e, t) {
@@ -229,7 +229,7 @@ function W(e) {
                             x: r.left + i.x,
                             y: r.top + i.y
                         };
-                    })(u.current, h, a);
+                    })(u.current, h, l);
                 g(t.x, t.y, {
                     velocity: {
                         type: 'static-random',
@@ -244,8 +244,8 @@ function W(e) {
                     }
                 });
             }
-        }, [g, h, d, a]),
-        l.useEffect(() => {
+        }, [g, h, d, l]),
+        a.useEffect(() => {
             if (v && 'leaf_fall' === d) {
                 let e = w[h].leafRotationDirection;
                 y.createConfetti(
@@ -333,7 +333,7 @@ function W(e) {
 }
 function U(e) {
     let t,
-        { message: n, compact: r, guild: a, usernameHook: o, onClickMessage: s } = e,
+        { message: n, compact: r, guild: l, usernameHook: o, onClickMessage: s } = e,
         c = (function (e) {
             switch (e.type) {
                 case v.uaV.GUILD_BOOST_TIER_1:
@@ -346,15 +346,15 @@ function U(e) {
             return null;
         })(n),
         u = (0, _.Z)(n),
-        { createMultipleConfettiAt: d, addClickListener: j } = l.useContext(f.h),
-        [C, S] = l.useState(!1),
-        I = l.useRef(null),
-        { reducedMotion: T } = l.useContext(p.Sfi),
+        { createMultipleConfettiAt: d, addClickListener: j } = a.useContext(f.h),
+        [C, S] = a.useState(!1),
+        I = a.useRef(null),
+        { reducedMotion: T } = a.useContext(p.Sfi),
         P = (0, y.ZH)(n),
         A = P.nick,
         w = o(P);
     t =
-        null == c || null == a
+        null == c || null == l
             ? u > 1
                 ? N.NW.format(N.t.yfC9dn, {
                       username: A,
@@ -370,16 +370,16 @@ function U(e) {
                     username: A,
                     usernameHook: w,
                     numSubscriptions: u,
-                    guildName: a.name,
+                    guildName: l.name,
                     newTierName: (0, x.nW)(c)
                 })
               : N.NW.format(N.t.cUfTTE, {
                     username: A,
                     usernameHook: w,
-                    guildName: a.name,
+                    guildName: l.name,
                     newTierName: (0, x.nW)(c)
                 });
-    let R = l.useCallback(() => {
+    let R = a.useCallback(() => {
             if (!T.enabled)
                 if (C || 0 !== Math.floor(50 * Math.random())) {
                     var e;
@@ -388,19 +388,19 @@ function U(e) {
                     d(t.left + t.width / 2, t.top + t.height / 2);
                 } else S(!0);
         }, [d, T, C]),
-        k = l.useCallback(() => {
+        k = a.useCallback(() => {
             S(!1);
         }, []),
-        D = l.useCallback(() => {
+        D = a.useCallback(() => {
             (0, g.AI)({ settingsVisible: !0 }), m.Z.open(v.oAB.POGGERMODE), S(!1);
         }, []),
-        L = l.useCallback(
+        L = a.useCallback(
             (e, t) => {
                 (null == t ? void 0 : t.id.startsWith(Z)) && D();
             },
             [D]
         );
-    l.useEffect(() => j(L));
+    a.useEffect(() => j(L));
     let M = (0, i.jsx)(p.P3F, {
         className: O.iconWrapper,
         innerRef: I,

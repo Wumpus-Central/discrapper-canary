@@ -9,8 +9,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    l = n(373793),
-    a = n(705512),
+    a = n(373793),
+    l = n(705512),
     o = n(442837),
     s = n(481060),
     c = n(566620),
@@ -39,7 +39,7 @@ var r = n(200651),
     w = n(388032),
     Z = n(758364);
 function R(e) {
-    let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: g } = e,
+    let { app: t, embedUrl: n, linkType: a, activityCustomId: l, activityReferrerId: s, onView: g } = e,
         { name: _, bot: b } = (t = (0, T.O)(t)),
         y = null == b ? void 0 : b.id,
         E = (0, f.ye)(t),
@@ -75,7 +75,7 @@ function R(e) {
                                 isStart: null == W,
                                 instanceId: null != W ? W : void 0,
                                 embeddedActivitiesManager: B,
-                                customId: a,
+                                customId: l,
                                 referrerId: R,
                                 analyticsLocations: L
                             });
@@ -92,7 +92,7 @@ function R(e) {
                                 appId: t.id,
                                 botId: y,
                                 analyticsLocations: L,
-                                customId: a,
+                                customId: l,
                                 referrerId: R
                             });
                         }
@@ -100,7 +100,7 @@ function R(e) {
                 null != z && e.push(z),
                 e
             );
-        }, [V, H, z, W, U, M, t.id, B, a, R, L, y]),
+        }, [V, H, z, W, U, M, t.id, B, l, R, L, y]),
         Y = E ? (0, r.jsx)(D, { app: t }) : (0, r.jsx)(k, { app: t });
     return (0, r.jsx)(C.W, {
         title: _,
@@ -113,15 +113,15 @@ function R(e) {
         actions: K,
         trackingConfig: {
             id: t.id,
-            linkType: l,
+            linkType: a,
             referrerId: R,
-            activityCustomId: a,
+            activityCustomId: l,
             onView: g
         }
     });
 }
 function k(e) {
-    var t, n, a;
+    var t, n, l;
     let { app: c } = e,
         u =
             (0, O.Eb)({
@@ -130,7 +130,7 @@ function k(e) {
                 integrationTypesConfig: c.integrationTypesConfig
             }) &&
             null != c.integrationTypesConfig &&
-            l.Y.GUILD_INSTALL in c.integrationTypesConfig,
+            a.Y.GUILD_INSTALL in c.integrationTypesConfig,
         d = (0, o.e7)([b.default], () => b.default.locale, []),
         p = i.useMemo(() => {
             var e, t;
@@ -142,7 +142,7 @@ function k(e) {
                 r = null != (t = null == (e = c.directoryEntry) ? void 0 : e.guild_count) ? t : 0;
             return 0 === r ? null : w.NW.format(w.t['6IW6Wl'], { guildCount: n.format(r) });
         }, [null == (t = c.directoryEntry) ? void 0 : t.guild_count, u, d]),
-        m = null == (a = c.categories) || null == (n = a.at(0)) ? void 0 : n.name;
+        m = null == (l = c.categories) || null == (n = l.at(0)) ? void 0 : n.name;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != m &&
@@ -171,7 +171,7 @@ function k(e) {
 }
 function D(e) {
     let { app: t } = e,
-        { tags: n, maxParticipants: l } = t,
+        { tags: n, maxParticipants: a } = t,
         c = (0, o.e7)(
             [E.Z],
             () => {
@@ -202,7 +202,7 @@ function D(e) {
                     guildId: c,
                     activityText: w.NW.string(w.t['IJa+4+'])
                 });
-            if (u.some((e) => (0, g.ig)(e) === a.o.GLOBAL))
+            if (u.some((e) => (0, g.ig)(e) === l.o.GLOBAL))
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(s.YqE, {
@@ -212,7 +212,7 @@ function D(e) {
                         w.NW.string(w.t.TsWCdX)
                     ]
                 });
-            let e = null != l ? w.NW.format(w.t.z8EAJS, { count: l }) : w.NW.string(w.t.RjceQU);
+            let e = null != a ? w.NW.format(w.t.z8EAJS, { count: a }) : w.NW.string(w.t.RjceQU);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(s.tBG, {
@@ -222,7 +222,7 @@ function D(e) {
                     e
                 ]
             });
-        }, [u, d, c, l]);
+        }, [u, d, c, a]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             n.length > 0 &&

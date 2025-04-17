@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var r = n(200651),
     i = n(192379),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     o = n(904245),
     s = n(541716),
     c = n(419922),
@@ -21,25 +21,25 @@ function x(e) {
     return t[i];
 }
 function y(e) {
-    let { currentUser: t, channel: n, message: l, buttonLabels: u, stickers: d, event: p, eventProperties: m } = e,
+    let { currentUser: t, channel: n, message: a, buttonLabels: u, stickers: d, event: p, eventProperties: m } = e,
         [h, _] = i.useState(!1),
         y = i.useMemo(
             () =>
                 x({
                     assets: d,
                     currentUser: t,
-                    message: l
+                    message: a
                 }),
-            [d, t, l]
+            [d, t, a]
         ),
         E = i.useMemo(
             () =>
                 x({
                     assets: u,
                     currentUser: t,
-                    message: l
+                    message: a
                 }),
-            [u, t, l]
+            [u, t, a]
         ),
         v = i.useCallback(async () => {
             let { valid: e } = await (0, g.v)({
@@ -62,12 +62,12 @@ function y(e) {
                     );
                 })({
                     channel: n,
-                    message: l,
+                    message: a,
                     sticker: y
                 }),
                 (function (e) {
                     var t, n;
-                    let { sticker: r, event: i, eventProperties: l } = e;
+                    let { sticker: r, event: i, eventProperties: a } = e;
                     null != i &&
                         f.default.track(
                             i,
@@ -95,7 +95,7 @@ function y(e) {
                                         });
                                 }
                                 return e;
-                            })({}, l)),
+                            })({}, a)),
                             (n = n = { sticker_id: r.id }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -116,11 +116,11 @@ function y(e) {
                     event: p,
                     eventProperties: m
                 }));
-        }, [n, l, y, p, m]);
-    return (0, r.jsxs)(a.zxk, {
+        }, [n, a, y, p, m]);
+    return (0, r.jsxs)(l.zxk, {
         className: b.CTAMessageButtonOuter,
         innerClassName: b.CTAMessageButton,
-        color: a.Ttl.PRIMARY,
+        color: l.Ttl.PRIMARY,
         onMouseEnter: () => _(!0),
         onMouseLeave: () => _(!1),
         onClick: v,
@@ -136,19 +136,19 @@ function y(e) {
     });
 }
 function E(e) {
-    let { channel: t, message: n, buttonLabels: i, stickers: a, event: o, eventProperties: s } = e,
+    let { channel: t, message: n, buttonLabels: i, stickers: l, event: o, eventProperties: s } = e,
         c = m.default.getCurrentUser(),
         f = (function (e) {
             let { channel: t, message: n, currentUser: r } = e;
-            return (0, l.e7)([p.Z, d.ZP], () => {
+            return (0, a.e7)([p.Z, d.ZP], () => {
                 var e;
                 let i = t.guild_id;
                 if (null == r || null == i) return !1;
-                let l = (0, u.xl)(t),
-                    a = p.Z.can(_.Plq.SEND_MESSAGES, t),
+                let a = (0, u.xl)(t),
+                    l = p.Z.can(_.Plq.SEND_MESSAGES, t),
                     o = null == (e = d.ZP.getMember(i, r.id)) ? void 0 : e.isPending,
                     s = n.author.bot;
-                return a && !l && !o && !s;
+                return l && !a && !o && !s;
             });
         })({
             channel: t,
@@ -163,7 +163,7 @@ function E(e) {
                   channel: t,
                   message: n,
                   buttonLabels: i,
-                  stickers: a,
+                  stickers: l,
                   event: o,
                   eventProperties: s
               })

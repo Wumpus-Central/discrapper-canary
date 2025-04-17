@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r,
     i,
-    l = n(442837),
-    a = n(570140);
+    a = n(442837),
+    l = n(570140);
 function o(e, t, n) {
     return (
         t in e
@@ -22,7 +22,7 @@ function o(e, t, n) {
 var s = (((r = {})[(r.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (r[(r.FETCHING = 1)] = 'FETCHING'), (r[(r.FETCHED = 2)] = 'FETCHED'), (r[(r.FAILED = 3)] = 'FAILED'), r);
 let c = {},
     u = {};
-class d extends (i = l.ZP.Store) {
+class d extends (i = a.ZP.Store) {
     getMediaPostEmbed(e) {
         if (null != e) return c[e];
     }
@@ -35,7 +35,7 @@ class d extends (i = l.ZP.Store) {
     }
 }
 o(d, 'displayName', 'MediaPostEmbedStore');
-let p = new d(a.Z, {
+let p = new d(l.Z, {
     CONNECTION_OPEN: function () {
         (c = {}), (u = {});
     },

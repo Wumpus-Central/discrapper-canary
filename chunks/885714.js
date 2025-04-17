@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    l = n(430824);
-function a(e) {
-    var { onCloseCallback: t, analyticsLocations: a } = e,
+    a = n(430824);
+function l(e) {
+    var { onCloseCallback: t, analyticsLocations: l } = e,
         o = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -14,13 +14,13 @@ function a(e) {
                     var n,
                         r,
                         i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ['onCloseCallback', 'analyticsLocations']);
@@ -58,8 +58,8 @@ function a(e) {
                     })({}, t, o)),
                     (i = i =
                         {
-                            analyticsLocations: a,
-                            guildCount: l.Z.getGuildCount(),
+                            analyticsLocations: l,
+                            guildCount: a.Z.getGuildCount(),
                             'aria-labelledby': 'nitro-guild-cap-upsell'
                         }),
                     Object.getOwnPropertyDescriptors

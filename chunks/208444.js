@@ -1,8 +1,8 @@
 n.d(t, { z: () => x });
 var r = n(192379),
     i = n(442837),
-    l = n(783097),
-    a = n(176412),
+    a = n(783097),
+    l = n(176412),
     o = n(749681),
     s = n(258971),
     c = n(592125),
@@ -34,7 +34,7 @@ function x(e, t) {
             },
             []
         ),
-        j = (0, l.PZ)(e, N) && O,
+        j = (0, a.PZ)(e, N) && O,
         C = n || j;
     return r.useMemo(
         () =>
@@ -43,7 +43,7 @@ function x(e, t) {
                       label: b.NW.string(b.t['HO/oXl']),
                       trackingArea: h.j_.VIEW,
                       onClick() {
-                          if ((null == t || t(h.j_.VIEW), j)) return void (0, a.X)(e.id);
+                          if ((null == t || t(h.j_.VIEW), j)) return void (0, l.X)(e.id);
                           (0, o.transitionToGlobalDiscovery)({
                               tab: _.GlobalDiscoveryTab.APPS,
                               applicationId: e.id,

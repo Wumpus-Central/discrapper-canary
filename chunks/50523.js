@@ -2,8 +2,8 @@ n.d(t, { b: () => E }), n(539854), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    l = n(100527),
-    a = n(906732),
+    a = n(100527),
+    l = n(906732),
     o = n(915346),
     s = n(783097),
     c = n(812236),
@@ -29,7 +29,7 @@ function E(e) {
         }),
         I = null != E && (0, s.ye)(E),
         T = null != C && I && S,
-        { analyticsLocations: P } = (0, a.ZP)(l.Z.ACTIVITY_CUSTOM_LINK),
+        { analyticsLocations: P } = (0, l.ZP)(a.Z.ACTIVITY_CUSTOM_LINK),
         A = (0, i.e7)([f.Z], () => f.Z.getChannelId()),
         w = (0, x.KF)(A),
         Z = (0, i.e7)([_.ZP], () => {

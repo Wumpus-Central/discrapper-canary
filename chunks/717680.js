@@ -1,9 +1,9 @@
 n.d(t, { Z: () => o }), n(388685);
 var r = n(192379);
 let i = !1,
-    l = new Set();
-function a(e) {
-    e !== i && ((i = e), l.forEach((e) => e(i)));
+    a = new Set();
+function l(e) {
+    e !== i && ((i = e), a.forEach((e) => e(i)));
 }
 function o() {
     let [e, t] = r.useState(i);
@@ -13,9 +13,9 @@ function o() {
                 t(e);
             };
             return (
-                l.add(e),
+                a.add(e),
                 () => {
-                    l.delete(e);
+                    a.delete(e);
                 }
             );
         }, []),
@@ -23,14 +23,14 @@ function o() {
     );
 }
 window.addEventListener('keydown', (e) => {
-    a(e.shiftKey);
+    l(e.shiftKey);
 }),
     window.addEventListener('keyup', (e) => {
-        a(e.shiftKey);
+        l(e.shiftKey);
     }),
     window.addEventListener('mousemove', (e) => {
-        a(e.shiftKey);
+        l(e.shiftKey);
     }),
     window.addEventListener('blur', () => {
-        a(!1);
+        l(!1);
     });

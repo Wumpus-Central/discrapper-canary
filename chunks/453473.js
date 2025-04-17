@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(512722),
     s = n.n(o),
     c = n(913527),
@@ -125,7 +125,7 @@ function F(e) {
           });
 }
 function B(e) {
-    let { onOpen: t, onClose: n, children: l, popoutPosition: a, popoutAlign: o } = e,
+    let { onOpen: t, onClose: n, children: a, popoutPosition: l, popoutAlign: o } = e,
         [s, c] = i.useState(!1),
         u = i.useCallback(() => {
             c(!1), s && (null == n || n());
@@ -137,7 +137,7 @@ function B(e) {
     let p = (0, m.e7)([I.Z], () => I.Z.hasOverdueReminder(), []);
     return (0, r.jsx)(f.yRy, {
         animation: f.yRy.Animation.NONE,
-        position: a,
+        position: l,
         align: o,
         autoInvert: !1,
         shouldShow: s,
@@ -148,14 +148,14 @@ function B(e) {
         ignoreModalClicks: !0,
         children: (e, t) => {
             let { isShown: n } = t;
-            return l(d, n, e, p);
+            return a(d, n, e, p);
         }
     });
 }
 function G(e) {
     let { savedMessageKeys: t, closePopout: n } = e,
-        l = i.useRef(null),
-        a = (0, _.Z)('for-later', l),
+        a = i.useRef(null),
+        l = (0, _.Z)('for-later', a),
         [o, s] = i.useState(new Date());
     return (
         i.useEffect(() => {
@@ -165,11 +165,11 @@ function G(e) {
             };
         }, []),
         (0, r.jsx)(p.bG, {
-            navigator: a,
+            navigator: l,
             children: (0, r.jsx)(p.SJ, {
                 children: (e) => {
                     var { ref: i } = e,
-                        a = (function (e, t) {
+                        l = (function (e, t) {
                             if (null == e) return {};
                             var n,
                                 r,
@@ -178,13 +178,13 @@ function G(e) {
                                     var n,
                                         r,
                                         i = {},
-                                        l = Object.keys(e);
-                                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                        a = Object.keys(e);
+                                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                     return i;
                                 })(e, t);
                             if (Object.getOwnPropertySymbols) {
-                                var l = Object.getOwnPropertySymbols(e);
-                                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                var a = Object.getOwnPropertySymbols(e);
+                                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                             }
                             return i;
                         })(e, ['ref']);
@@ -195,11 +195,11 @@ function G(e) {
                                 {
                                     ref: (e) => {
                                         var t;
-                                        (l.current = e), (i.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
+                                        (a.current = e), (i.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },
                                     className: D.messagesScroller
                                 },
-                                a
+                                l
                             ),
                             {
                                 children: t.map((e) =>
@@ -222,7 +222,7 @@ function G(e) {
     );
 }
 function H(e) {
-    let { savedMessage: t, closePopout: n, throttledNow: l } = e,
+    let { savedMessage: t, closePopout: n, throttledNow: a } = e,
         o = (0, S.gr)(t),
         s = i.useCallback(
             async (e) => {
@@ -252,7 +252,7 @@ function H(e) {
                   null != t.saveData.dueAt
                       ? (0, r.jsx)(Z.Z, {
                             reminder: t,
-                            throttledNow: l
+                            throttledNow: a
                         })
                       : null,
                   (0, r.jsx)(A.Z, { channel: o }),
@@ -279,7 +279,7 @@ function H(e) {
               ]
           })
         : (0, r.jsxs)('div', {
-              className: a()(D.messageContainer, D.deletedMessage),
+              className: l()(D.messageContainer, D.deletedMessage),
               children: [
                   (0, r.jsx)('div', {
                       className: D.deleteIcon,
@@ -311,11 +311,11 @@ function H(e) {
 }
 function V(e) {
     let { savedMessageKey: t, closePopout: n, throttledNow: i } = e,
-        l = (0, m.e7)([I.Z], () => I.Z.getSavedMessage(t.channelId, t.messageId));
-    return null == l
+        a = (0, m.e7)([I.Z], () => I.Z.getSavedMessage(t.channelId, t.messageId));
+    return null == a
         ? null
         : (0, r.jsx)(H, {
-              savedMessage: l,
+              savedMessage: a,
               closePopout: n,
               throttledNow: i
           });

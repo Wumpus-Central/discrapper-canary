@@ -2,14 +2,14 @@ n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    l = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    l = n(481060),
     o = n(318713),
     s = n(614507);
 function c(e) {
-    let { icon: t, iconNode: n, timestamp: i, timestampFormat: a, className: c, children: u, contentClassName: d, iconClassName: p, iconContainerClassName: m, timestampClassName: f, compact: h = !1 } = e;
+    let { icon: t, iconNode: n, timestamp: i, timestampFormat: l, className: c, children: u, contentClassName: d, iconClassName: p, iconContainerClassName: m, timestampClassName: f, compact: h = !1 } = e;
     return (0, r.jsxs)('div', {
-        className: l()(c, {
+        className: a()(c, {
             [s.container]: !0,
             [s.compact]: h,
             [s.cozy]: !h
@@ -17,7 +17,7 @@ function c(e) {
         children: [
             null != n &&
                 (0, r.jsx)('div', {
-                    className: l()(s.iconContainer, m),
+                    className: a()(s.iconContainer, m),
                     children: n
                 }),
             null != t &&
@@ -25,18 +25,18 @@ function c(e) {
                     className: s.iconContainer,
                     children: (0, r.jsx)('div', {
                         'data-accessibility': 'desaturate',
-                        className: l()(s.icon, s.iconSize, p),
+                        className: a()(s.icon, s.iconSize, p),
                         style: { backgroundImage: "url('".concat(t, "')") }
                     })
                 }),
             (0, r.jsxs)('div', {
-                className: l()(d, s.content),
+                className: a()(d, s.content),
                 children: [
                     u,
                     null != i &&
                         (0, r.jsx)(o.Z, {
                             timestamp: i,
-                            timestampFormat: a,
+                            timestampFormat: l,
                             className: f
                         })
                 ]
@@ -50,7 +50,7 @@ c.Action = (e) => {
         className: s.action,
         children: [
             '\u2014',
-            (0, r.jsx)(a.eee, {
+            (0, r.jsx)(l.eee, {
                 onClick: t,
                 className: s.actionAnchor,
                 children: n

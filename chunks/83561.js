@@ -5,24 +5,24 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     o = n(607070),
     s = n(426563),
     c = n(998502),
     u = n(388032),
     d = n(860918);
-let p = c.ZP.getEnableHardwareAcceleration() ? a.Xo$ : a.qEK;
+let p = c.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
 function m() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         [t, n] = i.useState(!1),
-        r = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
-        a = i.useMemo(() => {
+        r = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
+        l = i.useMemo(() => {
             let n = t || (!r && !e);
             return (0, s.j)(n);
         }, [t, r, e]);
     return {
-        avatarSrc: a,
+        avatarSrc: l,
         eventHandlers: {
             onMouseEnter: i.useCallback(() => n(!0), []),
             onMouseLeave: i.useCallback(() => n(!1), [])
@@ -35,7 +35,7 @@ function f(e) {
         className: d.avatarContainer,
         children: (0, r.jsx)(p, {
             src: t,
-            size: a.EFr.SIZE_40,
+            size: l.EFr.SIZE_40,
             'aria-label': u.NW.string(u.t.hG1StL)
         })
     });

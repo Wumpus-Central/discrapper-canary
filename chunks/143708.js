@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    l = n(144144),
-    a = n(955415),
+    a = n(144144),
+    l = n(955415),
     o = n(314897),
     s = n(944486),
     c = n(585483),
@@ -27,7 +27,7 @@ function f(e) {
                   ? (t = p.NW.string(p.t['57nBt7']))
                   : null != x
                     ? ((t = p.NW.formatToPlainString(p.t['9Akp1t'], { username: x })),
-                      (n = (0, r.jsx)(a.Z.Button, {
+                      (n = (0, r.jsx)(l.Z.Button, {
                           onClick: function () {
                               let { id: e } = h,
                                   t = '@'.concat(u.ZP.getUserTag(h, { decoration: 'never' }));
@@ -35,21 +35,21 @@ function f(e) {
                                   plainText: t,
                                   rawText: '<@'.concat(e, '>')
                               }),
-                                  null != b && l.Z.startTyping(b);
+                                  null != b && a.Z.startTyping(b);
                           },
                           children: p.NW.string(p.t.P8tvKC)
                       })))
                     : (t = p.NW.string(p.t['SMJr+f']))),
-        (0, r.jsxs)(a.Z, {
+        (0, r.jsxs)(l.Z, {
             children: [
-                (0, r.jsx)(a.Z.Header, { text: f }),
-                (0, r.jsxs)(a.Z.Body, {
+                (0, r.jsx)(l.Z.Header, { text: f }),
+                (0, r.jsxs)(l.Z.Body, {
                     children: [
                         (0, r.jsxs)('div', {
                             className: m.headerLine,
                             children: [
-                                (0, r.jsx)(a.Z.Icon, { expired: !0 }),
-                                (0, r.jsx)(a.Z.Info, {
+                                (0, r.jsx)(l.Z.Icon, { expired: !0 }),
+                                (0, r.jsx)(l.Z.Info, {
                                     expired: !0,
                                     title: p.NW.string(p.t['Jhx/ub']),
                                     children: t

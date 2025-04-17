@@ -7,10 +7,10 @@ n.d(t, {
 var r = n(570140);
 n(893776), n(703656);
 var i = n(626135),
-    l = n(723359),
-    a = n(981631);
+    a = n(723359),
+    l = n(981631);
 function o(e) {
-    i.default.track(a.rMx.OPEN_MODAL, {
+    i.default.track(l.rMx.OPEN_MODAL, {
         type: 'Enter Your Birthday',
         source: { section: e }
     }),
@@ -22,18 +22,18 @@ function o(e) {
 function s(e) {
     r.Z.wait(() => r.Z.dispatch({ type: 'AGE_GATE_MODAL_CLOSE' })),
         void 0 !== e &&
-            i.default.track(a.rMx.AGE_GATE_ACTION, {
+            i.default.track(l.rMx.AGE_GATE_ACTION, {
                 source: e,
-                action: l.Al.AGE_GATE_CLOSE
+                action: a.Al.AGE_GATE_CLOSE
             });
 }
 function c(e) {
     r.Z.wait(() => {
         r.Z.dispatch({ type: 'AGE_GATE_SUCCESS_MODAL_OPEN' });
     }),
-        i.default.track(a.rMx.AGE_GATE_ACTION, {
+        i.default.track(l.rMx.AGE_GATE_ACTION, {
             source: e,
-            action: l.Al.AGE_GATE_SUCCESS
+            action: a.Al.AGE_GATE_SUCCESS
         });
 }
 function u(e, t) {
@@ -43,8 +43,8 @@ function u(e, t) {
             underageMessage: t
         });
     }),
-        i.default.track(a.rMx.AGE_GATE_ACTION, {
+        i.default.track(l.rMx.AGE_GATE_ACTION, {
             source: e,
-            action: l.Al.AGE_GATE_FAILURE
+            action: a.Al.AGE_GATE_FAILURE
         });
 }

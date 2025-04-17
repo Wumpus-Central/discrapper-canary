@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r = n(200651),
     i = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(913527),
     s = n.n(o),
     c = n(442837),
@@ -30,10 +30,10 @@ let C = {
 };
 function S(e) {
     let { setTab: t, closePopout: n } = e,
-        l = (0, c.e7)([g.Z], () => g.Z.getMessageReminders()),
-        [a, o] = i.useState(!1),
-        s = i.useMemo(() => l.filter((e) => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [l]),
-        p = a ? l : s;
+        a = (0, c.e7)([g.Z], () => g.Z.getMessageReminders()),
+        [l, o] = i.useState(!1),
+        s = i.useMemo(() => a.filter((e) => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [a]),
+        p = l ? a : s;
     return (0, r.jsxs)('div', {
         className: O.container,
         children: [
@@ -47,14 +47,14 @@ function S(e) {
                 children: [
                     (0, r.jsx)(d.X6q, {
                         variant: 'heading-lg/bold',
-                        children: a ? N.NW.string(N.t['0KeMAw']) : N.NW.string(N.t.j5ZHEB)
+                        children: l ? N.NW.string(N.t['0KeMAw']) : N.NW.string(N.t.j5ZHEB)
                     }),
                     (0, r.jsx)(d.eee, {
-                        onClick: () => o(!a),
+                        onClick: () => o(!l),
                         children: (0, r.jsx)(d.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: a ? N.NW.formatToPlainString(N.t['/VlKx8'], { count: s.length }) : N.NW.formatToPlainString(N.t.QEO4Ii, { count: l.length })
+                            children: l ? N.NW.formatToPlainString(N.t['/VlKx8'], { count: s.length }) : N.NW.formatToPlainString(N.t.QEO4Ii, { count: a.length })
                         })
                     })
                 ]
@@ -66,25 +66,25 @@ function S(e) {
 function I(e) {
     let t,
         { messageReminder: i } = e,
-        l = i.saveData,
+        a = i.saveData,
         o = i.message,
-        u = (0, c.e7)([b.Z], () => b.Z.getChannel(l.channelId)),
+        u = (0, c.e7)([b.Z], () => b.Z.getChannel(a.channelId)),
         g = () => {
-            (0, f.uL)(v.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), l.channelId, l.messageId));
+            (0, f.uL)(v.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), a.channelId, a.messageId));
         },
         E = null;
-    return (null != l.dueAt &&
-        (l.dueAt > new Date()
+    return (null != a.dueAt &&
+        (a.dueAt > new Date()
             ? ((t = 'text-muted'),
               (E = N.NW.formatToPlainString(N.t.H4gnX1, {
                   duration: s()
-                      .duration(l.dueAt.getTime() - Date.now(), 'millisecond')
+                      .duration(a.dueAt.getTime() - Date.now(), 'millisecond')
                       .humanize()
               })))
             : ((t = 'text-danger'),
               (E = N.NW.formatToPlainString(N.t['Uq7Y+/'], {
                   duration: s()
-                      .duration(Date.now() - l.dueAt.getTime(), 'millisecond')
+                      .duration(Date.now() - a.dueAt.getTime(), 'millisecond')
                       .humanize()
               })))),
     null == o || null == u)
@@ -184,7 +184,7 @@ function I(e) {
                               (0, r.jsx)(d.DY3, {
                                   text: N.NW.string(N.t['1GzslZ']),
                                   children: (0, r.jsx)(d.P3F, {
-                                      onClick: () => (0, h.x)(l),
+                                      onClick: () => (0, h.x)(a),
                                       className: O.delete,
                                       children: (0, r.jsx)(d.XHJ, {
                                           size: 'custom',
@@ -198,7 +198,7 @@ function I(e) {
                       })
                   }),
                   (0, r.jsxs)('div', {
-                      className: a()(j.messageContainer, O.unloadedMessage),
+                      className: l()(j.messageContainer, O.unloadedMessage),
                       children: [
                           (0, r.jsx)(x.Z, {
                               className: j.jumpMessageButton,

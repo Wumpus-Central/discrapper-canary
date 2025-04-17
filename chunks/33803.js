@@ -1,8 +1,8 @@
 n.d(t, { Z: () => ee }), n(642613);
 var r = n(200651),
     i = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(913527),
     s = n.n(o),
     c = n(91192),
@@ -91,40 +91,40 @@ function V(e, t) {
             var n,
                 r,
                 i = {},
-                l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                a = Object.keys(e);
+            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
 function z(e, t) {
-    let { popouts: n, selected: r, setPopout: l } = (0, R.Z)(e.id, L.d$),
-        { usernameProfile: a, avatarProfile: o } = n,
+    let { popouts: n, selected: r, setPopout: a } = (0, R.Z)(e.id, L.d$),
+        { usernameProfile: l, avatarProfile: o } = n,
         s = (0, Z.wq)(e.author.id, t.id),
         c = (0, Z.RN)(e.author.id, t.id, e.id),
-        u = (0, Z.XO)(e, t, a, l);
+        u = (0, Z.XO)(e, t, l, a);
     return {
         selected: r,
         onContextMenu: s,
         onContextMenuModerateUser: c,
         onClickUsername: u,
-        onClickAvatar: (0, Z.R9)(o, l),
+        onClickAvatar: (0, Z.R9)(o, a),
         onPopoutRequestClose: i.useCallback(
             () =>
-                l({
+                a({
                     usernameProfile: !1,
                     avatarProfile: !1,
                     referencedUsernameProfile: !1
                 }),
-            [l]
+            [a]
         ),
         renderPopout: w.Z,
         showAvatarPopout: o,
-        showUsernamePopout: a
+        showUsernamePopout: l
     };
 }
 function K(e, t, n) {
@@ -145,14 +145,14 @@ function K(e, t, n) {
 function Y(e) {
     let { children: t, className: n, compact: i } = e;
     return (0, r.jsx)('div', {
-        className: a()(B.footerContainer, n, { [B.compact]: i }),
+        className: l()(B.footerContainer, n, { [B.compact]: i }),
         children: t
     });
 }
 function X(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)('div', {
-        className: a()(B.annotationRow, n),
+        className: l()(B.annotationRow, n),
         children: t
     });
 }
@@ -177,7 +177,7 @@ function q(e, t) {
                     {
                         size: 'xs',
                         color: 'currentColor',
-                        className: a()(B.alertActionIcon, B.alertActionSetCompletedIcon)
+                        className: l()(B.alertActionIcon, B.alertActionSetCompletedIcon)
                     },
                     t
                 )
@@ -204,37 +204,37 @@ function Q(e) {
     try {
         let e = parseInt(t.actionType);
         if (null == i) return q(e, {});
-        let l = (function (e, t, n) {
+        let a = (function (e, t, n) {
             var r;
             let i = null != (r = j.ZP.getNickname(n, null, t)) ? r : C.ZP.getUserTag(t),
-                l = s()(e.ts),
-                a = ''.concat(i, ' ').concat(l.fromNow());
+                a = s()(e.ts),
+                l = ''.concat(i, ' ').concat(a.fromNow());
             try {
                 switch (parseInt(e.actionType)) {
                     case g.d.DELETE_USER_MESSAGE:
                         return F.NW.formatToPlainString(F.t.BtKE9v, {
                             userName: i,
-                            timestamp: l.fromNow()
+                            timestamp: a.fromNow()
                         });
                     case g.d.SET_COMPLETED:
                         return F.NW.formatToPlainString(F.t.dyo9UV, {
                             userName: i,
-                            timestamp: l.fromNow()
+                            timestamp: a.fromNow()
                         });
                     case g.d.SUBMIT_FEEDBACK:
                         return F.NW.formatToPlainString(F.t['C9/kIC'], {
                             userName: i,
-                            timestamp: l.fromNow()
+                            timestamp: a.fromNow()
                         });
                     default:
-                        return a;
+                        return l;
                 }
             } catch (e) {
-                return a;
+                return l;
             }
         })(t, i, n);
         return (0, r.jsx)(p.ua7, {
-            text: l,
+            text: a,
             children: (t) => q(e, t)
         });
     } catch (e) {
@@ -260,7 +260,7 @@ function J(e) {
 }
 let $ = i.memo(function (e) {
     let t,
-        { message: n, channel: i, embedChannel: l, compact: a, interactionUserId: o } = e,
+        { message: n, channel: i, embedChannel: a, compact: l, interactionUserId: o } = e,
         s = z(n, i),
         c = K(i, n.author),
         u = (0, I.ZP)(n),
@@ -271,7 +271,7 @@ let $ = i.memo(function (e) {
                     channel: i,
                     author: u,
                     guildId: null == i ? void 0 : i.guild_id,
-                    compact: a
+                    compact: l
                 },
                 s
             ),
@@ -289,7 +289,7 @@ let $ = i.memo(function (e) {
                         channel: i,
                         author: e,
                         guildId: null == i ? void 0 : i.guild_id,
-                        compact: a
+                        compact: l
                     },
                     f
                 ),
@@ -304,12 +304,12 @@ let $ = i.memo(function (e) {
         className: B.spanCorrection,
         children: (0, _.Mq)(
             n,
-            l,
+            a,
             () =>
                 (0, r.jsx)('div', {
                     className: B.channelNameContainer,
                     children: (0, r.jsx)(T.Z, {
-                        channel: l,
+                        channel: a,
                         className: B.channelName,
                         openChatWithoutConnecting: !0
                     })
@@ -321,7 +321,7 @@ let $ = i.memo(function (e) {
 });
 function ee(e) {
     var t;
-    let { id: n, compact: l, message: o, channel: s } = e,
+    let { id: n, compact: a, message: o, channel: s } = e,
         {
             avatarSrc: v,
             eventHandlers: { onMouseEnter: O, onMouseLeave: j }
@@ -332,7 +332,7 @@ function ee(e) {
         { isFocused: w, handleFocus: R, handleBlur: L } = (0, Z.bb)(I),
         K = (0, d.e7)([f.Z], () => f.Z.keyboardModeEnabled),
         q = (0, d.e7)([N.Z], () => N.Z.can(M.Plq.MANAGE_MESSAGES, s), [s]),
-        { ruleName: Q, embedChannel: ee, decisionId: et, keywordMatchedContent: en, keyword: er, content: ei, flaggedMessageId: el, timeoutDuration: ea, decisionReason: eo, alertActionsExecution: es, quarantineType: ec, interactionUserId: eu } = (0, _.ZP)(o),
+        { ruleName: Q, embedChannel: ee, decisionId: et, keywordMatchedContent: en, keyword: er, content: ei, flaggedMessageId: ea, timeoutDuration: el, decisionReason: eo, alertActionsExecution: es, quarantineType: ec, interactionUserId: eu } = (0, _.ZP)(o),
         ed = i.useMemo(() => (0, S.k$)(ei, en, s.id), [ei, en, s]),
         ep = z(o, s),
         { selected: em } = ep,
@@ -342,9 +342,9 @@ function ee(e) {
         }, [o.id, ei, et, s]),
         eg = i.useCallback(
             (e) => {
-                null != el && null != ee && (e.stopPropagation(), e.preventDefault(), (0, y.Z)(M.Z5c.CHANNEL(null == ee ? void 0 : ee.guild_id, null == ee ? void 0 : ee.id, el)));
+                null != ea && null != ee && (e.stopPropagation(), e.preventDefault(), (0, y.Z)(M.Z5c.CHANNEL(null == ee ? void 0 : ee.guild_id, null == ee ? void 0 : ee.id, ea)));
             },
-            [ee, el]
+            [ee, ea]
         ),
         e_ = i.useCallback(
             (e) => {
@@ -361,26 +361,26 @@ function ee(e) {
         eb = i.useCallback(() => {
             (0, x.Xx)(o.id, s, g.d.DELETE_USER_MESSAGE);
         }, [s, o.id]),
-        ex = (0, U.L9)(Number(ea)),
+        ex = (0, U.L9)(Number(el)),
         ey = null != eo,
-        eE = q && null != el && (null == es || !es.actions.hasOwnProperty(g.d.DELETE_USER_MESSAGE)),
+        eE = q && null != ea && (null == es || !es.actions.hasOwnProperty(g.d.DELETE_USER_MESSAGE)),
         ev = o.embeds.length > 0 ? (null == (t = o.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) ? void 0 : t.rawValue) : null,
         eN = null != ev;
     return (0, r.jsx)('div', {
         onMouseEnter: O,
         onMouseLeave: j,
         children: (0, r.jsx)(D.Z, {
-            className: a()(B.mainContainer, { [B.compact]: l }),
-            iconNode: l ? null : (0, r.jsx)(k.S, { src: v }),
+            className: l()(B.mainContainer, { [B.compact]: a }),
+            iconNode: a ? null : (0, r.jsx)(k.S, { src: v }),
             iconContainerClassName: B.iconContainer,
-            compact: l,
+            compact: a,
             children: (0, r.jsxs)('div', {
-                className: a()(B.content, { [B.compact]: l }),
+                className: l()(B.content, { [B.compact]: a }),
                 children: [
                     (0, r.jsx)(A.nD, {
                         message: o,
                         messageClassname: B.spanCorrection,
-                        className: a()(B.usernameContainer, B.spanCorrection, { [B.compact]: l }),
+                        className: l()(B.usernameContainer, B.spanCorrection, { [B.compact]: a }),
                         username: (0, r.jsxs)('div', {
                             className: B.spanCorrection,
                             children: [
@@ -399,29 +399,29 @@ function ee(e) {
                                     message: o,
                                     channel: s,
                                     embedChannel: ee,
-                                    compact: l,
+                                    compact: a,
                                     interactionUserId: eu
                                 })
                             ]
                         }),
-                        compact: l,
+                        compact: a,
                         showTimestamp: !0
                     }),
                     (0, r.jsx)('div', {
-                        className: a()(B.messageContent, { [B.compact]: l }),
+                        className: l()(B.messageContent, { [B.compact]: a }),
                         children: (0, r.jsx)(
                             P.Z,
                             H(G({}, T), {
                                 message: o,
                                 channel: ee,
                                 content: ed,
-                                compact: l,
+                                compact: a,
                                 withFooter: !0,
                                 hideTimestamp: !0,
-                                className: a()(B.embedCard, {
-                                    [B.compact]: l,
+                                className: l()(B.embedCard, {
+                                    [B.compact]: a,
                                     [B.selected]: em || (K && w),
-                                    [B.isClickable]: null != el && null != ee
+                                    [B.isClickable]: null != ea && null != ee
                                 }),
                                 childrenAccessories: (0, r.jsxs)(r.Fragment, {
                                     children: [
@@ -437,7 +437,7 @@ function ee(e) {
                                                                 tag: 'span',
                                                                 children: F.NW.format(F.t.SYIUTU, { keyword: er })
                                                             }),
-                                                            (0, r.jsx)('div', { className: a()(B.dot, B.dotMargin) })
+                                                            (0, r.jsx)('div', { className: l()(B.dot, B.dotMargin) })
                                                         ]
                                                     }),
                                                 null != Q &&
@@ -450,7 +450,7 @@ function ee(e) {
                                                 null != ex &&
                                                     (0, r.jsxs)(r.Fragment, {
                                                         children: [
-                                                            (0, r.jsx)('div', { className: a()(B.dot, B.dotMargin) }),
+                                                            (0, r.jsx)('div', { className: l()(B.dot, B.dotMargin) }),
                                                             (0, r.jsx)(p.Text, {
                                                                 variant: 'text-xs/medium',
                                                                 color: 'text-muted',
@@ -463,7 +463,7 @@ function ee(e) {
                                                 null != ec &&
                                                     (0, r.jsxs)(r.Fragment, {
                                                         children: [
-                                                            (0, r.jsx)('div', { className: a()(B.dot, B.dotMargin) }),
+                                                            (0, r.jsx)('div', { className: l()(B.dot, B.dotMargin) }),
                                                             (0, r.jsx)(p.Text, {
                                                                 variant: 'text-xs/medium',
                                                                 color: 'text-muted',
@@ -496,9 +496,9 @@ function ee(e) {
                         )
                     }),
                     (0, r.jsx)(Y, {
-                        compact: l,
+                        compact: a,
                         children: (0, r.jsxs)('div', {
-                            className: a()(B.centeredRowContainer, B.buttonContainer, { [B.compact]: l }),
+                            className: l()(B.centeredRowContainer, B.buttonContainer, { [B.compact]: a }),
                             children: [
                                 (0, r.jsx)(p.zxk, {
                                     onClick: (e) => {

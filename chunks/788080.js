@@ -12,8 +12,8 @@ n.d(t, {
     n(35282);
 var r = n(913527),
     i = n.n(r),
-    l = n(406432),
-    a = n(531441),
+    a = n(406432),
+    l = n(531441),
     o = n(800530),
     s = n(981631),
     c = n(959517),
@@ -23,25 +23,25 @@ function d(e) {
 }
 function p(e) {
     var t, n;
-    return (0, l.CO)(e.filename) || (0, l.NU)(e.filename) ? ''.concat(c._j).concat(null != (t = e.filename) ? t : '.png') : null != (n = e.filename) ? n : '';
+    return (0, a.CO)(e.filename) || (0, a.NU)(e.filename) ? ''.concat(c._j).concat(null != (t = e.filename) ? t : '.png') : null != (n = e.filename) ? n : '';
 }
 function m(e) {
     var t, n, r, i;
     if (null == e.fields) return;
-    let l = e.fields.reduce((e, t) => ((e[t.rawName] = t.rawValue), e), {});
+    let a = e.fields.reduce((e, t) => ((e[t.rawName] = t.rawValue), e), {});
     return {
-        header: null != (t = l[o.I5.HEADER]) ? t : '',
-        icon: l[o.I5.ICON_TYPE],
-        body: null != (n = l[o.I5.BODY]) ? n : '',
-        ctas: (null != (r = l[o.I5.CTAS]) ? r : '').split(',').filter((e) => '' !== e),
-        timestamp: parseFloat(null != (i = l[o.I5.TIMESTAMP]) ? i : 0),
-        theme: l[o.I5.THEME],
-        learn_more_link: l[o.I5.LEARN_MORE_LINK],
-        classification_id: l[o.I5.CLASSIFICATION_ID]
+        header: null != (t = a[o.I5.HEADER]) ? t : '',
+        icon: a[o.I5.ICON_TYPE],
+        body: null != (n = a[o.I5.BODY]) ? n : '',
+        ctas: (null != (r = a[o.I5.CTAS]) ? r : '').split(',').filter((e) => '' !== e),
+        timestamp: parseFloat(null != (i = a[o.I5.TIMESTAMP]) ? i : 0),
+        theme: a[o.I5.THEME],
+        learn_more_link: a[o.I5.LEARN_MORE_LINK],
+        classification_id: a[o.I5.CLASSIFICATION_ID]
     };
 }
 function f(e) {
-    return e.type !== a.lK.MESSAGE || ('' === e.content && 0 === e.attachments.length);
+    return e.type !== l.lK.MESSAGE || ('' === e.content && 0 === e.attachments.length);
 }
 let h = (e) =>
         ({

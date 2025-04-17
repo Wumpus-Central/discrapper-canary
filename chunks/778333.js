@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x });
 var r = n(200651),
     i = n(192379),
-    l = n(442837),
-    a = n(493683),
+    a = n(442837),
+    l = n(493683),
     o = n(447543),
     s = n(100527),
     c = n(906732),
@@ -18,17 +18,17 @@ var r = n(200651),
 function x(e) {
     var t;
     let { invite: n, getAcceptInviteContext: x } = e,
-        y = (0, l.e7)([p.default], () => p.default.getId()),
+        y = (0, a.e7)([p.default], () => p.default.getId()),
         E = (null == (t = n.inviter) ? void 0 : t.id) === y,
         v = n.state === g.r2o.ACCEPTING,
         { analyticsLocations: N } = (0, c.ZP)(s.Z.INVITE_EMBED),
-        O = (0, l.e7)([f.Z], () => {
+        O = (0, a.e7)([f.Z], () => {
             var e;
             return null != n.inviter && f.Z.isFriend(null == (e = n.inviter) ? void 0 : e.id);
         }),
         j = i.useCallback(() => {
             let e = 'noop';
-            null != n.inviter && null != m.Z.getDMFromUserId(n.inviter.id) && ((e = 'transition'), a.Z.openPrivateChannel({ recipientIds: [n.inviter.id] })), (0, o.r$)(n, e, N);
+            null != n.inviter && null != m.Z.getDMFromUserId(n.inviter.id) && ((e = 'transition'), l.Z.openPrivateChannel({ recipientIds: [n.inviter.id] })), (0, o.r$)(n, e, N);
         }, [n, N]),
         C = i.useCallback(() => {
             (0, o.r$)(n, 'accept', N);

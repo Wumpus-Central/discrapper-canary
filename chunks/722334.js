@@ -2,8 +2,8 @@ n.d(t, { W: () => b });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    l = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    l = n(481060),
     o = n(626135),
     s = n(617136),
     c = n(497505),
@@ -18,9 +18,9 @@ function _(e) {
     let { questId: t } = e;
     return (0, r.jsx)('div', {
         className: h.buttonContainer,
-        children: (0, r.jsx)(a.zxk, {
+        children: (0, r.jsx)(l.zxk, {
             className: h.button,
-            color: a.Ttl.BRAND,
+            color: l.Ttl.BRAND,
             onClick: () => {
                 (0, d.navigateToQuestHome)({ fromContent: c.jn.EXCLUDED_QUEST_EMBED }),
                     o.default.track(
@@ -71,7 +71,7 @@ function b(e) {
             ref: (e) => {
                 n.current = e;
             },
-            className: l()(h.container, {
+            className: a()(h.container, {
                 [h.wide]: 'lg' === i,
                 [h.tall]: 'lg' !== i
             }),
@@ -79,12 +79,12 @@ function b(e) {
                 (0, r.jsxs)('div', {
                     className: h.contentContainer,
                     children: [
-                        (0, r.jsx)(a.X6q, {
+                        (0, r.jsx)(l.X6q, {
                             variant: 'lg' === i ? 'heading-xl/bold' : 'heading-lg/bold',
                             color: 'header-primary',
                             children: f.NW.string(f.t.vnP31d)
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: 'lg' === i ? 'text-sm/medium' : 'text-xs/medium',
                             color: 'text-normal',
                             className: h.__invalid_mobileWebCopy,

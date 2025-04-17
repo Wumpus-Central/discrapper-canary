@@ -7,8 +7,8 @@ n.d(t, {
     n(781311);
 var r = n(200651),
     i = n(192379),
-    l = n(512722),
-    a = n.n(l),
+    a = n(512722),
+    l = n.n(a),
     o = n(442837),
     s = n(481060),
     c = n(131388),
@@ -53,9 +53,9 @@ function C(e) {
 function S(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         i = f.QK.useSetting(),
-        l = (0, x.n)() && i,
-        [a, o] = (0, m.Z)(t, l),
-        s = l
+        a = (0, x.n)() && i,
+        [l, o] = (0, m.Z)(t, a),
+        s = a
             ? (0, r.jsx)(d.Z, {
                   autoPlay: !0,
                   loop: !0,
@@ -70,7 +70,7 @@ function S(e) {
                   className: j.coverImage
               });
     return (0, r.jsx)('div', {
-        ref: a,
+        ref: l,
         className: j.coverImageContainer,
         children:
             null == o || n
@@ -84,14 +84,14 @@ function S(e) {
 }
 function I(e) {
     var t, n;
-    let { guild: l, subscriptionsSettings: d } = e,
-        m = l.id,
+    let { guild: a, subscriptionsSettings: d } = e,
+        m = a.id,
         { nickname: f, nickcolor: _ } = (0, o.cj)(
             [h.ZP, g.default],
             () => {
                 var e, t;
                 let n = g.default.getCurrentUser();
-                a()(null != n, 'user cannot be null');
+                l()(null != n, 'user cannot be null');
                 let r = h.ZP.getMember(m, n.id);
                 return {
                     nickname: null != (e = null == r ? void 0 : r.nick) ? e : b.ZP.getName(n),
@@ -136,9 +136,9 @@ function I(e) {
                 children: [
                     (0, r.jsx)('div', {
                         children: (0, r.jsx)(p.Z, {
-                            guild: l,
+                            guild: a,
                             size: p.Z.Sizes.LARGER,
-                            iconSrc: null == l.icon || R ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
+                            iconSrc: null == a.icon || R ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
                         })
                     }),
                     (0, r.jsx)(s.LZC, {
@@ -155,7 +155,7 @@ function I(e) {
                                     variant: 'heading-xl/semibold',
                                     color: 'header-primary',
                                     lineClamp: 2,
-                                    children: R ? O.NW.string(O.t.rtgp7u) : O.NW.formatToPlainString(O.t.NZeik5, { guildName: l.name })
+                                    children: R ? O.NW.string(O.t.rtgp7u) : O.NW.formatToPlainString(O.t.NZeik5, { guildName: a.name })
                                 })
                             }),
                             (0, r.jsx)(s.LZC, { size: 8 }),

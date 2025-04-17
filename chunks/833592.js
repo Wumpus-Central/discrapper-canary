@@ -7,25 +7,25 @@ n.d(t, {
 });
 var r = n(990547),
     i = n(544891),
-    l = n(283693),
-    a = n(570140),
+    a = n(283693),
+    l = n(570140),
     o = n(695346),
     s = n(573261),
     c = n(140155),
     u = n(178480),
     d = n(981631);
 function p(e) {
-    a.Z.dispatch({
+    l.Z.dispatch({
         type: 'NOTIFICATION_CENTER_SET_ACTIVE',
         active: e
     });
 }
 function m() {
-    a.Z.dispatch({ type: 'RESET_NOTIFICATION_CENTER' });
+    l.Z.dispatch({ type: 'RESET_NOTIFICATION_CENTER' });
 }
 async function f(e, t) {
     if (c.Z.loading) return;
-    await a.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS' });
+    await l.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS' });
     let n = Math.ceil(c.Z.items.length / e.limit);
     try {
         let i = await s.Z.get({
@@ -35,7 +35,7 @@ async function f(e, t) {
                 properties: (e) => {
                     var t;
                     let r = ((null == (t = e.body) ? void 0 : t.items) || []).map((e) => e.type);
-                    return (0, l.iG)({
+                    return (0, a.iG)({
                         page: n,
                         items: r,
                         item_count: r.length
@@ -70,27 +70,27 @@ async function f(e, t) {
             rejectWithError: !0
         });
         null == t || t(),
-            await a.Z.dispatch({
+            await l.Z.dispatch({
                 type: 'LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS',
                 items: i.body.items,
                 cursor: i.body.cursor,
                 hasMore: i.body.has_more
             });
     } catch (e) {
-        null == t || t(), await a.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE' });
+        null == t || t(), await l.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE' });
     }
 }
 function h(e) {
     var t, n;
     null != e.local_id
         ? ((t = [e.local_id]),
-          a.Z.dispatch({
+          l.Z.dispatch({
               type: 'NOTIFICATION_CENTER_ITEMS_LOCAL_ACK',
               localIds: t
           }))
         : (0, u.RB)(e)
           ? ((n = e.id),
-            a.Z.dispatch({
+            l.Z.dispatch({
                 type: 'NOTIFICATION_CENTER_ITEMS_ACK',
                 optimistic: !0,
                 ids: [n]
@@ -99,7 +99,7 @@ function h(e) {
 }
 async function g(e) {
     try {
-        a.Z.dispatch({
+        l.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_ACK',
             optimistic: !0,
             ids: [e]
@@ -109,7 +109,7 @@ async function g(e) {
                 rejectWithError: !0
             });
     } catch (t) {
-        a.Z.dispatch({
+        l.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_ACK_FAILURE',
             ids: [e]
         });
@@ -118,7 +118,7 @@ async function g(e) {
 async function _(e) {
     let t = o.d$.getSetting();
     try {
-        a.Z.dispatch({
+        l.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEM_DELETE',
             id: e.id
         }),
@@ -137,7 +137,7 @@ async function _(e) {
             });
     } catch (t) {
         throw (
-            (a.Z.dispatch({
+            (l.Z.dispatch({
                 type: 'NOTIFICATION_CENTER_ITEM_DELETE_FAILURE',
                 item: e
             }),

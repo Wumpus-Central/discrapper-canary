@@ -1,10 +1,10 @@
 n.d(t, {
-    Ui: () => a,
+    Ui: () => l,
     p$: () => s
 });
 var r = n(818083),
     i = n(981631);
-let l = (0, r.B)({
+let a = (0, r.B)({
     kind: 'guild',
     id: '2023-03_guild_media_channel',
     label: 'Media Channel',
@@ -17,9 +17,9 @@ let l = (0, r.B)({
         }
     ]
 });
-function a(e) {
+function l(e) {
     var t;
-    let { enabled: n } = l.useExperiment(
+    let { enabled: n } = a.useExperiment(
         {
             guildId: null != (t = null == e ? void 0 : e.id) ? t : i.lds,
             location: '96e84c_1'

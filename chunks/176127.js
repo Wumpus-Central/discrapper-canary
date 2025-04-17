@@ -2,13 +2,13 @@ n.d(t, { Z: () => c }), n(583741);
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    l = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    l = n(442837),
     o = n(435064),
     s = n(892983);
 function c() {
     var e, t;
-    let n = (0, a.Wu)([o.Z], () => {
+    let n = (0, l.Wu)([o.Z], () => {
         var e;
         let t = null == (e = o.Z.getLastClipsSession()) ? void 0 : e.newClipIds;
         return null == t
@@ -18,7 +18,7 @@ function c() {
                   .filter((e) => t.includes(e.id));
     });
     return (0, r.jsx)('div', {
-        className: l()(s.thumbnailStack, {
+        className: a()(s.thumbnailStack, {
             [s['height-1']]: 1 === n.length,
             [s['height-2']]: 2 === n.length,
             [s['height-3']]: 3 === n.length,

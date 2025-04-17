@@ -1,11 +1,11 @@
 n.d(t, {
-    Dk: () => a,
+    Dk: () => l,
     Ix: () => o,
-    me: () => l
+    me: () => a
 });
 var r = n(544891),
     i = n(981631);
-async function l(e, t, n, l, a) {
+async function a(e, t, n, a, l) {
     return (
         await r.tn.post({
             url: i.ANM.STAGE_INSTANCES,
@@ -13,14 +13,14 @@ async function l(e, t, n, l, a) {
                 channel_id: e,
                 topic: t,
                 privacy_level: n,
-                guild_scheduled_event_id: a,
-                send_start_notification: l
+                guild_scheduled_event_id: l,
+                send_start_notification: a
             },
             rejectWithError: !1
         })
     ).body;
 }
-async function a(e, t, n) {
+async function l(e, t, n) {
     return (
         await r.tn.patch({
             url: i.ANM.STAGE_INSTANCE(e),

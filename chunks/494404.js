@@ -7,8 +7,8 @@ n.d(t, {
     n(539854);
 var r = n(200651),
     i = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(392711),
     s = n.n(o),
     c = n(91192),
@@ -49,9 +49,9 @@ function A(e) {
     e.stopPropagation();
 }
 let w = (e) => {
-        let { title: t, icon: n, children: i, className: l } = e;
+        let { title: t, icon: n, children: i, className: a } = e;
         return (0, r.jsxs)('div', {
-            className: a()(l, T.header),
+            className: l()(a, T.header),
             children: [
                 (0, r.jsxs)('div', {
                     className: T.titleContainer,
@@ -94,12 +94,12 @@ class R extends i.PureComponent {
             onClick: this.handleClickJump,
             children: [
                 (0, r.jsx)('div', {
-                    className: a()(T.__invalid_text, { hidden: e }),
+                    className: l()(T.__invalid_text, { hidden: e }),
                     children: I.NW.string(I.t.k5WiPT)
                 }),
                 (0, r.jsx)(d.$jN, {
                     type: d.$jN.Type.PULSING_ELLIPSIS,
-                    className: a()(T.loading, { [T.visible]: e })
+                    className: l()(T.loading, { [T.visible]: e })
                 })
             ]
         });
@@ -142,7 +142,7 @@ let k = u.ZP.connectStores([v.Z], (e) => {
     return { canManageMessages: null != t && v.Z.can(S.Plq.MANAGE_MESSAGES, t) };
 })(R);
 function D(e) {
-    let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: p, renderHeader: m, renderEmptyState: _, renderItem: b, getProTip: y, scrollerClassName: E, className: v, listName: w } = e,
+    let { analyticsName: t, items: n, hasMore: a, loading: o, loadMore: p, renderHeader: m, renderEmptyState: _, renderItem: b, getProTip: y, scrollerClassName: E, className: v, listName: w } = e,
         Z = i.useRef(null),
         R = (0, f.Z)(w, Z),
         k = (0, u.e7)([N.ZP], () => N.ZP.hasNotice()),
@@ -171,8 +171,8 @@ function D(e) {
     let M = i.useCallback(() => {
             var e;
             let t = null == (e = Z.current) ? void 0 : e.getScrollerState();
-            null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && l && !o && (null == p || p());
-        }, [l, p, o]),
+            null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && a && !o && (null == p || p());
+        }, [a, p, o]),
         W = [],
         U = !0;
     null == n
@@ -180,7 +180,7 @@ function D(e) {
               (0, r.jsx)(
                   'div',
                   {
-                      className: a()(T.emptyPlaceholder, T.loadingPlaceholder),
+                      className: l()(T.emptyPlaceholder, T.loadingPlaceholder),
                       children: (0, r.jsx)(d.$jN, {})
                   },
                   'spinner'
@@ -206,7 +206,7 @@ function D(e) {
                   },
                   'loading-more-after'
               )
-            : l
+            : a
               ? (0, r.jsx)('div', {
                     className: T.hasMore,
                     children: (0, r.jsx)(d.zxk, {
@@ -238,9 +238,9 @@ function D(e) {
                 : null,
         H = { maxHeight: D.height - 43 - 25 };
     k && (H.maxHeight -= 40), L && (H.maxHeight -= 48);
-    let V = null != p && l;
+    let V = null != p && a;
     return (0, r.jsx)('div', {
-        className: a()(v, T.messagesPopoutWrap),
+        className: l()(v, T.messagesPopoutWrap),
         style: H,
         onClick: A,
         onDoubleClick: A,
@@ -249,7 +249,7 @@ function D(e) {
             component: m(),
             children: [
                 (0, r.jsxs)(d.Den, {
-                    className: a()(T.messagesPopout, E),
+                    className: l()(T.messagesPopout, E),
                     onScroll: V ? M : void 0,
                     ref: Z,
                     children: [
@@ -260,7 +260,7 @@ function D(e) {
                                     var t,
                                         n,
                                         { ref: i } = e,
-                                        l = (function (e, t) {
+                                        a = (function (e, t) {
                                             if (null == e) return {};
                                             var n,
                                                 r,
@@ -269,13 +269,13 @@ function D(e) {
                                                     var n,
                                                         r,
                                                         i = {},
-                                                        l = Object.keys(e);
-                                                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                                        a = Object.keys(e);
+                                                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                                     return i;
                                                 })(e, t);
                                             if (Object.getOwnPropertySymbols) {
-                                                var l = Object.getOwnPropertySymbols(e);
-                                                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                                var a = Object.getOwnPropertySymbols(e);
+                                                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                                             }
                                             return i;
                                         })(e, ['ref']);
@@ -296,7 +296,7 @@ function D(e) {
                                                     });
                                             }
                                             return e;
-                                        })({ ref: i }, l)),
+                                        })({ ref: i }, a)),
                                         (n = n = { children: W }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -324,23 +324,23 @@ function D(e) {
     });
 }
 function L(e) {
-    let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: h, renderEmptyState: g, renderMessage: x, getProTip: v, scrollerClassName: N, className: O, onCloseMessage: j, listName: C } = e,
+    let { analyticsName: t, onFetch: n, channel: a, messages: l, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: h, renderEmptyState: g, renderMessage: x, getProTip: v, scrollerClassName: N, className: O, onCloseMessage: j, listName: C } = e,
         P = (0, u.e7)([E.Z], () => {
-            let e = null != l ? E.Z.getMessages(l.id) : null;
+            let e = null != a ? E.Z.getMessages(a.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
     function A(e, n) {
-        let { id: r, blocked: i, ignored: l, author: a, channel_id: o } = e;
+        let { id: r, blocked: i, ignored: a, author: l, channel_id: o } = e;
         if (i)
             p.Z.show({
                 title: I.NW.string(I.t['j7eA/v']),
-                body: I.NW.formatToPlainString(I.t.dTNNgo, { name: a.username }),
+                body: I.NW.formatToPlainString(I.t.dTNNgo, { name: l.username }),
                 confirmText: I.NW.string(I.t.BddRzc)
             });
-        else if (l)
+        else if (a)
             p.Z.show({
                 title: I.NW.string(I.t.XyWoKS),
-                body: I.NW.formatToPlainString(I.t['8t8doK'], { name: a.username }),
+                body: I.NW.formatToPlainString(I.t['8t8doK'], { name: l.username }),
                 confirmText: I.NW.string(I.t.BddRzc)
             });
         else if (!P) {
@@ -349,17 +349,17 @@ function L(e) {
         }
     }
     i.useEffect(() => {
-        n(l);
-    }, [l, n]);
+        n(a);
+    }, [a, n]);
     let w = i.useMemo(
         () =>
-            null == a
+            null == l
                 ? void 0
-                : a.map((e) => ({
+                : l.map((e) => ({
                       message: e,
-                      channel: l
+                      channel: a
                   })),
-        [a, l]
+        [l, a]
     );
     return (0, r.jsx)(D, {
         className: O,
@@ -391,7 +391,7 @@ function L(e) {
                                       channel: n
                                   }),
                                   (0, r.jsx)(k, {
-                                      channel: l,
+                                      channel: a,
                                       message: t,
                                       jumping: P,
                                       canCloseAllMessages: f,

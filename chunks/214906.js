@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(913527),
-    l = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    l = n(442837),
     o = n(481060),
     s = n(777861),
     c = n(569471),
@@ -11,7 +11,7 @@ var i = n(913527),
     d = n(776568),
     p = n(388032);
 function m(e) {
-    let [t, n, i] = (0, a.Wu)([c.Z], () => [c.Z.isMuted(e.id), c.Z.getMuteConfig(e.id), c.Z.hasJoined(e.id)]),
+    let [t, n, i] = (0, l.Wu)([c.Z], () => [c.Z.isMuted(e.id), c.Z.getMuteConfig(e.id), c.Z.hasJoined(e.id)]),
         m = (0, s.U)(n);
     function f(t) {
         u.Z.setNotificationSettings(e, { muted: t });
@@ -37,7 +37,7 @@ function m(e) {
                               label: i,
                               action: () =>
                                   (function (t) {
-                                      let n = t > 0 ? l()().add(t, 'second').toISOString() : null;
+                                      let n = t > 0 ? a()().add(t, 'second').toISOString() : null;
                                       u.Z.setNotificationSettings(e, {
                                           muted: !0,
                                           mute_config: {

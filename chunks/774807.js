@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r,
     i = n(442837),
-    l = n(570140),
-    a = n(455199),
+    a = n(570140),
+    l = n(455199),
     o = n(70956),
     s = n(709054),
     c = n(497089);
@@ -63,7 +63,7 @@ let m = 90 * o.Z.Millis.DAY,
     };
 class h extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(a.Z), null != e)) {
+        if ((this.waitFor(l.Z), null != e)) {
             var t;
             ((f = e).localItemAcks = (function (e) {
                 let t = {};
@@ -100,7 +100,7 @@ function g() {
     (f.hasNewMentions = !1), (f.isDataStale = !1), (f.isRefreshing = !1);
 }
 u(h, 'displayName', 'NotificationCenterStore'), u(h, 'persistKey', 'NotificationCenterStore');
-let _ = new h(l.Z, {
+let _ = new h(a.Z, {
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
     },

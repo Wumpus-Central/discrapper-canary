@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    l = n.n(i),
-    a = n(367814),
+    a = n.n(i),
+    l = n(367814),
     o = n(739566),
     s = n(492593),
     c = n(930282),
@@ -47,28 +47,28 @@ function m(e) {
                     var n,
                         r,
                         i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ['message', 'channel', 'content', 'className', 'compact', 'popoutProps', 'hideTimestamp', 'withFooter']);
     let E = (0, o.ZP)(i),
-        v = (0, a.Z)(E);
+        v = (0, l.Z)(E);
     return (0, r.jsx)('div', {
-        className: l()({ [d.withFooter]: x }, d.embedCard, { [d.compact]: g }, h),
+        className: a()({ [d.withFooter]: x }, d.embedCard, { [d.compact]: g }, h),
         children: (0, r.jsx)(
             s.Z,
             ((t = p({}, y)),
             (n = n =
                 {
-                    className: l()(d.messageContainer, { [d.compact]: g }),
+                    className: a()(d.messageContainer, { [d.compact]: g }),
                     childrenMessageContent: (0, r.jsx)(c.ZP, {
-                        className: l()(d.__invalid_messageContent, { [d.compact]: g }),
+                        className: a()(d.__invalid_messageContent, { [d.compact]: g }),
                         message: i,
                         content: f
                     }),
@@ -82,7 +82,7 @@ function m(e) {
                                 guildId: null == m ? void 0 : m.guild_id,
                                 compact: g,
                                 hideTimestamp: b,
-                                className: l()(d.header, { [d.compact]: g })
+                                className: a()(d.header, { [d.compact]: g })
                             },
                             null != _ ? _ : {}
                         )

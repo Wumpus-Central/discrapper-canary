@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r,
     i = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(600164),
+var a = n(481060),
+    l = n(600164),
     o = n(106887),
     s = (((r = s || {}).SMALL = 'SMALL'), (r.MEDIUM = 'MEDIUM'), (r.LARGE = 'LARGE'), r);
 let c = {
@@ -24,18 +24,18 @@ let c = {
                         var n,
                             r,
                             i = {},
-                            l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            a = Object.keys(e);
+                        for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    var a = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
             })(e, ['onDropdownClick', 'children', 'contentClassName', 'dropdownSize']);
         return (0, i.jsx)(
-            l.zxk,
+            a.zxk,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -63,22 +63,22 @@ let c = {
             })({}, p)),
             (n = n =
                 {
-                    children: (0, i.jsxs)(a.Z, {
-                        align: a.Z.Align.CENTER,
+                    children: (0, i.jsxs)(l.Z, {
+                        align: l.Z.Align.CENTER,
                         children: [
-                            (0, i.jsx)(a.Z.Child, {
+                            (0, i.jsx)(l.Z.Child, {
                                 className: u,
                                 children: s
                             }),
                             null != r
-                                ? (0, i.jsxs)(l.P3F, {
+                                ? (0, i.jsxs)(a.P3F, {
                                       className: c[d],
                                       onClick: (e) => {
                                           e.stopPropagation(), null != r && r(e);
                                       },
                                       children: [
                                           (0, i.jsx)('div', { className: o.arrowSeparator }),
-                                          (0, i.jsx)(l.CJ0, {
+                                          (0, i.jsx)(a.CJ0, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: o.dropdownArrow
@@ -104,5 +104,5 @@ let c = {
             t)
         );
     };
-(u.DropdownSizes = s), (u.Sizes = l.zxk.Sizes), (u.Colors = l.zxk.Colors), (u.Looks = l.zxk.Looks);
+(u.DropdownSizes = s), (u.Sizes = a.zxk.Sizes), (u.Colors = a.zxk.Colors), (u.Looks = a.zxk.Looks);
 let d = u;

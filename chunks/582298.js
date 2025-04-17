@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    l = n(430824),
-    a = n(646504),
+    a = n(430824),
+    l = n(646504),
     o = n(834129),
     s = n(981631),
     c = n(388032),
@@ -12,12 +12,12 @@ function d(e) {
     let t,
         { compact: d, isOwner: p, channel: m } = e,
         f = () => {
-            let e = l.Z.getGuild(m.getGuildId());
+            let e = a.Z.getGuild(m.getGuildId());
             null != e &&
                 ((0, i.ZDy)(async () => {
                     let { default: t } = await Promise.all([n.e('7654'), n.e('49049'), n.e('29328')]).then(n.bind(n, 560114));
                     return (n) => {
-                        var i, l;
+                        var i, a;
                         return (0, r.jsx)(
                             t,
                             ((i = (function (e) {
@@ -45,14 +45,14 @@ function d(e) {
                                 }
                                 return e;
                             })({}, n)),
-                            (l = l =
+                            (a = a =
                                 {
                                     guild: e,
                                     channel: m,
                                     source: s.t4x.INVITE_SYSTEM_MESSAGE
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -60,14 +60,14 @@ function d(e) {
                                           n.push.apply(n, r);
                                       }
                                       return n;
-                                  })(Object(l)).forEach(function (e) {
-                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                  })(Object(a)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                                   }),
                             i)
                         );
                     };
                 }),
-                (0, a.w)());
+                (0, l.w)());
         },
         h = (e, t) =>
             (0, r.jsx)(

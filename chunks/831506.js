@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(388685);
 var r,
     i = n(392711),
-    l = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    l = n(442837),
     o = n(570140),
     s = n(314897),
     c = n(699516),
@@ -31,26 +31,26 @@ function g(e, t) {
     let n = h(e, t);
     if (null == n) return;
     let r = m[e];
-    delete r[t], l().isEmpty(r) && delete m[e];
+    delete r[t], a().isEmpty(r) && delete m[e];
     let i = f[n];
     null != i && (i.delete(e), 0 === i.size && delete f[n]);
 }
 function _(e, t, n, r) {
     let i = n.find((e) => null != e.party && e.party.id),
-        l = null != i && null != i.party ? i.party.id : null,
-        a = h(t, e);
-    if (null == l || r === d.Skl.OFFLINE) return null != a && void g(t, e);
-    if (null != a) {
-        if (a === l) return !1;
+        a = null != i && null != i.party ? i.party.id : null,
+        l = h(t, e);
+    if (null == a || r === d.Skl.OFFLINE) return null != l && void g(t, e);
+    if (null != l) {
+        if (l === a) return !1;
         g(t, e);
     }
     !(function (e, t, n) {
         var r;
         let i = m[e];
         if ((null == i && (i = m[e] = {}), (i[t] = n), c.Z.isBlocked(e) || c.Z.isIgnored(e))) return;
-        let l = null != (r = f[n]) ? r : new Set();
-        (f[n] = l), l.add(e);
-    })(t, e, l);
+        let a = null != (r = f[n]) ? r : new Set();
+        (f[n] = a), a.add(e);
+    })(t, e, a);
 }
 function b(e) {
     let { guild: t } = e,
@@ -77,12 +77,12 @@ function E(e) {
     if (!c.Z.isBlocked(t.id) && !c.Z.isIgnored(t.id)) return !1;
     let n = m[t.id];
     if (null == n) return !1;
-    for (let e of l().values(n)) {
+    for (let e of a().values(n)) {
         let n = f[e];
         null != n && n.delete(t.id);
     }
 }
-class v extends (r = a.ZP.Store) {
+class v extends (r = l.ZP.Store) {
     initialize() {
         this.syncWith([u.Z], y), this.waitFor(u.Z, c.Z);
     }
@@ -165,7 +165,7 @@ let N = new v(o.Z, {
         let { relationship: t } = e,
             n = m[t.id];
         if (null == n) return !1;
-        for (let e of l().values(n)) {
+        for (let e of a().values(n)) {
             let n = f[e];
             null != n && n.add(t.id);
         }

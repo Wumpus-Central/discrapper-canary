@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A });
 var r = n(200651),
     i = n(192379),
-    l = n(793030),
-    a = n(442837),
+    a = n(793030),
+    l = n(442837),
     o = n(902704),
     s = n(692547),
     c = n(481060),
@@ -33,7 +33,7 @@ function I() {
                 className: S.headerIcon,
                 color: s.Z.colors.TEXT_LOW_CONTRAST
             }),
-            (0, r.jsx)(l.xv, {
+            (0, r.jsx)(a.xv, {
                 className: S.headerText,
                 variant: 'text-sm/semibold',
                 color: 'text-low-contrast',
@@ -45,7 +45,7 @@ function I() {
 function T(e) {
     let { message: t, snapshot: n, index: d } = e,
         p = i.useMemo(() => new v.r(t, n, d), [t, n, d]),
-        m = (0, a.e7)([g.Z, E.default, y.Z, x.Z, b.Z, u.Z], () => p.getForwardInfo(g.Z, E.default, y.Z, x.Z, b.Z, u.Z).footerInfo, [p], o.Z),
+        m = (0, l.e7)([g.Z, E.default, y.Z, x.Z, b.Z, u.Z], () => p.getForwardInfo(g.Z, E.default, y.Z, x.Z, b.Z, u.Z).footerInfo, [p], o.Z),
         f = i.useCallback(() => {
             (0, N.Z)(t);
         }, [t]);
@@ -62,7 +62,7 @@ function T(e) {
                             alt: ''
                         })
                       : null,
-                  (0, r.jsx)(l.xv, {
+                  (0, r.jsx)(a.xv, {
                       className: S.footerText,
                       variant: 'text-sm/medium',
                       color: 'none',
@@ -77,11 +77,11 @@ function T(e) {
 }
 function P(e) {
     var t;
-    let { message: n, snapshot: l, index: o } = e,
-        s = i.useMemo(() => (0, O.Z)(n, l), [n, l]),
+    let { message: n, snapshot: a, index: o } = e,
+        s = i.useMemo(() => (0, O.Z)(n, a), [n, a]),
         c = h.RS.useSetting(),
         u = h.NA.useSetting(),
-        b = (0, a.e7)([_.Z], () => _.Z.isDeveloper),
+        b = (0, l.e7)([_.Z], () => _.Z.isDeveloper),
         x = (0, d.A)((null != (t = s.editedTimestamp) ? t : s.timestamp).valueOf()),
         { content: y, hasSpoilerEmbeds: E } = (0, m.Z)(s, {
             hideSimpleEmbedContent: c && u,
@@ -93,7 +93,7 @@ function P(e) {
             allowDevLinks: b,
             previewLinkTarget: !0
         }),
-        v = (0, a.e7)([g.Z], () => g.Z.getChannel(n.channel_id)),
+        v = (0, l.e7)([g.Z], () => g.Z.getChannel(n.channel_id)),
         N = h.jU.useSetting();
     return null == v
         ? null
@@ -124,7 +124,7 @@ function P(e) {
                               }),
                               (0, r.jsx)(T, {
                                   message: n,
-                                  snapshot: l,
+                                  snapshot: a,
                                   index: o
                               })
                           ]

@@ -2,8 +2,8 @@ n.d(t, { Z: () => g }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    l = n(692547),
-    a = n(481060),
+    a = n(692547),
+    l = n(481060),
     o = n(706454),
     s = n(594174),
     c = n(626135),
@@ -18,15 +18,15 @@ function g(e) {
         n = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
         g = (0, i.e7)([o.default], () => o.default.locale),
         _ = (0, d.EO)(n);
-    return (0, r.jsx)(a.eee, {
+    return (0, r.jsx)(l.eee, {
         href: u.w,
         target: '_blank',
         tabIndex: -1,
         children: (0, r.jsx)(p.JO, {
-            color: _ ? l.Z.unsafe_rawColors.GREEN_360.css : 'currentColor',
+            color: _ ? a.Z.unsafe_rawColors.GREEN_360.css : 'currentColor',
             className: t,
             onClick: () => c.default.track(m.rMx.HELP_CLICKED, { highlighted: _ }),
-            icon: a.idN,
+            icon: l.idN,
             tooltipPosition: h.has(g) ? 'left' : void 0,
             tooltip: f.NW.string(f.t.cqEoj4)
         })

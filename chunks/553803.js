@@ -1,13 +1,13 @@
-n.d(t, { A: () => l });
+n.d(t, { A: () => a });
 var r = n(200651);
 n(192379);
 var i = n(481060);
-function l(e) {
-    let { message: t, initialAnswerId: l } = e;
+function a(e) {
+    let { message: t, initialAnswerId: a } = e;
     (0, i.ZDy)(async () => {
         let { default: e } = await n.e('74590').then(n.bind(n, 651081));
         return (n) => {
-            var i, a;
+            var i, l;
             return (0, r.jsx)(
                 e,
                 ((i = (function (e) {
@@ -35,13 +35,13 @@ function l(e) {
                     }
                     return e;
                 })({}, n)),
-                (a = a =
+                (l = l =
                     {
                         message: t,
-                        initialAnswerId: l
+                        initialAnswerId: a
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -49,8 +49,8 @@ function l(e) {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(a)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                      })(Object(l)).forEach(function (e) {
+                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                       }),
                 i)
             );

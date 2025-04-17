@@ -1,7 +1,7 @@
 n.d(t, {
     Ae: () => i,
-    I3: () => l,
-    p1: () => a
+    I3: () => a,
+    p1: () => l
 });
 let r = (0, n(818083).B)({
     kind: 'guild',
@@ -39,10 +39,10 @@ function i(e, t, n) {
         n
     );
 }
-function l(e, t, n) {
+function a(e, t, n) {
     return i(e, t, n).enabled;
 }
-function a(e, t) {
+function l(e, t) {
     let { enabled: n, unifiedEditing: r } = i(e, t);
     return !n || !r;
 }

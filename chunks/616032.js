@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(200651),
     i = n(192379),
-    l = n(990547),
-    a = n(91192),
+    a = n(990547),
+    l = n(91192),
     o = n(481060),
     s = n(724757),
     c = n(213609),
@@ -15,8 +15,8 @@ function m(e) {
         g = (0, s.Z)('for-you', h);
     (0, c.Z)(
         {
-            type: l.ImpressionTypes.VIEW,
-            name: l.ImpressionNames.NOTIFICATION_CENTER_LANDING,
+            type: a.ImpressionTypes.VIEW,
+            name: a.ImpressionNames.NOTIFICATION_CENTER_LANDING,
             properties: { empty: 0 === n.length }
         },
         { disableTrack: !t },
@@ -30,14 +30,14 @@ function m(e) {
     return t
         ? 0 === n.length
             ? (0, r.jsx)(u.v, {})
-            : (0, r.jsx)(a.bG, {
+            : (0, r.jsx)(l.bG, {
                   navigator: g,
-                  children: (0, r.jsx)(a.SJ, {
+                  children: (0, r.jsx)(l.SJ, {
                       children: (e) => {
                           var t,
                               i,
-                              { ref: l } = e,
-                              a = (function (e, t) {
+                              { ref: a } = e,
+                              l = (function (e, t) {
                                   if (null == e) return {};
                                   var n,
                                       r,
@@ -46,13 +46,13 @@ function m(e) {
                                           var n,
                                               r,
                                               i = {},
-                                              l = Object.keys(e);
-                                          for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                              a = Object.keys(e);
+                                          for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                           return i;
                                       })(e, t);
                                   if (Object.getOwnPropertySymbols) {
-                                      var l = Object.getOwnPropertySymbols(e);
-                                      for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                      var a = Object.getOwnPropertySymbols(e);
+                                      for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                                   }
                                   return i;
                               })(e, ['ref']);
@@ -87,10 +87,10 @@ function m(e) {
                                       className: p.container,
                                       ref: (e) => {
                                           var t;
-                                          (h.current = e), (l.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
+                                          (h.current = e), (a.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                       }
                                   },
-                                  a
+                                  l
                               )),
                               (i = i =
                                   {

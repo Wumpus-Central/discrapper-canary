@@ -5,8 +5,8 @@ n.d(t, {
     n(953529);
 var r = n(200651),
     i = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(481060),
     s = n(528144),
     c = n(118012),
@@ -18,22 +18,22 @@ var r = n(200651),
     h = n(515230);
 let g = (e) => {
         var t;
-        let { speaker: n, guildId: i, isEmbed: l } = e,
-            a = new m.Z(n.user);
+        let { speaker: n, guildId: i, isEmbed: a } = e,
+            l = new m.Z(n.user);
         return (0, r.jsxs)('div', {
             className: h.speaker,
             children: [
                 (0, r.jsx)(o.qEK, {
-                    src: a.getAvatarURL(i, l ? 16 : 24),
-                    size: l ? o.EFr.SIZE_16 : o.EFr.SIZE_24,
+                    src: l.getAvatarURL(i, a ? 16 : 24),
+                    size: a ? o.EFr.SIZE_16 : o.EFr.SIZE_24,
                     'aria-label': ''.concat(n.nick, '-avatar'),
-                    className: l ? null : h.avatar
+                    className: a ? null : h.avatar
                 }),
                 (0, r.jsx)(c.Z, {
-                    size: l ? c.Z.Sizes.SIZE_12 : c.Z.Sizes.SIZE_14,
+                    size: a ? c.Z.Sizes.SIZE_12 : c.Z.Sizes.SIZE_14,
                     color: c.Z.Colors.HEADER_SECONDARY,
                     className: h.username,
-                    children: null != (t = n.nick) ? t : a.username
+                    children: null != (t = n.nick) ? t : l.username
                 })
             ]
         });
@@ -42,7 +42,7 @@ let g = (e) => {
         let { guild: t, onlineCount: n } = e;
         if (null == t) return null;
         let i = new p.ZP(t),
-            { name: l, description: a } = i;
+            { name: a, description: l } = i;
         return (0, r.jsxs)('div', {
             children: [
                 (0, r.jsx)(s.Z, {
@@ -69,7 +69,7 @@ let g = (e) => {
                             children: [
                                 (0, r.jsx)(o.X6q, {
                                     variant: 'heading-sm/semibold',
-                                    children: l
+                                    children: a
                                 }),
                                 (0, r.jsxs)('div', {
                                     className: h.speaker,
@@ -87,21 +87,21 @@ let g = (e) => {
                         })
                     ]
                 }),
-                null != a &&
-                    '' !== a &&
+                null != l &&
+                    '' !== l &&
                     (0, r.jsx)(o.Text, {
                         color: 'header-secondary',
                         className: h.alignStart,
                         variant: 'text-sm/normal',
-                        children: a
+                        children: l
                     })
             ]
         });
     },
     b = (e) => {
         var t;
-        let { stageInstance: n, guild: l, isCard: m = !1, isEmbed: _ = !1, onClick: b } = e,
-            x = i.useMemo(() => (null == l ? null : l instanceof p.ZP ? l : new p.ZP(l)), [l]);
+        let { stageInstance: n, guild: a, isCard: m = !1, isEmbed: _ = !1, onClick: b } = e,
+            x = i.useMemo(() => (null == a ? null : a instanceof p.ZP ? a : new p.ZP(a)), [a]);
         if (null == n || null == x) return null;
         let { topic: y, speaker_count: E, participant_count: v } = n,
             N = null != (t = n.members) ? t : [],
@@ -126,7 +126,7 @@ let g = (e) => {
                                     }),
                                     (0, r.jsx)(o.X6q, {
                                         variant: 'eyebrow',
-                                        className: a()(h.__invalid_label, h.live),
+                                        className: l()(h.__invalid_label, h.live),
                                         children: f.NW.string(f.t['X2K3//'])
                                     })
                                 ]
@@ -142,7 +142,7 @@ let g = (e) => {
                                         className: h.listeners
                                     }),
                                     (0, r.jsx)(o.X6q, {
-                                        className: a()(h.__invalid_label, h.listeners),
+                                        className: l()(h.__invalid_label, h.listeners),
                                         variant: 'heading-sm/semibold',
                                         children: v
                                     })
@@ -152,7 +152,7 @@ let g = (e) => {
                     }),
                     _ &&
                         (0, r.jsxs)('div', {
-                            className: a()(h.guild, { [h.embed]: _ }),
+                            className: l()(h.guild, { [h.embed]: _ }),
                             children: [
                                 (0, r.jsx)(u.ZP, {
                                     mask: u.ZP.Masks.SQUIRCLE,
@@ -174,11 +174,11 @@ let g = (e) => {
                         }),
                     (0, r.jsx)(s.Z, {
                         size: m || _ ? s.Z.Sizes.SIZE_16 : s.Z.Sizes.SIZE_20,
-                        className: a()(h.header, { [h.embed]: _ }),
+                        className: l()(h.header, { [h.embed]: _ }),
                         children: y
                     }),
                     (0, r.jsxs)('div', {
-                        className: a()(h.members, { [h.embed]: _ }),
+                        className: l()(h.members, { [h.embed]: _ }),
                         children: [
                             O.length > 0 &&
                                 (0, r.jsxs)('div', {
@@ -200,7 +200,7 @@ let g = (e) => {
                                                   className: h.speaker,
                                                   children: [
                                                       (0, r.jsx)('div', {
-                                                          className: a()(h.icon, { [h.embed]: _ }),
+                                                          className: l()(h.icon, { [h.embed]: _ }),
                                                           children: (0, r.jsx)(o.S6n, {
                                                               size: 'custom',
                                                               color: 'currentColor',

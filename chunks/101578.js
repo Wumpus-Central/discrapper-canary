@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    l = n(654030),
-    a = n(906732),
+    a = n(654030),
+    l = n(906732),
     o = n(973616),
     s = n(789407),
     c = n(314897),
@@ -13,7 +13,7 @@ var i = n(442837),
     m = n(125865);
 let f = (e) => {
     let { channel: t, message: n, hideParty: f } = e,
-        { analyticsLocations: h } = (0, a.ZP)(),
+        { analyticsLocations: h } = (0, l.ZP)(),
         g = (0, i.e7)([c.default], () => c.default.getId()),
         _ = (0, i.e7)(
             [u.Z],
@@ -27,7 +27,7 @@ let f = (e) => {
             },
             [n, t, g]
         );
-    return (0, r.jsx)(l.Z, {
+    return (0, r.jsx)(a.Z, {
         className: m.container,
         activity: _,
         activityActionType: null != n.activity ? n.activity.type : null,

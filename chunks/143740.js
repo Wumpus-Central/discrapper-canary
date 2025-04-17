@@ -1,8 +1,8 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => a });
 var r = n(200651);
 n(192379);
 var i = n(481060);
-function l(e, t) {
+function a(e, t) {
     (0, i.ZDy)(async () => {
         let { default: i } = await n.e('6310').then(n.bind(n, 706923));
         return (n) =>

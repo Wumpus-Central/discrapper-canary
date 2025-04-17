@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(512722),
-    l = n.n(i),
-    a = n(399606),
+    a = n.n(i),
+    l = n(399606),
     o = n(481060),
     s = n(671533),
     c = n(240864),
@@ -14,7 +14,7 @@ var i = n(512722),
 function f(e) {
     var t, n, i, f;
     let { guildId: h, productId: g } = e,
-        _ = (0, a.e7)([c.Z], () => c.Z.getGuildProduct(g)),
+        _ = (0, l.e7)([c.Z], () => c.Z.getGuildProduct(g)),
         b = (null != (f = null == _ || null == (t = _.attachments) ? void 0 : t.length) ? f : 0) > 1,
         x = null == _ || null == (i = _.attachments) || null == (n = i[0]) ? void 0 : n.id;
     return b
@@ -39,7 +39,7 @@ function f(e) {
                   })
               ]
           })
-        : (l()(null != x, 'No attachment'),
+        : (a()(null != x, 'No attachment'),
           (0, r.jsxs)(d.Z, {
               guildId: h,
               productId: g,

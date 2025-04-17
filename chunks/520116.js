@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(539854);
 var r = n(200651),
     i = n(192379),
-    l = n(913527),
-    a = n.n(l),
+    a = n(913527),
+    l = n.n(a),
     o = n(91192),
     s = n(442837),
     c = n(481060),
@@ -27,17 +27,17 @@ let C = {
     right: -12
 };
 function S(e) {
-    var t, n, l;
-    let { channel: a, message: s, compact: u, isGroupStart: d, treatSpam: p, gotoChannel: m } = e,
+    var t, n, a;
+    let { channel: l, message: s, compact: u, isGroupStart: d, treatSpam: p, gotoChannel: m } = e,
         f = (0, o.JA)(null != (t = s.id) ? t : ''),
         g = i.useCallback(
             (e) => {
                 if ('ArrowLeft' === e.key) {
                     var t;
-                    null == (t = document.querySelector('[data-recents-channel="'.concat(a.id, '"]'))) || t.focus();
+                    null == (t = document.querySelector('[data-recents-channel="'.concat(l.id, '"]'))) || t.focus();
                 }
             },
-            [a.id]
+            [l.id]
         );
     return (0, r.jsx)(c.tEY, {
         offset: C,
@@ -74,7 +74,7 @@ function S(e) {
                 },
                 f
             )),
-            (l = l =
+            (a = a =
                 {
                     children: [
                         (0, r.jsx)(E.Z, {
@@ -84,7 +84,7 @@ function S(e) {
                         (0, r.jsx)(h.Z, {
                             id: s.id,
                             message: s,
-                            channel: a,
+                            channel: l,
                             className: j.message,
                             compact: u,
                             animateAvatar: !1,
@@ -95,7 +95,7 @@ function S(e) {
                     ]
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -103,8 +103,8 @@ function S(e) {
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(l)).forEach(function (e) {
-                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                  })(Object(a)).forEach(function (e) {
+                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
                   }),
             n),
             s.id
@@ -113,13 +113,13 @@ function S(e) {
 }
 function I(e) {
     var t, n;
-    let { channel: i, channelRecord: l, gotoChannel: o } = e,
+    let { channel: i, channelRecord: a, gotoChannel: o } = e,
         { enabled: h } = u.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
         E = g.jU.useSetting(),
-        C = (0, s.e7)([b.Z], () => b.Z.can(N.Plq.CREATE_INSTANT_INVITE, l)),
-        I = (0, m.P1)(l),
+        C = (0, s.e7)([b.Z], () => b.Z.can(N.Plq.CREATE_INSTANT_INVITE, a)),
+        I = (0, m.P1)(a),
         T = !1,
-        P = 0 === i.messages.length || a()(i.messages[0].timestamp).isSame(a()(), 'day'),
+        P = 0 === i.messages.length || l()(i.messages[0].timestamp).isSame(l()(), 'day'),
         A = null != (n = null == (t = x.default.getUser(_.default.getId())) ? void 0 : t.hasFlag(N.xW$.SPAMMER)) && n,
         w = [];
     if (!i.collapsed) {
@@ -140,16 +140,16 @@ function I(e) {
                             t
                         )
                     ),
-                        (e = a()(n.timestamp));
+                        (e = l()(n.timestamp));
                 }
-                let i = null == t || (0, p.Z)(l, t, n);
+                let i = null == t || (0, p.Z)(a, t, n);
                 (t = n),
                     (T = T || (0, m.DQ)(n)),
                     w.push(
                         (0, r.jsx)(
                             S,
                             {
-                                channel: l,
+                                channel: a,
                                 message: n,
                                 compact: E,
                                 isGroupStart: i,
