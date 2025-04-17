@@ -11,7 +11,7 @@ var r = n(200651),
     h = n(388032),
     p = n(418952);
 let f = i.forwardRef(function (e, t) {
-    let { body: n, header: l, artClassName: f, headerClassName: g, contentClassName: m, tryItText: b, dismissText: y, onTryFeature: _, onClose: v, className: O, inlineArt: C = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: j = !1, showGIFTag: E = !1, dismissibleContent: x, position: N = 'top', align: I = 'center', art: P, isPremiumEarlyAccess: w = !1, maxWidth: Z = 280, hideDismissButton: T = !1, pointerClassName: A, dismissIconClassName: R, dismissIcon: D, onDismissIconClick: L, tryItButtonColor: k } = e,
+    let { body: n, header: l, artClassName: f, headerClassName: g, contentClassName: m, tryItText: b, dismissText: _, onTryFeature: y, onClose: v, className: O, inlineArt: C = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: j = !1, showGIFTag: E = !1, dismissibleContent: x, position: N = 'top', align: I = 'center', art: P, isPremiumEarlyAccess: w = !1, maxWidth: Z = 280, hideDismissButton: T = !1, pointerClassName: A, dismissIconClassName: R, dismissIcon: D, onDismissIconClick: L, tryItButtonColor: k } = e,
         M = j ? s.zxk.Sizes.LARGE : s.zxk.Sizes.MAX,
         [U, G] = i.useState(!1),
         { ref: B, width: W } = (0, a.ZP)();
@@ -97,14 +97,14 @@ let f = i.forwardRef(function (e, t) {
                         ref: B,
                         className: U || !j ? p.buttonContainerVertical : p.buttonContainerHorizontal,
                         children:
-                            null != _
+                            null != y
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(s.zxk, {
                                               className: p.button,
                                               size: M,
                                               onClick: (e) => {
-                                                  null == v || v(e), _(e), V(d.L.PRIMARY);
+                                                  null == v || v(e), y(e), V(d.L.PRIMARY);
                                               },
                                               color: null != k ? k : S || w ? s.zxk.Colors.BRAND_INVERTED : s.zxk.Colors.WHITE,
                                               children: null != b ? b : h.NW.string(h.t.IHf1RE)
@@ -118,7 +118,7 @@ let f = i.forwardRef(function (e, t) {
                                                   },
                                                   color: S || w ? s.zxk.Colors.WHITE : s.zxk.Colors.BRAND,
                                                   look: S || w ? s.zxk.Looks.LINK : s.zxk.Looks.FILLED,
-                                                  children: null != y ? y : h.NW.string(h.t.om7Ovr)
+                                                  children: null != _ ? _ : h.NW.string(h.t.om7Ovr)
                                               })
                                       ]
                                   })

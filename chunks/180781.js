@@ -1,61 +1,61 @@
-n.d(e, { Z: () => x });
+n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
-var o = n(442837),
-    a = n(481060),
+var a = n(442837),
+    o = n(481060),
     r = n(906732),
     l = n(48217),
-    s = n(26323),
-    c = n(430824),
+    c = n(26323),
+    s = n(430824),
     d = n(914010),
     u = n(709586),
-    _ = n(981631),
-    g = n(30513),
-    h = n(388032),
-    m = n(273233);
-function x(t) {
-    let { analyticsSection: e, analyticsPage: n, isGIF: x, banner: N } = t,
-        f = (0, o.e7)([d.Z], () => d.Z.getGuildId()),
-        p = (0, o.e7)([c.Z], () => c.Z.getGuild(f)),
-        { analyticsLocations: b } = (0, r.ZP)();
-    return null == p || p.hasFeature(_.oNc.ANIMATED_BANNER) || (!x && p.hasFeature(_.oNc.BANNER))
+    f = n(981631),
+    _ = n(30513),
+    g = n(388032),
+    N = n(273233);
+function p(e) {
+    let { analyticsSection: t, analyticsPage: n, isGIF: p, banner: m } = e,
+        x = (0, a.e7)([d.Z], () => d.Z.getGuildId()),
+        A = (0, a.e7)([s.Z], () => s.Z.getGuild(x)),
+        { analyticsLocations: h } = (0, r.ZP)();
+    return null == A || A.hasFeature(f.oNc.ANIMATED_BANNER) || (!p && A.hasFeature(f.oNc.BANNER))
         ? null
         : (0, i.jsxs)('div', {
-              className: m.container,
+              className: N.container,
               children: [
-                  (0, i.jsx)(u.Z, { className: m.guildBoostingIcon }),
-                  (0, i.jsx)(a.Text, {
+                  (0, i.jsx)(u.Z, { className: N.guildBoostingIcon }),
+                  (0, i.jsx)(o.Text, {
                       color: 'header-primary',
                       variant: 'text-sm/semibold',
-                      children: h.NW.string(h.t['56M7xc'])
+                      children: g.NW.string(g.t['56M7xc'])
                   }),
-                  (0, i.jsx)(a.zxk, {
-                      look: a.zxk.Looks.LINK,
-                      color: a.zxk.Colors.LINK,
-                      className: m.subscribeButton,
+                  (0, i.jsx)(o.zxk, {
+                      look: o.zxk.Looks.LINK,
+                      color: o.zxk.Colors.LINK,
+                      className: N.subscribeButton,
                       onClick: () => {
-                          if (null == p) return;
-                          let t = {
-                              section: e,
+                          if (null == A) return;
+                          let e = {
+                              section: t,
                               page: n,
-                              object: _.qAy.UPSELL_HEADER
+                              object: f.qAy.UPSELL_HEADER
                           };
-                          null != N
+                          null != m
                               ? (0, l.c)({
-                                    analyticsLocations: b,
-                                    analyticsLocation: t,
-                                    guild: p,
-                                    isGIF: x,
-                                    banner: N
+                                    analyticsLocations: h,
+                                    analyticsLocation: e,
+                                    guild: A,
+                                    isGIF: p,
+                                    banner: m
                                 })
-                              : (0, s.Z)({
-                                    analyticsLocations: b,
-                                    analyticsSourceLocation: t,
-                                    guild: p,
-                                    perks: x ? (0, g.zC)() : (0, g.XO)()
+                              : (0, c.Z)({
+                                    analyticsLocations: h,
+                                    analyticsSourceLocation: e,
+                                    guild: A,
+                                    perks: p ? (0, _.zC)() : (0, _.XO)()
                                 });
                       },
-                      children: h.NW.string(h.t.WUHdZW)
+                      children: g.NW.string(g.t.WUHdZW)
                   })
               ]
           });

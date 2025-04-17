@@ -33,8 +33,8 @@ var r = n(200651),
     A = n(924540),
     Z = n(474486),
     x = n(119850),
-    w = n(938736),
-    L = n(227140),
+    L = n(938736),
+    w = n(227140),
     R = n(474936),
     D = n(981631),
     k = n(921944),
@@ -92,7 +92,7 @@ let G = 'NitroTabButton',
             er = (0, j.Vi)(),
             ei = (0, T.$_)(),
             el = (0, x.V)(),
-            ea = (0, w.Kn)(G),
+            ea = (0, L.Kn)(G),
             { fractionalState: eo, startsAt: es, endsAt: ec } = (0, d.Z)({ forceFetch: !0 }),
             [eu, ed] = (0, h.bf)(eo !== R.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
                 showAfterTimestamp: es.valueOf(),
@@ -124,26 +124,26 @@ let G = 'NitroTabButton',
             !0 === eg
                 ? (E = em
                       ? (0, r.jsx)(Z.Du, {})
-                      : (0, r.jsx)(L.Z, {
+                      : (0, r.jsx)(w.Z, {
                             copy: M.NW.string(M.t.OS9KPj),
                             showStars: !1
                         }))
                 : er
                   ? ((E = (0, r.jsx)(S.Z, {})), (V = 0))
                   : null != eh && eh === o.z.REVERSE_TRIAL_NITRO_TAB_BADGE_V2
-                    ? ((E = (0, r.jsx)(L.Z, {
+                    ? ((E = (0, r.jsx)(w.Z, {
                           copy: M.NW.string(M.t.HwUCnp),
                           showStars: !1
                       })),
                       (V = 4))
                     : null != ei
-                      ? ((E = (0, r.jsx)(L.Z, {
+                      ? ((E = (0, r.jsx)(w.Z, {
                             copy: ei,
                             showStars: !1
                         })),
                         (V = 1))
                       : null != el
-                        ? ((E = (0, r.jsx)(L.Z, {
+                        ? ((E = (0, r.jsx)(w.Z, {
                               copy: el,
                               showStars: !1
                           })),

@@ -3,8 +3,8 @@ var r = n(200651);
 n(192379);
 var i = n(153867),
     l = n(468026),
-    a = n(394059),
-    o = n(388032);
+    o = n(394059),
+    a = n(388032);
 function u(e) {
     var { type: t, onConfirm: n } = e,
         u = (function (e, t) {
@@ -26,8 +26,8 @@ function u(e) {
             }
             return i;
         })(e, ['type', 'onConfirm']);
-    let d = t === a.K.STREAM ? o.NW.string(o.t['/lFMWl']) : o.NW.string(o.t.xzxhZW),
-        s = t === a.K.STREAM ? o.NW.string(o.t.xaOX7e) : o.NW.string(o.t.oU1p9P);
+    let c = t === o.K.STREAM ? a.NW.string(a.t['/lFMWl']) : a.NW.string(a.t.xzxhZW),
+        s = t === o.K.STREAM ? a.NW.string(a.t.xaOX7e) : a.NW.string(a.t.oU1p9P);
     return (0, r.jsx)(
         l.default,
         (function (e) {
@@ -56,10 +56,10 @@ function u(e) {
             return e;
         })(
             {
-                confirmText: o.NW.string(o.t['cY+Ooa']),
-                secondaryConfirmText: o.NW.string(o.t['JdIQ/f']),
-                title: d,
-                cancelText: o.NW.string(o.t['ETE/oK']),
+                confirmText: a.NW.string(a.t['cY+Ooa']),
+                secondaryConfirmText: a.NW.string(a.t['JdIQ/f']),
+                title: c,
+                cancelText: a.NW.string(a.t['ETE/oK']),
                 onConfirm: n,
                 onConfirmSecondary: () => {
                     i.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), n();

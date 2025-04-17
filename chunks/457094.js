@@ -29,8 +29,8 @@ var r = n(200651),
     A = n(954709),
     Z = n(644679),
     x = n(314533),
-    w = n(9029),
-    L = n(935347),
+    L = n(9029),
+    w = n(935347),
     R = n(560067),
     D = n(823169),
     k = n(845767),
@@ -83,8 +83,8 @@ var r = n(200651),
     eA = n(171368),
     eZ = n(429974),
     ex = n(332754),
-    ew = n(507468),
-    eL = n(722589),
+    eL = n(507468),
+    ew = n(722589),
     eR = n(282506),
     eD = n(444961),
     ek = n(314897),
@@ -159,7 +159,7 @@ let e4 = !1;
         }));
 let e6 = (0, m.l)((e) => {
         let { location: t } = e,
-            n = (0, eL.default)(t.pathname);
+            n = (0, ew.default)(t.pathname);
         return (
             null != n &&
                 (0, Y.h)(() =>
@@ -461,7 +461,7 @@ class ta extends i.PureComponent {
             eC.Z.initialize(),
             eS.Z.initialize(),
             eZ.Z.initialize(),
-            ew.Z.init(),
+            eL.Z.init(),
             U.Z.initialize(),
             E.Z.initialize(),
             eN.Z.initialize(),
@@ -470,7 +470,7 @@ class ta extends i.PureComponent {
             es.Z.initialize(),
             eu.Z.initialize(),
             x.Z.initialize(),
-            w.Z.initialize(),
+            L.Z.initialize(),
             et.Z.init({
                 hasModalOpen: s.$sL,
                 openModal: () =>
@@ -491,7 +491,7 @@ class ta extends i.PureComponent {
             (this.historyUnlisten = eb.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        eO.Z.terminate(), eD.Z.terminate(), ef.Z.terminate(), ep.Z.terminate(), P.Z.terminate(), y.ZP.terminate(), eR.Z.terminate(), N.Z.terminate(), eg.Z.terminate(), ed.Z.terminate(), eZ.Z.terminate(), O.Z.terminate(), U.Z.terminate(), er.Z.terminate(), E.Z.terminate(), em.Z.terminate(), eN.Z.terminate(), ev.Z.terminate(), ec.Z.terminate(), es.Z.terminate(), eu.Z.terminate(), x.Z.terminate(), w.Z.terminate(), eh.Z.terminate(), D.Z.terminate(), W.Z.terminate(), A.Z.terminate(), Z.Z.terminate(), v.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        eO.Z.terminate(), eD.Z.terminate(), ef.Z.terminate(), ep.Z.terminate(), P.Z.terminate(), y.ZP.terminate(), eR.Z.terminate(), N.Z.terminate(), eg.Z.terminate(), ed.Z.terminate(), eZ.Z.terminate(), O.Z.terminate(), U.Z.terminate(), er.Z.terminate(), E.Z.terminate(), em.Z.terminate(), eN.Z.terminate(), ev.Z.terminate(), ec.Z.terminate(), es.Z.terminate(), eu.Z.terminate(), x.Z.terminate(), L.Z.terminate(), eh.Z.terminate(), D.Z.terminate(), W.Z.terminate(), A.Z.terminate(), Z.Z.terminate(), v.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
@@ -631,7 +631,7 @@ class ta extends i.PureComponent {
                         (0, r.jsx)(a.l_, { to: '/' })
                     ]
                 }),
-                (0, r.jsx)(L.Z, {})
+                (0, r.jsx)(w.Z, {})
             ]
         });
     }

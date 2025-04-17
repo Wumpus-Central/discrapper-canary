@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(692547),
     m = n(481060),
     b = n(925549),
-    y = n(493773),
-    _ = n(209613),
+    _ = n(493773),
+    y = n(209613),
     v = n(100527),
     O = n(906732),
     C = n(358221),
@@ -250,8 +250,8 @@ function eh(e) {
         }),
         p = (0, h.e7)([x.Z], () => x.Z.lurkingGuildIds()),
         b = i.useMemo(() => (n ? [] : p), [p, n]),
-        _ = (0, h.Wu)([R.Z, A.ZP], () => k.default.keys(R.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
-        G = b.concat(_),
+        y = (0, h.Wu)([R.Z, A.ZP], () => k.default.keys(R.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
+        G = b.concat(y),
         el = (0, h.e7)([C.Z], () => C.Z.isFullscreenInContext()),
         ec = (0, h.e7)([R.Z], () => R.Z.getGeoRestrictedGuilds()),
         [eh, ep] = i.useState(!1),
@@ -259,8 +259,8 @@ function eh(e) {
         eg = i.useCallback(() => ep(!1), []),
         em = i.useRef(!1),
         [eb] = i.useState(() => new f.V7()),
-        ey = i.useRef(null),
         e_ = i.useRef(null),
+        ey = i.useRef(null),
         ev = (0, u.OP)(),
         { ref: eO } = ev,
         eC = ea(ev, ['ref']),
@@ -277,7 +277,7 @@ function eh(e) {
                     eN,
                     () => {
                         var e, t;
-                        null == (e = ey.current) || e.calculateState(), null == (t = e_.current) || t.calculateState();
+                        null == (e = e_.current) || e.calculateState(), null == (t = ey.current) || t.calculateState();
                     },
                     eu(eI, a, eP)
                 ),
@@ -296,7 +296,7 @@ function eh(e) {
         { pathname: eT } = (0, c.TH)(),
         eA = eT.startsWith(en.Z5c.GUILD_DISCOVERY) || eT.startsWith(en.Z5c.GLOBAL_DISCOVERY),
         eR = eT.startsWith(en.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
-    (0, y.Ng)(() => {
+    (0, _.Ng)(() => {
         if (!em.current && 0 !== d.size) {
             if (eA) ew.scrollToGuild(null, !1);
             else {
@@ -424,7 +424,7 @@ function eh(e) {
                             className: ei.tree,
                             children: [
                                 (0, r.jsx)(B.Z, {
-                                    ref: ey,
+                                    ref: e_,
                                     isVisible: ew.isItemVisible,
                                     onJumpTo: ew.handleJumpToGuild,
                                     className: ei.unreadMentionsIndicatorTop,
@@ -483,7 +483,7 @@ function eh(e) {
                                 }),
                                 (0, r.jsx)(B.Z, {
                                     reverse: !0,
-                                    ref: e_,
+                                    ref: ey,
                                     isVisible: ew.isItemVisible,
                                     onJumpTo: ew.handleJumpToGuild,
                                     className: o()(ei.unreadMentionsIndicatorBottom, { [ei.unreadMentionsFixedFooter]: !n }),
@@ -505,8 +505,8 @@ function ep(e) {
         }),
         p = (0, h.e7)([x.Z], () => x.Z.lurkingGuildIds()),
         b = i.useMemo(() => (n ? [] : p), [p, n]),
-        _ = (0, h.Wu)([R.Z, A.ZP], () => k.default.keys(R.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
-        G = b.concat(_),
+        y = (0, h.Wu)([R.Z, A.ZP], () => k.default.keys(R.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
+        G = b.concat(y),
         el = (0, h.e7)([C.Z], () => C.Z.isFullscreenInContext()),
         ec = (0, h.e7)([R.Z], () => R.Z.getGeoRestrictedGuilds()),
         [eh, ep] = i.useState(!1),
@@ -514,8 +514,8 @@ function ep(e) {
         eg = i.useCallback(() => ep(!1), []),
         em = i.useRef(!1),
         [eb] = i.useState(() => new f.V7()),
-        ey = i.useRef(null),
         e_ = i.useRef(null),
+        ey = i.useRef(null),
         ev = (0, u.OP)(),
         { ref: eO } = ev,
         eC = ea(ev, ['ref']),
@@ -532,7 +532,7 @@ function ep(e) {
                     eN,
                     () => {
                         var e, t;
-                        null == (e = ey.current) || e.calculateState(), null == (t = e_.current) || t.calculateState();
+                        null == (e = e_.current) || e.calculateState(), null == (t = ey.current) || t.calculateState();
                     },
                     eu(eI, a, eP)
                 ),
@@ -551,7 +551,7 @@ function ep(e) {
         { pathname: eT } = (0, c.TH)(),
         eA = eT.startsWith(en.Z5c.GUILD_DISCOVERY) || eT.startsWith(en.Z5c.GLOBAL_DISCOVERY),
         eR = eT.startsWith(en.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
-    (0, y.Ng)(() => {
+    (0, _.Ng)(() => {
         if (!em.current && 0 !== d.size) {
             if (eA) ew.scrollToGuild(null, !1);
             else {
@@ -689,7 +689,7 @@ function ep(e) {
                                             className: ei.bottomSection,
                                             children: [
                                                 (0, r.jsx)(B.Z, {
-                                                    ref: ey,
+                                                    ref: e_,
                                                     isVisible: ew.isItemVisible,
                                                     onJumpTo: ew.handleJumpToGuild,
                                                     className: ei.unreadMentionsIndicatorTop,
@@ -738,7 +738,7 @@ function ep(e) {
                                 }),
                                 (0, r.jsx)(B.Z, {
                                     reverse: !0,
-                                    ref: e_,
+                                    ref: ey,
                                     isVisible: ew.isItemVisible,
                                     onJumpTo: ew.handleJumpToGuild,
                                     className: o()(ei.unreadMentionsIndicatorBottom, { [ei.unreadMentionsFixedFooter]: !n }),
@@ -753,7 +753,7 @@ function ep(e) {
 }
 let ef = i.memo(
     function (e) {
-        let t = (0, _.Z)('guildsnav'),
+        let t = (0, y.Z)('guildsnav'),
             { pinnedSectionEnabled: n } = (0, G.U)('GuildsBar');
         return (0, r.jsx)(u.bG, {
             navigator: t,

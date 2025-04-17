@@ -15,8 +15,8 @@ var i = n(392711),
     g = n(431),
     m = n(626135),
     b = n(74538),
-    y = n(557457),
-    _ = n(970645),
+    _ = n(557457),
+    y = n(970645),
     v = n(30684),
     O = n(514701),
     C = n(6242),
@@ -142,7 +142,7 @@ class L extends a.Z {
             }),
             A(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = f.default.getCurrentUser();
-                null != e && e.verified && !(0, b.I5)(e) && v.Z.shouldFetchCheckoutRecovery() && (await (0, _.o)());
+                null != e && e.verified && !(0, b.I5)(e) && v.Z.shouldFetchCheckoutRecovery() && (await (0, y.o)());
             }),
             A(this, '_maybeFetchUserAffinities', () => {
                 let { enabled: e } = x.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
@@ -186,7 +186,7 @@ class L extends a.Z {
                     let d = T.NW.formatToPlainString(T.t.AbyeZG, {
                         nickname: l.userNick,
                         resolution: (0, Z.o6)(l.maxResolution.height),
-                        fps: (0, y.bp)(l.maxFrameRate)
+                        fps: (0, _.bp)(l.maxFrameRate)
                     });
                     s.Z.sendNitroSystemMessage(e, d),
                         m.default.track(P.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {

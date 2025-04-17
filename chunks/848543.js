@@ -91,10 +91,10 @@ function Z(e) {
         })(e, ['channel']);
     let Z = i.useRef(null),
         x = (0, m.Q3)('SoundBoardRTCPanelButton'),
-        { coloredIconsEnabled: w } = (0, _.Z)({ location: 'ConnectedRTCConnection' }),
-        { mute: L, suppress: R } = (0, E.Z)(t),
+        { coloredIconsEnabled: L } = (0, _.Z)({ location: 'ConnectedRTCConnection' }),
+        { mute: w, suppress: R } = (0, E.Z)(t),
         D = (0, o.e7)([O.Z], () => O.Z.isDeaf()),
-        k = L || R || D,
+        k = w || R || D,
         [M, U] = i.useState(!1),
         G = t.getGuildId(),
         W = (0, y.sR)({ isSoundboardButtonDisabled: k }),
@@ -156,8 +156,8 @@ function Z(e) {
                                 j(
                                     A(j({}, e, t), {
                                         className: a()(P.button, P.buttonColor, {
-                                            [P.buttonActive]: M && !w,
-                                            [P.greyButtonActive]: M && w,
+                                            [P.buttonActive]: M && !L,
+                                            [P.greyButtonActive]: M && L,
                                             [P.disabled]: k
                                         }),
                                         wrapperClassName: P.button,
@@ -185,7 +185,7 @@ function Z(e) {
                                     children: (0, r.jsx)(Y, {
                                         className: P.buttonIcon,
                                         size: 'sm',
-                                        color: w ? 'currentColor' : M ? 'white' : u.TVs.colors.INTERACTIVE_ACTIVE
+                                        color: L ? 'currentColor' : M ? 'white' : u.TVs.colors.INTERACTIVE_ACTIVE
                                     })
                                 }
                             )
@@ -204,7 +204,7 @@ function Z(e) {
             value: H,
             children: (0, r.jsx)(u.ua7, {
                 targetElementRef: Z,
-                text: L ? T.NW.string(T.t['Ox4/zc']) : R ? T.NW.string(T.t['+YBKYG']) : D ? T.NW.string(T.t.X1lQlp) : T.NW.string(T.t['6EJvHh']),
+                text: w ? T.NW.string(T.t['Ox4/zc']) : R ? T.NW.string(T.t['+YBKYG']) : D ? T.NW.string(T.t.X1lQlp) : T.NW.string(T.t['6EJvHh']),
                 children: (e) => X(e)
             })
         })

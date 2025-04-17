@@ -15,8 +15,8 @@ var i = n(442837),
     g = n(979651),
     m = n(968358),
     b = n(790901),
-    y = n(714794),
-    _ = n(355363),
+    _ = n(714794),
+    y = n(355363),
     v = n(687352),
     O = n(876548),
     C = n(25601),
@@ -33,7 +33,7 @@ function N(e) {
         G = (0, i.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, n)),
         B = (0, i.e7)([g.Z], () => g.Z.hasVideo(n.id)),
         W = (0, u.PK)(n.id) && n.isGuildStageVoice(),
-        V = (0, _.ZP)({
+        V = (0, y.ZP)({
             channel: n,
             locked: G,
             video: B || W,
@@ -45,7 +45,7 @@ function N(e) {
             var e, t;
             return null != (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.hasFeature(S.oNc.COMMUNITY)) && t;
         });
-    if ((0, y.Z)(k))
+    if ((0, _.Z)(k))
         return (0, r.jsx)(C.Z, {
             mentionsCount: k,
             isMentionLowImportance: M

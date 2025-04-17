@@ -38,7 +38,7 @@ function b(e) {
     }
     return e;
 }
-function y(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,20 +56,20 @@ function y(e, t) {
         e
     );
 }
-function _(e) {
+function y(e) {
     let { target: t } = e,
         s = (0, l.Ie)('fakedoor'),
         p = i.useCallback(() => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('22862'), n.e('20404')]).then(n.bind(n, 646202));
-                return (n) => (0, r.jsx)(e, y(b({}, n), { target: t }));
+                return (n) => (0, r.jsx)(e, _(b({}, n), { target: t }));
             });
         }, [t]),
-        _ = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 (0, a.jW)(e, async () => {
                     let { default: e } = await n.e('39612').then(n.bind(n, 761624));
-                    return (n) => (0, r.jsx)(e, y(b({}, n), { signupTarget: t }));
+                    return (n) => (0, r.jsx)(e, _(b({}, n), { signupTarget: t }));
                 });
             },
             [t]
@@ -110,9 +110,9 @@ function _(e) {
                             }),
                             children: (0, r.jsx)(
                                 o.LYs,
-                                y(b({}, s), {
+                                _(b({}, s), {
                                     onClick: p,
-                                    onContextMenu: _,
+                                    onContextMenu: y,
                                     children: (0, r.jsx)(o.Dkj, { color: u.Z.TEXT_NORMAL })
                                 })
                             )
@@ -132,5 +132,5 @@ function _(e) {
 }
 function v() {
     let e = (0, s.e7)([p.Z], () => p.Z.getActiveUserSignUp());
-    return null == e ? null : (0, r.jsx)(_, { target: e });
+    return null == e ? null : (0, r.jsx)(y, { target: e });
 }

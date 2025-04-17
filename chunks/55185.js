@@ -18,8 +18,8 @@ var r,
     g = n(885110),
     m = n(63063),
     b = n(981631),
-    y = n(676654),
-    _ = n(388032),
+    _ = n(676654),
+    y = n(388032),
     v = n(22275),
     O = n(204794);
 async function C(e) {
@@ -43,7 +43,7 @@ function S(e) {
                     (0, i.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-primary',
-                        children: _.NW.string(_.t.KY0ilp)
+                        children: y.NW.string(y.t.KY0ilp)
                     }),
                     n &&
                         (0, i.jsxs)('div', {
@@ -56,7 +56,7 @@ function S(e) {
                                 (0, i.jsx)(c.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-secondary',
-                                    children: r === c.Skl.INVISIBLE ? _.NW.string(y.Z.a3AofX) : _.NW.string(_.t.WbGtnJ)
+                                    children: r === c.Skl.INVISIBLE ? y.NW.string(_.Z.a3AofX) : y.NW.string(y.t.WbGtnJ)
                                 })
                             ]
                         })
@@ -89,7 +89,7 @@ function j(e) {
                                 children: [
                                     (0, i.jsx)(c.zxk, {
                                         className: v.closeButton,
-                                        'aria-label': _.NW.string(_.t.cpT0Cg),
+                                        'aria-label': y.NW.string(y.t.cpT0Cg),
                                         look: c.zxk.Looks.BLANK,
                                         size: c.zxk.Sizes.NONE,
                                         onClick: n,
@@ -107,7 +107,7 @@ function j(e) {
                                         variant: 'heading-md/bold',
                                         color: 'header-primary',
                                         className: v.nuxTitle,
-                                        children: _.NW.string(_.t.PRjSRk)
+                                        children: y.NW.string(y.t.PRjSRk)
                                     })
                                 ]
                             }),
@@ -129,7 +129,7 @@ function E(e) {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
                 className: v.nuxContent,
-                children: _.NW.format(_.t.nEgjjo, {
+                children: y.NW.format(y.t.nEgjjo, {
                     onClickSettings: () => {
                         t(), u.Z.open(b.oAB.ACTIVITY_PRIVACY, null, { analyticsLocations: n });
                     }
@@ -152,12 +152,12 @@ function x(e) {
                 variant: 'heading-sm/semibold',
                 color: 'header-primary',
                 className: v.controlTitle,
-                children: _.NW.string(_.t['6x5uWV'])
+                children: y.NW.string(y.t['6x5uWV'])
             }),
             (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: _.NW.format(_.t.nEgjjo, {
+                children: y.NW.format(y.t.nEgjjo, {
                     onClickSettings: () => {
                         t(), u.Z.open(b.oAB.ACTIVITY_PRIVACY, null, { analyticsLocations: n });
                     }
@@ -180,7 +180,7 @@ function N(e) {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
                 className: v.nuxContent,
-                children: _.NW.format(_.t.fF2TbW, { helpDeskUrl: m.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS) })
+                children: y.NW.format(y.t.fF2TbW, { helpDeskUrl: m.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS) })
             }),
             (0, i.jsx)('div', {
                 className: v.toggleContainerWrapper,
@@ -199,7 +199,7 @@ function I(e) {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
                 className: v.nuxContent,
-                children: _.NW.format(_.t.fF2TbW, { helpDeskUrl: m.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS) })
+                children: y.NW.format(y.t.fF2TbW, { helpDeskUrl: m.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS) })
             }),
             (0, i.jsx)('div', {
                 className: v.toggleContainerWrapper,
@@ -220,7 +220,7 @@ function P() {
             (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: _.NW.format(_.t.fF2TbW, { helpDeskUrl: m.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS) })
+                children: y.NW.format(y.t.fF2TbW, { helpDeskUrl: m.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS) })
             })
         ]
     });
@@ -233,12 +233,12 @@ function w(e) {
                 variant: 'heading-sm/semibold',
                 color: 'header-primary',
                 className: v.controlTitle,
-                children: _.NW.string(y.Z.qKDqen)
+                children: y.NW.string(_.Z.qKDqen)
             }),
             (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: _.NW.format(_.t.fF2TbW, { helpDeskUrl: m.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS) })
+                children: y.NW.format(y.t.fF2TbW, { helpDeskUrl: m.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS) })
             }),
             (0, i.jsx)(c.zxk, {
                 className: v.goOnlineButton,
@@ -249,7 +249,7 @@ function w(e) {
                     t(), C(c.Skl.ONLINE);
                 },
                 fullWidth: !0,
-                children: _.NW.string(y.Z.Poezn5)
+                children: y.NW.string(_.Z.Poezn5)
             })
         ]
     });
@@ -266,7 +266,7 @@ function Z() {
             (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: _.NW.format(_.t.fF2TbW, { helpDeskUrl: m.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS) })
+                children: y.NW.format(y.t.fF2TbW, { helpDeskUrl: m.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS) })
             })
         ]
     });

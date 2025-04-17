@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(925549),
     m = n(438139),
     b = n(730749),
-    y = n(607070),
-    _ = n(636449),
+    _ = n(607070),
+    y = n(636449),
     v = n(214629),
     O = n(566620),
     C = n(317381),
@@ -112,11 +112,11 @@ function eb(e, t) {
         e
     );
 }
-let ey = (0, m.Z)(function (e) {
+let e_ = (0, m.Z)(function (e) {
     let { message: t } = e;
     return (0, r.jsx)(eo.Z, { children: t });
 });
-class e_ extends i.PureComponent {
+class ey extends i.PureComponent {
     renderSparkles() {
         let { useReducedMotion: e } = this.props;
         async function t() {
@@ -190,7 +190,7 @@ class e_ extends i.PureComponent {
             { application: n, embeddedActivity: i, channel: l, channelName: s, guildForConnectedChannel: a, showsActivityPopoutQuickRefocusNUX: u, markActivityPopoutQuickRefocusNUXAsDismissed: d } = this.props;
         if (null == i || null == n) return null;
         let f = { start: i.connectedSince },
-            g = (0, _.R)({ isContextless: i.location.kind === c.E.CONTEXTLESS }),
+            g = (0, y.R)({ isContextless: i.location.kind === c.E.CONTEXTLESS }),
             m = s;
         null != a && null != l ? ((e = eu.Z5c.CHANNEL(a.id, l.id)), (m = ''.concat(m, ' / ').concat(a.name))) : null != l && (e = eu.Z5c.CHANNEL(eu.ME, l.id));
         let b = (0, r.jsx)(B.Z, {
@@ -211,7 +211,7 @@ class e_ extends i.PureComponent {
                       children: n.name
                   })
               });
-        let y = (0, r.jsxs)(r.Fragment, {
+        let _ = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(R.Z, {
                     className: ef.gameIcon,
@@ -220,7 +220,7 @@ class e_ extends i.PureComponent {
                 }),
                 (0, r.jsxs)('div', {
                     className: ef.info,
-                    children: [t, null != l && (0, F.Qm)(l.type) ? b : (0, r.jsx)(ey, { timestamps: f })]
+                    children: [t, null != l && (0, F.Qm)(l.type) ? b : (0, r.jsx)(e_, { timestamps: f })]
                 })
             ]
         });
@@ -254,13 +254,13 @@ class e_ extends i.PureComponent {
                               onClick: () => {
                                   p.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }), u && d(eh.L.TAKE_ACTION), (0, j.yw)(eu.rMx.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED);
                               },
-                              children: y
+                              children: _
                           })
                       )
               })
             : (0, r.jsx)('div', {
                   className: ef.gameWrapper,
-                  children: y
+                  children: _
               });
     }
     render() {
@@ -287,7 +287,7 @@ class e_ extends i.PureComponent {
                 a()(null != t, 'Channel is null during navigation click'),
                     a()(null != n, 'Activity null during navigation click'),
                     g.Z.channelListScrollTo(null != (e = t.guild_id) ? e : eu.ME, t.id),
-                    !(0, _.R)({ isContextless: n.location.kind === c.E.CONTEXTLESS }) &&
+                    !(0, y.R)({ isContextless: n.location.kind === c.E.CONTEXTLESS }) &&
                         ((0, F.vd)(t.type) &&
                             f.Z.selectParticipant(
                                 t.id,
@@ -329,7 +329,7 @@ let ev = (0, b.Z)(function (e) {
         p = (0, u.e7)([K.Z], () => K.Z.getChannel(h)),
         f = (0, u.e7)([Q.Z], () => Q.Z.getGuild(null == p ? void 0 : p.guild_id)),
         [g, m] = (0, u.Wu)([z.Z], () => [z.Z.getCurrentUserActiveStream(), z.Z.getStreamerActiveStreamMetadata()]),
-        b = (0, u.e7)([y.Z], () => y.Z.useReducedMotion),
+        b = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
         O = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         { showRefreshedGoLiveModal: S } = (0, D.a)({
             location: 'ActivityPanelGameCard',
@@ -339,7 +339,7 @@ let ev = (0, b.Z)(function (e) {
         [x] = (0, E.Z)([null != (t = null != m && null != m.id ? m.id : null != s && null != s.id ? s.id : null != O ? O.applicationId : void 0) ? t : '']),
         I = (0, u.e7)([P.Z], () => P.Z.getFakeGameData()),
         w = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
-        R = (0, v.Z0)() && null != w && (0, _.R)({ isContextless: w.location.kind === c.E.CONTEXTLESS }),
+        R = (0, v.Z0)() && null != w && (0, y.R)({ isContextless: w.location.kind === c.E.CONTEXTLESS }),
         M = (0, u.e7)([X.Z], () => (0, k.Z)(X.Z) && (0, el.isWindows)()),
         U = (0, u.e7)([$.Z], () => (null != o ? $.Z.findActivity(o, (e) => e.type === eu.IIU.PLAYING) : null)),
         B = null != g && g.ownerId === o && g.state !== eu.jm8.ENDED,
@@ -351,7 +351,7 @@ let ev = (0, b.Z)(function (e) {
                 n = [],
                 r = (0, Z.wE)(d.z.ACTIVITY_POPOUT_NUX_MODAL),
                 i = (0, u.e7)([ei.Z], () => ei.Z.isFocused());
-            (0, _.R)({ isContextless: (null == t ? void 0 : t.location.kind) === c.E.CONTEXTLESS }) && r && i && n.push(d.z.ACTIVITY_POPOUT_NUX_QUICK_REFOCUS_TOOLTIP);
+            (0, y.R)({ isContextless: (null == t ? void 0 : t.location.kind) === c.E.CONTEXTLESS }) && r && i && n.push(d.z.ACTIVITY_POPOUT_NUX_QUICK_REFOCUS_TOOLTIP);
             let [l, o] = (0, T.US)(n);
             return {
                 showsActivityPopoutQuickRefocusNUX: l === d.z.ACTIVITY_POPOUT_NUX_QUICK_REFOCUS_TOOLTIP,
@@ -359,7 +359,7 @@ let ev = (0, b.Z)(function (e) {
             };
         })({ embeddedActivity: O });
     return (0, r.jsx)(
-        e_,
+        ey,
         eb(em({}, l), {
             guildId: n,
             canGoLive: M || R || void 0 !== I,

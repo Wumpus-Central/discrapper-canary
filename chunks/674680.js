@@ -50,12 +50,12 @@ function g(e) {
         m = (0, o.ZP)(),
         b = (0, c.oX)(n);
     if (null == b) return null;
-    let y = (0, l.UCu)(g),
-        { name: _, rarity: v } = b,
+    let _ = (0, l.UCu)(g),
+        { name: y, rarity: v } = b,
         { color: O } = (0, c.F7)(v),
         C = (0, i.wj)(m) ? p : f,
-        S = (y.size - y.offset - 2 * y.stroke) * 0.8,
-        j = y.size - y.stroke,
+        S = (_.size - _.offset - 2 * _.stroke) * 0.8,
+        j = _.size - _.stroke,
         E = {
             width: 0.4 * S,
             height: 0.4 * S
@@ -63,8 +63,8 @@ function g(e) {
         x = {
             width: E.width + 1,
             height: E.height + 1,
-            right: y.stroke + 1,
-            bottom: y.stroke + 1,
+            right: _.stroke + 1,
+            bottom: _.stroke + 1,
             padding: 0
         };
     return (0, r.jsxs)('div', {
@@ -72,9 +72,9 @@ function g(e) {
         style: {
             width: j,
             height: j,
-            padding: y.stroke
+            padding: _.stroke
         },
-        'aria-label': ''.concat(null != (t = _()) ? t : ''),
+        'aria-label': ''.concat(null != (t = y()) ? t : ''),
         children: [
             (0, r.jsx)('div', {
                 className: d.trophyIconContainer,

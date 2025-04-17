@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => _ }), n(388685);
+n.d(t, { ZP: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(399606),
@@ -14,11 +14,11 @@ var r = n(200651),
     g = n(326660),
     m = n(317169),
     b = n(19394),
-    y = n(535396);
-function _(e) {
+    _ = n(535396);
+function y(e) {
     let t = (0, l.e7)([p.Z], () => p.Z.getNotificationStateForGuild(e), [e]),
         n = (0, l.e7)([f.Z], () => f.Z.getStateForGuild(e)),
-        { trailing: _, showUnread: v } = (function (e, t, n) {
+        { trailing: y, showUnread: v } = (function (e, t, n) {
             let l = (0, m.Z)(e).available;
             return i.useMemo(() => {
                 var e, i, o;
@@ -61,14 +61,14 @@ function _(e) {
                     if (null == t || n === o.z.GUILD_POWERUP_PERKS_COACHMARK) return;
                     let r = (function (e, t) {
                         let n = h.Oe.find((e) => {
-                            let n = y.Cp[e],
+                            let n = _.Cp[e],
                                 r = null != n ? t.unlocked.get(n) : void 0;
-                            return null != r && r.user_id !== y.Fq;
+                            return null != r && r.user_id !== _.Fq;
                         });
                         if (null == n) return;
-                        let r = y.Q1[n];
+                        let r = _.Q1[n];
                         if (null == r || (0, u.OY)(r, e)) return;
-                        let i = y.Cp[n],
+                        let i = _.Cp[n],
                             l = null != i ? t.powerups.get(i) : void 0;
                         if (null != l)
                             return {
@@ -81,7 +81,7 @@ function _(e) {
                     })(e, t);
                     if (null != r) return r;
                     let i = (function (e, t, n) {
-                        let r = Array.from(y.KW.values())
+                        let r = Array.from(_.KW.values())
                             .map((e) => {
                                 if (null == t.unlocked.get(e)) return t.powerups.get(e);
                             })
@@ -172,9 +172,9 @@ function _(e) {
                 }
             }, [t, n, r, s, a, p]);
         })(e, n);
-    if (null !== n && (null != _ || v || null != O))
+    if (null !== n && (null != y || v || null != O))
         return {
-            trailing: _,
+            trailing: y,
             showUnread: v,
             popout: O
         };

@@ -29,8 +29,8 @@ var r = n(200651),
     A = n(540059),
     Z = n(724383),
     x = n(135864),
-    w = n(372900),
-    L = n(6039),
+    L = n(372900),
+    w = n(6039),
     R = n(637853),
     D = n(326145),
     k = n(269675),
@@ -258,11 +258,11 @@ let eI = (0, u.Un)({
                 )
               : (0, r.jsx)(ed.Z, {});
     }),
-    ew = (e) => (0, r.jsx)(eZ, eN({}, e)),
-    eL = () => (0, r.jsx)(Z.Z, {}),
+    eL = (e) => (0, r.jsx)(eZ, eN({}, e)),
+    ew = () => (0, r.jsx)(Z.Z, {}),
     eR = (e) => {
         let { match: t } = e;
-        return null != t.params.guildId ? (0, r.jsx)(L.Z, { guildId: t.params.guildId }) : null;
+        return null != t.params.guildId ? (0, r.jsx)(w.Z, { guildId: t.params.guildId }) : null;
     },
     eD = (e) => {
         let { match: t } = e;
@@ -525,7 +525,7 @@ function eK() {
                     className: eO.guilds,
                     themeOverride: n
                 }),
-            (0, r.jsx)(w.Z.Provider, {
+            (0, r.jsx)(L.Z.Provider, {
                 value: (null == f ? void 0 : f.params.guildId) === eg.ME || null == f ? void 0 : f.params.guildId,
                 children: (0, r.jsxs)('div', {
                     className: eO.base,
@@ -617,38 +617,38 @@ function eK() {
                                                     }),
                                                     (0, r.jsx)(y.Z, {
                                                         path: [eg.Z5c.CHANNEL_THREAD_VIEW(X.Hw.guildId(), X.Hw.channelId(), ':threadId', ':messageId?'), eg.Z5c.CHANNEL(eg.ME, X.Hw.channelId()), eg.Z5c.CHANNEL(X.Hw.guildId(), X.Hw.channelId({ optional: !0 }), ':messageId?')],
-                                                        render: ew,
+                                                        render: eL,
                                                         impressionName: c.ImpressionNames.GUILD_CHANNEL,
                                                         disableTrack: !0
                                                     }),
                                                     (0, r.jsx)(y.Z, {
                                                         path: eg.Z5c.GLOBAL_DISCOVERY,
-                                                        render: eL,
+                                                        render: ew,
                                                         impressionName: c.ImpressionNames.GLOBAL_DISCOVERY,
                                                         disableTrack: !0,
                                                         exact: !0
                                                     }),
                                                     (0, r.jsx)(y.Z, {
                                                         path: eg.Z5c.GLOBAL_DISCOVERY_SERVERS,
-                                                        render: eL,
+                                                        render: ew,
                                                         impressionName: c.ImpressionNames.GLOBAL_DISCOVERY,
                                                         disableTrack: !0
                                                     }),
                                                     (0, r.jsx)(y.Z, {
                                                         path: eg.Z5c.GLOBAL_DISCOVERY_APPS,
-                                                        render: eL,
+                                                        render: ew,
                                                         impressionName: c.ImpressionNames.GLOBAL_DISCOVERY_APPS,
                                                         disableTrack: !0
                                                     }),
                                                     (0, r.jsx)(y.Z, {
                                                         path: eg.Z5c.QUEST_HOME,
-                                                        render: eL,
+                                                        render: ew,
                                                         impressionName: c.ImpressionNames.QUEST_HOME,
                                                         disableTrack: !0
                                                     }),
                                                     (0, r.jsx)(y.Z, {
                                                         path: eg.Z5c.GUILD_DISCOVERY,
-                                                        render: eL,
+                                                        render: ew,
                                                         impressionName: c.ImpressionNames.GUILD_DISCOVERY,
                                                         disableTrack: !0
                                                     }),

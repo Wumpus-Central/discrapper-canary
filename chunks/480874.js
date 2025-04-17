@@ -41,7 +41,7 @@ function T() {
     (0, d.ZP)(() => {
         g.default.track(v.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), f.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });
     });
-    let w = i.useCallback(
+    let L = i.useCallback(
             (e) => {
                 var n, i;
                 let { row: o } = e,
@@ -65,7 +65,7 @@ function T() {
             },
             [t, l, j]
         ),
-        L = i.useCallback(
+        w = i.useCallback(
             () =>
                 (0, r.jsxs)(
                     h.Z,
@@ -166,8 +166,8 @@ function T() {
                                   paddingBottom: 24,
                                   sectionHeight: I.oi,
                                   rowHeight: I.WN,
-                                  renderSection: L,
-                                  renderRow: w,
+                                  renderSection: w,
+                                  renderRow: L,
                                   sections: [t.length],
                                   chunkSize: 30,
                                   fade: !0

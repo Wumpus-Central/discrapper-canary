@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(276952),
     m = n(682662),
     b = n(674552),
-    y = n(593364),
-    _ = n(905423),
+    _ = n(593364),
+    y = n(905423),
     v = n(199902),
     O = n(592125),
     C = n(944486),
@@ -72,7 +72,7 @@ function D() {
         })),
         B = (0, a.e7)([C.Z], () => C.Z.getChannelId(w.I_8)),
         W = (0, a.e7)([O.Z], () => O.Z.getChannel(B)),
-        V = (0, _.Z)((e) => e.guildId) === w.I_8,
+        V = (0, y.Z)((e) => e.guildId) === w.I_8,
         { badge: H, unread: F } = (0, N.Z)(G),
         z = (function (e) {
             let t = (0, a.e7)([C.Z], () => C.Z.getVoiceChannelId()),
@@ -109,7 +109,7 @@ function D() {
                 })
             );
         })(G),
-        Y = H > 0 ? (0, y.N)(H) : null,
+        Y = H > 0 ? (0, _.N)(H) : null,
         K = (0, f.Q3)('FavoritesButton'),
         q = i.useCallback(() => {
             L();

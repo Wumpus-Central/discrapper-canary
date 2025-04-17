@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => w }), n(388685), n(583741);
+n.d(t, { Z: () => L }), n(388685), n(583741);
 var i = n(200651);
 n(192379);
 var l = n(481060),
@@ -101,7 +101,7 @@ class x extends o.Z {
             null != e && (0, d.Dc)(e) && ((o = !0), (0, f.RM)(e.id));
         }
         let x = () => 0 === m.Z.totalGuilds && !N.isPlatformEmbedded,
-            w = s.bN();
+            L = s.bN();
         (e = [
             {
                 key: 'Unified NUF Modal',
@@ -152,7 +152,7 @@ class x extends o.Z {
             {
                 key: 'New User Age Gate',
                 open: c.i,
-                predicate: () => w && !x() && !T.a
+                predicate: () => L && !x() && !T.a
             },
             {
                 key: 'Claim Account Modal',
@@ -195,4 +195,4 @@ class x extends o.Z {
             t();
     }
 }
-let w = new x();
+let L = new x();

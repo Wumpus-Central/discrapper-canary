@@ -78,7 +78,7 @@ function x() {
     for (let e of Object.keys(S)) j(S[e]);
     P = !1;
 }
-class w extends (i = o.ZP.Store) {
+class L extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(h.ZP, f.Z, E.Z), this.syncWith([f.Z], Z);
     }
@@ -87,15 +87,15 @@ class w extends (i = o.ZP.Store) {
     }
 }
 (a = 'ActivityTrackingStore'),
-    (l = 'displayName') in w
-        ? Object.defineProperty(w, l, {
+    (l = 'displayName') in L
+        ? Object.defineProperty(L, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (w[l] = a),
-    new w(u.Z, {
+        : (L[l] = a),
+    new L(u.Z, {
         RUNNING_GAMES_CHANGE: () => Z(),
         CONNECTION_OPEN: function () {
             if (P) return !1;

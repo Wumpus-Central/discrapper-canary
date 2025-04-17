@@ -28,7 +28,7 @@ function S() {
         { tabs: T, selectedTab: P, setSelectedTab: j } = (0, E.Y)(),
         A = (0, g.lg)(P),
         Z = !y.MU.has(P),
-        { searchQuery: x, onSearchTextChange: w, onClearSearch: L, onSearchSubmit: R, isSearchVisible: D } = (0, _.H)({ loadId: e.current }),
+        { searchQuery: x, onSearchTextChange: L, onClearSearch: w, onSearchSubmit: R, isSearchVisible: D } = (0, _.H)({ loadId: e.current }),
         { enabled: k } = (0, p.W)({ location: 'global_discovery_header_bar' }),
         M = m.Z.useField('searchBarState'),
         {
@@ -45,9 +45,9 @@ function S() {
         B = h.Z.useField('fetchedQuery'),
         H = i.useCallback(
             (e) => {
-                j(e), D && L();
+                j(e), D && w();
             },
-            [D, L, j]
+            [D, w, j]
         ),
         F = i.useMemo(
             () =>
@@ -90,7 +90,7 @@ function S() {
                               D &&
                                   (0, r.jsx)(s.Cm, {
                                       icon: l.j9r,
-                                      onClick: L
+                                      onClick: w
                                   }),
                               D &&
                                   (0, r.jsx)(l.X6q, {
@@ -103,8 +103,8 @@ function S() {
                                   (0, r.jsx)(d.Z, {
                                       query: x,
                                       placeholder: v.NW.string(v.t['5h0QOD']),
-                                      onTextChange: w,
-                                      onClear: L,
+                                      onTextChange: L,
+                                      onClear: w,
                                       onSubmit: R,
                                       onCollapsedClick: G,
                                       state: D ? I.GlobalDiscoverySearchBarState.DEFAULT : M,
@@ -119,7 +119,7 @@ function S() {
                               D
                                   ? (0, r.jsx)(s.Cm, {
                                         icon: l.j9r,
-                                        onClick: L
+                                        onClick: w
                                     })
                                   : (0, r.jsx)(s.aV, { icon: l.QTo }),
                               !D &&
@@ -141,8 +141,8 @@ function S() {
                                   (0, r.jsx)(d.Z, {
                                       query: x,
                                       placeholder: v.NW.string(v.t['5h0QOD']),
-                                      onTextChange: w,
-                                      onClear: L,
+                                      onTextChange: L,
+                                      onClear: w,
                                       onSubmit: R,
                                       onCollapsedClick: G,
                                       state: D ? I.GlobalDiscoverySearchBarState.DEFAULT : M,

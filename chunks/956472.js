@@ -41,13 +41,13 @@ let c = (e) => {
             m = 1 === u.length && null != h,
             b = null != h && null != o && o >= h.amount;
         null != h && null != p ? (b ? f.push(h, p) : f.push(p, h), l === s.AW.ORBS ? g.push(h) : g.push(p, h)) : null != h ? (f.push(h), g.push(h)) : null != p && (f.push(p), l !== s.AW.ORBS && g.push(p));
-        let y = f.length > 0 && (null == (t = f[0]) ? void 0 : t.currency) === a.pKx.DISCORD_ORB;
+        let _ = f.length > 0 && (null == (t = f[0]) ? void 0 : t.currency) === a.pKx.DISCORD_ORB;
         return {
             displayPrices: g,
             checkoutEligiblePrices: f,
             isOrbExclusive: m,
             hasSufficientOrbs: b,
-            shouldCheckoutWithOrbs: y
+            shouldCheckoutWithOrbs: _
         };
     },
     h = (e) => {

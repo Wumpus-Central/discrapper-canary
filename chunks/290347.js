@@ -104,10 +104,10 @@ let C = [],
         });
     };
 function P(e) {
-    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: S, modalDismissibleContent: P, modalTopExtra: j, header: A, headerClassName: Z, subHeader: x, subHeaderExtra: w, featureCards: L, changeLogId: R, button: D, body: k } = e,
+    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: S, modalDismissibleContent: P, modalTopExtra: j, header: A, headerClassName: Z, subHeader: x, subHeaderExtra: L, featureCards: w, changeLogId: R, button: D, body: k } = e,
         { onClose: M, transitionState: U } = n,
         G = (0, p.Dt)(),
-        W = L.length % 2 == 0,
+        W = w.length % 2 == 0,
         V = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         [B, H] = i.useState(Date.now()),
         [F, z] = i.useState(0),
@@ -283,7 +283,7 @@ function P(e) {
                         (0, r.jsxs)(s.X6q, {
                             variant: 'heading-lg/semibold',
                             className: y.subHeader,
-                            children: [x, null == w ? void 0 : w()]
+                            children: [x, null == L ? void 0 : L()]
                         }),
                         null != k &&
                             (0, r.jsx)(s.X6q, {
@@ -291,10 +291,10 @@ function P(e) {
                                 className: y.bodyText,
                                 children: k
                             }),
-                        L.length > 0 &&
+                        w.length > 0 &&
                             (0, r.jsx)('div', {
                                 className: a()(y.featureCardGroup, { [y.wideStyle]: W }),
-                                children: L.map((e, t) => (0, r.jsx)(T, v(I({}, e), { wideStyle: W }), ''.concat(e.header, '_').concat(t)))
+                                children: w.map((e, t) => (0, r.jsx)(T, v(I({}, e), { wideStyle: W }), ''.concat(e.header, '_').concat(t)))
                             }),
                         D()
                     ]

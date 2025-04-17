@@ -1,7 +1,7 @@
 n.d(t, {
     KE: () => b,
     KT: () => m,
-    ZP: () => y
+    ZP: () => _
 }),
     n(388685),
     n(457542);
@@ -83,10 +83,10 @@ function b(e, t) {
         { modalKey: p.H2 }
     );
 }
-function y(e, t) {
+function _(e, t) {
     var m;
-    let { analyticsLocations: y } = (0, s.ZP)(),
-        [_, v] = i.useState(!1),
+    let { analyticsLocations: _ } = (0, s.ZP)(),
+        [y, v] = i.useState(!1),
         [O, C] = i.useState(void 0),
         S = (0, l.e7)([h.Z], () => {
             var t, n;
@@ -122,7 +122,7 @@ function y(e, t) {
                                   section: f.jXE.GUILD_POWERUPS_OVERVIEW_CARD
                               },
                               numberOfBoostsToAdd: t.cost - E,
-                              analyticsLocations: y,
+                              analyticsLocations: _,
                               guild: j,
                               intent: t.type === p.Us.LEVEL ? c.P.LEVEL : c.P.PERK,
                               onSubscribeComplete: () =>
@@ -160,11 +160,11 @@ function y(e, t) {
                               });
                           });
             },
-            [x, t, E, y, j]
+            [x, t, E, _, j]
         ),
         I = i.useCallback((e) => (e.stopPropagation(), x(!1)), [x]);
     return {
-        isLoading: _,
+        isLoading: y,
         error: O,
         onActivate: N,
         onDeactivate: I,

@@ -29,8 +29,8 @@ var r,
     A = n(102172),
     Z = n(871118),
     x = n(707409),
-    w = n(359110),
-    L = n(769654),
+    L = n(359110),
+    w = n(769654),
     R = n(849171),
     D = n(314897),
     k = n(592125),
@@ -332,7 +332,7 @@ let ei = (e) => {
                 onContextMenu: (e) => p(e, a),
                 children: [
                     (0, i.jsx)(u.P3F, {
-                        onClick: () => (0, L.X)(r.id),
+                        onClick: () => (0, w.X)(r.id),
                         'aria-hidden': !0,
                         tabIndex: -1,
                         children: (0, i.jsxs)('div', {
@@ -365,7 +365,7 @@ let ei = (e) => {
                     }),
                     (0, i.jsx)(u.P3F, {
                         onClick: () => {
-                            d.default.selectVoiceChannel(a.id), (0, w.Kh)(a.id);
+                            d.default.selectVoiceChannel(a.id), (0, L.Kh)(a.id);
                         },
                         focusProps: { ringTarget: h },
                         children: (0, i.jsxs)('div', {
