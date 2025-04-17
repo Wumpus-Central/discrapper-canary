@@ -2,8 +2,8 @@ t.d(n, { Z: () => x });
 var r = t(200651);
 t(192379);
 var o = t(793030),
-    s = t(442837),
-    i = t(481060),
+    i = t(442837),
+    s = t(481060),
     a = t(834129),
     l = t(271383),
     c = t(709054),
@@ -18,7 +18,7 @@ function x(e) {
             username: x,
             roleColor: _,
             roleColorStrings: v
-        } = (0, s.cj)(
+        } = (0, i.cj)(
             [l.ZP],
             () => {
                 var e, t;
@@ -35,7 +35,7 @@ function x(e) {
     return (0, r.jsx)(a.Z, {
         className: m.systemMessageContainer,
         contentClassName: m.systemMessageContent,
-        iconNode: (0, r.jsx)(i.$Eu, {
+        iconNode: (0, r.jsx)(s.$Eu, {
             className: m.icon,
             color: 'currentColor',
             size: 'sm'
@@ -48,7 +48,7 @@ function x(e) {
         children: (0, r.jsxs)('span', {
             className: m.boostMessage,
             children: [
-                (0, r.jsx)(i.PUh, {
+                (0, r.jsx)(s.PUh, {
                     className: m.boostMessageUser,
                     name: (0, r.jsx)(o.xv, {
                         color: 'currentColor',

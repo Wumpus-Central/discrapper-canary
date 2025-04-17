@@ -1,8 +1,8 @@
 t.d(n, { ZP: () => N }), t(388685);
 var r = t(200651),
     o = t(192379),
-    s = t(120356),
-    i = t.n(s),
+    i = t(120356),
+    s = t.n(i),
     a = t(793030),
     l = t(481060),
     c = t(808189),
@@ -18,15 +18,15 @@ var r = t(200651),
     j = t(117172);
 function h(e) {
     let n,
-        { active: t, nextActive: o, position: s } = e;
+        { active: t, nextActive: o, position: i } = e;
     return (
         (n = t && !1 !== o ? 'full' : t && !1 === o ? 'half' : 'none'),
         (0, r.jsxs)('div', {
             className: g.progressContainer,
             children: [
-                (0, r.jsx)('div', { className: i()(g.progress, g[s], g[n]) }),
+                (0, r.jsx)('div', { className: s()(g.progress, g[i], g[n]) }),
                 (0, r.jsx)('div', {
-                    className: i()(g.boostContainer, { [g.boostContainerActive]: t }),
+                    className: s()(g.boostContainer, { [g.boostContainerActive]: t }),
                     children: (0, r.jsx)(l.$Eu, {
                         size: 'sm',
                         color: 'white'
@@ -83,18 +83,18 @@ function b(e) {
 }
 function N(e) {
     let n,
-        { guildId: t, index: s, powerup: i, nextPowerup: l } = e,
-        c = (0, d.Z)(t, i),
+        { guildId: t, index: i, powerup: s, nextPowerup: l } = e,
+        c = (0, d.Z)(t, s),
         _ = (0, d.Z)(t, l),
-        v = null != (0, u.Z)(t, i) || c,
+        v = null != (0, u.Z)(t, s) || c,
         f = null != (0, u.Z)(t, l) || _,
         [N, Z] = o.useState(void 0);
     return (
         (0, x.KT)(N),
-        (n = 0 === s ? 'start' : null == l ? 'end' : 'middle'),
+        (n = 0 === i ? 'start' : null == l ? 'end' : 'middle'),
         (0, r.jsxs)(p.Z, {
             guildId: t,
-            powerup: i,
+            powerup: s,
             className: g.card,
             children: [
                 (0, r.jsx)(h, {
@@ -107,14 +107,14 @@ function N(e) {
                     children: [
                         (0, r.jsx)(a.X6, {
                             variant: 'heading-md/bold',
-                            children: i.title
+                            children: s.title
                         }),
-                        (0, r.jsx)(b, { index: s }),
+                        (0, r.jsx)(b, { index: i }),
                         !c &&
                             (0, r.jsx)(p.u, {
                                 className: g.footer,
                                 guildId: t,
-                                powerup: i
+                                powerup: s
                             })
                     ]
                 }),
@@ -123,7 +123,7 @@ function N(e) {
                         className: j.buttonContainer,
                         children: (0, r.jsx)(m.ZP, {
                             guildId: t,
-                            powerup: i,
+                            powerup: s,
                             onError: Z
                         })
                     })

@@ -5,8 +5,8 @@ t.d(n, {
 var r,
     o = t(200651);
 t(192379);
-var s = t(657707),
-    i = t(793030),
+var i = t(657707),
+    s = t(793030),
     a = t(692547),
     l = t(680278),
     c = t(388032),
@@ -20,18 +20,18 @@ function p(e) {
             (0, o.jsxs)('div', {
                 className: d.headerContainer,
                 children: [
-                    (0, o.jsx)(s.$Eu, {
+                    (0, o.jsx)(i.$Eu, {
                         size: 'sm',
                         color: 0 !== t ? a.Z.colors.HEADER_MUTED : a.Z.unsafe_rawColors.GUILD_BOOSTING_PINK
                     }),
-                    (0, o.jsx)(i.X6, {
+                    (0, o.jsx)(s.X6, {
                         color: 0 !== t ? 'header-muted' : 'header-primary',
                         variant: 'heading-lg/semibold',
                         children: n
                     })
                 ]
             }),
-            (0, o.jsx)(i.xv, {
+            (0, o.jsx)(s.xv, {
                 color: 'header-muted',
                 variant: 'text-sm/medium',
                 children: (() => {

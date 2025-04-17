@@ -1,8 +1,8 @@
 t.d(n, { Z: () => m }), t(388685), t(953529);
 var r = t(200651),
     o = t(192379),
-    s = t(793030),
-    i = t(481060),
+    i = t(793030),
+    s = t(481060),
     a = t(838968),
     l = t(262212),
     c = t(795338),
@@ -29,12 +29,12 @@ function m(e) {
                 children: [
                     (0, r.jsx)('div', {
                         className: p.headerContainer,
-                        children: (0, r.jsx)(s.X6, {
+                        children: (0, r.jsx)(i.X6, {
                             variant: 'heading-md/bold',
                             children: t.title
                         })
                     }),
-                    (0, r.jsx)(s.xv, {
+                    (0, r.jsx)(i.xv, {
                         className: p.description,
                         variant: 'text-sm/medium',
                         children: t.description
@@ -53,7 +53,7 @@ function m(e) {
                     onError: x
                 })
             }),
-            (0, r.jsx)(i.IGR, {
+            (0, r.jsx)(s.IGR, {
                 className: p.new,
                 text: u.NW.string(u.t.y2b7CA)
             })

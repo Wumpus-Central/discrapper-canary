@@ -1,8 +1,8 @@
 t.r(n), t.d(n, { default: () => m });
 var r = t(200651),
     o = t(512969),
-    s = t(442837),
-    i = t(353926),
+    i = t(442837),
+    s = t(353926),
     a = t(443002),
     l = t(430824),
     c = t(50101),
@@ -11,8 +11,8 @@ var r = t(200651),
     p = t(981631);
 function m(e) {
     let { guildId: n, powerupSkuId: t } = e,
-        m = (0, s.e7)([l.Z], () => l.Z.getGuild(n)),
-        x = (0, s.e7)([i.Z], () => i.Z.hasLoadedExperiments),
+        m = (0, i.e7)([l.Z], () => l.Z.getGuild(n)),
+        x = (0, i.e7)([s.Z], () => s.Z.hasLoadedExperiments),
         _ = (0, d.Z)(n),
         v = (0, c.Ek)(n, 'GuildPowerupsPage');
     return x && null != _ && null != m

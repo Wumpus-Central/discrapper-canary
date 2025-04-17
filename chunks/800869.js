@@ -1,8 +1,8 @@
 t.d(n, { Z: () => u });
 var r = t(200651),
     o = t(793030),
-    s = t(481060),
-    i = t(921944),
+    i = t(481060),
+    s = t(921944),
     a = t(680278),
     l = t(388032),
     c = t(305063),
@@ -27,11 +27,11 @@ function u(e) {
                 variant: 'text-sm/medium',
                 children: l.NW.string(a.Z.pycxTk)
             }),
-            (0, r.jsx)(s.olH, {
+            (0, r.jsx)(i.olH, {
                 className: c.close,
                 innerClassName: c.innerClose,
                 onClick: () => {
-                    n(i.L.USER_DISMISS);
+                    n(s.L.USER_DISMISS);
                 }
             })
         ]
