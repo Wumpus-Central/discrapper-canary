@@ -157,6 +157,7 @@ function x(e) {
               forum_channel_session_id: null != a ? a : S(s.id),
               forum_channel_layout: p.Z.getLayoutAnalytics(s.id),
               forum_channel_default_sort_order: s.defaultSortOrder,
+              forum_channel_tag_setting: p.Z.getTagSettingAnalytics(s.id),
               forum_channel_default_layout: s.defaultForumLayout
           }
         : null;
