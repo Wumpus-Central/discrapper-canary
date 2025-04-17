@@ -86,8 +86,7 @@ function v(e) {
                             e.stopPropagation(), null == O || O({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
                         },
                         onUserClick: (e) => e.stopPropagation(),
-                        disableUserPopout: !!P || ((e) => e === t.id),
-                        overflowCountVariant: 'text-xs/normal'
+                        disableUserPopout: !!P || ((e) => e === t.id)
                     })
                 ]
             })

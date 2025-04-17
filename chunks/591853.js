@@ -458,7 +458,6 @@ function eI(e) {
                         maxUsers: 3,
                         users: u,
                         size: f.EFr.SIZE_24,
-                        avatarClassName: eu.popoutStackedAvatar,
                         hideOverflowCount: !0,
                         disableUsernameTooltip: !0,
                         onUserPopoutRequestClose: s

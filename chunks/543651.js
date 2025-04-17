@@ -46,13 +46,7 @@ let g = function (e) {
                           (0, r.jsxs)(c.Text, {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
-                              className: m.__invalid_subtitle,
                               children: [null != v ? ''.concat(v, ' \u2022 ') : null, O]
-                          }),
-                          (0, r.jsx)(c.Text, {
-                              variant: 'text-xs/medium',
-                              color: 'text-muted',
-                              className: m.__invalid_subtitle
                           })
                       ]
                   }),
@@ -61,7 +55,6 @@ let g = function (e) {
                       (0, r.jsx)(d.Z, {
                           maxUsers: 4,
                           users: y,
-                          className: m.__invalid_facePile,
                           guildId: g
                       })
               ]

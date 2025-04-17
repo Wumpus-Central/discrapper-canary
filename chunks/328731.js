@@ -75,7 +75,6 @@ function y(e) {
                                               maxUsers: 3,
                                               users: y,
                                               size: o.EFr.SIZE_20,
-                                              avatarClassName: b.stackedAvatar,
                                               hideOverflowCount: !0,
                                               disableUsernameTooltip: !0
                                           })

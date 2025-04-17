@@ -35,7 +35,6 @@ e.exports = {
     hiddenButRenderedInputField: 'hiddenButRenderedInputField_af3b89',
     primaryButton: 'primaryButton_af3b89',
     secondaryButton: 'secondaryButton_af3b89',
-    popoutStackedAvatar: 'popoutStackedAvatar_af3b89',
     popoutBlockedWarningIcon: 'popoutBlockedWarningIcon_af3b89',
     popoutTextPrimary: 'popoutTextPrimary_af3b89',
     popoutTextSecondary: 'popoutTextSecondary_af3b89',
