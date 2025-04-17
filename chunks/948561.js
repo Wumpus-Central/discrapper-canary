@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => en,
+    ZP: () => er,
     b2: () => P
 }),
     n(388685);
@@ -375,25 +375,28 @@ function Q(e) {
     return null != n && E.Z.getGuildId() === t && Z(n, { forceBatchScan: !0 });
 }
 function X(e) {
-    (0, N.U)();
     let { channelId: t } = e;
-    return null != t && t === g.Z.getChannelId() && ee(t);
+    return null != t && et(t);
 }
 function J(e) {
+    let { channelId: t } = e;
+    return (0, N.U)(), null != t && t === g.Z.getChannelId() && et(t);
+}
+function $(e) {
     let { settings: t, local: n } = e;
     if (!n || t.type !== C.yP.PRELOADED_USER_SETTINGS) return !1;
     let r = g.Z.getChannelId();
-    return null != r && ee(r);
-}
-function $(e) {
-    let { channelId: t, chatOpen: n } = e;
-    return !!n && ee(t);
+    return null != r && et(r);
 }
 function ee(e) {
+    let { channelId: t, chatOpen: n } = e;
+    return !!n && et(t);
+}
+function et(e) {
     let t = m.Z.getMessages(e);
     return 0 !== t.length && H(t);
 }
-class et extends c.Z {
+class en extends c.Z {
     constructor(...e) {
         super(...e),
             R(this, 'actions', {
@@ -401,16 +404,17 @@ class et extends c.Z {
                 LOAD_FORUM_POSTS: q,
                 LOAD_THREADS_SUCCESS: Q,
                 LOAD_ARCHIVED_THREADS_SUCCESS: Q,
+                SIDEBAR_VIEW_CHANNEL: X,
                 MESSAGE_CREATE: Y,
                 MESSAGE_UPDATE: W,
                 LOGOUT: x,
                 SEARCH_FINISH: z,
                 MOD_VIEW_SEARCH_FINISH: z,
-                CHANNEL_SELECT: X,
+                CHANNEL_SELECT: J,
                 LOAD_PINNED_MESSAGES_SUCCESS: z,
-                USER_SETTINGS_PROTO_UPDATE: J,
-                CHANNEL_RTC_UPDATE_CHAT_OPEN: $
+                USER_SETTINGS_PROTO_UPDATE: $,
+                CHANNEL_RTC_UPDATE_CHAT_OPEN: ee
             });
     }
 }
-let en = new et();
+let er = new en();
