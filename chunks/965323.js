@@ -1,5 +1,6 @@
 e.exports = {
     scopes: 'scopes__29337',
+    noDivider: 'noDivider__29337',
     scope: 'scope__29337',
     scopeInner: 'scopeInner__29337',
     sectionLabel: 'sectionLabel__29337',

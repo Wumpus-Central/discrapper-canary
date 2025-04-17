@@ -36,7 +36,7 @@ function f(e) {
     });
 }
 async function _(e) {
-    let { authorize: t, clientId: n, scopes: r, responseType: o, redirectUri: a, codeChallenge: s, codeChallengeMethod: c, state: u, permissions: f, guildId: _, channelId: p, integrationType: h, nonce: m } = e;
+    let { authorize: t, clientId: n, scopes: r, responseType: o, redirectUri: a, codeChallenge: s, codeChallengeMethod: c, state: u, permissions: f, guildId: _, channelId: p, integrationType: h, nonce: m, dmSettings: g } = e;
     return (
         await i.tn.post({
             url: l.ANM.OAUTH2_AUTHORIZE,
@@ -57,7 +57,8 @@ async function _(e) {
                 permissions: f,
                 authorize: t,
                 integration_type: h,
-                location_context: d()
+                location_context: d(),
+                dm_settings: { allow_mobile_push: null == g ? void 0 : g.allowMobilePush }
             },
             oldFormErrors: !0,
             rejectWithError: !1

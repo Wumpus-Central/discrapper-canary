@@ -1,74 +1,78 @@
-n.d(t, { Z: () => m }), n(997841), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
+n.d(t, { Z: () => b }), n(997841), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
 var r = n(200651);
 n(192379);
-var i = n(243814),
-    o = n(993365),
-    a = n(481060),
-    s = n(979200),
-    l = n(630388),
-    c = n(709054),
-    u = n(941532),
-    d = n(713938),
-    f = n(981631),
-    _ = n(388032),
-    p = n(261668);
-let h = (e) => {
+var i = n(120356),
+    o = n.n(i),
+    a = n(243814),
+    s = n(993365),
+    l = n(481060),
+    c = n(162685),
+    u = n(979200),
+    d = n(630388),
+    f = n(709054),
+    _ = n(941532),
+    p = n(713938),
+    h = n(981631),
+    m = n(388032),
+    g = n(261668);
+let E = (e) => {
     switch (e) {
-        case s.ZC.IP_LOCATION:
-            return a.enf;
-        case s.ZC.DISPLAYS_ADVERTISEMENTS:
-            return a.FLu;
+        case u.ZC.IP_LOCATION:
+            return l.enf;
+        case u.ZC.DISPLAYS_ADVERTISEMENTS:
+            return l.FLu;
         default:
             return null;
     }
 };
-function m(e) {
+function b(e) {
     var t;
     let n,
-        { application: o, scopes: m, redirectUri: E, approximateGuildCount: b, isEmbeddedFlow: y, disclosures: v } = e,
-        O = new Date(c.default.extractTimestamp(o.id)),
-        I = (0, d.W3)(m),
-        S = (0, l.yE)(null != (t = o.flags) ? t : 0, f.udG.EMBEDDED);
-    if (null != E && !S && !y)
+        { application: i, scopes: s, redirectUri: b, approximateGuildCount: v, isEmbeddedFlow: O, disclosures: I } = e,
+        S = new Date(f.default.extractTimestamp(i.id)),
+        T = (0, p.W3)(s),
+        N = (0, d.yE)(null != (t = i.flags) ? t : 0, h.udG.EMBEDDED);
+    if (null != b && !N && !O)
         try {
-            let e = new URL(E);
+            let e = new URL(b);
             n = null != e.host && e.host.length > 0 ? e.origin : e.href;
         } catch (e) {
             n = null;
         }
+    let A = c.w.useExperiment({ location: 'oauth2_authorize' });
     return (0, r.jsxs)('div', {
-        className: p.applicationDetails,
+        className: o()(g.applicationDetails, { [g.noPadding]: A.enabled }),
         children: [
             null != n
-                ? (0, r.jsx)(g, {
-                      icon: a.xPt,
-                      text: _.NW.format(_.t['5k5OKC'], { origin: n })
+                ? (0, r.jsx)(y, {
+                      icon: l.xPt,
+                      text: m.NW.format(m.t['5k5OKC'], { origin: n })
                   })
                 : null,
-            (0, r.jsx)(g, {
-                icon: a.mBM,
-                text: (0, u.i)(o)
+            (0, r.jsx)(y, {
+                icon: l.mBM,
+                text: (0, _.i)(i)
             }),
-            (0, r.jsx)(g, {
-                icon: a.T39,
-                text: _.NW.formatToPlainString(_.t['+1bjc3'], { date: O })
+            (0, r.jsx)(y, {
+                icon: l.T39,
+                text: m.NW.formatToPlainString(m.t['+1bjc3'], { date: S })
             }),
-            m.includes(i.x.BOT) && null != b
-                ? (0, r.jsx)(g, {
-                      icon: a.wGt,
-                      text: _.NW.formatToPlainString(_.t.UHGHSE, { guildCount: b })
+            s.includes(a.x.BOT) && null != v
+                ? (0, r.jsx)(y, {
+                      icon: l.wGt,
+                      text: m.NW.formatToPlainString(m.t.UHGHSE, { guildCount: v })
                   })
                 : null,
-            (0, r.jsx)(g, {
-                icon: a.b7C,
-                text: I
+            (0, r.jsx)(y, {
+                icon: l.b7C,
+                text: T
             }),
-            null != v
-                ? v.map((e) => {
-                      let t = (0, s.PM)(e),
-                          n = h(e);
+            null != I
+                ? I.map((e) => {
+                      let t = (0, u.PM)(e),
+                          n = E(e);
                       return null != n && null != t
-                          ? (0, r.jsx)(g, {
+                          ? (0, r.jsx)(y, {
                                 icon: n,
                                 text: t
                             })
@@ -78,18 +82,18 @@ function m(e) {
         ]
     });
 }
-function g(e) {
+function y(e) {
     let { icon: t, text: n } = e;
     return (0, r.jsxs)('div', {
-        className: p.entry,
+        className: g.entry,
         children: [
             (0, r.jsx)(t, {
-                className: p.entryIcon,
+                className: g.entryIcon,
                 color: 'currentColor'
             }),
-            (0, r.jsx)(o.x, {
+            (0, r.jsx)(s.x, {
                 variant: 'text-xs/normal',
-                className: p.entryInner,
+                className: g.entryInner,
                 children: n
             })
         ]
