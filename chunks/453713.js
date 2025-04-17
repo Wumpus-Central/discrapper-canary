@@ -90,7 +90,7 @@ let x = s()((e) => {
             y = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(a)),
             { onFocus: S } = y,
             k = v(y, ['onFocus']),
-            P = l.useCallback(
+            E = l.useCallback(
                 (e) => {
                     e.preventDefault(), e.stopPropagation(), (0, f.$)(t, a), S();
                 },
@@ -121,9 +121,9 @@ let x = s()((e) => {
                             var t;
                             p(), null == (t = e.onMouseLeave) || t.call(e);
                         },
-                        onClick: P,
+                        onClick: E,
                         onKeyDown: (e) => {
-                            e.key === u.R8.ENTER && P(e);
+                            e.key === u.R8.ENTER && E(e);
                         },
                         className: m.colorVariant,
                         children: (0, r.jsx)('div', {
@@ -153,11 +153,11 @@ let x = s()((e) => {
             y = i.previewingVariantIndex,
             S = null == (t = l.variants) ? void 0 : t[j],
             k = null !== y ? (null == (n = l.variants) ? void 0 : n[y]) : void 0,
-            P = (0, p.Z)('shop-variants-group-'.concat(l.storeListingId), u.hy.HORIZONTAL);
+            E = (0, p.Z)('shop-variants-group-'.concat(l.storeListingId), u.hy.HORIZONTAL);
         if (null == S) return null;
-        let E = null != k ? k.variantLabel : null == S ? void 0 : S.variantLabel;
+        let P = null != k ? k.variantLabel : null == S ? void 0 : S.variantLabel;
         return (0, r.jsx)(c.bG, {
-            navigator: P,
+            navigator: E,
             children: (0, r.jsx)(c.SJ, {
                 children: (e) => {
                     var t,
@@ -200,7 +200,7 @@ let x = s()((e) => {
                                     variant: 'text-xs/medium',
                                     color: 'text-secondary',
                                     className: m.variantLabel,
-                                    children: d ? h.NW.string(h.t.wbgaj4) : E
+                                    children: d ? h.NW.string(h.t.wbgaj4) : P
                                 })
                             ]
                         })

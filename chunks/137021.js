@@ -20,7 +20,7 @@ var r = n(200651),
 function O(e) {
     var t,
         n,
-        { applicationId: h, customId: O, linkId: S, message: _, onClose: N, onCopyLink: E, onShare: P, transitionState: Z } = e,
+        { applicationId: h, customId: O, linkId: _, message: S, onClose: N, onCopyLink: E, onShare: P, transitionState: Z } = e,
         L = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -51,10 +51,10 @@ function O(e) {
                 applicationId: h,
                 referrerId: null == w ? void 0 : w.id,
                 customId: O,
-                linkId: S
+                linkId: _
             })
         );
-    }, [h, w, O, S, I]);
+    }, [h, w, O, _, I]);
     let W = l.useRef(0),
         [A, U] = l.useState([]),
         z = A.length,
@@ -100,7 +100,7 @@ function O(e) {
                         applicationName: C.name,
                         link: M
                     }),
-                    n = ''.concat(_, '\n\n').concat(t);
+                    n = ''.concat(S, '\n\n').concat(t);
                 T(!0),
                     (await Promise.all(e.map(d.qx))).filter(m.lm).forEach(async (e) => {
                         let t = b.Z.getChannel(e);
@@ -110,7 +110,7 @@ function O(e) {
                     P(!0),
                     N();
             },
-            [_, M, N, P, C]
+            [S, M, N, P, C]
         ),
         K =
             B.length > 0
@@ -186,7 +186,7 @@ function O(e) {
                                                 lineClamp: 1,
                                                 variant: 'text-sm/medium',
                                                 color: 'text-secondary',
-                                                children: _
+                                                children: S
                                             })
                                         })
                                     }),

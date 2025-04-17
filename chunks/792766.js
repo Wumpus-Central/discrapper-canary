@@ -103,12 +103,12 @@ let g = (e) => {
         let { stageInstance: n, guild: a, isCard: m = !1, isEmbed: _ = !1, onClick: b } = e,
             x = i.useMemo(() => (null == a ? null : a instanceof p.ZP ? a : new p.ZP(a)), [a]);
         if (null == n || null == x) return null;
-        let { topic: y, speaker_count: E, participant_count: v } = n,
-            N = null != (t = n.members) ? t : [],
-            O = _ ? N.slice(0, 3) : N,
-            j = E - O.length;
+        let { topic: y, speaker_count: v, participant_count: E } = n,
+            O = null != (t = n.members) ? t : [],
+            N = _ ? O.slice(0, 3) : O,
+            j = v - N.length;
         return (
-            _ && (j += N.length - O.length),
+            _ && (j += O.length - N.length),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
@@ -144,7 +144,7 @@ let g = (e) => {
                                     (0, r.jsx)(o.X6q, {
                                         className: l()(h.__invalid_label, h.listeners),
                                         variant: 'heading-sm/semibold',
-                                        children: v
+                                        children: E
                                     })
                                 ]
                             })
@@ -180,11 +180,11 @@ let g = (e) => {
                     (0, r.jsxs)('div', {
                         className: l()(h.members, { [h.embed]: _ }),
                         children: [
-                            O.length > 0 &&
+                            N.length > 0 &&
                                 (0, r.jsxs)('div', {
                                     className: h.speakers,
                                     children: [
-                                        O.map((e) =>
+                                        N.map((e) =>
                                             (0, r.jsx)(
                                                 g,
                                                 {

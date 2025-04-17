@@ -16,14 +16,14 @@ var r = n(200651),
     _ = n(280306);
 function b(e) {
     let { code: t, message: n, embedUrl: b } = e,
-        [x, y, E] = (0, l.Wu)([f.Z], () => [f.Z.getApplication(t), f.Z.isInvalidApplication(t), f.Z.getApplicationFetchState(t)], [t]),
-        v = (0, l.e7)([d.Z], () => {
+        [x, y, v] = (0, l.Wu)([f.Z], () => [f.Z.getApplication(t), f.Z.isInvalidApplication(t), f.Z.getApplicationFetchState(t)], [t]),
+        E = (0, l.e7)([d.Z], () => {
             var e;
             return null != (e = d.Z.getGuildId()) ? e : void 0;
         }),
-        [N, O] = i.useState(!1),
+        [O, N] = i.useState(!1),
         j = i.useCallback((e) => {
-            e && O(!0);
+            e && N(!0);
         }, []),
         C = (0, o.O)(j),
         S = i.useCallback(() => {
@@ -31,26 +31,26 @@ function b(e) {
                 application_id: t,
                 device_platform: a.tq ? 'mobile_web' : 'desktop_web',
                 sender_user_id: n.author.id,
-                guild_id: v,
+                guild_id: E,
                 channel_id: n.channel_id
             });
-        }, [t, v, n.author.id, n.channel_id]);
+        }, [t, E, n.author.id, n.channel_id]);
     return (i.useEffect(() => {
         (0, m.gZ)(t);
     }, [t]),
     i.useEffect(() => {
-        N && E === f.M.FETCHED && S();
-    }, [N, E, S]),
+        O && v === f.M.FETCHED && S();
+    }, [O, v, S]),
     i.useEffect(() => {
-        N &&
+        O &&
             y &&
             p.default.track(h.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                 device_platform: a.tq ? 'mobile_web' : 'desktop_web',
                 sender_user_id: n.author.id,
-                guild_id: v,
+                guild_id: E,
                 channel_id: n.channel_id
             });
-    }, [N, v, y, n.author.id, n.channel_id]),
+    }, [O, E, y, n.author.id, n.channel_id]),
     y)
         ? (0, r.jsxs)(c.Z, {
               containerRef: C,
@@ -71,7 +71,7 @@ function b(e) {
                   })
               ]
           })
-        : null == x || E === f.M.FETCHING
+        : null == x || v === f.M.FETCHING
           ? (0, r.jsxs)(c.Z, {
                 containerRef: C,
                 children: [(0, r.jsx)(c.Z.Header, { text: g.NW.string(g.t.m9hXGR) }), (0, r.jsx)(c.Z.Body, { resolving: !0 })]

@@ -23,10 +23,10 @@ var r = n(200651),
     b = n(703656),
     x = n(210887),
     y = n(592125),
-    E = n(375954),
-    v = n(496675),
-    N = n(933429),
-    O = n(451478),
+    v = n(375954),
+    E = n(496675),
+    O = n(933429),
+    N = n(451478),
     j = n(626135),
     C = n(585483),
     S = n(981631),
@@ -137,16 +137,16 @@ class R extends i.PureComponent {
             });
     }
 }
-let k = u.ZP.connectStores([v.Z], (e) => {
+let k = u.ZP.connectStores([E.Z], (e) => {
     let { channel: t } = e;
-    return { canManageMessages: null != t && v.Z.can(S.Plq.MANAGE_MESSAGES, t) };
+    return { canManageMessages: null != t && E.Z.can(S.Plq.MANAGE_MESSAGES, t) };
 })(R);
 function D(e) {
-    let { analyticsName: t, items: n, hasMore: a, loading: o, loadMore: p, renderHeader: m, renderEmptyState: _, renderItem: b, getProTip: y, scrollerClassName: E, className: v, listName: w } = e,
+    let { analyticsName: t, items: n, hasMore: a, loading: o, loadMore: p, renderHeader: m, renderEmptyState: _, renderItem: b, getProTip: y, scrollerClassName: v, className: E, listName: w } = e,
         Z = i.useRef(null),
         R = (0, f.Z)(w, Z),
-        k = (0, u.e7)([N.ZP], () => N.ZP.hasNotice()),
-        D = (0, u.e7)([O.Z], () => O.Z.windowSize()),
+        k = (0, u.e7)([O.ZP], () => O.ZP.hasNotice()),
+        D = (0, u.e7)([N.Z], () => N.Z.windowSize()),
         L = (0, g.Q3)('ItemsPopout');
     i.useEffect(() => {
         j.default.track(S.rMx.OPEN_POPOUT, { type: t });
@@ -240,7 +240,7 @@ function D(e) {
     k && (H.maxHeight -= 40), L && (H.maxHeight -= 48);
     let V = null != p && a;
     return (0, r.jsx)('div', {
-        className: l()(v, T.messagesPopoutWrap),
+        className: l()(E, T.messagesPopoutWrap),
         style: H,
         onClick: A,
         onDoubleClick: A,
@@ -249,7 +249,7 @@ function D(e) {
             component: m(),
             children: [
                 (0, r.jsxs)(d.Den, {
-                    className: l()(T.messagesPopout, E),
+                    className: l()(T.messagesPopout, v),
                     onScroll: V ? M : void 0,
                     ref: Z,
                     children: [
@@ -324,9 +324,9 @@ function D(e) {
     });
 }
 function L(e) {
-    let { analyticsName: t, onFetch: n, channel: a, messages: l, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: h, renderEmptyState: g, renderMessage: x, getProTip: v, scrollerClassName: N, className: O, onCloseMessage: j, listName: C } = e,
-        P = (0, u.e7)([E.Z], () => {
-            let e = null != a ? E.Z.getMessages(a.id) : null;
+    let { analyticsName: t, onFetch: n, channel: a, messages: l, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: h, renderEmptyState: g, renderMessage: x, getProTip: E, scrollerClassName: O, className: N, onCloseMessage: j, listName: C } = e,
+        P = (0, u.e7)([v.Z], () => {
+            let e = null != a ? v.Z.getMessages(a.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
     function A(e, n) {
@@ -362,8 +362,8 @@ function L(e) {
         [l, a]
     );
     return (0, r.jsx)(D, {
-        className: O,
-        scrollerClassName: N,
+        className: N,
+        scrollerClassName: O,
         items: w,
         loading: s,
         analyticsName: t,
@@ -371,7 +371,7 @@ function L(e) {
         renderHeader: h,
         hasMore: o,
         loadMore: c,
-        getProTip: v,
+        getProTip: E,
         renderItem: function (e) {
             let { message: t, channel: n } = e;
             if (null == t) return [];

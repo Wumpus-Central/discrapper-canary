@@ -89,8 +89,8 @@ function Z(e) {
         G = (0, a.e7)([E.Z], () => null != x && E.Z.getParticipantsListOpen(x)),
         { hasBugReporterAccess: w } = d.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
         { enabled: W, inInbox: B } = T.Z.useExperiment({ location: 'HeaderBar' }),
-        { hasParticipantsPanel: Y } = (0, _.Z)({ location: 'HeaderBar' }),
-        z = (0, O.Q3)('HeaderBar');
+        { hasParticipantsPanel: z } = (0, _.Z)({ location: 'HeaderBar' }),
+        Y = (0, O.Q3)('HeaderBar');
     return (0, r.jsx)(C.ZP, {
         className: n,
         innerClassName: u,
@@ -104,12 +104,12 @@ function Z(e) {
                           f,
                           e ? (0, r.jsx)(p.Z, { className: b.search }, null != c ? c : i) : null,
                           F && (0, r.jsx)(C.ZP.Divider, {}),
-                          !z && (0, r.jsx)(y.Z, {}),
-                          !z && (0, r.jsx)(I.Z, { canShowReminder: !0 }),
-                          !z && (0, r.jsx)(N.Z, {}),
+                          !Y && (0, r.jsx)(y.Z, {}),
+                          !Y && (0, r.jsx)(I.Z, { canShowReminder: !0 }),
+                          !Y && (0, r.jsx)(N.Z, {}),
                           W && !B ? (0, r.jsx)(S.Z, {}) : null,
-                          !z && (w ? (0, r.jsx)(g.Z, {}) : (0, r.jsx)(D.Z, {})),
-                          Y &&
+                          !Y && (w ? (0, r.jsx)(g.Z, {}) : (0, r.jsx)(D.Z, {})),
+                          z &&
                               V &&
                               null != x &&
                               !G &&

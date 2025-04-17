@@ -7,7 +7,7 @@ let r = (0, n(818083).B)({
     treatments: [
         {
             id: 1,
-            label: 'Enable Block User Feedback Survey',
+            label: 'Enable Ignore User Feedback Survey',
             config: { enabled: !0 }
         }
     ]

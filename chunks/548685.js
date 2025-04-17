@@ -23,9 +23,9 @@ let x = (e) => {
         y = l.createRef(),
         S = (0, m.u)(),
         k = l.useMemo(() => S(n), [t, S, n]),
-        P = (0, b.a)()(k),
-        E = (0, p.l)(P),
-        w = (0, h.St)(E);
+        E = (0, b.a)()(k),
+        P = (0, p.l)(E),
+        w = (0, h.St)(P);
     return null == j
         ? null
         : (0, r.jsxs)('div', {

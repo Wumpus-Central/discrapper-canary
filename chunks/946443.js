@@ -21,10 +21,10 @@ var r = n(200651),
     b = n(585483),
     x = n(358085),
     y = n(143316),
-    E = n(240126),
-    v = n(791914),
-    N = n(147522),
-    O = n(809780),
+    v = n(240126),
+    E = n(791914),
+    O = n(147522),
+    N = n(809780),
     j = n(981631),
     C = n(388032),
     S = n(128406);
@@ -32,7 +32,7 @@ function I(e) {
     var t, n, a, o, I, P, A;
     let { setTab: w, onJump: Z, showTutorial: R, setSeenTutorial: k, closePopout: D, badgeState: L } = e,
         M = i.useRef(null),
-        [W, U] = (0, O.ZP)(M),
+        [W, U] = (0, N.ZP)(M),
         { loadState: F, channels: B } = W,
         { maybeLoadMore: G, markAllRead: H } = U;
     (t = M),
@@ -96,13 +96,13 @@ function I(e) {
         return (0, r.jsxs)('div', {
             className: l()(S.container, { [S.widerInbox]: z }),
             children: [
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(E.Z, {
                     tab: d.X.UNREADS,
                     setTab: w,
                     badgeState: L,
                     closePopout: D
                 }),
-                (0, r.jsx)(E.Z, {
+                (0, r.jsx)(v.Z, {
                     Icon: p.xx7,
                     header: C.NW.string(C.t['6XMM+P']),
                     tip: (null == (A = s().os) ? void 0 : A.family) === 'OS X' ? C.NW.string(C.t.w9uDOT) : C.NW.string(C.t.BiUJCw)
@@ -114,7 +114,7 @@ function I(e) {
         className: l()(S.container, 'group-spacing-'.concat(V), { [S.widerInbox]: z }),
         'aria-label': C.NW.string(C.t.sRUdBw),
         children: [
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(E.Z, {
                 tab: d.X.UNREADS,
                 setTab: w,
                 badgeState: L,
@@ -187,9 +187,9 @@ function I(e) {
                             )),
                             (n = n =
                                 {
-                                    onScroll: F === O.jd.Done ? void 0 : G,
+                                    onScroll: F === N.jd.Done ? void 0 : G,
                                     className: S.scroller,
-                                    children: [R ? (0, r.jsx)(T, { setSeenTutorial: k }) : null, (0, N.Z)(B, U, Z), F === O.jd.Done ? null : (0, r.jsx)(p.$jN, { className: S.spinner })]
+                                    children: [R ? (0, r.jsx)(T, { setSeenTutorial: k }) : null, (0, O.Z)(B, U, Z), F === N.jd.Done ? null : (0, r.jsx)(p.$jN, { className: S.spinner })]
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -251,13 +251,13 @@ function P(e) {
     return (0, r.jsxs)('div', {
         className: S.container,
         children: [
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(E.Z, {
                 tab: d.X.UNREADS,
                 setTab: t,
                 badgeState: n,
                 closePopout: i
             }),
-            (0, r.jsx)(E.Z, {
+            (0, r.jsx)(v.Z, {
                 Icon: p.xx7,
                 disableStars: !0,
                 header: C.NW.string(C.t['KG/ynZ']),

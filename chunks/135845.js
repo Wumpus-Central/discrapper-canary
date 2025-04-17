@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => v });
 var r = n(200651),
     i = n(192379),
     a = n(512722),
@@ -17,35 +17,35 @@ var r = n(200651),
     b = n(245335),
     x = n(388032),
     y = n(273254);
-function E(e) {
+function v(e) {
     let t,
         n,
         a,
-        { invite: E, currentUserId: v, guild: N, onTransitionToInviteChannel: O, onAcceptInstantInvite: j } = e,
-        C = null == N ? void 0 : N.id,
+        { invite: v, currentUserId: E, guild: O, onTransitionToInviteChannel: N, onAcceptInstantInvite: j } = e,
+        C = null == O ? void 0 : O.id,
         S = (0, o.e7)([h.Z], () => h.Z.getGuildId()),
-        I = (0, o.e7)([f.Z], () => (null != E && null != E.target_user ? f.Z.getActiveStreamForUser(E.target_user.id, C) : null), [E, C]),
-        T = (0, o.e7)([f.Z], () => (null != E && null != E.target_user ? f.Z.getStreamForUser(E.target_user.id, C) : null), [E, C]),
+        I = (0, o.e7)([f.Z], () => (null != v && null != v.target_user ? f.Z.getActiveStreamForUser(v.target_user.id, C) : null), [v, C]),
+        T = (0, o.e7)([f.Z], () => (null != v && null != v.target_user ? f.Z.getStreamForUser(v.target_user.id, C) : null), [v, C]),
         { analyticsLocations: P } = (0, u.ZP)(c.Z.INVITE_EMBED),
-        A = null != E && E.target_type === b.Iq.STREAM && null != E.target_user && null != I,
-        w = null != E && null != T && null != E.channel && null != E.guild && T.channelId === E.channel.id && T.guildId === E.guild.id;
-    l()(null != E, 'Invite cannot be null');
-    let { target_type: Z, target_user: R } = E;
+        A = null != v && v.target_type === b.Iq.STREAM && null != v.target_user && null != I,
+        w = null != v && null != T && null != v.channel && null != v.guild && T.channelId === v.channel.id && T.guildId === v.guild.id;
+    l()(null != v, 'Invite cannot be null');
+    let { target_type: Z, target_user: R } = v;
     l()(Z === b.Iq.STREAM && null != R, 'invalid streaming invite');
-    let k = v === R.id,
-        D = E.state === _.r2o.ACCEPTING,
+    let k = E === R.id,
+        D = v.state === _.r2o.ACCEPTING,
         L = i.useCallback(() => {
             let e = 'noop';
-            A ? (O(), (e = 'transition')) : (j(), (e = 'accept')), (0, s.r$)(E, e, P);
-        }, [E, P, A, O, j]),
-        M = null != N;
-    if (null == N) {
-        if (null == E.guild) return (0, r.jsx)(g.Z, {});
-        N = new m.ZP(E.guild);
+            A ? (N(), (e = 'transition')) : (j(), (e = 'accept')), (0, s.r$)(v, e, P);
+        }, [v, P, A, N, j]),
+        M = null != O;
+    if (null == O) {
+        if (null == v.guild) return (0, r.jsx)(g.Z, {});
+        O = new m.ZP(v.guild);
     }
-    let W = null != E.channel ? (0, p.jD)(E.channel) : null;
+    let W = null != v.channel ? (0, p.jD)(v.channel) : null;
     M && !w ? (a = k ? x.NW.string(x.t.oBLoZG) : x.NW.formatToPlainString(x.t['0QJmAw'], { name: R.username })) : ((t = x.NW.string(x.t['I6JG4+'])), (n = d.Z.Button.Colors.GREEN), A && ((t = x.NW.string(x.t['Q1W99/'])), (n = d.Z.Button.Colors.PRIMARY)), (a = k ? x.NW.string(x.t['4hyaHh']) : x.NW.formatToPlainString(x.t.QmlLEh, { name: R.username })));
-    let U = S === N.id && null != W ? (0, r.jsx)(d.Z.Channel, { channel: W }) : x.NW.formatToPlainString(x.t.u0vaDA, { guildName: N.name });
+    let U = S === O.id && null != W ? (0, r.jsx)(d.Z.Channel, { channel: W }) : x.NW.formatToPlainString(x.t.u0vaDA, { guildName: O.name });
     return (0, r.jsxs)(d.Z, {
         children: [
             (0, r.jsx)(d.Z.Header, { text: x.NW.string(x.t['wS+5WV']) }),
@@ -55,7 +55,7 @@ function E(e) {
                         className: y.headerLine,
                         children: [
                             (0, r.jsx)(d.Z.Icon, {
-                                guild: N,
+                                guild: O,
                                 onClick: M && w ? L : void 0
                             }),
                             (0, r.jsx)(d.Z.Info, {

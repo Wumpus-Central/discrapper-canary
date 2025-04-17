@@ -1,6 +1,6 @@
 n.d(t, {
-    W: () => N,
-    u: () => v
+    W: () => O,
+    u: () => E
 }),
     n(190126),
     n(368063),
@@ -37,7 +37,7 @@ function y() {
             return e;
         }).apply(this, arguments);
 }
-function E(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,10 +62,10 @@ function E(e) {
     }
     return e;
 }
-var v = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
-function N(e) {
+var E = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
+function O(e) {
     var t, n, r, l;
-    let { title: v, header: N, info: O, staticBannerSrc: j, videoBannerSrc: C, bannerAspectRatio: S = 0, iconSrc: I, embedUrl: T, actions: P = [], trackingConfig: A } = e;
+    let { title: E, header: O, info: N, staticBannerSrc: j, videoBannerSrc: C, bannerAspectRatio: S = 0, iconSrc: I, embedUrl: T, actions: P = [], trackingConfig: A } = e;
     A = {
         id: null != (n = null == (t = A) ? void 0 : t.id) ? n : '0',
         linkType: null != (r = null == t ? void 0 : t.linkType) ? r : g.Un.UNKNOWN,
@@ -147,14 +147,14 @@ function N(e) {
                 className: x.contentContainer,
                 style: { background: R },
                 children: [
-                    null != N &&
+                    null != O &&
                         (0, i.jsxs)('div', {
                             className: x.header,
                             children: [
                                 (0, i.jsx)(c.Text, {
                                     variant: 'eyebrow',
                                     color: 'none',
-                                    children: N
+                                    children: O
                                 }),
                                 M
                             ]
@@ -174,12 +174,12 @@ function N(e) {
                                         variant: 'text-md/semibold',
                                         color: 'none',
                                         lineClamp: 1,
-                                        children: v
+                                        children: E
                                     }),
-                                    O
+                                    N
                                 ]
                             }),
-                            null == N && M
+                            null == O && M
                         ]
                     }),
                     P.length > 0 &&
@@ -212,12 +212,12 @@ function N(e) {
                                                           return e;
                                                       })(e)
                                                   );
-                                                  return (0, i.jsx)(c.zxk, E({}, d, t));
+                                                  return (0, i.jsx)(c.zxk, v({}, d, t));
                                               }
                                           },
                                           n
                                       )
-                                    : (0, i.jsx)(c.zxk, E({}, d), n);
+                                    : (0, i.jsx)(c.zxk, v({}, d), n);
                             })
                         })
                 ]
