@@ -28,8 +28,8 @@ function O(e) {
         {
             drag: D,
             dragSourcePosition: A,
-            drop: k,
-            setIsDraggable: W
+            drop: W,
+            setIsDraggable: k
         } = (0, c.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
             index: O,
@@ -74,13 +74,13 @@ function O(e) {
                       [_.containerFocused]: U
                   }),
                   ref: (e) => {
-                      D(k(e));
+                      D(W(e));
                   },
                   children: [
                       (0, r.jsx)('div', {
                           className: _.dragContainer,
-                          onMouseEnter: () => W(!0),
-                          onMouseLeave: () => W(!1),
+                          onMouseEnter: () => k(!0),
+                          onMouseLeave: () => k(!1),
                           children: (0, r.jsx)(o.Vni, {
                               size: 'xs',
                               color: 'currentColor',
@@ -133,13 +133,13 @@ function O(e) {
                       [_.containerFocused]: U
                   }),
                   ref: (e) => {
-                      D(k(e));
+                      D(W(e));
                   },
                   children: [
                       (0, r.jsx)('div', {
                           className: _.dragContainer,
-                          onMouseEnter: () => W(!0),
-                          onMouseLeave: () => W(!1),
+                          onMouseEnter: () => k(!0),
+                          onMouseLeave: () => k(!1),
                           children: (0, r.jsx)(o.Vni, {
                               size: 'xs',
                               color: 'currentColor',

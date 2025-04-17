@@ -95,14 +95,14 @@ function E(e) {
             R((n) => C(O({}, n), { [e]: t }));
         },
         A = (0, p.ss)(t),
-        k = (0, p.Gp)(),
-        W = i.useCallback(() => {
-            k &&
+        W = (0, p.Gp)(),
+        k = i.useCallback(() => {
+            W &&
                 g.jJ.trackExposure({
                     guildId: t,
                     location: 'b2d9de_1'
                 }),
-                k && A
+                W && A
                     ? (0, d.ZDy)(
                           async () => {
                               let { default: e } = await n.e('9558').then(n.bind(n, 34460));
@@ -120,7 +120,7 @@ function E(e) {
                           { modalKey: y }
                       )
                     : S();
-        }, [t, T, S, s, k, A]),
+        }, [t, T, S, s, W, A]),
         L = b.Lo(Z),
         M = i.useCallback(() => Z.forEach(b.GM), [Z]),
         G = (0, x.mY)(),
@@ -128,12 +128,12 @@ function E(e) {
     return (
         i.useEffect(
             () => (
-                U === N.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && W(),
+                U === N.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && k(),
                 () => {
                     (0, d.Mr3)(y);
                 }
             ),
-            [U, W]
+            [U, k]
         ),
         (0, r.jsxs)(r.Fragment, {
             children: [
@@ -157,7 +157,7 @@ function E(e) {
                             )
                         ),
                         (0, r.jsxs)(d.P3F, {
-                            onClick: G ? void 0 : W,
+                            onClick: G ? void 0 : k,
                             className: l()(v.createTierButton, { [v.disabled]: G }),
                             'aria-disabled': G,
                             children: [

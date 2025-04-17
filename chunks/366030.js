@@ -28,8 +28,8 @@ var r = n(200651),
     S = n(458034),
     I = n(856651),
     k = n(981631),
-    R = n(228168),
-    M = n(388032),
+    M = n(228168),
+    R = n(388032),
     E = n(933466);
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -62,13 +62,13 @@ function A(e) {
     if (null != s)
         switch (a) {
             case I.iO.LESS_THAN:
-                t = M.NW.format(M.t['2p7dAw'], {
+                t = R.NW.format(R.t['2p7dAw'], {
                     description: s,
                     count: Math.max(0, Number(i) - 1)
                 });
                 break;
             case I.iO.GREATER_THAN:
-                t = M.NW.format(M.t['2p7dAw'], {
+                t = R.NW.format(R.t['2p7dAw'], {
                     description: s,
                     count: Math.max(0, Number(i) + 1)
                 });
@@ -210,7 +210,7 @@ function L(e) {
         [d, l]
     );
     return (
-        (t = 1 === i.length && 1 === i[0].length ? M.NW.string(M.t.jDym4O) : 1 === i.length ? M.NW.format(M.t['0eBj39'], {}) : M.NW.format(M.t.D7uftL, {})),
+        (t = 1 === i.length && 1 === i[0].length ? R.NW.string(R.t.jDym4O) : 1 === i.length ? R.NW.format(R.t['0eBj39'], {}) : R.NW.format(R.t.D7uftL, {})),
         (0, r.jsxs)('div', {
             className: E.popout,
             children: [
@@ -235,13 +235,13 @@ function L(e) {
                             : (0, r.jsx)(p.zxk, {
                                   className: E.getRolesButton,
                                   onClick: n,
-                                  children: M.NW.string(M.t.T1t1WV)
+                                  children: R.NW.string(R.t.T1t1WV)
                               }),
                         (0, r.jsx)(p.zxk, {
                             className: E.viewConnectionsButton,
                             color: p.zxk.Colors.PRIMARY,
                             onClick: a,
-                            children: M.NW.string(M.t.hgKDnJ)
+                            children: R.NW.string(R.t.hgKDnJ)
                         })
                     ]
                 })
@@ -283,7 +283,7 @@ function B(e) {
                                   guildId: a.id,
                                   channelId: s.id,
                                   roleId: u.id,
-                                  subsection: R.Tb.CONNECTIONS,
+                                  subsection: M.Tb.CONNECTIONS,
                                   sourceAnalyticsLocations: l,
                                   analyticsLocation: { section: k.jXE.CHANNEL }
                               }),
@@ -296,7 +296,7 @@ function B(e) {
         nudgeAlignIntoViewport: !0,
         children: (e) =>
             (0, r.jsx)(p.ua7, {
-                text: M.NW.string(M.t.Wpsnam),
+                text: R.NW.string(R.t.Wpsnam),
                 children: (t) => {
                     var n, o;
                     return (0, r.jsxs)(

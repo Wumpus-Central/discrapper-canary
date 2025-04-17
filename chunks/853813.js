@@ -43,18 +43,18 @@ function E(e) {
         Z = (0, a.e7)([m.Z], () => !m.Z.isRoleHigher(T, R, P)),
         D = i.useRef(null),
         A = (0, a.e7)([x.Z], () => x.Z.getProps().integrations),
-        k = {
+        W = {
             role: P,
             editRoleId: n
         },
-        W = i.useRef(k);
+        k = i.useRef(W);
     if (
         (i.useEffect(() => {
-            W.current = k;
+            k.current = W;
         }),
         i.useEffect(() => {
             var e, t;
-            let { role: n, editRoleId: r } = W.current,
+            let { role: n, editRoleId: r } = k.current,
                 i = (0, b.UT)(E),
                 s = null != (t = null == (e = h.Z.getRoleMemberCount(T.id)) ? void 0 : e[r]) ? t : 0;
             g.default.track(

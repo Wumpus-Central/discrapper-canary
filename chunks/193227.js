@@ -23,8 +23,8 @@ var r = n(200651),
     y = n(302800),
     S = n(215023),
     k = n(474936),
-    E = n(484920);
-function P(e) {
+    P = n(484920);
+function E(e) {
     let { products: t, handleShopCardMount: n, header: l, category: a, isPremiumUser: o, isGiftEasterEggEnabled: c } = e,
         u = (0, i.e7)([b.default], () => b.default.getCurrentUser()),
         d = (0, j.St)(t);
@@ -34,14 +34,14 @@ function P(e) {
               children: [
                   null != l
                       ? (0, r.jsx)(s.Text, {
-                            className: E.itemTypeTitle,
+                            className: P.itemTypeTitle,
                             color: 'header-secondary',
                             variant: 'text-sm/bold',
                             children: l
                         })
                       : (0, r.jsx)(s.LZC, { size: 24 }),
                   (0, r.jsx)('div', {
-                      className: E.cardsContainer,
+                      className: P.cardsContainer,
                       children: d.map((e, t) =>
                           (0, r.jsx)(
                               p.k0,
@@ -100,7 +100,7 @@ function w(e) {
             [c, n]
         );
     return (0, r.jsx)(
-        P,
+        E,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -147,12 +147,12 @@ function B(e) {
             f ? 0.13 : 0.15
         );
     return (0, r.jsxs)('div', {
-        className: E.categoryWrapper,
+        className: P.categoryWrapper,
         ref: x,
         children: [
             p &&
                 (0, r.jsx)(s.P3F, {
-                    className: o()(E.hiddenWumpus, { [E.hiddenWumpusEnabled]: i }),
+                    className: o()(P.hiddenWumpus, { [P.hiddenWumpusEnabled]: i }),
                     onClick: () => b(!0),
                     style: { left: ''.concat(g.current, '%') },
                     children: (0, r.jsx)(d.Z, {
@@ -212,7 +212,7 @@ function I(e) {
     n)
         ? (0, r.jsx)(v.Z, {})
         : (0, r.jsx)('div', {
-              className: E.categories,
+              className: P.categories,
               children: a
                   .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
                   .filter((e) => {

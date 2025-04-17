@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -56,7 +56,7 @@ function A(e) {
     }
     return e;
 }
-function k(e, t) {
+function W(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function k(e, t) {
         e
     );
 }
-function W() {
+function k() {
     let e = (0, o.e7)([b.Z], () => b.Z.getGuild());
     return null == e ? null : (0, r.jsx)(L, { guild: e });
 }
@@ -82,7 +82,7 @@ function L(e) {
     let { guild: t } = e,
         s = t.id,
         b = (0, o.e7)([y.Z], () => y.Z.getCurrentPage()),
-        W = (0, E.Z)(s),
+        k = (0, E.Z)(s),
         {
             hasChanges: L,
             hasConfiguredAnythingForCurrentStep: M,
@@ -129,7 +129,7 @@ function L(e) {
             range: [0, 1],
             output: [K, (0, m.dQu)(c.Z.colors.STATUS_DANGER).hex()]
         });
-    if (W) {
+    if (k) {
         if (b === I.PG.DEFAULT_CHANNELS) return (0, r.jsx)(T.j, {});
         else if (b === I.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(P.Zm, {});
         else if (b === I.PG.HOME_SETTINGS) return (0, r.jsx)(w.Z, {});
@@ -153,7 +153,7 @@ function L(e) {
         $ = async () => {
             f.default.track(
                 R.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                k(A({}, (0, p.hH)(s)), {
+                W(A({}, (0, p.hH)(s)), {
                     step: I.PG[b],
                     back: !1,
                     skip: !L
@@ -165,7 +165,7 @@ function L(e) {
         ee = async () => {
             f.default.track(
                 R.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                k(A({}, (0, p.hH)(s)), {
+                W(A({}, (0, p.hH)(s)), {
                     step: I.PG[b],
                     back: !0,
                     skip: !1

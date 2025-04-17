@@ -10,8 +10,8 @@ var a = n(200651),
     d = n(540059),
     p = n(585483),
     m = n(254109),
-    g = n(212459),
-    _ = n(730606),
+    _ = n(212459),
+    g = n(730606),
     f = n(860153),
     y = n(981631),
     b = n(388032),
@@ -125,7 +125,7 @@ function h(e) {
                         fullscreenOnMobile: !1,
                         onClick: t,
                         'aria-label': b.NW.string(b.t.AMTX3t),
-                        children: (0, a.jsxs)(g.z.Provider, {
+                        children: (0, a.jsxs)(_.z.Provider, {
                             value: D,
                             children: [
                                 (0, a.jsx)(f.Z, {
@@ -137,7 +137,7 @@ function h(e) {
                                     style: { display: 'none' },
                                     ref: x
                                 }),
-                                (0, a.jsx)(_.ZP, {
+                                (0, a.jsx)(g.ZP, {
                                     items: n,
                                     startIndex: v,
                                     onIndexChange: I,

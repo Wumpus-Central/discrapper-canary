@@ -10,8 +10,8 @@ var a = n(200651),
     d = n(868643),
     p = n(912332),
     m = n(378409),
-    g = n(850908),
-    _ = n(695346),
+    _ = n(850908),
+    g = n(695346),
     f = n(572004),
     y = n(424218),
     b = n(49012),
@@ -225,14 +225,14 @@ function R(e) {
             id: d,
             label: T.NW.string(T.t.nwg3lZ)
         }),
-        _ = (function (e) {
+        g = (function (e) {
             var t;
             let { alt: n, sourceMetadata: r, width: o, height: i } = e,
                 c = k(T.NW.string(T.t.ILJuBg), 'name', { subtextLineClamp: 1 }),
                 l = k(T.NW.string(T.t['3Nf9u7']), 'size'),
                 u = k(T.NW.string(T.t.eOB2eX), 'alt', { subtextLineClamp: 2 });
             if ((null == r || null == (t = r.identifier) ? void 0 : t.type) !== 'attachment') return null;
-            let d = (0, g.Z)(r.identifier),
+            let d = (0, _.Z)(r.identifier),
                 p = (0, y.BU)(r.identifier.size / 1000);
             return (0, a.jsxs)(
                 s.sNh,
@@ -300,7 +300,7 @@ function R(e) {
                         )
                 ]
             }),
-            _,
+            g,
             p
         ]
     });
@@ -337,7 +337,7 @@ function Z(e) {
     let { item: o } = e,
         i = r.useRef(null),
         [c, l] = r.useState(!1),
-        u = _.Sb.useSetting(),
+        u = g.Sb.useSetting(),
         d = 'IMAGE' === o.type && O.isPlatformEmbedded && null == o.children && h.ZP.canCopyImage() && (0, m.Lz)(o.url),
         p = (0, m.Jj)(o.url);
     return u || d || p || (null == (n = o.sourceMetadata) || null == (t = n.identifier) ? void 0 : t.type) === 'attachment'

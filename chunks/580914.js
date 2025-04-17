@@ -23,8 +23,8 @@ var r = n(200651),
     y = n(794324),
     S = n(619899),
     k = n(957058),
-    E = n(215023),
-    P = n(981631),
+    P = n(215023),
+    E = n(981631),
     w = n(388032),
     B = n(806734);
 let I = {
@@ -51,7 +51,7 @@ let I = {
                   categorySkuId: e.skuId,
                   bannerAsset: e.heroBannerAsset,
                   fallbackBannerUrl: (0, _.uV)(null != (l = e.heroBanner) ? l : '', {
-                      size: E.pv,
+                      size: P.pv,
                       format: 'jpg'
                   }),
                   summary: e.summary,
@@ -72,7 +72,7 @@ let I = {
             G = (0, C.a)()(U),
             z = (0, v.l)(G).slice(0, 4),
             q = (0, S.St)(z),
-            Y = _ === E.AW.ORBS ? w.NW.string(w.t.hvVgAQ) : w.NW.formatToPlainString(w.t.wvKYCg, { category_name: Z.name });
+            Y = _ === P.AW.ORBS ? w.NW.string(w.t.hvVgAQ) : w.NW.formatToPlainString(w.t.wvKYCg, { category_name: Z.name });
         return null != L && (t || Z !== I)
             ? (0, r.jsxs)('div', {
                   className: o()(B.heroBlock, { [B.responsiveHero]: null == W ? void 0 : W.responsive }),
@@ -141,8 +141,8 @@ let I = {
                                                                     children: Z.title
                                                                 }),
                                                             (0, r.jsx)(c.Text, {
-                                                                variant: _ === E.AW.ORBS ? 'text-lg/medium' : 'text-md/normal',
-                                                                className: _ === E.AW.ORBS ? B.orbsSubHeaderText : (null == F ? void 0 : F.showDarkBannerText) ? B.subHeaderTextDark : B.subHeaderText,
+                                                                variant: _ === P.AW.ORBS ? 'text-lg/medium' : 'text-md/normal',
+                                                                className: _ === P.AW.ORBS ? B.orbsSubHeaderText : (null == F ? void 0 : F.showDarkBannerText) ? B.subHeaderTextDark : B.subHeaderText,
                                                                 style: null != Z.bannerTextColor ? { color: Z.bannerTextColor } : void 0,
                                                                 children: Z.summary
                                                             })
@@ -157,7 +157,7 @@ let I = {
                                                   className: B.heroHeaderButton,
                                                   color: c.Ttl.WHITE,
                                                   onClick: () => {
-                                                      _ === E.AW.ORBS ? (0, u.Z)(g.Z.getArticleURL(P.BhN.VIRTUAL_CURRENCY_LEARN_MORE)) : n('shop latest category hero', Z.categorySkuId);
+                                                      _ === P.AW.ORBS ? (0, u.Z)(g.Z.getArticleURL(E.BhN.VIRTUAL_CURRENCY_LEARN_MORE)) : n('shop latest category hero', Z.categorySkuId);
                                                   },
                                                   children: Y
                                               })
@@ -165,7 +165,7 @@ let I = {
                                   ]
                               }),
                               (0, r.jsx)('div', {
-                                  className: o()(B.row, B.feed, { [B.feedSingleRow]: _ !== E.AW.ORBS }),
+                                  className: o()(B.row, B.feed, { [B.feedSingleRow]: _ !== P.AW.ORBS }),
                                   children: t
                                       ? (0, r.jsx)(r.Fragment, {
                                             children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(O.K, {}, t))

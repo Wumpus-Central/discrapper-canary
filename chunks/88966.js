@@ -1,23 +1,23 @@
 n.d(t, { Z: () => g });
-var l = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(442837),
-    i = n(481060),
-    a = n(493683),
-    o = n(40851),
-    s = n(549879),
-    u = n(314897),
+var i = n(442837),
+    o = n(481060),
+    l = n(493683),
+    s = n(40851),
+    a = n(549879),
+    d = n(314897),
     c = n(981631),
-    d = n(388032);
+    u = n(388032);
 function g(e, t, n) {
-    let g = (0, o.Aq)();
-    return (0, r.e7)([u.default], () => u.default.getId() === e) || t === c.IlC.POPOUT
+    let g = (0, s.Aq)();
+    return (0, i.e7)([d.default], () => d.default.getId() === e) || t === c.IlC.POPOUT
         ? null
-        : (0, l.jsx)(i.sNh, {
+        : (0, r.jsx)(o.sNh, {
               id: 'message-user',
-              label: d.NW.string(d.t.OAJQlJ),
+              label: u.NW.string(u.t.OAJQlJ),
               action: () => {
-                  (0, s.i)(t, !0), a.Z.openPrivateChannel({ recipientIds: e }), g.dispatch(c.CkL.POPOUT_CLOSE), (0, i.pTH)();
+                  (0, a.i)(t, !0), l.Z.openPrivateChannel({ recipientIds: e }), g.dispatch(c.CkL.POPOUT_CLOSE), (0, o.pTH)();
               },
               icon: n
           });

@@ -39,7 +39,7 @@ var r = n(200651),
 let Z = (0, b.hQ)(),
     D = (0, b.hQ)(),
     A = (0, y.Mg)(u.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
-function k(e) {
+function W(e) {
     var t;
     let { emojiId: n, emojiName: i, className: s } = e,
         l = (0, c.e7)([j.ZP], () => (null != n ? j.ZP.getCustomEmojiById(n) : void 0));
@@ -50,7 +50,7 @@ function k(e) {
         className: s
     });
 }
-function W(e) {
+function k(e) {
     let { icon: t, children: n, checked: i, disabled: s = !1, onChange: a } = e,
         o = i || s;
     return (0, r.jsxs)('label', {
@@ -106,7 +106,7 @@ function L(e) {
                   i.length - s.size > 1 &&
                       (0, r.jsx)('div', {
                           className: R.list,
-                          children: (0, r.jsx)(W, {
+                          children: (0, r.jsx)(k, {
                               icon: (0, r.jsx)(m.avL, {
                                   size: 'md',
                                   color: 'currentColor',
@@ -127,9 +127,9 @@ function L(e) {
                       className: R.list,
                       children: i.map((e) =>
                           (0, r.jsxs)(
-                              W,
+                              k,
                               {
-                                  icon: (0, r.jsx)(k, {
+                                  icon: (0, r.jsx)(W, {
                                       emojiId: e.emoji_id,
                                       emojiName: e.emoji_name,
                                       className: R.rowIcon
@@ -452,7 +452,7 @@ function F(e) {
                     u.length > 1 &&
                         (0, r.jsx)('div', {
                             className: R.list,
-                            children: (0, r.jsx)(W, {
+                            children: (0, r.jsx)(k, {
                                 icon: (0, r.jsx)(m.avL, {
                                     size: 'md',
                                     color: 'currentColor'
@@ -474,7 +474,7 @@ function F(e) {
                             var t;
                             let n = null != (t = (0, h.Th)(e.type)) ? t : m.VL1;
                             return (0, r.jsx)(
-                                W,
+                                k,
                                 {
                                     icon: (0, r.jsx)('div', {
                                         className: R.rowIcon,

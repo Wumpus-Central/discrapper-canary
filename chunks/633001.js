@@ -367,7 +367,7 @@ function M() {
         V = (0, o.e7)([_.default], () => _.default.isFocusedPidOutOfProcess()),
         H = (0, O.getPID)(),
         W = (0, o.e7)([p.default], () => p.default.isOverlayOOPEnabledForPid(H), [H]),
-        [K, X] = (0, o.Wu)([v.Z], () => [v.Z.enabled, v.Z.keepOpen]),
+        [X, K] = (0, o.Wu)([v.Z], () => [v.Z.enabled, v.Z.keepOpen]),
         Y = (0, o.e7)([x.ZP], () => x.ZP.getRunningGames());
     r.useEffect(() => {
         Z((e) => {
@@ -692,12 +692,12 @@ function M() {
                                 (0, a.jsxs)(c.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: ['SoundboardOverlay.enabled: ', K ? 'Yes' : 'No']
+                                    children: ['SoundboardOverlay.enabled: ', X ? 'Yes' : 'No']
                                 }),
                                 (0, a.jsxs)(c.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: ['SoundboardOverlay.keepOpen: ', X ? 'Yes' : 'No']
+                                    children: ['SoundboardOverlay.keepOpen: ', K ? 'Yes' : 'No']
                                 })
                             ]
                         })
