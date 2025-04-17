@@ -137,7 +137,7 @@ class x extends o.Z {
                     };
                     r = await (0, l.ZDy)(
                         async () => {
-                            let { default: e } = await Promise.all([n.e('63288'), n.e('1337'), n.e('42483'), n.e('57015')]).then(n.bind(n, 599219));
+                            let { default: e } = await Promise.all([n.e('4181'), n.e('1337'), n.e('42483'), n.e('57015')]).then(n.bind(n, 599219));
                             return (n) => (0, i.jsx)(e, A(j({}, n), { onSlideChange: t }));
                         },
                         {

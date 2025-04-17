@@ -87,7 +87,7 @@ function Z(e) {
             }),
             p
                 ? (0, i.jsx)(a.F, {})
-                : (0, i.jsx)(W, {
+                : (0, i.jsx)(D, {
                       context: l,
                       command: o,
                       sectionName: c
@@ -146,7 +146,7 @@ function M() {
         children: l
     });
 }
-function W(e) {
+function D(e) {
     let { context: t, command: n, sectionName: l } = e;
     (0, f.PL)(!0, !0), (0, f.em)(t, !0, !0);
     let o = (0, N.D)(t),
@@ -204,7 +204,7 @@ function W(e) {
         ]
     });
 }
-function D(e) {
+function W(e) {
     let { context: t, commands: n, section: r, headerName: l, sectionName: o, children: a } = e;
     return 0 === n.length
         ? null
@@ -287,14 +287,14 @@ function B(e) {
         ? (0, i.jsxs)('ul', {
               className: w.contentContainer,
               children: [
-                  (0, i.jsx)(D, {
+                  (0, i.jsx)(W, {
                       context: n,
                       section: f,
                       commands: C,
                       headerName: T.NW.string(T.t.acSE0t),
                       sectionName: o
                   }),
-                  (0, i.jsx)(D, {
+                  (0, i.jsx)(W, {
                       context: n,
                       section: f,
                       commands: m ? k : y,

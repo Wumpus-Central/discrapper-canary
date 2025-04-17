@@ -34,8 +34,8 @@ var i = n(200651),
     k = n(87005),
     Z = n(219066),
     M = n(106066),
-    W = n(783097),
-    D = n(695676),
+    D = n(783097),
+    W = n(695676),
     B = n(98880),
     U = n(804307),
     H = n(888617),
@@ -69,8 +69,8 @@ function en(e) {
     let { context: t, entrypoint: n, searchQuery: l, setSearchQuery: o, setScroller: a, isScrollCloseToBottom: s } = e,
         c = (0, m.e7)([b.Z], () => b.Z.getIsEnabled(), []),
         u = n === R._b.TEXT && 'channel' === t.type && null != t.channel && !t.channel.isPrivate(),
-        d = (0, W.Yn)(n),
-        p = !(0, W.Yn)(n),
+        d = (0, D.Yn)(n),
+        p = !(0, D.Yn)(n),
         h = n === R._b.TEXT,
         [y, x] = eu(!0),
         [C, v] = eu(u),
@@ -491,7 +491,7 @@ function es(e) {
                 u = n === R._b.VOICE;
             return {
                 fetchState: s,
-                recommendationsSections: r.useMemo(() => (u ? (0, W.pF)(c) : c), [c, u]),
+                recommendationsSections: r.useMemo(() => (u ? (0, D.pF)(c) : c), [c, u]),
                 isInstallOnDemand: o
             };
         })({
@@ -690,7 +690,7 @@ function eu(e) {
 }
 function ed(e) {
     let { title: t, look: n, items: i, limit: l, sectionName: o, sectionOverallPosition: a } = e,
-        { pushHistory: s } = (0, D.hH)();
+        { pushHistory: s } = (0, W.hH)();
     return r.useMemo(
         () =>
             i.length <= l
@@ -707,7 +707,7 @@ function ed(e) {
                               num: i.length
                           }),
                               s({
-                                  type: D.gc.LIST,
+                                  type: W.gc.LIST,
                                   title: t,
                                   look: n,
                                   items: i,

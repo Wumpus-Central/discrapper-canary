@@ -136,7 +136,7 @@ function Z(e) {
                             query: n
                         }),
                     (P || g) &&
-                        (0, i.jsx)(D, {
+                        (0, i.jsx)(W, {
                             context: t,
                             applicationResults: j,
                             includePlaceholder: g,
@@ -230,7 +230,7 @@ function M(e) {
         ]
     });
 }
-function W(e) {
+function D(e) {
     var t, n;
     let { trackSearchResultsItemImpressionRef: r } = (0, g.Z)({
         applicationId: e.application.id,
@@ -266,7 +266,7 @@ function W(e) {
         )
     });
 }
-function D(e) {
+function W(e) {
     let { context: t, applicationResults: n, includePlaceholder: r, query: l, searchesBots: o } = e;
     return o
         ? (0, i.jsxs)('div', {
@@ -305,7 +305,7 @@ function D(e) {
                           n.map((e, n) => {
                               let { application: r, installOnDemand: o } = e;
                               return (0, i.jsx)(
-                                  W,
+                                  D,
                                   {
                                       context: t,
                                       application: r,

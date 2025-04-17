@@ -75,8 +75,8 @@ function w(e) {
     let { application: l, context: w, className: R, sectionName: k } = e,
         Z = r.useRef(null),
         M = (0, a.e7)([j.Z], () => j.Z.entrypoint()),
-        W = (0, P.L1)(l),
-        D = (0, m.Eb)(W),
+        D = (0, P.L1)(l),
+        W = (0, m.Eb)(D),
         B = (0, d.R)(l.id),
         U = (0, a.e7)(
             [y.Z],
@@ -111,7 +111,7 @@ function w(e) {
                               applicationId: l.id,
                               referrerId: null == V ? void 0 : V.id
                           })
-                        : (0, p.J)(T({ id: l.id }, W));
+                        : (0, p.J)(T({ id: l.id }, D));
                     (0, v.JG)(e, () => (0, s.showToast)((0, s.createToast)(I.NW.string(I.t['L/PwZW']), s.ToastType.SUCCESS))),
                         C.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: l.id,
@@ -155,14 +155,14 @@ function w(e) {
                                                 });
                                             }
                                         }),
-                                    D
+                                    W
                                         ? (0, i.jsx)(s.sNh, {
                                               id: 'add-app',
                                               label: I.NW.string(I.t.NgXl3N),
                                               action: () => {
-                                                  null == W.customInstallUrl && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, H),
+                                                  null == D.customInstallUrl && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, H),
                                                       (0, N.L)(
-                                                          L(T({}, W), {
+                                                          L(T({}, D), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
                                                                   null != t && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, H);

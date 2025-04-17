@@ -43,8 +43,8 @@ var i,
     k = n(226026),
     Z = n(570949),
     M = n(753972),
-    W = n(635753),
-    D = n(981631),
+    D = n(635753),
+    W = n(981631),
     B = n(217702),
     U = n(388032),
     H = n(860901),
@@ -233,9 +233,9 @@ function K(e) {
         w = l.useCallback(() => O(!1), []),
         k = (0, s.e7)([f.Z, E.Z], () => f.Z.inDevModeForApplication(t.id) || E.Z.inTestModeForApplication(t.id), [t.id]),
         Z = (0, L.WA)(t),
-        { enabled: D } = S.X.useExperiment({ location: 'AppLauncherAppCard' }, { autoTrackExposure: !0 }),
+        { enabled: W } = S.X.useExperiment({ location: 'AppLauncherAppCard' }, { autoTrackExposure: !0 }),
         { friends: B } = (0, b.Z)(t),
-        F = D && (0, L.ye)(t) && B.length > 0;
+        F = W && (0, L.ye)(t) && B.length > 0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             T
@@ -319,7 +319,7 @@ function K(e) {
                                 ]
                             }),
                             F
-                                ? (0, r.jsx)(W.Z, {
+                                ? (0, r.jsx)(D.Z, {
                                       friends: B,
                                       onClick: _,
                                       shortText: !0,
@@ -474,7 +474,7 @@ function el(e) {
         u = l.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    (0, g.yw)(D.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+                    (0, g.yw)(W.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                         application_id: t.id,
                         section_name: n,
                         search_results_position: i,
@@ -496,7 +496,7 @@ function el(e) {
         d = l.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    (0, g.yw)(D.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+                    (0, g.yw)(W.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                         application_id: t.id,
                         section_name: n,
                         search_results_position: i,
