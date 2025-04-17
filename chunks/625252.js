@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => _ });
 var r = n(200651),
     i = n(192379),
     s = n(780384),
@@ -8,22 +8,19 @@ var r = n(200651),
     c = n(626135),
     d = n(617136),
     u = n(497505),
-    m = n(865719),
-    g = n(341907),
-    p = n(46140),
-    h = n(981631),
-    f = n(388032),
-    _ = n(31903),
-    b = n(66094);
-function N() {
+    m = n(341907),
+    g = n(981631),
+    p = n(388032),
+    h = n(31903),
+    f = n(66094);
+function _() {
     let e = (0, s.wj)((0, o.ZP)()),
-        t = (0, m.y)({ location: p.dr.USER_SETTINGS_GIFT_INVENTORY }),
-        n = i.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
-        N = i.useCallback(() => {
+        t = i.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
+        n = i.useCallback(() => {
             (0, l.xf)(),
-                (0, g.navigateToQuestHome)({ fromContent: u.jn.QUEST_HOME_MOVE_CALLOUT }),
+                (0, m.navigateToQuestHome)({ fromContent: u.jn.QUEST_HOME_MOVE_CALLOUT }),
                 c.default.track(
-                    h.rMx.QUEST_CONTENT_CLICKED,
+                    g.rMx.QUEST_CONTENT_CLICKED,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -51,47 +48,45 @@ function N() {
                     })({ cta_name: d.jZ.VIEW_QUESTS }, (0, d.mH)(u.jn.QUEST_HOME_MOVE_CALLOUT))
                 );
         }, []);
-    return t === m.$.NEVER_SHOW
-        ? null
-        : (0, r.jsx)('div', {
-              className: _.container,
-              style: n,
-              children: (0, r.jsxs)('div', {
-                  className: _.textContainer,
-                  children: [
-                      (0, r.jsxs)('div', {
-                          className: _.headerContainer,
-                          children: [
-                              (0, r.jsx)('img', {
-                                  alt: '',
-                                  src: b,
-                                  className: _.icon
-                              }),
-                              (0, r.jsx)(a.X6q, {
-                                  variant: 'heading-lg/bold',
-                                  color: 'always-white',
-                                  children: f.NW.string(f.t.z8YP2N)
-                              })
-                          ]
-                      }),
-                      (0, r.jsx)(a.Text, {
-                          variant: 'text-md/medium',
-                          color: 'text-secondary',
-                          children: f.NW.string(f.t.IqmRZ2)
-                      }),
-                      (0, r.jsx)(a.zxk, {
-                          size: 'large',
-                          color: e ? a.Ttl.BRAND : a.Ttl.WHITE,
-                          className: _.button,
-                          onClick: N,
-                          innerClassName: _.innerButton,
-                          children: (0, r.jsx)(a.Text, {
-                              variant: 'text-md/medium',
-                              color: e ? 'always-white' : 'text-normal',
-                              children: f.NW.string(f.t.GURBQk)
-                          })
-                      })
-                  ]
-              })
-          });
+    return (0, r.jsx)('div', {
+        className: h.container,
+        style: t,
+        children: (0, r.jsxs)('div', {
+            className: h.textContainer,
+            children: [
+                (0, r.jsxs)('div', {
+                    className: h.headerContainer,
+                    children: [
+                        (0, r.jsx)('img', {
+                            alt: '',
+                            src: f,
+                            className: h.icon
+                        }),
+                        (0, r.jsx)(a.X6q, {
+                            variant: 'heading-lg/bold',
+                            color: 'always-white',
+                            children: p.NW.string(p.t.z8YP2N)
+                        })
+                    ]
+                }),
+                (0, r.jsx)(a.Text, {
+                    variant: 'text-md/medium',
+                    color: 'text-secondary',
+                    children: p.NW.string(p.t.IqmRZ2)
+                }),
+                (0, r.jsx)(a.zxk, {
+                    size: 'large',
+                    color: e ? a.Ttl.BRAND : a.Ttl.WHITE,
+                    className: h.button,
+                    onClick: n,
+                    innerClassName: h.innerButton,
+                    children: (0, r.jsx)(a.Text, {
+                        variant: 'text-md/medium',
+                        color: e ? 'always-white' : 'text-normal',
+                        children: p.NW.string(p.t.GURBQk)
+                    })
+                })
+            ]
+        })
+    });
 }
