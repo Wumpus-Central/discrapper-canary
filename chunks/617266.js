@@ -291,14 +291,17 @@ function z(e) {
                                   id: u.id
                               },
                     d = (0, j.hC)(c),
-                    f = (function (e, t) {
-                        if (t instanceof x.Sf && (0, x.Km)(t.type)) {
-                            if (null != t.rateLimitPerUser && t.rateLimitPerUser > 0 && !(N.Z.can(D.Plq.MANAGE_CHANNELS, t) || N.Z.can(D.Plq.MANAGE_MESSAGES, t))) return { label: T.NW.string(T.t.Icu3bW) };
-                            if (t.isThread() || t.isForumPost() || !N.Z.can(D.Plq.USE_APPLICATION_COMMANDS, t)) return { label: T.NW.string(T.t.v8MLq6) };
-                            let n = (0, j.dL)(t.id);
-                            if (e.id === n.id) return { label: T.NW.string(T.t.mD4gqa) };
-                        }
-                    })(i, u),
+                    f =
+                        null != i
+                            ? (function (e, t) {
+                                  if (t instanceof x.Sf && (0, x.Km)(t.type)) {
+                                      if (null != t.rateLimitPerUser && t.rateLimitPerUser > 0 && !(N.Z.can(D.Plq.MANAGE_CHANNELS, t) || N.Z.can(D.Plq.MANAGE_MESSAGES, t))) return { label: T.NW.string(T.t.Icu3bW) };
+                                      if (t.isThread() || t.isForumPost() || !N.Z.can(D.Plq.USE_APPLICATION_COMMANDS, t)) return { label: T.NW.string(T.t.v8MLq6) };
+                                      let n = (0, j.dL)(t.id);
+                                      if (e.id === n.id) return { label: T.NW.string(T.t.mD4gqa) };
+                                  }
+                              })(i, u)
+                            : null,
                     h = b.includes(d),
                     p = {
                         key: d,

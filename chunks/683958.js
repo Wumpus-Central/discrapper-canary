@@ -105,13 +105,19 @@ function P(e) {
             }
             return l;
         })(e, ['applicationId', 'channel', 'command', 'onClose', 'requireLaunchChannel', 'onShareResult', 'previewMessage']);
-    let L = l.useMemo(() => (0, o.dL)(s.id), [s]),
+    let L = l.useMemo(() => (null == s ? null : (0, o.dL)(s.id)), [s]),
         [D, M] = l.useState(!1),
         { commands: T, loading: k } =
-            ((t = {
-                channel: s,
-                type: 'channel'
-            }),
+            ((t = l.useMemo(
+                () =>
+                    null == s
+                        ? { type: 'contextless' }
+                        : {
+                              type: 'channel',
+                              channel: s
+                          },
+                [s]
+            )),
             (0, b.v1)(
                 t,
                 { commandTypes: _ },
@@ -122,13 +128,13 @@ function P(e) {
                 }
             )),
         W = l.useRef(0),
-        [A, R] = l.useState(w ? [L] : []),
+        [A, R] = l.useState(w && null != L ? [L] : []),
         I = A.length,
         F = I >= 5,
         [q, U] = l.useState(''),
         { results: z, updateSearchText: H } = (0, u.s)({
             selectedDestinations: A,
-            originDestination: L,
+            originDestination: null != L ? L : void 0,
             includeMissingDMs: !0
         }),
         G = l.useCallback(
@@ -213,18 +219,20 @@ function P(e) {
                 { children: (0, r.jsx)(a.$jN, { className: v.spinnerContainer }) }
             )
         );
-    K &&
-        (a.Y0X,
-        O(
-            x(
-                {
-                    className: v.modal,
-                    'aria-label': y.NW.string(y.t.fuFvw8)
-                },
-                Z
-            ),
-            { children: (0, r.jsx)(a.hzk, { children: y.NW.string(y.t.yAk8ZW) }) }
-        ));
+    if (K)
+        return (0, r.jsx)(
+            a.Y0X,
+            O(
+                x(
+                    {
+                        className: v.modal,
+                        'aria-label': y.NW.string(y.t.fuFvw8)
+                    },
+                    Z
+                ),
+                { children: (0, r.jsx)(a.hzk, { children: y.NW.string(y.t.yAk8ZW) }) }
+            )
+        );
     let et =
         z.length > 0
             ? (0, r.jsx)(p.F, {

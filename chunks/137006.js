@@ -69,7 +69,8 @@ let l = {
                             url: e.string().required(),
                             width: e.number().required()
                         }),
-                        components: e.array().items(s(e))
+                        components: e.array().items(s(e)),
+                        pid: e.number()
                     })
                 ),
             response: (e) => e.object({ success: e.boolean().required() })
