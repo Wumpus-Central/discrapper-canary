@@ -1,72 +1,75 @@
-n.d(t, { Z: () => a });
-var r = n(90712),
-    i = n(981631),
-    o = n(388032);
-function a(e) {
-    let t = (0, r.Z)(e),
+n.d(t, { Z: () => s });
+var r = n(750154),
+    i = n(90712),
+    o = n(981631),
+    a = n(388032);
+function s(e) {
+    let t = (0, i.Z)(e),
         n = null == t ? void 0 : t.icon;
-    return e.type === i.IIU.PLAYING && (null == t ? void 0 : t.type) === i.ABu.XBOX
+    return e.type === o.IIU.PLAYING && (null == t ? void 0 : t.type) === o.ABu.XBOX
         ? {
-              text: o.NW.formatToPlainString(o.t.Sq9xJy, { game: o.NW.string(o.t['Nfvo7+']) }),
+              text: a.NW.formatToPlainString(a.t.Sq9xJy, { game: a.NW.string(a.t['Nfvo7+']) }),
               platformIcon: n
           }
-        : e.type === i.IIU.PLAYING && (null == t ? void 0 : t.type) === i.ABu.PLAYSTATION
+        : e.type === o.IIU.PLAYING && (null == t ? void 0 : t.type) === o.ABu.PLAYSTATION
           ? {
-                text: o.NW.formatToPlainString(o.t.Sq9xJy, { game: o.NW.string(o.t.fFl4jo) }),
+                text: a.NW.formatToPlainString(a.t.Sq9xJy, { game: a.NW.string(a.t.fFl4jo) }),
                 platformIcon: n
             }
-          : e.type === i.IIU.STREAMING && (null == t ? void 0 : t.type) === i.ABu.TWITCH
+          : e.type === o.IIU.STREAMING && (null == t ? void 0 : t.type) === o.ABu.TWITCH
             ? {
-                  text: o.NW.formatToPlainString(o.t['4CQq9f'], { name: o.NW.string(o.t.q4pBGx) }),
+                  text: a.NW.formatToPlainString(a.t['4CQq9f'], { name: a.NW.string(a.t.q4pBGx) }),
                   platformIcon: n
               }
-            : e.type === i.IIU.STREAMING && (null == t ? void 0 : t.type) === i.ABu.YOUTUBE
+            : e.type === o.IIU.STREAMING && (null == t ? void 0 : t.type) === o.ABu.YOUTUBE
               ? {
-                    text: o.NW.formatToPlainString(o.t['4CQq9f'], { name: o.NW.string(o.t.aS6cKy) }),
+                    text: a.NW.formatToPlainString(a.t['4CQq9f'], { name: a.NW.string(a.t.aS6cKy) }),
                     platformIcon: n
                 }
-              : e.type === i.IIU.PLAYING
+              : e.type === o.IIU.PLAYING
                 ? {
-                      text: o.NW.string(o.t.BMTj29),
+                      text: a.NW.string(a.t.BMTj29),
                       platformIcon: n
                   }
-                : e.type === i.IIU.STREAMING
+                : e.type === o.IIU.STREAMING
                   ? {
-                        text: o.NW.string(o.t['Jpkr/v']),
+                        text: a.NW.string(a.t['Jpkr/v']),
                         platformIcon: n
                     }
-                  : e.type === i.IIU.LISTENING && null != e.details
-                    ? {
-                          text: o.NW.formatToPlainString(o.t['b+lA5+'], { name: e.name }),
-                          platformIcon: n
-                      }
-                    : e.type === i.IIU.LISTENING
+                  : (0, r.dS)(e)
+                    ? { text: a.NW.formatToPlainString(a.t.pW3Ip6, { name: e.name }) }
+                    : e.type === o.IIU.LISTENING && null != e.details
                       ? {
-                            text: o.NW.string(o.t.dBISa2),
+                            text: a.NW.formatToPlainString(a.t['b+lA5+'], { name: e.name }),
                             platformIcon: n
                         }
-                      : e.type === i.IIU.WATCHING && null != e.details
+                      : e.type === o.IIU.LISTENING
                         ? {
-                              text: o.NW.formatToPlainString(o.t.mqdfDQ, { name: e.name }),
+                              text: a.NW.string(a.t.dBISa2),
                               platformIcon: n
                           }
-                        : e.type === i.IIU.WATCHING
+                        : e.type === o.IIU.WATCHING && null != e.details
                           ? {
-                                text: o.NW.string(o.t.GpNXjI),
+                                text: a.NW.formatToPlainString(a.t.mqdfDQ, { name: e.name }),
                                 platformIcon: n
                             }
-                          : e.type === i.IIU.COMPETING && null != e.details
+                          : e.type === o.IIU.WATCHING
                             ? {
-                                  text: o.NW.formatToPlainString(o.t.oHF7Cg, { name: e.name }),
+                                  text: a.NW.string(a.t.GpNXjI),
                                   platformIcon: n
                               }
-                            : e.type === i.IIU.COMPETING
+                            : e.type === o.IIU.COMPETING && null != e.details
                               ? {
-                                    text: o.NW.string(o.t.OzCsIC),
+                                    text: a.NW.formatToPlainString(a.t.oHF7Cg, { name: e.name }),
                                     platformIcon: n
                                 }
-                              : {
-                                    text: void 0,
-                                    platformIcon: n
-                                };
+                              : e.type === o.IIU.COMPETING
+                                ? {
+                                      text: a.NW.string(a.t.OzCsIC),
+                                      platformIcon: n
+                                  }
+                                : {
+                                      text: void 0,
+                                      platformIcon: n
+                                  };
 }

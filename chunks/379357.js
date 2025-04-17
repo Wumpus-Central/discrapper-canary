@@ -1,7 +1,7 @@
 n.d(t, {
-    FO: () => E,
-    YC: () => b,
-    rv: () => g
+    FO: () => y,
+    YC: () => v,
+    rv: () => b
 }),
     n(388685),
     n(781311);
@@ -11,54 +11,56 @@ var r = n(726542),
     a = n(802856),
     s = n(835473),
     l = n(210753),
-    c = n(81063),
-    u = n(26033),
-    d = n(593294),
-    f = n(981631),
-    _ = n(701488),
-    p = n(388032);
-function h(e) {
-    return (0, u.dU)(e) && e.extra.entries.length > 0
+    c = n(750154),
+    u = n(81063),
+    d = n(768581),
+    f = n(26033),
+    _ = n(593294),
+    p = n(981631),
+    h = n(701488),
+    m = n(388032);
+function g(e) {
+    return (0, f.dU)(e) && e.extra.entries.length > 0
         ? { src: e.extra.entries[0].media.image_url }
-        : (0, u.y0)(e)
+        : (0, f.y0)(e)
           ? {
-                src: (0, c.xF)(e.extra.application_id, e.extra.media_assets_large_image, _.Si.LARGE),
+                src: (0, u.xF)(e.extra.application_id, e.extra.media_assets_large_image, h.Si.LARGE),
                 alt: e.extra.media_title
             }
-          : (0, u.KF)(e)
+          : (0, f.KF)(e)
             ? { src: e.extra.media.image_url }
             : void 0;
 }
-function m(e) {
-    let t = null == e ? void 0 : e.getIconURL(_.Si.LARGE),
+function E(e) {
+    let t = null == e ? void 0 : e.getIconURL(h.Si.LARGE),
         n = null == e ? void 0 : e.name;
     if (null != t)
         return {
             src: t,
-            alt: null == n ? p.NW.string(p.t['2B/phI']) : p.NW.formatToPlainString(p.t.tiKyYm, { applicationName: n })
+            alt: null == n ? m.NW.string(m.t['2B/phI']) : m.NW.formatToPlainString(m.t.tiKyYm, { applicationName: n })
         };
 }
-function g(e) {
+function b(e) {
     var t;
     let { entry: n, showCoverImage: r = !0 } = e,
-        { activity: i, activityApplication: o, fallbackApplication: a } = (0, d.Z)(n),
-        { largeImage: s, smallImage: c } = b(i, o),
-        { largeImage: u } = E(i, null != a ? a : o),
-        { coverImageUrl: f } = (0, l.$)(null == (t = null != a ? a : o) ? void 0 : t.id),
-        _ = h(n);
+        { activity: i, activityApplication: o, fallbackApplication: a } = (0, _.Z)(n),
+        { largeImage: s, smallImage: c } = v(i, o),
+        { largeImage: u } = y(i, null != a ? a : o),
+        { coverImageUrl: d } = (0, l.$)(null == (t = null != a ? a : o) ? void 0 : t.id),
+        f = g(n);
     return null != s
         ? {
               largeImage: s,
               smallImage: c
           }
-        : null != _
+        : null != f
           ? {
-                largeImage: _,
+                largeImage: f,
                 smallImage: void 0
             }
-          : null != f && r
+          : null != d && r
             ? {
-                  largeImage: { src: f },
+                  largeImage: { src: d },
                   smallImage: void 0
               }
             : {
@@ -66,33 +68,49 @@ function g(e) {
                   smallImage: void 0
               };
 }
-function E(e, t) {
-    let { largeImage: n, smallImage: i } = b(e, t);
+function y(e, t) {
+    let { largeImage: n, smallImage: i } = v(e, t);
     if (null != n)
         return {
             largeImage: n,
             smallImage: i
         };
+    if ((0, c.dS)(e)) {
+        var s;
+        let t = (0, c.rq)(e),
+            n =
+                null != t
+                    ? d.ZP.getGuildIconURL({
+                          id: t.guildId,
+                          icon: null == e || null == (s = e.assets) ? void 0 : s.small_image,
+                          size: h.Si.SMALL
+                      })
+                    : void 0;
+        return {
+            largeImage: null != n ? { src: n } : void 0,
+            smallImage: void 0
+        };
+    }
     if (null == n && (0, a.Z)(e))
         return {
             largeImage: {
-                src: r.Z.get(f.ABu.XBOX).icon.customPNG,
-                alt: p.NW.string(p.t['Nfvo7+'])
+                src: r.Z.get(p.ABu.XBOX).icon.customPNG,
+                alt: m.NW.string(m.t['Nfvo7+'])
             },
             smallImage: void 0
         };
     if (null == n && null == i && (0, o.Z)(e))
         return {
             largeImage: {
-                src: r.Z.get(f.ABu.PLAYSTATION).icon.lightPNG,
-                alt: p.NW.string(p.t.fFl4jo)
+                src: r.Z.get(p.ABu.PLAYSTATION).icon.lightPNG,
+                alt: m.NW.string(m.t.fFl4jo)
             },
             smallImage: void 0
         };
-    let s = m(t);
-    return null != s
+    let l = E(t);
+    return null != l
         ? {
-              largeImage: s,
+              largeImage: l,
               smallImage: i
           }
         : {
@@ -100,8 +118,8 @@ function E(e, t) {
               smallImage: void 0
           };
 }
-function b(e, t) {
-    var n, r, o, a, l, u;
+function v(e, t) {
+    var n, r, o, a, l, c;
     let d = (0, s.q)(null == e ? void 0 : e.application_id);
     if (null == e)
         return {
@@ -109,23 +127,23 @@ function b(e, t) {
             smallImage: void 0
         };
     let f = null == e || null == (n = e.assets) ? void 0 : n.large_image,
-        p =
+        _ =
             null != f
                 ? {
-                      src: (0, c.xF)(e.application_id, f, [_.Si.LARGE, _.Si.LARGE]),
+                      src: (0, u.xF)(e.application_id, f, [h.Si.LARGE, h.Si.LARGE]),
                       text: null == (o = e.assets) || null == (r = o.large_text) ? void 0 : r.trim()
                   }
                 : void 0,
-        h = (0, i.Z)(e) || null == e || null == (a = e.assets) ? void 0 : a.small_image,
-        g =
-            null != h
+        p = (0, i.Z)(e) || null == e || null == (a = e.assets) ? void 0 : a.small_image,
+        m =
+            null != p
                 ? {
-                      src: (0, c.xF)(e.application_id, h, [_.Si.LARGE, _.Si.LARGE]),
-                      text: null == (u = e.assets) || null == (l = u.small_text) ? void 0 : l.trim()
+                      src: (0, u.xF)(e.application_id, p, [h.Si.LARGE, h.Si.LARGE]),
+                      text: null == (c = e.assets) || null == (l = c.small_text) ? void 0 : l.trim()
                   }
                 : void 0;
     return {
-        largeImage: null != p ? p : m(null != t ? t : d),
-        smallImage: g
+        largeImage: null != _ ? _ : E(null != t ? t : d),
+        smallImage: m
     };
 }

@@ -1,15 +1,16 @@
-n.d(t, { Z: () => c }), n(35282);
+n.d(t, { Z: () => u }), n(35282);
 var r = n(657305),
     i = n(394821),
     o = n(841784),
     a = n(503438),
-    s = n(981631),
-    l = n(388032);
-function c(e) {
+    s = n(750154),
+    l = n(981631),
+    c = n(388032);
+function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (null == e ? void 0 : e.name) === '' ? null : null == e ? void 0 : e.name,
-        c = (null == e ? void 0 : e.details) === '' ? null : null == e ? void 0 : e.details,
-        u = (null == e ? void 0 : e.state) === '' ? null : null == e ? void 0 : e.state;
+        u = (null == e ? void 0 : e.details) === '' ? null : null == e ? void 0 : e.details,
+        d = (null == e ? void 0 : e.state) === '' ? null : null == e ? void 0 : e.state;
     if ((0, o.Z)(e)) {
         let e = (0, r.Z)(n);
         return {
@@ -17,48 +18,53 @@ function c(e) {
             tooltip: e
         };
     }
-    if ((null == e ? void 0 : e.type) === s.IIU.PLAYING && null != n)
+    if ((null == e ? void 0 : e.type) === l.IIU.PLAYING && null != n)
         return {
-            text: l.NW.format(l.t.lFApm5, { game: n }),
-            tooltip: l.NW.formatToPlainString(l.t.lFApm5, { game: n })
+            text: c.NW.format(c.t.lFApm5, { game: n }),
+            tooltip: c.NW.formatToPlainString(c.t.lFApm5, { game: n })
         };
-    if ((0, a.Z)(e) && t && null != u) {
-        var d;
-        let e = null == (d = u.split(';')) ? void 0 : d.join(', ');
+    if ((0, a.Z)(e) && t && null != d) {
+        var f;
+        let e = null == (f = d.split(';')) ? void 0 : f.join(', ');
         return {
-            text: l.NW.format(l.t.Vnuxub, { name: e }),
-            tooltip: l.NW.formatToPlainString(l.t.Vnuxub, { name: e })
+            text: c.NW.format(c.t.Vnuxub, { name: e }),
+            tooltip: c.NW.formatToPlainString(c.t.Vnuxub, { name: e })
         };
     }
-    return (null == e ? void 0 : e.type) === s.IIU.LISTENING && null != n
+    return (0, s.dS)(e) && null != n
         ? {
-              text: l.NW.format(l.t.Vnuxub, { name: n }),
-              tooltip: l.NW.formatToPlainString(l.t.Vnuxub, { name: n })
+              text: c.NW.format(c.t.pW3Ip6, { name: n }),
+              tooltip: c.NW.formatToPlainString(c.t.pW3Ip6, { name: n })
           }
-        : (0, i.Z)(e) && t && null != c
+        : (null == e ? void 0 : e.type) === l.IIU.LISTENING && null != n
           ? {
-                text: l.NW.format(l.t.pW3Ip6, { name: c }),
-                tooltip: l.NW.formatToPlainString(l.t.pW3Ip6, { name: c })
+                text: c.NW.format(c.t.Vnuxub, { name: n }),
+                tooltip: c.NW.formatToPlainString(c.t.Vnuxub, { name: n })
             }
-          : (null == e ? void 0 : e.type) === s.IIU.WATCHING && null != n
+          : (0, i.Z)(e) && t && null != u
             ? {
-                  text: l.NW.format(l.t.pW3Ip6, { name: n }),
-                  tooltip: l.NW.formatToPlainString(l.t.pW3Ip6, { name: n })
+                  text: c.NW.format(c.t.pW3Ip6, { name: u }),
+                  tooltip: c.NW.formatToPlainString(c.t.pW3Ip6, { name: u })
               }
-            : (null == e ? void 0 : e.type) === s.IIU.COMPETING && null != n
+            : (null == e ? void 0 : e.type) === l.IIU.WATCHING && null != n
               ? {
-                    text: l.NW.format(l.t.QQ2wVF, { name: n }),
-                    tooltip: l.NW.formatToPlainString(l.t.QQ2wVF, { name: n })
+                    text: c.NW.format(c.t.pW3Ip6, { name: n }),
+                    tooltip: c.NW.formatToPlainString(c.t.pW3Ip6, { name: n })
                 }
-              : (null == e ? void 0 : e.type) === s.IIU.STREAMING && null != c
+              : (null == e ? void 0 : e.type) === l.IIU.COMPETING && null != n
                 ? {
-                      text: l.NW.format(l.t['0wJXSk'], { name: c }),
-                      tooltip: l.NW.formatToPlainString(l.t['0wJXSk'], { name: c })
+                      text: c.NW.format(c.t.QQ2wVF, { name: n }),
+                      tooltip: c.NW.formatToPlainString(c.t.QQ2wVF, { name: n })
                   }
-                : (null == e ? void 0 : e.type) === s.IIU.STREAMING && null != n
+                : (null == e ? void 0 : e.type) === l.IIU.STREAMING && null != u
                   ? {
-                        text: l.NW.format(l.t['0wJXSk'], { name: n }),
-                        tooltip: l.NW.formatToPlainString(l.t['0wJXSk'], { name: n })
+                        text: c.NW.format(c.t['0wJXSk'], { name: u }),
+                        tooltip: c.NW.formatToPlainString(c.t['0wJXSk'], { name: u })
                     }
-                  : {};
+                  : (null == e ? void 0 : e.type) === l.IIU.STREAMING && null != n
+                    ? {
+                          text: c.NW.format(c.t['0wJXSk'], { name: n }),
+                          tooltip: c.NW.formatToPlainString(c.t['0wJXSk'], { name: n })
+                      }
+                    : {};
 }
