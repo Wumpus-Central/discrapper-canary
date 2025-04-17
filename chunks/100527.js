@@ -255,10 +255,8 @@ var r = (function (e) {
         (e.REQUEST_TO_SPEAK = 'request to speak'),
         (e.STAGE_VIDEO_LIMIT = 'stage video limit'),
         (e.ACTIVITIES_MINI_SHELF = 'activities mini shelf'),
-        (e.APP_LAUNCHER_IN_VOICE_BANNER = 'app launcher in voice banner'),
         (e.APP_OAUTH2_LINK_EMBED = 'application oauth2 embed'),
         (e.APP_DMS_ENTRY_POINT_COMMAND_BUTTON = 'app_dms_entry_point_command_button'),
-        (e.APP_LAUNCHER = 'app launcher'),
         (e.APP_DETAIL = 'app detail'),
         (e.VC_TILE_ACTIVITY_INVITE = 'vc tile activity invite'),
         (e.VC_TILE_ACTIVITY_SUGGESTION = 'vc tile activity suggestion'),
@@ -417,6 +415,9 @@ var r = (function (e) {
         (e.AUDIENCE_TILE = 'audience tile'),
         (e.STAGE_TILE = 'stage tile'),
         (e.CHAT_WALLPAPER_PICKER = 'chat wallpaper picker'),
+        (e.APP_LAUNCHER = 'app launcher'),
+        (e.APP_LAUNCHER_IN_VOICE_BANNER = 'app launcher in voice banner'),
+        (e.APP_LAUNCHER_FRIENDS_TAB_JOIN_BUTTON = 'app launcher friends who play tab join friend'),
         e
     );
 })(r || {});

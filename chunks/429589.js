@@ -77,20 +77,21 @@ function f(e, t) {
     return i;
 }
 function _(e) {
-    var { activity: t, embeddedActivity: n, user: s, onAction: c, ButtonComponent: f = a.Z } = e,
-        _ = d(e, ['activity', 'embeddedActivity', 'user', 'onAction', 'ButtonComponent']);
-    let p = (0, o.e)({
+    var { activity: t, embeddedActivity: n, user: s, onAction: c, ButtonComponent: f = a.Z, location: _ } = e,
+        p = d(e, ['activity', 'embeddedActivity', 'user', 'onAction', 'ButtonComponent', 'location']);
+    let h = (0, o.e)({
         activity: null != t ? t : void 0,
         embeddedActivity: n,
         user: s,
-        onGameJoin: c
+        onGameJoin: c,
+        location: _
     });
-    if (null == p) return null;
-    let { isJoining: h, handleJoinRequest: m, buttonCTA: g, tooltip: E, isEnabled: b } = p;
+    if (null == h) return null;
+    let { isJoining: m, handleJoinRequest: g, buttonCTA: E, tooltip: b, isEnabled: y } = h;
     return (0, r.jsx)(
         i.ua7,
         {
-            text: E,
+            text: b,
             children: (e) => {
                 let { onMouseEnter: t, onMouseLeave: n } = e;
                 return (0, r.jsx)(
@@ -98,16 +99,16 @@ function _(e) {
                     u(
                         l(
                             {
-                                onClick: m,
+                                onClick: g,
                                 onMouseEnter: t,
                                 onMouseLeave: n,
-                                disabled: !b,
-                                submitting: h,
+                                disabled: !y,
+                                submitting: m,
                                 fullWidth: !0
                             },
-                            _
+                            p
                         ),
-                        { children: g }
+                        { children: E }
                     )
                 );
             }

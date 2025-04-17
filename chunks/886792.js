@@ -1,16 +1,17 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var i = n(200651),
     r = n(192379),
     l = n(481060),
     o = n(620662),
     a = n(841784),
     s = n(429589),
-    c = n(499493),
-    u = n(797342),
-    d = n(314734),
-    p = n(981631),
-    m = n(977481);
-function f(e) {
+    c = n(100527),
+    u = n(499493),
+    d = n(797342),
+    p = n(314734),
+    m = n(981631),
+    f = n(977481);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -35,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function h(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,38 +54,40 @@ function h(e, t) {
         e
     );
 }
-function b(e) {
+function _(e) {
     let { entry: t } = e,
-        { user: n, activity: b, embeddedActivity: _ } = (0, u.n)(t),
-        y = r.useMemo(() => {
-            if (null == n || null == b) return null;
-            let e = (0, o.Z)(b, p.xjy.JOIN) || (0, a.Z)(b);
+        { user: n, activity: _, embeddedActivity: y } = (0, d.n)(t),
+        x = r.useMemo(() => {
+            if (null == n || null == _) return null;
+            let e = (0, o.Z)(_, m.xjy.JOIN) || (0, a.Z)(_);
             return e && e
                 ? (0, i.jsx)(s.Z, {
-                      embeddedActivity: _,
-                      activity: b,
+                      embeddedActivity: y,
+                      activity: _,
                       user: n,
                       ButtonComponent: (e) =>
                           (0, i.jsx)(
                               l.zxk,
-                              h(f({}, e), {
-                                  className: m.joinButton,
+                              b(h({}, e), {
+                                  className: f.joinButton,
                                   onClick: function (t) {
                                       var n;
                                       t.stopPropagation(), null == (n = e.onClick) || n.call(e, t);
-                                  }
+                                  },
+                                  color: l.Ttl.PRIMARY
                               })
-                          )
+                          ),
+                      location: c.Z.APP_LAUNCHER_FRIENDS_TAB_JOIN_BUTTON
                   })
                 : null;
-        }, [b, _, n]);
+        }, [_, y, n]);
     return (0, i.jsx)(
-        c.Z,
-        h(f({}, e), {
+        u.Z,
+        b(h({}, e), {
             onReaction: () => {},
             onRequestOpen: () => {},
-            customCTA: null != y ? y : null,
-            popoutClassname: d.I4,
+            customCTA: null != x ? x : null,
+            popoutClassname: p.I4,
             popoutPosition: 'left'
         })
     );
