@@ -48,8 +48,8 @@ var r,
     w = n(867003),
     W = n(768419),
     B = n(590415),
-    Y = n(581883),
-    z = n(199902),
+    z = n(581883),
+    Y = n(199902),
     H = n(314897),
     K = n(881998),
     q = n(463395),
@@ -132,7 +132,6 @@ let eM = {
         [eD.kVF.WIN7_8_DEPRECATED_MESSAGE]: 'hideWin78DeprecationMessageNotice',
         [eD.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: 'hidePremiumTier2TrialOfferEndingNotice',
         [eD.kVF.BLOCK_USER_FEEDBACK_NAGBAR]: 'hideNagbarBlockUserFeedbackNotice',
-        [eD.kVF.IGNORE_USER_FEEDBACK_NAGBAR]: 'hideNagbarIgnoreUserFeedbackNotice',
         [eD.kVF.MACOS_19_DEPRECATED_MESSAGE]: 'hideMacOS19DeprecationMessageNotice'
     },
     ev = new Set([eD.kVF.NO_INPUT_DETECTED, eD.kVF.NO_INPUT_DEVICES_DETECTED, eD.kVF.STREAMER_MODE, eD.kVF.VIDEO_UNSUPPORTED_BROWSER, eD.kVF.SPOTIFY_AUTO_PAUSED, eD.kVF.DISPATCH_ERROR, eD.kVF.DISPATCH_ERROR, eD.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS, eD.kVF.BLOCKED_BY_PROXY]),
@@ -172,8 +171,8 @@ function eW(e) {
     return !!i || (null != r && '' !== r ? c.K.get(r) : !!ev.has(e) && i);
 }
 let eB = [eD.kVF.QUARANTINED, eD.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eD.kVF.VIEWING_ROLES, eD.kVF.INVITED_TO_SPEAK, eD.kVF.LURKING_GUILD, eD.kVF.VOICE_DISABLED, eD.kVF.NO_INPUT_DEVICES_DETECTED, eD.kVF.NO_INPUT_DETECTED, eD.kVF.HARDWARE_MUTE, eD.kVF.H264_DISABLED, eD.kVF.DISPATCH_ERROR, eD.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS, eD.kVF.SPOTIFY_AUTO_PAUSED, eD.kVF.WIN32_DEPRECATED_MESSAGE, eD.kVF.WIN7_8_DEPRECATED_MESSAGE, eD.kVF.MACOS_19_DEPRECATED_MESSAGE, eD.kVF.BLOCKED_BY_PROXY, eD.kVF.VOICE_CONNECTED_LAST_SESSION, eD.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION, eD.kVF.GUILD_RAID_NOTIFICATION, eD.kVF.GIFTING_PROMOTION_REMINDER, eD.kVF.QUESTS_PROGRESS_INTERRUPTION, eD.kVF.UNCLAIMED_ACCOUNT, eD.kVF.POMELO_ELIGIBLE, eD.kVF.PENDING_MEMBER, eD.kVF.CHECKOUT_RECOVERY_NAGBAR, eD.kVF.OUTBOUND_PROMOTION, eD.kVF.CORRUPT_INSTALLATION, eD.kVF.VIDEO_UNSUPPORTED_BROWSER, eD.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK, eD.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL, eD.kVF.STREAMER_MODE, eD.kVF.SCHEDULED_MAINTENANCE, eD.kVF.BOUNCED_EMAIL_DETECTED, eD.kVF.UNVERIFIED_ACCOUNT, eD.kVF.PREMIUM_TIER_2_TRIAL_ENDING, eD.kVF.PREMIUM_TIER_0_TRIAL_ENDING, eD.kVF.PREMIUM_UNCANCEL, eD.kVF.PREMIUM_MISSING_PAYMENT, eD.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT, eD.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT, eD.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT, eD.kVF.PREMIUM_REACTIVATE, eD.kVF.ACTIVATE_SERVER_SUBSCRIPTION, eD.kVF.MFA_SMS_BACKUP, eD.kVF.APPLICATION_TEST_MODE, eD.kVF.LOCALIZED_PRICING, eD.kVF.DOWNLOAD_NAG, eD.kVF.CONNECT_SPOTIFY, eD.kVF.CONNECT_PLAYSTATION, eD.kVF.SURVEY, eD.kVF.SERVER_USAGE_SURVEY, eD.kVF.SAFETY_USER_SENTIMENT_NAGBAR, eD.kVF.UU_MIGRATION, eD.kVF.BLOCK_USER_FEEDBACK_NAGBAR, eD.kVF.IGNORE_USER_FEEDBACK_NAGBAR],
-    eY = [eD.kVF.QUARANTINED, eD.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eD.kVF.VIEWING_ROLES, eD.kVF.INVITED_TO_SPEAK, eD.kVF.LURKING_GUILD, eD.kVF.VOICE_DISABLED, eD.kVF.NO_INPUT_DETECTED, eD.kVF.HARDWARE_MUTE, eD.kVF.H264_DISABLED, eD.kVF.DISPATCH_ERROR, eD.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS, eD.kVF.SPOTIFY_AUTO_PAUSED, eD.kVF.BLOCKED_BY_PROXY, eD.kVF.VOICE_CONNECTED_LAST_SESSION, eD.kVF.PENDING_MEMBER, eD.kVF.STREAMER_MODE, eD.kVF.SCHEDULED_MAINTENANCE],
-    ez = {
+    ez = [eD.kVF.QUARANTINED, eD.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eD.kVF.VIEWING_ROLES, eD.kVF.INVITED_TO_SPEAK, eD.kVF.LURKING_GUILD, eD.kVF.VOICE_DISABLED, eD.kVF.NO_INPUT_DETECTED, eD.kVF.HARDWARE_MUTE, eD.kVF.H264_DISABLED, eD.kVF.DISPATCH_ERROR, eD.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS, eD.kVF.SPOTIFY_AUTO_PAUSED, eD.kVF.BLOCKED_BY_PROXY, eD.kVF.VOICE_CONNECTED_LAST_SESSION, eD.kVF.PENDING_MEMBER, eD.kVF.STREAMER_MODE, eD.kVF.SCHEDULED_MAINTENANCE],
+    eY = {
         [eD.kVF.GIFTING_PROMOTION_REMINDER]: {
             predicate: () => {
                 let { enabled: e } = L.Ys.getCurrentConfig({ location: 'NoticeStore' }, { autoTrackExposure: !1 }),
@@ -510,14 +509,14 @@ let eB = [eD.kVF.QUARANTINED, eD.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eD.kVF.VI
         },
         [eD.kVF.QUESTS_PROGRESS_INTERRUPTION]: {
             predicate: () => {
-                let e = z.Z.getCurrentUserActiveStream();
+                let e = Y.Z.getCurrentUserActiveStream();
                 if (null == e) return !1;
                 let t = (0, P.V9)(e),
                     n = V.Z.getStreamHeartbeatFailure(t);
                 return null != n && Date.now() - n.firstFailedAt >= em.Ot;
             },
             metadata: () => {
-                let e = z.Z.getCurrentUserActiveStream();
+                let e = Y.Z.getCurrentUserActiveStream();
                 return { streamKey: null != e ? (0, P.V9)(e) : null };
             }
         },
@@ -537,11 +536,8 @@ let eB = [eD.kVF.QUARANTINED, eD.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eD.kVF.VI
             })
         },
         [eD.kVF.IGNORE_USER_FEEDBACK_NAGBAR]: {
-            predicate: () => !eW(eD.kVF.IGNORE_USER_FEEDBACK_NAGBAR) && w.Rr(),
-            metadata: () => ({
-                dismissUntil: l()().add(180, 'days').toDate(),
-                sampleRate: 0.1
-            })
+            predicate: () => w.Rr(),
+            metadata: () => ({ sampleRate: 0.1 })
         }
     };
 function eH() {
@@ -555,10 +551,10 @@ function eH() {
         o = ea.Z.getGuildId(),
         a = eo.Z.getVoiceChannelId(),
         s = null != a ? e_.Z.getVoiceStateForChannel(a) : null;
-    for (let n of eg.a ? eY : eB)
+    for (let n of eg.a ? ez : eB)
         if (
-            null != ez[n] &&
-            ez[n].predicate({
+            null != eY[n] &&
+            eY[n].predicate({
                 selectedGuildId: o,
                 voiceChannelId: a,
                 voiceState: s,
@@ -568,7 +564,7 @@ function eH() {
             })
         ) {
             let l =
-                null == (e = (t = ez[n]).metadata)
+                null == (e = (t = eY[n]).metadata)
                     ? void 0
                     : e.call(t, {
                           currentUser: r,
@@ -627,7 +623,7 @@ function eK() {
 }
 class eq extends (r = o.ZP.Store) {
     initialize() {
-        this.syncWith([eu.Z, ei.Z, Q.Z, ea.Z, j.Z, eT.Z, K.Z, J.Z, Y.Z, D.Z, V.Z, z.Z], eH), this.waitFor(eE.default, es.Z, ee.Z, $.ZP, el.Z, et.Z, ec.Z, p.Z, ea.Z, ed.Z, W.Z, A.ZP, ei.Z, eP.Z, ef.Z, ep.Z, en.Z, eN.ZP, eC.Z, Q.Z, eO.Z, er.Z, j.Z, eS.Z, eT.Z, J.Z, h.Z, O.Z, x.Z, V.Z, z.Z);
+        this.syncWith([eu.Z, ei.Z, Q.Z, ea.Z, j.Z, eT.Z, K.Z, J.Z, z.Z, D.Z, V.Z, Y.Z], eH), this.waitFor(eE.default, es.Z, ee.Z, $.ZP, el.Z, et.Z, ec.Z, p.Z, ea.Z, ed.Z, W.Z, A.ZP, ei.Z, eP.Z, ef.Z, ep.Z, en.Z, eN.ZP, eC.Z, Q.Z, eO.Z, er.Z, j.Z, eS.Z, eT.Z, J.Z, h.Z, O.Z, x.Z, V.Z, Y.Z);
     }
     hasNotice() {
         return null != eV && null != eV.type;

@@ -251,7 +251,13 @@ let S = {
                     rejectWithError: !1
                 })
                 .then(() => {
-                    c.Z.showIgnoreSuccessToast(e, n), i.uv.announce(E.NW.string(E.t.Us93CQ));
+                    c.Z.showIgnoreSuccessToast(e, n),
+                        i.uv.announce(E.NW.string(E.t.Us93CQ)),
+                        o.Z.dispatch({
+                            type: 'RELATIONSHIP_IGNORE_USER_SUCCESS',
+                            userId: e,
+                            timestamp: Date.now()
+                        });
                 })
                 .catch(() => {
                     c.Z.showFailedToast(), i.uv.announce(E.NW.string(E.t.n6Jo3N));
