@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => _,
-    q: () => b
+    Z: () => b,
+    q: () => _
 }),
     n(290780);
 var r = n(200651),
@@ -17,14 +17,14 @@ var r = n(200651),
     p = n(778825),
     h = n(388032),
     f = n(835813);
-function _(e) {
+function b(e) {
     let { guildId: t, className: n, globalOption: i, hideDivider: s = !1, onChange: l, renderOptionSuffix: o } = e;
     return (0, r.jsx)(d.Z, {
         className: a()(f.section, n),
         title: h.NW.string(h.t.ref7Ki),
         hideDivider: s,
         forcedDivider: !0,
-        children: (0, r.jsx)(b, {
+        children: (0, r.jsx)(_, {
             guildId: t,
             onChange: l,
             renderOptionSuffix: o,
@@ -32,23 +32,25 @@ function _(e) {
         })
     });
 }
-function b(e) {
+function _(e) {
     let { guildId: t, globalOption: n, onChange: s, renderOptionSuffix: a } = e,
         d = (0, l.e7)([p.Z], () => p.Z.showNotice()),
-        _ = (0, l.e7)([m.ZP], () => m.ZP.getFlattenedGuildIds()),
-        b = (0, l.e7)([u.Z], () => u.Z.getGuilds()),
+        b = (0, l.e7)([m.ZP], () => m.ZP.getFlattenedGuildIds()),
+        _ = (0, l.e7)([u.Z], () => u.Z.getGuilds()),
         N = i.useMemo(() => {
-            let e = _.map((e) => {
-                let t = b[e];
-                return null == t
-                    ? null
-                    : {
-                          label: t.name,
-                          value: t.id
-                      };
-            }).filter(g.lm);
+            let e = b
+                .map((e) => {
+                    let t = _[e];
+                    return null == t
+                        ? null
+                        : {
+                              label: t.name,
+                              value: t.id
+                          };
+                })
+                .filter(g.lm);
             return null != n && e.unshift(n), e;
-        }, [_, b, n]),
+        }, [b, _, n]),
         x = i.useCallback(
             (e) => {
                 let t = (null == e ? void 0 : e.label) === (null == n ? void 0 : n.label) && (null == e ? void 0 : e.value) === (null == n ? void 0 : n.value);
@@ -56,18 +58,18 @@ function b(e) {
                     ? null
                     : (0, r.jsx)(c.Z, {
                           className: f.guildSelectOptionIcon,
-                          guild: b[e.value],
+                          guild: _[e.value],
                           size: c.Z.Sizes.SMOL,
                           active: !0
                       });
             },
-            [b, n]
+            [_, n]
         );
     return (0, r.jsx)(o.VcW, {
         isDisabled: d,
         onChange: (e) => {
             if ('' === e || e === (null == n ? void 0 : n.value)) return void s(null);
-            let t = b[e];
+            let t = _[e];
             null != t && s(t);
         },
         value: t,
