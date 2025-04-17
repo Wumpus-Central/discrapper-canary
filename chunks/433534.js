@@ -27,10 +27,7 @@ function l(e) {
     return !(
         (null != a && !a.includes(r.Y.USER_INSTALL)) ||
         t === o.bi.BUILT_IN ||
-        i.ZP.hasUserStateApplication({
-            applicationId: t,
-            authorizedOnly: !0
-        }) ||
+        i.ZP.hasUserStateApplication(t) ||
         (null != n &&
             i.ZP.hasContextStateApplication({
                 applicationId: t,

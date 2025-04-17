@@ -232,8 +232,7 @@ function ei(e) {
         let t = {
             descriptor: j(M({}, (0, R.X0)(ew(e))), {
                 permissions: null != e.permissions ? (0, p.tk)(eM(e.permissions, a)) : void 0,
-                botId: e.bot_id,
-                authorized: e.authorized
+                botId: e.bot_id
             }),
             commands: {}
         };
@@ -341,7 +340,7 @@ function el(e) {
                   },
             { serverVersion: B }
         ),
-        eh.hasUserStateApplication({ applicationId: t }) && Q({ type: 'user' }, { serverVersion: B }),
+        eh.hasUserStateApplication(t) && Q({ type: 'user' }, { serverVersion: B }),
         eh.hasApplicationState(t) &&
             Q(
                 {
@@ -415,10 +414,8 @@ class ep extends (r = l.ZP.Store) {
     }
     hasUserStateApplication(e) {
         var t, n;
-        let { applicationId: r, authorizedOnly: i = !1 } = e,
-            o = this.indices[G],
-            a = (null != (n = null == o || null == (t = o.result) ? void 0 : t.sections) ? n : {})[r];
-        return null != a && (!i || !1 !== a.descriptor.authorized);
+        let r = this.indices[G];
+        return null != (null != (n = null == r || null == (t = r.result) ? void 0 : t.sections) ? n : {})[e];
     }
     getApplicationState(e) {
         var t;
