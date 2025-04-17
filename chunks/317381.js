@@ -87,7 +87,8 @@ let D = {
         everLaunchedActivities: new Set(),
         seenNewActivities: {},
         seenUpdatedActivities: {},
-        surfacesToShowNewActivityIndicator: new Set()
+        surfacesToShowNewActivityIndicator: new Set(),
+        lastCheckedForBadgeableActivities: null
     },
     L = [],
     x = [],
@@ -349,7 +350,8 @@ function em(e) {
                 r.omit_badge_from_surfaces.includes(e) || D.surfacesToShowNewActivityIndicator.add(e);
             }),
             (D.seenUpdatedActivities[t] = r.label_until));
-    });
+    }),
+        (D.lastCheckedForBadgeableActivities = new Date(n).toISOString());
 }
 function eg(e) {
     let { guildId: t, activities: n } = e,
@@ -570,7 +572,8 @@ C(eP, 'displayName', 'EmbeddedActivitiesStore'),
             return w(R({}, e), { everLaunchedActivities: n });
         },
         (e) => (delete e.usersHavePlayedByApp, R({}, e)),
-        (e) => ((e.surfacesToShowNewActivityIndicator = new Set()), e.shouldShowNewActivityIndicator && e.surfacesToShowNewActivityIndicator.add(l.eR.VOICE_LAUNCHER), delete e.shouldShowNewActivityIndicator, R({}, e))
+        (e) => ((e.surfacesToShowNewActivityIndicator = new Set()), e.shouldShowNewActivityIndicator && e.surfacesToShowNewActivityIndicator.add(l.eR.VOICE_LAUNCHER), delete e.shouldShowNewActivityIndicator, R({}, e)),
+        (e) => w(R({}, e), { lastCheckedForBadgeableActivities: null })
     ]);
 let ew = new eP(s.Z, {
         ACTIVITY_LAYOUT_MODE_UPDATE: eN,

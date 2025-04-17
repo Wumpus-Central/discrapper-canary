@@ -54,7 +54,10 @@ let U = i.forwardRef(function (e, t) {
         }),
         [T]
     );
-    let F = (0, g.a)(h.eR.TEXT_LAUNCHER),
+    let F = (0, g.a)({
+            surface: h.eR.TEXT_LAUNCHER,
+            skipFetchingShelf: I === f.O.NONE
+        }),
         H = i.useCallback(() => {
             (0, _.yw)(R.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED, {
                 source: v._b.TEXT,
