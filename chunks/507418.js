@@ -1,36 +1,41 @@
-n.d(t, { Z: () => p }), n(35282);
+n.d(t, { Z: () => m }), n(35282);
 var r = n(200651);
 n(192379);
 var i = n(512722),
-    a = n.n(i),
-    l = n(83474),
+    l = n.n(i),
+    a = n(83474),
     o = n(245315),
     s = n(556041),
-    c = n(347475),
+    c = n(726033),
     u = n(592125),
-    d = n(368859);
-function p(e, t) {
-    var n, i, p, m;
+    d = n(594174),
+    p = n(368859);
+function m(e, t) {
+    var n, i, m, f;
     if ((0, o.cp)(t)) return (0, r.jsx)(s.Z, {});
-    if ((0, d.Z)(t)) {
-        let a = (null != (i = null == t || null == (n = t.author) ? void 0 : n.username) ? i : '').split(' ').slice(0, -1).join(' '),
+    if ((0, p.Z)(t)) {
+        let l = (null != (i = null == t || null == (n = t.author) ? void 0 : n.username) ? i : '').split(' ').slice(0, -1).join(' '),
             { guild_id: o, channel_id: s, message_id: c } = t.messageReference;
         if (null != o)
-            return (0, r.jsx)(l.ZP, {
+            return (0, r.jsx)(a.ZP, {
                 setPopoutRef: e.setPopoutRef,
                 guildId: o,
                 channelId: s,
                 messageId: c,
-                name: a
+                name: l
             });
     }
     if (null != t.interaction && 'SENDING' === t.state) return (0, r.jsx)(r.Fragment, {});
-    let f = u.Z.getChannel(t.channel_id);
+    let h = null != t.webhookId ? t.author : d.default.getUser(t.author.id);
+    l()(null != h, 'renderUserGuildPopout: user should never be null');
+    let g = d.default.getCurrentUser();
+    l()(null != g, 'renderUserGuildPopout: currentUser should never be null');
+    let _ = u.Z.getChannel(t.channel_id);
     return (
-        a()(null != f, 'renderUserGuildPopout: channel should never be null'),
+        l()(null != _, 'renderUserGuildPopout: channel should never be null'),
         (0, r.jsx)(
             c.Z,
-            ((p = (function (e) {
+            ((m = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -55,16 +60,16 @@ function p(e, t) {
                 }
                 return e;
             })({}, e)),
-            (m = m =
+            (f = f =
                 {
+                    user: h,
+                    currentUser: g,
+                    guildId: _.guild_id,
                     channelId: t.channel_id,
-                    messageId: t.id,
-                    guildId: f.guild_id,
-                    userId: t.author.id,
-                    user: null != t.webhookId ? t.author : void 0
+                    messageId: t.id
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(p, Object.getOwnPropertyDescriptors(m))
+                ? Object.defineProperties(m, Object.getOwnPropertyDescriptors(f))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -72,10 +77,10 @@ function p(e, t) {
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(m)).forEach(function (e) {
-                      Object.defineProperty(p, e, Object.getOwnPropertyDescriptor(m, e));
+                  })(Object(f)).forEach(function (e) {
+                      Object.defineProperty(m, e, Object.getOwnPropertyDescriptor(f, e));
                   }),
-            p)
+            m)
         )
     );
 }

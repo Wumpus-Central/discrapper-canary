@@ -1,132 +1,57 @@
-n.d(t, { Z: () => v }), n(388685);
-var r = n(200651),
-    i = n(192379),
-    o = n(512722),
-    a = n.n(o),
-    s = n(442837),
-    l = n(695346),
-    c = n(699516),
-    u = n(594174),
-    d = n(614417),
-    f = n(601665),
-    _ = n(103113),
-    p = n(738953);
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+n.d(t, { Z: () => p });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    l = n(906732),
+    o = n(646476),
+    c = n(197115),
+    d = n(388032),
+    u = n(944680),
+    m = n(568147),
+    g = n(332796);
+let p = (e) => {
+    let { className: t, imageClassName: n, textContainerOverrideStyles: i, location: p, analyticsLocation: h } = e,
+        { analyticsLocations: f } = (0, l.ZP)(p),
+        b = (0, o.rK)(),
+        { enabled: _ } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: b }),
+        N = _ && b;
+    return (0, r.jsx)(l.Gt, {
+        value: f,
+        children: (0, r.jsxs)('div', {
+            className: s()(u.container, t),
+            children: [
+                (0, r.jsxs)('div', {
+                    className: u.textContainer,
+                    style: i,
+                    children: [
+                        (0, r.jsx)(a.X6q, {
+                            variant: 'heading-lg/extrabold',
+                            className: u.heading,
+                            children: N ? d.NW.string(d.t.LB3bJC) : d.NW.string(d.t.Ve9Ge3)
+                        }),
+                        (0, r.jsx)(a.Text, {
+                            variant: 'text-sm/medium',
+                            children: N ? d.NW.string(d.t.u49cn5) : d.NW.string(d.t.yQ06u7)
+                        }),
+                        (0, r.jsx)(c.Z, {
+                            isGift: !0,
+                            className: u.giftCardButton,
+                            look: a.zxk.Looks.OUTLINED,
+                            buttonText: d.NW.string(d.t.Ve9Ge3),
+                            buttonTextClassName: u.giftButtonCTA,
+                            color: a.zxk.Colors.CUSTOM,
+                            premiumModalAnalyticsLocation: h
+                        })
+                    ]
+                }),
+                (0, r.jsx)('img', {
+                    src: N ? g : m,
+                    className: s()(u.bannerImage, n),
+                    alt: 'gift nitro banner'
                 })
-            )),
-            r.forEach(function (t) {
-                h(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function g(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function E(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function b(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = y(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function y(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-function v(e) {
-    var { userId: t, user: n } = e,
-        o = b(e, ['userId', 'user']);
-    let h = (0, s.e7)([u.default], () => u.default.getUser(t), [t]),
-        g = null != n ? n : h;
-    a()(null != g, 'UserProfilePopoutWrapper: user cannot be undefined');
-    let y = (0, s.e7)([u.default], () => u.default.getCurrentUser());
-    a()(null != y, 'UserProfilePopoutWrapper: currentUser cannot be undefined');
-    let { isBlocked: v, isIgnored: O } = (0, s.cj)([c.Z], () => ({
-            isBlocked: c.Z.isBlocked(g.id),
-            isIgnored: c.Z.isIgnored(g.id)
-        })),
-        [I, S] = i.useState(v || O || v),
-        T = l.Rt.useSetting();
-    return I && !(O && T)
-        ? (0, r.jsx)(
-              d.Z,
-              E(m({}, o), {
-                  user: g,
-                  currentUser: y,
-                  onViewBlockedProfileClick: () => S(!1)
-              })
-          )
-        : g.isNonUserBot()
-          ? (0, r.jsx)(
-                _.Z,
-                E(m({}, o), {
-                    user: g,
-                    currentUser: y
-                })
-            )
-          : g.bot
-            ? (0, r.jsx)(
-                  f.Z,
-                  E(m({}, o), {
-                      user: g,
-                      currentUser: y
-                  })
-              )
-            : (0, r.jsx)(
-                  p.Z,
-                  E(m({}, o), {
-                      user: g,
-                      currentUser: y
-                  })
-              );
-}
+            ]
+        })
+    });
+};
