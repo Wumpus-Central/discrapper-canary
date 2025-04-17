@@ -1,7 +1,7 @@
 n.d(t, {
-    $h: () => S,
-    jG: () => C,
-    yI: () => j
+    $h: () => j,
+    jG: () => S,
+    yI: () => E
 });
 var r = n(200651);
 n(192379);
@@ -19,37 +19,36 @@ var i = n(120356),
     g = n(795338),
     m = n(279604),
     b = n(981631),
-    y = n(921944),
-    _ = n(680278),
+    _ = n(921944),
+    y = n(680278),
     v = n(388032),
-    O = n(423151);
-function C(e) {
+    O = n(423151),
+    C = n(324670);
+function S(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
     return (0, r.jsx)(x, {
-        asset: (0, r.jsx)(E, {
-            powerups: n,
-            markAsDismissed: i
-        }),
-        header: v.NW.formatToPlainString(_.Z['Zg/m9P'], { perkName: n.title }),
-        content: v.NW.formatToPlainString(_.Z['1EGXSE'], { perkName: n.title }),
+        asset: (0, r.jsx)(g.g, { className: O.image }),
+        header: v.NW.formatToPlainString(y.Z['Zg/m9P'], { perkName: n.title }),
+        content: v.NW.formatToPlainString(y.Z['1EGXSE'], { perkName: n.title }),
         buttonCTA: v.NW.string(v.t.RzWDqa),
         onClick: () => (0, f.Z)(t, n.skuId),
         markAsDismissed: i
     });
 }
-function S(e) {
+function j(e) {
     let { guildId: t, markAsDismissed: n } = e,
         i = (0, p.Z)(t),
-        l = (0, h.Z)(t);
-    if (0 === l.length) return;
-    let o = l.length > 1 ? ''.concat(l[0].title, ' & ').concat(l[1].title) : ''.concat(l[0].title);
+        o = (0, h.Z)(t);
+    if (0 === o.length) return;
+    let s = o.length > 1 ? ''.concat(o[0].title, ' & ').concat(o[1].title) : ''.concat(o[0].title);
     return (0, r.jsx)(x, {
-        asset: (0, r.jsx)(E, {
-            powerups: l,
-            markAsDismissed: n
+        asset: (0, r.jsx)('img', {
+            alt: '',
+            src: C.Z,
+            className: l()(O.image, O.newPerksImage)
         }),
-        header: v.NW.string(_.Z.xyE2AQ),
-        content: i ? v.NW.formatToPlainString(_.Z.IJP4YG, { perks: o }) : v.NW.formatToPlainString(_.Z['6kywho'], { perks: o }),
+        header: v.NW.string(y.Z.xyE2AQ),
+        content: i ? v.NW.formatToPlainString(y.Z.IJP4YG, { perks: s }) : v.NW.formatToPlainString(y.Z['6kywho'], { perks: s }),
         buttonCTA: v.NW.string(v.t.RzWDqa),
         onClick: () =>
             i
@@ -62,7 +61,7 @@ function S(e) {
         caretPosition: i ? u.DF.LEFT_TOP : u.DF.TOP_CENTER
     });
 }
-function j(e) {
+function E(e) {
     let { guildId: t, powerups: n, markAsDismissed: i } = e,
         l = (0, s.e7)([d.Z], () => {
             var e;
@@ -73,38 +72,23 @@ function j(e) {
     let a = n.length > 1 ? ''.concat(n[0].title, ' & ').concat(n[1].title) : ''.concat(n[0].title),
         c = 1 === n.length;
     return (0, r.jsx)(x, {
-        asset: (0, r.jsx)(E, {
-            powerups: n,
-            markAsDismissed: i
-        }),
-        header: v.NW.formatToPlainString(_.Z.LmpChI, { guildName: l }),
-        content: n.length > 1 ? v.NW.formatToPlainString(_.Z.wcQOqK, { perks: a }) : v.NW.formatToPlainString(_.Z.ZF8NT0, { perk: a }),
-        buttonCTA: c ? v.NW.string(_.Z.gSxlHR) : v.NW.string(v.t.RzWDqa),
+        asset:
+            1 === n.length
+                ? (0, r.jsx)(g.m, {
+                      className: O.image,
+                      powerup: n[0]
+                  })
+                : (0, r.jsx)(g.g, { className: O.image }),
+        header: v.NW.formatToPlainString(y.Z.LmpChI, { guildName: l }),
+        content: n.length > 1 ? v.NW.formatToPlainString(y.Z.wcQOqK, { perks: a }) : v.NW.formatToPlainString(y.Z.ZF8NT0, { perk: a }),
+        buttonCTA: c ? v.NW.string(y.Z.gSxlHR) : v.NW.string(v.t.RzWDqa),
         onClick: (e) => (c ? o(e) : (0, f.Z)(t)),
         markAsDismissed: i
     });
 }
-function E(e) {
-    let { powerups: t, markAsDismissed: n } = e;
-    return (0, r.jsxs)('div', {
-        className: O.imageContainer,
-        children: [
-            Array.isArray(t) && 1 === t.length
-                ? (0, r.jsx)(g.m, {
-                      className: O.image,
-                      powerup: t[0]
-                  })
-                : (0, r.jsx)(g.g, { className: O.image }),
-            (0, r.jsx)(a.olH, {
-                className: O.close,
-                onClick: () => n(y.L.USER_DISMISS)
-            })
-        ]
-    });
-}
 function x(e) {
-    var { header: t, content: n, caretPosition: i } = e,
-        s = (function (e, t) {
+    var { asset: t, header: n, content: i, caretPosition: s, markAsDismissed: c } = e,
+        d = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -122,9 +106,9 @@ function x(e) {
                 for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['header', 'content', 'caretPosition']);
-    let a = null != i ? i : u.DF.LEFT_TOP,
-        c = a === u.DF.TOP_CENTER || a === u.DF.LEFT_TOP ? O[a] : '';
+        })(e, ['asset', 'header', 'content', 'caretPosition', 'markAsDismissed']);
+    let h = null != s ? s : u.DF.LEFT_TOP,
+        p = h === u.DF.TOP_CENTER || h === u.DF.LEFT_TOP ? O[h] : '';
     return (0, r.jsx)(
         u.ZP,
         (function (e) {
@@ -153,21 +137,32 @@ function x(e) {
             return e;
         })(
             {
+                asset: (0, r.jsxs)('div', {
+                    className: O.imageContainer,
+                    children: [
+                        t,
+                        (0, r.jsx)(a.olH, {
+                            className: O.close,
+                            onClick: () => (null == c ? void 0 : c(_.L.USER_DISMISS))
+                        })
+                    ]
+                }),
                 header: (0, r.jsx)(o.xv, {
                     variant: 'text-md/semibold',
-                    children: t
+                    children: n
                 }),
                 content: (0, r.jsx)(o.xv, {
                     variant: 'text-sm/medium',
                     color: 'text-muted',
-                    children: n
+                    children: i
                 }),
-                className: l()(O.container, c),
+                className: l()(O.container, p),
                 headerClassName: O.header,
                 contentClassName: O.header,
-                caretPosition: a
+                caretPosition: h,
+                markAsDismissed: c
             },
-            s
+            d
         )
     );
 }
