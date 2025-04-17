@@ -1,17 +1,17 @@
-n.d(t, { Z: () => o });
-var r = n(570140),
-    i = n(149071),
-    l = n(9156);
-let o = {
+r.d(t, { Z: () => l });
+var n = r(570140),
+    i = r(149071),
+    o = r(9156);
+let l = {
     update(e) {
-        r.Z.dispatch({
+        n.Z.dispatch({
             type: 'CHANNEL_COLLAPSE',
             channelId: e
         });
     },
     toggleCollapseGuild(e) {
-        i.Z.saveUserGuildSettings(e, { hide_muted_channels: !l.ZP.isGuildCollapsed(e) }),
-            r.Z.dispatch({
+        i.Z.saveUserGuildSettings(e, { hide_muted_channels: !o.ZP.isGuildCollapsed(e) }),
+            n.Z.dispatch({
                 type: 'GUILD_TOGGLE_COLLAPSE_MUTED',
                 guildId: e
             });

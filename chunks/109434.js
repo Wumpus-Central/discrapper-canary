@@ -103,7 +103,7 @@ class b {
                 this.setChannelState(e, { layoutType: t }), h.Z.setLayout(t);
             }),
             (this.setTagSetting = (e, t) => {
-                this.setChannelState(e, { tagSetting: t });
+                this.setChannelState(e, { tagSetting: t }), h.Z.setTagSetting(t);
             }),
             (this.setScrollPosition = (e, t) => {
                 this.setChannelState(e, { scrollPosition: t });

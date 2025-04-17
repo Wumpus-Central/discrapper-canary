@@ -3,23 +3,23 @@ var r = n(200651);
 n(192379);
 var i = n(442837),
     l = n(481060),
-    o = n(740492),
-    a = n(27584),
+    a = n(740492),
+    o = n(27584),
     u = n(295510),
-    c = n(394059),
+    d = n(394059),
     s = n(65154),
-    d = n(388032);
+    c = n(388032);
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Yn.DEFAULT,
-        [n, f, p] = (0, a.Z)(e, t),
-        b = (0, i.e7)([o.ZP], () => o.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
+        [n, f, p] = (0, o.Z)(e, t),
+        v = (0, i.e7)([a.ZP], () => a.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
     return n
         ? (0, r.jsx)(l.S89, {
               id: 'self-video-hide',
-              label: d.NW.string(d.t.MH8ESU),
+              label: c.NW.string(c.t.MH8ESU),
               checked: !f,
               action: () => {
-                  if (b || f) return p(!f);
+                  if (v || f) return p(!f);
                   (0, l.h7j)((e) => {
                       var t, n;
                       return (0, r.jsx)(
@@ -51,7 +51,7 @@ function f(e) {
                           })({}, e)),
                           (n = n =
                               {
-                                  type: c.K.VIDEO,
+                                  type: d.K.VIDEO,
                                   onConfirm: () => p(!f)
                               }),
                           Object.getOwnPropertyDescriptors

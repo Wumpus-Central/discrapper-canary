@@ -366,7 +366,7 @@ function eK(e) {
         p = (0, C.KF)(t.id),
         h = (0, C.g5)(p),
         { userInActivity: g } = (0, u.cj)([y.ZP], () => ({ userInActivity: null != y.ZP.getSelfEmbeddedActivityForChannel(t.id) })),
-        m = (0, v.a)(O.eR.VOICE_LAUNCHER),
+        m = (0, v.a)({ surface: O.eR.VOICE_LAUNCHER }),
         b = p !== C.jy.CAN_LAUNCH,
         { Component: _, events: E, play: I } = (0, Z.Z)('RTCConnection');
     return n

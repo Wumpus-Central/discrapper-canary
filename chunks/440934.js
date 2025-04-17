@@ -9,13 +9,13 @@ var o = n(481060),
     r = n(118012),
     a = n(970184),
     c = n(471073),
-    s = n(293979),
-    l = n(954654),
+    l = n(293979),
+    s = n(954654),
     _ = n(388032),
     d = n(994186);
 function u(e) {
     let { title: t, onClose: n, transitionState: u } = e,
-        { components: p, applicationIconURL: I, applicationName: f, submissionState: m, error: S, validators: C, onSubmit: T } = (0, s.X9)(e, n);
+        { components: p, applicationIconURL: I, applicationName: f, submissionState: m, error: S, validators: C, onSubmit: T } = (0, l.X9)(e, n);
     return (0, i.jsx)('form', {
         onSubmit: (e) => {
             e.preventDefault(), T();
@@ -61,7 +61,7 @@ function u(e) {
                             children: (0, i.jsx)(a.Il, {
                                 modal: e,
                                 validators: C,
-                                children: (0, l.xX)(p)
+                                children: (0, s.xX)(p)
                             })
                         })
                     ]

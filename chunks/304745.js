@@ -35,7 +35,7 @@ function Z(e) {
         { isHovered: M, setIsHovered: L, onMouseEnter: D, onMouseLeave: W } = (0, x.Z)(200, 300),
         U = (0, O.Z)({ location: 'CenterControlTrayActivityButton' }),
         { coloredIconsEnabled: B } = (0, j.Z)({ location: 'VideoButton' }),
-        G = (0, p.a)(s.eR.VOICE_LAUNCHER),
+        G = (0, p.a)({ surface: s.eR.VOICE_LAUNCHER }),
         F = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
         H = (0, d.Z)({ channelId: t.id }),
         V = (B && F) || (!B && (H || (!U && M))),
