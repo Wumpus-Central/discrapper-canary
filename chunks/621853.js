@@ -471,6 +471,7 @@ class es extends f.Z {
             GUILD_MEMBER_UPDATE: et,
             GUILD_JOIN: en,
             GUILD_DELETE: en,
+            INVITE_ACCEPT_SUCCESS: en,
             GUILD_MEMBER_ADD: er,
             GUILD_MEMBER_REMOVE: er,
             RELATIONSHIP_ADD: ei,
