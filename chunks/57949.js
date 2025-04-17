@@ -2,8 +2,8 @@ n.d(t, { z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(772848),
-    a = n(481060),
-    l = n(159351),
+    l = n(481060),
+    a = n(159351),
     o = n(667),
     s = n(626135),
     c = n(981631);
@@ -15,11 +15,11 @@ function u(e) {
         h = () => {
             p = !0;
         };
-    (0, a.ZDy)(
+    (0, l.ZDy)(
         async () => {
             let { default: e } = await n.e('88806').then(n.bind(n, 578780));
             return (n) => {
-                var i, a;
+                var i, l;
                 return (0, r.jsx)(
                     e,
                     ((i = (function (e) {
@@ -47,7 +47,7 @@ function u(e) {
                         }
                         return e;
                     })({}, n)),
-                    (a = a =
+                    (l = l =
                         {
                             applicationId: t.application_id,
                             skuId: f,
@@ -60,7 +60,7 @@ function u(e) {
                             onComplete: h
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -68,8 +68,8 @@ function u(e) {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(a)).forEach(function (e) {
-                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                          })(Object(l)).forEach(function (e) {
+                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                           }),
                     i)
                 );
@@ -85,7 +85,7 @@ function u(e) {
                         sku_id: f,
                         location_stack: Array.isArray(d) ? d : [d]
                     }),
-                    (0, l.fw)(),
+                    (0, a.fw)(),
                     (0, o.p)();
             },
             onCloseRequest: c.dG4

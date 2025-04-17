@@ -16,7 +16,7 @@ let h = (e) => {
     var t;
     let n,
         i,
-        { title: h, titleClassName: f, buttonClassName: _, perkImage: b, isCarousel: N, onCtaClick: x, perkComponent: E, subtitle: j = '', descriptionCta: C = '', cardVariant: O, subtitleClassName: S, imageOverlayText: v } = e,
+        { title: h, titleClassName: f, buttonClassName: b, perkImage: _, isCarousel: N, onCtaClick: x, perkComponent: E, subtitle: j = '', descriptionCta: C = '', cardVariant: O, subtitleClassName: S, imageOverlayText: v } = e,
         T = (0, o._)(O),
         I = (0, l.Er)(),
         y = (null == I ? void 0 : I.nitroTenureStatus) === d.EB.REDEEMABLE;
@@ -45,12 +45,12 @@ let h = (e) => {
                 subtitle: j,
                 subtitleClassName: S
             }),
-            null != b &&
+            null != _ &&
                 (0, r.jsxs)('div', {
                     className: s()(u.relative, { [u.cardImage]: !N }),
                     children: [
                         (0, r.jsx)('img', {
-                            src: b,
+                            src: _,
                             alt: '',
                             className: N ? (A ? u.carouselCardImageGrayscale : u.carouselCardImage) : ''
                         }),
@@ -74,7 +74,7 @@ let h = (e) => {
                         0 !== C.length &&
                             null != x &&
                             (0, r.jsx)(a.zxk, {
-                                className: _,
+                                className: b,
                                 disabled: !y,
                                 fullWidth: !0,
                                 onClick: x,

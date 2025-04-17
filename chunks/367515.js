@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(292352),
     h = n(332495),
     f = n(388032),
-    _ = n(708734);
-function b(e) {
+    b = n(708734);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,7 +69,7 @@ function x(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            N(b({}, n), {
+                            N(_({}, n), {
                                 currentUser: E,
                                 otherUser: t
                             })
@@ -83,7 +83,7 @@ function x(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            N(b({}, n), {
+                            N(_({}, n), {
                                 currentUser: E,
                                 otherUser: t
                             })
@@ -97,7 +97,7 @@ function x(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            N(b({}, n), {
+                            N(_({}, n), {
                                 currentUser: E,
                                 otherUser: t
                             })
@@ -105,21 +105,21 @@ function x(e) {
                 });
         }, [E, t]);
     return (0, r.jsxs)('div', {
-        className: _.container,
+        className: b.container,
         children: [
             (0, r.jsx)('div', {
-                className: _.details,
+                className: b.details,
                 children: (0, r.jsx)(g.Z, {
                     otherUser: t,
                     status: p.ne.PENDING
                 })
             }),
             (0, r.jsx)('div', {
-                className: _.actions,
+                className: b.actions,
                 children: s
                     ? (0, r.jsx)(m.Z, {
                           icon: o.Dio,
-                          className: _.__invalid_actionDeny,
+                          className: b.__invalid_actionDeny,
                           tooltip: f.NW.string(h.Z.e5iHmZ),
                           onClick: O
                       })
@@ -129,13 +129,13 @@ function x(e) {
                                   ? null
                                   : (0, r.jsx)(m.Z, {
                                         icon: o.dz2,
-                                        className: _.__invalid_actionAccept,
+                                        className: b.__invalid_actionAccept,
                                         tooltip: f.NW.string(h.Z.krWQZG),
                                         onClick: j
                                     }),
                               (0, r.jsx)(m.Z, {
                                   icon: o.Dio,
-                                  className: _.__invalid_actionDeny,
+                                  className: b.__invalid_actionDeny,
                                   tooltip: f.NW.string(h.Z.bBDeND),
                                   onClick: C
                               })

@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(296810),
     h = n(921813),
     f = n(643879),
-    _ = n(621853),
-    b = n(246946),
+    b = n(621853),
+    _ = n(246946),
     N = n(594174),
     x = n(63063),
     E = n(74538),
@@ -81,8 +81,8 @@ function R(e) {
             let e = N.default.getCurrentUser();
             return a()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
-        R = (0, l.e7)([_.Z], () => !_.Z.isFetchingProfile(s.id, null == t ? void 0 : t.id)),
-        D = (0, l.e7)([b.Z], () => b.Z.hidePersonalInformation),
+        R = (0, l.e7)([b.Z], () => !b.Z.isFetchingProfile(s.id, null == t ? void 0 : t.id)),
+        D = (0, l.e7)([_.Z], () => _.Z.hidePersonalInformation),
         Z = (0, l.cj)([C.Z], () => A(y({}, C.Z.getAllPending()), { source: C.Z.getSource() })),
         { source: w, pendingAvatar: k } = Z,
         W = (function (e, t) {

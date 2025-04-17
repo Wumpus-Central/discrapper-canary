@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(200651),
     i = n(192379),
-    a = n(287734),
-    l = n(475468),
+    l = n(287734),
+    a = n(475468),
     o = n(358555),
     s = n(955415),
     c = n(944486),
@@ -26,8 +26,8 @@ function h(e) {
                 guild_id: _,
                 channel_id: b
             }),
-                (0, l.K)(n.id, h.id),
-                a.default.selectVoiceChannel(h.id);
+                (0, a.K)(n.id, h.id),
+                l.default.selectVoiceChannel(h.id);
         }, [null == (t = g.author) ? void 0 : t.id, n.id, h.id, h.type, _, b]),
         y = (0, r.jsx)(s.Z.Channel, { channel: h });
     return (0, r.jsx)(s.Z, {

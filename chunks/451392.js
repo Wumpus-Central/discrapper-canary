@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -14,9 +14,9 @@ var i = n(120356),
     p = n(193528),
     h = n(993413),
     f = n(388032),
-    _ = n(732391);
-function b(e) {
-    let { user: t, pendingAvatarSrc: n, pendingColors: i, onThemeColorsChange: a, preventDisabled: b, guildId: N, className: x, showPremiumIcon: E = !0, showResetThemeButton: j = !1, forcedDivider: C } = e,
+    b = n(732391);
+function _(e) {
+    let { user: t, pendingAvatarSrc: n, pendingColors: i, onThemeColorsChange: a, preventDisabled: _, guildId: N, className: x, showPremiumIcon: E = !0, showResetThemeButton: j = !1, forcedDivider: C } = e,
         O = (0, u.ZP)(t.id, N),
         { primaryColor: S, secondaryColor: v } = (0, m.Z)({
             user: t,
@@ -34,22 +34,22 @@ function b(e) {
     };
     return (0, r.jsx)(h.Z, {
         title: f.NW.string(f.t.DMeO2d),
-        disabled: !T && !b,
-        className: s()(_.__invalid_profileThemesSection, x),
+        disabled: !T && !_,
+        className: s()(b.__invalid_profileThemesSection, x),
         showPremiumIcon: E,
         forcedDivider: C,
         children: (0, r.jsxs)('div', {
-            className: _.sectionContainer,
+            className: b.sectionContainer,
             children: [
                 (0, r.jsx)('div', {
-                    className: _.sparkleContainer,
+                    className: b.sparkleContainer,
                     children: (0, r.jsx)(p.Z, {
                         onChange: (e) => P([e, v]),
                         color: S,
                         suggestedColors: A,
                         showEyeDropper: !0,
                         label: (0, r.jsx)(c.Text, {
-                            className: _.colorSwatchLabel,
+                            className: b.colorSwatchLabel,
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
                             'aria-hidden': !0,
@@ -58,14 +58,14 @@ function b(e) {
                     })
                 }),
                 (0, r.jsx)('div', {
-                    className: _.sparkleContainer,
+                    className: b.sparkleContainer,
                     children: (0, r.jsx)(p.Z, {
                         onChange: (e) => P([S, e]),
                         color: v,
                         suggestedColors: A,
                         showEyeDropper: !0,
                         label: (0, r.jsx)(c.Text, {
-                            className: _.colorSwatchLabel,
+                            className: b.colorSwatchLabel,
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
                             'aria-hidden': !0,
@@ -76,7 +76,7 @@ function b(e) {
                 j &&
                     null != N &&
                     (0, r.jsx)(c.zxk, {
-                        className: _.resetButton,
+                        className: b.resetButton,
                         color: c.zxk.Colors.PRIMARY,
                         look: c.zxk.Looks.LINK,
                         size: c.zxk.Sizes.SMALL,

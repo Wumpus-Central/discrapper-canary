@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     o = n(665149),
     s = n(618158),
     c = n(819640),
@@ -24,7 +24,7 @@ function b(e) {
             lastClipsSession: N,
             remindersEnabled: O,
             hasAnyClipAnimations: j
-        } = (0, a.cj)([p.Z], () => ({
+        } = (0, l.cj)([p.Z], () => ({
             hasClips: p.Z.hasClips(),
             hasNewClips: p.Z.getNewClipIds().length > 0,
             lastClipsSession: p.Z.getLastClipsSession(),
@@ -34,10 +34,10 @@ function b(e) {
         C = null != N && N.newClipIds.length > 0,
         S = (0, f.n)((e) => e.clipsButtonRef),
         I = (0, f.n)((e) => e.setClipsButtonRef),
-        T = (0, a.e7)([c.Z], () => c.Z.hasLayers()),
+        T = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: P, allowIdle: A } = (0, s.Y)('animation');
     function w() {
-        (0, l.ZDy)(
+        (0, a.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('89129')]).then(n.bind(n, 542055));
                 return (t) =>
@@ -80,7 +80,7 @@ function b(e) {
                       t &&
                       O &&
                       C &&
-                      !(0, l.$sL)() &&
+                      !(0, a.$sL)() &&
                       !T &&
                       (0, r.jsx)(h.Z, {
                           clipIconRef: S,
@@ -91,7 +91,7 @@ function b(e) {
                       ref: I,
                       children: (0, r.jsx)(o.JO, {
                           className: b,
-                          icon: l.AlX,
+                          icon: a.AlX,
                           showBadge: v,
                           tooltip: _.NW.string(_.t.MXaLEB),
                           onClick: w

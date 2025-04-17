@@ -1,9 +1,9 @@
 n.d(t, { Z: () => j }), n(388685), n(415506);
 var r,
     i = n(200651),
-    a = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    l = n(192379),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     c = n(481060),
     u = n(239091),
@@ -64,7 +64,7 @@ function N(e, t) {
         e
     );
 }
-class O extends (r = a.PureComponent) {
+class O extends (r = l.PureComponent) {
     get analyticsLocation() {
         return N(v({}, this.props.analyticsContext.location), { object: b.qAy.BUTTON_CTA });
     }
@@ -87,15 +87,15 @@ class O extends (r = a.PureComponent) {
             : null;
     }
     renderDisabledButton(e, t) {
-        let { className: n, fullWidth: r, size: a, customDisabledColor: l, tooltipPosition: o } = this.props;
+        let { className: n, fullWidth: r, size: l, customDisabledColor: a, tooltipPosition: o } = this.props;
         return (0, i.jsxs)('div', {
             className: y.disabledButtonWrapper,
             children: [
                 (0, i.jsx)(c.zxk, {
                     className: n,
                     fullWidth: r,
-                    size: a,
-                    color: null != l ? l : y.disabledButtonColor,
+                    size: l,
+                    color: null != a ? a : y.disabledButtonColor,
                     disabled: !0,
                     children: e
                 }),
@@ -108,8 +108,8 @@ class O extends (r = a.PureComponent) {
         });
     }
     render() {
-        let { className: e, fullWidth: t, size: n, color: r, isLaunchable: a, isLaunching: l, isRunning: s, isShiny: u, hideNotLaunchable: d } = this.props;
-        if (!a) return d ? null : this.renderDisabledButton(x.NW.string(x.t['359PbW']), g.isPlatformEmbedded ? x.NW.string(x.t.NASLa2) : x.NW.string(x.t.o1bhkJ));
+        let { className: e, fullWidth: t, size: n, color: r, isLaunchable: l, isLaunching: a, isRunning: s, isShiny: u, hideNotLaunchable: d } = this.props;
+        if (!l) return d ? null : this.renderDisabledButton(x.NW.string(x.t['359PbW']), g.isPlatformEmbedded ? x.NW.string(x.t.NASLa2) : x.NW.string(x.t.o1bhkJ));
         if (s) return this.renderDisabledButton(x.NW.string(x.t['3elwAA']));
         let p = u ? c.gtL : c.zxk;
         return (0, i.jsxs)(p, {
@@ -118,7 +118,7 @@ class O extends (r = a.PureComponent) {
             fullWidth: t,
             size: n,
             color: null != r ? r : c.zxk.Colors.GREEN,
-            submitting: l,
+            submitting: a,
             onClick: this.handleClick,
             children: [
                 (0, i.jsx)('div', {
@@ -133,7 +133,7 @@ class O extends (r = a.PureComponent) {
         super(...e),
             E(this, 'handleDropdownClick', (e) => {
                 e.stopPropagation();
-                let { libraryApplication: t, onDropdownOpen: r, onDropdownClose: a } = this.props;
+                let { libraryApplication: t, onDropdownOpen: r, onDropdownClose: l } = this.props;
                 if ((null == r || r(e), null == t)) throw Error('Unexpected missing libraryApplication');
                 u.jW(
                     e,
@@ -148,7 +148,7 @@ class O extends (r = a.PureComponent) {
                                 })
                             );
                     },
-                    { onClose: a }
+                    { onClose: l }
                 );
             }),
             E(this, 'handleClick', () => {
@@ -166,15 +166,15 @@ class O extends (r = a.PureComponent) {
 function j(e) {
     let { applicationId: t, libraryApplication: n } = e,
         r = (0, d.O)(),
-        [a, l] = (0, s.Wu)([f.Z, m.Z, h.Z], () => [f.Z.isConnected(t) || m.Z.isLaunchable(t) || (null != n && h.Z.isLaunchable(n.id, n.branchId)), m.Z.launchingGames.has(t)], [t, n]),
+        [l, a] = (0, s.Wu)([f.Z, m.Z, h.Z], () => [f.Z.isConnected(t) || m.Z.isLaunchable(t) || (null != n && h.Z.isLaunchable(n.id, n.branchId)), m.Z.launchingGames.has(t)], [t, n]),
         o = (0, s.e7)([p.ZP], () => new Set(p.ZP.getRunningVerifiedApplicationIds()).has(t), [t]),
         c = (0, s.e7)([h.Z], () => (null != n ? h.Z.getState(n.id, n.branchId) : null), [n]);
     return (0, i.jsx)(
         O,
         N(v({}, e), {
             analyticsContext: r,
-            isLaunchable: a,
-            isLaunching: l,
+            isLaunchable: l,
+            isLaunching: a,
             isRunning: o,
             dispatchState: c
         })

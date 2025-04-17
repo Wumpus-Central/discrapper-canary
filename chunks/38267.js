@@ -1,13 +1,13 @@
 n.d(t, { Z: () => o }), n(388685);
 var r = n(192379),
     i = n(585483),
-    a = n(981631);
-function l(e) {
+    l = n(981631);
+function a(e) {
     return Object.keys(e).some((t) => e[t]);
 }
 function o(e, t) {
     let [n, o] = r.useState(t),
-        [s, c] = r.useState(l(n)),
+        [s, c] = r.useState(a(n)),
         u = r.useRef(s),
         d = r.useRef(null),
         p = r.useCallback((e) => {
@@ -37,7 +37,7 @@ function o(e, t) {
                         }
                         return e;
                     })({}, t, e),
-                    r = l(n);
+                    r = a(n);
                 return r !== u.current && ((u.current = r), null != d.current && (cancelAnimationFrame(d.current), (d.current = null)), r ? c(!0) : (d.current = requestAnimationFrame(() => c(!1)))), n;
             });
         }, []);
@@ -50,7 +50,7 @@ function o(e, t) {
                     emojiBurstPicker: n
                 });
             };
-            return i.S.subscribeKeyed(a.LPv.TOGGLE_REACTION_POPOUT, e, t), () => void i.S.unsubscribeKeyed(a.LPv.TOGGLE_REACTION_POPOUT, e, t);
+            return i.S.subscribeKeyed(l.LPv.TOGGLE_REACTION_POPOUT, e, t), () => void i.S.unsubscribeKeyed(l.LPv.TOGGLE_REACTION_POPOUT, e, t);
         }, [e, p]),
         {
             popouts: n,

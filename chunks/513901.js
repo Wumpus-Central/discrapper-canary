@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(504983),
     h = n(981631),
     f = n(474936),
-    _ = n(388032),
-    b = n(482470);
+    b = n(388032),
+    _ = n(482470);
 function N(e) {
     let { user: t, guild: n, className: s, sectionTitle: N, forcedDivider: x = !1, withTutorial: E = !1, showBorder: j = !1, isTryItOutFlow: C = !1, initialSelectedEffectId: O } = e,
         S = (0, m.Kg)(t, n),
@@ -48,24 +48,24 @@ function N(e) {
         errors: y,
         className: s,
         children: (0, r.jsxs)('div', {
-            className: b.buttonsContainer,
+            className: _.buttonsContainer,
             children: [
                 (0, r.jsx)(R, {
                     size: l.zxk.Sizes.SMALL,
                     onClick: A,
-                    className: a()({ [b.buttonHighlighted]: E }),
-                    children: _.NW.string(_.t['0nEVoK'])
+                    className: a()({ [_.buttonHighlighted]: E }),
+                    children: b.NW.string(b.t['0nEVoK'])
                 }),
                 (C || void 0 !== I ? null != I : null != S) &&
                     (0, r.jsx)(l.zxk, {
-                        className: b.removeButton,
+                        className: _.removeButton,
                         color: l.zxk.Colors.PRIMARY,
                         look: l.zxk.Looks.LINK,
                         size: l.zxk.Sizes.SMALL,
                         onClick: function () {
                             (0, m.s6)(null, S, null == n ? void 0 : n.id);
                         },
-                        children: P ? _.NW.string(_.t.GJ3Fcn) : _.NW.string(_.t['Ld+f5e'])
+                        children: P ? b.NW.string(b.t.GJ3Fcn) : b.NW.string(b.t['Ld+f5e'])
                     })
             ]
         })

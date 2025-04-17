@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(442837),
     s = n(481060),
     c = n(447543),
@@ -21,7 +21,7 @@ var r = n(200651),
     v = n(388032),
     N = n(583136);
 function O(e) {
-    let { invite: t, isMemberOfGuild: n, onTransitionToInviteChannel: a, onAcceptInstantInvite: c } = e,
+    let { invite: t, isMemberOfGuild: n, onTransitionToInviteChannel: l, onAcceptInstantInvite: c } = e,
         d = i.useRef(null),
         [p, f] = i.useState(!0),
         [h, O] = i.useState(!1),
@@ -50,7 +50,7 @@ function O(e) {
     return null == I
         ? (0, r.jsx)(y.Z, {})
         : (0, r.jsxs)(s.P3F, {
-              className: l()(N.guildInviteContainer, { [N.clickable]: h && p }),
+              className: a()(N.guildInviteContainer, { [N.clickable]: h && p }),
               onClick: T,
               style: A,
               children: [
@@ -94,7 +94,7 @@ function O(e) {
                         })
                       : null,
                   (0, r.jsxs)('div', {
-                      className: l()(N.footer, { [N.floatingFooter]: h }),
+                      className: a()(N.footer, { [N.floatingFooter]: h }),
                       children: [
                           h && p ? (0, r.jsx)('div', { className: N.gradient }) : null,
                           (0, r.jsxs)('div', {
@@ -108,7 +108,7 @@ function O(e) {
                                           profile: I,
                                           isMemberOfGuild: n,
                                           submitting: C,
-                                          onTransitionToInviteChannel: a,
+                                          onTransitionToInviteChannel: l,
                                           onAcceptInstantInvite: c
                                       })
                                   })
@@ -120,19 +120,19 @@ function O(e) {
           });
 }
 function j(e) {
-    let { invite: t, profile: n, isMemberOfGuild: a, submitting: l, onTransitionToInviteChannel: o, onAcceptInstantInvite: s } = e,
+    let { invite: t, profile: n, isMemberOfGuild: l, submitting: a, onTransitionToInviteChannel: o, onAcceptInstantInvite: s } = e,
         { guildId: u, ctaType: m } = (0, f.ZP)(n, f.F3.INVITE),
         { analyticsLocations: g } = (0, p.ZP)(d.Z.INVITE_EMBED),
         _ = i.useCallback(() => {
-            let e = a ? 'transition' : 'accept';
+            let e = l ? 'transition' : 'accept';
             (0, c.r$)(t, e, g);
-        }, [t, g, a]);
+        }, [t, g, l]);
     return null == m
         ? null
         : (0, r.jsx)(h.o, {
               guildId: u,
               ctaType: m,
-              submitting: l,
+              submitting: a,
               onGoToGuild: o,
               onAcceptInvite: s,
               onStartApplication: s,

@@ -1,6 +1,6 @@
 n.d(t, {
-    hs: () => b,
-    oF: () => _
+    hs: () => _,
+    oF: () => b
 }),
     n(388685);
 var r = n(913527),
@@ -17,7 +17,7 @@ var r = n(913527),
     p = n(823379),
     h = n(981631),
     f = n(701488);
-function _() {
+function b() {
     let e = (0, s.Wu)([d.ZP, m.Z, g.Z], () =>
             d.ZP.getGamesSeen(!1)
                 .filter((e) => !!(0, d.FZ)(e, [d.ZP, m.Z, g.Z]).detectable && null != e.lastLaunched && 30 >= i()().diff(e.lastLaunched, 'days'))
@@ -41,7 +41,7 @@ function _() {
         count: t
     };
 }
-function b() {
+function _() {
     let e = (0, s.e7)([u.Z], () => u.Z.getAccounts()),
         t = (0, l.ZP)(),
         n = e.length;

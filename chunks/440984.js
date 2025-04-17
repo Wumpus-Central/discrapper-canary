@@ -13,13 +13,13 @@ var r = n(200651),
     p = n(798769),
     h = n(474936),
     f = n(388032),
-    _ = n(583532),
-    b = n(982404),
+    b = n(583532),
+    _ = n(982404),
     N = n(299156);
 function x(e) {
     let { premiumSubscription: t, premiumType: n, onClose: x, confettiCanvas: E, userWasChurned: j = !1, userDiscountOffer: C } = e,
         O = (0, o.ZP)(),
-        S = (0, a.wj)(O) ? b : N,
+        S = (0, a.wj)(O) ? _ : N,
         v = i.useRef(null),
         [T, I] = i.useState(!1),
         y = (0, g._)(t, h.Xh.PREMIUM_MONTH_TIER_2, C),
@@ -42,7 +42,7 @@ function x(e) {
             regularPrice: P
         }),
         Z = (0, r.jsx)('div', {
-            className: _.whatYouLoseButtonContainer,
+            className: b.whatYouLoseButtonContainer,
             children: (0, r.jsx)(l.zxk, {
                 color: l.zxk.Colors.BRAND,
                 onClick: x,
@@ -53,24 +53,24 @@ function x(e) {
         children: [
             (0, r.jsx)(p.Z, {
                 premiumType: n,
-                className: _.cancellationHeader,
+                className: b.cancellationHeader,
                 onClose: x
             }),
             (0, r.jsx)('div', {
                 ref: v,
                 children: (0, r.jsx)(l.hzk, {
-                    className: _.body,
+                    className: b.body,
                     children:
                         null != y
                             ? (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsxs)('div', {
-                                          className: _.discountAppliedBody,
+                                          className: b.discountAppliedBody,
                                           children: [
                                               (0, r.jsx)('img', {
                                                   alt: '',
                                                   src: S,
-                                                  className: _.nitroIcon
+                                                  className: b.nitroIcon
                                               }),
                                               (0, r.jsx)(l.X6q, {
                                                   variant: 'heading-xl/bold',
@@ -79,7 +79,7 @@ function x(e) {
                                           ]
                                       }),
                                       (0, r.jsx)('div', {
-                                          className: _.bodyString,
+                                          className: b.bodyString,
                                           children: D
                                       }),
                                       Z

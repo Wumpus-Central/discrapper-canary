@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685), n(35282), n(853839), n(570086), n(479048);
+n.d(t, { Z: () => b }), n(388685), n(35282), n(853839), n(570086), n(479048);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -50,11 +50,11 @@ let p = "Make sure you're only uploading text files!",
         name: 'New Profile Effect',
         config: { effects: [] }
     });
-function _() {
+function b() {
     let { profileEffects: e, upsertConfig: t } = (0, u.n6)(),
         [n, s] = i.useState(),
-        _ = i.useRef(null),
-        b = i.useCallback(
+        b = i.useRef(null),
+        _ = i.useCallback(
             (e, n) => {
                 if (null == n || !e.type.startsWith('text/')) return (0, d.Eo)(p);
                 let [r, i] = n.split(',');
@@ -68,9 +68,9 @@ function _() {
             (e) => {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null) return void (0, d.Eo)('Error uploading file. Try again!');
-                (0, d.Kr)(e.currentTarget.files, b, d.Eo);
+                (0, d.Kr)(e.currentTarget.files, _, d.Eo);
             },
-            [b]
+            [_]
         );
     return (0, r.jsxs)('div', {
         className: g.root,
@@ -117,7 +117,7 @@ function _() {
                                             children: 'Import Shared Config'
                                         }),
                                         (0, r.jsx)(c.Z, {
-                                            ref: _,
+                                            ref: b,
                                             onChange: N,
                                             multiple: !1
                                         })

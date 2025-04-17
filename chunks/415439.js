@@ -18,8 +18,8 @@ var r = n(442837),
     p = n(973616),
     h = n(592125),
     f = n(626135),
-    _ = n(823379),
-    b = n(728345),
+    b = n(823379),
+    _ = n(728345),
     N = n(812206),
     x = n(981631);
 async function E(e, t, n) {
@@ -29,7 +29,7 @@ async function E(e, t, n) {
         try {
             var s;
             if (((r = null == (s = N.Z.getApplication(e.id)) ? void 0 : s.bot), null == r)) {
-                let t = await (0, b.UM)(e.id);
+                let t = await (0, _.UM)(e.id);
                 (e = t), (r = p.ZP.createFromServer(t).bot);
             }
         } catch (e) {
@@ -90,7 +90,7 @@ function O() {
         includeAuthorizedAppsAndFetch: !1
     });
     return {
-        frecentApps: e.map((e) => e.application).filter(_.lm),
+        frecentApps: e.map((e) => e.application).filter(b.lm),
         loading: t
     };
 }

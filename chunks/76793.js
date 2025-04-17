@@ -1,4 +1,4 @@
-n.d(t, { q: () => b });
+n.d(t, { q: () => _ });
 var r = n(200651),
     i = n(192379),
     s = n(442837),
@@ -18,10 +18,10 @@ function f(e) {
     let { userId: t, count: n } = e,
         d = (0, s.e7)([m.default], () => m.default.getUser(t)),
         f = g.ZP.getFormattedName(d),
-        _ = i.useCallback(() => {
+        b = i.useCallback(() => {
             (0, c.Zn)(t);
         }, [t]),
-        b = i.useCallback(() => (0, u.openUserProfileModal)({ userId: t }), [t]);
+        _ = i.useCallback(() => (0, u.openUserProfileModal)({ userId: t }), [t]);
     return (
         i.useEffect(() => {
             (0, l.PR)(t);
@@ -40,7 +40,7 @@ function f(e) {
                     children: [
                         (0, r.jsx)(a.P3F, {
                             className: h.username,
-                            onClick: b,
+                            onClick: _,
                             children: (0, r.jsx)(a.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'interactive-active',
@@ -55,7 +55,7 @@ function f(e) {
                     ]
                 }),
                 (0, r.jsx)(a.P3F, {
-                    onClick: _,
+                    onClick: b,
                     className: h.sectionIconContainer,
                     children: (0, r.jsx)(a.XHJ, { size: 'xs' })
                 })
@@ -63,7 +63,7 @@ function f(e) {
         })
     );
 }
-function _(e) {
+function b(e) {
     let { className: t, userId: n, verification: s, index: l } = e,
         o = (0, c.bo)(s.timestamp),
         d = i.useCallback(() => {
@@ -98,7 +98,7 @@ function _(e) {
         ]
     });
 }
-function b(e) {
+function _(e) {
     let { userId: t } = e,
         n = (0, d._)(t);
     return (0, r.jsxs)(r.Fragment, {
@@ -112,7 +112,7 @@ function b(e) {
                     i.Fragment,
                     {
                         children: [
-                            (0, r.jsx)(_, {
+                            (0, r.jsx)(b, {
                                 className: h.row,
                                 userId: t,
                                 index: s,

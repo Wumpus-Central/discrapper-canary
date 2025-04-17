@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(626135),
     h = n(695349),
     f = n(103433),
-    _ = n(166021),
-    b = n(32173),
+    b = n(166021),
+    _ = n(32173),
     N = n(391110),
     x = n(75077),
     E = n(981631),
@@ -27,7 +27,7 @@ let S = (e) => {
         { isAllPerksVisible: s, setIsAllPerksVisible: S, previousComponent: v, isFullScreen: T } = e,
         I = i.useRef(null),
         y = i.useRef(null),
-        A = Object.entries((0, b.Z)()).reduce((e, t) => {
+        A = Object.entries((0, _.Z)()).reduce((e, t) => {
             let [n, r] = t;
             return !1 !== r.canReveal && 'upcomingDropUntimed' !== r.name && (e[n] = r), e;
         }, {}),
@@ -70,7 +70,7 @@ let S = (e) => {
                                     className: C.heading,
                                     children: t
                                 }),
-                                (0, r.jsx)(_.Z, {
+                                (0, r.jsx)(b.Z, {
                                     className: C.cardCarousel,
                                     cards: (0, x.sP)({
                                         perksCards: A,
@@ -88,7 +88,7 @@ let S = (e) => {
                                     className: C.heading,
                                     children: n
                                 }),
-                                (0, r.jsx)(_.Z, {
+                                (0, r.jsx)(b.Z, {
                                     className: C.cardCarousel,
                                     cards: (0, x.sP)({
                                         perksCards: A,
@@ -106,7 +106,7 @@ let S = (e) => {
                                     className: C.heading,
                                     children: j.NW.string(j.t.LTaxu7)
                                 }),
-                                (0, r.jsx)(_.Z, {
+                                (0, r.jsx)(b.Z, {
                                     className: C.cardCarousel,
                                     cards: (0, x.sP)({
                                         perksCards: A,

@@ -1,10 +1,10 @@
 t.d(n, { Z: () => s });
-var r = t(806729),
-    o = t(146078),
+var o = t(806729),
+    r = t(146078),
     i = t(228168),
     l = t(388032);
 function s(e) {
-    let { mutualGuilds: n } = (0, r.Z)(e),
+    let { mutualGuilds: n } = (0, o.Z)(e),
         t = null == n ? void 0 : n.length;
     return [
         {
@@ -13,7 +13,7 @@ function s(e) {
         },
         {
             section: i.oh.MUTUAL_GUILDS,
-            text: (0, o.Z)(t)
+            text: (0, r.Z)(t)
         },
         {
             section: i.oh.BOT_DATA_ACCESS,

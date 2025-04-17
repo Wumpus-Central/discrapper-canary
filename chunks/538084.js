@@ -5,25 +5,25 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(913527),
-    l = n.n(a),
+    l = n(913527),
+    a = n.n(l),
     o = n(481060),
     s = n(45251),
     c = n(388032),
     u = n(427676);
 let d = 'SCHEDULED_MESSAGE_CREATE_MODAL_KEY';
 function p(e) {
-    let { channel: t, transitionState: n, onClose: a, prefilledTime: p } = e,
-        m = l()(),
-        f = l()().add(365, 'days'),
-        [h, g] = i.useState(null != p ? l()(p.substring(0, 200)) : m);
+    let { channel: t, transitionState: n, onClose: l, prefilledTime: p } = e,
+        m = a()(),
+        f = a()().add(365, 'days'),
+        [h, g] = i.useState(null != p ? a()(p.substring(0, 200)) : m);
     return (0, r.jsxs)(o.Y0X, {
         transitionState: n,
         size: o.CgR.SMALL,
         'aria-label': c.NW.string(c.t.WbFpq6),
         children: [
             (0, r.jsx)(o.olH, {
-                onClick: a,
+                onClick: l,
                 className: u.closeButton
             }),
             (0, r.jsx)(o.xBx, {
@@ -77,7 +77,7 @@ function p(e) {
                 children: [
                     (0, r.jsx)(o.zxk, {
                         color: o.zxk.Colors.PRIMARY,
-                        onClick: a,
+                        onClick: l,
                         className: u.cancelButton,
                         children: c.NW.string(c.t['ETE/oK'])
                     }),

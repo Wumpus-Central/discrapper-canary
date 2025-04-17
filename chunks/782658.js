@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R });
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    l = n(447543),
+    l = n(442837),
+    a = n(447543),
     o = n(410575),
     s = n(758119),
     c = n(622822),
@@ -32,7 +32,7 @@ var r = n(200651),
     Z = n(723359);
 function R(e) {
     let { code: t, author: n, getAcceptInviteContext: R } = e,
-        { invite: k, inviteError: D } = (0, a.cj)(
+        { invite: k, inviteError: D } = (0, l.cj)(
             [y.Z],
             () => ({
                 invite: y.Z.getInvite(t),
@@ -42,7 +42,7 @@ function R(e) {
         ),
         L = null == k;
     i.useEffect(() => {
-        L && l.ZP.resolveInvite(t);
+        L && a.ZP.resolveInvite(t);
     }, [t, L]);
     let M =
             null != k
@@ -53,9 +53,9 @@ function R(e) {
                   },
         { analyticsLocations: W } = (0, u.ZP)(),
         U = (0, d.O)(),
-        F = (0, a.e7)([x.Z], () => ((null == k ? void 0 : k.guild) != null ? x.Z.getGuild(k.guild.id) : null), [k]),
-        B = (0, a.e7)([b.default], () => b.default.getId()),
-        G = (0, a.e7)(
+        F = (0, l.e7)([x.Z], () => ((null == k ? void 0 : k.guild) != null ? x.Z.getGuild(k.guild.id) : null), [k]),
+        B = (0, l.e7)([b.default], () => b.default.getId()),
+        G = (0, l.e7)(
             [m.ZP],
             () => {
                 var e;
@@ -64,7 +64,7 @@ function R(e) {
             [M]
         ),
         H = () => {
-            null != M.channel && l.ZP.transitionToInviteSync(M);
+            null != M.channel && a.ZP.transitionToInviteSync(M);
         },
         V = () => {
             if (null == F && (null == k ? void 0 : k.guild) != null) {
@@ -80,7 +80,7 @@ function R(e) {
                       },
                       analyticsLocations: W
                   })
-                : l.ZP.acceptInviteAndTransitionToInviteChannel({
+                : a.ZP.acceptInviteAndTransitionToInviteChannel({
                       inviteKey: t,
                       context: R('Invite Button Embed')
                   });

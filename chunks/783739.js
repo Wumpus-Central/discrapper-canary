@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(771845),
     h = n(594174),
     f = n(314884),
-    _ = n(74538),
-    b = n(199778),
+    b = n(74538),
+    _ = n(199778),
     N = n(296533),
     x = n(901750),
     E = n(112863),
@@ -28,7 +28,7 @@ function T(e) {
         n = (0, s.e7)([f.Z], () => f.Z.boostSlots),
         T = i.useMemo(() => Object.values(n), [n]),
         I = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-        y = _.ZP.isPremium(I, S.p9.TIER_2),
+        y = b.ZP.isPremium(I, S.p9.TIER_2),
         A = (0, s.e7)([g.Z], () => g.Z.affinities),
         P = (0, s.e7)([p.ZP], () => p.ZP.getFlattenedGuildIds()),
         R = A.length > 0 || P.length > 0,
@@ -57,7 +57,7 @@ function T(e) {
                     hasGuildAffinitiesOrInGuild: R,
                     subscriptionIsPausedOrPausePending: B
                 }),
-            (0, r.jsx)(b.Z, {
+            (0, r.jsx)(_.Z, {
                 hide: k,
                 containerClassName: v.FPContainer,
                 pillClassName: v.FPPill

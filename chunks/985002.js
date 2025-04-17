@@ -10,11 +10,11 @@ function o(e) {
         [d, u] = r.useState(!1),
         [m, g] = r.useState(!1),
         [p, h] = r.useState(!1),
-        [f, _] = r.useState(!1),
-        [b, N] = r.useState(!1),
+        [f, b] = r.useState(!1),
+        [_, N] = r.useState(!1),
         [x, E] = r.useState(!1),
         [j, C] = r.useState(!1),
-        O = o || d || m || p || b || j,
+        O = o || d || m || p || _ || j,
         S = r.useCallback(
             async (e) => {
                 if (!O) {
@@ -81,14 +81,14 @@ function o(e) {
         ),
         y = r.useCallback(async () => {
             if (!f) {
-                _(!0);
+                b(!0);
                 try {
                     await (0, s.qd)(), null == n || n();
                 } catch (n) {
                     let e = new i.Hx(n);
                     null == t || t(e);
                 } finally {
-                    _(!1);
+                    b(!1);
                 }
             }
         }, [f, t, n]),
@@ -117,7 +117,7 @@ function o(e) {
         getLinkCode: y,
         requestLink: r.useCallback(
             async (e, r) => {
-                if (!b) {
+                if (!_) {
                     N(!0);
                     try {
                         await s.ZP.requestLink(e, r), null == n || n();
@@ -129,7 +129,7 @@ function o(e) {
                     }
                 }
             },
-            [b, t, n]
+            [_, t, n]
         ),
         loadMore: r.useCallback(
             async (e) => {
@@ -157,7 +157,7 @@ function o(e) {
         isCancelLoading: p,
         isGetLinkCodeLoading: f,
         isSelectTeenUserLoading: x,
-        isRequestingLink: b,
+        isRequestingLink: _,
         isMoreLoading: j
     };
 }

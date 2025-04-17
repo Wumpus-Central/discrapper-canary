@@ -1,8 +1,8 @@
 n.d(t, { Z: () => K }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(913527),
     s = n.n(o),
     c = n(442837),
@@ -117,7 +117,7 @@ class H extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            U(this, 'renderMedia', () => (0, r.jsx)('div', { className: l()(W.invalidPoop, { [W.invalidPoopHorizontal]: this.isHorizontal }) })),
+            U(this, 'renderMedia', () => (0, r.jsx)('div', { className: a()(W.invalidPoop, { [W.invalidPoopHorizontal]: this.isHorizontal }) })),
             U(this, 'renderTitle', () => (this.props.isSelfGift ? M.NW.string(M.t['mT9B4+']) : M.NW.string(M.t.Vo5yHx))),
             U(this, 'renderActions', () =>
                 this.props.isSelfGift
@@ -177,16 +177,16 @@ class V extends i.Component {
     }
     renderButton(e) {
         let { libraryApplication: t, currentUser: n, isSelfGift: i } = this.props,
-            a = {
+            l = {
                 onClick: this.handleAccept,
                 color: u.zxk.Colors.BRAND
             },
-            l = (!e.isSubscription && null != t) || (!e.isSelfRedeemable && i) || (e.isExistingPremiumSubscriptionDisallowed && (0, w.I5)(n));
+            a = (!e.isSubscription && null != t) || (!e.isSelfRedeemable && i) || (e.isExistingPremiumSubscriptionDisallowed && (0, w.I5)(n));
         return (
-            (e.redeemed || l || e.isClaimed || !n.verified) && ((a.color = u.zxk.Colors.BRAND), (a.disabled = !0)),
+            (e.redeemed || a || e.isClaimed || !n.verified) && ((l.color = u.zxk.Colors.BRAND), (l.disabled = !0)),
             (0, r.jsx)(
                 u.zxk,
-                B(F({}, a), {
+                B(F({}, l), {
                     className: (0, g.mO)(e) ? W.collectiblesAcceptButton : null,
                     size: u.zxk.Sizes.SMALL,
                     children: e.redeemed ? M.NW.string(M.t.BTihoq) : null != e.giftStyle ? M.NW.string(M.t.TiZFqa) : M.NW.string(M.t.bUvv1d)
@@ -203,7 +203,7 @@ class V extends i.Component {
         return this.isCustomGiftMessage() && !n ? M.NW.formatToPlainString(M.t.t1SOIS, { recipientDisplayName: R.ZP.getName(t) }) : null == r ? null : e.isSubscription ? (n ? M.NW.string(M.t['2PJ1ND']) : M.NW.string(M.t.hrnGnp)) : n ? M.NW.string(M.t.QLEMlZ) : M.NW.string(M.t.W4DBc3);
     }
     renderBody(e) {
-        let { libraryApplication: t, isSelfGift: n, sku: r, gifter: i, subscriptionPlan: a, currentUser: l } = this.props;
+        let { libraryApplication: t, isSelfGift: n, sku: r, gifter: i, subscriptionPlan: l, currentUser: a } = this.props;
         if (null == r) return M.NW.string(M.t.ZTNur6);
         if (!n && this.isCustomGiftMessage() && !e.redeemed) return;
         let o = r.isPreorder() ? M.NW.formatToPlainString(M.t.evinTU, { name: r.name }) : r.name;
@@ -220,7 +220,7 @@ class V extends i.Component {
                 onViewInLibrary: this.handleViewLibrary
             });
         if (e.isClaimed) return M.NW.string(M.t.ARWFQU);
-        if (!l.verified) return M.NW.format(M.t.GQxl7u, { onClick: this.handleVerificationClick });
+        if (!a.verified) return M.NW.format(M.t.GQxl7u, { onClick: this.handleVerificationClick });
         if (n) return e.isSelfRedeemable ? M.NW.string(M.t['lQI+cH']) : M.NW.formatToPlainString(M.t['A+etHx'], { skuName: o });
         if (e.isExistingPremiumSubscriptionDisallowed) return M.NW.string(M.t['UCIU9/']);
         if (e.hasMultipleCopies)
@@ -246,19 +246,19 @@ class V extends i.Component {
                         skuName: o
                     });
         if (e.isSubscription) {
-            if (null == a) return M.NW.string(M.t.ZTNur6);
+            if (null == l) return M.NW.string(M.t.ZTNur6);
             if (null != i) {
-                let e = a.interval === L.rV.MONTH ? M.t['/RDIEB'] : M.t['3CX6Eh'];
+                let e = l.interval === L.rV.MONTH ? M.t['/RDIEB'] : M.t['3CX6Eh'];
                 return M.NW.format(e, {
                     username: R.ZP.getUserTag(i),
                     skuName: o,
-                    intervalCount: a.intervalCount
+                    intervalCount: l.intervalCount
                 });
             }
-            let e = a.interval === L.rV.MONTH ? M.t['2O4lo6'] : M.t['+Xjmsb'];
+            let e = l.interval === L.rV.MONTH ? M.t['2O4lo6'] : M.t['+Xjmsb'];
             return M.NW.format(e, {
                 skuName: o,
-                intervalCount: a.intervalCount
+                intervalCount: l.intervalCount
             });
         }
         return null != i ? M.NW.format(M.t['3HsdQ0'], { username: R.ZP.getUserTag(i) }) : M.NW.string(M.t.Jdnjjo);
@@ -321,19 +321,19 @@ class V extends i.Component {
                 e.stopPropagation(), e.preventDefault(), d.Z.open(D.oAB.ACCOUNT);
             }),
             U(this, 'handleAccept', (e) => {
-                let { channelId: t, code: n, content: r, type: i, giftInfo: a } = this.props;
+                let { channelId: t, code: n, content: r, type: i, giftInfo: l } = this.props;
                 e.preventDefault(),
                     e.stopPropagation(),
                     P.default.track(D.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
                         location: B(F({}, this.analyticsLocation), { object: D.qAy.BUTTON_CTA })
                     });
-                let l = i !== D.uaV.CUSTOM_GIFT ? void 0 : r;
+                let a = i !== D.uaV.CUSTOM_GIFT ? void 0 : r;
                 (0, x.V)({
                     processedCode: n,
                     channelContext: t,
-                    customGiftMessage: l,
-                    giftInfo: a
+                    customGiftMessage: a,
+                    giftInfo: l
                 });
             }),
             U(this, 'handleEmbedClick', (e) => {
@@ -350,18 +350,18 @@ class V extends i.Component {
                 let { useReducedMotion: t, width: n } = this.props;
                 if (null == e || null == e.giftStyle) return null;
                 let i = L.jy.includes(e.giftStyle),
-                    a = l()(W.customGiftEmbedWrapper, {
+                    l = a()(W.customGiftEmbedWrapper, {
                         [W.legacySeasonalGiftEmbedWrapper]: i,
                         [W.giftEmbedWrapperHorizontal]: n >= p.aL
                     }),
-                    o = l()({
+                    o = a()({
                         [W.legacySeasonalGiftEmbedBox]: i,
                         [W.legacySeasonalGiftEmbedBoxHorizontal]: i && n >= p.aL,
                         [W.customGiftEmbedBox]: !i,
                         [W.customGiftEmbedBoxHorizontal]: !i && n >= p.aL
                     });
                 return (0, r.jsxs)('div', {
-                    className: a,
+                    className: l,
                     children: [
                         !t &&
                             L.eZ.includes(e.giftStyle) &&
@@ -385,18 +385,18 @@ let z = (0, f.Z)((0, m.Z)(V)),
     K = c.ZP.connectStores([O.Z, I.Z, C.default, j.Z, S.Z, N.default, h.Z], (e) => {
         let { code: t, author: n, currentUser: r } = e,
             i = O.Z.get(t),
-            a = null != i ? I.Z.get(i.skuId) : null,
-            l = null != i && null != i.userId ? C.default.getUser(i.userId) : null,
+            l = null != i ? I.Z.get(i.skuId) : null,
+            a = null != i && null != i.userId ? C.default.getUser(i.userId) : null,
             o = h.Z.useReducedMotion;
         return {
-            sku: a,
+            sku: l,
             giftCode: i,
-            gifter: l,
+            gifter: a,
             currentUser: r,
             subscriptionPlan: null != i && null != i.subscriptionPlanId ? (0, Z.oE)(i.subscriptionPlanId) : null,
             isSelfGift: null != i ? N.default.getId() === i.userId : N.default.getId() === n.id,
             resolved: O.Z.getIsResolved(t),
-            libraryApplication: null != a && (null == i ? void 0 : i.entitlementBranches) != null ? A.z2(i.entitlementBranches, a, j.Z) : null,
+            libraryApplication: null != l && (null == i ? void 0 : i.entitlementBranches) != null ? A.z2(i.entitlementBranches, l, j.Z) : null,
             useReducedMotion: o
         };
     })(z);

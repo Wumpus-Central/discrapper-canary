@@ -2,8 +2,8 @@ n.d(t, { Z: () => o });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(388032),
-    l = n(499632);
+    l = n(388032),
+    a = n(499632);
 function o(e) {
     let { message: t } = e;
     return (0, r.jsxs)(i.P3F, {
@@ -47,7 +47,7 @@ function o(e) {
                     );
             });
         },
-        className: l.accessory,
+        className: a.accessory,
         children: [
             (0, r.jsx)(i.d3s, {
                 size: 'xs',
@@ -55,8 +55,8 @@ function o(e) {
             }),
             (0, r.jsx)(i.Text, {
                 variant: 'text-xs/normal',
-                className: l.accessoryText,
-                children: a.NW.string(a.t['2aXnfX'])
+                className: a.accessoryText,
+                children: l.NW.string(l.t['2aXnfX'])
             })
         ]
     });

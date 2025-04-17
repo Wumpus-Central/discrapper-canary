@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
 var i = n(512722),
-    a = n.n(i),
-    l = n(399606),
+    l = n.n(i),
+    a = n(399606),
     o = n(481060),
     s = n(607070),
     c = n(430824),
@@ -15,11 +15,11 @@ var i = n(512722),
     h = n(388032);
 function g(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: i } = e,
-        g = (0, l.e7)([p.Z], () => p.Z.getGuildProduct(n)),
-        _ = (0, l.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        b = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
+        g = (0, a.e7)([p.Z], () => p.Z.getGuildProduct(n)),
+        _ = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        b = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
         x = (0, u.n)();
-    return (a()(null != _, 'guild cannot be null'), a()(null != g, 'guildProductListing cannot be null'), (0, d.SO)(_))
+    return (l()(null != _, 'guild cannot be null'), l()(null != g, 'guildProductListing cannot be null'), (0, d.SO)(_))
         ? (0, r.jsx)(o.ua7, {
               text: h.NW.string(h.t.sAJr9f),
               children: (e) => {

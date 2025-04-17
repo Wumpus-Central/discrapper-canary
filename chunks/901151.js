@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(838436),
     h = n(51331),
     f = n(726985),
-    _ = n(981631),
-    b = n(388032),
+    b = n(981631),
+    _ = n(388032),
     N = n(296281);
 function x(e) {
     let { applications: t } = e,
@@ -29,7 +29,7 @@ function x(e) {
             let t = e.join(', '),
                 i = n.length - 3;
             return i > 0
-                ? b.NW.format(b.t.sHFdTk, {
+                ? _.NW.format(_.t.sHFdTk, {
                       gameList: t,
                       plusMoreHook: (e, t) =>
                           (0, r.jsx)(
@@ -38,7 +38,7 @@ function x(e) {
                                   tag: 'span',
                                   variant: 'text-sm/medium',
                                   color: 'text-muted',
-                                  children: b.NW.format(b.t['EADv+/'], { count: i })
+                                  children: _.NW.format(_.t['EADv+/'], { count: i })
                               },
                               t
                           )
@@ -88,7 +88,7 @@ function x(e) {
             );
         }, [n]),
         u = i.useCallback(() => {
-            l.Z.open(_.oAB.AUTHORIZED_APPS);
+            l.Z.open(b.oAB.AUTHORIZED_APPS);
         }, []);
     return (0, r.jsxs)('div', {
         className: N.header,
@@ -108,7 +108,7 @@ function x(e) {
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'interactive-normal',
-                                children: b.NW.format(b.t.oYaYOT, {})
+                                children: _.NW.format(_.t.oYaYOT, {})
                             }),
                             (0, r.jsx)(a.Fbu, {
                                 size: 'xxs',
@@ -132,8 +132,8 @@ function E() {
     return (0, r.jsx)(p.U, {
         setting: f.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
         children: (0, r.jsx)(h.Z, {
-            title: b.NW.string(b.t.XpBObG),
-            note: b.NW.format(b.t.oZsHTE, { helpdeskArticle: c.Z.getArticleURL(_.BhN.SLAYER_GAME_FRIENDS) }),
+            title: _.NW.string(_.t.XpBObG),
+            note: _.NW.format(_.t.oZsHTE, { helpdeskArticle: c.Z.getArticleURL(b.BhN.SLAYER_GAME_FRIENDS) }),
             value: e,
             onChange: u._j.updateSetting
         })
@@ -144,15 +144,15 @@ function j() {
         t = e === s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET ? s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL : e,
         n = [
             {
-                name: b.NW.string(b.t.JIFnNz),
+                name: _.NW.string(_.t.JIFnNz),
                 value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL
             },
             {
-                name: b.NW.string(b.t.rRdsk5),
+                name: _.NW.string(_.t.rRdsk5),
                 value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME
             },
             {
-                name: b.NW.string(b.t.AolKwM),
+                name: _.NW.string(_.t.AolKwM),
                 value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE
             }
         ];
@@ -160,8 +160,8 @@ function j() {
         setting: f.s6.PRIVACY_AND_SAFETY_IN_GAME_DMS,
         children: [
             (0, r.jsx)(p.H, {
-                header: b.NW.string(b.t['ms+TmZ']),
-                description: b.NW.string(b.t['4NN4+/'])
+                header: _.NW.string(_.t['ms+TmZ']),
+                description: _.NW.string(_.t['4NN4+/'])
             }),
             (0, r.jsx)(a.FXm, {
                 value: t,
@@ -190,12 +190,12 @@ function C() {
                             variant: 'text-md/medium',
                             color: 'header-primary',
                             className: N.noGamesConnectedText,
-                            children: b.NW.string(b.t['+0U77e'])
+                            children: _.NW.string(_.t['+0U77e'])
                         }),
                         (0, r.jsx)(a.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
-                            children: b.NW.format(b.t.V8wClJ, { helpdeskArticle: c.Z.getArticleURL(_.BhN.SOCIAL_LAYER_CONNECTIONS) })
+                            children: _.NW.format(_.t.V8wClJ, { helpdeskArticle: c.Z.getArticleURL(b.BhN.SOCIAL_LAYER_CONNECTIONS) })
                         })
                     ]
                 })

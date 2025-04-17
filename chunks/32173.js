@@ -18,8 +18,8 @@ var s = n(399606),
     p = n(779618),
     h = n(832149),
     f = n(605236),
-    _ = n(300284),
-    b = n(703656),
+    b = n(300284),
+    _ = n(703656),
     N = n(547972),
     x = n(131951),
     E = n(594174),
@@ -72,8 +72,8 @@ var s = n(399606),
     ep = n(91394),
     eh = n(209672),
     ef = n(698173),
-    e_ = n(926262),
-    eb = n(482668),
+    eb = n(926262),
+    e_ = n(482668),
     eN = n(21504),
     ex = n(371435),
     eE = n(83663),
@@ -103,7 +103,7 @@ let eO = () => {
         eL = null != eO && eO.hasPremiumAtLeast(W.p9.TIER_2),
         eB = (0, f.wE)(a.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE),
         { enabled: eM } = v.Z.useExperiment({ location: 'usePerksDiscoverabilityCards' }),
-        eU = (0, _.Z)({
+        eU = (0, b.Z)({
             scrollPosition: V.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
@@ -114,7 +114,7 @@ let eO = () => {
             });
         },
         eG = () => {
-            (0, b.uL)(B.Z5c.COLLECTIBLES_SHOP);
+            (0, _.uL)(B.Z5c.COLLECTIBLES_SHOP);
         },
         eF = () => {
             o.Z.open(B.oAB.APPEARANCE, null, { scrollPosition: V.h1.CUSTOM_APP_ICONS });
@@ -415,7 +415,7 @@ let eO = () => {
                 name: 'largeUploads',
                 title: F.NW.formatToPlainString(F.t.jqhAdH, { premiumMaxSize: eC }),
                 subtitle: F.NW.formatToPlainString(F.t['HI+cfn'], { premiumMaxSize: eC }),
-                perkImage: e_,
+                perkImage: eb,
                 description: F.NW.string(F.t['R0gx+/'])
             },
             hdVideo: {
@@ -526,7 +526,7 @@ let eO = () => {
                     termsLink: T.Ps
                 }),
                 perkComponent: (0, i.jsx)(Z.Z, {
-                    image: r ? eN.Z : eb.Z,
+                    image: r ? eN.Z : e_.Z,
                     cta: F.NW.string(F.t.s0w7a2),
                     onClick: () => {
                         (0, l.ZDy)(async () => {

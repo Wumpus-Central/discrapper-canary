@@ -2,8 +2,8 @@ n.d(t, { H: () => x }), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(399606),
-    a = n(166081),
-    l = n(54797),
+    l = n(166081),
+    a = n(54797),
     o = n(674180),
     s = n(430824),
     c = n(572004),
@@ -23,7 +23,7 @@ function x(e) {
             var e;
             return s.Z.getRole(n, null != (e = null == t ? void 0 : t.role_id) ? e : b.lds);
         }),
-        P = (0, a.U)(t, 600),
+        P = (0, l.U)(t, 600),
         A = (0, f.C)(t),
         w = (0, u.SO)(I),
         { shouldHideGuildPurchaseEntryPoints: Z } = (0, o.uP)(n),
@@ -52,7 +52,7 @@ function x(e) {
             onUnpublishProduct: () => {},
             onDeleteProduct: () => {},
             onReportProduct: () => {
-                (0, l.x)({ listing: t });
+                (0, a.x)({ listing: t });
             },
             onCopyProductLink: () => {
                 (0, c.JG)((0, d.ar)(n, t.id));

@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(526156),
     h = n(706705),
     f = n(726985),
-    _ = n(981631),
-    b = n(231338),
+    b = n(981631),
+    _ = n(231338),
     N = n(426617);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -280,7 +280,7 @@ function D() {
         children: [
             (0, r.jsx)(p.Z, {
                 parentSetting: f.s6.DESIGN_SYSTEMS,
-                settingsSection: _.oAB.DESIGN_SYSTEMS,
+                settingsSection: b.oAB.DESIGN_SYSTEMS,
                 tabs: [
                     {
                         title: 'Components',
@@ -357,7 +357,7 @@ function Z() {
                       className: N.buttons,
                       children: [
                           (0, r.jsx)(d.f6W, {
-                              theme: b.BR.DARKER,
+                              theme: _.BR.DARKER,
                               children: (e) =>
                                   (0, r.jsx)('div', {
                                       className: a()(e, N.section),
@@ -365,7 +365,7 @@ function Z() {
                                   })
                           }),
                           (0, r.jsx)(d.f6W, {
-                              theme: b.BR.LIGHT,
+                              theme: _.BR.LIGHT,
                               children: (e) =>
                                   (0, r.jsx)('div', {
                                       className: a()(e, N.section),
@@ -373,7 +373,7 @@ function Z() {
                                   })
                           }),
                           (0, r.jsx)(d.f6W, {
-                              theme: b.BR.DARKER,
+                              theme: _.BR.DARKER,
                               children: (e) =>
                                   (0, r.jsxs)('div', {
                                       className: a()(e, N.section),
@@ -389,7 +389,7 @@ function Z() {
                                   })
                           }),
                           (0, r.jsx)(d.f6W, {
-                              theme: b.BR.LIGHT,
+                              theme: _.BR.LIGHT,
                               children: (e) =>
                                   (0, r.jsxs)('div', {
                                       className: a()(e, N.section),
@@ -1113,7 +1113,7 @@ function G() {
 function F() {
     let e = (0, o.e7)([m.Z], () => m.Z.gradientPreset);
     return (0, r.jsx)(d.f6W, {
-        theme: b.BR.DARKER,
+        theme: _.BR.DARKER,
         disableAdaptiveTheme: !0,
         children: (t) =>
             (0, r.jsxs)('div', {
@@ -1126,7 +1126,7 @@ function F() {
                         children: 'Button'
                     }),
                     (0, r.jsx)(d.f6W, {
-                        theme: b.BR.LIGHT,
+                        theme: _.BR.LIGHT,
                         children: (t) =>
                             (0, r.jsxs)('div', {
                                 className: a()(t, N.section),
@@ -1138,7 +1138,7 @@ function F() {
                                         children: 'Button'
                                     }),
                                     (0, r.jsx)(d.f6W, {
-                                        theme: b.BR.DARKER,
+                                        theme: _.BR.DARKER,
                                         children: (e) =>
                                             (0, r.jsx)('div', {
                                                 className: a()(e, N.section),

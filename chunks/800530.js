@@ -20,8 +20,8 @@ n.d(t, {
 });
 var r,
     i,
-    a,
     l,
+    a,
     o,
     s,
     c,
@@ -48,7 +48,7 @@ var h = (((r = {}).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (r.LEAR
 class g {}
 p(g, 'ICON_TYPE', 'icon_type'), p(g, 'HEADER', 'header'), p(g, 'BODY', 'body'), p(g, 'CTAS', 'ctas'), p(g, 'TIMESTAMP', 'timestamp'), p(g, 'THEME', 'theme'), p(g, 'CLIENT_VERSION_MESSAGE', 'client_version_message'), p(g, 'LEARN_MORE_LINK', 'learn_more_link'), p(g, 'CLASSIFICATION_ID', 'classification_id');
 var _ = (((i = {})[(i.ViewViolationDetail = 0)] = 'ViewViolationDetail'), (i[(i.ViewViolationsDropdown = 1)] = 'ViewViolationsDropdown'), (i[(i.ClickLetUsKnow = 2)] = 'ClickLetUsKnow'), (i[(i.ClickAgeVerificationLink = 3)] = 'ClickAgeVerificationLink'), (i[(i.ClickSpamWebformLink = 4)] = 'ClickSpamWebformLink'), (i[(i.ClickLearnMoreLink = 5)] = 'ClickLearnMoreLink'), (i[(i.ClickCommunityGuidelinesLink = 6)] = 'ClickCommunityGuidelinesLink'), (i[(i.ClickWarningSystemHelpcenterLink = 7)] = 'ClickWarningSystemHelpcenterLink'), i),
-    b = (((a = {})[(a.SystemDM = 0)] = 'SystemDM'), (a[(a.StandingTab = 1)] = 'StandingTab'), (a[(a.AppealIngestion = 2)] = 'AppealIngestion'), a);
+    b = (((l = {})[(l.SystemDM = 0)] = 'SystemDM'), (l[(l.StandingTab = 1)] = 'StandingTab'), (l[(l.AppealIngestion = 2)] = 'AppealIngestion'), l);
 Object.freeze({
     SPEED_BUMP: d.jXE.APPEAL_INGESTION_SPEED_BUMP,
     COLLECT_SIGNAL: d.jXE.APPEAL_INGESTION_COLLECT_SIGNAL,
@@ -57,7 +57,7 @@ Object.freeze({
     THANKS: d.jXE.APPEAL_INGESTION_THANKS,
     SPAM: d.jXE.APPEAL_INGESTION_SPAM
 });
-var x = (((l = {})[(l.DIDNT_VIOLATE_POLICY = 0)] = 'DIDNT_VIOLATE_POLICY'), (l[(l.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'), (l[(l.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'), (l[(l.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE'), l);
+var x = (((a = {})[(a.DIDNT_VIOLATE_POLICY = 0)] = 'DIDNT_VIOLATE_POLICY'), (a[(a.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'), (a[(a.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'), (a[(a.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE'), a);
 let y = [0, 1, 2, 3],
     E = 372,
     v = 279,

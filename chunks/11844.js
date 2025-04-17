@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(267642),
     h = n(981631),
     f = n(388032),
-    _ = n(122039);
-function b(e) {
+    b = n(122039);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -80,7 +80,7 @@ let x = function () {
         e.current = await (0, a.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
-                return (t) => (0, r.jsx)(e, N(b({}, t), { onSelectGuild: C }));
+                return (t) => (0, r.jsx)(e, N(_({}, t), { onSelectGuild: C }));
             },
             {
                 onCloseRequest: () => {
@@ -91,15 +91,15 @@ let x = function () {
     }
     let S = (0, p.aq)({ isBoostManagementDisabledForFractionalPremium: j });
     return (0, r.jsxs)('div', {
-        className: _.wrapper,
+        className: b.wrapper,
         children: [
             (0, r.jsx)(g.Z, {
-                className: _.boostIcon,
+                className: b.boostIcon,
                 width: 16,
                 height: 16
             }),
             (0, r.jsx)(a.Text, {
-                className: _.copy,
+                className: b.copy,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
                 children: f.NW.format(f.t.kqC5vr, {
@@ -108,7 +108,7 @@ let x = function () {
                             i = (0, r.jsx)(
                                 a.zxk,
                                 {
-                                    className: _.cta,
+                                    className: b.cta,
                                     disabled: n,
                                     color: a.zxk.Colors.LINK,
                                     look: a.zxk.Looks.LINK,
@@ -123,7 +123,7 @@ let x = function () {
                                   {
                                       text: S,
                                       'aria-label': S.toString(),
-                                      children: (e) => (0, r.jsx)('span', N(b({}, e), { children: i }))
+                                      children: (e) => (0, r.jsx)('span', N(_({}, e), { children: i }))
                                   },
                                   t
                               )

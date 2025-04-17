@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r,
     i,
     s,
@@ -41,7 +41,7 @@ class f extends (s = c.ZP.Store) {
               writable: !0
           })
         : (f[r] = i);
-let _ = new f(d.Z, {
+let b = new f(d.Z, {
     MFA_ENABLE_SUCCESS: function (e) {
         let { token: t, codes: n } = e;
         void 0 !== t && o.setToken(t), (m = n);

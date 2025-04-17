@@ -7,7 +7,7 @@ var r = n(200651),
     o = n(686546),
     c = n(168301);
 let d = i.forwardRef(function (e, t) {
-    let { tooltipText: n, children: i, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: g, innerClassName: p, className: h, redGlow: f, tooltipClassName: _, onMouseEnter: b, onMouseLeave: N, 'aria-label': x, 'aria-checked': E, role: j, tooltipColor: C, tooltipForceOpen: O, tooltipContentClassName: S, plated: v } = e,
+    let { tooltipText: n, children: i, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: g, innerClassName: p, className: h, redGlow: f, tooltipClassName: b, onMouseEnter: _, onMouseLeave: N, 'aria-label': x, 'aria-checked': E, role: j, tooltipColor: C, tooltipForceOpen: O, tooltipContentClassName: S, plated: v } = e,
         T =
             'function' == typeof m
                 ? (0, r.jsx)(m, {
@@ -19,7 +19,7 @@ let d = i.forwardRef(function (e, t) {
                   })
                 : m;
     return (0, r.jsx)(l.ua7, {
-        tooltipClassName: _,
+        tooltipClassName: b,
         text: n,
         'aria-label': x,
         color: C,
@@ -28,7 +28,7 @@ let d = i.forwardRef(function (e, t) {
         children: (e) => {
             var n,
                 m,
-                { onClick: g, onMouseEnter: _, onMouseLeave: x } = e,
+                { onClick: g, onMouseEnter: b, onMouseLeave: x } = e,
                 C = (function (e, t) {
                     if (null == e) return {};
                     var n,
@@ -94,7 +94,7 @@ let d = i.forwardRef(function (e, t) {
                             null != g && g(), null != d && d(e);
                         },
                         onMouseEnter: () => {
-                            null == _ || _(), null == b || b();
+                            null == b || b(), null == _ || _();
                         },
                         onMouseLeave: () => {
                             null == x || x(), null == N || N();

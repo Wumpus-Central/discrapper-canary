@@ -18,8 +18,8 @@ var r = n(192379),
     p = n(680089),
     h = n(592125),
     f = n(58468),
-    _ = n(77498),
-    b = n(496675),
+    b = n(77498),
+    _ = n(496675),
     N = n(306680),
     x = n(944486),
     E = n(9156),
@@ -27,7 +27,7 @@ var r = n(192379),
     C = n(540126),
     O = n(647086),
     S = n(231338);
-let v = 12633 == n.j ? [l.ZP, o.Z, d.ZP, u.Z, m.Z, p.Z, h.Z, _.Z, b.Z, N.ZP, x.Z, E.ZP] : null;
+let v = 12633 == n.j ? [l.ZP, o.Z, d.ZP, u.Z, m.Z, p.Z, h.Z, b.Z, _.Z, N.ZP, x.Z, E.ZP] : null;
 function T() {
     let [e, t] = r.useState(() => I());
     return (
@@ -62,12 +62,12 @@ function I() {
         return s()(n)
             .map((n) => {
                 var c;
-                if (!n.isPrivate() && !b.Z.can(S.Pl.VIEW_CHANNEL, n)) return null;
+                if (!n.isPrivate() && !_.Z.can(S.Pl.VIEW_CHANNEL, n)) return null;
                 let d = null != r && (r.id === n.id || i === n.id),
                     m = null != r && r.isThread() && r.parent_id === n.id,
                     p = null != (c = d || m || !l ? u.Z.getActiveJoinedRelevantThreadsForParent(n.guild_id, n.id) : u.Z.getActiveJoinedUnreadThreadsForParent(n.guild_id, n.id)) ? c : {},
                     h = (0, C.zR)(n, p, r, i, t),
-                    _ = f.Z.isCollapsed(n.id),
+                    b = f.Z.isCollapsed(n.id),
                     x = E.ZP.isChannelMuted(n.guild_id, n.id),
                     j = {
                         id: n.id,
@@ -76,10 +76,10 @@ function I() {
                         position: e[n.id].order,
                         threadIds: h,
                         threadCount: s().size(h),
-                        isCollapsed: _,
+                        isCollapsed: b,
                         isMuted: x,
                         isFirstVoiceChannel: !1,
-                        subtitle: (0, C.Bz)(n, _, !1)
+                        subtitle: (0, C.Bz)(n, b, !1)
                     };
                 return d || m || !s().isEmpty(p) || N.ZP.getMentionCount(n.id) > 0 ? j : (t && x) || (l && (x || o || (0, g.vd)(n.type) || ((0, g.vc)(n.type) && !1 === N.ZP.hasUnread(n.id)))) ? null : j;
             })
@@ -90,7 +90,7 @@ function I() {
             })
             .value();
     }
-    let _ = null,
+    let b = null,
         v = {
             isMuted: !1,
             isCollapsed: !1,
@@ -100,7 +100,7 @@ function I() {
             getShownChannelAndThreadIds: () => l.map((e) => e.id),
             isEmpty: () => 0 === l.length,
             get channelList() {
-                return null == _ && (_ = m(l, this)), _;
+                return null == b && (b = m(l, this)), b;
             }
         },
         T = s()(e)

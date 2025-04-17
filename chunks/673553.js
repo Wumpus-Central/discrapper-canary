@@ -18,9 +18,9 @@ let m = new Set(['PageDown', 'PageUp', 'Home', 'End', 'ArrowUp', 'ArrowDown', 'A
             var n;
             let f = null == (n = (0, c.uB)(e)) ? void 0 : n.activeElement;
             if ((0, c.VG)(f) || r.fC.isActive() || g.has(t) || p.has(t) || h.has(t)) return !1;
-            let _ = null != f && 'BODY' === f.tagName;
+            let b = null != f && 'BODY' === f.tagName;
             return (
-                !((i.Z.keyboardModeEnabled && !_ && !/^[a-zA-Z0-9]$/.test(t)) || o.S.hasSubscribers(u.CkL.MODAL_CLOSE) || s.Z.hasLayers()) &&
+                !((i.Z.keyboardModeEnabled && !b && !/^[a-zA-Z0-9]$/.test(t)) || o.S.hasSubscribers(u.CkL.MODAL_CLOSE) || s.Z.hasLayers()) &&
                 ('Tab' === t && o.S.hasSubscribers(u.CkL.TEXTAREA_FOCUS) && null != document.querySelector('[data-can-focus="true"]')
                     ? (e.preventDefault(), o.S.dispatch(u.CkL.TEXTAREA_FOCUS), !1)
                     : !(

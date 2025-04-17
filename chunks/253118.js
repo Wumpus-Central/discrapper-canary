@@ -2,20 +2,20 @@ n.d(t, { Z: () => c });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(904245),
-    l = n(739566),
+    l = n(904245),
+    a = n(739566),
     o = n(834129),
     s = n(388032);
 function c(e) {
     var t, n;
     let { message: c, usernameHook: u, onClickPins: d, compact: p } = e,
-        m = (0, l.ZP)(c),
+        m = (0, a.ZP)(c),
         f = m.nick,
         h = u(m),
         g = () => {
             if (null == c.messageReference) return;
             let { channel_id: e, message_id: t } = c.messageReference;
-            a.Z.jumpToMessage({
+            l.Z.jumpToMessage({
                 channelId: e,
                 messageId: t,
                 flash: !0

@@ -1,14 +1,14 @@
 n.d(t, {
     Q: () => o,
-    Z: () => l
+    Z: () => a
 });
 var r = n(200651);
 n(192379);
 var i = n(275344),
-    a = n(938353);
-function l(e) {
+    l = n(938353);
+function a(e) {
     let {
-        channelMessageProps: { message: t, channel: n, compact: l = !1 },
+        channelMessageProps: { message: t, channel: n, compact: a = !1 },
         hasSpoilerEmbeds: o,
         handleContextMenu: s,
         isInteracting: c,
@@ -25,12 +25,12 @@ function l(e) {
         ? null
         : (0, r.jsx)(i.Z, {
               message: t,
-              children: (0, r.jsx)(a.ZP, {
+              children: (0, r.jsx)(l.ZP, {
                   className: _,
                   isInteracting: c,
                   message: t,
                   channel: n,
-                  compact: l,
+                  compact: a,
                   hasSpoilerEmbeds: o,
                   isMessageSnapshot: d,
                   onMediaItemContextMenu: s,
@@ -43,11 +43,11 @@ function l(e) {
           });
 }
 function o(e, t) {
-    let { message: n, channel: i, compact: l = !1, renderThreadAccessory: o, disableReactionCreates: s, disableReactionUpdates: c, isSearchResult: u } = e;
-    return (0, r.jsx)(a.$p, {
+    let { message: n, channel: i, compact: a = !1, renderThreadAccessory: o, disableReactionCreates: s, disableReactionUpdates: c, isSearchResult: u } = e;
+    return (0, r.jsx)(l.$p, {
         message: n,
         channel: i,
-        compact: l,
+        compact: a,
         hasSpoilerEmbeds: t,
         renderThreadAccessory: o,
         disableReactionCreates: s,

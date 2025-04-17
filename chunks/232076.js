@@ -16,8 +16,8 @@ let g = function (e) {
         p = (0, c._O)(),
         { eligibleToFetch: h } = (0, u.N)(e),
         f = (0, s.Z)(),
-        _ = h && (null == n ? void 0 : n.verified) === !0 && (0, l.M5)(n, m.p9.TIER_2) && f.fetched && f.fractionalState !== m.a$.FP_ONLY && !g && !p;
+        b = h && (null == n ? void 0 : n.verified) === !0 && (0, l.M5)(n, m.p9.TIER_2) && f.fetched && f.fractionalState !== m.a$.FP_ONLY && !g && !p;
     r.useEffect(() => {
-        _ && !t && d.Z.checkAndFetchReferralsRemaining();
-    }, [_, t]);
+        b && !t && d.Z.checkAndFetchReferralsRemaining();
+    }, [b, t]);
 };

@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(641360),
-    l = n(769409),
+    l = n(641360),
+    a = n(769409),
     o = n(739566),
     s = n(834129),
     c = n(388032);
@@ -11,7 +11,7 @@ function u(e) {
     let { message: t, usernameHook: u, compact: d } = e,
         p = (0, o.ZP)(t),
         m = u(p),
-        f = (0, a.I3)('GdmNameChangeSystemMessage', t.channel_id);
+        f = (0, l.I3)('GdmNameChangeSystemMessage', t.channel_id);
     return (0, r.jsx)(s.Z, {
         icon: n(819373),
         timestamp: t.timestamp,
@@ -26,7 +26,7 @@ function u(e) {
                       color: 'text-link',
                       children: c.NW.string(c.t['5Q9+/P'])
                   }),
-                  onEditGroup: () => (0, l.B)(t.channel_id)
+                  onEditGroup: () => (0, a.B)(t.channel_id)
               })
             : c.NW.format(c.t.OEdU6e, {
                   username: p.nick,

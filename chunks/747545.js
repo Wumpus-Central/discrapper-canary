@@ -20,8 +20,8 @@ var r = n(200651),
     p = n(906732),
     h = n(920321),
     f = n(921801),
-    _ = n(695346),
-    b = n(938117),
+    b = n(695346),
+    _ = n(938117),
     N = n(131951),
     x = n(626135),
     E = n(358085),
@@ -59,7 +59,7 @@ function I(e) {
             isVideoAvailable: N.Z.isVideoAvailable()
         })),
         Z = (0, h.Z)(),
-        w = _.qF.useSetting(),
+        w = b.qF.useSetting(),
         k = Object.values(Z).map((e) => {
             let { id: t, name: n } = e;
             return {
@@ -84,7 +84,7 @@ function I(e) {
                       className: S.previewToggle,
                       note: O.NW.string(O.t.WNbX4O),
                       onChange: (e) => {
-                          _.qF.updateSetting(e), x.default.track(j.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                          b.qF.updateSetting(e), x.default.track(j.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
                       },
                       value: w,
                       hideBorder: !0,
@@ -125,7 +125,7 @@ function I(e) {
                 }),
             (0, r.jsx)(f.F, {
                 setting: C.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
-                children: (0, r.jsx)(b.Z, {
+                children: (0, r.jsx)(_.Z, {
                     className: S.spacingTop24,
                     onLearnMore: s,
                     selectedBackgroundOption: l,

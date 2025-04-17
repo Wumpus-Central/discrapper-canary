@@ -12,7 +12,7 @@ var r = n(200651),
     g = n(132709);
 function p(e) {
     var t, n, p, h;
-    let { transitionState: f, onSuccess: _, onClose: b, requirementsUpdated: N, noSkip: x = !1 } = e,
+    let { transitionState: f, onSuccess: b, onClose: _, requirementsUpdated: N, noSkip: x = !1 } = e,
         [E, j] = i.useState(''),
         [C, O] = i.useState(''),
         [S, v] = i.useState(''),
@@ -29,7 +29,7 @@ function p(e) {
             password: E,
             newPassword: C
         });
-        if (null == n ? void 0 : n.ok) _();
+        if (null == n ? void 0 : n.ok) b();
         else {
             var r;
             (null == n || null == (r = n.body) ? void 0 : r.username) != null && (0, d.P)();
@@ -63,7 +63,7 @@ function p(e) {
                         }),
                         !0 !== x &&
                             (0, r.jsx)(a.olH, {
-                                onClick: b,
+                                onClick: _,
                                 className: g.modalCloseButton
                             })
                     ]
@@ -120,7 +120,7 @@ function p(e) {
                                         className: g.cancel,
                                         look: a.zxk.Looks.LINK,
                                         color: a.zxk.Colors.PRIMARY,
-                                        onClick: b,
+                                        onClick: _,
                                         children: m.NW.string(m.t['ETE/oK'])
                                     })
                             ]

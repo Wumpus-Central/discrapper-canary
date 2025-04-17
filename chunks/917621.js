@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(481060),
     s = n(600164),
     c = n(424678),
@@ -67,15 +67,15 @@ function j(e, t) {
     );
 }
 function C(e) {
-    let { member: t, className: n, guildId: a, channelId: s, messageId: c, analyticsLocations: d } = e,
+    let { member: t, className: n, guildId: l, channelId: s, messageId: c, analyticsLocations: d } = e,
         p = i.useRef(null);
     return t.unknownUser
         ? (0, r.jsx)('div', {
               className: v.partyMember,
               children: (0, r.jsx)(o.qEK, {
-                  src: t.user.getAvatarURL(a, (0, o.pxk)(o.EFr.SIZE_24)),
+                  src: t.user.getAvatarURL(l, (0, o.pxk)(o.EFr.SIZE_24)),
                   size: o.EFr.SIZE_24,
-                  className: l()(v.partyAvatar, n),
+                  className: a()(v.partyAvatar, n),
                   'aria-label': t.user.username
               })
           })
@@ -83,7 +83,7 @@ function C(e) {
               targetElementRef: p,
               position: 'left',
               user: t.user,
-              guildId: a,
+              guildId: l,
               channelId: s,
               messageId: c,
               newAnalyticsLocations: d,
@@ -105,9 +105,9 @@ function C(e) {
                                   ),
                                   {
                                       children: (0, r.jsx)(o.qEK, {
-                                          src: t.user.getAvatarURL(a, (0, o.pxk)(o.EFr.SIZE_24)),
+                                          src: t.user.getAvatarURL(l, (0, o.pxk)(o.EFr.SIZE_24)),
                                           size: o.EFr.SIZE_24,
-                                          className: l()(v.partyAvatar, n),
+                                          className: a()(v.partyAvatar, n),
                                           'aria-label': t.user.username
                                       })
                                   }
@@ -178,7 +178,7 @@ class S extends i.PureComponent {
         }
     }
     renderPartyStatus() {
-        let { activityActionType: e, isGameLaunchable: t, isSyncable: n, isPreview: i, isInBrowser: a, name: l, activity: s } = this.props,
+        let { activityActionType: e, isGameLaunchable: t, isSyncable: n, isPreview: i, isInBrowser: l, name: a, activity: s } = this.props,
             [u, d] = this.getPartySize();
         if (this.isDeadInvite())
             switch (e) {
@@ -191,7 +191,7 @@ class S extends i.PureComponent {
                 default:
                     return E.NW.string(E.t['2Gbof3']);
             }
-        return !a || i || this.isEmbeddedActivityApplication() || e !== x.mFx.JOIN
+        return !l || i || this.isEmbeddedActivityApplication() || e !== x.mFx.JOIN
             ? this.isActionType(x.mFx.LISTEN) || this.isActionType(x.mFx.WATCH)
                 ? null != s && null != s.details && null != s.state && (0, b.Z)(s)
                     ? [
@@ -248,11 +248,11 @@ class S extends i.PureComponent {
                           : this.hasPartySize() && 0 !== d
                             ? E.NW.formatToPlainString(E.t.XWapnZ, { number: d - u })
                             : null
-                      : E.NW.formatToPlainString(E.t.SqJBnJ, { name: l })
+                      : E.NW.formatToPlainString(E.t.SqJBnJ, { name: a })
             : E.NW.string(E.t.c3EWuL);
     }
     renderActionButton() {
-        let { isInBrowser: e, isPreview: t, isGameLaunchable: n, isSender: i, partyId: a, activity: l, message: s, renderSpotifyJoinButton: c, renderCustomButton: u } = this.props,
+        let { isInBrowser: e, isPreview: t, isGameLaunchable: n, isSender: i, partyId: l, activity: a, message: s, renderSpotifyJoinButton: c, renderCustomButton: u } = this.props,
             d = {
                 className: v.actionButton,
                 size: o.zxk.Sizes.SMALL
@@ -260,10 +260,10 @@ class S extends i.PureComponent {
             p = null != u ? u(d) : null;
         return null != p
             ? p
-            : !this.isDeadInvite() && this.isActionType(x.mFx.LISTEN) && null != a && null != s && null != l && (0, y.Ps)(a)
+            : !this.isDeadInvite() && this.isActionType(x.mFx.LISTEN) && null != l && null != s && null != a && (0, y.Ps)(l)
               ? c(
                     j(O({}, d), {
-                        activity: l,
+                        activity: a,
                         user: s.author
                     })
                 )
@@ -323,34 +323,34 @@ class S extends i.PureComponent {
     }
     renderParty() {
         let { partyId: e, partyMembers: t, hideParty: n, guildId: i } = this.props,
-            [a, l] = this.getPartySize(),
+            [l, a] = this.getPartySize(),
             o = this.hasPartySize() || this.isActionType(x.mFx.LISTEN) || this.isActionType(x.mFx.WATCH);
         if (null == e || this.isDeadInvite() || !o || n) return null;
         let s = [...t],
-            c = Math.min(a, 6);
+            c = Math.min(l, 6);
         for (; s.length < c; )
             s.push({
                 user: new p.Z({ discriminator: '0005' }),
                 unknownUser: !0
             });
-        let u = Math.min(l, 106);
+        let u = Math.min(a, 106);
         for (; s.length < u; ) s.push(null);
         return (0, r.jsx)(d.Z, {
             guildId: i,
             className: v.partyMembers,
             users: s,
-            max: l > 0 ? Math.min(l, 6) : 6,
+            max: a > 0 ? Math.min(a, 6) : 6,
             renderUser: this.renderUser,
             renderMoreUsers: this.renderMoreUsers
         });
     }
     render() {
         let { className: e, coverImage: t, name: n, activity: i } = this.props,
-            a = this.isActionType(x.mFx.JOIN) || this.isActionType(x.mFx.JOIN_REQUEST),
+            l = this.isActionType(x.mFx.JOIN) || this.isActionType(x.mFx.JOIN_REQUEST),
             c = this.isDeadInvite(),
             u = null;
-        null == t || null == i || a
-            ? !a && c && (u = (0, r.jsx)('div', { className: v.artworkSpotifySessionEnded }))
+        null == t || null == i || l
+            ? !l && c && (u = (0, r.jsx)('div', { className: v.artworkSpotifySessionEnded }))
             : (u = (0, r.jsx)('img', {
                   alt: '',
                   src: t,
@@ -373,12 +373,12 @@ class S extends i.PureComponent {
                       })
                     : u;
         return (0, r.jsxs)('div', {
-            className: l()(v.invite, e),
+            className: a()(v.invite, e),
             children: [
                 (0, r.jsx)('div', {
                     className: v.coverImageWrapper,
                     children: (0, r.jsx)('div', {
-                        className: l()((0, f.l)(v, 'coverImage', this.getActionableMode()), null != u ? v.blurred : null),
+                        className: a()((0, f.l)(v, 'coverImage', this.getActionableMode()), null != u ? v.blurred : null),
                         style: { backgroundImage: null != t ? "url('".concat(t, "')") : void 0 }
                     })
                 }),
@@ -408,7 +408,7 @@ class S extends i.PureComponent {
                                             style: { marginRight: 0 },
                                             children: [this.renderActionButton(), this.renderParty()]
                                         }),
-                                        null == u && a
+                                        null == u && l
                                             ? (0, r.jsx)('div', {
                                                   className: v.name,
                                                   children: n
@@ -463,7 +463,7 @@ class S extends i.PureComponent {
                 null != e && null != n && (null == t || t(e, n.author.id));
             }),
             N(this, 'renderUser', (e, t, n) => {
-                let { guildId: i, channelId: a, message: o, analyticsLocations: s } = this.props;
+                let { guildId: i, channelId: l, message: o, analyticsLocations: s } = this.props;
                 return null != e
                     ? (0, r.jsx)(
                           C,
@@ -471,13 +471,13 @@ class S extends i.PureComponent {
                               member: e,
                               className: t,
                               guildId: i,
-                              channelId: a,
+                              channelId: l,
                               messageId: null == o ? void 0 : o.id,
                               analyticsLocations: s
                           },
                           n
                       )
-                    : (0, r.jsx)('div', { className: l()(v.partyMemberEmpty, t) }, n);
+                    : (0, r.jsx)('div', { className: a()(v.partyMemberEmpty, t) }, n);
             });
     }
 }

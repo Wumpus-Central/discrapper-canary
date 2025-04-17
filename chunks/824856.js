@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(953529);
+n.d(t, { Z: () => b }), n(953529);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -13,10 +13,10 @@ var r = n(200651),
     p = n(150414),
     h = n(993553),
     f = n(53524);
-function _(e) {
+function b(e) {
     let { cta: t, storeListing: n, className: s } = e,
-        { applicationId: _, benefits: b, description: N } = n,
-        x = i.useMemo(() => (null == n.thumbnail ? null : (0, p.q)(_, n.thumbnail, 256)), [_, n.thumbnail]),
+        { applicationId: b, benefits: _, description: N } = n,
+        x = i.useMemo(() => (null == n.thumbnail ? null : (0, p.q)(b, n.thumbnail, 256)), [b, n.thumbnail]),
         { data: E } = (0, d.X)(n.skuId),
         j = i.useMemo(() => {
             if (null == E || 0 === E.length) return null;
@@ -65,17 +65,17 @@ function _(e) {
                               children: N
                           })
                       }),
-                  null != b &&
-                      b.length > 0 &&
+                  null != _ &&
+                      _.length > 0 &&
                       (0, r.jsx)('div', {
                           className: f.benefits,
-                          children: b.map((e) => {
+                          children: _.map((e) => {
                               let { id: t, name: n, description: i, icon: s } = e;
                               return (0, r.jsx)(
                                   o.Gm,
                                   {
                                       header: n,
-                                      icon: (0, u.n)(_, s),
+                                      icon: (0, u.n)(b, s),
                                       description: i
                                   },
                                   t

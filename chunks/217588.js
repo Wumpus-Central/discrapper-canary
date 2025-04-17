@@ -1,8 +1,8 @@
 n.d(t, { Z: () => G }), n(953529), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(442837),
     s = n(481060),
     c = n(749210),
@@ -115,17 +115,17 @@ function W(e) {
     });
 }
 let U = (e) => {
-        let { closePopout: t, sticker: n, channel: a, refreshPositionKey: l } = e,
+        let { closePopout: t, sticker: n, channel: l, refreshPositionKey: a } = e,
             [c, u, p] = (0, o.Wu)([j.Z], () => [j.Z.getStickerPack(n.pack_id), !j.Z.hasLoadedStickerPacks, j.Z.isPremiumPack(n.pack_id)], [n]),
             m = L({
                 sticker: n,
                 stickerPack: c
             });
         (0, O.Pq)(n.pack_id);
-        let f = (0, O.Sd)(a),
+        let f = (0, O.Sd)(l),
             h = {
-                refreshPositionKey: l,
-                channel: a
+                refreshPositionKey: a,
+                channel: l
             },
             g = i.useRef(h);
         return (i.useEffect(() => {
@@ -202,7 +202,7 @@ let U = (e) => {
     },
     F = (e) => {
         let t,
-            { sticker: n, channel: a, closePopout: m, refreshPositionKey: b } = e,
+            { sticker: n, channel: l, closePopout: m, refreshPositionKey: b } = e,
             [O, j] = i.useState(null),
             [C, I] = i.useState(!1),
             D = E.default.getCurrentUser(),
@@ -213,12 +213,12 @@ let U = (e) => {
             [H, V] = i.useState(null),
             z = i.useMemo(
                 () => ({
-                    page: null != a.guild_id ? T.ZY5.GUILD_CHANNEL : T.ZY5.DM_CHANNEL,
+                    page: null != l.guild_id ? T.ZY5.GUILD_CHANNEL : T.ZY5.DM_CHANNEL,
                     section: T.jXE.STICKER_POPOUT
                 }),
-                [a.guild_id]
+                [l.guild_id]
             ),
-            { current: K } = i.useRef(R({ guild_id: a.getGuildId() }, (0, d.v_)(a))),
+            { current: K } = i.useRef(R({ guild_id: l.getGuildId() }, (0, d.v_)(l))),
             Y = {
                 stickerSourceGuild: U,
                 refreshPositionKey: b
@@ -233,7 +233,7 @@ let U = (e) => {
                     (null == e || e.hasFeature(T.oNc.DISCOVERABLE)) && j(await (0, h.Z)(n.id)), I(!0);
                 })();
             }, [n.id, F]);
-        let q = n.guild_id === a.getGuildId(),
+        let q = n.guild_id === l.getGuildId(),
             Q = null != O,
             J = !1,
             $ = 'Custom Sticker Popout';
@@ -245,7 +245,7 @@ let U = (e) => {
                 ? ((t = A.NW.string(A.t.IuXYcn)), (J = !0), ($ = 'Custom Sticker Popout (Upsell)'))
                 : ((t = A.NW.format(A.t.hGWuxc, {
                       openPremiumSettings: () => {
-                          M(a), m();
+                          M(l), m();
                       }
                   })),
                   ($ = 'Custom Sticker Popout (Soft Upsell)'));
@@ -339,7 +339,7 @@ let U = (e) => {
                                                               (0, r.jsx)(s.CJ0, {
                                                                   size: 'md',
                                                                   color: 'currentColor',
-                                                                  className: l()(Z.showMoreEmojisArrow, { [Z.showMoreEmojisArrowCollapsed]: !B })
+                                                                  className: a()(Z.showMoreEmojisArrow, { [Z.showMoreEmojisArrowCollapsed]: !B })
                                                               })
                                                           ]
                                                       })
@@ -356,7 +356,7 @@ let U = (e) => {
                                                                   k(R({ text: e.name }, _.b_), {
                                                                       children: (t) => {
                                                                           var { onMouseEnter: n, onMouseLeave: i } = t,
-                                                                              a = (function (e, t) {
+                                                                              l = (function (e, t) {
                                                                                   if (null == e) return {};
                                                                                   var n,
                                                                                       r,
@@ -365,13 +365,13 @@ let U = (e) => {
                                                                                           var n,
                                                                                               r,
                                                                                               i = {},
-                                                                                              a = Object.keys(e);
-                                                                                          for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                                                                              l = Object.keys(e);
+                                                                                          for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                                                                           return i;
                                                                                       })(e, t);
                                                                                   if (Object.getOwnPropertySymbols) {
-                                                                                      var a = Object.getOwnPropertySymbols(e);
-                                                                                      for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                                                                      var l = Object.getOwnPropertySymbols(e);
+                                                                                      for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                                                                                   }
                                                                                   return i;
                                                                               })(t, ['onMouseEnter', 'onMouseLeave']);
@@ -380,7 +380,7 @@ let U = (e) => {
                                                                               k(
                                                                                   R(
                                                                                       {
-                                                                                          className: l()(Z.otherEmoji, { [w.nonInteractingSticker]: null != H && H !== e.id }),
+                                                                                          className: a()(Z.otherEmoji, { [w.nonInteractingSticker]: null != H && H !== e.id }),
                                                                                           onMouseEnter: () => {
                                                                                               null == n || n(), V(e.id);
                                                                                           },
@@ -388,7 +388,7 @@ let U = (e) => {
                                                                                               null == i || i(), V(null);
                                                                                           }
                                                                                       },
-                                                                                      a
+                                                                                      l
                                                                                   ),
                                                                                   {
                                                                                       children: (0, r.jsx)(S.Z, {
@@ -433,24 +433,24 @@ function B(e) {
     });
 }
 let G = (e) => {
-    let { renderableSticker: t, channel: n, closePopout: i, refreshPositionKey: a } = e,
-        [l, o] = (0, O.XW)(t, !0);
-    return null != l && (0, C.jl)(l)
+    let { renderableSticker: t, channel: n, closePopout: i, refreshPositionKey: l } = e,
+        [a, o] = (0, O.XW)(t, !0);
+    return null != a && (0, C.jl)(a)
         ? (0, r.jsx)(U, {
-              sticker: l,
+              sticker: a,
               closePopout: i,
               channel: n,
-              refreshPositionKey: a
+              refreshPositionKey: l
           })
-        : null != l && (0, C.J8)(l)
+        : null != a && (0, C.J8)(a)
           ? (0, r.jsx)(F, {
-                sticker: l,
+                sticker: a,
                 channel: n,
                 closePopout: i,
-                refreshPositionKey: a
+                refreshPositionKey: l
             })
           : o
-            ? o && null == l
+            ? o && null == a
                 ? (0, r.jsx)(B, {
                       channel: n,
                       closePopout: i,

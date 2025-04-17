@@ -10,11 +10,11 @@ var r = n(200651),
     u = n(626135),
     m = n(314684),
     g = n(794484),
-    p = n(536844),
+    p = n(347475),
     h = n(342414),
     f = n(615042),
-    _ = n(391110),
-    b = n(71363),
+    b = n(391110),
+    _ = n(71363),
     N = n(781800),
     x = n(981631),
     E = n(388032),
@@ -43,10 +43,10 @@ let O = () => {
                             children: [
                                 (0, r.jsx)(h.Z, {
                                     className: j.heroHeading,
-                                    location: _.MQ.HOME
+                                    location: b.MQ.HOME
                                 }),
                                 (0, r.jsx)(g.Z, {
-                                    variant: _.R0.WHATS_NEW,
+                                    variant: b.R0.WHATS_NEW,
                                     className: j.whatsNew,
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
@@ -58,7 +58,7 @@ let O = () => {
                                     leftAlignHeaders: !0,
                                     showAllPerksButton: (0, r.jsx)(N.Z, {
                                         setIsAllPerksVisible: O,
-                                        previousComponent: _.MQ.HOME
+                                        previousComponent: b.MQ.HOME
                                     })
                                 }),
                                 (0, r.jsx)(p.Z, {
@@ -91,10 +91,10 @@ let O = () => {
                         })
                     })
                 }),
-                (0, r.jsx)(b.Z, {
+                (0, r.jsx)(_.Z, {
                     isAllPerksVisible: n,
                     setIsAllPerksVisible: O,
-                    previousComponent: _.MQ.HOME
+                    previousComponent: b.MQ.HOME
                 })
             ]
         })

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r = n(200651),
     i = n(192379),
-    a = n(512722),
-    l = n.n(a),
+    l = n(512722),
+    a = n.n(l),
     o = n(442837),
     s = n(447543),
     c = n(100527),
@@ -20,7 +20,7 @@ var r = n(200651),
 function E(e) {
     let t,
         n,
-        a,
+        l,
         { invite: E, currentUserId: v, guild: N, onTransitionToInviteChannel: O, onAcceptInstantInvite: j } = e,
         C = null == N ? void 0 : N.id,
         S = (0, o.e7)([h.Z], () => h.Z.getGuildId()),
@@ -29,9 +29,9 @@ function E(e) {
         { analyticsLocations: P } = (0, u.ZP)(c.Z.INVITE_EMBED),
         A = null != E && E.target_type === b.Iq.STREAM && null != E.target_user && null != I,
         w = null != E && null != T && null != E.channel && null != E.guild && T.channelId === E.channel.id && T.guildId === E.guild.id;
-    l()(null != E, 'Invite cannot be null');
+    a()(null != E, 'Invite cannot be null');
     let { target_type: Z, target_user: R } = E;
-    l()(Z === b.Iq.STREAM && null != R, 'invalid streaming invite');
+    a()(Z === b.Iq.STREAM && null != R, 'invalid streaming invite');
     let k = v === R.id,
         D = E.state === _.r2o.ACCEPTING,
         L = i.useCallback(() => {
@@ -44,7 +44,7 @@ function E(e) {
         N = new m.ZP(E.guild);
     }
     let W = null != E.channel ? (0, p.jD)(E.channel) : null;
-    M && !w ? (a = k ? x.NW.string(x.t.oBLoZG) : x.NW.formatToPlainString(x.t['0QJmAw'], { name: R.username })) : ((t = x.NW.string(x.t['I6JG4+'])), (n = d.Z.Button.Colors.GREEN), A && ((t = x.NW.string(x.t['Q1W99/'])), (n = d.Z.Button.Colors.PRIMARY)), (a = k ? x.NW.string(x.t['4hyaHh']) : x.NW.formatToPlainString(x.t.QmlLEh, { name: R.username })));
+    M && !w ? (l = k ? x.NW.string(x.t.oBLoZG) : x.NW.formatToPlainString(x.t['0QJmAw'], { name: R.username })) : ((t = x.NW.string(x.t['I6JG4+'])), (n = d.Z.Button.Colors.GREEN), A && ((t = x.NW.string(x.t['Q1W99/'])), (n = d.Z.Button.Colors.PRIMARY)), (l = k ? x.NW.string(x.t['4hyaHh']) : x.NW.formatToPlainString(x.t.QmlLEh, { name: R.username })));
     let U = S === N.id && null != W ? (0, r.jsx)(d.Z.Channel, { channel: W }) : x.NW.formatToPlainString(x.t.u0vaDA, { guildName: N.name });
     return (0, r.jsxs)(d.Z, {
         children: [
@@ -59,7 +59,7 @@ function E(e) {
                                 onClick: M && w ? L : void 0
                             }),
                             (0, r.jsx)(d.Z.Info, {
-                                title: a,
+                                title: l,
                                 onClick: M && w ? L : void 0,
                                 children: U
                             })

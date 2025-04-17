@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(997841), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(533800),
-    l = n(481060),
+    l = n(533800),
+    a = n(481060),
     o = n(447543),
     s = n(100527),
     c = n(906732),
@@ -32,7 +32,7 @@ function v(e) {
         U = null != M,
         F = null != M && M.isGuildVocal(),
         B = null != M && M.isGuildStageVoice(),
-        G = (0, h.yE)(null != (t = P.flags) ? t : 0, a.$.IS_GUEST_INVITE),
+        G = (0, h.yE)(null != (t = P.flags) ? t : 0, l.$.IS_GUEST_INVITE),
         H = null != (v = null == T ? void 0 : T.hasFeature(x.oNc.HUB)) && v,
         V = (0, u.h)(),
         z = null == T ? void 0 : T.id,
@@ -81,10 +81,10 @@ function v(e) {
             ]
         })),
         G &&
-            (C = (0, r.jsx)(l.DY3, {
+            (C = (0, r.jsx)(a.DY3, {
                 className: E.tooltipContainer,
                 text: y.NW.string(y.t['/FeTKy']),
-                children: (0, r.jsx)(l.d3s, {
+                children: (0, r.jsx)(a.d3s, {
                     size: 'md',
                     color: 'currentColor',
                     className: E.infoIcon
@@ -147,12 +147,12 @@ function v(e) {
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)('div', { className: E.separator }),
-                            (0, r.jsx)(l.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
                                 children: y.NW.format(y.t['/o1IfH'], {
                                     onClick: () =>
-                                        (0, l.ZDy)(async () => {
+                                        (0, a.ZDy)(async () => {
                                             let { default: e } = await Promise.all([n.e('95468'), n.e('46343')]).then(n.bind(n, 650233));
                                             return (t) =>
                                                 (0, r.jsx)(

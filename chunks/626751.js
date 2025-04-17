@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    l = n(987909),
+    l = n(442837),
+    a = n(987909),
     o = n(430824),
     s = n(630388),
     c = n(35125),
@@ -13,7 +13,7 @@ function p(e) {
     let { channel: p, message: m } = e,
         f = null != (n = null == (t = m.roleSubscriptionData) ? void 0 : t.is_renewal) && n ? (0, u.Md)() : (0, u.Q8)(),
         h = p.guild_id,
-        g = (0, a.e7)(
+        g = (0, l.e7)(
             [o.Z],
             () => {
                 var e;
@@ -25,7 +25,7 @@ function p(e) {
         b = i.useMemo(() => (0, c._i)(p, m), [p, m]);
     return _
         ? null
-        : (0, r.jsx)(l.Z, {
+        : (0, r.jsx)(a.Z, {
               channel: p,
               message: m,
               buttonLabels: f,

@@ -7,8 +7,8 @@ n.d(t, {
 });
 var r = n(166459),
     i = n(966390),
-    a = n(476326),
-    l = n(703558),
+    l = n(476326),
+    a = n(703558),
     o = n(398805);
 async function s(e, t, n) {
     let r = (0, o.Yk)(t, n),
@@ -20,26 +20,26 @@ function c(e, t, n) {
         id: t,
         channelId: e,
         file: n,
-        platform: a.ow.WEB
+        platform: l.ow.WEB
     };
     r.Z.addFile({
         file: i,
         channelId: e,
-        draftType: l.d.Poll
+        draftType: a.d.Poll
     });
 }
 async function u(e, t, n) {
-    r.Z.remove(e, t, l.d.Poll);
+    r.Z.remove(e, t, a.d.Poll);
 }
 async function d(e) {
-    r.Z.clearAll(e, l.d.Poll);
+    r.Z.clearAll(e, a.d.Poll);
 }
 async function p(e) {
-    let { channel: t, items: n, poll: r, nonce: a, maxSizeCallback: o } = e;
+    let { channel: t, items: n, poll: r, nonce: l, maxSizeCallback: o } = e;
     return i.Z.uploadFiles({
         channelId: t.id,
         uploads: n,
-        draftType: l.d.Poll,
+        draftType: a.d.Poll,
         parsedMessage: {
             content: '',
             tts: !1,
@@ -47,7 +47,7 @@ async function p(e) {
             validNonShortcutEmojis: []
         },
         options: {
-            nonce: a,
+            nonce: l,
             poll: r
         },
         raiseEndpointErrors: !0

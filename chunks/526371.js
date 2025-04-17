@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(314910),
     h = n(498646),
     f = n(981631),
-    _ = n(921944),
-    b = n(622802),
+    b = n(921944),
+    _ = n(622802),
     N = n(388032),
     x = n(631587),
     E = n(394637);
@@ -39,7 +39,7 @@ function j() {
                 onMouseEnter: () => n(!0),
                 onMouseLeave: () => n(!1),
                 onClick: () => {
-                    h(_.L.PRIMARY), d.Z.open(f.oAB.CLICKER_GAME, null, { analyticsLocations: s });
+                    h(b.L.PRIMARY), d.Z.open(f.oAB.CLICKER_GAME, null, { analyticsLocations: s });
                 },
                 children: [
                     (0, r.jsxs)('div', {
@@ -48,7 +48,7 @@ function j() {
                             (0, r.jsxs)(c.P3F, {
                                 className: x.dismiss,
                                 onClick: (e) => {
-                                    e.stopPropagation(), h(_.L.USER_DISMISS);
+                                    e.stopPropagation(), h(b.L.USER_DISMISS);
                                 },
                                 children: [
                                     (0, r.jsx)(c.P$X, {
@@ -58,7 +58,7 @@ function j() {
                                     (0, r.jsx)(l.xv, {
                                         color: 'currentColor',
                                         variant: 'text-xs/bold',
-                                        children: N.NW.string(b.Z.AsH93d)
+                                        children: N.NW.string(_.Z.AsH93d)
                                     })
                                 ]
                             }),
@@ -88,12 +88,12 @@ function j() {
                                     (0, r.jsx)(l.xv, {
                                         variant: 'text-md/bold',
                                         color: 'always-white',
-                                        children: N.NW.string(b.Z['7qZdOz'])
+                                        children: N.NW.string(_.Z['7qZdOz'])
                                     }),
                                     (0, r.jsx)(l.xv, {
                                         variant: 'text-sm/medium',
                                         color: 'always-white',
-                                        children: N.NW.string(b.Z.orfMLS)
+                                        children: N.NW.string(_.Z.orfMLS)
                                     })
                                 ]
                             }),

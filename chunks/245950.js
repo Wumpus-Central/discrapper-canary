@@ -16,11 +16,11 @@ function p(e) {
         i = (0, a.e7)([d.Z], () => (null != n ? d.Z.getSubscriptionGroupListingForSubscriptionListing(n.id) : null)),
         p = (0, a.e7)([l.Z], () => l.Z.getGuild(null == i ? void 0 : i.guild_id)),
         [h, f] = r.useState(!1),
-        { fetchSubscriptionsSettings: _ } = (0, c.JH)();
+        { fetchSubscriptionsSettings: b } = (0, c.JH)();
     r.useEffect(() => {
-        h && null != p && null == d.Z.getSubscriptionSettings(p.id) && _(p.id);
-    }, [h, p, _]);
-    let b =
+        h && null != p && null == d.Z.getSubscriptionSettings(p.id) && b(p.id);
+    }, [h, p, b]);
+    let _ =
         null == n
             ? void 0
             : (function (e) {
@@ -47,6 +47,6 @@ function p(e) {
         handleToggleExpanded: () => f((e) => !e),
         listing: n,
         groupListing: i,
-        subscriptionInfo: b
+        subscriptionInfo: _
     };
 }

@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(763283),
     h = n(981631),
     f = n(622802),
-    _ = n(388032),
-    b = n(753514),
+    b = n(388032),
+    _ = n(753514),
     N = n(450890),
     x = n(145133);
 let E = (0, i.Un)({
@@ -66,14 +66,14 @@ function j() {
                               })({}, t)),
                               (a = a =
                                   {
-                                      header: _.NW.string(f.Z.SvQ1xM),
-                                      confirmText: _.NW.string(f.Z.vLz9lJ),
-                                      cancelText: _.NW.string(f.Z['+Mgv5O']),
+                                      header: b.NW.string(f.Z.SvQ1xM),
+                                      confirmText: b.NW.string(f.Z.vLz9lJ),
+                                      cancelText: b.NW.string(f.Z['+Mgv5O']),
                                       onConfirm: i,
                                       confirmButtonColor: l.zxk.Colors.GREEN,
                                       children: (0, r.jsx)(s.xv, {
                                           variant: 'text-md/normal',
-                                          children: _.NW.string(f.Z['v6v/BQ'])
+                                          children: b.NW.string(f.Z['v6v/BQ'])
                                       })
                                   }),
                               Object.getOwnPropertyDescriptors
@@ -95,19 +95,19 @@ function j() {
                 : i();
         };
     return (0, r.jsxs)('div', {
-        className: b.container,
+        className: _.container,
         children: [
-            (0, r.jsx)('div', { className: b.backgroundOverlay }),
+            (0, r.jsx)('div', { className: _.backgroundOverlay }),
             (0, r.jsxs)('div', {
-                className: b.mainContent,
+                className: _.mainContent,
                 children: [
                     (0, r.jsx)('img', {
                         src: N,
-                        alt: _.NW.string(f.Z['7qZdOz'])
+                        alt: b.NW.string(f.Z['7qZdOz'])
                     }),
                     (0, r.jsxs)(g.Z, {
                         muted: !0,
-                        className: b.playButton,
+                        className: _.playButton,
                         color: 'white',
                         disabled: t,
                         onClick: j,
@@ -115,18 +115,18 @@ function j() {
                             (0, r.jsx)(p.Z, {
                                 color: 'always-white',
                                 variant: 'text-lg/bold',
-                                children: e ? _.NW.string(f.Z.ziFxys) : _.NW.string(f.Z.vLz9lJ)
+                                children: e ? b.NW.string(f.Z.ziFxys) : b.NW.string(f.Z.vLz9lJ)
                             }),
                             (0, r.jsx)(p.Z, {
                                 color: 'always-white',
                                 variant: 'text-xxs/medium',
-                                children: _.NW.string(f.Z['10J8k5'])
+                                children: b.NW.string(f.Z['10J8k5'])
                             })
                         ]
                     }),
                     (0, r.jsx)(g.Z, {
                         muted: !0,
-                        className: b.resetButton,
+                        className: _.resetButton,
                         color: 'white',
                         disabled: t || !e,
                         onClick: () => {
@@ -135,22 +135,22 @@ function j() {
                         children: (0, r.jsx)(p.Z, {
                             color: 'always-white',
                             variant: 'text-xs/bold',
-                            children: _.NW.string(f.Z['/A+1UF'])
+                            children: b.NW.string(f.Z['/A+1UF'])
                         })
                     })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: b.footer,
+                className: _.footer,
                 children: [
                     (0, r.jsx)(p.Z, {
-                        className: b.availability,
+                        className: _.availability,
                         color: 'always-white',
                         variant: 'text-xxs/medium',
-                        children: _.NW.string(f.Z.eZleys)
+                        children: b.NW.string(f.Z.eZleys)
                     }),
                     (0, r.jsx)('div', {
-                        className: b.footerCenter,
+                        className: _.footerCenter,
                         children: (0, r.jsx)(g.Z, {
                             muted: !0,
                             color: 'white',
@@ -160,13 +160,13 @@ function j() {
                             children: (0, r.jsx)(p.Z, {
                                 color: 'always-white',
                                 variant: 'text-xs/bold',
-                                children: _.NW.string(f.Z.CQXsEh)
+                                children: b.NW.string(f.Z.CQXsEh)
                             })
                         })
                     }),
                     (0, r.jsx)('img', {
                         src: x,
-                        alt: _.NW.string(f.Z.ABYTMz)
+                        alt: b.NW.string(f.Z.ABYTMz)
                     })
                 ]
             })

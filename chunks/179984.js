@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(975298),
     h = n(15640),
     f = n(594174),
-    _ = n(78839),
-    b = n(74538),
+    b = n(78839),
+    _ = n(74538),
     N = n(775412),
     x = n(104494),
     E = n(639119),
@@ -78,7 +78,7 @@ let k = () => {
             { premiumType: n } = e,
             i = (0, u.ZP)();
         t = n === I.p9.TIER_0 ? ((0, o.wj)(i) ? P : R) : (0, o.wj)(i) ? D : Z;
-        let s = (0, b.Px)(n);
+        let s = (0, _.Px)(n);
         return (0, r.jsx)('img', {
             src: t,
             className: A.logo,
@@ -144,7 +144,7 @@ let k = () => {
         let n,
             { className: s, hideCTAs: P = !1, headingOverride: R, hidePill: D = !1, selectedPlanColumnClassName: Z, selectedPlanTier: U = I.p9.TIER_2 } = e,
             { analyticsLocations: V } = (0, g.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-            G = (0, l.e7)([_.ZP], () => _.ZP.hasFetchedSubscriptions()),
+            G = (0, l.e7)([b.ZP], () => b.ZP.hasFetchedSubscriptions()),
             F = (0, h.V)(),
             H = 'PlanComparisonTable';
         (0, d.j)({
@@ -158,16 +158,16 @@ let k = () => {
         let z = (0, u.ZP)(),
             Y = (0, o.ap)(z),
             K = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
-            q = (0, b.M5)(K, I.p9.TIER_2),
+            q = (0, _.M5)(K, I.p9.TIER_2),
             X = (0, E.N)(),
             Q = null == X || null == (t = X.subscription_trial) ? void 0 : t.sku_id,
             J = (0, N.rT)(),
             $ = (0, x.Ng)(),
             ee = null != $ && (0, x.Wp)($, I.Si.TIER_2),
             et = (0, j.A)(I.Xh.PREMIUM_MONTH_TIER_2),
-            en = ''.concat(et, '/').concat((0, b.eP)(I.rV.MONTH)),
-            er = (0, b.CY)(I.Xh.PREMIUM_MONTH_TIER_0),
-            ei = (0, b.CY)(I.Xh.PREMIUM_MONTH_TIER_2),
+            en = ''.concat(et, '/').concat((0, _.eP)(I.rV.MONTH)),
+            er = (0, _.CY)(I.Xh.PREMIUM_MONTH_TIER_0),
+            ei = (0, _.CY)(I.Xh.PREMIUM_MONTH_TIER_2),
             es = (0, p.Z)(),
             ea = (0, S.n)(er, ei, ee, en, es.fractionalState),
             el = (0, C.Vi)();

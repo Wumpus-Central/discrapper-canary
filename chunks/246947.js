@@ -1,7 +1,7 @@
-n.d(t, { W: () => l });
+n.d(t, { W: () => a });
 var r = n(818083),
     i = n(846573);
-let a = (0, r.B)({
+let l = (0, r.B)({
     kind: 'user',
     id: '2025-01_desktop_multiple_background_updates',
     label: 'Support multiple native background updates',
@@ -14,10 +14,10 @@ let a = (0, r.B)({
         }
     ]
 });
-function l(e) {
+function a(e) {
     let { location: t } = e,
         { isInHoldout: n } = i.X.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-    return a.getCurrentConfig(
+    return l.getCurrentConfig(
         { location: t },
         {
             disable: n,

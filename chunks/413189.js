@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N });
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     o = n(410030),
     s = n(739566),
     c = n(612659),
@@ -28,19 +28,19 @@ function N(e) {
         A = null == (t = I.chatWallpaperInfo) ? void 0 : t.wallpaperId,
         { enabled: w } = (0, m.sX)({ location: 'ChatWallpaperSetSystemMessage' }),
         Z = (0, s.ZP)(I),
-        R = (0, l.wjy)((0, o.ZP)()),
+        R = (0, a.wjy)((0, o.ZP)()),
         {
             chatWallpaper: k,
             isUpdatingChatWallpaperFlag: D,
             lastSetMessageId: L
-        } = (0, a.cj)([f.Z], () => ({
+        } = (0, l.cj)([f.Z], () => ({
             chatWallpaper: f.Z.getWallpaperById(A),
             isUpdatingChatWallpaperFlag: f.Z.isUpdatingChatWallpaperFlagForChannel(T.id),
             lastSetMessageId: f.Z.getLastSetWallpaperMessageIdForChannel(T.id)
         })),
         M = (0, _.Z)(T.id),
         W = L === I.id,
-        U = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        U = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         F = (null == U ? void 0 : U.id) === I.author.id,
         B = (0, c.m)(y.p9.TIER_2),
         G = h.t(T);
@@ -72,13 +72,13 @@ function N(e) {
           (null == M ? void 0 : M.isViewable) &&
               W &&
               !F &&
-              (S = (0, r.jsx)(l.zxk, {
+              (S = (0, r.jsx)(a.zxk, {
                   className: v.action,
                   onClick: () => {
                       g.X(T, A, {
                           shouldClear: !G,
                           onError: () => {
-                              (0, l.showToast)((0, l.createToast)(E.NW.string(E.t.F8FvU1), l.ToastType.FAILURE));
+                              (0, a.showToast)((0, a.createToast)(E.NW.string(E.t.F8FvU1), a.ToastType.FAILURE));
                           }
                       });
                   },

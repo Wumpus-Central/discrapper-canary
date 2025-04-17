@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r = n(200651),
     i = n(192379),
-    a = n(481060),
-    l = n(665149),
+    l = n(481060),
+    a = n(665149),
     o = n(388035),
     s = n(453473),
     c = n(388032);
@@ -20,7 +20,7 @@ function u(e) {
                 location: 'bookmarks-button',
                 targetElementRef: d,
                 children: (0, r.jsx)(
-                    l.JO,
+                    a.JO,
                     ((s = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -51,7 +51,7 @@ function u(e) {
                             ref: d,
                             className: u,
                             onClick: e,
-                            icon: a.plf,
+                            icon: l.plf,
                             'aria-label': c.NW.string(c.t['2pAkDA']),
                             tooltip: t ? null : c.NW.string(c.t['2pAkDA']),
                             selected: t,

@@ -13,8 +13,8 @@ var r,
     p = n(355467),
     h = n(827837),
     f = n(821849),
-    _ = n(724757),
-    b = n(600164),
+    b = n(724757),
+    _ = n(600164),
     N = n(239827),
     x = n(818035),
     E = n(509545),
@@ -84,7 +84,7 @@ function Z(e) {
         var e;
         null == (e = o.current) || e.scrollTo({ to: 0 });
     }, [c]);
-    let b = s.useCallback(
+    let _ = s.useCallback(
             (e) => {
                 u(e);
                 let n = t[t.length - 1].id;
@@ -92,7 +92,7 @@ function Z(e) {
             },
             [t, a, g]
         ),
-        x = (0, _.Z)('billing-history', o);
+        x = (0, b.Z)('billing-history', o);
     return (0, i.jsx)(d.bG, {
         navigator: x,
         children: (0, i.jsx)(d.SJ, {
@@ -124,7 +124,7 @@ function Z(e) {
                             {
                                 className: l()(y.verticalFit, y.paginator),
                                 currentPageIndex: c,
-                                onChangePage: b,
+                                onChangePage: _,
                                 numPages: a,
                                 showPageCount: !1,
                                 ref: t
@@ -201,7 +201,7 @@ class w extends (r = s.PureComponent) {
                                         ? null
                                         : (0, i.jsx)('div', {
                                               className: l()(y.paymentRow, y.bottomDivider),
-                                              children: (0, i.jsxs)(b.Z, {
+                                              children: (0, i.jsxs)(_.Z, {
                                                   className: y.paymentRowHeader,
                                                   children: [
                                                       (0, i.jsx)('div', {

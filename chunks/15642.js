@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(674701),
-    l = n(934415),
+    l = n(674701),
+    a = n(934415),
     o = n(834129),
     s = n(981631),
     c = n(848024);
@@ -13,11 +13,11 @@ function u(e) {
         contentClassName: c.messageContentContainer,
         iconContainerClassName: c.iconContainer,
         iconNode: (0, r.jsx)(i.Dkj, { colorClass: c.icon }),
-        children: (0, r.jsx)(a.Z, {
+        children: (0, r.jsx)(l.Z, {
             giftIntentType: t,
-            premiumGiftIntentCardType: a.U.SYSTEM_MESSAGE,
+            premiumGiftIntentCardType: l.U.SYSTEM_MESSAGE,
             recipientUser: n,
-            analyticsPage: (0, l.mE)(d),
+            analyticsPage: (0, a.mE)(d),
             analyticsSection: s.jXE.CHANNEL,
             giftIntentSecondaryAction: u
         })

@@ -53,7 +53,7 @@ function p(e, t) {
     );
 }
 function h(e) {
-    let { guildBoostSlot: t, onClose: h, hasCancelableGuildBoostSlot: f, premiumSubscription: _, onSelect: b, fractionalState: N, user: x } = e,
+    let { guildBoostSlot: t, onClose: h, hasCancelableGuildBoostSlot: f, premiumSubscription: b, onSelect: _, fractionalState: N, user: x } = e,
         E = {
             transfer: {
                 label: null != t.premiumGuildSubscription ? u.NW.string(u.t['PR0n//']) : u.NW.string(u.t['+fmEYG']),
@@ -71,7 +71,7 @@ function h(e) {
                 disabled: !1
             }
         };
-    switch (_.status) {
+    switch (b.status) {
         case c.O0b.PAST_DUE:
             (E.cancel.disabled = !0), (E.cancel.subtext = u.NW.string(u.t.WnL6DQ)), (E.uncancel.disabled = !0);
             break;
@@ -82,7 +82,7 @@ function h(e) {
     (0, l.y)('guild_boost_slot_popout', x, N) && ((E.cancel.subtext = u.NW.string(u.t.dq4vq6)), (E.cancel.disabled = !0), (E.uncancel.disabled = !0));
     let j = i.useMemo(
         () =>
-            _.isPausedOrPausePending && N === d.a$.NONE
+            b.isPausedOrPausePending && N === d.a$.NONE
                 ? (0, r.jsx)(s.sNh, {
                       id: 'manage-subscription',
                       label: u.NW.string(u.t.obRG6e),
@@ -91,10 +91,10 @@ function h(e) {
                       className: m.manageSubscription
                   })
                 : null,
-        [N, _]
+        [N, b]
     );
     return (0, r.jsxs)(s.v2r, {
-        onSelect: b,
+        onSelect: _,
         navId: 'subscription-context',
         variant: 'fixed',
         'aria-label': u.NW.string(u.t.ogxXGh),

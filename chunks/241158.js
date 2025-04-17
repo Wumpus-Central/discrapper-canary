@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(831964),
     h = n(981631),
     f = n(869783),
-    _ = n(388032),
-    b = n(731568);
+    b = n(388032),
+    _ = n(731568);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,7 +41,7 @@ function N(e) {
     return e;
 }
 let x = (e) => {
-        let { name: t, title: n, description: s, descriptionCta: _, previewImage: N, videoUrl: x, shouldLoadVideo: E, index: j, isCompact: C, isReducedMotion: O, onClick: S } = e,
+        let { name: t, title: n, description: s, descriptionCta: b, previewImage: N, videoUrl: x, shouldLoadVideo: E, index: j, isCompact: C, isReducedMotion: O, onClick: S } = e,
             v = (0, g.rO)(),
             T = i.useRef(null),
             I = i.useRef(0),
@@ -49,28 +49,28 @@ let x = (e) => {
                 let t;
                 switch (e) {
                     case p.dm.EMOJIS:
-                        t = b.emojisBackground;
+                        t = _.emojisBackground;
                         break;
                     case p.dm.REFERRAL_PROGRAM:
-                        t = b.referralProgramBackground;
+                        t = _.referralProgramBackground;
                         break;
                     case p.dm.NO_LIMITS:
-                        t = b.noLimitsBackground;
+                        t = _.noLimitsBackground;
                         break;
                     case p.dm.NEW_APP_STYLES:
-                        t = b.newStylesBackground;
+                        t = _.newStylesBackground;
                         break;
                     case p.dm.YOUR_SPACE:
-                        t = b.yourSpaceBackground;
+                        t = _.yourSpaceBackground;
                         break;
                     case p.dm.SERVER_PROFILES:
-                        t = b.serverProfilesBackground;
+                        t = _.serverProfilesBackground;
                         break;
                     case p.dm.SHOW_YOUR_STYLE:
-                        t = b.yourStyleBackground;
+                        t = _.yourStyleBackground;
                         break;
                     case p.dm.PERMADECOS:
-                        t = b.permadecosBackground;
+                        t = _.permadecosBackground;
                 }
                 return t;
             })(t),
@@ -89,35 +89,35 @@ let x = (e) => {
             k = () =>
                 (0, r.jsxs)('div', {
                     className: a()({
-                        [b.whatsNewTextBoxOuter]: !C,
-                        [b.compactTextBox]: C
+                        [_.whatsNewTextBoxOuter]: !C,
+                        [_.compactTextBox]: C
                     }),
                     children: [
                         (0, r.jsx)(c.X6q, {
                             variant: 'heading-xxl/extrabold',
                             color: 'header-primary',
                             className: a()({
-                                [b.whatsNewBoxHeader]: !C,
-                                [b.compactBoxHeader]: C
+                                [_.whatsNewBoxHeader]: !C,
+                                [_.compactBoxHeader]: C
                             }),
                             children: n
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             color: 'text-muted',
-                            className: b.whatsNewBoxDescription,
+                            className: _.whatsNewBoxDescription,
                             children: s
                         }),
-                        null != _ &&
+                        null != b &&
                             null != S &&
                             (0, r.jsx)(c.zxk, {
                                 look: c.iLD.OUTLINED,
                                 color: R,
-                                className: a()(b.whatsNewBoxButton, P ? b.whatsNewBoxButtonWhite : b.whatsNewBoxButtonBrand),
+                                className: a()(_.whatsNewBoxButton, P ? _.whatsNewBoxButtonWhite : _.whatsNewBoxButtonBrand),
                                 onClick: () => {
                                     D(), S();
                                 },
-                                children: _
+                                children: b
                             })
                     ]
                 }),
@@ -125,8 +125,8 @@ let x = (e) => {
                 let { isLeft: t } = e;
                 return (0, r.jsx)('div', {
                     className: a()({
-                        [b.whatsNewArtContainer]: !C,
-                        [b.compactBoxArtContainer]: C
+                        [_.whatsNewArtContainer]: !C,
+                        [_.compactBoxArtContainer]: C
                     }),
                     children: (0, r.jsx)(
                         u.Z,
@@ -137,9 +137,9 @@ let x = (e) => {
                             poster: N,
                             loop: !0,
                             className: a()({
-                                [b.perkBoxVideo]: !C,
-                                [b.leftSideArt]: t && !C,
-                                [b.compactBoxVideo]: C
+                                [_.perkBoxVideo]: !C,
+                                [_.leftSideArt]: t && !C,
+                                [_.compactBoxVideo]: C
                             }),
                             ref: T,
                             children: (0, r.jsx)('source', {
@@ -154,8 +154,8 @@ let x = (e) => {
             L = j % 2 != 0;
         return (0, r.jsx)('div', {
             className: a()(y, {
-                [b.whatsNewBoxContainer]: !C,
-                [b.compactBoxContainer]: C
+                [_.whatsNewBoxContainer]: !C,
+                [_.compactBoxContainer]: C
             }),
             onMouseEnter: Z,
             onFocus: Z,
@@ -175,13 +175,13 @@ let x = (e) => {
             l = Object.values((0, p.ZP)(i)),
             o = i ? Object.values((0, p.__)()) : null;
         return (0, r.jsxs)('div', {
-            className: a()(b.boxBackdrop, t),
+            className: a()(_.boxBackdrop, t),
             children: [
                 (0, r.jsx)(c.X6q, {
-                    className: b.whatsNewHeader,
+                    className: _.whatsNewHeader,
                     variant: 'display-md',
                     color: 'header-primary',
-                    children: i ? _.NW.string(_.t.EnzW2N) : _.NW.string(_.t.LRmNAg)
+                    children: i ? b.NW.string(b.t.EnzW2N) : b.NW.string(b.t.LRmNAg)
                 }),
                 l.map((e, t) =>
                     (0, r.jsx)(
@@ -199,7 +199,7 @@ let x = (e) => {
                 ),
                 null != o &&
                     (0, r.jsxs)('div', {
-                        className: b.compactBoxOuterContainer,
+                        className: _.compactBoxOuterContainer,
                         children: [
                             o.map((e, t) =>
                                 (0, r.jsx)(
@@ -215,7 +215,7 @@ let x = (e) => {
                                     e.name
                                 )
                             ),
-                            (0, r.jsx)('div', { className: b.whatsNewSideGradient })
+                            (0, r.jsx)('div', { className: _.whatsNewSideGradient })
                         ]
                     })
             ]

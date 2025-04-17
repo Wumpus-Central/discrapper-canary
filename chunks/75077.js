@@ -2,7 +2,7 @@ n.d(t, {
     Dp: () => g,
     Gw: () => h,
     Op: () => x,
-    gx: () => _,
+    gx: () => b,
     iG: () => f,
     mN: () => E,
     oo: () => p,
@@ -65,8 +65,8 @@ function f(e, t) {
             return '';
     }
 }
-let _ = (e, t, n) => ((0, s.wj)(e) ? t : n),
-    b = (e) => {
+let b = (e, t, n) => ((0, s.wj)(e) ? t : n),
+    _ = (e) => {
         let { cards: t, perksCards: n, isFullScreen: r, showTenureCard: i } = e,
             s = r ? 3 : 2,
             a = (e) => {
@@ -93,7 +93,7 @@ let _ = (e, t, n) => ((0, s.wj)(e) ? t : n),
                     .otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
                 break;
             case c.R0.WHATS_NEW:
-                u = b({
+                u = _({
                     cards: u,
                     perksCards: t,
                     isFullScreen: i,

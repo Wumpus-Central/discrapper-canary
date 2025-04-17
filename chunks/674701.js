@@ -4,9 +4,9 @@ n.d(t, {
 });
 var r,
     i = n(200651),
-    a = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    l = n(192379),
+    a = n(120356),
+    o = n.n(a),
     s = n(990547),
     c = n(442837),
     u = n(692547),
@@ -35,11 +35,11 @@ var r,
     Z = n(587862),
     R = (((r = {}).SYSTEM_MESSAGE = 'system_message'), (r.COACHMARK = 'coachmark'), r);
 function k(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: l, onMouseLeave: R, popoutPosition: k, analyticsPage: D, analyticsSection: L, glow: M, giftIntentSecondaryAction: W } = e,
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: a, onMouseLeave: R, popoutPosition: k, analyticsPage: D, analyticsSection: L, glow: M, giftIntentSecondaryAction: W } = e,
         U = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
         { analyticsLocations: F } = (0, h.ZP)(),
         B = (0, c.e7)([C.Z], () => C.Z.getFriendAnniversaryYears(r.id));
-    a.useEffect(() => {
+    l.useEffect(() => {
         (0, g.h)({
             name: s.ImpressionNames.GIFT_INTENT_CARD,
             type: s.ImpressionTypes.VIEW,
@@ -66,7 +66,7 @@ function k(e) {
             [Z.outerGlow]: M,
             [Z.contentCoachmark]: H
         }),
-        onMouseEnter: l,
+        onMouseEnter: a,
         onMouseLeave: R,
         children: (0, i.jsxs)('div', {
             className: o()(V, { [Z.innerGlow]: M }),

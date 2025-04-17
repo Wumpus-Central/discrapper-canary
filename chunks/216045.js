@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(634894),
     h = n(100527),
     f = n(906732),
-    _ = n(475977),
-    b = n(605236),
+    b = n(475977),
+    _ = n(605236),
     N = n(243778),
     x = n(957730),
     E = n(442933),
@@ -76,10 +76,10 @@ function G() {
         X = Z.ZP.canUsePremiumProfileCustomization(n),
         { analyticsLocations: Q } = (0, f.ZP)(h.Z.PROFILE),
         J = (0, y.T)({ location: 'UserSettingsProfileCustomization' }),
-        $ = (0, b.wE)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
+        $ = (0, _.wE)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
         ee = J && !$;
     i.useEffect(() => {
-        ee && (0, b.EW)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
+        ee && (0, _.EW)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
     }, [ee]);
     let et = (0, E.H)('UserSettingsProfileCustomization'),
         [en, er] = (0, N.US)(et ? [o.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE] : []),
@@ -106,7 +106,7 @@ function G() {
         : (0, r.jsxs)(f.Gt, {
               value: Q,
               children: [
-                  (0, r.jsx)(_.Z, {}),
+                  (0, r.jsx)(b.Z, {}),
                   (0, r.jsx)(O.Z, {
                       profilePreview: (0, r.jsx)(
                           S.Z,

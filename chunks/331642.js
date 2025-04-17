@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(603074),
     h = n(294206),
     f = n(388032),
-    _ = n(517058);
-function b(e) {
+    b = n(517058);
+function _(e) {
     let { onSelect: t } = e,
         [n, a] = i.useState(!1),
         o = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
@@ -79,7 +79,7 @@ function b(e) {
                         children: (0, r.jsx)(l.vdY, {
                             size: 'md',
                             color: 'currentColor',
-                            className: _.secondaryIcon
+                            className: b.secondaryIcon
                         })
                     }),
                 Object.getOwnPropertyDescriptors
@@ -115,7 +115,7 @@ function N(e) {
         children: (0, r.jsx)(l.gj8, {
             size: 'md',
             color: 'currentColor',
-            className: _.secondaryIconActive
+            className: b.secondaryIconActive
         })
     });
 }
@@ -126,21 +126,21 @@ function x(e) {
         d = null == t ? void 0 : t.emojiName,
         u = s && (null != d || null != c);
     return (0, r.jsxs)('div', {
-        className: _.soundButtonSettingContainer,
+        className: b.soundButtonSettingContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: _.container,
+                className: b.container,
                 children: [
                     u &&
                         (0, r.jsx)(o.Z, {
                             emojiId: c,
                             emojiName: d,
-                            className: _.emoji
+                            className: b.emoji
                         }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-primary',
-                        className: _.soundText,
+                        className: b.soundText,
                         children:
                             null == t
                                 ? f.NW.string(f.t.PoWNfX)
@@ -162,14 +162,14 @@ function x(e) {
                         : (0, r.jsx)(l.gj8, {
                               size: 'md',
                               color: 'currentColor',
-                              className: _.secondaryIconDisabled
+                              className: b.secondaryIconDisabled
                           })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: _.container,
+                className: b.container,
                 children: [
-                    (0, r.jsx)(b, { onSelect: i }),
+                    (0, r.jsx)(_, { onSelect: i }),
                     s &&
                         !n &&
                         (0, r.jsx)(h.hU, {
@@ -178,7 +178,7 @@ function x(e) {
                             children: (0, r.jsx)(l.XHJ, {
                                 size: 'md',
                                 color: a.Z.unsafe_rawColors.RED_400.css,
-                                className: _.secondaryIcon
+                                className: b.secondaryIcon
                             })
                         })
                 ]

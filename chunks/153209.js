@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685), n(642613);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(442837),
     s = n(524437),
     c = n(481060),
@@ -34,7 +34,7 @@ function O(e) {
     });
 }
 function j(e) {
-    let { setTab: t, badgeState: n, closePopout: a } = e,
+    let { setTab: t, badgeState: n, closePopout: l } = e,
         { initialized: c, items: E, loading: N, loadMore: j } = (0, m.y6)(),
         C = (0, o.e7)([u.Z], () => u.Z.localItems),
         S = (0, h.Us)({ location: 'ForYou' }),
@@ -50,13 +50,13 @@ function j(e) {
             return !1;
         }, [T, P, I]);
     return (0, r.jsxs)('div', {
-        className: l()(v.container, { [v.widerInbox]: S }),
+        className: a()(v.container, { [v.widerInbox]: S }),
         children: [
             (0, r.jsx)(x.Z, {
                 tab: s.X.FOR_YOU,
                 setTab: t,
                 badgeState: n,
-                closePopout: a,
+                closePopout: l,
                 children: A
                     ? (0, r.jsx)(O, {
                           onClick: () => {

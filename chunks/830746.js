@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(399606),
@@ -14,30 +14,30 @@ var i = n(399606),
     p = n(292352),
     h = n(332495),
     f = n(388032),
-    _ = n(959810);
-let b = () => {
+    b = n(959810);
+let _ = () => {
     let e = (0, c.mq)(p.ne.ACTIVE),
         t = (0, o.c)(),
         n = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
-        b = (0, l.o)(f.NW.string(h.Z['5RZ8Tk']), f.NW.string(h.Z.bmhCnJ)),
+        _ = (0, l.o)(f.NW.string(h.Z['5RZ8Tk']), f.NW.string(h.Z.bmhCnJ)),
         N = (0, l.o)(f.NW.string(h.Z.XKnFFh), f.NW.string(h.Z['68zfxM'])),
         x = (0, l.o)(f.NW.string(h.Z['Rm/6a2']), f.NW.string(h.Z['1xPTwM']));
     return void 0 === n
         ? null
         : (0, r.jsxs)('div', {
-              className: _.container,
+              className: b.container,
               children: [
                   (0, r.jsx)('div', {
-                      className: _.banner,
+                      className: b.banner,
                       children: (0, r.jsx)(d.Z, {})
                   }),
                   (0, r.jsxs)('div', {
-                      className: _.featureCards,
+                      className: b.featureCards,
                       children: [
                           (0, r.jsx)(g.Z, {
                               icon: s.eQA,
                               header: f.NW.string(h.Z['001l3t']),
-                              description: b
+                              description: _
                           }),
                           (0, r.jsx)(g.Z, {
                               icon: s.tEF,

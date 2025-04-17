@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(311570),
-    l = n(692547),
+    l = n(311570),
+    a = n(692547),
     o = n(481060),
     s = n(100527),
     c = n(906732),
@@ -69,7 +69,7 @@ let j = 'HD_STREAMING_POTION_MODAL_KEY';
 function C(e) {
     let { channel: t } = e,
         n = (0, m.T$)(t),
-        [l, u] = (0, i.useState)(!1),
+        [a, u] = (0, i.useState)(!1),
         { price: h, fetchingPrice: g, error: _ } = (0, m.R2)(f.FX),
         { entitlement: x, fetchedEntitlement: y, error: E } = (0, m.t6)(f.FX),
         v = _ || E,
@@ -79,7 +79,7 @@ function C(e) {
         () => () => {
             v && (0, p.SN)(f.FX);
         },
-        [x, t, l, v]
+        [x, t, a, v]
     );
     let j = (0, i.useCallback)(() => {
             (0, p.Zu)(t.id), (0, o.pTH)();
@@ -89,7 +89,7 @@ function C(e) {
                 skuId: f.FX,
                 analyticsLocations: N,
                 onComplete: j,
-                variantsReturnStyle: a.v.INDIVIDUAL_PRODUCTS
+                variantsReturnStyle: l.v.INDIVIDUAL_PRODUCTS
             });
         }, [N, j]),
         I = (0, i.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == x ? void 0 : x.type) === b.qc2.DEVELOPER_GIFT ? 1 : 2 * !!O) : 3), [t.isHDStreamSplashed, n, null == x ? void 0 : x.type, O]),
@@ -105,8 +105,8 @@ function C(e) {
     });
 }
 let S = (e) => {
-        let { channel: t, buttonState: n, price: i, onActionClick: a, loading: l } = e;
-        return l
+        let { channel: t, buttonState: n, price: i, onActionClick: l, loading: a } = e;
+        return a
             ? (0, r.jsx)(Z, {})
             : null == i
               ? (0, r.jsx)(w, {})
@@ -119,7 +119,7 @@ let S = (e) => {
                         (0, r.jsx)(P, {
                             buttonState: n,
                             price: i,
-                            onActionClick: a
+                            onActionClick: l
                         })
                     ]
                 });
@@ -199,7 +199,7 @@ let S = (e) => {
     },
     A = (e) => {
         let { buttonState: t, price: n, onActionClick: i } = e,
-            a = x.NW.formatToPlainString(x.t.S9LAdX, { price: (0, g.T4)(n.amount, n.currency) });
+            l = x.NW.formatToPlainString(x.t.S9LAdX, { price: (0, g.T4)(n.amount, n.currency) });
         if (3 === t || 4 === t) {
             let e = {
                 3: x.NW.string(x.t.Qrh2BQ),
@@ -216,7 +216,7 @@ let S = (e) => {
                         (n = n =
                             {
                                 disabled: !0,
-                                children: a
+                                children: l
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -236,7 +236,7 @@ let S = (e) => {
             });
         }
         let s = {
-            0: a,
+            0: l,
             1: x.NW.string(x.t.sl6Tcn),
             2: x.NW.string(x.t.XJ9INj)
         }[t];
@@ -246,7 +246,7 @@ let S = (e) => {
                 className: y.buttonCopy,
                 children: [
                     (0, r.jsx)(o.hh5, {
-                        color: l.Z.colors.WHITE,
+                        color: a.Z.colors.WHITE,
                         size: 'sm'
                     }),
                     s

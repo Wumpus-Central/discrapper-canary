@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(654904),
     h = n(993413),
     f = n(921944),
-    _ = n(486324),
-    b = n(388032),
+    b = n(486324),
+    _ = n(388032),
     N = n(24085);
 let x = [
     {
@@ -33,14 +33,14 @@ function E(e) {
         w = (0, m._)(),
         { recentAvatarsLimit: k } = (0, d.pC)(w),
         W = i.useCallback(() => {
-            D(f.L.TAKE_ACTION), (0, p.$r)(_.pC.AVATAR, C, v, v ? x : void 0);
+            D(f.L.TAKE_ACTION), (0, p.$r)(b.pC.AVATAR, C, v, v ? x : void 0);
         }, [C, v, D]);
     return (0, r.jsx)(h.Z, {
         className: O,
         title: E,
         titleIcon: Z ? (0, r.jsx)(g.Z, { className: N.newBadge }) : void 0,
         description: A
-            ? b.NW.format(b.t.U4tZfX, {
+            ? _.NW.format(_.t.U4tZfX, {
                   recentAvatarsLimit: k,
                   onClick: W
               })
@@ -55,7 +55,7 @@ function E(e) {
                     className: a()({ [N.buttonHighlighted]: I }),
                     size: o.zxk.Sizes.SMALL,
                     onClick: W,
-                    children: null != j ? j : b.NW.string(b.t['4OynCA'])
+                    children: null != j ? j : _.NW.string(_.t['4OynCA'])
                 }),
                 t &&
                     (0, r.jsx)(o.zxk, {
@@ -64,7 +64,7 @@ function E(e) {
                         look: o.zxk.Looks.LINK,
                         size: o.zxk.Sizes.SMALL,
                         onClick: () => s(null),
-                        children: null != C ? b.NW.string(b.t.TDjKDg) : b.NW.string(b.t.twB3f3)
+                        children: null != C ? _.NW.string(_.t.TDjKDg) : _.NW.string(_.t.twB3f3)
                     })
             ]
         })

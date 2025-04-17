@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(594174),
     h = n(981631),
     f = n(388032),
-    _ = n(959963);
-let b = {
+    b = n(959963);
+let _ = {
     width: 387,
     height: 218
 };
@@ -42,14 +42,14 @@ function N(e) {
             renderCamera: (e) =>
                 t
                     ? (0, r.jsx)('div', {
-                          className: _.cameraWrapper,
+                          className: b.cameraWrapper,
                           children: (0, r.jsxs)('div', {
-                              className: _.camera,
+                              className: b.camera,
                               children: [
                                   (0, r.jsx)(x, {
                                       deviceId: e,
-                                      width: b.width,
-                                      height: b.height,
+                                      width: _.width,
+                                      height: _.height,
                                       disabled: !t
                                   }),
                                   (0, r.jsx)(m.S, {})
@@ -57,9 +57,9 @@ function N(e) {
                           })
                       })
                     : (0, r.jsxs)('div', {
-                          className: _.cameraWrapper,
+                          className: b.cameraWrapper,
                           children: [
-                              (0, r.jsx)('div', { className: _.previewImage }),
+                              (0, r.jsx)('div', { className: b.previewImage }),
                               (0, r.jsx)(a.ua7, {
                                   text: v ? null : f.NW.string(f.t['8jSzSU']),
                                   children: (e) => {

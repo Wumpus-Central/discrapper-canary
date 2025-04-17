@@ -31,8 +31,8 @@ function p(e) {
     let { groupListingId: t, subscription: n, className: s } = e,
         { analyticsLocations: l } = (0, c.ZP)(o.Z.PENDING_PLAN_CHANGE_NOTICE),
         { resetRenewalMutation: p, submitting: h, error: f } = g(l),
-        _ = (0, d._k)(t, { includeSoftDeleted: !0 }),
-        { currentListing: b, nextListing: N } = i.useMemo(() => {
+        b = (0, d._k)(t, { includeSoftDeleted: !0 }),
+        { currentListing: _, nextListing: N } = i.useMemo(() => {
             if ((null == n ? void 0 : n.renewalMutations) == null)
                 return {
                     currentListing: void 0,
@@ -41,15 +41,15 @@ function p(e) {
             let e = n.items[0].planId,
                 t = n.renewalMutations.items[0].planId;
             return {
-                currentListing: _.find((t) => t.subscription_plans[0].id === e),
-                nextListing: _.find((e) => e.subscription_plans[0].id === t)
+                currentListing: b.find((t) => t.subscription_plans[0].id === e),
+                nextListing: b.find((e) => e.subscription_plans[0].id === t)
             };
-        }, [n, _]);
-    if (null == n || null == b || null == N) return null;
+        }, [n, b]);
+    if (null == n || null == _ || null == N) return null;
     let x = a()(n.currentPeriodEnd).format('MMM DD, YYYY');
     return (0, r.jsx)(u.Z, {
         message: m.NW.format(m.t.chw89f, {
-            currentListing: b.name,
+            currentListing: _.name,
             nextListing: N.name,
             changeDate: x
         }),

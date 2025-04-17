@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(467055), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(442837),
     s = n(481060),
     c = n(911969),
@@ -67,7 +67,7 @@ let j = {
         variant: 'text-md/normal',
         color: 'header-secondary'
     },
-    C = { className: l()('mention', v.mention) };
+    C = { className: a()('mention', v.mention) };
 function S(e) {
     return (0, r.jsx)(
         s.Text,
@@ -78,7 +78,7 @@ function S(e) {
     );
 }
 let I = i.memo(function (e) {
-    var t, n, a, l, I, T;
+    var t, n, l, a, I, T;
     let P,
         { channel: A, messageId: w, interactionData: Z } = e,
         { analyticsLocations: R } = (0, u.ZP)(),
@@ -96,11 +96,11 @@ let I = i.memo(function (e) {
         });
     else {
         let e = [],
-            t = Object.fromEntries((null != (l = null == (n = Z.application_command) ? void 0 : n.options) ? l : []).map((e) => [e.name, e]));
+            t = Object.fromEntries((null != (a = null == (n = Z.application_command) ? void 0 : n.options) ? a : []).map((e) => [e.name, e]));
         for (let n of null != (I = Z.options) ? I : [])
             e = e.concat(
                 (function e(t) {
-                    var n, a, l, o, u, d, p;
+                    var n, l, a, o, u, d, p;
                     let v,
                         { option: I, channel: T, guild: P, messageId: A, parentOptionKey: w, commandOptionSpec: Z, sourceAnalyticsLocations: R } = t,
                         k = null != w ? w + ' ' + I.name : I.name;
@@ -109,12 +109,12 @@ let I = i.memo(function (e) {
                                 (0, r.jsxs)(
                                     i.Fragment,
                                     {
-                                        children: [' ', (0, r.jsx)(s.Text, O(N({}, j), { children: null != (a = null == Z ? void 0 : Z.name_localized) ? a : I.name }))]
+                                        children: [' ', (0, r.jsx)(s.Text, O(N({}, j), { children: null != (l = null == Z ? void 0 : Z.name_localized) ? l : I.name }))]
                                     },
                                     k
                                 )
                             ],
-                            c = Object.fromEntries(null == (n = null != (l = null == Z ? void 0 : Z.options) ? l : []) ? void 0 : n.map((e) => [e.name, e]));
+                            c = Object.fromEntries(null == (n = null != (a = null == Z ? void 0 : Z.options) ? a : []) ? void 0 : n.map((e) => [e.name, e]));
                         for (let n of null != (o = I.options) ? o : [])
                             t = t.concat(
                                 e({
@@ -249,7 +249,7 @@ let I = i.memo(function (e) {
                 (0, r.jsxs)(
                     s.Text,
                     O(N({}, j), {
-                        children: ['/', null != (T = null == (a = Z.application_command) ? void 0 : a.name_localized) ? T : Z.name]
+                        children: ['/', null != (T = null == (l = Z.application_command) ? void 0 : l.name_localized) ? T : Z.name]
                     })
                 ),
                 e

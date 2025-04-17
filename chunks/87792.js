@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(785681),
     h = n(985002),
     f = n(858719),
-    _ = n(780985),
-    b = n(880257),
+    b = n(780985),
+    _ = n(880257),
     N = n(631885),
     x = n(240351),
     E = n(792258),
@@ -80,18 +80,18 @@ function D(e) {
         n = i.useCallback(() => {
             (0, o.showToast)((0, o.createToast)(y.NW.string(I.Z.Wu8BKy), o.ToastType.FAILURE));
         }, []),
-        s = (0, b.Z)(),
+        s = (0, _.Z)(),
         l = (0, f.ws)(t),
         c = (0, f.C7)(t),
         { loadMore: u, isMoreLoading: p } = (0, h.G)({ onError: n }),
-        _ = v.tx.get(t),
+        b = v.tx.get(t),
         [N, x] = i.useState(v.iB),
         C = (0, g.Xi)({ location: 'family_center_activity_section_web' }),
         O = i.useCallback(() => {
             x((e) => e + v.iB), u(t);
         }, [t, u]);
-    a()(_, 'No text for action type');
-    let S = _.sectionHeader(c),
+    a()(b, 'No text for action type');
+    let S = b.sectionHeader(c),
         T = i.useCallback(
             (e) => {
                 let { row: t } = e,
@@ -102,7 +102,7 @@ function D(e) {
                           {
                               userId: n.entity_id,
                               timestamp: d.default.extractTimestamp(n.event_id),
-                              timestampFormatter: _.timestampFormatter
+                              timestampFormatter: b.timestampFormatter
                           },
                           n.event_id
                       )
@@ -110,7 +110,7 @@ function D(e) {
                       ? (0, r.jsx)(E.Z, { guildId: n.entity_id }, n.event_id)
                       : void 0;
             },
-            [l, _.timestampFormatter]
+            [l, b.timestampFormatter]
         ),
         P = i.useCallback(
             () =>
@@ -122,17 +122,17 @@ function D(e) {
                             color: 'header-secondary',
                             children: S
                         }),
-                        void 0 !== _.sectionDescription
+                        void 0 !== b.sectionDescription
                             ? (0, r.jsx)(o.Text, {
                                   className: A.sectionDescription,
                                   variant: 'text-md/medium',
                                   color: 'text-muted',
-                                  children: _.sectionDescription(null != s && s, C)
+                                  children: b.sectionDescription(null != s && s, C)
                               })
                             : null
                     ]
                 }),
-            [S, _, s, C]
+            [S, b, s, C]
         );
     if (0 === l.length) return null;
     let R = l.slice(0, N);
@@ -166,7 +166,7 @@ function D(e) {
     });
 }
 let Z = () => {
-        let e = (0, b.Z)(),
+        let e = (0, _.Z)(),
             t = (0, N.mq)(v.ne.ACTIVE),
             n = (0, p.o)(y.NW.formatToPlainString(I.Z['7hqFl5'], { activeLinks: t.length }), y.NW.string(I.Z['Q/D/0d'])),
             i = (0, m.Qr)(!!e),
@@ -194,7 +194,7 @@ let Z = () => {
     },
     w = (e) => {
         let { userId: t, subText: n, avatarSize: i = o.EFr.SIZE_40 } = e,
-            s = (0, _.I)(t);
+            s = (0, b.I)(t);
         return void 0 === s
             ? null
             : (0, r.jsxs)('div', {
@@ -253,7 +253,7 @@ let Z = () => {
     },
     W = (e) => {
         let { userId: t } = e,
-            n = (0, b.Z)(),
+            n = (0, _.Z)(),
             i = (0, N.mq)(v.ne.ACTIVE),
             s = (0, m.Qr)(!!n),
             a = (0, N.Rd)(s);

@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var r = n(192379),
     i = n(192720);
-function a() {
+function l() {
     r.useEffect(() => {
         (0, i.sE)();
     }, []);

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(481060),
-    l = n(626135),
+    l = n(481060),
+    a = n(626135),
     o = n(288552),
     s = n(981631),
     c = n(388032),
@@ -12,7 +12,7 @@ function d(e) {
         [d, m] = i.useState(!1),
         f = () => {
             n(),
-                l.default.track(s.rMx.INBOX_CHANNEL_ACKED, {
+                a.default.track(s.rMx.INBOX_CHANNEL_ACKED, {
                     marked_all_channels_as_read: !0,
                     num_unread_channels_remaining: 0
                 });
@@ -31,13 +31,13 @@ function d(e) {
             'bottom-floating' === t
                 ? (0, r.jsx)(o.a, {
                       text: c.NW.string(c.t['8k+6QU']),
-                      icon: a.W6s,
+                      icon: l.W6s,
                       onClick: h
                   })
-                : (0, r.jsx)(a.M0o, {
+                : (0, r.jsx)(l.M0o, {
                       tooltip: c.NW.string(c.t['8k+6QU']),
-                      color: a.YX$.TERTIARY,
-                      icon: (0, r.jsx)(a.W6s, {
+                      color: l.YX$.TERTIARY,
+                      icon: (0, r.jsx)(l.W6s, {
                           size: 'xs',
                           color: 'currentColor'
                       }),
@@ -49,15 +49,15 @@ function d(e) {
 }
 function p(e) {
     let { cancel: t, confirm: n } = e;
-    return (0, r.jsx)(a.sYh, {
+    return (0, r.jsx)(l.sYh, {
         dismissable: !0,
         header: c.NW.string(c.t.h4bVZ2),
         confirmText: c.NW.string(c.t.e6RscX),
         cancelText: c.NW.string(c.t['ETE/oK']),
-        confirmButtonColor: a.zxk.Colors.BRAND,
+        confirmButtonColor: l.zxk.Colors.BRAND,
         onCancel: t,
         onConfirm: n,
-        children: (0, r.jsx)(a.Text, {
+        children: (0, r.jsx)(l.Text, {
             color: 'text-normal',
             variant: 'text-sm/normal',
             children: c.NW.string(c.t['0MQ0BQ'])

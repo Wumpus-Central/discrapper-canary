@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(913527),
-    l = n.n(a),
+    l = n(913527),
+    a = n.n(l),
     o = n(442837),
     s = n(481060),
     c = n(727637),
@@ -15,11 +15,11 @@ var r = n(200651),
     g = n(8298);
 function _(e) {
     let { invite: t, expired: n } = e,
-        a = (0, o.e7)([m.default], () => {
+        l = (0, o.e7)([m.default], () => {
             var e, n;
             return null != (n = null == (e = m.default.getUser(t.inviter_id)) ? void 0 : e.username) ? n : '';
         }),
-        u = (0, f.vc)(l()(t.created_at), 'LT'),
+        u = (0, f.vc)(a()(t.created_at), 'LT'),
         d = i.useRef(null),
         _ = (0, c.Z)(d);
     return (
@@ -42,7 +42,7 @@ function _(e) {
                             className: g.title,
                             variant: 'text-md/semibold',
                             color: 'interactive-active',
-                            children: h.NW.format(h.t.vtUO3d, { username: a })
+                            children: h.NW.format(h.t.vtUO3d, { username: l })
                         }),
                         (0, r.jsxs)('div', {
                             className: g.buttonContainer,
@@ -92,8 +92,8 @@ function _(e) {
     );
 }
 function b(e) {
-    let { expired: t, invite: n, isHoveringInvite: a } = e,
-        l = (0, o.e7)([d.Z], () => d.Z.isInviteGameInstalled(n)),
+    let { expired: t, invite: n, isHoveringInvite: l } = e,
+        a = (0, o.e7)([d.Z], () => d.Z.isInviteGameInstalled(n)),
         c = (0, o.e7)([d.Z], () => d.Z.isInviteJoinable(n)),
         [m, f] = i.useState(!1),
         _ = i.useCallback(async () => {
@@ -111,7 +111,7 @@ function b(e) {
             f(!1);
         }, [n]);
     if (t)
-        if (l && a)
+        if (a && l)
             return (0, r.jsx)(s.zxk, {
                 className: g.primaryButton,
                 color: s.Ttl.TRANSPARENT,
@@ -121,7 +121,7 @@ function b(e) {
                 children: h.NW.string(h.t['s+J8Dg'])
             });
         else return null;
-    return l && c
+    return a && c
         ? (0, r.jsx)(s.zxk, {
               className: g.primaryButton,
               color: s.Ttl.GREEN,

@@ -2,25 +2,25 @@ n.d(t, { Z: () => c }), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(600164),
-    l = n(245315),
+    l = n(600164),
+    a = n(245315),
     o = n(388032),
     s = n(49791);
 let c = () =>
-    (0, r.jsxs)(a.Z, {
-        align: a.Z.Align.CENTER,
-        justify: a.Z.Justify.CENTER,
-        direction: a.Z.Direction.VERTICAL,
+    (0, r.jsxs)(l.Z, {
+        align: l.Z.Align.CENTER,
+        justify: l.Z.Justify.CENTER,
+        direction: l.Z.Direction.VERTICAL,
         className: s.popout,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
-                src: (0, l.QA)(),
+                src: (0, a.QA)(),
                 className: s.avatar
             }),
-            (0, r.jsxs)(a.Z, {
-                align: a.Z.Align.CENTER,
-                justify: a.Z.Justify.CENTER,
+            (0, r.jsxs)(l.Z, {
+                align: l.Z.Align.CENTER,
+                justify: l.Z.Justify.CENTER,
                 className: s.nameWrapper,
                 children: [
                     (0, r.jsx)(i.ua7, {

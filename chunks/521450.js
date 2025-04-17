@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(695346),
     h = n(981631),
     f = n(930441),
-    _ = n(332495),
-    b = n(388032),
+    b = n(332495),
+    _ = n(388032),
     N = n(128607),
     x = n(20493);
 let E = () => {
@@ -30,15 +30,15 @@ let E = () => {
                 (0, r.jsx)(d.Text, {
                     variant: 'eyebrow',
                     color: 'text-muted',
-                    children: b.NW.string(_.Z.USIXU1)
+                    children: _.NW.string(b.Z.USIXU1)
                 }),
                 (0, r.jsx)(d.j7V, {
                     className: a()(x.marginTop8, x.marginBottom20),
                     value: e,
-                    note: b.NW.string(_.Z['5MdB3t']),
+                    note: _.NW.string(b.Z['5MdB3t']),
                     hideBorder: !0,
                     onChange: p.Ex.updateSetting,
-                    children: b.NW.string(_.Z.zkEceX)
+                    children: _.NW.string(b.Z.zkEceX)
                 }),
                 e
                     ? (0, r.jsx)(d.Zbd, {
@@ -52,7 +52,7 @@ let E = () => {
                                       children: (0, r.jsx)(d.Text, {
                                           variant: 'text-sm/semibold',
                                           color: 'text-normal',
-                                          children: b.NW.string(_.Z.xAVm7O)
+                                          children: _.NW.string(b.Z.xAVm7O)
                                       })
                                   }),
                                   (0, r.jsx)(d.P3F, {
@@ -62,7 +62,7 @@ let E = () => {
                                               pathname: h.Z5c.FAMILY_CENTER,
                                               state: { scrollRestoration: !1 }
                                           },
-                                          children: b.NW.string(_.Z.cUIXFR)
+                                          children: _.NW.string(b.Z.cUIXFR)
                                       })
                                   }),
                                   (0, r.jsx)(d.G2e, {
@@ -77,12 +77,12 @@ let E = () => {
                 (0, r.jsx)(d.j7V, {
                     className: a()(x.marginTop20, x.marginBottom20),
                     value: !!t[f.$Z.FAMILY_CENTER_DIGEST],
-                    note: b.NW.string(_.Z['y34S4+']),
+                    note: _.NW.string(b.Z['y34S4+']),
                     hideBorder: !0,
                     onChange: function (e) {
                         (0, m.pR)(f.$Z.FAMILY_CENTER_DIGEST, e);
                     },
-                    children: b.NW.string(_.Z.irvJKS)
+                    children: _.NW.string(b.Z.irvJKS)
                 })
             ]
         })

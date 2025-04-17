@@ -1,24 +1,24 @@
 n.d(t, {
     E: () => o,
-    _: () => l
+    _: () => a
 }),
     n(314940);
 var r = n(278074),
     i = n(263568),
-    a = n(228127);
-function l(e, t) {
+    l = n(228127);
+function a(e, t) {
     let n = (0, r.EQ)(t)
-        .with(i.C.IMAGE_ONLY_ANSWERS, () => a.normalStylesImageOnlyAnswers)
-        .otherwise(() => a.normalStylesDefault);
+        .with(i.C.IMAGE_ONLY_ANSWERS, () => l.normalStylesImageOnlyAnswers)
+        .otherwise(() => l.normalStylesDefault);
     return {
         styles: {
             loserSelected: n,
             normal: n,
             notVoted: n,
             selected: n,
-            voted: a.votedStyles,
-            victorSelected: a.victorStyles,
-            victorNotSelected: a.victorStyles,
+            voted: l.votedStyles,
+            victorSelected: l.victorStyles,
+            victorNotSelected: l.victorStyles,
             normalVote: n
         }
     };

@@ -1,74 +1,74 @@
-n.d(t, { Z: () => O });
-var r = n(200651);
+n.d(t, { Z: () => b });
+var l = n(200651);
 n(192379);
-var l = n(442837),
-    i = n(481060),
+var i = n(442837),
+    r = n(481060),
     o = n(493683),
     a = n(40851),
-    u = n(740492),
-    c = n(314897),
-    s = n(592125),
-    d = n(699516),
+    s = n(740492),
+    u = n(314897),
+    d = n(592125),
+    c = n(699516),
     f = n(944486),
     g = n(981631),
-    b = n(388032);
-function O(e) {
-    let { user: t, context: O, label: E, joinCallVideo: _, id: y, onCall: v } = e,
-        h = (0, a.Aq)(),
-        Z = (0, l.e7)([c.default], () => c.default.getId() === t.id),
-        p = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.id)),
-        m = (0, l.e7)([f.Z, s.Z], () => f.Z.getVoiceChannelId() === s.Z.getDMFromUserId(t.id));
-    if (Z || O === g.IlC.POPOUT || m || t.bot || t.isProvisional) return null;
-    let S = () => {
-            null == v || v(),
+    Z = n(388032);
+function b(e) {
+    let { user: t, context: b, label: O, joinCallVideo: m, id: N, onCall: h } = e,
+        j = (0, a.Aq)(),
+        E = (0, i.e7)([u.default], () => u.default.getId() === t.id),
+        v = (0, i.e7)([c.Z], () => c.Z.isBlocked(t.id)),
+        p = (0, i.e7)([f.Z, d.Z], () => f.Z.getVoiceChannelId() === d.Z.getDMFromUserId(t.id));
+    if (E || b === g.IlC.POPOUT || p || t.bot || t.isProvisional) return null;
+    let P = () => {
+            null == h || h(),
                 o.Z.openPrivateChannel({
                     recipientIds: t.id,
                     joinCall: !0,
-                    joinCallVideo: _
+                    joinCallVideo: m
                 }),
-                h.dispatch(g.CkL.POPOUT_CLOSE),
-                (0, i.pTH)();
+                j.dispatch(g.CkL.POPOUT_CLOSE),
+                (0, r.pTH)();
         },
-        j = !u.ZP.disableCallUserConfirmationPrompt;
-    return (0, r.jsx)(i.sNh, {
-        id: null != y ? y : 'call',
-        label: null != E ? E : b.NW.string(b.t.JJogjo),
-        action: j
+        y = !s.ZP.disableCallUserConfirmationPrompt;
+    return (0, l.jsx)(r.sNh, {
+        id: null != N ? N : 'call',
+        label: null != O ? O : Z.NW.string(Z.t.JJogjo),
+        action: y
             ? () => {
-                  (0, i.ZDy)(async () => {
+                  (0, r.ZDy)(async () => {
                       let { default: e } = await n.e('27157').then(n.bind(n, 736454));
                       return (t) =>
-                          (0, r.jsx)(
+                          (0, l.jsx)(
                               e,
                               (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
-                                          r = Object.keys(n);
+                                          l = Object.keys(n);
                                       'function' == typeof Object.getOwnPropertySymbols &&
-                                          (r = r.concat(
+                                          (l = l.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                               })
                                           )),
-                                          r.forEach(function (t) {
-                                              var r;
-                                              (r = n[t]),
+                                          l.forEach(function (t) {
+                                              var l;
+                                              (l = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
-                                                            value: r,
+                                                            value: l,
                                                             enumerable: !0,
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = r);
+                                                      : (e[t] = l);
                                           });
                                   }
                                   return e;
-                              })({ onSubmit: S }, t)
+                              })({ onSubmit: P }, t)
                           );
                   });
               }
-            : S,
-        disabled: p
+            : P,
+        disabled: v
     });
 }

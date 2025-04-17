@@ -19,8 +19,8 @@ var r = n(200651),
     p = n(600164),
     h = n(296848),
     f = n(798769),
-    _ = n(981631),
-    b = n(388032),
+    b = n(981631),
+    _ = n(388032),
     N = n(714421);
 async function x(e) {
     let { premiumSubscription: t, pauseDuration: n, onClose: r, setHasError: i, setIsCancelling: s, analyticsLocations: a, analyticsLocation: l } = e;
@@ -39,15 +39,15 @@ function E(e) {
             },
             [a]
         ),
-        g = d.status === _.O0b.PAUSED ? b.NW.string(b.t.Lp9WoK) : b.NW.string(b.t.eSR83d),
+        g = d.status === b.O0b.PAUSED ? _.NW.string(_.t.Lp9WoK) : _.NW.string(_.t.eSR83d),
         x = (function (e) {
-            let t = e.status === _.O0b.PAUSED ? b.t.o3upfX : b.t.dBXZEh,
+            let t = e.status === b.O0b.PAUSED ? _.t.o3upfX : _.t.dBXZEh,
                 { durations: n, currentDaysPaused: r } = (0, h.AT)(e),
                 i = [];
             for (let e of n) {
                 let n = l.T[e];
                 i.push({
-                    name: b.NW.formatToPlainString(t, { days: n - r }),
+                    name: _.NW.formatToPlainString(t, { days: n - r }),
                     value: n,
                     radioItemIconClassName: N.radioOption
                 });
@@ -55,7 +55,7 @@ function E(e) {
             return (
                 i.sort((e, t) => e.value - t.value),
                 i.push({
-                    name: b.NW.string(b.t.OCPUMz),
+                    name: _.NW.string(_.t.OCPUMz),
                     value: 0,
                     radioBarClassName: N.cancelText,
                     radioItemIconClassName: N.cancelText
@@ -81,7 +81,7 @@ function E(e) {
                             (0, r.jsx)(c.X6q, {
                                 variant: 'heading-xl/bold',
                                 className: N.__invalid_modalHeader,
-                                children: b.NW.string(b.t.f3nnBw)
+                                children: _.NW.string(_.t.f3nnBw)
                             }),
                             (0, r.jsx)(c.X6q, {
                                 variant: 'heading-sm/medium',
@@ -115,20 +115,20 @@ function j(e) {
         O = (0, m.ZP)(),
         S = null,
         v = null,
-        T = [_.O0b.PAST_DUE, _.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
+        T = [b.O0b.PAST_DUE, b.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
         I = a()(T).add(l, 'days').toDate();
     switch (t.status) {
-        case _.O0b.PAST_DUE:
-            v = b.NW.format(b.t['xaS18/'], {
+        case b.O0b.PAST_DUE:
+            v = _.NW.format(_.t['xaS18/'], {
                 pauseDuration: l,
                 resumeDate: I
             });
             break;
-        case _.O0b.PAUSED:
-            v = b.NW.format(b.t.Vur3FR, { resumeDate: I });
+        case b.O0b.PAUSED:
+            v = _.NW.format(_.t.Vur3FR, { resumeDate: I });
             break;
         default:
-            v = b.NW.format(b.t.W85vFB, {
+            v = _.NW.format(_.t.W85vFB, {
                 pauseDate: T,
                 resumeDate: I,
                 pauseDuration: l
@@ -152,7 +152,7 @@ function j(e) {
                         children: (0, r.jsx)(c.X6q, {
                             variant: 'heading-xl/bold',
                             className: N.__invalid_modalHeader,
-                            children: b.NW.string(b.t['AnMG5+'])
+                            children: _.NW.string(_.t['AnMG5+'])
                         })
                     })
                 }),
@@ -162,7 +162,7 @@ function j(e) {
                         u
                             ? (0, r.jsx)(c.kzN, {
                                   className: N.errorBlock,
-                                  children: b.NW.string(b.t['5mlOCQ'])
+                                  children: _.NW.string(_.t['5mlOCQ'])
                               })
                             : null,
                         S
@@ -187,13 +187,13 @@ function j(e) {
                                         analyticsLocation: d
                                     });
                                 },
-                                children: b.NW.string(b.t['cY+Ooa'])
+                                children: _.NW.string(_.t['cY+Ooa'])
                             }),
                             (0, r.jsx)(c.zxk, {
                                 look: c.zxk.Looks.LINK,
                                 color: (0, o.wj)(O) ? c.zxk.Colors.WHITE : c.zxk.Colors.PRIMARY,
                                 onClick: s,
-                                children: b.NW.string(b.t.h9tkAA)
+                                children: _.NW.string(_.t.h9tkAA)
                             })
                         ]
                     })

@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(824203),
-    l = n(981631),
+    l = n(824203),
+    a = n(981631),
     o = n(388032),
     s = n(806518);
 function c(e) {
@@ -13,7 +13,7 @@ function c(e) {
         p = null == (t = c.interactionMetadata) ? void 0 : t.ephemerality_reason,
         m = () => u(c, !0);
     if (null != p) {
-        let e = (0, a.i)(p);
+        let e = (0, l.i)(p);
         n = (0, r.jsx)('div', {
             className: s.userAppsBetaContent,
             children: o.NW.format(o.t.wx1tLS, {
@@ -23,7 +23,7 @@ function c(e) {
         });
     } else
         n =
-            c.type === l.uaV.STAGE_RAISE_HAND
+            c.type === a.uaV.STAGE_RAISE_HAND
                 ? o.NW.format(o.t['qDAX+/'], { handleDelete: m })
                 : o.NW.format(o.t.uX3ecH, {
                       count: 1,

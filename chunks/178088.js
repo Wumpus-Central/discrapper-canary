@@ -1,8 +1,8 @@
 n.d(t, { k: () => S }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(849057),
-    l = n(442837),
+    l = n(849057),
+    a = n(442837),
     o = n(524437),
     s = n(481060),
     c = n(100527),
@@ -28,7 +28,7 @@ function S(e) {
         { analyticsLocations: A } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
         [w, Z] = i.useState(!1),
         [R, k] = [
-            (0, l.e7)([g.Z], () => {
+            (0, a.e7)([g.Z], () => {
                 var e, t;
                 return null != (t = null == (e = g.Z.settings.inbox) ? void 0 : e.currentTab) ? t : o.X.UNREADS;
             }),
@@ -44,7 +44,7 @@ function S(e) {
             }, [])
         ],
         { showTutorial: D, setSeenTutorial: L } = (function (e) {
-            let t = (0, l.e7)([g.Z], () => {
+            let t = (0, a.e7)([g.Z], () => {
                     var e, t;
                     return null != (t = null == (e = g.Z.settings.inbox) ? void 0 : e.viewedTutorial) && t;
                 }),
@@ -71,7 +71,7 @@ function S(e) {
     i.useEffect(() => (_.S.subscribe(j.CkL.TOGGLE_INBOX, W), () => void _.S.unsubscribe(j.CkL.TOGGLE_INBOX, W)), [W]);
     let { showReminders: U } = f.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: F, inInbox: B } = p.Z.useExperiment({ location: 'RecentsPopout' }),
-        G = (0, l.e7)([m.Z], () => m.Z.hasOverdueReminder(), []) && F && B,
+        G = (0, a.e7)([m.Z], () => m.Z.hasOverdueReminder(), []) && F && B,
         { enabled: H } = d.Z.useExperiment({ location: 'RecentsPopout' });
     i.useEffect(() => {
         (((!U || (F && B)) && R === o.X.TODOS) || (R === o.X.BOOKMARKS && !(F || B))) && k(o.X.MENTIONS);
@@ -131,7 +131,7 @@ function S(e) {
                                             setTab: k,
                                             closePopout: M
                                         })
-                                      : (0, r.jsx)(a.SV, {
+                                      : (0, r.jsx)(l.SV, {
                                             fallback: (0, r.jsx)(N.h, {
                                                 setTab: k,
                                                 closePopout: M,

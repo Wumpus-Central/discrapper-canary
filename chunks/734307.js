@@ -13,8 +13,8 @@ var r,
     p = n(601070),
     h = n(569471),
     f = n(581883),
-    _ = n(314897),
-    b = n(680089),
+    b = n(314897),
+    _ = n(680089),
     N = n(592125),
     x = n(58468),
     E = n(77498),
@@ -96,7 +96,7 @@ function F(e) {
 }
 class H extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, _.default, b.Z, N.Z, x.Z, d.ZP, E.Z, m.Z, g.ZP, h.Z, j.Z, C.ZP, O.Z, S.ZP, f.Z);
+        this.waitFor(p.Z, b.default, _.Z, N.Z, x.Z, d.ZP, E.Z, m.Z, g.ZP, h.Z, j.Z, C.ZP, O.Z, S.ZP, f.Z);
     }
     getGuild(e, t) {
         var n, r;
@@ -219,7 +219,7 @@ let z = new H(c.Z, {
     GUILD_DELETE: Z,
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e;
-        return _.default.getId() === n.id && R.clearGuildId(t);
+        return b.default.getId() === n.id && R.clearGuildId(t);
     },
     GUILD_MUTE_EXPIRED: k,
     GUILD_ROLE_CREATE: k,

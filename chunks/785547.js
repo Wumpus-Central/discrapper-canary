@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(415506), n(388685);
 var r,
     i,
-    a = n(200651),
-    l = n(192379),
+    l = n(200651),
+    a = n(192379),
     o = n(442837),
     s = n(692547),
     c = n(481060),
@@ -80,7 +80,7 @@ let A = Object.freeze({
         [O.apO.RESUME]: 'paused'
     }),
     w = () => [j.NW.string(j.t.r9wmKi), j.NW.string(j.t['6CpimZ']), j.NW.string(j.t.ysbNDQ), j.NW.string(j.t.TLnXx8), j.NW.string(j.t.Qi8mnZ), j.NW.string(j.t.yvMu3d), j.NW.string(j.t.PnNUZ2), j.NW.string(j.t.hU2TEB), j.NW.string(j.t.YyY519), j.NW.string(j.t.PbHJb2)];
-class Z extends (r = l.Component) {
+class Z extends (r = a.Component) {
     get analyticsLocation() {
         return T(I({}, this.props.analyticsContext.location), { object: O.qAy.BUTTON_CTA });
     }
@@ -118,15 +118,15 @@ class Z extends (r = l.Component) {
         return null != r ? r : null != t && t.type === O.vxO.UNINSTALLING ? 'uninstalling' : (0, y.isWeb)() ? 'play' : 'unsupported_os';
     }
     renderPlayButton() {
-        let { libraryApplication: e, fullWidth: t, size: n, color: r, customDisabledColor: i, isPlayShiny: l, onDropdownOpen: o, onDropdownClose: s, analyticsListSort: c, analyticsListIndex: u } = this.props;
-        return (0, a.jsx)(N.Z, {
+        let { libraryApplication: e, fullWidth: t, size: n, color: r, customDisabledColor: i, isPlayShiny: a, onDropdownOpen: o, onDropdownClose: s, analyticsListSort: c, analyticsListIndex: u } = this.props;
+        return (0, l.jsx)(N.Z, {
             applicationId: e.id,
             libraryApplication: e,
             fullWidth: t,
             size: n,
             color: r,
             customDisabledColor: i,
-            isShiny: l,
+            isShiny: a,
             onDropdownOpen: o,
             onDropdownClose: s,
             analyticsListSort: c,
@@ -134,22 +134,22 @@ class Z extends (r = l.Component) {
         });
     }
     renderDisabledButton(e, t) {
-        let { className: n, fullWidth: r, size: i, customDisabledColor: l, tooltipPosition: o } = this.props;
-        return (0, a.jsxs)('div', {
+        let { className: n, fullWidth: r, size: i, customDisabledColor: a, tooltipPosition: o } = this.props;
+        return (0, l.jsxs)('div', {
             className: C.disabledButtonWrapper,
             children: [
-                (0, a.jsxs)(c.zxk, {
+                (0, l.jsxs)(c.zxk, {
                     className: n,
                     fullWidth: r,
                     size: i,
-                    color: null != l ? l : C.disabledButtonColor,
+                    color: null != a ? a : C.disabledButtonColor,
                     disabled: !0,
                     children: [this.getText(e), this.renderProgressBar()]
                 }),
-                (0, a.jsx)(c.ua7, {
+                (0, l.jsx)(c.ua7, {
                     text: t,
                     position: o,
-                    children: (e) => (0, a.jsx)('div', I({ className: C.disabledButtonOverlay }, e))
+                    children: (e) => (0, l.jsx)('div', I({ className: C.disabledButtonOverlay }, e))
                 })
             ]
         });
@@ -160,7 +160,7 @@ class Z extends (r = l.Component) {
         let n = x.KJ(t);
         if (null == n) return null;
         let r = n.type === O.vxO.UNINSTALLING ? c.Exd.INDETERMINATE : x.xI(Number(n.progress), Number(n.total));
-        return (0, a.jsx)(c.Exd, {
+        return (0, l.jsx)(c.Exd, {
             percent: r,
             size: c.Exd.Sizes.XSMALL,
             foregroundColor: n.paused ? s.Z.unsafe_rawColors.PRIMARY_500.css : s.Z.unsafe_rawColors.GREEN_360.css,
@@ -169,12 +169,12 @@ class Z extends (r = l.Component) {
         });
     }
     renderActionButton(e, t) {
-        let { className: n, fullWidth: r, size: i, color: l, isCloudSyncing: o } = this.props;
-        return (0, a.jsxs)(c.zxk, {
+        let { className: n, fullWidth: r, size: i, color: a, isCloudSyncing: o } = this.props;
+        return (0, l.jsxs)(c.zxk, {
             className: n,
             fullWidth: r,
             size: i,
-            color: null != l ? l : c.zxk.Colors.GREEN,
+            color: null != a ? a : c.zxk.Colors.GREEN,
             submitting: 'uninstalling' === e || o,
             onClick: (e) => this.handleClick(e, t),
             children: [this.getText(e), this.renderProgressBar()]
@@ -231,15 +231,15 @@ function R(e) {
     let { libraryApplication: t } = e,
         n = (0, d.O)(),
         [r, i] = (0, o.Wu)([_.Z, b.Z], () => [(0, h.i)(t, _.Z, b.Z), _.Z.getState(t.id, t.branchId)], [t]),
-        l = (0, o.e7)([g.Z], () => g.Z.isSyncing(t.id, t.branchId), [t]),
+        a = (0, o.e7)([g.Z], () => g.Z.isSyncing(t.id, t.branchId), [t]),
         s = (0, o.e7)([f.Z], () => f.Z.hasNoBuild(t.id, t.branchId), [t]);
-    return (0, a.jsx)(
+    return (0, l.jsx)(
         Z,
         T(I({}, e), {
             analyticsContext: n,
             actionState: r,
             dispatchState: i,
-            isCloudSyncing: l,
+            isCloudSyncing: a,
             hasNoBuild: s
         })
     );

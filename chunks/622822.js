@@ -6,15 +6,15 @@ n.d(t, {
 });
 var r = n(81643),
     i = n(974814),
-    a = n(594174),
-    l = n(709054),
+    l = n(594174),
+    a = n(709054),
     o = n(981631),
     s = n(388032);
 let c = new Date('06/16/2020'),
     u = [o.V_K.AGE_RESTRICTED, o.V_K.EXPLICIT];
 function d() {
-    let e = a.default.getCurrentUser();
-    return null != e && l.default.extractTimestamp(e.id) > c.getTime() && null == e.nsfwAllowed;
+    let e = l.default.getCurrentUser();
+    return null != e && a.default.extractTimestamp(e.id) > c.getTime() && null == e.nsfwAllowed;
 }
 function p(e) {
     return u.includes(e.nsfwLevel);

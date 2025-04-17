@@ -1,6 +1,6 @@
 n.d(t, {
     V9: () => N,
-    ek: () => b
+    ek: () => _
 }),
     n(388685);
 var r = n(200651),
@@ -17,13 +17,13 @@ var r = n(200651),
     p = n(82856),
     h = n(981631),
     f = n(388032),
-    _ = n(313008);
-let b = {
-        START: _.alignLeft,
-        END: _.alignRight
+    b = n(313008);
+let _ = {
+        START: b.alignLeft,
+        END: b.alignRight
     },
     N = (e) => {
-        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, analyticsPage: N, isCoachmarkEnabled: x = !0, linkText: E = f.NW.string(f.t.XRdyj4), cardAlignment: j = b.START, className: C } = e,
+        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, analyticsPage: N, isCoachmarkEnabled: x = !0, linkText: E = f.NW.string(f.t.XRdyj4), cardAlignment: j = _.START, className: C } = e,
             { balance: O } = (0, d.A)(),
             [S, v] = i.useState(u.b.DEFAULT),
             [T, I] = i.useState(!1),
@@ -59,9 +59,9 @@ let b = {
             }, [T, w]),
             W = (0, l.Z)(null, k);
         return (0, r.jsxs)('div', {
-            className: a()(_.container, C, {
-                [_.hidden]: y,
-                [_.visible]: !y
+            className: a()(b.container, C, {
+                [b.hidden]: y,
+                [b.visible]: !y
             }),
             children: [
                 (0, r.jsx)(g.A4, {
@@ -76,9 +76,9 @@ let b = {
                 }),
                 T &&
                     (0, r.jsx)('div', {
-                        className: a()(_.cardContainer, j, {
-                            [_.hidden]: y,
-                            [_.visible]: !y
+                        className: a()(b.cardContainer, j, {
+                            [b.hidden]: y,
+                            [b.visible]: !y
                         }),
                         ref: W,
                         children: (0, r.jsx)(m.L, {
@@ -93,4 +93,4 @@ let b = {
             ]
         });
     };
-N.CardAlignment = b;
+N.CardAlignment = _;

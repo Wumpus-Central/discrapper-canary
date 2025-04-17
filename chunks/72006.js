@@ -12,7 +12,7 @@ n.d(t, {
     iK: () => Z,
     lv: () => T,
     nR: () => P,
-    q0: () => a.a,
+    q0: () => l.a,
     x0: () => j,
     xb: () => U,
     yd: () => C
@@ -21,9 +21,9 @@ n.d(t, {
     n(539854);
 var r = n(5148),
     i = n(593121),
-    a = n.n(i),
-    l = n(668705),
-    o = n.n(l),
+    l = n.n(i),
+    a = n(668705),
+    o = n.n(a),
     s = n(283852),
     c = n.n(s),
     u = n(115129),
@@ -41,37 +41,37 @@ var r = n(5148),
     v = n(302648),
     N = n.n(v);
 function O(e, t, n, i) {
-    let a = i.getCurrentContent(),
-        l = null;
-    null != e && (l = (a = a.createEntity(...e)).getLastCreatedEntityKey());
-    let o = a.getFirstBlock(),
+    let l = i.getCurrentContent(),
+        a = null;
+    null != e && (a = (l = l.createEntity(...e)).getLastCreatedEntityKey());
+    let o = l.getFirstBlock(),
         s = new r.SelectionState({
             anchorKey: o.getKey(),
             anchorOffset: t,
             focusKey: o.getKey(),
             focusOffset: n
         });
-    return (a = r.Modifier.applyEntity(a, s, l)), r.EditorState.set(i, { currentContent: a });
+    return (l = r.Modifier.applyEntity(l, s, a)), r.EditorState.set(i, { currentContent: l });
 }
 function j(e, t, n, i) {
-    let a,
-        l,
+    let l,
+        a,
         s = t.getCurrentContent(),
         c = s.getFirstBlock(),
         u = c.getText();
     'number' == typeof n
         ? (n > u.length && (n = u.length),
           null != i && i > u.length && (i = u.length),
-          (a = new r.SelectionState({
+          (l = new r.SelectionState({
               anchorKey: c.getKey(),
               anchorOffset: n,
               focusKey: c.getKey(),
               focusOffset: null != i && 0 !== i ? i : n
           })))
-        : (a = t.getSelection());
+        : (l = t.getSelection());
     let d = t.getCurrentInlineStyle(),
-        p = o()(s, a);
-    return a.isCollapsed() ? ((s = r.Modifier.insertText(s, a, e, d, p)), (l = 'insert-characters')) : ((s = r.Modifier.replaceText(s, a, e, d, p)), (l = 'replace-characters')), r.EditorState.push(t, s, l);
+        p = o()(s, l);
+    return l.isCollapsed() ? ((s = r.Modifier.insertText(s, l, e, d, p)), (a = 'insert-characters')) : ((s = r.Modifier.replaceText(s, l, e, d, p)), (a = 'replace-characters')), r.EditorState.push(t, s, a);
 }
 function C(e, t) {
     switch (e) {
@@ -108,15 +108,15 @@ function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         r = t.getCurrentContent(),
         i = r.getFirstBlock(),
-        a = i.getText(),
-        l = [];
+        l = i.getText(),
+        a = [];
     return (
         i.findEntityRanges(
             (e) => null !== e.getEntity(),
             (e, t) => {
                 let n = r.getEntity(i.getEntityAt(e)).getType(),
-                    o = a.substring(e, t);
-                l.push({
+                    o = l.substring(e, t);
+                a.push({
                     processed: !1,
                     type: n,
                     start: e,
@@ -128,10 +128,10 @@ function T(e, t) {
         e.forEach((e) => {
             let r = !1;
             if (
-                (l.forEach((n) => {
-                    let { type: i, start: a, end: l } = e,
+                (a.forEach((n) => {
+                    let { type: i, start: l, end: a } = e,
                         o = e.getFullMatch();
-                    !n.processed && (n.type === i && n.start === a && n.text === o ? ((n.processed = !0), (r = !0)) : ((a >= n.start && a < n.end) || (l > n.start && l <= n.end)) && ((n.processed = !0), (t = O(null, n.start, n.end, t))));
+                    !n.processed && (n.type === i && n.start === l && n.text === o ? ((n.processed = !0), (r = !0)) : ((l >= n.start && l < n.end) || (a > n.start && a <= n.end)) && ((n.processed = !0), (t = O(null, n.start, n.end, t))));
                 }),
                 r)
             )
@@ -139,7 +139,7 @@ function T(e, t) {
             let i = n[e.type];
             t = O([e.type, null != i && i.mutable ? 'MUTABLE' : 'IMMUTABLE', { token: e }], e.start, e.end, t);
         }),
-        l.forEach((e) => {
+        a.forEach((e) => {
             e.processed || (t = O(null, e.start, e.end, t));
         }),
         t
@@ -202,8 +202,8 @@ function W(e) {
     let r = n.getClientRects()[0],
         i = e.getClientRects()[0];
     if (null == r || null == i) return;
-    let a = r.left - i.left + e.scrollLeft;
-    a < e.scrollLeft ? (e.scrollLeft = a - 10) : a > e.scrollLeft + e.offsetWidth && (e.scrollLeft = a - e.offsetWidth + 3);
+    let l = r.left - i.left + e.scrollLeft;
+    l < e.scrollLeft ? (e.scrollLeft = l - 10) : l > e.scrollLeft + e.offsetWidth && (e.scrollLeft = l - e.offsetWidth + 3);
 }
 function U(e) {
     return 0 === I(e).length;

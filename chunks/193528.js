@@ -13,7 +13,7 @@ var r = n(200651),
     p = n(981631),
     h = n(388032),
     f = n(768402);
-function _(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function _(e) {
     }
     return e;
 }
-function b(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,7 +77,7 @@ function N(e) {
             renderPopout: (e) =>
                 (0, r.jsx)(
                     d.Z$W,
-                    b(_({}, e), {
+                    _(b({}, e), {
                         value: s,
                         onChange: t,
                         suggestedColors: N,
@@ -114,7 +114,7 @@ function N(e) {
                     children: [
                         (0, r.jsx)(
                             d.P3F,
-                            b(_({}, n), {
+                            _(b({}, n), {
                                 tabIndex: x ? -1 : 0,
                                 onClick: x ? p.dG4 : t,
                                 style: {

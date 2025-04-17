@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => E,
-    c: () => b
+    c: () => _
 }),
     n(388685);
 var r,
@@ -17,7 +17,7 @@ var r,
     p = n(13140),
     h = n(388032),
     f = n(556707);
-function _(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function _(e, t, n) {
         e
     );
 }
-var b = (((r = {}).DEFAULT = 'DEFAULT'), (r.RECORDING = 'RECORDING'), r);
+var _ = (((r = {}).DEFAULT = 'DEFAULT'), (r.RECORDING = 'RECORDING'), r);
 let N = {
     DEFAULT: f.__invalid_default,
     RECORDING: f.recording
@@ -108,12 +108,12 @@ class x extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            _(this, '_inputId', u().uniqueId('key-recorder-')),
-            _(this, '_unregisterNativeRecorder', null),
-            _(this, '_mousedownMode', null),
-            _(this, '_inputRef', s.createRef()),
-            _(this, '_containerRef', s.createRef()),
-            _(this, 'setInputRef', (e) => {
+            b(this, '_inputId', u().uniqueId('key-recorder-')),
+            b(this, '_unregisterNativeRecorder', null),
+            b(this, '_mousedownMode', null),
+            b(this, '_inputRef', s.createRef()),
+            b(this, '_containerRef', s.createRef()),
+            b(this, 'setInputRef', (e) => {
                 var t;
                 let { registerNativeRecorder: n, onChange: r } = this.props;
                 if (((this._inputRef.current = e), null == (t = this._unregisterNativeRecorder) || t.call(this), null != e))
@@ -125,12 +125,12 @@ class x extends s.PureComponent {
                         }
                     else null != r && (new (c())(e).handleKey = r);
             }),
-            _(this, 'handleClick', (e) => {
+            b(this, 'handleClick', (e) => {
                 e.stopPropagation(), e.preventDefault();
                 let { onClick: t, disableOnClickWhileRecording: n } = this.props;
                 (n && 'RECORDING' === this._mousedownMode) || t();
             }),
-            _(this, 'handleMouseDown', () => {
+            b(this, 'handleMouseDown', () => {
                 this._mousedownMode = this.props.mode;
             });
     }

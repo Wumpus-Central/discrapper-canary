@@ -41,8 +41,8 @@ function f(e) {
     let { unclaimedNotice: t, unverifiedNotice: i, className: a } = e,
         {
             isClaimed: f,
-            isVerified: _,
-            hasEmail: b
+            isVerified: b,
+            hasEmail: _
         } = (0, o.cj)([u.default], () => {
             let e = u.default.getCurrentUser();
             return (
@@ -60,7 +60,7 @@ function f(e) {
             return (t) => (0, r.jsx)(e, h({}, t));
         });
     }
-    return f && _
+    return f && b
         ? null
         : (0, r.jsx)(c.Zbd, {
               className: s()(p.wrapper, a),
@@ -83,7 +83,7 @@ function f(e) {
                                   className: p.content,
                                   children: [
                                       f
-                                          ? b
+                                          ? _
                                               ? (0, r.jsx)(d.Z.Child, {
                                                     grow: 0,
                                                     shrink: 0,
@@ -110,7 +110,7 @@ function f(e) {
                                                     children: g.NW.string(g.t.fiNVio)
                                                 })
                                             }),
-                                      f && b
+                                      f && _
                                           ? (0, r.jsx)(d.Z.Child, {
                                                 grow: 0,
                                                 shrink: 0,

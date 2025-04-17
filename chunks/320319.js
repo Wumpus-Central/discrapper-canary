@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(605236),
     h = n(706140),
     f = n(626135),
-    _ = n(314684),
-    b = n(715627),
+    b = n(314684),
+    _ = n(715627),
     N = n(404615),
     x = n(238108),
     E = n(32173),
@@ -81,8 +81,8 @@ let R = {
             k = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
             [W, L] = i.useState(!1),
             [B, M] = i.useState(!1),
-            U = (0, _.Er)(),
-            V = (0, _.IB)(),
+            U = (0, b.Er)(),
+            V = (0, b.IB)(),
             [G, F] = i.useState(!1),
             [H, z] = i.useState(t === E.u.TENURE_REWARD_COLLECTIBLE && V && (null == U ? void 0 : U.nitroTenureStatus) === S.EB.REDEEMABLE);
         i.useEffect(() => {
@@ -193,7 +193,7 @@ let R = {
                             children: [
                                 (0, r.jsx)(Z, P(A({}, e), { ref: t === E.u.TENURE_REWARD_COLLECTIBLE ? ei : void 0 })),
                                 H &&
-                                    (0, r.jsx)(b.Z, {
+                                    (0, r.jsx)(_.Z, {
                                         speedValues: R,
                                         numBursts: 3,
                                         particlesPerBurst: 15,
@@ -253,18 +253,18 @@ let R = {
 D.displayName = 'PerkDiscoverabilityCard';
 let Z = i.forwardRef((e, t) => {
     var n;
-    let { title: i, titleClassName: s = '', subtitle: l = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: d, onCtaClick: m, onMouseEnter: g, className: p, perkComponent: h, cardVariant: f, cardType: _, onClick: b, backgroundImage: x, pillText: E, perkImage: S, imageOverlayText: v } = e,
-        T = _ === j.R0.CARD_CAROUSEL_FIRST_ROW || _ === j.R0.CARD_CAROUSEL_SECOND_ROW || _ === j.R0.CARD_CAROUSEL_THIRD_ROW,
+    let { title: i, titleClassName: s = '', subtitle: l = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: d, onCtaClick: m, onMouseEnter: g, className: p, perkComponent: h, cardVariant: f, cardType: b, onClick: _, backgroundImage: x, pillText: E, perkImage: S, imageOverlayText: v } = e,
+        T = b === j.R0.CARD_CAROUSEL_FIRST_ROW || b === j.R0.CARD_CAROUSEL_SECOND_ROW || b === j.R0.CARD_CAROUSEL_THIRD_ROW,
         I = '' !== o || '' !== c || ('' !== l && f === j.zW.REWARD),
         A = (0, N._)(f);
     return (0, r.jsxs)(u.P3F, {
         className: a()(y.card, p, null == (n = A.cardContainer) ? void 0 : n.className, {
-            [y.clickable]: null != b,
+            [y.clickable]: null != _,
             [y.hideOverflow]: T
         }),
         onMouseEnter: g,
         style: { backgroundImage: null != x ? 'url('.concat(x, ')') : void 0 },
-        onClick: b,
+        onClick: _,
         children: [
             null != E &&
                 (0, r.jsx)(u.Text, {

@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(440051),
     h = n(734934),
     f = n(300284),
-    _ = n(680295),
-    b = n(785717),
+    b = n(680295),
+    _ = n(785717),
     N = n(687158),
     x = n(899007),
     E = n(648052),
@@ -76,7 +76,7 @@ function Q(e) {
         ee = __OVERLAY__,
         et = (0, N.ZP)(t.id),
         { analyticsLocations: en } = (0, u.ZP)(d.Z.ACCOUNT_PROFILE_POPOUT),
-        er = (0, b.ZB)({
+        er = (0, _.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: t.id
         }),
@@ -97,14 +97,14 @@ function Q(e) {
         ep = (0, M.g)(n),
         eh = (0, f.Z)({ analyticsLocations: en }),
         ef = (0, L.I5)(t),
-        e_ = (0, m.p)({ location: 'AccountProfilePopout' }),
-        eb = i.useMemo(() => (0, g.Z)(), []),
+        eb = (0, m.p)({ location: 'AccountProfilePopout' }),
+        e_ = i.useMemo(() => (0, g.Z)(), []),
         eN = (e) => {
             null == n || n(),
                 (0, P.openUserProfileModal)(
                     X(
                         {
-                            customStatusPrompt: eb,
+                            customStatusPrompt: e_,
                             sourceAnalyticsLocations: en
                         },
                         er,
@@ -114,7 +114,7 @@ function Q(e) {
         };
     return (0, r.jsx)(u.Gt, {
         value: en,
-        children: (0, r.jsx)(b.Mt, {
+        children: (0, r.jsx)(_.Mt, {
             value: er,
             openedAt: $,
             fetchStartedAt: null == et ? void 0 : et.fetchStartedAt,
@@ -148,12 +148,12 @@ function Q(e) {
                                     user: t,
                                     profileType: z.y0.BITE_SIZE,
                                     onCloseProfile: n,
-                                    prompt: e_ ? eb : null
+                                    prompt: eb ? e_ : null
                                 })
                             ]
                         }),
                         (null == et ? void 0 : et.profileEffectId) != null &&
-                            (0, r.jsx)(_.Z, {
+                            (0, r.jsx)(b.Z, {
                                 profileEffectId: null == et ? void 0 : et.profileEffectId,
                                 isHovering: es
                             }),

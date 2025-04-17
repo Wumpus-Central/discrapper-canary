@@ -16,7 +16,7 @@ function f(e) {
     let { user: t } = e,
         { analyticsLocations: n } = (0, l.ZP)(),
         f = t.nameplate,
-        { pendingNameplate: _, pendingErrors: b } = (0, u._A)(),
+        { pendingNameplate: b, pendingErrors: _ } = (0, u._A)(),
         N = [s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE],
         [x, E] = (0, o.US)(N),
         j = x === s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
@@ -29,7 +29,7 @@ function f(e) {
     return (0, r.jsx)(m.Z, {
         title: p.NW.string(p.t.x5CoXV),
         titleIcon: j ? (0, r.jsx)(c.Z, { className: h.newBadge }) : void 0,
-        errors: b,
+        errors: _,
         children: (0, r.jsxs)('div', {
             className: h.section,
             children: [
@@ -38,7 +38,7 @@ function f(e) {
                     onClick: C,
                     children: p.NW.string(p.t.NzNLv7)
                 }),
-                (void 0 === _ ? null != f : null != _) &&
+                (void 0 === b ? null != f : null != b) &&
                     (0, r.jsx)(a.zxk, {
                         size: a.zxk.Sizes.SMALL,
                         color: a.zxk.Colors.PRIMARY,

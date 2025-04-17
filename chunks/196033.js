@@ -17,7 +17,7 @@ let f = () => {
         t = (0, c.zL)(d.jE.UPSELL_BANNER_POPOUT),
         n = (0, l.H)('upsell_banner'),
         f = (0, a.e7)([o.Z], () => o.Z.getMarketingBySurface(i.K.EDIT_PROFILE_SETTINGS)),
-        _ = r.useMemo(
+        b = r.useMemo(
             () =>
                 n
                     ? {
@@ -67,12 +67,12 @@ let f = () => {
                         });
                 }
                 return e;
-            })({}, _)),
+            })({}, b)),
             (r = r =
                 {
                     type: s.Z.BANNER,
-                    asset: null != e ? e : _.asset,
-                    popoutAsset: null != t ? t : _.popoutAsset
+                    asset: null != e ? e : b.asset,
+                    popoutAsset: null != t ? t : b.popoutAsset
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -88,5 +88,5 @@ let f = () => {
                   }),
             n
         );
-    }, [e, t, _]);
+    }, [e, t, b]);
 };

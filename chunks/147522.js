@@ -2,8 +2,8 @@ n.d(t, { Z: () => d }), n(361932), n(187205), n(539854);
 var r = n(200651);
 n(192379);
 var i = n(392711),
-    a = n.n(i),
-    l = n(661824),
+    l = n.n(i),
+    a = n(661824),
     o = n(289481),
     s = n(809780),
     c = n(388032),
@@ -11,16 +11,16 @@ var i = n(392711),
 function d(e, t, n) {
     let { markChannelRead: i, markGuildRead: d, deleteChannel: p, toggle: m, getNumUnreadChannels: f } = t,
         h = null;
-    return a().flatMap(e, (e) => {
+    return l().flatMap(e, (e) => {
         let t = e.sortOrder !== h;
         h = e.sortOrder;
-        let a = [];
+        let l = [];
         return (
             t &&
                 (e.hasLoadedAnything && e.sortOrder === s.As.ReallyOldChannel
-                    ? a.push(
+                    ? l.push(
                           (0, r.jsx)(
-                              l.Z,
+                              a.Z,
                               {
                                   className: u.divider,
                                   contentClassName: u.dividerContent,
@@ -31,9 +31,9 @@ function d(e, t, n) {
                       )
                     : e.hasLoadedAnything &&
                       e.sortOrder === s.As.NoNotifications &&
-                      a.push(
+                      l.push(
                           (0, r.jsx)(
-                              l.Z,
+                              a.Z,
                               {
                                   className: u.divider,
                                   contentClassName: u.dividerContent,
@@ -42,7 +42,7 @@ function d(e, t, n) {
                               'disabled-divider'
                           )
                       )),
-            a.push(
+            l.push(
                 (0, r.jsx)(
                     o.Z,
                     {
@@ -57,7 +57,7 @@ function d(e, t, n) {
                     e.channelId
                 )
             ),
-            a
+            l
         );
     });
 }

@@ -13,14 +13,14 @@ var r = n(200651),
     p = n(526761),
     h = n(726985),
     f = n(388032),
-    _ = n(20493);
-function b(e) {
+    b = n(20493);
+function _(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, l.e7)([u.Z], () => u.Z.getExperimentalEncoders());
     return (0, r.jsx)(d.F, {
         setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
         children: (0, r.jsx)(o.j7V, {
-            className: a()(_.marginTop8, _.marginBottom20),
+            className: a()(b.marginTop8, b.marginBottom20),
             value: n,
             onChange: c.Z.setExperimentalEncoders,
             hideBorder: t,
@@ -104,7 +104,7 @@ function N(e) {
                 (0, r.jsx)(d.F, {
                     setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
                     children: (0, r.jsx)(o.j7V, {
-                        className: t ? null : a()(_.marginTop8, _.marginBottom20),
+                        className: t ? null : a()(b.marginTop8, b.marginBottom20),
                         value: n,
                         onChange: c.Z.setOpenH264,
                         hideBorder: t,
@@ -118,7 +118,7 @@ function N(e) {
                             (0, r.jsx)(o.j7V, {
                                 style: { scrollMarginTop: '48px' },
                                 containerRef: N,
-                                className: t ? null : a()(_.marginTop8, _.marginBottom20),
+                                className: t ? null : a()(b.marginTop8, b.marginBottom20),
                                 value: s,
                                 onChange: x,
                                 note: f.NW.string(f.t.P1UKqq),
@@ -133,7 +133,7 @@ function N(e) {
                         ]
                     })
                 }),
-                (0, r.jsx)(b, { refreshStyles: t })
+                (0, r.jsx)(_, { refreshStyles: t })
             ]
         });
     return (0, r.jsx)(d.F, {
@@ -141,7 +141,7 @@ function N(e) {
         children: t
             ? E
             : (0, r.jsx)(o.hjN, {
-                  className: _.marginBottom20,
+                  className: b.marginBottom20,
                   title: f.NW.string(f.t.Tceiq6),
                   children: E
               })

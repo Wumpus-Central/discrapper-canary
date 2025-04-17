@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => _,
+    ZP: () => b,
     u0: () => l
 });
 var r,
@@ -155,7 +155,7 @@ let o = 'premium_tier_2_gradient',
             ]
         });
     },
-    _ = (e) => {
+    b = (e) => {
         let { className: t, variant: n } = e,
             r = (0, a.ZP)(),
             l = (0, s.wj)(r) ? d : o,

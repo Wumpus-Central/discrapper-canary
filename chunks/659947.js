@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(914010),
     h = n(727785),
     f = n(388032),
-    _ = n(484671);
-function b(e) {
+    b = n(484671);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -74,11 +74,11 @@ function S() {
 }
 function v() {
     return (0, r.jsx)('div', {
-        className: _.voiceListSearchEmpty,
+        className: b.voiceListSearchEmpty,
         children: (0, r.jsx)(a.Text, {
             variant: 'text-md/medium',
             color: 'text-muted',
-            className: _.noVoiceChannelSelected,
+            className: b.noVoiceChannelSelected,
             children: f.NW.string(f.t.zHjCd3)
         })
     });
@@ -96,9 +96,9 @@ function T(e) {
                 async () => (e) =>
                     (0, r.jsx)(
                         I,
-                        N(b({}, e), {
+                        N(_({}, e), {
                             onSelect: (e) => {
-                                u(e), l.Z.setKeybind(N(b({}, o.current), { params: { channelId: e } }));
+                                u(e), l.Z.setKeybind(N(_({}, o.current), { params: { channelId: e } }));
                             }
                         })
                     )
@@ -106,12 +106,12 @@ function T(e) {
         }, []);
     return (0, r.jsx)(a.hjN, {
         title: f.NW.string(f.t.q4JpMz),
-        className: _.channelIdSection,
+        className: b.channelIdSection,
         children: (0, r.jsxs)(c.Z, {
             align: c.Z.Align.STRETCH,
             children: [
                 (0, r.jsx)('div', {
-                    className: _.selectedVoiceChannel,
+                    className: b.selectedVoiceChannel,
                     children: (0, r.jsx)(y, { channelId: d })
                 }),
                 (0, r.jsx)(c.Z.Child, {
@@ -129,7 +129,7 @@ function T(e) {
 function I(e) {
     let { transitionState: t, onClose: n, onSelect: l } = e,
         c = i.useId(),
-        b = i.useRef(null),
+        _ = i.useRef(null),
         {
             mouseFocusEnabled: N,
             enableMouseFocus: x,
@@ -190,7 +190,7 @@ function I(e) {
             );
         })(T);
     i.useEffect(() => {
-        let { current: e } = b;
+        let { current: e } = _;
         null == e ||
             e.isItemVisible(0, P, !0) ||
             e.scrollToIndex({
@@ -208,15 +208,15 @@ function I(e) {
             if ((null == t ? void 0 : t.type) === h.h8.VOICE_CHANNEL) return t.record.id;
         })();
     return (0, r.jsx)('div', {
-        className: _.voiceModalContainer,
+        className: b.voiceModalContainer,
         onMouseMove: x,
         children: (0, r.jsxs)(a.Y0X, {
             transitionState: t,
             size: a.CgR.MEDIUM,
-            className: _.voiceModalRootContainer,
+            className: b.voiceModalRootContainer,
             children: [
                 (0, r.jsx)('div', {
-                    className: _.inputWrapper,
+                    className: b.inputWrapper,
                     children: (0, r.jsx)(a.oil, {
                         value: T,
                         onChange: I,
@@ -259,7 +259,7 @@ function I(e) {
                         innerId: c,
                         innerRole: 'listbox',
                         'aria-label': f.NW.string(f.t['+N3fW1']),
-                        ref: b,
+                        ref: _,
                         sections: [D],
                         renderRow: function (e) {
                             let { row: t } = e,
@@ -286,7 +286,7 @@ function I(e) {
                                     children:
                                         null != a
                                             ? (0, r.jsx)('div', {
-                                                  className: _.guildName,
+                                                  className: b.guildName,
                                                   children: a.name
                                               })
                                             : null
@@ -298,7 +298,7 @@ function I(e) {
                         renderFooter: O,
                         sectionHeight: 0,
                         rowHeight: 34,
-                        className: _.voiceChannelList,
+                        className: b.voiceChannelList,
                         listHeaderHeight: 8,
                         footerHeight: 16
                     })
@@ -330,7 +330,7 @@ function y(e) {
         ? (0, r.jsx)(a.Text, {
               variant: 'text-md/medium',
               color: 'text-muted',
-              className: _.noVoiceChannelSelected,
+              className: b.noVoiceChannelSelected,
               children: f.NW.string(f.t['/fYIKy'])
           })
         : (0, r.jsx)(d.$W, {
@@ -344,7 +344,7 @@ function y(e) {
               children:
                   null != l
                       ? (0, r.jsx)('div', {
-                            className: _.guildName,
+                            className: b.guildName,
                             children: l.name
                         })
                       : null

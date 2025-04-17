@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685), n(953529), n(49124), n(539854), n(642613);
+n.d(t, { Z: () => b }), n(388685), n(953529), n(49124), n(539854), n(642613);
 var r = n(200651),
     i = n(192379),
     s = n(392711),
@@ -13,7 +13,7 @@ var r = n(200651),
     p = n(878209),
     h = n(987338),
     f = n(516370);
-function _() {
+function b() {
     let e = (0, l.cj)([u.Z], () => u.Z.getAllExperimentOverrideDescriptors()),
         t = (0, l.cj)([u.Z], () => u.Z.getRegisteredExperiments()),
         [n, s] = i.useState(''),
@@ -30,7 +30,7 @@ function _() {
             }),
             a.length > 0
                 ? a.map((t) => {
-                      let n = t.experiment.type === h.xY.GUILD ? N : b;
+                      let n = t.experiment.type === h.xY.GUILD ? N : _;
                       return (0, r.jsx)(
                           n,
                           {
@@ -52,13 +52,13 @@ function _() {
         ]
     });
 }
-function b(e) {
+function _(e) {
     var t;
     let { experiment: n, experimentId: s, overrideDescriptor: m, defaultOpen: p } = e,
-        [_, b] = i.useState(p),
+        [b, _] = i.useState(p),
         [N, x] = i.useState(!1),
         E = i.useCallback(() => {
-            b((e) => !e);
+            _((e) => !e);
         }, []),
         j = (0, l.e7)([u.Z], () => u.Z.getUserExperimentDescriptor(s)),
         C = (0, l.e7)([u.Z], () => u.Z.getLoadedUserExperiment(s)),
@@ -124,7 +124,7 @@ function b(e) {
                 ]
             })
         });
-    return _
+    return b
         ? (0, r.jsxs)('div', {
               className: f.group,
               children: [
@@ -222,8 +222,8 @@ function b(e) {
 function N(e) {
     let { experiment: t, experimentId: n, overrideDescriptor: s } = e,
         [c, g] = i.useState(null != s),
-        [p, _] = i.useState(!1),
-        b = i.useCallback(() => {
+        [p, b] = i.useState(!1),
+        _ = i.useCallback(() => {
             g((e) => !e);
         }, []),
         N = (0, l.e7)([u.Z], () => u.Z.getLoadedGuildExperiment(n)),
@@ -257,7 +257,7 @@ function N(e) {
             return [r.join('\n'), s];
         }),
         C = (0, r.jsx)(o.P3F, {
-            onClick: b,
+            onClick: _,
             children: (0, r.jsxs)(o.vwX, {
                 tag: o.RB0.H3,
                 className: f.title,
@@ -371,7 +371,7 @@ function N(e) {
                                     className: f.debugButton,
                                     size: o.zxk.Sizes.SMALL,
                                     look: o.zxk.Looks.BLANK,
-                                    onClick: () => _(!0),
+                                    onClick: () => b(!0),
                                     children: 'More Details \xBB'
                                 })
                       ]

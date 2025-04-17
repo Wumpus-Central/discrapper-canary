@@ -2,8 +2,8 @@ n.d(t, { Z: () => b });
 var r = n(200651);
 n(192379);
 var i = n(399606),
-    a = n(524437),
-    l = n(481060),
+    l = n(524437),
+    a = n(481060),
     o = n(494404),
     s = n(377171),
     c = n(317632),
@@ -29,12 +29,12 @@ function b(e) {
             (0, r.jsxs)('div', {
                 className: _.headerTitle,
                 children: [
-                    (0, r.jsx)(l.xx7, {
+                    (0, r.jsx)(a.xx7, {
                         size: 'md',
                         color: 'currentColor',
                         className: _.inboxIcon
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(a.Text, {
                         className: _.inboxTitle,
                         variant: 'text-lg/semibold',
                         color: 'interactive-active',
@@ -48,47 +48,47 @@ function b(e) {
             }),
             (0, r.jsx)('div', {
                 className: _.headerTabs,
-                children: (0, r.jsxs)(l.njP, {
+                children: (0, r.jsxs)(a.njP, {
                     selectedItem: t,
                     type: 'top',
                     look: 'brand',
                     onItemSelect: n,
                     className: _.tabBar,
                     children: [
-                        (0, r.jsxs)(l.njP.Item, {
-                            id: a.X.FOR_YOU,
+                        (0, r.jsxs)(a.njP.Item, {
+                            id: l.X.FOR_YOU,
                             'aria-label': g.NW.string(g.t['En+D+v']),
                             className: _.tab,
                             children: [
                                 g.NW.string(g.t['En+D+v']),
                                 (null == x ? void 0 : x.badgeForYou)
-                                    ? (0, r.jsx)(l.fWl, {
+                                    ? (0, r.jsx)(a.fWl, {
                                           color: s.Z.STATUS_DANGER,
                                           className: _.iconBadge
                                       })
                                     : null
                             ]
                         }),
-                        (0, r.jsx)(l.njP.Item, {
-                            id: a.X.UNREADS,
+                        (0, r.jsx)(a.njP.Item, {
+                            id: l.X.UNREADS,
                             className: _.tab,
                             children: g.NW.string(g.t.sRUdBw)
                         }),
-                        (0, r.jsx)(l.njP.Item, {
+                        (0, r.jsx)(a.njP.Item, {
                             'aria-label': g.NW.string(g.t['GRZF9/']),
-                            id: a.X.MENTIONS,
+                            id: l.X.MENTIONS,
                             className: _.tab,
                             children: g.NW.string(g.t['GRZF9/'])
                         }),
                         j
-                            ? (0, r.jsxs)(l.njP.Item, {
+                            ? (0, r.jsxs)(a.njP.Item, {
                                   'aria-label': 'game_invites',
-                                  id: a.X.GAME_INVITES,
+                                  id: l.X.GAME_INVITES,
                                   className: _.tab,
                                   children: [
                                       g.NW.string(g.t.apq3cX),
                                       C > 0
-                                          ? (0, r.jsx)(l.fWl, {
+                                          ? (0, r.jsx)(a.fWl, {
                                                 color: s.Z.STATUS_DANGER,
                                                 className: _.iconBadge
                                             })
@@ -97,25 +97,25 @@ function b(e) {
                               })
                             : null,
                         v && N
-                            ? (0, r.jsx)(l.njP.Item, {
+                            ? (0, r.jsx)(a.njP.Item, {
                                   'aria-label': g.NW.string(g.t['2pAkDA']),
-                                  id: a.X.BOOKMARKS,
+                                  id: l.X.BOOKMARKS,
                                   className: _.tab,
                                   children: 0 === S ? g.NW.string(g.t['2pAkDA']) : g.NW.formatToPlainString(g.t.I4fryM, { count: S })
                               })
                             : null,
                         E && !v
-                            ? (0, r.jsx)(l.njP.Item, {
+                            ? (0, r.jsx)(a.njP.Item, {
                                   'aria-label': 'todos',
-                                  id: a.X.TODOS,
+                                  id: l.X.TODOS,
                                   className: _.tab,
                                   children: 0 === S ? g.NW.string(g.t.aUXxzc) : g.NW.formatToPlainString(g.t['5en8yc'], { count: S })
                               })
                             : null,
                         O
-                            ? (0, r.jsx)(l.njP.Item, {
+                            ? (0, r.jsx)(a.njP.Item, {
                                   'aria-label': 'scheduled',
-                                  id: a.X.SCHEDULED,
+                                  id: l.X.SCHEDULED,
                                   className: _.tab,
                                   children: g.NW.string(g.t.Fn6Odn)
                               })

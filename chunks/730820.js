@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(600164),
     h = n(144114),
     f = n(921801),
-    _ = n(607018),
-    b = n(778764),
+    b = n(607018),
+    _ = n(778764),
     N = n(314897),
     x = n(325067),
     E = n(594174),
@@ -293,7 +293,7 @@ class k extends i.PureComponent {
                 this.renderMFASMS(),
                 (0, r.jsx)(f.F, {
                     setting: v.s6.ACCOUNT_SECURITY_KEYS,
-                    children: (0, r.jsx)(b.Z, {})
+                    children: (0, r.jsx)(_.Z, {})
                 })
             ]
         });
@@ -314,7 +314,7 @@ class k extends i.PureComponent {
                         children: y.NW.string(y.t.cDgKtb)
                     })
                 }),
-                (0, r.jsx)(b.Z, {})
+                (0, r.jsx)(_.Z, {})
             ]
         });
     }
@@ -342,7 +342,7 @@ class k extends i.PureComponent {
     }
     openPhoneVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, o.h7j)((t) => (0, r.jsx)(_.default, D({ reason: h.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: I.M });
+        (0, o.h7j)((t) => (0, r.jsx)(b.default, D({ reason: h.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: I.M });
     }
     constructor(...e) {
         super(...e),

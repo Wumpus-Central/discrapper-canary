@@ -1,4 +1,4 @@
-n.d(t, { Z: () => e_ }), n(388685);
+n.d(t, { Z: () => eb }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(100527),
     h = n(906732),
     f = n(70097),
-    _ = n(433811),
-    b = n(214852),
+    b = n(433811),
+    _ = n(214852),
     N = n(594174),
     x = n(78839),
     E = n(626135),
@@ -120,16 +120,16 @@ let ep = (e) => {
               })
             : null;
     },
-    e_ = (e) => {
+    eb = (e) => {
         var t, n, s;
         let { isFullscreen: L, entrypoint: V } = e;
-        (0, b.z)(_.X);
+        (0, _.z)(b.X);
         let F = V === en.EZ.ApplicationStoreHome,
             H = i.useRef(null),
             z = i.useRef(null),
             et = i.useRef(null),
-            e_ = i.useRef(null),
             eb = i.useRef(null),
+            e_ = i.useRef(null),
             eN = i.useRef(null),
             ex = i.useRef(null),
             eE = (0, l.e7)([g.Z], () => g.Z.useReducedMotion),
@@ -264,20 +264,20 @@ let ep = (e) => {
                               className: a()({ [ea.heroHeadingV2Container]: eI }),
                               children: [
                                   (0, r.jsx)(o.$, {
-                                      innerRef: eI ? e_ : eb,
+                                      innerRef: eI ? eb : e_,
                                       onChange: (e) => eA(e),
                                       threshold: 0,
                                       active: !0,
                                       children: eI
                                           ? (0, r.jsx)(Q.Z, {
-                                                ref: e_,
+                                                ref: eb,
                                                 subscriptionTier: eG,
                                                 isFullscreen: L || eX,
                                                 entrypoint: V,
                                                 isDarkMode: eC
                                             })
                                           : (0, r.jsx)(G.ZP, {
-                                                ref: eb,
+                                                ref: e_,
                                                 subscriptionTier: eG,
                                                 isFullscreen: L || eX,
                                                 isMarketingPageV2Enabled: eI,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(67390),
-    l = n(896835),
+    l = n(67390),
+    a = n(896835),
     o = n(447564),
     s = n(63063),
     c = n(739566),
@@ -21,7 +21,7 @@ function h(e) {
             guildId: h.guild_id,
             messageId: n.id
         })(g),
-        b = (0, l.j)('HDStreamingUpgradedMessage'),
+        b = (0, a.j)('HDStreamingUpgradedMessage'),
         x = () => (0, o.k)(h, 'HDStreamingUpgradedMessage'),
         y = b ? x : s.Z.getArticleURL(p.BhN.HD_STREAMING_POTION);
     return (0, r.jsxs)(r.Fragment, {
@@ -44,7 +44,7 @@ function h(e) {
                 },
                 className: f.embed,
                 children: [
-                    (0, r.jsx)(a.Z, {}),
+                    (0, r.jsx)(l.Z, {}),
                     (0, r.jsxs)('div', {
                         className: f.text,
                         children: [

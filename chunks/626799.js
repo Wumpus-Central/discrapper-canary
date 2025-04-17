@@ -6,8 +6,8 @@ n.d(t, {
     n(415506);
 var r,
     i = n(200651),
-    a = n(192379),
-    l = n(568611),
+    l = n(192379),
+    a = n(568611),
     o = n(442837),
     s = n(481060),
     c = n(558381),
@@ -40,7 +40,7 @@ function C(e, t, n) {
         e
     );
 }
-class S extends (r = a.Component) {
+class S extends (r = l.Component) {
     get analyticsLocation() {
         var e, t;
         let {
@@ -98,11 +98,11 @@ class S extends (r = a.Component) {
         });
     }
     render() {
-        let { sku: e, storeListing: t, width: n, fetchFailed: r, renderFallback: a } = this.props,
+        let { sku: e, storeListing: t, width: n, fetchFailed: r, renderFallback: l } = this.props,
             o = n > f.aL;
         return null == e || null == t
             ? r
-                ? a()
+                ? l()
                 : (0, i.jsx)(f.OR, { isHorizontal: o })
             : e.productLine === N.POd.COLLECTIBLES
               ? (0, i.jsx)(u.Z, {
@@ -111,7 +111,7 @@ class S extends (r = a.Component) {
                 })
               : (0, i.jsx)(u.Z, {
                     section: N.jXE.APPLICATION_EMBED,
-                    children: (0, i.jsx)(l.rU, {
+                    children: (0, i.jsx)(a.rU, {
                         onClick: this.handleLinkClick,
                         to: this.getStoreListingLocation(),
                         onMouseEnter: this.handleMouseEnter,
@@ -150,7 +150,7 @@ class S extends (r = a.Component) {
                 null != t && t(e);
             }),
             C(this, 'renderApplicationTile', (e, t) => {
-                let { inLibrary: n, width: r, renderCustomTitle: a, renderCustomTagline: l, renderCustomMedia: o } = this.props,
+                let { inLibrary: n, width: r, renderCustomTitle: l, renderCustomTagline: a, renderCustomMedia: o } = this.props,
                     { playing: s, muted: c } = this.state,
                     u = r > f.aL;
                 return (0, i.jsx)(m.Z, {
@@ -161,23 +161,23 @@ class S extends (r = a.Component) {
                     inLibrary: n,
                     onToggleMute: this.handleToggleMute,
                     renderCustomActions: () => this.renderActions(e),
-                    renderCustomTitle: a,
-                    renderCustomTagline: l,
+                    renderCustomTitle: l,
+                    renderCustomTagline: a,
                     renderCustomMedia: o,
                     isHorizontal: u,
                     isEmbed: !0
                 });
             }),
             C(this, 'renderActions', (e) => {
-                let { inLibrary: t, application: n, skuId: r, libraryApplication: a, renderCustomActions: l } = this.props;
-                if (null != l)
+                let { inLibrary: t, application: n, skuId: r, libraryApplication: l, renderCustomActions: a } = this.props;
+                if (null != a)
                     return (0, i.jsx)('div', {
                         className: j.tileActions,
-                        children: l()
+                        children: a()
                     });
                 if (null == n) return null;
                 let o = null != n && n.primarySkuId === r,
-                    c = null != a && a.hasFlag(N.eHb.HIDDEN);
+                    c = null != l && l.hasFlag(N.eHb.HIDDEN);
                 return (0, i.jsxs)('div', {
                     className: j.tileActions,
                     children: [
