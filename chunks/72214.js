@@ -39,19 +39,18 @@ function _(e) {
         [E, y] = l.useState(h('')),
         I = l.useCallback((e) => y(h(e)), [y]),
         { queryMode: S } = E,
-        [A, O] = l.useState(null != n ? n : []),
-        N = l.useRef(n);
+        A = l.useRef(),
+        O = l.useRef(n),
+        N = p !== A.current ? n : O.current;
     l.useEffect(() => {
-        N.current = n;
-    }),
+        p !== A.current && (O.current = n), (A.current = p);
+    }, [p, n]),
         l.useLayoutEffect(() => {
-            var e;
-            let { query: t, resultTypes: n } = E;
+            let { query: e, resultTypes: t } = E;
             m({
-                query: t,
-                resultTypes: n
-            }),
-                O(null != (e = N.current) ? e : []);
+                query: e,
+                resultTypes: t
+            });
         }, [m, E]),
         (0, s.D)();
     let v = (0, r.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
@@ -67,12 +66,12 @@ function _(e) {
                     targetDestination: t,
                     frequentChannels: v,
                     selectedDestinations: n,
-                    pinnedDestinations: A,
+                    pinnedDestinations: N,
                     originDestination: i,
                     includeMissingDMs: f,
                     isConnected: x
                 }),
-            [b, C, S, t, v, n, A, i, f, x]
+            [b, C, S, t, v, n, N, i, f, x]
         ),
         updateSearchText: I
     };
