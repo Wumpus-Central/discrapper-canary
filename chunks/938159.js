@@ -10,5 +10,6 @@ e.exports = {
     botTag: 'botTag__5d473',
     username: 'username__5d473',
     name: 'name__5d473',
-    clanTag: 'clanTag__5d473'
+    clanTag: 'clanTag__5d473',
+    flatBottom: 'flatBottom__5d473'
 };

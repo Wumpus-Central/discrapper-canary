@@ -323,7 +323,10 @@ let j = (0, N.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                               {
                                   ref: eu,
                                   selected: n,
-                                  className: a()(D.member, B, { [D.offline]: P === C.Skl.OFFLINE && !n }),
+                                  className: a()(D.member, B, {
+                                      [D.offline]: P === C.Skl.OFFLINE && !n,
+                                      [D.flatBottom]: eT
+                                  }),
                                   innerClassName: D.memberInner,
                                   onClick: Q,
                                   onKeyDown: q,
