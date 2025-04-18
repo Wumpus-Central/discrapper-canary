@@ -12,8 +12,8 @@ n.d(t, {
 var r = n(192379),
     l = n(512969),
     a = n(442837),
-    o = n(607070),
-    i = n(100527),
+    i = n(607070),
+    o = n(100527),
     s = n(906732),
     c = n(597688),
     u = n(328347),
@@ -35,10 +35,10 @@ let h = ''.concat('#').concat('itemSkuId', '='),
         }, [e, t.pathname]);
     },
     v = (e) => {
-        let { productSkuId: t, analyticsLocations: n, analyticsSource: r, initialItemCardRef: l, reducedMotion: a = !1, tab: o } = e,
-            i = c.Z.getProduct(t),
+        let { productSkuId: t, analyticsLocations: n, analyticsSource: r, initialItemCardRef: l, reducedMotion: a = !1, tab: i } = e,
+            o = c.Z.getProduct(t),
             s = c.Z.getCategoryForProduct(t);
-        if (null != i && null != s) {
+        if (null != o && null != s) {
             var u;
             null == (u = l.current) ||
                 u.scrollIntoView({
@@ -46,16 +46,16 @@ let h = ''.concat('#').concat('itemSkuId', '='),
                     block: 'center',
                     inline: 'center'
                 });
-            let e = i,
+            let e = o,
                 b = (0, f.oQ)({
-                    product: i,
-                    tab: o
+                    product: o,
+                    tab: i
                 }),
                 g = setTimeout(
                     () => {
                         let a = document.getElementById('shop-item-'.concat(e.skuId));
-                        if ((a !== document.activeElement && (null == a || a.focus()), null != i.variantGroupStoreListingId)) {
-                            let n = c.Z.getProductByStoreListingId(i.variantGroupStoreListingId);
+                        if ((a !== document.activeElement && (null == a || a.focus()), null != o.variantGroupStoreListingId)) {
+                            let n = c.Z.getProductByStoreListingId(o.variantGroupStoreListingId);
                             if (null != n) {
                                 var u;
                                 e = n;
@@ -69,7 +69,7 @@ let h = ''.concat('#').concat('itemSkuId', '='),
                             analyticsSource: r,
                             analyticsLocations: n,
                             returnRef: l,
-                            tab: o,
+                            tab: i,
                             shouldCheckoutWithOrbs: b
                         });
                     },
@@ -81,10 +81,10 @@ let h = ''.concat('#').concat('itemSkuId', '='),
     },
     x = (e) => {
         let { isFetchingCategories: t, isLayer: n, initialItemCardRef: c } = e,
-            d = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
+            d = (0, a.e7)([i.Z], () => i.Z.useReducedMotion),
             p = r.useRef(null),
             f = (0, l.TH)(),
-            h = f.pathname === g.Z5c.COLLECTIBLES_SHOP ? i.Z.HOME_PAGE_SHOP_TAB : f.pathname === g.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? i.Z.COLLECTIBLES_SHOP_FULLSCREEN : i.Z.COLLECTIBLES_SHOP,
+            h = f.pathname === g.Z5c.COLLECTIBLES_SHOP ? o.Z.HOME_PAGE_SHOP_TAB : f.pathname === g.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN : o.Z.COLLECTIBLES_SHOP,
             { analyticsLocations: _ } = (0, s.ZP)(h),
             C = (0, b.Z)();
         r.useEffect(() => {
@@ -120,33 +120,34 @@ let h = ''.concat('#').concat('itemSkuId', '='),
     },
     O = (e) => {
         let t = r.useRef({}),
-            n = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
+            n = (0, a.e7)([i.Z], () => i.Z.useReducedMotion),
             l = (0, a.e7)([c.Z], () => c.Z.isFetchingCategories),
-            [i, s] = r.useState(null),
+            [o, s] = r.useState(null),
             u = r.useCallback((e, n) => {
                 t.current[e] = n;
             }, []),
             d = r.useCallback(
                 (r) => {
-                    if (l) s(r);
-                    else {
-                        let l = t.current[r];
-                        null != l &&
-                            (null == e ||
-                                e.scrollIntoViewNode({
-                                    node: l,
-                                    padding: 12,
-                                    animate: !n,
-                                    shouldScrollToStart: !0
-                                }));
-                    }
+                    l
+                        ? s(r)
+                        : setTimeout(() => {
+                              let l = t.current[r];
+                              null != l &&
+                                  (null == e ||
+                                      e.scrollIntoViewNode({
+                                          node: l,
+                                          padding: 12,
+                                          animate: !n,
+                                          shouldScrollToStart: !0
+                                      }));
+                          }, 100);
                 },
                 [e, n, l, s]
             );
         return (
             r.useEffect(() => {
-                l || null == i || (d(i), s(null));
-            }, [l, d, i, s]),
+                l || null == o || (d(o), s(null));
+            }, [l, d, o, s]),
             {
                 setCategoryRef: u,
                 handleScrollToCategory: d

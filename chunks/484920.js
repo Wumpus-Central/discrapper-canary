@@ -6,6 +6,7 @@ e.exports = {
     fadeIn: 'fadeIn__6db1d',
     pageWrapper: 'pageWrapper__6db1d',
     page: 'page__6db1d',
+    pageWithPagination: 'pageWithPagination__6db1d',
     pageFullscreen: 'pageFullscreen__6db1d',
     categoryWrapper: 'categoryWrapper__6db1d',
     cardsContainer: 'cardsContainer__6db1d',
@@ -17,5 +18,6 @@ e.exports = {
     hiddenWumpus: 'hiddenWumpus__6db1d',
     hiddenWumpusEnabled: 'hiddenWumpusEnabled__6db1d',
     categories: 'categories__6db1d',
-    skeletons: 'skeletons__6db1d'
+    skeletons: 'skeletons__6db1d',
+    paginationContainer: 'paginationContainer__6db1d'
 };
