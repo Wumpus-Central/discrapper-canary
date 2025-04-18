@@ -7,18 +7,26 @@ var r = n(200651),
     s = n(792766),
     c = n(955415);
 let u = (e) => {
-    let { invite: t, stageInstance: n, guild: u, isMember: d, onTransitionToInviteChannel: p, onAcceptInstantInvite: m } = e,
-        { analyticsLocations: f } = (0, o.ZP)(l.Z.INVITE_EMBED),
-        h = i.useCallback(() => {
+    let { invite: t, stageInstance: n, guild: u, inviterId: d, isMember: p, onTransitionToInviteChannel: m, onAcceptInstantInvite: f } = e,
+        { analyticsLocations: h } = (0, o.ZP)(l.Z.INVITE_EMBED),
+        g = i.useCallback(() => {
             let e = 'noop';
-            d ? (p(), (e = 'transition')) : (m(), (e = 'accept')), (0, a.r$)(t, e, f);
-        }, [t, f, d, p, m]);
+            p ? (m(), (e = 'transition')) : (f(), (e = 'accept')),
+                (0, a.r$)(
+                    {
+                        invite: t,
+                        action: e,
+                        inviter_id: d
+                    },
+                    h
+                );
+        }, [t, d, h, p, m, f]);
     return (0, r.jsx)(c.Z, {
         children: (0, r.jsx)(s.Z, {
             isEmbed: !0,
             stageInstance: n,
             guild: u,
-            onClick: h
+            onClick: g
         })
     });
 };

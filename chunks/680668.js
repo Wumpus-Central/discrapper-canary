@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(997841), n(388685);
+n.d(t, { Z: () => E }), n(997841), n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(533800),
@@ -17,9 +17,9 @@ var r = n(200651),
     b = n(358595),
     x = n(981631),
     y = n(388032),
-    E = n(273254);
-function v(e) {
-    var t, v, O;
+    v = n(273254);
+function E(e) {
+    var t, E, O;
     let N,
         j,
         C,
@@ -33,7 +33,7 @@ function v(e) {
         F = null != M && M.isGuildVocal(),
         B = null != M && M.isGuildStageVoice(),
         G = (0, h.yE)(null != (t = P.flags) ? t : 0, a.$.IS_GUEST_INVITE),
-        H = null != (v = null == T ? void 0 : T.hasFeature(x.oNc.HUB)) && v,
+        H = null != (E = null == T ? void 0 : T.hasFeature(x.oNc.HUB)) && E,
         V = (0, u.h)(),
         z = null == T ? void 0 : T.id,
         { analyticsLocations: K } = (0, c.ZP)(s.Z.INVITE_EMBED),
@@ -45,8 +45,16 @@ function v(e) {
         }, [z, K, V, W, S]),
         J = i.useCallback(() => {
             let e = 'noop';
-            W ? (S(), (e = 'transition')) : (I(), (e = 'accept')), (0, o.r$)(P, e, K);
-        }, [P, K, W, S, I]);
+            W ? (S(), (e = 'transition')) : (I(), (e = 'accept')),
+                (0, o.r$)(
+                    {
+                        invite: P,
+                        action: e,
+                        inviter_id: A.id
+                    },
+                    K
+                );
+        }, [P, A, K, W, S, I]);
     if (null == T) {
         if (null == P.guild) return (0, r.jsx)(b.Z, {});
         (T = g.Qs(P.guild)).premiumTier = null != (O = P.guild.premium_tier) ? O : x.Eu4.NONE;
@@ -61,7 +69,7 @@ function v(e) {
     });
     return (
         (j = (0, r.jsxs)('span', {
-            className: E.infoTitle,
+            className: v.infoTitle,
             children: [
                 (0, r.jsx)(d.Z, {
                     guildId: T.id,
@@ -71,7 +79,7 @@ function v(e) {
                     children: () => (0, r.jsx)(m.Z.GuildName, { guild: T })
                 }),
                 (0, r.jsx)('span', {
-                    className: E.infoBadge,
+                    className: v.infoBadge,
                     children: (0, r.jsx)(p.Z, {
                         guild: T,
                         isBannerVisible: !1,
@@ -82,22 +90,22 @@ function v(e) {
         })),
         G &&
             (C = (0, r.jsx)(l.DY3, {
-                className: E.tooltipContainer,
+                className: v.tooltipContainer,
                 text: y.NW.string(y.t['/FeTKy']),
                 children: (0, r.jsx)(l.d3s, {
                     size: 'md',
                     color: 'currentColor',
-                    className: E.infoIcon
+                    className: v.infoIcon
                 })
             })),
         F
             ? ((j = (0, r.jsx)(m.Z.Channel, { channel: M })),
               (N = (0, r.jsxs)('span', {
-                  className: E.infoTitle,
+                  className: v.infoTitle,
                   children: [
                       y.NW.format(y.t['2wimj4'], { guildName: T.name }),
                       (0, r.jsx)('span', {
-                          className: E.infoBadge,
+                          className: v.infoBadge,
                           children: (0, r.jsx)(p.Z, {
                               guild: T,
                               isBannerVisible: !1
@@ -125,7 +133,7 @@ function v(e) {
                 (0, r.jsxs)(m.Z.Body, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: E.headerLine,
+                            className: v.headerLine,
                             children: [
                                 (0, r.jsx)(m.Z.Icon, { guild: T }),
                                 (0, r.jsx)(m.Z.Info, {
@@ -146,7 +154,7 @@ function v(e) {
                 T.hasFeature(x.oNc.HUB) &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)('div', { className: E.separator }),
+                            (0, r.jsx)('div', { className: v.separator }),
                             (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',

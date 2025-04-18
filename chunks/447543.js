@@ -272,13 +272,15 @@ let em = function (e, t) {
         let { guild_id: t, channel_id: n } = e;
         (0, S.xt)(e) && null != n ? em(n) : await Q.Z.transitionToGuildSync(t);
     };
-function eE(e, t, n) {
-    var r;
+function eE(e, t) {
+    var n;
+    let { invite: r, action: i, inviter_id: a } = e;
     H.default.track(J.rMx.INVITE_EMBED_ACTIONED, {
-        action: t,
-        invite_code: e.code,
-        invite_type: null == (r = e.type) ? void 0 : r.toString(),
-        location_stack: null != n ? n : null
+        action: i,
+        invite_code: r.code,
+        invite_type: null == (n = r.type) ? void 0 : n.toString(),
+        inviter_id: null != a ? a : null,
+        location_stack: null != t ? t : null
     });
 }
 function eb(e, t, n) {
