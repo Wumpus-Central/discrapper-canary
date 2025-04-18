@@ -1,18 +1,17 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(442837),
     o = n(911367),
-    a = n(695346),
-    s = n(699516),
-    c = n(594174),
-    u = n(212321),
-    d = n(646915),
-    p = n(184301),
-    h = n(432958),
-    f = n(792379),
-    m = n(177222);
-function g(e) {
+    a = n(594174),
+    s = n(212321),
+    c = n(646915),
+    u = n(788111),
+    d = n(184301),
+    p = n(792379),
+    h = n(571784),
+    f = n(177222);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,63 +36,55 @@ function g(e) {
     }
     return e;
 }
-function b(e) {
+function g(e) {
     let { channel: t } = e,
-        n = (0, d.Z)();
+        [n] = t.recipients,
+        g = (0, l.e7)([a.default], () => a.default.getUser(n)),
+        b = (0, l.e7)([a.default], () => a.default.getCurrentUser()),
+        _ = (0, c.Z)(),
+        [y, C] = (0, u.Z)(n);
     (0, o.t)();
-    let { withMutualFriendsCount: b } = (0, u.j)({ location: 'UserProfilePanelRenderer' }),
-        [_] = t.recipients,
-        y = (0, l.e7)([c.default], () => c.default.getUser(_)),
-        C = (0, l.e7)([c.default], () => c.default.getCurrentUser());
-    i.useEffect(() => {
-        (0, p.Z)(null != y ? y : _, {
+    let { withMutualFriendsCount: x } = (0, s.j)({ location: 'UserProfilePanelRenderer' });
+    return (i.useEffect(() => {
+        (0, d.Z)(null != g ? g : n, {
             type: 'panel',
-            withMutualFriendsCount: (null == y ? void 0 : y.bot) !== !0 && b,
-            withMutualFriends: (null == y ? void 0 : y.bot) !== !0 && !b,
+            withMutualFriendsCount: (null == g ? void 0 : g.bot) !== !0 && x,
+            withMutualFriends: (null == g ? void 0 : g.bot) !== !0 && !x,
             withMutualGuilds: !0,
             channelId: t.id
         });
-    }, [y, _, t.id, b]);
-    let { isBlocked: x, isIgnored: v } = (0, l.cj)([s.Z], () => ({
-            isBlocked: s.Z.isBlocked(_),
-            isIgnored: s.Z.isIgnored(_)
-        })),
-        [j, O] = i.useState(x || v),
-        E = a.Rt.useSetting();
-    return (i.useEffect(() => {
-        O(x || v);
-    }, [x, v]),
-    null == y || null == C || n)
+    }, [g, n, t.id, x]),
+    null == g || null == b || _)
         ? null
-        : j && !(v && E)
+        : y
           ? (0, r.jsx)(
-                h.A,
-                g(
+                h.Z,
+                m(
                     {
-                        user: y,
-                        currentUser: C,
-                        onViewBlockedProfileClick: () => O(!1)
+                        user: g,
+                        currentUser: b,
+                        onHide: C
                     },
                     e
                 )
             )
-          : y.isNonUserBot()
+          : g.isNonUserBot()
             ? (0, r.jsx)(
-                  f.Z,
-                  g(
+                  p.Z,
+                  m(
                       {
-                          user: y,
-                          currentUser: C
+                          user: g,
+                          currentUser: b
                       },
                       e
                   )
               )
             : (0, r.jsx)(
-                  m.Z,
-                  g(
+                  f.Z,
+                  m(
                       {
-                          user: y,
-                          currentUser: C
+                          user: g,
+                          currentUser: b
                       },
                       e
                   )

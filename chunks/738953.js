@@ -117,8 +117,9 @@ function B(e) {
                     G(
                         j(
                             {
-                                customStatusPrompt: ei,
-                                sourceAnalyticsLocations: z
+                                sourceAnalyticsLocations: z,
+                                hideRestrictedProfile: !0,
+                                customStatusPrompt: ei
                             },
                             q,
                             e

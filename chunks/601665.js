@@ -70,7 +70,17 @@ function C(e) {
         null == L || L(null == B ? void 0 : B.current);
     }, [B, L]);
     let V = (e) => {
-            null == D || D(), (0, y.openUserProfileModal)(A({ sourceAnalyticsLocations: k }, j, e));
+            null == D || D(),
+                (0, y.openUserProfileModal)(
+                    A(
+                        {
+                            sourceAnalyticsLocations: k,
+                            hideRestrictedProfile: !0
+                        },
+                        j,
+                        e
+                    )
+                );
         },
         Z = () =>
             x

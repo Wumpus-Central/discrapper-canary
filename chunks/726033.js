@@ -1,14 +1,12 @@
-n.d(t, { Z: () => m }), n(388685);
-var r = n(200651),
-    i = n(192379),
-    o = n(442837),
-    a = n(695346),
-    s = n(699516),
-    l = n(614417),
-    c = n(601665),
-    u = n(103113),
-    d = n(738953);
-function f(e, t, n) {
+n.d(t, { Z: () => _ }), n(388685);
+var r = n(200651);
+n(192379);
+var i = n(788111),
+    o = n(601665),
+    a = n(103113),
+    s = n(862077),
+    l = n(738953);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +19,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +30,12 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,24 +47,19 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e) {
+function _(e) {
     let { user: t } = e,
-        { isBlocked: n, isIgnored: f } = (0, o.cj)([s.Z], () => ({
-            isBlocked: s.Z.isBlocked(t.id),
-            isIgnored: s.Z.isIgnored(t.id)
-        })),
-        [p, m] = i.useState(n || f),
-        g = a.Rt.useSetting();
-    return p && !(f && g) ? (0, r.jsx)(l.Z, h(_({}, e), { onViewBlockedProfileClick: () => m(!1) })) : t.isNonUserBot() ? (0, r.jsx)(u.Z, _({}, e)) : t.bot ? (0, r.jsx)(c.Z, _({}, e)) : (0, r.jsx)(d.Z, _({}, e));
+        [n, c] = (0, i.Z)(t.id);
+    return n ? (0, r.jsx)(s.Z, f(u({}, e), { onHide: c })) : t.isNonUserBot() ? (0, r.jsx)(a.Z, u({}, e)) : t.bot ? (0, r.jsx)(o.Z, u({}, e)) : (0, r.jsx)(l.Z, u({}, e));
 }

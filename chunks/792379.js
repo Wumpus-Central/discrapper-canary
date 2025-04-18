@@ -69,7 +69,16 @@ function R(e) {
         U = i.useRef(null),
         B = (0, a.Z)(U),
         G = (e) => {
-            (0, P.openUserProfileModal)(w({ sourceAnalyticsLocations: D }, W, e));
+            (0, P.openUserProfileModal)(
+                w(
+                    {
+                        sourceAnalyticsLocations: D,
+                        hideRestrictedProfile: !0
+                    },
+                    W,
+                    e
+                )
+            );
         };
     return (0, r.jsx)(u.Gt, {
         value: D,
