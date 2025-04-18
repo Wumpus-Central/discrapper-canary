@@ -48,14 +48,21 @@ class C extends (r = s.Component) {
         return e[e.length - 1].y + _ / 2;
     }
     getProgressHeight(e) {
-        let { tiers: t, progress: n } = this.props,
-            r = t[e],
-            i = t[e + 1];
-        if (null == i || n === r.numRequired) return r.y;
-        let s = i.y - r.y,
-            l = i.numRequired - r.numRequired,
-            a = n - r.numRequired;
-        return r.y + (a / l) * s;
+        let t,
+            { tiers: n, progress: r } = this.props,
+            i = n[e];
+        for (let e = n.length - 1; e > 0; e--) {
+            if (r === n[e].numRequired) return n[e].y;
+            if (r > n[e].numRequired) {
+                t = n[e + 1];
+                break;
+            }
+        }
+        if (null == t) return i.y;
+        let s = t.y - i.y,
+            l = t.numRequired - i.numRequired,
+            a = r - i.numRequired;
+        return i.y + (a / l) * s;
     }
     getCurrentTierIndex() {
         let { currentTier: e, tiers: t } = this.props;
