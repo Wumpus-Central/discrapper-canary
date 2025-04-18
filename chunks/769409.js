@@ -5,31 +5,31 @@ var i = n(481060),
     a = n(668781),
     l = n(231338),
     o = n(388032);
-let s = (e) => {
-    let t = 'group-dm-edit-modal-'.concat(e),
-        s = !1,
-        c = (e) => {
-            s = e;
+let s = (e, t) => {
+    let s = 'group-dm-edit-modal-'.concat(e),
+        c = !1,
+        u = (e) => {
+            c = e;
         },
-        u = () => {
-            s
+        d = () => {
+            c
                 ? a.Z.show({
                       title: o.NW.string(o.t.pvRCSk),
                       body: o.NW.string(o.t.DRi46e),
                       confirmText: o.NW.string(o.t['6GQDFh']),
                       confirmColor: i.Ttl.RED,
                       cancelText: o.NW.string(o.t.DmDzZG),
-                      onConfirm: () => (0, i.Mr3)(t),
+                      onConfirm: () => (0, i.Mr3)(s),
                       onCancel: l.dG
                   })
-                : (0, i.Mr3)(t);
+                : (0, i.Mr3)(s);
         };
     (0, i.ZDy)(
         async () => {
-            let { default: t } = await n.e('41259').then(n.bind(n, 912114));
+            let { default: i } = await n.e('41259').then(n.bind(n, 912114));
             return (n) =>
                 (0, r.jsx)(
-                    t,
+                    i,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -56,17 +56,18 @@ let s = (e) => {
                         return e;
                     })(
                         {
-                            closeOrShowDiscardChangesAlert: u,
-                            setHasPendingChanges: c,
-                            channelId: e
+                            closeOrShowDiscardChangesAlert: d,
+                            setHasPendingChanges: u,
+                            channelId: e,
+                            location: t
                         },
                         n
                     )
                 );
         },
         {
-            modalKey: t,
-            onCloseRequest: u
+            modalKey: s,
+            onCloseRequest: d
         }
     );
 };

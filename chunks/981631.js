@@ -2416,6 +2416,8 @@ var N =
     (r.RING_TO_GUILD_VC_MENU_ITEM_SHOWN = 'impression_ring_to_guild_vc_menu_item_shown'),
     (r.RING_CALL_DECLINED = 'ring_call_declined'),
     (r.RING_CALL_ACCEPTED = 'ring_call_accepted'),
+    (r.CHANNEL_ICON_EDIT_PROGRESSED = 'channel_icon_edit_progressed'),
+    (r.GDM_EDIT_INTERACTED = 'gdm_edit_interacted'),
     r);
 Object.freeze({
     STORAGE_MANIFEST: (t, e) => ''.concat(t, '/storage/').concat(e, '/MANIFEST'),

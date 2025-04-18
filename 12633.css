@@ -15826,7 +15826,7 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 }
 
 .nitroRewardTileAssetContainer_a92e89 {
-    background-image: linear-gradient(45deg, var(--guild-boosting-blue), var(--guild-boosting-purple));
+    background-image: linear-gradient(135deg, var(--premium-tier-1-dark-blue-for-gradients) 20%, var(--premium-perk-pink));
     display: flex;
     place-content: center;
     text-align: center
@@ -34551,6 +34551,7 @@ html:not(.visual-refresh) .root_e5f3a9 {
 }
 
 .rootContainer__5ce63 {
+    border: 0 !important;
     min-height: 200px;
     width: 440px
 }
@@ -34566,10 +34567,12 @@ html:not(.visual-refresh) .root_e5f3a9 {
 }
 
 .headerContainer__5ce63 {
+    border-radius: 11px 11px 0 0;
     display: grid;
     grid-area: header;
     grid-template: "layer" 1fr/1fr;
-    min-height: 200px
+    min-height: 200px;
+    overflow: hidden
 }
 
 .nitroHeaderContainer__5ce63 {
@@ -34740,21 +34743,13 @@ html:not(.visual-refresh) .root_e5f3a9 {
     display: flex
 }
 
-.iconBackgroundFractional__5ce63 {
+.rewardAssetContainer__5ce63 {
     align-items: center;
     align-self: center;
-    border-radius: 4px;
     display: flex;
     grid-area: layer;
     justify-content: center;
-    justify-self: center;
-    padding: 4px
-}
-
-.iconFractional__5ce63 {
-    filter: drop-shadow(0 1px 2px rgb(0 0 0/.5));
-    height: 155px;
-    width: 155px
+    justify-self: center
 }
 
 .spinnerContainer__5ce63 {

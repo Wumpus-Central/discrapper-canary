@@ -1,36 +1,41 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(641360),
-    l = n(769409),
-    o = n(739566),
-    s = n(834129),
-    c = n(388032);
-function u(e) {
-    let { message: t, usernameHook: u, compact: d } = e,
-        p = (0, o.ZP)(t),
-        m = u(p),
-        f = (0, a.I3)('GdmNameChangeSystemMessage', t.channel_id);
-    return (0, r.jsx)(s.Z, {
+    a = n(100527),
+    l = n(641360),
+    o = n(769409),
+    s = n(739566),
+    c = n(834129),
+    u = n(388032);
+function d(e) {
+    let { message: t, usernameHook: d, compact: p } = e,
+        m = (0, s.ZP)(t),
+        f = d(m),
+        h = (0, l.I3)('GdmNameChangeSystemMessage', t.channel_id);
+    return (0, r.jsx)(c.Z, {
         icon: n(819373),
         timestamp: t.timestamp,
-        compact: d,
-        children: f
-            ? c.NW.format(c.t['4wLp29'], {
-                  username: p.nick,
-                  usernameHook: m,
-                  editGroupButton: (0, r.jsx)(i.Text, {
-                      tag: 'span',
-                      variant: 'text-md/medium',
-                      color: 'text-link',
-                      children: c.NW.string(c.t['5Q9+/P'])
-                  }),
-                  onEditGroup: () => (0, l.B)(t.channel_id)
+        compact: p,
+        children: h
+            ? u.NW.format(u.t['4wLp29'], {
+                  username: m.nick,
+                  usernameHook: f,
+                  editGroupButton: (0, r.jsx)(
+                      i.Text,
+                      {
+                          tag: 'span',
+                          variant: 'text-md/medium',
+                          color: 'text-link',
+                          children: u.NW.string(u.t['5Q9+/P'])
+                      },
+                      'edit-group-button-'.concat(t.id)
+                  ),
+                  onEditGroup: () => (0, o.B)(t.channel_id, a.Z.GROUP_DM_SYSTEM_MESSAGE_ICON)
               })
-            : c.NW.format(c.t.OEdU6e, {
-                  username: p.nick,
-                  usernameHook: m
+            : u.NW.format(u.t.OEdU6e, {
+                  username: m.nick,
+                  usernameHook: f
               })
     });
 }

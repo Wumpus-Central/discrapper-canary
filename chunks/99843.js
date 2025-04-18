@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -7,16 +7,18 @@ var r = n(200651),
     s = n(493683),
     c = n(239091),
     u = n(599059),
-    d = n(933557),
-    p = n(641360),
-    h = n(266076),
-    f = n(187237),
-    m = n(769409),
-    g = n(210975),
-    b = n(981631),
-    _ = n(388032),
-    y = n(791293);
-function C(e) {
+    d = n(100527),
+    p = n(933557),
+    h = n(641360),
+    f = n(266076),
+    m = n(187237),
+    g = n(769409),
+    b = n(210975),
+    _ = n(626135),
+    y = n(981631),
+    C = n(388032),
+    x = n(791293);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +43,7 @@ function C(e) {
     }
     return e;
 }
-function x(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,142 +61,203 @@ function x(e, t) {
         e
     );
 }
-let v = (e) => {
+let O = (e) => {
         let { channel: t } = e;
-        return (0, g.m$)({ channelId: t.id })
+        return (0, b.m$)({ channelId: t.id })
             ? (0, r.jsx)(a.ua7, {
-                  text: _.NW.string(_.t.QyZ4TU),
+                  text: C.NW.string(C.t.QyZ4TU),
                   children: (e) =>
                       (0, r.jsx)(
                           a.tQf,
-                          x(C({}, e), {
+                          j(v({}, e), {
                               size: 'xs',
-                              'aria-label': _.NW.string(_.t.VHXh8f),
+                              'aria-label': C.NW.string(C.t.VHXh8f),
                               color: a.TVs.colors.INTERACTIVE_NORMAL
                           })
                       )
               })
             : null;
     },
-    j = (e) => {
-        let { channel: t, children: l, inlineEditor: u } = e,
-            p = t.id,
-            h = t.name,
-            f = (0, d.ZP)(t),
-            g = (0, d.cO)(t),
-            [j, O] = i.useState(!1);
-        return (0, r.jsxs)('div', {
-            className: y.newWrapper,
-            children: [
-                (0, r.jsxs)('div', {
-                    className: o()(y.hoverableContainer, { [y.editing]: !1 !== j }),
-                    onDoubleClick: (e) => e.stopPropagation(),
-                    children: [
-                        l,
-                        !1 === j
-                            ? (0, r.jsxs)(r.Fragment, {
-                                  children: [
-                                      (0, r.jsx)(a.ua7, {
-                                          text: _.NW.string(u ? _.t.pYO54e : _.t['5Q9+/P']),
-                                          position: 'bottom',
-                                          children: (e) =>
-                                              (0, r.jsxs)(
-                                                  a.P3F,
-                                                  x(C({}, e), {
-                                                      className: y.clickableTitle,
-                                                      onClick: () => (u ? O(h) : (0, m.B)(t.id)),
-                                                      onContextMenu: (e) =>
-                                                          (0, c.jW)(
-                                                              e,
-                                                              () =>
-                                                                  Promise.all([n.e('79695'), n.e('20875'), n.e('70205'), n.e('53912'), n.e('518')])
-                                                                      .then(n.bind(n, 354741))
-                                                                      .then((e) => {
-                                                                          let { default: n } = e;
-                                                                          return (e) =>
-                                                                              (0, r.jsx)(
-                                                                                  n,
-                                                                                  x(C({}, e), {
-                                                                                      channel: t,
-                                                                                      selected: !0
-                                                                                  })
-                                                                              );
-                                                                      }),
-                                                              { noBlurEvent: !0 }
-                                                          ),
-                                                      onDoubleClick: (e) => e.stopPropagation(),
-                                                      'aria-label': _.NW.string(_.t.bt75u7),
-                                                      children: [
-                                                          (0, r.jsx)(a.Text, {
-                                                              variant: 'text-md/semibold',
-                                                              color: 'header-primary',
-                                                              children: null != f ? f : ''
-                                                          }),
-                                                          (0, r.jsx)(a.vdY, {
-                                                              className: y.editIcon,
-                                                              size: 'xs',
-                                                              color: 'currentColor'
-                                                          })
-                                                      ]
-                                                  })
-                                              )
-                                      }),
-                                      (0, r.jsx)(v, { channel: t })
-                                  ]
-                              })
-                            : (0, r.jsx)('form', {
-                                  onSubmit: () => {
-                                      !1 !== j && j !== h && s.Z.setName(p, j), O(!1);
-                                  },
-                                  children: (0, r.jsx)(a.oil, {
-                                      autoFocus: !0,
-                                      maxLength: b.HN8,
-                                      inputClassName: y.newInput,
-                                      name: 'channel_name',
-                                      autoComplete: 'off',
-                                      value: j,
-                                      placeholder: null != g ? g : '',
-                                      onChange: (e) => O(e),
-                                      onBlur: () => O(!1),
-                                      onKeyUp: (e) => 'Escape' === e.key && O(!1)
-                                  })
-                              })
-                    ]
-                }),
-                !1 !== j &&
-                    (0, r.jsxs)('div', {
-                        className: y.explainer,
-                        children: [
-                            (0, r.jsx)(a.Text, {
-                                variant: 'text-xs/medium',
-                                color: 'header-muted',
-                                children: _.NW.string(_.t.a7oCBg)
-                            }),
-                            (0, r.jsx)(a.Text, {
-                                variant: 'text-xs/medium',
-                                color: 'header-muted',
-                                className: y.visibleLink,
-                                children: _.NW.format(_.t.HVqAgI, { onCancel: () => O(!1) })
-                            })
-                        ]
+    E = (e) => {
+        let { channel: t, children: i, tooltipText: l, onClick: o, className: s } = e;
+        return (0, r.jsx)(a.ua7, {
+            text: l,
+            position: 'bottom',
+            children: (e) => {
+                var { onMouseEnter: u } = e,
+                    p = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                            r,
+                            i = (function (e, t) {
+                                if (null == e) return {};
+                                var n,
+                                    r,
+                                    i = {},
+                                    l = Object.keys(e);
+                                for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                return i;
+                            })(e, t);
+                        if (Object.getOwnPropertySymbols) {
+                            var l = Object.getOwnPropertySymbols(e);
+                            for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                        }
+                        return i;
+                    })(e, ['onMouseEnter']);
+                return (0, r.jsx)(
+                    a.P3F,
+                    j(v({}, p), {
+                        className: s,
+                        onClick: o,
+                        onContextMenu: (e) =>
+                            (0, c.jW)(
+                                e,
+                                () =>
+                                    Promise.all([n.e('79695'), n.e('20875'), n.e('70205'), n.e('53912'), n.e('518')])
+                                        .then(n.bind(n, 354741))
+                                        .then((e) => {
+                                            let { default: n } = e;
+                                            return (e) =>
+                                                (0, r.jsx)(
+                                                    n,
+                                                    j(v({}, e), {
+                                                        channel: t,
+                                                        selected: !0
+                                                    })
+                                                );
+                                        }),
+                                { noBlurEvent: !0 }
+                            ),
+                        onDoubleClick: (e) => e.stopPropagation(),
+                        onMouseEnter: () => {
+                            null == u || u(),
+                                _.default.track(y.rMx.GDM_EDIT_INTERACTED, {
+                                    channel_id: t.id,
+                                    action: 'entry_point_hovered',
+                                    location: d.Z.HEADER_BAR
+                                });
+                        },
+                        'aria-label': l,
+                        children: i
                     })
-            ]
+                );
+            }
         });
     },
-    O = (e) => {
+    N = (e) => {
+        let { channel: t, children: n, inlineEditor: l } = e,
+            c = t.id,
+            u = t.name,
+            h = (0, p.ZP)(t),
+            f = (0, p.cO)(t),
+            [m, b] = i.useState(!1),
+            _ = i.useCallback(() => (l ? b(u) : (0, g.B)(c, d.Z.HEADER_BAR)), [l, u, c]),
+            v = l ? C.t.pYO54e : C.t['5Q9+/P'];
+        return l
+            ? (0, r.jsxs)('div', {
+                  className: x.newWrapper,
+                  children: [
+                      (0, r.jsxs)('div', {
+                          className: o()(x.hoverableContainer, { [x.editing]: !1 !== m }),
+                          onDoubleClick: (e) => e.stopPropagation(),
+                          children: [
+                              n,
+                              !1 === m
+                                  ? (0, r.jsxs)(r.Fragment, {
+                                        children: [
+                                            (0, r.jsxs)(E, {
+                                                channel: t,
+                                                tooltipText: C.NW.string(v),
+                                                onClick: _,
+                                                className: x.clickableTitle,
+                                                children: [
+                                                    (0, r.jsx)(a.Text, {
+                                                        variant: 'text-md/semibold',
+                                                        color: 'header-primary',
+                                                        children: null != h ? h : ''
+                                                    }),
+                                                    (0, r.jsx)(a.vdY, {
+                                                        className: x.editIcon,
+                                                        size: 'xs',
+                                                        color: 'currentColor'
+                                                    })
+                                                ]
+                                            }),
+                                            (0, r.jsx)(O, { channel: t })
+                                        ]
+                                    })
+                                  : (0, r.jsx)('form', {
+                                        onSubmit: () => {
+                                            !1 !== m && m !== u && s.Z.setName(c, m), b(!1);
+                                        },
+                                        children: (0, r.jsx)(a.oil, {
+                                            autoFocus: !0,
+                                            maxLength: y.HN8,
+                                            inputClassName: x.newInput,
+                                            name: 'channel_name',
+                                            autoComplete: 'off',
+                                            value: m,
+                                            placeholder: null != f ? f : '',
+                                            onChange: (e) => b(e),
+                                            onBlur: () => b(!1),
+                                            onKeyUp: (e) => 'Escape' === e.key && b(!1)
+                                        })
+                                    })
+                          ]
+                      }),
+                      !1 !== m &&
+                          (0, r.jsxs)('div', {
+                              className: x.explainer,
+                              children: [
+                                  (0, r.jsx)(a.Text, {
+                                      variant: 'text-xs/medium',
+                                      color: 'header-muted',
+                                      children: C.NW.string(C.t.a7oCBg)
+                                  }),
+                                  (0, r.jsx)(a.Text, {
+                                      variant: 'text-xs/medium',
+                                      color: 'header-muted',
+                                      className: x.visibleLink,
+                                      children: C.NW.format(C.t.HVqAgI, { onCancel: () => b(!1) })
+                                  })
+                              ]
+                          })
+                  ]
+              })
+            : (0, r.jsxs)(E, {
+                  channel: t,
+                  tooltipText: C.NW.string(v),
+                  onClick: _,
+                  className: o()(x.hoverableContainer, x.clickableTitle),
+                  children: [
+                      n,
+                      (0, r.jsx)(a.Text, {
+                          variant: 'text-md/semibold',
+                          color: 'header-primary',
+                          children: null != h ? h : ''
+                      }),
+                      (0, r.jsx)(a.vdY, {
+                          className: x.editIcon,
+                          size: 'xs',
+                          color: 'currentColor'
+                      })
+                  ]
+              });
+    },
+    I = (e) => {
         let { channel: t, children: n } = e,
-            i = (0, d.ZP)(t);
+            i = (0, p.ZP)(t);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 n,
                 (0, r.jsxs)('div', {
-                    className: y.container,
+                    className: x.container,
                     onDoubleClick: (e) => e.stopPropagation(),
                     children: [
                         (0, r.jsx)(u.Z, {
                             minLen: 1,
-                            maxLen: b.HN8,
-                            className: y.channelName,
+                            maxLen: y.HN8,
+                            className: x.channelName,
                             name: 'channel_name',
                             autoComplete: 'off',
                             value: null != i ? i : '',
@@ -202,22 +265,24 @@ let v = (e) => {
                                 i !== e.currentTarget.value && s.Z.setName(t.id, e.currentTarget.value);
                             }
                         }),
-                        (0, r.jsx)(v, { channel: t })
+                        (0, r.jsx)(O, { channel: t })
                     ]
                 })
             ]
         });
     },
-    E = (e) => {
+    P = (e) => {
         let { channel: t, legacyIconClassName: n } = e,
-            { enabled: i, unifiedEditing: l } = (0, p.Ae)('header_bar', t.id);
-        return (0, r.jsx)(i ? j : O, {
+            { enabled: i, unifiedEditing: l } = (0, h.Ae)('header_bar', t.id);
+        return (0, r.jsx)(i ? N : I, {
             channel: t,
             inlineEditor: !l,
-            children: (0, r.jsx)(f.v, {
+            children: (0, r.jsx)(m.v, {
                 channel: t,
-                className: i ? y.newGdmIcon : n,
-                children: (0, r.jsx)(h.Z, {
+                className: i ? x.newGdmIcon : n,
+                editable: !l,
+                location: d.Z.HEADER_BAR,
+                children: (0, r.jsx)(f.Z, {
                     'aria-hidden': !0,
                     channel: t,
                     size: a.EFr.SIZE_24,
