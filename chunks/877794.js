@@ -1,141 +1,141 @@
-n.d(t, { Z: () => E }), n(388685);
-var r = n(200651),
-    c = n(192379),
-    l = n(374470),
+n.d(e, { Z: () => g }), n(388685);
+var l = n(200651),
+    r = n(192379),
+    c = n(374470),
     i = n(442837),
     s = n(481060),
-    o = n(295866),
-    a = n(398327),
+    a = n(295866),
+    o = n(398327),
     u = n(63063),
     d = n(601993),
-    p = n(981631),
-    b = n(388032);
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+    b = n(981631),
+    p = n(388032);
+function f(t) {
+    for (var e = 1; e < arguments.length; e++) {
+        var n = null != arguments[e] ? arguments[e] : {},
+            l = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (l = l.concat(
+                Object.getOwnPropertySymbols(n).filter(function (t) {
+                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
+            l.forEach(function (e) {
+                var l;
+                (l = n[e]),
+                    e in t
+                        ? Object.defineProperty(t, e, {
+                              value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (t[e] = l);
             });
     }
-    return e;
+    return t;
 }
-function h(e, t) {
+function h(t, e) {
     return (
-        (t = null != t ? t : {}),
+        (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
+            : (function (t, e) {
+                  var n = Object.keys(t);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var l = Object.getOwnPropertySymbols(t);
+                      n.push.apply(n, l);
                   }
                   return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              })(Object(e)).forEach(function (n) {
+                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
               }),
-        e
+        t
     );
 }
-function E(e) {
-    let { text: t = '', target: n } = e,
-        E = (0, i.e7)([a.Z], () => a.Z.isEnabled()),
-        O = (0, i.e7)([a.Z], () => a.Z.hasLearnedWord(t), [t]),
-        j = c.useRef(h(f({}, e), { spellcheckEnabled: E }));
-    j.current = h(f({}, e), { spellcheckEnabled: E });
-    let y = c.useRef(!1),
-        [k, N] = c.useState(!1),
-        [g, m] = c.useState([]),
-        S = c.useCallback(() => {
-            let { spellcheckEnabled: e, text: t, onHeightUpdate: n } = j.current;
-            e &&
+function g(t) {
+    let { text: e = '', target: n } = t,
+        g = (0, i.e7)([o.Z], () => o.Z.isEnabled()),
+        N = (0, i.e7)([o.Z], () => o.Z.hasLearnedWord(e), [e]),
+        E = r.useRef(h(f({}, t), { spellcheckEnabled: g }));
+    E.current = h(f({}, t), { spellcheckEnabled: g });
+    let O = r.useRef(!1),
+        [y, j] = r.useState(!1),
+        [S, k] = r.useState([]),
+        m = r.useCallback(() => {
+            let { spellcheckEnabled: t, text: e, onHeightUpdate: n } = E.current;
+            t &&
                 (0, d.Gb)() &&
-                Promise.all([(0, d.f5)(t, !0), (0, d.WA)(t, !0)]).then((e) => {
-                    let [t, r] = e;
-                    y.current && (N(t), m(r), n());
+                Promise.all([(0, d.f5)(e, !0), (0, d.WA)(e, !0)]).then((t) => {
+                    let [e, l] = t;
+                    O.current && (j(e), k(l), n());
                 });
         }, []),
-        x = c.useCallback(() => {
-            if ((0, l.k)(n, HTMLInputElement) || (0, l.k)(n, HTMLTextAreaElement)) {
-                let { selectionStart: e, selectionEnd: t, value: r } = n;
-                (n.value = ''), (n.value = r), 'email' !== n.type && ((n.selectionStart = e), (n.selectionEnd = t));
+        x = r.useCallback(() => {
+            if ((0, c.k)(n, HTMLInputElement) || (0, c.k)(n, HTMLTextAreaElement)) {
+                let { selectionStart: t, selectionEnd: e, value: l } = n;
+                (n.value = ''), (n.value = l), 'email' !== n.type && ((n.selectionStart = t), (n.selectionEnd = e));
             }
         }, [n]);
-    return (c.useEffect(() => {
-        let e = (0, d.RD)(S);
+    return (r.useEffect(() => {
+        let t = (0, d.RD)(m);
         return (
-            (y.current = !0),
+            (O.current = !0),
             () => {
-                (y.current = !1), e();
+                (O.current = !1), t();
             }
         );
-    }, [S]),
-    c.useEffect(() => {
-        S();
-    }, [t, E, S]),
+    }, [m]),
+    r.useEffect(() => {
+        m();
+    }, [e, g, m]),
     (0, d.Gb)())
         ? [
-              g.map((e, t) =>
-                  (0, r.jsx)(
+              S.map((t, e) =>
+                  (0, l.jsx)(
                       s.sNh,
                       {
-                          id: 'correction-'.concat(t),
-                          label: e,
+                          id: 'correction-'.concat(e),
+                          label: t,
                           action: () => {
-                              (0, d.Rs)(e), n.focus();
+                              (0, d.Rs)(t), n.focus();
                           }
                       },
-                      'correction-'.concat(t)
+                      'correction-'.concat(e)
                   )
               ),
-              (0, r.jsxs)(r.Fragment, {
+              (0, l.jsxs)(l.Fragment, {
                   children: [
-                      k
-                          ? (0, r.jsx)(s.sNh, {
+                      y
+                          ? (0, l.jsx)(s.sNh, {
                                 id: 'add-to-dictionary',
-                                label: b.NW.string(b.t.HJmG1N),
+                                label: p.NW.string(p.t.HJmG1N),
                                 action: () => {
-                                    (0, o.D0)(t), x();
+                                    (0, a.D0)(e), x();
                                 }
                             })
                           : null,
-                      O &&
-                          (0, r.jsx)(s.sNh, {
+                      N &&
+                          (0, l.jsx)(s.sNh, {
                               id: 'remove-from-dictionary',
-                              label: b.NW.string(b.t.xXqIX1),
+                              label: p.NW.string(p.t.xXqIX1),
                               action: () => {
-                                  (0, o.lE)(t), x();
+                                  (0, a.lE)(e), x();
                               }
                           }),
-                      (0, r.jsx)(s.S89, {
+                      (0, l.jsx)(s.S89, {
                           id: 'spellcheck',
-                          label: b.NW.string(b.t.TKkotb),
-                          checked: E,
+                          label: p.NW.string(p.t.TKkotb),
+                          checked: g,
                           action: () => {
-                              (0, o.kY)(), x();
+                              (0, a.kY)(), x();
                           }
                       }),
-                      E
-                          ? (0, r.jsx)(s.sNh, {
+                      g
+                          ? (0, l.jsx)(s.sNh, {
                                 id: 'languages',
-                                label: b.NW.string(b.t.OlOHDA),
-                                action: () => window.open(u.Z.getArticleURL(p.BhN.SPELLCHECK))
+                                label: p.NW.string(p.t.OlOHDA),
+                                action: () => window.open(u.Z.getArticleURL(b.BhN.SPELLCHECK))
                             })
                           : null
                   ]

@@ -4,7 +4,7 @@ var r = n(442837),
     l = n(905128),
     o = n(535396);
 function s(e) {
-    return (0, r.e7)([l.Z], () => {
+    return (0, r.Wu)([l.Z], () => {
         let t = l.Z.getStateForGuild(e);
         return null == t
             ? []

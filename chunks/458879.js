@@ -1,13 +1,13 @@
-n.d(t, { Z: () => a });
-var s = n(990547),
-    i = n(881052),
-    r = n(573261),
+n.d(t, { Z: () => r });
+var i = n(990547),
+    s = n(881052),
+    a = n(573261),
     l = n(981631);
-let a = {
-    createGuildFromTemplate: async function (e, t, n, a, o) {
+let r = {
+    createGuildFromTemplate: async function (e, t, n, r, d) {
         try {
             return (
-                await r.Z.post({
+                await a.Z.post({
                     url: l.ANM.GUILDS,
                     body: {
                         name: e,
@@ -16,20 +16,20 @@ let a = {
                         system_channel_id: n.system_channel_id,
                         roles: n.roles,
                         guild_template_code: n.code,
-                        staff_only: !!o || void 0
+                        staff_only: !!d || void 0
                     },
                     trackedActionData: {
-                        event: s.NetworkActionNames.GUILD_CREATE,
+                        event: i.NetworkActionNames.GUILD_CREATE,
                         properties: {
                             template_name: n.id,
-                            is_community_intent: a
+                            is_community_intent: r
                         }
                     },
                     rejectWithError: !1
                 })
             ).body;
         } catch (e) {
-            throw new i.Hx(e);
+            throw new s.Hx(e);
         }
     }
 };

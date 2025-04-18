@@ -1,11 +1,11 @@
 n.d(t, { Z: () => i });
 var r = n(200651);
 n(192379);
-var o = n(906732);
+var l = n(906732);
 function i(e, t) {
     return function (n) {
-        let { analyticsLocations: i } = (0, o.ZP)(t);
-        return (0, r.jsx)(o.Gt, {
+        let { analyticsLocations: i } = (0, l.ZP)(t);
+        return (0, r.jsx)(l.Gt, {
             value: i,
             children: (0, r.jsx)(
                 e,
