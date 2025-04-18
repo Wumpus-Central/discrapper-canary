@@ -1026,7 +1026,8 @@ let ea = d.ZP.connectStores([D.default], () => ({
     disableAppCollectionsCache: D.default.disableAppCollectionsCache,
     preventPopoutClose: D.default.preventPopoutClose
 }))((e) => {
-    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: i, isLoggingOverlayEvents: s, isLoggingAnalyticsEvents: a, isAxeEnabled: l, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: m, onlyShowPreviewAppCollections: p, disableAppCollectionsCache: h, preventPopoutClose: b } = e;
+    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: i, isLoggingOverlayEvents: s, isLoggingAnalyticsEvents: a, isAxeEnabled: l, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: m, onlyShowPreviewAppCollections: p, disableAppCollectionsCache: h, preventPopoutClose: b } = e,
+        _ = B.zY.useSetting();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(R.F, {
@@ -1078,6 +1079,15 @@ let ea = d.ZP.connectStores([D.default], () => ({
                                 note: 'Logs all analytics events to the developer console',
                                 onChange: (e) => (0, f.y)({ logAnalyticsEvents: e }),
                                 children: 'Enable Logging of Analytics Events'
+                            })
+                        }),
+                        (0, r.jsx)(R.F, {
+                            setting: U.s6.DEVELOPER_OPTIONS_ALWAYS_DELIVER,
+                            children: (0, r.jsx)(g.j7V, {
+                                value: _,
+                                note: 'Make user targetable for all active ads',
+                                onChange: (e) => B.zY.updateSetting(e),
+                                children: 'Ads auto-targeting'
                             })
                         }),
                         (0, r.jsx)(R.F, {

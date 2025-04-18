@@ -115,7 +115,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
     },
     e1 = eZ.Z,
     e2 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: v, impressionSource: A, numOfPendingFamilyRequests: R, isOverlaySupported: U, isClipsBetaTagShowing: V = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e3, isStaff: e6, isInappropriateConversationWarningEnabled: e8, isInapproprateConversationsDefaultOn: e4, paymentsBlocked: e9, isEligibleForQuests: e5, showGiftNitro: e7, isStricterMessageRequestsEnabled: te, hasLibraryApplication: tt, hasTOTPEnabled: tn, developerMode: tr, isAdultUser: ti, hasSecureFramesVerifiedUserIds: ts, hypeSquadRemoved: ta, hasIgnoredUsers: tl, hasBlockedUsers: to, useRefreshedVoiceAndVideo: tc, isEligibleForSensitiveContentDefaults: td } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: v, impressionSource: A, numOfPendingFamilyRequests: R, isOverlaySupported: U, isClipsBetaTagShowing: V = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e3, isStaff: e6, isInappropriateConversationWarningEnabled: e8, isInapproprateConversationsDefaultOn: e9, paymentsBlocked: e4, isEligibleForQuests: e5, showGiftNitro: e7, isStricterMessageRequestsEnabled: te, hasLibraryApplication: tt, hasTOTPEnabled: tn, developerMode: tr, isAdultUser: ti, hasSecureFramesVerifiedUserIds: ts, hypeSquadRemoved: ta, hasIgnoredUsers: tl, hasBlockedUsers: to, useRefreshedVoiceAndVideo: tc, isEligibleForSensitiveContentDefaults: td } = e;
         return Object.freeze({
             [eG.s6.SEARCH_NO_RESULTS]: {
                 section: g.ID.CUSTOM,
@@ -460,7 +460,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eH.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eK.NW.string(eK.t.qFsx5u)],
                 parent: eG.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => e8 && !ti && !e4
+                predicate: () => e8 && !ti && !e9
             },
             [eG.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2]: {
                 section: eH.oAB.DATA_AND_PRIVACY,
@@ -605,13 +605,13 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eH.oAB.INVENTORY,
                 searchableTitles: [eK.NW.string(eK.t.Ve9Ge3)],
                 parent: eG.s6.GIFT_INVENTORY,
-                predicate: () => !e9 && e7
+                predicate: () => !e4 && e7
             },
             [eG.s6.GIFT_CODE_REDEMPTION]: {
                 section: eH.oAB.INVENTORY,
                 searchableTitles: [eK.NW.string(eK.t['il+VCg'])],
                 parent: eG.s6.GIFT_INVENTORY,
-                predicate: () => !e9
+                predicate: () => !e4
             },
             [eG.s6.GIFT_INVENTORY_QUESTS]: {
                 section: eH.oAB.INVENTORY,
@@ -623,13 +623,13 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eH.oAB.INVENTORY,
                 searchableTitles: [eK.NW.string(eK.t['9KeUbW'])],
                 parent: eG.s6.GIFT_INVENTORY,
-                predicate: () => !e9
+                predicate: () => !e4
             },
             [eG.s6.GIFT_BLOCKED_PAYMENTS]: {
                 section: eH.oAB.INVENTORY,
                 searchableTitles: [eK.NW.string(eK.t.vwMEHR)],
                 parent: eG.s6.GIFT_INVENTORY,
-                predicate: () => e9
+                predicate: () => e4
             },
             [eG.s6.BILLING]: {
                 section: eH.oAB.BILLING,
@@ -1602,6 +1602,12 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: ['Analytics Events Logging'],
                 parent: eG.s6.DEVELOPER_OPTIONS_FLAGS,
                 predicate: () => F.Z.isDeveloper
+            },
+            [eG.s6.DEVELOPER_OPTIONS_ALWAYS_DELIVER]: {
+                section: eH.oAB.DEVELOPER_OPTIONS,
+                searchableTitles: ['Always deliver ads'],
+                parent: eG.s6.DEVELOPER_OPTIONS_FLAGS,
+                predicate: () => e6 && F.Z.isDeveloper
             },
             [eG.s6.DEVELOPER_OPTIONS_SOURCE_MAPS]: {
                 section: eH.oAB.DEVELOPER_OPTIONS,
