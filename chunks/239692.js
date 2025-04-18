@@ -12,7 +12,6 @@ e.exports = {
     customStatus: 'customStatus__37e49',
     strikethrough: 'strikethrough__37e49',
     emoji: 'emoji__37e49',
-    accountProfilePopoutWrapper: 'accountProfilePopoutWrapper__37e49',
     micButtonParent: 'micButtonParent__37e49',
     buttonChevron: 'buttonChevron__37e49',
     micButtonWithMenu: 'micButtonWithMenu__37e49',
