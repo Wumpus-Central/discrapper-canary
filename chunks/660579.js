@@ -66,10 +66,14 @@ let u = i.forwardRef(function (e, t) {
         className: o,
         onMouseEnter: p,
         onMouseLeave: h,
-        onFocus: p,
+        onFocus: (e) => {
+            var t;
+            (null == (t = d.current) ? void 0 : t.contains(e.relatedTarget)) && p();
+        },
         onBlur: (e) => {
             var t;
-            (null == (t = d.current) ? void 0 : t.contains(e.relatedTarget)) || h();
+            let n = e.relatedTarget;
+            (null != n && (null == (t = d.current) ? void 0 : t.contains(n))) || h();
         },
         ref: d,
         children: [
