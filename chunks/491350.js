@@ -1,9 +1,16 @@
 e.exports = {
-    emptyContainer: 'emptyContainer__4a7f0',
-    emptyInner: 'emptyInner__4a7f0',
-    image: 'image__4a7f0',
-    header: 'header__4a7f0',
-    upsellButton: 'upsellButton__4a7f0',
-    upsellContainer: 'upsellContainer__4a7f0',
-    upsellText: 'upsellText__4a7f0'
+    container: 'container__9a73f',
+    headerContainer: 'headerContainer__9a73f',
+    searchContainer: 'searchContainer__9a73f',
+    searchWarning: 'searchWarning__9a73f',
+    addButton: 'addButton__9a73f',
+    memberRow: 'memberRow__9a73f',
+    emptyRowContainer: 'emptyRowContainer__9a73f',
+    emptyRowText: 'emptyRowText__9a73f',
+    memberDetails: 'memberDetails__9a73f',
+    list: 'list__9a73f',
+    removeButtonContainer: 'removeButtonContainer__9a73f',
+    removeButton: 'removeButton__9a73f',
+    removeButtonDisabled: 'removeButtonDisabled__9a73f',
+    removeTip: 'removeTip__9a73f'
 };

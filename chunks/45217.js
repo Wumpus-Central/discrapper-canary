@@ -1,1 +1,4 @@
-e.exports = '/assets/ef95e909088f721c.svg';
+e.exports = {
+    giftButton: 'giftButton_f3c9fa',
+    giftButtonInner: 'giftButtonInner_f3c9fa'
+};

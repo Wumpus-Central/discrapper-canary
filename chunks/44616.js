@@ -1,8 +1,19 @@
-e.exports = {
-    container: 'container_b9abc5',
-    containerInner: 'containerInner_b9abc5',
-    content: 'content_b9abc5',
-    backButton: 'backButton_b9abc5',
-    backButtonContainer: 'backButtonContainer_b9abc5',
-    headerArt: 'headerArt_b9abc5'
+var n = r(581079);
+t.exports = function (t, e) {
+    var r = [];
+    return (
+        t.findEntityRanges(
+            function (t) {
+                return t.getEntity() === e;
+            },
+            function (t, e) {
+                r.push({
+                    start: t,
+                    end: e
+                });
+            }
+        ),
+        r.length || n(!1),
+        r
+    );
 };
