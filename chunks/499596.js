@@ -1,17 +1,17 @@
 n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
-var l = n(120356),
-    i = n.n(l),
+var i = n(120356),
+    l = n.n(i),
     s = n(481060),
     a = n(884338),
     o = n(933557),
     c = n(471445),
     d = n(5192),
     u = n(388032),
-    f = n(304118);
+    f = n(209673);
 function m(e) {
-    let { channel: t, users: n, selected: l = !1 } = e,
+    let { channel: t, users: n, selected: i = !1 } = e,
         m = (0, o.ZP)(t),
         h = null;
     null != n &&
@@ -23,11 +23,11 @@ function m(e) {
             renderUser: (e) => {
                 if (null == e) return null;
                 let n = d.ZP.getName(t.guild_id, t.id, e),
-                    l = e.getAvatarURL(t.guild_id, 24);
+                    i = e.getAvatarURL(t.guild_id, 24);
                 return (0, r.jsx)(s.DY3, {
                     text: n,
                     children: (0, r.jsx)('img', {
-                        src: null != l ? l : void 0,
+                        src: null != i ? i : void 0,
                         'aria-label': e.username,
                         alt: '',
                         className: f.avatar
@@ -35,7 +35,7 @@ function m(e) {
                 });
             },
             renderMoreUsers: (e) => {
-                let l = (function (e, t) {
+                let i = (function (e, t) {
                     let n = t.id,
                         r = t.guild_id;
                     return e.length <= 1
@@ -59,7 +59,7 @@ function m(e) {
                 })(n.slice(4), t);
                 return (0, r.jsx)('div', {
                     children: (0, r.jsx)(s.DY3, {
-                        text: l,
+                        text: i,
                         children: (0, r.jsx)('div', {
                             className: f.userListOverflow,
                             children: e
@@ -72,7 +72,7 @@ function m(e) {
         }));
     let x = (0, c.KS)(t);
     return (0, r.jsxs)('div', {
-        className: i()(f.channelInfo, { [f.selected]: l }),
+        className: l()(f.channelInfo, { [f.selected]: i }),
         children: [
             (0, r.jsx)(x, { className: f.channelIcon }),
             (0, r.jsx)('div', {

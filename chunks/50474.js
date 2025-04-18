@@ -14,7 +14,7 @@ var s = r(200651),
     x = r(995390),
     h = r(665578),
     y = r(388032),
-    f = r(566670);
+    f = r(760502);
 function j(e) {
     let { applicationIcon: i, applicationId: r, applicationName: o, command: u, guildId: j, onClose: E, transitionState: g } = e,
         [v, N] = n.useState(null),

@@ -21,13 +21,13 @@ var i = n(200651),
     b = n(621600),
     C = n(423589),
     O = n(221259),
-    E = n(113449),
+    E = n(90699),
     Z = n(686660),
     _ = n(958648),
     T = n(569658),
     L = n(981631),
     W = n(388032),
-    y = n(955549);
+    y = n(60330);
 let M = s.forwardRef(function (e, t) {
     let { guildId: n, requestScrollToBottom: s } = e,
         l = (0, a.Wu)([N.Z, j.ZP], () =>

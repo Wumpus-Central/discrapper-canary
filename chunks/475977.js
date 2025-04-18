@@ -10,7 +10,7 @@ var r = n(200651),
     u = n(981631),
     m = n(474936),
     g = n(388032),
-    p = n(811344);
+    p = n(421236);
 let h = () => {
     let { analyticsLocations: e } = (0, l.ZP)(a.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
         t = i.useRef(null),

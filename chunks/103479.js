@@ -10,7 +10,7 @@ var i = n(763472),
     s = n(591759),
     l = n(475413),
     c = n(388032),
-    u = n(227832);
+    u = n(935693);
 async function d(e) {
     let { activity: t, user: n, index: r } = e;
     try {

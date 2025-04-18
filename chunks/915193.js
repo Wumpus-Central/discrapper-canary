@@ -9,7 +9,7 @@ var i = n(442837),
     d = n(700582),
     c = n(594174),
     u = n(388032),
-    g = n(837014);
+    g = n(991380);
 function f(e) {
     let { color: t, className: n } = e;
     return (0, r.jsx)('svg', {

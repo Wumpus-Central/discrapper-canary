@@ -2,8 +2,8 @@ n.d(t, { Z: () => y });
 var r = n(200651),
     l = n(192379),
     a = n(120356),
-    o = n.n(a),
-    i = n(685816),
+    i = n.n(a),
+    o = n(685816),
     s = n(481060),
     c = n(381585),
     u = n(139668),
@@ -18,7 +18,7 @@ var r = n(200651),
     C = n(384067),
     v = n(215023),
     x = n(388032),
-    O = n(806734);
+    O = n(379890);
 let j = (e) => {
         var t;
         let { handleTransition: n, numVisibleItems: a, isFetchingCategories: s, tab: u, isFullScreen: v } = e,
@@ -37,8 +37,8 @@ let j = (e) => {
         }, []);
         let {
                 isFetchingShopHome: k,
-                fetchShopHomeError: E,
-                shopBlocks: P,
+                fetchShopHomeError: P,
+                shopBlocks: E,
                 refreshShopHome: w
             } = (0, d.E)(u, {
                 noCache: x,
@@ -50,9 +50,9 @@ let j = (e) => {
             }, [w]);
         if (
             (l.useEffect(() => {
-                null != E ||
+                null != P ||
                     k ||
-                    0 === P.length ||
+                    0 === E.length ||
                     (0, b.n)({
                         sessionId: S,
                         checkpoint: b.a.SHOP_RENDERED,
@@ -61,15 +61,15 @@ let j = (e) => {
                         unpublishedCategoriesShown: j,
                         cacheDisabled: x
                     });
-            }, [E, k, P.length, j, x, S, u, v]),
-            null != E)
+            }, [P, k, E.length, j, x, S, u, v]),
+            null != P)
         )
             return (0, r.jsx)(p.Z, {
                 onRetry: B,
                 errorOrigin: p.i.SHOP_PAGE,
-                errorMessage: E.message
+                errorMessage: P.message
             });
-        if (k || 0 === P.length)
+        if (k || 0 === E.length)
             return (0, r.jsxs)('div', {
                 className: O.loadingContainer,
                 children: [
@@ -96,7 +96,7 @@ let j = (e) => {
             if (null == e) return null;
             let l = null;
             switch (e.type) {
-                case i.z.HERO:
+                case o.z.HERO:
                     l = (0, r.jsx)(
                         m.Z,
                         {
@@ -108,7 +108,7 @@ let j = (e) => {
                         t
                     );
                     break;
-                case i.z.FEATURED:
+                case o.z.FEATURED:
                     l = (0, r.jsx)(
                         g.Z,
                         {
@@ -119,7 +119,7 @@ let j = (e) => {
                         t
                     );
                     break;
-                case i.z.FEED:
+                case o.z.FEED:
                     l = (0, r.jsx)(
                         h.Z,
                         {
@@ -132,7 +132,7 @@ let j = (e) => {
                         t
                     );
                     break;
-                case i.z.WIDE_BANNER:
+                case o.z.WIDE_BANNER:
                     l = (0, r.jsx)(
                         C.Z,
                         {
@@ -143,7 +143,7 @@ let j = (e) => {
                         t
                     );
                     break;
-                case i.z.SHELF:
+                case o.z.SHELF:
                     l = (0, r.jsx)(
                         _.Z,
                         {
@@ -160,26 +160,26 @@ let j = (e) => {
             return (0, r.jsx)(
                 'div',
                 {
-                    className: o()(O.blockContainer, { [O.topBlockContainer]: 0 === t }),
+                    className: i()(O.blockContainer, { [O.topBlockContainer]: 0 === t }),
                     children: l
                 },
                 t
             );
         };
-        return (0, r.jsx)(r.Fragment, { children: P.map((e, t) => I(e, t)) });
+        return (0, r.jsx)(r.Fragment, { children: E.map((e, t) => I(e, t)) });
     },
     y = (e) => {
-        let { isFullScreen: t, handleTransition: n, numVisibleItems: l, tab: a, isFetchingCategories: i } = e,
+        let { isFullScreen: t, handleTransition: n, numVisibleItems: l, tab: a, isFetchingCategories: o } = e,
             c = (0, u.R)('CollectiblesFeedShop');
         return (0, r.jsx)('div', {
-            className: o()(O.shop, { [O.shopFullscreen]: t }),
+            className: i()(O.shop, { [O.shopFullscreen]: t }),
             children: (0, r.jsxs)('div', {
-                className: o()(O.content, O.mainContent),
+                className: i()(O.content, O.mainContent),
                 children: [
                     (0, r.jsx)(j, {
                         handleTransition: n,
                         numVisibleItems: l,
-                        isFetchingCategories: i,
+                        isFetchingCategories: o,
                         tab: a,
                         isFullScreen: t
                     }),

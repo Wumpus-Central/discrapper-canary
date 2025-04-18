@@ -3,7 +3,7 @@ var r = n(200651);
 n(192379);
 var i = n(27457),
     l = n(131951),
-    o = n(938243);
+    o = n(61000);
 function a(e) {
     var { aspectRatio: t, blocked: n, ignored: a, channel: s, className: c, focused: u, children: d, inCall: p, inPopout: h, noBorder: f, onClick: m, onContextMenu: g, onDoubleClick: b, onVideoResize: _, paused: y, pulseSpeakingIndicator: C, participant: x, width: v } = e,
         j = (function (e, t) {

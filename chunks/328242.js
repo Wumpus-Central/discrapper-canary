@@ -1,16 +1,16 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(200651);
 n(192379);
-var l = n(120356),
-    i = n.n(l),
+var i = n(120356),
+    l = n.n(i),
     s = n(268146),
     a = n(481060),
     o = n(63063),
     c = n(668519),
     d = n(615161),
-    u = n(843874),
+    u = n(519229),
     f = n(388032),
-    m = n(814799);
+    m = n(483205);
 function h(e) {
     let { source: t } = e;
     return t.id.startsWith(s.vA.SCREEN)
@@ -26,11 +26,11 @@ function h(e) {
           : (0, r.jsx)(a.Odl, { size: 'xs' });
 }
 function x(e) {
-    let { source: t, selected: n, twoClickVariant: l, onClick: s } = e,
+    let { source: t, selected: n, twoClickVariant: i, onClick: s } = e,
         { url: o, name: c } = t;
     return (0, r.jsxs)(a.P3F, {
         onClick: () => s(t),
-        className: i()(m.source, { [m.selectedSource]: n }),
+        className: l()(m.source, { [m.selectedSource]: n }),
         children: [
             (0, r.jsx)('div', {
                 className: m.sourcePreviewContainer,
@@ -42,7 +42,7 @@ function x(e) {
                             className: m.sourcePreviewImage,
                             alt: ''
                         }),
-                        !l &&
+                        !i &&
                             (0, r.jsx)('div', {
                                 className: m.sourceOverlay,
                                 children: (0, r.jsx)('div', {
@@ -74,17 +74,17 @@ function x(e) {
 function p(e) {
     var t;
     let { onClick: n } = e,
-        { twoClickVariant: l } = (0, c.a)({
+        { twoClickVariant: i } = (0, c.a)({
             autoTrackExposure: !1,
             location: 'sourcegrid'
         }),
-        [{ windowSources: i, deviceSources: o, screenSources: u, sourceType: f, fetchingSources: h, selectedSource: p }] = (0, d.E_)();
+        [{ windowSources: l, deviceSources: o, screenSources: u, sourceType: f, fetchingSources: h, selectedSource: p }] = (0, d.E_)();
     return h
         ? (0, r.jsx)('div', {
               className: m.loading,
               children: (0, r.jsx)(a.$jN, {})
           })
-        : ((t = f === s.vA.WINDOW ? i : f === s.vA.SCREEN ? u : o),
+        : ((t = f === s.vA.WINDOW ? l : f === s.vA.SCREEN ? u : o),
           f === s.vA.CAMERA && 0 === t.length
               ? (0, r.jsx)(g, {})
               : (0, r.jsx)('div', {
@@ -96,7 +96,7 @@ function p(e) {
                                 onClick: n,
                                 source: e,
                                 selected: (null == p ? void 0 : p.id) === e.id,
-                                twoClickVariant: l
+                                twoClickVariant: i
                             },
                             e.id
                         )

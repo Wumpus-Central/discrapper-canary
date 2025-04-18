@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(200651),
     l = n(192379),
     a = n(481060),
-    o = n(727637),
-    i = n(906732),
+    i = n(727637),
+    o = n(906732),
     s = n(333867),
     c = n(677232),
     u = n(884697),
@@ -12,7 +12,7 @@ var r = n(200651),
     p = n(474936),
     f = n(231338),
     g = n(388032),
-    h = n(846165);
+    h = n(45217);
 let m = {
         dark: [
             {
@@ -77,9 +77,9 @@ let m = {
     },
     _ = (e) => {
         let { product: t, selectedVariantIndex: n, returnRef: _, onSuccess: C, tooltipDelay: v, isGiftEasterEggEnabled: x, color: O = a.Ttl.BRAND } = e,
-            { analyticsLocations: j } = (0, i.ZP)(),
+            { analyticsLocations: j } = (0, o.ZP)(),
             y = l.useRef(null),
-            S = (0, o.Z)(y),
+            S = (0, i.Z)(y),
             k = (0, d.hv)('CollectiblesShopGiftButton');
         return (0, u.x6)(t)
             ? null
@@ -87,7 +87,7 @@ let m = {
                   text: g.NW.string(g.t['JCFN//']),
                   delay: v,
                   children: (e) => {
-                      var l, o;
+                      var l, i;
                       return (0, r.jsx)(
                           a.zxk,
                           ((l = (function (e) {
@@ -115,7 +115,7 @@ let m = {
                               }
                               return e;
                           })({}, e)),
-                          (o = o =
+                          (i = i =
                               {
                                   buttonRef: y,
                                   className: h.giftButton,
@@ -157,7 +157,7 @@ let m = {
                                         })
                               }),
                           Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                              ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                               : (function (e, t) {
                                     var n = Object.keys(e);
                                     if (Object.getOwnPropertySymbols) {
@@ -165,8 +165,8 @@ let m = {
                                         n.push.apply(n, r);
                                     }
                                     return n;
-                                })(Object(o)).forEach(function (e) {
-                                    Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                                })(Object(i)).forEach(function (e) {
+                                    Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
                                 }),
                           l)
                       );

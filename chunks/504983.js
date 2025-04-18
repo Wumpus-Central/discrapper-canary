@@ -6,7 +6,7 @@ var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
-    s = n(933282),
+    s = n(92242),
     l = (function (e) {
         return (e.PREMIUM = 'premium'), (e.LIMITED = 'limited'), e;
     })({});

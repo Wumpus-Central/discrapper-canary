@@ -2,8 +2,8 @@ n.d(t, { I: () => k }), n(539854);
 var r = n(200651),
     l = n(192379),
     a = n(120356),
-    o = n.n(a),
-    i = n(636977),
+    i = n.n(a),
+    o = n(636977),
     s = n(442837),
     c = n(481060),
     u = n(37234),
@@ -20,19 +20,19 @@ var r = n(200651),
     x = n(215023),
     O = n(981631),
     j = n(388032),
-    y = n(774457);
+    y = n(780432);
 function S(e) {
     let { tab: t, displayText: n, selected: l, handleTransition: a } = e;
     return (0, r.jsx)(p.Z.Title, {
         onClick: () => a(t),
         wrapperClassName: y.tabWrapper,
-        className: o()(y.tab, { [y.selected]: l }),
+        className: i()(y.tab, { [y.selected]: l }),
         children: n
     });
 }
 function k(e) {
-    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: k, handleTransition: E } = e,
-        P = (0, b.ZP)(),
+    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: k, handleTransition: P } = e,
+        E = (0, b.ZP)(),
         w = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
         B = (null == w ? void 0 : w.isStaff()) || (null == w ? void 0 : w.isStaffPersonal()) || !1,
         { enabled: I } = (0, h.W)({ location: 'collectibles_shop_header_bar' }),
@@ -60,13 +60,13 @@ function k(e) {
                     sectionType: O.jXE.ORBS_BALANCE_MENU,
                     ctaObject: O.qAy.CTA_TO_QUEST_HOME
                 }),
-                (0, f.navigateToQuestHome)({ fromContent: i.j.ORBS_BALANCE_MENU });
+                (0, f.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
         }, [N, t, L]);
     return (0, r.jsx)(c.f6W, {
-        theme: P,
+        theme: E,
         children: (e) =>
             (0, r.jsxs)(p.Z, {
-                className: o()(e, y.headerBar, { [y.fullscreenHeaderBar]: t }),
+                className: i()(e, y.headerBar, { [y.fullscreenHeaderBar]: t }),
                 innerClassname: I ? y.headerBarInner : void 0,
                 toolbar: t || !B ? null : (0, r.jsx)(l.Fragment, {}),
                 children: [
@@ -82,7 +82,7 @@ function k(e) {
                                     tab: t,
                                     displayText: n,
                                     selected: k === t,
-                                    handleTransition: E
+                                    handleTransition: P
                                 },
                                 t
                             );

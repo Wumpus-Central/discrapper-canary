@@ -8,7 +8,7 @@ var r = n(200651),
     c = n(981631),
     u = n(486324),
     f = n(388032),
-    d = n(826756);
+    d = n(282600);
 function p(e) {
     var { uploadType: t, className: n } = e,
         l = (function (e, t) {

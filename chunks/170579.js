@@ -18,7 +18,7 @@ var i = n(120356),
     E = n(108989),
     b = n(474936),
     y = n(388032),
-    v = n(790816);
+    v = n(860867);
 function O(e, t) {
     let n = p.ZP.getDefaultPrice(e),
         { intervalType: r } = p.ZP.getInterval(e),

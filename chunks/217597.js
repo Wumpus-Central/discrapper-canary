@@ -2,7 +2,7 @@ n.d(t, { Z: () => l });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(380544);
+    s = n(717244);
 function l(e) {
     let { label: t, sublabel: n, value: l, additionalContent: a, tooltip: o } = e;
     return (0, r.jsxs)('div', {

@@ -6,7 +6,7 @@ var i = s(200651),
     r = s(481060),
     o = s(313201),
     c = s(388032),
-    d = s(807201);
+    d = s(472922);
 let u = (e) => {
         let { index: t, title: s, selected: n } = e;
         return (0, i.jsxs)('div', {

@@ -11,7 +11,7 @@ var i = n(481060),
     s = n(502762),
     l = n(292814),
     c = n(388032),
-    u = n(188394);
+    u = n(848481);
 function d(e) {
     return (0, r.jsx)(o.Z, { application: e }, e.id);
 }

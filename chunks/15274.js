@@ -64,7 +64,7 @@ function d(e, t) {
 function f(e) {
     let { eventId: t, parentGuildId: o, recurrenceId: a } = e;
     (0, i.ZD)(async () => {
-        let { default: e } = await Promise.all([n.e('18543'), n.e('15483'), n.e('22347'), n.e('70657')]).then(n.bind(n, 697849));
+        let { default: e } = await Promise.all([n.e('18543'), n.e('15483'), n.e('22347'), n.e('5821')]).then(n.bind(n, 697849));
         return (n) =>
             (0, r.jsx)(
                 e,

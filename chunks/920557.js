@@ -16,8 +16,8 @@ var r = n(200651),
     _ = n(139256),
     b = n(294608),
     x = n(388032),
-    y = n(709893);
-function v(e) {
+    y = n(169082);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,21 +42,21 @@ function v(e) {
     }
     return e;
 }
-function E(e) {
+function v(e) {
     let { percentage: t, label: n, canShowVoterDetails: a, answerId: l } = e,
         s = (0, p.Dt)(),
         { channelId: c, messageId: u } = (0, b.pE)(),
         [g, _] = i.useState(''),
-        [x, E] = i.useState(!1),
+        [x, v] = i.useState(!1),
         O = '' !== g && x,
         N = i.useCallback(() => {
             _((0, h.e1)(u, c, l));
         }, [u, c, l]),
         j = i.useCallback(() => {
-            N(), E(!0);
+            N(), v(!0);
         }, [N]),
         C = i.useCallback(() => {
-            E(!1);
+            v(!1);
         }, []),
         S = i.useCallback(() => {
             (0, f.n)({
@@ -100,7 +100,7 @@ function E(e) {
                                   var t, n;
                                   return (0, r.jsx)(
                                       d.zxk,
-                                      ((t = v({}, e)),
+                                      ((t = E({}, e)),
                                       (n = n =
                                           {
                                               onMouseEnter: j,
@@ -233,7 +233,7 @@ function j(e) {
             }),
             t.didSelfVote && (0, r.jsx)(o.T, { children: x.NW.string(x.t['8DAM+/']) }),
             a &&
-                (0, r.jsx)(E, {
+                (0, r.jsx)(v, {
                     percentage: t.votesPercentage,
                     label: t.votes,
                     canShowVoterDetails: s,
@@ -273,7 +273,7 @@ function C(e) {
         })(e, ['isExpired', 'answersInteraction', 'canShowVoteCounts', 'canTapAnswers']);
     return (0, r.jsx)(
         _.$e,
-        v(
+        E(
             {
                 className: y.answersContainer,
                 answerClassName: y.answer,

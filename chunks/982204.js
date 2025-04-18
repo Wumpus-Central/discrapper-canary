@@ -12,7 +12,7 @@ var i = n(512722),
     c = n(937615),
     u = n(981631),
     d = n(388032),
-    f = n(718578);
+    f = n(808241);
 function _(e) {
     let { sku: t, value: n } = e,
         i = (0, a.ed)('SKUInvoicePreview');

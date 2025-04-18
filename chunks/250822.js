@@ -1,9 +1,9 @@
 t.d(n, { Z: () => s });
-var o = t(192379),
-    r = t(442837),
+var r = t(192379),
+    o = t(442837),
     i = t(621853);
 let l = [];
 function s(e) {
-    let n = (0, r.e7)([i.Z], () => i.Z.getUserProfile(e));
-    return (0, o.useMemo)(() => ((null == n ? void 0 : n.applicationRoleConnections) == null ? l : n.applicationRoleConnections), [null == n ? void 0 : n.applicationRoleConnections]);
+    let n = (0, o.e7)([i.Z], () => i.Z.getUserProfile(e));
+    return (0, r.useMemo)(() => ((null == n ? void 0 : n.applicationRoleConnections) == null ? l : n.applicationRoleConnections), [null == n ? void 0 : n.applicationRoleConnections]);
 }

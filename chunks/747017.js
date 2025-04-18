@@ -16,7 +16,7 @@ var r = n(200651),
     g = n(122943),
     E = n(556638),
     b = n(981631),
-    y = n(843280);
+    y = n(405538);
 function v(e) {
     let { user: t, activities: n, applicationStream: o, voiceChannel: v, textClassName: O, iconClassName: I, textSize: S = 'xs', animate: T = !0, hasQuest: N = !1, hideEmoji: A = !1, hideTooltip: C = !1 } = e;
     (0, u.Z)(null == t ? void 0 : t.id);

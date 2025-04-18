@@ -21,13 +21,13 @@ var r = n(200651),
     b = n(585483),
     x = n(358085),
     y = n(143316),
-    v = n(240126),
-    E = n(791914),
+    E = n(240126),
+    v = n(791914),
     O = n(147522),
     N = n(809780),
     j = n(981631),
     C = n(388032),
-    S = n(128406);
+    S = n(679678);
 function I(e) {
     var t, n, a, o, I, P, A;
     let { setTab: w, onJump: Z, showTutorial: R, setSeenTutorial: k, closePopout: D, badgeState: L } = e,
@@ -96,13 +96,13 @@ function I(e) {
         return (0, r.jsxs)('div', {
             className: l()(S.container, { [S.widerInbox]: z }),
             children: [
-                (0, r.jsx)(E.Z, {
+                (0, r.jsx)(v.Z, {
                     tab: d.X.UNREADS,
                     setTab: w,
                     badgeState: L,
                     closePopout: D
                 }),
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(E.Z, {
                     Icon: p.xx7,
                     header: C.NW.string(C.t['6XMM+P']),
                     tip: (null == (A = s().os) ? void 0 : A.family) === 'OS X' ? C.NW.string(C.t.w9uDOT) : C.NW.string(C.t.BiUJCw)
@@ -114,7 +114,7 @@ function I(e) {
         className: l()(S.container, 'group-spacing-'.concat(V), { [S.widerInbox]: z }),
         'aria-label': C.NW.string(C.t.sRUdBw),
         children: [
-            (0, r.jsx)(E.Z, {
+            (0, r.jsx)(v.Z, {
                 tab: d.X.UNREADS,
                 setTab: w,
                 badgeState: L,
@@ -251,13 +251,13 @@ function P(e) {
     return (0, r.jsxs)('div', {
         className: S.container,
         children: [
-            (0, r.jsx)(E.Z, {
+            (0, r.jsx)(v.Z, {
                 tab: d.X.UNREADS,
                 setTab: t,
                 badgeState: n,
                 closePopout: i
             }),
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(E.Z, {
                 Icon: p.xx7,
                 disableStars: !0,
                 header: C.NW.string(C.t['KG/ynZ']),

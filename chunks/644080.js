@@ -17,7 +17,7 @@ var t = l(200651),
     b = l(768581),
     j = l(981631),
     C = l(388032),
-    _ = l(18314),
+    _ = l(666533),
     v = l(63190),
     I = l(102219);
 let Z = (e) => {
@@ -124,7 +124,7 @@ let y = r.memo(function (e) {
                                             color: o.zxk.Colors.PRIMARY,
                                             onClick: () =>
                                                 (0, o.ZDy)(async () => {
-                                                    let { default: e } = await Promise.all([l.e('7654'), l.e('17439')]).then(l.bind(l, 560114));
+                                                    let { default: e } = await Promise.all([l.e('7654'), l.e('99060')]).then(l.bind(l, 560114));
                                                     return (l) => {
                                                         var r, a;
                                                         return (0, t.jsx)(

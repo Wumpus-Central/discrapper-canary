@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(739566),
     x = n(492593),
     y = n(453687),
-    v = n(25015),
-    E = n(689674),
+    E = n(25015),
+    v = n(689674),
     O = n(438075),
     N = n(963550),
     j = n(845080),
@@ -26,7 +26,7 @@ var r = n(200651),
     S = n(145807),
     I = n(56744),
     T = n(981631),
-    P = n(30804);
+    P = n(988940);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -95,7 +95,7 @@ let Z = i.memo(function (e) {
         V = a.type === T.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
         z = a.isFirstMessageInForumPost(M),
         K = (0, u.A)((null != (n = a.editedTimestamp) ? n : a.timestamp).valueOf()),
-        { content: Y, hasSpoilerEmbeds: X } = (0, v.Z)(a, {
+        { content: Y, hasSpoilerEmbeds: X } = (0, E.Z)(a, {
             hideSimpleEmbedContent: L,
             allowList: z || K,
             allowHeading: z || K,
@@ -114,7 +114,7 @@ let Z = i.memo(function (e) {
             roleId: $.iconRoleId
         }),
         ei = (0, s.e7)([f.Z], () => f.Z.can(T.Plq.CREATE_INSTANT_INVITE, M)),
-        ea = (0, E.Z)({
+        ea = (0, v.Z)({
             message: a,
             channel: M,
             enabled: G

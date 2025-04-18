@@ -14,8 +14,8 @@ var r,
     g = n(815372),
     m = n(14429),
     b = n(576855),
-    _ = n(313201),
-    y = n(991346),
+    y = n(313201),
+    _ = n(991346),
     v = n(592125),
     O = n(888369),
     C = n(430824),
@@ -23,8 +23,8 @@ var r,
     j = n(944486),
     E = n(938475),
     x = n(483360),
-    N = n(585483),
-    I = n(63063),
+    I = n(585483),
+    N = n(63063),
     P = n(51596),
     w = n(823385),
     Z = n(415795),
@@ -32,7 +32,7 @@ var r,
     A = n(558631),
     R = n(981631),
     D = n(388032),
-    L = n(298746);
+    L = n(786553);
 function k(e, t, n) {
     return (
         t in e
@@ -92,7 +92,7 @@ let G = { bottom: 10 },
                 (0, i.jsx)('div', {
                     className: L.emptyStateCTA,
                     children: (0, i.jsx)(u.eee, {
-                        href: I.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
+                        href: N.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
                         children: D.NW.string(D.t['4iPfEB'])
                     })
                 })
@@ -234,7 +234,7 @@ class q extends l.PureComponent {
                 });
     }
     focusNode(e) {
-        N.S.dispatch(R.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        I.S.dispatch(R.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
     }
     getRowId(e) {
         return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
@@ -248,7 +248,7 @@ class q extends l.PureComponent {
                 textChannelSymbolHook: (e, t) => K(t, f.xQ.TEXT_CHANNEL, D.NW.string(D.t.wrwhub)),
                 voiceChannelSymbolHook: (e, t) => K(t, f.xQ.VOICE_CHANNEL, D.NW.string(D.t['jz+hJi'])),
                 guildSymbolHook: (e, t) => K(t, f.xQ.GUILD, D.NW.string(D.t.WuwCWl)),
-                helpdeskArticle: I.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL)
+                helpdeskArticle: N.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL)
             })
         });
     }
@@ -275,7 +275,7 @@ class q extends l.PureComponent {
         super(...e),
             k(this, 'scrollerRef', l.createRef()),
             k(this, 'inputRef', l.createRef()),
-            k(this, '_listId', (0, _.hQ)()),
+            k(this, '_listId', (0, y.hQ)()),
             k(this, 'state', {
                 query: this.props.query,
                 mouseFocusDisabled: !0
@@ -299,7 +299,7 @@ class q extends l.PureComponent {
                 switch (t.type) {
                     case f.h8.GUILD:
                         return (0, d.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('7654'), n.e('44156'), n.e('49286'), n.e('6850'), n.e('32652'), n.e('58227'), n.e('54408'), n.e('10923'), n.e('56534'), n.e('87154'), n.e('33213'), n.e('40407')]).then(n.bind(n, 545135));
+                            let { default: e } = await Promise.all([n.e('7654'), n.e('44156'), n.e('50329'), n.e('6850'), n.e('32652'), n.e('58227'), n.e('54408'), n.e('97502'), n.e('56534'), n.e('87154'), n.e('33213'), n.e('71110')]).then(n.bind(n, 545135));
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
@@ -321,7 +321,7 @@ class q extends l.PureComponent {
                             case R.d4z.GUILD_FORUM:
                             case R.d4z.GUILD_MEDIA:
                                 return (0, d.jW)(e, async () => {
-                                    let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('44011')]).then(n.bind(n, 373651));
+                                    let { default: e } = await Promise.all([n.e('26881'), n.e('18320'), n.e('44011')]).then(n.bind(n, 373651));
                                     return (t) =>
                                         (0, i.jsx)(
                                             e,
@@ -335,7 +335,7 @@ class q extends l.PureComponent {
                             case R.d4z.GUILD_VOICE:
                             case R.d4z.GUILD_STAGE_VOICE:
                                 return (0, d.jW)(e, async () => {
-                                    let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331'), n.e('81070')]).then(n.bind(n, 213202));
+                                    let { default: e } = await Promise.all([n.e('26881'), n.e('18320'), n.e('83331'), n.e('81070')]).then(n.bind(n, 213202));
                                     return (t) =>
                                         (0, i.jsx)(
                                             e,
@@ -382,7 +382,7 @@ class q extends l.PureComponent {
                         break;
                     case f.h8.GROUP_DM:
                         return (0, d.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('53912'), n.e('2016')]).then(n.bind(n, 354741));
+                            let { default: e } = await Promise.all([n.e('26881'), n.e('53912'), n.e('54464')]).then(n.bind(n, 354741));
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
@@ -395,7 +395,7 @@ class q extends l.PureComponent {
                         });
                     case f.h8.USER:
                         return (0, d.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('86423')]).then(n.bind(n, 881351));
+                            let { default: e } = await Promise.all([n.e('26881'), n.e('69220'), n.e('4074')]).then(n.bind(n, 881351));
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
@@ -587,7 +587,7 @@ class q extends l.PureComponent {
 }
 function Q(e) {
     let t = (0, c.cj)([w.Z], () => w.Z.getProps()),
-        n = (0, y.Pt)(),
+        n = (0, _.Pt)(),
         r = A.Z.useExperiment({ location: 'QuickSwitcher' }).enabled,
         o = l.useMemo(
             () =>

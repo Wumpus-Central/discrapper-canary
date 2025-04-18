@@ -15,7 +15,7 @@ var i = n(442837),
     m = n(518950),
     g = n(967128),
     b = n(388032),
-    _ = n(906667);
+    _ = n(954678);
 function y(e) {
     let { channel: t } = e;
     return (0, u.I3)(a.Z.EMPTY_GROUP_DM, t.id)

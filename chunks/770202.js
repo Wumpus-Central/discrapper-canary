@@ -14,9 +14,9 @@ var r = n(200651),
     g = n(496675),
     m = n(98597),
     b = n(473403),
-    _ = n(981631),
-    y = n(490897),
-    v = n(915887);
+    y = n(981631),
+    _ = n(490897),
+    v = n(653084);
 function O(e, t, n) {
     return (
         t in e
@@ -66,7 +66,7 @@ class j extends m.ZP {
                     onContextMenu: this.handleContextMenu,
                     connectDragPreview: s ? l : null,
                     'aria-label': (0, d.ZP)({ channel: e }),
-                    resolvedUnreadSetting: y.i.ONLY_MENTIONS,
+                    resolvedUnreadSetting: _.i.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()]
                 })
             });
@@ -110,12 +110,12 @@ class j extends m.ZP {
             O(this, 'handleClick', (e) => {
                 let t = e.getGuildId();
                 if (null == t) throw Error('TextChannel, transitionTo: Channel does not have a guildId');
-                (0, h.uL)(_.Z5c.CHANNEL(t, e.id), {
+                (0, h.uL)(y.Z5c.CHANNEL(t, e.id), {
                     state: {
                         analyticsSource: {
-                            page: _.ZY5.GUILD_CHANNEL,
-                            section: _.jXE.CHANNEL_LIST,
-                            object: _.qAy.CHANNEL
+                            page: y.ZY5.GUILD_CHANNEL,
+                            section: y.jXE.CHANNEL_LIST,
+                            object: y.qAy.CHANNEL
                         }
                     }
                 });
@@ -128,8 +128,8 @@ let E = (0, u.B)(j),
             l = (0, s.cj)([p.Z, g.Z], () => {
                 let e = p.Z.getChannel(t.parent_id);
                 return {
-                    canManageChannel: g.Z.can(_.Plq.MANAGE_CHANNELS, t),
-                    canReorderChannel: !0 !== i && null != e ? g.Z.can(_.Plq.MANAGE_CHANNELS, e) : g.Z.can(_.Plq.MANAGE_CHANNELS, n)
+                    canManageChannel: g.Z.can(y.Plq.MANAGE_CHANNELS, t),
+                    canReorderChannel: !0 !== i && null != e ? g.Z.can(y.Plq.MANAGE_CHANNELS, e) : g.Z.can(y.Plq.MANAGE_CHANNELS, n)
                 };
             });
         return (0, r.jsx)(E, C({}, l, e));

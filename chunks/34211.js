@@ -20,8 +20,8 @@ function u(e, t, a) {
         e
     );
 }
-let p = c.j_.MAIN_NAVIGATION_MENU,
-    _ = (e) => [
+let _ = c.j_.MAIN_NAVIGATION_MENU,
+    p = (e) => [
         {
             route: c.am.DOWNLOAD,
             linkClicked: 'download',
@@ -124,7 +124,7 @@ class h extends (n = r.PureComponent) {
         let e = (0, l.fQ)(this.context.router),
             { isMobile: t, isVisible: a, styles: n, TrackClick: r, avoidRouter: u } = this.props,
             { sectionShown: h } = this.state;
-        return _(null != d.Z ? d.Z.getLocale().toLowerCase() : '').map((l) =>
+        return p(null != d.Z ? d.Z.getLocale().toLowerCase() : '').map((l) =>
             null != l.links
                 ? (0, s.jsx)(
                       o.Z,
@@ -148,7 +148,7 @@ class h extends (n = r.PureComponent) {
                             role: 'none',
                             children: (0, s.jsx)(r, {
                                 className: n.mainNavLink,
-                                eventName: p,
+                                eventName: _,
                                 data: l.linkClicked ? { linkClicked: l.linkClicked } : {},
                                 href: l.route,
                                 rel: 'me',
@@ -172,7 +172,7 @@ class h extends (n = r.PureComponent) {
                                   children: (0, s.jsx)(r, {
                                       tag: 'span',
                                       className: n.mainNavLink,
-                                      eventName: p,
+                                      eventName: _,
                                       data: { linkClicked: l.linkClicked },
                                       children: l.title
                                   })

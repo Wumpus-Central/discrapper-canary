@@ -9,7 +9,7 @@ var n = r(200651),
     h = r(25015),
     v = r(963550),
     u = r(845080),
-    f = r(30804);
+    f = r(988940);
 let p = i.memo(function (e) {
     var t, r;
     let { message: s, channel: p, compact: d, className: b, isGroupStart: g, hideSimpleEmbedContent: Z = !0, disableInteraction: j, previewGuildId: M, preview: O, author: y } = e,

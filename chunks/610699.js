@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(880251),
     x = n(208444),
     y = n(835473),
-    v = n(471445),
-    E = n(111028),
+    E = n(471445),
+    v = n(111028),
     O = n(601964),
     N = n(592125),
     j = n(430824),
@@ -30,7 +30,7 @@ var r = n(200651),
     A = n(981631),
     w = n(245335),
     Z = n(388032),
-    R = n(582909);
+    R = n(361825);
 function k(e) {
     let { members: t, membersOnline: n, textColor: i } = e,
         a = [];
@@ -83,7 +83,7 @@ function k(e) {
 function D(e) {
     let { channel: t, guild: n, hasEnded: i, textColor: a } = e;
     if (null != t && null != n) {
-        let e = (0, v.KS)(t, n);
+        let e = (0, E.KS)(t, n);
         return (0, r.jsxs)('div', {
             className: l()(R.channel, { [R.ended]: i }),
             children: [
@@ -94,7 +94,7 @@ function D(e) {
                           color: 'currentColor'
                       })
                     : null,
-                (0, r.jsx)(E.Z, {
+                (0, r.jsx)(v.Z, {
                     children: (0, r.jsx)(u.Text, {
                         variant: 'text-xs/normal',
                         color: a,
@@ -110,7 +110,7 @@ function D(e) {
     return null != n
         ? (0, r.jsx)('div', {
               className: l()(R.channel, { [R.ended]: i }),
-              children: (0, r.jsx)(E.Z, {
+              children: (0, r.jsx)(v.Z, {
                   children: (0, r.jsx)(u.Text, {
                       variant: 'text-xs/normal',
                       color: a,
@@ -134,8 +134,8 @@ function L(e) {
             });
         }, [null == (t = l.inviter) ? void 0 : t.id, _.id]),
         x = (0, c.e7)([j.Z], () => (null != l.guild ? j.Z.getGuild(l.guild.id) : null), [l]),
-        v = (0, y.Z)([_.id])[0],
-        E = (0, c.e7)([p.ZP], () => {
+        E = (0, y.Z)([_.id])[0],
+        v = (0, c.e7)([p.ZP], () => {
             var e;
             return (null == l ? void 0 : l.channel) != null && (null == (e = p.ZP.getSelfEmbeddedActivityForChannel(l.channel.id)) ? void 0 : e.applicationId) === _.id;
         }),
@@ -174,13 +174,13 @@ function L(e) {
         if (null == l.guild) return (0, r.jsx)(P.Z, {});
         x = new O.ZP(l.guild);
     }
-    let G = (B && !k) || (B && E);
-    return (B && E && (a = Z.NW.string(Z.t.wJNK8P)), k || (a = Z.NW.string(Z.t.hHGrW1)), null == l.code || '' === l.code || null == v)
+    let G = (B && !k) || (B && v);
+    return (B && v && (a = Z.NW.string(Z.t.wJNK8P)), k || (a = Z.NW.string(Z.t.hHGrW1)), null == l.code || '' === l.code || null == E)
         ? null
         : (0, r.jsx)(f.Gt, {
               value: D,
               children: (0, r.jsx)(M, {
-                  app: v,
+                  app: E,
                   invite: l,
                   activityUsers: W,
                   isMember: B,
@@ -199,7 +199,7 @@ function L(e) {
 }
 function M(e) {
     var t, n;
-    let { app: a, invite: l, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: y, tooltip: v, handleAcceptInvite: E, onView: O } = e,
+    let { app: a, invite: l, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: y, tooltip: E, handleAcceptInvite: v, onView: O } = e,
         N = new URL(l.code, 'https://discord.gg').toString(),
         { bot: j, icon: C } = a,
         S = T.ZP.getApplicationIconURL({
@@ -216,12 +216,12 @@ function M(e) {
                     label: s ? (m ? Z.NW.string(Z.t.VJlc0d) : Z.NW.string(Z.t.RscU7O)) : Z.NW.string(Z.t['2BP08P']),
                     trackingArea: s ? _.j_.PLAY : _.j_.JOIN_SERVER,
                     submitting: f,
-                    disabledReason: y && null != v ? v : void 0,
-                    onClick: E
+                    disabledReason: y && null != E ? E : void 0,
+                    onClick: v
                 }
             ];
             return null != I && e.push(I), e;
-        }, [E, m, y, s, f, v, I]);
+        }, [v, m, y, s, f, E, I]);
     return (0, r.jsx)(
         h.W,
         ((t = (function (e) {

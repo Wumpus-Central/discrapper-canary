@@ -12,7 +12,7 @@ var i = n(481060),
     m = n(613810),
     g = n(391181),
     p = n(388032),
-    h = n(520880);
+    h = n(571393);
 let f = 'guild-product-listings-header';
 function x(e) {
     let { guildId: t, handleCreateOrEditProduct: u } = e,

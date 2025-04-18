@@ -17,7 +17,7 @@ var r = n(200651),
     x = n(929507),
     j = n(981631),
     O = n(388032),
-    N = n(694095);
+    N = n(939607);
 function y(e) {
     var t, n, l;
     let { name: y, icon: v, imageSrc: _, iconBackgroundColor: C, iconClassName: I, iconWrapperClassName: S, details: E, integration: P, buttonText: w, buttonDisabled: T, hasNextSection: Z, onButtonClick: W, guildId: k, isScrolling: A, canShowMigrationTooltip: D, trailing: R } = e,

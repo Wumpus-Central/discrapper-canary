@@ -5,7 +5,7 @@ var i = n(481060),
     a = n(600164),
     l = n(245315),
     o = n(388032),
-    s = n(49791);
+    s = n(184075);
 let c = () =>
     (0, r.jsxs)(a.Z, {
         align: a.Z.Align.CENTER,

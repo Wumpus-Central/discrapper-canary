@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(583741), n(388685), n(539854);
+n.d(t, { Z: () => _ }), n(583741), n(388685), n(539854);
 var r,
     i = n(200651),
     l = n(192379),
@@ -9,7 +9,7 @@ var r,
     u = n(748780),
     d = n(902704),
     h = n(481060),
-    p = n(161421);
+    p = n(164627);
 function f(e, t, n) {
     return (
         t in e
@@ -107,7 +107,7 @@ class b extends l.Component {
             });
     }
 }
-class _ extends (r = l.PureComponent) {
+class y extends (r = l.PureComponent) {
     componentDidMount() {
         this.calculateState();
     }
@@ -188,11 +188,11 @@ class _ extends (r = l.PureComponent) {
             });
     }
 }
-f(_, 'contextType', h.Sfi),
-    f(_, 'defaultProps', {
+f(y, 'contextType', h.Sfi),
+    f(y, 'defaultProps', {
         className: p.container,
         reverse: !1,
         hide: !1,
         animate: !0
     });
-let y = _;
+let _ = y;

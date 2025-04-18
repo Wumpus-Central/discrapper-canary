@@ -6,7 +6,7 @@ var r = n(120356),
     s = n(692547),
     a = n(481060),
     o = n(600164),
-    c = n(427256);
+    c = n(475258);
 let d = (e) => {
     let { className: t, icon: n, noticeText: r, buttonText: d, onClick: u, canSync: h } = e;
     return (0, i.jsx)(a.Zbd, {

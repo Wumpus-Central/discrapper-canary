@@ -11,7 +11,7 @@ var r = n(200651),
     p = n(359993),
     m = n(981631),
     h = n(388032),
-    g = n(886141);
+    g = n(979726);
 function _(e) {
     let { applicationId: t, similarApplications: n, onSelectApplication: i, similarLoadId: s } = e,
         o = (function (e) {

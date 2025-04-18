@@ -9,7 +9,7 @@ var i = n(481060),
     c = n(63063),
     u = n(981631),
     d = n(388032),
-    p = n(966651);
+    p = n(71028);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,7 +65,7 @@ function f(e) {
         onClick: () => {
             s.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, h({}, (0, l.hH)(t))),
                 (0, i.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
+                    let { default: e } = await Promise.all([n.e('45094'), n.e('58106')]).then(n.bind(n, 218613));
                     return (n) => {
                         var i, l;
                         return (0, r.jsx)(

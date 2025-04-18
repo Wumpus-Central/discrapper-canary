@@ -8,10 +8,10 @@ var n = a(200651),
     c = a(608863),
     d = a(66037),
     u = a(643103),
-    p = a(34211),
-    _ = a(231338),
+    _ = a(34211),
+    p = a(231338),
     h = a(431138),
-    m = a(35289);
+    m = a(135406);
 function N(e, t, a) {
     return (
         t in e
@@ -25,7 +25,7 @@ function N(e, t, a) {
         e
     );
 }
-let I = _.j_.MAIN_NAVIGATION_MENU;
+let I = p.j_.MAIN_NAVIGATION_MENU;
 class g extends s.PureComponent {
     componentDidMount() {
         window.addEventListener('keydown', this.handleKeyDown);
@@ -49,8 +49,8 @@ class g extends s.PureComponent {
                         children: (0, n.jsx)(d.Z, {
                             avoidRouter: s,
                             className: m.logoWrapper,
-                            to: _.am.INDEX,
-                            from: _.j_.MAIN_NAVIGATION_MENU,
+                            to: p.am.INDEX,
+                            from: p.j_.MAIN_NAVIGATION_MENU,
                             children: (0, n.jsx)('img', {
                                 className: m.logo,
                                 src: h.r.ASSET_LOGO_DISCORD_SVG,
@@ -76,7 +76,7 @@ class g extends s.PureComponent {
                     (0, n.jsxs)('ul', {
                         className: o ? m.headerNavOpen : m.headerNav,
                         children: [
-                            (0, n.jsx)(p.o, {
+                            (0, n.jsx)(_.o, {
                                 avoidRouter: s,
                                 TrackClick: t,
                                 styles: m,

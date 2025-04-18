@@ -12,7 +12,7 @@ var r = n(200651),
     h = n(170245),
     f = n(981631),
     g = n(388032),
-    m = n(292568);
+    m = n(866000);
 function b(e) {
     let { user: t, nickname: n, status: b, isFocused: _ } = e,
         E = i.useContext(u.AnalyticsContext),

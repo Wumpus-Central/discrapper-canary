@@ -13,7 +13,7 @@ var r = n(200651),
     p = n(576645),
     h = n(981631),
     m = n(388032),
-    g = n(521338);
+    g = n(477965);
 function E(e) {
     let { emojiConfetti: t } = e,
         n = i.useMemo(() => (null == t ? null : null == t.id ? t.optionallyDiverseSequence : t.name), [t]);

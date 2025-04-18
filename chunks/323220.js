@@ -6,7 +6,7 @@ var i = n(481060),
     a = n(686546),
     s = n(686369),
     l = n(388032),
-    c = n(248217);
+    c = n(609928);
 function u(e) {
     let { guildId: t, name: n } = e,
         u = (0, i.dQu)(i.TVs.colors.BG_BASE_TERTIARY),

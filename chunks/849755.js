@@ -17,7 +17,7 @@ var r = n(200651),
     E = n(228168),
     b = n(981631),
     y = n(388032),
-    v = n(588015);
+    v = n(353990);
 function O(e) {
     let { voiceChannel: t, onAction: n, onClose: o } = e,
         { profileType: O } = (0, m.z)(),

@@ -8,7 +8,7 @@ var r = n(200651),
     c = n(259580),
     d = n(81543),
     u = n(388032),
-    m = n(448533);
+    m = n(63014);
 let g = function (e) {
     let { items: t, carouselClassName: n, paginationCaretClassName: s, intervalBetweenAutomaticItemRotations: g, renderItem: p } = e,
         h = i.useMemo(() => new a.Xp(), []),

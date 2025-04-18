@@ -14,7 +14,7 @@ var n = r(200651),
     u = r(639119),
     f = r(474936),
     p = r(388032),
-    d = r(952849);
+    d = r(217750);
 function b(e) {
     let { isTabSelected: t, expiresAt: r, trialDuration: s, className: h } = e,
         v = i.useMemo(() => Date.parse(r), [r]),

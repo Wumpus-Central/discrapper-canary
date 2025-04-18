@@ -6,7 +6,7 @@ var i = t(200651),
     d = t(481060),
     o = t(765305),
     s = t(388032),
-    c = t(645331);
+    c = t(808754);
 function u(e) {
     let { onClose: n, selectedTab: t, onTabSelected: r, userCount: u, hasBanner: _, isHub: g = !1 } = e,
         p = l.useRef(null);

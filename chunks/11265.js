@@ -7,7 +7,7 @@ var r = n(200651),
     o = n(481060),
     c = n(393238),
     d = n(388032),
-    u = n(212787);
+    u = n(933485);
 let m = i.memo(function (e) {
     var t, n;
     let { renderHeader: s, children: m, isExpanded: g, isStuck: p, onExpand: h, disableAnimation: f, disableBackground: x } = e,

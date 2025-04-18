@@ -22,7 +22,7 @@ function c(e) {
         description: s.NW.string(s.t['EYn7//']),
         onClick: function () {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('22347'), n.e('82758'), n.e('58023'), n.e('22754')]).then(n.bind(n, 779250));
+                let { default: e } = await Promise.all([n.e('22347'), n.e('82758'), n.e('58023'), n.e('85407')]).then(n.bind(n, 779250));
                 return (t) => {
                     var n, i;
                     return (0, r.jsx)(

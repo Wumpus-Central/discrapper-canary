@@ -11,7 +11,7 @@ var r = n(200651),
     f = n(981631),
     d = n(630724),
     p = n(388032),
-    _ = n(327342);
+    _ = n(11190);
 function g(e) {
     let { email: t, setEmail: n, claimRequired: u, onSuccess: m, onClose: f } = e,
         [g, N] = o.useState(),

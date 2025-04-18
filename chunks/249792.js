@@ -8,7 +8,7 @@ var i = n(120356),
     a = n(481060),
     c = n(565138),
     u = n(252686),
-    d = n(728492);
+    d = n(909698);
 function h(e) {
     let { guild: t, show: n, active: i, onAnimationStart: h, onAnimationRest: p } = e,
         f = {},
@@ -17,7 +17,7 @@ function h(e) {
     let m = (0, a.dQu)(s.Z.unsafe_rawColors.BRAND_500).hex(),
         b = (0, a.dQu)(s.Z.unsafe_rawColors.PRIMARY_630).hex();
     i && null == t.icon && ((f.backgroundColor = m), (g.backgroundColor = b));
-    let _ = (0, a.Yzy)(n, {
+    let y = (0, a.Yzy)(n, {
         from: f,
         enter: g,
         leave: f,
@@ -26,7 +26,7 @@ function h(e) {
         onRest: p
     });
     return (0, r.jsx)(r.Fragment, {
-        children: _(
+        children: y(
             (e, n, i) =>
                 n &&
                 (0, r.jsx)(

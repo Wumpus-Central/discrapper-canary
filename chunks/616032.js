@@ -8,7 +8,7 @@ var r = n(200651),
     c = n(213609),
     u = n(441358),
     d = n(426521),
-    p = n(823123);
+    p = n(981783);
 function m(e) {
     let { initialized: t, items: n, loading: m, loadMore: f } = e,
         h = i.useRef(null),

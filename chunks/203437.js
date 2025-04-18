@@ -13,12 +13,12 @@ var l = n(200651),
     h = n(594174),
     g = n(267642),
     p = n(709054),
-    b = n(208049),
-    y = n(763296),
+    y = n(208049),
+    b = n(763296),
     v = n(710111),
     x = n(981631),
     j = n(388032),
-    N = n(696200);
+    N = n(212168);
 function w(e) {
     let { availableSlots: t, className: n } = e;
     return (0, l.jsxs)(o.Text, {
@@ -46,12 +46,12 @@ function C(e) {
             return e;
         }),
         S = (0, s.cj)(
-            [y.Z],
+            [b.Z],
             () => {
                 let e = {};
                 for (let [n, l] of p.default.entries(C)) {
                     var t;
-                    let a = (0, g.yw)(l, null != (t = y.Z.getSoundsForGuild(n)) ? t : v.Hy, l.premiumTier);
+                    let a = (0, g.yw)(l, null != (t = b.Z.getSoundsForGuild(n)) ? t : v.Hy, l.premiumTier);
                     e[n] = a;
                 }
                 return e;
@@ -59,7 +59,7 @@ function C(e) {
             [C]
         );
     a.useEffect(() => {
-        (0, b.w)();
+        (0, y.w)();
     }, []);
     let O = a.useMemo(
             () =>

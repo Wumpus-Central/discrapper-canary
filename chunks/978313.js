@@ -11,8 +11,8 @@ var n = r(200651),
     m = r(810568),
     g = r(221370),
     f = r(388032),
-    p = r(263930),
-    O = r(430871);
+    p = r(206218),
+    O = r(981767);
 function E(e) {
     let { detectedGame: t, trackAction: r } = e,
         [i, E] = a.useState((null == t ? void 0 : t.summaryLocalized) != null),

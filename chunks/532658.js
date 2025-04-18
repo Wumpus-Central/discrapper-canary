@@ -34,7 +34,7 @@ var r = n(200651),
     N = n(444295),
     V = n(981631),
     k = n(388032),
-    D = n(62802);
+    D = n(934705);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -167,7 +167,7 @@ function G(e, t) {
         )
     );
 }
-let U = i.memo(function (e) {
+let F = i.memo(function (e) {
         let { nick: t, connectedOn: n, isSettingsPreview: l, voiceBackgroundWidth: u, rightAlign: d = !1 } = e,
             { showConnectedAnimation: p, recentlyConnected: f, hideConnectedAnimation: O, setHideConnectedAnimation: m } = G(n, l),
             { ref: y, width: v } = (0, g.ZP)(),
@@ -222,7 +222,7 @@ let U = i.memo(function (e) {
             })
         });
     }),
-    F = i.memo(function (e) {
+    U = i.memo(function (e) {
         let { avatarSize: t, userId: n, channelId: i, guildId: l } = e,
             o = 2 * t,
             a = -(t / 2);
@@ -386,7 +386,7 @@ let U = i.memo(function (e) {
                                       })
                               }),
                         !R &&
-                            (0, r.jsx)(U, {
+                            (0, r.jsx)(F, {
                                 nick: u,
                                 connectedOn: L,
                                 isSettingsPreview: C,
@@ -399,7 +399,7 @@ let U = i.memo(function (e) {
                             src: eg,
                             'aria-hidden': !0
                         }),
-                        (0, r.jsx)(F, {
+                        (0, r.jsx)(U, {
                             avatarSize: ef,
                             userId: a.id,
                             channelId: t.id,
@@ -426,7 +426,7 @@ let U = i.memo(function (e) {
                             'aria-hidden': !0
                         }),
                         !R &&
-                            (0, r.jsx)(U, {
+                            (0, r.jsx)(F, {
                                 nick: u,
                                 connectedOn: L,
                                 isSettingsPreview: C,
@@ -508,7 +508,7 @@ let U = i.memo(function (e) {
             k = (e, t) => {
                 m ||
                     (0, u.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('6524')]).then(n.bind(n, 27900));
+                        let { default: e } = await Promise.all([n.e('26881'), n.e('6524')]).then(n.bind(n, 27900));
                         return (
                             (0, N.Ws)(V.Odu.VOICE_V3, {
                                 type: N.Qu.VOICE,

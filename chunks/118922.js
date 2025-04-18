@@ -3,7 +3,7 @@ var i = r(200651),
     t = r(192379),
     s = r(481060),
     c = r(388032),
-    o = r(421690);
+    o = r(320929);
 function a(n) {
     let { transitionState: e, onClose: r, title: a, body: l, cta: d, closeLabel: h, onConfirm: x, iconVariant: u = 'warning' } = n,
         [g, k] = t.useState(!1),

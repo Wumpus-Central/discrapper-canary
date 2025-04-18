@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(367907),
     x = n(313201),
     y = n(592125),
-    v = n(984933),
-    E = n(768119),
+    E = n(984933),
+    v = n(768119),
     O = n(944486),
     N = n(585483),
     j = n(72006),
@@ -28,7 +28,7 @@ var r = n(200651),
     T = n(778177),
     P = n(981631),
     A = n(388032),
-    w = n(665333);
+    w = n(496304);
 function Z(e, t, n) {
     return (
         t in e
@@ -42,7 +42,7 @@ function Z(e, t, n) {
         e
     );
 }
-n(852037);
+n(855801);
 let R = (0, x.hQ)(),
     k = c()(p.yC, 500);
 class D extends i.PureComponent {
@@ -206,7 +206,7 @@ class D extends i.PureComponent {
                 let n = O.Z.getChannelId(),
                     r = y.Z.getChannel(n);
                 if (((null == r ? void 0 : r.isThread()) && (r = y.Z.getChannel(null == r ? void 0 : r.parent_id)), null == r || r.isPrivate())) return void this.focusEditor();
-                let i = v.ZP.getTextChannelNameDisambiguations(r.getGuildId())[r.id],
+                let i = E.ZP.getTextChannelNameDisambiguations(r.getGuildId())[r.id],
                     a = null != i ? i.name : r.name;
                 Promise.resolve().then(() => {
                     let { _editorRef: e } = this;
@@ -315,19 +315,19 @@ class D extends i.PureComponent {
             C.WU();
     }
 }
-let L = u.ZP.connectStores([_.Z, E.Z], () => {
+let L = u.ZP.connectStores([_.Z, v.Z], () => {
     var e;
-    let t = E.Z.getCurrentSearchId(),
-        n = E.Z.getSearchType(),
-        r = null != t && E.Z.isSearching(t),
-        i = null != t && null != (e = E.Z.getEditorState(t)) ? e : j.nR(S.Jl(h.ZP)),
+    let t = v.Z.getCurrentSearchId(),
+        n = v.Z.getSearchType(),
+        r = null != t && v.Z.isSearching(t),
+        i = null != t && null != (e = v.Z.getEditorState(t)) ? e : j.nR(S.Jl(h.ZP)),
         a = _.Z.keyboardModeEnabled;
     return {
         searchId: t,
         searchType: n,
         isSearching: r,
         editorState: i,
-        hasResults: E.Z.hasResults(t),
+        hasResults: v.Z.hasResults(t),
         keyboardModeEnabled: a
     };
 })(D);

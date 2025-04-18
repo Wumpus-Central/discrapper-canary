@@ -67,7 +67,7 @@ function _(e, t) {
         e
     );
 }
-n(120235);
+n(22740);
 let p = (function (e) {
         return [Array.isArray(navigator.languages) ? navigator.languages[0] : null, navigator.language, navigator.browserLanguage, navigator.userLanguage, e].find((e) => null != e && '' !== e);
     })('en-US'),

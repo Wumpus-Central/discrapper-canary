@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(488131),
     m = n(592125),
     b = n(306680),
-    _ = n(979651),
-    y = n(938475),
+    y = n(979651),
+    _ = n(938475),
     v = n(714794),
     O = n(876548),
     C = n(25601),
@@ -23,9 +23,9 @@ var r = n(200651),
     j = n(981631),
     E = n(124368),
     x = n(388032),
-    N = n(915887),
-    I = n(768107),
-    P = n(995453);
+    I = n(653084),
+    N = n(830082),
+    P = n(209025);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -160,8 +160,8 @@ function A(e) {
 }
 let R = i.memo(function (e) {
     let { thread: t, isSelectedChannel: l, isSelectedVoice: P, isLast: R, withGuildIcon: D } = e,
-        L = (0, a.e7)([y.ZP], () => y.ZP.getVoiceStatesForChannel(t), [t]),
-        k = (0, a.e7)([_.Z], () => _.Z.hasVideo(t.id)),
+        L = (0, a.e7)([_.ZP], () => _.ZP.getVoiceStatesForChannel(t), [t]),
+        k = (0, a.e7)([y.Z], () => y.Z.hasVideo(t.id)),
         {
             unread: M,
             mentionCount: U,
@@ -227,7 +227,7 @@ let R = i.memo(function (e) {
         X = (0, p.Q3)('GuildSidebarThreadListEntry') ? T : A;
     return (0, r.jsxs)('li', {
         role: Y,
-        className: o()(N.containerDefault, { [N.selected]: l }),
+        className: o()(I.containerDefault, { [I.selected]: l }),
         children: [
             (0, r.jsx)(X, { withGuildIcon: D }),
             R
@@ -246,34 +246,34 @@ let R = i.memo(function (e) {
                     right: 4
                 },
                 children: (0, r.jsxs)('div', {
-                    className: o()(N.iconVisibility, I.wrapper, I.typeThread, {
-                        [I.modeSelected]: l,
-                        [I.modeMuted]: !l && B,
-                        [I.modeUnreadImportant]: !B && !l && M,
-                        [I.withGuildIcon]: D
+                    className: o()(I.iconVisibility, N.wrapper, N.typeThread, {
+                        [N.modeSelected]: l,
+                        [N.modeMuted]: !l && B,
+                        [N.modeUnreadImportant]: !B && !l && M,
+                        [N.withGuildIcon]: D
                     }),
                     onMouseDown: V,
                     onContextMenu: H,
                     children: [
-                        !M || B || l ? null : (0, r.jsx)('div', { className: o()(I.unread, I.unreadImportant) }),
+                        !M || B || l ? null : (0, r.jsx)('div', { className: o()(N.unread, N.unreadImportant) }),
                         (0, r.jsx)(
                             c.P3F,
                             Z(w({}, K), {
                                 innerRef: q,
-                                className: I.link,
+                                className: N.link,
                                 onClick: W,
                                 'aria-label': Q,
                                 focusProps: { enabled: !1 },
                                 children: (0, r.jsxs)('div', {
-                                    className: o()(I.linkTop, I.__invalid_threadMainContent),
+                                    className: o()(N.linkTop, N.__invalid_threadMainContent),
                                     children: [
                                         (0, r.jsx)(h.Z, {
-                                            className: I.name,
+                                            className: N.name,
                                             'aria-hidden': !0,
                                             children: t.name
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: I.children,
+                                            className: N.children,
                                             children: [
                                                 F > 0 && t.userLimit > 0
                                                     ? (0, r.jsx)(O.Z, {

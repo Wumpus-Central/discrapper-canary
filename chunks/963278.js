@@ -3,17 +3,17 @@ var r = n(200651);
 n(192379);
 var l = n(120356),
     a = n.n(l),
-    o = n(442837),
-    i = n(481060),
+    i = n(442837),
+    o = n(481060),
     s = n(594174),
     c = n(381585),
     u = n(597688),
     d = n(709999),
     b = n(388032),
-    p = n(806734);
+    p = n(379890);
 let f = (e) => {
     let { shelf: t, handleTransition: n, tab: l } = e,
-        f = (0, o.e7)([s.default], () => s.default.getCurrentUser());
+        f = (0, i.e7)([s.default], () => s.default.getCurrentUser());
     return null == f
         ? null
         : (0, r.jsxs)('div', {
@@ -22,13 +22,13 @@ let f = (e) => {
                   (0, r.jsxs)('div', {
                       className: p.blockHeader,
                       children: [
-                          (0, r.jsx)(i.X6q, {
+                          (0, r.jsx)(o.X6q, {
                               variant: 'heading-lg/semibold',
                               children: t.name
                           }),
-                          (0, r.jsx)(i.zxk, {
-                              color: i.Ttl.PRIMARY,
-                              look: i.iLD.FILLED,
+                          (0, r.jsx)(o.zxk, {
+                              color: o.Ttl.PRIMARY,
+                              look: o.iLD.FILLED,
                               onClick: () => n('shelf block see all', t.categorySkuId),
                               children: b.NW.formatToPlainString(b.t.bc9RBA, { category_name: t.name })
                           })
@@ -39,8 +39,8 @@ let f = (e) => {
                       children: (0, r.jsx)(r.Fragment, {
                           children: t.rankedSkuIds.map((e, n) => {
                               let a = u.Z.getCategoryForProduct(e),
-                                  o = u.Z.getProduct(e);
-                              return null == a || null == o
+                                  i = u.Z.getProduct(e);
+                              return null == a || null == i
                                   ? null
                                   : (0, r.jsx)(
                                         c.k0,
@@ -53,7 +53,7 @@ let f = (e) => {
                                             children: (0, r.jsx)(
                                                 d.Z,
                                                 {
-                                                    product: o,
+                                                    product: i,
                                                     category: a,
                                                     user: f,
                                                     tab: l

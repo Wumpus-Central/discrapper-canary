@@ -4,8 +4,8 @@ n(192379);
 var i = n(120356),
     s = n.n(i),
     a = n(481060),
-    l = n(589608),
-    o = n(270434);
+    l = n(580548),
+    o = n(227135);
 let c = (e) => {
     let { icon: t, iconClassName: n, header: i, description: c } = e;
     return (0, r.jsxs)('div', {

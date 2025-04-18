@@ -20,13 +20,13 @@ var r = n(200651),
     g = n(540059),
     m = n(680089),
     b = n(430824),
-    _ = n(496675),
-    y = n(9156),
+    y = n(496675),
+    _ = n(9156),
     v = n(203818),
     O = n(438144),
     C = n(981631),
     S = n(388032),
-    j = n(585523);
+    j = n(201871);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,17 +70,17 @@ function x(e, t) {
         e
     );
 }
-function N(e) {
+function I(e) {
     e.stopPropagation();
 }
-let I = i.memo(function (e) {
+let N = i.memo(function (e) {
         let t,
-            { channel: l, connectChannelDragSource: h, connectChannelDropTarget: v, disableManageChannels: O, position: I, sortingPosition: P, hideIcon: w, children: Z } = e,
+            { channel: l, connectChannelDragSource: h, connectChannelDropTarget: v, disableManageChannels: O, position: N, sortingPosition: P, hideIcon: w, children: Z } = e,
             T = (0, g.Q3)('CategoryChannel'),
-            A = (0, a.e7)([y.ZP], () => y.ZP.isChannelMuted(l.getGuildId(), l.id)),
+            A = (0, a.e7)([_.ZP], () => _.ZP.isChannelMuted(l.getGuildId(), l.id)),
             R = (0, a.e7)([m.Z], () => m.Z.isCollapsed(l.id)),
-            D = (0, a.e7)([_.Z], () => _.Z.can(C.Plq.MANAGE_CHANNELS, l));
-        t = null != P ? (I > P ? j.containerDragAfter : j.containerDragBefore) : j.containerDefault;
+            D = (0, a.e7)([y.Z], () => y.Z.can(C.Plq.MANAGE_CHANNELS, l));
+        t = null != P ? (N > P ? j.containerDragAfter : j.containerDragBefore) : j.containerDefault;
         let L = i.useCallback(() => {
                 R ? (0, u.mJ)(l.id) : (0, u.c4)(l.id);
             }, [l.id, R]),
@@ -109,7 +109,7 @@ let I = i.memo(function (e) {
                     t = l.getGuildId();
                 null != t &&
                     (0, c.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
+                        let { default: i } = await Promise.all([n.e('45094'), n.e('58106')]).then(n.bind(n, 218613));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
@@ -204,7 +204,7 @@ let I = i.memo(function (e) {
                                     )
                                 ),
                                 (0, r.jsx)('div', {
-                                    onClick: N,
+                                    onClick: I,
                                     className: j.children,
                                     children:
                                         D && !O
@@ -253,7 +253,7 @@ let I = i.memo(function (e) {
             });
         return null != v && null != h ? v(h(F)) : F;
     }),
-    P = (0, h.B)(I),
+    P = (0, h.B)(N),
     w = i.memo(function (e) {
         let { name: t, onDismiss: n, className: i } = e;
         return (0, r.jsx)('li', {

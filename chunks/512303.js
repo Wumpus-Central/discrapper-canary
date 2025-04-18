@@ -15,7 +15,7 @@ var r = n(200651),
     h = n(594174),
     p = n(981631),
     O = n(388032),
-    y = n(274693);
+    y = n(896602);
 function E(e) {
     var t, n, E, N;
     let v = null == (t = e.interactionMetadata) ? void 0 : t.authorizing_integration_owners[a.Y.USER_INSTALL],

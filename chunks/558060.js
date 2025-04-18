@@ -3,13 +3,13 @@ var r = n(200651);
 n(192379);
 var l = n(120356),
     a = n.n(l),
-    o = n(481060),
-    i = n(884697),
+    i = n(481060),
+    o = n(884697),
     s = n(409116),
     c = n(200615),
     u = n(981631),
     d = n(388032),
-    b = n(561197);
+    b = n(187339);
 function p() {
     return (p =
         Object.assign ||
@@ -66,16 +66,16 @@ function g(e, t) {
 }
 function h(e) {
     let { product: t, isPremiumUser: n, discount: l, className: h, nitroUpsell: m = !1, hideStrikethroughPrice: _ = !1 } = e,
-        C = (0, i.ql)(t, u.tuJ.DEFAULT);
+        C = (0, o.ql)(t, u.tuJ.DEFAULT);
     if (null == C) return null;
     if (C.amount <= 0)
         return (0, r.jsx)('div', {
             className: a()(b.priceTagsContainer, h),
             children: (0, r.jsx)(s.F, { price: C })
         });
-    let v = (0, i.ql)(t, u.tuJ.PREMIUM_TIER_2),
-        x = !n && !(0, i.x6)(t),
-        O = (0, i.x6)(t) && n ? g(f({}, C), { amount: l.original }) : C,
+    let v = (0, o.ql)(t, u.tuJ.PREMIUM_TIER_2),
+        x = !n && !(0, o.x6)(t),
+        O = (0, o.x6)(t) && n ? g(f({}, C), { amount: l.original }) : C,
         j = _ && n,
         y = _ && !n;
     return (0, r.jsxs)('div', {
@@ -84,7 +84,7 @@ function h(e) {
             !j &&
                 (0, r.jsx)(s.F, {
                     price: O,
-                    discount: n ? i.f_ : l,
+                    discount: n ? o.f_ : l,
                     className: a()(b.price, {
                         [b.striked]: n,
                         [b.dimmed]: n,
@@ -95,10 +95,10 @@ function h(e) {
                 !y &&
                 (0, r.jsx)(s.F, {
                     price: v,
-                    discount: n ? l : i.f_,
+                    discount: n ? l : o.f_,
                     renderPrice: m
                         ? (e) =>
-                              (0, r.jsx)(o.Text, {
+                              (0, r.jsx)(i.Text, {
                                   variant: 'text-xs/medium',
                                   children: d.NW.format(d.t.Sv8iiY, {
                                       price: e,
@@ -113,7 +113,7 @@ function h(e) {
                         [b.fullPrice]: x
                     }),
                     variant: n ? void 0 : 'text-xs/semibold',
-                    icon: (0, r.jsx)(o.ua7, {
+                    icon: (0, r.jsx)(i.ua7, {
                         text: d.NW.string(d.t.MPFyJy),
                         'aria-label': d.NW.string(d.t.X3Ekj4),
                         children: (e) => {
@@ -125,7 +125,7 @@ function h(e) {
                                 })(e)
                             );
                             return (0, r.jsx)(
-                                o.SrA,
+                                i.SrA,
                                 g(
                                     f(
                                         {

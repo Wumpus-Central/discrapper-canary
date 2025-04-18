@@ -1,6 +1,6 @@
 n.d(t, {
-    EM: () => _,
-    WW: () => y,
+    EM: () => y,
+    WW: () => _,
     ZP: () => v
 });
 var r = n(200651),
@@ -16,11 +16,11 @@ var r = n(200651),
     p = n(327530),
     f = n(981631),
     g = n(388032),
-    m = n(789123);
+    m = n(503668);
 function b(e) {
     return e ? 9 : p.QP;
 }
-function _(e, t, n, r, i) {
+function y(e, t, n, r, i) {
     let l = r && 'compact' === i ? 8 : p.$k;
     if (e === d.wZ) return l;
     if (e === d.wd) return t.hasFeature(f.oNc.HUB) ? 0 : l;
@@ -34,7 +34,7 @@ function _(e, t, n, r, i) {
     }
     return r && 'compact' === i ? 32 : p.Pw;
 }
-function y(e, t) {
+function _(e, t) {
     switch (e) {
         case d.wZ:
             return 'hoisted-spacer';
@@ -54,15 +54,15 @@ function y(e, t) {
     }
 }
 let v = i.memo(function (e) {
-    let { sectionIndex: t, guild: n, guildChannels: b, guildChannelsVersion: _, selectedChannelId: y, disableManageChannels: v } = e,
+    let { sectionIndex: t, guild: n, guildChannels: b, guildChannelsVersion: y, selectedChannelId: _, disableManageChannels: v } = e,
         { isFavoritesPerk: O } = (0, a.z)('ChannelListSection'),
         C = i.useCallback(() => {
             let e = b.getCategoryFromSection(b.recentsSectionNumber);
             if (null == e) return;
             let t = null,
                 r = e.getShownChannelAndThreadIds();
-            null != y && r.includes(y) && (t = (0, c.KY)(b)), (0, c.Uo)(n.id, r, t);
-        }, [n.id, y, b, _]),
+            null != _ && r.includes(_) && (t = (0, c.KY)(b)), (0, c.Uo)(n.id, r, t);
+        }, [n.id, _, b, y]),
         S = (0, s.Q3)('ChannelListSection'),
         { density: j } = (0, l.TCT)(),
         E = S && 'compact' === j ? 8 : p.$k;

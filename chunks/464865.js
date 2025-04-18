@@ -12,7 +12,7 @@ var r = n(200651),
     g = n(859481),
     p = n(981631),
     h = n(388032),
-    f = n(50986);
+    f = n(665065);
 function x(e) {
     let { guild: t } = e,
         n = (0, s.e7)([o.Z], () => o.Z.hideInstantInvites),

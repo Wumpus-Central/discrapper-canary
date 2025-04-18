@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => y });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -12,7 +12,7 @@ var i = n(442837),
     h = n(434479),
     p = n(490897),
     f = n(388032),
-    g = n(768107);
+    g = n(830082);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,9 +56,9 @@ function b(e, t) {
         e
     );
 }
-function _(e) {
-    let { guild: t, selected: _ } = e,
-        { hasUnread: y, mentionCount: v } = (0, i.cj)(
+function y(e) {
+    let { guild: t, selected: y } = e,
+        { hasUnread: _, mentionCount: v } = (0, i.cj)(
             [u.ZP],
             () => ({
                 hasUnread: u.ZP.hasUnread(t.id, p.W.GUILD_EVENT),
@@ -69,7 +69,7 @@ function _(e) {
         O = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
     async function C() {
         await (0, o.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('79010')]).then(n.bind(n, 17671));
+            let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('8674')]).then(n.bind(n, 17671));
             return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
         }),
             (0, a.EW)(l.z.GUILD_HEADER_EVENT_UPSELL);
@@ -85,7 +85,7 @@ function _(e) {
                 className: e
             }),
         text: j,
-        selected: _,
+        selected: y,
         onClick: C,
         onContextMenu: (e) => {
             (0, s.jW)(e, async () => {
@@ -93,7 +93,7 @@ function _(e) {
                 return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
             });
         },
-        showUnread: y && !O,
+        showUnread: _ && !O,
         trailing:
             !O && v > 0
                 ? (0, r.jsx)(o.mAB, {

@@ -4,7 +4,7 @@ n(192379);
 var i = n(120356),
     o = n.n(i),
     a = n(481060),
-    s = n(259173);
+    s = n(288371);
 function l(e) {
     let { rank: t, hideInnerBorder: n = !1 } = e,
         i = t <= 3 ? 'text-xs/semibold' : 'text-xs/medium';

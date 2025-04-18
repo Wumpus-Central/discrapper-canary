@@ -6,7 +6,7 @@ var r = n(120356),
     a = n(481060),
     l = n(436774),
     c = n(118012),
-    s = n(237844);
+    s = n(308933);
 function u(t) {
     let { text: e, textSize: n = c.Z.Sizes.SIZE_12, textColor: r = c.Z.Colors.STANDARD, className: u, button: _, reducedRightPadding: d = !1 } = t;
     return (0, o.jsxs)('div', {

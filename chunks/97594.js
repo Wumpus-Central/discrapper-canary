@@ -15,7 +15,7 @@ var a = n(200651),
     f = n(860153),
     y = n(981631),
     b = n(388032),
-    O = n(269045);
+    O = n(67936);
 function h(e) {
     var { onClose: t, items: n, startingIndex: o, shouldRedactExplicitContent: h, shouldHideMediaOptions: S = !1, transitionState: E } = e,
         C = (function (e, t) {

@@ -1,5 +1,5 @@
 n.d(t, { Z: () => r });
-var i = n(99887),
+var i = n(182431),
     a = {
         lessThanXSeconds: {
             one: '१ सेकंड से कम',

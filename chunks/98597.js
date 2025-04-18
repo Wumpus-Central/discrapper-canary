@@ -20,14 +20,14 @@ var r,
     g = n(427679),
     m = n(155409),
     b = n(131704),
-    _ = n(199902),
-    y = n(430824),
+    y = n(199902),
+    _ = n(430824),
     v = n(496675),
     O = n(914010),
     C = n(281029),
     S = n(981631),
     j = n(388032),
-    E = n(915887);
+    E = n(653084);
 function x(e, t, n) {
     return (
         t in e
@@ -41,7 +41,7 @@ function x(e, t, n) {
         e
     );
 }
-function N(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function N(e) {
     }
     return e;
 }
-function I(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -136,7 +136,7 @@ function T(e) {
 function A(e) {
     let { channel: t, isDefaultChannel: r = !1, locked: o, tabIndex: u, forceShowButtons: f, hasChannelInfo: b = !1 } = e,
         { entrypoints: O } = (0, h._k)({ location: 'channel_base' }),
-        C = (0, a.e7)([y.Z], () => y.Z.getGuild(t.getGuildId())),
+        C = (0, a.e7)([_.Z], () => _.Z.getGuild(t.getGuildId())),
         x = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
         P = (0, a.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(t.id), [t.id]),
         w = (0, a.e7)([v.Z], () => (0, p.b)(v.Z, C, t, x)),
@@ -146,13 +146,13 @@ function A(e) {
     if (o || !w) return null;
     function R() {
         if (null != C) {
-            let e = _.Z.getAllActiveStreams().filter((e) => e.state !== S.jm8.ENDED && e.channelId === t.id);
+            let e = y.Z.getAllActiveStreams().filter((e) => e.state !== S.jm8.ENDED && e.channelId === t.id);
             (0, c.ZDy)(async () => {
-                let { default: r } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
+                let { default: r } = await Promise.all([n.e('7654'), n.e('99060')]).then(n.bind(n, 560114));
                 return (n) =>
                     (0, i.jsx)(
                         r,
-                        I(N({}, n), {
+                        N(I({}, n), {
                             guild: C,
                             channel: t,
                             streamUserId: 1 === e.length ? e[0].ownerId : null,
@@ -186,7 +186,7 @@ function A(e) {
             children: (e) =>
                 (0, i.jsx)(
                     c.P3F,
-                    I(N({ className: s()(E.iconItem, f ? E.alwaysShown : void 0, b ? E.iconWithChannelInfo : E.iconNoChannelInfo) }, e), {
+                    N(I({ className: s()(E.iconItem, f ? E.alwaysShown : void 0, b ? E.iconWithChannelInfo : E.iconNoChannelInfo) }, e), {
                         onClick: R,
                         tabIndex: u,
                         'aria-label': T,
@@ -206,7 +206,7 @@ function R(e) {
         children: (e) =>
             (0, i.jsx)(
                 c.P3F,
-                I(N({ className: E.iconItem }, e), {
+                N(I({ className: E.iconItem }, e), {
                     onClick: n,
                     'aria-label': j.NW.string(j.t.ROh4T0),
                     children: (0, i.jsx)(c.Dio, {
@@ -228,7 +228,7 @@ function D(e) {
         children: (e) =>
             (0, i.jsx)(
                 c.P3F,
-                I(N({ className: E.iconItem }, e), {
+                N(I({ className: E.iconItem }, e), {
                     onClick: n,
                     'aria-label': j.NW.string(j.t['N2c/Ul']),
                     children: (0, i.jsx)(c.dz2, {
@@ -243,19 +243,19 @@ function D(e) {
 class L extends (r = l.PureComponent) {
     renderOptionsButton(e) {
         let { onContextMenu: t } = e;
-        return (0, i.jsx)(Z, I(N({}, this.props), { onContextMenu: t }));
+        return (0, i.jsx)(Z, N(I({}, this.props), { onContextMenu: t }));
     }
     renderEditButton() {
-        return (0, i.jsx)(T, N({}, this.props));
+        return (0, i.jsx)(T, I({}, this.props));
     }
     renderInviteButton() {
-        return (0, i.jsx)(A, N({}, this.props));
+        return (0, i.jsx)(A, I({}, this.props));
     }
     renderRemoveSuggestionButton() {
-        return (0, i.jsx)(R, N({}, this.props));
+        return (0, i.jsx)(R, I({}, this.props));
     }
     renderAcceptSuggestionButton() {
-        return (0, i.jsx)(D, N({}, this.props));
+        return (0, i.jsx)(D, I({}, this.props));
     }
     getClassName() {
         let { position: e, sortingPosition: t } = this.props;

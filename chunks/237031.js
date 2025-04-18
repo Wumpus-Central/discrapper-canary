@@ -6,7 +6,7 @@ var r = n(200651);
 n(192379);
 var l = n(481060),
     a = n(82856);
-function o(e) {
+function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,7 +31,7 @@ function o(e) {
     }
     return e;
 }
-let i = 'collectibles shop product details modal',
+let o = 'collectibles shop product details modal',
     s = (e) => {
         let { product: t, category: s, shouldCheckoutWithOrbs: u, analyticsSource: d, analyticsLocations: b, returnRef: p, tab: f } = e;
         u && (0, a.S6)(),
@@ -42,7 +42,7 @@ let i = 'collectibles shop product details modal',
                         var l, a;
                         return (0, r.jsx)(
                             e,
-                            ((l = o({}, n)),
+                            ((l = i({}, n)),
                             (a = a =
                                 {
                                     product: t,
@@ -69,8 +69,8 @@ let i = 'collectibles shop product details modal',
                         );
                     };
                 },
-                o(
-                    { modalKey: i },
+                i(
+                    { modalKey: o },
                     u
                         ? {
                               onCloseRequest() {
@@ -82,5 +82,5 @@ let i = 'collectibles shop product details modal',
             );
     },
     c = () => {
-        (0, l.Mr3)(i);
+        (0, l.Mr3)(o);
     };

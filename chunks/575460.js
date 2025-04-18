@@ -6,7 +6,7 @@ var i = n(481060),
     o = n(528027),
     l = n(686807),
     s = n(113318),
-    c = n(604528);
+    c = n(540650);
 function d(e) {
     let { benefit: t, guildId: n, onClick: d } = e,
         u = (0, s.Z)(n, t.ref_id),

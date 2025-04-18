@@ -13,7 +13,7 @@ var i = n(200651),
     f = n(849522),
     m = n(145597),
     g = n(981631),
-    y = n(842304);
+    y = n(151232);
 function O(e) {
     let { id: t, replyToMessageId: n, channel: O, onSend: v } = e,
         b = (0, f.Z)(),

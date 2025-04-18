@@ -24,7 +24,7 @@ var r = n(200651),
     x = n(981631),
     E = n(474936),
     j = n(388032),
-    C = n(238045);
+    C = n(886377);
 function O(e) {
     let { guildTier: t, guildBoostSlot: n, showAltText: a, isCanceled: o, premiumSubscription: c, fractionalPremiumInfo: d } = e,
         u = i.useMemo(() => {

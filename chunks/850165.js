@@ -2,7 +2,7 @@ n.d(e, { Z: () => i }), n(953529);
 var r = n(200651);
 n(192379);
 var s = n(481060),
-    o = n(948582);
+    o = n(987634);
 function i(t) {
     let { heroImageSrc: e, heroImageAlt: n, children: i, header: c, description: a } = t;
     return (0, r.jsxs)(r.Fragment, {

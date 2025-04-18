@@ -208,7 +208,7 @@ class H extends (r = o.ZP.PersistedStore) {
 b(H, 'displayName', 'ChannelSectionStore'), b(H, 'persistKey', 'ChannelSectionStore2');
 let W = new H(a.Z, {
     CHANNEL_TOGGLE_MEMBERS_SECTION: P,
-    PROFILE_PANEL_TOGGLE_SECTION: D,
+    USER_PROFILE_SIDEBAR_TOGGLE_SECTION: D,
     CHANNEL_TOGGLE_SUMMARIES_SECTION: w,
     SIDEBAR_VIEW_CHANNEL: M,
     SIDEBAR_VIEW_GUILD: L,

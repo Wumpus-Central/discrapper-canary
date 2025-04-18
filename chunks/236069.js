@@ -4,7 +4,7 @@ n(192379);
 var i = n(481060),
     l = n(295474),
     o = n(388032),
-    a = n(131715);
+    a = n(226293);
 function s(e) {
     let { guildId: t, analyticsLocations: n, analyticsLocation: s } = e,
         [c, u] = (0, l.ww)({

@@ -13,13 +13,13 @@ var l = n(200651),
     h = n(626135),
     g = n(208049),
     p = n(671895),
-    b = n(586826),
-    y = n(812613),
+    y = n(586826),
+    b = n(812613),
     v = n(203437),
     x = n(710111),
     j = n(981631),
     N = n(388032),
-    w = n(414213);
+    w = n(883099);
 let C = [
     {
         name: 'audio',
@@ -30,10 +30,10 @@ function S(e) {
     var t, n, r, s;
     let { guildId: S, sourceFile: O, existingSound: P, onClose: E, transitionState: k, showGuildPicker: Z = !1 } = e,
         [M, I] = a.useState(null != (n = null != (t = null == O ? void 0 : O.name) ? t : null == P ? void 0 : P.name) ? n : ''),
-        [_, D] = a.useState(null != (r = null == P ? void 0 : P.volume) ? r : 1),
-        [R, T] = a.useState(null == P ? void 0 : P.emojiId),
+        [T, _] = a.useState(null != (r = null == P ? void 0 : P.volume) ? r : 1),
+        [D, R] = a.useState(null == P ? void 0 : P.emojiId),
         [F, W] = a.useState(null == P ? void 0 : P.emojiName),
-        { file: z, loadAudioFromFile: A, maxVolume: L, setMaxVolume: B } = (0, b.p)(),
+        { file: z, loadAudioFromFile: A, maxVolume: B, setMaxVolume: L } = (0, y.p)(),
         [U, G] = a.useState(!1),
         [H, q] = a.useState(null),
         [V, Y] = a.useState(null),
@@ -91,7 +91,7 @@ function S(e) {
         er = a.useCallback(async (e, t) => {
             X('encoding');
             try {
-                let n = await (0, y.kV)(e, t);
+                let n = await (0, b.kV)(e, t);
                 return X('ready'), n;
             } catch (e) {
                 throw (X('encoding-failed'), e);
@@ -106,22 +106,22 @@ function S(e) {
                 if (null == t) return;
                 e = t;
             }
-            let t = (0, y.Zk)(e);
+            let t = (0, b.Zk)(e);
             X('uploading');
             try {
-                await (0, y.bb)({
+                await (0, b.bb)({
                     readPromise: t,
                     guildId: K,
                     name: M,
-                    volume: _,
-                    emojiId: R,
+                    volume: T,
+                    emojiId: D,
                     emojiName: F
                 }),
                     X('ready');
             } catch (e) {
                 throw new c.Z(e);
             }
-        }, [z, K, M, er, V, _, R, F]),
+        }, [z, K, M, er, V, T, D, F]),
         es = a.useCallback(async () => {
             o()(null != K, 'Cannot submit soundboard sound with no guildId'), G(!0), q(null);
             try {
@@ -130,18 +130,18 @@ function S(e) {
                           guildId: K,
                           soundId: P.soundId,
                           name: M,
-                          volume: _,
-                          emojiId: R,
+                          volume: T,
+                          emojiId: D,
                           emojiName: F
                       })
-                    : await ei(),
+                    : (await ei(), (0, u.showToast)((0, u.createToast)(N.NW.string(N.t.T7dhBA), u.ToastType.SUCCESS))),
                     E();
             } catch (e) {
                 ee(e);
             } finally {
-                X('ready'), G(!1), D(1), B(1);
+                X('ready'), G(!1), _(1), L(1);
             }
-        }, [el, E, K, P, M, _, R, F, ei, B]);
+        }, [el, E, K, P, M, T, D, F, ei, L]);
     (0, d.ZP)(() => {
         A(null),
             h.default.track(j.rMx.OPEN_MODAL, {
@@ -150,13 +150,13 @@ function S(e) {
             });
     }),
         a.useEffect(() => {
-            D(Math.min(_, L));
-        }, [_, D, L]);
+            _(Math.min(T, B));
+        }, [T, _, B]);
     let eo = (0, l.jsx)(f.Z, {
         guildId: K,
-        emojiId: R,
+        emojiId: D,
         emojiName: F,
-        setEmojiId: T,
+        setEmojiId: R,
         setEmojiName: W,
         error: null == H ? void 0 : H.getFirstFieldErrorMessage('emoji'),
         isRequiredField: !1
@@ -200,7 +200,7 @@ function S(e) {
                     (el || null != z) &&
                         (0, l.jsx)(p.Z, {
                             sound: P,
-                            volume: _,
+                            volume: T,
                             disabled: en,
                             onChange: Y
                         }),
@@ -242,10 +242,10 @@ function S(e) {
                         className: w.section,
                         title: N.NW.string(N.t['3CJlb2']),
                         children: (0, l.jsx)(u.iRW, {
-                            initialValue: _,
-                            onValueChange: (e) => D(e),
+                            initialValue: T,
+                            onValueChange: (e) => _(e),
                             minValue: 0,
-                            maxValue: L
+                            maxValue: B
                         })
                     })
                 ]

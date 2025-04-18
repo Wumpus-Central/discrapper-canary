@@ -6,7 +6,7 @@ var r = n(200651),
     i = n(481060),
     c = n(313201),
     s = n(388032),
-    d = n(98847);
+    d = n(716121);
 function u(e) {
     let { errorText: t, title: n, description: o, transitionState: u, onCancel: m, onConfirm: p, children: b } = e,
         g = (0, c.Dt)(),

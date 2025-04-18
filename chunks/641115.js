@@ -1,8 +1,8 @@
 n.d(t, { Z: () => k }), n(388685);
 var r = n(200651),
-    l = n(192379),
-    i = n(120356),
-    s = n.n(i),
+    i = n(192379),
+    l = n(120356),
+    s = n.n(l),
     a = n(512722),
     o = n.n(a),
     c = n(442837),
@@ -17,15 +17,15 @@ var r = n(200651),
     _ = n(592125),
     j = n(944486),
     v = n(594174),
-    S = n(74538),
-    N = n(451467),
-    C = n(122186),
-    b = n(37113),
+    b = n(74538),
+    S = n(451467),
+    N = n(122186),
+    C = n(37113),
     y = n(981631),
     Z = n(388032),
-    I = n(347226),
-    O = n(480197),
-    w = n(20493);
+    I = n(319255),
+    O = n(669872),
+    w = n(971005);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -96,8 +96,8 @@ function R() {
 function W(e) {
     let t,
         n,
-        { type: l, selected: i, needsPremium: a, needsDemo: o, analyticsLocation: c, onClick: u, onClose: f, setIsHovering: m } = e,
-        { value: h, label: x } = l;
+        { type: i, selected: l, needsPremium: a, needsDemo: o, analyticsLocation: c, onClick: u, onClose: f, setIsHovering: m } = e,
+        { value: h, label: x } = i;
     return (
         a
             ? ((t = (0, r.jsx)(d.DY3, {
@@ -133,7 +133,7 @@ function W(e) {
         {
             content: t,
             className: s()(O.selectorButton, {
-                [O.selectorButtonSelected]: i,
+                [O.selectorButtonSelected]: l,
                 [O.perksDemo]: o,
                 [O.premiumUpsell]: a
             }),
@@ -142,29 +142,29 @@ function W(e) {
     );
 }
 function k(e) {
-    let { onClose: t, selectedPreset: n, selectedResolution: i, selectedFPS: s, onResolutionChange: a, onFPSChange: x, onPresetChange: R, targetGuildPremiumTier: k, captureDeviceSelected: A } = e,
+    let { onClose: t, selectedPreset: n, selectedResolution: l, selectedFPS: s, onResolutionChange: a, onFPSChange: x, onPresetChange: R, targetGuildPremiumTier: k, captureDeviceSelected: A } = e,
         M = (0, c.e7)([v.default], () => {
             let e = v.default.getCurrentUser();
             return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
         }),
         L = (0, c.e7)([j.Z, _.Z], () => _.Z.getChannel(j.Z.getVoiceChannelId())),
-        D = S.ZP.canStreamQuality(S.U2.MID, M),
+        D = b.ZP.canStreamQuality(b.U2.MID, M),
         { location: G } = (0, f.O)(),
-        U = (0, m.Zq)({ autoTrackExposure: !1 }),
-        B = (0, p.B4)(),
+        B = (0, m.Zq)({ autoTrackExposure: !1 }),
+        U = (0, p.B4)(),
         z = v.default.getUser(null == L ? void 0 : L.hdStreamingBuyerId),
         F = null != L && null != L.hdStreamingUntil && new Date(L.hdStreamingUntil) > new Date() && null != z,
-        H = !D && !U,
-        [V, Y] = l.useState(!1),
-        J = A ? b.z8 : b.WC,
+        H = !D && !B,
+        [V, Y] = i.useState(!1),
+        J = A ? C.z8 : C.WC,
         X = E(T({}, G), { section: y.jXE.STREAM_SETTINGS }),
         K = (0, r.jsx)(d.hE2, {
             buttons: J.map((e) =>
                 W({
                     type: e,
-                    selected: e.value === i,
-                    needsPremium: !(0, N.Z)(n, e.value, s, M, k, L),
-                    needsDemo: B && e.value !== b.LY.RESOLUTION_720,
+                    selected: e.value === l,
+                    needsPremium: !(0, S.Z)(n, e.value, s, M, k, L),
+                    needsDemo: U && e.value !== C.LY.RESOLUTION_720,
                     analyticsLocation: X,
                     onClick: () => a(e.value),
                     onClose: t,
@@ -173,12 +173,12 @@ function k(e) {
             )
         }),
         q = (0, r.jsx)(d.hE2, {
-            buttons: b.k0.map((e) =>
+            buttons: C.k0.map((e) =>
                 W({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, N.Z)(n, i, e.value, M, k, L),
-                    needsDemo: B && e.value === b.ws.FPS_60,
+                    needsPremium: !(0, S.Z)(n, l, e.value, M, k, L),
+                    needsDemo: U && e.value === C.ws.FPS_60,
                     analyticsLocation: X,
                     onClick: () => x(e.value),
                     onClose: t,
@@ -188,24 +188,24 @@ function k(e) {
         }),
         Q = [
             {
-                value: b.tI.PRESET_VIDEO,
+                value: C.tI.PRESET_VIDEO,
                 label: Z.NW.string(Z.t.HcwHc3)
             },
             ...(A
                 ? []
                 : [
                       {
-                          value: b.tI.PRESET_DOCUMENTS,
+                          value: C.tI.PRESET_DOCUMENTS,
                           label: Z.NW.string(Z.t['/RfohI'])
                       }
                   ]),
             {
-                value: b.tI.PRESET_CUSTOM,
+                value: C.tI.PRESET_CUSTOM,
                 label: Z.NW.string(Z.t['+eOtrK'])
             }
         ],
         $ =
-            n === b.tI.PRESET_DOCUMENTS
+            n === C.tI.PRESET_DOCUMENTS
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(h.Z, {
@@ -220,13 +220,13 @@ function k(e) {
                               })
                           }),
                           H
-                              ? (0, r.jsx)(C.Z, {
+                              ? (0, r.jsx)(N.Z, {
                                     message: Z.NW.string(Z.t.deDogI),
                                     onClose: t,
                                     openStreamUpsellModal: P
                                 })
                               : null,
-                          B && (0, r.jsx)(C.c, {}),
+                          U && (0, r.jsx)(N.c, {}),
                           F &&
                               null != L.hdStreamingUntil &&
                               (0, r.jsx)(g.Z, {
@@ -255,13 +255,13 @@ function k(e) {
                               ]
                           }),
                           H
-                              ? (0, r.jsx)(C.Z, {
+                              ? (0, r.jsx)(N.Z, {
                                     onClose: t,
                                     openStreamUpsellModal: P,
                                     glow: V
                                 })
                               : null,
-                          B && (0, r.jsx)(C.c, {}),
+                          U && (0, r.jsx)(N.c, {}),
                           F &&
                               null != L.hdStreamingUntil &&
                               (0, r.jsx)(g.Z, {

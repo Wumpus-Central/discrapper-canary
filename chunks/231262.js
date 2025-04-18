@@ -1,4 +1,4 @@
-a.d(t, { h: () => _ });
+a.d(t, { h: () => p });
 var n = a(200651),
     s = a(192379),
     r = a(120356),
@@ -7,21 +7,21 @@ var n = a(200651),
     o = a(653371),
     c = a(388755),
     d = a(330711),
-    u = a(419920);
-let p = null;
-class _ extends s.PureComponent {
+    u = a(316202);
+let _ = null;
+class p extends s.PureComponent {
     render() {
-        let { token: e, className: t, onChangeLocale: a, mainContentId: r, mobileClassName: i, avoidRouter: d, authRedirectTo: _, openNavAriaLabel: h, hideNavAriaLabel: m, skipToContentLabel: N } = this.props;
-        return null == p
+        let { token: e, className: t, onChangeLocale: a, mainContentId: r, mobileClassName: i, avoidRouter: d, authRedirectTo: p, openNavAriaLabel: h, hideNavAriaLabel: m, skipToContentLabel: N } = this.props;
+        return null == _
             ? null
             : (0, n.jsxs)(s.Fragment, {
                   children: [
                       (0, n.jsx)(o.a, {
                           className: l()(u.desktopHeader, t),
-                          TrackClick: p,
+                          TrackClick: _,
                           token: e,
                           avoidRouter: d,
-                          authRedirectTo: _,
+                          authRedirectTo: p,
                           onChangeLocale: a,
                           mainContentId: r,
                           skipToContentLabel: N
@@ -30,7 +30,7 @@ class _ extends s.PureComponent {
                           className: l()(u.mobileHeader, i),
                           token: e,
                           avoidRouter: d,
-                          TrackClick: p,
+                          TrackClick: _,
                           onChangeLocale: a,
                           openNavAriaLabel: h,
                           hideNavAriaLabel: m
@@ -41,7 +41,7 @@ class _ extends s.PureComponent {
     constructor(e) {
         super(e),
             null != e.locale && d.Z.setLocale(e.locale),
-            (p = (t) =>
+            (_ = (t) =>
                 (0, n.jsx)(
                     i.Z,
                     (function (e) {

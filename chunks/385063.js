@@ -10,7 +10,7 @@ var i = n(442837),
     u = n(739566),
     d = n(834129),
     p = n(388032),
-    m = n(677972);
+    m = n(252303);
 function f(e) {
     let { message: t, usernameHook: a, compact: l, isForumPost: o } = e,
         s = (0, u.ZP)(t),

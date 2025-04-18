@@ -25,7 +25,7 @@ var r = n(200651),
     N = n(981631),
     I = n(921944),
     P = n(388032),
-    S = n(393740);
+    S = n(685837);
 function Z(e) {
     let { channel: t, idle: n, whichPopoutIsOpen: Z, setWhichPopoutIsOpen: T } = e,
         A = (0, l.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),

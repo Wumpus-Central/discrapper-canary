@@ -4,7 +4,7 @@ n(192379);
 var i = n(120356),
     l = n.n(i),
     o = n(134433),
-    a = n(753130);
+    a = n(440306);
 function s(e) {
     let t,
         { className: n, children: i, verified: s, roleColor: c, roleName: u } = e;

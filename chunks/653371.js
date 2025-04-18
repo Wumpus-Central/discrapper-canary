@@ -8,12 +8,12 @@ var n = a(200651),
     c = a(66037),
     d = a(787907),
     u = a(643103),
-    p = a(34211),
-    _ = a(231338),
+    _ = a(34211),
+    p = a(231338),
     h = a(436620),
     m = a(431138),
     N = a(330711),
-    I = a(306222);
+    I = a(721380);
 function g(e, t, a) {
     return (
         t in e
@@ -27,22 +27,22 @@ function g(e, t, a) {
         e
     );
 }
-let k = _.j_.MAIN_NAVIGATION_MENU,
+let k = p.j_.MAIN_NAVIGATION_MENU,
     O = () => [
         {
-            route: (0, i.L)(_.RK.TWITTER),
+            route: (0, i.L)(p.RK.TWITTER),
             linkClicked: 'twitter',
             alt: "Discord's Twitter",
             img: m.r.ASSET_SOCIAL_TWITTER
         },
         {
-            route: _.fK.FACEBOOK_URL,
+            route: p.fK.FACEBOOK_URL,
             linkClicked: 'facebook',
             alt: "Discord's Facebook",
             img: m.r.ASSET_SOCIAL_FACEBOOK
         },
         {
-            route: _.fK.INSTAGRAM_URL,
+            route: p.fK.INSTAGRAM_URL,
             linkClicked: 'instagram',
             alt: "Discord's Instagram",
             img: m.r.ASSET_SOCIAL_INSTAGRAM
@@ -69,8 +69,8 @@ class A extends s.PureComponent {
                                     data: { linkClicked: 'logo' },
                                     children: (0, n.jsx)(c.Z, {
                                         avoidRouter: i,
-                                        to: _.am.INDEX,
-                                        from: _.j_.MAIN_NAVIGATION_MENU,
+                                        to: p.am.INDEX,
+                                        from: p.j_.MAIN_NAVIGATION_MENU,
                                         children: (0, n.jsx)(d.O, {})
                                     })
                                 }),
@@ -85,7 +85,7 @@ class A extends s.PureComponent {
                         }),
                         (0, n.jsx)('ul', {
                             className: I.headerNav,
-                            children: (0, n.jsx)(p.o, {
+                            children: (0, n.jsx)(_.o, {
                                 avoidRouter: i,
                                 TrackClick: r,
                                 styles: I
@@ -114,7 +114,7 @@ class A extends s.PureComponent {
                     r = (0, o.Ui)(a),
                     l = N.Z.Messages.NAVIGATION_LOGIN;
                 return (
-                    null != e && ((r = _.$w.ME), (l = N.Z.Messages.NAVIGATION_OPEN)),
+                    null != e && ((r = p.$w.ME), (l = N.Z.Messages.NAVIGATION_OPEN)),
                     s
                         ? (0, n.jsx)(
                               'li',

@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(388685);
 var r = n(200651),
     l = n(192379),
     a = n(200100),
-    o = n(780384),
-    i = n(481060),
+    i = n(780384),
+    o = n(481060),
     s = n(410030),
     c = n(965645),
     u = n(362061);
@@ -70,7 +70,7 @@ let d = [
     p = 1 / 300,
     f = (0, a.animated)(c.Z),
     g = (0, a.animated)(u.Z),
-    h = (0, a.animated)(i.OgN),
+    h = (0, a.animated)(o.OgN),
     m = l.memo(function (e) {
         let {
                 themeOverride: t,
@@ -85,10 +85,10 @@ let d = [
             [m, _] = (function (e) {
                 let [t, n] = l.useState(!1),
                     [r, a] = l.useState(Math.floor(7 * Math.random())),
-                    o = l.useRef(r);
+                    i = l.useRef(r);
                 return (
                     l.useEffect(() => {
-                        o.current = r;
+                        i.current = r;
                     }),
                     l.useEffect(() => {
                         if (e) return;
@@ -96,14 +96,14 @@ let d = [
                         if ((n(t), !t)) {
                             let e;
                             do e = Math.floor(7 * Math.random());
-                            while (e === o.current);
+                            while (e === i.current);
                             a(e);
                         }
                     }, [e]),
                     [t, r]
                 );
             })(n),
-            C = (0, i.q_F)({
+            C = (0, o.q_F)({
                 reverse: !n,
                 reset: !0,
                 from: { scale: 1 },
@@ -114,12 +114,12 @@ let d = [
                 }
             }),
             v = a ? _ : 0,
-            x = (0, o.wj)(null != t ? t : u) ? c.dark[v] : c.light[v];
+            x = (0, i.wj)(null != t ? t : u) ? c.dark[v] : c.light[v];
         return !n && a
             ? (0, r.jsx)(h, {})
             : a && m
               ? (0, r.jsx)(g, {
-                    isDark: (0, o.wj)(u),
+                    isDark: (0, i.wj)(u),
                     style: C
                 })
               : (0, r.jsx)(f, {

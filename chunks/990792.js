@@ -11,10 +11,10 @@ var l = n(200651),
     f = n(293501),
     m = n(943351),
     h = n(231338),
-    g = n(183519);
+    g = n(415853);
 let p = a.memo(function (e) {
     let { file: t, audio: n, className: r, waveformSettings: p } = e,
-        [b, y] = a.useState({
+        [y, b] = a.useState({
             width: 0,
             height: 0
         }),
@@ -60,10 +60,10 @@ let p = a.memo(function (e) {
         w = (0, c.ZP)(),
         C = (0, d.Sl)((0, o.wj)(w) ? h.Il.PRIMARY_300 : h.Il.PRIMARY_700),
         S = null == j || null == N,
-        O = (0 === b.width || 0 === b.height || S) && null != t,
+        O = (0 === y.width || 0 === y.height || S) && null != t,
         P = a.useCallback(() => {
             null != v.current &&
-                y({
+                b({
                     width: v.current.offsetWidth,
                     height: v.current.offsetHeight
                 });
@@ -86,7 +86,7 @@ let p = a.memo(function (e) {
                 t = e.getContext('2d');
             if (null == t) return;
             let { width: n, height: l } = e;
-            if (0 !== b.width && 0 !== b.height && null != N && N.length > 0) {
+            if (0 !== y.width && 0 !== y.height && null != N && N.length > 0) {
                 let e = n / N.length,
                     a = -(e * (m.nl.waveformBarWidth - 1));
                 t.clearRect(0, 0, n, l), (t.fillStyle = C.hex);
@@ -97,15 +97,15 @@ let p = a.memo(function (e) {
                     t.fillRect(i, s, e - a, r);
                 }
             }
-        }, [C, b, w, N]),
+        }, [C, y, w, N]),
         (0, l.jsxs)('div', {
             className: i()(g.container, r),
             children: [
                 (0, l.jsx)('canvas', {
                     className: g.waveformCanvas,
                     ref: v,
-                    width: 4 * b.width,
-                    height: 4 * b.height
+                    width: 4 * y.width,
+                    height: 4 * y.height
                 }),
                 O &&
                     (0, l.jsx)('div', {

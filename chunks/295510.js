@@ -1,35 +1,35 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => a });
 var r = n(200651);
 n(192379);
-var i = n(153867),
-    l = n(468026),
-    a = n(394059),
-    o = n(388032);
-function u(e) {
+var l = n(153867),
+    i = n(468026),
+    o = n(394059),
+    u = n(388032);
+function a(e) {
     var { type: t, onConfirm: n } = e,
-        u = (function (e, t) {
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        l = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return i;
+            return l;
         })(e, ['type', 'onConfirm']);
-    let d = t === a.K.STREAM ? o.NW.string(o.t['/lFMWl']) : o.NW.string(o.t.xzxhZW),
-        s = t === a.K.STREAM ? o.NW.string(o.t.xaOX7e) : o.NW.string(o.t.oU1p9P);
+    let c = t === o.K.STREAM ? u.NW.string(u.t['/lFMWl']) : u.NW.string(u.t.xzxhZW),
+        d = t === o.K.STREAM ? u.NW.string(u.t.xaOX7e) : u.NW.string(u.t.oU1p9P);
     return (0, r.jsx)(
-        l.default,
+        i.default,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -56,17 +56,17 @@ function u(e) {
             return e;
         })(
             {
-                confirmText: o.NW.string(o.t['cY+Ooa']),
-                secondaryConfirmText: o.NW.string(o.t['JdIQ/f']),
-                title: d,
-                cancelText: o.NW.string(o.t['ETE/oK']),
+                confirmText: u.NW.string(u.t['cY+Ooa']),
+                secondaryConfirmText: u.NW.string(u.t['JdIQ/f']),
+                title: c,
+                cancelText: u.NW.string(u.t['ETE/oK']),
                 onConfirm: n,
                 onConfirmSecondary: () => {
-                    i.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), n();
+                    l.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), n();
                 },
-                body: s
+                body: d
             },
-            u
+            a
         )
     );
 }

@@ -13,8 +13,8 @@ var n = r(200651),
     f = r(810568),
     p = r(981631),
     O = r(388032),
-    E = r(263930),
-    N = r(926921);
+    E = r(206218),
+    N = r(370221);
 function h(e) {
     let { detectedGame: t, trackClick: r, onInviteResolved: i, closeModal: h } = e,
         [x, v] = a.useState(),

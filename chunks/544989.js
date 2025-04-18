@@ -4,7 +4,7 @@ n(192379);
 var i = n(120356),
     o = n.n(i),
     a = n(228168),
-    s = n(405751);
+    s = n(18999);
 function l(e) {
     let { profileType: t, children: n } = e;
     return (0, r.jsx)('div', {

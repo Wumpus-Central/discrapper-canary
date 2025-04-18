@@ -4,7 +4,7 @@ var r = n(200651),
     s = n(481060),
     l = n(428760),
     a = n(388032),
-    o = n(283902);
+    o = n(194355);
 function c(e) {
     let { onChange: t, initialValue: n, maxWordCount: c, collapsed: d = !1 } = e,
         [u, m] = i.useState(!d);

@@ -2,7 +2,7 @@ n.d(t, { Z: () => o });
 var r = n(200651),
     i = n(192379),
     l = n(122611),
-    a = n(302000);
+    a = n(303478);
 function o(e) {
     let { guild: t, setHasSubheader: n } = e,
         o = i.useRef(null);

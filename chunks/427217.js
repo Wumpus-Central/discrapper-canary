@@ -4,7 +4,7 @@ n(192379);
 var i = n(120356),
     s = n.n(i),
     a = n(584973),
-    l = n(60213);
+    l = n(443762);
 function o(e) {
     let { activity: t, className: n, emojiClassName: i, textClassName: o, placeholderText: c, soloEmojiClassName: d, animate: u = !0, hideTooltip: m = !1, hideEmoji: g = !1, children: p } = e;
     if (null == t) return null;

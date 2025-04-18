@@ -6,10 +6,10 @@ var r = n(200651),
     a = n(641360),
     s = n(140106),
     c = n(388032),
-    u = n(639041);
+    u = n(957694);
 function d(e) {
-    let { channel: t, children: n, className: i } = e;
-    return (0, a.I3)('HeaderBarMaybeClickableGdmIcon', t.id)
+    let { channel: t, children: n, className: i, editable: d, location: p } = e;
+    return (0, a.I3)('HeaderBarMaybeClickableGdmIcon', t.id, { autoTrackExposure: d }) && d
         ? (0, r.jsx)(o.ua7, {
               position: 'bottom',
               text: c.NW.string(c.t['0qPSMT']),
@@ -45,7 +45,7 @@ function d(e) {
                       (c = c =
                           {
                               className: l()(u.editableGdmIcon, i),
-                              onClick: () => (0, s.P5)(t.id),
+                              onClick: () => (0, s.P5)(t.id, p),
                               children: [
                                   n,
                                   (0, r.jsx)('div', {

@@ -90,7 +90,7 @@ async function O(e) {
         Z = k === p.Skl.ONLINE ? V : k;
     (y = await (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('94989'), n.e('82412'), n.e('62880'), n.e('54636')]).then(n.bind(n, 678780));
+            let { default: e } = await Promise.all([n.e('94989'), n.e('82412'), n.e('62880'), n.e('1381')]).then(n.bind(n, 678780));
             return (t) =>
                 (0, r.jsx)(
                     e,

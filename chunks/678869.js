@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(981631),
     A = n(616922),
     C = n(388032),
-    R = n(292199),
-    P = n(610220);
+    R = n(731399),
+    P = n(175985);
 function w(e, t) {
     return C.NW.formatToPlainString(C.t.h2yWWV, {
         username: t.username,

@@ -8,7 +8,7 @@ var i = n(803997),
     o = n.n(i),
     a = n(657707),
     s = n(777207),
-    l = n(172204),
+    l = n(939440),
     c = (function (e) {
         return (e.WARNING = 'warn'), (e.INFO = 'info'), (e.ERROR = 'danger'), (e.POSITIVE = 'positive'), (e.PREVIEW = 'preview'), e;
     })({});

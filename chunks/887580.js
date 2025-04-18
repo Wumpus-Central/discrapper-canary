@@ -17,7 +17,7 @@ var r = n(200651),
     u = n(492435),
     d = n(389494),
     f = n(353926),
-    _ = n(405548);
+    _ = n(968431);
 let p = RegExp('^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$', 'i');
 function h(e) {
     return p.test(e);

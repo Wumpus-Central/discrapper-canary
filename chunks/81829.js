@@ -5,9 +5,9 @@ var r = n(200651),
     a = n(200100),
     i = n(481060),
     c = n(763283),
-    l = n(622802),
+    l = n(609077),
     u = n(388032),
-    d = n(122846),
+    d = n(812898),
     f = n(225893);
 function p(e) {
     let { id: t, points: n, onFinished: s } = e,

@@ -22,7 +22,7 @@ var r = n(200651),
     j = n(361057),
     O = n(997614),
     E = n(159909),
-    N = n(531675);
+    N = n(685455);
 function I(e) {
     let { channel: t, hasActiveStream: n, showRightDivider: I, themeable: P = !1 } = e,
         { analyticsLocations: S } = (0, a.ZP)(o.Z.VOICE_CONTROL_TRAY),

@@ -1,6 +1,6 @@
 n.d(t, {
     T: () => A,
-    Z: () => T
+    Z: () => C
 });
 var r = n(200651),
     l = n(192379),
@@ -28,7 +28,7 @@ var r = n(200651),
     Z = n(981631),
     x = n(65154),
     N = n(388032),
-    w = n(519417);
+    w = n(816732);
 let P = s.EFr.SIZE_80,
     R = s.EFr.SIZE_40;
 function A(e) {
@@ -90,8 +90,8 @@ function A(e) {
           })
         : null;
 }
-function T(e) {
-    let { participant: t, channel: n, inCall: i, width: s, paused: v, selected: A, fit: T, onVideoResize: C, blocked: D, ignored: M, noVideoRender: L = !1, pulseSpeakingIndicator: k = !1, inOverlayPopout: U = !1 } = e,
+function C(e) {
+    let { participant: t, channel: n, inCall: i, width: s, paused: v, selected: A, fit: C, onVideoResize: T, blocked: D, ignored: M, noVideoRender: L = !1, pulseSpeakingIndicator: k = !1, inOverlayPopout: U = !1 } = e,
         W = y.Z.getVideoComponent(),
         F = (0, o.e7)([S.default], () => S.default.getId()),
         { user: V, streamId: Y, speaking: H } = t,
@@ -136,13 +136,13 @@ function T(e) {
             : (0, r.jsx)(
                   E.Z,
                   {
-                      onResize: C,
+                      onResize: T,
                       wrapperClassName: w.videoWrapper,
                       className: w.content,
                       mirror: z,
                       streamId: Y,
                       videoComponent: W,
-                      fit: T,
+                      fit: C,
                       paused: v,
                       videoSpinnerContext: V.id === F ? c.m.SELF_VIDEO : c.m.REMOTE_VIDEO,
                       userId: V.id

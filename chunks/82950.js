@@ -3,7 +3,7 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     a = n(207126),
-    l = n(763010);
+    l = n(108063);
 function o(e) {
     let { channel: t } = e;
     return (0, r.jsxs)('div', {

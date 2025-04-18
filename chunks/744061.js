@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(626135),
     d = n(981631),
     p = n(388032),
-    h = n(41281),
-    f = n(73433);
+    h = n(350589),
+    f = n(852831);
 function m(e) {
     let { onClose: t, onConfirm: m, onCancel: g, channel: b, analyticsType: _, popoutText: y, animation: C } = e;
     i.useEffect(() => {

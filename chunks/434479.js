@@ -6,9 +6,9 @@ var i = n(120356),
     o = n(91192),
     s = n(589440),
     a = n(481060),
-    c = n(440185),
-    u = n(915887),
-    d = n(768107);
+    c = n(298018),
+    u = n(653084),
+    d = n(830082);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,7 +54,7 @@ function p(e, t) {
 }
 function f(e) {
     var t,
-        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: _, background: y, showUnread: v = !1 } = e,
+        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: y, background: _, showUnread: v = !1 } = e,
         O = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -101,7 +101,7 @@ function f(e) {
                           },
                 className: l()(u.containerDefault, d.wrapper, { [d.modeSelected]: b }, i),
                 children: [
-                    y,
+                    _,
                     v ? (0, r.jsx)('div', { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)('div', {
                         className: l()([d.link, d.basicChannelRowLink, f]),
@@ -117,7 +117,7 @@ function f(e) {
                                     'aria-hidden': !0,
                                     children: m
                                 }),
-                                _
+                                y
                             ]
                         })
                     })

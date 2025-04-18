@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
-    s = n(462991);
+    s = n(473528);
 let l = i.forwardRef((e, t) => {
     let { muted: n = !1, highlighted: i = !1, avatar: o, decorators: l, name: c, subText: u, avatarClassName: d, innerClassName: f } = e;
     return (0, r.jsxs)('div', {

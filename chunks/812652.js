@@ -1,7 +1,7 @@
 n.d(t, { Z: () => Z }), n(388685), n(415506);
 var r = n(200651),
-    l = n(392711),
-    i = n.n(l),
+    i = n(392711),
+    l = n.n(i),
     s = n(268146),
     a = n(481060),
     o = n(100527),
@@ -15,10 +15,10 @@ var r = n(200651),
     p = n(156582),
     g = n(396678),
     _ = n(37113),
-    j = n(843874),
+    j = n(519229),
     v = n(388032),
-    S = n(864443);
-let N = [
+    b = n(959596);
+let S = [
         {
             value: _.tI.PRESET_VIDEO,
             canUse: (e) => !0
@@ -32,7 +32,7 @@ let N = [
             canUse: (e) => !0
         }
     ],
-    C = [
+    N = [
         {
             value: _.LY.RESOLUTION_720,
             canUse: (e) => !0
@@ -50,11 +50,11 @@ let N = [
             canUse: (e) => e !== s.vA.CAMERA
         }
     ],
-    b = [_.ws.FPS_15, _.ws.FPS_30, _.ws.FPS_60];
+    C = [_.ws.FPS_15, _.ws.FPS_30, _.ws.FPS_60];
 function y(e) {
     let { label: t } = e;
     return (0, r.jsxs)('div', {
-        className: S.premiumOptionContainer,
+        className: b.premiumOptionContainer,
         children: [
             t,
             (0, r.jsx)(a.SrA, {
@@ -65,22 +65,22 @@ function y(e) {
     });
 }
 function Z(e) {
-    var t, n, l;
-    let { onClose: S, onSelect: Z } = e,
+    var t, n, i;
+    let { onClose: b, onSelect: Z } = e,
         [{ notifyFriends: I, hidePreview: O, muteStreamAudio: w, preset: T, resolution: E, fps: P, sourceType: R, audioSourceId: W }, k] = (0, x.E_)(),
         A = (0, c.Z)(),
         M = (0, h.Z)(),
         [L, D] = null != (n = (0, g.Z)(_.tI.PRESET_VIDEO)) ? n : [_.LY.RESOLUTION_720, _.ws.FPS_30],
-        [G, U] = null != (l = (0, g.Z)(_.tI.PRESET_DOCUMENTS)) ? l : [_.LY.RESOLUTION_SOURCE, _.ws.FPS_15];
+        [G, B] = null != (i = (0, g.Z)(_.tI.PRESET_DOCUMENTS)) ? i : [_.LY.RESOLUTION_SOURCE, _.ws.FPS_15];
     return (0, r.jsxs)(a.v2r, {
         'aria-label': v.NW.string(v.t['+1H47u']),
         navId: 'stream-options',
-        onClose: S,
+        onClose: b,
         onSelect: Z,
         children: [
             (0, r.jsx)(a.kSQ, {
                 label: v.NW.string(j.Z.P2pjm5),
-                children: N.filter((e) => {
+                children: S.filter((e) => {
                     let { canUse: t } = e;
                     return t(R);
                 }).map((e) => {
@@ -102,7 +102,7 @@ function Z(e) {
                                     case _.tI.PRESET_DOCUMENTS:
                                         return v.NW.format(j.Z['8tcFLy'], {
                                             resolution: (0, m.M)(G),
-                                            frameRate: U
+                                            frameRate: B
                                         });
                                     case _.tI.PRESET_CUSTOM:
                                         return;
@@ -127,7 +127,7 @@ function Z(e) {
                         (0, r.jsx)(a.sNh, {
                             id: 'resolution',
                             label: v.NW.string(j.Z.IG5n0d),
-                            children: C.filter((e) => {
+                            children: N.filter((e) => {
                                 let { canUse: t } = e;
                                 return t(R);
                             }).map((e) => {
@@ -141,7 +141,7 @@ function Z(e) {
                                         label: t !== _.LY.RESOLUTION_720 ? (0, r.jsx)(y, { label: (0, m.M)(t) }) : (0, m.M)(t),
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, u.Z)(T, e, P, d.default.getCurrentUser(), M)) return S(), (0, p.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
+                                                if (!(0, u.Z)(T, e, P, d.default.getCurrentUser(), M)) return b(), (0, p.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
                                                 k({
                                                     type: 'set_resolution',
                                                     resolution: e
@@ -155,7 +155,7 @@ function Z(e) {
                         (0, r.jsx)(a.sNh, {
                             id: 'frame-rate',
                             label: v.NW.string(v.t.SkkeIi),
-                            children: b.map((e) =>
+                            children: C.map((e) =>
                                 (0, r.jsx)(
                                     a.k5B,
                                     {
@@ -165,7 +165,7 @@ function Z(e) {
                                         label: e === _.ws.FPS_60 ? (0, r.jsx)(y, { label: ''.concat(e, 'fps') }) : ''.concat(e, 'fps'),
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, u.Z)(T, E, e, d.default.getCurrentUser(), M)) return S(), (0, p.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
+                                                if (!(0, u.Z)(T, E, e, d.default.getCurrentUser(), M)) return b(), (0, p.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
                                                 k({
                                                     type: 'set_fps',
                                                     fps: e
@@ -195,7 +195,7 @@ function Z(e) {
                     label: v.NW.string(j.Z.YSdHV1),
                     subtext: null == (t = A[null != W ? W : '']) ? void 0 : t.name,
                     subtextLineClamp: 1,
-                    children: i().map(A, (e) => {
+                    children: l().map(A, (e) => {
                         let { id: t, name: n } = e;
                         return (0, r.jsx)(
                             a.k5B,

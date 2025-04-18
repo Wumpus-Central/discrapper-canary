@@ -21,7 +21,7 @@ var r = n(200651),
     j = n(526761),
     C = n(726985),
     O = n(388032),
-    S = n(545784);
+    S = n(804008);
 function v() {
     c.Z.useExperiment({ location: 'profile_customization_auto' });
     let e = (0, s.e7)([u.Z], () => u.Z.getGuild()),

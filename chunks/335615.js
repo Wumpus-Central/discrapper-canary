@@ -48,7 +48,7 @@ var r = n(200651),
     K = n(998502),
     X = n(981631),
     Q = n(388032),
-    J = n(11847);
+    J = n(39985);
 function $(e, t, n) {
     return (
         t in e
@@ -137,7 +137,7 @@ let er = K.ZP.getEnableHardwareAcceleration(),
             Z = i.useCallback(
                 (e) => {
                     (0, m.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('4040'), n.e('98693'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387)),
+                        let { default: e } = await Promise.all([n.e('26881'), n.e('4040'), n.e('98693'), n.e('7717'), n.e('97474')]).then(n.bind(n, 757387)),
                             t = V.Z.isInChannel(G.Z.getVoiceChannelId(), u.id);
                         return (n) =>
                             (0, r.jsx)(

@@ -7,7 +7,7 @@ var r = n(120356),
     s = n(942951),
     l = n(456269),
     c = n(388032),
-    u = n(794168);
+    u = n(747495);
 let d = (e) => {
     var t, n;
     let { message: r, channel: d, renderColon: h, hasUnreads: p } = e,

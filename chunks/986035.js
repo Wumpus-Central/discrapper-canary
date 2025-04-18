@@ -5,8 +5,8 @@ var r = n(200651),
     o = n.n(l),
     a = n(481060),
     s = n(480916),
-    c = n(352075),
-    u = n(20493);
+    c = n(143234),
+    u = n(971005);
 let d = function (e) {
     let { title: t, description: n, agreement: l, disagreement: d, onAgree: p, onDisagree: h, imageClassName: f, agreementButtonColor: m = a.zxk.Colors.RED, modalType: g, channelId: b, guildId: _ } = e;
     i.useEffect(() => {

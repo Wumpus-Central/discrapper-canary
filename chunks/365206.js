@@ -8,7 +8,7 @@ var i = n(120356),
     s = n(839963),
     c = n(139256),
     u = n(388032),
-    d = n(241127);
+    d = n(376705);
 function p(e) {
     let { didSelfVote: t, label: n, percentage: i } = e;
     return (0, r.jsxs)('div', {

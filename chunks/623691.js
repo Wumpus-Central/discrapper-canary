@@ -10,7 +10,7 @@ var r = n(200651),
     u = n(494831),
     m = n(981631),
     g = n(388032),
-    p = n(587072);
+    p = n(154458);
 function h(e) {
     let { guild: t, everyoneRole: n, filteredRoles: s, setEditRoleId: l, query: o, setQuery: c, setHeaderHeight: d } = e,
         m = i.useRef(null);

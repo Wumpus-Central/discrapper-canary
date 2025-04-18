@@ -7,7 +7,7 @@ var i = n(481060),
     a = n(981631),
     o = n(474936),
     c = n(388032),
-    d = n(109626);
+    d = n(676172);
 function u(e) {
     let { guild: t, numSounds: n, isOutOfSlots: u } = e,
         m = t.premiumTier,

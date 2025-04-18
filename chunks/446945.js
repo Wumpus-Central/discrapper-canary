@@ -8,7 +8,7 @@ var i = n(481060),
     o = n(540457),
     c = n(700833),
     d = n(388032),
-    u = n(999384);
+    u = n(695303);
 function m(e) {
     let { addFormField: t, onSelect: n, guild: o, allowTerms: m } = e;
     return (0, r.jsx)(i.v2r, {

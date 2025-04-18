@@ -8,7 +8,7 @@ var o = n(200100),
     l = n(644646),
     c = n(46140),
     d = n(388032),
-    u = n(420444);
+    u = n(381649);
 let p = (e) => {
     let { quest: t, expansionSpring: n, isFullyExpanded: p, partnerBranding: m, useReducedMotion: f } = e,
         g = (0, i.j)({ location: c.dr.QUESTS_BAR });

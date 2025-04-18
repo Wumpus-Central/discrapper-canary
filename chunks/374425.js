@@ -14,7 +14,7 @@ var r = n(200651),
     h = n(217588),
     g = n(981631),
     _ = n(474936),
-    b = n(282940);
+    b = n(288001);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,8 +58,8 @@ function y(e, t) {
         e
     );
 }
-let v = (0, d.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
-    E = (e) => {
+let E = (0, d.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+    v = (e) => {
         null != e &&
             s.ZP.trackWithMetadata(g.rMx.EXPRESSION_TOOLTIP_VIEWED, {
                 type: _.cd.STICKER_IN_MESSAGE_HOVER,
@@ -115,7 +115,7 @@ let v = (0, d.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                             text: (0, u.Y)(j),
                             'aria-label': !1,
                             onTooltipShow: () => {
-                                E(O);
+                                v(O);
                             },
                             children: (e) =>
                                 (0, r.jsx)(
@@ -129,7 +129,7 @@ let v = (0, d.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                                         tag: 'span',
                                         children: (0, r.jsx)(f.Z, {
                                             isInteracting: a,
-                                            size: v,
+                                            size: E,
                                             sticker: null != O ? O : t
                                         })
                                     })

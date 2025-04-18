@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(160404),
     x = n(225675),
     y = n(981631),
-    v = n(388032),
-    E = n(318135);
+    E = n(388032),
+    v = n(545894);
 function O(e) {
     var t;
     return (0, r.jsx)('span', {
@@ -87,9 +87,9 @@ function N(e) {
         c.$e(y.Plq.MANAGE_GUILD, y.Plq.MANAGE_ROLES)
     ) || a.isOwner(n.id))
         ? (0, r.jsx)('div', {
-              className: E.container,
+              className: v.container,
               children: (0, r.jsx)(d.hQY, {
-                  placeholder: v.NW.string(v.t.Sojqsr),
+                  placeholder: E.NW.string(E.t.Sojqsr),
                   value: I,
                   onChange: T,
                   autoFocus: !0,
@@ -132,6 +132,6 @@ function N(e) {
           })
         : (0, r.jsx)(d.Text, {
               variant: 'text-md/medium',
-              children: v.NW.string(v.t.MNSTbW)
+              children: E.NW.string(E.t.MNSTbW)
           });
 }

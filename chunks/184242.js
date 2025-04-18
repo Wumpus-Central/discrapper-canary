@@ -1,5 +1,5 @@
-t.d(n, { Ac: () => r });
-let o = (0, t(818083).B)({
+t.d(n, { Ac: () => o });
+let r = (0, t(818083).B)({
     kind: 'user',
     id: '2024-08_user_profile_blockee_hide_mutuals',
     label: 'User Profile Blockee Hide Mutuals',
@@ -12,8 +12,8 @@ let o = (0, t(818083).B)({
         }
     ]
 });
-function r(e) {
+function o(e) {
     let { location: n, autoTrackExposure: t = !0 } = e,
-        { enabled: r } = o.useExperiment({ location: n }, { autoTrackExposure: t });
-    return r;
+        { enabled: o } = r.useExperiment({ location: n }, { autoTrackExposure: t });
+    return o;
 }

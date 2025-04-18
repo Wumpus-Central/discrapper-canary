@@ -4,7 +4,7 @@ var r = n(200651),
     o = n(958783),
     a = n(499997),
     s = n(388032),
-    l = n(526361);
+    l = n(353723);
 let c = (e) => {
     let { showSubtext: t = !1 } = e;
     return (0, r.jsxs)(o.Z, {

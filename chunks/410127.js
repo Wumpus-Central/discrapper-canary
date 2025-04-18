@@ -1,8 +1,8 @@
-n.d(t, { Z: () => o }), n(35282);
+n.d(t, { Z: () => i }), n(35282);
 var r = n(593473),
     l = n(512969),
     a = n(215023);
-let o = () => {
+let i = () => {
     let e = (0, l.TH)(),
         { tab: t } = (0, r.parse)(e.search);
     if (Object.values(a.AW).includes(t)) return t;

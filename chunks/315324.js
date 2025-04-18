@@ -19,7 +19,7 @@ var i = n(442837),
     m = n(788858),
     g = n(228168),
     E = n(981631),
-    b = n(227832);
+    b = n(935693);
 let y = 3;
 function v(e) {
     let { user: t, guild: n, channel: v, onAction: O, onClose: I } = e,

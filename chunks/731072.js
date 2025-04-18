@@ -7,7 +7,7 @@ var r = n(200651),
     s = n(434404),
     c = n(486199),
     d = n(13051),
-    u = n(621057);
+    u = n(512065);
 function p(e) {
     let { integrations: t, editedIntegration: n, guild: p, platformType: m, labelText: b, descriptionText: g, helpText: f, canNavigate: h } = e,
         x = a.Z.get(m),

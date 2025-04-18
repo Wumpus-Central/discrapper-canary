@@ -4,7 +4,7 @@ n(192379);
 var i = n(481060),
     s = n(823188),
     a = n(388032),
-    l = n(641089);
+    l = n(691264);
 let o = () =>
     (0, r.jsxs)('div', {
         className: l.banner,

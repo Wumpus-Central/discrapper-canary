@@ -5,7 +5,7 @@ var t = r(481060),
     l = r(600164),
     n = r(424071),
     o = r(388032),
-    c = r(475286),
+    c = r(336309),
     i = r(387852);
 function d(e) {
     let { onContinue: a, onClose: r, title: d, body: x } = e;

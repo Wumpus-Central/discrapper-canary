@@ -4,12 +4,12 @@ var C = B(200651),
     w = B(481060),
     D = B(434404),
     f = B(755641),
-    E = B(817239),
+    E = B(69590),
     v = B(388032),
-    I = B(602268);
+    I = B(271529);
 function P(A) {
     let { className: g, guildId: B, selectedBadge: P } = A,
-        r = Q.useCallback(
+        e = Q.useCallback(
             (A) => {
                 D.Z.updateGuildProfile(B, { badge: A });
             },
@@ -23,7 +23,7 @@ function P(A) {
                 children: v.NW.string(E.Z.pb7lpK)
             }),
             (0, C.jsx)(f.g, {
-                onBadgeClicked: r,
+                onBadgeClicked: e,
                 selectedBadge: P
             })
         ]

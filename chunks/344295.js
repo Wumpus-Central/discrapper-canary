@@ -36,7 +36,7 @@ var r = n(200651),
     k = n(701476),
     W = n(436620),
     M = n(388032),
-    G = n(20493);
+    G = n(971005);
 function B(e, t, n) {
     return (
         t in e

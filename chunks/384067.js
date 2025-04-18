@@ -2,8 +2,8 @@ n.d(t, { Z: () => h }), n(388685);
 var r = n(200651),
     l = n(192379),
     a = n(120356),
-    o = n.n(a),
-    i = n(622535),
+    i = n.n(a),
+    o = n(622535),
     s = n(481060),
     c = n(63063),
     u = n(597688),
@@ -11,7 +11,7 @@ var r = n(200651),
     b = n(215023),
     p = n(981631),
     f = n(388032),
-    g = n(806734);
+    g = n(379890);
 let h = (e) => {
     var t, n, a;
     let { wideBannerBlock: h, handleTransition: m, tab: _ } = e,
@@ -37,13 +37,13 @@ let h = (e) => {
         k = h.bannerUrl;
     return null == k
         ? null
-        : (0, r.jsx)(i.$, {
+        : (0, r.jsx)(o.$, {
               innerRef: v,
               onChange: S,
               threshold: 0,
               children: (0, r.jsxs)('div', {
                   ref: v,
-                  className: o()(g.row, g.between, g.bannerBlockContainer, g.centeredSection),
+                  className: i()(g.row, g.between, g.bannerBlockContainer, g.centeredSection),
                   children: [
                       (0, r.jsx)('div', {
                           className: g.wideBannerBackgroundImg,

@@ -8,7 +8,7 @@ var r = n(200651),
     c = n(618541),
     u = n(975060),
     d = n(388032),
-    f = n(912296);
+    f = n(804589);
 class _ extends i.PureComponent {
     componentDidMount() {
         null != this.props.paypalClient && s.f6();

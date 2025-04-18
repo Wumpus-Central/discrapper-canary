@@ -16,7 +16,7 @@ var l = n(200651),
     b = n(780525),
     k = n(215023),
     x = n(388032),
-    j = n(284613);
+    j = n(146736);
 function N(e) {
     let { skuId: t, onSelect: n, selected: r } = e,
         { product: i } = (0, d.T)(t),

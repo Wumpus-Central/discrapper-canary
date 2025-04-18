@@ -1,8 +1,8 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(200651);
 n(192379);
-var l = n(120356),
-    i = n.n(l),
+var i = n(120356),
+    l = n.n(i),
     s = n(268146),
     a = n(481060),
     o = n(925329),
@@ -14,16 +14,16 @@ var l = n(120356),
     h = n(615161),
     x = n(396678),
     p = n(37113),
-    g = n(843874),
+    g = n(519229),
     _ = n(388032),
-    j = n(326879);
+    j = n(80569);
 function v() {
     return (0, r.jsx)('span', {
         className: j.ellipsis,
         children: '\u2022'
     });
 }
-function S(e) {
+function b(e) {
     let { source: t } = e;
     return null == t
         ? (0, r.jsx)(a.hGI, {
@@ -48,26 +48,26 @@ function S(e) {
                   className: j.sourceIcon
               });
 }
-function N(e) {
-    var t, n, l, o;
+function S(e) {
+    var t, n, i, o;
     let { nativePickerEnabled: m } = e,
-        [{ preset: N, resolution: C, fps: b, muteStreamAudio: y, selectedSource: Z, sourceType: I, audioSourceId: O }] = (0, h.E_)(),
+        [{ preset: S, resolution: N, fps: C, muteStreamAudio: y, selectedSource: Z, sourceType: I, audioSourceId: O }] = (0, h.E_)(),
         { twoClickVariant: w } = (0, d.a)({
             location: 'go_live_modal_refresh',
             autoTrackExposure: !1
         }),
         T = (0, c.Z)(),
-        [E, P] = null != (l = (0, x.Z)(N)) ? l : [C, b],
-        R = (0, u.L)(N),
+        [E, P] = null != (i = (0, x.Z)(S)) ? i : [N, C],
+        R = (0, u.L)(S),
         W = (0, f.M)(E),
         k = I === s.vA.CAMERA,
         A = null != Z || (!!w && (!m || k)),
         M = null != Z ? (null == Z || null == (t = Z.id) ? void 0 : t.startsWith(s.vA.CAMERA)) : k,
-        L = A ? void 0 : N === p.tI.PRESET_VIDEO ? _.NW.string(g.Z.MuHUFR) : N === p.tI.PRESET_DOCUMENTS ? _.NW.string(g.Z.y0JuYW) : void 0;
+        L = A ? void 0 : S === p.tI.PRESET_VIDEO ? _.NW.string(g.Z.MuHUFR) : S === p.tI.PRESET_DOCUMENTS ? _.NW.string(g.Z.y0JuYW) : void 0;
     return (0, r.jsxs)('div', {
         className: j.root,
         children: [
-            A && (0, r.jsx)(S, { source: Z }),
+            A && (0, r.jsx)(b, { source: Z }),
             (0, r.jsxs)('div', {
                 className: j.summary,
                 children: [
@@ -114,7 +114,7 @@ function N(e) {
                                             className: j.iconSummaryContainer,
                                             children: [
                                                 (0, r.jsx)(a.OyP, {
-                                                    className: i()(j.icon, j.mutedIcon),
+                                                    className: l()(j.icon, j.mutedIcon),
                                                     size: 'xxs',
                                                     color: 'currentColor'
                                                 }),

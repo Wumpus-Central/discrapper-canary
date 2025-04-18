@@ -96,7 +96,7 @@ let x = 'in-app',
 function k(e) {
     let { questId: t, location: i, questContentPosition: o, preview: a = !1, previewQuest: l = null } = e;
     (0, s.ZDy)(async () => {
-        let { default: e } = await Promise.all([n.e('37447'), n.e('64838'), n.e('27458'), n.e('78900'), n.e('37560')]).then(n.bind(n, 985866));
+        let { default: e } = await Promise.all([n.e('37447'), n.e('64838'), n.e('27458'), n.e('88708'), n.e('29876')]).then(n.bind(n, 985866));
         return (n) =>
             (0, r.jsx)(
                 e,
@@ -203,7 +203,7 @@ function V(e) {
         });
 }
 function Z() {
-    return Promise.all([n.e('66816'), n.e('27458'), n.e('32249'), n.e('60333')]).then(n.bind(n, 536687));
+    return Promise.all([n.e('66816'), n.e('27458'), n.e('32249'), n.e('37020')]).then(n.bind(n, 536687));
 }
 function H(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],

@@ -11,7 +11,7 @@ var i = n(120356),
     u = n(131951),
     m = n(726985),
     g = n(388032),
-    p = n(20493);
+    p = n(971005);
 function h(e) {
     let { refreshStyles: t = !1 } = e,
         { sidechainEnabled: n, sidechainStrength: i } = (0, a.cj)([u.Z], () => ({

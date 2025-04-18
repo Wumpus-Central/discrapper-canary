@@ -8,7 +8,7 @@ var s = n(442837),
     c = n(63063),
     o = n(981631),
     m = n(388032),
-    p = n(981860);
+    p = n(886755);
 let x = c.Z.getArticleURL(o.BhN.MISSING_ENTITLEMENT),
     d = s.ZP.connectStores([l.Z], (t) => {
         let { applicationId: i } = t;

@@ -40,7 +40,7 @@ var r = n(200651),
     M = n(981631),
     W = n(65154),
     T = n(388032),
-    L = n(62802);
+    L = n(934705);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -84,11 +84,11 @@ function G(e, t) {
         e
     );
 }
-let U = (e) => {
+let F = (e) => {
     let t = (null != e ? e : 0) % C.Z.DEFAULT_AVATARS.length;
     return C.Z.DEFAULT_AVATARS[t];
 };
-function F(e) {
+function U(e) {
     var t, n;
     let { hiddenVoiceStates: i, voiceStateMap: l, size: c, locked: u, flipped: p } = e,
         f = (0, A.e5)(c),
@@ -106,8 +106,8 @@ function F(e) {
                     .filter(E.lm),
             [i, l, f]
         ),
-        O = null != (t = g[0]) ? t : U(0),
-        m = null != (n = g[1]) ? n : U(1);
+        O = null != (t = g[0]) ? t : F(0),
+        m = null != (n = g[1]) ? n : F(1);
     return (0, r.jsxs)('div', {
         className: o()(L.hiddenVoiceStates, u && L.locked, p && L.flipped),
         children: [
@@ -212,7 +212,7 @@ let z = i.memo(function (e) {
                       ),
                   D &&
                       C.length > 1 &&
-                      (0, r.jsx)(F, {
+                      (0, r.jsx)(U, {
                           hiddenVoiceStates: C,
                           voiceStateMap: P,
                           size: (0, A.px)(v),

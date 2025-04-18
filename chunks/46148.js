@@ -14,37 +14,37 @@ var r = n(200651),
     g = n(13186),
     m = n(981631),
     b = n(921944),
-    _ = n(474936),
-    y = n(388032),
-    v = n(706442),
+    y = n(474936),
+    _ = n(388032),
+    v = n(152891),
     O = n(777091);
 let C = (e, t) => {
         let n = null != t && !t.isPreview;
         return e ? (e && !n ? 'no-wallpaper-nitro' : 'has-wallpaper-nitro') : 'non-nitro';
     },
-    S = (e) => ('has-wallpaper-nitro' === e ? y.NW.string(y.t.T9dXPj) : y.NW.string(y.t.zyvzQ0)),
+    S = (e) => ('has-wallpaper-nitro' === e ? _.NW.string(_.t.T9dXPj) : _.NW.string(_.t.zyvzQ0)),
     j = (e) => {
         switch (e) {
             case 'non-nitro':
-                return y.NW.string(y.t.VU8fxM);
+                return _.NW.string(_.t.VU8fxM);
             case 'no-wallpaper-nitro':
-                return y.NW.string(y.t.BQBNjY);
+                return _.NW.string(_.t.BQBNjY);
             case 'has-wallpaper-nitro':
-                return y.NW.string(y.t.eZMxlZ);
+                return _.NW.string(_.t.eZMxlZ);
         }
     },
     E = (e) => {
         let { children: t, channelId: n, selectedChannelId: E } = e,
             x = (0, a.wE)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
-            N = (0, l.e7)([d.Z], () => d.Z.getLayers().includes(m.S9g.USER_SETTINGS)),
-            I = E === n,
+            I = (0, l.e7)([d.Z], () => d.Z.getLayers().includes(m.S9g.USER_SETTINGS)),
+            N = E === n,
             { canAccessPicker: P, entryPoint: w } = (0, p.m)({
                 location: 'ChatWallpaperDMListCoachmark',
                 selectedChannelId: E
             }),
             Z = w === h.FN.CONTEXT_MENU,
-            [T, A] = (0, c.US)(x && Z && I && P && !N ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
-            R = (0, u.m)(_.p9.TIER_2),
+            [T, A] = (0, c.US)(x && Z && N && P && !I ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
+            R = (0, u.m)(y.p9.TIER_2),
             D = (0, f.Z)(n),
             L = T === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
             k = (0, i.useRef)(null),
@@ -82,7 +82,7 @@ let C = (e, t) => {
                     (0, r.jsx)(g.Z, {
                         ref: M,
                         onClose: B,
-                        buttonText: y.NW.string(y.t['+IrDzM']),
+                        buttonText: _.NW.string(_.t['+IrDzM']),
                         header: V,
                         art: (0, r.jsx)('img', {
                             src: O.Z,

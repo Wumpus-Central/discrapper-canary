@@ -18,7 +18,7 @@ var r = n(200651),
     b = n(693091),
     f = n(981631),
     v = n(388032),
-    g = n(560226);
+    g = n(180577);
 function y(e) {
     e.currentTarget.scrollTo(0, 0);
 }

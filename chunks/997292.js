@@ -27,7 +27,7 @@ let p = {
                     displayProfile: r,
                     isProfileOpen: !i
                 }),
-                s.Z.toggleProfilePanelSection(),
+                s.Z.toggleUserProfileSidebarSection(),
                 !1
             );
         }

@@ -4,7 +4,7 @@ n(192379);
 var i = n(837411),
     o = n(705556),
     a = n(955418),
-    s = n(200669);
+    s = n(165957);
 function l(e) {
     let { user: t, guildId: n, channelId: l, onClose: c, appContext: u } = e,
         d = (0, i.Z)(t.id, n);

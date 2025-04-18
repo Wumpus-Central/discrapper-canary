@@ -5,7 +5,7 @@ var r = n(200651),
     l = n.n(i),
     s = n(481060),
     o = n(49898),
-    c = n(109188);
+    c = n(481354);
 function d(e) {
     let { state: t, query: n, placeholder: i, onTextChange: d, onCollapsedClick: u, onClear: p, onBlur: m, onSubmit: h } = e,
         g = a.useRef(null),

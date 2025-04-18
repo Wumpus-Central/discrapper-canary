@@ -21,7 +21,7 @@ var r = n(200651),
     O = n(981631),
     I = n(474936),
     _ = n(388032),
-    j = n(374336);
+    j = n(357776);
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,8 +76,8 @@ let N = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     },
     R = { opacity: 0 },
     A = { opacity: 1 },
-    T = { borderRadius: ''.concat(N, 'px ').concat(N, 'px ').concat(N, 'px ').concat(N, 'px') },
-    C = { borderRadius: '0px '.concat(N, 'px ').concat(N, 'px 0px') },
+    C = { borderRadius: ''.concat(N, 'px ').concat(N, 'px ').concat(N, 'px ').concat(N, 'px') },
+    T = { borderRadius: '0px '.concat(N, 'px ').concat(N, 'px 0px') },
     D = {
         mass: 1,
         tension: 500,
@@ -89,8 +89,8 @@ let N = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             i,
             { participant: o, isUpsellEnabled: s, shape: d, size: g, didTrackUpsellViewed: N, setDidTrackUpsellViewed: w, className: P, premiumIndicator: R } = e,
             A = (0, b.Wc)(o),
-            { analyticsLocations: T } = (0, p.ZP)(),
-            C = null != (0, y.Z)(o);
+            { analyticsLocations: C } = (0, p.ZP)(),
+            T = null != (0, y.Z)(o);
         try {
             t = (0, b.nG)(A);
         } catch (e) {
@@ -121,15 +121,15 @@ let N = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         type: I.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: i,
-                        location_stack: T
+                        location_stack: C
                     }),
                     w(!0));
-            }, [t, i, D, N, w, T]),
+            }, [t, i, D, N, w, C]),
             null == A)
         )
             return null;
         let W = (0, r.jsx)(f.ua7, {
-            text: C ? _.NW.string(_.t.q8TiVl) : D ? _.NW.string(_.t.IHgpEh) : _.NW.string(_.t.vLb0VV),
+            text: T ? _.NW.string(_.t.q8TiVl) : D ? _.NW.string(_.t.IHgpEh) : _.NW.string(_.t.vLb0VV),
             position: 'bottom',
             color: f.ua7.Colors.GREY,
             children: (e) =>
@@ -137,7 +137,7 @@ let N = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                     f.P3F,
                     x(Z({}, e), {
                         onClick: U,
-                        className: a()(j.qualityIndicator, g, E.eE[d], C ? j.qualityIndicatorLowQuality : j.qualityIndicatorFullQuality, { [j.clickable]: k && D }),
+                        className: a()(j.qualityIndicator, g, E.eE[d], T ? j.qualityIndicatorLowQuality : j.qualityIndicatorFullQuality, { [j.clickable]: k && D }),
                         children: [
                             D
                                 ? (0, r.jsx)(f.SrA, {
@@ -185,7 +185,7 @@ let N = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             ),
             y = (0, f.q_F)(
                 {
-                    to: v ? C : T,
+                    to: v ? T : C,
                     config: D
                 },
                 'animate-always'

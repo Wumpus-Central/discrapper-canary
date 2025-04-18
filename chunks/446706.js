@@ -10,7 +10,7 @@ var i = n(200651),
     C = n(109983),
     m = n(834891),
     p = n(388032),
-    N = n(867562);
+    N = n(493449);
 function u(e) {
     let { guildTemplate: t, onClick: n, autoFocus: a } = e,
         l = (0, c.Q3)('GuildTemplatesItem'),

@@ -31,7 +31,7 @@ var r = n(200651),
     D = n(982204),
     L = n(981631),
     x = n(388032),
-    M = n(718578);
+    M = n(808241);
 function k(e) {
     let { application: t, sku: n, isEmbeddedIAP: i } = e;
     return !0 !== i

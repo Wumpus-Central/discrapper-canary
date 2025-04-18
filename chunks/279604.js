@@ -1,7 +1,7 @@
 n.d(t, {
     KE: () => b,
     KT: () => m,
-    ZP: () => _
+    ZP: () => y
 }),
     n(388685),
     n(457542);
@@ -65,7 +65,7 @@ function b(e, t) {
                             )
                         );
                 case p.Us.PERK: {
-                    let { default: i } = await Promise.all([n.e('32652'), n.e('21487')]).then(n.bind(n, 326055));
+                    let { default: i } = await Promise.all([n.e('32652'), n.e('53300')]).then(n.bind(n, 326055));
                     return (n) =>
                         (0, r.jsx)(
                             i,
@@ -83,10 +83,10 @@ function b(e, t) {
         { modalKey: p.H2 }
     );
 }
-function _(e, t) {
+function y(e, t) {
     var m;
-    let { analyticsLocations: _ } = (0, s.ZP)(),
-        [y, v] = i.useState(!1),
+    let { analyticsLocations: y } = (0, s.ZP)(),
+        [_, v] = i.useState(!1),
         [O, C] = i.useState(void 0),
         S = (0, l.e7)([h.Z], () => {
             var t, n;
@@ -112,7 +112,7 @@ function _(e, t) {
             },
             [e, t.skuId]
         ),
-        N = i.useCallback(
+        I = i.useCallback(
             (e) => {
                 if ((e.stopPropagation(), null != j))
                     return E < t.cost
@@ -122,7 +122,7 @@ function _(e, t) {
                                   section: f.jXE.GUILD_POWERUPS_OVERVIEW_CARD
                               },
                               numberOfBoostsToAdd: t.cost - E,
-                              analyticsLocations: _,
+                              analyticsLocations: y,
                               guild: j,
                               intent: t.type === p.Us.LEVEL ? c.P.LEVEL : c.P.PERK,
                               onSubscribeComplete: () =>
@@ -160,14 +160,14 @@ function _(e, t) {
                               });
                           });
             },
-            [x, t, E, _, j]
+            [x, t, E, y, j]
         ),
-        I = i.useCallback((e) => (e.stopPropagation(), x(!1)), [x]);
+        N = i.useCallback((e) => (e.stopPropagation(), x(!1)), [x]);
     return {
-        isLoading: y,
+        isLoading: _,
         error: O,
-        onActivate: N,
-        onDeactivate: I,
+        onActivate: I,
+        onDeactivate: N,
         onShowDeactivate: i.useCallback(
             (i) => {
                 i.stopPropagation(),

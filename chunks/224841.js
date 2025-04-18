@@ -7,7 +7,7 @@ var i = n(481060),
     o = n(63063),
     a = n(981631),
     c = n(388032),
-    u = n(963650);
+    u = n(70622);
 let d = () => (0, l.uL)(a.Z5c.LOGIN, { source: 'age_gate_underage' }),
     h = (e) => {
         let { authBoxClassName: t, underageMessage: l } = e;

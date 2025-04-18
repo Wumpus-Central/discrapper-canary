@@ -5,7 +5,7 @@ var i = n(434404),
     l = n(970731),
     a = n(981631),
     o = n(388032),
-    s = n(545900),
+    s = n(839007),
     c = n(930128);
 function u(e) {
     let { guild: t, markAsDismissed: n } = e;

@@ -86,11 +86,11 @@ function u(e) {
             c,
             u,
             d = e.target;
-        for (; null != d; ) 'src' in d && null != d.src && (c = d.src), 'href' in d && null != d.href && ((s = d.href), (u = d.textContent), 'img' === d.getAttribute('data-role') && (c = s)), (d = null == d ? void 0 : d.parentNode);
+        for (; null != d; ) 'src' in d && null != d.src && (c = d.src), 'href' in d && null != d.href && ((s = d.href), (u = d.textContent)), (d = null == d ? void 0 : d.parentNode);
         if (null != c)
             return (0, i.jW)(e, async () => {
                 let { default: e } = await n.e('12241').then(n.bind(n, 115512));
-                return (t) => (0, r.jsx)(e, l(a({}, t), { src: c }));
+                return (t) => (0, r.jsx)(e, l(a({}, t), { src: null != c ? c : '' }));
             });
         if (null != s)
             return (0, i.jW)(e, async () => {

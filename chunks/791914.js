@@ -14,11 +14,11 @@ var i = n(399606),
     f = n(216789),
     h = n(818186),
     g = n(388032),
-    _ = n(413813);
+    _ = n(660175);
 function b(e) {
     let { tab: t, setTab: n, children: b, badgeState: x, closePopout: y } = e,
-        { showReminders: v } = m.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
-        { enabled: E, inInbox: O } = d.Z.useExperiment({ location: 'RecentsPopout' }),
+        { showReminders: E } = m.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
+        { enabled: v, inInbox: O } = d.Z.useExperiment({ location: 'RecentsPopout' }),
         N = (0, f.Us)({ location: 'RecentsHeader' }),
         { enabled: j } = u.Z.useExperiment({ location: 'RecentsHeader' }),
         C = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
@@ -96,7 +96,7 @@ function b(e) {
                                   ]
                               })
                             : null,
-                        E && O
+                        v && O
                             ? (0, r.jsx)(l.njP.Item, {
                                   'aria-label': g.NW.string(g.t['2pAkDA']),
                                   id: a.X.BOOKMARKS,
@@ -104,7 +104,7 @@ function b(e) {
                                   children: 0 === S ? g.NW.string(g.t['2pAkDA']) : g.NW.formatToPlainString(g.t.I4fryM, { count: S })
                               })
                             : null,
-                        v && !E
+                        E && !v
                             ? (0, r.jsx)(l.njP.Item, {
                                   'aria-label': 'todos',
                                   id: a.X.TODOS,

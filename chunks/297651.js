@@ -2,8 +2,8 @@ n.d(t, { E: () => p });
 var r = n(192379),
     l = n(442837),
     a = n(626135),
-    o = n(74538),
-    i = n(381585),
+    i = n(74538),
+    o = n(381585),
     s = n(597688),
     c = n(884697),
     u = n(819490),
@@ -11,10 +11,10 @@ var r = n(192379),
     b = n(981631);
 function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'product',
-        p = (0, i.sp)(),
+        p = (0, o.sp)(),
         f = (0, l.e7)([s.Z], () => s.Z.getProduct(e)),
         g = (0, d.x)(),
-        h = o.ZP.canUseCollectibles(g),
+        h = i.ZP.canUseCollectibles(g),
         m = r.useRef(null),
         _ = (0, u.B)('shop_product_card'),
         C = r.useCallback(() => {

@@ -24,8 +24,8 @@ var r,
     b = n(601070),
     x = n(344185),
     y = n(569471),
-    v = n(723170),
-    E = n(675478),
+    E = n(723170),
+    v = n(675478),
     O = n(581883),
     N = n(131704),
     j = n(592125),
@@ -268,13 +268,13 @@ class V extends l.EventEmitter {
                     o = r[l],
                     s = !o.collapsed;
                 (i[t] = s),
-                    (0, E.BU)(
+                    (0, v.BU)(
                         n,
                         t,
                         (e) => {
                             e.collapsedInInbox = s;
                         },
-                        E.fy.FREQUENT_USER_ACTION
+                        v.fy.FREQUENT_USER_ACTION
                     ),
                     this.setState({
                         scrollToChannelIndex: l,
@@ -413,7 +413,7 @@ function Y(e, t, n, r) {
                 if (Date.now() - e > X) return 6;
             }
             if (r.isThread()) {
-                let e = (0, v.J)(r);
+                let e = (0, E.J)(r);
                 return e === M.iN.ALL_MESSAGES ? 4 : e === M.iN.NO_MESSAGES ? 7 : 5;
             }
             {

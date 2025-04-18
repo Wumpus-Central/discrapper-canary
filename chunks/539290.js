@@ -11,7 +11,7 @@ var i = r(120356),
     a = r(410030),
     c = r(696936),
     h = r(903773),
-    v = r(734344);
+    v = r(232703);
 let u = {
     RIGHT: v.horizontalStatusWarningBlock,
     BOTTOM: v.verticalStatusWarningBlock

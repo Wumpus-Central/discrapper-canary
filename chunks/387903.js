@@ -37,11 +37,11 @@ var r,
     D = n(503438),
     _ = n(802856),
     L = n(420660),
-    W = n(39628),
-    k = n(701488),
+    k = n(39628),
+    W = n(701488),
     M = n(981631),
     U = n(388032),
-    R = n(636424);
+    R = n(50666);
 function V(e, t, n) {
     return (
         t in e
@@ -182,7 +182,7 @@ class H extends (r = o.PureComponent) {
                 null != u.large_image
                     ? (0, i.jsx)('img', {
                           alt: null != (t = u.large_text) ? t : '',
-                          src: (0, Z.xF)(d, u.large_image, null != l ? l : [k.Si.LARGE, k.Si.LARGE]),
+                          src: (0, Z.xF)(d, u.large_image, null != l ? l : [W.Si.LARGE, W.Si.LARGE]),
                           className: s()(this.getTypeClass('assetsLargeImage', this.isStreamerOnTypeActivityFeed() ? M.ABu.TWITCH : ''), {
                               [null != (n = this.getTypeClass('assetsLargeMask')) ? n : '']: null != u.small_image,
                               [R.assetsLargeImageSpotify]: f
@@ -199,15 +199,15 @@ class H extends (r = o.PureComponent) {
             if (null == t) return null;
             m = (0, i.jsx)(O.ZP, {
                 mask: O.ZP.Masks.SQUIRCLE,
-                width: k.Si.SMALL,
-                height: k.Si.SMALL,
+                width: W.Si.SMALL,
+                height: W.Si.SMALL,
                 children: (0, i.jsx)('img', {
                     src:
                         null !=
                         (r = I.ZP.getGuildIconURL({
                             id: t.guildId,
                             icon: u.small_image,
-                            size: k.Si.SMALL
+                            size: W.Si.SMALL
                         }))
                             ? r
                             : void 0,
@@ -254,7 +254,7 @@ class H extends (r = o.PureComponent) {
                         F(
                             {
                                 alt: null != (t = u.small_text) ? t : '',
-                                src: (0, Z.xF)(d, u.small_image, [k.Si.SMALL, k.Si.SMALL]),
+                                src: (0, Z.xF)(d, u.small_image, [W.Si.SMALL, W.Si.SMALL]),
                                 className: this.getTypeClass('assetsSmallImage', null == m ? 'WithoutLargeImage' : void 0)
                             },
                             e
@@ -431,7 +431,7 @@ class H extends (r = o.PureComponent) {
         let { start: n, end: r } = t;
         return null == n || null == r
             ? null
-            : (0, i.jsx)(W.Z, {
+            : (0, i.jsx)(k.Z, {
                   start: n,
                   end: r,
                   className: this.getTypeClass('timeBar'),
@@ -465,7 +465,7 @@ class H extends (r = o.PureComponent) {
                             : u
                 }))),
         (null != c && '' !== c && e.type !== M.IIU.CUSTOM_STATUS) || (0, E.dS)(e))
-            ? ((null == a ? void 0 : a.size) == null && [k.Zc].includes(null != (n = e.application_id) ? n : '')
+            ? ((null == a ? void 0 : a.size) == null && [W.Zc].includes(null != (n = e.application_id) ? n : '')
                   ? (l = U.NW.formatToPlainString(U.t['u//9Bw'], {
                         count: '0',
                         max: null != (r = null == t ? void 0 : t.getMaxParticipants()) ? r : 0

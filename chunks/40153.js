@@ -17,7 +17,7 @@ var r = n(200651),
     p = n(662146),
     f = n(981631),
     g = n(388032),
-    m = n(217873);
+    m = n(22835);
 function b(e) {
     let t = i.useRef(null),
         n = e.map((e) => e[0]);
@@ -32,7 +32,7 @@ function b(e) {
         t
     );
 }
-function _(e, t) {
+function y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return (
@@ -51,9 +51,9 @@ function _(e, t) {
         }
     );
 }
-function y(e) {
+function _(e) {
     let { name: t, targetNode: n, combine: l, below: o } = e,
-        s = i.useMemo(() => _([h.eD.GUILD, h.eD.FOLDER], n, o, l), [n, o, l]),
+        s = i.useMemo(() => y([h.eD.GUILD, h.eD.FOLDER], n, o, l), [n, o, l]),
         [{ canDrop: a, isOver: u }, d] = (0, c.L)(s),
         p = b([
             [a, m.autoPointerEvents],
@@ -69,7 +69,7 @@ function y(e) {
 }
 function v(e) {
     let { name: t, targetNode: n, onDragOverChanged: l } = e,
-        [{ canDrop: s, isOver: a }, u] = (0, c.L)(() => _([h.eD.GUILD], n, !0, !0));
+        [{ canDrop: s, isOver: a }, u] = (0, c.L)(() => y([h.eD.GUILD], n, !0, !0));
     i.useEffect(() => {
         null == l || l(a);
     }, [l, a]);
@@ -99,7 +99,7 @@ let O = i.memo(function (e) {
         className: m.wrapper,
         'aria-hidden': !0,
         children: [
-            (0, r.jsx)(y, {
+            (0, r.jsx)(_, {
                 name: t,
                 targetNode: n,
                 below: l
@@ -116,7 +116,7 @@ let O = i.memo(function (e) {
 });
 function C(e) {
     let { name: t, targetNode: n } = e,
-        [{ canDrop: i, isOver: l }, o] = (0, c.L)(() => _([h.eD.GUILD], n, !0, !0)),
+        [{ canDrop: i, isOver: l }, o] = (0, c.L)(() => y([h.eD.GUILD], n, !0, !0)),
         s = b([[l, m.wrapperOver]]),
         a = b([
             [l, m.dragOver],

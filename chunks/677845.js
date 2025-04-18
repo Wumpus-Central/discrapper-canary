@@ -21,7 +21,7 @@ var r = n(200651),
     v = n(251564),
     j = n(695492),
     O = n(981631),
-    E = n(600295);
+    E = n(110414);
 function N(e) {
     let { participants: t, onClick: n, onDoubleClick: N, onContextMenu: I, channel: P, className: S, inCall: Z, totalNumberOfParticipants: T, paused: A = !1 } = e,
         w = (0, c.bp)() === O.IlC.POPOUT,

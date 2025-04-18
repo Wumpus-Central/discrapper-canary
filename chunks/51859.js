@@ -8,7 +8,7 @@ var r = t(200651),
     c = t(795338),
     d = t(279604),
     u = t(388032),
-    p = t(117172);
+    p = t(451785);
 function m(e) {
     let { guildId: n, powerup: t } = e,
         [m, x] = o.useState(void 0);

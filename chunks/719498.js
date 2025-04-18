@@ -7,7 +7,7 @@ var n = r(200651),
     s = r(925329),
     l = r(296023),
     d = r(388032),
-    x = r(821084);
+    x = r(709771);
 let u = (e) => {
     let { channel: t, application: u, onClose: b, transitionState: m } = e,
         p = (0, c.Q3)('IntegrationsEditLinkedLobbyModal'),

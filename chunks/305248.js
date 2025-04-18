@@ -14,7 +14,7 @@ var r = n(200651),
     h = n(823379),
     g = n(709054),
     _ = n(124368),
-    b = n(572198);
+    b = n(436007);
 function x(e) {
     let { channel: t, channelRecord: n, deleteChannel: a } = e,
         x = (0, o.Wu)(

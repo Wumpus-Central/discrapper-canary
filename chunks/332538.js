@@ -18,8 +18,8 @@ var r = n(200651),
     g = n(905128),
     m = n(326660),
     b = n(317169),
-    _ = n(19394),
-    y = n(535396),
+    y = n(19394),
+    _ = n(535396),
     v = n(921944);
 function O(e) {
     let t = (0, l.e7)([f.Z], () => f.Z.getNotificationStateForGuild(e), [e]),
@@ -34,7 +34,7 @@ function O(e) {
                         showUnread: !1
                     };
                 let { unlocked: c } = t,
-                    u = (0, _.h)(c),
+                    u = (0, y.h)(c),
                     d = null != (i = null == n ? void 0 : n.lastSeenWarningNotification) ? i : Date.now(),
                     h = new Date(null == (e = u[u.length - 1]) ? void 0 : e.ends_at).getTime(),
                     p = null != (o = null == n ? void 0 : n.lastBoostCount) ? o : 0;
@@ -67,14 +67,14 @@ function O(e) {
                     if (null == t || n === o.z.GUILD_POWERUP_PERKS_COACHMARK) return;
                     let r = (function (e, t) {
                         let n = h.Oe.find((e) => {
-                            let n = y.Cp[e],
+                            let n = _.Cp[e],
                                 r = null != n ? t.unlocked.get(n) : void 0;
-                            return null != r && r.user_id !== y.Fq;
+                            return null != r && r.user_id !== _.Fq;
                         });
                         if (null == n) return;
-                        let r = y.Q1[n];
+                        let r = _.Q1[n];
                         if (null == r || (0, u.OY)(r, e)) return;
-                        let i = y.Cp[n],
+                        let i = _.Cp[n],
                             l = null != i ? t.powerups.get(i) : void 0;
                         if (null != l)
                             return {
@@ -87,7 +87,7 @@ function O(e) {
                     })(e, t);
                     if (null != r) return r;
                     let i = (function (e, t, n) {
-                        let r = Array.from(y.KW.values())
+                        let r = Array.from(_.KW.values())
                             .map((e) => {
                                 if (null == t.unlocked.get(e)) return t.powerups.get(e);
                             })
@@ -195,9 +195,9 @@ function C(e) {
         i.useEffect(() => {
             null != t &&
                 h.Oe.forEach((n) => {
-                    let r = y.Cp[n];
+                    let r = _.Cp[n];
                     if (null == r || !t.unlocked.has(r)) return;
-                    let i = y.Q1[n];
+                    let i = _.Q1[n];
                     null != i && (0, u.Qd)(i, e, !1, v.L.AUTO_DISMISS);
                 });
         }, [e, t]);

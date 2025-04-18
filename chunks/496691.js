@@ -8,13 +8,13 @@ var n = a(200651),
     c = a(153867),
     d = a(706454),
     u = a(626135),
-    p = a(981631),
-    _ = a(388032),
-    h = a(681205);
+    _ = a(981631),
+    p = a(388032),
+    h = a(235030);
 class m extends s.Component {
     shouldScrollToTop(e) {
         let { location: t } = e;
-        return t.pathname.startsWith(p.Z5c.APPLICATION_STORE_LISTING_SKU('')) || t.pathname.startsWith(p.Z5c.APPLICATION_STORE_LISTING_APPLICATION(''));
+        return t.pathname.startsWith(_.Z5c.APPLICATION_STORE_LISTING_SKU('')) || t.pathname.startsWith(_.Z5c.APPLICATION_STORE_LISTING_APPLICATION(''));
     }
     render() {
         let { location: e, className: t, render: a, locale: o } = this.props;
@@ -32,9 +32,9 @@ class m extends s.Component {
                             className: h.marketingHeader,
                             onChangeLocale: this.handleHeaderLocaleChange,
                             mobileClassName: h.marketingHeader,
-                            openNavAriaLabel: _.NW.string(_.t.Fs9k3N),
-                            hideNavAriaLabel: _.NW.string(_.t.AbfyHB),
-                            skipToContentLabel: _.NW.string(_.t['18gavL'])
+                            openNavAriaLabel: p.NW.string(p.t.Fs9k3N),
+                            hideNavAriaLabel: p.NW.string(p.t.AbfyHB),
+                            skipToContentLabel: p.NW.string(p.t['18gavL'])
                         }),
                         a(t, i),
                         (0, n.jsx)(r.$, {

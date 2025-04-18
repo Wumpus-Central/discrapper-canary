@@ -7,7 +7,7 @@ var r = n(200651),
     o = n(442837),
     c = n(210753),
     d = n(77498),
-    u = n(686964);
+    u = n(156170);
 function m(e) {
     let { applicationId: t, selected: n, onClick: s, disabled: m } = e,
         { isFetching: g, coverImageUrl: p } = (0, c.$)(t, {

@@ -18,7 +18,7 @@ var r = n(200651),
     b = n(981631),
     y = n(701488),
     v = n(388032),
-    O = n(24158);
+    O = n(960228);
 function I(e) {
     let { application: t } = e,
         n = t.getIconURL(y.Si.LARGE),

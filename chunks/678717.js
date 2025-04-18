@@ -50,8 +50,8 @@ var j = n(392750),
     q = n(56706),
     J = n(621060),
     $ = n(388032),
-    Q = n(736967),
-    ee = n(616257);
+    Q = n(202756),
+    ee = n(482479);
 function et(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: r } = e,
         l = (0, d.Z)({

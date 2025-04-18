@@ -16,7 +16,7 @@ var r = n(200651),
     p = n(591759),
     h = n(254109),
     m = n(212459),
-    g = n(986261);
+    g = n(264146);
 function E(e, t, n) {
     return (
         t in e
@@ -140,7 +140,7 @@ function T(e) {
                           maxWidth: o,
                           maxHeight: s,
                           useFullWidth: !0,
-                          shouldLink: !0,
+                          shouldLink: !1,
                           className: g.media,
                           animated: !i && n.animated,
                           autoPlay: !i,

@@ -7,7 +7,7 @@ var r = n(200651),
     o = n(49012),
     c = n(981631),
     d = n(388032),
-    u = n(924902);
+    u = n(109807);
 let p = s.Z.getArticleURL(c.BhN.BOT_DATA_ACCESS);
 function m(e) {
     let { application: t } = e,

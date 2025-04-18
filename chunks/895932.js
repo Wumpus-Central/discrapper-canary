@@ -8,7 +8,7 @@ var a = n(313361),
     o = n(109434),
     c = n(228392),
     d = n(388032),
-    u = n(987097);
+    u = n(491646);
 function m(e) {
     let { channel: t, closePopout: n } = e,
         { sortOrder: m, layoutType: h, tagSetting: g } = (0, o.H)(t.id),

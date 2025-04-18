@@ -2,7 +2,7 @@ n.d(t, { z: () => a });
 var r = n(200651);
 n(192379);
 var i = n(206295),
-    o = n(650623);
+    o = n(799789);
 function a(e) {
     let { children: t, imageUrl: n } = e,
         { primaryColor: a, secondaryColor: s } = (0, i.Z)(''.concat(n, '?forColors'));

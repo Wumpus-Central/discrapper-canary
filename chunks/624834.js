@@ -19,7 +19,7 @@ var r = n(200651),
     b = n(849171),
     y = n(981631),
     O = n(388032),
-    I = n(164914);
+    I = n(90796);
 function _(e) {
     let { participant: t, width: n, channelId: i } = e,
         { analyticsLocations: a } = (0, E.ZP)(p.Z.PRESENCE_ACTIVITY_TILE),
@@ -74,14 +74,14 @@ function j(e) {
         P = (0, u.O)(),
         R = i.activity.session_id,
         A = (0, f.Z)(i.activity, y.xjy.EMBEDDED) && (0, f.Z)(i.activity, y.xjy.CONTEXTLESS),
-        [T, C] = l.useState(!1),
+        [C, T] = l.useState(!1),
         D = null == Z ? void 0 : Z.id,
         M = l.useCallback(
             async (e) => {
                 e.stopPropagation(),
                     null != m &&
                         null != D &&
-                        (C(!0),
+                        (T(!0),
                         await (0, c.Z)({
                             applicationId: m,
                             activityChannelId: n,
@@ -92,7 +92,7 @@ function j(e) {
                             instanceId: void 0,
                             isContextlessActivity: A
                         }),
-                        C(!1));
+                        T(!1));
             },
             [m, D, P.location, w, R, n, A]
         );
@@ -127,7 +127,7 @@ function j(e) {
                       className: I.buttons,
                       children: (0, r.jsx)(s.zxk, {
                           onClick: M,
-                          submitting: T,
+                          submitting: C,
                           size: (0, b.ac)(p),
                           className: I.button,
                           color: s.zxk.Colors.PRIMARY,

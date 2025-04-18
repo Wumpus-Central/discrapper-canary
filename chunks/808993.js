@@ -6,7 +6,7 @@ var i = n(120356),
     l = n(481060),
     o = n(388905),
     a = n(388032),
-    c = n(20493);
+    c = n(971005);
 function u(e) {
     let { email: t } = e;
     return (0, r.jsxs)('div', {

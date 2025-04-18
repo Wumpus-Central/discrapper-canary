@@ -27,7 +27,7 @@ var r = n(200651),
     S = n(466711),
     T = n(319417),
     N = n(728386),
-    A = n(302195);
+    A = n(120232);
 function C(e) {
     let { disabled: t, channel: n } = e,
         { enabled: i } = _.O.useExperiment({ location: 'gift-button' }),

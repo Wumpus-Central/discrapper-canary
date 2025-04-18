@@ -58,9 +58,9 @@ var r = n(200651),
     el = n(910611),
     eo = n(915718),
     ea = n(518311),
-    es = n(180539),
-    ec = n(882378),
-    eu = n(207868),
+    es = n(882378),
+    ec = n(207868),
+    eu = n(473065),
     ed = n(576171),
     ep = n(754688),
     eh = n(41776),
@@ -74,7 +74,7 @@ var r = n(200651),
     ex = n(6025),
     ev = n(897473),
     ej = n(922482),
-    eO = n(856393),
+    eO = n(504185),
     eE = n(657218),
     eN = n(66556),
     eI = n(739830),
@@ -82,7 +82,7 @@ var r = n(200651),
     eS = n(900157),
     eZ = n(108427),
     eT = n(171368),
-    eA = n(431933),
+    eA = n(336724),
     ew = n(524329),
     eR = n(995532),
     ek = n(738643),
@@ -114,7 +114,7 @@ var r = n(200651),
     e8 = n(440493),
     e5 = n(157925),
     e9 = n(388032),
-    te = n(100658);
+    te = n(22249);
 function tt(e, t, n) {
     return (
         t in e
@@ -207,7 +207,7 @@ class tl extends i.PureComponent {
         let i = eY.default.getUser(t.getRecipientId());
         s()(null != i, 'Missing user in Channel.openDMContextMenu'),
             (0, b.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('20875'), n.e('70205'), n.e('4040'), n.e('53912'), n.e('56826'), n.e('31084')]).then(n.bind(n, 131404));
+                let { default: e } = await Promise.all([n.e('26881'), n.e('20875'), n.e('70205'), n.e('4040'), n.e('53912'), n.e('56826'), n.e('3431')]).then(n.bind(n, 131404));
                 return (n) =>
                     (0, r.jsx)(
                         e,
@@ -578,7 +578,7 @@ class tl extends i.PureComponent {
                             ),
                             o.push(
                                 (0, r.jsx)(
-                                    es.Z,
+                                    eu.Z,
                                     {
                                         channel: e,
                                         showCallOrActivityPanel: i || l
@@ -586,7 +586,7 @@ class tl extends i.PureComponent {
                                     'profile'
                                 )
                             ),
-                            o.push((0, r.jsx)(ec.Z, { channel: e }, 'safety_tools')),
+                            o.push((0, r.jsx)(es.Z, { channel: e }, 'safety_tools')),
                             o.push((0, r.jsx)(en.Z, { channel: e }, 'chat-wallpaper'));
                         break;
                     case e3.d4z.GROUP_DM:
@@ -608,7 +608,7 @@ class tl extends i.PureComponent {
                     case e3.d4z.ANNOUNCEMENT_THREAD:
                     case e3.d4z.PRIVATE_THREAD:
                     case e3.d4z.PUBLIC_THREAD:
-                        null == t || t.isForumLikeChannel() || o.push((0, r.jsx)(eN.Z, { channel: t }, 'browser')), e.isVocalThread() && o.push((0, r.jsx)(eu.Z, { channel: e }, 'thread-call')), o.push((0, r.jsx)(eI.Z, { channel: e }, 'notifications')), o.push((0, r.jsx)(ee.Z, { channel: e }, 'pins')), e.isArchivedThread() || o.push((0, r.jsx)(J.Z, { channelId: e.id }, 'members')), null != t && (0, O.Lp)(e) && o.push((0, r.jsx)(et.Z, { channel: e }, 'summaries')), o.push((0, r.jsx)(eP.Z, { channel: e }, 'threads-overflow'));
+                        null == t || t.isForumLikeChannel() || o.push((0, r.jsx)(eN.Z, { channel: t }, 'browser')), e.isVocalThread() && o.push((0, r.jsx)(ec.Z, { channel: e }, 'thread-call')), o.push((0, r.jsx)(eI.Z, { channel: e }, 'notifications')), o.push((0, r.jsx)(ee.Z, { channel: e }, 'pins')), e.isArchivedThread() || o.push((0, r.jsx)(J.Z, { channelId: e.id }, 'members')), null != t && (0, O.Lp)(e) && o.push((0, r.jsx)(et.Z, { channel: e }, 'summaries')), o.push((0, r.jsx)(eP.Z, { channel: e }, 'threads-overflow'));
                         break;
                     case e3.d4z.GUILD_ANNOUNCEMENT:
                     case e3.d4z.GUILD_TEXT:

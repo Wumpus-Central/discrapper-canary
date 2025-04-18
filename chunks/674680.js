@@ -8,7 +8,7 @@ var i = n(780384),
     a = n(889901),
     c = n(955204),
     u = n(231338),
-    d = n(835115);
+    d = n(437983);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,12 +50,12 @@ function g(e) {
         m = (0, o.ZP)(),
         b = (0, c.oX)(n);
     if (null == b) return null;
-    let _ = (0, l.UCu)(g),
-        { name: y, rarity: v } = b,
+    let y = (0, l.UCu)(g),
+        { name: _, rarity: v } = b,
         { color: O } = (0, c.F7)(v),
         C = (0, i.wj)(m) ? p : f,
-        S = (_.size - _.offset - 2 * _.stroke) * 0.8,
-        j = _.size - _.stroke,
+        S = (y.size - y.offset - 2 * y.stroke) * 0.8,
+        j = y.size - y.stroke,
         E = {
             width: 0.4 * S,
             height: 0.4 * S
@@ -63,8 +63,8 @@ function g(e) {
         x = {
             width: E.width + 1,
             height: E.height + 1,
-            right: _.stroke + 1,
-            bottom: _.stroke + 1,
+            right: y.stroke + 1,
+            bottom: y.stroke + 1,
             padding: 0
         };
     return (0, r.jsxs)('div', {
@@ -72,9 +72,9 @@ function g(e) {
         style: {
             width: j,
             height: j,
-            padding: _.stroke
+            padding: y.stroke
         },
-        'aria-label': ''.concat(null != (t = y()) ? t : ''),
+        'aria-label': ''.concat(null != (t = _()) ? t : ''),
         children: [
             (0, r.jsx)('div', {
                 className: d.trophyIconContainer,

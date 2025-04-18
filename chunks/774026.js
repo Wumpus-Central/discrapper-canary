@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(200651);
 n(192379);
-var l = n(913527),
-    i = n.n(l),
+var i = n(913527),
+    l = n.n(i),
     s = n(793030),
     a = n(739566),
     o = n(942951),
@@ -10,18 +10,18 @@ var l = n(913527),
     d = n(63063),
     u = n(981631),
     f = n(388032),
-    m = n(447556);
+    m = n(864557);
 function h(e) {
     var t;
-    let { streamingUntil: n, user: l, channel: h } = e,
-        x = (0, a.JZ)(l, h),
+    let { streamingUntil: n, user: i, channel: h } = e,
+        x = (0, a.JZ)(i, h),
         p = (0, o.l)({
-            user: l,
+            user: i,
             channelId: h.id,
             guildId: h.guild_id,
             messageId: void 0
         })(x),
-        g = i()(n).diff(i()(), 'hours');
+        g = l()(n).diff(l()(), 'hours');
     return g <= 0
         ? null
         : (0, r.jsxs)('div', {
@@ -38,7 +38,7 @@ function h(e) {
                               color: 'text-muted',
                               variant: 'text-sm/medium',
                               children: f.NW.format(f.t.NZDuBg, {
-                                  actorName: null != (t = l.globalName) ? t : l.username,
+                                  actorName: null != (t = i.globalName) ? t : i.username,
                                   actorHook: p,
                                   num: g,
                                   helpCenterLink: d.Z.getArticleURL(u.BhN.HD_STREAMING_POTION)

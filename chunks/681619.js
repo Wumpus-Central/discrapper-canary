@@ -4,7 +4,7 @@ var a = n(200651),
     l = n(120356),
     i = n.n(l),
     s = n(481060),
-    o = n(616257);
+    o = n(482479);
 function c(e) {
     let { columns: t, data: n, className: l, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: m = 40 } = e,
         x = r.useMemo(

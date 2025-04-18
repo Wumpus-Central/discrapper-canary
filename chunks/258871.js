@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => _ });
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -55,7 +55,7 @@ function b(e, t) {
         e
     );
 }
-let _ = [
+let y = [
         {
             key: 'EVENTS',
             renderIcon: (e) =>
@@ -70,7 +70,7 @@ let _ = [
             },
             handler: (e) =>
                 (0, o.ZDy)(async () => {
-                    let { default: t } = await Promise.all([n.e('22347'), n.e('56236'), n.e('79010')]).then(n.bind(n, 17671));
+                    let { default: t } = await Promise.all([n.e('22347'), n.e('56236'), n.e('8674')]).then(n.bind(n, 17671));
                     return (n) => (0, r.jsx)(t, b(m({}, n), { guildId: e.id }));
                 })
         },
@@ -114,7 +114,7 @@ let _ = [
             getName: () => g.NW.string(g.t.MJQOuL),
             handler: (e, t) =>
                 (0, o.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
+                    let { default: i } = await Promise.all([n.e('7654'), n.e('99060')]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             i,
@@ -127,7 +127,7 @@ let _ = [
                 })
         }
     ],
-    y = (e) => {
+    _ = (e) => {
         let { guild: t, channel: n } = e,
             o = (0, s.ZP)(t.id);
         i.useEffect(() => {
@@ -147,7 +147,7 @@ let _ = [
             g = i.useMemo(() => ({ numEvents: o.length }), [o.length]),
             m = (0, p.t)(n);
         return (0, r.jsx)(r.Fragment, {
-            children: _.map((e) => {
+            children: y.map((e) => {
                 let { key: i, getName: l, handler: o, renderIcon: s } = e;
                 if (!u && 'EVENTS' === i) return null;
                 let d = ''.concat(i, '-').concat(t.id);

@@ -4,7 +4,7 @@ n(192379);
 var a = n(120356),
     i = n.n(a),
     l = n(481060),
-    s = n(237561);
+    s = n(150368);
 let o = function (e) {
     let { tabs: t, onTabSelect: n, selectedTab: a, className: o } = e;
     return (0, r.jsx)(l.njP, {

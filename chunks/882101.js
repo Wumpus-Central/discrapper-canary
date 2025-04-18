@@ -13,7 +13,7 @@ var i = n(481060),
     s = n(290348),
     c = n(367719),
     d = n(388032),
-    u = n(450154);
+    u = n(123163);
 let _ = (e) => {
     let { listingName: t } = e;
     return (0, r.jsx)(i.X6q, {

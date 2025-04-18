@@ -8,7 +8,7 @@ var i = n(120356),
     l = n(509545),
     c = n(74538),
     u = n(474936),
-    d = n(106112);
+    d = n(963918);
 let f = function (e) {
     let { subscriptionTier: t, interval: n = u.rV.MONTH, className: i, isGift: f = !1, variant: _, priceOptions: p, isMarketingPageV2: h } = e;
     if (!(0, a.e7)([l.Z], () => l.Z.isLoadedForPremiumSKUs()))

@@ -55,7 +55,7 @@ function o() {
     return new Promise((t) => {
         (0, i.ZDy)(
             async () => {
-                let { default: t } = await Promise.all([n.e('76540'), n.e('69422')]).then(n.bind(n, 628908));
+                let { default: t } = await Promise.all([n.e('76540'), n.e('59787')]).then(n.bind(n, 628908));
                 return (n) => (0, r.jsx)(t, l(a({}, n), { isTotp: e }));
             },
             {

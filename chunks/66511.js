@@ -77,7 +77,7 @@ let p = () => {
             };
             (0, i.ZD)(
                 async () => {
-                    let { default: t } = await Promise.all([n.e('54408'), n.e('77025')]).then(n.bind(n, 645264));
+                    let { default: t } = await Promise.all([n.e('54408'), n.e('56484')]).then(n.bind(n, 645264));
                     return (n) =>
                         (0, r.jsx)(
                             t,
@@ -110,7 +110,7 @@ let p = () => {
         },
         openMemberVerificationPreviewModal(e) {
             (0, i.ZD)(async () => {
-                let { default: t } = await Promise.all([n.e('54408'), n.e('77025')]).then(n.bind(n, 645264));
+                let { default: t } = await Promise.all([n.e('54408'), n.e('56484')]).then(n.bind(n, 645264));
                 return (n) =>
                     (0, r.jsx)(
                         t,

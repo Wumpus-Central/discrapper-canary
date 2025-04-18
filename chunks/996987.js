@@ -7,7 +7,7 @@ var i = n(481060),
     a = n(63063),
     s = n(453628),
     c = n(388032),
-    d = n(20493);
+    d = n(971005);
 function u(e) {
     let { value: t, onChange: n, children: u, note: p, helpdeskArticleId: m, style: b, disabled: g = !1, hideBorder: f = !1, className: h = d.marginBottom20 } = e,
         x = (0, o.Dt)();

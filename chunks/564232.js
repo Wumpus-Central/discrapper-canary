@@ -17,7 +17,7 @@ var n = r(200651),
     O = r(432496),
     j = r(981631),
     y = r(388032),
-    I = r(763147);
+    I = r(985959);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -89,7 +89,7 @@ function w(e) {
                                                 guildId: t.id,
                                                 onContextMenu: (e) => {
                                                     (0, c.jW)(e, async () => {
-                                                        let { default: e } = await Promise.all([r.e('79695'), r.e('26976'), r.e('88606')]).then(r.bind(r, 415118));
+                                                        let { default: e } = await Promise.all([r.e('26881'), r.e('26976'), r.e('30343')]).then(r.bind(r, 415118));
                                                         return (r) => {
                                                             var s, l;
                                                             return (0, n.jsx)(

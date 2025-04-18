@@ -5,7 +5,7 @@ var r = n(200651),
     a = n.n(o),
     s = n(481060),
     l = n(388032),
-    c = n(163845);
+    c = n(120942);
 let u = i.forwardRef(function (e, t) {
     let { className: n, src: i, unicodeEmoji: o, name: u, size: d = 20, enableTooltip: f = !0, enableHeight: _ = !0, onClick: p } = e;
     if (null == i && null == o) return null;

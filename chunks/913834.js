@@ -7,7 +7,7 @@ var r = n(200651),
     l = n(704041),
     c = n(986398),
     u = n(463031),
-    d = n(791644);
+    d = n(298338);
 function p(e) {
     let { guild: t, message: n } = e,
         [p, g] = o.useState(!1),

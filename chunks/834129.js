@@ -5,7 +5,7 @@ var i = n(120356),
     a = n.n(i),
     l = n(481060),
     o = n(318713),
-    s = n(614507);
+    s = n(534225);
 function c(e) {
     let { icon: t, iconNode: n, timestamp: i, timestampFormat: l, className: c, children: u, contentClassName: d, iconClassName: p, iconContainerClassName: m, timestampClassName: f, compact: h = !1 } = e;
     return (0, r.jsxs)('div', {

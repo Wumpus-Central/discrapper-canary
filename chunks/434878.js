@@ -60,7 +60,7 @@ var r = n(200651),
     es = n(981631),
     eo = n(124368),
     ec = n(388032),
-    ed = n(683999);
+    ed = n(175421);
 function eu(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -681,7 +681,7 @@ function e_(e) {
         parentId: t.id,
         focusedThreadId: e_
     });
-    let e9 = a.useCallback(() => {
+    let e1 = a.useCallback(() => {
             var e, n;
             if (eb) return;
             let r = eg ? (null == (e = eX.current) ? void 0 : e.getScrollerState()) : null == (n = et.current) ? void 0 : n.getScrollerState();
@@ -693,16 +693,16 @@ function e_(e) {
             let a = r.scrollTop + r.offsetHeight;
             r.scrollHeight - a < (eg ? Math.max(200, (0, en.KW)(eP)) : 200) && C();
         }, [eb, eg, t.guild_id, t.id, eP, C]),
-        e1 = (0, g.e7)([j.Z], () => j.Z.keyboardModeEnabled),
+        e9 = (0, g.e7)([j.Z], () => j.Z.keyboardModeEnabled),
         e6 = (0, ei.ZP)({
             id: 'forum-grid-view',
-            isEnabled: eg && e1,
+            isEnabled: eg && e9,
             setFocus: e3
         }),
         e8 = (0, el.Z)({
             listRef: et,
             padding: 96,
-            isEnabled: !eg && e1,
+            isEnabled: !eg && e9,
             channel: t
         }),
         e4 = e6.containerProps,
@@ -756,7 +756,7 @@ function e_(e) {
                                               renderSection: eY,
                                               renderItem: eQ,
                                               getSectionProps: e0,
-                                              onScroll: v ? e9 : void 0,
+                                              onScroll: v ? e1 : void 0,
                                               chunkSize: 350
                                           },
                                           e5,
@@ -784,7 +784,7 @@ function e_(e) {
                                                           renderRow: eV,
                                                           renderSection: eU,
                                                           chunkSize: 150,
-                                                          onScroll: v ? e9 : void 0,
+                                                          onScroll: v ? e1 : void 0,
                                                           paddingBottom: 24
                                                       },
                                                       a,

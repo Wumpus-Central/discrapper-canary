@@ -6,7 +6,7 @@ var r = n(481060),
     s = n(13140),
     c = n(487029),
     a = n(388032),
-    l = n(771031);
+    l = n(169804);
 function d(e) {
     let { guildId: t, channel: d, keybind: u, transitionState: h, onClose: k } = e;
     function b() {

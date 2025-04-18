@@ -14,13 +14,13 @@ var r = n(200651),
     g = n(612226),
     m = n(951483),
     b = n(714338),
-    _ = n(607070),
-    y = n(460181),
+    y = n(607070),
+    _ = n(460181),
     v = n(585483),
     O = n(264549),
     C = n(981631),
     S = n(388032),
-    j = n(268751);
+    j = n(39389);
 function E(e, t, n) {
     return (
         t in e
@@ -35,12 +35,12 @@ function E(e, t, n) {
     );
 }
 let x = {
-    UP: u().throttle(() => (0, y.GN)('ddr-up'), 100),
-    DOWN: u().throttle(() => (0, y.GN)('ddr-down'), 100),
-    LEFT: u().throttle(() => (0, y.GN)('ddr-left'), 100),
-    RIGHT: u().throttle(() => (0, y.GN)('ddr-right'), 100)
+    UP: u().throttle(() => (0, _.GN)('ddr-up'), 100),
+    DOWN: u().throttle(() => (0, _.GN)('ddr-down'), 100),
+    LEFT: u().throttle(() => (0, _.GN)('ddr-left'), 100),
+    RIGHT: u().throttle(() => (0, _.GN)('ddr-right'), 100)
 };
-function N(e) {
+function I(e) {
     switch (e.keyCode) {
         case C.yXg.ARROW_UP:
             return 'UP';
@@ -54,7 +54,7 @@ function N(e) {
             return null;
     }
 }
-let I = [g.Q2.MESSAGE, g.Q2.NAVIGATION, g.Q2.VOICE_AND_VIDEO, g.Q2.CHAT, g.Q2.MISCELLANEOUS];
+let N = [g.Q2.MESSAGE, g.Q2.NAVIGATION, g.Q2.VOICE_AND_VIDEO, g.Q2.CHAT, g.Q2.MISCELLANEOUS];
 function P(e) {
     let { showBackdrop: t } = e;
     return (0, r.jsx)('div', { className: o()(j.backdrop, { [j.show]: t }) });
@@ -69,7 +69,7 @@ function w() {
     );
     return (0, r.jsx)('div', {
         className: j.keyboardShortcutList,
-        children: I.map((t) => {
+        children: N.map((t) => {
             let n = e[t],
                 i = (0, g.UD)(t),
                 l = (0, g.U6)(t);
@@ -269,12 +269,12 @@ class Z extends i.PureComponent {
             })),
             E(this, 'handleKeyDown', (e) => {
                 if ((this.lastInputedKeys.push(e.keyCode), (this.lastInputedKeys = this.lastInputedKeys.slice(-5)), this.lastInputedKeys[0] === C.yXg.H && this.lastInputedKeys[1] === C.yXg.H && this.lastInputedKeys[2] === C.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === C.yXg.N && this.lastInputedKeys[4] === C.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled)) return;
-                let t = N(e);
+                let t = I(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({ direction: t }));
             }),
             E(this, 'handleKeyUp', (e) => {
                 if (this.props.keyboardModeEnabled) return;
-                let t = N(e);
+                let t = I(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({ direction: t }));
             }),
             E(this, 'onArrowClick', (e) => {
@@ -307,9 +307,9 @@ function A(e) {
         [l, s] = i.useState(!1),
         [a, c] = i.useState(!1),
         u = i.useMemo(() => (__OVERLAY__ ? (0, m.Zg)() : (0, g.Rv)()), []),
-        { keyboardModeEnabled: d, useReducedMotion: y } = (0, h.cj)([_.Z], () => ({
-            keyboardModeEnabled: _.Z.keyboardModeEnabled,
-            useReducedMotion: _.Z.useReducedMotion
+        { keyboardModeEnabled: d, useReducedMotion: _ } = (0, h.cj)([y.Z], () => ({
+            keyboardModeEnabled: y.Z.keyboardModeEnabled,
+            useReducedMotion: y.Z.useReducedMotion
         }));
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -337,7 +337,7 @@ function A(e) {
                                   content: u,
                                   keyboardModeEnabled: d,
                                   activateRagingDemon: function () {
-                                      y || (b.Z.disable(), s(!0), c(!0));
+                                      _ || (b.Z.disable(), s(!0), c(!0));
                                   }
                               },
                               'modal'

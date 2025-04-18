@@ -5,7 +5,7 @@ var r = l(409794),
     s = l(777207),
     i = l(541822),
     a = l(330711),
-    o = l(845533);
+    o = l(237177);
 function c(e) {
     let { benefits: n, description: l, imgSrc: c, title: d, tag: u, FallbackIcon: m } = e,
         x = null != c ? { '--custom-background-url': 'url('.concat(c.toString(), ')') } : void 0;

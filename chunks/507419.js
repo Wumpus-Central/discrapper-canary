@@ -8,12 +8,12 @@ var l = n(200651),
     u = n(174727),
     c = n(990792),
     d = n(388032),
-    f = n(534844);
+    f = n(924849);
 let m = a.memo(function (e) {
     let { sound: t, volume: n, disabled: m } = e,
         [h, g] = a.useState(!1),
         p = a.useRef(null),
-        { file: b, audio: y, loadAudioFromFile: v } = (0, o.p)(),
+        { file: y, audio: b, loadAudioFromFile: v } = (0, o.p)(),
         x = a.useMemo(() => (0, i.Z)(t.soundId), [t]);
     return (
         a.useEffect(() => {
@@ -26,7 +26,7 @@ let m = a.memo(function (e) {
                     onClick: m
                         ? void 0
                         : function () {
-                              null != y && (y.paused ? ((y.volume = (0, s.Z)(n)), (y.currentTime = 0), y.play(), g(!0), y.addEventListener('ended', () => g(!1), { once: !0 })) : (y.pause(), g(!1)));
+                              null != b && (b.paused ? ((b.volume = (0, s.Z)(n)), (b.currentTime = 0), b.play(), g(!0), b.addEventListener('ended', () => g(!1), { once: !0 })) : (b.pause(), g(!1)));
                           },
                     className: f.playButton,
                     'aria-label': h ? d.NW.string(d.t.hHBkuL) : d.NW.string(d.t.RscU7O),
@@ -46,8 +46,8 @@ let m = a.memo(function (e) {
                     className: f.waveformContainer,
                     children: (0, l.jsx)(c.Z, {
                         className: f.waveform,
-                        file: b,
-                        audio: y
+                        file: y,
+                        audio: b
                     })
                 })
             ]

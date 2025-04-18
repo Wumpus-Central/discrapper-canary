@@ -1,5 +1,5 @@
 n.d(t, {
-    J: () => N,
+    J: () => I,
     y: () => x
 });
 var r = n(200651),
@@ -17,23 +17,23 @@ var r = n(200651),
     g = n(311352),
     m = n(668519),
     b = n(562224),
-    _ = n(803647),
-    y = n(131704),
+    y = n(803647),
+    _ = n(131704),
     v = n(944486),
     O = n(626135),
     C = n(870569),
     S = n(981631),
     j = n(388032),
-    E = n(390648);
+    E = n(903203);
 function x(e, t, n) {
     return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === S.IIU.PLAYING && (0, d.Z)(t, S.xjy.JOIN));
 }
-let N = i.memo(function (e) {
+let I = i.memo(function (e) {
     let t,
         l,
         d,
-        N,
-        { stream: I, canGoLive: P, guildId: w, isStreaming: Z, channel: T, canStream: A, runningGame: R, embeddedActivity: D, activity: L, application: k, analyticsContext: M } = e,
+        I,
+        { stream: N, canGoLive: P, guildId: w, isStreaming: Z, channel: T, canStream: A, runningGame: R, embeddedActivity: D, activity: L, application: k, analyticsContext: M } = e,
         { showRefreshedGoLiveModal: U } = (0, m.a)({
             location: 'Activity Panel',
             autoTrackExposure: !1
@@ -62,10 +62,10 @@ let N = i.memo(function (e) {
             [G]
         ),
         H = i.useCallback(() => {
-            (0, _.Z)(I);
-        }, [I]),
+            (0, y.Z)(N);
+        }, [N]),
         F = i.useCallback(() => {
-            let e = null != T && (0, y.vd)(T.type) ? T : null,
+            let e = null != T && (0, _.vd)(T.type) ? T : null,
                 t = null != e ? e.getGuildId() : w;
             if (U && null != R && null != v.Z.getVoiceChannelId()) {
                 (0, m.s)('Activity Panel'), (0, b.Z)(R.pid);
@@ -134,19 +134,19 @@ let N = i.memo(function (e) {
                             H(), (0, f.v)(G, f.d.STREAM, !1);
                         }),
                         (d = a.g5r),
-                        (N = j.NW.string(j.t.S5anIS)))
+                        (I = j.NW.string(j.t.S5anIS)))
                       : A
                         ? ((t = !1),
                           (l = () => {
                               F(), (0, f.v)(G, f.d.STREAM, !0);
                           }),
                           (d = a.hGI),
-                          (N = null != R ? j.NW.formatToPlainString(j.t.AB5gT0, { game: R.name }) : j.NW.string(j.t.FeUKeH)))
-                        : ((t = !0), (l = null), (d = a.hGI), (N = null != T && (0, y.vd)(T.type) ? j.NW.string(j.t.uQn9Bw) : null != w ? j.NW.string(j.t.fBXEoK) : j.NW.string(j.t.n3feND))),
+                          (I = null != R ? j.NW.formatToPlainString(j.t.AB5gT0, { game: R.name }) : j.NW.string(j.t.FeUKeH)))
+                        : ((t = !0), (l = null), (d = a.hGI), (I = null != T && (0, _.vd)(T.type) ? j.NW.string(j.t.uQn9Bw) : null != w ? j.NW.string(j.t.fBXEoK) : j.NW.string(j.t.n3feND))),
                   (0, r.jsx)('div', {
                       className: E.panelButtonContainer,
                       children: (0, r.jsx)(C.Z, {
-                          tooltipText: N,
+                          tooltipText: I,
                           disabled: t,
                           onClick: l,
                           icon: d
@@ -169,7 +169,7 @@ let N = i.memo(function (e) {
                       onClick: V(D.applicationId, D.location),
                       icon: a.PBZ
                   }),
-        q = null == I ? null : (0, r.jsx)(g.Z, {});
+        q = null == N ? null : (0, r.jsx)(g.Z, {});
     return null == z && null == Y && null == K
         ? null
         : (0, r.jsxs)('div', {

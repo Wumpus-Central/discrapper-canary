@@ -12,7 +12,7 @@ var i = n(120356),
     f = n(528567),
     _ = n(371583),
     p = n(388032),
-    h = n(445232);
+    h = n(131718);
 function m(e) {
     switch (e) {
         case a.q.DAILY:

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(442837),
@@ -14,7 +14,7 @@ var r = n(200651),
     h = n(709054),
     g = n(838440),
     _ = n(981631),
-    b = n(18485);
+    b = n(206371);
 function x(e) {
     let { assets: t, currentUser: n, message: r } = e,
         i = (h.default.extractTimestamp(n.id) + h.default.extractTimestamp(r.id)) % t.length;
@@ -32,7 +32,7 @@ function y(e) {
                 }),
             [d, t, a]
         ),
-        v = i.useMemo(
+        E = i.useMemo(
             () =>
                 x({
                     assets: u,
@@ -41,7 +41,7 @@ function y(e) {
                 }),
             [u, t, a]
         ),
-        E = i.useCallback(async () => {
+        v = i.useCallback(async () => {
             let { valid: e } = await (0, g.v)({
                 type: s.Ie.FORM,
                 content: '',
@@ -123,7 +123,7 @@ function y(e) {
         color: l.Ttl.PRIMARY,
         onMouseEnter: () => _(!0),
         onMouseLeave: () => _(!1),
-        onClick: E,
+        onClick: v,
         children: [
             (0, r.jsx)(c.Z, {
                 className: b.CTAMessageSticker,
@@ -131,11 +131,11 @@ function y(e) {
                 sticker: y,
                 size: 28
             }),
-            v
+            E
         ]
     });
 }
-function v(e) {
+function E(e) {
     let { channel: t, message: n, buttonLabels: i, stickers: l, event: o, eventProperties: s } = e,
         c = m.default.getCurrentUser(),
         f = (function (e) {

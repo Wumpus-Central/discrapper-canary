@@ -10,7 +10,7 @@ var i = n(120356),
     d = n(785717),
     u = n(475413),
     m = n(388032),
-    g = n(517895);
+    g = n(389111);
 function p(e) {
     let { user: t, isHovering: n } = e,
         { trackUserProfileAction: i } = (0, d.KZ)();

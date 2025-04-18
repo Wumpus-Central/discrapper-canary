@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => W });
 var r = n(200651);
 n(192379);
 var l = n(120356),
@@ -31,9 +31,9 @@ var l = n(120356),
     A = n(981631),
     w = n(477839),
     D = n(388032),
-    _ = n(622802),
-    L = n(126485);
-let W = (e) => {
+    _ = n(609077),
+    L = n(494557);
+let k = (e) => {
         let { user: t, color: n, look: l, activity: i, onAction: o } = e,
             a = (0, p.Aq)();
         return (0, r.jsx)(
@@ -50,8 +50,8 @@ let W = (e) => {
             'custom-activity-button'
         );
     },
-    k = (0, u.Z)((e) => {
-        let { activity: t, embeddedActivity: n, user: l, applicationStream: o, className: u, guildId: p, channelId: g, source: k, color: M = c.zxk.Colors.WHITE, look: U = c.zxk.Looks.OUTLINED, type: R, onAction: V } = e,
+    W = (0, u.Z)((e) => {
+        let { activity: t, embeddedActivity: n, user: l, applicationStream: o, className: u, guildId: p, channelId: g, source: W, color: M = c.zxk.Colors.WHITE, look: U = c.zxk.Looks.OUTLINED, type: R, onAction: V } = e,
             F = (0, s.e7)([b.default], () => {
                 let e = b.default.getCurrentUser();
                 return a()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
@@ -105,7 +105,7 @@ let W = (e) => {
                           Object.defineProperty(z, e, Object.getOwnPropertyDescriptor(H, e));
                       }),
                 (t = z),
-                (0, r.jsx)(W, {
+                (0, r.jsx)(k, {
                     user: l,
                     color: M,
                     look: U,
@@ -154,7 +154,7 @@ let W = (e) => {
                                 user: l,
                                 guildId: p,
                                 channelId: g,
-                                source: k,
+                                source: W,
                                 look: U,
                                 color: M,
                                 onAction: V
@@ -166,7 +166,7 @@ let W = (e) => {
                             {
                                 activity: t,
                                 user: l,
-                                source: k,
+                                source: W,
                                 look: U,
                                 color: M,
                                 onAction: V
