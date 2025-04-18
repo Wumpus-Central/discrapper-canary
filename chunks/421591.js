@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(482853);
+n.d(t, { Z: () => v }), n(388685), n(482853);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -7,24 +7,25 @@ var i = n(200651),
     s = n(906732),
     c = n(541099),
     u = n(695676),
-    d = n(173790),
-    p = n(692656),
-    m = n(684256),
-    f = n(314734),
-    h = n(981631),
-    b = n(267482);
-let _ = {
-        width: f.Gy,
-        height: f.lv
+    d = n(176412),
+    p = n(173790),
+    m = n(692656),
+    f = n(684256),
+    h = n(314734),
+    b = n(981631),
+    _ = n(267482);
+let y = {
+        width: h.Gy,
+        height: (0, d.DK)()
     },
-    y = { height: f.lv },
-    x = r.memo(
+    x = { height: (0, d.DK)() },
+    v = r.memo(
         r.forwardRef(function (e, t) {
             let { context: n, entrypoint: l, initHistory: u } = e,
                 { analyticsLocations: d } = (0, s.ZP)(o.Z.APP_LAUNCHER);
             return (
                 r.useEffect(() => {
-                    (0, a.yw)(h.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
+                    (0, a.yw)(b.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
                         source: l,
                         location: 'app_launcher'
                     });
@@ -32,7 +33,7 @@ let _ = {
                 r.useEffect(() => {
                     let e = Date.now();
                     return () => {
-                        (0, a.yw)(h.rMx.APP_LAUNCHER_CLOSED, {
+                        (0, a.yw)(b.rMx.APP_LAUNCHER_CLOSED, {
                             reason: c.Z.closeReason(),
                             time_spent: Date.now() - e,
                             source: l
@@ -40,16 +41,16 @@ let _ = {
                     };
                 }, [l]),
                 (0, i.jsx)('div', {
-                    className: b.drawerSizingWrapper,
+                    className: _.drawerSizingWrapper,
                     ref: t,
-                    style: _,
+                    style: y,
                     children: (0, i.jsx)('div', {
-                        className: b.contentWrapper,
+                        className: _.contentWrapper,
                         children: (0, i.jsx)(s.Gt, {
                             value: d,
                             children: (0, i.jsx)(C, {
                                 initHistory: u,
-                                children: (0, i.jsx)(v, {
+                                children: (0, i.jsx)(g, {
                                     context: n,
                                     entrypoint: l
                                 })
@@ -138,7 +139,7 @@ function C(e) {
         children: n
     });
 }
-function v(e) {
+function g(e) {
     let { context: t, entrypoint: n } = e,
         [o, a] = r.useState(''),
         { setScroller: s, isCloseToBottom: c } = (function (e) {
@@ -159,7 +160,7 @@ function v(e) {
                             }
                         );
                     function e() {
-                        null != t && ((o.current = t.scrollTop), l(t.scrollHeight - (t.scrollTop + t.clientHeight) < 0.5 * f.K7));
+                        null != t && ((o.current = t.scrollTop), l(t.scrollHeight - (t.scrollTop + t.clientHeight) < 0.5 * (0, d.cr)()));
                     }
                 }, [t]),
                 {
@@ -168,27 +169,27 @@ function v(e) {
                 }
             );
         })(o),
-        { currentView: h, getMostRecentHistoryItemByType: _, setSlideReady: x } = (0, u.hH)();
+        { currentView: b, getMostRecentHistoryItemByType: y, setSlideReady: v } = (0, u.hH)();
     r.useEffect(() => {
-        x(!1);
-    }, [null == h ? void 0 : h.type, x]);
+        v(!1);
+    }, [null == b ? void 0 : b.type, v]);
     let C = r.useCallback(() => {
-        x(!0);
-    }, [x]);
-    if (null == h) return null;
-    let v = _(u.gc.LIST),
-        g = _(u.gc.APPLICATION);
+        v(!0);
+    }, [v]);
+    if (null == b) return null;
+    let g = y(u.gc.LIST),
+        N = y(u.gc.APPLICATION);
     return (0, i.jsxs)(l.MyZ, {
-        activeSlide: h.type,
-        width: f.Gy,
+        activeSlide: b.type,
+        width: h.Gy,
         onSlideReady: C,
         children: [
             (0, i.jsx)(l.Mi4, {
                 id: u.gc.HOME,
                 children: (0, i.jsx)('div', {
-                    className: b.slideContent,
-                    style: y,
-                    children: (0, i.jsx)(p.Z, {
+                    className: _.slideContent,
+                    style: x,
+                    children: (0, i.jsx)(m.Z, {
                         isScrollCloseToBottom: c,
                         setScroller: s,
                         context: t,
@@ -201,33 +202,33 @@ function v(e) {
             (0, i.jsx)(l.Mi4, {
                 id: u.gc.LIST,
                 children: (0, i.jsx)('div', {
-                    className: b.slideContent,
-                    style: y,
+                    className: _.slideContent,
+                    style: x,
                     children:
-                        null != v &&
-                        (0, i.jsx)(m.Z, {
+                        null != g &&
+                        (0, i.jsx)(f.Z, {
                             context: t,
                             entrypoint: n,
-                            title: v.title,
-                            look: v.look,
-                            items: v.items,
-                            sectionName: v.sectionName,
-                            sectionOverallPosition: v.sectionOverallPosition
+                            title: g.title,
+                            look: g.look,
+                            items: g.items,
+                            sectionName: g.sectionName,
+                            sectionOverallPosition: g.sectionOverallPosition
                         })
                 })
             }),
             (0, i.jsx)(l.Mi4, {
                 id: u.gc.APPLICATION,
                 children: (0, i.jsx)('div', {
-                    className: b.slideContent,
-                    style: y,
+                    className: _.slideContent,
+                    style: x,
                     children:
-                        null != g &&
-                        (0, i.jsx)(d.Z, {
+                        null != N &&
+                        (0, i.jsx)(p.Z, {
                             context: t,
-                            application: g.application,
-                            sectionName: g.sectionName,
-                            showFriendsTab: !!g.showFriendsTab
+                            application: N.application,
+                            sectionName: N.sectionName,
+                            showFriendsTab: !!N.showFriendsTab
                         })
                 })
             })

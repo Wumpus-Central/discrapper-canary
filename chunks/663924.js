@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => I });
 var r = n(200651),
     i = n(192379),
     l = n(374470),
@@ -13,58 +13,59 @@ var r = n(200651),
     f = n(499254),
     m = n(827498),
     g = n(421591),
-    b = n(496977),
-    _ = n(314734),
-    y = n(981631),
-    C = n(149203),
-    x = n(388032),
-    v = n(208888);
-let j = { height: _.lv };
-function O() {
+    b = n(176412),
+    _ = n(496977),
+    y = n(314734),
+    C = n(981631),
+    x = n(149203),
+    v = n(388032),
+    j = n(208888);
+let O = { height: (0, b.DK)() };
+function E() {
     f.yT(m.ti.DISMISSED);
 }
-function E(e) {
+function N(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: u } = e,
         d = i.useRef(null),
-        { renderWindow: f, windowDispatch: x } = i.useContext(s.ZP),
+        { renderWindow: f, windowDispatch: b } = i.useContext(s.ZP),
         v = null != u,
         j = (0, o.Jw)(null != u ? u : ''),
-        E = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 var t;
                 if ((!v && (0, o.$s)()) || (v && !(j && n))) return;
                 let { target: r } = e;
-                if ((0, l.k)(r) && null != r.closest('.' + _.Jh)) return;
+                if ((0, l.k)(r) && null != r.closest('.' + y.Jh)) return;
                 for (; (0, l.k)(r); ) {
                     if (r === d.current) return;
-                    if (r.classList.contains(_.t4) || r.classList.contains(_.Id)) return void e.preventDefault();
-                    if (r.classList.contains(_.NN)) return;
-                    let t = [C.cZ, c.N];
-                    if (r.classList.contains(_.I4) || t.includes(r.id)) return;
+                    if (r.classList.contains(y.t4) || r.classList.contains(y.Id)) return void e.preventDefault();
+                    if (r.classList.contains(y.NN)) return;
+                    let t = [x.cZ, c.N];
+                    if (r.classList.contains(y.I4) || t.includes(r.id)) return;
                     r = r.parentNode;
                 }
-                O();
+                E();
                 let i = null == (t = (0, h.uB)(e)) ? void 0 : t.activeElement;
-                (null == i || 'BODY' === i.tagName) && p.S.dispatchToLastSubscribed(y.CkL.TEXTAREA_FOCUS);
+                (null == i || 'BODY' === i.tagName) && p.S.dispatchToLastSubscribed(C.CkL.TEXTAREA_FOCUS);
             },
             [n, j, v]
         );
     i.useLayoutEffect(
         () => (
-            f.addEventListener('mousedown', E),
-            f.addEventListener('contextmenu', E),
-            x.subscribe(y.CkL.POPOUT_CLOSE, O),
+            f.addEventListener('mousedown', O),
+            f.addEventListener('contextmenu', O),
+            b.subscribe(C.CkL.POPOUT_CLOSE, E),
             () => {
-                f.removeEventListener('mousedown', E), f.removeEventListener('contextmenu', E), x.unsubscribe(y.CkL.POPOUT_CLOSE, O);
+                f.removeEventListener('mousedown', O), f.removeEventListener('contextmenu', O), b.unsubscribe(C.CkL.POPOUT_CLOSE, E);
             }
         ),
-        [E, f, x]
+        [O, f, b]
     ),
         (0, a.Tbt)(d),
         i.useEffect(() => {
-            ((!v && (0, o.$s)()) || (v && !j)) && O();
+            ((!v && (0, o.$s)()) || (v && !j)) && E();
         }, [j, v]);
-    let N = (0, b.Z)();
+    let N = (0, _.Z)();
     return (0, r.jsx)(g.Z, {
         ref: d,
         context: {
@@ -75,7 +76,7 @@ function E(e) {
         initHistory: N
     });
 }
-let N = i.memo(function (e) {
+let I = i.memo(function (e) {
     var { positionTargetRef: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -98,9 +99,9 @@ let N = i.memo(function (e) {
         })(e, ['positionTargetRef']);
     let i = (0, u.Q3)('AppLauncherPopup');
     return (0, r.jsx)('span', {
-        style: _.u$,
+        style: (0, b.kU)(),
         children: (0, r.jsx)(d.W5, {
-            className: v.positionLayer,
+            className: j.positionLayer,
             targetRef: t,
             position: 'top',
             align: 'right',
@@ -110,14 +111,14 @@ let N = i.memo(function (e) {
             children: (e) => {
                 let { isPositioned: t } = e;
                 return (0, r.jsx)('section', {
-                    className: v.positionContainer,
+                    className: j.positionContainer,
                     role: 'dialog',
-                    style: j,
-                    'aria-label': x.NW.string(x.t['3CNGLC']),
+                    style: O,
+                    'aria-label': v.NW.string(v.t['3CNGLC']),
                     children:
                         t &&
                         (0, r.jsx)(
-                            E,
+                            N,
                             (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},

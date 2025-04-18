@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => F,
-    u: () => Q
+    u: () => Y
 }),
     n(388685),
     n(953529);
@@ -21,14 +21,14 @@ var i = n(200651),
     _ = n(427996),
     y = n(906732),
     x = n(706302),
-    C = n(812236),
-    v = n(835473),
+    v = n(812236),
+    C = n(835473),
     g = n(146282),
     N = n(26033),
     j = n(70097),
     P = n(240991),
-    O = n(973616),
-    E = n(626135),
+    E = n(973616),
+    O = n(626135),
     A = n(424602),
     I = n(573188),
     S = n(783097),
@@ -36,11 +36,11 @@ var i = n(200651),
     L = n(886792),
     w = n(635753),
     R = n(520315),
-    k = n(29380),
-    Z = n(783685),
+    Z = n(29380),
+    k = n(783685),
     M = n(981631),
-    D = n(206583),
-    W = n(388032),
+    W = n(206583),
+    D = n(388032),
     B = n(565486),
     U = n(852831);
 function H(e) {
@@ -93,26 +93,26 @@ function F(e) {
             var e;
             return null != (e = (0, S.jD)(l)) ? e : '';
         }, [l]),
-        C = (0, d.e7)([f.Z], () => f.Z.inDevModeForApplication(l.id)),
-        { isSlideReady: v } = (0, T.hH)(),
-        [P, O] = r.useState(!1);
+        v = (0, d.e7)([f.Z], () => f.Z.inDevModeForApplication(l.id)),
+        { isSlideReady: C } = (0, T.hH)(),
+        [P, E] = r.useState(!1);
     r.useEffect(() => {
-        v && O(!0);
-    }, [v]);
-    let E = null != a,
+        C && E(!0);
+    }, [C]);
+    let O = null != a,
         R = A.PM.useExperiment({ location: 'AppLauncherProfile' }),
-        { enabled: k } = I.X.useExperiment({ location: 'AppLauncherProfile' }),
-        [Z, M] = r.useState(y),
+        { enabled: Z } = I.X.useExperiment({ location: 'AppLauncherProfile' }),
+        [k, M] = r.useState(y),
         { friends: U, friendsLastPlayed: F } = (0, h.Z)(l),
-        Y =
+        q =
             ((t = U),
             r.useMemo(() => {
                 var e, n, i, r;
                 if (0 === t.length) return '';
-                let l = u().sample(1 === t.length ? K : $);
+                let l = u().sample(1 === t.length ? J : K);
                 return (
                     s()(l, 'intl message arrays should not be empty'),
-                    W.NW.format(l, {
+                    D.NW.format(l, {
                         friendCount: t.length,
                         count: t.length,
                         friendCountMinusOne: t.length - 1,
@@ -122,16 +122,16 @@ function F(e) {
                     })
                 );
             }, [t])),
-        ee = (0, d.e7)([g.Z], () => g.Z.getFeed(D.YN.GLOBAL_FEED)),
-        et = r
+        $ = (0, d.e7)([g.Z], () => g.Z.getFeed(W.YN.GLOBAL_FEED)),
+        ee = r
             .useMemo(() => {
-                if (null == ee) return [];
-                let e = ee.entries.reduce((e, t) => V(H({}, e), { [t.content.id]: t.content }), {});
+                if (null == $) return [];
+                let e = $.entries.reduce((e, t) => V(H({}, e), { [t.content.id]: t.content }), {});
                 return U.reduce((t, n) => {
                     let i = e[F[n.id]];
                     return null != i && (0, N.Mq)(i) ? [...t, i] : t;
                 }, []);
-            }, [ee, U, F])
+            }, [$, U, F])
             .map((e) =>
                 (0, i.jsx)(
                     L.Z,
@@ -148,21 +148,22 @@ function F(e) {
             {
                 [B.experimentLayout]: R.enabled,
                 [B.altLayout]: R.altLayout,
-                [B.fixedHeight]: Z && U.length > 1 && U.length <= 3
+                [B.fixedHeight]: k && U.length > 1 && U.length <= 3,
+                [B.friendsWhoPlay]: Z
             },
             B.container
         ),
         children: [
-            R.enabled
+            R.enabled || Z
                 ? (0, i.jsxs)('div', {
                       className: B.experimentTitleContainer,
-                      children: [(0, i.jsx)(X, { application: l }), (0, i.jsx)(G, { application: l })]
+                      children: [(0, i.jsx)(G, { application: l }), R.enabled ? (0, i.jsx)(z, { application: l }) : null]
                   })
                 : null,
-            k && 0 !== U.length
+            Z && 0 !== U.length
                 ? (0, i.jsxs)(m.njP, {
                       className: B.tabBar,
-                      selectedItem: Z ? 'friends' : 'overview',
+                      selectedItem: k ? 'friends' : 'overview',
                       onItemSelect: (e) => {
                           'friends' === e ? M(!0) : M(!1);
                       },
@@ -171,7 +172,7 @@ function F(e) {
                           (0, i.jsx)(m.njP.Item, {
                               id: 'overview',
                               className: B.tabItem,
-                              children: W.NW.string(W.t['/dp6yc'])
+                              children: D.NW.string(D.t['/dp6yc'])
                           }),
                           (0, i.jsx)(m.njP.Item, {
                               id: 'friends',
@@ -184,28 +185,22 @@ function F(e) {
                       ]
                   })
                 : null,
-            Z
-                ? (0, i.jsx)(z, {
-                      application: l,
-                      pepButtonLabelEnabled: R.enabled,
-                      children: (0, i.jsxs)('div', {
-                          className: B.friendsContainer,
-                          children: [
-                              (0, i.jsx)('div', { children: et }),
-                              (0, i.jsx)(m.Text, {
-                                  className: B.friendsMotivationText,
-                                  variant: 'text-md/normal',
-                                  color: 'text-secondary',
-                                  children: Y
-                              })
-                          ]
-                      })
-                  })
-                : (0, i.jsxs)(z, {
-                      application: l,
-                      pepButtonLabelEnabled: R.enabled,
+            k
+                ? (0, i.jsxs)('div', {
+                      className: B.friendsContainer,
                       children: [
-                          E
+                          (0, i.jsx)('div', { children: ee }),
+                          (0, i.jsx)(m.Text, {
+                              className: B.friendsMotivationText,
+                              variant: 'text-md/normal',
+                              color: 'text-secondary',
+                              children: q
+                          })
+                      ]
+                  })
+                : (0, i.jsxs)(i.Fragment, {
+                      children: [
+                          O
                               ? (0, i.jsxs)('div', {
                                     className: B.videoContainer,
                                     children: [
@@ -222,18 +217,18 @@ function F(e) {
                                         (0, i.jsx)('img', {
                                             className: B.videoCover,
                                             src: c,
-                                            'aria-label': W.NW.string(W.t.X4IxWF)
+                                            'aria-label': D.NW.string(D.t.X4IxWF)
                                         })
                                     ]
                                 })
                               : null,
                           (0, i.jsxs)('div', {
-                              className: E ? B.overviewContainerWithVideo : B.overviewContainerNoVideo,
+                              className: O ? B.overviewContainerWithVideo : B.overviewContainerNoVideo,
                               children: [
-                                  R.enabled ? null : (0, i.jsx)(X, { application: l }),
-                                  (0, i.jsx)(q, { application: l }),
-                                  x.length > 0 ? (0, i.jsx)(J, { description: x }) : null,
-                                  C
+                                  R.enabled || Z ? null : (0, i.jsx)(G, { application: l }),
+                                  (0, i.jsx)(X, { application: l }),
+                                  x.length > 0 ? (0, i.jsx)(Q, { description: x }) : null,
+                                  v
                                       ? (0, i.jsx)('div', {
                                             className: B.developerShelfControlsContainer,
                                             children: (0, i.jsx)(_.W, {
@@ -242,29 +237,24 @@ function F(e) {
                                             })
                                         })
                                       : null,
-                                  R.enabled
+                                  R.enabled || Z
                                       ? null
-                                      : (0, i.jsx)(Q, {
+                                      : (0, i.jsx)(Y, {
                                             context: n,
                                             application: l,
                                             sectionName: p,
-                                            isDeveloperOfThisApp: C,
+                                            isDeveloperOfThisApp: v,
                                             hasCommands: b
                                         })
                               ]
-                          })
+                          }),
+                          R.enabled || Z ? null : (0, i.jsx)(z, { application: l })
                       ]
                   })
         ]
     });
 }
 function z(e) {
-    let { children: t, pepButtonLabelEnabled: n, application: r } = e;
-    return (0, i.jsxs)(i.Fragment, {
-        children: [t, n ? null : (0, i.jsx)(G, { application: r })]
-    });
-}
-function G(e) {
     let { application: t } = e,
         n = (0, S.Cb)(t),
         r = (0, S.Hu)(t);
@@ -283,7 +273,7 @@ function G(e) {
                                 (0, i.jsx)(m.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: W.NW.string(W.t['8z5B2d'])
+                                    children: D.NW.string(D.t['8z5B2d'])
                                 })
                             ]
                         })
@@ -299,7 +289,7 @@ function G(e) {
                                 (0, i.jsx)(m.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: W.NW.string(W.t['5khEk5'])
+                                    children: D.NW.string(D.t['5khEk5'])
                                 })
                             ]
                         })
@@ -308,7 +298,7 @@ function G(e) {
           })
         : null;
 }
-function X(e) {
+function G(e) {
     var t;
     let { application: n } = e,
         r = (0, S.BQ)(n) ? n.name : null != (t = (0, S.$d)(n)) ? t : '',
@@ -327,14 +317,14 @@ function X(e) {
                       children: (0, i.jsx)(m.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
-                          children: W.NW.string(W.t.LO4f0N)
+                          children: D.NW.string(D.t.LO4f0N)
                       })
                   })
                 : null
         ]
     });
 }
-function q(e) {
+function X(e) {
     let { application: t } = e,
         n = r.useMemo(() => {
             var e;
@@ -344,7 +334,7 @@ function q(e) {
         ? (0, i.jsxs)('div', {
               className: B.tagsContainer,
               children: [
-                  (0, i.jsx)(Y, { application: t }),
+                  (0, i.jsx)(q, { application: t }),
                   n.map((e, t) =>
                       (0, i.jsx)(
                           'div',
@@ -363,11 +353,11 @@ function q(e) {
           })
         : null;
 }
-function Y(e) {
+function q(e) {
     var t;
     let { application: n } = e;
     if (!(0, S.ye)(n)) return null;
-    let r = null != (t = (0, S.BQ)(n) ? (n instanceof O.ZP ? n.maxParticipants : n.max_participants) : 0) ? t : 0;
+    let r = null != (t = (0, S.BQ)(n) ? (n instanceof E.ZP ? n.maxParticipants : n.max_participants) : 0) ? t : 0;
     return (0, i.jsxs)('div', {
         className: B.tagContainer,
         children: [
@@ -383,11 +373,11 @@ function Y(e) {
         ]
     });
 }
-function Q(e) {
+function Y(e) {
     var t;
     let { context: n, application: l, sectionName: a, hasCommands: s, isDeveloperOfThisApp: c } = e,
-        u = (0, C.Fs)(n, l.id),
-        d = (0, v.q)(l.id),
+        u = (0, v.Fs)(n, l.id),
+        d = (0, C.q)(l.id),
         f = null == d || null == (t = d.bot) ? void 0 : t.id,
         h = (0, x.Z)({
             context: n,
@@ -396,13 +386,14 @@ function Q(e) {
         }),
         { analyticsLocations: b } = (0, y.ZP)(),
         [_, g] = r.useState(!1),
-        N = A.PM.useExperiment({ location: 'AppLauncherAppProfile.PrimaryEntryPointArea()' });
+        N = A.PM.useExperiment({ location: 'AppLauncherAppProfile.PrimaryEntryPointArea()' }),
+        { enabled: j } = I.X.useExperiment({ location: 'AppLauncherProfile.PrimaryEntryPointArea()' });
     if (
         (r.useEffect(() => {
             if (!(0, S.BQ)(l) || !(0, S.ye)(l)) return;
             let e = setTimeout(() => {
                 (null == u || null == f) &&
-                    E.default.track(M.rMx.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED, {
+                    O.default.track(M.rMx.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED, {
                         application_id: l.id,
                         is_primary_entry_point_command_non_null: null != u,
                         is_bot_user_id_non_null: null != f,
@@ -414,74 +405,80 @@ function Q(e) {
         !(0, S.BQ)(l) || !(0, S.ye)(l))
     )
         return null;
-    let j = m.PhG.MAX;
+    let P = m.PhG.MAX;
     return null != u && null != f
         ? (0, i.jsxs)('div', {
-              className: o()(
-                  {
-                      [B.experimentLayout]: N.enabled,
-                      [B.altLayout]: N.altLayout,
-                      [B.noShowTryItOutButton]: !h
-                  },
-                  B.entrypointContainer
-              ),
+              className: j ? B.friendsWhoPlayPEP : void 0,
               children: [
-                  (0, i.jsx)('div', {
-                      className: B.entryPointContainerFlexChild,
-                      children: (0, i.jsx)(k.Z, {
-                          context: n,
-                          application: l,
-                          sectionName: a,
-                          primaryEntryPointCommand: u,
-                          buttonSize: j,
-                          playSolo: _
-                      })
-                  }),
-                  h && null != f
-                      ? N.altLayout
-                          ? (0, i.jsx)('div', {
-                                className: B.altLayout,
-                                children: (0, i.jsx)('div', {
-                                    className: B.entryPointContainerFlexChild,
-                                    children: (0, i.jsx)(m.XZJ, {
-                                        className: B.entryPointCheckbox,
-                                        value: _,
-                                        onChange: () => g(!_),
-                                        children: (0, i.jsxs)(m.Text, {
-                                            variant: 'text-sm/medium',
-                                            className: B.entryPointCheckboxLabel,
-                                            children: [
-                                                W.NW.string(W.t['e+CzPj']),
-                                                (0, i.jsx)(m.ua7, {
-                                                    text: W.NW.string(W.t.QOZI8f),
-                                                    children: (e) => (0, i.jsx)(p.d, V(H({}, e), { size: 'xs' }))
+                  (0, i.jsxs)('div', {
+                      className: o()(
+                          {
+                              [B.experimentLayout]: N.enabled,
+                              [B.altLayout]: N.altLayout,
+                              [B.noShowTryItOutButton]: !h
+                          },
+                          B.entrypointContainer
+                      ),
+                      children: [
+                          (0, i.jsx)('div', {
+                              className: B.entryPointContainerFlexChild,
+                              children: (0, i.jsx)(Z.Z, {
+                                  context: n,
+                                  application: l,
+                                  sectionName: a,
+                                  primaryEntryPointCommand: u,
+                                  buttonSize: P,
+                                  playSolo: _
+                              })
+                          }),
+                          h && null != f
+                              ? N.altLayout
+                                  ? (0, i.jsx)('div', {
+                                        className: B.altLayout,
+                                        children: (0, i.jsx)('div', {
+                                            className: B.entryPointContainerFlexChild,
+                                            children: (0, i.jsx)(m.XZJ, {
+                                                className: B.entryPointCheckbox,
+                                                value: _,
+                                                onChange: () => g(!_),
+                                                children: (0, i.jsxs)(m.Text, {
+                                                    variant: 'text-sm/medium',
+                                                    className: B.entryPointCheckboxLabel,
+                                                    children: [
+                                                        D.NW.string(D.t['e+CzPj']),
+                                                        (0, i.jsx)(m.ua7, {
+                                                            text: D.NW.string(D.t.QOZI8f),
+                                                            children: (e) => (0, i.jsx)(p.d, V(H({}, e), { size: 'xs' }))
+                                                        })
+                                                    ]
                                                 })
-                                            ]
+                                            })
                                         })
                                     })
-                                })
-                            })
-                          : (0, i.jsx)('div', {
-                                className: B.entryPointContainerFlexChild,
-                                children: (0, i.jsx)(Z.Z, {
-                                    botUserId: f,
-                                    applicationId: l.id,
-                                    buttonSize: j,
-                                    analyticsLocations: b
-                                })
-                            })
-                      : null
+                                  : (0, i.jsx)('div', {
+                                        className: B.entryPointContainerFlexChild,
+                                        children: (0, i.jsx)(k.Z, {
+                                            botUserId: f,
+                                            applicationId: l.id,
+                                            buttonSize: P,
+                                            analyticsLocations: b
+                                        })
+                                    })
+                              : null
+                      ]
+                  }),
+                  j ? (0, i.jsx)(z, { application: l }) : null
               ]
           })
         : c && !s && (0, S.ye)(l)
           ? (0, i.jsx)(m.Wn, {
                 className: B.primaryEntryPointWarningMessage,
                 messageType: m.QYI.WARNING,
-                children: W.NW.format(W.t['s/3hjI'], {})
+                children: D.NW.format(D.t['s/3hjI'], {})
             })
           : null;
 }
-function J(e) {
+function Q(e) {
     let { description: t } = e,
         n = A.PM.useExperiment({ location: 'AppLauncherProfile.Description()' }),
         [l, o] = r.useState(!0);
@@ -544,7 +541,7 @@ function J(e) {
                           (0, i.jsx)(m.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: b ? W.NW.string(W.t.u4YJ8v) : W.NW.string(W.t['N/tajI'])
+                              children: b ? D.NW.string(D.t.u4YJ8v) : D.NW.string(D.t['N/tajI'])
                           }),
                           b
                               ? (0, i.jsx)(m.u04, {
@@ -561,5 +558,5 @@ function J(e) {
         ]
     });
 }
-let K = [W.t.eCLLn5, W.t.d8pkUF],
-    $ = [W.t.d8pkUF, W.t.MbWAxs, W.t['8kiRMT'], W.t.GRL3Nj];
+let J = [D.t.eCLLn5, D.t.d8pkUF],
+    K = [D.t.d8pkUF, D.t.MbWAxs, D.t['8kiRMT'], D.t.GRL3Nj];

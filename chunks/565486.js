@@ -3,11 +3,13 @@ e.exports = {
     monetizationDisclosureContainerStyle: 'monetizationDisclosureContainerStyle__95856',
     experimentLayout: 'experimentLayout__95856',
     altLayout: 'altLayout__95856',
+    friendsWhoPlay: 'friendsWhoPlay__95856',
     videoContainer: 'videoContainer__95856',
     videoCover: 'videoCover__95856',
     video: 'video__95856',
     fadeIn: 'fadeIn__95856',
     overviewContainerWithVideo: 'overviewContainerWithVideo__95856',
+    tabBar: 'tabBar__95856',
     overviewContainerNoVideo: 'overviewContainerNoVideo__95856',
     titleContainer: 'titleContainer__95856',
     partnerLabelContainer: 'partnerLabelContainer__95856',
@@ -18,6 +20,7 @@ e.exports = {
     entrypointContainer: 'entrypointContainer__95856',
     developerShelfControlsContainer: 'developerShelfControlsContainer__95856',
     experimentTitleContainer: 'experimentTitleContainer__95856',
+    friendsWhoPlayPEP: 'friendsWhoPlayPEP__95856',
     entryPointCheckbox: 'entryPointCheckbox__95856',
     entryPointCheckboxLabel: 'entryPointCheckboxLabel__95856',
     noShowTryItOutButton: 'noShowTryItOutButton__95856',
@@ -29,6 +32,5 @@ e.exports = {
     friendsMotivationText: 'friendsMotivationText__95856',
     friendsContainer: 'friendsContainer__95856',
     fixedHeight: 'fixedHeight__95856',
-    tabBar: 'tabBar__95856',
     tabItem: 'tabItem__95856'
 };
