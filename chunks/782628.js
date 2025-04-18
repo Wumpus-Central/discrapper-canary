@@ -5,8 +5,11 @@ e.exports = {
     hiddenPlaceholder: 'hiddenPlaceholder_dbc4b7',
     emojiButton: 'emojiButton_dbc4b7',
     emojiButtonContainer: 'emojiButtonContainer_dbc4b7',
+    buttonContainerWithLabel: 'buttonContainerWithLabel_dbc4b7',
+    emojiButtonContainerWithLabel: 'emojiButtonContainerWithLabel_dbc4b7',
     emoji: 'emoji_dbc4b7',
     input: 'input_dbc4b7',
+    inputWithLabel: 'inputWithLabel_dbc4b7',
     clearButtonWrapper: 'clearButtonWrapper_dbc4b7',
     clearButton: 'clearButton_dbc4b7',
     clearIcon: 'clearIcon_dbc4b7',
@@ -17,5 +20,7 @@ e.exports = {
     clearAfterSelectContainer: 'clearAfterSelectContainer_dbc4b7',
     profilePreview: 'profilePreview_dbc4b7',
     needInspiration: 'needInspiration_dbc4b7',
-    needInspirationDisabled: 'needInspirationDisabled_dbc4b7'
+    needInspirationDisabled: 'needInspirationDisabled_dbc4b7',
+    labelSelectorContainer: 'labelSelectorContainer_dbc4b7',
+    inputCustomStatusLabelRow: 'inputCustomStatusLabelRow_dbc4b7'
 };

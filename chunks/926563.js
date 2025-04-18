@@ -1,9 +1,9 @@
 n.d(t, { Z: () => b });
-var r = n(200651);
+var a = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(680295),
-    l = n(687158),
+var r = n(481060),
+    l = n(680295),
+    i = n(687158),
     o = n(899007),
     s = n(648052),
     u = n(867176),
@@ -11,57 +11,58 @@ var a = n(481060),
     d = n(530),
     m = n(4517),
     f = n(5192),
-    p = n(228168),
-    h = n(200051);
+    h = n(228168),
+    p = n(200051);
 function b(e) {
-    let { user: t, previewText: n, previewEmoji: b, previewStatus: S, placeHolderText: j, transitionState: g } = e,
-        x = (0, l.ZP)(t.id);
-    return (0, r.jsxs)(c.Z, {
+    let { user: t, previewText: n, previewEmoji: b, previewStatus: S, placeHolderText: j, transitionState: g, label: x } = e,
+        v = (0, i.ZP)(t.id);
+    return (0, a.jsxs)(c.Z, {
         user: t,
-        displayProfile: x,
-        profileType: p.y0.BITE_SIZE,
-        className: h.profilePreviewContainer,
+        displayProfile: v,
+        profileType: h.y0.BITE_SIZE,
+        className: p.profilePreviewContainer,
         children: [
-            (0, r.jsxs)('header', {
+            (0, a.jsxs)('header', {
                 children: [
-                    (0, r.jsx)(u.Z, {
+                    (0, a.jsx)(u.Z, {
                         user: t,
-                        displayProfile: x,
-                        profileType: p.y0.BITE_SIZE
+                        displayProfile: v,
+                        profileType: h.y0.BITE_SIZE
                     }),
-                    (0, r.jsx)('div', {
+                    (0, a.jsx)('div', {
                         inert: '',
-                        children: (0, r.jsx)(o.Z, {
+                        children: (0, a.jsx)(o.Z, {
                             user: t,
-                            displayProfile: x,
-                            profileType: p.y0.BITE_SIZE,
+                            displayProfile: v,
+                            profileType: h.y0.BITE_SIZE,
                             previewStatus: S,
-                            className: h.avatar
+                            className: p.avatar
                         })
                     }),
-                    (0, r.jsx)(m.Z, {
+                    (0, a.jsx)(m.Z, {
                         location: 'CustomStatusUserProfilePreview',
                         user: t,
-                        profileType: p.y0.BITE_SIZE,
+                        profileType: h.y0.BITE_SIZE,
                         previewText: n,
                         previewEmoji: b,
                         placeholderText: j,
-                        hasEntered: g === a.Dvm.ENTERED
+                        hasEntered: g === r.Dvm.ENTERED,
+                        previewLabel: x
                     })
                 ]
             }),
-            (null == x ? void 0 : x.profileEffectId) != null && (0, r.jsx)(i.Z, { profileEffectId: x.profileEffectId }),
-            (0, r.jsx)('div', {
-                className: h.usernameContainer,
+            (null == v ? void 0 : v.profileEffectId) != null && (0, a.jsx)(l.Z, { profileEffectId: v.profileEffectId }),
+            (0, a.jsx)('div', {
+                className: p.usernameContainer,
                 inert: '',
-                children: (0, r.jsx)(d.Z, {
+                children: (0, a.jsx)(d.Z, {
                     user: t,
-                    profileType: p.y0.BITE_SIZE,
+                    profileType: h.y0.BITE_SIZE,
                     nickname: f.ZP.getName(null, null, t),
-                    pronouns: null == x ? void 0 : x.pronouns,
-                    tags: (0, r.jsx)(s.Z, {
-                        displayProfile: x,
-                        profileType: p.y0.BITE_SIZE
+                    pronouns: null == v ? void 0 : v.pronouns,
+                    tags: (0, a.jsx)(s.Z, {
+                        displayProfile: v,
+                        profileType: h.y0.BITE_SIZE
                     })
                 })
             })

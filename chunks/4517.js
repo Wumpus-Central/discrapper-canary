@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X }), n(388685);
+n.d(t, { Z: () => J }), n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -14,22 +14,23 @@ var r = n(200651),
     h = n(906732),
     m = n(359588),
     g = n(368326),
-    E = n(8454),
-    b = n(600243),
-    y = n(346565),
-    v = n(633302),
-    O = n(314897),
-    I = n(785717),
-    S = n(81570),
-    T = n(510659),
-    N = n(287954),
-    A = n(810097),
-    C = n(64621),
-    R = n(913002),
-    P = n(228168),
-    w = n(388032),
-    D = n(484822);
-function L(e, t, n) {
+    E = n(74340),
+    b = n(8454),
+    y = n(600243),
+    v = n(346565),
+    O = n(633302),
+    I = n(314897),
+    S = n(785717),
+    T = n(81570),
+    N = n(510659),
+    A = n(287954),
+    C = n(810097),
+    R = n(64621),
+    P = n(913002),
+    w = n(228168),
+    D = n(388032),
+    L = n(484822);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +43,7 @@ function L(e, t, n) {
         e
     );
 }
-function x(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,12 +54,12 @@ function x(e) {
                 })
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,29 +71,29 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function j(e, t) {
+function U(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = U(e, t);
+        i = G(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function U(e, t) {
+function G(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -101,40 +102,40 @@ function U(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let G = 1.25,
-    B = 36,
-    F = 144,
-    V = 150,
+let B = 1.25,
+    F = 36,
+    V = 144,
     Z = 150,
-    H = 300,
-    W = 14;
-function Y(e) {
+    H = 150,
+    W = 300,
+    Y = 14;
+function K(e) {
     let { profileType: t, children: n, className: i } = e,
         a = {
-            [D.biteSize]: t === P.y0.BITE_SIZE,
-            [D.fullSize]: t === P.y0.FULL_SIZE,
-            [D.panel]: t === P.y0.PANEL
+            [L.biteSize]: t === w.y0.BITE_SIZE,
+            [L.fullSize]: t === w.y0.FULL_SIZE,
+            [L.panel]: t === w.y0.PANEL
         };
     return (0, r.jsx)('div', {
-        className: o()(D.referenceContainer, a, i),
+        className: o()(L.referenceContainer, a, i),
         children: (0, r.jsx)('div', {
-            className: o()(D.outer, a),
+            className: o()(L.outer, a),
             children: (0, r.jsx)('span', {
-                className: D.inner,
+                className: L.inner,
                 children: n
             })
         })
     });
 }
-function K(e) {
+function z(e) {
     let { profileType: t, onCloseProfile: i, prompt: a } = e,
         { analyticsLocations: s } = (0, h.ZP)(),
-        { trackUserProfileAction: c } = (0, I.KZ)(),
+        { trackUserProfileAction: c } = (0, S.KZ)(),
         u = (0, m.Z)({ location: 'AddCustomStatusBubble' }),
         f = {
-            [D.biteSize]: t === P.y0.BITE_SIZE,
-            [D.fullSize]: t === P.y0.FULL_SIZE,
-            [D.panel]: t === P.y0.PANEL
+            [L.biteSize]: t === w.y0.BITE_SIZE,
+            [L.fullSize]: t === w.y0.FULL_SIZE,
+            [L.panel]: t === w.y0.PANEL
         },
         _ = () => {
             c({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
@@ -144,7 +145,7 @@ function K(e) {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            k(x({}, t), {
+                            j(M({}, t), {
                                 sourceAnalyticsLocations: s,
                                 location: 'UserProfileCustomStatusBubble',
                                 prompt: a
@@ -154,73 +155,73 @@ function K(e) {
         },
         p = u
             ? (0, r.jsxs)('div', {
-                  className: D.labelIconsRow,
+                  className: L.labelIconsRow,
                   children: [
-                      (0, r.jsx)(b.Z, {
+                      (0, r.jsx)(y.Z, {
                           label: l.w.LISTEN,
                           size: 'xxs'
                       }),
-                      (0, r.jsx)(b.Z, {
+                      (0, r.jsx)(y.Z, {
                           label: l.w.WATCH,
                           size: 'xxs'
                       }),
-                      (0, r.jsx)(b.Z, {
+                      (0, r.jsx)(y.Z, {
                           label: l.w.PLAY,
                           size: 'xxs'
                       }),
-                      (0, r.jsx)(b.Z, {
+                      (0, r.jsx)(y.Z, {
                           label: l.w.THINK,
                           size: 'xxs'
                       }),
-                      (0, r.jsx)(b.Z, {
+                      (0, r.jsx)(y.Z, {
                           label: l.w.LOVE,
                           size: 'xxs'
                       })
                   ]
               })
             : null,
-        g = null != a ? a.label() : w.NW.string(w.t.evw0o6),
+        g = null != a ? a.label() : D.NW.string(D.t.evw0o6),
         E = (0, r.jsxs)('div', {
-            className: o()(D.content, f, null != p && D.withLabel),
+            className: o()(L.content, f, null != p && L.withLabel),
             children: [
                 p,
                 (0, r.jsx)(d.oFk, {
                     size: 'xs',
-                    className: D.addStatusIcon,
-                    colorClass: D.addStatusIconColor
+                    className: L.addStatusIcon,
+                    colorClass: L.addStatusIconColor
                 }),
                 (0, r.jsx)(d.Text, {
                     variant: 'text-sm/normal',
-                    className: o()(D.addStatusPrompt, null != a && D.italicPrompt),
+                    className: o()(L.addStatusPrompt, null != a && L.italicPrompt),
                     children: g
                 })
             ]
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(Y, {
+            (0, r.jsx)(K, {
                 profileType: t,
                 children: E
             }),
             (0, r.jsx)(d.P3F, {
-                className: o()(D.container, D.editable, f),
-                'aria-label': w.NW.string(w.t['zrpF/f']),
+                className: o()(L.container, L.editable, f),
+                'aria-label': D.NW.string(D.t['zrpF/f']),
                 onClick: _,
-                focusProps: { ringClassName: D.ring },
+                focusProps: { ringClassName: L.ring },
                 children: (0, r.jsx)('div', {
-                    className: o()(D.outer, f),
+                    className: o()(L.outer, f),
                     children: (0, r.jsxs)('span', {
-                        className: o()(D.inner, D.clickable),
+                        className: o()(L.inner, L.clickable),
                         children: [
                             p,
                             (0, r.jsx)(d.oFk, {
                                 size: 'xs',
-                                className: D.addStatusIcon,
-                                colorClass: D.addStatusIconColor
+                                className: L.addStatusIcon,
+                                colorClass: L.addStatusIconColor
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
-                                className: o()(D.addStatusPrompt, null != a && D.italicPrompt),
+                                className: o()(L.addStatusPrompt, null != a && L.italicPrompt),
                                 children: g
                             })
                         ]
@@ -230,204 +231,212 @@ function K(e) {
         ]
     });
 }
-let z = i.forwardRef(function (e, t) {
+let q = i.forwardRef(function (e, t) {
     var n, a;
-    let { emoji: l, text: p, profileType: h, animate: m, className: E, renderToolbar: b, onShowToolbar: v, placeholderText: O, label: S, hasEntered: N = !0 } = e,
-        A = (0, T.yi)(),
-        { trackUserProfileAction: C } = (0, I.KZ)(),
-        R = {
-            [D.biteSize]: h === P.y0.BITE_SIZE,
-            [D.fullSize]: h === P.y0.FULL_SIZE,
-            [D.panel]: h === P.y0.PANEL
+    let { emoji: l, text: p, profileType: h, animate: E, className: b, renderToolbar: y, onShowToolbar: O, placeholderText: I, label: T, hasEntered: A = !0 } = e,
+        C = (0, N.yi)(),
+        { trackUserProfileAction: R } = (0, S.KZ)(),
+        P = {
+            [L.biteSize]: h === w.y0.BITE_SIZE,
+            [L.fullSize]: h === w.y0.FULL_SIZE,
+            [L.panel]: h === w.y0.PANEL
         },
-        L = (0, g.p)({ location: 'CustomStatusBubble' }),
-        x = null != l ? G : 0,
-        M = null != S ? W : 0,
-        k = B + x + M,
-        j = F + x + M,
-        U = i.useRef(null),
-        K = i.useRef(null),
+        x = (0, g.p)({ location: 'CustomStatusBubble' }),
+        M = (0, m.Z)({ location: 'UserProfileCustomStatusBubble' }),
+        k = null != l ? B : 0,
+        j = null != T && M ? Y : 0,
+        U = F + k + j,
+        G = V + k + j,
         z = i.useRef(null),
-        q = i.useRef(k),
-        Q = i.useRef(j),
-        X = null != l && null == p,
-        [J, $] = i.useState(!1),
-        [ee, et] = i.useState(!0),
-        [en, er] = i.useState(!X && N),
-        ei = !X && N && J;
+        q = i.useRef(null),
+        Q = i.useRef(null),
+        X = i.useRef(U),
+        J = i.useRef(G),
+        $ = null != l && null == p && null == T,
+        [ee, et] = i.useState(!1),
+        [en, er] = i.useState(!0),
+        [ei, ea] = i.useState(!$ && A),
+        eo = A && ee;
     i.useLayoutEffect(() => {
-        if (($(!0), null == K.current || null == z.current || !ei)) return;
-        let e = K.current.getBoundingClientRect().height,
-            t = z.current.getBoundingClientRect().height;
-        er(t > e), (q.current = e), (Q.current = t);
-    }, [ei, p, l]);
-    let ea = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
-        [eo] = i.useState(() => new u.V7());
-    i.useEffect(() => () => eo.stop(), [eo]),
+        if ((et(!0), null == q.current || null == Q.current || !eo)) return;
+        let e = q.current.getBoundingClientRect().height,
+            t = Q.current.getBoundingClientRect().height;
+        ea(t > e), (X.current = e), (J.current = t);
+    }, [eo, p, l, T]);
+    let es = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
+        [el] = i.useState(() => new u.V7());
+    i.useEffect(() => () => el.stop(), [el]),
         i.useEffect(() => {
-            null == A || A.onInteractionPopoutTargetRefChange(U);
-        }, [A]);
-    let [es, el] = (0, d.q_F)(() => ({
-            maxHeight: ''.concat(q.current, 'px'),
-            config: {
-                clamp: !0,
-                duration: V
-            }
-        })),
-        ec = (e) => {
-            en &&
+            null == C || C.onInteractionPopoutTargetRefChange(z);
+        }, [C]);
+    let [ec, eu] = (0, d.q_F)(() => ({
+        maxHeight: ''.concat(X.current, 'px'),
+        config: {
+            clamp: !0,
+            duration: Z
+        }
+    }));
+    i.useEffect(() => {
+        ee &&
+            eu({
+                maxHeight: ''.concat(Math.min(X.current, U), 'px'),
+                immediate: !0
+            });
+    }, [ee, T, eu, U]);
+    let ed = (e) => {
+            ei &&
                 (e
-                    ? el({
-                          maxHeight: ''.concat(Math.min(Q.current, j), 'px'),
-                          delay: ea ? 0 : H,
+                    ? eu({
+                          maxHeight: ''.concat(Math.min(J.current, G), 'px'),
+                          delay: es ? 0 : W,
                           config: {
                               clamp: !0,
-                              duration: ea ? 0 : V
+                              duration: es ? 0 : Z
                           }
                       })
-                    : el({
-                          maxHeight: ''.concat(Math.min(q.current, k), 'px'),
+                    : eu({
+                          maxHeight: ''.concat(Math.min(X.current, U), 'px'),
                           delay: 0
                       }),
-                ea ? et(!e) : eo.start(e ? H : Z, () => et(!e)));
+                es ? er(!e) : el.start(e ? W : H, () => er(!e)));
         },
-        eu =
-            null != S
-                ? (0, r.jsx)(y.Z, {
-                      label: S,
-                      className: D.labelRow
-                  })
-                : null,
-        ed =
-            null != l
-                ? (0, r.jsx)(_.Z, {
-                      emoji: l,
-                      animate: m,
-                      hideTooltip: !1,
-                      tooltipDelay: P.vB,
-                      className: D.statusEmoji
-                  })
-                : null,
         ef =
-            null != p
-                ? (0, r.jsx)(d.Text, {
-                      variant: 'text-sm/normal',
-                      className: D.statusText,
-                      children: p
+            null != T && M
+                ? (0, r.jsx)(v.Z, {
+                      label: T,
+                      className: L.labelRow
                   })
                 : null,
         e_ =
-            void 0 === O || (null != l && L)
+            null != l
+                ? (0, r.jsx)(_.Z, {
+                      emoji: l,
+                      animate: E,
+                      hideTooltip: !1,
+                      tooltipDelay: w.vB,
+                      className: L.statusEmoji
+                  })
+                : null,
+        ep =
+            null != p
+                ? (0, r.jsx)(d.Text, {
+                      variant: 'text-sm/normal',
+                      className: L.statusText,
+                      children: p
+                  })
+                : null,
+        eh =
+            void 0 === I || (null != l && x)
                 ? null
                 : (0, r.jsx)(d.Text, {
                       variant: 'text-sm/normal',
                       color: 'text-muted',
-                      'aria-label': ''.concat(w.NW.string(w.t.EVV6ub), ': ').concat(O),
-                      className: o()(D.statusText, L && D.italicPrompt),
-                      children: null != O ? O : ''
+                      'aria-label': ''.concat(D.NW.string(D.t.EVV6ub), ': ').concat(I),
+                      className: o()(L.statusText, x && L.italicPrompt),
+                      children: null != I ? I : ''
                   }),
-        ep = null == ef || '' === p ? e_ : ef,
-        eh = (0, r.jsxs)('div', {
-            ref: K,
-            className: o()(D.content, R),
-            children: [eu, ed, ep]
+        em = null == ep || '' === p ? eh : ep,
+        eg = (0, r.jsxs)('div', {
+            ref: q,
+            className: o()(L.content, P),
+            children: [ef, e_, em]
         }),
-        em = (0, r.jsxs)('div', {
-            ref: z,
-            className: o()(D.content, D.unclamped, R),
-            children: [eu, ed, ep]
+        eE = (0, r.jsxs)('div', {
+            ref: Q,
+            className: o()(L.content, L.unclamped, P),
+            children: [ef, e_, em]
         }),
-        eg = (0, r.jsx)('div', {
+        eb = (0, r.jsx)('div', {
             ref: t,
-            className: o()(D.outer, R),
+            className: o()(L.outer, P),
             children: (0, r.jsx)('span', {
-                className: D.inner,
+                className: L.inner,
                 children: (0, r.jsxs)(s.animated.div, {
-                    style: es,
-                    className: o()(D.content, { [D.unclamped]: !ee }),
-                    children: [eu, ed, ep]
+                    style: ec,
+                    className: o()(L.content, { [L.unclamped]: !en }),
+                    children: [ef, e_, em]
                 })
             })
         }),
-        eE = (0, r.jsxs)(Y, {
+        ey = (0, r.jsxs)(K, {
             profileType: h,
-            className: null != S ? D.withLabel : void 0,
-            children: [eu, eh, em]
+            className: null != ef ? L.withLabel : void 0,
+            children: [ef, eg, eE]
         });
-    return null == v
+    return null == O
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  eE,
+                  ey,
                   (0, r.jsx)(d.tEY, {
-                      ringClassName: D.ring,
+                      ringClassName: L.ring,
                       children: (0, r.jsxs)('div', {
-                          ref: U,
+                          ref: z,
                           role: 'tooltip',
                           tabIndex: 0,
-                          className: o()(D.container, R, E),
-                          'aria-label': w.NW.formatToPlainString(w.t.UpF5QU, {
+                          className: o()(L.container, P, b),
+                          'aria-label': D.NW.formatToPlainString(D.t.UpF5QU, {
                               emoji: null != (n = null == l ? void 0 : l.name) ? n : '',
                               status: p
                           }),
                           onMouseEnter: () => {
-                              C({ action: 'HOVER_CUSTOM_STATUS' }), ec(!0);
+                              R({ action: 'HOVER_CUSTOM_STATUS' }), ed(!0);
                           },
                           onMouseLeave: () => {
-                              ec(!1);
+                              ed(!1);
                           },
-                          onFocus: () => ec(!0),
-                          onBlur: () => ec(!1),
-                          children: [eg, null == b ? void 0 : b(en)]
+                          onFocus: () => ed(!0),
+                          onBlur: () => ed(!1),
+                          children: [eb, null == y ? void 0 : y(ei)]
                       })
                   })
               ]
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  eE,
+                  ey,
                   (0, r.jsx)(d.tEY, {
-                      ringClassName: D.ring,
+                      ringClassName: L.ring,
                       children: (0, r.jsxs)('div', {
-                          ref: U,
+                          ref: z,
                           role: 'tooltip',
                           tabIndex: 0,
-                          className: o()(D.container, R, E),
-                          'aria-label': w.NW.formatToPlainString(w.t.UpF5QU, {
+                          className: o()(L.container, P, b),
+                          'aria-label': D.NW.formatToPlainString(D.t.UpF5QU, {
                               emoji: null != (a = null == l ? void 0 : l.name) ? a : '',
                               status: p
                           }),
                           onFocus: () => {
-                              v(!0), ec(!0);
+                              O(!0), ed(!0);
                           },
                           onBlur: (e) => {
                               var t;
-                              (null == (t = U.current) ? void 0 : t.contains(e.relatedTarget)) || (v(!1), ec(!1));
+                              (null == (t = z.current) ? void 0 : t.contains(e.relatedTarget)) || (O(!1), ed(!1));
                           },
                           onMouseEnter: () => {
-                              C({ action: 'HOVER_CUSTOM_STATUS' }), v(!0), ec(!0);
+                              R({ action: 'HOVER_CUSTOM_STATUS' }), O(!0), ed(!0);
                           },
                           onMouseLeave: () => {
-                              v(!1), ec(!1);
+                              O(!1), ed(!1);
                           },
-                          children: [eg, null == b ? void 0 : b(en)]
+                          children: [eb, null == y ? void 0 : y(ei)]
                       })
                   })
               ]
           });
 });
-function q(e) {
+function Q(e) {
     var { emoji: t, text: n, onCloseProfile: a } = e,
-        o = j(e, ['emoji', 'text', 'onCloseProfile']);
+        o = U(e, ['emoji', 'text', 'onCloseProfile']);
     let [s, l] = i.useState(!1);
     return (0, r.jsx)(
-        z,
-        k(x({}, o), {
+        q,
+        j(M({}, o), {
             emoji: t,
             text: n,
-            className: D.editable,
+            className: L.editable,
             onShowToolbar: l,
             renderToolbar: (e) =>
-                (0, r.jsx)(R.Z, {
+                (0, r.jsx)(P.Z, {
                     isVisible: s,
                     isExpandable: e,
                     onCloseProfile: a
@@ -435,60 +444,60 @@ function q(e) {
         })
     );
 }
-function Q(e) {
+function X(e) {
     var { emoji: t, text: n, user: a, guildId: o, channelId: s, profileType: l } = e,
-        c = j(e, ['emoji', 'text', 'user', 'guildId', 'channelId', 'profileType']);
-    let { trackUserProfileAction: u } = (0, I.KZ)(),
-        { interactionType: d, interactionSource: f, resetInteraction: _ } = (0, T.Xo)(),
-        p = f === P.n_.STATUS && d === P.P.REACT,
-        h = f === P.n_.STATUS && d === P.P.REPLY,
+        c = U(e, ['emoji', 'text', 'user', 'guildId', 'channelId', 'profileType']);
+    let { trackUserProfileAction: u } = (0, S.KZ)(),
+        { interactionType: d, interactionSource: f, resetInteraction: _ } = (0, N.Xo)(),
+        p = f === w.n_.STATUS && d === w.P.REACT,
+        h = f === w.n_.STATUS && d === w.P.REPLY,
         m = p || h,
         g = i.useRef(null),
         E = i.useRef(t),
         b = i.useRef(n);
     i.useEffect(() => {
-        f === P.n_.STATUS && ((E.current !== t || b.current !== n) && _(), (E.current = t), (b.current = n));
+        f === w.n_.STATUS && ((E.current !== t || b.current !== n) && _(), (E.current = t), (b.current = n));
     }, [f, _, t, n]);
-    let [y, O] = i.useState(!1),
-        S = i.useCallback(
+    let [y, v] = i.useState(!1),
+        I = i.useCallback(
             (e) => {
-                (e || !m) && O(e);
+                (e || !m) && v(e);
             },
             [m]
         ),
-        R = () => {
+        T = () => {
             if (null == t) return n;
-            let e = null != t.id ? '`' + ':'.concat(t.name, ':') + '`' : v.ZP.translateSurrogatesToInlineEmoji(t.name);
+            let e = null != t.id ? '`' + ':'.concat(t.name, ':') + '`' : O.ZP.translateSurrogatesToInlineEmoji(t.name);
             return null == n ? e : ''.concat(e, ' ').concat(n);
         };
-    return (0, r.jsx)(N.Z, {
+    return (0, r.jsx)(A.Z, {
         user: a,
         guildId: o,
         channelId: s,
         profileType: l,
-        sourceDetails: R(),
-        sourceType: P.n_.STATUS,
+        sourceDetails: T(),
+        sourceType: w.n_.STATUS,
         onAction: u,
-        onClose: () => O(!1),
+        onClose: () => v(!1),
         children: () =>
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(R.Z, {
                 targetElementRef: g,
-                sourceType: P.n_.STATUS,
+                sourceType: w.n_.STATUS,
                 user: a,
                 children: (0, r.jsx)(
-                    z,
-                    k(x({}, c), {
+                    q,
+                    j(M({}, c), {
                         ref: g,
                         emoji: t,
                         text: n,
                         profileType: l,
-                        className: m ? D.hoisted : void 0,
-                        onShowToolbar: S,
+                        className: m ? L.hoisted : void 0,
+                        onShowToolbar: I,
                         renderToolbar: (e) =>
-                            (0, r.jsx)(A.ZP, {
+                            (0, r.jsx)(C.ZP, {
                                 targetRef: g,
                                 user: a,
-                                sourceType: P.n_.STATUS,
+                                sourceType: w.n_.STATUS,
                                 isVisible: y && !m,
                                 isExpandable: e,
                                 onAction: u
@@ -498,93 +507,99 @@ function Q(e) {
             })
     });
 }
-function X(e) {
+function J(e) {
     var t,
         n,
-        { location: i, user: a, onCloseProfile: o, previewText: s, previewEmoji: l, placeholderText: u, prompt: d, disableEdit: f = !1 } = e,
-        _ = j(e, ['location', 'user', 'onCloseProfile', 'previewText', 'previewEmoji', 'placeholderText', 'prompt', 'disableEdit']);
-    let m = (0, E.Z)(a.id),
-        { analyticsLocations: g } = (0, h.ZP)(p.Z.PROFILE_CUSTOM_STATUS),
-        b = (0, c.e7)([O.default], () => O.default.getId() === a.id),
-        y = b && !f,
-        v = (0, S.T)({ location: i }),
-        I = !b && !a.bot && v;
+        { location: i, user: a, onCloseProfile: o, previewText: s, previewEmoji: l, previewLabel: u, placeholderText: d, prompt: f, disableEdit: _ = !1 } = e,
+        m = U(e, ['location', 'user', 'onCloseProfile', 'previewText', 'previewEmoji', 'previewLabel', 'placeholderText', 'prompt', 'disableEdit']);
+    let g = (0, b.Z)(a.id),
+        { analyticsLocations: y } = (0, h.ZP)(p.Z.PROFILE_CUSTOM_STATUS),
+        v = (0, c.e7)([I.default], () => I.default.getId() === a.id),
+        O = v && !_,
+        S = (0, T.T)({ location: i }),
+        N = !v && !a.bot && S;
     if (null != s || null != l) {
         let e = null != l ? l : null,
-            t = null != s && '' !== s ? s : null;
+            t = null != s && '' !== s ? s : null,
+            n = null != u ? u : null;
         return (0, r.jsx)(h.Gt, {
-            value: g,
+            value: y,
             children: (0, r.jsx)(
-                z,
-                x(
+                q,
+                M(
                     {
                         emoji: e,
                         text: t,
-                        placeholderText: u
+                        placeholderText: d,
+                        label: n
                     },
-                    _
+                    m
                 )
             )
         });
     }
-    let T = null != (t = null == m ? void 0 : m.emoji) ? t : null,
-        N = null != (n = null == m ? void 0 : m.state) ? n : null,
-        A = null != N && '' !== N ? N : null;
-    return null != T || null != A || y
-        ? null == T && null == A
+    let A = null != (t = null == g ? void 0 : g.emoji) ? t : null,
+        C = null != (n = null == g ? void 0 : g.state) ? n : null,
+        R = null != C && '' !== C ? C : null,
+        P = null != g ? (0, E.Z)(g) : null;
+    return null != A || null != R || O
+        ? null == A && null == R
             ? (0, r.jsx)(h.Gt, {
-                  value: g,
+                  value: y,
                   children: (0, r.jsx)(
-                      K,
-                      x(
+                      z,
+                      M(
                           {
                               onCloseProfile: o,
-                              prompt: d
+                              prompt: f
                           },
-                          _
+                          m
                       )
                   )
               })
-            : I
+            : N
               ? (0, r.jsx)(h.Gt, {
-                    value: g,
+                    value: y,
                     children: (0, r.jsx)(
-                        Q,
-                        x(
+                        X,
+                        M(
                             {
                                 user: a,
-                                emoji: T,
-                                text: A
+                                emoji: A,
+                                text: R,
+                                label: P
                             },
-                            _
+                            m
                         )
                     )
                 })
-              : y
+              : O
                 ? (0, r.jsx)(h.Gt, {
-                      value: g,
+                      value: y,
                       children: (0, r.jsx)(
-                          q,
-                          x(
+                          Q,
+                          M(
                               {
-                                  emoji: T,
-                                  text: A,
+                                  emoji: A,
+                                  text: R,
+                                  label: P,
                                   onCloseProfile: o
                               },
-                              _
+                              m
                           )
                       )
                   })
                 : (0, r.jsx)(h.Gt, {
-                      value: g,
+                      value: y,
                       children: (0, r.jsx)(
-                          z,
-                          x(
+                          q,
+                          M(
                               {
-                                  emoji: T,
-                                  text: A
+                                  emoji: A,
+                                  text: R,
+                                  label: P
                               },
-                              _
+                              m
                           )
                       )
                   })
