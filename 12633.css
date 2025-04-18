@@ -51298,13 +51298,9 @@ html.disable-forced-colors * {
 }
 
 .fixed_c38106 {
-    position: fixed
-}
-
-.fixed_c38106,
-.title_c38106 {
     left: 0;
-    right: 0;
+    position: fixed;
+    right: var(--devtools-sidebar-width);
     top: 0
 }
 
@@ -51313,7 +51309,10 @@ html.disable-forced-colors * {
     bottom: 0;
     display: flex;
     justify-content: center;
-    position: absolute
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
 }
 
 .leading_c38106 {

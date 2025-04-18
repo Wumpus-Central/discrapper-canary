@@ -1,11 +1,12 @@
-e.exports = {
-    header: 'header_b87308',
-    appIcon: 'appIcon_b87308',
-    subInfo: 'subInfo_b87308',
-    guildSubscription: 'guildSubscription_b87308',
-    subInfoType: 'subInfoType_b87308',
-    subscriptions: 'subscriptions_b87308',
-    activeSubscriptionCard: 'activeSubscriptionCard_b87308',
-    activeSubscriptionCTA: 'activeSubscriptionCTA_b87308',
-    planNotice: 'planNotice_b87308'
-};
+var e = n(220159),
+    o = n(181794),
+    i = n(85328).f;
+e(
+    {
+        target: 'Object',
+        stat: !0,
+        forced: Object.defineProperty !== i,
+        sham: !o
+    },
+    { defineProperty: i }
+);

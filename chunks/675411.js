@@ -1,7 +1,10 @@
-e.exports = {
-    value: 'value__96f95',
-    actions: 'actions__96f95',
-    iconWrapper: 'iconWrapper__96f95',
-    icon: 'icon__96f95',
-    disabled: 'disabled__96f95'
+var n = r(222671);
+t.exports = function (t) {
+    var e = n(t);
+    return {
+        x: e.left,
+        y: e.top,
+        width: e.right - e.left,
+        height: e.bottom - e.top
+    };
 };
