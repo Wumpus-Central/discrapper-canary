@@ -1,33 +1,34 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(765053),
     l = n(512969),
     c = n(442837),
     u = n(316792),
     d = n(168551),
     f = n(19759),
-    _ = n(892071),
-    p = n(252618),
-    h = n(587061),
-    m = n(981631);
-n(933688);
-let g = new Set([m.Z5c.LOGIN, m.Z5c.REGISTER]);
-function E(e) {
-    let { lang: t, style: n, className: o } = (0, _.vP)(),
+    _ = n(522474),
+    p = n(892071),
+    h = n(252618),
+    m = n(587061),
+    g = n(981631);
+n(294346);
+let E = new Set([g.Z5c.LOGIN, g.Z5c.REGISTER]);
+function b(e) {
+    let { lang: t, style: n, className: a } = (0, p.vP)(),
         s = (0, l.TH)(),
-        u = i.useMemo(() => g.has(s.pathname), [s.pathname]);
-    (0, h.Z)(window, u);
-    let d = (0, c.e7)([f.Z], () => f.Z.sidebarWidth);
+        u = i.useMemo(() => E.has(s.pathname), [s.pathname]);
+    (0, m.Z)(window, u);
+    let d = (0, c.e7)([f.Z, _.Z], () => (_.Z.getWindowOpen(g.KJ3.DEVTOOLS_POPOUT) ? 0 : f.Z.sidebarWidth));
     return (0, r.jsx)('html', {
         lang: t,
         style: ''.concat(n, ' --devtools-sidebar-width: ').concat(d, 'px;'),
-        className: a()(o, e, { overlay: __OVERLAY__ })
+        className: o()(a, e, { overlay: __OVERLAY__ })
     });
 }
-function b() {
+function y() {
     let [e, t] = i.useState([]);
     return (
         i.useEffect(() => {
@@ -57,13 +58,13 @@ function b() {
         })
     );
 }
-function y(e) {
+function v(e) {
     let { children: t, skipsSettingDefaultPageTitle: n } = e;
-    (0, p.ZD)({ skipsSettingDefaultPageTitle: n });
-    let { clientThemesClassName: o, clientThemesCSS: a } = (0, d.ZP)(),
-        l = i.createElement('style', { [d.PQ]: !0 }, a);
+    (0, h.ZD)({ skipsSettingDefaultPageTitle: n });
+    let { clientThemesClassName: a, clientThemesCSS: o } = (0, d.ZP)(),
+        l = i.createElement('style', { [d.PQ]: !0 }, o);
     return (0, r.jsxs)(s.ql, {
-        children: [E(o), b(), l, t]
+        children: [b(a), y(), l, t]
     });
 }
-let v = i.memo(y);
+let O = i.memo(v);

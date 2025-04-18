@@ -7,6 +7,7 @@ e.exports = {
     inspectorWrapper: 'inspectorWrapper_fe7ab2',
     tabBarContainer: 'tabBarContainer_fe7ab2',
     tabBar: 'tabBar_fe7ab2',
+    tabMeasurer: 'tabMeasurer_fe7ab2',
     tabItem: 'tabItem_fe7ab2',
     selected: 'selected_fe7ab2',
     menu: 'menu_fe7ab2',

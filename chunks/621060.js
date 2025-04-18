@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => v,
-    v0: () => h
+    ZP: () => g,
+    v0: () => p
 }),
     n(388685),
     n(539854),
@@ -12,58 +12,44 @@ var a,
     s = n.n(i),
     o = n(93582),
     c = n(481060),
-    d = n(424625),
-    u = n(823379),
-    m = n(246992),
-    x = n(482479),
-    h = (((a = {}).NONE = ''), (a.EXPERIMENTS = 'Experiments'), (a.EVENTS = 'Events'), (a.PREMIUM = 'Premium'), (a.BILLING = 'Billing'), (a.USERS = 'Users'), (a.GUILDS = 'Guilds'), (a.UI = 'UI'), (a.GAMES = 'Games'), (a.AUDIO_VIDEO = 'Audio / Video'), (a.DEVELOPMENT = 'Development'), a);
-let p = ['Experiments', 'Events', 'Premium', 'Billing', 'Users', 'Guilds', 'UI', 'Games', 'Audio / Video', 'Development'],
-    b = l.forwardRef(function (e, t) {
+    d = n(393238),
+    u = n(424625),
+    m = n(823379),
+    x = n(246992),
+    h = n(616257),
+    p = (((a = {}).NONE = ''), (a.EXPERIMENTS = 'Experiments'), (a.EVENTS = 'Events'), (a.PREMIUM = 'Premium'), (a.BILLING = 'Billing'), (a.USERS = 'Users'), (a.GUILDS = 'Guilds'), (a.UI = 'UI'), (a.GAMES = 'Games'), (a.AUDIO_VIDEO = 'Audio / Video'), (a.DEVELOPMENT = 'Development'), a);
+let b = ['Experiments', 'Events', 'Premium', 'Billing', 'Users', 'Guilds', 'UI', 'Games', 'Audio / Video', 'Development'],
+    f = l.forwardRef(function (e, t) {
         let { id: n, selected: a, onClick: l, children: i } = e;
         return (0, r.jsx)(c.P3F, {
-            className: s()(x.tabItem, { [x.selected]: a }),
+            className: s()(h.tabItem, { [h.selected]: a }),
             'data-tab-id': n,
             innerRef: t,
             onClick: l,
             children: i
         });
     });
-function f(e) {
+function v(e) {
     let { tabs: t, selectedTabId: n, onSelectTab: a } = e,
-        i = l.useRef(null),
-        s = l.useRef(0),
-        h = l.useRef(new Map()),
-        [f, v] = l.useState([]),
-        j = l.useCallback(() => {
-            var e, a, r, l;
-            if (null == i.current) return;
-            let o = [],
-                c = i.current.getBoundingClientRect().width;
-            if (c !== s.current) {
-                for (let i of ((s.current = c), (c -= null != (a = null == (e = h.current.get(n)) ? void 0 : e.width) ? a : 0), t)) i.id !== n && (c -= null != (l = null == (r = h.current.get(i.id)) ? void 0 : r.width) ? l : 0) < 0 && o.push(i.id);
-                v(o);
-            }
-        }, [t, n]),
-        g = l.useRef(null);
-    l.useEffect(
-        () => (
-            (g.current = new ResizeObserver(() => j())),
-            null != i.current && g.current.observe(i.current),
-            () => {
-                var e;
-                null == (e = g.current) || e.disconnect();
-            }
-        ),
-        [j]
-    );
-    let _ = l.useCallback(
+        i = l.useRef(new Map()),
+        [s, p] = l.useState(() => new Set()),
+        { ref: v, width: g } = (0, d.ZP)();
+    l.useEffect(() => {
+        var e, a, r, l;
+        if (null == g) return;
+        let s = new Set(),
+            o = null != g ? g : 0;
+        for (let c of ((o -= null != (a = null == (e = i.current.get(n)) ? void 0 : e.getBoundingClientRect().width) ? a : 0), t)) c.id !== n && (o -= null != (l = null == (r = i.current.get(c.id)) ? void 0 : r.getBoundingClientRect().width) ? l : 0) < 0 && s.add(c.id);
+        p(s);
+    }, [t, g, v, n]);
+    let j = l.useCallback(
         (e) => {
             var n, l, i;
             let { closePopout: s } = e,
                 d = t.filter((e) => null == e.group),
                 u = {};
             for (let e of t) null != e.group && (null != u[(n = e.group)] || (u[n] = []), u[e.group].push(e));
-            for (let e of p)
+            for (let e of b)
                 null == (i = u[e]) ||
                     i.sort((e, t) => {
                         var n, a;
@@ -88,7 +74,7 @@ function f(e) {
                             t
                         );
                     }),
-                    p.map((e) =>
+                    b.map((e) =>
                         (0, r.jsx)(
                             c.kSQ,
                             {
@@ -115,43 +101,56 @@ function f(e) {
         [t, a]
     );
     return (0, r.jsxs)('div', {
-        className: x.tabBarContainer,
+        className: h.tabBarContainer,
         children: [
-            (0, r.jsx)('div', {
-                className: x.tabBar,
-                ref: i,
-                children: t
-                    .map((e) => {
-                        let { id: t, name: l } = e;
-                        if (!f.includes(t))
+            (0, r.jsxs)('div', {
+                className: h.tabBar,
+                ref: v,
+                children: [
+                    t
+                        .map((e) => {
+                            let { id: t, name: l } = e;
+                            if (!s.has(t))
+                                return (0, r.jsx)(
+                                    f,
+                                    {
+                                        id: t,
+                                        selected: n === t,
+                                        onClick: n !== t ? () => a(t) : void 0,
+                                        children: l
+                                    },
+                                    t
+                                );
+                        })
+                        .filter(m.lm),
+                    (0, r.jsx)('div', {
+                        className: h.tabMeasurer,
+                        children: t.map((e) => {
+                            let { id: t, name: l } = e;
                             return (0, r.jsx)(
-                                b,
+                                f,
                                 {
                                     id: t,
                                     selected: n === t,
                                     ref: (e) => {
-                                        var n, a, r;
-                                        let l = null != (a = null == (n = h.current.get(t)) ? void 0 : n.width) ? a : 0;
-                                        h.current.set(t, {
-                                            node: e,
-                                            width: null != (r = null == e ? void 0 : e.getBoundingClientRect().width) ? r : l
-                                        });
+                                        i.current.set(t, e);
                                     },
                                     onClick: n !== t ? () => a(t) : void 0,
                                     children: l
                                 },
                                 t
                             );
+                        })
                     })
-                    .filter(u.lm)
+                ]
             }),
             (0, r.jsx)('div', {
-                className: x.menu,
+                className: h.menu,
                 children:
-                    f.length > 0 &&
+                    s.size > 0 &&
                     (0, r.jsx)(c.yRy, {
-                        layerContext: m.O$,
-                        renderPopout: _,
+                        layerContext: x.O$,
+                        renderPopout: j,
                         position: 'bottom',
                         align: 'right',
                         spacing: 0,
@@ -186,11 +185,11 @@ function f(e) {
                                 })({}, e)),
                                 (n = n =
                                     {
-                                        className: x.overflowChevron,
+                                        className: h.overflowChevron,
                                         size: c.zxk.Sizes.ICON,
                                         look: c.zxk.Looks.BLANK,
-                                        children: (0, r.jsx)(d.Z, {
-                                            className: x.__invalid_overflowIcon,
+                                        children: (0, r.jsx)(u.Z, {
+                                            className: h.__invalid_overflowIcon,
                                             width: 16,
                                             height: 16
                                         })
@@ -215,14 +214,14 @@ function f(e) {
         ]
     });
 }
-function v(e, t) {
+function g(e, t) {
     var n, a, i;
     let { tabs: s, initialSelectedTabId: o, onChangeTab: c } = e,
         [d, u] = l.useState(null != o ? o : null == (n = s[0]) ? void 0 : n.id);
     return {
         TabBar: l.useCallback(
             () =>
-                (0, r.jsx)(f, {
+                (0, r.jsx)(v, {
                     tabs: s,
                     selectedTabId: d,
                     onSelectTab: (e) => {

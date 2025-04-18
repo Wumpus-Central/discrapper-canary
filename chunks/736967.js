@@ -4,5 +4,6 @@ e.exports = {
     sidebarContent: 'sidebarContent_db0ccb',
     mobileHeaderCollapsed: 'mobileHeaderCollapsed_db0ccb',
     mobileContainerExpanded: 'mobileContainerExpanded_db0ccb',
-    layerContainer: 'layerContainer_db0ccb'
+    layerContainer: 'layerContainer_db0ccb',
+    popoutContainer: 'popoutContainer_db0ccb'
 };
