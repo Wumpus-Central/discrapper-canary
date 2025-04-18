@@ -11,8 +11,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(952265),
-    o = n(359110),
-    a = n(314897),
+    a = n(359110),
+    o = n(314897),
     s = n(88751),
     l = n(427679),
     c = n(513449),
@@ -72,7 +72,7 @@ function m(e, t) {
     );
 }
 function g(e) {
-    let t = a.default.getId(),
+    let t = o.default.getId(),
         n = s.ZP.isModerator(t, e.id),
         r = l.Z.isLive(e.id);
     n && !r ? E(e) : n && r && b(e);
@@ -80,7 +80,7 @@ function g(e) {
 function E(e, t) {
     (0, i.ZD)(
         async () => {
-            let { default: t } = await Promise.all([n.e('82758'), n.e('95924')]).then(n.bind(n, 581355));
+            let { default: t } = await Promise.all([n.e('82758'), n.e('24231')]).then(n.bind(n, 581355));
             return (n) => (0, r.jsx)(t, m(p({}, n), { channel: e }));
         },
         { contextKey: t === d.IlC.POPOUT ? f.u1 : f.z1 }
@@ -103,7 +103,7 @@ function y(e, t) {
 }
 function v(e) {}
 function O(e) {
-    (0, o.Kh)(e.id);
+    (0, a.Kh)(e.id);
 }
 function I(e, t) {
     (0, i.ZD)(async () => {
@@ -128,7 +128,7 @@ function S(e, t) {
     );
 }
 function T(e) {
-    let t = a.default.getId(),
+    let t = o.default.getId(),
         n = (0, u.Z7)(e),
         r = (0, u.wK)(e);
     return !s.ZP.isModerator(t, e) && (n > 0 || r > 0);

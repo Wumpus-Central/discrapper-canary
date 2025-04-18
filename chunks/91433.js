@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(906732),
     c = n(835473),
@@ -11,10 +11,10 @@ var r = n(200651),
     f = n(5192),
     _ = n(785717),
     p = n(388032),
-    h = n(877468);
+    h = n(185589);
 function m(e) {
-    let { user: t, guildId: n, channelId: o, applicationId: m, friendToken: g, isGameRelationship: E = !1, className: b } = e,
-        y = f.ZP.getName(n, o, t),
+    let { user: t, guildId: n, channelId: a, applicationId: m, friendToken: g, isGameRelationship: E = !1, className: b } = e,
+        y = f.ZP.getName(n, a, t),
         { trackUserProfileAction: v } = (0, _.KZ)(),
         { newestAnalyticsLocation: O } = (0, l.ZP)(),
         { acceptFriendRequest: I, cancelFriendRequest: S } = (0, d.u)({
@@ -35,7 +35,7 @@ function m(e) {
     return A && null == C
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(h.container, b),
+              className: o()(h.container, b),
               children: [
                   A
                       ? (0, r.jsx)(s.Text, {
@@ -64,7 +64,7 @@ function m(e) {
                       children: [
                           (0, r.jsx)(s.zxk, {
                               look: s.zxk.Looks.FILLED,
-                              color: a()(s.zxk.Colors.BRAND, h.color),
+                              color: o()(s.zxk.Colors.BRAND, h.color),
                               size: s.zxk.Sizes.SMALL,
                               className: h.button,
                               onClick: T,

@@ -6,7 +6,7 @@ var r = n(200651),
     s = n(780384),
     o = n(481060),
     c = n(410030),
-    d = n(417782);
+    d = n(750567);
 function u(e) {
     let { title: t } = e;
     return (0, r.jsx)(o.X6q, {

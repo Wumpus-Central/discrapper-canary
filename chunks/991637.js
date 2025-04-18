@@ -1,17 +1,17 @@
 var r = n(638934),
     i = n(286233),
-    o = n(535213),
-    a = n(383252),
+    a = n(535213),
+    o = n(383252),
     s = n(234268),
     l = n(751340);
-o();
+a();
 var c = r(s()),
     u = function (e) {
         return c(void 0 === this ? Promise : this, e);
     };
 i(u, {
     getPolyfill: s,
-    implementation: a,
+    implementation: o,
     shim: l
 }),
     (e.exports = u);

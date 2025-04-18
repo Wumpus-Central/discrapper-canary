@@ -1,8 +1,8 @@
 n.d(t, { k: () => w });
 var r = n(200651),
     i = n(192379),
-    o = n(442837),
-    a = n(780384),
+    a = n(442837),
+    o = n(780384),
     s = n(481060),
     l = n(607070),
     c = n(339085),
@@ -23,7 +23,7 @@ var r = n(200651),
     S = n(784222),
     T = n(149203),
     N = n(388032),
-    A = n(315225);
+    A = n(466988);
 let C = 250;
 function R(e) {
     return null != e && 'animated' in e;
@@ -67,12 +67,12 @@ let P = (e) => {
                     allNamesString: null == B ? void 0 : B.name
                 };
         }
-        let F = (0, o.e7)([g.Z], () => (null !== t && t.type === u.B.GUILD ? g.Z.getGuild(t.guildId) : null), [t]),
-            V = (0, o.e7)([E.Z], () => E.Z.isFocused()),
-            Z = (0, o.e7)([l.Z], () => l.Z.useReducedMotion, []),
+        let F = (0, a.e7)([g.Z], () => (null !== t && t.type === u.B.GUILD ? g.Z.getGuild(t.guildId) : null), [t]),
+            V = (0, a.e7)([E.Z], () => E.Z.isFocused()),
+            Z = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             H = m.Yk.useSetting(),
             W = (0, v.C1)(M, R(t) ? t : null),
-            Y = (0, o.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
+            Y = (0, a.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
             { newlyAddedEmojis: K } = (0, O.Z)(M, k),
             z = (null == B ? void 0 : B.type) === S.ld.EMOJI ? B.subCategory : T.t0.NONE;
         if (
@@ -128,17 +128,17 @@ let P = (e) => {
         else if ('EXPAND_OR_COLLAPSE_EMOJI' === t.type) {
             let e = n(187119),
                 i = n(39874),
-                o = n(853871),
+                a = n(853871),
                 s = n(63149);
             w = Y.has(t.guildId)
                 ? (0, r.jsx)('img', {
                       className: A.icon,
-                      src: (0, a.wj)(q) ? o : s,
+                      src: (0, o.wj)(q) ? a : s,
                       alt: ''
                   })
                 : (0, r.jsx)('img', {
                       className: A.icon,
-                      src: (0, a.wj)(q) ? e : i,
+                      src: (0, o.wj)(q) ? e : i,
                       alt: ''
                   });
         }

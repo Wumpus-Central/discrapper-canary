@@ -10,7 +10,7 @@ var i = n(913527),
     d = n(63063),
     u = n(981631),
     f = n(388032),
-    m = n(864557);
+    m = n(447556);
 function h(e) {
     var t;
     let { streamingUntil: n, user: i, channel: h } = e,

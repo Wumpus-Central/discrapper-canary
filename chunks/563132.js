@@ -6,9 +6,9 @@ n.d(t, {
     n(997841);
 var r = n(200651),
     i = n(192379),
-    o = n(734530),
-    a = n(913527),
-    s = n.n(a),
+    a = n(734530),
+    o = n(913527),
+    s = n.n(o),
     l = n(772848),
     c = n(442837),
     u = n(211266),
@@ -94,7 +94,7 @@ function V(e, t) {
 }
 let [Z, H, W] = (0, v.Z)();
 function Y(e) {
-    var t, n, a;
+    var t, n, o;
     let { loadId: v, activeSubscription: G, stepConfigs: F, breadcrumbs: H = [], skuIDs: W, isGift: Y = !1, children: K, defaultPlanId: z, purchaseType: q = j.GZQ.SUBSCRIPTION, applicationId: Q, referralCode: X, repeatPurchase: J = !1 } = e,
         $ = (0, M.Z)(),
         ee = (0, h.Q)(),
@@ -103,8 +103,8 @@ function Y(e) {
             paymentSources: en,
             hasPaymentSources: er,
             paymentSourceId: ei,
-            setPaymentSourceId: eo,
-            hasFetchedPaymentSources: ea
+            setPaymentSourceId: ea,
+            hasFetchedPaymentSources: eo
         } = (0, C.Z)({
             isGift: Y,
             activeSubscription: G
@@ -187,11 +187,11 @@ function Y(e) {
         }, [eR, e8, ei]),
         { data: tr } = (0, p.IX)(Q),
         ti = g.Sb.useSetting(),
-        to = (0, c.e7)([d.Z], () => d.Z.getFetchState());
+        ta = (0, c.e7)([d.Z], () => d.Z.getFetchState());
     i.useEffect(() => {
-        null != tr && (0, O.yE)(tr.flags, j.udG.EMBEDDED) && ti && null == to && (0, f.$h)();
-    }, [tr, ti, to]);
-    let ta = (0, O.yE)(null != (t = null == tr ? void 0 : tr.flags) ? t : 0, j.udG.EMBEDDED) && (0, O.yE)(null != (n = null == tr ? void 0 : tr.flags) ? n : 0, j.udG.EMBEDDED_IAP),
+        null != tr && (0, O.yE)(tr.flags, j.udG.EMBEDDED) && ti && null == ta && (0, f.$h)();
+    }, [tr, ti, ta]);
+    let to = (0, O.yE)(null != (t = null == tr ? void 0 : tr.flags) ? t : 0, j.udG.EMBEDDED) && (0, O.yE)(null != (n = null == tr ? void 0 : tr.flags) ? n : 0, j.udG.EMBEDDED_IAP),
         ts = (0, c.e7)([_.ZP], () =>
             Array.from(_.ZP.getSelfEmbeddedActivities().values()).find((e) => {
                 let { applicationId: t } = e;
@@ -202,7 +202,7 @@ function Y(e) {
         tc = (0, c.e7)([y.Z], () => (null != eR ? y.Z.getForSKU(eR) : null), [eR]),
         tu = e5[null != eR ? eR : ''],
         [td, tf] = i.useState(null),
-        t_ = null != (a = null == G ? void 0 : G.inReverseTrial) && a && !Y;
+        t_ = null != (o = null == G ? void 0 : G.inReverseTrial) && o && !Y;
     return (0, r.jsx)(Z.Provider, {
         value: V(
             B(
@@ -217,11 +217,11 @@ function Y(e) {
                     setUpdatedSubscription: ez,
                     subscriptionMetadataRequest: eq,
                     setSubscriptionMetadataRequest: eQ,
-                    hasFetchedPaymentSources: ea,
+                    hasFetchedPaymentSources: eo,
                     paymentSources: en,
                     hasPaymentSources: er,
                     paymentSourceId: ei,
-                    setPaymentSourceId: eo,
+                    setPaymentSourceId: ea,
                     priceOptions: ec,
                     setCurrency: eu,
                     currencyLoading: ed,
@@ -280,9 +280,9 @@ function Y(e) {
                 selectedSkuPricePreview: tn,
                 application: tr,
                 purchaseType: q,
-                isEmbeddedIAP: ta,
+                isEmbeddedIAP: to,
                 activitySessionId: tl,
-                devShelfFetchState: to,
+                devShelfFetchState: ta,
                 entitlementsGranted: e$,
                 setEntitlementsGranted: e0,
                 referralCode: X,
@@ -292,7 +292,7 @@ function Y(e) {
                 inReverseTrial: t_
             }
         ),
-        children: (0, r.jsx)(o.Elements, {
+        children: (0, r.jsx)(a.Elements, {
             options: j.OBo,
             stripe: $,
             children: K

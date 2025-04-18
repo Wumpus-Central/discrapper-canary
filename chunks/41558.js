@@ -4,7 +4,7 @@ var i,
     l = n(192379),
     o = n(481060),
     a = n(388032),
-    s = n(437375),
+    s = n(780775),
     c = (((i = c || {})[(i.VIEW_MORE = 0)] = 'VIEW_MORE'), (i[(i.VIEW_LESS = 1)] = 'VIEW_LESS'), i);
 function u(e) {
     let { title: t, buttonType: n, onClickViewButton: i } = e;

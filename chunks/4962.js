@@ -9,7 +9,7 @@ var l = n(120356),
     c = n(700582),
     u = n(451478),
     d = n(388032),
-    p = n(161510),
+    p = n(36028),
     h = (((r = h || {})[(r.STAFF_NOTES = 1)] = 'STAFF_NOTES'), r);
 let f = o.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
         let { user: t, className: n, animate: r } = e;

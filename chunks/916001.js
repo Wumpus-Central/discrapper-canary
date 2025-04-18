@@ -4,7 +4,7 @@ n(192379);
 var i = n(866442),
     a = n(481060),
     l = n(388032),
-    o = n(18850);
+    o = n(838997);
 function s(e) {
     let { locked: t, role: n, textVariant: s = 'text-xs/medium' } = e,
         c = (0, a.dQu)(a.TVs.colors.INTERACTIVE_NORMAL).hex();

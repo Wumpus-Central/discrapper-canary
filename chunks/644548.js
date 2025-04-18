@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(804061), n(704826), n(35282);
 var r = n(200651),
     i = n(192379),
-    o = n(317261),
-    a = n(70956),
+    a = n(317261),
+    o = n(70956),
     s = n(5192),
     l = n(379357),
     c = n(561308),
@@ -16,15 +16,15 @@ var r = n(200651),
     g = n(797342),
     E = n(388032);
 function b(e) {
-    if (e === o._.WEEK) return E.t['7TXfc3'];
+    if (e === a._.WEEK) return E.t['7TXfc3'];
 }
 let y = (e, t, n, r) => {
         let i = b(r),
-            o = s.ZP.getName(t.guild_id, t.id, n),
-            a = e.extra.game_name;
+            a = s.ZP.getName(t.guild_id, t.id, n),
+            o = e.extra.game_name;
         return E.NW.formatToMarkdownString(i, {
-            gameName: a,
-            userName: o
+            gameName: o,
+            userName: a
         }).replaceAll('*', '');
     },
     v = (e, t) =>
@@ -33,7 +33,7 @@ let y = (e, t, n, r) => {
             activity: e.extra.game_name
         }),
     O = (e) => {
-        let { channel: t, entry: n, disableGameProfileLinks: o, onReaction: s, onVoiceChannelPreview: b } = e,
+        let { channel: t, entry: n, disableGameProfileLinks: a, onReaction: s, onVoiceChannelPreview: b } = e,
             { largeImage: O } = (0, l.rv)({ entry: n }),
             { user: I, details: S, appName: T } = (0, g.n)(n),
             { primaryColor: N, secondaryColor: A } = (0, d.Z)(null == O ? void 0 : O.src),
@@ -47,7 +47,7 @@ let y = (e, t, n, r) => {
                             applicationImageSrc: null == O ? void 0 : O.src,
                             avatarSrcs: [I.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
                             description: y(n, t, I, R),
-                            timestamp: E.NW.formatToPlainString(E.t.YL7UEx, { hours: Math.round(C / a.Z.Seconds.HOUR) }),
+                            timestamp: E.NW.formatToPlainString(E.t.YL7UEx, { hours: Math.round(C / o.Z.Seconds.HOUR) }),
                             colors: [N, A],
                             channelId: e
                         });
@@ -75,7 +75,7 @@ let y = (e, t, n, r) => {
                         location: p.Gt.POPOUT,
                         children: _.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
                     }),
-                    disableGameProfileLinks: o
+                    disableGameProfileLinks: a
                 }),
                 (0, r.jsx)(h.St, {
                     children: (0, r.jsx)(h.WT, {

@@ -7,7 +7,7 @@ var l = i(512722),
     u = i(372900),
     c = i(238246),
     d = i(592125),
-    h = i(504185);
+    h = i(856393);
 function o(n) {
     let { windowKey: e, channelId: i } = n,
         l = (0, r.e7)([d.Z], () => d.Z.getChannel(i));

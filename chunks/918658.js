@@ -21,14 +21,14 @@ var i = n(120356),
     S = n(259580),
     p = n(358085),
     A = n(962086),
-    R = n(160404),
-    P = n(889695),
-    f = n(981631),
+    f = n(160404),
+    R = n(889695),
+    P = n(981631),
     C = n(176505),
     D = n(302463),
     g = n(293810),
     y = n(388032),
-    m = n(789868);
+    m = n(800515);
 function h(e) {
     let { className: t, onClick: n, children: i } = e;
     return (0, r.jsx)(s.zxk, {
@@ -56,37 +56,37 @@ function U() {
             backNavigationSection: i,
             isFullServerPreview: l,
             isServerShopPreview: p
-        } = (0, o.cj)([R.Z], () => ({
-            viewingRoles: null != e ? R.Z.getViewingRoles(e) : null,
-            backNavigationSection: R.Z.getBackNavigationSection(e),
-            isFullServerPreview: null != e && R.Z.isFullServerPreview(e),
-            isServerShopPreview: null != e && R.Z.isViewingServerShop(e)
+        } = (0, o.cj)([f.Z], () => ({
+            viewingRoles: null != e ? f.Z.getViewingRoles(e) : null,
+            backNavigationSection: f.Z.getBackNavigationSection(e),
+            isFullServerPreview: null != e && f.Z.isFullServerPreview(e),
+            isServerShopPreview: null != e && f.Z.isViewingServerShop(e)
         }));
     if (null == n || null == e) return null;
     let U = (function (e) {
             switch (e) {
-                case f.pNK.INTEGRATIONS:
+                case P.pNK.INTEGRATIONS:
                     return y.NW.string(y.t.k7LGdn);
-                case f.pNK.ROLE_SUBSCRIPTIONS:
+                case P.pNK.ROLE_SUBSCRIPTIONS:
                     return y.NW.string(y.t.bRqiqa);
-                case f.pNK.ONBOARDING:
+                case P.pNK.ONBOARDING:
                     return y.NW.string(y.t.qZpU3d);
                 default:
                     return y.NW.string(y.t.MTIXho);
             }
         })(i),
-        M = i === f.pNK.ROLE_SUBSCRIPTIONS ? y.NW.string(y.t.hZUCzc) : y.NW.string(y.t['/djIh4']),
-        L = t === C.oC.GUILD_ONBOARDING,
-        Z = (t) => {
+        M = i === P.pNK.ROLE_SUBSCRIPTIONS ? y.NW.string(y.t.hZUCzc) : y.NW.string(y.t['/djIh4']),
+        Z = t === C.oC.GUILD_ONBOARDING,
+        L = (t) => {
             let { backToSettings: n } = t;
-            null != e && (R.Z.isFullServerPreview(e) && (0, I.uL)(f.Z5c.CHANNEL(e)), u.ZP.shouldShowOnboarding(e) && (c.Z.finishOnboarding(e), (0, d.EI)(e)), (0, A.mL)(e), n && _.Z.open(e, i), i === f.pNK.ROLE_SUBSCRIPTIONS && (0, E.GN)(e));
+            null != e && (f.Z.isFullServerPreview(e) && (0, I.uL)(P.Z5c.CHANNEL(e)), u.ZP.shouldShowOnboarding(e) && (c.Z.finishOnboarding(e), (0, d.EI)(e)), (0, A.mL)(e), n && _.Z.open(e, i), i === P.pNK.ROLE_SUBSCRIPTIONS && (0, E.GN)(e));
         };
     return (0, r.jsxs)(s.qXd, {
         color: s.DM8.BRAND,
         className: m.notice,
         children: [
             (0, r.jsxs)(h, {
-                onClick: () => Z({ backToSettings: !0 }),
+                onClick: () => L({ backToSettings: !0 }),
                 className: m.backButton,
                 children: [
                     (0, r.jsx)(T.Z, {
@@ -98,7 +98,7 @@ function U() {
                     U
                 ]
             }),
-            L && l
+            Z && l
                 ? (0, r.jsx)('div', {
                       className: m.noticeContents,
                       children: (0, r.jsx)('div', {
@@ -115,7 +115,7 @@ function U() {
                           }),
                           (0, r.jsx)(s.yRy, {
                               position: 'bottom',
-                              renderPopout: () => (0, r.jsx)(P.Z, { guildId: e }),
+                              renderPopout: () => (0, r.jsx)(R.Z, { guildId: e }),
                               children: (e) => {
                                   let { onClick: t } = e;
                                   return (0, r.jsxs)(h, {
@@ -155,13 +155,13 @@ function U() {
                               })
                       ]
                   }),
-            l || i === f.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(b, { onClick: () => Z({ backToSettings: !1 }) })
+            l || i === P.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(b, { onClick: () => L({ backToSettings: !1 }) })
         ]
     });
 }
 function M(e) {
     let { guildId: t } = e;
-    return (0, o.e7)([R.Z], () => R.Z.isViewingRoles(t))
+    return (0, o.e7)([f.Z], () => f.Z.isViewingRoles(t))
         ? (0, r.jsx)('div', {
               className: l()(m.settingsWrapper, {
                   [m.windows]: (0, p.isWindows)(),

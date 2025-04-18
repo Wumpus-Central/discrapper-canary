@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(997841);
 var r = n(200651),
     i = n(117447),
-    o = n(481060),
-    a = n(783097),
+    a = n(481060),
+    o = n(783097),
     s = n(594174),
     l = n(572004),
     c = n(630388),
@@ -41,7 +41,7 @@ function p(e) {
     let { application: t, label: n, onSuccess: f, showIconFirst: p, focusedClassName: h } = e;
     if (__OVERLAY__ || !l.wS || null == t) return null;
     let m = s.default.getCurrentUser(),
-        g = (0, a.Ow)(t);
+        g = (0, o.Ow)(t);
     function E() {
         var e;
         if (null == t) return;
@@ -55,7 +55,7 @@ function p(e) {
     }
     let b = 'copy-app-link-'.concat(t.id);
     return (0, r.jsx)(
-        o.sNh,
+        a.sNh,
         {
             id: b,
             label: n,

@@ -54,7 +54,7 @@ function p(e) {
                 var i;
                 (i = c({}, e)).isCoachmarkEnabled &&
                     (0, a.ZDy)(async () => {
-                        let { BalanceWidgetEarnedOrbsCoachmarkModal: e } = await Promise.all([n.e('82081'), n.e('82196')]).then(n.bind(n, 720463));
+                        let { BalanceWidgetEarnedOrbsCoachmarkModal: e } = await Promise.all([n.e('82081'), n.e('72425')]).then(n.bind(n, 720463));
                         return (t) => (0, r.jsx)(e, c({}, i, t));
                     }, g);
             } else !l && t && m();

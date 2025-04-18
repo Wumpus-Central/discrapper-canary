@@ -1,15 +1,15 @@
 n.d(t, {
     C8: () => i,
-    dK: () => a,
-    mq: () => o
+    dK: () => o,
+    mq: () => a
 });
 var r = n(192379),
     i = r.createContext(),
-    o = r.createContext();
-function a(e) {
+    a = r.createContext();
+function o(e) {
     var t = e.children,
         n = r.useState(null),
-        a = n[0],
+        o = n[0],
         s = n[1],
         l = r.useRef(!1);
     r.useEffect(function () {
@@ -20,5 +20,5 @@ function a(e) {
     var c = r.useCallback(function (e) {
         l.current || s(e);
     }, []);
-    return r.createElement(i.Provider, { value: a }, r.createElement(o.Provider, { value: c }, t));
+    return r.createElement(i.Provider, { value: o }, r.createElement(a.Provider, { value: c }, t));
 }

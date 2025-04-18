@@ -5,8 +5,8 @@ n.d(t, {
     n(953529);
 var r = n(399606),
     i = n(695346),
-    o = n(246946),
-    a = n(594174),
+    a = n(246946),
+    o = n(594174),
     s = n(388032);
 function l(e, t, n) {
     return (
@@ -65,8 +65,8 @@ let f = 'quest_completed',
 function p(e) {
     var t;
     let n = i.R_.useSetting(),
-        l = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
-        u = (0, r.e7)([o.Z], () => o.Z.hidePersonalInformation);
+        l = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
+        u = (0, r.e7)([a.Z], () => a.Z.hidePersonalInformation);
     if (null == e) return [];
     let f = null != (t = null == e ? void 0 : e.getBadges()) ? t : [];
     return null != l && l.id === e.userId && n && (f = f.filter((e) => e.id !== _)), u && (f = f.map((e) => d(c({}, e), { description: e.id === _ ? s.NW.string(s.t.Br1ls7) : e.description }))), f;

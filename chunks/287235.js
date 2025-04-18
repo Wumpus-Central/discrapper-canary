@@ -6,8 +6,8 @@ n.d(t, {
     n(200651);
 var r = n(192379),
     i = n(372817),
-    o = n(5967),
-    a = n(420212);
+    a = n(5967),
+    o = n(420212);
 let s = 'data-jump-section',
     l = 'global',
     c = r.createContext(l);
@@ -21,8 +21,8 @@ function d(e) {
 }
 async function f(e) {
     var t, n, r, c;
-    if (e.key !== a.LT) return;
-    let u = (0, o.uB)(e);
+    if (e.key !== o.LT) return;
+    let u = (0, a.uB)(e);
     if (null == u) return;
     let d = null,
         f = null,
@@ -38,7 +38,7 @@ async function f(e) {
         getFocusableElements: () => Array.from(u.querySelectorAll('['.concat(s, '="').concat(null != d ? d : l, '"]'))),
         getActiveElement: () => u.activeElement
     });
-    if ((null == (t = (0, o.uB)(e)) ? void 0 : t.activeElement) == null || null == f) {
+    if ((null == (t = (0, a.uB)(e)) ? void 0 : t.activeElement) == null || null == f) {
         null == (n = p.getFirstFocusableElement()) || n.focus();
         return;
     }

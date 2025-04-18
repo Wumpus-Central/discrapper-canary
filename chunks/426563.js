@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(526167),
     i = n(621554),
-    o = n(328756),
-    a = n(639525),
+    a = n(328756),
+    o = n(639525),
     s = n(131812),
     l = n(265174),
     c = n(926425),
@@ -34,7 +34,7 @@ function P() {
     return e ? R : i;
 }
 let w = {
-    DEFAULT_AVATARS: [o, a, s, l, c, u],
+    DEFAULT_AVATARS: [a, o, s, l, c, u],
     DEFAULT_PROVISIONAL_AVATARS: [O, I, S, T, N, A],
     DEFAULT_GROUP_DM_AVATARS: [d, f, _, p, h, m, g, E],
     BOT_AVATARS: {

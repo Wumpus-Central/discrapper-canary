@@ -2,8 +2,8 @@ n.d(t, { Z: () => O }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(979554),
+    a = n.n(i),
+    o = n(979554),
     s = n(442837),
     l = n(481060),
     c = n(987209),
@@ -14,7 +14,7 @@ var i = n(120356),
     p = n(905357),
     h = n(473608),
     m = n(388032),
-    g = n(225113);
+    g = n(664549);
 function E(e, t, n) {
     return (
         t in e
@@ -75,7 +75,7 @@ let O = (e) => {
         A = (0, p.k)(I);
     if (null == I) return null;
     let [C] = I.items,
-        R = () => (C.type === a.Z.AVATAR_DECORATION ? m.NW.string(m.t['7v0T9P']) : C.type === a.Z.PROFILE_EFFECT ? m.NW.string(m.t.wR5wOj) : null),
+        R = () => (C.type === o.Z.AVATAR_DECORATION ? m.NW.string(m.t['7v0T9P']) : C.type === o.Z.PROFILE_EFFECT ? m.NW.string(m.t.wR5wOj) : null),
         P = null != S && S.id !== (null == N ? void 0 : N.id),
         w = () => {
             null != t && null != E && E(t);
@@ -102,8 +102,8 @@ let O = (e) => {
                                             v(b({}, e), {
                                                 user: S,
                                                 pendingAvatar: S.getAvatarURL(null, (0, l.pxk)(l.EFr.SIZE_80)),
-                                                pendingAvatarDecoration: C.type === a.Z.AVATAR_DECORATION ? C : null,
-                                                pendingProfileEffectId: C.type === a.Z.PROFILE_EFFECT ? C.id : null,
+                                                pendingAvatarDecoration: C.type === o.Z.AVATAR_DECORATION ? C : null,
+                                                pendingProfileEffectId: C.type === o.Z.PROFILE_EFFECT ? C.id : null,
                                                 canUsePremiumCustomization: !0,
                                                 disabledInputs: !0
                                             })
@@ -130,7 +130,7 @@ let O = (e) => {
             (0, r.jsxs)(l.P3F, {
                 tag: 'div',
                 onClick: w,
-                className: o()(g.previewContainer, {
+                className: a()(g.previewContainer, {
                     [g.previewContainerSelected]: n && null == T,
                     [g.previewContainerError]: n && null != T
                 }),

@@ -1,8 +1,8 @@
 n.d(t, { A: () => _ });
 var r = n(200651),
     i = n(192379),
-    o = n(200100),
-    a = n(481060);
+    a = n(200100),
+    o = n(481060);
 function s(e, t, n) {
     return (
         t in e
@@ -61,8 +61,8 @@ function d(e, t) {
         r,
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -71,14 +71,14 @@ function f(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function _(e) {
     var { shouldAnimate: t = 'respect-motion-settings' } = e,
         n = d(e, ['shouldAnimate']);
-    let s = i.useContext(a.Sfi).reducedMotion.enabled,
+    let s = i.useContext(o.Sfi).reducedMotion.enabled,
         c = 'animate-always' === t || ('respect-motion-settings' === t && !s);
-    return (0, r.jsx)(o.Spring, u(l({}, n), { immediate: !c }));
+    return (0, r.jsx)(a.Spring, u(l({}, n), { immediate: !c }));
 }

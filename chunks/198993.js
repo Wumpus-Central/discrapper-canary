@@ -1,17 +1,17 @@
 n.d(t, {
-    ZP: () => x,
-    c2: () => N,
-    cK: () => g
+    ZP: () => N,
+    c2: () => x,
+    cK: () => p
 });
 var r,
     i,
     s,
-    l = n(200651),
-    o = n(192379),
+    o = n(200651),
+    l = n(192379),
     a = n(120356),
     c = n.n(a),
     u = n(512092),
-    d = n(560973);
+    d = n(634715);
 function h(e, t, n) {
     return (
         t in e
@@ -25,7 +25,7 @@ function h(e, t, n) {
         e
     );
 }
-function p(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,13 +41,13 @@ function p(e) {
     }
     return e;
 }
-var g = (((r = {}).SIZE_40 = 'SIZE_40'), (r.SIZE_60 = 'SIZE_60'), r);
-let f = Object.freeze({
+var p = (((r = {}).SIZE_40 = 'SIZE_40'), (r.SIZE_60 = 'SIZE_60'), r);
+let m = Object.freeze({
         SIZE_40: 'size-40',
         SIZE_60: 'size-60'
     }),
-    m = n(515695);
-class _ extends (i = o.PureComponent) {
+    f = n(515695);
+class _ extends (i = l.PureComponent) {
     render() {
         let e = this.props,
             { className: t, text: n } = e,
@@ -70,16 +70,16 @@ class _ extends (i = o.PureComponent) {
                 }
                 return i;
             })(e, ['className', 'text']);
-        return (0, l.jsx)('div', {
+        return (0, o.jsx)('div', {
             style: {
                 width: r.size,
                 height: r.size,
                 backgroundColor: r.bgColor
             },
             className: c()(d.qrCodeContainer, t),
-            children: (0, l.jsx)(
+            children: (0, o.jsx)(
                 u.default,
-                p(
+                g(
                     {
                         value: n,
                         level: 'M'
@@ -95,19 +95,19 @@ h(_, 'defaultProps', {
     bgColor: '#ffffff',
     fgColor: '#000000'
 });
-class N extends (s = o.PureComponent) {
+class x extends (s = l.PureComponent) {
     render() {
         let { overlaySize: e } = this.props,
-            t = f[null != e ? e : 'SIZE_40'];
-        return (0, l.jsxs)('div', {
+            t = m[null != e ? e : 'SIZE_40'];
+        return (0, o.jsxs)('div', {
             className: d.qrCodeOverlayContainer,
             children: [
-                (0, l.jsx)(_, p({}, this.props)),
-                (0, l.jsx)('div', {
+                (0, o.jsx)(_, g({}, this.props)),
+                (0, o.jsx)('div', {
                     className: d.qrCodeOverlay,
-                    children: (0, l.jsx)('img', {
+                    children: (0, o.jsx)('img', {
                         className: d[t],
-                        src: m,
+                        src: f,
                         alt: ''
                     })
                 })
@@ -115,9 +115,9 @@ class N extends (s = o.PureComponent) {
         });
     }
 }
-h(N, 'defaultProps', {
+h(x, 'defaultProps', {
     size: 144,
     bgColor: '#ffffff',
     fgColor: '#000000'
 });
-let x = _;
+let N = _;

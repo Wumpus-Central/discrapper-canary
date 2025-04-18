@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -15,9 +15,9 @@ var r = n(200651),
     m = n(768581),
     b = n(823379),
     y = n(51144),
-    _ = n(237272);
-let v = d.u.SIZE_24;
-function O(e) {
+    _ = n(291798);
+let O = d.u.SIZE_24;
+function v(e) {
     var t, n;
     let { activity: l, user: o, embeddedApp: s, onOpenSpotifyAlbum: u } = e,
         d = null == l ? void 0 : l.assets,
@@ -112,7 +112,7 @@ function C(e) {
         children: s
     });
 }
-function S(e) {
+function j(e) {
     let { activity: t, user: n, onOpenSpotifyArtist: i } = e,
         l = null == t ? void 0 : t.details,
         s = null == t ? void 0 : t.state,
@@ -141,7 +141,7 @@ function S(e) {
               children: a
           });
 }
-function j(e) {
+function S(e) {
     let { activity: t } = e,
         n = null == t ? void 0 : t.state;
     return null == n || '' === n || (0, c.Z)(t)
@@ -151,7 +151,7 @@ function j(e) {
               children: n
           });
 }
-function E(e) {
+function x(e) {
     let { activity: t } = e;
     if (null == t || !(0, c.Z)(t)) return null;
     let { timestamps: n } = t;
@@ -165,11 +165,11 @@ function E(e) {
         singleLine: !0
     });
 }
-function x(e) {
+function E(e) {
     let { activity: t, embeddedApp: n, user: l, channel: o, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: g } = e,
         m = [];
     null != n ? (m = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (m = u.map((e) => e.user.id));
-    let x = (0, s.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(b.lm)),
+    let E = (0, s.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(b.lm)),
         I = null != n || (0, c.Z)(t),
         N = i.useMemo(() => {
             let e = new Map();
@@ -190,7 +190,7 @@ function x(e) {
                   (0, r.jsxs)('div', {
                       className: _.flexRow,
                       children: [
-                          (0, r.jsx)(O, {
+                          (0, r.jsx)(v, {
                               activity: t,
                               user: l,
                               embeddedApp: n,
@@ -204,18 +204,18 @@ function x(e) {
                                       embeddedApp: n,
                                       onOpenSpotifyTrack: h
                                   }),
-                                  (0, r.jsx)(S, {
+                                  (0, r.jsx)(j, {
                                       activity: t,
                                       user: l,
                                       onOpenSpotifyArtist: p
                                   }),
-                                  (0, r.jsx)(j, { activity: t }),
+                                  (0, r.jsx)(S, { activity: t }),
                                   m.length > 0 &&
                                       (0, r.jsx)(d.Z, {
                                           className: _.usersSummary,
                                           guildId: o.guild_id,
-                                          users: x,
-                                          size: v,
+                                          users: E,
+                                          size: O,
                                           max: 7,
                                           renderUser: (e) => {
                                               var t;
@@ -230,7 +230,7 @@ function x(e) {
                                                       children: (0, r.jsx)(
                                                           'img',
                                                           {
-                                                              src: e.getAvatarURL(o.guild_id, v),
+                                                              src: e.getAvatarURL(o.guild_id, O),
                                                               alt: i,
                                                               className: _.avatar
                                                           },
@@ -245,7 +245,7 @@ function x(e) {
                           })
                       ]
                   }),
-                  (0, r.jsx)(E, { activity: t })
+                  (0, r.jsx)(x, { activity: t })
               ]
           })
         : null;

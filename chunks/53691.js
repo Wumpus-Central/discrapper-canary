@@ -2,13 +2,13 @@ n.d(t, { p: () => p });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(200100),
+    a = n.n(i),
+    o = n(200100),
     s = n(481060),
     l = n(436774),
     c = n(197115),
     u = n(474936),
-    d = n(285173);
+    d = n(888358);
 function f(e, t, n) {
     return (
         t in e
@@ -48,9 +48,9 @@ function p(e) {
                 friction: 14
             }
         });
-    return (0, r.jsxs)(a.animated.div, {
+    return (0, r.jsxs)(o.animated.div, {
         style: _({}, O),
-        className: o()(
+        className: a()(
             d.upsellContainer,
             {
                 [d.upsellContainerShadow]: E,

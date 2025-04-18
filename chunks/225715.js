@@ -10,11 +10,11 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(41959),
     l = n(245561),
-    c = n(315205);
+    c = n(890515);
 function u(e, t, n) {
     return (
         t in e
@@ -73,8 +73,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -83,13 +83,13 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let m = (e) => {
         var { application: t, asset: n, className: i } = e,
-            o = p(e, ['application', 'asset', 'className']);
+            a = p(e, ['application', 'asset', 'className']);
         return (0, r.jsx)(
             s.Z,
             d(
@@ -99,7 +99,7 @@ let m = (e) => {
                     asset: n,
                     className: i
                 },
-                o
+                a
             )
         );
     },
@@ -107,11 +107,11 @@ let m = (e) => {
         var { children: t, className: n, id: i } = e,
             s = p(e, ['children', 'className', 'id']);
         return (0, r.jsx)(
-            a.X6q,
+            o.X6q,
             _(
                 d(
                     {
-                        className: o()(c.header, n),
+                        className: a()(c.header, n),
                         variant: 'heading-xl/extrabold',
                         id: i
                     },
@@ -126,17 +126,17 @@ function E() {
 }
 let b = (e) => {
         var { className: t, title: n, description: i } = e,
-            o = p(e, ['className', 'title', 'description']);
+            a = p(e, ['className', 'title', 'description']);
         return (0, r.jsxs)(
             'div',
-            _(d({ className: t }, o), {
+            _(d({ className: t }, a), {
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(o.X6q, {
                         variant: 'heading-md/bold',
                         color: 'header-primary',
                         children: n
                     }),
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(o.X6q, {
                         variant: 'heading-sm/normal',
                         color: 'header-secondary',
                         children: i
@@ -146,11 +146,11 @@ let b = (e) => {
         );
     },
     y = (e) => {
-        var { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: a } = e,
+        var { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: o } = e,
             s = p(e, ['applicationId', 'storeListingBenefits', 'skuBenefits', 'className']);
         return (0, r.jsx)(
             'div',
-            _(d({ className: o()(c.benefitsContainer, a) }, s), {
+            _(d({ className: a()(c.benefitsContainer, o) }, s), {
                 children: (0, r.jsx)(l.GU, {
                     applicationId: t,
                     storeListingBenefits: n,
@@ -163,5 +163,5 @@ let b = (e) => {
     v = (e) => {
         var { children: t, className: n } = e,
             i = p(e, ['children', 'className']);
-        return (0, r.jsx)('div', _(d({ className: o()(c.container, n) }, i), { children: t }));
+        return (0, r.jsx)('div', _(d({ className: a()(c.container, n) }, i), { children: t }));
     };

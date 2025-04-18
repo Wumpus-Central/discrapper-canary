@@ -2,8 +2,8 @@ n.d(t, { Z: () => v });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(780384),
     l = n(481060),
     c = n(570908),
@@ -15,17 +15,17 @@ var i = n(120356),
     h = n(5192),
     m = n(579407),
     g = n(388032),
-    E = n(291540),
+    E = n(538566),
     b = n(460400),
     y = n(943549);
 let v = (e) => {
     let { user: t, nameplate: n, nameplateData: i, className: v, isHighlighted: O, showStatus: I, showWumpus: S, isPurchased: T = !1 } = e,
-        N = (0, a.e7)([_.Z], () => (0, s.wj)(_.Z.theme)),
+        N = (0, o.e7)([_.Z], () => (0, s.wj)(_.Z.theme)),
         A = null != n ? (0, m.EU)(n) : i,
-        C = (0, a.e7)([p.Z], () => p.Z.getStatus(t.id)),
+        C = (0, o.e7)([p.Z], () => p.Z.getStatus(t.id)),
         R = N ? '#706F74' : '#aaaab2';
     return (0, r.jsxs)('div', {
-        className: o()(v, E.nameplatePreview, { [E.nameplatePurchased]: T && !O }),
+        className: a()(v, E.nameplatePreview, { [E.nameplatePurchased]: T && !O }),
         style: { color: N ? 'white' : 'black' },
         children: [
             null != A &&
@@ -42,7 +42,7 @@ let v = (e) => {
                 className: E.overlayContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: o()(E.avatarContainer, !S && E.avatarVisible),
+                        className: a()(E.avatarContainer, !S && E.avatarVisible),
                         children: (0, r.jsx)(c.Z, {
                             avatar: (0, r.jsx)(u.Z, {
                                 user: t,
@@ -56,7 +56,7 @@ let v = (e) => {
                         })
                     }),
                     (0, r.jsx)('div', {
-                        className: o()(E.avatarContainer, S && E.avatarVisible),
+                        className: a()(E.avatarContainer, S && E.avatarVisible),
                         children: (0, r.jsx)(c.Z, {
                             avatar: (0, r.jsx)(l.qEK, {
                                 src: N ? b : y,
@@ -65,7 +65,7 @@ let v = (e) => {
                                 status: l.Skl.ONLINE,
                                 statusColor: R
                             }),
-                            name: (0, r.jsx)('div', { className: o()(E.placeholderUsername, E.placeholderUsernameColor) }),
+                            name: (0, r.jsx)('div', { className: a()(E.placeholderUsername, E.placeholderUsernameColor) }),
                             innerClassName: E.avatarWithTextInnerClassName
                         })
                     })

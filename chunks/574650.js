@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(539854), n(388685);
+n.d(t, { Z: () => R }), n(539854), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -16,9 +16,9 @@ var i = n(120356),
     N = n(981631),
     T = n(176505),
     S = n(388032),
-    p = n(657321),
-    A = n(373185);
-function R(e) {
+    p = n(246752),
+    A = n(240211);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,15 +43,15 @@ function R(e) {
     }
     return e;
 }
-let P = () => {
+let R = () => {
     var e, t;
     let i = (0, a.e7)([u.Z], () => u.Z.getGuildId(), []),
-        P = (0, a.e7)([c.Z], () => c.Z.getGuild(i), [i]),
-        f = (0, a.e7)([O.Z], () => (null != i ? O.Z.getRequest(i) : null), [i]),
+        R = (0, a.e7)([c.Z], () => c.Z.getGuild(i), [i]),
+        P = (0, a.e7)([O.Z], () => (null != i ? O.Z.getRequest(i) : null), [i]),
         C = (0, o.TH)(),
-        D = (null == (e = (0, o.LX)(C.pathname, N.Z5c.CHANNEL(null == P ? void 0 : P.id, T.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
-    if (null == P || !(0, I.Dc)(P) || D) return null;
-    let g = null != (t = null == f ? void 0 : f.applicationStatus) ? t : _.wB.STARTED,
+        D = (null == (e = (0, o.LX)(C.pathname, N.Z5c.CHANNEL(null == R ? void 0 : R.id, T.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+    if (null == R || !(0, I.Dc)(R) || D) return null;
+    let g = null != (t = null == P ? void 0 : P.applicationStatus) ? t : _.wB.STARTED,
         y = null,
         m = null,
         h = null,
@@ -65,12 +65,12 @@ let P = () => {
                         var t, n;
                         return (0, r.jsx)(
                             s.ConfirmModal,
-                            ((t = R(
+                            ((t = f(
                                 {
                                     header: S.NW.string(S.t.aIz1oa),
                                     confirmText: S.NW.string(S.t['cY+Ooa']),
                                     cancelText: S.NW.string(S.t['ETE/oK']),
-                                    onConfirm: () => d.Z.removeGuildJoinRequest(P.id),
+                                    onConfirm: () => d.Z.removeGuildJoinRequest(R.id),
                                     confirmButtonColor: s.zxk.Colors.BRAND
                                 },
                                 e
@@ -105,7 +105,7 @@ let P = () => {
                 (h = () => {
                     (0, s.ZDy)(async () => {
                         let { default: e } = await n.e('3378').then(n.bind(n, 76075));
-                        return (t) => (0, r.jsx)(e, R({ guildId: P.id }, t));
+                        return (t) => (0, r.jsx)(e, f({ guildId: R.id }, t));
                     });
                 }),
                 b.push(p.error);
@@ -114,7 +114,7 @@ let P = () => {
             (y = S.NW.string(S.t.G5YKXF)),
                 (m = S.NW.string(S.t['r8/DT0'])),
                 (h = () => {
-                    (0, E.hk)(P.id);
+                    (0, E.hk)(R.id);
                 });
     }
     return (0, r.jsxs)('div', {

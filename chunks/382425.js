@@ -1,8 +1,8 @@
 n.d(t, { Z: () => q }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(287734),
@@ -41,12 +41,12 @@ var r = n(200651),
     V = n(228168),
     Z = n(981631),
     H = n(388032),
-    W = n(935693),
-    Y = n(548120),
+    W = n(227832),
+    Y = n(162509),
     K = n(924482),
     z = n(774797);
 function q(e) {
-    let { user: t, currentUser: n, stream: o, className: q, onClose: Q, profileGuildId: X } = e,
+    let { user: t, currentUser: n, stream: a, className: q, onClose: Q, profileGuildId: X } = e,
         J = i.useRef(null),
         { profileType: $, theme: ee } = (0, L.z)(),
         { interactionSource: et, interactionSourceId: en } = (0, P.Xo)(),
@@ -54,11 +54,11 @@ function q(e) {
             [Y.fullSize]: $ === V.y0.FULL_SIZE,
             [W.fullSize]: $ === V.y0.FULL_SIZE
         },
-        ei = (0, s.e7)([S.Z], () => S.Z.getGuild(null == o ? void 0 : o.guildId)),
-        eo = (0, s.e7)([I.Z], () => I.Z.getChannel(null == o ? void 0 : o.channelId)),
-        ea = (0, s.Wu)([A.ZP], () =>
-            null != eo
-                ? A.ZP.getVoiceStatesForChannel(eo).map((e) => {
+        ei = (0, s.e7)([S.Z], () => S.Z.getGuild(null == a ? void 0 : a.guildId)),
+        ea = (0, s.e7)([I.Z], () => I.Z.getChannel(null == a ? void 0 : a.channelId)),
+        eo = (0, s.Wu)([A.ZP], () =>
+            null != ea
+                ? A.ZP.getVoiceStatesForChannel(ea).map((e) => {
                       let { user: t } = e;
                       return t;
                   })
@@ -68,25 +68,25 @@ function q(e) {
         { analyticsLocations: el } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         ec = (0, C.Z)({
             display: 'live',
-            voiceChannelId: null == eo ? void 0 : eo.id,
+            voiceChannelId: null == ea ? void 0 : ea.id,
             user: t,
-            stream: o,
+            stream: a,
             analyticsLocations: el
         }),
         eu = (0, R.Z)({
             userId: t.id,
             onAction: ec
         }),
-        [ed, ef] = (0, b.wq)(eo),
-        { previewUrl: e_, isLoading: ep } = (0, E.Z)(o.guildId, o.channelId, o.ownerId),
-        eh = (0, s.e7)([T.Z], () => null != eo && T.Z.canBasicChannel(Z.S7T.CONNECT, eo)),
+        [ed, ef] = (0, b.wq)(ea),
+        { previewUrl: e_, isLoading: ep } = (0, E.Z)(a.guildId, a.channelId, a.ownerId),
+        eh = (0, s.e7)([T.Z], () => null != ea && T.Z.canBasicChannel(Z.S7T.CONNECT, ea)),
         em = (0, d.Z)(ep ? null : e_),
         eg = ep || null == e_ ? em : e_;
-    if (null == ei || null == eo || !1 === o.discoverable || null === $) return null;
+    if (null == ei || null == ea || !1 === a.discoverable || null === $) return null;
     let eE = () => {
-            let e = a()(Y.preview, er),
+            let e = o()(Y.preview, er),
                 t = (e) => {
-                    e.stopPropagation(), ec({ action: 'PRESS_IMAGE' }), c.default.selectVoiceChannel(o.channelId), (0, u.iV)(o), null == Q || Q();
+                    e.stopPropagation(), ec({ action: 'PRESS_IMAGE' }), c.default.selectVoiceChannel(a.channelId), (0, u.iV)(a), null == Q || Q();
                 };
             return null == eg && ep
                 ? (0, r.jsx)('div', {
@@ -95,7 +95,7 @@ function q(e) {
                   })
                 : null == eg
                   ? (0, r.jsxs)(l.P3F, {
-                        className: a()(e, Y.overlay, { [Y.clickable]: ed }),
+                        className: o()(e, Y.overlay, { [Y.clickable]: ed }),
                         onClick: ed ? t : void 0,
                         children: [
                             (0, r.jsx)('img', {
@@ -120,7 +120,7 @@ function q(e) {
                         ]
                     })
                   : (0, r.jsxs)(l.P3F, {
-                        className: a()(e, Y.overlay, { [Y.clickable]: ed }),
+                        className: o()(e, Y.overlay, { [Y.clickable]: ed }),
                         onClick: ed ? t : void 0,
                         children: [
                             (0, r.jsx)('img', {
@@ -150,7 +150,7 @@ function q(e) {
         eb = () => {
             if ($ !== V.y0.FULL_SIZE) return null;
             let e = (e) => {
-                    e.stopPropagation(), null == ec || ec({ action: 'OPEN_VOICE_CHANNEL' }), eo.isGuildStageVoice() ? (0, O.Cq)(eo) : (c.default.selectVoiceChannel(eo.id), (0, y.Kh)(eo.id)), null == Q || Q();
+                    e.stopPropagation(), null == ec || ec({ action: 'OPEN_VOICE_CHANNEL' }), ea.isGuildStageVoice() ? (0, O.Cq)(ea) : (c.default.selectVoiceChannel(ea.id), (0, y.Kh)(ea.id)), null == Q || Q();
                 },
                 n = (e) => {
                     e.stopPropagation(), ec({ action: 'OPEN_VOICE_GUILD' }), (0, v.X)(ei.id), null == Q || Q();
@@ -166,15 +166,15 @@ function q(e) {
                                 className: W.voiceChannelHeading,
                                 children: [
                                     (0, r.jsx)(G.Z, {
-                                        channel: eo,
+                                        channel: ea,
                                         size: 'xxs',
                                         color: l.TVs.colors.TEXT_NORMAL,
                                         className: W.voiceIcon
                                     }),
                                     (0, r.jsx)(l.P3F, {
-                                        className: a()(W.clickableText, W.inline),
+                                        className: o()(W.clickableText, W.inline),
                                         onClick: e,
-                                        children: eo.name
+                                        children: ea.name
                                     })
                                 ]
                             }),
@@ -186,9 +186,9 @@ function q(e) {
                         ]
                     }),
                     (0, r.jsx)(g.Z, {
-                        users: ea,
+                        users: eo,
                         guildId: ei.id,
-                        channelId: eo.id,
+                        channelId: ea.id,
                         maxUsers: U.W,
                         size: l.EFr.SIZE_16,
                         onClick: (e) => {
@@ -207,7 +207,7 @@ function q(e) {
                 : (0, r.jsx)(U.Z, {
                       user: t,
                       guild: ei,
-                      channel: eo,
+                      channel: ea,
                       onAction: ec,
                       onClose: Q
                   }),
@@ -215,9 +215,9 @@ function q(e) {
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: a()(W.actions, er),
+                      className: o()(W.actions, er),
                       children: (0, r.jsx)(B.Z, {
-                          channel: eo,
+                          channel: ea,
                           onAction: ec,
                           onClose: Q
                       })
@@ -257,7 +257,7 @@ function q(e) {
                             }),
                         children: (0, r.jsxs)(M.Z, {
                             ref: eu,
-                            className: a()(q, { [W.hoisted]: eI }),
+                            className: o()(q, { [W.hoisted]: eI }),
                             onAction: ec,
                             onClose: Q,
                             children: [
@@ -269,7 +269,7 @@ function q(e) {
                                     className: W.body,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: a()(W.content, er),
+                                            className: o()(W.content, er),
                                             children: [eE(), eb(), $ === V.y0.FULL_SIZE && ev()]
                                         }),
                                         ey()

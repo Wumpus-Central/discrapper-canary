@@ -1,8 +1,8 @@
 n.d(t, { Z: () => X }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(954955),
     l = n.n(s),
     c = n(990547),
@@ -31,7 +31,7 @@ var r = n(200651),
     D = n(921944),
     L = n(474936),
     x = n(388032),
-    M = n(289885);
+    M = n(874577);
 function k(e, t, n) {
     return (
         t in e
@@ -157,7 +157,7 @@ function W(e) {
     });
 }
 function Y(e) {
-    let { isSelected: t, onSelect: n, selectionId: o, tooltipText: s, label: u, className: f, children: _ } = e,
+    let { isSelected: t, onSelect: n, selectionId: a, tooltipText: s, label: u, className: f, children: _ } = e,
         p = (0, d.xUy)({
             label: u,
             isSelected: t
@@ -171,7 +171,7 @@ function Y(e) {
                         (0, h.h)({
                             type: c.ImpressionTypes.VIEW,
                             name: c.ImpressionNames.CHAT_WALLPAPER_WALLPAPER_OPTION,
-                            properties: { design_group_id: o }
+                            properties: { design_group_id: a }
                         });
                 });
             },
@@ -183,7 +183,7 @@ function Y(e) {
                 e.disconnect();
             }
         );
-    }, [o, m]);
+    }, [a, m]);
     let [g, E] = i.useState('top');
     return (
         i.useEffect(() => {
@@ -215,13 +215,13 @@ function Y(e) {
             children: (e) =>
                 (0, r.jsx)('div', {
                     ref: m,
-                    className: a()(f, t && M.wallpaperSelected),
+                    className: o()(f, t && M.wallpaperSelected),
                     children: (0, r.jsx)(
                         d.P3F,
                         G(j({}, e, p), {
                             className: M.wallpaperSelectionClickableContainer,
                             tabIndex: p.tabIndex,
-                            onClick: t ? w.dG4 : () => n(o),
+                            onClick: t ? w.dG4 : () => n(a),
                             children: _
                         })
                     )
@@ -230,15 +230,15 @@ function Y(e) {
     );
 }
 function K(e) {
-    let { isSelected: t, onSelect: n, chatWallpaperMetadata: o } = e,
-        { label: a, default: s, designGroupId: l } = o,
+    let { isSelected: t, onSelect: n, chatWallpaperMetadata: a } = e,
+        { label: o, default: s, designGroupId: l } = a,
         [c, u] = i.useState(!1);
     return (
         i.useEffect(() => {
             let e;
             if (t) {
                 let t = !1,
-                    n = (0, m.I)(o.default.asset);
+                    n = (0, m.I)(a.default.asset);
                 (0, g.p)(n, () => {
                     u(!1), (t = !0);
                 }),
@@ -249,19 +249,19 @@ function K(e) {
             return () => {
                 clearTimeout(e), u(!1);
             };
-        }, [t, o]),
+        }, [t, a]),
         (0, r.jsxs)(Y, {
             isSelected: t,
             onSelect: n,
             selectionId: l,
-            tooltipText: a,
-            label: a,
+            tooltipText: o,
+            label: o,
             className: M.wallpaper,
             children: [
                 c && (0, r.jsx)(d.$jN, { className: M.previewLoadingSpinner }),
                 (0, r.jsx)('img', {
                     src: (0, m.I)(s.icon),
-                    alt: a,
+                    alt: o,
                     width: B,
                     height: B,
                     draggable: !1,
@@ -287,7 +287,7 @@ function z(e) {
     });
 }
 function q(e) {
-    let { canApply: t, isUpdating: n, isBlurEnabled: i, onBlurEnabledChange: o, onClose: a, onApply: s } = e;
+    let { canApply: t, isUpdating: n, isBlurEnabled: i, onBlurEnabledChange: a, onClose: o, onApply: s } = e;
     return (0, r.jsxs)(d.Kqy, {
         direction: 'horizontal',
         justify: 'space-between',
@@ -299,7 +299,7 @@ function q(e) {
                 type: d.XZJ.Types.INVERTED,
                 value: i,
                 onChange: (e, t) => {
-                    I.default.track(w.rMx.CHAT_WALLPAPER_PICKER_BLUR_TOGGLED, { selected: t }), o(t);
+                    I.default.track(w.rMx.CHAT_WALLPAPER_PICKER_BLUR_TOGGLED, { selected: t }), a(t);
                 },
                 children: x.NW.string(x.t['3nPvdH'])
             }),
@@ -313,7 +313,7 @@ function q(e) {
                         size: d.zxk.Sizes.MEDIUM,
                         color: d.zxk.Colors.PRIMARY,
                         onClick: () => {
-                            I.default.track(w.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'footer' }), a();
+                            I.default.track(w.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'footer' }), o();
                         },
                         disabled: n,
                         children: x.NW.string(x.t['ETE/oK'])
@@ -358,7 +358,7 @@ function Q() {
     });
 }
 let X = function (e) {
-    let { className: t, position: o = w.VD2.TOP_RIGHT, config: s } = e,
+    let { className: t, position: a = w.VD2.TOP_RIGHT, config: s } = e,
         { analyticsLocations: l } = (0, p.ZP)(_.Z.CHAT_WALLPAPER_PICKER),
         { activePickerChannelId: c, closePicker: h, setPreviewWallpaperId: m } = (0, S.B)(),
         g = (0, P.Z)(c),
@@ -452,9 +452,9 @@ let X = function (e) {
         );
     }, [V]);
     let ei = null == c && (null == s ? void 0 : s.pickerType) !== S.j.COACHMARK,
-        eo = null;
+        ea = null;
     return (
-        (eo =
+        (ea =
             B || ei
                 ? (0, r.jsxs)('div', {
                       className: M.errorContainer,
@@ -521,8 +521,8 @@ let X = function (e) {
         (0, r.jsx)(p.Gt, {
             value: l,
             children: (0, r.jsx)(v.Z, {
-                className: a()(M.draggableContainer, t),
-                defaultPosition: o,
+                className: o()(M.draggableContainer, t),
+                defaultPosition: a,
                 topOffset: 88,
                 children: (0, r.jsxs)('div', {
                     className: M.container,
@@ -541,7 +541,7 @@ let X = function (e) {
                         (0, r.jsx)('div', { className: M.divider }),
                         (0, r.jsx)(d.JcV, {
                             containerRef: V,
-                            children: eo
+                            children: ea
                         })
                     ]
                 })

@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(692547),
+    a = n.n(i),
+    o = n(692547),
     s = n(481060),
     l = n(114487),
     c = n(686546),
@@ -18,17 +18,17 @@ var i = n(120356),
     _ = n(43542),
     p = n(723776),
     h = n(686369),
-    m = n(609928);
+    m = n(248217);
 function g(e, t) {
     let n = (0, h.q)(e, t);
     return null != e.brandColorPrimary ? e.brandColorPrimary : n;
 }
 function E(e) {
     let { profile: t, className: n } = e,
-        i = g(t, (0, s.dQu)(a.Z.colors.BG_BASE_TERTIARY).hex()),
+        i = g(t, (0, s.dQu)(o.Z.colors.BG_BASE_TERTIARY).hex()),
         l = (0, h.d)(i, t);
     return (0, r.jsx)('div', {
-        className: o()(n, m.banner),
+        className: a()(n, m.banner),
         style: { background: l }
     });
 }
@@ -61,7 +61,7 @@ function b(e) {
                       width: 70,
                       height: 70,
                       children: (0, r.jsxs)('div', {
-                          className: o()(m.avatarWrapper, m.clickable),
+                          className: a()(m.avatarWrapper, m.clickable),
                           children: [
                               (0, r.jsx)(l.b, {
                                   guildId: t.id,
@@ -88,18 +88,18 @@ function b(e) {
           });
 }
 function y(e) {
-    let { profile: t, onIconChange: n, className: i, disableCTA: a, CTAOverride: l, onClose: c } = e,
+    let { profile: t, onIconChange: n, className: i, disableCTA: o, CTAOverride: l, onClose: c } = e,
         u = null;
     return (
         null != l
             ? (u = l)
-            : a ||
+            : o ||
               (u = (0, r.jsx)(d.Z, {
                   profile: t,
                   onComplete: c
               })),
         (0, r.jsxs)('div', {
-            className: o()(m.container, i),
+            className: a()(m.container, i),
             children: [
                 (0, r.jsx)(E, { profile: t }),
                 (0, r.jsx)(b, {

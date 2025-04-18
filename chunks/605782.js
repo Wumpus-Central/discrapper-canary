@@ -2,8 +2,8 @@ n.d(t, { Z: () => d }), n(35282);
 var r = n(200651),
     i = n(192379),
     s = n(512969),
-    l = n(215569);
-function o(e) {
+    o = n(215569);
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,28 +69,28 @@ class u extends i.Component {
     render() {
         let e = this.props,
             { children: t, location: n, history: u, staticContext: d, match: h } = e,
-            p = c(e, ['children', 'location', 'history', 'staticContext', 'match']),
-            g = null,
-            f = null;
+            g = c(e, ['children', 'location', 'history', 'staticContext', 'match']),
+            p = null,
+            m = null;
         return (
             i.Children.forEach(t, (e) => {
-                if (null == g && i.isValidElement(e)) {
+                if (null == p && i.isValidElement(e)) {
                     let t = e.props,
-                        { component: r, render: l } = t,
+                        { component: r, render: o } = t,
                         h = c(t, ['component', 'render']),
-                        p = h.path || h.from;
-                    null != (g = null != p ? (0, s.LX)(n.pathname, a(o({}, h), { path: p })) : null) &&
-                        ((h = a(o({}, h), {
-                            key: p,
+                        g = h.path || h.from;
+                    null != (p = null != g ? (0, s.LX)(n.pathname, a(l({}, h), { path: g })) : null) &&
+                        ((h = a(l({}, h), {
+                            key: g,
                             location: n,
-                            match: g,
+                            match: p,
                             history: u,
                             staticContext: d
                         })),
-                        null != r ? (f = i.createElement(r, h)) : null != l && (f = l(h)));
+                        null != r ? (m = i.createElement(r, h)) : null != o && (m = o(h)));
                 }
             }),
-            (0, r.jsx)(l.W, a(o({}, p), { children: f }))
+            (0, r.jsx)(o.W, a(l({}, g), { children: m }))
         );
     }
 }

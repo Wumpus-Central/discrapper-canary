@@ -14,7 +14,7 @@ var r = n(200651),
     p = n(765305),
     g = n(231338),
     v = n(388032),
-    O = n(532262);
+    O = n(923167);
 function j() {
     return (0, r.jsx)(u.IGR, {
         className: O.newBadge,

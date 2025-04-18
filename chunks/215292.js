@@ -15,7 +15,7 @@ var i = n(200651),
     m = n(984933),
     p = n(430824),
     N = n(388032),
-    u = n(316555);
+    u = n(78389);
 function L(e) {
     let { createdGuildId: t, hasFooter: n = !0, onClose: L, onChannelPromptCompleted: _, isSlideReady: g } = e,
         [x, T] = s.useState(''),

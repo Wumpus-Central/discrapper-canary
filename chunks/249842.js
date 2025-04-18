@@ -1,15 +1,15 @@
-n.d(t, { P: () => a });
+n.d(t, { P: () => o });
 var r = n(544891),
     i = n(570140),
-    o = n(981631);
-async function a(e) {
+    a = n(981631);
+async function o(e) {
     i.Z.dispatch({
         type: 'GUILD_POPOUT_FETCH_START',
         guildId: e
     });
     try {
         let t = await r.tn.get({
-            url: o.ANM.GUILD_PREVIEW(e),
+            url: a.ANM.GUILD_PREVIEW(e),
             oldFormErrors: !0,
             rejectWithError: !0
         });

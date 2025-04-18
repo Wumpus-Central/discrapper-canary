@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r,
     i = n(873546),
-    o = n(442837),
-    a = n(570140),
+    a = n(442837),
+    o = n(570140),
     s = n(897473),
     l = n(585483),
     c = n(709054),
@@ -68,12 +68,12 @@ function D() {
 function L(e) {
     let { sidebarType: t, guildId: n, baseChannelId: r, details: i } = e;
     S = !1;
-    let o = A(r);
+    let a = A(r);
     return (
-        null != o &&
+        null != a &&
         ((N[n] = {
             type: t,
-            baseChannelId: o,
+            baseChannelId: a,
             guildId: n,
             details: i
         }),
@@ -87,10 +87,10 @@ function x(e) {
 function M(e) {
     let { sidebarType: t, baseChannelId: n, channelId: r, details: i } = e;
     S = !1;
-    let o = A(n);
+    let a = A(n);
     return (
-        null != o &&
-        ((T[o] = {
+        null != a &&
+        ((T[a] = {
             type: t,
             channelId: r,
             details: i
@@ -162,11 +162,11 @@ function V() {
 function Z() {
     i.tq && v && ((v = !1), (O = !1));
 }
-class H extends (r = o.ZP.PersistedStore) {
+class H extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
-            var t, n, r, i, o;
-            (v = null != (t = e.isMembersOpen) && t), (O = null != (n = e.isSummariesOpen) && n), (I = null == (r = e.isProfileOpen) || r), (T = null != (i = e.sidebars) ? i : {}), (N = null != (o = e.guildSidebars) ? o : {});
+            var t, n, r, i, a;
+            (v = null != (t = e.isMembersOpen) && t), (O = null != (n = e.isSummariesOpen) && n), (I = null == (r = e.isProfileOpen) || r), (T = null != (i = e.sidebars) ? i : {}), (N = null != (a = e.guildSidebars) ? a : {});
         }
         this.syncWith([f.Z], V), this.syncWith([d.Z], B);
     }
@@ -206,7 +206,7 @@ class H extends (r = o.ZP.PersistedStore) {
     }
 }
 b(H, 'displayName', 'ChannelSectionStore'), b(H, 'persistKey', 'ChannelSectionStore2');
-let W = new H(a.Z, {
+let W = new H(o.Z, {
     CHANNEL_TOGGLE_MEMBERS_SECTION: P,
     USER_PROFILE_SIDEBAR_TOGGLE_SECTION: D,
     CHANNEL_TOGGLE_SUMMARIES_SECTION: w,

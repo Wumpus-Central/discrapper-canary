@@ -28,7 +28,7 @@ n.d(t, {
     QI: () => eH,
     QP: () => ew,
     RQ: () => eW,
-    RU: () => ea,
+    RU: () => eo,
     Rg: () => F,
     Rr: () => P,
     Rt: () => $,
@@ -71,7 +71,7 @@ n.d(t, {
     h1: () => eD,
     h8: () => er,
     hX: () => eq,
-    hs: () => eo,
+    hs: () => ea,
     i_: () => V,
     ih: () => eu,
     in: () => eE,
@@ -103,8 +103,8 @@ n.d(t, {
     n(388685);
 var r = n(314794),
     i = n(981631),
-    o = n(185923),
-    a = n(388032),
+    a = n(185923),
+    o = n(388032),
     s = (function (e) {
         return (e[(e.TIER_1 = 1)] = 'TIER_1'), (e[(e.TIER_2 = 2)] = 'TIER_2'), (e[(e.TIER_0 = 3)] = 'TIER_0'), e;
     })({});
@@ -345,8 +345,8 @@ let T = Object.freeze({
     en = [V, Z, H, W, Y, K, z, q, Q, X, J, $, ee, et],
     er = [X, J, ee],
     ei = [X, ee],
-    eo = '1150904354090532864',
-    ea = '1199128659810582528',
+    ea = '1150904354090532864',
+    eo = '1199128659810582528',
     es = '1204865493622587392',
     el = '1204867673024888832',
     ec = '1215346678383509504',
@@ -539,7 +539,7 @@ let eb = Object.freeze({
         [i.Eu4.NONE]: {
             features: [],
             limits: {
-                emoji: o.xD,
+                emoji: a.xD,
                 bitrate: i.eWB,
                 fileSize: i.mBz,
                 screenShareQualityFramerate: 30,
@@ -657,49 +657,49 @@ var e1 = (function (e) {
 let e2 = {
     premium_tenure_1_month_v2: {
         id: 'premium_tenure_1_month_v2',
-        nameUnformatted: a.t.LR1C0d,
+        nameUnformatted: o.t.LR1C0d,
         tenureReqNumMonths: 1,
         hasWideArt: !1
     },
     premium_tenure_3_month_v2: {
         id: 'premium_tenure_3_month_v2',
-        nameUnformatted: a.t['rI1/3N'],
+        nameUnformatted: o.t['rI1/3N'],
         tenureReqNumMonths: 3,
         hasWideArt: !1
     },
     premium_tenure_6_month_v2: {
         id: 'premium_tenure_6_month_v2',
-        nameUnformatted: a.t.VkhVKS,
+        nameUnformatted: o.t.VkhVKS,
         tenureReqNumMonths: 6,
         hasWideArt: !1
     },
     premium_tenure_12_month_v2: {
         id: 'premium_tenure_12_month_v2',
-        nameUnformatted: a.t.gzUfNT,
+        nameUnformatted: o.t.gzUfNT,
         tenureReqNumMonths: 12,
         hasWideArt: !1
     },
     premium_tenure_24_month_v2: {
         id: 'premium_tenure_24_month_v2',
-        nameUnformatted: a.t.fuwTPj,
+        nameUnformatted: o.t.fuwTPj,
         tenureReqNumMonths: 24,
         hasWideArt: !1
     },
     premium_tenure_36_month_v2: {
         id: 'premium_tenure_36_month_v2',
-        nameUnformatted: a.t.qNhNk5,
+        nameUnformatted: o.t.qNhNk5,
         tenureReqNumMonths: 36,
         hasWideArt: !1
     },
     premium_tenure_60_month_v2: {
         id: 'premium_tenure_60_month_v2',
-        nameUnformatted: a.t['wvX+eH'],
+        nameUnformatted: o.t['wvX+eH'],
         tenureReqNumMonths: 60,
         hasWideArt: !0
     },
     premium_tenure_72_month_v2: {
         id: 'premium_tenure_72_month_v2',
-        nameUnformatted: a.t['/menIy'],
+        nameUnformatted: o.t['/menIy'],
         tenureReqNumMonths: 72,
         hasWideArt: !0
     }

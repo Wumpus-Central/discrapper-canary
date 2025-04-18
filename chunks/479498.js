@@ -1,13 +1,13 @@
 n.d(t, { k: () => b }), n(388685);
 var r,
     i = n(200651),
-    o = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    a = n(192379),
+    o = n(120356),
+    s = n.n(o),
     l = n(442837),
     c = n(607070),
     u = n(451478),
-    d = n(508168);
+    d = n(555712);
 function f(e, t, n) {
     return (
         t in e
@@ -66,8 +66,8 @@ function m(e, t) {
         r,
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -76,13 +76,13 @@ function g(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class E extends (r = o.PureComponent) {
+class E extends (r = a.PureComponent) {
     async componentDidMount() {
-        let { importData: e, nextScene: t, pauseWhileUnfocused: r, pause: i, isWindowFocused: o, useReducedMotion: a, rendererSettings: s } = this.props,
+        let { importData: e, nextScene: t, pauseWhileUnfocused: r, pause: i, isWindowFocused: a, useReducedMotion: o, rendererSettings: s } = this.props,
             [l, { default: c }] = await Promise.all([e(), Promise.resolve().then(n.t.bind(n, 500923, 23))]);
         null != this.animationRef &&
             ((this.animation = c.loadAnimation({
@@ -97,15 +97,15 @@ class E extends (r = o.PureComponent) {
             this.animation.addEventListener('complete', this.handleComplete),
             this.animation.addEventListener('enterFrame', this.handleEnterFrame),
             this.playScene(t),
-            ((r && !o) || i || a) && this.animation.pause());
+            ((r && !a) || i || o) && this.animation.pause());
     }
     componentWillUnmount() {
         (this.isUnmounted = !0), null != this.animation && (this.animation.destroy(), (this.animation = void 0));
     }
     componentDidUpdate(e) {
         var t, n, r;
-        let { nextScene: i, pauseWhileUnfocused: o, pause: a, isWindowFocused: s, useReducedMotion: l } = this.props;
-        i !== this.currentScene && this.shouldForcePlayAfter() && !a && this.playScene(i), null != this.animation && (o && !e.isWindowFocused && s && !l && !0 !== a ? this.animation.play() : (l || (o && e.isWindowFocused && !s)) && this.animation.pause()), !e.pause && a ? null == (t = this.animation) || t.pause() : !e.pause || a || l || null == (n = this.animation) || n.play(), e.nextScene !== i && a && (this.playScene(i), null == (r = this.animation) || r.pause());
+        let { nextScene: i, pauseWhileUnfocused: a, pause: o, isWindowFocused: s, useReducedMotion: l } = this.props;
+        i !== this.currentScene && this.shouldForcePlayAfter() && !o && this.playScene(i), null != this.animation && (a && !e.isWindowFocused && s && !l && !0 !== o ? this.animation.play() : (l || (a && e.isWindowFocused && !s)) && this.animation.pause()), !e.pause && o ? null == (t = this.animation) || t.pause() : !e.pause || o || l || null == (n = this.animation) || n.play(), e.nextScene !== i && o && (this.playScene(i), null == (r = this.animation) || r.pause());
     }
     shouldForcePlayAfter() {
         let { sceneSegments: e } = this.props;
@@ -115,10 +115,10 @@ class E extends (r = o.PureComponent) {
         if (this.isUnmounted) return;
         let { onScenePlay: t, sceneSegments: n, useReducedMotion: r } = this.props,
             i = n[e],
-            o = n[this.currentScene];
-        if ((null != this.animation && (e === this.currentScene || i.BEG !== o.BEG || i.END !== o.END) && this.animation.playSegments([i.BEG, i.END], !0), (this.currentScene = e), null != t && t(this.currentScene), r)) {
-            var a;
-            null == (a = this.animation) || a.pause();
+            a = n[this.currentScene];
+        if ((null != this.animation && (e === this.currentScene || i.BEG !== a.BEG || i.END !== a.END) && this.animation.playSegments([i.BEG, i.END], !0), (this.currentScene = e), null != t && t(this.currentScene), r)) {
+            var o;
+            null == (o = this.animation) || o.pause();
         }
     }
     render() {
@@ -159,13 +159,13 @@ f(E, 'defaultProps', {
 let b = (e) => {
     var { componentRef: t, ignoreReducedMotion: n = !1 } = e,
         r = m(e, ['componentRef', 'ignoreReducedMotion']);
-    let o = (0, l.e7)([u.Z], () => u.Z.isFocused()),
-        a = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
+    let a = (0, l.e7)([u.Z], () => u.Z.isFocused()),
+        o = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
     return (0, i.jsx)(
         E,
         h(_({}, r), {
-            isWindowFocused: o,
-            useReducedMotion: a && !n,
+            isWindowFocused: a,
+            useReducedMotion: o && !n,
             ref: t
         })
     );

@@ -5,12 +5,12 @@ n.d(t, {
 });
 var r = n(644387),
     i = n(582661),
-    o = n(383466),
-    a = n(559972),
+    a = n(383466),
+    o = n(559972),
     s = new Map(),
     l = /auto|scroll/,
     c = /^tb|vertical/,
-    u = /msie|trident/i.test(a.C.navigator && a.C.navigator.userAgent),
+    u = /msie|trident/i.test(o.C.navigator && o.C.navigator.userAgent),
     d = function (e) {
         return parseFloat(e || '0');
     },
@@ -33,11 +33,11 @@ var r = n(644387),
     }),
     p = function (e) {
         if (s.has(e)) return s.get(e);
-        if ((0, o.xj)(e)) return s.set(e, _), _;
+        if ((0, a.xj)(e)) return s.set(e, _), _;
         var t = getComputedStyle(e),
-            n = (0, o.zd)(e) && e.ownerSVGElement && e.getBBox(),
+            n = (0, a.zd)(e) && e.ownerSVGElement && e.getBBox(),
             r = !u && 'border-box' === t.boxSizing,
-            a = c.test(t.writingMode || ''),
+            o = c.test(t.writingMode || ''),
             p = !n && l.test(t.overflowY || ''),
             h = !n && l.test(t.overflowX || ''),
             m = n ? 0 : d(t.paddingTop),
@@ -61,9 +61,9 @@ var r = n(644387),
             x = D + S + R + N,
             M = L + T + C + A,
             k = Object.freeze({
-                devicePixelContentBoxSize: f(Math.round(D * devicePixelRatio), Math.round(L * devicePixelRatio), a),
-                borderBoxSize: f(x, M, a),
-                contentBoxSize: f(D, L, a),
+                devicePixelContentBoxSize: f(Math.round(D * devicePixelRatio), Math.round(L * devicePixelRatio), o),
+                borderBoxSize: f(x, M, o),
+                contentBoxSize: f(D, L, o),
                 contentRect: new i.N(b, m, D, L)
             });
         return s.set(e, k), k;
@@ -71,14 +71,14 @@ var r = n(644387),
     h = function (e, t) {
         var n = p(e),
             i = n.borderBoxSize,
-            o = n.contentBoxSize,
-            a = n.devicePixelContentBoxSize;
+            a = n.contentBoxSize,
+            o = n.devicePixelContentBoxSize;
         switch (t) {
             case r.z.DEVICE_PIXEL_CONTENT_BOX:
-                return a;
+                return o;
             case r.z.BORDER_BOX:
                 return i;
             default:
-                return o;
+                return a;
         }
     };

@@ -1,16 +1,16 @@
 n.d(t, {
-    MT: () => o,
+    MT: () => a,
     TG: () => s,
-    wB: () => a
+    wB: () => o
 });
 var r = n(149765),
     i = n(981631);
-function o(e) {
+function a(e) {
     return r.e$(e.permissions, i.Plq.VIEW_CHANNEL);
 }
-function a(e, t) {
+function o(e, t) {
     return null != t && (!!r.e$(t.deny, i.Plq.VIEW_CHANNEL) || (e.isGuildVocal() && r.e$(t.deny, i.Plq.CONNECT)));
 }
 function s(e, t) {
-    return !(null == t || a(e, t)) && !!r.e$(t.allow, i.Plq.VIEW_CHANNEL) && (!e.isGuildVocal() || r.e$(t.allow, i.Plq.CONNECT));
+    return !(null == t || o(e, t)) && !!r.e$(t.allow, i.Plq.VIEW_CHANNEL) && (!e.isGuildVocal() || r.e$(t.allow, i.Plq.CONNECT));
 }

@@ -2,8 +2,8 @@ n.d(t, { Z: () => k }), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(315263),
     l = n(100527),
     c = n(906732),
@@ -29,7 +29,7 @@ var i = n(120356),
     R = n(474936),
     P = n(681642),
     w = n(388032),
-    D = n(34477);
+    D = n(286020);
 function L(e, t, n) {
     return (
         t in e
@@ -80,7 +80,7 @@ function k(e) {
         V = (0, T.Of)(null != (t = null == B ? void 0 : B.id) ? t : null),
         Z = (0, S.Z)(V).some((e) => e.id === m.l.ORB_PROFILE_BADGE);
     return (0, r.jsx)('div', {
-        className: o()(D.container, i),
+        className: a()(D.container, i),
         'aria-label': w.NW.string(w.t.VWV0y8),
         role: 'group',
         children: n.map((e, t) => {
@@ -162,13 +162,13 @@ function k(e) {
                     currentUserOwnsOrbBadge: Z
                 });
             return (0, r.jsx)(
-                a.DY3,
+                o.DY3,
                 {
                     text: T,
                     'aria-label': e.description,
                     forceOpen: null != k && k(e.id),
                     delay: N.vB,
-                    children: (0, r.jsx)(a.eee, {
+                    children: (0, r.jsx)(o.eee, {
                         onClick: y,
                         onMouseEnter: O,
                         href: e.link,
@@ -176,7 +176,7 @@ function k(e) {
                             alt: ' ',
                             'aria-hidden': !0,
                             src: null != (n = e.iconSrc) ? n : (0, N.Ej)(e.icon),
-                            className: o()(D.badge, d)
+                            className: a()(D.badge, d)
                         })
                     })
                 },

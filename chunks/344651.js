@@ -2,8 +2,8 @@ n.d(t, { Z: () => Y }), n(539854), n(388685), n(997841), n(415506);
 var r = n(392711),
     i = n.n(r);
 n(724522);
-var o = n(442837),
-    a = n(570140),
+var a = n(442837),
+    o = n(570140),
     s = n(749210),
     l = n(821849),
     c = n(232567),
@@ -87,8 +87,8 @@ function k(e, t) {
         r,
         i = j(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -97,8 +97,8 @@ function j(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let U = new d.Z('ConnectionStore'),
@@ -115,7 +115,7 @@ let U = new d.Z('ConnectionStore'),
                       };
             let r = (0, E.q_)(t),
                 i = v.Z.getChannel(t.id),
-                o =
+                a =
                     null == i
                         ? void 0
                         : i.merge(
@@ -124,7 +124,7 @@ let U = new d.Z('ConnectionStore'),
                                   bitrate: null != (n = r.bitrate) ? n : i.bitrate
                               })
                           );
-            return e.channels.push(null != o ? o : r), e;
+            return e.channels.push(null != a ? a : r), e;
         },
         (e) => 'CHANNEL_UPDATE' !== e
     ),
@@ -201,7 +201,7 @@ function Y(e) {
     return Z[e];
 }
 function K(e) {
-    a.Z.dispatch(e).catch((t) =>
+    o.Z.dispatch(e).catch((t) =>
         w.Wb.resetSocketOnDispatchError({
             error: t,
             action: e.type
@@ -209,15 +209,15 @@ function K(e) {
     );
 }
 function z(e, t, n) {
-    var r, o;
-    let { roles: a, nick: s, avatar: l, avatar_decoration_data: c, flags: d, premium_since: f, pending: _, joined_at: p, communication_disabled_until: h, unusual_dm_activity_until: m } = n,
+    var r, a;
+    let { roles: o, nick: s, avatar: l, avatar_decoration_data: c, flags: d, premium_since: f, pending: _, joined_at: p, communication_disabled_until: h, unusual_dm_activity_until: m } = n,
         g = O.ZP.getMember(e, t.id);
-    (null != g && g.nick === s && g.avatar === l && i().isEqual(g.roles, a) && (0, u.sr)(null != (r = g.avatarDecoration) ? r : null, null != c ? c : null) && g.premiumSince === f && g.isPending === _ && g.joinedAt === p && g.communicationDisabledUntil === h && g.flags === d && (null != (o = g.unusualDMActivityUntil) ? o : null) === (null != m ? m : null)) ||
+    (null != g && g.nick === s && g.avatar === l && i().isEqual(g.roles, o) && (0, u.sr)(null != (r = g.avatarDecoration) ? r : null, null != c ? c : null) && g.premiumSince === f && g.isPending === _ && g.joinedAt === p && g.communicationDisabledUntil === h && g.flags === d && (null != (a = g.unusualDMActivityUntil) ? a : null) === (null != m ? m : null)) ||
         K({
             type: 'GUILD_MEMBER_ADD',
             guildId: e,
             user: t,
-            roles: a,
+            roles: o,
             nick: s,
             avatar: l,
             avatarDecoration: c,
@@ -255,14 +255,14 @@ function Q(e) {
     });
 }
 function X(e) {
-    let { guildId: t, user: n, status: r, activities: i, hiddenActivities: o, clientStatus: a, processedAtTimestamp: s } = e;
+    let { guildId: t, user: n, status: r, activities: i, hiddenActivities: a, clientStatus: o, processedAtTimestamp: s } = e;
     V.add({
         guildId: t,
         user: n,
         status: r,
-        clientStatus: a,
+        clientStatus: o,
         activities: i,
-        hiddenActivities: o,
+        hiddenActivities: a,
         processedAtTimestamp: s
     });
 }
@@ -271,7 +271,7 @@ W(
     (e) => ('full' === e.data_mode ? null : v.o.loadGuildIds([e.id])),
     (e) => {
         m.Z.initialGuild.measure(() => {
-            o.ZP.Emitter.batched(() => {
+            a.ZP.Emitter.batched(() => {
                 let t = R.Fx(e, w.Wb.identifyStartTime);
                 null != S.default.getCurrentUser() &&
                     (K({
@@ -306,7 +306,7 @@ W(
 ),
     H(['READY_SUPPLEMENTAL'], (e) => {
         m.Z.readySupplemental.measure(() => {
-            o.ZP.Emitter.batched(() => {
+            a.ZP.Emitter.batched(() => {
                 var t, n;
                 e = m.Z.hydrateReadySupplemental.measure(() => R.r$(e, w.Wb.identifyStartTime));
                 let r = (e) =>
@@ -322,15 +322,15 @@ W(
                 i.forEach((e) => {
                     e.presences = r(e.presences || []);
                 });
-                let o = e.presences ? r(e.presences) : [],
-                    a = (null != (t = e.lazy_private_channels) ? t : []).map((e) => (0, E.q_)(e)),
+                let a = e.presences ? r(e.presences) : [],
+                    o = (null != (t = e.lazy_private_channels) ? t : []).map((e) => (0, E.q_)(e)),
                     s = null != (n = e.game_invites) ? n : [];
                 m.Z.dispatchReadySupplemental.measure(() => {
                     K({
                         type: 'CONNECTION_OPEN_SUPPLEMENTAL',
                         guilds: i,
-                        presences: o,
-                        lazyPrivateChannels: a,
+                        presences: a,
+                        lazyPrivateChannels: o,
                         gameInvites: s
                     });
                 });
@@ -384,15 +384,15 @@ W(
         (e, t, n) => {
             if (e.user.bot) return void K({ type: 'LOGOUT' });
             m.Z.ready.measure(() => {
-                o.ZP.Emitter.batched(() => {
+                a.ZP.Emitter.batched(() => {
                     let t = (e = m.Z.hydrateReady.measure(() => R.IM(e, w.Wb.identifyStartTime, n))).private_channels.map((e) => (0, E.q_)(e)),
                         r = e.guilds.filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted).map((e) => e.id),
                         i = e.guilds.filter((e) => !0 !== e.unavailable),
-                        o = e.guilds.filter((e) => !0 === e.geo_restricted);
+                        a = e.guilds.filter((e) => !0 === e.geo_restricted);
                     i.forEach((e) => {
                         e.presences = [];
                     });
-                    let a = null == e.user_settings_proto ? void 0 : (0, g.ac)(e.user_settings_proto);
+                    let o = null == e.user_settings_proto ? void 0 : (0, g.ac)(e.user_settings_proto);
                     m.Z.dispatchReady.measure(() => {
                         var n, s;
                         K({
@@ -423,11 +423,11 @@ W(
                             pendingPayments: e.pending_payments,
                             countryCode: null != (s = e.country_code) ? s : void 0,
                             guildJoinRequests: e.guild_join_requests || [],
-                            userSettingsProto: a,
+                            userSettingsProto: o,
                             apiCodeVersion: e.api_code_version,
                             auth: e.auth,
                             notificationSettings: { flags: e.notification_settings.flags },
-                            geoRestrictedGuilds: o,
+                            geoRestrictedGuilds: a,
                             explicitContentScanVersion: e.explicit_content_scan_version,
                             failedStates: e.failed_states
                         });
@@ -794,7 +794,7 @@ W(
                   });
     }),
     H(['GUILD_MEMBERS_CHUNK'], (e) => {
-        o.ZP.Emitter.batched(() => {
+        a.ZP.Emitter.batched(() => {
             F.add({
                 guildId: e.guild_id,
                 members: e.members,
@@ -802,13 +802,13 @@ W(
             }),
                 null != e.presences &&
                     e.presences.forEach((t) => {
-                        let { user: n, status: r, client_status: i, activities: o, hidden_activities: a, processed_at_timestamp: s } = t;
+                        let { user: n, status: r, client_status: i, activities: a, hidden_activities: o, processed_at_timestamp: s } = t;
                         return X({
                             guildId: e.guild_id,
                             user: n,
                             status: r,
-                            activities: o,
-                            hiddenActivities: a,
+                            activities: a,
+                            hiddenActivities: o,
                             clientStatus: i,
                             processedAtTimestamp: s
                         });
@@ -817,7 +817,7 @@ W(
         });
     }),
     H(['THREAD_MEMBER_LIST_UPDATE'], (e) => {
-        o.ZP.Emitter.batched(() => {
+        a.ZP.Emitter.batched(() => {
             K({
                 type: 'THREAD_MEMBER_LIST_UPDATE',
                 guildId: e.guild_id,
@@ -826,13 +826,13 @@ W(
             }),
                 null != e.presences &&
                     e.presences.forEach((t) => {
-                        let { user: n, status: r, client_status: i, activities: o, hidden_activities: a, processed_at_timestamp: s } = t;
+                        let { user: n, status: r, client_status: i, activities: a, hidden_activities: o, processed_at_timestamp: s } = t;
                         return X({
                             guildId: e.guild_id,
                             user: n,
                             status: r,
-                            activities: o,
-                            hiddenActivities: a,
+                            activities: a,
+                            hiddenActivities: o,
                             clientStatus: i,
                             processedAtTimestamp: s
                         });
@@ -1275,7 +1275,7 @@ W(
         });
     }),
     H(['GUILD_MEMBER_LIST_UPDATE'], (e) => {
-        o.ZP.Emitter.batched(() => {
+        a.ZP.Emitter.batched(() => {
             let t = (t) => {
                 if (null == t.member) return;
                 let { member: n } = t;

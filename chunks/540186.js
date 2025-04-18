@@ -13,7 +13,7 @@ var i = n(442837),
     g = n(981631),
     _ = n(765305),
     m = n(388032),
-    b = n(687743);
+    b = n(158170);
 function x(e) {
     let { icon: t } = e;
     return (0, r.jsx)('div', {

@@ -6,7 +6,7 @@ var r = n(200651),
     o = n(453473),
     s = n(216789),
     c = n(791914),
-    u = n(275331);
+    u = n(929968);
 function d(e) {
     let { setTab: t, closePopout: n, badgeState: i } = e,
         d = (0, s.Us)({ location: 'ForLaterInbox' });

@@ -24,8 +24,8 @@ var r = n(200651),
     y = n(626135),
     Z = n(823379),
     I = n(63063),
-    O = n(358085),
-    w = n(653255),
+    w = n(358085),
+    O = n(653255),
     T = n(989941),
     E = n(618407),
     P = n(586290),
@@ -38,11 +38,11 @@ var r = n(200651),
     D = n(981631),
     G = n(526761),
     B = n(388032),
-    U = n(934366),
-    z = n(319255);
+    U = n(14383),
+    z = n(347226);
 function F(e) {
     let { selectedSource: t, selectSource: n, sourceChanged: i, onChangeSource: l } = e,
-        s = (0, a.e7)([m.ZP, C.Z], () => ((0, O.isWindows)() ? (0, T.Z)(m.ZP, C.Z) : null)),
+        s = (0, a.e7)([m.ZP, C.Z], () => ((0, w.isWindows)() ? (0, T.Z)(m.ZP, C.Z) : null)),
         c = (0, a.e7)([d.Z], () => ((null == s ? void 0 : s.id) != null ? d.Z.getApplication(s.id) : null)),
         u = (0, a.e7)([m.ZP], () => m.ZP.getRunningGames()),
         f = (0, a.Wu)([d.Z], () => u.map((e) => (null != e.id ? d.Z.getApplication(e.id) : null)).filter(Z.lm), [u]),
@@ -206,10 +206,10 @@ function X(e) {
     });
 }
 function K(e) {
-    let { selectedSource: t, selectedFPS: n, selectedChannelId: l, selectedPreset: s, selectedResolution: o, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: m, selectSource: h, selectGuild: x, sound: p, previewDisabled: j, onClose: v, onChangeSelectedFPS: C, onChangeSelectedResolution: y, onChangeSelectedPreset: Z, onChangeSelectedChannelId: O, onChangeSource: T, onChangeAudioDevice: k, onChangeGuild: M, onChangeSound: L, onChangePreviewDisabled: z } = e,
+    let { selectedSource: t, selectedFPS: n, selectedChannelId: l, selectedPreset: s, selectedResolution: o, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: m, selectSource: h, selectGuild: x, sound: p, previewDisabled: j, onClose: v, onChangeSelectedFPS: C, onChangeSelectedResolution: y, onChangeSelectedPreset: Z, onChangeSelectedChannelId: w, onChangeSource: T, onChangeAudioDevice: k, onChangeGuild: M, onChangeSound: L, onChangePreviewDisabled: z } = e,
         K = (0, a.e7)([S.Z, _.Z], () => _.Z.getChannel(S.Z.getVoiceChannelId())),
-        q = (0, a.e7)([w.Z], () => w.Z.GPUDriversOutdated),
-        Q = (0, a.e7)([w.Z], () => w.Z.problematicGPUDriver),
+        q = (0, a.e7)([O.Z], () => O.Z.GPUDriversOutdated),
+        Q = (0, a.e7)([O.Z], () => O.Z.problematicGPUDriver),
         $ = (0, a.e7)([N.default], () => N.default.getCurrentUser()),
         ee = (0, E.Z)();
     null != t && t.id.startsWith('screen') && !b.Z.supportsScreenSoundshare() && (ee = B.NW.string(B.t['1b0Gm5']));
@@ -254,7 +254,7 @@ function K(e) {
                 : (0, r.jsx)(R.Z, {
                       guildId: f,
                       selectedChannelId: l,
-                      onChangeSelectedChannelId: O
+                      onChangeSelectedChannelId: w
                   }),
             null != f && en && er ? (0, r.jsx)(Y, { guildId: f }) : null,
             q ? (0, r.jsx)(V, { text: B.NW.string(B.t.q65tS0) }) : null,

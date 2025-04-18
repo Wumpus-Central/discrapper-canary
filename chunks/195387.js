@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(481060),
-    a = n(549879),
+    a = n(481060),
+    o = n(549879),
     s = n(906732),
     l = n(189432),
     c = n(189357),
@@ -24,12 +24,12 @@ function g(e) {
         ? null
         : (0, r.jsx)(_.oY, {
               action: 'PRESS_MOD_VIEW',
-              icon: o.HI3,
+              icon: a.HI3,
               shouldShowTooltip: y,
               tooltipText: m.NW.string(m.t.kj3tz8),
               onClick: () => {
                   u.Z.close(),
-                      (0, a.i)(b),
+                      (0, o.i)(b),
                       (0, l.r)(n, t.id, null != S ? S : p.oC.MEMBER_SAFETY, {
                           modViewPanel: h.k.INFO,
                           sourceLocation: v

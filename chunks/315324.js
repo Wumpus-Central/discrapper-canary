@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(481060),
-    a = n(287734),
+    a = n(481060),
+    o = n(287734),
     s = n(111028),
     l = n(318374),
     c = n(565138),
@@ -19,7 +19,7 @@ var i = n(442837),
     m = n(788858),
     g = n(228168),
     E = n(981631),
-    b = n(935693);
+    b = n(227832);
 let y = 3;
 function v(e) {
     let { user: t, guild: n, channel: v, onAction: O, onClose: I } = e,
@@ -30,7 +30,7 @@ function v(e) {
             e.stopPropagation(), (0, d.X)(n.id), null == O || O({ action: 'OPEN_VOICE_GUILD' }), null == I || I();
         },
         A = (e) => {
-            e.stopPropagation(), a.default.selectVoiceChannel(v.id), (0, u.Kh)(v.id), null == O || O({ action: 'OPEN_VOICE_CHANNEL' }), null == I || I();
+            e.stopPropagation(), o.default.selectVoiceChannel(v.id), (0, u.Kh)(v.id), null == O || O({ action: 'OPEN_VOICE_CHANNEL' }), null == I || I();
         },
         C = S === g.y0.FULL_SIZE,
         R = S === g.y0.PANEL,
@@ -41,7 +41,7 @@ function v(e) {
             (0, r.jsxs)('div', {
                 className: b.voiceChannel,
                 children: [
-                    (0, r.jsx)(o.DY3, {
+                    (0, r.jsx)(a.DY3, {
                         text: n.name,
                         'aria-label': !1,
                         children: (0, r.jsx)(c.Z, {
@@ -51,9 +51,9 @@ function v(e) {
                             onClick: N
                         })
                     }),
-                    (0, r.jsx)(o.Fbu, {
+                    (0, r.jsx)(a.Fbu, {
                         size: 'xxs',
-                        color: o.TVs.colors.INTERACTIVE_NORMAL
+                        color: a.TVs.colors.INTERACTIVE_NORMAL
                     }),
                     (0, r.jsxs)('div', {
                         className: b.voiceChannelText,
@@ -61,13 +61,13 @@ function v(e) {
                             (0, r.jsx)(m.Z, {
                                 channel: v,
                                 size: 'xxs',
-                                color: o.TVs.colors.INTERACTIVE_NORMAL,
+                                color: a.TVs.colors.INTERACTIVE_NORMAL,
                                 className: b.voiceIcon
                             }),
-                            (0, r.jsx)(o.P3F, {
+                            (0, r.jsx)(a.P3F, {
                                 onClick: A,
                                 className: b.clickableText,
-                                children: (0, r.jsx)(o.Text, {
+                                children: (0, r.jsx)(a.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'interactive-normal',
                                     lineClamp: 1,
@@ -81,7 +81,7 @@ function v(e) {
                         guildId: n.id,
                         channelId: v.id,
                         maxUsers: y,
-                        size: o.EFr.SIZE_16,
+                        size: a.EFr.SIZE_16,
                         onClick: (e) => {
                             e.stopPropagation(), null == O || O({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
                         },

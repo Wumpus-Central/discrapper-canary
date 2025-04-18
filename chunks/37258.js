@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(40851),
-    a = n(906732),
+    a = n(40851),
+    o = n(906732),
     s = n(785717),
     l = n(171368),
     c = n(981631),
@@ -43,8 +43,8 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -53,17 +53,17 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function h(e) {
     var { label: t, onAction: n, icon: d } = e,
         p = _(e, ['label', 'onAction', 'icon']);
-    let { analyticsLocations: h } = (0, a.ZP)(),
+    let { analyticsLocations: h } = (0, o.ZP)(),
         { context: m } = (0, s.KZ)(),
-        g = (0, o.Aq)(),
-        E = (0, o.bp)();
+        g = (0, a.Aq)(),
+        E = (0, a.bp)();
     return (0, r.jsx)(i.sNh, {
         id: 'user-profile',
         label: null != t ? t : u.NW.string(u.t.LYju5O),

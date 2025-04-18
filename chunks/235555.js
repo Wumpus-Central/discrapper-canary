@@ -51,7 +51,7 @@ class E extends i.PureComponent {
         super(...e),
             _(this, 'handleUserContextMenu', (e, t) => {
                 (0, s.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('26881'), n.e('69220'), n.e('4074')]).then(n.bind(n, 881351));
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('86423')]).then(n.bind(n, 881351));
                     return (n) => {
                         var i, l;
                         return (0, r.jsx)(

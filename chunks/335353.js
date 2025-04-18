@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     l = n(70097),
     o = n(576645),
-    s = n(311829);
+    s = n(489953);
 function a(e) {
     let { children: t, channel: n } = e,
         a = (0, i.useRef)(null);

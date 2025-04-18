@@ -13,8 +13,8 @@ n.d(t, {
     n(539854);
 var r = n(921738),
     i = n.n(r),
-    o = n(259443),
-    a = n(433517),
+    a = n(259443),
+    o = n(433517),
     s = n(358085),
     l = n(981631);
 function c(e, t, n) {
@@ -46,7 +46,7 @@ function u(e) {
     }
     return e;
 }
-let d = new o.Yd('KeyboardLayoutMapUtils'),
+let d = new a.Yd('KeyboardLayoutMapUtils'),
     f = (0, s.isLinux)() ? l.HsE : (0, s.isMac)() ? l.REU : (0, s.isWindows)() || __OVERLAY__ ? l.iC$ : i().codes,
     _ = 'keyboardMapper.keyMap',
     p = Object.freeze({
@@ -217,7 +217,7 @@ class v {
         null == this._internalKeyLayoutMap && this._initializeInternalLayoutMap(), this._hasExactMatch(r) || ('dead' !== r.key.toLowerCase() && (null == this.keyMap[r.key] ? (this.keyMap[r.key] = r.keyCode) : this.keyMap[r.key] !== r.keyCode && d.error('KeyboardMapper - Key code mismatch for key '.concat(r.key, ': ').concat(this.keyMap[r.key], ' !== ').concat(r.keyCode)), (this.keyCodeMap[r.keyCode] = null != (n = this.keyCodeMap[r.keyCode]) ? n : []), this.keyCodeMap[r.keyCode].push(r), null == (t = this._internalKeyLayoutMap) || t.set(r.code, r.key), this.updateCaches(), this.save()));
     }
     save() {
-        a.K.set(_, this.keyMap);
+        o.K.set(_, this.keyMap);
     }
     updateCaches() {
         this._setCachedKeyCodeMapEntries(), this._setCachedKeyMapEntries(), this._setCachedKeyLayoutMapEntries();
@@ -248,7 +248,7 @@ class v {
     }
     constructor(e = {}) {
         var t;
-        c(this, 'keyCodeMap', void 0), c(this, 'keyMap', void 0), c(this, '_internalKeyLayoutMap', null), c(this, '_defaultKeyMap', void 0), c(this, '_cachedKeyCodeMapEntries', []), c(this, '_cachedKeyMapEntries', []), c(this, '_cachedKeyLayoutMapEntries', []), c(this, '_cachedAllEvents', []), (this._defaultKeyMap = e), (this.keyMap = null != (t = a.K.get(_)) ? t : e), (this.keyMap = y(u({}, this.keyMap))), this._initializeInternalLayoutMap(), (this.keyCodeMap = this._buildKeyCodeMapFromKeyMap()), this.updateCaches();
+        c(this, 'keyCodeMap', void 0), c(this, 'keyMap', void 0), c(this, '_internalKeyLayoutMap', null), c(this, '_defaultKeyMap', void 0), c(this, '_cachedKeyCodeMapEntries', []), c(this, '_cachedKeyMapEntries', []), c(this, '_cachedKeyLayoutMapEntries', []), c(this, '_cachedAllEvents', []), (this._defaultKeyMap = e), (this.keyMap = null != (t = o.K.get(_)) ? t : e), (this.keyMap = y(u({}, this.keyMap))), this._initializeInternalLayoutMap(), (this.keyCodeMap = this._buildKeyCodeMapFromKeyMap()), this.updateCaches();
     }
 }
 class O extends v {
@@ -397,12 +397,12 @@ function P(e) {
 }
 function w(e) {
     var t, n, r, i;
-    let o = e.toLocaleUpperCase(),
-        a = R(o),
-        s = null != (n = null == (t = N()) ? void 0 : t.findKeyboardEventByKey(o, a)) ? n : null;
+    let a = e.toLocaleUpperCase(),
+        o = R(a),
+        s = null != (n = null == (t = N()) ? void 0 : t.findKeyboardEventByKey(a, o)) ? n : null;
     if (null != s) return s;
     try {
-        let e = null != (i = null == (r = N()) ? void 0 : r.getDefaultKeyboardEventShape(o, void 0, a)) ? i : null;
+        let e = null != (i = null == (r = N()) ? void 0 : r.getDefaultKeyboardEventShape(a, void 0, o)) ? i : null;
         if (null == e) return null;
         let t = new KeyboardEvent('keydown', e);
         return b({
@@ -416,8 +416,8 @@ function w(e) {
 }
 function D(e) {
     var t, n, r, i;
-    let o = null != (n = null == (t = N()) ? void 0 : t.findKeyboardEventByKeyCode(e)) ? n : null;
-    if (null != o) return o;
+    let a = null != (n = null == (t = N()) ? void 0 : t.findKeyboardEventByKeyCode(e)) ? n : null;
+    if (null != a) return a;
     try {
         let t = null != (i = null == (r = N()) ? void 0 : r.getDefaultKeyboardEventShape(void 0, e)) ? i : null;
         if (null == t) return null;

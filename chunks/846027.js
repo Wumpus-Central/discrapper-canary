@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P });
 var r = n(570140),
     i = n(710845),
-    o = n(460181),
-    a = n(340332),
+    a = n(460181),
+    o = n(340332),
     s = n(569550),
     l = n(672339),
     c = n(463395),
@@ -46,17 +46,17 @@ function y(e) {
 }
 let v = new i.Z('AudioActionCreators');
 function O() {
-    (0, o.GN)('mention3', void 0, void 0, void 0, g.w.VOICE);
+    (0, a.GN)('mention3', void 0, void 0, void 0, g.w.VOICE);
 }
 function I() {
     let e = d.Z.getInputDevices()[d.Z.getInputDeviceId()];
     return null != e ? e.name : '';
 }
 function S(e, t, n, r) {
-    let { location: i, analyticsLocations: o } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+    let { location: i, analyticsLocations: a } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     if (t === n) return;
-    let a = f.Z.getVoiceChannelId(),
-        s = null != a ? u.Z.getChannel(a) : null,
+    let o = f.Z.getVoiceChannelId(),
+        s = null != o ? u.Z.getChannel(o) : null,
         l = e[t],
         _ = e[n],
         h = d.Z.getMediaEngine().getAudioSubsystem(),
@@ -67,7 +67,7 @@ function S(e, t, n, r) {
         device_type: r,
         device_is_certified: c.Z.isCertified(n),
         location: i,
-        location_stack: o,
+        location_stack: a,
         voice_channel_type: null == s ? void 0 : s.type,
         audio_subsystem: h,
         audio_layer: g
@@ -84,21 +84,21 @@ let T = {
         enable: N,
         toggleSelfMute() {
             var e;
-            let { context: t = E.Yn.DEFAULT, syncRemote: n = !0, usedKeybind: i = !1, playSoundEffect: o = !0, location: a } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+            let { context: t = E.Yn.DEFAULT, syncRemote: n = !0, usedKeybind: i = !1, playSoundEffect: a = !0, location: o } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
             return A()
                 ? Promise.resolve()
                 : (C({
                         usedKeybind: i,
-                        location: a
+                        location: o
                     }),
-                    (o = o && !d.Z.hasActiveCallKitCall()),
+                    (a = a && !d.Z.hasActiveCallKitCall()),
                     (null == (e = _.default.getCurrentUser()) ? void 0 : e.isStaff()) && v.info('Toggling self mute'),
                     d.Z.isEnabled())
                   ? r.Z.dispatch({
                         type: 'AUDIO_TOGGLE_SELF_MUTE',
                         context: t,
                         syncRemote: n,
-                        playSoundEffect: o
+                        playSoundEffect: a
                     })
                   : this.enable(!0);
         },
@@ -157,7 +157,7 @@ let T = {
         setDisableLocalVideo(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.Yn.DEFAULT,
                 i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
-                o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+                a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
             A() ||
                 r.Z.dispatch({
                     type: 'AUDIO_SET_LOCAL_VIDEO_DISABLED',
@@ -165,7 +165,7 @@ let T = {
                     userId: e,
                     videoToggleState: t,
                     persist: i,
-                    isAutomatic: o
+                    isAutomatic: a
                 });
         },
         setLocalVolume(e, t) {
@@ -174,7 +174,7 @@ let T = {
                 type: 'AUDIO_SET_LOCAL_VOLUME',
                 context: n,
                 userId: e,
-                volume: (0, a.r)(t, n)
+                volume: (0, o.r)(t, n)
             });
         },
         setLocalPan(e, t, n) {
@@ -192,45 +192,45 @@ let T = {
                 n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.Yn.DEFAULT,
                 { analyticsLocations: i } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
             if (A()) return;
-            let o = e !== d.Z.getMode(),
-                a = d.Z.getModeOptions(n);
+            let a = e !== d.Z.getMode(),
+                o = d.Z.getModeOptions(n);
             if (
                 (r.Z.dispatch({
                     type: 'AUDIO_SET_MODE',
                     context: n,
                     mode: e,
-                    options: y({}, a, t)
+                    options: y({}, o, t)
                 }),
-                o)
+                a)
             ) {
                 let t = d.Z.getMediaEngine().getAudioSubsystem(),
                     n = d.Z.getMediaEngine().getAudioLayer(),
                     r = f.Z.getVoiceChannelId(),
-                    o = null != r ? u.Z.getChannel(r) : null,
-                    a = I();
+                    a = null != r ? u.Z.getChannel(r) : null,
+                    o = I();
                 p.default.track(m.rMx.VOICE_ACTIVATION_MODE_CHANGED, {
                     mode: e,
                     location_stack: i,
-                    voice_channel_type: null == o ? void 0 : o.type,
-                    input_device_name: a,
+                    voice_channel_type: null == a ? void 0 : a.type,
+                    input_device_name: o,
                     audio_subsystem: t,
                     audio_layer: n
                 });
-            } else if (e === m.pM4.VOICE_ACTIVITY && a !== t) {
+            } else if (e === m.pM4.VOICE_ACTIVITY && o !== t) {
                 let e = d.Z.getMediaEngine().getAudioSubsystem(),
                     n = d.Z.getMediaEngine().getAudioLayer(),
                     r = f.Z.getVoiceChannelId(),
-                    o = null != r ? u.Z.getChannel(r) : null,
+                    a = null != r ? u.Z.getChannel(r) : null,
                     s = I();
                 p.default.track(m.rMx.VOICE_ACTIVITY_THRESHOLD_CHANGED, {
                     location_stack: i,
-                    voice_channel_type: null == o ? void 0 : o.type,
+                    voice_channel_type: null == a ? void 0 : a.type,
                     input_device_name: s,
                     audio_subsystem: e,
                     audio_layer: n,
-                    old_threshold: a.threshold,
+                    old_threshold: o.threshold,
                     new_threshold: t.threshold,
-                    old_auto_threshold: a.autoThreshold,
+                    old_auto_threshold: o.autoThreshold,
                     new_auto_threshold: t.autoThreshold
                 });
             }
@@ -390,8 +390,8 @@ let T = {
                 ((() => {
                     let r = d.Z.getAttenuation(),
                         i = d.Z.getAttenuateWhileSpeakingSelf(),
-                        o = d.Z.getAttenuateWhileSpeakingOthers();
-                    return r !== e ? (0, s.Z)('global_attenuation_strength', e, r) : i !== t ? (0, s.Z)('global_attenuation_for_self_speak_enabled', t, i) : o !== n && (0, s.Z)('global_attenuation_for_other_speak_enabled', n, o);
+                        a = d.Z.getAttenuateWhileSpeakingOthers();
+                    return r !== e ? (0, s.Z)('global_attenuation_strength', e, r) : i !== t ? (0, s.Z)('global_attenuation_for_self_speak_enabled', t, i) : a !== n && (0, s.Z)('global_attenuation_for_other_speak_enabled', n, a);
                 })(),
                 r.Z.dispatch({
                     type: 'AUDIO_SET_ATTENUATION',

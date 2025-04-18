@@ -1,13 +1,13 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(63063),
     c = n(981631),
     u = n(388032),
-    d = n(23328);
+    d = n(388272);
 let f = [
         {
             getQuestion: () => u.NW.string(u.t.C4J8UF),
@@ -28,9 +28,9 @@ let f = [
     ],
     _ = function (e) {
         let { className: t } = e,
-            [n, o] = i.useState(null);
+            [n, a] = i.useState(null);
         return (0, r.jsxs)('div', {
-            className: a()(d.wrapper, t),
+            className: o()(d.wrapper, t),
             children: [
                 (0, r.jsx)(s.X6q, {
                     className: d.heading,
@@ -47,8 +47,8 @@ let f = [
                                 className: d.listItem,
                                 children: [
                                     (0, r.jsxs)(s.P3F, {
-                                        className: a()(d.questionWrapper, { [d.questionWrapperExpanded]: i }),
-                                        onClick: () => o((e) => (e === t ? null : t)),
+                                        className: o()(d.questionWrapper, { [d.questionWrapperExpanded]: i }),
+                                        onClick: () => a((e) => (e === t ? null : t)),
                                         tag: 'li',
                                         children: [
                                             (0, r.jsx)(s.Text, {

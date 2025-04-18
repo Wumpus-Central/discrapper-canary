@@ -6,8 +6,8 @@ var i = t(120356),
     s = t(928873),
     o = t(790472),
     u = t(777207),
-    a = t(967693),
-    c = t(336041);
+    a = t(559554),
+    c = t(820468);
 function d(e) {
     let { title: n, description: t, headerImage: i, onDetails: d, onPurchase: p, PurchaseButton: m, availabilityLabel: b } = e;
     return (0, r.jsx)(s.tE, {

@@ -1,8 +1,8 @@
 n.d(t, { p: () => g });
 var r = n(200651),
     i = n(120356),
-    o = n.n(i),
-    a = n(657707),
+    a = n.n(i),
+    o = n(657707),
     s = n(793030),
     l = n(481060),
     c = n(436774),
@@ -12,7 +12,7 @@ var r = n(200651),
     _ = n(409100),
     p = n(474936),
     h = n(388032),
-    m = n(781267);
+    m = n(46350);
 let g = (e) => {
     let { buttonAnalyticsObject: t, className: n, upsellText: i } = e,
         g = u.default.getCurrentUser(),
@@ -24,12 +24,12 @@ let g = (e) => {
     return E
         ? null
         : (0, r.jsxs)('div', {
-              className: o()(m.upsellContainer, n),
+              className: a()(m.upsellContainer, n),
               children: [
                   (0, r.jsxs)('div', {
                       className: m.row,
                       children: [
-                          (0, r.jsx)(a.SrA, {
+                          (0, r.jsx)(o.SrA, {
                               size: 'md',
                               color: c.JX.PREMIUM_TIER_2
                           }),

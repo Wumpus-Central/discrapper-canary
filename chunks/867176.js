@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(866442),
     l = n(442837),
     c = n(692547),
@@ -20,7 +20,7 @@ var r = n(200651),
     g = n(768581),
     E = n(28660),
     b = n(462997),
-    y = n(791748);
+    y = n(738861);
 function v(e, t, n) {
     return (
         t in e
@@ -79,8 +79,8 @@ function T(e, t) {
         r,
         i = N(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -89,8 +89,8 @@ function N(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let A = (e) => {
@@ -99,13 +99,13 @@ let A = (e) => {
 };
 function C(e) {
     var t;
-    let { user: n, displayProfile: o, guildId: b, pendingBanner: v, children: O, className: I, avatarSize: S, avatarOffsetX: T, avatarOffsetY: N, bannerWidth: C, bannerHeight: R, themePadding: P, pendingAccentColor: w, animateOnHover: D = !1 } = e,
+    let { user: n, displayProfile: a, guildId: b, pendingBanner: v, children: O, className: I, avatarSize: S, avatarOffsetX: T, avatarOffsetY: N, bannerWidth: C, bannerHeight: R, themePadding: P, pendingAccentColor: w, animateOnHover: D = !1 } = e,
         L = (0, _.Dt)(),
         [x, M] = i.useState(!1),
         k = (0, l.e7)([m.Z], () => m.Z.isFocused()),
         j = h.QK.getSetting(),
         { bannerSrc: U, status: G } = (0, E.Z)({
-            displayProfile: o,
+            displayProfile: a,
             pendingBanner: v,
             size: C,
             canAnimate: D || !j ? x : k
@@ -113,7 +113,7 @@ function C(e) {
         B = (0, u.dQu)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
         F = n.getAvatarURL(b, (0, u.pxk)(S)),
         V = (0, s._i)((0, d.ZP)(F, B, !1)),
-        Z = (0, f.Z)(null != (t = null != w ? w : null == o ? void 0 : o.primaryColor) ? t : V).hex,
+        Z = (0, f.Z)(null != (t = null != w ? w : null == a ? void 0 : a.primaryColor) ? t : V).hex,
         H = A(S),
         W = H + T - P,
         Y = R - N - P;
@@ -153,7 +153,7 @@ function C(e) {
                 children: [
                     O,
                     (0, r.jsxs)('div', {
-                        className: a()(y.banner, I),
+                        className: o()(y.banner, I),
                         onMouseMove: () => M(!0),
                         onMouseLeave: () => M(!1),
                         style: {
@@ -171,14 +171,14 @@ function C(e) {
 }
 function R(e) {
     var { profileType: t, displayProfile: n, canUsePremiumProfileCustomization: i = !1 } = e,
-        o = T(e, ['profileType', 'displayProfile', 'canUsePremiumProfileCustomization']);
-    let a = b.q[t],
+        a = T(e, ['profileType', 'displayProfile', 'canUsePremiumProfileCustomization']);
+    let o = b.q[t],
         s = i || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1;
     return (0, r.jsx)(
         C,
-        S(O({}, o, a), {
+        S(O({}, a, o), {
             displayProfile: n,
-            themePadding: s ? a.themePadding : 0
+            themePadding: s ? o.themePadding : 0
         })
     );
 }

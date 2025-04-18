@@ -1,7 +1,7 @@
 var r = n(98405),
     i = n(127849),
-    o = n(580983),
-    a = n(507604),
+    a = n(580983),
+    o = n(507604),
     s = n(569743),
     l = n(840475),
     c = n(391246),
@@ -68,7 +68,7 @@ var r = n(98405),
     en = function (e, t, n) {
         return ee(e, (t = E(t))) && v(n) && b(n, 'value') && !b(n, 'get') && !b(n, 'set') && !n.configurable && (!b(n, 'writable') || n.writable) && (!b(n, 'enumerable') || n.enumerable) ? ((e[t] = n.value), e) : G(e, t, n);
     };
-a
+o
     ? (W || ((D.f = et), (w.f = en), J(z, 'buffer'), J(z, 'byteOffset'), J(z, 'byteLength'), J(z, 'length')),
       r(
           {
@@ -82,7 +82,7 @@ a
           }
       ),
       (e.exports = function (e, t, n) {
-          var a = e.match(/\d+/)[0] / 8,
+          var o = e.match(/\d+/)[0] / 8,
               l = e + (n ? 'Clamped' : '') + 'Array',
               c = 'get' + e,
               d = 'set' + e,
@@ -92,11 +92,11 @@ a
               y = {},
               O = function (e, t) {
                   var n = k(e);
-                  return n.view[c](t * a + n.byteOffset, !0);
+                  return n.view[c](t * o + n.byteOffset, !0);
               },
               S = function (e, t, r) {
                   var i = k(e);
-                  i.view[d](t * a + i.byteOffset, n ? g(r) : r, !0);
+                  i.view[d](t * o + i.byteOffset, n ? g(r) : r, !0);
               },
               P = function (e, t) {
                   G(e, t, {
@@ -116,7 +116,7 @@ a
                         u(e, b),
                         M(
                             (function () {
-                                return v(t) ? ($(t) ? (void 0 !== r ? new _(t, m(n, a), r) : void 0 !== n ? new _(t, m(n, a)) : new _(t)) : q(t) ? L(E, t) : o(A, E, t)) : new _(h(t));
+                                return v(t) ? ($(t) ? (void 0 !== r ? new _(t, m(n, o), r) : void 0 !== n ? new _(t, m(n, o)) : new _(t)) : q(t) ? L(E, t) : a(A, E, t)) : new _(h(t));
                             })(),
                             e,
                             E
@@ -137,15 +137,15 @@ a
                         d = 0;
                     if (v(t))
                         if ($(t)) {
-                            (i = t), (d = m(n, a));
+                            (i = t), (d = m(n, o));
                             var f = t.byteLength;
                             if (void 0 === r) {
-                                if (f % a || (s = f - d) < 0) throw new F(X);
-                            } else if ((s = p(r) * a) + d > f) throw new F(X);
-                            l = s / a;
+                                if (f % o || (s = f - d) < 0) throw new F(X);
+                            } else if ((s = p(r) * o) + d > f) throw new F(X);
+                            l = s / o;
                         } else if (q(t)) return L(E, t);
-                        else return o(A, E, t);
-                    else i = new V((s = (l = h(t)) * a));
+                        else return a(A, E, t);
+                    else i = new V((s = (l = h(t)) * o));
                     for (
                         j(e, {
                             buffer: i,
@@ -175,8 +175,8 @@ a
                   },
                   y
               ),
-              Q in E || f(E, Q, a),
-              Q in b || f(b, Q, a),
+              Q in E || f(E, Q, o),
+              Q in b || f(b, Q, o),
               R(l);
       }))
     : (e.exports = function () {});

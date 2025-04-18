@@ -5,7 +5,7 @@ var i = n(120356),
     s = n.n(i),
     l = n(481060),
     a = n(388032),
-    o = n(329954);
+    o = n(53134);
 function c(e) {
     let { className: t, enabled: n, previewCTA: i, onPreview: c, onToggle: d, animateStatus: u, firstLine: m, secondLine: g, disabled: p } = e;
     return (0, r.jsxs)('div', {

@@ -4,7 +4,7 @@ n(192379);
 var r = n(481060),
     l = n(968437),
     s = n(388032),
-    a = n(583243);
+    a = n(830655);
 let o = (e) => {
     let { autoArchiveDuration: t, onChange: n, isDisabled: o } = e,
         c = (0, l.nt)();

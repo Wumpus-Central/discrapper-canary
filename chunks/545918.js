@@ -41,8 +41,8 @@ var r = n(200651),
     F = n(176505),
     z = n(50493),
     U = n(388032),
-    q = n(940471),
-    V = n(22249);
+    q = n(86931),
+    V = n(100658);
 function J(e) {
     let { guild: t, previousChannel: n, currentTab: i, onTabSelect: a } = e,
         s = (0, f.W)(t.id),

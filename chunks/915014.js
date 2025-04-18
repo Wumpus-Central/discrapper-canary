@@ -2,15 +2,15 @@ n.d(t, { Z: () => h });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(318374),
-    a = n(522289),
+    a = n(318374),
+    o = n(522289),
     s = n(565138),
     l = n(806729),
     c = n(708108),
     u = n(146078),
     d = n(228168),
     f = n(182294),
-    _ = n(879268);
+    _ = n(68646);
 let p = 3;
 function h(e) {
     let { user: t, onOpenProfile: n } = e,
@@ -25,7 +25,7 @@ function h(e) {
                       className: _.section,
                       onClick: () => (null == n ? void 0 : n(d.oh.MUTUAL_FRIENDS)),
                       children: [
-                          (0, r.jsx)(o.Z, {
+                          (0, r.jsx)(a.Z, {
                               maxUsers: p,
                               users: h.map((e) => {
                                   let { user: t } = e;
@@ -58,7 +58,7 @@ function h(e) {
                       onClick: () => (null == n ? void 0 : n(d.oh.MUTUAL_GUILDS)),
                       children: [
                           !g &&
-                              (0, r.jsx)(a.Z, {
+                              (0, r.jsx)(o.Z, {
                                   maxGuilds: p,
                                   guilds: m.map((e) => {
                                       let { guild: t } = e;

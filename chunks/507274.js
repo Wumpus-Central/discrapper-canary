@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(597442),
-    a = n(84735),
+    a = n(597442),
+    o = n(84735),
     s = n(481060),
     l = n(793903);
 function c(e, t, n) {
@@ -67,8 +67,8 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -77,8 +77,8 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let h = i.createContext({ inDialog: void 0 }),
@@ -89,7 +89,7 @@ let h = i.createContext({ inDialog: void 0 }),
             b = i.useRef(null),
             [y, v] = i.useState(!1),
             O = y ? b : E;
-        (0, o.T)(O, { returnRef: m }),
+        (0, a.T)(O, { returnRef: m }),
             i.useContext(l.Z)(
                 {
                     type: c,
@@ -119,7 +119,7 @@ let h = i.createContext({ inDialog: void 0 }),
                     'aria-modal': !0,
                     children: (0, r.jsx)(s.y5t, {
                         forceLevel: 1,
-                        children: (0, r.jsx)(a.J, {
+                        children: (0, r.jsx)(o.J, {
                             containerRef: E,
                             children: n
                         })

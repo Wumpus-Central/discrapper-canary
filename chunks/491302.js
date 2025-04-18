@@ -11,7 +11,7 @@ var r = n(200651),
     p = n(486199),
     m = n(981631),
     b = n(388032),
-    g = n(544948);
+    g = n(405920);
 function f(e) {
     let { webhook: t, editedWebhook: n, channelOptions: f, isExpanded: h, errors: x, onToggleExpand: j } = e,
         O = i.useMemo(() => {

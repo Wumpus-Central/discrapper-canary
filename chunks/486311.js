@@ -13,10 +13,10 @@ var r = n(200651),
     f = n(933104),
     g = n(332538),
     m = n(921944),
-    b = n(696672),
+    b = n(680278),
     y = n(388032),
-    _ = n(625467);
-function v(e) {
+    _ = n(388298);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function v(e) {
     }
     return e;
 }
-let O = {
+let v = {
         animation: {
             BEG: 0,
             END: 75
@@ -54,25 +54,25 @@ let O = {
     C = i.memo(function (e) {
         let { guildId: t, selected: l } = e,
             C = (0, g.ZP)(t),
-            S = i.useCallback(() => {
+            j = i.useCallback(() => {
                 var e;
                 (0, d.jd)(t), (0, p.Z)(t), null == C || null == (e = C.popout) || e.markAsDismissed(m.L.INDIRECT_ACTION);
             }, [t, C]),
-            j = i.useCallback(() => {
+            S = i.useCallback(() => {
                 var e;
                 switch (null == C || null == (e = C.popout) ? void 0 : e.type) {
                     case h.J.LEVEL_REACHED:
-                        return (0, r.jsx)(f.jG, v({ guildId: t }, C.popout));
+                        return (0, r.jsx)(f.jG, O({ guildId: t }, C.popout));
                     case h.J.PERKS_AVAILABLE:
-                        return (0, r.jsx)(f.$h, v({ guildId: t }, C.popout));
+                        return (0, r.jsx)(f.$h, O({ guildId: t }, C.popout));
                     case h.J.PERKS_PURCHASABLE:
-                        return (0, r.jsx)(f.yI, v({ guildId: t }, C.popout));
+                        return (0, r.jsx)(f.yI, O({ guildId: t }, C.popout));
                     default:
                         return (0, r.jsx)('div', {});
                 }
             }, [t, null == C ? void 0 : C.popout]),
-            E = (0, a.s9z)(a.JQI),
-            x = (0, s.e7)([u.Z], () => u.Z.hasLayers()),
+            x = (0, a.s9z)(a.JQI),
+            E = (0, s.e7)([u.Z], () => u.Z.hasLayers()),
             [I, N] = i.useState(null),
             P = null == I ? 'animation' : 'LOOP';
         i.useEffect(() => {
@@ -82,16 +82,16 @@ let O = {
             N(e);
         }, []);
         return (0, r.jsx)(a.yRy, {
-            shouldShow: (null == C ? void 0 : C.popout) != null && !(E || x),
+            shouldShow: (null == C ? void 0 : C.popout) != null && !(x || E),
             nudgeAlignIntoViewport: !0,
             animationPosition: 'bottom',
             position: 'right',
-            renderPopout: j,
+            renderPopout: S,
             children: (e) => {
                 var i, s;
                 return (0, r.jsx)(
                     c.m,
-                    ((i = v({}, e)),
+                    ((i = O({}, e)),
                     (s = s =
                         {
                             className: _.container,
@@ -109,7 +109,7 @@ let O = {
                                     children: (0, r.jsx)(a.kci, {
                                         nextScene: P,
                                         className: _.lottie,
-                                        sceneSegments: O,
+                                        sceneSegments: v,
                                         importData: () => n.e('50821').then(n.t.bind(n, 548421, 19)),
                                         onScenePlay: w,
                                         rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
@@ -120,7 +120,7 @@ let O = {
                                 children: y.NW.string(b.Z.yv3DJC)
                             }),
                             selected: l,
-                            onClick: S,
+                            onClick: j,
                             showUnread: (null == C ? void 0 : C.showUnread) === !0,
                             trailing: null == C ? void 0 : C.trailing
                         }),

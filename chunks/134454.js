@@ -5,14 +5,14 @@
         n = ['Faoi', 'Gear', 'Màrt', 'Gibl', 'Cèit', 'Ògmh', 'Iuch', 'Lùn', 'Sult', 'Dàmh', 'Samh', 'Dùbh'],
         r = ['Didòmhnaich', 'Diluain', 'Dimàirt', 'Diciadain', 'Diardaoin', 'Dihaoine', 'Disathairne'],
         i = ['Did', 'Dil', 'Dim', 'Dic', 'Dia', 'Dih', 'Dis'],
-        o = ['Dò', 'Lu', 'Mà', 'Ci', 'Ar', 'Ha', 'Sa'];
+        a = ['Dò', 'Lu', 'Mà', 'Ci', 'Ar', 'Ha', 'Sa'];
     return e.defineLocale('gd', {
         months: t,
         monthsShort: n,
         monthsParseExact: !0,
         weekdays: r,
         weekdaysShort: i,
-        weekdaysMin: o,
+        weekdaysMin: a,
         longDateFormat: {
             LT: 'HH:mm',
             LTS: 'HH:mm:ss',

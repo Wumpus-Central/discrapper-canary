@@ -48,7 +48,7 @@ var r = n(200651),
     z = n(981631),
     H = n(486324),
     V = n(388032),
-    Y = n(507975),
+    Y = n(945745),
     K = n(935653),
     X = n(449874);
 function q(e, t, n) {
@@ -549,7 +549,7 @@ class $ extends i.PureComponent {
             }),
             q(this, 'handleOpenImageEditingModal', (e, t) => {
                 (0, g.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e('91689'), n.e('59732'), n.e('80354')]).then(n.bind(n, 712451));
+                    let { default: i } = await Promise.all([n.e('91689'), n.e('59732'), n.e('77942')]).then(n.bind(n, 712451));
                     return (n) =>
                         (0, r.jsx)(
                             i,
@@ -570,7 +570,7 @@ class $ extends i.PureComponent {
             q(this, 'handleHomeHeaderChange', (e, t) => {
                 if (null == e || void 0 === t) return void R.Z.updateGuild({ homeHeader: null });
                 (0, g.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e('91689'), n.e('59732'), n.e('80354')]).then(n.bind(n, 712451));
+                    let { default: i } = await Promise.all([n.e('91689'), n.e('59732'), n.e('77942')]).then(n.bind(n, 712451));
                     return (n) =>
                         (0, r.jsx)(
                             i,

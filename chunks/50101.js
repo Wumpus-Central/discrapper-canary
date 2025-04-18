@@ -1,11 +1,11 @@
 n.d(t, {
-    Ek: () => a,
+    Ek: () => o,
     ZP: () => l,
     gV: () => s
 });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'guild',
     id: '2025-02_skill_trees',
     label: 'Skill Trees',
@@ -19,8 +19,8 @@ let o = (0, r.B)({
         }
     ]
 });
-function a(e, t) {
-    return o.useExperiment(
+function o(e, t) {
+    return a.useExperiment(
         {
             guildId: e,
             location: t
@@ -29,7 +29,7 @@ function a(e, t) {
     ).enabled;
 }
 function s(e, t) {
-    return o.getCurrentConfig(
+    return a.getCurrentConfig(
         {
             guildId: e,
             location: t
@@ -37,4 +37,4 @@ function s(e, t) {
         { autoTrackExposure: !1 }
     ).enabled;
 }
-let l = o;
+let l = a;

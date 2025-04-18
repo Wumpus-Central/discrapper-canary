@@ -5,14 +5,14 @@ n.d(t, { MT: () => l }), n(183759);
 var i = (function () {
         return ('function' == typeof Symbol && Symbol.observable) || '@@observable';
     })(),
-    o = function () {
+    a = function () {
         return Math.random().toString(36).substring(7).split('').join('.');
     },
-    a = {
-        INIT: '@@redux/INIT' + o(),
-        REPLACE: '@@redux/REPLACE' + o(),
+    o = {
+        INIT: '@@redux/INIT' + a(),
+        REPLACE: '@@redux/REPLACE' + a(),
         PROBE_UNKNOWN_ACTION: function () {
-            return '@@redux/PROBE_UNKNOWN_ACTION' + o();
+            return '@@redux/PROBE_UNKNOWN_ACTION' + a();
         }
     };
 function s(e) {
@@ -27,7 +27,7 @@ function l(e, t, n) {
         return n(l)(e, t);
     }
     if ('function' != typeof e) throw Error(r(2));
-    var o,
+    var a,
         c = e,
         u = t,
         d = [],
@@ -71,7 +71,7 @@ function l(e, t, n) {
     }
     function E(e) {
         if ('function' != typeof e) throw Error(r(10));
-        (c = e), g({ type: a.REPLACE });
+        (c = e), g({ type: o.REPLACE });
     }
     function b() {
         var e,
@@ -92,13 +92,13 @@ function l(e, t, n) {
         );
     }
     return (
-        g({ type: a.INIT }),
-        ((o = {
+        g({ type: o.INIT }),
+        ((a = {
             dispatch: g,
             subscribe: m,
             getState: h,
             replaceReducer: E
         })[i] = b),
-        o
+        a
     );
 }

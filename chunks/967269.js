@@ -19,15 +19,15 @@ function i(e, t) {
         i
     );
 }
-function o(e, t) {
+function a(e, t) {
     function n(n) {
         return n in t ? t[n] : e[n];
     }
     (e = e || {}), (t = t || {});
     var r,
         i = Object.create(null),
-        o = [];
-    for (var a in e) a in t ? o.length && ((i[a] = o), (o = [])) : o.push(a);
+        a = [];
+    for (var o in e) o in t ? a.length && ((i[o] = a), (a = [])) : a.push(o);
     var s = {};
     for (var l in t) {
         if (i[l])
@@ -37,10 +37,10 @@ function o(e, t) {
             }
         s[l] = n(l);
     }
-    for (r = 0; r < o.length; r++) s[o[r]] = n(o[r]);
+    for (r = 0; r < a.length; r++) s[a[r]] = n(a[r]);
     return s;
 }
-function a(e, t, n) {
+function o(e, t, n) {
     return null != n[t] ? n[t] : e.props[t];
 }
 function s(e, t) {
@@ -48,41 +48,41 @@ function s(e, t) {
         return (0, r.cloneElement)(n, {
             onExited: t.bind(null, n),
             in: !0,
-            appear: a(n, 'appear', e),
-            enter: a(n, 'enter', e),
-            exit: a(n, 'exit', e)
+            appear: o(n, 'appear', e),
+            enter: o(n, 'enter', e),
+            exit: o(n, 'exit', e)
         });
     });
 }
 function l(e, t, n) {
     var s = i(e.children),
-        l = o(t, s);
+        l = a(t, s);
     return (
         Object.keys(l).forEach(function (i) {
-            var o = l[i];
-            if ((0, r.isValidElement)(o)) {
+            var a = l[i];
+            if ((0, r.isValidElement)(a)) {
                 var c = i in t,
                     u = i in s,
                     d = t[i],
                     f = (0, r.isValidElement)(d) && !d.props.in;
                 u && (!c || f)
-                    ? (l[i] = (0, r.cloneElement)(o, {
-                          onExited: n.bind(null, o),
+                    ? (l[i] = (0, r.cloneElement)(a, {
+                          onExited: n.bind(null, a),
                           in: !0,
-                          exit: a(o, 'exit', e),
-                          enter: a(o, 'enter', e)
+                          exit: o(a, 'exit', e),
+                          enter: o(a, 'enter', e)
                       }))
                     : u || !c || f
                       ? u &&
                         c &&
                         (0, r.isValidElement)(d) &&
-                        (l[i] = (0, r.cloneElement)(o, {
-                            onExited: n.bind(null, o),
+                        (l[i] = (0, r.cloneElement)(a, {
+                            onExited: n.bind(null, a),
                             in: d.props.in,
-                            exit: a(o, 'exit', e),
-                            enter: a(o, 'enter', e)
+                            exit: o(a, 'exit', e),
+                            enter: o(a, 'enter', e)
                         }))
-                      : (l[i] = (0, r.cloneElement)(o, { in: !1 }));
+                      : (l[i] = (0, r.cloneElement)(a, { in: !1 }));
             }
         }),
         l

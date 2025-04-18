@@ -1,9 +1,9 @@
 n.d(t, { a: () => W }), n(415506), n(388685);
 var r,
     i = n(200651),
-    o = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    a = n(192379),
+    o = n(120356),
+    s = n.n(o),
     l = n(96355),
     c = n(47759),
     u = n.n(c),
@@ -14,7 +14,7 @@ var r,
     h = n(215569),
     m = n(481060),
     g = n(540059),
-    E = n(937879);
+    E = n(976962);
 function b(e, t, n) {
     return (
         t in e
@@ -73,8 +73,8 @@ function I(e, t) {
         r,
         i = S(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -83,8 +83,8 @@ function S(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let T = 10800000,
@@ -158,7 +158,7 @@ function F(e, t) {
 function V(e) {
     return e.toString();
 }
-class Z extends o.Component {
+class Z extends a.Component {
     componentDidMount() {
         this.forceUpdate();
     }
@@ -198,11 +198,11 @@ function W(e) {
                 height: A
             },
             highlight: r = !1,
-            rounded: o = !1
+            rounded: a = !1
         } = e,
-        a = I(e, ['selected', 'lowerBadgeSize', 'highlight', 'rounded']);
+        o = I(e, ['selected', 'lowerBadgeSize', 'highlight', 'rounded']);
     let s = (0, g.Q3)('BlobMask'),
-        l = !!a.isFolder,
+        l = !!o.isFolder,
         c = L(!1),
         u = L(l),
         d = x(u),
@@ -210,8 +210,8 @@ function W(e) {
     return s
         ? (0, i.jsx)(
               K,
-              O(y({}, a), {
-                  rounded: o,
+              O(y({}, o), {
+                  rounded: a,
                   isVisualRefreshEnabled: !0,
                   baseViewBoxSize: c,
                   viewBoxSize: u,
@@ -224,7 +224,7 @@ function W(e) {
           )
         : (0, i.jsx)(
               Y,
-              O(y({}, a), {
+              O(y({}, o), {
                   selected: t,
                   lowerBadgeSize: n,
                   highlight: r,
@@ -236,29 +236,29 @@ function W(e) {
               })
           );
 }
-class Y extends o.Component {
+class Y extends a.Component {
     static getDerivedStateFromProps(e, t) {
-        let { hasRenderedBadge: n, upperBadgeMask: r, lowerBadgeMask: i, borderRadiusMask: o, renderComplex: a } = t,
+        let { hasRenderedBadge: n, upperBadgeMask: r, lowerBadgeMask: i, borderRadiusMask: a, renderComplex: o } = t,
             { upperBadge: s, lowerBadge: l } = e,
             c = !1;
         return (
             ((null != s && null == r) || (null != l && null == i)) && ((c = !0), (n = !0), (r = new d.Controller({ spring: 0 })), (i = new d.Controller({ spring: 0 }))),
-            H(e) && null == o && ((c = !0), (o = new d.Controller({ spring: 0 }))),
-            !a && H(e) && ((c = !0), (a = !0)),
+            H(e) && null == a && ((c = !0), (a = new d.Controller({ spring: 0 }))),
+            !o && H(e) && ((c = !0), (o = !0)),
             c
                 ? {
                       hasRenderedBadge: n,
                       lowerBadgeMask: i,
                       upperBadgeMask: r,
-                      borderRadiusMask: o,
-                      renderComplex: a
+                      borderRadiusMask: a,
+                      renderComplex: o
                   }
                 : null
         );
     }
     componentDidMount() {
         let { selected: e, lowerBadge: t, upperBadge: n } = this.props,
-            { borderRadiusMask: r, lowerBadgeMask: i, upperBadgeMask: o } = this.state;
+            { borderRadiusMask: r, lowerBadgeMask: i, upperBadgeMask: a } = this.state;
         null == r ||
             r
                 .update({
@@ -273,8 +273,8 @@ class Y extends o.Component {
                         immediate: !0
                     })
                     .start(),
-            null == o ||
-                o
+            null == a ||
+                a
                     .update({
                         spring: +(null != n),
                         immediate: !0
@@ -287,7 +287,7 @@ class Y extends o.Component {
     }
     componentDidUpdate(e) {
         let { selected: t, lowerBadge: n, upperBadge: r } = this.props,
-            { borderRadiusMask: i, lowerBadgeMask: o, upperBadgeMask: a, renderComplex: s } = this.state;
+            { borderRadiusMask: i, lowerBadgeMask: a, upperBadgeMask: o, renderComplex: s } = this.state;
         t && !e.selected
             ? null == i ||
               i
@@ -308,25 +308,6 @@ class Y extends o.Component {
                       })
                       .start()),
             null != n && null == e.lowerBadge
-                ? null == o ||
-                  o
-                      .update({
-                          spring: 1,
-                          immediate: !document.hasFocus(),
-                          config: w
-                      })
-                      .start()
-                : null == n &&
-                  null != e.lowerBadge &&
-                  (null == o ||
-                      o
-                          .update({
-                              spring: 0,
-                              immediate: !document.hasFocus(),
-                              config: D
-                          })
-                          .start()),
-            null != r && null == e.upperBadge
                 ? null == a ||
                   a
                       .update({
@@ -335,10 +316,29 @@ class Y extends o.Component {
                           config: w
                       })
                       .start()
-                : null == r &&
-                  null != e.upperBadge &&
+                : null == n &&
+                  null != e.lowerBadge &&
                   (null == a ||
                       a
+                          .update({
+                              spring: 0,
+                              immediate: !document.hasFocus(),
+                              config: D
+                          })
+                          .start()),
+            null != r && null == e.upperBadge
+                ? null == o ||
+                  o
+                      .update({
+                          spring: 1,
+                          immediate: !document.hasFocus(),
+                          config: w
+                      })
+                      .start()
+                : null == r &&
+                  null != e.upperBadge &&
+                  (null == o ||
+                      o
                           .update({
                               spring: 0,
                               immediate: !document.hasFocus(),
@@ -380,7 +380,7 @@ class Y extends o.Component {
         return null == (e = this.state.borderRadiusMask) ? void 0 : e.springs.spring.to(this.interpolator);
     }
     render() {
-        let { children: e, className: t, innerClassName: n, lowerBadge: r, lowerBadgeSize: a, style: l, upperBadge: c, highlight: u, viewBoxSize: f, badgeMaskSize: p, badgeMaskStroke: m, isVisualRefreshEnabled: g, isFolder: b } = this.props,
+        let { children: e, className: t, innerClassName: n, lowerBadge: r, lowerBadgeSize: o, style: l, upperBadge: c, highlight: u, viewBoxSize: f, badgeMaskSize: p, badgeMaskStroke: m, isVisualRefreshEnabled: g, isFolder: b } = this.props,
             { maskId: y, lowerBadgeMask: v, upperBadgeMask: O, focused: I, hasRenderedBadge: S, renderComplex: T } = this.state;
         if (!T)
             return (0, i.jsx)(
@@ -425,8 +425,8 @@ class Y extends o.Component {
             P = ''.concat(y, '-blob_mask'),
             w = ''.concat(y, '-stroke_mask'),
             D = ''.concat(y, '-highlight_mask'),
-            L = (null == a ? void 0 : a.width) != null ? a.width : A,
-            x = (null == a ? void 0 : a.height) != null ? a.height : A,
+            L = (null == o ? void 0 : o.width) != null ? o.width : A,
+            x = (null == o ? void 0 : o.height) != null ? o.height : A,
             M = {
                 width: g ? f + 8 : f,
                 height: g ? f + 8 : f,
@@ -546,7 +546,7 @@ class Y extends o.Component {
                                       })
                                     : null,
                                 I
-                                    ? (0, i.jsxs)(o.Fragment, {
+                                    ? (0, i.jsxs)(a.Fragment, {
                                           children: [
                                               (0, i.jsx)('g', {
                                                   className: E.focusStroke,
@@ -586,7 +586,7 @@ class Y extends o.Component {
                         'svg'
                     ),
                     (0, i.jsxs)(h.W, {
-                        component: o.Fragment,
+                        component: a.Fragment,
                         children: [
                             null != r
                                 ? (0, i.jsx)(
@@ -639,8 +639,8 @@ class Y extends o.Component {
     }
 }
 function K(e) {
-    let { children: t, viewBoxSize: n, className: r, style: a, innerClassName: l, isFolder: c, lowerBadgeSize: u, highlight: d, badgeMaskStroke: f, badgeMaskSize: p, upperBadge: h, lowerBadge: m, rounded: g = !1 } = e,
-        [b, y] = o.useState(!1),
+    let { children: t, viewBoxSize: n, className: r, style: o, innerClassName: l, isFolder: c, lowerBadgeSize: u, highlight: d, badgeMaskStroke: f, badgeMaskSize: p, upperBadge: h, lowerBadge: m, rounded: g = !1 } = e,
+        [b, y] = a.useState(!1),
         v = () => {
             y(!0);
         },
@@ -649,7 +649,7 @@ function K(e) {
         },
         I = null != h,
         S = null != m,
-        T = o.useId(),
+        T = a.useId(),
         N = ''.concat(T, '-upper_badge_masks'),
         R = ''.concat(T, '-lower_badge_masks'),
         P = ''.concat(T, '-blob_mask'),
@@ -669,7 +669,7 @@ function K(e) {
         'div',
         {
             className: s()(r, E.wrapper),
-            style: a,
+            style: o,
             onFocus: v,
             onBlur: O,
             children: [

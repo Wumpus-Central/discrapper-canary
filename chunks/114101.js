@@ -1,8 +1,8 @@
 n.d(t, { V: () => d });
 var r = n(200651),
     i = n(192379),
-    o = n(709014);
-function a(e, t, n) {
+    a = n(709014);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -71,7 +71,7 @@ let u = {
             t = i.useCallback(() => {
                 null != e.current && e.current.play('click');
             }, []),
-            a = i.useCallback(() => {
+            o = i.useCallback(() => {
                 null != e.current && e.current.play('hover');
             }, []),
             l = i.useCallback(() => {
@@ -80,7 +80,7 @@ let u = {
             d = i.useCallback(
                 (t) =>
                     (0, r.jsx)(
-                        o.L,
+                        a.L,
                         c(s({}, t), {
                             src: () => n.e('37655').then(n.t.bind(n, 119493, 19)),
                             ref: e,
@@ -91,7 +91,7 @@ let u = {
             );
         return {
             events: {
-                onMouseEnter: a,
+                onMouseEnter: o,
                 onMouseLeave: l
             },
             play: t,

@@ -5,20 +5,20 @@ n.d(t, {
 });
 var r = n(570140),
     i = n(579806),
-    o = n(710845),
-    a = n(314897),
+    a = n(710845),
+    o = n(314897),
     s = n(626135),
     l = n(931619),
     c = n(358085),
     u = n(548570),
     d = n(616810),
     f = n(755278);
-let _ = new o.Z('ConnectionStore'),
+let _ = new a.Z('ConnectionStore'),
     p = new u.Z(),
     h = new d.Z(p),
     m = new f.Z(p);
 (p.handleIdentify = () => {
-    let e = a.default.getToken();
+    let e = o.default.getToken();
     return (_.verbose('handleIdentify called', { hasToken: null != e }), null == e)
         ? null
         : {

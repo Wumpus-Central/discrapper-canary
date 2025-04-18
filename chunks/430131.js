@@ -8,7 +8,7 @@ var i = n(442837),
     o = n(52597),
     c = n(981631),
     d = n(388032),
-    u = n(749530);
+    u = n(784740);
 function m(e) {
     let { errors: t, pendingNick: n, currentNick: m, username: g, guild: p } = e,
         h = null != n ? n : m,

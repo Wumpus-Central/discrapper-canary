@@ -16,8 +16,8 @@ n.d(t, {
     n(415506);
 var r = n(544891),
     i = n(570140),
-    o = n(812206),
-    a = n(594190),
+    a = n(812206),
+    o = n(594190),
     s = n(703656),
     l = n(695346),
     c = n(391690),
@@ -53,21 +53,21 @@ function b() {
     _.Z.destroy();
 }
 function y(e) {
-    let { application: t, branchId: n, buildId: r, manifestIds: o, installationPath: a, analyticsLocation: s } = e;
+    let { application: t, branchId: n, buildId: r, manifestIds: a, installationPath: o, analyticsLocation: s } = e;
     _.Z.setTargetManifest({
         applicationId: t.id,
         applicationName: t.name,
         applicationIcon: t.icon,
         branchId: n,
         buildId: r,
-        manifestIds: o,
-        installationPath: a
+        manifestIds: a,
+        installationPath: o
     }),
         i.Z.dispatch({
             type: 'DISPATCH_APPLICATION_INSTALL',
             applicationId: t.id,
             branchId: n,
-            installationPath: a
+            installationPath: o
         }),
         u.default.track(h.rMx.LIBRARY_INSTALL_INITIATED, {
             application_id: t.id,
@@ -92,7 +92,7 @@ function v(e, t, n) {
         });
 }
 function O(e, t, n, r) {
-    if (a.ZP.getRunningDiscordApplicationIds().includes(e.id)) return;
+    if (o.ZP.getRunningDiscordApplicationIds().includes(e.id)) return;
     let i = c.Z.getInstallationPath(e.id, t);
     if (null == i) throw Error('Missing installation path for application: '.concat(e.id, ' ').concat(t));
     _.Z.setTargetManifest({
@@ -106,17 +106,17 @@ function O(e, t, n, r) {
     });
 }
 function I(e, t, n, r) {
-    let o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+    let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     O(e, t, n, r),
         i.Z.dispatch({
             type: 'DISPATCH_APPLICATION_UPDATE',
             applicationId: e.id,
             branchId: t,
-            automatic: o
+            automatic: a
         });
 }
 function S(e, t, n) {
-    let r = o.Z.getApplication(e);
+    let r = a.Z.getApplication(e);
     null != r &&
         (f.Z.removeShortcuts(r.name),
         u.default.track(h.rMx.LIBRARY_UNINSTALL_INITIATED, {
@@ -161,11 +161,11 @@ function R(e, t) {
     });
 }
 function P(e, t) {
-    let n = o.Z.getApplication(e);
+    let n = a.Z.getApplication(e);
     null != n && f.Z.createShortcuts(l.Xc.getSetting(), l.Pe.getSetting(), n.name, n.id, t.installPath);
 }
 function w(e, t) {
-    let i = o.Z.getApplication(e);
+    let i = a.Z.getApplication(e);
     r.tn.post({
         url: h.ANM.LIBRARY_APPLICATION_INSTALLED(e, e),
         oldFormErrors: !0,

@@ -73,7 +73,7 @@ function g(e) {
                           label: c.NW.string(c.t['fUYU+v']),
                           action: () =>
                               (0, s.ZDy)(async () => {
-                                  let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('30224')]).then(n.bind(n, 218613));
+                                  let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('7911')]).then(n.bind(n, 218613));
                                   return (n) =>
                                       (0, i.jsx)(
                                           t,
@@ -93,7 +93,7 @@ function g(e) {
                           label: c.NW.string(c.t['ISN+ND']),
                           action: () =>
                               (0, s.ZDy)(async () => {
-                                  let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('30224')]).then(n.bind(n, 218613));
+                                  let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('7911')]).then(n.bind(n, 218613));
                                   return (n) =>
                                       (0, i.jsx)(
                                           t,

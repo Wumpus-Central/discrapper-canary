@@ -2,8 +2,8 @@ n.d(t, { u: () => O }), n(539854), n(993155), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(355467),
-    a = n(179360),
+    a = n(355467),
+    o = n(179360),
     s = n(821849),
     l = n(594174),
     c = n(314884),
@@ -70,8 +70,8 @@ function b(e, t) {
         r,
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -80,8 +80,8 @@ function y(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let v = 'apply-guild-boost-modal';
@@ -103,7 +103,7 @@ async function O(e) {
             { contextKey: D }
         );
     let x = [];
-    u.Z.isLoadedForPremiumSKUs() || x.push((0, s.Y2)()), c.Z.hasFetched || (x.push(o.jg()), x.push((0, a.X8)())), x.length > 0 && (await Promise.allSettled(x));
+    u.Z.isLoadedForPremiumSKUs() || x.push((0, s.Y2)()), c.Z.hasFetched || (x.push(a.jg()), x.push((0, o.X8)())), x.length > 0 && (await Promise.allSettled(x));
     let M = (0, f.vx)(c.Z.boostSlots),
         k = M.length,
         j = (e) => {
@@ -122,13 +122,13 @@ async function O(e) {
         1 === k ? (e = M.slice(0, 1)) : null != y && (e = M.slice(0, y)),
             await (0, i.ZDy)(
                 async () => {
-                    let { default: t } = await Promise.all([n.e('22646'), n.e('30419'), n.e('23532')]).then(n.bind(n, 760558));
+                    let { default: t } = await Promise.all([n.e('22646'), n.e('30419'), n.e('49027')]).then(n.bind(n, 760558));
                     return (n) => {
                         var { onClose: i } = n,
-                            o = b(n, ['onClose']);
+                            a = b(n, ['onClose']);
                         return (0, r.jsx)(
                             t,
-                            E(m({}, o), {
+                            E(m({}, a), {
                                 onClose: (e) => {
                                     i(), j(e);
                                 },

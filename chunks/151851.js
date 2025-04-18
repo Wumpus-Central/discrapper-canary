@@ -2,8 +2,8 @@ n.d(t, { Z: () => R });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(350810),
     c = n(579806),
@@ -19,7 +19,7 @@ var i = n(120356),
     b = n(358085),
     y = n(998502),
     v = n(388032),
-    O = n(639750);
+    O = n(445561);
 let I = '#ffffff',
     S = (e) => y.ZP.close(e),
     T = (e) => y.ZP.minimize(e),
@@ -27,7 +27,7 @@ let I = '#ffffff',
         (0, b.isMac)() && !t.altKey ? y.ZP.fullscreen(e) : y.ZP.maximize(e);
     },
     A = (e) => {
-        let { children: t, windowKey: n, themeOverride: i, hasOpenLayer: a } = e,
+        let { children: t, windowKey: n, themeOverride: i, hasOpenLayer: o } = e,
             l = (0, r.jsx)(s.P3F, {
                 className: O.winButtonClose,
                 onClick: () => S(n),
@@ -56,7 +56,7 @@ let I = '#ffffff',
             theme: i,
             children: (e) =>
                 (0, r.jsxs)('div', {
-                    className: o()(O.typeWindows, e, { [O.withBackgroundOverride]: !a }),
+                    className: a()(O.typeWindows, e, { [O.withBackgroundOverride]: !o }),
                     children: [
                         (0, r.jsx)('div', {
                             className: O.wordmarkWindows,
@@ -69,12 +69,12 @@ let I = '#ffffff',
         });
     },
     C = (e) => {
-        let { focused: t, windowKey: n, frame: i, themeOverride: a, hasOpenLayer: l, children: u } = e;
+        let { focused: t, windowKey: n, frame: i, themeOverride: o, hasOpenLayer: l, children: u } = e;
         return (0, r.jsx)(s.f6W, {
-            theme: a,
+            theme: o,
             children: (e) =>
                 (0, r.jsxs)(s.P3F, {
-                    className: o()(i ? O.typeMacOSWithFrame : O.typeMacOS, t ? O.focused : O.unfocused, e, { [O.withBackgroundOverride]: !l }),
+                    className: a()(i ? O.typeMacOSWithFrame : O.typeMacOS, t ? O.focused : O.unfocused, e, { [O.withBackgroundOverride]: !l }),
                     onDoubleClick: () => y.ZP.maximize(n),
                     tabIndex: -1,
                     children: [
@@ -117,9 +117,9 @@ let I = '#ffffff',
         });
     };
 function R(e) {
-    let { focused: t, type: n, windowKey: i, macOSFrame: o = !1, themeOverride: s } = e,
+    let { focused: t, type: n, windowKey: i, macOSFrame: a = !1, themeOverride: s } = e,
         c = (0, u.bp)(),
-        f = (0, a.e7)([d.Z], () => d.Z.isFullscreenInContext(c)),
+        f = (0, o.e7)([d.Z], () => d.Z.isFullscreenInContext(c)),
         _ = (0, l.Z)();
     if (f) return null;
     switch (n) {
@@ -133,7 +133,7 @@ function R(e) {
             return (0, r.jsx)(C, {
                 focused: t,
                 windowKey: i,
-                frame: o,
+                frame: a,
                 themeOverride: s,
                 hasOpenLayer: _
             });

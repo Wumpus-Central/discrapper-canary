@@ -1,8 +1,8 @@
 n.d(t, { J: () => I }), n(388685), n(65234), n(111804), n(490233), n(97749);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(812028),
     l = n(772848),
     c = n(631467),
@@ -13,7 +13,7 @@ var r = n(200651),
     p = n(953101),
     h = n(701488),
     m = n(981631),
-    g = n(296265);
+    g = n(962140);
 function E(e, t, n) {
     return (
         t in e
@@ -67,7 +67,7 @@ function v(e, t) {
     );
 }
 function O(e) {
-    let { url: t, className: n, style: o, onLoad: a, shouldRefocus: g, queryParams: E, allowPopups: y = !1, referrerPolicy: O = 'origin' } = e,
+    let { url: t, className: n, style: a, onLoad: o, shouldRefocus: g, queryParams: E, allowPopups: y = !1, referrerPolicy: O = 'origin' } = e,
         I = (0, f.sU)({}),
         S = (0, s.useMemoOne)(() => (0, l.Z)(), [t]),
         T = i.useRef(null),
@@ -78,10 +78,10 @@ function O(e) {
         }),
         [C, R] = i.useState(!1),
         P = u.Z.theme,
-        w = b({}, o);
+        w = b({}, a);
     function D(e) {
         var n;
-        null == a || a(e.target), (T.current = e.target), N(!0), null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, A], null != t ? t : '');
+        null == o || o(e.target), (T.current = e.target), N(!0), null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, A], null != t ? t : '');
     }
     return (
         P === m.BRd.LIGHT ? (w.colorScheme = 'light') : (w.colorScheme = 'dark'),
@@ -122,19 +122,19 @@ function O(e) {
 }
 function I(e) {
     let { onLoad: t } = e,
-        [n, o] = i.useState(!1),
+        [n, a] = i.useState(!1),
         s = i.useCallback(
             (e) => {
-                o(!0), null == t || t(e);
+                a(!0), null == t || t(e);
             },
             [t]
         );
     return (0, r.jsxs)('div', {
         className: g.fillParent,
         children: [
-            !n && (0, r.jsx)('div', { className: a()(g.fillParent, g.iframePlaceholder) }),
+            !n && (0, r.jsx)('div', { className: o()(g.fillParent, g.iframePlaceholder) }),
             (0, r.jsx)('div', {
-                className: a()(g.fillParent, n ? void 0 : g.hiddenIframeContainer),
+                className: o()(g.fillParent, n ? void 0 : g.hiddenIframeContainer),
                 children: (0, r.jsx)(O, v(b({}, e), { onLoad: s }))
             })
         ]

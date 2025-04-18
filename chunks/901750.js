@@ -3,7 +3,7 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     s = n(388032),
-    a = n(732546);
+    a = n(947239);
 let l = function (e) {
     let { hasGuildBoostSlots: t, hasAppliedGuildBoosts: l, hasBoostPerk: o, canAddBoosts: c } = e;
     return (0, r.jsxs)('div', {

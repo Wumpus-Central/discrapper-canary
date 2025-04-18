@@ -1,8 +1,8 @@
 n.d(t, { Z: () => M }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(442837),
@@ -29,20 +29,20 @@ var r = n(200651),
     P = n(981631),
     w = n(474936),
     D = n(388032),
-    L = n(976917);
+    L = n(136266);
 let x = 1500;
 function M(e) {
-    let { giftCode: t, application: n, sku: o, subscriptionPlan: s, selectedGiftStyle: l, onClose: d, hasSentMessage: f, giftRecipient: h, giftMessageError: b, isSendingMessage: y } = e,
+    let { giftCode: t, application: n, sku: a, subscriptionPlan: s, selectedGiftStyle: l, onClose: d, hasSentMessage: f, giftRecipient: h, giftMessageError: b, isSendingMessage: y } = e,
         [O, S] = i.useState(u.kO8.Modes.DEFAULT),
         M = (0, c.e7)([I.Z], () => I.Z.enabled),
         j = f || (null != l && null != h),
-        U = (null == o ? void 0 : o.productLine) === P.POd.COLLECTIBLES,
+        U = (null == a ? void 0 : a.productLine) === P.POd.COLLECTIBLES,
         G = (0, E.Z)(),
         { selectedGiftingPromotionReward: B } = (0, R.wD)(),
         F = null == G ? void 0 : G.giftPurchaseConfirmation,
         V = (0, g.tK)(null == B ? void 0 : B.skuId),
         Z = (0, g.a5)(s) && null != V && null != F,
-        H = () => (null != s ? s.skuId : null != o ? o.id : null),
+        H = () => (null != s ? s.skuId : null != a ? a.id : null),
         W = () => {
             let e;
             return null != b
@@ -57,13 +57,13 @@ function M(e) {
         },
         Y = () => (null != h || (f && null == b) ? D.NW.string(D.t.zOmK9P) : null != b ? D.NW.string(D.t.d1lrmZ) : D.NW.string(D.t['/s1xR0'])),
         K = (e, t) => {
-            null != o &&
+            null != a &&
                 (0, N.dM)(
                     new v.Z({
                         code: t,
                         maxUses: 1
                     }),
-                    o
+                    a
                 ),
                 (0, T.JG)(
                     e,
@@ -175,7 +175,7 @@ function M(e) {
               ]
           })
         : (0, r.jsxs)('div', {
-              className: a()(L.confirmation, { [L.seasonalConfirmationPadding]: Z }),
+              className: o()(L.confirmation, { [L.seasonalConfirmationPadding]: Z }),
               children: [
                   null != n
                       ? (0, r.jsx)(p.Z, {
@@ -187,7 +187,7 @@ function M(e) {
                       : null,
                   (0, r.jsx)(u.X6q, {
                       variant: 'heading-lg/semibold',
-                      className: a()({
+                      className: o()({
                           [L.header]: null == l && !U,
                           [L.headerCustomGifting]: null != l && !U
                       }),
@@ -202,7 +202,7 @@ let k = (e) => {
     i.useEffect(() => {
         f.Z.fetchRelationships(), (0, b.W)();
     }, []);
-    let [o, a] = i.useState(),
+    let [a, o] = i.useState(),
         [s, p] = i.useState(!1),
         [m, g] = i.useState(!1),
         { userAffinities: E, isLoading: v } = (0, c.cj)([y.Z], () => ({
@@ -235,9 +235,9 @@ let k = (e) => {
                                       size: u.EFr.SIZE_20
                                   }),
                         renderLeading: () => (v ? (0, r.jsx)(u.$jN, { type: u.RAz.PULSING_ELLIPSIS }) : null),
-                        value: o,
+                        value: a,
                         onChange: (e) => {
-                            a(e), p(!1);
+                            o(e), p(!1);
                         },
                         options: P.map((e) => ({
                             value: e,
@@ -245,12 +245,12 @@ let k = (e) => {
                         }))
                     }),
                     (0, r.jsx)(u.zxk, {
-                        disabled: null == o,
+                        disabled: null == a,
                         submitting: m,
                         className: L.sendToRecipientButton,
                         onClick: () => {
                             g(!0),
-                                (0, h.YD)(o, t)
+                                (0, h.YD)(a, t)
                                     .then(() => {
                                         n(), (0, d.Ou)();
                                     })

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => U });
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(692547),
     c = n(780384),
@@ -24,7 +24,7 @@ var r = n(200651),
     T = n(682947),
     N = n(981631),
     A = n(388032),
-    C = n(605914);
+    C = n(90235);
 function R(e, t, n) {
     return (
         t in e
@@ -83,8 +83,8 @@ function L(e, t) {
         r,
         i = x(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -93,8 +93,8 @@ function x(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let M = {
@@ -155,7 +155,7 @@ function k(e) {
         className: C.tooltipPremiumFooterContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: a()(C.tooltipPremiumFooterSegment, C.tooltipPremiumFooterTierSegment),
+                className: o()(C.tooltipPremiumFooterSegment, C.tooltipPremiumFooterTierSegment),
                 children: [
                     (0, r.jsx)(v.Z, {
                         width: 18,
@@ -182,7 +182,7 @@ function k(e) {
 }
 function j(e) {
     let { badgeType: t, guildTraits: n } = e,
-        { tooltipTitle: i, tooltipSubtitle: o, tooltipDescription: a } = (0, T.G)(t, n.visibility);
+        { tooltipTitle: i, tooltipSubtitle: a, tooltipDescription: o } = (0, T.G)(t, n.visibility);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
@@ -193,18 +193,18 @@ function j(e) {
                         variant: 'text-xs/bold',
                         children: i
                     }),
-                    null != o
-                        ? (0, r.jsx)(u.Text, {
-                              color: 'text-muted',
-                              variant: 'text-xs/medium',
-                              children: o
-                          })
-                        : null,
                     null != a
                         ? (0, r.jsx)(u.Text, {
                               color: 'text-muted',
                               variant: 'text-xs/medium',
                               children: a
+                          })
+                        : null,
+                    null != o
+                        ? (0, r.jsx)(u.Text, {
+                              color: 'text-muted',
+                              variant: 'text-xs/medium',
+                              children: o
                           })
                         : null
                 ]
@@ -215,12 +215,12 @@ function j(e) {
 }
 function U(e) {
     let t, n;
-    var o,
+    var a,
         l,
         { guild: _, tooltipColor: y = u.ua7.Colors.BRAND, tooltipPosition: v, className: O, flowerStarClassName: T, iconClassName: A, badgeStrokeColor: R, badgeColor: w, disableBoostClick: x, 'aria-label': k = !1 } = e,
         U = L(e, ['guild', 'tooltipColor', 'tooltipPosition', 'className', 'flowerStarClassName', 'iconClassName', 'badgeStrokeColor', 'badgeColor', 'disableBoostClick', 'aria-label']);
     let G = (0, p.Q3)('GuildBadgeV2'),
-        B = null != (o = U.size) ? o : G ? 18 : 16,
+        B = null != (a = U.size) ? a : G ? 18 : 16,
         F = (0, s.e7)([b.default, E.ZP], () => {
             let e = b.default.getCurrentUser();
             return E.ZP.isMember(null == _ ? void 0 : _.id, null == e ? void 0 : e.id);
@@ -263,7 +263,7 @@ function U(e) {
                           u.P3F,
                           D(P({}, t), {
                               onClick: Y,
-                              className: a()(C.clanBadgeContainer, O),
+                              className: o()(C.clanBadgeContainer, O),
                               children: (0, r.jsx)(f.KQ, {
                                   src: e,
                                   size: B

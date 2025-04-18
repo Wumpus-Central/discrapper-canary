@@ -1,9 +1,9 @@
 n.d(t, { U: () => u }), n(388685);
 var r,
     i = n(200651),
-    o = n(192379),
-    a = n(392711),
-    s = n.n(a),
+    a = n(192379),
+    o = n(392711),
+    s = n.n(o),
     l = n(607070);
 function c(e, t, n) {
     return (
@@ -18,7 +18,7 @@ function c(e, t, n) {
         e
     );
 }
-class u extends (r = o.Component) {
+class u extends (r = a.Component) {
     componentDidMount() {
         this.props.isShaking && this.startShaking();
     }
@@ -46,7 +46,7 @@ class u extends (r = o.Component) {
     }
     constructor(...e) {
         super(...e),
-            c(this, 'ref', o.createRef()),
+            c(this, 'ref', a.createRef()),
             c(this, 'animationFrame', void 0),
             c(this, 'shouldRenderFrame', !0),
             c(this, 'animate', () => {

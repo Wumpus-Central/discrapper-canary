@@ -5,7 +5,7 @@ var r = n(200651),
     l = n(279881),
     a = n(383124),
     o = n(388032),
-    c = n(830578);
+    c = n(955373);
 function d(e) {
     let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: d, disabled: u } = e,
         { topGames: m, tryFetchTopGames: g } = (0, l.I)(),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(415506);
 var r = n(430198),
     i = n(557135),
-    o = n(66999),
-    a = n(592125),
+    a = n(66999),
+    o = n(592125),
     s = n(496675),
     l = n(944486),
     c = n(979651);
@@ -10,7 +10,7 @@ let u = 10000;
 class d extends Error {}
 async function f(e) {
     let { channelId: t, timeoutMs: n = u, bypassChangeModal: f = !1 } = e,
-        _ = a.Z.getChannel(t);
+        _ = o.Z.getChannel(t);
     if (
         null == _ ||
         !(await i.Z.handleVoiceConnect({
@@ -18,7 +18,7 @@ async function f(e) {
             bypassChangeModal: f,
             channel: _,
             connected: c.Z.isInChannel(t),
-            needSubscriptionToAccess: (0, o.$)(t, a.Z, r.Z, s.Z).needSubscriptionToAccess
+            needSubscriptionToAccess: (0, a.$)(t, o.Z, r.Z, s.Z).needSubscriptionToAccess
         }))
     )
         return !1;

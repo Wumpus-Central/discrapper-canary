@@ -1,7 +1,7 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(490983),
     i = n(388032);
-let o = {
+let a = {
     MENTION_EVERYONE: () => ({
         test: 'everyone',
         text: '@everyone',

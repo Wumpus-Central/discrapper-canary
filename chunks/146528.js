@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(81825),
     i = n(591548);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,10 +14,10 @@ function o(e, t, n) {
         e
     );
 }
-class a extends r.Z {
+class o extends r.Z {
     static createInvoiceFromServer(e) {
         var t;
-        return new a({
+        return new o({
             id: e.id,
             invoiceItems: null == (t = e.invoice_items) ? void 0 : t.map(i.H),
             total: e.total,
@@ -31,6 +31,6 @@ class a extends r.Z {
         });
     }
     constructor(e) {
-        super(), o(this, 'id', void 0), o(this, 'invoiceItems', void 0), o(this, 'total', void 0), o(this, 'subtotal', void 0), o(this, 'currency', void 0), o(this, 'tax', void 0), o(this, 'taxInclusive', void 0), o(this, 'subscriptionPeriodStart', void 0), o(this, 'subscriptionPeriodEnd', void 0), o(this, 'status', void 0), (this.id = e.id), (this.invoiceItems = e.invoiceItems), (this.total = e.total), (this.subtotal = e.subtotal), (this.currency = e.currency), (this.tax = e.tax), (this.taxInclusive = e.taxInclusive), (this.subscriptionPeriodStart = e.subscriptionPeriodStart), (this.subscriptionPeriodEnd = e.subscriptionPeriodEnd), (this.status = e.status);
+        super(), a(this, 'id', void 0), a(this, 'invoiceItems', void 0), a(this, 'total', void 0), a(this, 'subtotal', void 0), a(this, 'currency', void 0), a(this, 'tax', void 0), a(this, 'taxInclusive', void 0), a(this, 'subscriptionPeriodStart', void 0), a(this, 'subscriptionPeriodEnd', void 0), a(this, 'status', void 0), (this.id = e.id), (this.invoiceItems = e.invoiceItems), (this.total = e.total), (this.subtotal = e.subtotal), (this.currency = e.currency), (this.tax = e.tax), (this.taxInclusive = e.taxInclusive), (this.subscriptionPeriodStart = e.subscriptionPeriodStart), (this.subscriptionPeriodEnd = e.subscriptionPeriodEnd), (this.status = e.status);
     }
 }

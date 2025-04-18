@@ -2,8 +2,8 @@ n.d(t, { Z: () => A });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(481060),
-    a = n(592125),
+    a = n(481060),
+    o = n(592125),
     s = n(944486),
     l = n(246946),
     c = n(5192),
@@ -22,8 +22,8 @@ var i = n(442837),
     O = n(915014),
     I = n(228168),
     S = n(388032),
-    T = n(46781),
-    N = n(165957);
+    T = n(773714),
+    N = n(200669);
 function A(e) {
     let { user: t, currentUser: n, displayProfile: A, guild: C, isHovering: R, onOpenProfile: P, channelId: w, onClose: D } = e,
         L = c.ZP.getName(null == C ? void 0 : C.id, w, t),
@@ -31,9 +31,9 @@ function A(e) {
             var e;
             return null == (e = u.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        M = (0, i.e7)([a.Z, s.Z], () => a.Z.getChannel(s.Z.getChannelId())),
+        M = (0, i.e7)([o.Z, s.Z], () => o.Z.getChannel(s.Z.getChannelId())),
         k = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation);
-    return (0, r.jsxs)(o.Ttm, {
+    return (0, r.jsxs)(a.Ttm, {
         fade: !0,
         className: N.body,
         children: [

@@ -1,20 +1,20 @@
 n.d(t, { O: () => u }), n(388685);
 var r = n(192379),
     i = n(237617),
-    o = n(266338);
-let a = {};
+    a = n(266338);
+let o = {};
 function s(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         s = (0, r.useRef)(null),
-        l = (0, i.Z)(null != t ? t : a),
+        l = (0, i.Z)(null != t ? t : o),
         c = (0, r.useRef)(null);
     return (
         (0, r.useLayoutEffect)(() => {
             if (!n) return;
-            null == c.current && (c.current = (0, o.c)(l.current));
+            null == c.current && (c.current = (0, a.c)(l.current));
             let t = s.current,
                 r = c.current;
-            null != t && null != r && (0, o.YP)(r, t, e);
+            null != t && null != r && (0, a.YP)(r, t, e);
         }, [n, e, l]),
         (0, r.useEffect)(() => {
             if (!n) return;
@@ -22,7 +22,7 @@ function s(e, t) {
                 t = c.current;
             if (null != e && null != t)
                 return () => {
-                    (0, o.UC)(t, e);
+                    (0, a.UC)(t, e);
                 };
         }, [n, t]),
         s
@@ -36,9 +36,9 @@ function c(e) {
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        o = (0, i.Z)((t) => {
+        a = (0, i.Z)((t) => {
             e(t.isIntersecting);
         }),
-        a = (0, r.useMemo)(() => c(t), [t]);
-    return s(o.current, a, n);
+        o = (0, r.useMemo)(() => c(t), [t]);
+    return s(a.current, o, n);
 }

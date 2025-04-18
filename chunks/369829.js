@@ -1,7 +1,7 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(49691),
     i = { passive: !0 };
-let o = {
+let a = {
     name: 'eventListeners',
     enabled: !0,
     phase: 'write',
@@ -9,10 +9,10 @@ let o = {
     effect: function (e) {
         var t = e.state,
             n = e.instance,
-            o = e.options,
-            a = o.scroll,
-            s = void 0 === a || a,
-            l = o.resize,
+            a = e.options,
+            o = a.scroll,
+            s = void 0 === o || o,
+            l = a.resize,
             c = void 0 === l || l,
             u = (0, r.Z)(t.elements.popper),
             d = [].concat(t.scrollParents.reference, t.scrollParents.popper);

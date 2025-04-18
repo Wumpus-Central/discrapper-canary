@@ -6,7 +6,7 @@ var r = n(200651),
     a = n(481060),
     s = n(923726),
     c = n(388032),
-    u = n(674118);
+    u = n(542503);
 function d(e) {
     let { text: t, hasScrolled: n } = e;
     return (0, r.jsxs)('div', {

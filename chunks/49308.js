@@ -1,8 +1,8 @@
 n.d(t, { x: () => S });
 var r = n(200651),
     i = n(192379),
-    o = n(512722),
-    a = n.n(o),
+    a = n(512722),
+    o = n.n(a),
     s = n(399606),
     l = n(607070),
     c = n(597688),
@@ -47,14 +47,14 @@ function O(e) {
     return e;
 }
 function I(e) {
-    let { handleClose: t, confettiCanvas: n, hideConfetti: i = !1, analyticsLocations: o } = e,
+    let { handleClose: t, confettiCanvas: n, hideConfetti: i = !1, analyticsLocations: a } = e,
         l = (0, s.e7)([u.Z], () => u.Z.purchases),
         { skusById: f, selectedSkuId: _, application: h } = (0, g.JL)(),
         m = (0, s.e7)([c.Z], () => c.Z.getProduct(_)),
         E = (0, d.o)(m, l);
-    a()(null != _, 'Expected selectedSkuId'), a()(null != h, 'Expected application');
+    o()(null != _, 'Expected selectedSkuId'), o()(null != h, 'Expected application');
     let v = f[_];
-    return (a()(null != v, 'Expected sku'), null == m)
+    return (o()(null != v, 'Expected sku'), null == m)
         ? null
         : (0, r.jsxs)(b.C3, {
               children: [
@@ -63,7 +63,7 @@ function I(e) {
                       product: m,
                       onClose: t,
                       confettiCanvas: n,
-                      analyticsLocations: o,
+                      analyticsLocations: a,
                       hideConfetti: i,
                       selectedVariantIndex: E
                   })
@@ -71,7 +71,7 @@ function I(e) {
           });
 }
 function S(e) {
-    let { isGift: t, giftCode: n, selectedGiftStyle: o, hasSentMessage: a, giftRecipient: u, giftMessageError: d, isSendingMessage: p } = (0, m.wD)(),
+    let { isGift: t, giftCode: n, selectedGiftStyle: a, hasSentMessage: o, giftRecipient: u, giftMessageError: d, isSendingMessage: p } = (0, m.wD)(),
         b = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         y = i.useRef(null),
         { selectedSkuId: v } = (0, g.JL)(),
@@ -84,8 +84,8 @@ function S(e) {
                   (0, r.jsx)(E.Z, {
                       giftCode: n,
                       onClose: e.handleClose,
-                      selectedGiftStyle: o,
-                      hasSentMessage: a,
+                      selectedGiftStyle: a,
+                      hasSentMessage: o,
                       giftRecipient: u,
                       giftMessageError: d,
                       isSendingMessage: p

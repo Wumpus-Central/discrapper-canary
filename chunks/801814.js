@@ -24,13 +24,13 @@ function i() {
         background_install_ms_total: 0
     };
 }
-function o(e) {
+function a(e) {
     return 'host' === e;
 }
-n.d(t, { Z: () => a });
-class a {
+n.d(t, { Z: () => o });
+class o {
     handleDownloadingModule(e) {
-        if (!o(e.name)) {
+        if (!a(e.name)) {
             if (null != this._downloadingModules[e.name]) return void console.warn('Duplicate downloading-module event for module ', e.name);
             this._downloadingModules[e.name] = {
                 startTime: BigInt(e.now),
@@ -52,18 +52,18 @@ class a {
         this._updateReportField(e, t, Math.max);
     }
     handleDownloadedModule(e) {
-        if (o(e.name)) return;
+        if (a(e.name)) return;
         let t = this._downloadingModules[e.name];
         if (null == t) return void console.warn('Downloaded complete without corresponding downloading event for module ', e.name);
         let n = t.foreground ? 'foreground' : 'background',
             r = ''.concat(n, '_download_ms_').concat(e.name),
             i = ''.concat(n, '_bytes_').concat(e.name),
-            a = Number((BigInt(e.now) - t.startTime + BigInt(999999)) / BigInt(1000000)),
+            o = Number((BigInt(e.now) - t.startTime + BigInt(999999)) / BigInt(1000000)),
             s = !1 === e.receivedBytes ? 0 : e.receivedBytes;
-        t.foreground ? ((this._report.foreground_download_ms_total += a), (this._report.foreground_bytes_total += s)) : ((this._report.background_download_ms_total += a), (this._report.background_bytes_total += s)), this.incrementReportField(r, a), this.incrementReportField(i, s), delete this._downloadingModules[e.name];
+        t.foreground ? ((this._report.foreground_download_ms_total += o), (this._report.foreground_bytes_total += s)) : ((this._report.background_download_ms_total += o), (this._report.background_bytes_total += s)), this.incrementReportField(r, o), this.incrementReportField(i, s), delete this._downloadingModules[e.name];
     }
     handleInstallingModule(e) {
-        if (!o(e.name)) {
+        if (!a(e.name)) {
             if (null != this._installingModules[e.name]) return void console.warn('Duplicate installing-module event for module ', e.name);
             this._installingModules[e.name] = {
                 startTime: BigInt(e.now),
@@ -74,15 +74,15 @@ class a {
         }
     }
     handleInstalledModule(e) {
-        if (o(e.name)) return;
+        if (a(e.name)) return;
         let t = this._installingModules[e.name];
         if (null == t) return;
         let n = t.foreground ? 'foreground' : 'background',
             r = ''.concat(n, '_install_ms_').concat(e.name),
             i = 'min_version_'.concat(e.name),
-            a = 'max_version_'.concat(e.name),
+            o = 'max_version_'.concat(e.name),
             s = Number((BigInt(e.now) - t.startTime + BigInt(999999)) / BigInt(1000000));
-        t.foreground ? (this._report.foreground_install_ms_total += s) : (this._report.background_install_ms_total += s), this.incrementReportField(r, s), this.setReportFieldMinimum(i, t.oldVersion), e.succeeded ? (!0 === e.delta ? this._report.num_delta_installed++ : this._report.num_full_installed++, this.setReportFieldMaximum(a, t.newVersion)) : this._report.num_failed++, delete this._installingModules[e.name];
+        t.foreground ? (this._report.foreground_install_ms_total += s) : (this._report.background_install_ms_total += s), this.incrementReportField(r, s), this.setReportFieldMinimum(i, t.oldVersion), e.succeeded ? (!0 === e.delta ? this._report.num_delta_installed++ : this._report.num_full_installed++, this.setReportFieldMaximum(o, t.newVersion)) : this._report.num_failed++, delete this._installingModules[e.name];
     }
     trackEvent(e) {
         switch (e.type) {

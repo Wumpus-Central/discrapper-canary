@@ -8,7 +8,7 @@ var i = n(200651),
     c = n(673125),
     d = n(90753),
     u = n(594174),
-    h = n(337442);
+    h = n(770376);
 function p(e) {
     let { streamerId: t, channelId: n } = e,
         s = r.useRef(null),

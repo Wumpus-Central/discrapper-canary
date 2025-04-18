@@ -6,7 +6,7 @@ var r = n(192379),
     s = n(761910),
     l = n(981631),
     c = n(388032),
-    u = n(534664);
+    u = n(875231);
 function d(e, t) {
     let { hideSimpleEmbedContent: d, formatInline: p = !1, noStyleAndInteraction: g = !1, isInteracting: m = !1, allowHeading: f = !1, allowList: b = !1, allowLinks: h = !1, allowDevLinks: y = !1, previewLinkTarget: _ = !1, viewingChannelId: O } = t,
         v = (0, o.p)();

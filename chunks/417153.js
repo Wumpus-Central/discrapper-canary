@@ -6,7 +6,7 @@ n.d(t, {
     n(388685);
 var r = n(290486),
     i = n(731965);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,7 +30,7 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -66,7 +66,7 @@ function u(e) {
     (0, i.j)(() => {
         c.setState((t) =>
             null != t.currentToast
-                ? l(a({}, t), {
+                ? l(o({}, t), {
                       queuedToasts: [...t.queuedToasts, e]
                   })
                 : {

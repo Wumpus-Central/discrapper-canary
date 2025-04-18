@@ -15,7 +15,7 @@ var r = n(200651),
     _ = n(626135),
     m = n(981631),
     f = n(65154),
-    p = n(840696);
+    p = n(521361);
 function g(e) {
     let { label: t, Icon: n } = e;
     return (0, r.jsxs)('div', {

@@ -1,8 +1,8 @@
 n.d(t, {
     Hm: () => s,
-    Tv: () => a,
+    Tv: () => o,
     __: () => i,
-    yT: () => o
+    yT: () => a
 });
 var r = n(570140);
 function i(e, t, n) {
@@ -13,13 +13,13 @@ function i(e, t, n) {
         initialState: n
     });
 }
-function o(e) {
+function a(e) {
     r.Z.dispatch({
         type: 'APP_LAUNCHER_DISMISS',
         closeReason: e
     });
 }
-function a(e) {
+function o(e) {
     r.Z.dispatch({
         type: 'APP_LAUNCHER_ADD_FAILED_APP_DM_LOAD',
         channelId: e

@@ -15,7 +15,7 @@ var r = t(200651),
     h = t(382405),
     I = t(386019),
     g = t(228168),
-    y = t(935693);
+    y = t(227832);
 function j(e) {
     let { user: n, entry: t, profileGuildId: i, className: j, onClose: v, hideContextMenu: x = !1 } = e,
         _ = o.useRef(null),

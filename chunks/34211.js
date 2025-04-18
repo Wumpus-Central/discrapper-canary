@@ -1,7 +1,7 @@
-a.d(t, { o: () => h }), a(388685);
+a.d(t, { o: () => m }), a(388685);
 var n,
-    s = a(200651),
-    r = a(192379),
+    r = a(200651),
+    s = a(192379),
     l = a(948789),
     i = a(66037),
     o = a(248108),
@@ -21,7 +21,7 @@ function u(e, t, a) {
     );
 }
 let _ = c.j_.MAIN_NAVIGATION_MENU,
-    p = (e) => [
+    N = (e) => [
         {
             route: c.am.DOWNLOAD,
             linkClicked: 'download',
@@ -119,34 +119,34 @@ let _ = c.j_.MAIN_NAVIGATION_MENU,
             ]
         }
     ];
-class h extends (n = r.PureComponent) {
+class m extends (n = s.PureComponent) {
     render() {
         let e = (0, l.fQ)(this.context.router),
-            { isMobile: t, isVisible: a, styles: n, TrackClick: r, avoidRouter: u } = this.props,
-            { sectionShown: h } = this.state;
-        return p(null != d.Z ? d.Z.getLocale().toLowerCase() : '').map((l) =>
+            { isMobile: t, isVisible: a, styles: n, TrackClick: s, avoidRouter: u } = this.props,
+            { sectionShown: m } = this.state;
+        return N(null != d.Z ? d.Z.getLocale().toLowerCase() : '').map((l) =>
             null != l.links
-                ? (0, s.jsx)(
+                ? (0, r.jsx)(
                       o.Z,
                       {
                           title: l.title,
                           links: l.links,
-                          isOpen: h === l.title,
+                          isOpen: m === l.title,
                           isMobile: t,
                           avoidRouter: u,
-                          TrackClick: r,
+                          TrackClick: s,
                           onClose: this.closeSubNav,
                           onOpen: this.openSubNav
                       },
                       l.title
                   )
                 : l.external && null != l.route
-                  ? (0, s.jsx)(
+                  ? (0, r.jsx)(
                         'li',
                         {
                             className: n.listItemInactive,
                             role: 'none',
-                            children: (0, s.jsx)(r, {
+                            children: (0, r.jsx)(s, {
                                 className: n.mainNavLink,
                                 eventName: _,
                                 data: l.linkClicked ? { linkClicked: l.linkClicked } : {},
@@ -158,18 +158,18 @@ class h extends (n = r.PureComponent) {
                         'external_link_'.concat(l.route)
                     )
                   : null != l.route
-                    ? (0, s.jsx)(
+                    ? (0, r.jsx)(
                           'li',
                           {
                               className: e(l.route) ? n.listItemActive : n.listItemInactive,
                               role: 'none',
-                              children: (0, s.jsx)(i.Z, {
+                              children: (0, r.jsx)(i.Z, {
                                   avoidRouter: u,
                                   to: l.route,
                                   from: c.j_.MAIN_NAVIGATION_MENU,
                                   tabIndex: a ? 0 : -1,
                                   role: 'menuitem',
-                                  children: (0, s.jsx)(r, {
+                                  children: (0, r.jsx)(s, {
                                       tag: 'span',
                                       className: n.mainNavLink,
                                       eventName: _,
@@ -196,7 +196,7 @@ class h extends (n = r.PureComponent) {
             });
     }
 }
-u(h, 'defaultProps', {
+u(m, 'defaultProps', {
     isMobile: !1,
     isVisible: !0
 });

@@ -164,7 +164,7 @@ let B = {
             (0, x.Pr)({}, null == s ? void 0 : s.document),
                 (0, o.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e('7654'), n.e('99060')]).then(n.bind(n, 560114));
+                        let { default: e } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
                         return (n) => {
                             var a, o;
                             return (0, r.jsx)(

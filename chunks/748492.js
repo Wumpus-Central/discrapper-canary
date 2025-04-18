@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(252258),
+    a = n.n(i),
+    o = n(252258),
     s = n(442837),
     l = n(481060),
     c = n(846027),
@@ -35,12 +35,12 @@ var i = n(120356),
     P = n(981631),
     w = n(231338),
     D = n(388032),
-    L = n(955999),
-    x = n(303473);
+    L = n(816083),
+    x = n(992955);
 function M(e) {
     let { onClick: t, isExpanded: n } = e;
     return (0, r.jsx)(v.Z, {
-        iconClassName: o()(L.arrowIcon, { [L.arrowIconExpanded]: n }),
+        iconClassName: a()(L.arrowIcon, { [L.arrowIconExpanded]: n }),
         onClick: t,
         iconComponent: l.CJ0,
         label: n ? D.NW.string(D.t['2TiKgY']) : D.NW.string(D.t.oN8bqa)
@@ -48,12 +48,12 @@ function M(e) {
 }
 function k(e) {
     var t, n;
-    let { channel: i, applicationId: o, onMouseDown: l, onMouseMove: v, onMouseLeave: S, onJumpToChannel: C, idle: D, selectedParticipant: M, embeddedActivity: k } = e,
+    let { channel: i, applicationId: a, onMouseDown: l, onMouseMove: v, onMouseLeave: S, onJumpToChannel: C, idle: D, selectedParticipant: M, embeddedActivity: k } = e,
         j = (0, u.bp)() === P.IlC.POPOUT,
         U = (0, s.e7)([N.Z], () => N.Z.isVideoEnabled()),
         G = (0, s.e7)([N.Z], () => Object.values(N.Z.getVideoDevices())[0]),
         B = !1 === (null == (t = null == G ? void 0 : G.disabled) || t),
-        F = (0, f.Z)([o])[0],
+        F = (0, f.Z)([a])[0],
         V = (0, g.Z)(i),
         { parentAnalyticsLocation: Z } = (0, d.ZP)(),
         H = (e) => {
@@ -115,7 +115,7 @@ function k(e) {
                         basis: '50%',
                         align: h.Z.Align.CENTER,
                         children: [
-                            j || (0, A.R)({ isContextless: k.location.kind === a.E.CONTEXTLESS })
+                            j || (0, A.R)({ isContextless: k.location.kind === o.E.CONTEXTLESS })
                                 ? null
                                 : (0, r.jsx)(I.Z, {
                                       className: L.rightPipIcon,
@@ -124,7 +124,7 @@ function k(e) {
                                       onClosePopout: w.Vq
                                   }),
                             (0, r.jsx)(O.Z, {
-                                applicationId: o,
+                                applicationId: a,
                                 location: k.location,
                                 className: L.rightPipIcon
                             })
@@ -137,12 +137,12 @@ function k(e) {
 }
 function j(e) {
     var t;
-    let { channel: n, applicationId: i, onMouseDown: a, onMouseMove: s, onMouseLeave: c, onJumpToChannel: u, idle: d, users: _, embeddedActivity: p } = e,
+    let { channel: n, applicationId: i, onMouseDown: o, onMouseMove: s, onMouseLeave: c, onJumpToChannel: u, idle: d, users: _, embeddedActivity: p } = e,
         h = (0, f.Z)([i])[0];
     return (0, r.jsxs)(l.P3F, {
-        className: o()(x.videoControls, x.videoControlsTextActivity),
+        className: a()(x.videoControls, x.videoControlsTextActivity),
         onMouseMove: s,
-        onMouseDown: a,
+        onMouseDown: o,
         onMouseLeave: c,
         onDoubleClick: u,
         children: [
@@ -188,15 +188,15 @@ function U(e) {
 }
 function G(e) {
     var t;
-    let { onMouseDown: n, onMouseMove: i, onMouseLeave: a, showControls: s, applicationId: c, channel: u, onJumpToChannel: d, onToggleHeight: _, isExpanded: p, hideExpandedButton: h, embeddedActivity: m } = e,
+    let { onMouseDown: n, onMouseMove: i, onMouseLeave: o, showControls: s, applicationId: c, channel: u, onJumpToChannel: d, onToggleHeight: _, isExpanded: p, hideExpandedButton: h, embeddedActivity: m } = e,
         g = (0, f.Z)([c])[0];
     return (0, r.jsx)('div', {
         className: L.pipHeader,
         onMouseMove: i,
         onMouseDown: n,
-        onMouseLeave: a,
+        onMouseLeave: o,
         children: (0, r.jsxs)('div', {
-            className: o()(x.topControls, L.pipHeaderContent, { [L.pipHeaderContentOpen]: s }),
+            className: a()(x.topControls, L.pipHeaderContent, { [L.pipHeaderContentOpen]: s }),
             children: [
                 !s &&
                     (0, r.jsx)(l.xhG, {

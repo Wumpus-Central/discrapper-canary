@@ -4,7 +4,7 @@ var r = n(200651),
     i = n(120356),
     l = n.n(i),
     s = n(481060),
-    o = n(981222);
+    o = n(66418);
 let c = a.memo(
     a.forwardRef(function (e, t) {
         let { onClick: n, onContextMenu: a, className: i, disabled: c, children: d, 'aria-label': u } = e;

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(200651),
     i = n(192379),
-    o = n(481060),
-    a = n(320582),
+    a = n(481060),
+    o = n(320582),
     s = n(298213),
     l = n(51144),
     c = n(749302),
@@ -61,12 +61,12 @@ function p(e, t) {
 }
 function h(e) {
     let { user: t } = e,
-        d = (0, a.ML)(t.id),
+        d = (0, o.ML)(t.id),
         _ = l.ZP.useName(t),
         h = i.useCallback(
             (e) => {
-                let { id: i, name: a } = e;
-                (0, o.ZDy)(async () => {
+                let { id: i, name: o } = e;
+                (0, a.ZDy)(async () => {
                     let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
                     return (n) =>
                         (0, r.jsx)(
@@ -87,11 +87,11 @@ function h(e) {
                                     n
                                 ),
                                 {
-                                    children: (0, r.jsx)(o.Text, {
+                                    children: (0, r.jsx)(a.Text, {
                                         variant: 'text-md/normal',
                                         children: u.NW.format(u.t.dsU5bm, {
                                             name: _,
-                                            gameName: a
+                                            gameName: o
                                         })
                                     })
                                 }

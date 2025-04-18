@@ -6,7 +6,7 @@ var r = n(200651),
     a = n(641360),
     s = n(140106),
     c = n(388032),
-    u = n(957694);
+    u = n(639041);
 function d(e) {
     let { channel: t, children: n, className: i, editable: d, location: p } = e;
     return (0, a.I3)('HeaderBarMaybeClickableGdmIcon', t.id, { autoTrackExposure: d }) && d

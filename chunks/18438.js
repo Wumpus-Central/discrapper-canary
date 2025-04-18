@@ -10,7 +10,7 @@ n.d(t, {
     b9: () => v,
     cV: () => d,
     g_: () => _,
-    iq: () => a,
+    iq: () => o,
     pG: () => b,
     sr: () => m,
     xn: () => f,
@@ -20,14 +20,14 @@ n.d(t, {
 var r = n(544891),
     i = n(570140);
 n(37234);
-var o = n(981631);
-async function a(e, t) {
-    let { nick: n, avatar: a, avatarDescription: s, avatarId: l, avatarDecoration: c } = t;
+var a = n(981631);
+async function o(e, t) {
+    let { nick: n, avatar: o, avatarDescription: s, avatarId: l, avatarDecoration: c } = t;
     if (null == e) throw Error('Need guildId');
     i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_SUBMIT' });
     let u = {
         nick: n,
-        avatar: a,
+        avatar: o,
         avatar_description: s,
         avatar_id: l,
         avatar_decoration_id: null === c ? null : null == c ? void 0 : c.id,
@@ -35,7 +35,7 @@ async function a(e, t) {
     };
     try {
         let t = await r.tn.patch({
-                url: o.ANM.SET_GUILD_MEMBER(e),
+                url: a.ANM.SET_GUILD_MEMBER(e),
                 body: u,
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -48,7 +48,7 @@ async function a(e, t) {
                 guildMember: n,
                 guildId: e
             }),
-            (null != a || null != l) && i.Z.dispatch({ type: 'RECENT_AVATARS_UPDATE' }),
+            (null != o || null != l) && i.Z.dispatch({ type: 'RECENT_AVATARS_UPDATE' }),
             t
         );
     } catch (t) {

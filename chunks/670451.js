@@ -1,10 +1,10 @@
 n.d(t, { Z: () => _ });
 var r = n(200651),
     i = n(192379),
-    o = n(481060),
-    a = n(386019),
+    a = n(481060),
+    o = n(386019),
     s = n(388032),
-    l = n(935693);
+    l = n(227832);
 function c(e, t, n) {
     return (
         t in e
@@ -60,16 +60,16 @@ function f(e, t) {
 function _(e) {
     let t = i.useRef(null);
     return (0, r.jsx)(
-        a.Z,
+        o.Z,
         f(u({}, e), {
             children: (e) =>
-                (0, r.jsx)(o.ua7, {
+                (0, r.jsx)(a.ua7, {
                     targetElementRef: t,
                     text: s.NW.string(s.t.UKOtz8),
                     'aria-label': !1,
                     children: (n) =>
                         (0, r.jsx)(
-                            o.P3F,
+                            a.P3F,
                             f(u({}, n, e), {
                                 innerRef: t,
                                 'aria-label': s.NW.string(s.t.UKOtz8),
@@ -82,8 +82,8 @@ function _(e) {
                                     t.preventDefault(), null == (r = n.onClick) || r.call(n), e.onClick(t);
                                 },
                                 className: l.contextMenu,
-                                children: (0, r.jsx)(o.xhG, {
-                                    color: o.TVs.colors.INTERACTIVE_NORMAL,
+                                children: (0, r.jsx)(a.xhG, {
+                                    color: a.TVs.colors.INTERACTIVE_NORMAL,
                                     size: 'xs'
                                 })
                             })

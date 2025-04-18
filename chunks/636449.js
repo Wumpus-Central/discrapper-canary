@@ -4,20 +4,20 @@ n.d(t, {
 });
 var r = n(570140),
     i = n(522474),
-    o = n(788983),
-    a = n(214629),
+    a = n(788983),
+    o = n(214629),
     s = n(422483),
     l = n(981631);
 function c(e) {
     var t;
     let { isContextless: n } = e;
-    return (null == (t = platform) ? void 0 : t.name) !== 'Firefox' && (!!n || a.ZP.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled || s.Z.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled);
+    return (null == (t = platform) ? void 0 : t.name) !== 'Firefox' && (!!n || o.ZP.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled || s.Z.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled);
 }
 async function u(e, t) {
     let n,
-        a = i.Z.getWindowOpen(l.KJ3.ACTIVITY_POPOUT);
+        o = i.Z.getWindowOpen(l.KJ3.ACTIVITY_POPOUT);
     e &&
-        !a &&
+        !o &&
         r.Z.wait(() => {
             r.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
         });
@@ -26,5 +26,5 @@ async function u(e, t) {
     } catch (e) {
         n = !1;
     }
-    return !n && e && o.xv(l.KJ3.ACTIVITY_POPOUT), n;
+    return !n && e && a.xv(l.KJ3.ACTIVITY_POPOUT), n;
 }

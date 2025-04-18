@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(259443),
     i = n(47770),
-    o = n(740197),
-    a = n(376398),
+    a = n(740197),
+    o = n(376398),
     s = n(65154);
 function l(e, t, n) {
     return (
@@ -31,7 +31,7 @@ class d extends i.Z {
     }
     destroy() {
         var e;
-        null == (e = this.audioElement) || e.pause(), null != this.videoStreamId && (0, a.jC)(this.videoStreamId), null != this.streamSourceNode && (this.streamSourceNode.disconnect(), (this.streamSourceNode = null)), null != this.levelNode && (this.levelNode.disconnect(), this.levelNode.port.postMessage('close'), (this.levelNode = null)), this.setSpeakingFlags(s.Dg.NONE), this.removeAllListeners();
+        null == (e = this.audioElement) || e.pause(), null != this.videoStreamId && (0, o.jC)(this.videoStreamId), null != this.streamSourceNode && (this.streamSourceNode.disconnect(), (this.streamSourceNode = null)), null != this.levelNode && (this.levelNode.disconnect(), this.levelNode.port.postMessage('close'), (this.levelNode = null)), this.setSpeakingFlags(s.Dg.NONE), this.removeAllListeners();
     }
     addTrack(e) {
         if (this.stream.getTracks().includes(e)) return this.stream.getTracks().length;
@@ -55,11 +55,11 @@ class d extends i.Z {
         }
         return (
             'video' === e.kind &&
-                (null != this.videoStreamId && (0, a.jC)(this.videoStreamId),
+                (null != this.videoStreamId && (0, o.jC)(this.videoStreamId),
                 this.stream.getVideoTracks().forEach((t) => {
                     e !== t && ((t.discordIsTearingDown = !0), this.stream.removeTrack(t));
                 }),
-                (this.videoStreamId = (0, a.N7)(this.stream)),
+                (this.videoStreamId = (0, o.N7)(this.stream)),
                 this.emit('video', this.videoStreamId)),
             'audio' === e.kind &&
                 this.stream.getAudioTracks().forEach((t) => {
@@ -69,7 +69,7 @@ class d extends i.Z {
         );
     }
     removeTrack(e) {
-        return this.stream.removeTrack(e), 'video' === e.kind && (null != this.videoStreamId && (0, a.jC)(this.videoStreamId), this.emit('video', null)), this.stream.getTracks().length;
+        return this.stream.removeTrack(e), 'video' === e.kind && (null != this.videoStreamId && (0, o.jC)(this.videoStreamId), this.emit('video', null)), this.stream.getTracks().length;
     }
     setSinkId(e) {
         (this.sinkId = e), this.updateAudioElement();
@@ -100,7 +100,7 @@ class d extends i.Z {
         if (null != e) {
             (e.muted = this._mute), (e.volume = this._volume / 100);
             let t = this.sinkId;
-            null != t && o.ZA && e.setSinkId(t);
+            null != t && a.ZA && e.setSinkId(t);
         }
     }
     constructor(e, t) {

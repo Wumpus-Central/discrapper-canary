@@ -2,18 +2,18 @@ n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(222062),
-    a = n(867176),
+    a = n(222062),
+    o = n(867176),
     s = n(654904),
     l = n(486324),
     c = n(228168),
     u = n(388032),
-    d = n(58959);
+    d = n(83561);
 function f(e) {
     let { user: t, displayProfile: n, guildId: f, canUsePremiumCustomization: _, pendingBanner: p, pendingAccentColor: h, isTryItOutFlow: m, disabledInputs: g, onUpsellClick: E } = e,
         b = _ || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
         y = b ? i.vdY : i.SrA,
-        v = (0, o.M)(b),
+        v = (0, a.M)(b),
         O = () => {
             if (!b && !v) {
                 null == E || E();
@@ -21,7 +21,7 @@ function f(e) {
             }
             (0, s.$r)(l.pC.BANNER, f, m);
         };
-    return (0, r.jsx)(a.Z, {
+    return (0, r.jsx)(o.Z, {
         user: t,
         displayProfile: n,
         guildId: f,

@@ -50,7 +50,7 @@ let o = ['#be0351', '#ff2c52'],
                 }
                 return i;
             })(e, ['width', 'height', 'primaryTintColor', 'secondaryTintColor']);
-        let { primaryColorsTransformed: g, secondaryColorsTransformed: Z } = (0, s.s)({
+        let { primaryColorsTransformed: Z, secondaryColorsTransformed: M } = (0, s.s)({
             primaryBaseColors: o,
             primaryTintColor: p,
             primaryTintLuminances: a,
@@ -97,11 +97,11 @@ let o = ['#be0351', '#ff2c52'],
                     children: [
                         (0, n.jsx)('path', {
                             d: 'M11 12v-2h-1V9H6v1H5v2H4v3h8v-3h-1Z',
-                            fill: Z[1]
+                            fill: M[1]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M14 3V2h-2V1H4v1H2v1H1v6h1v1h2V9h8v1h2V9h1V3h-1Z',
-                            fill: g[1]
+                            fill: Z[1]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M12 0H4v1h8V0Z',
@@ -121,7 +121,7 @@ let o = ['#be0351', '#ff2c52'],
                         }),
                         (0, n.jsx)('path', {
                             d: 'M15 3h-1v6h1V3Z',
-                            fill: g[0]
+                            fill: Z[0]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M15 6h-2v2h2V6ZM12 2h-2v2h2V2Z',
@@ -130,11 +130,11 @@ let o = ['#be0351', '#ff2c52'],
                         (0, n.jsx)('path', {
                             opacity: '.5',
                             d: 'M15 6h-1v2h1V6Z',
-                            fill: g[0]
+                            fill: Z[0]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M10 7H6v1h4V7ZM12 8h-2v1h2V8ZM6 8H4v1h2V8Z',
-                            fill: g[0]
+                            fill: Z[0]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M6 10H5v2h1v-2Z',
@@ -142,7 +142,7 @@ let o = ['#be0351', '#ff2c52'],
                         }),
                         (0, n.jsx)('path', {
                             d: 'M11 10h-1v2h1v-2ZM11 12v2H4v1h8v-3h-1Z',
-                            fill: Z[0]
+                            fill: M[0]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M5 12H4v2h1v-2Z',
@@ -150,7 +150,7 @@ let o = ['#be0351', '#ff2c52'],
                         }),
                         (0, n.jsx)('path', {
                             d: 'M4 9H2v1h2V9ZM14 9h-2v1h2V9Z',
-                            fill: g[0]
+                            fill: Z[0]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M8 6H6v2h2V6Z',
@@ -159,7 +159,7 @@ let o = ['#be0351', '#ff2c52'],
                         (0, n.jsx)('path', {
                             opacity: '.5',
                             d: 'M8 7H6v1h2V7Z',
-                            fill: g[0]
+                            fill: Z[0]
                         }),
                         (0, n.jsx)('path', {
                             d: 'M10 8H6v1h4V8Z',

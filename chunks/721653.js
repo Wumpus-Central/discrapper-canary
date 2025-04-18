@@ -1,7 +1,7 @@
 var r = n(687249),
     i = n(779518),
-    o = 1,
-    a = 2;
+    a = 1,
+    o = 2;
 e.exports = function (e, t, n, s) {
     var l = n.length,
         c = l,
@@ -20,7 +20,7 @@ e.exports = function (e, t, n, s) {
         } else {
             var h = new r();
             if (s) var m = s(_, p, f, e, t, h);
-            if (!(void 0 === m ? i(p, _, o | a, s, h) : m)) return !1;
+            if (!(void 0 === m ? i(p, _, a | o, s, h) : m)) return !1;
         }
     }
     return !0;

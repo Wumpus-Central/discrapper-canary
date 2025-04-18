@@ -6,7 +6,7 @@ var i = n(200100),
     s = n(481060),
     a = n(671533),
     o = n(388032),
-    c = n(407857);
+    c = n(73697);
 function d(e) {
     let { testimonial: t, className: n } = e,
         { message: r, profilePic: i, adminTitle: a, emphasisColor: d = 'interactive-normal' } = t;

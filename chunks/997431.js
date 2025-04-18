@@ -1,12 +1,12 @@
 n.d(t, {
-    MP: () => a,
+    MP: () => o,
     lc: () => l,
     up: () => s
 });
 var r = n(131704),
     i = n(411198),
-    o = n(981631);
-function a(e, t) {
+    a = n(981631);
+function o(e, t) {
     if (null == e || '' === e) return null;
     let n = new Date(e);
     return !(n instanceof Date) || isNaN(n.getTime())
@@ -17,10 +17,10 @@ function a(e, t) {
           });
 }
 function s(e) {
-    return e.hasFeature(o.oNc.GUILD_TAGS);
+    return e.hasFeature(a.oNc.GUILD_TAGS);
 }
 function l(e) {
-    if (null == e.guild || (0, i.Qs)(e.guild).hasFeature(o.oNc.HUB)) return !1;
+    if (null == e.guild || (0, i.Qs)(e.guild).hasFeature(a.oNc.HUB)) return !1;
     let t = (null == e ? void 0 : e.channel) != null ? (0, r.jD)(e.channel) : null;
     return null == t || !t.isGuildVocal();
 }

@@ -7,7 +7,7 @@ n.r(t),
 var r = n(200651);
 n(192379);
 var i = n(239091);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,7 +31,7 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -69,19 +69,19 @@ function c() {
 }
 function u(e) {
     let t = c(),
-        o = e.target;
-    if ((null == o ? void 0 : o.tagName) === 'TEXTAREA' || (null == o ? void 0 : o.tagName) === 'INPUT') {
-        if ((null == o ? void 0 : o.type) !== 'checkbox')
+        a = e.target;
+    if ((null == a ? void 0 : a.tagName) === 'TEXTAREA' || (null == a ? void 0 : a.tagName) === 'INPUT') {
+        if ((null == a ? void 0 : a.type) !== 'checkbox')
             return (0, i.jW)(
                 e,
                 async () => {
                     let { default: e } = await n.e('99989').then(n.bind(n, 889662));
-                    return (n) => (0, r.jsx)(e, l(a({}, n), { text: t }));
+                    return (n) => (0, r.jsx)(e, l(o({}, n), { text: t }));
                 },
                 { enableSpellCheck: !0 }
             );
     } else {
-        if ('none' === window.getComputedStyle(o).getPropertyValue('-webkit-user-select')) return void e.preventDefault();
+        if ('none' === window.getComputedStyle(a).getPropertyValue('-webkit-user-select')) return void e.preventDefault();
         let s,
             c,
             u,
@@ -90,7 +90,7 @@ function u(e) {
         if (null != c)
             return (0, i.jW)(e, async () => {
                 let { default: e } = await n.e('12241').then(n.bind(n, 115512));
-                return (t) => (0, r.jsx)(e, l(a({}, t), { src: null != c ? c : '' }));
+                return (t) => (0, r.jsx)(e, l(o({}, t), { src: null != c ? c : '' }));
             });
         if (null != s)
             return (0, i.jW)(e, async () => {
@@ -98,7 +98,7 @@ function u(e) {
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        l(a({}, t), {
+                        l(o({}, t), {
                             href: s,
                             textContent: u
                         })
@@ -107,7 +107,7 @@ function u(e) {
         if (null != t && '' !== t)
             return (0, i.jW)(e, async () => {
                 let { default: e } = await n.e('3865').then(n.bind(n, 745763));
-                return (n) => (0, r.jsx)(e, l(a({}, n), { text: t }));
+                return (n) => (0, r.jsx)(e, l(o({}, n), { text: t }));
             });
     }
     return e.preventDefault(), null;

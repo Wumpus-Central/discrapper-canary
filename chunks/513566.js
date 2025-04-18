@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r = n(348327),
     i = n.n(r),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(570140),
     l = n(846027),
     c = n(287734),
@@ -60,18 +60,18 @@ class I extends u.Z {
             O(
                 this,
                 'handleViewUpdate',
-                a().debounce(() => {
+                o().debounce(() => {
                     let e = g.Z.getVoiceChannelId();
                     if (null == e) return void this.setThumbarButtons([]);
                     let t = m.Z.isSelfMute(),
                         n = m.Z.isSelfDeaf(),
                         r = m.Z.isVideoEnabled(),
                         i = m.Z.isVideoAvailable(),
-                        o = h.Z.getChannel(e),
-                        a = null == o || (0, f.y)(o),
+                        a = h.Z.getChannel(e),
+                        o = null == a || (0, f.y)(a),
                         { reachedLimit: s, limit: l } =
-                            null != o
-                                ? (0, d.t)(o)
+                            null != a
+                                ? (0, d.t)(a)
                                 : {
                                       reachedLimit: void 0,
                                       limit: void 0
@@ -79,9 +79,9 @@ class I extends u.Z {
                         c = (0, _.X)({
                             enabled: r,
                             join: !1,
-                            channel: o,
+                            channel: a,
                             cameraUnavailable: !i,
-                            hasPermission: a,
+                            hasPermission: o,
                             channelLimit: l,
                             channelLimitReached: s
                         });

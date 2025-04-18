@@ -2,22 +2,22 @@ let r;
 n.d(t, { Z: () => I }), n(388685), n(35282);
 var i = n(200651),
     s = n(192379),
-    l = n(873546),
-    o = n(442837),
+    o = n(873546),
+    l = n(442837),
     a = n(481060),
     c = n(980591),
     u = n(605782),
     d = n(133853),
     h = n(568154),
-    p = n(353926),
-    g = n(703656),
-    f = n(981631),
-    m = n(452802);
+    g = n(353926),
+    p = n(703656),
+    m = n(981631),
+    f = n(963865);
 let _ = n(575703),
-    N = n(2984),
-    x = [f.Z5c.LOGIN, f.Z5c.LOGIN_HANDOFF, f.Z5c.REGISTER, f.Z5c.INVITE(''), f.Z5c.GIFT_CODE(''), f.Z5c.GUILD_TEMPLATE_LOGIN(''), f.Z5c.GUILD_TEMPLATE(''), f.Z5c.DISABLE_EMAIL_NOTIFICATIONS, f.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, f.Z5c.BILLING_PREMIUM_SUBSCRIBE, f.Z5c.BILLING_PAYMENT_SOURCES_CREATE, f.Z5c.BILLING_PAYMENTS, f.Z5c.BILLING_PREMIUM_SWITCH_PLAN, f.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, f.Z5c.VERIFY, f.Z5c.VERIFY_HUB_EMAIL, f.Z5c.REJECT_IP, f.Z5c.REJECT_MFA, f.Z5c.AUTHORIZE_IP, f.Z5c.AUTHORIZE_PAYMENT, f.Z5c.RESET, f.Z5c.HANDOFF, f.Z5c.REPORT, f.Z5c.REPORT_SECOND_LOOK, f.Z5c.ACCOUNT_REVERT('')];
+    x = n(2984),
+    N = [m.Z5c.LOGIN, m.Z5c.LOGIN_HANDOFF, m.Z5c.REGISTER, m.Z5c.INVITE(''), m.Z5c.GIFT_CODE(''), m.Z5c.GUILD_TEMPLATE_LOGIN(''), m.Z5c.GUILD_TEMPLATE(''), m.Z5c.DISABLE_EMAIL_NOTIFICATIONS, m.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, m.Z5c.BILLING_PREMIUM_SUBSCRIBE, m.Z5c.BILLING_PAYMENT_SOURCES_CREATE, m.Z5c.BILLING_PAYMENTS, m.Z5c.BILLING_PREMIUM_SWITCH_PLAN, m.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, m.Z5c.VERIFY, m.Z5c.VERIFY_HUB_EMAIL, m.Z5c.REJECT_IP, m.Z5c.REJECT_MFA, m.Z5c.AUTHORIZE_IP, m.Z5c.AUTHORIZE_PAYMENT, m.Z5c.RESET, m.Z5c.HANDOFF, m.Z5c.REPORT, m.Z5c.REPORT_SECOND_LOOK, m.Z5c.ACCOUNT_REVERT('')];
 function b(e) {
-    return x.some((t) => e.startsWith(t));
+    return N.some((t) => e.startsWith(t));
 }
 let E = (e) => ((r = e), e);
 function v(e) {
@@ -26,8 +26,8 @@ function v(e) {
         (function () {
             var e;
             let [t, n] = s.useState(!1),
-                [i, l] = s.useState(!0),
-                a = (0, o.e7)([p.Z], () => p.Z.hasLoadedExperiments);
+                [i, o] = s.useState(!0),
+                a = (0, l.e7)([g.Z], () => g.Z.hasLoadedExperiments);
             return ((0, c.Z)(() => {}, 300), void 0 !== r) ? r : !i && a ? (t || n(!0), E(((e = 0), 'default'))) : i ? E('default') : 'loading';
         })()
     ) {
@@ -35,13 +35,13 @@ function v(e) {
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)('img', {
-                        className: m.artwork,
+                        className: f.artwork,
                         src: _,
                         alt: ''
                     }),
                     (0, i.jsx)('img', {
-                        className: m.logoWithText,
-                        src: N,
+                        className: f.logoWithText,
+                        src: x,
                         alt: ''
                     }),
                     t
@@ -60,14 +60,14 @@ class j extends s.Component {
         window.removeEventListener('resize', this.handleResize);
     }
     mobileTransitionTo(e, t) {
-        if (b(e)) (0, g.uL)(e, t);
+        if (b(e)) (0, p.uL)(e, t);
         else {
             let n = null != t && null != t.search ? t.search : null;
             window.location = null == n ? e : ''.concat(e, '?').concat(n);
         }
     }
     mobileReplaceWith(e) {
-        b(e) ? (0, g.dL)(e) : (window.location = e);
+        b(e) ? (0, p.dL)(e) : (window.location = e);
     }
     renderDefault() {
         let { splash: e } = this.props,
@@ -75,13 +75,13 @@ class j extends s.Component {
                 component: s.Fragment,
                 children: s.Children.map(this.props.children, (e) =>
                     s.cloneElement(e, {
-                        transitionTo: g.uL,
-                        replaceWith: g.dL
+                        transitionTo: p.uL,
+                        replaceWith: p.dL
                     })
                 )
             });
         return (0, i.jsx)('div', {
-            className: m.characterBackground,
+            className: f.characterBackground,
             children: (0, i.jsx)(a.y5t, {
                 forceLevel: 1,
                 children:
@@ -90,7 +90,7 @@ class j extends s.Component {
                               children: [
                                   (0, i.jsx)(d.Z, {
                                       show: !0,
-                                      className: m.logo
+                                      className: f.logo
                                   }),
                                   (0, i.jsx)(h.h, {
                                       splash: e,
@@ -116,7 +116,7 @@ class j extends s.Component {
     render() {
         let { isMobileWidth: e } = this.state,
             t = navigator.userAgent.includes('GameLauncher');
-        return e || l.tq || l.Em || t ? this.renderMobile() : this.renderDefault();
+        return e || o.tq || o.Em || t ? this.renderMobile() : this.renderDefault();
     }
     constructor(e) {
         var t, n;

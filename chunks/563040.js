@@ -12,8 +12,8 @@ n.d(t, {
     n(415506);
 var r = n(913527),
     i = n.n(r),
-    o = n(55935);
-function a(e, t, n) {
+    a = n(55935);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ class y {
         return this._index[t.unix()];
     }
     _createLabel(e) {
-        return (0, o.vc)(e.locale(i().locale()), this.labelFormat);
+        return (0, a.vc)(e.locale(i().locale()), this.labelFormat);
     }
     _generateTimeOptions() {
         (this.options = []), (this._index = {});
@@ -115,7 +115,7 @@ class y {
         return null == t ? this._addNewOption(e) : t;
     }
     constructor({ intervalInMinutes: e = m, labelFormat: t = g } = {}) {
-        if ((a(this, 'intervalInMinutes', void 0), a(this, 'labelFormat', void 0), a(this, 'options', []), a(this, '_index', {}), e <= 0)) throw Error('intervalInMinutes should be positive number, got '.concat(e));
+        if ((o(this, 'intervalInMinutes', void 0), o(this, 'labelFormat', void 0), o(this, 'options', []), o(this, '_index', {}), e <= 0)) throw Error('intervalInMinutes should be positive number, got '.concat(e));
         (this.intervalInMinutes = e), (this.labelFormat = t), this._generateTimeOptions();
     }
 }

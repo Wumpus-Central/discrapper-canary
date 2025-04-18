@@ -5,8 +5,8 @@ n.d(t, {
     jy: () => T
 });
 var i = n(252258),
-    o = n(570140),
-    a = n(519938),
+    a = n(570140),
+    o = n(519938),
     s = n(317770),
     l = n(928518),
     c = n(592125),
@@ -26,21 +26,21 @@ function O(e, t, n) {
     if ((0, m.R)({ isContextless: t.location.kind === i.E.CONTEXTLESS }) || d.Z.isOpen(n)) return !1;
     if (null != r) {
         let e = r;
-        o.Z.wait(() => a.xv(e));
+        a.Z.wait(() => o.xv(e));
     }
-    o.Z.wait(() => a.bA(n, v.NYg.EMBED_IFRAME, { channel: e })), (r = n);
+    a.Z.wait(() => o.bA(n, v.NYg.EMBED_IFRAME, { channel: e })), (r = n);
 }
 function I() {
     let e = r;
-    null != e && d.Z.isOpen(e) && (o.Z.wait(() => a.xv(e)), (r = null));
+    null != e && d.Z.isOpen(e) && (a.Z.wait(() => o.xv(e)), (r = null));
 }
 function S(e) {
     let t = null != e ? e : r;
-    null != t && d.Z.isOpen(t) && o.Z.wait(() => a.Cp(t));
+    null != t && d.Z.isOpen(t) && a.Z.wait(() => o.Cp(t));
 }
 function T(e) {
     let t = null != e ? e : r;
-    null != t && d.Z.isOpen(t) && o.Z.wait(() => a.$Z(t));
+    null != t && d.Z.isOpen(t) && a.Z.wait(() => o.$Z(t));
 }
 function N() {
     let e = g.ZP.getConnectedActivityLocation(),

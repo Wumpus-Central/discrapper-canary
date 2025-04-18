@@ -2,8 +2,8 @@ n.d(t, { Z: () => v }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(704215),
-    a = n(481060),
+    a = n(704215),
+    o = n(481060),
     s = n(194359),
     l = n(377171),
     c = n(243778),
@@ -12,7 +12,7 @@ var i = n(442837),
     f = n(981631),
     _ = n(921944),
     p = n(388032),
-    h = n(917921);
+    h = n(86777);
 function m(e, t, n) {
     return (
         t in e
@@ -66,7 +66,7 @@ function b(e, t) {
     );
 }
 function y() {
-    return (0, r.jsx)(a.IGR, {
+    return (0, r.jsx)(o.IGR, {
         color: l.Z.BG_BRAND,
         text: p.NW.string(p.t.y2b7CA)
     });
@@ -90,12 +90,12 @@ function v(e) {
             }),
             [T]
         ),
-        R = [o.z.IGNORE_USER_NEW_BADGE],
+        R = [a.z.IGNORE_USER_NEW_BADGE],
         [P, w] = (0, c.US)(R),
-        D = P === o.z.IGNORE_USER_NEW_BADGE;
+        D = P === a.z.IGNORE_USER_NEW_BADGE;
     return N || C
         ? null
-        : (0, r.jsx)(a.sNh, {
+        : (0, r.jsx)(o.sNh, {
               id: 'ignore',
               color: 'default',
               label: A
@@ -110,9 +110,9 @@ function v(e) {
                     }
                   : () => {
                         D && w(_.L.TAKE_ACTION),
-                            (0, a.ZDy)(
+                            (0, o.ZDy)(
                                 async () => {
-                                    let { default: e } = await Promise.all([n.e('97652'), n.e('27346')]).then(n.bind(n, 240515));
+                                    let { default: e } = await Promise.all([n.e('97652'), n.e('25784')]).then(n.bind(n, 240515));
                                     return (n) =>
                                         (0, r.jsx)(
                                             e,
@@ -126,7 +126,7 @@ function v(e) {
                                             })
                                         );
                                 },
-                                { contextKey: (0, a.VnL)(S) }
+                                { contextKey: (0, o.VnL)(S) }
                             );
                     }
           });

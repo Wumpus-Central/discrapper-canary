@@ -1,8 +1,8 @@
-n.d(t, { Z: () => eo }), n(388685);
+n.d(t, { Z: () => ea }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(954955),
-    a = n.n(o),
+    a = n(954955),
+    o = n.n(a),
     s = n(359959),
     l = n(442837),
     c = n(477690),
@@ -34,7 +34,7 @@ var r = n(200651),
     M = n(15350),
     k = n(611480),
     j = n(981631),
-    U = n(751947);
+    U = n(655304);
 function G(e, t, n) {
     return (
         t in e
@@ -99,26 +99,26 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     J = q + 2 * Q,
     $ = 8,
     ee = 200,
-    et = a()(T.Iw, ee),
-    en = a()(T.m1, ee),
+    et = o()(T.Iw, ee),
+    en = o()(T.m1, ee),
     er = i.forwardRef(function (e, t) {
-        var o;
-        let { containerWidth: a, channel: c, onSelectSticker: O, closePopout: G } = e,
+        var a;
+        let { containerWidth: o, channel: c, onSelectSticker: O, closePopout: G } = e,
             { location: F } = (0, d.O)(),
             { analyticsLocations: z } = (0, _.ZP)(f.Z.STICKER_PICKER),
-            q = (null == (o = (0, E.N)()) ? void 0 : o.subscription_trial) != null,
+            q = (null == (a = (0, E.N)()) ? void 0 : a.subscription_trial) != null,
             Q = i.useRef(null),
             ee = i.useRef(null),
             er = i.useRef(null),
             ei = (0, I.Q)((e) => e.showPremiumUpsell),
-            [eo, ea] = (0, h.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], s.X),
+            [ea, eo] = (0, h.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], s.X),
             es = i.useRef('');
         i.useImperativeHandle(t, () => ({ onPickerOpen: ex }));
         let el = (0, N.Sd)(c),
             ec = 0 === el.filter((e) => e.type !== C.Ih.EMPTY_GUILD_UPSELL).length,
             eu = (0, m.ep)({
                 gridWrapperRef: Q,
-                containerWidth: a,
+                containerWidth: o,
                 showingEmptyState: ec,
                 listPaddingLeft: H,
                 listScrollbarWidth: $
@@ -126,7 +126,7 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ed = b._O.useSetting(),
             ef = i.useMemo(() => new Set(ed), [ed]),
             e_ = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
-            ep = i.useMemo(() => (0, M.S)(eo, e_, c), [eo, e_, c]),
+            ep = i.useMemo(() => (0, M.S)(ea, e_, c), [ea, e_, c]),
             eh = (0, N.RJ)(),
             em = (0, N.LZ)(),
             eg = (0, l.cj)([A.Z], () => A.Z.getAllGuildStickers()),
@@ -134,9 +134,9 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ey = eE.length + eb.length,
             ev = i.useCallback(
                 (e) => {
-                    '' === eo ? (0, T.On)(e) : (0, T.Yk)(e, eo, ey), O(e.sticker, C.V0.STICKER_PICKER);
+                    '' === ea ? (0, T.On)(e) : (0, T.Yk)(e, ea, ey), O(e.sticker, C.V0.STICKER_PICKER);
                 },
-                [O, eo, ey]
+                [O, ea, ey]
             ),
             eO = null != eu && eu > Z,
             {
@@ -164,7 +164,7 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 location: F
                             }),
                                 (0, u.ZDy)(async () => {
-                                    let { default: t } = await Promise.all([n.e('93626'), n.e('52784')]).then(n.bind(n, 136735));
+                                    let { default: t } = await Promise.all([n.e('93626'), n.e('61547')]).then(n.bind(n, 136735));
                                     return (n) => (0, r.jsx)(t, B({ guildId: e.guild_id }, n));
                                 });
                             break;
@@ -203,7 +203,7 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     r += e.length;
                 }),
                 (0, T.ev)({
-                    containerWidth: a,
+                    containerWidth: o,
                     favoriteStickers: eh,
                     frequentlyUsedStickers: em,
                     guildStickers: t,
@@ -211,11 +211,11 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 });
         };
         i.useEffect(() => {
-            '' === es.current && '' !== eo && (0, T.n8)(), (es.current = eo);
-        }, [eo]),
+            '' === es.current && '' !== ea && (0, T.n8)(), (es.current = ea);
+        }, [ea]),
             i.useEffect(() => {
-                0 === ey ? et(eo) : en(eo, ey, ea);
-            }, [eo, ey, ea]),
+                0 === ey ? et(ea) : en(ea, ey, eo);
+            }, [ea, ey, eo]),
             i.useLayoutEffect(() => {
                 var e;
                 null == (e = er.current) || e.focus();
@@ -297,4 +297,4 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             children: e.isLoading ? (0, r.jsx)(u.$jN, { className: U.loadingIndicator }) : (0, r.jsx)(er, V(B({}, e), { ref: t }))
         })
     ),
-    eo = i.forwardRef(ei);
+    ea = i.forwardRef(ei);

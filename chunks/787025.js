@@ -5,13 +5,13 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(466377),
+    a = n.n(i),
+    o = n(466377),
     s = n(481060),
     l = n(252618),
     c = n(981631),
     u = n(388032),
-    d = n(499374);
+    d = n(484618);
 function f(e, t, n) {
     return (
         t in e
@@ -70,8 +70,8 @@ function m(e, t) {
         r,
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -80,8 +80,8 @@ function g(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function E(e) {
@@ -92,7 +92,7 @@ function E(e) {
             theme: c.BRd.DARK,
             children: (e) =>
                 (0, r.jsx)('div', {
-                    className: o()(e, d.oauth2PageWrapper, i),
+                    className: a()(e, d.oauth2PageWrapper, i),
                     children:
                         !0 === n
                             ? t
@@ -105,14 +105,14 @@ function E(e) {
     );
 }
 function b(e) {
-    var { children: t, footer: n, transitionState: i, modalSize: o } = e,
+    var { children: t, footer: n, transitionState: i, modalSize: a } = e,
         s = m(e, ['children', 'footer', 'transitionState', 'modalSize']);
     return (0, r.jsxs)(
-        a.Y0,
+        o.Y0,
         h(
             _(
                 {
-                    size: null != o ? o : a.Cg.DYNAMIC,
+                    size: null != a ? a : o.Cg.DYNAMIC,
                     transitionState: i,
                     className: d.oauth2ModalWrapper
                 },
@@ -120,13 +120,13 @@ function b(e) {
             ),
             {
                 children: [
-                    (0, r.jsx)(a.hz, {
+                    (0, r.jsx)(o.hz, {
                         paddingFix: !1,
                         className: d.oauth2ModalContent,
                         children: t
                     }),
                     null != n &&
-                        (0, r.jsx)(a.mz, {
+                        (0, r.jsx)(o.mz, {
                             className: d.footer,
                             children: n
                         })

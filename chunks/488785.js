@@ -9,7 +9,7 @@ var r = n(200651),
     u = n(570140),
     d = n(596454),
     p = n(607070),
-    h = n(456554);
+    h = n(301222);
 let f = [h.emoji1, h.emoji2, h.emoji3, h.emoji4],
     m = i.memo(function (e) {
         var t;

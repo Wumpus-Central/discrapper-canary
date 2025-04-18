@@ -6,7 +6,7 @@ var r = n(200651),
     a = n(481060),
     s = n(65205),
     u = n(388032),
-    c = n(725916);
+    c = n(670161);
 function d(e) {
     let { className: t } = e;
     return (0, r.jsxs)('svg', {

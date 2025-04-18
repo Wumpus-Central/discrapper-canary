@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(200651),
     i = n(192379),
-    o = n(995899),
-    a = n(399606),
+    a = n(995899),
+    o = n(399606),
     s = n(607070),
     l = n(981631);
 function c(e, t, n) {
@@ -74,8 +74,8 @@ let _ = 20,
     h = i.createContext(p);
 function m(e) {
     let { children: t, confettiCanvas: n, spriteCanvas: l, baseConfig: c, addClickListener: d, removeClickListener: m } = e,
-        g = (0, o.uR)(n, l),
-        E = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        g = (0, a.uR)(n, l),
+        E = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
         b = i.useMemo(
             () =>
                 E

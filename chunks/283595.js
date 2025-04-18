@@ -1,8 +1,8 @@
 n.d(t, { Z: () => Z }), n(388685), n(997841), n(358797);
 var r,
     i = n(392711),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(433517),
     l = n(570140),
     c = n(85521),
@@ -100,8 +100,8 @@ function D(e) {
 function L(e) {
     let { applicationId: t, branchId: n, flags: r } = e,
         i = (0, d.Tu)(t, n),
-        o = B(t, n);
-    null != o && !o.isHidden() && u.yE(r, _.eHb.HIDDEN) && (N = !0), I.add(i);
+        a = B(t, n);
+    null != a && !a.isHidden() && u.yE(r, _.eHb.HIDDEN) && (N = !0), I.add(i);
 }
 function x(e) {
     let { libraryApplication: t } = e,
@@ -142,7 +142,7 @@ function B(e, t) {
 function F() {
     return h({}, O, v);
 }
-class V extends (r = a.ZP.Store) {
+class V extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(f.default);
         let e = s.K.get(E);
@@ -173,8 +173,8 @@ class V extends (r = a.ZP.Store) {
         if (null != n) {
             var r;
             let i = (0, d.Tu)(e, n),
-                o = null != (r = v[i]) ? r : O[i];
-            if (null != o && (0, d.Je)(o) && (t || !o.isHidden())) return o;
+                a = null != (r = v[i]) ? r : O[i];
+            if (null != a && (0, d.Je)(a) && (t || !a.isHidden())) return a;
         }
         let i = F();
         for (let n in i)
@@ -193,7 +193,7 @@ class V extends (r = a.ZP.Store) {
         return y;
     }
     get entitledBranchIds() {
-        return o()(F())
+        return a()(F())
             .values()
             .filter((e) => (0, d.Je)(e))
             .map((e) => e.branchId)

@@ -1,4 +1,4 @@
-n.d(t, { m: () => j });
+n.d(t, { m: () => S });
 var r = n(200651),
     i = n(192379),
     l = n(399606),
@@ -16,27 +16,27 @@ var r = n(200651),
     b = n(540126),
     y = n(434479),
     _ = n(981631),
-    v = n(176505),
-    O = n(490897),
+    O = n(176505),
+    v = n(490897),
     C = n(388032),
-    S = n(732020);
-function j(e) {
-    let { guild: t, selected: j } = e,
-        E = (0, h.Z)(t),
-        x = (0, u.wE)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
+    j = n(990252);
+function S(e) {
+    let { guild: t, selected: S } = e,
+        x = (0, h.Z)(t),
+        E = (0, u.wE)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         I = (0, l.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
-        N = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, O.W.GUILD_ONBOARDING_QUESTION)),
+        N = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, v.W.GUILD_ONBOARDING_QUESTION)),
         P = I.length > b.Cb,
         w = (0, l.e7)([d.Z, g.ZP], () => {
             let e = d.Z.lastFetchedAt(t.id),
-                n = g.ZP.lastMessageId(t.id, O.W.GUILD_ONBOARDING_QUESTION);
+                n = g.ZP.lastMessageId(t.id, v.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
             let r = m.default.extractTimestamp(n);
             return null != e && e > r;
         }),
         Z = i.useCallback(() => {
-            (0, f.uL)(_.Z5c.CHANNEL(t.id, E ? v.oC.CUSTOMIZE_COMMUNITY : v.oC.CHANNEL_BROWSER));
-        }, [t.id, E]),
+            (0, f.uL)(_.Z5c.CHANNEL(t.id, x ? O.oC.CUSTOMIZE_COMMUNITY : O.oC.CHANNEL_BROWSER));
+        }, [t.id, x]),
         T = i.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
@@ -92,13 +92,13 @@ function j(e) {
         ),
         A = null;
     return (
-        (x && !N && !P) ||
-            j ||
+        (E && !N && !P) ||
+            S ||
             w ||
             (A = (0, r.jsx)(a.IGR, {
                 color: s.Z.colors.BADGE_BRAND_BG.css,
                 text: C.NW.string(C.t.y2b7CA),
-                className: S.newChannel
+                className: j.newChannel
             })),
         (0, r.jsx)(y.m, {
             id: 'channels-'.concat(t.id),
@@ -108,8 +108,8 @@ function j(e) {
                     color: 'currentColor',
                     className: e
                 }),
-            text: E ? C.NW.string(C.t.h9mGOD) : C.NW.string(C.t.et6wam),
-            selected: j,
+            text: x ? C.NW.string(C.t.h9mGOD) : C.NW.string(C.t.et6wam),
+            selected: S,
             onClick: Z,
             onContextMenu: T,
             trailing: A

@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(291044);
-function a(e, t, n) {
+    a = n(372584);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -61,8 +61,8 @@ function u(e, t) {
         r,
         i = d(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -71,18 +71,18 @@ function d(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let f = {
-        UP: o.directionUp,
-        RIGHT: o.directionRight,
-        DOWN: o.directionDown,
-        LEFT: o.directionLeft
+        UP: a.directionUp,
+        RIGHT: a.directionRight,
+        DOWN: a.directionDown,
+        LEFT: a.directionLeft
     },
     _ = (e) => {
-        var { direction: t = f.DOWN, width: n = 24, height: o = 24, color: a = 'currentColor', className: l, foreground: d, expanded: _ } = e,
+        var { direction: t = f.DOWN, width: n = 24, height: a = 24, color: o = 'currentColor', className: l, foreground: d, expanded: _ } = e,
             p = u(e, ['direction', 'width', 'height', 'color', 'className', 'foreground', 'expanded']);
         let h = t;
         !0 === _ ? (h = f.DOWN) : !1 === _ && (h = f.RIGHT);
@@ -98,8 +98,8 @@ let f = {
                 className: l,
                 size: 'custom',
                 width: n,
-                height: o,
-                color: null != a ? a : 'currentColor',
+                height: a,
+                color: null != o ? o : 'currentColor',
                 colorClass: d
             })
         );

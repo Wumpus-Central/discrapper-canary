@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u }), n(35282);
 var r = n(657305),
     i = n(394821),
-    o = n(841784),
-    a = n(503438),
+    a = n(841784),
+    o = n(503438),
     s = n(750154),
     l = n(981631),
     c = n(388032);
@@ -11,7 +11,7 @@ function u(e) {
         n = (null == e ? void 0 : e.name) === '' ? null : null == e ? void 0 : e.name,
         u = (null == e ? void 0 : e.details) === '' ? null : null == e ? void 0 : e.details,
         d = (null == e ? void 0 : e.state) === '' ? null : null == e ? void 0 : e.state;
-    if ((0, o.Z)(e)) {
+    if ((0, a.Z)(e)) {
         let e = (0, r.Z)(n);
         return {
             text: e,
@@ -23,7 +23,7 @@ function u(e) {
             text: c.NW.format(c.t.lFApm5, { game: n }),
             tooltip: c.NW.formatToPlainString(c.t.lFApm5, { game: n })
         };
-    if ((0, a.Z)(e) && t && null != d) {
+    if ((0, o.Z)(e) && t && null != d) {
         var f;
         let e = null == (f = d.split(';')) ? void 0 : f.join(', ');
         return {

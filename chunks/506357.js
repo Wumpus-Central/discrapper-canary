@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => f });
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -16,13 +16,13 @@ var r = n(200651),
     T = n(981631),
     S = n(176505),
     p = n(388032),
-    A = n(252553);
-function R(e) {
-    var t, R;
-    let { onDismiss: P } = e,
-        f = (0, l.e7)([E.Z], () => E.Z.getGuildId()),
-        C = (0, l.e7)([d.Z], () => (null != f ? d.Z.getChannelId(f) : null), [f]),
-        D = null != f ? f : null,
+    A = n(302654);
+function f(e) {
+    var t, f;
+    let { onDismiss: R } = e,
+        P = (0, l.e7)([E.Z], () => E.Z.getGuildId()),
+        C = (0, l.e7)([d.Z], () => (null != P ? d.Z.getChannelId(P) : null), [P]),
+        D = null != P ? P : null,
         g = (0, l.e7)([u.Z], () => (null != D ? u.Z.getGuild(D) : null), [D]),
         { shouldShowIncidentActions: y, incidentData: m, isUnderLockdown: h } = (0, I.mI)(D),
         b = (0, s.n2)(null != (t = null == g ? void 0 : g.id) ? t : T.lds),
@@ -91,23 +91,23 @@ function R(e) {
                 };
             });
         },
-        L = (0, r.jsx)(a.Z, {
+        Z = (0, r.jsx)(a.Z, {
             className: A.guildIcon,
             guild: g,
             size: a.Z.Sizes.MINI
         }),
-        Z = (0, N.OY)(m, g.name);
-    if (null != (null != (R = m.dmsDisabledUntil) ? R : m.invitesDisabledUntil) && h)
+        L = (0, N.OY)(m, g.name);
+    if (null != (null != (f = m.dmsDisabledUntil) ? f : m.invitesDisabledUntil) && h)
         return (0, r.jsxs)(o.qXd, {
             className: A.notice,
             color: o.DM8.NEUTRAL,
             children: [
                 (0, r.jsx)(o.RyX, {
-                    onClick: P,
+                    onClick: R,
                     noticeType: T.kVF.GUILD_RAID_NOTIFICATION
                 }),
-                L,
                 Z,
+                L,
                 (0, r.jsx)(o.EyT, {
                     className: A.actionButton,
                     onClick: () => M(!1),
@@ -124,19 +124,19 @@ function R(e) {
                 })
             ]
         });
-    let k = (0, N.CG)(m) ? p.NW.formatToPlainString(p.t.tZTx2N, { guildName: g.name }) : (0, N.kk)(m) ? p.NW.formatToPlainString(p.t['1bSmxs'], { guildName: g.name }) : p.NW.formatToPlainString(p.t.W87xDA, { guildName: g.name }),
-        v = b && C === S.oC.MEMBER_SAFETY;
+    let v = (0, N.CG)(m) ? p.NW.formatToPlainString(p.t.tZTx2N, { guildName: g.name }) : (0, N.kk)(m) ? p.NW.formatToPlainString(p.t['1bSmxs'], { guildName: g.name }) : p.NW.formatToPlainString(p.t.W87xDA, { guildName: g.name }),
+        k = b && C === S.oC.MEMBER_SAFETY;
     return (0, r.jsxs)(o.qXd, {
         className: A.notice,
         color: o.DM8.WARNING,
         children: [
             (0, r.jsx)(o.RyX, {
-                onClick: P,
+                onClick: R,
                 noticeType: T.kVF.GUILD_RAID_NOTIFICATION
             }),
-            L,
-            k,
-            !v &&
+            Z,
+            v,
+            !k &&
                 (0, r.jsx)(o.EyT, {
                     className: A.actionButton,
                     onClick: () => M(!0),

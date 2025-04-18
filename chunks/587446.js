@@ -2,10 +2,10 @@ n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(388032),
-    l = n(939251);
+    l = n(584235);
 function c(e, t, n) {
     return (
         t in e
@@ -60,16 +60,16 @@ function f(e, t) {
 }
 function _(e) {
     let { text: t = s.NW.string(s.t['5AFxuL']), className: n } = e;
-    return (0, r.jsx)(a.ua7, {
+    return (0, r.jsx)(o.ua7, {
         text: t,
         children: (e) =>
             (0, r.jsx)(
-                a.P3F,
+                o.P3F,
                 f(u({}, e), {
-                    children: (0, r.jsx)(a.SrA, {
+                    children: (0, r.jsx)(o.SrA, {
                         size: 'md',
                         color: 'currentColor',
-                        className: o()(l.nitroWheel, n)
+                        className: a()(l.nitroWheel, n)
                     })
                 })
             )

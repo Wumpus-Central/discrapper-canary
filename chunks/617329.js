@@ -1,10 +1,10 @@
 n.d(t, { R: () => d });
 var r = n(192379),
     i = n(348288);
-function o(e, t) {
-    return u(e) || c(e, t) || s(e, t) || a();
+function a(e, t) {
+    return u(e) || c(e, t) || s(e, t) || o();
 }
-function a() {
+function o() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 }
 function s(e, t) {
@@ -25,16 +25,16 @@ function c(e, t) {
         var n = [],
             r = !0,
             i = !1,
-            o = void 0;
+            a = void 0;
         try {
-            for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0);
+            for (var o, s = e[Symbol.iterator](); !(r = (o = s.next()).done) && (n.push(o.value), !t || n.length !== t); r = !0);
         } catch (e) {
-            (i = !0), (o = e);
+            (i = !0), (a = e);
         } finally {
             try {
                 r || null == s.return || s.return();
             } finally {
-                if (i) throw o;
+                if (i) throw a;
             }
         }
         return n;
@@ -44,15 +44,15 @@ function u(e) {
     if (Array.isArray(e)) return e;
 }
 var d = function () {
-    var e = o((0, r.useState)(!1), 2),
+    var e = a((0, r.useState)(!1), 2),
         t = e[0],
         n = e[1],
-        a = (0, r.useContext)(i.L);
+        o = (0, r.useContext)(i.L);
     return (
         (0, r.useEffect)(
             function () {
                 var e,
-                    t = null == a || null == (e = a.dragDropManager) ? void 0 : e.getBackend(),
+                    t = null == o || null == (e = o.dragDropManager) ? void 0 : e.getBackend(),
                     r = {
                         backendChanged: function (e) {
                             n(e.previewEnabled());
@@ -66,7 +66,7 @@ var d = function () {
                     }
                 );
             },
-            [a, a.dragDropManager]
+            [o, o.dragDropManager]
         ),
         t
     );

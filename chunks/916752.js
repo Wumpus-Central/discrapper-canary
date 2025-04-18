@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(192379),
     i = n(913527),
-    o = n.n(i),
-    a = n(931609),
+    a = n.n(i),
+    o = n(931609),
     s = n(70956),
     l = n(660199);
 let c = [
@@ -13,11 +13,11 @@ let c = [
     ],
     u = 2 * s.Z.Seconds.HOUR;
 function d(e) {
-    let t = (0, a.Z)();
+    let t = (0, o.Z)();
     return (r.useEffect(() => {
         if ('R' !== e.format) return;
         let n = 1000 * u,
-            r = Math.abs(e.parsed.diff(o()()));
+            r = Math.abs(e.parsed.diff(a()()));
         for (let [e, t] of c)
             if (r < 1000 * e) {
                 n = 1000 * t;

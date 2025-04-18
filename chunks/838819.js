@@ -47,7 +47,7 @@ var r = n(200651),
     Y = n(921944),
     $ = n(420212),
     K = n(474936),
-    X = n(842817);
+    X = n(484920);
 let J = (e) => {
         let { isFullScreen: t, tab: n } = e;
         return !t && n !== z.AW.CATALOG;

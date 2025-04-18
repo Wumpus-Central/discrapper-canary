@@ -6,8 +6,8 @@ n.d(t, {
     n(539854);
 var r = n(192379),
     i = n(512722),
-    o = n.n(i),
-    a = n(683076),
+    a = n.n(i),
+    o = n(683076),
     s = n(442837),
     l = n(224706),
     c = n(812206),
@@ -29,12 +29,12 @@ let m = function (e, t) {
     },
     g = (e, t) => {
         let n = [];
-        return null == e || null == t ? ['no match'] : ((0, _.yE)(t.flags, h.udG.GAME_PROFILE_DISABLED) && n.push('profile disabled'), e.themes.includes(a.i.EROTIC) && n.push('nsfw'), (null == e.summary || 0 === e.summary.length) && n.push('no summary'), (null == e.summary || 0 === e.summary.length) && n.push('no summary'), n);
+        return null == e || null == t ? ['no match'] : ((0, _.yE)(t.flags, h.udG.GAME_PROFILE_DISABLED) && n.push('profile disabled'), e.themes.includes(o.i.EROTIC) && n.push('nsfw'), (null == e.summary || 0 === e.summary.length) && n.push('no summary'), (null == e.summary || 0 === e.summary.length) && n.push('no summary'), n);
     },
     E = (e, t) => 0 === g(e, t).length,
     b = (e) => E(d.Z.getGame(e), c.Z.getApplication(e)),
     y = (e) => {
-        let { location: t, applicationId: n = '', autoTrackExposure: i = !0, source: a, trackEntryPointImpression: c = !0 } = e,
+        let { location: t, applicationId: n = '', autoTrackExposure: i = !0, source: o, trackEntryPointImpression: c = !0 } = e,
             f = r.useRef(!1),
             _ = (0, p.xG)(t, i);
         r.useEffect(() => {
@@ -45,8 +45,8 @@ let m = function (e, t) {
             y = r.useMemo(() => (null != h && null != b ? E(h, b) : null), [b, h]);
         return (
             r.useEffect(() => {
-                !f.current && _ && c && !1 === d.Z.isFetching(n) && null != h && null != y && (o()(null != a, 'Cannot track a Game Profile Entry Point Impressions without a source.'), m(y, n, g(h), a), (f.current = !0));
-            }, [y, n, _, h, a, c]),
+                !f.current && _ && c && !1 === d.Z.isFetching(n) && null != h && null != y && (a()(null != o, 'Cannot track a Game Profile Entry Point Impressions without a source.'), m(y, n, g(h), o), (f.current = !0));
+            }, [y, n, _, h, o, c]),
             {
                 shouldOpenGameProfile: _ && !0 === y,
                 applicationId: n

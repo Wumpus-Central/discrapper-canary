@@ -25,14 +25,14 @@ var i,
     _ = n(361213),
     y = n(542094),
     x = n(778569),
-    C = n(182906),
-    v = n(556505),
+    v = n(182906),
+    C = n(556505),
     g = n(367907),
     N = n(220082),
     j = n(70097),
     P = n(973616),
-    O = n(594174),
-    E = n(695103),
+    E = n(594174),
+    O = n(695103),
     A = n(880448),
     I = n(768581),
     S = n(573188),
@@ -40,14 +40,14 @@ var i,
     L = n(783097),
     w = n(695676),
     R = n(176412),
-    k = n(226026),
-    Z = n(570949),
+    Z = n(226026),
+    k = n(570949),
     M = n(753972),
-    D = n(635753),
-    W = n(981631),
+    W = n(635753),
+    D = n(981631),
     B = n(217702),
     U = n(388032),
-    H = n(642228),
+    H = n(860901),
     V = n(413097),
     F = n(969728);
 function z() {
@@ -144,13 +144,13 @@ function Q(e) {
             (e) => {
                 if ((0, L.BQ)(t)) {
                     let n = t instanceof P.ZP ? t : P.ZP.createFromServer(t);
-                    (0, u.vq)(e, (e) => (0, r.jsx)(Z.Z, G({ application: n }, e)));
+                    (0, u.vq)(e, (e) => (0, r.jsx)(k.Z, G({ application: n }, e)));
                 }
             },
             [t]
         ),
         { name: _, description: y } = l.useMemo(() => (0, L.sl)(t, { fakeAppIconURL: V }), [t]),
-        { trackItemImpressionRef: x } = (0, k.Z)({
+        { trackItemImpressionRef: x } = (0, Z.Z)({
             applicationId: t.id,
             applicationFlags: (0, L.BQ)(t) ? t.flags : void 0,
             sectionName: o,
@@ -158,7 +158,7 @@ function Q(e) {
             sectionOverallPosition: d,
             promotionalLabel: (0, L.dF)(t)
         }),
-        C = l.useMemo(() => {
+        v = l.useMemo(() => {
             let e = m ? H.containerDisabled : H.container;
             return a()(
                 e,
@@ -173,12 +173,12 @@ function Q(e) {
     return m
         ? (0, r.jsx)('div', {
               ref: p ? x : void 0,
-              className: C,
+              className: v,
               children: i
           })
         : (0, r.jsx)(c.P3F, {
               innerRef: p ? x : void 0,
-              className: C,
+              className: v,
               onClick: n,
               onContextMenu: b,
               'aria-label': U.NW.formatToPlainString(U.t['zLhr9/'], {
@@ -221,21 +221,21 @@ function J(e) {
 }
 function K(e) {
     let { application: t, look: n, imageStyle: i, enableVideoBanner: o, disableBannerFadeIn: u, children: p, overrideImageUrl: m, showsPromoted: h, onClickAppCardFriends: _ } = e,
-        { iconURL: y, name: x, description: C } = l.useMemo(() => (0, L.sl)(t, { fakeAppIconURL: V }), [t]),
-        g = l.useMemo(() => (null == C ? null : (0, R.ae)(C)), [C]),
+        { iconURL: y, name: x, description: v } = l.useMemo(() => (0, L.sl)(t, { fakeAppIconURL: V }), [t]),
+        g = l.useMemo(() => (null == v ? null : (0, R.ae)(v)), [v]),
         j = (0, N.ZP)(y, ''),
-        [P, O] = l.useState(!1),
+        [P, E] = l.useState(!1),
         A = l.useCallback(() => {
-            !0 === o && O(!0);
+            !0 === o && E(!0);
         }, [o]),
         I = h || (0, L.lf)(t),
         T = 'large_banner' === n || 'medium_banner' === n,
-        w = l.useCallback(() => O(!1), []),
-        k = (0, s.e7)([f.Z, E.Z], () => f.Z.inDevModeForApplication(t.id) || E.Z.inTestModeForApplication(t.id), [t.id]),
-        Z = (0, L.WA)(t),
-        { enabled: W } = S.X.useExperiment({ location: 'AppLauncherAppCard' }, { autoTrackExposure: !0 }),
+        w = l.useCallback(() => E(!1), []),
+        Z = (0, s.e7)([f.Z, O.Z], () => f.Z.inDevModeForApplication(t.id) || O.Z.inTestModeForApplication(t.id), [t.id]),
+        k = (0, L.WA)(t),
+        { enabled: D } = S.X.useExperiment({ location: 'AppLauncherAppCard' }, { autoTrackExposure: !0 }),
         { friends: B } = (0, b.Z)(t),
-        F = W && (0, L.ye)(t) && B.length > 0;
+        F = D && (0, L.ye)(t) && B.length > 0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             T
@@ -259,7 +259,7 @@ function K(e) {
                                   overrideImageUrl: m
                               })
                           }),
-                          k || I || Z !== d.ww.NONE
+                          Z || I || k !== d.ww.NONE
                               ? (0, r.jsxs)('div', {
                                     className: H.bannerUpperRightContainer,
                                     children: [
@@ -272,8 +272,8 @@ function K(e) {
                                                     children: U.NW.string(U.t['/eVltr'])
                                                 })
                                             }),
-                                        k && (0, r.jsx)($, {}),
-                                        Z !== d.ww.NONE && (0, r.jsx)(v.Z, { labelType: Z })
+                                        Z && (0, r.jsx)($, {}),
+                                        k !== d.ww.NONE && (0, r.jsx)(C.Z, { labelType: k })
                                     ]
                                 })
                               : null,
@@ -319,7 +319,7 @@ function K(e) {
                                 ]
                             }),
                             F
-                                ? (0, r.jsx)(D.Z, {
+                                ? (0, r.jsx)(W.Z, {
                                       friends: B,
                                       onClick: _,
                                       shortText: !0,
@@ -347,7 +347,7 @@ function $() {
 }
 function ee(e) {
     let { application: t } = e,
-        n = O.default.getCurrentUser();
+        n = E.default.getCurrentUser();
     if (!(null == n ? void 0 : n.isStaff()) && !(null == n ? void 0 : n.isStaffPersonal())) return null;
     let i = (0, L.yJ)(t);
     if (null == i || !(0, L.BQ)(t)) return null;
@@ -431,7 +431,7 @@ function en(e) {
                       })
                   })
                 : null,
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(v.Z, {
                 imageBackground: o,
                 applicationName: t.name,
                 imageClassName: d,
@@ -474,7 +474,7 @@ function el(e) {
         u = l.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    (0, g.yw)(W.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+                    (0, g.yw)(D.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                         application_id: t.id,
                         section_name: n,
                         search_results_position: i,
@@ -496,7 +496,7 @@ function el(e) {
         d = l.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    (0, g.yw)(W.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+                    (0, g.yw)(D.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                         application_id: t.id,
                         section_name: n,
                         search_results_position: i,
@@ -560,8 +560,8 @@ function ea(e) {
         {
             onActivityItemSelected: _,
             activityAction: x,
-            buttonColor: C,
-            buttonText: v
+            buttonColor: v,
+            buttonText: C
         } = (0, R.P7)({
             context: t,
             application: n,
@@ -615,15 +615,15 @@ function ea(e) {
                           className: H.voiceLauncherAppCardButton,
                           type: 'submit',
                           size: c.zxk.Sizes.LARGE,
-                          color: C,
+                          color: v,
                           disabled: m,
                           onClick: _,
                           'aria-label': U.NW.formatToPlainString(U.t['XjP/R0'], {
-                              buttonText: v,
+                              buttonText: C,
                               applicationName: n.name
                           }),
                           submitting: b,
-                          children: v
+                          children: C
                       })
                   })
               })

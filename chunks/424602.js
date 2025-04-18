@@ -1,12 +1,12 @@
 n.d(t, {
     PM: () => c,
-    _f: () => o,
+    _f: () => a,
     aZ: () => l,
-    gu: () => a
+    gu: () => o
 });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
         kind: 'user',
         id: '2024-09_user_app_install_education',
         label: 'User App Install Education Experiment',
@@ -34,7 +34,7 @@ let o = (0, r.B)({
             }
         ]
     }),
-    a = '1211781489931452447',
+    o = '1211781489931452447',
     s = (0, r.B)({
         kind: 'guild',
         id: '2025-02_filter_wordle_from_voice_channel_launcher',

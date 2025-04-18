@@ -16,17 +16,17 @@ var i = n(200651),
     _ = n(973616),
     y = n(914010),
     x = n(594174),
-    C = n(626135),
-    v = n(572004),
+    v = n(626135),
+    C = n(572004),
     g = n(630388),
     N = n(135431),
     j = n(541099),
     P = n(783097),
-    O = n(570949),
-    E = n(314734),
+    E = n(570949),
+    O = n(314734),
     A = n(981631),
     I = n(388032),
-    S = n(133404);
+    S = n(640724);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -72,11 +72,11 @@ function L(e, t) {
 }
 function w(e) {
     var t;
-    let { application: l, context: w, className: R, sectionName: k } = e,
-        Z = r.useRef(null),
+    let { application: l, context: w, className: R, sectionName: Z } = e,
+        k = r.useRef(null),
         M = (0, a.e7)([j.Z], () => j.Z.entrypoint()),
-        D = (0, P.L1)(l),
-        W = (0, m.Eb)(D),
+        W = (0, P.L1)(l),
+        D = (0, m.Eb)(W),
         B = (0, d.R)(l.id),
         U = (0, a.e7)(
             [y.Z],
@@ -89,7 +89,7 @@ function w(e) {
         H = {
             location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: l.id,
-            section_name: k,
+            section_name: Z,
             source: j.Z.lastShownEntrypoint()
         },
         V = x.default.getCurrentUser(),
@@ -98,7 +98,7 @@ function w(e) {
             id: l.id,
             label: I.NW.string(I.t['+NP/b2'])
         }),
-        G = (0, O.P)({ application: l }),
+        G = (0, E.P)({ application: l }),
         X = (0, g.yE)(null != (t = l.flags) ? t : 0, A.udG.EMBEDDED),
         q = 'channel' === w.type ? w.channel : void 0;
     return (0, i.jsxs)('div', {
@@ -111,9 +111,9 @@ function w(e) {
                               applicationId: l.id,
                               referrerId: null == V ? void 0 : V.id
                           })
-                        : (0, p.J)(T({ id: l.id }, D));
-                    (0, v.JG)(e, () => (0, s.showToast)((0, s.createToast)(I.NW.string(I.t['L/PwZW']), s.ToastType.SUCCESS))),
-                        C.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                        : (0, p.J)(T({ id: l.id }, W));
+                    (0, C.JG)(e, () => (0, s.showToast)((0, s.createToast)(I.NW.string(I.t['L/PwZW']), s.ToastType.SUCCESS))),
+                        v.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: l.id,
                             source: M
                         });
@@ -126,11 +126,11 @@ function w(e) {
                 })
             }),
             (0, i.jsx)(s.yRy, {
-                targetElementRef: Z,
+                targetElementRef: k,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, i.jsxs)(s.v2r, {
-                        className: E.NN,
+                        className: O.NN,
                         navId: 'app-details-more-menu',
                         onClose: t,
                         'aria-label': I.NW.string(I.t.AXIHpa),
@@ -144,7 +144,7 @@ function w(e) {
                                             label: I.NW.string(I.t.kRvlKC),
                                             action: () => {
                                                 (0, s.ZDy)(async () => {
-                                                    let { default: e } = await Promise.all([n.e('74891'), n.e('77803'), n.e('96616')]).then(n.bind(n, 7225));
+                                                    let { default: e } = await Promise.all([n.e('74891'), n.e('77803'), n.e('53458')]).then(n.bind(n, 7225));
                                                     return (t) =>
                                                         (0, i.jsx)(e, {
                                                             transitionState: t.transitionState,
@@ -155,14 +155,14 @@ function w(e) {
                                                 });
                                             }
                                         }),
-                                    W
+                                    D
                                         ? (0, i.jsx)(s.sNh, {
                                               id: 'add-app',
                                               label: I.NW.string(I.t.NgXl3N),
                                               action: () => {
-                                                  null == D.customInstallUrl && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, H),
+                                                  null == W.customInstallUrl && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, H),
                                                       (0, N.L)(
-                                                          L(T({}, D), {
+                                                          L(T({}, W), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
                                                                   null != t && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, H);
@@ -201,7 +201,7 @@ function w(e) {
                 children: (e) =>
                     (0, i.jsx)(
                         s.P3F,
-                        L(T({ innerRef: Z }, e), {
+                        L(T({ innerRef: k }, e), {
                             onClick: e.onClick,
                             className: o()(S.clickable, R),
                             'aria-label': I.NW.string(I.t.UKOtz8),

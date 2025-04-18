@@ -2,8 +2,8 @@ n.d(t, { Z: () => p }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(468363),
-    a = n(158776),
+    a = n(468363),
+    o = n(158776),
     s = n(885110),
     l = n(369566),
     c = n(29899),
@@ -20,11 +20,11 @@ function p(e) {
             guildId: h
         }),
         O = t.id === n.id,
-        I = (0, i.e7)([s.Z, a.Z], () => {
-            let e = O ? s.Z.getStatus() : a.Z.getStatus(t.id, h);
+        I = (0, i.e7)([s.Z, o.Z], () => {
+            let e = O ? s.Z.getStatus() : o.Z.getStatus(t.id, h);
             return e === _.Sk.OFFLINE || e === _.Sk.INVISIBLE;
         }),
-        { voiceActivityStatusEnabled: S } = (0, o.U)({ location: 'UserProfileFeaturedActivity' });
+        { voiceActivityStatusEnabled: S } = (0, a.U)({ location: 'UserProfileFeaturedActivity' });
     return I || null == b
         ? I || null == y
             ? S && !I && null != v

@@ -8,7 +8,7 @@ var r = n(200651),
     c = n(768581),
     d = n(956965),
     u = n(388032),
-    p = n(669285);
+    p = n(275459);
 let m = function (e) {
     var t, n, m;
     let { application: h, onSelectApplication: g, showCategory: _ = !1 } = e,

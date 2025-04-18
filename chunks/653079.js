@@ -8,7 +8,7 @@ var n = r(200651),
     c = r(709999),
     u = r(22267),
     d = r(388032),
-    p = r(364563);
+    p = r(52431);
 let b = (e) => {
     let { user: t, selectedNameplate: r, purchased: i } = e,
         b = (0, l.e7)([s.Z], () => s.Z.getProduct(null == r ? void 0 : r.skuId));

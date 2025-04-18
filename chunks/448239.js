@@ -2,7 +2,7 @@ n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var i = n(325767);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,7 +26,7 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -60,8 +60,8 @@ function c(e, t) {
         r,
         i = u(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -70,16 +70,16 @@ function u(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function d(e) {
-    var { width: t = 24, height: n = 24, color: o = 'currentColor', className: s, foreground: u } = e,
+    var { width: t = 24, height: n = 24, color: a = 'currentColor', className: s, foreground: u } = e,
         d = c(e, ['width', 'height', 'color', 'className', 'foreground']);
     return (0, r.jsx)(
         'svg',
-        l(a({}, (0, i.Z)(d)), {
+        l(o({}, (0, i.Z)(d)), {
             className: s,
             width: t,
             height: n,
@@ -89,7 +89,7 @@ function d(e) {
                 clipRule: 'evenodd',
                 d: 'M18.625 3H5.375C4.06519 3 3 4.06519 3 5.375V18.625C3 19.936 4.06519 21 5.375 21H18.625C19.936 21 21 19.936 21 18.625V5.375C21.0057 4.08803 19.9197 3 18.625 3ZM19 19V5H4.99999V19H19Z',
                 className: u,
-                fill: o
+                fill: a
             })
         })
     );

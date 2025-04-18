@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(200100),
+    a = n.n(i),
+    o = n(200100),
     s = n(481060),
     l = n(906732),
     c = n(975298),
@@ -18,8 +18,8 @@ var i = n(120356),
     p = n(981631),
     h = n(474936),
     m = n(388032),
-    g = n(696672),
-    E = n(649145);
+    g = n(680278),
+    E = n(910307);
 function b(e, t, n) {
     return (
         t in e
@@ -111,14 +111,14 @@ let S = {
             }),
             G = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(a.animated.div, {
+                    (0, r.jsx)(o.animated.div, {
                         className: E.progressBarMarkerIndicator,
                         style: { transform: U.to((e) => 'translate(-50%, -50%) scale('.concat(e, ')')) }
                     }),
                     N !== p.Eu4.NONE
                         ? j
                             ? (0, r.jsx)(s.mTd, {
-                                  className: o()(E.boostedTierIcon, E.disabledIndicator),
+                                  className: a()(E.boostedTierIcon, E.disabledIndicator),
                                   size: 'xxs',
                                   color: 'currentColor'
                               })
@@ -165,7 +165,7 @@ let S = {
                     O(
                         y(
                             {
-                                className: o()(E.progressBarMarker, {
+                                className: a()(E.progressBarMarker, {
                                     [E.progressBarMarkerUnlocked]: x,
                                     [E.progressBarMarkerLocked]: F,
                                     [E.progressBarMarkerLower]: M,

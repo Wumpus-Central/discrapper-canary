@@ -8,8 +8,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(686546),
     c = n(884902),
@@ -19,7 +19,7 @@ var i = n(120356),
     _ = n(5192),
     p = n(192918),
     h = n(388032),
-    m = n(111998);
+    m = n(522314);
 function g() {
     return (0, r.jsx)('div', {
         className: m.container,
@@ -29,7 +29,7 @@ function g() {
 function E(e) {
     let { children: t, selected: n } = e;
     return (0, r.jsx)('div', {
-        className: o()(m.container, m.openOnHover, { [m.selected]: n }),
+        className: a()(m.container, m.openOnHover, { [m.selected]: n }),
         children: t
     });
 }
@@ -44,19 +44,19 @@ function y(e) {
     let { users: t, guildId: n, 'aria-hidden': i } = e;
     return (0, r.jsx)('div', {
         className: m.facePile,
-        children: t.map((e, o) => {
-            let a = (0, r.jsx)(s.qEK, {
+        children: t.map((e, a) => {
+            let o = (0, r.jsx)(s.qEK, {
                 src: e.getAvatarURL(n, 80),
                 size: s.EFr.SIZE_16,
                 'aria-label': i ? void 0 : e.username,
                 'aria-hidden': i
             });
-            return o === t.length - 1
+            return a === t.length - 1
                 ? (0, r.jsx)(
                       'div',
                       {
                           className: m.facePileItem,
-                          children: a
+                          children: o
                       },
                       e.id
                   )
@@ -67,7 +67,7 @@ function y(e) {
                           height: 16,
                           className: m.facePileItem,
                           mask: l.ZP.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
-                          children: a
+                          children: o
                       },
                       e.id
                   );
@@ -75,12 +75,12 @@ function y(e) {
     });
 }
 function v(e) {
-    let { guildId: t, channelId: n, entry: i, maxAvatars: o = 3 } = e,
+    let { guildId: t, channelId: n, entry: i, maxAvatars: a = 3 } = e,
         l = i.author_id,
-        g = (0, a.e7)([f.default], () => f.default.getUser(l)),
-        { displayParticipants: E, participant1: b, participant2: v, numOtherParticipants: O } = (0, p.Z)(i, o),
-        I = (0, a.e7)([u.ZP], () => u.ZP.getMember(t, l)),
-        S = (0, a.e7)(
+        g = (0, o.e7)([f.default], () => f.default.getUser(l)),
+        { displayParticipants: E, participant1: b, participant2: v, numOtherParticipants: O } = (0, p.Z)(i, a),
+        I = (0, o.e7)([u.ZP], () => u.ZP.getMember(t, l)),
+        S = (0, o.e7)(
             [d.Z],
             () => {
                 var e;

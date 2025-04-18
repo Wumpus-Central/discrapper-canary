@@ -2,7 +2,7 @@ n.d(t, { Z: () => a }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(558522),
-    o = n(628331);
+    o = n(484112);
 function a(e) {
     let { imageBackground: t, applicationName: n, imageClassName: a, imageNotFoundClassName: s } = e,
         [c, u] = r.useState(!1);

@@ -2,8 +2,8 @@ n.d(t, { Z: () => b }), n(997841), n(190126), n(368063), n(65234), n(111804), n(
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(243814),
+    a = n.n(i),
+    o = n(243814),
     s = n(993365),
     l = n(481060),
     c = n(162685),
@@ -14,7 +14,7 @@ var i = n(120356),
     p = n(713938),
     h = n(981631),
     m = n(388032),
-    g = n(865244);
+    g = n(261668);
 let E = (e) => {
     switch (e) {
         case u.ZC.IP_LOCATION:
@@ -41,7 +41,7 @@ function b(e) {
         }
     let A = c.w.useExperiment({ location: 'oauth2_authorize' });
     return (0, r.jsxs)('div', {
-        className: o()(g.applicationDetails, { [g.noPadding]: A.enabled }),
+        className: a()(g.applicationDetails, { [g.noPadding]: A.enabled }),
         children: [
             null != n
                 ? (0, r.jsx)(y, {
@@ -57,7 +57,7 @@ function b(e) {
                 icon: l.T39,
                 text: m.NW.formatToPlainString(m.t['+1bjc3'], { date: S })
             }),
-            s.includes(a.x.BOT) && null != v
+            s.includes(o.x.BOT) && null != v
                 ? (0, r.jsx)(y, {
                       icon: l.wGt,
                       text: m.NW.formatToPlainString(m.t.UHGHSE, { guildCount: v })

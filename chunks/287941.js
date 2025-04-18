@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(570140),
     i = n(607070),
-    o = n(626135),
-    a = n(823961),
+    a = n(626135),
+    o = n(823961),
     s = n(992970),
     l = n(111810),
     c = n(235894),
@@ -27,10 +27,10 @@ let d = () => {
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = arguments.length > 3 ? arguments[3] : void 0;
         if (!d()) return;
-        let a = null == e.id,
+        let o = null == e.id,
             { shouldPlay: l, failureReason: c } = p(n);
-        o.default.track(u.rMx.CONFETTI_POTION_TRIGGERED, {
-            emoji_type: a ? s.aK.Unicode : s.aK.UserCreated,
+        a.default.track(u.rMx.CONFETTI_POTION_TRIGGERED, {
+            emoji_type: o ? s.aK.Unicode : s.aK.UserCreated,
             will_play: l,
             failure_reason: c,
             location: i
@@ -44,7 +44,7 @@ let d = () => {
     },
     _ = (e, t) => {
         let n = l.HZ.getCurrentConfig({ location: 'TriggerConfetti' }, { autoTrackExposure: !1 }).canSeeConfetti;
-        return a.Z.confettiMode || t
+        return o.Z.confettiMode || t
             ? n
                 ? i.Z.useReducedMotion
                     ? {
@@ -71,7 +71,7 @@ let d = () => {
     },
     p = (e) => {
         let t = l.HZ.getCurrentConfig({ location: 'TriggerConfetti' }, { autoTrackExposure: !1 }).canSeeConfetti;
-        return a.Z.confettiMode || e
+        return o.Z.confettiMode || e
             ? t
                 ? i.Z.useReducedMotion
                     ? {
@@ -103,16 +103,16 @@ let d = () => {
                           h: 0
                       },
             i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            a = arguments.length > 3 ? arguments[3] : void 0;
+            o = arguments.length > 3 ? arguments[3] : void 0;
         if (!d()) return;
         let l = (0, c.Eq)(e),
             f = (null == l || null == (t = l.emoji) ? void 0 : t[0].id) == null,
             { shouldPlay: p, failureReason: h } = _(e, i);
-        o.default.track(u.rMx.CONFETTI_POTION_TRIGGERED, {
+        a.default.track(u.rMx.CONFETTI_POTION_TRIGGERED, {
             emoji_type: f ? s.aK.Unicode : s.aK.UserCreated,
             will_play: p,
             failure_reason: h,
-            location: a
+            location: o
         }),
             p &&
                 null != l &&

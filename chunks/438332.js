@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r,
     i = n(913527),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(570140),
     l = n(709054);
 function c(e, t, n) {
@@ -92,7 +92,7 @@ function b() {
 function y() {
     (p = _), b();
 }
-class v extends (r = a.ZP.PersistedStore) {
+class v extends (r = o.ZP.PersistedStore) {
     initialize(e) {
         p = null != e ? e : _;
     }
@@ -107,8 +107,8 @@ class v extends (r = a.ZP.PersistedStore) {
         let n = this.getLastSeenEmojiByGuild(e);
         if (null == n || l.default.compare(t, n.id) > 0) return !0;
         {
-            let e = o()(n.lastSeen);
-            return o()().isBefore(e.add(2, 'weeks')) && !n.acknowledged;
+            let e = a()(n.lastSeen);
+            return a()().isBefore(e.add(2, 'weeks')) && !n.acknowledged;
         }
     }
 }

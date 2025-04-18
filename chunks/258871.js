@@ -70,7 +70,7 @@ let y = [
             },
             handler: (e) =>
                 (0, o.ZDy)(async () => {
-                    let { default: t } = await Promise.all([n.e('22347'), n.e('56236'), n.e('8674')]).then(n.bind(n, 17671));
+                    let { default: t } = await Promise.all([n.e('22347'), n.e('56236'), n.e('79010')]).then(n.bind(n, 17671));
                     return (n) => (0, r.jsx)(t, b(m({}, n), { guildId: e.id }));
                 })
         },
@@ -114,7 +114,7 @@ let y = [
             getName: () => g.NW.string(g.t.MJQOuL),
             handler: (e, t) =>
                 (0, o.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e('7654'), n.e('99060')]).then(n.bind(n, 560114));
+                    let { default: i } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             i,

@@ -1,14 +1,14 @@
 n.d(t, {
     Jj: () => i,
-    OF: () => o,
+    OF: () => a,
     WW: () => s,
-    hV: () => a,
+    hV: () => o,
     mT: () => r
 });
 let r = 550,
     i = 350,
-    o = 40;
-var a = (function (e) {
+    a = 40;
+var o = (function (e) {
     return (e.STATIC = 'STATIC'), (e.RESPONSIVE = 'RESPONSIVE'), (e.MOSAIC = 'MOSAIC'), e;
 })({});
 let s = 20;

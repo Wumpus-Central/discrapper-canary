@@ -1,7 +1,7 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(442837),
     i = n(570140);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,7 +25,7 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -81,15 +81,15 @@ function g(e) {
 function E(e) {
     let { guildId: t, powerups: n, catalog: r } = e,
         i = g(t),
-        o = new Map(d);
-    o.set(
+        a = new Map(d);
+    a.set(
         t,
-        l(a({}, i), {
+        l(o({}, i), {
             powerups: n,
             catalog: r
         })
     ),
-        (d = o),
+        (d = a),
         (f[t] = Date.now()),
         (p[t] = !0);
 }
@@ -97,15 +97,15 @@ function b(e) {
     let { guildId: t, unlocked: n } = e,
         r = g(t),
         i = m(n),
-        o = new Map(d);
-    o.set(
+        a = new Map(d);
+    a.set(
         t,
-        l(a({}, r), {
+        l(o({}, r), {
             unlocked: n,
             appliedBoosts: i
         })
     ),
-        (d = o),
+        (d = a),
         (_[t] = Date.now()),
         (h[t] = !0);
 }
@@ -115,9 +115,9 @@ function y(e, t) {
     r.forEach((e) => {
         t ? i.unlocked.set(e.sku_id, e) : i.unlocked.delete(e.sku_id);
     });
-    let o = m(i.unlocked),
+    let a = m(i.unlocked),
         s = new Map(d);
-    s.set(n, l(a({}, i), { appliedBoosts: o })), (d = s);
+    s.set(n, l(o({}, i), { appliedBoosts: a })), (d = s);
 }
 function v(e) {
     y(e, !0);

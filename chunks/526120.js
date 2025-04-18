@@ -8,8 +8,8 @@ n.d(t, {
     n(388685);
 var r = n(544891),
     i = n(570140),
-    o = n(904245),
-    a = n(593472),
+    a = n(904245),
+    o = n(593472),
     s = n(160404),
     l = n(359110),
     c = n(592125),
@@ -99,11 +99,11 @@ let m = async (e) => {
                 channel_action_type: -1
             }),
             n && (0, l.Kh)(t, { navigationReplace: !1 }),
-            o.Z.jumpToMessage({
+            a.Z.jumpToMessage({
                 channelId: t,
                 messageId: d.default.castChannelIdAsMessageId(t),
                 flash: !1,
-                jumpType: a.SR.INSTANT
+                jumpType: o.SR.INSTANT
             });
     },
     b = (e, t) => {
@@ -137,15 +137,15 @@ let m = async (e) => {
         )
             return;
         let n = c.Z.getChannel(t),
-            o = f.Z.getActionForChannel(e, t);
-        if (null != n && null != o) {
-            var a, l;
-            let t = d.default.keys(null != (a = p.Z.getCompletedActions(e)) ? a : {}),
+            a = f.Z.getActionForChannel(e, t);
+        if (null != n && null != a) {
+            var o, l;
+            let t = d.default.keys(null != (o = p.Z.getCompletedActions(e)) ? o : {}),
                 r = null != (l = f.Z.getNewMemberActions(e)) ? l : [];
             u.default.track(h.rMx.SERVER_GUIDE_ACTION_COMPLETED, {
                 guild_id: n.guild_id,
                 channel_id: n.id,
-                channel_action_type: o.actionType,
+                channel_action_type: a.actionType,
                 has_completed_all: r.reduce((e, n) => e && t.includes(n.channelId), !0)
             });
         }

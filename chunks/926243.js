@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(239091),
@@ -17,7 +17,7 @@ var r = n(200651),
     E = n(358085),
     b = n(288406),
     y = n(388032),
-    v = n(384678);
+    v = n(139642);
 function O(e, t, n) {
     return (
         t in e
@@ -76,8 +76,8 @@ function N(e, t) {
         r,
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -86,13 +86,13 @@ function A(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let C = (e, t) => ''.concat(e, ':').concat(t),
     R = i.forwardRef(function (e, t) {
-        var { emoji: n, isFavorite: i, isLargeSize: o, isMediumSize: c, isInspected: u, isDisabled: d, showPulse: _, columnIndex: h, rowIndex: m, size: E, surrogateCodePoint: O, allowAnimatedEmoji: S, selectedItemClassName: A, inNitroLockedSection: C } = e,
+        var { emoji: n, isFavorite: i, isLargeSize: a, isMediumSize: c, isInspected: u, isDisabled: d, showPulse: _, columnIndex: h, rowIndex: m, size: E, surrogateCodePoint: O, allowAnimatedEmoji: S, selectedItemClassName: A, inNitroLockedSection: C } = e,
             R = N(e, ['emoji', 'isFavorite', 'isLargeSize', 'isMediumSize', 'isInspected', 'isDisabled', 'showPulse', 'columnIndex', 'rowIndex', 'size', 'surrogateCodePoint', 'allowAnimatedEmoji', 'selectedItemClassName', 'inNitroLockedSection']);
         let P = (0, s.e7)([g.Z], () => (n.type === f.B.GUILD ? g.Z.getGuild(n.guildId) : void 0), [n]),
             w = () => {
@@ -111,8 +111,8 @@ let C = (e, t) => ''.concat(e, ':').concat(t),
             children: (0, r.jsx)(
                 'button',
                 T(I({}, R), {
-                    className: a()(v.emojiItem, {
-                        [v.emojiItemLarge]: o,
+                    className: o()(v.emojiItem, {
+                        [v.emojiItemLarge]: a,
                         [v.emojiItemMedium]: c,
                         [v.emojiItemSelected]: u,
                         [null != A ? A : '']: u,
@@ -139,7 +139,7 @@ let C = (e, t) => ''.concat(e, ':').concat(t),
         });
     });
 function P(e) {
-    let { descriptor: t, emojiItemKey: o, isInspected: a, rowIndex: f, channelGuildId: p, onInspect: g, onSelect: b, isScrolling: v, isUsingKeyboardNavigation: O, showEmojiFavoriteTooltip: S, surrogateCodePoint: A, selectedItemClassName: P, getEmojiItemProps: w, isMediumSize: D, isLargeSize: L, pulseItemKey: x, allowAnimatedEmoji: M, setPulseItemKey: k, messageId: j, isBurstReaction: U, rowPosition: G, inNitroLockedSection: B } = e,
+    let { descriptor: t, emojiItemKey: a, isInspected: o, rowIndex: f, channelGuildId: p, onInspect: g, onSelect: b, isScrolling: v, isUsingKeyboardNavigation: O, showEmojiFavoriteTooltip: S, surrogateCodePoint: A, selectedItemClassName: P, getEmojiItemProps: w, isMediumSize: D, isLargeSize: L, pulseItemKey: x, allowAnimatedEmoji: M, setPulseItemKey: k, messageId: j, isBurstReaction: U, rowPosition: G, inNitroLockedSection: B } = e,
         [F, V] = i.useState(''),
         Z = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         H = (0, s.e7)([d.ZP], () => d.ZP.getDisambiguatedEmojiContext(p), [p]),
@@ -148,7 +148,7 @@ function P(e) {
         Q = (e) => {
             if ((e.stopPropagation(), v.current || O.current)) return;
             let n = e.altKey;
-            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(Y) && k(o),
+            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(Y) && k(a),
                 (0, h.Kw)(h.v6.FAVORITE_EMOJI_TOOLTIP),
                 b(t, {
                     isFinalSelection: !e.shiftKey,
@@ -173,7 +173,7 @@ function P(e) {
             return (0, i.createElement)(
                 'li',
                 T(I({}, d), {
-                    key: o,
+                    key: a,
                     ref: W
                 }),
                 F !== C(q, f) &&
@@ -183,9 +183,9 @@ function P(e) {
                         isFavorite: H.isFavoriteEmojiWithoutFetchingLatest(Y),
                         isLargeSize: L,
                         isMediumSize: D,
-                        isInspected: a,
+                        isInspected: o,
                         isDisabled: z,
-                        showPulse: x === o,
+                        showPulse: x === a,
                         allowAnimatedEmoji: M,
                         onFocus: null != u ? u : X,
                         onMouseMove: X,
@@ -219,7 +219,7 @@ function P(e) {
                   delay: 200,
                   children: (e) => $(e)
               },
-              o
+              a
           )
         : $();
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r = n(200651),
     i = n(192379),
-    o = n(692547),
-    a = n(481060),
+    a = n(692547),
+    o = n(481060),
     s = n(220082),
     l = n(420596),
     c = n(880563),
@@ -10,7 +10,7 @@ var r = n(200651),
     d = n(484459),
     f = n(695346),
     _ = n(981631),
-    p = n(119149);
+    p = n(318413);
 function h(e, t, n) {
     return (
         t in e
@@ -69,8 +69,8 @@ function b(e, t) {
         r,
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -79,15 +79,15 @@ function y(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let v = function (e) {
     var { style: t, src: n, backgroundSrc: h, userId: g, pulseSpeakingIndicator: y = !1, speaking: v = !1 } = e,
         O = b(e, ['style', 'src', 'backgroundSrc', 'userId', 'pulseSpeakingIndicator', 'speaking']);
     let I = null != h ? h : n,
-        S = (0, s.ZP)(I, o.Z.unsafe_rawColors.PRIMARY_800.css),
+        S = (0, s.ZP)(I, a.Z.unsafe_rawColors.PRIMARY_800.css),
         T = (0, l.c)(!0, 'VideoBackground-web').enabled,
         N = (0, u.ZP)(null != g ? g : _.lds),
         A =
@@ -105,7 +105,7 @@ let v = function (e) {
     )
         return null;
     let C = (0, r.jsx)(
-            a.qEK,
+            o.qEK,
             m(
                 {
                     className: p.avatarWrapper,

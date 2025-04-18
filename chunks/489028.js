@@ -23,7 +23,7 @@ var r = n(200651),
     C = n(674563),
     y = n(829857),
     I = n(388032),
-    E = n(997168);
+    E = n(738309);
 function S(e) {
     let { onCreateTeamClick: t, isGuildOwner: n } = e;
     return (0, r.jsx)('div', {

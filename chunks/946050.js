@@ -6,7 +6,7 @@ var i = n(481060),
     o = n(28391),
     a = n(526761),
     s = n(388032),
-    c = n(860168);
+    c = n(900907);
 function u(e) {
     let { channel: t, clearUnreadsNotice: n } = e;
     return (0, r.jsxs)('div', {

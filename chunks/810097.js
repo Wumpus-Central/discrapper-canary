@@ -7,8 +7,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n(278074),
     c = n(442837),
@@ -23,7 +23,7 @@ var r = n(200651),
     E = n(652853),
     b = n(228168),
     y = n(388032),
-    v = n(916365);
+    v = n(341969);
 function O(e, t, n) {
     return (
         t in e
@@ -89,7 +89,7 @@ let N = 2700,
         [b.n_.ACTIVITY]: () => y.NW.string(y.t.ObfsSk)
     };
 function P(e) {
-    let { user: t, sourceType: n, isVisible: o, isExpandable: O, interactionSourceId: S, targetRef: N, onAction: A, renderMoreButtonPopout: P } = e,
+    let { user: t, sourceType: n, isVisible: a, isExpandable: O, interactionSourceId: S, targetRef: N, onAction: A, renderMoreButtonPopout: P } = e,
         w = i.useRef(null),
         D = (0, c.e7)([p.default], () => p.default.getId() === t.id),
         L = (0, h.Z)(t.id),
@@ -97,7 +97,7 @@ function P(e) {
         { onInteraction: M, onInteractionPopoutTargetRefChange: k } = (0, g.Xo)(),
         { live: j, stream: U } = (0, m.Z)(t.id),
         G =
-            !o &&
+            !a &&
             x !== b.y0.FULL_SIZE &&
             (0, l.EQ)(n)
                 .with(b.n_.STATUS, () => 0 === j.length && null == U)
@@ -138,9 +138,9 @@ function P(e) {
             e.animationName === (0, s.get)(v, 'fadeInAndOut') && F(!1);
         };
     return (0, r.jsxs)(f.ZP, {
-        className: a()(v.popover, {
+        className: o()(v.popover, {
             [v.fadeInAndOut]: B,
-            [v.visible]: o,
+            [v.visible]: a,
             [v.expandable]: O,
             [v.statusPopover]: n === b.n_.STATUS,
             [v.avatarPopover]: n === b.n_.AVATAR,
@@ -150,7 +150,7 @@ function P(e) {
         children: [
             (0, r.jsx)(d.DY3, {
                 text: y.NW.string(y.t.nhaI4e),
-                shouldShow: o,
+                shouldShow: a,
                 className: v.tooltipContainer,
                 delay: 0,
                 'aria-label': !1,
@@ -167,7 +167,7 @@ function P(e) {
             }),
             (0, r.jsx)(d.DY3, {
                 text: y.NW.string(y.t.RmDYKC),
-                shouldShow: o,
+                shouldShow: a,
                 className: v.tooltipContainer,
                 delay: 0,
                 'aria-label': !1,
@@ -191,7 +191,7 @@ function P(e) {
                       };
                       return (0, r.jsx)(d.DY3, {
                           text: y.NW.string(y.t.UKOtz8),
-                          shouldShow: o,
+                          shouldShow: a,
                           className: v.tooltipContainer,
                           delay: 0,
                           'aria-label': !1,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(512722),
     l = n.n(s),
     c = n(442837),
@@ -12,7 +12,7 @@ var r = n(200651),
     _ = n(74538),
     p = n(981631),
     h = n(388032),
-    m = n(795544);
+    m = n(247382);
 function g(e, t, n) {
     return (
         t in e
@@ -55,9 +55,9 @@ class b extends i.Component {
         return (null == e.eulaId || t.hasAcceptedEULA) && (!e.showWithdrawalWaiver || t.hasAcceptedWithdrawalWaiver);
     }
     render() {
-        let { eulaId: e, applicationName: t, hasPreviouslyAcceptedEULA: i, forceShow: o, disabled: s, className: c, checkboxClassname: d, checkboxLabelClassname: g, finePrint: b, showPricingLink: y, showWithdrawalWaiver: v, isTrial: O, inReverseTrial: I, isDiscount: S, subscriptionPlan: T, finePrintClassname: N } = this.props,
+        let { eulaId: e, applicationName: t, hasPreviouslyAcceptedEULA: i, forceShow: a, disabled: s, className: c, checkboxClassname: d, checkboxLabelClassname: g, finePrint: b, showPricingLink: y, showWithdrawalWaiver: v, isTrial: O, inReverseTrial: I, isDiscount: S, subscriptionPlan: T, finePrintClassname: N } = this.props,
             { hasAcceptedEULA: A, hasAcceptedWithdrawalWaiver: C } = this.state;
-        return (l()(!O || null != T, 'subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true'), o || (null != e && !i) || v)
+        return (l()(!O || null != T, 'subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true'), a || (null != e && !i) || v)
             ? (0, r.jsxs)('div', {
                   className: c,
                   children: [
@@ -66,7 +66,7 @@ class b extends i.Component {
                               className: m.formTitle,
                               children: h.NW.string(h.t.Ogvn5u)
                           }),
-                      null != e && (o || !i)
+                      null != e && (a || !i)
                           ? (0, r.jsx)(u.XZJ, {
                                 type: u.XZJ.Types.INVERTED,
                                 value: A,
@@ -91,7 +91,7 @@ class b extends i.Component {
                       null == b
                           ? null
                           : (0, r.jsx)('div', {
-                                className: a()(m.finePrint, N),
+                                className: o()(m.finePrint, N),
                                 children: b
                             }),
                       v
@@ -103,9 +103,9 @@ class b extends i.Component {
                                         value: C,
                                         onChange: this.handleToggleEUWithdralWaiverAcceptance,
                                         disabled: s,
-                                        className: a()(m.checkbox, d),
+                                        className: o()(m.checkbox, d),
                                         children: (0, r.jsx)('div', {
-                                            className: a()(m.checkboxLabel, g),
+                                            className: o()(m.checkboxLabel, g),
                                             children: h.NW.string(h.t.DFCVNz)
                                         })
                                     }),

@@ -12,7 +12,7 @@ var r = n(200651),
     p = n(981631),
     f = n(176505),
     g = n(388032),
-    m = n(394840);
+    m = n(509775);
 function b(e, t) {
     return (0, r.jsx)(
         s.Text,
@@ -28,19 +28,19 @@ let y = i.memo(function (e) {
     var t, n;
     let { guild: y } = e,
         _ = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(y.id), [y.id]),
-        v = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(y.id)),
-        O = i.useMemo(() => {
-            if (null == _ || null == v) return 0;
+        O = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(y.id)),
+        v = i.useMemo(() => {
+            if (null == _ || null == O) return 0;
             let e = 0;
             return (
                 _.forEach((t) => {
-                    null != v[t.channelId] && e++;
+                    null != O[t.channelId] && e++;
                 }),
                 e
             );
-        }, [v, _]),
+        }, [O, _]),
         C = null == _ ? 0 : _.length,
-        S = (0, l.JA)('progress-bar-'.concat(y.id));
+        j = (0, l.JA)('progress-bar-'.concat(y.id));
     return (0, r.jsxs)('li', {
         children: [
             (0, r.jsxs)(
@@ -69,7 +69,7 @@ let y = i.memo(function (e) {
                             });
                     }
                     return e;
-                })({}, S)),
+                })({}, j)),
                 (n = n =
                     {
                         role: 'button',
@@ -96,7 +96,7 @@ let y = i.memo(function (e) {
                                                 children: g.NW.format(g.t.eqZ1lZ, {
                                                     numberHook: b,
                                                     total: C.toString(),
-                                                    completed: O.toString()
+                                                    completed: v.toString()
                                                 })
                                             }),
                                             (0, r.jsx)(h.Z, {
@@ -112,7 +112,7 @@ let y = i.memo(function (e) {
                             (0, r.jsx)(s.Exd, {
                                 className: m.progressBar,
                                 foregroundGradientColor: [(0, a.Lq)(p.Ilk.GREEN_300), (0, a.Lq)(p.Ilk.GREEN_230)],
-                                percent: (O / C) * 100 + 3,
+                                percent: (v / C) * 100 + 3,
                                 animate: !0
                             })
                         ]

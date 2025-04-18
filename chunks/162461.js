@@ -1,5 +1,5 @@
 n.d(t, {
-    DG: () => a,
+    DG: () => o,
     MY: () => s,
     iC: () => f,
     nP: () => d,
@@ -8,8 +8,8 @@ n.d(t, {
 });
 var r = n(818083),
     i = n(109911),
-    o = n(987338);
-let a = (0, r.B)({
+    a = n(987338);
+let o = (0, r.B)({
         kind: 'user',
         id: '2024-03_content_inventory_memberlist_and_ranker',
         label: 'Enables the memberlist content feed',
@@ -34,7 +34,7 @@ let a = (0, r.B)({
         kind: 'user',
         id: '2025-02_hotwheels_v2_model',
         label: 'Next iteration of the activity feed ranking model.',
-        commonTriggerPoint: o.$P.CONNECTION_OPEN,
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
         defaultConfig: {},
         treatments: [
             {
@@ -50,12 +50,12 @@ let a = (0, r.B)({
         ]
     });
 function l(e) {
-    let { enabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
+    let { enabled: t } = o.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
         n = (0, i.Ji)(e, !1);
     return t || n;
 }
 function c(e) {
-    let { enabled: t, impressionCappingEnabled: n } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+    let { enabled: t, impressionCappingEnabled: n } = o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
     return t && !0 === n;
 }
 let u = (0, r.B)({

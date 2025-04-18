@@ -1,6 +1,6 @@
 n.d(t, {
-    OG: () => S,
-    ZP: () => O,
+    OG: () => j,
+    ZP: () => v,
     Zu: () => C
 }),
     n(388685);
@@ -17,7 +17,7 @@ var r = n(200651),
     p = n(662146),
     f = n(981631),
     g = n(388032),
-    m = n(22835);
+    m = n(217873);
 function b(e) {
     let t = i.useRef(null),
         n = e.map((e) => e[0]);
@@ -67,7 +67,7 @@ function _(e) {
         className: m.target
     });
 }
-function v(e) {
+function O(e) {
     let { name: t, targetNode: n, onDragOverChanged: l } = e,
         [{ canDrop: s, isOver: a }, u] = (0, c.L)(() => y([h.eD.GUILD], n, !0, !0));
     i.useEffect(() => {
@@ -92,7 +92,7 @@ function v(e) {
         })
     });
 }
-let O = i.memo(function (e) {
+let v = i.memo(function (e) {
     let { name: t, targetNode: n, noCombine: i = !1, below: l = !1, onDragOverChanged: o } = e,
         s = !i && null == n.parentId;
     return (0, r.jsxs)('div', {
@@ -105,7 +105,7 @@ let O = i.memo(function (e) {
                 below: l
             }),
             s
-                ? (0, r.jsx)(v, {
+                ? (0, r.jsx)(O, {
                       name: t,
                       targetNode: n,
                       onDragOverChanged: o
@@ -138,7 +138,7 @@ function C(e) {
         })
     });
 }
-function S(e) {
+function j(e) {
     let { children: t } = e,
         [, n] = (0, c.L)({ accept: [] });
     return (0, r.jsx)('div', {

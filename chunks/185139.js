@@ -1,9 +1,9 @@
 n.d(t, { Z: () => v }), n(388685), n(415506);
 var r = n(200651),
     i = n(192379),
-    o = n(734530),
-    a = n(120356),
-    s = n.n(a),
+    a = n(734530),
+    o = n(120356),
+    s = n.n(o),
     l = n(846519),
     c = n(481060),
     u = n(609194),
@@ -16,10 +16,10 @@ var h = n(122289),
     m = n(70956),
     g = n(981631),
     E = n(388032),
-    b = n(731581);
+    b = n(106194);
 let y = new Set([p.h8.SKU_SELECT, p.h8.AWAITING_AUTHENTICATION, p.h8.AWAITING_PURCHASE_TOKEN_AUTH, p.h8.CONFIRM]);
 function v(e) {
-    let { steps: t, currentStep: n, body: a, paymentError: v, header: O, footer: I, isGift: S = !1, giftMessage: T = E.NW.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: A = !1, purchaseError: C, purchaseErrorBlockRef: R, planError: P, onScroll: w, scrollerClassName: D, hasCurrencies: L = !1 } = e,
+    let { steps: t, currentStep: n, body: o, paymentError: v, header: O, footer: I, isGift: S = !1, giftMessage: T = E.NW.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: A = !1, purchaseError: C, purchaseErrorBlockRef: R, planError: P, onScroll: w, scrollerClassName: D, hasCurrencies: L = !1 } = e,
         x = null;
     null != v && null == (0, p.ly)(v) ? (x = v) : null != C ? (x = C) : null != P && (x = P);
     let M = null != x ? x.message : '';
@@ -42,7 +42,7 @@ function v(e) {
         );
     }, [k]);
     let U = t.includes(p.h8.PAYMENT_TYPE) ? p.h8.PAYMENT_TYPE : p.h8.ADD_PAYMENT_STEPS;
-    return (0, r.jsxs)(o.Elements, {
+    return (0, r.jsxs)(a.Elements, {
         options: g.OBo,
         stripe: k,
         children: [
@@ -98,7 +98,7 @@ function v(e) {
                                       children: (0, r.jsx)(c.h21, {
                                           onScroll: w,
                                           className: s()(b.scroller, D),
-                                          children: a
+                                          children: o
                                       })
                                   })
                         ]

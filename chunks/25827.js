@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(557753),
     l = n(95416),
     c = n(75735),
@@ -16,7 +16,7 @@ var r = n(200651),
     p = n(67844),
     h = n(871499),
     m = n(981631),
-    g = n(318282);
+    g = n(726465);
 function E(e, t, n) {
     return (
         t in e
@@ -75,8 +75,8 @@ function O(e, t) {
         r,
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -85,15 +85,15 @@ function I(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function S(e) {
     let t = (0, p.X)(e),
-        { enabled: n, cameraUnavailable: o, onChange: a, onCameraUnavailable: d, hasPermission: f, children: _, channelLimitReached: h = !1, join: g } = e,
+        { enabled: n, cameraUnavailable: a, onChange: o, onCameraUnavailable: d, hasPermission: f, children: _, channelLimitReached: h = !1, join: g } = e,
         E = (0, u.bp)(),
-        b = o ? () => d() : () => a(!e.enabled, E),
+        b = a ? () => d() : () => o(!e.enabled, E),
         { Component: y, play: v, events: O } = (0, c.o)(g || n ? 'disable' : 'enable');
     i.useEffect(() => () => v(), [n, v]);
     let I = g ? s.O : E === m.IlC.POPOUT ? (n ? s.O : l.A) : y;
@@ -105,14 +105,14 @@ function S(e) {
             iconComponent: I,
             iconColor: 'currentColor',
             label: t,
-            unavailable: o,
+            unavailable: a,
             onMouseEnter: g ? void 0 : O.onMouseEnter,
             onMouseLeave: g ? void 0 : O.onMouseLeave
         })
     });
 }
 function T(e) {
-    var { enabled: t, join: n, channel: i, onChange: o, onCameraUnavailable: s, cameraUnavailable: l, hasPermission: c, className: u, channelLimitReached: p, channelLimit: m, centerButton: E = !1, onPopoutClick: y } = e,
+    var { enabled: t, join: n, channel: i, onChange: a, onCameraUnavailable: s, cameraUnavailable: l, hasPermission: c, className: u, channelLimitReached: p, channelLimit: m, centerButton: E = !1, onPopoutClick: y } = e,
         I = O(e, ['enabled', 'join', 'channel', 'onChange', 'onCameraUnavailable', 'cameraUnavailable', 'hasPermission', 'className', 'channelLimitReached', 'channelLimit', 'centerButton', 'onPopoutClick']);
     let T = E ? h.d : h.Z,
         { mode: N } = (0, d.ZP)({ location: 'VideoButton' }),
@@ -124,14 +124,14 @@ function T(e) {
         enabled: t,
         join: n,
         channel: i,
-        onChange: o,
+        onChange: a,
         onCameraUnavailable: s,
         cameraUnavailable: l,
         hasPermission: c,
         channelLimitReached: p,
         channelLimit: m,
         children: (e) => {
-            var { unavailable: t, onMouseEnter: i, onMouseLeave: o, isActive: s } = e,
+            var { unavailable: t, onMouseEnter: i, onMouseLeave: a, isActive: s } = e,
                 l = O(e, ['unavailable', 'onMouseEnter', 'onMouseLeave', 'isActive']);
             return (0, r.jsx)(
                 T,
@@ -145,9 +145,9 @@ function T(e) {
                     },
                     onMouseLeave: (e) => {
                         var t;
-                        null == (t = I.onMouseLeave) || t.call(I, e), null == o || o();
+                        null == (t = I.onMouseLeave) || t.call(I, e), null == a || a();
                     },
-                    className: a()(u, { [g.fauxDisabled]: t }),
+                    className: o()(u, { [g.fauxDisabled]: t }),
                     onPopoutClick: y,
                     fullRegionButton: n
                 })

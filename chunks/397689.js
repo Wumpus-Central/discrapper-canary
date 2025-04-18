@@ -2,8 +2,8 @@ n.d(t, { Z: () => v });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(906732),
     c = n(1585),
@@ -12,7 +12,7 @@ var i = n(120356),
     f = n(445924),
     _ = n(654904),
     p = n(486324),
-    h = n(743626);
+    h = n(25931);
 function m(e, t, n) {
     return (
         t in e
@@ -69,12 +69,12 @@ let y = d.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK;
 function v(e) {
     let { user: t, guild: n, displayProfile: i, canUsePremiumCustomization: d, previewAvatar: m, previewAvatarDecoration: E, previewTheme: v, previewPrimaryColor: O, className: I, disabledInputs: S, isTryItOutFlow: T, onUpsellClick: N } = e,
         { analyticsLocations: A } = (0, l.ZP)(),
-        C = (0, a.e7)([u.Z], () => u.Z.getStatus(t.id)),
+        C = (0, o.e7)([u.Z], () => u.Z.getStatus(t.id)),
         R = null == n || (null == i ? void 0 : i.canUsePremiumProfileCustomization) || d,
         P = (0, r.jsx)(y, {
             src: m,
             avatarDecoration: E,
-            imageClassName: o()(I, { [h.overlay]: !S }),
+            imageClassName: a()(I, { [h.overlay]: !S }),
             size: s.EFr.SIZE_80,
             'aria-label': t.username,
             status: C,
@@ -107,7 +107,7 @@ function v(e) {
                     (0, r.jsxs)(
                         s.P3F,
                         b(g({}, e), {
-                            className: o()(h.avatar, h.clickable),
+                            className: a()(h.avatar, h.clickable),
                             children: [
                                 P,
                                 (0, r.jsx)(s.vdY, {
@@ -123,7 +123,7 @@ function v(e) {
             })
           : (0, r.jsxs)(s.P3F, {
                 onClick: N,
-                className: o()(h.avatar, h.clickable),
+                className: a()(h.avatar, h.clickable),
                 children: [
                     P,
                     (0, r.jsx)(s.SrA, {

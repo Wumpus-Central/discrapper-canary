@@ -1,8 +1,8 @@
 n.d(t, { Z: () => M }), n(35282);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(503438),
     c = n(100527),
@@ -28,7 +28,7 @@ var r = n(200651),
     R = n(666984),
     P = n(386019),
     w = n(228168),
-    D = n(935693);
+    D = n(227832);
 function L(e, t, n) {
     return (
         t in e
@@ -60,7 +60,7 @@ function x(e) {
 }
 function M(e) {
     var t;
-    let { user: n, currentUser: o, activity: L, profileGuildId: M, className: k, onClose: j } = e,
+    let { user: n, currentUser: a, activity: L, profileGuildId: M, className: k, onClose: j } = e,
         U = i.useRef(null),
         { profileType: G } = (0, O.z)(),
         B = { [D.fullSize]: G === w.y0.FULL_SIZE },
@@ -86,29 +86,29 @@ function M(e) {
     if (!(0, l.Z)(L)) return null;
     let q = () => {
             var e, t;
-            let o = null != (t = null == (e = L.state) ? void 0 : e.split(';')) ? t : [];
-            return 0 === o.length
+            let a = null != (t = null == (e = L.state) ? void 0 : e.split(';')) ? t : [];
+            return 0 === a.length
                 ? null
                 : null == L.sync_id
                   ? (0, r.jsx)(A.Z, {
                         variant: 'text-xs/normal',
-                        text: o.join(', ')
+                        text: a.join(', ')
                     })
                   : (0, r.jsx)(A.Z, {
                         variant: 'text-xs/normal',
-                        text: o.map((e, t) =>
+                        text: a.map((e, t) =>
                             (0, r.jsxs)(
                                 i.Fragment,
                                 {
                                     children: [
                                         (0, r.jsx)(s.P3F, {
-                                            className: a()(D.clickableText, D.inline),
+                                            className: o()(D.clickableText, D.inline),
                                             onClick: (e) => {
                                                 e.stopPropagation(), K({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(L, n.id, t);
                                             },
                                             children: e
                                         }),
-                                        t < o.length - 1 ? ', ' : ''
+                                        t < a.length - 1 ? ', ' : ''
                                     ]
                                 },
                                 t
@@ -128,10 +128,10 @@ function M(e) {
                   });
         },
         X = () =>
-            n.id === o.id
+            n.id === a.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: a()(D.actions, B),
+                      className: o()(D.actions, B),
                       children: (0, r.jsx)(R.Z, {
                           user: n,
                           activity: L,
@@ -176,7 +176,7 @@ function M(e) {
                             }),
                         children: (0, r.jsxs)(T.Z, {
                             ref: z,
-                            className: a()(k, { [D.hoisted]: $ }),
+                            className: o()(k, { [D.hoisted]: $ }),
                             onAction: K,
                             onClose: j,
                             children: [
@@ -184,7 +184,7 @@ function M(e) {
                                 (0, r.jsx)('div', {
                                     className: D.body,
                                     children: (0, r.jsxs)('div', {
-                                        className: a()(D.content, B),
+                                        className: o()(D.content, B),
                                         children: [
                                             (0, r.jsx)(f.E, {
                                                 image: W,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => S });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(481060),
-    a = n(40851),
+    a = n(481060),
+    o = n(40851),
     s = n(456100),
     l = n(841784),
     c = n(906732),
@@ -72,7 +72,7 @@ function I(e, t) {
 function S(e) {
     let { user: t, activity: n, onAction: y, onClose: O } = e,
         { newestAnalyticsLocation: S } = (0, c.ZP)(),
-        T = (0, a.bp)() === E.IlC.POPOUT,
+        T = (0, o.bp)() === E.IlC.POPOUT,
         N = (0, i.e7)([h.Z, m.Z], () => h.Z.getChannel(m.Z.getChannelId())),
         A = (0, p.e)({
             activity: null != n ? n : void 0,
@@ -81,12 +81,12 @@ function S(e) {
             onClose: O
         }),
         { enabled: C } = s.c.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
-        R = C ? o.iWm : o.jje;
+        R = C ? a.iWm : a.jje;
     if (null == A && null != n && (0, l.Z)(n))
         return (0, r.jsx)(g.tG, {
             icon: R,
             text: b.NW.string(b.t.RscU7O),
-            color: o.Ttl.BRAND,
+            color: a.Ttl.BRAND,
             themeColor: 'none',
             fullWidth: !0,
             onClick: (e) => {
@@ -108,13 +108,13 @@ function S(e) {
     if (null == A) return null;
     let { isJoining: P, handleJoinRequest: w, buttonCTA: D, tooltip: L, isEnabled: x, isEmbedded: M } = A;
     return M
-        ? (0, r.jsx)(o.ua7, {
+        ? (0, r.jsx)(a.ua7, {
               text: L,
               children: (e) =>
                   (0, r.jsx)(
                       g.tG,
                       I(v({}, e), {
-                          icon: o.YVR,
+                          icon: a.YVR,
                           text: D,
                           disabled: !x,
                           submitting: P,
@@ -125,13 +125,13 @@ function S(e) {
                       })
                   )
           })
-        : (0, r.jsx)(o.ua7, {
+        : (0, r.jsx)(a.ua7, {
               text: L,
               children: (e) =>
                   (0, r.jsx)(
                       g.tG,
                       I(v({}, e), {
-                          icon: o.iWm,
+                          icon: a.iWm,
                           text: D,
                           disabled: !x,
                           submitting: P,

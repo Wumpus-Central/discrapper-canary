@@ -21,7 +21,7 @@ var r = n(200651),
     v = n(203377),
     O = n(929834),
     C = n(388032),
-    y = n(48719);
+    y = n(356941);
 function I() {
     return (0, r.jsx)(a.Text, {
         tag: 'span',

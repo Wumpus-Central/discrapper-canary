@@ -2,9 +2,9 @@ n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(921944),
-    a = n(388032),
-    s = n(112762),
+    a = n(921944),
+    o = n(388032),
+    s = n(784168),
     l = n(905287);
 function c(e, t, n) {
     return (
@@ -80,12 +80,12 @@ function _(e) {
                     (0, r.jsx)(i.X6q, {
                         className: s.text,
                         variant: 'heading-sm/semibold',
-                        children: a.NW.string(a.t['YMI+UV'])
+                        children: o.NW.string(o.t['YMI+UV'])
                     }),
                     (0, r.jsx)(i.Text, {
                         className: s.text,
                         variant: 'text-sm/normal',
-                        children: a.NW.string(a.t.BIBwbm)
+                        children: o.NW.string(o.t.BIBwbm)
                     })
                 ]
             }),
@@ -95,7 +95,7 @@ function _(e) {
                     className: s.ctaButton,
                     color: i.zxk.Colors.BRAND_INVERTED,
                     onClick: () => n(),
-                    children: a.NW.string(a.t.RzWDqa)
+                    children: o.NW.string(o.t.RzWDqa)
                 })
             }),
             (0, r.jsx)('div', { className: s.pointer })
@@ -103,7 +103,7 @@ function _(e) {
     });
 }
 function p(e) {
-    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: a } = e;
+    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: o } = e;
     return (0, r.jsx)(i.yRy, {
         spacing: 0,
         shouldShow: !0,
@@ -114,10 +114,10 @@ function p(e) {
                 _,
                 f(u({}, e), {
                     onDismissClick: () => {
-                        t(), a(o.L.USER_DISMISS);
+                        t(), o(a.L.USER_DISMISS);
                     },
                     onCheckItOutClick: () => {
-                        n(), t(), a(o.L.TAKE_ACTION);
+                        n(), t(), o(a.L.TAKE_ACTION);
                     }
                 })
             ),

@@ -2,8 +2,8 @@ n.d(t, { Z: () => b });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(692547),
+    a = n.n(i),
+    o = n(692547),
     s = n(481060),
     l = n(201895),
     c = n(933557),
@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(788858),
     f = n(170187),
     _ = n(388032),
-    p = n(405538);
+    p = n(843280);
 function h(e, t, n) {
     return (
         t in e
@@ -76,7 +76,7 @@ function b(e) {
                       size: 'custom',
                       color: y,
                       channel: t,
-                      className: o()(p.icon, h)
+                      className: a()(p.icon, h)
                   })
                 : (0, r.jsx)(s.ua7, {
                       text: v,
@@ -86,9 +86,9 @@ function b(e) {
                               d.Z,
                               E(m({}, e), {
                                   size: 'custom',
-                                  color: a.Z.colors.STATUS_POSITIVE,
+                                  color: o.Z.colors.STATUS_POSITIVE,
                                   channel: t,
-                                  className: o()(p.icon, h)
+                                  className: a()(p.icon, h)
                               })
                           )
                   }),

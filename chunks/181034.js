@@ -1,8 +1,8 @@
-n.d(t, { N: () => a });
+n.d(t, { N: () => o });
 var r = n(192379),
     i = n(573654),
-    o = n(348288);
-function a() {
-    var e = (0, r.useContext)(o.L).dragDropManager;
+    a = n(348288);
+function o() {
+    var e = (0, r.useContext)(a.L).dragDropManager;
     return (0, i.k)(null != e, 'Expected drag drop context'), e;
 }

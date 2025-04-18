@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(570140),
@@ -20,8 +20,8 @@ var r = n(200651),
     v = n(981631),
     O = n(526761),
     I = n(388032),
-    S = n(690731),
-    T = n(931475);
+    S = n(888090),
+    T = n(716827);
 function N(e, t, n) {
     return (
         t in e
@@ -80,8 +80,8 @@ function P(e, t) {
         r,
         i = w(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -90,12 +90,12 @@ function w(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function D(e) {
-    let { className: t, disabled: o, isEditor: N, renderCTAButtons: C } = e,
+    let { className: t, disabled: a, isEditor: N, renderCTAButtons: C } = e,
         [w, D] = (0, s.Wu)([g.Z], () => [g.Z.getCurrentDesktopIcon(), g.Z.isUpsellPreview]),
         { enabled: L } = p.Z.getCurrentConfig(
             { location: 'UserSettingsAppearanceInAppIcon' },
@@ -189,7 +189,7 @@ function D(e) {
                                                   })
                                             : (0, r.jsx)(l.X6q, {
                                                   variant: 'text-sm/normal',
-                                                  className: a()({ [T.subtext]: G }),
+                                                  className: o()({ [T.subtext]: G }),
                                                   children: I.NW.string(I.t.IgENJi)
                                               })
                                     ]
@@ -198,7 +198,7 @@ function D(e) {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: a()(S.presets, { [S.presetsJustified]: L && N }),
+                            className: o()(S.presets, { [S.presetsJustified]: L && N }),
                             children: (0, y.wu)()
                                 .filter((e) => {
                                     let { isHidden: t } = e;
@@ -211,8 +211,8 @@ function D(e) {
                                             icon: e,
                                             isSelected: w === e.id,
                                             onSelect: (e) => B(e),
-                                            disabled: o,
-                                            tabIndex: 0 !== t || o ? void 0 : 0,
+                                            disabled: a,
+                                            tabIndex: 0 !== t || a ? void 0 : 0,
                                             locked: L && !N && e.id !== E.aH.DEFAULT
                                         },
                                         e.id

@@ -2,9 +2,9 @@ n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(913527),
-    s = n.n(a),
+    a = n.n(i),
+    o = n(913527),
+    s = n.n(o),
     l = n(442837),
     c = n(481060),
     u = n(835473),
@@ -13,9 +13,9 @@ var i = n(120356),
     _ = n(594174),
     p = n(823379),
     h = n(388032),
-    m = n(889466);
+    m = n(352665);
 let g = function (e) {
-    let { createdAt: t, participantIds: n, applicationId: i, title: a, guildId: g, className: E } = e,
+    let { createdAt: t, participantIds: n, applicationId: i, title: o, guildId: g, className: E } = e,
         b = (0, u.q)(i),
         y = (0, l.Wu)([_.default], () => {
             var e;
@@ -26,17 +26,17 @@ let g = function (e) {
     return null == t
         ? null
         : (0, r.jsxs)('div', {
-              className: o()(E, m.container),
+              className: a()(E, m.container),
               children: [
                   (0, r.jsx)(f.Z, { game: b }),
                   (0, r.jsxs)('div', {
                       className: m.textSection,
                       children: [
-                          null != a && '' !== a
+                          null != o && '' !== o
                               ? (0, r.jsx)(c.Text, {
                                     variant: 'text-md/semibold',
                                     color: 'interactive-active',
-                                    children: a
+                                    children: o
                                 })
                               : (0, r.jsx)(c.Text, {
                                     variant: 'text-md/semibold',

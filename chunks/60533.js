@@ -5,7 +5,7 @@ var i = n(442837),
     s = n(481060),
     l = n(90815),
     a = n(594174),
-    o = n(807790);
+    o = n(675968);
 function c(e) {
     let { guild: t } = e,
         n = (0, i.e7)([a.default], () => {

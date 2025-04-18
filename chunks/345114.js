@@ -14,7 +14,7 @@ var r = n(200651),
     h = n(981631),
     g = n(176505),
     _ = n(388032),
-    b = n(998332);
+    b = n(896293);
 function x(e) {
     let { username: t } = e;
     return (0, r.jsx)('div', {

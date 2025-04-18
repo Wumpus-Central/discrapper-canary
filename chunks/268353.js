@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(481060),
-    a = n(928518),
+    a = n(481060),
+    o = n(928518),
     s = n(451478),
     l = n(228488),
     c = n(871499),
@@ -43,8 +43,8 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -53,27 +53,27 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function h(e) {
     var { enabled: t } = e,
         n = _(e, ['enabled']);
     let i = t ? u.NW.string(u.t.Z7MyND) : u.NW.string(u.t.OIDkcn),
-        a = t ? o.wvt : o.NpZ;
+        o = t ? a.wvt : a.NpZ;
     return (0, r.jsx)(
         c.Z,
         f(
             {
                 label: i,
-                iconComponent: a
+                iconComponent: o
             },
             n
         )
     );
 }
-let m = i.ZP.connectStores([s.Z, a.Z], (e) => {
+let m = i.ZP.connectStores([s.Z, o.Z], (e) => {
     let { node: t, guestWindow: n } = e;
     return { enabled: (0, l.rB)(t, null == n ? void 0 : n.document) };
 })(h);

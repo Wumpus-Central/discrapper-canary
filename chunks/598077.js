@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(415506), n(997841);
 var r = n(149765),
     i = n(81825),
-    o = n(864106),
-    a = n(4242),
+    a = n(864106),
+    o = n(4242),
     s = n(768581),
     l = n(630388),
     c = n(111361),
@@ -190,7 +190,7 @@ class b extends i.Z {
         return this.avatarDecorationData;
     }
     set avatarDecoration(e) {
-        this.avatarDecorationData = (0, o.FG)(e);
+        this.avatarDecorationData = (0, a.FG)(e);
     }
     get nameplate() {
         var e;
@@ -199,18 +199,18 @@ class b extends i.Z {
             ? null
             : {
                   src: t.asset,
-                  palette: (0, a.t1)(t.palette),
+                  palette: (0, o.t1)(t.palette),
                   imgAlt: t.label
               };
     }
     constructor(e) {
-        var t, n, i, o, a, s, l, c, u, _, p, m, g, E, b, y, v, O, I, S, T, N, A, C, R, P, w, D, L, x, M, k;
+        var t, n, i, a, o, s, l, c, u, _, p, m, g, E, b, y, v, O, I, S, T, N, A, C, R, P, w, D, L, x, M, k;
         super(), h(this, 'id', void 0), h(this, 'username', void 0), h(this, 'discriminator', void 0), h(this, 'avatar', void 0), h(this, 'avatarDecorationData', void 0), h(this, 'banner', void 0), h(this, 'email', void 0), h(this, 'verified', void 0), h(this, 'bot', void 0), h(this, 'system', void 0), h(this, 'mfaEnabled', void 0), h(this, 'mobile', void 0), h(this, 'desktop', void 0), h(this, 'premiumType', void 0), h(this, 'flags', void 0), h(this, 'publicFlags', void 0), h(this, 'purchasedFlags', void 0), h(this, 'premiumUsageFlags', void 0), h(this, 'phone', void 0), h(this, 'nsfwAllowed', void 0), h(this, 'ageVerificationStatus', void 0), h(this, 'guildMemberAvatars', void 0), h(this, 'hasBouncedEmail', void 0), h(this, 'personalConnectionId', void 0), h(this, 'globalName', void 0), h(this, 'primaryGuild', void 0), h(this, 'collectibles', void 0), h(this, 'hasFlag', (e) => !1), h(this, 'isStaff', () => !1), h(this, 'isStaffPersonal', () => !1), h(this, 'hasAnyStaffLevel', () => !1);
         let j = null != (n = e.premium_type) ? n : e.premiumType;
         (this.id = e.id),
             (this.username = null != (i = e.username) ? i : ''),
-            (this.discriminator = null != (o = e.discriminator) ? o : d.fo$),
-            (this.avatar = null != (a = e.avatar) ? a : null),
+            (this.discriminator = null != (a = e.discriminator) ? a : d.fo$),
+            (this.avatar = null != (o = e.avatar) ? o : null),
             (this.avatarDecoration = null != (s = e.avatar_decoration_data) ? s : e.avatarDecorationData),
             (this.email = null != (l = e.email) ? l : null),
             (this.verified = null != (c = e.verified) && c),

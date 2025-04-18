@@ -8,16 +8,16 @@ n.d(t, {
     n(415506);
 var r = n(192379),
     i = n(373793),
-    o = n(911969),
-    a = n(592125),
+    a = n(911969),
+    o = n(592125),
     s = n(963456),
     l = n(213459),
     c = n(367790);
 let u = 'no primary app command for application',
-    d = [o.yU.PRIMARY_ENTRY_POINT];
+    d = [a.yU.PRIMARY_ENTRY_POINT];
 async function f(e, t) {
     let n,
-        r = a.Z.getChannel(e);
+        r = o.Z.getChannel(e);
     if (
         (null != r &&
             null ==
@@ -47,7 +47,7 @@ async function f(e, t) {
 function _(e, t) {
     return l.ZP.query(
         e,
-        { commandTypes: [o.yU.PRIMARY_ENTRY_POINT] },
+        { commandTypes: [a.yU.PRIMARY_ENTRY_POINT] },
         {
             placeholderCount: 1,
             scoreMethod: c.p.COMMAND_ONLY,
@@ -59,18 +59,18 @@ function _(e, t) {
 }
 function p(e, t) {
     let { commands: n, loading: i } = h(e, t),
-        o = n[0],
-        a = null != o;
+        a = n[0],
+        o = null != a;
     return (
         r.useEffect(() => {
-            a ||
+            o ||
                 i ||
                 (0, s.j)({
                     type: 'application',
                     applicationId: t
                 });
-        }, [t, a, i]),
-        o
+        }, [t, o, i]),
+        a
     );
 }
 function h(e, t) {
@@ -94,6 +94,6 @@ function m(e) {
 function g(e) {
     if (null == e) return !1;
     let t = null != e.integration_types && e.integration_types.includes(i.Y.USER_INSTALL),
-        n = null != e.contexts && e.contexts.includes(o.D.BOT_DM);
+        n = null != e.contexts && e.contexts.includes(a.D.BOT_DM);
     return t && n;
 }

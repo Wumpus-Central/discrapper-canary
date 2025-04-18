@@ -1,4 +1,4 @@
-let r, i, o, a, s, l, c, u, d, f, _;
+let r, i, a, o, s, l, c, u, d, f, _;
 n.d(t, { Z: () => F });
 var p,
     h = n(442837),
@@ -49,11 +49,11 @@ function C(e) {
 }
 function R(e) {
     let { profileEffectId: t } = e;
-    o = t;
+    a = t;
 }
 function P(e) {
     let { banner: t } = e;
-    a = t;
+    o = t;
 }
 function w(e) {
     let { bio: t } = e;
@@ -78,7 +78,7 @@ function k() {
     (r = void 0), (c = void 0), (i = void 0);
 }
 function j() {
-    (a = void 0), (s = void 0), (l = void 0), (u = void 0), (o = void 0);
+    (o = void 0), (s = void 0), (l = void 0), (u = void 0), (a = void 0);
 }
 function U() {
     y = {};
@@ -94,7 +94,7 @@ class B extends (p = h.ZP.Store) {
         return y;
     }
     showNotice() {
-        return void 0 !== r || void 0 !== i || void 0 !== o || void 0 !== a || void 0 !== s || void 0 !== l || void 0 !== c || void 0 !== u;
+        return void 0 !== r || void 0 !== i || void 0 !== a || void 0 !== o || void 0 !== s || void 0 !== l || void 0 !== c || void 0 !== u;
     }
     getIsSubmitDisabled() {
         return void 0 !== s && s.length > g.tPV;
@@ -106,10 +106,10 @@ class B extends (p = h.ZP.Store) {
         return i;
     }
     getPendingProfileEffectId() {
-        return o;
+        return a;
     }
     getPendingBanner() {
-        return a;
+        return o;
     }
     getPendingBio() {
         return s;
@@ -130,8 +130,8 @@ class B extends (p = h.ZP.Store) {
         return {
             pendingAvatar: r,
             pendingAvatarDecoration: i,
-            pendingProfileEffectId: o,
-            pendingBanner: a,
+            pendingProfileEffectId: a,
+            pendingBanner: o,
             pendingBio: s,
             pendingPronouns: l,
             pendingNickname: c,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => O });
 var r = n(200651);
 n(192379);
 var i = n(704215),
-    o = n(952265),
-    a = n(468026),
+    a = n(952265),
+    o = n(468026),
     s = n(231757),
     l = n(605236),
     c = n(131951),
@@ -12,7 +12,7 @@ var i = n(704215),
     f = n(927923),
     _ = n(981631),
     p = n(388032),
-    h = n(893966);
+    h = n(97800);
 function m(e, t, n) {
     return (
         t in e
@@ -83,7 +83,7 @@ let y = 'game_console_alert_modal',
                           },
                           s = (e) =>
                               (0, r.jsx)(
-                                  a.default,
+                                  o.default,
                                   b(g({}, e), {
                                       title: t,
                                       body: p.NW.string(p.t.bL21zs),
@@ -91,7 +91,7 @@ let y = 'game_console_alert_modal',
                                       titleClassName: h.title
                                   })
                               );
-                      (0, o.nf)(v) ? (0, o.o)(v, s) : (0, o.h7)(s, { modalKey: v });
+                      (0, a.nf)(v) ? (0, a.o)(v, s) : (0, a.h7)(s, { modalKey: v });
                   });
         },
         showSelfDismissableAlert(e) {
@@ -99,7 +99,7 @@ let y = 'game_console_alert_modal',
                 c = (0, r.jsx)(d.t, {
                     body: n,
                     errorCodeMessage: i,
-                    dismissCallback: () => (0, o.Mr)(y)
+                    dismissCallback: () => (0, a.Mr)(y)
                 });
             function p() {
                 null != l &&
@@ -112,13 +112,13 @@ let y = 'game_console_alert_modal',
             }
             let h = (e) =>
                 (0, r.jsx)(
-                    a.default,
+                    o.default,
                     b(g({}, e), {
                         title: t,
                         body: c,
                         onConfirm: p
                     })
                 );
-            (0, o.nf)(y) ? (0, o.o)(y, h) : (0, o.h7)(h, { modalKey: y });
+            (0, a.nf)(y) ? (0, a.o)(y, h) : (0, a.h7)(h, { modalKey: y });
         }
     };

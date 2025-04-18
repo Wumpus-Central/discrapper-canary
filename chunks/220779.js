@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(410030),
     c = n(541716),
@@ -18,7 +18,7 @@ var r = n(200651),
     h = n(142550),
     m = n(981631),
     g = n(388032),
-    E = n(212287);
+    E = n(304222);
 function b(e, t, n) {
     return (
         t in e
@@ -76,7 +76,7 @@ let I = (0, p.kt)({
     type: m.d4z.DM
 });
 function S(e) {
-    let { placeholder: t, onEnter: n, setEditorRef: o, showEmojiButton: s = !1, renderAttachButton: l, autoFocus: f = !0, onFocus: _, channel: p, className: m } = e,
+    let { placeholder: t, onEnter: n, setEditorRef: a, showEmojiButton: s = !1, renderAttachButton: l, autoFocus: f = !0, onFocus: _, channel: p, className: m } = e,
         [g, b] = i.useState(''),
         [v, S] = i.useState((0, u.JM)('')),
         T = () => {
@@ -94,7 +94,7 @@ function S(e) {
         ref: A,
         placeholder: t,
         editorClassName: m,
-        className: a()(E.replyInput, m),
+        className: o()(E.replyInput, m),
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
         maxCharacterCount: h.z,
@@ -119,7 +119,7 @@ function S(e) {
                       shouldRefocus: !1
                   }));
         },
-        setEditorRef: o,
+        setEditorRef: a,
         focused: f,
         onFocus: _,
         disableThemedBackground: !0,
@@ -149,8 +149,8 @@ let T = (e, t) => {
     },
     N = (e) => {
         let { onSelectEmoji: t, onClick: n } = e,
-            o = (0, l.ZP)(),
-            [a, c] = i.useState(!1),
+            a = (0, l.ZP)(),
+            [o, c] = i.useState(!1),
             u = i.useRef(null),
             d = i.useRef(null);
         return (
@@ -159,11 +159,11 @@ let T = (e, t) => {
                 targetElementRef: d,
                 align: 'right',
                 position: 'top',
-                shouldShow: a,
+                shouldShow: o,
                 disablePointerEvents: !1,
                 renderPopout: () =>
                     (0, r.jsx)(s.f6W, {
-                        theme: o,
+                        theme: a,
                         children: (e) =>
                             (0, r.jsx)('div', {
                                 className: e,

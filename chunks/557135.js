@@ -2,8 +2,8 @@ n.d(t, { Z: () => O }), n(415506);
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(287734),
-    a = n(258609),
+    a = n(287734),
+    o = n(258609),
     s = n(703656),
     l = n(414509),
     c = n(452369),
@@ -55,7 +55,7 @@ let O = {
     async handleVoiceConnect(e) {
         let { channel: t, connected: s, needSubscriptionToAccess: b, locked: O = !1, routeDirectlyToChannel: I = !1, bypassChangeModal: S, bypassBlockedWarningModal: T, bypassGuildIdCheck: N = !1 } = e;
         t.isThread() && (await d.Z.unarchiveThreadIfNecessary(t.id), u.Z.hasJoined(t.id) || (await d.Z.joinThread(t, 'Join Voice')));
-        let A = a.Z.getRemoteSessionId(),
+        let A = o.Z.getRemoteSessionId(),
             C = p.Z.getVoiceStateForSession(f.default.getId(), A),
             R = (null == C ? void 0 : C.channelId) === t.id || _.Z.getChannelId() === p.Z.getCurrentClientVoiceChannelId(t.guild_id),
             P = c.Z.getBlockedUsersForVoiceChannel(t.id),
@@ -88,19 +88,19 @@ let O = {
                               );
                       });
                   })
-                : (O || s || o.default.selectVoiceChannel(t.id), !__OVERLAY__ && (s || R || b || I) && v(t, N), !0)
+                : (O || s || a.default.selectVoiceChannel(t.id), !__OVERLAY__ && (s || R || b || I) && v(t, N), !0)
             : new Promise((e) => {
                   (0, i.ZDy)(
                       async () => {
                           let { default: i } = await n.e('12858').then(n.bind(n, 404339));
                           return (n) => {
-                              let { onClose: o, transitionState: a } = n;
+                              let { onClose: a, transitionState: o } = n;
                               return (0, r.jsx)(i, {
                                   channelId: t.id,
                                   blockedUserIds: P,
                                   ignoredUserIds: w,
-                                  transitionState: a,
-                                  onClose: o,
+                                  transitionState: o,
+                                  onClose: a,
                                   onJoin: () =>
                                       e(
                                           this.handleVoiceConnect({

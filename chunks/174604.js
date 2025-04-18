@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685), n(583741), n(953529);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(200100),
     l = n(793030),
     c = n(442837),
@@ -10,9 +10,9 @@ var r = n(200651),
     d = n(905128),
     f = n(50101),
     _ = n(535396),
-    p = n(696672),
+    p = n(680278),
     h = n(388032),
-    m = n(793217);
+    m = n(698323);
 function g(e, t, n) {
     return (
         t in e
@@ -75,7 +75,7 @@ function v(e) {
     });
 }
 function O(e) {
-    let { guild: t, themeResponsive: n = !0, onButtonClick: o } = e,
+    let { guild: t, themeResponsive: n = !0, onButtonClick: a } = e,
         g = (0, f.Ek)(t.id, 'GuildBoostingMarketing'),
         b = (0, c.e7)([d.Z], () => {
             var e, n;
@@ -115,13 +115,13 @@ function O(e) {
     }, [b]);
     return g && null != b && 0 !== b.length
         ? (0, r.jsxs)(s.animated.div, {
-              className: a()(m.container, { [m.themeResponsiveContainer]: n }),
+              className: o()(m.container, { [m.themeResponsiveContainer]: n }),
               style: y(E({}, S), { opacity: +!!O }),
               children: [
                   (0, r.jsx)(l.xv, {
                       tag: 'span',
                       variant: 'text-md/semibold',
-                      className: a()(m.description, {
+                      className: o()(m.description, {
                           [m.text]: !n,
                           [m.responsiveText]: n
                       }),
@@ -129,7 +129,7 @@ function O(e) {
                   }),
                   (0, r.jsx)(u.zxk, {
                       className: m.button,
-                      onClick: o,
+                      onClick: a,
                       children: h.NW.string(p.Z.E5V5KC)
                   })
               ]

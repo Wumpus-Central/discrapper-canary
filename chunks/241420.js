@@ -2,17 +2,17 @@ n.d(t, { default: () => p });
 var r = n(200651);
 n(192379);
 var o = n(481060),
-    i = n(546957),
-    a = n(190014),
+    a = n(546957),
+    i = n(190014),
     c = n(301812),
     l = n(988043),
     u = n(919539),
     s = n(526761),
     _ = n(388032),
-    b = n(888247);
-function d(e) {
+    d = n(671364);
+function b(e) {
     let { guildId: t } = e;
-    return (0, r.jsxs)(i.Z, {
+    return (0, r.jsxs)(a.Z, {
         children: [
             (0, r.jsx)(l.Z, {
                 ingress: s.f4.SERVER_PRIVACY_MODAL,
@@ -26,7 +26,7 @@ function d(e) {
                 ingress: s.f4.SERVER_PRIVACY_MODAL,
                 guildId: t
             }),
-            (0, r.jsx)(a.Z, {
+            (0, r.jsx)(i.Z, {
                 ingress: s.f4.SERVER_PRIVACY_MODAL,
                 guildId: t
             }),
@@ -39,26 +39,26 @@ function d(e) {
     });
 }
 function p(e) {
-    let { guild: t, transitionState: n, onClose: i } = e,
-        a = ''.concat(_.NW.string(_.t.BayiAg), '\u2014').concat(null != t ? t.toString() : '??');
+    let { guild: t, transitionState: n, onClose: a } = e,
+        i = ''.concat(_.NW.string(_.t.BayiAg), '\u2014').concat(null != t ? t.toString() : '??');
     return (0, r.jsxs)(o.Y0X, {
         transitionState: n,
         size: o.CgR.SMALL,
-        'aria-label': a,
+        'aria-label': i,
         children: [
             (0, r.jsx)(o.xBx, {
                 children: (0, r.jsx)(o.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: a
+                    children: i
                 })
             }),
             (0, r.jsx)(o.hzk, {
-                className: b.content,
-                children: (0, r.jsx)(d, { guildId: t.id })
+                className: d.content,
+                children: (0, r.jsx)(b, { guildId: t.id })
             }),
             (0, r.jsx)(o.mzw, {
                 children: (0, r.jsx)(o.zxk, {
-                    onClick: () => i(),
+                    onClick: () => a(),
                     children: _.NW.string(_.t.i4jeWV)
                 })
             })

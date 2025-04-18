@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(570140),
-    a = n(317770),
+    a = n(570140),
+    o = n(317770),
     s = n(603113),
     l = n(812206),
     c = n(158776),
@@ -51,8 +51,8 @@ function E(e, t) {
         r,
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -61,8 +61,8 @@ function b(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let y = null;
@@ -71,8 +71,8 @@ function v(e, t) {
 }
 async function O(e) {
     var t,
-        o,
         a,
+        o,
         m,
         { userId: b, section: O, subsection: I, guildId: S, channelId: T, friendToken: N, analyticsLocation: A, showGuildProfile: C = !0, appContext: R, customStatusPrompt: P } = e,
         w = E(e, ['userId', 'section', 'subsection', 'guildId', 'channelId', 'friendToken', 'analyticsLocation', 'showGuildProfile', 'appContext', 'customStatusPrompt']);
@@ -90,7 +90,7 @@ async function O(e) {
         Z = k === p.Skl.ONLINE ? V : k;
     (y = await (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('94989'), n.e('82412'), n.e('62880'), n.e('1381')]).then(n.bind(n, 678780));
+            let { default: e } = await Promise.all([n.e('94989'), n.e('82412'), n.e('62880'), n.e('54636')]).then(n.bind(n, 678780));
             return (t) =>
                 (0, r.jsx)(
                     e,
@@ -124,9 +124,9 @@ async function O(e) {
                     guild_id: S,
                     channel_id: T,
                     other_user_id: b,
-                    application_id: null != (o = null == M ? void 0 : M.application_id) ? o : null,
+                    application_id: null != (a = null == M ? void 0 : M.application_id) ? a : null,
                     application_name: null == M ? void 0 : M.name,
-                    sku_id: null != (a = null == F ? void 0 : F.primarySkuId) ? a : null,
+                    sku_id: null != (o = null == F ? void 0 : F.primarySkuId) ? o : null,
                     is_friend: u.Z.isFriend(b),
                     has_images: !!(null != (m = null == G ? void 0 : G.large_image) ? m : null == G ? void 0 : G.small_image),
                     party_max: null == U || null == (t = U.size) ? void 0 : t[1],
@@ -144,12 +144,12 @@ async function O(e) {
 function I() {
     null != y && (0, i.Mr3)(y), (y = null);
 }
-class S extends a.Z {
+class S extends o.Z {
     _initialize() {
-        o.Z.subscribe('USER_PROFILE_MODAL_OPEN', O), o.Z.subscribe('USER_PROFILE_MODAL_CLOSE', I);
+        a.Z.subscribe('USER_PROFILE_MODAL_OPEN', O), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', I);
     }
     _terminate() {
-        o.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', O), o.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', I);
+        a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', O), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', I);
     }
 }
 let T = new S();

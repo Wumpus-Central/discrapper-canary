@@ -1,21 +1,21 @@
-n.d(t, { Z: () => N }), n(388685), n(415506), n(457542);
+n.d(t, { Z: () => x }), n(388685), n(415506), n(457542);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    l = n.n(s),
-    o = n(990547),
+    o = n.n(s),
+    l = n(990547),
     a = n(481060),
     c = n(479531),
     u = n(388905),
     d = n(585483),
     h = n(573261),
-    p = n(720196),
-    g = n(981631),
-    f = n(388032),
-    m = n(25624),
-    _ = n(971005);
-function N(e) {
-    let { setOriginalEmail: t, setSlide: s, ready: N, token: x } = e,
+    g = n(720196),
+    p = n(981631),
+    m = n(388032),
+    f = n(578605),
+    _ = n(20493);
+function x(e) {
+    let { setOriginalEmail: t, setSlide: s, ready: x, token: N } = e,
         [b, E] = i.useState(!1),
         [v, j] = i.useState(null),
         [I, O] = i.useState(null),
@@ -23,18 +23,18 @@ function N(e) {
         C = i.useRef(null);
     return (
         i.useEffect(() => {
-            if (N) {
+            if (x) {
                 var e;
                 null == (e = C.current) || e.focus();
             }
-        }, [N]),
+        }, [x]),
         (0, r.jsxs)('div', {
             children: [
                 (0, r.jsx)(u.Ee, {
                     src: null == I ? n(26230) : n(935227),
-                    className: l()(_.marginBottom20, _.marginTop8)
+                    className: o()(_.marginBottom20, _.marginTop8)
                 }),
-                (0, r.jsx)(u.Dx, { children: f.NW.string(f.t['IfBQ5+']) }),
+                (0, r.jsx)(u.Dx, { children: m.NW.string(m.t['IfBQ5+']) }),
                 null != I && '' !== I
                     ? (0, r.jsx)(a.Text, {
                           variant: 'text-sm/normal',
@@ -43,12 +43,12 @@ function N(e) {
                       })
                     : null,
                 (0, r.jsxs)(u.gO, {
-                    className: l()(_.marginBottom20, _.marginTop20),
+                    className: o()(_.marginBottom20, _.marginTop20),
                     children: [
                         (0, r.jsx)(u.II, {
                             name: 'password',
                             type: 'password',
-                            label: f.NW.string(f.t['8dM4FB']),
+                            label: m.NW.string(m.t['8dM4FB']),
                             setRef: C,
                             className: _.marginBottom20,
                             value: S,
@@ -56,14 +56,14 @@ function N(e) {
                             error: v,
                             autoComplete: 'new-password',
                             maxLength: 72,
-                            placeholder: f.NW.string(f.t['yY/PXV'])
+                            placeholder: m.NW.string(m.t['yY/PXV'])
                         }),
                         (0, r.jsx)(u.zx, {
                             className: _.marginTop8,
                             onClick: () => {
                                 if (!b) {
                                     if (0 === S.length) {
-                                        j(f.NW.string(f.t.R98xDw)), d.S.dispatch(g.CkL.WAVE_EMPHASIZE);
+                                        j(m.NW.string(m.t.R98xDw)), d.S.dispatch(p.CkL.WAVE_EMPHASIZE);
                                         return;
                                     }
                                     return (
@@ -72,22 +72,22 @@ function N(e) {
                                         t(''),
                                         E(!0),
                                         h.Z.post({
-                                            url: g.ANM.ACCOUNT_REVERT,
+                                            url: p.ANM.ACCOUNT_REVERT,
                                             body: {
-                                                token: x,
+                                                token: N,
                                                 password: S
                                             },
-                                            trackedActionData: { event: o.NetworkActionNames.ACCOUNT_REVERT },
+                                            trackedActionData: { event: l.NetworkActionNames.ACCOUNT_REVERT },
                                             rejectWithError: !1
                                         })
                                             .then((e) => {
                                                 let {
                                                     body: { email: n }
                                                 } = e;
-                                                y(''), t(n), s(p.n.SUCCESS);
+                                                y(''), t(n), s(g.n.SUCCESS);
                                             })
                                             .catch((e) => {
-                                                if (e instanceof Error) O(f.NW.formatToPlainString(f.t.aTVNen, { statusPageURL: g.yXt.STATUS }));
+                                                if (e instanceof Error) O(m.NW.formatToPlainString(m.t.aTVNen, { statusPageURL: p.yXt.STATUS }));
                                                 else {
                                                     let t = new c.Z(e);
                                                     t.hasFieldErrors()
@@ -95,19 +95,19 @@ function N(e) {
                                                         : O(
                                                               (function (e) {
                                                                   switch (e) {
-                                                                      case g.evJ.ACCOUNT_REVERT_INVALID_TOKEN:
-                                                                          return f.NW.string(f.t['11zzGR']);
-                                                                      case g.evJ.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN:
-                                                                          return f.NW.string(f.t['6qmgaG']);
-                                                                      case g.evJ.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND:
-                                                                          return f.NW.string(f.t.bChnKi);
+                                                                      case p.evJ.ACCOUNT_REVERT_INVALID_TOKEN:
+                                                                          return m.NW.string(m.t['11zzGR']);
+                                                                      case p.evJ.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN:
+                                                                          return m.NW.string(m.t['6qmgaG']);
+                                                                      case p.evJ.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND:
+                                                                          return m.NW.string(m.t.bChnKi);
                                                                       default:
-                                                                          return f.NW.format(f.t.aTVNen, { statusPageURL: g.yXt.STATUS });
+                                                                          return m.NW.format(m.t.aTVNen, { statusPageURL: p.yXt.STATUS });
                                                                   }
                                                               })(t.code).toString()
                                                           );
                                                 }
-                                                d.S.dispatch(g.CkL.WAVE_EMPHASIZE);
+                                                d.S.dispatch(p.CkL.WAVE_EMPHASIZE);
                                             })
                                             .finally(() => {
                                                 E(!1);
@@ -117,18 +117,18 @@ function N(e) {
                             },
                             submitting: b,
                             disabled: b,
-                            children: f.NW.string(f.t.ezv91d)
+                            children: m.NW.string(m.t.ezv91d)
                         })
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: m.buttonContainer,
+                    className: f.buttonContainer,
                     children: (0, r.jsx)(u.zx, {
                         color: u.zx.Colors.PRIMARY,
                         onClick: () => {
-                            y(''), s(p.n.START);
+                            y(''), s(g.n.START);
                         },
-                        children: f.NW.string(f.t.rzxnQ0)
+                        children: m.NW.string(m.t.rzxnQ0)
                     })
                 })
             ]

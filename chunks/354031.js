@@ -6,7 +6,7 @@ var r = n(200651),
     a = n(434404),
     o = n(981631),
     c = n(388032),
-    d = n(36323);
+    d = n(307906);
 function u(e) {
     let { features: t, canManageGuild: n } = e,
         u = i.useCallback(

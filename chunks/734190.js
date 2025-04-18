@@ -16,16 +16,16 @@ var r = n(200651),
     b = n(306680),
     y = n(979651),
     _ = n(938475),
-    v = n(714794),
-    O = n(876548),
+    O = n(714794),
+    v = n(876548),
     C = n(25601),
-    S = n(207055),
-    j = n(981631),
-    E = n(124368),
-    x = n(388032),
-    I = n(653084),
-    N = n(830082),
-    P = n(209025);
+    j = n(207055),
+    S = n(981631),
+    x = n(124368),
+    E = n(388032),
+    I = n(915887),
+    N = n(768107),
+    P = n(995453);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -174,14 +174,14 @@ let R = i.memo(function (e) {
         B = (0, a.e7)([f.Z], () => f.Z.isMuted(t.id)),
         W = i.useCallback(
             (e) => {
-                (0, g.ok)(t, !e.shiftKey, E.on.CHANNEL_LIST);
+                (0, g.ok)(t, !e.shiftKey, x.on.CHANNEL_LIST);
             },
             [t]
         ),
         V = i.useCallback(() => {
             u.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
-        H = i.useCallback(
+        F = i.useCallback(
             (e) => {
                 let i = m.Z.getChannel(t.id);
                 null != i &&
@@ -192,7 +192,7 @@ let R = i.memo(function (e) {
             },
             [t.id]
         ),
-        F = null == L ? 0 : L.length,
+        H = null == L ? 0 : L.length,
         z = (0, s.JA)(t.id),
         { role: Y } = z,
         K = (function (e, t) {
@@ -217,13 +217,13 @@ let R = i.memo(function (e) {
         q = i.useRef(null),
         Q =
             U > 0
-                ? x.NW.formatToPlainString(x.t['ZL7+Iy'], {
+                ? E.NW.formatToPlainString(E.t['ZL7+Iy'], {
                       channelName: t.name,
                       mentionCount: U
                   })
                 : M
-                  ? x.NW.formatToPlainString(x.t.YlVvmZ, { channelName: t.name })
-                  : x.NW.formatToPlainString(x.t['0nZpiI'], { channelName: t.name }),
+                  ? E.NW.formatToPlainString(E.t.YlVvmZ, { channelName: t.name })
+                  : E.NW.formatToPlainString(E.t['0nZpiI'], { channelName: t.name }),
         X = (0, p.Q3)('GuildSidebarThreadListEntry') ? T : A;
     return (0, r.jsxs)('li', {
         role: Y,
@@ -253,7 +253,7 @@ let R = i.memo(function (e) {
                         [N.withGuildIcon]: D
                     }),
                     onMouseDown: V,
-                    onContextMenu: H,
+                    onContextMenu: F,
                     children: [
                         !M || B || l ? null : (0, r.jsx)('div', { className: o()(N.unread, N.unreadImportant) }),
                         (0, r.jsx)(
@@ -275,14 +275,14 @@ let R = i.memo(function (e) {
                                         (0, r.jsxs)('div', {
                                             className: N.children,
                                             children: [
-                                                F > 0 && t.userLimit > 0
-                                                    ? (0, r.jsx)(O.Z, {
-                                                          userCount: F,
+                                                H > 0 && t.userLimit > 0
+                                                    ? (0, r.jsx)(v.Z, {
+                                                          userCount: H,
                                                           video: k,
                                                           channel: t
                                                       })
                                                     : null,
-                                                (0, v.Z)(U)
+                                                (0, O.Z)(U)
                                                     ? (0, r.jsx)(C.Z, {
                                                           mentionsCount: U,
                                                           isMentionLowImportance: G
@@ -297,12 +297,12 @@ let R = i.memo(function (e) {
                     ]
                 })
             }),
-            (0, r.jsx)(S.Z, {
+            (0, r.jsx)(j.Z, {
                 channel: t,
                 collapsed: !P,
                 collapsedMax: 6,
                 voiceStates: L,
-                location: j.Sbl.GUILD_CHANNEL_LIST
+                location: S.Sbl.GUILD_CHANNEL_LIST
             })
         ]
     });

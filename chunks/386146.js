@@ -1,11 +1,11 @@
 n.d(t, {
     H3: () => l,
-    JN: () => a,
+    JN: () => o,
     tc: () => s
 });
 var r = n(818083),
     i = n(984134);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-02_av_error_codes',
     label: 'AV error new UI',
@@ -18,10 +18,10 @@ let o = (0, r.B)({
         }
     ]
 });
-function a(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: r } = i.h.useExperiment({ location: t }, { autoTrackExposure: n });
-    return o.useExperiment(
+    return a.useExperiment(
         { location: t },
         {
             disable: r,
@@ -32,7 +32,7 @@ function a(e) {
 function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: r } = i.h.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return o.getCurrentConfig(
+    return a.getCurrentConfig(
         { location: t },
         {
             disable: r,
@@ -41,5 +41,5 @@ function s(e) {
     ).avErrorUIEnabled;
 }
 function l(e) {
-    o.trackExposure({ location: e });
+    a.trackExposure({ location: e });
 }

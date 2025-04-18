@@ -11,14 +11,14 @@ function r(e) {
 function i(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function o(e, t) {
+function a(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
         (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function a(e, t, n) {
-    return t && o(e.prototype, t), n && o(e, n), e;
+function o(e, t, n) {
+    return t && a(e.prototype, t), n && a(e, n), e;
 }
 function s(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
@@ -89,11 +89,11 @@ var h = (function (e) {
     function n() {
         var e;
         i(this, n);
-        for (var r = arguments.length, o = Array(r), a = 0; a < r; a++) o[a] = arguments[a];
-        return p(d((e = t.call.apply(t, [this].concat(o)))), 'priority', 140), p(d(e), 'incompatibleTokens', ['R', 'u', 't', 'T']), e;
+        for (var r = arguments.length, a = Array(r), o = 0; o < r; o++) a[o] = arguments[o];
+        return p(d((e = t.call.apply(t, [this].concat(a)))), 'priority', 140), p(d(e), 'incompatibleTokens', ['R', 'u', 't', 'T']), e;
     }
     return (
-        a(n, [
+        o(n, [
             {
                 key: 'parse',
                 value: function (e, t, n) {

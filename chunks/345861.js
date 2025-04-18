@@ -9,7 +9,7 @@ function a(e) {
     var t,
         r,
         { buttonCTA: i, onChange: a, onFileSizeError: c, 'aria-label': h, multiple: v = !1, disabled: u = !1, submitting: f = !1, maxFileSizeBytes: p, filters: d, className: b } = e,
-        g = (function (e, t) {
+        Z = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -57,7 +57,7 @@ function a(e) {
                                 });
                         }
                         return e;
-                    })({}, g)),
+                    })({}, Z)),
                     (r = r =
                         {
                             submitting: f,

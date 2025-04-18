@@ -1,15 +1,15 @@
 n.d(t, { Z: () => m });
 var r = n(200651),
     i = n(192379),
-    o = n(367907),
-    a = n(10718),
+    a = n(367907),
+    o = n(10718),
     s = n(69626),
     l = n(626135),
     c = n(785717),
     u = n(678738),
     d = n(981631),
     f = n(388032),
-    _ = n(411802);
+    _ = n(175354);
 function p(e, t, n) {
     return (
         t in e
@@ -49,7 +49,7 @@ function m(e) {
             }),
             [m]
         ),
-        { commands: y } = a.Qm(b, t, n),
+        { commands: y } = o.Qm(b, t, n),
         v = i.useMemo(
             () =>
                 null == y
@@ -72,7 +72,7 @@ function m(e) {
                         command_id: e,
                         guild_id: p
                     },
-                    (0, o.JS)(m.id)
+                    (0, a.JS)(m.id)
                 )
             );
     };

@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(442837),
-    a = n(597688),
+    a = n(442837),
+    o = n(597688),
     s = n(479446),
     l = n(646476),
     c = n(599659),
@@ -60,7 +60,7 @@ function I(e) {
             [S, W, q, K, X]
         ),
         $ = (0, u.x8)(),
-        ee = (0, o.Wu)([a.Z], () => a.Z.recommendedGiftSkuIds);
+        ee = (0, a.Wu)([o.Z], () => o.Z.recommendedGiftSkuIds);
     return (0, r.jsx)(y.Provider, {
         value: {
             isGift: t,

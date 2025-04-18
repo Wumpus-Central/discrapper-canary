@@ -6,14 +6,14 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(833062),
-    a = n(678738),
+    a = n(833062),
+    o = n(678738),
     s = n(502762),
     l = n(292814),
     c = n(388032),
-    u = n(848481);
+    u = n(188394);
 function d(e) {
-    return (0, r.jsx)(o.Z, { application: e }, e.id);
+    return (0, r.jsx)(a.Z, { application: e }, e.id);
 }
 function f(e) {
     let { userId: t } = e,
@@ -48,18 +48,18 @@ function f(e) {
 }
 function _(e) {
     let { userId: t, headingColor: n } = e,
-        o = (0, l.e)({
+        a = (0, l.e)({
             userId: t,
             renderApplicationName: d
         });
-    return (0, r.jsx)(a.Z, {
+    return (0, r.jsx)(o.Z, {
         headingColor: n,
         heading: c.NW.string(c.t.Iyka0d),
         headingIcon: i.P4T,
         children: (0, r.jsx)(i.Text, {
             variant: 'text-xs/normal',
             color: 'text-normal',
-            children: o
+            children: a
         })
     });
 }

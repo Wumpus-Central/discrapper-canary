@@ -4,7 +4,7 @@ n(192379);
 var i = n(481060),
     l = n(823188),
     s = n(474936),
-    o = n(908270);
+    o = n(894838);
 function a(e) {
     let { onClick: t, isGift: n, priceOptions: s, showPromotionalGiftBanner: a } = e;
     return (0, r.jsx)(i.P3F, {

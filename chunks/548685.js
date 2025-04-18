@@ -16,7 +16,7 @@ var r = n(200651),
     m = n(957058),
     _ = n(215023),
     C = n(388032),
-    v = n(379890);
+    v = n(806734);
 let x = (e) => {
     let { isLoading: t, rankedSkuIds: n, handleTransition: a, numVisibleItems: x, tab: O } = e,
         j = (0, o.e7)([c.default], () => c.default.getCurrentUser()),

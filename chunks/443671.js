@@ -7,7 +7,7 @@ var r = n(200651),
     o = n(487894),
     c = n(300234),
     d = n(388032),
-    u = n(524855);
+    u = n(258033);
 function h(e) {
     let { channel: t, threadIds: n, startThread: l, goToThread: h } = e,
         g = a.useCallback(

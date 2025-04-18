@@ -8,14 +8,14 @@ e.exports = function (e) {
             built_in: 'array date decimal duration integer map pair string tag xml null boolean bytes keyword list locale queue set stack staticarray local var variable global data self inherited currentcapture givenblock',
             keyword: 'cache database_names database_schemanames database_tablenames define_tag define_type email_batch encode_set html_comment handle handle_error header if inline iterate ljax_target link link_currentaction link_currentgroup link_currentrecord link_detail link_firstgroup link_firstrecord link_lastgroup link_lastrecord link_nextgroup link_nextrecord link_prevgroup link_prevrecord log loop namespace_using output_none portal private protect records referer referrer repeating resultset rows search_args search_arguments select sort_args sort_arguments thread_atomic value_list while abort case else fail_if fail_ifnot fail if_empty if_false if_null if_true loop_abort loop_continue loop_count params params_up return return_value run_children soap_definetag soap_lastrequest soap_lastresponse tag_name ascending average by define descending do equals frozen group handle_failure import in into join let match max min on order parent protected provide public require returnhome skip split_thread sum take thread to trait type where with yield yieldhome'
         },
-        o = e.COMMENT('<!--', '-->', { relevance: 0 }),
-        a = {
+        a = e.COMMENT('<!--', '-->', { relevance: 0 }),
+        o = {
             className: 'meta',
             begin: '\\[noprocess\\]',
             starts: {
                 end: '\\[/noprocess\\]',
                 returnEnd: !0,
-                contains: [o]
+                contains: [a]
             }
         },
         s = {
@@ -90,10 +90,10 @@ e.exports = function (e) {
                     end: '\\[|' + n,
                     returnEnd: !0,
                     relevance: 0,
-                    contains: [o]
+                    contains: [a]
                 }
             },
-            a,
+            o,
             s,
             {
                 className: 'meta',
@@ -109,10 +109,10 @@ e.exports = function (e) {
                             starts: {
                                 end: '\\[noprocess\\]|' + n,
                                 returnEnd: !0,
-                                contains: [o]
+                                contains: [a]
                             }
                         },
-                        a,
+                        o,
                         s
                     ].concat(c)
                 }

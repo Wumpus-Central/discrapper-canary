@@ -13,7 +13,7 @@ var i = n(793030),
     g = n(888125),
     p = n(981631),
     h = n(388032),
-    f = n(413905);
+    f = n(162161);
 function x() {
     let { analyticsLocations: e } = (0, a.ZP)(l.Z.GUILD_SETTINGS_BOOST_PERKS_PAGE),
         t = (0, s.e7)([c.Z], () => c.Z.getProps().guild, []),

@@ -8,7 +8,7 @@ var s = r(200651),
     i = r(424071),
     d = r(239358),
     x = r(388032),
-    u = r(336309);
+    u = r(475286);
 function h(e) {
     let { platformType: a, onContinue: r, onClose: h, img: N, headerConnect: m, headerReconnect: C, body: j, learnMoreLink: k, valueProps: v } = e,
         p = (0, l.e7)([c.Z], () => {

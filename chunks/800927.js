@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(413496), n(433524), n(35282), n(704826), n(804061);
 var r = n(512722),
     i = n.n(r),
-    o = n(477660),
-    a = n.n(o);
+    a = n(477660),
+    o = n.n(a);
 function s(e, t, n) {
     return (
         t in e
@@ -68,7 +68,7 @@ let d = /\n{2,}$/,
     v = 1,
     O = 1000000000,
     I = (e) => e.map((e) => ('text' === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, '')), e)),
-    S = u(l({}, a().defaultRules.list), {
+    S = u(l({}, o().defaultRules.list), {
         requiredFirstCharacters: ' *-0123456789'.split(''),
         match: (e, t) => {
             if (!t.allowList || t._listLevel >= y + 1) return null;
@@ -78,8 +78,8 @@ let d = /\n{2,}$/,
         },
         parse: (e, t, n) => {
             let r = e[2],
-                o = r.length > 1,
-                a = o ? Math.min(O, Math.max(v, +r)) : void 0,
+                a = r.length > 1,
+                o = a ? Math.min(O, Math.max(v, +r)) : void 0,
                 s = e[0].replace(d, '\n'),
                 c = h.exec(s),
                 f = null != c ? c[0].length : 0,
@@ -91,18 +91,18 @@ let d = /\n{2,}$/,
             i()(null != y, 'markup list items can not be parsed.');
             let S = !1;
             return {
-                ordered: o,
-                start: a,
+                ordered: a,
+                start: o,
                 items: y.map((e, r) => {
                     let i,
-                        o = e.replace(h, '').replace(b, ''),
-                        a = r === y.length - 1,
-                        s = -1 !== o.indexOf('\n\n') || (a && S);
+                        a = e.replace(h, '').replace(b, ''),
+                        o = r === y.length - 1,
+                        s = -1 !== a.indexOf('\n\n') || (o && S);
                     S = s;
                     let c = n.inline,
                         d = n._list,
                         f = n._listLevel;
-                    (n._list = !0), (n._listLevel = (null != f ? f : 0) + 1), s ? ((n.inline = !1), (i = o.replace(g, '\n\n'))) : ((n.inline = !0), (i = o.replace(g, '')));
+                    (n._list = !0), (n._listLevel = (null != f ? f : 0) + 1), s ? ((n.inline = !1), (i = a.replace(g, '\n\n'))) : ((n.inline = !0), (i = a.replace(g, '')));
                     let _ = I(t(i, u(l({}, n), { allowHeading: !1 })));
                     return (n.inline = c), (n._list = d), (n._listLevel = f), _;
                 })

@@ -1,13 +1,13 @@
 n.d(t, {
-    Kw: () => a,
+    Kw: () => o,
     Po: () => l,
     hv: () => s
 });
 var r = n(570140),
     i = n(626135),
-    o = n(981631);
-function a(e) {
-    i.default.track(o.rMx.HOTSPOT_HIDDEN, { hotspot_location: e }),
+    a = n(981631);
+function o(e) {
+    i.default.track(a.rMx.HOTSPOT_HIDDEN, { hotspot_location: e }),
         r.Z.wait(() => {
             r.Z.dispatch({
                 type: 'HOTSPOT_HIDE',

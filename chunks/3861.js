@@ -17,7 +17,7 @@ var r = n(200651),
     _ = n(45430),
     y = n(981631),
     C = n(354459),
-    x = n(875288);
+    x = n(363987);
 let v = (0, a.Z)((e) => {
     let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: a, layout: v, onSelectParticipant: j, onContextMenuParticipant: O, onFullscreenParticipant: E, channel: N, hasConnectPermission: I, className: P, inCall: S, showParticipants: Z = !0, paused: T = !1, width: A, height: w, idle: R, mode: k, popoutWindow: M, awaitingRemoteSessionInfo: L, callContainerDimensions: D } = e;
     i.useEffect(() => {

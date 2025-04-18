@@ -6,8 +6,8 @@ var r = n(200651),
     a = n(813197),
     o = n(999382),
     c = n(388032),
-    d = n(604425),
-    u = n(375600);
+    d = n(137991),
+    u = n(381109);
 function m(e) {
     let { profile: t, handleIconChange: n, canManageGuild: s } = e,
         o = i.useCallback(() => {

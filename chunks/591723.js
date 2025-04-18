@@ -1,8 +1,8 @@
 n.d(t, { V: () => v });
 var r = n(573654),
     i = n(40284),
-    o = n(481732),
-    a = n(478413),
+    a = n(481732),
+    o = n(478413),
     s = n(919513),
     l = n(158851);
 function c(e, t) {
@@ -41,16 +41,16 @@ function m(e, t) {
         var n = [],
             r = !0,
             i = !1,
-            o = void 0;
+            a = void 0;
         try {
-            for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0);
+            for (var o, s = e[Symbol.iterator](); !(r = (o = s.next()).done) && (n.push(o.value), !t || n.length !== t); r = !0);
         } catch (e) {
-            (i = !0), (o = e);
+            (i = !0), (a = e);
         } finally {
             try {
                 r || null == s.return || s.return();
             } finally {
-                if (i) throw o;
+                if (i) throw a;
             }
         }
         return n;
@@ -60,11 +60,11 @@ function g(e) {
     if (Array.isArray(e)) return e;
 }
 function E(e) {
-    var t = (0, o.p)().toString();
+    var t = (0, a.p)().toString();
     switch (e) {
-        case a.t.SOURCE:
+        case o.t.SOURCE:
             return 'S'.concat(t);
-        case a.t.TARGET:
+        case o.t.TARGET:
             return 'T'.concat(t);
         default:
             throw Error('Unknown Handler Role: '.concat(e));
@@ -73,9 +73,9 @@ function E(e) {
 function b(e) {
     switch (e[0]) {
         case 'S':
-            return a.t.SOURCE;
+            return o.t.SOURCE;
         case 'T':
-            return a.t.TARGET;
+            return o.t.TARGET;
         default:
             (0, r.k)(!1, 'Cannot parse handler ID: '.concat(e));
     }
@@ -85,9 +85,9 @@ function y(e, t) {
         r = !1;
     do {
         var i = n.next(),
-            o = i.done;
+            a = i.done;
         if (f(i.value, 2)[1] === t) return !0;
-        r = !!o;
+        r = !!a;
     } while (!r);
     return !1;
 }
@@ -101,7 +101,7 @@ var v = (function () {
                 key: 'addSource',
                 value: function (e, t) {
                     (0, s.sM)(e), (0, s.up)(t);
-                    var n = this.addHandler(a.t.SOURCE, e, t);
+                    var n = this.addHandler(o.t.SOURCE, e, t);
                     return this.store.dispatch((0, i.j1)(n)), n;
                 }
             },
@@ -109,7 +109,7 @@ var v = (function () {
                 key: 'addTarget',
                 value: function (e, t) {
                     (0, s.sM)(e, !0), (0, s.JP)(t);
-                    var n = this.addHandler(a.t.TARGET, e, t);
+                    var n = this.addHandler(o.t.TARGET, e, t);
                     return this.store.dispatch((0, i.jn)(n)), n;
                 }
             },
@@ -147,13 +147,13 @@ var v = (function () {
             {
                 key: 'isSourceId',
                 value: function (e) {
-                    return b(e) === a.t.SOURCE;
+                    return b(e) === o.t.SOURCE;
                 }
             },
             {
                 key: 'isTargetId',
                 value: function (e) {
-                    return b(e) === a.t.TARGET;
+                    return b(e) === o.t.TARGET;
                 }
             },
             {
@@ -190,7 +190,7 @@ var v = (function () {
                 key: 'addHandler',
                 value: function (e, t, n) {
                     var r = E(e);
-                    return this.types.set(r, t), e === a.t.SOURCE ? this.dragSources.set(r, n) : e === a.t.TARGET && this.dropTargets.set(r, n), r;
+                    return this.types.set(r, t), e === o.t.SOURCE ? this.dragSources.set(r, n) : e === o.t.TARGET && this.dropTargets.set(r, n), r;
                 }
             }
         ]),

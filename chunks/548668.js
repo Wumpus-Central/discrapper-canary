@@ -1,7 +1,7 @@
 let n;
 a.d(t, { $: () => b });
-var s,
-    r = a(200651),
+var r,
+    s = a(200651),
     l = a(192379),
     i = a(120356),
     o = a.n(i),
@@ -9,12 +9,12 @@ var s,
     d = a(213919),
     u = a(982905),
     _ = a(794010),
-    p = a(66037),
-    h = a(231338),
-    m = a(436620),
-    N = a(330711),
-    I = a(650548);
-function g(e, t, a) {
+    N = a(66037),
+    m = a(231338),
+    p = a(436620),
+    h = a(330711),
+    I = a(716817);
+function k(e, t, a) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,159 +27,159 @@ function g(e, t, a) {
         e
     );
 }
-let k = 'Footer Navigation',
-    O = {
+let g = 'Footer Navigation',
+    A = {
         BLURPLE: 'Blurple',
         PRIMARY: 'Primary'
     },
-    A = () => [
+    O = () => [
         {
-            title: N.Z.Messages.NAVIGATION_PRODUCT,
+            title: h.Z.Messages.NAVIGATION_PRODUCT,
             routes: [
                 {
-                    link: h.am.DOWNLOAD,
-                    title: N.Z.Messages.NAVIGATION_DOWNLOAD,
+                    link: m.am.DOWNLOAD,
+                    title: h.Z.Messages.NAVIGATION_DOWNLOAD,
                     tracking: 'download'
                 },
                 {
-                    link: h.am.BRANDING,
-                    title: N.Z.Messages.NAVIGATION_BRANDING,
+                    link: m.am.BRANDING,
+                    title: h.Z.Messages.NAVIGATION_BRANDING,
                     tracking: 'branding'
                 },
                 {
-                    link: h.am.NITRO,
-                    title: N.Z.Messages.NAVIGATION_NITRO,
+                    link: m.am.NITRO,
+                    title: h.Z.Messages.NAVIGATION_NITRO,
                     tracking: 'nitro',
                     external: !0
                 }
             ]
         },
         {
-            title: N.Z.Messages.NAVIGATION_DEVELOPERS,
+            title: h.Z.Messages.NAVIGATION_DEVELOPERS,
             routes: [
                 {
-                    link: h.am.RICH_PRESENCE,
-                    title: N.Z.Messages.NAVIGATION_RICH_PRESENCE,
+                    link: m.am.RICH_PRESENCE,
+                    title: h.Z.Messages.NAVIGATION_RICH_PRESENCE,
                     tracking: 'rich_presence'
                 },
                 {
-                    link: h.am.VERIFICATION,
-                    title: N.Z.Messages.NAVIGATION_VERIFICATION,
+                    link: m.am.VERIFICATION,
+                    title: h.Z.Messages.NAVIGATION_VERIFICATION,
                     tracking: 'verification',
                     external: !0
                 },
                 {
-                    link: h.yX.DEV_PORTAL_APPLICATIONS,
-                    title: N.Z.Messages.NAVIGATION_APPLICATIONS,
+                    link: m.yX.DEV_PORTAL_APPLICATIONS,
+                    title: h.Z.Messages.NAVIGATION_APPLICATIONS,
                     tracking: 'developers',
                     external: !0
                 },
                 {
-                    link: h.yX.DEV_PORTAL_DOCUMENTATION,
-                    title: N.Z.Messages.NAVIGATION_DOCUMENTATION,
+                    link: m.yX.DEV_PORTAL_DOCUMENTATION,
+                    title: h.Z.Messages.NAVIGATION_DOCUMENTATION,
                     tracking: 'documentation',
                     external: !0
                 }
             ]
         },
         {
-            title: N.Z.Messages.NAVIGATION_RESOURCES,
+            title: h.Z.Messages.NAVIGATION_RESOURCES,
             routes: [
                 {
-                    link: h.yX.HELP_AND_SUPPORT,
-                    title: N.Z.Messages.NAVIGATION_HELP_AND_SUPPORT,
+                    link: m.yX.HELP_AND_SUPPORT,
+                    title: h.Z.Messages.NAVIGATION_HELP_AND_SUPPORT,
                     tracking: 'helpandsupport',
                     external: !0
                 },
                 {
-                    link: h.am.GUIDELINES,
-                    title: N.Z.Messages.NAVIGATION_GUIDELINES,
+                    link: m.am.GUIDELINES,
+                    title: h.Z.Messages.NAVIGATION_GUIDELINES,
                     tracking: 'guidelines',
                     external: !0
                 },
                 {
-                    link: h.yX.FEEDBACK,
-                    title: N.Z.Messages.NAVIGATION_FEEDBACK,
+                    link: m.yX.FEEDBACK,
+                    title: h.Z.Messages.NAVIGATION_FEEDBACK,
                     tracking: 'feedback',
                     external: !0
                 },
                 {
-                    link: h.am.TERMS,
-                    title: N.Z.Messages.NAVIGATION_TERMS,
+                    link: m.am.TERMS,
+                    title: h.Z.Messages.NAVIGATION_TERMS,
                     tracking: 'terms',
                     external: !0
                 },
                 {
-                    link: h.am.PRIVACY,
-                    title: N.Z.Messages.NAVIGATION_PRIVACY,
+                    link: m.am.PRIVACY,
+                    title: h.Z.Messages.NAVIGATION_PRIVACY,
                     tracking: 'privacy',
                     external: !0
                 },
                 {
-                    link: h.am.SECURITY,
-                    title: N.Z.Messages.NAVIGATION_SECURITY,
+                    link: m.am.SECURITY,
+                    title: h.Z.Messages.NAVIGATION_SECURITY,
                     tracking: 'security'
                 },
                 {
-                    link: h.yX.STATUS,
-                    title: N.Z.Messages.NAVIGATION_STATUS,
+                    link: m.yX.STATUS,
+                    title: h.Z.Messages.NAVIGATION_STATUS,
                     tracking: 'status',
                     external: !0
                 },
                 {
-                    link: h.am.SAFETY_LANDING,
-                    title: N.Z.Messages.NAVIGATION_SAFETY_CENTER,
+                    link: m.am.SAFETY_LANDING,
+                    title: h.Z.Messages.NAVIGATION_SAFETY_CENTER,
                     tracking: 'safetycenter',
                     external: !0
                 }
             ]
         },
         {
-            title: N.Z.Messages.NAVIGATION_COMPANY,
+            title: h.Z.Messages.NAVIGATION_COMPANY,
             routes: [
                 {
-                    link: h.am.COMPANY,
-                    title: N.Z.Messages.NAVIGATION_ABOUT,
+                    link: m.am.COMPANY,
+                    title: h.Z.Messages.NAVIGATION_ABOUT,
                     tracking: 'about'
                 },
                 {
-                    link: h.am.BLOG,
-                    title: N.Z.Messages.NAVIGATION_BLOG,
+                    link: m.am.BLOG,
+                    title: h.Z.Messages.NAVIGATION_BLOG,
                     tracking: 'blog',
                     external: !0
                 },
                 {
-                    link: h.am.JOBS,
-                    title: N.Z.Messages.NAVIGATION_JOBS,
+                    link: m.am.JOBS,
+                    title: h.Z.Messages.NAVIGATION_JOBS,
                     tracking: 'join',
                     external: !0
                 }
             ]
         },
         {
-            title: N.Z.Messages.NAVIGATION_MORE,
+            title: h.Z.Messages.NAVIGATION_MORE,
             routes: [
                 {
-                    link: h.am.PARTNERS,
-                    title: N.Z.Messages.NAVIGATION_PARTNERS,
+                    link: m.am.PARTNERS,
+                    title: h.Z.Messages.NAVIGATION_PARTNERS,
                     tracking: 'partners',
                     external: !0
                 },
                 {
-                    link: h.am.HYPESQUAD,
-                    title: N.Z.Messages.NAVIGATION_HYPESQUAD,
+                    link: m.am.HYPESQUAD,
+                    title: h.Z.Messages.NAVIGATION_HYPESQUAD,
                     tracking: 'hypesquad',
                     external: !0
                 },
                 {
-                    link: h.yX.PRESS_INQUIRIES,
-                    title: N.Z.Messages.NAVIGATION_PRESS_INQUIRIES,
+                    link: m.yX.PRESS_INQUIRIES,
+                    title: h.Z.Messages.NAVIGATION_PRESS_INQUIRIES,
                     tracking: 'pressinquiries',
                     external: !0
                 },
                 {
-                    link: h.am.OPEN_SOURCE,
-                    title: N.Z.Messages.NAVIGATION_OPEN_SOURCE,
+                    link: m.am.OPEN_SOURCE,
+                    title: h.Z.Messages.NAVIGATION_OPEN_SOURCE,
                     tracking: 'open_source'
                 }
             ]
@@ -187,14 +187,14 @@ let k = 'Footer Navigation',
     ],
     f = (e) => {
         let { colorVariant: t, animate: a } = e;
-        return (0, r.jsx)('svg', {
+        return (0, s.jsx)('svg', {
             className: (0, u.l)(I, 'footerBackground', t),
             preserveAspectRatio: 'none',
             width: '1920',
             height: '100%',
             viewBox: '0 0 1920 330',
             version: '1.1',
-            children: (0, r.jsx)('path', {
+            children: (0, s.jsx)('path', {
                 className: (0, u.l)(I, 'footerBackground', a ? 'Play' : 'Paused'),
                 fill: '#1a1c1e',
                 fillOpacity: '0.3',
@@ -202,19 +202,19 @@ let k = 'Footer Navigation',
             })
         });
     };
-class b extends (s = l.PureComponent) {
+class b extends (r = l.PureComponent) {
     componentDidMount() {
         this.setState({
             token: (0, d.getToken)(),
-            isAppCompatible: m.KO
+            isAppCompatible: p.KO
         });
     }
     renderAppButton(e) {
         if ('STATIC_RENDERER' === this.props.platform) return null;
-        let { downloadLink: t, isMobile: a, mobileDownloadText: s, platform: l, variant: i, authRedirectTo: o } = this.props,
+        let { downloadLink: t, isMobile: a, mobileDownloadText: r, platform: l, variant: i, authRedirectTo: o } = this.props,
             { isAppCompatible: c } = this.state;
         if (a)
-            return (0, r.jsx)(n, {
+            return (0, s.jsx)(n, {
                 eventName: 'Download App',
                 data: {
                     Platform: l,
@@ -226,10 +226,10 @@ class b extends (s = l.PureComponent) {
                 target: '_blank',
                 className: (0, u.l)(I, 'button', i),
                 href: t,
-                children: s
+                children: r
             });
         if (!c)
-            return (0, r.jsx)(n, {
+            return (0, s.jsx)(n, {
                 eventName: 'Download App',
                 data: {
                     Platform: l,
@@ -239,15 +239,15 @@ class b extends (s = l.PureComponent) {
                 },
                 alt: 'Download Discord',
                 className: (0, u.l)(I, 'button', i),
-                href: h.am.DOWNLOAD,
-                children: N.Z.Messages.NAVIGATION_DOWNLOAD
+                href: m.am.DOWNLOAD,
+                children: h.Z.Messages.NAVIGATION_DOWNLOAD
             });
-        let d = null != o ? h.$w.REGISTER_WITH_REDIRECT(o) : h.$w.REGISTER,
-            _ = N.Z.Messages.COMMON_SIGN_UP_NOW;
+        let d = null != o ? m.$w.REGISTER_WITH_REDIRECT(o) : m.$w.REGISTER,
+            _ = h.Z.Messages.COMMON_SIGN_UP_NOW;
         return (
-            e && ((d = h.$w.ME), (_ = N.Z.Messages.COMMON_OPEN_DISCORD)),
-            (0, r.jsx)(n, {
-                eventName: k,
+            e && ((d = m.$w.ME), (_ = h.Z.Messages.COMMON_OPEN_DISCORD)),
+            (0, s.jsx)(n, {
+                eventName: g,
                 className: (0, u.l)(I, 'button', this.props.variant),
                 data: {
                     linkClicked: e ? 'open' : 'login',
@@ -259,32 +259,32 @@ class b extends (s = l.PureComponent) {
         );
     }
     render() {
-        let { variant: e, style: t, className: s, avoidRouter: l, showWave: i } = this.props,
+        let { variant: e, style: t, className: r, avoidRouter: l, showWave: i } = this.props,
             { animateBackground: d, token: _ } = this.state,
-            m = A().map((e) => {
+            p = O().map((e) => {
                 let t = e.routes.map((e, t) =>
                     e.external
-                        ? (0, r.jsx)(
+                        ? (0, s.jsx)(
                               n,
                               {
                                   className: I.route,
-                                  eventName: k,
+                                  eventName: g,
                                   data: { linkClicked: e.tracking },
                                   href: e.link,
                                   children: e.title
                               },
                               e.link || t
                           )
-                        : (0, r.jsx)(
-                              p.Z,
+                        : (0, s.jsx)(
+                              N.Z,
                               {
                                   avoidRouter: l,
                                   to: e.link,
                                   from: 'footer_navigation',
                                   className: I.route,
-                                  children: (0, r.jsx)(n, {
+                                  children: (0, s.jsx)(n, {
                                       tag: 'span',
-                                      eventName: k,
+                                      eventName: g,
                                       data: { linkClicked: e.tracking },
                                       children: e.title
                                   })
@@ -292,12 +292,12 @@ class b extends (s = l.PureComponent) {
                               e.link
                           )
                 );
-                return (0, r.jsxs)(
+                return (0, s.jsxs)(
                     'div',
                     {
                         className: I.navigationSection,
                         children: [
-                            (0, r.jsx)('h3', {
+                            (0, s.jsx)('h3', {
                                 className: I.navigationHeader,
                                 children: e.title
                             }),
@@ -307,56 +307,56 @@ class b extends (s = l.PureComponent) {
                     e.title
                 );
             });
-        return (0, r.jsx)(c.$, {
+        return (0, s.jsx)(c.$, {
             innerRef: this.ref,
             onChange: this.handleVisibility,
-            children: (0, r.jsxs)('footer', {
+            children: (0, s.jsxs)('footer', {
                 ref: this.ref,
-                className: o()((0, u.l)(I, 'footer', e), s),
+                className: o()((0, u.l)(I, 'footer', e), r),
                 style: t,
                 children: [
                     i
-                        ? (0, r.jsx)(f, {
+                        ? (0, s.jsx)(f, {
                               colorVariant: e,
                               animate: d
                           })
                         : null,
-                    (0, r.jsxs)('div', {
+                    (0, s.jsxs)('div', {
                         className: I.footerContent,
                         children: [
-                            (0, r.jsxs)('div', {
+                            (0, s.jsxs)('div', {
                                 className: I.navigation,
                                 children: [
-                                    (0, r.jsx)('div', {
+                                    (0, s.jsx)('div', {
                                         className: I.logoWrap,
-                                        children: (0, r.jsx)(n, {
+                                        children: (0, s.jsx)(n, {
                                             className: I.logo,
-                                            href: h.am.INDEX,
-                                            eventName: k,
+                                            href: m.am.INDEX,
+                                            eventName: g,
                                             data: { linkClicked: 'logo' },
-                                            children: (0, r.jsx)('img', {
-                                                alt: N.Z.Messages.NAVIGATION_HOME,
+                                            children: (0, s.jsx)('img', {
+                                                alt: h.Z.Messages.NAVIGATION_HOME,
                                                 src: a(131529)
                                             })
                                         })
                                     }),
-                                    m
+                                    p
                                 ]
                             }),
-                            (0, r.jsx)('div', { className: I.separator }),
-                            (0, r.jsxs)('div', {
+                            (0, s.jsx)('div', { className: I.separator }),
+                            (0, s.jsxs)('div', {
                                 className: I.joinDiscord,
                                 children: [
-                                    (0, r.jsxs)('div', {
+                                    (0, s.jsxs)('div', {
                                         className: I.stats,
                                         children: [
-                                            (0, r.jsx)('h2', {
+                                            (0, s.jsx)('h2', {
                                                 className: I.readyToJoin,
-                                                children: N.Z.Messages.FOOTER_READY_TO_TRY_DISCORD
+                                                children: h.Z.Messages.FOOTER_READY_TO_TRY_DISCORD
                                             }),
-                                            (0, r.jsx)('h3', {
+                                            (0, s.jsx)('h3', {
                                                 className: I.joinOtherPlayers,
-                                                children: N.Z.Messages.FOOTER_JOIN_OVER_PLAYERS_TODAY.format({ num: h.vS })
+                                                children: h.Z.Messages.FOOTER_JOIN_OVER_PLAYERS_TODAY.format({ num: m.vS })
                                             })
                                         ]
                                     }),
@@ -371,19 +371,19 @@ class b extends (s = l.PureComponent) {
     }
     constructor(e) {
         super(e),
-            g(this, 'state', {
+            k(this, 'state', {
                 animateBackground: !1,
                 isMobile: null,
                 token: null,
                 isAppCompatible: !0
             }),
-            g(this, 'ref', l.createRef()),
-            g(this, 'handleVisibility', (e) => {
+            k(this, 'ref', l.createRef()),
+            k(this, 'handleVisibility', (e) => {
                 this.setState({ animateBackground: e });
             }),
-            null != e.locale && N.Z.setLocale(e.locale),
+            null != e.locale && h.Z.setLocale(e.locale),
             (n = (t) =>
-                (0, r.jsx)(
+                (0, s.jsx)(
                     _.Z,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -396,7 +396,7 @@ class b extends (s = l.PureComponent) {
                                     })
                                 )),
                                 n.forEach(function (t) {
-                                    g(e, t, a[t]);
+                                    k(e, t, a[t]);
                                 });
                         }
                         return e;
@@ -410,8 +410,8 @@ class b extends (s = l.PureComponent) {
                 ));
     }
 }
-g(b, 'Variants', O),
-    g(b, 'defaultProps', {
-        variant: O.PRIMARY,
+k(b, 'Variants', A),
+    k(b, 'defaultProps', {
+        variant: A.PRIMARY,
         showWave: !0
     });

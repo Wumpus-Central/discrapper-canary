@@ -6,8 +6,8 @@ n.d(t, {
     kE: () => D
 });
 var i,
-    o = n(192379),
-    a = n(442837),
+    a = n(192379),
+    o = n(442837),
     s = n(570140),
     l = n(872810),
     c = n(592125),
@@ -57,7 +57,7 @@ function P() {
     }
 }
 function w() {
-    return (0, o.useEffect)(
+    return (0, a.useEffect)(
         () => (
             S++,
             P(),
@@ -69,7 +69,7 @@ function w() {
     );
 }
 function D() {
-    return (0, o.useEffect)(
+    return (0, a.useEffect)(
         () => (
             T++,
             P(),
@@ -98,7 +98,7 @@ function k() {
         sourceName: null != (e = x()) ? e : y.NW.string(y.t['KKcy9/'])
     };
 }
-class j extends (i = a.ZP.Store) {
+class j extends (i = o.ZP.Store) {
     initialize() {
         this.syncWith([d.Z, _.Z, c.Z, u.Z, f.Z], L), L();
     }

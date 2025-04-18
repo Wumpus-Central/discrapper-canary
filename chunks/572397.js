@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(192379),
     i = n(442837),
-    o = n(524437),
-    a = n(781391),
+    a = n(524437),
+    o = n(781391),
     s = n(740492),
     l = n(581883),
     c = n(626135),
@@ -18,13 +18,13 @@ var r = n(192379),
 let h = () => {
         let e = (0, i.e7)([d.Z], () => d.Z.gradientPreset),
             t = (0, i.e7)([s.ZP], () => s.ZP.useSystemTheme === p.KW.ON),
-            [n, o] = (0, r.useState)(t);
+            [n, a] = (0, r.useState)(t);
         return (
             (0, r.useEffect)(() => {
-                null == e && o(t);
+                null == e && a(t);
             }, [e, t]),
             (0, r.useCallback)(() => {
-                null != e && ((0, u.kj)(), n && (0, a.hi)(p.KW.ON));
+                null != e && ((0, u.kj)(), n && (0, o.hi)(p.KW.ON));
             }, [e, n])
         );
     },
@@ -33,7 +33,7 @@ let h = () => {
             t = (0, i.e7)([l.Z], () => {
                 var e;
                 let t = null == (e = l.Z.settings.appearance) ? void 0 : e.theme;
-                return 'default '.concat(t === o.Q2.LIGHT ? f.BRd.LIGHT : f.BRd.DARK);
+                return 'default '.concat(t === a.Q2.LIGHT ? f.BRd.LIGHT : f.BRd.DARK);
             });
         return (0, r.useCallback)(
             (n) => {

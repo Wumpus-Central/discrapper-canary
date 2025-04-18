@@ -2,18 +2,18 @@ n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(388032),
-    l = n(848941),
+    l = n(330479),
     c = n(247844);
 function u(e) {
     let { className: t, icon: n, children: i } = e;
     return (0, r.jsxs)('li', {
-        className: o()(l.card, t),
+        className: a()(l.card, t),
         children: [
             (0, r.jsx)(n, { className: l.icon }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 className: l.__invalid_description,
                 variant: 'text-sm/medium',
                 children: i
@@ -29,7 +29,7 @@ let d = function (e) {
             (0, r.jsxs)('div', {
                 className: l.content,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(o.X6q, {
                         className: l.heading,
                         color: 'always-white',
                         variant: 'heading-xxl/bold',
@@ -40,14 +40,14 @@ let d = function (e) {
                         children: [
                             (0, r.jsx)(u, {
                                 className: t,
-                                icon: a.$zw,
+                                icon: o.$zw,
                                 children: s.NW.string(s.t.TZigSE)
                             }),
                             (0, r.jsx)(u, {
                                 className: t,
                                 icon: (e) =>
                                     (0, r.jsx)('img', {
-                                        className: o()(e.className, l.iconImage),
+                                        className: a()(e.className, l.iconImage),
                                         src: c,
                                         alt: ''
                                     }),
@@ -55,12 +55,12 @@ let d = function (e) {
                             }),
                             (0, r.jsx)(u, {
                                 className: t,
-                                icon: a.lZ8,
+                                icon: o.lZ8,
                                 children: s.NW.string(s.t['2RUcaG'])
                             }),
                             (0, r.jsx)(u, {
                                 className: t,
-                                icon: a.h_8,
+                                icon: o.h_8,
                                 children: s.NW.string(s.t.bJoZKS)
                             })
                         ]

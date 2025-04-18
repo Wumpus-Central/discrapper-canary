@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(804061), n(704826), n(35282);
 var r = n(200651),
     i = n(192379),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(706454),
     l = n(594174),
     c = n(49012),
@@ -22,9 +22,9 @@ var r = n(200651),
 let I = (e, t, n) => {
         let r = O.t.LHF6Dw,
             i = u.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
-            o = e.extra.media_title;
+            a = e.extra.media_title;
         return O.NW.formatToMarkdownString(r, {
-            mediaTitle: o,
+            mediaTitle: a,
             userName: i,
             episodeDescription: e.extra.media_subtitle
         }).replaceAll('*', '');
@@ -36,10 +36,10 @@ let I = (e, t, n) => {
         }),
     T = (e) => {
         let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: T } = e,
-            N = (0, o.e7)([l.default], () => l.default.getUser(n.author_id)),
+            N = (0, a.e7)([l.default], () => l.default.getUser(n.author_id)),
             { largeImage: A } = (0, f.rv)({ entry: n }),
             { primaryColor: C, secondaryColor: R } = (0, m.Z)(null == A ? void 0 : A.src),
-            P = (0, o.e7)([s.default], () => s.default.locale),
+            P = (0, a.e7)([s.default], () => s.default.locale),
             w = (0, h.Z)(v.ABu.CRUNCHYROLL),
             D = (0, _.ap)(n.extra.media_assets_large_text),
             L = i.useCallback(
@@ -81,7 +81,7 @@ let I = (e, t, n) => {
                           subtitle: n.extra.media_subtitle,
                           headerIcons: (0, r.jsx)(y.Z, {
                               onClick: w,
-                              Icon: a.omf,
+                              Icon: o.omf,
                               'aria-label': O.NW.string(O.t.jdJYX1)
                           }),
                           badges: (0, r.jsx)(E.Gk, {

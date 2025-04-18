@@ -2,10 +2,10 @@ n.r(t),
     n.d(t, {
         Manager: () => i.dK,
         Popper: () => r.r,
-        Reference: () => o.s,
-        usePopper: () => a.D
+        Reference: () => a.s,
+        usePopper: () => o.D
     });
 var r = n(636074),
     i = n(298503),
-    o = n(837215),
-    a = n(283209);
+    a = n(837215),
+    o = n(283209);

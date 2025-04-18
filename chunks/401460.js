@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(481060),
@@ -12,7 +12,7 @@ var r = n(200651),
     _ = n(441319),
     p = n(981631),
     h = n(388032),
-    m = n(873324);
+    m = n(770580);
 function g(e, t, n) {
     return (
         t in e
@@ -71,7 +71,7 @@ let v = () => [h.NW.string(h.t.EgWTY2), h.NW.string(h.t.umBn5e), h.NW.string(h.t
         return null != (e = l().sample(v())) ? e : h.NW.string(h.t.EgWTY2);
     };
 function I(e) {
-    let { id: t, className: n, onSelect: o, isSelected: s = !1, tabIndex: l, children: f, locked: h = !1 } = e,
+    let { id: t, className: n, onSelect: a, isSelected: s = !1, tabIndex: l, children: f, locked: h = !1 } = e,
         [g, b] = i.useState((0, _.aW)(t).name),
         v = t === d.Ru.PIRATE,
         I = (0, c.xUy)({
@@ -89,8 +89,8 @@ function I(e) {
                         c.P3F,
                         y(E({}, e, I), {
                             tabIndex: null != l ? l : I.tabIndex,
-                            className: a()(m.appIconSelection, { [m.selected]: s }, n),
-                            onClick: s ? p.dG4 : () => (null == o ? void 0 : o(t)),
+                            className: o()(m.appIconSelection, { [m.selected]: s }, n),
+                            onClick: s ? p.dG4 : () => (null == a ? void 0 : a(t)),
                             children: f
                         })
                     ),
@@ -108,13 +108,13 @@ function I(e) {
     });
 }
 function S(e) {
-    let { icon: t, isSelected: n, disabled: i, tabIndex: o, onSelect: a, locked: s } = e;
+    let { icon: t, isSelected: n, disabled: i, tabIndex: a, onSelect: o, locked: s } = e;
     return (0, r.jsx)(I, {
-        onSelect: i ? void 0 : a,
+        onSelect: i ? void 0 : o,
         isSelected: n,
         id: t.id,
         className: i ? m.disabled : void 0,
-        tabIndex: o,
+        tabIndex: a,
         locked: s,
         children: (0, r.jsx)(f.Z, {
             id: t.id,

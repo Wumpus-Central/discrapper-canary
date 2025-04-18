@@ -4,13 +4,13 @@ n.d(t, {
 });
 var r = n(399606),
     i = n(339085),
-    o = n(185923);
-let a = [];
+    a = n(185923);
+let o = [];
 function s(e) {
     let { emojiStoreInstance: t = i.ZP, guildId: n, pickerIntention: r } = e;
     return {
-        topEmojis: r !== o.Hz.REACTION ? t.getTopEmoji(n) : a,
-        newlyAddedEmojis: r !== o.Hz.REACTION ? t.getNewlyAddedEmoji(n) : a
+        topEmojis: r !== a.Hz.REACTION ? t.getTopEmoji(n) : o,
+        newlyAddedEmojis: r !== a.Hz.REACTION ? t.getNewlyAddedEmoji(n) : o
     };
 }
 function l(e, t) {

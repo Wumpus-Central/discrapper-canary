@@ -9,11 +9,11 @@ var i = n(120356),
     c = n(430824),
     u = n(739566),
     d = n(464891),
-    p = n(83561),
+    p = n(605568),
     m = n(834129),
     f = n(674563),
     h = n(388032),
-    g = n(719075);
+    g = n(126759);
 function _(e) {
     var t;
     let { message: n, compact: i, usernameHook: _, channel: b } = e,

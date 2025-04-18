@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(692547),
+    a = n.n(i),
+    o = n(692547),
     s = n(780384),
     l = n(481060),
     c = n(410030),
@@ -17,7 +17,7 @@ var i = n(120356),
     f = n(211242),
     _ = n(981631),
     p = n(388032),
-    h = n(373883),
+    h = n(747168),
     m = n(51125),
     g = n(47268);
 function E(e) {
@@ -25,7 +25,7 @@ function E(e) {
         n = (0, c.ZP)(),
         i = (0, s.wj)(n) ? m : g;
     return (0, r.jsxs)('div', {
-        className: o()(h.container, t),
+        className: a()(h.container, t),
         children: [
             (0, r.jsx)(l.X6q, {
                 className: h.header,
@@ -69,7 +69,7 @@ function v(e) {
     let { className: t } = e;
     return (0, f.Q)()
         ? (0, r.jsxs)(l.Zbd, {
-              className: o()(h.blockedPaymentsWarning, t),
+              className: a()(h.blockedPaymentsWarning, t),
               type: l.Zbd.Types.CUSTOM,
               children: [
                   (0, r.jsx)(l.P4T, {
@@ -77,7 +77,7 @@ function v(e) {
                       width: 20,
                       height: 20,
                       className: h.blockedPaymentsWarningIcon,
-                      color: a.Z.unsafe_rawColors.YELLOW_300.css
+                      color: o.Z.unsafe_rawColors.YELLOW_300.css
                   }),
                   (0, r.jsx)(l.Text, {
                       variant: 'text-sm/normal',

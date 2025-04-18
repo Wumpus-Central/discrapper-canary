@@ -1,8 +1,8 @@
 n.d(t, { H: () => y }), n(388685);
 var r = n(512722),
     i = n.n(r),
-    o = n(570140),
-    a = n(355467),
+    a = n(570140),
+    o = n(355467),
     s = n(159351),
     l = n(366939),
     c = n(16084),
@@ -66,7 +66,7 @@ function b(e, t) {
 }
 async function y(e) {
     let { setPurchaseState: t, setHasAcceptedTerms: n, setIsSubmitting: r, setPurchaseError: m, hasRedirectURL: E, setHasRedirectURL: y, isGift: v, baseAnalyticsData: O, analyticsLocation: I, analyticsLocations: S, flowStartTime: T, subscriptionPlan: N, planGroup: A, trialId: C, priceOptions: R, paymentSource: P, isPrepaidPaymentPastDue: w, openInvoiceId: D, premiumSubscription: L, onNext: x, metadata: M, sku: k, skuPricePreview: j, purchaseType: U, referralCode: G, loadId: B, giftInfoOptions: F, invoicePreview: V } = e;
-    t(_.A.PURCHASING), n(!0), r(!0), o.Z.wait(s.fw), m(null);
+    t(_.A.PURCHASING), n(!0), r(!0), a.Z.wait(s.fw), m(null);
     try {
         let e, n, r;
         if (
@@ -109,8 +109,8 @@ async function y(e) {
             });
         } else if (w && null != D && null != P && null != L)
             e = p.Uk1.has(P.type)
-                ? await (0, a.G)(L, D, P, R.currency)
-                : await (0, a.Mg)(
+                ? await (0, o.G)(L, D, P, R.currency)
+                : await (0, o.Mg)(
                       L,
                       {
                           paymentSource: P,
@@ -126,7 +126,7 @@ async function y(e) {
                     paymentSource: P,
                     currency: R.currency
                 };
-            L.status === p.O0b.PAUSED && (n.status = p.O0b.ACTIVE), L.isPausedAllowsResumeButNotUpdates || (n.items = t), (e = await (0, a.Mg)(L, n, S, I, B));
+            L.status === p.O0b.PAUSED && (n.status = p.O0b.ACTIVE), L.isPausedAllowsResumeButNotUpdates || (n.items = t), (e = await (0, o.Mg)(L, n, S, I, B));
         } else
             e = await (0, l.Ld)({
                 planId: N.id,

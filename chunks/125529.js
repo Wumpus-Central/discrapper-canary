@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(981729);
-function a(e, t, n) {
+    a = n(981729);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -60,8 +60,8 @@ function u(e, t) {
         r,
         i = d(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -70,14 +70,14 @@ function d(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function f(e) {
     var { mouseLeaveDelay: t = 100 } = e,
         n = u(e, ['mouseLeaveDelay']);
-    let { children: a, className: l } = n,
+    let { children: o, className: l } = n,
         d = u(n, ['children', 'className']),
         f = i.useRef(0),
         [_, p] = i.useState(!1);
@@ -92,7 +92,7 @@ function f(e) {
         onMouseEnter: 0 !== t ? h : () => {},
         onMouseLeave: 0 !== t ? m : () => {},
         children: (0, r.jsx)(
-            o.u,
+            a.u,
             c(
                 s(
                     {
@@ -101,7 +101,7 @@ function f(e) {
                     },
                     d
                 ),
-                { children: a }
+                { children: o }
             )
         )
     });

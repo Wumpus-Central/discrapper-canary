@@ -1,12 +1,12 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(866442),
     l = n(481060),
     c = n(779699),
-    u = n(578474);
+    u = n(477524);
 function d(e, t, n) {
     return (
         t in e
@@ -65,8 +65,8 @@ function h(e, t) {
         r,
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,12 +75,12 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let g = (e) => {
-    var { children: t, className: n, color: o, roleColors: d, iconType: _, onMouseEnter: m, onMouseLeave: g } = e,
+    var { children: t, className: n, color: a, roleColors: d, iconType: _, onMouseEnter: m, onMouseLeave: g } = e,
         E = h(e, ['children', 'className', 'color', 'roleColors', 'iconType', 'onMouseEnter', 'onMouseLeave']);
     let [b, y] = i.useState(!1),
         { text: v, gradient: O } = (0, l.Icv)(null == d ? void 0 : d.primaryColor, null == d ? void 0 : d.secondaryColor, null == d ? void 0 : d.tertiaryColor, 'username'),
@@ -98,16 +98,16 @@ let g = (e) => {
         ),
         T = {};
     return (
-        null != o &&
+        null != a &&
             (T = {
-                color: (0, s.Rf)(o),
-                backgroundColor: b ? (0, s.br)(o, 0.3) : (0, s.br)(o, 0.1)
+                color: (0, s.Rf)(a),
+                backgroundColor: b ? (0, s.br)(a, 0.3) : (0, s.br)(a, 0.1)
             }),
         (0, r.jsx)(
             l.P3F,
             p(f({}, E), {
                 tag: 'span',
-                className: a()(n, {
+                className: o()(n, {
                     [u.wrapper]: !0,
                     interactive: E.onClick
                 }),

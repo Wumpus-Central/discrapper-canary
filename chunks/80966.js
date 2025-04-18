@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(200651),
     i = n(192379),
-    o = n(403182),
-    a = n(124347),
+    a = n(403182),
+    o = n(124347),
     s = n(640108),
     l = n(981631),
     c = n(388032);
@@ -64,8 +64,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -74,8 +74,8 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 class m extends i.Component {
@@ -84,7 +84,7 @@ class m extends i.Component {
             { src: t, fileSize: n, className: i, mediaPlayerClassName: u, poster: f, fileName: h, naturalWidth: m, naturalHeight: g, playable: E, downloadable: b = !0, volume: y, autoPlay: v, autoMute: O, responsive: I, mediaLayoutType: S, mimeType: T, renderOverlayContent: N, renderLinkComponent: A, onClick: C, onPlay: R, onPause: P, onEnded: w, onControlsShow: D, onControlsHide: L, onVolumeChange: x, onMute: M, alt: k = c.NW.string(c.t.FlNoSU) } = e,
             j = p(e, ['src', 'fileSize', 'className', 'mediaPlayerClassName', 'poster', 'fileName', 'naturalWidth', 'naturalHeight', 'playable', 'downloadable', 'volume', 'autoPlay', 'autoMute', 'responsive', 'mediaLayoutType', 'mimeType', 'renderOverlayContent', 'renderLinkComponent', 'onClick', 'onPlay', 'onPause', 'onEnded', 'onControlsShow', 'onControlsHide', 'onVolumeChange', 'onMute', 'alt']);
         return (0, r.jsx)(
-            a.ZP,
+            o.ZP,
             _(
                 d(
                     {
@@ -104,7 +104,7 @@ class m extends i.Component {
                     children: (e) => {
                         let {
                                 src: i,
-                                size: { width: a, height: c }
+                                size: { width: o, height: c }
                             } = e,
                             d = !((m <= l.N_j && g <= l.XKF) || (m <= l.XKF && g <= l.N_j));
                         return (0, r.jsx)(s.ZP, {
@@ -112,7 +112,7 @@ class m extends i.Component {
                             forceExternal: d,
                             src: t,
                             poster: i,
-                            width: a,
+                            width: o,
                             height: c,
                             responsive: I,
                             volume: y,
@@ -121,7 +121,7 @@ class m extends i.Component {
                             type: s.ZP.Types.VIDEO,
                             mediaLayoutType: S,
                             fileName: h,
-                            fileSize: null == n ? void 0 : (0, o.Ng)(n),
+                            fileSize: null == n ? void 0 : (0, a.Ng)(n),
                             fileSizeBytes: null == n ? void 0 : n,
                             playable: E,
                             renderLinkComponent: A,

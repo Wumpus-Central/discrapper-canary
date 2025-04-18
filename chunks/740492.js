@@ -1,8 +1,8 @@
 n.d(t, { ZP: () => C });
 var r,
     i = n(392711),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(433517),
     l = n(570140);
 n(541049);
@@ -65,10 +65,10 @@ function T() {
 }
 function N() {
     var e;
-    let t = a.ZP.PersistedStore.migrateAndReadStoreState('AccessibilityStore', []).state;
+    let t = o.ZP.PersistedStore.migrateAndReadStoreState('AccessibilityStore', []).state;
     return null != (e = null == t ? void 0 : t.darkSidebar) && e;
 }
-class A extends (r = a.ZP.DeviceSettingsStore) {
+class A extends (r = o.ZP.DeviceSettingsStore) {
     initialize(e) {
         var t;
         (y = null != e ? e : {}).darkSidebar = null != (t = y.darkSidebar) ? t : N();
@@ -200,7 +200,7 @@ p(A, 'displayName', 'UnsyncedUserSettingsStore'),
     p(A, 'migrations', [
         () => {
             let e = s.K.get('UserSettingsStore');
-            return s.K.remove('UserSettingsStore'), o().pick(e, 'dataSavingMode', 'videoUploadQuality', 'lowQualityImageMode', 'useSystemTheme', 'expressionPickerWidth', 'disableVoiceChannelChangeAlert', 'disableHideSelfStreamAndVideoConfirmationAlert', 'pushUpsellDismissed', 'disableEmbeddedActivityPopOutAlert', 'disableActivityHardwareAccelerationPrompt', 'disableInviteWithTextChannelActivityLaunch', 'disableActivityHostLeftNitroUpsell', 'disableCallUserConfirmationPrompt', 'disableApplicationSubscriptionCancellationSurvey', 'enableAndroidChatListAnimations', 'showPlayAgain');
+            return s.K.remove('UserSettingsStore'), a().pick(e, 'dataSavingMode', 'videoUploadQuality', 'lowQualityImageMode', 'useSystemTheme', 'expressionPickerWidth', 'disableVoiceChannelChangeAlert', 'disableHideSelfStreamAndVideoConfirmationAlert', 'pushUpsellDismissed', 'disableEmbeddedActivityPopOutAlert', 'disableActivityHardwareAccelerationPrompt', 'disableInviteWithTextChannelActivityLaunch', 'disableActivityHostLeftNitroUpsell', 'disableCallUserConfirmationPrompt', 'disableApplicationSubscriptionCancellationSurvey', 'enableAndroidChatListAnimations', 'showPlayAgain');
         },
         (e) => {
             delete e.disableVisualRefresh;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(192379);
 let i = Object.freeze({
     scrollTop: 0,
@@ -9,19 +9,19 @@ let i = Object.freeze({
     offsetWidth: 0,
     dirty: 0
 });
-function o() {
+function a() {
     let e = (0, r.useRef)(null),
         t = (0, r.useCallback)(() => {
             let { current: t } = e;
             if (null != t) {
-                let { scrollTop: e, scrollLeft: n, scrollHeight: r, scrollWidth: i, offsetHeight: o, offsetWidth: a } = t;
+                let { scrollTop: e, scrollLeft: n, scrollHeight: r, scrollWidth: i, offsetHeight: a, offsetWidth: o } = t;
                 return {
                     scrollTop: e,
                     scrollLeft: n,
                     scrollHeight: r,
                     scrollWidth: i,
-                    offsetHeight: o,
-                    offsetWidth: a,
+                    offsetHeight: a,
+                    offsetWidth: o,
                     dirty: 0
                 };
             }

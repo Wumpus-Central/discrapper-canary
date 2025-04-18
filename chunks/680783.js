@@ -1,19 +1,19 @@
 n.d(t, { Z: () => u });
 var r = n(442837),
     i = n(780384),
-    o = n(410030),
-    a = n(592125),
+    a = n(410030),
+    o = n(592125),
     s = n(436952),
     l = n(839606),
     c = n(373076);
 function u(e) {
-    let t = (0, r.e7)([a.Z], () => {
+    let t = (0, r.e7)([o.Z], () => {
             var t;
-            return null == (t = a.Z.getChannel(e)) ? void 0 : t.wallpaper;
+            return null == (t = o.Z.getChannel(e)) ? void 0 : t.wallpaper;
         }),
         { previewWallpaperId: n, activePickerChannelId: u } = (0, l.B)(),
         d = (0, c.P)(null == t ? void 0 : t.setterId),
-        f = (0, i.wj)((0, o.ZP)()),
+        f = (0, i.wj)((0, a.ZP)()),
         _ = (0, s.sQ)({ location: 'ChatWallpaperSetSystemMessage' });
     return null == e
         ? void 0

@@ -1,14 +1,14 @@
 n.d(t, { Z: () => m }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(835473),
     l = n(925329),
     c = n(699516),
     u = n(594174),
     d = n(981631),
-    f = n(648225);
+    f = n(998587);
 let _ = [];
 function p(e, t) {
     let n = (0, s.Z)(e, t);
@@ -39,7 +39,7 @@ function m(e) {
     let { menuItemId: t, user: n, label: s, gameRelationships: f, onClick: m, color: g } = e,
         { id: E, bot: b } = n,
         y =
-            (0, o.e7)([u.default], () => {
+            (0, a.e7)([u.default], () => {
                 var e;
                 return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === E;
             }) || b,
@@ -54,7 +54,7 @@ function m(e) {
                 }),
             [v]
         ),
-        N = (0, o.e7)([c.Z], () => c.Z.getRelationshipType(E), [E]),
+        N = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(E), [E]),
         A = p(T, O || 1 === v.length);
     if (y || 0 === v.length || N === d.OGo.FRIEND) return null;
     if (1 === v.length) {
@@ -62,7 +62,7 @@ function m(e) {
             n = A.get(e);
         return null == n
             ? null
-            : (0, r.jsx)(a.sNh, {
+            : (0, r.jsx)(o.sNh, {
                   color: g,
                   id: t,
                   label: s,
@@ -78,7 +78,7 @@ function m(e) {
         null != n &&
             C.push(
                 (0, r.jsx)(
-                    a.sNh,
+                    o.sNh,
                     {
                         id: t,
                         label: n.name,
@@ -94,7 +94,7 @@ function m(e) {
     }),
     0 === C.length)
         ? null
-        : (0, r.jsx)(a.sNh, {
+        : (0, r.jsx)(o.sNh, {
               color: g,
               id: t,
               label: s,

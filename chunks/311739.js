@@ -2,18 +2,18 @@ n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(782568),
-    a = n(583434),
+    a = n(782568),
+    o = n(583434),
     s = n(124072),
     l = n(891984),
     c = n(626135),
     u = n(981631),
     d = n(388032),
-    f = n(554329);
+    f = n(897384);
 function _(e) {
     var t;
-    let { shopLink: n, skuId: o, onClick: c } = e,
-        { product: u } = (0, a.T)(o);
+    let { shopLink: n, skuId: a, onClick: c } = e,
+        { product: u } = (0, o.T)(a);
     return (0, r.jsxs)(
         s.Z,
         {
@@ -30,21 +30,21 @@ function _(e) {
                 (0, r.jsx)(l.Z, {})
             ]
         },
-        o
+        a
     );
 }
 function p(e) {
     return {
         react(t, n, i) {
-            let a = i.noStyleAndInteraction
+            let o = i.noStyleAndInteraction
                 ? void 0
                 : (n) => {
-                      e.shouldStopPropagation && (null == n || n.stopPropagation()), c.default.track(u.rMx.SHOP_LINK_MENTION_CLICKED, { sku_id: t.skuId }), (0, o.Z)(t.shopLink);
+                      e.shouldStopPropagation && (null == n || n.stopPropagation()), c.default.track(u.rMx.SHOP_LINK_MENTION_CLICKED, { sku_id: t.skuId }), (0, a.Z)(t.shopLink);
                   };
             return (0, r.jsx)(_, {
                 shopLink: t.shopLink,
                 skuId: t.skuId,
-                onClick: a
+                onClick: o
             });
         }
     };

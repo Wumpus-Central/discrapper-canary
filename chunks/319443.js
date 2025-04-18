@@ -30,14 +30,14 @@ var r = n(200651),
     A = n(258971),
     L = n(133743),
     R = n(726941),
-    Z = n(271200),
+    Z = n(666697),
     k = n(548514),
     w = n(370648),
     D = n(569527),
     M = n(979007),
     G = n(981631),
     z = n(388032),
-    B = n(28015);
+    B = n(691133);
 function W(e) {
     let { applicationId: t, hideDetailHeaderButtons: n, onClickBack: i } = e,
         s = (0, o.e7)([N.Z], () => N.Z.getApplication(t)),

@@ -1,7 +1,7 @@
 n.d(t, {
-    $h: () => j,
-    jG: () => S,
-    yI: () => E
+    $h: () => S,
+    jG: () => j,
+    yI: () => x
 });
 var r = n(200651);
 n(192379);
@@ -20,36 +20,36 @@ var i = n(120356),
     m = n(279604),
     b = n(981631),
     y = n(921944),
-    _ = n(696672),
-    v = n(388032),
-    O = n(400242),
+    _ = n(680278),
+    O = n(388032),
+    v = n(423151),
     C = n(324670);
-function S(e) {
+function j(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
-    return (0, r.jsx)(x, {
-        asset: (0, r.jsx)(g.g, { className: O.image }),
-        header: v.NW.formatToPlainString(_.Z['Zg/m9P'], { perkName: n.title }),
-        content: v.NW.formatToPlainString(_.Z['1EGXSE'], { perkName: n.title }),
-        buttonCTA: v.NW.string(v.t.RzWDqa),
+    return (0, r.jsx)(E, {
+        asset: (0, r.jsx)(g.g, { className: v.image }),
+        header: O.NW.formatToPlainString(_.Z['Zg/m9P'], { perkName: n.title }),
+        content: O.NW.formatToPlainString(_.Z['1EGXSE'], { perkName: n.title }),
+        buttonCTA: O.NW.string(O.t.RzWDqa),
         onClick: () => (0, f.Z)(t, n.skuId),
         markAsDismissed: i
     });
 }
-function j(e) {
+function S(e) {
     let { guildId: t, markAsDismissed: n } = e,
         i = (0, p.Z)(t),
         o = (0, h.Z)(t);
     if (0 === o.length) return;
     let s = o.length > 1 ? ''.concat(o[0].title, ' & ').concat(o[1].title) : ''.concat(o[0].title);
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(E, {
         asset: (0, r.jsx)('img', {
             alt: '',
             src: C.Z,
-            className: l()(O.image, O.newPerksImage)
+            className: l()(v.image, v.newPerksImage)
         }),
-        header: v.NW.string(_.Z.xyE2AQ),
-        content: i ? v.NW.formatToPlainString(_.Z.IJP4YG, { perks: s }) : v.NW.formatToPlainString(_.Z['6kywho'], { perks: s }),
-        buttonCTA: v.NW.string(v.t.RzWDqa),
+        header: O.NW.string(_.Z.xyE2AQ),
+        content: i ? O.NW.formatToPlainString(_.Z.IJP4YG, { perks: s }) : O.NW.formatToPlainString(_.Z['6kywho'], { perks: s }),
+        buttonCTA: O.NW.string(O.t.RzWDqa),
         onClick: () =>
             i
                 ? (0, f.Z)(t)
@@ -61,7 +61,7 @@ function j(e) {
         caretPosition: i ? u.DF.LEFT_TOP : u.DF.TOP_CENTER
     });
 }
-function E(e) {
+function x(e) {
     let { guildId: t, powerups: n, markAsDismissed: i } = e,
         l = (0, s.e7)([d.Z], () => {
             var e;
@@ -71,22 +71,22 @@ function E(e) {
     if (0 === n.length) return;
     let a = n.length > 1 ? ''.concat(n[0].title, ' & ').concat(n[1].title) : ''.concat(n[0].title),
         c = 1 === n.length;
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(E, {
         asset:
             1 === n.length
                 ? (0, r.jsx)(g.m, {
-                      className: O.image,
+                      className: v.image,
                       powerup: n[0]
                   })
-                : (0, r.jsx)(g.g, { className: O.image }),
-        header: v.NW.formatToPlainString(_.Z.LmpChI, { guildName: l }),
-        content: n.length > 1 ? v.NW.formatToPlainString(_.Z.wcQOqK, { perks: a }) : v.NW.formatToPlainString(_.Z.ZF8NT0, { perk: a }),
-        buttonCTA: c ? v.NW.string(_.Z.gSxlHR) : v.NW.string(v.t.RzWDqa),
+                : (0, r.jsx)(g.g, { className: v.image }),
+        header: O.NW.formatToPlainString(_.Z.LmpChI, { guildName: l }),
+        content: n.length > 1 ? O.NW.formatToPlainString(_.Z.wcQOqK, { perks: a }) : O.NW.formatToPlainString(_.Z.ZF8NT0, { perk: a }),
+        buttonCTA: c ? O.NW.string(_.Z.gSxlHR) : O.NW.string(O.t.RzWDqa),
         onClick: (e) => (c ? o(e) : (0, f.Z)(t)),
         markAsDismissed: i
     });
 }
-function x(e) {
+function E(e) {
     var { asset: t, header: n, content: i, caretPosition: s, markAsDismissed: c } = e,
         d = (function (e, t) {
             if (null == e) return {};
@@ -108,7 +108,7 @@ function x(e) {
             return i;
         })(e, ['asset', 'header', 'content', 'caretPosition', 'markAsDismissed']);
     let h = null != s ? s : u.DF.LEFT_TOP,
-        p = h === u.DF.TOP_CENTER || h === u.DF.LEFT_TOP ? O[h] : '';
+        p = h === u.DF.TOP_CENTER || h === u.DF.LEFT_TOP ? v[h] : '';
     return (0, r.jsx)(
         u.ZP,
         (function (e) {
@@ -138,11 +138,11 @@ function x(e) {
         })(
             {
                 asset: (0, r.jsxs)('div', {
-                    className: O.imageContainer,
+                    className: v.imageContainer,
                     children: [
                         t,
                         (0, r.jsx)(a.olH, {
-                            className: O.close,
+                            className: v.close,
                             onClick: () => (null == c ? void 0 : c(y.L.USER_DISMISS))
                         })
                     ]
@@ -156,9 +156,9 @@ function x(e) {
                     color: 'text-muted',
                     children: i
                 }),
-                className: l()(O.container, p),
-                headerClassName: O.header,
-                contentClassName: O.header,
+                className: l()(v.container, p),
+                headerClassName: v.header,
+                contentClassName: v.header,
                 caretPosition: h,
                 markAsDismissed: c
             },

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u }), n(388685), n(953529), n(457542);
 var r = n(544891),
     i = n(570140),
-    o = n(626135),
-    a = n(741847),
+    a = n(626135),
+    o = n(741847),
     s = n(981631);
 let l = new Map();
 function c(e) {
@@ -23,7 +23,7 @@ function c(e) {
             (t) => {
                 let n = t.body;
                 return (
-                    o.default.track(s.rMx.GUILD_TEMPLATE_RESOLVED, {
+                    a.default.track(s.rMx.GUILD_TEMPLATE_RESOLVED, {
                         resolved: !0,
                         guild_template_code: e,
                         guild_template_name: n.name,
@@ -36,13 +36,13 @@ function c(e) {
                         code: e
                     }),
                     {
-                        guildTemplate: (0, a.Z)(n),
+                        guildTemplate: (0, o.Z)(n),
                         code: e
                     }
                 );
             },
             () => (
-                o.default.track(s.rMx.GUILD_TEMPLATE_RESOLVED, {
+                a.default.track(s.rMx.GUILD_TEMPLATE_RESOLVED, {
                     resolved: !1,
                     guild_template_code: e
                 }),
@@ -111,13 +111,13 @@ let u = {
                     code: t
                 });
             }),
-    updateGuildTemplate: (e, t, n, o) =>
+    updateGuildTemplate: (e, t, n, a) =>
         r.tn
             .patch({
                 url: s.ANM.GUILD_TEMPLATE(e, t),
                 body: {
                     name: n,
-                    description: o
+                    description: a
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1

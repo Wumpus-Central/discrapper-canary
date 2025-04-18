@@ -14,7 +14,7 @@ let c = 'guild-connection-roles';
 function u(e) {
     (0, a.ZDy)(
         async () => {
-            let { default: t } = await n.e('40897').then(n.bind(n, 598729));
+            let { default: t } = await n.e('40897').then(n.bind(n, 507294));
             return (n) => {
                 var o, a;
                 return (0, r.jsx)(

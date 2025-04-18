@@ -1,8 +1,8 @@
 n.d(t, { Z: () => H }), n(388685);
 var r,
     i = n(275726),
-    o = n(442837),
-    a = n(570140),
+    a = n(442837),
+    o = n(570140),
     s = n(594174),
     l = n(281494),
     c = n(981631);
@@ -43,8 +43,8 @@ function C(e) {
     (T = null), (h = !0);
 }
 function R(e) {
-    let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: o } = e;
-    (S = null == r && o), (h = !1), (f = t), (_ = new Set(n)), (T = r), (p = i);
+    let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a } = e;
+    (S = null == r && a), (h = !1), (f = t), (_ = new Set(n)), (T = r), (p = i);
 }
 function P(e) {
     let {} = e;
@@ -79,12 +79,12 @@ function j(e) {
 }
 function U(e) {
     let { userTrialOfferId: t } = e;
-    h || (0, l.C$)(), m.has(t) || (L(t), a.Z.wait(() => (0, l.IB)(t).catch(c.VqG)));
+    h || (0, l.C$)(), m.has(t) || (L(t), o.Z.wait(() => (0, l.IB)(t).catch(c.VqG)));
 }
 function G(e) {
     let t = e.type === i.u.PREMIUM_REFERRAL ? e.content : null;
     if (null == t) return !1;
-    g.has(t) || m.has(t) || (L(t), a.Z.wait(() => (0, l.IB)(t).catch(c.VqG)));
+    g.has(t) || m.has(t) || (L(t), o.Z.wait(() => (0, l.IB)(t).catch(c.VqG)));
 }
 function B() {
     O = !0;
@@ -96,7 +96,7 @@ function F(e) {
 function V() {
     O = !1;
 }
-class Z extends (r = o.ZP.Store) {
+class Z extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(s.default), this.syncWith([s.default], A);
     }
@@ -141,7 +141,7 @@ class Z extends (r = o.ZP.Store) {
     }
 }
 u(Z, 'displayName', 'ReferralTrialStore');
-let H = new Z(a.Z, {
+let H = new Z(o.Z, {
     BILLING_REFERRAL_TRIAL_OFFER_UPDATE: U,
     BILLING_REFERRALS_REMAINING_FETCH_START: C,
     BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: R,

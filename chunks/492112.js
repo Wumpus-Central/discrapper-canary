@@ -1,36 +1,36 @@
 n.d(t, { Z: () => s });
 var r = n(423650),
     i = n.n(r),
-    o = n(388032);
-let a = '1290718710658629658';
+    a = n(388032);
+let o = '1290718710658629658';
 function s(e) {
     let { entityName: t } = e,
         n = [
             {
                 key: 'NOT_INTERESTED',
-                text: o.NW.formatToPlainString(o.t.AZRWVV, { entityName: t })
+                text: a.NW.formatToPlainString(a.t.AZRWVV, { entityName: t })
             },
             {
                 key: 'INVALUABLE',
-                text: o.NW.string(o.t.ETU4NT)
+                text: a.NW.string(a.t.ETU4NT)
             },
             {
                 key: 'TOO_LONG',
-                text: o.NW.string(o.t.uRIIpK)
+                text: a.NW.string(a.t.uRIIpK)
             },
             {
                 key: 'UNSURE_HOW',
-                text: o.NW.string(o.t['5dxvxs'])
+                text: a.NW.string(a.t['5dxvxs'])
             },
             {
                 key: 'OTHER',
-                text: o.NW.string(o.t.RFasgo)
+                text: a.NW.string(a.t.RFasgo)
             }
         ];
     return {
-        id: a,
-        title: o.NW.string(o.t.ugbhDQ),
-        subtitle: o.NW.string(o.t.FIYcpK),
+        id: o,
+        title: a.NW.string(a.t.ugbhDQ),
+        subtitle: a.NW.string(a.t.FIYcpK),
         choices: i()(n.slice(0, 4)).concat(n[4])
     };
 }

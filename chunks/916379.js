@@ -3,13 +3,13 @@ let t = ['as', 'in', 'of', 'if', 'for', 'while', 'finally', 'var', 'new', 'funct
     r = [].concat(['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'], ['Object', 'Function', 'Boolean', 'Symbol', 'Math', 'Date', 'Number', 'BigInt', 'String', 'RegExp', 'Array', 'Float32Array', 'Float64Array', 'Int8Array', 'Uint8Array', 'Uint8ClampedArray', 'Int16Array', 'Int32Array', 'Uint16Array', 'Uint32Array', 'BigInt64Array', 'BigUint64Array', 'Set', 'Map', 'WeakSet', 'WeakMap', 'ArrayBuffer', 'SharedArrayBuffer', 'Atomics', 'DataView', 'JSON', 'Promise', 'Generator', 'GeneratorFunction', 'AsyncFunction', 'Reflect', 'Proxy', 'Intl', 'WebAssembly'], ['Error', 'EvalError', 'InternalError', 'RangeError', 'ReferenceError', 'SyntaxError', 'TypeError', 'URIError']);
 e.exports = function (e) {
     let i = ['npm', 'print'],
-        o = ['yes', 'no', 'on', 'off'],
-        a = ['then', 'unless', 'until', 'loop', 'by', 'when', 'and', 'or', 'is', 'isnt', 'not'],
+        a = ['yes', 'no', 'on', 'off'],
+        o = ['then', 'unless', 'until', 'loop', 'by', 'when', 'and', 'or', 'is', 'isnt', 'not'],
         s = ['var', 'const', 'let', 'function', 'static'],
         l = (e) => (t) => !e.includes(t),
         c = {
-            keyword: t.concat(a).filter(l(s)),
-            literal: n.concat(o),
+            keyword: t.concat(o).filter(l(s)),
+            literal: n.concat(a),
             built_in: r.concat(i)
         },
         u = '[A-Za-z$_][0-9A-Za-z$_]*',

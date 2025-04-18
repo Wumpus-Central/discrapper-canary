@@ -3,8 +3,8 @@ e.exports = function (e) {
         n = e.COMMENT('//', '$', { contains: [{ begin: /\\\n/ }] }),
         r = 'decltype\\(auto\\)',
         i = '[a-zA-Z_]\\w*::',
-        o = '<[^<>]+>',
-        a = '(' + r + '|' + t.optional(i) + '[a-zA-Z_]\\w*' + t.optional(o) + ')',
+        a = '<[^<>]+>',
+        o = '(' + r + '|' + t.optional(i) + '[a-zA-Z_]\\w*' + t.optional(a) + ')',
         s = {
             className: 'type',
             variants: [{ begin: '\\b[a-z\\d_]*_t\\b' }, { match: /\batomic_[a-z]{3,6}\b/ }]
@@ -95,7 +95,7 @@ e.exports = function (e) {
             relevance: 0
         },
         g = {
-            begin: '(' + a + '[\\*&\\s]+)+' + _,
+            begin: '(' + o + '[\\*&\\s]+)+' + _,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,

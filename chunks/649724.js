@@ -5,14 +5,14 @@ n.d(t, {
     n(388685);
 var r,
     i = n(200651),
-    o = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    a = n(192379),
+    o = n(120356),
+    s = n.n(o),
     l = n(481060),
     c = n(600164),
     u = n(153066),
     d = n(388032),
-    f = n(643317);
+    f = n(159485);
 function _(e, t, n) {
     return (
         t in e
@@ -31,14 +31,14 @@ let p = {
     SUCCESS: 'success',
     ERROR: 'error'
 };
-class h extends (r = o.PureComponent) {
+class h extends (r = a.PureComponent) {
     select() {
         var e;
         null == (e = this.inputRef.current) || e.select();
     }
     renderInput(e) {
         var t;
-        let { value: n, mode: r, autoFocus: o, spellCheck: a, inputClassName: l, placeholder: c } = this.props,
+        let { value: n, mode: r, autoFocus: a, spellCheck: o, inputClassName: l, placeholder: c } = this.props,
             d = null == (t = this.context) ? void 0 : t.titleId;
         return (0, i.jsx)('input', {
             className: s()((0, u.l)(f, 'input', r), l, { [f.inputHidden]: e }),
@@ -48,14 +48,14 @@ class h extends (r = o.PureComponent) {
             onClick: this.handleInputClick,
             readOnly: !0,
             'aria-labelledby': d,
-            autoFocus: o,
-            spellCheck: a,
+            autoFocus: a,
+            spellCheck: o,
             placeholder: c
         });
     }
     render() {
         let e,
-            { text: t = d.NW.string(d.t.OpuAlJ), mode: n, hideMessage: r, className: o, buttonLook: a, supportsCopy: _, disabled: h } = this.props,
+            { text: t = d.NW.string(d.t.OpuAlJ), mode: n, hideMessage: r, className: a, buttonLook: o, supportsCopy: _, disabled: h } = this.props,
             m = null != r;
         switch (n) {
             case p.SUCCESS:
@@ -71,7 +71,7 @@ class h extends (r = o.PureComponent) {
             focusTarget: this.inputRef,
             ringTarget: this.containerRef,
             children: (0, i.jsx)('div', {
-                className: s()((0, u.l)(f, 'copyInput', n), o),
+                className: s()((0, u.l)(f, 'copyInput', n), a),
                 ref: this.containerRef,
                 children: (0, i.jsxs)(c.Z, {
                     className: f.layout,
@@ -98,7 +98,7 @@ class h extends (r = o.PureComponent) {
                                       onClick: this.handleButtonClick,
                                       size: l.PhG.MIN,
                                       color: e,
-                                      look: a,
+                                      look: o,
                                       disabled: h,
                                       children: t
                                   })
@@ -111,8 +111,8 @@ class h extends (r = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'inputRef', o.createRef()),
-            _(this, 'containerRef', o.createRef()),
+            _(this, 'inputRef', a.createRef()),
+            _(this, 'containerRef', a.createRef()),
             _(this, 'handleButtonClick', () => {
                 this.select();
                 let { onCopy: e, value: t } = this.props;

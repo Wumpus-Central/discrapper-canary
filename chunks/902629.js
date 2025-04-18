@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l }), n(388685);
 var r = n(147913),
     i = n(313261),
-    o = n(38618);
-function a(e, t, n) {
+    a = n(38618);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,11 +18,11 @@ function a(e, t, n) {
 class s extends r.Z {
     handleCheckExperiments() {
         let { enabled: e } = i.O.getCurrentConfig({ location: 'gateway' }, { autoTrackExposure: !0 });
-        o.Z.getSocket().dispatcher.toggleRequestIdleCallback(e);
+        a.Z.getSocket().dispatcher.toggleRequestIdleCallback(e);
     }
     constructor(...e) {
         super(...e),
-            a(this, 'actions', {
+            o(this, 'actions', {
                 EXPERIMENT_OVERRIDE_BUCKET: this.handleCheckExperiments,
                 LOGIN_SUCCESS: this.handleCheckExperiments,
                 EXPERIMENTS_FETCH_SUCCESS: this.handleCheckExperiments,

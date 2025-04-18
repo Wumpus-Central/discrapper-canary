@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(710845),
     c = n(219929),
@@ -17,7 +17,7 @@ var r = n(200651),
     _ = n(622999),
     p = n(981631),
     h = n(388032),
-    m = n(233260);
+    m = n(844424);
 function g(e, t, n) {
     return (
         t in e
@@ -76,8 +76,8 @@ function v(e, t) {
         r,
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -86,8 +86,8 @@ function O(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let I = new l.Z('PaymentRequest'),
@@ -171,8 +171,8 @@ class T extends i.Component {
     renderButton(e) {
         var t,
             n,
-            { iconType: i, buttonText: o } = e,
-            a = v(e, ['iconType', 'buttonText']);
+            { iconType: i, buttonText: a } = e,
+            o = v(e, ['iconType', 'buttonText']);
         return (0, r.jsx)(
             s.zxk,
             y(
@@ -182,7 +182,7 @@ class T extends i.Component {
                         className: null != (t = this.props.className) ? t : m.button,
                         submitting: this.state.submitting
                     },
-                    a
+                    o
                 ),
                 {
                     children: (0, r.jsxs)('div', {
@@ -192,7 +192,7 @@ class T extends i.Component {
                                 className: null != (n = this.props.iconClassName) ? n : m.buttonIcon,
                                 type: i
                             }),
-                            o
+                            a
                         ]
                     })
                 }
@@ -412,7 +412,7 @@ class A extends T {
                 (0, r.jsx)(c.ZP, {
                     type: c.ZP.Types.APPLE,
                     size: c.Uy.MEDIUM,
-                    className: a()(m.paymentRequestIcon, m.appleConnectorIcon)
+                    className: o()(m.paymentRequestIcon, m.appleConnectorIcon)
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: 'text-md/medium',

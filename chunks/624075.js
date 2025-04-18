@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,7 +29,7 @@ function o(e) {
     }
     return e;
 }
-function a(e, t) {
+function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,30 +46,30 @@ function s(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : a(Object(t)).forEach(function (n) {
+            : o(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function l(e, t, n, i) {
-    let a = (0, r.Z)(e, t, i),
+    let o = (0, r.Z)(e, t, i),
         l = (e, t) => n.computeScrollPosition(e, t);
-    return s(o({}, a), {
+    return s(a({}, o), {
         getScrollPosition: l,
         isItemVisible(e, n) {
             let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                [i, o] = l(e, n),
-                a = t();
-            return r ? i >= a.scrollTop && i + o <= a.scrollTop + a.offsetHeight : i + o >= a.scrollTop && i <= a.scrollTop + a.offsetHeight;
+                [i, a] = l(e, n),
+                o = t();
+            return r ? i >= o.scrollTop && i + a <= o.scrollTop + o.offsetHeight : i + a >= o.scrollTop && i <= o.scrollTop + o.offsetHeight;
         },
         scrollToIndex(e) {
-            let { section: t, row: n, animate: r, callback: i, padding: o = 0 } = e,
+            let { section: t, row: n, animate: r, callback: i, padding: a = 0 } = e,
                 [s, c] = l(t, n);
-            a.scrollIntoViewRect({
+            o.scrollIntoViewRect({
                 start: s,
                 end: s + c,
-                padding: o,
+                padding: a,
                 animate: r,
                 callback: i
             });

@@ -1,19 +1,19 @@
 n.d(t, {
     Z: () => l,
-    y: () => a
+    y: () => o
 }),
     n(388685);
 var r = n(192379),
     i = n(392711);
-let o = 300;
-var a = (function (e) {
+let a = 300;
+var o = (function (e) {
     return (e[(e.VERTICAL_TOP = 0)] = 'VERTICAL_TOP'), (e[(e.VERTICAL_BOTTOM = 1)] = 'VERTICAL_BOTTOM'), (e[(e.HORIZONTAL_LEFT = 2)] = 'HORIZONTAL_LEFT'), (e[(e.HORIZONTAL_RIGHT = 3)] = 'HORIZONTAL_RIGHT'), e;
 })({});
 function s(e) {
     return +(2 === e || 3 === e);
 }
 let l = (e) => {
-    let { initialElementDimension: t, resizableDomNodeRef: n, maxDimension: a, minDimension: l, onElementResize: c, onElementResizeStart: u, onElementResizeEnd: d, throttleDuration: f = o, orientation: _, usePointerEvents: p = !1, getClampedValue: h = i.clamp } = e,
+    let { initialElementDimension: t, resizableDomNodeRef: n, maxDimension: o, minDimension: l, onElementResize: c, onElementResizeStart: u, onElementResizeEnd: d, throttleDuration: f = a, orientation: _, usePointerEvents: p = !1, getClampedValue: h = i.clamp } = e,
         [m, g] = r.useState(!1),
         E = r.useRef(0),
         b = r.useRef(!1),
@@ -28,15 +28,15 @@ let l = (e) => {
                 return y.current + r;
             }
             function t(e) {
-                return h(e, null != l ? l : 0, null != a ? a : e);
+                return h(e, null != l ? l : 0, null != o ? o : e);
             }
             let r = (0, i.throttle)(c, f),
-                o = (i) => {
+                a = (i) => {
                     if (null == n.current) return null;
-                    let o = e(i),
-                        a = t(o),
+                    let a = e(i),
+                        o = t(a),
                         l = 1 === s(_) ? 'width' : 'height';
-                    (n.current.style[l] = ''.concat(a, 'px')), b.current || ((b.current = !0), null == u || u(a)), r(a, o);
+                    (n.current.style[l] = ''.concat(o, 'px')), b.current || ((b.current = !0), null == u || u(o)), r(o, a);
                 },
                 v = (n) => {
                     g(!1);
@@ -49,12 +49,12 @@ let l = (e) => {
                 S = n.current.ownerDocument;
             return (
                 S.addEventListener(O, v),
-                S.addEventListener(I, o),
+                S.addEventListener(I, a),
                 () => {
-                    S.removeEventListener(O, v), S.removeEventListener(I, o), r.cancel();
+                    S.removeEventListener(O, v), S.removeEventListener(I, a), r.cancel();
                 }
             );
-        }, [m, c, l, a, _, n, f, d, p, h, u]),
+        }, [m, c, l, o, _, n, f, d, p, h, u]),
         r.useCallback(
             (e) => {
                 let t = 1 === s(_);

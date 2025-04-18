@@ -2,8 +2,8 @@ n.d(t, { Z: () => h }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(481060),
-    a = n(230711),
+    a = n(481060),
+    o = n(230711),
     s = n(26033),
     l = n(740605),
     c = n(180335),
@@ -22,18 +22,18 @@ function h(e) {
         y = (0, i.e7)([u.Z], () => u.Z.hasConnectedAccount());
     if ('recent' !== m || !(0, c.AZ)(h)) return null;
     if (!y)
-        return (0, r.jsx)(o.sNh, {
+        return (0, r.jsx)(a.sNh, {
             id: 'connect-spotify',
             label: p.NW.formatToPlainString(p.t.XWSHTU, { platform: _.ai }),
             action: () => {
-                null == g || g({ action: 'PRESS_CONNECT_SPOTIFY_MENU_ITEM' }), a.Z.open(f.oAB.CONNECTIONS), null == E || E();
+                null == g || g({ action: 'PRESS_CONNECT_SPOTIFY_MENU_ITEM' }), o.Z.open(f.oAB.CONNECTIONS), null == E || E();
             }
         });
     if (b) return null;
     let v = (0, s.dU)(h) ? (null == (t = h.extra.entries[0]) ? void 0 : t.media) : h.extra.media;
     return null == v
         ? null
-        : (0, r.jsx)(o.sNh, {
+        : (0, r.jsx)(a.sNh, {
               id: 'play-on-spotify',
               label: p.NW.string(p.t.rRffNz),
               action: () => {

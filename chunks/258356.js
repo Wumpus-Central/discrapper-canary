@@ -1,26 +1,26 @@
 n.d(t, {
-    X: () => g,
-    Z: () => f
+    X: () => p,
+    Z: () => m
 }),
     n(953529);
 var r = n(200651);
 n(192379);
 var i = n(481060),
     s = n(565138),
-    l = n(372769),
-    o = n(742593),
+    o = n(372769),
+    l = n(742593),
     a = n(390072),
     c = n(601964),
     u = n(230224),
     d = n(388032),
-    h = n(188327);
-function p(e) {
+    h = n(807048);
+function g(e) {
     var t;
-    let { guildScheduledEvent: n, channel: s, onAcceptInvite: l, isSubmitting: c } = e;
+    let { guildScheduledEvent: n, channel: s, onAcceptInvite: o, isSubmitting: c } = e;
     return (0, r.jsxs)('div', {
         className: h.guildEventCard,
         children: [
-            (0, r.jsx)(o.ZP, {
+            (0, r.jsx)(l.ZP, {
                 name: n.name,
                 description: null != (t = n.description) ? t : void 0,
                 headerVariant: 'heading-md/medium',
@@ -40,19 +40,19 @@ function p(e) {
             (0, r.jsx)(i.zxk, {
                 className: h.acceptButton,
                 color: i.zxk.Colors.GREEN,
-                onClick: l,
+                onClick: o,
                 submitting: c,
                 children: d.NW.string(d.t.riu2R0)
             })
         ]
     });
 }
-function g(e) {
+function p(e) {
     var t;
     let { invite: n } = e,
-        o = null != n.guild ? new c.ZP(n.guild) : null;
-    if (null == o) return null;
-    let a = null != (t = o.description) ? t : '';
+        l = null != n.guild ? new c.ZP(n.guild) : null;
+    if (null == l) return null;
+    let a = null != (t = l.description) ? t : '';
     return (0, r.jsxs)('div', {
         className: h.guildInfoCard,
         children: [
@@ -65,7 +65,7 @@ function g(e) {
                 className: h.guildContainer,
                 children: [
                     (0, r.jsx)(s.Z, {
-                        guild: o,
+                        guild: l,
                         active: !0,
                         size: s.Z.Sizes.MEDIUM
                     }),
@@ -78,9 +78,9 @@ function g(e) {
                                 variant: 'text-sm/medium',
                                 tag: 'span',
                                 children: [
-                                    o.name,
-                                    (0, r.jsx)(l.Z, {
-                                        guild: o,
+                                    l.name,
+                                    (0, r.jsx)(o.Z, {
+                                        guild: l,
                                         className: h.guildBadge,
                                         tooltipPosition: 'left'
                                     })
@@ -107,12 +107,12 @@ function g(e) {
         ]
     });
 }
-function f(e) {
+function m(e) {
     let { invite: t, channel: n, isSubmitting: i, onAcceptInvite: s } = e,
-        { guild_scheduled_event: l } = t;
-    return null != l
-        ? (0, r.jsx)(p, {
-              guildScheduledEvent: l,
+        { guild_scheduled_event: o } = t;
+    return null != o
+        ? (0, r.jsx)(g, {
+              guildScheduledEvent: o,
               channel: n,
               isSubmitting: i,
               onAcceptInvite: s

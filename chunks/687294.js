@@ -6,8 +6,8 @@ n.d(t, {
     n(415506);
 var r = n(259443),
     i = n(510990),
-    o = n(141795),
-    a = n(983544),
+    a = n(141795),
+    o = n(983544),
     s = n(596956),
     l = n(865275),
     c = n(981631),
@@ -75,7 +75,7 @@ class g extends l.Z {
     }
     async compressAndCheckFileSize() {
         var e, t;
-        let n = (0, a.F)(null == (t = this.files[0]) || null == (e = t.item) ? void 0 : e.target);
+        let n = (0, o.F)(null == (t = this.files[0]) || null == (e = t.item) ? void 0 : e.target);
         return this.files.length > n.getMaxAttachmentsCount()
             ? (m.log('Too many attachments for '.concat(this.id)), this._handleError({ code: c.evJ.TOO_MANY_ATTACHMENTS }), !1)
             : !(this._fileSize() > n.getMaxTotalAttachmentSize()) ||
@@ -134,16 +134,16 @@ class g extends l.Z {
     async cancelItem(e) {
         m.log('Cancel called for '.concat(this.id, ' for item ').concat(e));
         let t = this.files.find((t) => t.id === e);
-        if (null == t || t.status === o.m.CANCELED) return;
+        if (null == t || t.status === a.m.CANCELED) return;
         let n = this.files.indexOf(t);
         (this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]), (this._file = h(_({}, this._file), { items: this.files })), await (0, i.V)(t), t.cancel(), this.emit('cancel-upload-item', this._file), 0 === this.files.length && this.cancel();
     }
     failed() {
-        return this.files.some((e) => e.status === o.m.ERROR);
+        return this.files.some((e) => e.status === a.m.ERROR);
     }
     _remainingUploadCount() {
         let e = this.files;
-        return e.length - e.filter((e) => e.status === o.m.COMPLETED).length;
+        return e.length - e.filter((e) => e.status === a.m.COMPLETED).length;
     }
     clear() {
         this.cancel(), (this.files = []);
@@ -159,16 +159,16 @@ async function E(e) {
             (e) =>
                 new Promise((r, i) => {
                     switch (e.status) {
-                        case o.m.NOT_STARTED:
+                        case a.m.NOT_STARTED:
                             e.upload();
                             break;
-                        case o.m.COMPLETED:
+                        case a.m.COMPLETED:
                             r('complete');
                             break;
-                        case o.m.ERROR:
+                        case a.m.ERROR:
                             t && e.error !== c.evJ.ENTITY_TOO_LARGE ? e.upload() : i(Error('File failed to upload'));
                             break;
-                        case o.m.CANCELED:
+                        case a.m.CANCELED:
                             i(Error('Upload is canceled'));
                     }
                     e.on('complete', () => {

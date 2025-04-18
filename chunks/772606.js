@@ -6,7 +6,7 @@ var i = n(200651),
     a = n(481060),
     s = n(695676),
     c = n(388032),
-    u = n(23948);
+    u = n(672425);
 function d(e) {
     let { className: t } = e,
         { goBack: n } = (0, s.hH)(),

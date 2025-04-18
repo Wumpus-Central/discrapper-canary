@@ -1,19 +1,19 @@
 var r = n(751736)('iterator'),
     i = !1;
 try {
-    var o = 0,
-        a = {
+    var a = 0,
+        o = {
             next: function () {
-                return { done: !!o++ };
+                return { done: !!a++ };
             },
             return: function () {
                 i = !0;
             }
         };
-    (a[r] = function () {
+    (o[r] = function () {
         return this;
     }),
-        Array.from(a, function () {
+        Array.from(o, function () {
             throw 2;
         });
 } catch (e) {}
@@ -25,15 +25,15 @@ e.exports = function (e, t) {
     }
     var n = !1;
     try {
-        var o = {};
-        (o[r] = function () {
+        var a = {};
+        (a[r] = function () {
             return {
                 next: function () {
                     return { done: (n = !0) };
                 }
             };
         }),
-            e(o);
+            e(a);
     } catch (e) {}
     return n;
 };

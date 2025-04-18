@@ -2,10 +2,10 @@ n.d(t, { Z: () => c });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(118012),
-    l = n(988283);
+    l = n(362560);
 function c(e) {
     var t;
     let { name: n, className: i, state: c, isInline: u, onClick: d } = e,
@@ -16,12 +16,12 @@ function c(e) {
     let h = (0, r.jsx)(s.Z, {
         size: u ? s.Z.Sizes.SIZE_16 : s.Z.Sizes.SIZE_14,
         color: p,
-        className: o()(l.option, { [l.inline]: u }, _, i),
+        className: a()(l.option, { [l.inline]: u }, _, i),
         children: f
     });
     return null == d
         ? h
-        : (0, r.jsx)(a.P3F, {
+        : (0, r.jsx)(o.P3F, {
               className: l.clickable,
               onClick: () => d(n),
               children: h

@@ -12,7 +12,7 @@ var i = n(442837),
     h = n(434479),
     p = n(490897),
     f = n(388032),
-    g = n(830082);
+    g = n(768107);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,7 +58,7 @@ function b(e, t) {
 }
 function y(e) {
     let { guild: t, selected: y } = e,
-        { hasUnread: _, mentionCount: v } = (0, i.cj)(
+        { hasUnread: _, mentionCount: O } = (0, i.cj)(
             [u.ZP],
             () => ({
                 hasUnread: u.ZP.hasUnread(t.id, p.W.GUILD_EVENT),
@@ -66,16 +66,16 @@ function y(e) {
             }),
             [t.id]
         ),
-        O = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
+        v = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
     async function C() {
         await (0, o.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('8674')]).then(n.bind(n, 17671));
+            let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('79010')]).then(n.bind(n, 17671));
             return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
         }),
             (0, a.EW)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
-    let S = (0, c.ZP)(t.id),
-        j = S.length > 0 ? f.NW.formatToPlainString(f.t.IBdqSk, { number: S.length }) : f.NW.string(f.t.tlopTE);
+    let j = (0, c.ZP)(t.id),
+        S = j.length > 0 ? f.NW.formatToPlainString(f.t.IBdqSk, { number: j.length }) : f.NW.string(f.t.tlopTE);
     return (0, r.jsx)(h.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
@@ -84,7 +84,7 @@ function y(e) {
                 color: 'currentColor',
                 className: e
             }),
-        text: j,
+        text: S,
         selected: y,
         onClick: C,
         onContextMenu: (e) => {
@@ -93,13 +93,13 @@ function y(e) {
                 return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
             });
         },
-        showUnread: _ && !O,
+        showUnread: _ && !v,
         trailing:
-            !O && v > 0
+            !v && O > 0
                 ? (0, r.jsx)(o.mAB, {
                       className: g.numberBadge,
                       disableColor: !0,
-                      count: v
+                      count: O
                   })
                 : null
     });

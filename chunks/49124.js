@@ -1,7 +1,7 @@
 var r = n(98405),
     i = n(154028),
-    o = n(636881),
-    a = n(580983),
+    a = n(636881),
+    o = n(580983),
     s = n(46015),
     l = n(621523),
     c = n(880181),
@@ -34,9 +34,9 @@ var r = n(98405),
         if (!(!c(r) && (void 0 === e || u(e))))
             return (
                 (n[1] = function (e, t) {
-                    if ((c(r) && (t = a(r, this, p(e), t)), !u(t))) return t;
+                    if ((c(r) && (t = o(r, this, p(e), t)), !u(t))) return t;
                 }),
-                o(h, null, n)
+                a(h, null, n)
             );
     },
     A = function (e, t, n) {
@@ -55,7 +55,7 @@ h &&
         {
             stringify: function (e, t, n) {
                 var r = d(arguments),
-                    i = o(S ? N : h, null, r);
+                    i = a(S ? N : h, null, r);
                 return T && 'string' == typeof i ? b(i, v, A) : i;
             }
         }

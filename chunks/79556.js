@@ -16,20 +16,20 @@ var r = n(200651),
     b = n(340541),
     y = n(22082),
     _ = n(665906),
-    v = n(592125),
-    O = n(430824),
+    O = n(592125),
+    v = n(430824),
     C = n(496675),
-    S = n(306680),
-    j = n(9156),
-    E = n(594174),
-    x = n(109446),
+    j = n(306680),
+    S = n(9156),
+    x = n(594174),
+    E = n(109446),
     I = n(98597),
     N = n(648501),
     P = n(473403),
     w = n(304471),
     Z = n(981631),
     T = n(647086),
-    A = n(653084);
+    A = n(915887);
 function R(e, t, n) {
     return (
         t in e
@@ -94,10 +94,10 @@ class k extends I.ZP {
               });
     }
     render() {
-        let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: m, isSubscriptionGated: y, isFavoriteSuggestion: _, subtitle: v, forceTopLevelThread: O, embeddedApps: C, resolvedUnreadSetting: S, withGuildIcon: j, enableActivities: E } = this.props,
-            x = (0, b.jW)({ location: 'text_channel' }).entrypoints,
-            I = E && null != C && C.length > 0,
-            N = (0, g.D)(v),
+        let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: m, isSubscriptionGated: y, isFavoriteSuggestion: _, subtitle: O, forceTopLevelThread: v, embeddedApps: C, resolvedUnreadSetting: j, withGuildIcon: S, enableActivities: x } = this.props,
+            E = (0, b.jW)({ location: 'text_channel' }).entrypoints,
+            I = x && null != C && C.length > 0,
+            N = (0, g.D)(O),
             w = (0, r.jsx)('li', {
                 className: o()(this.getClassName(), {
                     [A.disabled]: this.isDisabled(),
@@ -130,9 +130,9 @@ class k extends I.ZP {
                             onContextMenu: this.handleContextMenu,
                             connectDragPreview: m ? p : null,
                             isFavoriteSuggestion: _,
-                            channelTypeOverride: O ? Z.d4z.GUILD_TEXT : void 0,
-                            resolvedUnreadSetting: S,
-                            withGuildIcon: j,
+                            channelTypeOverride: v ? Z.d4z.GUILD_TEXT : void 0,
+                            resolvedUnreadSetting: j,
+                            withGuildIcon: S,
                             'aria-label': (0, f.ZP)({
                                 channel: e,
                                 unread: l,
@@ -148,8 +148,8 @@ class k extends I.ZP {
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             this.renderChannelInfo(),
-                                            x && this.renderOptionsButton({ onContextMenu: this.handleContextMenu }),
-                                            !x &&
+                                            E && this.renderOptionsButton({ onContextMenu: this.handleContextMenu }),
+                                            !E &&
                                                 (0, r.jsxs)(r.Fragment, {
                                                     children: [this.renderInviteButton(), this.renderEditButton()]
                                                 })
@@ -206,13 +206,13 @@ class k extends I.ZP {
                           onAction: this.handleActivitiesPopoutClose,
                           channel: t
                       })
-                    : (0, r.jsx)(x.Z, L(D({}, e), { channel: this.props.channel }));
+                    : (0, r.jsx)(E.Z, L(D({}, e), { channel: this.props.channel }));
             }),
             R(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props;
                 if (t.type === Z.d4z.GROUP_DM)
                     return void (0, u.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('26881'), n.e('53912'), n.e('54464')]).then(n.bind(n, 354741));
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('53912'), n.e('2016')]).then(n.bind(n, 354741));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
@@ -223,10 +223,10 @@ class k extends I.ZP {
                             );
                     });
                 if (t.type === Z.d4z.DM) {
-                    let i = E.default.getUser(t.getRecipientId());
+                    let i = x.default.getUser(t.getRecipientId());
                     null != i &&
                         (0, u.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('26881'), n.e('4040'), n.e('53912'), n.e('56826'), n.e('19196')]).then(n.bind(n, 131404));
+                            let { default: e } = await Promise.all([n.e('79695'), n.e('4040'), n.e('53912'), n.e('56826'), n.e('45903')]).then(n.bind(n, 131404));
                             return (n) =>
                                 (0, r.jsx)(
                                     e,
@@ -239,10 +239,10 @@ class k extends I.ZP {
                         });
                     return;
                 }
-                let i = O.Z.getGuild(t.getGuildId());
+                let i = v.Z.getGuild(t.getGuildId());
                 null != i &&
                     (0, u.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('26881'), n.e('18320'), n.e('44011')]).then(n.bind(n, 373651));
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('44011')]).then(n.bind(n, 373651));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
@@ -259,26 +259,26 @@ let M = (0, d.B)(k);
 function U(e) {
     let { channel: t, guild: n, disableSorting: i, isFavoriteCategory: l, muted: o, selected: a } = e,
         { hasActiveThreads: c, hasMoreActiveThreads: u } = (0, _.JQ)(t),
-        d = (0, s.cj)([S.ZP], () => ({
-            unread: S.ZP.hasUnread(t.id),
-            ackMessageId: S.ZP.ackMessageId(t.id),
-            isLowImportanceMention: S.ZP.getIsMentionLowImportance(t.id)
+        d = (0, s.cj)([j.ZP], () => ({
+            unread: j.ZP.hasUnread(t.id),
+            ackMessageId: j.ZP.ackMessageId(t.id),
+            isLowImportanceMention: j.ZP.getIsMentionLowImportance(t.id)
         })),
-        f = (0, s.e7)([j.ZP], () => j.ZP.resolveUnreadSetting(t)),
-        g = (0, s.cj)([v.Z, C.Z], () => {
-            let e = v.Z.getChannel(t.parent_id);
+        f = (0, s.e7)([S.ZP], () => S.ZP.resolveUnreadSetting(t)),
+        g = (0, s.cj)([O.Z, C.Z], () => {
+            let e = O.Z.getChannel(t.parent_id);
             return {
                 canManageChannel: C.Z.can(Z.Plq.MANAGE_CHANNELS, t),
                 canReorderChannel: !0 !== i && (n.id === T._ || (null != e ? C.Z.can(Z.Plq.MANAGE_CHANNELS, e) : C.Z.can(Z.Plq.MANAGE_CHANNELS, n)))
             };
         }),
         b = (0, s.e7)([y.Z], () => y.Z.shouldIndicateNewChannel(n.id, t.id)),
-        { needSubscriptionToAccess: O, isSubscriptionGated: x } = (0, m.Z)(t.id),
-        I = (0, s.e7)([j.ZP], () => j.ZP.isFavorite(n.id, t.id)),
+        { needSubscriptionToAccess: v, isSubscriptionGated: E } = (0, m.Z)(t.id),
+        I = (0, s.e7)([S.ZP], () => S.ZP.isFavorite(n.id, t.id)),
         P = (0, s.e7)(
-            [E.default],
+            [x.default],
             () => {
-                let e = E.default.getCurrentUser();
+                let e = x.default.getCurrentUser();
                 return null != e && (!t.isNSFW() || e.nsfwAllowed);
             },
             [t]
@@ -288,8 +288,8 @@ function U(e) {
             channel: t,
             isChannelCollapsed: !1,
             isChannelSelected: a,
-            isSubscriptionGated: x,
-            needSubscriptionToAccess: O,
+            isSubscriptionGated: E,
+            needSubscriptionToAccess: v,
             isNewChannel: b,
             muted: o,
             enableActivities: w,
@@ -301,8 +301,8 @@ function U(e) {
         L(D({}, d, g, e), {
             hasActiveThreads: c,
             hasMoreActiveThreads: u,
-            isSubscriptionGated: x,
-            needSubscriptionToAccess: O,
+            isSubscriptionGated: E,
+            needSubscriptionToAccess: v,
             isNewChannel: b && e.canBeNewChannel,
             isFavoriteSuggestion: l && !I,
             canShowThreadPreviewForUser: P,

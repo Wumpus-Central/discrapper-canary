@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C });
 var r = n(200651),
     i = n(442837),
-    o = n(481060),
-    a = n(320582),
+    a = n(481060),
+    o = n(320582),
     s = n(189156),
     l = n(699516),
     c = n(246946),
@@ -23,7 +23,7 @@ var r = n(200651),
     S = n(915014),
     T = n(228168),
     N = n(981631),
-    A = n(165957);
+    A = n(200669);
 function C(e) {
     let { user: t, currentUser: n, displayProfile: C, guild: R, isHovering: P, onOpenProfile: w, channelId: D, onClose: L } = e,
         x = u.ZP.useName(null == R ? void 0 : R.id, D, t),
@@ -31,11 +31,11 @@ function C(e) {
             relationshipType: l.Z.getRelationshipType(t.id),
             originApplicationId: l.Z.getOriginApplicationId(t.id)
         })),
-        j = (0, a.vh)(t.id),
+        j = (0, o.vh)(t.id),
         U = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
         G = t.id === n.id,
         B = (0, d.I5)(n);
-    return (0, r.jsxs)(o.Ttm, {
+    return (0, r.jsxs)(a.Ttm, {
         fade: !0,
         className: A.body,
         children: [

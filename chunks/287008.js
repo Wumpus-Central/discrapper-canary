@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r = n(192379),
     i = n(442837),
-    o = n(654904),
-    a = n(643879),
+    a = n(654904),
+    o = n(643879),
     s = n(271383),
     l = n(369111),
     c = n(442552);
@@ -12,7 +12,7 @@ function u(e) {
         { pendingAvatar: g } = (0, l.Z)({}),
         E =
             d && null != t
-                ? (0, a.SD)({
+                ? (0, o.SD)({
                       userId: t.id,
                       image: g,
                       canAnimate: m,
@@ -25,7 +25,7 @@ function u(e) {
         avatarSrc: r.useMemo(
             () =>
                 null != t
-                    ? (0, o.SG)(b, y, t, {
+                    ? (0, a.SG)(b, y, t, {
                           canAnimate: m,
                           size: u
                       })

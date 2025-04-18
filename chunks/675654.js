@@ -1,6 +1,6 @@
 n.d(t, {
-    Br: () => o,
-    CA: () => a,
+    Br: () => a,
+    CA: () => o,
     Ko: () => s,
     We: () => l,
     rq: () => c,
@@ -8,8 +8,8 @@ n.d(t, {
 });
 var r = n(995899);
 let i = n(177351),
-    o = ['#FF73FA', '#FFC0FF', '#FFD836', '#FF9A15', '#A5F7DE', '#51BC9D', '#AEC7FF', '#3E70DD'],
-    a = [
+    a = ['#FF73FA', '#FFC0FF', '#FFD836', '#FF9A15', '#A5F7DE', '#51BC9D', '#AEC7FF', '#3E70DD'],
+    o = [
         n(294521),
         i,
         n(817812),

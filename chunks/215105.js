@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A }), n(388685), n(781311);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(106351),
     l = n(507274),
     c = n(541716),
@@ -19,7 +19,7 @@ var r = n(200651),
     y = n(228168),
     v = n(420212),
     O = n(388032),
-    I = n(222600);
+    I = n(42328);
 let S = (0, f.kt)({
         id: '1',
         type: s.d.DM
@@ -28,9 +28,9 @@ let S = (0, f.kt)({
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
             case y.n_.ACTIVITY:
-                let o = O.NW.formatToPlainString(O.t.WmvMCg, { username: n }),
-                    a = '\n> '.concat(i);
-                return null != i ? ''.concat(E.jd).concat(o, '*').concat(a, '\n').concat(t) : ''.concat(E.jd).concat(o, '*\n').concat(t);
+                let a = O.NW.formatToPlainString(O.t.WmvMCg, { username: n }),
+                    o = '\n> '.concat(i);
+                return null != i ? ''.concat(E.jd).concat(a, '*').concat(o, '\n').concat(t) : ''.concat(E.jd).concat(a, '*\n').concat(t);
             case y.n_.AVATAR:
                 let s = O.NW.formatToPlainString(O.t.lpaBsL, { username: n });
                 return ''.concat(E.jd).concat(s, '*\n').concat(t);
@@ -55,7 +55,7 @@ let S = (0, f.kt)({
         }
     };
 function A(e) {
-    let { user: t, guildId: n, channelId: o, profileType: s, sourceType: f, sourceDetails: _, setPopoutRef: E, modalKey: A, onAction: C, onClose: R, entry: P } = e,
+    let { user: t, guildId: n, channelId: a, profileType: s, sourceType: f, sourceDetails: _, setPopoutRef: E, modalKey: A, onAction: C, onClose: R, entry: P } = e,
         { resetInteraction: w, setInteractionToast: D } = (0, g.Xo)(),
         { primaryColor: L } = (0, b.z)(),
         [x, M] = i.useState(''),
@@ -107,7 +107,7 @@ function A(e) {
         ref: G,
         onKeyDown: B,
         children: (0, r.jsx)('div', {
-            className: a()(I.container, V, Z, { [I.customProfileTheme]: null != L }),
+            className: o()(I.container, V, Z, { [I.customProfileTheme]: null != L }),
             children: (0, r.jsx)(d.Z, {
                 parentModalKey: A,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -115,7 +115,7 @@ function A(e) {
                 innerClassName: I.inputInner,
                 editorClassName: I.editor,
                 type: c.Ie.USER_PROFILE_REPLY,
-                placeholder: O.NW.formatToPlainString(N(f), { username: p.ZP.getName(n, o, t) }),
+                placeholder: O.NW.formatToPlainString(N(f), { username: p.ZP.getName(n, a, t) }),
                 channel: S,
                 textValue: x,
                 richValue: k,

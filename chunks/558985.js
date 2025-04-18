@@ -1,8 +1,8 @@
 n.d(t, { $: () => d }), n(388685), n(415506);
 var r,
     i = n(192379),
-    o = n(772848),
-    a = n(324404);
+    a = n(772848),
+    o = n(324404);
 function s(e, t, n) {
     return (
         t in e
@@ -16,7 +16,7 @@ function s(e, t, n) {
         e
     );
 }
-let l = (0, o.Z)(),
+let l = (0, a.Z)(),
     c = new Map(),
     u = new Map();
 class d extends (r = i.Component) {
@@ -50,12 +50,12 @@ class d extends (r = i.Component) {
     constructor(e) {
         super(e), s(this, 'elementId', void 0), s(this, 'isVisible', !1);
         let { root: t, rootMargin: n, threshold: r } = e;
-        t ? (c.has(t) ? (this.elementId = c.get(t) || '') : c.set(t, (0, o.Z)())) : (this.elementId = l);
+        t ? (c.has(t) ? (this.elementId = c.get(t) || '') : c.set(t, (0, a.Z)())) : (this.elementId = l);
         let i = this.getVisibilityObserverId();
         u.has(i) ||
             u.set(
                 i,
-                new a.Z({
+                new o.Z({
                     root: t,
                     rootMargin: n,
                     threshold: r

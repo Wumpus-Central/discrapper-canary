@@ -10,16 +10,16 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(911969),
     l = n(937615),
     c = n(388032),
-    u = n(840589);
+    u = n(585871);
 function d(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)('div', {
-        className: o()(u.table, n),
+        className: a()(u.table, n),
         children: t
     });
 }
@@ -33,7 +33,7 @@ function f(e) {
 function _(e) {
     let { label: t, value: n, className: i } = e;
     return (0, r.jsxs)('div', {
-        className: o()(u.row, i),
+        className: a()(u.row, i),
         children: [
             (0, r.jsx)('div', {
                 className: u.rowLabel,
@@ -47,12 +47,12 @@ function _(e) {
     });
 }
 function p(e) {
-    let { label: t, value: n, discounts: i, originalAmount: o, interval: d, currency: f, className: p, intervalCount: h, inTrialPeriod: m } = e,
+    let { label: t, value: n, discounts: i, originalAmount: a, interval: d, currency: f, className: p, intervalCount: h, inTrialPeriod: m } = e,
         g = (e) => (null != i ? i.find((t) => t.type === e) : null),
         E = g(s.eW.SUBSCRIPTION_PLAN),
         b = g(s.eW.ENTITLEMENT),
-        y = null != E ? Math.floor((E.amount / o) * 100) : null,
-        v = (0, l.T4)(o, f);
+        y = null != E ? Math.floor((E.amount / a) * 100) : null,
+        v = (0, l.T4)(a, f);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(_, {
@@ -71,7 +71,7 @@ function p(e) {
                 className: p
             }),
             m &&
-                (0, r.jsx)(a.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: 'text-md/medium',
                     className: u.trialEndPrice,
                     children: c.NW.format(c.t.v9QeOD, { price: v })
@@ -94,7 +94,7 @@ function p(e) {
 function h(e) {
     let { extended: t = !1, negativeMarginTop: n = !1, negativeMarginBottom: i = !1 } = e;
     return (0, r.jsx)('div', {
-        className: o()(u.divider, {
+        className: a()(u.divider, {
             [u.dividerExtended]: t,
             [u.negativeMarginTop]: n,
             [u.negativeMarginBottom]: i
@@ -104,7 +104,7 @@ function h(e) {
 function m(e) {
     let { label: t, value: n, className: i } = e;
     return (0, r.jsxs)('div', {
-        className: o()(u.totalRow, i),
+        className: a()(u.totalRow, i),
         children: [
             (0, r.jsx)('div', {
                 className: u.totalLabel,
@@ -120,7 +120,7 @@ function m(e) {
 function g(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)('div', {
-        className: o()(u.finePrint, n),
+        className: a()(u.finePrint, n),
         children: t
     });
 }

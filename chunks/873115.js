@@ -13,8 +13,8 @@ n.d(t, {
     n(388685);
 var r = n(544891),
     i = n(570140),
-    o = n(618541),
-    a = n(751767),
+    a = n(618541),
+    o = n(751767),
     s = n(358085),
     l = n(355467),
     c = n(981631);
@@ -25,7 +25,7 @@ function f(e) {
     return ''.concat(t, '/agreements/approve?nolegacy=1&ba_token=').concat(e);
 }
 function _() {
-    (0, a.S)().then((e) => {
+    (0, o.S)().then((e) => {
         e.client
             .create({ authorization: c.Ai1.BRAINTREE.KEY })
             .then((e) => {
@@ -40,9 +40,9 @@ function _() {
     });
 }
 function p() {
-    let e = o.Z.getClient();
+    let e = a.Z.getClient();
     if (null == e) throw Error('Braintree client must be initialized before creating Venmo client.');
-    (0, a.S)().then((t) => {
+    (0, o.S)().then((t) => {
         t.venmo
             .create({
                 client: e,
@@ -61,9 +61,9 @@ function p() {
     });
 }
 function h() {
-    let e = o.Z.getClient();
+    let e = a.Z.getClient();
     if (null == e) throw Error('braintree client must be initialized before calling this');
-    (0, a.S)().then((t) => {
+    (0, o.S)().then((t) => {
         t.paypal
             .create({ client: e })
             .then((e) => {
@@ -97,7 +97,7 @@ function h() {
     });
 }
 function m() {
-    let e = o.Z.getPayPalClient();
+    let e = a.Z.getPayPalClient();
     if (null == e) throw Error('braintree paypal client must be initialized before calling this');
     i.Z.dispatch({ type: 'BRAINTREE_TOKENIZE_PAYPAL_START' });
     let t = Promise.resolve('');
@@ -105,19 +105,19 @@ function m() {
         t
             .then(() => e.tokenize({ flow: 'vault' }))
             .then((e) => {
-                let { email: t, firstName: n, lastName: r, billingAddress: o } = e.details;
+                let { email: t, firstName: n, lastName: r, billingAddress: a } = e.details;
                 i.Z.dispatch({
                     type: 'BRAINTREE_TOKENIZE_PAYPAL_SUCCESS',
                     nonce: e.nonce,
                     email: t,
                     billingAddress: {
                         name: ''.concat(n, ' ').concat(r),
-                        line1: o.line1,
-                        line2: o.line2,
-                        city: o.city,
-                        state: o.state,
-                        country: o.countryCode,
-                        postalCode: o.postalCode
+                        line1: a.line1,
+                        line2: a.line2,
+                        city: a.city,
+                        state: a.state,
+                        country: a.countryCode,
+                        postalCode: a.postalCode
                     }
                 });
             })
@@ -133,7 +133,7 @@ function m() {
             });
 }
 function g() {
-    let e = o.Z.getVenmoClient();
+    let e = a.Z.getVenmoClient();
     if (null == e) throw Error('Braintree Venmo client must be initialized before calling tokenize.');
     i.Z.dispatch({ type: 'BRAINTREE_TOKENIZE_VENMO_START' }),
         e
@@ -167,13 +167,13 @@ function E(e, t) {
     }
 }
 function b() {
-    return E(o.Z.getPayPalClient(), { type: 'BRAINTREE_TEARDOWN_PAYPAL_CLIENT' });
+    return E(a.Z.getPayPalClient(), { type: 'BRAINTREE_TEARDOWN_PAYPAL_CLIENT' });
 }
 function y() {
-    return E(o.Z.getVenmoClient(), { type: 'BRAINTREE_TEARDOWN_VENMO_CLIENT' });
+    return E(a.Z.getVenmoClient(), { type: 'BRAINTREE_TEARDOWN_VENMO_CLIENT' });
 }
 function v() {
-    let e = o.Z.getLastURL();
+    let e = a.Z.getLastURL();
     null == e ? m() : (i.Z.dispatch({ type: 'BRAINTREE_TOKENIZE_PAYPAL_START' }), window.open(e));
 }
 function O() {

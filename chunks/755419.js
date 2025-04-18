@@ -5,11 +5,11 @@ n.d(t, {
 });
 var r = n(200651),
     i = n(120356),
-    o = n.n(i),
-    a = n(317257),
+    a = n.n(i),
+    o = n(317257),
     s = n(499997),
     l = n(215023),
-    c = n(779861),
+    c = n(157570),
     u = n(593639),
     d = n(26028);
 let f = {
@@ -29,15 +29,15 @@ let f = {
                 let { animationState: t = 'on', className: n } = e;
                 return (0, r.jsx)(s.Z, {
                     animationState: t,
-                    className: o()(c.orbProfileBadgeAsset, n)
+                    className: a()(c.orbProfileBadgeAsset, n)
                 });
             }
         }
     },
     _ = (e) => e in f,
     p = () => ({
-        id: a.l.ORB_PROFILE_BADGE,
-        icon: a.l.ORB_PROFILE_BADGE,
+        id: o.l.ORB_PROFILE_BADGE,
+        icon: o.l.ORB_PROFILE_BADGE,
         iconSrc: d.Z,
         description: '',
         isPreviewMode: !0

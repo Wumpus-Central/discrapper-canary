@@ -18,20 +18,20 @@ var i = n(442837),
     S = n(703656),
     p = n(706454),
     A = n(933429),
-    R = n(395361),
-    P = n(626135),
-    f = n(243778),
+    f = n(395361),
+    R = n(626135),
+    P = n(243778),
     C = n(921944),
     D = n(981631),
     g = n(801461),
     y = n(474936),
     m = n(388032),
-    h = n(226293);
+    h = n(131715);
 let b = (e) => {
     let { dismissibleContent: t, noticeType: b } = e,
         U = (0, i.e7)([A.ZP], () => A.ZP.getNotice()),
         M = (0, i.e7)([p.default], () => p.default.locale);
-    return (0, r.jsx)(f.ZP, {
+    return (0, r.jsx)(P.ZP, {
         contentTypes: [t],
         groupName: C.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
@@ -98,7 +98,7 @@ let b = (e) => {
                                 onClick: () => i(C.L.UNKNOWN),
                                 noticeType: b
                             }),
-                            (0, r.jsx)(R.Z, { className: h.platformIcon }),
+                            (0, r.jsx)(f.Z, { className: h.platformIcon }),
                             m.NW.string(m.t['5NUVHB']),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () =>
@@ -161,7 +161,7 @@ let b = (e) => {
                                 className: h.premiumAction,
                                 noticeType: b,
                                 onClick: () => {
-                                    P.default.track(D.rMx.PREMIUM_PROMOTION_OPENED, {
+                                    R.default.track(D.rMx.PREMIUM_PROMOTION_OPENED, {
                                         location_section: D.jXE.NOTIFICATION_BAR,
                                         location_object: D.qAy.BUTTON_CTA
                                     }),

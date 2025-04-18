@@ -5,8 +5,8 @@ n.d(t, {
     n(997841);
 var r = n(818083),
     i = n(630388),
-    o = n(981631),
-    a = n(987338);
+    a = n(981631),
+    o = n(987338);
 let s = (0, r.B)({
     kind: 'user',
     id: '2024-11_activities_contextless',
@@ -15,7 +15,7 @@ let s = (0, r.B)({
         enabledOnDesktop: !1,
         enabledOnMobile: !1
     },
-    commonTriggerPoint: a.$P.CONNECTION_OPEN,
+    commonTriggerPoint: o.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -40,5 +40,5 @@ function l() {
 }
 function c(e) {
     var t;
-    return (0, i.yE)(null != (t = e.flags) ? t : 0, o.udG.CONTEXTLESS_ACTIVITY) && l();
+    return (0, i.yE)(null != (t = e.flags) ? t : 0, a.udG.CONTEXTLESS_ACTIVITY) && l();
 }

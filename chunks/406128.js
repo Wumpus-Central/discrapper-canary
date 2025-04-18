@@ -1,16 +1,16 @@
 n.d(t, { Z: () => d });
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(600164),
-    c = n(149065);
+    c = n(42656);
 class u extends i.PureComponent {
     render() {
         let { note: e, title: t, action: n, className: i } = this.props;
         return (0, r.jsx)('div', {
-            className: a()(c.wrapper, i),
+            className: o()(c.wrapper, i),
             children: (0, r.jsxs)(l.Z, {
                 className: c.flexWrapper,
                 direction: l.Z.Direction.VERTICAL,

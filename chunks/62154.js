@@ -17,7 +17,7 @@ var o = t(442837),
     I = t(643518),
     g = t(228168),
     y = t(981631),
-    j = t(191902);
+    j = t(405666);
 function v(e) {
     var n;
     let { user: t, currentUser: v, guildId: x, channelId: _, displayProfile: Z, initialSection: O, initialSubsection: N, friendToken: P, onClose: E } = e,

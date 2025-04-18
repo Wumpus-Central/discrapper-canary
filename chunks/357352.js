@@ -1,12 +1,12 @@
 n.d(t, {
-    I: () => a,
-    b: () => o
+    I: () => o,
+    b: () => a
 });
 let r = 'https://cdn.discordapp.com/assets',
     i = 'https://cdn.discordapp.com/assets/content';
-function o(e) {
+function a(e) {
     return ''.concat(r, '/').concat(e);
 }
-function a(e) {
+function o(e) {
     return ''.concat(i, '/').concat(e);
 }

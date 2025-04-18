@@ -13,7 +13,7 @@ var r = n(200651),
     u = n(998502),
     d = n(981631),
     p = n(388032),
-    h = n(683004);
+    h = n(607919);
 let f = 'Activity Encourages Hardware Acceleration';
 function g(e) {
     var t,

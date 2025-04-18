@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(518950),
-    a = n(998502),
+    a = n(518950),
+    o = n(998502),
     s = n(388032);
 function l(e, t, n) {
     return (
@@ -34,19 +34,19 @@ function c(e) {
     }
     return e;
 }
-let u = a.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
+let u = o.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
     d = (e) => {
-        let { user: t, guildId: n, avatarDecorationOverride: a, status: l, avatarSize: d = i.EFr.SIZE_120, 'aria-hidden': f = !1, className: _, animateOnHover: p = !1, questPreviewRewardAssetUrl: h = null } = e,
+        let { user: t, guildId: n, avatarDecorationOverride: o, status: l, avatarSize: d = i.EFr.SIZE_120, 'aria-hidden': f = !1, className: _, animateOnHover: p = !1, questPreviewRewardAssetUrl: h = null } = e,
             {
                 avatarDecorationSrc: m,
                 avatarSrc: g,
                 eventHandlers: E
-            } = (0, o.Z)({
+            } = (0, a.Z)({
                 user: t,
                 guildId: n,
                 size: d,
                 showPending: !0,
-                avatarDecorationOverride: a,
+                avatarDecorationOverride: o,
                 animateOnHover: p
             });
         return (0, r.jsx)(

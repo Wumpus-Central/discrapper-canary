@@ -1,13 +1,13 @@
 n.d(t, {
     OU: () => d,
     ZP: () => f,
-    fC: () => a
+    fC: () => o
 });
 var r = n(192379),
     i = function () {
         (this.locks = []), (this.listeners = []);
     };
-function o(e, t, n) {
+function a(e, t, n) {
     void 0 === n && (n = !1);
     var r = (function (e) {
             return document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, {
@@ -17,8 +17,8 @@ function o(e, t, n) {
             });
         })(e),
         i = t.compareDocumentPosition(e),
-        o = null;
-    i & Node.DOCUMENT_POSITION_PRECEDING || n ? (o = r.firstChild()) : i & Node.DOCUMENT_POSITION_FOLLOWING && (o = r.lastChild()), (null != o ? o : e).focus();
+        a = null;
+    i & Node.DOCUMENT_POSITION_PRECEDING || n ? (a = r.firstChild()) : i & Node.DOCUMENT_POSITION_FOLLOWING && (a = r.lastChild()), (null != a ? a : e).focus();
 }
 (i.prototype.add = function (e, t) {
     var n = {
@@ -70,12 +70,12 @@ function o(e, t, n) {
             return n(t, e.locks);
         });
     });
-var a = new i(),
+var o = new i(),
     s = 0;
 function l(e) {
     (0, r.useEffect)(
         function () {
-            return a.subscribe(e);
+            return o.subscribe(e);
         },
         [e]
     );
@@ -100,11 +100,11 @@ function u(e) {
         (0, r.useLayoutEffect)(
             function () {
                 return (
-                    a.add(t, function (e) {
+                    o.add(t, function (e) {
                         return (n.current = e);
                     }),
                     function () {
-                        return a.remove(t);
+                        return o.remove(t);
                     }
                 );
             },
@@ -132,10 +132,10 @@ function f(e, t) {
     void 0 === t && (t = {});
     var n = t.returnRef,
         i = t.disableReturnRef,
-        a = t.attachTo;
-    void 0 === a && (a = document);
+        o = t.attachTo;
+    void 0 === o && (o = document);
     var s = t.disable,
-        l = a instanceof HTMLElement ? a.ownerDocument : a,
+        l = o instanceof HTMLElement ? o.ownerDocument : o,
         d = u();
     (0, r.useEffect)(
         function () {
@@ -151,7 +151,7 @@ function f(e, t) {
                         var n = e.current;
                         if (null != n) {
                             var r = t.target || l.body;
-                            n.contains(r) || (t.preventDefault(), t.stopImmediatePropagation(), o(n, r));
+                            n.contains(r) || (t.preventDefault(), t.stopImmediatePropagation(), a(n, r));
                         }
                     }
                 }
@@ -161,20 +161,20 @@ function f(e, t) {
                         if (null != n) {
                             (null != t.relatedTarget && t.relatedTarget !== l.body) || (t.preventDefault(), n.focus());
                             var r = t.target || l.body;
-                            n.contains(r) || o(n, r);
+                            n.contains(r) || a(n, r);
                         }
                     }
                 }
                 return (
-                    null == t || null == l.activeElement || t.contains(l.activeElement) || null != t.querySelector('[autofocus]') || o(t, l.activeElement, !0),
-                    a.addEventListener('focusin', n, { capture: !0 }),
-                    a.addEventListener('focusout', r, { capture: !0 }),
+                    null == t || null == l.activeElement || t.contains(l.activeElement) || null != t.querySelector('[autofocus]') || a(t, l.activeElement, !0),
+                    o.addEventListener('focusin', n, { capture: !0 }),
+                    o.addEventListener('focusout', r, { capture: !0 }),
                     function () {
-                        a.removeEventListener('focusin', n, { capture: !0 }), a.removeEventListener('focusout', r, { capture: !0 });
+                        o.removeEventListener('focusin', n, { capture: !0 }), o.removeEventListener('focusout', r, { capture: !0 });
                     }
                 );
             },
-            [a, l, e, d]
+            [o, l, e, d]
         ),
         c(n, i);
 }

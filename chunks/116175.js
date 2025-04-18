@@ -1,5 +1,5 @@
 n.d(t, {
-    ME: () => o,
+    ME: () => a,
     ZD: () => r
 });
 var r = (function (e) {
@@ -60,7 +60,7 @@ let i = [
     }
 ];
 i[0].primary, i[0].secondary;
-let o = {
+let a = {
     0: 2,
     1: 1,
     2: 1,

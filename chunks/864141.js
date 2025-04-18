@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(793030),
+    a = n.n(i),
+    o = n(793030),
     s = n(442837),
     l = n(481060),
     c = n(287734),
@@ -29,7 +29,7 @@ var i = n(120356),
     R = n(670451),
     P = n(228168),
     w = n(388032),
-    D = n(935693);
+    D = n(227832);
 function L(e, t, n) {
     return (
         t in e
@@ -123,7 +123,7 @@ function j(e) {
                 children: [
                     (0, r.jsxs)('div', {
                         children: [
-                            (0, r.jsxs)(a.X6, {
+                            (0, r.jsxs)(o.X6, {
                                 variant: 'heading-sm/semibold',
                                 color: 'text-normal',
                                 className: D.voiceChannelHeading,
@@ -135,7 +135,7 @@ function j(e) {
                                         className: D.voiceIcon
                                     }),
                                     (0, r.jsx)(l.P3F, {
-                                        className: o()(D.clickableText, D.inline),
+                                        className: a()(D.clickableText, D.inline),
                                         onClick: e,
                                         children: H
                                     })
@@ -161,7 +161,7 @@ function j(e) {
         },
         q = () =>
             (0, r.jsx)('div', {
-                className: o()(D.actions, U),
+                className: a()(D.actions, U),
                 children: (0, r.jsx)(C.Z, {
                     channel: i,
                     onAction: B,
@@ -172,7 +172,7 @@ function j(e) {
         value: G,
         children: (0, r.jsxs)(O.Z, {
             ref: F,
-            className: o()(D.card, L),
+            className: a()(D.card, L),
             onAction: B,
             onClose: M,
             children: [
@@ -188,7 +188,7 @@ function j(e) {
                 (0, r.jsx)('div', {
                     className: D.body,
                     children: (0, r.jsxs)('div', {
-                        className: o()(D.content, U),
+                        className: a()(D.content, U),
                         children: [
                             (0, r.jsx)(T.Z, {
                                 users: Z,

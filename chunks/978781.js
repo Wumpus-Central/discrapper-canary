@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(278074),
     l = n(442837),
     c = n(481060),
@@ -32,7 +32,7 @@ var r = n(200651),
     C = n(921944),
     R = n(474936),
     P = n(388032),
-    w = n(867736);
+    w = n(16534);
 function D(e, t, n) {
     return (
         t in e
@@ -89,12 +89,12 @@ function k() {
     );
 }
 function j(e) {
-    let { tab: t, isPreview: o, isCoachmark: l, onClose: u } = e,
+    let { tab: t, isPreview: a, isCoachmark: l, onClose: u } = e,
         f = i.useCallback(() => {
             u(), l || d.Z.open();
         }, [u, l]),
         p = (0, s.EQ)({
-            isPreview: o,
+            isPreview: a,
             isCoachmark: l
         })
             .with({ isCoachmark: !0 }, () => P.NW.string(P.t.cpT0Cg))
@@ -138,7 +138,7 @@ function j(e) {
     return (0, r.jsxs)('div', {
         className: w.footerContainer,
         children: [
-            o &&
+            a &&
                 (0, r.jsxs)('div', {
                     className: w.footerLabelContainer,
                     children: [
@@ -159,7 +159,7 @@ function j(e) {
                 children: [
                     (0, r.jsx)('div', {
                         children: (0, r.jsx)(c.zxk, {
-                            className: a()(w.footerButton, w.footerButtonBack),
+                            className: o()(w.footerButton, w.footerButtonBack),
                             color: c.Ttl.PRIMARY,
                             size: c.zxk.Sizes.NONE,
                             onClick: f,
@@ -167,7 +167,7 @@ function j(e) {
                             children: (0, r.jsx)(I.Z, { direction: I.Z.Directions.LEFT })
                         })
                     }),
-                    o &&
+                    a &&
                         (0, r.jsx)(S.Z, {
                             className: w.footerButton,
                             subscriptionTier: R.Si.TIER_2,
@@ -181,8 +181,8 @@ function j(e) {
     });
 }
 function U(e) {
-    let { initialTab: t, markAsDismissed: n, isCoachmark: o } = e,
-        [a, s] = i.useState(t),
+    let { initialTab: t, markAsDismissed: n, isCoachmark: a } = e,
+        [o, s] = i.useState(t),
         d = i.useMemo(
             () => [
                 {
@@ -234,7 +234,7 @@ function U(e) {
                         }),
                         (0, r.jsx)(c.sY7, {
                             options: d,
-                            value: a,
+                            value: o,
                             onChange: (e) => {
                                 let { value: t } = e;
                                 return s(t);
@@ -245,10 +245,10 @@ function U(e) {
                 }),
                 (0, r.jsxs)(c.Ttm, {
                     className: w.scrollContainer,
-                    children: [0 === a && (0, r.jsx)(M, { isCoachmark: o }), 1 === a && (0, r.jsx)(k, {})]
+                    children: [0 === o && (0, r.jsx)(M, { isCoachmark: a }), 1 === o && (0, r.jsx)(k, {})]
                 }),
                 (0, r.jsx)(j, {
-                    tab: a,
+                    tab: o,
                     isPreview: g,
                     onClose: R,
                     isCoachmark: !1

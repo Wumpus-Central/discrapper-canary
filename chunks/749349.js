@@ -1,13 +1,13 @@
 n.d(t, { Z: () => c });
 var r = n(317770),
     i = n(626135),
-    o = n(358085),
-    a = n(998502),
+    a = n(358085),
+    o = n(998502),
     s = n(981631);
 class l extends r.Z {
     _initialize() {
-        o.isPlatformEmbedded &&
-            (a.ZP.on('APP_PUSH_ANALYTICS', (e, t) => {
+        a.isPlatformEmbedded &&
+            (o.ZP.on('APP_PUSH_ANALYTICS', (e, t) => {
                 this._handleEventResponse(t);
             }),
             this.processModuleEvents());
@@ -15,7 +15,7 @@ class l extends r.Z {
     _terminate() {}
     processModuleEvents() {
         try {
-            a.ZP.send('APP_GET_ANALYTICS_EVENTS');
+            o.ZP.send('APP_GET_ANALYTICS_EVENTS');
         } catch (e) {
             console.error('[analytics] failed to send analytics events query: '.concat(e));
         }

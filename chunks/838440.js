@@ -2,8 +2,8 @@ n.d(t, { v: () => b }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(570140),
-    a = n(468026),
+    a = n(570140),
+    o = n(468026),
     s = n(673750),
     l = n(300429),
     c = n(594174),
@@ -44,7 +44,7 @@ function m(e) {
 function g(e, t) {
     (0, i.h7j)((n) =>
         (0, r.jsx)(
-            a.default,
+            o.default,
             m(
                 {
                     title: p.NW.string(p.t.l8rYLi),
@@ -75,7 +75,7 @@ function E(e) {
         S = !v;
     if (u.length > I) {
         S && null != E
-            ? o.Z.dispatch({
+            ? a.Z.dispatch({
                   type: 'MESSAGE_LENGTH_UPSELL',
                   channel: E,
                   content: u
@@ -115,7 +115,7 @@ function E(e) {
         (0, i.h7j)(
             (e) =>
                 (0, r.jsx)(
-                    a.default,
+                    o.default,
                     m(
                         {
                             title: p.NW.string(p.t['7Q4eo6']),
@@ -136,7 +136,7 @@ function E(e) {
     O({ valid: !0 });
 }
 function b(e) {
-    let { openWarningPopout: t, type: n, content: r, stickers: i, uploads: o, channel: a, restrictMentions: s = !0, respectCooldown: l = !0 } = e,
+    let { openWarningPopout: t, type: n, content: r, stickers: i, uploads: a, channel: o, restrictMentions: s = !0, respectCooldown: l = !0 } = e,
         u = f.ZP.canUseIncreasedMessageLength(c.default.getCurrentUser());
     return new Promise((e) =>
         E({
@@ -144,8 +144,8 @@ function b(e) {
             type: n,
             content: r,
             stickers: i,
-            uploads: o,
-            channel: a,
+            uploads: a,
+            channel: o,
             restrictMentions: s,
             respectCooldown: l,
             userCanUsePremiumMessageLength: u,

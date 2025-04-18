@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(192379),
     i = n(399606),
-    o = n(634894),
-    a = n(335131),
+    a = n(634894),
+    o = n(335131),
     s = n(1870),
     l = n(228624),
     c = n(267097);
@@ -39,11 +39,11 @@ function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = 'useFetchPurchases';
-    (0, o.j)({
+    (0, a.j)({
         location: n + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, o.j)({
+        (0, a.j)({
             location: n + ' auto off',
             autoTrackExposure: !1
         });
@@ -60,7 +60,7 @@ function f() {
         }, [f]),
         (0, r.useEffect)(() => {
             (!0 === e && m.current && null == g.current) ||
-                (0, a.qg)({
+                (0, o.qg)({
                     variantsReturnStyle: c,
                     location: t
                 });
@@ -78,18 +78,18 @@ function f() {
 function _(e) {
     let t = null == e ? void 0 : e.paymentGateway,
         n = 'useFetchCollectiblesCategoriesAndPurchases';
-    (0, o.j)({
+    (0, a.j)({
         location: n + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, o.j)({
+        (0, a.j)({
             location: n + ' auto off',
             autoTrackExposure: !1
         });
     let {
             isFetching: r,
             categories: i,
-            fetchCategoriesError: a,
+            fetchCategoriesError: o,
             refreshCategories: s
         } = (0, c.Z)({
             paymentGateway: t,
@@ -103,7 +103,7 @@ function _(e) {
         isClaiming: l,
         categories: i,
         purchases: p,
-        fetchCategoriesError: a,
+        fetchCategoriesError: o,
         fetchPurchasesError: u,
         claimError: d,
         refreshCategories: s,

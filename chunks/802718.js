@@ -1,4 +1,4 @@
-n.d(t, { U: () => v });
+n.d(t, { U: () => O });
 var r = n(200651),
     i = n(192379),
     l = n(91192),
@@ -12,7 +12,7 @@ var r = n(200651),
     p = n(678513),
     f = n(981631),
     g = n(388032),
-    m = n(675640);
+    m = n(975812);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,7 +61,7 @@ function _(e) {
         s = (0, l.Ie)('fakedoor'),
         p = i.useCallback(() => {
             (0, o.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('22862'), n.e('8672')]).then(n.bind(n, 646202));
+                let { default: e } = await Promise.all([n.e('22862'), n.e('20404')]).then(n.bind(n, 646202));
                 return (n) => (0, r.jsx)(e, y(b({}, n), { target: t }));
             });
         }, [t]),
@@ -74,13 +74,13 @@ function _(e) {
             },
             [t]
         ),
-        v = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
-        O = (0, r.jsxs)('div', {
+        O = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
+        v = (0, r.jsxs)('div', {
             className: m.tooltipContainer,
             children: [
                 (0, r.jsx)('div', {
                     className: m.tooltipBackground,
-                    style: { background: v }
+                    style: { background: O }
                 }),
                 (0, r.jsx)(o.X6q, {
                     variant: 'heading-sm/medium',
@@ -98,7 +98,7 @@ function _(e) {
             (0, r.jsx)(o.ze6, {
                 theme: f.BRd.DARK,
                 children: (0, r.jsx)(h.Z, {
-                    text: O,
+                    text: v,
                     tooltipClass: m.tooltip,
                     tooltipContentClass: m.tooltipContent,
                     children: (0, r.jsx)(o.ze6, {
@@ -123,7 +123,7 @@ function _(e) {
             }),
             (0, r.jsx)('div', {
                 style: {
-                    background: v,
+                    background: O,
                     width: 0,
                     height: 0
                 }
@@ -131,7 +131,7 @@ function _(e) {
         ]
     });
 }
-function v() {
+function O() {
     let e = (0, s.e7)([p.Z], () => p.Z.getActiveUserSignUp());
     return null == e ? null : (0, r.jsx)(_, { target: e });
 }

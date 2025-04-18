@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(607070),
@@ -15,24 +15,24 @@ var r = n(200651),
     m = n(347312),
     g = n(981631),
     E = n(388032),
-    b = n(795650);
+    b = n(182525);
 let y = i.lazy(() => n.e('89792').then(n.bind(n, 711635)));
 function v(e) {
     let { played: t, duration: n, currentTime: i } = e,
-        o = null == n ? '--:--' : t ? (0, d.yv)(Math.ceil(n - i)) : (0, d.yv)(Math.ceil(n));
+        a = null == n ? '--:--' : t ? (0, d.yv)(Math.ceil(n - i)) : (0, d.yv)(Math.ceil(n));
     return (0, r.jsx)(l.Text, {
         variant: 'text-sm/normal',
         className: b.duration,
         tabularNumbers: !0,
-        children: o
+        children: a
     });
 }
 function O(e, t, n) {
     i.useEffect(() => {
         let r;
         function i() {
-            let o = e.current;
-            null != o && (n(o.currentTime), t && (r = requestAnimationFrame(i)));
+            let a = e.current;
+            null != a && (n(a.currentTime), t && (r = requestAnimationFrame(i)));
         }
         return (
             i(),
@@ -60,7 +60,7 @@ function I(e, t, n) {
 }
 let S = i.memo(function (e) {
     let t,
-        { src: n, volume: o = 1, onVolumeChange: d, onMute: _, waveform: g, durationSecs: S, onVolumeShow: T, onVolumeHide: N, onPlay: A, onPause: C, onError: R } = e,
+        { src: n, volume: a = 1, onVolumeChange: d, onMute: _, waveform: g, durationSecs: S, onVolumeShow: T, onVolumeHide: N, onPlay: A, onPause: C, onError: R } = e,
         P = i.useRef(null),
         [w, D] = i.useState(0),
         [L, x] = i.useState(S),
@@ -69,7 +69,7 @@ let S = i.memo(function (e) {
         [G, B] = i.useState(!1),
         [F, V] = i.useState(!1),
         [Z, H] = i.useState('none'),
-        [W, Y] = i.useState(() => ('function' == typeof o ? o() : o)),
+        [W, Y] = i.useState(() => ('function' == typeof a ? a() : a)),
         K = i.useRef(void 0),
         z = i.useCallback(() => {
             U((e) => !e);
@@ -125,28 +125,28 @@ let S = i.memo(function (e) {
     i.useEffect(() => {
         !F && j && V(!0);
     }, [j, F]);
-    let eo = i.useRef(null),
-        ea = {
+    let ea = i.useRef(null),
+        eo = {
             played: F,
             currentTime: w,
             onPause: C,
             onPlay: A
         },
-        es = i.useRef(ea);
+        es = i.useRef(eo);
     i.useEffect(() => {
-        es.current = ea;
+        es.current = eo;
     }),
         i.useEffect(() => {
             let { played: e, currentTime: t, onPause: n, onPlay: r } = es.current;
             if (e || j)
                 if (j) {
-                    var i, o;
-                    (eo.current = performance.now()), null == r || r(!1, t, (null != (o = null == (i = P.current) ? void 0 : i.duration) ? o : 0) * p.Z.Millis.SECOND);
+                    var i, a;
+                    (ea.current = performance.now()), null == r || r(!1, t, (null != (a = null == (i = P.current) ? void 0 : i.duration) ? a : 0) * p.Z.Millis.SECOND);
                 } else {
                     let e = performance.now(),
-                        r = eo.current,
+                        r = ea.current,
                         i = null != r ? (e - r) / 1000 : 0;
-                    null == n || n(t, i), (eo.current = null);
+                    null == n || n(t, i), (ea.current = null);
                 }
         }, [j]),
         O(P, j, D),
@@ -184,12 +184,12 @@ let S = i.memo(function (e) {
               });
     let eu = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
     return (0, r.jsxs)('div', {
-        className: a()(b.container, { [b.playing]: j }),
+        className: o()(b.container, { [b.playing]: j }),
         onMouseEnter: q,
         children: [
             (0, r.jsx)('div', {
                 className: b.rippleContainer,
-                children: (0, r.jsx)('div', { className: a()(b.ripple, { [b.reducedMotion]: eu }) })
+                children: (0, r.jsx)('div', { className: o()(b.ripple, { [b.reducedMotion]: eu }) })
             }),
             (0, r.jsx)(l.P3F, {
                 className: b.playButtonContainer,

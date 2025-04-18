@@ -1,6 +1,6 @@
 n.d(t, {
     L9: () => u,
-    LY: () => a,
+    LY: () => o,
     ND: () => f,
     WC: () => p,
     aW: () => s,
@@ -16,8 +16,8 @@ n.d(t, {
     n(415506);
 var r = n(981631),
     i = n(474936),
-    o = n(388032),
-    a = (function (e) {
+    a = n(388032),
+    o = (function (e) {
         return (e[(e.RESOLUTION_480 = 480)] = 'RESOLUTION_480'), (e[(e.RESOLUTION_720 = 720)] = 'RESOLUTION_720'), (e[(e.RESOLUTION_1080 = 1080)] = 'RESOLUTION_1080'), (e[(e.RESOLUTION_1440 = 1440)] = 'RESOLUTION_1440'), (e[(e.RESOLUTION_SOURCE = 0)] = 'RESOLUTION_SOURCE'), e;
     })({});
 function s(e) {
@@ -189,9 +189,9 @@ function _(e, t) {
         }
     };
 }
-let p = [_(720), _(1080), _(1440), _(0, () => o.NW.string(o.t.XjXqzs))],
+let p = [_(720), _(1080), _(1440), _(0, () => a.NW.string(a.t.XjXqzs))],
     h = [_(720), _(1080), _(1440)],
-    m = (e) => (0 === e ? o.NW.string(o.t.XjXqzs) : o.NW.formatToPlainString(o.t.TEOC0N, { resolution: e })),
+    m = (e) => (0 === e ? a.NW.string(a.t.XjXqzs) : a.NW.formatToPlainString(a.t.TEOC0N, { resolution: e })),
     g = [_(480, () => m(480)), _(720, () => m(720)), _(1080, () => m(1080)), _(1440, () => m(1440)), _(0, () => m(0))],
     E = [_(15), _(30), _(60)],
-    b = [_(15, () => o.NW.formatToPlainString(o.t['bW+JCQ'], { value: 15 })), _(30, () => o.NW.formatToPlainString(o.t['bW+JCQ'], { value: 30 })), _(60, () => o.NW.formatToPlainString(o.t['bW+JCQ'], { value: 60 }))];
+    b = [_(15, () => a.NW.formatToPlainString(a.t['bW+JCQ'], { value: 15 })), _(30, () => a.NW.formatToPlainString(a.t['bW+JCQ'], { value: 30 })), _(60, () => a.NW.formatToPlainString(a.t['bW+JCQ'], { value: 60 }))];

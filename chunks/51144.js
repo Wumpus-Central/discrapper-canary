@@ -11,8 +11,8 @@ n.d(t, {
     n(415506);
 var r = n(442837),
     i = n(246946),
-    o = n(594174),
-    a = n(981631),
+    a = n(594174),
+    o = n(981631),
     s = n(388032);
 function l(e, t, n) {
     return (
@@ -70,8 +70,8 @@ function E(e) {
     var t;
     let n = (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation);
     if (null == e) return;
-    let o = m(e);
-    return n && o.toLocaleLowerCase() === (null == (t = e.username) ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (o = f(o)), o;
+    let a = m(e);
+    return n && a.toLocaleLowerCase() === (null == (t = e.username) ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (a = f(a)), a;
 }
 function b(e) {
     if (null != e)
@@ -90,19 +90,19 @@ function y(e) {
 function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     switch (e) {
-        case a.Skl.ONLINE:
+        case o.Skl.ONLINE:
             return t ? s.NW.string(s.t['9hghLC']) : s.NW.string(s.t.WbGtnJ);
-        case a.Skl.OFFLINE:
+        case o.Skl.OFFLINE:
             return s.NW.string(s.t.Vv0abG);
-        case a.Skl.IDLE:
+        case o.Skl.IDLE:
             return s.NW.string(s.t.qWbtVV);
-        case a.Skl.DND:
+        case o.Skl.DND:
             return s.NW.string(s.t.jaNpQE);
-        case a.Skl.INVISIBLE:
+        case o.Skl.INVISIBLE:
             return s.NW.string(s.t.bg24HB);
-        case a.Skl.STREAMING:
+        case o.Skl.STREAMING:
             return s.NW.string(s.t.XKYej4);
-        case a.Skl.UNKNOWN:
+        case o.Skl.UNKNOWN:
         default:
             return null;
     }
@@ -111,9 +111,9 @@ function O(e, t) {
     let { maxDaysOld: n, minDaysOld: r = 0 } = t;
     if (null == e) return !1;
     let i = Date.now() - e.createdAt.getTime(),
-        o = null == n || i <= u * n,
-        a = i >= u * r;
-    return !!o && !!a;
+        a = null == n || i <= u * n,
+        o = i >= u * r;
+    return !!a && !!o;
 }
 function I(e) {
     return !O(e, {
@@ -131,7 +131,7 @@ function T(e, t, n) {
     if (null == e) return s.NW.string(s.t.sKdZ6e);
     if (!h(e.username)) return d;
     let r = n;
-    if (('always' === t.identifiable ? (r = !1) : 'never' === t.identifiable && (r = !0), '0' !== e.discriminator && e.discriminator !== a.fo$ && !t.forcePomelo)) return 'username' === t.mode || r ? e.username : ''.concat(e.username, '#').concat(e.discriminator);
+    if (('always' === t.identifiable ? (r = !1) : 'never' === t.identifiable && (r = !0), '0' !== e.discriminator && e.discriminator !== o.fo$ && !t.forcePomelo)) return 'username' === t.mode || r ? e.username : ''.concat(e.username, '#').concat(e.discriminator);
     let i = r ? f(e.username) : e.username;
     return 'never' !== t.decoration ? _(i) : i;
 }
@@ -141,8 +141,8 @@ function N(e, t) {
     return T(e, n, r);
 }
 function A(e) {
-    return (0, r.e7)([o.default], () => {
-        if (null != e) return e.isPrivate() && e.isDM() ? o.default.getUser(e.getRecipientId()) : null;
+    return (0, r.e7)([a.default], () => {
+        if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
 }
 let C = {

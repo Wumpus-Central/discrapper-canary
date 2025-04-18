@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(200651),
     i = n(192379),
-    o = n(481060),
-    a = n(239091),
+    a = n(481060),
+    o = n(239091),
     s = n(299206),
     l = n(810568),
     c = n(168524),
@@ -13,7 +13,7 @@ var r = n(200651),
     d = n(26033),
     f = n(178762),
     _ = n(388032),
-    p = n(175720);
+    p = n(442826);
 function h(e, t, n) {
     return (
         t in e
@@ -95,27 +95,27 @@ function y(e) {
             trackEntryPointImpression: !0,
             sourceUserId: y.author_id
         });
-    return (0, r.jsx)(o.yRy, {
+    return (0, r.jsx)(a.yRy, {
         targetElementRef: I,
         align: 'top',
         position: 'right',
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(o.v2r, {
+            return (0, r.jsx)(a.v2r, {
                 navId: b,
                 onClose: () => {
-                    (0, a.Zy)(), t();
+                    (0, o.Zy)(), t();
                 },
                 'aria-label': _.NW.string(_.t.liqwPD),
                 onSelect: v,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsxs)(o.kSQ, {
+                        (0, r.jsxs)(a.kSQ, {
                             children: [
                                 T,
                                 null != P &&
-                                    (0, r.jsx)(o.sNh, {
+                                    (0, r.jsx)(a.sNh, {
                                         id: 'game-profile',
                                         label: _.NW.string(_.t.f7aVGh),
                                         action: (e) => {
@@ -124,7 +124,7 @@ function y(e) {
                                     })
                             ]
                         }),
-                        (0, r.jsxs)(o.kSQ, {
+                        (0, r.jsxs)(a.kSQ, {
                             children: [N, C]
                         })
                     ]
@@ -132,13 +132,13 @@ function y(e) {
             });
         },
         children: (e) =>
-            (0, r.jsx)(o.ua7, {
+            (0, r.jsx)(a.ua7, {
                 text: _.NW.string(_.t.UKOtz8),
                 children: (t) =>
                     (0, r.jsx)(
-                        o.P3F,
+                        a.P3F,
                         E(m(E(m({ innerRef: I }, t), { className: p.menuIcon }), e), {
-                            children: (0, r.jsx)(o.xhG, {
+                            children: (0, r.jsx)(a.xhG, {
                                 color: 'currentColor',
                                 size: 'custom',
                                 width: 16,

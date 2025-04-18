@@ -1,8 +1,8 @@
 var n = Symbol.for('react.element'),
     r = Symbol.for('react.portal'),
     i = Symbol.for('react.fragment'),
-    o = Symbol.for('react.strict_mode'),
-    a = Symbol.for('react.profiler'),
+    a = Symbol.for('react.strict_mode'),
+    o = Symbol.for('react.profiler'),
     s = Symbol.for('react.provider'),
     l = Symbol.for('react.context'),
     c = Symbol.for('react.forward_ref'),
@@ -52,23 +52,23 @@ var O = Array.isArray,
     };
 function N(e, t, r) {
     var i,
-        o = {},
-        a = null,
+        a = {},
+        o = null,
         s = null;
-    if (null != t) for (i in (void 0 !== t.ref && (s = t.ref), void 0 !== t.key && (a = '' + t.key), t)) I.call(t, i) && !T.hasOwnProperty(i) && (o[i] = t[i]);
+    if (null != t) for (i in (void 0 !== t.ref && (s = t.ref), void 0 !== t.key && (o = '' + t.key), t)) I.call(t, i) && !T.hasOwnProperty(i) && (a[i] = t[i]);
     var l = arguments.length - 2;
-    if (1 === l) o.children = r;
+    if (1 === l) a.children = r;
     else if (1 < l) {
         for (var c = Array(l), u = 0; u < l; u++) c[u] = arguments[u + 2];
-        o.children = c;
+        a.children = c;
     }
-    if (e && e.defaultProps) for (i in (l = e.defaultProps)) void 0 === o[i] && (o[i] = l[i]);
+    if (e && e.defaultProps) for (i in (l = e.defaultProps)) void 0 === a[i] && (a[i] = l[i]);
     return {
         $$typeof: n,
         type: e,
-        key: a,
+        key: o,
         ref: s,
-        props: o,
+        props: a,
         _owner: S.current
     };
 }
@@ -101,7 +101,7 @@ var P = /\/+/g;
 function w(e, t) {
     return 'object' == typeof e && null !== e && null != e.key ? R('' + e.key) : t.toString(36);
 }
-function D(e, t, i, o, a) {
+function D(e, t, i, a, o) {
     var s = typeof e;
     ('undefined' === s || 'boolean' === s) && (e = null);
     var l = !1;
@@ -121,23 +121,23 @@ function D(e, t, i, o, a) {
         }
     if (l)
         return (
-            (a = a((l = e))),
-            (e = '' === o ? '.' + w(l, 0) : o),
-            O(a)
+            (o = o((l = e))),
+            (e = '' === a ? '.' + w(l, 0) : a),
+            O(o)
                 ? ((i = ''),
                   null != e && (i = e.replace(P, '$&/') + '/'),
-                  D(a, t, i, '', function (e) {
+                  D(o, t, i, '', function (e) {
                       return e;
                   }))
-                : null != a && (C(a) && (a = A(a, i + (!a.key || (l && l.key === a.key) ? '' : ('' + a.key).replace(P, '$&/') + '/') + e)), t.push(a)),
+                : null != o && (C(o) && (o = A(o, i + (!o.key || (l && l.key === o.key) ? '' : ('' + o.key).replace(P, '$&/') + '/') + e)), t.push(o)),
             1
         );
-    if (((l = 0), (o = '' === o ? '.' : o + ':'), O(e)))
+    if (((l = 0), (a = '' === a ? '.' : a + ':'), O(e)))
         for (var c = 0; c < e.length; c++) {
-            var u = o + w((s = e[c]), c);
-            l += D(s, t, i, u, a);
+            var u = a + w((s = e[c]), c);
+            l += D(s, t, i, u, o);
         }
-    else if ('function' == typeof (u = p(e))) for (e = u.call(e), c = 0; !(s = e.next()).done; ) (u = o + w((s = s.value), c++)), (l += D(s, t, i, u, a));
+    else if ('function' == typeof (u = p(e))) for (e = u.call(e), c = 0; !(s = e.next()).done; ) (u = a + w((s = s.value), c++)), (l += D(s, t, i, u, o));
     else if ('object' === s) throw Error('Objects are not valid as a React child (found: ' + ('[object Object]' === (t = String(e)) ? 'object with keys {' + Object.keys(e).join(', ') + '}' : t) + '). If you meant to render a collection of children, use an array instead.');
     return l;
 }
@@ -212,20 +212,20 @@ function U() {
 }),
     (t.Component = E),
     (t.Fragment = i),
-    (t.Profiler = a),
+    (t.Profiler = o),
     (t.PureComponent = y),
-    (t.StrictMode = o),
+    (t.StrictMode = a),
     (t.Suspense = u),
     (t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = j),
     (t.act = U),
     (t.cloneElement = function (e, t, r) {
         if (null == e) throw Error('React.cloneElement(...): The argument must be a React element, but you passed ' + e + '.');
         var i = m({}, e.props),
-            o = e.key,
-            a = e.ref,
+            a = e.key,
+            o = e.ref,
             s = e._owner;
         if (null != t) {
-            if ((void 0 !== t.ref && ((a = t.ref), (s = S.current)), void 0 !== t.key && (o = '' + t.key), e.type && e.type.defaultProps)) var l = e.type.defaultProps;
+            if ((void 0 !== t.ref && ((o = t.ref), (s = S.current)), void 0 !== t.key && (a = '' + t.key), e.type && e.type.defaultProps)) var l = e.type.defaultProps;
             for (c in t) I.call(t, c) && !T.hasOwnProperty(c) && (i[c] = void 0 === t[c] && void 0 !== l ? l[c] : t[c]);
         }
         var c = arguments.length - 2;
@@ -238,8 +238,8 @@ function U() {
         return {
             $$typeof: n,
             type: e.type,
-            key: o,
-            ref: a,
+            key: a,
+            ref: o,
             props: i,
             _owner: s
         };

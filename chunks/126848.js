@@ -14,45 +14,45 @@ var i = r(120356),
     p = r(346497),
     d = r(924540),
     b = r(474486),
-    g = r(227140),
-    Z = r(351402),
-    j = r(170671),
-    M = r(474936),
+    Z = r(227140),
+    M = r(351402),
+    g = r(170671),
+    j = r(474936),
     O = r(388032),
-    y = r(670926);
+    y = r(374594);
 function m(e) {
     let t,
         { decoration: r, label: i, isSelected: m } = e,
         H = (0, v.N)(),
-        x = (0, h.Ng)(),
-        V = (0, p.Vi)(),
-        w = (0, o.e7)([Z.Z], () => Z.Z.isLocalizedPromoEnabled) && null == H && null == r,
-        C = (null == H ? void 0 : H.trial_id) === M.a7,
-        P = (0, c.m)({ location: 'UserSettingsPremiumLabel' }),
-        _ = (0, a.wE)(l.z.Q1_2025_MARKETING_MOMENT_OFFER_BADGE);
+        V = (0, h.Ng)(),
+        x = (0, p.Vi)(),
+        w = (0, o.e7)([M.Z], () => M.Z.isLocalizedPromoEnabled) && null == H && null == r,
+        P = (null == H ? void 0 : H.trial_id) === j.a7,
+        _ = (0, c.m)({ location: 'UserSettingsPremiumLabel' }),
+        C = (0, a.wE)(l.z.Q1_2025_MARKETING_MOMENT_OFFER_BADGE);
     return (
         (t =
-            !0 === P
-                ? !0 === _
+            !0 === _
+                ? !0 === C
                     ? (0, n.jsx)(b.Du, {})
-                    : (0, n.jsx)(g.Z, {
+                    : (0, n.jsx)(Z.Z, {
                           copy: O.NW.string(O.t.OS9KPj),
                           showStars: !1
                       })
-                : V
+                : x
                   ? (0, n.jsx)(u.Z, {})
-                  : null != x
+                  : null != V
                     ? (0, n.jsx)(d.GN, {
                           isTabSelected: m,
-                          userDiscount: x,
+                          userDiscount: V,
                           includesAmountOff: !1
                       })
-                    : null == H || C
+                    : null == H || P
                       ? null != r
                           ? r
                           : w
                             ? (0, n.jsx)(f.k, { entryPoint: f.U.SettingsMenu })
-                            : (0, n.jsx)(j.Z, { isSelected: m })
+                            : (0, n.jsx)(g.Z, { isSelected: m })
                       : (0, n.jsx)(d.$H, {
                             isTabSelected: m,
                             trialOffer: H
@@ -60,14 +60,14 @@ function m(e) {
         (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)('div', {
-                    className: s()(y.premiumLabel, { [y.selected]: (m || w) && !V }),
+                    className: s()(y.premiumLabel, { [y.selected]: (m || w) && !x }),
                     children: [i, t]
                 }),
                 (0, n.jsx)('div', {
                     className: s()(y.background, {
                         [y.auPromo]: w && !m,
                         [y.auPromoSelected]: w && m,
-                        [y.selectedBackground]: !w && !V && m
+                        [y.selectedBackground]: !w && !x && m
                     })
                 })
             ]

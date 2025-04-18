@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(91192),
     l = n(481060),
     c = n(166459),
@@ -14,7 +14,7 @@ var r = n(200651),
     f = n(43085),
     _ = n(981631),
     p = n(388032),
-    h = n(357168);
+    h = n(743462);
 function m(e, t, n) {
     return (
         t in e
@@ -73,8 +73,8 @@ function y(e, t) {
         r,
         i = v(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -83,8 +83,8 @@ function v(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 var O = (function (e) {
@@ -94,7 +94,7 @@ function I(e) {
     e.stopPropagation();
 }
 function S(e, t) {
-    let { id: n, channelId: i, className: o, children: m, actions: E, handleEditModal: v, keyboardModeEnabled: O, onKeyDown: S, draftType: T, size: N = 1 } = e,
+    let { id: n, channelId: i, className: a, children: m, actions: E, handleEditModal: v, keyboardModeEnabled: O, onKeyDown: S, draftType: T, size: N = 1 } = e,
         A = (0, s.JA)(n),
         { onFocus: C } = A,
         R = y(A, ['onFocus']),
@@ -128,7 +128,7 @@ function S(e, t) {
                 onFocus: P,
                 onBlur: w,
                 onKeyDown: x,
-                className: a()(h.upload, o, { [h.sizeClip]: 2 === N }),
+                className: o()(h.upload, a, { [h.sizeClip]: 2 === N }),
                 ref: t,
                 children: (0, r.jsxs)('div', {
                     className: h.uploadContainer,
@@ -138,11 +138,11 @@ function S(e, t) {
                             ? (0, r.jsx)('div', {
                                   className: h.actionBarContainer,
                                   children: (0, r.jsx)('div', {
-                                      className: a()(h.actionBar, { [h.smallActionBar]: D }),
+                                      className: o()(h.actionBar, { [h.smallActionBar]: D }),
                                       onContextMenu: I,
                                       'aria-label': p.NW.string(p.t['8Lu3Dg']),
                                       children: (0, r.jsx)(u.ZP, {
-                                          className: a()({ [h.miniPopover]: D }),
+                                          className: o()({ [h.miniPopover]: D }),
                                           children: E
                                       })
                                   })

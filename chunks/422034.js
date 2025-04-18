@@ -5,15 +5,15 @@ n.d(t, {
     n(583741);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(518950),
     u = n(357355),
     d = n(182294),
     f = n(388032),
-    _ = n(48245);
+    _ = n(556921);
 function p(e, t, n) {
     return (
         t in e
@@ -44,7 +44,7 @@ function h(e) {
     return e;
 }
 function m(e) {
-    let { smallerText: t, className: n, textColor: o, isMarketingPageV2Enabled: c } = e,
+    let { smallerText: t, className: n, textColor: a, isMarketingPageV2Enabled: c } = e,
         p = (0, s.e7)([u.Z], () => u.Z.affinities.slice(0, 3).reverse()),
         h = p.map((e, t) =>
             (0, r.jsx)(
@@ -77,17 +77,17 @@ function m(e) {
         return t || c
             ? (0, r.jsx)(l.Text, {
                   variant: c ? 'text-sm/normal' : 'text-lg/medium',
-                  color: o,
+                  color: a,
                   children: E
               })
             : (0, r.jsx)(l.X6q, {
                   variant: 'heading-xl/medium',
-                  color: o,
+                  color: a,
                   children: E
               });
     }
     return (0, r.jsxs)('div', {
-        className: a()(_.container, n, { [_.v2Container]: c }),
+        className: o()(_.container, n, { [_.v2Container]: c }),
         children: [
             (0, r.jsx)('div', {
                 className: _.iconContainer,
@@ -102,7 +102,7 @@ function m(e) {
 }
 function g(e) {
     let { affinity: t, applyMask: n, size: i } = e,
-        { avatarSrc: o, eventHandlers: s } = (0, c.Z)({
+        { avatarSrc: a, eventHandlers: s } = (0, c.Z)({
             user: t,
             size: i,
             animateOnHover: !0
@@ -111,8 +111,8 @@ function g(e) {
         l.qEK,
         h(
             {
-                className: a()(_.icon, { [_.mask]: n }),
-                src: o,
+                className: o()(_.icon, { [_.mask]: n }),
+                src: a,
                 'aria-label': t.username,
                 size: i
             },

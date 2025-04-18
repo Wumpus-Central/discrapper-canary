@@ -11,8 +11,8 @@ n.d(t, {
     n(35282);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(593473),
     l = n(512969),
     c = n(442837),
@@ -32,7 +32,7 @@ var r = n(200651),
     I = n(787025),
     S = n(981631),
     T = n(388032),
-    N = n(575130);
+    N = n(986335);
 function A(e, t, n) {
     return (
         t in e
@@ -91,8 +91,8 @@ function w(e, t) {
         r,
         i = D(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -101,26 +101,26 @@ function D(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function L(e) {
-    let { message: t, footer: n, headerClassName: i, showsCloseWindowText: o, spinner: s } = e;
+    let { message: t, footer: n, headerClassName: i, showsCloseWindowText: a, spinner: s } = e;
     return (
         (0, _.Tt)({ location: T.NW.string(T.t['3S249/']) }),
         (0, r.jsxs)('div', {
             className: N.wrapper,
             children: [
                 s ? (0, r.jsx)(u.$, {}) : null,
-                (0, r.jsx)('div', { className: a()(N.header, i) }),
+                (0, r.jsx)('div', { className: o()(N.header, i) }),
                 (0, r.jsx)(f.X6q, {
                     variant: 'heading-lg/bold',
                     className: N.text,
                     children: t
                 }),
                 null != n ? n : null,
-                o
+                a
                     ? (0, r.jsx)(d.x, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
@@ -137,8 +137,8 @@ function x(e) {
 }
 function M(e) {
     var { guild: t, application: n } = e,
-        o = w(e, ['guild', 'application']);
-    let a = T.NW.string(T.t.se5gLi);
+        a = w(e, ['guild', 'application']);
+    let o = T.NW.string(T.t.se5gLi);
     i.useEffect(() => {
         y.default.track(S.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
     }, [null == n ? void 0 : n.id]);
@@ -165,48 +165,48 @@ function M(e) {
             x,
             C(
                 {
-                    message: a,
+                    message: o,
                     footer: l
                 },
-                o
+                a
             )
         )
     });
 }
 function k(e) {
     var { guild: t, application: n } = e;
-    let { onClose: o } = w(e, ['guild', 'application']),
-        a = i.useCallback(() => {
+    let { onClose: a } = w(e, ['guild', 'application']),
+        o = i.useCallback(() => {
             (null == t ? void 0 : t.id) != null &&
                 ((0, m.X)(null == t ? void 0 : t.id),
-                null == o || o(),
+                null == a || a(),
                 y.default.track(S.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
                     application_id: null == n ? void 0 : n.id,
                     guild_id: null == t ? void 0 : t.id
                 }));
-        }, [o, null == n ? void 0 : n.id, null == t ? void 0 : t.id]),
+        }, [a, null == n ? void 0 : n.id, null == t ? void 0 : t.id]),
         s = p.z8.getField('entrypoint'),
         l = i.useCallback(() => {
-            null == o || o(), y.default.track(S.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == n ? void 0 : n.id });
-        }, [o, null == n ? void 0 : n.id]),
+            null == a || a(), y.default.track(S.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == n ? void 0 : n.id });
+        }, [a, null == n ? void 0 : n.id]),
         u = window.location.pathname.startsWith(S.Z5c.APPLICATION_DIRECTORY),
         d = i.useCallback(() => {
             (null == n ? void 0 : n.id) != null &&
-                (null == o || o(),
+                (null == a || a(),
                 null != s && (0, h.uL)(''),
                 setImmediate(() => {
                     v.S.dispatchToLastSubscribed(S.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), y.default.track(S.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
                 }));
-        }, [null == n ? void 0 : n.id, o, s]),
+        }, [null == n ? void 0 : n.id, a, s]),
         _ = (0, c.e7)([b.Z, g.Z], () => g.Z.getChannel(b.Z.getChannelId())),
         O = (0, c.e7)([E.Z], () => E.Z.can(S.Plq.SEND_MESSAGES, _)),
         I = null != t,
         A = null == t && O && (!u || null != s);
-    return null != t || null != o
+    return null != t || null != a
         ? (0, r.jsxs)('div', {
               className: N.buttonsContainer,
               children: [
-                  null != o
+                  null != a
                       ? I || A
                           ? (0, r.jsx)(f.zxk, {
                                 size: f.zxk.Sizes.SMALL,
@@ -225,7 +225,7 @@ function k(e) {
                   I &&
                       (0, r.jsx)(f.zxk, {
                           color: f.zxk.Colors.BRAND,
-                          onClick: a,
+                          onClick: o,
                           children: (null == t ? void 0 : t.name.length) > 30 ? T.NW.string(T.t.M35zFB) : T.NW.format(T.t.UdYYPz, { guildName: null == t ? void 0 : t.name })
                       }),
                   A &&
@@ -254,14 +254,14 @@ function U() {
 }
 function G(e) {
     var t, n;
-    let { location: o } = e;
+    let { location: a } = e;
     i.useEffect(() => {
-        if (null == o || '' === o.search) return;
+        if (null == a || '' === a.search) return;
         let e = null != document.referrer && '' !== document.referrer ? O.Z.toURLSafe(document.referrer) : null;
         (null == e || e.host !== window.location.host || e.pathname !== S.Z5c.OAUTH2_AUTHORIZE) && (0, h.uL)(S.Z5c.INDEX);
-    }, [o]);
-    let a = null != o ? (0, s.parse)(o.search) : {},
-        l = null != (n = null != (t = a.error_description) ? t : a.error) ? n : T.NW.string(T.t['mqn87+']);
+    }, [a]);
+    let o = null != a ? (0, s.parse)(a.search) : {},
+        l = null != (n = null != (t = o.error_description) ? t : o.error) ? n : T.NW.string(T.t['mqn87+']);
     return (0, r.jsx)(I.G, {
         children: (0, r.jsx)(j, {
             message: l,

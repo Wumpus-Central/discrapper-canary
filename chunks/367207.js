@@ -17,13 +17,13 @@ var i = n(392711),
     b = n(74538),
     y = n(557457),
     _ = n(970645),
-    v = n(30684),
-    O = n(514701),
+    O = n(30684),
+    v = n(514701),
     C = n(6242),
-    S = n(467721),
-    j = n(757692),
-    E = n(937579),
-    x = n(522558),
+    j = n(467721),
+    S = n(757692),
+    x = n(937579),
+    E = n(522558),
     I = n(11352),
     N = n(474936),
     P = n(981631),
@@ -136,16 +136,16 @@ class L extends a.Z {
                 let e = f.default.getCurrentUser();
                 if (null != e && e.verified) {
                     let t = !(0, b.I5)(e) && g.Z.shouldFetchOffer();
-                    await (0, E.T)('PremiumManager', t);
+                    await (0, x.T)('PremiumManager', t);
                 }
                 o.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
             }),
             A(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = f.default.getCurrentUser();
-                null != e && e.verified && !(0, b.I5)(e) && v.Z.shouldFetchCheckoutRecovery() && (await (0, _.o)());
+                null != e && e.verified && !(0, b.I5)(e) && O.Z.shouldFetchCheckoutRecovery() && (await (0, _.o)());
             }),
             A(this, '_maybeFetchUserAffinities', () => {
-                let { enabled: e } = x.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
+                let { enabled: e } = E.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
                 e && (0, h.W)();
             }),
             A(this, '_trackCustomNotificationSoundsExposure', () => {
@@ -178,11 +178,11 @@ class L extends a.Z {
                 (0, i.debounce)((e, t, n) => {
                     var r, i;
                     let l = u.Z.getSelectedParticipant(e),
-                        o = (0, j.o)(l, n),
+                        o = (0, S.o)(l, n),
                         { sendNitroMessage: a } = (0, C.TD)(o),
                         c = null != (i = null == (r = p.Z.getGuild(t)) ? void 0 : r.premiumTier) ? i : P.Eu4.NONE;
-                    if (S.Z.cooldownIsActive() || !a || c >= P.Eu4.TIER_2 || (null == l ? void 0 : l.type) !== w.fO.STREAM || (null == l ? void 0 : l.id) === (null == n ? void 0 : n.id) || null == l.maxResolution || null == l.maxFrameRate) return;
-                    O.I();
+                    if (j.Z.cooldownIsActive() || !a || c >= P.Eu4.TIER_2 || (null == l ? void 0 : l.type) !== w.fO.STREAM || (null == l ? void 0 : l.id) === (null == n ? void 0 : n.id) || null == l.maxResolution || null == l.maxFrameRate) return;
+                    v.I();
                     let d = T.NW.formatToPlainString(T.t.AbyeZG, {
                         nickname: l.userNick,
                         resolution: (0, Z.o6)(l.maxResolution.height),

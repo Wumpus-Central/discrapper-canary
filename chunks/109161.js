@@ -5,11 +5,11 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(981729),
     l = n(865672),
-    c = n(568490);
+    c = n(563373);
 function u(e, t, n) {
     return (
         t in e
@@ -65,13 +65,13 @@ function _(e, t) {
 function p(e, t, n) {
     return i.useMemo(() => {
         let i = [e, t, n].filter((e) => null != e),
-            o = i.length >= 2,
-            a = i.length > 1 ? 100 / (i.length - 1) : 0,
+            a = i.length >= 2,
+            o = i.length > 1 ? 100 / (i.length - 1) : 0,
             s = i.map((e, t) =>
                 (0, r.jsx)(
                     'stop',
                     {
-                        offset: ''.concat(t * a, '%'),
+                        offset: ''.concat(t * o, '%'),
                         style: { stopColor: e }
                     },
                     t
@@ -79,7 +79,7 @@ function p(e, t, n) {
             ),
             l = i.join('');
         return {
-            hasGradient: o,
+            hasGradient: a,
             stops: s,
             gradientId: 'dotGradient-'.concat(l),
             animatedGradientId: 'dotAnimatedGradient-'.concat(l)
@@ -88,14 +88,14 @@ function p(e, t, n) {
 }
 function h(e) {
     var t;
-    let { color: n, colors: o, className: s, background: l = !0 } = e,
+    let { color: n, colors: a, className: s, background: l = !0 } = e,
         [u, d] = i.useState(!1),
-        f = null != (t = null == o ? void 0 : o.primaryColor) ? t : n,
-        { hasGradient: _, stops: h, gradientId: m, animatedGradientId: g } = p(f, null == o ? void 0 : o.secondaryColor, null == o ? void 0 : o.tertiaryColor);
+        f = null != (t = null == a ? void 0 : a.primaryColor) ? t : n,
+        { hasGradient: _, stops: h, gradientId: m, animatedGradientId: g } = p(f, null == a ? void 0 : a.secondaryColor, null == a ? void 0 : a.tertiaryColor);
     return null == f
         ? null
         : (0, r.jsxs)('svg', {
-              className: a()(c.svg, s),
+              className: o()(c.svg, s),
               viewBox: '0 0 20 20',
               fill: 'none',
               onMouseEnter: () => {
@@ -173,10 +173,10 @@ function h(e) {
           });
 }
 function m(e) {
-    let { color: t, colors: n, name: i, tooltip: o = !0 } = e;
+    let { color: t, colors: n, name: i, tooltip: a = !0 } = e;
     return null == t && null == n
         ? null
-        : o
+        : a
           ? (0, r.jsx)(s.u, {
                 text: i,
                 children: (t) =>
@@ -192,12 +192,12 @@ function m(e) {
 }
 function g(e) {
     let { color: t, colors: n, className: i } = e,
-        { text: o, gradient: s } = (0, l.I)(null == n ? void 0 : n.primaryColor, null == n ? void 0 : n.secondaryColor, null == n ? void 0 : n.tertiaryColor, 'dot');
+        { text: a, gradient: s } = (0, l.I)(null == n ? void 0 : n.primaryColor, null == n ? void 0 : n.secondaryColor, null == n ? void 0 : n.tertiaryColor, 'dot');
     if (null == t && null == n) return null;
     let u = null != n && null != n.primaryColor && null != n.secondaryColor,
-        f = d({}, u ? o.gradientStyle : { backgroundColor: t });
+        f = d({}, u ? a.gradientStyle : { backgroundColor: t });
     return (0, r.jsx)('span', {
-        className: a()(c.roleCircle, i, { [s.gradientClassName]: u }),
+        className: o()(c.roleCircle, i, { [s.gradientClassName]: u }),
         style: f
     });
 }

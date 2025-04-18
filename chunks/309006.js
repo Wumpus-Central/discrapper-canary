@@ -5,15 +5,15 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(392711),
-    a = n(772848),
+    a = n(392711),
+    o = n(772848),
     s = n(442837),
     l = n(607070),
     c = n(963838),
     u = n(39127),
     d = n(594174),
     f = n(353368),
-    _ = n(365317);
+    _ = n(297928);
 let p = 50;
 function h(e) {
     var t;
@@ -45,9 +45,9 @@ let m = i.forwardRef(function (e, t) {
                     }),
                     r = null != n.emojiId,
                     i = f.q.PREMIUM,
-                    s = (0, o.random)(c.Jw[i].length, !1),
+                    s = (0, a.random)(c.Jw[i].length, !1),
                     l = {
-                        id: (0, a.Z)(),
+                        id: (0, o.Z)(),
                         animationId: s,
                         animationType: i,
                         shouldResize: r,

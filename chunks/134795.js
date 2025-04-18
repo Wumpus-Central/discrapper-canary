@@ -8,7 +8,7 @@ var i = n(120356),
     o = n(993413),
     c = n(486324),
     d = n(388032),
-    u = n(727098);
+    u = n(771066);
 function m(e) {
     let { showRemoveBannerButton: t, errors: n, onBannerChange: i, guildId: m, className: g, disabled: p = !1, showPremiumIcon: h = !0, isTryItOutFlow: f = !1, forcedDivider: b, withHighlight: _ = !1 } = e,
         N = _ ? a.gtL : a.zxk;

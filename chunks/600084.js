@@ -36,8 +36,8 @@ var r = n(200651),
     L = n(981631),
     D = n(176505),
     W = n(388032),
-    U = n(954678),
-    B = n(971005);
+    U = n(906667),
+    B = n(20493);
 function G(e) {
     let { canManageRoles: t, channel: n } = e,
         i = t && (0, p.Yk)(n),

@@ -20,7 +20,7 @@ e.exports = function (e) {
             end: /'/,
             contains: [{ begin: /''/ }]
         },
-        o = {
+        a = {
             className: 'number',
             relevance: 0,
             variants: [
@@ -38,7 +38,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        a = {
+        o = {
             className: 'string',
             variants: [{ match: /#\d[\d_]*/ }, { match: /#\$[\dA-Fa-f][\dA-Fa-f_]*/ }, { match: /#&[0-7][0-7_]*/ }, { match: /#%[01][01_]*/ }]
         },
@@ -59,7 +59,7 @@ e.exports = function (e) {
                     begin: /\(/,
                     end: /\)/,
                     keywords: t,
-                    contains: [i, a, r].concat(n)
+                    contains: [i, o, r].concat(n)
                 },
                 r
             ].concat(n)
@@ -70,6 +70,6 @@ e.exports = function (e) {
         case_insensitive: !0,
         keywords: t,
         illegal: /"|\$[G-Zg-z]|\/\*|<\/|\|/,
-        contains: [i, a, o, s, l, r].concat(n)
+        contains: [i, o, a, s, l, r].concat(n)
     };
 };

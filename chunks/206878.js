@@ -106,7 +106,7 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
             r = t.filter((e) => !a.test(e));
         r.length > 0 && n('File names must be in lowercase snake case', r);
     },
-    j = (e, t, n, a) => {
+    g = (e, t, n, a) => {
         let r = t.size,
             l = r > 1000000 ? ''.concat((r / 1000000).toFixed(2), 'MB') : ''.concat((r / 1000).toFixed(2), 'KB'),
             i = ''.concat(t.name, ' - ').concat(l);
@@ -115,15 +115,15 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
             n('Files exceed the recommended size limit - make sure they are optimized!', [''.concat(i, ' (max: ').concat(t, ')')]);
         } else r > e.warn && a("Files are a tad chonky - are you sure they're optimized?", [''.concat(i)]);
     },
-    g = (e, t, n, a) => {
+    j = (e, t, n, a) => {
         let r = p[e];
-        if (null != r) for (let e of t) e.name.endsWith('.txt') || j(r, e, n, a);
+        if (null != r) for (let e of t) e.name.endsWith('.txt') || g(r, e, n, a);
     },
     _ = (e, t, n) => {
         for (let a of e) {
             let e = (0, r.BU)(a),
                 l = null != e ? p[e] : null;
-            null != l && j(l, a, t, n);
+            null != l && g(l, a, t, n);
         }
     },
     y = (e) => {
@@ -154,7 +154,7 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
                     names: i,
                     addError: n
                 }),
-                    g(r.aB.PROFILE_EFFECT, l, n, a);
+                    j(r.aB.PROFILE_EFFECT, l, n, a);
                 let s = o.filter((e) => !i.some((t) => t === e)).map((e) => ''.concat(t, ' - ').concat(e));
                 s.length > 0 && n('Missing required files', s);
                 let d = c.filter((e) => !i.some((t) => t.startsWith(e))).map((e) => ''.concat(t, ' - ').concat(e));
@@ -169,7 +169,7 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
             names: t.avatarDecorationFiles.map((e) => e.name),
             addError: n
         }),
-            g(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
+            j(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
     },
     N = (e, t, n) => {
         y({

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c });
 var r = n(200651),
     i = n(192379),
-    o = n(834427);
-function a(e, t, n) {
+    a = n(834427);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -39,10 +39,10 @@ class l extends i.Component {
         this._ref = e;
     }
     render() {
-        return (0, r.jsx)(o.S, s({ ref: this.setRef }, this.props));
+        return (0, r.jsx)(a.S, s({ ref: this.setRef }, this.props));
     }
     constructor(e) {
-        super(e), a(this, '_ref', i.createRef()), (this.setRef = this.setRef.bind(this));
+        super(e), o(this, '_ref', i.createRef()), (this.setRef = this.setRef.bind(this));
     }
 }
 let c = l;

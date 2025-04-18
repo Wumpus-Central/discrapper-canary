@@ -7,8 +7,8 @@ n.d(t, {
     n(388685),
     n(35282),
     n(704826);
-var o = n(400053),
-    a = n.n(o),
+var a = n(400053),
+    o = n.n(a),
     s = n(477660),
     l = n.n(s),
     c = n(20970),
@@ -50,19 +50,19 @@ class f {
         return [t, r];
     }
     constructor(e, t, n) {
-        d(this, 'message', void 0), d(this, 'hasMarkdown', void 0), d(this, 'intlMessage', void 0), (this.message = n ? e : e.replace(u.hN, '')), (this.hasMarkdown = n), (this.intlMessage = new (a())(this.message, t));
+        d(this, 'message', void 0), d(this, 'hasMarkdown', void 0), d(this, 'intlMessage', void 0), (this.message = n ? e : e.replace(u.hN, '')), (this.hasMarkdown = n), (this.intlMessage = new (o())(this.message, t));
     }
 }
 function _(e, t) {
     let n = l().parserFor(t(e)),
         r = l().reactFor(l().ruleOutput(e, 'react'));
     return (e, t, i) => {
-        let o = !e.includes('\n\n');
+        let a = !e.includes('\n\n');
         return (
-            o || (e += '\n\n'),
+            a || (e += '\n\n'),
             r(
                 n(e, {
-                    inline: o,
+                    inline: a,
                     context: t,
                     unsafeContext: i
                 })
@@ -86,6 +86,6 @@ function m(e, t) {
     if (null == e) return '';
     null == r && h(n(281071).Z), (e = e.replace(/^\n+|\n+$/g, ''));
     let i = u.aT.test(e),
-        o = u.b9.test(e);
-    return i || o ? new f(e, t, o) : e;
+        a = u.b9.test(e);
+    return i || a ? new f(e, t, a) : e;
 }

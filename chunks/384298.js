@@ -2,8 +2,8 @@ n.d(t, { Z: () => E });
 var r = n(200651);
 n(192379);
 var i = n(657707),
-    o = n(442837),
-    a = n(475179),
+    a = n(442837),
+    o = n(475179),
     s = n(287734),
     l = n(359110),
     c = n(922482),
@@ -18,8 +18,8 @@ var i = n(657707),
 function E(e) {
     let { channel: t, onAction: n, onClose: E } = e,
         { profileType: b } = (0, _.z)(),
-        y = (0, o.e7)([d.Z], () => d.Z.isInChannel(t.id)),
-        v = (0, o.e7)([u.Z], () => t.isPrivate() || u.Z.can(m.Plq.CONNECT, t)),
+        y = (0, a.e7)([d.Z], () => d.Z.isInChannel(t.id)),
+        v = (0, a.e7)([u.Z], () => t.isPrivate() || u.Z.can(m.Plq.CONNECT, t)),
         { chatButtonEnabled: O } = (0, f.s)({ location: 'UserProfileActivityVoiceChannelButtons' });
     if (!v) return null;
     let I = () => (b === h.y0.FULL_SIZE ? g.NW.string(g.t['3xjX0d']) : t.isDM() || t.isGroupDM() ? g.NW.string(g.t['7hwn2N']) : t.isGuildStageVoice() ? g.NW.string(g.t.Acqcoq) : g.NW.string(g.t.BXxdl5)),
@@ -41,7 +41,7 @@ function E(e) {
                     tooltipText: y ? g.NW.string(g.t.kkKapK) : g.NW.string(g.t.ZXxLQk),
                     themeColor: y ? 'secondary' : 'primary',
                     onClick: (e) => {
-                        e.stopPropagation(), null == n || n({ action: 'OPEN_VOICE_CHAT' }), a.Z.updateChatOpen(t.id, !0), (0, l.Kh)(t.id), null == E || E();
+                        e.stopPropagation(), null == n || n({ action: 'OPEN_VOICE_CHAT' }), o.Z.updateChatOpen(t.id, !0), (0, l.Kh)(t.id), null == E || E();
                     }
                 })
         ]

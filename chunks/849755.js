@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(906732),
@@ -17,9 +17,9 @@ var r = n(200651),
     E = n(228168),
     b = n(981631),
     y = n(388032),
-    v = n(353990);
+    v = n(588015);
 function O(e) {
-    let { voiceChannel: t, onAction: n, onClose: o } = e,
+    let { voiceChannel: t, onAction: n, onClose: a } = e,
         { profileType: O } = (0, m.z)(),
         { analyticsLocations: I } = (0, c.ZP)(),
         S = (0, p.W)(t),
@@ -37,7 +37,7 @@ function O(e) {
     let C = (e) => {
         e.stopPropagation(),
             n({ action: 'PRESS_VOICE_CHANNEL_STATUS' }),
-            O === E.y0.BITE_SIZE && (null == o || o()),
+            O === E.y0.BITE_SIZE && (null == a || a()),
             (0, d.Z)({
                 channel: t,
                 sourceAnalyticsLocations: I
@@ -57,7 +57,7 @@ function O(e) {
                   (0, r.jsx)(l.vdY, {
                       color: 'currentColor',
                       size: 'xxs',
-                      className: a()(v.pencilIcon, null != A ? v.hidden : void 0),
+                      className: o()(v.pencilIcon, null != A ? v.hidden : void 0),
                       'aria-label': y.NW.string(y.t.bt75u7)
                   })
               ]

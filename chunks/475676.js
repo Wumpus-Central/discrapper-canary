@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(835473),
     l = n(297781),
     c = n(443487),
@@ -18,7 +18,7 @@ var r = n(200651),
     b = n(981631),
     y = n(701488),
     v = n(388032),
-    O = n(960228);
+    O = n(24158);
 function I(e) {
     let { application: t } = e,
         n = t.getIconURL(y.Si.LARGE),
@@ -35,7 +35,7 @@ function I(e) {
         className: O.gameTitleContainer,
         children: [
             i,
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-sm/medium',
                 className: O.gameTitle,
                 children: t.name
@@ -69,7 +69,7 @@ function T(e) {
             leaderboardId: A.extra.leaderboard_id,
             intervalStart: null != (E = null == R ? void 0 : R.interval_start) ? E : ''
         }),
-        w = (0, o.e7)([u.default], () => u.default.getId()),
+        w = (0, a.e7)([u.default], () => u.default.getId()),
         [D, L] = i.useMemo(() => {
             let e = P.find((e) => e.userId === w),
                 t = P[0],
@@ -77,7 +77,7 @@ function T(e) {
                 r = null == R ? void 0 : R.users.find((e) => e.user_id === (null == n ? void 0 : n.userId));
             return [n, r];
         }, [R, P, w]),
-        x = (0, o.e7)([d.default], () => d.default.getUser(null == D ? void 0 : D.userId)),
+        x = (0, a.e7)([d.default], () => d.default.getUser(null == D ? void 0 : D.userId)),
         M = _.ZP.getName(C, void 0, x);
     S({
         leaderboard: R,
@@ -107,7 +107,7 @@ function T(e) {
                 (0, r.jsxs)(c.e$, {
                     children: [
                         (0, r.jsx)(I, { application: k }),
-                        (0, r.jsx)(a.LZC, { size: 2 }),
+                        (0, r.jsx)(o.LZC, { size: 2 }),
                         (0, r.jsx)(c.ll, { children: y }),
                         (0, r.jsx)(l.Gk, {
                             location: l.Gt.CARD,
@@ -134,7 +134,7 @@ function N(e) {
             (0, r.jsxs)(c.e$, {
                 children: [
                     (0, r.jsx)(I, { application: n }),
-                    (0, r.jsx)(a.LZC, { size: 2 }),
+                    (0, r.jsx)(o.LZC, { size: 2 }),
                     (0, r.jsx)(c.ll, { children: v.NW.string(v.t['t+b0DA']) }),
                     (0, r.jsx)(l.Gk, {
                         location: l.Gt.CARD,

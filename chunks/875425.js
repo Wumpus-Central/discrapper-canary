@@ -8,8 +8,8 @@ n.d(t, {
 });
 var r = n(134632),
     i = n(51144),
-    o = n(231338),
-    a = n(388032);
+    a = n(231338),
+    o = n(388032);
 let s = 128,
     l = Object.freeze({
         MINUTES_30: 1800000,
@@ -20,20 +20,20 @@ let s = 128,
     }),
     c = [
         {
-            value: o.Sk.ONLINE,
-            label: () => (0, i.u5)(o.Sk.ONLINE)
+            value: a.Sk.ONLINE,
+            label: () => (0, i.u5)(a.Sk.ONLINE)
         },
         {
-            value: o.Sk.IDLE,
-            label: () => (0, i.u5)(o.Sk.IDLE)
+            value: a.Sk.IDLE,
+            label: () => (0, i.u5)(a.Sk.IDLE)
         },
         {
-            value: o.Sk.DND,
-            label: () => (0, i.u5)(o.Sk.DND)
+            value: a.Sk.DND,
+            label: () => (0, i.u5)(a.Sk.DND)
         },
         {
-            value: o.Sk.INVISIBLE,
-            label: () => (0, i.u5)(o.Sk.INVISIBLE)
+            value: a.Sk.INVISIBLE,
+            label: () => (0, i.u5)(a.Sk.INVISIBLE)
         }
     ],
     u = [l.TODAY, l.HOURS_4, l.HOURS_1, l.MINUTES_30, l.DONT_CLEAR];
@@ -43,135 +43,135 @@ var d = (function (e) {
 let f = [
     {
         value: 'PLAYING',
-        label: () => a.NW.string(a.t.r5TNm5)
+        label: () => o.NW.string(o.t.r5TNm5)
     },
     {
         value: 'LISTENING_TO',
-        label: () => a.NW.string(a.t.ylzor6)
+        label: () => o.NW.string(o.t.ylzor6)
     },
     {
         value: 'WATCHING',
-        label: () => a.NW.string(a.t.pzz9iI)
+        label: () => o.NW.string(o.t.pzz9iI)
     },
     {
         value: 'CURRENT_OBSESSION',
-        label: () => a.NW.string(a.t.ZStIVl)
+        label: () => o.NW.string(o.t.ZStIVl)
     },
     {
         value: 'SHOWER_THOUGHT',
-        label: () => a.NW.string(a.t.Wf8fxM)
+        label: () => o.NW.string(o.t.Wf8fxM)
     },
     {
         value: 'TODAY_I_LEARNED',
-        label: () => a.NW.string(a.t.pycKi4)
+        label: () => o.NW.string(o.t.pycKi4)
     },
     {
         value: 'HOT_TAKE',
-        label: () => a.NW.string(a.t.l3pZcn)
+        label: () => o.NW.string(o.t.l3pZcn)
     },
     {
         value: 'DAD_JOKE',
-        label: () => a.NW.string(a.t['3XVZ0t'])
+        label: () => o.NW.string(o.t['3XVZ0t'])
     },
     {
         value: 'EMOJI_DAY',
-        label: () => a.NW.string(a.t['4U+EJC'])
+        label: () => o.NW.string(o.t['4U+EJC'])
     },
     {
         value: 'USELESS_TALENT',
-        label: () => a.NW.string(a.t['Z3Vn/f'])
+        label: () => o.NW.string(o.t['Z3Vn/f'])
     },
     {
         value: 'VIDEO_GAME_ITEM',
-        label: () => a.NW.string(a.t.PiepBg)
+        label: () => o.NW.string(o.t.PiepBg)
     },
     {
         value: 'READING',
-        label: () => a.NW.string(a.t.pYQRnJ)
+        label: () => o.NW.string(o.t.pYQRnJ)
     },
     {
         value: 'SONG_STUCK',
-        label: () => a.NW.string(a.t.S7UJ0t)
+        label: () => o.NW.string(o.t.S7UJ0t)
     },
     {
         value: 'MOST_USED_EMOJI',
-        label: () => a.NW.string(a.t['1TlHw8'])
+        label: () => o.NW.string(o.t['1TlHw8'])
     },
     {
         value: 'BEST_FOOD',
-        label: () => a.NW.string(a.t.ZPjue3)
+        label: () => o.NW.string(o.t.ZPjue3)
     },
     {
         value: 'FICTIONAL_WORLD',
-        label: () => a.NW.string(a.t.lyOeXF)
+        label: () => o.NW.string(o.t.lyOeXF)
     },
     {
         value: 'USERNAME_ORIGIN',
-        label: () => a.NW.string(a.t.l6Yb3d)
+        label: () => o.NW.string(o.t.l6Yb3d)
     },
     {
         value: 'THEME_SONG',
-        label: () => a.NW.string(a.t.Vok4QU)
+        label: () => o.NW.string(o.t.Vok4QU)
     },
     {
         value: 'FAVORITE_COLLECTIBLE',
-        label: () => a.NW.string(a.t.T24um5)
+        label: () => o.NW.string(o.t.T24um5)
     },
     {
         value: 'GAME_MECHANIC',
-        label: () => a.NW.string(a.t.kzToEh)
+        label: () => o.NW.string(o.t.kzToEh)
     },
     {
         value: 'NPC_COMPANION',
-        label: () => a.NW.string(a.t['/Zm5VV'])
+        label: () => o.NW.string(o.t['/Zm5VV'])
     },
     {
         value: 'FOOD_CRAVING',
-        label: () => a.NW.string(a.t.ujnXur)
+        label: () => o.NW.string(o.t.ujnXur)
     },
     {
         value: 'MYTHICAL_PET',
-        label: () => a.NW.string(a.t['45r7ub'])
+        label: () => o.NW.string(o.t['45r7ub'])
     },
     {
         value: 'LATEST_HOBBY',
-        label: () => a.NW.string(a.t.SluNa2)
+        label: () => o.NW.string(o.t.SluNa2)
     },
     {
         value: 'FAVORITE_ANIME',
-        label: () => a.NW.string(a.t.R1f9RU)
+        label: () => o.NW.string(o.t.R1f9RU)
     },
     {
         value: 'RANKED_UP',
-        label: () => a.NW.string(a.t.nXJgjo)
+        label: () => o.NW.string(o.t.nXJgjo)
     },
     {
         value: 'CHARACTER_CLASS',
-        label: () => a.NW.string(a.t.SWVxPD)
+        label: () => o.NW.string(o.t.SWVxPD)
     },
     {
         value: 'HIGH_SCORE',
-        label: () => a.NW.string(a.t.gbUeX1)
+        label: () => o.NW.string(o.t.gbUeX1)
     },
     {
         value: 'FINISHED_PLAYING',
-        label: () => a.NW.string(a.t.bIrdLi)
+        label: () => o.NW.string(o.t.bIrdLi)
     },
     {
         value: 'FINISHED_READING',
-        label: () => a.NW.string(a.t['tcQn+P'])
+        label: () => o.NW.string(o.t['tcQn+P'])
     },
     {
         value: 'CANT_WAIT',
-        label: () => a.NW.string(a.t['40gTj4'])
+        label: () => o.NW.string(o.t['40gTj4'])
     },
     {
         value: 'ADD_STATUS',
-        label: () => a.NW.string(a.t.Vq4UmZ)
+        label: () => o.NW.string(o.t.Vq4UmZ)
     },
     {
         value: 'WHATS_ON_YOUR_MIND',
-        label: () => a.NW.string(a.t['xod36+'])
+        label: () => o.NW.string(o.t['xod36+'])
     }
 ];
 r.w.LISTEN, r.w.WATCH, r.w.PLAY, r.w.THINK, r.w.LOVE;

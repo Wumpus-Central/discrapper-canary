@@ -10,7 +10,7 @@ var r = n(200651),
     u = n(936726),
     p = n(981631),
     m = n(388032),
-    b = n(992153);
+    b = n(274008);
 function g(e) {
     let { webhooks: t, selectableWebhookChannels: n, lastCreatedWebhookId: g, editedWebhook: f, errors: h, canNavigate: x } = e,
         j = i.useMemo(

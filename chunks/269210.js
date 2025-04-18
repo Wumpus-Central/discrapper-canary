@@ -13,8 +13,8 @@ var l = n(120356),
     u = n(777207),
     s = n(692547),
     c = n(330711),
-    d = n(746606),
-    p = n(336041);
+    d = n(812743),
+    p = n(820468);
 let f = 5;
 function b(e) {
     let { description: t, imgSrc: n, renderPurchaseButton: l, onPurchase: b, title: O, onDetails: m, benefitItems: y, benefitsSummary: v, subtitle: g, maxBenefits: h = f } = e;

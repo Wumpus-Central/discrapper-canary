@@ -6,8 +6,8 @@ n.d(t, {
     n(997841);
 var r = n(442837),
     i = n(812206),
-    o = n(522474),
-    a = n(630388),
+    a = n(522474),
+    o = n(630388),
     s = n(636449),
     l = n(774226),
     c = n(317381),
@@ -18,18 +18,18 @@ var r = n(442837),
 function p(e) {
     var t;
     let { application: n, channelId: r } = e;
-    if (null != n && (0, a.yE)(null != (t = n.flags) ? t : 0, _.udG.EMBEDDED)) {
-        if (o.Z.getWindowOpen(_.KJ3.ACTIVITY_POPOUT) && c.ZP.getActivityPanelMode() === f.Ez.ACTIVITY_POPOUT_WINDOW) return _.KJ3.ACTIVITY_POPOUT;
-        if (o.Z.getWindowOpen(_.KJ3.CHANNEL_CALL_POPOUT) && (0, d.Z)(r) && !(0, s.R)({ isContextless: (0, l.Kb)(n) })) return _.KJ3.CHANNEL_CALL_POPOUT;
+    if (null != n && (0, o.yE)(null != (t = n.flags) ? t : 0, _.udG.EMBEDDED)) {
+        if (a.Z.getWindowOpen(_.KJ3.ACTIVITY_POPOUT) && c.ZP.getActivityPanelMode() === f.Ez.ACTIVITY_POPOUT_WINDOW) return _.KJ3.ACTIVITY_POPOUT;
+        if (a.Z.getWindowOpen(_.KJ3.CHANNEL_CALL_POPOUT) && (0, d.Z)(r) && !(0, s.R)({ isContextless: (0, l.Kb)(n) })) return _.KJ3.CHANNEL_CALL_POPOUT;
     }
 }
 function h(e) {
     let { channelId: t, EmbeddedActivitiesStore: n, ApplicationStore: r } = e,
         i = n.getSelfEmbeddedActivityForChannel(t),
-        o = r.getApplication(null == i ? void 0 : i.applicationId);
-    if (null != o)
+        a = r.getApplication(null == i ? void 0 : i.applicationId);
+    if (null != a)
         return p({
-            application: o,
+            application: a,
             channelId: t
         });
 }
@@ -46,12 +46,12 @@ function m(e) {
 }
 function g(e) {
     let { channelId: t } = e;
-    return (0, r.e7)([o.Z, c.ZP, i.Z], () => {
+    return (0, r.e7)([a.Z, c.ZP, i.Z], () => {
         let e = h({
             channelId: null != t ? t : c.ZP.getConnectedActivityChannelId(),
             EmbeddedActivitiesStore: c.ZP,
             ApplicationStore: i.Z
         });
-        return null != e ? o.Z.getWindow(e) : void 0;
+        return null != e ? a.Z.getWindow(e) : void 0;
     });
 }

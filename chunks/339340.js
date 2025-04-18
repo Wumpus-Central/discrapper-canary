@@ -7,8 +7,8 @@ n.d(t, {
     n(35282);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(399606),
     l = n(343817),
     c = n(481060),
@@ -26,11 +26,11 @@ var r = n(200651),
     v = n(626135),
     O = n(981631),
     I = n(388032),
-    S = n(903308);
+    S = n(823150);
 let T = 'VoiceChannelStatusModal',
     N = 500;
 function A(e) {
-    let { channel: t, transitionState: n, sourceAnalyticsLocations: o, onClose: A } = e,
+    let { channel: t, transitionState: n, sourceAnalyticsLocations: a, onClose: A } = e,
         C = (0, s.e7)([f.Z], () => f.Z.getChannelStatus(t)),
         R = (0, s.e7)([b.Z], () => b.Z.getMediaSessionId()),
         [P, w] = i.useState(null != C ? C : ''),
@@ -43,9 +43,9 @@ function A(e) {
         v.default.track(O.rMx.OPEN_MODAL, {
             type: 'Voice Channel Topic Modal',
             guild_id: t.guild_id,
-            location_stack: o
+            location_stack: a
         });
-    }, [t.guild_id, o]);
+    }, [t.guild_id, a]);
     let G = (e) => {
             M(new l.Hx(e, e.status).getAnyErrorMessage());
         },
@@ -62,8 +62,8 @@ function A(e) {
             let n = P.length,
                 r = P.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length,
                 i = E.ZP.parse(void 0, P),
-                { hasErrors: a } = B(i);
-            if (!a) {
+                { hasErrors: o } = B(i);
+            if (!o) {
                 try {
                     let e = await u.ZP.updateVoiceChannelStatus(t.id, i.content);
                     204 === e.status
@@ -73,7 +73,7 @@ function A(e) {
                               media_session_id: R,
                               raw_length: n,
                               text_length: r,
-                              location_stack: o
+                              location_stack: a
                           }),
                           A())
                         : G(e);
@@ -100,7 +100,7 @@ function A(e) {
         children: (0, r.jsxs)(c.Y0X, {
             transitionState: n,
             size: c.CgR.SMALL,
-            className: a()(S.modal, S.gradientBorder),
+            className: o()(S.modal, S.gradientBorder),
             children: [
                 (0, r.jsxs)(c.hzk, {
                     className: S.container,

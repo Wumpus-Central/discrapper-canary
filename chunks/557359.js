@@ -12,7 +12,7 @@ var r = n(200651),
     g = n(651390),
     p = n(981631),
     h = n(388032),
-    f = n(449358);
+    f = n(52930);
 function x(e) {
     let { requireTerms: t, rules: n } = e,
         s = (0, o.e7)([u.Z], () => u.Z.getProps().guild),

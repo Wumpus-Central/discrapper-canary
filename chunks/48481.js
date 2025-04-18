@@ -18,8 +18,8 @@ n.d(t, {
     n(583741);
 var r = n(647943),
     i = n(581282),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(377108),
     l = n(524437),
     c = n(397696),
@@ -105,11 +105,11 @@ function N(e, t) {
     }
     let r = 0.1 > Math.random(),
         i = !1,
-        o = [];
+        a = [];
     for (let n of t) {
-        var a, s;
+        var o, s;
         if (n.version <= e.versions.clientVersion) {
-            r && (null == (a = n.cleanup) || a.call(n));
+            r && (null == (o = n.cleanup) || o.call(n));
             continue;
         }
         let t = n.run(e);
@@ -117,19 +117,19 @@ function N(e, t) {
             null == (s = n.cleanup) || s.call(n);
             continue;
         }
-        (i = !0), null != n.cleanup && o.push(n.cleanup);
+        (i = !0), null != n.cleanup && a.push(n.cleanup);
     }
     return {
         proto: e,
         isDirty: i,
-        cleanupFuncs: o
+        cleanupFuncs: a
     };
 }
 function A(e, t) {
     let n = Object.entries(e);
     if (n.length > t)
         for (
-            n = a()
+            n = o()
                 .sortBy(n, (e) => {
                     let [t, n] = e;
                     return n.recentUses[n.recentUses.length - 1];

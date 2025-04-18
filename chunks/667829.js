@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685), n(539854), n(35282);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(218887),
@@ -26,7 +26,7 @@ var r = n(200651),
     A = n(925994),
     C = n(981631),
     R = n(388032),
-    P = n(120232);
+    P = n(302195);
 function w(e, t, n) {
     return (
         t in e
@@ -194,12 +194,12 @@ class j extends i.Component {
         return e && !n ? R.NW.string(R.t.IYKTTU) : t;
     }
     render() {
-        var e, t, n, i, o, s;
+        var e, t, n, i, a, s;
         let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: b, spellcheckEnabled: v, useNewSlashCommands: S, canOnlyUseTextCommands: A, className: R, id: w, required: L, maxCharacterCount: M, allowNewLines: j, 'aria-describedby': U, 'aria-labelledby': G, accessibilityLabel: B } = this.props,
             { submitting: F, popup: V } = this.state,
             Z = {
                 channel: m,
-                className: a()(R, P.textArea, {
+                className: o()(R, P.textArea, {
                     [P.textAreaSlate]: b,
                     [P.textAreaDisabled]: u || F
                 }),
@@ -223,7 +223,7 @@ class j extends i.Component {
                 onResize: p,
                 onKeyDown: _,
                 onSubmit: h,
-                textAreaPaddingClassName: a()(k[E], {
+                textAreaPaddingClassName: o()(k[E], {
                     [P.textAreaWithoutAttachmentButton]: g !== O.Ie.NORMAL && g !== O.Ie.OVERLAY && g !== O.Ie.THREAD_CREATION && g !== O.Ie.SIDEBAR,
                     [P.textAreaForPostCreation]: g === O.Ie.CREATE_FORUM_POST,
                     [P.textAreaCustomGift]: g === O.Ie.CUSTOM_GIFT,
@@ -234,7 +234,7 @@ class j extends i.Component {
                 useNewSlashCommands: S,
                 disableAutoFocus: f.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
-                'aria-controls': null != (o = V.id) ? o : void 0,
+                'aria-controls': null != (a = V.id) ? a : void 0,
                 'aria-haspopup': 'listbox',
                 'aria-expanded': null !== V.id || void 0,
                 'aria-activedescendant': null != (s = V.activeDescendant) ? s : void 0,
@@ -340,26 +340,26 @@ class j extends i.Component {
                 null == t || t(e), n && this.setState({ focused: !1 });
             }),
             w(this, 'handlePaste', (e) => {
-                let { channel: t, canPasteFiles: n, uploadPromptCharacterCount: r, promptToUpload: i, maxCharacterCount: o, type: a } = this.props;
+                let { channel: t, canPasteFiles: n, uploadPromptCharacterCount: r, promptToUpload: i, maxCharacterCount: a, type: o } = this.props;
                 if (null == i || (!t.isPrivate() && !n) || (t.isPrivate() && t.isManaged())) return !1;
                 let s = (e, n) => {
-                        var r, o;
+                        var r, a;
                         let s = g.Z.getActiveCommand(t.id);
                         if (null == s)
-                            return i(e, t, a.drafts.type, {
+                            return i(e, t, o.drafts.type, {
                                 requireConfirm: !0,
                                 showLargeMessageDialog: n
                             });
-                        let l = null != (r = a.drafts.commandType) ? r : a.drafts.type,
+                        let l = null != (r = o.drafts.commandType) ? r : o.drafts.type,
                             c = null,
                             u = g.Z.getActiveOption(t.id);
                         null !=
                             (c =
                                 (null == u ? void 0 : u.type) === h.jw.ATTACHMENT
                                     ? u
-                                    : null == (o = s.options)
+                                    : null == (a = s.options)
                                       ? void 0
-                                      : o.find((e) => {
+                                      : a.find((e) => {
                                             if (e.type === h.jw.ATTACHMENT) return null == b.Z.getUpload(t.id, e.name, l);
                                         })) &&
                             p.Z.setFile({
@@ -373,8 +373,8 @@ class j extends i.Component {
                                 }
                             });
                     },
-                    l = null != r ? r : o,
-                    { files: c } = U(e.clipboardData, a.uploadLongMessages ? l : null);
+                    l = null != r ? r : a,
+                    { files: c } = U(e.clipboardData, o.uploadLongMessages ? l : null);
                 return (
                     M(
                         'onPaste',
@@ -414,19 +414,19 @@ function U(e, t) {
     let n = [],
         r = [],
         i = null,
-        o = null;
+        a = null;
     for (let t of e.items)
         if ('file' === t.kind) {
             let e = t.getAsFile();
             if (null == e) continue;
             null != e.path && e.path.length > 0 ? n.push(e) : r.push(e);
-        } else 'string' === t.kind && ('text/plain' === t.type && null == i ? (i = t) : 'text/html' === t.type && null == o && (o = t));
+        } else 'string' === t.kind && ('text/plain' === t.type && null == i ? (i = t) : 'text/html' === t.type && null == a && (a = t));
     if (n.length > 0) return { files: n };
     if (r.length > 0) {
-        if (1 === r.length && 'image/png' === r[0].type && null != o) {
-            var a;
+        if (1 === r.length && 'image/png' === r[0].type && null != a) {
+            var o;
             let t = r[0],
-                n = null != (a = G(e.getData(o.type))) ? a : t.name;
+                n = null != (o = G(e.getData(a.type))) ? o : t.name;
             return { files: [(0, v.dp)(t, n, t.type)] };
         }
         return { files: r };

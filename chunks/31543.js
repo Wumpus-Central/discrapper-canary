@@ -1,15 +1,15 @@
 n.d(t, { Z: () => p });
 var r = n(200651),
     i = n(192379),
-    o = n(359959),
-    a = n(260866),
+    a = n(359959),
+    o = n(260866),
     s = n(481060),
     l = n(806966),
     c = n(28546),
     u = n(453070),
     d = n(611480),
     f = n(388032),
-    _ = n(101337);
+    _ = n(419028);
 let p = i.forwardRef(function (e, t) {
     let { onKeyDown: n, stickersListRef: p, channel: h } = e,
         m = (0, u.fQ)(h),
@@ -19,10 +19,10 @@ let p = i.forwardRef(function (e, t) {
                 searchQuery: e.searchQuery,
                 isSearchSuggestion: e.isSearchSuggestion
             }),
-            o.X
+            a.X
         ),
         y = l.ZN.useStore((e) => e.searchPlaceholder),
-        v = l.ZN.useStore((e) => e.inspectedExpressionPosition, o.X),
+        v = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
         O = i.useCallback(
             (e) => {
                 var t;
@@ -63,7 +63,7 @@ let p = i.forwardRef(function (e, t) {
                     'aria-haspopup': 'grid',
                     'aria-controls': d.Vr,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, a.NE)(d.Vr, v.columnIndex, v.rowIndex)
+                    'aria-activedescendant': (0, o.NE)(d.Vr, v.columnIndex, v.rowIndex)
                 }
             })
         })

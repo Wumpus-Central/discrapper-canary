@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r = n(200651),
     i = n(192379),
-    o = n(477660),
-    a = n.n(o),
+    a = n(477660),
+    o = n.n(a),
     s = n(481060),
     l = n(100527),
     c = n(906732),
@@ -65,8 +65,8 @@ function h(e, t) {
         r,
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,13 +75,13 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let g = 1,
     E = i.memo(function (e) {
-        let { onClick: t, trusted: n, title: o, href: d, children: _, messageId: m, channelId: E } = e,
+        let { onClick: t, trusted: n, title: a, href: d, children: _, messageId: m, channelId: E } = e,
             b = h(e, ['onClick', 'trusted', 'title', 'href', 'children', 'messageId', 'channelId']),
             { analyticsLocations: y } = (0, c.ZP)(l.Z.MASKED_LINK),
             v = i.useCallback((t) => (0, u.q)(e, t, y), [y, e]),
@@ -91,17 +91,17 @@ let g = 1,
                 },
                 [v]
             ),
-            I = a().sanitizeUrl(d);
+            I = o().sanitizeUrl(d);
         return (0, r.jsx)(
             s.eee,
             p(f({}, b), {
-                title: o,
+                title: a,
                 target: '_blank',
                 rel: 'noreferrer noopener',
                 href: I,
                 onClick: v,
                 onAuxClick: O,
-                children: null != _ ? _ : o
+                children: null != _ ? _ : a
             })
         );
     });

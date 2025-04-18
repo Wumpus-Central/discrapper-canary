@@ -1,7 +1,7 @@
 n.d(t, { N: () => a });
 var r = n(200651),
     i = n(481060),
-    s = n(488398);
+    s = n(704912);
 let a = (e) => {
     let { children: t, header: n } = e;
     return (0, r.jsxs)('div', {

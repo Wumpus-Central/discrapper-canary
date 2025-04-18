@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(510659),
-    a = n(511341),
+    a = n(510659),
+    o = n(511341),
     s = n(215105),
     l = n(429974),
     c = n(228168);
@@ -65,8 +65,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,8 +75,8 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e, t) {
@@ -97,7 +97,7 @@ function m(e, t) {
 function g(e) {
     var { user: t, guildId: n, channelId: u, profileType: f, onClose: h, children: g } = e,
         E = p(e, ['user', 'guildId', 'channelId', 'profileType', 'onClose', 'children']);
-    let { interactionType: b, interactionSource: y, resetInteraction: v, interactionSourceId: O, interactionPopoutTargetRef: I } = (0, o.Xo)(),
+    let { interactionType: b, interactionSource: y, resetInteraction: v, interactionSourceId: O, interactionPopoutTargetRef: I } = (0, a.Xo)(),
         S = f === c.y0.FULL_SIZE ? (0, l.z)(t.id, n) : void 0,
         T = y === E.sourceType && b === c.P.REACT,
         N = y === E.sourceType && b === c.P.REPLY,
@@ -110,9 +110,9 @@ function g(e) {
                     targetElementRef: null != I ? I : void 0,
                     renderPopout: (e) => {
                         let { setPopoutRef: i } = e,
-                            o = T ? a.Z : s.Z;
+                            a = T ? o.Z : s.Z;
                         return (0, r.jsx)(
-                            o,
+                            a,
                             d(
                                 {
                                     user: t,

@@ -6,18 +6,18 @@ n.d(t, {
     _j: () => p,
     c8: () => s,
     d$: () => l,
-    fP: () => o,
+    fP: () => a,
     hs: () => g,
     j1: () => _,
     kQ: () => c,
-    pq: () => a,
+    pq: () => o,
     xi: () => h
 });
 var r = n(261470),
     i = n(70956);
 n(981631);
-let o = [0, 4, 8, 16, 24],
-    a = 16,
+let a = [0, 4, 8, 16, 24],
+    o = 16,
     s = 0,
     l = Object.freeze({
         referencedAvatarProfile: !1,

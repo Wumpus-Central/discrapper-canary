@@ -4,9 +4,9 @@ n.d(t, {
 });
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    s = n(592341);
+    a = n(120356),
+    o = n.n(a),
+    s = n(573694);
 function l(e, t, n) {
     return (
         t in e
@@ -65,8 +65,8 @@ function f(e, t) {
         r,
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,8 +75,8 @@ function _(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let p = {
@@ -89,17 +89,17 @@ let p = {
     },
     h = i.forwardRef((e, t) => {
         let n;
-        var { children: i, editable: o = !1, type: l = p.PRIMARY, className: u, outline: _ = !1 } = e,
+        var { children: i, editable: a = !1, type: l = p.PRIMARY, className: u, outline: _ = !1 } = e,
             h = f(e, ['children', 'editable', 'type', 'className', 'outline']);
         return (
-            _ ? (n = s.outline) : l === p.PRIMARY && o && (n = s.editable),
+            _ ? (n = s.outline) : l === p.PRIMARY && a && (n = s.editable),
             (0, r.jsx)(
                 'div',
                 d(
                     c(
                         {
                             ref: t,
-                            className: a()(u, l, n)
+                            className: o()(u, l, n)
                         },
                         h
                     ),

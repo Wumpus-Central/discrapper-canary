@@ -1,8 +1,8 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(200651),
-    i = n(284006);
-let o = (e) => {
-    let { assetComponent: t, tooltipWordmarkComponent: n, children: o } = e;
+    i = n(88419);
+let a = (e) => {
+    let { assetComponent: t, tooltipWordmarkComponent: n, children: a } = e;
     return (0, r.jsxs)('div', {
         className: i.tooltipContainer,
         children: [
@@ -11,7 +11,7 @@ let o = (e) => {
                 className: i.tooltipWordmarkContainer,
                 children: n
             }),
-            o
+            a
         ]
     });
 };

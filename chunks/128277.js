@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D }), n(35282);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(503438),
     c = n(100527),
@@ -23,7 +23,7 @@ var r = n(200651),
     S = n(666984),
     T = n(670451),
     N = n(228168),
-    A = n(935693);
+    A = n(227832);
 function C(e, t, n) {
     return (
         t in e
@@ -77,20 +77,20 @@ function w(e, t) {
     );
 }
 function D(e) {
-    let { user: t, currentUser: n, activity: o, className: C, onClose: P } = e,
+    let { user: t, currentUser: n, activity: a, className: C, onClose: P } = e,
         { profileType: D } = (0, E.z)(),
         L = { [A.fullSize]: D === N.y0.FULL_SIZE },
         x = (0, _.Z)({
-            activity: o,
+            activity: a,
             user: t
         }),
-        M = (0, g.Z)(o),
-        { largeImage: k } = (0, d.FO)(o),
+        M = (0, g.Z)(a),
+        { largeImage: k } = (0, d.FO)(a),
         { analyticsLocations: j } = (0, u.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         U = (0, h.Z)({
             display: 'live',
             user: t,
-            activity: o,
+            activity: a,
             entry: x,
             analyticsLocations: j
         }),
@@ -98,13 +98,13 @@ function D(e) {
             userId: t.id,
             onAction: U
         });
-    if (!(0, l.Z)(o)) return null;
+    if (!(0, l.Z)(a)) return null;
     let B = () => {
             var e, n;
-            let l = null != (n = null == (e = o.state) ? void 0 : e.split(';')) ? n : [];
+            let l = null != (n = null == (e = a.state) ? void 0 : e.split(';')) ? n : [];
             return 0 === l.length
                 ? null
-                : null == o.sync_id
+                : null == a.sync_id
                   ? (0, r.jsx)(O.Z, {
                         variant: 'text-xs/normal',
                         text: l.join(', ')
@@ -117,9 +117,9 @@ function D(e) {
                                 {
                                     children: [
                                         (0, r.jsx)(s.P3F, {
-                                            className: a()(A.clickableText, A.inline),
+                                            className: o()(A.clickableText, A.inline),
                                             onClick: (e) => {
-                                                e.stopPropagation(), U({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(o, t.id, n);
+                                                e.stopPropagation(), U({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(a, t.id, n);
                                             },
                                             children: e
                                         }),
@@ -132,7 +132,7 @@ function D(e) {
                     });
         },
         F = () => {
-            let { timestamps: e } = o;
+            let { timestamps: e } = a;
             if (null == e) return null;
             let { start: t, end: n } = e;
             return null == t || null == n
@@ -146,10 +146,10 @@ function D(e) {
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: a()(A.actions, L),
+                      className: o()(A.actions, L),
                       children: (0, r.jsx)(S.Z, {
                           user: t,
-                          activity: o,
+                          activity: a,
                           onAction: U
                       })
                   });
@@ -157,7 +157,7 @@ function D(e) {
         value: j,
         children: (0, r.jsxs)(y.Z, {
             ref: G,
-            className: a()(A.card, C),
+            className: o()(A.card, C),
             onAction: U,
             onClose: P,
             children: [
@@ -167,7 +167,7 @@ function D(e) {
                         contextMenu: (0, r.jsx)(T.Z, {
                             display: 'live',
                             user: t,
-                            activity: o,
+                            activity: a,
                             entry: x,
                             onClose: P
                         })
@@ -176,14 +176,14 @@ function D(e) {
                 (0, r.jsx)('div', {
                     className: A.body,
                     children: (0, r.jsxs)('div', {
-                        className: a()(A.content, L),
+                        className: o()(A.content, L),
                         children: [
                             (0, r.jsx)(f.E, {
                                 image: k,
                                 size: f.J.SIZE_60,
                                 className: A.clickableImage,
                                 onClick: (e) => {
-                                    e.stopPropagation(), U({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(o, t.id);
+                                    e.stopPropagation(), U({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(a, t.id);
                                 }
                             }),
                             (0, r.jsxs)('div', {
@@ -193,9 +193,9 @@ function D(e) {
                                         children: [
                                             (0, r.jsx)(O.Z, {
                                                 variant: 'heading-sm/semibold',
-                                                text: o.details,
+                                                text: a.details,
                                                 onClick: () => {
-                                                    U({ action: 'OPEN_SPOTIFY_TRACK' }), (0, p.aG)(o);
+                                                    U({ action: 'OPEN_SPOTIFY_TRACK' }), (0, p.aG)(a);
                                                 }
                                             }),
                                             B()
@@ -203,7 +203,7 @@ function D(e) {
                                     }),
                                     (0, r.jsx)(b.Z, {
                                         user: t,
-                                        activity: o,
+                                        activity: a,
                                         className: A.badges
                                     }),
                                     F()

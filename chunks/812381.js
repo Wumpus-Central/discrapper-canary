@@ -6,7 +6,7 @@ var r = n(920981),
     i = n(481060),
     s = n(335131),
     o = n(52030),
-    c = n(198768);
+    c = n(977003);
 let d = () => {
     let e = (0, l.e7)([o.Z], () => o.Z.getShopHomeConfigOverride()),
         t = Object.values(r.H).map((e) => ({

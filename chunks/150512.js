@@ -13,7 +13,7 @@ var l = n(200651),
     I = n(594174),
     h = n(5192),
     g = n(51144),
-    f = n(370376);
+    f = n(82778);
 function p(e) {
     let { guildId: t, welcomeMessage: n, className: i } = e,
         p = (0, a.e7)([N.Z], () => N.Z.getGuild(t)),

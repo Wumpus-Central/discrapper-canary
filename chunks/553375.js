@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(26033),
-    a = n(810568),
+    a = n(26033),
+    o = n(810568),
     s = n(168524),
     l = n(858042),
     c = n(981631),
@@ -16,7 +16,7 @@ function d(e) {
     let { user: t, activity: n, entry: r } = e;
     return null != r
         ? {
-              applicationId: (0, o.dX)(r) ? r.extra.application_id : void 0,
+              applicationId: (0, a.dX)(r) ? r.extra.application_id : void 0,
               sourceUserId: r.author_id
           }
         : null != n
@@ -42,15 +42,15 @@ function f(e) {
     });
 }
 function _(e) {
-    let { user: t, activity: n, entry: o, onAction: l, isMenuOpen: c, appContext: f } = e,
+    let { user: t, activity: n, entry: a, onAction: l, isMenuOpen: c, appContext: f } = e,
         { applicationId: _, sourceUserId: p } = d({
             activity: n,
-            entry: o,
+            entry: a,
             user: t
         }),
         h = (0, s.Z)({
             location: 'UserProfileActivityContextMenu',
-            source: a.m1.UserProfileCardContextMenu,
+            source: o.m1.UserProfileCardContextMenu,
             trackEntryPointImpression: c,
             applicationId: _,
             sourceUserId: p,

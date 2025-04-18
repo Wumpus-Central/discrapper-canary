@@ -1,14 +1,14 @@
 var r = n(127849),
     i = n(636881),
-    o = n(880181),
-    a = n(284955),
+    a = n(880181),
+    o = n(284955),
     s = n(476078),
     l = n(992174),
     c = n(338045),
     u = r.Function,
     d =
         /MSIE .\./.test(s) ||
-        ('BUN' === a &&
+        ('BUN' === o &&
             (function () {
                 var e = r.Bun.version.split('.');
                 return e.length < 3 || ('0' === e[0] && (e[1] < 3 || ('3' === e[1] && '0' === e[2])));
@@ -16,16 +16,16 @@ var r = n(127849),
 e.exports = function (e, t) {
     var n = t ? 2 : 1;
     return d
-        ? function (r, a) {
+        ? function (r, o) {
               var s = c(arguments.length, 1) > n,
-                  d = o(r) ? r : u(r),
+                  d = a(r) ? r : u(r),
                   f = s ? l(arguments, n) : [],
                   _ = s
                       ? function () {
                             i(d, this, f);
                         }
                       : d;
-              return t ? e(_, a) : e(_);
+              return t ? e(_, o) : e(_);
           }
         : e;
 };

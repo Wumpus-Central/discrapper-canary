@@ -25,7 +25,7 @@ var t = l(200651),
     y = l(981631),
     E = l(185923),
     S = l(388032),
-    P = l(808092);
+    P = l(495084);
 let T = (e) => {
     var n, l;
     let { guildId: T, welcomeChannel: Z, transitionState: w, onSave: z, onClose: W } = e,

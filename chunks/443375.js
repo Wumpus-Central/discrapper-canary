@@ -1,8 +1,8 @@
 n.d(t, { Z: () => W });
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(394821),
     c = n(841784),
@@ -38,7 +38,7 @@ var r = n(200651),
     G = n(981631),
     B = n(701488),
     F = n(388032),
-    V = n(935693);
+    V = n(227832);
 function Z(e, t, n) {
     return (
         t in e
@@ -70,7 +70,7 @@ function H(e) {
 }
 function W(e) {
     var t;
-    let { user: n, currentUser: o, activity: Z, application: W, voiceGuild: Y, voiceChannel: K, profileGuildId: z, className: q, onClose: Q } = e,
+    let { user: n, currentUser: a, activity: Z, application: W, voiceGuild: Y, voiceChannel: K, profileGuildId: z, className: q, onClose: Q } = e,
         X = i.useRef(null),
         { analyticsLocations: J } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { profileType: $ } = (0, A.z)(),
@@ -87,16 +87,16 @@ function W(e) {
             entry: er,
             analyticsLocations: J
         }),
-        eo = (0, y.Z)({
+        ea = (0, y.Z)({
             userId: n.id,
             onAction: ei
         }),
-        ea = (0, v.Z)(Z),
+        eo = (0, v.Z)(Z),
         { largeImage: es, smallImage: el } = (0, p.FO)(Z, W),
         ec = (0, j.Z)({
             location: 'UserProfileActivityCardWithInteractionToolbar',
             user: n,
-            currentUser: o,
+            currentUser: a,
             activity: Z,
             application: W,
             entry: er,
@@ -176,13 +176,13 @@ function W(e) {
             });
         },
         e_ = () => {
-            var e, t, n, i, o, a;
+            var e, t, n, i, a, o;
             if (Z.type === G.IIU.WATCHING) return null;
             if ((0, u.Z)(Z)) return ep();
             if ((0, E.dS)(Z) && (null == (e = Z.party) ? void 0 : e.size) != null && (null == (t = Z.party) ? void 0 : t.size.length) >= 2) {
                 let e = F.NW.formatToPlainString(F.t['JC/3x8'], {
                     numSpeakers: null == (i = Z.party) ? void 0 : i.size[0],
-                    numListeners: (null == (o = Z.party) ? void 0 : o.size[1]) - (null == (a = Z.party) ? void 0 : a.size[0])
+                    numListeners: (null == (a = Z.party) ? void 0 : a.size[1]) - (null == (o = Z.party) ? void 0 : o.size[0])
                 });
                 return (0, r.jsx)(L.Z, {
                     variant: 'text-xs/normal',
@@ -271,10 +271,10 @@ function W(e) {
                       onClose: Q
                   }),
         eE = () =>
-            n.id === o.id
+            n.id === a.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: a()(V.actions, ee),
+                      className: o()(V.actions, ee),
                       children: (0, r.jsx)(R.Z, {
                           activity: Z,
                           user: n,
@@ -319,17 +319,17 @@ function W(e) {
                             }),
                         onShowToolbar: () => ei({ action: 'HOVER_ACTIVITY_CARD' }),
                         children: (0, r.jsxs)(w.Z, {
-                            ref: eo,
-                            className: a()(q, { [V.hoisted]: ey }),
+                            ref: ea,
+                            className: o()(q, { [V.hoisted]: ey }),
                             onAction: ei,
                             onClose: Q,
                             children: [
-                                (0, r.jsx)(D.Z, H({}, ea)),
+                                (0, r.jsx)(D.Z, H({}, eo)),
                                 (0, r.jsxs)('div', {
                                     className: V.body,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: a()(V.content, ee),
+                                            className: o()(V.content, ee),
                                             children: [
                                                 !n.bot && eu(),
                                                 (0, r.jsxs)('div', {

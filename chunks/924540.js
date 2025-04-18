@@ -1,6 +1,6 @@
 r.d(t, {
-    $H: () => g,
-    GN: () => Z
+    $H: () => Z,
+    GN: () => M
 });
 var n = r(200651),
     i = r(192379),
@@ -14,7 +14,7 @@ var n = r(200651),
     u = r(639119),
     f = r(474936),
     p = r(388032),
-    d = r(217750);
+    d = r(952849);
 function b(e) {
     let { isTabSelected: t, expiresAt: r, trialDuration: s, className: h } = e,
         v = i.useMemo(() => Date.parse(r), [r]),
@@ -90,7 +90,7 @@ function b(e) {
               }
           });
 }
-function g(e) {
+function Z(e) {
     var t, r;
     let { isTabSelected: i, trialOffer: s } = e,
         o = null == (t = (0, u.N)()) ? void 0 : t.subscription_trial,
@@ -99,25 +99,25 @@ function g(e) {
             intervalType: null == o ? void 0 : o.interval,
             intervalCount: null == o ? void 0 : o.interval_count
         });
-    return (0, n.jsx)(j, {
+    return (0, n.jsx)(g, {
         isTabSelected: i,
         badgeCopy: a,
         offerExpiresAt: s.expires_at,
         className: ((r = null == o ? void 0 : o.sku_id), l ? d.premiumTrialBadgeV2 : r === f.Si.TIER_2 ? d.premiumTrialTier2UnacknowledgedBadge : d.premiumTrialTier0UnacknowledgedBadge)
     });
 }
-function Z(e) {
+function M(e) {
     let { isTabSelected: t, userDiscount: r, includesAmountOff: i } = e,
         s = p.NW.formatToPlainString(p.t.iiLbvr, { percent: r.discount.amount }),
         o = (0, v.xP)('OfferTabBadge');
-    return (0, n.jsx)(j, {
+    return (0, n.jsx)(g, {
         isTabSelected: t,
         badgeCopy: i ? s : p.NW.string(p.t['/DTtr6']),
         offerExpiresAt: r.expires_at,
         className: o ? d.premiumTrialBadgeV2 : d.premiumDiscountUnacknowledgedBadge
     });
 }
-function j(e) {
+function g(e) {
     let { isTabSelected: t, badgeCopy: r, offerExpiresAt: i, className: s, ackedClassName: a } = e;
     return null != i
         ? (0, n.jsx)(b, {

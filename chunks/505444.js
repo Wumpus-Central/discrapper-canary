@@ -105,13 +105,13 @@ var i = {
             }
         }
     },
-    o = !!('undefined' != typeof window && window.document && window.document.createElement),
-    a = {
-        canUseDOM: o,
+    a = !!('undefined' != typeof window && window.document && window.document.createElement),
+    o = {
+        canUseDOM: a,
         canUseWorkers: 'undefined' != typeof Worker,
-        canUseEventListeners: o && !!(window.addEventListener || window.attachEvent),
-        canUseViewport: o && !!window.screen,
-        isInWorker: !o
+        canUseEventListeners: a && !!(window.addEventListener || window.attachEvent),
+        canUseViewport: a && !!window.screen,
+        isInWorker: !a
     },
     s = i.isUnitlessNumber;
 function l(e, t, n) {
@@ -134,7 +134,7 @@ var u = function () {};
         return e;
     });
 var d = !1;
-if (a.canUseDOM) {
+if (o.canUseDOM) {
     var f = document.createElement('div').style;
     try {
         f.font = '';
@@ -146,16 +146,16 @@ e.exports = {
     createDangerousStringForStyles: function (e) {},
     setValueForStyles: function (e, t, n) {
         var r = e.style;
-        for (var o in t)
-            if (t.hasOwnProperty(o)) {
-                var a = 0 === o.indexOf('--'),
-                    s = l(o, t[o], a);
-                if (('float' === o && (o = 'cssFloat'), a)) r.setProperty(o, s);
-                else if (s) r[o] = s;
+        for (var a in t)
+            if (t.hasOwnProperty(a)) {
+                var o = 0 === a.indexOf('--'),
+                    s = l(a, t[a], o);
+                if (('float' === a && (a = 'cssFloat'), o)) r.setProperty(a, s);
+                else if (s) r[a] = s;
                 else {
-                    var c = d && i.shorthandPropertyExpansions[o];
+                    var c = d && i.shorthandPropertyExpansions[a];
                     if (c) for (var u in c) r[u] = '';
-                    else r[o] = '';
+                    else r[a] = '';
                 }
             }
     }

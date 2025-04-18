@@ -1,12 +1,12 @@
 n.d(t, {
     $Z: () => s,
     Ao: () => l,
-    Cp: () => a,
+    Cp: () => o,
     Cz: () => u,
     bA: () => i,
     d7: () => c,
     k3: () => d,
-    xv: () => o
+    xv: () => a
 });
 var r = n(570140);
 function i(e, t) {
@@ -18,13 +18,13 @@ function i(e, t) {
         props: n
     });
 }
-function o(e) {
+function a(e) {
     r.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_CLOSE',
         id: e
     });
 }
-function a(e) {
+function o(e) {
     r.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_HIDE',
         id: e

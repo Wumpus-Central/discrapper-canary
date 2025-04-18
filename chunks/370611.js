@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(195302),
     l = n(206295),
     c = n(134432),
@@ -25,7 +25,7 @@ var r = n(200651),
     N = n(463031),
     A = n(206583),
     C = n(388032),
-    R = n(839571);
+    R = n(667450);
 function P(e, t, n) {
     return (
         t in e
@@ -83,8 +83,8 @@ let x = 10,
     k = 'leaderboard.png';
 function j(e) {
     let { leaderboard: t, previewMode: n = !1, trackRankingItemInteraction: s } = e,
-        f = (0, o.e7)([d.default], () => d.default.getId()),
-        _ = (0, o.e7)([u.default], () => u.default.locale),
+        f = (0, a.e7)([d.default], () => d.default.getId()),
+        _ = (0, a.e7)([u.default], () => u.default.locale),
         { rankChanges: h } = (0, y.Z)({
             guildId: t.guild_id,
             leaderboardId: t.leaderboard_id,
@@ -98,10 +98,10 @@ function j(e) {
             });
             let { sort_by_statistic_id: n } = t.guild_settings;
             return t.users.map((t, r) => {
-                var i, o;
+                var i, a;
                 return {
                     userId: t.user_id,
-                    value: null != (o = null == (i = t.statistics[n]) ? void 0 : i.value) ? o : 0,
+                    value: null != (a = null == (i = t.statistics[n]) ? void 0 : i.value) ? a : 0,
                     rank: r + 1,
                     previousRank: e.get(t.user_id)
                 };
@@ -140,17 +140,17 @@ function j(e) {
                           (0, r.jsxs)('div', {
                               className: R.headerRow,
                               children: [
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: 'text-xxs/medium',
                                       className: R.headerRank,
                                       children: '#'
                                   }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: 'text-xxs/medium',
                                       className: R.headerPlayer,
                                       children: C.NW.string(C.t['6ii1+/'])
                                   }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: 'text-xxs/medium',
                                       className: R.headerValue,
                                       children: (0, E.s)({
@@ -161,7 +161,7 @@ function j(e) {
                                   })
                               ]
                           }),
-                          (0, r.jsxs)(a.u2D, {
+                          (0, r.jsxs)(o.u2D, {
                               className: R.rows,
                               children: [
                                   m.map((e) =>
@@ -192,7 +192,7 @@ function U(e) {
         children: (0, r.jsxs)('span', {
             className: R.emptyTitleContainer,
             children: [
-                (0, r.jsx)(a.Text, {
+                (0, r.jsx)(o.Text, {
                     tag: 'span',
                     variant: 'text-lg/normal',
                     className: R.emptyTitle,
@@ -208,11 +208,11 @@ function U(e) {
 }
 function G(e) {
     let { userId: t, rank: n, value: l, guildId: c, previousRank: u, locale: d, leaderboard: p, trackRankingItemInteraction: E } = e,
-        b = (0, o.e7)([_.default], () => _.default.getUser(t)),
+        b = (0, a.e7)([_.default], () => _.default.getUser(t)),
         y = h.ZP.getName(c, void 0, b),
         v = null != u && u > n,
         [O, P] = i.useState('default'),
-        D = (0, o.e7)([f.Z], () => {
+        D = (0, a.e7)([f.Z], () => {
             let e = f.Z.getPrimaryActivity(t);
             return (null == e ? void 0 : e.application_id) != null && N.T.includes(e.application_id);
         }),
@@ -236,16 +236,16 @@ function G(e) {
                 P('error');
             }
         },
-        U = (0, r.jsx)(a.Text, {
+        U = (0, r.jsx)(o.Text, {
             className: R.tooltip,
             variant: 'text-sm/medium',
             children:
                 'copied' === O
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(a.kSu, {
+                              (0, r.jsx)(o.kSu, {
                                   size: 'xs',
-                                  color: a.TVs.colors.STATUS_POSITIVE
+                                  color: o.TVs.colors.STATUS_POSITIVE
                               }),
                               C.NW.string(C.t.ZO0ku7)
                           ]
@@ -253,9 +253,9 @@ function G(e) {
                     : 'error' === O
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(a.P$X, {
+                                (0, r.jsx)(o.P$X, {
                                     size: 'xs',
-                                    color: a.TVs.colors.STATUS_DANGER
+                                    color: o.TVs.colors.STATUS_DANGER
                                 }),
                                 C.NW.string(C.t.j2d6Ki)
                             ]
@@ -271,7 +271,7 @@ function G(e) {
                 children:
                     n <= 3
                         ? (0, r.jsx)(I._, { rank: n })
-                        : (0, r.jsx)(a.Text, {
+                        : (0, r.jsx)(o.Text, {
                               tabularNumbers: !0,
                               color: 'text-muted',
                               variant: 'text-xs/medium',
@@ -281,16 +281,16 @@ function G(e) {
             (0, r.jsxs)('div', {
                 className: R.userPlayer,
                 children: [
-                    (0, r.jsx)(a.qEK, {
+                    (0, r.jsx)(o.qEK, {
                         src: null == b ? void 0 : b.getAvatarURL(c, 16),
-                        size: a.EFr.SIZE_16,
+                        size: o.EFr.SIZE_16,
                         'aria-label': 'avatar'
                     }),
-                    (0, r.jsx)(a.LZC, {
+                    (0, r.jsx)(o.LZC, {
                         size: 6,
                         horizontal: !0
                     }),
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(o.X6q, {
                         lineClamp: 1,
                         variant: 'heading-sm/medium',
                         color: 'header-primary',
@@ -299,7 +299,7 @@ function G(e) {
                     1 === n
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(a.LZC, {
+                                  (0, r.jsx)(o.LZC, {
                                       size: 4,
                                       horizontal: !0
                                   }),
@@ -317,30 +317,30 @@ function G(e) {
                 className: R.badgesContainer,
                 children: [
                     D &&
-                        (0, r.jsx)(a.iWm, {
+                        (0, r.jsx)(o.iWm, {
                             size: 'xs',
-                            color: a.TVs.colors.TEXT_POSITIVE,
+                            color: o.TVs.colors.TEXT_POSITIVE,
                             className: R.liveIcon
                         }),
                     m.isPlatformEmbedded &&
-                        (0, r.jsx)(a.ua7, {
+                        (0, r.jsx)(o.ua7, {
                             text: U,
                             'aria-label': !1,
                             shouldShow: !x,
                             onTooltipHide: () => P('default'),
                             children: (e) =>
                                 (0, r.jsx)(
-                                    a.P3F,
+                                    o.P3F,
                                     L(w({}, e), {
                                         onClick: x ? void 0 : j,
                                         'aria-busy': x,
                                         className: R.copyLinkContainer,
                                         children: x
-                                            ? (0, r.jsx)(a.$jN, {
-                                                  type: a.$jN.Type.SPINNING_CIRCLE_SIMPLE,
+                                            ? (0, r.jsx)(o.$jN, {
+                                                  type: o.$jN.Type.SPINNING_CIRCLE_SIMPLE,
                                                   className: R.copySpinner
                                               })
-                                            : (0, r.jsx)(a.xPt, {
+                                            : (0, r.jsx)(o.xPt, {
                                                   size: 'xs',
                                                   className: R.copyLink
                                               })
@@ -349,7 +349,7 @@ function G(e) {
                         })
                 ]
             }),
-            (0, r.jsx)(a.X6q, {
+            (0, r.jsx)(o.X6q, {
                 variant: 'heading-sm/medium',
                 color: 'header-primary',
                 tabularNumbers: !0,
@@ -363,7 +363,7 @@ function B(e) {
     return (0, r.jsxs)('div', {
         className: R.joinLeaderboardCTAContainer,
         children: [
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 children: C.NW.string(C.t.BfRGk5)
             }),
@@ -379,11 +379,11 @@ function F(e) {
     return (0, r.jsxs)('div', {
         className: R.rankChangeBadge,
         children: [
-            (0, r.jsx)(a.wj7, {
+            (0, r.jsx)(o.wj7, {
                 size: 'xxs',
-                color: a.TVs.colors.TEXT_MUTED
+                color: o.TVs.colors.TEXT_MUTED
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-xs/medium',
                 color: 'text-muted',
                 children: t

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => l }), n(35282);
 var r = n(477660),
     i = n.n(r);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e, t) {
+function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -32,7 +32,7 @@ let s = /\n$/,
             (t = null != t ? t : {}),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                : a(Object(t)).forEach(function (n) {
+                : o(Object(t)).forEach(function (n) {
                       Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                   }),
             e
@@ -49,7 +49,7 @@ let s = /\n$/,
                         })
                     )),
                     r.forEach(function (t) {
-                        o(e, t, n[t]);
+                        a(e, t, n[t]);
                     });
             }
             return e;

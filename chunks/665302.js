@@ -4,7 +4,7 @@ n(192379);
 var i = n(481060),
     l = n(671533),
     o = n(981631),
-    a = n(891555);
+    a = n(261496);
 function s(e) {
     let { buttonText: t, onGoBack: n, onDismiss: s, showCloseButton: c } = e;
     return (0, r.jsxs)(i.qXd, {

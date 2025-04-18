@@ -1,8 +1,8 @@
 n.d(t, { I: () => p }), n(539854), n(415506), n(644351), n(146733), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(388685);
 var r = n(710845),
     i = n(358085),
-    o = n(374023),
-    a = n(988348);
+    a = n(374023),
+    o = n(988348);
 function s(e, t, n) {
     return (
         t in e
@@ -36,7 +36,7 @@ class f {
 d.push(
     class extends f {
         static canUse() {
-            return (0, a.N)();
+            return (0, o.N)();
         }
         getAlgorithm() {
             return 'zstd-stream';
@@ -52,7 +52,7 @@ d.push(
         }
         close() {}
         constructor(e) {
-            super(e), s(this, '_decoder', null), s(this, '_stream', void 0), this._gatewayEncoding.wantsString() ? (this._decoder = new TextDecoder('utf-8')) : (this._decoder = null), (this._stream = (0, a.G)());
+            super(e), s(this, '_decoder', null), s(this, '_stream', void 0), this._gatewayEncoding.wantsString() ? (this._decoder = new TextDecoder('utf-8')) : (this._decoder = null), (this._stream = (0, o.G)());
         }
     }
 ),
@@ -84,21 +84,21 @@ d.push(
                     i = this._inflate;
                 if (null == i) return void new r.Z('GatewayCompressionHandler').error('flush end happened on closed compression adapter');
                 if (e !== n.Z_OK) throw Error('zlib error, '.concat(e, ', ').concat(i.strm.msg));
-                let { chunks: o } = i,
-                    a = o.length;
-                if (this._gatewayEncoding.wantsString()) t = a > 1 ? o.join('') : o[0];
-                else if (a > 1) {
+                let { chunks: a } = i,
+                    o = a.length;
+                if (this._gatewayEncoding.wantsString()) t = o > 1 ? a.join('') : a[0];
+                else if (o > 1) {
                     let e = 0;
-                    for (let t = 0; t < a; t++) e += o[t].length;
+                    for (let t = 0; t < o; t++) e += a[t].length;
                     let n = new Uint8Array(e),
                         r = 0;
-                    for (let e = 0; e < a; e++) {
-                        let t = o[e];
+                    for (let e = 0; e < o; e++) {
+                        let t = a[e];
                         n.set(t, r), (r += t.length);
                     }
                     t = n;
-                } else t = o[0];
-                (o.length = 0), null != this._onDataReady && this._onDataReady(t);
+                } else t = a[0];
+                (a.length = 0), null != this._onDataReady && this._onDataReady(t);
             }
             constructor(e) {
                 super(e),
@@ -143,10 +143,10 @@ d.push(
                 return !1;
             }
             bindWebSocket(e) {
-                this.close(), (this._socketId = e._socketId), (0, a.N)() ? ((0, i.isAndroid)() ? null == c || c.enableZstdStreamSupport(this._socketId) : l.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0)) : (0, i.isAndroid)() ? null == c || c.enableZlibStreamSupport(this._socketId) : l.DCDCompressionManager.enableZlibStreamSupport(this._socketId);
+                this.close(), (this._socketId = e._socketId), (0, o.N)() ? ((0, i.isAndroid)() ? null == c || c.enableZstdStreamSupport(this._socketId) : l.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0)) : (0, i.isAndroid)() ? null == c || c.enableZlibStreamSupport(this._socketId) : l.DCDCompressionManager.enableZlibStreamSupport(this._socketId);
             }
             getAlgorithm() {
-                return (0, a.N)() ? 'zstd-stream' : 'zlib-stream';
+                return (0, o.N)() ? 'zstd-stream' : 'zlib-stream';
             }
             usesLegacyCompression() {
                 return !1;
@@ -181,7 +181,7 @@ class _ extends f {
     close() {}
 }
 function p(e) {
-    if (o.s.isDiscordGatewayPlaintextSet()) return new _(e);
+    if (a.s.isDiscordGatewayPlaintextSet()) return new _(e);
     for (var t of d) if (t.canUse()) return new t(e);
     return new _(e);
 }

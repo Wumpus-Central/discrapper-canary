@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(359959),
     l = n(260866),
     c = n(481060),
@@ -11,9 +11,9 @@ var r = n(200651),
     f = n(149203),
     _ = n(981631),
     p = n(388032),
-    h = n(825372);
+    h = n(539490);
 let m = i.forwardRef(function (e, t) {
-        let { emojiListRef: n, gridNavigatorId: o, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: b, className: y, defaultSearchPlaceholder: v } = e,
+        let { emojiListRef: n, gridNavigatorId: a, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: b, className: y, defaultSearchPlaceholder: v } = e,
             O = i.useRef(null),
             I = (0, d.Iu)((e) => e.searchQuery),
             [S, T] = u.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], s.X),
@@ -54,13 +54,13 @@ let m = i.forwardRef(function (e, t) {
                 onKeyDown: C,
                 onFocus: E,
                 onChange: N,
-                className: a()(y, { [h.searchBarFullRow]: m }),
+                className: o()(y, { [h.searchBarFullRow]: m }),
                 inputProps: {
                     'aria-label': p.NW.string(p.t.tCauZW),
                     'aria-haspopup': 'grid',
-                    'aria-controls': o,
+                    'aria-controls': a,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, l.NE)(o, S.columnIndex, S.rowIndex)
+                    'aria-activedescendant': (0, l.NE)(a, S.columnIndex, S.rowIndex)
                 }
             })
         );

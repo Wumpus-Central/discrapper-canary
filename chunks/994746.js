@@ -1,71 +1,71 @@
 n.d(t, { Z: () => s });
 var r = n(750154),
     i = n(90712),
-    o = n(981631),
-    a = n(388032);
+    a = n(981631),
+    o = n(388032);
 function s(e) {
     let t = (0, i.Z)(e),
         n = null == t ? void 0 : t.icon;
-    return e.type === o.IIU.PLAYING && (null == t ? void 0 : t.type) === o.ABu.XBOX
+    return e.type === a.IIU.PLAYING && (null == t ? void 0 : t.type) === a.ABu.XBOX
         ? {
-              text: a.NW.formatToPlainString(a.t.Sq9xJy, { game: a.NW.string(a.t['Nfvo7+']) }),
+              text: o.NW.formatToPlainString(o.t.Sq9xJy, { game: o.NW.string(o.t['Nfvo7+']) }),
               platformIcon: n
           }
-        : e.type === o.IIU.PLAYING && (null == t ? void 0 : t.type) === o.ABu.PLAYSTATION
+        : e.type === a.IIU.PLAYING && (null == t ? void 0 : t.type) === a.ABu.PLAYSTATION
           ? {
-                text: a.NW.formatToPlainString(a.t.Sq9xJy, { game: a.NW.string(a.t.fFl4jo) }),
+                text: o.NW.formatToPlainString(o.t.Sq9xJy, { game: o.NW.string(o.t.fFl4jo) }),
                 platformIcon: n
             }
-          : e.type === o.IIU.STREAMING && (null == t ? void 0 : t.type) === o.ABu.TWITCH
+          : e.type === a.IIU.STREAMING && (null == t ? void 0 : t.type) === a.ABu.TWITCH
             ? {
-                  text: a.NW.formatToPlainString(a.t['4CQq9f'], { name: a.NW.string(a.t.q4pBGx) }),
+                  text: o.NW.formatToPlainString(o.t['4CQq9f'], { name: o.NW.string(o.t.q4pBGx) }),
                   platformIcon: n
               }
-            : e.type === o.IIU.STREAMING && (null == t ? void 0 : t.type) === o.ABu.YOUTUBE
+            : e.type === a.IIU.STREAMING && (null == t ? void 0 : t.type) === a.ABu.YOUTUBE
               ? {
-                    text: a.NW.formatToPlainString(a.t['4CQq9f'], { name: a.NW.string(a.t.aS6cKy) }),
+                    text: o.NW.formatToPlainString(o.t['4CQq9f'], { name: o.NW.string(o.t.aS6cKy) }),
                     platformIcon: n
                 }
-              : e.type === o.IIU.PLAYING
+              : e.type === a.IIU.PLAYING
                 ? {
-                      text: a.NW.string(a.t.BMTj29),
+                      text: o.NW.string(o.t.BMTj29),
                       platformIcon: n
                   }
-                : e.type === o.IIU.STREAMING
+                : e.type === a.IIU.STREAMING
                   ? {
-                        text: a.NW.string(a.t['Jpkr/v']),
+                        text: o.NW.string(o.t['Jpkr/v']),
                         platformIcon: n
                     }
                   : (0, r.dS)(e)
-                    ? { text: a.NW.formatToPlainString(a.t.pW3Ip6, { name: e.name }) }
-                    : e.type === o.IIU.LISTENING && null != e.details
+                    ? { text: o.NW.formatToPlainString(o.t.pW3Ip6, { name: e.name }) }
+                    : e.type === a.IIU.LISTENING && null != e.details
                       ? {
-                            text: a.NW.formatToPlainString(a.t['b+lA5+'], { name: e.name }),
+                            text: o.NW.formatToPlainString(o.t['b+lA5+'], { name: e.name }),
                             platformIcon: n
                         }
-                      : e.type === o.IIU.LISTENING
+                      : e.type === a.IIU.LISTENING
                         ? {
-                              text: a.NW.string(a.t.dBISa2),
+                              text: o.NW.string(o.t.dBISa2),
                               platformIcon: n
                           }
-                        : e.type === o.IIU.WATCHING && null != e.details
+                        : e.type === a.IIU.WATCHING && null != e.details
                           ? {
-                                text: a.NW.formatToPlainString(a.t.mqdfDQ, { name: e.name }),
+                                text: o.NW.formatToPlainString(o.t.mqdfDQ, { name: e.name }),
                                 platformIcon: n
                             }
-                          : e.type === o.IIU.WATCHING
+                          : e.type === a.IIU.WATCHING
                             ? {
-                                  text: a.NW.string(a.t.GpNXjI),
+                                  text: o.NW.string(o.t.GpNXjI),
                                   platformIcon: n
                               }
-                            : e.type === o.IIU.COMPETING && null != e.details
+                            : e.type === a.IIU.COMPETING && null != e.details
                               ? {
-                                    text: a.NW.formatToPlainString(a.t.oHF7Cg, { name: e.name }),
+                                    text: o.NW.formatToPlainString(o.t.oHF7Cg, { name: e.name }),
                                     platformIcon: n
                                 }
-                              : e.type === o.IIU.COMPETING
+                              : e.type === a.IIU.COMPETING
                                 ? {
-                                      text: a.NW.string(a.t.OzCsIC),
+                                      text: o.NW.string(o.t.OzCsIC),
                                       platformIcon: n
                                   }
                                 : {

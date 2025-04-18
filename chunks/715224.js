@@ -9,7 +9,7 @@ var r = n(200651),
     d = n(434404),
     u = n(981631),
     m = n(388032),
-    g = n(990971);
+    g = n(387136);
 let p = 'NO_SYSTEM_CHANNEL';
 function h(e) {
     var t;

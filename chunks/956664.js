@@ -34,17 +34,17 @@ n.d(t, {
     n(415506);
 var r = n(512722),
     i = n.n(r),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(950200),
     l = n.n(s);
 function c(e) {
-    let { width: t, height: n, maxWidth: r, maxHeight: i, minWidth: o = 0, minHeight: a = 0 } = e;
+    let { width: t, height: n, maxWidth: r, maxHeight: i, minWidth: a = 0, minHeight: o = 0 } = e;
     if (t !== r || n !== i) {
         let e = t > r ? r / t : 1;
-        t = Math.max(Math.round(t * e), o);
-        let s = (n = Math.max(Math.round(n * e), a)) > i ? i / n : 1;
-        (t = Math.max(Math.round(t * s), o)), (n = Math.max(Math.round(n * s), a));
+        t = Math.max(Math.round(t * e), a);
+        let s = (n = Math.max(Math.round(n * e), o)) > i ? i / n : 1;
+        (t = Math.max(Math.round(t * s), a)), (n = Math.max(Math.round(n * s), o));
     }
     return {
         width: t,
@@ -67,17 +67,17 @@ let f = 2,
     _ = 1.6;
 function p(e, t, n, r) {
     let i = Math.max(f, null != e && 0 !== e && null != t && 0 !== t ? e / n : 0),
-        o = f;
-    null != n && n * i > window.innerWidth * _ && (o = (window.innerWidth * _) / n);
-    let a = f;
-    return null != r && r * i > window.innerHeight * _ && (a = (window.innerHeight * _) / r), (i = Math.min(i, o, a));
+        a = f;
+    null != n && n * i > window.innerWidth * _ && (a = (window.innerWidth * _) / n);
+    let o = f;
+    return null != r && r * i > window.innerHeight * _ && (o = (window.innerHeight * _) / r), (i = Math.min(i, a, o));
 }
 function h(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e,
-        o = 1;
-    t > r && (o = r / t), (t = Math.round(t * o));
-    let a = 1;
-    return (n = Math.round(n * o)) > i && (a = i / n), Math.min(o * a, 1);
+        a = 1;
+    t > r && (a = r / t), (t = Math.round(t * a));
+    let o = 1;
+    return (n = Math.round(n * a)) > i && (o = i / n), Math.min(a * o, 1);
 }
 function m(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e;
@@ -92,7 +92,7 @@ function E(e) {
 }
 function b(e, t, n) {
     let r = [];
-    for (let i = 0, o, a, s, l, c; i < t; i += n) (a = e[(o = 4 * i) + 0]), (s = e[o + 1]), (l = e[o + 2]), (void 0 === (c = e[o + 3]) || c >= 125) && !(a > 250 && s > 250 && l > 250) && r.push([a, s, l]);
+    for (let i = 0, a, o, s, l, c; i < t; i += n) (o = e[(a = 4 * i) + 0]), (s = e[a + 1]), (l = e[a + 2]), (void 0 === (c = e[a + 3]) || c >= 125) && !(o > 250 && s > 250 && l > 250) && r.push([o, s, l]);
     return r;
 }
 let y = [[0, 0, 0]],
@@ -101,15 +101,15 @@ function O(e, t, n) {
     let r = document.createElement('canvas'),
         i = r.getContext('2d');
     if (null == i) return y;
-    let o = (r.width = 0 === e.width ? v : e.width),
-        a = (r.height = 0 === e.height ? v : e.height);
-    i.drawImage(e, 0, 0, o, a);
-    let s = b(i.getImageData(0, 0, o, a).data, o * a, n),
+    let a = (r.width = 0 === e.width ? v : e.width),
+        o = (r.height = 0 === e.height ? v : e.height);
+    i.drawImage(e, 0, 0, a, o);
+    let s = b(i.getImageData(0, 0, a, o).data, a * o, n),
         c = l()(s, t);
     return 'boolean' == typeof c ? y : c.palette();
 }
 let I = (e) => ('number' == typeof e ? null : S(e)),
-    S = a().memoize(
+    S = o().memoize(
         (e) =>
             new Promise((t, n) => {
                 let r = new Image();

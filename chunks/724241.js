@@ -2,15 +2,15 @@ n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(648052),
-    a = n(530),
+    a = n(648052),
+    o = n(530),
     s = n(420654),
     l = n(116854),
     c = n(271383),
     u = n(246946),
     d = n(654904),
     f = n(228168),
-    _ = n(165957);
+    _ = n(200669);
 function p(e) {
     var t;
     let { user: n, displayProfile: p, guild: h, pendingAvatar: m, pendingNickname: g, pendingGlobalName: E, pendingBio: b, pendingPronouns: y, isTryItOutFlow: v, hideBioSection: O, pendingBadges: I, shouldOpenBadgeTooltip: S } = e,
@@ -35,14 +35,14 @@ function p(e) {
         inert: '',
         className: _.body,
         children: [
-            (0, r.jsx)(a.Z, {
+            (0, r.jsx)(o.Z, {
                 user: n,
                 profileType: f.y0.BITE_SIZE,
                 usernameIcon: P(),
                 nickname: R,
                 pronouns: C,
                 isTryItOut: v,
-                tags: (0, r.jsx)(o.Z, {
+                tags: (0, r.jsx)(a.Z, {
                     displayProfile: p,
                     profileType: f.y0.BITE_SIZE,
                     pendingBadges: I,

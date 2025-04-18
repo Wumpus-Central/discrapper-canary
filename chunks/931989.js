@@ -1,24 +1,24 @@
 n.d(t, { Z: () => u }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(260630),
-    a = n(530548),
+    a = n(260630),
+    o = n(530548),
     s = n(481060),
     l = n(40851),
     c = n(912811);
 function u(e) {
-    let { buffer: t, autoplay: n = !0, className: o, fit: l, alignment: u, style: f, eventTargetRef: _ } = e,
+    let { buffer: t, autoplay: n = !0, className: a, fit: l, alignment: u, style: f, eventTargetRef: _ } = e,
         p = i.useContext(s.Sfi),
         h = d(),
         [m, g] = i.useState(void 0),
-        { rive: E, RiveComponent: b } = (0, a.useRive)({
+        { rive: E, RiveComponent: b } = (0, o.useRive)({
             eventTarget: null == _ ? void 0 : _.current,
             buffer: t,
             autoplay: n,
             stateMachines: m,
-            layout: new a.Layout({
-                fit: null != l ? c.L[l] : a.Fit.Cover,
-                alignment: null != u ? c.E[u] : a.Alignment.Center
+            layout: new o.Layout({
+                fit: null != l ? c.L[l] : o.Fit.Cover,
+                alignment: null != u ? c.E[u] : o.Alignment.Center
             })
         });
     i.useEffect(() => {
@@ -36,12 +36,12 @@ function u(e) {
         if (null == E) return;
         E.play();
         let e = (t) => {
-            null != t.data && 'number' == typeof t.data && ((y.current = t.data), t.data > 0 && (p.reducedMotion.enabled && E.isPlaying && E.pause(), E.off(a.EventType.Advance, e)));
+            null != t.data && 'number' == typeof t.data && ((y.current = t.data), t.data > 0 && (p.reducedMotion.enabled && E.isPlaying && E.pause(), E.off(o.EventType.Advance, e)));
         };
         return (
-            E.on(a.EventType.Advance, e),
+            E.on(o.EventType.Advance, e),
             () => {
-                E.off(a.EventType.Advance, e);
+                E.off(o.EventType.Advance, e);
             }
         );
     }, [E, p.reducedMotion.enabled]);
@@ -57,7 +57,7 @@ function u(e) {
                 );
         }, [E, h]),
         (0, r.jsx)(b, {
-            className: o,
+            className: a,
             style: f
         })
     );
@@ -80,4 +80,4 @@ function d() {
         t
     );
 }
-a.RuntimeLoader.setWasmUrl(o);
+o.RuntimeLoader.setWasmUrl(a);

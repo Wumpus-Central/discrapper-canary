@@ -3,19 +3,19 @@ var r = n(200651);
 n(192379);
 var i = n(120356),
     s = n.n(i),
-    l = n(481060),
-    o = n(600164),
+    o = n(481060),
+    l = n(600164),
     a = n(388905),
-    c = n(990330),
-    u = n(971005);
+    c = n(256478),
+    u = n(20493);
 function d(e) {
     let { value: t, onChange: n, subText: i, muted: d, marginTopStyle: h } = e;
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(l.Z, {
         className: null != h ? h : u.marginTop20,
-        align: o.Z.Align.CENTER,
-        children: (0, r.jsx)(l.XZJ, {
+        align: l.Z.Align.CENTER,
+        children: (0, r.jsx)(o.XZJ, {
             value: t,
-            type: l.XZJ.Types.INVERTED,
+            type: o.XZJ.Types.INVERTED,
             onChange: (e, t) => n(t),
             className: c.checkbox,
             children: (0, r.jsx)(a.i_, {

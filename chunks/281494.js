@@ -12,9 +12,9 @@ n.d(t, {
 var r = n(544891),
     i = n(570140);
 n(904245);
-var o = n(598077);
+var a = n(598077);
 n(944486);
-var a = n(960048),
+var o = n(960048),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -61,7 +61,7 @@ async function h(e, t, n) {
         searchQuery: t
     });
     if (p.has(i)) return p.get(i);
-    let { users: a, next_index: l } = (
+    let { users: o, next_index: l } = (
             await r.tn.post({
                 url: s.ANM.GET_REFERRAL_ELIGIBLE_USERS,
                 body: {
@@ -74,7 +74,7 @@ async function h(e, t, n) {
             })
         ).body,
         u = {
-            users: a.map((e) => new o.Z(e)),
+            users: o.map((e) => new a.Z(e)),
             nextIndex: l
         };
     return p.set(i, u), u;
@@ -115,21 +115,21 @@ async function g(e) {
         n = new Map();
     for (let i of e)
         try {
-            var o;
+            var a;
             let e =
                 null !=
-                (o = (
+                (a = (
                     await r.tn.post({
                         url: s.ANM.CREATE_REFERRAL(i),
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
                 ).body)
-                    ? o
+                    ? a
                     : null;
             null != e && t.push(e), n.set(i, 1);
         } catch (e) {
-            a.Z.captureException(e), n.set(i, 2);
+            o.Z.captureException(e), n.set(i, 2);
         }
     return (
         i.Z.dispatch({

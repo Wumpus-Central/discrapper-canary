@@ -16,20 +16,20 @@ var r = n(200651),
     b = n(944486),
     y = n(594174),
     _ = n(431),
-    v = n(774343),
-    O = n(417363),
+    O = n(774343),
+    v = n(417363),
     C = n(941128),
-    S = n(780570),
-    j = n(278464),
-    E = n(276952),
-    x = n(682662),
+    j = n(780570),
+    S = n(278464),
+    x = n(276952),
+    E = n(682662),
     I = n(662146),
     N = n(674552),
     P = n(981631),
     w = n(474936),
     Z = n(871465),
     T = n(388032),
-    A = n(881991);
+    A = n(823306);
 let R = {
     origin: {
         x: -16,
@@ -45,9 +45,9 @@ let R = {
 function D(e) {
     var t, n;
     let { selected: p, user: f, badge: b, link: y, showProgressBadge: _ } = e,
-        v = (0, o.e7)([u.Z], () => u.Z.isEditorOpen),
-        [O, C] = i.useState(!1),
-        [S, j] = i.useState(!1),
+        O = (0, o.e7)([u.Z], () => u.Z.isEditorOpen),
+        [v, C] = i.useState(!1),
+        [j, S] = i.useState(!1),
         [w, D] = i.useState(null),
         [L, k] = i.useState(0),
         M = (0, l.Ie)('home'),
@@ -57,7 +57,7 @@ function D(e) {
         };
     if (null == f) return null;
     let B = T.NW.string(T.t.YUU0RE);
-    S && (B = s.K.get(P.wli) ? T.NW.string(T.t.nkq1l5) : T.NW.string(T.t.Be8Q5O));
+    j && (B = s.K.get(P.wli) ? T.NW.string(T.t.nkq1l5) : T.NW.string(T.t.Be8Q5O));
     let W = null;
     !p &&
         _ &&
@@ -65,8 +65,8 @@ function D(e) {
             className: A.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let V = p || O || v,
-        H = (0, r.jsx)(a.aRk, {
+    let V = p || v || O,
+        F = (0, r.jsx)(a.aRk, {
             selected: U || V,
             lowerBadge: b > 0 ? (0, N.Ne)(b) : null,
             upperBadge: W,
@@ -108,9 +108,9 @@ function D(e) {
                                 s.K.set(P.wli, e),
                                     e && s.K.set(Z.O5, !0),
                                     e ? (0, g.GN)('discodo') : (0, g.GN)('user_leave'),
-                                    j(!0),
+                                    S(!0),
                                     setTimeout(() => {
-                                        j(!1);
+                                        S(!1);
                                     }, 1000);
                             }
                         },
@@ -156,11 +156,11 @@ function D(e) {
             inlineSpecs: R,
             tutorialId: 'friends-list',
             position: 'right',
-            children: (0, r.jsxs)(x.H, {
+            children: (0, r.jsxs)(E.H, {
                 children: [
-                    (0, r.jsx)(E.Z, {
+                    (0, r.jsx)(x.Z, {
                         selected: p,
-                        hovered: O,
+                        hovered: v,
                         className: A.pill
                     }),
                     (0, r.jsx)(I.Z, {
@@ -168,7 +168,7 @@ function D(e) {
                         hideOnClick: !0,
                         text: B,
                         selected: p,
-                        children: H
+                        children: F
                     })
                 ]
             })
@@ -176,11 +176,11 @@ function D(e) {
     });
 }
 function L() {
-    let e = (0, j.n)(),
-        t = (0, o.e7)([C.Z, O.Z], () => {
-            let e = (0, c.E)(C.Z.activeItems, O.Z),
-                { total: t, progress: n } = S.lK(e),
-                r = S.xI(n, t);
+    let e = (0, S.n)(),
+        t = (0, o.e7)([C.Z, v.Z], () => {
+            let e = (0, c.E)(C.Z.activeItems, v.Z),
+                { total: t, progress: n } = j.lK(e),
+                r = j.xI(n, t);
             return r > 0 && r < 100;
         }),
         n = (0, f.If)(),
@@ -194,7 +194,7 @@ function L() {
         d = (0, p.q)(),
         h = n + a + d,
         g = h === a && a > 0 && n + d === 0,
-        m = v.Z.getHomeLink();
+        m = O.Z.getHomeLink();
     return (
         g && (m = P.Z5c.APPLICATION_STORE),
         (0, r.jsx)(D, {

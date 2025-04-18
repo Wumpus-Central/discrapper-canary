@@ -21,15 +21,15 @@ n.d(t, {
     n(388685);
 var r = n(772848),
     i = n(433517),
-    o = n(70956);
-let a = 'purchase_token',
-    s = 60 * o.Z.Millis.DAY;
+    a = n(70956);
+let o = 'purchase_token',
+    s = 60 * a.Z.Millis.DAY;
 function l() {
-    let e = i.K.get(a);
+    let e = i.K.get(o);
     if (null != e && e.expires >= Date.now()) return e.purchaseToken;
     let t = (0, r.Z)();
     return (
-        i.K.set(a, {
+        i.K.set(o, {
             purchaseToken: t,
             expires: Date.now() + s
         }),

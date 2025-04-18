@@ -4,25 +4,25 @@ class i extends Error {
         super(e), (this.name = 'TimeoutError');
     }
 }
-let o = (e, t, n) =>
-    new Promise((o, a) => {
+let a = (e, t, n) =>
+    new Promise((a, o) => {
         if ('number' != typeof t || t < 0) throw TypeError('Expected `milliseconds` to be a positive number');
-        if (t === 1 / 0) return void o(e);
+        if (t === 1 / 0) return void a(e);
         let s = setTimeout(() => {
             if ('function' == typeof n) {
                 try {
-                    o(n());
+                    a(n());
                 } catch (e) {
-                    a(e);
+                    o(e);
                 }
                 return;
             }
             let r = 'string' == typeof n ? n : `Promise timed out after ${t} milliseconds`,
                 s = n instanceof Error ? n : new i(r);
-            'function' == typeof e.cancel && e.cancel(), a(s);
+            'function' == typeof e.cancel && e.cancel(), o(s);
         }, t);
-        r(e.then(o, a), () => {
+        r(e.then(a, o), () => {
             clearTimeout(s);
         });
     });
-(e.exports = o), (e.exports.default = o), (e.exports.TimeoutError = i);
+(e.exports = a), (e.exports.default = a), (e.exports.TimeoutError = i);

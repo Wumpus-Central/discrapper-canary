@@ -8,8 +8,8 @@ n.d(t, {
     n(388685),
     n(539854),
     n(17089);
-var o,
-    a = n(756647),
+var a,
+    o = n(756647),
     s = n(442837),
     l = n(544891),
     c = n(761609);
@@ -68,7 +68,7 @@ function _(e, t) {
 let p = 1500,
     h = 10000,
     m = 1500,
-    g = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() => e()),
+    g = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() => e()),
     E = new c.R(),
     b = {
         handleConnectionOpen: () => {},
@@ -81,11 +81,11 @@ let p = 1500,
     O = () => Promise.resolve({ sessionId: void 0 }),
     I = (e) => {
         var t;
-        let { dispatcher: n, actionHandler: o, getFingerprint: c, getSessionId: f = O, TRACKING_URL: I, drainTimeoutOverride: S, waitFor: T } = e;
+        let { dispatcher: n, actionHandler: a, getFingerprint: c, getSessionId: f = O, TRACKING_URL: I, drainTimeoutOverride: S, waitFor: T } = e;
         function N(e) {
             if (null != i) return i;
             let t = e.fingerprint || c();
-            return null != t ? (0, a.s)(t) : null;
+            return null != t ? (0, o.s)(t) : null;
         }
         function A() {
             return 0 !== y.length && (null != i ? null != r : null != c());
@@ -137,21 +137,21 @@ let p = 1500,
                 return R(), !1;
             }),
             (b.handleTrack = function (e) {
-                let { event: t, properties: n, flush: r, fingerprint: i, resolve: o } = e;
+                let { event: t, properties: n, flush: r, fingerprint: i, resolve: a } = e;
                 return (
                     f().then((e) => {
-                        let { sessionId: a } = e,
+                        let { sessionId: o } = e,
                             s = {
                                 type: t,
                                 fingerprint: i,
                                 properties: d(
                                     {
                                         client_track_timestamp: Date.now(),
-                                        client_heartbeat_session_id: a
+                                        client_heartbeat_session_id: o
                                     },
                                     n
                                 ),
-                                resolve: o
+                                resolve: a
                             },
                             l = N(s);
                         null != l && (s.properties.client_uuid = E.generate(l)), y.push(s), y.length > h && (y = y.slice(-h)), r ? C({ shouldFlushOnNextTick: !0 }) : C({ shouldFlushOnNextTick: !1 });
@@ -167,5 +167,5 @@ let p = 1500,
                 super(...e), u(this, 'submitEventsImmediately', P);
             }
         }
-        return u(w, 'displayName', 'AnalyticsTrackingStore'), new w(n, o);
+        return u(w, 'displayName', 'AnalyticsTrackingStore'), new w(n, a);
     };

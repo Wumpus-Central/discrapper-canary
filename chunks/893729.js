@@ -1,4 +1,4 @@
-r.d(t, { Z: () => Z });
+r.d(t, { Z: () => M });
 var n = r(200651),
     i = r(192379),
     s = r(120356),
@@ -13,10 +13,10 @@ var n = r(200651),
     p = r(5192),
     d = r(981631),
     b = r(388032),
-    g = r(636510);
-function Z(e) {
+    Z = r(264700);
+function M(e) {
     var t;
-    let { guildId: r, role: s, theme: Z, content: j = b.NW.string(b.t['6OSasb']), className: M } = e,
+    let { guildId: r, role: s, theme: M, content: g = b.NW.string(b.t['6OSasb']), className: j } = e,
         O = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
         y = p.ZP.useName(r, null, O),
         m = (0, c.Kz)(s),
@@ -51,7 +51,7 @@ function Z(e) {
                     {},
                     (0, v.ZP)({
                         channelId: '0',
-                        content: j,
+                        content: g,
                         tts: void 0,
                         type: void 0,
                         messageReference: void 0,
@@ -78,19 +78,19 @@ function Z(e) {
                       }),
                 e)
             );
-        }, [O, j]),
-        x = {
+        }, [O, g]),
+        V = {
             nick: y,
             colorString: null != (t = s.colorString) ? t : void 0
         };
     return (0, n.jsx)(a.f6W, {
-        theme: Z,
+        theme: M,
         children: (e) =>
             (0, n.jsx)('div', {
-                className: o()(e, g.container, M),
+                className: o()(e, Z.container, j),
                 children: (0, n.jsx)(u.Z, {
                     hideTimestamp: !0,
-                    author: x,
+                    author: V,
                     roleIcon: m,
                     message: H,
                     isGroupStart: !0,

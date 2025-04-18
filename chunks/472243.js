@@ -2,8 +2,8 @@ n.d(t, { Z: () => I });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(100527),
     c = n(906732),
@@ -15,7 +15,7 @@ var i = n(120356),
     h = n(981631),
     m = n(474936),
     g = n(388032),
-    E = n(994867);
+    E = n(317727);
 function b(e, t, n) {
     return (
         t in e
@@ -71,7 +71,7 @@ function O(e, t) {
 function I(e) {
     var t, n, i, b;
     let { type: v, textValue: I, maxCharacterCount: S, showRemainingCharsAfterCount: T, className: N } = e,
-        A = (0, a.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
+        A = (0, o.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
         C = (0, u.Z)(),
         R = null != S ? S : C,
         P = null != (b = null != T ? T : S) ? b : C / 10,
@@ -89,7 +89,7 @@ function I(e) {
     return (0, r.jsx)(c.Gt, {
         value: G,
         children: (0, r.jsxs)('div', {
-            className: o()(N, E.characterCount),
+            className: a()(N, E.characterCount),
             children: [
                 (0, r.jsxs)('div', {
                     className: E.flairContainer,

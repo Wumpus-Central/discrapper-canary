@@ -18,7 +18,7 @@ var r = n(200651),
     C = n(384067),
     v = n(215023),
     x = n(388032),
-    O = n(379890);
+    O = n(806734);
 let j = (e) => {
         var t;
         let { handleTransition: n, numVisibleItems: a, isFetchingCategories: s, tab: u, isFullScreen: v } = e,

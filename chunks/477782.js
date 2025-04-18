@@ -1,40 +1,40 @@
-s.d(t, { default: () => d }), s(388685);
-var n = s(200651),
-    i = s(192379),
-    a = s(481060),
-    l = s(313201),
-    o = s(117984),
-    r = s(388032),
-    c = s(465867);
-function d(e) {
-    let { onClose: t, transitionState: s } = e,
-        d = (0, l.Dt)(),
-        [h, u] = i.useState('');
-    return (0, n.jsx)('form', {
+t.d(n, { default: () => f }), t(388685);
+var i = t(200651),
+    a = t(192379),
+    o = t(481060),
+    s = t(313201),
+    l = t(117984),
+    r = t(388032),
+    c = t(788428);
+function f(e) {
+    let { onClose: n, transitionState: t } = e,
+        f = (0, s.Dt)(),
+        [d, u] = a.useState('');
+    return (0, i.jsx)('form', {
         onSubmit: function (e) {
-            e.preventDefault(), (0, o.CM)(h), t();
+            e.preventDefault(), (0, l.CM)(d), n();
         },
-        children: (0, n.jsxs)(a.Y0X, {
-            transitionState: s,
-            'aria-labelledby': d,
+        children: (0, i.jsxs)(o.Y0X, {
+            transitionState: t,
+            'aria-labelledby': f,
             children: [
-                (0, n.jsxs)(a.hzk, {
+                (0, i.jsxs)(o.hzk, {
                     children: [
-                        (0, n.jsx)(a.X6q, {
-                            id: d,
+                        (0, i.jsx)(o.X6q, {
+                            id: f,
                             className: c.header,
                             variant: 'heading-xl/semibold',
                             children: r.NW.string(r.t['ISN+ND'])
                         }),
-                        (0, n.jsx)(a.olH, {
-                            onClick: t,
+                        (0, i.jsx)(o.olH, {
+                            onClick: n,
                             className: c.closeButton
                         }),
-                        (0, n.jsx)(a.xJW, {
+                        (0, i.jsx)(o.xJW, {
                             title: r.NW.string(r.t.OCAkGB),
                             className: c.name,
-                            children: (0, n.jsx)(a.oil, {
-                                value: h,
+                            children: (0, i.jsx)(o.oil, {
+                                value: d,
                                 onChange: u,
                                 maxLength: 100,
                                 placeholder: r.NW.string(r.t.eTVbt7),
@@ -44,17 +44,17 @@ function d(e) {
                         })
                     ]
                 }),
-                (0, n.jsxs)(a.mzw, {
+                (0, i.jsxs)(o.mzw, {
                     children: [
-                        (0, n.jsx)(a.zxk, {
+                        (0, i.jsx)(o.zxk, {
                             type: 'submit',
-                            disabled: '' === h,
+                            disabled: '' === d,
                             children: r.NW.string(r.t['ISN+ND'])
                         }),
-                        (0, n.jsx)(a.zxk, {
-                            onClick: t,
-                            look: a.zxk.Looks.LINK,
-                            color: a.zxk.Colors.PRIMARY,
+                        (0, i.jsx)(o.zxk, {
+                            onClick: n,
+                            look: o.zxk.Looks.LINK,
+                            color: o.zxk.Colors.PRIMARY,
                             children: r.NW.string(r.t['ETE/oK'])
                         })
                     ]

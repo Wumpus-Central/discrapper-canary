@@ -13,21 +13,21 @@ var i = n(200651),
     f = n(91140),
     h = n(297781),
     b = n(388032),
-    _ = n(921108),
-    y = n(206218);
+    _ = n(152790),
+    y = n(263930);
 let x = (e) => {
-    let { entry: t, onClose: n, onReaction: l, onRequestOpen: x, disableActivityProfileLinks: C, customCTA: v, popoutClassname: g, popoutPosition: N = 'right' } = e,
+    let { entry: t, onClose: n, onReaction: l, onRequestOpen: x, disableActivityProfileLinks: v, customCTA: C, popoutClassname: g, popoutPosition: N = 'right' } = e,
         j = r.useRef(null),
         P = (0, a.e7)([u.Z, c.Z], () => c.Z.getChannel(u.Z.getChannelId())),
-        O = (0, a.e7)([d.default], () => d.default.getUser(t.author_id)),
-        { nick: E, avatar: A } = r.useMemo(() => {
-            let e = null == O ? void 0 : O.getAvatarURL(null == P ? void 0 : P.guild_id, 48, !1);
+        E = (0, a.e7)([d.default], () => d.default.getUser(t.author_id)),
+        { nick: O, avatar: A } = r.useMemo(() => {
+            let e = null == E ? void 0 : E.getAvatarURL(null == P ? void 0 : P.guild_id, 48, !1);
             return {
-                nick: p.ZP.getName(null == P ? void 0 : P.guild_id, null == P ? void 0 : P.id, O),
+                nick: p.ZP.getName(null == P ? void 0 : P.guild_id, null == P ? void 0 : P.id, E),
                 avatar: e
             };
-        }, [O, P]);
-    return null == O
+        }, [E, P]);
+    return null == E
         ? null
         : (0, i.jsx)(s.yRy, {
               targetElementRef: j,
@@ -45,7 +45,7 @@ let x = (e) => {
                           },
                           onUserPopoutClosed: () => r(),
                           disableGameProfileLinks: !0,
-                          disableActivityProfileLinks: C
+                          disableActivityProfileLinks: v
                       })
                   });
               },
@@ -97,7 +97,7 @@ let x = (e) => {
                                           (0, i.jsx)('img', {
                                               className: _.avatar,
                                               src: A,
-                                              alt: b.NW.formatToPlainString(b.t.IzVXxc, { userName: E })
+                                              alt: b.NW.formatToPlainString(b.t.IzVXxc, { userName: O })
                                           }),
                                           (0, i.jsx)('div', {
                                               className: _.playerInfo,
@@ -108,7 +108,7 @@ let x = (e) => {
                                                           variant: 'text-md/medium',
                                                           color: 'text-primary',
                                                           lineClamp: 1,
-                                                          children: E
+                                                          children: O
                                                       }),
                                                       (0, i.jsx)(h.Gk, {
                                                           location: h.Gt.GAME_PROFILE,
@@ -117,8 +117,8 @@ let x = (e) => {
                                                   ]
                                               })
                                           }),
-                                          null != v
-                                              ? v
+                                          null != C
+                                              ? C
                                               : (0, i.jsx)('div', {
                                                     className: _.reactions,
                                                     children: (0, i.jsx)(s.n$P, { size: 'sm' })

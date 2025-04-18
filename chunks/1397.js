@@ -35,7 +35,7 @@ var r = n(200651),
     M = n(981631),
     L = n(815660),
     D = n(388032),
-    W = n(545462);
+    W = n(628829);
 function U(e, t, n) {
     return (
         t in e
@@ -229,7 +229,7 @@ class F extends i.PureComponent {
             U(this, 'handleVerifyPhone', () => {
                 (0, s.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e('76540'), n.e('17078')]).then(n.bind(n, 607018));
+                        let { default: e } = await Promise.all([n.e('76540'), n.e('84575')]).then(n.bind(n, 607018));
                         return (t) => (0, r.jsx)(e, B({ reason: E.L.GUILD_PHONE_REQUIRED }, t));
                     },
                     { modalKey: L.M }

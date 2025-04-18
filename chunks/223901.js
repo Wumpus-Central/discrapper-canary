@@ -5,7 +5,7 @@ var n = t(200651),
     o = t(91159),
     s = t(593130),
     _ = t(388032),
-    i = t(837121);
+    i = t(137642);
 function d(e) {
     let { channel: a, onClose: t, transitionState: d } = e;
     return (

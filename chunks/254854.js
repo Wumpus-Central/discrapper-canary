@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(570140);
 function i(e, t, n) {
     return (
@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +29,12 @@ function o(e) {
     }
     return e;
 }
-let a = {
-    show(e, t, n, i, o) {
+let o = {
+    show(e, t, n, i, a) {
         r.Z.dispatch({
             type: 'NOTICE_SHOW',
             notice: {
-                id: o,
+                id: a,
                 type: e,
                 message: t,
                 buttonText: n,
@@ -43,6 +43,6 @@ let a = {
         });
     },
     dismiss(e) {
-        r.Z.dispatch(o({ type: 'NOTICE_DISMISS' }, e));
+        r.Z.dispatch(a({ type: 'NOTICE_DISMISS' }, e));
     }
 };

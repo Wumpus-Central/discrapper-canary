@@ -3,7 +3,7 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     s = n(921801),
-    a = n(849836);
+    a = n(632805);
 function l(e) {
     let { children: t, title: n, description: l, webSetting: o } = e;
     return (0, r.jsx)(s.F, {

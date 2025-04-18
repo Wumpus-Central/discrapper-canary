@@ -1,7 +1,7 @@
 var r = n(56135),
     i = n(888968),
-    o = n(649786),
-    a = n(718332),
+    a = n(649786),
+    o = n(718332),
     s = n(320114),
     l = n(82075),
     c = 1,
@@ -30,7 +30,7 @@ e.exports = function (e, t, n, r, O, S, T) {
         case d:
         case f:
         case h:
-            return o(+e, +t);
+            return a(+e, +t);
         case _:
             return e.name == t.name && e.message == t.message;
         case m:
@@ -44,7 +44,7 @@ e.exports = function (e, t, n, r, O, S, T) {
             var C = T.get(e);
             if (C) return C == t;
             (r |= u), T.set(e, t);
-            var R = a(N(e), N(t), r, O, S, T);
+            var R = o(N(e), N(t), r, O, S, T);
             return T.delete(e), R;
         case b:
             if (I) return I.call(e) == I.call(t);

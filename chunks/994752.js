@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(664674);
+    a = n(570140),
+    o = n(664674);
 function s(e, t, n) {
     return (
         t in e
@@ -21,11 +21,11 @@ let l = !1,
 function u(e) {
     let { leaderboardResponse: t, intervalOffset: n } = e,
         { leaderboard: r } = t,
-        { guild_id: i, leaderboard_id: o } = r,
-        a = c.get(n);
-    null == a && ((a = new Map()), c.set(n, a));
-    let s = a.get(i);
-    null == s && ((s = new Map()), a.set(i, s)), s.set(o, t);
+        { guild_id: i, leaderboard_id: a } = r,
+        o = c.get(n);
+    null == o && ((o = new Map()), c.set(n, o));
+    let s = o.get(i);
+    null == s && ((s = new Map()), o.set(i, s)), s.set(a, t);
 }
 function d() {
     c = new Map();
@@ -39,7 +39,7 @@ class f extends (r = i.ZP.Store) {
     get(e, t) {
         var n;
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return l ? a.Z : null == (n = this.getLeaderboardResponse(e, t, r)) ? void 0 : n.leaderboard;
+        return l ? o.Z : null == (n = this.getLeaderboardResponse(e, t, r)) ? void 0 : n.leaderboard;
     }
     getLeaderboardResponse(e, t) {
         var n, r;
@@ -48,7 +48,7 @@ class f extends (r = i.ZP.Store) {
     }
 }
 s(f, 'displayName', 'GuildLeaderboardStore');
-let _ = new f(o.Z, {
+let _ = new f(a.Z, {
     CONNECTION_OPEN: d,
     SET_GUILD_LEADERBOARD: u
 });

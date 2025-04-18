@@ -1,8 +1,8 @@
 n.d(t, { Z: () => H }), n(539854), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(442837),
@@ -29,7 +29,7 @@ var r = n(200651),
     P = n(5192),
     w = n(981631),
     D = n(388032),
-    L = n(184639);
+    L = n(486850);
 function x(e, t, n) {
     return (
         t in e
@@ -88,8 +88,8 @@ function U(e, t) {
         r,
         i = G(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -98,8 +98,8 @@ function G(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let B = [];
@@ -128,7 +128,7 @@ class F extends i.PureComponent {
     render() {
         let { activity: e, isRefreshChatInputEnabled: t } = this.props;
         return (0, r.jsxs)('div', {
-            className: a()(L.activityInviteEducation, { [L.activityInviteEducationFadeIn]: this.state.fadeIn }),
+            className: o()(L.activityInviteEducation, { [L.activityInviteEducationFadeIn]: this.state.fadeIn }),
             children: [
                 t
                     ? (0, r.jsx)(d.whL, {
@@ -167,7 +167,7 @@ function V(e) {
     });
 }
 function Z(e) {
-    let { guildId: t, activity: n, showInviteEducation: i, isFocused: o, typingUsers: s, className: c, channel: u, isThreadCreation: f, renderDots: _, poggermodeEnabled: p, isComboing: g } = e,
+    let { guildId: t, activity: n, showInviteEducation: i, isFocused: a, typingUsers: s, className: c, channel: u, isThreadCreation: f, renderDots: _, poggermodeEnabled: p, isComboing: g } = e,
         { rateLimitPerUser: E } = u,
         y = N.default.getCurrentUser(),
         v = O.Z.getGuild(t),
@@ -187,7 +187,7 @@ function Z(e) {
         return i && null != n
             ? (0, r.jsx)(F, {
                   activity: n,
-                  isFocused: o,
+                  isFocused: a,
                   isRefreshChatInputEnabled: A
               })
             : (0, r.jsx)(V, {
@@ -212,10 +212,10 @@ function Z(e) {
                   }))
                 : T.length > 3 && (M = D.NW.string(D.t.uVDhqa)),
         (0, r.jsxs)('div', {
-            className: a()(
+            className: o()(
                 L.typing,
                 {
-                    'stop-animation': !o,
+                    'stop-animation': !a,
                     [L.isComboing]: p && g
                 },
                 c
@@ -253,18 +253,18 @@ function Z(e) {
 function H(e) {
     var { channel: t, isThreadCreation: n = !1 } = e,
         i = U(e, ['channel', 'isThreadCreation']);
-    let o = (0, c.e7)([S.Z], () => S.Z.findActivity((e) => null != e.application_id)),
-        a = (0, c.e7)([E.ZP, v.default], () => E.ZP.getUserCombo(v.default.getId(), t.id)),
-        s = (0, c.e7)([y.Z, p.Z], () => (0, _.Z)(t, o, y.Z, p.Z)),
+    let a = (0, c.e7)([S.Z], () => S.Z.findActivity((e) => null != e.application_id)),
+        o = (0, c.e7)([E.ZP, v.default], () => E.ZP.getUserCombo(v.default.getId(), t.id)),
+        s = (0, c.e7)([y.Z, p.Z], () => (0, _.Z)(t, a, y.Z, p.Z)),
         l = j(M({}, i), {
             baseTextColor: (0, d.dQu)(u.Z.colors.INTERACTIVE_NORMAL).hex(),
             activeTextColor: (0, d.dQu)(u.Z.colors.INTERACTIVE_NORMAL).hex(),
             showInviteEducation: s,
-            activity: o,
+            activity: a,
             typingUsers: (0, c.e7)([T.Z], () => T.Z.getTypingUsers(t.id)),
             isFocused: (0, c.e7)([A.Z], () => A.Z.isFocused()),
             guildId: t.guild_id,
-            isComboing: null != a,
+            isComboing: null != o,
             channel: t,
             isThreadCreation: n
         });

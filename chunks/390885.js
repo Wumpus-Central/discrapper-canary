@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var r = n(290486),
     i = n(291476),
     s = n(731965),
-    l = n(433517),
-    o = n(710845),
+    o = n(433517),
+    l = n(710845),
     a = n(626135),
     c = n(630724),
     u = n(981631);
@@ -50,7 +50,7 @@ function h(e, t) {
         e
     );
 }
-function p(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -69,55 +69,55 @@ function p(e, t) {
     }
     return i;
 }
-function g(e) {
+function p(e) {
     var t = (function (e, t) {
-        if ('object' !== f(e) || null === e) return e;
+        if ('object' !== m(e) || null === e) return e;
         var n = e[Symbol.toPrimitive];
         if (void 0 !== n) {
             var r = n.call(e, t || 'default');
-            if ('object' !== f(r)) return r;
+            if ('object' !== m(r)) return r;
             throw TypeError('@@toPrimitive must return a primitive value.');
         }
         return ('string' === t ? String : Number)(e);
     })(e, 'string');
-    return 'symbol' === f(t) ? t : String(t);
+    return 'symbol' === m(t) ? t : String(t);
 }
-function f(e) {
+function m(e) {
     return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
 }
-let m = 'UserFlowAnalyticsStore_current',
+let f = 'UserFlowAnalyticsStore_current',
     _ = 'UserFlowAnalyticsStore';
-function N(e) {
+function x(e) {
     if (e === c.MK.UNKNOWN) return null;
-    let t = l.K.get(''.concat(_, '-').concat(e));
+    let t = o.K.get(''.concat(_, '-').concat(e));
     if (null == t) return null;
     let { version: n } = t,
-        r = p(t, ['version']);
+        r = g(t, ['version']);
     return 1 !== n ? null : r;
 }
-new o.Z('UserFlowAnalytics');
-let x = (0, r.U)()(
+new l.Z('UserFlowAnalytics');
+let N = (0, r.U)()(
     (0, i.XR)((e, t) => ({
         flows: {},
         currentFlow: null,
         activeFlow: () => {
             var e;
-            let n = null != (e = t().currentFlow) ? e : l.K.get(m);
+            let n = null != (e = t().currentFlow) ? e : o.K.get(f);
             if (null == n) return null;
             let { [n]: r } = t().flows,
-                i = null != r ? r : N(n);
+                i = null != r ? r : x(n);
             return (null == i ? void 0 : i.currentStep) != null ? n : null;
         }
     }))
 );
 function b(e, t) {
-    let n = x.getState().flows,
+    let n = N.getState().flows,
         { [e]: r } = n,
-        i = p(n, [e].map(g)),
-        l = null != r ? r : N(e);
-    ((null == l ? void 0 : l.currentStep) == null || l.currentStep !== t) &&
+        i = g(n, [e].map(p)),
+        o = null != r ? r : x(e);
+    ((null == o ? void 0 : o.currentStep) == null || o.currentStep !== t) &&
         (0, s.j)(() => {
-            x.setState({
+            N.setState({
                 flows: h(d({}, i), {
                     [e]: {
                         type: e,
@@ -137,17 +137,17 @@ function E(e, t) {
         r = e;
     if (e === c.MK.ANY) {
         var i;
-        r = null != (i = x.getState().activeFlow()) ? i : c.MK.UNKNOWN;
+        r = null != (i = N.getState().activeFlow()) ? i : c.MK.UNKNOWN;
     }
-    let l = x.getState().flows,
-        { [r]: o } = l,
-        a = p(l, [r].map(g)),
-        u = null != o ? o : N(r);
+    let o = N.getState().flows,
+        { [r]: l } = o,
+        a = g(o, [r].map(p)),
+        u = null != l ? l : x(r);
     null != u &&
         null != u.currentStep &&
         u.currentStep !== t &&
         (0, s.j)(() => {
-            x.setState({
+            N.setState({
                 flows: h(d({}, a), {
                     [r]: h(d({}, u), {
                         lastStep: u.currentStep,
@@ -162,9 +162,9 @@ function E(e, t) {
         });
 }
 function v() {
-    return null != x.getState().activeFlow();
+    return null != N.getState().activeFlow();
 }
-x.subscribe(
+N.subscribe(
     (e) => (null != e.currentFlow ? e.flows[e.currentFlow] : void 0),
     (e) => {
         var t;
@@ -173,7 +173,7 @@ x.subscribe(
             (!(function (e) {
                 if (e.type === c.MK.UNKNOWN) return;
                 let t = ''.concat(_, '-').concat(e.type);
-                e.ended ? (l.K.remove(t), l.K.remove(m)) : (l.K.set(''.concat(_, '-').concat(e.type), h(d({}, e), { version: 1 })), l.K.set(m, e.type));
+                e.ended ? (o.K.remove(t), o.K.remove(f)) : (o.K.set(''.concat(_, '-').concat(e.type), h(d({}, e), { version: 1 })), o.K.set(f, e.type));
             })(e),
             a.default.track(
                 u.rMx.NUO_TRANSITION,
@@ -187,10 +187,10 @@ x.subscribe(
             ),
             e.ended)
         ) {
-            let t = d({}, x.getState().flows);
+            let t = d({}, N.getState().flows);
             delete t[e.type],
                 (0, s.j)(() => {
-                    x.setState({
+                    N.setState({
                         flows: t,
                         currentFlow: null
                     });

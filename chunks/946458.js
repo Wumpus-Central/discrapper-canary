@@ -5,7 +5,7 @@ var r = n(442837),
     l = n(481060),
     s = n(596454),
     a = n(339085),
-    o = n(278414);
+    o = n(939790);
 function c(e) {
     let { reactionEmoji: t } = e,
         n = (0, r.e7)([a.ZP], () => ((null == t ? void 0 : t.emojiId) != null ? a.ZP.getUsableCustomEmojiById(t.emojiId) : null));

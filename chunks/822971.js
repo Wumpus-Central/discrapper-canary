@@ -10,19 +10,19 @@ function r(e) {
 function i(...e) {
     return e.map((e) => n(e)).join('');
 }
-function o(e) {
+function a(e) {
     let t = e[e.length - 1];
     return 'object' == typeof t && t.constructor === Object ? (e.splice(e.length - 1, 1), t) : {};
 }
-function a(...e) {
-    return '(' + (o(e).capture ? '' : '?:') + e.map((e) => n(e)).join('|') + ')';
+function o(...e) {
+    return '(' + (a(e).capture ? '' : '?:') + e.map((e) => n(e)).join('|') + ')';
 }
 e.exports = function (e) {
     let n = {
             scope: 'keyword',
             match: /\b(yield|return|let|do|match|use)!/
         },
-        o = ['if', 'else', 'endif', 'line', 'nowarn', 'light', 'r', 'i', 'I', 'load', 'time', 'help', 'quit'],
+        a = ['if', 'else', 'endif', 'line', 'nowarn', 'light', 'r', 'i', 'I', 'load', 'time', 'help', 'quit'],
         s = ['bool', 'byte', 'sbyte', 'int8', 'int16', 'int32', 'uint8', 'uint16', 'uint32', 'int', 'uint', 'int64', 'uint64', 'nativeint', 'unativeint', 'decimal', 'float', 'double', 'float32', 'single', 'char', 'string', 'unit', 'bigint', 'option', 'voption', 'list', 'array', 'seq', 'byref', 'exn', 'inref', 'nativeptr', 'obj', 'outref', 'voidptr', 'Result'],
         l = {
             keyword: ['abstract', 'and', 'as', 'assert', 'base', 'begin', 'class', 'default', 'delegate', 'do', 'done', 'downcast', 'downto', 'elif', 'else', 'end', 'exception', 'extern', 'finally', 'fixed', 'for', 'fun', 'function', 'global', 'if', 'in', 'inherit', 'inline', 'interface', 'internal', 'lazy', 'let', 'match', 'member', 'module', 'mutable', 'namespace', 'new', 'of', 'open', 'or', 'override', 'private', 'public', 'rec', 'return', 'static', 'struct', 'then', 'to', 'try', 'type', 'upcast', 'use', 'val', 'void', 'when', 'while', 'with', 'yield'],
@@ -47,13 +47,13 @@ e.exports = function (e) {
         },
         p = function ({ includeEqual: e }) {
             let n,
-                o = i('[', ...Array.from((n = e ? '!%&*+-/<=>@^|~?' : '!%&*+-/<>@^|~?')).map(t), ']'),
-                s = a(o, /\./),
+                a = i('[', ...Array.from((n = e ? '!%&*+-/<=>@^|~?' : '!%&*+-/<>@^|~?')).map(t), ']'),
+                s = o(a, /\./),
                 l = i(s, r(s)),
-                c = a(i(l, s, '*'), i(o, '+'));
+                c = o(i(l, s, '*'), i(a, '+'));
             return {
                 scope: 'operator',
-                match: a(c, /:\?>/, /:\?/, /:>/, /:=/, /::?/, /\$/),
+                match: o(c, /:\?>/, /:\?/, /:>/, /:=/, /::?/, /\$/),
                 relevance: 0
             };
         },
@@ -61,9 +61,9 @@ e.exports = function (e) {
         m = p({ includeEqual: !1 }),
         g = function (t, n) {
             return {
-                begin: i(t, r(i(/\s*/, a(/\w/, /'/, /\^/, /#/, /``/, /\(/, /{\|/)))),
+                begin: i(t, r(i(/\s*/, o(/\w/, /'/, /\^/, /#/, /``/, /\(/, /{\|/)))),
                 beginScope: n,
-                end: r(a(/\n/, /=/)),
+                end: r(o(/\n/, /=/)),
                 relevance: 0,
                 keywords: e.inherit(l, { type: s }),
                 contains: [c, _, e.inherit(d, { scope: null }), m]
@@ -95,7 +95,7 @@ e.exports = function (e) {
             match: /\b[_a-z]\w*(?=\s*\{)/
         },
         O = {
-            begin: [/^\s*/, i(/#/, a(...o)), /\b/],
+            begin: [/^\s*/, i(/#/, o(...a)), /\b/],
             beginScope: { 2: 'meta' },
             end: r(/\s|$/)
         },
@@ -147,7 +147,7 @@ e.exports = function (e) {
         },
         w = {
             scope: 'string',
-            match: i(/'/, a(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
+            match: i(/'/, o(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
         };
     return (
         (A.contains = [R, C, T, S, w, n, c, d, E, v, O, I, _, h]),

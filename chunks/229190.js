@@ -3,7 +3,7 @@ var C = B(200651),
     Q = B(192379),
     w = B(481060),
     D = B(388032),
-    f = B(347848);
+    f = B(404922);
 function E(A) {
     let { showSecondaryColor: g, palette: B, onPrimaryColorChange: E, onSecondaryColorChange: v } = A,
         I = Q.useRef(null);

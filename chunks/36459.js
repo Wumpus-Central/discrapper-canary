@@ -1,11 +1,11 @@
 n.d(t, {
-    $Y: () => P,
+    $Y: () => R,
     JK: () => p,
     Je: () => A,
     T9: () => D,
     UE: () => C,
-    Xx: () => f,
-    mm: () => R,
+    Xx: () => P,
+    mm: () => f,
     qY: () => S
 }),
     n(388685);
@@ -107,7 +107,7 @@ async function A(e) {
         ).body
     );
 }
-async function R(e, t) {
+async function f(e, t) {
     return (
         await r.tn.del({
             url: _.ANM.GUILD_AUTOMOD_RULE(t, e),
@@ -116,14 +116,14 @@ async function R(e, t) {
         !0
     );
 }
-async function P(e) {
+async function R(e) {
     let t = await r.tn.get({
         url: _.ANM.GUILD_AUTOMOD_RULES(e),
         rejectWithError: !1
     });
     return Array.isArray(t.body) ? t.body.map(T) : [];
 }
-async function f(e, t, n) {
+async function P(e, t, n) {
     a.Z.can(_.Plq.MANAGE_MESSAGES, t) &&
         (await r.tn.post({
             url: _.ANM.GUILD_AUTOMOD_ALERT_ACTION(t.guild_id),

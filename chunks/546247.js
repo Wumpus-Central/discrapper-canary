@@ -5,7 +5,7 @@ var i = n(120356),
     l = n.n(i),
     o = n(481060),
     a = n(998502),
-    s = n(488482);
+    s = n(939630);
 let c = a.ZP.getEnableHardwareAcceleration()
     ? function (e) {
           let { eventTargetRef: t } = e;

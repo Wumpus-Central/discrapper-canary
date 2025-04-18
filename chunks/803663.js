@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(359110),
-    a = n(922482),
+    a = n(359110),
+    o = n(922482),
     s = n(146085),
     l = n(750154),
     c = n(592125),
@@ -20,7 +20,7 @@ function p(e) {
         y = (0, i.e7)([u.Z], () => null != b && u.Z.can(s.gl, b), [b]);
     if (!(0, l.dS)(t) || !y || null == g || null == m) return null;
     let v = (e) => {
-        e.stopPropagation(), null == n || n({ action: 'PRESS_STAGE_CHANNEL_LISTEN_BUTTON' }), a.AC(g, m), (0, o.Kh)(m), null == p || p();
+        e.stopPropagation(), null == n || n({ action: 'PRESS_STAGE_CHANNEL_LISTEN_BUTTON' }), o.AC(g, m), (0, a.Kh)(m), null == p || p();
     };
     return (0, r.jsx)(f.tG, {
         text: _.NW.string(_.t.ZYO5OD),

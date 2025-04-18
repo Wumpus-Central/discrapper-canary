@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(434404),
-    a = n(981631);
+    a = n(434404),
+    o = n(981631);
 function s(e, t, n) {
     return (
         t in e
@@ -57,9 +57,9 @@ function u(e, t) {
     );
 }
 function d(e) {
-    o.Z.open(e, a.pNK.SOUNDBOARD),
+    a.Z.open(e, o.pNK.SOUNDBOARD),
         (0, i.ZDy)(async () => {
-            let { default: t } = await Promise.all([n.e('56035'), n.e('42564')]).then(n.bind(n, 758961));
+            let { default: t } = await Promise.all([n.e('56035'), n.e('34057')]).then(n.bind(n, 758961));
             return (n) => (0, r.jsx)(t, u(l({}, n), { guildId: e }));
         });
 }

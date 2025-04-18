@@ -12,8 +12,8 @@ n.d(t, {
     n(953529);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(166459),
@@ -29,7 +29,7 @@ var r = n(200651),
     b = n(273031),
     y = n(859235),
     v = n(388032),
-    O = n(234541);
+    O = n(739846);
 function I(e, t, n) {
     return (
         t in e
@@ -84,13 +84,13 @@ function N(e, t) {
 }
 let A = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/avif', 'video/quicktime', 'video/mp4'];
 function C(e) {
-    let { alt: t, spoiler: n, renderContent: o, size: a } = e,
+    let { alt: t, spoiler: n, renderContent: a, size: o } = e,
         [s, l] = i.useState(!1);
     return (0, r.jsx)(p.aQ.Provider, {
         value: !n,
         children: (0, r.jsx)(p.ZP, {
             containerStyles:
-                a === y.q.CLIP
+                o === y.q.CLIP
                     ? {
                           borderBottomLeftRadius: 0,
                           borderBottomRightRadius: 0,
@@ -104,7 +104,7 @@ function C(e) {
                 (0, r.jsxs)('div', {
                     className: O.spoilerWrapper,
                     children: [
-                        o(e),
+                        a(e),
                         (0, r.jsxs)('div', {
                             className: O.tags,
                             children: [
@@ -128,7 +128,7 @@ function C(e) {
     });
 }
 function R(e) {
-    let { file: t, alt: n, spoiler: o, size: s = y.q.MEDIUM, onMouseEnter: c } = e,
+    let { file: t, alt: n, spoiler: a, size: s = y.q.MEDIUM, onMouseEnter: c } = e,
         [u, d] = i.useState(),
         [f, _] = i.useState({
             width: 0,
@@ -166,7 +166,7 @@ function R(e) {
                     ? (0, r.jsx)(r.Fragment, {})
                     : (0, r.jsx)('img', {
                           src: u,
-                          className: a()(O.media, {
+                          className: o()(O.media, {
                               [O.spoiler]: e,
                               [O.imageSmall]: p
                           }),
@@ -192,21 +192,21 @@ function R(e) {
         }, [u, h]);
     return (0, r.jsx)('div', {
         onMouseEnter: c,
-        className: a()(O.mediaContainer, { [O.imageSmall]: p }),
+        className: o()(O.mediaContainer, { [O.imageSmall]: p }),
         children: (0, r.jsx)(l.P3F, {
             onClick: m,
             className: O.clickableMedia,
             children: (0, r.jsx)(C, {
                 size: s,
                 alt: n,
-                spoiler: o,
+                spoiler: a,
                 renderContent: h
             })
         })
     });
 }
 function P(e) {
-    let { file: t, alt: n, spoiler: o, size: s = y.q.MEDIUM, onMouseEnter: l, onVideoLoadError: c } = e,
+    let { file: t, alt: n, spoiler: a, size: s = y.q.MEDIUM, onMouseEnter: l, onVideoLoadError: c } = e,
         [u, d] = i.useState(),
         f = i.useRef(null);
     return (
@@ -226,12 +226,12 @@ function P(e) {
             children: (0, r.jsx)(C, {
                 size: s,
                 alt: n,
-                spoiler: o,
+                spoiler: a,
                 renderContent: (e) =>
                     (0, r.jsx)(h.Z, {
                         ref: f,
                         src: u,
-                        className: a()(O.media, {
+                        className: o()(O.media, {
                             [O.spoiler]: e,
                             [O.sizeClip]: s === y.q.CLIP
                         }),
@@ -245,21 +245,21 @@ function P(e) {
 }
 function w(e) {
     var t;
-    let { upload: n, size: o = y.q.MEDIUM, onMouseEnter: s } = e,
+    let { upload: n, size: a = y.q.MEDIUM, onMouseEnter: s } = e,
         [l, c] = i.useState(!1),
-        u = o === y.q.SMALL;
+        u = a === y.q.SMALL;
     return n.isImage && n.item.platform === d.ow.WEB
         ? (0, r.jsx)(R, {
               file: n.item.file,
               alt: n.description,
               spoiler: n.spoiler,
-              size: o,
+              size: a,
               onMouseEnter: s
           })
         : !l && n.isVideo && n.item.platform === d.ow.WEB
           ? (0, r.jsx)(P, {
                 file: n.item.file,
-                size: o,
+                size: a,
                 alt: n.description,
                 spoiler: n.spoiler,
                 onMouseEnter: s,
@@ -267,7 +267,7 @@ function w(e) {
             })
           : (0, r.jsx)('div', {
                 onMouseEnter: s,
-                className: a()(O.icon, O.__invalid_imageContainer, {
+                className: o()(O.icon, O.__invalid_imageContainer, {
                     [O[null != (t = n.classification) ? t : '']]: !0,
                     [O.imageSmall]: u
                 }),
@@ -283,7 +283,7 @@ function w(e) {
             });
 }
 function D(e) {
-    let { channelId: t, draftType: n, upload: o, keyboardModeEnabled: d, label: p, size: h = y.q.MEDIUM, canEdit: g = !0, hideFileName: I = !1, clip: T } = e,
+    let { channelId: t, draftType: n, upload: a, keyboardModeEnabled: d, label: p, size: h = y.q.MEDIUM, canEdit: g = !0, hideFileName: I = !1, clip: T } = e,
         A = null != T,
         C = (h = A ? y.q.CLIP : h) === y.q.SMALL,
         R = (0, s.e7)([m.Z], () => {
@@ -297,14 +297,14 @@ function D(e) {
                         u.default,
                         N(S({}, e), {
                             draftType: n,
-                            upload: o,
+                            upload: a,
                             channelId: t,
                             onSubmit: (e) => {
-                                let { name: r, description: i, spoiler: a } = e;
-                                c.Z.update(t, o.id, n, {
+                                let { name: r, description: i, spoiler: o } = e;
+                                c.Z.update(t, a.id, n, {
                                     filename: r,
                                     description: i,
-                                    spoiler: a
+                                    spoiler: o
                                 });
                             }
                         })
@@ -316,57 +316,57 @@ function D(e) {
             children: [
                 g
                     ? (0, r.jsx)(b.Z, {
-                          className: a()({ [O.action]: C }),
+                          className: o()({ [O.action]: C }),
                           tooltip: A ? v.NW.string(v.t.MYgdY2) : v.NW.string(v.t.cuurzM),
-                          onClick: () => c.Z.update(t, o.id, n, { spoiler: !o.spoiler }),
-                          children: o.spoiler
+                          onClick: () => c.Z.update(t, a.id, n, { spoiler: !a.spoiler }),
+                          children: a.spoiler
                               ? (0, r.jsx)(l.kZF, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: a()({ [O.actionBarIcon]: C })
+                                    className: o()({ [O.actionBarIcon]: C })
                                 })
                               : (0, r.jsx)(l.tEF, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: a()({ [O.actionBarIcon]: C })
+                                    className: o()({ [O.actionBarIcon]: C })
                                 })
                       })
                     : null,
                 g && !A
                     ? (0, r.jsx)(b.Z, {
-                          className: a()({ [O.action]: C }),
+                          className: o()({ [O.action]: C }),
                           tooltip: v.NW.string(v.t.Y8ujqq),
                           onClick: P,
                           children: (0, r.jsx)(l.vdY, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: a()({ [O.actionBarIcon]: C })
+                              className: o()({ [O.actionBarIcon]: C })
                           })
                       })
                     : null,
                 (0, r.jsx)(b.Z, {
-                    className: a()({ [O.action]: C }),
+                    className: o()({ [O.action]: C }),
                     tooltip: A ? v.NW.string(v.t.MskAXV) : v.NW.string(v.t.vN7REx),
-                    onClick: () => c.Z.remove(t, o.id, n),
+                    onClick: () => c.Z.remove(t, a.id, n),
                     dangerous: !0,
                     children: (0, r.jsx)(l.XHJ, {
                         size: 'md',
                         color: 'currentColor',
-                        className: a()({ [O.actionBarIcon]: C })
+                        className: o()({ [O.actionBarIcon]: C })
                     })
                 })
             ]
         }),
         draftType: n,
-        id: o.id,
+        id: a.id,
         channelId: t,
         handleEditModal: P,
         keyboardModeEnabled: d,
         size: h,
-        className: a()({ [O.attachmentItemSmall]: C }),
+        className: o()({ [O.attachmentItemSmall]: C }),
         children: [
             (0, r.jsx)(w, {
-                upload: o,
+                upload: a,
                 size: h
             }),
             !I &&
@@ -376,7 +376,7 @@ function D(e) {
                     children: (0, r.jsx)(l.Text, {
                         className: O.filename,
                         variant: 'text-sm/normal',
-                        children: null != p ? p : o.filename
+                        children: null != p ? p : a.filename
                     })
                 }),
             A &&

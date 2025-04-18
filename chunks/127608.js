@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(388032);
-function a(e, t, n) {
+    a = n(388032);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -68,9 +68,9 @@ function u() {
             (0, r.jsx)(
                 t,
                 c(s({}, n), {
-                    header: o.NW.string(o.t.GFr0GR),
-                    body: o.NW.string(o.t.QSk6Ex),
-                    confirmText: o.NW.string(o.t.BK8LKy),
+                    header: a.NW.string(a.t.GFr0GR),
+                    body: a.NW.string(a.t.QSk6Ex),
+                    confirmText: a.NW.string(a.t.BK8LKy),
                     onConfirm: e
                 })
             );

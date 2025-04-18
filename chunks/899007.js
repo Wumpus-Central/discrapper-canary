@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(420660),
@@ -19,7 +19,7 @@ var r = n(200651),
     y = n(228168),
     v = n(981631),
     O = n(474936),
-    I = n(161502);
+    I = n(487784);
 function S(e, t, n) {
     return (
         t in e
@@ -74,7 +74,7 @@ function A(e, t) {
 }
 let C = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
 function R(e) {
-    let { user: t, displayProfile: n, guildId: o, channelId: h, profileType: S, animateOnHover: N, onOpenProfile: R, className: P, previewStatus: w } = e,
+    let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: S, animateOnHover: N, onOpenProfile: R, className: P, previewStatus: w } = e,
         { theme: D } = (0, b.z)(),
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: x } = (0, m.KZ)(),
@@ -88,7 +88,7 @@ function R(e) {
         })),
         F = void 0 !== w ? w : G,
         V = S === y.y0.FULL_SIZE ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
-        Z = a()(
+        Z = o()(
             I.avatar,
             {
                 [I.biteSize]: S === y.y0.BITE_SIZE,
@@ -103,7 +103,7 @@ function R(e) {
             eventHandlers: Y
         } = (0, E.Z)({
             user: t,
-            guildId: null != n ? n.guildId : o,
+            guildId: null != n ? n.guildId : a,
             size: V,
             animateOnHover: N
         }),
@@ -130,7 +130,7 @@ function R(e) {
         : (0, r.jsx)(
               l.P3F,
               A(T({}, Y), {
-                  className: a()(Z, I.clickable),
+                  className: o()(Z, I.clickable),
                   focusProps: { ringClassName: I.focusRing },
                   onClick: () => {
                       x({

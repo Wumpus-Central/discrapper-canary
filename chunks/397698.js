@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(776862),
-    a = n(306680),
+    a = n(776862),
+    o = n(306680),
     s = n(626135),
     l = n(499254),
     c = n(827498),
@@ -40,10 +40,10 @@ function _(e) {
 }
 function p(e) {
     let { context: t, openInPopout: f, analyticsLocation: p, initialState: h } = e;
-    f && (0, o.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
+    f && (0, a.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
     let m = f ? i.u1M : i.z1l;
     (0, l.yT)(c.ti.DISMISSED), (0, l.__)(c._b.VOICE, void 0, h);
-    let g = 'contextless' !== t.type && (a.ZP.hasUnread(t.channel.id) || a.ZP.getMentionCount(t.channel.id) > 0);
+    let g = 'contextless' !== t.type && (o.ZP.hasUnread(t.channel.id) || o.ZP.getMentionCount(t.channel.id) > 0);
     return (
         s.default.track(d.rMx.VOICE_PANEL_TAB_OPENED, {
             tab: 'activities',
@@ -53,7 +53,7 @@ function p(e) {
         }),
         (0, i.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('23491'), n.e('36526'), n.e('35755'), n.e('45480')]).then(n.bind(n, 743161));
+                let { default: e } = await Promise.all([n.e('23491'), n.e('11252'), n.e('35755'), n.e('45480')]).then(n.bind(n, 743161));
                 return (n) => (0, r.jsx)(e, _({ context: t }, n));
             },
             {

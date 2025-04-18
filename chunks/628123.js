@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(818405),
     l = n(587158),
     c = n(286379),
@@ -20,7 +20,7 @@ var r = n(200651),
     v = n(998502),
     O = n(981631),
     I = n(388032),
-    S = n(336705);
+    S = n(804683);
 function T(e, t, n) {
     return (
         t in e
@@ -59,7 +59,7 @@ function N() {
         children: I.NW.string(I.t['/Nz9ra'])
     });
 }
-let A = a().throttle(
+let A = o().throttle(
     (e) => {
         g.Z.increment(
             {

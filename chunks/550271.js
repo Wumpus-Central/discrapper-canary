@@ -14,16 +14,16 @@ var i = r(496532),
     p = r(874706),
     d = r(137411),
     b = r(775101),
-    g = r(933632),
-    Z = r(158188),
-    j = r(66334),
-    M = r(215635),
+    Z = r(933632),
+    M = r(158188),
+    g = r(66334),
+    j = r(215635),
     O = r(718572),
     y = r(496223),
     m = r(846262),
     H = r(926372),
-    x = r(116175);
-function V(e) {
+    V = r(116175);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -50,7 +50,7 @@ function V(e) {
 }
 let w = (e) => {
     var { badge: t, primaryTintColor: r, secondaryTintColor: w } = e,
-        C = (function (e, t) {
+        P = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -70,172 +70,172 @@ let w = (e) => {
             return i;
         })(e, ['badge', 'primaryTintColor', 'secondaryTintColor']);
     switch (t) {
-        case x.ZD.SWORD:
+        case V.ZD.SWORD:
             return (0, n.jsx)(
                 O.o,
-                V(
+                x(
                     {
                         primaryTintColor: r,
                         secondaryTintColor: w
                     },
-                    C
+                    P
                 )
             );
-        case x.ZD.WATER_DROP:
-            return (0, n.jsx)(m.l, V({ primaryTintColor: r }, C));
-        case x.ZD.SKULL:
-            return (0, n.jsx)(b.F, V({ primaryTintColor: r }, C));
-        case x.ZD.TOADSTOOL:
+        case V.ZD.WATER_DROP:
+            return (0, n.jsx)(m.l, x({ primaryTintColor: r }, P));
+        case V.ZD.SKULL:
+            return (0, n.jsx)(b.F, x({ primaryTintColor: r }, P));
+        case V.ZD.TOADSTOOL:
             return (0, n.jsx)(
                 y.j,
-                V(
+                x(
                     {
                         primaryTintColor: r,
                         secondaryTintColor: w
                     },
-                    C
+                    P
                 )
             );
-        case x.ZD.MOON:
-            return (0, n.jsx)(p.V, V({ primaryTintColor: r }, C));
-        case x.ZD.LIGHTNING:
-            return (0, n.jsx)(f.$, V({ primaryTintColor: r }, C));
-        case x.ZD.LEAF:
-            return (0, n.jsx)(u.N, V({ primaryTintColor: r }, C));
-        case x.ZD.HEART:
-            return (0, n.jsx)(h.K, V({ primaryTintColor: r }, C));
-        case x.ZD.FIRE:
-            return (0, n.jsx)(o.e, V({ primaryTintColor: r }, C));
-        case x.ZD.COMPASS:
+        case V.ZD.MOON:
+            return (0, n.jsx)(p.V, x({ primaryTintColor: r }, P));
+        case V.ZD.LIGHTNING:
+            return (0, n.jsx)(f.$, x({ primaryTintColor: r }, P));
+        case V.ZD.LEAF:
+            return (0, n.jsx)(u.N, x({ primaryTintColor: r }, P));
+        case V.ZD.HEART:
+            return (0, n.jsx)(h.K, x({ primaryTintColor: r }, P));
+        case V.ZD.FIRE:
+            return (0, n.jsx)(o.e, x({ primaryTintColor: r }, P));
+        case V.ZD.COMPASS:
             return (0, n.jsx)(
                 i._,
-                V(
+                x(
                     {
                         primaryTintColor: r,
                         secondaryTintColor: w
                     },
-                    C
+                    P
                 )
             );
-        case x.ZD.CROSSHAIRS:
+        case V.ZD.CROSSHAIRS:
             return (0, n.jsx)(
                 s.U,
-                V(
+                x(
                     {
                         primaryTintColor: r,
                         secondaryTintColor: w
                     },
-                    C
+                    P
                 )
             );
-        case x.ZD.FLOWER:
+        case V.ZD.FLOWER:
             return (0, n.jsx)(
                 l.P,
-                V(
+                x(
                     {
                         primaryTintColor: r,
                         secondaryTintColor: w
                     },
-                    C
+                    P
                 )
             );
-        case x.ZD.FORCE:
+        case V.ZD.FORCE:
             return (0, n.jsx)(
                 a.S,
-                V(
+                x(
                     {
                         primaryTintColor: r,
                         secondaryTintColor: w
                     },
-                    C
+                    P
                 )
             );
-        case x.ZD.GEM:
+        case V.ZD.GEM:
             return (0, n.jsx)(
                 c.j,
-                V(
+                x(
                     {
                         primaryTintColor: r,
                         secondaryTintColor: w
                     },
-                    C
+                    P
                 )
             );
-        case x.ZD.LAVA:
+        case V.ZD.LAVA:
             return (0, n.jsx)(
                 v.x,
-                V(
+                x(
                     {
                         primaryTintColor: r,
                         secondaryTintColor: w
                     },
-                    C
+                    P
                 )
             );
-        case x.ZD.PSYCHIC:
+        case V.ZD.PSYCHIC:
             return (0, n.jsx)(
                 d.y,
-                V(
+                x(
                     {
                         primaryTintColor: r,
                         secondaryTintColor: w
                     },
-                    C
+                    P
                 )
             );
-        case x.ZD.SMOKE:
+        case V.ZD.SMOKE:
             return (0, n.jsx)(
-                g.l,
-                V(
+                Z.l,
+                x(
                     {
                         primaryTintColor: r,
                         secondaryTintColor: w
                     },
-                    C
+                    P
                 )
             );
-        case x.ZD.SNOW:
+        case V.ZD.SNOW:
             return (0, n.jsx)(
-                Z.W,
-                V(
+                M.W,
+                x(
                     {
                         primaryTintColor: r,
                         secondaryTintColor: w
                     },
-                    C
+                    P
                 )
             );
-        case x.ZD.SOUND:
+        case V.ZD.SOUND:
             return (0, n.jsx)(
-                j.J,
-                V(
+                g.J,
+                x(
                     {
                         primaryTintColor: r,
                         secondaryTintColor: w
                     },
-                    C
+                    P
                 )
             );
-        case x.ZD.SUN:
+        case V.ZD.SUN:
             return (0, n.jsx)(
-                M.O,
-                V(
+                j.O,
+                x(
                     {
                         primaryTintColor: r,
                         secondaryTintColor: w
                     },
-                    C
+                    P
                 )
             );
-        case x.ZD.WIND:
+        case V.ZD.WIND:
             return (0, n.jsx)(
                 H.z,
-                V(
+                x(
                     {
                         primaryTintColor: r,
                         secondaryTintColor: w
                     },
-                    C
+                    P
                 )
             );
     }

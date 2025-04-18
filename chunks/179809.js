@@ -16,17 +16,17 @@ var r = n(200651),
     b = n(276952),
     y = n(199540),
     _ = n(40153),
-    v = n(252686),
-    O = n(682662),
+    O = n(252686),
+    v = n(682662),
     C = n(662146),
-    S = n(388032),
-    j = n(909698),
-    E = n(815537);
-let x = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    j = n(388032),
+    S = n(728492),
+    x = n(335426);
+let E = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     I = (0, a.animated)(d.Kqy),
     N = i.memo(function (e) {
         let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: u, mentionCount: g = 0, isMentionLowImportance: N, unread: P = !1, defaultFolderName: w, useCircleMask: Z = !1, draggable: T = !1, sorting: A = !1, onDragStart: R, onDragEnd: D, onExpandCollapse: L, onContextMenu: k, renderChildNode: M, folderIconContent: U, folderIconContentClassName: G, 'aria-setsize': B, 'aria-posinset': W } = e,
-            { id: V, name: H, children: F } = t,
+            { id: V, name: F, children: H } = t,
             [z, Y] = i.useState(!1),
             [K, q] = i.useState(!1),
             Q = z || K;
@@ -56,7 +56,7 @@ let x = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 },
                 [L, a]
             ),
-            et = null != H && '' !== H ? H : null != w && '' !== w ? w : S.NW.string(S.t.xV9hVl),
+            et = null != F && '' !== F ? F : null != w && '' !== w ? w : j.NW.string(j.t.xV9hVl),
             en = (0, c.Ie)(''.concat(V)),
             er = 'folder-items-'.concat(V),
             ei = (function (e) {
@@ -67,22 +67,22 @@ let x = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     l = (0, d.dQu)(d.TVs.modules.guildbar.FOLDER_SIZE),
                     o = n ? r : 8;
                 return e * (t + o) + (n ? (l - i) / 2 - o : 0);
-            })(F.length),
+            })(H.length),
             el = (0, d.Yzy)(!X && a, {
                 from: { height: 0 },
                 enter: { height: 1 },
                 leave: { height: 0 },
-                config: { duration: x }
+                config: { duration: E }
             }),
             eo = i.useCallback((e) => (null == n ? void 0 : n(V, e)), [n, V]),
-            es = (0, r.jsxs)(O.H, {
+            es = (0, r.jsxs)(v.H, {
                 children: [
                     (0, r.jsx)(b.Z, {
                         disabled: X || a,
                         hovered: z,
                         selected: l,
                         unread: P,
-                        className: E.pill
+                        className: x.pill
                     }),
                     (0, r.jsx)(C.Z, {
                         text: et,
@@ -95,10 +95,10 @@ let x = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       J(e);
                                   }
                                 : void 0,
-                            className: o()(j.folderIcon, { [E.wobble]: !X && K && !a }),
+                            className: o()(S.folderIcon, { [x.wobble]: !X && K && !a }),
                             'data-dnd-name': et,
                             children: X
-                                ? (0, r.jsx)(v.Z, {})
+                                ? (0, r.jsx)(O.Z, {})
                                 : (0, r.jsx)(y.Z, {
                                       folderNode: t,
                                       expanded: a,
@@ -132,15 +132,15 @@ let x = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
             });
         return (0, r.jsxs)('div', {
             ref: eo,
-            className: o()(j.wrapper, a && j.isExpanded),
+            className: o()(S.wrapper, a && S.isExpanded),
             'data-drop-hovering': K,
             children: [
                 !X &&
                     a &&
                     (0, r.jsx)('span', {
-                        className: o()(j.expandedFolderBackground, {
-                            [j.collapsed]: !a,
-                            [j.hover]: Q
+                        className: o()(S.expandedFolderBackground, {
+                            [S.collapsed]: !a,
+                            [S.hover]: Q
                         })
                     }),
                 es,
@@ -160,7 +160,7 @@ let x = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                 },
                                 role: 'group',
                                 'aria-label': t.name,
-                                children: F.map((t, n) => M(t, n, F.length, e.height))
+                                children: H.map((t, n) => M(t, n, H.length, e.height))
                             },
                             l
                         )

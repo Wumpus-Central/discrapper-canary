@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(358085),
+    a = n(570140),
+    o = n(358085),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -34,7 +34,7 @@ function c(e) {
     return e;
 }
 let u = {
-        desktopType: a.isPlatformEmbedded ? s.qrD.ALL : s.qrD.NEVER,
+        desktopType: o.isPlatformEmbedded ? s.qrD.ALL : s.qrD.NEVER,
         disableAllSounds: !1,
         disabledSounds: [],
         ttsType: s.PrB.NEVER,
@@ -111,10 +111,10 @@ l(y, 'displayName', 'NotificationSettingsStore'),
     l(y, 'migrations', [
         (e) => {
             let t = c({}, e);
-            return (t.disabledSounds = t.disabledSounds || []), (t.disableUnreadBadge = t.disableUnreadBadge || !1), (t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash), (t.ttsType = t.ttsType || s.PrB.NEVER), null == t.desktopType && (t.desktopType = a.isPlatformEmbedded ? s.qrD.ALL : s.qrD.NEVER), t;
+            return (t.disabledSounds = t.disabledSounds || []), (t.disableUnreadBadge = t.disableUnreadBadge || !1), (t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash), (t.ttsType = t.ttsType || s.PrB.NEVER), null == t.desktopType && (t.desktopType = o.isPlatformEmbedded ? s.qrD.ALL : s.qrD.NEVER), t;
         }
     ]);
-let v = new y(o.Z, {
+let v = new y(a.Z, {
     NOTIFICATIONS_SET_DESKTOP_TYPE: f,
     NOTIFICATIONS_SET_TTS_TYPE: h,
     NOTIFICATIONS_SET_DISABLED_SOUNDS: _,

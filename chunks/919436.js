@@ -16,16 +16,16 @@ var r,
     b = n(199902),
     y = n(19780),
     _ = n(306680),
-    v = n(944486),
-    O = n(594174),
+    O = n(944486),
+    v = n(594174),
     C = n(451478),
-    S = n(276952),
-    j = n(682662),
-    E = n(662146),
-    x = n(674552),
+    j = n(276952),
+    S = n(682662),
+    x = n(662146),
+    E = n(674552),
     I = n(981631),
     N = n(388032),
-    P = n(122727);
+    P = n(223203);
 function w(e, t, n) {
     return (
         t in e
@@ -145,7 +145,7 @@ class D extends (r = l.PureComponent) {
     }
     getChannelIcon() {
         let { channel: e } = this.props,
-            t = e.type === I.d4z.DM ? O.default.getUser(e.getRecipientId()) : null;
+            t = e.type === I.d4z.DM ? v.default.getUser(e.getRecipientId()) : null;
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
@@ -154,22 +154,22 @@ class D extends (r = l.PureComponent) {
             y = e.isMultiUserDM() && null == e.icon && h;
         return (0, i.jsx)(o.animated.div, {
             style: this.getAnimatedStyle(),
-            children: (0, i.jsxs)(j.H, {
+            children: (0, i.jsxs)(S.H, {
                 children: [
-                    (0, i.jsx)(S.Z, {
+                    (0, i.jsx)(j.Z, {
                         hovered: !b && g,
                         selected: !b && n,
                         unread: !b && d,
                         className: P.pill
                     }),
-                    (0, i.jsx)(E.Z, {
+                    (0, i.jsx)(x.Z, {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, i.jsx)(c.aRk, {
                             rounded: p,
                             selected: !p && (n || g),
-                            lowerBadge: r > 0 ? (0, x.Ne)(r, void 0, !0) : null,
-                            upperBadge: (0, x.Or)({
+                            lowerBadge: r > 0 ? (0, E.Ne)(r, void 0, !0) : null,
+                            upperBadge: (0, E.Or)({
                                 audio: l,
                                 video: s,
                                 screenshare: a,
@@ -227,10 +227,10 @@ class D extends (r = l.PureComponent) {
             }),
             w(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    r = t.type === I.d4z.DM ? O.default.getUser(t.getRecipientId()) : null;
+                    r = t.type === I.d4z.DM ? v.default.getUser(t.getRecipientId()) : null;
                 null != r
                     ? (0, u.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('26881'), n.e('4040'), n.e('53912'), n.e('56826'), n.e('19196')]).then(n.bind(n, 131404));
+                          let { default: e } = await Promise.all([n.e('79695'), n.e('4040'), n.e('53912'), n.e('56826'), n.e('45903')]).then(n.bind(n, 131404));
                           return (n) =>
                               (0, i.jsx)(
                                   e,
@@ -241,7 +241,7 @@ class D extends (r = l.PureComponent) {
                               );
                       })
                     : (0, u.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('26881'), n.e('53912'), n.e('54464')]).then(n.bind(n, 354741));
+                          let { default: e } = await Promise.all([n.e('79695'), n.e('53912'), n.e('2016')]).then(n.bind(n, 354741));
                           return (n) =>
                               (0, i.jsx)(
                                   e,
@@ -267,29 +267,29 @@ let L = l.forwardRef(function (e, t) {
         o = (0, a.e7)([y.Z], () => y.Z.getChannelId(), []),
         u = (0, a.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : I.WtW.VOICE), [o]),
         h = (0, a.e7)([b.Z], () => b.Z.getAllApplicationStreamsForChannel(n).length > 0),
-        m = (0, a.e7)([v.Z], () => v.Z.getChannelId(), []),
-        O = (0, a.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
+        m = (0, a.e7)([O.Z], () => O.Z.getChannelId(), []),
+        v = (0, a.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
         { isFacepileEnabled: C } = g.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
-        S = o === n,
-        j = !1,
-        E = !1;
-    S && ((j = u === I.WtW.VOICE), (E = u === I.WtW.VIDEO));
-    let x = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE),
+        j = o === n,
+        S = !1,
+        x = !1;
+    j && ((S = u === I.WtW.VOICE), (x = u === I.WtW.VIDEO));
+    let E = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE),
         N = (0, f.Q3)('DirectMessage');
     return (0, i.jsx)(
         D,
         T(Z({}, e), {
             ref: t,
             channelName: r,
-            unread: O > 0,
+            unread: v > 0,
             selected: m === n,
-            badge: O,
-            audio: j,
-            video: E,
+            badge: v,
+            audio: S,
+            video: x,
             stream: h,
-            isCurrentUserInThisDMCall: S,
+            isCurrentUserInThisDMCall: j,
             isGDMFacepileEnabled: C,
-            size: N ? x : 56,
+            size: N ? E : 56,
             isVisualRefreshEnabled: N,
             treeItemProps: l
         })

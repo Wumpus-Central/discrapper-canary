@@ -5,8 +5,8 @@ n.d(t, {
     n(953529);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(355467),
@@ -22,12 +22,12 @@ var r = n(200651),
     b = n(474936),
     y = n(981631),
     v = n(388032),
-    O = n(597439),
+    O = n(229191),
     I = (function (e) {
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e;
     })({});
 function S(e) {
-    let { containerContext: t, image: n, title: o, description: I, enableSocialProof: S, analyticsLocationSection: T, upsellViewedTrackingData: N, onClose: A, onDisplay: C, onLearnMore: R } = e,
+    let { containerContext: t, image: n, title: a, description: I, enableSocialProof: S, analyticsLocationSection: T, upsellViewedTrackingData: N, onClose: A, onDisplay: C, onLearnMore: R } = e,
         P = (0, s.e7)([h.Z], () => h.Z.affinities),
         w = (0, s.e7)([h.Z], () => h.Z.hasFetched);
     i.useEffect(() => {
@@ -63,7 +63,7 @@ function S(e) {
                 isVisible: !0
             }),
             (0, r.jsxs)('div', {
-                className: a()(O.container, L()),
+                className: o()(O.container, L()),
                 children: [
                     (0, r.jsx)(l.olH, {
                         onClick: A,
@@ -80,9 +80,9 @@ function S(e) {
                                 alt: 'Nitro Perk'
                             }),
                             (0, r.jsx)(l.X6q, {
-                                className: a()(O.title, { [O.titleNoSocialProof]: !D }),
+                                className: o()(O.title, { [O.titleNoSocialProof]: !D }),
                                 variant: 'heading-xl/bold',
-                                children: o
+                                children: a
                             }),
                             D && (0, r.jsx)(E.Z, { affinities: P }),
                             (0, r.jsx)(l.Text, {

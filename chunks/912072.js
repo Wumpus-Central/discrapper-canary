@@ -7,8 +7,8 @@ var a = n(200651),
     o = n(481060),
     c = n(98357),
     d = n(432877),
-    u = n(274254),
-    m = n(482479);
+    u = n(738629),
+    m = n(616257);
 function x(e) {
     let { devSettingsCategory: t } = e,
         n = (0, s.e7)([d.ZP], () => d.ZP.allByCategory(t), [t], s.pF),

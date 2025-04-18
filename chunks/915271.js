@@ -1,14 +1,14 @@
 n.d(t, { Z: () => p });
 var r = n(200651),
     i = n(192379),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(873115),
     l = n(219929),
     c = n(618541),
     u = n(975060),
     d = n(388032),
-    f = n(514390);
+    f = n(422743);
 class _ extends i.PureComponent {
     componentDidMount() {
         null != this.props.venmoClient && s.by();
@@ -30,19 +30,19 @@ class _ extends i.PureComponent {
                 i
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(a.X6q, {
+                              (0, r.jsx)(o.X6q, {
                                   variant: e.length < 25 ? 'heading-xl/bold' : 'heading-lg/bold',
                                   className: f.connectionInstructions,
                                   children: d.NW.format(d.t.DowIra, { venmoUsername: e })
                               }),
-                              (0, r.jsx)(a.Text, {
+                              (0, r.jsx)(o.Text, {
                                   variant: 'text-md/medium',
                                   className: f.connectionInstructions,
                                   children: d.NW.string(d.t.kmEvnZ)
                               })
                           ]
                       })
-                    : (0, r.jsx)(a.Text, {
+                    : (0, r.jsx)(o.Text, {
                           variant: 'text-md/medium',
                           className: f.connectionInstructions,
                           children: null == n ? d.NW.string(d.t['2ouZDQ']) : d.NW.string(d.t.mIL6JS)
@@ -51,7 +51,7 @@ class _ extends i.PureComponent {
         });
     }
 }
-let p = o.ZP.connectStores([c.Z, u.Z], () => ({
+let p = a.ZP.connectStores([c.Z, u.Z], () => ({
     venmoUsername: u.Z.venmoUsername,
     venmoClient: c.Z.getVenmoClient()
 }))(_);

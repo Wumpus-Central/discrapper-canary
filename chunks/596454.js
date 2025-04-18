@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(388685), n(415506);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(990169),
     c = n(249458),
@@ -73,8 +73,8 @@ function I(e, t) {
         r,
         i = S(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -83,16 +83,16 @@ function S(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-n(889995);
+n(477526);
 let T = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFocused()) : g.n;
 function N(e) {
     var t,
         n,
-        { src: o, alt: s, className: c, emojiId: f, emojiName: p, channelId: g, messageId: b, animated: v, size: S = 'default', isInteracting: N = !1, shouldAnimate: A, onMouseEnter: C, onMouseLeave: R, canSelect: P = !0, autoplay: w, registerInnerRef: D, registerAnimatedElementRef: L } = e,
+        { src: a, alt: s, className: c, emojiId: f, emojiName: p, channelId: g, messageId: b, animated: v, size: S = 'default', isInteracting: N = !1, shouldAnimate: A, onMouseEnter: C, onMouseLeave: R, canSelect: P = !0, autoplay: w, registerInnerRef: D, registerAnimatedElementRef: L } = e,
         x = I(e, ['src', 'alt', 'className', 'emojiId', 'emojiName', 'channelId', 'messageId', 'animated', 'size', 'isInteracting', 'shouldAnimate', 'onMouseEnter', 'onMouseLeave', 'canSelect', 'autoplay', 'registerInnerRef', 'registerAnimatedElementRef']);
     let [M, k] = i.useState(!1),
         [j, U] = i.useState(void 0),
@@ -104,7 +104,7 @@ function N(e) {
         W = E.kV[S],
         Y = i.useRef(null),
         K = i.useMemo(() => {
-            if (null != o) return o;
+            if (null != a) return a;
             if (null != f) {
                 let e = !0 === A && H;
                 return h.ZP.getEmojiURL({
@@ -115,7 +115,7 @@ function N(e) {
             }
             if (null != p) return m.ZP.getURL(p);
             throw Error('Unknown Src for Emoji');
-        }, [v, H, f, p, W, Z, M, N, A, o]),
+        }, [v, H, f, p, W, Z, M, N, A, a]),
         z = i.useCallback(() => {
             null != K &&
                 (G.current = (0, d.po)(K, (e) => {
@@ -138,7 +138,7 @@ function N(e) {
             let e = null != f && '' !== f ? { 'data-id': f } : { 'data-name': p };
             return y(
                 O(y({}, x), {
-                    className: a()('emoji', c, {
+                    className: o()('emoji', c, {
                         jumboable: 'jumbo' === S,
                         reactionLarge: 'reactionLarge' === S
                     }),
@@ -166,7 +166,7 @@ function N(e) {
         $ = (0, l.Z)(Y);
     return null == K || '' === K
         ? (0, r.jsx)('span', {
-              className: a()('emoji', 'emoji-text'),
+              className: o()('emoji', 'emoji-text'),
               children: p
           })
         : (0, r.jsxs)(r.Fragment, {
@@ -209,13 +209,13 @@ function N(e) {
 }
 function A(e) {
     let { useThoughtfullyAnimated: t } = i.useContext(f.q),
-        { animate: n, registerRef: o } = t(),
-        { disableAnimations: a } = i.useContext(c.G);
+        { animate: n, registerRef: a } = t(),
+        { disableAnimations: o } = i.useContext(c.G);
     return (0, r.jsx)(
         N,
         O(y({}, e), {
-            registerAnimatedElementRef: o,
-            shouldAnimate: n && !a
+            registerAnimatedElementRef: a,
+            shouldAnimate: n && !o
         })
     );
 }

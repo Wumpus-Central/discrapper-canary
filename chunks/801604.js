@@ -14,9 +14,9 @@ var i = n(120356),
     h = n(615161),
     x = n(396678),
     p = n(37113),
-    g = n(519229),
+    g = n(843874),
     _ = n(388032),
-    j = n(80569);
+    j = n(326879);
 function v() {
     return (0, r.jsx)('span', {
         className: j.ellipsis,
@@ -51,8 +51,8 @@ function b(e) {
 function S(e) {
     var t, n, i, o;
     let { nativePickerEnabled: m } = e,
-        [{ preset: S, resolution: N, fps: C, muteStreamAudio: y, selectedSource: Z, sourceType: I, audioSourceId: O }] = (0, h.E_)(),
-        { twoClickVariant: w } = (0, d.a)({
+        [{ preset: S, resolution: N, fps: C, muteStreamAudio: y, selectedSource: Z, sourceType: I, audioSourceId: w }] = (0, h.E_)(),
+        { twoClickVariant: O } = (0, d.a)({
             location: 'go_live_modal_refresh',
             autoTrackExposure: !1
         }),
@@ -61,7 +61,7 @@ function S(e) {
         R = (0, u.L)(S),
         W = (0, f.M)(E),
         k = I === s.vA.CAMERA,
-        A = null != Z || (!!w && (!m || k)),
+        A = null != Z || (!!O && (!m || k)),
         M = null != Z ? (null == Z || null == (t = Z.id) ? void 0 : t.startsWith(s.vA.CAMERA)) : k,
         L = A ? void 0 : S === p.tI.PRESET_VIDEO ? _.NW.string(g.Z.MuHUFR) : S === p.tI.PRESET_DOCUMENTS ? _.NW.string(g.Z.y0JuYW) : void 0;
     return (0, r.jsxs)('div', {
@@ -125,7 +125,7 @@ function S(e) {
                                 }),
                             M
                                 ? (0, r.jsxs)(r.Fragment, {
-                                      children: [(0, r.jsx)(v, {}), (0, r.jsx)('span', { children: null == (n = T[null != O ? O : '']) ? void 0 : n.name })]
+                                      children: [(0, r.jsx)(v, {}), (0, r.jsx)('span', { children: null == (n = T[null != w ? w : '']) ? void 0 : n.name })]
                                   })
                                 : null
                         ]

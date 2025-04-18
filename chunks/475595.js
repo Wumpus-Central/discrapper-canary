@@ -18,8 +18,8 @@ n.d(t, {
     n(388685);
 var r = n(887003),
     i = n(46140),
-    o = n(151702);
-let a = /\.([a-zA-Z0-9]+)$/,
+    a = n(151702);
+let o = /\.([a-zA-Z0-9]+)$/,
     s = ['video/mp4', 'video/webm'];
 var l = (function (e) {
     return (e.HERO = 'hero'), (e.QUEST_BAR_HERO = 'quest_bar_hero'), (e.REWARD = 'reward'), (e.GAME_TILE = 'game_tile'), (e.LOGO_TYPE = 'logo_type'), e;
@@ -27,24 +27,24 @@ var l = (function (e) {
 function c(e, t, n) {
     let r = _(e, t, n),
         i = p(t),
-        o = null != i && s.includes(i);
+        a = null != i && s.includes(i);
     return {
         url: r,
         mimetype: i,
-        isAnimated: o
+        isAnimated: a
     };
 }
 function u(e, t) {
     return null != e ? e : t;
 }
 function d(e, t, n) {
-    let a;
+    let o;
     switch (t) {
         case 'hero':
-            a = u(e.config.assets.heroVideo, e.config.assets.hero);
+            o = u(e.config.assets.heroVideo, e.config.assets.hero);
             break;
         case 'quest_bar_hero':
-            a = u(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
+            o = u(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
             break;
         case 'reward': {
             var s, l;
@@ -52,21 +52,21 @@ function d(e, t, n) {
                 n = 'rewardsConfig' in e.config ? e.config.rewardsConfig.rewards[t] : e.config.rewards[t];
             if (n.type === r.w.VIRTUAL_CURRENCY)
                 return {
-                    url: o.Z,
+                    url: a.Z,
                     mimetype: 'video/webm',
                     isAnimated: !0
                 };
-            a = u(n.assetVideo, n.asset);
+            o = u(n.assetVideo, n.asset);
             break;
         }
         case 'game_tile':
-            a = e.config.assets.gameTile;
+            o = e.config.assets.gameTile;
             break;
         case 'logo_type':
-            a = e.config.assets.logotype;
+            o = e.config.assets.logotype;
     }
     let d = e.config.features.includes(i.S7.QUESTS_CDN);
-    return c(e.id, a, {
+    return c(e.id, o, {
         theme: n,
         newCdn: d
     });
@@ -90,7 +90,7 @@ function p(e) {
         let t = null != (r = new URL(e).searchParams.get('mimetype')) ? r : void 0;
         return null != t ? decodeURIComponent(t) : null;
     }
-    switch (null == (n = a.exec(e)) || null == (t = n[1]) ? void 0 : t.toLowerCase()) {
+    switch (null == (n = o.exec(e)) || null == (t = n[1]) ? void 0 : t.toLowerCase()) {
         case 'webm':
             return 'video/webm';
         case 'mp4':

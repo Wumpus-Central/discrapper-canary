@@ -7,8 +7,8 @@ n.d(t, {
     n(35282);
 var r = n(477690),
     i = n(911969),
-    o = n(472401),
-    a = n(981631),
+    a = n(472401),
+    o = n(981631),
     s = n(388032);
 let l = 0;
 function c() {
@@ -19,7 +19,7 @@ function c() {
 }
 function u(e) {
     let { itemId: t, hash: n, containerWidth: i = parseFloat(r.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) } = e;
-    return (0, o.$)({
+    return (0, a.$)({
         itemId: t,
         hash: n,
         containerWidth: i
@@ -36,7 +36,7 @@ function f(e) {
             var t;
             let n = null != (t = e.proxy_url) ? t : e.url;
             return {
-                type: a.s9s.IMG,
+                type: o.s9s.IMG,
                 width: 0,
                 height: 0,
                 src: n
@@ -45,7 +45,7 @@ function f(e) {
             let r = d(e.url);
             if (null != r)
                 return {
-                    type: a.s9s.YOUTUBE_VIDEO,
+                    type: o.s9s.YOUTUBE_VIDEO,
                     youtubeVideoId: r
                 };
     }

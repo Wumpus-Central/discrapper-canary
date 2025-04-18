@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(913527),
-    a = n.n(o),
+    a = n(913527),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(11769),
@@ -13,7 +13,7 @@ var r = n(200651),
     p = n(70956),
     h = n(981631),
     m = n(388032),
-    g = n(344338);
+    g = n(873007);
 function E(e, t, n) {
     return (
         t in e
@@ -68,7 +68,7 @@ function v(e, t) {
 }
 function O(e) {
     let t,
-        { isEnabled: n, rateLimitPerUser: o, isBypassSlowmode: s, slowmodeCooldownGuess: u, isRefreshChatInputEnabled: d, isRefreshEnabled: f } = e,
+        { isEnabled: n, rateLimitPerUser: a, isBypassSlowmode: s, slowmodeCooldownGuess: u, isRefreshChatInputEnabled: d, isRefreshEnabled: f } = e,
         [E, y] = i.useState(!1);
     if (
         (i.useEffect(() => {
@@ -88,9 +88,9 @@ function O(e) {
         !n)
     )
         return null;
-    let O = (0, c.k)(o);
+    let O = (0, c.k)(a);
     if (!s && u > 0) {
-        let e = a().duration(u);
+        let e = o().duration(u);
         if (u > p.Z.Millis.HOUR) {
             let n = ''.concat(e.minutes()).padStart(2, '0'),
                 r = ''.concat(e.seconds()).padStart(2, '0');
@@ -127,15 +127,15 @@ function O(e) {
 function I(e) {
     let { channel: t, isThreadCreation: n = !1 } = e,
         i = (0, s.e7)([f.Z], () => f.Z.getSlowmodeCooldownGuess(t.id, n ? f.S.CreateThread : f.S.SendMessage)),
-        o = (0, s.e7)([d.Z], () => (n ? d.Z.can(h.Plq.MANAGE_THREADS, t) : d.Z.can(h.Plq.MANAGE_CHANNELS, t) || d.Z.can(h.Plq.MANAGE_MESSAGES, t))),
-        { rateLimitPerUser: a } = t,
-        l = a > 0,
+        a = (0, s.e7)([d.Z], () => (n ? d.Z.can(h.Plq.MANAGE_THREADS, t) : d.Z.can(h.Plq.MANAGE_CHANNELS, t) || d.Z.can(h.Plq.MANAGE_MESSAGES, t))),
+        { rateLimitPerUser: o } = t,
+        l = o > 0,
         c = (0, u.R6)('SlowmodeIndicator'),
         _ = (0, u.Q3)('SlowmodeIndicator');
     return (0, r.jsx)(O, {
         isEnabled: l,
-        rateLimitPerUser: a,
-        isBypassSlowmode: o,
+        rateLimitPerUser: o,
+        isBypassSlowmode: a,
         slowmodeCooldownGuess: i,
         isRefreshChatInputEnabled: c,
         isRefreshEnabled: _

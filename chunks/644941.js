@@ -35,7 +35,7 @@ var n = r(200651),
     L = r(978313),
     D = r(206583),
     G = r(388032),
-    k = r(206218);
+    k = r(263930);
 let K = () =>
     (0, n.jsxs)('div', {
         className: k.gameBadge,

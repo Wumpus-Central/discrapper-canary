@@ -5,7 +5,7 @@ var l = n(481060),
     i = n(565138),
     a = n(430824),
     o = n(388032),
-    s = n(43829);
+    s = n(680006);
 let c = (e) => {
     let { stageInstance: t } = e,
         n = a.Z.getGuild(t.guild_id);

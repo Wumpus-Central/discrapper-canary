@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(192379),
     i = n(120356),
-    o = n.n(i),
-    a = n(866442),
+    a = n.n(i),
+    o = n(866442),
     s = n(442837),
     l = n(481060),
     c = n(607070),
@@ -53,7 +53,7 @@ function g(e) {
     return {
         profileThemeStyle: (0, r.useMemo)(() => {
             if (null == n || null == i || null == E || null == b) return m;
-            let e = (e, t) => (0, a.ho)(e, _, null, t);
+            let e = (e, t) => (0, o.ho)(e, _, null, t);
             return p(
                 {
                     '--profile-gradient-primary-color': e(n),
@@ -70,7 +70,7 @@ function g(e) {
                 })
             );
         }, [n, i, E, b, t, _]),
-        profileThemeClassName: o()((0, l.QeD)(t), {
+        profileThemeClassName: a()((0, l.QeD)(t), {
             [d.e3]: null != n,
             [h]: null != n
         })

@@ -21,8 +21,8 @@ n.d(t, {
 });
 var r = n(570140),
     i = n(153867),
-    o = n(626135),
-    a = n(607070),
+    a = n(626135),
+    o = n(607070),
     s = n(981631),
     l = n(969943),
     c = n(611480);
@@ -46,10 +46,10 @@ function f(e) {
     });
 }
 function _() {
-    r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_ENABLE' }), o.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !0 });
+    r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_ENABLE' }), a.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !0 });
 }
 function p() {
-    r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_DISABLE' }), o.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !1 });
+    r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_DISABLE' }), a.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !1 });
 }
 function h() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_DESATURATE_ROLES_TOGGLE' });
@@ -73,12 +73,12 @@ function b(e) {
     });
 }
 function y(e) {
-    let t = a.Z.useReducedMotion;
+    let t = o.Z.useReducedMotion;
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION',
         prefersReducedMotion: e
     });
-    let n = a.Z.useReducedMotion;
+    let n = o.Z.useReducedMotion;
     !t && n
         ? i.ZP.applySettingsOverride({
               gifAutoPlay: {
@@ -125,7 +125,7 @@ function T(e) {
         type: 'ACCESSIBILITY_SET_ROLE_STYLE',
         roleStyle: e
     }),
-        o.default.track(s.rMx.ROLE_STYLE_SETTING_UPDATED, { role_style: e });
+        a.default.track(s.rMx.ROLE_STYLE_SETTING_UPDATED, { role_style: e });
 }
 function N() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE' });

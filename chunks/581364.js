@@ -24,8 +24,8 @@ n.d(t, {
     n(781311);
 var r = n(654861),
     i = n.n(r),
-    o = n(512722),
-    a = n.n(o),
+    a = n(512722),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(149765),
@@ -93,40 +93,40 @@ function v(e, t) {
 function O(e) {
     var t, n, r;
     let i,
-        { rootCommand: o, command: a, applicationId: s, subCommandPath: l, useKeyedPermissions: d } = e;
-    null != o.permissions &&
-        o.permissions.length > 0 &&
+        { rootCommand: a, command: o, applicationId: s, subCommandPath: l, useKeyedPermissions: d } = e;
+    null != a.permissions &&
+        a.permissions.length > 0 &&
         (d
-            ? (i = (0, f.tk)(o.permissions))
+            ? (i = (0, f.tk)(a.permissions))
             : ((i = {}),
-              o.permissions.forEach((e) => {
+              a.permissions.forEach((e) => {
                   i[e.id] = e;
               })));
     let _ = (null != l ? l : []).map((e) => e.name),
         m = (null != l ? l : []).map((e) => e.displayName);
     return {
-        version: o.version,
-        guildId: o.guild_id,
-        id: [o.id, ..._].join(h.oQ),
-        untranslatedName: [o.name, ..._].join(' '),
-        serverLocalizedName: a.name_localized,
+        version: a.version,
+        guildId: a.guild_id,
+        id: [a.id, ..._].join(h.oQ),
+        untranslatedName: [a.name, ..._].join(' '),
+        serverLocalizedName: o.name_localized,
         applicationId: s,
-        type: null != (t = o.type) ? t : u.yU.CHAT,
+        type: null != (t = a.type) ? t : u.yU.CHAT,
         inputType: p.iw.BOT,
-        untranslatedDescription: a.description,
-        options: I(a.options),
-        rootCommand: o,
+        untranslatedDescription: o.description,
+        options: I(o.options),
+        rootCommand: a,
         subCommandPath: l,
-        defaultMemberPermissions: null == o.default_member_permissions ? void 0 : c.vB(o.default_member_permissions),
-        dmPermission: o.dm_permission,
+        defaultMemberPermissions: null == a.default_member_permissions ? void 0 : c.vB(a.default_member_permissions),
+        dmPermission: a.dm_permission,
         permissions: i,
-        displayName: [null != (n = o.name_localized) ? n : o.name, ...m].join(' '),
-        displayDescription: null != (r = a.description_localized) ? r : a.description,
-        nsfw: o.nsfw,
-        contexts: o.contexts,
-        integration_types: o.integration_types,
-        global_popularity_rank: o.global_popularity_rank,
-        handler: o.handler
+        displayName: [null != (n = a.name_localized) ? n : a.name, ...m].join(' '),
+        displayDescription: null != (r = o.description_localized) ? r : o.description,
+        nsfw: a.nsfw,
+        contexts: a.contexts,
+        integration_types: a.integration_types,
+        global_popularity_rank: a.global_popularity_rank,
+        handler: a.handler
     };
 }
 function I(e) {
@@ -166,15 +166,15 @@ function S(e) {
 }
 function T(e) {
     var t, n;
-    let { rootCommand: r, command: i, applicationId: o, subCommandPath: a, useKeyedPermissions: s } = e;
+    let { rootCommand: r, command: i, applicationId: a, subCommandPath: o, useKeyedPermissions: s } = e;
     if (i.hasOwnProperty('id')) {
         if (null == i.options || 0 === i.options.length)
             return [
                 O({
                     rootCommand: r,
                     command: i,
-                    applicationId: o,
-                    subCommandPath: a,
+                    applicationId: a,
+                    subCommandPath: o,
                     useKeyedPermissions: s
                 })
             ];
@@ -183,8 +183,8 @@ function T(e) {
             O({
                 rootCommand: r,
                 command: i,
-                applicationId: o,
-                subCommandPath: a,
+                applicationId: a,
+                subCommandPath: o,
                 useKeyedPermissions: s
             })
         ];
@@ -196,8 +196,8 @@ function T(e) {
             ...T({
                 rootCommand: r,
                 command: c[e],
-                applicationId: o,
-                subCommandPath: (null != a ? a : []).concat([
+                applicationId: a,
+                subCommandPath: (null != o ? o : []).concat([
                     {
                         name: c[e].name,
                         type: u.jw.SUB_COMMAND_GROUP,
@@ -213,8 +213,8 @@ function T(e) {
             O({
                 rootCommand: r,
                 command: d[e],
-                applicationId: o,
-                subCommandPath: (null != a ? a : []).concat([
+                applicationId: a,
+                subCommandPath: (null != o ? o : []).concat([
                     {
                         name: d[e].name,
                         type: u.jw.SUB_COMMAND,
@@ -231,8 +231,8 @@ function T(e) {
                 O({
                     rootCommand: r,
                     command: i,
-                    applicationId: o,
-                    subCommandPath: a,
+                    applicationId: a,
+                    subCommandPath: o,
                     useKeyedPermissions: s
                 })
             ),
@@ -243,7 +243,7 @@ function N(e, t) {
     return l().flatMap(
         e,
         (e) => (
-            a()(null != e.id, 'Missing command id'),
+            o()(null != e.id, 'Missing command id'),
             T({
                 rootCommand: e,
                 command: e,
@@ -286,15 +286,15 @@ function P(e) {
 }
 let w = c.vB(0);
 function D(e) {
-    let { PermissionStore: t, guild: n, selfMember: r, applicationLevelPermissions: i, commandLevelPermissions: o, defaultMemberPermissions: a } = e;
+    let { PermissionStore: t, guild: n, selfMember: r, applicationLevelPermissions: i, commandLevelPermissions: a, defaultMemberPermissions: o } = e;
     if (n.ownerId === r.userId || t.can(g.Pl.ADMINISTRATOR, n)) return !0;
     let s = n.id;
-    if (null != o) {
-        let e = L(r, s, o);
+    if (null != a) {
+        let e = L(r, s, a);
         if ('boolean' == typeof e) return e;
     }
     let l = L(r, s, i);
-    return ('boolean' != typeof l || !!l) && (null == a || (!c.fS(a, w) && t.can(a, n)));
+    return ('boolean' != typeof l || !!l) && (null == o || (!c.fS(o, w) && t.can(o, n)));
 }
 function L(e, t, n) {
     let r = n[(0, f.rE)(e.userId, p.Kw.USER)];
@@ -305,8 +305,8 @@ function L(e, t, n) {
         if (null != e && ((i = !0), e.permission)) return !0;
     }
     if (i) return !1;
-    let o = n[(0, f.rE)(t, p.Kw.ROLE)];
-    return null != o ? o.permission : null;
+    let a = n[(0, f.rE)(t, p.Kw.ROLE)];
+    return null != a ? a.permission : null;
 }
 function x(e) {
     switch (e) {
@@ -363,13 +363,13 @@ function j(e) {
 }
 function U(e) {
     var t, n;
-    let { command: r, location: i, triggerSection: o, queryLength: a, sectionName: s, query: l, searchResultsPosition: c, source: u } = e;
+    let { command: r, location: i, triggerSection: a, queryLength: o, sectionName: s, query: l, searchResultsPosition: c, source: u } = e;
     (0, d.yw)(m.rMx.APPLICATION_COMMAND_SELECTED, {
         command_id: null != (n = null == (t = r.rootCommand) ? void 0 : t.id) ? n : r.id,
         application_id: r.applicationId,
         location: i,
-        section: o,
-        query_length: a,
+        section: a,
+        query_length: o,
         command_text_length: r.displayName.length,
         section_name: s,
         query: l,

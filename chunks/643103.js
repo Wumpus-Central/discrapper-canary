@@ -1,13 +1,13 @@
-a.d(t, { p: () => p }), a(642613), a(388685);
+a.d(t, { p: () => N }), a(642613), a(388685);
 var n = a(200651),
-    s = a(192379),
-    r = a(120356),
-    l = a.n(r),
+    r = a(192379),
+    s = a(120356),
+    l = a.n(s),
     i = a(435935),
     o = a(982905),
     c = a(431138),
     d = a(330711),
-    u = a(640122);
+    u = a(795177);
 function _(e, t, a) {
     return (
         t in e
@@ -21,13 +21,13 @@ function _(e, t, a) {
         e
     );
 }
-class p extends s.PureComponent {
+class N extends r.PureComponent {
     componentDidMount() {
         this.callChangeLocale(d.Z.getLocale());
     }
     render() {
-        let { isOpen: e, languages: t, current: s } = this.state,
-            { className: r } = this.props,
+        let { isOpen: e, languages: t, current: r } = this.state,
+            { className: s } = this.props,
             d = null;
         return (
             null != t &&
@@ -46,7 +46,7 @@ class p extends s.PureComponent {
                             : (0, n.jsxs)(
                                   'li',
                                   {
-                                      className: (0, o.l)(u, 'locale', null != s && e.code === s.code ? 'Current' : null),
+                                      className: (0, o.l)(u, 'locale', null != r && e.code === r.code ? 'Current' : null),
                                       onClick: () => this.setLocale(e.code),
                                       children: [
                                           (0, n.jsx)('img', {
@@ -61,7 +61,7 @@ class p extends s.PureComponent {
                               );
                     })),
             (0, n.jsxs)('div', {
-                className: l()(u.localePicker, r),
+                className: l()(u.localePicker, s),
                 onMouseEnter: this.open,
                 onMouseLeave: this.close,
                 onClick: this.toggle,

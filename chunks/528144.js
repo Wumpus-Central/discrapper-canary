@@ -2,10 +2,10 @@ n.d(t, { Z: () => h });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
-    s = n(400377),
-    l = n(717371);
+    a = n.n(i),
+    o = n(481060),
+    s = n(951878),
+    l = n(967777);
 function c(e, t, n) {
     return (
         t in e
@@ -69,12 +69,12 @@ let _ = Object.freeze({
     }),
     p = (e) => {
         let { id: t, muted: n = !1, className: i = s.wrapper, size: l = _.SIZE_14, selectable: c = !1, children: d, color: p, onClick: h, onContextMenu: m, style: g, title: E, uppercase: b } = e;
-        return (0, r.jsx)(a.H, {
+        return (0, r.jsx)(o.H, {
             role: null != h ? 'button' : void 0,
             onClick: h,
             onContextMenu: m,
             id: t,
-            className: o()(i, {
+            className: a()(i, {
                 [s.base]: !0,
                 [l]: !0,
                 [s.selectable]: c,

@@ -8,7 +8,7 @@ var n = r(200651),
     s = r(543388),
     u = r(223021),
     m = r(388032),
-    p = r(161441);
+    p = r(848697);
 let d = l.memo(function (e) {
         let { children: t, className: r, compact: i = !1, timestamp: d, timestampFormat: b, isVisibleOnlyOnHover: y = !1, cozyAlt: g = !1, isInline: O = !0, id: j, isEdited: v = !1, application: h, tooltipPosition: x } = e,
             P = l.useMemo(() => new Date(d), [d]),

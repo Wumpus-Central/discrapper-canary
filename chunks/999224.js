@@ -1,8 +1,8 @@
 n.d(t, { x: () => V });
 var r = n(771356),
     i = n(640490),
-    o = n(578895),
-    a = n(243125),
+    a = n(578895),
+    o = n(243125),
     s = n(89222),
     l = n(51016),
     c = n(629928),
@@ -22,7 +22,7 @@ var r = n(771356),
     I = n(936643),
     S = n(357826),
     T = n(486527),
-    N = n(287244),
+    N = n(722565),
     A = n(711814),
     C = n(149334),
     R = n(409863),
@@ -85,7 +85,7 @@ let V = {
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(61, 72, 79, 0.50) 0%, rgba(61, 72, 79, 0.00) 100%)',
         baseColor: '#1B1F23',
         styleKey: 'robot',
-        previewSoundURLs: [a.Z]
+        previewSoundURLs: [o.Z]
     },
     tunes: {
         name: N.Z.sem63N,
@@ -149,7 +149,7 @@ let V = {
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(207, 122, 124, 0.50) 0%, rgba(207, 122, 124, 0.00) 100%)',
         baseColor: '#2D1011',
         styleKey: 'cave',
-        previewSoundURLs: [i.Z, o.Z]
+        previewSoundURLs: [i.Z, a.Z]
     },
     deepfried: {
         name: N.Z.qRFFLC,

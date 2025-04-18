@@ -3,11 +3,11 @@ e.exports = function (e) {
         n = /^[a-zA-Z][a-zA-Z0-9-]*/,
         r = ['ALPHA', 'BIT', 'CHAR', 'CR', 'CRLF', 'CTL', 'DIGIT', 'DQUOTE', 'HEXDIG', 'HTAB', 'LF', 'LWSP', 'OCTET', 'SP', 'VCHAR', 'WSP'],
         i = e.COMMENT(/;/, /$/),
-        o = {
+        a = {
             scope: 'symbol',
             match: /%b[0-1]+(-[0-1]+|(\.[0-1]+)+)?/
         },
-        a = {
+        o = {
             scope: 'symbol',
             match: /%d[0-9]+(-[0-9]+|(\.[0-9]+)+)?/
         },
@@ -33,8 +33,8 @@ e.exports = function (e) {
                 match: t.concat(n, /(?=\s*=)/)
             },
             i,
-            o,
             a,
+            o,
             s,
             l,
             e.QUOTE_STRING_MODE,

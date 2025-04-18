@@ -6,12 +6,12 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(780384),
-    a = n(481060),
+    a = n(780384),
+    o = n(481060),
     s = n(410030),
     l = n(594174),
     c = n(388032),
-    u = n(566978),
+    u = n(373063),
     d = n(982240),
     f = n(533854),
     _ = (function (e) {
@@ -31,29 +31,29 @@ let p = (e) => {
         children: [
             (0, r.jsx)('img', {
                 className: u.__invalid_loadIssueImg,
-                src: (0, o.wj)(p) ? d : f,
+                src: (0, a.wj)(p) ? d : f,
                 alt: ''
             }),
-            (0, r.jsx)(a.X6q, {
+            (0, r.jsx)(o.X6q, {
                 className: u.heading1,
                 variant: 'heading-xl/semibold',
                 children: c.NW.string(c.t['i5SQ7+'])
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 className: u.description,
                 variant: 'text-md/normal',
                 children: g
             }),
             h &&
                 null != _ &&
-                (0, r.jsx)(a.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: 'text-md/normal',
                     children: 'staff-only debug: ' + _
                 }),
-            (0, r.jsx)(a.zxk, {
+            (0, r.jsx)(o.zxk, {
                 className: u.reload,
-                size: a.zxk.Sizes.MEDIUM,
-                color: a.zxk.Colors.BRAND,
+                size: o.zxk.Sizes.MEDIUM,
+                color: o.zxk.Colors.BRAND,
                 onClick: t,
                 children: c.NW.string(c.t['+hivLS'])
             })

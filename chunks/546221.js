@@ -16,7 +16,7 @@ var i = n(481060),
     f = n(215124),
     x = n(981631),
     b = n(388032),
-    j = n(153197);
+    j = n(264054);
 function N(e) {
     let { payoutsByPeriod: t, team: n } = e,
         s = (0, c.mY)() ? null : b.NW.format(b.t.d1sCiY, { url: null != n ? x.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });

@@ -1,15 +1,15 @@
 n.d(t, { Z: () => m });
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(596454),
     c = n(633302),
     u = n(695346),
     d = n(563114),
     f = n(556638),
-    _ = n(405538);
+    _ = n(843280);
 function p(e, t, n) {
     return (
         t in e
@@ -40,21 +40,21 @@ function h(e) {
     return e;
 }
 function m(e) {
-    let { emoji: t, className: n, animate: o = !0, hideTooltip: p = !1, tooltipDelay: m = f.X } = e,
+    let { emoji: t, className: n, animate: a = !0, hideTooltip: p = !1, tooltipDelay: m = f.X } = e,
         g = u.Yk.useSetting(),
         E = i.useRef(null),
         b = null != t.id ? ':'.concat(t.name, ':') : c.ZP.translateSurrogatesToInlineEmoji(t.name);
     if (null == t.id && d.T.has(t.name))
         return (0, r.jsx)('span', {
-            className: a()(_.emoji, n),
+            className: o()(_.emoji, n),
             children: t.name
         });
     let y = {
-        className: a()(_.emoji, n),
+        className: o()(_.emoji, n),
         emojiId: t.id,
         emojiName: t.name,
         autoplay: !0,
-        animated: !!(t.animated && g && o),
+        animated: !!(t.animated && g && a),
         registerInnerRef: (e) => {
             E.current = e;
         }

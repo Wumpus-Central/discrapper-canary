@@ -2,15 +2,15 @@ n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(481060),
-    a = n(549879),
+    a = n(481060),
+    o = n(549879),
     s = n(300284),
     l = n(314897),
     c = n(430824),
     u = n(785717),
     d = n(475413),
     f = n(388032),
-    _ = n(87665);
+    _ = n(206435);
 function p(e, t, n) {
     return (
         t in e
@@ -52,17 +52,17 @@ function m(e) {
             ? (0, r.jsx)(d.tG, {
                   action: 'EDIT_PROFILE',
                   text: f.NW.string(f.t.s5vZlZ),
-                  icon: o.vdY,
+                  icon: a.vdY,
                   autoFocus: !0,
                   fullWidth: p,
                   onClick: () => {
-                      null == g || g(), v(), (0, a.i)(m);
+                      null == g || g(), v(), (0, o.i)(m);
                   }
               })
-            : (0, r.jsx)(o.yRy, {
+            : (0, r.jsx)(a.yRy, {
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
-                      return (0, r.jsxs)(o.v2r, {
+                      return (0, r.jsxs)(a.v2r, {
                           className: _.popoutMenu,
                           onSelect: void 0,
                           navId: 'edit-profile-popout',
@@ -71,20 +71,20 @@ function m(e) {
                           },
                           'aria-label': f.NW.string(f.t.AXIHpa),
                           children: [
-                              (0, r.jsx)(o.sNh, {
+                              (0, r.jsx)(a.sNh, {
                                   id: 'edit-server-profile',
                                   label: f.NW.string(f.t['PKQB/P']),
                                   subtext: f.NW.string(f.t.VYHWKC),
                                   action: () => {
-                                      O({ action: 'EDIT_GUILD_PROFILE' }), y(), (0, a.i)(m);
+                                      O({ action: 'EDIT_GUILD_PROFILE' }), y(), (0, o.i)(m);
                                   }
                               }),
-                              (0, r.jsx)(o.sNh, {
+                              (0, r.jsx)(a.sNh, {
                                   id: 'edit-main-profile',
                                   label: f.NW.string(f.t.HmFaFB),
                                   subtext: f.NW.string(f.t['+EERMj']),
                                   action: () => {
-                                      O({ action: 'EDIT_PROFILE' }), v(), (0, a.i)(m);
+                                      O({ action: 'EDIT_PROFILE' }), v(), (0, o.i)(m);
                                   }
                               })
                           ]
@@ -96,7 +96,7 @@ function m(e) {
                           h(
                               {
                                   text: f.NW.string(f.t.s5vZlZ),
-                                  icon: o.vdY,
+                                  icon: a.vdY,
                                   autoFocus: !0,
                                   fullWidth: p
                               },

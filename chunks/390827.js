@@ -1,7 +1,7 @@
 var r,
     i,
-    o,
     a,
+    o,
     s = n(127849),
     l = n(636881),
     c = n(48657),
@@ -69,7 +69,7 @@ var R = function (e) {
                 O.now(P(e));
             })
           : S && !g
-            ? ((a = (o = new S()).port2), (o.port1.onmessage = w), (i = c(a.postMessage, a)))
+            ? ((o = (a = new S()).port2), (a.port1.onmessage = w), (i = c(o.postMessage, o)))
             : s.addEventListener && u(s.postMessage) && !s.importScripts && r && 'file:' !== r.protocol && !f(D)
               ? ((i = D), s.addEventListener('message', w, !1))
               : (i =

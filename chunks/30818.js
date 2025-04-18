@@ -5,7 +5,7 @@ var i = n(793030),
     s = n(481060),
     l = n(640175),
     a = n(388032),
-    o = n(63706);
+    o = n(45218);
 function c(e) {
     let { guildId: t, defaultSettings: n, canManageGuild: c } = e;
     return (0, r.jsxs)(s.hjN, {

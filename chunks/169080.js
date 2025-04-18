@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(200651),
     i = n(192379),
-    o = n(512722),
-    a = n.n(o),
+    a = n(512722),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(297781),
@@ -15,20 +15,20 @@ var r = n(200651),
     _ = n(986398),
     p = n(69589),
     h = n(388032),
-    m = n(418792);
+    m = n(588799);
 let g = [n(191420), n(774621), n(49274), n(904141)];
 function E(e) {
     var t, n;
-    let { generateImageRef: o, leaderboard: g, userId: E, guildId: b } = e,
+    let { generateImageRef: a, leaderboard: g, userId: E, guildId: b } = e,
         y = (0, s.e7)([u.default], () => u.default.getUser(E)),
         v = g.guild_settings.sort_by_statistic_id,
         O = i.useMemo(() => g.users.findIndex((e) => e.user_id === E) + 1, [g, E]),
         I = i.useMemo(() => g.users.find((e) => e.user_id === E), [g, E]);
-    a()(null != I, 'User row should not be null'), a()(null != y, 'User must exist');
+    o()(null != I, 'User row should not be null'), o()(null != y, 'User must exist');
     let S = d.ZP.getName(b, void 0, y),
         T = null != (n = null == (t = I.statistics[v]) ? void 0 : t.value) ? n : 0;
     return (0, r.jsxs)('div', {
-        ref: o,
+        ref: a,
         className: m.container,
         children: [
             (0, r.jsx)(p.Z, {

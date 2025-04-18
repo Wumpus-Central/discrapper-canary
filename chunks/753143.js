@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(192379),
     i = n(134158),
-    o = n(924428),
-    a = n(151973);
+    a = n(924428),
+    o = n(151973);
 function s(e, t, n) {
     return (
         t in e
@@ -68,7 +68,7 @@ let d = Object.freeze({
 });
 function f(e) {
     let { sections: t, sectionHeight: n, rowHeight: s, footerHeight: c, sidebarHeight: f, listHeaderHeight: _, chunkSize: p = 256, paddingTop: h = 0, paddingBottom: m = 0, getScrollerState: g, getAnchorId: E } = e,
-        b = (0, o.Z)(),
+        b = (0, a.Z)(),
         y = (0, r.useRef)(d),
         [v] = (0, r.useState)(() => new i.Z()),
         {
@@ -76,7 +76,7 @@ function f(e) {
             chunkStart: I,
             chunkEnd: S,
             forceUpdateOnChunkChange: T
-        } = (0, a.Z)({
+        } = (0, o.Z)({
             chunkSize: p,
             getScrollerState: g,
             forceUpdate: b
@@ -130,14 +130,14 @@ function f(e) {
     );
 }
 function _(e) {
-    let { scrollerRef: t, anchor: n, getScrollerState: i, listComputer: o, getAnchorId: a, totalHeight: s } = e;
+    let { scrollerRef: t, anchor: n, getScrollerState: i, listComputer: a, getAnchorId: o, totalHeight: s } = e;
     (0, r.useLayoutEffect)(() => {
         let { current: e } = t,
             { scrollTop: r } = i();
-        if (null == n || null == n.row || null == e || null == a || 0 === r) return;
+        if (null == n || null == n.row || null == e || null == o || 0 === r) return;
         let s = (t) => {
-            if (t < 0 || t >= o.sections[n.section] || a(n.section, n.row) !== n.id) return !1;
-            let [i] = o.computeScrollPosition(n.section, t),
+            if (t < 0 || t >= a.sections[n.section] || o(n.section, n.row) !== n.id) return !1;
+            let [i] = a.computeScrollPosition(n.section, t),
                 s = i - n.scrollOffset;
             return r !== s && (e.scrollTop = s), !0;
         };

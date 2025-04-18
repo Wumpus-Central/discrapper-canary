@@ -10,8 +10,8 @@ n.d(t, {
     n(539854);
 var r = n(738774),
     i = n(906411),
-    o = n(889564),
-    a = n(131704),
+    a = n(889564),
+    o = n(131704),
     s = n(496675),
     l = n(594174),
     c = n(768581),
@@ -34,8 +34,8 @@ function v(e) {
     let { emoji: t, channel: n, guildId: i = null == n ? void 0 : n.getGuildId(), intention: c, forceIncludeExternalGuilds: u } = e;
     if (!b(t)) return null;
     if (c === p.Hz.GUILD_PROFILE) return p.Z5.DISALLOW_CUSTOM;
-    let d = null != n && (0, a.zi)(n.type),
-        h = null != n && (0, a.bw)(n.type),
+    let d = null != n && (0, o.zi)(n.type),
+        h = null != n && (0, o.bw)(n.type),
         m = y(t, i),
         g = s.Z.can(_.Plq.USE_EXTERNAL_EMOJIS, n);
     if (c === p.Hz.COMMUNITY_CONTENT) return m && null != t.guildId && t.available ? null : p.Z5.DISALLOW_EXTERNAL;
@@ -46,24 +46,24 @@ function v(e) {
         if (c === p.Hz.STATUS) return p.Z5.PREMIUM_LOCKED;
         else if (!t.managed) return p.Z5.PREMIUM_LOCKED;
     }
-    return (0, o.Fv)(t, null != i ? i : void 0) ? ((0, r.Ol)(t.guildId) ? p.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE : p.Z5.ROLE_SUBSCRIPTION_LOCKED) : !t.animated || f.ZP.canUseAnimatedEmojis(E) || (0, o.yH)(t) ? null : p.Z5.PREMIUM_LOCKED;
+    return (0, a.Fv)(t, null != i ? i : void 0) ? ((0, r.Ol)(t.guildId) ? p.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE : p.Z5.ROLE_SUBSCRIPTION_LOCKED) : !t.animated || f.ZP.canUseAnimatedEmojis(E) || (0, a.yH)(t) ? null : p.Z5.PREMIUM_LOCKED;
 }
 function O(e, t) {
     let n = 0,
         r = 0,
-        o = 0,
         a = 0,
+        o = 0,
         s = 0,
         l = 0;
     return (
         e.forEach((e) => {
-            null != e.id ? (e.type === i.B.GUILD && (e.guildId === t ? (e.managed ? a++ : r++) : e.managed ? s++ : o++), e.animated && l++) : n++;
+            null != e.id ? (e.type === i.B.GUILD && (e.guildId === t ? (e.managed ? o++ : r++) : e.managed ? s++ : a++), e.animated && l++) : n++;
         }),
         {
             unicode: n,
             custom: r,
-            customExternal: o,
-            managed: a,
+            customExternal: a,
+            managed: o,
             managedExternal: s,
             animated: l
         }
@@ -81,8 +81,8 @@ let I = {
     isCustomEmoji: b,
     getEmojiUnavailableReasons(e) {
         let { categoryEmojis: t, channel: n, guildId: r, intention: i } = e,
-            o = new Set(),
-            a = [],
+            a = new Set(),
+            o = [],
             s = 0,
             l = !1;
         for (let e of t) {
@@ -93,14 +93,14 @@ let I = {
                 intention: i
             });
             if (null == t) {
-                a.push(e);
+                o.push(e);
                 continue;
             }
-            E.has(t) || a.push(e), g.has(t) && (null != e.id && o.add(e.id), m.has(t) && (l || t !== p.Z5.PREMIUM_LOCKED || (l = !0), s++));
+            E.has(t) || o.push(e), g.has(t) && (null != e.id && a.add(e.id), m.has(t) && (l || t !== p.Z5.PREMIUM_LOCKED || (l = !0), s++));
         }
         return {
-            emojisDisabled: o,
-            emojisUnfiltered: a,
+            emojisDisabled: a,
+            emojisUnfiltered: o,
             emojisPremiumLockedCount: s,
             emojiNitroLocked: l
         };
@@ -115,8 +115,8 @@ let I = {
     },
     isEmojiCategoryNitroLocked(e) {
         let { categoryEmojis: t, channel: n, guildId: r, intention: i } = e,
-            o = !1,
-            a = 0;
+            a = !1,
+            o = 0;
         for (let e of t) {
             let t = v({
                 emoji: e,
@@ -124,9 +124,9 @@ let I = {
                 intention: i,
                 guildId: r
             });
-            t === p.Z5.PREMIUM_LOCKED ? ((o = !0), a++) : t === p.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE && a++;
+            t === p.Z5.PREMIUM_LOCKED ? ((a = !0), o++) : t === p.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE && o++;
         }
-        return o && a === t.length;
+        return a && o === t.length;
     },
     isEmojiFilteredOrLocked(e) {
         return this.isEmojiFiltered(e) || this.isEmojiPremiumLocked(e);

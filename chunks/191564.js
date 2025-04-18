@@ -21,7 +21,7 @@ var n = r(200651),
     O = r(981631),
     v = r(474936),
     _ = r(388032),
-    N = r(307455);
+    N = r(287975);
 function E(e) {
     let { user: t, product: r, purchase: i, onApply: o, onClose: s, onOpenShop: c, disableApplyButton: a, canUseCollectibles: d, selectedProfileEffectId: f, selectedProfileEffectItem: h } = e,
         b = (0, p.M)();

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(481060),
@@ -10,7 +10,7 @@ var r = n(200651),
     d = n(751688),
     f = n(5192),
     _ = n(51144),
-    p = n(103244);
+    p = n(223390);
 function h(e, t, n) {
     return (
         t in e
@@ -87,7 +87,7 @@ function y() {
     }
 }
 function v(e) {
-    let { users: t, maxUsers: o, guildId: s, channelId: h, className: g, size: v = c.EFr.SIZE_24, overflowCountVariant: O, overflowCountColor: I = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: T = !1, disableUsernameTooltip: N = !1, disableUserPopout: A = !1, onClick: C, onFocus: R, onUserClick: P, onUserPopoutRequestClose: w } = e,
+    let { users: t, maxUsers: a, guildId: s, channelId: h, className: g, size: v = c.EFr.SIZE_24, overflowCountVariant: O, overflowCountColor: I = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: T = !1, disableUsernameTooltip: N = !1, disableUserPopout: A = !1, onClick: C, onFocus: R, onUserClick: P, onUserPopoutRequestClose: w } = e,
         [D, L] = i.useState(!1),
         x = b(v);
     function M() {
@@ -112,7 +112,7 @@ function v(e) {
                                 (0, u.jW)(
                                     t,
                                     async () => {
-                                        let { default: t } = await Promise.all([n.e('26881'), n.e('69220'), n.e('79075')]).then(n.bind(n, 881351));
+                                        let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('70686')]).then(n.bind(n, 881351));
                                         return (n) =>
                                             (0, r.jsx)(
                                                 t,
@@ -133,16 +133,16 @@ function v(e) {
         });
     }
     function k() {
-        let e = t.length - o,
+        let e = t.length - a,
             n = e + 1,
             i = e > 0 && !T,
-            u = Math.min(t.length, o) - 1,
+            u = Math.min(t.length, a) - 1,
             d = l()(t)
-                .take(o)
+                .take(a)
                 .map((e, t) => {
                     let n = _.ZP.getName(e),
-                        o = t === u && !i,
-                        l = a()(p.avatar, x, o && p.isLast);
+                        a = t === u && !i,
+                        l = o()(p.avatar, x, a && p.isLast);
                     return N
                         ? (0, r.jsx)(
                               'div',
@@ -182,7 +182,7 @@ function v(e) {
                     onRequestClose: () => L(!1),
                     children: () =>
                         (0, r.jsx)(c.zxk, {
-                            className: a()(p.overflow, x, S),
+                            className: o()(p.overflow, x, S),
                             onFocus: R,
                             onClick: (e) => {
                                 null == C || C(e), L(!0);
@@ -204,7 +204,7 @@ function v(e) {
     return t.length <= 0
         ? null
         : (0, r.jsx)('div', {
-              className: a()(g, p.avatars),
+              className: o()(g, p.avatars),
               children: k()
           });
 }

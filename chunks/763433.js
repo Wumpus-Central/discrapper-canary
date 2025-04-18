@@ -14,7 +14,7 @@ var r,
     p = n(822857),
     m = n(594174),
     h = n(744695),
-    g = n(24307),
+    g = n(296026),
     _ = (((r = {}).DEFAULT = 'DEFAULT'), (r.SEARCH = 'SEARCH'), r);
 function f(e) {
     let { selectedTabId: t, handleTransition: n, tabs: r, state: l = 'DEFAULT', onAvailableWidthChange: _, icon: f, children: b } = e,

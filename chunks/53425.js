@@ -11,13 +11,13 @@ var r = n(200651),
     h = n(823379),
     p = n(734190),
     f = n(388032),
-    g = n(209025);
+    g = n(995453);
 let m = i.memo(function (e) {
     let { channel: t, selectedChannel: n, selectedVoiceChannelId: i, sortedThreadIds: l, withGuildIcon: m } = e,
         { density: b } = (0, a.TCT)(),
         y = (0, c.Q3)('GuildSidebarThreadList'),
         _ = (0, s.Wu)([u.Z], () => l.map((e) => u.Z.getChannel(e)).filter(h.lm), [l]),
-        v = (0, s.e7)([d.ZP], () => {
+        O = (0, s.e7)([d.ZP], () => {
             let e = _[_.length - 1];
             if (null == e) return 0;
             let t = d.ZP.getVoiceStates(e.guild_id)[e.id];
@@ -31,7 +31,7 @@ let m = i.memo(function (e) {
             children: [
                 (0, r.jsx)('div', {
                     className: o()(g.spineBorder, { [g.spineBorderWithGuildIcon]: m }),
-                    style: { bottom: (y && 'cozy' === b ? 28 : 24) + v }
+                    style: { bottom: (y && 'cozy' === b ? 28 : 24) + O }
                 }),
                 _.map((e, t) =>
                     (0, r.jsx)(

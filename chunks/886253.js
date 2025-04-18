@@ -12,8 +12,8 @@ var r = l(442837),
     m = l(533159),
     x = l(981631),
     h = l(388032),
-    p = l(485953),
-    v = l(496047);
+    p = l(969878),
+    v = l(409369);
 function j(e) {
     let { appId: n, skuId: l, transitionState: j, onClose: N, onHeaderTitleClick: f, children: b, footer: S } = e,
         g = (0, r.e7)(

@@ -7,7 +7,7 @@ r(192379);
 var l = r(385499),
     i = r(245315),
     o = r(368859),
-    a = r(161441);
+    a = r(848697);
 function c(e) {
     let t,
         { message: r, channel: n, user: a, isRepliedMessage: c } = e;

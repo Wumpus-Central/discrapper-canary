@@ -2,8 +2,8 @@ let t = 2147483647,
     n = 36,
     r = 1,
     i = 26,
-    o = 38,
-    a = 700,
+    a = 38,
+    o = 700,
     s = 72,
     l = 128,
     c = '-',
@@ -53,62 +53,62 @@ let v = function (e) {
     },
     I = function (e, t, r) {
         let s = 0;
-        for (e = r ? h(e / a) : e >> 1, e += h(e / t); e > (p * i) >> 1; s += n) e = h(e / p);
-        return h(s + ((p + 1) * e) / (e + o));
+        for (e = r ? h(e / o) : e >> 1, e += h(e / t); e > (p * i) >> 1; s += n) e = h(e / p);
+        return h(s + ((p + 1) * e) / (e + a));
     },
     S = function (e) {
-        let o = [],
-            a = e.length,
+        let a = [],
+            o = e.length,
             u = 0,
             d = l,
             f = s,
             _ = e.lastIndexOf(c);
         _ < 0 && (_ = 0);
-        for (let t = 0; t < _; ++t) e.charCodeAt(t) >= 128 && g('not-basic'), o.push(e.charCodeAt(t));
-        for (let s = _ > 0 ? _ + 1 : 0; s < a; ) {
+        for (let t = 0; t < _; ++t) e.charCodeAt(t) >= 128 && g('not-basic'), a.push(e.charCodeAt(t));
+        for (let s = _ > 0 ? _ + 1 : 0; s < o; ) {
             let l = u;
-            for (let o = 1, l = n; ; l += n) {
-                s >= a && g('invalid-input');
+            for (let a = 1, l = n; ; l += n) {
+                s >= o && g('invalid-input');
                 let c = v(e.charCodeAt(s++));
-                (c >= n || c > h((t - u) / o)) && g('overflow'), (u += c * o);
+                (c >= n || c > h((t - u) / a)) && g('overflow'), (u += c * a);
                 let d = l <= f ? r : l >= f + i ? i : l - f;
                 if (c < d) break;
                 let _ = n - d;
-                o > h(t / _) && g('overflow'), (o *= _);
+                a > h(t / _) && g('overflow'), (a *= _);
             }
-            let c = o.length + 1;
-            (f = I(u - l, c, 0 == l)), h(u / c) > t - d && g('overflow'), (d += h(u / c)), (u %= c), o.splice(u++, 0, d);
+            let c = a.length + 1;
+            (f = I(u - l, c, 0 == l)), h(u / c) > t - d && g('overflow'), (d += h(u / c)), (u %= c), a.splice(u++, 0, d);
         }
-        return String.fromCodePoint(...o);
+        return String.fromCodePoint(...a);
     },
     T = function (e) {
-        let o = [],
-            a = (e = y(e)).length,
+        let a = [],
+            o = (e = y(e)).length,
             u = l,
             d = 0,
             f = s;
-        for (let t of e) t < 128 && o.push(m(t));
-        let _ = o.length,
+        for (let t of e) t < 128 && a.push(m(t));
+        let _ = a.length,
             p = _;
-        for (_ && o.push(c); p < a; ) {
-            let a = t;
-            for (let t of e) t >= u && t < a && (a = t);
+        for (_ && a.push(c); p < o; ) {
+            let o = t;
+            for (let t of e) t >= u && t < o && (o = t);
             let s = p + 1;
-            for (let l of (a - u > h((t - d) / s) && g('overflow'), (d += (a - u) * s), (u = a), e))
+            for (let l of (o - u > h((t - d) / s) && g('overflow'), (d += (o - u) * s), (u = o), e))
                 if ((l < u && ++d > t && g('overflow'), l == u)) {
                     let e = d;
                     for (let t = n; ; t += n) {
-                        let a = t <= f ? r : t >= f + i ? i : t - f;
-                        if (e < a) break;
-                        let s = e - a,
-                            l = n - a;
-                        o.push(m(O(a + (s % l), 0))), (e = h(s / l));
+                        let o = t <= f ? r : t >= f + i ? i : t - f;
+                        if (e < o) break;
+                        let s = e - o,
+                            l = n - o;
+                        a.push(m(O(o + (s % l), 0))), (e = h(s / l));
                     }
-                    o.push(m(O(e, 0))), (f = I(d, s, p == _)), (d = 0), ++p;
+                    a.push(m(O(e, 0))), (f = I(d, s, p == _)), (d = 0), ++p;
                 }
             ++d, ++u;
         }
-        return o.join('');
+        return a.join('');
     },
     N = function (e) {
         return b(e, function (e) {

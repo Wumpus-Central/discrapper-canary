@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(168232),
+    a = n(570140),
+    o = n(168232),
     s = n(430824),
     l = n(594174),
     c = n(987338),
@@ -22,7 +22,7 @@ function d(e, t, n) {
 }
 let f = 'production' === u.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === u.C.STAGING;
 function _() {
-    f = (0, a.QI)(l.default.getCurrentUser());
+    f = (0, o.QI)(l.default.getCurrentUser());
 }
 class p extends (r = i.ZP.Store) {
     initialize() {
@@ -53,7 +53,7 @@ class p extends (r = i.ZP.Store) {
     }
 }
 d(p, 'displayName', 'DeveloperExperimentStore');
-let h = new p(o.Z, {
+let h = new p(a.Z, {
     CONNECTION_OPEN: _,
     OVERLAY_INITIALIZE: _,
     CURRENT_USER_UPDATE: _

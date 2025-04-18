@@ -1,4 +1,4 @@
-let r, i, o, a, s, l, c, u, d, f, _, p, h, m, g;
+let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g;
 n.d(t, { Z: () => er });
 var E,
     b = n(979554),
@@ -48,7 +48,7 @@ function D(e) {
 }
 function L(e) {
     let { avatarDecoration: t } = e;
-    o = t;
+    a = t;
 }
 function x(e) {
     let { nameplate: t } = e;
@@ -56,7 +56,7 @@ function x(e) {
 }
 function M(e) {
     let { profileEffectId: t } = e;
-    a = t;
+    o = t;
 }
 function k(e) {
     let { item: t } = e;
@@ -116,16 +116,16 @@ function Q() {
     X(), J(), (T = {});
 }
 function X() {
-    (r = void 0), (i = void 0), (o = void 0), (a = void 0), (s = void 0);
+    (r = void 0), (i = void 0), (a = void 0), (o = void 0), (s = void 0);
 }
 function J() {
-    (l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (a = void 0);
+    (l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (o = void 0);
 }
 function $() {
     (p = void 0), (h = void 0), (m = void 0), (g = void 0), (_ = void 0);
 }
 function ee() {
-    o = void 0;
+    a = void 0;
 }
 function et() {
     Q(), $(), A();
@@ -138,7 +138,7 @@ class en extends (E = y.ZP.Store) {
         return T;
     }
     showNotice() {
-        return void 0 !== r || void 0 !== l || void 0 !== c || void 0 !== u || void 0 !== d || void 0 !== f || void 0 !== o || void 0 !== a || void 0 !== i || void 0 !== s;
+        return void 0 !== r || void 0 !== l || void 0 !== c || void 0 !== u || void 0 !== d || void 0 !== f || void 0 !== a || void 0 !== o || void 0 !== i || void 0 !== s;
     }
     getIsSubmitDisabled() {
         return void 0 !== c && c.length > O.tPV;
@@ -165,13 +165,13 @@ class en extends (E = y.ZP.Store) {
         return f;
     }
     getPendingAvatarDecoration() {
-        return o;
+        return a;
     }
     getPendingNameplate() {
         return s;
     }
     getPendingProfileEffectId() {
-        return a;
+        return o;
     }
     getAllPending() {
         return {
@@ -181,8 +181,8 @@ class en extends (E = y.ZP.Store) {
             pendingPronouns: u,
             pendingAccentColor: d,
             pendingThemeColors: f,
-            pendingAvatarDecoration: o,
-            pendingProfileEffectId: a,
+            pendingAvatarDecoration: a,
+            pendingProfileEffectId: o,
             pendingGlobalName: i,
             pendingNameplate: s
         };

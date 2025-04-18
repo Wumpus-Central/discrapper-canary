@@ -12,7 +12,7 @@ var r = n(200651),
     g = n(981631),
     p = n(30513),
     h = n(388032),
-    f = n(240342);
+    f = n(919957);
 function x(e) {
     let { errorDetails: t, originalVanityURLCode: n } = e;
     if (null != t)

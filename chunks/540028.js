@@ -2,8 +2,8 @@ n.d(t, { Z: () => S }), n(539854), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(692547),
-    a = n(481060),
+    a = n(692547),
+    o = n(481060),
     s = n(475179),
     l = n(519938),
     c = n(317381),
@@ -15,7 +15,7 @@ var i = n(442837),
     h = n(981631),
     m = n(354459),
     g = n(388032),
-    E = n(303473);
+    E = n(992955);
 function b(e, t, n) {
     return (
         t in e
@@ -69,7 +69,7 @@ function O(e, t) {
     );
 }
 function I(e) {
-    let { closePopout: t, idle: n, pipWindows: o, voiceChannelId: p, onSelect: E } = e;
+    let { closePopout: t, idle: n, pipWindows: a, voiceChannelId: p, onSelect: E } = e;
     n && t();
     let b = (0, i.e7)([c.ZP], () => c.ZP.getCurrentEmbeddedActivity()),
         y = (0, i.e7)([_.Z], () => _.Z.pipWindow),
@@ -90,7 +90,7 @@ function I(e) {
     }
     function T() {
         let e = [],
-            t = o.find((e) => e.component === h.NYg.VIDEO);
+            t = a.find((e) => e.component === h.NYg.VIDEO);
         return (
             null != t &&
                 O.forEach((n) => {
@@ -111,19 +111,19 @@ function I(e) {
         var t;
         let n = e.pipWindow.id,
             i = null == (t = e.participant) ? void 0 : t.id,
-            o = S(e),
+            a = S(e),
             s = ''.concat(n).concat(null != i ? i : '');
         return (0, r.jsx)(
-            a.sNh,
+            o.sNh,
             {
                 id: s,
-                label: o,
+                label: a,
                 action: () => I(e)
             },
             s
         );
     }
-    return (0, r.jsx)(a.v2r, {
+    return (0, r.jsx)(o.v2r, {
         navId: 'pip-menu',
         'aria-label': 'switch PIP',
         onClose: t,
@@ -142,7 +142,7 @@ let S = function (e) {
         u = 1 === s.length && l.length <= 1;
     return c || u
         ? null
-        : (0, r.jsx)(a.yRy, {
+        : (0, r.jsx)(o.yRy, {
               position: 'bottom',
               renderPopout: (e) =>
                   (0, r.jsx)(
@@ -158,11 +158,11 @@ let S = function (e) {
                   ),
               children: (e) =>
                   (0, r.jsx)(
-                      a.P3F,
+                      o.P3F,
                       O(y({ className: E.menuIcon }, e), {
-                          children: (0, r.jsx)(a.Huf, {
+                          children: (0, r.jsx)(o.Huf, {
                               size: 'md',
-                              color: o.Z.unsafe_rawColors.WHITE_500.css
+                              color: a.Z.unsafe_rawColors.WHITE_500.css
                           })
                       })
                   )

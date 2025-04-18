@@ -17,15 +17,15 @@ var r = n(200651),
     S = n(626135),
     p = n(74538),
     A = n(243778),
-    R = n(921944),
-    P = n(981631),
-    f = n(474936),
+    f = n(921944),
+    R = n(981631),
+    P = n(474936),
     C = n(388032),
-    D = n(343759);
+    D = n(134772);
 let g = (e) => {
     let { dismissibleContent: t } = e,
         n = (0, O.a0)(),
-        g = (0, o.e7)([T.default], () => p.ZP.isPremiumExactly(T.default.getCurrentUser(), f.p9.TIER_2)),
+        g = (0, o.e7)([T.default], () => p.ZP.isPremiumExactly(T.default.getCurrentUser(), P.p9.TIER_2)),
         { enabled: y, getNitroCTA: m } = I.g.useExperiment(
             { location: 'OutboundPromotionNotice' },
             {
@@ -39,7 +39,7 @@ let g = (e) => {
         M = i.useCallback(() => {
             var e, t;
             (0, E.Z)({
-                subscriptionTier: p.ZP.getSkuIdForPremiumType(f.p9.TIER_2),
+                subscriptionTier: p.ZP.getSkuIdForPremiumType(P.p9.TIER_2),
                 analyticsLocations: U,
                 analyticsObject:
                     ((e = (function (e) {
@@ -69,8 +69,8 @@ let g = (e) => {
                     })({}, b)),
                     (t = t =
                         {
-                            object: P.qAy.BUTTON_CTA,
-                            objectType: P.Qqv.TIER_2
+                            object: R.qAy.BUTTON_CTA,
+                            objectType: R.Qqv.TIER_2
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -87,21 +87,21 @@ let g = (e) => {
                     e)
             });
         }, [U, b]),
-        L = i.useCallback(() => {
-            c.Z.open(P.oAB.INVENTORY), N.ZP.dismissOutboundPromotionNotice();
-        }, []),
         Z = i.useCallback(() => {
-            S.default.track(P.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), m ? M() : L();
-        }, [m, M, L]);
+            c.Z.open(R.oAB.INVENTORY), N.ZP.dismissOutboundPromotionNotice();
+        }, []),
+        L = i.useCallback(() => {
+            S.default.track(R.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), m ? M() : Z();
+        }, [m, M, Z]);
     if (null == n) return null;
-    let k = (e) =>
+    let v = (e) =>
         (0, r.jsxs)(s.qXd, {
             color: s.DM8.PREMIUM_TIER_2,
             children: [
                 (0, r.jsx)(s.RyX, {
-                    noticeType: P.kVF.OUTBOUND_PROMOTION,
+                    noticeType: R.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
-                        N.ZP.dismissOutboundPromotionNotice(), null !== e && e(R.L.USER_DISMISS);
+                        N.ZP.dismissOutboundPromotionNotice(), null !== e && e(f.L.USER_DISMISS);
                     }
                 }),
                 (0, r.jsx)(s.SrA, {
@@ -114,14 +114,14 @@ let g = (e) => {
                         ? (0, r.jsxs)(l.xv, {
                               variant: 'text-sm/normal',
                               className: D.text,
-                              children: [C.NW.string(C.t['5JMiOj']), ' ', C.NW.format(C.t.fjSvsL, { onClick: L })]
+                              children: [C.NW.string(C.t['5JMiOj']), ' ', C.NW.format(C.t.fjSvsL, { onClick: Z })]
                           })
                         : C.NW.string(C.t['5JMiOj'])
                     : C.NW.string(C.t['Pzh+Gx']),
                 (0, r.jsx)(s.NoS, {
-                    noticeType: P.kVF.OUTBOUND_PROMOTION,
+                    noticeType: R.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
-                        Z(), null !== e && e(R.L.TAKE_ACTION);
+                        L(), null !== e && e(f.L.TAKE_ACTION);
                     },
                     children: m ? C.NW.string(C.t.pj0XBA) : C.NW.string(C.t.jVcuVV)
                 })
@@ -132,12 +132,12 @@ let g = (e) => {
               contentType: t,
               newSnowflakeId: n,
               timeRecurringConfig: { cooldownDurationMs: 0 },
-              groupName: R.R.NOTICE_BAR,
+              groupName: f.R.NOTICE_BAR,
               bypassAutoDismiss: !0,
               children: (e) => {
                   let { visibleContent: t, markAsDismissed: n } = e;
-                  if (t === a.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR) return k(n);
+                  if (t === a.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR) return v(n);
               }
           })
-        : k(null);
+        : v(null);
 };

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => w });
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(230711),
@@ -23,20 +23,20 @@ var r = n(200651),
     S = n(921944),
     T = n(474936),
     N = n(388032),
-    A = n(149547);
+    A = n(362450);
 let C = () => {
         var e, t, n;
         let i = (0, s.e7)([g.default], () => b.ZP.isPremium(g.default.getCurrentUser())),
-            o = (0, p.N)(),
-            a = (null == o || null == (e = o.subscription_trial) ? void 0 : e.sku_id) === T.Si.TIER_2;
+            a = (0, p.N)(),
+            o = (null == a || null == (e = a.subscription_trial) ? void 0 : e.sku_id) === T.Si.TIER_2;
         return (0, r.jsx)(h.Z, {
             size: l.zxk.Sizes.MEDIUM,
             buttonText: i
                 ? N.NW.string(N.t.IJI7ys)
-                : a
+                : o
                   ? (0, b.Rt)({
-                        intervalType: null == o || null == (t = o.subscription_trial) ? void 0 : t.interval,
-                        intervalCount: null == o || null == (n = o.subscription_trial) ? void 0 : n.interval_count
+                        intervalType: null == a || null == (t = a.subscription_trial) ? void 0 : t.interval,
+                        intervalCount: null == a || null == (n = a.subscription_trial) ? void 0 : n.interval_count
                     })
                   : N.NW.string(N.t.mr4K7O),
             subscriptionTier: T.Si.TIER_2
@@ -75,7 +75,7 @@ let C = () => {
     P = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
             i = (0, s.e7)([v.Z], () => v.Z.isUpsellPreview),
-            o = () => {
+            a = () => {
                 null == n || n(S.L.DISMISS), (0, y.G8)(), t || c.Z.open();
             };
         return (0, r.jsxs)('div', {
@@ -84,7 +84,7 @@ let C = () => {
                 i && (0, r.jsx)(C, {}),
                 (0, r.jsx)(l.zxk, {
                     className: A.footerButton,
-                    onClick: o,
+                    onClick: a,
                     color: l.zxk.Colors.PRIMARY,
                     size: l.zxk.Sizes.MEDIUM,
                     children: i || t ? N.NW.string(N.t['dqH+qq']) : N.NW.string(N.t.Olc2Ky)
@@ -94,7 +94,7 @@ let C = () => {
     };
 function w(e) {
     let { isCoachmark: t, markAsDismissed: n } = e,
-        { analyticsLocations: o } = (0, _.ZP)(f.Z.APP_ICON_EDITOR),
+        { analyticsLocations: a } = (0, _.ZP)(f.Z.APP_ICON_EDITOR),
         c = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
         {
             isUpsellPreview: p,
@@ -109,9 +109,9 @@ function w(e) {
         p &&
             E.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: T.cd.APP_ICON_UPSELL,
-                location_stack: o
+                location_stack: a
             });
-    }, [p, o]);
+    }, [p, a]);
     let b = (0, u.Z)(null, p ? y.O7 : I.dG4);
     return (i.useEffect(() => {
         if (p && !h) return y.O7;
@@ -119,10 +119,10 @@ function w(e) {
     null == c)
         ? null
         : (0, r.jsx)(_.Gt, {
-              value: o,
+              value: a,
               children: (0, r.jsx)('div', {
                   ref: b,
-                  className: a()(A.editor, m ? A.editorAnimate : null),
+                  className: o()(A.editor, m ? A.editorAnimate : null),
                   'data-app-right-panel': !0,
                   children: (0, r.jsxs)(l.y5t, {
                       children: [

@@ -6,7 +6,7 @@ var r = n(200651),
     o = n(826078),
     s = n(917042),
     u = n(20437),
-    c = n(802887);
+    c = n(138339);
 function d(e) {
     let { isLoading: t, onDoneLoading: n, videoURL: d, audioURL: m, transitionState: p } = e,
         { videoPlayerRef: f, cropData: v, applicationAudioEnabled: h, voiceAudioEnabled: g } = (0, u.S)(),

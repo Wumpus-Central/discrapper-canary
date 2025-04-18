@@ -8,7 +8,7 @@ var i = n(120356),
     a = n(481060),
     c = n(565138),
     u = n(252686),
-    d = n(909698);
+    d = n(728492);
 function h(e) {
     let { guild: t, show: n, active: i, onAnimationStart: h, onAnimationRest: p } = e,
         f = {},

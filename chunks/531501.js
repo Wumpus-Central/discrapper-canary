@@ -2,15 +2,15 @@ n.d(t, { Z: () => s });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(809918);
+    a = n.n(i),
+    o = n(197007);
 function s(e) {
     let { children: t, className: n, color: i } = e;
     return (0, r.jsxs)('div', {
-        className: o()(a.container, n),
+        className: a()(o.container, n),
         children: [
             (0, r.jsxs)('svg', {
-                className: a.border,
+                className: o.border,
                 width: '48',
                 height: '48',
                 viewBox: '0 0 48 48',

@@ -7,7 +7,7 @@ var o = n(200651),
     c = n(823985),
     l = n(202120),
     d = n(388032),
-    u = n(98540);
+    u = n(712694);
 function h(t) {
     var e, n;
     let { onClose: h, transitionState: x, location: f, successRedirect: m, platformType: p } = t,

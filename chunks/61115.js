@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(200100),
     l = n(481060),
     c = n(493773),
@@ -17,7 +17,7 @@ var r = n(200651),
     p = n(569984),
     h = n(981631),
     m = n(388032),
-    g = n(417898),
+    g = n(61942),
     E = n(677486);
 function b(e, t, n) {
     return (
@@ -74,7 +74,7 @@ function O(e, t) {
 let I = 2500,
     S = 467;
 function T(e) {
-    let { questId: t, survey: n, transitionState: o, onClose: a, onSubmit: f } = e,
+    let { questId: t, survey: n, transitionState: a, onClose: o, onSubmit: f } = e,
         p = (0, _.B4)(t),
         [b, v] = i.useState(0),
         [T, A] = (0, l.q_F)(() => ({
@@ -94,15 +94,15 @@ function T(e) {
                     );
         },
         P = async (e) => {
-            1 === e && (await A({ width: '100%' }), a());
+            1 === e && (await A({ width: '100%' }), o());
         };
     return (
         (0, c.ZP)(() => {
             null != p && d.default.track(h.rMx.QUEST_SURVEY_DISPLAYED, C(p, n));
         }),
-        null == p && a(),
+        null == p && o(),
         (0, r.jsx)(l.Y0X, {
-            transitionState: o,
+            transitionState: a,
             size: l.CgR.DYNAMIC,
             className: g.modalRoot,
             children: (0, r.jsxs)(l.MyZ, {
@@ -120,7 +120,7 @@ function T(e) {
                                 children: [
                                     (0, r.jsx)(l.olH, {
                                         className: g.closeBtn,
-                                        onClick: a
+                                        onClick: o
                                     }),
                                     (0, r.jsx)('img', {
                                         src: E,
@@ -180,7 +180,7 @@ function T(e) {
                                     className: g.closeButtonContainer,
                                     children: [
                                         (0, r.jsx)(l.zxk, {
-                                            onClick: a,
+                                            onClick: o,
                                             children: m.NW.string(m.t.cpT0Cg)
                                         }),
                                         (0, r.jsx)(s.animated.div, {
@@ -200,7 +200,7 @@ function T(e) {
 function N(e) {
     let { className: t, choice: n, onClick: i } = e;
     return (0, r.jsxs)(l.P3F, {
-        className: a()(g.choiceContainer, t),
+        className: o()(g.choiceContainer, t),
         onClick: () => i(n),
         children: [
             (0, r.jsx)(l.Text, {

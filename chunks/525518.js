@@ -7,7 +7,7 @@ var r = n(200651),
     o = n(215023),
     c = n(981631),
     u = n(388032),
-    d = n(5496);
+    d = n(108845);
 function m(e) {
     let { skuId: t, tab: n } = e,
         m = i.useCallback(() => {

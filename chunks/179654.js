@@ -1,8 +1,8 @@
 n.d(t, { Z: () => s });
 var r = n(934458),
     i = n(848479),
-    o = n(909766);
-function a(e, t, n) {
+    a = n(909766);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -83,6 +83,6 @@ class s {
               };
     }
     constructor() {
-        a(this, 'cpuHistogram', new o.b()), a(this, 'memoryHistogram', new o.b()), a(this, 'startCPU', i.Z.getCumulativeCPUUsage()), a(this, 'lastCPU', this.startCPU), a(this, 'lastBattery', null);
+        o(this, 'cpuHistogram', new a.b()), o(this, 'memoryHistogram', new a.b()), o(this, 'startCPU', i.Z.getCumulativeCPUUsage()), o(this, 'lastCPU', this.startCPU), o(this, 'lastBattery', null);
     }
 }

@@ -5,8 +5,8 @@ n.d(t, {
     n(539854);
 var r = n(200651),
     i = n(192379),
-    o = n(873546),
-    a = n(442837),
+    a = n(873546),
+    o = n(442837),
     s = n(911969),
     l = n(607070),
     c = n(998698),
@@ -27,19 +27,19 @@ var r = n(200651),
     S = n(466711),
     T = n(319417),
     N = n(728386),
-    A = n(120232);
+    A = n(302195);
 function C(e) {
     let { disabled: t, channel: n } = e,
         { enabled: i } = _.O.useExperiment({ location: 'gift-button' }),
-        o = (0, p.Z)();
+        a = (0, p.Z)();
     return i
         ? (0, r.jsx)(v.Z, {
               disabled: t,
               channel: n
           })
-        : null != o
+        : null != a
           ? (0, r.jsx)(S.Z, {
-                giftingPromotionConfig: o,
+                giftingPromotionConfig: a,
                 disabled: t,
                 channel: n
             })
@@ -51,19 +51,19 @@ function C(e) {
 function R(e) {
     var t, n, i, _, p, h, m;
     let { type: v, disabled: I, channel: S, handleSubmit: R, isEmpty: w, showAllButtons: D, children: L } = e,
-        x = (0, a.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
+        x = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
         M = P(S.id, v, w),
-        { activeCommand: k, activeCommandOption: j } = (0, a.cj)([c.Z], () => ({
+        { activeCommand: k, activeCommandOption: j } = (0, o.cj)([c.Z], () => ({
             activeCommand: c.Z.getActiveCommand(S.id),
             activeCommandOption: c.Z.getActiveOption(S.id)
         })),
         { paymentsBlocked: U } = u.Z.useExperiment({ location: 'dc120b_3' }, { autoTrackExposure: !1 }),
         G = [],
         B = !S.isDM() || void 0 === S.recipients || S.recipients.length > 1,
-        F = (0, a.e7)([g.default], () => (B ? null : g.default.getUser(S.recipients[0]))),
+        F = (0, o.e7)([g.default], () => (B ? null : g.default.getUser(S.recipients[0]))),
         V = (0, d.R6)('ChannelTextAreaButtons'),
         Z = (0, f.Nt)() && (null == (t = v.confetti) ? void 0 : t.button) != null;
-    return (o.tq ||
+    return (a.tq ||
         ((null == (p = v.gifts) ? void 0 : p.button) != null &&
             null == k &&
             !U &&
@@ -152,7 +152,7 @@ function R(e) {
           });
 }
 function P(e, t, n) {
-    return (0, a.e7)([h.Z, m.Z], () => {
+    return (0, o.e7)([h.Z, m.Z], () => {
         let r = h.Z.getStickerPreview(e, t.drafts.type),
             i = null != r && r.length > 0;
         return 0 === m.Z.getUploads(e, t.drafts.type).length && n && !i;

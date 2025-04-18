@@ -1,6 +1,6 @@
 n.d(t, {
-    P2: () => a,
-    jl: () => o
+    P2: () => o,
+    jl: () => a
 });
 let r = {
         emitDefaultValues: !1,
@@ -9,9 +9,9 @@ let r = {
         prettySpaces: 0
     },
     i = { ignoreUnknownFields: !1 };
-function o(e) {
+function a(e) {
     return e ? Object.assign(Object.assign({}, i), e) : i;
 }
-function a(e) {
+function o(e) {
     return e ? Object.assign(Object.assign({}, r), e) : r;
 }

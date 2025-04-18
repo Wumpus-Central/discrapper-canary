@@ -8,7 +8,7 @@ n(192379);
 var l = n(120356),
     i = n.n(l),
     a = n(481060),
-    o = n(728627);
+    o = n(754363);
 function s(e) {
     let { title: t } = e;
     return (0, r.jsx)(a.Text, {

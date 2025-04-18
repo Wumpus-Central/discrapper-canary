@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(192379),
     i = n(442837),
-    o = n(846519),
-    a = n(594174),
+    a = n(846519),
+    o = n(594174),
     s = n(431),
     l = n(580130),
     c = n(74538),
@@ -15,16 +15,16 @@ function d(e) {
     return null != e && null != e.expires_at && Date.now() > Date.parse(e.expires_at);
 }
 function f(e) {
-    let t = a.default.getCurrentUser(),
+    let t = o.default.getCurrentUser(),
         n = (0, i.e7)([s.Z], () => s.Z.getUserTrialOffer(e)),
         [f, _] = r.useState(d(n)),
-        p = (0, i.e7)([a.default], () => (0, c.I5)(a.default.getCurrentUser())),
+        p = (0, i.e7)([o.default], () => (0, c.I5)(o.default.getCurrentUser())),
         h = (0, i.Wu)([l.Z], () => l.Z.getFractionalPremium(!1)).length > 0,
         m = !p || (h && (0, u.C)('use-trial-offer', t));
     return (
         r.useEffect(() => {
             if (null != n && null != n.expires_at) {
-                let e = new o.V7(),
+                let e = new a.V7(),
                     t = () => {
                         let r = null != n.expires_at ? Date.parse(n.expires_at) - Date.now() : 0;
                         null == e ||

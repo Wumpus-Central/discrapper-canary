@@ -1,7 +1,7 @@
-n.d(t, { w: () => o });
+n.d(t, { w: () => a });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2024-08_friend_anniversaries',
     label: 'Friend Anniversaries',

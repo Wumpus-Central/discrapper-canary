@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r = n(200651),
     i = n(192379),
-    o = n(996146),
-    a = n(481060),
+    a = n(996146),
+    o = n(481060),
     s = n(100527),
     l = n(906732),
     c = n(540059),
@@ -12,7 +12,7 @@ var r = n(200651),
     _ = n(443603),
     p = n(981631),
     h = n(388032),
-    m = n(120232);
+    m = n(302195);
 function g(e, t, n) {
     return (
         t in e
@@ -69,14 +69,14 @@ function v(e) {
     let { disabled: t, channel: i } = e,
         { analyticsLocations: g } = (0, l.ZP)(s.Z.GIFT_BUTTON),
         b = (0, f.Ft)(i),
-        { Component: v, events: O, play: I } = (0, o.$)(),
+        { Component: v, events: O, play: I } = (0, a.$)(),
         { enabled: S } = d.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
         T = (0, c.Q3)('ChannelPremiumGiftButton'),
         N = i.type === p.d4z.DM;
     if (t) return null;
     let A = () => {
         S && N && null != b
-            ? (0, a.ZDy)(async () => {
+            ? (0, o.ZDy)(async () => {
                   let { default: e } = await n.e('59207').then(n.bind(n, 435626));
                   return (t) =>
                       (0, r.jsx)(
@@ -109,7 +109,7 @@ function v(e) {
                   }
               });
     };
-    return (0, r.jsx)(a.ua7, {
+    return (0, r.jsx)(o.ua7, {
         text: h.NW.string(h.t.sWtWDQ),
         children: (e) =>
             (0, r.jsx)(

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(433517),
     i = n(981631);
-function o(e, t) {
+function a(e, t) {
     if (0 === e.length) return 'No logs';
     let n = r.K.get(i.JkL),
-        o = r.K.get(i.scU),
-        a = null != n ? 'Device Token: '.concat(n) : '',
-        s = null != o ? 'Device Voip Token: '.concat(o) : '',
+        a = r.K.get(i.scU),
+        o = null != n ? 'Device Token: '.concat(n) : '',
+        s = null != a ? 'Device Voip Token: '.concat(a) : '',
         l = e
             .map((e) => {
                 let n = e.silent ? 'Silent' : 'Displayed',
@@ -14,5 +14,5 @@ function o(e, t) {
                 return ''.concat(new Date(e.receivedTimestamp).toISOString(), ' [').concat(e.type, '] ').concat(n, ' - ').concat(r);
             })
             .join('\n');
-    return ''.concat(a, '\n').concat(s, '\n\n').concat(l);
+    return ''.concat(o, '\n').concat(s, '\n\n').concat(l);
 }

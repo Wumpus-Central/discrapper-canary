@@ -1,78 +1,78 @@
-i.d(e, { default: () => P }), i(388685);
-var n = i(200651),
-    r = i(192379),
-    s = i(541822),
-    o = i(442837),
-    l = i(481060),
-    a = i(728345),
-    c = i(812206),
-    p = i(600164),
-    u = i(886176),
-    _ = i(572004),
-    d = i(504211),
-    S = i(283836),
-    C = i(507608),
-    f = i(533159),
-    I = i(981631),
-    T = i(979007),
-    N = i(388032),
-    g = i(485953);
-function P(t) {
-    let { onClose: e, transitionState: i, appId: P, guildId: O } = t,
-        b = (0, o.e7)([c.Z], () => c.Z.getApplication(P), [P]),
-        [m, h] = r.useState(() => (c.Z.isFetchingApplication(P) ? { status: 1 } : { status: 0 }));
-    r.useEffect(() => {
-        0 === m.status &&
-            (h({ status: 1 }),
-            a.ZP.fetchApplication(P)
+s.d(e, { default: () => j }), s(388685);
+var r = s(200651),
+    a = s(192379),
+    i = s(541822),
+    o = s(442837),
+    c = s(481060),
+    n = s(728345),
+    l = s(812206),
+    d = s(600164),
+    p = s(886176),
+    u = s(572004),
+    _ = s(504211),
+    f = s(283836),
+    m = s(507608),
+    x = s(533159),
+    h = s(981631),
+    S = s(979007),
+    N = s(388032),
+    g = s(969878);
+function j(t) {
+    let { onClose: e, transitionState: s, appId: j, guildId: v } = t,
+        C = (0, o.e7)([l.Z], () => l.Z.getApplication(j), [j]),
+        [b, T] = a.useState(() => (l.Z.isFetchingApplication(j) ? { status: 1 } : { status: 0 }));
+    a.useEffect(() => {
+        0 === b.status &&
+            (T({ status: 1 }),
+            n.ZP.fetchApplication(j)
                 .then(() => {
-                    h({ status: 2 });
+                    T({ status: 2 });
                 })
                 .catch((t) => {
-                    h({
+                    T({
                         status: 3,
                         error: t.message
                     });
                 }));
-    }, [P, m.status]);
-    let { subscriptions: L, otps: E } = (0, S.q)(P);
-    if (null == b) return null;
-    let y = N.NW.formatToPlainString(N.t.XDRjs7, { appName: b.name });
-    return (0, n.jsxs)(l.Y0X, {
-        transitionState: i,
-        'aria-label': y,
-        size: l.CgR.DYNAMIC,
+    }, [j, b.status]);
+    let { subscriptions: Z, otps: w } = (0, f.q)(j);
+    if (null == C) return null;
+    let A = N.NW.formatToPlainString(N.t.XDRjs7, { appName: C.name });
+    return (0, r.jsxs)(c.Y0X, {
+        transitionState: s,
+        'aria-label': A,
+        size: c.CgR.DYNAMIC,
         className: g.modal,
         children: [
-            (0, n.jsxs)(l.xBx, {
+            (0, r.jsxs)(c.xBx, {
                 className: g.modalHeader,
                 children: [
-                    (0, n.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: g.modalTitle,
                         children: [
-                            (0, n.jsx)(u.Z, {}),
-                            (0, n.jsx)(l.X6q, {
+                            (0, r.jsx)(p.Z, {}),
+                            (0, r.jsx)(c.X6q, {
                                 variant: 'heading-md/semibold',
-                                children: y
+                                children: A
                             })
                         ]
                     }),
-                    (0, n.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: g.modalHeaderLinks,
                         children: [
-                            _.wS &&
-                                (0, n.jsx)(l.zxk, {
-                                    look: l.iLD.BLANK,
-                                    size: l.PhG.ICON,
-                                    color: l.Ttl.TRANSPARENT,
+                            u.wS &&
+                                (0, r.jsx)(c.zxk, {
+                                    look: c.iLD.BLANK,
+                                    size: c.PhG.ICON,
+                                    color: c.Ttl.TRANSPARENT,
                                     'aria-label': N.NW.string(N.t.WqhZsr),
                                     onClick: () => {
-                                        let t = ''.concat(location.protocol, '//').concat(location.host).concat(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(P, T.GlobalDiscoveryAppsSections.STORE));
-                                        (0, _.JG)(t, () => (0, l.showToast)((0, l.createToast)(N.NW.string(N.t['L/PwZW']), l.ToastType.SUCCESS))), (0, d.X)(P, d.B.STORE_MODAL);
+                                        let t = ''.concat(location.protocol, '//').concat(location.host).concat(h.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(j, S.GlobalDiscoveryAppsSections.STORE));
+                                        (0, u.JG)(t, () => (0, c.showToast)((0, c.createToast)(N.NW.string(N.t['L/PwZW']), c.ToastType.SUCCESS))), (0, _.X)(j, _.B.STORE_MODAL);
                                     },
-                                    children: (0, n.jsx)(l.xPt, { size: 'sm' })
+                                    children: (0, r.jsx)(c.xPt, { size: 'sm' })
                                 }),
-                            (0, n.jsx)(l.olH, {
+                            (0, r.jsx)(c.olH, {
                                 onClick: e,
                                 className: g.modalCloseBtn
                             })
@@ -80,27 +80,27 @@ function P(t) {
                     })
                 ]
             }),
-            (0, n.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: g.scrollerWrapper,
-                children: (0, n.jsx)(s.Z, {
+                children: (0, r.jsx)(i.Z, {
                     className: g.scroller,
-                    children: (0, n.jsx)(C.AF, {
-                        app: b,
-                        guildId: O,
-                        subscriptions: L,
-                        otps: E
+                    children: (0, r.jsx)(m.AF, {
+                        app: C,
+                        guildId: v,
+                        subscriptions: Z,
+                        otps: w
                     })
                 })
             }),
-            (0, n.jsx)(l.mzw, {
-                justify: p.Z.Justify.END,
-                children: (0, n.jsx)(l.Text, {
+            (0, r.jsx)(c.mzw, {
+                justify: d.Z.Justify.END,
+                children: (0, r.jsx)(c.Text, {
                     variant: 'text-md/normal',
                     children:
-                        null != b.termsOfServiceUrl || null != b.privacyPolicyUrl
-                            ? (0, n.jsx)(f.Z, {
-                                  termsOfServiceUrl: b.termsOfServiceUrl,
-                                  privacyPolicyUrl: b.privacyPolicyUrl
+                        null != C.termsOfServiceUrl || null != C.privacyPolicyUrl
+                            ? (0, r.jsx)(x.Z, {
+                                  termsOfServiceUrl: C.termsOfServiceUrl,
+                                  privacyPolicyUrl: C.privacyPolicyUrl
                               })
                             : N.NW.string(N.t['3ZY+0N'])
                 })

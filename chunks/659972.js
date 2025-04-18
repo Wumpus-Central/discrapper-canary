@@ -14,7 +14,7 @@ var l = n(120356),
     d = n(857395),
     u = n(131154),
     h = n(38981),
-    g = n(966835),
+    g = n(7394),
     _ = (((r = {})[(r.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (r[(r.TRENDING = 1)] = 'TRENDING'), (r[(r.PERSONALIZED = 2)] = 'PERSONALIZED'), (r[(r.USER_GUILDS = 3)] = 'USER_GUILDS'), (r[(r.FRIENDS_GUILDS = 4)] = 'FRIENDS_GUILDS'), (r[(r.INTRO_CARD = 5)] = 'INTRO_CARD'), (r[(r.FEATURED = 6)] = 'FEATURED'), r);
 function m(e) {
     let { guild: t, stageInstance: n, showGuildPopout: r, setShowGuildPopout: l, handleGuildNameClick: _, source: m, speakers: b, speakerCount: x, audienceCount: f, channelName: p } = e,

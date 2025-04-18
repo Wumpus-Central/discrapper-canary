@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(168524),
     d = n(115530),
     h = n(388032),
-    p = n(841580);
+    p = n(270861);
 function f(e) {
     let { name: t, applicationId: n } = e,
         i = (0, u.Z)({

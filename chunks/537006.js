@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S });
 var r = n(200651),
     i = n(120356),
-    o = n.n(i),
-    a = n(704215),
+    a = n.n(i),
+    o = n(704215),
     s = n(481060),
     l = n(906732),
     c = n(335131),
@@ -17,7 +17,7 @@ var r = n(200651),
     E = n(921944),
     b = n(474936),
     y = n(388032),
-    v = n(52546);
+    v = n(869310);
 function O(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(s.P3F, {
@@ -33,7 +33,7 @@ function O(e) {
 }
 function I(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
-        { analyticsLocations: o, newestAnalyticsLocation: a } = (0, l.ZP)(),
+        { analyticsLocations: a, newestAnalyticsLocation: o } = (0, l.ZP)(),
         { trackUserProfileAction: u } = (0, _.KZ)();
     return (0, r.jsxs)('div', {
         className: v.upsellButtons,
@@ -87,9 +87,9 @@ function I(e) {
                     className: v.upsellButton,
                     onClick: () => {
                         (0, c.mK)({
-                            analyticsLocations: o,
+                            analyticsLocations: a,
                             openInLayer: !1,
-                            analyticsSource: a
+                            analyticsSource: o
                         }),
                             null == i || i();
                     }
@@ -103,10 +103,10 @@ let S = function (e) {
         { profileType: l } = (0, p.z)(),
         c = l === m.y0.FULL_SIZE;
     return (0, r.jsx)(u.ZP, {
-        contentTypes: [a.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS],
+        contentTypes: [o.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS],
         children: (e) => {
             let { visibleContent: l, markAsDismissed: u } = e;
-            if (l !== a.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS) return null;
+            if (l !== o.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS) return null;
             {
                 let e = (0, r.jsx)('div', {
                         children: (0, r.jsx)(s.Text, {
@@ -114,7 +114,7 @@ let S = function (e) {
                             children: y.NW.string(y.t.EIYbj4)
                         })
                     }),
-                    a = (0, r.jsx)(O, { onClose: () => u(E.L.USER_DISMISS) }),
+                    o = (0, r.jsx)(O, { onClose: () => u(E.L.USER_DISMISS) }),
                     l = (0, r.jsx)(I, {
                         isPremiumUser: t,
                         onInteraction: n,
@@ -122,26 +122,26 @@ let S = function (e) {
                     });
                 return c
                     ? (0, r.jsx)('div', {
-                          className: o()(v.upsellContainer, i),
+                          className: a()(v.upsellContainer, i),
                           children: (0, r.jsxs)('div', {
-                              className: o()(v.upsellContent, v.upsellRowContent),
+                              className: a()(v.upsellContent, v.upsellRowContent),
                               children: [
                                   e,
                                   (0, r.jsxs)('div', {
                                       className: v.upsellRowRight,
-                                      children: [(0, r.jsx)('div', { children: l }), (0, r.jsx)('div', { children: a })]
+                                      children: [(0, r.jsx)('div', { children: l }), (0, r.jsx)('div', { children: o })]
                                   })
                               ]
                           })
                       })
                     : (0, r.jsx)('div', {
-                          className: o()(v.upsellContainer, i),
+                          className: a()(v.upsellContainer, i),
                           children: (0, r.jsxs)('div', {
-                              className: o()(v.upsellContent, v.upsellDefaultContent),
+                              className: a()(v.upsellContent, v.upsellDefaultContent),
                               children: [
                                   (0, r.jsxs)('div', {
                                       className: v.upsellHeader,
-                                      children: [e, (0, r.jsx)('div', { children: a })]
+                                      children: [e, (0, r.jsx)('div', { children: o })]
                                   }),
                                   l
                               ]

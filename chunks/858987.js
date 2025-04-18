@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(512722),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(115130),
     l = n(906732),
     c = n(563132),
@@ -18,7 +18,7 @@ var i = n(512722),
     p = n(981631),
     h = n(231338),
     m = n(388032),
-    g = n(358771),
+    g = n(972478),
     E = n(74316);
 function b(e, t, n) {
     return (
@@ -73,11 +73,11 @@ function O(e, t) {
     );
 }
 function I(e) {
-    let { purchaseType: t, plan: n, premiumSubscription: r, isGift: i, planGroup: a, isPrepaidPaymentSource: s, inReverseTrial: l } = e;
+    let { purchaseType: t, plan: n, premiumSubscription: r, isGift: i, planGroup: o, isPrepaidPaymentSource: s, inReverseTrial: l } = e;
     if (t === h.GZ.ONE_TIME) return i ? m.NW.string(m.t.ouo4FB) : m.NW.string(m.t.ExD0Nj);
-    if ((o()(null != n, 'Subscription plan must be selected to render SubscriptionReviewButton'), i)) return m.NW.string(m.t.ouo4FB);
+    if ((a()(null != n, 'Subscription plan must be selected to render SubscriptionReviewButton'), i)) return m.NW.string(m.t.ouo4FB);
     if (l) return m.NW.string(m.t.LQVQIi);
-    if ((0, d.PV)(n.id)) return s ? m.NW.string(m.t.cRCCJy) : null != r ? (r.isPausedAllowsResumeButNotUpdates ? m.NW.string(m.t.zpi5pq) : (0, f.R4)(r, n.id, a) ? m.NW.string(m.t.IJI7ys) : m.NW.string(m.t.VPuTc3)) : (0, d.W_)(null, n);
+    if ((0, d.PV)(n.id)) return s ? m.NW.string(m.t.cRCCJy) : null != r ? (r.isPausedAllowsResumeButNotUpdates ? m.NW.string(m.t.zpi5pq) : (0, f.R4)(r, n.id, o) ? m.NW.string(m.t.IJI7ys) : m.NW.string(m.t.VPuTc3)) : (0, d.W_)(null, n);
     return m.NW.string(m.t.YScQSE);
 }
 function S(e, t) {
@@ -85,7 +85,7 @@ function S(e, t) {
 }
 function T(e) {
     var t;
-    let { legalTermsNodeRef: n, invoiceError: i, planError: o, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: b, isGift: v, planGroup: T, isPrepaid: N, isTrial: A, makePurchase: C, needsPaymentSource: R, inReverseTrial: P, onNext: w } = e,
+    let { legalTermsNodeRef: n, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: b, isGift: v, planGroup: T, isPrepaid: N, isTrial: A, makePurchase: C, needsPaymentSource: R, inReverseTrial: P, onNext: w } = e,
         { application: D, selectedPlan: L, hasAcceptedTerms: x, purchaseType: M, paymentSourceId: k, activeSubscription: j, devShelfFetchState: U } = (0, c.JL)(),
         G = I({
             purchaseType: M,
@@ -97,20 +97,20 @@ function T(e) {
             inReverseTrial: P
         }),
         { analyticsLocations: B } = (0, l.ZP)();
-    if (null != i || null != o || d)
-        return (0, r.jsx)(a.zxk, {
-            color: a.zxk.Colors.GREEN,
+    if (null != i || null != a || d)
+        return (0, r.jsx)(o.zxk, {
+            color: o.zxk.Colors.GREEN,
             disabled: !0,
             children: G
         });
     if (R)
-        return (0, r.jsx)(a.ua7, {
+        return (0, r.jsx)(o.ua7, {
             text: m.NW.string(m.t.L7jbQU),
             children: (e) =>
                 (0, r.jsx)(
-                    a.zxk,
+                    o.zxk,
                     O(y({}, e), {
-                        color: a.zxk.Colors.GREEN,
+                        color: o.zxk.Colors.GREEN,
                         type: 'submit',
                         'data-testid': 'submitButton',
                         disabled: !0,
@@ -119,13 +119,13 @@ function T(e) {
                 )
         });
     if ((0, u.yE)(null != (t = null == D ? void 0 : D.flags) ? t : 0, p.udG.EMBEDDED) && U === s.O.LOADING)
-        return (0, r.jsx)(a.ua7, {
+        return (0, r.jsx)(o.ua7, {
             text: m.NW.string(m.t.cjA5tr),
             children: (e) =>
                 (0, r.jsx)(
-                    a.zxk,
+                    o.zxk,
                     O(y({}, e), {
-                        color: a.zxk.Colors.GREEN,
+                        color: o.zxk.Colors.GREEN,
                         type: 'submit',
                         'data-testid': 'submitButton',
                         disabled: !0,
@@ -134,11 +134,11 @@ function T(e) {
                 )
         });
     if (A)
-        return (0, r.jsxs)(a.gtL, {
+        return (0, r.jsxs)(o.gtL, {
             innerClassName: g.innerButton,
             'data-testid': x ? 'purchase' : 'submitButton',
             onClick: x ? C : () => S(n, f),
-            color: a.zxk.Colors.GREEN,
+            color: o.zxk.Colors.GREEN,
             submitting: h,
             children: [
                 (0, r.jsx)('img', {
@@ -150,13 +150,13 @@ function T(e) {
             ]
         });
     if (!x)
-        return (0, r.jsx)(a.ua7, {
+        return (0, r.jsx)(o.ua7, {
             text: m.NW.string(m.t.XdvBLS),
             children: (e) =>
                 (0, r.jsx)(
-                    a.zxk,
+                    o.zxk,
                     O(y({}, e), {
-                        color: a.zxk.Colors.GREEN,
+                        color: o.zxk.Colors.GREEN,
                         type: 'submit',
                         onClick: () => S(n, f),
                         'data-testid': 'submitButton',
@@ -174,10 +174,10 @@ function T(e) {
             analyticsLocations: B
         });
     else
-        return (0, r.jsx)(a.zxk, {
+        return (0, r.jsx)(o.zxk, {
             'data-testid': 'purchase',
             onClick: C,
-            color: a.zxk.Colors.GREEN,
+            color: o.zxk.Colors.GREEN,
             submitting: h,
             children: G
         });

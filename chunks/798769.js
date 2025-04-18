@@ -2,18 +2,18 @@ n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(481060),
-    a = n(607070),
+    a = n(481060),
+    o = n(607070),
     s = n(409813),
     l = n(669079),
     c = n(170579),
     u = n(616030),
     d = n(474936),
     f = n(388032),
-    _ = n(166716);
+    _ = n(451316);
 function p(e) {
     let { currentStep: t, className: n, purchaseState: p, premiumType: h, useWinterTheme: m = !1, onClose: g, hideCloseButton: E, showTrialBadge: b, showDiscountBadge: y, isGift: v, giftRecipient: O } = e,
-        I = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+        I = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         S = m ? d.nL.WINTER : d.nL.DEFAULT,
         T = () => {
             switch (t) {
@@ -28,15 +28,15 @@ function p(e) {
             }
         };
     return v && (0, l.pO)(O) && t !== s.h8.CONFIRM
-        ? (0, r.jsxs)(o.xBx, {
+        ? (0, r.jsxs)(a.xBx, {
               className: _.modalHeaderCustomGift,
               separator: !1,
               children: [
-                  (0, r.jsx)(o.X6q, {
+                  (0, r.jsx)(a.X6q, {
                       variant: 'heading-lg/semibold',
                       children: T()
                   }),
-                  (0, r.jsx)(o.olH, {
+                  (0, r.jsx)(a.olH, {
                       onClick: g,
                       className: _.closeButton,
                       innerClassName: _.closeButtonInner

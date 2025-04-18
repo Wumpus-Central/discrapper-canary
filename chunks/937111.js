@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(601964),
+    a = n(570140),
+    o = n(601964),
     s = n(594174),
     l = n(881952);
 function c(e, t, n) {
@@ -83,12 +83,12 @@ function O(e) {
     if (null != n && null != r) {
         let { guild_id: e } = r;
         d[e] = h(r);
-        let { id: t, name: i, icon: o, features: a, splash: s } = n;
+        let { id: t, name: i, icon: a, features: o, splash: s } = n;
         _[t] = {
             id: t,
             name: i,
-            icon: o,
-            features: null != a ? a : [],
+            icon: a,
+            features: null != o ? o : [],
             splash: s
         };
     }
@@ -97,13 +97,13 @@ function I(e) {
     let { guilds: t } = e;
     (f = !0),
         t.forEach((e) => {
-            let { id: t, name: n, features: r, icon: i, splash: o } = e;
+            let { id: t, name: n, features: r, icon: i, splash: a } = e;
             _[t] = {
                 id: t,
                 name: n,
                 features: r,
                 icon: i,
-                splash: o
+                splash: a
             };
         });
 }
@@ -114,13 +114,13 @@ function S(e) {
 function T(e) {
     let { form: t, guildId: n } = e;
     if ((null == t ? void 0 : t.guild) != null) {
-        let { id: e, name: r, icon: i, features: o, splash: a } = t.guild;
+        let { id: e, name: r, icon: i, features: a, splash: o } = t.guild;
         _[n] = {
             id: e,
             name: r,
             icon: i,
-            features: null != o ? o : [],
-            splash: a
+            features: null != a ? a : [],
+            splash: o
         };
     }
 }
@@ -145,7 +145,7 @@ class R extends (r = i.ZP.Store) {
             .filter((e) => null != e);
     }
     getJoinRequestGuild(e) {
-        return null != _[e] ? new a.ZP(_[e]) : null;
+        return null != _[e] ? new o.ZP(_[e]) : null;
     }
     get hasFetchedRequestToJoinGuilds() {
         return f;
@@ -158,7 +158,7 @@ class R extends (r = i.ZP.Store) {
     }
 }
 c(R, 'displayName', 'UserGuildJoinRequestStore');
-let P = new R(o.Z, {
+let P = new R(a.Z, {
     CONNECTION_OPEN: g,
     GUILD_JOIN_REQUEST_UPDATE: b,
     GUILD_JOIN_REQUEST_CREATE: b,

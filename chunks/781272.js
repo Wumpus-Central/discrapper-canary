@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var i = n(477660),
-    o = n.n(i),
-    a = n(481060);
+    a = n.n(i),
+    o = n(481060);
 function s(e, t, n) {
     return (
         t in e
@@ -70,7 +70,7 @@ function d(e) {
                     let t = e.context[e.target];
                     t && t.onClick ? ((i.onClick = t.onClick), (i.onContextMenu = t.onContextMenu)) : (i.onClick = t);
                 }
-                return null == i.onClick && (i.href = o().sanitizeUrl(e.target)), (0, r.jsx)(a.eee, u(l({ title: e.title }, i), { children: t(e.content, n) }), n.key);
+                return null == i.onClick && (i.href = a().sanitizeUrl(e.target)), (0, r.jsx)(o.eee, u(l({ title: e.title }, i), { children: t(e.content, n) }), n.key);
             }
         })),
         e

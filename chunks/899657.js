@@ -9,13 +9,13 @@ e.exports = function (e) {
             literal: ['true', 'false', 'undefined', 'null']
         },
         i = /""|"[^"]+"/,
-        o = /''|'[^']+'/,
-        a = /\[\]|\[[^\]]+\]/,
+        a = /''|'[^']+'/,
+        o = /\[\]|\[[^\]]+\]/,
         s = /[^\s!"#%&'()*+,.\/;<=>@\[\\\]^`{|}~]+/,
         l = /(\.|\/)/,
-        c = t.either(i, o, a, s),
+        c = t.either(i, a, o, s),
         u = t.concat(t.optional(/\.|\.\/|\//), c, t.anyNumberOfTimes(t.concat(l, c))),
-        d = t.concat('(', a, '|', s, ')(?==)'),
+        d = t.concat('(', o, '|', s, ')(?==)'),
         f = { begin: u },
         _ = e.inherit(f, { keywords: r }),
         p = {

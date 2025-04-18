@@ -9,11 +9,11 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(887490),
-    s = n(416387),
-    l = n(525051),
-    c = n(494451);
+    a = n.n(i),
+    o = n(887490),
+    s = n(227473),
+    l = n(112360),
+    c = n(703803);
 function u(e, t, n) {
     return (
         t in e
@@ -76,7 +76,7 @@ let p = {
     url: s.fakeLink,
     autolink: s.fakeLink,
     silentPrefix: s.fakeLink,
-    spoiler: o()(c.spoilerContent, c.spoilerMarkdownContent, c.obscuredTextContent, s.spoiler),
+    spoiler: a()(c.spoilerContent, c.spoilerMarkdownContent, c.obscuredTextContent, s.spoiler),
     staticRouteLink: s.fakeLink,
     syntaxBefore: s.syntaxBefore,
     syntaxAfter: s.syntaxAfter,
@@ -89,8 +89,8 @@ function h(e, t) {
     let n,
         { attributes: i, children: c, leaf: u, text: f } = t,
         h = !1,
-        [m] = a.bN.node(e, a.C0.parent(a.bN.findPath(e, f)));
-    switch (a.bN.isEditor(m) ? 'editor' : m.type) {
+        [m] = o.bN.node(e, o.C0.parent(o.bN.findPath(e, f)));
+    switch (o.bN.isEditor(m) ? 'editor' : m.type) {
         case 'line':
         case 'blockQuote': {
             h = void 0;
@@ -110,11 +110,11 @@ function h(e, t) {
                 })
                 .filter((e) => null != e)
                 .join(' ');
-            n = o()(e, { [s.syntaxOverride]: '||' === u.text || '\\' === u.text });
+            n = a()(e, { [s.syntaxOverride]: '||' === u.text || '\\' === u.text });
         }
     }
     return (
-        (n = o()(n, { [l.emptyText]: '' === f.text })),
+        (n = a()(n, { [l.emptyText]: '' === f.text })),
         (0, r.jsx)(
             'span',
             _(d({}, i), {

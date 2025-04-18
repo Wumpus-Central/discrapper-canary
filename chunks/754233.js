@@ -6,7 +6,7 @@ var o = r(481060),
     s = r(430824),
     a = r(614812),
     l = r(388032),
-    i = r(770840);
+    i = r(318350);
 let d = (e) => {
     var t, r;
     let { onClose: d, guildId: u } = e,

@@ -1,18 +1,18 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(544891),
     i = n(981631),
-    o = n(388032);
-class a extends r.sX {
+    a = n(388032);
+class o extends r.sX {
     constructor(e, t) {
         super(
             e,
             t,
             null != t
-                ? o.NW.formatToPlainString(o.t.aKRa0d, {
+                ? a.NW.formatToPlainString(a.t.aKRa0d, {
                       statusPageURL: i.yXt.STATUS,
                       details: ''.concat(t)
                   })
-                : o.NW.formatToPlainString(o.t.aTVNen, { statusPageURL: i.yXt.STATUS })
+                : a.NW.formatToPlainString(a.t.aTVNen, { statusPageURL: i.yXt.STATUS })
         );
     }
 }

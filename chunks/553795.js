@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P }), n(388685);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(457330),
+    a = n(570140),
+    o = n(457330),
     s = n(726542),
     l = n(368111),
     c = n(601964);
@@ -73,7 +73,7 @@ function I(e) {
     O(e.connectedAccounts.map((e) => new l.Z(e)));
 }
 function S(e) {
-    e.local && null != e.accounts ? O(e.accounts.map((e) => new l.Z(_(d({}, e), { integrations: e.integrations.map((e) => _(d({}, e), { guild: new c.ZP(e.guild) })) })))) : a.Z.fetch();
+    e.local && null != e.accounts ? O(e.accounts.map((e) => new l.Z(_(d({}, e), { integrations: e.integrations.map((e) => _(d({}, e), { guild: new c.ZP(e.guild) })) })))) : o.Z.fetch();
 }
 function T(e) {
     E[e.integrationId] = e.joining;
@@ -83,13 +83,13 @@ function N(e) {
 }
 function A(e) {
     let { platformType: t, id: n, revoked: r, accessToken: i } = e,
-        o = m.find((e) => e.id === n && e.type === t);
-    if (null == o) return !1;
-    null != r && (o.revoked = r), null != i && (o.accessToken = i);
+        a = m.find((e) => e.id === n && e.type === t);
+    if (null == a) return !1;
+    null != r && (a.revoked = r), null != i && (a.accessToken = i);
 }
 function C(e) {
     let { code: t, state: n, openid_params: r, provider: i } = e;
-    a.Z.callback(i, {
+    o.Z.callback(i, {
         code: t,
         state: n,
         openid_params: r
@@ -131,7 +131,7 @@ class R extends (r = i.ZP.Store) {
     }
 }
 u(R, 'displayName', 'ConnectedAccountsStore');
-let P = new R(o.Z, {
+let P = new R(a.Z, {
     CONNECTION_OPEN: I,
     USER_CONNECTIONS_UPDATE: S,
     USER_CONNECTIONS_INTEGRATION_JOINING: T,

@@ -3,8 +3,8 @@ e.exports = function (e) {
         n = '[eE][-+]?' + t,
         r = t + '(\\.' + t + ')?(' + n + ')?',
         i = '\\w+',
-        o = '\\b(' + (t + '#' + i + '(\\.' + i + ')?#(' + n) + ')?|' + r + ')',
-        a = '[A-Za-z](_?[A-Za-z0-9.])*',
+        a = '\\b(' + (t + '#' + i + '(\\.' + i + ')?#(' + n) + ')?|' + r + ')',
+        o = '[A-Za-z](_?[A-Za-z0-9.])*',
         s = '[]\\{\\}%#\'"',
         l = e.COMMENT('--', '$'),
         c = {
@@ -22,7 +22,7 @@ e.exports = function (e) {
                 },
                 {
                     className: 'type',
-                    begin: a,
+                    begin: o,
                     endsParent: !0,
                     relevance: 0
                 }
@@ -54,12 +54,12 @@ e.exports = function (e) {
             },
             {
                 className: 'number',
-                begin: o,
+                begin: a,
                 relevance: 0
             },
             {
                 className: 'symbol',
-                begin: "'" + a
+                begin: "'" + o
             },
             {
                 className: 'title',

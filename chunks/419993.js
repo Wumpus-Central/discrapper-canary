@@ -1,9 +1,9 @@
 n.d(t, { K: () => S }), n(539854);
 var r,
     i = n(200651),
-    o = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    a = n(192379),
+    o = n(120356),
+    s = n.n(o),
     l = n(772848),
     c = n(84735),
     u = n(15127),
@@ -11,9 +11,9 @@ var r,
     f = n(993365),
     _ = n(179240),
     p = n(388032),
-    h = n(219461),
-    m = n(691989),
-    g = n(675857);
+    h = n(999249),
+    m = n(953100),
+    g = n(283574);
 function E(e, t, n) {
     return (
         t in e
@@ -32,7 +32,7 @@ let b = (0, l.Z)(),
     v = (0, l.Z)(),
     O = 10,
     I = 7.23;
-class S extends (r = o.Component) {
+class S extends (r = a.Component) {
     getPaddingRight() {
         let { maxLength: e, showCharacterCountFullPadding: t } = this.props;
         if (null == e) return O;
@@ -97,7 +97,7 @@ class S extends (r = o.Component) {
     }
     render() {
         var e, t;
-        let { disabled: n, value: r, placeholder: o, autoFocus: a, minLength: l, maxLength: u, allowOverflow: f, spellCheck: E, resizeable: b, className: O, id: I, rows: S, flex: T, autosize: N, required: A, onInvalid: C, inputRef: R } = this.props,
+        let { disabled: n, value: r, placeholder: a, autoFocus: o, minLength: l, maxLength: u, allowOverflow: f, spellCheck: E, resizeable: b, className: O, id: I, rows: S, flex: T, autosize: N, required: A, onInvalid: C, inputRef: R } = this.props,
             P = N ? _.l : 'textarea',
             w = this.hasError(),
             D = null != (t = this.props['aria-labelledby']) ? t : null == (e = this.context) ? void 0 : e.titleId,
@@ -122,9 +122,9 @@ class S extends (r = o.Component) {
                                 style: { paddingRight: this.getPaddingRight() },
                                 id: I,
                                 disabled: n,
-                                placeholder: o,
+                                placeholder: a,
                                 value: r,
-                                autoFocus: a,
+                                autoFocus: o,
                                 minLength: l,
                                 maxLength: f ? void 0 : u,
                                 spellCheck: E,
@@ -163,8 +163,8 @@ class S extends (r = o.Component) {
                 var e;
                 let { maxLength: t, minLength: n, error: r } = this.props,
                     i = [],
-                    o = null == (e = this.context) ? void 0 : e.errorId;
-                return null != o && i.push(o), null != r ? i.push(b) : (null != t && i.push(v), null != n && i.push(y)), i.length > 0 ? i.join(' ') : void 0;
+                    a = null == (e = this.context) ? void 0 : e.errorId;
+                return null != a && i.push(a), null != r ? i.push(b) : (null != t && i.push(v), null != n && i.push(y)), i.length > 0 ? i.join(' ') : void 0;
             }),
             E(this, 'onChange', (e) => {
                 let { onChange: t, name: n } = this.props;

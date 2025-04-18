@@ -1,8 +1,8 @@
 n.d(t, { C: () => y });
 var r = n(458725),
     i = n(433883),
-    o = n(185112),
-    a = n(889701),
+    a = n(185112),
+    o = n(889701),
     s = n(34024),
     l = n(211224),
     c = n(670357),
@@ -17,7 +17,7 @@ var r = n(458725),
     E = n(541759),
     b = n(159729);
 let y = {
-    [r.u.NO_AUDIO_INPUT_DETECTED]: a.d,
+    [r.u.NO_AUDIO_INPUT_DETECTED]: o.d,
     [r.u.NO_INPUT_DEVICES]: s.Z,
     [r.u.STREAM_VIEW_LOW_FPS]: h.c,
     [r.u.STREAM_VIEW_HIGH_PACKET_LOSS]: p.B,
@@ -32,5 +32,5 @@ let y = {
     [r.u.VIDEO_STREAM_RECEIVER_READY_TIMEOUT]: m.c,
     [r.u.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM]: b.y,
     [r.u.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM]: g.d,
-    [r.u.CAMERA_SEND_LOW_FPS]: o.l
+    [r.u.CAMERA_SEND_LOW_FPS]: a.l
 };

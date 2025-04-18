@@ -6,7 +6,7 @@ var i = n(200651),
     a = n(129724),
     o = n(981631),
     c = n(388032),
-    d = n(971005);
+    d = n(20493);
 function u(e) {
     let { channel: t, onChange: n } = e,
         [u, h] = r.useState(null),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A });
 var r = n(200651),
     i = n(192379),
-    o = n(873546),
-    a = n(442837),
+    a = n(873546),
+    o = n(442837),
     s = n(239091),
     l = n(100527),
     c = n(906732),
@@ -71,7 +71,7 @@ function T(e, t) {
     );
 }
 function N(e) {
-    let { userId: t, className: o, children: a } = e,
+    let { userId: t, className: a, children: o } = e,
         l = i.useCallback(() => {
             (0, d.k)({ kind: 'user' });
         }, []),
@@ -86,17 +86,17 @@ function N(e) {
             [t]
         );
     return (0, r.jsx)(f.Z, {
-        className: o,
+        className: a,
         onClick: l,
         onContextMenu: c,
-        children: a
+        children: o
     });
 }
 function A(e) {
     let { className: t, userId: i, channelId: d, parsedUserId: O, content: S, inlinePreview: A = !1, viewingChannelId: C } = e,
         { analyticsLocations: R } = (0, c.ZP)(l.Z.USER_MENTION),
-        P = (0, a.e7)([E.default], () => E.default.getUser(i)),
-        w = (0, a.e7)([p.Z], () => p.Z.getChannel(d)),
+        P = (0, o.e7)([E.default], () => E.default.getUser(i)),
+        w = (0, o.e7)([p.Z], () => p.Z.getChannel(d)),
         D = null != w ? w.getGuildId() : null,
         L =
             A || null == P || null == D || null == d
@@ -104,7 +104,7 @@ function A(e) {
                 : (e) => {
                       null != w &&
                           (0, s.jW)(e, async () => {
-                              let { default: e } = await Promise.all([n.e('94342'), n.e('26881'), n.e('13351'), n.e('4040'), n.e('98693'), n.e('7717'), n.e('87918')]).then(n.bind(n, 757387));
+                              let { default: e } = await Promise.all([n.e('94342'), n.e('79695'), n.e('13351'), n.e('4040'), n.e('98693'), n.e('7717'), n.e('20204')]).then(n.bind(n, 757387));
                               return (t) =>
                                   (0, r.jsx)(
                                       e,
@@ -118,7 +118,7 @@ function A(e) {
                           });
                   },
         x = y.ZP.useName(P),
-        M = (0, a.e7)([p.Z, h.ZP, g.Z], () => b.ZP.getNickname(D, d, P)),
+        M = (0, o.e7)([p.Z, h.ZP, g.Z], () => b.ZP.getNickname(D, d, P)),
         k = m.Z.getGuild(D),
         j = (0, u.Ib)(k, w) && i === v.fL ? v.jM : null;
     if (null == P)
@@ -153,7 +153,7 @@ function A(e) {
                   user: P,
                   guildId: null != D ? D : void 0,
                   channelId: d,
-                  position: o.tq ? 'top' : 'right',
+                  position: a.tq ? 'top' : 'right',
                   clickTrap: !0,
                   children: (e) => U(e)
               })

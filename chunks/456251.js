@@ -1,8 +1,8 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(172382);
-function a() {
-    return (0, r.jsx)(i.$jN, { className: o.spinner });
+    a = n(357069);
+function o() {
+    return (0, r.jsx)(i.$jN, { className: a.spinner });
 }

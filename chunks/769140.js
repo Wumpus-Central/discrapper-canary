@@ -2,8 +2,8 @@ n.d(t, { Z: () => H }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(287734),
     c = n(872810),
@@ -37,8 +37,8 @@ var i = n(120356),
     j = n(228168),
     U = n(981631),
     G = n(388032),
-    B = n(935693),
-    F = n(548120),
+    B = n(227832),
+    F = n(162509),
     V = n(924482),
     Z = n(774797);
 function H(e) {
@@ -48,9 +48,9 @@ function H(e) {
             [F.fullSize]: Y === j.y0.FULL_SIZE,
             [B.fullSize]: Y === j.y0.FULL_SIZE
         },
-        q = (0, a.e7)([I.Z], () => I.Z.getGuild(null == i ? void 0 : i.guildId)),
-        Q = (0, a.e7)([O.Z], () => O.Z.getChannel(null == i ? void 0 : i.channelId)),
-        X = (0, a.Wu)([N.ZP], () =>
+        q = (0, o.e7)([I.Z], () => I.Z.getGuild(null == i ? void 0 : i.guildId)),
+        Q = (0, o.e7)([O.Z], () => O.Z.getChannel(null == i ? void 0 : i.channelId)),
+        X = (0, o.Wu)([N.ZP], () =>
             null != Q
                 ? N.ZP.getVoiceStatesForChannel(Q).map((e) => {
                       let { user: t } = e;
@@ -58,7 +58,7 @@ function H(e) {
                   })
                 : []
         ),
-        J = (0, a.e7)([T.Z], () => T.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, f.Z)(e))),
+        J = (0, o.e7)([T.Z], () => T.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, f.Z)(e))),
         { analyticsLocations: $ } = (0, p.ZP)(_.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         ee = (0, A.Z)({
             display: 'live',
@@ -72,13 +72,13 @@ function H(e) {
             onAction: ee
         }),
         { previewUrl: en, isLoading: er } = (0, g.Z)(null == i ? void 0 : i.guildId, null == i ? void 0 : i.channelId, null == i ? void 0 : i.ownerId),
-        [ei, eo] = (0, E.wq)(Q),
-        ea = (0, a.e7)([S.Z], () => null != Q && S.Z.canBasicChannel(U.S7T.CONNECT, Q)),
+        [ei, ea] = (0, E.wq)(Q),
+        eo = (0, o.e7)([S.Z], () => null != Q && S.Z.canBasicChannel(U.S7T.CONNECT, Q)),
         es = (0, u.Z)(er ? null : en),
         el = er || null == en ? es : en;
     if (null == q || null == Q || !1 === i.discoverable) return null;
     let ec = () => {
-            let e = o()(F.preview, z),
+            let e = a()(F.preview, z),
                 t = (e) => {
                     e.stopPropagation(), ee({ action: 'PRESS_IMAGE' }), l.default.selectVoiceChannel(i.channelId), (0, c.iV)(i), null == W || W();
                 };
@@ -89,7 +89,7 @@ function H(e) {
                   })
                 : null == el
                   ? (0, r.jsxs)(s.P3F, {
-                        className: o()(e, F.overlay, { [F.clickable]: ei }),
+                        className: a()(e, F.overlay, { [F.clickable]: ei }),
                         onClick: ei ? t : void 0,
                         children: [
                             (0, r.jsx)('img', {
@@ -103,18 +103,18 @@ function H(e) {
                                             className: F.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: (0, E.P9)(eo)
+                                            children: (0, E.P9)(ea)
                                         }),
                                         (0, r.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
-                                            children: ea ? G.NW.string(G.t.uQZTBQ) : G.NW.string(G.t.pgUTZG)
+                                            children: eo ? G.NW.string(G.t.uQZTBQ) : G.NW.string(G.t.pgUTZG)
                                         })
                                     ]
                                 })
                         ]
                     })
                   : (0, r.jsxs)(s.P3F, {
-                        className: o()(e, F.overlay, { [F.clickable]: ei }),
+                        className: a()(e, F.overlay, { [F.clickable]: ei }),
                         onClick: ei ? t : void 0,
                         children: [
                             (0, r.jsx)('img', {
@@ -129,7 +129,7 @@ function H(e) {
                                             className: F.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: (0, E.P9)(eo)
+                                            children: (0, E.P9)(ea)
                                         }),
                                         (0, r.jsx)(s.gw7, {
                                             size: 'xs',
@@ -166,7 +166,7 @@ function H(e) {
                                         className: B.voiceIcon
                                     }),
                                     (0, r.jsx)(s.P3F, {
-                                        className: o()(B.clickableText, B.inline),
+                                        className: a()(B.clickableText, B.inline),
                                         onClick: e,
                                         children: Q.name
                                     })
@@ -209,7 +209,7 @@ function H(e) {
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: o()(B.actions, z),
+                      className: a()(B.actions, z),
                       children: (0, r.jsx)(M.Z, {
                           channel: Q,
                           onAction: ee,
@@ -237,7 +237,7 @@ function H(e) {
                     className: B.body,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: o()(B.content, z),
+                            className: a()(B.content, z),
                             children: [ec(), eu(), Y === j.y0.FULL_SIZE && ef()]
                         }),
                         ed()

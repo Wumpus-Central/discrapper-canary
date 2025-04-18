@@ -1,9 +1,9 @@
 n.d(t, { Z: () => H }), n(997841), n(388685), n(642613);
 var r,
     i = n(348327),
-    o = n.n(i),
-    a = n(392711),
-    s = n.n(a),
+    a = n.n(i),
+    o = n(392711),
+    s = n.n(o),
     l = n(442837),
     c = n(570140),
     u = n(503438),
@@ -79,7 +79,7 @@ function U() {
     T === O.Skl.ONLINE && A > 0 && (T = O.Skl.IDLE);
     let t = !1,
         n = P || T === O.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(k);
-    o()(C, n) || ((C = n), (t = !0));
+    a()(C, n) || ((C = n), (t = !0));
     let r = v.Z.getRemoteActivities();
     w !== r && ((w = r), (t = !0));
     let i = v.Z.getHiddenActivities();

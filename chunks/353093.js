@@ -8,8 +8,8 @@ n.d(t, {
     n(108131);
 var r = n(442837),
     i = n(607070),
-    o = n(715903),
-    a = n(271383),
+    a = n(715903),
+    o = n(271383),
     s = n(594174),
     l = n(308083),
     c = n(981631);
@@ -45,11 +45,11 @@ function p(e, t) {
     let n = (0, r.e7)([i.Z], () => i.Z.hideTags),
         l = (0, r.e7)([s.default], () => s.default.getUser(e), [e]),
         c = (0, r.e7)(
-            [a.ZP],
+            [o.ZP],
             () => {
                 if (null == t || null == e) return null;
-                let n = a.ZP.getMember(t, e);
-                return (0, o.EY)(n);
+                let n = o.ZP.getMember(t, e);
+                return (0, a.EY)(n);
             },
             [t, e]
         ),

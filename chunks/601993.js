@@ -10,12 +10,12 @@ n.d(t, {
 });
 var r = n(579806),
     i = n(405826),
-    o = n(358085);
-function a() {
+    a = n(358085);
+function o() {
     return (null === r.Z || void 0 === r.Z ? void 0 : r.Z.spellCheck) != null;
 }
 function s() {
-    return (0, o.isDesktop)() && a();
+    return (0, a.isDesktop)() && o();
 }
 let l = s() ? (0, i.N)() : null;
 async function c(e) {
@@ -46,7 +46,7 @@ async function p(e) {
     null != t && t.setAppLocale(e);
 }
 function h(e) {
-    if (!a()) return () => {};
+    if (!o()) return () => {};
     let t = r.Z.spellCheck.on('spellcheck-result', e);
     return null != t ? t : () => {};
 }

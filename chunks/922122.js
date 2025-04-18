@@ -11,7 +11,7 @@ var r = n(200651),
     p = n(540059),
     m = n(79707),
     h = n(388032),
-    g = n(684636);
+    g = n(602791);
 function _(e) {
     let { onTabSelect: t, tabs: n, selectedTab: i } = e,
         s = (0, u.ZP)(),

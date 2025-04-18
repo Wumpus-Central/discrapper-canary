@@ -100,9 +100,9 @@ var i = n(990547),
     ez = n(46140),
     eY = n(65154),
     eK = n(388032),
-    eq = n(609077),
-    eX = n(127941),
-    eQ = n(788634);
+    eq = n(622802),
+    eX = n(332495),
+    eQ = n(539452);
 let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     e$ = () => {
         let e = [];

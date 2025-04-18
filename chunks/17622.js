@@ -6,7 +6,7 @@ var o = n(120356),
     s = n(793030),
     c = n(119331),
     i = n(336227),
-    l = n(88921);
+    l = n(15537);
 function u(e) {
     let { powerup: t } = e,
         n = (0, i.Z)(t);

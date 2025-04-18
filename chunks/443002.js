@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(622535),
-    a = n(481060),
+    a = n(622535),
+    o = n(481060),
     s = n(425493),
     l = n(211266),
     c = n(906732),
@@ -21,7 +21,7 @@ var r = n(200651),
     O = n(383881),
     I = n(981631),
     S = n(388032),
-    T = n(177000);
+    T = n(871146);
 let N = function (e) {
     let { analyticsLocation: t, guild: n, onClose: N } = e,
         [A, C] = i.useState(!0),
@@ -90,7 +90,7 @@ let N = function (e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 null != N &&
-                    (0, r.jsx)(a.P3F, {
+                    (0, r.jsx)(o.P3F, {
                         'aria-label': S.NW.string(S.t.cpT0Cg),
                         onClick: j,
                         className: T.closeIconWrapper,
@@ -101,7 +101,7 @@ let N = function (e) {
                             variant: s.Z.Variants.SOLID
                         })
                     }),
-                (0, r.jsxs)(a.yWw, {
+                (0, r.jsxs)(o.yWw, {
                     ref: L,
                     className: T.scroller,
                     children: [
@@ -117,7 +117,7 @@ let N = function (e) {
                                                 themeResponsive: !1,
                                                 onButtonClick: M
                                             }),
-                                        (0, r.jsx)(a.X6q, {
+                                        (0, r.jsx)(o.X6q, {
                                             className: T.heading,
                                             color: 'always-white',
                                             variant: 'display-lg',
@@ -165,7 +165,7 @@ let N = function (e) {
                                 (0, r.jsx)('div', { className: T.lowerBodyBackgroundImage })
                             ]
                         }),
-                        (0, r.jsx)(o.$, {
+                        (0, r.jsx)(a.$, {
                             innerRef: D,
                             onChange: U,
                             children: (0, r.jsx)('div', {

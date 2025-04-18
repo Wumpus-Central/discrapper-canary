@@ -1,8 +1,8 @@
 n.d(t, { e: () => m }), n(388685);
 var r = n(192379),
     i = n(442837),
-    o = n(634894),
-    a = n(353926),
+    a = n(634894),
+    o = n(353926),
     s = n(335131),
     l = n(597688),
     c = n(228624);
@@ -62,15 +62,15 @@ let p = 600000,
     h = 600000;
 function m(e, t) {
     let n = 'useMaybeFetchCollectiblesCategories';
-    (0, o.j)({
+    (0, a.j)({
         location: n + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, o.j)({
+        (0, a.j)({
             location: n + ' auto off',
             autoTrackExposure: !1
         });
-    let u = (0, i.e7)([a.Z], () => a.Z.hasLoadedExperiments),
+    let u = (0, i.e7)([o.Z], () => o.Z.hasLoadedExperiments),
         f = null == e ? void 0 : e.includeBundles,
         m = (0, c.hv)('useMaybeFetchCollectiblesCategoriesShared'),
         [g, E, b, y, v, O] = (0, i.Wu)([l.Z], () => {
@@ -87,8 +87,8 @@ function m(e, t) {
                     variantsReturnStyle: m
                 }),
                 i = !(0, s.oc)(E, r),
-                o = Date.now() - v < p;
-            (i || !o) && (0, s.F$)(r, t);
+                a = Date.now() - v < p;
+            (i || !a) && (0, s.F$)(r, t);
         }, [u, g, E, v, e, b, f, y, m, t]),
         {
             isFetching: g,

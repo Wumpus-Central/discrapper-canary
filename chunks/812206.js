@@ -1,8 +1,8 @@
 n.d(t, { Z: () => K }), n(388685), n(642613), n(539854);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(973616);
+    a = n(570140),
+    o = n(973616);
 function s(e, t, n) {
     return (
         t in e
@@ -75,7 +75,7 @@ function y() {
 }
 function v(e) {
     let { applications: t } = e;
-    for (let e of t) b(new a.ZP(e));
+    for (let e of t) b(new o.ZP(e));
 }
 function O(e) {
     let { applicationId: t } = e,
@@ -91,7 +91,7 @@ function S(e) {
     T(t);
 }
 function T(e) {
-    b(a.ZP.createFromServer(e));
+    b(o.ZP.createFromServer(e));
 }
 function N(e) {
     let { userId: t, applicationId: n } = e,
@@ -107,10 +107,10 @@ function N(e) {
           });
     let i = new Map();
     for (let [e, t] of Object.entries(g.botUserIdToAppUsage)) i.set(e, t);
-    let o = Array.from(i.entries()).sort((e, t) => t[1].lastUsedMs - e[1].lastUsedMs);
-    for (let e = 0; e < o.length; e++)
+    let a = Array.from(i.entries()).sort((e, t) => t[1].lastUsedMs - e[1].lastUsedMs);
+    for (let e = 0; e < a.length; e++)
         if (e >= E) {
-            let t = o[e][0];
+            let t = a[e][0];
             delete g.botUserIdToAppUsage[t];
         }
 }
@@ -130,17 +130,17 @@ function C(e) {
 }
 function R(e) {
     let { libraryApplications: t } = e;
-    for (let e of t) b(a.ZP.createFromServer(e.application));
+    for (let e of t) b(o.ZP.createFromServer(e.application));
 }
 function P(e) {
     let { applications: t } = e;
-    for (let e of t) b(a.ZP.createFromServer(e));
+    for (let e of t) b(o.ZP.createFromServer(e));
 }
 function w(e) {
     let { recommendations: t } = e;
     t.forEach((e) => {
         e.items.forEach((e) => {
-            b(a.ZP.createFromServer(e.application));
+            b(o.ZP.createFromServer(e.application));
         });
     });
 }
@@ -171,13 +171,13 @@ function x(e) {
 function M(e) {
     let { entitlements: t } = e,
         n = !1;
-    for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (b(a.ZP.createFromServer(e.application)), (n = !0));
+    for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (b(o.ZP.createFromServer(e.application)), (n = !0));
     return n;
 }
 function k(e) {
     let { guildId: t, applications: n } = e,
         r = [];
-    for (let e of n) r.push(e.id), b(a.ZP.createFromServer(e));
+    for (let e of n) r.push(e.id), b(o.ZP.createFromServer(e));
     _[t] = r;
 }
 function j(e) {
@@ -186,7 +186,7 @@ function j(e) {
     for (let e of t) {
         var r;
         let t = null == (r = e.sku) ? void 0 : r.application;
-        null == t || n.has(t.id) || b(a.ZP.createFromServer(t));
+        null == t || n.has(t.id) || b(o.ZP.createFromServer(t));
     }
     return n.size > 0;
 }
@@ -194,23 +194,23 @@ function U(e) {
     var t;
     let { payment: n } = e;
     if ((null == (t = n.sku) ? void 0 : t.application) == null) return !1;
-    b(a.ZP.createFromServer(n.sku.application));
+    b(o.ZP.createFromServer(n.sku.application));
 }
 function G(e) {
     var t;
     let { giftCode: n } = e;
     if ((null == (t = n.store_listing) ? void 0 : t.sku.application) == null) return !1;
-    b(a.ZP.createFromServer(n.store_listing.sku.application));
+    b(o.ZP.createFromServer(n.store_listing.sku.application));
 }
 function B(e) {
     let { invite: t } = e;
     if (null == t.target_application) return !1;
-    b(a.ZP.createFromServer(t.target_application));
+    b(o.ZP.createFromServer(t.target_application));
 }
 function F(e) {
     let { storeListing: t } = e;
     if (null == t.sku.application) return !1;
-    b(a.ZP.createFromServer(t.sku.application));
+    b(o.ZP.createFromServer(t.sku.application));
 }
 function V(e) {
     let { messages: t } = e;
@@ -220,12 +220,12 @@ function Z(e) {
     var t;
     null == (t = e.attachments) ||
         t.forEach((e) => {
-            null != e.application && b(a.ZP.createFromServer(e.application));
+            null != e.application && b(o.ZP.createFromServer(e.application));
         });
 }
 function H(e) {
     e.apps.forEach((e) => {
-        b(a.ZP.createFromServer(e.application));
+        b(o.ZP.createFromServer(e.application));
         let t = e.application.bot;
         null != t &&
             N({
@@ -236,7 +236,7 @@ function H(e) {
 }
 function W(e) {
     e.items.forEach((e) => {
-        null != e.application && b(a.ZP.createFromServer(e.application));
+        null != e.application && b(o.ZP.createFromServer(e.application));
     });
 }
 class Y extends (r = i.ZP.PersistedStore) {
@@ -300,7 +300,7 @@ class Y extends (r = i.ZP.PersistedStore) {
     }
 }
 s(Y, 'displayName', 'ApplicationStore'), s(Y, 'persistKey', 'ApplicationStore');
-let K = new Y(o.Z, {
+let K = new Y(a.Z, {
     LOGOUT: y,
     OVERLAY_INITIALIZE: v,
     APPLICATION_FETCH: O,

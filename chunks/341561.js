@@ -2,8 +2,8 @@ n.d(t, { Z: () => D });
 var r = n(200651);
 n(192379);
 var i = n(952265),
-    o = n(588468),
-    a = n(125900),
+    a = n(588468),
+    o = n(125900),
     s = n(12327),
     l = n(285651),
     c = n(268350),
@@ -18,7 +18,7 @@ var i = n(952265),
     E = n(761652),
     b = n(981631),
     y = n(388032),
-    v = n(170813);
+    v = n(212206);
 function O(e, t, n) {
     return (
         t in e
@@ -78,8 +78,8 @@ let D = {
     stores: [u.Z],
     matches: (e, t, n, r, i) => n.length > 1,
     queryResults(e, t, n, r, i) {
-        let o = r.allowSoundmoji && (0, a.dX)({ location: 'queryResults' }),
-            s = r.allowStickers || o ? 0 : A,
+        let a = r.allowSoundmoji && (0, o.dX)({ location: 'queryResults' }),
+            s = r.allowStickers || a ? 0 : A,
             u = b.rnv + s,
             {
                 emojis: { unlocked: d }
@@ -104,7 +104,7 @@ let D = {
             (f = t.slice(0, r)), '-' === n[0] && (f = t.filter((e) => e.sticker.name === n));
         }
         let _ = [];
-        o &&
+        a &&
             ((_ = h.ZP.querySoundmoji(n, e)
                 .map((e) => ({ sound: e }))
                 .slice(0, N)),
@@ -127,7 +127,7 @@ let D = {
     },
     renderResults(e) {
         let {
-                results: { emojis: t, stickers: a, soundmoji: s, emojisLocked: l },
+                results: { emojis: t, stickers: o, soundmoji: s, emojisLocked: l },
                 selectedIndex: c,
                 query: u,
                 onHover: d,
@@ -140,7 +140,7 @@ let D = {
                 });
             },
             h = t.length > 0 || l.length > 0,
-            g = a.length > 0;
+            g = o.length > 0;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, m.HI)({
@@ -151,7 +151,7 @@ let D = {
                     onClick: f,
                     titleWithQuery: y.t.ksAVYm,
                     titleWithoutQuery: y.NW.string(y.t.sMOuub),
-                    Component: o.ZP.Emoji,
+                    Component: a.ZP.Emoji,
                     getProps: (e) => ({
                         emoji: e,
                         key: e.id || e.uniqueName || e.name,
@@ -170,7 +170,7 @@ let D = {
                           onClick: p,
                           titleWithQuery: 0 === t.length ? y.t.ksAVYm : null,
                           titleWithoutQuery: 0 === t.length ? y.NW.string(y.t.sMOuub) : null,
-                          Component: o.ZP.EmojiUpsell,
+                          Component: a.ZP.EmojiUpsell,
                           getProps: (e) => {
                               let { emojis: t } = e;
                               return {
@@ -183,16 +183,16 @@ let D = {
                           indexOffset: t.length
                       })
                     : null,
-                h && g && (0, r.jsx)(o.ZP.Divider, { className: v.divider }),
+                h && g && (0, r.jsx)(a.ZP.Divider, { className: v.divider }),
                 (0, m.HI)({
                     query: u,
                     selectedIndex: c,
-                    autocompletes: a,
+                    autocompletes: o,
                     onHover: d,
                     onClick: f,
                     titleWithQuery: y.t.uferGB,
                     titleWithoutQuery: y.NW.string(y.t['fT+Yjo']),
-                    Component: o.ZP.Sticker,
+                    Component: a.ZP.Sticker,
                     getProps: (e) => {
                         let { comparator: t, sticker: n } = e;
                         return {
@@ -207,7 +207,7 @@ let D = {
                     indexOffset: t.length + l.length,
                     headerClassName: h ? v.secondarySection : void 0
                 }),
-                (h || g) && s.length > 0 && (0, r.jsx)(o.ZP.Divider, { className: v.divider }),
+                (h || g) && s.length > 0 && (0, r.jsx)(a.ZP.Divider, { className: v.divider }),
                 (0, m.HI)({
                     query: u,
                     selectedIndex: c,
@@ -216,7 +216,7 @@ let D = {
                     onClick: f,
                     titleWithQuery: y.t['0cKBGB'],
                     titleWithoutQuery: y.NW.string(y.t.EHlAMT),
-                    Component: o.ZP.Soundmoji,
+                    Component: a.ZP.Soundmoji,
                     getProps: (e) => {
                         let { sound: t } = e;
                         return {
@@ -226,7 +226,7 @@ let D = {
                     },
                     getQuery: (e) => e,
                     key: 'soundmoji',
-                    indexOffset: t.length + l.length + a.length,
+                    indexOffset: t.length + l.length + o.length,
                     headerClassName: h || g ? v.secondarySection : void 0
                 })
             ]
@@ -235,14 +235,14 @@ let D = {
     onSelect(e) {
         let {
             results: { emojis: t, emojisLocked: n, soundmoji: r, stickers: i },
-            index: o,
-            options: a,
+            index: a,
+            options: o,
             channel: l
         } = e;
-        if (o < t.length) {
-            let e = t[o];
+        if (a < t.length) {
+            let e = t[a];
             return (
-                a.insertText(P(e), w(e)),
+                o.insertText(P(e), w(e)),
                 {
                     type: g.z2.EMOJI,
                     metadata: {
@@ -256,12 +256,12 @@ let D = {
                 }
             );
         }
-        if ((o -= t.length) < n.length) return { type: null };
-        if ((o -= n.length) < i.length) {
-            let e = i[o];
+        if ((a -= t.length) < n.length) return { type: null };
+        if ((a -= n.length) < i.length) {
+            let e = i[a];
             return (
-                a.insertText(''),
-                a.sendSticker(e.sticker, d.V0.AUTOCOMPLETE),
+                o.insertText(''),
+                o.sendSticker(e.sticker, d.V0.AUTOCOMPLETE),
                 {
                     type: g.z2.STICKER,
                     metadata: {
@@ -272,10 +272,10 @@ let D = {
                 }
             );
         }
-        if ((o -= i.length) < r.length) {
-            let e = r[o];
+        if ((a -= i.length) < r.length) {
+            let e = r[a];
             return (
-                a.insertText((0, s.Z)(e.sound.guildId, e.sound.soundId)),
+                o.insertText((0, s.Z)(e.sound.guildId, e.sound.soundId)),
                 p.default.track(b.rMx.SOUNDMOJI_SELECT, {
                     channel_id: l.id,
                     guild_id: l.guild_id,

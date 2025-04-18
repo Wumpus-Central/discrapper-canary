@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u }), n(388685);
 var r = n(147913),
     i = n(314897),
-    o = n(592125),
-    a = n(242291),
+    a = n(592125),
+    o = n(242291),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -26,10 +26,10 @@ class c extends r.Z {
                 let { state: t, channelId: n } = e,
                     r = t === s.hes.RTC_CONNECTED,
                     i = r && !this.prevConnected,
-                    l = o.Z.getChannel(n),
+                    l = a.Z.getChannel(n),
                     c = null == l ? void 0 : l.getGuildId(),
                     u = this.tempMutedChannel === n;
-                i && null != c && (u ? (this.tempMutedChannel = null) : (0, a.M2)(c)), (this.prevConnected = r);
+                i && null != c && (u ? (this.tempMutedChannel = null) : (0, o.M2)(c)), (this.prevConnected = r);
             }),
             l(this, 'handleMute', (e) => {
                 let { channelId: t } = e;
@@ -40,8 +40,8 @@ class c extends r.Z {
                     n = i.default.getId(),
                     r = i.default.getSessionId();
                 t.forEach((e) => {
-                    let { userId: t, channelId: i, sessionId: o } = e;
-                    t === n && o !== r && null != i && (this.tempMutedChannel = i);
+                    let { userId: t, channelId: i, sessionId: a } = e;
+                    t === n && a !== r && null != i && (this.tempMutedChannel = i);
                 });
             }),
             l(this, 'actions', {

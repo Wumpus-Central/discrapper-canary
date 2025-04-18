@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C });
 var r,
     i = n(512969),
-    o = n(442837),
-    a = n(570140),
+    a = n(442837),
+    o = n(570140),
     s = n(937111),
     l = n(893607),
     c = n(703656),
@@ -58,12 +58,12 @@ function T(e) {
 function N() {
     (m = null), (g = null);
 }
-class A extends (r = o.ZP.PersistedStore) {
+class A extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        var t, n, r, o;
-        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(f.Z, u.default, d.Z), (E = null != (n = null == e ? void 0 : e.selectedGuildTimestampMillis) ? n : {}), (m = null != (r = null == e ? void 0 : e.selectedGuildId) ? r : null), (g = null != (o = null == e ? void 0 : e.lastSelectedGuildId) ? o : null);
-        let a = d.Z.lastNonVoiceRoute,
-            s = (0, i.LX)(a, { path: _.Z5c.CHANNEL(l.Hw.guildId()) });
+        var t, n, r, a;
+        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(f.Z, u.default, d.Z), (E = null != (n = null == e ? void 0 : e.selectedGuildTimestampMillis) ? n : {}), (m = null != (r = null == e ? void 0 : e.selectedGuildId) ? r : null), (g = null != (a = null == e ? void 0 : e.lastSelectedGuildId) ? a : null);
+        let o = d.Z.lastNonVoiceRoute,
+            s = (0, i.LX)(o, { path: _.Z5c.CHANNEL(l.Hw.guildId()) });
         null == s || null == (t = s.params) || t.guildId;
     }
     getState() {
@@ -84,7 +84,7 @@ class A extends (r = o.ZP.PersistedStore) {
     }
 }
 p(A, 'displayName', 'SelectedGuildStore'), p(A, 'persistKey', 'SelectedGuildStore');
-let C = new A(a.Z, {
+let C = new A(o.Z, {
     CONNECTION_OPEN: b,
     OVERLAY_INITIALIZE: y,
     CHANNEL_SELECT: O,

@@ -10,8 +10,8 @@ n.d(t, {
     n(539854);
 var r = n(544891),
     i = n(780384),
-    o = n(410030),
-    a = n(726542),
+    a = n(410030),
+    o = n(726542),
     s = n(122021),
     l = n(981631),
     c = n(388032);
@@ -76,8 +76,8 @@ let b = function (e) {
         }
     },
     v = (e) => {
-        let t = a.Z.get((0, s.rR)(e)),
-            n = (0, o.ZP)();
+        let t = o.Z.get((0, s.rR)(e)),
+            n = (0, a.ZP)();
         return null != t && ['twitch', 'youtube'].includes(e) ? "url('".concat((0, i.wj)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null;
     };
 function O(e) {
@@ -101,16 +101,16 @@ async function I(e, t) {
             rejectWithError: !0
         });
         if (!Array.isArray(t.body)) return h(n, 0), [];
-        let o = t.body.map(O),
-            a = [];
-        o.forEach((e) => {
+        let a = t.body.map(O),
+            o = [];
+        a.forEach((e) => {
             let { userId: t } = e;
-            return a.push(t);
+            return o.push(t);
         });
-        let s = f(e, a),
-            c = i.filter((e) => !a.includes(e)),
+        let s = f(e, o),
+            c = i.filter((e) => !o.includes(e)),
             u = f(e, c);
-        return h(s, 3), h(u, 0), o;
+        return h(s, 3), h(u, 0), a;
     } catch (e) {
         h(n, 0);
     }

@@ -4,7 +4,7 @@ n(192379);
 var i = n(481060),
     l = n(812652),
     s = n(388032),
-    a = n(12584);
+    a = n(79309);
 function o(e) {
     let { align: t = 'left' } = e;
     return (0, r.jsx)(i.yRy, {

@@ -5,7 +5,7 @@ var a = n(120356),
     i = n.n(a),
     l = n(481060),
     s = n(388032),
-    o = n(439422),
+    o = n(166596),
     c = n(516450);
 function d(e) {
     let { heading: t = s.NW.string(s.t.NGw8v7), body: n = s.NW.string(s.t['1XZRY2']), className: a } = e;

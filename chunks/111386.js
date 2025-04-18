@@ -1,11 +1,11 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(704215),
-    a = n(481060),
+    a = n(704215),
+    o = n(481060),
     s = n(243778),
     l = n(388032),
-    c = n(809286),
+    c = n(945554),
     u = n(442937);
 function d(e, t, n) {
     return (
@@ -71,11 +71,11 @@ let h = () =>
                 (0, r.jsxs)('div', {
                     className: c.coachtipTextContainer,
                     children: [
-                        (0, r.jsx)(a.X6q, {
+                        (0, r.jsx)(o.X6q, {
                             variant: 'heading-lg/semibold',
                             children: l.NW.string(l.t.V5y3qa)
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: 'text-md/normal',
                             color: 'text-secondary',
                             children: l.NW.string(l.t.eSDHDg)
@@ -86,16 +86,16 @@ let h = () =>
         }),
     m = (e) => {
         let { children: t } = e,
-            [n] = (0, s.US)([o.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP]),
+            [n] = (0, s.US)([a.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP]),
             [l, u] = i.useState(!1);
         return (i.useEffect(() => {
             setTimeout(() => {
                 u(!0);
             }, 300);
         }),
-        n !== o.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP)
+        n !== a.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP)
             ? t
-            : (0, r.jsx)(a.ua7, {
+            : (0, r.jsx)(o.ua7, {
                   text: (0, r.jsx)(h, {}),
                   tooltipClassName: c.coachtip,
                   tooltipContentClassName: c.coachtipContent,

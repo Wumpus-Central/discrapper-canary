@@ -6,7 +6,7 @@ var l = n(481060),
     i = n(703288),
     o = n(332325),
     s = n(388032),
-    c = n(26562);
+    c = n(537796);
 function u(e) {
     let { filterQuery: t, setFilterQuery: n, onClose: u, sortOrder: d, setSortOrder: p } = e;
     return (0, r.jsxs)(l.xBx, {

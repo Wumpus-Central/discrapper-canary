@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(388685), n(539854);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(314897);
+    a = n(570140),
+    o = n(314897);
 function s(e, t, n) {
     return (
         t in e
@@ -25,7 +25,7 @@ function _(e) {
     return 'packetsSent' in e;
 }
 function p(e, t, n, r, i) {
-    var o, a, s, l, c, u, d, f, p, h, m, g, E, b, y, v;
+    var a, o, s, l, c, u, d, f, p, h, m, g, E, b, y, v;
     let O = r.find((e) => 'video' === e.type);
     if (
         (null == n &&
@@ -43,10 +43,10 @@ function p(e, t, n, r, i) {
         null == O)
     )
         return n;
-    let I = _(O) ? (null != (a = O.packetsSent) ? a : 0) : null != (s = O.packetsReceived) ? s : 0,
+    let I = _(O) ? (null != (o = O.packetsSent) ? o : 0) : null != (s = O.packetsReceived) ? s : 0,
         S = _(O) ? (null != (l = O.packetsLost) ? l : 0) : null != (c = O.packetsLost) ? c : 0,
         T = _(O) ? (null != (u = O.frameRateEncode) ? u : 0) : null != (d = O.frameRateDecode) ? d : 0,
-        N = null != (f = null == (o = O.resolution) ? void 0 : o.height) ? f : 0;
+        N = null != (f = null == (a = O.resolution) ? void 0 : a.height) ? f : 0;
     (n.numDatapoints += 1), (n.frameRateAggregated += T), (n.resolutionAggregated += N);
     let A = null == i ? void 0 : i.find((e) => 'video' === e.type);
     if (null != A && t >= n.minVersion) {
@@ -60,10 +60,10 @@ function p(e, t, n, r, i) {
     return (n.frameRate = n.frameRateAggregated / n.numDatapoints), (n.resolution = n.resolutionAggregated / n.numDatapoints), (n.packetLossRate = n.packetsLost / (n.packetsSentOrReceived + n.packetsLost)), n;
 }
 function h(e, t, n, r) {
-    var i, o;
+    var i, a;
     null == e[t] && (e[t] = {});
-    let s = a.default.getId();
-    for (let a of ((e[t][s] = p(n.version, null != (i = null == r ? void 0 : r.version) ? i : 0, e[t][s], n.stats.rtp.outbound, null == r ? void 0 : r.stats.rtp.outbound)), Object.keys(n.stats.rtp.inbound))) e[t][a] = p(n.version, null != (o = null == r ? void 0 : r.version) ? o : 0, e[t][a], n.stats.rtp.inbound[a], null == r ? void 0 : r.stats.rtp.inbound[a]);
+    let s = o.default.getId();
+    for (let o of ((e[t][s] = p(n.version, null != (i = null == r ? void 0 : r.version) ? i : 0, e[t][s], n.stats.rtp.outbound, null == r ? void 0 : r.stats.rtp.outbound)), Object.keys(n.stats.rtp.inbound))) e[t][o] = p(n.version, null != (a = null == r ? void 0 : r.version) ? a : 0, e[t][o], n.stats.rtp.inbound[o], null == r ? void 0 : r.stats.rtp.inbound[o]);
 }
 function m(e) {
     let { connectionStats: t } = e,
@@ -107,7 +107,7 @@ class y extends (r = i.ZP.Store) {
     }
 }
 s(y, 'displayName', 'MediaEngineStatsStore');
-let v = new y(o.Z, {
+let v = new y(a.Z, {
     MEDIA_ENGINE_CONNECTION_STATS: m,
     MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET: g,
     RTC_CONNECTION_VIDEO: E

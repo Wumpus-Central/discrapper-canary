@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(570140),
-    a = n(781391),
+    a = n(570140),
+    o = n(781391),
     s = n(594174),
     l = n(626135),
     c = n(358085),
@@ -63,10 +63,10 @@ let T = {
     },
     init() {
         this.initBasic(),
-            o.Z.subscribe('ACCESSIBILITY_COLORBLIND_TOGGLE', () => {
+            a.Z.subscribe('ACCESSIBILITY_COLORBLIND_TOGGLE', () => {
                 l.default.track(f.rMx.LOCAL_SETTINGS_UPDATED, { colorblind_enabled: d.Z.colorblindMode });
             }),
-            o.Z.subscribe('ACCESSIBILITY_SET_SATURATION', (e) => {
+            a.Z.subscribe('ACCESSIBILITY_SET_SATURATION', (e) => {
                 l.default.track(f.rMx.LOCAL_SETTINGS_UPDATED, { saturation_level: e.saturation });
             });
     },
@@ -76,12 +76,12 @@ let T = {
                 d.Z.keyboardNavigationExplainerModalSeen ||
                 0 !== O ||
                 (0, i.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e('6380'), n.e('18793')]).then(n.bind(n, 461964));
+                    let { default: e } = await Promise.all([n.e('6380'), n.e('91081')]).then(n.bind(n, 461964));
                     return (t) => (0, r.jsx)(e, h({}, t));
                 });
     },
     handleSystemPrefersReducedMotionChanged(e) {
-        o.Z.wait(() => {
+        a.Z.wait(() => {
             u.Nc(e.matches ? 'reduce' : 'no-preference');
         });
     },
@@ -89,14 +89,14 @@ let T = {
         let e = _.zd.NO_PREFERENCE;
         b.matches ? (e = _.zd.DARK) : y.matches && (e = _.zd.LIGHT);
         let t = (!c.isPlatformEmbedded || S()) && v.matches ? 'active' : 'none';
-        o.Z.wait(() => {
-            a.Q_(e), u.Ej(t);
+        a.Z.wait(() => {
+            o.Q_(e), u.Ej(t);
         });
     },
     handleSystemPrefersContrastChanged() {
         let e = 'no-preference';
         g.matches ? (e = 'more') : E.matches && (e = 'less'),
-            o.Z.wait(() => {
+            a.Z.wait(() => {
                 u.TX(e);
             });
     }

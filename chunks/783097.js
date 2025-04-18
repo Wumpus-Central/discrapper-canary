@@ -29,8 +29,8 @@ n.d(t, {
     n(388685);
 var r = n(912370),
     i = n(668781),
-    o = n(904245),
-    a = n(911969),
+    a = n(904245),
+    o = n(911969),
     s = n(761122),
     l = n(213459),
     c = n(895924),
@@ -105,8 +105,8 @@ function A(e, t) {
         r,
         i = C(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -115,8 +115,8 @@ function C(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let R = { id: v.bi.BUILT_IN };
@@ -146,15 +146,15 @@ function k(e) {
         n = null == t ? void 0 : t.client_platform_config[(0, s.Z)((0, g.getOS)())];
     if ((null == n ? void 0 : n.label_until) != null && Date.now() < Date.parse(null == n ? void 0 : n.label_until)) {
         var r;
-        return null != (r = null == n ? void 0 : n.label_type) ? r : a.ww.NONE;
+        return null != (r = null == n ? void 0 : n.label_type) ? r : o.ww.NONE;
     }
-    return a.ww.NONE;
+    return o.ww.NONE;
 }
 function j(e) {
     switch (k(e)) {
-        case a.ww.NEW:
+        case o.ww.NEW:
             return 'New';
-        case a.ww.UPDATED:
+        case o.ww.UPDATED:
             return 'Updated';
         default:
             return '';
@@ -164,7 +164,7 @@ function U(e) {
     return P(e) && L(e) ? (e instanceof p.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function G(e) {
-    let { command: t, optionValues: n, context: r, commandTargetId: a, maxSizeCallback: s, sectionName: l, commandOrigin: u = c.bB.APPLICATION_LAUNCHER } = e,
+    let { command: t, optionValues: n, context: r, commandTargetId: o, maxSizeCallback: s, sectionName: l, commandOrigin: u = c.bB.APPLICATION_LAUNCHER } = e,
         { channel: f } = r,
         p = async () => {
             try {
@@ -172,7 +172,7 @@ function G(e) {
                     command: t,
                     optionValues: n,
                     context: r,
-                    commandTargetId: a,
+                    commandTargetId: o,
                     maxSizeCallback: s,
                     commandOrigin: u,
                     sectionName: l,
@@ -181,7 +181,7 @@ function G(e) {
                 if (t.inputType === c.iw.BUILT_IN_TEXT && null != i && null != r.channel) {
                     var e;
                     let t = _.ZP.parse(f, i.content);
-                    (t.tts = null != (e = i.tts) && e), o.Z.sendMessage(r.channel.id, t);
+                    (t.tts = null != (e = i.tts) && e), a.Z.sendMessage(r.channel.id, t);
                 }
             } catch (e) {
                 throw (

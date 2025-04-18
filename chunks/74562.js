@@ -10,7 +10,7 @@ var i = t(442837),
     u = t(496675),
     d = t(981631),
     g = t(388032),
-    p = t(633662);
+    p = t(588477);
 function h(e) {
     let { guildId: n, onClose: t } = e,
         { showHubEventsList: h } = c.Z.useExperiment(

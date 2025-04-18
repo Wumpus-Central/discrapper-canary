@@ -1,8 +1,8 @@
 n.d(t, { Z: () => X }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(200100),
     l = n(134632),
     c = n(442837),
@@ -28,7 +28,7 @@ var r = n(200651),
     R = n(913002),
     P = n(228168),
     w = n(388032),
-    D = n(249809);
+    D = n(484822);
 function L(e, t, n) {
     return (
         t in e
@@ -87,8 +87,8 @@ function j(e, t) {
         r,
         i = U(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -97,8 +97,8 @@ function U(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let G = 1.25,
@@ -110,15 +110,15 @@ let G = 1.25,
     W = 14;
 function Y(e) {
     let { profileType: t, children: n, className: i } = e,
-        o = {
+        a = {
             [D.biteSize]: t === P.y0.BITE_SIZE,
             [D.fullSize]: t === P.y0.FULL_SIZE,
             [D.panel]: t === P.y0.PANEL
         };
     return (0, r.jsx)('div', {
-        className: a()(D.referenceContainer, o, i),
+        className: o()(D.referenceContainer, a, i),
         children: (0, r.jsx)('div', {
-            className: a()(D.outer, o),
+            className: o()(D.outer, a),
             children: (0, r.jsx)('span', {
                 className: D.inner,
                 children: n
@@ -127,7 +127,7 @@ function Y(e) {
     });
 }
 function K(e) {
-    let { profileType: t, onCloseProfile: i, prompt: o } = e,
+    let { profileType: t, onCloseProfile: i, prompt: a } = e,
         { analyticsLocations: s } = (0, h.ZP)(),
         { trackUserProfileAction: c } = (0, I.KZ)(),
         u = (0, m.Z)({ location: 'AddCustomStatusBubble' }),
@@ -147,7 +147,7 @@ function K(e) {
                             k(x({}, t), {
                                 sourceAnalyticsLocations: s,
                                 location: 'UserProfileCustomStatusBubble',
-                                prompt: o
+                                prompt: a
                             })
                         );
                 });
@@ -179,9 +179,9 @@ function K(e) {
                   ]
               })
             : null,
-        g = null != o ? o.label() : w.NW.string(w.t.evw0o6),
+        g = null != a ? a.label() : w.NW.string(w.t.evw0o6),
         E = (0, r.jsxs)('div', {
-            className: a()(D.content, f, null != p && D.withLabel),
+            className: o()(D.content, f, null != p && D.withLabel),
             children: [
                 p,
                 (0, r.jsx)(d.oFk, {
@@ -191,7 +191,7 @@ function K(e) {
                 }),
                 (0, r.jsx)(d.Text, {
                     variant: 'text-sm/normal',
-                    className: a()(D.addStatusPrompt, null != o && D.italicPrompt),
+                    className: o()(D.addStatusPrompt, null != a && D.italicPrompt),
                     children: g
                 })
             ]
@@ -203,14 +203,14 @@ function K(e) {
                 children: E
             }),
             (0, r.jsx)(d.P3F, {
-                className: a()(D.container, D.editable, f),
+                className: o()(D.container, D.editable, f),
                 'aria-label': w.NW.string(w.t['zrpF/f']),
                 onClick: _,
                 focusProps: { ringClassName: D.ring },
                 children: (0, r.jsx)('div', {
-                    className: a()(D.outer, f),
+                    className: o()(D.outer, f),
                     children: (0, r.jsxs)('span', {
-                        className: a()(D.inner, D.clickable),
+                        className: o()(D.inner, D.clickable),
                         children: [
                             p,
                             (0, r.jsx)(d.oFk, {
@@ -220,7 +220,7 @@ function K(e) {
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
-                                className: a()(D.addStatusPrompt, null != o && D.italicPrompt),
+                                className: o()(D.addStatusPrompt, null != a && D.italicPrompt),
                                 children: g
                             })
                         ]
@@ -231,7 +231,7 @@ function K(e) {
     });
 }
 let z = i.forwardRef(function (e, t) {
-    var n, o;
+    var n, a;
     let { emoji: l, text: p, profileType: h, animate: m, className: E, renderToolbar: b, onShowToolbar: v, placeholderText: O, label: S, hasEntered: N = !0 } = e,
         A = (0, T.yi)(),
         { trackUserProfileAction: C } = (0, I.KZ)(),
@@ -261,9 +261,9 @@ let z = i.forwardRef(function (e, t) {
             t = z.current.getBoundingClientRect().height;
         er(t > e), (q.current = e), (Q.current = t);
     }, [ei, p, l]);
-    let eo = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
-        [ea] = i.useState(() => new u.V7());
-    i.useEffect(() => () => ea.stop(), [ea]),
+    let ea = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
+        [eo] = i.useState(() => new u.V7());
+    i.useEffect(() => () => eo.stop(), [eo]),
         i.useEffect(() => {
             null == A || A.onInteractionPopoutTargetRefChange(U);
         }, [A]);
@@ -279,17 +279,17 @@ let z = i.forwardRef(function (e, t) {
                 (e
                     ? el({
                           maxHeight: ''.concat(Math.min(Q.current, j), 'px'),
-                          delay: eo ? 0 : H,
+                          delay: ea ? 0 : H,
                           config: {
                               clamp: !0,
-                              duration: eo ? 0 : V
+                              duration: ea ? 0 : V
                           }
                       })
                     : el({
                           maxHeight: ''.concat(Math.min(q.current, k), 'px'),
                           delay: 0
                       }),
-                eo ? et(!e) : ea.start(e ? H : Z, () => et(!e)));
+                ea ? et(!e) : eo.start(e ? H : Z, () => et(!e)));
         },
         eu =
             null != S
@@ -323,28 +323,28 @@ let z = i.forwardRef(function (e, t) {
                       variant: 'text-sm/normal',
                       color: 'text-muted',
                       'aria-label': ''.concat(w.NW.string(w.t.EVV6ub), ': ').concat(O),
-                      className: a()(D.statusText, L && D.italicPrompt),
+                      className: o()(D.statusText, L && D.italicPrompt),
                       children: null != O ? O : ''
                   }),
         ep = null == ef || '' === p ? e_ : ef,
         eh = (0, r.jsxs)('div', {
             ref: K,
-            className: a()(D.content, R),
+            className: o()(D.content, R),
             children: [eu, ed, ep]
         }),
         em = (0, r.jsxs)('div', {
             ref: z,
-            className: a()(D.content, D.unclamped, R),
+            className: o()(D.content, D.unclamped, R),
             children: [eu, ed, ep]
         }),
         eg = (0, r.jsx)('div', {
             ref: t,
-            className: a()(D.outer, R),
+            className: o()(D.outer, R),
             children: (0, r.jsx)('span', {
                 className: D.inner,
                 children: (0, r.jsxs)(s.animated.div, {
                     style: es,
-                    className: a()(D.content, { [D.unclamped]: !ee }),
+                    className: o()(D.content, { [D.unclamped]: !ee }),
                     children: [eu, ed, ep]
                 })
             })
@@ -364,7 +364,7 @@ let z = i.forwardRef(function (e, t) {
                           ref: U,
                           role: 'tooltip',
                           tabIndex: 0,
-                          className: a()(D.container, R, E),
+                          className: o()(D.container, R, E),
                           'aria-label': w.NW.formatToPlainString(w.t.UpF5QU, {
                               emoji: null != (n = null == l ? void 0 : l.name) ? n : '',
                               status: p
@@ -391,9 +391,9 @@ let z = i.forwardRef(function (e, t) {
                           ref: U,
                           role: 'tooltip',
                           tabIndex: 0,
-                          className: a()(D.container, R, E),
+                          className: o()(D.container, R, E),
                           'aria-label': w.NW.formatToPlainString(w.t.UpF5QU, {
-                              emoji: null != (o = null == l ? void 0 : l.name) ? o : '',
+                              emoji: null != (a = null == l ? void 0 : l.name) ? a : '',
                               status: p
                           }),
                           onFocus: () => {
@@ -416,12 +416,12 @@ let z = i.forwardRef(function (e, t) {
           });
 });
 function q(e) {
-    var { emoji: t, text: n, onCloseProfile: o } = e,
-        a = j(e, ['emoji', 'text', 'onCloseProfile']);
+    var { emoji: t, text: n, onCloseProfile: a } = e,
+        o = j(e, ['emoji', 'text', 'onCloseProfile']);
     let [s, l] = i.useState(!1);
     return (0, r.jsx)(
         z,
-        k(x({}, a), {
+        k(x({}, o), {
             emoji: t,
             text: n,
             className: D.editable,
@@ -430,13 +430,13 @@ function q(e) {
                 (0, r.jsx)(R.Z, {
                     isVisible: s,
                     isExpandable: e,
-                    onCloseProfile: o
+                    onCloseProfile: a
                 })
         })
     );
 }
 function Q(e) {
-    var { emoji: t, text: n, user: o, guildId: a, channelId: s, profileType: l } = e,
+    var { emoji: t, text: n, user: a, guildId: o, channelId: s, profileType: l } = e,
         c = j(e, ['emoji', 'text', 'user', 'guildId', 'channelId', 'profileType']);
     let { trackUserProfileAction: u } = (0, I.KZ)(),
         { interactionType: d, interactionSource: f, resetInteraction: _ } = (0, T.Xo)(),
@@ -462,8 +462,8 @@ function Q(e) {
             return null == n ? e : ''.concat(e, ' ').concat(n);
         };
     return (0, r.jsx)(N.Z, {
-        user: o,
-        guildId: a,
+        user: a,
+        guildId: o,
         channelId: s,
         profileType: l,
         sourceDetails: R(),
@@ -474,7 +474,7 @@ function Q(e) {
             (0, r.jsx)(C.Z, {
                 targetElementRef: g,
                 sourceType: P.n_.STATUS,
-                user: o,
+                user: a,
                 children: (0, r.jsx)(
                     z,
                     k(x({}, c), {
@@ -487,7 +487,7 @@ function Q(e) {
                         renderToolbar: (e) =>
                             (0, r.jsx)(A.ZP, {
                                 targetRef: g,
-                                user: o,
+                                user: a,
                                 sourceType: P.n_.STATUS,
                                 isVisible: y && !m,
                                 isExpandable: e,
@@ -501,14 +501,14 @@ function Q(e) {
 function X(e) {
     var t,
         n,
-        { location: i, user: o, onCloseProfile: a, previewText: s, previewEmoji: l, placeholderText: u, prompt: d, disableEdit: f = !1 } = e,
+        { location: i, user: a, onCloseProfile: o, previewText: s, previewEmoji: l, placeholderText: u, prompt: d, disableEdit: f = !1 } = e,
         _ = j(e, ['location', 'user', 'onCloseProfile', 'previewText', 'previewEmoji', 'placeholderText', 'prompt', 'disableEdit']);
-    let m = (0, E.Z)(o.id),
+    let m = (0, E.Z)(a.id),
         { analyticsLocations: g } = (0, h.ZP)(p.Z.PROFILE_CUSTOM_STATUS),
-        b = (0, c.e7)([O.default], () => O.default.getId() === o.id),
+        b = (0, c.e7)([O.default], () => O.default.getId() === a.id),
         y = b && !f,
         v = (0, S.T)({ location: i }),
-        I = !b && !o.bot && v;
+        I = !b && !a.bot && v;
     if (null != s || null != l) {
         let e = null != l ? l : null,
             t = null != s && '' !== s ? s : null;
@@ -538,7 +538,7 @@ function X(e) {
                       K,
                       x(
                           {
-                              onCloseProfile: a,
+                              onCloseProfile: o,
                               prompt: d
                           },
                           _
@@ -552,7 +552,7 @@ function X(e) {
                         Q,
                         x(
                             {
-                                user: o,
+                                user: a,
                                 emoji: T,
                                 text: A
                             },
@@ -569,7 +569,7 @@ function X(e) {
                               {
                                   emoji: T,
                                   text: A,
-                                  onCloseProfile: a
+                                  onCloseProfile: o
                               },
                               _
                           )

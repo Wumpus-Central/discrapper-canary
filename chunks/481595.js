@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(997841);
 var r = n(200651),
     i = n(192379),
-    o = n(512722),
-    a = n.n(o),
+    a = n(512722),
+    o = n.n(a),
     s = n(742280),
     l = n(399606),
     c = n(481060),
@@ -31,7 +31,7 @@ var r = n(200651),
     D = n(982204),
     L = n(981631),
     x = n(388032),
-    M = n(808241);
+    M = n(718578);
 function k(e) {
     let { application: t, sku: n, isEmbeddedIAP: i } = e;
     return !0 !== i
@@ -49,7 +49,7 @@ function k(e) {
           });
 }
 function j(e) {
-    let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: o, handlePaymentSourceAdd: m } = e,
+    let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: a, handlePaymentSourceAdd: m } = e,
         { application: j, purchaseState: U, paymentSources: G, paymentSourceId: B, setHasAcceptedTerms: F, skusById: V, skuPricePreviewsById: Z, selectedSkuId: H, isEmbeddedIAP: W, purchaseType: Y, purchasePreviewError: K, devShelfFetchState: z, setPurchasePreviewError: q } = (0, C.JL)(),
         { isGift: Q, giftRecipient: X } = (0, A.wD)(),
         J = Q && (0, N.pO)(X),
@@ -57,14 +57,14 @@ function j(e) {
             defaultPaymentSourceId: v.Z.defaultPaymentSourceId,
             hasFetchedPaymentSources: v.Z.hasFetchedPaymentSources
         }));
-    a()(null != H, 'Expected selectedSkuId');
+    o()(null != H, 'Expected selectedSkuId');
     let et = V[H],
         en = Z[H],
         er = null != B ? B : O.c,
         ei = null != en ? en[er] : null;
-    a()(null != et, 'SKU must exist and be fetched.'), a()(null != j, 'Application must exist.');
-    let eo = (0, l.e7)([h.Z, I.Z], () => I.Z.inTestModeForApplication(j.id) || h.Z.inDevModeForApplication(j.id), [j.id]),
-        ea = (0, l.e7)([b.Z], () => b.Z.enabled),
+    o()(null != et, 'SKU must exist and be fetched.'), o()(null != j, 'Application must exist.');
+    let ea = (0, l.e7)([h.Z, I.Z], () => I.Z.inTestModeForApplication(j.id) || h.Z.inDevModeForApplication(j.id), [j.id]),
+        eo = (0, l.e7)([b.Z], () => b.Z.enabled),
         es = s.M.EEA_COUNTRIES.has(y.Z.ipCountryCodeWithFallback),
         el = U === R.A.PURCHASING || U === R.A.COMPLETED,
         ec = (0, P.m)(G, B),
@@ -86,7 +86,7 @@ function j(e) {
         (0, r.jsxs)('div', {
             className: M.stepBody,
             children: [
-                eo
+                ea
                     ? (0, r.jsx)(
                           f.Z,
                           {
@@ -147,9 +147,9 @@ function j(e) {
                         (0, r.jsx)(_.Z, {
                             paymentSources: Object.values(G),
                             selectedPaymentSourceId: B,
-                            onChange: o,
+                            onChange: a,
                             onPaymentSourceAdd: m,
-                            hidePersonalInformation: ea
+                            hidePersonalInformation: eo
                         })
                     ]
                 }),

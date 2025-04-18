@@ -1,4 +1,4 @@
-r.d(t, { Z: () => g }), r(388685);
+r.d(t, { Z: () => Z }), r(388685);
 var n,
     i,
     s,
@@ -52,7 +52,7 @@ class b extends (n = o.ZP.Store) {
               writable: !0
           })
         : (b[i] = s);
-let g = new b(l.Z, {
+let Z = new b(l.Z, {
     GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, appliedBoosts: r } = e;
         a[t] = {

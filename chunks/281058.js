@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(626135),
+    a = n(570140),
+    o = n(626135),
     s = n(761274),
     l = n(981631);
 function c(e, t, n) {
@@ -36,14 +36,14 @@ class d extends (r = i.ZP.DeviceSettingsStore) {
             i = r[n];
         (r[n] = t),
             i !== t &&
-                a.default.track(l.rMx.PERMISSIONS_ACKED, {
+                o.default.track(l.rMx.PERMISSIONS_ACKED, {
                     type: n,
                     action: t,
                     previous_action: null != i ? i : s.PQ.NONE
                 });
     }
     constructor() {
-        super(o.Z, { SET_NATIVE_PERMISSION: (e) => this.handleSetNativePermission(e) });
+        super(a.Z, { SET_NATIVE_PERMISSION: (e) => this.handleSetNativePermission(e) });
     }
 }
 c(d, 'displayName', 'NativePermissionStore'), c(d, 'persistKey', 'NativePermissionsStore');

@@ -8,7 +8,7 @@ var i = n(481060),
     o = n(515025),
     c = n(981631),
     d = n(388032),
-    u = n(35859);
+    u = n(563772);
 function m(e) {
     let { guild: t, canManageGuild: n } = e;
     return (0, r.jsxs)(i.hjN, {

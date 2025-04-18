@@ -16,7 +16,7 @@ var l = t(120356),
     I = t(315416),
     f = t(765305),
     v = t(388032),
-    N = t(393732);
+    N = t(960689);
 function h(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -235,7 +235,7 @@ function D(e) {
                       guildId: n.guild_id,
                       onContextMenu: function (e, n) {
                           (0, o.jW)(e, async () => {
-                              let { default: e } = await Promise.all([t.e('26881'), t.e('69220'), t.e('79075')]).then(t.bind(t, 881351));
+                              let { default: e } = await Promise.all([t.e('79695'), t.e('69220'), t.e('70686')]).then(t.bind(t, 881351));
                               return (t) => (0, i.jsx)(e, E(h({}, t), { user: n }));
                           });
                       },

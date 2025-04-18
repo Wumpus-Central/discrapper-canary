@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(192379),
     i = n(663507),
-    o = n(924428),
-    a = n(151973);
+    a = n(924428),
+    o = n(151973);
 function s(e, t, n) {
     return (
         t in e
@@ -66,7 +66,7 @@ let d = Object.freeze({
 });
 function f(e) {
     let { sections: t, columns: n, getItemKey: s, getItemHeight: c, getSectionHeight: f, chunkSize: _ = 250, getScrollerState: p, maxBufferWidth: h, itemGutter: m, removeEdgeItemGutters: g, sectionGutter: E, padding: b, paddingVertical: y, paddingHorizontal: v, dir: O } = e,
-        I = (0, o.Z)(),
+        I = (0, a.Z)(),
         S = (0, r.useRef)(d),
         [T] = (0, r.useState)(() => new i.ZP()),
         N = p(),
@@ -77,7 +77,7 @@ function f(e) {
             chunkStart: P,
             chunkEnd: w,
             forceUpdateOnChunkChange: D
-        } = (0, a.Z)({
+        } = (0, o.Z)({
             chunkSize: _,
             getScrollerState: p,
             forceUpdate: I

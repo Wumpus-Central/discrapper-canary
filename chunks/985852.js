@@ -7,7 +7,7 @@ var r = n(200651),
     c = n(120421),
     l = n(401258),
     u = n(477839),
-    d = n(533328),
+    d = n(805768),
     f = n(18856);
 function p(e) {
     let { isPaused: t } = e,

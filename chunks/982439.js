@@ -1,8 +1,8 @@
 n.d(t, { q: () => d });
 var r = n(569545),
     i = n(199902),
-    o = n(858340),
-    a = n(458725),
+    a = n(858340),
+    o = n(458725),
     s = n(442741),
     l = n(981631);
 function c(e, t, n) {
@@ -37,7 +37,7 @@ function u(e) {
 let d = {
     getActiveErrors: () => {
         let e = i.Z.getCurrentUserActiveStream();
-        return null != e && null != o.Z.getHookError(l.K3D.SOUND) ? [u({ type: a.u.STREAM_SOUNDSHARE_FAILED }, (0, s.rT)((0, r.V9)(e)))] : void 0;
+        return null != e && null != a.Z.getHookError(l.K3D.SOUND) ? [u({ type: o.u.STREAM_SOUNDSHARE_FAILED }, (0, s.rT)((0, r.V9)(e)))] : void 0;
     },
     makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
 };

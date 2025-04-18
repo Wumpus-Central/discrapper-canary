@@ -1,7 +1,7 @@
 let r, i;
 n.d(t, { Z: () => C }), n(388685);
-var o,
-    a = n(442837),
+var a,
+    o = n(442837),
     s = n(570140),
     l = n(981631),
     c = n(354459);
@@ -66,16 +66,16 @@ let p = new Map(),
     };
 function E(e) {
     var t, n;
-    let { id: o, component: a, props: s } = e;
-    if (null != p.get(o)) return;
+    let { id: a, component: o, props: s } = e;
+    if (null != p.get(a)) return;
     let c = {
-        id: o,
-        component: a,
+        id: a,
+        component: o,
         position: null != (t = s.position) ? t : m,
         props: s,
         docked: null != (n = s.docked) && n
     };
-    p.set(o, c), a === l.NYg.VIDEO ? null == r && (r = o) : a === l.NYg.EMBED_IFRAME && null == i && (i = o);
+    p.set(a, c), o === l.NYg.VIDEO ? null == r && (r = a) : o === l.NYg.EMBED_IFRAME && null == i && (i = a);
 }
 function b(e) {
     let { id: t } = e;
@@ -141,7 +141,7 @@ function T(e) {
 function N() {
     (r = null), (i = null), (p = new Map());
 }
-class A extends (o = a.ZP.PersistedStore) {
+class A extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         if (null == e) {
             (m = l.VD2.BOTTOM_RIGHT),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => k }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(355467),
@@ -27,7 +27,7 @@ var r = n(200651),
     C = n(185923),
     R = n(474936),
     P = n(388032),
-    w = n(541135);
+    w = n(938585);
 function D(e, t, n) {
     return (
         t in e
@@ -82,11 +82,11 @@ function M(e, t) {
 }
 let k = (e) => {
     let t,
-        { onLearnMore: o, onClose: D, channel: x, emojiDescriptor: k, pickerIntention: j, analyticsLocation: U, containerContext: G } = e,
+        { onLearnMore: a, onClose: D, channel: x, emojiDescriptor: k, pickerIntention: j, analyticsLocation: U, containerContext: G } = e,
         B = (0, s.e7)([v.Z], () => v.Z.theme) === A.BRd.LIGHT ? 'light' : 'dark',
         [F, V] = i.useState(!1),
         Z = () => {
-            (0, T.A3)(x), (0, p.z)(), o();
+            (0, T.A3)(x), (0, p.z)(), a();
         },
         H = n(577391)('./img_premium_emoji_'.concat(B, '.svg')),
         W = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(B, '.png'),
@@ -122,12 +122,12 @@ let k = (e) => {
             });
     }, [U, Q, q, et, en, t, er, J]);
     let ei = () => (z ? P.NW.string(P.t['Gd/XHB']) : P.NW.string(P.t.P3etAg)),
-        eo = (0, s.e7)([_.Z], () => _.Z.affinities),
-        ea = (0, s.e7)([_.Z], () => _.Z.hasFetched);
+        ea = (0, s.e7)([_.Z], () => _.Z.affinities),
+        eo = (0, s.e7)([_.Z], () => _.Z.hasFetched);
     i.useEffect(() => {
-        ea || c.MH();
-    }, [ea]);
-    let es = eo.length > 1 && $,
+        eo || c.MH();
+    }, [eo]);
+    let es = ea.length > 1 && $,
         el = () =>
             (0, r.jsx)(y.Z, {
                 containerContext: G,
@@ -154,7 +154,7 @@ let k = (e) => {
     return J
         ? el()
         : (0, r.jsxs)('div', {
-              className: a()(w.premiumPromo, { [w.unifyTrialUpsell]: z }),
+              className: o()(w.premiumPromo, { [w.unifyTrialUpsell]: z }),
               children: [
                   (0, r.jsx)(l.P3F, {
                       className: w.premiumPromoClose,

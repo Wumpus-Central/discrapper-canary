@@ -9,7 +9,7 @@ n(192379);
 var r = n(466377),
     l = n(481060),
     i = n(281598),
-    s = n(834439);
+    s = n(152906);
 let o = 'shop-assets-preview-instructions-modal',
     c = 'shop-pfx-preview-instructions-modal',
     d = (e) => {

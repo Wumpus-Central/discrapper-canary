@@ -24,7 +24,7 @@ var o = t(481060),
     Z = t(228168),
     O = t(981631),
     N = t(388032),
-    P = t(191902);
+    P = t(405666);
 function E(e) {
     let { user: n, currentUser: t, guildId: E, channelId: S, messageId: T, roleId: A, sessionId: C, initialSection: L, initialSubsection: w, transitionState: R, openedAt: M, onClose: U, sourceAnalyticsLocations: D = [] } = e,
         B = E === O.ME ? void 0 : E,

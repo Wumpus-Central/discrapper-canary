@@ -1,14 +1,14 @@
 a.d(t, { O: () => i });
 var n = a(200651),
-    s = a(192379),
-    r = a(435935),
-    l = a(25850);
-class i extends s.PureComponent {
+    r = a(192379),
+    s = a(435935),
+    l = a(551472);
+class i extends r.PureComponent {
     render() {
-        return (0, n.jsxs)(r.k, {
-            wrap: r.k.Wrap.NO_WRAP,
+        return (0, n.jsxs)(s.k, {
+            wrap: s.k.Wrap.NO_WRAP,
             children: [
-                (0, n.jsx)(r.k.Child, {
+                (0, n.jsx)(s.k.Child, {
                     grow: 0,
                     shrink: 0,
                     children: (0, n.jsxs)('svg', {
@@ -31,7 +31,7 @@ class i extends s.PureComponent {
                         ]
                     })
                 }),
-                (0, n.jsx)(r.k.Child, {
+                (0, n.jsx)(s.k.Child, {
                     grow: 0,
                     shrink: 0,
                     children: (0, n.jsx)('svg', {

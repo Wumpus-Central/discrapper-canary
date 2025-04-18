@@ -31,8 +31,8 @@ var r = n(200651),
     y = n(463727),
     Z = n(855403),
     I = n(299570),
-    O = n(960861),
-    w = n(59468),
+    w = n(960861),
+    O = n(59468),
     T = n(989941),
     E = n(39540),
     P = n(958707),
@@ -43,7 +43,7 @@ var r = n(200651),
     M = n(46140),
     L = n(65154),
     D = n(388032),
-    G = n(777046);
+    G = n(873270);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -80,7 +80,7 @@ function z(e) {
         a = S.Z.supports(L.AN.GO_LIVE_HARDWARE),
         [o, m] = i.useState(null),
         [N, C] = i.useState(null),
-        [I, O] = i.useState(null),
+        [I, w] = i.useState(null),
         T = null != I && I.length > 0,
         [E, R] = i.useState(c.vA.WINDOW),
         [k, B] = i.useState(!1),
@@ -113,23 +113,23 @@ function z(e) {
     i.useEffect(() => {
         let e = F.current;
         return (
-            (0, w.t)({
+            (0, O.t)({
                 width: 176,
                 height: 99
             }).then((e) => {
                 let { screenSources: t, windowSources: n, cameraSources: r } = e;
-                m(t), C(n), O(r);
+                m(t), C(n), w(r);
             }),
             e.start(1000, async () => {
                 let {
                     screenSources: e,
                     windowSources: t,
                     cameraSources: n
-                } = await (0, w.t)({
+                } = await (0, O.t)({
                     width: 176,
                     height: 99
                 });
-                m(e), C(t), O(n);
+                m(e), C(t), w(n);
             }),
             () => {
                 e.stop();
@@ -456,7 +456,7 @@ function Y(e) {
         i.useEffect(() => {
             (0, C.isLinux)() || ((0, C.isMac)() && o().satisfies(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release, k.jR)) ? (0, I.T)(l) : (0, I.t)();
         }, [l]),
-        s === O.Uc.Error
+        s === w.Uc.Error
             ? (0, r.jsx)(f.Text, {
                   className: G.errorMessage,
                   variant: 'text-md/normal',

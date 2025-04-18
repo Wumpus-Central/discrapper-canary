@@ -34,7 +34,7 @@ var r = n(200651),
     N = n(444295),
     V = n(981631),
     k = n(388032),
-    D = n(934705);
+    D = n(62802);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -508,7 +508,7 @@ let F = i.memo(function (e) {
             k = (e, t) => {
                 m ||
                     (0, u.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('26881'), n.e('6524')]).then(n.bind(n, 27900));
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('6524')]).then(n.bind(n, 27900));
                         return (
                             (0, N.Ws)(V.Odu.VOICE_V3, {
                                 type: N.Qu.VOICE,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l });
 var r = n(339085),
     i = n(131704),
-    o = n(176354),
-    a = n(700785),
+    a = n(176354),
+    o = n(700785),
     s = n(981631);
 function l(e) {
     let { activity: t, user: n, channel: l } = e;
@@ -10,8 +10,8 @@ function l(e) {
     let c = t.emoji;
     if (null == c.id || null == l || !(0, i.zi)(l.type)) return !0;
     let u = r.ZP.getUsableCustomEmojiById(c.id),
-        d = o.ZP.isInternalEmojiForGuildId(u, l.getGuildId()),
-        f = a.BT({
+        d = a.ZP.isInternalEmojiForGuildId(u, l.getGuildId()),
+        f = o.BT({
             permission: s.Plq.USE_EXTERNAL_EMOJIS,
             user: n,
             context: l
