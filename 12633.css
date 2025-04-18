@@ -45917,7 +45917,7 @@ div.mobilePushContainer__3d3b0 {
 }
 
 .btnHamburger__006d6 span {
-    background: hsl(0, calc(var(--saturation-factor, 1)*0%), 100%);
+    background: var(--white);
     display: block;
     height: 9px;
     opacity: 1;
@@ -45953,11 +45953,11 @@ div.mobilePushContainer__3d3b0 {
 }
 
 .theme-dark .btnHamburger__006d6 span {
-    background: hsl(0, calc(var(--saturation-factor, 1)*0%), 100%)
+    background: var(--white)
 }
 
 .theme-light .btnHamburger__006d6 span {
-    background: hsl(0, calc(var(--saturation-factor, 1)*0%), 0%)
+    background: var(--black)
 }
 
 .btnHamburgerOpen__006d6 span:first-child,
