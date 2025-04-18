@@ -315,7 +315,7 @@ function et(e) {
         e3 = () => eQ(eA, eM, ek),
         e4 = () => (eW ? (0, r.jsx)(d.Z, { message: W.NW.formatToPlainString(W.t['9hnZoK'], { kunaPriceWithCurrency: (0, I.T4)(7.5345 * eZ.amount, H.pK.HRK) }) }) : null),
         e5 = null != g && null != U && (0, S.R4)(g, U, z),
-        e6 = ex.isFractionalPremiumActive && (null == g || e5) && !e_;
+        e6 = ex.isFractionalPremiumActive && (null == g || e5) && !e_ && null != U && V.dJ.has(U);
     return (0, r.jsxs)('div', {
         className: o()(eO ? K.stepBodyCustomGift : K.stepBody, { [K.paddingForHalloweenBanner]: eS }),
         children: [

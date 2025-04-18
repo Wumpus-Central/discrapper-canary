@@ -1,7 +1,7 @@
-n.d(t, { D: () => l });
-var r = n(818083),
-    a = n(355820);
-let i = (0, r.B)({
+n.d(t, { D: () => i });
+var a = n(818083),
+    r = n(355820);
+let l = (0, a.B)({
     kind: 'user',
     id: '2025-01_user_profile_custom_status_edit_preview',
     label: 'User Profile Custom Status Edit Preview',
@@ -28,18 +28,18 @@ let i = (0, r.B)({
         }
     ]
 });
-function l(e) {
+function i(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        r = (0, a.P)({
+        a = (0, r.P)({
             location: t,
             autoTrackExposure: n
         }),
-        { enabledWithStatusSelection: l, enabledWithoutSatusSelection: o } = i.getCurrentConfig(
+        { enabledWithStatusSelection: i, enabledWithoutSatusSelection: o } = l.getCurrentConfig(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: r
+                disable: a
             }
         );
-    return l || o;
+    return i || o;
 }

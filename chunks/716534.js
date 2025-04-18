@@ -151,7 +151,7 @@ function Y(e) {
         null == eJ && e$(null == ex ? void 0 : ex.subscriptionPeriodEnd);
     }, [null == ex ? void 0 : ex.subscriptionPeriodEnd, eJ]);
     let e0 = (0, h.Z)(),
-        e1 = eX || e0.fractionalState === B.a$.NONE ? null : (0, r.jsx)(L.n, { fractionalPremiumInfo: e0 }),
+        e1 = !eX && e0.isFractionalPremiumActive && B.dJ.has(z),
         e2 = i.useMemo(
             () =>
                 (0, N.V7)({
@@ -219,7 +219,7 @@ function Y(e) {
         ef && ex.subscriptionPeriodEnd !== ek.subscriptionPeriodEnd && (Y = ex.subscriptionPeriodEnd),
             (K = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    e1,
+                    e1 && (0, r.jsx)(L.n, { fractionalPremiumInfo: e0 }),
                     (0, r.jsxs)(D.aO, {
                         className: H.invoice,
                         children: [

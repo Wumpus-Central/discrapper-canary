@@ -14,9 +14,9 @@ var o = t(481060),
     b = t(502762),
     m = t(530),
     h = t(871604),
-    I = t(952124),
-    g = t(53558),
-    y = t(544989),
+    g = t(952124),
+    y = t(53558),
+    I = t(544989),
     j = t(934861),
     v = t(4517),
     x = t(740628),
@@ -26,24 +26,24 @@ var o = t(481060),
     N = t(388032),
     P = t(405666);
 function E(e) {
-    let { user: n, currentUser: t, guildId: E, channelId: S, messageId: T, roleId: A, sessionId: C, initialSection: L, initialSubsection: w, transitionState: R, openedAt: M, onClose: U, sourceAnalyticsLocations: D = [] } = e,
-        B = E === O.ME ? void 0 : E,
-        W = (0, a.ZP)(n.id, B),
-        { analyticsLocations: G } = (0, l.ZP)([...D, i.Z.SIMPLIFIED_PROFILE_MODAL]),
-        F = (0, c.ZB)({
-            layout: 'SIMPLIFIED_MODAL',
+    let { user: n, currentUser: t, guildId: E, channelId: S, messageId: T, roleId: A, sessionId: C, initialSection: L, initialSubsection: w, transitionState: R, openedAt: M, onClose: U, sourceAnalyticsLocations: B = [] } = e,
+        D = E === O.ME ? void 0 : E,
+        W = (0, a.ZP)(n.id, D),
+        { analyticsLocations: G } = (0, l.ZP)([...B, i.Z.SIMPLIFIED_PROFILE_MODAL]),
+        k = (0, c.ZB)({
+            layout: 'MODAL',
             userId: n.id,
             sourceSessionId: C,
-            guildId: B,
+            guildId: D,
             channelId: S,
             messageId: T,
             roleId: A
         }),
-        k = (0, _.Z)(n);
+        F = (0, _.Z)(n);
     return (0, r.jsx)(l.Gt, {
         value: G,
         children: (0, r.jsx)(c.Mt, {
-            value: F,
+            value: k,
             openedAt: M,
             fetchStartedAt: null == W ? void 0 : W.fetchStartedAt,
             fetchEndedAt: null == W ? void 0 : W.fetchEndedAt,
@@ -58,11 +58,11 @@ function E(e) {
                     displayProfile: W,
                     profileType: Z.y0.FULL_SIZE,
                     children: [
-                        (0, r.jsx)(y.Z, {
+                        (0, r.jsx)(I.Z, {
                             profileType: Z.y0.FULL_SIZE,
-                            children: (0, r.jsx)(I.Z, {
+                            children: (0, r.jsx)(g.Z, {
                                 user: n,
-                                guildId: B,
+                                guildId: D,
                                 onCloseProfile: U
                             })
                         }),
@@ -79,7 +79,7 @@ function E(e) {
                                         (0, r.jsx)(d.Z, {
                                             user: n,
                                             displayProfile: W,
-                                            guildId: B,
+                                            guildId: D,
                                             channelId: S,
                                             profileType: Z.y0.FULL_SIZE
                                         }),
@@ -103,9 +103,9 @@ function E(e) {
                                                     onClose: U,
                                                     tooltipContainerClassName: P.messageIconButton
                                                 }),
-                                                (0, r.jsx)(g.Z, {
+                                                (0, r.jsx)(y.Z, {
                                                     user: n,
-                                                    guildId: B
+                                                    guildId: D
                                                 }),
                                                 (0, r.jsx)(h.Z, { user: n })
                                             ]
@@ -121,7 +121,7 @@ function E(e) {
                                     className: P.username,
                                     user: n,
                                     profileType: Z.y0.FULL_SIZE,
-                                    nickname: s.ZP.getName(B, S, n),
+                                    nickname: s.ZP.getName(D, S, n),
                                     pronouns: null == W ? void 0 : W.pronouns,
                                     nicknameVariant: 'heading-xl/bold',
                                     nicknameIcons: (0, r.jsx)(p.Z, { userId: n.id }),
@@ -135,8 +135,8 @@ function E(e) {
                                     user: n,
                                     currentUser: t,
                                     displayProfile: W,
-                                    guildId: B,
-                                    items: k,
+                                    guildId: D,
+                                    items: F,
                                     initialSection: null != L ? L : Z.oh.BOT_INFO,
                                     initialSubsection: w,
                                     onClose: U

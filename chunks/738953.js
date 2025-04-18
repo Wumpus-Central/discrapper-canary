@@ -88,7 +88,7 @@ function B(e) {
     let { user: t, currentUser: n, guildId: k, channelId: U, messageId: B, roleId: F, openedAt: V, closePopout: Z, setPopoutRef: H, disableUserProfileLink: W = __OVERLAY__, newAnalyticsLocations: Y = [], appContext: K = L.IlC.APP } = e,
         { analyticsLocations: z } = (0, d.ZP)([...Y, u.Z.BITE_SIZE_PROFILE_POPOUT]),
         q = (0, m.ZB)({
-            layout: 'BITE_SIZE_POPOUT',
+            layout: 'POPOUT',
             userId: t.id,
             guildId: k,
             channelId: U,

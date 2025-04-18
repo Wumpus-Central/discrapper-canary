@@ -59,7 +59,7 @@ let u = (e) => {
                 )
             ),
             [j, N] = l.useState(''),
-            [y, O] = l.useState('');
+            [y, O] = l.useState(null);
         l.useEffect(() => {
             var e;
             N(null != (e = null == f ? void 0 : f.value) ? e : '');
@@ -67,18 +67,18 @@ let u = (e) => {
         let Z = l.useCallback(
             (e) => {
                 let t = null != h ? new RegExp(h) : null;
-                null != t && null == t.exec(e)
-                    ? (O(s.NW.string(s.t['24xrGR'])),
-                      _({
-                          value: e,
-                          isValid: !1
-                      }))
-                    : null != e &&
-                      (O(''),
+                null == t || t.test(e)
+                    ? null != e &&
+                      (O(null),
                       N(e),
                       _({
                           value: e,
                           isValid: !0
+                      }))
+                    : (O(s.NW.string(s.t['24xrGR'])),
+                      _({
+                          value: e,
+                          isValid: !1
                       }));
             },
             [_, h]

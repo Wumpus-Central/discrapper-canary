@@ -1,4 +1,4 @@
-t.d(n, { Z: () => y });
+t.d(n, { Z: () => I });
 var r = t(200651);
 t(192379);
 var o = t(481060),
@@ -55,7 +55,7 @@ function h(e, n) {
         e
     );
 }
-function I(e) {
+function g(e) {
     var { user: n, analyticsLocation: t } = e,
         o = (function (e, n) {
             if (null == e) return {};
@@ -87,7 +87,7 @@ function I(e) {
               children: (e) => (0, r.jsx)('div', h(m({}, e), { children: (0, r.jsx)(s.ef, m({}, o)) }))
           });
 }
-function g(e) {
+function y(e) {
     let { gameFriends: n, hasIncomingPendingGameFriends: t, hasOutgoingPendingGameFriends: o, user: i, analyticsLocation: l } = e,
         {
             onMouseEnter: s,
@@ -99,7 +99,7 @@ function g(e) {
             hasIncomingPendingGameFriends: t,
             hasOutgoingPendingGameFriends: o
         });
-    return (0, r.jsx)(I, {
+    return (0, r.jsx)(g, {
         tooltipText: a,
         ariaLabel: c,
         icon: u,
@@ -108,11 +108,11 @@ function g(e) {
         analyticsLocation: l
     });
 }
-function y(e) {
+function I(e) {
     let { isCurrentUser: n, user: t, relationshipType: a, friendToken: d, onClose: m } = e,
         { newestAnalyticsLocation: h } = (0, l.ZP)(),
-        { gameFriends: y, hasOutgoingPendingGameFriends: j, hasIncomingPendingGameFriends: v } = (0, u.H)({ userId: t.id }),
-        x = y.length > 0 || j || v;
+        { gameFriends: I, hasOutgoingPendingGameFriends: j, hasIncomingPendingGameFriends: v } = (0, u.H)({ userId: t.id }),
+        x = I.length > 0 || j || v;
     return n || a === f.OGo.BLOCKED
         ? null
         : a === f.OGo.FRIEND || t.bot
@@ -127,10 +127,10 @@ function y(e) {
             ? (0, r.jsxs)('div', {
                   className: b.multipleButtons,
                   children: [
-                      (0, r.jsx)(g, {
+                      (0, r.jsx)(y, {
                           user: t,
                           analyticsLocation: h,
-                          gameFriends: y,
+                          gameFriends: I,
                           hasIncomingPendingGameFriends: v,
                           hasOutgoingPendingGameFriends: j
                       }),
@@ -144,7 +144,7 @@ function y(e) {
               ? (0, r.jsxs)('div', {
                     className: b.multipleButtons,
                     children: [
-                        (0, r.jsx)(I, {
+                        (0, r.jsx)(g, {
                             icon: o.iHX,
                             tooltipText: p.NW.string(p.t.zz2i8v),
                             user: t,
@@ -160,7 +160,7 @@ function y(e) {
                 ? (0, r.jsxs)('div', {
                       className: b.multipleButtons,
                       children: [
-                          (0, r.jsx)(I, {
+                          (0, r.jsx)(g, {
                               icon: o.iHX,
                               tooltipText: p.NW.string(p.t.ZOFd1N),
                               user: t,

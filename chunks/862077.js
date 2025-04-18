@@ -52,7 +52,7 @@ function S(e) {
         P = (0, a.e7)([c.Z], () => c.Z.isBlocked(t.id)),
         { analyticsLocations: w } = (0, l.ZP)([...R, P ? s.Z.BLOCKED_PROFILE_POPOUT : s.Z.IGNORED_PROFILE_POPOUT]),
         D = (0, d.ZB)({
-            layout: P ? 'BLOCKED_PROFILE_POPOUT' : 'IGNORED_PROFILE_POPOUT',
+            layout: 'POPOUT',
             userId: t.id,
             guildId: n,
             channelId: S,

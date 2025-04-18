@@ -13,9 +13,9 @@ var r = t(200651),
     b = t(687158),
     m = t(316027),
     h = t(502762),
-    I = t(848780),
-    g = t(907179),
-    y = t(228168),
+    g = t(848780),
+    y = t(907179),
+    I = t(228168),
     j = t(981631),
     v = t(388032),
     x = t(829441),
@@ -51,7 +51,7 @@ function O(e) {
         w = (0, i.e7)([d.Z], () => d.Z.isBlocked(n.id)),
         { analyticsLocations: R } = (0, c.ZP)([...C, w ? s.Z.BLOCKED_PROFILE_MODAL : s.Z.IGNORED_PROFILE_MODAL]),
         M = (0, f.ZB)({
-            layout: w ? 'BLOCKED_PROFILE_MODAL' : 'IGNORED_PROFILE_MODAL',
+            layout: 'MODAL',
             userId: n.id,
             guildId: L,
             channelId: O,
@@ -69,16 +69,16 @@ function O(e) {
                 description: v.NW.string(w ? v.t.QxrDY2 : v.t.W6fjkZ)
             }
         ],
-        D = (0, b.ZP)(n.id, A ? L : void 0),
-        B = o.createRef();
+        B = (0, b.ZP)(n.id, A ? L : void 0),
+        D = o.createRef();
     return (0, r.jsx)(c.Gt, {
         value: R,
         children: (0, r.jsx)(f.Mt, {
             value: M,
             openedAt: S,
-            fetchStartedAt: null == D ? void 0 : D.fetchStartedAt,
-            fetchEndedAt: null == D ? void 0 : D.fetchEndedAt,
-            isLoaded: null == D ? void 0 : D.isLoaded,
+            fetchStartedAt: null == B ? void 0 : B.fetchStartedAt,
+            fetchEndedAt: null == B ? void 0 : B.fetchEndedAt,
+            isLoaded: null == B ? void 0 : B.isLoaded,
             children: (0, r.jsx)(l.Y0X, {
                 transitionState: E,
                 className: x.root,
@@ -86,9 +86,9 @@ function O(e) {
                 'aria-label': v.NW.string(v.t['3N/J2t']),
                 children: (0, r.jsx)(h.Z, {
                     user: n,
-                    displayProfile: D,
-                    profileType: y.y0.FULL_SIZE,
-                    ref: B,
+                    displayProfile: B,
+                    profileType: I.y0.FULL_SIZE,
+                    ref: D,
                     children: (0, r.jsxs)('div', {
                         className: x.container,
                         children: [
@@ -138,7 +138,7 @@ function O(e) {
                                     (0, r.jsxs)(l.Kqy, {
                                         align: 'center',
                                         children: [
-                                            (0, r.jsx)(g.Z, {
+                                            (0, r.jsx)(y.Z, {
                                                 size: l.PhG.MEDIUM,
                                                 isBlocked: w,
                                                 onClick: () => {
@@ -154,7 +154,7 @@ function O(e) {
                                                         );
                                                 }
                                             }),
-                                            (0, r.jsx)(I.Z, {
+                                            (0, r.jsx)(g.Z, {
                                                 userId: n.id,
                                                 onClick: () => {
                                                     T(),

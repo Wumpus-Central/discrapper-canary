@@ -14,9 +14,9 @@ var o = t(442837),
     b = t(502762),
     m = t(530),
     h = t(740628),
-    I = t(643518),
-    g = t(228168),
-    y = t(981631),
+    g = t(643518),
+    y = t(228168),
+    I = t(981631),
     j = t(405666);
 function v(e) {
     var n;
@@ -29,7 +29,7 @@ function v(e) {
         C = t.id === v.id,
         L = (0, c.I5)(v),
         w = s.ZP.useName(null == Z ? void 0 : Z.guildId, _, t),
-        R = (0, I.Z)({
+        R = (0, g.Z)({
             user: t,
             currentUser: v,
             guildId: x,
@@ -41,18 +41,18 @@ function v(e) {
             (0, r.jsx)(m.Z, {
                 className: j.username,
                 user: t,
-                profileType: g.y0.FULL_SIZE,
+                profileType: y.y0.FULL_SIZE,
                 nickname: w,
                 pronouns: null == Z ? void 0 : Z.pronouns,
                 nicknameVariant: 'heading-xl/bold',
                 nicknameIcons: (0, r.jsx)(u.Z, { userId: t.id }),
                 tags: (0, r.jsx)(a.Z, {
                     displayProfile: Z,
-                    profileType: g.y0.FULL_SIZE,
+                    profileType: y.y0.FULL_SIZE,
                     onClose: E
                 })
             }),
-            S === y.OGo.PENDING_INCOMING &&
+            S === I.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(b.Z.Overlay, {
                     className: j.bannerContainer,
                     children: (0, r.jsx)(f.Z, {

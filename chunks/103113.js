@@ -58,7 +58,7 @@ function P(e) {
         j = (0, h.ZP)(t.id, n),
         { analyticsLocations: U } = (0, l.ZP)([...k, s.Z.BITE_SIZE_PROFILE_POPOUT]),
         G = (0, _.ZB)({
-            layout: 'BITE_SIZE_POPOUT',
+            layout: 'POPOUT',
             userId: t.id,
             guildId: n,
             channelId: C,

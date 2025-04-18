@@ -12,11 +12,11 @@ var r = t(200651),
 function p(e) {
     let { autoFocus: n = !1, className: t, userId: p, onUpdate: b } = e,
         m = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
-        { loading: h, note: I } = (0, c.Z)(p),
-        g = o.useRef(null);
+        { loading: h, note: g } = (0, c.Z)(p),
+        y = o.useRef(null);
     return (o.useEffect(() => {
         if (!n || m) return;
-        let e = g.current;
+        let e = y.current;
         (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
     }, [n, m]),
     m)
@@ -24,14 +24,14 @@ function p(e) {
         : (0, r.jsx)('div', {
               className: t,
               children: (0, r.jsx)(l.lcI, {
-                  ref: g,
+                  ref: y,
                   className: f.textarea,
                   disabled: h,
                   placeholder: h ? u.NW.string(u.t['WLKx//']) : u.NW.string(u.t.VBhOe3),
                   'aria-label': u.NW.string(u.t.PbMNh4),
                   onBlur: (e) => {
                       let n = e.currentTarget.value;
-                      (null != I ? I : '') !== n && (null == b || b(), s.Z.updateNote(p, n));
+                      (null != g ? g : '') !== n && (null == b || b(), s.Z.updateNote(p, n));
                   },
                   onKeyPress: (e) => {
                       if (13 === e.which)
@@ -41,7 +41,7 @@ function p(e) {
                           } else e.preventDefault(), e.currentTarget.blur();
                       else e.which === d.yXg.SPACE && e.stopPropagation();
                   },
-                  defaultValue: null != I ? I : void 0,
+                  defaultValue: null != g ? g : void 0,
                   maxLength: d.vuo
               })
           });

@@ -44,8 +44,8 @@ var _ = n(392750),
     V = n(315384),
     H = n(514866),
     W = n(384207),
-    K = n(264603),
-    X = n(678639),
+    X = n(264603),
+    K = n(678639),
     Y = n(351930),
     J = n(771751),
     q = n(596768),
@@ -90,7 +90,7 @@ function el(e) {
                     id: 'stores',
                     name: 'Stores',
                     group: Q.v0.EVENTS,
-                    render: () => (0, a.jsx)(X.Z, {})
+                    render: () => (0, a.jsx)(K.Z, {})
                 },
                 {
                     id: 'dispatcher',
@@ -147,7 +147,7 @@ function el(e) {
                         id: 'slayer_sdk',
                         name: 'Slayer SDK',
                         group: Q.v0.GAMES,
-                        render: () => (0, a.jsx)(K.Z, {})
+                        render: () => (0, a.jsx)(X.Z, {})
                     })),
                 e.push({
                     id: 'intl',

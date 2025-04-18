@@ -62,7 +62,7 @@ function R(e) {
         D = i.useRef(Date.now()),
         { analyticsLocations: W } = (0, d.ZP)(u.Z.PROFILE_PANEL),
         U = (0, f.ZB)({
-            layout: 'SIMPLIFIED_DM_PANEL',
+            layout: 'SIDEBAR',
             userId: t.id,
             channelId: R.id
         }),

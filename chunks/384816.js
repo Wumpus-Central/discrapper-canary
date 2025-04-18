@@ -14,9 +14,9 @@ var o = t(442837),
     b = t(771362),
     m = t(280885),
     h = t(819602),
-    I = t(78806),
-    g = t(900927),
-    y = t(678738),
+    g = t(78806),
+    y = t(900927),
+    I = t(678738),
     j = t(652853),
     v = t(179828),
     x = t(228168),
@@ -56,20 +56,20 @@ function O(e) {
                     headingColor: 'header-secondary'
                 }),
             L.length > 0 &&
-                (0, r.jsx)(y.Z, {
+                (0, r.jsx)(I.Z, {
                     heading: _.NW.string(_.t['Uv/eT0']),
-                    children: (0, r.jsx)(I.Z, { applicationIds: L })
+                    children: (0, r.jsx)(g.Z, { applicationIds: L })
                 }),
-            (0, r.jsx)(y.Z, {
+            (0, r.jsx)(I.Z, {
                 heading: _.NW.string(_.t.a6XYDw),
-                children: (0, r.jsx)(g.Z, {
+                children: (0, r.jsx)(y.Z, {
                     userId: n.id,
                     guildId: null == O ? void 0 : O.guildId,
                     tooltipDelay: x.vB
                 })
             }),
             R.length > 0 &&
-                (0, r.jsx)(y.Z, {
+                (0, r.jsx)(I.Z, {
                     heading: _.NW.string(_.t['3fe7U1']),
                     scrollIntoView: N === x.Tb.CONNECTIONS,
                     children: (0, r.jsx)(h.OA, {
@@ -81,7 +81,7 @@ function O(e) {
                     })
                 }),
             M.length > 0 &&
-                (0, r.jsx)(y.Z, {
+                (0, r.jsx)(I.Z, {
                     heading: _.NW.string(_.t.PHjkRE),
                     children: M.map((e) =>
                         (0, r.jsx)(
@@ -99,7 +99,7 @@ function O(e) {
                         )
                     )
                 }),
-            (0, r.jsx)(y.Z, {
+            (0, r.jsx)(I.Z, {
                 heading: _.NW.string(_.t['mQKv+v']),
                 scrollIntoView: N === x.Tb.NOTE,
                 children: (0, r.jsx)(l.Z, {

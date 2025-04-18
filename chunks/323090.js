@@ -14,9 +14,9 @@ var o = t(442837),
     b = t(900927),
     m = t(678738),
     h = t(179828),
-    I = t(228168),
-    g = t(388032),
-    y = t(349966);
+    g = t(228168),
+    y = t(388032),
+    I = t(349966);
 function j(e) {
     let { user: n, currentUser: t, displayProfile: j, guildId: v, subsection: x, onClose: _ } = e,
         { trackUserProfileAction: Z } = (0, d.KZ)(),
@@ -28,7 +28,7 @@ function j(e) {
         P = (0, o.e7)([s.Z, a.Z], () => s.Z.getChannel(a.Z.getChannelId()));
     return (0, r.jsxs)(i.zJl, {
         fade: !0,
-        className: y.scroller,
+        className: I.scroller,
         children: [
             (null == j ? void 0 : j.bio) != null &&
                 (null == j ? void 0 : j.bio) !== '' &&
@@ -50,23 +50,23 @@ function j(e) {
                     user: n,
                     currentUser: t,
                     guild: O,
-                    scrollIntoView: x === I.Tb.ROLES
+                    scrollIntoView: x === g.Tb.ROLES
                 }),
             (0, r.jsx)(m.Z, {
-                heading: g.NW.string(g.t['A//N4u']),
+                heading: y.NW.string(y.t['A//N4u']),
                 children: (0, r.jsx)(b.Z, {
                     userId: n.id,
                     guildId: v,
-                    tooltipDelay: I.vB
+                    tooltipDelay: g.vB
                 })
             }),
             (0, r.jsx)(m.Z, {
-                heading: g.NW.string(g.t['mQKv+v']),
-                scrollIntoView: x === I.Tb.NOTE,
+                heading: y.NW.string(y.t['mQKv+v']),
+                scrollIntoView: x === g.Tb.NOTE,
                 children: (0, r.jsx)(l.Z, {
                     userId: n.id,
-                    className: y.note,
-                    autoFocus: x === I.Tb.NOTE,
+                    className: I.note,
+                    autoFocus: x === g.Tb.NOTE,
                     onUpdate: () => Z({ action: 'SET_NOTE' })
                 })
             })
