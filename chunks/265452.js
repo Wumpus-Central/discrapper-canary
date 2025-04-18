@@ -420,12 +420,13 @@ function ea(e) {
         }, [ev, n]),
         eP = i.useCallback(async () => {
             var e, t, n, l;
+            if (null == eI) return null;
             ei(!0);
             let i = null,
                 s = null != (e = P.Z.getStageInstanceByChannel(null == eI ? void 0 : eI.id)) ? e : null;
             if (eN && null != r.vanityURLCode) i = r.vanityURLCode;
             else if ((null == s ? void 0 : s.invite_code) != null) i = s.invite_code;
-            else if (null != eI) {
+            else {
                 let e =
                     null !=
                     (t = k.Z.getInvite(eI.id, {
