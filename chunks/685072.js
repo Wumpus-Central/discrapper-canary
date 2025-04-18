@@ -1,8 +1,8 @@
 n.d(t, { K: () => d });
 var r = n(200651),
     i = n(192379),
-    o = n(709014);
-function a(e, t, n) {
+    a = n(709014);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -66,7 +66,7 @@ let u = {
             t = i.useCallback(() => {
                 null != e.current && e.current.play('all');
             }, []),
-            a = i.useCallback(() => {
+            o = i.useCallback(() => {
                 null != e.current && e.current.play('all');
             }, []),
             l = i.useCallback(() => {
@@ -75,7 +75,7 @@ let u = {
             d = i.useCallback(
                 (t) =>
                     (0, r.jsx)(
-                        o.L,
+                        a.L,
                         c(s({}, t), {
                             src: () => n.e('52680').then(n.t.bind(n, 728913, 19)),
                             ref: e,
@@ -86,13 +86,17 @@ let u = {
             );
         return {
             events: {
-                onMouseEnter: a,
+                onMouseEnter: o,
                 onMouseLeave: l
             },
             play: t,
             getDuration: i.useCallback(() => {
                 var t;
                 return null == (t = e.current) ? void 0 : t.getDuration();
+            }, []),
+            getCurrentFrame: i.useCallback(() => {
+                var t, n;
+                return null != (n = null == (t = e.current) ? void 0 : t.getCurrentFrame()) ? n : null;
             }, []),
             Component: d
         };

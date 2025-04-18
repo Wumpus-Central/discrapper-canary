@@ -106,6 +106,10 @@ let o = {
                 var e;
                 return null == (e = t.current) ? void 0 : e.getDuration();
             }, []),
+            getCurrentFrame: l.useCallback(() => {
+                var e, n;
+                return null != (n = null == (e = t.current) ? void 0 : e.getCurrentFrame()) ? n : null;
+            }, []),
             Component: d
         };
     };
