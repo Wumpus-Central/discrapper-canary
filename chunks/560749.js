@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(35282), n(539854), n(388685), n(387201), n(642613);
+n.d(t, { Z: () => w }), n(35282), n(539854), n(388685), n(387201), n(642613);
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -74,7 +74,7 @@ function I(e) {
         ]
     });
 }
-function O(e) {
+function w(e) {
     let { onSelectChannel: t } = e,
         { search: n, query: c, results: j } = (0, u.Z)({ searchOptions: { frecencyBoosters: !0 } }),
         v = (0, l.Wu)([_.Z, x.ZP, m.Z, p.Z, g.Z], () => {
@@ -87,7 +87,7 @@ function O(e) {
             }
             return e;
         }),
-        O = (0, l.Wu)([d.Z, m.Z, h.Z, p.Z, g.Z], () => {
+        w = (0, l.Wu)([d.Z, m.Z, h.Z, p.Z, g.Z], () => {
             let e = [],
                 t = new Set();
             for (let n of d.Z.getChannelHistory()) {
@@ -98,18 +98,19 @@ function O(e) {
             return e;
         }),
         T = i.useMemo(() => {
-            let e = new Set(O.map((e) => e.id)),
+            let e = new Set(w.map((e) => e.id)),
                 t = new Set(v.map((e) => e.id));
             return [
                 ...v
                     .toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
                     .map((e) => (0, o.Z)(e.id))
                     .filter(b.lm),
-                ...O.filter((e) => !t.has(e.id))
+                ...w
+                    .filter((e) => !t.has(e.id))
                     .map((e) => (0, o.Z)(e.id))
                     .filter(b.lm)
             ];
-        }, [O, v]),
+        }, [w, v]),
         E = '' !== c ? j : T;
     return (0, r.jsxs)('div', {
         className: Z.root,
@@ -156,11 +157,11 @@ function O(e) {
                           );
                       }
                   })
-                : (0, r.jsx)(w, {})
+                : (0, r.jsx)(O, {})
         ]
     });
 }
-function w() {
+function O() {
     return (0, r.jsxs)('div', {
         className: Z.emptyState,
         children: [

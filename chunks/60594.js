@@ -24,8 +24,8 @@ var r = n(200651),
     y = n(600164),
     Z = n(313201),
     I = n(540059),
-    O = n(243778),
-    w = n(594190),
+    w = n(243778),
+    O = n(594190),
     T = n(751571),
     E = n(970731),
     P = n(695346),
@@ -124,7 +124,7 @@ function ef(e) {
         { preset: ep, resolution: eg, fps: e_, soundshareEnabled: ej } = (0, m.cj)([R.Z], () => R.Z.getState()),
         ev = i.useRef(Date.now()),
         eb = (0, m.e7)([M.Z, W.Z], () => W.Z.getChannel(M.Z.getVoiceChannelId())),
-        eS = (0, m.e7)([w.ZP, D.Z], () => ((0, U.isWindows)() ? (0, X.Z)(w.ZP, D.Z) : null)),
+        eS = (0, m.e7)([O.ZP, D.Z], () => ((0, U.isWindows)() ? (0, X.Z)(O.ZP, D.Z) : null)),
         eN = (0, m.e7)([b.ZP], () => b.ZP.getCurrentEmbeddedActivity()),
         eC = (null == eN ? void 0 : eN.location.kind) === f.E.CONTEXTLESS,
         ey = (0, C.q)(null == eN ? void 0 : eN.applicationId),
@@ -136,24 +136,24 @@ function ef(e) {
                 eI(await (null === j.Z || void 0 === j.Z || null == (e = j.Z.window) ? void 0 : e.getMediaSourceId('DISCORD_ACTIVITY_POPOUT')));
             })();
     }, [eC]);
-    let eO = (0, m.e7)([L.default], () => {
+    let ew = (0, m.e7)([L.default], () => {
             let e = L.default.getCurrentUser();
             return o()(null != e, 'GoLiveModal: user cannot be undefined'), e;
         }),
-        ew = null != (t = null == eb ? void 0 : eb.getGuildId()) ? t : ef,
+        eO = null != (t = null == eb ? void 0 : eb.getGuildId()) ? t : ef,
         eT = (0, m.e7)([k.Z], () => {
             var e;
-            return null != ew ? (null == (e = k.Z.getGuild(ew)) ? void 0 : e.premiumTier) : null;
+            return null != eO ? (null == (e = k.Z.getGuild(eO)) ? void 0 : e.premiumTier) : null;
         }),
-        [eE, eP] = null != (l = (0, V.Z)(ep, eO, eT)) ? l : [en.LY.RESOLUTION_720, en.ws.FPS_30],
+        [eE, eP] = null != (l = (0, V.Z)(ep, ew, eT)) ? l : [en.LY.RESOLUTION_720, en.ws.FPS_30],
         { lastPickerAction: eR } = (0, m.e7)([J.ZP], () => J.ZP.getPickerState()),
         eW = A.Z.getUseSystemScreensharePicker();
     (0, J.UB)();
     let ek = eW && (0, U.isMac)() && u().satisfies(null === j.Z || void 0 === j.Z ? void 0 : j.Z.os.release, et.jR),
         eA = [];
     ex === x.Dvm.ENTERED && eW && (0, U.isMac)() && eA.push(h.z.GO_LIVE_SYSTEM_PICKER_COACHMARK);
-    let [eM, eL] = (0, O.US)(eA, void 0, !0);
-    ep !== en.tI.PRESET_CUSTOM && ((eg = eE), (e_ = eP)), (0, H.Z)(ep, eg, e_, eO, eT) || ((eg = eE), (e_ = eP));
+    let [eM, eL] = (0, w.US)(eA, void 0, !0);
+    ep !== en.tI.PRESET_CUSTOM && ((eg = eE), (e_ = eP)), (0, H.Z)(ep, eg, e_, ew, eT) || ((eg = eE), (e_ = eP));
     let eD = (0, Z.Dt)(),
         [eG, eB] = i.useState(((B = ee && !ek), F ? 0 : B ? 2 : 3)),
         [eU, ez] = i.useState(ek),
@@ -188,7 +188,7 @@ function ef(e) {
         let l = eK,
             s = eQ,
             a = e1;
-        (0, H.Z)(l, s, a, eO, eT, r) || ((l = en.tI.PRESET_VIDEO), (s = en.LY.RESOLUTION_720), (a = en.ws.FPS_30)),
+        (0, H.Z)(l, s, a, ew, eT, r) || ((l = en.tI.PRESET_VIDEO), (s = en.LY.RESOLUTION_720), (a = en.ws.FPS_30)),
             (0, g.Rc)({
                 preset: l,
                 resolution: s,
@@ -198,7 +198,7 @@ function ef(e) {
         let c = {};
         if (null == eV ? void 0 : eV.id.startsWith('prepicked:')) c = J.ZP.getStreamStartOptions();
         else {
-            let e = (0, $.Z)(eS, eV, w.ZP.getRunningGames()),
+            let e = (0, $.Z)(eS, eV, O.ZP.getRunningGames()),
                 t = !(0, U.isWindows)() || null == e || (null == eV ? void 0 : eV.id.startsWith('camera:'));
             (c.pid = t || null == e ? void 0 : e.pid), null == c.pid && (null != eV ? ((c.sourceId = eV.id), (c.sourceName = eV.name)) : null != eZ && ((c.sourceId = eZ), (c.sourceName = null == ey ? void 0 : ey.name)));
         }
@@ -227,7 +227,7 @@ function ef(e) {
         tn(), eh();
     }
     i.useEffect(() => {
-        let e = (0, U.isWindows)() ? (0, X.Z)(w.ZP, D.Z) : null,
+        let e = (0, U.isWindows)() ? (0, X.Z)(O.ZP, D.Z) : null,
             t = (null == e ? void 0 : e.id) != null ? N.Z.getApplication(e.id) : null;
         G.default.track(er.rMx.OPEN_MODAL, {
             type: 'Go Live Modal',
@@ -240,19 +240,19 @@ function ef(e) {
     let ti = i.useCallback(
             (e, t, n) => {
                 var r;
-                let i = (0, V.Z)(e, eO, eT),
+                let i = (0, V.Z)(e, ew, eT),
                     [l, s] = null != i ? i : [t, n];
                 e !== eK && ((t = l), (n = s));
                 let a = null != (r = null == eb ? void 0 : eb.id) ? r : eF;
                 o()(null != a, 'Received null target channel ID');
                 let c = W.Z.getChannel(a);
-                if (!(0, H.Z)(e, t, n, eO, eT, c)) {
-                    let [e, r] = (0, V.Z)(en.tI.PRESET_VIDEO, eO, eT);
+                if (!(0, H.Z)(e, t, n, ew, eT, c)) {
+                    let [e, r] = (0, V.Z)(en.tI.PRESET_VIDEO, ew, eT);
                     (t = e), (n = r);
                 }
                 n !== e1 && e0(n), t !== eQ && e$(t), l !== t || s !== n ? eq(en.tI.PRESET_CUSTOM) : e !== eK && eq(e);
             },
-            [eb, eF, eO, eT, e1, eQ, eK]
+            [eb, eF, ew, eT, e1, eQ, eK]
         ),
         tl = i.useCallback(
             (e) => {
@@ -264,7 +264,7 @@ function ef(e) {
         if ((e.preventDefault(), 1 === eG)) return tl();
         if (2 === eG) return eB(3);
         if (null != e6) return eB(1);
-        let t = (0, $.Z)(eS, eV, w.ZP.getRunningGames());
+        let t = (0, $.Z)(eS, eV, O.ZP.getRunningGames());
         if (z.ZP.supportsFeature(er.eRX.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated)) {
             var i;
             let e = null != (i = null == eS ? void 0 : eS.pid) ? i : null;
@@ -547,6 +547,14 @@ function ef(e) {
 }
 function em(e) {
     let { showRefreshedGoLiveModal: t } = (0, F.a)({ location: e.analyticsLocation }),
-        n = (0, m.e7)([w.ZP], () => (null != e.sourcePID ? w.ZP.getGameForPID(e.sourcePID) : void 0));
-    return t ? (0, r.jsx)(ee.Z, ed(ec({}, e), { sourceApplication: null != n ? n : void 0 })) : (0, r.jsx)(ef, ec({}, e));
+        n = (0, m.e7)([O.ZP], () => (null != e.sourcePID ? O.ZP.getGameForPID(e.sourcePID) : void 0));
+    return t
+        ? (0, r.jsx)(
+              ee.Z,
+              ed(ec({}, e), {
+                  selectSource: e.selectSource,
+                  sourceApplication: null != n ? n : void 0
+              })
+          )
+        : (0, r.jsx)(ef, ec({}, e));
 }

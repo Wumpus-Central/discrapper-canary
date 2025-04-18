@@ -10,7 +10,8 @@ let l = (0, r.B)({
     label: 'Go Live Modal Refresh',
     defaultConfig: {
         showRefreshedGoLiveModal: !1,
-        twoClickVariant: !1
+        twoClickVariant: !1,
+        skipModalForGame: !1
     },
     treatments: [
         {
@@ -18,7 +19,8 @@ let l = (0, r.B)({
             label: 'Show refreshed go live modal',
             config: {
                 showRefreshedGoLiveModal: !0,
-                twoClickVariant: !1
+                twoClickVariant: !1,
+                skipModalForGame: !0
             }
         },
         {
@@ -26,7 +28,17 @@ let l = (0, r.B)({
             label: 'Show refreshed go live modal, 2 click variant',
             config: {
                 showRefreshedGoLiveModal: !0,
-                twoClickVariant: !0
+                twoClickVariant: !0,
+                skipModalForGame: !0
+            }
+        },
+        {
+            id: 3,
+            label: 'Show refreshed go live modal, 2 click variant, dont skip modal for game',
+            config: {
+                showRefreshedGoLiveModal: !0,
+                twoClickVariant: !0,
+                skipModalForGame: !1
             }
         }
     ]
