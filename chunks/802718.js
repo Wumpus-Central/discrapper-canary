@@ -12,7 +12,7 @@ var r = n(200651),
     p = n(678513),
     f = n(981631),
     g = n(388032),
-    m = n(975812);
+    m = n(675640);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,7 +38,7 @@ function b(e) {
     }
     return e;
 }
-function _(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,20 +56,20 @@ function _(e, t) {
         e
     );
 }
-function y(e) {
+function _(e) {
     let { target: t } = e,
         s = (0, l.Ie)('fakedoor'),
         p = i.useCallback(() => {
             (0, o.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('22862'), n.e('20404')]).then(n.bind(n, 646202));
-                return (n) => (0, r.jsx)(e, _(b({}, n), { target: t }));
+                let { default: e } = await Promise.all([n.e('22862'), n.e('8672')]).then(n.bind(n, 646202));
+                return (n) => (0, r.jsx)(e, y(b({}, n), { target: t }));
             });
         }, [t]),
-        y = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 (0, a.jW)(e, async () => {
                     let { default: e } = await n.e('39612').then(n.bind(n, 761624));
-                    return (n) => (0, r.jsx)(e, _(b({}, n), { signupTarget: t }));
+                    return (n) => (0, r.jsx)(e, y(b({}, n), { signupTarget: t }));
                 });
             },
             [t]
@@ -110,9 +110,10 @@ function y(e) {
                             }),
                             children: (0, r.jsx)(
                                 o.LYs,
-                                _(b({}, s), {
+                                y(b({}, s), {
+                                    ariaLabel: t.tooltipHeader,
                                     onClick: p,
-                                    onContextMenu: y,
+                                    onContextMenu: _,
                                     children: (0, r.jsx)(o.Dkj, { color: u.Z.TEXT_NORMAL })
                                 })
                             )
@@ -132,5 +133,5 @@ function y(e) {
 }
 function v() {
     let e = (0, s.e7)([p.Z], () => p.Z.getActiveUserSignUp());
-    return null == e ? null : (0, r.jsx)(y, { target: e });
+    return null == e ? null : (0, r.jsx)(_, { target: e });
 }

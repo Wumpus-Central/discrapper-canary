@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(276952),
     m = n(682662),
     b = n(674552),
-    _ = n(593364),
-    y = n(905423),
+    y = n(593364),
+    _ = n(905423),
     v = n(199902),
     O = n(592125),
     C = n(944486),
@@ -23,12 +23,12 @@ var r = n(200651),
     j = n(709054),
     E = n(853856),
     x = n(593214),
-    N = n(919755),
-    I = n(110977),
+    I = n(919755),
+    N = n(110977),
     P = n(603274),
     w = n(981631),
     Z = n(388032),
-    T = n(940751);
+    T = n(941985);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -72,8 +72,8 @@ function D() {
         })),
         B = (0, a.e7)([C.Z], () => C.Z.getChannelId(w.I_8)),
         W = (0, a.e7)([O.Z], () => O.Z.getChannel(B)),
-        V = (0, y.Z)((e) => e.guildId) === w.I_8,
-        { badge: H, unread: F } = (0, N.Z)(G),
+        V = (0, _.Z)((e) => e.guildId) === w.I_8,
+        { badge: H, unread: F } = (0, I.Z)(G),
         z = (function (e) {
             let t = (0, a.e7)([C.Z], () => C.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -109,7 +109,7 @@ function D() {
                 })
             );
         })(G),
-        Y = H > 0 ? (0, _.N)(H) : null,
+        Y = H > 0 ? (0, y.N)(H) : null,
         K = (0, f.Q3)('FavoritesButton'),
         q = i.useCallback(() => {
             L();
@@ -124,7 +124,7 @@ function D() {
             }),
             (0, r.jsx)(P.Z, {
                 onShow: q,
-                children: (0, r.jsx)(I.S, {
+                children: (0, r.jsx)(N.S, {
                     children: (0, r.jsx)(c.aRk, {
                         selected: K || V || k,
                         upperBadge: z,
@@ -138,6 +138,7 @@ function D() {
                                         guildName: Z.NW.string(Z.t.wMWycn),
                                         mentions: H
                                     }),
+                                    'aria-selected': V,
                                     to: {
                                         pathname: w.Z5c.CHANNEL(w.I_8, B),
                                         state: R

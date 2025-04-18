@@ -7,6 +7,7 @@ e.exports = {
     bottomSection: 'bottomSection_ef3116',
     scroller: 'scroller_ef3116',
     scrolling: 'scrolling_ef3116',
+    isScrolledToBottom: 'isScrolledToBottom_ef3116',
     unreadMentionsIndicatorBottom: 'unreadMentionsIndicatorBottom_ef3116',
     unreadMentionsIndicatorTop: 'unreadMentionsIndicatorTop_ef3116',
     unreadMentionsBar: 'unreadMentionsBar_ef3116',

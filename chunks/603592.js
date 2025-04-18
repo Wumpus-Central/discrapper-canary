@@ -9,10 +9,10 @@ var r = n(200651),
     u = n(276952),
     d = n(682662),
     h = n(662146),
-    p = n(329922);
+    p = n(996084);
 let f = i.forwardRef(function (e, t) {
     var n, l;
-    let { id: f, onClick: g, onContextMenu: m, icon: b, selected: _, tooltip: y, upperBadge: v, lowerBadge: O, lowerBadgeSize: C, showPill: S = !0, className: j, 'aria-label': E, children: x, onMouseEnter: N, onMouseLeave: I, onMouseDown: P } = e,
+    let { id: f, onClick: g, onContextMenu: m, icon: b, selected: y, tooltip: _, upperBadge: v, lowerBadge: O, lowerBadgeSize: C, showPill: S = !0, className: j, 'aria-label': E, children: x, onMouseEnter: I, onMouseLeave: N, onMouseDown: P } = e,
         w = (0, c.Q3)('ButtonListItem'),
         Z = (0, s.Ie)(f),
         [T, A] = i.useState(!1);
@@ -23,15 +23,15 @@ let f = i.forwardRef(function (e, t) {
                       className: p.pill,
                       children: (0, r.jsx)(u.Z, {
                           hovered: T,
-                          selected: _
+                          selected: y
                       })
                   })
                 : null,
             (0, r.jsx)(h.Z, {
-                text: y,
-                selected: _,
+                text: _,
+                selected: y,
                 children: (0, r.jsx)(a.aRk, {
-                    selected: !!w || _ || T,
+                    selected: !!w || y || T,
                     upperBadge: v,
                     lowerBadge: O,
                     lowerBadgeSize: C,
@@ -65,15 +65,16 @@ let f = i.forwardRef(function (e, t) {
                             {
                                 innerRef: t,
                                 onMouseEnter: () => {
-                                    null == N || N(), A(!0);
+                                    null == I || I(), A(!0);
                                 },
                                 onMouseLeave: () => {
-                                    null == I || I(), A(!1);
+                                    null == N || N(), A(!1);
                                 },
                                 onMouseDown: P,
-                                className: o()(p.circleIconButton, j, { [p.selected]: _ || T }),
+                                className: o()(p.circleIconButton, j, { [p.selected]: y || T }),
                                 onClick: g,
-                                'aria-label': 'string' == typeof y && null == E ? y : E,
+                                'aria-label': 'string' == typeof _ && null == E ? _ : E,
+                                'aria-selected': y,
                                 onContextMenu: m,
                                 focusProps: { enabled: !1 }
                             },

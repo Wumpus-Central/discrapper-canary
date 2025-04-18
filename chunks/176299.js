@@ -42,7 +42,7 @@ var r = n(200651),
     B = n(745052),
     H = n(285865),
     F = n(659971),
-    z = n(664608),
+    z = n(179742),
     Y = n(270759),
     K = n(918701),
     q = n(905423),
@@ -70,7 +70,7 @@ var r = n(200651),
     eb = n(215023),
     e_ = n(290511),
     eE = n(186901),
-    eO = n(128654);
+    eO = n(690975);
 function eN(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -426,7 +426,6 @@ function eY(e) {
                 ref: O ? y : void 0,
                 'data-collapsed': N,
                 className: a()(eO.sidebar, e, {
-                    [eO.hasNotice]: t,
                     [eO.fullWidth]: d.tq,
                     [eO.hidden]: g,
                     [eO.channelListHidden]: o

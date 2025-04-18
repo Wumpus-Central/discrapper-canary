@@ -105,7 +105,11 @@ function g(e) {
     );
 }
 function E(e) {
-    return d(c({}, g(e)), { role: 'treeitem' });
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+    return d(c({}, g(e)), {
+        role: 'treeitem',
+        'aria-level': t
+    });
 }
 function b(e) {
     let { children: t, id: n } = e;

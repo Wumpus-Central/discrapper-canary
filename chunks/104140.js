@@ -14,7 +14,7 @@ var r,
     h = n(215569),
     m = n(481060),
     g = n(540059),
-    E = n(976962);
+    E = n(937879);
 function b(e, t, n) {
     return (
         t in e
@@ -401,6 +401,7 @@ class Y extends o.Component {
                             viewBox: '0 0 '.concat(f, ' ').concat(f),
                             className: E.svg,
                             overflow: 'visible',
+                            role: 'none',
                             children: (0, i.jsx)(
                                 'foreignObject',
                                 {
@@ -449,6 +450,7 @@ class Y extends o.Component {
                             viewBox: ''.concat(M.x, ' ').concat(M.y, ' ').concat(M.width, ' ').concat(M.height),
                             className: s()(E.svg, { [E.noContain]: u }),
                             overflow: 'visible',
+                            role: 'none',
                             children: [
                                 (0, i.jsxs)('defs', {
                                     children: [
@@ -679,6 +681,7 @@ function K(e) {
                         viewBox: ''.concat(M.x, ' ').concat(M.y, ' ').concat(M.width, ' ').concat(M.height),
                         className: s()(E.svg, { [E.noContain]: d }),
                         overflow: 'visible',
+                        role: 'none',
                         children: [
                             (0, i.jsxs)('defs', {
                                 children: [

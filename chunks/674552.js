@@ -2,7 +2,7 @@ n.d(t, {
     Ne: () => f,
     Ny: () => g,
     Or: () => b,
-    jt: () => _
+    jt: () => y
 }),
     n(388685);
 var r = n(200651);
@@ -15,7 +15,7 @@ var i = n(120356),
     c = n(246364),
     u = n(460562),
     d = n(981631),
-    h = n(176330);
+    h = n(653024);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,10 +41,11 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function f(e, t, n) {
     return (0, r.jsx)(o.mAB, {
         count: e,
-        color: t
+        color: t,
+        'aria-hidden': n
     });
 }
 function g() {
@@ -71,12 +72,12 @@ function b(e) {
         if (!n) return null;
         t = o.gj8;
     }
-    return y({
+    return _({
         icon: t,
         isCurrentUserConnected: l
     });
 }
-function _(e) {
+function y(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, r] = (function (e) {
             switch (e) {
@@ -90,12 +91,12 @@ function _(e) {
                     return [void 0, o.vdY];
             }
         })(t);
-    return y({
+    return _({
         icon: r,
         color: n
     });
 }
-function y(e) {
+function _(e) {
     let { icon: t, color: n, isCurrentUserConnected: i } = e,
         s = null == n ? { disableColor: !0 } : { color: (0, a.Lq)(n) };
     return (0, r.jsx)(

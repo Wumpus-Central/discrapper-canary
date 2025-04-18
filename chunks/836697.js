@@ -14,10 +14,10 @@ var r = n(200651),
     g = n(289090),
     m = n(727258),
     b = n(234383),
-    _ = n(179809),
-    y = n(588275),
+    y = n(179809),
+    _ = n(588275),
     v = n(388032),
-    O = n(315268);
+    O = n(893102);
 function C(e) {
     let { onActivate: t, children: n } = e,
         l = (0, s.e7)([p.Z], () => p.Z.hasJoinRequestCoackmark()),
@@ -134,8 +134,8 @@ function S(e) {
         j = (0, s.e7)([f.Z], () => f.Z.getGuildId()),
         E = (0, s.e7)([p.Z], () => p.Z.hasFetchedRequestToJoinGuilds),
         x = (0, b.Z)(),
-        N = (0, c.Z)(j),
-        I = i.useMemo(() => {
+        I = (0, c.Z)(j),
+        N = i.useMemo(() => {
             let e = (0, m.qQ)({
                 folderId: g.S.PENDING_JOIN_REQUESTS_FOLDER,
                 folderName: v.NW.string(v.t['scsU+v']),
@@ -150,16 +150,16 @@ function S(e) {
     }, [l, E]);
     let P = null != j && x.includes(j);
     return (i.useEffect(() => {
-        !l && P && N !== j && S(!0);
-    }, [l, P, N, j]),
+        !l && P && I !== j && S(!0);
+    }, [l, P, I, j]),
     0 === x.length)
         ? null
         : (0, r.jsx)(C, {
               onActivate: t,
               children: (0, r.jsx)('div', {
                   className: o()({ [O.folderWrapperCollapsed]: !l }),
-                  children: (0, r.jsx)(_.Z, {
-                      folderNode: I,
+                  children: (0, r.jsx)(y.Z, {
+                      folderNode: N,
                       expanded: l,
                       useCircleMask: !l && !P,
                       selected: P,
@@ -174,14 +174,16 @@ function S(e) {
                           color: 'currentColor',
                           className: O.pendingIcon
                       }),
-                      renderChildNode: function (e, t) {
+                      renderChildNode: function (e, t, n, i) {
                           return e.type !== m.eD.GUILD
                               ? null
                               : (0, r.jsx)(
-                                    y.Z,
+                                    _.Z,
                                     {
                                         guildNode: e,
-                                        height: t
+                                        height: i,
+                                        'aria-setsize': n,
+                                        'aria-posinset': t
                                     },
                                     e.id
                                 );
