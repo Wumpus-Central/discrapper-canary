@@ -432,15 +432,16 @@ function ea(e) {
             currency: a.currency,
             analyticsLocations: _,
             analyticsLocation: v.Z.GUILD_BOOSTING_REVIEW_RENEWAL
-        });
-    null != R &&
+        }),
+        D = null != W ? W : R;
+    null != D &&
         (r = {
-            amount: R.total,
-            currency: R.currency,
-            tax: R.tax,
-            taxInclusive: R.taxInclusive
+            amount: D.total,
+            currency: D.currency,
+            tax: D.tax,
+            taxInclusive: D.taxInclusive
         });
-    let D = o.M.EEA_COUNTRIES.has(M.Z.ipCountryCodeWithFallback);
+    let w = o.M.EEA_COUNTRIES.has(M.Z.ipCountryCodeWithFallback);
     return (0, i.jsxs)('div', {
         children: [
             null != W && null != R
@@ -495,7 +496,7 @@ function ea(e) {
                             productLine: z.POd.BOOST
                         }),
                         showPricingLink: (null != (n = null == W ? void 0 : W.currency) ? n : J.pK.USD) !== J.pK.USD,
-                        showWithdrawalWaiver: D,
+                        showWithdrawalWaiver: w,
                         subscriptionPlan: d
                     })
             })

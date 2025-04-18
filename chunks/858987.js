@@ -73,11 +73,12 @@ function O(e, t) {
     );
 }
 function I(e) {
-    let { purchaseType: t, plan: n, premiumSubscription: r, isGift: i, planGroup: o, isPrepaidPaymentSource: s, inReverseTrial: l } = e;
-    if (t === h.GZ.ONE_TIME) return i ? m.NW.string(m.t.ouo4FB) : m.NW.string(m.t.ExD0Nj);
-    if ((a()(null != n, 'Subscription plan must be selected to render SubscriptionReviewButton'), i)) return m.NW.string(m.t.ouo4FB);
-    if (l) return m.NW.string(m.t.LQVQIi);
-    if ((0, d.PV)(n.id)) return s ? m.NW.string(m.t.cRCCJy) : null != r ? (r.isPausedAllowsResumeButNotUpdates ? m.NW.string(m.t.zpi5pq) : (0, f.R4)(r, n.id, o) ? m.NW.string(m.t.IJI7ys) : m.NW.string(m.t.VPuTc3)) : (0, d.W_)(null, n);
+    let { purchaseType: t, plan: n, premiumSubscription: r, productLine: i, isGift: o, planGroup: s, isPrepaidPaymentSource: l, inReverseTrial: c } = e;
+    if (t === h.GZ.ONE_TIME) return o ? m.NW.string(m.t.ouo4FB) : m.NW.string(m.t.ExD0Nj);
+    if ((a()(null != n, 'Subscription plan must be selected to render SubscriptionReviewButton'), i === p.POd.BOOST)) return m.NW.string(m.t.eUEeCg);
+    if (o) return m.NW.string(m.t.ouo4FB);
+    if (c) return m.NW.string(m.t.LQVQIi);
+    if ((0, d.PV)(n.id)) return l ? m.NW.string(m.t.cRCCJy) : null != r ? (r.isPausedAllowsResumeButNotUpdates ? m.NW.string(m.t.zpi5pq) : (0, f.R4)(r, n.id, s) ? m.NW.string(m.t.IJI7ys) : m.NW.string(m.t.VPuTc3)) : (0, d.W_)(null, n);
     return m.NW.string(m.t.YScQSE);
 }
 function S(e, t) {
