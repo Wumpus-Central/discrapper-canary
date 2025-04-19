@@ -1,68 +1,68 @@
 n.d(t, {
-    G: () => eN,
-    Z: () => ey
+    G: () => eb,
+    Z: () => ev
 }),
     n(997841),
     n(953529),
     n(290780);
-var i = n(200651),
-    r = n(192379),
+var r = n(200651),
+    i = n(192379),
     l = n(120356),
     s = n.n(l),
-    a = n(313361),
-    o = n(697988),
-    c = n(683860),
-    d = n(442837),
-    u = n(692547),
-    h = n(780384),
-    g = n(481060),
-    m = n(787014),
-    p = n(771340),
-    f = n(410575),
-    x = n(852860),
-    j = n(129865),
-    b = n(902840),
-    N = n(933557),
-    v = n(541716),
-    y = n(752305),
-    C = n(893718),
-    S = n(600164),
-    w = n(313201),
-    O = n(907040),
+    a = n(313361);
+n(697988);
+var o = n(683860),
+    c = n(442837),
+    d = n(692547),
+    u = n(780384),
+    h = n(481060),
+    g = n(787014),
+    m = n(771340),
+    p = n(410575),
+    f = n(852860),
+    x = n(129865),
+    j = n(902840),
+    b = n(933557),
+    N = n(541716),
+    v = n(752305),
+    y = n(893718),
+    C = n(600164),
+    S = n(313201),
+    w = n(907040),
     Z = n(633302),
-    T = n(109434),
+    O = n(109434),
     E = n(162389),
-    R = n(946458),
-    _ = n(600553),
-    I = n(968437),
-    P = n(665906),
-    W = n(456077),
-    D = n(747212),
-    L = n(210887),
-    A = n(131704),
-    M = n(314897),
-    k = n(388610),
-    B = n(430824),
-    V = n(496675),
-    G = n(903223),
-    U = n(594174),
-    H = n(934415),
-    z = n(70956),
-    F = n(630388),
-    X = n(63063),
-    J = n(129724),
-    q = n(732335),
-    $ = n(296146),
+    T = n(946458),
+    R = n(600553),
+    _ = n(968437),
+    I = n(665906),
+    P = n(456077),
+    W = n(747212),
+    D = n(210887),
+    L = n(131704),
+    A = n(314897),
+    M = n(388610),
+    k = n(430824),
+    B = n(496675),
+    V = n(903223),
+    G = n(594174),
+    U = n(934415),
+    H = n(70956),
+    z = n(630388),
+    F = n(63063),
+    X = n(129724),
+    J = n(732335),
+    q = n(296146),
     Q = n(564735),
-    Y = n(981631),
-    K = n(176505),
-    ee = n(185923),
-    et = n(710352),
-    en = n(124368),
-    ei = n(388032),
+    $ = n(981631),
+    Y = n(176505),
+    K = n(185923),
+    ee = n(710352),
+    et = n(124368),
+    en = n(388032),
     er = n(194512),
-    el = n(20493);
-function es(e, t, n) {
+    ei = n(20493);
+function el(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -75,39 +75,39 @@ function es(e, t, n) {
         e
     );
 }
-let ea = (0, w.hQ)(),
-    eo = (0, w.hQ)(),
-    ec = (0, w.hQ)(),
-    ed = (0, w.hQ)(),
-    eu = (0, w.hQ)(),
-    eh = (0, w.hQ)(),
-    eg = (0, w.hQ)(),
-    em = (0, w.hQ)(),
-    ep = (0, w.hQ)(),
-    ef = (0, w.hQ)(),
-    ex = (0, w.hQ)(),
-    ej = (0, A.kt)({
+let es = (0, S.hQ)(),
+    ea = (0, S.hQ)(),
+    eo = (0, S.hQ)(),
+    ec = (0, S.hQ)(),
+    ed = (0, S.hQ)(),
+    eu = (0, S.hQ)(),
+    eh = (0, S.hQ)(),
+    eg = (0, S.hQ)(),
+    em = (0, S.hQ)(),
+    ep = (0, S.hQ)(),
+    ef = (0, S.hQ)(),
+    ex = (0, L.kt)({
         id: '1',
-        type: Y.d4z.DM
+        type: $.d4z.DM
     }),
-    eb = 'AUTOMATIC_RTC_REGION',
-    eN = d.ZP.connectStores([k.Z], () => {
-        let { channel: e, submitting: t } = k.Z.getProps();
+    ej = 'AUTOMATIC_RTC_REGION',
+    eb = c.ZP.connectStores([M.Z], () => {
+        let { channel: e, submitting: t } = M.Z.getProps();
         return {
             channel: e,
             submitting: t,
             onReset() {
-                null != e && (0, m.S1)(e.id);
+                null != e && (0, g.S1)(e.id);
             },
             onSave() {
                 if (null == e) return;
-                let { name: t, type: n, topic: i, bitrate: r, userLimit: l, nsfw: s, flags: a, rateLimitPerUser: o, defaultThreadRateLimitPerUser: c, threadMetadata: d, defaultAutoArchiveDuration: u, template: h, rtcRegion: g, videoQualityMode: p, defaultReactionEmoji: f, availableTags: x, defaultSortOrder: j, defaultForumLayout: b, defaultTagSetting: N } = e;
-                e.isThread() && (t = (0, W.Z)(t, !0)),
-                    (0, m.wk)(e.id, {
+                let { name: t, type: n, topic: r, bitrate: i, userLimit: l, nsfw: s, flags: a, rateLimitPerUser: o, defaultThreadRateLimitPerUser: c, threadMetadata: d, defaultAutoArchiveDuration: u, template: h, rtcRegion: m, videoQualityMode: p, defaultReactionEmoji: f, availableTags: x, defaultSortOrder: j, defaultForumLayout: b, defaultTagSetting: N } = e;
+                e.isThread() && (t = (0, P.Z)(t, !0)),
+                    (0, g.wk)(e.id, {
                         name: t,
                         type: n,
-                        topic: i,
-                        bitrate: r,
+                        topic: r,
+                        bitrate: i,
                         userLimit: l,
                         nsfw: s,
                         flags: a,
@@ -118,7 +118,7 @@ let ea = (0, w.hQ)(),
                         invitable: null == d ? void 0 : d.invitable,
                         defaultAutoArchiveDuration: u,
                         template: h,
-                        rtcRegion: g,
+                        rtcRegion: m,
                         videoQualityMode: p,
                         defaultReactionEmoji: f,
                         availableTags: x,
@@ -128,19 +128,19 @@ let ea = (0, w.hQ)(),
                     });
             }
         };
-    })(x.Z);
-class ev extends r.PureComponent {
+    })(f.Z);
+class eN extends i.PureComponent {
     componentDidMount() {
-        null == this.props.regions && null != this.props.guild && p.Z.fetchRegions(this.props.guild.id);
+        null == this.props.regions && null != this.props.guild && m.Z.fetchRegions(this.props.guild.id);
     }
     componentDidUpdate(e) {
-        var t, n, i, r;
-        let l = null != (i = null == (t = this.props.channel) ? void 0 : t.topic) ? i : '';
-        (null != (r = null == (n = e.channel) ? void 0 : n.topic) ? r : '') !== l &&
+        var t, n, r, i;
+        let l = null != (r = null == (t = this.props.channel) ? void 0 : t.topic) ? r : '';
+        (null != (i = null == (n = e.channel) ? void 0 : n.topic) ? i : '') !== l &&
             l !== this.state.textTopicValue &&
             this.setState({
                 textTopicValue: l,
-                richTopicValue: (0, y.JM)(l)
+                richTopicValue: (0, v.JM)(l)
             });
     }
     getError(e) {
@@ -148,37 +148,37 @@ class ev extends r.PureComponent {
         return null == t ? void 0 : t[e];
     }
     getCooldownSliderMarker(e) {
-        return (0, J.A)(e, !0);
+        return (0, X.A)(e, !0);
     }
     getAutoArchiveDurationSliderMarker(e) {
-        return (0, J.A)(e * z.Z.Seconds.MINUTE, !0);
+        return (0, X.A)(e * H.Z.Seconds.MINUTE, !0);
     }
     renderChannelInfo(e, t) {
-        var n, r, l, d, h, m;
-        let p,
-            x,
-            { canManageChannels: j, canSendMessages: b, isThreadModerator: N, canManageThread: y, guild: S, isForumPost: w, isOwner: O, showAdvancedSlowModeSetting: T, settingsRevampEnabled: _ } = this.props,
-            P = A.Ec.has(e.type),
-            W = e.isForumLikeChannel(),
-            L = W && (null == (n = e.availableTags) ? void 0 : n.every((e) => e.moderated)),
-            M = (null == (r = U.default.getCurrentUser()) ? void 0 : r.isStaff()) === !0,
-            k = A.TK.has(e.type)
-                ? (0, i.jsxs)('div', {
+        var n, i, l, c, u, g;
+        let m,
+            f,
+            { canManageChannels: x, canSendMessages: j, isThreadModerator: b, canManageThread: v, guild: C, isForumPost: S, isOwner: w, showAdvancedSlowModeSetting: O, settingsRevampEnabled: R } = this.props,
+            I = L.Ec.has(e.type),
+            P = e.isForumLikeChannel(),
+            D = P && (null == (n = e.availableTags) ? void 0 : n.every((e) => e.moderated)),
+            A = (null == (i = G.default.getCurrentUser()) ? void 0 : i.isStaff()) === !0,
+            M = L.TK.has(e.type)
+                ? (0, r.jsxs)('div', {
                       children: [
-                          (0, i.jsx)(g.xJW, {
-                              title: W ? ei.NW.string(ei.t.yR6Hwc) : ei.NW.string(ei.t.X8jMDg),
-                              className: el.marginTop20,
-                              children: W
-                                  ? (0, i.jsx)(C.Z, {
+                          (0, r.jsx)(h.xJW, {
+                              title: P ? en.NW.string(en.t.yR6Hwc) : en.NW.string(en.t.X8jMDg),
+                              className: ei.marginTop20,
+                              children: P
+                                  ? (0, r.jsx)(y.Z, {
                                         innerClassName: er.forumGuidelines,
                                         characterCountClassName: er.forumGuidelinesCharacterCount,
-                                        maxCharacterCount: K.Z7,
+                                        maxCharacterCount: Y.Z7,
                                         onChange: this.handleChangeRichTopic,
-                                        placeholder: ei.NW.string(ei.t['71fbmp']),
-                                        channel: ej,
+                                        placeholder: en.NW.string(en.t['71fbmp']),
+                                        channel: ex,
                                         textValue: this.state.textTopicValue,
                                         richValue: this.state.richTopicValue,
-                                        type: v.Ie.FORUM_CHANNEL_GUIDELINES,
+                                        type: N.Ie.FORUM_CHANNEL_GUIDELINES,
                                         onBlur: () => {
                                             this.setState({ topicFocused: !1 });
                                         },
@@ -189,120 +189,120 @@ class ev extends r.PureComponent {
                                         onSubmit: this.handleSubmit,
                                         disableThemedBackground: !0
                                     })
-                                  : (0, i.jsx)(g.Kx8, {
-                                        autoFocus: this.props.subsection === Y.ZfP.TOPIC,
-                                        placeholder: ei.NW.string(ei.t['71fbmp']),
+                                  : (0, r.jsx)(h.Kx8, {
+                                        autoFocus: this.props.subsection === $.ZfP.TOPIC,
+                                        placeholder: en.NW.string(en.t['71fbmp']),
                                         value: Z.ZP.translateSurrogatesToInlineEmoji(e.topic),
                                         onChange: this.handleChangeTopic,
                                         error: this.getError('topic'),
-                                        maxLength: K.$x,
-                                        disabled: !j,
+                                        maxLength: Y.$x,
+                                        disabled: !x,
                                         autosize: !0
                                     })
                           }),
-                          (0, i.jsx)(g.$i$, { className: s()(el.marginTop40, el.marginBottom40) })
+                          (0, r.jsx)(h.$i$, { className: s()(ei.marginTop40, ei.marginBottom40) })
                       ]
                   })
                 : null,
-            B =
-                W && M
-                    ? (0, i.jsxs)('div', {
+            k =
+                P && A
+                    ? (0, r.jsxs)('div', {
                           children: [
-                              (0, i.jsx)(g.xJW, {
-                                  title: ei.NW.string(ei.t.qk2jdX),
-                                  className: el.marginTop20,
-                                  children: (0, i.jsx)(g.Kx8, {
-                                      placeholder: ei.NW.string(ei.t.DDjD1N),
+                              (0, r.jsx)(h.xJW, {
+                                  title: en.NW.string(en.t.qk2jdX),
+                                  className: ei.marginTop20,
+                                  children: (0, r.jsx)(h.Kx8, {
+                                      placeholder: en.NW.string(en.t.DDjD1N),
                                       value: Z.ZP.translateSurrogatesToInlineEmoji(null != (l = e.template) ? l : ''),
                                       onChange: this.handleChangeTemplate,
                                       error: this.getError('template'),
-                                      maxLength: et.Vb,
-                                      disabled: !j,
+                                      maxLength: ee.Vb,
+                                      disabled: !x,
                                       autosize: !0
                                   })
                               }),
-                              (0, i.jsx)(g.$i$, { className: s()(el.marginTop40, el.marginBottom40) })
+                              (0, r.jsx)(h.$i$, { className: s()(ei.marginTop40, ei.marginBottom40) })
                           ]
                       })
                     : null,
-            V = e.isForumLikeChannel()
-                ? (0, i.jsxs)('div', {
+            B = e.isForumLikeChannel()
+                ? (0, r.jsxs)('div', {
                       children: [
-                          (0, i.jsxs)(g.xJW, {
+                          (0, r.jsxs)(h.xJW, {
                               children: [
-                                  (0, i.jsx)(g.vwX, {
-                                      id: ea,
+                                  (0, r.jsx)(h.vwX, {
+                                      id: es,
                                       className: er.formTitle,
-                                      children: ei.NW.string(ei.t['P/y+sr'])
+                                      children: en.NW.string(en.t['P/y+sr'])
                                   }),
-                                  (0, i.jsx)(g.R94, {
-                                      id: eo,
-                                      type: g.R94.Types.DESCRIPTION,
+                                  (0, r.jsx)(h.R94, {
+                                      id: ea,
+                                      type: h.R94.Types.DESCRIPTION,
                                       className: er.description,
-                                      children: ei.NW.string(ei.t['/oQQ39'])
+                                      children: en.NW.string(en.t['/oQQ39'])
                                   }),
-                                  (0, i.jsx)(E.Z, { channel: e })
+                                  (0, r.jsx)(E.Z, { channel: e })
                               ]
                           }),
-                          (0, i.jsx)(g.XZJ, {
-                              disabled: !j || L,
-                              value: e.hasFlag(K.zZ.REQUIRE_TAG),
-                              type: g.XZJ.Types.INVERTED,
+                          (0, r.jsx)(h.XZJ, {
+                              disabled: !x || D,
+                              value: e.hasFlag(Y.zZ.REQUIRE_TAG),
+                              type: h.XZJ.Types.INVERTED,
                               onChange: (e, t) => this.handleRequireTagChanged(t),
-                              children: (0, i.jsx)(g.Text, {
+                              children: (0, r.jsx)(h.Text, {
                                   variant: 'text-sm/normal',
-                                  children: ei.NW.string(ei.t['9g2Zys'])
+                                  children: en.NW.string(en.t['9g2Zys'])
                               })
                           }),
-                          (0, i.jsx)(g.$i$, { className: s()(el.marginTop40, el.marginBottom40) })
+                          (0, r.jsx)(h.$i$, { className: s()(ei.marginTop40, ei.marginBottom40) })
                       ]
                   })
                 : null,
-            G = e.isForumLikeChannel()
-                ? (0, i.jsxs)('div', {
+            V = e.isForumLikeChannel()
+                ? (0, r.jsxs)('div', {
                       children: [
-                          (0, i.jsxs)('div', {
+                          (0, r.jsxs)('div', {
                               className: er.twoColumnSettings,
                               children: [
-                                  (0, i.jsxs)(g.xJW, {
+                                  (0, r.jsxs)(h.xJW, {
                                       className: s()(er.settingsLeft, er.settingsDefaultReaction),
                                       children: [
-                                          (0, i.jsx)(g.vwX, {
-                                              id: ec,
-                                              className: er.formTitle,
-                                              children: ei.NW.string(ei.t['8ao1+P'])
-                                          }),
-                                          (0, i.jsx)(g.R94, {
+                                          (0, r.jsx)(h.vwX, {
                                               id: eo,
-                                              type: g.R94.Types.DESCRIPTION,
-                                              className: er.description,
-                                              children: ei.NW.string(ei.t.SdbF0t)
+                                              className: er.formTitle,
+                                              children: en.NW.string(en.t['8ao1+P'])
                                           }),
-                                          (0, i.jsxs)('div', {
+                                          (0, r.jsx)(h.R94, {
+                                              id: ea,
+                                              type: h.R94.Types.DESCRIPTION,
+                                              className: er.description,
+                                              children: en.NW.string(en.t.SdbF0t)
+                                          }),
+                                          (0, r.jsxs)('div', {
                                               className: er.buttonRow,
                                               children: [
-                                                  (0, i.jsx)(g.yRy, {
+                                                  (0, r.jsx)(h.yRy, {
                                                       targetElementRef: this.defaultReactionButtonRef,
                                                       renderPopout: this.renderEmojiPicker,
                                                       position: 'right',
-                                                      animation: g.yRy.Animation.NONE,
+                                                      animation: h.yRy.Animation.NONE,
                                                       align: 'center',
                                                       children: (e) => {
                                                           var t, n;
-                                                          return (0, i.jsx)(
-                                                              g.zxk,
+                                                          return (0, r.jsx)(
+                                                              h.zxk,
                                                               ((t = (function (e) {
                                                                   for (var t = 1; t < arguments.length; t++) {
                                                                       var n = null != arguments[t] ? arguments[t] : {},
-                                                                          i = Object.keys(n);
+                                                                          r = Object.keys(n);
                                                                       'function' == typeof Object.getOwnPropertySymbols &&
-                                                                          (i = i.concat(
+                                                                          (r = r.concat(
                                                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                                               })
                                                                           )),
-                                                                          i.forEach(function (t) {
-                                                                              es(e, t, n[t]);
+                                                                          r.forEach(function (t) {
+                                                                              el(e, t, n[t]);
                                                                           });
                                                                   }
                                                                   return e;
@@ -310,20 +310,20 @@ class ev extends r.PureComponent {
                                                               (n = n =
                                                                   {
                                                                       buttonRef: this.defaultReactionButtonRef,
-                                                                      disabled: !j,
+                                                                      disabled: !x,
                                                                       onClick: (t) => {
                                                                           var n;
                                                                           null == (n = e.onClick) || n.call(e, t);
                                                                       },
-                                                                      children: ei.NW.string(ei.t['59QgaG'])
+                                                                      children: en.NW.string(en.t['59QgaG'])
                                                                   }),
                                                               Object.getOwnPropertyDescriptors
                                                                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                                                   : (function (e, t) {
                                                                         var n = Object.keys(e);
                                                                         if (Object.getOwnPropertySymbols) {
-                                                                            var i = Object.getOwnPropertySymbols(e);
-                                                                            n.push.apply(n, i);
+                                                                            var r = Object.getOwnPropertySymbols(e);
+                                                                            n.push.apply(n, r);
                                                                         }
                                                                         return n;
                                                                     })(Object(n)).forEach(function (e) {
@@ -334,81 +334,81 @@ class ev extends r.PureComponent {
                                                       }
                                                   }),
                                                   null != e.defaultReactionEmoji
-                                                      ? (0, i.jsx)(g.zxk, {
+                                                      ? (0, r.jsx)(h.zxk, {
                                                             className: er.removeButton,
                                                             onClick: () => this.handleChangeDefaultReactionEmoji(null),
-                                                            size: g.zxk.Sizes.MIN,
-                                                            look: g.zxk.Looks.LINK,
-                                                            color: g.zxk.Colors.RED,
-                                                            children: ei.NW.string(ei.t.N86XcH)
+                                                            size: h.zxk.Sizes.MIN,
+                                                            look: h.zxk.Looks.LINK,
+                                                            color: h.zxk.Colors.RED,
+                                                            children: en.NW.string(en.t.N86XcH)
                                                         })
                                                       : null
                                               ]
                                           })
                                       ]
                                   }),
-                                  (0, i.jsx)(R.Z, { reactionEmoji: e.defaultReactionEmoji })
+                                  (0, r.jsx)(T.Z, { reactionEmoji: e.defaultReactionEmoji })
                               ]
                           }),
-                          (0, i.jsx)(g.$i$, { className: s()(el.marginTop40, el.marginBottom40) })
+                          (0, r.jsx)(h.$i$, { className: s()(ei.marginTop40, ei.marginBottom40) })
                       ]
                   })
                 : null,
-            H = e.isForumChannel()
-                ? (0, i.jsxs)('div', {
+            U = e.isForumChannel()
+                ? (0, r.jsxs)('div', {
                       children: [
-                          (0, i.jsxs)('div', {
+                          (0, r.jsxs)('div', {
                               className: er.twoColumnSettings,
                               children: [
-                                  (0, i.jsxs)(g.xJW, {
+                                  (0, r.jsxs)(h.xJW, {
                                       className: s()(er.settingsLeft, er.settingsDefaultView),
                                       children: [
-                                          (0, i.jsx)(g.hjN, {
-                                              title: ei.NW.string(ei.t.kQvoCw),
-                                              children: (0, i.jsx)(g.q4e, {
+                                          (0, r.jsx)(h.hjN, {
+                                              title: en.NW.string(en.t.kQvoCw),
+                                              children: (0, r.jsx)(h.q4e, {
                                                   options: [
                                                       {
-                                                          label: ei.NW.string(ei.t['4HXEZG']),
+                                                          label: en.NW.string(en.t['4HXEZG']),
                                                           value: a.X.LIST
                                                       },
                                                       {
-                                                          label: ei.NW.string(ei.t['8RswJC']),
+                                                          label: en.NW.string(en.t['8RswJC']),
                                                           value: a.X.GRID
                                                       }
                                                   ],
-                                                  value: null != (d = e.defaultForumLayout) ? d : a.X.LIST,
+                                                  value: null != (c = e.defaultForumLayout) ? c : a.X.LIST,
                                                   onChange: this.handleChangeDefaultForumLayout
                                               })
                                           }),
-                                          (0, i.jsx)(g.R94, {
-                                              className: el.marginTop8,
-                                              type: g.R94.Types.DESCRIPTION,
-                                              children: ei.NW.string(ei.t.mOSViY)
+                                          (0, r.jsx)(h.R94, {
+                                              className: ei.marginTop8,
+                                              type: h.R94.Types.DESCRIPTION,
+                                              children: en.NW.string(en.t.mOSViY)
                                           })
                                       ]
                                   }),
-                                  e.defaultForumLayout === a.X.GRID ? (0, i.jsx)($.Z, { className: er.defaultImageView }) : (0, i.jsx)(Q.Z, { className: er.defaultImageView })
+                                  e.defaultForumLayout === a.X.GRID ? (0, r.jsx)(q.Z, { className: er.defaultImageView }) : (0, r.jsx)(Q.Z, { className: er.defaultImageView })
                               ]
                           }),
-                          (0, i.jsx)(g.$i$, { className: s()(el.marginTop40, el.marginBottom40) })
+                          (0, r.jsx)(h.$i$, { className: s()(ei.marginTop40, ei.marginBottom40) })
                       ]
                   })
                 : null,
-            z = e.isForumLikeChannel()
-                ? (0, i.jsxs)('div', {
+            H = e.isForumLikeChannel()
+                ? (0, r.jsxs)('div', {
                       children: [
-                          (0, i.jsx)(g.xJW, {
-                              children: (0, i.jsx)(g.hjN, {
-                                  title: ei.NW.string(ei.t.gePre3),
-                                  children: (0, i.jsx)(g.q4e, {
+                          (0, r.jsx)(h.xJW, {
+                              children: (0, r.jsx)(h.hjN, {
+                                  title: en.NW.string(en.t.gePre3),
+                                  children: (0, r.jsx)(h.q4e, {
                                       options: [
                                           {
-                                              label: ei.NW.string(ei.t.ElZtzs),
-                                              value: c.z.LATEST_ACTIVITY
+                                              label: en.NW.string(en.t.ElZtzs),
+                                              value: o.z.LATEST_ACTIVITY
                                           },
                                           {
-                                              label: ei.NW.string(ei.t.w28f3N),
-                                              value: c.z.CREATION_DATE
+                                              label: en.NW.string(en.t.w28f3N),
+                                              value: o.z.CREATION_DATE
                                           }
                                       ],
                                       value: e.getDefaultSortOrder(),
@@ -416,273 +416,242 @@ class ev extends r.PureComponent {
                                   })
                               })
                           }),
-                          (0, i.jsx)(g.R94, {
-                              className: el.marginTop8,
-                              type: g.R94.Types.DESCRIPTION,
-                              children: ei.NW.string(ei.t['165cVV'])
+                          (0, r.jsx)(h.R94, {
+                              className: ei.marginTop8,
+                              type: h.R94.Types.DESCRIPTION,
+                              children: en.NW.string(en.t['165cVV'])
                           }),
-                          (0, i.jsx)(g.$i$, { className: s()(el.marginTop40, el.marginBottom40) })
+                          (0, r.jsx)(h.$i$, { className: s()(ei.marginTop40, ei.marginBottom40) })
                       ]
                   })
                 : null,
-            F = e.isForumLikeChannel()
-                ? (0, i.jsxs)('div', {
+            z = I ? b : x,
+            X = L.X_.has(e.type)
+                ? (0, r.jsxs)('div', {
                       children: [
-                          (0, i.jsx)(g.xJW, {
-                              children: (0, i.jsx)(g.hjN, {
-                                  title: ei.NW.string(ei.t.Paxaur),
-                                  children: (0, i.jsx)(g.q4e, {
-                                      options: [
-                                          {
-                                              label: ei.NW.string(ei.t.rQ0ctb),
-                                              value: o.z.MATCH_SOME
-                                          },
-                                          {
-                                              label: ei.NW.string(ei.t.FCXUu7),
-                                              value: o.z.MATCH_ALL
-                                          }
-                                      ],
-                                      value: e.getDefaultTagSetting(),
-                                      onChange: this.handleChangeDefaultTagSetting
-                                  })
-                              })
-                          }),
-                          (0, i.jsx)(g.R94, {
-                              className: el.marginTop8,
-                              type: g.R94.Types.DESCRIPTION,
-                              children: ei.NW.string(ei.t.DqOl8P)
-                          }),
-                          (0, i.jsx)(g.$i$, { className: s()(el.marginTop40, el.marginBottom40) })
-                      ]
-                  })
-                : null,
-            J = P ? N : j,
-            ee = A.X_.has(e.type)
-                ? (0, i.jsxs)('div', {
-                      children: [
-                          (0, i.jsxs)(g.xJW, {
+                          (0, r.jsxs)(h.xJW, {
                               children: [
-                                  (0, i.jsx)(g.vwX, {
-                                      id: ed,
-                                      className: el.marginBottom8,
-                                      children: ei.NW.string(ei.t['tTHx9/'])
+                                  (0, r.jsx)(h.vwX, {
+                                      id: ec,
+                                      className: ei.marginBottom8,
+                                      children: en.NW.string(en.t['tTHx9/'])
                                   }),
-                                  W
-                                      ? (0, i.jsx)(g.vwX, {
-                                            className: el.marginTop20,
-                                            children: ei.NW.string(ei.t.O1c02t)
+                                  P
+                                      ? (0, r.jsx)(h.vwX, {
+                                            className: ei.marginTop20,
+                                            children: en.NW.string(en.t.O1c02t)
                                         })
                                       : null,
-                                  !0 === T
-                                      ? (0, i.jsx)(q.Z, {
+                                  !0 === O
+                                      ? (0, r.jsx)(J.Z, {
                                             channel: e,
                                             onChange: this.handleChangeSlowmode
                                         })
-                                      : (0, i.jsx)(g.iRW, {
-                                            className: el.marginTop20,
+                                      : (0, r.jsx)(h.iRW, {
+                                            className: ei.marginTop20,
                                             initialValue: e.rateLimitPerUser,
-                                            markers: Y.BiE,
+                                            markers: $.BiE,
                                             stickToMarkers: !0,
                                             onValueChange: this.handleChangeSlowmode,
                                             onMarkerRender: this.getCooldownSliderMarker,
-                                            disabled: !J,
+                                            disabled: !z,
                                             equidistant: !0,
-                                            'aria-labelledby': ed,
-                                            'aria-describedby': eu
+                                            'aria-labelledby': ec,
+                                            'aria-describedby': ed
                                         }),
-                                  (0, i.jsx)(g.R94, {
-                                      id: eu,
-                                      type: g.R94.Types.DESCRIPTION,
-                                      children: W ? ei.NW.string(ei.t['a+1pdH']) : P ? ei.NW.string(ei.t.OMmNCg) : ei.NW.string(ei.t['HEA/DQ'])
+                                  (0, r.jsx)(h.R94, {
+                                      id: ed,
+                                      type: h.R94.Types.DESCRIPTION,
+                                      children: P ? en.NW.string(en.t['a+1pdH']) : I ? en.NW.string(en.t.OMmNCg) : en.NW.string(en.t['HEA/DQ'])
                                   }),
-                                  W
-                                      ? (0, i.jsxs)(i.Fragment, {
+                                  P
+                                      ? (0, r.jsxs)(r.Fragment, {
                                             children: [
-                                                (0, i.jsx)(g.vwX, {
-                                                    className: el.marginTop20,
-                                                    children: ei.NW.string(ei.t['fkY5+v'])
+                                                (0, r.jsx)(h.vwX, {
+                                                    className: ei.marginTop20,
+                                                    children: en.NW.string(en.t['fkY5+v'])
                                                 }),
-                                                (0, i.jsx)(g.iRW, {
-                                                    className: el.marginTop20,
-                                                    initialValue: null != (h = e.defaultThreadRateLimitPerUser) ? h : 0,
-                                                    markers: Y.BiE,
+                                                (0, r.jsx)(h.iRW, {
+                                                    className: ei.marginTop20,
+                                                    initialValue: null != (u = e.defaultThreadRateLimitPerUser) ? u : 0,
+                                                    markers: $.BiE,
                                                     stickToMarkers: !0,
                                                     onValueChange: this.handleChangeThreadMessageSlowmode,
                                                     onMarkerRender: this.getCooldownSliderMarker,
-                                                    disabled: !J,
+                                                    disabled: !z,
                                                     equidistant: !0,
-                                                    'aria-labelledby': ed,
-                                                    'aria-describedby': eu
+                                                    'aria-labelledby': ec,
+                                                    'aria-describedby': ed
                                                 }),
-                                                (0, i.jsx)(g.R94, {
-                                                    type: g.R94.Types.DESCRIPTION,
-                                                    children: ei.NW.string(ei.t.kdZU6O)
+                                                (0, r.jsx)(h.R94, {
+                                                    type: h.R94.Types.DESCRIPTION,
+                                                    children: en.NW.string(en.t.kdZU6O)
                                                 })
                                             ]
                                         })
                                       : null
                               ]
                           }),
-                          (0, i.jsx)(g.$i$, { className: s()(el.marginTop40, el.marginBottom40) })
+                          (0, r.jsx)(h.$i$, { className: s()(ei.marginTop40, ei.marginBottom40) })
                       ]
                   })
                 : null,
-            eh =
-                P && null != e.threadMetadata
-                    ? (0, i.jsxs)('div', {
+            K =
+                I && null != e.threadMetadata
+                    ? (0, r.jsxs)('div', {
                           children: [
-                              (0, i.jsx)(g.xJW, {
-                                  children: (0, i.jsx)(f.Z, {
-                                      page: Y.ZY5.CHANNEL_SETTINGS,
-                                      children: (0, i.jsx)(D.Z, {
-                                          isDisabled: !y,
-                                          autoArchiveDuration: null != (m = e.threadMetadata.autoArchiveDuration) ? m : en.AX,
+                              (0, r.jsx)(h.xJW, {
+                                  children: (0, r.jsx)(p.Z, {
+                                      page: $.ZY5.CHANNEL_SETTINGS,
+                                      children: (0, r.jsx)(W.Z, {
+                                          isDisabled: !v,
+                                          autoArchiveDuration: null != (g = e.threadMetadata.autoArchiveDuration) ? g : et.AX,
                                           onChange: this.handleAutoArchiveDurationChanged
                                       })
                                   })
                               }),
-                              (0, i.jsx)(g.R94, {
-                                  className: el.marginTop8,
-                                  type: g.R94.Types.DESCRIPTION,
-                                  children: w ? ei.NW.string(ei.t['3aJN9P']) : ei.NW.string(ei.t.YUXr4e)
+                              (0, r.jsx)(h.R94, {
+                                  className: ei.marginTop8,
+                                  type: h.R94.Types.DESCRIPTION,
+                                  children: S ? en.NW.string(en.t['3aJN9P']) : en.NW.string(en.t.YUXr4e)
                               })
                           ]
                       })
                     : null,
-            eg =
-                e.type === Y.d4z.PRIVATE_THREAD && null != e.threadMetadata
-                    ? (0, i.jsx)('div', {
-                          children: (0, i.jsx)(g.j7V, {
-                              note: ei.NW.string(ei.t.cSyXJi),
+            eu =
+                e.type === $.d4z.PRIVATE_THREAD && null != e.threadMetadata
+                    ? (0, r.jsx)('div', {
+                          children: (0, r.jsx)(h.j7V, {
+                              note: en.NW.string(en.t.cSyXJi),
                               onChange: this.handleInvitableChanged,
                               value: e.threadMetadata.invitable,
                               hideBorder: !0,
-                              disabled: !y,
-                              children: ei.NW.string(ei.t.s2rpNT)
+                              disabled: !v,
+                              children: en.NW.string(en.t.s2rpNT)
                           })
                       })
                     : null,
-            em = A.ov.has(e.type)
-                ? (0, i.jsx)('div', {
-                      children: (0, i.jsx)(g.j7V, {
-                          note: ei.NW.string(ei.t['9eUgwc']),
+            eh = L.ov.has(e.type)
+                ? (0, r.jsx)('div', {
+                      children: (0, r.jsx)(h.j7V, {
+                          note: en.NW.string(en.t['9eUgwc']),
                           onChange: this.handleNSFWChange,
                           value: e.isNSFW(),
                           hideBorder: !0,
-                          disabled: !j || null != e.linkedLobby,
-                          disabledText: null != e.linkedLobby ? ei.NW.string(ei.t.l6uSVV) : null,
-                          children: ei.NW.string(ei.t.Es25YW)
+                          disabled: !x || null != e.linkedLobby,
+                          disabledText: null != e.linkedLobby ? en.NW.string(en.t.l6uSVV) : null,
+                          children: en.NW.string(en.t.Es25YW)
                       })
                   })
                 : null,
-            ep =
-                A.Y0.has(e.type) && null != S && S.hasFeature(Y.oNc.NEWS) && e.id !== (null == S ? void 0 : S.rulesChannelId) && e.id !== (null == S ? void 0 : S.publicUpdatesChannelId)
-                    ? (0, i.jsx)('div', {
-                          children: (0, i.jsx)(g.j7V, {
-                              note: (0, i.jsxs)(i.Fragment, {
+            eg =
+                L.Y0.has(e.type) && null != C && C.hasFeature($.oNc.NEWS) && e.id !== (null == C ? void 0 : C.rulesChannelId) && e.id !== (null == C ? void 0 : C.publicUpdatesChannelId)
+                    ? (0, r.jsx)('div', {
+                          children: (0, r.jsx)(h.j7V, {
+                              note: (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, i.jsx)('div', { children: ei.NW.format(ei.t.tI7KNT, { documentationLink: X.Z.getArticleURL(Y.BhN.ANNOUNCEMENT_CHANNELS) }) }),
-                                      (0, i.jsx)('div', {
-                                          className: el.marginTop8,
-                                          children: _ ? ei.NW.string(ei.t['2Ab4IS']) : ei.NW.string(ei.t['/8VkyM'])
+                                      (0, r.jsx)('div', { children: en.NW.format(en.t.tI7KNT, { documentationLink: F.Z.getArticleURL($.BhN.ANNOUNCEMENT_CHANNELS) }) }),
+                                      (0, r.jsx)('div', {
+                                          className: ei.marginTop8,
+                                          children: R ? en.NW.string(en.t['2Ab4IS']) : en.NW.string(en.t['/8VkyM'])
                                       })
                                   ]
                               }),
                               onChange: this.handleNewsChange,
-                              value: e.type === Y.d4z.GUILD_ANNOUNCEMENT,
+                              value: e.type === $.d4z.GUILD_ANNOUNCEMENT,
                               hideBorder: !0,
-                              disabled: !j,
-                              children: ei.NW.string(ei.t.Au2b7u)
+                              disabled: !x,
+                              children: en.NW.string(en.t.Au2b7u)
                           })
                       })
                     : null,
-            ef = A.uC.has(e.type)
-                ? (0, i.jsxs)('div', {
+            em = L.uC.has(e.type)
+                ? (0, r.jsxs)('div', {
                       children: [
-                          (0, i.jsx)(g.$i$, { className: s()(el.marginTop40, el.marginBottom40) }),
-                          (0, i.jsx)(f.Z, {
-                              page: Y.ZY5.CHANNEL_SETTINGS,
-                              children: (0, i.jsx)(D.Z, {
-                                  isDisabled: !j,
-                                  autoArchiveDuration: (0, I.WD)(e, null),
+                          (0, r.jsx)(h.$i$, { className: s()(ei.marginTop40, ei.marginBottom40) }),
+                          (0, r.jsx)(p.Z, {
+                              page: $.ZY5.CHANNEL_SETTINGS,
+                              children: (0, r.jsx)(W.Z, {
+                                  isDisabled: !x,
+                                  autoArchiveDuration: (0, _.WD)(e, null),
                                   onChange: this.handleChangeDefaultAutoArchiveDuration
                               })
                           }),
-                          (0, i.jsx)(g.R94, {
-                              className: el.marginTop8,
-                              type: g.R94.Types.DESCRIPTION,
-                              children: e.isForumLikeChannel() ? ei.NW.string(ei.t.fyXclZ) : ei.NW.string(ei.t.W3Noi4)
+                          (0, r.jsx)(h.R94, {
+                              className: ei.marginTop8,
+                              type: h.R94.Types.DESCRIPTION,
+                              children: e.isForumLikeChannel() ? en.NW.string(en.t.fyXclZ) : en.NW.string(en.t.W3Noi4)
                           })
                       ]
                   })
                 : null,
-            ex = this.props.showChannelSummariesSettings
-                ? (0, i.jsx)(g.j7V, {
-                      note: ei.NW.format(ei.t.feJW19, { helpdeskArticle: X.Z.getArticleURL(Y.BhN.CONVERSATION_SUMMARIES) }),
+            ep = this.props.showChannelSummariesSettings
+                ? (0, r.jsx)(h.j7V, {
+                      note: en.NW.format(en.t.feJW19, { helpdeskArticle: F.Z.getArticleURL($.BhN.CONVERSATION_SUMMARIES) }),
                       onChange: this.handleChannelSummariesToggled,
-                      value: !e.hasFlag(K.zZ.SUMMARIES_DISABLED) && (null == S ? void 0 : S.hasFeature(Y.oNc.SUMMARIES_ENABLED_BY_USER)),
+                      value: !e.hasFlag(Y.zZ.SUMMARIES_DISABLED) && (null == C ? void 0 : C.hasFeature($.oNc.SUMMARIES_ENABLED_BY_USER)),
                       hideBorder: !0,
-                      disabled: !j || !(null == S ? void 0 : S.hasFeature(Y.oNc.SUMMARIES_ENABLED_BY_USER)),
-                      children: (0, i.jsxs)('div', {
+                      disabled: !x || !(null == C ? void 0 : C.hasFeature($.oNc.SUMMARIES_ENABLED_BY_USER)),
+                      children: (0, r.jsxs)('div', {
                           className: er.badgedItem,
                           children: [
-                              ei.NW.string(ei.t.id3ozs),
-                              (0, i.jsx)(g.IGR, {
-                                  text: ei.NW.string(ei.t.oW0eUV),
-                                  color: u.Z.colors.BG_BRAND.css
+                              en.NW.string(en.t.id3ozs),
+                              (0, r.jsx)(h.IGR, {
+                                  text: en.NW.string(en.t.oW0eUV),
+                                  color: d.Z.colors.BG_BRAND.css
                               })
                           ]
                       })
                   })
                 : null,
-            eb = e.isMediaChannel()
-                ? (0, i.jsxs)('div', {
+            ef = e.isMediaChannel()
+                ? (0, r.jsxs)('div', {
                       children: [
-                          (0, i.jsx)(g.$i$, { className: s()(el.marginTop40, el.marginBottom40) }),
-                          (0, i.jsx)(g.j7V, {
+                          (0, r.jsx)(h.$i$, { className: s()(ei.marginTop40, ei.marginBottom40) }),
+                          (0, r.jsx)(h.j7V, {
                               onChange: this.handleShowMediaOptionsToggled,
-                              value: !e.hasFlag(K.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS),
-                              note: ei.NW.string(ei.t.J4wCc3),
+                              value: !e.hasFlag(Y.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS),
+                              note: en.NW.string(en.t.J4wCc3),
                               hideBorder: !0,
-                              disabled: !j,
-                              children: ei.NW.string(ei.t.u8LZOj)
+                              disabled: !x,
+                              children: en.NW.string(en.t.u8LZOj)
                           })
                       ]
                   })
                 : null;
         return (
-            e.type === Y.d4z.GUILD_CATEGORY ? ((x = ei.NW.string(ei.t.OCAkGB)), (p = 'category-name')) : e.isForumPost() ? ((x = ei.NW.string(ei.t.uyVrTE)), (p = 'post-title')) : P ? ((x = ei.NW.string(ei.t.j3XWjI)), (p = 'thread-name')) : ((x = ei.NW.string(ei.t.PVbHDg)), (p = 'channel-name')),
-            (0, i.jsxs)('div', {
+            e.type === $.d4z.GUILD_CATEGORY ? ((f = en.NW.string(en.t.OCAkGB)), (m = 'category-name')) : e.isForumPost() ? ((f = en.NW.string(en.t.uyVrTE)), (m = 'post-title')) : I ? ((f = en.NW.string(en.t.j3XWjI)), (m = 'thread-name')) : ((f = en.NW.string(en.t.PVbHDg)), (m = 'channel-name')),
+            (0, r.jsxs)('div', {
                 children: [
-                    (0, i.jsx)(g.xJW, {
-                        title: x,
-                        children: (0, i.jsx)(g.oil, {
+                    (0, r.jsx)(h.xJW, {
+                        title: f,
+                        children: (0, r.jsx)(h.oil, {
                             value: t,
                             onChange: this.handleChangeName,
                             onBlur: this.handleBlurName,
                             error: this.getError('name'),
-                            name: p,
+                            name: m,
                             autoFocus: !0,
-                            disabled: O ? !b : !j,
-                            maxLength: Y.HN8
+                            disabled: w ? !j : !x,
+                            maxLength: $.HN8
                         })
                     }),
-                    (0, i.jsx)(g.$i$, { className: s()(el.marginTop40, el.marginBottom40) }),
+                    (0, r.jsx)(h.$i$, { className: s()(ei.marginTop40, ei.marginBottom40) }),
+                    M,
                     k,
                     B,
                     V,
-                    G,
-                    ee,
-                    eh,
+                    X,
+                    K,
+                    U,
                     H,
-                    z,
-                    F,
+                    null,
+                    eu,
+                    eh,
                     eg,
-                    em,
                     ep,
-                    ex,
-                    ef,
-                    eb
+                    em,
+                    ef
                 ]
             })
         );
@@ -693,42 +662,42 @@ class ev extends r.PureComponent {
     renderVoiceBitrate(e, t) {
         let { canManageChannels: n } = this.props;
         if (!this.showVoiceSettings()) return null;
-        let r = (0, H.g7)(t, e),
+        let i = (0, U.g7)(t, e),
             l = this.getError('bitrate');
-        return (0, i.jsxs)(S.Z, {
-            direction: S.Z.Direction.VERTICAL,
-            className: el.marginBottom40,
+        return (0, r.jsxs)(C.Z, {
+            direction: C.Z.Direction.VERTICAL,
+            className: ei.marginBottom40,
             children: [
-                (0, i.jsx)(g.vwX, {
-                    id: eh,
-                    children: ei.NW.string(ei.t.w2d0vb)
+                (0, r.jsx)(h.vwX, {
+                    id: eu,
+                    children: en.NW.string(en.t.w2d0vb)
                 }),
                 '' !== l &&
-                    (0, i.jsx)(g.R94, {
-                        id: eg,
-                        type: g.geA.DESCRIPTION,
-                        style: { color: u.Z.unsafe_rawColors.RED_400.css },
-                        className: el.marginBottom8,
+                    (0, r.jsx)(h.R94, {
+                        id: eh,
+                        type: h.geA.DESCRIPTION,
+                        style: { color: d.Z.unsafe_rawColors.RED_400.css },
+                        className: ei.marginBottom8,
                         children: l
                     }),
-                (0, i.jsx)(g.iRW, {
-                    initialValue: Math.min(e.bitrate, r),
+                (0, r.jsx)(h.iRW, {
+                    initialValue: Math.min(e.bitrate, i),
                     onValueChange: this.handleChangeBitrate,
                     onValueRender: this.renderBitrate,
                     onMarkerRender: this.renderBitrate,
-                    markers: [Y.Fc, Y.epw, r],
-                    minValue: Y.Fc,
-                    maxValue: r,
-                    keyboardStep: Y.V7H,
+                    markers: [$.Fc, $.epw, i],
+                    minValue: $.Fc,
+                    maxValue: i,
+                    keyboardStep: $.V7H,
                     disabled: !n,
-                    'aria-labelledby': eh,
-                    'aria-describedby': null != l && '' !== l ? eg : em
+                    'aria-labelledby': eu,
+                    'aria-describedby': null != l && '' !== l ? eh : eg
                 }),
-                r > Y.epw
-                    ? (0, i.jsx)(g.R94, {
-                          id: em,
-                          type: g.geA.DESCRIPTION,
-                          children: ei.NW.format(ei.t.SbQJk5, { bitrate: Y.epw / 1000 })
+                i > $.epw
+                    ? (0, r.jsx)(h.R94, {
+                          id: eg,
+                          type: h.geA.DESCRIPTION,
+                          children: en.NW.format(en.t.SbQJk5, { bitrate: $.epw / 1000 })
                       })
                     : null
             ]
@@ -739,9 +708,9 @@ class ev extends r.PureComponent {
         return (
             null != e &&
             null != e.guild_id &&
-            A.vg.has(e.type) &&
+            L.vg.has(e.type) &&
             (e.isGuildVocal() ||
-                P.tM.getCurrentConfig({
+                I.tM.getCurrentConfig({
                     guildId: e.guild_id,
                     location: '9b50bd_1'
                 }).enabled)
@@ -751,86 +720,86 @@ class ev extends r.PureComponent {
         var t;
         let { canManageChannels: n } = this.props;
         if (!this.showVoiceSettings()) return null;
-        let r = [
+        let i = [
             {
-                value: Y.Ucd.AUTO,
-                name: ei.NW.string(ei.t.jjKYpq)
+                value: $.Ucd.AUTO,
+                name: en.NW.string(en.t.jjKYpq)
             },
             {
-                value: Y.Ucd.FULL,
-                name: ei.NW.string(ei.t['7jOoJC'])
+                value: $.Ucd.FULL,
+                name: en.NW.string(en.t['7jOoJC'])
             }
         ];
-        return (0, i.jsxs)(S.Z, {
-            direction: S.Z.Direction.VERTICAL,
-            className: el.marginBottom40,
+        return (0, r.jsxs)(C.Z, {
+            direction: C.Z.Direction.VERTICAL,
+            className: ei.marginBottom40,
             children: [
-                (0, i.jsx)(g.xJW, {
-                    title: ei.NW.string(ei.t.jhJEJi),
-                    children: (0, i.jsx)(g.FXm, {
+                (0, r.jsx)(h.xJW, {
+                    title: en.NW.string(en.t.jhJEJi),
+                    children: (0, r.jsx)(h.FXm, {
                         onChange: (e) => {
                             let { value: t } = e;
                             return this.handleVideoQualityModeChange(t);
                         },
-                        options: r,
-                        value: null != (t = e.videoQualityMode) ? t : Y.Ucd.AUTO,
+                        options: i,
+                        value: null != (t = e.videoQualityMode) ? t : $.Ucd.AUTO,
                         disabled: !n
                     })
                 }),
-                (0, i.jsx)(g.R94, {
-                    type: g.geA.DESCRIPTION,
-                    children: ei.NW.format(ei.t.c5W7Sk, {})
+                (0, r.jsx)(h.R94, {
+                    type: h.geA.DESCRIPTION,
+                    children: en.NW.format(en.t.c5W7Sk, {})
                 })
             ]
         });
     }
     onRenderUserLimit(e) {
-        return 0 === (e = Math.round(e)) ? ei.NW.string(ei.t.XX5ciY) : ei.NW.formatToPlainString(ei.t['3uHFUV'], { num: e });
+        return 0 === (e = Math.round(e)) ? en.NW.string(en.t.XX5ciY) : en.NW.formatToPlainString(en.t['3uHFUV'], { num: e });
     }
     renderUserLimit(e) {
         let { canManageChannels: t } = this.props;
         if (!this.showVoiceSettings()) return null;
         let n = this.getError('user_limit'),
-            r = e.isGuildStageVoice() ? Y.xGv : Y.$pe;
-        return (0, i.jsxs)(S.Z, {
-            direction: S.Z.Direction.VERTICAL,
-            className: el.marginBottom40,
+            i = e.isGuildStageVoice() ? $.xGv : $.$pe;
+        return (0, r.jsxs)(C.Z, {
+            direction: C.Z.Direction.VERTICAL,
+            className: ei.marginBottom40,
             children: [
-                (0, i.jsx)(g.vwX, {
-                    id: ep,
-                    children: ei.NW.string(ei.t['/AoSGB'])
+                (0, r.jsx)(h.vwX, {
+                    id: em,
+                    children: en.NW.string(en.t['/AoSGB'])
                 }),
                 '' !== n &&
-                    (0, i.jsx)(g.R94, {
-                        id: ef,
-                        type: g.geA.DESCRIPTION,
-                        style: { color: u.Z.unsafe_rawColors.RED_400.css },
-                        className: el.marginBottom8,
+                    (0, r.jsx)(h.R94, {
+                        id: ep,
+                        type: h.geA.DESCRIPTION,
+                        style: { color: d.Z.unsafe_rawColors.RED_400.css },
+                        className: ei.marginBottom8,
                         children: n
                     }),
-                (0, i.jsx)(g.iRW, {
-                    initialValue: Math.min(e.userLimit, r),
+                (0, r.jsx)(h.iRW, {
+                    initialValue: Math.min(e.userLimit, i),
                     onValueChange: this.handleUserLimitChange,
                     onValueRender: this.onRenderUserLimit,
                     onMarkerRender: (e) => (0 === Math.round(e) ? '\u221E' : e),
-                    markers: [0, r],
+                    markers: [0, i],
                     minValue: 0,
-                    maxValue: r,
+                    maxValue: i,
                     disabled: !t,
-                    'aria-labelledby': ep,
-                    'aria-describedby': null != n && '' !== n ? ef : ex
+                    'aria-labelledby': em,
+                    'aria-describedby': null != n && '' !== n ? ep : ef
                 }),
-                (0, i.jsx)(g.R94, {
-                    id: ex,
-                    type: g.geA.DESCRIPTION,
-                    children: ei.NW.format(e.isGuildStageVoice() ? ei.t.OqZI8P : ei.t['8yb3JS'], {})
+                (0, r.jsx)(h.R94, {
+                    id: ef,
+                    type: h.geA.DESCRIPTION,
+                    children: en.NW.format(e.isGuildStageVoice() ? en.t.OqZI8P : en.t['8yb3JS'], {})
                 })
             ]
         });
     }
     renderRegionOverride(e) {
         var t;
-        let { regions: n, canManageChannels: r, guild: l } = this.props;
+        let { regions: n, canManageChannels: i, guild: l } = this.props;
         if (null == l || !this.showVoiceSettings() || e.isGuildStageVoice()) return null;
         let s = [];
         null != n &&
@@ -840,36 +809,36 @@ class ev extends r.PureComponent {
                     label: e.name,
                     value: e.id
                 }))).unshift({
-                label: ei.NW.string(ei.t.JEmsam),
-                value: eb
+                label: en.NW.string(en.t.JEmsam),
+                value: ej
             });
-        let a = null != (t = e.rtcRegion) ? t : eb;
-        return (0, i.jsxs)(S.Z, {
-            direction: S.Z.Direction.VERTICAL,
+        let a = null != (t = e.rtcRegion) ? t : ej;
+        return (0, r.jsxs)(C.Z, {
+            direction: C.Z.Direction.VERTICAL,
             children: [
-                (0, i.jsx)(g.vwX, { children: ei.NW.string(ei.t.Ms8bX1) }),
-                (0, i.jsx)(g.q4e, {
+                (0, r.jsx)(h.vwX, { children: en.NW.string(en.t.Ms8bX1) }),
+                (0, r.jsx)(h.q4e, {
                     options: s,
                     value: a,
                     onChange: this.handleRegionChange,
-                    isDisabled: !r
+                    isDisabled: !i
                 }),
-                (0, i.jsx)(g.R94, {
-                    type: g.geA.DESCRIPTION,
-                    children: ei.NW.string(ei.t['dbTs+/'])
+                (0, r.jsx)(h.R94, {
+                    type: h.geA.DESCRIPTION,
+                    children: en.NW.string(en.t['dbTs+/'])
                 })
             ]
         });
     }
     renderJuiceImage(e) {
         let t,
-            { theme: r } = this.props;
+            { theme: i } = this.props;
         return (
-            (t = e.type === Y.d4z.GUILD_CATEGORY ? ((0, h.wj)(r) ? n(309095) : n(925442)) : (0, h.wj)(r) ? n(316491) : n(301358)),
-            (0, i.jsx)(S.Z, {
-                justify: S.Z.Justify.CENTER,
-                className: el.marginTop60,
-                children: (0, i.jsx)('img', {
+            (t = e.type === $.d4z.GUILD_CATEGORY ? ((0, u.wj)(i) ? n(309095) : n(925442)) : (0, u.wj)(i) ? n(316491) : n(301358)),
+            (0, r.jsx)(C.Z, {
+                justify: C.Z.Justify.CENTER,
+                className: ei.marginTop60,
+                children: (0, r.jsx)('img', {
                     alt: '',
                     width: 280,
                     height: 165,
@@ -882,11 +851,11 @@ class ev extends r.PureComponent {
         let { channel: e, channelName: t, guild: n } = this.props;
         return null == e || null == t || null == n
             ? null
-            : (0, i.jsxs)(g.hjN, {
+            : (0, r.jsxs)(h.hjN, {
                   className: 'channel-settings-overview',
-                  tag: g.RB0.H1,
-                  title: ei.NW.string(ei.t['/dp6yc']),
-                  children: [this.renderChannelInfo(e, t), this.showVoiceSettings() ? (0, i.jsx)(g.$i$, { className: s()(el.marginTop40, el.marginBottom40) }) : null, this.renderVoiceBitrate(e, n), this.renderVideoQualityMode(e), this.renderUserLimit(e), this.renderRegionOverride(e), this.renderJuiceImage(e)]
+                  tag: h.RB0.H1,
+                  title: en.NW.string(en.t['/dp6yc']),
+                  children: [this.renderChannelInfo(e, t), this.showVoiceSettings() ? (0, r.jsx)(h.$i$, { className: s()(ei.marginTop40, ei.marginBottom40) }) : null, this.renderVoiceBitrate(e, n), this.renderVideoQualityMode(e), this.renderUserLimit(e), this.renderRegionOverride(e), this.renderJuiceImage(e)]
               });
     }
     handleSubmit() {
@@ -900,51 +869,51 @@ class ev extends r.PureComponent {
     constructor(e) {
         var t, n;
         super(e),
-            es(this, 'defaultReactionButtonRef', r.createRef()),
-            es(this, 'renderEmojiPicker', (e) => {
+            el(this, 'defaultReactionButtonRef', i.createRef()),
+            el(this, 'renderEmojiPicker', (e) => {
                 let { closePopout: t } = e,
                     { channel: n } = this.props;
-                return (0, i.jsx)(O.Z, {
+                return (0, r.jsx)(w.Z, {
                     guildId: null == n ? void 0 : n.guild_id,
                     closePopout: t,
                     onSelectEmoji: (e, n) => {
                         this.handleChangeDefaultReactionEmoji(e), n && t();
                     },
-                    pickerIntention: ee.Hz.COMMUNITY_CONTENT,
+                    pickerIntention: K.Hz.COMMUNITY_CONTENT,
                     channel: n
                 });
             }),
-            es(this, 'handleRequireTagChanged', (e) => {
+            el(this, 'handleRequireTagChanged', (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, F.mB)(t.flags, K.zZ.REQUIRE_TAG, e);
-                (0, m.pW)({ flags: n });
+                let n = (0, z.mB)(t.flags, Y.zZ.REQUIRE_TAG, e);
+                (0, g.pW)({ flags: n });
             }),
-            es(this, 'handleChangeName', (e) => {
+            el(this, 'handleChangeName', (e) => {
                 let { channel: t } = this.props;
-                null != t && (t.isThread() ? (e = (0, W.Z)(e, !1)) : Y.TPd.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, H.Nj)(e)), (0, m.pW)({ name: e }));
+                null != t && (t.isThread() ? (e = (0, P.Z)(e, !1)) : $.TPd.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, U.Nj)(e)), (0, g.pW)({ name: e }));
             }),
-            es(this, 'handleBlurName', () => {
+            el(this, 'handleBlurName', () => {
                 let { channel: e, channelName: t } = this.props;
                 if ((null == e ? void 0 : e.isThread()) && null != t) {
-                    let e = (0, W.Z)(t, !0);
-                    e !== t && (0, m.pW)({ name: e });
+                    let e = (0, P.Z)(t, !0);
+                    e !== t && (0, g.pW)({ name: e });
                 }
             }),
-            es(this, 'handleChangeTopic', (e) => {
-                (0, m.pW)({ topic: Z.ZP.translateInlineEmojiToSurrogates(e) });
+            el(this, 'handleChangeTopic', (e) => {
+                (0, g.pW)({ topic: Z.ZP.translateInlineEmojiToSurrogates(e) });
             }),
-            es(this, 'handleChangeRichTopic', (e, t, n) => {
+            el(this, 'handleChangeRichTopic', (e, t, n) => {
                 this.setState({
                     textTopicValue: t,
                     richTopicValue: n
                 }),
                     this.handleChangeTopic(t);
             }),
-            es(this, 'handleChangeTemplate', (e) => {
-                (0, m.pW)({ template: Z.ZP.translateInlineEmojiToSurrogates(e) });
+            el(this, 'handleChangeTemplate', (e) => {
+                (0, g.pW)({ template: Z.ZP.translateInlineEmojiToSurrogates(e) });
             }),
-            es(this, 'handleChangeDefaultReactionEmoji', (e) => {
+            el(this, 'handleChangeDefaultReactionEmoji', (e) => {
                 let t =
                     null == e
                         ? null
@@ -957,124 +926,124 @@ class ev extends r.PureComponent {
                                 emojiId: void 0,
                                 emojiName: e.optionallyDiverseSequence
                             };
-                (0, m.pW)({ defaultReactionEmoji: t });
+                (0, g.pW)({ defaultReactionEmoji: t });
             }),
-            es(this, 'handleChangeDefaultForumLayout', (e) => {
+            el(this, 'handleChangeDefaultForumLayout', (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                (0, m.pW)({ defaultForumLayout: e }), this.props.handleSetDefaultLayout(e);
+                (0, g.pW)({ defaultForumLayout: e }), this.props.handleSetDefaultLayout(e);
             }),
-            es(this, 'handleChangeDefaultSortOrder', (e) => {
+            el(this, 'handleChangeDefaultSortOrder', (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                (0, m.pW)({ defaultSortOrder: e });
+                (0, g.pW)({ defaultSortOrder: e });
             }),
-            es(this, 'handleChangeDefaultTagSetting', (e) => {
+            el(this, 'handleChangeDefaultTagSetting', (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                (0, m.pW)({ defaultTagSetting: e });
+                (0, g.pW)({ defaultTagSetting: e });
             }),
-            es(this, 'handleChangeBitrate', (e) => {
-                (0, m.pW)({ bitrate: 1000 * Math.round(e / 1000) });
+            el(this, 'handleChangeBitrate', (e) => {
+                (0, g.pW)({ bitrate: 1000 * Math.round(e / 1000) });
             }),
-            es(this, 'handleUserLimitChange', (e) => {
-                (0, m.pW)({ userLimit: Math.round(e) });
+            el(this, 'handleUserLimitChange', (e) => {
+                (0, g.pW)({ userLimit: Math.round(e) });
             }),
-            es(this, 'handleNSFWChange', (e) => {
-                (0, m.pW)({ nsfw: e });
+            el(this, 'handleNSFWChange', (e) => {
+                (0, g.pW)({ nsfw: e });
             }),
-            es(this, 'handleActiveChannelsRemovedChange', (e) => {
+            el(this, 'handleActiveChannelsRemovedChange', (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, F.mB)(t.flags, K.zZ.ACTIVE_CHANNELS_REMOVED, !e);
-                (0, m.pW)({ flags: n });
+                let n = (0, z.mB)(t.flags, Y.zZ.ACTIVE_CHANNELS_REMOVED, !e);
+                (0, g.pW)({ flags: n });
             }),
-            es(this, 'handleNewsChange', (e) => {
-                (0, m.pW)({ type: e ? Y.d4z.GUILD_ANNOUNCEMENT : Y.d4z.GUILD_TEXT });
+            el(this, 'handleNewsChange', (e) => {
+                (0, g.pW)({ type: e ? $.d4z.GUILD_ANNOUNCEMENT : $.d4z.GUILD_TEXT });
             }),
-            es(this, 'handleChangeSlowmode', (e) => {
-                (0, m.pW)({ rateLimitPerUser: e });
+            el(this, 'handleChangeSlowmode', (e) => {
+                (0, g.pW)({ rateLimitPerUser: e });
             }),
-            es(this, 'handleChangeThreadMessageSlowmode', (e) => {
-                (0, m.pW)({ defaultThreadRateLimitPerUser: e });
+            el(this, 'handleChangeThreadMessageSlowmode', (e) => {
+                (0, g.pW)({ defaultThreadRateLimitPerUser: e });
             }),
-            es(this, 'handleChangeDefaultAutoArchiveDuration', (e) => {
-                (0, m.pW)({ defaultAutoArchiveDuration: e });
+            el(this, 'handleChangeDefaultAutoArchiveDuration', (e) => {
+                (0, g.pW)({ defaultAutoArchiveDuration: e });
             }),
-            es(this, 'handleRegionChange', (e) => {
-                (0, m.pW)({ rtcRegion: e === eb ? null : e });
+            el(this, 'handleRegionChange', (e) => {
+                (0, g.pW)({ rtcRegion: e === ej ? null : e });
             }),
-            es(this, 'handleVideoQualityModeChange', (e) => {
-                (0, m.pW)({ videoQualityMode: e });
+            el(this, 'handleVideoQualityModeChange', (e) => {
+                (0, g.pW)({ videoQualityMode: e });
             }),
-            es(this, 'handleAutoArchiveDurationChanged', (e) => {
-                (0, m.pW)({ autoArchiveDuration: e });
+            el(this, 'handleAutoArchiveDurationChanged', (e) => {
+                (0, g.pW)({ autoArchiveDuration: e });
             }),
-            es(this, 'handleInvitableChanged', (e) => {
-                (0, m.pW)({ invitable: e });
+            el(this, 'handleInvitableChanged', (e) => {
+                (0, g.pW)({ invitable: e });
             }),
-            es(this, 'handleChannelSummariesToggled', (e) => {
+            el(this, 'handleChannelSummariesToggled', (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, F.mB)(t.flags, K.zZ.SUMMARIES_DISABLED, !e);
-                (0, m.pW)({ flags: n });
+                let n = (0, z.mB)(t.flags, Y.zZ.SUMMARIES_DISABLED, !e);
+                (0, g.pW)({ flags: n });
             }),
-            es(this, 'handleShowMediaOptionsToggled', (e) => {
+            el(this, 'handleShowMediaOptionsToggled', (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, F.mB)(t.flags, K.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS, !e);
-                (0, m.pW)({ flags: n });
+                let n = (0, z.mB)(t.flags, Y.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS, !e);
+                (0, g.pW)({ flags: n });
             });
         let l = null != (n = null == (t = this.props.channel) ? void 0 : t.topic) ? n : '';
         this.state = {
             textTopicValue: l,
-            richTopicValue: (0, y.JM)(l),
+            richTopicValue: (0, v.JM)(l),
             topicFocused: !1
         };
     }
 }
-function ey() {
+function ev() {
     var e;
-    let { errors: t, channel: n, submitting: l, subsection: s } = (0, d.cj)([k.Z], () => k.Z.getProps()),
-        a = (0, d.e7)([G.Z], () => {
+    let { errors: t, channel: n, submitting: l, subsection: s } = (0, c.cj)([M.Z], () => M.Z.getProps()),
+        a = (0, c.e7)([V.Z], () => {
             var e;
-            return G.Z.getRegions(null != (e = null == n ? void 0 : n.getGuildId()) ? e : null);
+            return V.Z.getRegions(null != (e = null == n ? void 0 : n.getGuildId()) ? e : null);
         }),
-        o = (0, d.e7)([L.Z], () => L.Z.theme),
-        c = (0, d.e7)([B.Z], () => B.Z.getGuild(null == n ? void 0 : n.getGuildId())),
-        u = (0, P.C7)(n),
-        h = (0, P.Xb)(n),
-        { canManageChannels: g, canSendMessages: m } = (0, d.cj)([V.Z], () => ({
-            canManageChannels: V.Z.can(Y.Plq.MANAGE_CHANNELS, n),
-            canSendMessages: V.Z.can(Y.Plq.SEND_MESSAGES, n)
+        o = (0, c.e7)([D.Z], () => D.Z.theme),
+        d = (0, c.e7)([k.Z], () => k.Z.getGuild(null == n ? void 0 : n.getGuildId())),
+        u = (0, I.C7)(n),
+        h = (0, I.Xb)(n),
+        { canManageChannels: g, canSendMessages: m } = (0, c.cj)([B.Z], () => ({
+            canManageChannels: B.Z.can($.Plq.MANAGE_CHANNELS, n),
+            canSendMessages: B.Z.can($.Plq.SEND_MESSAGES, n)
         })),
-        p = (0, N.ZP)(n),
-        f = M.default.getId(),
-        x = (0, T.v)(),
+        p = (0, b.ZP)(n),
+        f = A.default.getId(),
+        N = (0, O.v)(),
         v = null == n ? void 0 : n.id,
-        y = (0, b.ts)(n, !1, !0),
-        C = j.Z.useExperiment({
+        y = (0, j.ts)(n, !1, !0),
+        C = x.Z.useExperiment({
             guildId: null == n ? void 0 : n.guild_id,
             location: 'ChannelSettingsOverview'
         }).enabled,
-        S = r.useCallback(
+        S = i.useCallback(
             (e) => {
-                null != v && x.getState().setLayoutType(v, e);
+                null != v && N.getState().setLayoutType(v, e);
             },
-            [v, x]
+            [v, N]
         ),
-        w = (0, _.Dj)({
+        w = (0, R.Dj)({
             guildId: null != (e = null == n ? void 0 : n.guild_id) ? e : void 0,
             location: 'guild settings overview'
         });
-    return (0, i.jsx)(ev, {
+    return (0, r.jsx)(eN, {
         errors: t,
         channel: n,
         channelName: p,
         submitting: l,
         regions: a,
         theme: o,
-        guild: c,
+        guild: d,
         canManageChannels: (null == n ? void 0 : n.isThread()) ? u : g,
         canSendMessages: m,
         isThreadModerator: h,
