@@ -1,18 +1,18 @@
-n.d(t, { Z: () => l });
-var i = n(200651);
+n.d(e, { Z: () => l });
+var o = n(200651);
 n(192379);
-var a = n(180781),
-    o = n(321867),
-    r = n(486324);
-function l(e) {
-    let { type: t, analyticsPage: n, analyticsSection: l, isGIF: c, banner: s } = e;
-    return [r.pC.BANNER, r.pC.AVATAR].includes(t) && c
-        ? (0, i.jsx)(o.Z, {
+var r = n(180781),
+    i = n(321867),
+    a = n(486324);
+function l(t) {
+    let { type: e, analyticsPage: n, analyticsSection: l, isGIF: c, banner: s } = t;
+    return [a.pC.BANNER, a.pC.AVATAR].includes(e) && c
+        ? (0, o.jsx)(i.Z, {
               analyticsSection: l,
-              type: t
+              type: e
           })
-        : t === r.pC.GUILD_BANNER
-          ? (0, i.jsx)(a.Z, {
+        : e === a.pC.GUILD_BANNER
+          ? (0, o.jsx)(r.Z, {
                 analyticsSection: l,
                 analyticsPage: n,
                 isGIF: c,

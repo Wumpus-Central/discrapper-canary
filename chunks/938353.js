@@ -33,8 +33,8 @@ var r,
     b = n(421474),
     x = n(603270),
     y = n(162297),
-    E = n(222709),
-    v = n(446411),
+    v = n(222709),
+    E = n(446411),
     O = n(960904),
     N = n(161314),
     j = n(247206),
@@ -87,8 +87,8 @@ var r,
     eb = n(591759),
     ex = n(594173),
     ey = n(169525),
-    eE = n(786761),
-    ev = n(161010),
+    ev = n(786761),
+    eE = n(161010),
     eO = n(255269),
     eN = n(461157),
     ej = n(901461),
@@ -258,7 +258,7 @@ class e1 extends (r = a.Component) {
     }
     renderSocialProofingFileSizeNitroUpsell(e) {
         let t = e.attachments.some((e) => e.size > eG.Lw);
-        return (0, ev.M)('attachment') && t ? (0, i.jsx)(eq, {}) : null;
+        return (0, eE.M)('attachment') && t ? (0, i.jsx)(eq, {}) : null;
     }
     renderCodedLinks(e) {
         return 0 === e.codedLinks.length
@@ -544,13 +544,13 @@ class e1 extends (r = a.Component) {
     renderPublishBump(e) {
         return this.props.channel.type !== eB.d4z.GUILD_ANNOUNCEMENT || this.props.isMessageSnapshot
             ? null
-            : (0, i.jsx)(E.Z, {
+            : (0, i.jsx)(v.Z, {
                   channelId: e.channel_id,
                   messageId: e.id
               });
     }
     renderEphemeralAccessories(e) {
-        return (0, eE.Pv)(e)
+        return (0, ev.Pv)(e)
             ? (0, i.jsx)(eT.Z, {
                   message: e,
                   onDeleteMessage: () => {
@@ -726,8 +726,8 @@ class e1 extends (r = a.Component) {
             b = this.renderEphemeralAccessories(t),
             x = this.renderStickersAccessories(t),
             y = this.renderThreadAccessories(t),
-            E = this.renderComponentAccessories(t),
-            v = this.renderThreadRoleMentionWarning(t),
+            v = this.renderComponentAccessories(t),
+            E = this.renderThreadRoleMentionWarning(t),
             O = this.renderEmbeddedApplicationInstanceEmbed(t),
             N = this.renderInteractionPremiumUpsell(t),
             j = this.renderMediaPostEmbeds(t),
@@ -737,12 +737,12 @@ class e1 extends (r = a.Component) {
             T = this.renderMediaObscureNotice(t),
             P = this.renderPoll(t, r),
             A = this.renderForwardedMessage(t);
-        return null == s && null == d && null == f && null == h && null == g && null == c && null == u && null == _ && null == b && null == x && null == y && null == E && null == O && null == v && null == j && null == C && null != N && null == P && null == I && null == A
+        return null == s && null == d && null == f && null == h && null == g && null == c && null == u && null == _ && null == b && null == x && null == y && null == v && null == O && null == E && null == j && null == C && null != N && null == P && null == I && null == A
             ? null
             : (0, i.jsxs)('div', {
                   id: (0, eZ.bX)(t),
                   className: o()(e, eV.container),
-                  children: [A, v, P, s, c, u, j, d, p, f, T, h, x, E, O, N, m, g, _, b, a && this.renderSuppressConfirmModal(), l && this.renderRemoveAttachmentConfirmModal(), y, C, S, I]
+                  children: [A, E, P, s, c, u, j, d, p, f, T, h, x, v, O, N, m, g, _, b, a && this.renderSuppressConfirmModal(), l && this.renderRemoveAttachmentConfirmModal(), y, C, S, I]
               });
     }
     constructor(...e) {
@@ -774,7 +774,7 @@ class e1 extends (r = a.Component) {
                           {
                               value: e$(e.url, e.image, e.video),
                               children: (0, i.jsx)(
-                                  v.ZP,
+                                  E.ZP,
                                   eY(
                                       {
                                           className: eV.embedWrapper,
@@ -849,10 +849,10 @@ function e3(e) {
             [f, n]
         ),
         y = (0, w.ux)(n.guild_id),
-        [, E] = (0, Z.AB)(n.guild_id),
-        v = (0, ei.$R)(n),
-        O = (o === r.author.id || x) && r.author.id !== eB.LAt && !1 !== a && !(0, eg.yE)(r.flags, eB.iLy.EPHEMERAL) && v && 1 === (0, eN.Z)(r),
-        N = o === r.author.id && v && !l,
+        [, v] = (0, Z.AB)(n.guild_id),
+        E = (0, ei.$R)(n),
+        O = (o === r.author.id || x) && r.author.id !== eB.LAt && !1 !== a && !(0, eg.yE)(r.flags, eB.iLy.EPHEMERAL) && E && 1 === (0, eN.Z)(r),
+        N = o === r.author.id && E && !l,
         j = r.author.id === o,
         S = r.isFirstMessageInForumPost(n),
         I = (0, eC.Z)({
@@ -862,8 +862,8 @@ function e3(e) {
             canAddNewReactions: b,
             isLurking: h,
             isGuest: g,
-            communicationDisabled: E,
-            isActiveChannelOrUnarchivableThread: v,
+            communicationDisabled: v,
+            isActiveChannelOrUnarchivableThread: E,
             isAutomodQuarantined: y
         }),
         T = (0, B.A)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),

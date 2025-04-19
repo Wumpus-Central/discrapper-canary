@@ -16,8 +16,8 @@ let p = (e) => {
             {
                 initialized: x,
                 loading: y,
-                items: E,
-                hasMore: v,
+                items: v,
+                hasMore: E,
                 cursor: O,
                 errored: N
             } = (0, i.cj)([c.Z], () => ({
@@ -39,9 +39,9 @@ let p = (e) => {
         let S = (0, l.Z)();
         r.useEffect(
             () => () => {
-                p ? !S() && (N || E.length > 100) && (0, s.jF)() : n && E.length > 100 && (0, s.jF)();
+                p ? !S() && (N || v.length > 100) && (0, s.jF)() : n && v.length > 100 && (0, s.jF)();
             },
-            [n, E, p, S, N]
+            [n, v, p, S, N]
         ),
             r.useEffect(() => {
                 let e = h && t;
@@ -57,7 +57,7 @@ let p = (e) => {
             async (e) => {
                 !g.current &&
                     x &&
-                    v &&
+                    E &&
                     null != O &&
                     (e || !N) &&
                     ((g.current = !0),
@@ -76,13 +76,13 @@ let p = (e) => {
                     ),
                     b(!1));
             },
-            [x, v, O, N, m, j, C]
+            [x, E, O, N, m, j, C]
         );
         return {
             initialized: x,
             loading: y,
-            items: E,
-            hasMore: v,
+            items: v,
+            hasMore: E,
             loadMore: I,
             loadingMore: _,
             setReadNotifItemToAcked: (e) => {

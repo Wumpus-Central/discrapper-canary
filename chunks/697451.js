@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(100527),
     x = n(906732),
     y = n(783097),
-    E = n(581364),
-    v = n(592180),
+    v = n(581364),
+    E = n(592180),
     O = n(726033),
     N = n(598077),
     j = n(594174),
@@ -93,7 +93,7 @@ function M(e) {
 }
 function W(e, t, n, i, a) {
     var o, s, c;
-    let { message: u, compact: d, channel: m, isInteractionUserBlocked: f, isInteractionUserIgnored: h, showAvatarPopout: g, showTargetAvatarPopout: _, onClickAvatar: b, onUserContextMenu: x, onClickTargetAvatar: y, onTargetUserContextMenu: E, onPopoutRequestClose: v } = e;
+    let { message: u, compact: d, channel: m, isInteractionUserBlocked: f, isInteractionUserIgnored: h, showAvatarPopout: g, showTargetAvatarPopout: _, onClickAvatar: b, onUserContextMenu: x, onClickTargetAvatar: y, onTargetUserContextMenu: v, onPopoutRequestClose: E } = e;
     if (d && 1 === n) return null;
     if ((d && null == u.activityInstance) || f || h)
         return (0, r.jsx)('div', {
@@ -128,7 +128,7 @@ function W(e, t, n, i, a) {
                 guildId: m.guild_id,
                 guildAvatar: O,
                 onClick: 1 === n ? y : b,
-                onContextMenu: 1 === n ? E : x
+                onContextMenu: 1 === n ? v : x
             }),
         j = 1 === n ? _ : g;
     return null != a && null != j
@@ -136,7 +136,7 @@ function W(e, t, n, i, a) {
               renderPopout: a,
               shouldShow: j,
               position: 'right',
-              onRequestClose: v,
+              onRequestClose: E,
               children: N
           })
         : N();
@@ -207,7 +207,7 @@ function G(e) {
             ),
             [o, a.id, a.interactionData]
         ),
-        M = (0, E.t0)(a),
+        M = (0, v.t0)(a),
         G = (null == M ? void 0 : M.type) === m.B8.APPLICATION_COMMAND && null != M.target_user ? new N.Z(M.target_user) : null,
         H = (null == M ? void 0 : M.type) === m.B8.APPLICATION_COMMAND && null != a.messageReference && null != e.renderTargetMessage,
         V = (0, T.Sw)(null == (t = a.interaction) ? void 0 : t.user, o),
@@ -227,7 +227,7 @@ function G(e) {
             'user'
         );
     };
-    if ((null == a ? void 0 : a.activityInstance) === null || (0, v.g)(a))
+    if ((null == a ? void 0 : a.activityInstance) === null || (0, E.g)(a))
         (n = R.NW.format(R.t['rg7U+P'], {
             userHook: q,
             commandHook: () => {
@@ -284,7 +284,7 @@ function G(e) {
                                         })
                                     })
                                 );
-                            if (!(0, v.g)(i))
+                            if (!(0, E.g)(i))
                                 return (0, r.jsx)('div', {
                                     className: k.commandName,
                                     children: s

@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(349033),
     x = n(999650),
     y = n(933557),
-    E = n(471445),
-    v = n(592125),
+    v = n(471445),
+    E = n(592125),
     O = n(271383),
     N = n(699516),
     j = n(250758),
@@ -110,7 +110,7 @@ let B = p()('2015-05-15').local(),
         let { user: o, text: s } = n;
         if (null == o) return (0, r.jsx)('strong', { children: s });
         let c = T.default.getUser(o.id),
-            u = v.Z.getChannel(e),
+            u = E.Z.getChannel(e),
             d = (null == u ? void 0 : u.isPrivate()) ? N.Z.getNickname(o.id) : null,
             p = null != (a = null != (i = O.ZP.getNick(e, o.id)) ? i : d) ? a : Z.ZP.getName(o),
             m = null != (l = null == c ? void 0 : c.getAvatarURL(e, 20)) ? l : o.getAvatarURL(null == u ? void 0 : u.guild_id, 20);
@@ -145,8 +145,8 @@ let B = p()('2015-05-15').local(),
     V = (e, t, n) => {
         let { channel: i, text: a } = n;
         if (null == i) return (0, r.jsx)('strong', { children: a });
-        let l = v.Z.getChannel(i.parent_id),
-            o = (0, E.KS)(i);
+        let l = E.Z.getChannel(i.parent_id),
+            o = (0, v.KS)(i);
         return (0, r.jsxs)('div', {
             className: L.resultChannel,
             children: [
