@@ -1,7 +1,8 @@
-B.d(g, {
-    M: () => Q,
-    Z: () => D
-});
+B.r(g),
+    B.d(g, {
+        default: () => D,
+        messagesLoader: () => Q
+    });
 let { createLoader: C } = B(164484),
     Q = C(
         {

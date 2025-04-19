@@ -1,1 +1,1 @@
-e.exports = { videoBackgroundArt: 'videoBackgroundArt__2b87f' };
+t.exports = { videoBackgroundArt: 'videoBackgroundArt__2b87f' };

@@ -1,12 +1,15 @@
-n.d(t, {
-    Kj: () => p,
-    NW: () => m,
-    St: () => h,
-    Vb: () => c.Vb,
-    j1: () => g,
-    t: () => l.k,
-    u5: () => c.u5
-}),
+n.r(t),
+    n.d(t, {
+        getAvailableLocales: () => c.u5,
+        getLanguages: () => c.Vb,
+        getSystemLocale: () => h,
+        initialLocale: () => g,
+        international: () => u.Z,
+        intl: () => E,
+        systemLocale: () => m,
+        t: () => l.k,
+        useSyncMessages: () => b
+    }),
     n(388685);
 var r = n(200651),
     i = n(192379),
@@ -14,8 +17,9 @@ var r = n(200651),
     o = n(477660),
     s = n.n(o),
     l = n(253185),
-    c = n(424395);
-function u(e, t, n) {
+    c = n(424395),
+    u = n(120235);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +32,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +43,12 @@ function d(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,24 +60,24 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-n(120235);
-let p = (function (e) {
-        return [Array.isArray(navigator.languages) ? navigator.languages[0] : null, navigator.language, navigator.browserLanguage, navigator.userLanguage, e].find((e) => null != e && '' !== e);
-    })('en-US'),
-    h = (0, c.YI)(p, 'en-US'),
-    m = new a.IntlManager({
-        initialLocale: h,
+function h(e) {
+    return [Array.isArray(navigator.languages) ? navigator.languages[0] : null, navigator.language, navigator.browserLanguage, navigator.userLanguage, e].find((e) => null != e && '' !== e);
+}
+let m = h('en-US'),
+    g = (0, c.YI)(m, 'en-US'),
+    E = new a.IntlManager({
+        initialLocale: g,
         defaultLocale: 'en-US'
     }).withFormatters({
         format: (0, a.makeReactFormatter)({
@@ -99,11 +103,11 @@ let p = (function (e) {
                         if (null == a) break;
                         (l.onClick = null != (c = a.onClick) ? c : a), (l.onContextMenu = a.onContextMenu);
                 }
-                return (0, i.createElement)(o, _(d({}, l), { key: t }), e);
+                return (0, i.createElement)(o, p(f({}, l), { key: t }), e);
             }
         }),
         formatToPlainString: a.stringFormatter,
         formatToMarkdownString: a.markdownFormatter,
         formatToParts: a.astFormatter
     }),
-    g = (e) => (0, c.j1)(e, m);
+    b = (e) => (0, c.j1)(e, E);

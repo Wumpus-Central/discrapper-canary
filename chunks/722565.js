@@ -1,7 +1,8 @@
-n.d(t, {
-    M: () => i,
-    Z: () => o
-});
+n.r(t),
+    n.d(t, {
+        default: () => o,
+        messagesLoader: () => i
+    });
 let { createLoader: r } = n(164484),
     i = r(
         {

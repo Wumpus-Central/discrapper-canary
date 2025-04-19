@@ -1,2 +1,2 @@
-n.d(t, { C: () => r });
-let r = 'CONNECTED_GAMES';
+n.d(t, { C: () => i });
+let i = 'CONNECTED_GAMES';

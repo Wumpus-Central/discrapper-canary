@@ -22,13 +22,13 @@ var r = n(200651),
     I = n(591853),
     S = n(371991),
     T = n(410441),
-    N = n(981631),
-    A = n(616922),
+    A = n(981631),
+    N = n(616922),
     C = n(388032),
     R = n(292199),
     P = n(610220);
 function w(e, t) {
-    return C.NW.formatToPlainString(C.t.h2yWWV, {
+    return C.intl.formatToPlainString(C.t.h2yWWV, {
         username: t.username,
         activity: e
     });
@@ -37,11 +37,13 @@ let D = (e, t, n) => {
     let { artist: r, media: i } = e,
         a = C.t['6iNxrq'],
         o = m.ZP.getName(t.guild_id, t.id, n);
-    return C.NW.formatToMarkdownString(a, {
-        artist: r,
-        userName: o,
-        media: i
-    }).replaceAll('*', '');
+    return C.intl
+        .formatToMarkdownString(a, {
+            artist: r,
+            userName: o,
+            media: i
+        })
+        .replaceAll('*', '');
 };
 function L(e) {
     let { activity: t } = e,
@@ -90,9 +92,9 @@ function x(e) {
         { channel: R, entry: x, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
         { largeImage: U } = (0, g.rv)({ entry: x }),
         { activity: G, currentEntry: B, artist: F, title: V, user: Z } = (0, O.pi)(x),
-        { primaryColor: H, secondaryColor: W } = (0, v.Z)(null == U ? void 0 : U.src),
-        Y = (0, y.Z)(N.ABu.SPOTIFY),
-        K = (0, o.e7)([u.Z, p.default], () => ((null == G ? void 0 : G.type) === N.IIU.LISTENING && null != Z ? (0, f.Z)(u.Z, p.default, Z, G) : void 0), [G, Z], s.Z),
+        { primaryColor: H, secondaryColor: Y } = (0, v.Z)(null == U ? void 0 : U.src),
+        W = (0, y.Z)(A.ABu.SPOTIFY),
+        K = (0, o.e7)([u.Z, p.default], () => ((null == G ? void 0 : G.type) === A.IIU.LISTENING && null != Z ? (0, f.Z)(u.Z, p.default, Z, G) : void 0), [G, Z], s.Z),
         z = i.useCallback(() => {
             var e;
             if (null == R || null == Z) return;
@@ -111,10 +113,10 @@ function x(e) {
                     R,
                     Z
                 ),
-                colors: [H, W],
+                colors: [H, Y],
                 badges: (0, b.jE)({ timestamp: n })
             });
-        }, [G, F, R, x, null == U ? void 0 : U.src, H, W, V, Z]);
+        }, [G, F, R, x, null == U ? void 0 : U.src, H, Y, V, Z]);
     if (null == G || null == B) return null;
     let q = F,
         Q = [];
@@ -127,7 +129,7 @@ function x(e) {
             }),
             (n = () => {
                 var e;
-                null != (e = null == Y ? void 0 : Y()) || (0, c.aG)(G);
+                null != (e = null == W ? void 0 : W()) || (0, c.aG)(G);
             });
         let e = (e) => {
             (0, c.d$)(G, Z.id, e);
@@ -142,7 +144,7 @@ function x(e) {
             (null == K ? void 0 : K.syncDisabled) === !1)
         ) {
             let e = () => {
-                (0, _.Z)(K, A.kG.USER_ACTIVITY_SYNC), M();
+                (0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), M();
             };
             Q.push(
                 (0, r.jsx)(
@@ -150,7 +152,7 @@ function x(e) {
                     {
                         onClick: e,
                         IconComponent: l.iOO,
-                        children: C.NW.string(C.t.eU3inJ)
+                        children: C.intl.string(C.t.eU3inJ)
                     },
                     'listen-along'
                 )
@@ -165,7 +167,7 @@ function x(e) {
             B.media.provider === a.p.SPOTIFY
                 ? (0, r.jsx)(T.Z, {
                       onClick: n,
-                      'aria-label': C.NW.string(C.t.rRffNz),
+                      'aria-label': C.intl.string(C.t.rRffNz),
                       Icon: h.Z
                   })
                 : null,

@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(591853),
     S = n(797342),
     T = n(981631),
-    N = n(388032);
-function A(e, t, n) {
+    A = n(388032);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,37 +47,41 @@ function C(e) {
                 })
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
 }
 let R = (e, t) =>
-        N.NW.formatToPlainString(N.t.tAwI1t, {
+        A.intl.formatToPlainString(A.t.tAwI1t, {
             username: t.username,
             activity: e.extra.activity_name
         }),
     P = (e, t, n) => {
-        let r = N.t['bES+y8'],
+        let r = A.t['bES+y8'],
             i = m.ZP.getName(t.guild_id, t.id, n),
             a = e.extra.activity_name;
-        return N.NW.formatToMarkdownString(r, {
-            gameName: a,
-            userName: i
-        }).replaceAll('*', '');
+        return A.intl
+            .formatToMarkdownString(r, {
+                gameName: a,
+                userName: i
+            })
+            .replaceAll('*', '');
     },
     w = (e) => {
         let { entry: t, channel: n, users: r, countOthers: i } = e,
-            a = N.t['7j/5mp'];
-        return N.NW.formatToMarkdownString(a, {
-            gameName: t.extra.activity_name,
-            user1: m.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[0]),
-            user2: m.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[1]),
-            countOthers: i
-        }).replaceAll('*', '');
+            a = A.t['7j/5mp'];
+        return A.intl
+            .formatToMarkdownString(a, {
+                gameName: t.extra.activity_name,
+                user1: m.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[0]),
+                user2: m.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[1]),
+                countOthers: i
+            })
+            .replaceAll('*', '');
     },
     D = (e) => {
-        let { channel: t, entry: n, onReaction: m, onVoiceChannelPreview: A, disableActivityProfileLinks: D } = e,
+        let { channel: t, entry: n, onReaction: m, onVoiceChannelPreview: N, disableActivityProfileLinks: D } = e,
             { largeImage: L } = (0, g.rv)({
                 entry: n,
                 showCoverImage: !1
@@ -86,10 +90,10 @@ let R = (e, t) =>
             { primaryColor: U, secondaryColor: G } = (0, v.Z)(null == L ? void 0 : L.src),
             B = (0, a.e7)([p.default], () => p.default.locale),
             { displayParticipants: F, participant1: V, participant2: Z, numOtherParticipants: H } = (0, E.Z)(n, 3),
-            W = () => {
+            Y = () => {
                 d.__(f._b.TEXT, _.Ie.NORMAL, { applicationId: n.extra.application_id });
             },
-            Y = i.useCallback(
+            W = i.useCallback(
                 (e) => {
                     if ((null == L ? void 0 : L.src) == null || null == t || null == x) return;
                     let r =
@@ -121,15 +125,15 @@ let R = (e, t) =>
             }),
             q = (0, r.jsx)(I.wG, {
                 channel: t,
-                userDescription: (0, b.kr)(n) ? N.t.vPg1JS : N.t.rPqqtr,
+                userDescription: (0, b.kr)(n) ? A.t.vPg1JS : A.t.rPqqtr,
                 title: n.extra.activity_name,
                 subtitle: M,
                 badges: z,
                 entry: n,
                 showCoverImage: !1,
-                onClickTitle: D ? void 0 : W,
-                onClickSubtitle: D ? void 0 : W,
-                onClickThumbnail: D ? void 0 : W
+                onClickTitle: D ? void 0 : Y,
+                onClickSubtitle: D ? void 0 : Y,
+                onClickThumbnail: D ? void 0 : Y
             }),
             Q = (0, l.Z)(k, T.xjy.JOIN) || (0, c.Z)(k),
             X = Q
@@ -144,9 +148,9 @@ let R = (e, t) =>
             $ = D
                 ? null
                 : (0, r.jsx)(I.Ll, {
-                      onClick: W,
+                      onClick: Y,
                       IconComponent: J,
-                      children: N.NW.string(N.t.GDWYR0)
+                      children: A.intl.string(A.t.GDWYR0)
                   }),
             ee = [Q && !D ? X : $].filter(h.lm);
         return (0, r.jsxs)(I.yR, {
@@ -155,10 +159,10 @@ let R = (e, t) =>
                 (0, r.jsx)(I.St, {
                     children: (0, r.jsx)(I.WT, {
                         onReaction: m,
-                        onVoiceChannelPreview: A,
+                        onVoiceChannelPreview: N,
                         user: x,
                         channel: t,
-                        generateReactionImage: Y,
+                        generateReactionImage: W,
                         reactionImageAltText: R(n, x),
                         entry: n,
                         buttons: ee

@@ -23,40 +23,42 @@ let I = (e, t, n) => {
         let r = O.t.LHF6Dw,
             i = u.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
             a = e.extra.media_title;
-        return O.NW.formatToMarkdownString(r, {
-            mediaTitle: a,
-            userName: i,
-            episodeDescription: e.extra.media_subtitle
-        }).replaceAll('*', '');
+        return O.intl
+            .formatToMarkdownString(r, {
+                mediaTitle: a,
+                userName: i,
+                episodeDescription: e.extra.media_subtitle
+            })
+            .replaceAll('*', '');
     },
     S = (e, t) =>
-        O.NW.formatToPlainString(O.t.kCbfbG, {
+        O.intl.formatToPlainString(O.t.kCbfbG, {
             username: t.username,
             activity: e.extra.media_title
         }),
     T = (e) => {
         let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: T } = e,
-            N = (0, a.e7)([l.default], () => l.default.getUser(n.author_id)),
-            { largeImage: A } = (0, f.rv)({ entry: n }),
-            { primaryColor: C, secondaryColor: R } = (0, m.Z)(null == A ? void 0 : A.src),
+            A = (0, a.e7)([l.default], () => l.default.getUser(n.author_id)),
+            { largeImage: N } = (0, f.rv)({ entry: n }),
+            { primaryColor: C, secondaryColor: R } = (0, m.Z)(null == N ? void 0 : N.src),
             P = (0, a.e7)([s.default], () => s.default.locale),
             w = (0, h.Z)(v.ABu.CRUNCHYROLL),
             D = (0, _.ap)(n.extra.media_assets_large_text),
             L = i.useCallback(
                 (e) => {
-                    if (null != N && (null == A ? void 0 : A.src) != null)
+                    if (null != A && (null == N ? void 0 : N.src) != null)
                         return (0, p.B)({
                             entry: n,
-                            mediaImageSrc: null == A ? void 0 : A.src,
-                            avatarSrc: N.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
-                            description: I(n, t, N),
+                            mediaImageSrc: null == N ? void 0 : N.src,
+                            avatarSrc: A.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
+                            description: I(n, t, A),
                             timestamp: (0, _.yh)(n, P),
                             episodeDescription: D,
                             colors: [C, R],
                             channelId: e
                         });
                 },
-                [t, n, D, P, null == A ? void 0 : A.src, C, R, N]
+                [t, n, D, P, null == N ? void 0 : N.src, C, R, A]
             ),
             x = () => {
                 if (null == n.extra.url) return;
@@ -69,7 +71,7 @@ let I = (e, t, n) => {
                         trusted: !1
                     });
             };
-        return null == N
+        return null == A
             ? null
             : (0, r.jsxs)(b.yR, {
                   children: [
@@ -82,7 +84,7 @@ let I = (e, t, n) => {
                           headerIcons: (0, r.jsx)(y.Z, {
                               onClick: w,
                               Icon: o.omf,
-                              'aria-label': O.NW.string(O.t.jdJYX1)
+                              'aria-label': O.intl.string(O.t.jdJYX1)
                           }),
                           badges: (0, r.jsx)(E.Gk, {
                               location: E.Gt.POPOUT,
@@ -95,10 +97,10 @@ let I = (e, t, n) => {
                           children: (0, r.jsx)(b.WT, {
                               onReaction: u,
                               onVoiceChannelPreview: T,
-                              user: N,
+                              user: A,
                               channel: t,
                               generateReactionImage: L,
-                              reactionImageAltText: S(n, N),
+                              reactionImageAltText: S(n, A),
                               entry: n
                           })
                       })
