@@ -1,21 +1,19 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => l });
 var r = n(192379),
     i = n(230711),
-    a = n(906732),
-    o = n(18438),
-    s = n(981631),
-    l = n(526761);
-function c() {
-    let { guild: e, scrollPosition: t, analyticsLocation: n, analyticsLocations: c, openWithoutBackstack: u } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { analyticsLocations: d } = (0, a.ZP)();
+    a = n(18438),
+    o = n(981631),
+    s = n(526761);
+function l() {
+    let { guild: e, scrollPosition: t, analyticsLocation: n, analyticsLocations: l, openWithoutBackstack: c } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (0, r.useCallback)(() => {
-        null != e && (0, o.Fq)(e, null != c ? c : d),
-            i.Z.open(s.oAB.PROFILE_CUSTOMIZATION, null != e ? l.NB.GUILD : l.NB.USER_PROFILE, {
+        null != e && (0, a.Fq)(e),
+            i.Z.open(o.oAB.PROFILE_CUSTOMIZATION, null != e ? s.NB.GUILD : s.NB.USER_PROFILE, {
                 analyticsLocation: n,
-                analyticsLocations: c,
-                openWithoutBackstack: u,
+                analyticsLocations: l,
+                openWithoutBackstack: c,
                 scrollPosition: t
             });
-    }, [e, t, n, c, u, d]);
+    }, [e, t, n, l, c]);
 }
 n(778825), n(663389);

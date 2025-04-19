@@ -18,9 +18,8 @@ n.d(t, {
 }),
     n(415506);
 var r = n(544891),
-    i = n(570140);
-n(37234);
-var a = n(981631);
+    i = n(570140),
+    a = n(981631);
 async function o(e, t) {
     let { nick: n, avatar: o, avatarDescription: s, avatarId: l, avatarDecoration: c } = t;
     if (null == e) throw Error('Need guildId');
@@ -69,11 +68,10 @@ function s(e) {
         guild: e
     });
 }
-function l(e, t) {
+function l(e) {
     i.Z.dispatch({
         type: 'GUILD_IDENTITY_SETTINGS_INIT',
-        guild: e,
-        analyticsLocations: t
+        guild: e
     });
 }
 function c() {

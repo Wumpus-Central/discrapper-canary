@@ -24,7 +24,7 @@ var r = n(200651),
     j = n(110924),
     N = n(200876),
     _ = n(556019),
-    v = n(375727),
+    v = n(59769),
     O = n(730089),
     C = n(372444),
     y = n(889564),
@@ -450,11 +450,7 @@ let F = d().throttle(h.OQ, 1000),
                                     ]
                                 }),
                                 $
-                                    ? (0, r.jsx)(g.zxk, {
-                                          onClick: v.i,
-                                          size: g.zxk.Sizes.MEDIUM,
-                                          children: M.NW.string(M.t.DU0dy8)
-                                      })
+                                    ? (0, r.jsx)(v.b, {})
                                     : (0, r.jsxs)(g.zxk, {
                                           tabIndex: -1,
                                           size: g.zxk.Sizes.MEDIUM,
