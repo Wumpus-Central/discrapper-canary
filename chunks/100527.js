@@ -203,6 +203,7 @@ var r = (function (e) {
         (e.STREAM_CONTEXT_MENU = 'stream context menu'),
         (e.GROUP_DM_CONTEXT_MENU = 'group dm context menu'),
         (e.GROUP_DM_EDIT_MODAL = 'group dm edit modal'),
+        (e.NEW_GROUP_DM_INVITE_MODAL = 'new group dm invite modal'),
         (e.GROUP_DM_ICON_EDITOR = 'group dm icon editor'),
         (e.GROUP_DM_SYSTEM_MESSAGE_NAME = 'group dm system message name'),
         (e.GROUP_DM_SYSTEM_MESSAGE_ICON = 'group dm system message icon'),

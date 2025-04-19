@@ -1,22 +1,28 @@
-n.d(t, { default: () => O }), n(388685);
+n.d(t, {
+    B: () => O,
+    default: () => E
+}),
+    n(388685);
 var r = n(200651),
-    l = n(192379),
-    o = n(442837),
-    a = n(481060),
-    i = n(493683),
-    c = n(493773),
-    s = n(100527),
-    u = n(906732),
-    d = n(43267),
-    p = n(933557),
-    h = n(313201),
-    m = n(592125),
-    f = n(626135),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(442837),
+    s = n(481060),
+    c = n(493683),
+    u = n(493773),
+    d = n(100527),
+    p = n(906732),
+    h = n(43267),
+    f = n(933557),
+    m = n(313201),
+    g = n(592125),
+    b = n(626135),
     _ = n(140106),
-    b = n(981631),
-    y = n(388032),
-    v = n(285580);
-function g(e) {
+    y = n(981631),
+    C = n(388032),
+    x = n(285580);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,161 +65,162 @@ function j(e, t) {
         e
     );
 }
-function x(e) {
-    let { channel: t, previewIcon: n, onIconChange: l, onIconRemove: o, analyticsLocations: i } = e,
-        c = void 0 !== n ? n : null != t.icon ? (0, d.x)(t, 120) : null,
-        { analyticsLocations: p } = (0, u.ZP)(i, s.Z.GROUP_DM_ICON_EDITOR);
+function O(e) {
+    let { channel: t, previewIcon: n, onIconChange: i, onIconRemove: l, analyticsLocations: a, petite: c = !1, className: u, allowRemovingIcon: f = !0 } = e,
+        m = void 0 !== n ? n : (null == t ? void 0 : t.icon) != null ? (0, h.x)(t, 120) : null,
+        { analyticsLocations: g } = (0, p.ZP)(a, d.Z.GROUP_DM_ICON_EDITOR),
+        b = c ? 32 : 64;
     return (0, r.jsxs)('div', {
-        className: v.iconSection,
+        className: o()(x.iconSection, u),
         children: [
-            (0, r.jsxs)(a.P3F, {
-                className: v.iconContainer,
-                'aria-label': y.NW.string(y.t['0qPSMT']),
-                onClick: () => (0, _.ND)(l, p),
+            (0, r.jsxs)(s.P3F, {
+                className: o()(x.iconContainer, { [x.petite]: c }),
+                'aria-label': C.NW.string(C.t['0qPSMT']),
+                onClick: () => (0, _.ND)(i, g),
                 children: [
-                    null != c
+                    null != m
                         ? (0, r.jsx)('img', {
-                              src: c,
+                              src: m,
                               alt: '',
-                              className: v.iconImage
+                              className: x.iconImage
                           })
                         : (0, r.jsx)('div', {
-                              className: v.iconPlaceholder,
-                              children: (0, r.jsx)(a.BFJ, {
+                              className: x.iconPlaceholder,
+                              children: (0, r.jsx)(s.BFJ, {
                                   size: 'custom',
-                                  width: 64,
-                                  height: 64,
+                                  width: b,
+                                  height: b,
                                   color: 'currentColor'
                               })
                           }),
                     (0, r.jsx)('div', {
-                        className: v.pencilIconWrapper,
-                        children: (0, r.jsx)(a.vdY, {
+                        className: x.pencilIconWrapper,
+                        children: (0, r.jsx)(s.vdY, {
                             color: 'currentColor',
-                            size: 'refresh_sm'
+                            size: c ? 'xs' : 'refresh_sm'
                         })
                     })
                 ]
             }),
-            null != c
-                ? (0, r.jsx)(a.P3F, {
-                      onClick: o,
-                      'aria-label': y.NW.string(y.t['uY+Nk5']),
+            null != m && f
+                ? (0, r.jsx)(s.P3F, {
+                      onClick: l,
+                      'aria-label': C.NW.string(C.t['uY+Nk5']),
                       style: { cursor: 'pointer' },
-                      children: (0, r.jsx)(a.Text, {
+                      children: (0, r.jsx)(s.Text, {
                           variant: 'text-sm/medium',
                           color: 'text-danger',
-                          children: y.NW.string(y.t['uY+Nk5'])
+                          children: C.NW.string(C.t['uY+Nk5'])
                       })
                   })
                 : null
         ]
     });
 }
-let O = function (e) {
-    let { channelId: t, onClose: n, transitionState: d, setHasPendingChanges: O, closeOrShowDiscardChangesAlert: N, location: P } = e,
-        D = (0, h.Dt)(),
-        w = (0, o.e7)([m.Z], () => m.Z.getChannel(t)),
-        C = null == w ? void 0 : w.name,
-        I = (0, p.cO)(w),
-        [k, W] = l.useState(null != C ? C : ''),
-        [E, T] = l.useState(void 0),
-        R = void 0 !== E,
-        { analyticsLocations: S } = (0, u.ZP)(P, s.Z.GROUP_DM_EDIT_MODAL),
-        Z = {
+let E = function (e) {
+    let { channelId: t, onClose: n, transitionState: l, setHasPendingChanges: o, closeOrShowDiscardChangesAlert: h, location: E } = e,
+        N = (0, m.Dt)(),
+        I = (0, a.e7)([g.Z], () => g.Z.getChannel(t)),
+        P = null == I ? void 0 : I.name,
+        S = (0, f.cO)(I),
+        [Z, T] = i.useState(null != P ? P : ''),
+        [A, w] = i.useState(void 0),
+        R = void 0 !== A,
+        { analyticsLocations: k } = (0, p.ZP)(E, d.Z.GROUP_DM_EDIT_MODAL),
+        M = {
             channel_id: t,
-            channel_type: null == w ? void 0 : w.type,
-            location: P,
-            location_stack: S,
-            old_name_set: '' !== C,
-            old_icon_set: (null == w ? void 0 : w.icon) != null
+            channel_type: null == I ? void 0 : I.type,
+            location: E,
+            location_stack: k,
+            old_name_set: '' !== P,
+            old_icon_set: (null == I ? void 0 : I.icon) != null
         };
-    return (l.useEffect(() => {
-        O(k !== C || R);
-    }, [k, C, R, O]),
-    (0, c.ZP)(
+    return (i.useEffect(() => {
+        o(Z !== P || R);
+    }, [Z, P, R, o]),
+    (0, u.ZP)(
         () => (
-            f.default.track(b.rMx.GDM_EDIT_INTERACTED, j(g({}, Z), { action: 'opened' })),
+            b.default.track(y.rMx.GDM_EDIT_INTERACTED, j(v({}, M), { action: 'opened' })),
             () => {
-                f.default.track(b.rMx.GDM_EDIT_INTERACTED, j(g({}, Z), { action: 'dismissed' }));
+                b.default.track(y.rMx.GDM_EDIT_INTERACTED, j(v({}, M), { action: 'dismissed' }));
             }
         )
     ),
-    null == w)
+    null == I)
         ? null
-        : (0, r.jsx)(u.Gt, {
-              value: S,
+        : (0, r.jsx)(p.Gt, {
+              value: k,
               children: (0, r.jsx)('form', {
                   onSubmit: (e) => {
                       e.preventDefault();
-                      let r = k !== C,
-                          l = void 0 !== E;
-                      f.default.track(
-                          b.rMx.GDM_EDIT_INTERACTED,
-                          j(g({}, Z), {
+                      let r = Z !== P,
+                          i = void 0 !== A;
+                      b.default.track(
+                          y.rMx.GDM_EDIT_INTERACTED,
+                          j(v({}, M), {
                               action: 'saved',
-                              new_name_set: '' !== k,
-                              new_icon_set: (l ? E : null == w ? void 0 : w.icon) != null,
+                              new_name_set: '' !== Z,
+                              new_icon_set: (i ? A : null == I ? void 0 : I.icon) != null,
                               name_changed: r,
-                              icon_changed: l
+                              icon_changed: i
                           })
                       ),
-                          r && i.Z.setName(t, k),
-                          l && i.Z.setIcon(t, E, P).catch(_.es),
+                          r && c.Z.setName(t, Z),
+                          i && c.Z.setIcon(t, A, E).catch(_.es),
                           n();
                   },
-                  children: (0, r.jsxs)(a.Y0X, {
-                      transitionState: d,
-                      'aria-labelledby': D,
+                  children: (0, r.jsxs)(s.Y0X, {
+                      transitionState: l,
+                      'aria-labelledby': N,
                       children: [
-                          (0, r.jsxs)(a.xBx, {
+                          (0, r.jsxs)(s.xBx, {
                               separator: !0,
-                              className: v.header,
+                              className: x.header,
                               children: [
-                                  (0, r.jsx)(a.X6q, {
-                                      id: D,
+                                  (0, r.jsx)(s.X6q, {
+                                      id: N,
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
-                                      children: y.NW.string(y.t['5Q9+/P'])
+                                      children: C.NW.string(C.t['5Q9+/P'])
                                   }),
-                                  (0, r.jsx)(a.olH, {
-                                      onClick: N,
-                                      className: v.closeButtonWrapper
+                                  (0, r.jsx)(s.olH, {
+                                      onClick: h,
+                                      className: x.closeButtonWrapper
                                   })
                               ]
                           }),
-                          (0, r.jsxs)(a.hzk, {
-                              className: v.modalContent,
+                          (0, r.jsxs)(s.hzk, {
+                              className: x.modalContent,
                               children: [
-                                  (0, r.jsx)(x, {
-                                      channel: w,
-                                      previewIcon: E,
-                                      onIconChange: (e) => T(e.imageUri),
-                                      onIconRemove: () => T(null),
-                                      analyticsLocations: S
+                                  (0, r.jsx)(O, {
+                                      channel: I,
+                                      previewIcon: A,
+                                      onIconChange: (e) => w(e.imageUri),
+                                      onIconRemove: () => w(null),
+                                      analyticsLocations: k
                                   }),
-                                  (0, r.jsx)(a.oil, {
-                                      'aria-label': y.NW.string(y.t.GEGW3N),
-                                      placeholder: null != I ? I : '',
-                                      value: k,
-                                      onChange: W,
+                                  (0, r.jsx)(s.oil, {
+                                      'aria-label': C.NW.string(C.t.GEGW3N),
+                                      placeholder: null != S ? S : '',
+                                      value: Z,
+                                      onChange: T,
                                       autoFocus: !0
                                   })
                               ]
                           }),
-                          (0, r.jsxs)(a.mzw, {
+                          (0, r.jsxs)(s.mzw, {
                               children: [
-                                  (0, r.jsx)(a.zxk, {
+                                  (0, r.jsx)(s.zxk, {
                                       type: 'submit',
-                                      disabled: k === C && !R,
-                                      children: y.NW.string(y.t.R3BPHx)
+                                      disabled: Z === P && !R,
+                                      children: C.NW.string(C.t.R3BPHx)
                                   }),
-                                  (0, r.jsx)(a.zxk, {
-                                      onClick: N,
-                                      look: a.zxk.Looks.LINK,
-                                      color: a.zxk.Colors.PRIMARY,
-                                      innerClassName: v.cancelButton,
-                                      children: y.NW.string(y.t['ETE/oK'])
+                                  (0, r.jsx)(s.zxk, {
+                                      onClick: h,
+                                      look: s.zxk.Looks.LINK,
+                                      color: s.zxk.Colors.PRIMARY,
+                                      innerClassName: x.cancelButton,
+                                      children: C.NW.string(C.t['ETE/oK'])
                                   })
                               ]
                           })
