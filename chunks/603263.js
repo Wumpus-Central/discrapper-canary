@@ -1,14 +1,14 @@
 n.d(t, {
     Nz: () => p,
     QQ: () => b,
-    QY: () => E,
+    QY: () => v,
     Vj: () => d,
     j8: () => x,
     jn: () => f,
     m$: () => m,
     oO: () => h,
     qt: () => y,
-    u$: () => v,
+    u$: () => E,
     yC: () => u
 });
 var r = n(570140),
@@ -150,15 +150,14 @@ function x(e, t) {
         });
 }
 function y(e) {
-    i.ZP.trackWithMetadata(o.rMx.SEARCH_CLOSED, { search_id: l.Z.getAnalyticsId(e) }),
-        r.Z.wait(() =>
-            r.Z.dispatch({
-                type: 'SEARCH_EDITOR_STATE_CLEAR',
-                searchId: e
-            })
-        );
+    r.Z.wait(() =>
+        r.Z.dispatch({
+            type: 'SEARCH_EDITOR_STATE_CLEAR',
+            searchId: e
+        })
+    );
 }
-function v(e, t, n) {
+function E(e, t, n) {
     null != e &&
         r.Z.dispatch({
             type: 'SEARCH_AUTOCOMPLETE_QUERY_UPDATE',
@@ -167,7 +166,7 @@ function v(e, t, n) {
             cursorScope: n
         });
 }
-function E(e, t) {
+function v(e, t) {
     r.Z.dispatch({
         type: 'SEARCH_SET_SHOW_BLOCKED_RESULTS',
         searchId: e,

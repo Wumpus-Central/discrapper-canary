@@ -1587,6 +1587,7 @@ var N =
     (r.SEARCH_OPENED = 'search_opened'),
     (r.SEARCH_STARTED = 'search_started'),
     (r.SEARCH_CLOSED = 'search_closed'),
+    (r.SEARCH_INPUT_CLEARED = 'search_input_cleared'),
     (r.SEARCH_V2_OPENED = 'search_v2_opened'),
     (r.SEARCH_V2_CLOSED = 'search_v2_closed'),
     (r.SEARCH_V2_FILTER_ADD = 'search_v2_filter_add'),
