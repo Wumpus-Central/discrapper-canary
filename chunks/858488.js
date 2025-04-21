@@ -1,29 +1,29 @@
-n.d(t, { Z: () => u }), n(388685);
+n.d(t, { Z: () => s }), n(388685);
 var l = n(200651);
 n(192379);
-var r = n(442837),
-    i = n(481060),
+var i = n(442837),
+    r = n(481060),
     o = n(699516),
     a = n(388032);
-function u(e) {
-    let { user: t, onAction: u, appContext: c } = e,
-        s = t.id,
-        [d, f] = (0, r.Wu)(
+function s(e) {
+    let { user: t, onAction: s, appContext: u } = e,
+        d = t.id,
+        [c, f] = (0, i.Wu)(
             [o.Z],
             () => {
                 var e;
-                return [o.Z.isFriend(s), null != (e = o.Z.getNickname(s)) ? e : null];
+                return [o.Z.isFriend(d), null != (e = o.Z.getNickname(d)) ? e : null];
             },
-            [s]
+            [d]
         );
-    if (!d) return null;
+    if (!c) return null;
     let g = null == f ? a.intl.string(a.t.BGYkaG) : a.intl.string(a.t['8pOYUF']);
-    return (0, l.jsx)(i.sNh, {
+    return (0, l.jsx)(r.sNh, {
         id: null == f ? 'add-friend-nickname' : 'edit-friend-nickname',
         label: g,
         action: () => {
-            null == u || u(),
-                (0, i.ZDy)(
+            null == s || s(),
+                (0, r.ZDy)(
                     async () => {
                         let { default: e } = await n.e('25070').then(n.bind(n, 670794));
                         return (n) =>
@@ -62,7 +62,7 @@ function u(e) {
                                 )
                             );
                     },
-                    { contextKey: null != c ? (0, i.VnL)(c) : void 0 }
+                    { contextKey: null != u ? (0, r.VnL)(u) : void 0 }
                 );
         }
     });

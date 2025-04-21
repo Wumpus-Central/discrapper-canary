@@ -23,7 +23,7 @@ function u(e) {
         : {};
 }
 function d(e) {
-    return e.hasFeature(c.oNc.CLAN) || e.hasFeature(c.oNc.GUILD_TAGS);
+    return e.hasFeature(c.oNc.GUILD_TAGS);
 }
 n(388032);
 let f = {

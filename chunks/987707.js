@@ -19,10 +19,10 @@ let I = [T.Plq.KICK_MEMBERS, T.Plq.BAN_MEMBERS, T.Plq.ADMINISTRATOR, T.Plq.MANAG
     g = [],
     f = [],
     S = [],
-    U = [],
     h = [],
-    L = [],
-    p = !0,
+    U = [],
+    p = [],
+    L = !0,
     D = !1,
     C = !1,
     M = !0,
@@ -118,16 +118,16 @@ class F extends (r = E.ZP.Store) {
         return S;
     }
     get automodRules() {
-        return U;
-    }
-    get threads() {
         return h;
     }
+    get threads() {
+        return U;
+    }
     get applicationCommands() {
-        return L;
+        return p;
     }
     get isInitialLoading() {
-        return p;
+        return L;
     }
     get isLoading() {
         return D;
@@ -175,7 +175,7 @@ let z = new F(u.Z, {
     },
     AUDIT_LOG_FETCH_SUCCESS: function (e) {
         var t;
-        (j = 0), (p = !1), (D = !1), (M = !0), (m = !1), (N = y(e.logs)), (R = e.integrations), (f = e.webhooks), (S = e.guildScheduledEvents), (U = null != (t = e.automodRules) ? t : []), (h = e.threads), (L = e.applicationCommands), e.logs.length < T.Rg9 && (M = !1);
+        (j = 0), (L = !1), (D = !1), (M = !0), (m = !1), (N = y(e.logs)), (R = e.integrations), (f = e.webhooks), (S = e.guildScheduledEvents), (h = null != (t = e.automodRules) ? t : []), (U = e.threads), (p = e.applicationCommands), e.logs.length < T.Rg9 && (M = !1);
     },
     AUDIT_LOG_FETCH_FAIL: function () {
         (D = !1), (m = !0), (N = []);
@@ -186,7 +186,7 @@ let z = new F(u.Z, {
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function (e) {
         let { logs: t, integrations: n, webhooks: r, guildScheduledEvents: l, automodRules: s, threads: i, applicationCommands: a } = e;
-        if (((C = !1), (R = n), (f = r), (S = l), (U = s), (h = i), (L = a), (0 === t.length || t.length < T.Rg9) && (M = !1), t.length > 0)) {
+        if (((C = !1), (R = n), (f = r), (S = l), (h = s), (U = i), (p = a), (0 === t.length || t.length < T.Rg9) && (M = !1), t.length > 0)) {
             let e = y(t);
             N = [...N, ...e];
         }
@@ -212,6 +212,6 @@ let z = new F(u.Z, {
         return (O = t), (P = null), G({ section: n });
     },
     GUILD_SETTINGS_CLOSE: function () {
-        (N = []), (g = []), (b = T.rsA.ALL), (v = null), (P = null), (x = {}), (j = 0), (p = !0), (R = []), (f = []), (S = []), (U = []), (h = []);
+        (N = []), (g = []), (b = T.rsA.ALL), (v = null), (P = null), (x = {}), (j = 0), (L = !0), (R = []), (f = []), (S = []), (h = []), (U = []);
     }
 });

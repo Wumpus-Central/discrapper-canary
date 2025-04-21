@@ -84,29 +84,29 @@ function h(e, t) {
                 y = Math.max(0, Math.min(Math.floor((b - s) / (o + s)), c, t.length)),
                 O = Math.min((b - s) / y - s, r),
                 I = Math.max(0, y - p.length),
-                _ = p.slice(0, y),
-                j = m.slice(0, I),
-                Z = Array(I);
+                Z = p.slice(0, y),
+                _ = m.slice(0, I),
+                j = Array(I);
             if (I > 0) {
                 let e = [];
-                for (let t of j) {
+                for (let t of _) {
                     let n = S.current[t.id];
-                    null != n && n < I ? (Z[n] = t) : e.push(t);
+                    null != n && n < I ? (j[n] = t) : e.push(t);
                 }
-                for (let t = 0; t < Z.length; t++) {
-                    if (null != Z[t]) continue;
+                for (let t = 0; t < j.length; t++) {
+                    if (null != j[t]) continue;
                     let n = e.shift();
                     if (null == n) break;
-                    Z[t] = n;
+                    j[t] = n;
                 }
             }
-            let x = Z.filter(u.lm);
+            let x = j.filter(u.lm);
             S.current = (0, i.keyBy)((0, i.range)(x.length), (e) => x[e].id);
-            let w = [..._, ...x];
+            let P = [...Z, ...x];
             return (
-                null != v && (f && w.length >= y ? (w[Math.max(0, w.length - 1)] = v) : w.push(v)),
+                null != v && (f && P.length >= y ? (P[Math.max(0, P.length - 1)] = v) : P.push(v)),
                 {
-                    visibleParticipants: w,
+                    visibleParticipants: P,
                     participantTileWidth: O
                 }
             );

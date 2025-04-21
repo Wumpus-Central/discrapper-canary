@@ -33,7 +33,7 @@ let p = i.memo(function (e) {
             streamKey: b,
             paused: g
         }),
-        _ = i.useCallback(() => {
+        Z = i.useCallback(() => {
             O(!1), I();
         }, [I]);
     return (0, l.jsxs)('div', {
@@ -44,7 +44,7 @@ let p = i.memo(function (e) {
                     className: o()(f.video, (0, d.l)(f, 'video', p), { [f.mirror]: E }, m),
                     streamId: t,
                     onResize: n,
-                    onReady: _,
+                    onReady: Z,
                     paused: g
                 }),
             g

@@ -14,14 +14,14 @@ var n = t(200651),
     _ = t(388032),
     m = t(192639),
     S = t(129512),
-    h = t(330065);
-let g = [16, 16, 14, 14, 12, 10, 8],
+    g = t(330065);
+let h = [16, 16, 14, 14, 12, 10, 8],
     p = function (e) {
         var i, t;
-        let { guild: r, disabled: p, small: v, loading: A = !1, description: T, memberCount: N, presenceCount: C, className: P } = e,
+        let { guild: r, disabled: p, small: v, loading: T = !1, description: A, memberCount: N, presenceCount: C, className: P } = e,
             y = (0, o.ZP)(),
             [O, D] = l.useState(!1);
-        if (null == r || A)
+        if (null == r || T)
             return (0, n.jsx)('div', {
                 className: a()(P, m.card, m.cardPlaceholder, {
                     [m.cardSmall]: v,
@@ -37,7 +37,7 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                           splash: r.discoverySplash,
                           size: 240 * (0, E.x_)()
                       }),
-            R = (0, s.wj)(y) ? S : h,
+            R = (0, s.wj)(y) ? S : g,
             j =
                 null !=
                 (i = f.ZP.getGuildIconURL({
@@ -47,7 +47,7 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                 }))
                     ? i
                     : void 0,
-            F = null != r.description ? r.description : T,
+            F = null != r.description ? r.description : A,
             V = null != N ? N : null == r ? void 0 : r.memberCount,
             x = null != C ? C : null == r ? void 0 : r.presenceCount,
             G = null;
@@ -63,7 +63,7 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                 className: m.defaultIcon,
                 children: (0, n.jsx)(u.Text, {
                     className: m.acronym,
-                    style: { fontSize: null != (t = g[e.length]) ? t : g[g.length - 1] },
+                    style: { fontSize: null != (t = h[e.length]) ? t : h[h.length - 1] },
                     variant: 'text-sm/normal',
                     children: e
                 })

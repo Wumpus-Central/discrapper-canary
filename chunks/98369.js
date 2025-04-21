@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733);
+n.d(t, { Z: () => j }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733);
 var r,
     l,
     i,
@@ -55,10 +55,10 @@ function I(e) {
         l = O();
     return n || r || l;
 }
-function _() {
+function Z() {
     h.clear(), v.clear(), (S = !1);
 }
-class j extends (r = a.ZP.Store) {
+class _ extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, E.Z, d.Z, f.Z);
     }
@@ -73,20 +73,20 @@ class j extends (r = a.ZP.Store) {
     }
 }
 (i = 'SecureFramesVerifiedStore'),
-    (l = 'displayName') in j
-        ? Object.defineProperty(j, l, {
+    (l = 'displayName') in _
+        ? Object.defineProperty(_, l, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (j[l] = i);
-let Z = new j(s.Z, {
-    CONNECTION_OPEN: _,
+        : (_[l] = i);
+let j = new _(s.Z, {
+    CONNECTION_OPEN: Z,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
         if (t === b) return !1;
-        (b = t), _();
+        (b = t), Z();
     },
     RTC_CONNECTION_STATE: function (e) {
         let { streamKey: t, state: n, context: r } = e;
@@ -96,7 +96,7 @@ let Z = new j(s.Z, {
                 if (null == t) return !1;
                 return v.delete(t), O();
             case o.Yn.DEFAULT:
-                _();
+                Z();
         }
     },
     RTC_CONNECTION_ROSTER_MAP_UPDATE: function (e) {

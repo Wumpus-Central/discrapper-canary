@@ -16,7 +16,7 @@ async function c(e, t, n) {
     try {
         null != e &&
             !0 === t &&
-            (0, a.hx)({
+            (0, a.h)({
                 guildId: e,
                 userId: s.default.getId(),
                 source: n

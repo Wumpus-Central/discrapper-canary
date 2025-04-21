@@ -19,7 +19,7 @@ var r = n(200651),
     g = n(327999),
     f = n(388032),
     S = n(615133);
-function U(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function U(e) {
     }
     return e;
 }
-function h(e, t) {
+function U(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,13 +62,13 @@ function h(e, t) {
         e
     );
 }
-let L = l.memo(function () {
+let p = l.memo(function () {
         return (0, r.jsx)(o.ua7, {
             text: f.intl.string(f.t['vu/MiY']),
             children: (e) =>
                 (0, r.jsx)(
                     o.Text,
-                    h(U({}, e), {
+                    U(h({}, e), {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
                         className: S.unknownInvite,
@@ -77,13 +77,13 @@ let L = l.memo(function () {
                 )
         });
     }),
-    p = l.memo(function () {
+    L = l.memo(function () {
         return (0, r.jsx)(o.ua7, {
             text: f.intl.string(f.t.OrCp9v),
             children: (e) =>
                 (0, r.jsx)(
                     o.Text,
-                    h(U({}, e), {
+                    U(h({}, e), {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
                         className: S.unknownInvite,
@@ -295,11 +295,11 @@ function v(e) {
         case null == d:
         case null == n:
         case n === g.gq.UNSPECIFIED:
-            return (0, r.jsx)(L, U({}, _));
+            return (0, r.jsx)(p, h({}, _));
         case null != s && A:
             return (0, r.jsxs)(
                 o.P3F,
-                h(U({ className: S.inviteContainer }, _), {
+                U(h({ className: S.inviteContainer }, _), {
                     'aria-label': (0, g.MS)(s),
                     role: 'button',
                     tabIndex: 0,
@@ -319,7 +319,7 @@ function v(e) {
                 children: [
                     (0, r.jsxs)(
                         o.P3F,
-                        h(U({ className: S.inviteContainer }, _), {
+                        U(h({ className: S.inviteContainer }, _), {
                             'aria-label': null == d ? void 0 : d.getJoinTypeLabel(null != t ? t : void 0),
                             role: 'button',
                             tabIndex: 0,
@@ -344,7 +344,7 @@ function v(e) {
                 ]
             });
         default:
-            return (0, r.jsx)(L, U({}, _));
+            return (0, r.jsx)(p, h({}, _));
     }
 }
 let b = l.memo(function (e) {
@@ -357,12 +357,12 @@ let b = l.memo(function (e) {
         null != d && (E.Z.requestMembersById(i, [d]), (0, _.Z)(d, void 0, { guildId: i }));
     }, [i, d]);
     let O = (0, a.e7)([A.Z], () => A.Z.hideInstantInvites, []);
-    if (null == c) return (0, r.jsx)(L, {});
+    if (null == c) return (0, r.jsx)(p, {});
     let { sourceInviteCode: R, joinSourceType: f, integrationType: S } = c,
-        h = null != f ? D[f] : null,
-        C = null != (n = null == h ? void 0 : h.hasTooltip) && n;
+        U = null != f ? D[f] : null,
+        C = null != (n = null == U ? void 0 : U.hasTooltip) && n;
     return (f === g.gq.INVITE || f === g.gq.VANITY_URL || (f === g.gq.MANUAL_MEMBER_VERIFICATION && null != R)) && O
-        ? (0, r.jsx)(p, {})
+        ? (0, r.jsx)(L, {})
         : (0, r.jsx)(M, {
               hasTooltip: C && !o,
               inviterUser: null != I ? I : null,
@@ -371,7 +371,7 @@ let b = l.memo(function (e) {
               children: (e) =>
                   (0, r.jsx)(
                       v,
-                      U(
+                      h(
                           {
                               sourceInviteCode: R,
                               joinSourceType: f,

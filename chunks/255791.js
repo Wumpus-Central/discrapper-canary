@@ -20,7 +20,7 @@ class f extends (r = a.ZP.Store) {
         if (null == e) return !1;
         let n = null != (t = c.Z.getMemberCount(e.id)) ? t : 0,
             r = d.Z.can(p.Plq.ADMINISTRATOR, e);
-        return !e.hasFeature(p.oNc.CLAN) && !h[p.vID.MAX_MEMBER_COUNT].has(e.id) && r && e.maxMembers > 0 && e.maxMembers - n <= 10000;
+        return !h[p.vID.MAX_MEMBER_COUNT].has(e.id) && r && e.maxMembers > 0 && e.maxMembers - n <= 10000;
     }
 }
 (l = 'MaxMemberCountChannelNoticeStore'),

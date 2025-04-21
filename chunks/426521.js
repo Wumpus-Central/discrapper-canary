@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(709054),
     x = n(591759),
     y = n(833592),
-    v = n(497089),
-    E = n(178480),
+    E = n(497089),
+    v = n(178480),
     O = n(418316),
     j = n(382865),
     C = n(526146),
@@ -103,7 +103,7 @@ let M = i.memo(function (e) {
             { analyticsLocations: c } = (0, s.ZP)(),
             p = (0, C.I)(l, o),
             f = i.useCallback(async () => {
-                if ((p || (0, y.wt)(l), null != l.item_enum && l.item_enum === v.AM.FIND_FRIENDS))
+                if ((p || (0, y.wt)(l), null != l.item_enum && l.item_enum === E.AM.FIND_FRIENDS))
                     return void (0, a.ZDy)(async () => {
                         let { default: e } = await n.e('6074').then(n.bind(n, 443189));
                         return (t) =>
@@ -155,7 +155,7 @@ let M = i.memo(function (e) {
                         } else await (0, u.Z)(r);
                     }
                     _.default.track(T.rMx.NOTIFICATION_CENTER_ACTION, {
-                        action_type: v.ud.CLICKED,
+                        action_type: E.ud.CLICKED,
                         notification_center_id: l.id,
                         item_type: l.type,
                         acked: p
@@ -163,9 +163,9 @@ let M = i.memo(function (e) {
                 }
             }, [l, p, c]),
             h = null;
-        l.type === v.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user
+        l.type === E.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user
             ? (h = (0, r.jsx)(I.Z, { userId: l.other_user.id }))
-            : l.type === v.O7.INCOMING_GAME_FRIEND_REQUESTS &&
+            : l.type === E.O7.INCOMING_GAME_FRIEND_REQUESTS &&
               null != l.other_user &&
               (h = (0, r.jsx)(I.Z, {
                   userId: l.other_user.id,
@@ -201,7 +201,7 @@ let M = i.memo(function (e) {
                                 (0, r.jsx)(a.Text, {
                                     variant: 'text-xs/medium',
                                     color: p ? 'text-muted' : 'header-secondary',
-                                    children: (0, E.a3)(b.default.extractTimestamp(l.id))
+                                    children: (0, v.a3)(b.default.extractTimestamp(l.id))
                                 }),
                                 h
                             ]

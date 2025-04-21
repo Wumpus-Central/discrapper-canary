@@ -2,8 +2,8 @@ n.d(t, { default: () => b });
 var r = n(200651),
     l = n(192379),
     a = n(481060),
-    i = n(211266),
-    o = n(332664),
+    o = n(211266),
+    i = n(332664),
     s = n(626135),
     c = n(867003),
     u = n(987562),
@@ -11,16 +11,16 @@ var r = n(200651),
     _ = n(388032);
 function b(e) {
     let { onClose: t, transitionState: b } = e,
-        m = (0, i.Z)(u.Me),
+        m = (0, o.Z)(u.Me),
         f = l.useMemo(() => m.map((e) => e.value), [m]);
     l.useEffect(() => {
         s.default.track(d.rMx.OPEN_MODAL, { type: 'Ignore User Feedback' });
     }, []);
-    let p = l.useCallback((e) => {
+    let g = l.useCallback((e) => {
         var t;
-        let { rating: l, problem: i, feedback: o } = e,
+        let { rating: l, problem: o, feedback: i } = e,
             s = null == l;
-        (0, c.wT)(l, o, null != (t = null == i ? void 0 : i.value) ? t : null, s),
+        (0, c.wT)(l, i, null != (t = null == o ? void 0 : o.value) ? t : null, s),
             s ||
                 (0, a.ZDy)(async () => {
                     let { default: e } = await n.e('14466').then(n.bind(n, 729328));
@@ -55,14 +55,14 @@ function b(e) {
                         );
                 });
     }, []);
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(i.Z, {
         modalType: 'ignore_user',
         header: _.intl.string(_.t.Ib6biY),
         body: _.intl.string(_.t['uW0/nZ']),
         problemTitle: _.intl.string(_.t.avs5Vl),
         problems: m,
         freeformNeededProblems: f,
-        onSubmit: p,
+        onSubmit: g,
         onClose: t,
         transitionState: b,
         otherKey: u.XL.SOMETHING_ELSE,

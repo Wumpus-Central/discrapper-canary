@@ -36,12 +36,12 @@ function g(e, t) {
 }
 function h(e) {
     var t, n, r;
-    let { emojiHose: a, context: h, canvasWidth: v, canvasHeight: S, fallbackColor: b, outlineColorDark: y, outlineColorLight: O, streamerId: I, deadDrawables: _ } = e;
+    let { emojiHose: a, context: h, canvasWidth: v, canvasHeight: S, fallbackColor: b, outlineColorDark: y, outlineColorLight: O, streamerId: I, deadDrawables: Z } = e;
     h.save();
-    let j = u.Z.getEmojiImage(null != (n = null != (t = a.emojiId) ? t : a.emojiName) ? n : ''),
-        Z = (0, d.np)(a.x, v),
+    let _ = u.Z.getEmojiImage(null != (n = null != (t = a.emojiId) ? t : a.emojiName) ? n : ''),
+        j = (0, d.np)(a.x, v),
         x = (0, d.np)(a.y, S),
-        { outlineColor: w } = (0, d.bg)(a.userId, y, O, b);
+        { outlineColor: P } = (0, d.bg)(a.userId, y, O, b);
     g(a, (e) => {
         (e.x += e.xSpeed * window.devicePixelRatio),
             (e.y += e.ySpeed * window.devicePixelRatio),
@@ -79,9 +79,9 @@ function h(e) {
                         return (r.particles[e.id] = o), (r.lastSpawned[e.id] = Date.now()), r;
                     });
                 });
-        })(a, Z, x),
-        (0, f.I)(h, Z, x, w, m.q2),
-        (0, f.T)(h, Z, x, a.userId),
+        })(a, j, x),
+        (0, f.I)(h, j, x, P, m.q2),
+        (0, f.T)(h, j, x, a.userId),
         g(a, (e) =>
             (function (e, t, n) {
                 if (null == t) return;
@@ -89,9 +89,9 @@ function h(e) {
                     l = n.x - (r / 2) * window.devicePixelRatio,
                     i = n.y - 1.2 * r * window.devicePixelRatio;
                 (e.globalAlpha = n.opacity), e.drawImage(t, r / 2 + l, r / 2 + i, r, r);
-            })(h, j, e)
+            })(h, _, e)
         ),
         a.lastUpdatedAt + m.FO < Date.now() && (0, s.ZZ)(I, a),
-        a.state !== c.f.STOP || Object.keys(null != (r = E.getState().particles[a.id]) ? r : {}).length > 0 || _.push(a),
+        a.state !== c.f.STOP || Object.keys(null != (r = E.getState().particles[a.id]) ? r : {}).length > 0 || Z.push(a),
         h.restore();
 }

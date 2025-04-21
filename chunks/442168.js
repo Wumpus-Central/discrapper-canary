@@ -54,9 +54,9 @@ function b(e) {
         y = (0, l.useRef)(null),
         O = d.n.getState().clipsButtonRef,
         I = (0, f.V9)(t),
-        _ = (0, a.e7)([u.Z], () => u.Z.getActiveAnimation()),
-        j = (0, a.Wu)([u.Z], () => u.Z.getStreamClipAnimations(I)),
-        Z = (0, l.useRef)(void 0);
+        Z = (0, a.e7)([u.Z], () => u.Z.getActiveAnimation()),
+        _ = (0, a.Wu)([u.Z], () => u.Z.getStreamClipAnimations(I)),
+        j = (0, l.useRef)(void 0);
     l.useEffect(
         () => () => {
             (0, c.Gh)(I);
@@ -75,9 +75,9 @@ function b(e) {
                       left: t.left
                   };
         },
-        w = (e) => {
+        P = (e) => {
             let t = null == O ? void 0 : O.getBoundingClientRect();
-            if (((Z.current = t), e.timestamp !== _ || null == t || n)) return g;
+            if (((j.current = t), e.timestamp !== Z || null == t || n)) return g;
             let { top: r, left: l } = t;
             return {
                 top: r + 36,
@@ -86,12 +86,12 @@ function b(e) {
                 width: 268
             };
         },
-        P = (0, l.useRef)(null),
+        w = (0, l.useRef)(null),
         R = (0, s.Yzy)(
-            j,
+            _,
             {
                 keys: (e) => e.timestamp,
-                ref: P,
+                ref: w,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
                 config: h
@@ -100,7 +100,7 @@ function b(e) {
         ),
         A = (0, l.useRef)(null),
         C = (0, s.Yzy)(
-            j,
+            _,
             {
                 ref: A,
                 keys: (e) => e.timestamp,
@@ -111,7 +111,7 @@ function b(e) {
                             visibility: 'hidden',
                             opacity: 1
                         },
-                        b.enabled ? w(e) : x()
+                        b.enabled ? P(e) : x()
                     ),
                 enter: (e) => [
                     E(
@@ -119,7 +119,7 @@ function b(e) {
                             opacity: 1,
                             visibility: 'visible'
                         },
-                        w(e)
+                        P(e)
                     )
                 ],
                 leave: E(
@@ -131,23 +131,23 @@ function b(e) {
                                 width: 0
                             },
                             (() => {
-                                if (null != Z.current)
+                                if (null != j.current)
                                     return {
-                                        top: Z.current.top + 12,
-                                        left: Z.current.left + 12
+                                        top: j.current.top + 12,
+                                        left: j.current.left + 12
                                     };
                             })()
                         )
                 ),
                 config: b.enabled ? S : v,
                 onRest: (e, t) => {
-                    null != t.item && null != j.find((e) => e.timestamp === t.item.timestamp) && (0, c.Gh)(I, t.item.timestamp);
+                    null != t.item && null != _.find((e) => e.timestamp === t.item.timestamp) && (0, c.Gh)(I, t.item.timestamp);
                 }
             },
             'animate-always'
         );
     return (
-        (0, i.useChain)([P, A], [0, 0.1], 3000),
+        (0, i.useChain)([w, A], [0, 0.1], 3000),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {

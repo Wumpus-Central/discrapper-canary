@@ -4,7 +4,7 @@ n.d(t, {
     V_: () => U,
     Ym: () => F,
     ZP: () => H,
-    ac: () => Y,
+    ac: () => W,
     bn: () => L,
     nR: () => M
 }),
@@ -30,17 +30,17 @@ var r,
     y = n(884338),
     O = n(719296),
     I = n(958185),
-    _ = n(100527),
-    j = n(906732),
-    Z = n(890280),
+    Z = n(100527),
+    _ = n(906732),
+    j = n(890280),
     x = n(835473),
-    w = n(522474),
-    P = n(314897),
+    P = n(522474),
+    w = n(314897),
     R = n(819640),
     A = n(594174),
     C = n(823379),
-    T = n(5192),
-    N = n(388032),
+    N = n(5192),
+    T = n(388032),
     D = n(754438),
     M = (((r = {})[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), (r[(r.LARGE = 2)] = 'LARGE'), r);
 let L = 1024,
@@ -62,7 +62,7 @@ function V(e) {
         max: 4,
         renderUser: (e) => {
             if (null == e) return null;
-            let t = T.ZP.getName(n, r, e);
+            let t = N.ZP.getName(n, r, e);
             return (0, l.jsx)(
                 c.DY3,
                 {
@@ -83,7 +83,7 @@ function V(e) {
         }
     });
 }
-function Y(e) {
+function W(e) {
     switch (e) {
         case 2:
             return c.zxk.Sizes.LARGE;
@@ -93,30 +93,30 @@ function Y(e) {
             return c.zxk.Sizes.SMALL;
     }
 }
-function W(e) {
+function Y(e) {
     var t, n;
     let { participants: r, application: a, channel: E, width: h } = e,
         v = U(h),
         [S] = F(h),
-        b = (0, u.Wu)([A.default, P.default], () =>
+        b = (0, u.Wu)([A.default, w.default], () =>
             Array.from(r)
-                .map((e) => ((0, p.J)(e, P.default) ? null : A.default.getUser(e.userId)))
+                .map((e) => ((0, p.J)(e, w.default) ? null : A.default.getUser(e.userId)))
                 .filter(C.lm)
         ),
         y = (0, u.e7)([f.ZP], () => {
             var e;
             return null != (e = f.ZP.getEmbeddedActivitiesForChannel(E.id).find((e) => e.applicationId === a.id)) ? e : f.ZP.getEmbeddedActivitiesForStartingChannel(E.id).find((e) => e.applicationId === a.id);
         }),
-        { analyticsLocations: O } = (0, j.ZP)(),
+        { analyticsLocations: O } = (0, _.ZP)(),
         I = (0, d.O)(),
-        _ = T.ZP.getName(E.getGuildId(), E.id, null == b ? void 0 : b[0]),
+        Z = N.ZP.getName(E.getGuildId(), E.id, null == b ? void 0 : b[0]),
         x =
             (0, g.s5)({
                 userId: null == (t = A.default.getCurrentUser()) ? void 0 : t.id,
                 channelId: E.id,
                 application: a
             }) === g.Fw.CAN_JOIN,
-        w = null != (n = E.getGuildId()) ? n : void 0,
+        P = null != (n = E.getGuildId()) ? n : void 0,
         R = i.useId(),
         M = a.id,
         L = i.useMemo(
@@ -126,7 +126,7 @@ function W(e) {
             }),
             [E]
         ),
-        { submitting: k } = (0, Z.Z)({
+        { submitting: k } = (0, j.Z)({
             applicationId: M,
             context: L,
             launchingComponentId: R
@@ -136,7 +136,7 @@ function W(e) {
         children: [
             (0, l.jsx)(V, {
                 avatarSize: S,
-                guildId: w,
+                guildId: P,
                 channelId: E.id,
                 users: b
             }),
@@ -148,11 +148,11 @@ function W(e) {
                 variant: 'text-sm/normal',
                 children:
                     b.length > 1
-                        ? N.intl.formatToPlainString(N.t.cpe6CA, {
-                              username: _,
+                        ? T.intl.formatToPlainString(T.t.cpe6CA, {
+                              username: Z,
                               count: b.length - 1
                           })
-                        : N.intl.formatToPlainString(N.t['7Uuia2'], { username: _ })
+                        : T.intl.formatToPlainString(T.t['7Uuia2'], { username: Z })
             }),
             (0, l.jsx)(c.Text, {
                 className: o()(D.header, {
@@ -180,11 +180,11 @@ function W(e) {
                                       });
                           },
                           submitting: k,
-                          size: Y(v),
+                          size: W(v),
                           className: D.button,
                           look: c.iLD.FILLED,
                           color: c.zxk.Colors.WHITE,
-                          children: N.intl.string(N.t['4i2vj4'])
+                          children: T.intl.string(T.t['4i2vj4'])
                       })
                     : null
             })
@@ -193,7 +193,7 @@ function W(e) {
 }
 function H(e) {
     let { participant: t, width: n, selected: r, interactible: a, channel: o } = e,
-        { analyticsLocations: s } = (0, j.ZP)(_.Z.ACTIVITY_TILE),
+        { analyticsLocations: s } = (0, _.ZP)(Z.Z.ACTIVITY_TILE),
         { applicationId: c } = t,
         d = (0, h.Z)(),
         f = null != d && (0, E.pY)(d.location) === o.id && d.applicationId === c,
@@ -205,21 +205,21 @@ function H(e) {
         }),
         g = !r && f,
         y = !f,
-        Z = !f && !r,
-        P = (0, u.e7)([R.Z, w.Z], () =>
+        j = !f && !r,
+        w = (0, u.e7)([R.Z, P.Z], () =>
             (0, I.Z)({
                 LayerStore: R.Z,
-                PopoutWindowStore: w.Z
+                PopoutWindowStore: P.Z
             })
         );
     return (
         i.useEffect(() => {
-            if (g && null != d && !P) {
+            if (g && null != d && !w) {
                 let e = (0, O.Z)(d.location.id, d.applicationId);
                 (0, b.jy)(e);
             }
-        }, [g, d, P]),
-        (0, l.jsx)(j.Gt, {
+        }, [g, d, w]),
+        (0, l.jsx)(_.Gt, {
             value: s,
             children: (0, l.jsxs)('div', {
                 className: D.container,
@@ -237,9 +237,9 @@ function H(e) {
                               src: p
                           })
                         : null,
-                    Z &&
+                    j &&
                         null != m &&
-                        (0, l.jsx)(W, {
+                        (0, l.jsx)(Y, {
                             width: n,
                             channel: o,
                             participants: t.participants,

@@ -98,7 +98,7 @@ function h(e, t, n, h) {
         });
         return null != e.current && t.observe(e.current), () => t.disconnect();
     }, [e, I, n]);
-    let _ = r.useCallback(() => {
+    let Z = r.useCallback(() => {
         let t = c.Z.getDrawables(n),
             r = m.U.getState().particles,
             l = t.length > 0 || Object.keys(r).length > 0;
@@ -107,11 +107,11 @@ function h(e, t, n, h) {
     r.useEffect(() => {
         let e = O.current;
         return (
-            c.Z.addChangeListener(_),
-            _(),
+            c.Z.addChangeListener(Z),
+            Z(),
             (0, o.vM)(t.getAvatarURL(null, E.Ks)),
             () => {
-                c.Z.removeChangeListener(_), e.stop();
+                c.Z.removeChangeListener(Z), e.stop();
             }
         );
     });
