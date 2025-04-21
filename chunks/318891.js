@@ -22,13 +22,13 @@ var i = n(252258),
     b = n(719296),
     y = n(958185),
     v = n(981631);
-function O(e, t, n) {
-    if ((0, m.R)({ isContextless: t.location.kind === i.E.CONTEXTLESS }) || d.Z.isOpen(n)) return !1;
+function O(e, t) {
+    if ((0, m.R)() || d.Z.isOpen(t)) return !1;
     if (null != r) {
         let e = r;
         a.Z.wait(() => o.xv(e));
     }
-    a.Z.wait(() => o.bA(n, v.NYg.EMBED_IFRAME, { channel: e })), (r = n);
+    a.Z.wait(() => o.bA(t, v.NYg.EMBED_IFRAME, { channel: e })), (r = t);
 }
 function I() {
     let e = r;
@@ -44,14 +44,11 @@ function T(e) {
 }
 function A() {
     let e = g.ZP.getConnectedActivityLocation(),
-        t = null != e ? g.ZP.getSelfEmbeddedActivityForLocation(e) : null,
-        n = (0, E.pY)(e),
-        r = c.Z.getChannel(n);
-    if (null == t || null == r) return I();
-    {
-        let e = (0, b.Z)(t.location.id, t.applicationId);
-        return O(r, t, e);
-    }
+        t = (null == e ? void 0 : e.kind) === i.E.CONTEXTLESS,
+        n = null != e ? g.ZP.getSelfEmbeddedActivityForLocation(e) : null,
+        r = (0, E.pY)(e),
+        a = c.Z.getChannel(r);
+    return null != n && (t || null != a) ? O(a, (0, b.Z)(n.location.id, n.applicationId)) : I();
 }
 function N() {
     return (0, y.Z)({

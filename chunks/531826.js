@@ -1,7 +1,7 @@
 n.d(t, {
-    ZP: () => p,
-    jA: () => m,
-    sU: () => g
+    ZP: () => _,
+    jA: () => h,
+    sU: () => m
 }),
     n(997841);
 var r = n(442837),
@@ -9,47 +9,46 @@ var r = n(442837),
     a = n(522474),
     o = n(630388),
     s = n(636449),
-    l = n(774226),
-    c = n(317381),
-    u = n(16609),
-    d = n(917107),
-    f = n(918559),
-    _ = n(981631);
-function p(e) {
+    l = n(317381),
+    c = n(16609),
+    u = n(917107),
+    d = n(918559),
+    f = n(981631);
+function _(e) {
     var t;
     let { application: n, channelId: r } = e;
-    if (null != n && (0, o.yE)(null != (t = n.flags) ? t : 0, _.udG.EMBEDDED)) {
-        if (a.Z.getWindowOpen(_.KJ3.ACTIVITY_POPOUT) && c.ZP.getActivityPanelMode() === f.Ez.ACTIVITY_POPOUT_WINDOW) return _.KJ3.ACTIVITY_POPOUT;
-        if (a.Z.getWindowOpen(_.KJ3.CHANNEL_CALL_POPOUT) && (0, d.Z)(r) && !(0, s.R)({ isContextless: (0, l.Kb)(n) })) return _.KJ3.CHANNEL_CALL_POPOUT;
+    if (null != n && (0, o.yE)(null != (t = n.flags) ? t : 0, f.udG.EMBEDDED)) {
+        if (a.Z.getWindowOpen(f.KJ3.ACTIVITY_POPOUT) && l.ZP.getActivityPanelMode() === d.Ez.ACTIVITY_POPOUT_WINDOW) return f.KJ3.ACTIVITY_POPOUT;
+        if (a.Z.getWindowOpen(f.KJ3.CHANNEL_CALL_POPOUT) && (0, u.Z)(r) && !(0, s.R)()) return f.KJ3.CHANNEL_CALL_POPOUT;
     }
 }
-function h(e) {
+function p(e) {
     let { channelId: t, EmbeddedActivitiesStore: n, ApplicationStore: r } = e,
         i = n.getSelfEmbeddedActivityForChannel(t),
         a = r.getApplication(null == i ? void 0 : i.applicationId);
     if (null != a)
-        return p({
+        return _({
             application: a,
             channelId: t
         });
 }
-function m(e) {
+function h(e) {
     let { applicationId: t } = e,
-        n = c.ZP.getCurrentEmbeddedActivity();
+        n = l.ZP.getCurrentEmbeddedActivity();
     if (null == n || n.applicationId !== t) return;
     let r = i.Z.getApplication(t);
     if (null != r)
-        return p({
+        return _({
             application: r,
-            channelId: (0, u.pY)(n.location)
+            channelId: (0, c.pY)(n.location)
         });
 }
-function g(e) {
+function m(e) {
     let { channelId: t } = e;
-    return (0, r.e7)([a.Z, c.ZP, i.Z], () => {
-        let e = h({
-            channelId: null != t ? t : c.ZP.getConnectedActivityChannelId(),
-            EmbeddedActivitiesStore: c.ZP,
+    return (0, r.e7)([a.Z, l.ZP, i.Z], () => {
+        let e = p({
+            channelId: null != t ? t : l.ZP.getConnectedActivityChannelId(),
+            EmbeddedActivitiesStore: l.ZP,
             ApplicationStore: i.Z
         });
         return null != e ? a.Z.getWindow(e) : void 0;

@@ -3,6 +3,7 @@ e.exports = {
     wrapper: 'wrapper__49094',
     resizable: 'resizable__49094',
     noChat: 'noChat__49094',
+    contextlessActivityWrapper: 'contextlessActivityWrapper__49094',
     activityPanelContainer: 'activityPanelContainer__49094',
     header: 'header__49094',
     footer: 'footer__49094',

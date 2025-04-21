@@ -276,7 +276,7 @@ function ec(e) {
             embeddedActivity: L,
             inviterUserId: T
         }),
-        (0, E.R)({ isContextless: c.kind === a.E.CONTEXTLESS })
+        (0, E.R)()
             ? ((J = A.Ez.ACTIVITY_POPOUT_WINDOW),
               s.Z.wait(() => {
                   s.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
@@ -414,8 +414,9 @@ function eA(e) {
 function eN(e) {
     let { channelId: t } = e;
     if (null == r) return;
-    let n = (0, O.pY)(r);
-    null != n && n !== t && J === A.Ez.PANEL && (J = A.Ez.PIP);
+    let n = r.kind === a.E.CONTEXTLESS,
+        i = (0, O.pY)(r);
+    (n || null != i) && i !== t && J === A.Ez.PANEL && (J = A.Ez.PIP);
 }
 function eC(e, t) {
     return ''.concat(e, ':').concat(t);

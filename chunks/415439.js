@@ -1,36 +1,35 @@
 n.d(t, {
-    BV: () => C,
-    FW: () => O,
-    Kt: () => j,
-    ZC: () => S
+    BV: () => j,
+    FW: () => C,
+    Kt: () => E,
+    ZC: () => O
 });
 var i = n(442837),
     r = n(493683),
     s = n(153867),
     l = n(636449),
-    a = n(774226),
-    o = n(122613),
-    c = n(100527),
-    d = n(87005),
-    u = n(895924),
-    m = n(812236),
-    g = n(740492),
-    p = n(973616),
-    h = n(592125),
-    f = n(626135),
-    b = n(823379),
-    _ = n(728345),
-    x = n(812206),
-    E = n(981631);
-async function j(e, t, n) {
+    a = n(122613),
+    o = n(100527),
+    c = n(87005),
+    d = n(895924),
+    u = n(812236),
+    m = n(740492),
+    g = n(973616),
+    p = n(592125),
+    h = n(626135),
+    f = n(823379),
+    b = n(728345),
+    _ = n(812206),
+    x = n(981631);
+async function E(e, t, n) {
     t(e.id);
     let i = e.bot;
     if (null == i)
         try {
             var s;
-            if (((i = null == (s = x.Z.getApplication(e.id)) ? void 0 : s.bot), null == i)) {
-                let t = await (0, _.UM)(e.id);
-                (e = t), (i = p.ZP.createFromServer(t).bot);
+            if (((i = null == (s = _.Z.getApplication(e.id)) ? void 0 : s.bot), null == i)) {
+                let t = await (0, b.UM)(e.id);
+                (e = t), (i = g.ZP.createFromServer(t).bot);
             }
         } catch (e) {
             t(void 0);
@@ -38,59 +37,59 @@ async function j(e, t, n) {
         }
     if (null != i) {
         let s,
-            d = null == h.Z.getDMFromUserId(i.id);
+            c = null == p.Z.getDMFromUserId(i.id);
         try {
-            s = (0, l.R)({ isContextless: (0, a.Kb)(e) })
+            s = (0, l.R)()
                 ? await r.Z.getOrEnsurePrivateChannel(i.id)
                 : await r.Z.openPrivateChannel({
                       recipientIds: [i.id],
-                      location: c.Z.APP_DMS_QUICK_LAUNCHER
+                      location: o.Z.APP_DMS_QUICK_LAUNCHER
                   });
         } catch (e) {
             t(void 0);
         }
         if (
-            (f.default.track(E.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (h.default.track(x.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
-                is_new_dm: d,
+                is_new_dm: c,
                 channel_id: s
             }),
             null == s)
         )
             return void t(void 0);
         try {
-            await (0, m.ZP)(s, e.id);
+            await (0, u.ZP)(s, e.id);
         } catch (e) {
-            if (e.message === m.sV) return void t(void 0);
+            if (e.message === u.sV) return void t(void 0);
         }
-        await (0, o.Z)({
+        await (0, a.Z)({
             targetApplicationId: e.id,
             channelId: s,
             analyticsLocations: n,
-            commandOrigin: u.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
+            commandOrigin: d.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
             onExecutedCallback() {
                 t(void 0);
             }
         });
     } else t(void 0);
 }
-function C(e, t) {
-    s.ZP.updatedUnsyncedSettings({ showPlayAgain: e }), e || f.default.track(E.rMx.APP_DMS_QUICK_LAUNCHER_HIDDEN, { source: t });
+function j(e, t) {
+    s.ZP.updatedUnsyncedSettings({ showPlayAgain: e }), e || h.default.track(x.rMx.APP_DMS_QUICK_LAUNCHER_HIDDEN, { source: t });
 }
-function O() {
-    let e = (0, i.e7)([g.ZP], () => g.ZP.showPlayAgain),
-        { frecentApps: t } = S();
+function C() {
+    let e = (0, i.e7)([m.ZP], () => m.ZP.showPlayAgain),
+        { frecentApps: t } = O();
     return e && t.length > 0;
 }
-function S() {
-    let { frecentApps: e, loading: t } = (0, d.f)({
+function O() {
+    let { frecentApps: e, loading: t } = (0, c.f)({
         context: { type: 'contextless' },
         onlyActivityApps: !0,
         allowCommandFetch: !0,
         includeAuthorizedAppsAndFetch: !1
     });
     return {
-        frecentApps: e.map((e) => e.application).filter(b.lm),
+        frecentApps: e.map((e) => e.application).filter(f.lm),
         loading: t
     };
 }
