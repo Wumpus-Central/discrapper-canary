@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(512722),
@@ -35,9 +35,61 @@ var r = n(200651),
     k = n(388032),
     j = n(393040),
     U = n(236691);
-function G(e) {
+function G(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function B(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                G(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function F(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function V(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : F(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function Z(e) {
     let t,
-        { premiumSubscription: n, paymentSources: a, priceOptions: p, onPaymentSourceChange: h, onPaymentSourceAdd: N, planId: P, setHasAcceptedTerms: L, legalTermsNodeRef: x, hasLegalTermsFlash: j, onInvoiceError: G, planGroup: Y, currencies: W, onCurrencyChange: K, hasOpenInvoice: z, purchaseState: q, handleClose: Q } = e,
+        { premiumSubscription: n, paymentSources: a, priceOptions: p, onPaymentSourceChange: h, onPaymentSourceAdd: N, planId: P, setHasAcceptedTerms: L, legalTermsNodeRef: x, hasLegalTermsFlash: j, onInvoiceError: G, planGroup: B, currencies: F, onCurrencyChange: V, hasOpenInvoice: Z, purchaseState: q, handleClose: Q } = e,
         { selectedSkuId: X, defaultPlanId: J, isPremium: $, startedPaymentFlowWithPaymentSourcesRef: ee } = (0, E.JL)(),
         { isGift: et } = (0, g.wD)(),
         en = p.paymentSourceId,
@@ -66,38 +118,38 @@ function G(e) {
                 }),
             [X, n, J, $]
         );
-    t = z || eu ? k.intl.string(k.t.nyzoFR) : (0, T.PV)(P) ? (0, T.W_)(n, ei) : k.intl.formatToPlainString(k.t['sBpy9/'], { planName: ei.name });
+    t = Z || eu ? k.intl.string(k.t.nyzoFR) : (0, T.PV)(P) ? (0, T.W_)(n, ei) : k.intl.formatToPlainString(k.t['sBpy9/'], { planName: ei.name });
     let ef = null;
     return (
         null != n &&
-            (ef = z
-                ? (0, r.jsx)(B, {
+            (ef = Z
+                ? (0, r.jsx)(H, {
                       premiumSubscription: n,
                       onInvoiceError: G,
                       priceOptions: p,
                       preventFetch: !1
                   })
                 : eu
-                  ? (0, r.jsx)(Z, {
+                  ? (0, r.jsx)(K, {
                         premiumSubscription: n,
                         onInvoiceError: G,
                         priceOptions: p,
                         preventFetch: el
                     })
-                  : (0, A.R4)(n, P, Y)
-                    ? (0, r.jsx)(F, {
+                  : (0, A.R4)(n, P, B)
+                    ? (0, r.jsx)(Y, {
                           premiumSubscription: n,
                           newPlan: ei,
                           onInvoiceError: G,
-                          planGroup: Y,
+                          planGroup: B,
                           priceOptions: p,
                           fractionalPremiumInfo: eo,
                           preventFetch: el
                       })
-                    : (0, r.jsx)(H, {
+                    : (0, r.jsx)(z, {
                           premiumSubscription: n,
                           newPlan: ei,
-                          planGroup: Y,
+                          planGroup: B,
                           fractionalPremiumInfo: eo,
                           priceOptions: p,
                           preventFetch: el
@@ -118,7 +170,7 @@ function G(e) {
                                 planOptions: ed,
                                 eligibleForMultiMonthPlans: !1,
                                 selectedPlanId: P,
-                                planGroup: Y,
+                                planGroup: B,
                                 showTotal: !1,
                                 handleClose: Q
                             }),
@@ -148,7 +200,7 @@ function G(e) {
                     ]
                 }),
                 (0, r.jsxs)(u.b, {
-                    currencies: W,
+                    currencies: F,
                     className: U.currencyWrapper,
                     children: [
                         (0, r.jsx)(c.vwX, {
@@ -157,8 +209,8 @@ function G(e) {
                         }),
                         (0, r.jsx)(u.Z, {
                             selectedCurrency: p.currency,
-                            currencies: W,
-                            onChange: K,
+                            currencies: F,
+                            onChange: V,
                             disabled: el
                         })
                     ]
@@ -167,12 +219,12 @@ function G(e) {
                     isActive: j,
                     ref: x,
                     children:
-                        null != n && (0, A.R4)(n, P, Y)
-                            ? (0, r.jsx)(V, {
+                        null != n && (0, A.R4)(n, P, B)
+                            ? (0, r.jsx)(W, {
                                   premiumSubscription: n,
                                   newPlan: ei,
                                   onInvoiceError: G,
-                                  planGroup: Y,
+                                  planGroup: B,
                                   priceOptions: p,
                                   preventFetch: el,
                                   disabled: el,
@@ -187,7 +239,7 @@ function G(e) {
                                       paymentSourceType: er,
                                       basePrice: (0, T.aS)(ei.id, !1, et, p),
                                       currentSubscription: n,
-                                      planGroup: Y
+                                      planGroup: B
                                   }),
                                   forceShow: !0,
                                   showPricingLink: ei.currency !== M.pKx.USD,
@@ -195,14 +247,14 @@ function G(e) {
                                   disabled: el,
                                   subscriptionPlan: ei,
                                   currentSubscription: n,
-                                  planGroup: Y
+                                  planGroup: B
                               })
                 })
             ]
         })
     );
 }
-function B(e) {
+function H(e) {
     let { premiumSubscription: t, onInvoiceError: n, priceOptions: a, preventFetch: o } = e,
         [s, l] = (0, N.Ox)({
             subscriptionId: t.id,
@@ -230,56 +282,47 @@ function B(e) {
           })
         : (0, r.jsx)(c.$jN, {});
 }
-function F(e) {
+function Y(e) {
     let t,
         { premiumSubscription: n, newPlan: a, onInvoiceError: o, planGroup: s, priceOptions: l, fractionalPremiumInfo: u, preventFetch: d } = e,
         { selectedSkuId: f, startedPaymentFlowWithPaymentSourcesRef: _ } = (0, E.JL)(),
-        { isGift: m } = (0, g.wD)(),
-        { analyticsLocations: b } = (0, h.ZP)(),
-        v = (0, T.al)(n, a.id, 1, new Set(s)),
-        [O, I] = (0, N.ED)({
-            subscriptionId: n.id,
-            items: v,
-            renewal: !1,
-            applyEntitlements: !0,
-            paymentSourceId: l.paymentSourceId,
-            currency: l.currency,
+        { isGift: p } = (0, g.wD)(),
+        { analyticsLocations: m } = (0, h.ZP)(),
+        b = (0, T.al)(n, a.id, 1, new Set(s)),
+        {
+            proratedInvoicePreview: v,
+            proratedInvoiceError: O,
+            renewalInvoicePreview: I,
+            renewalInvoiceError: S
+        } = q({
+            premiumSubscription: n,
+            newItems: b,
+            priceOptions: l,
             preventFetch: d,
-            analyticsLocations: b,
-            analyticsLocation: p.Z.BILLING_SWITCH_PLAN_IMMEDIATE_PRORATED_INVOICE_PREVIEW
+            analyticsLocations: m
         }),
-        [S, A] = (0, N.ED)({
-            subscriptionId: n.id,
-            items: v,
-            renewal: !0,
-            paymentSourceId: l.paymentSourceId,
-            currency: l.currency,
-            preventFetch: d,
-            analyticsLocations: b,
-            analyticsLocation: p.Z.BILLING_SWITCH_PLAN_IMMEDIATE_RENEWAL_INVOICE_PREVIEW
-        }),
-        C = null != I ? I : A;
+        A = null != O ? O : S;
     if (
         (i.useEffect(() => {
-            o(C);
-        }, [o, C]),
-        null != C)
+            o(A);
+        }, [o, A]),
+        null != A)
     )
-        return (0, r.jsx)(c.kzN, { children: C.message });
-    let P = (0, y.Kp)({
+        return (0, r.jsx)(c.kzN, { children: A.message });
+    let N = (0, y.Kp)({
             isTrial: !1,
-            isGift: m,
+            isGift: p,
             selectedSkuId: f,
             startedPaymentFlowWithPaymentSources: _.current
         }),
-        w = (0, y.$g)(P, O, a);
-    if ((null !== u && null !== O && (t = (0, T.N1)(O.subscriptionPeriodEnd, u.unactivatedUnits, u.endsAt)), null == O || null == S || w)) return (0, r.jsx)(c.$jN, { className: U.__invalid_spinner });
-    let D = (0, T.Ap)(l.paymentSourceId);
+        C = (0, y.$g)(N, v, a);
+    if ((null !== u && null !== v && (t = (0, T.N1)(v.subscriptionPeriodEnd, u.unactivatedUnits, u.endsAt)), null == v || null == I || C)) return (0, r.jsx)(c.$jN, { className: U.__invalid_spinner });
+    let P = (0, T.Ap)(l.paymentSourceId);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(L.hG, {
-                proratedInvoice: O,
-                renewalInvoice: S,
+                proratedInvoice: v,
+                renewalInvoice: I,
                 overrideRenewalDate: t
             }),
             (0, r.jsxs)(R.aO, {
@@ -287,73 +330,76 @@ function F(e) {
                 children: [
                     (0, r.jsx)(R.Z9, { children: k.intl.string(k.t['2eh+Cg']) }),
                     (0, r.jsx)(L.Lu, {
-                        invoice: O,
+                        invoice: v,
                         newPlan: a,
-                        isPrepaidPaymentSource: D
+                        isPrepaidPaymentSource: P
                     }),
                     (0, r.jsx)(L.nd, {
                         premiumSubscription: n,
-                        proratedInvoice: O,
-                        renewalInvoice: S,
+                        proratedInvoice: v,
+                        renewalInvoice: I,
                         overrideRenewalDate: t,
                         isUpdate: !0,
-                        isPrepaidPaymentSource: D
+                        isPrepaidPaymentSource: P
                     })
                 ]
             })
         ]
     });
 }
-function V(e) {
+function W(e) {
     let t,
-        { premiumSubscription: n, newPlan: a, onInvoiceError: o, planGroup: s, priceOptions: l, preventFetch: u, disabled: f, isEEA: m, paymentSources: g, setHasAcceptedTerms: E } = e,
-        { analyticsLocations: b } = (0, h.ZP)(),
-        y = (0, T.al)(n, a.id, 1, new Set(s)),
-        [O, I] = (0, N.ED)({
-            subscriptionId: n.id,
-            items: y,
-            renewal: !0,
-            paymentSourceId: l.paymentSourceId,
-            currency: l.currency,
+        { premiumSubscription: n, newPlan: a, onInvoiceError: o, planGroup: s, priceOptions: l, preventFetch: u, disabled: f, isEEA: p, paymentSources: m, setHasAcceptedTerms: g } = e,
+        { analyticsLocations: E } = (0, h.ZP)(),
+        b = (0, T.al)(n, a.id, 1, new Set(s)),
+        {
+            proratedInvoicePreview: y,
+            proratedInvoiceError: O,
+            renewalInvoicePreview: I,
+            renewalInvoiceError: S
+        } = q({
+            premiumSubscription: n,
+            newItems: b,
+            priceOptions: l,
             preventFetch: u,
-            analyticsLocations: b,
-            analyticsLocation: p.Z.BILLING_SWITCH_PLAN_IMMEDIATE_RENEWAL_INVOICE_PREVIEW
+            analyticsLocations: E
         }),
-        S = (0, v.$)(g, l.paymentSourceId),
-        A = I;
+        A = (0, v.$)(m, l.paymentSourceId),
+        N = null != S ? S : O;
     return (i.useEffect(() => {
-        o(A);
-    }, [o, A]),
-    null != A)
-        ? (0, r.jsx)(c.kzN, { children: A.message })
-        : (null != O &&
+        o(N);
+    }, [o, N]),
+    null != N)
+        ? (0, r.jsx)(c.kzN, { children: N.message })
+        : (null != I &&
                 (t = {
-                    amount: O.total,
-                    currency: O.currency,
-                    tax: O.tax,
-                    taxInclusive: O.taxInclusive
+                    amount: I.subtotal,
+                    currency: I.currency,
+                    tax: I.tax,
+                    taxInclusive: I.taxInclusive
                 }),
             null == t)
           ? null
           : (0, r.jsx)(_.Z, {
-                onChange: E,
+                onChange: g,
                 finePrint: (0, r.jsx)(d.Z, {
                     subscriptionPlan: a,
-                    paymentSourceType: S,
+                    paymentSourceType: A,
                     basePrice: t,
+                    proratedAmount: null != y ? y.total : void 0,
                     currentSubscription: n,
                     planGroup: s
                 }),
                 forceShow: !0,
                 showPricingLink: a.currency !== M.pKx.USD,
-                showWithdrawalWaiver: m,
+                showWithdrawalWaiver: p,
                 disabled: f,
                 subscriptionPlan: a,
                 currentSubscription: n,
                 planGroup: s
             });
 }
-function Z(e) {
+function K(e) {
     let { premiumSubscription: t, priceOptions: n, preventFetch: a, onInvoiceError: o } = e,
         { analyticsLocations: s } = (0, h.ZP)(),
         [l, u] = (0, N.ED)({
@@ -410,7 +456,7 @@ function Z(e) {
         ]
     });
 }
-function H(e) {
+function z(e) {
     let t,
         { premiumSubscription: n, newPlan: i, planGroup: a, fractionalPremiumInfo: o, priceOptions: s, preventFetch: l } = e,
         { analyticsLocations: u } = (0, h.ZP)(),
@@ -461,3 +507,28 @@ function H(e) {
         })
     );
 }
+let q = (e) => {
+    let { premiumSubscription: t, newItems: n, priceOptions: r, preventFetch: i, analyticsLocations: a } = e,
+        o = {
+            subscriptionId: t.id,
+            items: n,
+            paymentSourceId: r.paymentSourceId,
+            currency: r.currency,
+            preventFetch: i,
+            analyticsLocations: a,
+            analyticsLocation: p.Z.BILLING_SWITCH_PLAN_IMMEDIATE_PRORATED_INVOICE_PREVIEW
+        },
+        [s, l] = (0, N.ED)(
+            V(B({}, o), {
+                renewal: !1,
+                applyEntitlements: !0
+            })
+        ),
+        [c, u] = (0, N.ED)(V(B({}, o), { renewal: !0 }));
+    return {
+        proratedInvoicePreview: s,
+        proratedInvoiceError: l,
+        renewalInvoicePreview: c,
+        renewalInvoiceError: u
+    };
+};
