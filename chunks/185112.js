@@ -41,7 +41,19 @@ let d = 10,
             let t = null == (e = a.Z.getRTCConnection()) ? void 0 : e.getMediaEngineConnectionId();
             if (null == t || !i.Z.isVideoEnabled()) return null;
             let n = (0, l.hj)(t, r.default.getId());
-            return null == n ? null : n.short.frameRate < d || n.long.frameRate < d ? [u({ type: o.u.CAMERA_SEND_LOW_FPS }, (0, s.Y9)())] : void 0;
+            return null == n
+                ? null
+                : n.short.frameRate < d || n.long.frameRate < d
+                  ? [
+                        u(
+                            {
+                                type: o.u.CAMERA_SEND_LOW_FPS,
+                                userId: r.default.getId()
+                            },
+                            (0, s.Y9)()
+                        )
+                    ]
+                  : void 0;
         },
         makeErrorContextKey: (e) => ''.concat(e.mediaSessionId)
     };
