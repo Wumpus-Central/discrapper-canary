@@ -2,7 +2,8 @@ n.d(t, {
     Pe: () => et,
     Pr: () => Y,
     Qe: () => J,
-    ZP: () => er,
+    ZP: () => ei,
+    co: () => er,
     nB: () => en
 }),
     n(388685),
@@ -469,4 +470,9 @@ function en(e) {
         .take(t)
         .value();
 }
-let er = ee;
+function er(e) {
+    if (0 === e.length) return !1;
+    let t = e.toLowerCase().replace(/^@/, '');
+    return y.intl.string(y.t.Qf3ptr).startsWith(t) || b.ME.substring(1).startsWith(t);
+}
+let ei = ee;
