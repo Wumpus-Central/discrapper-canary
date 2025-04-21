@@ -24,7 +24,6 @@ function o(e) {
         partnered: t.has(i.oNc.PARTNERED),
         community: t.has(i.oNc.COMMUNITY),
         staff: t.has(i.oNc.INTERNAL_EMPLOYEE_ONLY),
-        clan: t.has(i.oNc.CLAN),
         visibility: n,
         premium: a,
         premiumSubscriberCount: o,

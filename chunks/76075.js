@@ -1,121 +1,109 @@
-n.d(t, { default: () => O });
-var r = n(200651);
+n.d(t, { default: () => g });
+var o = n(200651);
 n(192379);
-var i = n(442837),
-    o = n(481060),
-    l = n(100527),
-    a = n(970606),
-    c = n(313201),
-    s = n(271383),
-    u = n(430824),
-    d = n(594174),
-    f = n(693546),
-    p = n(305325),
-    m = n(937111),
-    g = n(702286),
-    b = n(523924),
-    _ = n(981631),
-    j = n(388032);
-let O = function (e) {
+var r = n(442837),
+    i = n(481060),
+    l = n(313201),
+    a = n(271383),
+    s = n(430824),
+    c = n(594174),
+    u = n(693546),
+    d = n(305325),
+    f = n(937111),
+    p = n(702286),
+    m = n(523924),
+    b = n(388032);
+let g = function (e) {
     var t,
         n,
-        { guildId: O, transitionState: h } = e,
-        x = (function (e, t) {
+        { guildId: g, transitionState: j } = e,
+        h = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                i = (function (e, t) {
+                o,
+                r = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        i = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        o,
+                        r = {},
+                        i = Object.keys(e);
+                    for (o = 0; o < i.length; o++) (n = i[o]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (o = 0; o < i.length; o++) (n = i[o]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
-            return i;
+            return r;
         })(e, ['guildId', 'transitionState']);
-    let v = (0, c.Dt)(),
-        P = (0, i.e7)([m.Z], () => m.Z.getRequest(O), [O]),
-        y = (0, i.e7)([u.Z], () => u.Z.getGuild(O), [O]),
-        C = (0, i.e7)([d.default], () => {
+    let y = (0, l.Dt)(),
+        x = (0, r.e7)([f.Z], () => f.Z.getRequest(g), [g]),
+        O = (0, r.e7)([s.Z], () => s.Z.getGuild(g), [g]),
+        v = (0, r.e7)([c.default], () => {
             var e;
-            return null == (e = d.default.getCurrentUser()) ? void 0 : e.id;
+            return null == (e = c.default.getCurrentUser()) ? void 0 : e.id;
         }),
-        w = (0, i.e7)([s.ZP], () => (null != C ? s.ZP.getMember(O, C) : null), [C, O]),
-        A = async () => {
-            var e;
-            if (
-                (null != (e = null == y ? void 0 : y.hasFeature(_.oNc.CLAN)) &&
-                    e &&
-                    (0, a.Vr)({
-                        guildId: O,
-                        source: l.Z.CLAN_REAPPLY
-                    }),
-                null == w ? void 0 : w.isPending)
-            ) {
+        P = (0, r.e7)([a.ZP], () => (null != v ? a.ZP.getMember(g, v) : null), [v, g]),
+        C = async () => {
+            if (null == P ? void 0 : P.isPending) {
                 try {
-                    await f.Z.removeGuildJoinRequest(O);
+                    await u.Z.removeGuildJoinRequest(g);
                 } catch (e) {
                     throw e;
                 }
-                x.onClose(), (0, p.hk)(O);
-            } else f.Z.resetGuildJoinRequest(O);
+                h.onClose(), (0, d.hk)(g);
+            } else u.Z.resetGuildJoinRequest(g);
         };
-    return (0, r.jsx)(o.Y0X, {
-        size: o.CgR.DYNAMIC,
-        transitionState: h,
-        'aria-labelledby': v,
-        children: (0, r.jsx)(
-            b.Z,
+    return (0, o.jsx)(i.Y0X, {
+        size: i.CgR.DYNAMIC,
+        transitionState: j,
+        'aria-labelledby': y,
+        children: (0, o.jsx)(
+            m.Z,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        o = Object.keys(n);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (o = o.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        o.forEach(function (t) {
+                            var o;
+                            (o = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: o,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = o);
                         });
                 }
                 return e;
-            })({}, x)),
+            })({}, h)),
             (n = n =
                 {
-                    headerId: v,
-                    reapplyText: j.intl.string(j.t.I1LYVl),
-                    onReapply: A,
-                    confirmText: j.intl.string(j.t.BddRzc),
+                    headerId: y,
+                    reapplyText: b.intl.string(b.t.I1LYVl),
+                    onReapply: C,
+                    confirmText: b.intl.string(b.t.BddRzc),
                     onWithdrawApplication: () => {
-                        x.onClose(), null == w && (0, g.Z)();
+                        h.onClose(), null == P && (0, p.Z)();
                     },
-                    rejectionReason: null == P ? void 0 : P.rejectionReason,
-                    guild: y
+                    rejectionReason: null == x ? void 0 : x.rejectionReason,
+                    guild: O
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          var o = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, o);
                       }
                       return n;
                   })(Object(n)).forEach(function (e) {

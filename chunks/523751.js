@@ -1,4 +1,4 @@
-n.d(t, { Z: () => U });
+n.d(t, { Z: () => k });
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -7,25 +7,23 @@ var r = n(200651),
     l = n(692547),
     c = n(780384),
     u = n(481060),
-    d = n(353093),
-    f = n(979264),
-    _ = n(436774),
-    p = n(540059),
-    h = n(623624),
-    m = n(297700),
-    g = n(210887),
-    E = n(271383),
-    b = n(594174),
-    y = n(665786),
-    v = n(697725),
-    O = n(267642),
-    I = n(284363),
-    S = n(854218),
-    T = n(682947),
-    A = n(981631),
-    N = n(388032),
-    C = n(90235);
-function R(e, t, n) {
+    d = n(436774),
+    f = n(540059),
+    _ = n(623624),
+    p = n(297700),
+    h = n(210887),
+    m = n(271383),
+    g = n(594174),
+    E = n(665786),
+    b = n(697725),
+    y = n(267642),
+    v = n(284363),
+    O = n(854218),
+    I = n(682947),
+    S = n(981631),
+    T = n(388032),
+    A = n(90235);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +36,7 @@ function R(e, t, n) {
         e
     );
 }
-function P(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,12 +47,12 @@ function P(e) {
                 })
             )),
             r.forEach(function (t) {
-                R(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
 }
-function w(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,29 +64,29 @@ function w(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function L(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = x(e, t);
+        i = D(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function x(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,96 +95,95 @@ function x(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let M = {
-    [I.Q.STAFF]: {
+let L = {
+    [v.Q.STAFF]: {
         IconComponent: u.Ymb,
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundDarkColor: l.Z.unsafe_rawColors.GREEN_360.css,
         backgroundLightColor: l.Z.unsafe_rawColors.GREEN_360.css
     },
-    [I.Q.VERIFIED_AND_PARTNERED]: {
+    [v.Q.VERIFIED_AND_PARTNERED]: {
         IconComponent: u.kmB,
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundDarkColor: l.Z.unsafe_rawColors.GREEN_360.css,
         backgroundLightColor: l.Z.unsafe_rawColors.GREEN_360.css
     },
-    [I.Q.VERIFIED]: {
+    [v.Q.VERIFIED]: {
         IconComponent: u.kmB,
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundDarkColor: l.Z.unsafe_rawColors.GREEN_360.css,
         backgroundLightColor: l.Z.unsafe_rawColors.GREEN_360.css
     },
-    [I.Q.PARTNERED]: {
-        IconComponent: (0, u.GSL)(y.Z),
+    [v.Q.PARTNERED]: {
+        IconComponent: (0, u.GSL)(E.Z),
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundDarkColor: l.Z.unsafe_rawColors.BRAND_500.css,
         backgroundLightColor: l.Z.unsafe_rawColors.BRAND_500.css
     },
-    [I.Q.COMMUNITY]: {
+    [v.Q.COMMUNITY]: {
         IconComponent: u.tvw,
         foregroundDarkColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundLightColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
-        premiumBackgroundColor: _.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
+        premiumBackgroundColor: d.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
         premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css,
         sizeAdjustment: 2
     },
-    [I.Q.DISCOVERABLE]: {
+    [v.Q.DISCOVERABLE]: {
         IconComponent: u.enf,
         foregroundDarkColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundLightColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
-        premiumBackgroundColor: _.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
+        premiumBackgroundColor: d.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
         premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css,
         sizeAdjustment: 2
     },
-    [I.Q.CLAN]: {},
-    [I.Q.NONE]: {}
+    [v.Q.NONE]: {}
 };
-function k(e) {
+function x(e) {
     let { guildTraits: t } = e;
     return (0, r.jsxs)('div', {
-        className: C.tooltipPremiumFooterContainer,
+        className: A.tooltipPremiumFooterContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: o()(C.tooltipPremiumFooterSegment, C.tooltipPremiumFooterTierSegment),
+                className: o()(A.tooltipPremiumFooterSegment, A.tooltipPremiumFooterTierSegment),
                 children: [
-                    (0, r.jsx)(v.Z, {
+                    (0, r.jsx)(b.Z, {
                         width: 18,
                         height: 18,
-                        className: C.gemIcon
+                        className: A.gemIcon
                     }),
                     (0, r.jsx)(u.Text, {
                         variant: 'text-xs/semibold',
                         color: 'always-white',
-                        children: O.nW(t.premiumTier)
+                        children: y.nW(t.premiumTier)
                     })
                 ]
             }),
             (0, r.jsx)('div', {
-                className: C.tooltipPremiumFooterSegment,
+                className: A.tooltipPremiumFooterSegment,
                 children: (0, r.jsx)(u.Text, {
                     variant: 'text-xs/semibold',
                     color: 'always-white',
-                    children: N.intl.format(N.t['dR/SVF'], { count: t.premiumSubscriberCount })
+                    children: T.intl.format(T.t['dR/SVF'], { count: t.premiumSubscriberCount })
                 })
             })
         ]
     });
 }
-function j(e) {
+function M(e) {
     let { badgeType: t, guildTraits: n } = e,
-        { tooltipTitle: i, tooltipSubtitle: a, tooltipDescription: o } = (0, T.G)(t, n.visibility);
+        { tooltipTitle: i, tooltipSubtitle: a, tooltipDescription: o } = (0, I.G)(t, n.visibility);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: C.tooltipBodyContainer,
+                className: A.tooltipBodyContainer,
                 children: [
                     (0, r.jsx)(u.Text, {
                         color: 'interactive-active',
@@ -209,103 +206,75 @@ function j(e) {
                         : null
                 ]
             }),
-            n.premium ? (0, r.jsx)(k, { guildTraits: n }) : null
+            n.premium ? (0, r.jsx)(x, { guildTraits: n }) : null
         ]
     });
 }
-function U(e) {
+function k(e) {
     let t, n;
     var a,
-        l,
-        { guild: _, tooltipColor: y = u.ua7.Colors.BRAND, tooltipPosition: v, className: O, flowerStarClassName: T, iconClassName: N, badgeStrokeColor: R, badgeColor: w, disableBoostClick: x, 'aria-label': k = !1 } = e,
-        U = L(e, ['guild', 'tooltipColor', 'tooltipPosition', 'className', 'flowerStarClassName', 'iconClassName', 'badgeStrokeColor', 'badgeColor', 'disableBoostClick', 'aria-label']);
-    let G = (0, p.Q3)('GuildBadgeV2'),
-        B = null != (a = U.size) ? a : G ? 18 : 16,
-        F = (0, s.e7)([b.default, E.ZP], () => {
-            let e = b.default.getCurrentUser();
-            return E.ZP.isMember(null == _ ? void 0 : _.id, null == e ? void 0 : e.id);
+        { guild: o, tooltipColor: l = u.ua7.Colors.BRAND, tooltipPosition: d, className: E, flowerStarClassName: b, iconClassName: y, badgeStrokeColor: I, badgeColor: T, disableBoostClick: N, 'aria-label': R = !1 } = e,
+        D = w(e, ['guild', 'tooltipColor', 'tooltipPosition', 'className', 'flowerStarClassName', 'iconClassName', 'badgeStrokeColor', 'badgeColor', 'disableBoostClick', 'aria-label']);
+    let x = (0, f.Q3)('GuildBadgeV2'),
+        k = null != (a = D.size) ? a : x ? 18 : 16,
+        j = (0, s.e7)([g.default, m.ZP], () => {
+            let e = g.default.getCurrentUser();
+            return m.ZP.isMember(null == o ? void 0 : o.id, null == e ? void 0 : e.id);
         }),
-        V = (0, s.e7)([g.Z], () => g.Z.theme),
-        Z = (0, S.XX)(_),
-        H = (0, I.i)(Z),
-        Y = i.useMemo(() => Z.premium && F && !x, [x, Z.premium, F]),
-        W = i.useCallback(
+        U = (0, s.e7)([h.Z], () => h.Z.theme),
+        G = (0, O.XX)(o),
+        B = (0, v.i)(G),
+        F = i.useMemo(() => G.premium && j && !N, [N, G.premium, j]),
+        V = i.useCallback(
             (e) => {
-                Y &&
+                F &&
                     (e.stopPropagation(),
                     e.preventDefault(),
-                    (0, h.f)({
-                        guildId: _.id,
+                    (0, _.f)({
+                        guildId: o.id,
                         location: {
-                            section: A.jXE.GUILD_HEADER,
-                            object: A.qAy.BOOST_GEM_ICON
+                            section: S.jXE.GUILD_HEADER,
+                            object: S.qAy.BOOST_GEM_ICON
                         }
                     }));
             },
-            [Y, _.id]
+            [F, o.id]
         );
-    if (H === I.Q.NONE) return null;
-    if (H === I.Q.CLAN) {
-        let e = (0, d.ky)(_.id, null == (l = _.profile) ? void 0 : l.badge, B);
-        return null == e
-            ? null
-            : (0, r.jsx)(u.ua7, {
-                  color: y,
-                  position: v,
-                  'aria-label': k,
-                  text: (0, r.jsx)(j, {
-                      badgeType: H,
-                      guildTraits: Z
-                  }),
-                  tooltipContentClassName: C.tooltipRemovePadding,
-                  children: (t) =>
-                      (0, r.jsx)(
-                          u.P3F,
-                          D(P({}, t), {
-                              onClick: W,
-                              className: o()(C.clanBadgeContainer, O),
-                              children: (0, r.jsx)(f.KQ, {
-                                  src: e,
-                                  size: B
-                              })
-                          })
-                      )
-              });
-    }
-    let { IconComponent: K, backgroundDarkColor: z, backgroundLightColor: q, foregroundDarkColor: Q, foregroundLightColor: X, premiumBackgroundColor: J, premiumForegroundColor: $, sizeAdjustment: ee } = M[H];
-    if (null == K) return null;
-    Z.premium && ((t = $), (n = J));
-    let et = (0, c.wj)(V) ? Q : X,
-        en = (0, c.wj)(V) ? z : q;
-    (t = null != t ? t : et), (n = null != n ? n : en);
-    let er = Math.floor(0.75 * B) - (null != ee ? ee : 0);
+    if (B === v.Q.NONE) return null;
+    let { IconComponent: Z, backgroundDarkColor: H, backgroundLightColor: Y, foregroundDarkColor: W, foregroundLightColor: K, premiumBackgroundColor: z, premiumForegroundColor: q, sizeAdjustment: Q } = L[B];
+    if (null == Z) return null;
+    G.premium && ((t = q), (n = z));
+    let X = (0, c.wj)(U) ? W : K,
+        J = (0, c.wj)(U) ? H : Y;
+    (t = null != t ? t : X), (n = null != n ? n : J);
+    let $ = Math.floor(0.75 * k) - (null != Q ? Q : 0);
     return (0, r.jsx)(u.ua7, {
-        color: y,
-        position: v,
-        'aria-label': k,
-        text: (0, r.jsx)(j, {
-            badgeType: H,
-            guildTraits: Z
+        color: l,
+        position: d,
+        'aria-label': R,
+        text: (0, r.jsx)(M, {
+            badgeType: B,
+            guildTraits: G
         }),
-        tooltipContentClassName: C.tooltipRemovePadding,
+        tooltipContentClassName: A.tooltipRemovePadding,
         children: (e) =>
             (0, r.jsx)(u.P3F, {
-                onClick: W,
-                tabIndex: Y ? 0 : -1,
+                onClick: V,
+                tabIndex: F ? 0 : -1,
                 children: (0, r.jsx)(
-                    m.Z,
-                    D(P({}, e), {
-                        className: O,
-                        flowerStarClassName: T,
+                    p.Z,
+                    P(C({}, e), {
+                        className: E,
+                        flowerStarClassName: b,
                         allowFullSizedIcon: !0,
-                        color: null != n ? n : w,
-                        stroke: R,
-                        size: B,
-                        children: (0, r.jsx)(K, {
+                        color: null != n ? n : T,
+                        stroke: I,
+                        size: k,
+                        children: (0, r.jsx)(Z, {
                             size: 'custom',
-                            width: er,
-                            height: er,
-                            className: N,
+                            width: $,
+                            height: $,
+                            className: y,
                             color: null != t ? t : 'currentColor'
                         })
                     })

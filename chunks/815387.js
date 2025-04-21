@@ -328,7 +328,6 @@ let eR = Object.freeze({
                 children: [
                     (0, r.jsx)(eC.Z, {
                         message: t,
-                        guildId: i.guild_id,
                         compact: n,
                         usernameHook: o
                     }),

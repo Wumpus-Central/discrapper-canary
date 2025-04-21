@@ -1,6 +1,7 @@
 n.d(t, {
     Dq: () => s,
     ID: () => l,
+    Pq: () => u,
     pL: () => c
 });
 var r = n(314897),
@@ -39,4 +40,7 @@ function c(e) {
         join_request_status: c,
         join_request_user_id: u
     });
+}
+function u(e) {
+    a.default.track(o.rMx.MEMBER_VERIFICATION_APPLICATION_VIEWED, { guild_id: e });
 }
