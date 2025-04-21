@@ -9,7 +9,7 @@ var r = n(774078),
     o = n(388032);
 let s = 60000;
 var l = (function (e) {
-    return (e[(e.SHORT_TIME_LEFT = 0)] = 'SHORT_TIME_LEFT'), (e[(e.LONG_TIME_LEFT = 1)] = 'LONG_TIME_LEFT'), (e[(e.ENDS_IN = 2)] = 'ENDS_IN'), (e[(e.SHORT_TIME = 3)] = 'SHORT_TIME'), e;
+    return (e[(e.SHORT_TIME_LEFT = 0)] = 'SHORT_TIME_LEFT'), (e[(e.LONG_TIME_LEFT = 1)] = 'LONG_TIME_LEFT'), (e[(e.ENDS_IN = 2)] = 'ENDS_IN'), (e[(e.SHORT_TIME = 3)] = 'SHORT_TIME'), (e[(e.CREDITS_ENDS_IN = 4)] = 'CREDITS_ENDS_IN'), e;
 })({});
 function c(e) {
     return e.days > 0
@@ -57,6 +57,13 @@ function u(e, t) {
                 days: o.t.rLqNaW,
                 hours: o.t.d1LvCA,
                 minutes: o.t.Z2LX7O
+            };
+            break;
+        case 4:
+            n = {
+                days: o.t.xQ3zuL,
+                hours: o.t.SFU7QE,
+                minutes: o.t.Y4FNdH
             };
             break;
         case 3:

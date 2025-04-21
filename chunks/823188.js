@@ -54,24 +54,28 @@ var i = n(120356),
         return (e[(e.PREMIUM_TIER_0_WHITE_FILL = 0)] = 'PREMIUM_TIER_0_WHITE_FILL'), (e[(e.PREMIUM_TIER_0_GRADIENT_FILL = 1)] = 'PREMIUM_TIER_0_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_WHITE_FILL = 2)] = 'PREMIUM_TIER_2_WHITE_FILL'), (e[(e.PREMIUM_TIER_2_NEW_GRADIENT_FILL = 3)] = 'PREMIUM_TIER_2_NEW_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_OLD_GRADIENT_FILL = 4)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE = 5)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE'), (e[(e.PREMIUM_TIER_2_GREY_FILL = 6)] = 'PREMIUM_TIER_2_GREY_FILL'), e;
     })({});
 function H(e) {
-    let { text: t, className: n, colorOptions: i = 2 } = e;
-    return (0, r.jsx)('div', {
+    let { text: t, className: n, colorOptions: i = 2, icon: o, gap: s = !0 } = e;
+    return (0, r.jsxs)('div', {
         className: a()(n, G.freeTrialPill, {
             [G.freeTrialPillTier0GradientFill]: 1 === i,
             [G.freeTrialPillTier2GradientFill]: 3 === i,
             [G.freeTrialPillTier2OldGradientFill]: 4 === i,
             [G.lightBackgroundPill]: 5 === i,
-            [G.greyBackgroundPill]: 6 === i
+            [G.greyBackgroundPill]: 6 === i,
+            [G.freeTrialPillGap]: s
         }),
-        children: (0, r.jsx)(d.Text, {
-            variant: 'text-xs/bold',
-            className: a()(G.freeTrialPillText, {
-                [G.freeTrialPillTextInverted]: 0 !== i && 2 !== i,
-                [G.freeTrialPillTextTier0]: 0 === i,
-                [G.freeTrialPillTextTier2]: 2 === i || 6 === i
+        children: [
+            (0, r.jsx)(d.Text, {
+                variant: 'text-xs/bold',
+                className: a()(G.freeTrialPillText, {
+                    [G.freeTrialPillTextInverted]: 0 !== i && 2 !== i,
+                    [G.freeTrialPillTextTier0]: 0 === i,
+                    [G.freeTrialPillTextTier2]: 2 === i || 6 === i
+                }),
+                children: t
             }),
-            children: t
-        })
+            o
+        ]
     });
 }
 function Y(e) {
