@@ -1372,7 +1372,6 @@ function nJ(e) {
             soundshareId: o.desktopSource.soundshareId,
             useVideoHook: _,
             useGraphicsCapture: tw(),
-            useGraphicsCaptureApiLevel: null,
             useLoopback: r.getExperimentalSoundshare(),
             useQuartzCapturer: !0,
             allowScreenCaptureKit: tL(),
