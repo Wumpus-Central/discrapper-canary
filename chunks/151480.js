@@ -1,5 +1,6 @@
 n.d(t, {
     X: () => p,
+    i: () => h,
     k9: () => _
 });
 var r = n(602715),
@@ -56,4 +57,11 @@ async function p(e, t, n) {
             channelId: e.id
         });
     }
+}
+function h(e, t) {
+    a.Z.dispatch({
+        type: 'UPDATE_CHAT_WALLPAPER_OVERRIDES',
+        wallpaperId: e,
+        overrides: t
+    });
 }
