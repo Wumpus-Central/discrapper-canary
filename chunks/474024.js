@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -10,57 +10,61 @@ var r = n(200651),
     u = n(330705),
     m = n(323220),
     g = n(434404),
-    p = n(981631),
-    h = n(388032),
-    f = n(951767);
-function x(e) {
+    p = n(436879),
+    h = n(981631),
+    f = n(388032),
+    x = n(951767);
+function b(e) {
     var t;
     let { profile: n, canManageGuild: l } = e,
-        x = n.id,
-        b = a.Y.VISIBLE.has(n.visibility),
-        j = (0, o.e7)(
+        b = n.id,
+        j = a.Y.VISIBLE.has(n.visibility),
+        _ = (0, o.e7)(
             [d.Z],
             () => {
                 var e;
-                return (null == (e = d.Z.getProfile(x)) ? void 0 : e.visibility) === u.k.PUBLIC_WITH_RECRUITMENT;
+                return (null == (e = d.Z.getProfile(b)) ? void 0 : e.visibility) === u.k.PUBLIC_WITH_RECRUITMENT;
             },
-            [x]
+            [b]
         ),
-        _ = i.useCallback(() => {
-            b ? g.Z.updateGuildProfile(x, { visibility: u.k.RESTRICTED }) : g.Z.updateGuildProfile(x, { visibility: j ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
-        }, [x, j, b]),
-        v = i.useCallback(() => {
-            g.Z.setSection(p.pNK.ACCESS, p.KsC.ACCESS_DISCOVERABLE);
+        v = i.useRef(null);
+    (0, p.Z)(v, h.KsC.PROFILE_VISIBILITY);
+    let O = i.useCallback(() => {
+            j ? g.Z.updateGuildProfile(b, { visibility: u.k.RESTRICTED }) : g.Z.updateGuildProfile(b, { visibility: _ ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
+        }, [b, _, j]),
+        C = i.useCallback(() => {
+            g.Z.setSection(h.pNK.ACCESS, h.KsC.ACCESS_DISCOVERABLE);
         }, []),
-        O = null == (t = n.features) ? void 0 : t.includes(p.oNc.DISCOVERABLE);
+        y = null == (t = n.features) ? void 0 : t.includes(h.oNc.DISCOVERABLE);
     return (0, r.jsxs)(c.hjN, {
-        className: f.twoColumnContainer,
+        className: x.twoColumnContainer,
+        ref: v,
         children: [
             (0, r.jsxs)('div', {
-                className: f.column,
+                className: x.column,
                 children: [
                     (0, r.jsx)(c.j7V, {
-                        onChange: _,
-                        value: !b,
+                        onChange: O,
+                        value: !j,
                         hideBorder: !0,
-                        disabled: O || !l,
-                        children: h.intl.string(h.t.fjHWen)
+                        disabled: y || !l,
+                        children: f.intl.string(f.t.fjHWen)
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
-                        children: h.intl.string(h.t.J1YOV1)
+                        children: f.intl.string(f.t.J1YOV1)
                     }),
-                    O &&
+                    y &&
                         (0, r.jsx)(c.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-muted',
-                            children: h.intl.format(h.t.R8jY9v, {
+                            children: f.intl.format(f.t.R8jY9v, {
                                 accessLink: (e, t) =>
                                     (0, r.jsx)(
                                         c.eee,
                                         {
-                                            onClick: v,
+                                            onClick: C,
                                             children: e
                                         },
                                         t
@@ -70,9 +74,9 @@ function x(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: s()(f.column, { [f.profileViewDisabled]: b }),
+                className: s()(x.column, { [x.profileViewDisabled]: j }),
                 children: (0, r.jsx)(m.Z, {
-                    guildId: x,
+                    guildId: b,
                     name: null
                 })
             })
