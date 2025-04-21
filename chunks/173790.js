@@ -16,8 +16,8 @@ var i = n(200651),
     _ = n(783097),
     y = n(753972),
     x = n(387658),
-    v = n(536650),
-    C = n(675993),
+    C = n(536650),
+    v = n(675993),
     g = n(689079),
     j = n(388032),
     P = n(189102),
@@ -29,7 +29,7 @@ function E(e) {
         I = (0, l.e7)([h.Z], () => h.Z.entrypoint()),
         S = null != (t = (0, p.q)(c.id === g.bi.BUILT_IN ? null : c.id)) ? t : c,
         T = (0, l.e7)([s.Z], () => s.Z.inDevModeForApplication(S.id)),
-        L = (0, _.ye)(S) ? O : C.Z,
+        L = (0, _.ye)(S) ? O : v.Z,
         w = m.PM.useExperiment({ location: 'AppLauncherApplicationViewScreen' }),
         { enabled: R } = f.X.useExperiment({ location: 'AppLauncherApplicationViewScreen' }),
         Z = r.useRef(null),
@@ -57,7 +57,7 @@ function E(e) {
             role: 'region',
             'aria-label': j.intl.formatToPlainString(j.t['4OP4Ul'], { applicationName: B }),
             children: [
-                (0, i.jsx)(v.Z, {
+                (0, i.jsx)(C.Z, {
                     application: S,
                     context: n,
                     name: B,
@@ -88,7 +88,7 @@ function E(e) {
                       })
                     : null,
                 w.enabled || R
-                    ? (0, i.jsx)(C.u, {
+                    ? (0, i.jsx)(v.u, {
                           context: n,
                           application: S,
                           hasCommands: k,
@@ -108,7 +108,7 @@ function O(e) {
         }),
         s = (0, _.yJ)(n),
         d = null != s && null != s.activity_preview_video_asset_id ? (0, c.Z)(n.id, s.activity_preview_video_asset_id) : null;
-    return (0, i.jsx)(C.Z, {
+    return (0, i.jsx)(v.Z, {
         context: t,
         application: n,
         imageCoverUrl: a.url,

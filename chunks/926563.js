@@ -11,38 +11,38 @@ var a = n(481060),
     d = n(530),
     m = n(4517),
     f = n(5192),
-    h = n(228168),
-    p = n(200051);
+    p = n(228168),
+    h = n(200051);
 function b(e) {
     let { user: t, previewText: n, previewEmoji: b, previewStatus: S, placeHolderText: j, transitionState: g, label: x } = e,
         v = (0, i.ZP)(t.id);
     return (0, l.jsxs)(c.Z, {
         user: t,
         displayProfile: v,
-        profileType: h.y0.BITE_SIZE,
-        className: p.profilePreviewContainer,
+        profileType: p.y0.BITE_SIZE,
+        className: h.profilePreviewContainer,
         children: [
             (0, l.jsxs)('header', {
                 children: [
                     (0, l.jsx)(u.Z, {
                         user: t,
                         displayProfile: v,
-                        profileType: h.y0.BITE_SIZE
+                        profileType: p.y0.BITE_SIZE
                     }),
                     (0, l.jsx)('div', {
                         inert: '',
                         children: (0, l.jsx)(o.Z, {
                             user: t,
                             displayProfile: v,
-                            profileType: h.y0.BITE_SIZE,
+                            profileType: p.y0.BITE_SIZE,
                             previewStatus: S,
-                            className: p.avatar
+                            className: h.avatar
                         })
                     }),
                     (0, l.jsx)(m.Z, {
                         location: 'CustomStatusUserProfilePreview',
                         user: t,
-                        profileType: h.y0.BITE_SIZE,
+                        profileType: p.y0.BITE_SIZE,
                         previewText: n,
                         previewEmoji: b,
                         placeholderText: j,
@@ -53,16 +53,16 @@ function b(e) {
             }),
             (null == v ? void 0 : v.profileEffectId) != null && (0, l.jsx)(r.Z, { profileEffectId: v.profileEffectId }),
             (0, l.jsx)('div', {
-                className: p.usernameContainer,
+                className: h.usernameContainer,
                 inert: '',
                 children: (0, l.jsx)(d.Z, {
                     user: t,
-                    profileType: h.y0.BITE_SIZE,
+                    profileType: p.y0.BITE_SIZE,
                     nickname: f.ZP.getName(null, null, t),
                     pronouns: null == v ? void 0 : v.pronouns,
                     tags: (0, l.jsx)(s.Z, {
                         displayProfile: v,
-                        profileType: h.y0.BITE_SIZE
+                        profileType: p.y0.BITE_SIZE
                     })
                 })
             })

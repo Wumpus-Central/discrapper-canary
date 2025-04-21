@@ -78,8 +78,8 @@ let y = i.memo(function (e) {
         })(e, ['folderNode']);
     let { id: _, name: O, color: v, children: C } = t,
         j = C.map((e) => e.id),
-        S = (0, a.Z)((e) => e.guildId),
-        x = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(_)),
+        x = (0, a.Z)((e) => e.guildId),
+        S = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(_)),
         E = (function (e) {
             let t = e.children
                     .map((e) => {
@@ -128,8 +128,8 @@ let y = i.memo(function (e) {
         p.Z,
         b(m({}, y), {
             folderNode: t,
-            expanded: x,
-            selected: null != S && j.includes(S),
+            expanded: S,
+            selected: null != x && j.includes(x),
             mentionCount: P,
             isMentionLowImportance: w,
             unread: N,

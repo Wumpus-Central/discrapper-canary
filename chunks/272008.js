@@ -98,18 +98,18 @@ async function I() {
                     url: E.ANM.QUESTS_CURRENT_QUESTS,
                     rejectWithError: !1
                 }),
-                t = e.body.quests
-                    .filter((e) => (0, p.Qe)(e))
-                    .map((e) => (0, p.WP)(e))
-                    .filter((e) => {
-                        var t;
-                        return (null == (t = e.userStatus) ? void 0 : t.claimedAt) != null || g.r.build(e.config).rewardPlatforms.length > 0;
-                    }),
-                n = e.body.excluded_quests;
+                t = e.body.quests.filter((e) => (0, p.Qe)(e)).map((e) => (0, p.WP)(e)),
+                n = e.body.quest_enrollment_blocked_until,
+                r = t.filter((e) => {
+                    var t;
+                    return (null == (t = e.userStatus) ? void 0 : t.claimedAt) != null || g.r.build(e.config).rewardPlatforms.length > 0;
+                }),
+                o = e.body.excluded_quests;
             a.Z.dispatch({
                 type: 'QUESTS_FETCH_CURRENT_QUESTS_SUCCESS',
-                quests: t,
-                excludedQuests: n
+                quests: r,
+                excludedQuests: o,
+                questEnrollmentBlockedUntil: n
             }),
                 d.Z.recordQuestRequestApiResponse(E.ANM.QUESTS_CURRENT_QUESTS, { wasSuccessful: !0 });
         } catch (e) {

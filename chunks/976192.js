@@ -1,82 +1,82 @@
-n.d(t, { Z: () => m });
-var l = n(200651),
-    r = n(192379),
+n.d(t, { Z: () => p });
+var r = n(200651),
+    l = n(192379),
     i = n(442837),
-    o = n(481060),
-    a = n(616780),
+    a = n(481060),
+    o = n(616780),
     u = n(40851),
-    s = n(300284),
-    c = n(484459),
+    c = n(300284),
+    s = n(484459),
     d = n(314897),
-    b = n(271383),
-    g = n(430824),
-    Z = n(496675),
-    f = n(594174),
-    p = n(981631),
-    O = n(388032),
-    h = n(965385);
-function m(e) {
-    let { guildId: t, userId: m, analyticsLocation: j, analyticsLocations: P, context: y, icon: E } = e,
-        x = g.Z.getGuild(t),
-        N = d.default.getId(),
-        v = (0, i.e7)([f.default], () => f.default.getUser(m)),
-        _ = (0, i.e7)([b.ZP], () => b.ZP.isGuestOrLurker(t, m), [t, m]);
-    (0, i.e7)([Z.Z], () => Z.Z.getGuildVersion(t), [t]);
-    let C = r.useMemo(() => ({ [t]: [m] }), [t, m]);
-    (0, a.$)(C);
-    let S = y === p.IlC.POPOUT,
-        M = (0, s.Z)({
-            guild: x,
-            analyticsLocation: j
+    f = n(271383),
+    O = n(430824),
+    E = n(496675),
+    g = n(594174),
+    b = n(981631),
+    y = n(388032),
+    _ = n(965385);
+function p(e) {
+    let { guildId: t, userId: p, analyticsLocation: m, analyticsLocations: j, context: M, icon: P } = e,
+        S = O.Z.getGuild(t),
+        A = d.default.getId(),
+        v = (0, i.e7)([g.default], () => g.default.getUser(p)),
+        Z = (0, i.e7)([f.ZP], () => f.ZP.isGuestOrLurker(t, p), [t, p]);
+    (0, i.e7)([E.Z], () => E.Z.getGuildVersion(t), [t]);
+    let N = l.useMemo(() => ({ [t]: [p] }), [t, p]);
+    (0, o.$)(N);
+    let I = M === b.IlC.POPOUT,
+        h = (0, c.Z)({
+            guild: S,
+            analyticsLocation: m
         }),
         T = (0, u.Aq)();
-    if (null == x || S) return null;
-    let I = N === m && (Z.Z.can(p.Plq.CHANGE_NICKNAME, x) || Z.Z.can(p.Plq.MANAGE_NICKNAMES, x)),
-        w = N === m,
-        R = Z.Z.canManageUser(p.Plq.MANAGE_NICKNAMES, m, x);
-    if (!(I || R || w) || null == v || _) return null;
-    let A = x.hasFeature(p.oNc.HUB) ? O.intl.string(O.t['+MWrWl']) : O.intl.string(O.t['PKQB/P']),
-        U = w ? A : O.intl.string(O.t.dilOFx);
-    return (0, l.jsx)(o.sNh, {
+    if (null == S || I) return null;
+    let D = A === p && (E.Z.can(b.Plq.CHANGE_NICKNAME, S) || E.Z.can(b.Plq.MANAGE_NICKNAMES, S)),
+        C = A === p,
+        U = E.Z.canManageUser(b.Plq.MANAGE_NICKNAMES, p, S);
+    if (!(D || U || C) || null == v || Z) return null;
+    let R = S.hasFeature(b.oNc.HUB) ? y.intl.string(y.t['+MWrWl']) : y.intl.string(y.t['PKQB/P']),
+        L = C ? R : y.intl.string(y.t.dilOFx);
+    return (0, r.jsx)(a.sNh, {
         id: 'change-nickname',
-        label: (0, l.jsx)('div', {
-            className: h.labelWrapper,
-            children: (0, l.jsx)('span', {
-                className: h.label,
-                children: U
+        label: (0, r.jsx)('div', {
+            className: _.labelWrapper,
+            children: (0, r.jsx)('span', {
+                className: _.label,
+                children: L
             })
         }),
-        icon: E,
+        icon: P,
         action: () => {
-            w
-                ? ((0, c.Z)(v.id, v.getAvatarURL(t, 80), { guildId: t }), M(), T.dispatch(p.CkL.POPOUT_CLOSE), (0, o.pTH)())
-                : (0, o.ZDy)(async () => {
+            C
+                ? ((0, s.Z)(v.id, v.getAvatarURL(t, 80), { guildId: t }), h(), T.dispatch(b.CkL.POPOUT_CLOSE), (0, a.pTH)())
+                : (0, a.ZDy)(async () => {
                       let { default: e } = await n.e('17712').then(n.bind(n, 620021));
                       return (n) => {
-                          var r, i;
-                          return (0, l.jsx)(
+                          var l, i;
+                          return (0, r.jsx)(
                               e,
-                              ((r = (function (e) {
+                              ((l = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
-                                          l = Object.keys(n);
+                                          r = Object.keys(n);
                                       'function' == typeof Object.getOwnPropertySymbols &&
-                                          (l = l.concat(
+                                          (r = r.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                               })
                                           )),
-                                          l.forEach(function (t) {
-                                              var l;
-                                              (l = n[t]),
+                                          r.forEach(function (t) {
+                                              var r;
+                                              (r = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
-                                                            value: l,
+                                                            value: r,
                                                             enumerable: !0,
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = l);
+                                                      : (e[t] = r);
                                           });
                                   }
                                   return e;
@@ -85,22 +85,22 @@ function m(e) {
                                   {
                                       guildId: t,
                                       user: v,
-                                      analyticsSource: j,
-                                      analyticsLocations: P
+                                      analyticsSource: m,
+                                      analyticsLocations: j
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+                                  ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
-                                            var l = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, l);
+                                            var r = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, r);
                                         }
                                         return n;
                                     })(Object(i)).forEach(function (e) {
-                                        Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+                                        Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
                                     }),
-                              r)
+                              l)
                           );
                       };
                   });

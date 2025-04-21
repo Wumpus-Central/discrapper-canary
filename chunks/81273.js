@@ -44,7 +44,7 @@ let L = (e, t, n, a) => {
         V = (0, C._k)(n, { includeSoftDeleted: !0 }).map((e) => e.subscription_plans[0].id),
         H = (0, I.V)(z),
         G = null != H,
-        Y = (null == z ? void 0 : z.trialId) != null,
+        Y = !!(null == z ? void 0 : z.hasActiveTrial),
         { loading: q, getTrialPurchaseEligibility: X } = (0, E.F)(),
         K = (0, C.oC)(null == e ? void 0 : e.id),
         { analyticsLocations: J } = (0, m.ZP)(),

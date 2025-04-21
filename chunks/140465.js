@@ -118,7 +118,7 @@ let m = () => {
         let e = (0, o.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
             t = m(),
             n = null !== e && e.hasPremiumNitroMonthly,
-            r = null != e && null != e.trialId;
+            r = !!(null == e ? void 0 : e.hasActiveTrial);
         return n && !r && !t;
     },
     v = () => (0, u.W)();

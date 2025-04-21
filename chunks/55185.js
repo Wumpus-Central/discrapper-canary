@@ -71,7 +71,7 @@ function j(e) {
         ]
     });
 }
-function S(e) {
+function x(e) {
     let { children: t, closePopout: n } = e,
         r = (0, l.useRef)(null);
     return (
@@ -118,11 +118,11 @@ function S(e) {
         })
     );
 }
-function x(e) {
+function S(e) {
     let { closePopout: t } = e,
         { analyticsLocations: n } = (0, h.ZP)(d.Z.SHARING_CONTROLS_COACHMARK),
         r = p.G6.useSetting();
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(x, {
         closePopout: t,
         children: [
             (0, i.jsx)(c.Text, {
@@ -146,7 +146,7 @@ function E(e) {
     let { closePopout: t } = e,
         { analyticsLocations: n } = (0, h.ZP)(d.Z.SHARING_CONTROLS_COACHMARK),
         r = p.G6.useSetting();
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(x, {
         children: [
             (0, i.jsx)(o.X6, {
                 variant: 'heading-sm/semibold',
@@ -173,7 +173,7 @@ function E(e) {
 function I(e) {
     let { closePopout: t } = e,
         n = p.G6.useSetting();
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(x, {
         closePopout: t,
         children: [
             (0, i.jsx)(c.Text, {
@@ -192,7 +192,7 @@ function I(e) {
 function P(e) {
     let { closePopout: t } = e,
         n = p.G6.useSetting();
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(x, {
         closePopout: t,
         children: [
             (0, i.jsx)(c.Text, {
@@ -213,7 +213,7 @@ function P(e) {
 }
 function w() {
     let e = p.G6.useSetting();
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(x, {
         children: [
             (0, i.jsx)(j, { showCurrentGame: e }),
             (0, i.jsx)(c.$i$, { className: O.divider }),
@@ -227,7 +227,7 @@ function w() {
 }
 function N(e) {
     let { closePopout: t } = e;
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(x, {
         children: [
             (0, i.jsx)(o.X6, {
                 variant: 'heading-sm/semibold',
@@ -256,7 +256,7 @@ function N(e) {
 }
 function Z() {
     let e = p.G6.useSetting();
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(x, {
         children: [
             (0, i.jsx)(j, {
                 showCurrentGame: e,
@@ -282,7 +282,7 @@ function A(e) {
         o)
     ) {
         case 0:
-            return (0, i.jsx)(x, { closePopout: n });
+            return (0, i.jsx)(S, { closePopout: n });
         case 1:
             return (0, i.jsx)(I, { closePopout: n });
         case 2:

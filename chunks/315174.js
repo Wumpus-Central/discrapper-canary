@@ -24,7 +24,7 @@ var r = n(200651),
     v = n(647086),
     C = n(388032),
     j = n(917669);
-function S(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function S(e) {
     }
     return e;
 }
-function x(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -114,7 +114,7 @@ function I(e) {
                     children: (e) =>
                         (0, r.jsxs)(
                             'div',
-                            x(S({ className: j.communityInfoPill }, e), {
+                            S(x({ className: j.communityInfoPill }, e), {
                                 children: [
                                     (0, r.jsx)(u.enf, {
                                         size: 'custom',
@@ -229,7 +229,7 @@ function T(e) {
                       return (t) =>
                           (0, r.jsx)(
                               e,
-                              x(S({}, t), {
+                              S(x({}, t), {
                                   guild: l,
                                   source: O.t4x.GUILD_HEADER
                               })
@@ -237,7 +237,7 @@ function T(e) {
                   })
                 : (0, u.ZDy)(async () => {
                       let { default: e } = await n.e('88358').then(n.bind(n, 598402));
-                      return (t) => (0, r.jsx)(e, S({}, t));
+                      return (t) => (0, r.jsx)(e, x({}, t));
                   });
         }, [p, l]);
     return (0, r.jsxs)(r.Fragment, {
@@ -252,8 +252,8 @@ function T(e) {
                     var n;
                     return (0, r.jsxs)(
                         u.P3F,
-                        x(
-                            S(
+                        S(
+                            x(
                                 {
                                     className: j.guildDropdown,
                                     'aria-label': C.intl.formatToPlainString(C.t.xMXpl5, { guildName: null != (n = null == l ? void 0 : l.toString()) ? n : '' }),
@@ -295,7 +295,7 @@ function T(e) {
                     children: (e) =>
                         (0, r.jsx)(
                             u.P3F,
-                            x(S({ className: j.inviteButton }, e), {
+                            S(x({ className: j.inviteButton }, e), {
                                 onClick: () => {
                                     var t;
                                     null == (t = e.onClick) || t.call(e), m();
@@ -378,7 +378,7 @@ let A = i.memo(function (e) {
                                 children: [
                                     (0, r.jsx)('div', {
                                         className: o()(j.headerContent, j.primaryInfo),
-                                        children: q ? (0, r.jsx)(T, x(S({}, Q), { children: w })) : (0, r.jsx)(Z, x(S({}, Q), { children: w }))
+                                        children: q ? (0, r.jsx)(T, S(x({}, Q), { children: w })) : (0, r.jsx)(Z, S(x({}, Q), { children: w }))
                                     }),
                                     M &&
                                         (0, r.jsx)(I, {

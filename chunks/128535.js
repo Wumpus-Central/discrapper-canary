@@ -1,11 +1,11 @@
-n.d(t, { Z: () => O }), n(539854), n(388685);
+n.d(t, { Z: () => T }), n(539854), n(388685);
 var r = n(200651);
 n(192379);
 var s = n(120356),
     i = n.n(s),
     o = n(959078),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     c = n(607070),
     u = n(553795),
     d = n(358085),
@@ -20,9 +20,9 @@ var s = n(120356),
 let C = (e) => (0 === e.length ? b.warning : b.danger),
     v = (e, t) => (0 === e.length ? j.intl.formatToPlainString(j.t.gX0Qc3, { gameTitle: t }) : j.intl.formatToPlainString(j.t['28Ql29'], { gameTitle: t })),
     y = (e) => {
-        let { quest: t, location: n, errors: s, gameTitle: i, consoleHelpArticle: a, expiredCredentialsInteractable: c, impressionId: p } = e;
+        let { quest: t, location: n, errors: s, gameTitle: i, consoleHelpArticle: l, expiredCredentialsInteractable: c, impressionId: p } = e;
         if (0 === s.length)
-            return (0, r.jsx)(l.Text, {
+            return (0, r.jsx)(a.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
                 children: j.intl.format(j.t.GXqvCw, { gameTitle: i })
@@ -53,17 +53,17 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                     }
                 });
             }),
-            a
+            l
         ];
-        return (0, r.jsx)(l.Text, {
+        return (0, r.jsx)(a.Text, {
             variant: 'text-sm/medium',
             color: 'text-muted',
             children: g.reduce((e, t) => [...e, t, ' '], [])
         });
     },
-    O = function (e) {
+    T = function (e) {
         let t = e.quest.config.messages.gameTitle,
-            n = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
+            n = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
             s = (0, f.k3)(e.quest.id, e.location),
             o = (0, x.n)(),
             u = (0, m.O5)(),
@@ -73,8 +73,8 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                 className: b.refreshIcon
             }),
             {
-                errorHints: O,
-                startingConsoleQuest: T,
+                errorHints: T,
+                startingConsoleQuest: O,
                 startConsoleQuest: E
             } = (0, g.GI)({
                 questId: e.quest.id,
@@ -89,7 +89,7 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                 afterRequest: h.stopAnimation
             });
         return (0, r.jsxs)('div', {
-            className: i()(b.container, { [b.inFlight]: T }),
+            className: i()(b.container, { [b.inFlight]: O }),
             children: [
                 (0, r.jsxs)('div', {
                     className: b.info,
@@ -97,22 +97,22 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                         (0, r.jsxs)('div', {
                             className: b.header,
                             children: [
-                                (0, r.jsx)(l.P4T, {
-                                    className: i()(b.headerIcon, C(O)),
+                                (0, r.jsx)(a.P4T, {
+                                    className: i()(b.headerIcon, C(T)),
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 16,
                                     height: 16
                                 }),
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: 'text-sm/semibold',
-                                    children: v(O, t)
+                                    children: v(T, t)
                                 })
                             ]
                         }),
                         y({
                             quest: e.quest,
-                            errors: O,
+                            errors: T,
                             gameTitle: t,
                             location: e.location,
                             consoleHelpArticle: s,
@@ -123,10 +123,10 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                 }),
                 (0, r.jsx)('div', {
                     className: b.cta,
-                    children: (0, r.jsx)(l.zxk, {
-                        color: l.Ttl.PRIMARY,
+                    children: (0, r.jsx)(a.zxk, {
+                        color: a.Ttl.PRIMARY,
                         onClick: E,
-                        disabled: T,
+                        disabled: O,
                         children: (0, r.jsxs)('div', {
                             className: b.ctaInner,
                             children: [h.render(), j.intl.string(j.t.nPThNT)]

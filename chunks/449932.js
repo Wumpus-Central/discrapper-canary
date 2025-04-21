@@ -106,23 +106,23 @@ let j = (e) => {
             }
         });
     if (null == j) return null;
-    let S = y || (0, c.Z)(n),
-        x = (0, f.vd)(t.type);
+    let x = y || (0, c.Z)(n),
+        S = (0, f.vd)(t.type);
     return (0, r.jsxs)('div', {
         className: O.activity,
         children: [
             (0, r.jsx)('div', {
                 className: O.channelActivityContainer,
-                children: S
+                children: x
                     ? (0, r.jsx)(_.Z, {
                           activity: n,
                           embeddedApp: l,
                           user: j,
                           channel: t,
                           sortedVoiceStates: i,
-                          onOpenSpotifyTrack: x ? h.aG : void 0,
-                          onOpenSpotifyArtist: x ? h.d$ : void 0,
-                          onOpenSpotifyAlbum: x ? h.Z5 : void 0
+                          onOpenSpotifyTrack: S ? h.aG : void 0,
+                          onOpenSpotifyArtist: S ? h.d$ : void 0,
+                          onOpenSpotifyAlbum: S ? h.Z5 : void 0
                       })
                     : (0, r.jsx)(a.Z, {
                           type: a.P.VOICE_CHANNEL,

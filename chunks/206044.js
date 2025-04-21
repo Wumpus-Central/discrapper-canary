@@ -3,8 +3,8 @@ var r = n(200651),
     s = n(192379),
     i = n(120356),
     o = n.n(i),
-    a = n(200100),
-    l = n(722770),
+    l = n(200100),
+    a = n(722770),
     c = n(442837),
     u = n(846519),
     d = n(481060),
@@ -19,8 +19,8 @@ var r = n(200651),
     C = n(497505),
     v = n(918701),
     y = n(475595),
-    O = n(566078),
-    T = n(685613),
+    T = n(566078),
+    O = n(685613),
     E = n(611855),
     N = n(644646),
     q = n(670638),
@@ -72,8 +72,8 @@ function D(e, t) {
         e
     );
 }
-let A = (0, a.animated)(d.CJ0),
-    M = (0, a.animated)(h.Z),
+let M = (0, l.animated)(d.CJ0),
+    A = (0, l.animated)(h.Z),
     Z = (e) => {
         var { quest: t, location: n, questContentPosition: i } = e,
             o = (function (e, t) {
@@ -95,7 +95,7 @@ let A = (0, a.animated)(d.CJ0),
                 }
                 return s;
             })(e, ['quest', 'location', 'questContentPosition']);
-        let [a, l] = s.useState(!1),
+        let [l, a] = s.useState(!1),
             c = s.useRef(new u.V7()),
             m = (0, j.O5)();
         s.useEffect(() => {
@@ -112,12 +112,12 @@ let A = (0, a.animated)(d.CJ0),
                 questContentPosition: i
             }),
                 (0, f.JG)((0, v.Rs)(t.id), () => {
-                    l(!0), c.current.start(1000, () => l(!1));
+                    a(!0), c.current.start(1000, () => a(!1));
                 });
         };
         return (0, r.jsx)(d.ua7, {
-            forceOpen: a,
-            shouldShow: a,
+            forceOpen: l,
+            shouldShow: l,
             color: d.ua7.Colors.GREEN,
             text: R.intl.string(R.t.MSaeTU),
             children: () =>
@@ -136,7 +136,7 @@ let A = (0, a.animated)(d.CJ0),
     k = (e) => {
         var t, n;
         let { isFocused: i, isQuestExpired: u, quest: h, location: f, size: v, expansionSpring: k, isAnimating: L, isExpanded: B, isInConcurrentQuestExperiment: U, contentPosition: Q, toggleExpanded: W } = e,
-            { ref: F, height: z } = (0, m.ZP)(),
+            { ref: z, height: F } = (0, m.ZP)(),
             [G, H] = s.useState(null),
             [X, V] = s.useState(null),
             Y = (0, x.Z)((e) => {
@@ -157,12 +157,12 @@ let A = (0, a.animated)(d.CJ0),
                 month: 'long',
                 day: 'numeric'
             }),
-            ea = (0, b.B6)(O.r.build(h.config).rewardsExpireAt, {
+            el = (0, b.B6)(T.r.build(h.config).rewardsExpireAt, {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
             }),
-            el = s.useMemo(() => null != h.config.cosponsorMetadata, [h]),
+            ea = s.useMemo(() => null != h.config.cosponsorMetadata, [h]),
             ec = (e) => {
                 e.stopPropagation(),
                     e.currentTarget.blur(),
@@ -177,12 +177,12 @@ let A = (0, a.animated)(d.CJ0),
         s.useEffect(() => {
             $.isAnimated && null != ee.current && (i ? ee.current.play() : i || (ee.current.pause(), (ee.current.currentTime = 0)));
         }, [i, $]);
-        let eu = (0, r.jsx)(T.ZP, {
+        let eu = (0, r.jsx)(O.ZP, {
             className: _.partnerBranding,
-            logotypeClassName: el ? _.partnerBrandingLogotypes : void 0,
-            gameTileSize: T.fF.MEDIUM,
+            logotypeClassName: ea ? _.partnerBrandingLogotypes : void 0,
+            gameTileSize: O.fF.MEDIUM,
             quest: h,
-            separatorSpacing: T.US.MEDIUM,
+            separatorSpacing: O.US.MEDIUM,
             theme: w.BR.DARK,
             withGameTile: !en || null == h.config.cosponsorMetadata
         });
@@ -193,9 +193,9 @@ let A = (0, a.animated)(d.CJ0),
                 [_.outerContainerXs]: 'xs' === v
             }),
             'aria-label': R.intl.string(R.t.dcl9MT),
-            style: { height: et ? z : void 0 },
+            style: { height: et ? F : void 0 },
             children: [
-                (0, r.jsx)(M, {
+                (0, r.jsx)(A, {
                     style: {
                         opacity: k.to({
                             range: [0, 1],
@@ -222,7 +222,7 @@ let A = (0, a.animated)(d.CJ0),
                     className: _.header,
                     'aria-expanded': B,
                     children: [
-                        (0, r.jsxs)(a.animated.div, {
+                        (0, r.jsxs)(l.animated.div, {
                             className: o()(_.headerContent, { [_.headerContentEmbed]: en }),
                             style: {
                                 y: et
@@ -234,7 +234,7 @@ let A = (0, a.animated)(d.CJ0),
                             },
                             children: [
                                 et &&
-                                    (0, r.jsx)(a.animated.div, {
+                                    (0, r.jsx)(l.animated.div, {
                                         className: _.headerCollapsedContent,
                                         style: {
                                             opacity: k.to({
@@ -274,9 +274,9 @@ let A = (0, a.animated)(d.CJ0),
                                             ]
                                         })
                                     }),
-                                (0, r.jsxs)(a.animated.div, {
+                                (0, r.jsxs)(l.animated.div, {
                                     ref: (e) => {
-                                        F.current = e;
+                                        z.current = e;
                                     },
                                     className: o()(_.headerExpandedContent, {
                                         [_.outerContainerGiftInventory]: et,
@@ -324,7 +324,7 @@ let A = (0, a.animated)(d.CJ0),
                                                         (0, r.jsx)(d.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'always-white',
-                                                            children: es ? R.intl.formatToPlainString(R.t.APddvL, { expirationDate: ea }) : u ? R.intl.formatToPlainString(R.t.v7xMw8, { expirationDate: eo }) : R.intl.formatToPlainString(R.t['pX+fmp'], { expirationDate: eo })
+                                                            children: es ? R.intl.formatToPlainString(R.t.APddvL, { expirationDate: el }) : u ? R.intl.formatToPlainString(R.t.v7xMw8, { expirationDate: eo }) : R.intl.formatToPlainString(R.t['pX+fmp'], { expirationDate: eo })
                                                         })
                                                     ]
                                                 })
@@ -341,7 +341,7 @@ let A = (0, a.animated)(d.CJ0),
                                 })
                             ]
                         }),
-                        (0, r.jsxs)(a.animated.div, {
+                        (0, r.jsxs)(l.animated.div, {
                             className: _.iconsContainer,
                             style: {
                                 top: et
@@ -360,7 +360,7 @@ let A = (0, a.animated)(d.CJ0),
                                     hideLearnMore: et,
                                     showShareLink: !u && en,
                                     children: (e) =>
-                                        (0, r.jsx)(a.animated.div, {
+                                        (0, r.jsx)(l.animated.div, {
                                             style: {
                                                 opacity: k,
                                                 visibility: L || B ? 'inherit' : 'hidden'
@@ -373,7 +373,7 @@ let A = (0, a.animated)(d.CJ0),
                                                     'aria-label': R.intl.string(R.t.DEoVWV),
                                                     children: (0, r.jsx)(d.xhG, {
                                                         size: 'md',
-                                                        color: l.Z.WHITE
+                                                        color: a.Z.WHITE
                                                     })
                                                 })
                                             )
@@ -385,14 +385,14 @@ let A = (0, a.animated)(d.CJ0),
                                         onClick: ec,
                                         className: _.iconWrapper,
                                         'aria-label': B ? R.intl.string(R.t.iTcumZ) : R.intl.string(R.t.dcl9MT),
-                                        children: (0, r.jsx)(A, {
+                                        children: (0, r.jsx)(M, {
                                             style: {
                                                 rotate: k.to({
                                                     range: [0, 1],
                                                     output: [0, 180]
                                                 })
                                             },
-                                            color: l.Z.WHITE
+                                            color: a.Z.WHITE
                                         })
                                     })
                             ]

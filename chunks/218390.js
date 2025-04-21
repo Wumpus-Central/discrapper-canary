@@ -46,8 +46,8 @@ var i = n(200651),
     F = n(232076),
     H = n(197115),
     z = n(823188),
-    Y = n(504865),
-    W = n(179984),
+    W = n(504865),
+    Y = n(179984),
     K = n(386733),
     q = n(474936),
     X = n(981631),
@@ -61,7 +61,7 @@ let et = 'to_premium_home_button',
     er = 'payment modal';
 function es(e) {
     let { premiumSubscription: t, isDiscountApplied: n, activeDiscountInfo: r, theme: s } = e,
-        l = null != t.trialId,
+        l = t.hasActiveTrial,
         a = t.planIdFromItems === q.Xh.PREMIUM_YEAR_TIER_2,
         c = n || l,
         d = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
@@ -101,7 +101,7 @@ function es(e) {
             ]
         });
     }
-    return (0, i.jsx)(Y.Z, {
+    return (0, i.jsx)(W.Z, {
         variant: void 0,
         subscriptionTier: q.Si.TIER_2,
         interval: g.interval
@@ -118,7 +118,7 @@ function el() {
         d = null !== s && null !== s.planIdFromItems;
     if (!d && !a.isFractionalPremiumActive) return null;
     let g = a.isFractionalPremiumActive && !o,
-        p = null !== s && null != s.trialId;
+        p = null !== s && s.hasActiveTrial;
     return (0, i.jsxs)('div', {
         className: l()(J.tierCard, { [J.withTier2Rim]: t || p }),
         children: [
@@ -388,7 +388,7 @@ let ec = function () {
             note: null
         });
     if ((!k && !L) || a) return (0, i.jsx)(m.$jN, {});
-    let B = null !== n && null != n.trialId;
+    let B = !!(null == n ? void 0 : n.hasActiveTrial);
     return (0, i.jsx)(O.Gt, {
         value: t,
         children: (0, i.jsxs)(i.Fragment, {
@@ -399,7 +399,7 @@ let ec = function () {
                         (0, i.jsx)(el, {}),
                         P && (0, i.jsx)(K.Z, { isInSettings: !0 }),
                         (0, i.jsx)(eo, {}),
-                        (0, i.jsx)(W.Z, {
+                        (0, i.jsx)(Y.Z, {
                             className: J.__invalid_planComparisonTable,
                             hideCTAs: !0,
                             headingOverride: Q.intl.string(Q.t.dnVvQU),

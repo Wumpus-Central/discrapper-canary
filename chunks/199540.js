@@ -20,7 +20,7 @@ var r = n(200651),
 let v = (0, m.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     C = (0, m.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     j = ['13px 4px 4px 4px', '4px 13px 4px 4px', '4px 4px 4px 13px', '4px 4px 13px 4px'];
-function S(e) {
+function x(e) {
     let { guildId: t, animate: n, index: i } = e,
         l = (0, c.e7)([g.Z], () => g.Z.getGuild(t), [t]),
         o = (0, p.Q3)('GuildIcon'),
@@ -41,7 +41,7 @@ function S(e) {
               style: o ? { borderRadius: j[i] } : void 0
           });
 }
-function x(e) {
+function S(e) {
     let t,
         n,
         { folderNode: l, hovered: o, expanded: c } = e,
@@ -51,7 +51,7 @@ function x(e) {
         m = g === y.Wyy,
         b = f.map((e) => e.id),
         [_, j] = i.useState(!1),
-        [x, E] = i.useState(c),
+        [S, E] = i.useState(c),
         I = u ? (c ? 22 : -11) : c ? 0 : -C,
         P = (0, d.q_F)(
             {
@@ -67,7 +67,7 @@ function x(e) {
             'animate-always'
         ),
         w = _ ? P : void 0;
-    (_ || x) &&
+    (_ || S) &&
         (t = (0, r.jsx)(s.animated.div, {
             style: w,
             className: O.expandedFolderIconWrapper,
@@ -77,13 +77,13 @@ function x(e) {
                 style: { color: (0, a.Rf)(g) }
             })
         })),
-        (_ || !x) &&
+        (_ || !S) &&
             (n = (0, r.jsx)(s.animated.div, {
                 style: w,
                 className: O.closedFolderIconWrapper,
                 children: b.slice(0, 4).map((e, t) =>
                     (0, r.jsx)(
-                        S,
+                        x,
                         {
                             index: t,
                             guildId: e,
@@ -116,7 +116,7 @@ function E(e) {
             folderIconContentClassName: v,
             folderIconContent: C,
             onClick: j,
-            onContextMenu: S,
+            onContextMenu: x,
             onHoverChange: E,
             onKeyDown: I,
             treeItemProps: { onFocus: P },
@@ -195,7 +195,7 @@ function E(e) {
                 {
                     className: o()(O.folder, { [O.hover]: T }),
                     onClick: j,
-                    onContextMenu: S,
+                    onContextMenu: x,
                     onMouseEnter: R,
                     onMouseLeave: D,
                     onKeyDown: I,
@@ -223,7 +223,7 @@ function E(e) {
                                   className: o()(O.expandedFolderIconWrapper, v),
                                   children: C
                               })
-                            : (0, r.jsx)(x, {
+                            : (0, r.jsx)(S, {
                                   folderNode: l,
                                   hovered: T,
                                   expanded: a

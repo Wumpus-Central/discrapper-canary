@@ -16,8 +16,8 @@ var i = n(200651),
     _ = n(973616),
     y = n(914010),
     x = n(594174),
-    v = n(626135),
-    C = n(572004),
+    C = n(626135),
+    v = n(572004),
     g = n(630388),
     j = n(135431),
     P = n(541099),
@@ -112,8 +112,8 @@ function w(e) {
                               referrerId: null == V ? void 0 : V.id
                           })
                         : (0, p.J)(T({ id: l.id }, D));
-                    (0, C.JG)(e, () => (0, s.showToast)((0, s.createToast)(I.intl.string(I.t['L/PwZW']), s.ToastType.SUCCESS))),
-                        v.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                    (0, v.JG)(e, () => (0, s.showToast)((0, s.createToast)(I.intl.string(I.t['L/PwZW']), s.ToastType.SUCCESS))),
+                        C.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: l.id,
                             source: M
                         });

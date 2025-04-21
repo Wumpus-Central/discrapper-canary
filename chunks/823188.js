@@ -191,7 +191,7 @@ function z(e) {
         m = (0, A.t7)(),
         b = (0, A.lr)(),
         y = n === k.p9.TIER_0 ? k.Si.TIER_0 : k.Si.TIER_2,
-        v = (null == p ? void 0 : p.trialId) != null ? (null == h ? void 0 : h.premiumType) : m ? k.p9.TIER_2 : null,
+        v = (null == p ? void 0 : p.hasActiveTrial) ? (null == h ? void 0 : h.premiumType) : m ? k.p9.TIER_2 : null,
         O = (0, P.N)(),
         I = (0, R.Ng)(),
         T = null == O ? void 0 : O.subscription_trial;
@@ -333,7 +333,7 @@ function Q(e) {
         u = (0, l.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
         d = (0, P.N)(),
         f = null == d || null == (t = d.subscription_trial) ? void 0 : t.sku_id,
-        _ = (null == u ? void 0 : u.trialId) != null,
+        _ = !!(null == u ? void 0 : u.hasActiveTrial),
         p = null != f || _;
     return (0, r.jsxs)('div', {
         className: a()(G.tier0, G.card, G.tier0V2Background, o, {
@@ -377,8 +377,8 @@ function X(e) {
         _ = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
         p = (0, P.N)(),
         h = null == p || null == (t = p.subscription_trial) ? void 0 : t.sku_id,
-        m = (null == f ? void 0 : f.trialId) != null,
-        b = (null == f ? void 0 : f.trialId) != null ? (null == _ ? void 0 : _.premiumType) : null,
+        m = !!(null == f ? void 0 : f.hasActiveTrial),
+        b = m ? (null == _ ? void 0 : _.premiumType) : null,
         y = null != h || m;
     return (0, r.jsxs)('div', {
         className: a()(G.tier0, G.card, s, {
@@ -672,7 +672,7 @@ function et(e) {
         I = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
         S = (0, P.N)(),
         T = null == S || null == (t = S.subscription_trial) ? void 0 : t.sku_id,
-        w = (null == O ? void 0 : O.trialId) != null ? (null == I ? void 0 : I.premiumType) : null,
+        w = (null == O ? void 0 : O.hasActiveTrial) ? (null == I ? void 0 : I.premiumType) : null,
         L = (0, A.Nx)(),
         M = (0, R.Ng)(),
         B = (0, A.t7)(),

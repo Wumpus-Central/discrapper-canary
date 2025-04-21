@@ -18,7 +18,7 @@ function m(e, t) {
         _ = (0, o.Z)(b),
         y = 'channel' in t && (0, l.aZ)(t.channel, 'useActivityShelfData()'),
         x = i.useMemo(() => _.filter(c.lm), [_]),
-        v = i.useMemo(
+        C = i.useMemo(
             () =>
                 null != f && x.length > 0 && x[0].id === f && null != x[0].embeddedActivityConfig
                     ? [
@@ -30,7 +30,7 @@ function m(e, t) {
                     : [],
             [x, f]
         ),
-        C = i.useMemo(
+        v = i.useMemo(
             () =>
                 m
                     .map((e) => {
@@ -47,7 +47,7 @@ function m(e, t) {
         );
     return i.useMemo(
         () =>
-            [...v, ...C]
+            [...C, ...v]
                 .filter((e) => {
                     var t;
                     let { activity: n } = e;
@@ -58,6 +58,6 @@ function m(e, t) {
                     return !t.requires_age_gate || (null == n ? void 0 : n.nsfwAllowed) === !0 || (null == n ? void 0 : n.nsfwAllowed) == null;
                 })
                 .filter((e) => !y || e.application.id !== l.gu),
-        [null == n ? void 0 : n.nsfwAllowed, C, y, v]
+        [null == n ? void 0 : n.nsfwAllowed, v, y, C]
     );
 }

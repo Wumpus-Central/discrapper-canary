@@ -16,7 +16,7 @@ var i = n(200651),
     _ = n(152790),
     y = n(263930);
 let x = (e) => {
-    let { entry: t, onClose: n, onReaction: l, onRequestOpen: x, disableActivityProfileLinks: v, customCTA: C, popoutClassname: g, popoutPosition: j = 'right' } = e,
+    let { entry: t, onClose: n, onReaction: l, onRequestOpen: x, disableActivityProfileLinks: C, customCTA: v, popoutClassname: g, popoutPosition: j = 'right' } = e,
         P = r.useRef(null),
         N = (0, a.e7)([u.Z, c.Z], () => c.Z.getChannel(u.Z.getChannelId())),
         E = (0, a.e7)([d.default], () => d.default.getUser(t.author_id)),
@@ -45,7 +45,7 @@ let x = (e) => {
                           },
                           onUserPopoutClosed: () => r(),
                           disableGameProfileLinks: !0,
-                          disableActivityProfileLinks: v
+                          disableActivityProfileLinks: C
                       })
                   });
               },
@@ -111,14 +111,14 @@ let x = (e) => {
                                                           children: O
                                                       }),
                                                       (0, i.jsx)(h.Gk, {
-                                                          location: h.Gt.GAME_PROFILE,
+                                                          location: h.Gt.APP_LAUNCHER,
                                                           children: f.W.map((e, n) => (0, i.jsx)(e, { entry: t }, n))
                                                       })
                                                   ]
                                               })
                                           }),
-                                          null != C
-                                              ? C
+                                          null != v
+                                              ? v
                                               : (0, i.jsx)('div', {
                                                     className: _.reactions,
                                                     children: (0, i.jsx)(s.n$P, { size: 'sm' })

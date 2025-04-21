@@ -20,8 +20,8 @@ var r = n(200651),
     v = n(906732),
     C = n(358221),
     j = n(540059),
-    S = n(706590),
-    x = n(940777),
+    x = n(706590),
+    S = n(940777),
     E = n(41776),
     I = n(905423),
     P = n(802718),
@@ -264,15 +264,15 @@ function ed(e) {
         { ref: eO } = e_,
         ev = es(e_, ['ref']),
         eC = (0, m.mFp)(),
-        [ej, eS] = i.useState(!1),
-        [ex, eE] = i.useState(!1),
+        [ej, ex] = i.useState(!1),
+        [eS, eE] = i.useState(!1),
         eI = (0, m.dQu)(g.Z.modules.guildbar.AVATAR_SIZE),
         eP = (0, m.dQu)(g.Z.space.SPACE_XS),
         ew = i.useMemo(
             () =>
                 new eu(
                     d,
-                    eS,
+                    ex,
                     eE,
                     () => {
                         var e, t;
@@ -366,7 +366,7 @@ function ed(e) {
             [ep, ef, ed, ew.setNodeRef]
         ),
         eL = d.getRoots(),
-        ek = (0, S.Z)(),
+        ek = (0, x.Z)(),
         eM = (0, P.U)(),
         { enabled: eU } = (0, w.W)({ location: 'GuildsBar' });
     (0, Z.i)();
@@ -439,7 +439,7 @@ function ed(e) {
                                         className: o()({
                                             [er.scroller]: !0,
                                             [er.scrolling]: ej,
-                                            [er.isScrolledToBottom]: ex
+                                            [er.isScrolledToBottom]: eS
                                         }),
                                         experimental_useStack: a,
                                         gap: 'xs',
@@ -447,7 +447,7 @@ function ed(e) {
                                         onScroll: ew.handleScroll,
                                         children: [
                                             (0, r.jsx)(Y.u, {}),
-                                            ek ? (0, r.jsx)(x.Z, {}) : null,
+                                            ek ? (0, r.jsx)(S.Z, {}) : null,
                                             (0, r.jsx)(K.Z, { isOnHubVerificationRoute: eA }),
                                             (0, r.jsx)(V.Z, {}),
                                             eM,
@@ -512,15 +512,15 @@ function eh(e) {
         { ref: eO } = e_,
         ev = es(e_, ['ref']),
         eC = (0, m.mFp)(),
-        [ej, eS] = i.useState(!1),
-        [ex, eE] = i.useState(!1),
+        [ej, ex] = i.useState(!1),
+        [eS, eE] = i.useState(!1),
         eI = (0, m.dQu)(g.Z.modules.guildbar.AVATAR_SIZE),
         eP = (0, m.dQu)(g.Z.space.SPACE_XS),
         ew = i.useMemo(
             () =>
                 new eu(
                     d,
-                    eS,
+                    ex,
                     eE,
                     () => {
                         var e, t;
@@ -614,7 +614,7 @@ function eh(e) {
             [ep, ef, ed, ew.setNodeRef]
         ),
         eL = d.getRoots(),
-        ek = (0, S.Z)(),
+        ek = (0, x.Z)(),
         eM = (0, P.U)(),
         { enabled: eU } = (0, w.W)({ location: 'GuildsBar' });
     (0, Z.i)();
@@ -679,7 +679,7 @@ function eh(e) {
                                     children: [
                                         (0, r.jsxs)('div', {
                                             className: er.topSection,
-                                            children: [(0, r.jsx)(Y.u, {}), ek ? (0, r.jsx)(x.Z, {}) : null, (0, r.jsx)(K.Z, { isOnHubVerificationRoute: eA }), eM, G.map((e) => (0, r.jsx)(ee.Z, { guildId: e }, e)), (0, r.jsx)($.Z, { onActivate: eR })]
+                                            children: [(0, r.jsx)(Y.u, {}), ek ? (0, r.jsx)(S.Z, {}) : null, (0, r.jsx)(K.Z, { isOnHubVerificationRoute: eA }), eM, G.map((e) => (0, r.jsx)(ee.Z, { guildId: e }, e)), (0, r.jsx)($.Z, { onActivate: eR })]
                                         }),
                                         (0, r.jsxs)('div', {
                                             className: er.bottomSection,
@@ -695,7 +695,7 @@ function eh(e) {
                                                 (0, r.jsxs)(m.xVE, {
                                                     className: o()(er.scroller, er.scrollerBottomSection, {
                                                         [er.scrolling]: ej,
-                                                        [er.isScrolledToBottom]: ex
+                                                        [er.isScrolledToBottom]: eS
                                                     }),
                                                     experimental_useStack: a,
                                                     gap: 'xs',

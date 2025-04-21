@@ -3,8 +3,8 @@ var r = n(200651),
     s = n(192379),
     i = n(120356),
     o = n.n(i),
-    a = n(481060),
-    l = n(918701),
+    l = n(481060),
+    a = n(918701),
     c = n(467628),
     u = n(373370),
     d = n(566078),
@@ -17,12 +17,12 @@ function g(e) {
         b = s.useMemo(() => d.r.build(f.config), [f.config]),
         C = b.defaultReward.messages.name,
         v = b.defaultReward.messages.nameWithArticle,
-        y = (0, l.Kr)(f.config),
-        O = (0, u.mK)(f.config);
+        y = (0, a.Kr)(f.config),
+        T = (0, u.mK)(f.config);
     return (0, r.jsxs)('div', {
         children: [
             g &&
-                (0, r.jsx)(a.Text, {
+                (0, r.jsx)(l.Text, {
                     color: n,
                     variant: 'text-sm/normal',
                     children: p.intl.formatToPlainString(p.t['W8/b3d'], { rewardName: j ? C : v })
@@ -34,20 +34,20 @@ function g(e) {
                         [x.rewardsDisclosuresStack]: 'stack' === t
                     }),
                     children: [
-                        (0, r.jsx)(a.Text, {
-                            className: o()({ [x.rewardsDisclosuresDurationPremiumExtendable]: null != O }),
+                        (0, r.jsx)(l.Text, {
+                            className: o()({ [x.rewardsDisclosuresDurationPremiumExtendable]: null != T }),
                             color: i,
                             tag: 'li',
                             variant: 'text-xs/medium',
                             children: p.intl.formatToPlainString(p.t.coKAb2, { rewardsDuration: y })
                         }),
-                        null != O &&
-                            (0, r.jsx)(a.Text, {
+                        null != T &&
+                            (0, r.jsx)(l.Text, {
                                 className: o()({ [x.rewardsDisclosuresItemPremiumHighlight]: h }),
                                 tag: 'li',
                                 color: h ? void 0 : i,
                                 variant: 'text-xs/medium',
-                                children: O
+                                children: T
                             })
                     ]
                 })

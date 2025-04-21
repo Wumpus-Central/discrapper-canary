@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685), n(482853);
+n.d(t, { Z: () => C }), n(388685), n(482853);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -19,7 +19,7 @@ let y = {
         height: (0, d.DK)()
     },
     x = { height: (0, d.DK)() },
-    v = r.memo(
+    C = r.memo(
         r.forwardRef(function (e, t) {
             let { context: n, entrypoint: l, initHistory: u } = e,
                 { analyticsLocations: d } = (0, s.ZP)(o.Z.APP_LAUNCHER);
@@ -48,7 +48,7 @@ let y = {
                         className: _.contentWrapper,
                         children: (0, i.jsx)(s.Gt, {
                             value: d,
-                            children: (0, i.jsx)(C, {
+                            children: (0, i.jsx)(v, {
                                 initHistory: u,
                                 children: (0, i.jsx)(g, {
                                     context: n,
@@ -61,7 +61,7 @@ let y = {
             );
         })
     );
-function C(e) {
+function v(e) {
     let { initHistory: t, children: n } = e,
         [l, o] = r.useState(null != t ? t : [{ type: u.gc.HOME }]),
         [a, s] = r.useState({}),
@@ -169,20 +169,20 @@ function g(e) {
                 }
             );
         })(o),
-        { currentView: b, getMostRecentHistoryItemByType: y, setSlideReady: v } = (0, u.hH)();
+        { currentView: b, getMostRecentHistoryItemByType: y, setSlideReady: C } = (0, u.hH)();
     r.useEffect(() => {
-        v(!1);
-    }, [null == b ? void 0 : b.type, v]);
-    let C = r.useCallback(() => {
-        v(!0);
-    }, [v]);
+        C(!1);
+    }, [null == b ? void 0 : b.type, C]);
+    let v = r.useCallback(() => {
+        C(!0);
+    }, [C]);
     if (null == b) return null;
     let g = y(u.gc.LIST),
         j = y(u.gc.APPLICATION);
     return (0, i.jsxs)(l.MyZ, {
         activeSlide: b.type,
         width: h.Gy,
-        onSlideReady: C,
+        onSlideReady: v,
         children: [
             (0, i.jsx)(l.Mi4, {
                 id: u.gc.HOME,

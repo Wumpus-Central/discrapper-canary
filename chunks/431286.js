@@ -23,12 +23,12 @@ function j() {
     let { hasLayers: e } = (0, o.cj)([f.Z], () => ({ hasLayers: f.Z.hasLayers() })),
         { onboardingModalOpenedPrior: t } = (0, o.cj)([b.Z], () => ({ onboardingModalOpenedPrior: b.Z.onboardingModalOpenedPrior })),
         { enabled: j } = (0, m.W)({ location: 'virtual_currency_announcement_modal' }),
-        [S, x] = (0, h.US)(j ? [s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...y.b.useSelectedDismissibleContent),
+        [x, S] = (0, h.US)(j ? [s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...y.b.useSelectedDismissibleContent),
         E = (0, c.s9z)(c.JQI);
     i.useEffect(() => {
         j &&
             !t &&
-            S === s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
+            x === s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
             (e ||
                 E ||
                 (u.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN' }),
@@ -38,13 +38,13 @@ function j() {
                         return function (t) {
                             let { onClose: n, transitionState: i } = t,
                                 o = async () => {
-                                    await n(), x(O.L.USER_DISMISS);
+                                    await n(), S(O.L.USER_DISMISS);
                                 };
                             return (0, r.jsx)(e, {
                                 transitionState: i,
                                 onClose: o,
                                 ctaOnClick: () => {
-                                    x(O.L.TAKE_ACTION),
+                                    S(O.L.TAKE_ACTION),
                                         (0, d.EW)(s.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
                                             dismissAction: O.L.INDIRECT_ACTION,
                                             groupName: O.R.VIRTUAL_CURRENCY_ONBOARDING
@@ -70,9 +70,9 @@ function j() {
                     {
                         modalKey: C,
                         onCloseRequest: () => {
-                            x(O.L.USER_DISMISS), (0, c.Mr3)(C);
+                            S(O.L.USER_DISMISS), (0, c.Mr3)(C);
                         }
                     }
                 )));
-    }, [S, j, t, x, e, E]);
+    }, [x, j, t, S, e, E]);
 }

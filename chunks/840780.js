@@ -20,8 +20,8 @@ var r = n(200651),
     v = n(566620),
     C = n(317381),
     j = n(736409),
-    S = n(367907),
-    x = n(835473),
+    x = n(367907),
+    S = n(835473),
     E = n(413523),
     I = n(933557),
     P = n(194082),
@@ -251,7 +251,7 @@ class ey extends i.PureComponent {
                           em(eg({}, e), {
                               className: o()(ep.gameWrapper, ep.clickableGameWrapper, { [ep.clickableGameWrapperForceHover]: u }),
                               onClick: () => {
-                                  p.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }), u && d(ed.L.TAKE_ACTION), (0, S.yw)(ec.rMx.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED);
+                                  p.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }), u && d(ed.L.TAKE_ACTION), (0, x.yw)(ec.rMx.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED);
                               },
                               children: y
                           })
@@ -331,7 +331,7 @@ let e_ = (0, b.Z)(function (e) {
         b = (0, u.e7)([y.Z], () => y.Z.useReducedMotion),
         v = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         j = (0, u.e7)([q.Z, X.Z, K.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, X.Z).length > 0)),
-        [S] = (0, x.Z)([null != (t = null != m && null != m.id ? m.id : null != s && null != s.id ? s.id : null != v ? v.applicationId : void 0) ? t : '']),
+        [x] = (0, S.Z)([null != (t = null != m && null != m.id ? m.id : null != s && null != s.id ? s.id : null != v ? v.applicationId : void 0) ? t : '']),
         E = (0, u.e7)([w.Z], () => w.Z.getFakeGameData()),
         P = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         N = (0, O.Z0)() && null != P && (0, _.R)({ isContextless: P.location.kind === c.E.CONTEXTLESS }),
@@ -362,7 +362,7 @@ let e_ = (0, b.Z)(function (e) {
             embeddedActivity: v,
             userId: o,
             runningGame: null != E ? E : s,
-            application: S,
+            application: x,
             useReducedMotion: b,
             isStreaming: M,
             channel: p,

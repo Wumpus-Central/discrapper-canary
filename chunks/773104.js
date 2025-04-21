@@ -15,5 +15,5 @@ function c(e) {
         let e = m();
         if (null != e) return e;
     }
-    return null != g && l.nG[g.trial_id].skus.includes(l.Si.TIER_0) ? (null != u ? u : t) : null != g && l.nG[g.trial_id].skus.includes(l.Si.TIER_2) ? (null != d ? d : t) : null != b && null != b.trialId && y === l.p9.TIER_0 ? (null != f ? f : t) : null != b && null != b.trialId && y === l.p9.TIER_2 ? (null != _ ? _ : t) : null != E ? (null != n ? n : t) : null == y ? (null != c ? c : t) : y === l.p9.TIER_0 || y === l.p9.TIER_1 ? (null != p ? p : t) : y === l.p9.TIER_2 && null != h ? h : t;
+    return null != g && l.nG[g.trial_id].skus.includes(l.Si.TIER_0) ? (null != u ? u : t) : null != g && l.nG[g.trial_id].skus.includes(l.Si.TIER_2) ? (null != d ? d : t) : null != b && b.hasActiveTrial && y === l.p9.TIER_0 ? (null != f ? f : t) : null != b && b.hasActiveTrial && y === l.p9.TIER_2 ? (null != _ ? _ : t) : null != E ? (null != n ? n : t) : null == y ? (null != c ? c : t) : y === l.p9.TIER_0 || y === l.p9.TIER_1 ? (null != p ? p : t) : y === l.p9.TIER_2 && null != h ? h : t;
 }

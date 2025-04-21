@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => F,
+    Z: () => z,
     b: () => Z
 }),
     n(388685),
@@ -184,7 +184,7 @@ let V = '1193992107035983872',
         targetedContent: []
     };
 function U() {
-    var e, t, s, d, u, k, Z, V, U, H, F, z, X, K;
+    var e, t, s, d, u, k, Z, V, U, H, z, F, X, K;
     let [Y, G] = o.useState(Q),
         J = o.useCallback((e) => {
             G(D(q({}, e), { preview: !0 }));
@@ -404,7 +404,7 @@ function U() {
                             assetKey: 'heroVideo',
                             onFileChange: el,
                             filters: L,
-                            initialValue: null != (z = Y.config.assets.heroVideo) ? z : void 0
+                            initialValue: null != (F = Y.config.assets.heroVideo) ? F : void 0
                         }),
                         (0, r.jsx)(P.Z, {
                             title: 'Quest Bar Hero',
@@ -706,7 +706,7 @@ function U() {
                             withBorder: !0,
                             children: [
                                 (0, r.jsx)(p.vwX, { children: 'Channel Call Header' }),
-                                (null == (F = Y.userStatus) ? void 0 : F.claimedAt) != null &&
+                                (null == (z = Y.userStatus) ? void 0 : z.claimedAt) != null &&
                                     (0, r.jsx)(p.Text, {
                                         color: 'text-secondary',
                                         variant: 'text-sm/normal',
@@ -851,4 +851,4 @@ class H extends o.Component {
             });
     }
 }
-let F = H;
+let z = H;

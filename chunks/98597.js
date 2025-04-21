@@ -26,8 +26,8 @@ var r,
     v = n(914010),
     C = n(281029),
     j = n(981631),
-    S = n(388032),
-    x = n(915887);
+    x = n(388032),
+    S = n(915887);
 function E(e, t, n) {
     return (
         t in e
@@ -79,19 +79,19 @@ function w(e, t, n) {
     return null != t && !!t && !(0, C.ig)(n, e.type);
 }
 function N(e, t) {
-    return null == t ? x.containerDefault : e > t ? x.containerDragAfter : x.containerDragBefore;
+    return null == t ? S.containerDefault : e > t ? S.containerDragAfter : S.containerDragBefore;
 }
 function Z(e) {
     let { tabIndex: t, forceShowButtons: n, hasChannelInfo: r, onContextMenu: l } = e;
     return (0, i.jsx)(c.ua7, {
-        text: S.intl.string(S.t.OBr7Cw),
+        text: x.intl.string(x.t.OBr7Cw),
         children: (e) => {
             let { onMouseEnter: o, onMouseLeave: a, onFocus: u, onBlur: d } = e;
             return (0, i.jsx)(c.P3F, {
-                className: s()(x.iconItem, n ? x.alwaysShown : void 0, r ? x.iconWithChannelInfo : x.iconNoChannelInfo),
+                className: s()(S.iconItem, n ? S.alwaysShown : void 0, r ? S.iconWithChannelInfo : S.iconNoChannelInfo),
                 onClick: l,
                 tabIndex: t,
-                'aria-label': S.intl.string(S.t.OBr7Cw),
+                'aria-label': x.intl.string(x.t.OBr7Cw),
                 onMouseEnter: o,
                 onMouseLeave: a,
                 onFocus: u,
@@ -99,7 +99,7 @@ function Z(e) {
                 children: (0, i.jsx)(c.Huf, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: x.actionIcon
+                    className: S.actionIcon
                 })
             });
         }
@@ -112,14 +112,14 @@ function T(e) {
         u.ZP.open(t.id);
     }
     return (0, i.jsx)(c.ua7, {
-        text: S.intl.string(S.t['3gUsJS']),
+        text: x.intl.string(x.t['3gUsJS']),
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n, onFocus: a, onBlur: u } = e;
             return (0, i.jsx)(c.P3F, {
-                className: s()(x.iconItem, l ? x.alwaysShown : void 0, o ? x.iconWithChannelInfo : x.iconNoChannelInfo),
+                className: s()(S.iconItem, l ? S.alwaysShown : void 0, o ? S.iconWithChannelInfo : S.iconNoChannelInfo),
                 onClick: d,
                 tabIndex: r,
-                'aria-label': S.intl.string(S.t['3gUsJS']),
+                'aria-label': x.intl.string(x.t['3gUsJS']),
                 onMouseEnter: t,
                 onMouseLeave: n,
                 onFocus: a,
@@ -127,7 +127,7 @@ function T(e) {
                 children: (0, i.jsx)(c.ewm, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: x.actionIcon
+                    className: S.actionIcon
                 })
             });
         }
@@ -140,8 +140,8 @@ function A(e) {
         E = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
         w = (0, a.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(t.id), [t.id]),
         N = (0, a.e7)([O.Z], () => (0, p.b)(O.Z, C, t, E)),
-        Z = (0, a.e7)([O.Z], () => (O.Z.can(j.Plq.CREATE_INSTANT_INVITE, t) ? S.intl.string(S.t.zJrgTE) : S.intl.string(S.t.Sd8Ix8))),
-        T = v ? S.intl.string(S.t['EE+P0N']) : Z,
+        Z = (0, a.e7)([O.Z], () => (O.Z.can(j.Plq.CREATE_INSTANT_INVITE, t) ? x.intl.string(x.t.zJrgTE) : x.intl.string(x.t.Sd8Ix8))),
+        T = v ? x.intl.string(x.t['EE+P0N']) : Z,
         A = l.useRef(null);
     if (o || !N) return null;
     function R() {
@@ -166,7 +166,7 @@ function A(e) {
     let D = v ? c.oLu : c.ejJ,
         L = (0, i.jsx)(D, {
             size: 'xs',
-            className: x.actionIcon,
+            className: S.actionIcon,
             'aria-hidden': !0,
             color: 'currentColor'
         });
@@ -186,7 +186,7 @@ function A(e) {
             children: (e) =>
                 (0, i.jsx)(
                     c.P3F,
-                    P(I({ className: s()(x.iconItem, f ? x.alwaysShown : void 0, b ? x.iconWithChannelInfo : x.iconNoChannelInfo) }, e), {
+                    P(I({ className: s()(S.iconItem, f ? S.alwaysShown : void 0, b ? S.iconWithChannelInfo : S.iconNoChannelInfo) }, e), {
                         onClick: R,
                         tabIndex: u,
                         'aria-label': T,
@@ -202,17 +202,17 @@ function R(e) {
             (0, f._U)(t.guild_id, t.id);
         };
     return (0, i.jsx)(c.ua7, {
-        text: S.intl.string(S.t.ROh4T0),
+        text: x.intl.string(x.t.ROh4T0),
         children: (e) =>
             (0, i.jsx)(
                 c.P3F,
-                P(I({ className: x.iconItem }, e), {
+                P(I({ className: S.iconItem }, e), {
                     onClick: n,
-                    'aria-label': S.intl.string(S.t.ROh4T0),
+                    'aria-label': x.intl.string(x.t.ROh4T0),
                     children: (0, i.jsx)(c.Dio, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: x.actionIcon
+                        className: S.actionIcon
                     })
                 })
             )
@@ -224,17 +224,17 @@ function D(e) {
             (0, f.dM)(t.guild_id, t.id, !0, { section: j.jXE.CHANNEL_LIST });
         };
     return (0, i.jsx)(c.ua7, {
-        text: S.intl.string(S.t['N2c/Ul']),
+        text: x.intl.string(x.t['N2c/Ul']),
         children: (e) =>
             (0, i.jsx)(
                 c.P3F,
-                P(I({ className: x.iconItem }, e), {
+                P(I({ className: S.iconItem }, e), {
                     onClick: n,
-                    'aria-label': S.intl.string(S.t['N2c/Ul']),
+                    'aria-label': x.intl.string(x.t['N2c/Ul']),
                     children: (0, i.jsx)(c.dz2, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: x.actionIcon
+                        className: S.actionIcon
                     })
                 })
             )

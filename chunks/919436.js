@@ -20,8 +20,8 @@ var r,
     v = n(594174),
     C = n(451478),
     j = n(276952),
-    S = n(682662),
-    x = n(662146),
+    x = n(682662),
+    S = n(662146),
     E = n(674552),
     I = n(981631),
     P = n(388032),
@@ -154,7 +154,7 @@ class D extends (r = l.PureComponent) {
             y = e.isMultiUserDM() && null == e.icon && h;
         return (0, i.jsx)(o.animated.div, {
             style: this.getAnimatedStyle(),
-            children: (0, i.jsxs)(S.H, {
+            children: (0, i.jsxs)(x.H, {
                 children: [
                     (0, i.jsx)(j.Z, {
                         hovered: !b && g,
@@ -162,7 +162,7 @@ class D extends (r = l.PureComponent) {
                         unread: !b && d,
                         className: w.pill
                     }),
-                    (0, i.jsx)(x.Z, {
+                    (0, i.jsx)(S.Z, {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, i.jsx)(c.aRk, {
@@ -271,9 +271,9 @@ let L = l.forwardRef(function (e, t) {
         v = (0, a.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
         { isFacepileEnabled: C } = g.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
         j = o === n,
-        S = !1,
-        x = !1;
-    j && ((S = u === I.WtW.VOICE), (x = u === I.WtW.VIDEO));
+        x = !1,
+        S = !1;
+    j && ((x = u === I.WtW.VOICE), (S = u === I.WtW.VIDEO));
     let E = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE),
         P = (0, f.Q3)('DirectMessage');
     return (0, i.jsx)(
@@ -284,8 +284,8 @@ let L = l.forwardRef(function (e, t) {
             unread: v > 0,
             selected: m === n,
             badge: v,
-            audio: S,
-            video: x,
+            audio: x,
+            video: S,
             stream: h,
             isCurrentUserInThisDMCall: j,
             isGDMFacepileEnabled: C,

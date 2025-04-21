@@ -152,7 +152,7 @@ function Z(e) {
             return N.Z1.has(t);
         }),
         z = F || H ? G.total - U.total : -U.total,
-        { interval: Y, intervalCount: W } = L,
+        { interval: W, intervalCount: Y } = L,
         K = A.intl.format(A.t['0W23cn'], { endDate: G.subscriptionPeriodStart });
     return (
         l.isPausedForFractionalPremium && d.fetched && (K = A.intl.format(A.t.eb0xgY, { expirationDate: d.endsAt.toDate() })),
@@ -174,7 +174,7 @@ function Z(e) {
                                 (0, i.jsx)(b.Z9, { children: A.intl.string(A.t.iqhIp6) }),
                                 (0, i.jsx)(b.B1, {
                                     label: A.intl.format(A.t['Vg+LRk'], { subscriptionCount: 1 }),
-                                    value: (0, T.og)((0, T.T4)(z, l.currency), Y, W),
+                                    value: (0, T.og)((0, T.T4)(z, l.currency), W, Y),
                                     className: P.invoiceCancelRow
                                 }),
                                 null != V && V.length > 0

@@ -183,8 +183,8 @@ function I(e) {
         Q = (0, p.ZP)(),
         U = ((0, c.wj)(Q) ? N.BRd.DARK : N.BRd.LIGHT) === N.BRd.DARK,
         H = o.useContext(l.S).reducedMotion.enabled,
-        F = (0, h.tP)(m),
-        z = (null == (t = m.userStatus) ? void 0 : t.claimedAt) != null,
+        z = (0, h.tP)(m),
+        F = (null == (t = m.userStatus) ? void 0 : t.claimedAt) != null,
         X = o.useRef(C),
         K = o.useRef(null),
         Y = (0, h.B6)(m.config.expiresAt, {
@@ -347,7 +347,7 @@ function I(e) {
                                         color: U ? 'text-muted' : 'always-white',
                                         children: A.intl.format(A.t.buEvBw, { brandName: null != (u = null == (i = m.config.cosponsorMetadata) ? void 0 : i.name) ? u : m.config.messages.gamePublisher })
                                     }),
-                                    F || z
+                                    z || F
                                         ? null
                                         : (0, r.jsx)(d.Text, {
                                               variant: 'text-sm/medium',

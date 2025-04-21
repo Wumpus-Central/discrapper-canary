@@ -8,8 +8,8 @@ var r,
     i = n(200651);
 n(192379);
 var o = n(120356),
-    a = n.n(o),
-    l = n(692547),
+    l = n.n(o),
+    a = n(692547),
     c = n(469244),
     u = n(780384),
     d = n(113434),
@@ -25,7 +25,7 @@ let j = function (e) {
         C = (0, d.Gd)(s.id, b),
         v = f && null != s.config.cosponsorMetadata && null != C;
     return (0, i.jsxs)('div', {
-        className: a()(g.partnerBranding, t),
+        className: l()(g.partnerBranding, t),
         children: [
             j &&
                 (0, i.jsx)(p.Fl, {
@@ -55,7 +55,7 @@ let j = function (e) {
                 children: (e) =>
                     (0, i.jsx)('img', {
                         ref: e,
-                        className: a()(g.partnerBrandingLogotype, n, { [g.partnerBrandingLogotypeWithCosponsor]: v }),
+                        className: l()(g.partnerBrandingLogotype, n, { [g.partnerBrandingLogotypeWithCosponsor]: v }),
                         alt: s.config.messages.gameTitle,
                         src: (0, m.fh)(s, m.eC.LOGO_TYPE, b).url
                     })
@@ -68,7 +68,7 @@ let j = function (e) {
                             style: { margin: '0 '.concat(o, 'px') },
                             children: (0, i.jsx)(c.P, {
                                 className: g.cosponsorBrandSeparator,
-                                color: l.Z.colors.WHITE
+                                color: a.Z.colors.WHITE
                             })
                         }),
                         (0, i.jsx)(p.Fl, {
@@ -77,7 +77,7 @@ let j = function (e) {
                                 var t, r;
                                 return (0, i.jsx)('img', {
                                     ref: e,
-                                    className: a()(g.partnerBrandingLogotype, g.partnerBrandingLogotypeWithCosponsor, n),
+                                    className: l()(g.partnerBrandingLogotype, g.partnerBrandingLogotypeWithCosponsor, n),
                                     alt: null != (r = null == (t = s.config.cosponsorMetadata) ? void 0 : t.name) ? r : '',
                                     src: C.url
                                 });

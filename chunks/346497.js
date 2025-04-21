@@ -43,7 +43,7 @@ function N(e) {
         let e = null == (n = (0, f.Af)(a)) ? void 0 : n.planId,
             t = null != e && f.ZP.getPremiumType(e) === I.p9.TIER_2,
             r = c.default.getCurrentUser(),
-            i = (null == a ? void 0 : a.trialId) != null && f.ZP.isPremiumExactly(r, I.p9.TIER_0);
+            i = !!(null == a ? void 0 : a.hasActiveTrial) && f.ZP.isPremiumExactly(r, I.p9.TIER_0);
         s = t || i;
     }
     return !r || s || l;

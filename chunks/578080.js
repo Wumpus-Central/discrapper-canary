@@ -95,7 +95,7 @@ function L(e) {
 }
 let Z = o.forwardRef(function (e, t) {
     var n, s;
-    let { children: _, className: Z, collapsedHeight: W, expansionSpring: V, isExpanded: Q, isExpansionAnimationComplete: U, onCtxMenuOpen: H, onCtxMenuClose: F, onCtxMenuSelect: z, quest: X, useReducedMotion: K } = e,
+    let { children: _, className: Z, collapsedHeight: W, expansionSpring: V, isExpanded: Q, isExpansionAnimationComplete: U, onCtxMenuOpen: H, onCtxMenuClose: z, onCtxMenuSelect: F, quest: X, useReducedMotion: K } = e,
         Y = (0, l.e7)([j.Z], () => j.Z.isEnrolling(X.id), [X]),
         G = (0, x.aM)(),
         J = (0, b.B6)(X.config.expiresAt),
@@ -215,8 +215,8 @@ let Z = o.forwardRef(function (e, t) {
                                       }),
                                       (0, r.jsx)(N.r, {
                                           onOpen: H,
-                                          onClose: F,
-                                          onSelect: z,
+                                          onClose: z,
+                                          onSelect: F,
                                           questContent: v.jn.QUEST_BAR,
                                           quest: X,
                                           shouldShowDisclosure: !1,
@@ -269,8 +269,8 @@ let Z = o.forwardRef(function (e, t) {
                                               (0, r.jsx)(P.Z, { color: 'always-white' }),
                                               (0, r.jsx)(N.r, {
                                                   onOpen: H,
-                                                  onClose: F,
-                                                  onSelect: z,
+                                                  onClose: z,
+                                                  onSelect: F,
                                                   questContent: v.jn.QUEST_BAR,
                                                   quest: X,
                                                   shouldShowDisclosure: !0,

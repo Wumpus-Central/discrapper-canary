@@ -25,8 +25,8 @@ var i,
     _ = n(361213),
     y = n(542094),
     x = n(778569),
-    v = n(182906),
-    C = n(556505),
+    C = n(182906),
+    v = n(556505),
     g = n(367907),
     j = n(220082),
     P = n(70097),
@@ -158,7 +158,7 @@ function Q(e) {
             sectionOverallPosition: d,
             promotionalLabel: (0, L.dF)(t)
         }),
-        v = l.useMemo(() => {
+        C = l.useMemo(() => {
             let e = m ? W.containerDisabled : W.container;
             return a()(
                 e,
@@ -173,12 +173,12 @@ function Q(e) {
     return m
         ? (0, r.jsx)('div', {
               ref: p ? x : void 0,
-              className: v,
+              className: C,
               children: i
           })
         : (0, r.jsx)(c.P3F, {
               innerRef: p ? x : void 0,
-              className: v,
+              className: C,
               onClick: n,
               onContextMenu: b,
               'aria-label': H.intl.formatToPlainString(H.t['zLhr9/'], {
@@ -221,8 +221,8 @@ function J(e) {
 }
 function K(e) {
     let { application: t, look: n, imageStyle: i, enableVideoBanner: o, disableBannerFadeIn: u, children: p, overrideImageUrl: m, showsPromoted: h, onClickAppCardFriends: _ } = e,
-        { iconURL: y, name: x, description: v } = l.useMemo(() => (0, L.sl)(t, { fakeAppIconURL: V }), [t]),
-        g = l.useMemo(() => (null == v ? null : (0, R.ae)(v)), [v]),
+        { iconURL: y, name: x, description: C } = l.useMemo(() => (0, L.sl)(t, { fakeAppIconURL: V }), [t]),
+        g = l.useMemo(() => (null == C ? null : (0, R.ae)(C)), [C]),
         P = (0, j.ZP)(y, ''),
         [N, E] = l.useState(!1),
         A = l.useCallback(() => {
@@ -273,7 +273,7 @@ function K(e) {
                                                 })
                                             }),
                                         Z && (0, r.jsx)($, {}),
-                                        k !== d.ww.NONE && (0, r.jsx)(C.Z, { labelType: k })
+                                        k !== d.ww.NONE && (0, r.jsx)(v.Z, { labelType: k })
                                     ]
                                 })
                               : null,
@@ -431,7 +431,7 @@ function en(e) {
                       })
                   })
                 : null,
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(C.Z, {
                 imageBackground: o,
                 applicationName: t.name,
                 imageClassName: d,
@@ -560,8 +560,8 @@ function ea(e) {
         {
             onActivityItemSelected: _,
             activityAction: x,
-            buttonColor: v,
-            buttonText: C
+            buttonColor: C,
+            buttonText: v
         } = (0, R.P7)({
             context: t,
             application: n,
@@ -615,15 +615,15 @@ function ea(e) {
                           className: W.voiceLauncherAppCardButton,
                           type: 'submit',
                           size: c.zxk.Sizes.LARGE,
-                          color: v,
+                          color: C,
                           disabled: m,
                           onClick: _,
                           'aria-label': H.intl.formatToPlainString(H.t['XjP/R0'], {
-                              buttonText: C,
+                              buttonText: v,
                               applicationName: n.name
                           }),
                           submitting: b,
-                          children: C
+                          children: v
                       })
                   })
               })

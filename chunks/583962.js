@@ -25,8 +25,8 @@ var r = n(200651),
     v = n(267642),
     C = n(624138),
     j = n(667815),
-    S = n(531572),
-    x = n(26323),
+    x = n(531572),
+    S = n(26323),
     E = n(30513),
     I = n(981631),
     P = n(388032),
@@ -113,9 +113,9 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             A = (0, v.FZ)(b),
             D = null == A,
             L = null != A ? A : b,
-            M = (0, c.e7)([S.Z], () => {
+            M = (0, c.e7)([x.Z], () => {
                 var e;
-                return null != (e = S.Z.getCountForGuild(t.id)) ? e : 0;
+                return null != (e = x.Z.getCountForGuild(t.id)) ? e : 0;
             }),
             U = (0, c.e7)([_.Z], () => _.Z.can(I.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
@@ -139,7 +139,7 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                     guild_id: t.id,
                     location_stack: u
                 }),
-                    (0, x.Z)({
+                    (0, S.Z)({
                         analyticsLocations: u,
                         analyticsSourceLocation: {
                             page: I.ZY5.GUILD_CHANNEL,

@@ -11,8 +11,8 @@ var r = n(200651),
     h = n(388032),
     p = n(418952);
 let f = i.forwardRef(function (e, t) {
-    let { body: n, header: l, artClassName: f, headerClassName: g, contentClassName: m, tryItText: b, dismissText: y, onTryFeature: _, onClose: O, className: v, inlineArt: C = !1, isPremiumFeature: j = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: x = !1, dismissibleContent: E, position: I = 'top', align: P = 'center', art: w, isPremiumEarlyAccess: N = !1, maxWidth: Z = 280, hideDismissButton: T = !1, pointerClassName: A, dismissIconClassName: R, dismissIcon: D, onDismissIconClick: L, tryItButtonColor: k } = e,
-        M = S ? s.zxk.Sizes.LARGE : s.zxk.Sizes.MAX,
+    let { body: n, header: l, artClassName: f, headerClassName: g, contentClassName: m, tryItText: b, dismissText: y, onTryFeature: _, onClose: O, className: v, inlineArt: C = !1, isPremiumFeature: j = !1, shouldUseHorizontalButtons: x = !1, showGIFTag: S = !1, dismissibleContent: E, position: I = 'top', align: P = 'center', art: w, isPremiumEarlyAccess: N = !1, maxWidth: Z = 280, hideDismissButton: T = !1, pointerClassName: A, dismissIconClassName: R, dismissIcon: D, onDismissIconClick: L, tryItButtonColor: k } = e,
+        M = x ? s.zxk.Sizes.LARGE : s.zxk.Sizes.MAX,
         [U, G] = i.useState(!1),
         { ref: B, width: V } = (0, a.ZP)();
     function F(e) {
@@ -44,7 +44,7 @@ let f = i.forwardRef(function (e, t) {
                         }),
                     (0, r.jsxs)('div', {
                         className: o()(f, C ? p.artInline : p.artAbsolute),
-                        children: [x && (0, r.jsx)(u.Z, { className: p.gifTag }), w]
+                        children: [S && (0, r.jsx)(u.Z, { className: p.gifTag }), w]
                     }),
                     (0, r.jsxs)('div', {
                         className: p.body,
@@ -95,7 +95,7 @@ let f = i.forwardRef(function (e, t) {
                     }),
                     (0, r.jsx)('div', {
                         ref: B,
-                        className: U || !S ? p.buttonContainerVertical : p.buttonContainerHorizontal,
+                        className: U || !x ? p.buttonContainerVertical : p.buttonContainerHorizontal,
                         children:
                             null != _
                                 ? (0, r.jsxs)(r.Fragment, {

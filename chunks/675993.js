@@ -21,8 +21,8 @@ var i = n(200651),
     _ = n(427996),
     y = n(906732),
     x = n(706302),
-    v = n(812236),
-    C = n(835473),
+    C = n(812236),
+    v = n(835473),
     g = n(146282),
     j = n(26033),
     P = n(70097),
@@ -93,12 +93,12 @@ function F(e) {
             var e;
             return null != (e = (0, S.jD)(l)) ? e : '';
         }, [l]),
-        v = (0, d.e7)([f.Z], () => f.Z.inDevModeForApplication(l.id)),
-        { isSlideReady: C } = (0, T.hH)(),
+        C = (0, d.e7)([f.Z], () => f.Z.inDevModeForApplication(l.id)),
+        { isSlideReady: v } = (0, T.hH)(),
         [N, E] = r.useState(!1);
     r.useEffect(() => {
-        C && E(!0);
-    }, [C]);
+        v && E(!0);
+    }, [v]);
     let O = null != a,
         R = A.PM.useExperiment({ location: 'AppLauncherProfile' }),
         { enabled: Z } = I.X.useExperiment({ location: 'AppLauncherProfile' }),
@@ -228,7 +228,7 @@ function F(e) {
                                   R.enabled || Z ? null : (0, i.jsx)(G, { application: l }),
                                   (0, i.jsx)(X, { application: l }),
                                   x.length > 0 ? (0, i.jsx)(Q, { description: x }) : null,
-                                  v
+                                  C
                                       ? (0, i.jsx)('div', {
                                             className: U.developerShelfControlsContainer,
                                             children: (0, i.jsx)(_.W, {
@@ -243,7 +243,7 @@ function F(e) {
                                             context: n,
                                             application: l,
                                             sectionName: p,
-                                            isDeveloperOfThisApp: v,
+                                            isDeveloperOfThisApp: C,
                                             hasCommands: b
                                         })
                               ]
@@ -376,8 +376,8 @@ function q(e) {
 function Y(e) {
     var t;
     let { context: n, application: l, sectionName: a, hasCommands: s, isDeveloperOfThisApp: c } = e,
-        u = (0, v.Fs)(n, l.id),
-        d = (0, C.q)(l.id),
+        u = (0, C.Fs)(n, l.id),
+        d = (0, v.q)(l.id),
         f = null == d || null == (t = d.bot) ? void 0 : t.id,
         h = (0, x.Z)({
             context: n,

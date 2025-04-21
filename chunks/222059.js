@@ -20,8 +20,8 @@ var r = n(200651),
     v = n(417363),
     C = n(941128),
     j = n(780570),
-    S = n(278464),
-    x = n(276952),
+    x = n(278464),
+    S = n(276952),
     E = n(682662),
     I = n(662146),
     P = n(674552),
@@ -47,7 +47,7 @@ function D(e) {
     let { selected: p, user: f, badge: b, link: y, showProgressBadge: _ } = e,
         O = (0, o.e7)([u.Z], () => u.Z.isEditorOpen),
         [v, C] = i.useState(!1),
-        [j, S] = i.useState(!1),
+        [j, x] = i.useState(!1),
         [N, D] = i.useState(null),
         [L, k] = i.useState(0),
         M = (0, l.Ie)('home'),
@@ -108,9 +108,9 @@ function D(e) {
                                 s.K.set(w.wli, e),
                                     e && s.K.set(Z.O5, !0),
                                     e ? (0, g.GN)('discodo') : (0, g.GN)('user_leave'),
-                                    S(!0),
+                                    x(!0),
                                     setTimeout(() => {
-                                        S(!1);
+                                        x(!1);
                                     }, 1000);
                             }
                         },
@@ -158,7 +158,7 @@ function D(e) {
             position: 'right',
             children: (0, r.jsxs)(E.H, {
                 children: [
-                    (0, r.jsx)(x.Z, {
+                    (0, r.jsx)(S.Z, {
                         selected: p,
                         hovered: v,
                         className: A.pill
@@ -176,7 +176,7 @@ function D(e) {
     });
 }
 function L() {
-    let e = (0, S.n)(),
+    let e = (0, x.n)(),
         t = (0, o.e7)([C.Z, v.Z], () => {
             let e = (0, c.E)(C.Z.activeItems, v.Z),
                 { total: t, progress: n } = j.lK(e),

@@ -19,7 +19,7 @@ function h(e) {
         S = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         [b, y] = l.useState(!0),
         O = !S,
-        I = (0, o.Yzy)(b, {
+        Z = (0, o.Yzy)(b, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
             leave: { rotate: -120 },
@@ -47,7 +47,7 @@ function h(e) {
     }, [v, t, O]),
     O)
         ? null
-        : I((e, t) => {
+        : Z((e, t) => {
               var n;
               let { rotate: l } = e;
               return (

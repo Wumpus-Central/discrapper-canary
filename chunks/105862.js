@@ -20,7 +20,7 @@ function _(e) {
         x = r.useCallback(() => {
             (0, s.Z)(c.Z.getAppsSupportURL(p.BhN.APPS_LEARN_MORE));
         }, []),
-        { trackSectionImpressionRef: v } = (0, d.Z)({
+        { trackSectionImpressionRef: C } = (0, d.Z)({
             sectionName: u.L3.NEW_TO_APPS,
             numItems: 1,
             numVisibleItems: 1
@@ -29,7 +29,7 @@ function _(e) {
         className: n ? f.containerPadding : void 0,
         children: (0, i.jsxs)('div', {
             ref: (e) => {
-                v.current = e;
+                C.current = e;
             },
             className: f.container,
             children: [

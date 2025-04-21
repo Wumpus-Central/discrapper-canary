@@ -20,8 +20,8 @@ var r = n(200651),
     v = n(592125),
     C = n(944486),
     j = n(979651),
-    S = n(709054),
-    x = n(853856),
+    x = n(709054),
+    S = n(853856),
     E = n(593214),
     I = n(919755),
     P = n(110977),
@@ -66,9 +66,9 @@ function D() {
     let l = (0, s.Ie)('favorites'),
         { favoriteAdded: D, clearFavoriteAdded: L } = (0, E.up)(),
         [k, M] = i.useState(!1),
-        { favoriteServerMuted: U, favoriteChannels: G } = (0, a.cj)([x.Z], () => ({
-            favoriteChannels: x.Z.getFavoriteChannels(),
-            favoriteServerMuted: x.Z.favoriteServerMuted
+        { favoriteServerMuted: U, favoriteChannels: G } = (0, a.cj)([S.Z], () => ({
+            favoriteChannels: S.Z.getFavoriteChannels(),
+            favoriteServerMuted: S.Z.favoriteServerMuted
         })),
         B = (0, a.e7)([C.Z], () => C.Z.getChannelId(N.I_8)),
         V = (0, a.e7)([v.Z], () => v.Z.getChannel(B)),
@@ -84,7 +84,7 @@ function D() {
                 }),
                 i = (0, a.e7)([O.Z], () => O.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
                 l = (0, a.e7)([j.Z], () => n && null != t && j.Z.hasVideo(t), [n, t]),
-                o = (0, a.Wu)([h.ZP], () => S.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
+                o = (0, a.Wu)([h.ZP], () => x.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
                 s = (0, a.e7)([h.ZP], () =>
                     Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,

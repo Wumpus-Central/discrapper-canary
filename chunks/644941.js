@@ -25,11 +25,11 @@ var n = r(200651),
     P = r(567409),
     S = r(774073),
     N = r(426482),
-    w = r(715318),
-    A = r(38516),
+    A = r(715318),
+    w = r(38516),
     C = r(891949),
-    M = r(252547),
-    R = r(484527),
+    R = r(252547),
+    M = r(484527),
     T = r(131033),
     L = r(296768),
     D = r(978313),
@@ -91,7 +91,7 @@ function Q(e) {
                                     size: N.Z.LARGE
                                 })
                             }),
-                            (0, n.jsx)(w.Z, {
+                            (0, n.jsx)(A.Z, {
                                 applicationId: a.id,
                                 viewId: u,
                                 className: K.overflowMenu
@@ -153,7 +153,7 @@ function F(e) {
     return (0, n.jsxs)('div', {
         className: K.sections,
         children: [
-            (0, n.jsx)(M.Z, {
+            (0, n.jsx)(R.Z, {
                 entries: a,
                 viewId: u,
                 officialGuildId: null == l || null == (t = l.guild) ? void 0 : t.id,
@@ -195,13 +195,13 @@ function Y(e) {
                         detectedGame: t,
                         trackAction: a
                     }),
-                    (0, n.jsx)(R.Z, {
+                    (0, n.jsx)(M.Z, {
                         detectedGame: t,
                         trackClick: a,
                         onInviteResolved: o,
                         closeModal: s
                     }),
-                    (0, n.jsx)(A.Z, {
+                    (0, n.jsx)(w.Z, {
                         detectedGame: t,
                         trackClick: a
                     }),
@@ -222,9 +222,9 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                 var e;
                 return (null != (e = _.Z.getSimilarGames(r)) ? e : []).slice(0, 25);
             }),
-            [w, A] = i.useState(null),
+            [A, w] = i.useState(null),
             C = (0, P.Ns)(r),
-            [M, R] = i.useState(null),
+            [R, M] = i.useState(null),
             T = (0, f.q)(r),
             L = (0, u.e7)([h.Z], () => h.Z.getGame(r)),
             D = null != (t = null == L ? void 0 : L.name) ? t : null == T ? void 0 : T.name,
@@ -236,7 +236,7 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                     action: e,
                     similarGameId: t,
                     viewId: S,
-                    officialGuildId: null == M || null == (n = M.guild) ? void 0 : n.id
+                    officialGuildId: null == R || null == (n = R.guild) ? void 0 : n.id
                 });
             };
         return ((0, g.ZP)(() => {
@@ -256,11 +256,11 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
         i.useEffect(() => {
             (async () => {
                 if (0 === N.length) {
-                    A(null);
+                    w(null);
                     try {
                         await (0, y.i)(r);
                     } catch (e) {
-                        A(e);
+                        w(e);
                     }
                 }
             })();
@@ -283,7 +283,7 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                 playedFriendIds: C.map((e) => e.author_id),
                 playedFriendsData: n,
                 similarGames: U(N),
-                officialGuildId: null == M || null == (e = M.guild) ? void 0 : e.id
+                officialGuildId: null == R || null == (e = R.guild) ? void 0 : e.id
             });
         }),
         null == L || null == T)
@@ -310,16 +310,16 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                                           detectedGame: L,
                                           application: T,
                                           entries: C,
-                                          officialGuildInvite: M,
+                                          officialGuildInvite: R,
                                           similarGames: N,
-                                          similarGamesError: w,
+                                          similarGamesError: A,
                                           onClose: c,
                                           viewId: S,
                                           trackAction: G
                                       }),
                                       (0, n.jsx)(Y, {
                                           detectedGame: L,
-                                          setOfficialGuildInvite: R,
+                                          setOfficialGuildInvite: M,
                                           trackAction: G,
                                           onClose: c,
                                           appContext: v

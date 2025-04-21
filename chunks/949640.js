@@ -14,7 +14,7 @@ var r = n(200651),
 function u(e) {
     let { uploadType: t, maxFileSizeBytes: l, onComplete: s, showUpsellHeader: a = !0, analyticsLocation: o, analyticsLocations: c } = e;
     (0, i.ZDy)(async () => {
-        let { default: e } = await Promise.all([n.e('91689'), n.e('89289'), n.e('71704')]).then(n.bind(n, 28130));
+        let { default: e } = await Promise.all([n.e('91689'), n.e('89289'), n.e('63993')]).then(n.bind(n, 28130));
         return (n) =>
             (0, r.jsx)(
                 e,

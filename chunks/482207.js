@@ -1,17 +1,17 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r,
-    i,
     l,
-    o = n(442837),
+    a,
+    i = n(442837),
     s = n(570140);
-let a = () => ({
+let o = () => ({
         isFetching: !1,
         lastFetchedAt: null,
         error: null
     }),
     c = [],
-    u = a();
-class d extends (l = o.ZP.Store) {
+    u = o();
+class d extends (a = i.ZP.Store) {
     get isFetching() {
         return u.isFetching;
     }
@@ -26,16 +26,16 @@ class d extends (l = o.ZP.Store) {
         return c;
     }
 }
-(i = 'RecentAvatarsStore'),
+(l = 'RecentAvatarsStore'),
     (r = 'displayName') in d
         ? Object.defineProperty(d, r, {
-              value: i,
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (d[r] = i);
-let h = new d(s.Z, {
+        : (d[r] = l);
+let f = new d(s.Z, {
     RECENT_AVATARS_FETCH_START: function () {
         (u.isFetching = !0), (u.error = null);
     },
@@ -55,6 +55,6 @@ let h = new d(s.Z, {
         c = c.filter((e) => e.id !== t);
     },
     LOGOUT: function () {
-        (c = []), (u = a());
+        (c = []), (u = o());
     }
 });

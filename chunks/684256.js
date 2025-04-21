@@ -14,7 +14,7 @@ var i = n(200651),
 function h(e) {
     let { context: t, entrypoint: n, title: l, look: h, items: b, sectionName: _, sectionOverallPosition: y } = e,
         x = (0, u.s)(),
-        v = r.useMemo(() => (n === c._b.TEXT ? d.kA : d.qR), [n]);
+        C = r.useMemo(() => (n === c._b.TEXT ? d.kA : d.qR), [n]);
     return (0, i.jsxs)('section', {
         className: f.container,
         'aria-label': m.intl.formatToPlainString(m.t.iobNIC, { sectionTitle: l }),
@@ -39,7 +39,7 @@ function h(e) {
                     children: b.map((e, n) => {
                         let { application: r, installOnDemand: l, showsPromoted: o } = e;
                         return (0, i.jsx)(
-                            v,
+                            C,
                             {
                                 context: t,
                                 application: r,

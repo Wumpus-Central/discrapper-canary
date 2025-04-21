@@ -64,14 +64,14 @@ let O = i.memo(function (e) {
             null != _ && r.includes(_) && (t = (0, c.KY)(b)), (0, c.Uo)(n.id, r, t);
         }, [n.id, _, b, y]),
         j = (0, s.Q3)('ChannelListSection'),
-        { density: S } = (0, l.TCT)(),
-        x = j && 'compact' === S ? 8 : p.$k;
+        { density: x } = (0, l.TCT)(),
+        S = j && 'compact' === x ? 8 : p.$k;
     switch (t) {
         case d.wZ:
-            return (0, r.jsx)('div', { style: { height: x } });
+            return (0, r.jsx)('div', { style: { height: S } });
         case d.wd:
             if (n.hasFeature(f.oNc.HUB)) return null;
-            return (0, r.jsx)('div', { style: { height: x } });
+            return (0, r.jsx)('div', { style: { height: S } });
         case d.p2:
             return (0, r.jsx)(h.P, { name: v ? g.intl.string(g.t.mlPMCw) : g.intl.string(g.t.k8fFjo) });
         case b.recentsSectionNumber:

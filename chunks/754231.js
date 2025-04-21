@@ -141,7 +141,7 @@ function j(e) {
               children: a
           });
 }
-function S(e) {
+function x(e) {
     let { activity: t } = e,
         n = null == t ? void 0 : t.state;
     return null == n || '' === n || (0, c.Z)(t)
@@ -151,7 +151,7 @@ function S(e) {
               children: n
           });
 }
-function x(e) {
+function S(e) {
     let { activity: t } = e;
     if (null == t || !(0, c.Z)(t)) return null;
     let { timestamps: n } = t;
@@ -209,7 +209,7 @@ function E(e) {
                                       user: l,
                                       onOpenSpotifyArtist: p
                                   }),
-                                  (0, r.jsx)(S, { activity: t }),
+                                  (0, r.jsx)(x, { activity: t }),
                                   m.length > 0 &&
                                       (0, r.jsx)(d.Z, {
                                           className: _.usersSummary,
@@ -245,7 +245,7 @@ function E(e) {
                           })
                       ]
                   }),
-                  (0, r.jsx)(x, { activity: t })
+                  (0, r.jsx)(S, { activity: t })
               ]
           })
         : null;

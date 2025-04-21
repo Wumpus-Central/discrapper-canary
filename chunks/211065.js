@@ -10,8 +10,8 @@ var l = n(200651),
     d = n(318766),
     m = n(907040),
     f = n(246133),
-    h = n(695346),
-    p = n(293273),
+    p = n(695346),
+    h = n(293273),
     b = n(594174),
     S = n(626135),
     j = n(720449),
@@ -305,7 +305,7 @@ class E extends a.PureComponent {
             N(this, 'handleSaveStatus', () => {
                 let { sourceAnalyticsContext: e, onClose: t } = this.props,
                     { emojiInfo: n, text: l, clearAfter: a, status: r } = this.state,
-                    i = h.co.getSetting();
+                    i = p.co.getSetting();
                 i !== r &&
                     (0, f.Z)({
                         nextStatus: r,
@@ -338,13 +338,13 @@ class E extends a.PureComponent {
     }
 }
 let k = o.ZP.connectStores(
-    [p.Z, b.default],
+    [h.Z, b.default],
     () => {
         let e = b.default.getCurrentUser();
         return (
             i()(null != e, 'CustomStatusModal: user cannot be null'),
             {
-                customStatus: p.Z.getCustomStatusActivity(),
+                customStatus: h.Z.getCustomStatusActivity(),
                 user: e
             }
         );

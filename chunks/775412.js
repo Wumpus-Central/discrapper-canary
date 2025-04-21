@@ -11,12 +11,12 @@ var r = n(442837),
     l = n(474936);
 let c = () => {
     let e = (0, r.e7)([a.ZP], () => a.ZP.getPremiumTypeSubscription());
-    return (null == e ? void 0 : e.trialId) != null;
+    return !!(null == e ? void 0 : e.hasActiveTrial);
 };
 function u() {
     let e = (0, r.e7)([a.ZP], () => a.ZP.getPremiumTypeSubscription()),
         t = (0, r.e7)([i.default], () => i.default.getCurrentUser());
-    return (null == e ? void 0 : e.trialId) != null ? (null == t ? void 0 : t.premiumType) : null;
+    return (null == e ? void 0 : e.hasActiveTrial) ? (null == t ? void 0 : t.premiumType) : null;
 }
 function d() {
     return l.CR.map((e) => o.Z.getUserTrialOffer(e))

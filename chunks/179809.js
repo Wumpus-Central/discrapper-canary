@@ -20,8 +20,8 @@ var r = n(200651),
     v = n(682662),
     C = n(662146),
     j = n(388032),
-    S = n(728492),
-    x = n(335426);
+    x = n(728492),
+    S = n(335426);
 let E = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     I = (0, a.animated)(d.Kqy),
     P = i.memo(function (e) {
@@ -82,7 +82,7 @@ let E = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         hovered: W,
                         selected: l,
                         unread: w,
-                        className: x.pill
+                        className: S.pill
                     }),
                     (0, r.jsx)(C.Z, {
                         text: et,
@@ -95,7 +95,7 @@ let E = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       J(e);
                                   }
                                 : void 0,
-                            className: o()(S.folderIcon, { [x.wobble]: !X && K && !a }),
+                            className: o()(x.folderIcon, { [S.wobble]: !X && K && !a }),
                             'data-dnd-name': et,
                             children: X
                                 ? (0, r.jsx)(O.Z, {})
@@ -132,15 +132,15 @@ let E = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
             });
         return (0, r.jsxs)('div', {
             ref: eo,
-            className: o()(S.wrapper, a && S.isExpanded),
+            className: o()(x.wrapper, a && x.isExpanded),
             'data-drop-hovering': K,
             children: [
                 !X &&
                     a &&
                     (0, r.jsx)('span', {
-                        className: o()(S.expandedFolderBackground, {
-                            [S.collapsed]: !a,
-                            [S.hover]: Q
+                        className: o()(x.expandedFolderBackground, {
+                            [x.collapsed]: !a,
+                            [x.hover]: Q
                         })
                     }),
                 es,

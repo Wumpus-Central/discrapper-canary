@@ -58,7 +58,7 @@ let v = {
                 var e;
                 (0, d.jd)(t), (0, p.Z)(t), null == C || null == (e = C.popout) || e.markAsDismissed(m.L.INDIRECT_ACTION);
             }, [t, C]),
-            S = i.useCallback(() => {
+            x = i.useCallback(() => {
                 var e;
                 switch (null == C || null == (e = C.popout) ? void 0 : e.type) {
                     case h.J.LEVEL_REACHED:
@@ -71,7 +71,7 @@ let v = {
                         return (0, r.jsx)('div', {});
                 }
             }, [t, null == C ? void 0 : C.popout]),
-            x = (0, a.s9z)(a.JQI),
+            S = (0, a.s9z)(a.JQI),
             E = (0, s.e7)([u.Z], () => u.Z.hasLayers()),
             [I, P] = i.useState(null),
             w = null == I ? 'animation' : 'LOOP';
@@ -82,11 +82,11 @@ let v = {
             P(e);
         }, []);
         return (0, r.jsx)(a.yRy, {
-            shouldShow: (null == C ? void 0 : C.popout) != null && !(x || E),
+            shouldShow: (null == C ? void 0 : C.popout) != null && !(S || E),
             nudgeAlignIntoViewport: !0,
             animationPosition: 'bottom',
             position: 'right',
-            renderPopout: S,
+            renderPopout: x,
             children: (e) => {
                 var i, s;
                 return (0, r.jsx)(

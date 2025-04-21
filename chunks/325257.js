@@ -20,8 +20,8 @@ var r = n(200651),
     v = n(271383),
     C = n(771845),
     j = n(727258),
-    S = n(276952),
-    x = n(249792),
+    x = n(276952),
+    S = n(249792),
     E = n(40153),
     I = n(593618),
     P = n(252686),
@@ -122,17 +122,17 @@ let M = i.memo(function (e) {
             if (null != F) return void (0, _.uL)(F, { state: L });
             (0, O.X)(eo, { state: L });
         }, [eo, F]),
-        eS = i.useCallback(() => {
+        ex = i.useCallback(() => {
             if (null != F || null == H || q || !et) return;
             let e = (0, y.V)(H.id);
             null != e && p.Z.preload(H.id, e);
         }, [F, H, q, et]),
-        ex = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
+        eS = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
         eE = i.useCallback(
             (e) => {
-                null == H || ex || J(e, H);
+                null == H || eS || J(e, H);
             },
-            [H, J, ex]
+            [H, J, eS]
         ),
         eI = i.useCallback(
             (e) => {
@@ -160,7 +160,7 @@ let M = i.memo(function (e) {
     if (null == H) return null;
     let eZ =
             eO || ey
-                ? (0, r.jsx)(x.Z, {
+                ? (0, r.jsx)(S.Z, {
                       guild: H,
                       show: eO,
                       active: W,
@@ -188,7 +188,7 @@ let M = i.memo(function (e) {
                                   onMouseLeave: function () {
                                       ee || em(!1);
                                   },
-                                  onMouseDown: eS,
+                                  onMouseDown: ex,
                                   onContextMenu: eE,
                                   onKeyDown: eI,
                                   icon: H.getIconURL(2 * eN, eb && z, ea),
@@ -230,7 +230,7 @@ let M = i.memo(function (e) {
     return (0, r.jsxs)(w.H, {
         ref: ew,
         children: [
-            (0, r.jsx)(S.Z, {
+            (0, r.jsx)(x.Z, {
                 hovered: !eh && eb,
                 selected: !eh && W,
                 unread: !eh && Y,

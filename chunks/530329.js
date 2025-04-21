@@ -7,8 +7,8 @@ var r = n(200651),
     o = n(378879),
     c = n(981631),
     u = n(486324),
-    f = n(388032),
-    d = n(826756);
+    d = n(388032),
+    f = n(826756);
 function p(e) {
     var { uploadType: t, className: n } = e,
         a = (function (e, t) {
@@ -33,12 +33,12 @@ function p(e) {
     let p = l.useCallback(() => {
             (0, o.s)(t, void 0);
         }, [t]),
-        m = l.useMemo(() => {
+        g = l.useMemo(() => {
             switch (t) {
                 case u.pC.AVATAR:
-                    return f.intl.format(f.t['pvw/HB'], { onClick: p });
+                    return d.intl.format(d.t['pvw/HB'], { onClick: p });
                 case u.pC.BANNER:
-                    return f.intl.format(f.t.aCrz1d, { onClick: p });
+                    return d.intl.format(d.t.aCrz1d, { onClick: p });
                 default:
                     return '';
             }
@@ -73,10 +73,10 @@ function p(e) {
                   return e;
               })(
                   {
-                      text: m,
-                      button: f.intl.string(f.t.BmJkbW),
+                      text: g,
+                      button: d.intl.string(d.t.BmJkbW),
                       buttonAnalyticsObject: { section: c.jXE.USER_PROFILE },
-                      className: i()(d.container, n)
+                      className: i()(f.container, n)
                   },
                   a
               )

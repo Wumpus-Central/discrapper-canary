@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => x });
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -64,12 +64,12 @@ function j(e) {
             );
     });
 }
-function S(e) {
+function x(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         s = (0, l.e7)([f.Z], () => f.Z.getGuilds()),
-        S = i.useMemo(() => Object.values(s), [s]),
-        x = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-        E = i.useMemo(() => S.some((e) => e.isOwner(x)), [S, x]),
+        x = i.useMemo(() => Object.values(s), [s]),
+        S = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+        E = i.useMemo(() => x.some((e) => e.isOwner(S)), [x, S]),
         I = (0, o.s9z)((e) => (0, o.DEQ)(e, _.PU)),
         { analyticsLocations: P } = (0, a.ZP)(),
         w = (0, u.Q3)('CreateJoinGuildButton'),

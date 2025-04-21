@@ -121,7 +121,7 @@ let w = {
     [c.s.LAUNCHED_ACTIVITY]: [U, G, j, z, K, V]
 };
 var D = (function (e) {
-    return (e[(e.CARD = 0)] = 'CARD'), (e[(e.POPOUT = 1)] = 'POPOUT'), (e[(e.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (e[(e.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (e[(e.USER_PROFILE = 4)] = 'USER_PROFILE'), (e[(e.EMBED = 5)] = 'EMBED'), (e[(e.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT'), (e[(e.OVERLAY = 7)] = 'OVERLAY'), (e[(e.FRIENDS_POPOUT = 8)] = 'FRIENDS_POPOUT'), e;
+    return (e[(e.CARD = 0)] = 'CARD'), (e[(e.POPOUT = 1)] = 'POPOUT'), (e[(e.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (e[(e.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (e[(e.USER_PROFILE = 4)] = 'USER_PROFILE'), (e[(e.EMBED = 5)] = 'EMBED'), (e[(e.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT'), (e[(e.OVERLAY = 7)] = 'OVERLAY'), (e[(e.FRIENDS_POPOUT = 8)] = 'FRIENDS_POPOUT'), (e[(e.APP_LAUNCHER = 9)] = 'APP_LAUNCHER'), e;
 })({});
 let L = i.createContext({});
 function x() {
@@ -173,7 +173,7 @@ function j(e) {
 function U(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: i, defaultIconColor: a, location: o } = x(),
-        s = (0, b.Jg)(t) && (0, h.Hi)(o, [0, 4, 7]),
+        s = (0, b.Jg)(t) && (0, h.Hi)(o, [0, 4, 7, 9]),
         l = s ? f.TVs.colors.TEXT_POSITIVE : a,
         c = s ? 'text-positive' : i,
         { streamPreviewUrl: u } = (0, E.Z)(t),

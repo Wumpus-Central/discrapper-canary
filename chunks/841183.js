@@ -8,24 +8,24 @@ var r = n(192379),
     c = n(27367);
 function u(e) {
     let { avatarId: t, storageHash: n, size: u } = e,
-        { onMouseEnter: f, onMouseLeave: d, shouldAnimate: p } = (0, i.Z)(),
-        m = (0, l.e7)([s.default], () => s.default.getId());
+        { onMouseEnter: d, onMouseLeave: f, shouldAnimate: p } = (0, i.Z)(),
+        g = (0, l.e7)([s.default], () => s.default.getId());
     return {
         avatarSrc: r.useMemo(
             () =>
                 (0, o.fD)({
-                    userId: m,
+                    userId: g,
                     avatarId: t,
                     storageHash: n,
                     canAnimate: p,
                     size: (0, a.pxk)(null != u ? u : c.m)
                 }),
-            [m, t, n, p, u]
+            [g, t, n, p, u]
         ),
         isAvatarAnimating: p,
         eventHandlers: {
-            onMouseEnter: f,
-            onMouseLeave: d
+            onMouseEnter: d,
+            onMouseLeave: f
         }
     };
 }

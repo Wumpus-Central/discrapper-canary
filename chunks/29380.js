@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -16,8 +16,8 @@ var i = n(200651),
     _ = n(981631),
     y = n(388032),
     x = n(854408);
-function v(e) {
-    let { context: t, application: n, sectionName: v, primaryEntryPointCommand: C, buttonSize: g = l.PhG.MEDIUM, playSolo: j = !1 } = e,
+function C(e) {
+    let { context: t, application: n, sectionName: C, primaryEntryPointCommand: v, buttonSize: g = l.PhG.MEDIUM, playSolo: j = !1 } = e,
         P = r.useId(),
         N = r.useCallback(() => {
             c.yT(p.ti.ACTIVITY);
@@ -37,7 +37,7 @@ function v(e) {
             context: t
         }),
         L = u.PM.useExperiment({ location: 'AppPrimaryEntryPointButton()' }),
-        w = r.useMemo(() => (0, f.XZ)(C.displayName), [C.displayName]),
+        w = r.useMemo(() => (0, f.XZ)(v.displayName), [v.displayName]),
         {
             onActivityItemSelected: R,
             buttonColor: Z,
@@ -46,7 +46,7 @@ function v(e) {
             context: t,
             application: n,
             location: a.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: v,
+            sectionName: C,
             commandName: w,
             autoDismissOnClick: T === o.JS.LEAVE,
             launchingComponentId: P,

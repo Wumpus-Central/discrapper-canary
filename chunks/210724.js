@@ -106,22 +106,22 @@ function R(e) {
         { hasError: V, isLoading: Q } = (0, v.d7)(),
         U = o.useContext(w.T) || (R && B && !Q),
         H = o.useRef(U),
-        F = (0, O.B)(s, U && !V),
-        z = o.useRef(-1),
+        z = (0, O.B)(s, U && !V),
+        F = o.useRef(-1),
         X = o.useRef(!1),
         [K, Y] = o.useState(!1),
         [G, J] = o.useState(!1),
         [$, ee] = o.useState(!0),
         [et, en] = o.useState(!0),
-        [er, eo] = o.useState(F.preEnrollmentExpandedHeight),
+        [er, eo] = o.useState(z.preEnrollmentExpandedHeight),
         es = o.useRef(null),
         ea = o.useCallback((e) => {
             ee(!1), J(e);
         }, []),
         ei = o.useCallback(() => {
             var e, t;
-            eo((null != (t = null == (e = es.current) ? void 0 : e.offsetHeight) ? t : 84) + 2 * F.paddingVertical);
-        }, [F.paddingVertical]),
+            eo((null != (t = null == (e = es.current) ? void 0 : e.offsetHeight) ? t : 84) + 2 * z.paddingVertical);
+        }, [z.paddingVertical]),
         el = o.useCallback(() => {
             ei(), ea(!0);
         }, [ei, ea]),
@@ -139,7 +139,7 @@ function R(e) {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 if (G) return;
                 let { withDelay: t = !1 } = e;
-                t ? (z.current = window.setTimeout(el, 75)) : el();
+                t ? (F.current = window.setTimeout(el, 75)) : el();
             },
             [el, G]
         ),
@@ -147,8 +147,8 @@ function R(e) {
             ep();
         }, [ep]),
         ef = o.useCallback(() => {
-            window.clearTimeout(z.current), F.canCollapseOnBlur && !K && (X.current || ea(!1));
-        }, [K, F, ea]),
+            window.clearTimeout(F.current), z.canCollapseOnBlur && !K && (X.current || ea(!1));
+        }, [K, z, ea]),
         eg = o.useCallback(() => {
             var e;
             (0, m.dA)({
@@ -171,8 +171,8 @@ function R(e) {
                 ef();
         }, [ef, s]);
     o.useLayoutEffect(() => {
-        Z && F.shouldExpandOnQuestComplete && el();
-    }, [el, Z, F.shouldExpandOnQuestComplete]),
+        Z && z.shouldExpandOnQuestComplete && el();
+    }, [el, Z, z.shouldExpandOnQuestComplete]),
         o.useLayoutEffect(() => {
             M && !L && X.current && el();
         }, [el, M, L]),
@@ -218,8 +218,8 @@ function R(e) {
         I && (0, _.loadVideoQuestModal)();
     }, [I]),
     o.useLayoutEffect(() => {
-        Z && !W && F.canCollapseOnBlur && ei();
-    }, [Z, el, F.canCollapseOnBlur, ei, W]),
+        Z && !W && z.canCollapseOnBlur && ei();
+    }, [Z, el, z.canCollapseOnBlur, ei, W]),
     o.useEffect(() => {
         var e, t;
         V &&
@@ -244,10 +244,10 @@ function R(e) {
     R && (U || !et || Q) && !V)
         ? (0, r.jsx)(j.A, {
               questOrQuests: s,
-              questContent: F.trackingCtx.content,
+              questContent: z.trackingCtx.content,
               overrideVisibility: !q && U,
               children: (e, t) => {
-                  let n = F.component;
+                  let n = z.component;
                   return (
                       (D.current = t.current),
                       (0, r.jsxs)('div', {
@@ -272,7 +272,7 @@ function R(e) {
                                       color: s.config.colors.secondary,
                                       height: ev.to({
                                           range: [0, 1],
-                                          output: [0, !F.canCollapseOnBlur && G ? er : 70]
+                                          output: [0, !z.canCollapseOnBlur && G ? er : 70]
                                       })
                                   },
                                   children: (0, r.jsx)(i.animated.div, {
@@ -281,8 +281,8 @@ function R(e) {
                                           [E.contentWrapperAccepted]: M
                                       }),
                                       style: {
-                                          backgroundColor: F.preEnrollmentBackgroundColor,
-                                          backgroundImage: M ? F.postEnrollmentBackgroundImage : void 0
+                                          backgroundColor: z.preEnrollmentBackgroundColor,
+                                          backgroundImage: M ? z.postEnrollmentBackgroundImage : void 0
                                       },
                                       children: (0, r.jsx)(C.t, {
                                           springConfig: eh,

@@ -16,8 +16,8 @@ var i = n(200651),
     _ = n(104919),
     y = n(583027),
     x = n(585483),
-    v = n(499254),
-    C = n(541099),
+    C = n(499254),
+    v = n(541099),
     g = n(827498),
     j = n(496158),
     P = n(676161),
@@ -36,8 +36,8 @@ function k(e) {
     var t, n;
     let { context: l, command: o, section: s, sectionName: c } = e,
         d = r.useCallback(() => {
-            let e = C.Z.entrypoint();
-            v.yT(g.ti.COMMAND),
+            let e = v.Z.entrypoint();
+            C.yT(g.ti.COMMAND),
                 (0, y.Mo)({
                     command: o,
                     location: b.Vh.APP_LAUNCHER_APPLICATION_VIEW,
@@ -155,7 +155,7 @@ function D(e) {
             async (e) => {
                 if ('channel' !== t.type) return;
                 e.stopPropagation();
-                let i = C.Z.lastShownEntrypoint();
+                let i = v.Z.lastShownEntrypoint();
                 try {
                     let { isAuthorized: e } = await (0, _.L)({
                         applicationId: n.applicationId,
@@ -175,7 +175,7 @@ function D(e) {
                             sectionName: l,
                             commandOrigin: b.bB.APP_LAUNCHER_APPLICATION_VIEW
                         }),
-                        v.yT(g.ti.COMMAND));
+                        C.yT(g.ti.COMMAND));
                 } finally {
                     c(!1);
                 }
@@ -275,7 +275,7 @@ function U(e) {
     r.useEffect(() => {
         c(l.id);
     }, [l.id, c]);
-    let v = (0, P.Z)({
+    let C = (0, P.Z)({
         context: n,
         commands: y,
         limit: 5
@@ -290,7 +290,7 @@ function U(e) {
                   (0, i.jsx)(B, {
                       context: n,
                       section: f,
-                      commands: v,
+                      commands: C,
                       headerName: T.intl.string(T.t.acSE0t),
                       sectionName: o
                   }),

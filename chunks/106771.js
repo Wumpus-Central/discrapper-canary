@@ -16,7 +16,7 @@ var i = n(200651),
     _ = n(413097);
 function y(e) {
     var t;
-    let { command: n, application: y, onClick: x, query: v, searchResultsPosition: C, onClickAppCardFriends: g } = e,
+    let { command: n, application: y, onClick: x, query: C, searchResultsPosition: v, onClickAppCardFriends: g } = e,
         j = r.useCallback(
             (e) => {
                 if ((0, u.BQ)(y)) {
@@ -64,8 +64,8 @@ function y(e) {
         { trackSearchResultsItemImpressionRef: A } = (0, h.Z)({
             applicationId: y.id,
             commandId: null == n ? void 0 : n.id,
-            query: v,
-            searchResultsPosition: C
+            query: C,
+            searchResultsPosition: v
         }),
         { enabled: I } = c.X.useExperiment({ location: 'AppLauncherSearchCard' }, { autoTrackExposure: !0 }),
         { friends: S } = (0, a.Z)(y),

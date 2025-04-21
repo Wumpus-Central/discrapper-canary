@@ -44,7 +44,7 @@ function d(e) {
             },
             [S, g, m]
         ),
-        I = r.useCallback(
+        Z = r.useCallback(
             (e) => {
                 E.current && null != g && S('handleMouseEnter', g, e);
             },
@@ -65,7 +65,7 @@ function d(e) {
                 [g, m]
             ),
             handleMouseDown: b,
-            handleMouseEnter: I,
+            handleMouseEnter: Z,
             handleMouseMove: y,
             handleMouseUp: O
         }

@@ -30,7 +30,7 @@ function p(e) {
                       r = s()(t.createdAt).format('M/D/YY'),
                       l = t.status === m.O0b.CANCELED,
                       a = t.status === m.O0b.PAST_DUE,
-                      c = null != t.trialId;
+                      c = t.hasActiveTrial;
                   return {
                       memberSince: r,
                       nextRenewalDate: n,

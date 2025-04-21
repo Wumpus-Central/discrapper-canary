@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Y }), n(388685);
+n.d(t, { Z: () => W }), n(388685);
 var i,
     r,
     s,
@@ -128,7 +128,7 @@ class z extends (i = o.ZP.Store) {
               writable: !0
           })
         : (z[r] = s);
-let Y = new z(c.Z, {
+let W = new z(c.Z, {
     APPLICATION_FETCH_FAIL: F,
     APPLICATION_FETCH_SUCCESS: F,
     APPLICATION_FETCH: F,

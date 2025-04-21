@@ -15,17 +15,17 @@ var r = n(200651),
     m = n(490897),
     b = n(915887);
 let y = (0, c.B)(function (e) {
-    let { guild: t, selectedChannelId: l, position: c, disableManageChannels: y, sorting: _, sortingType: O, sortingPosition: v, connectChannelDragSource: C, connectChannelDropTarget: j, tabIndex: S } = e,
-        x = (0, s.e7)([u.Z, d.ZP], () => {
+    let { guild: t, selectedChannelId: l, position: c, disableManageChannels: y, sorting: _, sortingType: O, sortingPosition: v, connectChannelDragSource: C, connectChannelDropTarget: j, tabIndex: x } = e,
+        S = (0, s.e7)([u.Z, d.ZP], () => {
             let e = d.ZP.getDirectoryChannelIds(t.id);
             return 0 === e.length ? null : u.Z.getChannel(e[0]);
         }),
-        E = (0, s.e7)([u.Z], () => u.Z.getChannel(null == x ? void 0 : x.parent_id)),
-        I = l === (null == x ? void 0 : x.id),
+        E = (0, s.e7)([u.Z], () => u.Z.getChannel(null == S ? void 0 : S.parent_id)),
+        I = l === (null == S ? void 0 : S.id),
         P = (0, s.e7)([h.Z], () => (null != E ? h.Z.can(g.Plq.MANAGE_CHANNELS, E) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
         w = i.useCallback(
             (e) => {
-                null != x &&
+                null != S &&
                     (0, a.jW)(e, async () => {
                         let { default: e } = await n.e('70623').then(n.bind(n, 99334));
                         return (t) => {
@@ -57,7 +57,7 @@ let y = (0, c.B)(function (e) {
                                     }
                                     return e;
                                 })({}, t)),
-                                (i = i = { channel: x }),
+                                (i = i = { channel: S }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                     : (function (e, t) {
@@ -75,20 +75,20 @@ let y = (0, c.B)(function (e) {
                         };
                     });
             },
-            [x]
+            [S]
         );
-    if (null == x) return null;
+    if (null == S) return null;
     let N = (0, p.jo)(c, v),
-        Z = (0, p.CN)(x, _, O),
+        Z = (0, p.CN)(S, _, O),
         T = (0, r.jsx)('div', {
             className: o()(N, {
                 [b.disabled]: Z,
                 [b.selected]: I
             }),
-            'data-dnd-name': x.name,
+            'data-dnd-name': S.name,
             children: (0, r.jsxs)(f.ZP, {
                 className: b.iconVisibility,
-                channel: x,
+                channel: S,
                 guild: t,
                 selected: I,
                 onContextMenu: w,
@@ -96,13 +96,13 @@ let y = (0, c.B)(function (e) {
                 resolvedUnreadSetting: m.i.ONLY_MENTIONS,
                 children: [
                     (0, r.jsx)(p.eP, {
-                        channel: x,
-                        tabIndex: S
+                        channel: S,
+                        tabIndex: x
                     }),
                     (0, r.jsx)(p.hR, {
-                        channel: x,
+                        channel: S,
                         disableManageChannels: y,
-                        tabIndex: S
+                        tabIndex: x
                     })
                 ]
             })

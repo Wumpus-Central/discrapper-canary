@@ -32,9 +32,9 @@ let b = (e) => {
         });
     },
     y = (e) => {
-        let { showAnimations: t = !0, iconClassName: n, staticPercentage: r, innerCircleClassName: l, progressCircleStrokeSize: o, backgroundCircleSize: c, percentage: d, initialPercentage: m, progressCircleVariation: y = 0, avatarDecoAssetId: _, avatarDecoAssetDescription: O, ellipseOpacity: v, customAnimationClassName: C, circleColor: j, circleStroke: S } = e,
-            x = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
-            E = t && !x;
+        let { showAnimations: t = !0, iconClassName: n, staticPercentage: r, innerCircleClassName: l, progressCircleStrokeSize: o, backgroundCircleSize: c, percentage: d, initialPercentage: m, progressCircleVariation: y = 0, avatarDecoAssetId: _, avatarDecoAssetDescription: O, ellipseOpacity: v, customAnimationClassName: C, circleColor: j, circleStroke: x } = e,
+            S = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+            E = t && !S;
         return (0, i.jsx)('div', {
             className: s()(g.progressCircle, n),
             children: (0, i.jsx)(f.Z, {
@@ -42,7 +42,7 @@ let b = (e) => {
                     [g.activeProgressCircleAnimation]: E,
                     [null != C ? C : '']: E
                 }),
-                progressCircleStroke: S,
+                progressCircleStroke: x,
                 progressCircleStrokeSize: o,
                 percentage: null != r ? r : d,
                 initialPercentage: null != r ? r : m,

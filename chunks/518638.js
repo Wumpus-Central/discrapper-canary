@@ -106,7 +106,7 @@ function N() {
                       return 1 === _.default.compare(t, o);
                   }),
         f = c.ZP.getPremiumTypeSubscription(),
-        p = (null == f ? void 0 : f.trialId) != null,
+        p = !!(null == f ? void 0 : f.hasActiveTrial),
         g = u.Z.hasAnyUnexpiredOffer(),
         E = p || g ? s.filter((e) => P(e)) : s;
     return 0 === E.length ? null : E.sort((e, t) => (new Date(e.startDate) < new Date(t.startDate) ? -1 : 1))[0].id;

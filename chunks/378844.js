@@ -46,11 +46,11 @@ var y = (((r = {})[(r.VOICE = 0)] = 'VOICE'), r);
 let _ = (e) => {
     let { type: t, guildId: r, closePopout: y } = e,
         _ = (0, c.Dt)(),
-        { notClaimed: O, notEmailVerified: v, notPhoneVerified: C, newAccount: j, newMember: S } = (0, l.e7)([d.Z], () => d.Z.getCheck(r), [r]),
-        x = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
+        { notClaimed: O, notEmailVerified: v, notPhoneVerified: C, newAccount: j, newMember: x } = (0, l.e7)([d.Z], () => d.Z.getCheck(r), [r]),
+        S = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
         E = null,
         I = null;
-    return (0 === t && (O ? ((E = g.intl.string(g.t.IRxUlJ)), (I = g.intl.string(g.t.fiNVio))) : C ? ((E = g.intl.string(g.t.vW8iUF)), (I = g.intl.string(g.t['50gfOj']))) : v ? ((E = g.intl.string(g.t.vdSOp6)), (I = g.intl.string(g.t.lm1UKi))) : S ? ((E = g.intl.formatToPlainString(g.t.v1ktYW, { min: p.YeM.MEMBER_AGE })), (I = g.intl.string(g.t.BddRzc))) : j && ((E = g.intl.formatToPlainString(g.t['sncw4+'], { min: p.YeM.ACCOUNT_AGE })), (I = g.intl.string(g.t.BddRzc)))), null == x || null == E)
+    return (0 === t && (O ? ((E = g.intl.string(g.t.IRxUlJ)), (I = g.intl.string(g.t.fiNVio))) : C ? ((E = g.intl.string(g.t.vW8iUF)), (I = g.intl.string(g.t['50gfOj']))) : v ? ((E = g.intl.string(g.t.vdSOp6)), (I = g.intl.string(g.t.lm1UKi))) : x ? ((E = g.intl.formatToPlainString(g.t.v1ktYW, { min: p.YeM.MEMBER_AGE })), (I = g.intl.string(g.t.BddRzc))) : j && ((E = g.intl.formatToPlainString(g.t['sncw4+'], { min: p.YeM.ACCOUNT_AGE })), (I = g.intl.string(g.t.BddRzc)))), null == S || null == E)
         ? null
         : (0, i.jsxs)(o.VqE, {
               className: m.container,
@@ -67,7 +67,7 @@ let _ = (e) => {
                           (0, i.jsx)(o.X6q, {
                               variant: 'heading-md/semibold',
                               id: _,
-                              children: x
+                              children: S
                           }),
                           (0, i.jsx)(o.Text, {
                               color: 'header-secondary',

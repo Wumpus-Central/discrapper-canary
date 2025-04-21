@@ -25,7 +25,7 @@ let p = i.memo(function (e) {
         loading: y,
         paused: g
     });
-    let { onReady: I } = (0, u.Z)({
+    let { onReady: Z } = (0, u.Z)({
             streamId: t,
             userId: S,
             loading: y,
@@ -33,9 +33,9 @@ let p = i.memo(function (e) {
             streamKey: b,
             paused: g
         }),
-        Z = i.useCallback(() => {
-            O(!1), I();
-        }, [I]);
+        j = i.useCallback(() => {
+            O(!1), Z();
+        }, [Z]);
     return (0, l.jsxs)('div', {
         className: o()(f.wrapper, r),
         children: [
@@ -44,7 +44,7 @@ let p = i.memo(function (e) {
                     className: o()(f.video, (0, d.l)(f, 'video', p), { [f.mirror]: E }, m),
                     streamId: t,
                     onResize: n,
-                    onReady: Z,
+                    onReady: j,
                     paused: g
                 }),
             g
