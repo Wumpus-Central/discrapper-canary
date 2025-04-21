@@ -34,6 +34,7 @@ function o(e) {
         nameplate: t,
         voiceChannel: null,
         voiceActivityStatusEnabled: !1,
-        customStatusRTCEntrypointEnabled: !1
+        customStatusRTCEntrypointEnabled: !1,
+        isQuestBarEmpty: !0
     });
 }
