@@ -116,6 +116,7 @@ function F(e) {
                         friendCount: t.length,
                         count: t.length,
                         friendCountMinusOne: t.length - 1,
+                        friendCountMinusTwo: t.length - 2,
                         firstFriendName: t[0].username,
                         secondFriendName: null != (i = null == (e = t[1]) ? void 0 : e.username) ? i : '',
                         thirdFriendName: null != (r = null == (n = t[2]) ? void 0 : n.username) ? r : ''

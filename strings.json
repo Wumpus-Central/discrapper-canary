@@ -1297,7 +1297,7 @@
   "TzufcX": "No permissions",
   "KXk3AQ": "Select an option below",
   "eCLLn5": "!!{firstFriendName}!! really got into this one.\\n\\nYou might love it too\\n\\n",
-  "d8pkUF": "!!{firstFriendName}!!{friendCount, plural, =1 { is} =2 { and !!{secondFriendName}!! are} =3 {, !!{secondFriendName}!!, and !!{thirdFriendName}!! are} other {, !!{secondFriendName}!!, and  others are} } into it.\\n\\nPlay now and find out why.\\n\\n",
+  "d8pkUF": "!!{firstFriendName}!!{friendCount, plural, =1 { is} =2 { and !!{secondFriendName}!! are} =3 {, !!{secondFriendName}!!, and !!{thirdFriendName}!! are} other {, !!{secondFriendName}!!, and !!{friendCountMinusTwo}!! others are} } into it.\\n\\nPlay now and find out why.\\n\\n",
   "MbWAxs": "!!{friendCount}!! of your friends are already playing.\\n\\nNow it's your turn.\\n\\n",
   "8kiRMT": "You've got friends in the game.\\n\\nNow it's your turn.\\n\\n",
   "GRL3Nj": "!!{firstFriendName}!! and {friendCount, plural, =2 {!!{secondFriendName}!!} other {!!{friendCountMinusOne}!! others} } are playing.\\n\\nDon't get left behind.\\n\\n",
