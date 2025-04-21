@@ -75,38 +75,42 @@ function f() {
         }
     );
 }
-function _(e) {
-    let t = null == e ? void 0 : e.paymentGateway,
-        n = 'useFetchCollectiblesCategoriesAndPurchases';
+function _(e, t) {
+    let n = null == e ? void 0 : e.paymentGateway,
+        r = 'useFetchCollectiblesCategoriesAndPurchases';
     (0, a.j)({
-        location: n + ' auto on',
+        location: r + ' auto on',
         autoTrackExposure: !0
     }),
         (0, a.j)({
-            location: n + ' auto off',
+            location: r + ' auto off',
             autoTrackExposure: !1
         });
     let {
-            isFetching: r,
-            categories: i,
-            fetchCategoriesError: o,
-            refreshCategories: s
-        } = (0, c.Z)({
-            paymentGateway: t,
-            noOp: null == e ? void 0 : e.noOp
-        }),
-        { isClaiming: l, fetchPurchasesError: u, claimError: d, isFetching: _, purchases: p, hasPreviouslyFetched: h } = f(null == e ? void 0 : e.stalePurchasesOK, null == e ? void 0 : e.location);
+            isFetching: i,
+            categories: o,
+            fetchCategoriesError: s,
+            refreshCategories: l
+        } = (0, c.Z)(
+            {
+                paymentGateway: n,
+                noOp: null == e ? void 0 : e.noOp,
+                logPerf: null == e ? void 0 : e.logPerf
+            },
+            t
+        ),
+        { isClaiming: u, fetchPurchasesError: d, claimError: _, isFetching: p, purchases: h, hasPreviouslyFetched: m } = f(null == e ? void 0 : e.stalePurchasesOK, null == e ? void 0 : e.location);
     return {
-        isFetching: r || _,
-        isFetchingCategories: r,
-        isFetchingPurchases: _,
-        isClaiming: l,
-        categories: i,
-        purchases: p,
-        fetchCategoriesError: o,
-        fetchPurchasesError: u,
-        claimError: d,
-        refreshCategories: s,
-        hasPreviouslyFetched: h
+        isFetching: i || p,
+        isFetchingCategories: i,
+        isFetchingPurchases: p,
+        isClaiming: u,
+        categories: o,
+        purchases: h,
+        fetchCategoriesError: s,
+        fetchPurchasesError: d,
+        claimError: _,
+        refreshCategories: l,
+        hasPreviouslyFetched: m
     };
 }
