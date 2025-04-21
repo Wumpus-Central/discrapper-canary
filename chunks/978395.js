@@ -43,6 +43,7 @@ function C(e) {
                 user: t,
                 profileType: T.y0.BITE_SIZE,
                 onOpenProfile: w,
+                onClose: L,
                 usernameIcon:
                     t.hasAvatarForGuild(null == R ? void 0 : R.id) &&
                     (0, r.jsx)(O.Z, {

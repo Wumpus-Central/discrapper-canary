@@ -81,10 +81,10 @@ function g(e, t) {
     return i;
 }
 function E(e) {
-    var { guildId: t, channelId: n, messageId: f, name: p, position: g = 'right' } = e,
-        E = m(e, ['guildId', 'channelId', 'messageId', 'name', 'position']);
-    let b = (0, c.h)(),
-        { unavailable: y, guild: v } = (0, a.cj)(
+    var { guildId: t, channelId: n, messageId: f, name: p, position: g = 'right', onClose: E } = e,
+        b = m(e, ['guildId', 'channelId', 'messageId', 'name', 'position', 'onClose']);
+    let y = (0, c.h)(),
+        { unavailable: v, guild: O } = (0, a.cj)(
             [l.Z],
             () => ({
                 guild: l.Z.getGuild(t),
@@ -92,14 +92,14 @@ function E(e) {
             }),
             [t]
         ),
-        O = null != v,
-        I = i.useCallback(async () => {
-            if (!b)
+        I = null != O,
+        S = i.useCallback(async () => {
+            if (!y)
                 try {
-                    O || (await (0, s.P)(t));
+                    I || (await (0, s.P)(t));
                 } catch (e) {}
-        }, [b, O, t]);
-    return y
+        }, [y, I, t]);
+    return v
         ? (0, r.jsx)(
               o.yRy,
               h(
@@ -108,7 +108,7 @@ function E(e) {
                           position: 'right',
                           renderPopout: (e) => (0, r.jsx)(u.SK, {})
                       },
-                      E
+                      b
                   ),
                   { clickTrap: !0 }
               )
@@ -118,30 +118,32 @@ function E(e) {
               _(
                   {
                       position: g,
-                      preload: I,
+                      preload: S,
                       clickTrap: !0,
                       renderPopout: (e) =>
-                          b
+                          y
                               ? (0, r.jsx)(
                                     d.Z,
                                     h(_({}, e), {
-                                        onClose: e.closePopout,
+                                        onClose: () => {
+                                            e.closePopout(), null == E || E();
+                                        },
                                         guildId: t,
                                         name: p
                                     })
                                 )
-                              : null == v
+                              : null == O
                                 ? (0, r.jsx)(r.Fragment, {})
                                 : (0, r.jsx)(
                                       u.sK,
                                       h(_({}, e), {
-                                          guild: v,
+                                          guild: O,
                                           channelId: n,
                                           messageId: f
                                       })
                                   )
                   },
-                  E
+                  b
               )
           );
 }

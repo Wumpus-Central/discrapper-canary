@@ -87,16 +87,16 @@ let g = i.memo(function (e) {
     }),
     b = i.memo(function (e) {
         var t;
-        let { primaryGuild: n, userId: i, contextGuildId: a, className: l, containerClassName: f, textVariant: _, textColor: h, badgeSize: g, disableGuildProfile: b = !1, inline: y = !0, onShowProfile: v } = e,
-            O = (0, s.e7)([u.default], () => u.default.getUser(i), [i]),
-            I = null != (t = null == O ? void 0 : O.primaryGuild) ? t : n,
-            { tag: S, badge: T, guildId: A } = (0, d.Pb)(I);
-        return (0, d.p0)(i, a) && null != A
+        let { primaryGuild: n, userId: i, contextGuildId: a, className: l, containerClassName: f, textVariant: _, textColor: h, badgeSize: g, disableGuildProfile: b = !1, inline: y = !0, onShowProfile: v, onClose: O } = e,
+            I = (0, s.e7)([u.default], () => u.default.getUser(i), [i]),
+            S = null != (t = null == I ? void 0 : I.primaryGuild) ? t : n,
+            { tag: T, badge: A, guildId: N } = (0, d.Pb)(S);
+        return (0, d.p0)(i, a) && null != N
             ? b
                 ? (0, r.jsx)(E, {
-                      guildId: A,
-                      clanTag: S,
-                      clanBadge: T,
+                      guildId: N,
+                      clanTag: T,
+                      clanBadge: A,
                       className: o()(p.noTooltip, l),
                       textVariant: _,
                       textColor: h,
@@ -104,8 +104,9 @@ let g = i.memo(function (e) {
                       inline: y
                   })
                 : (0, r.jsx)(c.Z, {
-                      guildId: A,
+                      guildId: N,
                       onRequestOpen: v,
+                      onClose: O,
                       children: (e) =>
                           (0, r.jsx)('span', {
                               className: f,
@@ -113,9 +114,9 @@ let g = i.memo(function (e) {
                                   E,
                                   m(
                                       {
-                                          guildId: A,
-                                          clanTag: S,
-                                          clanBadge: T,
+                                          guildId: N,
+                                          clanTag: T,
+                                          clanBadge: A,
                                           className: l,
                                           textVariant: _,
                                           textColor: h,
