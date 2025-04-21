@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r,
     i,
-    s,
-    l = n(442837),
+    l,
+    s = n(442837),
     a = n(570140),
     o = n(999382),
     c = n(740903),
@@ -29,7 +29,7 @@ function g(e) {
             u = c.u.OVERVIEW;
     }
 }
-class p extends (s = l.ZP.Store) {
+class p extends (l = s.ZP.Store) {
     getCurrentPage() {
         return u;
     }

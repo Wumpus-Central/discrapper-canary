@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     s = n(120356),
     o = n.n(s),
-    a = n(392711),
-    l = n(442837),
+    l = n(392711),
+    a = n(442837),
     c = n(261435),
     d = n(237997),
     u = n(486016),
@@ -16,11 +16,11 @@ var i = n(200651),
 function y(e) {
     let { locked: t, keybind: n } = e,
         s = r.useRef(null),
-        p = (0, l.Wu)([c.Z], () => c.Z.getNotifications()),
-        y = (0, l.e7)([d.default], () => d.default.getNotificationPositionMode());
-    if ((0, l.e7)([f.Z], () => f.Z.isNotificationDisabled(u.OverlayNotificationDisabledSetting.TEXT_CHAT)) || y === g._vf.DISABLED) return null;
+        p = (0, a.Wu)([c.Z], () => c.Z.getNotifications()),
+        y = (0, a.e7)([d.default], () => d.default.getNotificationPositionMode());
+    if ((0, a.e7)([f.Z], () => f.Z.isNotificationDisabled(u.OverlayNotificationDisabledSetting.TEXT_CHAT)) || y === g._vf.DISABLED) return null;
     let _ = p.filter((e) => !t || e.status !== g._1z.TIMED_OUT),
-        O = (0, a.groupBy)(_, (e) => e.type);
+        O = (0, l.groupBy)(_, (e) => e.type);
     return (0, i.jsx)(h.Z, {
         contentDomRef: s,
         observeInterval: 200,

@@ -1,20 +1,20 @@
-s.d(e, { Z: () => b });
-var i = s(200651);
-s(192379);
-var n = s(979554),
-    r = s(442837),
-    l = s(481060),
-    a = s(1585),
-    o = s(125988),
-    c = s(876917),
-    u = s(594174),
-    d = s(597688),
-    p = s(609887);
+i.d(e, { Z: () => b });
+var n = i(200651);
+i(192379);
+var s = i(979554),
+    r = i(442837),
+    l = i(481060),
+    a = i(1585),
+    o = i(125988),
+    c = i(876917),
+    u = i(594174),
+    d = i(597688),
+    p = i(609887);
 let h = l.EFr.SIZE_152,
     f = (0, a.y9)(h),
     g = (t) => {
-        var e, s;
-        let { item: n } = t,
+        var e, i;
+        let { item: s } = t,
             a = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
             {
                 avatarDecorationSrc: c,
@@ -22,56 +22,56 @@ let h = l.EFr.SIZE_152,
                 eventHandlers: g
             } = (0, o.Z)({
                 user: a,
-                avatarDecorationOverride: n,
+                avatarDecorationOverride: s,
                 size: f
             });
-        return (0, i.jsx)('div', {
+        return (0, n.jsx)('div', {
             className: p.avatarDecorationPreview,
-            children: (0, i.jsx)(
+            children: (0, n.jsx)(
                 l.qEK,
                 ((e = (function (t) {
                     for (var e = 1; e < arguments.length; e++) {
-                        var s = null != arguments[e] ? arguments[e] : {},
-                            i = Object.keys(s);
+                        var i = null != arguments[e] ? arguments[e] : {},
+                            n = Object.keys(i);
                         'function' == typeof Object.getOwnPropertySymbols &&
-                            (i = i.concat(
-                                Object.getOwnPropertySymbols(s).filter(function (t) {
-                                    return Object.getOwnPropertyDescriptor(s, t).enumerable;
+                            (n = n.concat(
+                                Object.getOwnPropertySymbols(i).filter(function (t) {
+                                    return Object.getOwnPropertyDescriptor(i, t).enumerable;
                                 })
                             )),
-                            i.forEach(function (e) {
-                                var i;
-                                (i = s[e]),
+                            n.forEach(function (e) {
+                                var n;
+                                (n = i[e]),
                                     e in t
                                         ? Object.defineProperty(t, e, {
-                                              value: i,
+                                              value: n,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (t[e] = i);
+                                        : (t[e] = n);
                             });
                     }
                     return t;
                 })({}, g)),
-                (s = s =
+                (i = i =
                     {
-                        'aria-label': n.label,
+                        'aria-label': s.label,
                         src: d,
                         avatarDecoration: c,
                         size: h
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(s))
+                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
                     : (function (t, e) {
-                          var s = Object.keys(t);
+                          var i = Object.keys(t);
                           if (Object.getOwnPropertySymbols) {
-                              var i = Object.getOwnPropertySymbols(t);
-                              s.push.apply(s, i);
+                              var n = Object.getOwnPropertySymbols(t);
+                              i.push.apply(i, n);
                           }
-                          return s;
-                      })(Object(s)).forEach(function (t) {
-                          Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(s, t));
+                          return i;
+                      })(Object(i)).forEach(function (t) {
+                          Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(i, t));
                       }),
                 e)
             )
@@ -79,9 +79,9 @@ let h = l.EFr.SIZE_152,
     },
     m = (t) => {
         let { item: e } = t;
-        return (0, i.jsx)('div', {
+        return (0, n.jsx)('div', {
             className: p.profileEffectPreview,
-            children: (0, i.jsx)(c.Z, {
+            children: (0, n.jsx)(c.Z, {
                 isHovering: !0,
                 profileEffectId: null == e ? void 0 : e.id
             })
@@ -89,9 +89,9 @@ let h = l.EFr.SIZE_152,
     },
     b = (t) => {
         let { giftCode: e } = t,
-            s = (0, r.e7)([d.Z], () => d.Z.getProduct(e.skuId)),
-            l = null == s ? void 0 : s.items[0];
-        return (0, i.jsxs)(i.Fragment, {
-            children: [(null == l ? void 0 : l.type) === n.Z.AVATAR_DECORATION && (0, i.jsx)(g, { item: l }), (null == l ? void 0 : l.type) === n.Z.PROFILE_EFFECT && (0, i.jsx)(m, { item: l })]
+            i = (0, r.e7)([d.Z], () => d.Z.getProduct(e.skuId)),
+            l = null == i ? void 0 : i.items[0];
+        return (0, n.jsxs)(n.Fragment, {
+            children: [(null == l ? void 0 : l.type) === s.Z.AVATAR_DECORATION && (0, n.jsx)(g, { item: l }), (null == l ? void 0 : l.type) === s.Z.PROFILE_EFFECT && (0, n.jsx)(m, { item: l })]
         });
     };

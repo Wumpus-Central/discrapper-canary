@@ -88,7 +88,7 @@ function S(e) {
 function T(e) {
     '' === (g = e.query) && ((E = ''), (b = []), (O = []));
 }
-function N(e) {
+function A(e) {
     switch (e) {
         case p.FIXED_HEIGHT_MP4:
         case p.FIXED_HEIGHT_SMALL_MP4:
@@ -107,7 +107,7 @@ function N(e) {
             return !1;
     }
 }
-function A(e) {
+function N(e) {
     return e.replace(/^https?:/, '');
 }
 function C(e) {
@@ -118,11 +118,11 @@ function C(e) {
             return {
                 width: t,
                 height: n,
-                src: A(r),
-                gifSrc: A(i),
+                src: N(r),
+                gifSrc: N(i),
                 url: o,
                 id: s,
-                format: N(v) ? a.EO.VIDEO : a.EO.IMAGE
+                format: A(v) ? a.EO.VIDEO : a.EO.IMAGE
             };
         }));
 }
@@ -138,15 +138,15 @@ function P(e) {
             ? [
                   {
                       type: s.wI2.TRENDING_GIFS,
-                      name: l.NW.string(l.t.H6zNFx),
-                      src: A(e.trendingGIFPreview.src),
+                      name: l.intl.string(l.t.H6zNFx),
+                      src: N(e.trendingGIFPreview.src),
                       format: a.EO.IMAGE
                   }
               ]
             : []),
         ...t.map((e) =>
             f(u({}, e), {
-                src: A(e.src),
+                src: N(e.src),
                 type: s.wI2.TRENDING_CATEGORY,
                 format: a.EO.VIDEO
             })

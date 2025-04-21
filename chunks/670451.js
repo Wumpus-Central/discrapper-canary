@@ -65,14 +65,14 @@ function _(e) {
             children: (e) =>
                 (0, r.jsx)(a.ua7, {
                     targetElementRef: t,
-                    text: s.NW.string(s.t.UKOtz8),
+                    text: s.intl.string(s.t.UKOtz8),
                     'aria-label': !1,
                     children: (n) =>
                         (0, r.jsx)(
                             a.P3F,
                             f(u({}, n, e), {
                                 innerRef: t,
-                                'aria-label': s.NW.string(s.t.UKOtz8),
+                                'aria-label': s.intl.string(s.t.UKOtz8),
                                 onClick: (t) => {
                                     var r;
                                     t.stopPropagation(), null == (r = n.onClick) || r.call(n), e.onClick(t);

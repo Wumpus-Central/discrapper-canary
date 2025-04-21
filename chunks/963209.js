@@ -16,17 +16,17 @@ function d(e) {
             (0, n.jsx)(i.Z, {
                 size: i.Z.Sizes.SIZE_24,
                 className: c.title,
-                children: l.NW.string(l.t['Deps4+'])
+                children: l.intl.string(l.t['Deps4+'])
             }),
             (0, n.jsx)(i.Z, {
                 size: i.Z.Sizes.SIZE_24,
                 className: a()(c.title, c.subtitle),
-                children: l.NW.string(l.t.xv5g7O)
+                children: l.intl.string(l.t.xv5g7O)
             }),
             (0, n.jsx)(r.zxk, {
                 color: r.zxk.Colors.WHITE,
                 onClick: t,
-                children: l.NW.string(l.t['6X9YKC'])
+                children: l.intl.string(l.t['6X9YKC'])
             })
         ]
     });

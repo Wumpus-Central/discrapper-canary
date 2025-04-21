@@ -70,7 +70,7 @@ let O = o.memo(function (e) {
             })(
                 {
                     className: b.root,
-                    'aria-label': p.NW.string(p.t.shUONj),
+                    'aria-label': p.intl.string(p.t.shUONj),
                     size: s.CgR.DYNAMIC
                 },
                 y

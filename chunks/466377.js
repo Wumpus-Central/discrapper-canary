@@ -58,7 +58,7 @@ function T(e) {
     }
     return e;
 }
-function N(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,12 +70,12 @@ function N(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -116,7 +116,7 @@ var D = (function (e) {
 function L(e) {
     var t,
         { transitionState: n, children: a, size: f = 'small', role: h = 'dialog', className: m, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: b = v.dG, returnRef: O, animation: S = 'default' } = e,
-        N = C(e, ['transitionState', 'children', 'size', 'role', 'className', 'fullscreenOnMobile', 'hideShadow', 'onAnimationEnd', 'returnRef', 'animation']);
+        A = C(e, ['transitionState', 'children', 'size', 'role', 'className', 'fullscreenOnMobile', 'hideShadow', 'onAnimationEnd', 'returnRef', 'animation']);
     let R = n === y.Dv.ENTERING || n === y.Dv.ENTERED,
         { reducedMotion: P } = i.useContext(d.S),
         D = (0, u.q)(
@@ -133,10 +133,10 @@ function L(e) {
             'animate-always'
         ),
         L = i.useRef(null),
-        x = null != N['aria-label'],
-        M = null != N['aria-labelledby'],
+        x = null != A['aria-label'],
+        M = null != A['aria-labelledby'],
         k = i.useId(),
-        j = null != (t = N['aria-labelledby']) ? t : k,
+        j = null != (t = A['aria-labelledby']) ? t : k,
         U = i.useMemo(
             () => ({
                 headerId: j,
@@ -148,7 +148,7 @@ function L(e) {
         value: U,
         children: (0, r.jsx)(
             _.V,
-            A(
+            N(
                 T(
                     {
                         className: I.focusLock,
@@ -157,7 +157,7 @@ function L(e) {
                         impressionType: l.ImpressionTypes.MODAL,
                         'aria-labelledby': x ? void 0 : U.headerId
                     },
-                    N
+                    A
                 ),
                 {
                     children: (0, r.jsx)(s.animated.div, {
@@ -208,7 +208,7 @@ function k(e) {
         l = M(a);
     return (0, r.jsx)(
         l,
-        A(
+        N(
             T(
                 {
                     className: o()(I.content, t),
@@ -236,7 +236,7 @@ function j(e) {
 function U(e) {
     return (0, r.jsx)(f.zx, {
         focusProps: e.focusProps,
-        'aria-label': O.NW.string(O.t.cpT0Cg),
+        'aria-label': O.intl.string(O.t.cpT0Cg),
         look: f.zx.Looks.BLANK,
         size: f.zx.Sizes.NONE,
         onClick: e.onClick,

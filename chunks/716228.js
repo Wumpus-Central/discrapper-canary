@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(200651),
     s = n(192379),
     o = n(995899),
@@ -16,13 +16,13 @@ var r = n(200651),
     y = n(401258),
     h = n(81829),
     x = n(477839),
-    N = n(364491),
-    v = n(220371),
-    O = n(839538),
-    j = n(332536),
-    Z = n(225893),
-    _ = n(483586);
-function P(e) {
+    v = n(364491),
+    O = n(220371),
+    j = n(839538),
+    N = n(332536),
+    _ = n(225893),
+    P = n(483586);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,41 +47,41 @@ function P(e) {
     }
     return e;
 }
-let C = n(97996),
+let Z = n(97996),
     w = n(675755),
-    E = [_],
-    S = [v, O, j],
+    E = [P],
+    S = [O, j, N],
     I = [
         {
-            src: Z,
+            src: _,
             colorize: !1
         }
     ],
     k = [],
     M = new o.qA(),
-    W = [x.FK.LAWNMOWER_1, x.FK.LAWNMOWER_2];
-function R(e) {
-    var t, n, v;
-    let { isPaused: O, width: j, windowKey: Z } = e,
-        [_, R] = (0, s.useState)(0),
-        A = (0, s.useRef)('right'),
-        [T, L] = (0, s.useState)(null),
-        [B, D] = (0, s.useState)(null),
-        F = (0, s.useRef)(null),
-        U = (0, o.uR)(T, B),
+    R = [x.FK.LAWNMOWER_1, x.FK.LAWNMOWER_2];
+function A(e) {
+    var t, n, O;
+    let { isPaused: j, width: N, windowKey: _ } = e,
+        [P, A] = (0, s.useState)(0),
+        T = (0, s.useRef)('right'),
+        [L, B] = (0, s.useState)(null),
+        [D, F] = (0, s.useState)(null),
+        U = (0, s.useRef)(null),
+        W = (0, o.uR)(L, D),
         G = l.Mq[x.yN.LAWNMOWER],
         [K, V] = (0, s.useState)({}),
-        H = (0, i.e7)([c.Z], () => c.Z.getWindow(Z)),
+        H = (0, i.e7)([c.Z], () => c.Z.getWindow(_)),
         [q, z] = (0, d.Z)(x.yN.LAWNMOWER),
         Y = null != (t = q.count) ? t : 0;
-    (0, b.is)(C, O);
+    (0, b.is)(Z, j);
     let X = (0, b.eR)(w);
-    (0, f.Z)(W, Y);
+    (0, f.Z)(R, Y);
     let J = (0, s.useCallback)(() => {
-            if (U.isReady && null != F.current) {
-                let { x: e, y: t } = F.current.getBoundingClientRect(),
-                    n = 'right' === A.current ? 45 : 25;
-                U.createMultipleConfetti(
+            if (W.isReady && null != U.current) {
+                let { x: e, y: t } = U.current.getBoundingClientRect(),
+                    n = 'right' === T.current ? 45 : 25;
+                W.createMultipleConfetti(
                     {
                         position: {
                             type: 'static',
@@ -120,7 +120,7 @@ function R(e) {
             V((e) => {
                 var t, n, r;
                 return (
-                    (n = P({}, e)),
+                    (n = C({}, e)),
                     (r = r = { [(0, a.Z)()]: null != (t = G.points) ? t : 0 }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -137,33 +137,33 @@ function R(e) {
                     n
                 );
             });
-        }, [U, G.points]),
+        }, [W, G.points]),
         Q = (0, s.useCallback)(() => {
-            R(1), z({ count: Y + 1 }), X();
+            A(1), z({ count: Y + 1 }), X();
         }, [Y, X, z]),
         $ = (0, s.useCallback)(() => {
-            1 === _ && R(2);
-        }, [_]),
+            1 === P && A(2);
+        }, [P]),
         ee = (0, s.useCallback)(() => {
-            2 === _ && 0.1 >= Math.random() && R(0);
-        }, [_]);
+            2 === P && 0.1 >= Math.random() && A(0);
+        }, [P]);
     (0, u.Z)({
         onInterval: ee,
         interval: 1000,
-        isPaused: O
+        isPaused: j
     });
     let et = (0, s.useCallback)(
         (e) => {
-            delete K[e], V(P({}, K));
+            delete K[e], V(C({}, K));
         },
         [K]
     );
-    return 2 === _
+    return 2 === P
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(o.Ji, {
-                      ref: D,
+                      ref: F,
                       sprites: I,
                       colors: k,
                       spriteWidth: 8,
@@ -172,22 +172,22 @@ function R(e) {
                   (0, r.jsx)(y.Z, {
                       interval: 1000,
                       pointsPerInterval: G.points,
-                      isPaused: O || 0 !== _,
+                      isPaused: j || 0 !== P,
                       itemId: x.yN.LAWNMOWER,
                       onPointsInterval: J
                   }),
                   (0, r.jsx)(g.Z, {
-                      className: N.lawnmowerClickable,
+                      className: v.lawnmowerClickable,
                       onClick: Q,
                       children: (0, r.jsx)(p.Z, {
-                          className: N.lawnmower,
-                          width: j,
+                          className: v.lawnmower,
+                          width: N,
                           minSpeed: 50,
                           maxSpeed: 75,
                           imageSize: 80,
-                          isPaused: O || 0 !== _,
+                          isPaused: j || 0 !== P,
                           children: (e) => (
-                              (A.current = e),
+                              (T.current = e),
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)(h.Z, {
@@ -195,11 +195,11 @@ function R(e) {
                                           onRemovePoint: et
                                       }),
                                       (0, r.jsx)(m.Z, {
-                                          imageRef: F,
-                                          className: 'left' === e ? N.imageFlipped : N.image,
-                                          isPaused: O,
+                                          imageRef: U,
+                                          className: 'left' === e ? v.imageFlipped : v.image,
+                                          isPaused: j,
                                           interval: 200,
-                                          sources: 0 === _ ? E : S,
+                                          sources: 0 === P ? E : S,
                                           onLoopEnd: $
                                       })
                                   ]
@@ -208,11 +208,11 @@ function R(e) {
                       })
                   }),
                   (0, r.jsx)(o.O_, {
-                      className: N.confettiCanvas,
+                      className: v.confettiCanvas,
                       environment: M,
-                      ref: L,
+                      ref: B,
                       requestAnimationFrame: null != (n = null == H ? void 0 : H.requestAnimationFrame) ? n : requestAnimationFrame,
-                      cancelAnimationFrame: null != (v = null == H ? void 0 : H.cancelAnimationFrame) ? v : cancelAnimationFrame
+                      cancelAnimationFrame: null != (O = null == H ? void 0 : H.cancelAnimationFrame) ? O : cancelAnimationFrame
                   })
               ]
           });

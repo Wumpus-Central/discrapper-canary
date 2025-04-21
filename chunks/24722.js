@@ -38,19 +38,19 @@ function w(e) {
 }
 function C(e) {
     var t;
-    let { onClose: r, roleId: w, guildId: C, onBack: S, isCreateRoleFlow: N, focusSearchAfterReady: L, isReady: O } = e,
-        M = (0, l.e7)([x.Z], () => x.Z.getRole(w), [w]),
-        [z, P] = n.useState(''),
+    let { onClose: r, roleId: w, guildId: C, onBack: S, isCreateRoleFlow: L, focusSearchAfterReady: O, isReady: M } = e,
+        z = (0, l.e7)([x.Z], () => x.Z.getRole(w), [w]),
+        [N, P] = n.useState(''),
         [T, B] = n.useState({}),
         [I, E] = n.useState(!1);
     n.useEffect(() => {
-        b.Z.requestMembers(C, z.trim().toLowerCase(), h._4);
-    }, [C, z]);
+        b.Z.requestMembers(C, N.trim().toLowerCase(), h._4);
+    }, [C, N]);
     let A = n.useCallback((e) => !e.roles.includes(w), [w]),
-        W = (0, h.lJ)(C, A),
-        Z = n.useMemo(() => W.filter((e) => (0, h.eg)(z, e)), [z, W]);
-    Z = Z.filter((e) => e.id !== y.fL);
-    let Y = n.useCallback(async () => {
+        Z = (0, h.lJ)(C, A),
+        Y = n.useMemo(() => Z.filter((e) => (0, h.eg)(N, e)), [N, Z]);
+    Y = Y.filter((e) => e.id !== y.fL);
+    let q = n.useCallback(async () => {
             let e = Object.values(T).map((e) => e.row.id);
             E(!0);
             try {
@@ -59,7 +59,7 @@ function C(e) {
                 E(!1);
             }
         }, [C, w, T, r]),
-        q = n.useCallback((e) => {
+        K = n.useCallback((e) => {
             B((t) => {
                 let r = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -102,7 +102,7 @@ function C(e) {
                 );
             });
         }, []),
-        K = n.useCallback((e) => {
+        U = n.useCallback((e) => {
             B((t) => {
                 let { [e]: r } = t;
                 return (function (e, t) {
@@ -126,9 +126,9 @@ function C(e) {
                 })(t, [e].map(j));
             });
         }, []),
-        U = n.useMemo(
+        H = n.useMemo(
             () =>
-                Z.map((e) => {
+                Y.map((e) => {
                     var t;
                     let r = m.ZP.getUserTag(e.user);
                     return {
@@ -144,9 +144,9 @@ function C(e) {
                         key: e.id
                     };
                 }),
-            [Z]
+            [Y]
         ),
-        H = n.useMemo(() => Object.keys(T).length, [T]);
+        V = n.useMemo(() => Object.keys(T).length, [T]);
     return (0, o.jsxs)(o.Fragment, {
         children: [
             (0, o.jsxs)(i.xBx, {
@@ -156,27 +156,27 @@ function C(e) {
                 children: [
                     (0, o.jsx)(i.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: v.NW.string(v.t['ZYOK4+'])
+                        children: v.intl.string(v.t['ZYOK4+'])
                     }),
-                    N
+                    L
                         ? (0, o.jsx)(i.Text, {
                               className: R.subtitle,
                               color: 'text-normal',
                               variant: 'text-md/normal',
-                              children: v.NW.string(v.t.AMsxa2)
+                              children: v.intl.string(v.t.AMsxa2)
                           })
                         : (0, o.jsxs)('div', {
                               className: R.roleContainer,
                               children: [
                                   (0, o.jsx)(i.lZ8, {
                                       size: 'xs',
-                                      color: null != (t = null == M ? void 0 : M.colorString) ? t : (0, a.Rf)(p.p6O)
+                                      color: null != (t = null == z ? void 0 : z.colorString) ? t : (0, a.Rf)(p.p6O)
                                   }),
                                   (0, o.jsx)(i.Text, {
                                       className: R.roleName,
                                       color: 'text-normal',
                                       variant: 'text-md/normal',
-                                      children: null == M ? void 0 : M.name
+                                      children: null == z ? void 0 : z.name
                                   })
                               ]
                           })
@@ -185,17 +185,17 @@ function C(e) {
             (0, o.jsx)(c.t, {
                 listClassName: R.list,
                 pendingAdditions: T,
-                query: z,
+                query: N,
                 onQueryChange: P,
-                onClickRow: q,
-                onRemovePendingAddition: K,
+                onClickRow: K,
+                onRemovePendingAddition: U,
                 roles: [],
-                members: U,
-                placeholderText: v.NW.string(v.t.vMiCaW),
-                renderEmptyText: (e) => v.NW.format(v.t.eq8a8f, { query: e }),
-                focusSearchAfterReady: L,
-                isReady: O,
-                description: v.NW.formatToPlainString(v.t['3OxP4u'], { numMembers: g.ey })
+                members: H,
+                placeholderText: v.intl.string(v.t.vMiCaW),
+                renderEmptyText: (e) => v.intl.format(v.t.eq8a8f, { query: e }),
+                focusSearchAfterReady: O,
+                isReady: M,
+                description: v.intl.formatToPlainString(v.t['3OxP4u'], { numMembers: g.ey })
             }),
             (0, o.jsxs)(i.mzw, {
                 className: R.footer,
@@ -203,25 +203,25 @@ function C(e) {
                     (0, o.jsxs)('div', {
                         className: R.buttonsRight,
                         children: [
-                            N && 0 === H
+                            L && 0 === V
                                 ? (0, o.jsx)(i.zxk, {
                                       onClick: r,
                                       color: i.zxk.Colors.PRIMARY,
-                                      children: v.NW.string(v.t.CJm5V1)
+                                      children: v.intl.string(v.t.CJm5V1)
                                   })
                                 : (0, o.jsx)(i.zxk, {
-                                      onClick: Y,
+                                      onClick: q,
                                       submitting: I,
-                                      disabled: 0 === H || H > g.ey,
-                                      children: v.NW.string(v.t.OYkgVl)
+                                      disabled: 0 === V || V > g.ey,
+                                      children: v.intl.string(v.t.OYkgVl)
                                   }),
-                            !N &&
+                            !L &&
                                 (0, o.jsx)(i.zxk, {
                                     look: i.zxk.Looks.LINK,
                                     color: i.zxk.Colors.PRIMARY,
                                     size: i.zxk.Sizes.SMALL,
                                     onClick: r,
-                                    children: v.NW.string(v.t['ETE/oK'])
+                                    children: v.intl.string(v.t['ETE/oK'])
                                 })
                         ]
                     }),
@@ -232,7 +232,7 @@ function C(e) {
                             size: i.zxk.Sizes.TINY,
                             onClick: S,
                             className: R.backButton,
-                            children: v.NW.string(v.t['13/7kZ'])
+                            children: v.intl.string(v.t['13/7kZ'])
                         })
                 ]
             })

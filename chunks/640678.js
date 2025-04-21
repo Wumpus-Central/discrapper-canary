@@ -1,8 +1,8 @@
 n.d(t, { t: () => c });
 var i = n(163400),
     r = n(995532),
-    s = n(496675),
-    l = n(600553),
+    l = n(496675),
+    s = n(600553),
     o = n(896007);
 let a = {
     HEADER: 'HEADER',
@@ -10,9 +10,9 @@ let a = {
 };
 function c(e) {
     var t, n;
-    let c = s.Z.getGuildPermissionProps(e),
+    let c = l.Z.getGuildPermissionProps(e),
         u = (0, i.p)(e.id).length > 0,
-        d = (0, l.i1)({
+        d = (0, s.i1)({
             guildId: e.id,
             location: 'getGuildSettingsSections'
         });

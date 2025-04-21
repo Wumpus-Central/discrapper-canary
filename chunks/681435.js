@@ -86,14 +86,14 @@ let g = [],
             b = r.useMemo(() => ((0, u.Fc)(t) && null != n && !h ? [n.dismissibleContent] : g), [t, n, h]),
             _ = h && (null == n ? void 0 : n.type) === l.Z.COACHTIP ? o.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null,
             [E, O] = (0, s.US)(b, void 0, !0),
-            [N, y] = (0, s.XR)(_, null != (e = null == n ? void 0 : n.version) ? e : 0, void 0, !0),
-            I = (0, p.mB)(n),
-            v = null != E || null != N || I.hasPreviewAssets ? m(I, n) : null;
+            [y, I] = (0, s.XR)(_, null != (e = null == n ? void 0 : n.version) ? e : 0, void 0, !0),
+            v = (0, p.mB)(n),
+            C = null != E || null != y || v.hasPreviewAssets ? m(v, n) : null;
         return {
-            shopButtonDisplayOptions: v,
+            shopButtonDisplayOptions: C,
             dismissShopButtonDC: () => {
-                let e = h ? y : O;
-                null != v && e(f.L.AUTO);
+                let e = h ? I : O;
+                null != C && e(f.L.AUTO);
             }
         };
     };

@@ -25,12 +25,12 @@ function I(e, t) {
 function S(e) {
     var t;
     let { renderHeader: n, referralTrialOfferId: a, handleClose: S } = e,
-        { selectedSkuId: T, step: N, selectedPlan: A, purchaseState: C, purchaseType: R, selectedSku: P } = (0, g.JL)(),
+        { selectedSkuId: T, step: A, selectedPlan: N, purchaseState: C, purchaseType: R, selectedSku: P } = (0, g.JL)(),
         { isGift: w, selectedGiftStyle: D, giftRecipient: L } = (0, m.wD)(),
-        x = w && (0, h.pO)(L) && N === E.h8.CONFIRM && null != D && (null == P ? void 0 : P.productLine) !== b.POd.COLLECTIBLES,
-        M = null != n && null != N,
+        x = w && (0, h.pO)(L) && A === E.h8.CONFIRM && null != D && (null == P ? void 0 : P.productLine) !== b.POd.COLLECTIBLES,
+        M = null != n && null != A,
         k = [E.h8.SKU_SELECT, E.h8.SELECT_FREE_SKU],
-        j = null != N && !k.includes(N) && null != T,
+        j = null != A && !k.includes(A) && null != T,
         U = (0, d.N)(a),
         G = !w && null != U && null != T && y.nG[U.trial_id].skus.includes(T),
         B = (0, u.Ng)(),
@@ -38,9 +38,9 @@ function S(e) {
         V = !w && null != B && null != T && F,
         { enabled: Z } = c.ZP.useExperiment({ location: 'PaymentModalHeader' }, { autoTrackExposure: !1 }),
         H = (0, c.rK)(),
-        W = Z && H;
+        Y = Z && H;
     return i.useMemo(() => {
-        if (null == N) return;
+        if (null == A) return;
         let e = null;
         return (
             x
@@ -59,16 +59,16 @@ function S(e) {
                       ]
                   }))
                 : M
-                  ? (e = n(null != A ? A : null, S, N))
+                  ? (e = n(null != N ? N : null, S, A))
                   : R === v.GZ.ONE_TIME
                     ? (e = (0, r.jsx)(p.t, {
-                          step: N,
+                          step: A,
                           onClose: S
                       }))
                     : j &&
                       (o()(I(T, y.y7), 'invalid sku id: '.concat(T)),
                       (e = (0, r.jsx)(_.Z, {
-                          currentStep: null != N ? N : void 0,
+                          currentStep: null != A ? A : void 0,
                           purchaseState: C,
                           premiumType: y.y7[T],
                           onClose: S,
@@ -76,9 +76,9 @@ function S(e) {
                           showDiscountBadge: V,
                           isGift: w,
                           giftRecipient: L,
-                          useWinterTheme: W
+                          useWinterTheme: Y
                       }))),
             e
         );
-    }, [D, S, C, n, A, T, N, G, V, x, j, M, R, w, L, W]);
+    }, [D, S, C, n, N, T, A, G, V, x, j, M, R, w, L, Y]);
 }

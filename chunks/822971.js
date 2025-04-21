@@ -114,13 +114,13 @@ e.exports = function (e) {
             end: /"/,
             contains: [{ match: /""/ }, e.BACKSLASH_ESCAPE]
         },
-        N = {
+        A = {
             scope: 'string',
             begin: /"""/,
             end: /"""/,
             relevance: 2
         },
-        A = {
+        N = {
             scope: 'subst',
             begin: /\{/,
             end: /\}/,
@@ -130,19 +130,19 @@ e.exports = function (e) {
             scope: 'string',
             begin: /\$"/,
             end: /"/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, e.BACKSLASH_ESCAPE, A]
+            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, e.BACKSLASH_ESCAPE, N]
         },
         R = {
             scope: 'string',
             begin: /(\$@|@\$)"/,
             end: /"/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, { match: /""/ }, e.BACKSLASH_ESCAPE, A]
+            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, { match: /""/ }, e.BACKSLASH_ESCAPE, N]
         },
         P = {
             scope: 'string',
             begin: /\$"""/,
             end: /"""/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, A],
+            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, N],
             relevance: 2
         },
         w = {
@@ -150,7 +150,7 @@ e.exports = function (e) {
             match: i(/'/, o(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
         };
     return (
-        (A.contains = [R, C, T, S, w, n, c, d, E, v, O, I, _, h]),
+        (N.contains = [R, C, T, S, w, n, c, d, E, v, O, I, _, h]),
         {
             name: 'F#',
             aliases: ['fs', 'f#'],
@@ -160,7 +160,7 @@ e.exports = function (e) {
             contains: [
                 n,
                 {
-                    variants: [P, R, C, N, T, S, w]
+                    variants: [P, R, C, A, T, S, w]
                 },
                 c,
                 d,
@@ -170,7 +170,7 @@ e.exports = function (e) {
                     begin: /\[</,
                     end: />\]/,
                     relevance: 2,
-                    contains: [d, N, T, S, w, I]
+                    contains: [d, A, T, S, w, I]
                 },
                 b,
                 E,

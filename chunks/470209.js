@@ -3,8 +3,8 @@ var n = r(200651);
 r(192379);
 var A = r(512722),
     a = r.n(A),
-    o = r(866442),
-    l = r(481060),
+    l = r(866442),
+    o = r(481060),
     i = r(313201),
     s = r(981631),
     c = r(388032),
@@ -60,31 +60,31 @@ function p(e) {
     return (0, n.jsxs)('div', {
         className: d.roleInputContainer,
         children: [
-            (0, n.jsx)(l.oil, {
+            (0, n.jsx)(o.oil, {
                 autoFocus: !0,
                 value: A,
                 onChange: (e) => r((t) => (a()(null != t, 'newRoleParams should be defined'), g(u({}, t), { name: e }))),
                 id: f,
-                placeholder: c.NW.string(c.t.oNauur),
+                placeholder: c.intl.string(c.t.oNauur),
                 maxLength: s.VKK,
                 inputClassName: d.input
             }),
             (0, n.jsxs)('div', {
                 className: d.roleColorContainer,
                 children: [
-                    (0, n.jsx)(l.nn4, { children: c.NW.format(c.t['Vlq/pK'], { color: (0, o.Rf)(i) }) }),
+                    (0, n.jsx)(o.nn4, { children: c.intl.format(c.t['Vlq/pK'], { color: (0, l.Rf)(i) }) }),
                     (0, n.jsx)('div', {
                         className: d.roleColorPreview,
-                        style: { backgroundColor: (0, o.Rf)(i) }
+                        style: { backgroundColor: (0, l.Rf)(i) }
                     }),
-                    (0, n.jsx)(l.LZC, {
+                    (0, n.jsx)(o.LZC, {
                         size: 8,
                         horizontal: !0
                     }),
-                    (0, n.jsx)(l.yRy, {
+                    (0, n.jsx)(o.yRy, {
                         renderPopout: (e) =>
                             (0, n.jsx)(
-                                l.Z$W,
+                                o.Z$W,
                                 g(u({}, e), {
                                     value: i,
                                     onChange: p
@@ -92,12 +92,12 @@ function p(e) {
                             ),
                         children: (e) =>
                             (0, n.jsx)(
-                                l.P3F,
+                                o.P3F,
                                 g(u({}, e), {
                                     tag: 'span',
-                                    'aria-label': c.NW.string(c.t.QLgdlZ),
+                                    'aria-label': c.intl.string(c.t.QLgdlZ),
                                     className: d.dropperIconContainer,
-                                    children: (0, n.jsx)(l.ilE, {
+                                    children: (0, n.jsx)(o.ilE, {
                                         size: 'xs',
                                         color: 'currentColor',
                                         className: d.dropperIcon

@@ -82,12 +82,12 @@ function g(e, t) {
 }
 let E = i.forwardRef(function (e, t) {
     var n,
-        { avatar: a, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: v, selected: O, muted: I, to: S, avatarClassName: T, selectedClassName: N, innerClassName: A, wrapContent: C, highlighted: R, focusProps: P } = e,
+        { avatar: a, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: v, selected: O, muted: I, to: S, avatarClassName: T, selectedClassName: A, innerClassName: N, wrapContent: C, highlighted: R, focusProps: P } = e,
         w = m(e, ['avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
     (w.className = o()(w.className, d.container, {
         [d.selected]: O,
         [d.highlighted]: R,
-        [null != N ? N : '']: O,
+        [null != A ? A : '']: O,
         [d.clickable]: !O && (null != S || null != y)
     })),
         (w['aria-selected'] = null != (n = w['aria-selected']) ? n : O);
@@ -104,7 +104,7 @@ let E = i.forwardRef(function (e, t) {
                 }),
                 (0, r.jsxs)('div', {
                     ref: D,
-                    className: o()(A, d.layout, {
+                    className: o()(N, d.layout, {
                         [d.muted]: !O && I,
                         [d.wrappedLayout]: C
                     }),

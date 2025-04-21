@@ -23,8 +23,8 @@ var i = n(120356),
     I = n(430824),
     S = n(496675),
     T = n(158776),
-    N = n(938475),
-    A = n(960870),
+    A = n(938475),
+    N = n(960870),
     C = n(139793),
     R = n(652853),
     P = n(336383),
@@ -42,17 +42,17 @@ var i = n(120356),
     V = n(924482),
     Z = n(774797);
 function H(e) {
-    let { user: t, currentUser: n, stream: i, className: H, onClose: W } = e,
-        { profileType: Y, theme: K } = (0, R.z)(),
+    let { user: t, currentUser: n, stream: i, className: H, onClose: Y } = e,
+        { profileType: W, theme: K } = (0, R.z)(),
         z = {
-            [F.fullSize]: Y === j.y0.FULL_SIZE,
-            [B.fullSize]: Y === j.y0.FULL_SIZE
+            [F.fullSize]: W === j.y0.FULL_SIZE,
+            [B.fullSize]: W === j.y0.FULL_SIZE
         },
         q = (0, o.e7)([I.Z], () => I.Z.getGuild(null == i ? void 0 : i.guildId)),
         Q = (0, o.e7)([O.Z], () => O.Z.getChannel(null == i ? void 0 : i.channelId)),
-        X = (0, o.Wu)([N.ZP], () =>
+        X = (0, o.Wu)([A.ZP], () =>
             null != Q
-                ? N.ZP.getVoiceStatesForChannel(Q).map((e) => {
+                ? A.ZP.getVoiceStatesForChannel(Q).map((e) => {
                       let { user: t } = e;
                       return t;
                   })
@@ -60,7 +60,7 @@ function H(e) {
         ),
         J = (0, o.e7)([T.Z], () => T.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, f.Z)(e))),
         { analyticsLocations: $ } = (0, p.ZP)(_.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        ee = (0, A.Z)({
+        ee = (0, N.Z)({
             display: 'live',
             voiceChannelId: null == Q ? void 0 : Q.id,
             user: t,
@@ -80,7 +80,7 @@ function H(e) {
     let ec = () => {
             let e = a()(F.preview, z),
                 t = (e) => {
-                    e.stopPropagation(), ee({ action: 'PRESS_IMAGE' }), l.default.selectVoiceChannel(i.channelId), (0, c.iV)(i), null == W || W();
+                    e.stopPropagation(), ee({ action: 'PRESS_IMAGE' }), l.default.selectVoiceChannel(i.channelId), (0, c.iV)(i), null == Y || Y();
                 };
             return null == el && er
                 ? (0, r.jsx)('div', {
@@ -96,7 +96,7 @@ function H(e) {
                                 alt: '',
                                 src: K === U.BRd.LIGHT ? Z : V
                             }),
-                            Y !== j.y0.FULL_SIZE &&
+                            W !== j.y0.FULL_SIZE &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(s.Text, {
@@ -107,7 +107,7 @@ function H(e) {
                                         }),
                                         (0, r.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
-                                            children: eo ? G.NW.string(G.t.uQZTBQ) : G.NW.string(G.t.pgUTZG)
+                                            children: eo ? G.intl.string(G.t.uQZTBQ) : G.intl.string(G.t.pgUTZG)
                                         })
                                     ]
                                 })
@@ -122,7 +122,7 @@ function H(e) {
                                 src: el,
                                 className: F.image
                             }),
-                            Y !== j.y0.FULL_SIZE &&
+                            W !== j.y0.FULL_SIZE &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(s.Text, {
@@ -142,12 +142,12 @@ function H(e) {
                     });
         },
         eu = () => {
-            if (Y !== j.y0.FULL_SIZE) return null;
+            if (W !== j.y0.FULL_SIZE) return null;
             let e = (e) => {
-                    e.stopPropagation(), null == ee || ee({ action: 'OPEN_VOICE_CHANNEL' }), Q.isGuildStageVoice() ? (0, v.Cq)(Q) : (l.default.selectVoiceChannel(Q.id), (0, b.Kh)(Q.id)), null == W || W();
+                    e.stopPropagation(), null == ee || ee({ action: 'OPEN_VOICE_CHANNEL' }), Q.isGuildStageVoice() ? (0, v.Cq)(Q) : (l.default.selectVoiceChannel(Q.id), (0, b.Kh)(Q.id)), null == Y || Y();
                 },
                 n = (e) => {
-                    e.stopPropagation(), ee({ action: 'OPEN_VOICE_GUILD' }), (0, y.X)(q.id), null == W || W();
+                    e.stopPropagation(), ee({ action: 'OPEN_VOICE_GUILD' }), (0, y.X)(q.id), null == Y || Y();
                 };
             return (0, r.jsxs)('div', {
                 className: B.details,
@@ -174,7 +174,7 @@ function H(e) {
                             }),
                             (0, r.jsx)(D.Z, {
                                 variant: 'text-xs/normal',
-                                text: G.NW.formatToPlainString(G.t['hq/Qzc'], { guildName: q.name }),
+                                text: G.intl.formatToPlainString(G.t['hq/Qzc'], { guildName: q.name }),
                                 onClick: n
                             })
                         ]
@@ -196,14 +196,14 @@ function H(e) {
             });
         },
         ed = () =>
-            Y === j.y0.FULL_SIZE
+            W === j.y0.FULL_SIZE
                 ? null
                 : (0, r.jsx)(L.Z, {
                       user: t,
                       guild: q,
                       channel: Q,
                       onAction: ee,
-                      onClose: W
+                      onClose: Y
                   }),
         ef = () =>
             t.id === n.id
@@ -213,7 +213,7 @@ function H(e) {
                       children: (0, r.jsx)(M.Z, {
                           channel: Q,
                           onAction: ee,
-                          onClose: W
+                          onClose: Y
                       })
                   });
     return (0, r.jsx)(p.Gt, {
@@ -222,15 +222,15 @@ function H(e) {
             ref: et,
             className: H,
             onAction: ee,
-            onClose: W,
+            onClose: Y,
             children: [
                 (0, r.jsx)(w.Z, {
-                    text: null != J ? G.NW.formatToPlainString(G.t['4CQq9f'], { name: J.name }) : G.NW.string(G.t['Jpkr/v']),
+                    text: null != J ? G.intl.formatToPlainString(G.t['4CQq9f'], { name: J.name }) : G.intl.string(G.t['Jpkr/v']),
                     tags: (0, r.jsx)(h.ZP, { size: h.OH.SMALL }),
                     contextMenu: (0, r.jsx)(k.Z, {
                         display: 'live',
                         user: t,
-                        onClose: W
+                        onClose: Y
                     })
                 }),
                 (0, r.jsxs)('div', {
@@ -238,12 +238,12 @@ function H(e) {
                     children: [
                         (0, r.jsxs)('div', {
                             className: a()(B.content, z),
-                            children: [ec(), eu(), Y === j.y0.FULL_SIZE && ef()]
+                            children: [ec(), eu(), W === j.y0.FULL_SIZE && ef()]
                         }),
                         ed()
                     ]
                 }),
-                Y !== j.y0.FULL_SIZE && ef()
+                W !== j.y0.FULL_SIZE && ef()
             ]
         })
     });

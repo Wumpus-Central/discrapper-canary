@@ -15,7 +15,7 @@ let d = l.memo(function (e) {
             S = l.useMemo(() => (0, c.Hg)(P), [P]),
             N = l.useMemo(() => (null != b ? (0, c.vc)(P, b) : i ? (0, c.vc)(P, 'LT') : (0, c.Y4)(P, !0)), [P, b, i]),
             w = l.useMemo(() => (i ? (0, u.Z)(N) : null), [i, N]),
-            R = l.useMemo(() => (v ? m.NW.formatToPlainString(m.t.CDzOFR, { timeFormatted: S }) : S), [v, S]);
+            R = l.useMemo(() => (v ? m.intl.formatToPlainString(m.t.CDzOFR, { timeFormatted: S }) : S), [v, S]);
         return (0, n.jsx)('span', {
             className: o()(r, w, {
                 [p.timestamp]: !0,

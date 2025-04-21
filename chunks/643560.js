@@ -56,7 +56,7 @@ function f(e) {
         { isEntryAdmin: b, canEdit: _, canRemove: y } = (0, u.Z)(t),
         C = (0, a.Z)({
             id: t.guildId,
-            label: d.NW.string(d.t['94lLDw']),
+            label: d.intl.string(d.t['94lLDw']),
             onSuccess: m
         });
     i.useEffect(() => {
@@ -71,7 +71,7 @@ function f(e) {
     return (0, r.jsxs)(l.v2r, {
         navId: 'guild-entry-context',
         onClose: v,
-        'aria-label': d.NW.string(d.t.HpQykZ),
+        'aria-label': d.intl.string(d.t.HpQykZ),
         onSelect: f,
         children: [
             (0, r.jsxs)(l.kSQ, {
@@ -79,7 +79,7 @@ function f(e) {
                     _ && !g
                         ? (0, r.jsx)(l.sNh, {
                               id: 'update-entry',
-                              label: d.NW.string(d.t.XnuOvL),
+                              label: d.intl.string(d.t.XnuOvL),
                               action: function () {
                                   (0, l.ZDy)(async () => {
                                       let { default: e } = await n.e('34191').then(n.bind(n, 303647));
@@ -92,7 +92,7 @@ function f(e) {
                     y
                         ? (0, r.jsx)(l.sNh, {
                               id: 'remove-from-hub',
-                              label: d.NW.string(d.t.KUxYWF),
+                              label: d.intl.string(d.t.KUxYWF),
                               action: function () {
                                   (0, l.h7j)((e) =>
                                       (0, r.jsx)(
@@ -100,9 +100,9 @@ function f(e) {
                                           h(
                                               p(
                                                   {
-                                                      header: d.NW.string(d.t.KUxYWF),
-                                                      confirmText: d.NW.string(d.t.N86XcH),
-                                                      cancelText: d.NW.string(d.t['ETE/oK']),
+                                                      header: d.intl.string(d.t.KUxYWF),
+                                                      confirmText: d.intl.string(d.t.N86XcH),
+                                                      cancelText: d.intl.string(d.t['ETE/oK']),
                                                       onConfirm: x
                                                   },
                                                   e
@@ -110,7 +110,7 @@ function f(e) {
                                               {
                                                   children: (0, r.jsx)(l.Text, {
                                                       variant: 'text-md/normal',
-                                                      children: d.NW.format(d.t['/5y0ub'], { guildName: t.name })
+                                                      children: d.intl.format(d.t['/5y0ub'], { guildName: t.name })
                                                   })
                                               }
                                           )
@@ -125,7 +125,7 @@ function f(e) {
                         ? null
                         : (0, r.jsx)(l.sNh, {
                               id: 'report-server-listing',
-                              label: d.NW.string(d.t.Aen9en),
+                              label: d.intl.string(d.t.Aen9en),
                               action: function () {
                                   null != t && ((0, s.sq)(t), v());
                               },

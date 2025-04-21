@@ -1,15 +1,15 @@
 n.d(t, { Z: () => p });
 var r,
     i,
-    s,
-    l = n(442837),
+    l,
+    s = n(442837),
     a = n(570140);
 let o = null,
     c = 0,
     d = null,
     u = null,
     m = !1;
-class g extends (s = l.ZP.Store) {
+class g extends (l = s.ZP.Store) {
     hasChanges() {
         return o !== d;
     }

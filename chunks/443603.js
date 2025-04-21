@@ -94,7 +94,7 @@ let b = 24,
         }
     };
 function O(e) {
-    let { className: t, disabled: n = !1, innerClassName: i, childClassName: a, iconClassName: p, icon: m, children: E, onClick: O, isActive: I, onMouseEnter: S, onMouseLeave: T, onFocus: N, onBlur: A, pulse: C, sparkle: R, notification: P, 'aria-label': w, 'aria-expanded': D, 'aria-haspopup': L, 'aria-controls': x } = e,
+    let { className: t, disabled: n = !1, innerClassName: i, childClassName: a, iconClassName: p, icon: m, children: E, onClick: O, isActive: I, onMouseEnter: S, onMouseLeave: T, onFocus: A, onBlur: N, pulse: C, sparkle: R, notification: P, 'aria-label': w, 'aria-expanded': D, 'aria-haspopup': L, 'aria-controls': x } = e,
         M = (0, u.Q3)('ChannelTextAreaButton'),
         k = (0, l.Yzy)(null != E, g(h({}, v), { keys: (e) => (e ? 'children' : 'icon') })),
         j = (e) => {
@@ -128,8 +128,8 @@ function O(e) {
         onClick: O,
         onMouseEnter: S,
         onMouseLeave: T,
-        onFocus: N,
-        onBlur: A,
+        onFocus: A,
+        onBlur: N,
         focusProps: {
             offset: {
                 top: 4,

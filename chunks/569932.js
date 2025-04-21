@@ -1,39 +1,39 @@
-n.d(e, { A: () => u });
-var o = n(200651),
-    i = n(192379),
-    r = n(481060),
-    s = n(63063),
-    c = n(921869),
-    a = n(981631),
-    d = n(388032),
-    l = n(660025);
+e.d(n, { A: () => u });
+var o = e(200651),
+    i = e(192379),
+    r = e(481060),
+    s = e(63063),
+    c = e(921869),
+    a = e(981631),
+    l = e(388032),
+    d = e(660025);
 function u(t) {
-    let { platformType: e, onContinue: n, onClose: u } = t,
+    let { platformType: n, onContinue: e, onClose: u } = t,
         p = i.useMemo(
             () => [
                 {
-                    label: d.NW.string(d.t['+eJP7u']),
-                    subLabel: d.NW.string(d.t['+0VIUl']),
+                    label: l.intl.string(l.t['+eJP7u']),
+                    subLabel: l.intl.string(l.t['+0VIUl']),
                     icon: r.gj8
                 },
                 {
-                    label: d.NW.string(d.t.ZH4QFR),
+                    label: l.intl.string(l.t.ZH4QFR),
                     icon: r.iWm
                 }
             ],
             []
         ),
         _ = s.Z.getArticleURL(a.BhN.PS_CONNECTION),
-        b = d.NW.format(d.t.kqZQNT, { helpdeskArticleUrl: _ });
+        b = l.intl.format(l.t.kqZQNT, { helpdeskArticleUrl: _ });
     return (0, o.jsx)(c.m, {
-        platformType: e,
-        headerConnect: d.NW.string(d.t.xAWHOz),
-        headerReconnect: d.NW.string(d.t['ZJ/vBg']),
+        platformType: n,
+        headerConnect: l.intl.string(l.t.xAWHOz),
+        headerReconnect: l.intl.string(l.t['ZJ/vBg']),
         body: b,
         onClose: u,
-        onContinue: n,
+        onContinue: e,
         img: (0, o.jsx)('img', {
-            src: l.Z,
+            src: d.Z,
             width: 230,
             height: 160,
             alt: ''

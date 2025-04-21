@@ -1,6 +1,6 @@
 r.d(t, {
-    al: () => N,
-    ck: () => C
+    al: () => b,
+    ck: () => Z
 }),
     r(388685),
     r(539854),
@@ -9,8 +9,8 @@ r.d(t, {
 var n = r(200651),
     a = r(192379),
     i = r(112456),
-    s = r.n(i),
-    l = r(226961),
+    l = r.n(i),
+    s = r(226961),
     o = r(706619),
     c = r(206314);
 let d = {
@@ -138,7 +138,7 @@ function u(e) {
     return ''.concat((e / 1000).toFixed(2), ' Kbps');
 }
 function m(e) {
-    return s().filesize(e);
+    return l().filesize(e);
 }
 function p(e) {
     return e;
@@ -162,7 +162,7 @@ function v(e) {
 function D(e) {
     return e.toFixed(2);
 }
-let N = {
+let b = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
@@ -191,7 +191,7 @@ let N = {
         videoJitterTarget: !0,
         voiceActivityDetectorProcessTime: !0
     },
-    b = {
+    E = {
         accelerateRate: y,
         audioDetected: g,
         audioLevel: f,
@@ -249,8 +249,8 @@ let N = {
         },
         videoEntropy: D
     },
-    E = (e) => e,
-    j = (e) => {
+    j = (e) => e,
+    C = (e) => {
         let [t] = a.useState([]);
         return (
             t.push({
@@ -265,26 +265,26 @@ let N = {
             })
         );
     };
-function C(e) {
+function Z(e) {
     var t, r, a;
-    let { label: i, value: s, section: u } = e,
-        m = null != (r = b[i]) ? r : E,
+    let { label: i, value: l, section: u } = e,
+        m = null != (r = E[i]) ? r : j,
         p =
-            l.Pz[i] &&
-            (Array.isArray(s) && s.length > 0 && 'number' == typeof s[0].value
+            s.Pz[i] &&
+            (Array.isArray(l) && l.length > 0 && 'number' == typeof l[0].value
                 ? (0, n.jsx)(o.Z, {
-                      dataPoints: s,
+                      dataPoints: l,
                       width: 300,
                       height: 100
                   })
-                : 'number' == typeof s
-                  ? (0, n.jsx)(j, {
-                        value: s,
+                : 'number' == typeof l
+                  ? (0, n.jsx)(C, {
+                        value: l,
                         width: 300,
                         height: 100
                     })
                   : void 0),
-        h = Array.isArray(s) ? (null == (t = s.at(-1)) ? void 0 : t.value) : s;
+        h = Array.isArray(l) ? (null == (t = l.at(-1)) ? void 0 : t.value) : l;
     return (0, n.jsx)(c.Z, {
         label: i,
         valueRendered: m(h),

@@ -22,7 +22,7 @@ var r = n(200651),
     I = n(388032),
     S = n(888090),
     T = n(716827);
-function N(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function N(e, t, n) {
         e
     );
 }
-function A(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function A(e) {
                 })
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
@@ -95,7 +95,7 @@ function w(e, t) {
     return i;
 }
 function D(e) {
-    let { className: t, disabled: a, isEditor: N, renderCTAButtons: C } = e,
+    let { className: t, disabled: a, isEditor: A, renderCTAButtons: C } = e,
         [w, D] = (0, s.Wu)([g.Z], () => [g.Z.getCurrentDesktopIcon(), g.Z.isUpsellPreview]),
         { enabled: L } = p.Z.getCurrentConfig(
             { location: 'UserSettingsAppearanceInAppIcon' },
@@ -115,13 +115,13 @@ function D(e) {
         U = P(k, ['ref']),
         G = (0, f.Q3)('AppIconSelectionGroup'),
         B = (e) => {
-            if (L && !N && e !== E.aH.DEFAULT)
+            if (L && !A && e !== E.aH.DEFAULT)
                 return void (0, l.ZDy)(async () => {
                     let { default: e } = await n.e('69052').then(n.bind(n, 184250));
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            A(
+                            N(
                                 {
                                     analyticsSource: u.Z.APP_ICON_SELECTOR,
                                     analyticsLocation: {
@@ -142,7 +142,7 @@ function D(e) {
         ref: x,
         children: (0, r.jsx)(
             'div',
-            R(A({}, U), {
+            R(N({}, U), {
                 ref: j,
                 className: S.__invalid_container,
                 children: (0, r.jsxs)('div', {
@@ -154,20 +154,20 @@ function D(e) {
                                 (0, r.jsxs)('div', {
                                     className: S.headings,
                                     children: [
-                                        !N &&
+                                        !A &&
                                             (0, r.jsxs)('div', {
                                                 className: S.title,
                                                 children: [
                                                     (0, r.jsx)(l.X6q, {
                                                         className: S.titleText,
                                                         variant: G ? 'text-lg/medium' : 'text-md/medium',
-                                                        children: I.NW.string(I.t.NThqT0)
+                                                        children: I.intl.string(I.t.NThqT0)
                                                     }),
                                                     !L && (0, r.jsx)(h.Z, { className: S.premiumIcon })
                                                 ]
                                             }),
                                         L
-                                            ? N
+                                            ? A
                                                 ? null
                                                 : (0, r.jsxs)('div', {
                                                       className: S.description,
@@ -179,7 +179,7 @@ function D(e) {
                                                           }),
                                                           (0, r.jsx)(l.X6q, {
                                                               variant: 'text-sm/normal',
-                                                              children: I.NW.format(I.t.x2dQxM, {
+                                                              children: I.intl.format(I.t.x2dQxM, {
                                                                   onClick: () => {
                                                                       (0, _.$)();
                                                                   }
@@ -190,7 +190,7 @@ function D(e) {
                                             : (0, r.jsx)(l.X6q, {
                                                   variant: 'text-sm/normal',
                                                   className: o()({ [T.subtext]: G }),
-                                                  children: I.NW.string(I.t.IgENJi)
+                                                  children: I.intl.string(I.t.IgENJi)
                                               })
                                     ]
                                 }),
@@ -198,7 +198,7 @@ function D(e) {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: o()(S.presets, { [S.presetsJustified]: L && N }),
+                            className: o()(S.presets, { [S.presetsJustified]: L && A }),
                             children: (0, y.wu)()
                                 .filter((e) => {
                                     let { isHidden: t } = e;
@@ -213,7 +213,7 @@ function D(e) {
                                             onSelect: (e) => B(e),
                                             disabled: a,
                                             tabIndex: 0 !== t || a ? void 0 : 0,
-                                            locked: L && !N && e.id !== E.aH.DEFAULT
+                                            locked: L && !A && e.id !== E.aH.DEFAULT
                                         },
                                         e.id
                                     )

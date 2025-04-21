@@ -72,10 +72,10 @@ function v(e) {
         { Component: v, events: O, play: I } = (0, a.$)(),
         { enabled: S } = d.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
         T = (0, c.Q3)('ChannelPremiumGiftButton'),
-        N = i.type === p.d4z.DM;
+        A = i.type === p.d4z.DM;
     if (t) return null;
-    let A = () => {
-        S && N && null != b
+    let N = () => {
+        S && A && null != b
             ? (0, o.ZDy)(async () => {
                   let { default: e } = await n.e('59207').then(n.bind(n, 435626));
                   return (t) =>
@@ -110,7 +110,7 @@ function v(e) {
               });
     };
     return (0, r.jsx)(o.ua7, {
-        text: h.NW.string(h.t.sWtWDQ),
+        text: h.intl.string(h.t.sWtWDQ),
         children: (e) =>
             (0, r.jsx)(
                 _.Z,
@@ -119,10 +119,10 @@ function v(e) {
                         y(E({}, e), {
                             innerClassName: m.button,
                             isActive: !1,
-                            'aria-label': h.NW.string(h.t.Z1RnTk),
+                            'aria-label': h.intl.string(h.t.Z1RnTk),
                             'aria-haspopup': 'dialog',
                             onClick: () => {
-                                A(), I();
+                                N(), I();
                             }
                         }),
                         O

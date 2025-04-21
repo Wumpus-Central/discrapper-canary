@@ -1,9 +1,9 @@
 n.d(t, { Z: () => m }), n(388685), n(642613), n(583741);
-var r = n(392711),
-    i = n.n(r),
+var i = n(392711),
+    r = n.n(i),
     s = n(710845),
-    a = n(592125),
-    l = n(306680),
+    l = n(592125),
+    a = n(306680),
     o = n(709054),
     c = n(287328);
 function d(e, t, n) {
@@ -24,8 +24,8 @@ let u = new s.Z('ReadStates'),
         async getAll(e) {
             let t = performance.now(),
                 n = await c.Z.readStates(e).getMany(),
-                r = performance.now();
-            return u.log('asynchronously loaded in '.concat(r - t, 'ms (readStates: ').concat(n.length, ')')), n;
+                i = performance.now();
+            return u.log('asynchronously loaded in '.concat(i - t, 'ms (readStates: ').concat(n.length, ')')), n;
         }
         resetInMemoryState() {
             this.readStateVersion = null;
@@ -37,15 +37,15 @@ let u = new s.Z('ReadStates'),
             null != this.readStateVersion && (null != e.version ? (this.readStateVersion = e.version) : u.log('Received null read states version', e));
         }
         handleWriteCaches(e, t) {
-            let n = l.ZP.getAllReadStates(!1);
+            let n = a.ZP.getAllReadStates(!1);
             if (t) {
-                var r;
+                var i;
                 if (null == this.readStateVersion) return;
                 let t = '0',
                     s = '0',
-                    l = Object.keys(a.Z.getMutablePrivateChannels()),
-                    d = new Set(l);
-                for (let e of ((s = null != (r = i()(l).sort(o.default.compare).reverse().value()[0]) ? r : '0'), n)) null != e._lastMessageId && (1 === o.default.compare(e._lastMessageId, t) && (t = e._lastMessageId), d.has(e.channelId) && 1 === o.default.compare(e._lastMessageId, s) && (s = e._lastMessageId));
+                    a = Object.keys(l.Z.getMutablePrivateChannels()),
+                    d = new Set(a);
+                for (let e of ((s = null != (i = r()(a).sort(o.default.compare).reverse().value()[0]) ? i : '0'), n)) null != e._lastMessageId && (1 === o.default.compare(e._lastMessageId, t) && (t = e._lastMessageId), d.has(e.channelId) && 1 === o.default.compare(e._lastMessageId, s) && (s = e._lastMessageId));
                 c.Z.nonGuildVersionsTransaction(e).putAll([
                     {
                         id: 'highest_last_message_id',

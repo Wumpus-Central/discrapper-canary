@@ -12,11 +12,11 @@ var i = n(200651),
 function u(e, t) {
     var n;
     return e
-        ? s.NW.format(s.t.hv7hEx, {
+        ? s.intl.format(s.t.hv7hEx, {
               friendCount: t.length,
               friendName: null != (n = t[0].globalName) ? n : t[0].username
           })
-        : s.NW.format(s.t.IgnqIS, { friendCount: 2 });
+        : s.intl.format(s.t.IgnqIS, { friendCount: 2 });
 }
 function d(e) {
     let { friends: t, onClick: n, shortText: r, className: s } = e;

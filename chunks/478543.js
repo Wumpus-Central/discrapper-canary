@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685), n(539854);
+n.d(t, { Z: () => N }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -41,7 +41,7 @@ function v(e) {
                           color: 'currentColor',
                           className: b.copyLinkIcon
                       }),
-                      n ? E.NW.string(E.t.GmrIJS) : E.NW.string(E.t.iVzBOj)
+                      n ? E.intl.string(E.t.GmrIJS) : E.intl.string(E.t.iVzBOj)
                   ]
               })
             : null
@@ -100,20 +100,20 @@ function S(e) {
     l()(null != a, 'BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved');
     let { discord_web: g, discord_developers: b } = a.targetBuildOverride,
         v = null != g ? g : b;
-    l()(null != v, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), y(v, i) ? ((n = E.NW.string(E.t.tX4xrq)), (t = s), (r = c.zxk.Colors.RED)) : ((n = E.NW.string(E.t.nOunHB)), (t = o), (r = c.zxk.Colors.GREEN));
+    l()(null != v, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), y(v, i) ? ((n = E.intl.string(E.t.tX4xrq)), (t = s), (r = c.zxk.Colors.RED)) : ((n = E.intl.string(E.t.nOunHB)), (t = o), (r = c.zxk.Colors.GREEN));
     let O = () => {
         d.Z.isConnected()
             ? u.Z.show({
-                  title: E.NW.string(E.t.tiu1l5),
-                  body: E.NW.string(E.t['zK+lqa']),
+                  title: E.intl.string(E.t.tiu1l5),
+                  body: E.intl.string(E.t['zK+lqa']),
                   onConfirm: t,
-                  cancelText: E.NW.string(E.t['ETE/oK']),
-                  confirmText: E.NW.string(E.t['QDX/qq'])
+                  cancelText: E.intl.string(E.t['ETE/oK']),
+                  confirmText: E.intl.string(E.t['QDX/qq'])
               })
             : t();
     };
     return I({
-        subHead: E.NW.string(E.t.RCYGoq),
+        subHead: E.intl.string(E.t.RCYGoq),
         buildDetails: v.id,
         buttonClick: O,
         buttonText: n,
@@ -123,21 +123,21 @@ function S(e) {
 }
 function T(e) {
     return I({
-        subHead: E.NW.string(E.t.ODXApK),
+        subHead: E.intl.string(E.t.ODXApK),
         buttonColor: c.zxk.Colors.TRANSPARENT,
         buttonText: 'Invalid',
         buildDetails: e,
         disabled: !0
     });
 }
-function N(e, t, n) {
+function A(e, t, n) {
     return (0, r.jsxs)(c.Text, {
         variant: 'text-xs/normal',
         className: b.titleRegion,
         children: [
             (0, r.jsx)('strong', {
                 className: b.title,
-                children: null != e && null != e.releaseChannel ? E.NW.formatToPlainString(E.t.bFj63d, { releaseChannel: e.releaseChannel }) : E.NW.string(E.t.Wj3LW1)
+                children: null != e && null != e.releaseChannel ? E.intl.formatToPlainString(E.t.bFj63d, { releaseChannel: e.releaseChannel }) : E.intl.string(E.t.Wj3LW1)
             }),
             (0, r.jsx)(c.eee, {
                 className: b.infoLink,
@@ -153,7 +153,7 @@ function N(e, t, n) {
         ]
     });
 }
-let A = (e) => {
+let N = (e) => {
     let { loading: t = !1, currentOverrides: n, linkMeta: a, url: o, applyBuildOverride: s, clearBuildOverride: l } = e,
         [c, u] = i.useState(!1),
         d = i.useCallback(() => {
@@ -165,7 +165,7 @@ let A = (e) => {
     return (0, r.jsxs)('div', {
         className: b.wrapper,
         children: [
-            N(a, o, t),
+            A(a, o, t),
             (0, r.jsxs)('div', {
                 className: b.content,
                 children: [

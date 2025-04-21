@@ -1,8 +1,8 @@
 n.d(t, { y6: () => m }), n(388685);
 var r = n(192379),
     i = n(442837),
-    a = n(45114),
-    l = n(733427),
+    l = n(45114),
+    a = n(733427),
     o = n(455199),
     s = n(833592),
     c = n(140155),
@@ -19,7 +19,7 @@ let p = (e) => {
                 items: v,
                 hasMore: E,
                 cursor: O,
-                errored: N
+                errored: j
             } = (0, i.cj)([c.Z], () => ({
                 initialized: c.Z.initialized,
                 loading: c.Z.loading,
@@ -28,20 +28,20 @@ let p = (e) => {
                 cursor: c.Z.cursor,
                 errored: c.Z.errored
             })),
-            { roleFilter: j, everyoneFilter: C } = (0, i.cj)([o.Z], () => ({
+            { roleFilter: C, everyoneFilter: S } = (0, i.cj)([o.Z], () => ({
                 everyoneFilter: o.Z.everyoneFilter,
                 roleFilter: o.Z.roleFilter
             }));
         r.useEffect(() => ((0, s.Vk)(!0), () => (0, s.Vk)(!1)), []),
             r.useEffect(() => {
-                x && t && (0, a.FT)(d.W.NOTIFICATION_CENTER);
+                x && t && (0, l.FT)(d.W.NOTIFICATION_CENTER);
             }, [t, x]);
-        let S = (0, l.Z)();
+        let I = (0, a.Z)();
         r.useEffect(
             () => () => {
-                p ? !S() && (N || v.length > 100) && (0, s.jF)() : n && v.length > 100 && (0, s.jF)();
+                p ? !I() && (j || v.length > 100) && (0, s.jF)() : n && v.length > 100 && (0, s.jF)();
             },
-            [n, v, p, S, N]
+            [n, v, p, I, j]
         ),
             r.useEffect(() => {
                 let e = h && t;
@@ -49,25 +49,25 @@ let p = (e) => {
                     (0, s.jk)({
                         limit: null != f ? f : m ? 8 : 20,
                         with_mentions: m,
-                        roles_filter: j,
-                        everyone_filter: C
+                        roles_filter: C,
+                        everyone_filter: S
                     });
-            }, [x, h, t, m, j, C, f]);
-        let I = r.useCallback(
+            }, [x, h, t, m, C, S, f]);
+        let N = r.useCallback(
             async (e) => {
                 !g.current &&
                     x &&
                     E &&
                     null != O &&
-                    (e || !N) &&
+                    (e || !j) &&
                     ((g.current = !0),
                     b(!0),
                     await (0, s.jk)(
                         {
                             after: O,
                             with_mentions: m,
-                            roles_filter: j,
-                            everyone_filter: C,
+                            roles_filter: C,
+                            everyone_filter: S,
                             limit: m ? 8 : 20
                         },
                         () => {
@@ -76,19 +76,19 @@ let p = (e) => {
                     ),
                     b(!1));
             },
-            [x, E, O, N, m, j, C]
+            [x, E, O, j, m, C, S]
         );
         return {
             initialized: x,
             loading: y,
             items: v,
             hasMore: E,
-            loadMore: I,
+            loadMore: N,
             loadingMore: _,
             setReadNotifItemToAcked: (e) => {
                 e.acked || (e.acked = !0);
             },
-            errored: N
+            errored: j
         };
     },
     m = () => {

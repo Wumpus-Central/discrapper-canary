@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
-var r = n(200651),
-    i = n(192379),
-    a = n(481060),
-    l = n(980463),
+var i = n(200651),
+    r = n(192379),
+    l = n(481060),
+    a = n(980463),
     o = n(328908),
     s = n(992970),
     c = n(135793),
@@ -15,17 +15,17 @@ function b(e, t) {
     let n = (0, d.Z)(t, e),
         b = e.hasPotions(),
         h = (0, u.Nt)(),
-        p = i.useCallback(
+        p = r.useCallback(
             (n) => {
                 try {
-                    (0, l.qc)(t.id, e.id, n);
+                    (0, a.qc)(t.id, e.id, n);
                 } catch (e) {
-                    (0, a.showToast)((0, a.createToast)(m.NW.string(m.t.xsfC2d), a.ToastType.FAILURE));
+                    (0, l.showToast)((0, l.createToast)(m.intl.string(m.t.xsfC2d), l.ToastType.FAILURE));
                 }
             },
             [t.id, e.id]
         ),
-        O = i.useCallback(() => {
+        O = r.useCallback(() => {
             f.default.track(g.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: s.MG.MessageContextMenu }),
                 (0, c.s)({
                     channelId: t.id,
@@ -36,10 +36,10 @@ function b(e, t) {
                 });
         }, [t.id, e, p]);
     return n && !b && h
-        ? (0, r.jsx)(a.sNh, {
+        ? (0, i.jsx)(l.sNh, {
               id: 'add-confetti-potion',
-              label: m.NW.string(m.t.icaJW1),
-              icon: a.l22,
+              label: m.intl.string(m.t.icaJW1),
+              icon: l.l22,
               action: O
           })
         : null;

@@ -22,11 +22,11 @@ var r = n(200651),
     j = n(850020),
     O = n(965376),
     E = n(159299),
-    N = n(823415),
-    I = n(670188),
-    P = n(199902),
-    S = n(271383),
-    Z = n(430824),
+    I = n(823415),
+    P = n(670188),
+    S = n(199902),
+    Z = n(271383),
+    N = n(430824),
     T = n(158776),
     A = n(885110),
     w = n(111583),
@@ -35,14 +35,14 @@ var r = n(200651),
     M = n(626135),
     L = n(585483),
     D = n(700785),
-    W = n(51144),
-    U = n(998502),
-    B = n(276264),
-    G = n(981631),
-    F = n(388032),
-    H = n(688826),
-    V = n(11847);
-function z(e) {
+    U = n(51144),
+    B = n(998502),
+    G = n(276264),
+    F = n(981631),
+    H = n(388032),
+    V = n(688826),
+    z = n(11847);
+function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -67,17 +67,17 @@ function z(e) {
     }
     return e;
 }
-let Y = U.ZP.getEnableHardwareAcceleration(),
-    q = 44 + B.x,
+let Y = B.ZP.getEnableHardwareAcceleration(),
+    q = 44 + G.x,
     K = i.memo(function (e) {
         let { channel: t, sectionId: l, userId: o, guildOwnerId: a } = e,
             s = (0, p.e7)([w.Z], () => w.Z.isTyping(t.id, o)),
-            u = (0, p.e7)([S.ZP], () => S.ZP.getMember(t.guild_id, o)),
+            u = (0, p.e7)([Z.ZP], () => Z.ZP.getMember(t.guild_id, o)),
             h = (0, p.e7)(
-                [Z.Z],
+                [N.Z],
                 () => {
                     var e;
-                    return (null == u ? void 0 : u.colorRoleId) != null ? (null == (e = Z.Z.getRole(t.guild_id, u.colorRoleId)) ? void 0 : e.name) : void 0;
+                    return (null == u ? void 0 : u.colorRoleId) != null ? (null == (e = N.Z.getRole(t.guild_id, u.colorRoleId)) ? void 0 : e.name) : void 0;
                 },
                 [t.guild_id, u]
             ),
@@ -87,11 +87,11 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
             y = (0, p.e7)([T.Z, A.Z], () => (_ ? A.Z.getStatus() : T.Z.getStatus(o, t.guild_id))),
             C = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(o)),
             v = (0, p.e7)([T.Z, A.Z], () => (_ ? A.Z.getActivities() : T.Z.getActivities(o, t.guild_id))),
-            O = (0, p.e7)([P.Z], () => P.Z.getAnyStreamForUser(o)),
+            O = (0, p.e7)([S.Z], () => S.Z.getAnyStreamForUser(o)),
             k = (0, c.JA)(o),
             M = (0, p.e7)([E.Z], () => E.Z.canUserViewChannel(t.id, l, o)),
             D = (null == g ? void 0 : g.id) != null && g.id === a,
-            U = i.useCallback(
+            B = i.useCallback(
                 (e) => {
                     null != g &&
                         (0, f.jW)(e, async () => {
@@ -100,7 +100,7 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
                                 var i, l;
                                 return (0, r.jsx)(
                                     e,
-                                    ((i = z({}, n)),
+                                    ((i = W({}, n)),
                                     (l = l =
                                         {
                                             user: g,
@@ -126,25 +126,25 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
                 },
                 [g, t]
             ),
-            H = i.useCallback(() => {
+            V = i.useCallback(() => {
                 if (null == g) return;
-                let e = '@'.concat(W.ZP.getUserTag(g, { decoration: 'never' })),
+                let e = '@'.concat(U.ZP.getUserTag(g, { decoration: 'never' })),
                     n = '<@'.concat(g.id, '>');
-                L.S.dispatch(G.CkL.TEXTAREA_FOCUS, { channelId: t.id }),
-                    L.S.dispatchToLastSubscribed(G.CkL.INSERT_TEXT, {
+                L.S.dispatch(F.CkL.TEXTAREA_FOCUS, { channelId: t.id }),
+                    L.S.dispatchToLastSubscribed(F.CkL.INSERT_TEXT, {
                         plainText: e,
                         rawText: n
                     }),
                     m.Z.startTyping(t.id);
             }, [g, t]),
-            V = i.useCallback(
+            z = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
                         (0, x.f)({
                             guildId: t.guild_id,
                             location: {
-                                section: G.jXE.THREAD_MEMBER_LIST,
-                                object: G.qAy.BOOST_GEM_ICON
+                                section: F.jXE.THREAD_MEMBER_LIST,
+                                object: F.qAy.BOOST_GEM_ICON
                             }
                         });
                 },
@@ -155,17 +155,17 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
                 user: g
             }),
             [K, X] = i.useState(!1),
-            Q = (0, N.ic)({ location: 'PrivateChannelRecipients' });
+            Q = (0, I.ic)({ location: 'PrivateChannelRecipients' });
         if (null == g) return null;
         let J = null == u ? void 0 : u.premiumSince;
-        return (0, r.jsx)(I.Z, {
+        return (0, r.jsx)(P.Z, {
             user: g,
             guildId: t.guild_id,
             channelId: t.id,
             shouldShowOnHover: Q,
             position: d.tq ? 'window_center' : 'left',
             spacing: 16,
-            onShiftClick: H,
+            onShiftClick: V,
             clickTrap: K,
             shouldShow: K,
             onRequestClose: () => X(!1),
@@ -191,10 +191,10 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
                         return i;
                     })(e, ['onClick']);
                 return (0, r.jsx)(
-                    B.Z,
-                    z(
+                    G.Z,
+                    W(
                         {
-                            onContextMenu: U,
+                            onContextMenu: B,
                             shouldAnimateStatus: Y,
                             user: g,
                             currentUser: b,
@@ -211,13 +211,13 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
                             selected: K,
                             applicationStream: O,
                             premiumSince: null == J ? null : new Date(J),
-                            onClickPremiumGuildIcon: V,
+                            onClickPremiumGuildIcon: z,
                             itemProps: k,
-                            lostPermissionTooltipText: M ? void 0 : F.NW.string(F.t['/QcoT0']),
+                            lostPermissionTooltipText: M ? void 0 : H.intl.string(H.t['/QcoT0']),
                             isOwner: D,
                             nameplate: q,
                             onClick: (e) => {
-                                e.shiftKey ? null == H || H() : X((e) => !e);
+                                e.shiftKey ? null == V || V() : X((e) => !e);
                             }
                         },
                         i
@@ -233,19 +233,19 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
                 guildId: l,
                 size: 16
             });
-        return t === G.Skl.UNKNOWN
+        return t === F.Skl.UNKNOWN
             ? (0, r.jsx)('div', {
-                  className: V.membersGroup,
-                  children: (0, r.jsx)('div', { className: V.memberGroupsPlaceholder })
+                  className: z.membersGroup,
+                  children: (0, r.jsx)('div', { className: z.memberGroupsPlaceholder })
               })
             : (0, r.jsxs)(y.Z, {
-                  className: V.membersGroup,
-                  'aria-label': F.NW.formatToPlainString(F.t.UaqbkZ, {
+                  className: z.membersGroup,
+                  'aria-label': H.intl.formatToPlainString(H.t.UaqbkZ, {
                       title: n,
                       count: i
                   }),
                   children: [
-                      null != o ? (0, r.jsx)(C.Z, z({ className: V.roleIcon }, o)) : null,
+                      null != o ? (0, r.jsx)(C.Z, W({ className: z.roleIcon }, o)) : null,
                       (0, r.jsxs)('span', {
                           'aria-hidden': !0,
                           children: [n, ' \u2014 ', i]
@@ -255,28 +255,28 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
     }),
     Q = i.memo(function (e) {
         let { channel: t } = e;
-        return t.type === G.d4z.PRIVATE_THREAD
+        return t.type === F.d4z.PRIVATE_THREAD
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)('div', { className: H.divider }),
+                      (0, r.jsx)('div', { className: V.divider }),
                       (0, r.jsxs)(h.Text, {
                           variant: 'text-xs/bold',
                           color: 'header-secondary',
-                          className: H.private,
+                          className: V.private,
                           children: [
                               (0, r.jsx)(h.mBM, {
                                   size: 'xxs',
                                   color: 'currentColor'
                               }),
                               '\xA0',
-                              F.NW.string(F.t.BTLTAg)
+                              H.intl.string(H.t.BTLTAg)
                           ]
                       }),
                       (0, r.jsx)(h.Text, {
                           variant: 'text-sm/normal',
                           color: 'header-secondary',
-                          className: H.instructions,
-                          children: F.NW.string(F.t.Hsd8hI)
+                          className: V.instructions,
+                          children: H.intl.string(H.t.Hsd8hI)
                       })
                   ]
               })
@@ -348,7 +348,7 @@ function J(e) {
         C = 0 === d.length || d.every((e) => 0 === e.userIds.length);
     if (
         (i.useEffect(() => {
-            M.default.track(G.rMx.MEMBER_LIST_VIEWED, {
+            M.default.track(F.rMx.MEMBER_LIST_VIEWED, {
                 channel_id: t.id,
                 channel_type: t.type,
                 guild_id: t.guild_id
@@ -366,13 +366,13 @@ function J(e) {
             children: (0, r.jsx)(h.Wdt, {
                 children: (e) =>
                     (0, r.jsx)('div', {
-                        className: o()(V.membersWrap, V.hiddenMembers, H.container),
+                        className: o()(z.membersWrap, z.hiddenMembers, V.container),
                         children: (0, r.jsx)(
                             h.aVo,
-                            z(
+                            W(
                                 {
                                     ref: y,
-                                    className: V.members,
+                                    className: z.members,
                                     paddingTop: 0,
                                     sectionHeight: 40,
                                     renderSection: (e) => {
@@ -404,9 +404,9 @@ function J(e) {
                                             l[i]
                                         );
                                     },
-                                    footerHeight: (e) => 80 * (d[e] === f && t.type === G.d4z.PRIVATE_THREAD),
+                                    footerHeight: (e) => 80 * (d[e] === f && t.type === F.d4z.PRIVATE_THREAD),
                                     renderFooter: (e) => (d[e.section] === f ? (0, r.jsx)(Q, { channel: t }, 'footer') : null),
-                                    innerAriaLabel: F.NW.string(F.t['9Oq93t']),
+                                    innerAriaLabel: H.intl.string(H.t['9Oq93t']),
                                     innerTag: 'ul',
                                     sections: d.map((e) => e.userIds.length),
                                     fade: !0
@@ -424,36 +424,36 @@ function J(e) {
 function $(e) {
     let { channel: t } = e;
     return (0, r.jsxs)('div', {
-        className: o()(V.membersWrap, V.hiddenMembers, V.members, H.emptyState),
+        className: o()(z.membersWrap, z.hiddenMembers, z.members, V.emptyState),
         children: [
             (0, r.jsx)(h.Text, {
-                className: H.emptyStateHeader,
+                className: V.emptyStateHeader,
                 variant: 'text-xs/bold',
                 color: 'interactive-normal',
-                children: F.NW.string(F.t['9Oq93t'])
+                children: H.intl.string(H.t['9Oq93t'])
             }),
             (0, r.jsxs)('div', {
-                className: H.emptyStateIconContainer,
+                className: V.emptyStateIconContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: H.emptyStateIcon,
+                        className: V.emptyStateIcon,
                         children: (0, r.jsx)(h.BFJ, {
                             size: 'lg',
                             color: 'currentColor'
                         })
                     }),
-                    (0, r.jsx)(k.Z, { className: H.emptyStateStars })
+                    (0, r.jsx)(k.Z, { className: V.emptyStateStars })
                 ]
             }),
             (0, r.jsx)(h.X6q, {
                 variant: 'heading-md/semibold',
-                children: t.isForumPost() ? F.NW.string(F.t.p0UgNT) : F.NW.string(F.t['9/n5v7'])
+                children: t.isForumPost() ? H.intl.string(H.t.p0UgNT) : H.intl.string(H.t['9/n5v7'])
             }),
             (0, r.jsx)(h.Text, {
-                className: H.emptyStateSubtext,
+                className: V.emptyStateSubtext,
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: F.NW.string(F.t.emw8UF)
+                children: H.intl.string(H.t.emw8UF)
             })
         ]
     });

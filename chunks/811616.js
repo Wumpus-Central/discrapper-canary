@@ -20,8 +20,8 @@ var i = n(120356),
     y = n(388032),
     v = n(106981);
 function O(e) {
-    let { premiumSubscription: t, planId: n, selectPlan: i, selected: o, priceOptions: O, shouldShowUpdatedPaymentModal: I, isEligibleForDiscount: S, discountAmountOff: T, isEligibleForTrial: N } = e,
-        A = (0, l.e7)([f.default], () => f.default.locale),
+    let { premiumSubscription: t, planId: n, selectPlan: i, selected: o, priceOptions: O, shouldShowUpdatedPaymentModal: I, isEligibleForDiscount: S, discountAmountOff: T, isEligibleForTrial: A } = e,
+        N = (0, l.e7)([f.default], () => f.default.locale),
         C = (0, l.e7)([_.Z], () => _.Z.get(n)),
         { isGift: R, giftRecipient: P } = (0, d.wD)(),
         w = R && (0, p.pO)(P);
@@ -41,14 +41,14 @@ function O(e) {
                 variant: 'eyebrow',
                 color: 'always-white',
                 className: v.planOptionDiscount,
-                children: y.NW.format(y.t.IAybsL, { discount: (0, h.T3)(A, x / 100) })
+                children: y.intl.format(y.t.IAybsL, { discount: (0, h.T3)(N, x / 100) })
             }),
         F = () =>
             (C.interval === b.rV.YEAR && null != t) || (j && !D)
                 ? C.interval === b.rV.YEAR && null != t
                     ? (0, r.jsxs)('span', {
                           className: v.planOptionMonthsFree,
-                          children: ['(', y.NW.string(y.t['122kWF']), ')']
+                          children: ['(', y.intl.string(y.t['122kWF']), ')']
                       })
                     : j && !D
                       ? B()
@@ -67,14 +67,14 @@ function O(e) {
                     w &&
                         (0, r.jsx)('div', {
                             className: v.planOneTimeCost,
-                            children: y.NW.format(y.t.ori2Ji, { currencyAmount: (0, g.T4)(M.amount, M.currency) })
+                            children: y.intl.format(y.t.ori2Ji, { currencyAmount: (0, g.T4)(M.amount, M.currency) })
                         })
                 ]
             }),
         Z = () =>
             S && null != T && C.interval === b.rV.MONTH
                 ? (0, g.T4)(M.amount - T, M.currency)
-                : N
+                : A
                   ? (0, g.T4)(0, M.currency, {
                         minimumFractionDigits: 0,
                         maximumFractionDigits: 0
@@ -83,13 +83,13 @@ function O(e) {
         H = () => {
             if (S && null != T && C.interval === b.rV.MONTH) {
                 var e;
-                return y.NW.format(y.t['VeE/4O'], {
+                return y.intl.format(y.t['VeE/4O'], {
                     numMonths: null != (e = null == U ? void 0 : U.discount.user_usage_limit) ? e : b.rt,
                     discountedPrice: (0, g.T4)(M.amount - T, M.currency),
                     regularPrice: (0, g.T4)(M.amount, M.currency)
                 });
             }
-            return N ? y.NW.format(G, { price: (0, g.T4)(M.amount, M.currency) }) : C.interval === b.rV.YEAR ? y.NW.formatToPlainString(y.t.rtLTJC, { percent: x }) : null;
+            return A ? y.intl.format(G, { price: (0, g.T4)(M.amount, M.currency) }) : C.interval === b.rV.YEAR ? y.intl.formatToPlainString(y.t.rtLTJC, { percent: x }) : null;
         };
     return (0, r.jsxs)(u.P3F, {
         role: w ? 'menuitem' : 'radio',
@@ -129,7 +129,7 @@ function O(e) {
                             D &&
                                 (0, r.jsxs)('span', {
                                     className: v.planOptionCurrentPlan,
-                                    children: ['(', y.NW.string(y.t.ymSxh4), ')']
+                                    children: ['(', y.intl.string(y.t.ymSxh4), ')']
                                 }),
                             !w && F()
                         ]
@@ -137,7 +137,7 @@ function O(e) {
                     I
                         ? (0, r.jsx)('div', {
                               className: a()({ [v.optionPriceSelected]: o }),
-                              children: y.NW.format(y.t.hXcaLS, { price: Z() })
+                              children: y.intl.format(y.t.hXcaLS, { price: Z() })
                           })
                         : (0, r.jsx)('div', {
                               className: a()({ [v.optionSelected]: o || w }),

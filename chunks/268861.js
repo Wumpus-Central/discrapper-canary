@@ -29,12 +29,12 @@ function d(e) {
                               (0, i.jsx)(l.X6q, {
                                   variant: 'heading-xl/medium',
                                   color: 'header-primary',
-                                  children: c.NW.string(c.t.jzjJQk)
+                                  children: c.intl.string(c.t.jzjJQk)
                               }),
                               (0, i.jsx)(l.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-muted',
-                                  children: c.NW.string(c.t['5dOfxc'])
+                                  children: c.intl.string(c.t['5dOfxc'])
                               })
                           ]
                       }),
@@ -48,7 +48,7 @@ function d(e) {
                                       (0, i.jsx)(l.Text, {
                                           variant: 'text-md/medium',
                                           color: 'interactive-normal',
-                                          children: c.NW.string(c.t.S6VRyM)
+                                          children: c.intl.string(c.t.S6VRyM)
                                       })
                                   ]
                               }),
@@ -59,7 +59,7 @@ function d(e) {
                                       (0, i.jsx)(l.Text, {
                                           variant: 'text-md/medium',
                                           color: 'interactive-normal',
-                                          children: c.NW.string(c.t.xq8CKS)
+                                          children: c.intl.string(c.t.xq8CKS)
                                       })
                                   ]
                               }),
@@ -70,7 +70,7 @@ function d(e) {
                                       (0, i.jsx)(l.Text, {
                                           variant: 'text-md/medium',
                                           color: 'interactive-normal',
-                                          children: c.NW.string(c.t.GwpRe3)
+                                          children: c.intl.string(c.t.GwpRe3)
                                       })
                                   ]
                               }),
@@ -81,7 +81,7 @@ function d(e) {
                                       (0, i.jsx)(l.Text, {
                                           variant: 'text-md/medium',
                                           color: 'interactive-normal',
-                                          children: c.NW.string(c.t.VUoC5O)
+                                          children: c.intl.string(c.t.VUoC5O)
                                       })
                                   ]
                               })

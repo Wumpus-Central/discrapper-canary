@@ -1,15 +1,15 @@
 n.d(t, {
     FJ: () => en,
     RE: () => G,
-    T5: () => V,
-    Xb: () => B,
+    T5: () => B,
+    Xb: () => H,
     YK: () => ee,
     YS: () => J,
-    _J: () => F,
+    _J: () => z,
     _f: () => ei,
-    aE: () => H,
+    aE: () => F,
     bu: () => er,
-    kb: () => z,
+    kb: () => W,
     s9: () => Y,
     t9: () => Q,
     tr: () => et,
@@ -45,12 +45,12 @@ var r,
     _ = n(430824),
     E = n(131951),
     O = n(375954),
-    N = n(158776),
-    y = n(594174),
-    I = n(979651),
-    v = n(70956),
-    C = n(5192),
-    S = n(226951),
+    y = n(158776),
+    I = n(594174),
+    v = n(979651),
+    C = n(70956),
+    S = n(5192),
+    N = n(226951),
     T = n(591759),
     P = n(996106),
     j = n(863141),
@@ -107,8 +107,8 @@ let w = null != (i = null == (r = T.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT))
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    D = new RegExp('^'.concat(S.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(S.Z.escape(R), '|discordapp.com|discord.com)$')),
-    k = +v.Z.Millis.MINUTE,
+    D = new RegExp('^'.concat(N.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(N.Z.escape(R), '|discordapp.com|discord.com)$')),
+    k = +C.Z.Millis.MINUTE,
     M = {};
 function U(e) {
     return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = G(e.src)), Array.isArray(e.content) && (e.content = e.content.map(U)), e;
@@ -122,11 +122,11 @@ function G(e) {
               .concat('/' === e.charAt(0) ? '' : '/')
               .concat(e);
 }
-function W(e) {
+function V(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
     return t.indexOf(e) > -1;
 }
-function V(e, t) {
+function B(e, t) {
     let n = [],
         r = e.getGuildId();
     return (
@@ -142,8 +142,8 @@ function V(e, t) {
             ),
         Promise.all(n).then(() => {
             var n;
-            let i = (!e.isNSFW() || (null == (n = y.default.getCurrentUser()) ? void 0 : n.nsfwAllowed) === !0) && t ? O.Z.getMessages(e.id).toArray().map(B) : [],
-                l = Object.values(I.Z.getVoiceStatesForChannel(e.id)).map((t) => H(r, e.id, t));
+            let i = (!e.isNSFW() || (null == (n = I.default.getCurrentUser()) ? void 0 : n.nsfwAllowed) === !0) && t ? O.Z.getMessages(e.id).toArray().map(H) : [],
+                l = Object.values(v.Z.getVoiceStatesForChannel(e.id)).map((t) => F(r, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -159,7 +159,7 @@ function V(e, t) {
         })
     );
 }
-function B(e) {
+function H(e) {
     let t = p.Z.parseToAST(e.content, !0, { channelId: e.channel_id }).map(U),
         n = b.Z.getChannel(e.channel_id),
         r = null != e.author ? new m.Z(e.author) : void 0,
@@ -185,12 +185,12 @@ function B(e) {
         type: e.type
     };
 }
-function H(e, t, n) {
+function F(e, t, n) {
     let { mute: r, deaf: i, selfMute: l, selfDeaf: a, suppress: o, userId: s } = n,
-        c = y.default.getUser(s);
+        c = I.default.getUser(s);
     if (null == c) throw Error('Invalid user id: '.concat(s));
     return {
-        nick: C.ZP.getName(e, t, c),
+        nick: S.ZP.getName(e, t, c),
         mute: E.Z.isLocalMute(c.id),
         volume: E.Z.getLocalVolume(c.id),
         pan: E.Z.getLocalPan(c.id),
@@ -204,19 +204,19 @@ function H(e, t, n) {
         user: (0, j.Z)(c)
     };
 }
-function F(e, t) {
+function z(e, t) {
     return {
         type: e,
         user: (0, j.Z)(t),
         presence: {
-            status: N.Z.getStatus(t.id, null),
+            status: y.Z.getStatus(t.id, null),
             activity: null
         }
     };
 }
-function z(e, t) {
+function W(e, t) {
     var n;
-    return null == t ? e : L(x({}, e), { presence: L(x({}, e.presence), { activity: null != (n = N.Z.getApplicationActivity(e.user.id, t)) ? n : null }) });
+    return null == t ? e : L(x({}, e), { presence: L(x({}, e.presence), { activity: null != (n = y.Z.getApplicationActivity(e.user.id, t)) ? n : null }) });
 }
 function Y(e) {
     let t;
@@ -270,10 +270,10 @@ async function J(e, t, n) {
     if ('string' == typeof n)
         if (e.transport === A.He.POST_MESSAGE) {
             let e = (0, u.ZP)(t);
-            if (null == e || !W(n, [e])) throw new P.Z({ closeCode: Z.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+            if (null == e || !V(n, [e])) throw new P.Z({ closeCode: Z.$VG.INVALID_ORIGIN }, 'Invalid Origin');
         } else {
             let e = await X(t);
-            if (((r = f.ZP.createFromServer(e)), !W(n, e.rpc_origins))) throw new P.Z({ closeCode: Z.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+            if (((r = f.ZP.createFromServer(e)), !V(n, e.rpc_origins))) throw new P.Z({ closeCode: Z.$VG.INVALID_ORIGIN }, 'Invalid Origin');
         }
     null == r && (r = f.ZP.createFromServer(await X(t)));
     let { id: i, name: l, icon: a, coverImage: o, flags: s } = r;

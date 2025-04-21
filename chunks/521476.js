@@ -18,8 +18,8 @@ function p(e) {
             analyticsLocations: h,
             openWithoutBackstack: !0
         }),
-        g = m ? u.NW.string(u.t['9ph2v7']) : u.NW.string(u.t.ldh9Cg),
-        b = m ? u.NW.string(u.t['/PGQf3']) : u.NW.string(u.t.WikgZ2);
+        g = m ? u.intl.string(u.t['9ph2v7']) : u.intl.string(u.t.ldh9Cg),
+        b = m ? u.intl.string(u.t['/PGQf3']) : u.intl.string(u.t.WikgZ2);
     return (0, r.jsx)('div', {
         children: (0, r.jsx)(a.i, {
             bannerIcon: (0, r.jsx)(i.ics, {
@@ -27,7 +27,7 @@ function p(e) {
                 color: 'currentColor',
                 className: d.bannerIcon
             }),
-            bannerHeader: u.NW.format(u.t.kcYdTk, { guildName: null != (n = null == p ? void 0 : p.name) ? n : '' }),
+            bannerHeader: u.intl.format(u.t.kcYdTk, { guildName: null != (n = null == p ? void 0 : p.name) ? n : '' }),
             bannerSubtext: g,
             containerStyles: d.bannerContainer,
             headerStyles: d.bannerHeader,

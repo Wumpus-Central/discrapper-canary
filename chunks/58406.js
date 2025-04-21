@@ -53,19 +53,19 @@ class d {
     }
     showAlert(e) {
         let t = {
-            [o.Eu.CAMERA]: ''.concat(l.NW.string(l.t['68G7fH']), '. ').concat(l.NW.string(l.t['5Jvu1d'])),
-            [o.Eu.AUDIO]: ''.concat(l.NW.string(l.t.xisTfX), '. ').concat(l.NW.string(l.t['5Jvu1d'])),
-            [o.Eu.PHOTOS]: ''.concat(l.NW.string(l.t.jQHU4O), '. ').concat(l.NW.string(l.t['5Jvu1d'])),
-            [o.Eu.INPUT_MONITORING]: ''.concat(l.NW.string(l.t.UIBqsb), '. ').concat(l.NW.string(l.t['5Jvu1d'])),
-            [o.Eu.CONTACTS]: ''.concat(l.NW.string(l.t.kTtf7u), '. ').concat(l.NW.string(l.t['5Jvu1d']))
+            [o.Eu.CAMERA]: ''.concat(l.intl.string(l.t['68G7fH']), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
+            [o.Eu.AUDIO]: ''.concat(l.intl.string(l.t.xisTfX), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
+            [o.Eu.PHOTOS]: ''.concat(l.intl.string(l.t.jQHU4O), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
+            [o.Eu.INPUT_MONITORING]: ''.concat(l.intl.string(l.t.UIBqsb), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
+            [o.Eu.CONTACTS]: ''.concat(l.intl.string(l.t.kTtf7u), '. ').concat(l.intl.string(l.t['5Jvu1d']))
         }[e];
         null != t &&
             this.openAlertModal({
-                title: l.NW.string(l.t.u1Gxpq),
+                title: l.intl.string(l.t.u1Gxpq),
                 body: t,
                 onConfirm: () => this.openSettings(e),
-                cancelText: l.NW.string(l.t['ETE/oK']),
-                confirmText: l.NW.string(l.t['XgZk+v'])
+                cancelText: l.intl.string(l.t['ETE/oK']),
+                confirmText: l.intl.string(l.t['XgZk+v'])
             });
     }
     static defaultNativePermissionsRequestOptions(e) {

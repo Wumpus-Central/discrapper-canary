@@ -13,14 +13,14 @@ function h(e) {
         [j, g] = n.useState(!1),
         [z, A] = n.useState(''),
         [C, _] = n.useState(null),
-        N = n.useRef(null);
+        Z = n.useRef(null);
     (0, a.Z)({
         type: i.ImpressionTypes.MODAL,
         name: f
     });
-    let Z = async (e) => {
+    let y = async (e) => {
         if ((e.preventDefault(), _(null), g(!0), !1 === d.test(z))) {
-            _(u.NW.string(u.t.hML7Gx)), g(!1);
+            _(u.intl.string(u.t.hML7Gx)), g(!1);
             return;
         }
         try {
@@ -42,7 +42,7 @@ function h(e) {
     return (0, s.jsx)(o.Y0X, {
         transitionState: t,
         children: (0, s.jsxs)('form', {
-            onSubmit: Z,
+            onSubmit: y,
             children: [
                 (0, s.jsxs)(o.xBx, {
                     separator: !1,
@@ -61,12 +61,12 @@ function h(e) {
                 }),
                 (0, s.jsx)(o.hzk, {
                     children: (0, s.jsx)(o.xJW, {
-                        title: u.NW.string(u.t.hvOfmJ),
+                        title: u.intl.string(u.t.hvOfmJ),
                         error: C,
                         children: (0, s.jsx)(o.oil, {
                             value: z,
                             onChange: A,
-                            inputRef: N
+                            inputRef: Z
                         })
                     })
                 }),
@@ -83,7 +83,7 @@ function h(e) {
                             look: o.zxk.Looks.LINK,
                             color: o.zxk.Colors.PRIMARY,
                             onClick: x,
-                            children: u.NW.string(u.t['ETE/oK'])
+                            children: u.intl.string(u.t['ETE/oK'])
                         })
                     ]
                 })

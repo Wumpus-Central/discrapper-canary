@@ -1,8 +1,8 @@
-n.d(t, { default: () => S }), n(388685), n(953529), n(642613);
-var s = n(200651),
-    l = n(192379),
-    a = n(120356),
-    i = n.n(a),
+n.d(t, { default: () => w }), n(388685), n(953529), n(642613);
+var l = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
     r = n(108131),
     c = n.n(r),
     o = n(200100),
@@ -14,80 +14,80 @@ var s = n(200651),
     p = n(626135),
     j = n(547280),
     v = n(678513),
-    N = n(445507),
-    g = n(981631),
-    k = n(388032),
-    y = n(170141);
+    g = n(445507),
+    k = n(981631),
+    y = n(388032),
+    N = n(170141);
 function C(e) {
-    let { selectedOption: t, targetKey: n, dismissibleContent: a, data: i, handleGoToNextFormGroup: r } = e,
-        [c, o] = l.useState(''),
-        [m, x] = l.useState(null),
-        [u, h] = l.useState(null),
-        [p, v] = l.useState(!1),
-        [g, C] = l.useState(!1),
-        b = l.useCallback(
+    let { selectedOption: t, targetKey: n, dismissibleContent: s, data: a, handleGoToNextFormGroup: r } = e,
+        [c, o] = i.useState(''),
+        [m, x] = i.useState(null),
+        [u, h] = i.useState(null),
+        [p, v] = i.useState(!1),
+        [k, C] = i.useState(!1),
+        b = i.useCallback(
             (e) => {
                 let { value: t } = e;
-                null != i.current && ((i.current.playstyle = t), h(t), r(6));
+                null != a.current && ((a.current.playstyle = t), h(t), r(6));
             },
-            [i, h, r]
+            [a, h, r]
         ),
-        f = l.useCallback(() => {
-            if (null != i.current) {
+        f = i.useCallback(() => {
+            if (null != a.current) {
                 let e = !p;
-                v(e), (i.current.acknowledgeCap = e), e && g && r(8);
+                v(e), (a.current.acknowledgeCap = e), e && k && r(8);
             }
-        }, [g, p, v, i, r]),
-        W = l.useCallback(() => {
-            if (null != i.current) {
-                let e = !g;
-                C(e), (i.current.acknowledgeScreen = e), e && p && r(8);
+        }, [k, p, v, a, r]),
+        S = i.useCallback(() => {
+            if (null != a.current) {
+                let e = !k;
+                C(e), (a.current.acknowledgeScreen = e), e && p && r(8);
             }
-        }, [p, g, C, i, r]),
-        S = l.useCallback(
+        }, [p, k, C, a, r]),
+        w = i.useCallback(
             (e) => {
-                null != i.current && ((i.current.email = e), o(e), x(null));
+                null != a.current && ((a.current.email = e), o(e), x(null));
             },
-            [i, x]
+            [a, x]
         ),
-        w = l.useCallback(() => {
-            if (null != t && null != i.current) {
-                if (c.length < 3 || -1 === c.indexOf('@')) return void x(k.NW.string(k.t['3dVrwc']));
+        O = i.useCallback(() => {
+            if (null != t && null != a.current) {
+                if (c.length < 3 || -1 === c.indexOf('@')) return void x(y.intl.string(y.t['3dVrwc']));
                 (0, j.o)({
                     targetKey: n,
-                    dismissibleContent: a,
-                    data: i.current,
+                    dismissibleContent: s,
+                    data: a.current,
                     completed: !0
                 });
             }
-        }, [n, a, c, t, x, i]);
+        }, [n, s, c, t, x, a]);
     return null == t
         ? null
         : 'email' === t.type
-          ? (0, s.jsxs)('div', {
-                className: y.emailContainer,
+          ? (0, l.jsxs)('div', {
+                className: N.emailContainer,
                 children: [
-                    (0, s.jsx)(d.Text, {
+                    (0, l.jsx)(d.Text, {
                         variant: 'text-lg/medium',
                         color: 'header-primary',
-                        children: k.NW.string(k.t.NVeQW1)
+                        children: y.intl.string(y.t.NVeQW1)
                     }),
-                    (0, s.jsxs)('div', {
-                        className: y.emailForm,
+                    (0, l.jsxs)('div', {
+                        className: N.emailForm,
                         children: [
-                            (0, s.jsx)(d.oil, {
-                                className: y.emailInput,
+                            (0, l.jsx)(d.oil, {
+                                className: N.emailInput,
                                 value: c,
-                                onChange: S,
-                                placeholder: k.NW.string(k.t.e6OPgY),
+                                onChange: w,
+                                placeholder: y.intl.string(y.t.e6OPgY),
                                 error: m
                             }),
-                            (0, s.jsx)(d.zxk, {
-                                onClick: w,
-                                children: (0, s.jsx)(d.Text, {
+                            (0, l.jsx)(d.zxk, {
+                                onClick: O,
+                                children: (0, l.jsx)(d.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'interactive-active',
-                                    children: k.NW.string(k.t.mhisXl)
+                                    children: y.intl.string(y.t.mhisXl)
                                 })
                             })
                         ]
@@ -95,30 +95,30 @@ function C(e) {
                 ]
             })
           : 'clan' === t.type
-            ? (0, s.jsxs)('div', {
-                  className: y.form,
+            ? (0, l.jsxs)('div', {
+                  className: N.form,
                   children: [
-                      (0, s.jsxs)('div', {
-                          className: y.formGroup,
+                      (0, l.jsxs)('div', {
+                          className: N.formGroup,
                           children: [
-                              (0, s.jsxs)('div', {
+                              (0, l.jsxs)('div', {
                                   children: [
-                                      (0, s.jsx)(d.Text, {
+                                      (0, l.jsx)(d.Text, {
                                           variant: 'text-lg/medium',
                                           color: 'header-primary',
-                                          children: k.NW.string(k.t.jhUGT0)
+                                          children: y.intl.string(y.t.jhUGT0)
                                       }),
-                                      (0, s.jsx)(d.Text, {
+                                      (0, l.jsx)(d.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-muted',
-                                          children: k.NW.string(k.t.DuYera)
+                                          children: y.intl.string(y.t.DuYera)
                                       })
                                   ]
                               }),
-                              (0, s.jsx)('div', {
-                                  className: y.options,
-                                  children: (0, N.z5)().map((e) =>
-                                      (0, s.jsx)(
+                              (0, l.jsx)('div', {
+                                  className: N.options,
+                                  children: (0, g.z5)().map((e) =>
+                                      (0, l.jsx)(
                                           T,
                                           {
                                               option: e,
@@ -131,38 +131,38 @@ function C(e) {
                               })
                           ]
                       }),
-                      (0, s.jsxs)('div', {
-                          className: y.formGroup,
+                      (0, l.jsxs)('div', {
+                          className: N.formGroup,
                           children: [
-                              (0, s.jsxs)('div', {
+                              (0, l.jsxs)('div', {
                                   children: [
-                                      (0, s.jsx)(d.Text, {
+                                      (0, l.jsx)(d.Text, {
                                           variant: 'text-lg/medium',
                                           color: 'header-primary',
-                                          children: k.NW.string(k.t.RpkTY2)
+                                          children: y.intl.string(y.t.RpkTY2)
                                       }),
-                                      (0, s.jsx)(d.Text, {
+                                      (0, l.jsx)(d.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-muted',
-                                          children: k.NW.string(k.t.lsZPgI)
+                                          children: y.intl.string(y.t.lsZPgI)
                                       })
                                   ]
                               }),
-                              (0, s.jsxs)('div', {
-                                  className: y.acknowledgements,
+                              (0, l.jsxs)('div', {
+                                  className: N.acknowledgements,
                                   children: [
-                                      (0, s.jsxs)(d.P3F, {
-                                          className: y.acknowledgement,
+                                      (0, l.jsxs)(d.P3F, {
+                                          className: N.acknowledgement,
                                           onClick: f,
                                           children: [
-                                              (0, s.jsx)(d.Text, {
+                                              (0, l.jsx)(d.Text, {
                                                   variant: 'text-md/normal',
                                                   color: 'interactive-active',
-                                                  children: k.NW.string(k.t.suxlQk)
+                                                  children: y.intl.string(y.t.suxlQk)
                                               }),
-                                              (0, s.jsx)('div', {
-                                                  className: y.checkboxWrapper,
-                                                  children: (0, s.jsx)(d.XZJ, {
+                                              (0, l.jsx)('div', {
+                                                  className: N.checkboxWrapper,
+                                                  children: (0, l.jsx)(d.XZJ, {
                                                       displayOnly: !0,
                                                       type: d.XZJ.Types.INVERTED,
                                                       value: p
@@ -170,21 +170,21 @@ function C(e) {
                                               })
                                           ]
                                       }),
-                                      (0, s.jsxs)(d.P3F, {
-                                          className: y.acknowledgement,
-                                          onClick: W,
+                                      (0, l.jsxs)(d.P3F, {
+                                          className: N.acknowledgement,
+                                          onClick: S,
                                           children: [
-                                              (0, s.jsx)(d.Text, {
+                                              (0, l.jsx)(d.Text, {
                                                   variant: 'text-md/normal',
                                                   color: 'interactive-active',
-                                                  children: k.NW.string(k.t.TjPvzM)
+                                                  children: y.intl.string(y.t.TjPvzM)
                                               }),
-                                              (0, s.jsx)('div', {
-                                                  className: y.checkboxWrapper,
-                                                  children: (0, s.jsx)(d.XZJ, {
+                                              (0, l.jsx)('div', {
+                                                  className: N.checkboxWrapper,
+                                                  children: (0, l.jsx)(d.XZJ, {
                                                       displayOnly: !0,
                                                       type: d.XZJ.Types.INVERTED,
-                                                      value: g
+                                                      value: k
                                                   })
                                               })
                                           ]
@@ -193,30 +193,30 @@ function C(e) {
                               })
                           ]
                       }),
-                      (0, s.jsxs)('div', {
-                          className: y.formGroup,
+                      (0, l.jsxs)('div', {
+                          className: N.formGroup,
                           children: [
-                              (0, s.jsx)(d.Text, {
+                              (0, l.jsx)(d.Text, {
                                   variant: 'text-lg/medium',
                                   color: 'header-primary',
-                                  children: k.NW.string(k.t.NVeQW1)
+                                  children: y.intl.string(y.t.NVeQW1)
                               }),
-                              (0, s.jsxs)('div', {
-                                  className: y.emailForm,
+                              (0, l.jsxs)('div', {
+                                  className: N.emailForm,
                                   children: [
-                                      (0, s.jsx)(d.oil, {
-                                          className: y.emailInput,
+                                      (0, l.jsx)(d.oil, {
+                                          className: N.emailInput,
                                           value: c,
-                                          onChange: S,
-                                          placeholder: k.NW.string(k.t.e6OPgY),
+                                          onChange: w,
+                                          placeholder: y.intl.string(y.t.e6OPgY),
                                           error: m
                                       }),
-                                      (0, s.jsx)(d.zxk, {
-                                          onClick: w,
-                                          children: (0, s.jsx)(d.Text, {
+                                      (0, l.jsx)(d.zxk, {
+                                          onClick: O,
+                                          children: (0, l.jsx)(d.Text, {
                                               variant: 'text-sm/medium',
                                               color: 'interactive-active',
-                                              children: k.NW.string(k.t.mhisXl)
+                                              children: y.intl.string(y.t.mhisXl)
                                           })
                                       })
                                   ]
@@ -225,60 +225,60 @@ function C(e) {
                       })
                   ]
               })
-            : (0, s.jsx)('div', {});
+            : (0, l.jsx)('div', {});
 }
 function b(e) {
     let { iconName: t } = e,
         n = null;
     switch (t) {
         case 'compass':
-            n = (0, s.jsx)(d.Jmo, { className: y.icon });
+            n = (0, l.jsx)(d.Jmo, { className: N.icon });
             break;
         case 'gamepad':
-            n = (0, s.jsx)(d.xoD, {
+            n = (0, l.jsx)(d.xoD, {
                 size: 'xs',
                 color: 'currentColor',
-                className: y.icon
+                className: N.icon
             });
             break;
         case 'controller':
-            n = (0, s.jsx)(d.iWm, { className: y.icon });
+            n = (0, l.jsx)(d.iWm, { className: N.icon });
             break;
         case 'microphone':
-            n = (0, s.jsx)(d.S6n, { className: y.icon });
+            n = (0, l.jsx)(d.S6n, { className: N.icon });
             break;
         default:
             n = null;
     }
-    return (0, s.jsx)('div', {
-        className: y.iconContainer,
+    return (0, l.jsx)('div', {
+        className: N.iconContainer,
         children: n
     });
 }
 function T(e) {
-    let { option: t, icon: n, isSelected: a, onOptionSelected: r } = e,
-        [c, o] = l.useState(!1),
-        m = (0, d.dQu)(d.TVs.colors.BACKGROUND_TERTIARY).hsl({ opacity: c && !a ? 0.9 : 0.8 }),
-        x = l.useCallback(() => {
+    let { option: t, icon: n, isSelected: s, onOptionSelected: r } = e,
+        [c, o] = i.useState(!1),
+        m = (0, d.dQu)(d.TVs.colors.BACKGROUND_TERTIARY).hsl({ opacity: c && !s ? 0.9 : 0.8 }),
+        x = i.useCallback(() => {
             r(t);
         }, [r, t]);
-    return (0, s.jsxs)(d.P3F, {
-        className: i()(y.option, { [y.selectedOption]: a }),
+    return (0, l.jsxs)(d.P3F, {
+        className: a()(N.option, { [N.selectedOption]: s }),
         onMouseEnter: () => o(!0),
         onMouseLeave: () => o(!1),
         style: { backgroundColor: m },
         onClick: x,
         children: [
             n,
-            (0, s.jsxs)('div', {
-                className: y.optionContent,
+            (0, l.jsxs)('div', {
+                className: N.optionContent,
                 children: [
-                    (0, s.jsx)(d.Text, {
+                    (0, l.jsx)(d.Text, {
                         variant: 'text-lg/medium',
                         color: 'header-primary',
                         children: t.title
                     }),
-                    (0, s.jsx)(d.Text, {
+                    (0, l.jsx)(d.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         children: t.description
@@ -289,17 +289,17 @@ function T(e) {
     });
 }
 function f(e) {
-    let { option: t, selectedOption: n, setSelectedOption: l } = e,
-        a = t.key === (null == n ? void 0 : n.key);
-    return (0, s.jsx)(T, {
+    let { option: t, selectedOption: n, setSelectedOption: i } = e,
+        s = t.key === (null == n ? void 0 : n.key);
+    return (0, l.jsx)(T, {
         option: t,
-        icon: (0, s.jsx)(b, { iconName: t.icon }),
-        isSelected: a,
-        onOptionSelected: l
+        icon: (0, l.jsx)(b, { iconName: t.icon }),
+        isSelected: s,
+        onOptionSelected: i
     });
 }
-function W(e) {
-    let { target: t, selectedOption: n, handleSetSelectedOption: a, data: i } = e,
+function S(e) {
+    let { target: t, selectedOption: n, handleSetSelectedOption: s, data: a } = e,
         r = (0, m.e7)([x.Z], () => x.Z.useReducedMotion),
         [{ state: u }, p] = (0, d.q_F)(() => ({ state: 0 }), 'respect-motion-settings', []),
         j = (0, m.e7)([h.default], () => h.default.getCurrentUser()),
@@ -307,25 +307,25 @@ function W(e) {
             range: [0, 1],
             output: [1, 0]
         }),
-        N = u.to({
+        g = u.to({
             range: [0, 1],
             output: [0, 1]
         }),
-        g = u.to({
+        k = u.to({
             range: [0, 10],
             output: [0, -700]
         }),
-        b = l.useCallback(
+        b = i.useCallback(
             (e) => {
-                a(e),
+                s(e),
                     p({
                         state: 'email' === e.type ? 2 : 3,
                         immediate: r
                     });
             },
-            [a, p, r]
+            [s, p, r]
         ),
-        T = l.useCallback(
+        T = i.useCallback(
             (e) => {
                 p({
                     state: e,
@@ -336,57 +336,57 @@ function W(e) {
         );
     return null == j
         ? null
-        : (0, s.jsxs)(s.Fragment, {
+        : (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, s.jsxs)(o.animated.div, {
-                      className: y.header,
+                  (0, l.jsxs)(o.animated.div, {
+                      className: N.header,
                       style: { opacity: v },
                       children: [
-                          (0, s.jsxs)('div', {
-                              className: y.eyebrow,
+                          (0, l.jsxs)('div', {
+                              className: N.eyebrow,
                               children: [
-                                  (0, s.jsx)(d._XJ, {
+                                  (0, l.jsx)(d._XJ, {
                                       size: 'xxs',
                                       color: 'currentColor'
                                   }),
-                                  (0, s.jsx)(d.Text, {
+                                  (0, l.jsx)(d.Text, {
                                       variant: 'text-xs/semibold',
                                       color: 'none',
-                                      children: k.NW.string(k.t.hhKpxs)
+                                      children: y.intl.string(y.t.hhKpxs)
                                   })
                               ]
                           }),
-                          (0, s.jsx)(d.X6q, {
+                          (0, l.jsx)(d.X6q, {
                               variant: 'heading-xxl/medium',
                               color: 'header-primary',
                               children: t.title
                           }),
-                          (0, s.jsx)(d.Text, {
+                          (0, l.jsx)(d.Text, {
                               variant: 'text-md/normal',
                               color: 'always-white',
                               children: t.subtitle
                           })
                       ]
                   }),
-                  (0, s.jsxs)(o.animated.div, {
-                      className: y.question,
+                  (0, l.jsxs)(o.animated.div, {
+                      className: N.question,
                       style: {
-                          transform: g.to((e) => 'translateY('.concat(e, 'px)')),
+                          transform: k.to((e) => 'translateY('.concat(e, 'px)')),
                           marginTop: t.questionMargin
                       },
                       children: [
-                          (0, s.jsx)(d.Text, {
+                          (0, l.jsx)(d.Text, {
                               variant: 'text-lg/medium',
                               color: 'header-primary',
                               children: t.question
                           }),
-                          (0, s.jsx)('div', {
-                              className: y.options,
+                          (0, l.jsx)('div', {
+                              className: N.options,
                               children: (function (e, t) {
                                   let n = e.slice();
                                   return n.sort((e, n) => c().v3(''.concat(e.key).concat(t)) - c().v3(''.concat(n.key).concat(t))), n;
                               })(t.options, j.id).map((e) =>
-                                  (0, s.jsx)(
+                                  (0, l.jsx)(
                                       f,
                                       {
                                           option: e,
@@ -399,30 +399,30 @@ function W(e) {
                           })
                       ]
                   }),
-                  (0, s.jsx)(o.animated.div, {
+                  (0, l.jsx)(o.animated.div, {
                       style: {
-                          transform: g.to((e) => 'translateY('.concat(e, 'px)')),
-                          opacity: N
+                          transform: k.to((e) => 'translateY('.concat(e, 'px)')),
+                          opacity: g
                       },
-                      children: (0, s.jsx)(C, {
+                      children: (0, l.jsx)(C, {
                           selectedOption: n,
                           targetKey: t.key,
                           dismissibleContent: t.dismissibleContent,
-                          data: i,
+                          data: a,
                           handleGoToNextFormGroup: T
                       })
                   })
               ]
           });
 }
-function S(e) {
-    let { target: t, guildId: n, transitionState: a, onClose: r } = e,
+function w(e) {
+    let { target: t, guildId: n, transitionState: s, onClose: r } = e,
         c = (0, u.Dt)(),
-        o = l.useRef({ guildId: n }),
-        [x, h] = l.useState(null),
-        N = +!!(0, m.e7)([v.Z], () => v.Z.hasCompletedTarget(t.key));
-    l.useEffect(() => {
-        p.default.track(g.rMx.SIGNUP_VIEWED, {
+        o = i.useRef({ guildId: n }),
+        [x, h] = i.useState(null),
+        g = +!!(0, m.e7)([v.Z], () => v.Z.hasCompletedTarget(t.key));
+    i.useEffect(() => {
+        p.default.track(k.rMx.SIGNUP_VIEWED, {
             target_key: t.key,
             guild_id: n
         });
@@ -436,7 +436,7 @@ function S(e) {
             });
         };
     }, [t.key, t.dismissibleContent, o, n]);
-    let C = l.useCallback(
+    let C = i.useCallback(
             (e) => {
                 null != o.current && ((o.current.selectedOptionKey = e.key), h(e));
             },
@@ -444,9 +444,9 @@ function S(e) {
         ),
         b = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
         T = null;
-    switch (N) {
+    switch (g) {
         case 0:
-            T = (0, s.jsx)(W, {
+            T = (0, l.jsx)(S, {
                 target: t,
                 selectedOption: x,
                 handleSetSelectedOption: C,
@@ -454,45 +454,45 @@ function S(e) {
             });
             break;
         case 1:
-            T = (0, s.jsxs)('div', {
-                className: y.completedContainer,
+            T = (0, l.jsxs)('div', {
+                className: N.completedContainer,
                 children: [
-                    (0, s.jsx)(d.Text, {
+                    (0, l.jsx)(d.Text, {
                         variant: 'text-lg/medium',
                         color: 'header-primary',
-                        children: k.NW.string(k.t.n2NmuL)
+                        children: y.intl.string(y.t.n2NmuL)
                     }),
-                    (0, s.jsx)(d.Text, {
+                    (0, l.jsx)(d.Text, {
                         variant: 'text-md/normal',
                         color: 'text-muted',
-                        children: k.NW.string(k.t.SNYnLS)
+                        children: y.intl.string(y.t.SNYnLS)
                     }),
-                    (0, s.jsx)('div', {
-                        children: (0, s.jsx)(d.zxk, {
+                    (0, l.jsx)('div', {
+                        children: (0, l.jsx)(d.zxk, {
                             onClick: r,
-                            children: (0, s.jsx)(d.Text, {
+                            children: (0, l.jsx)(d.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
-                                children: k.NW.string(k.t.cpT0Cg)
+                                children: y.intl.string(y.t.cpT0Cg)
                             })
                         })
                     })
                 ]
             });
     }
-    return (0, s.jsx)(d.f6W, {
-        theme: g.BRd.DARK,
+    return (0, l.jsx)(d.f6W, {
+        theme: k.BRd.DARK,
         children: (e) =>
-            (0, s.jsxs)(d.Y0X, {
-                transitionState: a,
+            (0, l.jsxs)(d.Y0X, {
+                transitionState: s,
                 'aria-labelledby': c,
                 size: d.CgR.LARGE,
-                className: i()(y.modal, e),
+                className: a()(N.modal, e),
                 children: [
-                    (0, s.jsxs)(d.Ttm, {
-                        className: y.content,
+                    (0, l.jsxs)(d.Ttm, {
+                        className: N.content,
                         children: [
-                            (0, s.jsx)('div', {
+                            (0, l.jsx)('div', {
                                 style: {
                                     background: b,
                                     position: 'absolute',
@@ -503,21 +503,21 @@ function S(e) {
                                     zIndex: -1
                                 }
                             }),
-                            (0, s.jsx)('div', {
-                                className: y.contentInner,
-                                children: (0, s.jsx)(d.qBt, {
+                            (0, l.jsx)('div', {
+                                className: N.contentInner,
+                                children: (0, l.jsx)(d.qBt, {
                                     animationMotionType: 'lift',
                                     fillParent: !0,
-                                    step: N,
+                                    step: g,
                                     steps: [0, 1],
                                     children: T
                                 })
                             })
                         ]
                     }),
-                    (0, s.jsx)('div', {
-                        className: y.closeButtonContainer,
-                        children: (0, s.jsx)(d.olH, { onClick: r })
+                    (0, l.jsx)('div', {
+                        className: N.closeButtonContainer,
+                        children: (0, l.jsx)(d.olH, { onClick: r })
                     })
                 ]
             })

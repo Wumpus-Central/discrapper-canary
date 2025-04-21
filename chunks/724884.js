@@ -33,7 +33,7 @@ let d = function (e) {
                         className: l.heading,
                         color: 'always-white',
                         variant: 'heading-xxl/bold',
-                        children: s.NW.string(s.t.IzKs3t)
+                        children: s.intl.string(s.t.IzKs3t)
                     }),
                     (0, r.jsxs)('ul', {
                         className: l.cards,
@@ -41,7 +41,7 @@ let d = function (e) {
                             (0, r.jsx)(u, {
                                 className: t,
                                 icon: o.$zw,
-                                children: s.NW.string(s.t.TZigSE)
+                                children: s.intl.string(s.t.TZigSE)
                             }),
                             (0, r.jsx)(u, {
                                 className: t,
@@ -51,17 +51,17 @@ let d = function (e) {
                                         src: c,
                                         alt: ''
                                     }),
-                                children: s.NW.string(s.t.hjQuV1)
+                                children: s.intl.string(s.t.hjQuV1)
                             }),
                             (0, r.jsx)(u, {
                                 className: t,
                                 icon: o.lZ8,
-                                children: s.NW.string(s.t['2RUcaG'])
+                                children: s.intl.string(s.t['2RUcaG'])
                             }),
                             (0, r.jsx)(u, {
                                 className: t,
                                 icon: o.h_8,
-                                children: s.NW.string(s.t.bJoZKS)
+                                children: s.intl.string(s.t.bJoZKS)
                             })
                         ]
                     })

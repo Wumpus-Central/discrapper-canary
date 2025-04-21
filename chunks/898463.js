@@ -71,7 +71,7 @@ function T(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,7 +82,7 @@ function N(e, t) {
         e
     );
 }
-let A = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/avif', 'video/quicktime', 'video/mp4'];
+let N = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/avif', 'video/quicktime', 'video/mp4'];
 function C(e) {
     let { alt: t, spoiler: n, renderContent: a, size: o } = e,
         [s, l] = i.useState(!1);
@@ -111,13 +111,13 @@ function C(e) {
                                 null != t && '' !== t
                                     ? (0, r.jsx)('span', {
                                           className: O.altTag,
-                                          children: v.NW.string(v.t.QEW819)
+                                          children: v.intl.string(v.t.QEW819)
                                       })
                                     : null,
                                 s && n
                                     ? (0, r.jsx)('span', {
                                           className: O.altTag,
-                                          children: v.NW.string(v.t['F+x38P'])
+                                          children: v.intl.string(v.t['F+x38P'])
                                       })
                                     : null
                             ]
@@ -136,7 +136,7 @@ function R(e) {
         }),
         p = s === y.q.SMALL;
     i.useEffect(() => {
-        if (null == t || !1 === A.includes(t.type)) return;
+        if (null == t || !1 === N.includes(t.type)) return;
         let e = URL.createObjectURL(t);
         d(e);
         let n = new Image();
@@ -182,9 +182,9 @@ function R(e) {
                 (0, l.h7j)((e) =>
                     (0, r.jsx)(
                         l.Y0X,
-                        N(S({ className: O.__invalid_modal }, e), {
+                        A(S({ className: O.__invalid_modal }, e), {
                             size: l.CgR.DYNAMIC,
-                            'aria-label': v.NW.string(v.t.X4IxWF),
+                            'aria-label': v.intl.string(v.t.X4IxWF),
                             children: h(!1, !0)
                         })
                     )
@@ -276,7 +276,7 @@ function w(e) {
                     children: n.spoiler
                         ? (0, r.jsx)('span', {
                               className: O.altTag,
-                              children: v.NW.string(v.t['F+x38P'])
+                              children: v.intl.string(v.t['F+x38P'])
                           })
                         : null
                 })
@@ -284,8 +284,8 @@ function w(e) {
 }
 function D(e) {
     let { channelId: t, draftType: n, upload: a, keyboardModeEnabled: d, label: p, size: h = y.q.MEDIUM, canEdit: g = !0, hideFileName: I = !1, clip: T } = e,
-        A = null != T,
-        C = (h = A ? y.q.CLIP : h) === y.q.SMALL,
+        N = null != T,
+        C = (h = N ? y.q.CLIP : h) === y.q.SMALL,
         R = (0, s.e7)([m.Z], () => {
             var e;
             return null == (e = m.Z.getChannel(t)) ? void 0 : e.guild_id;
@@ -295,7 +295,7 @@ function D(e) {
                 (0, l.h7j)((e) =>
                     (0, r.jsx)(
                         u.default,
-                        N(S({}, e), {
+                        A(S({}, e), {
                             draftType: n,
                             upload: a,
                             channelId: t,
@@ -317,7 +317,7 @@ function D(e) {
                 g
                     ? (0, r.jsx)(b.Z, {
                           className: o()({ [O.action]: C }),
-                          tooltip: A ? v.NW.string(v.t.MYgdY2) : v.NW.string(v.t.cuurzM),
+                          tooltip: N ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzM),
                           onClick: () => c.Z.update(t, a.id, n, { spoiler: !a.spoiler }),
                           children: a.spoiler
                               ? (0, r.jsx)(l.kZF, {
@@ -332,10 +332,10 @@ function D(e) {
                                 })
                       })
                     : null,
-                g && !A
+                g && !N
                     ? (0, r.jsx)(b.Z, {
                           className: o()({ [O.action]: C }),
-                          tooltip: v.NW.string(v.t.Y8ujqq),
+                          tooltip: v.intl.string(v.t.Y8ujqq),
                           onClick: P,
                           children: (0, r.jsx)(l.vdY, {
                               size: 'xs',
@@ -346,7 +346,7 @@ function D(e) {
                     : null,
                 (0, r.jsx)(b.Z, {
                     className: o()({ [O.action]: C }),
-                    tooltip: A ? v.NW.string(v.t.MskAXV) : v.NW.string(v.t.vN7REx),
+                    tooltip: N ? v.intl.string(v.t.MskAXV) : v.intl.string(v.t.vN7REx),
                     onClick: () => c.Z.remove(t, a.id, n),
                     dangerous: !0,
                     children: (0, r.jsx)(l.XHJ, {
@@ -370,7 +370,7 @@ function D(e) {
                 size: h
             }),
             !I &&
-                !A &&
+                !N &&
                 (0, r.jsx)('div', {
                     className: O.filenameContainer,
                     children: (0, r.jsx)(l.Text, {
@@ -379,7 +379,7 @@ function D(e) {
                         children: null != p ? p : a.filename
                     })
                 }),
-            A &&
+            N &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(f.Z, {
@@ -393,7 +393,7 @@ function D(e) {
                         (0, r.jsx)(l.IGR, {
                             color: _.Z.BG_BRAND,
                             className: O.clipsBadge,
-                            text: v.NW.string(v.t.oA4afH)
+                            text: v.intl.string(v.t.oA4afH)
                         })
                     ]
                 })

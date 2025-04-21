@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var r = n(200651),
-    o = n(192379),
-    i = n(512722),
-    l = n.n(i),
+    i = n(192379),
+    l = n(512722),
+    o = n.n(l),
     a = n(990547),
     s = n(481060),
     c = n(110924),
@@ -12,48 +12,48 @@ var r = n(200651),
     p = n(996453),
     m = n(446706),
     f = n(867581),
-    N = n(675999),
-    I = n(981631),
+    I = n(675999),
+    N = n(981631),
     T = n(98078);
 function E(e) {
-    let { transitionState: t, initialSlide: n = N._m.GUILD_TEMPLATES, onSuccess: i, onClose: E, onSlideChange: S, hasJoinButton: O } = e,
-        [C, b] = o.useState(n),
+    let { transitionState: t, initialSlide: n = I._m.GUILD_TEMPLATES, onSuccess: l, onClose: E, onSlideChange: S, hasJoinButton: O } = e,
+        [C, b] = i.useState(n),
         g = (0, c.Z)(C),
-        [L, D] = o.useState(null),
-        [h, A] = o.useState(null),
-        [x, v] = o.useState(null),
-        [w, U] = o.useState(!1);
-    o.useEffect(() => {
+        [L, D] = i.useState(null),
+        [h, A] = i.useState(null),
+        [x, v] = i.useState(null),
+        [w, U] = i.useState(!1);
+    i.useEffect(() => {
         b(n);
     }, [b, n]),
-        o.useEffect(() => {
+        i.useEffect(() => {
             C !== g && S(C);
         }, [S, C, g]);
-    let y = o.useCallback((e) => {
-            b(N._m.CREATION_INTENT),
+    let y = i.useCallback((e) => {
+            b(I._m.CREATION_INTENT),
                 A(e),
-                u.default.track(I.rMx.GUILD_TEMPLATE_SELECTED, {
+                u.default.track(N.rMx.GUILD_TEMPLATE_SELECTED, {
                     template_name: e.id,
                     template_code: e.code
                 });
         }, []),
-        G = o.useCallback((e) => {
-            U(e === N.lr.COMMUNITY), b(N._m.CUSTOMIZE_GUILD);
+        G = i.useCallback((e) => {
+            U(e === I.lr.COMMUNITY), b(I._m.CUSTOMIZE_GUILD);
         }, []),
-        j = o.useCallback(() => b(N._m.JOIN_GUILD), [b]),
-        P = o.useCallback(() => {
-            if (C === N._m.CUSTOMIZE_GUILD) return void b(N._m.CREATION_INTENT);
-            b(N._m.GUILD_TEMPLATES), A(null);
+        j = i.useCallback(() => b(I._m.JOIN_GUILD), [b]),
+        P = i.useCallback(() => {
+            if (C === I._m.CUSTOMIZE_GUILD) return void b(I._m.CREATION_INTENT);
+            b(I._m.GUILD_TEMPLATES), A(null);
         }, [C]),
-        M = o.useCallback(
+        M = i.useCallback(
             (e) => {
-                v(e), i(e);
+                v(e), l(e);
             },
-            [i, v]
+            [l, v]
         ),
-        k = o.useCallback(() => {
-            l()(null != x, 'handleSuccess called before onGuildCreated'), i(x);
-        }, [i, x]),
+        k = i.useCallback(() => {
+            o()(null != x, 'handleSuccess called before onGuildCreated'), l(x);
+        }, [l, x]),
         R = { impression_group: a.ImpressionGroups.GUILD_ADD_FLOW },
         Z = (0, s.dQu)(s.TVs.modules.modal.WIDTH_SMALL);
     return (0, r.jsx)('div', {
@@ -68,7 +68,7 @@ function E(e) {
                     onSlideReady: (e) => D(e),
                     children: [
                         (0, r.jsx)(s.Mi4, {
-                            id: N._m.GUILD_TEMPLATES,
+                            id: I._m.GUILD_TEMPLATES,
                             impressionName: a.ImpressionNames.GUILD_ADD_LANDING,
                             impressionProperties: R,
                             children: (0, r.jsx)(m.Z, {
@@ -79,7 +79,7 @@ function E(e) {
                             })
                         }),
                         (0, r.jsx)(s.Mi4, {
-                            id: N._m.CREATION_INTENT,
+                            id: I._m.CREATION_INTENT,
                             impressionName: a.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
                             impressionProperties: R,
                             children: (0, r.jsx)(d.Z, {
@@ -89,7 +89,7 @@ function E(e) {
                             })
                         }),
                         (0, r.jsx)(s.Mi4, {
-                            id: N._m.CUSTOMIZE_GUILD,
+                            id: I._m.CUSTOMIZE_GUILD,
                             impressionName: a.ImpressionNames.GUILD_ADD_CUSTOMIZE,
                             impressionProperties: R,
                             children: (0, r.jsx)(p.Z, {
@@ -97,29 +97,29 @@ function E(e) {
                                 onGuildCreated: M,
                                 onClose: E,
                                 onBack: P,
-                                isSlideReady: L === N._m.CUSTOMIZE_GUILD,
+                                isSlideReady: L === I._m.CUSTOMIZE_GUILD,
                                 isCommunity: w
                             })
                         }),
                         (0, r.jsx)(s.Mi4, {
-                            id: N._m.CHANNEL_PROMPT,
+                            id: I._m.CHANNEL_PROMPT,
                             impressionName: a.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
                             impressionProperties: R,
                             children: (0, r.jsx)(_.Z, {
                                 createdGuildId: x,
                                 onClose: E,
                                 onChannelPromptCompleted: k,
-                                isSlideReady: L === N._m.CHANNEL_PROMPT
+                                isSlideReady: L === I._m.CHANNEL_PROMPT
                             })
                         }),
                         (0, r.jsx)(s.Mi4, {
-                            id: N._m.JOIN_GUILD,
+                            id: I._m.JOIN_GUILD,
                             impressionName: a.ImpressionNames.GUILD_ADD_JOIN,
                             impressionProperties: R,
                             children: (0, r.jsx)(f.Z, {
                                 onBack: P,
                                 onClose: E,
-                                isSlideReady: L === N._m.JOIN_GUILD
+                                isSlideReady: L === I._m.JOIN_GUILD
                             })
                         })
                     ]

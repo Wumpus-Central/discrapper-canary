@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(200651),
     s = n(192379),
     o = n(772848),
@@ -16,9 +16,9 @@ var r = n(200651),
     y = n(622802),
     h = n(388032),
     x = n(81050),
-    N = n(255785),
-    v = n(938998);
-function O(e) {
+    v = n(255785),
+    O = n(938998);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,41 +43,41 @@ function O(e) {
     }
     return e;
 }
-let j = n(748549),
-    Z = [b.FK.WEED];
-function _(e) {
+let N = n(748549),
+    _ = [b.FK.WEED];
+function P(e) {
     var t, n;
-    let { height: _, width: P, isPaused: C } = e,
+    let { height: P, width: C, isPaused: Z } = e,
         [w, E] = (0, s.useState)({}),
         S = (0, s.useRef)(null),
         I = (0, a.e7)([l.Z], () => l.Z.hasPurchasedUpgrade(b.yN.WEEDS, b.uv.WEED_KILLER)),
         k = c.Mq[b.yN.WEEDS],
-        [M, W] = (0, u.Z)(b.yN.WEEDS),
-        R = null != (t = M.count) ? t : 0;
-    (0, d.Z)(Z, R);
-    let A = (0, p.eR)(j),
-        T = (e) => {
-            var t;
-            null == (t = S.current) || t.removeDrop(e), A(), W({ count: R + 1 });
-        },
+        [M, R] = (0, u.Z)(b.yN.WEEDS),
+        A = null != (t = M.count) ? t : 0;
+    (0, d.Z)(_, A);
+    let T = (0, p.eR)(N),
         L = (e) => {
-            delete w[e], E(O({}, w));
+            var t;
+            null == (t = S.current) || t.removeDrop(e), T(), R({ count: A + 1 });
+        },
+        B = (e) => {
+            delete w[e], E(j({}, w));
         };
     return I
         ? null
         : (0, r.jsx)(g.Z, {
               ref: S,
-              isPaused: C,
+              isPaused: Z,
               itemId: b.yN.WEEDS,
               chance: 0.2,
               points: null != (n = k.points) ? n : 0,
-              height: _,
-              width: P,
+              height: P,
+              width: C,
               dropPadding: 60,
               onPointsAdded: () => {
                   var e, t, n;
                   E(
-                      ((t = O({}, w)),
+                      ((t = j({}, w)),
                       (n = n = { [(0, o.Z)()]: null != (e = k.points) ? e : 0 }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -99,16 +99,16 @@ function _(e) {
                       children: [
                           (0, r.jsx)(m.Z, {
                               renderedPoints: w,
-                              onRemovePoint: L
+                              onRemovePoint: B
                           }),
                           (0, r.jsx)(i.P3F, {
-                              onClick: () => T(e),
+                              onClick: () => L(e),
                               className: x.clickable,
                               children: (0, r.jsx)(f.Z, {
-                                  sources: [N, v],
+                                  sources: [v, O],
                                   className: x.weed,
-                                  'aria-label': h.NW.string(y.Z.QBujOj),
-                                  isPaused: C,
+                                  'aria-label': h.intl.string(y.default.QBujOj),
+                                  isPaused: Z,
                                   interval: 1000
                               })
                           })

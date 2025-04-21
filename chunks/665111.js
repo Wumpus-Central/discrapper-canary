@@ -2,10 +2,10 @@ n.d(t, { default: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(313201),
-    s = n(471253),
-    c = n(930180),
-    l = n(320596),
+    l = n(313201),
+    o = n(471253),
+    s = n(930180),
+    c = n(320596),
     a = n(939863),
     u = n(388032),
     d = n(22946);
@@ -22,24 +22,24 @@ function _(e) {
                     var n,
                         r,
                         i = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ['channel', 'transitionState', 'onClose']);
-    let g = (0, o.Dt)(),
-        f = (0, c._d)(_.id),
-        m = (0, c.K3)(_.id),
+    let g = (0, l.Dt)(),
+        f = (0, s._d)(_.id),
+        m = (0, s.K3)(_.id),
         j = async () => {
-            await (0, s.yi)(_), b();
+            await (0, o.yi)(_), b();
         },
         O = async () => {
-            await (0, s.RK)(_, !1), b();
+            await (0, o.RK)(_, !1), b();
         };
     return (0, r.jsx)(
         i.Y0X,
@@ -97,15 +97,15 @@ function _(e) {
                             variant: 'heading-xl/semibold',
                             color: 'header-primary',
                             className: d.headerTitle,
-                            children: u.NW.string(u.t.njetU1)
+                            children: u.intl.string(u.t.njetU1)
                         }),
                         (0, r.jsx)(i.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             className: d.headerSubtitle,
-                            children: u.NW.string(u.t.LQY4JS)
+                            children: u.intl.string(u.t.LQY4JS)
                         }),
-                        (f > 0 || m > 0) && (0, r.jsx)(l.mv, { channelId: _.id }),
+                        (f > 0 || m > 0) && (0, r.jsx)(c.mv, { channelId: _.id }),
                         (0, r.jsxs)('div', {
                             className: d.buttonsContainer,
                             children: [
@@ -124,7 +124,7 @@ function _(e) {
                                                 height: 20
                                             })
                                         }),
-                                        u.NW.string(u.t['Q8o/tb'])
+                                        u.intl.string(u.t['Q8o/tb'])
                                     ]
                                 }),
                                 (0, r.jsxs)(i.zxk, {
@@ -142,7 +142,7 @@ function _(e) {
                                                 height: 20
                                             })
                                         }),
-                                        u.NW.string(u.t['N3/Oyc'])
+                                        u.intl.string(u.t['N3/Oyc'])
                                     ]
                                 })
                             ]

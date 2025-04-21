@@ -1,8 +1,8 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(913527),
     s = n.n(o),
     c = n(442837),
@@ -20,22 +20,22 @@ var r = n(200651),
     v = n(791914),
     E = n(981631),
     O = n(388032),
-    N = n(829444),
-    j = n(384323);
-let C = {
+    j = n(829444),
+    C = n(384323);
+let S = {
     offset: {
         left: 4,
         right: -12
     }
 };
-function S(e) {
+function I(e) {
     let { setTab: t, closePopout: n } = e,
-        a = (0, c.e7)([g.Z], () => g.Z.getMessageReminders()),
-        [l, o] = i.useState(!1),
-        s = i.useMemo(() => a.filter((e) => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [a]),
-        p = l ? a : s;
+        l = (0, c.e7)([g.Z], () => g.Z.getMessageReminders()),
+        [a, o] = i.useState(!1),
+        s = i.useMemo(() => l.filter((e) => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [l]),
+        p = a ? l : s;
     return (0, r.jsxs)('div', {
-        className: N.container,
+        className: j.container,
         children: [
             (0, r.jsx)(v.Z, {
                 tab: u.X.TODOS,
@@ -43,66 +43,66 @@ function S(e) {
                 closePopout: n
             }),
             (0, r.jsxs)('div', {
-                className: N.headerText,
+                className: j.headerText,
                 children: [
                     (0, r.jsx)(d.X6q, {
                         variant: 'heading-lg/bold',
-                        children: l ? O.NW.string(O.t['0KeMAw']) : O.NW.string(O.t.j5ZHEB)
+                        children: a ? O.intl.string(O.t['0KeMAw']) : O.intl.string(O.t.j5ZHEB)
                     }),
                     (0, r.jsx)(d.eee, {
-                        onClick: () => o(!l),
+                        onClick: () => o(!a),
                         children: (0, r.jsx)(d.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: l ? O.NW.formatToPlainString(O.t['/VlKx8'], { count: s.length }) : O.NW.formatToPlainString(O.t.QEO4Ii, { count: a.length })
+                            children: a ? O.intl.formatToPlainString(O.t['/VlKx8'], { count: s.length }) : O.intl.formatToPlainString(O.t.QEO4Ii, { count: l.length })
                         })
                     })
                 ]
             }),
-            0 === p.length ? (0, r.jsx)(T, {}) : (0, r.jsx)(d.h21, { children: p.map((e) => (0, r.jsx)(I, { messageReminder: e }, e.saveData.messageId)) })
+            0 === p.length ? (0, r.jsx)(T, {}) : (0, r.jsx)(d.h21, { children: p.map((e) => (0, r.jsx)(N, { messageReminder: e }, e.saveData.messageId)) })
         ]
     });
 }
-function I(e) {
+function N(e) {
     let t,
         { messageReminder: i } = e,
-        a = i.saveData,
+        l = i.saveData,
         o = i.message,
-        u = (0, c.e7)([b.Z], () => b.Z.getChannel(a.channelId)),
+        u = (0, c.e7)([b.Z], () => b.Z.getChannel(l.channelId)),
         g = () => {
-            (0, f.uL)(E.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), a.channelId, a.messageId));
+            (0, f.uL)(E.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), l.channelId, l.messageId));
         },
         v = null;
-    return (null != a.dueAt &&
-        (a.dueAt > new Date()
+    return (null != l.dueAt &&
+        (l.dueAt > new Date()
             ? ((t = 'text-muted'),
-              (v = O.NW.formatToPlainString(O.t.H4gnX1, {
+              (v = O.intl.formatToPlainString(O.t.H4gnX1, {
                   duration: s()
-                      .duration(a.dueAt.getTime() - Date.now(), 'millisecond')
+                      .duration(l.dueAt.getTime() - Date.now(), 'millisecond')
                       .humanize()
               })))
             : ((t = 'text-danger'),
-              (v = O.NW.formatToPlainString(O.t['Uq7Y+/'], {
+              (v = O.intl.formatToPlainString(O.t['Uq7Y+/'], {
                   duration: s()
-                      .duration(Date.now() - a.dueAt.getTime(), 'millisecond')
+                      .duration(Date.now() - l.dueAt.getTime(), 'millisecond')
                       .humanize()
               })))),
     null == o || null == u)
         ? null
         : (0, r.jsxs)('div', {
-              className: j.container,
+              className: C.container,
               children: [
                   (0, r.jsx)(y.Z, {
                       channel: u,
                       gotoChannel: g,
                       children: (0, r.jsxs)('div', {
-                          className: N.reminderActions,
+                          className: j.reminderActions,
                           children: [
                               null != i.saveData.notes && i.saveData.notes.length > 0
                                   ? (0, r.jsxs)(d.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-muted',
-                                        className: N.notes,
+                                        className: j.notes,
                                         selectable: !0,
                                         children: [
                                             (0, r.jsx)(d.aAW, {
@@ -121,7 +121,7 @@ function I(e) {
                                     })
                                   : null,
                               (0, r.jsx)(d.DY3, {
-                                  text: O.NW.string(O.t.GtBCn5),
+                                  text: O.intl.string(O.t.GtBCn5),
                                   children: (0, r.jsx)(d.P3F, {
                                       onClick: (e) =>
                                           (0, p.jW)(e, async () => {
@@ -172,7 +172,7 @@ function I(e) {
                                                   );
                                               };
                                           }),
-                                      className: N.clock,
+                                      className: j.clock,
                                       children: (0, r.jsx)(d.T39, {
                                           size: 'custom',
                                           width: 20,
@@ -182,10 +182,10 @@ function I(e) {
                                   })
                               }),
                               (0, r.jsx)(d.DY3, {
-                                  text: O.NW.string(O.t['1GzslZ']),
+                                  text: O.intl.string(O.t['1GzslZ']),
                                   children: (0, r.jsx)(d.P3F, {
-                                      onClick: () => (0, h.x)(a),
-                                      className: N.delete,
+                                      onClick: () => (0, h.x)(l),
+                                      className: j.delete,
                                       children: (0, r.jsx)(d.XHJ, {
                                           size: 'custom',
                                           width: 20,
@@ -198,10 +198,10 @@ function I(e) {
                       })
                   }),
                   (0, r.jsxs)('div', {
-                      className: l()(j.messageContainer, N.unloadedMessage),
+                      className: a()(C.messageContainer, j.unloadedMessage),
                       children: [
                           (0, r.jsx)(x.Z, {
-                              className: j.jumpMessageButton,
+                              className: C.jumpMessageButton,
                               onJump: g
                           }),
                           (0, r.jsx)(
@@ -209,10 +209,10 @@ function I(e) {
                               {
                                   message: o,
                                   channel: u,
-                                  className: j.message,
+                                  className: C.message,
                                   compact: _.jU.getSetting(),
                                   animateAvatar: !1,
-                                  focusProps: C,
+                                  focusProps: S,
                                   trackAnnouncementViews: !0
                               },
                               o.id

@@ -1,47 +1,47 @@
-n.d(e, { default: () => u });
-var r = n(200651);
-n(192379);
-var o = n(481060),
-    i = n(194359),
-    c = n(468026),
-    a = n(388032);
-let u = (t) =>
+e.d(n, { default: () => a });
+var r = e(200651);
+e(192379);
+var i = e(481060),
+    o = e(194359),
+    c = e(468026),
+    l = e(388032);
+let a = (t) =>
     (0, r.jsx)(
         c.default,
         (function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-                var n = null != arguments[e] ? arguments[e] : {},
-                    r = Object.keys(n);
+            for (var n = 1; n < arguments.length; n++) {
+                var e = null != arguments[n] ? arguments[n] : {},
+                    r = Object.keys(e);
                 'function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (t) {
-                            return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                        Object.getOwnPropertySymbols(e).filter(function (t) {
+                            return Object.getOwnPropertyDescriptor(e, t).enumerable;
                         })
                     )),
-                    r.forEach(function (e) {
+                    r.forEach(function (n) {
                         var r;
-                        (r = n[e]),
-                            e in t
-                                ? Object.defineProperty(t, e, {
+                        (r = e[n]),
+                            n in t
+                                ? Object.defineProperty(t, n, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (t[e] = r);
+                                : (t[n] = r);
                     });
             }
             return t;
         })(
             {
-                confirmText: a.NW.string(a.t['cY+Ooa']),
-                title: a.NW.string(a.t.z2pFjo),
-                cancelText: a.NW.string(a.t['ETE/oK']),
+                confirmText: l.intl.string(l.t['cY+Ooa']),
+                title: l.intl.string(l.t.z2pFjo),
+                cancelText: l.intl.string(l.t['ETE/oK']),
                 onConfirm: () => {
-                    i.Z.clearPendingRelationships();
+                    o.Z.clearPendingRelationships();
                 },
-                body: a.NW.formatToPlainString(a.t['0nTvEx'], { incomingRequestCount: t.incomingRequestCount }),
-                confirmColor: o.Ttl.RED
+                body: l.intl.formatToPlainString(l.t['0nTvEx'], { incomingRequestCount: t.incomingRequestCount }),
+                confirmColor: i.Ttl.RED
             },
             t
         )

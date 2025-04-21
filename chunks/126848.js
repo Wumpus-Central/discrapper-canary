@@ -36,7 +36,7 @@ function m(e) {
                 ? !0 === C
                     ? (0, n.jsx)(b.Du, {})
                     : (0, n.jsx)(Z.Z, {
-                          copy: O.NW.string(O.t.OS9KPj),
+                          copy: O.intl.string(O.t.OS9KPj),
                           showStars: !1
                       })
                 : x

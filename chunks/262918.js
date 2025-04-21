@@ -1,40 +1,40 @@
-r.d(t, { default: () => p }), r(388685), r(539854);
-var n = r(200651),
-    i = r(192379),
-    s = r(512722),
-    a = r.n(s),
-    o = r(902704),
-    l = r(481060),
-    c = r(935369),
-    d = r(367907),
-    u = r(707515),
-    f = r(528567),
-    g = r(873128),
-    h = r(647529),
-    b = r(986398),
-    m = r(981631),
-    x = r(388032),
-    _ = r(308102);
+n.d(t, { default: () => p }), n(388685), n(539854);
+var r = n(200651),
+    i = n(192379),
+    s = n(512722),
+    a = n.n(s),
+    o = n(902704),
+    l = n(481060),
+    c = n(935369),
+    d = n(367907),
+    u = n(707515),
+    f = n(528567),
+    g = n(873128),
+    h = n(647529),
+    b = n(986398),
+    m = n(981631),
+    x = n(388032),
+    _ = n(308102);
 function p(e) {
     var t,
-        r,
+        n,
         { guildId: s, leaderboardId: p } = e,
         j = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
+            var n,
+                r,
                 i = (function (e, t) {
                     if (null == e) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         i = {},
                         s = Object.keys(e);
-                    for (n = 0; n < s.length; n++) (r = s[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < s.length; n++) (r = s[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ['guildId', 'leaderboardId']);
@@ -45,119 +45,119 @@ function p(e) {
     a()(null != w, 'Leaderboard must be loaded before opening the settings modal');
     let y = w.guild_settings,
         [v, O] = i.useState(y.sort_by_statistic_id),
-        [N, C] = i.useState(y.sort_desc),
-        [S, I] = i.useState(y.show_winner_crown),
-        [Z, { loading: W }] = (0, c.Z)(u._);
+        [C, S] = i.useState(y.sort_desc),
+        [I, N] = i.useState(y.show_winner_crown),
+        [Z, { loading: k }] = (0, c.Z)(u._);
     i.useEffect(() => {
         d.ZP.trackWithMetadata(m.rMx.OPEN_MODAL, { type: m.jXE.GUILD_LEADERBOARD_SETTINGS_MODAL });
     }, []);
-    let k = v !== y.sort_by_statistic_id || N !== y.sort_desc || S !== y.show_winner_crown,
-        L = async () => {
+    let L = v !== y.sort_by_statistic_id || C !== y.sort_desc || I !== y.show_winner_crown,
+        P = async () => {
             await Z({
                 guildId: s,
                 leaderboardId: p,
                 sortByStatisticId: v,
-                sortDesc: N,
-                showWinnerCrown: S
+                sortDesc: C,
+                showWinnerCrown: I
             }),
                 j.onClose();
         },
-        P = i.useMemo(() => {
+        B = i.useMemo(() => {
             let e = Object.values(w.settings.statistics).filter((e) => e.selectable_for_competition),
                 t = [];
-            for (let r of e)
+            for (let n of e)
                 for (let e of [!0, !1])
                     t.push({
                         value: {
-                            sortByStatisticId: r.id,
+                            sortByStatisticId: n.id,
                             sortDesc: e
                         },
                         label: (0, f.s)({
-                            statisticId: r.id,
+                            statisticId: n.id,
                             sortDesc: e,
-                            aggregationType: r.aggregation_type
+                            aggregationType: n.aggregation_type
                         })
                     });
             return t;
         }, [w]),
-        B = P.find((e) =>
+        E = B.find((e) =>
             (0, o.Z)(e.value, {
                 sortByStatisticId: v,
-                sortDesc: N
+                sortDesc: C
             })
         );
-    return (0, n.jsx)(
+    return (0, r.jsx)(
         h.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(r);
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
                 'function' == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    n.forEach(function (t) {
-                        var n;
-                        (n = r[t]),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: n,
+                                      value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = n);
+                                : (e[t] = r);
                     });
             }
             return e;
         })({}, j)),
-        (r = r =
+        (n = n =
             {
                 guildId: s,
-                title: x.NW.string(x.t.rv9GUV),
-                buttons: (0, n.jsx)(l.zxk, {
-                    onClick: L,
-                    submitting: W,
-                    disabled: !k,
-                    children: x.NW.string(x.t.R3BPHx)
+                title: x.intl.string(x.t.rv9GUV),
+                buttons: (0, r.jsx)(l.zxk, {
+                    onClick: P,
+                    submitting: k,
+                    disabled: !L,
+                    children: x.intl.string(x.t.R3BPHx)
                 }),
-                children: (0, n.jsxs)(l.hzk, {
+                children: (0, r.jsxs)(l.hzk, {
                     className: _.content,
                     children: [
-                        (0, n.jsx)(l.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: 'text-md/medium',
                             color: 'header-primary',
-                            children: x.NW.string(x.t.IQO9Fx)
+                            children: x.intl.string(x.t.IQO9Fx)
                         }),
-                        (0, n.jsx)(l.LZC, { size: 8 }),
-                        (0, n.jsx)(l.q4e, {
-                            placeholder: x.NW.string(x.t['g/Rr2d']),
-                            value: null == B ? void 0 : B.value,
-                            options: P,
+                        (0, r.jsx)(l.LZC, { size: 8 }),
+                        (0, r.jsx)(l.q4e, {
+                            placeholder: x.intl.string(x.t['g/Rr2d']),
+                            value: null == E ? void 0 : E.value,
+                            options: B,
                             onChange: (e) => {
-                                let { sortByStatisticId: t, sortDesc: r } = e;
-                                O(t), C(r);
+                                let { sortByStatisticId: t, sortDesc: n } = e;
+                                O(t), S(n);
                             }
                         }),
-                        (0, n.jsx)('div', { className: _.divider }),
-                        (0, n.jsx)(l.vwX, { children: x.NW.string(x.t.HU4EKC) }),
-                        (0, n.jsx)(l.LZC, { size: 8 }),
-                        (0, n.jsx)(l.j7V, {
+                        (0, r.jsx)('div', { className: _.divider }),
+                        (0, r.jsx)(l.vwX, { children: x.intl.string(x.t.HU4EKC) }),
+                        (0, r.jsx)(l.LZC, { size: 8 }),
+                        (0, r.jsx)(l.j7V, {
                             hideBorder: !0,
-                            onChange: () => I((e) => !e),
-                            value: S,
+                            onChange: () => N((e) => !e),
+                            value: I,
                             className: _.showWinnerCrownSwitch,
-                            children: (0, n.jsxs)('div', {
+                            children: (0, r.jsxs)('div', {
                                 className: _.showWinnerCrownTextContainer,
                                 children: [
-                                    (0, n.jsx)(l.Text, {
+                                    (0, r.jsx)(l.Text, {
                                         variant: 'text-md/medium',
                                         color: 'header-primary',
-                                        children: x.NW.string(x.t.cH7QEx)
+                                        children: x.intl.string(x.t.cH7QEx)
                                     }),
-                                    (0, n.jsx)(b.Z, {
+                                    (0, r.jsx)(b.Z, {
                                         className: _.winnerImage,
                                         leaderboard: w
                                     })
@@ -168,16 +168,16 @@ function p(e) {
                 })
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
             : (function (e, t) {
-                  var r = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return r;
-              })(Object(r)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
               }),
         t)
     );

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r,
     i = n(200651),
     l = n(192379),
@@ -69,11 +69,11 @@ class O extends (r = l.PureComponent) {
                         (0, i.jsx)('div', { className: m.image }),
                         (0, i.jsx)('div', {
                             className: o()(m.title, b.marginTop20),
-                            children: g.NW.string(g.t.Iz0kDg)
+                            children: g.intl.string(g.t.Iz0kDg)
                         }),
                         (0, i.jsx)('div', {
                             className: o()(m.body, b.marginTop4, b.marginBottom20),
-                            children: g.NW.format(g.t['0rqMV1'], { helpCenterURL: E })
+                            children: g.intl.format(g.t['0rqMV1'], { helpCenterURL: E })
                         }),
                         (0, i.jsx)(d.Z, {
                             grow: 0,
@@ -85,7 +85,7 @@ class O extends (r = l.PureComponent) {
                 }),
                 (0, i.jsx)('div', {
                     className: o()(m.footer, b.marginTop20),
-                    children: g.NW.string(g.t.qqYun5)
+                    children: g.intl.string(g.t.qqYun5)
                 }),
                 (0, i.jsxs)(d.Z, {
                     className: o()(b.marginTop4, b.marginBottom20),
@@ -93,7 +93,7 @@ class O extends (r = l.PureComponent) {
                     children: [
                         (0, i.jsx)('div', {
                             className: o()(m.footer, m.footerAction),
-                            children: g.NW.format(g.t.WL51ZW, { supportURL: p.Z.getSubmitRequestURL() })
+                            children: g.intl.format(g.t.WL51ZW, { supportURL: p.Z.getSubmitRequestURL() })
                         }),
                         (0, i.jsx)('div', {
                             className: o()(m.footer, m.footerBullet),
@@ -101,7 +101,7 @@ class O extends (r = l.PureComponent) {
                         }),
                         (0, i.jsx)('div', {
                             className: o()(m.footer, m.footerAction),
-                            children: g.NW.format(g.t.Hv7ztb, { logoutOnClick: this.props.onLogout })
+                            children: g.intl.format(g.t.Hv7ztb, { logoutOnClick: this.props.onLogout })
                         })
                     ]
                 })
@@ -121,4 +121,4 @@ _(O, 'defaultProps', {
     onCaptchaVerify: f.dG4,
     onLogout: f.dG4
 });
-let N = O;
+let y = O;

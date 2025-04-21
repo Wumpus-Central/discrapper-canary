@@ -1,24 +1,24 @@
 n.d(t, {
-    Z: () => l,
-    f: () => o
+    Z: () => o,
+    f: () => a
 });
-var r,
-    a = n(388032),
-    o = (((r = {}).COULD_NOT_FIND = "I couldn't find what I was looking for"), (r.CONFUSING_LANGUAGE = 'I found the language confusing'), (r.OTHER = 'Other'), r);
-function l() {
+var l,
+    r = n(388032),
+    a = (((l = {}).COULD_NOT_FIND = "I couldn't find what I was looking for"), (l.CONFUSING_LANGUAGE = 'I found the language confusing'), (l.OTHER = 'Other'), l);
+function o() {
     return [
         {
-            label: a.NW.string(a.t.cigGCQ),
+            label: r.intl.string(r.t.cigGCQ),
             code: 2,
             value: "I couldn't find what I was looking for"
         },
         {
-            label: a.NW.string(a.t.ZyXA0t),
+            label: r.intl.string(r.t.ZyXA0t),
             code: 3,
             value: 'I found the language confusing'
         },
         {
-            label: a.NW.string(a.t['emlT9/']),
+            label: r.intl.string(r.t['emlT9/']),
             code: 1,
             value: 'Other'
         }

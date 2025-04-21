@@ -11,29 +11,29 @@ n.d(t, {
     n(97749),
     n(388685);
 var r = n(703656),
-    a = n(216780),
-    i = n(258971),
+    i = n(216780),
+    a = n(258971),
     l = n(981631);
 let s = () => {
-        let e = { previousView: (0, i.Xh)() };
+        let e = { previousView: (0, a.Xh)() };
         (0, r.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS, { state: e });
     },
     o = (e) => {
         let { categoryId: t } = e,
-            n = { previousView: (0, i.Xh)() };
+            n = { previousView: (0, a.Xh)() };
         (0, r.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t), { state: n });
     },
     c = (e) => {
         let { applicationId: t } = e,
-            n = { previousView: (0, i.Xh)() };
+            n = { previousView: (0, a.Xh)() };
         (0, r.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t), { state: n });
     },
     d = function () {
         let { query: e, categoryId: t, page: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            s = { previousView: (0, i.Xh)() },
+            s = { previousView: (0, a.Xh)() },
             o = new URLSearchParams();
         null != e && '' !== e && o.set('q', e),
-            null != t && t !== a.MU && o.set('category_id', t.toString()),
+            null != t && t !== i.MU && o.set('category_id', t.toString()),
             null != n && n > 1 && o.set('page', n.toString()),
             (0, r.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, {
                 state: s,

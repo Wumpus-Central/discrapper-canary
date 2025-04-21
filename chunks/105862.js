@@ -46,23 +46,23 @@ function _(e) {
                         (0, i.jsx)(o.X6q, {
                             variant: 'heading-lg/bold',
                             color: 'header-primary',
-                            children: m.NW.string(m.t['kw8/ER'])
+                            children: m.intl.string(m.t['kw8/ER'])
                         }),
                         (0, i.jsx)(o.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-normal',
-                            children: m.NW.string(m.t.GZoV1N)
+                            children: m.intl.string(m.t.GZoV1N)
                         })
                     ]
                 }),
                 (0, i.jsx)(o.zxk, {
                     size: o.zxk.Sizes.MEDIUM,
-                    'aria-label': m.NW.formatToPlainString(m.t.xx5Sur, {
-                        sectionTitle: m.NW.string(m.t['kw8/ER']),
-                        sectionBody: m.NW.string(m.t.GZoV1N)
+                    'aria-label': m.intl.formatToPlainString(m.t.xx5Sur, {
+                        sectionTitle: m.intl.string(m.t['kw8/ER']),
+                        sectionBody: m.intl.string(m.t.GZoV1N)
                     }),
                     onClick: x,
-                    children: m.NW.string(m.t.Ye51oa)
+                    children: m.intl.string(m.t.Ye51oa)
                 })
             ]
         })

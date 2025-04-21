@@ -1,236 +1,236 @@
 n.d(t, {
-    U: () => x,
-    Uf: () => m,
-    ng: () => v
+    U: () => P,
+    Uf: () => I,
+    ng: () => N
 }),
     n(388685);
-var i = n(200651),
-    r = n(192379),
-    s = n(442837),
-    l = n(704215),
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    a = n(704215),
     o = n(481060),
-    a = n(436774),
-    c = n(706140),
+    c = n(436774),
+    s = n(706140),
     u = n(9156),
     d = n(594174),
-    g = n(74538),
-    b = n(759198),
-    p = n(11352),
-    S = n(213931),
-    f = n(767157),
-    O = n(112440),
-    h = n(671105),
-    E = n(552958),
-    N = n(981631),
-    y = n(921944),
-    j = n(871465),
-    _ = n(388032),
-    P = n(394049);
-function v(e, t) {
-    let n = p.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }),
-        i = A(e, void 0, l.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE, n.nestedEntry ? 'trailing' : 'top');
-    return ((n.nestedEntry && t) || (!n.nestedEntry && !t)) && i;
+    f = n(74538),
+    O = n(759198),
+    b = n(11352),
+    p = n(213931),
+    h = n(767157),
+    y = n(112440),
+    g = n(671105),
+    j = n(552958),
+    _ = n(981631),
+    m = n(921944),
+    v = n(871465),
+    x = n(388032),
+    C = n(394049);
+function N(e, t) {
+    let n = b.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }),
+        r = T(e, void 0, a.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE, n.nestedEntry ? 'trailing' : 'top');
+    return ((n.nestedEntry && t) || (!n.nestedEntry && !t)) && r;
 }
-function m(e, t, n) {
-    return A(e, t, l.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE, n);
+function I(e, t, n) {
+    return T(e, t, a.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE, n);
 }
-function x() {
-    let e = p.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }),
-        [t] = (0, c.cv)([l.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]);
+function P() {
+    let e = b.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }),
+        [t] = (0, s.cv)([a.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]);
     return (
         e.enabled &&
         e.nestedEntry &&
-        t === l.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE &&
-        (0, i.jsx)(o.IGR, {
-            className: P.newBadge,
-            text: _.NW.string(_.t.y2b7CA)
+        t === a.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE &&
+        (0, r.jsx)(o.IGR, {
+            className: C.newBadge,
+            text: x.intl.string(x.t.y2b7CA)
         })
     );
 }
-function A(e, t, l, v) {
-    var m, x;
-    let A = (0, h.OR)(e),
-        L = (0, h._c)(e, t),
-        I = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
-        Z = (0, s.e7)([u.ZP], () => u.ZP.isMuted(e), [e]),
-        D = g.ZP.canUseCustomNotificationSounds(I),
-        M = D ? (null != L ? L : A) : j.YC.CLASSIC,
-        T = p.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }).enabled,
-        [w, G] = r.useState(!1),
-        { playSound: k } = (0, E.Z)(),
-        [U, C] = (0, c.cv)([l]),
-        R = U === l;
+function T(e, t, a, N) {
+    var I, P;
+    let T = (0, g.OR)(e),
+        S = (0, g._c)(e, t),
+        E = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        w = (0, l.e7)([u.ZP], () => u.ZP.isMuted(e), [e]),
+        A = f.ZP.canUseCustomNotificationSounds(E),
+        D = A ? (null != S ? S : T) : v.YC.CLASSIC,
+        U = b.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }).enabled,
+        [M, Z] = i.useState(!1),
+        { playSound: k } = (0, j.Z)(),
+        [R, G] = (0, s.cv)([a]),
+        L = R === a;
     if (
-        (r.useEffect(
+        (i.useEffect(
             () => () => {
-                w && C(y.L.TAKE_ACTION);
+                M && G(m.L.TAKE_ACTION);
             },
-            [w, C]
+            [M, G]
         ),
-        !T)
+        !U)
     )
         return null;
-    let W = (n) => {
-            if ((k(n), C(y.L.TAKE_ACTION), !D && n !== j.YC.CLASSIC)) {
-                (0, f.Z)(n, 'contextMenu'), (0, O.Z)();
+    let F = (n) => {
+            if ((k(n), G(m.L.TAKE_ACTION), !A && n !== v.YC.CLASSIC)) {
+                (0, h.Z)(n, 'contextMenu'), (0, y.Z)();
                 return;
             }
-            null != t ? (0, S.M)(e, t, M, n, 'contextMenu') : (0, S.t)(e, M, n, 'contextMenu');
+            null != t ? (0, p.M)(e, t, D, n, 'contextMenu') : (0, p.t)(e, D, n, 'contextMenu');
         },
-        B = D ? o.Text : b.Z,
-        Y = (0, j.LB)(),
-        Q = null != (x = null == (m = Y.find((e) => e.value === M)) ? void 0 : m.label) ? x : _.NW.string(_.t.p3Hg5e),
-        F = (0, i.jsx)(o.IGR, {
-            className: P.newBadge,
-            text: _.NW.string(_.t.y2b7CA)
+        Y = A ? o.Text : O.Z,
+        z = (0, v.LB)(),
+        B = null != (P = null == (I = z.find((e) => e.value === D)) ? void 0 : I.label) ? P : x.intl.string(x.t.p3Hg5e),
+        V = (0, r.jsx)(o.IGR, {
+            className: C.newBadge,
+            text: x.intl.string(x.t.y2b7CA)
         });
-    return (0, i.jsx)(o.sNh, {
+    return (0, r.jsx)(o.sNh, {
         id: 'notification-sounds',
         label: (e) => {
             let { isFocused: t } = e;
             return (
-                t && G(t),
-                (0, i.jsxs)('div', {
-                    className: P.rootContainer,
+                t && Z(t),
+                (0, r.jsxs)('div', {
+                    className: C.rootContainer,
                     children: [
-                        (0, i.jsxs)('div', {
+                        (0, r.jsxs)('div', {
                             children: [
-                                R && 'top' === v && F,
-                                (0, i.jsxs)('div', {
-                                    className: P.headerContainer,
+                                L && 'top' === N && V,
+                                (0, r.jsxs)('div', {
+                                    className: C.headerContainer,
                                     children: [
-                                        (0, i.jsx)(B, {
-                                            className: P.text,
+                                        (0, r.jsx)(Y, {
+                                            className: C.text,
                                             color: t ? 'always-white' : void 0,
                                             variant: 'text-sm/medium',
-                                            children: _.NW.string(_.t.mrqSOj)
+                                            children: x.intl.string(x.t.mrqSOj)
                                         }),
-                                        (0, i.jsx)(o.SrA, {
+                                        (0, r.jsx)(o.SrA, {
                                             size: 'xs',
-                                            className: P.nitroWheel,
-                                            color: t ? 'white' : D ? void 0 : a.JX.PREMIUM_TIER_2
+                                            className: C.nitroWheel,
+                                            color: t ? 'white' : A ? void 0 : c.JX.PREMIUM_TIER_2
                                         })
                                     ]
                                 }),
-                                null != Q &&
-                                    (0, i.jsx)(B, {
-                                        className: P.text,
+                                null != B &&
+                                    (0, r.jsx)(Y, {
+                                        className: C.text,
                                         color: t ? 'always-white' : void 0,
                                         variant: 'text-xs/normal',
-                                        children: Q
+                                        children: B
                                     })
                             ]
                         }),
-                        R && 'trailing' === v && F
+                        L && 'trailing' === N && V
                     ]
                 })
             );
         },
         action:
-            e !== N.aIL
+            e !== _.aIL
                 ? () =>
                       (0, o.ZDy)(async () => {
                           let { default: t } = await Promise.all([n.e('5863'), n.e('48445')]).then(n.bind(n, 751212));
                           return (n) => {
-                              var r, s;
-                              return (0, i.jsx)(
+                              var i, l;
+                              return (0, r.jsx)(
                                   t,
-                                  ((r = (function (e) {
+                                  ((i = (function (e) {
                                       for (var t = 1; t < arguments.length; t++) {
                                           var n = null != arguments[t] ? arguments[t] : {},
-                                              i = Object.keys(n);
+                                              r = Object.keys(n);
                                           'function' == typeof Object.getOwnPropertySymbols &&
-                                              (i = i.concat(
+                                              (r = r.concat(
                                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                   })
                                               )),
-                                              i.forEach(function (t) {
-                                                  var i;
-                                                  (i = n[t]),
+                                              r.forEach(function (t) {
+                                                  var r;
+                                                  (r = n[t]),
                                                       t in e
                                                           ? Object.defineProperty(e, t, {
-                                                                value: i,
+                                                                value: r,
                                                                 enumerable: !0,
                                                                 configurable: !0,
                                                                 writable: !0
                                                             })
-                                                          : (e[t] = i);
+                                                          : (e[t] = r);
                                               });
                                       }
                                       return e;
                                   })({}, n)),
-                                  (s = s = { guildId: e }),
+                                  (l = l = { guildId: e }),
                                   Object.getOwnPropertyDescriptors
-                                      ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(s))
+                                      ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                       : (function (e, t) {
                                             var n = Object.keys(e);
                                             if (Object.getOwnPropertySymbols) {
-                                                var i = Object.getOwnPropertySymbols(e);
-                                                n.push.apply(n, i);
+                                                var r = Object.getOwnPropertySymbols(e);
+                                                n.push.apply(n, r);
                                             }
                                             return n;
-                                        })(Object(s)).forEach(function (e) {
-                                            Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(s, e));
+                                        })(Object(l)).forEach(function (e) {
+                                            Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                         }),
-                                  r)
+                                  i)
                               );
                           };
                       })
                 : void 0,
         hasSubmenu: !0,
-        children: (0, i.jsxs)(o.kSQ, {
+        children: (0, r.jsxs)(o.kSQ, {
             children: [
-                Y.map((e, t) =>
-                    (0, i.jsxs)(
-                        r.Fragment,
+                z.map((e, t) =>
+                    (0, r.jsxs)(
+                        i.Fragment,
                         {
                             children: [
-                                D || e.value === j.YC.CLASSIC
-                                    ? (0, i.jsx)(o.k5B, {
+                                A || e.value === v.YC.CLASSIC
+                                    ? (0, r.jsx)(o.k5B, {
                                           id: e.label,
                                           group: 'notification-preset',
-                                          checked: (null != M ? M : j.YC.CLASSIC) === e.value,
+                                          checked: (null != D ? D : v.YC.CLASSIC) === e.value,
                                           label: e.label,
-                                          action: () => W(e.value)
+                                          action: () => F(e.value)
                                       })
-                                    : (0, i.jsx)(o.sNh, {
+                                    : (0, r.jsx)(o.sNh, {
                                           id: e.label,
                                           label: (t) => {
                                               let { isFocused: n } = t;
-                                              return (0, i.jsxs)('div', {
-                                                  className: P.labelContainer,
+                                              return (0, r.jsxs)('div', {
+                                                  className: C.labelContainer,
                                                   children: [
-                                                      (0, i.jsx)(b.Z, {
+                                                      (0, r.jsx)(O.Z, {
                                                           color: n ? 'always-white' : void 0,
                                                           variant: 'text-sm/medium',
                                                           children: e.label
                                                       }),
-                                                      (0, i.jsx)(o.g8d, {
-                                                          className: P.playButton,
+                                                      (0, r.jsx)(o.g8d, {
+                                                          className: C.playButton,
                                                           color: n ? o.TVs.colors.INTERACTIVE_ACTIVE : o.TVs.colors.INTERACTIVE_NORMAL
                                                       })
                                                   ]
                                               });
                                           },
-                                          action: () => W(e.value)
+                                          action: () => F(e.value)
                                       }),
-                                e.value === j.YC.CLASSIC ? (0, i.jsx)(o.Clw, {}) : null
+                                e.value === v.YC.CLASSIC ? (0, r.jsx)(o.Clw, {}) : null
                             ]
                         },
                         t
                     )
                 ),
-                Z &&
-                    (0, i.jsxs)(i.Fragment, {
+                w &&
+                    (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, i.jsx)(o.Clw, {}),
-                            (0, i.jsx)(o.sNh, {
+                            (0, r.jsx)(o.Clw, {}),
+                            (0, r.jsx)(o.sNh, {
                                 id: 'label',
-                                label: (0, i.jsx)(o.Text, {
-                                    className: P.mutedLabel,
+                                label: (0, r.jsx)(o.Text, {
+                                    className: C.mutedLabel,
                                     variant: 'text-sm/medium',
-                                    children: _.NW.string(_.t['a9G/ER'])
+                                    children: x.intl.string(x.t['a9G/ER'])
                                 })
                             })
                         ]

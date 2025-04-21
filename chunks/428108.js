@@ -22,12 +22,12 @@ let y = (0, i.Z)(
             g = (0, b.Z)(t),
             P = (0, a.Z)({
                 id: t.id,
-                label: f.NW.string(f.t.gFHI3t)
+                label: f.intl.string(f.t.gFHI3t)
             });
         return (0, r.jsxs)(c.v2r, {
             navId: 'channel-context',
             onClose: l.Zy,
-            'aria-label': f.NW.string(f.t.Xm41aW),
+            'aria-label': f.intl.string(f.t.Xm41aW),
             onSelect: i,
             children: [
                 (0, r.jsx)(c.kSQ, { children: o }),

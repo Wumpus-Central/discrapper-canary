@@ -12,19 +12,19 @@ let c = (e) => {
         tooltipWordmarkComponent: (0, r.jsx)(i.X6, {
             variant: 'heading-md/extrabold',
             className: l.tooltipWordmark,
-            children: s.NW.string(s.t.ElYQFR)
+            children: s.intl.string(s.t.ElYQFR)
         }),
         children: [
             (0, r.jsx)(i.X6, {
                 variant: 'heading-xl/extrabold',
                 className: t ? void 0 : l.orbHeaderWithSpacing,
-                children: s.NW.string(s.t.lTHkqa)
+                children: s.intl.string(s.t.lTHkqa)
             }),
             t
                 ? (0, r.jsx)(i.xv, {
                       variant: 'text-xs/normal',
                       className: l.orbSubtext,
-                      children: s.NW.string(s.t.MEV0GB)
+                      children: s.intl.string(s.t.MEV0GB)
                   })
                 : void 0
         ]

@@ -16,27 +16,27 @@ var r = n(200651),
     y = n(388032),
     _ = n(965385);
 function p(e) {
-    let { guildId: t, userId: p, analyticsLocation: m, analyticsLocations: N, context: j, icon: M } = e,
-        P = O.Z.getGuild(t),
-        S = d.default.getId(),
-        A = (0, i.e7)([g.default], () => g.default.getUser(p)),
-        v = (0, i.e7)([f.ZP], () => f.ZP.isGuestOrLurker(t, p), [t, p]);
+    let { guildId: t, userId: p, analyticsLocation: m, analyticsLocations: j, context: M, icon: P } = e,
+        S = O.Z.getGuild(t),
+        A = d.default.getId(),
+        v = (0, i.e7)([g.default], () => g.default.getUser(p)),
+        Z = (0, i.e7)([f.ZP], () => f.ZP.isGuestOrLurker(t, p), [t, p]);
     (0, i.e7)([E.Z], () => E.Z.getGuildVersion(t), [t]);
-    let Z = l.useMemo(() => ({ [t]: [p] }), [t, p]);
-    (0, o.$)(Z);
-    let I = j === b.IlC.POPOUT,
+    let N = l.useMemo(() => ({ [t]: [p] }), [t, p]);
+    (0, o.$)(N);
+    let I = M === b.IlC.POPOUT,
         h = (0, c.Z)({
-            guild: P,
+            guild: S,
             analyticsLocation: m
         }),
         T = (0, u.Aq)();
-    if (null == P || I) return null;
-    let D = S === p && (E.Z.can(b.Plq.CHANGE_NICKNAME, P) || E.Z.can(b.Plq.MANAGE_NICKNAMES, P)),
-        C = S === p,
-        U = E.Z.canManageUser(b.Plq.MANAGE_NICKNAMES, p, P);
-    if (!(D || U || C) || null == A || v) return null;
-    let R = P.hasFeature(b.oNc.HUB) ? y.NW.string(y.t['+MWrWl']) : y.NW.string(y.t['PKQB/P']),
-        L = C ? R : y.NW.string(y.t.dilOFx);
+    if (null == S || I) return null;
+    let D = A === p && (E.Z.can(b.Plq.CHANGE_NICKNAME, S) || E.Z.can(b.Plq.MANAGE_NICKNAMES, S)),
+        C = A === p,
+        U = E.Z.canManageUser(b.Plq.MANAGE_NICKNAMES, p, S);
+    if (!(D || U || C) || null == v || Z) return null;
+    let R = S.hasFeature(b.oNc.HUB) ? y.intl.string(y.t['+MWrWl']) : y.intl.string(y.t['PKQB/P']),
+        L = C ? R : y.intl.string(y.t.dilOFx);
     return (0, r.jsx)(a.sNh, {
         id: 'change-nickname',
         label: (0, r.jsx)('div', {
@@ -46,10 +46,10 @@ function p(e) {
                 children: L
             })
         }),
-        icon: M,
+        icon: P,
         action: () => {
             C
-                ? ((0, s.Z)(A.id, A.getAvatarURL(t, 80), { guildId: t }), h(), T.dispatch(b.CkL.POPOUT_CLOSE), (0, a.pTH)())
+                ? ((0, s.Z)(v.id, v.getAvatarURL(t, 80), { guildId: t }), h(), T.dispatch(b.CkL.POPOUT_CLOSE), (0, a.pTH)())
                 : (0, a.ZDy)(async () => {
                       let { default: e } = await n.e('17712').then(n.bind(n, 620021));
                       return (n) => {
@@ -84,9 +84,9 @@ function p(e) {
                               (i = i =
                                   {
                                       guildId: t,
-                                      user: A,
+                                      user: v,
                                       analyticsSource: m,
-                                      analyticsLocations: N
+                                      analyticsLocations: j
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))

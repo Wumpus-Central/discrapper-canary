@@ -65,17 +65,17 @@ function g(e, t) {
 function E(e) {
     switch (e) {
         case 2:
-            return f.NW.string(f.t.iCehw8);
+            return f.intl.string(f.t.iCehw8);
         case 0:
-            return f.NW.string(f.t.hfYfEB);
+            return f.intl.string(f.t.hfYfEB);
         case 3:
-            return f.NW.string(f.t['TX+iFB']);
+            return f.intl.string(f.t['TX+iFB']);
         case 4:
-            return f.NW.string(f.t.NSYGX1);
+            return f.intl.string(f.t.NSYGX1);
         case 5:
-            return f.NW.string(f.t.jjUTLy);
+            return f.intl.string(f.t.jjUTLy);
         case 1:
-            return f.NW.string(f.t['lMrv9/']);
+            return f.intl.string(f.t['lMrv9/']);
         case 6:
             return null;
         default:

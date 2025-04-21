@@ -1,35 +1,35 @@
-r.d(a, { h: () => C }), r(388685);
-var s = r(200651),
-    t = r(192379),
-    l = r(512722),
-    n = r.n(l),
-    o = r(481060),
-    c = r(457330),
-    i = r(600164),
-    d = r(710845),
-    x = r(69580),
-    u = r(424071),
-    h = r(388032),
-    N = r(475286);
-let m = new d.Z('TwoWayLinkDiscordConsentWeb');
+a.d(t, { h: () => C }), a(388685);
+var r = a(200651),
+    l = a(192379),
+    s = a(512722),
+    n = a.n(s),
+    o = a(481060),
+    c = a(457330),
+    i = a(600164),
+    d = a(710845),
+    x = a(69580),
+    u = a(424071),
+    h = a(388032),
+    m = a(475286);
+let N = new d.Z('TwoWayLinkDiscordConsentWeb');
 function C(e) {
-    let { platformType: a, clientId: r, scopes: l, authToken: d, onContinue: C, onError: j, onClose: k, redirectUri: v } = e,
-        [p, f] = t.useState(!1),
-        b = t.useCallback(
+    let { platformType: t, clientId: a, scopes: s, authToken: d, onContinue: C, onError: j, onClose: k, redirectUri: v } = e,
+        [p, f] = l.useState(!1),
+        b = l.useCallback(
             async (e) => {
-                let r,
-                    s,
-                    { location: t } = e,
-                    { callbackCode: l, callbackState: n } = d;
+                let a,
+                    r,
+                    { location: l } = e,
+                    { callbackCode: s, callbackState: n } = d;
                 try {
-                    r = await c.Z.completeTwoWayLink(a, t, l, n);
+                    a = await c.Z.completeTwoWayLink(t, l, s, n);
                 } catch (e) {
                     var o;
-                    m.error(''.concat(a, ' link error:'), e), (s = null == (o = e.body) ? void 0 : o.code);
+                    N.error(''.concat(t, ' link error:'), e), (r = null == (o = e.body) ? void 0 : o.code);
                 }
-                null != r ? C() : j(s);
+                null != a ? C() : j(r);
             },
-            [a, d, C, j]
+            [t, d, C, j]
         ),
         {
             header: E,
@@ -37,53 +37,53 @@ function C(e) {
             appDetails: g,
             sendAuthorize: O
         } = (0, x.useOAuth2AuthorizeForm)({
-            clientId: r,
-            scopes: l,
+            clientId: a,
+            scopes: s,
             responseType: 'code',
             callback: b,
             isTrustedName: !0,
             isEmbeddedFlow: !0,
             redirectUri: v
         }),
-        R = t.useCallback(() => {
+        R = l.useCallback(() => {
             n()(null != O, 'sendAuthorize not available'), f(!0), O(!0);
         }, [O]);
-    return (0, s.jsxs)(u.Z, {
+    return (0, r.jsxs)(u.Z, {
         children: [
-            (0, s.jsxs)(o.xBx, {
+            (0, r.jsxs)(o.xBx, {
                 direction: i.Z.Direction.VERTICAL,
-                className: N.header,
+                className: m.header,
                 separator: !1,
                 children: [
-                    (0, s.jsx)(o.Text, {
-                        className: N.stepHeader,
+                    (0, r.jsx)(o.Text, {
+                        className: m.stepHeader,
                         variant: 'text-xs/bold',
                         color: 'header-secondary',
-                        children: h.NW.format(h.t.fHz6eX, {
+                        children: h.intl.format(h.t.fHz6eX, {
                             number: 2,
                             total: 2
                         })
                     }),
                     null != k &&
-                        (0, s.jsx)(o.olH, {
-                            className: N.closeButton,
+                        (0, r.jsx)(o.olH, {
+                            className: m.closeButton,
                             onClick: k
                         })
                 ]
             }),
-            (0, s.jsxs)(o.hzk, {
-                className: N.consentContent,
+            (0, r.jsxs)(o.hzk, {
+                className: m.consentContent,
                 paddingFix: !1,
                 children: [E, T, g]
             }),
-            (0, s.jsx)(o.mzw, {
-                className: N.footer,
-                children: (0, s.jsx)(o.zxk, {
-                    className: N.footerButton,
+            (0, r.jsx)(o.mzw, {
+                className: m.footer,
+                children: (0, r.jsx)(o.zxk, {
+                    className: m.footerButton,
                     color: o.zxk.Colors.BRAND,
                     submitting: p,
                     onClick: R,
-                    children: h.NW.string(h.t.ZN4hkZ)
+                    children: h.intl.string(h.t.ZN4hkZ)
                 })
             })
         ]

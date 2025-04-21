@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(933557),
     S = n(965048),
     T = n(569545),
-    N = n(74299),
-    A = n(863908),
+    A = n(74299),
+    N = n(863908),
     C = n(803647),
     R = n(266910),
     P = n(788983),
@@ -41,8 +41,8 @@ var r = n(200651),
     V = n(699516),
     Z = n(594174),
     H = n(248402),
-    W = n(33039),
-    Y = n(451478),
+    Y = n(33039),
+    W = n(451478),
     K = n(626135),
     z = n(5192),
     q = n(51144),
@@ -138,7 +138,7 @@ class e_ extends i.PureComponent {
         let { participantOnScreen: e, currentUserId: t } = this.props;
         if (!(0, eo._5)(e)) return null;
         let n = this.activeStreamForSelectedParticipant;
-        return null == n ? null : (0, A.Z)(n, e.user, e.user.id === t, this.streamerPaused);
+        return null == n ? null : (0, N.Z)(n, e.user, e.user.id === t, this.streamerPaused);
     }
     componentDidMount() {
         let { channel: e } = this.props;
@@ -359,11 +359,11 @@ function ep(e) {
         i = (0, c.e7)([H.Z], () => H.Z.getSpeaker(t.id)),
         a = (0, c.e7)([b.Z], () => b.Z.getParticipant(t.id, i), [t.id, i]),
         o = (0, c.e7)([F.Z], () => l()(F.Z.getVideoDevices()).values().first()),
-        s = (0, c.e7)([W.Z], () => (null != a && a.type !== eo.fO.ACTIVITY && a.type !== eo.fO.HIDDEN_STREAM ? W.Z.getStreamId(a.user.id, t.getGuildId(), (0, y.Z)(a.type)) : null), [a, t]),
+        s = (0, c.e7)([Y.Z], () => (null != a && a.type !== eo.fO.ACTIVITY && a.type !== eo.fO.HIDDEN_STREAM ? Y.Z.getStreamId(a.user.id, t.getGuildId(), (0, y.Z)(a.type)) : null), [a, t]),
         d = null == o || o.disabled,
         f = !d,
         _ = (0, c.e7)([F.Z], () => !d && F.Z.isVideoEnabled(), [d]),
-        p = (0, c.e7)([F.Z], () => (0, N.Z)(F.Z)),
+        p = (0, c.e7)([F.Z], () => (0, A.Z)(F.Z)),
         h = (0, c.e7)([B.default], () => B.default.getId()),
         m = (0, c.e7)([G.Z], () => G.Z.getCurrentUserActiveStream()),
         g = (0, S.Z)((null == a ? void 0 : a.type) === eo.fO.STREAM ? u.Yn.STREAM : u.Yn.DEFAULT, null != a && 'user' in a ? a.user.id : ''),
@@ -378,7 +378,7 @@ function ep(e) {
         currentUserId: h,
         activeStreams: E,
         activeSelfStream: m,
-        isMainWindowFocused: Y.Z.isFocused(),
+        isMainWindowFocused: W.Z.isFocused(),
         width: n,
         isOverlayRenderingVideo: !1,
         videoStreamError: g

@@ -51,12 +51,12 @@ function d(e, t, n, d) {
     if (null != d)
         return (0, r.jsx)(i.sNh, {
             id: 'invite-to-stream',
-            label: u.NW.string(u.t['OzOM/v']),
+            label: u.intl.string(u.t['OzOM/v']),
             action: h,
             icon: i.ejJ
         });
     if (null == t || null == e || !s.Z.can(c.Plq.CREATE_INSTANT_INVITE, e)) return null;
-    let g = f ? u.NW.string(u.t['EE+P0N']) : u.NW.string(u.t['6Qgren']);
+    let g = f ? u.intl.string(u.t['EE+P0N']) : u.intl.string(u.t['6Qgren']);
     return (0, r.jsx)(i.sNh, {
         id: 'invite-friends',
         label: g,

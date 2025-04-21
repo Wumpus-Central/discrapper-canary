@@ -2,8 +2,8 @@ n.d(t, { Z: () => y });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    l = n(442837),
+    l = n.n(i),
+    a = n(442837),
     o = n(481060),
     s = n(239091),
     c = n(901461),
@@ -19,7 +19,7 @@ var i = n(120356),
     x = n(955344);
 function y(e) {
     let { message: t, compact: n } = e,
-        i = (0, l.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
+        i = (0, a.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
     return null == i
         ? null
         : (0, r.jsx)(v, {
@@ -30,23 +30,23 @@ function y(e) {
 }
 function v(e) {
     let { channel: t, compact: i, isSystemMessage: c } = e,
-        u = (0, l.e7)([m.Z], () => m.Z.getCount(t.id)),
+        u = (0, a.e7)([m.Z], () => m.Z.getCount(t.id)),
         d = (function (e) {
             var t;
-            let n = (0, l.e7)([m.Z], () => m.Z.getMostRecentMessage(e.id)),
-                i = (0, l.e7)([m.Z], () => m.Z.getCount(e.id)),
-                a = (0, f.Ok)(e);
+            let n = (0, a.e7)([m.Z], () => m.Z.getMostRecentMessage(e.id)),
+                i = (0, a.e7)([m.Z], () => m.Z.getCount(e.id)),
+                l = (0, f.Ok)(e);
             return (null == (t = e.threadMetadata) ? void 0 : t.archived)
-                ? b.NW.string(b.t.ZTo4HR)
+                ? b.intl.string(b.t.ZTo4HR)
                 : null == i || 0 === i
-                  ? b.NW.string(b.t.HYtNyM)
+                  ? b.intl.string(b.t.HYtNyM)
                   : null == n
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)('span', { children: b.NW.string(b.t.ZTo4HR) }),
+                              (0, r.jsx)('span', { children: b.intl.string(b.t.ZTo4HR) }),
                               (0, r.jsx)('span', {
                                   className: x.timestamp,
-                                  children: (0, f.Ye)(a)
+                                  children: (0, f.Ye)(l)
                               })
                           ]
                       })
@@ -58,7 +58,7 @@ function v(e) {
                               }),
                               (0, r.jsx)('span', {
                                   className: x.timestamp,
-                                  children: (0, f.Ye)(a)
+                                  children: (0, f.Ye)(l)
                               })
                           ]
                       });
@@ -67,7 +67,7 @@ function v(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                className: a()(x.spine, {
+                className: l()(x.spine, {
                     [x.cozy]: !i,
                     [x.systemMessageSpine]: c
                 })
@@ -116,14 +116,14 @@ function v(e) {
                             );
                     });
                 },
-                'aria-roledescription': b.NW.string(b.t['8ipxiY']),
-                className: a()(x.container, { [x.systemMessageContainer]: c }),
+                'aria-roledescription': b.intl.string(b.t['8ipxiY']),
+                className: l()(x.container, { [x.systemMessageContainer]: c }),
                 children: (0, r.jsxs)(o.nuw, {
                     children: [
                         (0, r.jsxs)('div', {
                             className: x.topLine,
                             children: [
-                                (0, r.jsx)(o.nn4, { children: b.NW.string(b.t['7Xm5QE']) }),
+                                (0, r.jsx)(o.nn4, { children: b.intl.string(b.t['7Xm5QE']) }),
                                 (0, r.jsx)('span', {
                                     className: x.name,
                                     children: t.name

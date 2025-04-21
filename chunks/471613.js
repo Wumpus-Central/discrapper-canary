@@ -1,15 +1,15 @@
 n.d(t, { Z: () => p });
 var r,
     i,
-    s,
-    l = n(442837),
+    l,
+    s = n(442837),
     a = n(570140),
     o = n(40572),
     c = n(914010);
 let d = {},
     u = {},
     m = 0;
-class g extends (s = l.ZP.Store) {
+class g extends (l = s.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }

@@ -35,7 +35,7 @@ function g(e) {
               submitting: d,
               children: (0, l.jsxs)('div', {
                   className: y.btnContent,
-                  children: [u, null != c ? m.NW.formatToPlainString(m.t.i4T8v7, { rate: c }) : m.NW.string(m.t.uuzaAA)]
+                  children: [u, null != c ? m.intl.formatToPlainString(m.t.i4T8v7, { rate: c }) : m.intl.string(m.t.uuzaAA)]
               })
           })
         : (0, l.jsx)(S, {
@@ -43,11 +43,11 @@ function g(e) {
               children: (function (e, t) {
                   switch (e) {
                       case 2:
-                          return m.NW.formatToPlainString(m.t.k1ew5O, { rate: t });
+                          return m.intl.formatToPlainString(m.t.k1ew5O, { rate: t });
                       case 3:
-                          return m.NW.formatToPlainString(m.t['Hs3Y+P'], { rate: t });
+                          return m.intl.formatToPlainString(m.t['Hs3Y+P'], { rate: t });
                       case 4:
-                          return m.NW.string(m.t.DLAKbm);
+                          return m.intl.string(m.t.DLAKbm);
                   }
               })(s, null != c ? c : '')
           });
@@ -70,7 +70,7 @@ function h(e) {
         : g
           ? (0, l.jsx)(S, {
                 className: n,
-                children: m.NW.string(m.t['/bUsx8'])
+                children: m.intl.string(m.t['/bUsx8'])
             })
           : (0, l.jsx)(j, {
                 appId: t,
@@ -81,7 +81,7 @@ function h(e) {
                 className: n,
                 children: (0, l.jsxs)('div', {
                     className: y.btnContent,
-                    children: [s, m.NW.format(m.t.Xp5WTk, { price: (0, f.T4)(h.amount, h.currency) })]
+                    children: [s, m.intl.format(m.t.Xp5WTk, { price: (0, f.T4)(h.amount, h.currency) })]
                 })
             });
 }

@@ -22,8 +22,8 @@ var r = n(200651),
     b = n(822857),
     p = n(622562),
     g = n(937860),
-    N = n(921944),
-    C = n(973792),
+    C = n(921944),
+    N = n(973792),
     O = n(447489),
     v = n(484885);
 function x() {
@@ -55,8 +55,8 @@ let j = () => (0, h.Lk)(document.body.style.getPropertyValue('--custom-app-panel
                     c ||
                         (0, f.EW)(y[t], {
                             forceTrack: !0,
-                            dismissAction: 'CTA_CLICK' === e ? N.L.TAKE_ACTION : N.L.USER_DISMISS,
-                            groupName: N.R.VIRTUAL_CURRENCY_ONBOARDING
+                            dismissAction: 'CTA_CLICK' === e ? C.L.TAKE_ACTION : C.L.USER_DISMISS,
+                            groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING
                         });
                 },
                 [c, t]
@@ -64,7 +64,7 @@ let j = () => (0, h.Lk)(document.body.style.getPropertyValue('--custom-app-panel
             [m, h] = a.useState(!1);
         return (
             a.useEffect(() => {
-                u ? m || ((0, f.kk)(o, { groupName: N.R.VIRTUAL_CURRENCY_ONBOARDING }), void 0 !== r && r(), h(!0)) : m && h(!1);
+                u ? m || ((0, f.kk)(o, { groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING }), void 0 !== r && r(), h(!0)) : m && h(!1);
             }, [u, r, m, o]),
             {
                 shouldShow: m,
@@ -75,15 +75,15 @@ let j = () => (0, h.Lk)(document.body.style.getPropertyValue('--custom-app-panel
     k = (e) => {
         let { invertTail: t, leftOffset: n, rightOffset: a, tailSpineClassName: s, tailTargetInnerClassName: o } = e;
         return (0, r.jsxs)('div', {
-            className: l()(C.tail, t ? C.tailPositionInverted : C.tailPositionNormal),
+            className: l()(N.tail, t ? N.tailPositionInverted : N.tailPositionNormal),
             style: {
                 left: n,
                 right: a
             },
             children: [
-                (0, r.jsx)('div', { className: l()(C.tailSpine, s) }),
+                (0, r.jsx)('div', { className: l()(N.tailSpine, s) }),
                 (0, r.jsx)('div', {
-                    className: l()(C.tailTargetOuter, t ? C.tailTargetPositionInverted : C.tailTargetPositionNormal),
+                    className: l()(N.tailTargetOuter, t ? N.tailTargetPositionInverted : N.tailTargetPositionNormal),
                     children: (0, r.jsx)('svg', {
                         xmlns: 'http://www.w3.org/2000/svg',
                         width: '8',
@@ -94,7 +94,7 @@ let j = () => (0, h.Lk)(document.body.style.getPropertyValue('--custom-app-panel
                             cx: '50%',
                             cy: '50%',
                             r: '3',
-                            className: l()(C.tailTargetInner, o)
+                            className: l()(N.tailTargetInner, o)
                         })
                     })
                 })
@@ -109,13 +109,13 @@ let j = () => (0, h.Lk)(document.body.style.getPropertyValue('--custom-app-panel
         return n || null == a
             ? (0, r.jsx)('img', {
                   src: s,
-                  className: C.orbAsset,
+                  className: N.orbAsset,
                   alt: 'Orb'
               })
             : (0, r.jsxs)(m.Z, {
                   autoPlay: !0,
                   loop: !0,
-                  className: C.orbAsset,
+                  className: N.orbAsset,
                   children: [
                       (0, r.jsx)('source', {
                           src: v.Z,
@@ -123,7 +123,7 @@ let j = () => (0, h.Lk)(document.body.style.getPropertyValue('--custom-app-panel
                       }),
                       (0, r.jsx)('img', {
                           src: O.Z,
-                          className: C.orbAsset,
+                          className: N.orbAsset,
                           alt: 'Orb'
                       })
                   ]
@@ -132,29 +132,29 @@ let j = () => (0, h.Lk)(document.body.style.getPropertyValue('--custom-app-panel
     E = (e) => {
         let { titleText: t, descriptionText: n, onClose: a, onCtaClick: s, ctaText: l, iconComponent: o, tailLeftOffset: i = 22, renderTail: u, invertCoachmark: d = !1, coachmarkRef: m } = e;
         return (0, r.jsxs)('div', {
-            className: C.container,
+            className: N.container,
             ref: m,
             children: [
                 (0, r.jsx)(g.s, { onClick: a }),
                 o,
                 (0, r.jsxs)('div', {
-                    className: C.content,
+                    className: N.content,
                     children: [
                         (0, r.jsx)(c.X6q, {
-                            className: C.title,
+                            className: N.title,
                             variant: 'heading-md/bold',
                             children: t
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: 'text-sm/medium',
-                            className: C.description,
+                            className: N.description,
                             children: n
                         })
                     ]
                 }),
                 void 0 !== l &&
                     (0, r.jsx)(c.zxk, {
-                        className: C.ctaButton,
+                        className: N.ctaButton,
                         color: c.zxk.Colors.BRAND,
                         look: c.zxk.Looks.FILLED,
                         onClick: s,
@@ -209,13 +209,13 @@ let j = () => (0, h.Lk)(document.body.style.getPropertyValue('--custom-app-panel
 function T(e) {
     let { calculateVisibility: t, children: n, popoutElement: s, positionControlRef: l, targetElementRef: o, defaultCoachmarkPosition: i, disableAutoInvert: d, onGetTargetElementDimensions: m, spacing: f } = e,
         [h, b] = a.useState('bottom' === i),
-        [g, N] = a.useState(!0),
-        [C, O] = a.useState(String(Date.now())),
+        [g, C] = a.useState(!0),
+        [N, O] = a.useState(String(Date.now())),
         v = (0, u.Z)(),
         x = a.useCallback(
             (e) => {
                 let n = t(e);
-                n !== g && N(n);
+                n !== g && C(n);
             },
             [g, t]
         ),
@@ -267,7 +267,7 @@ function T(e) {
         align: 'left',
         shouldShow: E,
         spacing: f,
-        positionKey: C,
+        positionKey: N,
         animation: c.yRy.Animation.TRANSLATE,
         targetElementRef: o,
         children: () => n

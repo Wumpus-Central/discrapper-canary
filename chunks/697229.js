@@ -2,26 +2,26 @@ n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(481060),
-    c = n(914010),
-    a = n(362658),
-    l = n(981631),
+    l = n(481060),
+    o = n(914010),
+    c = n(362658),
+    a = n(981631),
     s = n(388032);
 function u(e) {
-    let t = (0, i.e7)([c.Z], () => c.Z.getGuildId()),
-        u = e.type === l.d4z.GUILD_CATEGORY,
-        { isFavoritesPerk: d } = (0, a.z)('useCategoryAddChannelItem');
-    return !__OVERLAY__ && t === l.I_8 && d && u
-        ? (0, r.jsx)(o.sNh, {
+    let t = (0, i.e7)([o.Z], () => o.Z.getGuildId()),
+        u = e.type === a.d4z.GUILD_CATEGORY,
+        { isFavoritesPerk: d } = (0, c.z)('useCategoryAddChannelItem');
+    return !__OVERLAY__ && t === a.I_8 && d && u
+        ? (0, r.jsx)(l.sNh, {
               id: 'add-channel-to-category',
-              icon: o.oFk,
+              icon: l.oFk,
               color: 'brand',
-              label: s.NW.string(s.t['6uDHk5']),
+              label: s.intl.string(s.t['6uDHk5']),
               action: function () {
-                  (0, o.ZDy)(async () => {
+                  (0, l.ZDy)(async () => {
                       let { default: t } = await n.e('95257').then(n.bind(n, 178125));
                       return (n) => {
-                          var i, o;
+                          var i, l;
                           return (0, r.jsx)(
                               t,
                               ((i = (function (e) {
@@ -49,9 +49,9 @@ function u(e) {
                                   }
                                   return e;
                               })({}, n)),
-                              (o = o = { parentId: e.id }),
+                              (l = l = { parentId: e.id }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
@@ -59,8 +59,8 @@ function u(e) {
                                             n.push.apply(n, r);
                                         }
                                         return n;
-                                    })(Object(o)).forEach(function (e) {
-                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                                    })(Object(l)).forEach(function (e) {
+                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
                               i)
                           );

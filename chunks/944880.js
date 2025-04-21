@@ -58,7 +58,7 @@ function S() {
         return;
     }
     if ((0, p.dR)({ location: 'tenure_reward_manager' }))
-        if (!0 === e || A(r)) R();
+        if (!0 === e || N(r)) R();
         else {
             let e = d.Z.getForApplication(g.CL);
             if (null == e) return;
@@ -76,14 +76,14 @@ function T() {
     let e = h.Z.getState();
     return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > v;
 }
-function N() {
+function A() {
     let e = (0, m.GT)();
     return null != e && null != e.redeemable_at && 0 >= i()(e.redeemable_at).diff(i().utc(), 'seconds');
 }
-function A(e) {
+function N(e) {
     if (h.Z.getFetchState() !== h.M.FETCHED) return !0;
     let t = (0, m.GT)();
-    return (null != t && null != e && e.id !== t.user_id) || T() || N();
+    return (null != t && null != e && e.id !== t.user_id) || T() || A();
 }
 function C() {
     if ((P(), h.Z.getFetchState() !== h.M.FETCHED || y)) return;

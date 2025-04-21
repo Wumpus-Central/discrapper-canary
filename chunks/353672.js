@@ -1,38 +1,38 @@
 n.d(e, { Z: () => a });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var s = n(120356),
-    i = n.n(s),
-    o = n(481060),
-    l = n(469894);
+var r = n(120356),
+    s = n.n(r),
+    l = n(481060),
+    o = n(469894);
 function a(t) {
-    let { tips: e, className: n, headerText: s } = t;
-    return (0, r.jsxs)('div', {
-        className: i()(l.tipsSection, n),
+    let { tips: e, className: n, headerText: r } = t;
+    return (0, i.jsxs)('div', {
+        className: s()(o.tipsSection, n),
         children: [
-            (0, r.jsx)('div', {
-                className: l.tipsHeader,
-                children: (0, r.jsx)(o.X6q, {
+            (0, i.jsx)('div', {
+                className: o.tipsHeader,
+                children: (0, i.jsx)(l.X6q, {
                     variant: 'heading-lg/bold',
-                    className: l.headerText,
-                    children: s
+                    className: o.headerText,
+                    children: r
                 })
             }),
-            (0, r.jsx)('ul', {
-                className: l.tipsList,
+            (0, i.jsx)('ul', {
+                className: o.tipsList,
                 children: e.map((t, e) =>
-                    (0, r.jsxs)(
+                    (0, i.jsxs)(
                         'li',
                         {
-                            className: l.tipRow,
+                            className: o.tipRow,
                             children: [
-                                (0, r.jsx)(o.X6q, {
+                                (0, i.jsx)(l.X6q, {
                                     variant: 'heading-md/semibold',
                                     color: 'text-brand',
-                                    className: l.tipNumber,
+                                    className: o.tipNumber,
                                     children: e + 1
                                 }),
-                                (0, r.jsx)(o.Text, {
+                                (0, i.jsx)(l.Text, {
                                     variant: 'text-sm/medium',
                                     children: t
                                 })

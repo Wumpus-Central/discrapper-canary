@@ -38,6 +38,6 @@ function u() {
     return r.useMemo(() => {
         let t = c({}, e),
             n = t[o.w5];
-        return null == n || (t[o.w5] = c({}, n, n.disabled && { name: s.NW.string(s.t.WKWARU) })), t;
+        return null == n || (t[o.w5] = c({}, n, n.disabled && { name: s.intl.string(s.t.WKWARU) })), t;
     }, [e]);
 }

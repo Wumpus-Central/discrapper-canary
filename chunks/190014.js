@@ -1,9 +1,9 @@
-n.d(t, { Z: () => N }), n(388685);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => x }), n(388685);
+var i = n(200651),
+    r = n(192379),
     s = n(626135),
-    a = n(63063),
-    l = n(88658),
+    l = n(63063),
+    a = n(88658),
     o = n(695346),
     c = n(639814),
     d = n(838436),
@@ -17,11 +17,11 @@ var r = n(200651),
 function _(e) {
     let { ingress: t, guildId: n } = e,
         c = o.iH.useSetting().includes(n),
-        g = i.useCallback(
+        g = r.useCallback(
             (e) => {
-                let r = (0, l.rr)();
-                e ? r.delete(n) : r.add(n),
-                    o.iH.updateSetting([...r]),
+                let i = (0, a.rr)();
+                e ? i.delete(n) : i.add(n),
+                    o.iH.updateSetting([...i]),
                     s.default.track(f.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: m.Y.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
                         ingress: t,
@@ -32,21 +32,21 @@ function _(e) {
         );
     return n === h.T
         ? null
-        : (0, r.jsx)(d.U, {
+        : (0, i.jsx)(d.U, {
               setting: p.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING_V2,
-              children: (0, r.jsx)(u.Z, {
-                  title: b.NW.string(b.t['T+nevL']),
+              children: (0, i.jsx)(u.Z, {
+                  title: b.intl.string(b.t['T+nevL']),
                   value: !c,
                   onChange: g,
-                  note: b.NW.format(b.t.jXKQCg, { helpdeskArticle: a.Z.getArticleURL(f.BhN.ACTIVITY_STATUS_SETTINGS) })
+                  note: b.intl.format(b.t.jXKQCg, { helpdeskArticle: l.Z.getArticleURL(f.BhN.ACTIVITY_STATUS_SETTINGS) })
               })
           });
 }
-function N(e) {
+function x(e) {
     let { ingress: t = g.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
-        i = (0, c.is)();
-    return (0, r.jsx)(_, {
+        r = (0, c.is)();
+    return (0, i.jsx)(_, {
         ingress: t,
-        guildId: null != n ? n : i
+        guildId: null != n ? n : r
     });
 }

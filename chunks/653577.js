@@ -50,7 +50,7 @@ function y(e) {
                     (0, r.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         className: m.statusText,
-                        children: g.NW.string(g.t.Mgpxi4)
+                        children: g.intl.string(g.t.Mgpxi4)
                     }),
                     (0, r.jsx)(a.vdY, {
                         color: 'currentColor',

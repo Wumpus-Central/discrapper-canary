@@ -19,7 +19,7 @@ function h(e) {
             null != e && s.Cq(e);
         }, [f]),
         O = null != (n = null == p ? void 0 : p.topic) ? n : h.name,
-        N = d.NW.formatToPlainString(d.t['T+DNAA'], { channel: O });
+        b = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: O });
     return (0, r.jsx)('div', {
         ref: g,
         children: (0, r.jsx)(o.P3F, {
@@ -27,7 +27,7 @@ function h(e) {
             focusProps: { ringTarget: g },
             children: (0, r.jsx)(o.X6q, {
                 variant: 'heading-sm/semibold',
-                children: N
+                children: b
             })
         })
     });
@@ -38,7 +38,7 @@ class f {
     }
     createHeader(e) {
         return {
-            subtitle: d.NW.string(d.t['+AJFJy']),
+            subtitle: d.intl.string(d.t['+AJFJy']),
             icon: null
         };
     }

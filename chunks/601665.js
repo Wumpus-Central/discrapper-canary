@@ -22,7 +22,7 @@ var r = n(200651),
     I = n(228168),
     S = n(388032),
     T = n(200669);
-function N(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function N(e, t, n) {
         e
     );
 }
-function A(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,24 +46,24 @@ function A(e) {
                 })
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
 }
 function C(e) {
-    let { user: t, currentUser: n, guildId: N, channelId: C, messageId: R, roleId: P, openedAt: w, closePopout: D, setPopoutRef: L, disableUserProfileLink: x = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
+    let { user: t, currentUser: n, guildId: A, channelId: C, messageId: R, roleId: P, openedAt: w, closePopout: D, setPopoutRef: L, disableUserProfileLink: x = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
         { analyticsLocations: k } = (0, c.ZP)([...M, l.Z.BITE_SIZE_PROFILE_POPOUT]),
         j = (0, d.ZB)({
             layout: 'POPOUT',
             userId: t.id,
-            guildId: N,
+            guildId: A,
             channelId: C,
             messageId: R,
             roleId: P
         }),
-        U = (0, _.ZP)(t.id, N),
-        G = (0, a.e7)([u.Z], () => (null != N ? u.Z.getGuild(N) : null)),
+        U = (0, _.ZP)(t.id, A),
+        G = (0, a.e7)([u.Z], () => (null != A ? u.Z.getGuild(A) : null)),
         B = i.useRef(null),
         F = (0, s.Z)(B);
     i.useEffect(() => {
@@ -72,7 +72,7 @@ function C(e) {
     let V = (e) => {
             null == D || D(),
                 (0, y.openUserProfileModal)(
-                    A(
+                    N(
                         {
                             sourceAnalyticsLocations: k,
                             hideRestrictedProfile: !0
@@ -87,11 +87,11 @@ function C(e) {
                 ? null
                 : (0, r.jsx)(o.sNh, {
                       id: 'view-profile',
-                      label: S.NW.string(S.t['+Xp3ho']),
+                      label: S.intl.string(S.t['+Xp3ho']),
                       action: () => {
                           V(),
                               (0, f.pQ)(
-                                  A(
+                                  N(
                                       {
                                           action: 'PRESS_VIEW_PROFILE',
                                           analyticsLocations: k
@@ -121,7 +121,7 @@ function C(e) {
                             profileType: I.y0.BITE_SIZE,
                             children: (0, r.jsx)(g.Z, {
                                 user: t,
-                                guildId: N,
+                                guildId: A,
                                 viewProfileItem: Z(),
                                 onCloseProfile: D
                             })
@@ -132,13 +132,13 @@ function C(e) {
                                 (0, r.jsx)(h.Z, {
                                     user: t,
                                     displayProfile: U,
-                                    guildId: N,
+                                    guildId: A,
                                     profileType: I.y0.BITE_SIZE
                                 }),
                                 (0, r.jsx)(p.Z, {
                                     user: t,
                                     displayProfile: U,
-                                    guildId: N,
+                                    guildId: A,
                                     channelId: C,
                                     profileType: I.y0.BITE_SIZE,
                                     onOpenProfile: x ? void 0 : V
@@ -163,7 +163,7 @@ function C(e) {
                         }),
                         (0, r.jsx)(O.Z, {
                             user: t,
-                            guildId: N,
+                            guildId: A,
                             channelId: C,
                             onClose: D
                         })

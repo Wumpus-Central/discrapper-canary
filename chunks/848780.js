@@ -16,6 +16,6 @@ function c(e) {
         size: a.PhG.MIN,
         onClick: c,
         color: a.Ttl.LINK,
-        children: l.NW.string(l.t.QbcRCA)
+        children: l.intl.string(l.t.QbcRCA)
     });
 }

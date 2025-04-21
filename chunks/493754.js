@@ -109,13 +109,13 @@ function C(e) {
             return i;
         })(e, ['stream', 'applicationId', 'channel', 'exitFullScreen', 'appContext', 'analyticsLocation', 'className']);
     let E = null == o ? void 0 : o.getGuildId(),
-        N = null == o ? void 0 : o.id,
-        I = (0, s.e7)([p.Z], () => (null != E ? p.Z.getGuild(E) : null), [E]),
-        P = (0, s.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(N), [N]);
-    if (!(null != I && null != o && h.Z.can(f.Plq.CREATE_INSTANT_INVITE, o))) return null;
-    let S = m.NW.string(m.t.VINpSE);
+        I = null == o ? void 0 : o.id,
+        P = (0, s.e7)([p.Z], () => (null != E ? p.Z.getGuild(E) : null), [E]),
+        S = (0, s.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(I), [I]);
+    if (!(null != P && null != o && h.Z.can(f.Plq.CREATE_INSTANT_INVITE, o))) return null;
+    let Z = m.intl.string(m.t.VINpSE);
     return (
-        null != n ? (S = m.NW.string(m.t['6VQaqa'])) : null != i && (S = m.NW.string(m.t['OzOM/v'])),
+        null != n ? (Z = m.intl.string(m.t['6VQaqa'])) : null != i && (Z = m.intl.string(m.t['OzOM/v'])),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(
@@ -126,24 +126,24 @@ function C(e) {
                                 size: null != (t = O.size) ? t : c.zxk.Sizes.SMALL,
                                 color: g.buttonColor,
                                 onClick: () => {
-                                    a()(null != I, 'guild cannot be null'),
+                                    a()(null != P, 'guild cannot be null'),
                                         a()(null != o, 'channel cannot be null'),
                                         y({
-                                            guild: I,
+                                            guild: P,
                                             channel: o,
                                             streamUserId: null == n ? void 0 : n.ownerId,
                                             applicationId: i,
                                             appContext: x,
                                             exitFullScreen: C,
                                             analyticsLocation: v,
-                                            guildScheduledEvent: P
+                                            guildScheduledEvent: S
                                         });
                                 },
                                 className: l()(j, g.textButton)
                             },
                             O
                         ),
-                        { children: S }
+                        { children: Z }
                     )
                 ),
                 (0, r.jsx)(d.Z, {
@@ -153,7 +153,7 @@ function C(e) {
                     className: l()(j, g.iconButton),
                     exitFullScreen: C,
                     analyticsLocation: v,
-                    guildScheduledEvent: P
+                    guildScheduledEvent: S
                 })
             ]
         })

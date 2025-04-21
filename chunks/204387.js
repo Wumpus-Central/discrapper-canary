@@ -1,7 +1,7 @@
 r.d(t, { default: () => f }), r(388685);
 var a = r(200651),
-    s = r(192379),
-    i = r(481060),
+    i = r(192379),
+    s = r(481060),
     n = r(100527),
     l = r(906732),
     o = r(626135),
@@ -12,9 +12,9 @@ var a = r(200651),
 let f = (e) => {
     let t,
         { transitionState: r, onClose: f, sourceAnalyticsLocations: p } = e,
-        [u, h] = s.useState(1),
-        [m, j] = s.useState(new Set()),
-        [_, g] = s.useState(new Map()),
+        [u, h] = i.useState(1),
+        [m, j] = i.useState(new Set()),
+        [_, g] = i.useState(new Map()),
         { analyticsLocations: L } = (0, l.ZP)([...p, n.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
     switch (u) {
         case 1:
@@ -39,7 +39,7 @@ let f = (e) => {
         default:
             f();
     }
-    return (0, a.jsx)(i.Y0X, {
+    return (0, a.jsx)(s.Y0X, {
         transitionState: r,
         children: t
     });

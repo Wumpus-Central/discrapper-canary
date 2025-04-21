@@ -1,8 +1,8 @@
 r.d(t, { Z: () => f }), r(415506), r(642613);
 var n = r(200651);
 r(192379);
-var a = r(120356),
-    i = r.n(a),
+var i = r(120356),
+    a = r.n(i),
     l = r(643872),
     s = r(481060),
     o = r(810568),
@@ -13,8 +13,8 @@ let m = [l.p.OFFICIAL, l.p.TWITTER, l.p.YOUTUBE];
 function g(e) {
     let { website: t, trackClick: r } = e,
         {
-            action: a,
-            icon: i,
+            action: i,
+            icon: a,
             title: u
         } = (function (e) {
             switch (e.category) {
@@ -22,19 +22,19 @@ function g(e) {
                     return {
                         icon: (0, n.jsx)(s.enf, { colorClass: d.linkIcon }),
                         action: o.as.WebsiteLink,
-                        title: c.NW.string(c.t.fOUKvr)
+                        title: c.intl.string(c.t.fOUKvr)
                     };
                 case l.p.TWITTER:
                     return {
                         icon: (0, n.jsx)(s.TAi, { colorClass: d.linkIcon }),
                         action: o.as.XLink,
-                        title: c.NW.string(c.t['INic4+'])
+                        title: c.intl.string(c.t['INic4+'])
                     };
                 case l.p.YOUTUBE:
                     return {
                         action: o.as.YouTubeLink,
                         icon: (0, n.jsx)(s.$5w, { colorClass: d.linkIcon }),
-                        title: c.NW.string(c.t.lNmxbG)
+                        title: c.intl.string(c.t.lNmxbG)
                     };
                 default:
                     throw Error('Unknown IGDB website category');
@@ -52,20 +52,20 @@ function g(e) {
                     if (null == e) return {};
                     var r,
                         n,
-                        a = (function (e, t) {
+                        i = (function (e, t) {
                             if (null == e) return {};
                             var r,
                                 n,
-                                a = {},
-                                i = Object.keys(e);
-                            for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
-                            return a;
+                                i = {},
+                                a = Object.keys(e);
+                            for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                            return i;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
-                        var i = Object.getOwnPropertySymbols(e);
-                        for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+                        var a = Object.getOwnPropertySymbols(e);
+                        for (n = 0; n < a.length; n++) (r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
                     }
-                    return a;
+                    return i;
                 })(e, ['onClick']);
             return (0, n.jsx)(
                 s.eee,
@@ -100,10 +100,10 @@ function g(e) {
                         title: u,
                         href: t.url,
                         onClick: () => {
-                            r(a), null == c || c();
+                            r(i), null == c || c();
                         },
                         target: '_blank',
-                        children: i
+                        children: a
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
@@ -125,13 +125,13 @@ function g(e) {
 let f = function (e) {
     let { detectedGame: t, trackClick: r } = e;
     if (null == t.websites) return null;
-    let a = t.websites
+    let i = t.websites
         .filter((e) => {
             let { category: t } = e;
             return m.includes(t);
         })
         .sort((e, t) => e.category - t.category);
-    return 0 === a.length
+    return 0 === i.length
         ? null
         : (0, n.jsxs)('div', {
               children: [
@@ -139,11 +139,11 @@ let f = function (e) {
                       className: u.sectionHeader,
                       variant: 'text-xs/semibold',
                       color: 'header-secondary',
-                      children: c.NW.string(c.t.Oj3o19)
+                      children: c.intl.string(c.t.Oj3o19)
                   }),
                   (0, n.jsx)('div', {
-                      className: i()(u.row, u.gapMd),
-                      children: a.map((e) =>
+                      className: a()(u.row, u.gapMd),
+                      children: i.map((e) =>
                           (0, n.jsx)(
                               g,
                               {

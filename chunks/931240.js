@@ -4,24 +4,24 @@ n.d(t, {
 }),
     n(953529),
     n(388685);
-var r = n(544891),
-    i = n(570140);
+var i = n(544891),
+    r = n(570140);
 n(479531);
 var s = n(314897),
-    a = n(594174),
-    l = n(970606);
+    l = n(594174),
+    a = n(970606);
 n(308083);
 var o = n(981631);
 async function c(e, t, n) {
     try {
         null != e &&
             !0 === t &&
-            (0, l.hx)({
+            (0, a.hx)({
                 guildId: e,
                 userId: s.default.getId(),
                 source: n
             });
-        let c = await r.tn.put({
+        let c = await i.tn.put({
             url: o.ANM.USER_SET_CLAN_IDENTITY,
             body: {
                 identity_guild_id: e,
@@ -29,38 +29,38 @@ async function c(e, t, n) {
             },
             rejectWithError: !1
         });
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'CURRENT_USER_UPDATE',
             user: (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        i = Object.keys(n);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        i.forEach(function (t) {
+                            var i;
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: i,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = i);
                         });
                 }
                 return e;
-            })({}, a.default.getCurrentUser(), c.body)
+            })({}, l.default.getCurrentUser(), c.body)
         });
     } catch (e) {
         return;
     }
 }
 function d() {
-    i.Z.dispatch({ type: 'CLAN_SETUP_RESET' });
+    r.Z.dispatch({ type: 'CLAN_SETUP_RESET' });
 }

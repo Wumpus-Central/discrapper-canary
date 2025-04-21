@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => P });
 var r = n(200651),
     i = n(192379),
     l = n(374470),
@@ -24,7 +24,7 @@ let O = { height: (0, b.DK)() };
 function E() {
     f.yT(m.ti.DISMISSED);
 }
-function N(e) {
+function I(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: u } = e,
         d = i.useRef(null),
         { renderWindow: f, windowDispatch: b } = i.useContext(s.ZP),
@@ -65,7 +65,7 @@ function N(e) {
         i.useEffect(() => {
             ((!v && (0, o.$s)()) || (v && !j)) && E();
         }, [j, v]);
-    let N = (0, _.Z)();
+    let I = (0, _.Z)();
     return (0, r.jsx)(g.Z, {
         ref: d,
         context: {
@@ -73,10 +73,10 @@ function N(e) {
             type: 'channel'
         },
         entrypoint: m._b.TEXT,
-        initHistory: N
+        initHistory: I
     });
 }
-let I = i.memo(function (e) {
+let P = i.memo(function (e) {
     var { positionTargetRef: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -114,11 +114,11 @@ let I = i.memo(function (e) {
                     className: j.positionContainer,
                     role: 'dialog',
                     style: O,
-                    'aria-label': v.NW.string(v.t['3CNGLC']),
+                    'aria-label': v.intl.string(v.t['3CNGLC']),
                     children:
                         t &&
                         (0, r.jsx)(
-                            N,
+                            I,
                             (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},

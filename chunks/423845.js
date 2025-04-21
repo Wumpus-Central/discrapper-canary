@@ -21,8 +21,8 @@ var r = n(620014),
     I = n(58834),
     S = n(453342),
     T = 1,
-    N = 2,
-    A = 4,
+    A = 2,
+    N = 4,
     C = '[object Arguments]',
     R = '[object Array]',
     P = '[object Boolean]',
@@ -40,8 +40,8 @@ var r = n(620014),
     V = '[object WeakMap]',
     Z = '[object ArrayBuffer]',
     H = '[object DataView]',
-    W = '[object Float32Array]',
-    Y = '[object Float64Array]',
+    Y = '[object Float32Array]',
+    W = '[object Float64Array]',
     K = '[object Int8Array]',
     z = '[object Int16Array]',
     q = '[object Int32Array]',
@@ -53,8 +53,8 @@ var r = n(620014),
 function et(e, t, n, R, P, w) {
     var D,
         M = t & T,
-        k = t & N,
-        U = t & A;
+        k = t & A,
+        U = t & N;
     if ((n && (D = P ? n(e, R, P, w) : n(e)), void 0 !== D)) return D;
     if (!v(e)) return e;
     var G = E(e);
@@ -92,4 +92,4 @@ function et(e, t, n, R, P, w) {
         D
     );
 }
-(ee[C] = ee[R] = ee[Z] = ee[H] = ee[P] = ee[w] = ee[W] = ee[Y] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[j] = ee[U] = ee[G] = ee[B] = ee[F] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[D] = ee[L] = ee[V] = !1), (e.exports = et);
+(ee[C] = ee[R] = ee[Z] = ee[H] = ee[P] = ee[w] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[j] = ee[U] = ee[G] = ee[B] = ee[F] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[D] = ee[L] = ee[V] = !1), (e.exports = et);

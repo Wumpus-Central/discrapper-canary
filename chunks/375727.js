@@ -1,17 +1,17 @@
 n.d(t, {
-    i: () => l,
+    i: () => s,
     y: () => a
 });
 var r = n(200651);
 n(192379);
 var i = n(481060);
-let s = 'EMOJI_STUDIO_MODAL_KEY',
-    l = async (e) => {
+let l = 'EMOJI_STUDIO_MODAL_KEY',
+    s = async (e) => {
         await (0, i.ZDy)(
             async () => {
                 let { EmojiStudioModal: t } = await n.e('78331').then(n.bind(n, 311770));
                 return (n) => {
-                    var i, s;
+                    var i, l;
                     return (0, r.jsx)(
                         t,
                         ((i = (function (e) {
@@ -39,9 +39,9 @@ let s = 'EMOJI_STUDIO_MODAL_KEY',
                             }
                             return e;
                         })({}, n)),
-                        (s = s = { userImage: e }),
+                        (l = l = { userImage: e }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -49,16 +49,16 @@ let s = 'EMOJI_STUDIO_MODAL_KEY',
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(s)).forEach(function (e) {
-                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                              })(Object(l)).forEach(function (e) {
+                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
                         i)
                     );
                 };
             },
-            { modalKey: s }
+            { modalKey: l }
         );
     },
     a = () => {
-        (0, i.Mr3)(s);
+        (0, i.Mr3)(l);
     };

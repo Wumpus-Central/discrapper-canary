@@ -10,11 +10,11 @@ let l = function (e) {
     return (0, r.jsx)('div', {
         className: s.body,
         children: (0, r.jsx)(a.hjN, {
-            title: o.NW.string(o.t.sN3wra),
+            title: o.intl.string(o.t.sN3wra),
             children: (0, r.jsx)(a.oil, {
                 inputRef: l,
-                name: o.NW.string(o.t.sN3wra),
-                placeholder: o.NW.string(o.t.sN3wra),
+                name: o.intl.string(o.t.sN3wra),
+                placeholder: o.intl.string(o.t.sN3wra),
                 onChange: (e) => t(e),
                 value: n.name
             })

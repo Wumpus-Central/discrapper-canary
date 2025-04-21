@@ -21,7 +21,7 @@ let u = (e) => {
             (0, r.jsx)(a.X6q, {
                 className: d.confirmationHeader,
                 variant: 'heading-lg/extrabold',
-                children: c.NW.format(c.t.I5dYFh, {
+                children: c.intl.format(c.t.I5dYFh, {
                     serverName: null == _ ? void 0 : _.toString(),
                     tierName: n.name
                 })
@@ -31,18 +31,18 @@ let u = (e) => {
                     className: d.confirmationSubtitle,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: c.NW.format(c.t.TnhFHh, { benefits: m.asString() })
+                    children: c.intl.format(c.t.TnhFHh, { benefits: m.asString() })
                 }),
             (0, r.jsx)(a.zxk, {
                 className: d.openDiscordButton,
                 onClick: () => (0, o.Z)('role_sub_mweb_success_modal'),
-                children: c.NW.string(c.t.WWvswM)
+                children: c.intl.string(c.t.WWvswM)
             }),
             (0, r.jsx)(a.zxk, {
                 className: d.doneButton,
                 look: a.zxk.Looks.BLANK,
                 onClick: () => t(!0),
-                children: c.NW.string(c.t.y84Dho)
+                children: c.intl.string(c.t.y84Dho)
             })
         ]
     });

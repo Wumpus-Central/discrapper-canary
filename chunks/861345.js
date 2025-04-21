@@ -1,12 +1,12 @@
 n.d(t, {
     p: () => j,
-    s: () => N
+    s: () => _
 }),
     n(953529);
 var r = n(200651),
     i = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     a = n(676062),
     o = n(481060),
     c = n(313201),
@@ -19,17 +19,17 @@ var r = n(200651),
     f = n(388032),
     x = n(492606);
 function b(e) {
-    let { guildId: t, emojiId: n, emojiName: s, title: a, description: c, targetType: d, index: u, dndName: g, onEdit: p, onMove: b, disabled: j = !1 } = e,
-        N = i.useRef(null),
+    let { guildId: t, emojiId: n, emojiName: l, title: a, description: c, targetType: d, index: u, dndName: g, onEdit: p, onMove: b, disabled: j = !1 } = e,
         _ = i.useRef(null),
-        { drag: v, dragPreview: O, drop: C, isDragging: y } = (0, h.Z)(N, d, u, b);
+        v = i.useRef(null),
+        { drag: O, dragPreview: C, drop: y, isDragging: N } = (0, h.Z)(_, d, u, b);
     return (
-        v(_),
-        O(C(N)),
+        O(v),
+        C(y(_)),
         (0, r.jsxs)('div', {
-            ref: N,
-            className: l()(x.card, {
-                [x.cardDragging]: y,
+            ref: _,
+            className: s()(x.card, {
+                [x.cardDragging]: N,
                 [x.disabled]: j
             }),
             children: [
@@ -39,12 +39,12 @@ function b(e) {
                         (0, r.jsx)(m.Z, {
                             guildId: t,
                             emojiId: n,
-                            emojiName: s,
+                            emojiName: l,
                             className: x.emoji
                         }),
                         !j &&
                             (0, r.jsx)('div', {
-                                ref: _,
+                                ref: v,
                                 className: x.dragIconWrapper,
                                 'data-dnd-name': g,
                                 children: (0, r.jsx)(o.Vni, {
@@ -77,7 +77,7 @@ function b(e) {
                         (0, r.jsx)(o.P3F, {
                             className: x.cardActionButton,
                             onClick: j ? void 0 : p,
-                            'aria-label': f.NW.string(f.t.Eoo8h4),
+                            'aria-label': f.intl.string(f.t.Eoo8h4),
                             'aria-disabled': j,
                             children: (0, r.jsx)(o.vdY, {
                                 size: 'xs',
@@ -91,14 +91,14 @@ function b(e) {
     );
 }
 function j(e) {
-    let { benefits: t, onEdit: n, onMove: s, guildId: o } = e,
+    let { benefits: t, onEdit: n, onMove: l, guildId: o } = e,
         m = (0, c.Dt)(),
         { isDragging: h } = (0, a.f)((e) => ({ isDragging: e.getItemType() === m })),
         f = (0, u.mY)();
     return 0 === t.length
         ? null
         : (0, r.jsx)('div', {
-              className: l()(x.container, { [x.isDragging]: h }),
+              className: s()(x.container, { [x.isDragging]: h }),
               children: t.map((e, t) =>
                   (0, r.jsxs)(
                       i.Fragment,
@@ -115,7 +115,7 @@ function j(e) {
                                   index: t,
                                   dndName: (0, p.Z)(e),
                                   onEdit: () => n(t),
-                                  onMove: s,
+                                  onMove: l,
                                   disabled: f
                               })
                           ]
@@ -125,14 +125,14 @@ function j(e) {
               )
           });
 }
-function N(e) {
+function _(e) {
     let { onClick: t, children: n, disabled: i = !1 } = e;
     return (0, r.jsx)(o.P3F, {
         className: x.container,
         onClick: i ? void 0 : t,
         'aria-disabled': i,
         children: (0, r.jsxs)('div', {
-            className: l()(x.card, x.addBenefit, { [x.disabled]: i }),
+            className: s()(x.card, x.addBenefit, { [x.disabled]: i }),
             children: [
                 (0, r.jsx)('div', {
                     className: x.emojiWrapper,

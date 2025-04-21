@@ -17,8 +17,8 @@ var i = n(120356),
     _ = n(185935),
     I = n(320007),
     O = n(540059),
-    N = n(141321),
-    T = n(2818),
+    T = n(141321),
+    N = n(2818),
     S = n(954551),
     p = n(208450),
     A = n(975146),
@@ -88,7 +88,7 @@ function L(e) {
         V = (0, a.e7)([f.Z], () => f.Z.isInChannel(x) || !1),
         G = (0, a.e7)([E.Z], () => null != x && E.Z.getParticipantsListOpen(x)),
         { hasBugReporterAccess: w } = d.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
-        { enabled: W, inInbox: B } = T.Z.useExperiment({ location: 'HeaderBar' }),
+        { enabled: B, inInbox: W } = N.Z.useExperiment({ location: 'HeaderBar' }),
         { hasParticipantsPanel: z } = (0, _.Z)({ location: 'HeaderBar' }),
         Y = (0, O.Q3)('HeaderBar');
     return (0, r.jsx)(C.ZP, {
@@ -106,8 +106,8 @@ function L(e) {
                           F && (0, r.jsx)(C.ZP.Divider, {}),
                           !Y && (0, r.jsx)(y.Z, {}),
                           !Y && (0, r.jsx)(I.Z, { canShowReminder: !0 }),
-                          !Y && (0, r.jsx)(N.Z, {}),
-                          W && !B ? (0, r.jsx)(S.Z, {}) : null,
+                          !Y && (0, r.jsx)(T.Z, {}),
+                          B && !W ? (0, r.jsx)(S.Z, {}) : null,
                           !Y && (w ? (0, r.jsx)(g.Z, {}) : (0, r.jsx)(D.Z, {})),
                           z &&
                               V &&

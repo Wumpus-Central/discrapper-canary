@@ -58,24 +58,24 @@ let u = (e) => {
                     t)
                 )
             ),
-            [j, N] = l.useState(''),
-            [y, O] = l.useState(null);
+            [j, y] = l.useState(''),
+            [O, Z] = l.useState(null);
         l.useEffect(() => {
             var e;
-            N(null != (e = null == f ? void 0 : f.value) ? e : '');
+            y(null != (e = null == f ? void 0 : f.value) ? e : '');
         }, [f]);
-        let Z = l.useCallback(
+        let I = l.useCallback(
             (e) => {
                 let t = null != h ? new RegExp(h) : null;
                 null == t || t.test(e)
                     ? null != e &&
-                      (O(null),
-                      N(e),
+                      (Z(null),
+                      y(e),
                       _({
                           value: e,
                           isValid: !0
                       }))
-                    : (O(s.NW.string(s.t['24xrGR'])),
+                    : (Z(s.intl.string(s.t['24xrGR'])),
                       _({
                           value: e,
                           isValid: !1
@@ -103,9 +103,9 @@ let u = (e) => {
                     }),
                 (0, r.jsx)(i.Kx8, {
                     maxLength: b,
-                    onChange: Z,
+                    onChange: I,
                     value: j,
-                    error: y,
+                    error: O,
                     rows: p,
                     placeholder: x,
                     autoFocus: !0

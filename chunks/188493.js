@@ -40,13 +40,13 @@ function f(e) {
         _ = i.useMemo(() => {
             var e;
             let t = (0, p.Cf)().find((e) => e.code === g);
-            return null != (e = null == t ? void 0 : t.name) ? e : h.NW.string(h.t.LQLMGB);
+            return null != (e = null == t ? void 0 : t.name) ? e : h.intl.string(h.t.LQLMGB);
         }, [g]);
     return (0, r.jsx)(a.ZP, {
         items: b,
         title: _,
         onSelect: m,
         selected: g,
-        'aria-label': h.NW.string(h.t.Ng5cTE)
+        'aria-label': h.intl.string(h.t.Ng5cTE)
     });
 }

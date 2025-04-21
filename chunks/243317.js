@@ -6,7 +6,7 @@ var o = n(481060),
     i = n(156189);
 function s() {
     return (0, r.jsx)(o.ua7, {
-        text: a.NW.string(a.t['RO/KYm']),
+        text: a.intl.string(a.t['RO/KYm']),
         children: (e) => {
             var t, n;
             return (0, r.jsx)(

@@ -31,12 +31,12 @@ function u(e) {
     return n
         ? (0, r.jsx)(i.sNh, {
               id: 'output-devices',
-              label: c.NW.string(c.t['6Ww0iI']),
+              label: c.intl.string(c.t['6Ww0iI']),
               subtext: p,
               children: f
           })
         : (0, r.jsx)(i.kSQ, {
-              label: c.NW.string(c.t['6Ww0iI']),
+              label: c.intl.string(c.t['6Ww0iI']),
               children: f
           });
 }

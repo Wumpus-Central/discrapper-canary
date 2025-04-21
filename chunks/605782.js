@@ -1,9 +1,9 @@
 n.d(t, { Z: () => d }), n(35282);
 var r = n(200651),
     i = n(192379),
-    s = n(512969),
-    o = n(215569);
-function l(e) {
+    l = n(512969),
+    s = n(215569);
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,13 +55,13 @@ function c(e, t) {
             var n,
                 r,
                 i = {},
-                s = Object.keys(e);
-            for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                l = Object.keys(e);
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var s = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var l = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -76,22 +76,22 @@ class u extends i.Component {
             i.Children.forEach(t, (e) => {
                 if (null == p && i.isValidElement(e)) {
                     let t = e.props,
-                        { component: r, render: o } = t,
+                        { component: r, render: s } = t,
                         h = c(t, ['component', 'render']),
                         g = h.path || h.from;
-                    null != (p = null != g ? (0, s.LX)(n.pathname, a(l({}, h), { path: g })) : null) &&
-                        ((h = a(l({}, h), {
+                    null != (p = null != g ? (0, l.LX)(n.pathname, a(o({}, h), { path: g })) : null) &&
+                        ((h = a(o({}, h), {
                             key: g,
                             location: n,
                             match: p,
                             history: u,
                             staticContext: d
                         })),
-                        null != r ? (m = i.createElement(r, h)) : null != o && (m = o(h)));
+                        null != r ? (m = i.createElement(r, h)) : null != s && (m = s(h)));
                 }
             }),
-            (0, r.jsx)(o.W, a(l({}, g), { children: m }))
+            (0, r.jsx)(s.W, a(o({}, g), { children: m }))
         );
     }
 }
-let d = (0, s.EN)(u);
+let d = (0, l.EN)(u);

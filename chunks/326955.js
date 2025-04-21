@@ -29,7 +29,7 @@ let g = (e) => {
                     (0, r.jsx)(l.Z, {
                         variant: 'text-sm/normal',
                         className: m.tooltipCounter,
-                        children: p.NW.format(f.Z.VN4aTU, {
+                        children: p.intl.format(f.default.VN4aTU, {
                             points: Math.abs(s),
                             grassIconHook: c.Z
                         })

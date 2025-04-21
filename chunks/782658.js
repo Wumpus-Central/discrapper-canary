@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R });
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    l = n(447543),
+    l = n(442837),
+    a = n(447543),
     o = n(410575),
     s = n(758119),
     c = n(622822),
@@ -20,11 +20,11 @@ var r = n(200651),
     v = n(411198),
     E = n(610699),
     O = n(313876),
-    N = n(778333),
-    j = n(949981),
-    C = n(680668),
-    S = n(508273),
-    I = n(143708),
+    j = n(778333),
+    C = n(949981),
+    S = n(680668),
+    I = n(508273),
+    N = n(143708),
     T = n(358595),
     P = n(563917),
     A = n(135845),
@@ -32,7 +32,7 @@ var r = n(200651),
     Z = n(723359);
 function R(e) {
     let { code: t, author: n, getAcceptInviteContext: R } = e,
-        { invite: k, inviteError: D } = (0, a.cj)(
+        { invite: k, inviteError: D } = (0, l.cj)(
             [y.Z],
             () => ({
                 invite: y.Z.getInvite(t),
@@ -42,7 +42,7 @@ function R(e) {
         ),
         L = null == k;
     i.useEffect(() => {
-        L && l.ZP.resolveInvite(t);
+        L && a.ZP.resolveInvite(t);
     }, [t, L]);
     let M =
             null != k
@@ -51,11 +51,11 @@ function R(e) {
                       state: w.r2o.RESOLVING,
                       code: ''
                   },
-        { analyticsLocations: W } = (0, u.ZP)(),
-        U = (0, d.O)(),
-        F = (0, a.e7)([x.Z], () => ((null == k ? void 0 : k.guild) != null ? x.Z.getGuild(k.guild.id) : null), [k]),
-        B = (0, a.e7)([b.default], () => b.default.getId()),
-        G = (0, a.e7)(
+        { analyticsLocations: U } = (0, u.ZP)(),
+        F = (0, d.O)(),
+        B = (0, l.e7)([x.Z], () => ((null == k ? void 0 : k.guild) != null ? x.Z.getGuild(k.guild.id) : null), [k]),
+        G = (0, l.e7)([b.default], () => b.default.getId()),
+        H = (0, l.e7)(
             [m.ZP],
             () => {
                 var e;
@@ -63,11 +63,11 @@ function R(e) {
             },
             [M]
         ),
-        H = () => {
-            null != M.channel && l.ZP.transitionToInviteSync(M);
-        },
         V = () => {
-            if (null == F && (null == k ? void 0 : k.guild) != null) {
+            null != M.channel && a.ZP.transitionToInviteSync(M);
+        },
+        z = () => {
+            if (null == B && (null == k ? void 0 : k.guild) != null) {
                 let e = v.Qs(k.guild);
                 if ((0, c.bN)() && (0, c.Yt)(e)) return void (0, s.mN)(Z.L0.NSFW_SERVER_INVITE_EMBED);
             }
@@ -78,34 +78,34 @@ function R(e) {
                           page: w.ZY5.INVITE_EMBED,
                           section: w.jXE.GUILD_CAP_UPSELL_MODAL
                       },
-                      analyticsLocations: W
+                      analyticsLocations: U
                   })
-                : l.ZP.acceptInviteAndTransitionToInviteChannel({
+                : a.ZP.acceptInviteAndTransitionToInviteChannel({
                       inviteKey: t,
                       context: R('Invite Button Embed')
                   });
         },
-        z = (0, r.jsx)(C.Z, {
-            onTransitionToInviteChannel: H,
-            onAcceptInstantInvite: V,
-            currentUserId: B,
-            guild: F,
+        W = (0, r.jsx)(S.Z, {
+            onTransitionToInviteChannel: V,
+            onAcceptInstantInvite: z,
+            currentUserId: G,
+            guild: B,
             invite: M,
             author: n
         });
     switch (M.state) {
         case w.r2o.RESOLVING:
-            z = (0, r.jsx)(T.Z, {});
+            W = (0, r.jsx)(T.Z, {});
             break;
         case w.r2o.EXPIRED:
         case w.r2o.BANNED:
-            z = (0, r.jsx)(I.Z, {
+            W = (0, r.jsx)(N.Z, {
                 banned: M.state === w.r2o.BANNED,
                 author: n
             });
             break;
         case w.r2o.ERROR:
-            z = (0, r.jsx)(O.Z, {
+            W = (0, r.jsx)(O.Z, {
                 author: n,
                 inviteError: D
             });
@@ -113,16 +113,16 @@ function R(e) {
         default:
             switch ((0, h.VR)(M)) {
                 case h.wx.GROUP_DM:
-                    z = (0, r.jsx)(j.Z, {
-                        onTransitionToInviteChannel: H,
-                        onAcceptInstantInvite: V,
-                        currentUserId: B,
+                    W = (0, r.jsx)(C.Z, {
+                        onTransitionToInviteChannel: V,
+                        onAcceptInstantInvite: z,
+                        currentUserId: G,
                         invite: M,
                         author: n
                     });
                     break;
                 case h.wx.FRIEND:
-                    z = (0, r.jsx)(N.Z, {
+                    W = (0, r.jsx)(j.Z, {
                         invite: M,
                         author: n,
                         getAcceptInviteContext: R
@@ -130,51 +130,51 @@ function R(e) {
                     break;
                 default:
                     if ((0, h.TY)(M)) {
-                        z = (0, r.jsx)(A.Z, {
-                            onTransitionToInviteChannel: H,
-                            onAcceptInstantInvite: V,
-                            currentUserId: B,
+                        W = (0, r.jsx)(A.Z, {
+                            onTransitionToInviteChannel: V,
+                            onAcceptInstantInvite: z,
+                            currentUserId: G,
                             inviterId: n.id,
-                            guild: F,
+                            guild: B,
                             invite: M
                         });
                         break;
                     }
                     if ((0, h.Tx)(M)) {
-                        z = (0, r.jsx)(f.ZP, {
-                            guildScheduledEvent: G,
+                        W = (0, r.jsx)(f.ZP, {
+                            guildScheduledEvent: H,
                             guild: M.guild,
                             channel: M.channel,
-                            isMember: null != F,
-                            onAcceptInstantInvite: V,
-                            onTransitionToInviteChannel: H
+                            isMember: null != B,
+                            onAcceptInstantInvite: z,
+                            onTransitionToInviteChannel: V
                         });
                         break;
                     }
                     if ((0, h.$P)(M)) {
-                        z = (0, r.jsx)(P.Z, {
+                        W = (0, r.jsx)(P.Z, {
                             invite: M,
                             stageInstance: M.stage_instance,
                             guild: M.guild,
-                            isMember: null != F,
+                            isMember: null != B,
                             inviterId: n.id,
-                            onTransitionToInviteChannel: H,
-                            onAcceptInstantInvite: V
+                            onTransitionToInviteChannel: V,
+                            onAcceptInstantInvite: z
                         });
                         break;
                     }
                     (0, h.P1)(M) &&
-                        (z = (0, r.jsx)(E.Z, {
+                        (W = (0, r.jsx)(E.Z, {
                             invite: M,
                             getAcceptInviteContext: R,
                             inviterId: n.id
                         })),
-                        U &&
+                        F &&
                             (0, p.lc)(M) &&
-                            (z = (0, r.jsx)(S.Z, {
-                                onTransitionToInviteChannel: H,
-                                onAcceptInstantInvite: V,
-                                isMemberOfGuild: null != F,
+                            (W = (0, r.jsx)(I.Z, {
+                                onTransitionToInviteChannel: V,
+                                onAcceptInstantInvite: z,
+                                isMemberOfGuild: null != B,
                                 invite: M,
                                 inviterId: n.id
                             }));
@@ -182,6 +182,6 @@ function R(e) {
     }
     return (0, r.jsx)(o.Z, {
         section: w.jXE.INVITE_LINK,
-        children: z
+        children: W
     });
 }

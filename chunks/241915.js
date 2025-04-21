@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => A,
+    Z: () => N,
     _: () => T
 }),
     n(388685);
@@ -308,7 +308,7 @@ h(T, 'defaultProps', {
     hidden: !1,
     roundCorners: !0
 });
-let N = (e) => {
+let A = (e) => {
         let { selectedPIPWindow: t, pipWindows: n, pipWidth: r, maxX: a, maxY: o, onWindowMove: s, onWindowResize: l, dockedRect: c, pictureInPictureComponents: u, appContext: d, roundCorners: _, resizeConfig: h } = e,
             g = () => {
                 if (null == t) return null;
@@ -343,4 +343,4 @@ let N = (e) => {
             children: g()
         });
     },
-    A = a.memo(N);
+    N = a.memo(A);

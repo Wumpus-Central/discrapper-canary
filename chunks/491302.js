@@ -24,7 +24,7 @@ function f(e) {
                       discriminator: m.fo$
                   });
         }, [t]),
-        N = i.useCallback(() => {
+        y = i.useCallback(() => {
             (0, l.h7j)((e) => {
                 var n, i;
                 return (0, r.jsx)(
@@ -56,20 +56,20 @@ function f(e) {
                     })({}, e)),
                     (i = i =
                         {
-                            header: b.NW.formatToPlainString(b.t.gBKqZ2, { name: t.name }),
-                            confirmText: b.NW.string(b.t.CMy0Cg),
-                            cancelText: b.NW.string(b.t['ETE/oK']),
+                            header: b.intl.formatToPlainString(b.t.gBKqZ2, { name: t.name }),
+                            confirmText: b.intl.string(b.t.CMy0Cg),
+                            cancelText: b.intl.string(b.t['ETE/oK']),
                             onConfirm: () => {
                                 s.Z.delete(t.guild_id, t.id).catch(() => {
                                     o.Z.show({
-                                        title: b.NW.string(b.t.LpbaFR),
-                                        body: b.NW.string(b.t['/4TwKS'])
+                                        title: b.intl.string(b.t.LpbaFR),
+                                        body: b.intl.string(b.t['/4TwKS'])
                                     });
                                 });
                             },
                             children: (0, r.jsx)(l.Text, {
                                 variant: 'text-md/normal',
-                                children: b.NW.string(b.t.zO9jrK)
+                                children: b.intl.string(b.t.zO9jrK)
                             })
                         }),
                     Object.getOwnPropertyDescriptors
@@ -88,19 +88,19 @@ function f(e) {
                 );
             });
         }, [t.guild_id, t.id, t.name]),
-        y = [];
+        v = [];
     null != t.source_channel &&
         null != t.source_guild &&
-        (y.push({
+        (v.push({
             icon: l.MqZ,
             text: t.source_channel.name
         }),
-        y.push({
+        v.push({
             text: (0, r.jsx)(
                 'span',
                 {
                     className: g.guildSource,
-                    children: b.NW.format(b.t['H/jJ6e'], {
+                    children: b.intl.format(b.t['H/jJ6e'], {
                         guildHook: () =>
                             (0, r.jsx)(
                                 'span',
@@ -115,11 +115,11 @@ function f(e) {
                 'guild-source'
             )
         }));
-    let v = null;
+    let _ = null;
     return (
         h &&
             null != n &&
-            (v = (0, r.jsxs)('div', {
+            (_ = (0, r.jsxs)('div', {
                 className: g.body,
                 children: [
                     (0, r.jsx)(l.$i$, { className: g.topDivider }),
@@ -132,7 +132,7 @@ function f(e) {
                                         (0, r.jsx)(c.Z.Child, {
                                             basis: '50%',
                                             children: (0, r.jsx)(l.xJW, {
-                                                title: b.NW.string(b.t.I1o5gY),
+                                                title: b.intl.string(b.t.I1o5gY),
                                                 children: (0, r.jsx)(l.oil, {
                                                     value: n.name,
                                                     onChange: (e) => {
@@ -146,7 +146,7 @@ function f(e) {
                                         (0, r.jsx)(c.Z.Child, {
                                             basis: '50%',
                                             children: (0, r.jsx)(l.xJW, {
-                                                title: b.NW.string(b.t['4TuWfX']),
+                                                title: b.intl.string(b.t['4TuWfX']),
                                                 children: (0, r.jsx)(l.q4e, {
                                                     value: n.channel_id,
                                                     options: f,
@@ -161,12 +161,12 @@ function f(e) {
                                 (0, r.jsx)(l.$i$, { className: g.bottomDivider }),
                                 (0, r.jsx)(c.Z, {
                                     children: (0, r.jsx)(l.zxk, {
-                                        onClick: N,
+                                        onClick: y,
                                         size: l.zxk.Sizes.SMALL,
                                         color: l.zxk.Colors.RED,
                                         look: l.zxk.Looks.LINK,
                                         className: g.removeButton,
-                                        children: b.NW.string(b.t.CMy0Cg)
+                                        children: b.intl.string(b.t.CMy0Cg)
                                     })
                                 })
                             ]
@@ -191,7 +191,7 @@ function f(e) {
                                     name: t.name,
                                     imageSrc: O,
                                     detailsClassName: g.__invalid_description,
-                                    details: y
+                                    details: v
                                 }),
                                 (0, r.jsx)(d.Z, {
                                     className: g.expandIcon,
@@ -201,7 +201,7 @@ function f(e) {
                             ]
                         })
                     }),
-                    v
+                    _
                 ]
             })
         })

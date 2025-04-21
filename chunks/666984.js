@@ -23,7 +23,7 @@ function _(e) {
                       className: f.primaryButton,
                       children: (0, r.jsx)(c.tG, {
                           icon: () => (0, r.jsx)(l.Z, {}),
-                          text: null != (t = m.label) ? t : d.NW.string(d.t.rRffNz),
+                          text: null != (t = m.label) ? t : d.intl.string(d.t.rRffNz),
                           disabled: m.disabled,
                           submitting: m.loading,
                           wrapperClassName: f.primaryButton,
@@ -35,7 +35,7 @@ function _(e) {
                   }),
                   (0, r.jsx)(c.ef, {
                       icon: i.iOO,
-                      tooltipText: null != (n = g.tooltip) ? n : d.NW.string(d.t.eU3inJ),
+                      tooltipText: null != (n = g.tooltip) ? n : d.intl.string(d.t.eU3inJ),
                       disabled: g.disabled,
                       submitting: g.loading,
                       fullWidth: !0,

@@ -26,7 +26,7 @@
             c = !1;
         return (
             'string' == typeof e && (e = K(e)),
-            'object' == typeof e && (Y(e.r) && Y(e.g) && Y(e.b) ? ((t = d(e.r, e.g, e.b)), (l = !0), (c = '%' === String(e.r).substr(-1) ? 'prgb' : 'rgb')) : Y(e.h) && Y(e.s) && Y(e.v) ? ((r = V(e.s)), (i = V(e.v)), (t = h(e.h, r, i)), (l = !0), (c = 'hsv')) : Y(e.h) && Y(e.s) && Y(e.l) && ((r = V(e.s)), (a = V(e.l)), (t = _(e.h, r, a)), (l = !0), (c = 'hsl')), e.hasOwnProperty('a') && (n = e.a)),
+            'object' == typeof e && (W(e.r) && W(e.g) && W(e.b) ? ((t = d(e.r, e.g, e.b)), (l = !0), (c = '%' === String(e.r).substr(-1) ? 'prgb' : 'rgb')) : W(e.h) && W(e.s) && W(e.v) ? ((r = V(e.s)), (i = V(e.v)), (t = h(e.h, r, i)), (l = !0), (c = 'hsv')) : W(e.h) && W(e.s) && W(e.l) && ((r = V(e.s)), (a = V(e.l)), (t = _(e.h, r, a)), (l = !0), (c = 'hsl')), e.hasOwnProperty('a') && (n = e.a)),
             (n = M(n)),
             {
                 ok: l,
@@ -176,11 +176,11 @@
             r = (n.h + t) % 360;
         return (n.h = r < 0 ? 360 + r : r), c(n);
     }
-    function N(e) {
+    function A(e) {
         var t = c(e).toHsl();
         return (t.h = (t.h + 180) % 360), c(t);
     }
-    function A(e) {
+    function N(e) {
         var t = c(e).toHsl(),
             n = t.h;
         return [
@@ -413,7 +413,7 @@
             return this._applyCombination(P, arguments);
         },
         complement: function () {
-            return this._applyCombination(N, arguments);
+            return this._applyCombination(A, arguments);
         },
         monochromatic: function () {
             return this._applyCombination(w, arguments);
@@ -422,7 +422,7 @@
             return this._applyCombination(R, arguments);
         },
         triad: function () {
-            return this._applyCombination(A, arguments);
+            return this._applyCombination(N, arguments);
         },
         tetrad: function () {
             return this._applyCombination(C, arguments);
@@ -685,7 +685,7 @@
     function H(e) {
         return U(e) / 255;
     }
-    var W = (function () {
+    var Y = (function () {
         var e = '(?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?)',
             t = '[\\s|\\(]+(' + e + ')[,|\\s]+(' + e + ')[,|\\s]+(' + e + ')\\s*\\)?',
             n = '[\\s|\\(]+(' + e + ')[,|\\s]+(' + e + ')[,|\\s]+(' + e + ')[,|\\s]+(' + e + ')\\s*\\)?';
@@ -703,8 +703,8 @@
             hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
         };
     })();
-    function Y(e) {
-        return !!W.CSS_UNIT.exec(e);
+    function W(e) {
+        return !!Y.CSS_UNIT.exec(e);
     }
     function K(e) {
         e = e.replace(n, '').replace(r, '').toLowerCase();
@@ -719,46 +719,46 @@
                 a: 0,
                 format: 'name'
             };
-        return (t = W.rgb.exec(e))
+        return (t = Y.rgb.exec(e))
             ? {
                   r: t[1],
                   g: t[2],
                   b: t[3]
               }
-            : (t = W.rgba.exec(e))
+            : (t = Y.rgba.exec(e))
               ? {
                     r: t[1],
                     g: t[2],
                     b: t[3],
                     a: t[4]
                 }
-              : (t = W.hsl.exec(e))
+              : (t = Y.hsl.exec(e))
                 ? {
                       h: t[1],
                       s: t[2],
                       l: t[3]
                   }
-                : (t = W.hsla.exec(e))
+                : (t = Y.hsla.exec(e))
                   ? {
                         h: t[1],
                         s: t[2],
                         l: t[3],
                         a: t[4]
                     }
-                  : (t = W.hsv.exec(e))
+                  : (t = Y.hsv.exec(e))
                     ? {
                           h: t[1],
                           s: t[2],
                           v: t[3]
                       }
-                    : (t = W.hsva.exec(e))
+                    : (t = Y.hsva.exec(e))
                       ? {
                             h: t[1],
                             s: t[2],
                             v: t[3],
                             a: t[4]
                         }
-                      : (t = W.hex8.exec(e))
+                      : (t = Y.hex8.exec(e))
                         ? {
                               r: U(t[1]),
                               g: U(t[2]),
@@ -766,14 +766,14 @@
                               a: H(t[4]),
                               format: i ? 'name' : 'hex8'
                           }
-                        : (t = W.hex6.exec(e))
+                        : (t = Y.hex6.exec(e))
                           ? {
                                 r: U(t[1]),
                                 g: U(t[2]),
                                 b: U(t[3]),
                                 format: i ? 'name' : 'hex'
                             }
-                          : (t = W.hex4.exec(e))
+                          : (t = Y.hex4.exec(e))
                             ? {
                                   r: U(t[1] + '' + t[1]),
                                   g: U(t[2] + '' + t[2]),
@@ -781,7 +781,7 @@
                                   a: H(t[4] + '' + t[4]),
                                   format: i ? 'name' : 'hex8'
                               }
-                            : !!(t = W.hex3.exec(e)) && {
+                            : !!(t = Y.hex3.exec(e)) && {
                                   r: U(t[1] + '' + t[1]),
                                   g: U(t[2] + '' + t[2]),
                                   b: U(t[3] + '' + t[3]),

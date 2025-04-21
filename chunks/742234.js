@@ -3,8 +3,8 @@ var r = n(200651);
 n(192379);
 var o = n(98278),
     c = n(790527),
-    a = n(474936),
-    i = n(388032);
+    i = n(474936),
+    a = n(388032);
 function l(t) {
     var { onClose: e, analyticsSource: l, analyticsLocation: s } = t,
         u = (function (t, e) {
@@ -55,14 +55,14 @@ function l(t) {
         })(
             {
                 artURL: n(677531),
-                type: a.cd.CLIENT_THEMES_UPSELL,
-                title: i.NW.string(i.t.GI7t09),
-                body: i.NW.string(i.t.MRrvSE),
-                glowUp: i.NW.string(i.t.MRrvSE),
+                type: i.cd.CLIENT_THEMES_UPSELL,
+                title: a.intl.string(a.t.GI7t09),
+                body: a.intl.string(a.t.MRrvSE),
+                glowUp: a.intl.string(a.t.MRrvSE),
                 onSecondaryClick: () => {
                     (0, o.$)(e);
                 },
-                secondaryCTA: i.NW.string(i.t.PcTCBw),
+                secondaryCTA: a.intl.string(a.t.PcTCBw),
                 analyticsSource: l,
                 analyticsLocation: s,
                 onClose: e,

@@ -3,9 +3,9 @@ n.d(t, {
     c: () => j
 });
 var r = n(200651),
-    i = n(192379),
-    l = n(120356),
-    s = n.n(l),
+    l = n(192379),
+    i = n(120356),
+    s = n.n(i),
     a = n(442837),
     o = n(481060),
     c = n(607070),
@@ -23,29 +23,29 @@ function _(e) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        l = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return i;
+            return l;
         })(e, ['location']);
-    let l = (0, u.N)(),
-        a = i.useCallback(() => {
-            if (null != l) {
+    let i = (0, u.N)(),
+        a = l.useCallback(() => {
+            if (null != i) {
                 var e;
-                return null != (e = (0, m.fr)(l)) ? e : p.NW.string(p.t.Y2WKTk);
+                return null != (e = (0, m.fr)(i)) ? e : p.intl.string(p.t.Y2WKTk);
             }
-            return p.NW.string(p.t.Y2WKTk);
-        }, [l]);
+            return p.intl.string(p.t.Y2WKTk);
+        }, [i]);
     return (0, r.jsx)(
         f.Z,
         (function (e) {
@@ -100,20 +100,20 @@ function j() {
             (0, r.jsx)(o.Text, {
                 variant: 'text-xs/medium',
                 className: g.reverseTrialEducationText,
-                children: p.NW.format(p.t.GimLpa, {})
+                children: p.intl.format(p.t.GimLpa, {})
             })
         ]
     });
 }
 function v(e) {
-    let { message: t, onClose: n, openStreamUpsellModal: i, glow: l = !1 } = e,
+    let { message: t, onClose: n, openStreamUpsellModal: l, glow: i = !1 } = e,
         a = {
             section: h.jXE.STREAM_SETTINGS,
             object: h.qAy.PREMIUM_UPSELL_BANNER,
             objectType: h.Qqv.BUY
         };
     return (0, r.jsxs)('div', {
-        className: s()(g.upsellBanner, g.enhancedBanner, { [g.gradientGlow]: l }),
+        className: s()(g.upsellBanner, g.enhancedBanner, { [g.gradientGlow]: i }),
         children: [
             (0, r.jsxs)('div', {
                 className: g.iconTextContainer,
@@ -128,9 +128,9 @@ function v(e) {
                         children:
                             null != t
                                 ? t
-                                : p.NW.format(p.t['L/zCtr'], {
+                                : p.intl.format(p.t['L/zCtr'], {
                                       onClick: () =>
-                                          i({
+                                          l({
                                               analyticsLocation: a,
                                               onClose: n
                                           })

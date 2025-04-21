@@ -39,14 +39,14 @@ function y(e) {
                     (0, r.jsx)(o.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-positive',
-                        children: p.NW.string(p.t['3BogKS'])
+                        children: p.intl.string(p.t['3BogKS'])
                     })
                 ]
             }),
             (0, r.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: p.NW.string(p.t.B9JNsr)
+                children: p.intl.string(p.t.B9JNsr)
             }),
             (0, r.jsxs)('div', {
                 className: g.header,
@@ -54,7 +54,7 @@ function y(e) {
                     (0, r.jsx)(o.X6q, {
                         variant: 'text-sm/bold',
                         color: 'header-primary',
-                        children: p.NW.string(p.t.cTQI5u)
+                        children: p.intl.string(p.t.cTQI5u)
                     }),
                     null != y &&
                         (0, r.jsx)(h.H, {
@@ -72,7 +72,7 @@ function y(e) {
             (0, r.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: p.NW.format(p.t.wKxADQ, { helpArticle: (0, u.uV)() })
+                children: p.intl.format(p.t.wKxADQ, { helpArticle: (0, u.uV)() })
             })
         ]
     });

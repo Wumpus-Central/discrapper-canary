@@ -1,9 +1,9 @@
 n.d(t, { Z: () => b });
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(780384),
-    a = n(481060),
-    l = n(37234),
+    l = n(481060),
+    a = n(37234),
     o = n(410030),
     c = n(626135),
     d = n(617136),
@@ -15,75 +15,75 @@ var r = n(200651),
     f = n(66094);
 function b() {
     let e = (0, s.wj)((0, o.ZP)()),
-        t = i.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
-        n = i.useCallback(() => {
-            (0, l.xf)(),
+        t = r.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
+        n = r.useCallback(() => {
+            (0, a.xf)(),
                 (0, m.navigateToQuestHome)({ fromContent: u.jn.QUEST_HOME_MOVE_CALLOUT }),
                 c.default.track(
                     g.rMx.QUEST_CONTENT_CLICKED,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
+                                i = Object.keys(n);
                             'function' == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
+                                (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     })
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
+                                i.forEach(function (t) {
+                                    var i;
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                                  value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
+                                            : (e[t] = i);
                                 });
                         }
                         return e;
                     })({ cta_name: d.jZ.VIEW_QUESTS }, (0, d.mH)(u.jn.QUEST_HOME_MOVE_CALLOUT))
                 );
         }, []);
-    return (0, r.jsx)('div', {
+    return (0, i.jsx)('div', {
         className: h.container,
         style: t,
-        children: (0, r.jsxs)('div', {
+        children: (0, i.jsxs)('div', {
             className: h.textContainer,
             children: [
-                (0, r.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     className: h.headerContainer,
                     children: [
-                        (0, r.jsx)('img', {
+                        (0, i.jsx)('img', {
                             alt: '',
                             src: f,
                             className: h.icon
                         }),
-                        (0, r.jsx)(a.X6q, {
+                        (0, i.jsx)(l.X6q, {
                             variant: 'heading-lg/bold',
                             color: 'always-white',
-                            children: p.NW.string(p.t.z8YP2N)
+                            children: p.intl.string(p.t.z8YP2N)
                         })
                     ]
                 }),
-                (0, r.jsx)(a.Text, {
+                (0, i.jsx)(l.Text, {
                     variant: 'text-md/medium',
                     color: 'text-secondary',
-                    children: p.NW.string(p.t.IqmRZ2)
+                    children: p.intl.string(p.t.IqmRZ2)
                 }),
-                (0, r.jsx)(a.zxk, {
+                (0, i.jsx)(l.zxk, {
                     size: 'large',
-                    color: e ? a.Ttl.BRAND : a.Ttl.WHITE,
+                    color: e ? l.Ttl.BRAND : l.Ttl.WHITE,
                     className: h.button,
                     onClick: n,
                     innerClassName: h.innerButton,
-                    children: (0, r.jsx)(a.Text, {
+                    children: (0, i.jsx)(l.Text, {
                         variant: 'text-md/medium',
                         color: e ? 'always-white' : 'text-normal',
-                        children: p.NW.string(p.t.GURBQk)
+                        children: p.intl.string(p.t.GURBQk)
                     })
                 })
             ]

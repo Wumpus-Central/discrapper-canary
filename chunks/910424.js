@@ -60,7 +60,7 @@ function y(e, t) {
 }
 function v(e) {
     let { isCurrentUser: t, color: n, look: v, applicationStream: S, onAction: j } = e,
-        { activeStream: N, watchingOtherStream: P } = (0, l.cj)([d.Z], () => ({
+        { activeStream: P, watchingOtherStream: E } = (0, l.cj)([d.Z], () => ({
             activeStream: d.Z.getActiveStreamForApplicationStream(S),
             watchingOtherStream:
                 null != S &&
@@ -69,16 +69,16 @@ function v(e) {
                     return t !== S.ownerId;
                 }).length > 0
         })),
-        E = (0, l.e7)([p.Z], () => p.Z.getChannel(null == S ? void 0 : S.channelId)),
-        [Z, I] = (0, u.wq)(E),
-        x = (0, c.Aq)(),
-        C = null != N && null != S && N.state !== g.jm8.ENDED && N.ownerId === S.ownerId,
-        T = (e) => {
-            null != S && (null == j || j(), a.default.selectVoiceChannel(S.channelId), C || (0, s.iV)(S, { forceMultiple: e }), x.dispatch(g.CkL.POPOUT_CLOSE), f.S.dispatch(g.CkL.MODAL_CLOSE), o.Z.popAll());
+        Z = (0, l.e7)([p.Z], () => p.Z.getChannel(null == S ? void 0 : S.channelId)),
+        [I, x] = (0, u.wq)(Z),
+        C = (0, c.Aq)(),
+        T = null != P && null != S && P.state !== g.jm8.ENDED && P.ownerId === S.ownerId,
+        N = (e) => {
+            null != S && (null == j || j(), a.default.selectVoiceChannel(S.channelId), T || (0, s.iV)(S, { forceMultiple: e }), C.dispatch(g.CkL.POPOUT_CLOSE), f.S.dispatch(g.CkL.MODAL_CLOSE), o.Z.popAll());
         };
     if (null == S) return null;
-    let A = (0, u.P9)(I);
-    t ? (A = b.NW.string(b.t.XvBdeX)) : C && (A = b.NW.string(b.t.JH1SJy));
+    let A = (0, u.P9)(x);
+    t ? (A = b.intl.string(b.t.XvBdeX)) : T && (A = b.intl.string(b.t.JH1SJy));
     let w = {
         color: n,
         look: v
@@ -90,8 +90,8 @@ function v(e) {
                 y(
                     h(
                         {
-                            disabled: t || C || !Z,
-                            onClick: () => T(!1)
+                            disabled: t || T || !I,
+                            onClick: () => N(!1)
                         },
                         w
                     ),
@@ -109,9 +109,9 @@ function v(e) {
                 ),
                 'play'
             ),
-            P && !C
+            E && !T
                 ? (0, r.jsx)(i.ua7, {
-                      text: b.NW.string(b.t.wCrzur),
+                      text: b.intl.string(b.t.wCrzur),
                       children: (e) =>
                           (0, r.jsx)(
                               m.Z,
@@ -120,7 +120,7 @@ function v(e) {
                                       y(h({}, e), {
                                           onClick: () => {
                                               var t;
-                                              null == (t = e.onClick) || t.call(e), T(!0);
+                                              null == (t = e.onClick) || t.call(e), N(!0);
                                           }
                                       }),
                                       w

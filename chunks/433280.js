@@ -31,21 +31,21 @@ function g(e) {
         (0, r.jsx)('div', {
             className: h.container,
             children: (0, r.jsx)(s.ZP, {
-                header: p.NW.string(p.t.C0m4ra),
-                content: p.NW.string(p.t.zOHfER),
+                header: p.intl.string(p.t.C0m4ra),
+                content: p.intl.string(p.t.zOHfER),
                 asset: (0, r.jsx)('div', {
                     className: h.image,
                     children: (0, r.jsx)('img', {
-                        alt: p.NW.string(p.t.xad4wc),
+                        alt: p.intl.string(p.t.xad4wc),
                         src: f,
                         className: h.image
                     })
                 }),
-                buttonCTA: p.NW.string(p.t.OgQQbG),
+                buttonCTA: p.intl.string(p.t.OgQQbG),
                 onClick: () => {
                     o.Z.open(t, d.pNK.ROLE_SUBSCRIPTIONS);
                 },
-                secondaryButtonCTA: p.NW.string(p.t.WAI6xs),
+                secondaryButtonCTA: p.intl.string(p.t.WAI6xs),
                 markAsDismissed: n
             })
         })

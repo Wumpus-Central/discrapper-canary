@@ -12,7 +12,7 @@ function s(e) {
         ? null
         : (0, r.jsx)(l.S89, {
               id: 'hide-voice-names',
-              label: a.NW.string(a.t.LxzNio),
+              label: a.intl.string(a.t.LxzNio),
               action: () => o.Z.update(e.id),
               checked: t
           });

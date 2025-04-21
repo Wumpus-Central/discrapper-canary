@@ -49,8 +49,8 @@ let f = c.QZA.CLOSED,
     I = null,
     S = [],
     T = null,
-    N = null;
-function A(e) {
+    A = null;
+function N(e) {
     (y = !0), C(e);
 }
 function C(e) {
@@ -82,10 +82,10 @@ function C(e) {
         (O = null != (r = e.onClose) ? r : null),
         (I = null != (i = e.analyticsLocation) ? i : null),
         (S = null != (a = e.analyticsLocations) ? a : []),
-        (N = null != (o = e.impressionSource) ? o : null);
+        (A = null != (o = e.impressionSource) ? o : null);
 }
 function R() {
-    (f = c.QZA.CLOSED), (y = !1), (E = null), (T = null), (b = null), (_ = null), (p = null), (h = {}), (m = {}), (O = null), (I = null), (S = []), (N = null);
+    (f = c.QZA.CLOSED), (y = !1), (E = null), (T = null), (b = null), (_ = null), (p = null), (h = {}), (m = {}), (O = null), (I = null), (S = []), (A = null);
 }
 function P(e) {
     var t;
@@ -174,7 +174,7 @@ class U extends (r = o.ZP.Store) {
             analyticsLocation: I,
             analyticsLocations: S,
             initialSection: T,
-            impressionSource: N
+            impressionSource: A
         };
     }
     get onClose() {
@@ -183,7 +183,7 @@ class U extends (r = o.ZP.Store) {
 }
 u(U, 'displayName', 'UserSettingsModalStore');
 let G = new U(s.Z, {
-    USER_SETTINGS_MODAL_OPEN: A,
+    USER_SETTINGS_MODAL_OPEN: N,
     USER_SETTINGS_MODAL_INIT: C,
     USER_SETTINGS_MODAL_CLOSE: R,
     LOGOUT: R,

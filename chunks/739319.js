@@ -48,7 +48,7 @@ function m(e) {
                                       (0, c.JG)(i, () => p(!0));
                                   },
                                   color: o.zxk.Colors.PRIMARY,
-                                  children: x ? d.NW.string(d.t['t5VZ8/']) : d.NW.string(d.t.OpuAlJ)
+                                  children: x ? d.intl.string(d.t['t5VZ8/']) : d.intl.string(d.t.OpuAlJ)
                               })
                           ]
                       })

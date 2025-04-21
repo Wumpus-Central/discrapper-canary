@@ -1,9 +1,9 @@
 n.d(t, { Z: () => _ });
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(481060),
-    a = n(410030),
-    l = n(100527),
+    l = n(410030),
+    a = n(100527),
     o = n(906732),
     c = n(197115),
     d = n(626135),
@@ -16,26 +16,26 @@ var r = n(200651),
     b = n(820350);
 function _(e) {
     let { user: t, showOverlay: n, children: _ } = e,
-        N = (0, a.ZP)(),
-        { analyticsLocations: x } = (0, o.ZP)(l.Z.PREMIUM_UPSELL_OVERLAY);
-    return (i.useEffect(() => {
+        x = (0, l.ZP)(),
+        { analyticsLocations: E } = (0, o.ZP)(a.Z.PREMIUM_UPSELL_OVERLAY);
+    return (r.useEffect(() => {
         n &&
             d.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
-                location_stack: x,
+                location_stack: E,
                 type: g.cd.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE
             });
-    }, [n, x]),
+    }, [n, E]),
     n)
-        ? (0, r.jsxs)('div', {
+        ? (0, i.jsxs)('div', {
               className: h.upsellOverlayContainer,
               children: [
-                  (0, r.jsx)('div', { children: _ }),
-                  (0, r.jsxs)('div', {
+                  (0, i.jsx)('div', { children: _ }),
+                  (0, i.jsxs)('div', {
                       className: h.upsellOverlay,
                       children: [
-                          (0, r.jsx)('img', {
+                          (0, i.jsx)('img', {
                               className: h.upsellImage,
-                              alt: p.NW.string(p.t.LHFZQ0),
+                              alt: p.intl.string(p.t.LHFZQ0),
                               src: (function (e) {
                                   switch (e) {
                                       case m.BRd.DARK:
@@ -43,27 +43,27 @@ function _(e) {
                                       case m.BRd.LIGHT:
                                           return b;
                                   }
-                              })(N)
+                              })(x)
                           }),
-                          (0, r.jsxs)('div', {
+                          (0, i.jsxs)('div', {
                               className: h.upsellTextContainer,
                               children: [
-                                  (0, r.jsx)(s.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       variant: 'text-lg/semibold',
                                       color: 'always-white',
-                                      children: p.NW.string(p.t.dMaDFR)
+                                      children: p.intl.string(p.t.dMaDFR)
                                   }),
-                                  (0, r.jsx)(s.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'always-white',
-                                      children: p.NW.string(p.t.F7sgFB)
+                                      children: p.intl.string(p.t.F7sgFB)
                                   })
                               ]
                           }),
-                          (0, r.jsx)(c.Z, {
+                          (0, i.jsx)(c.Z, {
                               size: s.zxk.Sizes.LARGE,
                               color: s.zxk.Colors.GREEN,
-                              buttonText: u.ZP.isPremium(t) ? p.NW.string(p.t.AfRWIy) : p.NW.string(p.t.nkdUys),
+                              buttonText: u.ZP.isPremium(t) ? p.intl.string(p.t.AfRWIy) : p.intl.string(p.t.nkdUys),
                               subscriptionTier: g.Si.TIER_2
                           })
                       ]

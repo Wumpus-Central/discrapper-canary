@@ -76,7 +76,7 @@ function m(e) {
             style: { maxWidth: y },
             className: o()(d.contentImage, f)
         });
-    let N =
+    let A =
         'height' === a
             ? {
                   maxWidth: y,
@@ -96,11 +96,11 @@ function m(e) {
                 (0, r.jsx)(
                     'img',
                     h(_({}, e), {
-                        style: N,
+                        style: A,
                         className: o()(d.contentImage, f),
                         src: v && null != m ? m : t,
                         'aria-hidden': g,
-                        alt: null != p ? p : g ? void 0 : u.NW.string(u.t['2B/phI']),
+                        alt: null != p ? p : g ? void 0 : u.intl.string(u.t['2B/phI']),
                         onError: (e) => (v ? S(!0) : O(!0))
                     })
                 )

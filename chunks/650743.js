@@ -52,8 +52,8 @@ function S(e) {
     let { soundboardSound: t, closePicker: O } = e,
         S = (0, d.Iu)((e) => e.searchQuery),
         T = (0, i.e7)([E.Z], () => null != t && E.Z.isFavoriteSound(t.soundId)),
-        N = (0, i.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guildId)),
-        A = (0, i.e7)([l.Z], () => l.Z.useReducedMotion, []),
+        A = (0, i.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guildId)),
+        N = (0, i.e7)([l.Z], () => l.Z.useReducedMotion, []),
         C = (0, i.e7)([h.Z], () => h.Z.isFocused()),
         R = (0, i.e7)([p.ZP], () => p.ZP.getKeybindForAction(b.kg4.SOUNDBOARD_HOLD));
     if (null != t && S.length > 0)
@@ -71,14 +71,14 @@ function S(e) {
                           className: v.emoji
                       }),
             graphicSecondary:
-                null != N
+                null != A
                     ? (0, r.jsx)(u.Z, {
-                          guild: N,
-                          shouldAnimate: !A && C
+                          guild: A,
+                          shouldAnimate: !N && C
                       })
                     : null,
             titlePrimary: t.name,
-            titleSecondary: null == N ? void 0 : N.name,
+            titleSecondary: null == A ? void 0 : A.name,
             isFavorite: T
         });
     let P = () => {
@@ -92,7 +92,7 @@ function S(e) {
         D = () => (0, c.EW)(a.z.SOUNDBOARD_KEYBIND_TIP),
         L =
             null != R && (0, m.isWindows)() && !w
-                ? y.NW.format(y.t.udMTtr, {
+                ? y.intl.format(y.t.udMTtr, {
                       keybind: (0, g.BB)(R.shortcut, !0),
                       openSettingsHook: (e, t) =>
                           (0, r.jsx)(

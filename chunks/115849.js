@@ -58,24 +58,24 @@ function O(e, t) {
         e
     );
 }
-let N = n(349181),
-    y = {
+let y = n(349181),
+    I = {
         canSend: !1,
         hint: null,
         success: null,
         error: null
     },
-    I = (0, d.hQ)(),
-    v = ''.concat(I, '-decription'),
-    C = ''.concat(I, '-error');
-function S(e, t) {
+    v = (0, d.hQ)(),
+    C = ''.concat(v, '-decription'),
+    S = ''.concat(v, '-error');
+function N(e, t) {
     switch (t.type) {
         case 'RESET':
-            return y;
+            return I;
         case 'SUCCESS':
-            return O(E({}, y), { success: t.text });
+            return O(E({}, I), { success: t.text });
         case 'HINT':
-            return O(E({}, y), {
+            return O(E({}, I), {
                 canSend: !0,
                 hint: t.text
             });
@@ -87,10 +87,10 @@ function S(e, t) {
     }
 }
 function T(e) {
-    let { placeholder: t = m.NW.string(m.t['Rn/sLi']) } = e,
+    let { placeholder: t = m.intl.string(m.t['Rn/sLi']) } = e,
         n = i.createRef(),
         l = i.createRef(),
-        [o, d] = i.useReducer(S, y),
+        [o, d] = i.useReducer(N, I),
         { canSend: E, hint: O, success: T, error: P } = o,
         j = (0, p.Q3)('AddFriendInput');
     return (
@@ -115,7 +115,7 @@ function T(e) {
                     () =>
                         d({
                             type: 'SUCCESS',
-                            text: m.NW.format(m.t.Rtl1Eh, { discordTag: t })
+                            text: m.intl.format(m.t.Rtl1Eh, { discordTag: t })
                         }),
                     (e) => {
                         var n;
@@ -132,17 +132,17 @@ function T(e) {
                     className: b.addFriendWumpusWrapper,
                     children: [
                         (0, r.jsx)(c.R94, {
-                            id: v,
+                            id: C,
                             type: c.R94.Types.DESCRIPTION,
                             children: (0, r.jsx)(c.Text, {
                                 tag: 'div',
                                 variant: 'heading-md/normal',
-                                children: m.NW.string(m.t['Rn/sLi'])
+                                children: m.intl.string(m.t['Rn/sLi'])
                             })
                         }),
                         j
                             ? (0, r.jsx)('img', {
-                                  src: N,
+                                  src: y,
                                   alt: 'Wumpus Waving'
                               })
                             : null
@@ -160,7 +160,7 @@ function T(e) {
                         }),
                         children: [
                             (0, r.jsx)(c.oil, {
-                                id: I,
+                                id: v,
                                 inputRef: n,
                                 className: b.addFriendInput,
                                 inputClassName: b.input,
@@ -195,7 +195,7 @@ function T(e) {
                                 placeholder: t,
                                 'aria-label': t,
                                 'aria-invalid': null != P || void 0,
-                                'aria-describedby': null != P ? C : v
+                                'aria-describedby': null != P ? S : C
                             }),
                             null != O &&
                                 (0, r.jsx)('div', {
@@ -207,7 +207,7 @@ function T(e) {
                                 size: c.zxk.Sizes.SMALL,
                                 disabled: !E,
                                 type: 'submit',
-                                children: m.NW.string(m.t['PMsq/f'])
+                                children: m.intl.string(m.t['PMsq/f'])
                             })
                         ]
                     })
@@ -215,7 +215,7 @@ function T(e) {
                 null != P &&
                     (0, r.jsx)(c.R94, {
                         role: 'alert',
-                        id: C,
+                        id: S,
                         type: c.R94.Types.ERROR,
                         className: _.marginTop8,
                         children: P

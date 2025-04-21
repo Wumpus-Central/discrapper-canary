@@ -1,12 +1,12 @@
 n.d(t, { Z: () => i }), n(314940);
-var a = n(278074),
-    r = n(481060),
-    l = n(695346);
+var l = n(278074),
+    a = n(481060),
+    r = n(695346);
 function i() {
-    let e = l.co.getSetting();
-    return (0, a.EQ)(e)
-        .with(r.Skl.IDLE, () => r.Skl.IDLE)
-        .with(r.Skl.DND, () => r.Skl.DND)
-        .with(r.Skl.INVISIBLE, () => r.Skl.INVISIBLE)
-        .otherwise(() => r.Skl.ONLINE);
+    let e = r.co.getSetting();
+    return (0, l.EQ)(e)
+        .with(a.Skl.IDLE, () => a.Skl.IDLE)
+        .with(a.Skl.DND, () => a.Skl.DND)
+        .with(a.Skl.INVISIBLE, () => a.Skl.INVISIBLE)
+        .otherwise(() => a.Skl.ONLINE);
 }

@@ -49,7 +49,7 @@ function T(e) {
     }
     return e;
 }
-function N(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,12 +61,12 @@ function N(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -118,12 +118,12 @@ function D(e) {
         h = C(e, ['hideBadges', 'stream', 'location']);
     let { parentAnalyticsLocation: I } = (0, s.ZP)(),
         S = (0, a.e7)([p.default], () => m.ZP.isPremium(p.default.getCurrentUser(), v.p9.TIER_1)),
-        N = (0, a.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
+        A = (0, a.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
         R = i.useMemo(() => (null != n ? [n] : []), [n]),
         D = i.useCallback(() => {
-            null != N && (0, f.Z)(N.getGuildId(), N.id, b.jXE.STREAM_SETTINGS);
-        }, [N]);
-    if (null == n || null == N) return null;
+            null != A && (0, f.Z)(A.getGuildId(), A.id, b.jXE.STREAM_SETTINGS);
+        }, [A]);
+    if (null == n || null == A) return null;
     let L = P;
     return (
         t || S || (L = w),
@@ -133,7 +133,7 @@ function D(e) {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(g.Z, {
                     children: (0, r.jsx)(d.Z, {
-                        channel: N,
+                        channel: A,
                         currentUser: p.default.getCurrentUser(),
                         activeStreams: R,
                         onClose: t,
@@ -148,8 +148,8 @@ function D(e) {
                 (0, r.jsx)(
                     E.Z,
                     T(
-                        A(T({}, e), {
-                            label: O.NW.string(O.t.tmiYpK),
+                        N(T({}, e), {
+                            label: O.intl.string(O.t.tmiYpK),
                             iconComponent: L,
                             onClick: (t) => {
                                 (null != I || null != u) && (0, l.v)(null != I ? I : u, l.d.STREAM_SETTINGS), null == e || e.onClick(t);

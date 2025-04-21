@@ -1,54 +1,54 @@
-i.d(t, { default: () => l });
-var e = i(200651);
+i.d(s, { default: () => x });
+var n = i(200651);
 i(192379);
-var n = i(481060),
+var e = i(481060),
     a = i(600164),
     r = i(313201),
     c = i(952164),
     o = i(388032),
-    x = i(532819);
-function l(s) {
-    let { transitionState: t, onClose: i } = s,
-        l = (0, r.Dt)();
-    return (0, e.jsxs)(n.Y0X, {
-        'aria-labelledby': l,
-        transitionState: t,
-        size: n.CgR.SMALL,
+    l = i(532819);
+function x(t) {
+    let { transitionState: s, onClose: i } = t,
+        x = (0, r.Dt)();
+    return (0, n.jsxs)(e.Y0X, {
+        'aria-labelledby': x,
+        transitionState: s,
+        size: e.CgR.SMALL,
         children: [
-            (0, e.jsx)(n.xBx, {
+            (0, n.jsx)(e.xBx, {
                 separator: !1,
-                children: (0, e.jsx)(n.X6q, {
-                    id: l,
+                children: (0, n.jsx)(e.X6q, {
+                    id: x,
                     variant: 'heading-lg/semibold',
-                    children: o.NW.formatToMarkdownString(o.t.DQsSGh, {})
+                    children: o.intl.formatToMarkdownString(o.t.DQsSGh, {})
                 })
             }),
-            (0, e.jsxs)(n.hzk, {
+            (0, n.jsxs)(e.hzk, {
                 children: [
-                    (0, e.jsx)(a.Z, {
+                    (0, n.jsx)(a.Z, {
                         justify: a.Z.Justify.CENTER,
-                        children: (0, e.jsx)('div', { className: x.image })
+                        children: (0, n.jsx)('div', { className: l.image })
                     }),
-                    (0, e.jsx)(n.Text, {
-                        className: x.text,
+                    (0, n.jsx)(e.Text, {
+                        className: l.text,
                         variant: 'text-sm/normal',
-                        children: o.NW.string(o.t.xGMwi4)
+                        children: o.intl.string(o.t.xGMwi4)
                     })
                 ]
             }),
-            (0, e.jsxs)(n.mzw, {
+            (0, n.jsxs)(e.mzw, {
                 children: [
-                    (0, e.jsx)(n.zxk, {
+                    (0, n.jsx)(e.zxk, {
                         onClick: function () {
                             (0, c.KK)(), i();
                         },
-                        children: o.NW.string(o.t.n8U5jY)
+                        children: o.intl.string(o.t.n8U5jY)
                     }),
-                    (0, e.jsx)(n.zxk, {
-                        look: n.zxk.Looks.LINK,
-                        color: n.zxk.Colors.PRIMARY,
+                    (0, n.jsx)(e.zxk, {
+                        look: e.zxk.Looks.LINK,
+                        color: e.zxk.Colors.PRIMARY,
                         onClick: i,
-                        children: o.NW.string(o.t['ETE/oK'])
+                        children: o.intl.string(o.t['ETE/oK'])
                     })
                 ]
             })

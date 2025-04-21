@@ -1,16 +1,16 @@
 n.d(t, { Z: () => c });
-var r = n(399606),
-    i = n(626135),
+var i = n(399606),
+    r = n(626135),
     s = n(260722),
-    a = n(914788),
-    l = n(292352),
+    l = n(914788),
+    a = n(292352),
     o = n(981631);
 let c = () => ({
-    selectedTab: (0, r.e7)([a.Z], () => a.Z.getSelectedTab()),
+    selectedTab: (0, i.e7)([l.Z], () => l.Z.getSelectedTab()),
     handleTabChange: (e) => {
         s.ZP.selectTab(e),
-            i.default.track(o.rMx.FAMILY_CENTER_ACTION, {
-                action: l.YC.TabChange,
+            r.default.track(o.rMx.FAMILY_CENTER_ACTION, {
+                action: a.YC.TabChange,
                 tab: e
             });
     }

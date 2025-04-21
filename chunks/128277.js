@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(262210),
     S = n(666984),
     T = n(670451),
-    N = n(228168),
-    A = n(227832);
+    A = n(228168),
+    N = n(227832);
 function C(e, t, n) {
     return (
         t in e
@@ -79,7 +79,7 @@ function w(e, t) {
 function D(e) {
     let { user: t, currentUser: n, activity: a, className: C, onClose: P } = e,
         { profileType: D } = (0, E.z)(),
-        L = { [A.fullSize]: D === N.y0.FULL_SIZE },
+        L = { [N.fullSize]: D === A.y0.FULL_SIZE },
         x = (0, _.Z)({
             activity: a,
             user: t
@@ -117,7 +117,7 @@ function D(e) {
                                 {
                                     children: [
                                         (0, r.jsx)(s.P3F, {
-                                            className: o()(A.clickableText, A.inline),
+                                            className: o()(N.clickableText, N.inline),
                                             onClick: (e) => {
                                                 e.stopPropagation(), U({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(a, t.id, n);
                                             },
@@ -146,7 +146,7 @@ function D(e) {
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: o()(A.actions, L),
+                      className: o()(N.actions, L),
                       children: (0, r.jsx)(S.Z, {
                           user: t,
                           activity: a,
@@ -157,7 +157,7 @@ function D(e) {
         value: j,
         children: (0, r.jsxs)(y.Z, {
             ref: G,
-            className: o()(A.card, C),
+            className: o()(N.card, C),
             onAction: U,
             onClose: P,
             children: [
@@ -174,20 +174,20 @@ function D(e) {
                     })
                 ),
                 (0, r.jsx)('div', {
-                    className: A.body,
+                    className: N.body,
                     children: (0, r.jsxs)('div', {
-                        className: o()(A.content, L),
+                        className: o()(N.content, L),
                         children: [
                             (0, r.jsx)(f.E, {
                                 image: k,
                                 size: f.J.SIZE_60,
-                                className: A.clickableImage,
+                                className: N.clickableImage,
                                 onClick: (e) => {
                                     e.stopPropagation(), U({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(a, t.id);
                                 }
                             }),
                             (0, r.jsxs)('div', {
-                                className: A.details,
+                                className: N.details,
                                 children: [
                                     (0, r.jsxs)('div', {
                                         children: [
@@ -204,16 +204,16 @@ function D(e) {
                                     (0, r.jsx)(b.Z, {
                                         user: t,
                                         activity: a,
-                                        className: A.badges
+                                        className: N.badges
                                     }),
                                     F()
                                 ]
                             }),
-                            D === N.y0.FULL_SIZE && V()
+                            D === A.y0.FULL_SIZE && V()
                         ]
                     })
                 }),
-                D !== N.y0.FULL_SIZE && V()
+                D !== A.y0.FULL_SIZE && V()
             ]
         })
     });

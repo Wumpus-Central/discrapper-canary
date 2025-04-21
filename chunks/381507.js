@@ -69,7 +69,7 @@ let x = () => {
                   (0, r.jsx)(l.Text, {
                       variant: 'text-xs/bold',
                       className: _.bannerHeader,
-                      children: p.NW.format(p.t.oxhCOj, { userName: f })
+                      children: p.intl.format(p.t.oxhCOj, { userName: f })
                   }),
                   (0, r.jsx)(j, { className: _.bannerIcon })
               ]

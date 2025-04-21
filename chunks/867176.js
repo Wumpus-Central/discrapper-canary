@@ -77,14 +77,14 @@ function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = N(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function N(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -93,13 +93,13 @@ function N(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let A = (e) => {
+let N = (e) => {
     let { size: t, stroke: n } = (0, u.UCu)(e);
     return t / 2 + n;
 };
 function C(e) {
     var t;
-    let { user: n, displayProfile: a, guildId: b, pendingBanner: v, children: O, className: I, avatarSize: S, avatarOffsetX: T, avatarOffsetY: N, bannerWidth: C, bannerHeight: R, themePadding: P, pendingAccentColor: w, animateOnHover: D = !1 } = e,
+    let { user: n, displayProfile: a, guildId: b, pendingBanner: v, children: O, className: I, avatarSize: S, avatarOffsetX: T, avatarOffsetY: A, bannerWidth: C, bannerHeight: R, themePadding: P, pendingAccentColor: w, animateOnHover: D = !1 } = e,
         L = (0, _.Dt)(),
         [x, M] = i.useState(!1),
         k = (0, l.e7)([m.Z], () => m.Z.isFocused()),
@@ -114,9 +114,9 @@ function C(e) {
         F = n.getAvatarURL(b, (0, u.pxk)(S)),
         V = (0, s._i)((0, d.ZP)(F, B, !1)),
         Z = (0, f.Z)(null != (t = null != w ? w : null == a ? void 0 : a.primaryColor) ? t : V).hex,
-        H = A(S),
-        W = H + T - P,
-        Y = R - N - P;
+        H = N(S),
+        Y = H + T - P,
+        W = R - A - P;
     return (0, r.jsxs)('svg', {
         className: y.mask,
         viewBox: '0 0 '.concat(C, ' ').concat(R),
@@ -137,8 +137,8 @@ function C(e) {
                     }),
                     (0, r.jsx)('circle', {
                         fill: 'black',
-                        cx: W,
-                        cy: Y,
+                        cx: Y,
+                        cy: W,
                         r: H
                     })
                 ]

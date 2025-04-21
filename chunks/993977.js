@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -44,7 +44,7 @@ function O(e) {
     }
     return e;
 }
-function N(e) {
+function y(e) {
     let { applicationViewItems: t, restoreApplication: n } = e;
     if (0 === t.length) return null;
     let i = t.map((e) => {
@@ -89,13 +89,13 @@ function N(e) {
         children: [
             (0, r.jsx)(a.vwX, {
                 className: _.hiddenLibraryApplicationsTitle,
-                children: b.NW.string(b.t['5PJtrK'])
+                children: b.intl.string(b.t['5PJtrK'])
             }),
             i
         ]
     });
 }
-class y extends i.PureComponent {
+class I extends i.PureComponent {
     handleToggleShortcutDesktop(e) {
         c.Xc.updateSetting(e);
     }
@@ -116,20 +116,20 @@ class y extends i.PureComponent {
                               (0, r.jsx)(a.j7V, {
                                   value: t,
                                   onChange: this.handleToggleShortcutDesktop,
-                                  note: b.NW.string(b.t.vT61Nz),
-                                  children: b.NW.string(b.t['9ID+Ki'])
+                                  note: b.intl.string(b.t.vT61Nz),
+                                  children: b.intl.string(b.t['9ID+Ki'])
                               }),
                               (0, r.jsx)(a.j7V, {
                                   value: n,
                                   onChange: this.handleToggleShortcutStartMenu,
-                                  note: b.NW.string(b.t.cpYp0N),
-                                  children: b.NW.string(b.t.vNpUMz)
+                                  note: b.intl.string(b.t.cpYp0N),
+                                  children: b.intl.string(b.t.vNpUMz)
                               }),
                               (0, r.jsx)(g.Z, {})
                           ]
                       })
                     : null,
-                (0, r.jsx)(N, {
+                (0, r.jsx)(y, {
                     restoreApplication: this.handleRestoreHiddenLibraryApplication,
                     applicationViewItems: e
                 })
@@ -155,11 +155,11 @@ class y extends i.PureComponent {
             });
     }
 }
-function I() {
+function v() {
     let e = {
         installShortcutDesktop: c.Xc.useSetting(),
         installShortcutStartMenu: c.Pe.useSetting(),
         hiddenLibraryApplicationViewItems: (0, l.e7)([u.Z], () => u.Z.hiddenLibraryApplicationViewItems)
     };
-    return (0, r.jsx)(y, O({}, e));
+    return (0, r.jsx)(I, O({}, e));
 }

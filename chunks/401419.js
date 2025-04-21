@@ -19,7 +19,7 @@ let u = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com']
         return (null != n && (r = n.split('/')), 'PlayStation' === e)
             ? null != t && u.includes(t) && 2 === r.length
                 ? {
-                      embedUrl: d(t, r[1], a.NW.currentLocale),
+                      embedUrl: d(t, r[1], a.intl.currentLocale),
                       style: {
                           width: 400,
                           height: 300,

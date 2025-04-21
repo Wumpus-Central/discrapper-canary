@@ -53,14 +53,14 @@ function g(e) {
                       ? (0, i.jsx)(s.IGR, {
                             className: o()(p.newBadge, p.inTagsRow),
                             color: a.Z.unsafe_rawColors.BRAND_260.css,
-                            text: h.NW.string(h.t.y2b7CA)
+                            text: h.intl.string(h.t.y2b7CA)
                         })
                       : null,
                   j &&
                       (0, i.jsx)('div', {
                           className: m.pinIcon,
                           children: (0, i.jsx)(s.ua7, {
-                              text: h.NW.string(h.t['1QLRYW']),
+                              text: h.intl.string(h.t['1QLRYW']),
                               children: (e) => {
                                   var t, n;
                                   return (0, i.jsx)(

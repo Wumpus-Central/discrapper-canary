@@ -31,22 +31,22 @@ function b(e) {
         { application: i, scopes: s, redirectUri: b, approximateGuildCount: v, isEmbeddedFlow: O, disclosures: I } = e,
         S = new Date(f.default.extractTimestamp(i.id)),
         T = (0, p.W3)(s),
-        N = (0, d.yE)(null != (t = i.flags) ? t : 0, h.udG.EMBEDDED);
-    if (null != b && !N && !O)
+        A = (0, d.yE)(null != (t = i.flags) ? t : 0, h.udG.EMBEDDED);
+    if (null != b && !A && !O)
         try {
             let e = new URL(b);
             n = null != e.host && e.host.length > 0 ? e.origin : e.href;
         } catch (e) {
             n = null;
         }
-    let A = c.w.useExperiment({ location: 'oauth2_authorize' });
+    let N = c.w.useExperiment({ location: 'oauth2_authorize' });
     return (0, r.jsxs)('div', {
-        className: a()(g.applicationDetails, { [g.noPadding]: A.enabled }),
+        className: a()(g.applicationDetails, { [g.noPadding]: N.enabled }),
         children: [
             null != n
                 ? (0, r.jsx)(y, {
                       icon: l.xPt,
-                      text: m.NW.format(m.t['5k5OKC'], { origin: n })
+                      text: m.intl.format(m.t['5k5OKC'], { origin: n })
                   })
                 : null,
             (0, r.jsx)(y, {
@@ -55,12 +55,12 @@ function b(e) {
             }),
             (0, r.jsx)(y, {
                 icon: l.T39,
-                text: m.NW.formatToPlainString(m.t['+1bjc3'], { date: S })
+                text: m.intl.formatToPlainString(m.t['+1bjc3'], { date: S })
             }),
             s.includes(o.x.BOT) && null != v
                 ? (0, r.jsx)(y, {
                       icon: l.wGt,
-                      text: m.NW.formatToPlainString(m.t.UHGHSE, { guildCount: v })
+                      text: m.intl.formatToPlainString(m.t.UHGHSE, { guildCount: v })
                   })
                 : null,
             (0, r.jsx)(y, {

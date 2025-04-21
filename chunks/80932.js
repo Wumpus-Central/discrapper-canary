@@ -1,5 +1,5 @@
 n.d(t, {
-    $K: () => A,
+    $K: () => N,
     OQ: () => v,
     RE: () => I,
     Xe: () => C,
@@ -134,20 +134,20 @@ function T(e) {
         .filter(h.lm);
     return [...(0, d.Z)(t).keys()];
 }
-function N(e) {
+function A(e) {
     var t, n, r;
     return null == e ? null : null != (r = null != (n = e.id) ? n : null == (t = u.ZP.convertSurrogateToBase(e.surrogates)) ? void 0 : t.name) ? r : e.name;
 }
-function A(e) {
-    let t = N(e);
+function N(e) {
+    let t = A(e);
     null != t &&
         _.DZ.updateAsync(
             'favoriteEmojis',
             (e) =>
                 ((e.emojis = T(e.emojis)), i().size(e.emojis) >= E.oX)
                     ? (m.Z.show({
-                          title: b.NW.string(b.t['+XYXtb']),
-                          body: b.NW.formatToPlainString(b.t.JaIyFh, { count: E.oX })
+                          title: b.intl.string(b.t['+XYXtb']),
+                          body: b.intl.formatToPlainString(b.t.JaIyFh, { count: E.oX })
                       }),
                       !1)
                     : !e.emojis.includes(t) && void e.emojis.push(t),
@@ -155,7 +155,7 @@ function A(e) {
         );
 }
 function C(e) {
-    let t = N(e);
+    let t = A(e);
     null != t &&
         _.DZ.updateAsync(
             'favoriteEmojis',

@@ -56,32 +56,32 @@ function p(e, t) {
         x = (0, o.Lh)(t);
     if (1 === v.length)
         if (!(y > 0))
-            return d.NW.formatToPlainString(O.reactionTooltip1, {
+            return d.intl.formatToPlainString(O.reactionTooltip1, {
                 a: v[0],
                 emojiName: x
             });
         else if (null != p)
-            return d.NW.format(O.reactionTooltip1NInteractive, {
+            return d.intl.format(O.reactionTooltip1NInteractive, {
                 a: v[0],
                 n: y,
                 emojiName: x,
                 onClick: p
             });
         else
-            return d.NW.formatToPlainString(O.reactionTooltip1N, {
+            return d.intl.formatToPlainString(O.reactionTooltip1N, {
                 a: v[0],
                 n: y,
                 emojiName: x
             });
     if (2 === v.length)
         if (!(y > 0))
-            return d.NW.formatToPlainString(O.reactionTooltip2, {
+            return d.intl.formatToPlainString(O.reactionTooltip2, {
                 a: v[0],
                 b: v[1],
                 emojiName: x
             });
         else if (null != p)
-            return d.NW.format(O.reactionTooltip2NInteractive, {
+            return d.intl.format(O.reactionTooltip2NInteractive, {
                 a: v[0],
                 b: v[1],
                 n: y,
@@ -89,7 +89,7 @@ function p(e, t) {
                 onClick: p
             });
         else
-            return d.NW.formatToPlainString(O.reactionTooltip2N, {
+            return d.intl.formatToPlainString(O.reactionTooltip2N, {
                 a: v[0],
                 b: v[1],
                 n: y,
@@ -97,18 +97,18 @@ function p(e, t) {
             });
     return 3 !== v.length
         ? null != p
-            ? d.NW.format(O.reactionTooltipNInteractive, {
+            ? d.intl.format(O.reactionTooltipNInteractive, {
                   n: y,
                   emojiName: x,
                   onClick: p
               })
-            : d.NW.formatToPlainString(O.reactionTooltipN, {
+            : d.intl.formatToPlainString(O.reactionTooltipN, {
                   n: y,
                   emojiName: x
               })
         : y > 0
           ? null != p
-              ? d.NW.format(O.reactionTooltip3NInteractive, {
+              ? d.intl.format(O.reactionTooltip3NInteractive, {
                     a: v[0],
                     b: v[1],
                     c: v[2],
@@ -116,14 +116,14 @@ function p(e, t) {
                     emojiName: x,
                     onClick: p
                 })
-              : d.NW.formatToPlainString(O.reactionTooltip3N, {
+              : d.intl.formatToPlainString(O.reactionTooltip3N, {
                     a: v[0],
                     b: v[1],
                     c: v[2],
                     n: y,
                     emojiName: x
                 })
-          : d.NW.formatToPlainString(O.reactionTooltip3, {
+          : d.intl.formatToPlainString(O.reactionTooltip3, {
                 a: v[0],
                 b: v[1],
                 c: v[2],

@@ -37,7 +37,7 @@ function u(e) {
     let t,
         { onChooseType: n, onStripePaymentMethodReceived: l, onPaymentRequestFailure: u, onValidPaymentRequest: d, paymentRequestRef: f, paymentRequestWallet: _ } = e,
         p = {
-            paymentLabel: o.NW.string(o.t.ZURqX1),
+            paymentLabel: o.intl.string(o.t.ZURqX1),
             paymentRequestRef: f,
             renderConnectorView: !0,
             onStripePaymentMethodReceived: l,
@@ -55,7 +55,7 @@ function u(e) {
         (0, r.jsx)('div', {
             className: s.body,
             children: (0, r.jsx)(i.hjN, {
-                title: o.NW.string(o.t.eQ2bLi),
+                title: o.intl.string(o.t.eQ2bLi),
                 children: t
             })
         })

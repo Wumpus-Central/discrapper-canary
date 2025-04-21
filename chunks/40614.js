@@ -30,7 +30,7 @@ let d = (e) => {
                           color: 'currentColor',
                           className: u.iconEye
                       }),
-                      c.NW.string(c.t.jfrLLS)
+                      c.intl.string(c.t.jfrLLS)
                   ]
               })
           });

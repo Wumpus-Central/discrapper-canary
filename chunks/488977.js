@@ -19,9 +19,9 @@ var i = n(200651),
     v = n(626135),
     C = n(572004),
     g = n(630388),
-    N = n(135431),
-    j = n(541099),
-    P = n(783097),
+    j = n(135431),
+    P = n(541099),
+    N = n(783097),
     E = n(570949),
     O = n(314734),
     A = n(981631),
@@ -74,11 +74,11 @@ function w(e) {
     var t;
     let { application: l, context: w, className: R, sectionName: Z } = e,
         k = r.useRef(null),
-        M = (0, a.e7)([j.Z], () => j.Z.entrypoint()),
-        W = (0, P.L1)(l),
-        D = (0, m.Eb)(W),
-        B = (0, d.R)(l.id),
-        U = (0, a.e7)(
+        M = (0, a.e7)([P.Z], () => P.Z.entrypoint()),
+        D = (0, N.L1)(l),
+        B = (0, m.Eb)(D),
+        U = (0, d.R)(l.id),
+        H = (0, a.e7)(
             [y.Z],
             () => {
                 var e;
@@ -86,17 +86,17 @@ function w(e) {
             },
             []
         ),
-        H = {
+        W = {
             location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: l.id,
             section_name: Z,
-            source: j.Z.lastShownEntrypoint()
+            source: P.Z.lastShownEntrypoint()
         },
         V = x.default.getCurrentUser(),
         F = h.Z.useExperiment({ location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU }, { autoTrackExposure: !0 }).enabled,
         z = (0, f.Z)({
             id: l.id,
-            label: I.NW.string(I.t['+NP/b2'])
+            label: I.intl.string(I.t['+NP/b2'])
         }),
         G = (0, E.P)({ application: l }),
         X = (0, g.yE)(null != (t = l.flags) ? t : 0, A.udG.EMBEDDED),
@@ -111,15 +111,15 @@ function w(e) {
                               applicationId: l.id,
                               referrerId: null == V ? void 0 : V.id
                           })
-                        : (0, p.J)(T({ id: l.id }, W));
-                    (0, C.JG)(e, () => (0, s.showToast)((0, s.createToast)(I.NW.string(I.t['L/PwZW']), s.ToastType.SUCCESS))),
+                        : (0, p.J)(T({ id: l.id }, D));
+                    (0, C.JG)(e, () => (0, s.showToast)((0, s.createToast)(I.intl.string(I.t['L/PwZW']), s.ToastType.SUCCESS))),
                         v.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: l.id,
                             source: M
                         });
                 },
                 className: o()(S.clickable, R),
-                'aria-label': I.NW.string(I.t.WqhZsr),
+                'aria-label': I.intl.string(I.t.WqhZsr),
                 children: (0, i.jsx)(s.xPt, {
                     size: 'sm',
                     color: s.TVs.colors.INTERACTIVE_ACTIVE
@@ -133,15 +133,15 @@ function w(e) {
                         className: O.NN,
                         navId: 'app-details-more-menu',
                         onClose: t,
-                        'aria-label': I.NW.string(I.t.AXIHpa),
+                        'aria-label': I.intl.string(I.t.AXIHpa),
                         onSelect: void 0,
                         children: [
                             (0, i.jsxs)(s.kSQ, {
                                 children: [
-                                    B &&
+                                    U &&
                                         (0, i.jsx)(s.sNh, {
                                             id: 'open-storefront',
-                                            label: I.NW.string(I.t.kRvlKC),
+                                            label: I.intl.string(I.t.kRvlKC),
                                             action: () => {
                                                 (0, s.ZDy)(async () => {
                                                     let { default: e } = await Promise.all([n.e('74891'), n.e('77803'), n.e('53458')]).then(n.bind(n, 7225));
@@ -150,22 +150,22 @@ function w(e) {
                                                             transitionState: t.transitionState,
                                                             onClose: t.onClose,
                                                             appId: l.id,
-                                                            guildId: U
+                                                            guildId: H
                                                         });
                                                 });
                                             }
                                         }),
-                                    D
+                                    B
                                         ? (0, i.jsx)(s.sNh, {
                                               id: 'add-app',
-                                              label: I.NW.string(I.t.NgXl3N),
+                                              label: I.intl.string(I.t.NgXl3N),
                                               action: () => {
-                                                  null == W.customInstallUrl && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, H),
-                                                      (0, N.L)(
-                                                          L(T({}, W), {
+                                                  null == D.customInstallUrl && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, W),
+                                                      (0, j.L)(
+                                                          L(T({}, D), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
-                                                                  null != t && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, H);
+                                                                  null != t && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, W);
                                                               },
                                                               source: 'app_launcher_app_details'
                                                           })
@@ -177,7 +177,7 @@ function w(e) {
                                         ? (0, i.jsx)(s.sNh, {
                                               id: 'report-app',
                                               color: 'danger',
-                                              label: I.NW.string(I.t.jhJze3),
+                                              label: I.intl.string(I.t.jhJze3),
                                               action: () => {
                                                   var e;
                                                   (0, b.uu)({
@@ -204,7 +204,7 @@ function w(e) {
                         L(T({ innerRef: k }, e), {
                             onClick: e.onClick,
                             className: o()(S.clickable, R),
-                            'aria-label': I.NW.string(I.t.UKOtz8),
+                            'aria-label': I.intl.string(I.t.UKOtz8),
                             children: (0, i.jsx)(s.xhG, {
                                 size: 'sm',
                                 color: s.TVs.colors.INTERACTIVE_ACTIVE

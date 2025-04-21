@@ -1,15 +1,15 @@
 n.d(t, {
     c_: () => o,
-    is: () => l
+    is: () => a
 });
-var r = n(442837),
-    i = n(430824),
+var i = n(442837),
+    r = n(430824),
     s = n(997950),
-    a = n(981631);
-let l = () => (0, s.xu)().selectedGuildId,
+    l = n(981631);
+let a = () => (0, s.xu)().selectedGuildId,
     o = () => {
         var e;
-        let t = l(),
-            n = (0, r.e7)([i.Z], () => i.Z.getGuild(t));
-        return null != (e = null == n ? void 0 : n.hasFeature(a.oNc.HUB)) && e;
+        let t = a(),
+            n = (0, i.e7)([r.Z], () => r.Z.getGuild(t));
+        return null != (e = null == n ? void 0 : n.hasFeature(l.oNc.HUB)) && e;
     };

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => N }), n(388685);
-var r,
-    i,
+n.d(t, { Z: () => x }), n(388685);
+var i,
+    r,
     s,
-    a = n(200651),
-    l = n(442837),
+    l = n(200651),
+    a = n(442837),
     o = n(544891),
     c = n(570140),
     d = n(668781),
@@ -14,7 +14,7 @@ var r,
 let h = { status: '' },
     f = [],
     b = ['discord.com', 'discordapp.com', 'discordapp.net', 'dl.discordapp.net', 'discordcdn.com', 'discord.gg', 'discord.media'];
-class _ extends (r = l.ZP.Store) {
+class _ extends (i = a.ZP.Store) {
     initialize() {
         this.updateState(), this.addListener();
     }
@@ -34,7 +34,7 @@ class _ extends (r = l.ZP.Store) {
         } catch (e) {}
     }
     async runCommand(e) {
-        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
+        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
         try {
             return await m.ZP.getDiscordUtils().runWarpCommand(e, ...n);
         } catch (e) {
@@ -61,7 +61,7 @@ class _ extends (r = l.ZP.Store) {
     async promptInstall() {
         (await d.Z.confirm({
             title: 'Warp not installed',
-            body: (0, a.jsx)('span', { children: 'Do you want to install Warp?' })
+            body: (0, l.jsx)('span', { children: 'Do you want to install Warp?' })
         }))
             ? this.install()
             : this.logEvent({ status: 'InstallDeclined' });
@@ -134,12 +134,12 @@ class _ extends (r = l.ZP.Store) {
     }
 }
 (s = 'WarpClientStore'),
-    (i = 'displayName') in _
-        ? Object.defineProperty(_, i, {
+    (r = 'displayName') in _
+        ? Object.defineProperty(_, r, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (_[i] = s);
-let N = new _(c.Z, {});
+        : (_[r] = s);
+let x = new _(c.Z, {});

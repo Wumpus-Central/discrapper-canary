@@ -176,7 +176,7 @@ class m extends h {
         );
     }
     mergeFromApplicationUpdate(e) {
-        var t, n, r, i, a, o, s, l, c, d, f, _, p, h, g, E, b, y, v, O, I, S, T, N, A, C, R, P, w, D, L, x, M, k, j, U, G, B, F, V, Z, H;
+        var t, n, r, i, a, o, s, l, c, d, f, _, p, h, g, E, b, y, v, O, I, S, T, A, N, C, R, P, w, D, L, x, M, k, j, U, G, B, F, V, Z, H;
         return new m({
             id: null != (t = e.id) ? t : this.id,
             name: null != (n = e.name) ? n : this.name,
@@ -201,8 +201,8 @@ class m extends h {
             eulaId: null != (I = e.eulaId) ? I : this.eulaId,
             slug: null != (S = e.slug) ? S : this.slug,
             coverImage: null != (T = e.coverImage) ? T : this.coverImage,
-            bot: null != (N = e.bot) ? N : this.bot,
-            flags: null != (A = e.flags) ? A : this.flags,
+            bot: null != (A = e.bot) ? A : this.bot,
+            flags: null != (N = e.flags) ? N : this.flags,
             maxParticipants: null != (C = e.maxParticipants) ? C : this.maxParticipants,
             tags: null != (R = e.tags) ? R : this.tags,
             embeddedActivityConfig: null != (P = e.embeddedActivityConfig) ? P : null != this.embeddedActivityConfig ? u({}, this.embeddedActivityConfig) : void 0,

@@ -55,7 +55,7 @@ function N(e) {
                       size: 'xs',
                       color: c.Z.unsafe_rawColors.WHITE_500.css
                   }),
-                  C.NW.string(C.t.b0y3DA)
+                  C.intl.string(C.t.b0y3DA)
               ]
           })
         : (0, t.jsxs)(o.gtL, {
@@ -68,7 +68,7 @@ function N(e) {
                       height: 16,
                       width: 16
                   }),
-                  C.NW.string(C.t['+7XY39'])
+                  C.intl.string(C.t['+7XY39'])
               ]
           });
 }
@@ -175,7 +175,7 @@ let y = r.memo(function (e) {
                                                         );
                                                     };
                                                 }),
-                                            children: C.NW.string(C.t.VINpSE)
+                                            children: C.intl.string(C.t.VINpSE)
                                         })
                                 ]
                             })

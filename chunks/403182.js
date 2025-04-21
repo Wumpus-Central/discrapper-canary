@@ -1,6 +1,6 @@
 n.d(t, {
     Ng: () => O,
-    OC: () => A,
+    OC: () => N,
     dg: () => I,
     dp: () => E,
     f3: () => y,
@@ -8,7 +8,7 @@ n.d(t, {
     nA: () => S,
     qF: () => g,
     uV: () => v,
-    vY: () => N
+    vY: () => A
 }),
     n(35282),
     n(388685),
@@ -119,10 +119,10 @@ function T(e) {
     for (let n of e) t += n.size;
     return t;
 }
-function N(e) {
-    return T(e) > A();
+function A(e) {
+    return T(e) > N();
 }
-function A() {
+function N() {
     let e = c.default.getCurrentUser();
     return null != e && e.isStaff() ? m : h;
 }
@@ -130,9 +130,9 @@ function C(e) {
     let { guildId: t, onClick: n } = e,
         i = (0, u.BU)(I(t) / 1024, { useKibibytes: !0 }),
         a = (0, u.BU)(_.Uq / 1024, { useKibibytes: !0 }),
-        o = p.NW.formatToPlainString(p.t.q5fTZm, { maxSize: i }),
-        s = p.NW.formatToPlainString(p.t.htbuIS, { premiumMaxSize: a }),
-        l = p.NW.format(p.t.fjSvsL, { onClick: n });
+        o = p.intl.formatToPlainString(p.t.q5fTZm, { maxSize: i }),
+        s = p.intl.formatToPlainString(p.t.htbuIS, { premiumMaxSize: a }),
+        l = p.intl.format(p.t.fjSvsL, { onClick: n });
     return (0, r.jsxs)(r.Fragment, {
         children: [o, ' ', s.replace('\n', ' '), '. ', l]
     });

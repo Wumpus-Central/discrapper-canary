@@ -21,8 +21,8 @@ var r,
     I = 8,
     S = 1,
     T = 2,
-    N = 3,
-    A = 4,
+    A = 3,
+    N = 4,
     C = 5,
     R = 6,
     P = 7,
@@ -40,8 +40,8 @@ var r,
     V = 19,
     Z = 20,
     H = 21,
-    W = 22,
-    Y = 23,
+    Y = 22,
+    W = 23,
     K = 24,
     z = 25,
     q = 26,
@@ -122,8 +122,8 @@ function ep(e, t) {
         eI,
         eS,
         eT = 0,
-        eN = new a.Buf8(4),
-        eA = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
+        eA = new a.Buf8(4),
+        eN = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
     if (!e || !e.state || !e.output || (!e.input && 0 !== e.avail_in)) return b;
     (n = e.state).mode === M && (n.mode = k), (en = e.next_out), (i = e.output), (ea = e.avail_out), (et = e.next_in), (r = e.input), (er = e.avail_in), (eo = n.hold), (es = n.bits), (el = er), (ec = ea), (eO = m);
     i: for (;;)
@@ -138,7 +138,7 @@ function ep(e, t) {
                     er--, (eo += r[et++] << es), (es += 8);
                 }
                 if (2 & n.wrap && 35615 === eo) {
-                    (n.check = 0), (eN[0] = 255 & eo), (eN[1] = (eo >>> 8) & 255), (n.check = s(n.check, eN, 2, 0)), (eo = 0), (es = 0), (n.mode = T);
+                    (n.check = 0), (eA[0] = 255 & eo), (eA[1] = (eo >>> 8) & 255), (n.check = s(n.check, eA, 2, 0)), (eo = 0), (es = 0), (n.mode = T);
                     break;
                 }
                 if (((n.flags = 0), n.head && (n.head.done = !1), !(1 & n.wrap) || (((255 & eo) << 8) + (eo >> 8)) % 31)) {
@@ -169,26 +169,26 @@ function ep(e, t) {
                     (e.msg = 'unknown header flags set'), (n.mode = $);
                     break;
                 }
-                n.head && (n.head.text = (eo >> 8) & 1), 512 & n.flags && ((eN[0] = 255 & eo), (eN[1] = (eo >>> 8) & 255), (n.check = s(n.check, eN, 2, 0))), (eo = 0), (es = 0), (n.mode = N);
-            case N:
+                n.head && (n.head.text = (eo >> 8) & 1), 512 & n.flags && ((eA[0] = 255 & eo), (eA[1] = (eo >>> 8) & 255), (n.check = s(n.check, eA, 2, 0))), (eo = 0), (es = 0), (n.mode = A);
+            case A:
                 for (; es < 32; ) {
                     if (0 === er) break i;
                     er--, (eo += r[et++] << es), (es += 8);
                 }
-                n.head && (n.head.time = eo), 512 & n.flags && ((eN[0] = 255 & eo), (eN[1] = (eo >>> 8) & 255), (eN[2] = (eo >>> 16) & 255), (eN[3] = (eo >>> 24) & 255), (n.check = s(n.check, eN, 4, 0))), (eo = 0), (es = 0), (n.mode = A);
-            case A:
+                n.head && (n.head.time = eo), 512 & n.flags && ((eA[0] = 255 & eo), (eA[1] = (eo >>> 8) & 255), (eA[2] = (eo >>> 16) & 255), (eA[3] = (eo >>> 24) & 255), (n.check = s(n.check, eA, 4, 0))), (eo = 0), (es = 0), (n.mode = N);
+            case N:
                 for (; es < 16; ) {
                     if (0 === er) break i;
                     er--, (eo += r[et++] << es), (es += 8);
                 }
-                n.head && ((n.head.xflags = 255 & eo), (n.head.os = eo >> 8)), 512 & n.flags && ((eN[0] = 255 & eo), (eN[1] = (eo >>> 8) & 255), (n.check = s(n.check, eN, 2, 0))), (eo = 0), (es = 0), (n.mode = C);
+                n.head && ((n.head.xflags = 255 & eo), (n.head.os = eo >> 8)), 512 & n.flags && ((eA[0] = 255 & eo), (eA[1] = (eo >>> 8) & 255), (n.check = s(n.check, eA, 2, 0))), (eo = 0), (es = 0), (n.mode = C);
             case C:
                 if (1024 & n.flags) {
                     for (; es < 16; ) {
                         if (0 === er) break i;
                         er--, (eo += r[et++] << es), (es += 8);
                     }
-                    (n.length = eo), n.head && (n.head.extra_len = eo), 512 & n.flags && ((eN[0] = 255 & eo), (eN[1] = (eo >>> 8) & 255), (n.check = s(n.check, eN, 2, 0))), (eo = 0), (es = 0);
+                    (n.length = eo), n.head && (n.head.extra_len = eo), 512 & n.flags && ((eA[0] = 255 & eo), (eA[1] = (eo >>> 8) & 255), (n.check = s(n.check, eA, 2, 0))), (eo = 0), (es = 0);
                 } else n.head && (n.head.extra = null);
                 n.mode = R;
             case R:
@@ -300,9 +300,9 @@ function ep(e, t) {
                         if (0 === er) break i;
                         er--, (eo += r[et++] << es), (es += 8);
                     }
-                    (n.lens[eA[n.have++]] = 7 & eo), (eo >>>= 3), (es -= 3);
+                    (n.lens[eN[n.have++]] = 7 & eo), (eo >>>= 3), (es -= 3);
                 }
-                for (; n.have < 19; ) n.lens[eA[n.have++]] = 0;
+                for (; n.have < 19; ) n.lens[eN[n.have++]] = 0;
                 if (((n.lencode = n.lendyn), (n.lenbits = 7), (eI = { bits: n.lenbits }), (eO = c(u, n.lens, 0, 19, n.lencode, 0, n.work, eI)), (n.lenbits = eI.bits), eO)) {
                     (e.msg = 'invalid code lengths set'), (n.mode = $);
                     break;
@@ -390,8 +390,8 @@ function ep(e, t) {
                     (e.msg = 'invalid literal/length code'), (n.mode = $);
                     break;
                 }
-                (n.extra = 15 & em), (n.mode = W);
-            case W:
+                (n.extra = 15 & em), (n.mode = Y);
+            case Y:
                 if (n.extra) {
                     for (eS = n.extra; es < eS; ) {
                         if (0 === er) break i;
@@ -399,8 +399,8 @@ function ep(e, t) {
                     }
                     (n.length += eo & ((1 << n.extra) - 1)), (eo >>>= n.extra), (es -= n.extra), (n.back += n.extra);
                 }
-                (n.was = n.length), (n.mode = Y);
-            case Y:
+                (n.was = n.length), (n.mode = W);
+            case W:
                 for (; (eh = (eT = n.distcode[eo & ((1 << n.distbits) - 1)]) >>> 24), (em = (eT >>> 16) & 255), (eg = 65535 & eT), !(eh <= es); ) {
                     if (0 === er) break i;
                     er--, (eo += r[et++] << es), (es += 8);

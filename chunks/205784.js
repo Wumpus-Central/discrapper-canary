@@ -1,32 +1,32 @@
-r.d(t, { default: () => p });
-var n = r(200651);
-r(192379);
-var l = r(442837),
-    i = r(481060),
-    o = r(239091),
-    a = r(749210),
-    d = r(664915),
-    s = r(771845),
-    c = r(181945),
-    u = r(945983),
-    b = r(981631),
-    f = r(388032);
+n.d(t, { default: () => p });
+var r = n(200651);
+n(192379);
+var l = n(442837),
+    i = n(481060),
+    o = n(239091),
+    a = n(749210),
+    d = n(664915),
+    s = n(771845),
+    c = n(181945),
+    u = n(945983),
+    b = n(981631),
+    f = n(388032);
 function p(e) {
     var t;
     let { folderId: p, folderName: j, folderColor: g, unread: m, onSelect: O } = e,
         h = (0, l.e7)([s.ZP], () => s.ZP.getGuildFolderById(p), [p]),
         y = (0, u.Z)(null != (t = null == h ? void 0 : h.guildIds) ? t : []),
         k = (0, l.e7)([d.Z], () => d.Z.getExpandedFolders().size > 0);
-    return (0, n.jsxs)(i.v2r, {
+    return (0, r.jsxs)(i.v2r, {
         navId: 'guild-context',
-        'aria-label': f.NW.string(f.t.HpQykZ),
+        'aria-label': f.intl.string(f.t.HpQykZ),
         onClose: o.Zy,
         onSelect: O,
         children: [
-            (0, n.jsx)(i.kSQ, {
-                children: (0, n.jsx)(i.sNh, {
+            (0, r.jsx)(i.kSQ, {
+                children: (0, r.jsx)(i.sNh, {
                     id: 'mark-folder-read',
-                    label: f.NW.string(f.t.thzRJC),
+                    label: f.intl.string(f.t.thzRJC),
                     action: function () {
                         if (null == h) return;
                         let { guildIds: e } = h;
@@ -35,40 +35,40 @@ function p(e) {
                     disabled: !m
                 })
             }),
-            null != y ? (0, n.jsx)(i.kSQ, { children: y }) : null,
-            (0, n.jsxs)(i.kSQ, {
+            null != y ? (0, r.jsx)(i.kSQ, { children: y }) : null,
+            (0, r.jsxs)(i.kSQ, {
                 children: [
-                    (0, n.jsx)(i.sNh, {
+                    (0, r.jsx)(i.sNh, {
                         id: 'folder-settings',
-                        label: f.NW.string(f.t.Dx7im5),
+                        label: f.intl.string(f.t.Dx7im5),
                         action: () =>
                             (0, i.ZDy)(async () => {
-                                let { default: e } = await r.e('66915').then(r.bind(r, 662708));
+                                let { default: e } = await n.e('66915').then(n.bind(n, 662708));
                                 return (t) => {
-                                    var r, l;
-                                    return (0, n.jsx)(
+                                    var n, l;
+                                    return (0, r.jsx)(
                                         e,
-                                        ((r = (function (e) {
+                                        ((n = (function (e) {
                                             for (var t = 1; t < arguments.length; t++) {
-                                                var r = null != arguments[t] ? arguments[t] : {},
-                                                    n = Object.keys(r);
+                                                var n = null != arguments[t] ? arguments[t] : {},
+                                                    r = Object.keys(n);
                                                 'function' == typeof Object.getOwnPropertySymbols &&
-                                                    (n = n.concat(
-                                                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                                    (r = r.concat(
+                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                         })
                                                     )),
-                                                    n.forEach(function (t) {
-                                                        var n;
-                                                        (n = r[t]),
+                                                    r.forEach(function (t) {
+                                                        var r;
+                                                        (r = n[t]),
                                                             t in e
                                                                 ? Object.defineProperty(e, t, {
-                                                                      value: n,
+                                                                      value: r,
                                                                       enumerable: !0,
                                                                       configurable: !0,
                                                                       writable: !0
                                                                   })
-                                                                : (e[t] = n);
+                                                                : (e[t] = r);
                                                     });
                                             }
                                             return e;
@@ -80,26 +80,26 @@ function p(e) {
                                                 folderColor: g
                                             }),
                                         Object.getOwnPropertyDescriptors
-                                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                             : (function (e, t) {
-                                                  var r = Object.keys(e);
+                                                  var n = Object.keys(e);
                                                   if (Object.getOwnPropertySymbols) {
-                                                      var n = Object.getOwnPropertySymbols(e);
-                                                      r.push.apply(r, n);
+                                                      var r = Object.getOwnPropertySymbols(e);
+                                                      n.push.apply(n, r);
                                                   }
-                                                  return r;
+                                                  return n;
                                               })(Object(l)).forEach(function (e) {
-                                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                                               }),
-                                        r)
+                                        n)
                                     );
                                 };
                             })
                     }),
                     k &&
-                        (0, n.jsx)(i.sNh, {
+                        (0, r.jsx)(i.sNh, {
                             id: 'folder-collapse',
-                            label: f.NW.string(f.t.rCPsbm),
+                            label: f.intl.string(f.t.rCPsbm),
                             action: () => a.Z.collapseAllFolders()
                         })
                 ]

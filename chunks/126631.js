@@ -1,9 +1,9 @@
 n.d(t, { Z: () => _ }), n(388685);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(481060),
-    a = n(541716),
-    l = n(752305),
+    l = n(541716),
+    a = n(752305),
     o = n(893718),
     c = n(313201),
     d = n(131704),
@@ -18,45 +18,45 @@ let h = (0, c.hQ)(),
     }),
     b = (0, c.hQ)();
 function _(e) {
-    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: _, currentBio: N, disabled: x = !1 } = e,
-        [E, j] = i.useState(null != d ? d : N),
-        [C, O] = i.useState((0, l.JM)(E)),
-        S = i.useRef(!1);
+    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: _, currentBio: x, disabled: E = !1 } = e,
+        [j, C] = r.useState(null != d ? d : x),
+        [O, S] = r.useState((0, a.JM)(j)),
+        v = r.useRef(!1);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             if (void 0 === d) {
-                let e = (0, l.JM)(N);
-                j(N), O(e);
+                let e = (0, a.JM)(x);
+                C(x), S(e);
             }
-        }, [d, N]),
-        (0, r.jsxs)(u.Z, {
+        }, [d, x]),
+        (0, i.jsxs)(u.Z, {
             title: t,
             titleId: h,
-            description: g.NW.string(g.t.Bbw6AQ),
+            description: g.intl.string(g.t.Bbw6AQ),
             errors: n,
-            disabled: x,
+            disabled: E,
             children: [
-                (0, r.jsx)(o.Z, {
+                (0, i.jsx)(o.Z, {
                     'aria-describedby': b,
                     'aria-labelledby': h,
                     className: p.bioTextAreaContainer,
                     innerClassName: p.bioTextArea,
                     maxCharacterCount: m.tPV,
                     onChange: function (e, t, n) {
-                        t !== E && (j(t), O(n), c(t));
+                        t !== j && (C(t), S(n), c(t));
                     },
                     placeholder: _,
                     channel: f,
-                    textValue: E,
-                    richValue: C,
-                    type: a.Ie.PROFILE_BIO_INPUT,
+                    textValue: j,
+                    richValue: O,
+                    type: l.Ie.PROFILE_BIO_INPUT,
                     onBlur: () => {
-                        S.current = !1;
+                        v.current = !1;
                     },
                     onFocus: () => {
-                        S.current = !0;
+                        v.current = !0;
                     },
-                    focused: S.current,
+                    focused: v.current,
                     onSubmit: function () {
                         return new Promise((e) => {
                             e({
@@ -66,9 +66,9 @@ function _(e) {
                         });
                     }
                 }),
-                (0, r.jsx)(s.nn4, {
+                (0, i.jsx)(s.nn4, {
                     id: b,
-                    children: g.NW.format(g.t['+DFxLS'], { maxLength: m.tPV })
+                    children: g.intl.format(g.t['+DFxLS'], { maxLength: m.tPV })
                 })
             ]
         })

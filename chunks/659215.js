@@ -62,7 +62,7 @@ function f(e) {
             }
             return r;
         })(e, ['onClose', 'analyticsSource']);
-    let b = d.NW.format(d.t['JmbS+f'], {
+    let b = d.intl.format(d.t['JmbS+f'], {
             onClick: () => {
                 o.Z.open(u.oAB.PREMIUM), r();
             }
@@ -79,7 +79,7 @@ function f(e) {
                 modalClassName: h.modalContainer,
                 bodyClassName: h.bodyContainer,
                 type: c.cd.BURST_REACTION_UPSELL,
-                title: d.NW.string(d.t.N4SCJy),
+                title: d.intl.string(d.t.N4SCJy),
                 body: b,
                 glowUp: b,
                 analyticsSource: f,
@@ -88,9 +88,9 @@ function f(e) {
                     object: u.qAy.BUTTON_CTA
                 },
                 onClose: r,
-                subscribeButtonText: O ? void 0 : d.NW.string(d.t['8x0jKS']),
+                subscribeButtonText: O ? void 0 : d.intl.string(d.t['8x0jKS']),
                 subscriptionTier: null != (n = null == j || null == (t = j.subscription_trial) ? void 0 : t.sku_id) ? n : c.Si.TIER_2,
-                backButtonText: d.NW.string(d.t.f3Pet7)
+                backButtonText: d.intl.string(d.t.f3Pet7)
             },
             g
         )

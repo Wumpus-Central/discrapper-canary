@@ -74,7 +74,7 @@ let m = () => {
         let [s, f] = (0, a.Wu)([u.Z], () => [u.Z.shouldShowWarning(), u.Z.isAFKChannel()], []),
             p = i.useCallback(() => {
                 let t, n;
-                f ? ((t = d.NW.string(d.t.Y40JkZ)), (n = d.NW.string(d.t['5J4yGR']))) : ((t = d.NW.string(d.t.FJSZVF)), (n = d.NW.string(d.t.etJjgY))),
+                f ? ((t = d.intl.string(d.t.Y40JkZ)), (n = d.intl.string(d.t['5J4yGR']))) : ((t = d.intl.string(d.t.FJSZVF)), (n = d.intl.string(d.t.etJjgY))),
                     (e.current = (0, o.h7j)((e) =>
                         (0, r.jsx)(
                             l.default,
@@ -83,8 +83,8 @@ let m = () => {
                                     title: t,
                                     body: n,
                                     onConfirm: m,
-                                    confirmText: d.NW.string(d.t.BddRzc),
-                                    secondaryConfirmText: d.NW.string(d.t['5E9SBw']),
+                                    confirmText: d.intl.string(d.t.BddRzc),
+                                    secondaryConfirmText: d.intl.string(d.t['5E9SBw']),
                                     onConfirmSecondary: g
                                 },
                                 e

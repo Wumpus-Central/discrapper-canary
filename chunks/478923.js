@@ -1,134 +1,134 @@
-r.d(e, { default: () => y });
-var n = r(200651),
-    i = r(192379),
-    o = r(990547),
-    c = r(442837),
-    s = r(481060),
-    a = r(194359),
-    l = r(1596),
-    d = r(681678),
-    u = r(138201),
-    f = r(699516),
-    O = r(626135),
-    m = r(63063),
-    j = r(5192),
-    N = r(240515),
-    p = r(858380),
-    x = r(981631),
-    g = r(388032),
-    b = r(111627);
-function I(t) {
+n.d(e, { default: () => N });
+var r = n(200651),
+    i = n(192379),
+    o = n(990547),
+    l = n(442837),
+    c = n(481060),
+    s = n(194359),
+    a = n(1596),
+    d = n(681678),
+    u = n(138201),
+    f = n(699516),
+    O = n(626135),
+    m = n(63063),
+    j = n(5192),
+    p = n(240515),
+    x = n(858380),
+    g = n(981631),
+    b = n(388032),
+    I = n(111627);
+function h(t) {
     for (var e = 1; e < arguments.length; e++) {
-        var r = null != arguments[e] ? arguments[e] : {},
-            n = Object.keys(r);
+        var n = null != arguments[e] ? arguments[e] : {},
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(r, t).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (t) {
+                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
                 })
             )),
-            n.forEach(function (e) {
-                var n;
-                (n = r[e]),
+            r.forEach(function (e) {
+                var r;
+                (r = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
-                              value: n,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = n);
+                        : (t[e] = r);
             });
     }
     return t;
 }
-function h(t, e) {
+function E(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
             : (function (t, e) {
-                  var r = Object.keys(t);
+                  var n = Object.keys(t);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(t);
-                      r.push.apply(r, n);
+                      var r = Object.getOwnPropertySymbols(t);
+                      n.push.apply(n, r);
                   }
-                  return r;
-              })(Object(e)).forEach(function (r) {
-                  Object.defineProperty(t, r, Object.getOwnPropertyDescriptor(e, r));
+                  return n;
+              })(Object(e)).forEach(function (n) {
+                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
               }),
         t
     );
 }
-function E(t) {
-    let { user: e, onBlock: r, onIgnore: i, location: o, disallowIgnore: a, guildId: d, channelId: E } = t,
-        y = (0, c.e7)([f.Z], () => f.Z.isIgnored(e.id));
-    return (0, n.jsxs)('div', {
-        className: b.container,
+function y(t) {
+    let { user: e, onBlock: n, onIgnore: i, location: o, disallowIgnore: s, guildId: d, channelId: y } = t,
+        N = (0, l.e7)([f.Z], () => f.Z.isIgnored(e.id));
+    return (0, r.jsxs)('div', {
+        className: I.container,
         children: [
-            (0, n.jsxs)('div', {
-                className: b.confirmationHeader,
+            (0, r.jsxs)('div', {
+                className: I.confirmationHeader,
                 children: [
-                    (0, n.jsxs)('div', {
-                        className: b.iconContainer,
+                    (0, r.jsxs)('div', {
+                        className: I.iconContainer,
                         children: [
-                            (0, n.jsx)(s.qEK, {
-                                size: s.EFr.SIZE_56,
+                            (0, r.jsx)(c.qEK, {
+                                size: c.EFr.SIZE_56,
                                 src: e.getAvatarURL(void 0, 64),
                                 'aria-hidden': !0
                             }),
-                            (0, n.jsx)('div', {
-                                className: b.icon,
-                                children: (0, n.jsx)(s.t6m, {})
+                            (0, r.jsx)('div', {
+                                className: I.icon,
+                                children: (0, r.jsx)(c.t6m, {})
                             })
                         ]
                     }),
-                    (0, n.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         children: [
-                            (0, n.jsx)(s.X6q, {
+                            (0, r.jsx)(c.X6q, {
                                 variant: 'heading-xl/bold',
                                 color: 'header-primary',
-                                children: g.NW.format(g.t.CIbzHR, { username: j.ZP.getName(d, E, e) })
+                                children: b.intl.format(b.t.CIbzHR, { username: j.ZP.getName(d, y, e) })
                             }),
-                            (0, n.jsx)(s.Text, {
+                            (0, r.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-secondary',
-                                children: g.NW.string(g.t.S70joq)
+                                children: b.intl.string(b.t.S70joq)
                             })
                         ]
                     })
                 ]
             }),
-            (0, n.jsx)(l.Z, {}),
-            a || y
+            (0, r.jsx)(a.Z, {}),
+            s || N
                 ? null
-                : (0, n.jsxs)('div', {
-                      className: b.otherOptions,
+                : (0, r.jsxs)('div', {
+                      className: I.otherOptions,
                       children: [
-                          (0, n.jsx)(u.rT, {
-                              title: g.NW.string(g.t['+BJTcH']),
-                              children: (0, n.jsx)(u.ZP, {
-                                  title: g.NW.string(g.t.hC8tcX),
-                                  description: g.NW.string(g.t.If89rK),
+                          (0, r.jsx)(u.rT, {
+                              title: b.intl.string(b.t['+BJTcH']),
+                              children: (0, r.jsx)(u.ZP, {
+                                  title: b.intl.string(b.t.hC8tcX),
+                                  description: b.intl.string(b.t.If89rK),
                                   titleVariant: 'text-md/medium',
                                   descriptionVariant: 'text-xs/medium',
-                                  buttonText: g.NW.string(g.t.mxJOd3),
-                                  buttonColor: s.Ttl.PRIMARY,
+                                  buttonText: b.intl.string(b.t.mxJOd3),
+                                  buttonColor: c.Ttl.PRIMARY,
                                   onButtonPress: () => {
-                                      O.default.track(x.rMx.USER_REMEDIATION_ACTION, {
-                                          action: p.l.GOTO_IGNORE,
+                                      O.default.track(g.rMx.USER_REMEDIATION_ACTION, {
+                                          action: x.l.GOTO_IGNORE,
                                           location: o
                                       }),
-                                          (0, s.pTH)(),
-                                          (0, s.h7j)((t) =>
-                                              (0, n.jsx)(
-                                                  N.default,
-                                                  h(I({}, t), {
+                                          (0, c.pTH)(),
+                                          (0, c.h7j)((t) =>
+                                              (0, r.jsx)(
+                                                  p.default,
+                                                  E(h({}, t), {
                                                       user: e,
                                                       guildId: d,
-                                                      channelId: E,
+                                                      channelId: y,
                                                       onIgnore: i,
-                                                      onBlock: r,
+                                                      onBlock: n,
                                                       location: o
                                                   })
                                               )
@@ -136,78 +136,78 @@ function E(t) {
                                   }
                               })
                           }),
-                          (0, n.jsx)(s.Text, {
+                          (0, r.jsx)(c.Text, {
                               variant: 'text-sm/medium',
-                              className: b.featureGuide,
-                              children: g.NW.format(g.t.DJN6eX, { articleLink: m.Z.getArticleURL(x.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
+                              className: I.featureGuide,
+                              children: b.intl.format(b.t.DJN6eX, { articleLink: m.Z.getArticleURL(g.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
                           })
                       ]
                   })
         ]
     });
 }
-function y(t) {
-    var { user: e, onBlock: r, onCancel: c, onIgnore: l, location: u = 'ContextMenu', disallowIgnore: f, guildId: m, channelId: j } = t,
-        N = (function (t, e) {
+function N(t) {
+    var { user: e, onBlock: n, onCancel: l, onIgnore: a, location: u = 'ContextMenu', disallowIgnore: f, guildId: m, channelId: j } = t,
+        p = (function (t, e) {
             if (null == t) return {};
-            var r,
-                n,
+            var n,
+                r,
                 i = (function (t, e) {
                     if (null == t) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         i = {},
                         o = Object.keys(t);
-                    for (n = 0; n < o.length; n++) (r = o[n]), e.indexOf(r) >= 0 || (i[r] = t[r]);
+                    for (r = 0; r < o.length; r++) (n = o[r]), e.indexOf(n) >= 0 || (i[n] = t[n]);
                     return i;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(t);
-                for (n = 0; n < o.length; n++) (r = o[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (i[r] = t[r]);
+                for (r = 0; r < o.length; r++) (n = o[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
             }
             return i;
         })(t, ['user', 'onBlock', 'onCancel', 'onIgnore', 'location', 'disallowIgnore', 'guildId', 'channelId']);
     return (
         i.useLayoutEffect(
             () => () => {
-                O.default.track(x.rMx.USER_REMEDIATION_ACTION, {
-                    action: p.l.DISMISS_BLOCK,
+                O.default.track(g.rMx.USER_REMEDIATION_ACTION, {
+                    action: x.l.DISMISS_BLOCK,
                     location: u
                 });
             },
             [u]
         ),
-        (0, n.jsx)(
-            s.ConfirmModal,
-            h(
-                I(
+        (0, r.jsx)(
+            c.ConfirmModal,
+            E(
+                h(
                     {
-                        confirmText: g.NW.string(g.t.l4EmaW),
-                        cancelText: g.NW.string(g.t['ETE/oK']),
+                        confirmText: b.intl.string(b.t.l4EmaW),
+                        cancelText: b.intl.string(b.t['ETE/oK']),
                         onCancel: () => {
-                            O.default.track(x.rMx.USER_REMEDIATION_ACTION, {
-                                action: p.l.CANCEL_BLOCK,
+                            O.default.track(g.rMx.USER_REMEDIATION_ACTION, {
+                                action: x.l.CANCEL_BLOCK,
                                 location: u
                             }),
-                                null == c || c();
+                                null == l || l();
                         },
                         onConfirm: () => {
-                            null == r || r(),
-                                a.Z.blockUser(e.id, { location: u }).then(() => {
-                                    O.default.track(x.rMx.BLOCK_USER_CONFIRMED), d.Z.showBlockSuccessToast(e.id, null != j ? j : void 0);
+                            null == n || n(),
+                                s.Z.blockUser(e.id, { location: u }).then(() => {
+                                    O.default.track(g.rMx.BLOCK_USER_CONFIRMED), d.Z.showBlockSuccessToast(e.id, null != j ? j : void 0);
                                 });
                         },
                         impression: { impressionName: o.ImpressionNames.BLOCK_USER_CONFIRMATION }
                     },
-                    N
+                    p
                 ),
                 {
-                    children: (0, n.jsx)(E, {
+                    children: (0, r.jsx)(y, {
                         user: e,
                         guildId: m,
                         channelId: j,
-                        onBlock: r,
-                        onIgnore: l,
+                        onBlock: n,
+                        onIgnore: a,
                         disallowIgnore: f
                     })
                 }

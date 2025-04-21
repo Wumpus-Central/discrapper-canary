@@ -99,7 +99,7 @@ function f(e) {
             },
             'animate-always'
         ),
-        v = C ? c.NW.formatToPlainString(c.t.D8Drx8, { seconds: n }) : void 0,
+        v = C ? c.intl.formatToPlainString(c.t.D8Drx8, { seconds: n }) : void 0,
         j = _ ? s.d : s.Z;
     return (0, r.jsxs)('div', {
         className: u.container,

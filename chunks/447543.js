@@ -29,8 +29,8 @@ var r = n(525654),
     I = n(15274),
     S = n(924301),
     T = n(461014),
-    N = n(82085),
-    A = n(264229),
+    A = n(82085),
+    N = n(264229),
     C = n(652898),
     R = n(895886),
     P = n(143816),
@@ -48,8 +48,8 @@ var r = n(525654),
     V = n(914010),
     Z = n(594174),
     H = n(626135),
-    W = n(70956),
-    Y = n(630388),
+    Y = n(70956),
+    W = n(630388),
     K = n(573261),
     z = n(954824),
     q = n(846027),
@@ -127,7 +127,7 @@ function ec(e) {
         case et.Iq.ROLE_SUBSCRIPTIONS_PURCHASE:
             l.targetType = e.target_type;
     }
-    return (null == U.Z.getGuild(null == (t = e.guild) ? void 0 : t.id) || e.new_member) && null != e.channel && (0, L.zi)(e.channel.type) && (l.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (l.guildScheduledEvent = e.guild_scheduled_event), (l.isGuestInvite = (0, Y.yE)(null != (a = e.flags) ? a : 0, o.$.IS_GUEST_INVITE)), (l.isApplicationBypassInvite = (0, Y.yE)(null != (s = e.flags) ? s : 0, o.$.IS_APPLICATION_BYPASS)), (l.inviterUserId = null == (n = e.inviter) ? void 0 : n.id), l;
+    return (null == U.Z.getGuild(null == (t = e.guild) ? void 0 : t.id) || e.new_member) && null != e.channel && (0, L.zi)(e.channel.type) && (l.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (l.guildScheduledEvent = e.guild_scheduled_event), (l.isGuestInvite = (0, W.yE)(null != (a = e.flags) ? a : 0, o.$.IS_GUEST_INVITE)), (l.isApplicationBypassInvite = (0, W.yE)(null != (s = e.flags) ? s : 0, o.$.IS_APPLICATION_BYPASS)), (l.inviterUserId = null == (n = e.inviter) ? void 0 : n.id), l;
 }
 function eu(e, t) {
     return eo(ei({}, e), { invite_guild_scheduled_event_id: t.guildScheduledEventId });
@@ -329,7 +329,7 @@ let ey = {
     async mobileCreateInvite(e, t) {
         let n = B.Z.getInvite(e.id);
         if (null != n && !n.isExpired()) return n.code;
-        let r = { max_age: W.Z.Seconds.DAY },
+        let r = { max_age: Y.Z.Seconds.DAY },
             i = await this.createInvite(e.id, r, t).catch(() => f.Z.dispatch({ type: 'NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED' }));
         return null == i ? void 0 : i.code;
     },
@@ -439,7 +439,7 @@ let ey = {
     acceptInvite(e) {
         var t;
         let { inviteKey: r, context: i, callback: a, skipOnboarding: o } = e,
-            s = (0, A.fU)(r),
+            s = (0, N.fU)(r),
             l = s.baseCode,
             c = x.default.getSessionId(),
             d = eu(i, s),
@@ -509,8 +509,8 @@ let ey = {
     transitionToInvite(e, t, n) {
         var r, i;
         let { channel: a, guild: s } = e;
-        if (null != s && (null == (r = s.features) ? void 0 : r.includes(J.oNc.HUB))) return void N.Z.onOpenHubInvite(e);
-        let l = (0, Y.yE)(null != (i = e.flags) ? i : 0, o.$.IS_APPLICATION_BYPASS);
+        if (null != s && (null == (r = s.features) ? void 0 : r.includes(J.oNc.HUB))) return void A.Z.onOpenHubInvite(e);
+        let l = (0, W.yE)(null != (i = e.flags) ? i : 0, o.$.IS_APPLICATION_BYPASS);
         if (null != s && !l && (0, T.u)(s)) return void (0, T._)(s.id);
         if (null == a) return;
         let c = ec(e);
@@ -541,7 +541,7 @@ let ey = {
     openApp(e, t, n, r, a) {
         var o, u;
         let d,
-            _ = null != e ? (0, A.fU)(e) : null,
+            _ = null != e ? (0, N.fU)(e) : null,
             p = null == _ ? void 0 : _.baseCode;
         if (
             (f.Z.dispatch({

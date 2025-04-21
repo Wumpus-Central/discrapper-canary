@@ -10,7 +10,7 @@ function c() {
     let { analyticsLocations: e } = (0, o.ZP)();
     return (0, r.jsx)(i.sNh, {
         id: 'voice-and-video-settings',
-        label: s.NW.string(s.t.dsXapK),
+        label: s.intl.string(s.t.dsXapK),
         action: () => {
             l.Z.open(a.oAB.VOICE, null, { analyticsLocations: e });
         },

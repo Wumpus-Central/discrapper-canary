@@ -2,27 +2,27 @@ n.d(t, { Z: () => a });
 var r,
     i = n(200651);
 n(192379);
-var s = n(481060),
-    l = n(808509);
+var l = n(481060),
+    s = n(808509);
 function a(e) {
     let { type: t } = e;
     return (0, i.jsx)('div', {
-        className: l.dividerContainer,
+        className: s.dividerContainer,
         children: (0, i.jsx)('div', {
-            className: l.dividerIconContainer,
+            className: s.dividerIconContainer,
             children: (function (e) {
                 switch (e) {
                     case 'arrow_down':
-                        return (0, i.jsx)(s.cQm, {
+                        return (0, i.jsx)(l.cQm, {
                             size: 'md',
                             color: 'currentColor',
-                            className: l.dividierIcon
+                            className: s.dividierIcon
                         });
                     case 'cross':
-                        return (0, i.jsx)(s.Dio, {
+                        return (0, i.jsx)(l.Dio, {
                             size: 'md',
                             color: 'currentColor',
-                            className: l.dividierIcon
+                            className: s.dividierIcon
                         });
                     default:
                         return null;

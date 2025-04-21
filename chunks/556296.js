@@ -29,7 +29,7 @@ var i,
     I = n(356659),
     S = n(710111),
     T = n(444675);
-function N(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function N(e, t, n) {
         e
     );
 }
-function A(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function A(e) {
                 })
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
@@ -130,11 +130,11 @@ function H(e, t) {
     let n = Z(e);
     null != n && G[n.action].onTrigger(t, n);
 }
-function W() {
+function Y() {
     let e = x();
     null == l().find(k, (t) => e.action === t.action && t.enabled && t.shortcut.length > 0) && U && !F && (J(e), (F = !0));
 }
-function Y() {
+function W() {
     let e = x();
     F && (X(e.id), (F = !1));
 }
@@ -180,12 +180,12 @@ function J(e) {
     let i = e.id,
         a = G[n].keyEvents;
     e.action === O.kg4.TOGGLE_MUTE && z(),
-        e.action === O.kg4.TOGGLE_OVERLAY_INPUT_LOCK && Y(),
+        e.action === O.kg4.TOGGLE_OVERLAY_INPUT_LOCK && W(),
         Q(
             i,
             t,
             (e) => H(i, e),
-            A(
+            N(
                 {
                     focused: !0,
                     blurred: !0,
@@ -198,7 +198,7 @@ function J(e) {
         d.Z.validateKeybind((0, y.BB)(e.shortcut));
 }
 function $(e) {
-    let t = A(
+    let t = N(
         {
             id: j.toString(),
             enabled: !0,
@@ -209,10 +209,10 @@ function $(e) {
         },
         e
     );
-    return (k = R(A({}, k), { [t.id]: t })), (j += 1), t;
+    return (k = R(N({}, k), { [t.id]: t })), (j += 1), t;
 }
 function ee(e) {
-    X(e.id), (k = A({}, k)), delete k[e.id], e.action === O.kg4.TOGGLE_MUTE && K(), e.action === O.kg4.TOGGLE_OVERLAY_INPUT_LOCK && W();
+    X(e.id), (k = N({}, k)), delete k[e.id], e.action === O.kg4.TOGGLE_MUTE && K(), e.action === O.kg4.TOGGLE_OVERLAY_INPUT_LOCK && Y();
 }
 function et(e) {
     let { keybind: t } = e;
@@ -231,7 +231,7 @@ function en(e) {
 }
 function er(e) {
     let { keybind: t } = e;
-    (k = R(A({}, k), { [t.id]: t })),
+    (k = R(N({}, k), { [t.id]: t })),
         __OVERLAY__ ||
             (m.default.track(O.rMx.USER_SETTINGS_KEYBIND_UPDATED, {
                 keybind_action: t.action,
@@ -243,7 +243,7 @@ function er(e) {
 }
 function ei(e) {
     let { enable: t } = e;
-    (U = t), t ? (d.Z.enable(), l().forEach(k, J), K(), W()) : (d.Z.disable(), l().forEach(k, (e) => X(e.id)), z(), Y());
+    (U = t), t ? (d.Z.enable(), l().forEach(k, J), K(), Y()) : (d.Z.disable(), l().forEach(k, (e) => X(e.id)), z(), W());
 }
 function ea(e) {
     let { keybinds: t } = e;
@@ -312,7 +312,7 @@ let el = [
                     else {
                         if (null == t) return e || !1;
                         er({
-                            keybind: R(A({}, r), {
+                            keybind: R(N({}, r), {
                                 shortcut: 'string' == typeof t ? (0, y.Kd)(t) : t,
                                 context: n
                             })
@@ -339,7 +339,7 @@ let el = [
     }
 ];
 function ec() {
-    return K(), W(), el.reduce((e, t) => t() || e, !1);
+    return K(), Y(), el.reduce((e, t) => t() || e, !1);
 }
 function eu() {
     return (
@@ -388,9 +388,9 @@ class ed extends (i = c.ZP.DeviceSettingsStore) {
         return this.getKeybindForAction(O.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, !0);
     }
 }
-N(ed, 'displayName', 'KeybindsStore'),
-    N(ed, 'persistKey', 'keybinds'),
-    N(ed, 'migrations', [
+A(ed, 'displayName', 'KeybindsStore'),
+    A(ed, 'persistKey', 'keybinds'),
+    A(ed, 'migrations', [
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                 { v: t, keybinds: n = e } = e;
@@ -407,7 +407,7 @@ N(ed, 'displayName', 'KeybindsStore'),
                             r = (0, y.Kd)('`').map((e) => e[1]);
                         if (o()(n, r)) return e;
                     }
-                    return R(A({}, e), { [n]: t });
+                    return R(N({}, e), { [n]: t });
                 },
                 {}
             );
@@ -419,7 +419,7 @@ N(ed, 'displayName', 'KeybindsStore'),
                 if (null != i) {
                     if (null == i.params || null == i.enabled) {
                         var n;
-                        i = R(A({}, i), {
+                        i = R(N({}, i), {
                             enabled: !1 !== i.enabled,
                             params: null != (n = i.params) ? n : {}
                         });
@@ -429,7 +429,7 @@ N(ed, 'displayName', 'KeybindsStore'),
             }
             return t;
         },
-        (e) => l().reduce(e, (e, t, n) => (t.action === O.kg4.TOGGLE_GO_LIVE_STREAMING && t.managed ? e : R(A({}, e), { [n]: t })), {})
+        (e) => l().reduce(e, (e, t, n) => (t.action === O.kg4.TOGGLE_GO_LIVE_STREAMING && t.managed ? e : R(N({}, e), { [n]: t })), {})
     ]);
 let ef = new ed(u.Z, {
         CONNECTION_OPEN: ec,

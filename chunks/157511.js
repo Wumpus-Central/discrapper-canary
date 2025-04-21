@@ -19,33 +19,33 @@ function h(e) {
     let { isPaused: n } = e,
         h = (0, o.e7)([i.Z], () => i.Z.getNumPurchasesForItemUpgrade(d.yN.SUN, d.uv.SUN_RAISE)),
         x = a.Mq[d.yN.SUN],
-        N = (0, s.useMemo)(() => x.getPoints(h), [h, x]),
-        v = (0, l.eR)(b),
-        [O, j] = (0, c.Z)(d.yN.SUN),
-        Z = null != (t = O.lastPlayedSunRiseSound) ? t : 0,
-        _ = h * y,
-        P = 120 + 16 * h,
-        C = -P / 5;
+        v = (0, s.useMemo)(() => x.getPoints(h), [h, x]),
+        O = (0, l.eR)(b),
+        [j, N] = (0, c.Z)(d.yN.SUN),
+        _ = null != (t = j.lastPlayedSunRiseSound) ? t : 0,
+        P = h * y,
+        C = 120 + 16 * h,
+        Z = -C / 5;
     return (
         (0, s.useEffect)(() => {
-            h > Z && (v(), j({ lastPlayedSunRiseSound: h }));
-        }, [v, h, Z, j]),
+            h > _ && (O(), N({ lastPlayedSunRiseSound: h }));
+        }, [O, h, _, N]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('img', {
                     className: m.sun,
                     style: {
-                        bottom: 'calc('.concat(_, '% - ').concat(P / 2, 'px)'),
-                        right: C,
-                        width: P,
-                        height: P
+                        bottom: 'calc('.concat(P, '% - ').concat(C / 2, 'px)'),
+                        right: Z,
+                        width: C,
+                        height: C
                     },
                     src: g,
-                    alt: p.NW.string(f.Z.JTkCcX)
+                    alt: p.intl.string(f.default.JTkCcX)
                 }),
                 (0, r.jsx)(u.Z, {
                     itemId: d.yN.SUN,
-                    pointsPerInterval: N,
+                    pointsPerInterval: v,
                     interval: 1000,
                     isPaused: n
                 })

@@ -1,9 +1,9 @@
 n.r(t),
     n.d(t, {
-        enable: () => N,
+        enable: () => A,
         isNotSupported: () => S,
         trackToggleSelfDeaf: () => C,
-        trackToggleSelfMute: () => A
+        trackToggleSelfMute: () => N
     });
 var r = n(200651);
 n(192379);
@@ -89,9 +89,9 @@ function S() {
                 v(
                     b(
                         {
-                            header: g.NW.string(g.t.ilMTy8),
-                            confirmText: g.NW.string(g.t.BK8LKy),
-                            cancelText: g.NW.string(g.t['ETE/oK']),
+                            header: g.intl.string(g.t.ilMTy8),
+                            confirmText: g.intl.string(g.t.BK8LKy),
+                            cancelText: g.intl.string(g.t['ETE/oK']),
                             onConfirm: I,
                             confirmButtonColor: i.zxk.Colors.BRAND
                         },
@@ -100,7 +100,7 @@ function S() {
                     {
                         children: (0, r.jsx)(i.Text, {
                             variant: 'text-md/normal',
-                            children: g.NW.string(g.t.h66vlJ)
+                            children: g.intl.string(g.t.h66vlJ)
                         })
                     }
                 )
@@ -115,7 +115,7 @@ function T(e) {
         action: e
     });
 }
-function N() {
+function A() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return S()
         ? Promise.resolve(!1)
@@ -149,7 +149,7 @@ function N() {
               )
               .then(() => !0));
 }
-function A(e) {
+function N(e) {
     let { usedKeybind: t = !1, location: n } = e,
         r = u.ZP.getKeybindForAction(h.kg4.TOGGLE_MUTE, !1, !0),
         i = c.Z.getVoiceChannelId(),

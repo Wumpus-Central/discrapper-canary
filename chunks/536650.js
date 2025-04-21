@@ -25,9 +25,9 @@ function _(e) {
     let { application: t, context: n, name: _, iconURL: y, scrollerRef: x, sectionName: v } = e,
         C = (0, o.ap)((0, s.ZP)()),
         g = r.useRef(null),
-        N = r.useRef(null),
         j = r.useRef(null),
         P = r.useRef(null),
+        N = r.useRef(null),
         E = (0, a.dQu)(a.TVs.colors.BG_BASE_PRIMARY).hex(),
         O = (0, c.ZP)('number' == typeof y ? '' : y, null != E ? E : ''),
         A = r.useMemo(() => {
@@ -47,13 +47,13 @@ function _(e) {
                 : O;
         }, [O, C]),
         I = b(g),
-        S = b(N),
+        S = b(j),
         T = r.useCallback(() => {
             var e, t, n, i;
             let r = x.current,
                 o = g.current,
-                a = j.current,
-                s = null == P ? void 0 : P.current,
+                a = P.current,
+                s = null == N ? void 0 : N.current,
                 c = parseInt(null != (e = null == I ? void 0 : I.height) ? e : ''),
                 u = parseInt(null != (t = null == S ? void 0 : S.height) ? t : '');
             if (null != r && null != o && null != a && !isNaN(c) && !isNaN(u)) {
@@ -108,7 +108,7 @@ function _(e) {
                         (0, i.jsx)('div', {
                             className: h.nameContainer,
                             children: (0, i.jsx)(a.X6q, {
-                                ref: j,
+                                ref: P,
                                 className: h.textApplicationName,
                                 variant: 'heading-lg/extrabold',
                                 children: _
@@ -118,7 +118,7 @@ function _(e) {
                 }),
                 (0, p.BQ)(t)
                     ? (0, i.jsx)('div', {
-                          ref: P,
+                          ref: N,
                           className: h.moreMenuButtonContainer,
                           children: (0, i.jsx)(f.Z, {
                               application: t,
@@ -129,7 +129,7 @@ function _(e) {
                       })
                     : null,
                 (0, i.jsx)('div', {
-                    ref: N,
+                    ref: j,
                     className: h.bannerBackground,
                     style: { backgroundColor: O }
                 })

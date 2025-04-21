@@ -5,8 +5,8 @@ n.d(t, {
     n(953529);
 var r,
     l = n(392711),
-    o = n.n(l),
-    i = n(442837),
+    i = n.n(l),
+    o = n(442837),
     s = n(570140),
     a = n(246364);
 function c(e, t, n) {
@@ -28,13 +28,13 @@ let u = {
         formFields: []
     },
     d = {};
-class m extends (r = i.ZP.Store) {
+class m extends (r = o.ZP.Store) {
     get(e) {
         if (null != e) return d[e];
     }
     getRulesPrompt(e) {
         var t;
-        return o().find(null == (t = d[e]) ? void 0 : t.formFields, a.J);
+        return i().find(null == (t = d[e]) ? void 0 : t.formFields, a.J);
     }
 }
 c(m, 'displayName', 'MemberVerificationFormStore');

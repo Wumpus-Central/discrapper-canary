@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(200651),
     i = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     a = n(600164),
     o = n(930223),
     c = n(20493);
@@ -22,11 +22,11 @@ function d(e, t, n) {
 class u extends i.PureComponent {
     render() {
         let { focused: e } = this.state,
-            { value: t, placeholder: n, error: i, className: s, maxLength: d, autoFocus: u, prefix: m, disabled: g } = this.props;
+            { value: t, placeholder: n, error: i, className: l, maxLength: d, autoFocus: u, prefix: m, disabled: g } = this.props;
         return (0, r.jsxs)(a.Z, {
             align: a.Z.Align.CENTER,
             justify: a.Z.Justify.START,
-            className: l()(o.prefixInput, s, {
+            className: s()(o.prefixInput, l, {
                 [o.focused]: e,
                 [o.error]: i
             }),

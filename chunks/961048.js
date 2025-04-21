@@ -56,7 +56,7 @@ function c(e) {
             return e;
         })(
             {
-                label: s.NW.string(s.t.UKOtz8),
+                label: s.intl.string(s.t.UKOtz8),
                 iconComponent: i.xhG,
                 tooltipPosition: 'bottom',
                 onClick: (e) => {

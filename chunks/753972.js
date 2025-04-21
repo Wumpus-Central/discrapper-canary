@@ -28,7 +28,7 @@ function u(e) {
             : null
         : (0, r.jsx)('img', {
               className: o()(c.icon, a),
-              alt: l.NW.string(l.t.X4IxWF),
+              alt: l.intl.string(l.t.X4IxWF),
               src: p,
               'aria-hidden': !0,
               draggable: !1

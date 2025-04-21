@@ -43,9 +43,9 @@ let b = (e) => {
                 user: t,
                 markAsDismissed: n
             }),
-            header: m.NW.string(m.t.wAtFS0),
-            content: m.NW.string(m.t.qIZICA),
-            buttonCTA: m.NW.string(m.t.hvVgAQ),
+            header: m.intl.string(m.t.wAtFS0),
+            content: m.intl.string(m.t.qIZICA),
+            buttonCTA: m.intl.string(m.t.hvVgAQ),
             onClick: () => {
                 (0, a.Z)(d.Z.getArticleURL(h.BhN.GUILD_LEADERBOARD)), n(f.L.USER_DISMISS);
             },

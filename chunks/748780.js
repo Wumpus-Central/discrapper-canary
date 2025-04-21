@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(35282), n(539854), n(583741);
+n.d(t, { Z: () => A }), n(35282), n(539854), n(583741);
 var r = n(96758),
     i = n(776465),
     a = n.n(i),
@@ -127,7 +127,7 @@ function I(e, t) {
                 duration: v
             })
         ),
-        N = T;
+        A = T;
     if (c || u) {
         let i = O(t.duration, g, E);
         (n = r[h](
@@ -139,13 +139,13 @@ function I(e, t) {
                 duration: i
             })
         )),
-            (N = r.sequence([T, n]));
+            (A = r.sequence([T, n]));
     }
     l
-        ? N.start(() => {
+        ? A.start(() => {
               (!m || (m && m())) && (f ? f(I.bind(null, e, t)) : I(e, t));
           })
-        : N.start(f);
+        : A.start(f);
 }
 function S(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
@@ -156,7 +156,7 @@ function S(e) {
 }
 r.inject.ApplyAnimatedValues(y, (e) => e);
 let T = { CLAMP: 'clamp' },
-    N = _(d({}, r), {
+    A = _(d({}, r), {
         Easing: a(),
         accelerate: v,
         animate: I,

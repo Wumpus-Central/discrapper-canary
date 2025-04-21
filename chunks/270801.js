@@ -65,12 +65,12 @@ let s = () =>
                                         variant: 'heading-lg/semibold',
                                         className: a.header,
                                         id: c,
-                                        children: o.NW.format(o.t.z9qozM, { guildName: e.guildName })
+                                        children: o.intl.format(o.t.z9qozM, { guildName: e.guildName })
                                     }),
                                     (0, r.jsx)(i.Text, {
                                         variant: 'text-sm/medium',
                                         color: 'header-secondary',
-                                        children: o.NW.string(o.t.nwpqyc)
+                                        children: o.intl.string(o.t.nwpqyc)
                                     }),
                                     (0, r.jsx)(i.zxk, {
                                         className: a.button,
@@ -79,7 +79,7 @@ let s = () =>
                                         },
                                         fullWidth: !0,
                                         size: i.PhG.LARGE,
-                                        children: o.NW.string(o.t.NuzmOD)
+                                        children: o.intl.string(o.t.NuzmOD)
                                     })
                                 ]
                             })

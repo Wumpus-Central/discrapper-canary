@@ -53,7 +53,7 @@ function x(e) {
         [_, j] = i.useState(!1),
         [x, E] = i.useState(c),
         I = u ? (c ? 22 : -11) : c ? 0 : -C,
-        N = (0, d.q_F)(
+        P = (0, d.q_F)(
             {
                 transform: 'translate3d(0, '.concat(I, 'px, 0)'),
                 config: { duration: v },
@@ -66,10 +66,10 @@ function x(e) {
             },
             'animate-always'
         ),
-        P = _ ? N : void 0;
+        w = _ ? P : void 0;
     (_ || x) &&
         (t = (0, r.jsx)(s.animated.div, {
-            style: P,
+            style: w,
             className: O.expandedFolderIconWrapper,
             children: (0, r.jsx)(d.ROc, {
                 size: u ? 'sm' : 'md',
@@ -79,7 +79,7 @@ function x(e) {
         })),
         (_ || !x) &&
             (n = (0, r.jsx)(s.animated.div, {
-                style: P,
+                style: w,
                 className: O.closedFolderIconWrapper,
                 children: b.slice(0, 4).map((e, t) =>
                     (0, r.jsx)(
@@ -93,10 +93,10 @@ function x(e) {
                     )
                 )
             }));
-    let w = { backgroundColor: u && m ? d.TVs.colors.BG_MOD_SUBTLE.css : (0, a.br)(g, 0.4) };
+    let N = { backgroundColor: u && m ? d.TVs.colors.BG_MOD_SUBTLE.css : (0, a.br)(g, 0.4) };
     return (0, r.jsxs)('div', {
         'aria-hidden': !0,
-        style: c ? void 0 : w,
+        style: c ? void 0 : N,
         className: O.folderIconWrapper,
         children: [t, n]
     });
@@ -119,9 +119,9 @@ function E(e) {
             onContextMenu: S,
             onHoverChange: E,
             onKeyDown: I,
-            treeItemProps: { onFocus: N },
-            'aria-setsize': P,
-            'aria-posinset': w
+            treeItemProps: { onFocus: P },
+            'aria-setsize': w,
+            'aria-posinset': N
         } = e,
         Z = (function (e, t) {
             if (null == e) return {};
@@ -199,7 +199,7 @@ function E(e) {
                     onMouseEnter: R,
                     onMouseLeave: D,
                     onKeyDown: I,
-                    onFocus: N,
+                    onFocus: P,
                     'aria-expanded': a,
                     'aria-owns': y,
                     focusProps: { enabled: !1 }
@@ -209,11 +209,11 @@ function E(e) {
             (n = n =
                 {
                     role: 'treeitem',
-                    'aria-setsize': P,
-                    'aria-posinset': w,
+                    'aria-setsize': w,
+                    'aria-posinset': N,
                     children: [
                         (0, r.jsx)(d.nn4, {
-                            children: _.NW.formatToPlainString(_.t['90/DwM'], {
+                            children: _.intl.formatToPlainString(_.t['90/DwM'], {
                                 folderName: m,
                                 mentions: f
                             })

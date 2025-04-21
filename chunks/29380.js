@@ -17,19 +17,19 @@ var i = n(200651),
     y = n(388032),
     x = n(854408);
 function v(e) {
-    let { context: t, application: n, sectionName: v, primaryEntryPointCommand: C, buttonSize: g = l.PhG.MEDIUM, playSolo: N = !1 } = e,
-        j = r.useId(),
-        P = r.useCallback(() => {
+    let { context: t, application: n, sectionName: v, primaryEntryPointCommand: C, buttonSize: g = l.PhG.MEDIUM, playSolo: j = !1 } = e,
+        P = r.useId(),
+        N = r.useCallback(() => {
             c.yT(p.ti.ACTIVITY);
         }, []),
         E = r.useCallback(() => {
-            d.Z.shouldShowModal() && P();
-        }, [P]),
+            d.Z.shouldShowModal() && N();
+        }, [N]),
         { submitting: O, wasSubmitting: A } = (0, h.Z)({
             applicationId: n.id,
             context: t,
-            launchingComponentId: j,
-            onSubmissionComplete: P
+            launchingComponentId: P,
+            onSubmissionComplete: N
         }),
         [I, S] = r.useState(!1),
         T = (0, o.Qv)({
@@ -49,21 +49,21 @@ function v(e) {
             sectionName: v,
             commandName: w,
             autoDismissOnClick: T === o.JS.LEAVE,
-            launchingComponentId: j,
+            launchingComponentId: P,
             submitting: null != A ? A : O,
             onConfirmActivityLaunchChecksAlertOpen: E,
-            playSolo: !!L.altLayout && N
+            playSolo: !!L.altLayout && j
         }),
-        { disabled: M, reason: W } = (0, m.Z)({
+        { disabled: M, reason: D } = (0, m.Z)({
             context: t,
             application: n,
             activityAction: T
         }),
-        D = L.enabled ? y.NW.string(y.t['1KxmJi']) : k;
+        B = L.enabled ? y.intl.string(y.t['1KxmJi']) : k;
     return (0, i.jsx)(l.ua7, {
-        shouldShow: null != W,
+        shouldShow: null != D,
         tooltipContentClassName: x.tooltipContent,
-        text: W,
+        text: D,
         children: (e) => {
             var t,
                 r,
@@ -130,11 +130,11 @@ function v(e) {
                                     button_action: p._y.USE_APP_COMMAND
                                 });
                         },
-                        'aria-label': y.NW.formatToPlainString(y.t['XjP/R0'], {
-                            buttonText: D,
+                        'aria-label': y.intl.formatToPlainString(y.t['XjP/R0'], {
+                            buttonText: B,
                             applicationName: n.name
                         }),
-                        children: D
+                        children: B
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

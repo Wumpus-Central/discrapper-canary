@@ -3,37 +3,37 @@ n.d(t, {
     g: () => d
 }),
     n(415506);
-var r = n(544891),
-    i = n(570140),
+var i = n(544891),
+    r = n(570140),
     s = n(981631),
-    a = n(388032);
-function l(e) {
+    l = n(388032);
+function a(e) {
     return (
         null != e &&
             null != e.body &&
-            i.Z.dispatch({
+            r.Z.dispatch({
                 type: 'UPDATE_CONSENTS',
                 consents: (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                            i = Object.keys(n);
                         'function' == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
+                            (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 })
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            i.forEach(function (t) {
+                                var i;
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = i);
                             });
                     }
                     return e;
@@ -44,19 +44,19 @@ function l(e) {
 }
 function o(e) {
     let t;
-    throw Error(e.status >= 500 && e.status <= 599 ? a.NW.string(a.t.cvJdtr) : null != e && null != e.body && null != e.body.message ? e.body.message : a.NW.string(a.t.cvJdtr));
+    throw Error(e.status >= 500 && e.status <= 599 ? l.intl.string(l.t.cvJdtr) : null != e && null != e.body && null != e.body.message ? e.body.message : l.intl.string(l.t.cvJdtr));
 }
 function c() {
-    return r.tn
+    return i.tn
         .get({
             url: s.ANM.SETTINGS_CONSENT,
             oldFormErrors: !0,
             rejectWithError: !1
         })
-        .then(l, (e) => Promise.reject(Error(e.body.message)));
+        .then(a, (e) => Promise.reject(Error(e.body.message)));
 }
 function d(e, t) {
-    return r.tn
+    return i.tn
         .post({
             url: s.ANM.SETTINGS_CONSENT,
             body: {
@@ -66,5 +66,5 @@ function d(e, t) {
             oldFormErrors: !0,
             rejectWithError: !1
         })
-        .then(l, o);
+        .then(a, o);
 }

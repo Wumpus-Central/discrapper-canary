@@ -15,22 +15,22 @@ var r = n(200651),
 let b = () =>
         (0, r.jsx)(s.Z, {
             submitting: !1,
-            message: h.NW.string(h.t['8g514e']),
+            message: h.intl.string(h.t['8g514e']),
             onReset: () => {
                 (0, u.PE)(!1);
             },
-            onResetText: h.NW.string(h.t['ETE/oK']),
+            onResetText: h.intl.string(h.t['ETE/oK']),
             onSave: () => {
                 (0, u.PE)(!1), (0, o.Mr3)(f.Pn);
             },
-            onSaveText: h.NW.string(h.t['Xt+UaW']),
+            onSaveText: h.intl.string(h.t['Xt+UaW']),
             onSaveButtonColor: o.Ttl.RED
         }),
     g = (e) => {
         let { transitionState: t, guildId: n, onClose: s, onComplete: f, inviteKey: h, isPreview: g = !1 } = e,
             x = (0, u.rb)((e) => e.shouldShowWarning),
             { verificationForm: j, hasFetched: v } = (0, d.ng)(n, g, h),
-            N = (0, a.Dt)();
+            _ = (0, a.Dt)();
         return (i.useEffect(() => {
             v && j === c.t && s();
         }, [v, s, j]),
@@ -40,7 +40,7 @@ let b = () =>
                   children: [
                       (0, r.jsxs)(o.Y0X, {
                           transitionState: t,
-                          'aria-labelledby': N,
+                          'aria-labelledby': _,
                           size: o.CgR.DYNAMIC,
                           className: p.container,
                           hideShadow: !0,
@@ -55,7 +55,7 @@ let b = () =>
                               }),
                               (0, r.jsx)(m.Z, {
                                   verificationForm: j,
-                                  headerId: N,
+                                  headerId: _,
                                   guildId: n,
                                   onClose: s,
                                   onComplete: f,

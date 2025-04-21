@@ -1,5 +1,5 @@
 n.d(t, {
-    Ux: () => T,
+    Ux: () => N,
     gS: () => S,
     ww: () => p
 }),
@@ -17,8 +17,8 @@ var r = n(192379),
     _ = n(981631),
     I = n(372897),
     O = n(526761),
-    N = n(388032);
-function T(e) {
+    T = n(388032);
+function N(e) {
     return (0, i.e7)(
         [a.default, s.ZP],
         () => {
@@ -48,9 +48,9 @@ function S(e) {
             if (u.has(I.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
                 if (null == e) {
                     var _;
-                    t.nick = [N.NW.formatToPlainString(N.t.WBUh3N, { guildName: null != (_ = i.name) ? _ : '' })];
-                } else t.nick = [N.NW.string(N.t.EPZCrK)];
-            return u.has(I.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [N.NW.string(N.t.dZh1v7)]), t;
+                    t.nick = [T.intl.formatToPlainString(T.t.WBUh3N, { guildName: null != (_ = i.name) ? _ : '' })];
+                } else t.nick = [T.intl.string(T.t.EPZCrK)];
+            return u.has(I.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [T.intl.string(T.t.dZh1v7)]), t;
         },
         [e]
     );

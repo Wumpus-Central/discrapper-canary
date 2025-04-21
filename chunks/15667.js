@@ -25,7 +25,7 @@ let s = (e) => {
                       className: o.breadcrumbsHeader,
                       color: 'header-secondary',
                       variant: 'heading-sm/semibold',
-                      children: a.NW.string(a.t['+3V9Tk'])
+                      children: a.intl.string(a.t['+3V9Tk'])
                   }),
                   t.map((e, t) =>
                       (0, r.jsxs)(

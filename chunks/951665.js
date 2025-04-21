@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(481060),
-    l = n(457414),
+    l = n(481060),
+    s = n(457414),
     a = n(311173),
     o = n(388032),
     c = n(320705);
@@ -62,8 +62,8 @@ function m(e) {
             },
             [m, n]
         );
-    return (0, l.S)(n.triggerType)
-        ? (0, r.jsx)(s.zF9, {
+    return (0, s.S)(n.triggerType)
+        ? (0, r.jsx)(l.zF9, {
               isExpanded: p,
               collapsibleContent: (0, r.jsx)(a.Z, {
                   rule: n,
@@ -74,24 +74,24 @@ function m(e) {
               className: c.collapseable,
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, r.jsx)(s.P3F, {
+                  return (0, r.jsx)(l.P3F, {
                       onClick: (e) => {
                           f(), t(e);
                       },
                       children: (0, r.jsxs)('div', {
                           className: c.header,
                           children: [
-                              (0, r.jsx)(s.X6q, {
+                              (0, r.jsx)(l.X6q, {
                                   variant: 'text-sm/medium',
-                                  children: o.NW.string(o.t.dnunm5)
+                                  children: o.intl.string(o.t.dnunm5)
                               }),
                               p
-                                  ? (0, r.jsx)(s.u04, {
+                                  ? (0, r.jsx)(l.u04, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: c.arrow
                                     })
-                                  : (0, r.jsx)(s.CJ0, {
+                                  : (0, r.jsx)(l.CJ0, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: c.arrow

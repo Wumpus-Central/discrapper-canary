@@ -106,7 +106,7 @@ let S = {
         [S.LARGER]: 64,
         [S.XLARGE]: 100
     },
-    N = {
+    A = {
         [S.SMOL]: [10, 10, 8, 6, 6, 4],
         [S.MINI]: [12, 12, 10, 10, 8, 6, 4],
         [S.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
@@ -116,7 +116,7 @@ let S = {
         [S.LARGER]: [19, 19, 17, 17, 15, 13, 11],
         [S.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
     };
-class A extends a.PureComponent {
+class N extends a.PureComponent {
     renderAcronym() {
         let { guild: e, iconSrc: t } = this.props;
         return null != e.icon || null != t
@@ -141,9 +141,9 @@ class A extends a.PureComponent {
     renderIcon() {
         var e, t;
         let n = this.props,
-            { guild: r, className: a, showBadge: o, active: l, size: c, style: u = {}, textScale: f, showTooltip: _, tooltipPosition: p, onClick: h, to: E, badgeStrokeColor: y, animate: I, tabIndex: S, iconSrc: T, 'aria-hidden': A, lossless: C, iconSize: R } = n,
+            { guild: r, className: a, showBadge: o, active: l, size: c, style: u = {}, textScale: f, showTooltip: _, tooltipPosition: p, onClick: h, to: E, badgeStrokeColor: y, animate: I, tabIndex: S, iconSrc: T, 'aria-hidden': N, lossless: C, iconSize: R } = n,
             P = O(n, ['guild', 'className', 'showBadge', 'active', 'size', 'style', 'textScale', 'showTooltip', 'tooltipPosition', 'onClick', 'to', 'badgeStrokeColor', 'animate', 'tabIndex', 'iconSrc', 'aria-hidden', 'lossless', 'iconSize']),
-            w = N[c],
+            w = A[c],
             D = null != h ? d.P3F : 'div';
         return (0, i.jsxs)(
             D,
@@ -155,7 +155,7 @@ class A extends a.PureComponent {
                             [g.iconInactive]: !l,
                             [g.noIcon]: null == r.icon
                         }),
-                        'aria-hidden': A,
+                        'aria-hidden': N,
                         style: null == r.icon ? b({ fontSize: (null != (t = w[r.acronym.length]) ? t : w[w.length - 1]) * f }, u) : u,
                         onClick: null != E || null == h ? void 0 : h,
                         tabIndex: S
@@ -198,7 +198,7 @@ class A extends a.PureComponent {
 let C = c.ZP.connectStores([p.Z], (e) => {
     let { guild: t, animate: n, iconSrc: r, style: i, size: a, iconSize: o, lossless: s } = e;
     return { style: v(b({}, i), { backgroundImage: (0, h.rv)(null != r ? r : t.getIconURL(null != o ? o : T[a], n && p.Z.isFocused(), s)) }) };
-})((0, f.N)((e) => (0, i.jsx)(A, b({}, e))));
+})((0, f.N)((e) => (0, i.jsx)(N, b({}, e))));
 class R extends (r = a.PureComponent) {
     render() {
         return (0, i.jsx)(C, b({}, this.props));

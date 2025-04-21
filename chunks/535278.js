@@ -25,13 +25,13 @@ function o(t) {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
                         id: u,
-                        children: s.NW.format(s.t['wLFT6+'], { tier: o.summary })
+                        children: s.intl.format(s.t['wLFT6+'], { tier: o.summary })
                     }),
                     (0, n.jsx)(r.Text, {
                         className: l.subtitle,
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: s.NW.format(s.t.OsAK9v, { timestamp: null == d ? void 0 : d.currentPeriodEnd })
+                        children: s.intl.format(s.t.OsAK9v, { timestamp: null == d ? void 0 : d.currentPeriodEnd })
                     })
                 ]
             }),
@@ -40,7 +40,7 @@ function o(t) {
                     size: r.zxk.Sizes.MEDIUM,
                     grow: !1,
                     onClick: i,
-                    children: s.NW.string(s.t['JtWl+f'])
+                    children: s.intl.string(s.t['JtWl+f'])
                 })
             })
         ]

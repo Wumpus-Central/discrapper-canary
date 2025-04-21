@@ -61,7 +61,7 @@ function f(e) {
     return (0, r.jsx)(
         a.Y0,
         d(c({}, e), {
-            'aria-label': o.NW.string(o.t.ZTNur6),
+            'aria-label': o.intl.string(o.t.ZTNur6),
             size: a.Cg.SMALL,
             children: (0, r.jsx)('div', {
                 className: s.spinnerContainer,

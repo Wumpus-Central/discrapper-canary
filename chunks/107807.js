@@ -13,8 +13,8 @@ var c = t(200651),
     C = t(481060),
     x = t(457330),
     p = t(749210),
-    N = t(230711),
-    f = t(99690),
+    f = t(230711),
+    N = t(99690),
     b = t(493773),
     _ = t(410030),
     j = t(726542),
@@ -36,13 +36,13 @@ var c = t(200651),
     M = t(275759),
     Z = t(231757),
     V = t(753194),
-    W = t(225104),
-    B = t(458034),
-    z = t(856651),
-    D = t(981631),
-    F = t(388032),
-    H = t(268300);
-function U(e) {
+    B = t(225104),
+    z = t(458034),
+    D = t(856651),
+    F = t(981631),
+    H = t(388032),
+    U = t(268300);
+function K(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             c = Object.keys(t);
@@ -67,7 +67,7 @@ function U(e) {
     }
     return e;
 }
-function K(e, n) {
+function Y(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -85,27 +85,27 @@ function K(e, n) {
         e
     );
 }
-function Y(e) {
+function q(e) {
     let { platformType: n, className: t } = e,
         o = (0, _.ZP)(),
         a = j.Z.get(n);
     return (0, c.jsx)('img', {
         src: (0, m.ap)(o) ? a.icon.lightSVG : a.icon.darkSVG,
         alt: '',
-        className: l()(H.platformIcon, t)
+        className: l()(U.platformIcon, t)
     });
 }
-function q(e) {
+function W(e) {
     let { channel: n, className: t } = e,
         o = (0, g.KS)(n);
     return (0, c.jsxs)('div', {
-        className: l()(H.channelName, t),
+        className: l()(U.channelName, t),
         children: [
-            null != o ? (0, c.jsx)(o, { className: H.channelNameIcon }) : null,
+            null != o ? (0, c.jsx)(o, { className: U.channelNameIcon }) : null,
             (0, c.jsx)(C.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'text-normal',
-                className: H.channelNameText,
+                className: U.channelNameText,
                 children: n.name
             })
         ]
@@ -117,14 +117,14 @@ function X(e) {
         s = null;
     if (null != r)
         switch (a) {
-            case z.iO.LESS_THAN:
-                s = F.NW.format(F.t['2p7dAw'], {
+            case D.iO.LESS_THAN:
+                s = H.intl.format(H.t['2p7dAw'], {
                     description: r,
                     count: Math.max(0, Number(l) - 1)
                 });
                 break;
-            case z.iO.GREATER_THAN:
-                s = F.NW.format(F.t['2p7dAw'], {
+            case D.iO.GREATER_THAN:
+                s = H.intl.format(H.t['2p7dAw'], {
                     description: r,
                     count: Math.max(0, Number(l) + 1)
                 });
@@ -135,17 +135,17 @@ function X(e) {
     else {
         let e;
         switch (a) {
-            case z.iO.EQUAL:
-                (e = F.t['0BlpbG']), t === D.ABu.PAYPAL && o === z.PC.PAYPAL_VERIFIED && (e = F.t.dcSDhY);
+            case D.iO.EQUAL:
+                (e = H.t['0BlpbG']), t === F.ABu.PAYPAL && o === D.PC.PAYPAL_VERIFIED && (e = H.t.dcSDhY);
                 break;
-            case z.iO.NOT_EQUAL:
-                e = F.t.otcpTE;
+            case D.iO.NOT_EQUAL:
+                e = H.t.otcpTE;
                 break;
-            case z.iO.LESS_THAN:
-                e = F.t.Ef35xs;
+            case D.iO.LESS_THAN:
+                e = H.t.Ef35xs;
                 break;
-            case z.iO.GREATER_THAN:
-                e = F.t['8W9OXV'];
+            case D.iO.GREATER_THAN:
+                e = H.t['8W9OXV'];
                 break;
             case void 0:
             case null:
@@ -168,7 +168,7 @@ function X(e) {
         (0, c.jsx)(C.Text, {
             variant: 'text-xs/normal',
             color: n,
-            className: H.connectionsCheck,
+            className: U.connectionsCheck,
             children: s
         })
     );
@@ -178,15 +178,15 @@ function Q(e) {
         [i, s] = o.useState({}),
         [u, m] = o.useState(0),
         [x, p] = o.useState(null),
-        [N, b] = o.useState(null),
+        [f, b] = o.useState(null),
         _ = o.useMemo(() => d().flatten(n), [n]),
         v = o.useMemo(() => d().groupBy(_, (e) => ''.concat(e.connection_type).concat(null != e.application_id ? ':'.concat(e.application_id) : '')), [_]);
     o.useEffect(() => m(Date.now()), [_]),
         o.useEffect(() => {
             if (null == x) return;
-            let e = v[''.concat(x).concat(null != N ? ':'.concat(N.id) : '')];
-            null != e && e.every((e) => e.result) && a(x, N);
-        }, [v, x, N, a]);
+            let e = v[''.concat(x).concat(null != f ? ':'.concat(f.id) : '')];
+            null != e && e.every((e) => e.result) && a(x, f);
+        }, [v, x, f, a]);
     let A = (0, C.dQu)(h.Z.unsafe_rawColors.GREEN_330).hex();
     return (0, c.jsx)(c.Fragment, {
         children: Object.keys(v)
@@ -201,9 +201,9 @@ function Q(e) {
                     h,
                     m,
                     x = v[e],
-                    N = x.find((e) => null == e.operator),
+                    f = x.find((e) => null == e.operator),
                     _ = x.filter((e) => null != e.operator),
-                    g = (null == N || N.result) && _.every((e) => e.result),
+                    g = (null == f || f.result) && _.every((e) => e.result),
                     k = x.find((e) => null != e.application),
                     T = j.Z.get(e),
                     O = null == T || T.enabled,
@@ -211,59 +211,59 @@ function Q(e) {
                     E = (null == S ? void 0 : S.bot) != null ? new I.Z(S.bot) : null;
                 M.SJ.includes(null != (n = null == S ? void 0 : S.id) ? n : '')
                     ? (d = (0, c.jsx)(V.Z, {
-                          className: H.botTag,
+                          className: U.botTag,
                           color: A,
                           size: 16
                       }))
                     : null != E &&
                       (d = (0, c.jsx)(y.Z, {
-                          className: H.botTag,
+                          className: U.botTag,
                           verified: E.isVerifiedBot()
                       }));
-                let P = i[null != (o = null == T ? void 0 : T.type) ? o : z.Kt],
+                let P = i[null != (o = null == T ? void 0 : T.type) ? o : D.Kt],
                     G = !g && null != P && P <= u;
                 return (
                     (h = g
                         ? (0, c.jsx)(C.dz2, {
                               size: 'md',
                               color: 'currentColor',
-                              className: H.connectionsChecksGroupCheckmark
+                              className: U.connectionsChecksGroupCheckmark
                           })
                         : G
                           ? (0, c.jsx)(C.zxk, {
                                 size: C.zxk.Sizes.TINY,
                                 look: C.zxk.Looks.LINK,
                                 color: C.zxk.Colors.LINK,
-                                className: H.connectionsChecksGroupRetryButton,
-                                children: F.NW.string(F.t['5911LS'])
+                                className: U.connectionsChecksGroupRetryButton,
+                                children: H.intl.string(H.t['5911LS'])
                             })
                           : O
                             ? (0, c.jsx)(w.Z, {
                                   direction: w.Z.Directions.RIGHT,
-                                  className: H.connectionsChecksGroupCaret
+                                  className: U.connectionsChecksGroupCaret
                               })
                             : (0, c.jsx)(C.Text, {
                                   variant: 'text-md/medium',
                                   color: 'text-muted',
-                                  children: F.NW.string(F.t['cEts6+'])
+                                  children: H.intl.string(H.t['cEts6+'])
                               })),
-                    (null == T ? void 0 : T.type) === D.ABu.STEAM && (m = F.NW.string(F.t.NcZh6O)),
+                    (null == T ? void 0 : T.type) === F.ABu.STEAM && (m = H.intl.string(H.t.NcZh6O)),
                     (0, c.jsxs)(
                         C.P3F,
                         {
-                            className: l()(H.connectionsChecksGroup, g ? H.connectionsChecksGroupPassed : null, O ? null : H.connectionsChecksGroupPlatformDisabled),
+                            className: l()(U.connectionsChecksGroup, g ? U.connectionsChecksGroupPassed : null, O ? null : U.connectionsChecksGroupPlatformDisabled),
                             onClick:
                                 !g && O
                                     ? () => {
                                           var e, n;
                                           return (
-                                              (n = null != (e = null == T ? void 0 : T.type) ? e : z.Kt),
+                                              (n = null != (e = null == T ? void 0 : T.type) ? e : D.Kt),
                                               void ((0, Z.Z)({
                                                   platformType: n,
                                                   location: 'Verified Roles Connect Accounts Modal',
                                                   overrideUrl: null == S ? void 0 : S.role_connections_verification_url
                                               }),
-                                              s(K(U({}, i), { [n]: Date.now() })),
+                                              s(Y(K({}, i), { [n]: Date.now() })),
                                               p(n),
                                               b(null != S ? S : null),
                                               t())
@@ -273,21 +273,21 @@ function Q(e) {
                             children: [
                                 !g && G
                                     ? (0, c.jsx)('div', {
-                                          className: H.connectionsChecksGroupRequirementsNotMet,
+                                          className: U.connectionsChecksGroupRequirementsNotMet,
                                           children: (0, c.jsx)(C.Text, {
                                               variant: 'text-xs/normal',
                                               color: 'always-white',
-                                              children: F.NW.string(F.t.UB3hKi)
+                                              children: H.intl.string(H.t.UB3hKi)
                                           })
                                       })
                                     : null,
-                                null != T ? (0, c.jsx)(Y, { platformType: T.type }) : null,
-                                null != E ? (0, c.jsx)(f.Z, { user: E }) : null,
+                                null != T ? (0, c.jsx)(q, { platformType: T.type }) : null,
+                                null != E ? (0, c.jsx)(N.Z, { user: E }) : null,
                                 (0, c.jsxs)('div', {
-                                    className: H.connectionsChecksGroupTextContainer,
+                                    className: U.connectionsChecksGroupTextContainer,
                                     children: [
                                         (0, c.jsxs)('div', {
-                                            className: H.connectionsChecksGroupTextNameContainer,
+                                            className: U.connectionsChecksGroupTextNameContainer,
                                             children: [
                                                 (0, c.jsx)(C.Text, {
                                                     variant: 'text-md/medium',
@@ -301,15 +301,15 @@ function Q(e) {
                                                           children: (e) =>
                                                               (0, c.jsx)(
                                                                   C.d3s,
-                                                                  K(
-                                                                      U(
+                                                                  Y(
+                                                                      K(
                                                                           {
                                                                               size: 'xs',
                                                                               color: 'currentColor'
                                                                           },
                                                                           e
                                                                       ),
-                                                                      { className: H.connectionsChecksGroupTextNameInfoIcon }
+                                                                      { className: U.connectionsChecksGroupTextNameInfoIcon }
                                                                   )
                                                               )
                                                       })
@@ -355,15 +355,15 @@ function J(e) {
         [s, d] = o.useState(l.friendSync),
         [u, h] = o.useState(l.showActivity),
         [m, p] = o.useState(1 === l.metadataVisibility),
-        [N, f] = o.useState(1 === l.visibility);
+        [f, N] = o.useState(1 === l.visibility);
     (0, b.ZP)(() => {
-        i(!N), r(m);
+        i(!f), r(m);
     });
     let _ = j.Z.get(l.type);
     return (
-        D.BFP.has(l.type) &&
+        F.BFP.has(l.type) &&
             (n = (0, c.jsx)(C.j7V, {
-                className: H.accountConnectedPrivacyOptionsSwitchItem,
+                className: U.accountConnectedPrivacyOptionsSwitchItem,
                 hideBorder: !0,
                 value: s,
                 onChange: (e) => {
@@ -371,12 +371,12 @@ function J(e) {
                 },
                 children: (0, c.jsx)(C.Text, {
                     variant: 'text-sm/semibold',
-                    children: F.NW.string(F.t['+KCMSk'])
+                    children: H.intl.string(H.t['+KCMSk'])
                 })
             })),
-        D.vbS.has(l.type) &&
+        F.vbS.has(l.type) &&
             (t = (0, c.jsx)(C.j7V, {
-                className: H.accountConnectedPrivacyOptionsSwitchItem,
+                className: U.accountConnectedPrivacyOptionsSwitchItem,
                 hideBorder: !0,
                 value: u,
                 onChange: (e) => {
@@ -384,36 +384,36 @@ function J(e) {
                 },
                 children: (0, c.jsx)(C.Text, {
                     variant: 'text-sm/semibold',
-                    children: F.NW.format(F.t['6u6J0t'], { platform: _.name })
+                    children: H.intl.format(H.t['6u6J0t'], { platform: _.name })
                 })
             })),
         !0 === _.hasMetadata &&
             (a = (0, c.jsx)(C.j7V, {
-                className: H.accountConnectedPrivacyOptionsSwitchItem,
+                className: U.accountConnectedPrivacyOptionsSwitchItem,
                 hideBorder: !0,
                 value: m,
-                disabled: !N,
+                disabled: !f,
                 onChange: (e) => {
                     r(e), p(e), x.Z.setMetadataVisibility(l.type, l.id, +!!e);
                 },
                 children: (0, c.jsx)(C.Text, {
                     variant: 'text-sm/semibold',
-                    children: F.NW.string(F.t.FYKGsL)
+                    children: H.intl.string(H.t.FYKGsL)
                 })
             })),
         (0, c.jsxs)('div', {
-            className: H.accountConnectedPrivacyOptionsContainer,
+            className: U.accountConnectedPrivacyOptionsContainer,
             children: [
                 (0, c.jsx)(C.j7V, {
-                    className: H.accountConnectedPrivacyOptionsSwitchItem,
+                    className: U.accountConnectedPrivacyOptionsSwitchItem,
                     hideBorder: !0,
-                    value: N,
+                    value: f,
                     onChange: (e) => {
-                        i(!e), f(e), x.Z.setVisibility(l.type, l.id, +!!e);
+                        i(!e), N(e), x.Z.setVisibility(l.type, l.id, +!!e);
                     },
                     children: (0, c.jsx)(C.Text, {
                         variant: 'text-sm/semibold',
-                        children: F.NW.string(F.t.f7yOAQ)
+                        children: H.intl.string(H.t.f7yOAQ)
                     })
                 }),
                 a,
@@ -428,38 +428,38 @@ function $(e) {
         [i, s] = o.useState(0),
         [d, h] = o.useState(null),
         [m, x] = o.useState(!1),
-        [f, b] = o.useState(!0),
+        [N, b] = o.useState(!0),
         [y, g] = o.useState(!1),
         [I, w] = o.useState(!0),
         [M, Z] = o.useState(!1),
         V = (0, u.e7)([E.Z], () => E.Z.getAccounts()),
-        z = (0, u.e7)([O.default], () => O.default.getId()),
-        [K, Y] = o.useState(null),
+        D = (0, u.e7)([O.default], () => O.default.getId()),
+        [Y, q] = o.useState(null),
         [X, $] = o.useState(null),
         [ee, en] = o.useState(null),
         et = (0, _.ZP)(),
         ec = (0, u.e7)([T.default], () => T.default.locale),
-        eo = (0, u.e7)([P.ZP], () => P.ZP.getMember(a, z)),
-        ea = Object.values((0, u.e7)([S.Z], () => S.Z.getMutableGuildChannelsForGuild(a))).filter((e) => G.Z.can(D.Plq.VIEW_CHANNEL, e) && G.Z.can(D.Plq.SEND_MESSAGES, e) && (0, A.Z)(e).includes(l));
+        eo = (0, u.e7)([P.ZP], () => P.ZP.getMember(a, D)),
+        ea = Object.values((0, u.e7)([S.Z], () => S.Z.getMutableGuildChannelsForGuild(a))).filter((e) => G.Z.can(F.Plq.VIEW_CHANNEL, e) && G.Z.can(F.Plq.SEND_MESSAGES, e) && (0, A.Z)(e).includes(l));
     function el() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        null == t || t(), e && (0, C.Mr3)(B.s$, C.z1l);
+        null == t || t(), e && (0, C.Mr3)(z.s$, C.z1l);
     }
     function ei() {
-        el(!0), N.Z.open(D.oAB.AUTHORIZED_APPS);
+        el(!0), f.Z.open(F.oAB.AUTHORIZED_APPS);
     }
     function er() {
-        el(!0), N.Z.open(D.oAB.CONNECTIONS);
+        el(!0), f.Z.open(F.oAB.CONNECTIONS);
     }
     async function es() {
         g(!0), await p.Z.assignGuildRoleConnection(a, l.id);
     }
     function ed() {
-        R.default.track(D.rMx.PASSPORT_CHALLENGE_STARTED, U({ role_id: l.id }, (0, v.hH)(a)));
+        R.default.track(F.rMx.PASSPORT_CHALLENGE_STARTED, K({ role_id: l.id }, (0, v.hH)(a)));
     }
     function eu(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        Y(e),
+        q(e),
             $(n),
             s(1),
             null != n &&
@@ -476,29 +476,29 @@ function $(e) {
             });
         }, [a, l.id, V]),
         o.useEffect(() => {
-            R.default.track(D.rMx.PASSPORT_CHALLENGE_VIEWED, U({ role_id: l.id }, (0, v.hH)(a)));
+            R.default.track(F.rMx.PASSPORT_CHALLENGE_VIEWED, K({ role_id: l.id }, (0, v.hH)(a)));
         }, [a, l.id]),
         o.useEffect(() => {
-            y && null != eo && eo.roles.includes(l.id) && (g(!1), ea.length > 0 ? s(2) : null == t || t(), R.default.track(D.rMx.PASSPORT_CHALLENGE_FINISHED, U({ role_id: l.id }, (0, v.hH)(a))));
+            y && null != eo && eo.roles.includes(l.id) && (g(!1), ea.length > 0 ? s(2) : null == t || t(), R.default.track(F.rMx.PASSPORT_CHALLENGE_FINISHED, K({ role_id: l.id }, (0, v.hH)(a))));
         }, [y, ea.length, eo, a, l.id, t]),
         (0, c.jsxs)(C.Y0X, {
             size: C.CgR.MEDIUM,
             transitionState: n,
-            'aria-label': F.NW.string(F.t.zOZh3d),
-            className: H.modalRoot,
+            'aria-label': H.intl.string(H.t.zOZh3d),
+            className: U.modalRoot,
             children: [
                 (function () {
                     switch (i) {
                         case 0:
                             return (0, c.jsxs)(C.xBx, {
-                                className: H.header,
+                                className: U.header,
                                 separator: !1,
                                 children: [
                                     (0, c.jsx)('div', {
-                                        className: H.headerText,
+                                        className: U.headerText,
                                         children: (0, c.jsx)(C.X6q, {
                                             variant: 'heading-xl/extrabold',
-                                            children: F.NW.string(F.t.zOZh3d)
+                                            children: H.intl.string(H.t.zOZh3d)
                                         })
                                     }),
                                     (0, c.jsx)(C.olH, { onClick: () => el() })
@@ -506,16 +506,16 @@ function $(e) {
                             });
                         case 1: {
                             var e, n;
-                            r()(null != K, 'lastPlatformConnected is null');
-                            let t = null != (n = null == X ? void 0 : X.name) ? n : null == (e = j.Z.get(K)) ? void 0 : e.name;
+                            r()(null != Y, 'lastPlatformConnected is null');
+                            let t = null != (n = null == X ? void 0 : X.name) ? n : null == (e = j.Z.get(Y)) ? void 0 : e.name;
                             return (0, c.jsxs)(C.xBx, {
-                                className: H.header,
+                                className: U.header,
                                 separator: !1,
                                 children: [
                                     (0, c.jsx)(C.X6q, {
                                         variant: 'heading-xl/extrabold',
-                                        className: H.headerText,
-                                        children: F.NW.format(F.t.yQvgBA, { platformName: t })
+                                        className: U.headerText,
+                                        children: H.intl.format(H.t.yQvgBA, { platformName: t })
                                     }),
                                     (0, c.jsx)(C.olH, { onClick: () => el() })
                                 ]
@@ -523,13 +523,13 @@ function $(e) {
                         }
                         case 2:
                             return (0, c.jsxs)(C.xBx, {
-                                className: H.header,
+                                className: U.header,
                                 separator: !1,
                                 children: [
                                     (0, c.jsx)(C.X6q, {
                                         variant: 'heading-xl/extrabold',
-                                        className: H.headerText,
-                                        children: F.NW.string(F.t.najNd3)
+                                        className: U.headerText,
+                                        children: H.intl.string(H.t.najNd3)
                                     }),
                                     (0, c.jsx)(C.olH, { onClick: () => el(!0) })
                                 ]
@@ -548,17 +548,17 @@ function $(e) {
                                     n = null != d && 1 === d.length && 1 === d[0].length;
                                 return (0, c.jsx)(C.hzk, {
                                     children:
-                                        f || null == d
-                                            ? (0, c.jsx)(C.$jN, { className: H.connectionsChecksGroups })
+                                        N || null == d
+                                            ? (0, c.jsx)(C.$jN, { className: U.connectionsChecksGroups })
                                             : (0, c.jsxs)(c.Fragment, {
                                                   children: [
                                                       (0, c.jsx)(C.Text, {
                                                           variant: 'text-md/medium',
                                                           color: 'header-secondary',
-                                                          children: F.NW.format(n ? F.t.jHfRvb : e ? F.t.mOQ8k5 : F.t.U0olLi, { roleName: l.name })
+                                                          children: H.intl.format(n ? H.t.jHfRvb : e ? H.t.mOQ8k5 : H.t.U0olLi, { roleName: l.name })
                                                       }),
                                                       (0, c.jsx)(C.zJl, {
-                                                          className: H.connectionsChecksGroups,
+                                                          className: U.connectionsChecksGroups,
                                                           children: (0, c.jsx)(Q, {
                                                               eligibilityStatesGroups: d,
                                                               onPlatformConnect: ed,
@@ -567,10 +567,10 @@ function $(e) {
                                                       }),
                                                       (0, c.jsx)(C.Text, {
                                                           variant: 'text-xs/normal',
-                                                          className: H.footerText,
+                                                          className: U.footerText,
                                                           color: 'header-secondary',
-                                                          children: F.NW.format(F.t.gsgvxs, {
-                                                              privacyPolicyUrl: D.EYA.PRIVACY,
+                                                          children: H.intl.format(H.t.gsgvxs, {
+                                                              privacyPolicyUrl: F.EYA.PRIVACY,
                                                               onAuthorizedApplicationsClick: () => ei(),
                                                               onConnectionsClick: () => er()
                                                           })
@@ -580,10 +580,10 @@ function $(e) {
                                 });
                             }
                             case 1: {
-                                r()(null != K, 'lastPlatformConnected is null');
+                                r()(null != Y, 'lastPlatformConnected is null');
                                 let e = V.find((e) => {
                                         let { type: n } = e;
-                                        return K === n;
+                                        return Y === n;
                                     }),
                                     n =
                                         null == ee
@@ -597,48 +597,48 @@ function $(e) {
                                         (0, c.jsx)(C.Text, {
                                             variant: 'text-md/normal',
                                             color: 'header-secondary',
-                                            children: F.NW.format(F.t.gsgvxs, {
-                                                privacyPolicyUrl: D.EYA.PRIVACY,
+                                            children: H.intl.format(H.t.gsgvxs, {
+                                                privacyPolicyUrl: F.EYA.PRIVACY,
                                                 onAuthorizedApplicationsClick: () => ei(),
                                                 onConnectionsClick: () => er()
                                             })
                                         }),
                                         (0, c.jsx)('div', {
-                                            className: H.accountConnectedContainer,
+                                            className: U.accountConnectedContainer,
                                             children:
                                                 null == e && null == n
-                                                    ? (0, c.jsx)(C.$jN, { className: H.accountConnectedLoading })
+                                                    ? (0, c.jsx)(C.$jN, { className: U.accountConnectedLoading })
                                                     : (0, c.jsxs)(c.Fragment, {
                                                           children: [
                                                               null != e
                                                                   ? (0, c.jsxs)(c.Fragment, {
                                                                         children: [
                                                                             (0, c.jsxs)('div', {
-                                                                                className: H.accountConnectedContainerChild,
+                                                                                className: U.accountConnectedContainerChild,
                                                                                 children: [
                                                                                     (0, c.jsx)(C.Text, {
                                                                                         variant: 'eyebrow',
                                                                                         color: 'header-secondary',
-                                                                                        children: F.NW.string(F.t.TOjkEh)
+                                                                                        children: H.intl.string(H.t.TOjkEh)
                                                                                     }),
                                                                                     (0, c.jsx)(k.E3, {
                                                                                         connectedAccount: e,
-                                                                                        userId: z,
+                                                                                        userId: D,
                                                                                         theme: et,
                                                                                         locale: ec,
-                                                                                        className: H.accountConnectedPreviewConnectedUserAccount,
+                                                                                        className: U.accountConnectedPreviewConnectedUserAccount,
                                                                                         showMetadata: I,
                                                                                         showInvisibleIcon: M
                                                                                     })
                                                                                 ]
                                                                             }),
                                                                             (0, c.jsxs)('div', {
-                                                                                className: H.accountConnectedContainerChild,
+                                                                                className: U.accountConnectedContainerChild,
                                                                                 children: [
                                                                                     (0, c.jsx)(C.Text, {
                                                                                         variant: 'eyebrow',
                                                                                         color: 'header-secondary',
-                                                                                        children: F.NW.string(F.t.jndPhY)
+                                                                                        children: H.intl.string(H.t.jndPhY)
                                                                                     }),
                                                                                     (0, c.jsx)(J, {
                                                                                         account: e,
@@ -652,22 +652,22 @@ function $(e) {
                                                                   : null,
                                                               null != n
                                                                   ? (0, c.jsxs)('div', {
-                                                                        className: H.accountConnectedContainerChild,
+                                                                        className: U.accountConnectedContainerChild,
                                                                         children: [
                                                                             (0, c.jsxs)('div', {
-                                                                                className: H.accountConnectedHeader,
+                                                                                className: U.accountConnectedHeader,
                                                                                 children: [
                                                                                     (0, c.jsx)(C.Text, {
                                                                                         variant: 'eyebrow',
                                                                                         color: 'header-secondary',
-                                                                                        children: F.NW.string(F.t.TOjkEh)
+                                                                                        children: H.intl.string(H.t.TOjkEh)
                                                                                     }),
                                                                                     (0, c.jsx)(C.ua7, {
-                                                                                        text: F.NW.string(F.t.x3svVV),
+                                                                                        text: H.intl.string(H.t.x3svVV),
                                                                                         children: (e) =>
                                                                                             (0, c.jsx)(
                                                                                                 C.d3s,
-                                                                                                U(
+                                                                                                K(
                                                                                                     {
                                                                                                         size: 'xs',
                                                                                                         color: 'currentColor'
@@ -680,7 +680,7 @@ function $(e) {
                                                                             }),
                                                                             (0, c.jsx)(k.tH, {
                                                                                 applicationRoleConnection: n,
-                                                                                className: H.accountConnectedPreviewConnectedUserAccount,
+                                                                                className: U.accountConnectedPreviewConnectedUserAccount,
                                                                                 locale: ec
                                                                             })
                                                                         ]
@@ -696,25 +696,25 @@ function $(e) {
                                 return (0, c.jsxs)(C.hzk, {
                                     children: [
                                         (0, c.jsxs)('div', {
-                                            className: H.roleGranted,
+                                            className: U.roleGranted,
                                             children: [
-                                                (0, c.jsx)(W.Z, {
+                                                (0, c.jsx)(B.Z, {
                                                     guildId: a,
-                                                    className: H.verifiedIcon,
+                                                    className: U.verifiedIcon,
                                                     role: l,
                                                     size: 24
                                                 }),
                                                 (0, c.jsx)(C.Text, {
                                                     variant: 'text-lg/semibold',
                                                     color: 'header-primary',
-                                                    className: H.roleGrantedName,
+                                                    className: U.roleGrantedName,
                                                     children: l.name
                                                 })
                                             ]
                                         }),
                                         (0, c.jsx)(C.zJl, {
-                                            className: H.channelsGranted,
-                                            children: ea.map((e) => (0, c.jsx)(q, { channel: e }, e.id))
+                                            className: U.channelsGranted,
+                                            children: ea.map((e) => (0, c.jsx)(W, { channel: e }, e.id))
                                         })
                                     ]
                                 });
@@ -733,17 +733,17 @@ function $(e) {
                                     (0, c.jsx)(C.zxk, {
                                         color: C.Ttl.BRAND,
                                         onClick: () => es(),
-                                        disabled: f || !m || y,
-                                        children: F.NW.string(F.t['8SuVoK'])
+                                        disabled: N || !m || y,
+                                        children: H.intl.string(H.t['8SuVoK'])
                                     }),
                                     n
                                         ? (0, c.jsx)('div', {
-                                              className: H.manageConnectionsFooterButton,
+                                              className: U.manageConnectionsFooterButton,
                                               children: (0, c.jsx)(C.zxk, {
                                                   look: C.iLD.LINK,
                                                   color: C.Ttl.LINK,
                                                   onClick: er,
-                                                  children: F.NW.string(F.t.VXV55O)
+                                                  children: H.intl.string(H.t.VXV55O)
                                               })
                                           })
                                         : null
@@ -754,7 +754,7 @@ function $(e) {
                                 children: (0, c.jsx)(C.zxk, {
                                     color: C.Ttl.BRAND,
                                     onClick: () => s(0),
-                                    children: F.NW.string(F.t.i4jeWV)
+                                    children: H.intl.string(H.t.i4jeWV)
                                 })
                             });
                         default:
@@ -763,16 +763,16 @@ function $(e) {
                                     (0, c.jsx)(C.zxk, {
                                         color: C.Ttl.BRAND,
                                         onClick: () => el(!0),
-                                        children: F.NW.string(F.t.cpT0Cg)
+                                        children: H.intl.string(H.t.cpT0Cg)
                                     }),
                                     n
                                         ? (0, c.jsx)('div', {
-                                              className: H.manageConnectionsFooterButton,
+                                              className: U.manageConnectionsFooterButton,
                                               children: (0, c.jsx)(C.zxk, {
                                                   look: C.iLD.LINK,
                                                   color: C.Ttl.LINK,
                                                   onClick: er,
-                                                  children: F.NW.string(F.t.VXV55O)
+                                                  children: H.intl.string(H.t.VXV55O)
                                               })
                                           })
                                         : null

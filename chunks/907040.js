@@ -27,8 +27,8 @@ var r = n(200651),
     I = n(806966),
     S = n(28546),
     T = n(691251),
-    N = n(98528),
-    A = n(770812),
+    A = n(98528),
+    N = n(770812),
     C = n(434404),
     R = n(536442),
     P = n(609218),
@@ -46,8 +46,8 @@ var r = n(200651),
     V = n(170762),
     Z = n(22363),
     H = n(784222),
-    W = n(141507),
-    Y = n(669040),
+    Y = n(141507),
+    W = n(669040),
     K = n(901963),
     z = n(212263),
     q = n(149203),
@@ -167,7 +167,7 @@ let ec = (e, t) => {
                 gridContainerProps: E,
                 handleGridContainerKeyDown: b,
                 isUsingKeyboardNavigation: O
-            } = (0, N.VO)({
+            } = (0, A.VO)({
                 columnCounts: r,
                 gridNavigatorId: q.Vr,
                 itemGrid: o,
@@ -232,7 +232,7 @@ let ec = (e, t) => {
     eg = function (e, t) {
         var n, a;
         let s,
-            { pickerIntention: l, channel: c, guildId: f, closePopout: p, emojiSize: T = q.Su.MEDIUM, hasTabWrapper: C = !1, containerContext: k = 0, includeCreateEmojiButton: ee, onSelectEmoji: en, onSelectSoundmoji: el, containerWidth: ec, onNavigateAway: e_, persistSearch: eg, className: eE, headerClassName: eb, analyticsOverride: ey = em, searchProps: ev = {}, wrapper: eO, shouldHidePickerActions: eI = !1, messageId: eS, renderHeader: eT, listHeaderClassName: eN, categoryListClassName: eA, shouldShowSoundmojiInEmojiPicker: eC = !1 } = e,
+            { pickerIntention: l, channel: c, guildId: f, closePopout: p, emojiSize: T = q.Su.MEDIUM, hasTabWrapper: C = !1, containerContext: k = 0, includeCreateEmojiButton: ee, onSelectEmoji: en, onSelectSoundmoji: el, containerWidth: ec, onNavigateAway: e_, persistSearch: eg, className: eE, headerClassName: eb, analyticsOverride: ey = em, searchProps: ev = {}, wrapper: eO, shouldHidePickerActions: eI = !1, messageId: eS, renderHeader: eT, listHeaderClassName: eA, categoryListClassName: eN, shouldShowSoundmojiInEmojiPicker: eC = !1 } = e,
             { onFocus: eR, onKeyDown: eP, autoFocus: ew = !0, accessory: eD } = ev,
             eL = (0, u.e7)([D.ZP], () => (null != f ? D.ZP.getDefaultChannel(f) : null), [f]),
             [ex, eM] = i.useState(null),
@@ -245,11 +245,11 @@ let ec = (e, t) => {
         let eF = null != (a = null != (n = null == c ? void 0 : c.getGuildId()) ? n : f) ? a : null,
             [eV, eZ] = i.useState(!1),
             eH = L.default.getCurrentUser(),
-            eW = (0, M.I5)(eH);
+            eY = (0, M.I5)(eH);
         i.useImperativeHandle(t, () => ({ onPickerOpen: tt }));
-        let { location: eY } = (0, m.O)(),
+        let { location: eW } = (0, m.O)(),
             { page: eK, section: ez, object: eq, openPopoutType: eQ } = ey,
-            eX = i.useMemo(() => er(et({}, eY), { section: null != ez ? ez : Q.jXE.EMOJI_PICKER_POPOUT }), [eY, ez]),
+            eX = i.useMemo(() => er(et({}, eW), { section: null != ez ? ez : Q.jXE.EMOJI_PICKER_POPOUT }), [eW, ez]),
             { analyticsLocations: eJ } = (0, E.ZP)(g.Z.EMOJI_PICKER),
             { diversitySurrogate: e$ } = (0, u.cj)([y.ZP], () => ({ diversitySurrogate: y.ZP.diversitySurrogate })),
             e0 = (0, j.DV)(ej, c, l),
@@ -259,7 +259,7 @@ let ec = (e, t) => {
             e4 = i.useCallback((e) => {
                 w.d4.updateSetting(Array.from(e));
             }, []),
-            e5 = (0, N.ep)({
+            e5 = (0, A.ep)({
                 gridWrapperRef: eU,
                 containerWidth: ec,
                 listPaddingLeft: ea,
@@ -392,12 +392,12 @@ let ec = (e, t) => {
                 }));
         } else
             (null == ex ? void 0 : ex.type) === H.Bg.ROLE_SUBSCRIPTION
-                ? (s = (0, r.jsx)(A.Z, {
+                ? (s = (0, r.jsx)(N.Z, {
                       onClose: () => eM(null),
                       guildId: ex.guildId,
                       emojiId: ex.emojiId
                   }))
-                : eV && !eW && (s = (0, r.jsx)(B.Z, { onDismiss: () => eZ(!1) }));
+                : eV && !eY && (s = (0, r.jsx)(B.Z, { onDismiss: () => eZ(!1) }));
         let td = (e, t) => {
                 tn(e, er(et({}, t), { isBurst: eV }));
             },
@@ -433,7 +433,7 @@ let ec = (e, t) => {
                     role: C ? 'tabpanel' : void 0,
                     className: o()($.wrapper, {
                         [$.emojiPickerHasTabWrapper]: C,
-                        [$.isBurstReactionPicker]: eV && eW
+                        [$.isBurstReactionPicker]: eV && eY
                     }),
                     children: [
                         C ? null : t_,
@@ -471,7 +471,7 @@ let ec = (e, t) => {
                                                       ),
                                                       {
                                                           children: tu
-                                                              ? (0, r.jsx)(Y.Z, {
+                                                              ? (0, r.jsx)(W.Z, {
                                                                     collapsedSections: e3,
                                                                     diversitySurrogate: e$,
                                                                     emojiGrid: e7,
@@ -492,7 +492,7 @@ let ec = (e, t) => {
                                                                     channelId: null == c ? void 0 : c.id,
                                                                     messageId: eS,
                                                                     isBurstReaction: eV,
-                                                                    listHeaderClassName: eN
+                                                                    listHeaderClassName: eA
                                                                 })
                                                               : null
                                                       }
@@ -500,7 +500,7 @@ let ec = (e, t) => {
                                               )
                                     ]
                                 }),
-                                (0, r.jsx)(W.k, {
+                                (0, r.jsx)(Y.k, {
                                     emojiGrid: e7,
                                     className: $.inspector,
                                     guildId: eF,
@@ -513,7 +513,7 @@ let ec = (e, t) => {
                         eI
                             ? null
                             : (0, r.jsx)(F.Z, {
-                                  className: o()($.categoryList, eA),
+                                  className: o()($.categoryList, eN),
                                   emojiListRef: eG,
                                   sectionDescriptors: e8,
                                   intention: l,

@@ -1,13 +1,13 @@
 n.d(t, { Z: () => p });
 var r,
     i,
-    a,
-    l = n(442837),
+    l,
+    a = n(442837),
     o = n(570140);
 let s = !1,
     c = !1,
     u = !1;
-class d extends (a = l.ZP.Store) {
+class d extends (l = a.ZP.Store) {
     getIsTargeted() {
         return u;
     }

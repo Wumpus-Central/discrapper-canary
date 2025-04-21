@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r,
     l,
     i,
@@ -41,13 +41,13 @@ function j(e, t, n) {
     };
     v.set(e.id, i);
 }
-function N(e) {
+function P(e) {
     let t = y.delete(e),
         n = v.delete(e),
         r = S.delete(e);
     return t || n || r;
 }
-function P() {
+function E() {
     var e;
     let t = f.Z.getChannelId();
     if (null == t) return !1;
@@ -62,12 +62,12 @@ function P() {
         r
     );
 }
-function E() {
+function Z() {
     y.clear(), v.clear(), S.clear();
 }
-class Z extends (r = o.ZP.Store) {
+class I extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, m.default, p.Z, f.Z), this.syncWith([m.default], P);
+        this.waitFor(g.Z, m.default, p.Z, f.Z), this.syncWith([m.default], E);
     }
     get desyncedVoiceStatesCount() {
         return y.size();
@@ -83,23 +83,23 @@ class Z extends (r = o.ZP.Store) {
     }
 }
 (i = 'RTCConnectionDesyncStore'),
-    (l = 'displayName') in Z
-        ? Object.defineProperty(Z, l, {
+    (l = 'displayName') in I
+        ? Object.defineProperty(I, l, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (Z[l] = i);
-let I = new Z(s.Z, {
+        : (I[l] = i);
+let x = new I(s.Z, {
     CONNECTION_OPEN: function () {
-        E();
+        Z();
     },
-    VOICE_CHANNEL_SELECT: E,
+    VOICE_CHANNEL_SELECT: Z,
     RTC_CONNECTION_STATE: function (e) {
         let { state: t, context: n } = e;
         if (n !== a.Yn.DEFAULT || t !== O.hes.DISCONNECTED) return !1;
-        E();
+        Z();
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e,
@@ -108,7 +108,7 @@ let I = new Z(s.Z, {
             null != n &&
             t.reduce((e, t) => {
                 let { userId: r, channelId: l } = t;
-                return (l === n && !!N(r)) || e;
+                return (l === n && !!P(r)) || e;
             }, !1)
         );
     },
@@ -125,6 +125,6 @@ let I = new Z(s.Z, {
     },
     RTC_CONNECTION_CLIENT_DISCONNECT: function (e) {
         let { userId: t, context: n } = e;
-        return n === a.Yn.DEFAULT && N(t);
+        return n === a.Yn.DEFAULT && P(t);
     }
 });

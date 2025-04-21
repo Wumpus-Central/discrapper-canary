@@ -57,6 +57,6 @@ let h = 3,
         });
         return (0, r.jsxs)(o.RX, {
             className: p.upsell,
-            children: [(0, r.jsx)(o.z5, { children: (0, r.jsx)(o.BR, { children: _.NW.format(_.t['uEky4+'], { count: t.length }) }) }), (0, r.jsx)(o.dY, { children: m })]
+            children: [(0, r.jsx)(o.z5, { children: (0, r.jsx)(o.BR, { children: _.intl.format(_.t['uEky4+'], { count: t.length }) }) }), (0, r.jsx)(o.dY, { children: m })]
         });
     };

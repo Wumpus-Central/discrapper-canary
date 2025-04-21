@@ -67,7 +67,7 @@ function g(e) {
     let { subscription: g, onUpdated: j } = e,
         [_, y] = r.useState(!1),
         [C, O] = r.useState(!1),
-        [N, E] = r.useState(null),
+        [E, N] = r.useState(null),
         T = (e) => ((null == e && (e = g.status), e in f) ? f[e] : 'Unknown status '.concat(e)),
         S = (e) => {
             let t = new Date(e);
@@ -120,7 +120,7 @@ function g(e) {
                     rejectWithError: !1
                 });
             } catch (e) {
-                E(e.body.message);
+                N(e.body.message);
             }
             j();
         },
@@ -243,11 +243,11 @@ function g(e) {
                                             onClick: (e) => w(),
                                             children: 'Renew Subscription'
                                         }),
-                                        null !== N &&
+                                        null !== E &&
                                             (0, a.jsx)(o.kzN, {
                                                 className: p.error,
-                                                onDismiss: () => E(null),
-                                                children: N
+                                                onDismiss: () => N(null),
+                                                children: E
                                             })
                                     ]
                                 }),

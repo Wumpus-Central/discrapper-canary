@@ -1,89 +1,89 @@
-n.d(e, { default: () => b }), n(388685);
-var r = n(200651),
-    t = n(192379),
-    a = n(120356),
-    i = n.n(a),
-    s = n(442837),
-    u = n(544891),
-    o = n(481060),
-    d = n(493773),
-    c = n(910693),
-    N = n(314897),
-    x = n(271383),
-    k = n(430824),
-    m = n(496675),
-    g = n(594174),
-    h = n(626135),
-    _ = n(51144),
-    v = n(981631),
-    C = n(388032),
-    E = n(696929);
+e.d(n, { default: () => b }), e(388685);
+var t = e(200651),
+    r = e(192379),
+    i = e(120356),
+    a = e.n(i),
+    s = e(442837),
+    u = e(544891),
+    o = e(481060),
+    d = e(493773),
+    c = e(910693),
+    x = e(314897),
+    k = e(271383),
+    N = e(430824),
+    m = e(496675),
+    g = e(594174),
+    h = e(626135),
+    _ = e(51144),
+    v = e(981631),
+    C = e(388032),
+    E = e(696929);
 function p(l) {
-    let { disabled: e = !1, user: n, setNickname: a, nickname: s, error: u, hasNick: d } = l,
-        c = t.useRef(null),
-        x = t.useCallback(() => {
+    let { disabled: n = !1, user: e, setNickname: i, nickname: s, error: u, hasNick: d } = l,
+        c = r.useRef(null),
+        k = r.useCallback(() => {
             var l;
-            a(''), null == (l = c.current) || l.focus();
-        }, [a]);
-    return (0, r.jsxs)(r.Fragment, {
+            i(''), null == (l = c.current) || l.focus();
+        }, [i]);
+    return (0, t.jsxs)(t.Fragment, {
         children: [
-            e || null == n || n.id === N.default.getId()
+            n || null == e || e.id === x.default.getId()
                 ? null
-                : (0, r.jsx)(o.Zbd, {
+                : (0, t.jsx)(o.Zbd, {
                       type: o.Zbd.Types.WARNING,
                       className: E.card,
-                      children: (0, r.jsx)(o.Text, {
+                      children: (0, t.jsx)(o.Text, {
                           className: E.warning,
                           variant: 'text-md/normal',
-                          children: C.NW.string(C.t.dq3At7)
+                          children: C.intl.string(C.t.dq3At7)
                       })
                   }),
-            (0, r.jsx)(o.vwX, {
-                className: i()(E.itemGroup, { [E.disabled]: e }),
-                children: e ? C.NW.string(C.t.EyA4q6) : C.NW.string(C.t['621LJC'])
+            (0, t.jsx)(o.vwX, {
+                className: a()(E.itemGroup, { [E.disabled]: n }),
+                children: n ? C.intl.string(C.t.EyA4q6) : C.intl.string(C.t['621LJC'])
             }),
-            (0, r.jsx)(o.oil, {
-                disabled: e,
+            (0, t.jsx)(o.oil, {
+                disabled: n,
                 inputRef: c,
                 maxLength: v.l$U,
                 value: s,
-                placeholder: _.ZP.getName(n),
-                onChange: a,
+                placeholder: _.ZP.getName(e),
+                onChange: i,
                 autoFocus: !0
             }),
             null != u
-                ? (0, r.jsx)(o.Text, {
+                ? (0, t.jsx)(o.Text, {
                       variant: 'text-xs/normal',
                       color: 'text-danger',
                       className: E.nickError,
                       children: u
                   })
                 : null,
-            d && !e
-                ? (0, r.jsx)(o.zxk, {
+            d && !n
+                ? (0, t.jsx)(o.zxk, {
                       look: o.zxk.Looks.LINK,
                       color: o.zxk.Colors.LINK,
                       size: o.zxk.Sizes.NONE,
-                      onClick: x,
+                      onClick: k,
                       className: E.reset,
-                      children: C.NW.string(C.t.aE02R0)
+                      children: C.intl.string(C.t.aE02R0)
                   })
                 : null
         ]
     });
 }
 let b = function (l) {
-    var e;
-    let { transitionState: n, user: a, guildId: i, onClose: N, analyticsSource: _, analyticsLocations: b } = l,
-        j = (0, s.e7)([x.ZP], () => (null != i ? x.ZP.getMember(i, a.id) : null)),
-        A = (0, s.e7)([m.Z, g.default, k.Z], () => {
+    var n;
+    let { transitionState: e, user: i, guildId: a, onClose: x, analyticsSource: _, analyticsLocations: b } = l,
+        j = (0, s.e7)([k.ZP], () => (null != a ? k.ZP.getMember(a, i.id) : null)),
+        A = (0, s.e7)([m.Z, g.default, N.Z], () => {
             var l;
-            let e = k.Z.getGuild(i);
-            return null != e && ((null == (l = g.default.getCurrentUser()) ? void 0 : l.id) === a.id ? m.Z.can(v.Plq.CHANGE_NICKNAME, e) || m.Z.can(v.Plq.MANAGE_NICKNAMES, e) : m.Z.canManageUser(v.Plq.MANAGE_NICKNAMES, a.id, e));
+            let n = N.Z.getGuild(a);
+            return null != n && ((null == (l = g.default.getCurrentUser()) ? void 0 : l.id) === i.id ? m.Z.can(v.Plq.CHANGE_NICKNAME, n) || m.Z.can(v.Plq.MANAGE_NICKNAMES, n) : m.Z.canManageUser(v.Plq.MANAGE_NICKNAMES, i.id, n));
         }),
-        [f, I] = t.useState(!1),
-        [M, Z] = t.useState(null != (e = null == j ? void 0 : j.nick) ? e : ''),
-        [z, P] = t.useState({});
+        [f, I] = r.useState(!1),
+        [M, Z] = r.useState(null != (n = null == j ? void 0 : j.nick) ? n : ''),
+        [z, P] = r.useState({});
     (0, d.ZP)(() => {
         h.default.track(v.rMx.OPEN_MODAL, {
             type: 'Change Server Identity',
@@ -91,70 +91,70 @@ let b = function (l) {
             source: _
         });
     });
-    let W = (0, c.sE)(i, {
+    let G = (0, c.sE)(a, {
             location: null == b ? void 0 : b[0],
-            targetUserId: a.id
+            targetUserId: i.id
         }),
-        G = t.useCallback(
+        L = r.useCallback(
             async (l) => {
-                var e, n, r, t, s, o, d, x, k;
+                var n, e, t, r, s, o, d, k, N;
                 l.preventDefault();
                 let m = null;
-                if ((M !== (null != (e = null == j ? void 0 : j.nick) ? e : '') && ((m = null != m ? m : {}).nick = M), null == m)) return void N();
+                if ((M !== (null != (n = null == j ? void 0 : j.nick) ? n : '') && ((m = null != m ? m : {}).nick = M), null == m)) return void x();
                 try {
                     I(!0),
                         await u.tn.patch({
-                            url: v.ANM.GUILD_MEMBER(i, a.id),
+                            url: v.ANM.GUILD_MEMBER(a, i.id),
                             body: m,
                             rejectWithError: !1
                         }),
-                        W(c.jQ.CHANGE_NICKNAME),
-                        N();
-                } catch (a) {
+                        G(c.jQ.CHANGE_NICKNAME),
+                        x();
+                } catch (i) {
                     let l;
                     I(!1);
-                    let e = null != (r = null == (n = a.body) ? void 0 : n.errors) ? r : null;
-                    (null == e ? void 0 : e.nick) != null ? (l = (null == (o = e.nick) || null == (s = o._errors) || null == (t = s[0]) ? void 0 : t.message) || C.NW.string(C.t.xex86u)) : (null == e ? void 0 : e.username) != null && (l = (null == (k = e.username) || null == (x = k._errors) || null == (d = x[0]) ? void 0 : d.message) || C.NW.string(C.t.xex86u)), P({ nick: l });
+                    let n = null != (t = null == (e = i.body) ? void 0 : e.errors) ? t : null;
+                    (null == n ? void 0 : n.nick) != null ? (l = (null == (o = n.nick) || null == (s = o._errors) || null == (r = s[0]) ? void 0 : r.message) || C.intl.string(C.t.xex86u)) : (null == n ? void 0 : n.username) != null && (l = (null == (N = n.username) || null == (k = N._errors) || null == (d = k[0]) ? void 0 : d.message) || C.intl.string(C.t.xex86u)), P({ nick: l });
                 }
             },
-            [i, M, N, a, j, W]
+            [a, M, x, i, j, G]
         );
-    return (0, r.jsx)(o.Y0X, {
-        'aria-label': C.NW.string(C.t['PKQB/P']),
-        transitionState: n,
-        children: (0, r.jsxs)('form', {
-            onSubmit: G,
+    return (0, t.jsx)(o.Y0X, {
+        'aria-label': C.intl.string(C.t['PKQB/P']),
+        transitionState: e,
+        children: (0, t.jsxs)('form', {
+            onSubmit: L,
             children: [
-                (0, r.jsx)(o.xBx, {
+                (0, t.jsx)(o.xBx, {
                     separator: !1,
-                    children: (0, r.jsx)(o.X6q, {
+                    children: (0, t.jsx)(o.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: C.NW.string(C.t.dilOFx)
+                        children: C.intl.string(C.t.dilOFx)
                     })
                 }),
-                (0, r.jsx)(o.hzk, {
+                (0, t.jsx)(o.hzk, {
                     className: E.modalContent,
-                    children: (0, r.jsx)(p, {
+                    children: (0, t.jsx)(p, {
                         disabled: !A,
-                        user: a,
+                        user: i,
                         error: z.nick,
                         nickname: M,
                         setNickname: Z,
                         hasNick: (null == j ? void 0 : j.nick) != null
                     })
                 }),
-                (0, r.jsxs)(o.mzw, {
+                (0, t.jsxs)(o.mzw, {
                     children: [
-                        (0, r.jsx)(o.zxk, {
+                        (0, t.jsx)(o.zxk, {
                             type: 'submit',
                             disabled: f,
-                            children: C.NW.string(C.t.R3BPHx)
+                            children: C.intl.string(C.t.R3BPHx)
                         }),
-                        (0, r.jsx)(o.zxk, {
-                            onClick: N,
+                        (0, t.jsx)(o.zxk, {
+                            onClick: x,
                             look: o.zxk.Looks.LINK,
                             color: o.zxk.Colors.PRIMARY,
-                            children: C.NW.string(C.t['ETE/oK'])
+                            children: C.intl.string(C.t['ETE/oK'])
                         })
                     ]
                 })

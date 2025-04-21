@@ -35,10 +35,10 @@ function v(e) {
                 query: r,
                 onClear: u,
                 onQueryChange: c.yN,
-                placeholder: h.NW.string(h.t['5h0QOD']),
+                placeholder: h.intl.string(h.t['5h0QOD']),
                 className: t,
                 inputProps: {
-                    'aria-label': h.NW.string(h.t.pk9BWV),
+                    'aria-label': h.intl.string(h.t.pk9BWV),
                     'aria-expanded': !0,
                     onFocus: (e) => v(!0, e),
                     onBlur: (e) => v(!1, e)

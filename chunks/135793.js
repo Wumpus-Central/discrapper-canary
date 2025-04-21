@@ -28,8 +28,8 @@ var r = n(200651),
     I = n(235894),
     S = n(883998),
     T = n(576645),
-    N = n(981631),
-    A = n(921944),
+    A = n(981631),
+    N = n(921944),
     C = n(388032),
     R = n(956589),
     P = n(99713);
@@ -92,7 +92,7 @@ let M = 190,
         let { channelId: t, message: i, onRedeem: a, onClose: o, buttonUseState: c = 'activate', source: u } = e,
             d = h.Z.getChannel(t);
         null != d &&
-            ((0, f.EW)(s.z.CONFETTI_POTION_UPSELL, { dismissAction: A.L.INDIRECT_ACTION }),
+            ((0, f.EW)(s.z.CONFETTI_POTION_UPSELL, { dismissAction: N.L.INDIRECT_ACTION }),
             (0, l.ZDy)(
                 async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 135793));
@@ -139,15 +139,15 @@ function B(e) {
         _ = (0, b.Qj)(t.id, c),
         { price: h, fetchingPrice: m, error: g } = (0, T.R2)(v.D1),
         { entitlement: y, fetchedEntitlement: O, error: S } = (0, T.t6)(v.D1),
-        A = g || S,
+        N = g || S,
         { analyticsLocations: C } = (0, d.ZP)([u.Z.CONFETTI_POTION_MODAL]),
         R = null != y && !y.consumed,
         P = m || !O;
     (0, i.useEffect)(
         () => () => {
-            A && (0, E.SN)(v.D1);
+            N && (0, E.SN)(v.D1);
         },
-        [A, c]
+        [N, c]
     );
     let w = (0, i.useCallback)(() => {
             null != _ && ((0, l.pTH)(), a(_));
@@ -166,7 +166,7 @@ function B(e) {
         x = (0, i.useMemo)(() => {
             if (null != y) {
                 if ('apply' === s) return 3;
-                if (y.type === N.qc2.DEVELOPER_GIFT) return 1;
+                if (y.type === A.qc2.DEVELOPER_GIFT) return 1;
                 if (R) return 2;
             }
             return 0;
@@ -242,19 +242,19 @@ let F = (e) => {
                             children: [
                                 (0, r.jsx)(l.X6q, {
                                     variant: 'heading-lg/bold',
-                                    children: C.NW.string(C.t['5/knv7'])
+                                    children: C.intl.string(C.t['5/knv7'])
                                 }),
                                 (0, r.jsx)(_.Z, {})
                             ]
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: C.NW.string(C.t.NFTQoa)
+                            children: C.intl.string(C.t.NFTQoa)
                         }),
                         (0, r.jsx)(l.Text, {
                             color: 'text-link',
                             variant: 'text-sm/normal',
-                            children: C.NW.format(C.t['jerM9/'], { helpCenterLink: m.Z.getArticleURL(N.BhN.CONFETTI_POTION) })
+                            children: C.intl.format(C.t['jerM9/'], { helpCenterLink: m.Z.getArticleURL(A.BhN.CONFETTI_POTION) })
                         })
                     ]
                 }),
@@ -264,7 +264,7 @@ let F = (e) => {
                     children: [
                         (0, r.jsx)(l.Text, {
                             variant: 'eyebrow',
-                            children: C.NW.string(C.t.o8XwoK)
+                            children: C.intl.string(C.t.o8XwoK)
                         }),
                         (0, r.jsx)(Z, {
                             channel: t,
@@ -288,7 +288,7 @@ let F = (e) => {
                     null == n
                         ? {
                               emojiName: null,
-                              selectionText: C.NW.string(C.t.KgK5qq)
+                              selectionText: C.intl.string(C.t.KgK5qq)
                           }
                         : {
                               emojiName: null == n.id ? n.optionallyDiverseSequence : n.name,
@@ -367,13 +367,13 @@ let F = (e) => {
                         (0, l.Mr3)(j);
                     },
                     color: l.zxk.Colors.PRIMARY,
-                    children: C.NW.string(C.t.w2Qbd3)
+                    children: C.intl.string(C.t.w2Qbd3)
                 }),
                 (0, r.jsxs)('div', {
                     className: R.footerRight,
                     children: [
-                        (0, r.jsx)(W, {}),
-                        (0, r.jsx)(Y, {
+                        (0, r.jsx)(Y, {}),
+                        (0, r.jsx)(W, {
                             buttonPurchaseState: t,
                             buttonDisabledState: n,
                             price: i,
@@ -384,10 +384,10 @@ let F = (e) => {
             ]
         });
     },
-    W = () => {
+    Y = () => {
         let { entitlement: e, numPotions: t } = (0, T.t6)(v.D1);
         if (null == t || 0 === t) return null;
-        let n = (null == e ? void 0 : e.type) === N.qc2.DEVELOPER_GIFT ? C.t['b+P6ra'] : C.t.RiQ4cn;
+        let n = (null == e ? void 0 : e.type) === A.qc2.DEVELOPER_GIFT ? C.t['b+P6ra'] : C.t.RiQ4cn;
         return (0, r.jsxs)('div', {
             className: R.remaining,
             children: [
@@ -398,12 +398,12 @@ let F = (e) => {
                 (0, r.jsx)(l.Text, {
                     color: 'none',
                     variant: 'text-sm/semibold',
-                    children: C.NW.formatToPlainString(n, { numPotions: t })
+                    children: C.intl.formatToPlainString(n, { numPotions: t })
                 })
             ]
         });
     },
-    Y = (e) => {
+    W = (e) => {
         let { buttonPurchaseState: t, buttonDisabledState: n, price: a, onActionClick: o } = e,
             {
                 isDisabled: s,
@@ -411,18 +411,18 @@ let F = (e) => {
                 tooltipCopy: u
             } = (0, i.useMemo)(() => {
                 let e = {
-                        0: C.NW.formatToPlainString(C.t.POGRmp, {
+                        0: C.intl.formatToPlainString(C.t.POGRmp, {
                             amount: v.pe,
                             price: (0, g.T4)(a.amount, a.currency)
                         }),
-                        1: C.NW.string(C.t.RrKeDw),
-                        2: C.NW.string(C.t.WOXaWF),
-                        3: C.NW.string(C.t['1Qm829'])
+                        1: C.intl.string(C.t.RrKeDw),
+                        2: C.intl.string(C.t.WOXaWF),
+                        3: C.intl.string(C.t['1Qm829'])
                     },
                     r = {
-                        1: C.NW.string(C.t['Cb8/7+']),
-                        2: C.NW.string(C.t.fMkB9P),
-                        3: C.NW.string(C.t['59ElNj'])
+                        1: C.intl.string(C.t['Cb8/7+']),
+                        2: C.intl.string(C.t.fMkB9P),
+                        3: C.intl.string(C.t['59ElNj'])
                     },
                     i = 0 !== n;
                 return {
@@ -462,7 +462,7 @@ let F = (e) => {
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-md/normal',
-                        children: C.NW.string(C.t.oKJdSk)
+                        children: C.intl.string(C.t.oKJdSk)
                     })
                 ]
             })

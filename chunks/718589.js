@@ -6,7 +6,7 @@ function l(e) {
     if (t.type === r.d4z.GUILD_VOICE) {
         if (null != n && n.length > 0) {
             let e = n.map((e) => e.application.name);
-            return i.NW.formatToPlainString(i.t.LmYuHR, { activeActivities: e.join(', ') });
+            return i.intl.formatToPlainString(i.t.LmYuHR, { activeActivities: e.join(', ') });
         }
     }
 }

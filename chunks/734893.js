@@ -10,8 +10,8 @@ n.d(t, {
     av: () => S,
     cq: () => E,
     j: () => C,
-    k3: () => N,
-    kb: () => A,
+    k3: () => A,
+    kb: () => N,
     n: () => _,
     oi: () => g,
     pw: () => I,
@@ -151,10 +151,10 @@ function T(e) {
     var t, n;
     return null != e && (!!S(e) || ((null == (t = e.welcomeMessage) ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < s) && (null == (n = e.welcomeMessage) ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < d)));
 }
-function N(e) {
+function A(e) {
     return e.type === o.d4z.GUILD_TEXT && !a.Uu(o.Plq.SEND_MESSAGES, e) && a.Uu(o.Plq.VIEW_CHANNEL, e);
 }
-function A(e) {
+function N(e) {
     switch (e.type) {
         case o.d4z.GUILD_TEXT:
         case o.d4z.GUILD_ANNOUNCEMENT:

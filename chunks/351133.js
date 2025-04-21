@@ -106,7 +106,7 @@ function h(e, t, n, r, i) {
         if (null != t.maxValue && null != t.minValue)
             return {
                 success: !1,
-                error: f.NW.formatToPlainString(n, {
+                error: f.intl.formatToPlainString(n, {
                     minimum: g(t.minValue),
                     maximum: g(t.maxValue)
                 })
@@ -114,12 +114,12 @@ function h(e, t, n, r, i) {
         else if (null != t.minValue)
             return {
                 success: !1,
-                error: f.NW.formatToPlainString(r, { minimum: g(t.minValue) })
+                error: f.intl.formatToPlainString(r, { minimum: g(t.minValue) })
             };
         else if (null != t.maxValue)
             return {
                 success: !1,
-                error: f.NW.formatToPlainString(i, { maximum: g(t.maxValue) })
+                error: f.intl.formatToPlainString(i, { maximum: g(t.maxValue) })
             };
     }
     return { success: !0 };
@@ -129,12 +129,12 @@ function m(e, t, n) {
         if (void 0 !== t.maxLength && void 0 !== t.minLength && t.minLength === t.maxLength)
             return {
                 success: !1,
-                error: f.NW.formatToPlainString(n.exactRangeErrorMessage, { value: g(t.minLength) })
+                error: f.intl.formatToPlainString(n.exactRangeErrorMessage, { value: g(t.minLength) })
             };
         else if (void 0 !== t.maxLength && void 0 !== t.minLength)
             return {
                 success: !1,
-                error: f.NW.formatToPlainString(n.rangeErrorMessage, {
+                error: f.intl.formatToPlainString(n.rangeErrorMessage, {
                     minimum: g(t.minLength),
                     maximum: g(t.maxLength)
                 })
@@ -142,17 +142,17 @@ function m(e, t, n) {
         else if (void 0 !== t.minLength)
             return {
                 success: !1,
-                error: f.NW.formatToPlainString(n.minErrorMessage, { minimum: g(t.minLength) })
+                error: f.intl.formatToPlainString(n.minErrorMessage, { minimum: g(t.minLength) })
             };
         else if (void 0 !== t.maxLength)
             return {
                 success: !1,
-                error: f.NW.formatToPlainString(n.maxErrorMessage, { maximum: g(t.maxLength) })
+                error: f.intl.formatToPlainString(n.maxErrorMessage, { maximum: g(t.maxLength) })
             };
     }
     return { success: !0 };
 }
 function g(e) {
-    return e.toLocaleString(f.NW.currentLocale, { useGrouping: !1 });
+    return e.toLocaleString(f.intl.currentLocale, { useGrouping: !1 });
 }
 let E = _;

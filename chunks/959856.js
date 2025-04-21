@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(457542), n(415506), n(388685), n(600040);
+n.d(t, { Z: () => N }), n(457542), n(415506), n(388685), n(600040);
 var r = n(512722),
     i = n.n(r),
     a = n(264344),
@@ -34,8 +34,8 @@ function T(e, t, n) {
         e
     );
 }
-let N = new s.Yd('MediaEngineWebRTC');
-class A extends l.Z {
+let A = new s.Yd('MediaEngineWebRTC');
+class N extends l.Z {
     destroy() {
         null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), (this.voiceActivityInput = null)), this.eachConnection((e) => e.destroy()), this.emit(f.aB.Destroy), this.removeAllListeners();
     }
@@ -43,7 +43,7 @@ class A extends l.Z {
         this.interacted || (document.createElement('audio').play(), (this.interacted = !0)), this.eachConnection((e) => e.interact());
     }
     static supported() {
-        return !__OVERLAY__ && (S.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(266370), !0) : (N.info('WebRTC is not supported on', o().name, o().version), !1));
+        return !__OVERLAY__ && (S.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(266370), !0) : (A.info('WebRTC is not supported on', o().name, o().version), !1));
     }
     supported() {
         return !0;

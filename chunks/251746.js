@@ -1,33 +1,33 @@
-n.d(e, { Z: () => f });
-var i = n(200651),
-    r = n(192379),
-    a = n(392711),
-    l = n.n(a),
-    s = n(442837),
-    o = n(481060),
-    d = n(66999),
-    c = n(665906),
-    u = n(979651),
-    h = n(557135),
-    g = n(388032);
+e.d(n, { Z: () => f });
+var i = e(200651),
+    r = e(192379),
+    l = e(392711),
+    a = e.n(l),
+    s = e(442837),
+    o = e(481060),
+    d = e(66999),
+    c = e(665906),
+    u = e(979651),
+    h = e(557135),
+    g = e(388032);
 function f(t) {
-    let e = (0, c.Y)(t),
-        n = (0, s.e7)([u.Z], () => u.Z.isInChannel(t.id)),
-        a = (0, s.e7)([u.Z], () => !l().isEmpty(u.Z.getVoiceStatesForChannel(t.id))),
+    let n = (0, c.Y)(t),
+        e = (0, s.e7)([u.Z], () => u.Z.isInChannel(t.id)),
+        l = (0, s.e7)([u.Z], () => !a().isEmpty(u.Z.getVoiceStatesForChannel(t.id))),
         { needSubscriptionToAccess: f } = (0, d.Z)(t.id),
         b = r.useCallback(() => {
             h.Z.handleVoiceConnect({
                 channel: t,
-                connected: n,
+                connected: e,
                 needSubscriptionToAccess: f,
                 locked: !1
             });
-        }, [t, n, f]);
-    return n || !e
+        }, [t, e, f]);
+    return e || !n
         ? null
         : (0, i.jsx)(o.sNh, {
               id: 'join-thread-voice',
-              label: a ? g.NW.string(g.t['0D/6R0']) : g.NW.string(g.t.My50nZ),
+              label: l ? g.intl.string(g.t['0D/6R0']) : g.intl.string(g.t.My50nZ),
               action: b
           });
 }

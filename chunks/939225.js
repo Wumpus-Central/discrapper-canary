@@ -16,8 +16,8 @@ function u(e) {
                 children: [
                     (0, r.jsx)(i.LZC, { size: 16 }),
                     (0, r.jsx)(a.Z, {
-                        message: c.NW.string(c.t.eSuJEx),
-                        ctaMessage: c.NW.string(c.t.RXsxqa),
+                        message: c.intl.string(c.t.eSuJEx),
+                        ctaMessage: c.intl.string(c.t.RXsxqa),
                         onClick: () => {
                             l.Z.open(o.oAB.SUBSCRIPTIONS, s.cP);
                         }

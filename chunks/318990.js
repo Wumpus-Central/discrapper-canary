@@ -45,7 +45,7 @@ function _() {
             animateOnHover: !0
         }),
         _ = (e) => (null != e.globalName ? e.globalName : e.username),
-        p = i.useMemo(() => (e.length >= 2 ? c.NW.formatToPlainString(c.t.c7ETJC, { username: _(e[0]) }) : 1 === e.length ? c.NW.formatToPlainString(c.t.dpjXPD, { username: _(e[0]) }) : ''), [e]);
+        p = i.useMemo(() => (e.length >= 2 ? c.intl.formatToPlainString(c.t.c7ETJC, { username: _(e[0]) }) : 1 === e.length ? c.intl.formatToPlainString(c.t.dpjXPD, { username: _(e[0]) }) : ''), [e]);
     return 0 === e.length
         ? null
         : (0, r.jsxs)('div', {

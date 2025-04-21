@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(873546),
-    l = n(399606),
+    l = n(873546),
+    a = n(399606),
     o = n(434650),
     s = n(230171),
     c = n(955415),
@@ -16,20 +16,20 @@ var r = n(200651),
     _ = n(280306);
 function b(e) {
     let { code: t, message: n, embedUrl: b } = e,
-        [x, y, v] = (0, l.Wu)([f.Z], () => [f.Z.getApplication(t), f.Z.isInvalidApplication(t), f.Z.getApplicationFetchState(t)], [t]),
-        E = (0, l.e7)([d.Z], () => {
+        [x, y, v] = (0, a.Wu)([f.Z], () => [f.Z.getApplication(t), f.Z.isInvalidApplication(t), f.Z.getApplicationFetchState(t)], [t]),
+        E = (0, a.e7)([d.Z], () => {
             var e;
             return null != (e = d.Z.getGuildId()) ? e : void 0;
         }),
-        [O, N] = i.useState(!1),
-        j = i.useCallback((e) => {
-            e && N(!0);
+        [O, j] = i.useState(!1),
+        C = i.useCallback((e) => {
+            e && j(!0);
         }, []),
-        C = (0, o.O)(j),
-        S = i.useCallback(() => {
+        S = (0, o.O)(C),
+        I = i.useCallback(() => {
             p.default.track(h.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                 application_id: t,
-                device_platform: a.tq ? 'mobile_web' : 'desktop_web',
+                device_platform: l.tq ? 'mobile_web' : 'desktop_web',
                 sender_user_id: n.author.id,
                 guild_id: E,
                 channel_id: n.channel_id
@@ -39,13 +39,13 @@ function b(e) {
         (0, m.gZ)(t);
     }, [t]),
     i.useEffect(() => {
-        O && v === f.M.FETCHED && S();
-    }, [O, v, S]),
+        O && v === f.M.FETCHED && I();
+    }, [O, v, I]),
     i.useEffect(() => {
         O &&
             y &&
             p.default.track(h.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
-                device_platform: a.tq ? 'mobile_web' : 'desktop_web',
+                device_platform: l.tq ? 'mobile_web' : 'desktop_web',
                 sender_user_id: n.author.id,
                 guild_id: E,
                 channel_id: n.channel_id
@@ -53,9 +53,9 @@ function b(e) {
     }, [O, E, y, n.author.id, n.channel_id]),
     y)
         ? (0, r.jsxs)(c.Z, {
-              containerRef: C,
+              containerRef: S,
               children: [
-                  (0, r.jsx)(c.Z.Header, { text: g.NW.string(g.t.j4KtLS) }),
+                  (0, r.jsx)(c.Z.Header, { text: g.intl.string(g.t.j4KtLS) }),
                   (0, r.jsx)(c.Z.Body, {
                       children: (0, r.jsxs)('div', {
                           className: _.invalidBody,
@@ -63,8 +63,8 @@ function b(e) {
                               (0, r.jsx)(c.Z.Icon, { expired: !0 }),
                               (0, r.jsx)(c.Z.Info, {
                                   expired: !0,
-                                  title: g.NW.string(g.t.NaQLEx),
-                                  children: g.NW.string(g.t['0H5OT0'])
+                                  title: g.intl.string(g.t.NaQLEx),
+                                  children: g.intl.string(g.t['0H5OT0'])
                               })
                           ]
                       })
@@ -73,13 +73,13 @@ function b(e) {
           })
         : null == x || v === f.M.FETCHING
           ? (0, r.jsxs)(c.Z, {
-                containerRef: C,
-                children: [(0, r.jsx)(c.Z.Header, { text: g.NW.string(g.t.m9hXGR) }), (0, r.jsx)(c.Z.Body, { resolving: !0 })]
+                containerRef: S,
+                children: [(0, r.jsx)(c.Z.Header, { text: g.intl.string(g.t.m9hXGR) }), (0, r.jsx)(c.Z.Body, { resolving: !0 })]
             })
           : (0, r.jsx)(s.O, {
                 app: u.ZP.createFromServer(x),
                 embedUrl: b,
                 linkType: s.U.APP_DISCOVERY,
-                onView: S
+                onView: I
             });
 }

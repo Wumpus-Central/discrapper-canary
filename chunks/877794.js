@@ -1,36 +1,36 @@
-n.d(e, { Z: () => g }), n(388685);
-var l = n(200651),
-    r = n(192379),
+n.d(e, { Z: () => E }), n(388685);
+var r = n(200651),
+    l = n(192379),
     c = n(374470),
     i = n(442837),
     s = n(481060),
-    a = n(295866),
-    o = n(398327),
+    o = n(295866),
+    a = n(398327),
     u = n(63063),
     d = n(601993),
-    b = n(981631),
-    p = n(388032);
+    p = n(981631),
+    b = n(388032);
 function f(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
-            l = Object.keys(n);
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (t) {
                     return Object.getOwnPropertyDescriptor(n, t).enumerable;
                 })
             )),
-            l.forEach(function (e) {
-                var l;
-                (l = n[e]),
+            r.forEach(function (e) {
+                var r;
+                (r = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
-                              value: l,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = l);
+                        : (t[e] = r);
             });
     }
     return t;
@@ -43,8 +43,8 @@ function h(t, e) {
             : (function (t, e) {
                   var n = Object.keys(t);
                   if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(t);
-                      n.push.apply(n, l);
+                      var r = Object.getOwnPropertySymbols(t);
+                      n.push.apply(n, r);
                   }
                   return n;
               })(Object(e)).forEach(function (n) {
@@ -53,46 +53,46 @@ function h(t, e) {
         t
     );
 }
-function g(t) {
+function E(t) {
     let { text: e = '', target: n } = t,
-        g = (0, i.e7)([o.Z], () => o.Z.isEnabled()),
-        N = (0, i.e7)([o.Z], () => o.Z.hasLearnedWord(e), [e]),
-        E = r.useRef(h(f({}, t), { spellcheckEnabled: g }));
-    E.current = h(f({}, t), { spellcheckEnabled: g });
-    let O = r.useRef(!1),
-        [y, j] = r.useState(!1),
-        [S, k] = r.useState([]),
-        m = r.useCallback(() => {
-            let { spellcheckEnabled: t, text: e, onHeightUpdate: n } = E.current;
+        E = (0, i.e7)([a.Z], () => a.Z.isEnabled()),
+        O = (0, i.e7)([a.Z], () => a.Z.hasLearnedWord(e), [e]),
+        j = l.useRef(h(f({}, t), { spellcheckEnabled: E }));
+    j.current = h(f({}, t), { spellcheckEnabled: E });
+    let y = l.useRef(!1),
+        [k, g] = l.useState(!1),
+        [m, S] = l.useState([]),
+        x = l.useCallback(() => {
+            let { spellcheckEnabled: t, text: e, onHeightUpdate: n } = j.current;
             t &&
                 (0, d.Gb)() &&
                 Promise.all([(0, d.f5)(e, !0), (0, d.WA)(e, !0)]).then((t) => {
-                    let [e, l] = t;
-                    O.current && (j(e), k(l), n());
+                    let [e, r] = t;
+                    y.current && (g(e), S(r), n());
                 });
         }, []),
-        x = r.useCallback(() => {
+        P = l.useCallback(() => {
             if ((0, c.k)(n, HTMLInputElement) || (0, c.k)(n, HTMLTextAreaElement)) {
-                let { selectionStart: t, selectionEnd: e, value: l } = n;
-                (n.value = ''), (n.value = l), 'email' !== n.type && ((n.selectionStart = t), (n.selectionEnd = e));
+                let { selectionStart: t, selectionEnd: e, value: r } = n;
+                (n.value = ''), (n.value = r), 'email' !== n.type && ((n.selectionStart = t), (n.selectionEnd = e));
             }
         }, [n]);
-    return (r.useEffect(() => {
-        let t = (0, d.RD)(m);
+    return (l.useEffect(() => {
+        let t = (0, d.RD)(x);
         return (
-            (O.current = !0),
+            (y.current = !0),
             () => {
-                (O.current = !1), t();
+                (y.current = !1), t();
             }
         );
-    }, [m]),
-    r.useEffect(() => {
-        m();
-    }, [e, g, m]),
+    }, [x]),
+    l.useEffect(() => {
+        x();
+    }, [e, E, x]),
     (0, d.Gb)())
         ? [
-              S.map((t, e) =>
-                  (0, l.jsx)(
+              m.map((t, e) =>
+                  (0, r.jsx)(
                       s.sNh,
                       {
                           id: 'correction-'.concat(e),
@@ -104,38 +104,38 @@ function g(t) {
                       'correction-'.concat(e)
                   )
               ),
-              (0, l.jsxs)(l.Fragment, {
+              (0, r.jsxs)(r.Fragment, {
                   children: [
-                      y
-                          ? (0, l.jsx)(s.sNh, {
+                      k
+                          ? (0, r.jsx)(s.sNh, {
                                 id: 'add-to-dictionary',
-                                label: p.NW.string(p.t.HJmG1N),
+                                label: b.intl.string(b.t.HJmG1N),
                                 action: () => {
-                                    (0, a.D0)(e), x();
+                                    (0, o.D0)(e), P();
                                 }
                             })
                           : null,
-                      N &&
-                          (0, l.jsx)(s.sNh, {
+                      O &&
+                          (0, r.jsx)(s.sNh, {
                               id: 'remove-from-dictionary',
-                              label: p.NW.string(p.t.xXqIX1),
+                              label: b.intl.string(b.t.xXqIX1),
                               action: () => {
-                                  (0, a.lE)(e), x();
+                                  (0, o.lE)(e), P();
                               }
                           }),
-                      (0, l.jsx)(s.S89, {
+                      (0, r.jsx)(s.S89, {
                           id: 'spellcheck',
-                          label: p.NW.string(p.t.TKkotb),
-                          checked: g,
+                          label: b.intl.string(b.t.TKkotb),
+                          checked: E,
                           action: () => {
-                              (0, a.kY)(), x();
+                              (0, o.kY)(), P();
                           }
                       }),
-                      g
-                          ? (0, l.jsx)(s.sNh, {
+                      E
+                          ? (0, r.jsx)(s.sNh, {
                                 id: 'languages',
-                                label: p.NW.string(p.t.OlOHDA),
-                                action: () => window.open(u.Z.getArticleURL(b.BhN.SPELLCHECK))
+                                label: b.intl.string(b.t.OlOHDA),
+                                action: () => window.open(u.Z.getArticleURL(p.BhN.SPELLCHECK))
                             })
                           : null
                   ]

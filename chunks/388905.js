@@ -6,12 +6,12 @@ n.d(t, {
     Hh: () => D,
     II: () => R,
     MC: () => C,
-    Vj: () => A,
+    Vj: () => N,
     ZP: () => k,
     gO: () => P,
     i_: () => w,
     jQ: () => x,
-    qE: () => N,
+    qE: () => A,
     v6: () => M,
     zx: () => T
 }),
@@ -131,7 +131,7 @@ let O = (e) => {
         );
     };
 (T.Looks = o.zxk.Looks), (T.Colors = o.zxk.Colors), (T.Sizes = o.zxk.Sizes);
-let N = (e) => {
+let A = (e) => {
         let { className: t, src: n, size: i } = e;
         return (0, r.jsx)(v, {
             src: n,
@@ -140,7 +140,7 @@ let N = (e) => {
             'aria-hidden': !0
         });
     },
-    A = (e) => {
+    N = (e) => {
         let { guild: t, size: n, animate: i = !1, className: a } = e;
         return (0, r.jsx)(d.Z, {
             active: !0,
@@ -150,7 +150,7 @@ let N = (e) => {
             className: a
         });
     };
-A.Sizes = d.Z.Sizes;
+N.Sizes = d.Z.Sizes;
 let C = (e) => {
     let { className: t, channel: n, size: i } = e;
     return (0, r.jsx)(v, {
@@ -239,7 +239,7 @@ let R = (e) => {
                               className: u,
                               variant: 'text-sm/normal',
                               color: 'header-secondary',
-                              children: h.NW.format(h.t['LC+S+v'], { membersOnline: n })
+                              children: h.intl.format(h.t['LC+S+v'], { membersOnline: n })
                           })
                       ]
                   })),
@@ -257,7 +257,7 @@ let R = (e) => {
                                   className: u,
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
-                                  children: h.NW.format(h.t.zRl6XV, { count: i })
+                                  children: h.intl.format(h.t.zRl6XV, { count: i })
                               })
                           ]
                       })
@@ -275,9 +275,9 @@ let R = (e) => {
                           tag: 'span',
                           variant: 'text-md/normal',
                           color: 'header-secondary',
-                          children: h.NW.string(h.t['/8WWvL'])
+                          children: h.intl.string(h.t['/8WWvL'])
                       }),
-                      (0, r.jsx)(N, {
+                      (0, r.jsx)(A, {
                           className: m.joiningAsAvatar,
                           src: t.getAvatarURL(void 0, 24),
                           size: o.EFr.SIZE_24,
@@ -300,11 +300,11 @@ let R = (e) => {
             children: [
                 (0, r.jsx)(T, {
                     onClick: () => window.open((0, f.t3)()),
-                    children: h.NW.format(h.t.JoS1i4, { platform: (0, f.DW)() })
+                    children: h.intl.format(h.t.JoS1i4, { platform: (0, f.DW)() })
                 }),
                 (0, r.jsx)(w, {
                     className: m.downloadButtonSubtext,
-                    children: h.NW.format(h.t.wO1VBg, { supportedBrowserURL: _.Z.getArticleURL(p.BhN.SUPPORTED_BROWSERS) })
+                    children: h.intl.format(h.t.wO1VBg, { supportedBrowserURL: _.Z.getArticleURL(p.BhN.SUPPORTED_BROWSERS) })
                 })
             ]
         });

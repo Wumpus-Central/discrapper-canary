@@ -14,10 +14,10 @@ let s = {
             })
             .then(
                 (e) => {
-                    (s = e.body.nick), i.Z.sendBotMessage(t, null != s && '' !== s ? o.NW.formatToMarkdownString(o.t['gz+HRk'], { nick: s }) : o.NW.string(o.t.Vhpd9P));
+                    (s = e.body.nick), i.Z.sendBotMessage(t, null != s && '' !== s ? o.intl.formatToMarkdownString(o.t['gz+HRk'], { nick: s }) : o.intl.string(o.t.Vhpd9P));
                 },
                 (e) => {
-                    403 === e.status ? i.Z.sendBotMessage(t, o.NW.formatToMarkdownString(o.t.Izf9jI, {})) : i.Z.sendBotMessage(t, o.NW.string(o.t['5LO/Sk']));
+                    403 === e.status ? i.Z.sendBotMessage(t, o.intl.formatToMarkdownString(o.t.Izf9jI, {})) : i.Z.sendBotMessage(t, o.intl.string(o.t['5LO/Sk']));
                 }
             )
 };

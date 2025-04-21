@@ -1,40 +1,40 @@
 n.d(t, { Z: () => m }), n(388685);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(481060),
-    a = n(484614),
-    l = n(313201),
+    l = n(484614),
+    a = n(313201),
     o = n(518638),
     c = n(388032),
     d = n(302291);
 function u(e) {
     let { onClose: t } = e;
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsxs)(s.xBx, {
+            (0, i.jsxs)(s.xBx, {
                 separator: !1,
                 className: d.errorHeader,
                 children: [
-                    (0, r.jsx)('div', { className: d.errorArt }),
-                    (0, r.jsx)(s.X6q, {
+                    (0, i.jsx)('div', { className: d.errorArt }),
+                    (0, i.jsx)(s.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: c.NW.string(c.t.iufib2)
+                        children: c.intl.string(c.t.iufib2)
                     })
                 ]
             }),
-            (0, r.jsx)(s.hzk, {
+            (0, i.jsx)(s.hzk, {
                 className: d.errorBody,
-                children: (0, r.jsx)(s.Text, {
+                children: (0, i.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     className: d.bodyText,
-                    children: c.NW.string(c.t.eAn6z8)
+                    children: c.intl.string(c.t.eAn6z8)
                 })
             }),
-            (0, r.jsx)(s.mzw, {
-                children: (0, r.jsx)(s.zxk, {
+            (0, i.jsx)(s.mzw, {
+                children: (0, i.jsx)(s.zxk, {
                     color: s.zxk.Colors.BRAND,
                     onClick: t,
-                    children: c.NW.string(c.t.cpT0Cg)
+                    children: c.intl.string(c.t.cpT0Cg)
                 })
             })
         ]
@@ -42,10 +42,10 @@ function u(e) {
 }
 let m = function (e) {
     let { onClose: t, onClaim: n, code: m, outboundPromotion: g, transitionState: p } = e,
-        [h, f] = i.useState(null),
-        b = (0, l.Dt)();
+        [h, f] = r.useState(null),
+        b = (0, a.Dt)();
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             null == m &&
                 (0, o.A2)(g.id)
                     .then((e) => n(e))
@@ -54,70 +54,70 @@ let m = function (e) {
                         return f(null == e || null == (t = e.body) ? void 0 : t.code);
                     });
         }, [m, g.id, n]),
-        (0, r.jsx)(s.Y0X, {
+        (0, i.jsx)(s.Y0X, {
             transitionState: p,
             'aria-labelledby': b,
             children:
                 null != h
-                    ? (0, r.jsx)(u, { onClose: t })
+                    ? (0, i.jsx)(u, { onClose: t })
                     : null == m
-                      ? (0, r.jsx)(s.hzk, { children: (0, r.jsx)(s.$jN, { className: d.loading }) })
-                      : (0, r.jsxs)(r.Fragment, {
+                      ? (0, i.jsx)(s.hzk, { children: (0, i.jsx)(s.$jN, { className: d.loading }) })
+                      : (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, r.jsxs)(s.xBx, {
+                                (0, i.jsxs)(s.xBx, {
                                     separator: !1,
                                     className: d.headerContainer,
                                     children: [
-                                        (0, r.jsx)('div', { className: d.art }),
-                                        (0, r.jsx)(s.X6q, {
+                                        (0, i.jsx)('div', { className: d.art }),
+                                        (0, i.jsx)(s.X6q, {
                                             variant: 'heading-xl/semibold',
-                                            children: c.NW.string(c.t['23BfZm'])
+                                            children: c.intl.string(c.t['23BfZm'])
                                         })
                                     ]
                                 }),
-                                (0, r.jsxs)(s.hzk, {
+                                (0, i.jsxs)(s.hzk, {
                                     children: [
-                                        (0, r.jsx)(s.Text, {
+                                        (0, i.jsx)(s.Text, {
                                             variant: 'text-md/normal',
                                             className: d.bodyText,
                                             children: g.outboundRedemptionModalBody
                                         }),
-                                        (0, r.jsx)(s.$i$, { className: d.formDivider }),
-                                        (0, r.jsxs)(s.hjN, {
-                                            title: c.NW.string(c.t.s9LFQk),
+                                        (0, i.jsx)(s.$i$, { className: d.formDivider }),
+                                        (0, i.jsxs)(s.hjN, {
+                                            title: c.intl.string(c.t.s9LFQk),
                                             className: d.formSection,
                                             children: [
-                                                (0, r.jsx)(a.Z, {
+                                                (0, i.jsx)(l.Z, {
                                                     value: m,
                                                     buttonColor: s.zxk.Colors.BRAND,
                                                     buttonLook: s.zxk.Looks.FILLED,
                                                     delay: 1000
                                                 }),
-                                                (0, r.jsx)(s.Text, {
+                                                (0, i.jsx)(s.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'header-secondary',
                                                     className: d.confirmationText,
-                                                    children: c.NW.string(c.t['F+nFTU'])
+                                                    children: c.intl.string(c.t['F+nFTU'])
                                                 })
                                             ]
                                         })
                                     ]
                                 }),
-                                (0, r.jsxs)(s.mzw, {
+                                (0, i.jsxs)(s.mzw, {
                                     children: [
-                                        (0, r.jsx)(s.zxk, {
+                                        (0, i.jsx)(s.zxk, {
                                             color: s.zxk.Colors.BRAND,
                                             onClick: () => {
                                                 let e = (0, o.BU)(m, g);
                                                 window.open(e, '_blank');
                                             },
-                                            children: c.NW.string(c.t['+zx47e'])
+                                            children: c.intl.string(c.t['+zx47e'])
                                         }),
-                                        (0, r.jsx)(s.zxk, {
+                                        (0, i.jsx)(s.zxk, {
                                             onClick: t,
                                             look: s.zxk.Looks.LINK,
                                             color: d.maybeLaterButton,
-                                            children: c.NW.string(c.t.TulDPj)
+                                            children: c.intl.string(c.t.TulDPj)
                                         })
                                     ]
                                 })

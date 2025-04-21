@@ -26,7 +26,7 @@ function c(e, t, n) {
 function u() {
     return [
         {
-            name: l.NW.string(l.t.Sp2NFx),
+            name: l.intl.string(l.t.Sp2NFx),
             extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp']
         }
     ];
@@ -98,8 +98,8 @@ class _ extends (r = a.PureComponent) {
             c(this, 'handleFileError', async () => {
                 let { openUploadError: e } = await Promise.resolve().then(n.bind(n, 531643));
                 e({
-                    title: l.NW.string(l.t['0egKg4']),
-                    help: l.NW.string(l.t['7PnXqq'])
+                    title: l.intl.string(l.t['0egKg4']),
+                    help: l.intl.string(l.t['7PnXqq'])
                 });
             });
     }

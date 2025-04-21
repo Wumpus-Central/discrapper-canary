@@ -79,8 +79,8 @@ class S extends (r = a.Component) {
     }
     getErrorMessage() {
         let { error: e, maxLength: t, minLength: n } = this.props,
-            r = this.getIsOverflowing() ? p.NW.formatToPlainString(p.t.ICT5S0, { maxLength: t }) : null,
-            i = this.getIsUnderflowing() ? p.NW.formatToPlainString(p.t['62rk1N'], { minLength: n }) : null;
+            r = this.getIsOverflowing() ? p.intl.formatToPlainString(p.t.ICT5S0, { maxLength: t }) : null,
+            i = this.getIsUnderflowing() ? p.intl.formatToPlainString(p.t['62rk1N'], { minLength: n }) : null;
         return (null != e && '' === e) || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != r ? r : i;
     }
     renderErrorMessage() {
@@ -97,8 +97,8 @@ class S extends (r = a.Component) {
     }
     render() {
         var e, t;
-        let { disabled: n, value: r, placeholder: a, autoFocus: o, minLength: l, maxLength: u, allowOverflow: f, spellCheck: E, resizeable: b, className: O, id: I, rows: S, flex: T, autosize: N, required: A, onInvalid: C, inputRef: R } = this.props,
-            P = N ? _.l : 'textarea',
+        let { disabled: n, value: r, placeholder: a, autoFocus: o, minLength: l, maxLength: u, allowOverflow: f, spellCheck: E, resizeable: b, className: O, id: I, rows: S, flex: T, autosize: A, required: N, onInvalid: C, inputRef: R } = this.props,
+            P = A ? _.l : 'textarea',
             w = this.hasError(),
             D = null != (t = this.props['aria-labelledby']) ? t : null == (e = this.context) ? void 0 : e.titleId,
             L = this.getAriaDescribedBy();
@@ -128,7 +128,7 @@ class S extends (r = a.Component) {
                                 minLength: l,
                                 maxLength: f ? void 0 : u,
                                 spellCheck: E,
-                                required: A,
+                                required: N,
                                 onChange: this.onChange,
                                 onBlur: this.onBlur,
                                 onFocus: this.onFocus,
@@ -141,12 +141,12 @@ class S extends (r = a.Component) {
                         null != l &&
                             (0, i.jsx)(d.n, {
                                 id: y,
-                                children: p.NW.format(p.t['bmQU//'], { minLength: l })
+                                children: p.intl.format(p.t['bmQU//'], { minLength: l })
                             }),
                         null != u &&
                             (0, i.jsx)(d.n, {
                                 id: v,
-                                children: p.NW.format(p.t['+DFxLS'], { maxLength: u })
+                                children: p.intl.format(p.t['+DFxLS'], { maxLength: u })
                             }),
                         this.renderCharacterCount(),
                         this.renderMaxLength()

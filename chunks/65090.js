@@ -109,7 +109,7 @@ let E = {
                 )
             );
         return (
-            m.mentions.user === u.h3.DENY ? ((t = f.t.MLiD1d), (n = f.NW.string(f.t.LPJmLy))) : ((t = f.t.rPNimp), (n = f.NW.string(f.t['9Oq93t']))),
+            m.mentions.user === u.h3.DENY ? ((t = f.t.MLiD1d), (n = f.intl.string(f.t.LPJmLy))) : ((t = f.t.rPNimp), (n = f.intl.string(f.t['9Oq93t']))),
             (0, r.jsxs)(
                 i.Fragment,
                 {

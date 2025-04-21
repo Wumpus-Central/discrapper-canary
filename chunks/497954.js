@@ -31,9 +31,9 @@ let p = (e) => {
         }, [t, p, n]),
         v = l.useMemo(() => b || h, [b, h]);
     return (0, r.jsx)(s.ZP, {
-        title: x.NW.formatToPlainString(x.t.U3yyFh, { username: f }),
-        description: x.NW.string(x.t.naWE6e),
-        buttonText: v ? x.NW.string(x.t.nDdxOD) : x.NW.string(x.t.ICYEfX),
+        title: x.intl.formatToPlainString(x.t.U3yyFh, { username: f }),
+        description: x.intl.string(x.t.naWE6e),
+        buttonText: v ? x.intl.string(x.t.nDdxOD) : x.intl.string(x.t.ICYEfX),
         buttonDisabled: v,
         onButtonPress: g
     });

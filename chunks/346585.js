@@ -1,7 +1,7 @@
 n.d(t, {
     IE: () => f,
     K9: () => p,
-    NX: () => T,
+    NX: () => N,
     R_: () => S,
     e$: () => _,
     ti: () => A,
@@ -39,8 +39,8 @@ function _(e) {
 }
 let I = ['@', '#', ':'],
     O = ['```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage', 'clyde'],
-    N = ['discordtag', 'everyone', 'here', 'discord nitro', 'discord', 'snowsgiving'];
-function T(e) {
+    T = ['discordtag', 'everyone', 'here', 'discord nitro', 'discord', 'snowsgiving'];
+function N(e) {
     var t;
     let n = e.username.toLowerCase();
     if (
@@ -52,7 +52,7 @@ function T(e) {
     )
         return !0;
     for (let e of I) if (n.includes(e)) return !0;
-    for (let e of N) if (n === e.toLowerCase()) return !0;
+    for (let e of T) if (n === e.toLowerCase()) return !0;
     for (let e of O) if (n.includes(e.toLowerCase())) return !0;
     return !1;
 }
@@ -70,7 +70,7 @@ function A(e) {
     return (0, l.EQ)(e)
         .with({ rateLimited: !0 }, () => ({
             type: c.K.RATE_LIMIT,
-            message: d.NW.string(d.t.T15lqq)
+            message: d.intl.string(d.t.T15lqq)
         }))
         .with({ error: l.P.not(l.P.nullish) }, (e) => {
             let { error: t } = e;
@@ -81,11 +81,11 @@ function A(e) {
         })
         .with({ taken: !1 }, () => ({
             type: c.K.AVAILABLE,
-            message: d.NW.string(d.t.PgfBS0)
+            message: d.intl.string(d.t.PgfBS0)
         }))
         .with({ taken: !0 }, () => ({
             type: c.K.ERROR,
-            message: d.NW.string(d.t.mCrAUV)
+            message: d.intl.string(d.t.mCrAUV)
         }))
         .with({ error: l.P.nullish }, () => ({
             type: c.K.INTERNAL_ERROR,

@@ -63,7 +63,7 @@ function T(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function N(e, t) {
         e
     );
 }
-function A(e, t, n, i, a) {
+function N(e, t, n, i, a) {
     if (null == e) return;
     let u = () => {
         let r = _.Z.getChannel(e);
@@ -117,12 +117,12 @@ function A(e, t, n, i, a) {
         ? (0, o.h7j)((t) =>
               (0, r.jsx)(
                   o.ConfirmModal,
-                  N(
+                  A(
                       S(
                           {
-                              header: v.NW.string(v.t.pe26Cg),
-                              confirmText: v.NW.string(v.t.VkKicX),
-                              cancelText: v.NW.string(v.t['ETE/oK']),
+                              header: v.intl.string(v.t.pe26Cg),
+                              confirmText: v.intl.string(v.t.VkKicX),
+                              cancelText: v.intl.string(v.t['ETE/oK']),
                               onConfirm: () => u(),
                               confirmButtonColor: o.zxk.Colors.BRAND,
                               onCloseCallback: () => {
@@ -134,7 +134,7 @@ function A(e, t, n, i, a) {
                       {
                           children: (0, r.jsx)(o.Text, {
                               variant: 'text-md/normal',
-                              children: v.NW.string(v.t['+awCIy'])
+                              children: v.intl.string(v.t['+awCIy'])
                           })
                       }
                   )
@@ -166,7 +166,7 @@ function C(e) {
                 : { type: 'contextless' },
         { command: S } = l.YZ(I, null != (t = n.commandKey) ? t : ''),
         T = f.dN.useSetting(),
-        N = i.useMemo(() => {
+        A = i.useMemo(() => {
             if (null == S || null == g || S.untranslatedName !== n.commandName || T) return !1;
             let e = g.isPrivate();
             if ((0, d.xl)(g) || (!e && !v)) return !1;
@@ -175,11 +175,11 @@ function C(e) {
         }, [g, S, v, O, n.commandName, T]),
         C = i.useCallback(
             (e) => {
-                null == e || e.stopPropagation(), null != g && null != n.commandName && null != n.commandKey && A(g.id, n.commandName, n.commandKey, c.Vh.MENTION);
+                null == e || e.stopPropagation(), null != g && null != n.commandName && null != n.commandKey && N(g.id, n.commandName, n.commandKey, c.Vh.MENTION);
             },
             [g, n.commandKey, n.commandName]
         );
-    return N
+    return A
         ? (0, r.jsx)(
               o.ua7,
               {
@@ -210,7 +210,7 @@ function R(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: s, onClick: l } = e,
         u = (0, a.e7)([m.Z], () => m.Z.getChannelId()),
         d = (e) => {
-            null == e || e.stopPropagation(), A(u, n, t, c.Vh.POPULAR_COMMANDS, s), null == l || l(t);
+            null == e || e.stopPropagation(), N(u, n, t, c.Vh.POPULAR_COMMANDS, s), null == l || l(t);
         };
     return (0, r.jsx)(o.ua7, {
         text: i,

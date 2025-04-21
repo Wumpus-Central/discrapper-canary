@@ -1,7 +1,7 @@
-n.d(t, { Z: () => s }), n(388685);
+n.d(t, { Z: () => l }), n(388685);
 var r = n(192379),
     i = n(268350);
-function s(e) {
+function l(e) {
     let [t, n] = r.useState(!0);
     return (
         r.useEffect(() => {

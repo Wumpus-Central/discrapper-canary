@@ -60,7 +60,7 @@ class v extends f.Z {
                     s.default,
                     b(
                         {
-                            title: g.NW.formatToPlainString(g.t.hbiAOz, { code: t }),
+                            title: g.intl.formatToPlainString(g.t.hbiAOz, { code: t }),
                             body: n
                         },
                         e
@@ -75,7 +75,7 @@ class v extends f.Z {
                     s.default,
                     b(
                         {
-                            title: g.NW.string(g.t.PtobXV),
+                            title: g.intl.string(g.t.PtobXV),
                             body: e
                         },
                         t
@@ -84,7 +84,7 @@ class v extends f.Z {
         );
     }
     showDevShelfOverrideEnabled() {
-        (0, a.showToast)((0, a.createToast)(g.NW.string(g.t.JfA7IC), a.ToastType.SUCCESS));
+        (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.JfA7IC), a.ToastType.SUCCESS));
     }
     leaveActivity(e) {
         let { location: t, applicationId: n, showFeedback: r, shouldClosePopout: a = !0 } = e;

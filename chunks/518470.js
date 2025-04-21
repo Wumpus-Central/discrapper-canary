@@ -1,12 +1,12 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => l });
 var r = n(192379),
     i = n(388032);
-function s() {
+function l() {
     return r.useMemo(
         () => [
             {
                 value: null,
-                label: i.NW.string(i.t.zHfL6u)
+                label: i.intl.string(i.t.zHfL6u)
             },
             {
                 value: 10,

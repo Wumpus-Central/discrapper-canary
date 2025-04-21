@@ -18,7 +18,7 @@ let f = (e) => {
                 (0, r.jsx)(o.Text, {
                     variant: 'text-sm/semibold',
                     color: 'always-white',
-                    children: t === c.t0.TOP_GUILD_EMOJI ? u.NW.string(u.t.TR2B4e) : u.NW.string(u.t['1aZ4V1'])
+                    children: t === c.t0.TOP_GUILD_EMOJI ? u.intl.string(u.t.TR2B4e) : u.intl.string(u.t['1aZ4V1'])
                 })
             ]
         });
@@ -44,7 +44,7 @@ let f = (e) => {
                                     ? (0, r.jsx)(o.r7p, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          'aria-label': _ ? u.NW.formatToPlainString(u.t['+fdUkZ'], { names: s }) : void 0,
+                                          'aria-label': _ ? u.intl.formatToPlainString(u.t['+fdUkZ'], { names: s }) : void 0,
                                           width: 15,
                                           height: 15,
                                           className: d.favorite

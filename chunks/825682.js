@@ -16,7 +16,7 @@ let d = function (e) {
     return f
         ? (0, r.jsx)('div', {
               className: u.text,
-              children: c.NW.string(c.t.tFY5ZW)
+              children: c.intl.string(c.t.tFY5ZW)
           })
         : (0, l.Z)({
                 activities: n,

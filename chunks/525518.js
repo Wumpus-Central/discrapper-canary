@@ -18,10 +18,10 @@ function m(e) {
                 .concat(c.Z5c.COLLECTIBLES_SHOP)
                 .concat((0, o.aK)(n) ? '?tab='.concat(n) : '', '#itemSkuId=')
                 .concat(t);
-            (0, s.JG)(e, () => (0, a.showToast)((0, a.createToast)(u.NW.string(u.t['L/PwZW']), a.ToastType.SUCCESS)));
+            (0, s.JG)(e, () => (0, a.showToast)((0, a.createToast)(u.intl.string(u.t['L/PwZW']), a.ToastType.SUCCESS)));
         }, [t, n]);
     return (0, r.jsx)(a.zxk, {
-        'aria-label': u.NW.string(u.t.WqhZsr),
+        'aria-label': u.intl.string(u.t.WqhZsr),
         look: a.zxk.Looks.BLANK,
         size: a.zxk.Sizes.NONE,
         onClick: m,

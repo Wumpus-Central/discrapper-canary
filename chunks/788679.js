@@ -1,9 +1,9 @@
 n.r(t), n.d(t, { default: () => d });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
-    a = n(522664),
-    l = n(247206),
+var r = n(481060),
+    l = n(522664),
+    a = n(247206),
     o = n(668058),
     s = n(112554),
     c = n(160877),
@@ -15,10 +15,10 @@ function d(e) {
         { reportFalsePositive: p, isReportFalsePositiveLoading: O } = (0, o.$)({
             onSuccess: () => (0, c.s)(m),
             onError: () => {
-                (0, i.showToast)((0, i.createToast)(u.NW.string(u.t.R0RpRU), i.ToastType.FAILURE));
+                (0, r.showToast)((0, r.createToast)(u.intl.string(u.t.R0RpRU), r.ToastType.FAILURE));
             },
             report: () => {
-                (0, a.Uj)(
+                (0, l.Uj)(
                     t,
                     n,
                     b.map((e) => e.id),
@@ -28,11 +28,11 @@ function d(e) {
         });
     return (
         b.length > 0 || h.length > 0 || m(),
-        (0, r.jsx)(c.$, {
+        (0, i.jsx)(c.$, {
             messageId: n,
             channelId: t,
             isReportFalsePositiveLoading: O,
-            analyticsContext: l.UU.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
+            analyticsContext: a.UU.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
             onConfirmPress: p,
             attachmentPreview: 1 === b.length && 0 === h.length ? b[0] : void 0,
             embedPreview: 1 === h.length && 0 === b.length ? h[0] : void 0,

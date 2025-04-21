@@ -2,8 +2,8 @@ r.d(t, { Z: () => b }), r(953529), r(388685);
 var n = r(200651),
     A = r(192379),
     a = r(120356),
-    o = r.n(a),
-    l = r(481060),
+    l = r.n(a),
+    o = r(481060),
     i = r(710845),
     s = r(310752),
     c = r(531643),
@@ -26,7 +26,7 @@ function f(e, t, r) {
 let p = new i.Z('UploadArea');
 function m() {
     return (0, n.jsxs)('div', {
-        children: [(0, n.jsx)('div', { className: o()(g.sparkleWhite, u.sparkleOne) }), (0, n.jsx)('div', { className: o()(g.sparkleWhite, u.sparkleTwo) }), (0, n.jsx)('div', { className: o()(g.lightWhite, u.lightOne) }), (0, n.jsx)('div', { className: o()(g.lightWhite, u.lightTwo) }), (0, n.jsx)('div', { className: o()(g.crossWhite, u.crossOne) }), (0, n.jsx)('div', { className: o()(g.crossWhite, u.crossTwo) }), (0, n.jsx)('div', { className: o()(g.popWhite, u.popOne) })]
+        children: [(0, n.jsx)('div', { className: l()(g.sparkleWhite, u.sparkleOne) }), (0, n.jsx)('div', { className: l()(g.sparkleWhite, u.sparkleTwo) }), (0, n.jsx)('div', { className: l()(g.lightWhite, u.lightOne) }), (0, n.jsx)('div', { className: l()(g.lightWhite, u.lightTwo) }), (0, n.jsx)('div', { className: l()(g.crossWhite, u.crossOne) }), (0, n.jsx)('div', { className: l()(g.crossWhite, u.crossTwo) }), (0, n.jsx)('div', { className: l()(g.popWhite, u.popOne) })]
     });
 }
 class h extends A.Component {
@@ -42,7 +42,7 @@ class h extends A.Component {
         let { title: e, description: t, icons: r, style: A, className: a } = this.props;
         return (0, n.jsx)('div', {
             ref: this.elementDOMRef,
-            className: o()(a, u.uploadArea, {
+            className: l()(a, u.uploadArea, {
                 [u.droppable]: this.state.isDragging,
                 [u.uploadModalIn]: this.state.isOverZone
             }),
@@ -105,8 +105,8 @@ class h extends A.Component {
                     r &&
                         (t.setState({ isDragging: !1 }),
                         (0, c.openUploadError)({
-                            title: d.NW.string(d.t.azO1PT),
-                            help: d.NW.string(d.t.Koklr6),
+                            title: d.intl.string(d.t.azO1PT),
+                            help: d.intl.string(d.t.Koklr6),
                             icons: t.props.icons
                         })),
                     !1)
@@ -117,7 +117,7 @@ class h extends A.Component {
                 if (!this.preventUnwantedDrop(e)) return !1;
                 let A = e.dataTransfer;
                 if (null != A) {
-                    if (('move' === A.effectAllowed ? (A.dropEffect = 'move') : (A.dropEffect = 'copy'), (0, l.nfh)(c.A) && (0, l.Mr3)(c.A), e.stopPropagation(), e.preventDefault(), null == (t = (r = this.props).onDragOver) || t.call(r, e), !this.state.isDragging)) {
+                    if (('move' === A.effectAllowed ? (A.dropEffect = 'move') : (A.dropEffect = 'copy'), (0, o.nfh)(c.A) && (0, o.Mr3)(c.A), e.stopPropagation(), e.preventDefault(), null == (t = (r = this.props).onDragOver) || t.call(r, e), !this.state.isDragging)) {
                         let e = null == (n = this.elementDOMRef.current) ? void 0 : n.ownerDocument.defaultView;
                         ((null != e && A.types instanceof e.DOMStringList && A.types.contains('application/x-moz-file')) || -1 !== A.types.indexOf('Files')) && this.setState((e) => (e.isDragging ? {} : { isDragging: !0 }));
                     }

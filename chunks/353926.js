@@ -80,8 +80,8 @@ let v = 'scientist:triggered',
     I = 'userExperimentOverrides',
     S = 'guildExperimentOverrides',
     T = 1,
-    N = new u.Z('ExperimentStore'),
-    A = !1,
+    A = new u.Z('ExperimentStore'),
+    N = !1,
     C = {},
     R = new Map(),
     P = {},
@@ -120,16 +120,16 @@ function H(e, t, n, r) {
     if (t.type === h.xY.GUILD) return (i += '|'.concat(t.guildId)), a && ((i += '|'.concat(n)), r && (i += '|triggerDebugging')), i;
     throw Error();
 }
-function W(e) {
+function Y(e) {
     if (e.type === h.xY.USER) return G(''.concat(e.bucket, '|').concat(e.revision));
     if (e.type === h.xY.GUILD) return G(''.concat(e.bucket, '|').concat(e.revision, '|').concat(e.guildId));
     throw Error();
 }
-let Y = Date.now(),
+let W = Date.now(),
     K = !1;
 function z(e, t) {
     let n = C[e];
-    return !(null == n || (K ? n.time < Y : Date.now() - n.time > F)) && n.hash === t;
+    return !(null == n || (K ? n.time < W : Date.now() - n.time > F)) && n.hash === t;
 }
 function q(e, t) {
     return R.get(e) === t;
@@ -152,7 +152,7 @@ function Q(e) {
     if (n.override) return !1;
     let u = l === h.a0.AUTO_FALLBACK && !!n.triggerDebuggingEnabled,
         f = H(t, n, r, u),
-        p = W(n);
+        p = Y(n);
     if ((c && q(f, p)) || z(f, p)) return !1;
     if (n.type === h.xY.USER) {
         let e = {
@@ -230,7 +230,7 @@ function Q(e) {
         ? R.set(f, p)
         : ((C[H(t, n, r, u)] = {
               time: Date.now(),
-              hash: W(n)
+              hash: Y(n)
           }),
           e_(C));
 }
@@ -268,7 +268,7 @@ function ee(e) {
     var t;
     !j && 'CONNECTION_OPEN' === e.type && Z(e.user) && (j = !0),
         'EXPERIMENTS_FETCH_SUCCESS' === e.type &&
-            A &&
+            N &&
             'ready_payload' === w.source &&
             _.default.track(m.rMx.EXPERIMENT_FETCH_IGNORED, {
                 fingerprint: e.fingerprint,
@@ -296,7 +296,7 @@ function ee(e) {
             !1
         ),
         n(598984).Vx.trackExposure(),
-        (A = !0);
+        (N = !0);
 }
 function et(e) {
     let { rawUserExperiments: t, rawGuildExperiments: n, source: r, sessionId: i, fingerprint: a } = e,
@@ -451,7 +451,7 @@ function ea(e) {
 function eo(e) {
     let { serializedExperimentStore: t, user: n } = e;
     !j && Z(n) && (j = !0),
-        (A = t.hasLoadedExperiments),
+        (N = t.hasLoadedExperiments),
         (C = t.trackedExposureExperiments),
         (D = t.loadedUserExperiments),
         (M = t.userExperimentOverrides),
@@ -465,14 +465,14 @@ function eo(e) {
         (x = {});
 }
 function es() {
-    A = !0;
+    N = !0;
 }
 function el(e) {
     let { isSwitchingAccount: t } = e;
-    s.K.remove(v), t || (s.K.remove(O), s.K.remove(I), s.K.remove(S), (M = {}), (k = {})), (D = {}), (w = y(E({}, w), { rawUserExperiments: [] })), (C = {}), (A = !1);
+    s.K.remove(v), t || (s.K.remove(O), s.K.remove(I), s.K.remove(S), (M = {}), (k = {})), (D = {}), (w = y(E({}, w), { rawUserExperiments: [] })), (C = {}), (N = !1);
 }
 function ec() {
-    (A = !1), (C = {}), (L = {}), s.K.remove(v);
+    (N = !1), (C = {}), (L = {}), s.K.remove(v);
 }
 function eu() {
     let e = s.K.get(v);
@@ -519,7 +519,7 @@ function ef() {
     try {
         s.K.set(I, M);
     } catch (e) {
-        N.error('Error saving user experiment overrides, unsaved data will be lost', e),
+        A.error('Error saving user experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveExperimentOverrides'
@@ -528,7 +528,7 @@ function ef() {
     try {
         s.K.set(S, k);
     } catch (e) {
-        N.error('Error saving guild experiment overrides, unsaved data will be lost', e),
+        A.error('Error saving guild experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveExperimentOverrides'
@@ -542,7 +542,7 @@ function e_(e) {
             e: e
         });
     } catch (e) {
-        N.error('Error saving tracked exposure experiments, unsaved data will be lost', e),
+        A.error('Error saving tracked exposure experiments, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveTrackedExposureExperiments'
@@ -612,7 +612,7 @@ class eg extends f.Z {
         };
     }
     get hasLoadedExperiments() {
-        return A;
+        return N;
     }
     hasRegisteredExperiment(e) {
         return null != P[e];
@@ -696,7 +696,7 @@ class eg extends f.Z {
         let e = {};
         for (let t in L) for (let n of ((e[t] = JSON.parse(JSON.stringify(L[t]))), e[t].populations)) n.filters = [];
         return {
-            hasLoadedExperiments: A,
+            hasLoadedExperiments: N,
             trackedExposureExperiments: C,
             loadedUserExperiments: D,
             loadedGuildExperiments: e,
@@ -708,7 +708,7 @@ class eg extends f.Z {
         };
     }
     hasExperimentTrackedExposure(e, t, n, r) {
-        return z(H(e, t, n, r), W(t));
+        return z(H(e, t, n, r), Y(t));
     }
     constructor() {
         super(

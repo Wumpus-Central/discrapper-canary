@@ -2,8 +2,8 @@ r.d(t, { default: () => O });
 var n = r(200651),
     o = r(192379),
     i = r(442837),
-    c = r(481060),
-    l = r(313201),
+    l = r(481060),
+    c = r(313201),
     s = r(237997),
     a = r(451478),
     u = r(358085),
@@ -34,7 +34,7 @@ function O(e) {
             }
             return o;
         })(e, ['transitionState', 'onClose', 'contextKey']);
-    let h = (0, l.Dt)(),
+    let h = (0, c.Dt)(),
         x = (0, i.e7)([a.Z], () => a.Z.isFocused()),
         P = y === d.IlC.APP,
         k = (0, f.getPID)(),
@@ -45,7 +45,7 @@ function O(e) {
     x || m)
         ? null
         : (0, n.jsxs)(
-              c.Y0X,
+              l.Y0X,
               ((t = (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var r = null != arguments[t] ? arguments[t] : {},
@@ -79,35 +79,35 @@ function O(e) {
               )),
               (r = r =
                   {
-                      size: c.CgR.SMALL,
+                      size: l.CgR.SMALL,
                       children: [
-                          (0, n.jsx)(c.xBx, {
-                              children: (0, n.jsx)(c.X6q, {
+                          (0, n.jsx)(l.xBx, {
+                              children: (0, n.jsx)(l.X6q, {
                                   variant: 'heading-xl/semibold',
-                                  children: p.NW.string(p.t.DJ8ojI)
+                                  children: p.intl.string(p.t.DJ8ojI)
                               })
                           }),
-                          (0, n.jsx)(c.hzk, {
-                              children: (0, n.jsx)(c.Text, {
+                          (0, n.jsx)(l.hzk, {
+                              children: (0, n.jsx)(l.Text, {
                                   color: 'text-normal',
                                   variant: 'text-md/medium',
-                                  children: p.NW.string(p.t['E+Ph7O'])
+                                  children: p.intl.string(p.t['E+Ph7O'])
                               })
                           }),
-                          (0, n.jsxs)(c.mzw, {
+                          (0, n.jsxs)(l.mzw, {
                               children: [
-                                  (0, n.jsx)(c.zxk, {
+                                  (0, n.jsx)(l.zxk, {
                                       onClick: () => {
                                           u.isPlatformEmbedded ? b.ZP.focus() : window.focus(), j();
                                       },
-                                      color: c.zxk.Colors.BRAND,
-                                      children: p.NW.string(p.t.ELRJQk)
+                                      color: l.zxk.Colors.BRAND,
+                                      children: p.intl.string(p.t.ELRJQk)
                                   }),
-                                  (0, n.jsx)(c.zxk, {
+                                  (0, n.jsx)(l.zxk, {
                                       onClick: () => (null == j ? void 0 : j()),
-                                      color: c.zxk.Colors.PRIMARY,
-                                      look: c.zxk.Looks.LINK,
-                                      children: p.NW.string(p.t.FgK5QE)
+                                      color: l.zxk.Colors.PRIMARY,
+                                      look: l.zxk.Looks.LINK,
+                                      children: p.intl.string(p.t.FgK5QE)
                                   })
                               ]
                           })

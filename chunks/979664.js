@@ -1,15 +1,15 @@
 n.d(t, { Z: () => g });
 var r = n(200651),
     i = n(192379),
-    s = n(442837),
-    l = n(481060),
+    l = n(442837),
+    s = n(481060),
     a = n(813197),
     o = n(999382),
     c = n(388032),
     d = n(137991),
     u = n(381109);
 function m(e) {
-    let { profile: t, handleIconChange: n, canManageGuild: s } = e,
+    let { profile: t, handleIconChange: n, canManageGuild: l } = e,
         o = i.useCallback(() => {
             n(null);
         }, [n]),
@@ -17,14 +17,14 @@ function m(e) {
     return (0, r.jsxs)('div', {
         className: d.buttons,
         children: [
-            (0, r.jsxs)(l.zxk, {
+            (0, r.jsxs)(s.zxk, {
                 focusProps: u,
                 tabIndex: -1,
-                size: l.zxk.Sizes.SMALL,
-                color: l.zxk.Colors.BRAND,
-                disabled: !s,
+                size: s.zxk.Sizes.SMALL,
+                color: s.zxk.Colors.BRAND,
+                disabled: !l,
                 children: [
-                    c.NW.string(c.t.r3Jdsb),
+                    c.intl.string(c.t.r3Jdsb),
                     (0, r.jsx)(a.ZP, {
                         tabIndex: 0,
                         onChange: n
@@ -32,13 +32,13 @@ function m(e) {
                 ]
             }),
             null != t.icon
-                ? (0, r.jsx)(l.zxk, {
-                      size: l.zxk.Sizes.SMALL,
-                      color: l.zxk.Colors.RED,
-                      look: l.zxk.Looks.LINK,
+                ? (0, r.jsx)(s.zxk, {
+                      size: s.zxk.Sizes.SMALL,
+                      color: s.zxk.Colors.RED,
+                      look: s.zxk.Looks.LINK,
                       onClick: o,
-                      disabled: !s,
-                      children: c.NW.string(c.t.x8AlTk)
+                      disabled: !l,
+                      children: c.intl.string(c.t.x8AlTk)
                   })
                 : null
         ]
@@ -46,20 +46,20 @@ function m(e) {
 }
 function g(e) {
     let { profile: t, canManageGuild: n, onIconChange: i } = e,
-        a = (0, s.e7)([o.Z], () => o.Z.getError('icon'));
+        a = (0, l.e7)([o.Z], () => o.Z.getError('icon'));
     return (0, r.jsxs)('section', {
         className: d.container,
         children: [
-            (0, r.jsxs)(l.hjN, {
+            (0, r.jsxs)(s.hjN, {
                 className: u.section,
                 children: [
                     (0, r.jsxs)('div', {
                         className: u.sectionHeader,
                         children: [
-                            (0, r.jsx)(l.vwX, { children: c.NW.string(c.t.FkQnxM) }),
-                            (0, r.jsx)(l.R94, {
+                            (0, r.jsx)(s.vwX, { children: c.intl.string(c.t.FkQnxM) }),
+                            (0, r.jsx)(s.R94, {
                                 type: 'description',
-                                children: c.NW.string(c.t.KjkA0d)
+                                children: c.intl.string(c.t.KjkA0d)
                             })
                         ]
                     }),

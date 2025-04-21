@@ -2,19 +2,19 @@ n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
 var r = n(392711),
-    a = n.n(r),
-    l = n(442837),
+    l = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(344185),
     s = n(665906),
     d = n(388032);
 function u(e) {
     let t = (0, s.Xb)(e),
-        r = (0, l.e7)([c.Z], () => !a().isEmpty(c.Z.getThreadsForGuild(e.id)));
+        r = (0, a.e7)([c.Z], () => !l().isEmpty(c.Z.getThreadsForGuild(e.id)));
     return t && r
         ? (0, i.jsx)(o.sNh, {
               id: 'active-threads',
-              label: d.NW.string(d.t.TM6erq),
+              label: d.intl.string(d.t.TM6erq),
               icon: o.kBi,
               action: () => {
                   (0, o.ZDy)(async () => {

@@ -49,7 +49,7 @@ function T(e) {
     }
     return e;
 }
-function N(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,12 +61,12 @@ function N(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -181,8 +181,8 @@ let P = new s.Z('GuildSettingsActionCreators'),
                     }),
                 {
                     modalProps: {
-                        title: I.NW.string(I.t.Wi9LER),
-                        actionText: r ? I.NW.string(I.t.MP0Ho6) : I.NW.string(I.t.yZcYGR)
+                        title: I.intl.string(I.t.Wi9LER),
+                        actionText: r ? I.intl.string(I.t.MP0Ho6) : I.intl.string(I.t.yZcYGR)
                     },
                     checkEnabled: !1
                 }
@@ -240,9 +240,9 @@ let P = new s.Z('GuildSettingsActionCreators'),
             );
         },
         saveGuild(e, t) {
-            let { name: n, description: r, icon: o, splash: s, banner: c, homeHeader: u, afkChannelId: d, afkTimeout: f, systemChannelId: _, verificationLevel: p, defaultMessageNotifications: h, explicitContentFilter: m, features: g, systemChannelFlags: E, preferredLocale: b, rulesChannelId: y, safetyAlertsChannelId: I, discoverySplash: S, publicUpdatesChannelId: N, premiumProgressBarEnabled: C, profile: R } = t,
+            let { name: n, description: r, icon: o, splash: s, banner: c, homeHeader: u, afkChannelId: d, afkTimeout: f, systemChannelId: _, verificationLevel: p, defaultMessageNotifications: h, explicitContentFilter: m, features: g, systemChannelFlags: E, preferredLocale: b, rulesChannelId: y, safetyAlertsChannelId: I, discoverySplash: S, publicUpdatesChannelId: A, premiumProgressBarEnabled: C, profile: R } = t,
                 w = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                D = A(
+                D = N(
                     T(
                         {
                             name: n,
@@ -262,7 +262,7 @@ let P = new s.Z('GuildSettingsActionCreators'),
                             system_channel_flags: E,
                             rules_channel_id: y,
                             discovery_splash: S,
-                            public_updates_channel_id: N,
+                            public_updates_channel_id: A,
                             safety_alerts_channel_id: I
                         },
                         null != C ? { premium_progress_bar_enabled: C } : null
@@ -339,8 +339,8 @@ let P = new s.Z('GuildSettingsActionCreators'),
                     }),
                 {
                     modalProps: {
-                        title: I.NW.string(I.t.Z5s7PD),
-                        actionText: I.NW.string(I.t.Z5s7PD)
+                        title: I.intl.string(I.t.Z5s7PD),
+                        actionText: I.intl.string(I.t.Z5s7PD)
                     },
                     checkEnabled: !1
                 }
@@ -372,8 +372,8 @@ let P = new s.Z('GuildSettingsActionCreators'),
                     }),
                 {
                     modalProps: {
-                        title: I.NW.formatToPlainString(I.t.us7mCw, { name: t }),
-                        actionText: I.NW.string(I.t.l3hWPz),
+                        title: I.intl.formatToPlainString(I.t.us7mCw, { name: t }),
+                        actionText: I.intl.string(I.t.l3hWPz),
                         disallowBackupCodes: !0
                     },
                     checkEnabled: !1

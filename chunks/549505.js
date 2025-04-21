@@ -1,30 +1,30 @@
-t.d(a, { default: () => _ });
-var s = t(200651);
-t(192379);
-var r = t(481060),
-    n = t(688465),
-    o = t(547972),
-    i = t(63063),
-    c = t(981631),
-    d = t(332325),
-    l = t(388032),
-    m = t(347383),
-    x = t(83173);
+a.d(t, { default: () => _ });
+var s = a(200651);
+a(192379);
+var n = a(481060),
+    i = a(688465),
+    r = a(547972),
+    o = a(63063),
+    l = a(981631),
+    c = a(332325),
+    d = a(388032),
+    m = a(347383),
+    x = a(83173);
 function _(e) {
-    let { transitionState: a, onClose: t } = e;
-    return (0, s.jsxs)(r.Y0X, {
-        transitionState: a,
-        size: r.CgR.DYNAMIC,
+    let { transitionState: t, onClose: a } = e;
+    return (0, s.jsxs)(n.Y0X, {
+        transitionState: t,
+        size: n.CgR.DYNAMIC,
         className: m.modalRoot,
         children: [
-            (0, s.jsxs)(r.xBx, {
+            (0, s.jsxs)(n.xBx, {
                 separator: !1,
                 className: m.modalHeader,
                 children: [
                     (0, s.jsx)('div', {
                         className: m.imageFrame,
                         children: (0, s.jsx)('img', {
-                            alt: l.NW.string(l.t.AWkQTk),
+                            alt: d.intl.string(d.t.AWkQTk),
                             src: x,
                             className: m.heroImage
                         })
@@ -32,25 +32,25 @@ function _(e) {
                     (0, s.jsxs)('div', {
                         className: m.headerWrapper,
                         children: [
-                            (0, s.jsx)(r.X6q, {
+                            (0, s.jsx)(n.X6q, {
                                 variant: 'heading-xl/bold',
-                                children: l.NW.string(l.t.gb37Ky)
+                                children: d.intl.string(d.t.gb37Ky)
                             }),
-                            (0, s.jsx)(n.Z, { className: m.betaTag })
+                            (0, s.jsx)(i.Z, { className: m.betaTag })
                         ]
                     })
                 ]
             }),
-            (0, s.jsxs)(r.hzk, {
+            (0, s.jsxs)(n.hzk, {
                 className: m.modalContent,
                 children: [
                     (0, s.jsxs)('div', {
                         className: m.modalContentFrame,
                         children: [
-                            (0, s.jsx)(r.Text, {
+                            (0, s.jsx)(n.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-secondary',
-                                children: l.NW.string(l.t.WKxo8v)
+                                children: d.intl.string(d.t.WKxo8v)
                             }),
                             (0, s.jsx)(b, {})
                         ]
@@ -58,19 +58,19 @@ function _(e) {
                     (0, s.jsxs)('div', {
                         className: m.modalFooter,
                         children: [
-                            (0, s.jsx)(r.zxk, {
-                                onClick: t,
+                            (0, s.jsx)(n.zxk, {
+                                onClick: a,
                                 className: m.button,
-                                children: l.NW.string(l.t['x/26d3'])
+                                children: d.intl.string(d.t['x/26d3'])
                             }),
-                            (0, s.jsx)(r.Text, {
+                            (0, s.jsx)(n.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'text-muted',
                                 className: m.disclosureText,
-                                children: l.NW.format(l.t['5Ey5Dw'], {
-                                    recentActivityURL: i.Z.getArticleURL(c.BhN.MEMBER_LIST_ACTIVITY_FEED),
+                                children: d.intl.format(d.t['5Ey5Dw'], {
+                                    recentActivityURL: o.Z.getArticleURL(l.BhN.MEMBER_LIST_ACTIVITY_FEED),
                                     handleActivityPrivacyClick: () => {
-                                        t(), (0, o.Z)(d.Z.ACTIVITY_PRIVACY);
+                                        a(), (0, r.Z)(c.Z.ACTIVITY_PRIVACY);
                                     }
                                 })
                             })
@@ -84,26 +84,26 @@ function _(e) {
 let b = () => {
     let e = [
         {
-            icon: (0, s.jsx)(r.iFz, { className: m.icon }),
-            text: l.NW.string(l.t.vXBrdn)
+            icon: (0, s.jsx)(n.iFz, { className: m.icon }),
+            text: d.intl.string(d.t.vXBrdn)
         },
         {
-            icon: (0, s.jsx)(r.iWm, { className: m.icon }),
-            text: l.NW.string(l.t.aExjOz)
+            icon: (0, s.jsx)(n.iWm, { className: m.icon }),
+            text: d.intl.string(d.t.aExjOz)
         },
         {
-            icon: (0, s.jsx)(r.kBi, { className: m.icon }),
-            text: l.NW.string(l.t['i7/QHB'])
+            icon: (0, s.jsx)(n.kBi, { className: m.icon }),
+            text: d.intl.string(d.t['i7/QHB'])
         },
         {
-            icon: (0, s.jsx)(r.lMe, { className: m.icon }),
-            text: l.NW.string(l.t.ZmBfKC)
+            icon: (0, s.jsx)(n.lMe, { className: m.icon }),
+            text: d.intl.string(d.t.ZmBfKC)
         }
     ];
     return (0, s.jsx)('div', {
         className: m.notes,
-        children: e.map((e, a) => {
-            let { icon: t, text: n } = e;
+        children: e.map((e, t) => {
+            let { icon: a, text: i } = e;
             return (0, s.jsxs)(
                 'div',
                 {
@@ -111,15 +111,15 @@ let b = () => {
                     children: [
                         (0, s.jsx)('div', {
                             className: m.badge,
-                            children: t
+                            children: a
                         }),
-                        (0, s.jsx)(r.Text, {
+                        (0, s.jsx)(n.Text, {
                             variant: 'text-sm/medium',
-                            children: n
+                            children: i
                         })
                     ]
                 },
-                'memberlist-learn-more-note-'.concat(a)
+                'memberlist-learn-more-note-'.concat(t)
             );
         })
     });

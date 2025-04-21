@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(457542), n(953529);
+n.d(t, { Z: () => A }), n(388685), n(457542), n(953529);
 var r = n(200651),
     i = n(192379),
     a = n(831209),
@@ -38,25 +38,25 @@ function T(e) {
               size: l.zxk.Sizes.SMALL,
               color: l.zxk.Colors.CUSTOM,
               onClick: n,
-              buttonText: I.NW.string(I.t.pj0XBA)
+              buttonText: I.intl.string(I.t.pj0XBA)
           })
         : a === b.y.JOIN_GUILD
           ? (0, r.jsx)(l.zxk, {
                 size: l.zxk.Sizes.SMALL,
                 fullWidth: !0,
                 onClick: o,
-                children: I.NW.string(I.t.riu2R0)
+                children: I.intl.string(I.t.riu2R0)
             })
           : null;
 }
-function N(e) {
+function A(e) {
     let { sound: t, channel: n, closePopout: c, refreshPosition: g } = e,
         y = t.guildId === O.X8,
         v = (0, s.e7)([m.Z], () => m.Z.getGuild(t.guildId)),
-        N = !y && null != v,
-        [A, C] = i.useState(),
+        A = !y && null != v,
+        [N, C] = i.useState(),
         R = (0, E.V2)({ location: 'SoundmojiGuildInfo' }),
-        P = y || N || null != A || !R,
+        P = y || A || null != N || !R,
         [w, D] = i.useState(!P);
     i.useEffect(() => {
         P ||
@@ -69,10 +69,10 @@ function N(e) {
                     D(!1), g();
                 }));
     }, [g, P, t.guildId, t.soundId]);
-    let { buttonType: L, description: x } = (0, b.Z)(t, n, N, A),
+    let { buttonType: L, description: x } = (0, b.Z)(t, n, A, N),
         M = L === b.y.JOIN_GUILD,
         k = !y && w,
-        j = i.useMemo(() => (N ? u.JO.createFromGuildRecord(v) : null != A ? u.JO.createFromDiscoverableGuild(A) : void 0), [v, N, A]);
+        j = i.useMemo(() => (A ? u.JO.createFromGuildRecord(v) : null != N ? u.JO.createFromDiscoverableGuild(N) : void 0), [v, A, N]);
     return k
         ? (0, r.jsx)(f.SE, {})
         : (0, r.jsxs)('div', {
@@ -105,19 +105,19 @@ function N(e) {
                                           variant: 'eyebrow',
                                           color: 'header-muted',
                                           className: S.infoExpandedGuildTitle,
-                                          children: N ? I.NW.string(I.t.tGDabm) : I.NW.string(I.t.rnOmOT)
+                                          children: A ? I.intl.string(I.t.tGDabm) : I.intl.string(I.t.rnOmOT)
                                       }),
                                       (0, r.jsx)('div', {
                                           className: S.infoExpandedGuildInfo,
                                           children: (0, r.jsx)(d.Oe, {
                                               expressionSourceGuild: j,
-                                              hasJoinedExpressionSourceGuild: N,
+                                              hasJoinedExpressionSourceGuild: A,
                                               isDisplayingJoinGuildButtonInPopout: M
                                           })
                                       }),
                                       (0, r.jsx)(T, {
                                           buttonType: L,
-                                          discoverableGuildId: null == A ? void 0 : A.id,
+                                          discoverableGuildId: null == N ? void 0 : N.id,
                                           closePopout: c
                                       })
                                   ]

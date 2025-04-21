@@ -1,4 +1,4 @@
-n.d(t, { default: () => M });
+n.d(t, { default: () => T });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -23,16 +23,16 @@ var i = n(442837),
     v = n(700994),
     w = n(199902),
     Z = n(314897),
-    N = n(592125),
-    x = n(131951),
-    C = n(594174),
-    E = n(358085),
-    P = n(444295),
-    k = n(1226),
-    W = n(981631),
-    V = n(65154),
-    A = n(388032);
-function L(e) {
+    x = n(592125),
+    C = n(131951),
+    E = n(594174),
+    P = n(358085),
+    k = n(444295),
+    V = n(1226),
+    A = n(981631),
+    L = n(65154),
+    N = n(388032);
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function L(e) {
     }
     return e;
 }
-function D(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,17 +75,17 @@ function D(e, t) {
         e
     );
 }
-function _(e) {
+function M(e) {
     return (0, i.e7)([w.Z], () => {
         let t = w.Z.getActiveStreamForApplicationStream(e);
         return null != t && (0, m.V9)(t) === (0, m.V9)(e);
     });
 }
-function M(e) {
-    let { stream: t, analyticsContext: n, appContext: w, exitFullscreen: M, onSelect: T } = e,
-        B = (function (e) {
-            let t = _(e),
-                n = (0, O.Z)(x.Z),
+function T(e) {
+    let { stream: t, analyticsContext: n, appContext: w, exitFullscreen: T, onSelect: B } = e,
+        U = (function (e) {
+            let t = M(e),
+                n = (0, O.Z)(C.Z),
                 o = p.Z.getSettings().clipsEnabled,
                 a = e.ownerId === Z.default.getId(),
                 { enableViewerClipping: c, ignoreSenderPreference: s } = S.Z.useExperiment({ location: 'StreamContextMenu' }, { autoTrackExposure: !1 }),
@@ -95,25 +95,25 @@ function M(e) {
                 ? (0, r.jsx)(l.sNh, {
                       id: 'clip-stream',
                       disabled: !o || !(a || d) || u,
-                      label: A.NW.string(A.t.U4URzM),
+                      label: N.intl.string(N.t.U4URzM),
                       action: () => (a ? (0, h.C1)() : (0, h.C1)((0, m.V9)(e)))
                   })
                 : null;
         })(t),
-        U = _(t),
-        G = (function (e) {
-            let t = _(e),
-                n = (0, v.Z)(e.ownerId, V.Yn.STREAM);
+        G = M(t),
+        J = (function (e) {
+            let t = M(e),
+                n = (0, v.Z)(e.ownerId, L.Yn.STREAM);
             return t ? n : null;
         })(t),
-        J = (function (e) {
+        Q = (function (e) {
             let t,
                 n = (0, i.e7)([j.Z], () => null != j.Z.getRemoteSessionId()),
-                o = (0, i.e7)([N.Z], () => N.Z.getChannel(e.channelId), [e.channelId]),
-                a = _(e),
-                u = C.default.getCurrentUser(),
+                o = (0, i.e7)([x.Z], () => x.Z.getChannel(e.channelId), [e.channelId]),
+                a = M(e),
+                u = E.default.getCurrentUser(),
                 d = null != u && e.ownerId === u.id;
-            return ((t = d ? A.NW.string(A.t.S5anIS) : a ? A.NW.string(A.t.q3O3Jy) : A.NW.string(A.t['7Xq/nZ'])), n || (!d && a && (null == o ? void 0 : o.isGuildStageVoice())))
+            return ((t = d ? N.intl.string(N.t.S5anIS) : a ? N.intl.string(N.t.q3O3Jy) : N.intl.string(N.t['7Xq/nZ'])), n || (!d && a && (null == o ? void 0 : o.isGuildStageVoice())))
                 ? null
                 : (0, r.jsx)(l.sNh, {
                       id: 'watch',
@@ -121,135 +121,135 @@ function M(e) {
                       action: a
                           ? function () {
                                 (0, s.g)((0, m.V9)(e)),
-                                    (0, P.Ws)(W.Odu.GO_LIVE, {
-                                        type: P.Qu.GO_LIVE,
-                                        value: P.bk.DISABLED,
+                                    (0, k.Ws)(A.Odu.GO_LIVE, {
+                                        type: k.Qu.GO_LIVE,
+                                        value: k.bk.DISABLED,
                                         userId: e.ownerId
                                     });
                             }
                           : function () {
                                 c.default.selectVoiceChannel(e.channelId),
                                     (0, s.rn)(e),
-                                    (0, P.Ws)(W.Odu.GO_LIVE, {
-                                        type: P.Qu.GO_LIVE,
-                                        value: P.bk.ENABLED,
+                                    (0, k.Ws)(A.Odu.GO_LIVE, {
+                                        type: k.Qu.GO_LIVE,
+                                        value: k.bk.ENABLED,
                                         userId: e.ownerId
                                     });
                             }
                   });
         })(t),
-        Q = (function (e) {
-            let t = _(e),
-                n = (0, i.e7)([x.Z], () => x.Z.isLocalMute(e.ownerId, V.Yn.STREAM)),
-                a = C.default.getCurrentUser(),
+        R = (function (e) {
+            let t = M(e),
+                n = (0, i.e7)([C.Z], () => C.Z.isLocalMute(e.ownerId, L.Yn.STREAM)),
+                a = E.default.getCurrentUser(),
                 c = null != a && e.ownerId === a.id;
             return !t || c
                 ? null
                 : (0, r.jsx)(l.S89, {
                       id: 'mute',
-                      label: A.NW.string(A.t.sWmtIy),
+                      label: N.intl.string(N.t.sWmtIy),
                       action: function () {
-                          o.Z.toggleLocalMute(e.ownerId, V.Yn.STREAM);
+                          o.Z.toggleLocalMute(e.ownerId, L.Yn.STREAM);
                       },
                       checked: n
                   });
         })(t),
-        R = (function (e) {
-            let t = _(e),
+        F = (function (e) {
+            let t = M(e),
                 n = e.ownerId === Z.default.getId(),
                 { sidechainAvailable: a } = I.Z.getCurrentConfig({ location: 'StreamContextMenu' }),
-                c = (0, i.e7)([x.Z], () => x.Z.getSidechainCompression()),
-                s = (0, i.e7)([x.Z], () => x.Z.getSidechainCompressionStrength()),
+                c = (0, i.e7)([C.Z], () => C.Z.getSidechainCompression()),
+                s = (0, i.e7)([C.Z], () => C.Z.getSidechainCompressionStrength()),
                 { analyticsLocations: u } = (0, d.ZP)();
-            return n || !t || !a || (0, E.isWeb)()
+            return n || !t || !a || (0, P.isWeb)()
                 ? null
                 : (0, r.jsxs)(l.kSQ, {
                       children: [
                           (0, r.jsx)(l.S89, {
                               id: 'sidechain-compression',
-                              label: A.NW.string(A.t['/jwMtr']),
+                              label: N.intl.string(N.t['/jwMtr']),
                               action: () => o.Z.setSidechainCompression(!c, { analyticsLocations: u }),
                               checked: c
                           }),
                           (0, r.jsx)(l.II_, {
                               id: 'sidechain-parameters',
-                              label: A.NW.string(A.t.fhEzfn),
+                              label: N.intl.string(N.t.fhEzfn),
                               control: (e, t) =>
                                   (0, r.jsx)(
                                       l._wy,
-                                      D(L({}, e), {
+                                      _(D({}, e), {
                                           ref: t,
                                           value: s,
                                           maxValue: 100,
                                           onChange: (e) => o.Z.setSidechainCompressionStrength(e, { analyticsLocations: u }),
-                                          'aria-label': A.NW.string(A.t.fhEzfn)
+                                          'aria-label': N.intl.string(N.t.fhEzfn)
                                       })
                                   )
                           })
                       ]
                   });
         })(t),
-        F = (0, f.Z)(t, w, M),
-        Y = (0, b.G)({
+        Y = (0, f.Z)(t, w, T),
+        z = (0, b.G)({
             stream: t,
             channelId: t.channelId
         }),
-        z = (0, g.B)({
+        W = (0, g.B)({
             userId: t.ownerId,
             channelId: t.channelId,
             guildId: t.guildId
         }),
         q = (function (e) {
             let t = (t) => {
-                    (0, k.cq)(e, t);
+                    (0, V.cq)(e, t);
                 },
-                n = (0, k.BO)(e);
+                n = (0, V.BO)(e);
             return (0, r.jsx)(l.II_, {
                 id: 'stream-zoom',
-                label: A.NW.string(A.t.B3kEDg),
+                label: N.intl.string(N.t.B3kEDg),
                 control: (e, i) =>
                     (0, r.jsx)(
                         l._wy,
-                        D(L({}, e), {
+                        _(D({}, e), {
                             ref: i,
                             value: n,
                             maxValue: 300,
                             onChange: t,
                             minValue: 100,
-                            'aria-label': A.NW.string(A.t.B3kEDg)
+                            'aria-label': N.intl.string(N.t.B3kEDg)
                         })
                     )
             });
         })(t),
         H = (function (e) {
-            let t = (0, k.xN)(e);
+            let t = (0, V.xN)(e);
             return (0, r.jsx)(l.S89, {
                 id: 'fit',
-                label: A.NW.string(A.t.mpnvra),
+                label: N.intl.string(N.t.mpnvra),
                 action: () => {
-                    (0, k.gI)(e, t === y.L.CONTAIN ? y.L.COVER : y.L.CONTAIN);
+                    (0, V.gI)(e, t === y.L.CONTAIN ? y.L.COVER : y.L.CONTAIN);
                 },
                 checked: t === y.L.COVER
             });
         })(t);
     return (0, r.jsx)(u.Z, {
         context: n,
-        object: W.qAy.CONTEXT_MENU,
+        object: A.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(l.v2r, {
             navId: 'stream-context',
             onClose: a.Zy,
-            'aria-label': A.NW.string(A.t.Gl3Q39),
-            onSelect: T,
+            'aria-label': N.intl.string(N.t.Gl3Q39),
+            onSelect: B,
             children: [
                 (0, r.jsxs)(l.kSQ, {
-                    children: [J, B, Q, Y, z]
+                    children: [Q, U, R, z, W]
                 }),
-                (0, r.jsx)(l.kSQ, { children: G }),
+                (0, r.jsx)(l.kSQ, { children: J }),
                 (0, r.jsxs)(l.kSQ, {
                     children: [q, H]
                 }),
-                R,
-                (0, r.jsx)(l.kSQ, { children: U && F })
+                F,
+                (0, r.jsx)(l.kSQ, { children: G && Y })
             ]
         })
     });

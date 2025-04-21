@@ -1,9 +1,9 @@
-n.d(t, { Z: () => N }), n(388685);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => x }), n(388685);
+var i = n(200651),
+    r = n(192379),
     s = n(442837),
-    a = n(481060),
-    l = n(570140),
+    l = n(481060),
+    a = n(570140),
     o = n(2052),
     c = n(932724),
     d = n(716161),
@@ -18,96 +18,96 @@ let _ = {
     width: 387,
     height: 218
 };
-function N(e) {
-    let { previewEnabled: t, onEnablePreview: n, onCancelPreview: N } = e,
-        x = g.Z.getCameraComponent(),
-        [E, j] = i.useState((0, c.P)(p.default.getCurrentUser())),
-        C = i.useRef(!1),
-        O = i.useRef(E),
-        S = (0, o.O)(),
-        v = (0, s.e7)([g.Z], () => g.Z.isVideoAvailable());
+function x(e) {
+    let { previewEnabled: t, onEnablePreview: n, onCancelPreview: x } = e,
+        E = g.Z.getCameraComponent(),
+        [j, C] = r.useState((0, c.P)(p.default.getCurrentUser())),
+        O = r.useRef(!1),
+        S = r.useRef(j),
+        v = (0, o.O)(),
+        T = (0, s.e7)([g.Z], () => g.Z.isVideoAvailable());
     return (
-        i.useEffect(
+        r.useEffect(
             () => () => {
-                C.current && l.Z.wait(() => (0, d.Up)(O.current));
+                O.current && a.Z.wait(() => (0, d.Up)(S.current));
             },
             []
         ),
-        (0, r.jsx)(m.Z, {
-            selectedBackgroundOption: E,
+        (0, i.jsx)(m.Z, {
+            selectedBackgroundOption: j,
             onSelectBackgroundOption: (e) => {
-                (C.current = !0), (O.current = e), j(e), (0, u.wG)(e, { location: S.location }).catch(h.dG4);
+                (O.current = !0), (S.current = e), C(e), (0, u.wG)(e, { location: v.location }).catch(h.dG4);
             },
-            onCancelPreview: N,
+            onCancelPreview: x,
             renderCamera: (e) =>
                 t
-                    ? (0, r.jsx)('div', {
+                    ? (0, i.jsx)('div', {
                           className: b.cameraWrapper,
-                          children: (0, r.jsxs)('div', {
+                          children: (0, i.jsxs)('div', {
                               className: b.camera,
                               children: [
-                                  (0, r.jsx)(x, {
+                                  (0, i.jsx)(E, {
                                       deviceId: e,
                                       width: _.width,
                                       height: _.height,
                                       disabled: !t
                                   }),
-                                  (0, r.jsx)(m.S, {})
+                                  (0, i.jsx)(m.S, {})
                               ]
                           })
                       })
-                    : (0, r.jsxs)('div', {
+                    : (0, i.jsxs)('div', {
                           className: b.cameraWrapper,
                           children: [
-                              (0, r.jsx)('div', { className: b.previewImage }),
-                              (0, r.jsx)(a.ua7, {
-                                  text: v ? null : f.NW.string(f.t['8jSzSU']),
+                              (0, i.jsx)('div', { className: b.previewImage }),
+                              (0, i.jsx)(l.ua7, {
+                                  text: T ? null : f.intl.string(f.t['8jSzSU']),
                                   children: (e) => {
-                                      var t, i;
-                                      return (0, r.jsx)(
-                                          a.zxk,
+                                      var t, r;
+                                      return (0, i.jsx)(
+                                          l.zxk,
                                           ((t = (function (e) {
                                               for (var t = 1; t < arguments.length; t++) {
                                                   var n = null != arguments[t] ? arguments[t] : {},
-                                                      r = Object.keys(n);
+                                                      i = Object.keys(n);
                                                   'function' == typeof Object.getOwnPropertySymbols &&
-                                                      (r = r.concat(
+                                                      (i = i.concat(
                                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                           })
                                                       )),
-                                                      r.forEach(function (t) {
-                                                          var r;
-                                                          (r = n[t]),
+                                                      i.forEach(function (t) {
+                                                          var i;
+                                                          (i = n[t]),
                                                               t in e
                                                                   ? Object.defineProperty(e, t, {
-                                                                        value: r,
+                                                                        value: i,
                                                                         enumerable: !0,
                                                                         configurable: !0,
                                                                         writable: !0
                                                                     })
-                                                                  : (e[t] = r);
+                                                                  : (e[t] = i);
                                                       });
                                               }
                                               return e;
                                           })({}, e)),
-                                          (i = i =
+                                          (r = r =
                                               {
                                                   onClick: n,
-                                                  disabled: !v,
-                                                  children: f.NW.string(f.t.JIf4v7)
+                                                  disabled: !T,
+                                                  children: f.intl.string(f.t.JIf4v7)
                                               }),
                                           Object.getOwnPropertyDescriptors
-                                              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
+                                              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                                               : (function (e, t) {
                                                     var n = Object.keys(e);
                                                     if (Object.getOwnPropertySymbols) {
-                                                        var r = Object.getOwnPropertySymbols(e);
-                                                        n.push.apply(n, r);
+                                                        var i = Object.getOwnPropertySymbols(e);
+                                                        n.push.apply(n, i);
                                                     }
                                                     return n;
-                                                })(Object(i)).forEach(function (e) {
-                                                    Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
+                                                })(Object(r)).forEach(function (e) {
+                                                    Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                                                 }),
                                           t)
                                       );

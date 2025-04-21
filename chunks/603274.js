@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(361932), n(187205), n(539854);
+n.d(t, { Z: () => N }), n(388685), n(361932), n(187205), n(539854);
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -42,7 +42,7 @@ function I(e, t) {
               ]
           });
 }
-function N() {
+function P() {
     let e = (0, a.Wu)([C.Z, b.Z], () =>
             v.default
                 .keys(C.Z.getFavoriteChannels())
@@ -99,9 +99,9 @@ function N() {
             },
             [t]
         ),
-        N = (0, a.Wu)([y.default], () => E.map((e) => y.default.getUser(e)), [E]),
-        P = (0, a.Wu)([y.default], () => S.map((e) => y.default.getUser(e)), [S]),
-        w = I(
+        P = (0, a.Wu)([y.default], () => E.map((e) => y.default.getUser(e)), [E]),
+        w = (0, a.Wu)([y.default], () => S.map((e) => y.default.getUser(e)), [S]),
+        N = I(
             c.gj8,
             l.filter((e) => !S.includes(e.id) && !E.includes(e.id))
         ),
@@ -140,36 +140,36 @@ function N() {
                   }),
         T = I(
             c.hGI,
-            P.filter((e) => null != e && !E.includes(e.id))
+            w.filter((e) => null != e && !E.includes(e.id))
         ),
         { enabled: A } = u.c.useExperiment({ location: 'FavoritesTooltip' }, { autoTrackExposure: !0 }),
-        R = I(A ? c.iWm : c.nG3, N);
+        R = I(A ? c.iWm : c.nG3, P);
     return (0, r.jsxs)(r.Fragment, {
-        children: [Z, w, T, R]
+        children: [Z, N, T, R]
     });
 }
-function P() {
+function w() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
                 className: l()(x.row, x.rowGuildName),
                 children: (0, r.jsx)('span', {
                     className: l()(x.guildNameText, x.guildNameTextLimitedSize),
-                    children: S.NW.string(S.t.wMWycn)
+                    children: S.intl.string(S.t.wMWycn)
                 })
             }),
-            (0, r.jsx)(N, {})
+            (0, r.jsx)(P, {})
         ]
     });
 }
-function w(e) {
+function N(e) {
     let { 'aria-label': t = !1, onShow: n, children: i } = e,
         l = (0, p.Q3)('FavoritesTooltip');
     return (0, r.jsx)(c.ua7, {
         hideOnClick: !0,
         spacing: l ? 12 : 20,
         position: 'right',
-        text: (0, r.jsx)(P, {}),
+        text: (0, r.jsx)(w, {}),
         'aria-label': t,
         tooltipClassName: E.listItemTooltip,
         onTooltipShow: n,

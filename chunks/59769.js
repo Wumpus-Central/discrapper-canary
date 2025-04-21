@@ -1,8 +1,8 @@
 n.d(t, { b: () => d }), n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(481060),
-    l = n(372129),
+    l = n(481060),
+    s = n(372129),
     a = n(375727),
     o = n(388032);
 let c = async (e, t, n) => {
@@ -14,15 +14,15 @@ let c = async (e, t, n) => {
     },
     d = () => {
         let [e, t] = i.useState(!1);
-        return (0, r.jsxs)(s.zxk, {
+        return (0, r.jsxs)(l.zxk, {
             tabIndex: -1,
-            size: s.zxk.Sizes.MEDIUM,
+            size: l.zxk.Sizes.MEDIUM,
             disabled: e,
             submitting: e,
             focusProps: { within: !0 },
             children: [
-                o.NW.string(o.t.DU0dy8),
-                (0, r.jsx)(l.Z, {
+                o.intl.string(o.t.DU0dy8),
+                (0, r.jsx)(s.Z, {
                     disabled: e,
                     tabIndex: 0,
                     onChange: c,

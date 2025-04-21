@@ -1,208 +1,208 @@
-n.d(t, { default: () => L }), n(388685);
-var i = n(200651),
-    d = n(192379),
-    r = n(442837),
-    a = n(481060),
-    l = n(933557),
-    s = n(156699),
-    _ = n(734893),
-    p = n(693196),
-    o = n(66999),
-    N = n(575830),
-    T = n(554747),
-    I = n(434404),
-    E = n(144140),
-    u = n(314897),
-    g = n(430824),
-    m = n(496675),
-    c = n(981631),
-    U = n(388032),
-    C = n(356407);
-let L = (e) => {
-    let { channel: t, onClose: n, onConfirm: L, transitionState: G } = e,
-        D = (0, l.ZP)(t, !0),
-        W = t.id,
-        y = t.isForumPost(),
-        O = (0, r.e7)([g.Z], () => g.Z.getGuild(t.getGuildId())),
-        z = (0, T.u1)(W),
-        { isSubscriptionGated: S } = (0, o.Z)(t.id),
-        A = (0, N.Z)(O, t),
-        [h, v] = d.useState(),
-        x = (0, r.e7)([u.default], () => t.isOwner(u.default.getId()), [t]),
-        f = (0, r.e7)([m.Z], () => m.Z.can(t.isThread() ? c.Plq.MANAGE_THREADS : c.Plq.MANAGE_CHANNELS, t), [t]),
-        R = (0, r.e7)(
-            [E.Z],
+e.d(n, { default: () => G }), e(388685);
+var i = e(200651),
+    l = e(192379),
+    d = e(442837),
+    r = e(481060),
+    a = e(933557),
+    s = e(156699),
+    _ = e(734893),
+    p = e(693196),
+    o = e(66999),
+    T = e(575830),
+    I = e(554747),
+    E = e(434404),
+    u = e(144140),
+    g = e(314897),
+    m = e(430824),
+    c = e(496675),
+    U = e(981631),
+    C = e(388032),
+    L = e(356407);
+let G = (t) => {
+    let { channel: n, onClose: e, onConfirm: G, transitionState: D } = t,
+        y = (0, a.ZP)(n, !0),
+        O = n.id,
+        z = n.isForumPost(),
+        S = (0, d.e7)([m.Z], () => m.Z.getGuild(n.getGuildId())),
+        A = (0, I.u1)(O),
+        { isSubscriptionGated: h } = (0, o.Z)(n.id),
+        v = (0, T.Z)(S, n),
+        [x, f] = l.useState(),
+        R = (0, d.e7)([g.default], () => n.isOwner(g.default.getId()), [n]),
+        N = (0, d.e7)([c.Z], () => c.Z.can(n.isThread() ? U.Plq.MANAGE_THREADS : U.Plq.MANAGE_CHANNELS, n), [n]),
+        H = (0, d.e7)(
+            [u.Z],
             () => {
-                var e;
-                return null != (e = E.Z.getCount(t.id)) ? e : 0;
+                var t;
+                return null != (t = u.Z.getCount(n.id)) ? t : 0;
             },
-            [t.id]
+            [n.id]
         ),
-        H = y && (f || (x && R < 1)),
-        B = z.length > 0 && (t.type === c.d4z.GUILD_VOICE || t.type === c.d4z.GUILD_STAGE_VOICE);
+        B = z && (N || (R && H < 1)),
+        M = A.length > 0 && (n.type === U.d4z.GUILD_VOICE || n.type === U.d4z.GUILD_STAGE_VOICE);
     if (
-        (d.useEffect(() => {
+        (l.useEffect(() => {
             (async () => {
-                if (!(await (0, s.C)(t.getGuildId(), W))) return v(_.j.DEFAULT);
-                let e = await (0, p.T)(t.getGuildId(), W);
-                if (null != e) return v(e);
+                if (!(await (0, s.C)(n.getGuildId(), O))) return f(_.j.DEFAULT);
+                let t = await (0, p.T)(n.getGuildId(), O);
+                if (null != t) return f(t);
             })();
-        }, [t, W]),
-        null != h)
+        }, [n, O]),
+        null != x)
     ) {
-        let e,
-            t = U.NW.string(U.t.iWlB6u);
+        let t,
+            n = C.intl.string(C.t.iWlB6u);
         return (
-            (e = h === _.j.TODO ? U.t['/rjozM'] : h === _.j.RESOURCE ? U.t.Nf5pt7 : U.t.ajiBwM),
-            (0, i.jsxs)(a.Y0X, {
-                transitionState: G,
-                'aria-label': U.NW.string(U.t['TY/V+P']),
+            (t = x === _.j.TODO ? C.t['/rjozM'] : x === _.j.RESOURCE ? C.t.Nf5pt7 : C.t.ajiBwM),
+            (0, i.jsxs)(r.Y0X, {
+                transitionState: D,
+                'aria-label': C.intl.string(C.t['TY/V+P']),
                 children: [
-                    (0, i.jsx)(a.xBx, {
+                    (0, i.jsx)(r.xBx, {
                         separator: !1,
-                        children: (0, i.jsx)(a.X6q, {
+                        children: (0, i.jsx)(r.X6q, {
                             variant: 'heading-lg/semibold',
-                            children: U.NW.string(U.t['TY/V+P'])
+                            children: C.intl.string(C.t['TY/V+P'])
                         })
                     }),
-                    (0, i.jsxs)(a.hzk, {
-                        className: C.modalContent,
+                    (0, i.jsxs)(r.hzk, {
+                        className: L.modalContent,
                         children: [
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(r.Text, {
                                 variant: 'text-md/normal',
-                                children: t
+                                children: n
                             }),
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(r.Text, {
                                 variant: 'text-md/normal',
-                                children: U.NW.format(e, {
+                                children: C.intl.format(t, {
                                     onClick: () => {
-                                        null != O && (I.Z.open(O.id, c.pNK.ONBOARDING), null == n || n());
+                                        null != S && (E.Z.open(S.id, U.pNK.ONBOARDING), null == e || e());
                                     }
                                 })
                             })
                         ]
                     }),
-                    (0, i.jsx)(a.mzw, {
-                        children: (0, i.jsx)(a.zxk, {
-                            onClick: n,
-                            children: U.NW.string(U.t.BddRzc)
+                    (0, i.jsx)(r.mzw, {
+                        children: (0, i.jsx)(r.zxk, {
+                            onClick: e,
+                            children: C.intl.string(C.t.BddRzc)
                         })
                     })
                 ]
             })
         );
     }
-    if (null == O) return null;
-    if (O.hasFeature(c.oNc.COMMUNITY) && (O.rulesChannelId === W || O.publicUpdatesChannelId === W)) {
-        let e = O.rulesChannelId === W ? U.NW.string(U.t.yjrZPj) : U.NW.string(U.t['1B1/ND']);
-        return (0, i.jsxs)(a.Y0X, {
-            transitionState: G,
-            'aria-label': U.NW.string(U.t['TY/V+P']),
+    if (null == S) return null;
+    if (S.hasFeature(U.oNc.COMMUNITY) && (S.rulesChannelId === O || S.publicUpdatesChannelId === O)) {
+        let t = S.rulesChannelId === O ? C.intl.string(C.t.yjrZPj) : C.intl.string(C.t['1B1/ND']);
+        return (0, i.jsxs)(r.Y0X, {
+            transitionState: D,
+            'aria-label': C.intl.string(C.t['TY/V+P']),
             children: [
-                (0, i.jsx)(a.xBx, {
+                (0, i.jsx)(r.xBx, {
                     separator: !1,
-                    children: (0, i.jsx)(a.X6q, {
+                    children: (0, i.jsx)(r.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: U.NW.string(U.t['TY/V+P'])
+                        children: C.intl.string(C.t['TY/V+P'])
                     })
                 }),
-                (0, i.jsxs)(a.hzk, {
+                (0, i.jsxs)(r.hzk, {
                     children: [
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(r.Text, {
                             variant: 'text-md/normal',
-                            className: C.__invalid_modalText,
-                            children: e
+                            className: L.__invalid_modalText,
+                            children: t
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(r.Text, {
                             variant: 'text-md/normal',
-                            className: C.__invalid_modalText,
-                            children: U.NW.format(U.t['cg6U//'], {
+                            className: L.__invalid_modalText,
+                            children: C.intl.format(C.t['cg6U//'], {
                                 onClick: () => {
-                                    I.Z.open(O.id, c.pNK.COMMUNITY), null == n || n();
+                                    E.Z.open(S.id, U.pNK.COMMUNITY), null == e || e();
                                 }
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(a.mzw, {
-                    children: (0, i.jsx)(a.zxk, {
-                        onClick: n,
-                        children: U.NW.string(U.t.BddRzc)
+                (0, i.jsx)(r.mzw, {
+                    children: (0, i.jsx)(r.zxk, {
+                        onClick: e,
+                        children: C.intl.string(C.t.BddRzc)
                     })
                 })
             ]
         });
     }
     {
-        let { deleteText: e, deleteBody: d } =
-            t.type === c.d4z.GUILD_CATEGORY
+        let { deleteText: t, deleteBody: l } =
+            n.type === U.d4z.GUILD_CATEGORY
                 ? {
-                      deleteText: U.NW.string(U.t.ifbXnJ),
-                      deleteBody: U.NW.format(U.t.a6Gz9P, { channelName: D })
+                      deleteText: C.intl.string(C.t.ifbXnJ),
+                      deleteBody: C.intl.format(C.t.a6Gz9P, { channelName: y })
                   }
-                : t.isForumPost()
+                : n.isForumPost()
                   ? {
-                        deleteText: H ? U.NW.string(U.t.nEOg1N) : U.NW.string(U.t.xwMqDw),
-                        deleteBody: H && x && !f ? U.NW.format(U.t['6/pY29'], { postName: D }) : H ? U.NW.format(U.t.su3voK, { postName: D }) : U.NW.string(U.t.RUHcys)
+                        deleteText: B ? C.intl.string(C.t.nEOg1N) : C.intl.string(C.t.xwMqDw),
+                        deleteBody: B && R && !N ? C.intl.format(C.t['6/pY29'], { postName: y }) : B ? C.intl.format(C.t.su3voK, { postName: y }) : C.intl.string(C.t.RUHcys)
                     }
-                  : t.isThread()
+                  : n.isThread()
                     ? {
-                          deleteText: U.NW.string(U.t.H7vTe3),
-                          deleteBody: U.NW.format(U.t.a6Gz9P, { channelName: D })
+                          deleteText: C.intl.string(C.t.H7vTe3),
+                          deleteBody: C.intl.format(C.t.a6Gz9P, { channelName: y })
                       }
-                    : S && A > 0
+                    : h && v > 0
                       ? {
-                            deleteText: U.NW.string(U.t['8D8Rsb']),
-                            deleteBody: U.NW.format(U.t['+qkiT0'], {
-                                channelName: D,
-                                numGuildRoleSubscriptionMembers: A
+                            deleteText: C.intl.string(C.t['8D8Rsb']),
+                            deleteBody: C.intl.format(C.t['+qkiT0'], {
+                                channelName: y,
+                                numGuildRoleSubscriptionMembers: v
                             })
                         }
                       : {
-                            deleteText: U.NW.string(U.t['8D8Rsb']),
-                            deleteBody: U.NW.format(U.t.a6Gz9P, { channelName: D })
+                            deleteText: C.intl.string(C.t['8D8Rsb']),
+                            deleteBody: C.intl.format(C.t.a6Gz9P, { channelName: y })
                         };
-        return (0, i.jsxs)(a.Y0X, {
-            transitionState: G,
-            'aria-label': e,
+        return (0, i.jsxs)(r.Y0X, {
+            transitionState: D,
+            'aria-label': t,
             children: [
-                (0, i.jsx)(a.xBx, {
+                (0, i.jsx)(r.xBx, {
                     separator: !1,
-                    children: (0, i.jsx)(a.X6q, {
+                    children: (0, i.jsx)(r.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: e
+                        children: t
                     })
                 }),
-                (0, i.jsxs)(a.hzk, {
-                    className: C.modalContent,
+                (0, i.jsxs)(r.hzk, {
+                    className: L.modalContent,
                     children: [
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(r.Text, {
                             variant: 'text-md/normal',
                             color: 'header-primary',
-                            children: d
+                            children: l
                         }),
-                        B
-                            ? (0, i.jsx)(a.Text, {
+                        M
+                            ? (0, i.jsx)(r.Text, {
                                   variant: 'text-md/normal',
                                   color: 'header-secondary',
-                                  className: C.warningText,
-                                  children: U.NW.format(U.t.Ze005O, { count: z.length })
+                                  className: L.warningText,
+                                  children: C.intl.format(C.t.Ze005O, { count: A.length })
                               })
                             : null
                     ]
                 }),
-                (0, i.jsxs)(a.mzw, {
+                (0, i.jsxs)(r.mzw, {
                     children: [
-                        (0, i.jsx)(a.zxk, {
-                            onClick: L,
-                            color: a.zxk.Colors.RED,
-                            children: e
+                        (0, i.jsx)(r.zxk, {
+                            onClick: G,
+                            color: r.zxk.Colors.RED,
+                            children: t
                         }),
-                        (0, i.jsx)(a.zxk, {
-                            onClick: n,
-                            look: a.zxk.Looks.LINK,
-                            color: a.zxk.Colors.PRIMARY,
-                            children: U.NW.string(U.t['ETE/oK'])
+                        (0, i.jsx)(r.zxk, {
+                            onClick: e,
+                            look: r.zxk.Looks.LINK,
+                            color: r.zxk.Colors.PRIMARY,
+                            children: C.intl.string(C.t['ETE/oK'])
                         })
                     ]
                 })

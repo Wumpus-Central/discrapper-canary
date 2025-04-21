@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(200651);
 n(192379);
-var i = n(120356),
-    l = n.n(i),
+var l = n(120356),
+    i = n.n(l),
     s = n(268146),
     a = n(481060),
     o = n(63063),
@@ -27,11 +27,11 @@ function x(e) {
           : (0, r.jsx)(a.Odl, { size: 'xs' });
 }
 function p(e) {
-    let { source: t, selected: n, twoClickVariant: i, onClick: s } = e,
+    let { source: t, selected: n, twoClickVariant: l, onClick: s } = e,
         { url: o, name: c } = t;
     return (0, r.jsxs)(a.P3F, {
         onClick: () => s(t),
-        className: l()(h.source, { [h.selectedSource]: n }),
+        className: i()(h.source, { [h.selectedSource]: n }),
         children: [
             (0, r.jsx)('div', {
                 className: h.sourcePreviewContainer,
@@ -43,7 +43,7 @@ function p(e) {
                             className: h.sourcePreviewImage,
                             alt: ''
                         }),
-                        !i &&
+                        !l &&
                             (0, r.jsx)('div', {
                                 className: h.sourceOverlay,
                                 children: (0, r.jsx)('div', {
@@ -51,7 +51,7 @@ function p(e) {
                                     children: (0, r.jsx)(a.Text, {
                                         variant: 'text-sm/medium',
                                         color: 'button-filled-white-text',
-                                        children: m.NW.string(m.t.z7WGho)
+                                        children: m.intl.string(m.t.z7WGho)
                                     })
                                 })
                             })
@@ -75,17 +75,17 @@ function p(e) {
 function g(e) {
     var t;
     let { onClick: n } = e,
-        { twoClickVariant: i } = (0, c.a)({
+        { twoClickVariant: l } = (0, c.a)({
             autoTrackExposure: !1,
             location: 'sourcegrid'
         }),
-        [{ windowSources: l, deviceSources: o, screenSources: f, sourceType: m, fetchingSources: x, selectedSource: g }] = (0, u.E_)();
+        [{ windowSources: i, deviceSources: o, screenSources: f, sourceType: m, fetchingSources: x, selectedSource: g }] = (0, u.E_)();
     return x
         ? (0, r.jsx)('div', {
               className: h.loading,
               children: (0, r.jsx)(a.$jN, {})
           })
-        : ((t = m === s.vA.WINDOW ? l : m === s.vA.SCREEN ? f : o),
+        : ((t = m === s.vA.WINDOW ? i : m === s.vA.SCREEN ? f : o),
           m === s.vA.CAMERA && 0 === t.length
               ? (0, r.jsx)(_, {})
               : (0, r.jsx)('div', {
@@ -97,7 +97,7 @@ function g(e) {
                                 onClick: n,
                                 source: e,
                                 selected: null != g && 'windowHandle' in g ? (0, d.Z)(e.id, g.windowHandle) : (null == g ? void 0 : g.id) === e.id,
-                                twoClickVariant: i
+                                twoClickVariant: l
                             },
                             e.id
                         )
@@ -117,17 +117,17 @@ function _() {
                 variant: 'text-lg/medium',
                 color: 'header-primary',
                 className: h.emptyHeader,
-                children: m.NW.string(f.Z['/z3YaW'])
+                children: m.intl.string(f.default['/z3YaW'])
             }),
             (0, r.jsx)(a.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-secondary',
                 className: h.emptyBody,
-                children: m.NW.string(f.Z.agwSGB)
+                children: m.intl.string(f.default.agwSGB)
             }),
             (0, r.jsx)(a.Text, {
                 variant: 'text-sm/semibold',
-                children: m.NW.format(f.Z.xpVzr6, { helpdeskURL: o.Z.getArticleURL(360040816151) })
+                children: m.intl.format(f.default.xpVzr6, { helpdeskURL: o.Z.getArticleURL(360040816151) })
             })
         ]
     });

@@ -20,13 +20,13 @@ let o = (e) => {
                 color: 'header-primary',
                 variant: 'text-lg/semibold',
                 className: a.header,
-                children: t ? l.NW.string(l.t.hsSHh4) : l.NW.string(l.t.Wf6iio)
+                children: t ? l.intl.string(l.t.hsSHh4) : l.intl.string(l.t.Wf6iio)
             }),
             (0, r.jsx)(i.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
                 className: a.__invalid_description,
-                children: t ? l.NW.string(l.t.FZ2J3d) : l.NW.string(l.t.TvHcv7)
+                children: t ? l.intl.string(l.t.FZ2J3d) : l.intl.string(l.t.TvHcv7)
             }),
             (0, r.jsx)('div', { className: a.gap }),
             (0, r.jsx)(i.zxk, {
@@ -69,7 +69,7 @@ let o = (e) => {
                     variant: 'text-sm/semibold',
                     className: a.addButton,
                     color: 'none',
-                    children: t ? l.NW.string(l.t.IyjHDw) : l.NW.string(l.t['KU/aNz'])
+                    children: t ? l.intl.string(l.t.IyjHDw) : l.intl.string(l.t['KU/aNz'])
                 })
             })
         ]

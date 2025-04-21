@@ -20,10 +20,10 @@ function I(e, t, n) {
 }
 let S = O.QZA.CLOSED,
     T = {};
-function N() {
+function A() {
     (S = O.QZA.OPEN), (T = {});
 }
-function A() {
+function N() {
     (S = O.QZA.CLOSED), (T = {});
 }
 function C() {
@@ -36,7 +36,7 @@ function R(e) {
 }
 function P(e) {
     let { section: t } = e;
-    return t === O.oAB.ACCOUNT && N();
+    return t === O.oAB.ACCOUNT && A();
 }
 function w(e) {
     let { avatar: t } = e;
@@ -94,11 +94,11 @@ function H(e) {
     let { avatarDecoration: t } = e;
     h = t;
 }
-function W(e) {
+function Y(e) {
     let { profileEffectId: t } = e;
     m = t;
 }
-function Y(e) {
+function W(e) {
     let { banner: t } = e;
     g = t;
 }
@@ -128,7 +128,7 @@ function ee() {
     a = void 0;
 }
 function et() {
-    Q(), $(), A();
+    Q(), $(), N();
 }
 class en extends (E = y.ZP.Store) {
     getFormState() {
@@ -214,11 +214,11 @@ class en extends (E = y.ZP.Store) {
 }
 I(en, 'displayName', 'UserSettingsAccountStore');
 let er = new en(v.Z, {
-    USER_SETTINGS_ACCOUNT_INIT: N,
-    USER_SETTINGS_MODAL_INIT: N,
-    USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: N,
+    USER_SETTINGS_ACCOUNT_INIT: A,
+    USER_SETTINGS_MODAL_INIT: A,
+    USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: A,
     USER_SETTINGS_MODAL_SET_SECTION: P,
-    USER_SETTINGS_ACCOUNT_CLOSE: A,
+    USER_SETTINGS_ACCOUNT_CLOSE: N,
     USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: et,
     USER_SETTINGS_ACCOUNT_SUBMIT: C,
     USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: R,
@@ -235,8 +235,8 @@ let er = new en(v.Z, {
     USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS: F,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: Z,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: H,
-    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: W,
-    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: Y,
+    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: Y,
+    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: W,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: V,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET: K,
     USER_SETTINGS_CLEAR_ERRORS: q,

@@ -15,11 +15,11 @@ let c = () => {
 function u() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('span', { children: l.NW.string(l.t.OJmNR0) }),
+            (0, r.jsx)('span', { children: l.intl.string(l.t.OJmNR0) }),
             (0, r.jsx)('br', {}),
             (0, r.jsx)('br', {}),
             (0, r.jsx)('span', {
-                children: l.NW.format(l.t.RCYeBA, {
+                children: l.intl.format(l.t.RCYeBA, {
                     blogHook: (e, t) =>
                         (0, r.jsx)(
                             i.eee,

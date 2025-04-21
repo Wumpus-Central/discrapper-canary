@@ -16,8 +16,8 @@ var l = t(200651),
     S = t(359110),
     I = t(814443),
     L = t(210887),
-    N = t(131704),
-    D = t(699516),
+    D = t(131704),
+    N = t(699516),
     h = t(944486),
     U = t(914010),
     P = t(594174),
@@ -59,7 +59,7 @@ function v(n) {
             let n = [];
             return (
                 o.forEachChannel((e) => {
-                    !1 !== (0, G.W)(e.id) && ((0, N.r8)(e.type) || (0, N.bw)(e.type)) && n.push(e);
+                    !1 !== (0, G.W)(e.id) && ((0, D.r8)(e.type) || (0, D.bw)(e.type)) && n.push(e);
                 }),
                 n.sort((n, e) => (n.id === d ? -1 : +(e.id === d)))
             );
@@ -73,7 +73,7 @@ function v(n) {
                       variant: 'eyebrow',
                       color: 'interactive-normal',
                       className: Z.contentPadding,
-                      children: m.NW.string(m.t.SOtDeX)
+                      children: m.intl.string(m.t.SOtDeX)
                   }),
                   (0, l.jsx)(_.aVo, {
                       sections: [u.length],
@@ -119,7 +119,7 @@ function b(n) {
                       lightSrc: p,
                       darkSrc: H
                   }),
-                  (0, l.jsx)(_.OZU, { note: m.NW.string(m.t['+Zg0lZ']) })
+                  (0, l.jsx)(_.OZU, { note: m.intl.string(m.t['+Zg0lZ']) })
               ]
           })
         : (0, l.jsx)(_.aVo, {
@@ -150,7 +150,7 @@ function b(n) {
                                   color: _.Ttl.BRAND,
                                   children: (0, l.jsx)(_.Text, {
                                       variant: 'text-sm/medium',
-                                      children: m.NW.string(m.t.RDE0SU)
+                                      children: m.intl.string(m.t.RDE0SU)
                                   })
                               })
                           ]
@@ -168,8 +168,8 @@ function M(n) {
     let { clip: e, editMetadata: t, transitionState: r, onClose: u } = n,
         [C, A] = i.useState(''),
         [T, L] = i.useState(!1),
-        [N, h] = i.useState(null),
-        R = (0, a.Wu)([D.Z], () => D.Z.getFriendIDs()),
+        [D, h] = i.useState(null),
+        R = (0, a.Wu)([N.Z], () => N.Z.getFriendIDs()),
         f = (0, a.Wu)(
             [I.Z, P.default],
             () =>
@@ -184,7 +184,7 @@ function M(n) {
         G = (0, a.e7)([U.Z], () => U.Z.getGuildId()),
         { analyticsLocations: H } = (0, c.ZP)(s.Z.CLIPS_SHARE_MODAL);
     async function p(n) {
-        let l = null != n ? n : N;
+        let l = null != n ? n : D;
         if (null != l) {
             L(!0);
             try {
@@ -213,13 +213,13 @@ function M(n) {
                 className: E()(Z.title, Z.contentPadding),
                 variant: 'heading-lg/semibold',
                 color: 'interactive-active',
-                children: m.NW.string(m.t['6EcIlJ'])
+                children: m.intl.string(m.t['6EcIlJ'])
             }),
             (0, l.jsx)(_.Text, {
                 variant: 'text-md/normal',
                 color: 'text-normal',
                 className: E()(Z.subtitle, Z.contentPadding),
-                children: m.NW.string(m.t.Ey7mOT)
+                children: m.intl.string(m.t.Ey7mOT)
             }),
             (0, l.jsx)(_.E1j, {
                 className: Z.searchBar,
@@ -229,7 +229,7 @@ function M(n) {
                 onClear: function () {
                     A('');
                 },
-                placeholder: m.NW.string(m.t.CmSHY2)
+                placeholder: m.intl.string(m.t.CmSHY2)
             }),
             (0, l.jsx)('div', { className: E()(Z.divider, Z.topDivider) }),
             (0, l.jsx)(b, {
@@ -241,24 +241,24 @@ function M(n) {
             null != G &&
                 (0, l.jsx)(v, {
                     guildId: G,
-                    selectedChannelId: N,
+                    selectedChannelId: D,
                     onSelectChannelId: h
                 }),
             (0, l.jsxs)(_.mzw, {
                 children: [
                     (0, l.jsx)(_.zxk, {
-                        disabled: null == N,
+                        disabled: null == D,
                         submitting: T,
                         color: _.zxk.Colors.BRAND,
                         onClick: () => p(),
-                        children: m.NW.string(m.t.I8lglZ)
+                        children: m.intl.string(m.t.I8lglZ)
                     }),
                     (0, l.jsx)(_.zxk, {
                         submitting: T,
                         look: _.iLD.LINK,
                         onClick: u,
                         color: _.Ttl.PRIMARY,
-                        children: m.NW.string(m.t['13/7kZ'])
+                        children: m.intl.string(m.t['13/7kZ'])
                     })
                 ]
             })

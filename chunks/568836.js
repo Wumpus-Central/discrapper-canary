@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    l = n(345898),
+    l = n.n(i),
+    a = n(345898),
     o = n(433962);
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -55,9 +55,9 @@ function c(e, t) {
 let u = 660,
     d = (e) =>
         (0, r.jsx)(
-            l.Z,
+            a.Z,
             c(s({}, e), {
-                className: a()(e.className, {
+                className: l()(e.className, {
                     [o.embedVertical]: !e.isHorizontal,
                     [o.embedHorizontal]: e.isHorizontal
                 })
@@ -72,11 +72,11 @@ let u = 660,
                     (0, r.jsx)('div', {
                         className: o.loadingDescription,
                         children: (0, r.jsx)('div', {
-                            className: a()(o.loadingBackgroundWrapper, { [o.loadingBackgroundWrapperHorizontal]: t }),
+                            className: l()(o.loadingBackgroundWrapper, { [o.loadingBackgroundWrapperHorizontal]: t }),
                             children: (0, r.jsx)('div', { className: o.loadingBackground })
                         })
                     }),
-                title: () => (0, r.jsx)('div', { className: a()(o.loadingImage, { [o.loadingImageHorizontal]: t }) })
+                title: () => (0, r.jsx)('div', { className: l()(o.loadingImage, { [o.loadingImageHorizontal]: t }) })
             })
         );
     };

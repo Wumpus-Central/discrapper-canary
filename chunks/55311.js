@@ -38,8 +38,8 @@ function s(e, t) {
                 })({}, e)),
                 (n = n =
                     {
-                        title: a.NW.string(a.t.QZ7WSU),
-                        body: a.NW.string(a.t.Tl9JpK)
+                        title: a.intl.string(a.t.QZ7WSU),
+                        body: a.intl.string(a.t.Tl9JpK)
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => m }), n(388685);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(442837),
-    a = n(481060),
-    l = n(747545),
+    l = n(481060),
+    a = n(747545),
     o = n(131951),
     c = n(388032),
     d = n(959963);
@@ -14,55 +14,55 @@ let u = {
 function m() {
     let e = o.Z.getCameraComponent(),
         t = (0, s.e7)([o.Z], () => o.Z.getVideoDeviceId()),
-        [n, m] = i.useState(!1),
+        [n, m] = r.useState(!1),
         g = (0, s.e7)([o.Z], () => o.Z.isVideoAvailable());
     return n
-        ? (0, r.jsx)('div', {
+        ? (0, i.jsx)('div', {
               className: d.cameraWrapper,
-              children: (0, r.jsxs)('div', {
+              children: (0, i.jsxs)('div', {
                   className: d.camera,
                   children: [
-                      (0, r.jsx)(e, {
+                      (0, i.jsx)(e, {
                           deviceId: t,
                           width: u.width,
                           height: u.height,
                           disabled: !n
                       }),
-                      (0, r.jsx)(l.S, {})
+                      (0, i.jsx)(a.S, {})
                   ]
               })
           })
-        : (0, r.jsxs)('div', {
+        : (0, i.jsxs)('div', {
               className: d.cameraWrapper,
               children: [
-                  (0, r.jsx)('div', { className: d.previewImage }),
-                  (0, r.jsx)(a.ua7, {
-                      text: g ? null : c.NW.string(c.t['8jSzSU']),
+                  (0, i.jsx)('div', { className: d.previewImage }),
+                  (0, i.jsx)(l.ua7, {
+                      text: g ? null : c.intl.string(c.t['8jSzSU']),
                       children: (e) => {
                           var t, n;
-                          return (0, r.jsx)(
-                              a.zxk,
+                          return (0, i.jsx)(
+                              l.zxk,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
-                                          r = Object.keys(n);
+                                          i = Object.keys(n);
                                       'function' == typeof Object.getOwnPropertySymbols &&
-                                          (r = r.concat(
+                                          (i = i.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                               })
                                           )),
-                                          r.forEach(function (t) {
-                                              var r;
-                                              (r = n[t]),
+                                          i.forEach(function (t) {
+                                              var i;
+                                              (i = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
-                                                            value: r,
+                                                            value: i,
                                                             enumerable: !0,
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = r);
+                                                      : (e[t] = i);
                                           });
                                   }
                                   return e;
@@ -71,15 +71,15 @@ function m() {
                                   {
                                       onClick: () => m(!0),
                                       disabled: !g,
-                                      children: c.NW.string(c.t.JIf4v7)
+                                      children: c.intl.string(c.t.JIf4v7)
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
-                                            var r = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, r);
+                                            var i = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, i);
                                         }
                                         return n;
                                     })(Object(n)).forEach(function (e) {

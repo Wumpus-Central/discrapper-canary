@@ -99,31 +99,31 @@ function Z(e) {
             isPreview: !0
         }),
         C = n === l.pC.AVATAR || n === l.pC.BANNER,
-        N = null != a,
-        h = (0, f.Z)(n === l.pC.AVATAR ? A.cd.ANIMATED_AVATAR_MODAL_UPSELL : A.cd.ANIMATED_BANNER_MODAL_UPSELL);
+        h = null != a,
+        T = (0, f.Z)(n === l.pC.AVATAR ? A.cd.ANIMATED_AVATAR_MODAL_UPSELL : A.cd.ANIMATED_BANNER_MODAL_UPSELL);
     return C
         ? (0, c.jsx)(
               p.Z,
               L(
                   {
-                      artURL: N ? void 0 : h,
-                      modalClassName: N ? R.modal : void 0,
-                      modalContentClassName: N ? R.modalContent : void 0,
+                      artURL: h ? void 0 : T,
+                      modalClassName: h ? R.modal : void 0,
+                      modalContentClassName: h ? R.modalContent : void 0,
                       type: n === l.pC.AVATAR ? A.cd.ANIMATED_AVATAR_MODAL_UPSELL : A.cd.ANIMATED_BANNER_MODAL_UPSELL,
-                      title: n === l.pC.AVATAR ? u.NW.string(u.t['X7tO6+']) : u.NW.string(u.t.zXPa2N),
-                      body: n === l.pC.AVATAR ? u.NW.string(u.t.ifCRdH) : u.NW.string(u.t.yQAnf3),
-                      glowUp: n === l.pC.AVATAR ? u.NW.string(u.t.ifCRdH) : u.NW.string(u.t.yQAnf3),
+                      title: n === l.pC.AVATAR ? u.intl.string(u.t['X7tO6+']) : u.intl.string(u.t.zXPa2N),
+                      body: n === l.pC.AVATAR ? u.intl.string(u.t.ifCRdH) : u.intl.string(u.t.yQAnf3),
+                      glowUp: n === l.pC.AVATAR ? u.intl.string(u.t.ifCRdH) : u.intl.string(u.t.yQAnf3),
                       onSecondaryClick: () => {
                           null == Z || Z(), (0, i.$)(r);
                       },
-                      secondaryCTA: u.NW.string(u.t.PcTCBw),
+                      secondaryCTA: u.intl.string(u.t.PcTCBw),
                       onClose: r,
                       enableArtBoxShadow: !1,
                       analyticsSource: b,
                       analyticsLocation: E,
                       hideBackButton: !0,
                       showEnhancedUpsell: !0,
-                      LeadingComponent: N
+                      LeadingComponent: h
                           ? (0, c.jsx)('div', {
                                 className: R.previewContainerParent,
                                 children: (0, c.jsx)(d.Z, {

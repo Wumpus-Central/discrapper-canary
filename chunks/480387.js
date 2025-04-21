@@ -3,34 +3,34 @@ n.d(t, {
     Zd: () => p,
     yD: () => g
 });
-var r = n(213919),
-    i = n(544891),
+var i = n(213919),
+    r = n(544891),
     s = n(570140),
-    a = n(893776),
-    l = n(710845),
+    l = n(893776),
+    a = n(710845),
     o = n(314897),
     c = n(726745),
     d = n(981631);
-let u = new l.Z('MultiAccountActionCreators');
+let u = new a.Z('MultiAccountActionCreators');
 function m() {
     let e = o.default.getId();
     c.Z.getUsers().forEach(async (t) => {
         let n,
-            { id: a } = t,
-            l = r.getToken(a);
-        if (null == l || '' === l)
+            { id: l } = t,
+            a = i.getToken(l);
+        if (null == a || '' === a)
             return void s.Z.dispatch({
                 type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE',
-                userId: a
+                userId: l
             });
         s.Z.dispatch({
             type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST',
-            userId: a
+            userId: l
         });
         try {
-            n = await i.tn.get({
+            n = await r.tn.get({
                 url: d.ANM.ME,
-                headers: { authorization: l },
+                headers: { authorization: a },
                 retries: 3,
                 rejectWithError: !1
             });
@@ -38,23 +38,23 @@ function m() {
             let e = (null == t ? void 0 : t.status) === 401 || (null == t ? void 0 : t.status) === 403;
             s.Z.dispatch({
                 type: e ? 'MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE' : 'MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS',
-                userId: a
+                userId: l
             });
             return;
         }
         s.Z.dispatch({
-            type: e === a ? 'CURRENT_USER_UPDATE' : 'USER_UPDATE',
+            type: e === l ? 'CURRENT_USER_UPDATE' : 'USER_UPDATE',
             user: n.body
         }),
             s.Z.dispatch({
                 type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS',
-                userId: a
+                userId: l
             });
     });
 }
 function g(e, t) {
     u.log('Switching account to '.concat(e), { switchSynchronously: t });
-    let n = r.getToken(e);
+    let n = i.getToken(e);
     return null == n
         ? (u.log('Switching accounts failed because there was no token'),
           s.Z.dispatch({
@@ -62,7 +62,7 @@ function g(e, t) {
               userId: e
           }),
           Promise.resolve())
-        : a.Z.switchAccountToken(n, t);
+        : l.Z.switchAccountToken(n, t);
 }
 function p(e) {
     s.Z.dispatch({

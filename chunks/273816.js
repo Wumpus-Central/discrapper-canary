@@ -63,11 +63,11 @@ function v(e) {
     (0, u.nU)();
     let _ = (0, a.e7)([p.Z], () => p.Z.getWindow(m.$J)),
         [E, x] = (0, u.m8)(v),
-        { currentFPS: I, averageFrameTime: j, timeSinceLastDrop: C, onResetFrameData: S, droppedFramesRef: N, renderedFrameCount: Z, bufferFramecountRef: w, frameCheckerEffect: P } = (0, u.d6)(!0, E, !0),
+        { currentFPS: I, averageFrameTime: j, timeSinceLastDrop: C, onResetFrameData: S, droppedFramesRef: Z, renderedFrameCount: N, bufferFramecountRef: w, frameCheckerEffect: P } = (0, u.d6)(!0, E, !0),
         [T, k, A] = (0, u.ZF)(v),
         [D, L] = (0, u.Y5)(T, P, _),
         R = performance.now() - x.current < u.MC,
-        W = k(j, w.current);
+        M = k(j, w.current);
     (0, c.ZP)(
         () => (
             D(),
@@ -76,11 +76,11 @@ function v(e) {
             }
         )
     );
-    let M = r.useCallback(() => {
+    let z = r.useCallback(() => {
             S(), A(), D();
         }, [S, A, D]),
-        [z, V] = r.useState(!0),
-        [U, G] = r.useState(!0),
+        [V, U] = r.useState(!0),
+        [W, G] = r.useState(!0),
         [F, B] = r.useState(!0),
         [H, Y] = r.useState(!0),
         [Q, K] = r.useState(!0);
@@ -89,7 +89,7 @@ function v(e) {
         : (0, i.jsxs)('div', {
               className: l()(g.panelGroup, !o && g.rightAligned),
               children: [
-                  (z || !t) &&
+                  (V || !t) &&
                       (0, i.jsxs)('div', {
                           className: g.measurement,
                           children: [
@@ -98,8 +98,8 @@ function v(e) {
                                       className: g.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
-                                          value: z,
-                                          onChange: (e, t) => V(t)
+                                          value: V,
+                                          onChange: (e, t) => U(t)
                                       })
                                   }),
                               (0, i.jsxs)(s.Text, {
@@ -119,7 +119,7 @@ function v(e) {
                               })
                           ]
                       }),
-                  (U || !t) &&
+                  (W || !t) &&
                       (0, i.jsxs)('div', {
                           className: g.measurement,
                           children: [
@@ -128,7 +128,7 @@ function v(e) {
                                       className: g.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
-                                          value: U,
+                                          value: W,
                                           onChange: (e, t) => G(t)
                                       })
                                   }),
@@ -173,14 +173,14 @@ function v(e) {
                                           tag: 'span',
                                           variant: 'code',
                                           color: C < 2 ? 'text-danger' : C < 5 ? 'text-warning' : 'text-primary',
-                                          children: N.current
+                                          children: Z.current
                                       }),
                                       (0, i.jsxs)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
                                           color: 'text-secondary',
                                           className: g.secondaryInfoText,
-                                          children: ['(', ((N.current / Z.current) * 100).toFixed(3), '%)']
+                                          children: ['(', ((Z.current / N.current) * 100).toFixed(3), '%)']
                                       })
                                   ]
                               })
@@ -210,7 +210,7 @@ function v(e) {
                                           tag: 'span',
                                           variant: 'code',
                                           color: 'text-primary',
-                                          children: Z.current.toFixed(0)
+                                          children: N.current.toFixed(0)
                                       })
                                   ]
                               })
@@ -246,8 +246,8 @@ function v(e) {
                                                       (0, i.jsxs)(s.Text, {
                                                           tag: 'span',
                                                           variant: 'code',
-                                                          color: W > 1 ? 'text-danger' : 'text-primary',
-                                                          children: [W.toFixed(2), 'ms']
+                                                          color: M > 1 ? 'text-danger' : 'text-primary',
+                                                          children: [M.toFixed(2), 'ms']
                                                       })
                                                   ]
                                               })
@@ -285,7 +285,7 @@ function v(e) {
                           className: g.bottomPanelButton,
                           children: (0, i.jsx)(h.Z, {
                               children: (0, i.jsx)(s.zxk, {
-                                  onClick: M,
+                                  onClick: z,
                                   children: 'Reset Frame Data'
                               })
                           })

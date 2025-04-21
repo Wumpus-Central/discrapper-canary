@@ -27,14 +27,14 @@ var r = n(997945),
     I = n(234912),
     S = n(405571),
     T = n(730886),
-    N = n(473974),
-    A = n(563856);
+    A = n(473974),
+    N = n(563856);
 let C = 60;
 function R() {
     return {
         id: r.aH.DEFAULT,
         iconSource: o,
-        name: i.NW.string(i.t.ANxkLy),
+        name: i.intl.string(i.t.ANxkLy),
         isPremium: !1
     };
 }
@@ -43,134 +43,134 @@ function P() {
         {
             id: r.Ru.BRAND_DARK,
             iconSource: u,
-            name: i.NW.string(i.t.gZEUBg),
+            name: i.intl.string(i.t.gZEUBg),
             isPremium: !0
         },
         {
             id: r.Ru.MANGA,
             iconSource: y,
             isPremium: !0,
-            name: i.NW.string(i.t.hGBbFx)
+            name: i.intl.string(i.t.hGBbFx)
         },
         {
             id: r.Ru.MATTE_DARK,
             iconSource: v,
             isPremium: !0,
-            name: i.NW.string(i.t.NkshQk)
+            name: i.intl.string(i.t.NkshQk)
         },
         {
             id: r.Ru.MATTE_LIGHT,
             iconSource: O,
-            name: i.NW.string(i.t.G2W309),
+            name: i.intl.string(i.t.G2W309),
             isPremium: !0
         },
         {
             id: r.Ru.PASTEL,
             iconSource: S,
             isPremium: !0,
-            name: i.NW.string(i.t.mTSkLS)
+            name: i.intl.string(i.t.mTSkLS)
         },
         {
             id: r.Ru.PIRATE,
             iconSource: T,
             isPremium: !0,
-            name: i.NW.string(i.t.EgWTY2)
+            name: i.intl.string(i.t.EgWTY2)
         },
         {
             id: r.Ru.CAMO,
             iconSource: d,
             isPremium: !0,
-            name: i.NW.string(i.t.RSKXOD)
+            name: i.intl.string(i.t.RSKXOD)
         },
         {
             id: r.Ru.SUNSET,
-            iconSource: N,
+            iconSource: A,
             isPremium: !0,
-            name: i.NW.string(i.t.ixdjPD)
+            name: i.intl.string(i.t.ixdjPD)
         },
         {
             id: r.Ru.GALAXY,
             iconSource: m,
             isPremium: !0,
-            name: i.NW.string(i.t.cb78Li)
+            name: i.intl.string(i.t.cb78Li)
         },
         {
             id: r.Ru.Y2K,
-            iconSource: A,
+            iconSource: N,
             isPremium: !0,
-            name: i.NW.string(i.t['s+KoXF'])
+            name: i.intl.string(i.t['s+KoXF'])
         },
         {
             id: r.Ru.CHERRY_BLOSSOM,
             iconSource: f,
             isPremium: !0,
-            name: i.NW.string(i.t['ta/5RE'])
+            name: i.intl.string(i.t['ta/5RE'])
         },
         {
             id: r.Ru.BEANIE,
             iconSource: s,
             isPremium: !0,
-            name: i.NW.string(i.t.IoLVi4)
+            name: i.intl.string(i.t.IoLVi4)
         },
         {
             id: r.Ru.GAMING,
             iconSource: g,
             isPremium: !0,
-            name: i.NW.string(i.t['2Tf+c3'])
+            name: i.intl.string(i.t['2Tf+c3'])
         },
         {
             id: r.Ru.CIRCUIT,
             iconSource: _,
             isPremium: !0,
-            name: i.NW.string(i.t.dUpxKS)
+            name: i.intl.string(i.t.dUpxKS)
         },
         {
             id: r.Ru.HOLO_WAVES,
             iconSource: E,
             isPremium: !0,
-            name: i.NW.string(i.t['9mg7g4'])
+            name: i.intl.string(i.t['9mg7g4'])
         },
         {
             id: r.Ru.BLUSH,
             iconSource: c,
             isPremium: !0,
-            name: i.NW.string(i.t.nmd90t)
+            name: i.intl.string(i.t.nmd90t)
         },
         {
             id: r.Ru.ANGRY,
             iconSource: a,
             isPremium: !0,
-            name: i.NW.string(i.t['9PUXpK'])
+            name: i.intl.string(i.t['9PUXpK'])
         },
         {
             id: r.Ru.CONTROLLER,
             iconSource: h,
             isPremium: !0,
-            name: i.NW.string(i.t['4QM2U1'])
+            name: i.intl.string(i.t['4QM2U1'])
         },
         {
             id: r.Ru.BLURPLE_TWILIGHT,
             iconSource: l,
             isPremium: !0,
-            name: i.NW.string(i.t.Mfoe3t)
+            name: i.intl.string(i.t.Mfoe3t)
         },
         {
             id: r.Ru.IN_RAINBOWS,
             iconSource: b,
             isPremium: !0,
-            name: i.NW.string(i.t.yxJB9P)
+            name: i.intl.string(i.t.yxJB9P)
         },
         {
             id: r.Ru.MIDNIGHT_PRISM,
             iconSource: I,
             isPremium: !0,
-            name: i.NW.string(i.t.nshUZW)
+            name: i.intl.string(i.t.nshUZW)
         },
         {
             id: r.Ru.COLOR_WAVE,
             iconSource: p,
             isPremium: !0,
-            name: i.NW.string(i.t.MWRYqq)
+            name: i.intl.string(i.t.MWRYqq)
         }
     ];
 }

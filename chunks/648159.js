@@ -8,7 +8,7 @@ function a() {
         l.useEffect(() => {
             r.isPlatformEmbedded ||
                 (0, i.EM)({
-                    messages: [s.NW.string(s.t.KIX3cn), s.NW.string(s.t['UbO+8v']), s.NW.string(s.t.MbySu7)],
+                    messages: [s.intl.string(s.t.KIX3cn), s.intl.string(s.t['UbO+8v']), s.intl.string(s.t.MbySu7)],
                     interval: 600,
                     count: 20,
                     onlyWhenBlurred: !0

@@ -66,19 +66,19 @@ class _ extends i.PureComponent {
     getTooltip(e, t) {
         switch (e.type) {
             case d.TzF.DONE:
-                if (t) return p.NW.string(p.t.atpo0d);
-                return p.NW.string(p.t.ZCw6zs);
+                if (t) return p.intl.string(p.t.atpo0d);
+                return p.intl.string(p.t.ZCw6zs);
             case d.TzF.CONFLICT:
             case d.TzF.ERROR:
-                return p.NW.string(p.t.ZCw6zs);
+                return p.intl.string(p.t.ZCw6zs);
             case d.TzF.PLANNING:
-                return p.NW.string(p.t.ERQ0VF);
+                return p.intl.string(p.t.ERQ0VF);
             case d.TzF.PREPARING:
-                return p.NW.string(p.t.n5feu7);
+                return p.intl.string(p.t.n5feu7);
             case d.TzF.PUSHING:
-                return p.NW.string(p.t.oCBh0N);
+                return p.intl.string(p.t.oCBh0N);
             case d.TzF.PULLING:
-                return p.NW.string(p.t.RTLNqK);
+                return p.intl.string(p.t.RTLNqK);
             default:
                 return null;
         }

@@ -66,13 +66,13 @@ function b(e, t) {
 }
 function y(e) {
     let { analyticsData: t, initialPlanId: n, breadcrumbSteps: r, handleStepChange: c, referralTrialOfferId: m, onReturn: E, continueSessionToInitialStep: y } = e,
-        { contextMetadata: O, step: I, paymentSources: S, paymentSourceId: T, setPaymentSourceId: N, purchaseError: A, setPurchaseError: C, purchaseErrorBlockRef: R, paymentAuthenticationState: P, selectedSkuId: w, activeSubscription: D, previousStepRef: L, setPurchaseState: x } = (0, d.JL)(),
+        { contextMetadata: O, step: I, paymentSources: S, paymentSourceId: T, setPaymentSourceId: A, purchaseError: N, setPurchaseError: C, purchaseErrorBlockRef: R, paymentAuthenticationState: P, selectedSkuId: w, activeSubscription: D, previousStepRef: L, setPurchaseState: x } = (0, d.JL)(),
         { isGift: M } = (0, u.wD)(),
         k = b(g({}, (0, s.fL)()), {
             paymentSources: S,
             paymentSourceId: T,
-            setPaymentSourceId: N,
-            purchaseError: A,
+            setPaymentSourceId: A,
+            purchaseError: N,
             setPurchaseError: C,
             purchaseErrorBlockRef: R,
             paymentAuthenticationState: P,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => F,
-    b: () => L
+    b: () => Z
 }),
     n(388685),
     n(314940);
@@ -30,8 +30,8 @@ var r = n(200651),
     S = n(456799),
     P = n(210851),
     E = n(602683),
-    N = n(916028),
-    T = n(749912),
+    T = n(916028),
+    N = n(749912),
     A = n(815183),
     R = n(899457),
     B = n(409667);
@@ -82,10 +82,10 @@ function D(e, t) {
         e
     );
 }
-let W = ['png', 'gif', 'webp'],
-    I = [...W, 'jpg', 'jpeg'],
-    M = Array.from(new Set([...I, 'gif', 'mp4', 'webm']));
-function L(e) {
+let I = ['png', 'gif', 'webp'],
+    M = [...I, 'jpg', 'jpeg'],
+    L = Array.from(new Set([...M, 'gif', 'mp4', 'webm']));
+function Z(e) {
     var t, n;
     return {
         code: 'PREVIEW-MODE-CODE',
@@ -96,7 +96,7 @@ function L(e) {
         claimedAt: null != (n = null == (t = e.userStatus) ? void 0 : t.claimedAt) ? n : ''
     };
 }
-function Z() {
+function W() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: r = null, claimedAt: o = null } = e;
     return {
@@ -184,7 +184,7 @@ let V = '1193992107035983872',
         targetedContent: []
     };
 function U() {
-    var e, t, s, d, u, k, L, V, U, H, F, z, X, K;
+    var e, t, s, d, u, k, Z, V, U, H, F, z, X, K;
     let [Y, G] = o.useState(Q),
         J = o.useCallback((e) => {
             G(D(q({}, e), { preview: !0 }));
@@ -298,7 +298,7 @@ function U() {
                 }),
                 (0, r.jsx)('div', {
                     className: B.fields,
-                    children: (0, r.jsx)(N.Z, {
+                    children: (0, r.jsx)(T.Z, {
                         onSelect: function (e) {
                             ea(e),
                                 null != e &&
@@ -325,7 +325,7 @@ function U() {
                 }),
                 (0, r.jsx)('div', {
                     className: B.fields,
-                    children: (0, r.jsx)(T.Z, {
+                    children: (0, r.jsx)(N.Z, {
                         taskDuration: eg,
                         taskConfig: Y.config.taskConfig,
                         onSelect: function (e) {
@@ -396,42 +396,42 @@ function U() {
                             title: 'Hero',
                             assetKey: 'hero',
                             onFileChange: el,
-                            filters: M,
+                            filters: L,
                             initialValue: Y.config.assets.hero
                         }),
                         (0, r.jsx)(P.Z, {
                             title: 'Hero Video (optional)',
                             assetKey: 'heroVideo',
                             onFileChange: el,
-                            filters: M,
+                            filters: L,
                             initialValue: null != (z = Y.config.assets.heroVideo) ? z : void 0
                         }),
                         (0, r.jsx)(P.Z, {
                             title: 'Quest Bar Hero',
                             assetKey: 'questBarHero',
                             onFileChange: el,
-                            filters: M,
+                            filters: L,
                             initialValue: Y.config.assets.questBarHero
                         }),
                         (0, r.jsx)(P.Z, {
                             title: 'Quest Bar Hero Video (optional)',
                             assetKey: 'questBarHeroVideo',
                             onFileChange: el,
-                            filters: M,
+                            filters: L,
                             initialValue: null != (X = Y.config.assets.questBarHeroVideo) ? X : void 0
                         }),
                         (0, r.jsx)(P.Z, {
                             title: 'Game Tile',
                             assetKey: 'gameTile',
                             onFileChange: el,
-                            filters: [...I, 'svg'],
+                            filters: [...M, 'svg'],
                             initialValue: Y.config.assets.gameTile
                         }),
                         (0, r.jsx)(P.Z, {
                             title: 'Logotype',
                             assetKey: 'logotype',
                             onFileChange: el,
-                            filters: [...W, 'svg'],
+                            filters: [...I, 'svg'],
                             initialValue: Y.config.assets.logotype
                         }),
                         ex &&
@@ -441,35 +441,35 @@ function U() {
                                         title: 'Quest Video',
                                         assetKey: 'videoPlayerVideo',
                                         onFileChange: ec,
-                                        filters: M,
+                                        filters: L,
                                         initialValue: null == (d = Y.config.videoMetadata) ? void 0 : d.assets.videoPlayerVideo
                                     }),
                                     (0, r.jsx)(P.Z, {
                                         title: 'Quest Video (Low Resolution)',
                                         assetKey: 'videoPlayerVideoLowRes',
                                         onFileChange: ec,
-                                        filters: M,
+                                        filters: L,
                                         initialValue: null == (u = Y.config.videoMetadata) ? void 0 : u.assets.videoPlayerVideoLowRes
                                     }),
                                     (0, r.jsx)(P.Z, {
                                         title: 'Video Player Thumbnail (optional)',
                                         assetKey: 'videoPlayerThumbnail',
                                         onFileChange: ec,
-                                        filters: I,
-                                        initialValue: null == (L = Y.config.videoMetadata) || null == (k = L.assets) ? void 0 : k.videoPlayerThumbnail
+                                        filters: M,
+                                        initialValue: null == (Z = Y.config.videoMetadata) || null == (k = Z.assets) ? void 0 : k.videoPlayerThumbnail
                                     }),
                                     (0, r.jsx)(P.Z, {
                                         title: 'Quest Bar Preview Video (optional)',
                                         assetKey: 'questBarPreviewVideo',
                                         onFileChange: ec,
-                                        filters: M,
+                                        filters: L,
                                         initialValue: null == (V = Y.config.videoMetadata) ? void 0 : V.assets.questBarPreviewVideo
                                     }),
                                     (0, r.jsx)(P.Z, {
                                         title: 'Quest Home Video (optional)',
                                         assetKey: 'questHomeVideo',
                                         onFileChange: ec,
-                                        filters: M,
+                                        filters: L,
                                         initialValue: null == (U = Y.config.videoMetadata) ? void 0 : U.assets.questHomeVideo
                                     })
                                 ]
@@ -533,7 +533,7 @@ function U() {
                                                             );
                                                         }
                                                     })(e, n, t),
-                                                filters: M,
+                                                filters: L,
                                                 initialValue: e.asset
                                             }),
                                         (0, r.jsxs)(p.xJW, {
@@ -590,12 +590,12 @@ function U() {
                                         J(D(q({}, Y), { userStatus: null }));
                                         break;
                                     case R.a.ENROLLED:
-                                        J(D(q({}, Y), { userStatus: Z({ enrolledAt: new Date().toISOString() }) }));
+                                        J(D(q({}, Y), { userStatus: W({ enrolledAt: new Date().toISOString() }) }));
                                         break;
                                     case R.a.COMPLETED_25:
                                         J(
                                             D(q({}, Y), {
-                                                userStatus: Z({
+                                                userStatus: W({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.25 * eg
                                                 })
@@ -605,7 +605,7 @@ function U() {
                                     case R.a.COMPLETED_50:
                                         J(
                                             D(q({}, Y), {
-                                                userStatus: Z({
+                                                userStatus: W({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.5 * eg
                                                 })
@@ -615,7 +615,7 @@ function U() {
                                     case R.a.COMPLETED_75:
                                         J(
                                             D(q({}, Y), {
-                                                userStatus: Z({
+                                                userStatus: W({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.75 * eg
                                                 })
@@ -625,7 +625,7 @@ function U() {
                                     case R.a.COMPLETED_100:
                                         J(
                                             D(q({}, Y), {
-                                                userStatus: Z({
+                                                userStatus: W({
                                                     completedAt: new Date().toISOString(),
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: eg
@@ -636,7 +636,7 @@ function U() {
                                     case R.a.CLAIMED:
                                         J(
                                             D(q({}, Y), {
-                                                userStatus: Z({
+                                                userStatus: W({
                                                     claimedAt: new Date().toISOString(),
                                                     completedAt: new Date().toISOString(),
                                                     enrolledAt: new Date().toISOString(),

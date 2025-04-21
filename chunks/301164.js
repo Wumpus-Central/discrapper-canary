@@ -61,7 +61,7 @@ function f(e) {
             }),
             (0, r.jsx)(o.zxk, {
                 className: d.closeButton,
-                'aria-label': u.NW.string(u.t.cpT0Cg),
+                'aria-label': u.intl.string(u.t.cpT0Cg),
                 look: o.zxk.Looks.BLANK,
                 size: o.zxk.Sizes.NONE,
                 onClick: () => {
@@ -79,14 +79,14 @@ function f(e) {
                     (0, r.jsx)(o.X6q, {
                         className: d.heading,
                         variant: 'heading-md/extrabold',
-                        children: u.NW.string(u.t.kQqTnp)
+                        children: u.intl.string(u.t.kQqTnp)
                     }),
                     (0, r.jsx)('div', {
                         className: d.infoContainer,
                         children: (0, r.jsx)(o.Text, {
                             className: d.infoText,
                             variant: 'text-sm/medium',
-                            children: u.NW.string(u.t.cxf5yM)
+                            children: u.intl.string(u.t.cxf5yM)
                         })
                     }),
                     (0, r.jsx)('div', {
@@ -97,7 +97,7 @@ function f(e) {
                             },
                             color: o.Ttl.WHITE,
                             className: d.button,
-                            children: u.NW.string(u.t.GBe9lJ)
+                            children: u.intl.string(u.t.GBe9lJ)
                         })
                     })
                 ]

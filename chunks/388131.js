@@ -4,9 +4,9 @@ n.d(t, {
 }),
     n(388685);
 var s = n(200651),
-    r = n(192379),
-    i = n(442837),
-    l = n(481060),
+    i = n(192379),
+    l = n(442837),
+    r = n(481060),
     a = n(741361),
     o = n(881052),
     d = n(911969),
@@ -14,28 +14,28 @@ var s = n(200651),
     h = n(600164),
     u = n(313201),
     p = n(592125),
-    N = n(430824),
-    m = n(700785),
-    g = n(146085),
-    C = n(71080),
+    m = n(430824),
+    g = n(700785),
+    C = n(146085),
+    N = n(71080),
     x = n(388032),
     I = n(441609);
 function E(e, t) {
     return {
         id: e,
         type: t,
-        deny: m.Hn,
-        allow: g.yP
+        deny: g.Hn,
+        allow: C.yP
     };
 }
 function j(e) {
-    let { transitionState: t, onClose: n, channelId: m } = e,
+    let { transitionState: t, onClose: n, channelId: g } = e,
         j = (0, u.Dt)(),
-        b = (0, i.e7)([p.Z], () => p.Z.getChannel(m)),
-        O = (0, i.e7)([N.Z], () => N.Z.getGuild(null == b ? void 0 : b.getGuildId())),
-        [f, S] = r.useState({}),
-        [v, A] = r.useState(!1),
-        [T, D] = r.useState(null);
+        b = (0, l.e7)([p.Z], () => p.Z.getChannel(g)),
+        O = (0, l.e7)([m.Z], () => m.Z.getGuild(null == b ? void 0 : b.getGuildId())),
+        [f, S] = i.useState({}),
+        [v, A] = i.useState(!1),
+        [T, D] = i.useState(null);
     if (null == b || null == O) return null;
     let L = async () => {
         A(!0);
@@ -48,7 +48,7 @@ function j(e) {
                     })
                     .map((e) => {
                         let { row: t } = e;
-                        return t.rowType === C.aC.ROLE ? E(t.id, d.BN.ROLE) : E(t.id, d.BN.MEMBER);
+                        return t.rowType === N.aC.ROLE ? E(t.id, d.BN.ROLE) : E(t.id, d.BN.MEMBER);
                     });
                 return (0, a.hw)(e.id, n, !0);
             })(b, f),
@@ -58,28 +58,28 @@ function j(e) {
             A(!1), D(e);
         }
     };
-    return (0, s.jsxs)(l.Y0X, {
+    return (0, s.jsxs)(r.Y0X, {
         transitionState: t,
         'aria-labelledby': j,
-        size: l.CgR.SMALL,
+        size: r.CgR.SMALL,
         className: I.modalRoot,
         children: [
-            (0, s.jsxs)(l.xBx, {
+            (0, s.jsxs)(r.xBx, {
                 separator: !1,
                 direction: h.Z.Direction.VERTICAL,
                 align: h.Z.Align.CENTER,
                 className: I.header,
                 children: [
-                    (0, s.jsx)(l.X6q, {
+                    (0, s.jsx)(r.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: x.NW.string(x.t.dMJ3Y2)
+                        children: x.intl.string(x.t.dMJ3Y2)
                     }),
-                    (0, s.jsxs)(l.Text, {
+                    (0, s.jsxs)(r.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         className: I.headerSubtitle,
                         children: [
-                            (0, s.jsx)(l.ewx, {
+                            (0, s.jsx)(r.ewx, {
                                 size: 'xs',
                                 color: 'currentColor',
                                 className: I.headerSubtitleIcon
@@ -92,30 +92,30 @@ function j(e) {
             (0, s.jsx)(c.U, {
                 guild: O,
                 channel: b,
-                permission: g.yP,
+                permission: C.yP,
                 pendingAdditions: f,
                 setPendingAdditions: S
             }),
             null != T
-                ? (0, s.jsx)(l.Text, {
+                ? (0, s.jsx)(r.Text, {
                       className: I.error,
                       variant: 'text-xs/normal',
                       color: 'text-danger',
                       children: T.getAnyErrorMessage()
                   })
                 : null,
-            (0, s.jsxs)(l.mzw, {
+            (0, s.jsxs)(r.mzw, {
                 children: [
-                    (0, s.jsx)(l.zxk, {
+                    (0, s.jsx)(r.zxk, {
                         onClick: L,
                         submitting: v,
-                        children: x.NW.string(x.t.OYkgVl)
+                        children: x.intl.string(x.t.OYkgVl)
                     }),
-                    (0, s.jsx)(l.zxk, {
-                        look: l.zxk.Looks.LINK,
-                        color: l.zxk.Colors.PRIMARY,
+                    (0, s.jsx)(r.zxk, {
+                        look: r.zxk.Looks.LINK,
+                        color: r.zxk.Colors.PRIMARY,
                         onClick: n,
-                        children: x.NW.string(x.t['ETE/oK'])
+                        children: x.intl.string(x.t['ETE/oK'])
                     })
                 ]
             })

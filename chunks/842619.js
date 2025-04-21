@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(e, { Z: () => g });
 var i,
     l,
     a,
@@ -23,7 +23,7 @@ let d = {},
 class f extends (a = r.ZP.Store) {
     areSlayerNotificationsSuppressed() {
         if (c.getCurrentConfig({ location: 'Store' }, { autoTrackExposure: !1 }).enabled) return !1;
-        for (let e in d) if (d[e] === s.default.getId()) return !0;
+        for (let t in d) if (d[t] === s.default.getId()) return !0;
         return !1;
     }
 }
@@ -37,10 +37,10 @@ class f extends (a = r.ZP.Store) {
           })
         : (f[i] = l);
 let g = new f(o.Z, {
-    RPC_APP_DISCONNECTED: function (e) {
-        delete d[e.socketId];
+    RPC_APP_DISCONNECTED: function (t) {
+        delete d[t.socketId];
     },
-    SET_RPC_NOTIFICATION_SETTINGS: function (e) {
-        delete d[e.socketId], e.suppressNotifications && (d[e.socketId] = e.targetUserId);
+    SET_RPC_NOTIFICATION_SETTINGS: function (t) {
+        delete d[t.socketId], t.suppressNotifications && (d[t.socketId] = t.targetUserId);
     }
 });

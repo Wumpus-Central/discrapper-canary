@@ -71,9 +71,9 @@ function S(e) {
         x = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
         E = i.useMemo(() => S.some((e) => e.isOwner(x)), [S, x]),
         I = (0, o.s9z)((e) => (0, o.DEQ)(e, _.PU)),
-        { analyticsLocations: N } = (0, a.ZP)(),
-        P = (0, u.Q3)('CreateJoinGuildButton'),
-        w = (0, r.jsx)(b.Z, {
+        { analyticsLocations: P } = (0, a.ZP)(),
+        w = (0, u.Q3)('CreateJoinGuildButton'),
+        N = (0, r.jsx)(b.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -84,17 +84,17 @@ function S(e) {
                               page: y.Sbl.CREATE_JOIN_GUILD_MODAL,
                               section: y.jXE.GUILD_CAP_UPSELL_MODAL
                           },
-                          analyticsLocations: N
+                          analyticsLocations: P
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
             selected: I,
             onContextMenu: j,
-            tooltip: O.NW.string(O.t.l5WIbW),
-            icon: P ? o.oFk : o.BRu
+            tooltip: O.intl.string(O.t.l5WIbW),
+            icon: w ? o.oFk : o.BRu
         });
     return t
-        ? w
+        ? N
         : (0, r.jsx)('div', {
               className: v.tutorialContainer,
               children: (0, r.jsxs)(p.Z, {
@@ -102,10 +102,10 @@ function S(e) {
                   inlineSpecs: C,
                   position: 'right',
                   children: [
-                      w,
+                      N,
                       null != n &&
                           (0, r.jsx)(m.ZP, {
-                              name: O.NW.string(O.t['45xjMz']),
+                              name: O.intl.string(O.t['45xjMz']),
                               targetNode: n,
                               below: !0,
                               noCombine: !0

@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => I,
-    xL: () => N
+    ZP: () => P,
+    xL: () => I
 });
 var r = n(200651),
     i = n(192379),
@@ -29,8 +29,8 @@ let O = (0, a.U)(() => ({ visible: !1 })),
             O.setState({ visible: e });
         });
     },
-    N = O;
-function I(e) {
+    I = O;
+function P(e) {
     let { context: t, entryPointCommandButtonRef: n, type: l } = e,
         { isInitialLoading: o, application: a, primaryEntryPointCommand: s } = (0, h.Z)({ context: t }),
         c = null == a ? void 0 : a.id,
@@ -58,7 +58,7 @@ function I(e) {
         [O]
     ),
     O)
-        ? (0, r.jsx)(P, {
+        ? (0, r.jsx)(S, {
               context: t,
               application: a,
               primaryEntryPointCommand: s,
@@ -68,7 +68,7 @@ function I(e) {
           })
         : null;
 }
-function P(e) {
+function S(e) {
     let { context: t, application: n, primaryEntryPointCommand: i, onOpenButtonPress: l, entryPointCommandButtonRef: a, type: s } = e,
         u = (0, C.Z)({ type: s }),
         {
@@ -98,10 +98,10 @@ function P(e) {
             analyticsLocations: x
         }),
         E = h ? c.zxk.Colors.RED : c.zxk.Colors.BRAND,
-        N = (0, y.Q3)('LoadedEntryPointCommandButton');
+        I = (0, y.Q3)('LoadedEntryPointCommandButton');
     return (0, r.jsx)(c.zxk, {
         className: o()(j.entryPointAppCommandButton, v.Id),
-        size: N ? c.zxk.Sizes.SMALL : c.zxk.Sizes.LARGE,
+        size: I ? c.zxk.Sizes.SMALL : c.zxk.Sizes.LARGE,
         color: E,
         submitting: d,
         onClick: O,

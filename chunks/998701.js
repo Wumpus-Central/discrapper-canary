@@ -23,15 +23,15 @@ class o {
     get displayMessage() {
         switch (this.code) {
             case 1:
-                return r.NW.string(r.t.dDMp2d);
+                return r.intl.string(r.t.dDMp2d);
             case 2:
-                return r.NW.string(r.t.XBxyvr);
+                return r.intl.string(r.t.XBxyvr);
             case 3:
-                return r.NW.string(r.t['6b6rws']);
+                return r.intl.string(r.t['6b6rws']);
             case 4:
-                return r.NW.string(r.t.VUc3tr);
+                return r.intl.string(r.t.VUc3tr);
             default:
-                return r.NW.string(r.t.VzHcSk);
+                return r.intl.string(r.t.VzHcSk);
         }
     }
     constructor(e) {

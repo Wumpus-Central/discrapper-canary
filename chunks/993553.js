@@ -1,9 +1,9 @@
 n.d(t, { Z: () => u }), n(388685);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(692547),
-    a = n(531057),
-    l = n(865824),
+    l = n(531057),
+    a = n(865824),
     o = n(481060),
     c = n(388032),
     d = n(244825);
@@ -14,88 +14,88 @@ function u(e) {
         g = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                i = (function (e, t) {
+                i,
+                r = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        i = {},
+                        i,
+                        r = {},
                         s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
-            return i;
+            return r;
         })(e, ['children', 'lineClamp']);
-    let [p, h] = i.useState(!1),
-        [f, b] = i.useState(null),
+    let [p, h] = r.useState(!1),
+        [f, b] = r.useState(null),
         _ =
             null != f &&
-            (0, r.jsx)('button', {
+            (0, i.jsx)('button', {
                 className: d.button,
                 onClick: () => h((e) => !e),
-                children: (0, r.jsxs)(o.Text, {
+                children: (0, i.jsxs)(o.Text, {
                     className: d.seeMore,
                     variant: 'text-sm/medium',
                     color: 'text-brand',
                     children: [
-                        p ? c.NW.string(c.t['JQX/PT']) : c.NW.string(c.t.Fbrd8P),
+                        p ? c.intl.string(c.t['JQX/PT']) : c.intl.string(c.t.Fbrd8P),
                         p
-                            ? (0, r.jsx)(l.u, {
+                            ? (0, i.jsx)(a.u, {
                                   color: s.Z.colors.TEXT_BRAND,
                                   size: 'xs'
                               })
-                            : (0, r.jsx)(a.C, {
+                            : (0, i.jsx)(l.C, {
                                   color: s.Z.colors.TEXT_BRAND,
                                   size: 'xs'
                               })
                     ]
                 })
             }),
-        [N, x] = i.useState(null),
-        E = i.useCallback(() => {
-            if (null == N) return;
-            let { scrollHeight: e, clientHeight: t } = N;
+        [x, E] = r.useState(null),
+        j = r.useCallback(() => {
+            if (null == x) return;
+            let { scrollHeight: e, clientHeight: t } = x;
             e > t &&
                 b({
                     truncatedHeight: t,
                     expandedHeight: e
                 });
-        }, [N]);
-    i.useEffect(() => {
-        requestAnimationFrame(E);
-    }, [E, u, m]);
-    let j = 'auto';
+        }, [x]);
+    r.useEffect(() => {
+        requestAnimationFrame(j);
+    }, [j, u, m]);
+    let C = 'auto';
     return (
-        null != f && (j = p ? ''.concat(f.expandedHeight, 'px') : ''.concat(f.truncatedHeight, 'px')),
-        (0, r.jsxs)('div', {
+        null != f && (C = p ? ''.concat(f.expandedHeight, 'px') : ''.concat(f.truncatedHeight, 'px')),
+        (0, i.jsxs)('div', {
             children: [
-                (0, r.jsx)(
+                (0, i.jsx)(
                     o.Text,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
+                                i = Object.keys(n);
                             'function' == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
+                                (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     })
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
+                                i.forEach(function (t) {
+                                    var i;
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                                  value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
+                                            : (e[t] = i);
                                 });
                         }
                         return e;
@@ -104,8 +104,8 @@ function u(e) {
                         {
                             className: d.content,
                             lineClamp: p ? void 0 : m,
-                            ref: x,
-                            style: { height: j },
+                            ref: E,
+                            style: { height: C },
                             children: u
                         }),
                     Object.getOwnPropertyDescriptors
@@ -113,8 +113,8 @@ function u(e) {
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
+                                  var i = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, i);
                               }
                               return n;
                           })(Object(n)).forEach(function (e) {

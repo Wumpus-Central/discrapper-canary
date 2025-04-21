@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Y }), n(388685);
+n.d(t, { Z: () => W }), n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(430824),
     S = n(572004),
     T = n(746878),
-    N = n(285063),
-    A = n(943362),
+    A = n(285063),
+    N = n(943362),
     C = n(551452),
     R = n(69626),
     P = n(142990),
@@ -194,7 +194,7 @@ function H(e) {
     });
 }
 n(484944);
-let W = {
+let Y = {
     blockQuote: {
         react: (e, t, n) =>
             (0, r.jsxs)(
@@ -317,7 +317,7 @@ let W = {
                 : null;
         }
     },
-    timestamp: { react: (e, t, n) => (0, r.jsx)(N.Z, { node: e }, n.key) },
+    timestamp: { react: (e, t, n) => (0, r.jsx)(A.Z, { node: e }, n.key) },
     list: {
         react: (e, t, n) => {
             let r = e.ordered ? 'ol' : 'ul',
@@ -378,15 +378,15 @@ let W = {
     },
     silentPrefix: { react: (e, t, n) => ('string' == typeof e.content ? (0, r.jsx)('span', { children: e.content }, n.key) : (0, r.jsx)('span', { children: t(e.content, n) }, n.key)) }
 };
-function Y(e) {
-    return B(U({}, W), {
+function W(e) {
+    return B(U({}, Y), {
         link: (0, w.Z)(e),
         devLink: (0, P.Z)(e),
         emoji: F(e),
         customEmoji: V(e),
         channelMention: (0, C.Z)(e),
         commandMention: (0, R.ZP)(e),
-        attachmentLink: (0, A.Z)(e),
+        attachmentLink: (0, N.Z)(e),
         shopLink: (0, D.Z)(e)
     });
 }

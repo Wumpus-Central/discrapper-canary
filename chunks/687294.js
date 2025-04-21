@@ -89,7 +89,7 @@ class g extends l.Z {
         return this.files.some((e) => e.error === c.evJ.ENTITY_TOO_LARGE);
     }
     setUploadingTextForUI() {
-        let e = 1 === this.files.length && null != this.files[0].filename ? this.files[0].filename : d.NW.formatToPlainString(d.t.D0noUl, { count: this.files.length }),
+        let e = 1 === this.files.length && null != this.files[0].filename ? this.files[0].filename : d.intl.formatToPlainString(d.t.D0noUl, { count: this.files.length }),
             t = this.files.some((e) => e.isImage),
             n = this.files.some((e) => e.isVideo),
             r = this._fileSize();

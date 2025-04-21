@@ -26,8 +26,8 @@ var r = n(200651),
     I = n(897291),
     S = n(466711),
     T = n(319417),
-    N = n(728386),
-    A = n(302195);
+    A = n(728386),
+    N = n(302195);
 function C(e) {
     let { disabled: t, channel: n } = e,
         { enabled: i } = _.O.useExperiment({ location: 'gift-button' }),
@@ -109,7 +109,7 @@ function R(e) {
             D &&
             G.push(
                 (0, r.jsx)(
-                    N.Z,
+                    A.Z,
                     {
                         disabled: I,
                         type: v
@@ -147,7 +147,7 @@ function R(e) {
     0 === G.length)
         ? null
         : (0, r.jsx)('div', {
-              className: A.buttons,
+              className: N.buttons,
               children: G
           });
 }

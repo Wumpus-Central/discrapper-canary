@@ -22,11 +22,11 @@ var r = n(200651),
     j = n(885110),
     O = n(797258),
     E = n(606304),
-    N = n(979651),
-    I = n(51144),
-    P = n(649739),
-    S = n(262317),
-    Z = n(981631),
+    I = n(979651),
+    P = n(51144),
+    S = n(649739),
+    Z = n(262317),
+    N = n(981631),
     T = n(524484),
     A = n(50259);
 let w = i.memo((e) => {
@@ -36,13 +36,13 @@ let w = i.memo((e) => {
         R = (0, a.e7)([_.default], () => _.default.getId() === w, [w]),
         [k, M, L] = (0, a.Wu)([C.Z], () => (R ? [!C.Z.isSupported() || C.Z.isSelfMute() || C.Z.isSelfMutedTemporarily(), C.Z.isSelfDeaf(), !1] : [!C.Z.isSupported() || C.Z.isLocalMute(w), !1, C.Z.isLocalVideoDisabled(w)]), [R, w]),
         D = (0, a.e7)([E.Z], () => E.Z.isPrioritySpeaker(w)),
-        W = (0, c.Z)({
+        U = (0, c.Z)({
             userId: w,
             checkSoundSharing: !0
         }),
-        U = (0, a.e7)([y.ZP], () => y.ZP.isGuestOrLurker(g.guild_id, w)),
-        B = (0, a.e7)([h.Z], () => h.Z.getGuildRingingUsers(g.id).has(w)),
-        G = (0, a.e7)(
+        B = (0, a.e7)([y.ZP], () => y.ZP.isGuestOrLurker(g.guild_id, w)),
+        G = (0, a.e7)([h.Z], () => h.Z.getGuildRingingUsers(g.id).has(w)),
+        F = (0, a.e7)(
             [u.ZP],
             () =>
                 u.ZP.getEmbeddedActivitiesForChannel(g.id).find((e) => {
@@ -51,21 +51,21 @@ let w = i.memo((e) => {
                 }),
             [w, g.id]
         ),
-        F = (0, p.Z)(null != G ? [G.applicationId] : []),
-        H = (0, P.Hr)('voice_users_eligibility_check', !1),
-        V = (0, a.e7)([v.Z, j.Z], () => (R ? j.Z.getActivities() : v.Z.getActivities(w, g.guild_id))).find((e) => null != e.application_id && e.type === Z.IIU.PLAYING),
-        z = (0, a.e7)([d.Z], () => ((null == V ? void 0 : V.application_id) != null ? d.Z.getApplication(null == V ? void 0 : V.application_id) : void 0));
-    null != z && P.ZP.trackExposure({ location: 'voice_users' });
+        H = (0, p.Z)(null != F ? [F.applicationId] : []),
+        V = (0, S.Hr)('voice_users_eligibility_check', !1),
+        z = (0, a.e7)([v.Z, j.Z], () => (R ? j.Z.getActivities() : v.Z.getActivities(w, g.guild_id))).find((e) => null != e.application_id && e.type === N.IIU.PLAYING),
+        W = (0, a.e7)([d.Z], () => ((null == z ? void 0 : z.application_id) != null ? d.Z.getApplication(null == z ? void 0 : z.application_id) : void 0));
+    null != W && S.ZP.trackExposure({ location: 'voice_users' });
     let [Y, q] = (0, a.Wu)([b.Z], () => [b.Z.getStreamForUser(w, g.getGuildId()), b.Z.getActiveStreamForUser(w, g.getGuildId())], [g, w]),
         K = (0, a.e7)([O.Z], () => O.Z.getSessionById(x)),
-        X = I.ZP.useName(s),
-        Q = (0, a.e7)([N.Z], () => N.Z.getVoicePlatformForChannel(g.id, w), [g.id, w]),
+        X = P.ZP.useName(s),
+        Q = (0, a.e7)([I.Z], () => I.Z.getVoicePlatformForChannel(g.id, w), [g.id, w]),
         J = (0, m.Eu)(g.id, w);
     return (0, r.jsx)(f.Z, {
         shakeLocation: T.oZ.VOICE_USER,
-        isShaking: W,
+        isShaking: U,
         children: (0, r.jsx)(
-            S.ZP,
+            Z.ZP,
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -94,23 +94,23 @@ let w = i.memo((e) => {
             (i = i =
                 {
                     nick: null != A ? A : X,
-                    canDrag: e.canDrag && !U,
+                    canDrag: e.canDrag && !B,
                     otherClientSessionType: null == K || null == (t = K.clientInfo) ? void 0 : t.os,
                     voicePlatform: Q,
                     localMute: k && !R,
                     localVideoDisabled: L,
                     mute: l || k,
                     deaf: o || M,
-                    speaking: W,
-                    ringing: B,
+                    speaking: U,
+                    ringing: G,
                     disconnected: J,
                     priority: D,
-                    embeddedApplication: F[0],
+                    embeddedApplication: H[0],
                     isStreaming: null != Y && Y.channelId === g.id,
-                    isWatching: null != q && q.state !== Z.jm8.ENDED,
-                    isGuest: U,
+                    isWatching: null != q && q.state !== N.jm8.ENDED,
+                    isGuest: B,
                     isSelf: _.default.getId() === s.id,
-                    application: H ? z : void 0
+                    application: V ? W : void 0
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -133,12 +133,12 @@ let R = [],
     k = function (e) {
         let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: h, location: f, numAudience: b, withGuildIcon: y = !1, className: C, children: j } = e,
             [O, E] = i.useState(null),
-            [N, I] = i.useState(!1),
-            P = i.useRef(null),
+            [I, P] = i.useState(!1),
+            S = i.useRef(null),
             T = (0, m.Es)(l.id, null != c ? c : R),
             k = i.useRef(
                 new s.sW(50, () => {
-                    E(P.current), (P.current = null);
+                    E(S.current), (S.current = null);
                 })
             ),
             M = i.useRef(
@@ -148,17 +148,17 @@ let R = [],
             ),
             L = i.useCallback(
                 (e) => {
-                    t && (I(!0), M.current.cancel(), (P.current = e), k.current.delay());
+                    t && (P(!0), M.current.cancel(), (S.current = e), k.current.delay());
                 },
                 [t]
             ),
             D = i.useCallback(
                 (e) => {
-                    t && (k.current.cancel(), O === e && (I(!1), M.current.delay()));
+                    t && (k.current.cancel(), O === e && (P(!1), M.current.delay()));
                 },
                 [t, O]
             ),
-            W = (0, a.Wu)([v.Z], () => {
+            U = (0, a.Wu)([v.Z], () => {
                 if (u) return [];
                 let e = new Set();
                 return (
@@ -172,8 +172,8 @@ let R = [],
                     Array.from(e)
                 );
             });
-        (0, p.Z)(W);
-        let U = (() => {
+        (0, p.Z)(U);
+        let B = (() => {
             if (null == T || 0 === T.length) return null;
             let e = (u && T.length > d + 1 ? T.slice(0, d) : T).map((e) => {
                 var t;
@@ -192,10 +192,10 @@ let R = [],
                         sessionId: null != (t = a.sessionId) ? t : '',
                         channel: l,
                         collapsed: u,
-                        canDrag: n && x.Z.can(Z.Plq.MOVE_MEMBERS, l),
+                        canDrag: n && x.Z.can(N.Plq.MOVE_MEMBERS, l),
                         showPreview: L,
                         hidePreview: D,
-                        previewIsOpen: N,
+                        previewIsOpen: I,
                         shouldShowPreview: O === i.id,
                         tabIndex: h,
                         location: f
@@ -206,16 +206,16 @@ let R = [],
             return (
                 null != b && b > 0
                     ? e.push(
-                          (0, r.jsx)(S.ul, {
+                          (0, r.jsx)(Z.ul, {
                               collapsed: u,
                               numAudience: b
                           })
                       )
-                    : u && T.length > d + 1 && e.push((0, r.jsx)(S.XX, { numUsers: T.length - d })),
+                    : u && T.length > d + 1 && e.push((0, r.jsx)(Z.XX, { numUsers: T.length - d })),
                 e
             );
         })();
-        return null == U && null == j
+        return null == B && null == j
             ? null
             : (0, r.jsxs)(g.eJ, {
                   className: o()(C, A.list, {
@@ -223,6 +223,6 @@ let R = [],
                       [A.withGuildIcon]: y
                   }),
                   collapsed: u,
-                  children: [U, j]
+                  children: [B, j]
               });
     };

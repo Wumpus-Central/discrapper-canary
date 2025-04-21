@@ -70,10 +70,10 @@ function I(e, t) {
 }
 let S = 'max_uses',
     T = 'User Invite Context Menu',
-    N = 'context_menu';
-function A(e, t) {
+    A = 'context_menu';
+function N(e, t) {
     s.Z.ensurePrivateChannel(e).then((e) => {
-        null != d.Z.getChannel(e) && c.Z.sendInvite(e, t, N, null);
+        null != d.Z.getChannel(e) && c.Z.sendInvite(e, t, A, null);
     });
 }
 function C(e) {
@@ -95,10 +95,10 @@ function C(e) {
             [n]
         ),
         [y, O] = i.useState({});
-    function N(e, t) {
+    function A(e, t) {
         let n = f.ZP.getDefaultChannel(e.id, !0, E.Plq.CREATE_INSTANT_INVITE);
         if (null != n) {
-            if ((O(I(v({}, y), { [e.id]: !0 })), !p.Z.can(E.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)) return void A(t, e.vanityURLCode);
+            if ((O(I(v({}, y), { [e.id]: !0 })), !p.Z.can(E.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)) return void N(t, e.vanityURLCode);
             l.ZP.createInvite(
                 n.id,
                 {
@@ -106,14 +106,14 @@ function C(e) {
                     unique: !0
                 },
                 T
-            ).then((e) => A(t, e.code));
+            ).then((e) => N(t, e.code));
         }
     }
     return (null == c ? void 0 : c.id) === t.id || t.bot || 0 === d.length || h.Z.isBlockedOrIgnored(t.id)
         ? null
         : (0, r.jsx)(o.sNh, {
               id: 'invite-to-server',
-              label: b.NW.string(b.t.Sd8Ix8),
+              label: b.intl.string(b.t.Sd8Ix8),
               children: d.map((e) =>
                   y[e.id]
                       ? (0, r.jsx)(
@@ -121,7 +121,7 @@ function C(e) {
                             {
                                 id: e.id,
                                 disabled: !0,
-                                label: b.NW.string(b.t.PuLLzM)
+                                label: b.intl.string(b.t.PuLLzM)
                             },
                             e.id
                         )
@@ -131,7 +131,7 @@ function C(e) {
                                 id: e.id,
                                 label: e.name,
                                 action: () => {
-                                    null == s || s(), N(e, t.id);
+                                    null == s || s(), A(e, t.id);
                                 }
                             },
                             e.id

@@ -19,13 +19,13 @@ function E() {
                       onClick: () => t(u.L.DISMISS),
                       noticeType: c.kVF.IGNORE_USER_FEEDBACK_NAGBAR
                   }),
-                  d.NW.string(d.t.XkeW9P),
+                  d.intl.string(d.t.XkeW9P),
                   (0, r.jsx)(l.NoS, {
                       onClick: () => {
                           (0, a.v3)(), t(u.L.TAKE_ACTION);
                       },
                       noticeType: c.kVF.IGNORE_USER_FEEDBACK_NAGBAR,
-                      children: d.NW.string(d.t.vcdNKi)
+                      children: d.intl.string(d.t.vcdNKi)
                   })
               ]
           });

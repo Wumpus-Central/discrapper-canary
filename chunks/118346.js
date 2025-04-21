@@ -42,24 +42,24 @@ function u() {
               className: c.verifyConfirmText,
               variant: 'text-sm/normal',
               color: 'text-positive',
-              children: a.NW.string(a.t.H3Q7U1)
+              children: a.intl.string(a.t.H3Q7U1)
           })
         : (0, r.jsx)(l.zxk, {
               size: l.zxk.Sizes.SMALL,
               submitting: e,
               onClick: m,
-              children: u ? a.NW.string(a.t.WnX4Jy) : a.NW.string(a.t['13ofGh'])
+              children: u ? a.intl.string(a.t.WnX4Jy) : a.intl.string(a.t['13ofGh'])
           });
 }
 function d() {
     return (0, r.jsx)(s.PU, {
         className: c.editableRequirementContainer,
         icon: l._XJ,
-        text: a.NW.string(a.t.c6EUJC),
-        footnote: a.NW.string(a.t['jMh+TU']),
+        text: a.intl.string(a.t.c6EUJC),
+        footnote: a.intl.string(a.t['jMh+TU']),
         meetsRequirement: !1,
         children: (0, r.jsx)(l.ua7, {
-            text: a.NW.string(a.t.mGlP39),
+            text: a.intl.string(a.t.mGlP39),
             children: (e) => {
                 var t, n;
                 return (0, r.jsx)(
@@ -93,7 +93,7 @@ function d() {
                         {
                             size: l.zxk.Sizes.SMALL,
                             disabled: !0,
-                            children: a.NW.string(a.t['13ofGh'])
+                            children: a.intl.string(a.t['13ofGh'])
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -115,12 +115,12 @@ function d() {
 }
 function m(e) {
     let { isUserVerified: t } = e,
-        n = t ? a.NW.string(a.t.qY1jHB) : a.NW.string(a.t.c6EUJC);
+        n = t ? a.intl.string(a.t.qY1jHB) : a.intl.string(a.t.c6EUJC);
     return (0, r.jsx)(s.PU, {
         className: c.editableRequirementContainer,
         icon: l._XJ,
         text: n,
-        footnote: a.NW.string(a.t['jMh+TU']),
+        footnote: a.intl.string(a.t['jMh+TU']),
         meetsRequirement: t,
         children: (0, r.jsx)(u, {})
     });

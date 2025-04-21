@@ -24,16 +24,16 @@ let b = function (e) {
         v = y && C === a.FN.TOOLBAR && x,
         [j, O] = (0, d.US)(v ? [l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE] : []),
         E = j === l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE,
-        N = i.useCallback(() => {
+        I = i.useCallback(() => {
             E && O(m.L.TAKE_ACTION), n === t.id ? (_(), p.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: 'close' })) : (b(t.id), p.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: 'open' }));
         }, [n, t.id, _, b, E, O]);
     return v
         ? (0, r.jsx)(h.JO, {
-              onClick: N,
-              tooltip: g.NW.string(g.t.GixvUl),
+              onClick: I,
+              tooltip: g.intl.string(g.t.GixvUl),
               icon: o.XBm,
               iconSize: 20,
-              'aria-label': g.NW.string(g.t.GixvUl),
+              'aria-label': g.intl.string(g.t.GixvUl),
               showBadge: E,
               selected: n === t.id
           })

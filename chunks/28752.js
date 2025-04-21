@@ -57,15 +57,15 @@ function E(e) {
                     {
                         type: a.Y.USER_INSTALL,
                         icon: o.oLu,
-                        title: d.NW.string(d.t.aCg60N),
-                        subtitle: d.NW.string(d.t.YeiIUV),
+                        title: d.intl.string(d.t.aCg60N),
+                        subtitle: d.intl.string(d.t.YeiIUV),
                         beta: !1
                     },
                     {
                         type: a.Y.GUILD_INSTALL,
                         icon: o.QTo,
-                        title: d.NW.string(d.t.E64YCw),
-                        subtitle: d.NW.string(d.t.bbtoKi),
+                        title: d.intl.string(d.t.E64YCw),
+                        subtitle: d.intl.string(d.t.bbtoKi),
                         beta: !1
                     }
                 ].filter((e) => {
@@ -84,7 +84,7 @@ function E(e) {
                         ? (0, r.jsx)(o.P3F, {
                               onClick: c,
                               className: f.closeButton,
-                              'aria-label': d.NW.string(d.t.cpT0Cg),
+                              'aria-label': d.intl.string(d.t.cpT0Cg),
                               children: (0, r.jsx)(o.Dio, {
                                   size: 'md',
                                   color: 'currentColor'
@@ -181,7 +181,7 @@ function y(e) {
                       children: (0, r.jsx)(o.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
-                          children: d.NW.string(d.t.LO4f0N)
+                          children: d.intl.string(d.t.LO4f0N)
                       })
                   })
                 : null
@@ -233,7 +233,7 @@ function O(e) {
                           (0, r.jsx)(o.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: O ? d.NW.string(d.t.u4YJ8v) : d.NW.string(d.t['N/tajI'])
+                              children: O ? d.intl.string(d.t.u4YJ8v) : d.intl.string(d.t['N/tajI'])
                           }),
                           O
                               ? (0, r.jsx)(o.u04, {

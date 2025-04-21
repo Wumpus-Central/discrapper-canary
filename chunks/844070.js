@@ -25,7 +25,7 @@ function u(e, t, n) {
     );
 }
 function d(e) {
-    u(e, c.NW.string(c.t['t3+Af3']), () => {
+    u(e, c.intl.string(c.t['t3+Af3']), () => {
         {
             let { openUserProfileModal: t } = n(171368);
             t({ userId: e.id });
@@ -34,7 +34,7 @@ function d(e) {
     });
 }
 function f(e) {
-    u(e, c.NW.string(c.t.MYr3KS), () => {
+    u(e, c.intl.string(c.t.MYr3KS), () => {
         r.Z.openPrivateChannel({ recipientIds: e.id });
     });
 }

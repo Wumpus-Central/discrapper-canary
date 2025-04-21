@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    s = n.n(i),
-    l = n(167533),
+    l = n.n(i),
+    s = n(167533),
     a = n(73346),
     o = n(169903),
     c = n(67152),
@@ -14,7 +14,7 @@ let g = [
         {
             key: 'tier_name',
             cellClassName: u.tierNameColumn,
-            renderHeader: () => d.NW.string(d.t['2Uiha2']),
+            renderHeader: () => d.intl.string(d.t['2Uiha2']),
             render(e) {
                 let t,
                     { subscriptionListing: n } = e;
@@ -39,14 +39,14 @@ let g = [
         },
         {
             key: 'subscribers',
-            cellClassName: s()(u.subscribersColumn, m.cellAlignRight),
-            renderHeader: () => d.NW.string(d.t.zu8go6),
+            cellClassName: l()(u.subscribersColumn, m.cellAlignRight),
+            renderHeader: () => d.intl.string(d.t.zu8go6),
             render: (e) => (0, r.jsx)(c.av, { children: e.roleMemberCount })
         },
         {
             key: 'price',
-            cellClassName: s()(u.priceColumn, m.cellAlignRight),
-            renderHeader: () => d.NW.string(d.t.NcrbWF),
+            cellClassName: l()(u.priceColumn, m.cellAlignRight),
+            renderHeader: () => d.intl.string(d.t.NcrbWF),
             render(e) {
                 let { subscriptionListing: t } = e,
                     n = null == t ? void 0 : t.subscription_plans[0],
@@ -59,13 +59,13 @@ let g = [
         let { totalPayoutsForPeriod: t, guildId: n, className: i } = e,
             a = (0, o.Z)(n, t);
         return (0, r.jsx)('div', {
-            className: s()(m.tableContainer, i),
-            children: (0, r.jsx)(l.Z, {
+            className: l()(m.tableContainer, i),
+            children: (0, r.jsx)(s.Z, {
                 columns: g,
                 data: a,
-                className: s()(m.table, u.table),
+                className: l()(m.table, u.table),
                 rowClassName: u.row,
-                headerClassName: s()(m.header, u.header)
+                headerClassName: l()(m.header, u.header)
             })
         });
     };

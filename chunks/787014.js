@@ -67,7 +67,7 @@ function p(e) {
     });
 }
 async function h(e, t) {
-    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: v, rtcRegion: O, videoQualityMode: I, autoArchiveDuration: S, locked: T, invitable: N, availableTags: A, defaultSortOrder: C, defaultForumLayout: R, defaultTagSetting: P, iconEmoji: w, themeColor: D } = t,
+    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: v, rtcRegion: O, videoQualityMode: I, autoArchiveDuration: S, locked: T, invitable: A, availableTags: N, defaultSortOrder: C, defaultForumLayout: R, defaultTagSetting: P, iconEmoji: w, themeColor: D } = t,
         L = s.Z.getChannel(e);
     return (
         i.Z.dispatch({ type: 'CHANNEL_SETTINGS_SUBMIT' }),
@@ -93,7 +93,7 @@ async function h(e, t) {
                     video_quality_mode: I,
                     auto_archive_duration: S,
                     locked: T,
-                    invitable: N,
+                    invitable: A,
                     default_reaction_emoji:
                         null != v
                             ? {
@@ -104,9 +104,9 @@ async function h(e, t) {
                               ? null
                               : void 0,
                     available_tags:
-                        null == A
+                        null == N
                             ? void 0
-                            : A.map((e) => ({
+                            : N.map((e) => ({
                                   id: e.id,
                                   name: e.name,
                                   emoji_id: e.emojiId,

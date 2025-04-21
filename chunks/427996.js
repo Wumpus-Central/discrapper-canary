@@ -33,12 +33,12 @@ function p(e) {
                 onClick: s.Y$,
                 children: (0, i.jsx)(a.Text, {
                     variant: 'text-md/semibold',
-                    children: u.NW.string(u.t['3TSGuL'])
+                    children: u.intl.string(u.t['3TSGuL'])
                 })
             }),
             p
                 ? (0, i.jsx)(a.xJW, {
-                      title: u.NW.string(u.t['9rnmen']),
+                      title: u.intl.string(u.t['9rnmen']),
                       children: (0, i.jsx)(a.oil, {
                           disabled: !p,
                           value: null != r ? r : void 0,

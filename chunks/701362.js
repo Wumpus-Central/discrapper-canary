@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(200651),
     l = n(192379),
     i = n(120356),
@@ -19,15 +19,15 @@ var r = n(200651),
     v = n(626135),
     S = n(102172),
     j = n(687516),
-    N = n(718805),
-    P = n(871118),
-    E = n(981631),
-    Z = n(388032),
-    I = n(768780);
-class x extends l.PureComponent {
+    P = n(718805),
+    E = n(871118),
+    Z = n(981631),
+    I = n(388032),
+    x = n(768780);
+class C extends l.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
-        v.default.track(E.rMx.OPEN_POPOUT, {
+        v.default.track(Z.rMx.OPEN_POPOUT, {
             type: 'Stream Preview',
             other_user_id: e.id,
             application_id: null != t ? t.id : null,
@@ -40,20 +40,20 @@ class x extends l.PureComponent {
         let { onWatch: t, activeStream: n, currentUserId: l, canWatch: i, unavailableReason: o } = this.props;
         return (0, r.jsxs)(s.P3F, {
             onClick: t,
-            className: I.previewContainer,
+            className: x.previewContainer,
             children: [
-                (0, r.jsx)(P.Z, {
-                    className: I.previewImage,
+                (0, r.jsx)(E.Z, {
+                    className: x.previewImage,
                     stream: e
                 }),
                 i
                     ? (0, r.jsx)('div', {
-                          className: I.previewHover,
+                          className: x.previewHover,
                           children: (0, r.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               color: 'none',
-                              className: I.white,
-                              children: (0, N.Z)(e, n, l, o)
+                              className: x.white,
+                              children: (0, P.Z)(e, n, l, o)
                           })
                       })
                     : null
@@ -65,13 +65,13 @@ class x extends l.PureComponent {
         return null == n
             ? null
             : (0, r.jsx)('div', {
-                  className: o()(I.streamPreviewWrapper, { [I.mounted]: l }),
+                  className: o()(x.streamPreviewWrapper, { [x.mounted]: l }),
                   children: (0, r.jsxs)('div', {
-                      className: I.streamPreview,
+                      className: x.streamPreview,
                       children: [
                           this.renderPreview(n),
                           (0, r.jsxs)('div', {
-                              className: I.body,
+                              className: x.body,
                               children: [
                                   null != e
                                       ? (0, r.jsx)(c.Z, {
@@ -83,8 +83,8 @@ class x extends l.PureComponent {
                                             channelId: n.channelId,
                                             analyticsParams: {
                                                 location: {
-                                                    page: E.ZY5.GO_LIVE_MODAL,
-                                                    section: E.jXE.STREAM_VIEWER_POPOUT
+                                                    page: Z.ZY5.GO_LIVE_MODAL,
+                                                    section: Z.jXE.STREAM_VIEWER_POPOUT
                                                 }
                                             },
                                             onAction: i
@@ -95,15 +95,15 @@ class x extends l.PureComponent {
                                             user: t,
                                             guildId: n.guildId,
                                             channelId: n.channelId,
-                                            className: I.activityActions,
-                                            color: I.watchButton,
+                                            className: x.activityActions,
+                                            color: x.watchButton,
                                             onAction: i
                                         }),
                                   !a &&
                                       (0, r.jsx)(p.Z, {
                                           type: p.Z.Types.INLINE,
-                                          className: I.protip,
-                                          children: __OVERLAY__ ? Z.NW.string(Z.t['YRdw7+']) : Z.NW.string(Z.t.CCTgbG)
+                                          className: x.protip,
+                                          children: __OVERLAY__ ? I.intl.string(I.t['YRdw7+']) : I.intl.string(I.t.CCTgbG)
                                       })
                               ]
                           })
@@ -112,7 +112,7 @@ class x extends l.PureComponent {
               });
     }
 }
-function C(e) {
+function T(e) {
     var t,
         n,
         { user: i, channel: o } = e,
@@ -138,14 +138,14 @@ function C(e) {
     let [c, d] = (0, a.Wu)([y.Z, b.Z, O.Z, f.Z], () => (0, S.p9)(o, y.Z, b.Z, O.Z, f.Z)),
         p = (0, a.e7)([m.Z], () => m.Z.getStreamForUser(i.id, o.getGuildId())),
         v = (0, a.e7)([m.Z], () => m.Z.getActiveStreamForApplicationStream(p)),
-        N = (0, a.e7)([g.default], () => g.default.getId()),
-        P = (0, j.Cf)(p),
-        E = (0, a.e7)([h.Z], () => (0, j.Um)(p, h.Z)),
-        Z = l.useMemo(() => ({ [o.guild_id]: [i.id] }), [o.guild_id, i.id]);
+        P = (0, a.e7)([g.default], () => g.default.getId()),
+        E = (0, j.Cf)(p),
+        Z = (0, a.e7)([h.Z], () => (0, j.Um)(p, h.Z)),
+        I = l.useMemo(() => ({ [o.guild_id]: [i.id] }), [o.guild_id, i.id]);
     return (
-        (0, u.$)(Z),
+        (0, u.$)(I),
         (0, r.jsx)(
-            x,
+            C,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -176,11 +176,11 @@ function C(e) {
                     canWatch: c,
                     unavailableReason: d,
                     user: i,
-                    streamApplication: P,
+                    streamApplication: E,
                     stream: p,
                     activeStream: v,
-                    currentUserId: N,
-                    activity: E
+                    currentUserId: P,
+                    activity: Z
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

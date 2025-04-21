@@ -90,7 +90,7 @@ function h(e) {
                         className: _.iconCaret,
                         'aria-hidden': !0
                     }),
-                    (0, r.jsx)('span', { children: f.NW.string(f.t['13/7kZ']) })
+                    (0, r.jsx)('span', { children: f.intl.string(f.t['13/7kZ']) })
                 ]
             },
             t
@@ -109,7 +109,7 @@ function h(e) {
                 disabled: n,
                 rel: 'next',
                 children: [
-                    (0, r.jsx)('span', { children: f.NW.string(f.t.PDTjLC) }),
+                    (0, r.jsx)('span', { children: f.intl.string(f.t.PDTjLC) }),
                     (0, r.jsx)(u.Fbu, {
                         size: 'md',
                         color: 'currentColor',
@@ -127,7 +127,7 @@ function h(e) {
             {
                 className: o()(_.roundButton, { [_.activeButton]: e.selected }),
                 onClick: e.selected ? void 0 : e.navigateToPage,
-                'aria-label': f.NW.formatToPlainString(f.t.IGMs8f, { pageNumber: e.targetPage }),
+                'aria-label': f.intl.formatToPlainString(f.t.IGMs8f, { pageNumber: e.targetPage }),
                 'aria-current': e.selected ? 'page' : void 0,
                 children: (0, r.jsx)('span', { children: e.targetPage })
             },

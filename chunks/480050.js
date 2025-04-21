@@ -83,7 +83,7 @@ function E(e) {
         O = i.useRef(null),
         I = (0, u.vV)(E, b, y, v),
         { width: S, height: T } = g(E, b, y, v, n),
-        [N, A] = (0, l.q_F)(() => ({
+        [A, N] = (0, l.q_F)(() => ({
             scale: 1,
             config: h
         })),
@@ -101,11 +101,11 @@ function E(e) {
     i.useEffect(() => {
         let e = c.Z.useReducedMotion;
         n
-            ? A({
+            ? N({
                   scale: I,
                   immediate: e
               })
-            : (A({
+            : (N({
                   scale: 1,
                   immediate: e
               }),
@@ -114,7 +114,7 @@ function E(e) {
                   y: 0,
                   immediate: e
               }));
-    }, [n, A, I, C, R]);
+    }, [n, N, I, C, R]);
     let M = (e, t) => {
             var n;
             let r = null == S ? (null == (n = O.current) ? void 0 : n.getBoundingClientRect()) : null,
@@ -161,7 +161,7 @@ function E(e) {
             [d.panning]: n && P,
             [d.pannable]: n && x
         }),
-        style: _({}, N, C),
+        style: _({}, A, C),
         children: t
     });
 }

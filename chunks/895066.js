@@ -276,8 +276,8 @@ class f {
                                 var r, a, o, s, l, c, d, f, _, p, h, m, g, E, b, y, v, O, I;
                                 let S = null != (r = e.transport.ping) ? r : 0,
                                     T = t.packetsReceived,
-                                    N = t.packetsLost,
-                                    A = t.bytesReceived,
+                                    A = t.packetsLost,
+                                    N = t.bytesReceived,
                                     C = t.nackCount,
                                     R = null != (a = t.fecPacketsReceived) ? a : 0,
                                     P = null != (o = t.fecPacketsDiscarded) ? o : 0,
@@ -309,15 +309,15 @@ class f {
                                     };
                                 if (null != this.inboundStats[n]) {
                                     let e = T - this.inboundStats[n].packetsReceived,
-                                        r = N - this.inboundStats[n].packetsLost,
+                                        r = A - this.inboundStats[n].packetsLost,
                                         a = 0,
                                         o = this.inboundStats[n].mosBuckets;
                                     e > 0 && r >= 0 && ((a = this.calculateMos(S + w, i().clamp(r / (e + r), 0, 1))), o[Math.floor(a)]++),
                                         (this.inboundStats[n] = u(
                                             {
                                                 packetsReceived: T,
-                                                bytesReceived: A,
-                                                packetsLost: N,
+                                                bytesReceived: N,
+                                                packetsLost: A,
                                                 nackCount: null != C ? C : 0,
                                                 fecPacketsReceived: R,
                                                 fecPacketsDiscarded: P,
@@ -345,8 +345,8 @@ class f {
                                     (this.inboundStats[n] = u(
                                         {
                                             packetsReceived: T,
-                                            bytesReceived: A,
-                                            packetsLost: N,
+                                            bytesReceived: N,
+                                            packetsLost: A,
                                             nackCount: null != C ? C : 0,
                                             fecPacketsReceived: R,
                                             fecPacketsDiscarded: P,

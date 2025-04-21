@@ -16,8 +16,8 @@ var l = t(120356),
     I = t(315416),
     f = t(765305),
     v = t(388032),
-    N = t(960689);
-function h(e) {
+    h = t(960689);
+function E(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             i = Object.keys(t);
@@ -42,7 +42,7 @@ function h(e) {
     }
     return e;
 }
-function E(e, n) {
+function C(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -60,20 +60,20 @@ function E(e, n) {
         e
     );
 }
-function C(e) {
+function b(e) {
     let { children: n } = e;
     return (0, i.jsxs)('div', {
-        className: N.emptyContainer,
+        className: h.emptyContainer,
         children: [
             (0, i.jsx)(c.Z, {
                 children: (0, i.jsx)('div', {
-                    className: N.circle,
+                    className: h.circle,
                     children: (0, i.jsx)(d.BFJ, {
                         size: 'custom',
                         color: 'currentColor',
                         height: 40,
                         width: 40,
-                        className: N.icon
+                        className: h.icon
                     })
                 })
             }),
@@ -81,50 +81,50 @@ function C(e) {
         ]
     });
 }
-function b() {
-    return (0, i.jsx)(C, {
+function x() {
+    return (0, i.jsx)(b, {
         children: (0, i.jsx)(d.X6q, {
             color: 'header-primary',
             variant: 'heading-xl/semibold',
-            className: N.title,
-            children: v.NW.string(v.t.hW0mBQ)
+            className: h.title,
+            children: v.intl.string(v.t.hW0mBQ)
         })
     });
 }
-function x() {
-    return (0, i.jsx)(C, {
+function T() {
+    return (0, i.jsx)(b, {
         children: (0, i.jsx)(d.X6q, {
             color: 'header-secondary',
             variant: 'heading-md/semibold',
-            className: N.errorTitle,
-            children: v.NW.string(v.t.obChXl)
+            className: h.errorTitle,
+            children: v.intl.string(v.t.obChXl)
         })
     });
 }
-function T(e) {
+function y(e) {
     let { count: n } = e;
     return (0, i.jsxs)('div', {
-        className: N.listRow,
+        className: h.listRow,
         children: [
             (0, i.jsx)('div', {
-                className: r()(N.listRowCircle, N.listAvatar),
+                className: r()(h.listRowCircle, h.listAvatar),
                 children: (0, i.jsx)(d.BFJ, {
                     size: 'custom',
                     color: 'currentColor',
                     height: 14,
                     width: 14,
-                    className: N.icon
+                    className: h.icon
                 })
             }),
             (0, i.jsx)(d.Text, {
                 color: 'text-normal',
                 variant: 'text-md/normal',
-                children: v.NW.format(v.t.BdQTfX, { userRemainCount: n })
+                children: v.intl.format(v.t.BdQTfX, { userRemainCount: n })
             })
         ]
     });
 }
-function y(e) {
+function L(e) {
     let { eventUser: n, guildId: t, onContextMenu: l } = e,
         o = (0, a.e7)([m.default], () => m.default.getUser(n.user_id)),
         c = (0, a.e7)([p.Z, g.Z, _.default], () => (n.user_id === _.default.getId() ? p.Z.getStatus() : g.Z.getStatus(n.user_id, t)), [n.user_id, t]);
@@ -140,10 +140,10 @@ function y(e) {
                   let { isShown: _ } = a;
                   return (0, i.jsxs)(
                       d.P3F,
-                      E(
-                          h(
+                      C(
+                          E(
                               {
-                                  className: r()(N.listRow, N.interactiveRow, { [N.selected]: _ }),
+                                  className: r()(h.listRow, h.interactiveRow, { [h.selected]: _ }),
                                   onContextMenu: (e) => l(e, o)
                               },
                               e
@@ -154,13 +154,13 @@ function y(e) {
                                       src: o.getAvatarURL(t, 24),
                                       'aria-label': o.username,
                                       size: d.EFr.SIZE_24,
-                                      className: N.listAvatar,
+                                      className: h.listAvatar,
                                       status: c
                                   }),
                                   (0, i.jsx)(s.Z, {
                                       user: o,
-                                      className: N.listName,
-                                      discriminatorClass: N.listDiscriminator,
+                                      className: h.listName,
+                                      discriminatorClass: h.listDiscriminator,
                                       nick: null == (u = n.member) ? void 0 : u.nick
                                   })
                               ]
@@ -170,14 +170,14 @@ function y(e) {
               }
           });
 }
-function L(e) {
+function N(e) {
     let { eventUsers: n, guildId: t, usersNotShownCount: l = 0, onContextMenu: r } = e;
     return (0, i.jsxs)(d.zJl, {
-        className: N.listScroller,
+        className: h.listScroller,
         children: [
             n.map((e) =>
                 (0, i.jsx)(
-                    y,
+                    L,
                     {
                         guildId: t,
                         eventUser: e,
@@ -186,14 +186,14 @@ function L(e) {
                     e.user_id
                 )
             ),
-            l > 0 && (0, i.jsx)(T, { count: l })
+            l > 0 && (0, i.jsx)(y, { count: l })
         ]
     });
 }
 function j(e) {
     let { children: n, style: t } = e;
     return (0, i.jsx)('div', {
-        className: N.container,
+        className: h.container,
         style: null != t ? t : {},
         children: n
     });
@@ -213,13 +213,13 @@ function D(e) {
             height: c,
             children: (0, i.jsx)(d.$jN, {
                 type: d.$jN.Type.SPINNING_CIRCLE,
-                className: N.spinner
+                className: h.spinner
             })
         });
     if (null != s && 0 === r.length)
         return (0, i.jsx)(S, {
             height: c,
-            children: (0, i.jsx)(x, {})
+            children: (0, i.jsx)(T, {})
         });
     let _ = 0;
     return (
@@ -227,16 +227,16 @@ function D(e) {
         0 === r.length
             ? (0, i.jsx)(S, {
                   height: c,
-                  children: (0, i.jsx)(b, {})
+                  children: (0, i.jsx)(x, {})
               })
             : (0, i.jsx)(j, {
-                  children: (0, i.jsx)(L, {
+                  children: (0, i.jsx)(N, {
                       eventUsers: r,
                       guildId: n.guild_id,
                       onContextMenu: function (e, n) {
                           (0, o.jW)(e, async () => {
                               let { default: e } = await Promise.all([t.e('79695'), t.e('69220'), t.e('70686')]).then(t.bind(t, 881351));
-                              return (t) => (0, i.jsx)(e, E(h({}, t), { user: n }));
+                              return (t) => (0, i.jsx)(e, C(E({}, t), { user: n }));
                           });
                       },
                       usersNotShownCount: _

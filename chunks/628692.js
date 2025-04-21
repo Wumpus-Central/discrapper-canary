@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => R,
-    ku: () => A
+    ku: () => N
 });
 var r = n(200651),
     i = n(192379),
@@ -73,7 +73,7 @@ function T(e, t) {
         e
     );
 }
-function N(e) {
+function A(e) {
     let { playSound: t } = e;
     return (0, r.jsxs)(l.P3F, {
         title: 'Risky Click',
@@ -90,14 +90,14 @@ function N(e) {
         ]
     });
 }
-function A(e) {
+function N(e) {
     let { soundId: t } = e,
         n = (0, s.e7)([h.Z], () => h.Z.getSoundById(t)),
         i = (0, d.V2)({ location: 'SoundboardMentionInline' }),
         { isPlaying: a, playSound: o } = (0, p.Z)(n);
     return i
         ? null == n
-            ? (0, r.jsx)(N, {})
+            ? (0, r.jsx)(A, {})
             : (0, r.jsx)(C, {
                   className: v.inlineTextArea,
                   isPlaying: a,
@@ -109,7 +109,7 @@ function A(e) {
 function C(e) {
     let { className: t, sound: n, playSound: i, isPlaying: a } = e,
         s = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
-        d = y.NW.formatToPlainString(y.t.tuMUJy, {
+        d = y.intl.formatToPlainString(y.t.tuMUJy, {
             emojiName: null == n ? void 0 : n.emojiName,
             soundName: null == n ? void 0 : n.name
         });
@@ -140,7 +140,7 @@ let R = function (e) {
             return null != (e = (0, f.Z)(t, n, a, o)) ? e : y;
         }, [t, n, a, o, y]),
         S = (0, s.e7)([b.Z], () => b.Z.getChannel(t)),
-        A = (0, u.X0)({ location: 'SoundboardMention' }),
+        N = (0, u.X0)({ location: 'SoundboardMention' }),
         R = i.useRef(null),
         { isPlaying: P, playSound: w } = (0, p.Z)(O, S),
         D = i.useCallback(async () => {
@@ -149,9 +149,9 @@ let R = function (e) {
                 null == (e = R.current) || e.addAnimation();
             }
         }, [w]);
-    return A
+    return N
         ? null == O
-            ? (0, r.jsx)(N, { playSound: D })
+            ? (0, r.jsx)(A, { playSound: D })
             : c && !d
               ? (0, r.jsx)(
                     g.ZP,

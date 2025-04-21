@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(642613), n(539854);
+n.d(t, { Z: () => I }), n(388685), n(642613), n(539854);
 var r,
     i = n(392711),
     l = n.n(i),
@@ -188,7 +188,7 @@ class E extends (r = o.ZP.Store) {
     }
 }
 y(E, 'displayName', 'ThreadMemberListStore');
-let N = new E(a.Z, {
+let I = new E(a.Z, {
     CONNECTION_OPEN: function () {
         C = {};
     },

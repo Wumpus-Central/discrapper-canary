@@ -64,10 +64,10 @@
         if (((h = Date.now()), (u = !1), (r = null), c > 2 || h - t - 50 < e)) for (i = 0, a = l.length; i < a && g.timeRemaining() > o; i++) (n = l.shift()), m++, n && n(g);
         l.length ? S() : (c = 0);
     }
-    function N(e) {
+    function A(e) {
         return p++, l.push(e), S(), p;
     }
-    function A(e) {
+    function N(e) {
         var t = e - 1 - m;
         l[t] && (l[t] = null);
     }
@@ -95,8 +95,8 @@
             })(a.requestIdleCallback);
         }
     else
-        (a.requestIdleCallback = N),
-            (a.cancelIdleCallback = A),
+        (a.requestIdleCallback = A),
+            (a.cancelIdleCallback = N),
             a.document &&
                 document.addEventListener &&
                 (a.addEventListener('scroll', v, !0),
@@ -116,7 +116,7 @@
                         attributes: !0
                     }));
     return {
-        request: N,
-        cancel: A
+        request: A,
+        cancel: N
     };
 });

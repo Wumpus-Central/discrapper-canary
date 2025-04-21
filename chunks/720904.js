@@ -1,9 +1,9 @@
-n.d(t, { Z: () => S }), n(781311);
-var r = n(200651);
+n.d(t, { Z: () => P }), n(781311);
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    a = n.n(i),
-    l = n(442837),
+var r = n(120356),
+    l = n.n(r),
+    a = n(442837),
     o = n(481060),
     s = n(543241),
     c = n(222677),
@@ -20,29 +20,29 @@ var i = n(120356),
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
 }
-function N(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -50,8 +50,8 @@ function N(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -60,42 +60,42 @@ function N(e, t) {
         e
     );
 }
-let v = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
-function j(e) {
+let j = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
+function S(e) {
     var t;
-    let { emoji: n, isFocused: i } = e,
-        { animated: l, src: s, surrogates: c } = n;
+    let { emoji: n, isFocused: r } = e,
+        { animated: a, src: s, surrogates: c } = n;
     return (
         null == s && null != n.id
             ? (s = m.ZP.getEmojiURL({
                   id: n.id,
-                  animated: !!l,
+                  animated: !!a,
                   size: 20
               }))
             : null == s && (s = b.ZP.getURL(c)),
-        (0, r.jsx)(
+        (0, i.jsx)(
             o.ua7,
             {
                 text: n.allNamesString,
                 hideOnClick: !0,
                 spacing: 16,
-                forceOpen: i,
+                forceOpen: r,
                 children: (e) =>
-                    (0, r.jsx)(
+                    (0, i.jsx)(
                         'div',
-                        N(
+                        v(
                             E(
                                 {
-                                    'aria-label': O.NW.formatToPlainString(O.t['/iYSo6'], { emojiName: n.name }),
-                                    className: a()(y.button, { [y.focused]: i })
+                                    'aria-label': O.intl.formatToPlainString(O.t['/iYSo6'], { emojiName: n.name }),
+                                    className: l()(y.button, { [y.focused]: r })
                                 },
                                 e
                             ),
                             {
                                 children:
                                     null == s || '' === s.trim()
-                                        ? (0, r.jsx)('span', N(E({ className: a()('emoji', 'emoji-text', y.icon) }, e), { children: c }))
-                                        : (0, r.jsx)('img', {
+                                        ? (0, i.jsx)('span', v(E({ className: l()('emoji', 'emoji-text', y.icon) }, e), { children: c }))
+                                        : (0, i.jsx)('img', {
                                               className: y.icon,
                                               src: s,
                                               alt: ''
@@ -108,11 +108,11 @@ function j(e) {
         )
     );
 }
-function S(e, t) {
+function P(e, t) {
     let n = (0, s.MZ)(t.guild_id).filter((e) => {
         var n;
         return (
-            !(e.useSpriteSheet && v.indexOf(null != (n = e.uniqueName) ? n : '') >= 0) &&
+            !(e.useSpriteSheet && j.indexOf(null != (n = e.uniqueName) ? n : '') >= 0) &&
             !b.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: t,
@@ -121,24 +121,24 @@ function S(e, t) {
         );
     });
     n.length > 4 && (n.length = 4);
-    let i = f.nc.useSetting(),
-        a = (0, d.$R)(t),
-        m = (0, l.e7)([g.Z], () => i && a && (t.isPrivate() || g.Z.can(h.Plq.ADD_REACTIONS, t)), [t, a, i]),
+    let r = f.nc.useSetting(),
+        l = (0, d.$R)(t),
+        m = (0, a.e7)([g.Z], () => r && l && (t.isPrivate() || g.Z.can(h.Plq.ADD_REACTIONS, t)), [t, l, r]),
         O = (n) => {
             (0, c.rU)(t.id, e.id, (0, u.g1)(n), c.TW.MESSAGE_CONTEXT_MENU);
         };
     return m && n.length > 0
-        ? (0, r.jsx)(o.kSQ, {
+        ? (0, i.jsx)(o.kSQ, {
               className: y.wrapper,
               children: n.map((e, t) => {
                   var n;
-                  return (0, r.jsx)(
+                  return (0, i.jsx)(
                       o.sNh,
                       {
                           id: 'quickreact-'.concat(null != (n = e.id) ? n : t),
                           render: (t) => {
                               let { isFocused: n } = t;
-                              return (0, r.jsx)(j, {
+                              return (0, i.jsx)(S, {
                                   emoji: e,
                                   isFocused: n
                               });

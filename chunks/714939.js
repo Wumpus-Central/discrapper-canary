@@ -2,8 +2,8 @@ n.d(t, { Z: () => o }), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(259580),
-    l = n(388032),
+    l = n(259580),
+    s = n(388032),
     a = n(70713);
 function o(e) {
     let { role: t, onClick: n } = e;
@@ -27,18 +27,18 @@ function o(e) {
                         className: a.label,
                         color: 'none',
                         variant: 'text-md/bold',
-                        children: l.NW.string(l.t.yiaoNj)
+                        children: s.intl.string(s.t.yiaoNj)
                     }),
                     (0, r.jsxs)(i.Text, {
                         color: 'none',
                         variant: 'text-xs/normal',
-                        children: [t.name, ' \u2022 ', l.NW.string(l.t.JwYI3N)]
+                        children: [t.name, ' \u2022 ', s.intl.string(s.t.JwYI3N)]
                     })
                 ]
             }),
-            (0, r.jsx)(s.Z, {
+            (0, r.jsx)(l.Z, {
                 className: a.arrow,
-                direction: s.Z.Directions.RIGHT
+                direction: l.Z.Directions.RIGHT
             })
         ]
     });

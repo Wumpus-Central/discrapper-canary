@@ -6,17 +6,17 @@ function a(e) {
         let t = Math.floor(e / r.Z.Seconds.HOUR),
             n = Math.floor((e - t * r.Z.Seconds.HOUR) / r.Z.Seconds.MINUTE),
             a = e - t * r.Z.Seconds.HOUR - n * r.Z.Seconds.MINUTE;
-        return i.NW.formatToPlainString(i.t['3hz51N'], {
+        return i.intl.formatToPlainString(i.t['3hz51N'], {
             hours: t,
             minutes: n,
             seconds: a
         });
     }
-    if (!(e >= 60)) return i.NW.formatToPlainString(i.t.IWntYm, { seconds: e });
+    if (!(e >= 60)) return i.intl.formatToPlainString(i.t.IWntYm, { seconds: e });
     {
         let t = Math.floor(e / 60),
             n = e - 60 * t;
-        return i.NW.formatToPlainString(i.t.sY3wlJ, {
+        return i.intl.formatToPlainString(i.t.sY3wlJ, {
             minutes: t,
             seconds: n
         });

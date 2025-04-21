@@ -56,11 +56,11 @@ function h() {
                               c.default,
                               p(
                                   {
-                                      title: f.NW.string(f.t.NYklho),
-                                      body: f.NW.string(f.t.EJ26Oj),
+                                      title: f.intl.string(f.t.NYklho),
+                                      body: f.intl.string(f.t.EJ26Oj),
                                       onCancel: _,
-                                      cancelText: f.NW.string(f.t.UYW0d3),
-                                      confirmText: f.NW.string(f.t.E3Y7ND),
+                                      cancelText: f.intl.string(f.t.UYW0d3),
+                                      confirmText: f.intl.string(f.t.E3Y7ND),
                                       onConfirm: () => {
                                           s.Z.setMode(d.pM4.PUSH_TO_TALK), _();
                                       }

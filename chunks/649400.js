@@ -1,4 +1,4 @@
-t.d(n, { default: () => f });
+t.d(e, { default: () => f });
 var r = t(200651);
 t(192379);
 var l = t(481060),
@@ -11,19 +11,19 @@ var l = t(481060),
     b = t(367722),
     d = t(388032);
 let f = (0, c.Z)(
-    function (e) {
-        let { channel: n, guild: t, onSelect: c } = e,
-            o = (0, s.Z)(n),
-            f = (0, b.Z)(n, t),
-            p = (0, u.Z)(n),
+    function (n) {
+        let { channel: e, guild: t, onSelect: c } = n,
+            o = (0, s.Z)(e),
+            f = (0, b.Z)(e, t),
+            p = (0, u.Z)(e),
             E = (0, a.Z)({
-                id: n.id,
-                label: d.NW.string(d.t.gFHI3t)
+                id: e.id,
+                label: d.intl.string(d.t.gFHI3t)
             });
         return (0, r.jsxs)(l.v2r, {
             navId: 'channel-context',
             onClose: i.Zy,
-            'aria-label': d.NW.string(d.t.Xm41aW),
+            'aria-label': d.intl.string(d.t.Xm41aW),
             onSelect: c,
             children: [(0, r.jsx)(l.kSQ, { children: o }), (0, r.jsx)(l.kSQ, { children: f }), (0, r.jsx)(l.kSQ, { children: p }), (0, r.jsx)(l.kSQ, { children: E })]
         });

@@ -5,8 +5,8 @@ var a = r(952265),
     o = r(174609),
     c = r(790527),
     i = r(703656),
-    s = r(626135),
-    l = r(981631),
+    l = r(626135),
+    s = r(981631),
     u = r(474936),
     p = r(388032),
     d = r(309368);
@@ -36,8 +36,8 @@ function b(e) {
             alt: 'HD Streaming Nitro Perk',
             src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png'
         }),
-        f = p.NW.string(p.t.ewxv3N),
-        y = p.NW.string(p.t.qlsCDA);
+        f = p.intl.string(p.t.ewxv3N),
+        y = p.intl.string(p.t.qlsCDA);
     return (0, n.jsx)(
         c.Z,
         (function (e) {
@@ -73,21 +73,21 @@ function b(e) {
                 artContainerClassName: d.artContainer,
                 type: u.cd.STREAM_QUALITY_UPSELL,
                 analyticsLocation: {
-                    section: l.jXE.STREAM_UPSELL_MODAL,
-                    object: l.qAy.BUTTON_CTA
+                    section: s.jXE.STREAM_UPSELL_MODAL,
+                    object: s.qAy.BUTTON_CTA
                 },
                 analyticsSource: r,
                 onClose: t,
                 onSubscribeClick: o.Z,
-                secondaryCTA: p.NW.string(p.t.ZnqyZ2),
+                secondaryCTA: p.intl.string(p.t.ZnqyZ2),
                 onSecondaryClick: function () {
                     (0, o.Z)(),
                         (0, a.pT)(),
-                        s.default.track(l.rMx.PREMIUM_PROMOTION_OPENED, {
-                            location_section: l.jXE.STREAM_UPSELL_MODAL,
-                            location_object: l.qAy.NAVIGATION_LINK
+                        l.default.track(s.rMx.PREMIUM_PROMOTION_OPENED, {
+                            location_section: s.jXE.STREAM_UPSELL_MODAL,
+                            location_object: s.qAy.NAVIGATION_LINK
                         }),
-                        (0, i.uL)(l.Z5c.APPLICATION_STORE);
+                        (0, i.uL)(s.Z5c.APPLICATION_STORE);
                 },
                 showEnhancedUpsell: !0,
                 enableArtBoxShadow: !1,

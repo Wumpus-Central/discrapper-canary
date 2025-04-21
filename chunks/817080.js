@@ -3,19 +3,19 @@ var t =
     (function (e) {
         if (!('undefined' != typeof navigator && /MSIE [1-9]\./.test(navigator.userAgent))) {
             var t = e.document,
-                r = function () {
+                n = function () {
                     return e.URL || e.webkitURL || e;
                 },
-                n = t.createElementNS('http://www.w3.org/1999/xhtml', 'a'),
-                o = 'download' in n,
+                r = t.createElementNS('http://www.w3.org/1999/xhtml', 'a'),
+                o = 'download' in r,
                 i = function (e) {
                     var t = new MouseEvent('click');
                     e.dispatchEvent(t);
                 },
                 a = /Version\/[\d\.]+.*Safari/.test(navigator.userAgent),
                 s = e.webkitRequestFileSystem,
-                c = e.requestFileSystem || s || e.mozRequestFileSystem,
-                l = function (t) {
+                l = e.requestFileSystem || s || e.mozRequestFileSystem,
+                c = function (t) {
                     (e.setImmediate || e.setTimeout)(function () {
                         throw t;
                     }, 0);
@@ -24,65 +24,65 @@ var t =
                 u = 0,
                 p = function (e) {
                     setTimeout(function () {
-                        'string' == typeof e ? r().revokeObjectURL(e) : e.remove();
+                        'string' == typeof e ? n().revokeObjectURL(e) : e.remove();
                     }, 40000);
                 },
-                h = function (e, t, r) {
-                    for (var n = (t = [].concat(t)).length; n--; ) {
-                        var o = e['on' + t[n]];
+                h = function (e, t, n) {
+                    for (var r = (t = [].concat(t)).length; r--; ) {
+                        var o = e['on' + t[r]];
                         if ('function' == typeof o)
                             try {
-                                o.call(e, r || e);
+                                o.call(e, n || e);
                             } catch (e) {
-                                l(e);
+                                c(e);
                             }
                     }
                 },
                 _ = function (e) {
                     return /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(e.type) ? new Blob(['ï\xBB\xBF', e], { type: e.type }) : e;
                 },
-                f = function (t, l, f) {
+                f = function (t, c, f) {
                     f || (t = _(t));
                     var E,
                         S,
-                        N = this,
-                        y = t.type,
-                        b = !1,
-                        m = function () {
-                            h(N, 'writestart progress write writeend'.split(' '));
-                        },
+                        y = this,
+                        b = t.type,
+                        m = !1,
                         O = function () {
+                            h(y, 'writestart progress write writeend'.split(' '));
+                        },
+                        N = function () {
                             if (S && a && 'undefined' != typeof FileReader) {
-                                var n = new FileReader();
-                                (n.onloadend = function () {
-                                    var e = n.result;
-                                    (S.location.href = 'data:attachment/file' + e.slice(e.search(/[,;]/))), (N.readyState = N.DONE), m();
+                                var r = new FileReader();
+                                (r.onloadend = function () {
+                                    var e = r.result;
+                                    (S.location.href = 'data:attachment/file' + e.slice(e.search(/[,;]/))), (y.readyState = y.DONE), O();
                                 }),
-                                    n.readAsDataURL(t),
-                                    (N.readyState = N.INIT);
+                                    r.readAsDataURL(t),
+                                    (y.readyState = y.INIT);
                                 return;
                             }
-                            (b || !E) && (E = r().createObjectURL(t)), S ? (S.location.href = E) : void 0 === e.open(E, '_blank') && a && (e.location.href = E), (N.readyState = N.DONE), m(), p(E);
+                            (m || !E) && (E = n().createObjectURL(t)), S ? (S.location.href = E) : void 0 === e.open(E, '_blank') && a && (e.location.href = E), (y.readyState = y.DONE), O(), p(E);
                         },
                         g = function (e) {
                             return function () {
-                                if (N.readyState !== N.DONE) return e.apply(this, arguments);
+                                if (y.readyState !== y.DONE) return e.apply(this, arguments);
                             };
                         },
                         M = {
                             create: !0,
                             exclusive: !1
                         };
-                    if (((N.readyState = N.INIT), l || (l = 'download'), o)) {
-                        (E = r().createObjectURL(t)),
+                    if (((y.readyState = y.INIT), c || (c = 'download'), o)) {
+                        (E = n().createObjectURL(t)),
                             setTimeout(function () {
-                                (n.href = E), (n.download = l), i(n), m(), p(E), (N.readyState = N.DONE);
+                                (r.href = E), (r.download = c), i(r), O(), p(E), (y.readyState = y.DONE);
                             });
                         return;
                     }
-                    if ((e.chrome && y && y !== d && ((t = (t.slice || t.webkitSlice).call(t, 0, t.size, d)), (b = !0)), s && 'download' !== l && (l += '.download'), (y === d || s) && (S = e), !c)) return void O();
+                    if ((e.chrome && b && b !== d && ((t = (t.slice || t.webkitSlice).call(t, 0, t.size, d)), (m = !0)), s && 'download' !== c && (c += '.download'), (b === d || s) && (S = e), !l)) return void N();
                     (u += t.size),
-                        c(
+                        l(
                             e.TEMPORARY,
                             u,
                             g(function (e) {
@@ -90,56 +90,56 @@ var t =
                                     'saved',
                                     M,
                                     g(function (e) {
-                                        var r = function () {
+                                        var n = function () {
                                             e.getFile(
-                                                l,
+                                                c,
                                                 M,
                                                 g(function (e) {
                                                     e.createWriter(
-                                                        g(function (r) {
-                                                            (r.onwriteend = function (t) {
-                                                                (S.location.href = e.toURL()), (N.readyState = N.DONE), h(N, 'writeend', t), p(e);
+                                                        g(function (n) {
+                                                            (n.onwriteend = function (t) {
+                                                                (S.location.href = e.toURL()), (y.readyState = y.DONE), h(y, 'writeend', t), p(e);
                                                             }),
-                                                                (r.onerror = function () {
-                                                                    var e = r.error;
-                                                                    e.code !== e.ABORT_ERR && O();
+                                                                (n.onerror = function () {
+                                                                    var e = n.error;
+                                                                    e.code !== e.ABORT_ERR && N();
                                                                 }),
                                                                 'writestart progress write abort'.split(' ').forEach(function (e) {
-                                                                    r['on' + e] = N['on' + e];
+                                                                    n['on' + e] = y['on' + e];
                                                                 }),
-                                                                r.write(t),
-                                                                (N.abort = function () {
-                                                                    r.abort(), (N.readyState = N.DONE);
+                                                                n.write(t),
+                                                                (y.abort = function () {
+                                                                    n.abort(), (y.readyState = y.DONE);
                                                                 }),
-                                                                (N.readyState = N.WRITING);
+                                                                (y.readyState = y.WRITING);
                                                         }),
-                                                        O
+                                                        N
                                                     );
                                                 }),
-                                                O
+                                                N
                                             );
                                         };
                                         e.getFile(
-                                            l,
+                                            c,
                                             { create: !1 },
                                             g(function (e) {
-                                                e.remove(), r();
+                                                e.remove(), n();
                                             }),
                                             g(function (e) {
-                                                e.code === e.NOT_FOUND_ERR ? r() : O();
+                                                e.code === e.NOT_FOUND_ERR ? n() : N();
                                             })
                                         );
                                     }),
-                                    O
+                                    N
                                 );
                             }),
-                            O
+                            N
                         );
                 },
                 E = f.prototype;
             return 'undefined' != typeof navigator && navigator.msSaveOrOpenBlob
-                ? function (e, t, r) {
-                      return r || (e = _(e)), navigator.msSaveOrOpenBlob(e, t || 'download');
+                ? function (e, t, n) {
+                      return n || (e = _(e)), navigator.msSaveOrOpenBlob(e, t || 'download');
                   }
                 : ((E.abort = function () {
                       (this.readyState = this.DONE), h(this, 'abort');
@@ -148,8 +148,8 @@ var t =
                   (E.WRITING = 1),
                   (E.DONE = 2),
                   (E.error = E.onwritestart = E.onprogress = E.onwrite = E.onabort = E.onerror = E.onwriteend = null),
-                  function (e, t, r) {
-                      return new f(e, t, r);
+                  function (e, t, n) {
+                      return new f(e, t, n);
                   });
         }
     })(('undefined' != typeof self && self) || ('undefined' != typeof window && window) || this.content);

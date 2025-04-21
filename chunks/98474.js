@@ -61,10 +61,10 @@ function O(e) {
     let { messageId: t, emoji: n, startPosition: O, targetPosition: y } = e,
         [x, T] = r.useState(0),
         [S, _] = r.useState(0),
-        [N, C] = r.useState(null),
-        { confettiCanvas: R } = r.useContext(u.h),
-        P = (0, o.uR)(R, N),
-        E = r.useMemo(
+        [C, R] = r.useState(null),
+        { confettiCanvas: P } = r.useContext(u.h),
+        E = (0, o.uR)(P, C),
+        I = r.useMemo(
             () => [
                 {
                     src:
@@ -80,7 +80,7 @@ function O(e) {
             ],
             [n.name, n.id]
         ),
-        I = y.x - (y.width / 2) * 0.5,
+        N = y.x - (y.width / 2) * 0.5,
         w = y.y - (y.height / 2) * 0.5,
         Z = (0, l.q_F)({
             from: { y: O.y },
@@ -101,7 +101,7 @@ function O(e) {
                 opacity: 1
             },
             to: {
-                x: I,
+                x: N,
                 scale: 0.5,
                 opacity: 0.4
             },
@@ -121,7 +121,7 @@ function O(e) {
         r.useEffect(() => {
             x > 0 &&
                 S > 0 &&
-                P.createConfetti(
+                E.createConfetti(
                     j(b({}, f.We), {
                         position: {
                             type: 'static',
@@ -132,12 +132,12 @@ function O(e) {
                         }
                     })
                 );
-        }, [P, x, S]),
+        }, [E, x, S]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Ji, {
-                    ref: C,
-                    sprites: E,
+                    ref: R,
+                    sprites: I,
                     colors: v,
                     spriteWidth: f.Ko,
                     spriteHeight: f.Ko

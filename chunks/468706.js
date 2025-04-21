@@ -2,8 +2,8 @@ n.d(t, { e: () => u });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(240872),
-    l = n(923500),
+    l = n(240872),
+    a = n(923500),
     o = n(247206),
     s = n(774863),
     c = n(388032);
@@ -16,12 +16,12 @@ function u(e, t) {
         }),
         !s.Z.canSubmitFpReport(t))
     ) {
-        a.Z.show({
-            title: c.NW.string(c.t['iS/eFB']),
-            body: c.NW.string(c.t.YrjcgY),
-            confirmText: c.NW.string(c.t.BddRzc)
+        l.Z.show({
+            title: c.intl.string(c.t['iS/eFB']),
+            body: c.intl.string(c.t.YrjcgY),
+            confirmText: c.intl.string(c.t.BddRzc)
         }),
-            l.Z.disableFalsePositiveButton(e, t);
+            a.Z.disableFalsePositiveButton(e, t);
         return;
     }
     (0, i.ZDy)(async () => {

@@ -40,9 +40,9 @@ function C(e) {
                 s.Z.unignoreUser(t, 'web_stranger_danger_more', n);
         }, [n, l, t]);
     return (0, r.jsx)(d.ZP, {
-        title: y.NW.string(y.t.avyV7O),
-        description: y.NW.string(y.t.naWE6e),
-        buttonText: a ? y.NW.string(y.t['3SrzRU']) : y.NW.string(y.t.avyV7O),
+        title: y.intl.string(y.t.avyV7O),
+        description: y.intl.string(y.t.naWE6e),
+        buttonText: a ? y.intl.string(y.t['3SrzRU']) : y.intl.string(y.t.avyV7O),
         onButtonPress: a ? u : c
     });
 }
@@ -53,7 +53,7 @@ function x(e) {
             (0, h.T)(t, [x]);
         }, [t, x]),
         E = (0, b.C2)(),
-        N = i.useCallback(
+        I = i.useCallback(
             (e) => () => {
                 s.Z.blockUser(v, { location: b.zr }).then(() => {
                     O();
@@ -77,7 +77,7 @@ function x(e) {
         }),
             c.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
     }, [t, x, v]);
-    let I = () => {
+    let P = () => {
             (0, a.ZDy)(async () => {
                 let { default: e } = await n.e('59385').then(n.bind(n, 480884));
                 return (n) => {
@@ -88,7 +88,7 @@ function x(e) {
                         channelId: t,
                         warningId: x,
                         senderId: v,
-                        description: y.NW.string(y.t.DJMZX1),
+                        description: y.intl.string(y.t.DJMZX1),
                         safetyTipRows: E.map((e, t) =>
                             (0, r.jsx)(
                                 u.q,
@@ -114,12 +114,12 @@ function x(e) {
                                 (0, r.jsx)(
                                     d.ZP,
                                     {
-                                        title: y.NW.string(y.t['5QYPOz']),
-                                        description: y.NW.string(y.t.G08MKi),
-                                        buttonText: y.NW.string(y.t['5QYPOz']),
+                                        title: y.intl.string(y.t['5QYPOz']),
+                                        description: y.intl.string(y.t.G08MKi),
+                                        buttonText: y.intl.string(y.t['5QYPOz']),
                                         buttonColor: a.zxk.Colors.RED,
                                         onButtonPress: () => {
-                                            l(), P(m.NM.USER_MODAL_BLOCK_CONFIRM, m.NM.USER_MODAL_BLOCK_CANCEL, I);
+                                            l(), S(m.NM.USER_MODAL_BLOCK_CONFIRM, m.NM.USER_MODAL_BLOCK_CANCEL, P);
                                         }
                                     },
                                     'block-button'
@@ -130,7 +130,7 @@ function x(e) {
                 };
             });
         },
-        P = (e, i, l) => {
+        S = (e, i, l) => {
             (0, a.ZDy)(async () => {
                 let { default: o } = await Promise.all([n.e('97652'), n.e('3078')]).then(n.bind(n, 744373));
                 return (n) => {
@@ -165,7 +165,7 @@ function x(e) {
                         (s = s =
                             {
                                 userId: v,
-                                confirmBlock: N(e),
+                                confirmBlock: I(e),
                                 onCancel: () => {
                                     null == l || l(),
                                         (0, m.qc)({
@@ -199,15 +199,15 @@ function x(e) {
         warningId: x,
         senderId: v,
         warningType: f.pj.STRANGER_DANGER,
-        header: y.NW.string(y.t.iOkDpK),
-        description: y.NW.string(y.t.ISUbcH),
+        header: y.intl.string(y.t.iOkDpK),
+        description: y.intl.string(y.t.ISUbcH),
         onDismiss: O,
         buttons: [
             {
-                text: y.NW.string(y.t['Qk/c4+']),
+                text: y.intl.string(y.t['Qk/c4+']),
                 color: a.zxk.Colors.BRAND,
                 onclick: () => {
-                    I(),
+                    P(),
                         (0, m.qc)({
                             channelId: t,
                             warningId: x,
@@ -221,9 +221,9 @@ function x(e) {
                 ? []
                 : [
                       {
-                          text: y.NW.string(y.t.ie0QdH),
+                          text: y.intl.string(y.t.ie0QdH),
                           color: a.zxk.Colors.RED,
-                          onclick: () => P(m.NM.USER_BANNER_BLOCK_CONFIRM, m.NM.USER_BANNER_BLOCK_CANCEL)
+                          onclick: () => S(m.NM.USER_BANNER_BLOCK_CONFIRM, m.NM.USER_BANNER_BLOCK_CANCEL)
                       }
                   ])
         ]

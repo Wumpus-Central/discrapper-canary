@@ -6,9 +6,9 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(565138),
-    o = n(372769),
-    l = n(742593),
+    l = n(565138),
+    s = n(372769),
+    o = n(742593),
     a = n(390072),
     c = n(601964),
     u = n(230224),
@@ -16,11 +16,11 @@ var i = n(481060),
     h = n(807048);
 function g(e) {
     var t;
-    let { guildScheduledEvent: n, channel: s, onAcceptInvite: o, isSubmitting: c } = e;
+    let { guildScheduledEvent: n, channel: l, onAcceptInvite: s, isSubmitting: c } = e;
     return (0, r.jsxs)('div', {
         className: h.guildEventCard,
         children: [
-            (0, r.jsx)(l.ZP, {
+            (0, r.jsx)(o.ZP, {
                 name: n.name,
                 description: null != (t = n.description) ? t : void 0,
                 headerVariant: 'heading-md/medium',
@@ -29,20 +29,20 @@ function g(e) {
                 guildEvent: n,
                 eventPreview: n
             }),
-            null != s &&
+            null != l &&
                 (0, r.jsx)('div', {
                     className: h.channelInfo,
                     children: (0, r.jsx)(a.Z, {
                         guildScheduledEvent: n,
-                        channel: s
+                        channel: l
                     })
                 }),
             (0, r.jsx)(i.zxk, {
                 className: h.acceptButton,
                 color: i.zxk.Colors.GREEN,
-                onClick: o,
+                onClick: s,
                 submitting: c,
-                children: d.NW.string(d.t.riu2R0)
+                children: d.intl.string(d.t.riu2R0)
             })
         ]
     });
@@ -50,24 +50,24 @@ function g(e) {
 function p(e) {
     var t;
     let { invite: n } = e,
-        l = null != n.guild ? new c.ZP(n.guild) : null;
-    if (null == l) return null;
-    let a = null != (t = l.description) ? t : '';
+        o = null != n.guild ? new c.ZP(n.guild) : null;
+    if (null == o) return null;
+    let a = null != (t = o.description) ? t : '';
     return (0, r.jsxs)('div', {
         className: h.guildInfoCard,
         children: [
             (0, r.jsx)(i.X6q, {
                 className: h.presentedBy,
                 variant: 'text-sm/medium',
-                children: d.NW.string(d.t.Eabu19)
+                children: d.intl.string(d.t.Eabu19)
             }),
             (0, r.jsxs)('div', {
                 className: h.guildContainer,
                 children: [
-                    (0, r.jsx)(s.Z, {
-                        guild: l,
+                    (0, r.jsx)(l.Z, {
+                        guild: o,
                         active: !0,
-                        size: s.Z.Sizes.MEDIUM
+                        size: l.Z.Sizes.MEDIUM
                     }),
                     (0, r.jsxs)('div', {
                         className: h.guildDetailsContanier,
@@ -78,9 +78,9 @@ function p(e) {
                                 variant: 'text-sm/medium',
                                 tag: 'span',
                                 children: [
-                                    l.name,
-                                    (0, r.jsx)(o.Z, {
-                                        guild: l,
+                                    o.name,
+                                    (0, r.jsx)(s.Z, {
+                                        guild: o,
                                         className: h.guildBadge,
                                         tooltipPosition: 'left'
                                     })
@@ -108,14 +108,14 @@ function p(e) {
     });
 }
 function m(e) {
-    let { invite: t, channel: n, isSubmitting: i, onAcceptInvite: s } = e,
-        { guild_scheduled_event: o } = t;
-    return null != o
+    let { invite: t, channel: n, isSubmitting: i, onAcceptInvite: l } = e,
+        { guild_scheduled_event: s } = t;
+    return null != s
         ? (0, r.jsx)(g, {
-              guildScheduledEvent: o,
+              guildScheduledEvent: s,
               channel: n,
               isSubmitting: i,
-              onAcceptInvite: s
+              onAcceptInvite: l
           })
         : null;
 }

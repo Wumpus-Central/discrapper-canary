@@ -22,13 +22,13 @@ let f = (e) => e !== o.jj.QUARANTINE_USER,
     g = (e) => {
         switch (e) {
             case o.jj.BLOCK_MESSAGE:
-                return c.NW.string(c.t.d1ab8v);
+                return c.intl.string(c.t.d1ab8v);
             case o.jj.FLAG_TO_CHANNEL:
-                return c.NW.string(c.t['Y+Vmvb']);
+                return c.intl.string(c.t['Y+Vmvb']);
             case o.jj.USER_COMMUNICATION_DISABLED:
-                return c.NW.string(c.t.Xz2njI);
+                return c.intl.string(c.t.Xz2njI);
             case o.jj.QUARANTINE_USER:
-                return c.NW.string(c.t.NPO8eX);
+                return c.intl.string(c.t.NPO8eX);
         }
     },
     d = function (e) {
@@ -37,18 +37,18 @@ let f = (e) => e !== o.jj.QUARANTINE_USER,
             case o.jj.BLOCK_MESSAGE:
                 switch (t) {
                     case o.fX.MENTION_SPAM:
-                        return c.NW.string(c.t['8hdId3']);
+                        return c.intl.string(c.t['8hdId3']);
                     case o.fX.ML_SPAM:
-                        return c.NW.string(c.t.tLQYs7);
+                        return c.intl.string(c.t.tLQYs7);
                     default:
-                        return c.NW.string(c.t.xAAocn);
+                        return c.intl.string(c.t.xAAocn);
                 }
             case o.jj.FLAG_TO_CHANNEL:
-                return c.NW.string(c.t.BHAXfX);
+                return c.intl.string(c.t.BHAXfX);
             case o.jj.USER_COMMUNICATION_DISABLED:
-                return c.NW.string(c.t['bNK+gI']);
+                return c.intl.string(c.t['bNK+gI']);
             case o.jj.QUARANTINE_USER:
-                return c.NW.string(c.t['/7nL5e']);
+                return c.intl.string(c.t['/7nL5e']);
         }
     },
     S = (e, t) => {
@@ -63,13 +63,13 @@ let f = (e) => e !== o.jj.QUARANTINE_USER,
                 let r = i.Z.getChannel(e);
                 if (null == r) return null;
                 let o = (0, l.F6)(r, u.default, a.Z);
-                return c.NW.format(c.t.xQXnkJ, { channelName: o });
+                return c.intl.format(c.t.xQXnkJ, { channelName: o });
             }
             case o.jj.USER_COMMUNICATION_DISABLED: {
                 let e = null != (f = null == t || null == (r = t.metadata) ? void 0 : r.durationSeconds) ? f : 0,
                     n = (0, s.L9)(e);
                 if (null == n) return null;
-                return c.NW.format(c.t.AFmbfX, { duration: n });
+                return c.intl.format(c.t.AFmbfX, { duration: n });
             }
         }
     },

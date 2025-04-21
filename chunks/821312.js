@@ -16,27 +16,27 @@ function b(e) {
         [f, h] = i.useState(),
         x = [
             {
-                text: p.NW.string(p.t['//3pvr']),
+                text: p.intl.string(p.t['//3pvr']),
                 value: d.C2.DM_SPAM
             },
             {
-                text: p.NW.string(p.t.SdVsio),
+                text: p.intl.string(p.t.SdVsio),
                 value: d.C2.MENTION_SPAM
             },
             {
-                text: p.NW.string(p.t.uTiSVF),
+                text: p.intl.string(p.t.uTiSVF),
                 value: d.C2.CHANNEL_SPAM
             },
             {
-                text: p.NW.string(p.t.GQczU1),
+                text: p.intl.string(p.t.GQczU1),
                 value: d.C2.SUS_NEW_MEMBERS
             },
             {
-                text: p.NW.string(p.t.AAgqy8),
+                text: p.intl.string(p.t.AAgqy8),
                 value: d.C2.CHANGING_SETTINGS
             },
             {
-                text: p.NW.string(p.t.ryPKb2),
+                text: p.intl.string(p.t.ryPKb2),
                 value: d.C2.OTHER
             }
         ];
@@ -64,7 +64,7 @@ function b(e) {
                                       (0, r.jsx)(s.X6q, {
                                           color: 'header-primary',
                                           variant: 'heading-md/semibold',
-                                          children: p.NW.string(p.t.f5hd9P)
+                                          children: p.intl.string(p.t.f5hd9P)
                                       })
                                   ]
                               }),
@@ -114,7 +114,7 @@ function b(e) {
                                                   className: m.textboxContainer,
                                                   children: (0, r.jsx)(s.Kx8, {
                                                       className: m.serverLockdownReasonText,
-                                                      placeholder: p.NW.string(p.t['PAM+JS']),
+                                                      placeholder: p.intl.string(p.t['PAM+JS']),
                                                       onChange: (e) => h(e),
                                                       value: f,
                                                       rows: 2,
@@ -142,7 +142,7 @@ function b(e) {
                           color: s.zxk.Colors.BRAND,
                           look: s.zxk.Looks.FILLED,
                           submitting: !1,
-                          children: p.NW.string(p.t.nAt0rK)
+                          children: p.intl.string(p.t.nAt0rK)
                       })
                   })
               ]

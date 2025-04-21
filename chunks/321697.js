@@ -1,16 +1,16 @@
-n.d(t, { r: () => a });
-var r = n(481060),
-    i = n(560067),
+n.d(t, { r: () => l });
+var i = n(481060),
+    r = n(560067),
     s = n(675999);
-let a = {
+let l = {
     binds: ['mod+shift+n'],
     comboKeysBindGlobal: !0,
     action() {
-        (0, r.nfh)(s.PU)
-            ? i.Z.updateCreateGuildModal({
+        (0, i.nfh)(s.PU)
+            ? r.Z.updateCreateGuildModal({
                   slide: s._m.JOIN_GUILD,
                   location: 'Keyboard Shortcut'
               })
-            : i.Z.openCreateGuildModal({ location: 'Keyboard Shortcut' });
+            : r.Z.openCreateGuildModal({ location: 'Keyboard Shortcut' });
     }
 };

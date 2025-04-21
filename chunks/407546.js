@@ -22,7 +22,7 @@ function d(e) {
             (0, r.jsx)(o.X6q, {
                 variant: 'heading-deprecated-12/semibold',
                 className: c.sectionLabel,
-                children: l.NW.string(l.t['1DXFFR'])
+                children: l.intl.string(l.t['1DXFFR'])
             }),
             null != t && '' !== t
                 ? (0, r.jsx)(a.x, {
@@ -34,7 +34,7 @@ function d(e) {
             (0, r.jsx)(o.VcW, {
                 wrapperClassName: c.select,
                 maxVisibleItems: u,
-                placeholder: l.NW.string(l.t.oM4E1N),
+                placeholder: l.intl.string(l.t.oM4E1N),
                 options: p,
                 onChange: d,
                 isDisabled: _,
@@ -44,7 +44,7 @@ function d(e) {
                 variant: 'text-xs/medium',
                 color: 'header-secondary',
                 className: c.label,
-                children: l.NW.format(l.t.t9Jm9v, {})
+                children: l.intl.format(l.t.t9Jm9v, {})
             })
         ]
     });

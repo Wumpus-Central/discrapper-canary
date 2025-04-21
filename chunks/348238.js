@@ -1,27 +1,27 @@
 n.d(t, {
-    $3: () => V,
-    Go: () => B,
+    $3: () => z,
+    Go: () => G,
     JC: () => Z,
     NU: () => L,
     Nk: () => w,
     R9: () => k,
-    RN: () => U,
+    RN: () => F,
     Wl: () => A,
     XO: () => P,
-    Xn: () => z,
-    bb: () => H,
+    Xn: () => W,
+    bb: () => V,
     qo: () => M,
     rY: () => D,
-    sR: () => F,
-    tn: () => G,
-    wq: () => W
+    sR: () => B,
+    tn: () => H,
+    wq: () => U
 }),
     n(997841),
     n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(668781),
-    l = n(239091),
+    l = n(668781),
+    a = n(239091),
     o = n(904245),
     s = n(144144),
     c = n(40851),
@@ -39,11 +39,11 @@ var r = n(200651),
     v = n(630388),
     E = n(358085),
     O = n(51144),
-    N = n(91047),
-    j = n(50284),
-    C = n(981631),
-    S = n(388032);
-function I(e, t, n) {
+    j = n(91047),
+    C = n(50284),
+    S = n(981631),
+    I = n(388032);
+function N(e, t, n) {
     return i.useCallback(() => {
         n({ [e]: !t });
     }, [e, n, t]);
@@ -54,11 +54,11 @@ function T(e, t, n) {
             let i = b.default.getUser(e);
             if (null == i) return;
             if ((r.preventDefault(), r.stopPropagation(), !r.shiftKey)) return void n();
-            let a = '@'.concat(O.ZP.getUserTag(i, { decoration: 'never' })),
-                l = '<@'.concat(e, '>');
-            x.S.dispatchToLastSubscribed(C.CkL.INSERT_TEXT, {
-                plainText: a,
-                rawText: l
+            let l = '@'.concat(O.ZP.getUserTag(i, { decoration: 'never' })),
+                a = '<@'.concat(e, '>');
+            x.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, {
+                plainText: l,
+                rawText: a
             }),
                 s.Z.startTyping(t);
         },
@@ -66,19 +66,19 @@ function T(e, t, n) {
     );
 }
 function P(e, t, n, r) {
-    let i = I('usernameProfile', n, r);
+    let i = N('usernameProfile', n, r);
     return T(e.author.id, t.id, i);
 }
 function A(e, t, n, r) {
-    let i = I('referencedUsernameProfile', n, r);
+    let i = N('referencedUsernameProfile', n, r);
     return T(null == e ? void 0 : e.author.id, t.id, i);
 }
 function w(e, t, n, r) {
-    let i = I('interactionUsernameProfile', n, r);
+    let i = N('interactionUsernameProfile', n, r);
     return T(null == e ? void 0 : e.user.id, t.id, i);
 }
 function Z(e, t, n, r) {
-    let i = I('referencedUsernameProfile', n, r);
+    let i = N('referencedUsernameProfile', n, r);
     return T(e, t.id, i);
 }
 function R(e) {
@@ -90,18 +90,18 @@ function R(e) {
     );
 }
 function k(e, t) {
-    return R(I('avatarProfile', e, t));
+    return R(N('avatarProfile', e, t));
 }
 function D(e, t) {
-    return R(I('referencedAvatarProfile', e, t));
+    return R(N('referencedAvatarProfile', e, t));
 }
 function L(e, t) {
-    return R(I('interactionAvatarProfile', e, t));
+    return R(N('interactionAvatarProfile', e, t));
 }
-function M(e, t, a, o) {
+function M(e, t, l, o) {
     let { id: s } = t,
         { id: u, flags: d } = e,
-        p = (0, v.yE)(d, C.iLy.EPHEMERAL),
+        p = (0, v.yE)(d, S.iLy.EPHEMERAL),
         m = (0, c.bp)();
     return i.useCallback(
         (e, t) => {
@@ -118,16 +118,16 @@ function M(e, t, a, o) {
             null == i ||
                 null == c ||
                 d ||
-                (a({ contextMenu: !0 }),
-                (0, l.jW)(
+                (l({ contextMenu: !0 }),
+                (0, a.jW)(
                     e,
                     async () => {
                         let { default: e } = await Promise.all([n.e('93375'), n.e('37220'), n.e('2089')]).then(n.bind(n, 225138));
                         return (n) => {
-                            var a, l;
+                            var l, a;
                             return (0, r.jsx)(
                                 e,
-                                ((a = (function (e) {
+                                ((l = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
@@ -152,7 +152,7 @@ function M(e, t, a, o) {
                                     }
                                     return e;
                                 })({}, n)),
-                                (l = l =
+                                (a = a =
                                     {
                                         message: c,
                                         channel: i,
@@ -160,7 +160,7 @@ function M(e, t, a, o) {
                                         shouldHideMediaOptions: o
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(l))
+                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -168,92 +168,92 @@ function M(e, t, a, o) {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(l)).forEach(function (e) {
-                                          Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(l, e));
+                                      })(Object(a)).forEach(function (e) {
+                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                                       }),
-                                a)
+                                l)
                             );
                         };
                     },
                     {
-                        onClose: () => a({ contextMenu: !1 }),
+                        onClose: () => l({ contextMenu: !1 }),
                         context: m
                     }
                 ));
         },
-        [p, s, u, a, m, o]
+        [p, s, u, l, m, o]
     );
 }
-function W(e, t) {
+function U(e, t) {
     return i.useCallback(
         (n) => {
             let r = b.default.getUser(e),
                 i = h.Z.getChannel(t);
-            null != r && null != i && (n.stopPropagation(), (0, N.Pv)(n, r, i));
+            null != r && null != i && (n.stopPropagation(), (0, j.Pv)(n, r, i));
         },
         [e, t]
     );
 }
-function U(e, t, n) {
+function F(e, t, n) {
     return i.useCallback(
         (r) => {
             let i = b.default.getUser(e),
-                a = h.Z.getChannel(t);
+                l = h.Z.getChannel(t);
             null != i &&
-                null != a &&
+                null != l &&
                 (r.stopPropagation(),
-                (0, N._j)(r, {
+                (0, j._j)(r, {
                     user: i,
-                    channel: a,
+                    channel: l,
                     moderationAlertId: n
                 }));
         },
         [e, t, n]
     );
 }
-function F(e, t) {
+function B(e, t) {
     return i.useCallback(
         (n) => {
             let r = b.default.getUser(e),
                 i = h.Z.getChannel(t);
-            null != r && null != i && (n.stopPropagation(), (0, N.xS)(n, r, i.guild_id));
+            null != r && null != i && (n.stopPropagation(), (0, j.xS)(n, r, i.guild_id));
         },
         [e, t]
     );
 }
-function B(e, t) {
+function G(e, t) {
     let { id: n } = e,
         { id: r } = t;
     return i.useCallback(
         (e) => {
-            e.altKey && (e.preventDefault(), (0, j.Z)(r, n));
+            e.altKey && (e.preventDefault(), (0, C.Z)(r, n));
         },
         [r, n]
     );
 }
-function G(e) {
+function H(e) {
     var t, n;
-    let { groupId: r, message: a, defaultValue: l, popouts: o } = e,
+    let { groupId: r, message: l, defaultValue: a, popouts: o } = e,
         { canShowReactionsOnMessageHover: s } = u.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
-        c = a.author.id,
+        c = l.author.id,
         h = ''.concat(r, ':').concat(c),
-        g = i.useRef(l),
+        g = i.useRef(a),
         _ =
-            ((t = a),
+            ((t = l),
             (n = o),
             i.useCallback(
                 (e) => {
                     if (null == e || !(e.nativeEvent instanceof MouseEvent) || Object.values(n).some((e) => e)) return;
                     let r = e.target;
                     if ((0, m.Uw)(t)) {
-                        let { x: e, y: n, width: i, height: a } = r.getBoundingClientRect();
+                        let { x: e, y: n, width: i, height: l } = r.getBoundingClientRect();
                         (0, p.Z)(
                             t,
                             {
                                 x: e,
                                 y: n,
                                 w: i,
-                                h: a
+                                h: l
                             },
                             !1,
                             d.LL.UserTriggered
@@ -262,16 +262,16 @@ function G(e) {
                 },
                 [t, n]
             )),
-        [b, y] = i.useState(l);
+        [b, y] = i.useState(a);
     g.current = b || g.current;
     let v = i.useCallback(
             (e) => {
-                s && (0, f.T6)(), b || (x.S.dispatchKeyed(C.LPv.ANIMATE_CHAT_AVATAR, h, !0), _(e), y(!0));
+                s && (0, f.T6)(), b || (x.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, h, !0), _(e), y(!0));
             },
             [b, h, s, _]
         ),
         E = i.useCallback(() => {
-            x.S.dispatchKeyed(C.LPv.ANIMATE_CHAT_AVATAR, h, !1), y(!1);
+            x.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, h, !1), y(!1);
         }, [h]);
     return {
         hasHovered: g.current,
@@ -280,46 +280,46 @@ function G(e) {
         handleMouseLeave: E
     };
 }
-function H(e, t) {
+function V(e, t) {
     let [n, r] = i.useState(!1),
-        [a, l] = i.useState(!1);
+        [l, a] = i.useState(!1);
     return {
         handleFocus: i.useCallback(
             (t) => {
                 var n, i;
-                let a = null != (i = null == (n = (0, y.uB)(t)) ? void 0 : n.activeElement) ? i : null;
-                (t.target === t.currentTarget || t.currentTarget.contains(a)) && (l(!0), r(!0)), null != e && e(t);
+                let l = null != (i = null == (n = (0, y.uB)(t)) ? void 0 : n.activeElement) ? i : null;
+                (t.target === t.currentTarget || t.currentTarget.contains(l)) && (a(!0), r(!0)), null != e && e(t);
             },
             [e]
         ),
         handleBlur: i.useCallback(
             (e) => {
                 var n, i;
-                let a = null != (i = null == (n = (0, y.uB)(e)) ? void 0 : n.activeElement) ? i : null;
-                (e.target !== e.currentTarget && e.currentTarget.contains(a)) || r(!1), null != t && t(e);
+                let l = null != (i = null == (n = (0, y.uB)(e)) ? void 0 : n.activeElement) ? i : null;
+                (e.target !== e.currentTarget && e.currentTarget.contains(l)) || r(!1), null != t && t(e);
             },
             [t]
         ),
         isFocused: n,
-        hasFocused: a
+        hasFocused: l
     };
 }
-function V(e, t) {
+function z(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return i.useCallback(() => {
         null != t &&
             (n
-                ? a.Z.show({
-                      title: S.NW.string(S.t['j7eA/v']),
-                      body: S.NW.formatToPlainString(S.t.dTNNgo, { name: t.author.username }),
-                      confirmText: S.NW.string(S.t.BddRzc)
+                ? l.Z.show({
+                      title: I.intl.string(I.t['j7eA/v']),
+                      body: I.intl.formatToPlainString(I.t.dTNNgo, { name: t.author.username }),
+                      confirmText: I.intl.string(I.t.BddRzc)
                   })
                 : r
-                  ? a.Z.show({
-                        title: S.NW.string(S.t.XyWoKS),
-                        body: S.NW.formatToPlainString(S.t['8t8doK'], { name: t.author.username }),
-                        confirmText: S.NW.string(S.t.BddRzc)
+                  ? l.Z.show({
+                        title: I.intl.string(I.t.XyWoKS),
+                        body: I.intl.formatToPlainString(I.t['8t8doK'], { name: t.author.username }),
+                        confirmText: I.intl.string(I.t.BddRzc)
                     })
                   : o.Z.jumpToMessage({
                         channelId: t.channel_id,
@@ -329,8 +329,8 @@ function V(e, t) {
                     }));
     }, [n, r, e.id, t]);
 }
-function z(e, t) {
-    let n = I('interactionData', e, t);
+function W(e, t) {
+    let n = N('interactionData', e, t);
     return i.useCallback(
         (e) => {
             e.preventDefault(), e.stopPropagation(), n();

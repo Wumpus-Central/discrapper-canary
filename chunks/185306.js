@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(200651),
     a = n(192379),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     i = n(263568),
     s = n(481060),
     c = n(388032),
@@ -51,7 +51,7 @@ function f(e, t) {
     );
 }
 function m(e) {
-    let { label: t, isSelected: n, onClick: a, children: o } = e,
+    let { label: t, isSelected: n, onClick: a, children: l } = e,
         i = (0, s.xUy)({
             isSelected: n,
             label: t
@@ -60,15 +60,15 @@ function m(e) {
         s.P3F,
         f(d({}, i), {
             onClick: a,
-            className: l()(u.option, n && u.optionSelected),
-            children: o
+            className: o()(u.option, n && u.optionSelected),
+            children: l
         })
     );
 }
 let p = function (e) {
     let { selectedLayoutType: t, onSelectedLayoutType: n } = e,
-        o = (0, s.arW)({ orientation: 'horizontal' }),
-        { ref: l } = o,
+        l = (0, s.arW)({ orientation: 'horizontal' }),
+        { ref: o } = l,
         p = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -78,26 +78,26 @@ let p = function (e) {
                     var n,
                         r,
                         a = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
                     return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
             return a;
-        })(o, ['ref']),
+        })(l, ['ref']),
         b = a.useMemo(
             () => [
                 {
                     name: i.C.DEFAULT,
-                    label: c.NW.string(c.t.GhK6X1),
+                    label: c.intl.string(c.t.GhK6X1),
                     icon: s.jE$
                 },
                 {
                     name: i.C.IMAGE_ONLY_ANSWERS,
-                    label: c.NW.string(c.t.an4GKS),
+                    label: c.intl.string(c.t.an4GKS),
                     icon: s.XBm
                 }
             ],
@@ -112,8 +112,8 @@ let p = function (e) {
             d(
                 {
                     className: u.container,
-                    'aria-label': c.NW.string(c.t.e9hWx8),
-                    ref: l
+                    'aria-label': c.intl.string(c.t.e9hWx8),
+                    ref: o
                 },
                 p
             ),

@@ -2,9 +2,9 @@ r.d(t, { default: () => x }), r(388685), r(704826), r(35282);
 var n = r(200651),
     i = r(192379),
     o = r(481060),
-    c = r(239091),
-    a = r(230711),
-    l = r(493544),
+    l = r(239091),
+    c = r(230711),
+    a = r(493544),
     s = r(108843),
     u = r(100527),
     d = r(906732),
@@ -28,21 +28,21 @@ let x = (0, s.Z)(
             w = (0, y.Z)(),
             E = (0, h.Z)(),
             k = (0, j.Z)(),
-            N = (0, f.Z)(),
-            D = (0, v.Z)(),
-            C = (0, m.Z)(),
-            W = (0, O.Z)(),
-            I = (0, S.Z)(),
-            { analyticsLocations: B } = (0, d.ZP)(),
-            T = i.useMemo(() => (0, b.j)(), []);
-        async function A() {
+            D = (0, f.Z)(),
+            C = (0, v.Z)(),
+            I = (0, m.Z)(),
+            B = (0, O.Z)(),
+            T = (0, S.Z)(),
+            { analyticsLocations: N } = (0, d.ZP)(),
+            A = i.useMemo(() => (0, b.j)(), []);
+        async function M() {
             try {
                 x(!0), await (0, p.bF)(), window.location.reload(!0);
             } catch (e) {
                 x(!1);
             }
         }
-        let M = (e) => {
+        let _ = (e) => {
                 switch (e) {
                     case P.oAB.GAMES:
                         return w;
@@ -51,37 +51,37 @@ let x = (0, s.Z)(
                     case P.oAB.APPEARANCE:
                         return k;
                     case P.oAB.ACCESSIBILITY:
-                        return N;
-                    case P.oAB.VOICE:
                         return D;
-                    case P.oAB.TEXT:
+                    case P.oAB.VOICE:
                         return C;
-                    case P.oAB.EXPERIMENTS:
-                        return W;
-                    case P.oAB.DEVELOPER_OPTIONS:
+                    case P.oAB.TEXT:
                         return I;
+                    case P.oAB.EXPERIMENTS:
+                        return B;
+                    case P.oAB.DEVELOPER_OPTIONS:
+                        return T;
                     default:
                         return null;
                 }
             },
-            _ = (0, g.VO)()
+            R = (0, g.VO)()
                 .filter((e) => {
                     let { section: t } = e;
-                    return t !== l.ID.HEADER && t !== l.ID.CUSTOM && t !== l.ID.DIVIDER && 'logout' !== t;
+                    return t !== a.ID.HEADER && t !== a.ID.CUSTOM && t !== a.ID.DIVIDER && 'logout' !== t;
                 })
                 .filter((e) => null == e.predicate || e.predicate());
         return (0, n.jsx)(d.Gt, {
-            value: B,
+            value: N,
             children: (0, n.jsxs)(o.v2r, {
                 navId: 'user-settings-cog',
-                onClose: c.Zy,
-                'aria-label': Z.NW.string(Z.t.opYYHh),
+                onClose: l.Zy,
+                'aria-label': Z.intl.string(Z.t.opYYHh),
                 onSelect: r,
                 onInteraction: s,
                 children: [
-                    _.map((e) => {
+                    R.map((e) => {
                         var t, r;
-                        let { section: i, label: c, onClick: l } = e,
+                        let { section: i, label: l, onClick: a } = e,
                             s = i.replace(/\W/gi, '_');
                         return (0, n.jsx)(
                             o.sNh,
@@ -112,17 +112,17 @@ let x = (0, s.Z)(
                             })(
                                 { id: s },
                                 {
-                                    label: c,
+                                    label: l,
                                     action: () =>
-                                        null != l
-                                            ? l()
+                                        null != a
+                                            ? a()
                                             : (function (e, t) {
                                                   let r = Object.values(P.oAB).filter((t) => t === e)[0];
-                                                  null != r && a.Z.open(r, void 0, { analyticsLocations: t });
-                                              })(i, B)
+                                                  null != r && c.Z.open(r, void 0, { analyticsLocations: t });
+                                              })(i, N)
                                 }
                             )),
-                            (r = r = { children: M(i) }),
+                            (r = r = { children: _(i) }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                                 : (function (e, t) {
@@ -139,12 +139,12 @@ let x = (0, s.Z)(
                             s
                         );
                     }),
-                    e.user.isStaff() && T.length > 0
+                    e.user.isStaff() && A.length > 0
                         ? (0, n.jsx)(o.sNh, {
                               label: 'Build Overrides',
                               id: 'build_overrides',
                               children: (0, n.jsx)(o.kSQ, {
-                                  children: T.map((e) =>
+                                  children: A.map((e) =>
                                       (0, n.jsx)(
                                           o.k5B,
                                           {
@@ -167,8 +167,8 @@ let x = (0, s.Z)(
                               children: (0, n.jsx)(o.sNh, {
                                   id: 'clear-build-override',
                                   disabled: u,
-                                  label: Z.NW.string(Z.t['/Nz9ra']),
-                                  action: A,
+                                  label: Z.intl.string(Z.t['/Nz9ra']),
+                                  action: M,
                                   color: 'danger'
                               })
                           })

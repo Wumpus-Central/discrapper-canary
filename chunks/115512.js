@@ -1,23 +1,23 @@
 n.d(e, { default: () => s });
-var a = n(200651);
+var l = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(239091),
-    o = n(358085),
-    i = n(29264),
+var a = n(481060),
+    r = n(239091),
+    i = n(358085),
+    o = n(29264),
     c = n(905041),
     u = n(388032);
 function s(t) {
     let { src: e, onSelect: n } = t,
-        s = (0, i.Z)(e),
+        s = (0, o.Z)(e),
         d = (0, c.Z)(e, null);
-    return o.isPlatformEmbedded
-        ? (0, a.jsxs)(r.v2r, {
+    return i.isPlatformEmbedded
+        ? (0, l.jsxs)(a.v2r, {
               navId: 'image-context',
-              onClose: l.Zy,
-              'aria-label': u.NW.string(u.t.Zow2V1),
+              onClose: r.Zy,
+              'aria-label': u.intl.string(u.t.Zow2V1),
               onSelect: n,
-              children: [(0, a.jsx)(r.kSQ, { children: s }), (0, a.jsx)(r.kSQ, { children: d })]
+              children: [(0, l.jsx)(a.kSQ, { children: s }), (0, l.jsx)(a.kSQ, { children: d })]
           })
         : null;
 }

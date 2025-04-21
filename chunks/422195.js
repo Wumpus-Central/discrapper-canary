@@ -22,7 +22,7 @@ var r = n(200651),
     I = n(957825),
     S = n(388032),
     T = n(619333);
-function N(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function N(e, t, n) {
         e
     );
 }
-function A(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function A(e) {
                 })
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
@@ -93,8 +93,8 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                     var c, d;
                     let f,
                         g = (null == (c = n[0]) ? void 0 : c.type) === b.Ih.FAVORITE,
-                        N = +!!g,
-                        C = (null == (d = n[N]) ? void 0 : d.type) === b.Ih.RECENT,
+                        A = +!!g,
+                        C = (null == (d = n[A]) ? void 0 : d.type) === b.Ih.RECENT,
                         P = n.length > 0,
                         D = n.length;
                     if (0 === a && g)
@@ -105,7 +105,7 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                 'aria-setsize': D,
                                 'aria-posinset': a,
                                 children: (0, r.jsx)(l.P3F, {
-                                    'aria-label': S.NW.string(S.t.y3LQCA),
+                                    'aria-label': S.intl.string(S.t.y3LQCA),
                                     className: o()(T.stickerCategory, T.stickerCategoryGeneric, {
                                         [T.stickerCategoryGenericDisabled]: P && !g,
                                         [T.stickerCategoryGenericSelected]: !m && g && 0 === t
@@ -122,7 +122,7 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                             },
                             'favorites'
                         );
-                    if (a === N && C)
+                    if (a === A && C)
                         return (0, r.jsx)(
                             'div',
                             {
@@ -130,10 +130,10 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                 'aria-setsize': D,
                                 'aria-posinset': a,
                                 children: (0, r.jsx)(l.P3F, {
-                                    'aria-label': S.NW.string(S.t.RxAmVF),
+                                    'aria-label': S.intl.string(S.t.RxAmVF),
                                     className: o()(T.stickerCategory, T.stickerCategoryGeneric, {
                                         [T.stickerCategoryGenericDisabled]: P && !C,
-                                        [T.stickerCategoryGenericSelected]: !m && C && t === N
+                                        [T.stickerCategoryGenericSelected]: !m && C && t === A
                                     }),
                                     onClick: s,
                                     children: (0, r.jsx)(l.T39, {
@@ -188,7 +188,7 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                             'aria-posinset': a,
                                             children: (0, r.jsx)(
                                                 l.P3F,
-                                                R(A({}, e), {
+                                                R(N({}, e), {
                                                     'aria-label': G,
                                                     className: o()(T.stickerCategory, {
                                                         [T.firstPartyCategory]: U,
@@ -217,9 +217,9 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                 },
                 [t, _, m, n]
             ),
-            N = i.useCallback((e, t) => (t ? j : 0), []);
+            A = i.useCallback((e, t) => (t ? j : 0), []);
         return {
-            getScrollOffsetForIndex: N,
+            getScrollOffsetForIndex: A,
             renderCategoryListItem: g,
             rowHeight: i.useCallback(
                 (e, t) => {

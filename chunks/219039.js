@@ -1,19 +1,19 @@
-n.d(t, { Z: () => l });
-var r = n(200651);
+n.d(t, { Z: () => a });
+var i = n(200651);
 n(192379);
-var i = n(481060),
+var r = n(481060),
     s = n(388032),
-    a = n(291226);
-function l(e) {
+    l = n(291226);
+function a(e) {
     let { count: t } = e;
-    return (0, r.jsxs)('div', {
-        className: a.countContainer,
+    return (0, i.jsxs)('div', {
+        className: l.countContainer,
         children: [
-            (0, r.jsx)('div', { className: a.dot }),
-            (0, r.jsx)(i.Text, {
+            (0, i.jsx)('div', { className: l.dot }),
+            (0, i.jsx)(r.Text, {
                 variant: 'text-xs/medium',
                 color: 'header-secondary',
-                children: s.NW.format(s.t['0WHArK'], { count: t })
+                children: s.intl.format(s.t['0WHArK'], { count: t })
             })
         ]
     });

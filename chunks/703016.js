@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(704826), n(35282), n(290780);
+n.d(t, { Z: () => z }), n(704826), n(35282), n(290780);
 var r = n(913527),
     i = n.n(r),
     l = n(570140),
@@ -17,12 +17,12 @@ var r = n(913527),
     _ = n(131951),
     E = n(292959),
     O = n(699516),
-    N = n(944486),
-    y = n(9156),
-    I = n(594174),
-    v = n(51144),
-    C = n(196051),
-    S = n(441729),
+    y = n(944486),
+    I = n(9156),
+    v = n(594174),
+    C = n(51144),
+    S = n(196051),
+    N = n(441729),
     T = n(653477),
     P = n(981631),
     j = n(388032);
@@ -34,21 +34,21 @@ let A = [],
 function R(e, t, n, r) {
     let l = b.Z.getGuild(n),
         a = e
-            .replace(w, j.NW.string(j.t['F+x38P']))
+            .replace(w, j.intl.string(j.t['F+x38P']))
             .replace(/<@!?(\d+)>/g, (e, t) => {
                 var r;
-                let i = I.default.getUser(t);
-                return null == i ? e : null != (r = m.ZP.getNick(n, i.id)) ? r : v.ZP.getName(i);
+                let i = v.default.getUser(t);
+                return null == i ? e : null != (r = m.ZP.getNick(n, i.id)) ? r : C.ZP.getName(i);
             })
             .replace(/<@&?(\d+)>/g, (e, t) => {
                 let n = null != l ? b.Z.getRole(l.id, t) : null;
-                return null != n && null != n.name ? n.name : j.NW.string(j.t.dRcLAw);
+                return null != n && null != n.name ? n.name : j.intl.string(j.t.dRcLAw);
             })
             .replace(/<#(\d+)>/g, (e, t) => {
                 let n = g.Z.getChannel(t);
-                return null == n ? e : (0, s.F6)(n, I.default, O.Z);
+                return null == n ? e : (0, s.F6)(n, v.default, O.Z);
             })
-            .replace(/<a?:(\w+):(\d+)>/g, (e, t) => ''.concat(j.NW.string(j.t.sMOuub), ' ').concat(t))
+            .replace(/<a?:(\w+):(\d+)>/g, (e, t) => ''.concat(j.intl.string(j.t.sMOuub), ' ').concat(t))
             .replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => '/'.concat(t))
             .replace(/<t:(\d+):([A-Z]|[a-z])>/g, (e, t, n) => {
                 let r = c.Qh[n],
@@ -57,11 +57,11 @@ function R(e, t, n, r) {
                 return null != r ? r(a) : a.format();
             });
     return null == r
-        ? j.NW.formatToPlainString(j.t['uIj77+'], {
+        ? j.intl.formatToPlainString(j.t['uIj77+'], {
               username: t,
               body: a
           })
-        : j.NW.formatToPlainString(j.t['Ix4H+v'], {
+        : j.intl.formatToPlainString(j.t['Ix4H+v'], {
               username: t,
               body: a,
               replyUsername: r
@@ -79,11 +79,11 @@ function D() {
 }
 async function k(e, t, n, r, i) {
     let l = o.e6(e, n);
-    null !== l && (null == x && D(), t ? await (0, C.NB)() : null == Z || Z.removeEventListener('end', C.NB), l.addEventListener('end', C.NB), null != r && l.addEventListener('start', r), null != i && l.addEventListener('end', i), (Z = l), o.iq(l, x));
+    null !== l && (null == x && D(), t ? await (0, S.NB)() : null == Z || Z.removeEventListener('end', S.NB), l.addEventListener('end', S.NB), null != r && l.addEventListener('start', r), null != i && l.addEventListener('end', i), (Z = l), o.iq(l, x));
 }
 function M(e, t, n, r, i) {
     k(e, t, i, () => {
-        (0, C.Bo)(n, r);
+        (0, S.Bo)(n, r);
     });
 }
 function U(e) {
@@ -91,52 +91,52 @@ function U(e) {
     k(t, n, r, i, l);
 }
 function G() {
-    return null !== Z && Z.removeEventListener('end', C.NB), o.M9(), (Z = null), !0;
+    return null !== Z && Z.removeEventListener('end', S.NB), o.M9(), (Z = null), !0;
 }
-function W(e) {
+function V(e) {
     var t, n, r;
     let { message: i, channel: l } = e,
         a = i.type === P.uaV.REPLY ? u.Z.getMessageByReference(i.messageReference) : null,
         o = (null == a ? void 0 : a.state) === u.Y.LOADED ? (null == a || null == (t = a.message) ? void 0 : t.author) : null,
-        s = null != o ? (null != (n = m.ZP.getNick(l.guild_id, null == o ? void 0 : o.id)) ? n : v.ZP.getName(o)) : null,
+        s = null != o ? (null != (n = m.ZP.getNick(l.guild_id, null == o ? void 0 : o.id)) ? n : C.ZP.getName(o)) : null,
         c = l.getGuildId(),
-        d = null != (r = m.ZP.getNick(c, i.author.id)) ? r : v.ZP.getName(i.author);
+        d = null != (r = m.ZP.getNick(c, i.author.id)) ? r : C.ZP.getName(i.author);
     return M(R(i.content, d, c, s), !0, l.id, i.id), !0;
 }
-function V(e) {
+function B(e) {
     var t, n, r, i, l, a;
     let { channelId: o, message: s, optimistic: c } = e;
     if (c || _.Z.isSelfDeaf()) return !1;
     let u = g.Z.getChannel(o);
     if (null == u) return !1;
-    let d = N.Z.getChannelId(),
+    let d = y.Z.getChannelId(),
         b = f.ZP.getCurrentSidebarChannelId(d),
-        I = o === d || o === b,
-        C = p.OW.getSetting() && s.tts && I,
-        S = E.Z.getTTSType(),
-        j = (null == (t = s.author) ? void 0 : t.id) !== h.default.getId() && (S === P.PrB.ALL_CHANNELS || (S === P.PrB.SELECTED_CHANNEL && I));
-    if ((C || j) && !O.Z.isBlockedOrIgnoredForMessage(s)) {
+        v = o === d || o === b,
+        S = p.OW.getSetting() && s.tts && v,
+        N = E.Z.getTTSType(),
+        j = (null == (t = s.author) ? void 0 : t.id) !== h.default.getId() && (N === P.PrB.ALL_CHANNELS || (N === P.PrB.SELECTED_CHANNEL && v));
+    if ((S || j) && !O.Z.isBlockedOrIgnoredForMessage(s)) {
         if (A.indexOf(s.id) >= 0) return !1;
         A.unshift(s.id) > 10 && A.pop();
         let e = u.getGuildId();
-        if (null != e && y.ZP.getMutedChannels(e).has(o)) return !1;
-        let t = null != (l = null != (i = m.ZP.getNick(e, null == (n = s.author) ? void 0 : n.id)) ? i : v.ZP.getName(s.author)) ? l : '',
+        if (null != e && I.ZP.getMutedChannels(e).has(o)) return !1;
+        let t = null != (l = null != (i = m.ZP.getNick(e, null == (n = s.author) ? void 0 : n.id)) ? i : C.ZP.getName(s.author)) ? l : '',
             c = s.type === P.uaV.REPLY ? (null == (r = s.referenced_message) ? void 0 : r.author) : null,
-            d = null != c ? (null != (a = m.ZP.getNick(e, null == c ? void 0 : c.id)) ? a : v.ZP.getName(c)) : null;
+            d = null != c ? (null != (a = m.ZP.getNick(e, null == c ? void 0 : c.id)) ? a : C.ZP.getName(c)) : null;
         M(R(s.content, t, e, d), !1, u.id, s.id, T.f);
     }
     return !1;
 }
-function B(e) {
+function H(e) {
     let { id: t, channelId: n } = e,
-        r = S.Z.currentMessage;
-    return null != r && t === r.messageId && n === r.channelId && ((0, C.NB)(), !0);
+        r = N.Z.currentMessage;
+    return null != r && t === r.messageId && n === r.channelId && ((0, S.NB)(), !0);
 }
-function H() {
+function F() {
     _.Z.isSelfDeaf() && o.M9();
 }
-let F = {
+let z = {
     init() {
-        l.Z.subscribe('SPEAK_TEXT', U), l.Z.subscribe('SPEAK_MESSAGE', W), l.Z.subscribe('STOP_SPEAKING', G), l.Z.subscribe('MESSAGE_CREATE', V), l.Z.subscribe('MESSAGE_DELETE', B), l.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', H), l.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', D), (0, a.Ql)(D);
+        l.Z.subscribe('SPEAK_TEXT', U), l.Z.subscribe('SPEAK_MESSAGE', V), l.Z.subscribe('STOP_SPEAKING', G), l.Z.subscribe('MESSAGE_CREATE', B), l.Z.subscribe('MESSAGE_DELETE', H), l.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', F), l.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', D), (0, a.Ql)(D);
     }
 };

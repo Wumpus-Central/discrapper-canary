@@ -5,25 +5,25 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(913527),
-    l = n.n(a),
+    l = n(913527),
+    a = n.n(l),
     o = n(481060),
     s = n(45251),
     c = n(388032),
     u = n(427676);
 let d = 'SCHEDULED_MESSAGE_CREATE_MODAL_KEY';
 function p(e) {
-    let { channel: t, transitionState: n, onClose: a, prefilledTime: p } = e,
-        m = l()(),
-        f = l()().add(365, 'days'),
-        [h, g] = i.useState(null != p ? l()(p.substring(0, 200)) : m);
+    let { channel: t, transitionState: n, onClose: l, prefilledTime: p } = e,
+        m = a()(),
+        f = a()().add(365, 'days'),
+        [h, g] = i.useState(null != p ? a()(p.substring(0, 200)) : m);
     return (0, r.jsxs)(o.Y0X, {
         transitionState: n,
         size: o.CgR.SMALL,
-        'aria-label': c.NW.string(c.t.WbFpq6),
+        'aria-label': c.intl.string(c.t.WbFpq6),
         children: [
             (0, r.jsx)(o.olH, {
-                onClick: a,
+                onClick: l,
                 className: u.closeButton
             }),
             (0, r.jsx)(o.xBx, {
@@ -31,7 +31,7 @@ function p(e) {
                 className: u.header,
                 children: (0, r.jsx)(o.X6q, {
                     variant: 'heading-xl/medium',
-                    children: c.NW.string(c.t['3+ii4O'])
+                    children: c.intl.string(c.t['3+ii4O'])
                 })
             }),
             (0, r.jsx)(o.hzk, {
@@ -41,7 +41,7 @@ function p(e) {
                         (0, r.jsx)('div', {
                             className: u.column,
                             children: (0, r.jsx)(o.xJW, {
-                                title: c.NW.string(c.t.pSZKvL),
+                                title: c.intl.string(c.t.pSZKvL),
                                 required: !0,
                                 children: (0, r.jsx)(o.Wrb, {
                                     value: h,
@@ -57,7 +57,7 @@ function p(e) {
                         (0, r.jsx)('div', {
                             className: u.column,
                             children: (0, r.jsx)(o.xJW, {
-                                title: c.NW.string(c.t.GOmEb2),
+                                title: c.intl.string(c.t.GOmEb2),
                                 required: !0,
                                 children: (0, r.jsx)(o.MGJ, {
                                     value: h,
@@ -77,9 +77,9 @@ function p(e) {
                 children: [
                     (0, r.jsx)(o.zxk, {
                         color: o.zxk.Colors.PRIMARY,
-                        onClick: a,
+                        onClick: l,
                         className: u.cancelButton,
-                        children: c.NW.string(c.t['ETE/oK'])
+                        children: c.intl.string(c.t['ETE/oK'])
                     }),
                     (0, r.jsx)(o.zxk, {
                         onClick: () => {
@@ -90,7 +90,7 @@ function p(e) {
                                 (0, o.Mr3)(d);
                         },
                         disabled: !1,
-                        children: c.NW.string(c.t.iQ1Swc)
+                        children: c.intl.string(c.t.iQ1Swc)
                     })
                 ]
             })

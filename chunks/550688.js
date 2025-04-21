@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(225893);
 function b(e) {
     let { name: t, description: n, pointsDescription: s, points: o, cost: u, iconSrc: f, currentPoints: b, onPurchase: y } = e,
-        h = 'string' == typeof t ? t : p.NW.format(t, { numPurchasing: 0 }),
-        x = 'string' == typeof t ? t : p.NW.formatToPlainString(t, { numPurchasing: 0 });
+        h = 'string' == typeof t ? t : p.intl.format(t, { numPurchasing: 0 }),
+        x = 'string' == typeof t ? t : p.intl.formatToPlainString(t, { numPurchasing: 0 });
     return (0, r.jsx)(l.Z, {
         borderColor: 'green',
         text: (0, r.jsx)(d.Z, {
@@ -23,7 +23,7 @@ function b(e) {
             description: n,
             pointsDescription:
                 0 !== o
-                    ? p.NW.format(s, {
+                    ? p.intl.format(s, {
                           points: o,
                           grassIconHook: a.Z
                       })

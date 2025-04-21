@@ -1,20 +1,20 @@
 n.d(t, { _: () => o });
-var r = n(442837),
-    i = n(607070),
+var i = n(442837),
+    r = n(607070),
     s = n(391110),
-    a = n(758114);
-let l = {
+    l = n(758114);
+let a = {
         subtitle: { onlyShowOnHover: !1 },
         description: {
             onlyShowOnHover: !0,
-            className: a.cardDescription
+            className: l.cardDescription
         },
         descriptionCta: { onlyShowOnHover: !0 }
     },
     o = (e) => {
-        let t = (0, r.e7)([i.Z], () => i.Z.useReducedMotion),
+        let t = (0, i.e7)([r.Z], () => r.Z.useReducedMotion),
             n = {
-                [s.zW.DEFAULT]: l,
+                [s.zW.DEFAULT]: a,
                 [s.zW.REWARD]: {
                     subtitle: {
                         onlyShowOnHover: !0,
@@ -22,16 +22,16 @@ let l = {
                     },
                     description: {
                         onlyShowOnHover: !0,
-                        className: a.cardDescriptionTenureReward
+                        className: l.cardDescriptionTenureReward
                     },
                     descriptionCta: {
                         onlyShowOnHover: !1,
                         hideOnHoverComponent: !0,
-                        className: a.descriptionCTATenureReward
+                        className: l.descriptionCTATenureReward
                     },
-                    cardContainer: { className: t ? void 0 : a.nitroGradientBorderHover }
+                    cardContainer: { className: t ? void 0 : l.nitroGradientBorderHover }
                 },
-                [s.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: a.nitroGradientBorderHover } }
+                [s.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: l.nitroGradientBorderHover } }
             };
         return null != e ? n[e] : n[s.zW.DEFAULT];
     };

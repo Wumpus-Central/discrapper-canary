@@ -1,9 +1,9 @@
-n.d(t, { Z: () => j });
-var r = n(200651),
-    i = n(608787),
+n.d(t, { Z: () => C });
+var i = n(200651),
+    r = n(608787),
     s = n(793030),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     o = n(607070),
     c = n(522474),
     d = n(788983),
@@ -15,158 +15,158 @@ var r = n(200651),
     f = n(622802),
     b = n(388032),
     _ = n(753514),
-    N = n(450890),
-    x = n(145133);
-let E = (0, i.Un)({
+    x = n(450890),
+    E = n(145133);
+let j = (0, r.Un)({
     createPromise: () => Promise.all([n.e('3589'), n.e('67544')]).then(n.bind(n, 894308)),
     webpackId: 894308,
     name: 'ClickerGamePopoutWindow'
 });
-function j() {
-    let e = (0, a.e7)([m.Z], () => m.Z.lifetimePoints > 0),
-        t = (0, a.e7)([c.Z], () => c.Z.getWindowOpen(h.KJ3.CLICKER_GAME)),
-        i = () => {
-            d.bA(h.KJ3.CLICKER_GAME, (e) => (0, r.jsx)(E, { windowKey: e }), {
+function C() {
+    let e = (0, l.e7)([m.Z], () => m.Z.lifetimePoints > 0),
+        t = (0, l.e7)([c.Z], () => c.Z.getWindowOpen(h.KJ3.CLICKER_GAME)),
+        r = () => {
+            d.bA(h.KJ3.CLICKER_GAME, (e) => (0, i.jsx)(j, { windowKey: e }), {
                 defaultWidth: 854,
                 defaultHeight: 768
             });
         },
-        j = () => {
+        C = () => {
             o.Z.useReducedMotion
-                ? (0, l.ZDy)(async () => {
+                ? (0, a.ZDy)(async () => {
                       let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
                       return (t) => {
-                          var n, a;
-                          return (0, r.jsx)(
+                          var n, l;
+                          return (0, i.jsx)(
                               e,
                               ((n = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
-                                          r = Object.keys(n);
+                                          i = Object.keys(n);
                                       'function' == typeof Object.getOwnPropertySymbols &&
-                                          (r = r.concat(
+                                          (i = i.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                               })
                                           )),
-                                          r.forEach(function (t) {
-                                              var r;
-                                              (r = n[t]),
+                                          i.forEach(function (t) {
+                                              var i;
+                                              (i = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
-                                                            value: r,
+                                                            value: i,
                                                             enumerable: !0,
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = r);
+                                                      : (e[t] = i);
                                           });
                                   }
                                   return e;
                               })({}, t)),
-                              (a = a =
+                              (l = l =
                                   {
-                                      header: b.NW.string(f.Z.SvQ1xM),
-                                      confirmText: b.NW.string(f.Z.vLz9lJ),
-                                      cancelText: b.NW.string(f.Z['+Mgv5O']),
-                                      onConfirm: i,
-                                      confirmButtonColor: l.zxk.Colors.GREEN,
-                                      children: (0, r.jsx)(s.xv, {
+                                      header: b.intl.string(f.default.SvQ1xM),
+                                      confirmText: b.intl.string(f.default.vLz9lJ),
+                                      cancelText: b.intl.string(f.default['+Mgv5O']),
+                                      onConfirm: r,
+                                      confirmButtonColor: a.zxk.Colors.GREEN,
+                                      children: (0, i.jsx)(s.xv, {
                                           variant: 'text-md/normal',
-                                          children: b.NW.string(f.Z['v6v/BQ'])
+                                          children: b.intl.string(f.default['v6v/BQ'])
                                       })
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
+                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
-                                            var r = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, r);
+                                            var i = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, i);
                                         }
                                         return n;
-                                    })(Object(a)).forEach(function (e) {
-                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                                    })(Object(l)).forEach(function (e) {
+                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
                               n)
                           );
                       };
                   })
-                : i();
+                : r();
         };
-    return (0, r.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: _.container,
         children: [
-            (0, r.jsx)('div', { className: _.backgroundOverlay }),
-            (0, r.jsxs)('div', {
+            (0, i.jsx)('div', { className: _.backgroundOverlay }),
+            (0, i.jsxs)('div', {
                 className: _.mainContent,
                 children: [
-                    (0, r.jsx)('img', {
-                        src: N,
-                        alt: b.NW.string(f.Z['7qZdOz'])
+                    (0, i.jsx)('img', {
+                        src: x,
+                        alt: b.intl.string(f.default['7qZdOz'])
                     }),
-                    (0, r.jsxs)(g.Z, {
+                    (0, i.jsxs)(g.Z, {
                         muted: !0,
                         className: _.playButton,
                         color: 'white',
                         disabled: t,
-                        onClick: j,
+                        onClick: C,
                         children: [
-                            (0, r.jsx)(p.Z, {
+                            (0, i.jsx)(p.Z, {
                                 color: 'always-white',
                                 variant: 'text-lg/bold',
-                                children: e ? b.NW.string(f.Z.ziFxys) : b.NW.string(f.Z.vLz9lJ)
+                                children: e ? b.intl.string(f.default.ziFxys) : b.intl.string(f.default.vLz9lJ)
                             }),
-                            (0, r.jsx)(p.Z, {
+                            (0, i.jsx)(p.Z, {
                                 color: 'always-white',
                                 variant: 'text-xxs/medium',
-                                children: b.NW.string(f.Z['10J8k5'])
+                                children: b.intl.string(f.default['10J8k5'])
                             })
                         ]
                     }),
-                    (0, r.jsx)(g.Z, {
+                    (0, i.jsx)(g.Z, {
                         muted: !0,
                         className: _.resetButton,
                         color: 'white',
                         disabled: t || !e,
                         onClick: () => {
-                            (0, u.yW)(), j();
+                            (0, u.yW)(), C();
                         },
-                        children: (0, r.jsx)(p.Z, {
+                        children: (0, i.jsx)(p.Z, {
                             color: 'always-white',
                             variant: 'text-xs/bold',
-                            children: b.NW.string(f.Z['/A+1UF'])
+                            children: b.intl.string(f.default['/A+1UF'])
                         })
                     })
                 ]
             }),
-            (0, r.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: _.footer,
                 children: [
-                    (0, r.jsx)(p.Z, {
+                    (0, i.jsx)(p.Z, {
                         className: _.availability,
                         color: 'always-white',
                         variant: 'text-xxs/medium',
-                        children: b.NW.string(f.Z.eZleys)
+                        children: b.intl.string(f.default.eZleys)
                     }),
-                    (0, r.jsx)('div', {
+                    (0, i.jsx)('div', {
                         className: _.footerCenter,
-                        children: (0, r.jsx)(g.Z, {
+                        children: (0, i.jsx)(g.Z, {
                             muted: !0,
                             color: 'white',
                             href: 'https://www.youtube.com/watch?v=h-9SUgIeJnY',
                             tag: 'a',
                             target: '_blank',
-                            children: (0, r.jsx)(p.Z, {
+                            children: (0, i.jsx)(p.Z, {
                                 color: 'always-white',
                                 variant: 'text-xs/bold',
-                                children: b.NW.string(f.Z.CQXsEh)
+                                children: b.intl.string(f.default.CQXsEh)
                             })
                         })
                     }),
-                    (0, r.jsx)('img', {
-                        src: x,
-                        alt: b.NW.string(f.Z.ABYTMz)
+                    (0, i.jsx)('img', {
+                        src: E,
+                        alt: b.intl.string(f.default.ABYTMz)
                     })
                 ]
             })

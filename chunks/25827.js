@@ -115,11 +115,11 @@ function T(e) {
     var { enabled: t, join: n, channel: i, onChange: a, onCameraUnavailable: s, cameraUnavailable: l, hasPermission: c, className: u, channelLimitReached: p, channelLimit: m, centerButton: E = !1, onPopoutClick: y } = e,
         I = O(e, ['enabled', 'join', 'channel', 'onChange', 'onCameraUnavailable', 'cameraUnavailable', 'hasPermission', 'className', 'channelLimitReached', 'channelLimit', 'centerButton', 'onPopoutClick']);
     let T = E ? h.d : h.Z,
-        { mode: N } = (0, d.ZP)({ location: 'VideoButton' }),
-        { squareButtonsEnabled: A, coloredIconsEnabled: C } = (0, f.Z)({ location: 'VideoButton' }),
+        { mode: A } = (0, d.ZP)({ location: 'VideoButton' }),
+        { squareButtonsEnabled: N, coloredIconsEnabled: C } = (0, f.Z)({ location: 'VideoButton' }),
         R = (0, _.Z)({ location: 'VideoButton' }),
-        P = () => (n ? 'join' : C && t ? 'green' : R || N === d.BK.GroupedButtonsRedMic ? 'primaryDark' : 'green'),
-        w = (e) => (n ? 'join' : (A || N === d.BK.GroupedButtonsRedMic) && e ? 'green' : I.color);
+        P = () => (n ? 'join' : C && t ? 'green' : R || A === d.BK.GroupedButtonsRedMic ? 'primaryDark' : 'green'),
+        w = (e) => (n ? 'join' : (N || A === d.BK.GroupedButtonsRedMic) && e ? 'green' : I.color);
     return (0, r.jsx)(S, {
         enabled: t,
         join: n,

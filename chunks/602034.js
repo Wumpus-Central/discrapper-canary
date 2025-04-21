@@ -123,14 +123,14 @@ function C(e) {
                     } else if (i === b.evJ.ENTITY_TOO_LARGE) {
                         let e = (0, m.dg)(t.getGuildId());
                         s.Z.show({
-                            title: _.NW.string(_.t['/tGlcn']),
-                            body: _.NW.formatToPlainString(_.t.fxEKdX, { maxSize: (0, m.Ng)(e) })
+                            title: _.intl.string(_.t['/tGlcn']),
+                            body: _.intl.formatToPlainString(_.t.fxEKdX, { maxSize: (0, m.Ng)(e) })
                         });
                     } else
                         i === b.evJ.TOO_MANY_ATTACHMENTS &&
                             s.Z.show({
-                                title: _.NW.string(_.t.wOr6hI),
-                                body: _.NW.formatToPlainString(_.t['qqyp/f'], { limit: b.dN1 })
+                                title: _.intl.string(_.t.wOr6hI),
+                                body: _.intl.formatToPlainString(_.t['qqyp/f'], { limit: b.dN1 })
                             });
                     d({ body: l });
                 }),

@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
 var r = n(442837),
-    a = n(481060),
-    l = n(787014),
+    l = n(481060),
+    a = n(787014),
     o = n(904245),
     u = n(787263),
     d = n(660189),
@@ -36,13 +36,13 @@ function p(e) {
         y = t && (p || (n && g < 1)),
         A = t && n && !p && g > 0 && null != v;
     return O && (p || y || A)
-        ? (0, i.jsx)(a.sNh, {
+        ? (0, i.jsx)(l.sNh, {
               id: 'delete-channel',
-              label: e.type === E.d4z.GUILD_CATEGORY ? h.NW.string(h.t.ifbXnJ) : e.isForumPost() ? (y ? h.NW.string(h.t.nEOg1N) : h.NW.string(h.t.xwMqDw)) : e.isThread() ? h.NW.string(h.t.H7vTe3) : h.NW.string(h.t['8D8Rsb']),
+              label: e.type === E.d4z.GUILD_CATEGORY ? h.intl.string(h.t.ifbXnJ) : e.isForumPost() ? (y ? h.intl.string(h.t.nEOg1N) : h.intl.string(h.t.xwMqDw)) : e.isThread() ? h.intl.string(h.t.H7vTe3) : h.intl.string(h.t['8D8Rsb']),
               color: 'danger',
               action: () => {
                   (0, u.w)(e, function () {
-                      A ? o.Z.deleteMessage(e.id, _.default.castChannelIdAsMessageId(e.id)) : l.ZP.deleteChannel(e.id);
+                      A ? o.Z.deleteMessage(e.id, _.default.castChannelIdAsMessageId(e.id)) : a.ZP.deleteChannel(e.id);
                   });
               }
           })

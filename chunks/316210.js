@@ -1,122 +1,122 @@
-r.d(t, { default: () => g });
-var n = r(200651),
-    s = r(192379),
-    a = r(481060),
-    o = r(600164),
-    i = r(63063),
-    c = r(497505),
-    l = r(918701),
-    d = r(981631),
-    m = r(388032),
-    u = r(698657),
-    x = r(708901);
+n.d(t, { default: () => g });
+var r = n(200651),
+    s = n(192379),
+    a = n(481060),
+    o = n(600164),
+    i = n(63063),
+    l = n(497505),
+    c = n(918701),
+    d = n(981631),
+    m = n(388032),
+    u = n(698657),
+    x = n(708901);
 let f = (e) => {
     switch (e) {
-        case c.jn.QUEST_BAR:
-        case c.jn.QUEST_BAR_V2:
+        case l.jn.QUEST_BAR:
+        case l.jn.QUEST_BAR_V2:
             return {
                 location: !0,
                 age: !0,
                 activity: !0
             };
-        case c.jn.ACTIVITY_PANEL:
-        case c.jn.QUESTS_EMBED:
-        case c.jn.QUEST_LIVE_STREAM:
+        case l.jn.ACTIVITY_PANEL:
+        case l.jn.QUESTS_EMBED:
+        case l.jn.QUEST_LIVE_STREAM:
             return { activity: !0 };
         default:
             return;
     }
 };
 function g(e) {
-    let { transitionState: t, onClose: r, questContent: c, quest: g } = e,
-        j = f(c),
+    let { transitionState: t, onClose: n, questContent: l, quest: g } = e,
+        j = f(l),
         h = s.useMemo(() => {
             var e;
-            return (0, l.Fs)({
+            return (0, c.Fs)({
                 isTargetedDisclosure: null != j,
                 gamePublisher: g.config.messages.gamePublisher,
                 gameTitle: g.config.messages.gameTitle,
                 cosponsorName: null == (e = g.config.cosponsorMetadata) ? void 0 : e.name
             });
         }, [g, j]);
-    return (0, n.jsxs)(a.Y0X, {
+    return (0, r.jsxs)(a.Y0X, {
         transitionState: t,
         size: a.CgR.DYNAMIC,
         className: u.modalRoot,
         children: [
-            (0, n.jsxs)(a.xBx, {
+            (0, r.jsxs)(a.xBx, {
                 direction: o.Z.Direction.VERTICAL,
                 separator: !1,
                 className: u.modalHeader,
                 children: [
-                    (0, n.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: u.modalTop,
                         children: [
-                            (0, n.jsx)('div', {
+                            (0, r.jsx)('div', {
                                 className: u.iconFrame,
-                                children: (0, n.jsx)('img', {
+                                children: (0, r.jsx)('img', {
                                     alt: '',
                                     src: x
                                 })
                             }),
-                            (0, n.jsx)(a.olH, {
+                            (0, r.jsx)(a.olH, {
                                 className: u.closeBtn,
-                                onClick: r
+                                onClick: n
                             })
                         ]
                     }),
-                    (0, n.jsx)(a.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         variant: 'heading-xl/bold',
-                        children: m.NW.string(m.t.GcsZKC)
+                        children: m.intl.string(m.t.GcsZKC)
                     })
                 ]
             }),
-            (0, n.jsxs)(a.hzk, {
+            (0, r.jsxs)(a.hzk, {
                 className: u.modalContent,
                 children: [
-                    (0, n.jsx)(a.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
                         className: u.upperBodyText,
                         children: h
                     }),
-                    (0, n.jsx)(_, { targetedTraits: j }),
-                    (0, n.jsx)(a.Text, {
+                    (0, r.jsx)(_, { targetedTraits: j }),
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-muted',
-                        children: m.NW.format(m.t.tzq9WV, { privacySettingsUrl: i.Z.getArticleURL(d.BhN.QUESTS_PRIVACY_CONTROLS) })
+                        children: m.intl.format(m.t.tzq9WV, { privacySettingsUrl: i.Z.getArticleURL(d.BhN.QUESTS_PRIVACY_CONTROLS) })
                     })
                 ]
             }),
-            (0, n.jsx)(a.mzw, {
+            (0, r.jsx)(a.mzw, {
                 className: u.footer,
-                children: (0, n.jsx)(a.zxk, {
-                    onClick: r,
-                    children: m.NW.string(m.t.cpT0Cg)
+                children: (0, r.jsx)(a.zxk, {
+                    onClick: n,
+                    children: m.intl.string(m.t.cpT0Cg)
                 })
             })
         ]
     });
 }
 function j(e) {
-    let { location: t, age: r, activity: s } = e;
-    return (0, n.jsxs)('ul', {
+    let { location: t, age: n, activity: s } = e;
+    return (0, r.jsxs)('ul', {
         className: u.targetList,
         children: [
             t &&
-                (0, n.jsx)(h, {
+                (0, r.jsx)(h, {
                     icon: a.enf,
-                    children: m.NW.string(m.t.xQSdPj)
+                    children: m.intl.string(m.t.xQSdPj)
                 }),
-            r &&
-                (0, n.jsx)(h, {
+            n &&
+                (0, r.jsx)(h, {
                     icon: a.tBG,
-                    children: m.NW.string(m.t.mYt7hY)
+                    children: m.intl.string(m.t.mYt7hY)
                 }),
             s &&
-                (0, n.jsx)(h, {
+                (0, r.jsx)(h, {
                     icon: a.iWm,
-                    children: m.NW.string(m.t.XAsWxc)
+                    children: m.intl.string(m.t.XAsWxc)
                 })
         ]
     });
@@ -124,29 +124,29 @@ function j(e) {
 function _(e) {
     let { targetedTraits: t } = e;
     return null != t
-        ? (0, n.jsx)(
+        ? (0, r.jsx)(
               j,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
-                      var r = null != arguments[t] ? arguments[t] : {},
-                          n = Object.keys(r);
+                      var n = null != arguments[t] ? arguments[t] : {},
+                          r = Object.keys(n);
                       'function' == typeof Object.getOwnPropertySymbols &&
-                          (n = n.concat(
-                              Object.getOwnPropertySymbols(r).filter(function (e) {
-                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                          (r = r.concat(
+                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
                               })
                           )),
-                          n.forEach(function (t) {
-                              var n;
-                              (n = r[t]),
+                          r.forEach(function (t) {
+                              var r;
+                              (r = n[t]),
                                   t in e
                                       ? Object.defineProperty(e, t, {
-                                            value: n,
+                                            value: r,
                                             enumerable: !0,
                                             configurable: !0,
                                             writable: !0
                                         })
-                                      : (e[t] = n);
+                                      : (e[t] = r);
                           });
                   }
                   return e;
@@ -155,17 +155,17 @@ function _(e) {
         : null;
 }
 function h(e) {
-    let { icon: t, children: r } = e;
-    return (0, n.jsxs)(a.Text, {
+    let { icon: t, children: n } = e;
+    return (0, r.jsxs)(a.Text, {
         variant: 'text-sm/medium',
         tag: 'li',
         className: u.targetItem,
         children: [
-            (0, n.jsx)(t, {
+            (0, r.jsx)(t, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            r
+            n
         ]
     });
 }

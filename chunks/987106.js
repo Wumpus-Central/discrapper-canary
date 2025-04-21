@@ -21,12 +21,12 @@ function j(e) {
         ? (0, n.jsx)(a.v2r, {
               navId: 'component-button',
               onClose: c.Zy,
-              'aria-label': m.NW.string(m.t.tvTXy8),
+              'aria-label': m.intl.string(m.t.tvTXy8),
               onSelect: r,
               children: (0, n.jsx)(a.kSQ, {
                   children: (0, n.jsx)(a.sNh, {
                       id: 'copy',
-                      label: m.NW.string(m.t.uHhnfX),
+                      label: m.intl.string(m.t.uHhnfX),
                       action: () => (0, p.JG)(t)
                   })
               })

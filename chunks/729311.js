@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(442837),
-    l = n(481060),
+    l = n(442837),
+    s = n(481060),
     a = n(852860),
     o = n(111028),
     c = n(977258),
@@ -20,35 +20,35 @@ var r = n(200651),
     x = n(259580),
     b = n(999382),
     j = n(743475),
-    N = n(889369),
-    _ = n(570961),
-    v = n(208665),
-    O = n(868814),
-    C = n(974513),
-    y = n(2348),
+    _ = n(889369),
+    v = n(570961),
+    O = n(208665),
+    C = n(868814),
+    y = n(974513),
+    N = n(2348),
     I = n(353890),
     E = n(716130),
     S = n(388032),
     T = n(19567);
 function P(e) {
     let { guild: t } = e,
-        a = (0, s.e7)([d.Z], () => d.Z.getEnabled(t.id)),
-        h = (0, s.e7)([p.Z], () => p.Z.hasFetched(t.id)),
-        f = (0, O.Z)(t),
-        x = (0, s.e7)([N.Z], () => N.Z.editedDefaultChannelIds),
+        a = (0, l.e7)([d.Z], () => d.Z.getEnabled(t.id)),
+        h = (0, l.e7)([p.Z], () => p.Z.hasFetched(t.id)),
+        f = (0, C.Z)(t),
+        x = (0, l.e7)([_.Z], () => _.Z.editedDefaultChannelIds),
         b = f.filter((e) => !x.has(e.id)),
-        [_, v] = i.useState(!1);
+        [v, O] = i.useState(!1);
     i.useEffect(() => {
         h || a || (0, g.S)(t.id);
     }, [t.id, h, a]);
-    let C = (e) => {
-        (0, l.ZDy)(async () => {
+    let y = (e) => {
+        (0, s.ZDy)(async () => {
             let { default: i } = await n.e('35641').then(n.bind(n, 89216));
             return (n) => {
-                var s, l;
+                var l, s;
                 return (0, r.jsx)(
                     i,
-                    ((s = (function (e) {
+                    ((l = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
@@ -73,13 +73,13 @@ function P(e) {
                         }
                         return e;
                     })({}, n)),
-                    (l = l =
+                    (s = s =
                         {
                             guildId: t.id,
                             startingChannelId: e
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(l))
+                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -87,46 +87,46 @@ function P(e) {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(l)).forEach(function (e) {
-                              Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(l, e));
+                          })(Object(s)).forEach(function (e) {
+                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
                           }),
-                    s)
+                    l)
                 );
             };
         });
     };
-    return _ || 0 === b.length
+    return v || 0 === b.length
         ? null
         : (0, r.jsxs)('div', {
               className: T.recommendations,
               children: [
-                  (0, r.jsx)(l.Text, {
+                  (0, r.jsx)(s.Text, {
                       variant: 'text-md/medium',
                       color: 'header-primary',
-                      children: S.NW.string(S.t.NN7rDw)
+                      children: S.intl.string(S.t.NN7rDw)
                   }),
                   (0, r.jsxs)('div', {
                       className: T.recsSubheader,
                       children: [
-                          (0, r.jsx)(l.Text, {
+                          (0, r.jsx)(s.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
-                              children: S.NW.string(S.t['3Uuql5'])
+                              children: S.intl.string(S.t['3Uuql5'])
                           }),
-                          (0, r.jsxs)(l.P3F, {
+                          (0, r.jsxs)(s.P3F, {
                               className: T.dismissAll,
-                              onClick: () => v(!0),
+                              onClick: () => O(!0),
                               children: [
-                                  (0, r.jsx)(l.dz2, {
+                                  (0, r.jsx)(s.dz2, {
                                       size: 'xxs',
                                       color: 'currentColor',
                                       className: T.checkmark
                                   }),
-                                  (0, r.jsx)(l.Text, {
+                                  (0, r.jsx)(s.Text, {
                                       className: T.dismissAllText,
                                       variant: 'text-xs/medium',
                                       color: 'text-brand',
-                                      children: S.NW.string(S.t.ZC3PJy)
+                                      children: S.intl.string(S.t.ZC3PJy)
                                   })
                               ]
                           })
@@ -152,7 +152,7 @@ function P(e) {
                                                           }),
                                                           (0, r.jsx)(o.Z, {
                                                               className: T.__invalid_name,
-                                                              children: (0, r.jsx)(l.Text, {
+                                                              children: (0, r.jsx)(s.Text, {
                                                                   className: T.__invalid_channelText,
                                                                   variant: 'text-md/medium',
                                                                   lineClamp: 1,
@@ -166,7 +166,7 @@ function P(e) {
                                                       ? (0, r.jsx)(
                                                             o.Z,
                                                             {
-                                                                children: (0, r.jsx)(l.Text, {
+                                                                children: (0, r.jsx)(s.Text, {
                                                                     className: T.topic,
                                                                     variant: 'text-xs/normal',
                                                                     children: m.Z.parseTopic(e.topic, !0, { channelId: e.id })
@@ -178,27 +178,27 @@ function P(e) {
                                               ]
                                           }),
                                           (0, c.s)(t.id, e.id)
-                                              ? (0, r.jsx)(l.zxk, {
-                                                    color: l.zxk.Colors.BRAND,
-                                                    size: l.zxk.Sizes.SMALL,
+                                              ? (0, r.jsx)(s.zxk, {
+                                                    color: s.zxk.Colors.BRAND,
+                                                    size: s.zxk.Sizes.SMALL,
                                                     className: T.addChannelCTA,
                                                     onClick: () => (0, j.pt)(e.id),
-                                                    children: S.NW.string(S.t.OYkgVl)
+                                                    children: S.intl.string(S.t.OYkgVl)
                                                 })
-                                              : (0, r.jsxs)(l.zxk, {
-                                                    look: l.zxk.Looks.OUTLINED,
-                                                    color: l.zxk.Colors.PRIMARY,
+                                              : (0, r.jsxs)(s.zxk, {
+                                                    look: s.zxk.Looks.OUTLINED,
+                                                    color: s.zxk.Colors.PRIMARY,
                                                     className: T.lockedPill,
                                                     innerClassName: T.lockedPillInner,
-                                                    onClick: () => C(e.id),
+                                                    onClick: () => y(e.id),
                                                     children: [
-                                                        (0, r.jsx)(l.mBM, {
+                                                        (0, r.jsx)(s.mBM, {
                                                             size: 'xs',
                                                             color: 'currentColor'
                                                         }),
-                                                        (0, r.jsx)(l.Text, {
+                                                        (0, r.jsx)(s.Text, {
                                                             variant: 'text-sm/medium',
-                                                            children: S.NW.string(S.t.zA9d1N)
+                                                            children: S.intl.string(S.t.zA9d1N)
                                                         })
                                                     ]
                                                 })
@@ -215,25 +215,25 @@ function P(e) {
 }
 function w(e) {
     let { saveOnClose: t = !1 } = e,
-        n = (0, s.e7)([b.Z], () => b.Z.getGuild()),
-        a = (0, s.e7)([d.Z], () => d.Z.isLoading()),
-        o = (0, s.e7)([f.ZP], () => f.ZP.getChannels(null == n ? void 0 : n.id)),
-        c = (0, s.e7)([h.Z], () => h.Z.getCategories(null == n ? void 0 : n.id)),
-        u = (0, s.e7)([v.Z], () => v.Z.advancedMode),
+        n = (0, l.e7)([b.Z], () => b.Z.getGuild()),
+        a = (0, l.e7)([d.Z], () => d.Z.isLoading()),
+        o = (0, l.e7)([f.ZP], () => f.ZP.getChannels(null == n ? void 0 : n.id)),
+        c = (0, l.e7)([h.Z], () => h.Z.getCategories(null == n ? void 0 : n.id)),
+        u = (0, l.e7)([O.Z], () => O.Z.advancedMode),
         m = i.useRef(null),
         [g, p] = i.useState(!1),
-        N = i.useRef(n);
+        _ = i.useRef(n);
     return (i.useEffect(() => {
-        N.current = n;
+        _.current = n;
     }),
     i.useEffect(() => {
         if (t) {
-            let { current: e } = N;
+            let { current: e } = _;
             return () => {
                 null != e &&
                     (0, j.DO)(e)
                         .then(() => {
-                            u && (0, _.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                            u && (0, v.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                         })
                         .catch(() => {});
             };
@@ -242,14 +242,14 @@ function w(e) {
     null == n)
         ? null
         : a
-          ? (0, r.jsx)(l.$jN, {})
+          ? (0, r.jsx)(s.$jN, {})
           : (0, r.jsxs)('div', {
                 className: T.columns,
                 children: [
                     (0, r.jsxs)('div', {
                         className: T.channelBrowser,
                         children: [
-                            (0, r.jsx)(l.P3F, {
+                            (0, r.jsx)(s.P3F, {
                                 className: T.collapseButton,
                                 onClick: () => p((e) => !e),
                                 children: (0, r.jsx)(x.Z, {
@@ -258,17 +258,17 @@ function w(e) {
                                     width: 16
                                 })
                             }),
-                            (0, r.jsx)(l.X6q, {
+                            (0, r.jsx)(s.X6q, {
                                 className: T.header,
                                 variant: 'heading-lg/extrabold',
-                                children: S.NW.string(S.t['4GSygo'])
+                                children: S.intl.string(S.t['4GSygo'])
                             }),
-                            (0, r.jsx)(l.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: S.NW.string(S.t.Kq7FAQ)
+                                children: S.intl.string(S.t.Kq7FAQ)
                             }),
-                            (0, r.jsx)(C.Wu, {
+                            (0, r.jsx)(y.Wu, {
                                 className: T.advancedModeToggle,
                                 guildId: n.id
                             }),
@@ -277,7 +277,7 @@ function w(e) {
                                 : (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(P, { guild: n }),
-                                          (0, r.jsx)(y.Z, {
+                                          (0, r.jsx)(N.Z, {
                                               className: T.channelBrowserOuter,
                                               guild: n,
                                               categories: c,
@@ -290,16 +290,16 @@ function w(e) {
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)('div', { className: T.largeSeparator }),
-                                        (0, r.jsx)(l.X6q, {
+                                        (0, r.jsx)(s.X6q, {
                                             className: T.prejoinHeader,
                                             variant: 'heading-lg/extrabold',
-                                            children: S.NW.string(S.t.g2Rnpa)
+                                            children: S.intl.string(S.t.g2Rnpa)
                                         }),
-                                        (0, r.jsx)(l.Text, {
+                                        (0, r.jsx)(s.Text, {
                                             className: T.prejoinSubHeader,
                                             variant: 'text-sm/normal',
                                             color: 'header-secondary',
-                                            children: S.NW.string(S.t.bLDQ1d)
+                                            children: S.intl.string(S.t.bLDQ1d)
                                         }),
                                         (0, r.jsx)('div', {
                                             ref: m,
@@ -325,21 +325,21 @@ function w(e) {
             });
 }
 function R() {
-    let e = (0, s.e7)([b.Z], () => b.Z.getProps().guild),
-        t = (0, s.e7)([N.Z], () => N.Z.submitting),
-        n = (0, s.e7)([v.Z], () => v.Z.advancedMode);
+    let e = (0, l.e7)([b.Z], () => b.Z.getProps().guild),
+        t = (0, l.e7)([_.Z], () => _.Z.submitting),
+        n = (0, l.e7)([O.Z], () => O.Z.advancedMode);
     return null == e
         ? null
         : (0, r.jsx)(a.Z, {
               onSave: () => {
                   (0, j.DO)(e)
                       .then(() => {
-                          n && (0, _.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                          n && (0, v.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                       })
                       .catch(() => {});
               },
               onReset: j.BG,
               submitting: t,
-              onSaveText: S.NW.string(S.t.R3BPHx)
+              onSaveText: S.intl.string(S.t.R3BPHx)
           });
 }

@@ -22,34 +22,34 @@ var r = n(200651),
     j = n(327250),
     O = n(50767);
 function E(e) {
-    let { userId: t, guildId: n, onClose: l, className: E, infoPanelClassName: N, style: I } = e,
-        P = (0, x.m)(n),
-        S = (0, a.e7)([C.default], () => C.default.getUser(t), [t]),
-        Z = (0, a.e7)([y.ZP], () => y.ZP.getMember(n, t), [n, t]),
-        [T, A] = i.useState(null == S || null == Z),
-        w = (0, u.Z)(Z),
+    let { userId: t, guildId: n, onClose: l, className: E, infoPanelClassName: I, style: P } = e,
+        S = (0, x.m)(n),
+        Z = (0, a.e7)([C.default], () => C.default.getUser(t), [t]),
+        N = (0, a.e7)([y.ZP], () => y.ZP.getMember(n, t), [n, t]),
+        [T, A] = i.useState(null == Z || null == N),
+        w = (0, u.Z)(N),
         R = i.useRef(null),
         { analyticsLocations: k } = (0, f.ZP)(h.Z.GUILD_MEMBER_MOD_VIEW),
         M = (0, g.ZP)(t, n),
         L = (0, d.ZP)();
     return (i.useEffect(() => {
-        P || l();
-    }, [P, l]),
+        S || l();
+    }, [S, l]),
     i.useEffect(() => {
-        null == w || null != Z || T || l();
-    }, [T, Z, l, w]),
+        null == w || null != N || T || l();
+    }, [T, N, l, w]),
     i.useEffect(() => {
-        null != S && null != Z && A(!1);
-    }, [S, Z]),
+        null != Z && null != N && A(!1);
+    }, [Z, N]),
     i.useEffect(() => {
-        let e = null == Z;
+        let e = null == N;
         return (
             !T && e && (R.current = window.setTimeout(l, 500)),
             () => {
                 null != R.current && window.clearTimeout(R.current);
             }
         );
-    }, [T, Z, l]),
+    }, [T, N, l]),
     (0, p.$)({ [n]: [t] }),
     i.useEffect(() => {
         !(async function () {
@@ -64,11 +64,11 @@ function E(e) {
             await Promise.all(e), A(!1);
         })();
     }, [n, t]),
-    P)
-        ? T || null == S || null == Z
+    S)
+        ? T || null == Z || null == N
             ? (0, r.jsx)('div', {
                   className: o()(O.sidebarContainer, O.loadingContainer, E),
-                  style: I,
+                  style: P,
                   children: (0, r.jsx)(s.$jN, {
                       animated: !0,
                       type: T ? s.$jN.Type.SPINNING_CIRCLE : s.$jN.Type.CHASING_DOTS
@@ -78,9 +78,9 @@ function E(e) {
                   value: k,
                   children: (0, r.jsx)('div', {
                       className: o()(O.sidebarContainer, E),
-                      style: I,
+                      style: P,
                       children: (0, r.jsx)(_.Z, {
-                          user: S,
+                          user: Z,
                           displayProfile: M,
                           profileType: null,
                           themeOverride: L,
@@ -98,7 +98,7 @@ function E(e) {
                                       userId: t,
                                       guildId: n,
                                       onClose: l,
-                                      className: N
+                                      className: I
                                   })
                               ]
                           })

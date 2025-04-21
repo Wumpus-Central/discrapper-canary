@@ -16,8 +16,8 @@ var i = n(120356),
     _ = n(434404),
     I = n(703656),
     O = n(944486),
-    N = n(914010),
-    T = n(671533),
+    T = n(914010),
+    N = n(671533),
     S = n(259580),
     p = n(358085),
     A = n(962086),
@@ -45,11 +45,11 @@ function b(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(h, {
         onClick: t,
-        children: y.NW.string(y.t.R9GHyc)
+        children: y.intl.string(y.t.R9GHyc)
     });
 }
 function U() {
-    let e = (0, o.e7)([N.Z], () => N.Z.getGuildId()),
+    let e = (0, o.e7)([T.Z], () => T.Z.getGuildId()),
         t = (0, o.e7)([O.Z], () => O.Z.getChannelId(e)),
         {
             viewingRoles: n,
@@ -66,16 +66,16 @@ function U() {
     let U = (function (e) {
             switch (e) {
                 case P.pNK.INTEGRATIONS:
-                    return y.NW.string(y.t.k7LGdn);
+                    return y.intl.string(y.t.k7LGdn);
                 case P.pNK.ROLE_SUBSCRIPTIONS:
-                    return y.NW.string(y.t.bRqiqa);
+                    return y.intl.string(y.t.bRqiqa);
                 case P.pNK.ONBOARDING:
-                    return y.NW.string(y.t.qZpU3d);
+                    return y.intl.string(y.t.qZpU3d);
                 default:
-                    return y.NW.string(y.t.MTIXho);
+                    return y.intl.string(y.t.MTIXho);
             }
         })(i),
-        M = i === P.pNK.ROLE_SUBSCRIPTIONS ? y.NW.string(y.t.hZUCzc) : y.NW.string(y.t['/djIh4']),
+        M = i === P.pNK.ROLE_SUBSCRIPTIONS ? y.intl.string(y.t.hZUCzc) : y.intl.string(y.t['/djIh4']),
         Z = t === C.oC.GUILD_ONBOARDING,
         L = (t) => {
             let { backToSettings: n } = t;
@@ -89,10 +89,10 @@ function U() {
                 onClick: () => L({ backToSettings: !0 }),
                 className: m.backButton,
                 children: [
-                    (0, r.jsx)(T.Z, {
+                    (0, r.jsx)(N.Z, {
                         width: 16,
                         height: 16,
-                        direction: T.Z.Directions.LEFT,
+                        direction: N.Z.Directions.LEFT,
                         className: m.backArrow
                     }),
                     U
@@ -103,7 +103,7 @@ function U() {
                       className: m.noticeContents,
                       children: (0, r.jsx)('div', {
                           className: m.noticeText,
-                          children: y.NW.string(y.t.PxbiAQ)
+                          children: y.intl.string(y.t.PxbiAQ)
                       })
                   })
                 : (0, r.jsxs)('div', {
@@ -111,7 +111,7 @@ function U() {
                       children: [
                           (0, r.jsx)('div', {
                               className: m.noticeText,
-                              children: l ? y.NW.formatToPlainString(y.t['0PHahI'], { numRoles: Object.keys(n).length }) : y.NW.formatToPlainString(y.t.vMlK8v, { numRoles: Object.keys(n).length })
+                              children: l ? y.intl.formatToPlainString(y.t['0PHahI'], { numRoles: Object.keys(n).length }) : y.intl.formatToPlainString(y.t.vMlK8v, { numRoles: Object.keys(n).length })
                           }),
                           (0, r.jsx)(s.yRy, {
                               position: 'bottom',
@@ -135,7 +135,7 @@ function U() {
                           l &&
                               (0, r.jsx)(s.DY3, {
                                   className: m.previewWarning,
-                                  text: y.NW.string(y.t.mW4DUF),
+                                  text: y.intl.string(y.t.mW4DUF),
                                   children: (0, r.jsx)(s.P4T, {
                                       size: 'xs',
                                       color: a.Z.unsafe_rawColors.YELLOW_300.css
@@ -144,7 +144,7 @@ function U() {
                           p &&
                               (0, r.jsx)(s.DY3, {
                                   className: m.previewWarning,
-                                  text: y.NW.formatToPlainString(y.t.eummvb, {
+                                  text: y.intl.formatToPlainString(y.t.eummvb, {
                                       maxTiers: g.fF,
                                       maxProducts: D.dD
                                   }),

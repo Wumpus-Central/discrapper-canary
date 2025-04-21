@@ -1,9 +1,9 @@
-r.d(t, { default: () => N }), r(388685), r(953529);
+r.d(t, { default: () => S }), r(388685), r(953529);
 var n = r(200651),
     l = r(192379),
     o = r(990547),
-    a = r(442837),
-    i = r(481060),
+    i = r(442837),
+    a = r(481060),
     c = r(390885),
     u = r(594174),
     s = r(626135),
@@ -15,13 +15,13 @@ var n = r(200651),
     b = r(630724),
     g = r(388032),
     y = r(465556);
-function N(e) {
+function S(e) {
     let { transitionState: t, onClose: r } = e,
-        [N, S] = l.useState(null),
-        [A, E] = l.useState(null),
+        [S, A] = l.useState(null),
+        [E, N] = l.useState(null),
         [O, v] = l.useState(!1),
         w = l.createRef(),
-        T = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
+        T = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
         h = l.createRef();
     l.useEffect(() => {
         c.Z.flowStep(b.MK.ANY, b.FF.AGE_GATE), s.default.track(_.rMx.OPEN_MODAL, { type: 'Claim Age Gate' });
@@ -30,15 +30,15 @@ function N(e) {
             (null == T ? void 0 : T.nsfwAllowed) != null && r();
         }, [T, r]);
     let C = async (e) => {
-            if ((e.preventDefault(), null != N)) {
+            if ((e.preventDefault(), null != S)) {
                 v(!0);
                 try {
-                    await p.Av(N, _.jXE.CLAIM_ACCOUNT_MODAL);
+                    await p.Av(S, _.jXE.CLAIM_ACCOUNT_MODAL);
                 } catch (e) {
                     if (null != e.body && null != e.body.date_of_birth) c.Z.flowStep(b.MK.ANY, b.FF.AGE_GATE_UNDERAGE), p.wE(d.L0.CLAIM_ACCOUNT), p.hp(d.L0.CLAIM_ACCOUNT), r();
                     else {
                         var t;
-                        (null == e || null == (t = e.body) ? void 0 : t.username) != null ? E(g.NW.string(g.t['TGg/2t'])) : E(null == e ? void 0 : e.body.message);
+                        (null == e || null == (t = e.body) ? void 0 : t.username) != null ? N(g.intl.string(g.t['TGg/2t'])) : N(null == e ? void 0 : e.body.message);
                     }
                 }
                 v(!1);
@@ -48,53 +48,53 @@ function N(e) {
             var e;
             null == (e = h.current) || e.focus();
         }, [h]);
-    return (0, n.jsx)(i.Y0X, {
+    return (0, n.jsx)(a.Y0X, {
         transitionState: t,
-        size: i.CgR.DYNAMIC,
-        'aria-label': g.NW.string(g.t.QpSKo6),
+        size: a.CgR.DYNAMIC,
+        'aria-label': g.intl.string(g.t.QpSKo6),
         className: y.modal,
         impression: {
             impressionName: o.ImpressionNames.USER_AGE_GATE,
             impressionProperties: { existing_user: !1 }
         },
-        children: (0, n.jsxs)(i.hzk, {
+        children: (0, n.jsxs)(a.hzk, {
             className: y.content,
             children: [
                 (0, n.jsx)('div', { className: y.image }),
                 (0, n.jsxs)('form', {
                     onSubmit: C,
                     children: [
-                        (0, n.jsx)(i.X6q, {
+                        (0, n.jsx)(a.X6q, {
                             className: y.title,
                             variant: 'heading-xl/semibold',
-                            children: g.NW.string(g.t.QpSKo6)
+                            children: g.intl.string(g.t.QpSKo6)
                         }),
-                        (0, n.jsx)(i.Text, {
+                        (0, n.jsx)(a.Text, {
                             color: 'header-secondary',
                             className: y.description,
                             variant: 'text-md/normal',
-                            children: g.NW.format(g.t.EcJBEB, { helpURL: f.Z.getArticleURL(_.BhN.AGE_GATE) })
+                            children: g.intl.format(g.t.EcJBEB, { helpURL: f.Z.getArticleURL(_.BhN.AGE_GATE) })
                         }),
                         (0, n.jsx)(m.Z, {
                             required: !0,
                             autoFocus: !0,
                             wrapperClassName: y.formItem,
-                            label: g.NW.string(g.t.rhBeKS),
+                            label: g.intl.string(g.t.rhBeKS),
                             name: 'birthday',
-                            onChange: (e) => S(e),
+                            onChange: (e) => A(e),
                             onPopulated: j,
-                            error: A,
-                            value: N,
+                            error: E,
+                            value: S,
                             ref: w
                         }),
-                        (0, n.jsx)(i.zxk, {
+                        (0, n.jsx)(a.zxk, {
                             buttonRef: h,
                             type: 'submit',
-                            size: i.zxk.Sizes.LARGE,
+                            size: a.zxk.Sizes.LARGE,
                             submitting: O,
-                            disabled: null == N,
+                            disabled: null == S,
                             fullWidth: !0,
-                            children: g.NW.string(g.t.i4jeWV)
+                            children: g.intl.string(g.t.i4jeWV)
                         })
                     ]
                 })

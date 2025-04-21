@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j });
 var r = n(200651),
     i = n(192379),
-    s = n(442837),
-    l = n(704215),
+    l = n(442837),
+    s = n(704215),
     a = n(481060),
     o = n(725803),
     c = n(605236),
@@ -17,24 +17,24 @@ var r = n(200651),
     b = n(94072);
 function j() {
     let e,
-        t = (0, s.e7)([d.Z], () => d.Z.getGuild()),
+        t = (0, l.e7)([d.Z], () => d.Z.getGuild()),
         { application: n, loading: j } = (0, o.Z)(null == t ? void 0 : t.id, x.wW.GUILD_ROLE_SUBSCRIPTIONS),
-        N = i.useRef(null),
-        _ = (0, u.Z)(null != t ? t : void 0);
+        _ = i.useRef(null),
+        v = (0, u.Z)(null != t ? t : void 0);
     i.useEffect(() => {
-        null != t && (0, m.sO)(t) && (0, c.EW)(l.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
+        null != t && (0, m.sO)(t) && (0, c.EW)(s.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
     }, [t]);
-    let v = (null == t ? void 0 : t.hasFeature(f.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(f.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
+    let O = (null == t ? void 0 : t.hasFeature(f.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(f.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
     return (
         (e =
             null == t || j
                 ? (0, r.jsx)(a.$jN, {})
-                : null != _
+                : null != v
                   ? (0, r.jsx)(p.Z, {
                         guild: t,
-                        config: _
+                        config: v
                     })
-                  : v
+                  : O
                     ? (0, r.jsx)(h.Z, { guild: t })
                     : (0, r.jsx)(g.Z, {
                           guild: t,
@@ -47,10 +47,10 @@ function j() {
                 children: (0, r.jsx)(a.w0Z, {
                     className: b.settingsScroller,
                     children: (0, r.jsx)('main', {
-                        ref: N,
+                        ref: _,
                         className: b.settingsContent,
                         children: (0, r.jsx)(a.JcV, {
-                            containerRef: N,
+                            containerRef: _,
                             children: e
                         })
                     })

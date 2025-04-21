@@ -8,7 +8,7 @@ n.d(t, {
     HW: () => E,
     Hp: () => g,
     JO: () => T,
-    Kw: () => A,
+    Kw: () => N,
     MG: () => y,
     OT: () => a,
     Qr: () => O,
@@ -28,7 +28,7 @@ n.d(t, {
     wD: () => S,
     xd: () => L,
     xx: () => w,
-    yl: () => N
+    yl: () => A
 });
 var r = n(710845),
     i = n(70956),
@@ -61,8 +61,8 @@ let c = 'alt+c',
     I = 640,
     S = 360,
     T = 100,
-    N = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
-    A = 15,
+    A = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
+    N = 15,
     C = 30000,
     R = 30,
     P = 10,

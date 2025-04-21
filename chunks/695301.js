@@ -26,18 +26,18 @@ let b = i.memo(function (e) {
         {
             badge: E,
             unread: I,
-            isMentionLowImportance: N
+            isMentionLowImportance: P
         } = (0, l.cj)([d.default], () => ({
             badge: d.default.getMentionCount(_),
             isMentionLowImportance: d.default.getIsMentionLowImportance(_),
             unread: d.default.hasUnread(_)
         })),
-        P = (0, a.Ij)(O) && 0 === E,
-        w = i.useMemo(
+        w = (0, a.Ij)(O) && 0 === E,
+        N = i.useMemo(
             () =>
                 null != y
                     ? y
-                    : P
+                    : w
                       ? (0, r.jsx)('div', {
                             className: m.pauseBackground,
                             children: (0, r.jsx)(o.fpf, {
@@ -49,7 +49,7 @@ let b = i.memo(function (e) {
                             })
                         })
                       : null,
-            [y, P]
+            [y, w]
         );
     return (0, r.jsx)(
         g.Z,
@@ -85,8 +85,8 @@ let b = i.memo(function (e) {
                 animatable: C,
                 selected: S === _,
                 badge: E,
-                isMentionLowImportance: N,
-                lowerBadge: w,
+                isMentionLowImportance: P,
+                lowerBadge: N,
                 unread: I,
                 mediaState: x,
                 guildJoinRequestStatus: v

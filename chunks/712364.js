@@ -116,14 +116,14 @@ class f extends (r = a.PureComponent) {
                             (0, i.jsx)(l.zxk, {
                                 type: 'submit',
                                 disabled: d || 0 === g.length,
-                                children: null != n ? n : c.NW.string(c.t['cY+Ooa'])
+                                children: null != n ? n : c.intl.string(c.t['cY+Ooa'])
                             }),
                             (0, i.jsx)(l.zxk, {
                                 onClick: this.handleCancel,
                                 disabled: d,
                                 look: l.zxk.Looks.LINK,
                                 color: l.zxk.Colors.PRIMARY,
-                                children: c.NW.string(c.t['ETE/oK'])
+                                children: c.intl.string(c.t['ETE/oK'])
                             })
                         ]
                     })
@@ -144,9 +144,9 @@ class f extends (r = a.PureComponent) {
             }),
             d(this, 'getLabelText', () => {
                 var e;
-                return null != (e = this.props.label) ? e : this.props.disallowBackupCodes ? c.NW.string(c.t.HZPBOT) : c.NW.string(c.t['+NQopK']);
+                return null != (e = this.props.label) ? e : this.props.disallowBackupCodes ? c.intl.string(c.t.HZPBOT) : c.intl.string(c.t['+NQopK']);
             }),
-            d(this, 'getSupportedCodeTypes', () => (this.props.disallowBackupCodes ? c.NW.string(c.t.tARzgo) : c.NW.string(c.t.yO4lAA))),
+            d(this, 'getSupportedCodeTypes', () => (this.props.disallowBackupCodes ? c.intl.string(c.t.tARzgo) : c.intl.string(c.t.yO4lAA))),
             d(this, 'getPlaceholder', () => {
                 var e;
                 return this.props.forceNoPlaceholder ? null : null != (e = this.props.placeholder) ? e : this.getSupportedCodeTypes();

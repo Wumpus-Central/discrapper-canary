@@ -1,10 +1,10 @@
 n.d(t, { Z: () => C }), n(361932), n(187205);
 var s = n(200651),
     i = n(192379),
-    r = n(120356),
-    o = n.n(r),
-    l = n(658722),
-    a = n.n(l),
+    l = n(120356),
+    r = n.n(l),
+    o = n(658722),
+    a = n.n(o),
     h = n(392711),
     c = n.n(h),
     d = n(217986),
@@ -31,14 +31,14 @@ class C extends i.PureComponent {
     renderItems() {
         let { query: e } = this.state,
             t = d.Z.flatMap((e, t) => {
-                let { alpha2: n, phoneCountryCodes: i, name: r } = e,
-                    o = (0, E.q9)(n);
+                let { alpha2: n, phoneCountryCodes: i, name: l } = e,
+                    r = (0, E.q9)(n);
                 return i.map((e) => ({
                     key: ''.concat(t, '-').concat(e),
-                    name: r,
-                    translatedName: o,
+                    name: l,
+                    translatedName: r,
                     countryData: {
-                        name: r,
+                        name: l,
                         alpha2: n,
                         code: e
                     },
@@ -49,7 +49,7 @@ class C extends i.PureComponent {
                         children: [
                             (0, s.jsx)(p.Z.Child, {
                                 className: R.countryName,
-                                children: o
+                                children: r
                             }),
                             (0, s.jsx)(p.Z.Child, {
                                 className: R.countryCode,
@@ -105,7 +105,7 @@ class C extends i.PureComponent {
                 })
                 .value();
         return 0 === n.length
-            ? (0, s.jsx)(u.mzC.Empty, { children: m.NW.string(m.t.PoWNfX) })
+            ? (0, s.jsx)(u.mzC.Empty, { children: m.intl.string(m.t.PoWNfX) })
             : (0, s.jsx)(u.w0Z, {
                   className: R.phoneFieldScroller,
                   children: n
@@ -114,11 +114,11 @@ class C extends i.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, s.jsxs)(u.mzC, {
-            className: o()(R.phoneFieldPopout, f.elevationBorderLow, e),
+            className: r()(R.phoneFieldPopout, f.elevationBorderLow, e),
             children: [
                 (0, s.jsx)(u.mzC.SearchBar, {
                     query: this.state.query,
-                    placeholder: m.NW.string(m.t.hGOODg),
+                    placeholder: m.intl.string(m.t.hGOODg),
                     onChange: this.onChangeQuery,
                     onClear: this.onClearQuery,
                     autoComplete: 'off'

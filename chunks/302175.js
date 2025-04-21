@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(639777),
     S = n(441536),
     T = n(535396),
-    N = n(981631),
-    A = n(680278),
+    A = n(981631),
+    N = n(680278),
     C = n(388032),
     R = n(840969),
     P = n(501867);
@@ -92,8 +92,8 @@ function M(e) {
             null != e &&
                 (0, p.u)({
                     analyticsLocation: {
-                        page: N.ZY5.GUILD_POWERUPS_MARKETING,
-                        section: N.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION
+                        page: A.ZY5.GUILD_POWERUPS_MARKETING,
+                        section: A.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION
                     },
                     numberOfBoostsToAdd: 1,
                     analyticsLocations: l,
@@ -152,7 +152,7 @@ function M(e) {
                     (0, r.jsx)(h.xm, {
                         heading: n.title,
                         description: n.description,
-                        label: C.NW.formatToPlainString(A.Z.QOacIS, { quantity: n.cost }),
+                        label: C.intl.formatToPlainString(N.default.QOacIS, { quantity: n.cost }),
                         isEnabled: c
                     }),
                     (0, r.jsxs)(s.animated.div, {
@@ -164,7 +164,7 @@ function M(e) {
                                 onClick: w,
                                 color: u.zxk.Colors.BRAND,
                                 className: P.button,
-                                children: C.NW.string(C.t['oPAx7+'])
+                                children: C.intl.string(C.t['oPAx7+'])
                             }),
                             _ &&
                                 (0, r.jsx)(u.zxk, {
@@ -172,7 +172,7 @@ function M(e) {
                                     onClick: L,
                                     color: u.zxk.Colors.PRIMARY,
                                     className: P.button,
-                                    children: C.NW.string(C.t.GoCQxc)
+                                    children: C.intl.string(C.t.GoCQxc)
                                 })
                         ]
                     })
@@ -180,7 +180,7 @@ function M(e) {
             }),
             (0, r.jsx)(u.IGR, {
                 className: P.topPerksCardNew,
-                text: C.NW.string(C.t.y2b7CA)
+                text: C.intl.string(C.t.y2b7CA)
             }),
             g && (0, r.jsx)('div', { className: P.shineLine })
         ]
@@ -205,17 +205,17 @@ let k = i.forwardRef((e, t) => {
                       children: [
                           (0, r.jsx)(l.X6, {
                               variant: 'heading-xxl/extrabold',
-                              children: C.NW.string(A.Z.wjI18f)
+                              children: C.intl.string(N.default.wjI18f)
                           }),
                           (0, r.jsx)(u.IGR, {
-                              text: C.NW.string(C.t.oW0eUV),
+                              text: C.intl.string(C.t.oW0eUV),
                               color: _.Z.BG_BRAND
                           })
                       ]
                   }),
                   (0, r.jsx)(l.xv, {
                       variant: 'text-lg/medium',
-                      children: C.NW.format(A.Z.S562fn, { helpDeskArticle: g.Z.getArticleURL(N.BhN.GUILD_BOOSTING_FAQ) })
+                      children: C.intl.format(N.default.S562fn, { helpDeskArticle: g.Z.getArticleURL(A.BhN.GUILD_BOOSTING_FAQ) })
                   }),
                   (0, r.jsx)('div', {
                       className: R.powerupsContainer,

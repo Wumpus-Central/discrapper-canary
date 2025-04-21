@@ -91,13 +91,13 @@ function b(e) {
         children: (0, r.jsxs)(
             s.kL8,
             m(p({}, i), {
-                'aria-label': u.NW.formatToPlainString(u.t.c1qVYm, { guildName: t.name }),
+                'aria-label': u.intl.formatToPlainString(u.t.c1qVYm, { guildName: t.name }),
                 className: a()(f.soundShowAllButton, { [f.focused]: n }),
                 onClick: () => (0, l.HZ)(t.id),
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: 'text-xs/semibold',
-                        children: u.NW.string(_ ? u.t['0aOCAA'] : u.t.ozv9NT)
+                        children: u.intl.string(_ ? u.t['0aOCAA'] : u.t.ozv9NT)
                     }),
                     !_ &&
                         (0, r.jsx)(s.CJ0, {

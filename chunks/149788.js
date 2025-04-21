@@ -74,8 +74,8 @@ let b = function (e) {
         onScroll: t,
         children: [
             (0, r.jsx)(s.Z, {
-                title: f.NW.string(f.t.X5xPlZ),
-                description: f.NW.string(f.t['F/IQCA']),
+                title: f.intl.string(f.t.X5xPlZ),
+                description: f.intl.string(f.t['F/IQCA']),
                 children: (0, r.jsx)(o.Z, {})
             }),
             (0, r.jsxs)(c.Z, {
@@ -87,7 +87,7 @@ let b = function (e) {
                                       className: g.sectionTitle,
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
-                                      children: f.NW.string(f.t['2DfZIS'])
+                                      children: f.intl.string(f.t['2DfZIS'])
                                   }),
                                   (0, r.jsxs)('div', {
                                       className: g.content,
@@ -119,13 +119,13 @@ let b = function (e) {
                                 className: m.text,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                children: [f.NW.string(f.t.O1k9XV), ' ']
+                                children: [f.intl.string(f.t.O1k9XV), ' ']
                             }),
                             (0, r.jsx)(l.Text, {
                                 className: m.text,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                children: f.NW.string(f.t.FV5dvr)
+                                children: f.intl.string(f.t.FV5dvr)
                             })
                         ]
                     })

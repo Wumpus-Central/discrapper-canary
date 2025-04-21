@@ -60,7 +60,7 @@ function m(e) {
             }
             return i;
         })(e, ['onClose', 'analytics']);
-    let m = d.NW.format(d.t['7aNIkZ'], {
+    let m = d.intl.format(d.t['7aNIkZ'], {
         onPressMore: function () {
             (0, o.Z)(),
                 t(),
@@ -75,7 +75,7 @@ function m(e) {
         s.Z,
         f(
             {
-                title: d.NW.string(d.t.K49fZG),
+                title: d.intl.string(d.t.K49fZG),
                 glowUp: m,
                 body: m,
                 artContainerClassName: p.artContainer,

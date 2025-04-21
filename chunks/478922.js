@@ -91,12 +91,12 @@ function g(e, t, n) {
         });
     return (0, i.forwardRef)(function (n, m) {
         var g,
-            { onScroll: E, dir: b = 'ltr', sections: y, columns: v, getItemKey: O, getItemHeight: I, getSectionHeight: S, chunkSize: T, renderSection: N, renderItem: A, getSectionProps: C, itemGutter: R, removeEdgeItemGutters: P, sectionGutter: w, padding: D, paddingVertical: L, paddingHorizontal: x, fade: M = !1, className: k, style: j, maxContentWidth: U, renderAccessory: G, onItemVisibilityChange: B } = n,
+            { onScroll: E, dir: b = 'ltr', sections: y, columns: v, getItemKey: O, getItemHeight: I, getSectionHeight: S, chunkSize: T, renderSection: A, renderItem: N, getSectionProps: C, itemGutter: R, removeEdgeItemGutters: P, sectionGutter: w, padding: D, paddingVertical: L, paddingHorizontal: x, fade: M = !1, className: k, style: j, maxContentWidth: U, renderAccessory: G, onItemVisibilityChange: B } = n,
             F = h(n, ['onScroll', 'dir', 'sections', 'columns', 'getItemKey', 'getItemHeight', 'getSectionHeight', 'chunkSize', 'renderSection', 'renderItem', 'getSectionProps', 'itemGutter', 'removeEdgeItemGutters', 'sectionGutter', 'padding', 'paddingVertical', 'paddingHorizontal', 'fade', 'className', 'style', 'maxContentWidth', 'renderAccessory', 'onItemVisibilityChange']);
         let V = i.useRef(null),
             Z = i.useRef(null),
             H = i.useRef({}),
-            [W, Y] = i.useState(!1),
+            [Y, W] = i.useState(!1),
             { scrollerRef: K, scrollerState: z, getScrollerState: q } = (0, c.T4)();
         (0, c.tT)({
             scrollerRef: K,
@@ -168,9 +168,9 @@ function g(e, t, n) {
         let el = (0, i.useCallback)(
             (e) => {
                 er(1),
-                    null == V.current ? Y(!0) : clearTimeout(V.current),
+                    null == V.current ? W(!0) : clearTimeout(V.current),
                     (V.current = setTimeout(() => {
-                        (V.current = null), Y(!1);
+                        (V.current = null), W(!1);
                     }, 200)),
                     null != E && E(e);
             },
@@ -190,7 +190,7 @@ function g(e, t, n) {
                             className: o()(k, {
                                 [e]: !0,
                                 [t]: M,
-                                [u.scrolling]: W
+                                [u.scrolling]: Y
                             }),
                             style: (0, c.uT)(j)
                         },
@@ -220,11 +220,11 @@ function g(e, t, n) {
                                                           p(f({}, s), {
                                                               style: f({}, i, null != (t = null == s ? void 0 : s.style) ? t : {}),
                                                               children: [
-                                                                  null != N && null != o && N(n, o, e),
+                                                                  null != A && null != o && A(n, o, e),
                                                                   a.map((e) => {
                                                                       let [t, n, r] = e,
                                                                           i = X[t];
-                                                                      return null != i ? A(n, r, i, t, J) : null;
+                                                                      return null != i ? N(n, r, i, t, J) : null;
                                                                   })
                                                               ]
                                                           }),
@@ -234,7 +234,7 @@ function g(e, t, n) {
                                             })
                                         })
                                     }),
-                                [$, A, N, X, ee, C, J]
+                                [$, N, A, X, ee, C, J]
                             )
                         ]
                     }

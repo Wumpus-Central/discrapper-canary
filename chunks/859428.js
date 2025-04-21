@@ -12,8 +12,8 @@ var r = n(200651),
     _ = n(900849),
     I = n(981631),
     O = n(388032),
-    N = n(8940),
-    T = n(240211);
+    T = n(8940),
+    N = n(240211);
 let S = () => {
     let e = (0, a.e7)([E.Z], () => E.Z.getGuildId(), []),
         t = (0, a.e7)([d.Z], () => d.Z.getGuild(e), [e]),
@@ -28,14 +28,14 @@ let S = () => {
         }
     };
     return (0, r.jsxs)('div', {
-        className: o()(N.notice, T.notice),
+        className: o()(T.notice, N.notice),
         children: [
             (0, r.jsxs)(s.zxk, {
                 look: s.zxk.Looks.OUTLINED,
                 color: s.zxk.Colors.WHITE,
                 size: s.zxk.Sizes.NONE,
-                className: o()(N.button, N.back),
-                innerClassName: N.iconButton,
+                className: o()(T.button, T.back),
+                innerClassName: T.iconButton,
                 onClick: () => {
                     (0, u.s1)().goBack();
                 },
@@ -43,24 +43,24 @@ let S = () => {
                     (0, r.jsx)(s.whL, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: N.arrow
+                        className: T.arrow
                     }),
-                    O.NW.string(O.t['13/7kZ'])
+                    O.intl.string(O.t['13/7kZ'])
                 ]
             }),
             (0, r.jsx)(s.Text, {
-                className: N.header,
+                className: T.header,
                 variant: 'text-sm/normal',
-                children: O.NW.string(O.t['N/y2WF'])
+                children: O.intl.string(O.t['N/y2WF'])
             }),
             (0, r.jsx)(s.zxk, {
-                className: N.button,
+                className: T.button,
                 look: s.zxk.Looks.OUTLINED,
                 color: s.zxk.Colors.WHITE,
                 size: s.zxk.Sizes.NONE,
                 submitting: n,
                 onClick: S,
-                children: O.NW.format(O.t.uHN7n5, { guild: t.name })
+                children: O.intl.format(O.t.uHN7n5, { guild: t.name })
             })
         ]
     });

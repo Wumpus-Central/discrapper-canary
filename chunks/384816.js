@@ -23,9 +23,9 @@ var o = t(442837),
     _ = t(388032),
     Z = t(349966);
 function O(e) {
-    let { user: n, currentUser: t, displayProfile: O, subsection: N, onClose: P } = e,
-        { theme: E } = (0, j.z)(),
-        { trackUserProfileAction: S } = (0, f.KZ)(),
+    let { user: n, currentUser: t, displayProfile: O, subsection: P, onClose: E } = e,
+        { theme: S } = (0, j.z)(),
+        { trackUserProfileAction: N } = (0, f.KZ)(),
         T = null == O ? void 0 : O.guildId,
         A = (0, o.e7)([d.Z], () => (null != T ? d.Z.getGuild(T) : null)),
         C = (0, o.e7)([u.Z], () => u.Z.getGuildId()),
@@ -48,7 +48,7 @@ function O(e) {
                     user: n,
                     currentUser: t,
                     guild: A,
-                    scrollIntoView: N === x.Tb.ROLES
+                    scrollIntoView: P === x.Tb.ROLES
                 }),
             n.isProvisional &&
                 (0, r.jsx)(c.WR, {
@@ -57,11 +57,11 @@ function O(e) {
                 }),
             L.length > 0 &&
                 (0, r.jsx)(I.Z, {
-                    heading: _.NW.string(_.t['Uv/eT0']),
+                    heading: _.intl.string(_.t['Uv/eT0']),
                     children: (0, r.jsx)(g.Z, { applicationIds: L })
                 }),
             (0, r.jsx)(I.Z, {
-                heading: _.NW.string(_.t.a6XYDw),
+                heading: _.intl.string(_.t.a6XYDw),
                 children: (0, r.jsx)(y.Z, {
                     userId: n.id,
                     guildId: null == O ? void 0 : O.guildId,
@@ -70,19 +70,19 @@ function O(e) {
             }),
             R.length > 0 &&
                 (0, r.jsx)(I.Z, {
-                    heading: _.NW.string(_.t['3fe7U1']),
-                    scrollIntoView: N === x.Tb.CONNECTIONS,
+                    heading: _.intl.string(_.t['3fe7U1']),
+                    scrollIntoView: P === x.Tb.CONNECTIONS,
                     children: (0, r.jsx)(h.OA, {
                         connectedAccounts: R,
                         className: Z.connections,
                         userId: n.id,
-                        theme: E,
+                        theme: S,
                         locale: w
                     })
                 }),
             M.length > 0 &&
                 (0, r.jsx)(I.Z, {
-                    heading: _.NW.string(_.t.PHjkRE),
+                    heading: _.intl.string(_.t.PHjkRE),
                     children: M.map((e) =>
                         (0, r.jsx)(
                             h.tH,
@@ -91,7 +91,7 @@ function O(e) {
                                 applicationRoleConnection: e,
                                 locale: w,
                                 onApplicationClicked: () => {
-                                    S({ action: 'PRESS_APP_CONNECTION' }), P();
+                                    N({ action: 'PRESS_APP_CONNECTION' }), E();
                                 },
                                 selectedGuildId: null != C ? C : void 0
                             },
@@ -100,13 +100,13 @@ function O(e) {
                     )
                 }),
             (0, r.jsx)(I.Z, {
-                heading: _.NW.string(_.t['mQKv+v']),
-                scrollIntoView: N === x.Tb.NOTE,
+                heading: _.intl.string(_.t['mQKv+v']),
+                scrollIntoView: P === x.Tb.NOTE,
                 children: (0, r.jsx)(l.Z, {
                     userId: n.id,
                     className: Z.note,
-                    autoFocus: N === x.Tb.NOTE,
-                    onUpdate: () => S({ action: 'SET_NOTE' })
+                    autoFocus: P === x.Tb.NOTE,
+                    onUpdate: () => N({ action: 'SET_NOTE' })
                 })
             })
         ]

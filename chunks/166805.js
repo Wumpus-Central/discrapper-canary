@@ -1,8 +1,8 @@
-n.d(t, { P: () => O }), n(388685), n(953529);
+n.d(t, { P: () => C }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
-    s = n(580685),
-    l = n(793030),
+    l = n(580685),
+    s = n(793030),
     a = n(442837),
     o = n(481060),
     c = n(497321),
@@ -16,15 +16,15 @@ var r = n(200651),
     x = n(800223),
     b = n(24318),
     j = n(822693),
-    N = n(388032),
-    _ = n(832721);
-function v(e) {
+    _ = n(388032),
+    v = n(832721);
+function O(e) {
     let { guildId: t } = e,
-        { guildProfile: c, fetchGuildProfile: g, fetchStatus: v } = (0, m.u)(t),
-        O = v !== u.a.FETCHED,
+        { guildProfile: c, fetchGuildProfile: g, fetchStatus: O } = (0, m.u)(t),
+        C = O !== u.a.FETCHED,
         {
-            fetchedEmbed: C,
-            embedEnabled: y,
+            fetchedEmbed: y,
+            embedEnabled: N,
             embedChannelId: I
         } = (0, a.cj)([f.Z], () => {
             let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = f.Z.getProps();
@@ -37,15 +37,15 @@ function v(e) {
         E = i.useMemo(() => (0, b.S)(t), [t]),
         S = i.useMemo(() => (0, b.a)(t), [t]),
         [T, P] = i.useState(!1),
-        w = null != c && s.Y.VISIBLE.has(c.visibility),
-        R = !O && !w && !y,
+        w = null != c && l.Y.VISIBLE.has(c.visibility),
+        R = !C && !w && !N,
         Z = (0, h.Dj)({
             guildId: t,
             location: 'widget settings'
         });
     i.useEffect(() => {
-        C || (0, p.R)(t);
-    }, [C, t]),
+        y || (0, p.R)(t);
+    }, [y, t]),
         i.useEffect(() => {
             g();
         }, [t, g]);
@@ -55,73 +55,73 @@ function v(e) {
         },
         [I, t]
     );
-    return C
+    return y
         ? (0, r.jsxs)('div', {
               children: [
                   (0, r.jsx)(o.j7V, {
                       disabled: T,
-                      value: y,
+                      value: N,
                       hideBorder: !0,
                       onChange: D,
-                      children: N.NW.string(N.t.NR6hub)
+                      children: _.intl.string(_.t.NR6hub)
                   }),
                   R
-                      ? (0, r.jsx)(l.xv, {
+                      ? (0, r.jsx)(s.xv, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
-                            className: _.subtext,
-                            children: Z ? N.NW.string(N.t.zCGuJy) : N.NW.string(N.t.yInR2t)
+                            className: v.subtext,
+                            children: Z ? _.intl.string(_.t.zCGuJy) : _.intl.string(_.t.yInR2t)
                         })
                       : null,
-                  y
+                  N
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)('div', { className: _.divider }),
-                                (0, r.jsx)(o.vwX, { children: N.NW.string(N.t.LUo0Q0) }),
+                                (0, r.jsx)('div', { className: v.divider }),
+                                (0, r.jsx)(o.vwX, { children: _.intl.string(_.t.LUo0Q0) }),
                                 (0, r.jsx)(j.m, {
                                     guildId: t,
-                                    widgetEnabled: y,
+                                    widgetEnabled: N,
                                     widgetChannelId: I,
                                     enableLocalUpdate: !0
                                 }),
-                                (0, r.jsx)(l.xv, {
+                                (0, r.jsx)(s.xv, {
                                     variant: 'text-sm/medium',
                                     color: 'text-secondary',
-                                    className: _.subtext,
-                                    children: N.NW.string(N.t.LxVR9P)
+                                    className: v.subtext,
+                                    children: _.intl.string(_.t.LxVR9P)
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: _.twoColumns,
+                                    className: v.twoColumns,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: _.column,
-                                            children: [(0, r.jsx)(o.vwX, { children: N.NW.string(N.t.TRyLUl) }), (0, r.jsx)(d.Z, { value: t })]
+                                            className: v.column,
+                                            children: [(0, r.jsx)(o.vwX, { children: _.intl.string(_.t.TRyLUl) }), (0, r.jsx)(d.Z, { value: t })]
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: _.column,
-                                            children: [(0, r.jsx)(o.vwX, { children: N.NW.string(N.t.VECJcH) }), (0, r.jsx)(d.Z, { value: E })]
+                                            className: v.column,
+                                            children: [(0, r.jsx)(o.vwX, { children: _.intl.string(_.t.VECJcH) }), (0, r.jsx)(d.Z, { value: E })]
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)('div', { className: _.divider }),
+                                (0, r.jsx)('div', { className: v.divider }),
                                 (0, r.jsxs)('div', {
-                                    className: _.twoColumns,
+                                    className: v.twoColumns,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: _.column,
+                                            className: v.column,
                                             children: [
-                                                (0, r.jsx)(o.vwX, { children: N.NW.string(N.t.XVGbn5) }),
+                                                (0, r.jsx)(o.vwX, { children: _.intl.string(_.t.XVGbn5) }),
                                                 (0, r.jsx)(d.Z, { value: S }),
-                                                (0, r.jsx)(l.xv, {
+                                                (0, r.jsx)(s.xv, {
                                                     variant: 'text-sm/medium',
                                                     color: 'text-secondary',
-                                                    className: _.subtext,
-                                                    children: N.NW.string(N.t['+baN19'])
+                                                    className: v.subtext,
+                                                    children: _.intl.string(_.t['+baN19'])
                                                 })
                                             ]
                                         }),
                                         (0, r.jsx)('img', {
-                                            className: _.column,
+                                            className: v.column,
                                             'data-accessibility': 'desaturate',
                                             alt: '',
                                             src: n(329488)
@@ -135,19 +135,19 @@ function v(e) {
           })
         : (0, r.jsx)(o.$jN, {});
 }
-function O(e) {
+function C(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([g.Z], () => g.Z.enabled);
     return (0, r.jsxs)(o.hjN, {
-        title: N.NW.string(N.t.qlhNb2),
+        title: _.intl.string(_.t.qlhNb2),
         children: [
-            (0, r.jsx)(l.xv, {
+            (0, r.jsx)(s.xv, {
                 variant: 'text-sm/medium',
                 color: 'text-secondary',
-                className: _.description,
-                children: N.NW.string(N.t['dNn/1t'])
+                className: v.description,
+                children: _.intl.string(_.t['dNn/1t'])
             }),
-            n ? (0, r.jsx)(c.Z, {}) : (0, r.jsx)(v, { guildId: t })
+            n ? (0, r.jsx)(c.Z, {}) : (0, r.jsx)(O, { guildId: t })
         ]
     });
 }

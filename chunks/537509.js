@@ -1,62 +1,62 @@
-r.d(e, { default: () => l }), r(388685);
-var o = r(200651),
-    i = r(192379),
-    s = r(481060),
-    n = r(313201),
-    a = r(388032),
-    c = r(567351);
-function l(t) {
-    let { transitionState: e, onConfirm: r, onClose: l } = t,
-        [d, h] = i.useState(!1),
-        x = (0, n.Dt)();
-    return (0, o.jsxs)(s.Y0X, {
+i.d(e, { default: () => c }), i(388685);
+var r = i(200651),
+    n = i(192379),
+    o = i(481060),
+    s = i(313201),
+    l = i(388032),
+    a = i(567351);
+function c(t) {
+    let { transitionState: e, onConfirm: i, onClose: c } = t,
+        [d, h] = n.useState(!1),
+        x = (0, s.Dt)();
+    return (0, r.jsxs)(o.Y0X, {
         transitionState: e,
         'aria-labelledby': x,
-        size: s.CgR.DYNAMIC,
-        className: c.root,
+        size: o.CgR.DYNAMIC,
+        className: a.root,
         children: [
-            (0, o.jsx)(s.xBx, {
-                children: (0, o.jsx)(s.X6q, {
+            (0, r.jsx)(o.xBx, {
+                children: (0, r.jsx)(o.X6q, {
                     id: x,
                     variant: 'heading-xl/bold',
                     color: 'header-primary',
-                    children: a.NW.string(a.t.eJzSDQ)
+                    children: l.intl.string(l.t.eJzSDQ)
                 })
             }),
-            (0, o.jsx)(s.hzk, {
-                className: c.content,
-                children: (0, o.jsx)(s.Text, {
+            (0, r.jsx)(o.hzk, {
+                className: a.content,
+                children: (0, r.jsx)(o.Text, {
                     variant: 'text-md/medium',
                     color: 'header-secondary',
-                    children: a.NW.string(a.t.GB4jU1)
+                    children: l.intl.string(l.t.GB4jU1)
                 })
             }),
-            (0, o.jsxs)(s.mzw, {
-                className: c.footer,
+            (0, r.jsxs)(o.mzw, {
+                className: a.footer,
                 children: [
-                    (0, o.jsx)(s.zxk, {
+                    (0, r.jsx)(o.zxk, {
                         type: 'submit',
-                        color: s.zxk.Colors.BRAND,
+                        color: o.zxk.Colors.BRAND,
                         onClick: () => {
                             if (!d) {
                                 h(!0);
                                 try {
-                                    r();
+                                    i();
                                 } catch (t) {
                                 } finally {
                                     h(!1);
                                 }
-                                l();
+                                c();
                             }
                         },
                         submitting: d,
-                        children: a.NW.string(a.t.MMlhsr)
+                        children: l.intl.string(l.t.MMlhsr)
                     }),
-                    (0, o.jsx)(s.zxk, {
-                        color: s.zxk.Colors.PRIMARY,
-                        onClick: l,
+                    (0, r.jsx)(o.zxk, {
+                        color: o.zxk.Colors.PRIMARY,
+                        onClick: c,
                         disabled: d,
-                        children: a.NW.string(a.t['ETE/oK'])
+                        children: l.intl.string(l.t['ETE/oK'])
                     })
                 ]
             })

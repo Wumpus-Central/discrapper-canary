@@ -1,8 +1,8 @@
 n.d(t, { ZP: () => P }), n(415506), n(388685), n(539338), n(953529);
 var r = n(200651),
     i = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     a = n(149765),
     o = n(442837),
     c = n(481060),
@@ -16,12 +16,12 @@ var r = n(200651),
     x = n(631969),
     b = n(95242),
     j = n(420966),
-    N = n(275296),
-    _ = n(203377),
-    v = n(981631),
-    O = n(388032),
-    C = n(96878),
-    y = n(877248);
+    _ = n(275296),
+    v = n(203377),
+    O = n(981631),
+    C = n(388032),
+    y = n(96878),
+    N = n(877248);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -66,87 +66,87 @@ function E(e, t) {
     );
 }
 function S(e) {
-    let { guild: t, role: n, locked: s } = e,
-        l = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
+    let { guild: t, role: n, locked: l } = e,
+        s = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         d = i.useMemo(
             () =>
                 h.uB({
-                    user: l,
+                    user: s,
                     context: t
                 }),
-            [l, t]
+            [s, t]
         ),
         u = i.useMemo(() => ({ [n.id]: E(I({}, n), { permissions: h.Hn }) }), [n]),
         g = i.useMemo(
             () =>
                 h.uB({
-                    user: l,
+                    user: s,
                     context: t,
                     roles: u
                 }),
-            [l, t, u]
+            [s, t, u]
         ),
         p = !a.fS(d, g);
     return (0, r.jsx)('div', {
-        className: C.clearButtonWrapper,
+        className: y.clearButtonWrapper,
         children: (0, r.jsx)(c.ua7, {
-            text: p ? O.NW.string(O.t['IQ/6Sk']) : null,
+            text: p ? C.intl.string(C.t['IQ/6Sk']) : null,
             position: 'top',
             color: c.ua7.Colors.RED,
             children: (e) => {
                 let { onMouseEnter: t, onMouseLeave: i } = e;
                 return (0, r.jsx)(c.zxk, {
-                    className: C.clearButton,
+                    className: y.clearButton,
                     size: c.zxk.Sizes.TINY,
                     look: c.zxk.Looks.LINK,
                     color: c.zxk.Colors.LINK,
                     onClick: () => (0, f.TY)(n.id),
                     onMouseEnter: t,
                     onMouseLeave: i,
-                    disabled: a.fS(n.permissions, h.Hn) || p || s,
-                    children: O.NW.string(O.t['UYq7+P'])
+                    disabled: a.fS(n.permissions, h.Hn) || p || l,
+                    children: C.intl.string(C.t['UYq7+P'])
                 });
             }
         })
     });
 }
 function T(e) {
-    let { guild: t, role: n, specs: i, locked: s } = e;
+    let { guild: t, role: n, specs: i, locked: l } = e;
     if (0 === i.length)
         return (0, r.jsxs)('div', {
-            className: C.noResultsContainer,
+            className: y.noResultsContainer,
             children: [
-                (0, r.jsx)(x.Z, { className: C.noResults }),
+                (0, r.jsx)(x.Z, { className: y.noResults }),
                 (0, r.jsx)(c.Text, {
                     variant: 'text-sm/normal',
-                    children: O.NW.string(O.t.DEBGqK)
+                    children: C.intl.string(C.t.DEBGqK)
                 })
             ]
         });
-    function l(e) {
-        return u.Z.can(e, t) ? !u.Z.can(e, t, null, { [n.id]: E(I({}, n), { permissions: a.Od(n.permissions, e) }) }) && O.NW.string(O.t['K+D+GB']) : O.NW.string(O.t.nOtPMD);
+    function s(e) {
+        return u.Z.can(e, t) ? !u.Z.can(e, t, null, { [n.id]: E(I({}, n), { permissions: a.Od(n.permissions, e) }) }) && C.intl.string(C.t['K+D+GB']) : C.intl.string(C.t.nOtPMD);
     }
     return (0, r.jsxs)('div', {
-        className: C.permissionsWrapper,
+        className: y.permissionsWrapper,
         children: [
             (0, r.jsx)(S, {
                 guild: t,
                 role: n,
-                locked: s
+                locked: l
             }),
             i.map((e, t) =>
                 (0, r.jsx)(
                     d.Z,
                     {
-                        className: C.permissionsForm,
+                        className: y.permissionsForm,
                         spec: e,
                         permissions: n.permissions,
-                        locked: s,
+                        locked: l,
                         onChange: (e, t) => {
                             if ('string' == typeof t) throw Error('Unexpected string `allow`');
                             (0, f.lO)(n.id, e, t);
                         },
-                        permissionRender: l
+                        permissionRender: s
                     },
                     t
                 )
@@ -155,7 +155,7 @@ function T(e) {
     });
 }
 function P(e) {
-    let { guild: t, role: n, locked: s, setSelectedSection: a, initialSearchQuery: o } = e,
+    let { guild: t, role: n, locked: l, setSelectedSection: a, initialSearchQuery: o } = e,
         [d, u] = i.useState(null != o ? o : ''),
         m = i
             .useMemo(() => p.Z.generateGuildPermissionSpec(t), [t])
@@ -173,38 +173,38 @@ function P(e) {
         P = i.useRef(!1);
     return (
         i.useEffect(() => {
-            P.current || '' === d.trimStart() || (g.default.track(v.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (P.current = !0));
+            P.current || '' === d.trimStart() || (g.default.track(O.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (P.current = !0));
         }, [d]),
         (0, r.jsx)(c.yWw, {
-            className: C.scroller,
+            className: y.scroller,
             style: { scrollPaddingTop: h },
             onScroll: S,
             children: (0, r.jsxs)('div', {
-                className: y.contentWidth,
+                className: N.contentWidth,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: l()(y.header, y.stickyHeader, { [y.stickyHeaderElevated]: !x }),
+                        className: s()(N.header, N.stickyHeader, { [N.stickyHeaderElevated]: !x }),
                         ref: f,
                         children: [
                             (0, r.jsx)(j.Z, {
                                 guild: t,
                                 role: n,
-                                selectedSection: _.ZI.PERMISSIONS,
+                                selectedSection: v.ZI.PERMISSIONS,
                                 setSelectedSection: a
                             }),
                             (0, r.jsx)('div', {
-                                className: C.noticeContainer,
-                                children: (0, r.jsx)(N.Z, { role: n })
+                                className: y.noticeContainer,
+                                children: (0, r.jsx)(_.Z, { role: n })
                             }),
                             (0, r.jsx)('div', {
-                                className: C.searchContainer,
+                                className: y.searchContainer,
                                 children: (0, r.jsx)(c.E1j, {
                                     size: c.E1j.Sizes.MEDIUM,
                                     query: d,
                                     onChange: u,
                                     onClear: () => u(''),
-                                    placeholder: O.NW.string(O.t.OLJAk5),
-                                    'aria-label': O.NW.string(O.t.OLJAk5)
+                                    placeholder: C.intl.string(C.t.OLJAk5),
+                                    'aria-label': C.intl.string(C.t.OLJAk5)
                                 })
                             })
                         ]
@@ -213,7 +213,7 @@ function P(e) {
                         guild: t,
                         role: n,
                         specs: m,
-                        locked: s
+                        locked: l
                     })
                 ]
             })

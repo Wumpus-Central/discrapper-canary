@@ -2,8 +2,8 @@ n.d(t, { Z: () => s });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(499033),
-    l = n(388032),
+    l = n(499033),
+    a = n(388032),
     o = n(35539);
 function s(e) {
     let { Icon: t, header: n, tip: s, disableStars: c } = e;
@@ -20,7 +20,7 @@ function s(e) {
                         width: 36,
                         height: 36
                     }),
-                    c ? null : (0, r.jsx)(a.Z, { className: o.stars })
+                    c ? null : (0, r.jsx)(l.Z, { className: o.stars })
                 ]
             }),
             (0, r.jsx)(i.X6q, {
@@ -39,7 +39,7 @@ function s(e) {
                               className: o.protip,
                               variant: 'text-xs/bold',
                               color: 'text-positive',
-                              children: [l.NW.string(l.t['8tvIiI']), ':', ' ']
+                              children: [a.intl.string(a.t['8tvIiI']), ':', ' ']
                           }),
                     s
                 ]

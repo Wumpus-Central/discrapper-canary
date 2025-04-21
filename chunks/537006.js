@@ -21,7 +21,7 @@ var r = n(200651),
 function O(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(s.P3F, {
-        'aria-label': y.NW.string(y.t.WAI6xs),
+        'aria-label': y.intl.string(y.t.WAI6xs),
         onClick: t,
         className: v.upsellCloseIconWrapper,
         children: (0, r.jsx)(s.Dio, {
@@ -57,14 +57,14 @@ function I(e) {
                                   size: 'xs',
                                   color: 'currentColor'
                               }),
-                              y.NW.string(y.t['0Q61kJ'])
+                              y.intl.string(y.t['0Q61kJ'])
                           ]
                       })
                     : (0, r.jsx)(d.Z, {
                           onClick: () => {
                               u({ action: m.yM.GET_PREMIUM }), null == i || i();
                           },
-                          buttonText: y.NW.string(y.t.x6rkDg),
+                          buttonText: y.intl.string(y.t.x6rkDg),
                           subscriptionTier: b.Si.TIER_2,
                           premiumModalAnalyticsLocation: { section: g.jXE.USER_PROFILE },
                           className: v.upsellButton,
@@ -79,7 +79,7 @@ function I(e) {
                 children: (0, r.jsx)(h.tG, {
                     icon: s.EOn,
                     action: m.yM.VISIT_SHOP,
-                    text: y.NW.string(y.t.b2d0Nz),
+                    text: y.intl.string(y.t.b2d0Nz),
                     look: s.zxk.Looks.FILLED,
                     color: s.zxk.Colors.PRIMARY,
                     themeColor: 'none',
@@ -111,7 +111,7 @@ let S = function (e) {
                 let e = (0, r.jsx)('div', {
                         children: (0, r.jsx)(s.Text, {
                             variant: 'text-sm/normal',
-                            children: y.NW.string(y.t.EIYbj4)
+                            children: y.intl.string(y.t.EIYbj4)
                         })
                     }),
                     o = (0, r.jsx)(O, { onClose: () => u(E.L.USER_DISMISS) }),

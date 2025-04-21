@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(200651),
     l = n(192379),
     o = n(120356),
-    a = n.n(o),
-    i = n(481060),
+    i = n.n(o),
+    a = n(481060),
     s = n(489813),
     c = n(707592),
     u = n(667084);
@@ -19,12 +19,12 @@ function d(e) {
                 C.map((e, t) => ({
                     name: e,
                     value: t,
-                    radioItemIconClassName: a()(u.multipleChoiceIcon, c),
+                    radioItemIconClassName: i()(u.multipleChoiceIcon, c),
                     radioBarClassName: u.multipleChoiceItem
                 })),
             [C, c]
         );
-    return (0, r.jsx)(i.FXm, {
+    return (0, r.jsx)(a.FXm, {
         radioPosition: 'right',
         disabled: t,
         options: m,

@@ -71,7 +71,7 @@ function g(e) {
                 children: [
                     (0, r.jsx)(s.vwX, {
                         tag: s.RB0.H4,
-                        children: j.NW.string(j.t['r+SebW'])
+                        children: j.intl.string(j.t['r+SebW'])
                     }),
                     (0, r.jsx)(s.olH, {
                         className: m.close,

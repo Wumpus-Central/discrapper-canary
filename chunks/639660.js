@@ -1,7 +1,7 @@
-t.d(n, { Z: () => f }), t(388685);
+t.d(n, { Z: () => v }), t(388685);
 var r = t(200651),
-    o = t(793030),
-    i = t(442837),
+    i = t(793030),
+    o = t(442837),
     s = t(704215),
     a = t(243778),
     l = t(430824),
@@ -12,24 +12,24 @@ var r = t(200651),
     m = t(680278),
     x = t(388032),
     _ = t(106180);
-function v() {
+function f() {
     return (0, r.jsx)('div', {
         className: _.staffContainer,
-        children: (0, r.jsx)(o.xv, {
+        children: (0, r.jsx)(i.xv, {
             variant: 'text-sm/medium',
-            children: x.NW.string(m.Z.l9n4QU)
+            children: x.intl.string(m.default.l9n4QU)
         })
     });
 }
-function f(e) {
+function v(e) {
     let { guildId: n } = e,
-        t = (0, i.e7)([l.Z], () => {
+        t = (0, o.e7)([l.Z], () => {
             var e;
             return (null == (e = l.Z.getGuild(n)) ? void 0 : e.hasFeature(p.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
         }),
-        [f, g] = (0, a.US)([s.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK], void 0, !1),
+        [v, g] = (0, a.US)([s.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK], void 0, !1),
         j = (0, c.Z)(n),
-        h = null != f && f === s.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK,
+        h = null != v && v === s.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK,
         b =
             j.length > 0
                 ? (0, r.jsx)(u.Z, {
@@ -43,11 +43,11 @@ function f(e) {
         ? (0, r.jsxs)('div', {
               className: _.container,
               children: [
-                  (0, r.jsx)(o.xv, {
+                  (0, r.jsx)(i.xv, {
                       variant: 'eyebrow',
-                      children: x.NW.string(m.Z['3FRira'])
+                      children: x.intl.string(m.default['3FRira'])
                   }),
-                  t && (0, r.jsx)(v, {}),
+                  t && (0, r.jsx)(f, {}),
                   b
               ]
           })

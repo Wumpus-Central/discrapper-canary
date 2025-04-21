@@ -35,7 +35,7 @@ let g = (e) => {
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: 'text-sm/semibold',
-                            children: p.NW.format(p.t.QEW8Mj, {
+                            children: p.intl.format(p.t.QEW8Mj, {
                                 onClick: () => {
                                     o({ action: 'PRESS_REACT_REPLY_TOAST' }), null == i || i(), c.Z.openPrivateChannel({ recipientIds: n });
                                 }
@@ -57,14 +57,14 @@ let g = (e) => {
                 (0, r.jsx)(l.Text, {
                     color: 'header-primary',
                     variant: 'text-sm/semibold',
-                    children: p.NW.string(p.t.tcARX1)
+                    children: p.intl.string(p.t.tcARX1)
                 })
             ]
         }),
     b = (e) => {
         let { userId: t, onClose: n, className: i } = e,
             { interactionTypeSent: c, showInteractionToast: d } = (0, f.Xo)(),
-            m = c === _.P.REPLY ? p.NW.string(p.t.BPaiaW) : p.NW.string(p.t.Ry2EtL),
+            m = c === _.P.REPLY ? p.intl.string(p.t.BPaiaW) : p.intl.string(p.t.Ry2EtL),
             b = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
             y = (0, l.Yzy)(
                 d,

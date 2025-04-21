@@ -1,9 +1,9 @@
-n.d(t, { Z: () => _ }), n(953529);
+n.d(t, { Z: () => v }), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(793030),
-    s = n(442837),
-    l = n(902840),
+    l = n(442837),
+    s = n(902840),
     a = n(100527),
     o = n(906732),
     c = n(34586),
@@ -17,75 +17,75 @@ var i = n(793030),
     x = n(166805),
     b = n(981631),
     j = n(388032),
-    N = n(515636);
-let _ = function () {
+    _ = n(515636);
+let v = function () {
     let { analyticsLocations: e } = (0, o.ZP)(a.Z.GUILD_SETTINGS_ENGAGEMENT_PAGE),
-        t = (0, s.e7)([u.Z], () => u.Z.getProps().guild, []),
-        n = (0, s.e7)([d.Z], () => null != t && d.Z.can(b.Plq.MANAGE_GUILD, t)),
-        _ = (0, c.E)(t),
-        v = (0, l.l9)(null != t ? t : void 0);
+        t = (0, l.e7)([u.Z], () => u.Z.getProps().guild, []),
+        n = (0, l.e7)([d.Z], () => null != t && d.Z.can(b.Plq.MANAGE_GUILD, t)),
+        v = (0, c.E)(t),
+        O = (0, s.l9)(null != t ? t : void 0);
     return null == t
         ? null
         : (0, r.jsx)(o.Gt, {
               value: e,
               children: (0, r.jsxs)('main', {
-                  className: N.container,
+                  className: _.container,
                   children: [
                       (0, r.jsxs)('div', {
                           children: [
                               (0, r.jsx)(i.X6, {
                                   variant: 'heading-lg/semibold',
                                   color: 'header-primary',
-                                  children: j.NW.string(j.t['6TAHb2'])
+                                  children: j.intl.string(j.t['6TAHb2'])
                               }),
                               (0, r.jsx)(i.xv, {
                                   variant: 'text-sm/medium',
                                   color: 'header-secondary',
                                   tag: 'p',
-                                  className: N.description,
-                                  children: j.NW.string(j.t.XCGZFh)
+                                  className: _.description,
+                                  children: j.intl.string(j.t.XCGZFh)
                               })
                           ]
                       }),
-                      !0 === v &&
+                      !0 === O &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(h.P, {
                                       canManageGuild: n,
                                       features: t.features
                                   }),
-                                  (0, r.jsx)('div', { className: N.divider })
+                                  (0, r.jsx)('div', { className: _.divider })
                               ]
                           }),
                       (0, r.jsx)(f.l, {
                           canManageGuild: n,
                           guild: t
                       }),
-                      void 0 !== _ &&
+                      void 0 !== v &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)('div', { className: N.divider }),
+                                  (0, r.jsx)('div', { className: _.divider }),
                                   (0, r.jsx)(m.q, {
-                                      isInventoryFeedEnabled: _,
+                                      isInventoryFeedEnabled: v,
                                       canManageGuild: n,
                                       features: t.features
                                   })
                               ]
                           }),
-                      (0, r.jsx)('div', { className: N.divider }),
+                      (0, r.jsx)('div', { className: _.divider }),
                       (0, r.jsx)(g.z, {
                           guildId: t.id,
                           defaultSettings: t.defaultMessageNotifications,
                           canManageGuild: n
                       }),
-                      (0, r.jsx)('div', { className: N.divider }),
+                      (0, r.jsx)('div', { className: _.divider }),
                       (0, r.jsx)(p.L, {
                           canManageGuild: n,
                           guild: t
                       }),
                       !0 === n &&
                           (0, r.jsxs)(r.Fragment, {
-                              children: [(0, r.jsx)('div', { className: N.divider }), (0, r.jsx)(x.P, { guildId: t.id })]
+                              children: [(0, r.jsx)('div', { className: _.divider }), (0, r.jsx)(x.P, { guildId: t.id })]
                           })
                   ]
               })

@@ -25,7 +25,7 @@ function d(e) {
                         color: 'header-secondary',
                         className: a()(u.text, u.scheduledMessageBarLabel),
                         variant: 'text-sm/normal',
-                        children: c.NW.formatToPlainString(c.t.MQcRX1, { timestamp: new Date(i).valueOf() })
+                        children: c.intl.formatToPlainString(c.t.MQcRX1, { timestamp: new Date(i).valueOf() })
                     }),
                     (0, r.jsx)('div', {
                         className: u.actions,

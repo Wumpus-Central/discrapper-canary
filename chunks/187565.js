@@ -2,7 +2,7 @@ n.d(t, {
     KJ: () => g,
     N0: () => j,
     k3: () => v,
-    lk: () => N,
+    lk: () => _,
     ng: () => x
 }),
     n(388685),
@@ -41,7 +41,7 @@ function x(e, t, n) {
             r = [
                 {
                     field_type: f.QJ.TERMS,
-                    label: b.NW.string(b.t['9suSIC']),
+                    label: b.intl.string(b.t['9suSIC']),
                     values: e,
                     required: !0
                 }
@@ -83,7 +83,7 @@ function v(e, t) {
         }
     );
 }
-function N(e) {
+function _(e) {
     let t = (0, p.rb)((e) => e.hasUnsubmittedChanges);
     i.useEffect(
         () => (

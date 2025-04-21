@@ -12,8 +12,8 @@ var r = n(200651),
     _ = n(450839),
     I = n(163684),
     O = n(518638),
-    N = n(748770),
-    T = n(594174),
+    T = n(748770),
+    N = n(594174),
     S = n(626135),
     p = n(74538),
     A = n(243778),
@@ -25,7 +25,7 @@ var r = n(200651),
 let g = (e) => {
     let { dismissibleContent: t } = e,
         n = (0, O.a0)(),
-        g = (0, o.e7)([T.default], () => p.ZP.isPremiumExactly(T.default.getCurrentUser(), P.p9.TIER_2)),
+        g = (0, o.e7)([N.default], () => p.ZP.isPremiumExactly(N.default.getCurrentUser(), P.p9.TIER_2)),
         { enabled: y, getNitroCTA: m } = I.g.useExperiment(
             { location: 'OutboundPromotionNotice' },
             {
@@ -88,7 +88,7 @@ let g = (e) => {
             });
         }, [U, b]),
         Z = i.useCallback(() => {
-            c.Z.open(R.oAB.INVENTORY), N.ZP.dismissOutboundPromotionNotice();
+            c.Z.open(R.oAB.INVENTORY), T.ZP.dismissOutboundPromotionNotice();
         }, []),
         L = i.useCallback(() => {
             S.default.track(R.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), m ? M() : Z();
@@ -101,7 +101,7 @@ let g = (e) => {
                 (0, r.jsx)(s.RyX, {
                     noticeType: R.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
-                        N.ZP.dismissOutboundPromotionNotice(), null !== e && e(f.L.USER_DISMISS);
+                        T.ZP.dismissOutboundPromotionNotice(), null !== e && e(f.L.USER_DISMISS);
                     }
                 }),
                 (0, r.jsx)(s.SrA, {
@@ -114,16 +114,16 @@ let g = (e) => {
                         ? (0, r.jsxs)(l.xv, {
                               variant: 'text-sm/normal',
                               className: D.text,
-                              children: [C.NW.string(C.t['5JMiOj']), ' ', C.NW.format(C.t.fjSvsL, { onClick: Z })]
+                              children: [C.intl.string(C.t['5JMiOj']), ' ', C.intl.format(C.t.fjSvsL, { onClick: Z })]
                           })
-                        : C.NW.string(C.t['5JMiOj'])
-                    : C.NW.string(C.t['Pzh+Gx']),
+                        : C.intl.string(C.t['5JMiOj'])
+                    : C.intl.string(C.t['Pzh+Gx']),
                 (0, r.jsx)(s.NoS, {
                     noticeType: R.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
                         L(), null !== e && e(f.L.TAKE_ACTION);
                     },
-                    children: m ? C.NW.string(C.t.pj0XBA) : C.NW.string(C.t.jVcuVV)
+                    children: m ? C.intl.string(C.t.pj0XBA) : C.intl.string(C.t.jVcuVV)
                 })
             ]
         });

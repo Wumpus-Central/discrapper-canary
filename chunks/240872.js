@@ -90,7 +90,7 @@ let d = {
                         onConfirm() {
                             t(!0);
                         },
-                        cancelText: o.NW.string(o.t['ETE/oK']),
+                        cancelText: o.intl.string(o.t['ETE/oK']),
                         onCancel() {
                             t(!1);
                         }

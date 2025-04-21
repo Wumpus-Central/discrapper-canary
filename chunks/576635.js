@@ -24,15 +24,15 @@ function _(e) {
             primaryColor: null,
             secondaryColor: null
         };
-    let N = null == h ? void 0 : h.getPreviewThemeColors(m),
-        A = null != (t = null == N ? void 0 : N[0]) ? t : (0, r._i)(I),
-        C = null != (n = null == N ? void 0 : N[1]) ? n : (0, r._i)(S),
-        R = y ? b : null != (_ = (0, d.V3)(A)) ? _ : b;
+    let A = null == h ? void 0 : h.getPreviewThemeColors(m),
+        N = null != (t = null == A ? void 0 : A[0]) ? t : (0, r._i)(I),
+        C = null != (n = null == A ? void 0 : A[1]) ? n : (0, r._i)(S),
+        R = y ? b : null != (_ = (0, d.V3)(N)) ? _ : b;
     return (
         T && (R === f.BRd.DARK && (0, a.wj)(b) ? (R = b) : R === f.BRd.DARK && (0, a.ap)(b) && (R = f.BRd.DARKER)),
         {
             theme: R,
-            primaryColor: A,
+            primaryColor: N,
             secondaryColor: C
         }
     );

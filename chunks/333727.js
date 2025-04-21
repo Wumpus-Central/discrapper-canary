@@ -10,7 +10,7 @@ var i = n(278323),
     d = n(388032);
 function p(e, t, n, p) {
     let h = t.username,
-        f = d.NW.format(d.t.VDODnp, {
+        f = d.intl.format(d.t.VDODnp, {
             username: '',
             game: n.name
         }),
@@ -25,8 +25,8 @@ function p(e, t, n, p) {
         icon: m,
         title: h,
         body: f,
-        confirmText: d.NW.string(d.t['fgP/wc']),
-        cancelText: d.NW.string(d.t.tpXzJy),
+        confirmText: d.intl.string(d.t['fgP/wc']),
+        cancelText: d.intl.string(d.t.tpXzJy),
         onNotificationShow: () => {
             g();
         },

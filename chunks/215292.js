@@ -1,135 +1,135 @@
-n.d(t, {
-    F: () => L,
-    Z: () => _
+e.d(n, {
+    F: () => _,
+    Z: () => g
 }),
-    n(388685);
-var i = n(200651),
-    s = n(192379),
-    a = n(442837),
-    l = n(481060),
-    r = n(493683),
-    d = n(881052),
-    c = n(600164),
-    o = n(313201),
-    C = n(565138),
-    m = n(984933),
-    p = n(430824),
-    N = n(388032),
-    u = n(78389);
-function L(e) {
-    let { createdGuildId: t, hasFooter: n = !0, onClose: L, onChannelPromptCompleted: _, isSlideReady: g } = e,
-        [x, T] = s.useState(''),
-        [E, h] = s.useState(null),
-        [I, G] = s.useState(!1),
-        W = (0, o.Dt)(),
-        D = (0, a.e7)([p.Z], () => p.Z.getGuild(t), [t]),
-        y = s.useRef(null);
-    s.useEffect(() => {
-        var e;
-        g && (null == (e = y.current) || e.focus());
-    }, [g]);
-    let U = s.useCallback(
-            async (e) => {
-                if ((e.preventDefault(), null == D)) return;
-                G(!0), h(null);
-                let t = m.ZP.getDefaultChannel(D.id);
+    e(388685);
+var i = e(200651),
+    l = e(192379),
+    s = e(442837),
+    a = e(481060),
+    r = e(493683),
+    d = e(881052),
+    c = e(600164),
+    o = e(313201),
+    C = e(565138),
+    m = e(984933),
+    p = e(430824),
+    u = e(388032),
+    L = e(78389);
+function _(t) {
+    let { createdGuildId: n, hasFooter: e = !0, onClose: _, onChannelPromptCompleted: g, isSlideReady: x } = t,
+        [T, E] = l.useState(''),
+        [h, I] = l.useState(null),
+        [G, D] = l.useState(!1),
+        y = (0, o.Dt)(),
+        U = (0, s.e7)([p.Z], () => p.Z.getGuild(n), [n]),
+        z = l.useRef(null);
+    l.useEffect(() => {
+        var t;
+        x && (null == (t = z.current) || t.focus());
+    }, [x]);
+    let N = l.useCallback(
+            async (t) => {
+                if ((t.preventDefault(), null == U)) return;
+                D(!0), I(null);
+                let n = m.ZP.getDefaultChannel(U.id);
                 try {
-                    let e = N.NW.formatToPlainString(N.t.V4lepK, { topic: x });
-                    await r.Z.createTextChannel(D.id, x, null == t ? void 0 : t.parent_id, e), _();
-                } catch (e) {
-                    h(new d.yZ(e));
+                    let t = u.intl.formatToPlainString(u.t.V4lepK, { topic: T });
+                    await r.Z.createTextChannel(U.id, T, null == n ? void 0 : n.parent_id, t), g();
+                } catch (t) {
+                    I(new d.yZ(t));
                 }
-                G(!1);
+                D(!1);
             },
-            [D, x, _]
+            [U, T, g]
         ),
-        z = (0, i.jsxs)(i.Fragment, {
+        j = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(l.zxk, {
-                    color: l.zxk.Colors.BRAND,
-                    onClick: U,
-                    disabled: 0 === x.length,
-                    submitting: I,
-                    children: N.NW.string(N.t.i4jeWV)
+                (0, i.jsx)(a.zxk, {
+                    color: a.zxk.Colors.BRAND,
+                    onClick: N,
+                    disabled: 0 === T.length,
+                    submitting: G,
+                    children: u.intl.string(u.t.i4jeWV)
                 }),
-                (0, i.jsx)(l.zxk, {
-                    className: u.skipButton,
-                    look: l.zxk.Looks.BLANK,
-                    size: l.zxk.Sizes.MIN,
-                    onClick: _,
-                    children: N.NW.string(N.t['5WxrcX'])
+                (0, i.jsx)(a.zxk, {
+                    className: L.skipButton,
+                    look: a.zxk.Looks.BLANK,
+                    size: a.zxk.Sizes.MIN,
+                    onClick: g,
+                    children: u.intl.string(u.t['5WxrcX'])
                 })
             ]
         });
     return {
         content: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(l.xBx, {
-                    className: u.header,
+                (0, i.jsxs)(a.xBx, {
+                    className: L.header,
                     direction: c.Z.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        null != D && (0, i.jsx)(C.Z, { guild: D }),
-                        (0, i.jsx)(l.Text, {
-                            className: u.guildName,
+                        null != U && (0, i.jsx)(C.Z, { guild: U }),
+                        (0, i.jsx)(a.Text, {
+                            className: L.guildName,
                             color: 'header-primary',
                             variant: 'text-sm/semibold',
-                            children: null == D ? void 0 : D.name
+                            children: null == U ? void 0 : U.name
                         }),
-                        (0, i.jsx)(l.X6q, {
-                            className: u.title,
+                        (0, i.jsx)(a.X6q, {
+                            className: L.title,
                             variant: 'heading-sm/semibold',
-                            children: N.NW.string(N.t['8VRa7e'])
+                            children: u.intl.string(u.t['8VRa7e'])
                         }),
-                        (0, i.jsx)(l.Text, {
-                            className: u.subtitle,
+                        (0, i.jsx)(a.Text, {
+                            className: L.subtitle,
                             color: 'header-secondary',
                             variant: 'text-md/normal',
-                            children: N.NW.string(N.t['+855Pj'])
+                            children: u.intl.string(u.t['+855Pj'])
                         }),
-                        null != L &&
-                            (0, i.jsx)(l.olH, {
-                                className: u.closeButton,
-                                onClick: L
+                        null != _ &&
+                            (0, i.jsx)(a.olH, {
+                                className: L.closeButton,
+                                onClick: _
                             })
                     ]
                 }),
-                (0, i.jsxs)(l.hzk, {
-                    className: u.channelPrompt,
+                (0, i.jsxs)(a.hzk, {
+                    className: L.channelPrompt,
                     children: [
                         (0, i.jsx)('form', {
-                            onSubmit: U,
-                            children: (0, i.jsx)(l.xJW, {
-                                title: N.NW.string(N.t.bY20tb),
+                            onSubmit: N,
+                            children: (0, i.jsx)(a.xJW, {
+                                title: u.intl.string(u.t.bY20tb),
                                 tag: 'label',
-                                htmlFor: W,
-                                error: null == E ? void 0 : E.getFieldMessage('name'),
-                                children: (0, i.jsx)(l.oil, {
+                                htmlFor: y,
+                                error: null == h ? void 0 : h.getFieldMessage('name'),
+                                children: (0, i.jsx)(a.oil, {
                                     type: 'text',
-                                    value: x,
-                                    id: W,
-                                    onChange: T,
-                                    placeholder: N.NW.string(N.t.xGOYAw),
-                                    inputRef: y
+                                    value: T,
+                                    id: y,
+                                    onChange: E,
+                                    placeholder: u.intl.string(u.t.xGOYAw),
+                                    inputRef: z
                                 })
                             })
                         }),
-                        null != E &&
-                            0 === Object.keys(E.fields).length &&
-                            (0, i.jsx)(l.Text, {
+                        null != h &&
+                            0 === Object.keys(h.fields).length &&
+                            (0, i.jsx)(a.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'text-danger',
-                                children: E.message
+                                children: h.message
                             })
                     ]
                 }),
-                n && (0, i.jsx)(l.mzw, { children: z })
+                e && (0, i.jsx)(a.mzw, { children: j })
             ]
         }),
-        footer: z
+        footer: j
     };
 }
-function _(e) {
-    let { content: t } = L(e);
-    return t;
+function g(t) {
+    let { content: n } = _(t);
+    return n;
 }

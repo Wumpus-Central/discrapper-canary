@@ -25,12 +25,12 @@ var r = n(477660),
     I = n(699516),
     S = n(944486),
     T = n(626135),
-    N = n(981631),
-    A = n(388032);
+    A = n(981631),
+    N = n(388032);
 function C(e, t) {
     var n;
     let r = E.Z.getChannel(S.Z.getChannelId());
-    return (null == r || r.type !== N.d4z.DM || !!I.Z.isFriend(null != (n = r.getRecipientId()) ? n : '')) && e === t;
+    return (null == r || r.type !== A.d4z.DM || !!I.Z.isFriend(null != (n = r.getRecipientId()) ? n : '')) && e === t;
 }
 function R(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
@@ -40,8 +40,8 @@ function R(e, t) {
     if (null == x) {
         null != t && t.preventDefault(),
             a.Z.show({
-                title: A.NW.string(A.t.x87gam),
-                body: A.NW.format(A.t['9rqRws'], { url: e.href }),
+                title: N.intl.string(N.t.x87gam),
+                body: N.intl.format(N.t['9rqRws'], { url: e.href }),
                 isDismissable: !0,
                 contextKey: I
             });
@@ -64,10 +64,10 @@ function R(e, t) {
             t = E.Z.getBasicChannel(L);
         k = null != (Z = null == t ? void 0 : t.guild_id) ? Z : null;
         let n = b.Z.getGuild(k),
-            r = (null == e || null == (F = e.messageReference) ? void 0 : F.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(N.iLy.IS_CROSSPOST)) && null != k;
+            r = (null == e || null == (F = e.messageReference) ? void 0 : F.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(A.iLy.IS_CROSSPOST)) && null != k;
         r && (null == e || null == (V = e.messageReference) ? void 0 : V.guild_id) != null ? ((U = e.messageReference.message_id), (G = e.messageReference.channel_id), (B = e.messageReference.guild_id)) : (B = k);
-        let i = (null == t ? void 0 : t.type) === N.d4z.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(N.oNc.COMMUNITY)) === !0,
-            a = (null == e ? void 0 : e.hasFlag(N.iLy.EPHEMERAL)) === !0;
+        let i = (null == t ? void 0 : t.type) === A.d4z.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(A.oNc.COMMUNITY)) === !0,
+            a = (null == e ? void 0 : e.hasFlag(A.iLy.EPHEMERAL)) === !0;
         j = null != e && !a && (r || i);
     }
     if (null != L) {
@@ -75,14 +75,14 @@ function R(e, t) {
             t = b.Z.getGuild(null == e ? void 0 : e.getGuildId());
         null != e &&
             null != t &&
-            t.hasFeature(N.oNc.DISCOVERABLE) &&
-            T.default.track(N.rMx.URL_CLICKED, {
+            t.hasFeature(A.oNc.DISCOVERABLE) &&
+            T.default.track(A.rMx.URL_CLICKED, {
                 url_domain: (0, v.F)(M),
                 guild_id: t.id,
                 channel_id: e.id
             }),
             (0, u.Z)(L) &&
-                T.default.track(N.rMx.CHANGE_LOG_CTA_CLICKED, {
+                T.default.track(A.rMx.CHANGE_LOG_CTA_CLICKED, {
                     cta_type: 'inline_link',
                     target: M
                 });
@@ -112,7 +112,7 @@ function R(e, t) {
                 return void R();
             (0, s.Z)(M);
         },
-        W = null != P ? P : () => {};
+        Y = null != P ? P : () => {};
     if (null !== c.Z.isBlockedDomain(M)) {
         null == t || t.preventDefault(), l.Z.show(M);
         return;
@@ -125,10 +125,10 @@ function R(e, t) {
         null == t || t.preventDefault(), d.Z.show(M);
         return;
     }
-    let Y = 'function' == typeof S ? S() : S,
+    let W = 'function' == typeof S ? S() : S,
         K = (0, v.E)(M),
         z = 'http:' !== K && 'https:' !== K;
-    if ((!z && (Y || y.Z.isTrustedDomain(M))) || (z && y.Z.isTrustedProtocol(M)))
+    if ((!z && (W || y.Z.isTrustedDomain(M))) || (z && y.Z.isTrustedProtocol(M)))
         return void (null == t || (null != w && w)
             ? H()
             : j &&
@@ -144,7 +144,7 @@ function R(e, t) {
             url: M,
             trustUrl: o.u,
             onConfirm: H,
-            onCancel: W,
+            onCancel: Y,
             isProtocol: !0,
             contextKey: I
         });
@@ -155,7 +155,7 @@ function R(e, t) {
             url: t,
             trustUrl: o.o,
             onConfirm: H,
-            onCancel: W,
+            onCancel: Y,
             isProtocol: !1,
             contextKey: I
         });

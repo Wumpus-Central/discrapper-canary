@@ -208,7 +208,7 @@ function h(e) {
                                 isDisabled: v || C,
                                 className: b.select,
                                 options: r.map((e) => m(O({}, e), { disabled: N && !Z.has(e.value) && Z.size === c })),
-                                placeholder: null != o ? o : f.NW.string(f.t.Otr6W1),
+                                placeholder: null != o ? o : f.intl.string(f.t.Otr6W1),
                                 onClose: () => k(!1),
                                 onOpen: () => k(!0),
                                 maxVisibleItems: 5,

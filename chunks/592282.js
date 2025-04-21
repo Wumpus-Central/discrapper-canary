@@ -67,24 +67,24 @@ function y(e, t) {
 }
 function v(e) {
     let { color: t = 'default', label: n, checked: a, subtext: g, disabled: b, isFocused: v, menuItemProps: O, action: I, className: S, focusedClassName: T } = e,
-        { onInteraction: N } = i.useContext(c.p),
-        A = i.useRef(null),
+        { onInteraction: A } = i.useContext(c.p),
+        N = i.useRef(null),
         C = (0, f.Q3)('MenuCheckboxItem');
     i.useEffect(() => {
-        v && (0, u.F)(A);
+        v && (0, u.F)(N);
     }, [v]);
     let R = i.useCallback(
         (e) => {
-            I(e), null == N || N({ type: c.U.CHECKBOX });
+            I(e), null == A || A({ type: c.U.CHECKBOX });
         },
-        [I, N]
+        [I, A]
     );
     return (0, r.jsxs)(
         s.P,
         y(
             E(
                 {
-                    innerRef: A,
+                    innerRef: N,
                     className: o()(m.item, m.checkboxContainer, m.labelContainer, h._[t], S, {
                         [m.disabled]: b,
                         [m.focused]: v,

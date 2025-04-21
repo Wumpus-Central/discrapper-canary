@@ -44,12 +44,12 @@ class s extends a.Z {
                 })({}, e)),
                 (n = n =
                     {
-                        header: o.NW.string(o.t.wDQgnZ),
-                        confirmText: o.NW.string(o.t['cY+Ooa']),
+                        header: o.intl.string(o.t.wDQgnZ),
+                        confirmText: o.intl.string(o.t['cY+Ooa']),
                         confirmButtonColor: i.zxk.Colors.GREEN,
                         children: (0, r.jsx)(i.Text, {
                             variant: 'text-md/normal',
-                            children: o.NW.string(o.t.OJklbW)
+                            children: o.intl.string(o.t.OJklbW)
                         })
                     }),
                 Object.getOwnPropertyDescriptors

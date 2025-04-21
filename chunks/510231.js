@@ -1,8 +1,8 @@
 n.d(t, { h: () => u }), n(583741);
 var r = n(192379),
     i = n(392711),
-    s = n.n(i),
-    l = n(442837),
+    l = n.n(i),
+    s = n(442837),
     a = n(189451),
     o = n(77498),
     c = n(570911);
@@ -11,10 +11,10 @@ function d(e) {
     return null != (t = c.gQ.get(e)) ? t : 0;
 }
 function u() {
-    let e = (0, l.e7)([o.Z], () => o.Z.games),
+    let e = (0, s.e7)([o.Z], () => o.Z.games),
         t = r.useMemo(
             () =>
-                s()(e)
+                l()(e)
                     .filter((e) => !((null == e ? void 0 : e.themes) != null && e.themes.includes(a.u.EROTIC)))
                     .map((e) => ({
                         value: e.id,

@@ -28,7 +28,7 @@ function b(e) {
 }
 function h(e) {
     return {
-        text: null != e ? e : m.NW.string(m.t.VCsUJi),
+        text: null != e ? e : m.intl.string(m.t.VCsUJi),
         color: 'text-danger',
         icon: (0, r.jsx)(c.P4T, {
             size: 'xs',
@@ -71,11 +71,11 @@ let _ = o.memo(function (e) {
         f = (function (e, t) {
             switch ((0, p.t$)(t, e)) {
                 case p.rQ.SENDING:
-                    return b(m.NW.string(m.t.RiLfBQ));
+                    return b(m.intl.string(m.t.RiLfBQ));
                 case p.rQ.CREATED:
-                    return b(m.NW.formatToPlainString(m.t['7ePV4u'], { applicationName: t.author.username }));
+                    return b(m.intl.formatToPlainString(m.t['7ePV4u'], { applicationName: t.author.username }));
                 case p.rQ.TIMED_OUT:
-                    return h(m.NW.string(m.t.h8hzPT));
+                    return h(m.intl.string(m.t.h8hzPT));
                 case p.rQ.FAILED:
                     return h(t.interactionError);
             }

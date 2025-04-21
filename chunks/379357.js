@@ -37,7 +37,7 @@ function E(e) {
     if (null != t)
         return {
             src: t,
-            alt: null == n ? m.NW.string(m.t['2B/phI']) : m.NW.formatToPlainString(m.t.tiKyYm, { applicationName: n })
+            alt: null == n ? m.intl.string(m.t['2B/phI']) : m.intl.formatToPlainString(m.t.tiKyYm, { applicationName: n })
         };
 }
 function b(e) {
@@ -95,7 +95,7 @@ function y(e, t) {
         return {
             largeImage: {
                 src: r.Z.get(p.ABu.XBOX).icon.customPNG,
-                alt: m.NW.string(m.t['Nfvo7+'])
+                alt: m.intl.string(m.t['Nfvo7+'])
             },
             smallImage: void 0
         };
@@ -103,7 +103,7 @@ function y(e, t) {
         return {
             largeImage: {
                 src: r.Z.get(p.ABu.PLAYSTATION).icon.lightPNG,
-                alt: m.NW.string(m.t.fFl4jo)
+                alt: m.intl.string(m.t.fFl4jo)
             },
             smallImage: void 0
         };

@@ -42,12 +42,12 @@ function d() {
                 return e;
             })(
                 {
-                    title: a.NW.string(a.t['zQ1+Jy']),
-                    body: a.NW.string(a.t.K1gWXl),
-                    secondaryConfirmText: a.NW.string(a.t.XAiAgI),
+                    title: a.intl.string(a.t['zQ1+Jy']),
+                    body: a.intl.string(a.t.K1gWXl),
+                    secondaryConfirmText: a.intl.string(a.t.XAiAgI),
                     onConfirmSecondary: u,
                     onConfirm: c,
-                    confirmText: a.NW.string(a.t.BddRzc)
+                    confirmText: a.intl.string(a.t.BddRzc)
                 },
                 e
             )

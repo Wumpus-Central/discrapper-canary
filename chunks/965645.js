@@ -1,9 +1,9 @@
 s.d(t, { Z: () => i });
 var l = s(200651);
 function i(e) {
-    let { width: t = 24, height: s = 24, boxColor: i, ribbonColor: r, style: o } = e;
+    let { width: t = 24, height: s = 24, boxColor: i, ribbonColor: r, style: n } = e;
     return (0, l.jsxs)('svg', {
-        style: o,
+        style: n,
         width: t,
         height: s,
         viewBox: '0 0 24 24',

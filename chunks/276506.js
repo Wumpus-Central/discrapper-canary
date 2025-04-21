@@ -13,7 +13,7 @@ function c(e) {
                 let e = i.Z.getRelationshipType(t),
                     n = o.Z.getGameRelationshipsForUser(t),
                     r = o.Z.getGameRelationshipsVersion();
-                return e === s.OGo.PENDING_INCOMING ? [l.NW.string(l.t['wPI56+']), r] : [n.length > 0 ? l.NW.string(l.t.LAcY7u) : l.NW.string(l.t.w5uwoK), r];
+                return e === s.OGo.PENDING_INCOMING ? [l.intl.string(l.t['wPI56+']), r] : [n.length > 0 ? l.intl.string(l.t.LAcY7u) : l.intl.string(l.t.w5uwoK), r];
             },
             [t],
             a.Q

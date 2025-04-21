@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(49308),
     S = n(117652),
     T = n(126982),
-    N = n(981631),
-    A = n(302800),
+    A = n(981631),
+    N = n(302800),
     C = n(215023),
     R = n(231338),
     P = n(770977);
@@ -84,11 +84,11 @@ function M(e) {
     let { onClose: n, onComplete: a, onStepChange: w, transitionState: L, loadId: M, skuId: k, isGift: j = !1, giftRecipient: U, giftMessage: G, giftingOrigin: B, analyticsLocations: F, returnRef: V } = e,
         { analyticsLocations: Z } = (0, d.ZP)([...F, u.Z.COLLECTIBLES_PAYMENT_MODAL]),
         H = i.useRef(new s.qA()),
-        [W, Y] = i.useState(null),
+        [Y, W] = i.useState(null),
         [K, z] = i.useState(!1),
         q = i.useMemo(
             () =>
-                (0, A.UY)({
+                (0, N.UY)({
                     purchaseType: C.o8.FIAT,
                     skuId: k
                 }),
@@ -136,7 +136,7 @@ function M(e) {
                         (0, r.jsx)(
                             I.x,
                             x(D({}, e), {
-                                confettiCanvas: W,
+                                confettiCanvas: Y,
                                 analyticsLocations: Z,
                                 hideConfetti: null != q
                             })
@@ -147,13 +147,13 @@ function M(e) {
                     }
                 }
             ],
-            [Z, W, q, j]
+            [Z, Y, q, j]
         );
     return (0, r.jsxs)(d.Gt, {
         value: Z,
         children: [
             (0, r.jsx)(s.O_, {
-                ref: Y,
+                ref: W,
                 className: P.confettiCanvas,
                 environment: H.current
             }),
@@ -164,7 +164,7 @@ function M(e) {
             (0, r.jsx)(m.PaymentContextProvider, {
                 loadId: M,
                 stepConfigs: er,
-                applicationId: N.XAJ,
+                applicationId: A.XAJ,
                 skuIDs: X,
                 isGift: j,
                 activeSubscription: null,
@@ -178,7 +178,7 @@ function M(e) {
                         children: (0, r.jsx)(b.PaymentModal, {
                             onClose: et,
                             onComplete: ee,
-                            applicationId: N.XAJ,
+                            applicationId: A.XAJ,
                             skuId: J,
                             initialPlanId: null,
                             analyticsLocations: Z,

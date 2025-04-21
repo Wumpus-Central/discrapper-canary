@@ -153,7 +153,7 @@ let m = (e) => {
         let i = y(e, t.name);
         'profile_effects' === n ? S(e, t, r) : v(t) ? ('collection' === n || null === n ? (t.name in _ ? r.collectionFiles.push(t) : r.ignoredFilenames.push(i)) : 'avatar_decorations' === n ? r.avatarDecorationFiles.push(t) : r.ignoredFilenames.push(i)) : r.ignoredFilenames.push(i);
     },
-    N = async (e, t, n) => {
+    A = async (e, t, n) => {
         let r = e.createReader();
         for (let i of await new Promise((e) => r.readEntries(e)))
             if (i.isFile) {
@@ -165,12 +165,12 @@ let m = (e) => {
                 n.ignoredFilenames.push(...e.map((e) => y(i.name, e.name)));
             }
     },
-    A = async (e, t) => {
+    N = async (e, t) => {
         let n = e.createReader();
         for (let r of await new Promise((e) => n.readEntries(e)))
             if (r.isDirectory) {
                 let e = r;
-                await N(e, 'profile_effects', t);
+                await A(e, 'profile_effects', t);
             } else r.isFile && r.name !== p && t.ignoredFilenames.push(y(e.name, r.name));
     },
     C = async (e, t) => {
@@ -178,9 +178,9 @@ let m = (e) => {
         for (let e of await new Promise((e) => n.readEntries(e)))
             if (e.isDirectory) {
                 let n = e;
-                if ('collection' === n.name) await N(n, 'collection', t);
-                else if ('avatar_decorations' === n.name) await N(n, 'avatar_decorations', t);
-                else if ('profile_effects' === n.name) await A(n, t);
+                if ('collection' === n.name) await A(n, 'collection', t);
+                else if ('avatar_decorations' === n.name) await A(n, 'avatar_decorations', t);
+                else if ('profile_effects' === n.name) await N(n, t);
                 else {
                     let e = await I(n);
                     t.ignoredFilenames.push(...e.map((e) => y(n.name, e.name)));
@@ -198,7 +198,7 @@ let m = (e) => {
             if (n.isDirectory) {
                 let e = n,
                     r = e.name;
-                'collection' === r || 'avatar_decorations' === r ? await N(e, r, t) : 'profile_effects' === r ? await A(e, t) : await C(e, t);
+                'collection' === r || 'avatar_decorations' === r ? await A(e, r, t) : 'profile_effects' === r ? await N(e, t) : await C(e, t);
             } else if (n.isFile) {
                 let e = n;
                 T('', await new Promise((t) => e.file(t)), null, t);

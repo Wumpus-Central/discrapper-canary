@@ -23,8 +23,8 @@ function d() {
 function f(e) {
     let { rootClassName: t, lang: n, theme: a, density: d, focused: f, fontScale: _, fontScaleClass: p, mouseMode: h, keyboardModeEnabled: m, saturation: g, desaturateUserColors: E, useForcedColors: b, systemForcedColors: y, useReducedMotion: v, alwaysShowLinkDecorations: O, hardwareAccelerationEnabled: I, children: S } = e,
         T = window.CSS.supports('selector(::-webkit-scrollbar)'),
-        N = 'font-size: '.concat(_, '%; --saturation-factor: ').concat(g, ';'),
-        A = o()(
+        A = 'font-size: '.concat(_, '%; --saturation-factor: ').concat(g, ';'),
+        N = o()(
             (0, c.Z)(),
             (0, l.QeD)(a),
             'density-'.concat(d),
@@ -52,10 +52,10 @@ function f(e) {
         C = i.useMemo(
             () => ({
                 lang: n,
-                style: N,
-                className: A
+                style: A,
+                className: N
             }),
-            [n, N, A]
+            [n, A, N]
         );
     return (0, r.jsx)(u.Provider, {
         value: C,

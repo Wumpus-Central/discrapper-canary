@@ -10,7 +10,7 @@ function c(e) {
     let t = (0, i.e7)([o.Z], () => o.Z.getToastsEnabled(e));
     return (0, r.jsx)(l.S89, {
         id: 'show-call-chat-toasts',
-        label: s.NW.string(s.t['5NL5vb']),
+        label: s.intl.string(s.t['5NL5vb']),
         checked: t,
         action: () => a.Z.setCallChatToastsEnabled(e, !t)
     });

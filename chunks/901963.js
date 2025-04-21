@@ -33,23 +33,23 @@ let y = 'premiumRetentionEmojiPickerNotice',
         )
             return null;
         let T = I.status === m.O0b.PAST_DUE ? (0, p.lY)(I).expiresDate : o()(I.currentPeriodStart).add(g.gh),
-            N = ''.concat(I.id, ':').concat(T.toISOString());
-        if (v === N) return null;
-        let A = p.ZP.getPremiumType(I.planId) === g.p9.TIER_0 ? f.JX.PREMIUM_TIER_0 : p.ZP.getPremiumType(I.planId) === g.p9.TIER_1 ? f.JX.PREMIUM_TIER_1 : f.JX.PREMIUM_TIER_2;
+            A = ''.concat(I.id, ':').concat(T.toISOString());
+        if (v === A) return null;
+        let N = p.ZP.getPremiumType(I.planId) === g.p9.TIER_0 ? f.JX.PREMIUM_TIER_0 : p.ZP.getPremiumType(I.planId) === g.p9.TIER_1 ? f.JX.PREMIUM_TIER_1 : f.JX.PREMIUM_TIER_2;
         return (0, r.jsxs)('div', {
             className: b.premiumRetentionNotice,
             children: [
                 (0, r.jsx)(c.SrA, {
                     size: 'md',
                     className: b.premiumRetentionNoticeIcon,
-                    color: A
+                    color: N
                 }),
                 (0, r.jsxs)('div', {
                     className: b.premiumRetentionNoticeContent,
                     children: [
                         (0, r.jsx)(c.Text, {
                             variant: 'text-xs/normal',
-                            children: E.NW.format(E.t.bTMjiI, {
+                            children: E.intl.format(E.t.bTMjiI, {
                                 planName: p.ZP.getDisplayPremiumType(I.planId),
                                 endsAt: T.toDate()
                             })
@@ -59,14 +59,14 @@ let y = 'premiumRetentionEmojiPickerNotice',
                                 onClick: () => {
                                     (0, h.A3)(n), t(), d.Z.open(m.oAB.PREMIUM);
                                 },
-                                children: E.NW.string(E.t.W3aavr)
+                                children: E.intl.string(E.t.W3aavr)
                             })
                         })
                     ]
                 }),
                 (0, r.jsx)(c.P3F, {
                     onClick: () => {
-                        l.K.set(y, N), (v = N), O(!0);
+                        l.K.set(y, A), (v = A), O(!0);
                     },
                     children: (0, r.jsx)(c.Dio, {
                         size: 'md',

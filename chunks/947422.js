@@ -95,7 +95,7 @@ function u(t) {
                     children: [
                         (0, n.jsx)('img', {
                             src: s,
-                            alt: l.NW.string(l.t['5DRw+/']),
+                            alt: l.intl.string(l.t['5DRw+/']),
                             className: c.illustration
                         }),
                         (0, n.jsx)(o.X6q, {
@@ -103,26 +103,26 @@ function u(t) {
                             variant: 'heading-xl/semibold',
                             color: 'header-primary',
                             className: c.headerTitle,
-                            children: l.NW.string(l.t.UVuXCg)
+                            children: l.intl.string(l.t.UVuXCg)
                         }),
                         (0, n.jsx)(a, {
-                            text: l.NW.string(l.t.sBDfo6),
+                            text: l.intl.string(l.t.sBDfo6),
                             icon: o.nRN,
                             foreground: c.red
                         }),
                         (0, n.jsx)(a, {
-                            text: l.NW.string(l.t.x58YtL),
+                            text: l.intl.string(l.t.x58YtL),
                             icon: o.gkL
                         }),
                         (0, n.jsx)(a, {
-                            text: l.NW.string(l.t.XtVqlZ),
+                            text: l.intl.string(l.t.XtVqlZ),
                             icon: o.V9
                         }),
                         (0, n.jsx)(o.zxk, {
                             color: o.zxk.Colors.BRAND,
                             className: c.button,
                             onClick: b,
-                            children: l.NW.string(l.t.obLqZ2)
+                            children: l.intl.string(l.t.obLqZ2)
                         })
                     ]
                 })

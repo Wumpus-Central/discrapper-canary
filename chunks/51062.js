@@ -68,7 +68,7 @@ function O(e, t) {
     );
 }
 function I(e, t, n) {
-    var b, v, I, S, T, N, A;
+    var b, v, I, S, T, A, N;
     let { channel: C, type: R } = e,
         [P, w] = r.useState(() => (0, p.P)()),
         D = (0, i.Z)(),
@@ -114,9 +114,9 @@ function I(e, t, n) {
             hidePersonalInformation: j,
             hideMentionDescription: R === l.Ie.RULES_INPUT,
             emojiIntention: R === l.Ie.RULES_INPUT ? E.Hz.COMMUNITY_CONTENT : E.Hz.CHAT,
-            currentWord: null != (N = null == F ? void 0 : F.word) ? N : '',
+            currentWord: null != (A = null == F ? void 0 : F.word) ? A : '',
             currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
-            optionText: null != G ? (0, o.KF)({ [G.name]: null != (A = null == (I = e.editorRef.current) ? void 0 : I.getCurrentCommandOptionValue()) ? A : [] }, G.name) : ''
+            optionText: null != G ? (0, o.KF)({ [G.name]: null != (N = null == (I = e.editorRef.current) ? void 0 : I.getCurrentCommandOptionValue()) ? N : [] }, G.name) : ''
         }),
         [Z] = r.useState(() => new p.Z(V));
     return (

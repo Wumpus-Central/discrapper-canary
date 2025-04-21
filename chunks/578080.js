@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(953529);
+n.d(t, { Z: () => Z }), n(953529);
 var r = n(200651),
     o = n(192379),
     s = n(120356),
@@ -25,15 +25,15 @@ var r = n(200651),
     S = n(340100),
     P = n(611855),
     E = n(644646),
-    N = n(78826),
-    T = n(670638),
+    T = n(78826),
+    N = n(670638),
     A = n(667105),
     R = n(46140),
     B = n(981631),
     k = n(701488),
     q = n(388032),
     D = n(92503);
-function W(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,7 +58,7 @@ function W(e) {
     }
     return e;
 }
-function I(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function I(e, t) {
         e
     );
 }
-function M(e) {
+function L(e) {
     let { style: t, onClick: n } = e;
     return (0, _.O)({
         location: R.dr.QUESTS_BAR,
@@ -89,13 +89,13 @@ function M(e) {
               fullWidth: !0,
               onClick: n,
               size: u.zxk.Sizes.NONE,
-              children: q.NW.string(q.t.lwQdjI)
+              children: q.intl.string(q.t.lwQdjI)
           })
         : null;
 }
-let L = o.forwardRef(function (e, t) {
+let Z = o.forwardRef(function (e, t) {
     var n, s;
-    let { children: _, className: L, collapsedHeight: Z, expansionSpring: V, isExpanded: Q, isExpansionAnimationComplete: U, onCtxMenuOpen: H, onCtxMenuClose: F, onCtxMenuSelect: z, quest: X, useReducedMotion: K } = e,
+    let { children: _, className: Z, collapsedHeight: W, expansionSpring: V, isExpanded: Q, isExpansionAnimationComplete: U, onCtxMenuOpen: H, onCtxMenuClose: F, onCtxMenuSelect: z, quest: X, useReducedMotion: K } = e,
         Y = (0, l.e7)([j.Z], () => j.Z.isEnrolling(X.id), [X]),
         G = (0, x.aM)(),
         J = (0, b.B6)(X.config.expiresAt),
@@ -104,7 +104,7 @@ let L = o.forwardRef(function (e, t) {
         et = o.useMemo(() => (0, O.fh)(X, O.eC.HERO), [X]),
         en = (0, A.tP)($.application.id),
         er = $.features.has(R.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST,
-        eo = $.features.has(R.S7.START_QUEST_CTA) ? q.NW.string(q.t.E80Bdn) : q.NW.string(q.t.l7E81t),
+        eo = $.features.has(R.S7.START_QUEST_CTA) ? q.intl.string(q.t.E80Bdn) : q.intl.string(q.t.l7E81t),
         es = o.useCallback(() => {
             (0, h.AH)(X.id, {
                 questContent: v.jn.QUEST_BAR,
@@ -151,7 +151,7 @@ let L = o.forwardRef(function (e, t) {
             };
         }, [X.config.colors.primary]);
     return (0, r.jsxs)(i.animated.div, {
-        className: a()(L, D.contentExpanded, { [D.contentInteractable]: eg }),
+        className: a()(Z, D.contentExpanded, { [D.contentInteractable]: eg }),
         style: {
             backgroundColor: X.config.colors.secondary,
             transform: em
@@ -164,7 +164,7 @@ let L = o.forwardRef(function (e, t) {
                           }),
                           V.to({
                               range: [0, 1],
-                              output: [0, Z]
+                              output: [0, W]
                           })
                       ],
                       (e, t) => 'translateY(calc('.concat(e, '% + ').concat(t, 'px))')
@@ -207,13 +207,13 @@ let L = o.forwardRef(function (e, t) {
                                                           className: D.questAcceptedContentCopySubheading,
                                                           color: 'always-white',
                                                           variant: 'text-xxs/normal',
-                                                          children: em ? q.NW.formatToPlainString(q.t.APddvL, { expirationDate: ee }) : q.NW.formatToPlainString(q.t['pX+fmp'], { expirationDate: J })
+                                                          children: em ? q.intl.formatToPlainString(q.t.APddvL, { expirationDate: ee }) : q.intl.formatToPlainString(q.t['pX+fmp'], { expirationDate: J })
                                                       })
                                                   ]
                                               })
                                           ]
                                       }),
-                                      (0, r.jsx)(T.r, {
+                                      (0, r.jsx)(N.r, {
                                           onOpen: H,
                                           onClose: F,
                                           onSelect: z,
@@ -224,9 +224,9 @@ let L = o.forwardRef(function (e, t) {
                                           children: (e) =>
                                               (0, r.jsx)(
                                                   u.P3F,
-                                                  I(W({}, e), {
+                                                  M(I({}, e), {
                                                       className: D.submenuWrapper,
-                                                      'aria-label': q.NW.string(q.t.DEoVWV),
+                                                      'aria-label': q.intl.string(q.t.DEoVWV),
                                                       children: (0, r.jsx)(u.xhG, {
                                                           size: 'md',
                                                           color: 'currentColor',
@@ -245,7 +245,7 @@ let L = o.forwardRef(function (e, t) {
                                         fullWidth: !0,
                                         onClick: ea,
                                         size: u.zxk.Sizes.NONE,
-                                        children: q.NW.string(q.t.cfY4PD)
+                                        children: q.intl.string(q.t.cfY4PD)
                                     })
                                   : (0, r.jsx)(u.Text, {
                                         className: D.description,
@@ -254,7 +254,7 @@ let L = o.forwardRef(function (e, t) {
                                         children: ex
                                     }),
                               (0, r.jsx)(S.Z, { quest: X }),
-                              !eh && !eu && !en && el && (0, r.jsx)(M, { onClick: eg ? ei : void 0 })
+                              !eh && !eu && !en && el && (0, r.jsx)(L, { onClick: eg ? ei : void 0 })
                           ]
                       })
                     : (0, r.jsxs)('div', {
@@ -267,7 +267,7 @@ let L = o.forwardRef(function (e, t) {
                                           className: D.utils,
                                           children: [
                                               (0, r.jsx)(P.Z, { color: 'always-white' }),
-                                              (0, r.jsx)(T.r, {
+                                              (0, r.jsx)(N.r, {
                                                   onOpen: H,
                                                   onClose: F,
                                                   onSelect: z,
@@ -278,9 +278,9 @@ let L = o.forwardRef(function (e, t) {
                                                   children: (e) =>
                                                       (0, r.jsx)(
                                                           u.P3F,
-                                                          I(W({}, e), {
+                                                          M(I({}, e), {
                                                               className: D.submenuWrapper,
-                                                              'aria-label': q.NW.string(q.t.DEoVWV),
+                                                              'aria-label': q.intl.string(q.t.DEoVWV),
                                                               children: (0, r.jsx)(u.xhG, {
                                                                   size: 'md',
                                                                   color: 'currentColor',
@@ -305,7 +305,7 @@ let L = o.forwardRef(function (e, t) {
                                                   className: D.title,
                                                   color: 'always-white',
                                                   variant: 'heading-md/medium',
-                                                  children: q.NW.format(q.t.EQa7oq, { questName: X.config.messages.questName })
+                                                  children: q.intl.format(q.t.EQa7oq, { questName: X.config.messages.questName })
                                               }),
                                               (0, r.jsx)(u.Text, {
                                                   className: D.description,
@@ -331,7 +331,7 @@ let L = o.forwardRef(function (e, t) {
                                   className: D.heroAssetWrapper,
                                   style: { color: X.config.colors.secondary },
                                   children: et.isAnimated
-                                      ? (0, r.jsx)(N.Fl, {
+                                      ? (0, r.jsx)(T.Fl, {
                                             id: 'QuestBarContentExpanded_heroAnimated',
                                             children: (e) => {
                                                 var t;
@@ -350,7 +350,7 @@ let L = o.forwardRef(function (e, t) {
                                                 });
                                             }
                                         })
-                                      : (0, r.jsx)(N.Fl, {
+                                      : (0, r.jsx)(T.Fl, {
                                             id: 'QuestBarContentExpanded_heroStatic',
                                             children: (e) =>
                                                 (0, r.jsx)('img', {

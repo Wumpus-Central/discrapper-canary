@@ -18,7 +18,7 @@ function c(e) {
                       null == d || d(), new l.Z('UserActivityActions').log('notify', n.id, t);
                   },
                   fullWidth: !0,
-                  children: s.NW.string(s.t.vwl1PD)
+                  children: s.intl.string(s.t.vwl1PD)
               },
               'notify'
           )

@@ -24,7 +24,7 @@ let f = [
         dismissibleContentVersion: _,
         eligiblePlanIds: [a.Xh.PREMIUM_YEAR_TIER_2, a.Xh.PREMIUM_MONTH_TIER_2],
         planSelection: {
-            heading: () => s.NW.string(s.t['o2XB4+']),
+            heading: () => s.intl.string(s.t['o2XB4+']),
             gradient: ['rgba(255, 144, 144, 1)', 'rgba(243, 14, 216, 1)'],
             getImageUrl: () => l.Z,
             getBackgroundImageUrl: () => u.Z
@@ -37,15 +37,15 @@ let f = [
         },
         firstTimeNotice: {
             getImageUrl: (e, t) => (t ? l.Z : d.Z),
-            title: () => s.NW.string(s.t.hFzI4u),
-            description: () => s.NW.string(s.t.B7R16u),
-            cta: () => s.NW.string(s.t.RzWDqa),
+            title: () => s.intl.string(s.t.hFzI4u),
+            description: () => s.intl.string(s.t.B7R16u),
+            cta: () => s.intl.string(s.t.RzWDqa),
             analyticsLocation: r.Z.VALENTINES_GIFTING_COACHMARK,
             analyticsPage: o.ZY5.PREMIUM_UPSELL_VALENTINES_GIFTING_CAMPAIGN
         },
         planSelectionBanner: {
-            desktopBannerText: () => s.NW.string(s.t['wxgA+v']),
-            mobileBannerText: () => s.NW.string(s.t.d4uO8v),
+            desktopBannerText: () => s.intl.string(s.t['wxgA+v']),
+            mobileBannerText: () => s.intl.string(s.t.d4uO8v),
             getImageUrl: () => '',
             gradient: () => ['rgba(255, 144, 144, 1)', 'rgba(243, 14, 216, 1)']
         },
@@ -53,13 +53,13 @@ let f = [
             getAnimatedImageUrl: () => d.Z,
             getStaticImageUrl: () => l.Z,
             getBackgroundImageUrl: () => c.Z,
-            title: () => s.NW.string(s.t.hFzI4u),
-            body: () => s.NW.string(s.t.rbWKaW)
+            title: () => s.intl.string(s.t.hFzI4u),
+            body: () => s.intl.string(s.t.rbWKaW)
         },
         giftPurchaseConfirmation: {
             yearGiftText: s.t.p0pZXF,
             monthGiftText: s.t['4ZJ+7e'],
-            collectRewardButtonText: () => s.NW.string(s.t.kMYVws),
-            rewardCollectedText: () => s.NW.string(s.t.eZrmtr)
+            collectRewardButtonText: () => s.intl.string(s.t.kMYVws),
+            rewardCollectedText: () => s.intl.string(s.t.eZrmtr)
         }
     };

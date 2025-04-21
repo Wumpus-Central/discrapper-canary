@@ -20,12 +20,12 @@ async function I(e, t) {
             .sort((e, t) => d.default.compare(e.id, t.id))
             .reverse()[0],
         O = null == I ? d.default.atPreviousMillisecond(t) : I.id,
-        N = 0;
+        T = 0;
     i.forAll((e) => {
-        d.default.compare(e.id, O) > 0 && (0, c.Ex)(e, n) && N++;
+        d.default.compare(e.id, O) > 0 && (0, c.Ex)(e, n) && T++;
     });
-    let T = a.Z.getChannel(e);
-    null != T && T.isThread() && (T.isArchivedThread() && (await o.Z.unarchiveThread(T, !1)), l.Z.hasJoined(e) || (await o.Z.joinThread(T, 'Mark Unread'))),
+    let N = a.Z.getChannel(e);
+    null != N && N.isThread() && (N.isArchivedThread() && (await o.Z.unarchiveThread(N, !1)), l.Z.hasJoined(e) || (await o.Z.joinThread(N, 'Mark Unread'))),
         _.log('Marking unread', {
             channelId: e,
             messageId: t
@@ -34,7 +34,7 @@ async function I(e, t) {
             url: E.ANM.MESSAGE_ACK(e, O),
             body: {
                 manual: !0,
-                mention_count: N
+                mention_count: T
             },
             oldFormErrors: !0,
             rejectWithError: !0

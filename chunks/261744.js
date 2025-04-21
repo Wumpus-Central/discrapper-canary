@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a }), n(388685);
-var r = n(442837),
-    i = n(687476),
+n.d(t, { Z: () => l }), n(388685);
+var i = n(442837),
+    r = n(687476),
     s = n(293810);
-function a() {
-    return (0, r.e7)([i.Z], () =>
+function l() {
+    return (0, i.e7)([r.Z], () =>
         (function () {
-            let [e] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [i.Z],
+            let [e] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [r.Z],
                 t = e.getGuildIdsWithPurchasableRoles(),
                 n = !1;
             return (t.forEach((t) => {
@@ -16,6 +16,6 @@ function a() {
                 : 0 === t.size
                   ? s.PY.NONE
                   : s.PY.IN_SUBSCRIPTION_SERVER;
-        })([i.Z])
+        })([r.Z])
     );
 }

@@ -75,7 +75,7 @@ function O(e) {
         children: [
             (0, r.jsxs)(s.P3F, {
                 className: o()(x.iconContainer, { [x.petite]: c }),
-                'aria-label': C.NW.string(C.t['0qPSMT']),
+                'aria-label': C.intl.string(C.t['0qPSMT']),
                 onClick: () => (0, _.ND)(i, g),
                 children: [
                     null != m
@@ -105,12 +105,12 @@ function O(e) {
             null != m && f
                 ? (0, r.jsx)(s.P3F, {
                       onClick: l,
-                      'aria-label': C.NW.string(C.t['uY+Nk5']),
+                      'aria-label': C.intl.string(C.t['uY+Nk5']),
                       style: { cursor: 'pointer' },
                       children: (0, r.jsx)(s.Text, {
                           variant: 'text-sm/medium',
                           color: 'text-danger',
-                          children: C.NW.string(C.t['uY+Nk5'])
+                          children: C.intl.string(C.t['uY+Nk5'])
                       })
                   })
                 : null
@@ -119,25 +119,25 @@ function O(e) {
 }
 let E = function (e) {
     let { channelId: t, onClose: n, transitionState: l, setHasPendingChanges: o, closeOrShowDiscardChangesAlert: h, location: E } = e,
-        N = (0, m.Dt)(),
-        I = (0, a.e7)([g.Z], () => g.Z.getChannel(t)),
-        P = null == I ? void 0 : I.name,
-        S = (0, f.cO)(I),
-        [Z, T] = i.useState(null != P ? P : ''),
+        I = (0, m.Dt)(),
+        P = (0, a.e7)([g.Z], () => g.Z.getChannel(t)),
+        S = null == P ? void 0 : P.name,
+        Z = (0, f.cO)(P),
+        [N, T] = i.useState(null != S ? S : ''),
         [A, w] = i.useState(void 0),
         R = void 0 !== A,
         { analyticsLocations: k } = (0, p.ZP)(E, d.Z.GROUP_DM_EDIT_MODAL),
         M = {
             channel_id: t,
-            channel_type: null == I ? void 0 : I.type,
+            channel_type: null == P ? void 0 : P.type,
             location: E,
             location_stack: k,
-            old_name_set: '' !== P,
-            old_icon_set: (null == I ? void 0 : I.icon) != null
+            old_name_set: '' !== S,
+            old_icon_set: (null == P ? void 0 : P.icon) != null
         };
     return (i.useEffect(() => {
-        o(Z !== P || R);
-    }, [Z, P, R, o]),
+        o(N !== S || R);
+    }, [N, S, R, o]),
     (0, u.ZP)(
         () => (
             b.default.track(y.rMx.GDM_EDIT_INTERACTED, j(v({}, M), { action: 'opened' })),
@@ -146,42 +146,42 @@ let E = function (e) {
             }
         )
     ),
-    null == I)
+    null == P)
         ? null
         : (0, r.jsx)(p.Gt, {
               value: k,
               children: (0, r.jsx)('form', {
                   onSubmit: (e) => {
                       e.preventDefault();
-                      let r = Z !== P,
+                      let r = N !== S,
                           i = void 0 !== A;
                       b.default.track(
                           y.rMx.GDM_EDIT_INTERACTED,
                           j(v({}, M), {
                               action: 'saved',
-                              new_name_set: '' !== Z,
-                              new_icon_set: (i ? A : null == I ? void 0 : I.icon) != null,
+                              new_name_set: '' !== N,
+                              new_icon_set: (i ? A : null == P ? void 0 : P.icon) != null,
                               name_changed: r,
                               icon_changed: i
                           })
                       ),
-                          r && c.Z.setName(t, Z),
+                          r && c.Z.setName(t, N),
                           i && c.Z.setIcon(t, A, E).catch(_.es),
                           n();
                   },
                   children: (0, r.jsxs)(s.Y0X, {
                       transitionState: l,
-                      'aria-labelledby': N,
+                      'aria-labelledby': I,
                       children: [
                           (0, r.jsxs)(s.xBx, {
                               separator: !0,
                               className: x.header,
                               children: [
                                   (0, r.jsx)(s.X6q, {
-                                      id: N,
+                                      id: I,
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
-                                      children: C.NW.string(C.t['5Q9+/P'])
+                                      children: C.intl.string(C.t['5Q9+/P'])
                                   }),
                                   (0, r.jsx)(s.olH, {
                                       onClick: h,
@@ -193,16 +193,16 @@ let E = function (e) {
                               className: x.modalContent,
                               children: [
                                   (0, r.jsx)(O, {
-                                      channel: I,
+                                      channel: P,
                                       previewIcon: A,
                                       onIconChange: (e) => w(e.imageUri),
                                       onIconRemove: () => w(null),
                                       analyticsLocations: k
                                   }),
                                   (0, r.jsx)(s.oil, {
-                                      'aria-label': C.NW.string(C.t.GEGW3N),
-                                      placeholder: null != S ? S : '',
-                                      value: Z,
+                                      'aria-label': C.intl.string(C.t.GEGW3N),
+                                      placeholder: null != Z ? Z : '',
+                                      value: N,
                                       onChange: T,
                                       autoFocus: !0
                                   })
@@ -212,15 +212,15 @@ let E = function (e) {
                               children: [
                                   (0, r.jsx)(s.zxk, {
                                       type: 'submit',
-                                      disabled: Z === P && !R,
-                                      children: C.NW.string(C.t.R3BPHx)
+                                      disabled: N === S && !R,
+                                      children: C.intl.string(C.t.R3BPHx)
                                   }),
                                   (0, r.jsx)(s.zxk, {
                                       onClick: h,
                                       look: s.zxk.Looks.LINK,
                                       color: s.zxk.Colors.PRIMARY,
                                       innerClassName: x.cancelButton,
-                                      children: C.NW.string(C.t['ETE/oK'])
+                                      children: C.intl.string(C.t['ETE/oK'])
                                   })
                               ]
                           })

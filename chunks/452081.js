@@ -14,11 +14,11 @@ function s() {
             () => [
                 {
                     id: l.e5.ALL,
-                    label: o.NW.string(o.t['0SzXmp'])
+                    label: o.intl.string(o.t['0SzXmp'])
                 },
                 {
                     id: l.e5.CLAIMED,
-                    label: o.NW.string(o.t.zyNYND)
+                    label: o.intl.string(o.t.zyNYND)
                 }
             ],
             []

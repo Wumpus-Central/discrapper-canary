@@ -16,7 +16,7 @@ let f = (e) => {
         x = n.scopes.some((e) => (0, i.sg)(e));
     return (
         n.clientId === o.t.PLAYSTATION_APPLICATION_ID || n.clientId === o.t.PLAYSTATION_STAGING_APPLICATION_ID ? (p = d.Z) : x && (p = u.Z),
-        null != n.twoWayLinkCode ? (h = s.NW.string(s.t.QhATl5)) : x && (h = s.NW.string(s.t.vBPvKy)),
+        null != n.twoWayLinkCode ? (h = s.intl.string(s.t.QhATl5)) : x && (h = s.intl.string(s.t.vBPvKy)),
         (0, r.jsxs)('div', {
             className: c.content,
             children: [
@@ -34,7 +34,7 @@ let f = (e) => {
                         (0, r.jsx)(l.X6q, {
                             variant: 'heading-xl/extrabold',
                             id: f,
-                            children: s.NW.string(s.t.qDtJmJ)
+                            children: s.intl.string(s.t.qDtJmJ)
                         }),
                         null != h
                             ? (0, r.jsx)(l.Text, {
@@ -49,7 +49,7 @@ let f = (e) => {
                     className: c.footerButton,
                     color: l.zxk.Colors.BRAND,
                     onClick: t,
-                    children: s.NW.string(s.t.i4jeWV)
+                    children: s.intl.string(s.t.i4jeWV)
                 })
             ]
         })

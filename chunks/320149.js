@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => v });
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -17,21 +17,21 @@ var r = n(200651),
     _ = n(933557),
     E = n(287746),
     O = n(388032),
-    N = n(560460),
-    y = n(46467);
-function I(e) {
+    y = n(560460),
+    I = n(46467);
+function v(e) {
     let { channel: t, baseChannelId: n } = e,
-        I = (0, _.ZP)(t),
-        v = (0, p.K)(),
-        C = (0, p.V)(),
-        S = (0, l.e7)([u.Z], () => u.Z.isMessageRequest(t.id)),
+        v = (0, _.ZP)(t),
+        C = (0, p.K)(),
+        S = (0, p.V)(),
+        N = (0, l.e7)([u.Z], () => u.Z.isMessageRequest(t.id)),
         T = (0, l.e7)([d.Z], () => d.Z.isSpam(t.id)),
         P = (0, f.V)(t.id, t.getRecipientId()),
         j = i.useCallback(() => {
-            m.Z.closeChannelSidebar(b.uZ), S && v && (0, g.Kh)(t.id), T && C && (0, g.Kh)(t.id);
-        }, [t.id, T, C, S, v]),
+            m.Z.closeChannelSidebar(b.uZ), N && C && (0, g.Kh)(t.id), T && S && (0, g.Kh)(t.id);
+        }, [t.id, T, S, N, C]),
         A = i.useCallback(() => {
-            (0, a.showToast)((0, a.createToast)(O.NW.string(O.t.pIQ3h4), a.ToastType.FAILURE));
+            (0, a.showToast)((0, a.createToast)(O.intl.string(O.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
         { markAsNotSpam: Z } = (0, h.m)({
             onAcceptSuccess: j,
@@ -43,7 +43,7 @@ function I(e) {
             s.ZP.Icon,
             {
                 icon: a.Dio,
-                tooltip: O.NW.string(O.t.cpT0Cg),
+                tooltip: O.intl.string(O.t.cpT0Cg),
                 onClick: () => m.Z.closeChannelSidebar(n)
             },
             'close'
@@ -53,32 +53,32 @@ function I(e) {
         children: [
             (0, r.jsx)(s.ZP, {
                 toolbar: x,
-                'aria-label': O.NW.string(O.t.BIYAqa),
+                'aria-label': O.intl.string(O.t.BIYAqa),
                 children: (0, c.ud)({
                     channel: t,
-                    channelName: I,
+                    channelName: v,
                     inSidebar: !0
                 })
             }),
             T &&
                 (0, r.jsxs)('div', {
-                    className: y.hamBanner,
+                    className: I.hamBanner,
                     children: [
                         (0, r.jsx)(a.Text, {
-                            className: y.__invalid_hamBannerText,
+                            className: I.__invalid_hamBannerText,
                             variant: 'text-sm/normal',
-                            children: O.NW.string(O.t.XVOKgo)
+                            children: O.intl.string(O.t.XVOKgo)
                         }),
                         (0, r.jsx)(a.zxk, {
-                            className: y.hamBannerButton,
+                            className: I.hamBannerButton,
                             size: a.PhG.SMALL,
                             onClick: () => Z(t, P),
-                            children: O.NW.string(O.t.koqL3d)
+                            children: O.intl.string(O.t.koqL3d)
                         })
                     ]
                 }),
             (0, r.jsx)('div', {
-                className: N.chat,
+                className: y.chat,
                 children: (0, r.jsx)(
                     E.Z,
                     {

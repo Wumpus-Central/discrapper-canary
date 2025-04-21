@@ -1,9 +1,9 @@
 n.d(t, { Z: () => d }), n(388685);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(995899),
-    a = n(745510),
-    l = n(675654);
+    l = n(745510),
+    a = n(675654);
 let o = {
         xMin: -40,
         xMax: 40,
@@ -11,16 +11,16 @@ let o = {
         yMax: -70
     },
     c = (e, t, n) => (null == n ? t : (e * n) / 100),
-    d = i.memo(function (e) {
-        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: u, particlesPerBurst: m, offsetXPercentageMax: g, offsetXPercentageMin: p, offsetYPercentageMax: h, offsetYPercentageMin: f, customConfettiCanvas: b, speedValues: _ = o, dragCoefficientValue: N = 1.66, onAnimationEnd: x } = e,
-            [E, j] = i.useState(null),
-            { confettiCanvas: C } = i.useContext(a.h),
-            O = (0, s.uR)(null != b ? b : C, E),
-            [S, v] = i.useState(!1);
-        i.useEffect(() => {
-            S && (null == x || x());
+    d = r.memo(function (e) {
+        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: u, particlesPerBurst: m, offsetXPercentageMax: g, offsetXPercentageMin: p, offsetYPercentageMax: h, offsetYPercentageMin: f, customConfettiCanvas: b, speedValues: _ = o, dragCoefficientValue: x = 1.66, onAnimationEnd: E } = e,
+            [j, C] = r.useState(null),
+            { confettiCanvas: O } = r.useContext(l.h),
+            S = (0, s.uR)(null != b ? b : O, j),
+            [v, T] = r.useState(!1);
+        r.useEffect(() => {
+            v && (null == E || E());
         });
-        let T = i.useMemo(() => {
+        let I = r.useMemo(() => {
             if (null != d)
                 return [
                     {
@@ -30,49 +30,49 @@ let o = {
                 ];
         }, [d]);
         return (
-            i.useEffect(() => {
+            r.useEffect(() => {
                 if (null == t) return;
                 let e = Array(null != u ? u : 4).fill(0);
                 return (
-                    (e = e.map((n, r) =>
+                    (e = e.map((n, i) =>
                         setTimeout(() => {
-                            O.createMultipleConfetti(
-                                (function (e, t, n, r, i) {
-                                    var s, a;
+                            S.createMultipleConfetti(
+                                (function (e, t, n, i, r) {
+                                    var s, l;
                                     let d = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
                                         u = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
                                         m = c(e.width, 100, n),
-                                        g = c(e.height, 75, i),
+                                        g = c(e.height, 75, r),
                                         p = c(e.width, 350, t),
-                                        h = c(e.height, 75, r),
-                                        { xMin: f, xMax: b, yMin: _, yMax: N } = d;
+                                        h = c(e.height, 75, i),
+                                        { xMin: f, xMax: b, yMin: _, yMax: x } = d;
                                     return (
                                         (s = (function (e) {
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var n = null != arguments[t] ? arguments[t] : {},
-                                                    r = Object.keys(n);
+                                                    i = Object.keys(n);
                                                 'function' == typeof Object.getOwnPropertySymbols &&
-                                                    (r = r.concat(
+                                                    (i = i.concat(
                                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                         })
                                                     )),
-                                                    r.forEach(function (t) {
-                                                        var r;
-                                                        (r = n[t]),
+                                                    i.forEach(function (t) {
+                                                        var i;
+                                                        (i = n[t]),
                                                             t in e
                                                                 ? Object.defineProperty(e, t, {
-                                                                      value: r,
+                                                                      value: i,
                                                                       enumerable: !0,
                                                                       configurable: !0,
                                                                       writable: !0
                                                                   })
-                                                                : (e[t] = r);
+                                                                : (e[t] = i);
                                                     });
                                             }
                                             return e;
-                                        })({}, l.We)),
-                                        (a = a =
+                                        })({}, a.We)),
+                                        (l = l =
                                             {
                                                 position: {
                                                     type: 'static-random',
@@ -93,13 +93,13 @@ let o = {
                                                     },
                                                     maxValue: {
                                                         x: b,
-                                                        y: N
+                                                        y: x
                                                     }
                                                 },
                                                 size: {
                                                     type: 'static-random',
-                                                    minValue: l.Ko,
-                                                    maxValue: l.Ko
+                                                    minValue: a.Ko,
+                                                    maxValue: a.Ko
                                                 },
                                                 dragCoefficient: {
                                                     type: 'static',
@@ -107,36 +107,36 @@ let o = {
                                                 }
                                             }),
                                         Object.getOwnPropertyDescriptors
-                                            ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(a))
+                                            ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(l))
                                             : (function (e, t) {
                                                   var n = Object.keys(e);
                                                   if (Object.getOwnPropertySymbols) {
-                                                      var r = Object.getOwnPropertySymbols(e);
-                                                      n.push.apply(n, r);
+                                                      var i = Object.getOwnPropertySymbols(e);
+                                                      n.push.apply(n, i);
                                                   }
                                                   return n;
-                                              })(Object(a)).forEach(function (e) {
-                                                  Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(a, e));
+                                              })(Object(l)).forEach(function (e) {
+                                                  Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(l, e));
                                               }),
                                         s
                                     );
-                                })(t.getBoundingClientRect(), g, p, h, f, _, N),
+                                })(t.getBoundingClientRect(), g, p, h, f, _, x),
                                 null != m ? m : 50
                             ),
-                                r === e.length - 1 && null != x && v(!0);
-                        }, 60 * r)
+                                i === e.length - 1 && null != E && T(!0);
+                        }, 60 * i)
                     )),
                     () => {
                         for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [O, t, u, m, g, p, h, f, _, N, x]),
-            (0, r.jsx)(s.Ji, {
-                ref: j,
-                sprites: null != T ? T : l.CA,
-                colors: null != n ? n : l.Br,
-                spriteWidth: l.Ko,
-                spriteHeight: l.Ko
+            }, [S, t, u, m, g, p, h, f, _, x, E]),
+            (0, i.jsx)(s.Ji, {
+                ref: C,
+                sprites: null != I ? I : a.CA,
+                colors: null != n ? n : a.Br,
+                spriteWidth: a.Ko,
+                spriteHeight: a.Ko
             })
         );
     });

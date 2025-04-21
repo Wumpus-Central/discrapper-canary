@@ -23,8 +23,8 @@ var i = n(120356),
     I = n(194811),
     S = n(373826),
     T = n(340266),
-    N = n(788858),
-    A = n(849755),
+    A = n(788858),
+    N = n(849755),
     C = n(384298),
     R = n(670451),
     P = n(228168),
@@ -101,11 +101,11 @@ function j(e) {
         V = (0, s.e7)([m.Z], () => m.Z.getGuild(i.guild_id)),
         Z = (0, E.Z)(i),
         H = (0, f.ZP)(i),
-        { channelStatusEnabled: W } = (0, g.D)({ location: 'UserProfileVoiceActivityCard' }),
-        Y = () => (i.isDM() || i.isGroupDM() ? w.NW.string(w.t['9FaEzs']) : i.isGuildStageVoice() ? w.NW.string(w.t.QygGCA) : w.NW.string(w.t.msxteH)),
+        { channelStatusEnabled: Y } = (0, g.D)({ location: 'UserProfileVoiceActivityCard' }),
+        W = () => (i.isDM() || i.isGroupDM() ? w.intl.string(w.t['9FaEzs']) : i.isGuildStageVoice() ? w.intl.string(w.t.QygGCA) : w.intl.string(w.t.msxteH)),
         K = () => {
             if (t.id !== n.id) return null;
-            let e = i.isDM() || i.isGroupDM() ? w.NW.string(w.t['+DsWbW']) : w.NW.string(w.t.xOVEjY);
+            let e = i.isDM() || i.isGroupDM() ? w.intl.string(w.t['+DsWbW']) : w.intl.string(w.t.xOVEjY);
             return (0, r.jsx)(l.ua7, {
                 text: e,
                 children: (e) => (0, r.jsx)(l.d3s, k(x({}, e), { size: 'xxs' }))
@@ -128,7 +128,7 @@ function j(e) {
                                 color: 'text-normal',
                                 className: D.voiceChannelHeading,
                                 children: [
-                                    (0, r.jsx)(N.Z, {
+                                    (0, r.jsx)(A.Z, {
                                         channel: i,
                                         size: 'xxs',
                                         color: l.TVs.colors.TEXT_NORMAL,
@@ -144,14 +144,14 @@ function j(e) {
                             null != V &&
                                 (0, r.jsx)(S.Z, {
                                     variant: 'text-xs/normal',
-                                    text: w.NW.formatToPlainString(w.t['hq/Qzc'], { guildName: V.name }),
+                                    text: w.intl.formatToPlainString(w.t['hq/Qzc'], { guildName: V.name }),
                                     onClick: t
                                 })
                         ]
                     }),
-                    W &&
+                    Y &&
                         i.isGuildVoice() &&
-                        (0, r.jsx)(A.Z, {
+                        (0, r.jsx)(N.Z, {
                             voiceChannel: i,
                             onAction: B,
                             onClose: M
@@ -177,7 +177,7 @@ function j(e) {
             onClose: M,
             children: [
                 (0, r.jsx)(I.Z, {
-                    text: Y(),
+                    text: W(),
                     tags: K(),
                     contextMenu: (0, r.jsx)(R.Z, {
                         display: 'voice',

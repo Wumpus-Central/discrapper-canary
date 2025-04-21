@@ -12,10 +12,10 @@ function u(e) {
         d = r.useRef(null);
     switch (n) {
         case a.bS.POPULAR:
-            t = s.NW.string(s.t.SzxiqK);
+            t = s.intl.string(s.t.SzxiqK);
             break;
         case a.bS.ALPHABETICAL:
-            t = s.NW.string(s.t.m8xstr);
+            t = s.intl.string(s.t.m8xstr);
     }
     return (0, i.jsx)(l.yRy, {
         targetElementRef: d,
@@ -66,7 +66,7 @@ function u(e) {
                         color: l.zxk.Colors.CUSTOM,
                         className: c.sortDropdown,
                         innerClassName: c.sortDropdownInner,
-                        'aria-label': s.NW.string(s.t.yeYaHR),
+                        'aria-label': s.intl.string(s.t.yeYaHR),
                         children: [
                             (0, i.jsx)(l.uVW, {
                                 size: 'xs',

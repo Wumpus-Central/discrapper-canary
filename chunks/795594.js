@@ -31,8 +31,8 @@ var r = n(200651),
     I = n(497321),
     S = n(468026),
     T = n(317381),
-    N = n(513202),
-    A = n(162685),
+    A = n(513202),
+    N = n(162685),
     C = n(445446),
     R = n(979200),
     P = n(870822),
@@ -50,8 +50,8 @@ var r = n(200651),
     V = n(9156),
     Z = n(768581),
     H = n(585483),
-    W = n(630388),
-    Y = n(49012),
+    Y = n(630388),
+    W = n(49012),
     K = n(621600),
     z = n(709054),
     q = n(706454),
@@ -132,7 +132,7 @@ function ef(e) {
             (0, r.jsx)(g.Text, {
                 color: 'text-normal',
                 variant: 'text-sm/medium',
-                children: er.NW.format(er.t.jUhnwc, {
+                children: er.intl.format(er.t.jUhnwc, {
                     applicationName: t.name,
                     onConnectionPress: () => O.Z.setSection(en.jXE.SETTINGS_CONNECTIONS)
                 })
@@ -166,18 +166,18 @@ let e_ = (e) => {
         });
     },
     eh = (e, t) => {
-        let n = er.NW.string(er.t.DT39Aw),
-            i = er.NW.formatToPlainString(er.t.QWGvxM, { applicationName: e.name });
+        let n = er.intl.string(er.t.DT39Aw),
+            i = er.intl.formatToPlainString(er.t.QWGvxM, { applicationName: e.name });
         return (
             (0, P.Z)(e) &&
-                ((n = er.NW.formatToPlainString(er.t['paC+UV'], { applicationName: e.name })),
+                ((n = er.intl.formatToPlainString(er.t['paC+UV'], { applicationName: e.name })),
                 (i = (0, r.jsxs)(r.Fragment, {
                     children: [
-                        er.NW.formatToPlainString(er.t.inM1Ym, { applicationName: e.name }),
+                        er.intl.formatToPlainString(er.t.inM1Ym, { applicationName: e.name }),
                         (0, r.jsx)(ee.Z, {
                             look: ee.z.WARNING,
                             className: ei.infoBox,
-                            children: er.NW.string(er.t.LY35Z2)
+                            children: er.intl.string(er.t.LY35Z2)
                         })
                     ]
                 }))),
@@ -187,7 +187,7 @@ let e_ = (e) => {
                         i,
                         (0, r.jsx)(ee.Z, {
                             className: ei.infoBox,
-                            children: er.NW.format(er.t.KRnERk, { applicationName: e.name })
+                            children: er.intl.format(er.t.KRnERk, { applicationName: e.name })
                         })
                     ]
                 })),
@@ -198,9 +198,9 @@ let e_ = (e) => {
                         {
                             title: n,
                             body: i,
-                            confirmText: er.NW.string(er.t.xUqheH),
+                            confirmText: er.intl.string(er.t.xUqheH),
                             confirmColor: g.Ttl.RED,
-                            cancelText: er.NW.string(er.t['ETE/oK']),
+                            cancelText: er.intl.string(er.t['ETE/oK']),
                             onConfirm: t
                         },
                         e
@@ -213,14 +213,14 @@ let e_ = (e) => {
         let { application: t, isVisible: n } = e,
             i = () => {
                 null != t.terms_of_service_url &&
-                    (0, Y.q)({
+                    (0, W.q)({
                         href: t.terms_of_service_url,
                         shouldConfirm: !0
                     });
             },
             a = () => {
                 null != t.privacy_policy_url &&
-                    (0, Y.q)({
+                    (0, W.q)({
                         href: t.privacy_policy_url,
                         shouldConfirm: !0
                     });
@@ -238,7 +238,7 @@ let e_ = (e) => {
                                 children: [
                                     (0, r.jsx)(g.R94, {
                                         className: ei.link,
-                                        children: er.NW.string(er.t['lx+GeX'])
+                                        children: er.intl.string(er.t['lx+GeX'])
                                     }),
                                     (0, r.jsx)(g.Gr1, {
                                         className: ei.externalLinkIcon,
@@ -260,7 +260,7 @@ let e_ = (e) => {
                                         children: [
                                             (0, r.jsx)(g.R94, {
                                                 className: ei.link,
-                                                children: er.NW.string(er.t.okSwq6)
+                                                children: er.intl.string(er.t.okSwq6)
                                             }),
                                             (0, r.jsx)(g.Gr1, {
                                                 className: ei.externalLinkIcon,
@@ -281,11 +281,11 @@ let e_ = (e) => {
             h = L.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !0 }).enabled,
             m = () => {
                 let e = [];
-                for (let n of t) e.push(...(0, k.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(er.NW.string(er.t.Ls2XRk));
+                for (let n of t) e.push(...(0, k.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(er.intl.string(er.t.Ls2XRk));
                 if (e.length > 0 || (null != u && u.length > 0))
                     return (0, r.jsx)(g.xJW, {
                         faded: !0,
-                        title: er.NW.string(er.t.xrmhRU),
+                        title: er.intl.string(er.t.xrmhRU),
                         className: eo.marginTop20,
                         children: (0, r.jsxs)('ul', {
                             children: [
@@ -322,13 +322,13 @@ let e_ = (e) => {
                 if (null != a.description && '' !== a.description)
                     return (0, r.jsx)(g.xJW, {
                         faded: !0,
-                        title: er.NW.string(er.t.GfRGra),
+                        title: er.intl.string(er.t.GfRGra),
                         children: (0, r.jsx)(g.R94, { children: a.description })
                     });
             },
             b = (0, D.Z)({
                 id: a.id,
-                label: er.NW.string(er.t['+NP/b2'])
+                label: er.intl.string(er.t['+NP/b2'])
             }),
             v = i.useMemo(() => {
                 if (null != b)
@@ -371,7 +371,7 @@ let e_ = (e) => {
                                 (0, r.jsx)(g.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-normal',
-                                    children: er.NW.format(er.t.yOApCA, { date: n })
+                                    children: er.intl.format(er.t.yOApCA, { date: n })
                                 })
                             ]
                         }),
@@ -382,7 +382,7 @@ let e_ = (e) => {
                                   size: g.PhG.SMALL,
                                   className: ei.reportButton,
                                   onClick: () => ep(p, l, s),
-                                  children: er.NW.string(er.t['+78Pfn'])
+                                  children: er.intl.string(er.t['+78Pfn'])
                               })
                             : null,
                         (0, r.jsx)(g.zxk, {
@@ -390,7 +390,7 @@ let e_ = (e) => {
                             look: g.iLD.OUTLINED,
                             size: g.PhG.SMALL,
                             onClick: () => eh(a, c),
-                            children: er.NW.string(er.t.xUqheH)
+                            children: er.intl.string(er.t.xUqheH)
                         })
                     ]
                 });
@@ -422,7 +422,7 @@ let e_ = (e) => {
         let { scopes: t, application: a, selectedChannelId: s, selectedGuildId: l, onDelete: c, disclosures: d, locale: p, id: E } = e,
             y = a.id,
             O = i.useMemo(() => j.ZP.createFromServer(a), [a]),
-            I = (0, W.yE)(O.flags, en.udG.EMBEDDED),
+            I = (0, Y.yE)(O.flags, en.udG.EMBEDDED),
             S = (0, _.e7)(
                 [J.Z],
                 () => {
@@ -431,9 +431,9 @@ let e_ = (e) => {
                 },
                 [y]
             ),
-            T = A.w.useExperiment({ location: 'oauth2_authorize' }),
-            N = a.bot,
-            C = (0, _.e7)([G.Z], () => G.Z.getDMFromUserId(null == N ? void 0 : N.id)),
+            T = N.w.useExperiment({ location: 'oauth2_authorize' }),
+            A = a.bot,
+            C = (0, _.e7)([G.Z], () => G.Z.getDMFromUserId(null == A ? void 0 : A.id)),
             { appDMChannelMuteConfig: P, dmChannelMuted: D } = (0, _.cj)([V.ZP], () =>
                 null == C
                     ? {
@@ -448,9 +448,9 @@ let e_ = (e) => {
             [x, U] = i.useState(!1),
             [B, F] = i.useState(!1),
             H = L.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !0 }).enabled,
-            Y = () => {
+            W = () => {
                 let e = [];
-                for (let n of t) e.push(...(0, k.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(er.NW.string(er.t.Ls2XRk));
+                for (let n of t) e.push(...(0, k.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(er.intl.string(er.t.Ls2XRk));
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(g.zF9, {
                         className: ei.appDetailsSection,
@@ -498,7 +498,7 @@ let e_ = (e) => {
                                             (0, r.jsx)(g.X6q, {
                                                 variant: 'heading-sm/medium',
                                                 color: 'header-primary',
-                                                children: er.NW.string(er.t.xrmhRU)
+                                                children: er.intl.string(er.t.xrmhRU)
                                             }),
                                             B
                                                 ? (0, r.jsx)(g.CJ0, {
@@ -516,7 +516,7 @@ let e_ = (e) => {
                                             variant: 'text-sm/normal',
                                             color: 'text-secondary',
                                             className: o()(ei.appDetailsContent, ei.permissionsDescription),
-                                            children: er.NW.format(er.t.nZOS8v, { numPermissions: e.length })
+                                            children: er.intl.format(er.t.nZOS8v, { numPermissions: e.length })
                                         })
                                 ]
                             });
@@ -561,7 +561,7 @@ let e_ = (e) => {
                                       (0, r.jsx)(g.X6q, {
                                           variant: 'heading-sm/medium',
                                           color: 'header-primary',
-                                          children: er.NW.string(er.t.fcYgiY)
+                                          children: er.intl.string(er.t.fcYgiY)
                                       }),
                                       x
                                           ? (0, r.jsx)(g.CJ0, {
@@ -610,7 +610,7 @@ let e_ = (e) => {
                                 (0, r.jsx)(g.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-normal',
-                                    children: er.NW.format(er.t.yOApCA, { date: n })
+                                    children: er.intl.format(er.t.yOApCA, { date: n })
                                 })
                             ]
                         }),
@@ -633,8 +633,8 @@ let e_ = (e) => {
                 );
             },
             ec = i.useCallback(async () => {
-                if ((u()(null != N, 'dm channel mute setting requires having a bot user'), null == C)) {
-                    let e = await b.Z.ensurePrivateChannel(N.id);
+                if ((u()(null != A, 'dm channel mute setting requires having a bot user'), null == C)) {
+                    let e = await b.Z.ensurePrivateChannel(A.id);
                     v.Z.updateChannelOverrideSettings(null, e, { muted: !1 }, K.ZB.Unmuted);
                     return;
                 }
@@ -644,7 +644,7 @@ let e_ = (e) => {
                           let { default: e } = await n.e('8246').then(n.bind(n, 540679));
                           return (t) => (0, r.jsx)(e, el({ channelId: C }, t));
                       });
-            }, [C, N, D]),
+            }, [C, A, D]),
             eu = () =>
                 T.enabled
                     ? (0, r.jsxs)('div', {
@@ -654,17 +654,17 @@ let e_ = (e) => {
                                   variant: 'heading-sm/medium',
                                   color: 'header-primary',
                                   className: ei.dmSettingsHeader,
-                                  children: er.NW.string(er.t.NaZyYG)
+                                  children: er.intl.string(er.t.NaZyYG)
                               }),
-                              null != N
+                              null != A
                                   ? (0, r.jsx)(g.j7V, {
                                         hideBorder: !0,
                                         onChange: ec,
                                         className: ei.dmSettingsSwitch,
                                         note:
                                             (null == P ? void 0 : P.end_time) != null
-                                                ? er.NW.format(er.t.j7h4AA, {
-                                                      endTime: new Date(P.end_time).toLocaleString(er.NW.currentLocale, {
+                                                ? er.intl.format(er.t.j7h4AA, {
+                                                      endTime: new Date(P.end_time).toLocaleString(er.intl.currentLocale, {
                                                           month: 'numeric',
                                                           day: 'numeric',
                                                           hour: 'numeric',
@@ -675,7 +675,7 @@ let e_ = (e) => {
                                         value: D,
                                         children: (0, r.jsx)(g.Text, {
                                             variant: 'text-sm/medium',
-                                            children: er.NW.string(er.t.NkwaBg)
+                                            children: er.intl.string(er.t.NkwaBg)
                                         })
                                     })
                                   : null,
@@ -684,12 +684,12 @@ let e_ = (e) => {
                                         hideBorder: !0,
                                         onChange: es,
                                         className: ei.dmSettingsSwitch,
-                                        note: er.NW.string(er.t.hw1nKS),
+                                        note: er.intl.string(er.t.hw1nKS),
                                         value: S,
                                         disabled: D,
                                         children: (0, r.jsx)(g.Text, {
                                             variant: 'text-sm/medium',
-                                            children: er.NW.string(er.t['Pkw//v'])
+                                            children: er.intl.string(er.t['Pkw//v'])
                                         })
                                     })
                                   : null
@@ -713,7 +713,7 @@ let e_ = (e) => {
                                 look: g.iLD.OUTLINED,
                                 size: g.PhG.SMALL,
                                 onClick: () => eh(a, c),
-                                children: er.NW.string(er.t.xUqheH)
+                                children: er.intl.string(er.t.xUqheH)
                             })
                         })
                     ]
@@ -724,7 +724,7 @@ let e_ = (e) => {
                 component: ee(),
                 children: (0, r.jsxs)('div', {
                     className: ei.appDetailsContainer,
-                    children: [Q(), Y(), eu(), ep()]
+                    children: [Q(), W(), eu(), ep()]
                 })
             })
         });
@@ -752,7 +752,7 @@ let e_ = (e) => {
                 E.Z.delete(t), H.S.safeDispatch(en.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { applicationId: n.id });
                 let r = o.get(n.id);
                 null != r &&
-                    N.Z.leaveActivity({
+                    A.Z.leaveActivity({
                         location: r.location,
                         applicationId: n.id,
                         showFeedback: !1
@@ -774,8 +774,8 @@ let e_ = (e) => {
                         query: f,
                         onChange: h,
                         onClear: m,
-                        placeholder: er.NW.string(er.t['5prvKS']),
-                        'aria-label': er.NW.string(er.t['5prvKS'])
+                        placeholder: er.intl.string(er.t['5prvKS']),
+                        'aria-label': er.intl.string(er.t['5prvKS'])
                     })
                 }),
             y = (e, t) =>
@@ -805,10 +805,10 @@ let e_ = (e) => {
                           type: g.$jN.Type.SPINNING_CIRCLE
                       })
                     : 0 === t.length
-                      ? y(er.NW.string(er.t.CpPv5u), er.NW.string(er.t['E+SM6e']))
+                      ? y(er.intl.string(er.t.CpPv5u), er.intl.string(er.t['E+SM6e']))
                       : 0 === v.length
                         ? (0, r.jsxs)(r.Fragment, {
-                              children: [b(), y(null, er.NW.string(er.t.EVWFNj))]
+                              children: [b(), y(null, er.intl.string(er.t.EVWFNj))]
                           })
                         : (0, r.jsxs)(r.Fragment, {
                               children: [
@@ -850,13 +850,13 @@ let e_ = (e) => {
             ? (0, r.jsx)(I.Z, {})
             : (0, r.jsx)(g.hjN, {
                   tag: g.RB0.H1,
-                  title: er.NW.string(er.t['f6kk+v']),
+                  title: er.intl.string(er.t['f6kk+v']),
                   children: (0, r.jsx)(g.y5t, {
                       component: (0, r.jsx)(g.ToO, {
                           className: eo.marginBottom40,
                           type: g.sje.PRIMARY,
-                          title: er.NW.string(er.t.HU3RFx),
-                          body: er.NW.string(er.t.Nu5Yi4)
+                          title: er.intl.string(er.t.HU3RFx),
+                          body: er.intl.string(er.t.Nu5Yi4)
                       }),
                       children: O()
                   })

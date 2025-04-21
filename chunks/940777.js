@@ -24,9 +24,9 @@ var r = n(200651),
     x = n(853856),
     E = n(593214),
     I = n(919755),
-    N = n(110977),
-    P = n(603274),
-    w = n(981631),
+    P = n(110977),
+    w = n(603274),
+    N = n(981631),
     Z = n(388032),
     T = n(940751);
 function A(e) {
@@ -56,9 +56,9 @@ function A(e) {
 }
 let R = {
     analyticsSource: {
-        page: w.ZY5.GUILD_CHANNEL,
-        section: w.jXE.CHANNEL_LIST,
-        object: w.qAy.CHANNEL
+        page: N.ZY5.GUILD_CHANNEL,
+        section: N.jXE.CHANNEL_LIST,
+        object: N.qAy.CHANNEL
     }
 };
 function D() {
@@ -70,11 +70,11 @@ function D() {
             favoriteChannels: x.Z.getFavoriteChannels(),
             favoriteServerMuted: x.Z.favoriteServerMuted
         })),
-        B = (0, a.e7)([C.Z], () => C.Z.getChannelId(w.I_8)),
-        W = (0, a.e7)([v.Z], () => v.Z.getChannel(B)),
-        V = (0, _.Z)((e) => e.guildId) === w.I_8,
-        { badge: F, unread: H } = (0, I.Z)(G),
-        z = (function (e) {
+        B = (0, a.e7)([C.Z], () => C.Z.getChannelId(N.I_8)),
+        V = (0, a.e7)([v.Z], () => v.Z.getChannel(B)),
+        F = (0, _.Z)((e) => e.guildId) === N.I_8,
+        { badge: H, unread: z } = (0, I.Z)(G),
+        W = (function (e) {
             let t = (0, a.e7)([C.Z], () => C.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
                 r = (0, a.e7)([O.Z], () => {
@@ -109,7 +109,7 @@ function D() {
                 })
             );
         })(G),
-        Y = F > 0 ? (0, y.N)(F) : null,
+        Y = H > 0 ? (0, y.N)(H) : null,
         K = (0, f.Q3)('FavoritesButton'),
         q = i.useCallback(() => {
             L();
@@ -117,37 +117,37 @@ function D() {
     return (0, r.jsxs)(m.H, {
         children: [
             (0, r.jsx)(g.Z, {
-                selected: V,
+                selected: F,
                 hovered: k,
-                unread: H && !U,
+                unread: z && !U,
                 className: T.pill
             }),
-            (0, r.jsx)(P.Z, {
+            (0, r.jsx)(w.Z, {
                 onShow: q,
-                children: (0, r.jsx)(N.S, {
+                children: (0, r.jsx)(P.S, {
                     children: (0, r.jsx)(c.aRk, {
-                        selected: K || V || k,
-                        upperBadge: z,
+                        selected: K || F || k,
+                        upperBadge: W,
                         lowerBadge: Y,
                         children: (0, r.jsx)(
                             c.LYs,
                             ((e = A({}, l)),
                             (t = t =
                                 {
-                                    ariaLabel: Z.NW.formatToPlainString(Z.t['/uzRsr'], {
-                                        guildName: Z.NW.string(Z.t.wMWycn),
-                                        mentions: F
+                                    ariaLabel: Z.intl.formatToPlainString(Z.t['/uzRsr'], {
+                                        guildName: Z.intl.string(Z.t.wMWycn),
+                                        mentions: H
                                     }),
-                                    'aria-selected': V,
+                                    'aria-selected': F,
                                     to: {
-                                        pathname: w.Z5c.CHANNEL(w.I_8, B),
+                                        pathname: N.Z5c.CHANNEL(N.I_8, B),
                                         state: R
                                     },
-                                    selected: V || k,
+                                    selected: F || k,
                                     onMouseEnter: () => M(!0),
                                     onMouseLeave: () => M(!1),
                                     onMouseDown: function () {
-                                        null != W && u.Z.preload(W.guild_id, W.id);
+                                        null != V && u.Z.preload(V.guild_id, V.id);
                                     },
                                     onContextMenu: function (e) {
                                         (0, d.jW)(e, async () => {

@@ -2,8 +2,8 @@ n.d(t, { A: () => m });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(63063),
-    l = n(586382),
+    l = n(63063),
+    s = n(586382),
     a = n(594980),
     o = n(515025),
     c = n(981631),
@@ -19,19 +19,19 @@ function m(e) {
                 children: [
                     (0, r.jsxs)(i.vwX, {
                         className: u.title,
-                        children: [d.NW.string(d.t.tzGY0t), (0, r.jsx)(l.hH, { guild: t })]
+                        children: [d.intl.string(d.t.tzGY0t), (0, r.jsx)(s.hH, { guild: t })]
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-secondary',
                         className: u.text,
-                        children: d.NW.string(d.t.F7bbrq)
+                        children: d.intl.string(d.t.F7bbrq)
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-secondary',
                         className: u.text,
-                        children: d.NW.format(d.t.ZYA9PT, { articleURL: s.Z.getArticleURL(c.BhN.GUILD_INVITE_SPLASH) })
+                        children: d.intl.format(d.t.ZYA9PT, { articleURL: l.Z.getArticleURL(c.BhN.GUILD_INVITE_SPLASH) })
                     }),
                     (0, r.jsx)(a.c, {
                         guild: t,

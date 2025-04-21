@@ -1,13 +1,13 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(192379),
     i = n(442837),
-    s = n(479531),
-    l = n(430824),
+    l = n(479531),
+    s = n(430824),
     a = n(594174),
     o = n(53365),
     c = n(223892);
 function d(e, t) {
-    let n = (0, i.e7)([l.Z], () => l.Z.getGuild(e)),
+    let n = (0, i.e7)([s.Z], () => s.Z.getGuild(e)),
         [d, u] = r.useState(),
         [m, g] = r.useState(!1),
         p = (0, c.Ob)(n);
@@ -28,7 +28,7 @@ function d(e, t) {
                 try {
                     null != t ? await o.wE(e, t) : await o.zo(e);
                 } catch (e) {
-                    u(new s.Z(e));
+                    u(new l.Z(e));
                 } finally {
                     g(!1);
                 }

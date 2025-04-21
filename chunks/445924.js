@@ -10,17 +10,17 @@ let o = (e) => {
         onClose: o,
         onSelect: void 0,
         navId: 'user-settings-change-avatar',
-        'aria-label': a.NW.string(a.t.ldIeAQ),
+        'aria-label': a.intl.string(a.t.ldIeAQ),
         children: [
             (0, r.jsx)(i.sNh, {
                 id: 'change-avatar',
                 action: t,
-                label: a.NW.string(a.t['4OynCA'])
+                label: a.intl.string(a.t['4OynCA'])
             }),
             (0, r.jsx)(i.sNh, {
                 id: 'change-avatar-decoration',
                 action: n,
-                label: a.NW.string(a.t['Tna/TU'])
+                label: a.intl.string(a.t['Tna/TU'])
             })
         ]
     });

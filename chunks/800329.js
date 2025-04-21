@@ -85,14 +85,14 @@ function p(e) {
                 })(y, C, x),
             [y, C, x]
         ),
-        N = E + 1,
-        I = N * j + (N - 1) * 8 <= b,
-        P = Math.floor(j / c) + 8,
-        S = Math.max(0, x - P * O) / 2;
+        I = E + 1,
+        P = I * j + (I - 1) * 8 <= b,
+        S = Math.floor(j / c) + 8,
+        Z = Math.max(0, x - S * O) / 2;
     return (0, r.jsx)(a.Z, {
         fade: !0,
         className: n,
-        listPadding: [h + S, 0, f + S - 8, 8],
+        listPadding: [h + Z, 0, f + Z - 8, 8],
         renderRow: function (e) {
             var t;
             let n = e * E;
@@ -111,7 +111,7 @@ function p(e) {
                                       {
                                           style: v,
                                           className: o()(s.tile, {
-                                              [s.padColumn]: I,
+                                              [s.padColumn]: P,
                                               [s.noVerticalMargin]: l >= (O - 1) * E,
                                               [s.noHorizontalMargin]: (l + 1) % E == 0 || l === y - 1
                                           }),
@@ -129,7 +129,7 @@ function p(e) {
         },
         rowCount: O,
         rowCountBySection: [O],
-        rowHeight: P,
+        rowHeight: S,
         onResize: g
     });
 }

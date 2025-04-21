@@ -65,9 +65,9 @@ let b = (e) => {
             d.tE,
             g(
                 {
-                    titleText: h.NW.string(h.t['duN28/']),
-                    descriptionText: h.NW.string(h.t['Veu++f']),
-                    ctaText: h.NW.string(h.t.F4SoLC),
+                    titleText: h.intl.string(h.t['duN28/']),
+                    descriptionText: h.intl.string(h.t['Veu++f']),
+                    ctaText: h.intl.string(h.t.F4SoLC),
                     tailLeftOffset: t,
                     customIconSrcs: { static: f.Z }
                 },

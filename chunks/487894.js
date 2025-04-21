@@ -36,13 +36,13 @@ function c(e) {
             (0, r.jsx)(a.Text, {
                 color: 'header-secondary',
                 variant: 'text-md/normal',
-                children: i.NW.string(i.t.jmq9GB)
+                children: i.intl.string(i.t.jmq9GB)
             }),
             d || u
                 ? (0, r.jsx)(a.zxk, {
                       className: o.cta,
                       onClick: c,
-                      children: i.NW.string(i.t.rBIGBA)
+                      children: i.intl.string(i.t.rBIGBA)
                   })
                 : null
         ]

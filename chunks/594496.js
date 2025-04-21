@@ -1,10 +1,10 @@
 n.d(t, { Z: () => R });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(512722),
-    s = n.n(i),
-    a = n(442837),
-    l = n(481060),
+var r = n(512722),
+    s = n.n(r),
+    l = n(442837),
+    a = n(481060),
     o = n(295474),
     c = n(150039),
     d = n(126631),
@@ -16,38 +16,38 @@ var i = n(512722),
     f = n(906364),
     b = n(643879),
     _ = n(621853),
-    N = n(271383),
-    x = n(594174),
-    E = n(74538),
-    j = n(51144),
-    C = n(18438),
-    O = n(778825),
-    S = n(52597),
-    v = n(430131),
-    T = n(133484),
-    I = n(388032),
+    x = n(271383),
+    E = n(594174),
+    j = n(74538),
+    C = n(51144),
+    O = n(18438),
+    S = n(778825),
+    v = n(52597),
+    T = n(430131),
+    I = n(133484),
+    N = n(388032),
     y = n(565872);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
@@ -60,8 +60,8 @@ function P(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -71,94 +71,94 @@ function P(e, t) {
     );
 }
 function R(e) {
-    var t, n, i, R;
+    var t, n, r, R;
     let { guild: D } = e,
-        Z = (0, a.e7)([x.default], () => {
-            let e = x.default.getCurrentUser();
+        Z = (0, l.e7)([E.default], () => {
+            let e = E.default.getCurrentUser();
             return s()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
         {
             pendingAvatar: w,
             pendingNickname: k,
-            pendingBanner: W,
-            pendingBio: L,
-            pendingPronouns: B,
-            pendingThemeColors: M,
-            errors: U,
-            guild: V
-        } = (0, a.cj)([O.Z], () => {
-            let { pendingAvatar: e, pendingNickname: t, pendingBio: n, pendingPronouns: r, pendingBanner: i, pendingThemeColors: s } = O.Z.getAllPending();
+            pendingBanner: L,
+            pendingBio: B,
+            pendingPronouns: M,
+            pendingThemeColors: U,
+            errors: V,
+            guild: G
+        } = (0, l.cj)([S.Z], () => {
+            let { pendingAvatar: e, pendingNickname: t, pendingBio: n, pendingPronouns: i, pendingBanner: r, pendingThemeColors: s } = S.Z.getAllPending();
             return {
                 pendingAvatar: e,
                 pendingNickname: t,
-                pendingBanner: i,
+                pendingBanner: r,
                 pendingBio: n,
-                pendingPronouns: r,
+                pendingPronouns: i,
                 pendingThemeColors: s,
-                errors: O.Z.getErrors(),
-                guild: O.Z.getGuild()
+                errors: S.Z.getErrors(),
+                guild: S.Z.getGuild()
             };
         }),
-        G = (0, b.SD)({
+        F = (0, b.SD)({
             userId: Z.id,
             image: w
         }),
-        F = null != D ? D : V;
-    s()(null != F, 'guild should not be null');
-    let H = (0, o.gS)(F.id),
-        z = (0, a.e7)([N.ZP], () => (null == F.id ? null : N.ZP.getMember(F.id, Z.id))),
-        Y = (0, a.e7)([_.Z], () => _.Z.getGuildMemberProfile(Z.id, F.id)),
-        K = E.ZP.canUsePremiumProfileCustomization(Z),
-        q = (0, c.gd)(w, null == z ? void 0 : z.avatar),
-        X = (0, c.f$)(W, null == Y ? void 0 : Y.banner),
-        Q = (0, S.p)(M, null == Y ? void 0 : Y.themeColors),
-        J = null != (t = null == Y ? void 0 : Y.bio) ? t : '',
-        $ = null != (n = null == Y ? void 0 : Y.pronouns) ? n : '',
+        H = null != D ? D : G;
+    s()(null != H, 'guild should not be null');
+    let z = (0, o.gS)(H.id),
+        Y = (0, l.e7)([x.ZP], () => (null == H.id ? null : x.ZP.getMember(H.id, Z.id))),
+        W = (0, l.e7)([_.Z], () => _.Z.getGuildMemberProfile(Z.id, H.id)),
+        K = j.ZP.canUsePremiumProfileCustomization(Z),
+        q = (0, c.gd)(w, null == Y ? void 0 : Y.avatar),
+        X = (0, c.f$)(L, null == W ? void 0 : W.banner),
+        Q = (0, v.p)(U, null == W ? void 0 : W.themeColors),
+        J = null != (t = null == W ? void 0 : W.bio) ? t : '',
+        $ = null != (n = null == W ? void 0 : W.pronouns) ? n : '',
         ee = (e, t, n) => {
             n(null != e ? e : null != t ? null : void 0);
         };
-    return (0, r.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: y.sectionsContainer,
         children: [
-            (0, r.jsx)(
-                v.Z,
+            (0, i.jsx)(
+                T.Z,
                 {
-                    errors: null != (i = null == U ? void 0 : U.nick) ? i : null == H ? void 0 : H.nick,
-                    username: j.ZP.getName(Z),
+                    errors: null != (r = null == V ? void 0 : V.nick) ? r : null == z ? void 0 : z.nick,
+                    username: C.ZP.getName(Z),
                     pendingNick: k,
-                    currentNick: null == z ? void 0 : z.nick,
-                    guild: F
+                    currentNick: null == Y ? void 0 : Y.nick,
+                    guild: H
                 },
                 'nick'
             ),
-            (0, r.jsx)(
+            (0, i.jsx)(
                 f.Z,
                 {
-                    sectionTitle: I.NW.string(I.t['+T3RIy']),
-                    errors: null == U ? void 0 : U.pronouns,
+                    sectionTitle: N.intl.string(N.t['+T3RIy']),
+                    errors: null == V ? void 0 : V.pronouns,
                     onPronounsChange: (e) => {
-                        (0, S.xs)(e, $);
+                        (0, v.xs)(e, $);
                     },
-                    pendingPronouns: B,
+                    pendingPronouns: M,
                     currentPronouns: $
                 },
                 'pronouns'
             ),
-            (0, r.jsxs)(T.Z, {
+            (0, i.jsxs)(I.Z, {
                 user: Z,
                 showOverlay: !K,
                 children: [
-                    (0, r.jsx)(
+                    (0, i.jsx)(
                         m.Z,
                         {
-                            sectionTitle: (0, r.jsxs)(r.Fragment, {
+                            sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    I.NW.string(I.t.lqaIxM),
-                                    (0, r.jsx)(l.ua7, {
-                                        text: I.NW.string(I.t['5AFxuL']),
+                                    N.intl.string(N.t.lqaIxM),
+                                    (0, i.jsx)(a.ua7, {
+                                        text: N.intl.string(N.t['5AFxuL']),
                                         children: (e) =>
-                                            (0, r.jsx)(
-                                                l.SrA,
+                                            (0, i.jsx)(
+                                                a.SrA,
                                                 P(
                                                     A(
                                                         {
@@ -174,24 +174,24 @@ function R(e) {
                                 ]
                             }),
                             showRemoveAvatarButton: q,
-                            onAvatarChange: (e) => ee(e, null == z ? void 0 : z.avatar, C.I5),
-                            errors: null == U ? void 0 : U.avatar,
-                            guildId: F.id,
+                            onAvatarChange: (e) => ee(e, null == Y ? void 0 : Y.avatar, O.I5),
+                            errors: null == V ? void 0 : V.avatar,
+                            guildId: H.id,
                             disabled: !K
                         },
                         'avatar'
                     ),
-                    (0, r.jsx)(
+                    (0, i.jsx)(
                         u.Z,
                         {
-                            sectionTitle: (0, r.jsxs)(r.Fragment, {
+                            sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    I.NW.string(I.t['7v0T9P']),
-                                    (0, r.jsx)(l.ua7, {
-                                        text: I.NW.string(I.t['5AFxuL']),
+                                    N.intl.string(N.t['7v0T9P']),
+                                    (0, i.jsx)(a.ua7, {
+                                        text: N.intl.string(N.t['5AFxuL']),
                                         children: (e) =>
-                                            (0, r.jsx)(
-                                                l.SrA,
+                                            (0, i.jsx)(
+                                                a.SrA,
                                                 P(
                                                     A(
                                                         {
@@ -207,21 +207,21 @@ function R(e) {
                                 ]
                             }),
                             user: Z,
-                            guild: F
+                            guild: H
                         },
                         'decoration'
                     ),
-                    (0, r.jsx)(
+                    (0, i.jsx)(
                         p.Z,
                         {
-                            sectionTitle: (0, r.jsxs)(r.Fragment, {
+                            sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    I.NW.string(I.t.wR5wOj),
-                                    (0, r.jsx)(l.ua7, {
-                                        text: I.NW.string(I.t['5AFxuL']),
+                                    N.intl.string(N.t.wR5wOj),
+                                    (0, i.jsx)(a.ua7, {
+                                        text: N.intl.string(N.t['5AFxuL']),
                                         children: (e) =>
-                                            (0, r.jsx)(
-                                                l.SrA,
+                                            (0, i.jsx)(
+                                                a.SrA,
                                                 P(
                                                     A(
                                                         {
@@ -237,43 +237,43 @@ function R(e) {
                                 ]
                             }),
                             user: Z,
-                            guild: F
+                            guild: H
                         },
                         'effect'
                     ),
-                    (0, r.jsx)(
+                    (0, i.jsx)(
                         g.Z,
                         {
                             showRemoveBannerButton: X,
-                            errors: null == U ? void 0 : U.banner,
-                            onBannerChange: (e) => ee(e, null == Y ? void 0 : Y.banner, C.g_),
-                            guildId: null == F ? void 0 : F.id,
+                            errors: null == V ? void 0 : V.banner,
+                            onBannerChange: (e) => ee(e, null == W ? void 0 : W.banner, O.g_),
+                            guildId: null == H ? void 0 : H.id,
                             disabled: !K
                         },
                         'banner'
                     ),
-                    (0, r.jsx)(h.Z, {
+                    (0, i.jsx)(h.Z, {
                         user: Z,
-                        pendingAvatarSrc: G,
-                        pendingColors: M,
+                        pendingAvatarSrc: F,
+                        pendingColors: U,
                         onThemeColorsChange: (e) => {
-                            (0, S.ce)(e, null == Y ? void 0 : Y.themeColors);
+                            (0, v.ce)(e, null == W ? void 0 : W.themeColors);
                         },
-                        guildId: null == F ? void 0 : F.id,
+                        guildId: null == H ? void 0 : H.id,
                         showResetThemeButton: Q
                     }),
-                    (0, r.jsx)(
+                    (0, i.jsx)(
                         d.Z,
                         {
-                            placeholder: I.NW.string(I.t['/7NKgo']),
-                            sectionTitle: (0, r.jsxs)(r.Fragment, {
+                            placeholder: N.intl.string(N.t['/7NKgo']),
+                            sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    I.NW.string(I.t.jGoPJS),
-                                    (0, r.jsx)(l.ua7, {
-                                        text: I.NW.string(I.t['5AFxuL']),
+                                    N.intl.string(N.t.jGoPJS),
+                                    (0, i.jsx)(a.ua7, {
+                                        text: N.intl.string(N.t['5AFxuL']),
                                         children: (e) =>
-                                            (0, r.jsx)(
-                                                l.SrA,
+                                            (0, i.jsx)(
+                                                a.SrA,
                                                 P(
                                                     A(
                                                         {
@@ -288,9 +288,9 @@ function R(e) {
                                     })
                                 ]
                             }),
-                            onBioChange: (e) => (0, S.qN)(e, J),
-                            errors: null != (R = null == U ? void 0 : U.bio) ? R : null == H ? void 0 : H.bio,
-                            pendingBio: L,
+                            onBioChange: (e) => (0, v.qN)(e, J),
+                            errors: null != (R = null == V ? void 0 : V.bio) ? R : null == z ? void 0 : z.bio,
+                            pendingBio: B,
                             currentBio: J,
                             disabled: !K
                         },

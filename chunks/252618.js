@@ -2,7 +2,7 @@ n.d(t, {
     EM: () => b,
     PR: () => g,
     Tt: () => O,
-    ZD: () => N,
+    ZD: () => A,
     yY: () => I
 }),
     n(388685);
@@ -165,7 +165,7 @@ function T() {
         return document.addEventListener('focusin', e, { capture: !0 }), () => document.removeEventListener('focusin', e, { capture: !0 });
     }, []);
 }
-function N() {
+function A() {
     let { skipsSettingDefaultPageTitle: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     T();
     let t = S();

@@ -1,4 +1,4 @@
-r.d(t, { default: () => d });
+r.d(e, { default: () => d });
 var n = r(200651);
 r(192379);
 var o = r(174609),
@@ -9,27 +9,27 @@ var o = r(174609),
     i = r(981631),
     u = r(388032),
     b = r(295491);
-function d(e) {
-    var { onClose: t } = e,
-        d = (function (e, t) {
-            if (null == e) return {};
+function d(t) {
+    var { onClose: e } = t,
+        d = (function (t, e) {
+            if (null == t) return {};
             var r,
                 n,
-                o = (function (e, t) {
-                    if (null == e) return {};
+                o = (function (t, e) {
+                    if (null == t) return {};
                     var r,
                         n,
                         o = {},
-                        a = Object.keys(e);
-                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                        a = Object.keys(t);
+                    for (n = 0; n < a.length; n++) (r = a[n]), e.indexOf(r) >= 0 || (o[r] = t[r]);
                     return o;
-                })(e, t);
+                })(t, e);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < a.length; n++) (r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                var a = Object.getOwnPropertySymbols(t);
+                for (n = 0; n < a.length; n++) (r = a[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]);
             }
             return o;
-        })(e, ['onClose']);
+        })(t, ['onClose']);
     let f = (0, n.jsx)('img', {
         src: r(414190),
         className: b.art,
@@ -37,44 +37,44 @@ function d(e) {
     });
     return (0, n.jsx)(
         c.Z,
-        (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
+        (function (t) {
+            for (var e = 1; e < arguments.length; e++) {
+                var r = null != arguments[e] ? arguments[e] : {},
                     n = Object.keys(r);
                 'function' == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        Object.getOwnPropertySymbols(r).filter(function (t) {
+                            return Object.getOwnPropertyDescriptor(r, t).enumerable;
                         })
                     )),
-                    n.forEach(function (t) {
+                    n.forEach(function (e) {
                         var n;
-                        (n = r[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
+                        (n = r[e]),
+                            e in t
+                                ? Object.defineProperty(t, e, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = n);
+                                : (t[e] = n);
                     });
             }
-            return e;
+            return t;
         })(
             {
-                title: u.NW.string(u.t.YqknLi),
-                glowUp: u.NW.string(u.t['3hj4kZ']),
-                body: u.NW.string(u.t['3hj4kZ']),
+                title: u.intl.string(u.t.YqknLi),
+                glowUp: u.intl.string(u.t['3hj4kZ']),
+                body: u.intl.string(u.t['3hj4kZ']),
                 artElement: f,
                 artContainerClassName: b.artContainer,
                 type: l.cd.VOICE_FILTERS_UPSELL,
-                onClose: t,
+                onClose: e,
                 onSubscribeClick: o.Z,
-                secondaryCTA: u.NW.string(u.t.ZnqyZ2),
+                secondaryCTA: u.intl.string(u.t.ZnqyZ2),
                 onSecondaryClick: function () {
                     (0, o.Z)(),
-                        t(),
+                        e(),
                         s.default.track(i.rMx.PREMIUM_PROMOTION_OPENED, {
                             location_section: i.jXE.VOICE_FILTERS_UPSELL_MODAL,
                             location_object: i.qAy.NAVIGATION_LINK

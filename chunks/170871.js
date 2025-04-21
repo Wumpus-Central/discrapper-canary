@@ -1,9 +1,9 @@
 n.d(t, { Z: () => g }), n(388685);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(481060),
+    l = n.n(s),
+    a = n(481060),
     o = n(114487),
     c = n(219039),
     d = n(979264),
@@ -11,20 +11,20 @@ var r = n(200651),
     m = n(580273);
 function g(e) {
     let { className: t, clanTag: n, clanBadge: s, onTagClick: g, guildId: p, guildName: h, guildIcon: f, guildIconSize: b, memberCount: _ } = e,
-        N = i.useRef(null),
-        [x, E] = i.useState(!1);
+        x = r.useRef(null),
+        [E, j] = r.useState(!1);
     return (
-        i.useEffect(() => {
-            let e = N.current;
-            null != e && null != e.offsetWidth && null != e.scrollWidth && E(e.offsetWidth < e.scrollWidth);
+        r.useEffect(() => {
+            let e = x.current;
+            null != e && null != e.offsetWidth && null != e.scrollWidth && j(e.offsetWidth < e.scrollWidth);
         }, []),
-        (0, r.jsxs)('div', {
-            className: a()(m.container, t),
+        (0, i.jsxs)('div', {
+            className: l()(m.container, t),
             children: [
-                (0, r.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     className: m.guildPrefixContainer,
                     children: [
-                        (0, r.jsx)(o.b, {
+                        (0, i.jsx)(o.b, {
                             guildId: p,
                             guildName: h,
                             guildIcon: f,
@@ -32,42 +32,42 @@ function g(e) {
                             className: m.guildPrefixIcon,
                             animate: !1
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, i.jsxs)('div', {
                             className: m.details,
                             children: [
-                                (0, r.jsx)(l.ua7, {
+                                (0, i.jsx)(a.ua7, {
                                     text: h,
-                                    color: l.ua7.Colors.PRIMARY,
-                                    shouldShow: x,
+                                    color: a.ua7.Colors.PRIMARY,
+                                    shouldShow: E,
                                     children: (e) => {
                                         var t, n;
-                                        return (0, r.jsx)(
+                                        return (0, i.jsx)(
                                             'span',
                                             ((t = (function (e) {
                                                 for (var t = 1; t < arguments.length; t++) {
                                                     var n = null != arguments[t] ? arguments[t] : {},
-                                                        r = Object.keys(n);
+                                                        i = Object.keys(n);
                                                     'function' == typeof Object.getOwnPropertySymbols &&
-                                                        (r = r.concat(
+                                                        (i = i.concat(
                                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                             })
                                                         )),
-                                                        r.forEach(function (t) {
-                                                            var r;
-                                                            (r = n[t]),
+                                                        i.forEach(function (t) {
+                                                            var i;
+                                                            (i = n[t]),
                                                                 t in e
                                                                     ? Object.defineProperty(e, t, {
-                                                                          value: r,
+                                                                          value: i,
                                                                           enumerable: !0,
                                                                           configurable: !0,
                                                                           writable: !0
                                                                       })
-                                                                    : (e[t] = r);
+                                                                    : (e[t] = i);
                                                         });
                                                 }
                                                 return e;
-                                            })({ ref: N }, e)),
+                                            })({ ref: x }, e)),
                                             (n = n =
                                                 {
                                                     className: m.guildName,
@@ -78,8 +78,8 @@ function g(e) {
                                                 : (function (e, t) {
                                                       var n = Object.keys(e);
                                                       if (Object.getOwnPropertySymbols) {
-                                                          var r = Object.getOwnPropertySymbols(e);
-                                                          n.push.apply(n, r);
+                                                          var i = Object.getOwnPropertySymbols(e);
+                                                          n.push.apply(n, i);
                                                       }
                                                       return n;
                                                   })(Object(n)).forEach(function (e) {
@@ -89,14 +89,14 @@ function g(e) {
                                         );
                                     }
                                 }),
-                                null != _ && (0, r.jsx)(c.Z, { count: _ })
+                                null != _ && (0, i.jsx)(c.Z, { count: _ })
                             ]
                         })
                     ]
                 }),
-                (0, r.jsx)('div', {
+                (0, i.jsx)('div', {
                     className: m.tagContainer,
-                    children: (0, r.jsx)(d.aG, {
+                    children: (0, i.jsx)(d.aG, {
                         guildId: p,
                         className: m.tag,
                         clanTag: n,

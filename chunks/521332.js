@@ -23,7 +23,7 @@ function _(e) {
         (0, r.jsx)(d.ZP, {
             title: t,
             description: n,
-            buttonText: o ? b.NW.string(b.t['h+WsPT']) : b.NW.string(b.t.A8t4NT),
+            buttonText: o ? b.intl.string(b.t['h+WsPT']) : b.intl.string(b.t.A8t4NT),
             buttonDisabled: o,
             onButtonPress: () => {
                 i(), c(!0), a(x.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
@@ -44,7 +44,7 @@ function f(e) {
                   (0, r.jsx)(a.X6q, {
                       variant: 'text-sm/semibold',
                       className: h.header,
-                      children: b.NW.string(b.t['1yxTIC'])
+                      children: b.intl.string(b.t['1yxTIC'])
                   }),
                   (0, r.jsx)('div', {
                       className: h.upsellsContainer,
@@ -77,7 +77,7 @@ function f(e) {
                       look: a.zxk.Looks.LINK,
                       color: a.zxk.Colors.LINK,
                       size: a.zxk.Sizes.NONE,
-                      children: b.NW.string(b.t.olebGx)
+                      children: b.intl.string(b.t.olebGx)
                   })
               ]
           });

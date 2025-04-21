@@ -7,7 +7,7 @@ n.d(t, {
     Gz: () => e_,
     Km: () => P,
     Lr: () => L,
-    Q5: () => Y,
+    Q5: () => W,
     Qm: () => G,
     Sf: () => eg,
     TK: () => J,
@@ -31,13 +31,13 @@ n.d(t, {
     r8: () => S,
     sR: () => U,
     tx: () => w,
-    uC: () => W,
+    uC: () => Y,
     vc: () => Z,
     vd: () => F,
     vg: () => en,
     xL: () => ee,
     zS: () => q,
-    zi: () => A
+    zi: () => N
 }),
     n(388685),
     n(997841),
@@ -115,9 +115,9 @@ function S(e) {
     return I.has(e);
 }
 let T = new Set([g.d4z.DM, g.d4z.GROUP_DM, g.d4z.GUILD_TEXT, g.d4z.GUILD_VOICE, g.d4z.GUILD_STAGE_VOICE, g.d4z.GUILD_CATEGORY, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_STORE, g.d4z.ANNOUNCEMENT_THREAD, g.d4z.PUBLIC_THREAD, g.d4z.PRIVATE_THREAD, g.d4z.GUILD_DIRECTORY, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA]),
-    N = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.ANNOUNCEMENT_THREAD, g.d4z.PUBLIC_THREAD, g.d4z.PRIVATE_THREAD]);
-function A(e) {
-    return N.has(e);
+    A = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.ANNOUNCEMENT_THREAD, g.d4z.PUBLIC_THREAD, g.d4z.PRIVATE_THREAD]);
+function N(e) {
+    return A.has(e);
 }
 let C = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA, g.d4z.GUILD_VOICE, g.d4z.GUILD_STAGE_VOICE]),
     R = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_VOICE, g.d4z.GUILD_STAGE_VOICE, g.d4z.GUILD_CATEGORY, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_STORE, g.d4z.ANNOUNCEMENT_THREAD, g.d4z.PUBLIC_THREAD, g.d4z.PRIVATE_THREAD, g.d4z.GUILD_DIRECTORY, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA]);
@@ -151,8 +151,8 @@ function Z(e) {
     return V.has(e);
 }
 let H = new Set([g.d4z.ANNOUNCEMENT_THREAD, g.d4z.PUBLIC_THREAD, g.d4z.PRIVATE_THREAD]),
-    W = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA]);
-function Y(e) {
+    Y = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA]);
+function W(e) {
     return H.has(e);
 }
 let K = new Set([g.d4z.DM, g.d4z.GROUP_DM, g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.ANNOUNCEMENT_THREAD, g.d4z.PUBLIC_THREAD, g.d4z.PRIVATE_THREAD, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA, g.d4z.GUILD_DIRECTORY, g.d4z.GUILD_VOICE, g.d4z.GUILD_STAGE_VOICE]);
@@ -338,7 +338,7 @@ class eg extends ep {
         return this.isGuildStageVoice();
     }
     isThread() {
-        return Y(this.type);
+        return W(this.type);
     }
     isAnnouncementThread() {
         return this.type === g.d4z.ANNOUNCEMENT_THREAD;
@@ -565,8 +565,8 @@ class eO extends ey {}
 class eI extends ey {}
 class eS extends eb {}
 class eT extends ey {}
-class eN extends ey {}
-class eA extends eb {}
+class eA extends ey {}
+class eN extends eb {}
 class eC extends eg {
     static fromServer(e, t) {
         var n, r, i, a;
@@ -766,8 +766,8 @@ function eU(e) {
 let eG = {
     [g.d4z.DM]: eL,
     [g.d4z.GROUP_DM]: ex,
-    [g.d4z.GUILD_TEXT]: eN,
-    [g.d4z.GUILD_VOICE]: eA,
+    [g.d4z.GUILD_TEXT]: eA,
+    [g.d4z.GUILD_VOICE]: eN,
     [g.d4z.GUILD_STAGE_VOICE]: eS,
     [g.d4z.GUILD_CATEGORY]: eO,
     [g.d4z.GUILD_ANNOUNCEMENT]: ev,

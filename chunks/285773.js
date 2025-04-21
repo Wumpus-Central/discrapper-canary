@@ -3,8 +3,8 @@ var r = n(200651);
 n(192379);
 var o = n(765717),
     i = n(384666),
-    c = n(69580),
-    l = n(397394),
+    l = n(69580),
+    c = n(397394),
     s = n(449934),
     a = n(721751),
     u = n(981631);
@@ -14,15 +14,15 @@ function d() {
         children: [
             (0, r.jsx)(o.Z, {
                 path: u.Z5c.OAUTH2_AUTHORIZED,
-                component: l.Xg
+                component: c.Xg
             }),
             (0, r.jsx)(o.Z, {
                 path: u.Z5c.OAUTH2_AUTHORIZE,
-                component: c.OAuth2AuthorizePage
+                component: l.OAuth2AuthorizePage
             }),
             (0, r.jsx)(o.Z, {
                 path: u.Z5c.OAUTH2_ERROR,
-                component: l.j3
+                component: c.j3
             }),
             (0, r.jsx)(o.Z, {
                 path: [u.Z5c.OAUTH2_WHITELIST_ACCEPT, '/oauth2/whitelist/accept'],

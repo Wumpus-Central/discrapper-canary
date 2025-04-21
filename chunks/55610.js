@@ -45,7 +45,7 @@ let E = (e) => {
                   }),
                   (0, r.jsx)('div', {
                       className: h.text,
-                      children: p.NW.format(g(i, t), { helpCenterLink: c.Z.getArticleURL(_.BhN.LOCALIZED_PRICING) })
+                      children: p.intl.format(g(i, t), { helpCenterLink: c.Z.getArticleURL(_.BhN.LOCALIZED_PRICING) })
                   })
               ]
           }))

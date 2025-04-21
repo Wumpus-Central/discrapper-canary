@@ -1,12 +1,12 @@
-n.d(t, { N: () => l });
+n.d(t, { N: () => o });
 var r = n(200651);
 n(192379);
 var a = n(692547),
-    o = n(325767);
-let l = (e) => {
+    l = n(325767);
+let o = (e) => {
     var t,
         n,
-        { width: l = 24, height: i = 24, color: s = a.Z.colors.INTERACTIVE_NORMAL } = e,
+        { width: o = 24, height: i = 24, color: s = a.Z.colors.INTERACTIVE_NORMAL } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -16,13 +16,13 @@ let l = (e) => {
                     var n,
                         r,
                         a = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
                     return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
             return a;
         })(e, ['width', 'height', 'color']);
@@ -52,11 +52,11 @@ let l = (e) => {
                     });
             }
             return e;
-        })({}, (0, o.Z)(c))),
+        })({}, (0, l.Z)(c))),
         (n = n =
             {
                 xmlns: 'http://www.w3.org/2000/svg',
-                width: l,
+                width: o,
                 height: i,
                 viewBox: '0 0 24 24',
                 fill: 'string' == typeof s ? s : s.css,

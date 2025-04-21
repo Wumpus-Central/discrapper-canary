@@ -59,19 +59,19 @@ let c = a.forwardRef(function (e, t) {
             var t;
             for (let n of ((null == (t = g.current.main) ? void 0 : t.paused) && (j.current = !1), Object.values(g.current))) null != n && (n.currentTime = e);
         }, []),
-        N = a.useCallback(() => {
+        k = a.useCallback(() => {
             var e;
             (null == (e = g.current.main) ? void 0 : e.paused) ? _() : w();
         }, [_, w]),
-        k = a.useCallback((e) => {
+        P = a.useCallback((e) => {
             g.current.main = e;
         }, []),
-        P = a.useCallback((e) => {
+        O = a.useCallback((e) => {
             let t = [];
             for (let n of Object.values(e.currentTarget.audioTracks)) n.label.includes(':application') ? (n.enabled = !0) : n.label.includes(':voice') ? ((n.enabled = !1), t.includes(n.label) || t.push(n.label)) : (n.enabled = !1);
             b(t);
         }, []),
-        O = a.useCallback((e, t) => {
+        S = a.useCallback((e, t) => {
             g.current[t] = e;
         }, []);
     return (a.useImperativeHandle(t, () => ({
@@ -85,9 +85,9 @@ let c = a.forwardRef(function (e, t) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(o.Z, {
-                      onClick: N,
+                      onClick: k,
                       className: p ? s.hidden : s.displayVideo,
-                      ref: k,
+                      ref: P,
                       src: n,
                       muted: !0,
                       onLoadedData: f,
@@ -99,15 +99,15 @@ let c = a.forwardRef(function (e, t) {
                       muted: !d,
                       preload: 'auto',
                       className: s.hidden,
-                      ref: (e) => O(e, 'application'),
-                      onLoadedMetadata: P
+                      ref: (e) => S(e, 'application'),
+                      onLoadedMetadata: O
                   }),
                   x.map((e) =>
                       (0, r.jsx)(
                           u,
                           {
                               audioTrackLabel: e,
-                              setRef: O,
+                              setRef: S,
                               src: c,
                               muted: !m
                           },

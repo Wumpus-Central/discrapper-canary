@@ -71,7 +71,7 @@ let m = (e) => {
                 E
                     ? (0, r.jsx)(o.kzN, {
                           className: _.errorBlock,
-                          children: f.NW.string(f.t.vZ8y7u)
+                          children: f.intl.string(f.t.vZ8y7u)
                       })
                     : null,
                 (0, r.jsx)(

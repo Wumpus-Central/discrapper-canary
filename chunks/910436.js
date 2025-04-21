@@ -19,19 +19,19 @@ var i = n(287734),
 function E(e) {
     let { party: t, onChannelContextMenu: n, quest: E } = e,
         O = (0, m.L)(),
-        { voiceChannels: N, currentActivities: y, partiedMembers: I, applicationStreams: v, guildContext: C } = t,
-        S = [],
+        { voiceChannels: y, currentActivities: I, partiedMembers: v, applicationStreams: C, guildContext: S } = t,
+        N = [],
         T = (e) => {
             var t, n;
-            let { length: i } = S;
-            if (0 === i) return void S.push(e);
-            let l = S[i - 1],
+            let { length: i } = N;
+            if (0 === i) return void N.push(e);
+            let l = N[i - 1],
                 a = ''.concat(null != (t = null == e ? void 0 : e.key) ? t : ''),
                 o = ''.concat(null != (n = null == l ? void 0 : l.key) ? n : '').startsWith('game') && a.startsWith('rich-presence');
-            S.push((0, r.jsx)(g.Z.Separator, { inset: o }, 'sep-'.concat(a))), S.push(e);
+            N.push((0, r.jsx)(g.Z.Separator, { inset: o }, 'sep-'.concat(a))), N.push(e);
         };
-    for (let { activity: e } of (N.length > 0 &&
-        N.forEach((e) => {
+    for (let { activity: e } of (y.length > 0 &&
+        y.forEach((e) => {
             let { members: t, channel: i, guild: l } = e;
             T(
                 (0, r.jsx)(
@@ -63,15 +63,15 @@ function E(e) {
             }
         }
     return (
-        v.length > 0 &&
+        C.length > 0 &&
             O &&
-            v.forEach((e) => {
+            C.forEach((e) => {
                 let { stream: t, streamUser: n, activity: a } = e;
                 T(
                     (0, r.jsx)(
                         g.Z.ApplicationStreamingSection,
                         {
-                            guildId: null == C ? void 0 : C.id,
+                            guildId: null == S ? void 0 : S.id,
                             user: n,
                             activity: a,
                             applicationStream: t,
@@ -83,11 +83,11 @@ function E(e) {
                     )
                 );
             }),
-        y.forEach((e, t) => {
-            var n, i, l, f, m, O, v, S, P;
+        I.forEach((e, t) => {
+            var n, i, l, f, m, O, C, N, P;
             let { activity: j, game: A, playingMembers: Z, activityUser: x } = e;
             if (null == j || null == j.type) return null;
-            if (y.length > 1 && j.type === _.IIU.PLAYING && !(0, a.Z)(j) && null != A)
+            if (I.length > 1 && j.type === _.IIU.PLAYING && !(0, a.Z)(j) && null != A)
                 T(
                     (0, r.jsx)(
                         g.Z.GameSection,
@@ -106,7 +106,7 @@ function E(e) {
                 );
             else if ((0, o.Z)(j)) {
                 let e = new Set(Z.map((e) => e.id)),
-                    t = null == (l = N.find((e) => null != e)) ? void 0 : l.channel;
+                    t = null == (l = y.find((e) => null != e)) ? void 0 : l.channel;
                 null != t &&
                     T(
                         (0, r.jsx)(
@@ -132,13 +132,13 @@ function E(e) {
                     )
                 );
             else if ((0, u.Z)(j)) {
-                let e = N.length > 0 && N[0].members.length > 1,
+                let e = y.length > 0 && y[0].members.length > 1,
                     n = Z.length > 1;
                 T(
                     (0, r.jsx)(
                         g.Z.TwitchSection,
                         {
-                            guildId: null == C ? void 0 : C.id,
+                            guildId: null == S ? void 0 : S.id,
                             activity: j,
                             user: e || n ? x : null,
                             getAssetImage: h.xF
@@ -153,7 +153,7 @@ function E(e) {
                               g.Z.SpotifySection,
                               {
                                   activity: j,
-                                  isSolo: 1 === I.length,
+                                  isSolo: 1 === v.length,
                                   partySize: {
                                       knownSize: Z.length,
                                       unknownSize: 0,
@@ -173,12 +173,12 @@ function E(e) {
                                     activity: j,
                                     getAssetImage: h.xF
                                 },
-                                'rich-presence-'.concat(null != (v = j.session_id) ? v : t, '-').concat(x.id)
+                                'rich-presence-'.concat(null != (C = j.session_id) ? C : t, '-').concat(x.id)
                             )
                         )
-                      : (0, c.Z)(j) && T((0, r.jsx)(g.Z.XboxSection, { title: A.name }, 'xbox-'.concat(null != (S = j.session_id) ? S : t)));
+                      : (0, c.Z)(j) && T((0, r.jsx)(g.Z.XboxSection, { title: A.name }, 'xbox-'.concat(null != (N = j.session_id) ? N : t)));
             null != E && null != A && (0, d._D)(j, E) && T((0, r.jsx)(p.Z, { quest: E }, 'quest-'.concat(E.id, '-').concat(null != (P = j.session_id) ? P : t)));
         }),
-        S.length > 0 ? (0, r.jsx)(g.Z.Body, { children: S }) : null
+        N.length > 0 ? (0, r.jsx)(g.Z.Body, { children: N }) : null
     );
 }

@@ -34,9 +34,9 @@ function j(e) {
                     .find((e) => e.author.id !== h.default.getId() && e.state === y.yb.SENT && !(0, _.Z)(e))
         ),
         E = (0, a.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        N = null != (t = b.ZP.useName(E)) ? t : C.NW.string(C.t.y1Wu2d),
-        I = (0, a.e7)([d.Z], () => d.Z.getStickerById(v)),
-        P = i.useCallback(async () => {
+        I = null != (t = b.ZP.useName(E)) ? t : C.intl.string(C.t.y1Wu2d),
+        P = (0, a.e7)([d.Z], () => d.Z.getStickerById(v)),
+        S = i.useCallback(async () => {
             if (null == l || '' === l)
                 try {
                     await c.Z.sendGreetMessage(n.id, v),
@@ -47,11 +47,11 @@ function j(e) {
                             type: 'Send wave'
                         });
                 } catch (e) {
-                    e.ok || 429 !== e.status || j(C.NW.string(C.t['Whhv4+']));
+                    e.ok || 429 !== e.status || j(C.intl.string(C.t['Whhv4+']));
                 }
         }, [n.id, n.type, l]),
-        S = C.NW.formatToPlainString(C.t.m0zYbW, { username: N }),
-        Z =
+        Z = C.intl.formatToPlainString(C.t.m0zYbW, { username: I }),
+        N =
             null != l && '' !== l
                 ? (0, r.jsx)(s.Text, {
                       className: x.error,
@@ -66,37 +66,37 @@ function j(e) {
               children: [
                   (0, r.jsxs)(s.P3F, {
                       className: null != l && '' !== l ? x.compactButtonDisabled : x.compactButton,
-                      'aria-label': C.NW.string(C.t.pJObYG),
-                      onClick: P,
+                      'aria-label': C.intl.string(C.t.pJObYG),
+                      onClick: S,
                       children: [
                           (0, r.jsx)(p.Z, {
-                              sticker: I,
+                              sticker: P,
                               size: 24
                           }),
                           (0, r.jsx)(s.Text, {
                               className: x.text,
                               variant: 'text-md/medium',
-                              children: S
+                              children: Z
                           })
                       ]
                   }),
-                  Z
+                  N
               ]
           })
         : (0, r.jsxs)('div', {
               className: x.containerExpanded,
               children: [
                   (0, r.jsx)(p.Z, {
-                      sticker: I,
+                      sticker: P,
                       size: 160
                   }),
                   (0, r.jsx)(s.zxk, {
                       className: x.button,
-                      onClick: P,
+                      onClick: S,
                       disabled: !!l,
-                      children: S
+                      children: Z
                   }),
-                  Z
+                  N
               ]
           });
 }

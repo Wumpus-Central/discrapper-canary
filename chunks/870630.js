@@ -47,28 +47,28 @@ let m = function (e) {
                 className: d.body,
                 children: [
                     (0, r.jsx)(s.hjN, {
-                        title: u.NW.string(u.t['w/qqKC']),
+                        title: u.intl.string(u.t['w/qqKC']),
                         children: (0, r.jsx)(s.oil, {
                             inputRef: n,
-                            name: u.NW.string(u.t['w/qqKC']),
-                            placeholder: u.NW.string(u.t['w/qqKC']),
+                            name: u.intl.string(u.t['w/qqKC']),
+                            placeholder: u.intl.string(u.t['w/qqKC']),
                             onChange: (e) => c(e),
                             value: g.email
                         })
                     }),
                     (0, r.jsx)(s.hjN, {
                         className: d.nonTopInputWrapper,
-                        title: u.NW.string(u.t.yf7ms7),
+                        title: u.intl.string(u.t.yf7ms7),
                         children: (0, r.jsx)(s.oil, {
-                            name: u.NW.string(u.t.yf7ms7),
-                            placeholder: u.NW.string(u.t.yf7ms7),
+                            name: u.intl.string(u.t.yf7ms7),
+                            placeholder: u.intl.string(u.t.yf7ms7),
                             onChange: (e) => l(e),
                             value: g.name
                         })
                     }),
                     (0, r.jsxs)(s.hjN, {
                         className: d.nonTopInputWrapper,
-                        title: u.NW.string(u.t.De3b8v),
+                        title: u.intl.string(u.t.De3b8v),
                         children: [
                             (0, r.jsx)(a.P24BankElement, {
                                 options: {
@@ -96,18 +96,18 @@ let m = function (e) {
                 className: d.body,
                 children: [
                     (0, r.jsx)(s.hjN, {
-                        title: u.NW.string(u.t.sN3wra),
+                        title: u.intl.string(u.t.sN3wra),
                         children: (0, r.jsx)(s.oil, {
                             inputRef: n,
-                            name: u.NW.string(u.t.sN3wra),
-                            placeholder: u.NW.string(u.t.sN3wra),
+                            name: u.intl.string(u.t.sN3wra),
+                            placeholder: u.intl.string(u.t.sN3wra),
                             onChange: (e) => i(e),
                             value: p.name
                         })
                     }),
                     (0, r.jsxs)(s.hjN, {
                         className: d.nonTopInputWrapper,
-                        title: u.NW.string(u.t.dFyV09),
+                        title: u.intl.string(u.t.dFyV09),
                         children: [
                             (0, r.jsx)(a.EpsBankElement, {
                                 options: {

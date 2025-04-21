@@ -218,7 +218,7 @@ function u(e, t, n, u, d) {
             },
             [b, t, d, u, n, p]
         ),
-        N = r.useCallback(
+        D = r.useCallback(
             (e, t) => {
                 f({
                     questId: b,
@@ -228,7 +228,7 @@ function u(e, t, n, u, d) {
             },
             [b, f]
         ),
-        D = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 if (null != t.current) {
                     var r, l;
@@ -265,7 +265,7 @@ function u(e, t, n, u, d) {
             },
             [p, b, d, g, u, n, t]
         ),
-        P = r.useCallback(
+        T = r.useCallback(
             (e, r) => {
                 var l, o;
                 if (null == t.current) return;
@@ -300,10 +300,10 @@ function u(e, t, n, u, d) {
         trackQuestVideoResumed: C,
         trackQuestVideoPaused: j,
         trackQuestVideoFocusChange: y,
-        trackQuestContentClick: N,
+        trackQuestContentClick: D,
         trackQuestVideoBufferingStarted: _,
         trackQuestVideoBufferingEnded: x,
-        trackWatchTimeAnalytics: D,
+        trackWatchTimeAnalytics: P,
         trackQuestVideoFullscreenChanged: r.useCallback(
             (e) => {
                 null != t.current &&
@@ -321,7 +321,7 @@ function u(e, t, n, u, d) {
             },
             [b, t, u, n, p, d]
         ),
-        trackQuestVideoError: P,
+        trackQuestVideoError: T,
         trackQuestVideoVolumeChanged: r.useCallback(
             (e) => {
                 null != t.current &&

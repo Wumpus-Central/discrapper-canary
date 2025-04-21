@@ -1,9 +1,9 @@
 n.d(t, { J: () => s });
-var r = n(442837),
-    i = n(594174);
+var i = n(442837),
+    r = n(594174);
 let s = () =>
-    (0, r.e7)([i.default], () => {
+    (0, i.e7)([r.default], () => {
         var e;
-        let t = i.default.getCurrentUser();
+        let t = r.default.getCurrentUser();
         return null != (e = null == t ? void 0 : t.nsfwAllowed) ? e : null;
     });

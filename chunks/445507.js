@@ -164,23 +164,23 @@ function h() {
     return [
         {
             value: 'very-casual',
-            title: i.NW.string(i.t['4g8/9/']),
-            description: i.NW.string(i.t['0qVVu7'])
+            title: i.intl.string(i.t['4g8/9/']),
+            description: i.intl.string(i.t['0qVVu7'])
         },
         {
             value: 'casual',
-            title: i.NW.string(i.t.gfRcc3),
-            description: i.NW.string(i.t.zbh9nJ)
+            title: i.intl.string(i.t.gfRcc3),
+            description: i.intl.string(i.t.zbh9nJ)
         },
         {
             value: 'hardcore',
-            title: i.NW.string(i.t['lj/ol5']),
-            description: i.NW.string(i.t.U2ICp6)
+            title: i.intl.string(i.t['lj/ol5']),
+            description: i.intl.string(i.t.U2ICp6)
         },
         {
             value: 'very-hardcore',
-            title: i.NW.string(i.t.kQaews),
-            description: i.NW.string(i.t.y4zY3t)
+            title: i.intl.string(i.t.kQaews),
+            description: i.intl.string(i.t.y4zY3t)
         }
     ];
 }

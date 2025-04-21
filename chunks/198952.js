@@ -2,60 +2,60 @@ n.d(t, {
     Z: () => m,
     r: () => u
 });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
+var r = n(481060),
     s = n(518950),
-    a = n(998502),
-    l = n(332495),
+    l = n(998502),
+    a = n(332495),
     o = n(388032),
     c = n(538631);
-let d = a.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
+let d = l.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
     u = (e) => {
         var t, n;
-        let { user: a, avatarSize: c = i.EFr.SIZE_48 } = e,
+        let { user: l, avatarSize: c = r.EFr.SIZE_48 } = e,
             {
                 avatarSrc: u,
                 avatarDecorationSrc: m,
                 eventHandlers: g
             } = (0, s.Z)({
-                user: a,
+                user: l,
                 size: c
             });
-        return (0, r.jsx)(
+        return (0, i.jsx)(
             'div',
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        i = Object.keys(n);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        i.forEach(function (t) {
+                            var i;
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: i,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = i);
                         });
                 }
                 return e;
             })({}, g)),
             (n = n =
                 {
-                    children: (0, r.jsx)(d, {
+                    children: (0, i.jsx)(d, {
                         src: u,
                         avatarDecoration: m,
                         size: c,
-                        'aria-label': o.NW.formatToPlainString(l.Z.kFj4h4, { name: a.username })
+                        'aria-label': o.intl.formatToPlainString(a.default.kFj4h4, { name: l.username })
                     })
                 }),
             Object.getOwnPropertyDescriptors
@@ -63,8 +63,8 @@ let d = a.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          var i = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, i);
                       }
                       return n;
                   })(Object(n)).forEach(function (e) {
@@ -74,12 +74,12 @@ let d = a.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
         );
     },
     m = (e) => {
-        let { currentUser: t, otherUser: n, children: i } = e;
-        return (0, r.jsx)('div', {
+        let { currentUser: t, otherUser: n, children: r } = e;
+        return (0, i.jsx)('div', {
             className: c.avatarPairContainer,
-            children: (0, r.jsxs)('div', {
+            children: (0, i.jsxs)('div', {
                 className: c.avatarPair,
-                children: [(0, r.jsx)(u, { user: t }), i, (0, r.jsx)(u, { user: n })]
+                children: [(0, i.jsx)(u, { user: t }), r, (0, i.jsx)(u, { user: n })]
             })
         });
     };

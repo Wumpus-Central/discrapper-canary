@@ -1,63 +1,63 @@
 n.d(t, { Z: () => u });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
+var r = n(481060),
     s = n(518950),
-    a = n(998502),
-    l = n(631885),
+    l = n(998502),
+    a = n(631885),
     o = n(329242),
     c = n(514299);
-let d = a.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK;
+let d = l.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK;
 function u(e) {
     var t, n;
-    let { otherUser: a, status: u } = e,
-        m = (0, l.j_)(a.id, u),
+    let { otherUser: l, status: u } = e,
+        m = (0, a.j_)(l.id, u),
         {
             avatarSrc: g,
             avatarDecorationSrc: p,
             eventHandlers: h
         } = (0, s.Z)({
-            user: a,
-            size: i.EFr.SIZE_40,
+            user: l,
+            size: r.EFr.SIZE_40,
             animateOnHover: !0
         });
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(
+            (0, i.jsx)(
                 'div',
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                            i = Object.keys(n);
                         'function' == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
+                            (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 })
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            i.forEach(function (t) {
+                                var i;
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = i);
                             });
                     }
                     return e;
                 })({}, h)),
                 (n = n =
                     {
-                        children: (0, r.jsx)(d, {
+                        children: (0, i.jsx)(d, {
                             className: c.avatar,
                             src: g,
                             avatarDecoration: p,
-                            size: i.EFr.SIZE_40,
-                            'aria-label': a.username
+                            size: r.EFr.SIZE_40,
+                            'aria-label': l.username
                         })
                     }),
                 Object.getOwnPropertyDescriptors
@@ -65,8 +65,8 @@ function u(e) {
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
+                              var i = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, i);
                           }
                           return n;
                       })(Object(n)).forEach(function (e) {
@@ -74,14 +74,14 @@ function u(e) {
                       }),
                 t)
             ),
-            (0, r.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: c.userPreview,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, i.jsx)('div', {
                         className: c.userContainerWithTimestamp,
-                        children: (0, r.jsx)(o.Z, { user: a })
+                        children: (0, i.jsx)(o.Z, { user: l })
                     }),
-                    (0, r.jsx)(i.Text, {
+                    (0, i.jsx)(r.Text, {
                         className: c.__invalid_timestamp,
                         color: 'text-muted',
                         variant: 'text-xs/normal',

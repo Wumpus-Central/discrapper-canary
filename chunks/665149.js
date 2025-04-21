@@ -72,7 +72,7 @@ let g = 24,
               });
     },
     b = i.forwardRef(function (e, t) {
-        let { className: n, iconClassName: i, children: a, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: _ = 'bottom', color: h, foreground: E, background: b, icon: y, iconSize: v = g, onClick: O, onContextMenu: I, tooltip: S = null, tooltipColor: T, tooltipPosition: N = 'bottom', tooltipDisabled: A, tooltipSpacing: C, hideOnClick: R = !0, role: P, 'aria-label': w, 'aria-hidden': D, 'aria-checked': L, 'aria-expanded': x, 'aria-haspopup': M, 'data-jump-section': k } = e,
+        let { className: n, iconClassName: i, children: a, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: _ = 'bottom', color: h, foreground: E, background: b, icon: y, iconSize: v = g, onClick: O, onContextMenu: I, tooltip: S = null, tooltipColor: T, tooltipPosition: A = 'bottom', tooltipDisabled: N, tooltipSpacing: C, hideOnClick: R = !0, role: P, 'aria-label': w, 'aria-hidden': D, 'aria-checked': L, 'aria-expanded': x, 'aria-haspopup': M, 'data-jump-section': k } = e,
             j = (0, f.Q3)('BaseHeaderBar'),
             U = null != b ? { secondaryColorClass: b } : {},
             G = (0, r.jsx)(
@@ -97,9 +97,9 @@ let g = 24,
             (0, r.jsx)(c.ua7, {
                 text: S,
                 color: T,
-                position: N,
+                position: A,
                 hideOnClick: R,
-                shouldShow: !A,
+                shouldShow: !N,
                 spacing: C,
                 children: (e) => {
                     let { onMouseEnter: f, onMouseLeave: g, onFocus: b, onBlur: S } = e;

@@ -1,9 +1,9 @@
-n.d(t, { h: () => x }), n(388685), n(953529);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { h: () => E }), n(388685), n(953529);
+var i = n(200651),
+    r = n(192379),
     s = n(913527),
-    a = n.n(s),
-    l = n(481060),
+    l = n.n(s),
+    a = n(481060),
     o = n(355467),
     c = n(100527),
     d = n(906732),
@@ -15,8 +15,8 @@ var r = n(200651),
     f = n(388032),
     b = n(637158);
 let _ = (e) => {
-        let [t, n] = i.useState(!1),
-            [r, s] = i.useState(null);
+        let [t, n] = r.useState(!1),
+            [i, s] = r.useState(null);
         return {
             cancelSubscription: async (t) => {
                 try {
@@ -27,116 +27,116 @@ let _ = (e) => {
                     n(!1);
                 }
             },
-            error: r,
+            error: i,
             submitting: t
         };
     },
-    N = (e) => {
+    x = (e) => {
         var t;
-        let { transitionState: n, groupListing: i, guildId: s, listing: o, subscription: N, onClose: x } = e,
-            E = (0, u.Dt)(),
-            j = (0, g.YB)(s),
-            C = (null == j || null == (t = j.cover_image_asset) ? void 0 : t.application_id) != null ? (0, m._W)(j.cover_image_asset.application_id, j.cover_image_asset, 440) : void 0,
-            { analyticsLocations: O } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: S, error: v, submitting: T } = _(O),
-            I = async () => {
-                (await S(N.id)) && x();
+        let { transitionState: n, groupListing: r, guildId: s, listing: o, subscription: x, onClose: E } = e,
+            j = (0, u.Dt)(),
+            C = (0, g.YB)(s),
+            O = (null == C || null == (t = C.cover_image_asset) ? void 0 : t.application_id) != null ? (0, m._W)(C.cover_image_asset.application_id, C.cover_image_asset, 440) : void 0,
+            { analyticsLocations: S } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
+            { cancelSubscription: v, error: T, submitting: I } = _(S),
+            N = async () => {
+                (await v(x.id)) && E();
             },
             y = o.role_benefits.benefits.filter((e) => e.ref_type === h.Qs.CHANNEL),
             A = o.role_benefits.benefits.filter((e) => e.ref_type === h.Qs.INTANGIBLE),
-            P = a()(N.currentPeriodEnd).format('MMMM Do, YYYY'),
-            R = f.NW.formatToPlainString(f.t.KsMRPz, {
+            P = l()(x.currentPeriodEnd).format('MMMM Do, YYYY'),
+            R = f.intl.formatToPlainString(f.t.KsMRPz, {
                 numChannels: y.length,
                 numAdditionalBenefits: A.length,
                 subscriptionEndDate: P
             });
-        return (0, r.jsxs)(l.Y0X, {
+        return (0, i.jsxs)(a.Y0X, {
             transitionState: n,
             className: b.__invalid_modal,
-            'aria-labelledby': E,
+            'aria-labelledby': j,
             children: [
-                (0, r.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     children: [
-                        (0, r.jsx)('img', {
-                            src: C,
+                        (0, i.jsx)('img', {
+                            src: O,
                             alt: '',
                             className: b.headerImage
                         }),
-                        (0, r.jsx)(l.olH, {
+                        (0, i.jsx)(a.olH, {
                             withCircleBackground: !0,
                             className: b.closeButton,
-                            onClick: x
+                            onClick: E
                         })
                     ]
                 }),
-                null != v ? (0, r.jsx)(l.kzN, { children: v.message }) : null,
-                (0, r.jsxs)(l.hzk, {
+                null != T ? (0, i.jsx)(a.kzN, { children: T.message }) : null,
+                (0, i.jsxs)(a.hzk, {
                     className: b.content,
                     children: [
-                        (0, r.jsx)(l.X6q, {
-                            id: E,
+                        (0, i.jsx)(a.X6q, {
+                            id: j,
                             variant: 'text-md/medium',
                             className: b.title,
-                            children: f.NW.string(f.t.O6l5tL)
+                            children: f.intl.string(f.t.O6l5tL)
                         }),
-                        (0, r.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             className: b.description,
                             variant: 'text-sm/normal',
                             children: R
                         }),
-                        (0, r.jsx)(p.c, {
+                        (0, i.jsx)(p.c, {
                             listingId: o.id,
-                            guildId: i.guild_id,
+                            guildId: r.guild_id,
                             className: b.benefits
                         })
                     ]
                 }),
-                (0, r.jsxs)(l.mzw, {
+                (0, i.jsxs)(a.mzw, {
                     className: b.footer,
                     children: [
-                        (0, r.jsx)(l.zxk, {
-                            color: l.zxk.Colors.RED,
-                            onClick: I,
-                            submitting: T,
-                            children: f.NW.string(f.t.F6lUDA)
+                        (0, i.jsx)(a.zxk, {
+                            color: a.zxk.Colors.RED,
+                            onClick: N,
+                            submitting: I,
+                            children: f.intl.string(f.t.F6lUDA)
                         }),
-                        (0, r.jsx)(l.zxk, {
-                            look: l.zxk.Looks.LINK,
-                            color: l.zxk.Colors.WHITE,
+                        (0, i.jsx)(a.zxk, {
+                            look: a.zxk.Looks.LINK,
+                            color: a.zxk.Colors.WHITE,
                             className: b.goBackButton,
-                            onClick: x,
-                            children: f.NW.string(f.t.EP6EPT)
+                            onClick: E,
+                            children: f.intl.string(f.t.EP6EPT)
                         })
                     ]
                 })
             ]
         });
     },
-    x = (e) => {
-        (0, l.h7j)((t) =>
-            (0, r.jsx)(
-                N,
+    E = (e) => {
+        (0, a.h7j)((t) =>
+            (0, i.jsx)(
+                x,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                            i = Object.keys(n);
                         'function' == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
+                            (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 })
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            i.forEach(function (t) {
+                                var i;
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = i);
                             });
                     }
                     return e;

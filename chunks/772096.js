@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => C,
-    yw: () => A
+    yw: () => N
 }),
     n(388685),
     n(190126),
@@ -106,7 +106,7 @@ function T(e, t) {
     }
     return e;
 }
-function N(e) {
+function A(e) {
     let t = '';
     for (let n of e)
         switch (n.type) {
@@ -128,7 +128,7 @@ function N(e) {
             case d.b.UNDERLINE:
             case d.b.STRIKETHROUGH:
             case d.b.SPOILER:
-                t += N(n.content);
+                t += A(n.content);
                 break;
             case d.b.TIMESTAMP:
                 t += '<timestamp>';
@@ -144,7 +144,7 @@ function N(e) {
         }
     return t;
 }
-function A(e) {
+function N(e) {
     try {
         var t;
         let n = new URL(e),
@@ -178,7 +178,7 @@ let C = m(p({}, l().defaultRules.link), {
             C = h.fullySanitized,
             R = b.trim();
         if (0 === g.trim().length || 0 === R.length) return u();
-        let P = A(l().unescapeUrl(o)),
+        let P = N(l().unescapeUrl(o)),
             w = null == P,
             D = (0, c.ZP)(a).length > 0 || (0, c.ZP)(s).length > 0;
         if (w || D) return u();
@@ -191,7 +191,7 @@ let C = m(p({}, l().defaultRules.link), {
             k = [...I, ...S],
             j = T(t(b, L), M, [d.b.EMOJI]),
             U = T(t(C, L), k);
-        if (null == j || null == U || 0 === N(j).trim().length) return u();
+        if (null == j || null == U || 0 === A(j).trim().length) return u();
         let G = i().pick(t.rules, x),
             B = l().parserFor(G)(_.whitespaceSanitized, L),
             F = h.whitespaceSanitized,

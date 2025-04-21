@@ -16,7 +16,7 @@ function E(A) {
                     variant: 'text-xs/semibold',
                     color: 'header-secondary',
                     className: f.customColorsHeader,
-                    children: D.NW.string(D.t.lfYWW1)
+                    children: D.intl.string(D.t.lfYWW1)
                 }),
                 (0, C.jsxs)('div', {
                     ref: I,
@@ -32,7 +32,7 @@ function E(A) {
                                 (0, C.jsx)(w.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-normal',
-                                    children: D.NW.string(D.t.C3KTQk)
+                                    children: D.intl.string(D.t.C3KTQk)
                                 }),
                                 (0, C.jsx)(w.Z$W, {
                                     className: f.colorPicker,
@@ -55,7 +55,7 @@ function E(A) {
                                     (0, C.jsx)(w.Text, {
                                         variant: 'text-xs/medium',
                                         color: 'text-normal',
-                                        children: D.NW.string(D.t['8elvy8'])
+                                        children: D.intl.string(D.t['8elvy8'])
                                     }),
                                     (0, C.jsx)(w.Z$W, {
                                         className: f.colorPicker,

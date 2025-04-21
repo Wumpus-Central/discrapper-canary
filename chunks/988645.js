@@ -16,13 +16,13 @@ let _ = [c.b.OTHER];
 function h(e) {
     let { onClose: t, transitionState: h, analyticsData: f } = e,
         { showFormStyleSurvey: v, hideNeutralOption: g, showVibesHoneypot: O } = (0, r.X)({ location: 'VoiceCallFeedback' }),
-        x = v ? p.NW.string(p.t.xv0BJi) : p.NW.string(p.t.Ss6tlZ),
-        y = v ? void 0 : p.NW.string(p.t.tLi4cX),
+        x = v ? p.intl.string(p.t.xv0BJi) : p.intl.string(p.t.Ss6tlZ),
+        y = v ? void 0 : p.intl.string(p.t.tLi4cX),
         j = g ? [b.aZ.BAD, b.aZ.GOOD] : void 0,
-        N = v
+        w = v
             ? {
-                  [b.aZ.BAD]: p.NW.string(p.t['0jP8iY']),
-                  [b.aZ.GOOD]: p.NW.string(p.t.B81oy8)
+                  [b.aZ.BAD]: p.intl.string(p.t['0jP8iY']),
+                  [b.aZ.GOOD]: p.intl.string(p.t.B81oy8)
               }
             : void 0;
     return (0, o.jsx)(l.Z, {
@@ -37,8 +37,8 @@ function h(e) {
             }
         },
         ratingOptions: j,
-        ratingTextLabels: N,
-        problemTitle: p.NW.string(p.t.FJmoxM),
+        ratingTextLabels: w,
+        problemTitle: p.intl.string(p.t.FJmoxM),
         problems: (0, c.Z)({
             isMobile: !1,
             showVibesHoneypot: O
@@ -86,7 +86,7 @@ function h(e) {
                                                 });
                                         }
                                         return e;
-                                    })({ body: p.NW.string(p.t['d9+vQ0']) }, t)
+                                    })({ body: p.intl.string(p.t['d9+vQ0']) }, t)
                                 );
                         }));
         },

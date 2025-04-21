@@ -18,10 +18,10 @@ function c(e, t, n) {
     return 'en-US' === s && l.includes(i.default.systemLocale) && (o.currencyDisplay = 'code'), (0, r.T4)(e, t, s, o);
 }
 function u(e, t, n) {
-    if (t === o.rV.YEAR) return s.NW.formatToPlainString(s.t.rS8FAw, { price: e });
-    if (t === o.rV.MONTH && 1 === n) return s.NW.formatToPlainString(s.t.AbOLNj, { price: e });
+    if (t === o.rV.YEAR) return s.intl.formatToPlainString(s.t.rS8FAw, { price: e });
+    if (t === o.rV.MONTH && 1 === n) return s.intl.formatToPlainString(s.t.AbOLNj, { price: e });
     if (t === o.rV.MONTH && n > 1)
-        return s.NW.formatToPlainString(s.t['Qc+9w8'], {
+        return s.intl.formatToPlainString(s.t['Qc+9w8'], {
             price: e,
             intervalCount: n
         });

@@ -1,24 +1,24 @@
 n.d(t, { Z: () => o });
-var r = n(544891),
-    i = n(570140),
+var i = n(544891),
+    r = n(570140),
     s = n(881052),
-    a = n(981631);
-let l = {
-        [a.gkr.HOUSE_1]: 1,
-        [a.gkr.HOUSE_2]: 2,
-        [a.gkr.HOUSE_3]: 3
+    l = n(981631);
+let a = {
+        [l.gkr.HOUSE_1]: 1,
+        [l.gkr.HOUSE_2]: 2,
+        [l.gkr.HOUSE_3]: 3
     },
     o = {
         joinHypeSquadOnline: (e) =>
-            r.tn
+            i.tn
                 .post({
-                    url: a.ANM.HYPESQUAD_ONLINE,
-                    body: { house_id: l[e.houseID] },
+                    url: l.ANM.HYPESQUAD_ONLINE,
+                    body: { house_id: a[e.houseID] },
                     oldFormErrors: !0,
                     rejectWithError: !1
                 })
                 .then(() =>
-                    i.Z.dispatch({
+                    r.Z.dispatch({
                         type: 'HYPESQUAD_ONLINE_MEMBERSHIP_JOIN_SUCCESS',
                         houseID: e.houseID
                     })
@@ -27,13 +27,13 @@ let l = {
                     throw new s.yZ(e);
                 }),
         leaveHypeSquadOnline: () =>
-            r.tn
+            i.tn
                 .del({
-                    url: a.ANM.HYPESQUAD_ONLINE,
+                    url: l.ANM.HYPESQUAD_ONLINE,
                     oldFormErrors: !0,
                     rejectWithError: !1
                 })
-                .then(() => i.Z.dispatch({ type: 'HYPESQUAD_ONLINE_MEMBERSHIP_LEAVE_SUCCESS' }))
+                .then(() => r.Z.dispatch({ type: 'HYPESQUAD_ONLINE_MEMBERSHIP_LEAVE_SUCCESS' }))
                 .catch((e) => {
                     throw new s.yZ(e);
                 })

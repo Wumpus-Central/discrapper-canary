@@ -13,8 +13,8 @@ function s(e) {
             analyticsLocation: s,
             openWithoutBackstack: !0
         }),
-        d = u ? o.NW.string(o.t['6ndMcn']) : o.NW.string(o.t['0eiu6O']),
-        E = u ? o.NW.string(o.t.S09nw8) : o.NW.string(o.t.tEttXV);
+        d = u ? o.intl.string(o.t['6ndMcn']) : o.intl.string(o.t['0eiu6O']),
+        E = u ? o.intl.string(o.t.S09nw8) : o.intl.string(o.t.tEttXV);
     return (0, r.jsxs)(i.qXd, {
         color: i.DM8.CUSTOM,
         className: a.quarantineNotice,

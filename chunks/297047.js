@@ -39,7 +39,7 @@ function f(e, t, n) {
         ? null
         : (0, r.jsx)(a.sNh, {
               id: 'mention',
-              label: g.NW.string(g.t.P8tvKC),
+              label: g.intl.string(g.t.P8tvKC),
               action: function () {
                   m(e, i);
               }

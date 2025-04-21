@@ -22,7 +22,7 @@ function h(e, t, n) {
           })
         : e.length > 0
           ? (0, r.jsx)(s.P, {
-                'aria-label': f.NW.string(f.t['78fJND']),
+                'aria-label': f.intl.string(f.t['78fJND']),
                 className: o()(_.iconContainer, _.iconClickable),
                 onClick: (e) => {
                     e.stopPropagation(), n('');
@@ -44,7 +44,7 @@ function h(e, t, n) {
                     width: p,
                     height: p,
                     className: _.icon,
-                    'aria-label': f.NW.string(f.t.cpT0Cg)
+                    'aria-label': f.intl.string(f.t.cpT0Cg)
                 })
             })
           : (0, r.jsx)('div', {
@@ -55,12 +55,12 @@ function h(e, t, n) {
                     width: p,
                     height: p,
                     className: _.icon,
-                    'aria-label': f.NW.string(f.t['5h0QOD'])
+                    'aria-label': f.intl.string(f.t['5h0QOD'])
                 })
             });
 }
 let m = i.forwardRef(function (e, t) {
-    let { query: n, onChange: a, loading: o = !1, disabled: s = !1, placeholder: u = f.NW.string(f.t['5h0QOD']), 'aria-label': d, onInteraction: p } = e,
+    let { query: n, onChange: a, loading: o = !1, disabled: s = !1, placeholder: u = f.intl.string(f.t['5h0QOD']), 'aria-label': d, onInteraction: p } = e,
         m = i.useRef(null),
         g = i.useRef(null);
     i.useImperativeHandle(

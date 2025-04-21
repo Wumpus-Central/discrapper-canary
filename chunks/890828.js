@@ -24,8 +24,8 @@ var i = n(200651),
     j = n(699516),
     C = n(594174),
     S = n(979651),
-    N = n(823379),
-    Z = n(136015),
+    Z = n(823379),
+    N = n(136015),
     w = n(981631),
     P = n(388032),
     T = n(688095);
@@ -36,7 +36,7 @@ let k = (e) => [
             if (null == t) return [];
             let n = t.username,
                 i = (0, m.e3)(t);
-            return Array.from(new Set([n, i.nick, ...Object.values(i.names)].flat().filter(N.lm)));
+            return Array.from(new Set([n, i.nick, ...Object.values(i.names)].flat().filter(Z.lm)));
         })(e)
     ],
     A = {
@@ -45,7 +45,7 @@ let k = (e) => [
         searchStringGenerator: (e) => {
             var t, n;
             let { channel: i, voiceStates: r } = e;
-            return [i.name, i.id, i.guild_id, null != (n = null == (t = x.Z.getGuild(i.guild_id)) ? void 0 : t.name) ? n : '', ...r.flatMap((e) => k(e))].filter(N.lm);
+            return [i.name, i.id, i.guild_id, null != (n = null == (t = x.Z.getGuild(i.guild_id)) ? void 0 : t.name) ? n : '', ...r.flatMap((e) => k(e))].filter(Z.lm);
         },
         throttleMs: 100
     },
@@ -57,7 +57,7 @@ let k = (e) => [
     },
     L = r.memo(function (e) {
         let { channel: t, query: n } = e,
-            [o] = (0, a.e7)([S.Z], () => [S.Z.getVoiceStatesForChannel(t.id), S.Z.getVoiceStateVersion()], [t.id], Z.Q),
+            [o] = (0, a.e7)([S.Z], () => [S.Z.getVoiceStatesForChannel(t.id), S.Z.getVoiceStateVersion()], [t.id], N.Q),
             [l, c] = r.useState([]);
         (0, O.BO)(n, Object.values(o), c, D);
         let u = (0, a.Wu)(
@@ -65,7 +65,7 @@ let k = (e) => [
                 () =>
                     Object.values(S.Z.getVoiceStatesForChannel(t.id))
                         .map((e) => C.default.getUser(e.userId))
-                        .filter(N.lm)
+                        .filter(Z.lm)
                         .sort((e, t) => {
                             var i, r, o, a;
                             if (l.length > 0 && '' !== n.trim()) {
@@ -118,14 +118,14 @@ let k = (e) => [
                 className: T.guildIconWrapper,
                 children: (0, i.jsx)(d.b, {
                     guildId: o.id,
-                    guildName: null != (t = o.name) ? t : P.NW.string(P.t.DmIUGB),
+                    guildName: null != (t = o.name) ? t : P.intl.string(P.t.DmIUGB),
                     guildIcon: o.icon,
                     iconSize: 32
                 })
             })
         });
     }),
-    W = r.memo(function (e) {
+    M = r.memo(function (e) {
         var t;
         let { channelId: n, isHighlighted: r, currentVoiceChannel: o, onClick: d, onMouseOver: p, onMouseLeave: h, query: f } = e,
             m = (0, a.e7)([_.Z], () => _.Z.getChannel(n), [n]),
@@ -187,7 +187,7 @@ let k = (e) => [
                   ]
               });
     }),
-    M = r.memo(function (e) {
+    z = r.memo(function (e) {
         let { emptyText: t } = e;
         return (0, i.jsx)('div', {
             className: T.emptyChannelItem,
@@ -198,7 +198,7 @@ let k = (e) => [
             })
         });
     }),
-    z = r.memo(function (e) {
+    V = r.memo(function (e) {
         let { sectionHeader: t, channelIds: n, currentVoiceChannel: o, onSelect: l, hasQuery: a, query: c, scrollable: u = !0 } = e,
             [d, p] = r.useState(null),
             h = (e) => {
@@ -224,10 +224,10 @@ let k = (e) => [
                 (0, i.jsxs)(g, {
                     className: T.channelList,
                     children: [
-                        a && 0 === n.length && (0, i.jsx)(M, { emptyText: P.NW.string(P.t.nxSS09) }),
+                        a && 0 === n.length && (0, i.jsx)(z, { emptyText: P.intl.string(P.t.nxSS09) }),
                         n.map((e) =>
                             (0, i.jsx)(
-                                W,
+                                M,
                                 {
                                     channelId: e,
                                     isHighlighted: e === d,
@@ -245,7 +245,7 @@ let k = (e) => [
             ]
         });
     });
-function V(e) {
+function U(e) {
     let { searchQuery: t, currentVoiceChannel: n, onSelect: r } = e,
         { recentVoiceChannelIds: o, friendVoiceChannelIds: c } = (function () {
             let e = (function () {
@@ -275,7 +275,7 @@ function V(e) {
                                         let i = _.Z.getChannel(n);
                                         return null != i && I.Z.can(w.Plq.CONNECT, i) && e.add(n), e;
                                     }, new Set())
-                            ).filter(N.lm),
+                            ).filter(Z.lm),
                         [e]
                     );
                 })(),
@@ -305,8 +305,8 @@ function V(e) {
               className: l()(T.channelList, T.channelListWrapper),
               children: [
                   o.length > 0 &&
-                      (0, i.jsx)(z, {
-                          sectionHeader: P.NW.string(P.t.lnk2NT),
+                      (0, i.jsx)(V, {
+                          sectionHeader: P.intl.string(P.t.lnk2NT),
                           channelIds: o.slice(0, 3),
                           hasQuery: !1,
                           query: t,
@@ -315,8 +315,8 @@ function V(e) {
                           scrollable: !1
                       }),
                   c.length > 0 &&
-                      (0, i.jsx)(z, {
-                          sectionHeader: P.NW.string(P.t['0lvb9P']),
+                      (0, i.jsx)(V, {
+                          sectionHeader: P.intl.string(P.t['0lvb9P']),
                           channelIds: c.slice(0, 8),
                           hasQuery: !1,
                           query: t,
@@ -326,9 +326,9 @@ function V(e) {
                       })
               ]
           })
-        : (0, i.jsx)(M, { emptyText: P.NW.string(P.t['3ET7Aw']) });
+        : (0, i.jsx)(z, { emptyText: P.intl.string(P.t['3ET7Aw']) });
 }
-function U(e) {
+function W(e) {
     e.stopPropagation();
 }
 function G(e) {
@@ -385,11 +385,11 @@ function G(e) {
         b = { count: v ? 20 : h.length },
         _ = r.useMemo(
             () => ({
-                onMouseDown: U,
-                onMouseMove: U,
-                onMouseUp: U,
-                onMouseEnter: U,
-                onMouseLeave: U
+                onMouseDown: W,
+                onMouseMove: W,
+                onMouseUp: W,
+                onMouseEnter: W,
+                onMouseLeave: W
             }),
             []
         );
@@ -429,7 +429,7 @@ function G(e) {
                             autoFocus: !0,
                             query: d,
                             size: s.E1j.Sizes.MEDIUM,
-                            placeholder: P.NW.string(P.t.UyA6SU),
+                            placeholder: P.intl.string(P.t.UyA6SU),
                             onClear: () => {
                                 p('');
                             },
@@ -438,12 +438,12 @@ function G(e) {
                                 p(e);
                             },
                             className: T.searchBar,
-                            inputProps: { 'aria-label': P.NW.string(P.t.UyA6SU) }
+                            inputProps: { 'aria-label': P.intl.string(P.t.UyA6SU) }
                         })
                     }),
                     y
-                        ? (0, i.jsx)(z, {
-                              sectionHeader: v ? P.NW.format(P.t.qdXiQ0, b) : P.NW.format(P.t['Aq+8wM'], b),
+                        ? (0, i.jsx)(V, {
+                              sectionHeader: v ? P.intl.format(P.t.qdXiQ0, b) : P.intl.format(P.t['Aq+8wM'], b),
                               channelIds: h
                                   .map((e) => {
                                       let { channel: t } = e;
@@ -455,7 +455,7 @@ function G(e) {
                               currentVoiceChannel: o,
                               onSelect: g
                           })
-                        : (0, i.jsx)(V, {
+                        : (0, i.jsx)(U, {
                               searchQuery: d,
                               currentVoiceChannel: o,
                               onSelect: g

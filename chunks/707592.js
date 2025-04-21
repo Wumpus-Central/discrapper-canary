@@ -43,7 +43,7 @@ function d(e) {
             onChange: i,
             value: t.response,
             autofocus: n,
-            placeholder: s.NW.string(s.t['Sqn+Wl'])
+            placeholder: s.intl.string(s.t['Sqn+Wl'])
         })
     });
 }

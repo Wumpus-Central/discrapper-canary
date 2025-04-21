@@ -1,31 +1,31 @@
 n.d(t, { Z: () => c });
 var r = n(192379),
-    i = n(268146),
-    l = n(846519),
+    l = n(268146),
+    i = n(846519),
     s = n(59468);
-let a = [i.vA.CAMERA],
-    o = [i.vA.SCREEN, i.vA.WINDOW, i.vA.CAMERA];
+let a = [l.vA.CAMERA],
+    o = [l.vA.SCREEN, l.vA.WINDOW, l.vA.CAMERA];
 function c(e, t) {
-    let n = r.useRef(new l.Xp());
+    let n = r.useRef(new i.Xp());
     r.useEffect(() => {
         let r = n.current,
-            i = {
+            l = {
                 width: 376,
                 height: 212,
                 types: e ? a : o
             };
         return (
-            (0, s.t)(i).then((e) => {
-                let { screenSources: n, windowSources: r, cameraSources: i } = e;
+            (0, s.t)(l).then((e) => {
+                let { screenSources: n, windowSources: r, cameraSources: l } = e;
                 t({
                     type: 'set_source_candidates',
                     screenSources: n,
                     windowSources: r,
-                    deviceSources: i
+                    deviceSources: l
                 });
             }),
             r.start(1000, async () => {
-                let { screenSources: e, windowSources: n, cameraSources: r } = await (0, s.t)(i);
+                let { screenSources: e, windowSources: n, cameraSources: r } = await (0, s.t)(l);
                 t({
                     type: 'set_source_candidates',
                     screenSources: e,

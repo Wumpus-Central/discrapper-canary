@@ -1,42 +1,42 @@
 n.d(t, { Z: () => c }), n(388685), n(642613);
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(442837),
+var r = n(442837),
     s = n(481060),
-    a = n(536442),
-    l = n(797685);
+    l = n(536442),
+    a = n(797685);
 function o(e) {
     let { hotspotLocation: t } = e,
-        [n, o] = (0, i.Wu)([a.qc], () => [a.qc.hasHotspot(t, !0), a.qc.getHotspotOverride(t)]);
-    return (0, r.jsxs)(r.Fragment, {
+        [n, o] = (0, r.Wu)([l.qc], () => [l.qc.hasHotspot(t, !0), l.qc.getHotspotOverride(t)]);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsxs)(s.xJW, {
+            (0, i.jsxs)(s.xJW, {
                 title: t,
-                className: l.hotspotSwitch,
+                className: a.hotspotSwitch,
                 children: [
                     n
-                        ? (0, r.jsx)(s.DY3, {
-                              className: l.iconContainer,
+                        ? (0, i.jsx)(s.DY3, {
+                              className: a.iconContainer,
                               element: 'span',
                               text: 'Active',
-                              children: (0, r.jsx)(s.dz2, {
+                              children: (0, i.jsx)(s.dz2, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: l.checkmark
+                                  className: a.checkmark
                               })
                           })
-                        : (0, r.jsx)(s.DY3, {
-                              className: l.iconContainer,
+                        : (0, i.jsx)(s.DY3, {
+                              className: a.iconContainer,
                               element: 'span',
                               text: 'Inactive',
-                              children: (0, r.jsx)(s.Dio, {
+                              children: (0, i.jsx)(s.Dio, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: l.xmark
+                                  className: a.xmark
                               })
                           }),
-                    (0, r.jsx)(s.q4e, {
-                        className: l.overrideSelect,
+                    (0, i.jsx)(s.q4e, {
+                        className: a.overrideSelect,
                         value: o,
                         options: [
                             {
@@ -52,30 +52,30 @@ function o(e) {
                                 label: 'Force Inactive'
                             }
                         ],
-                        onChange: (e) => (null != e ? (0, a.hv)(t, e) : (0, a.Po)(t))
+                        onChange: (e) => (null != e ? (0, l.hv)(t, e) : (0, l.Po)(t))
                     })
                 ]
             }),
-            (0, r.jsx)(s.$i$, {})
+            (0, i.jsx)(s.$i$, {})
         ]
     });
 }
 function c(e) {
     let { className: t } = e;
-    return (0, r.jsxs)(s.hjN, {
+    return (0, i.jsxs)(s.hjN, {
         title: 'Hotspots',
         tag: s.RB0.H1,
         className: t,
         children: [
-            (0, r.jsx)(s.Text, {
-                className: l.helpText,
+            (0, i.jsx)(s.Text, {
+                className: a.helpText,
                 tag: 'p',
                 variant: 'text-sm/normal',
                 children: 'All the "hotspots" in app, and their current status. Use the select menu to override them on or off.'
             }),
-            Object.keys(a.v6)
+            Object.keys(l.v6)
                 .sort((e, t) => e.localeCompare(t))
-                .map((e) => (0, r.jsx)(o, { hotspotLocation: e }, e))
+                .map((e) => (0, i.jsx)(o, { hotspotLocation: e }, e))
         ]
     });
 }

@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(392711),
-    s = n(481060),
-    l = n(246364),
+    l = n(481060),
+    s = n(246364),
     a = n(405545),
     o = n(382574),
     c = n(279988),
@@ -56,15 +56,15 @@ function g(e, t) {
     );
 }
 function p(e) {
-    let { dropHoveredIndex: t, formField: p, guild: h, index: x, isDragEnabled: b, submittedGuildJoinRequestsCount: j, removeFormField: N, updateFormField: _, updateFormFieldOrder: v, canRemove: O, actionsLocation: C, fieldStyle: y } = e,
+    let { dropHoveredIndex: t, formField: p, guild: h, index: x, isDragEnabled: b, submittedGuildJoinRequestsCount: j, removeFormField: _, updateFormField: v, updateFormFieldOrder: O, canRemove: C, actionsLocation: y, fieldStyle: N } = e,
         I = async () => {
-            await N(x);
+            await _(x);
         },
         E = async (e) => {
-            await _(x, e);
+            await v(x, e);
         },
         S = async (e, t, n) => {
-            await v(e, t, n);
+            await O(e, t, n);
         },
         T = (0, i.uniqueId)(),
         P = t === x,
@@ -76,7 +76,7 @@ function p(e) {
             onEdit: () => {
                 0 === j
                     ? f(p, E, h)
-                    : (0, s.ZDy)(async () => {
+                    : (0, l.ZDy)(async () => {
                           let { default: e } = await n.e('74673').then(n.bind(n, 394045));
                           return (t) =>
                               (0, r.jsx)(
@@ -91,28 +91,28 @@ function p(e) {
             },
             onRemove: I,
             onDrop: S,
-            canRemove: O,
-            actionsLocation: C,
-            fieldStyle: y
+            canRemove: C,
+            actionsLocation: y,
+            fieldStyle: N
         };
     switch (p.field_type) {
-        case l.QJ.TERMS:
+        case s.QJ.TERMS:
             return (0, r.jsx)(
                 c.Z,
                 m(
                     {
                         channelId: h.rulesChannelId,
-                        title: y === l.it.COMPACT ? u.NW.string(u.t['55+giY']) : u.NW.string(u.t['53vNcH']),
+                        title: N === s.it.COMPACT ? u.intl.string(u.t['55+giY']) : u.intl.string(u.t['53vNcH']),
                         formField: p
                     },
                     w
                 )
             );
-        case l.QJ.PARAGRAPH:
+        case s.QJ.PARAGRAPH:
             return (0, r.jsx)(o.Z, m({ formField: p }, w));
-        case l.QJ.TEXT_INPUT:
+        case s.QJ.TEXT_INPUT:
             return (0, r.jsx)(d.Z, m({ formField: p }, w));
-        case l.QJ.MULTIPLE_CHOICE:
+        case s.QJ.MULTIPLE_CHOICE:
             return (0, r.jsx)(a.Z, m({ formField: p }, w));
         default:
             return null;
@@ -120,8 +120,8 @@ function p(e) {
 }
 function h(e, t, i) {
     switch (e) {
-        case l.QJ.TERMS:
-            return (0, s.ZDy)(async () => {
+        case s.QJ.TERMS:
+            return (0, l.ZDy)(async () => {
                 let { default: e } = await n.e('5945').then(n.bind(n, 92451));
                 return (n) =>
                     (0, r.jsx)(
@@ -133,8 +133,8 @@ function h(e, t, i) {
                         })
                     );
             });
-        case l.QJ.PARAGRAPH:
-            return (0, s.ZDy)(async () => {
+        case s.QJ.PARAGRAPH:
+            return (0, l.ZDy)(async () => {
                 let { ParagraphFormFieldModal: e } = await n.e('6595').then(n.bind(n, 457042));
                 return (n) =>
                     (0, r.jsx)(
@@ -145,8 +145,8 @@ function h(e, t, i) {
                         })
                     );
             });
-        case l.QJ.TEXT_INPUT:
-            return (0, s.ZDy)(async () => {
+        case s.QJ.TEXT_INPUT:
+            return (0, l.ZDy)(async () => {
                 let { TextInputFormFieldModal: e } = await n.e('6595').then(n.bind(n, 457042));
                 return (n) =>
                     (0, r.jsx)(
@@ -157,8 +157,8 @@ function h(e, t, i) {
                         })
                     );
             });
-        case l.QJ.MULTIPLE_CHOICE:
-            return (0, s.ZDy)(async () => {
+        case s.QJ.MULTIPLE_CHOICE:
+            return (0, l.ZDy)(async () => {
                 let { default: e } = await n.e('94064').then(n.bind(n, 607569));
                 return (n) =>
                     (0, r.jsx)(
@@ -173,12 +173,12 @@ function h(e, t, i) {
 }
 function f(e, t, i) {
     switch (e.field_type) {
-        case l.QJ.TERMS:
-            return (0, s.ZDy)(async () => {
-                let { default: s } = await n.e('5945').then(n.bind(n, 92451));
+        case s.QJ.TERMS:
+            return (0, l.ZDy)(async () => {
+                let { default: l } = await n.e('5945').then(n.bind(n, 92451));
                 return (n) =>
                     (0, r.jsx)(
-                        s,
+                        l,
                         g(m({}, n), {
                             field: e,
                             onSave: t,
@@ -186,8 +186,8 @@ function f(e, t, i) {
                         })
                     );
             });
-        case l.QJ.PARAGRAPH:
-            return (0, s.ZDy)(async () => {
+        case s.QJ.PARAGRAPH:
+            return (0, l.ZDy)(async () => {
                 let { ParagraphFormFieldModal: i } = await n.e('6595').then(n.bind(n, 457042));
                 return (n) =>
                     (0, r.jsx)(
@@ -198,8 +198,8 @@ function f(e, t, i) {
                         })
                     );
             });
-        case l.QJ.TEXT_INPUT:
-            return (0, s.ZDy)(async () => {
+        case s.QJ.TEXT_INPUT:
+            return (0, l.ZDy)(async () => {
                 let { TextInputFormFieldModal: i } = await n.e('6595').then(n.bind(n, 457042));
                 return (n) =>
                     (0, r.jsx)(
@@ -210,8 +210,8 @@ function f(e, t, i) {
                         })
                     );
             });
-        case l.QJ.MULTIPLE_CHOICE:
-            return (0, s.ZDy)(async () => {
+        case s.QJ.MULTIPLE_CHOICE:
+            return (0, l.ZDy)(async () => {
                 let { default: i } = await n.e('94064').then(n.bind(n, 607569));
                 return (n) =>
                     (0, r.jsx)(

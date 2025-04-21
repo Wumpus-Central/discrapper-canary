@@ -15,24 +15,24 @@ var r = n(200651),
     b = n(67190),
     y = n(225893);
 function h(e) {
-    let { name: t, description: n, pointsDescription: s, points: o, cost: f, iconSrc: m, currentPoints: h, onPurchase: x, itemId: N, upgradeId: v } = e,
-        O = (0, a.e7)([i.Z], () => (null != v ? i.Z.getNumPurchasesForItemUpgrade(N, v) : 0)) + 1,
-        j = 'string' == typeof t ? t : g.NW.format(t, { numPurchasing: O }),
-        Z = 'string' == typeof t ? t : g.NW.formatToPlainString(t, { numPurchasing: O });
+    let { name: t, description: n, pointsDescription: s, points: o, cost: f, iconSrc: m, currentPoints: h, onPurchase: x, itemId: v, upgradeId: O } = e,
+        j = (0, a.e7)([i.Z], () => (null != O ? i.Z.getNumPurchasesForItemUpgrade(v, O) : 0)) + 1,
+        N = 'string' == typeof t ? t : g.intl.format(t, { numPurchasing: j }),
+        _ = 'string' == typeof t ? t : g.intl.formatToPlainString(t, { numPurchasing: j });
     return (0, r.jsx)(d.Z, {
         text: (0, r.jsx)(p.Z, {
-            name: j,
+            name: N,
             description: n,
             pointsDescription:
                 0 !== o
-                    ? g.NW.format(s, {
+                    ? g.intl.format(s, {
                           points: o,
                           grassIconHook: c.Z
                       })
                     : null
         }),
         borderColor: 'green',
-        'aria-label': Z,
+        'aria-label': _,
         children: (e) => {
             var t, n;
             return (0, r.jsxs)(

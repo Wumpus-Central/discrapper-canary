@@ -13,16 +13,16 @@ n.d(t, {
     n(388685),
     n(35282);
 var r = n(860911),
-    a = n(442837),
-    i = n(703656),
+    i = n(442837),
+    a = n(703656),
     l = n(314897),
     s = n(594174),
     o = n(626135),
     c = n(258971),
     d = n(981631);
 function u(e, t) {
-    var n, r, a;
-    let i = c.z8.getField('sessionId'),
+    var n, r, i;
+    let a = c.z8.getField('sessionId'),
         l = c.z8.getField('guildId'),
         d = null == (n = c.z8.getField('entrypoint')) ? void 0 : n.name,
         u = s.default.getCurrentUser(),
@@ -52,15 +52,15 @@ function u(e, t) {
                 }
                 return e;
             })({}, t)),
-            (a = a =
+            (i = i =
                 {
                     guild_id: l,
-                    directory_session_id: i,
+                    directory_session_id: a,
                     source: d,
                     user_id: null == u ? void 0 : u.id
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -68,14 +68,14 @@ function u(e, t) {
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(a)).forEach(function (e) {
-                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                  })(Object(i)).forEach(function (e) {
+                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
                   }),
             r);
     return o.default.track(e, p);
 }
 function p() {
-    return (0, a.e7)([l.default], () => l.default.isAuthenticated());
+    return (0, i.e7)([l.default], () => l.default.isAuthenticated());
 }
 function m() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -85,11 +85,11 @@ function m() {
         t.searchParams.set(n, r);
     }
     let n = t.pathname + t.search,
-        a = (0, r.Ui)(n, !1);
-    (0, i.uL)(a);
+        i = (0, r.Ui)(n, !1);
+    (0, a.uL)(i);
 }
 function h() {
     let e = new URL(location.href),
         t = '?redirect_to='.concat(encodeURIComponent(e.pathname + e.search));
-    (0, i.uL)(d.Z5c.REGISTER + t);
+    (0, a.uL)(d.Z5c.REGISTER + t);
 }

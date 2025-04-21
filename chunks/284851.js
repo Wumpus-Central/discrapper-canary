@@ -10,7 +10,7 @@ function i(e) {
         variant: 'fixed',
         onSelect: t,
         navId: 'quest-home-platform-select-'.concat(i.id),
-        'aria-label': a.NW.string(a.t.ogxXGh),
+        'aria-label': a.intl.string(a.t.ogxXGh),
         onClose: t,
         children: (0, r.jsxs)(
             o.kSQ,
@@ -18,13 +18,13 @@ function i(e) {
                 children: [
                     (0, r.jsx)(o.sNh, {
                         id: 'desktop',
-                        label: a.NW.string(a.t.QXc019),
+                        label: a.intl.string(a.t.QXc019),
                         action: () => n(s.cd.DESKTOP),
                         icon: o.pzj
                     }),
                     (0, r.jsx)(o.sNh, {
                         id: 'console',
-                        label: a.NW.string(a.t['8lAfuL']),
+                        label: a.intl.string(a.t['8lAfuL']),
                         action: () => n(s.cd.CONSOLE),
                         icon: o.iWm
                     })

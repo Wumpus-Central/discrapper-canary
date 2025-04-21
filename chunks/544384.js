@@ -38,13 +38,13 @@ function b(e) {
         I = null != (t = a.find((e) => e.ownerId === (null == i ? void 0 : i.id))) ? t : null,
         S = E(n, i, a),
         T = (0, c.Z)(I, y),
-        { simplifiedSettingsEnabled: N } = (0, h.Z)({ location: 'ManageStreamsMenu' }),
-        A = (0, u.b)({
+        { simplifiedSettingsEnabled: A } = (0, h.Z)({ location: 'ManageStreamsMenu' }),
+        N = (0, u.b)({
             disableChangeWindows: v,
             stream: I,
             showReportOption: f,
             handleGoLive: _,
-            simplified: N,
+            simplified: A,
             appContext: y
         });
     return (0, r.jsx)(s.Z, {
@@ -54,7 +54,7 @@ function b(e) {
             navId: 'manage-streams',
             onClose: p,
             onInteraction: O,
-            'aria-label': null != I ? g.NW.string(g.t.S5anIS) : g.NW.string(g.t.fjBNo6),
+            'aria-label': null != I ? g.intl.string(g.t.S5anIS) : g.intl.string(g.t.fjBNo6),
             children: [
                 (0, r.jsx)(o.kSQ, {
                     children: S.map((e) => {
@@ -63,7 +63,7 @@ function b(e) {
                             o.sNh,
                             {
                                 id: t.ownerId,
-                                label: g.NW.formatToPlainString(g.t['7rkg+/'], { username: n }),
+                                label: g.intl.formatToPlainString(g.t['7rkg+/'], { username: n }),
                                 icon: o.g5r,
                                 action: () => (0, d.Z)(t)
                             },
@@ -71,12 +71,12 @@ function b(e) {
                         );
                     })
                 }),
-                l ? null : A,
-                N && !l
+                l ? null : N,
+                A && !l
                     ? (0, r.jsx)(o.kSQ, {
                           children: (0, r.jsx)(o.sNh, {
                               id: 'more-options',
-                              label: g.NW.string(g.t.PdRCRk),
+                              label: g.intl.string(g.t.PdRCRk),
                               children: T
                           })
                       })

@@ -14,7 +14,7 @@ function a(e) {
                   null != t &&
                       (0, r.jsx)(l.Z, {
                           href: t,
-                          children: i.NW.string(i.t['8S0kcH'])
+                          children: i.intl.string(i.t['8S0kcH'])
                       }),
                   null != t &&
                       null != n &&
@@ -25,7 +25,7 @@ function a(e) {
                   null != n &&
                       (0, r.jsx)(l.Z, {
                           href: n,
-                          children: i.NW.string(i.t.ZpyeCg)
+                          children: i.intl.string(i.t.ZpyeCg)
                       })
               ]
           });

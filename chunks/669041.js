@@ -65,7 +65,7 @@ function h(e) {
                 color: o.zxk.Colors.BRAND,
                 size: o.zxk.Sizes.MEDIUM,
                 onClick: n,
-                children: u.NW.string(u.t.cpT0Cg)
+                children: u.intl.string(u.t.cpT0Cg)
             })
         });
     return (0, r.jsxs)(o.Y0X, {
@@ -84,7 +84,7 @@ function h(e) {
                     (0, r.jsx)(o.X6q, {
                         className: d.title,
                         variant: 'heading-xl/bold',
-                        children: u.NW.string(u.t.c8eASE)
+                        children: u.intl.string(u.t.c8eASE)
                     }),
                     (0, r.jsx)(o.olH, {
                         onClick: n,
@@ -104,7 +104,7 @@ function h(e) {
                             className: d.content,
                             children: (0, r.jsx)(o.Text, {
                                 variant: 'text-md/normal',
-                                children: u.NW.string(u.t.vjyinp)
+                                children: u.intl.string(u.t.vjyinp)
                             })
                         }),
                         m()
@@ -117,7 +117,7 @@ function h(e) {
                             className: d.content,
                             children: (0, r.jsx)(o.Text, {
                                 variant: 'text-md/normal',
-                                children: u.NW.format(u.t.qP5xYW, {
+                                children: u.intl.format(u.t.qP5xYW, {
                                     emailAddress: _,
                                     emailAddressLink: 'mailto:'.concat(_)
                                 })
@@ -136,7 +136,7 @@ function h(e) {
                                     (0, r.jsx)(o.Text, {
                                         className: d.tooltipText,
                                         variant: 'text-sm/normal',
-                                        children: u.NW.string(u.t.yb7itb)
+                                        children: u.intl.string(u.t.yb7itb)
                                     })
                                 ]
                             })

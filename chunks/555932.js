@@ -77,8 +77,8 @@ function v(e) {
         { fillFactor: I, totalAvailableBoostsCount: S } = i.useMemo(() => (0, c.Hl)(t), [t]),
         {
             progressBarFillWidthFactor: T,
-            isProgressBarAnimationComplete: N,
-            setShouldFireConfetti: A,
+            isProgressBarAnimationComplete: A,
+            setShouldFireConfetti: N,
             shouldFireConfetti: C,
             tierMarkerAnimationPosition: R
         } = y({
@@ -103,8 +103,8 @@ function v(e) {
             'aria-valuenow': S,
             'aria-valuetext':
                 t.premiumTier === f.Eu4.NONE
-                    ? _.NW.formatToPlainString(_.t.Ukqm9v, { numSubscriptionsApplied: S })
-                    : _.NW.formatToPlainString(_.t.qWunaW, {
+                    ? _.intl.formatToPlainString(_.t.Ukqm9v, { numSubscriptionsApplied: S })
+                    : _.intl.formatToPlainString(_.t.qWunaW, {
                           numSubscriptionsApplied: S,
                           tierName: (0, c.nW)(t.premiumTier, { useLevels: !1 })
                       }),
@@ -130,9 +130,9 @@ function v(e) {
                         {
                             confettiTriggerRef: v,
                             guild: t,
-                            isProgressBarAnimationComplete: N,
+                            isProgressBarAnimationComplete: A,
                             setConfettiCount: E,
-                            setShouldFireConfetti: A,
+                            setShouldFireConfetti: N,
                             tier: e,
                             tierMarkerAnimationPosition: R,
                             totalAvailableBoostsCount: S,

@@ -14,10 +14,10 @@ function s(e) {
             src: n(297806),
             alt: ''
         }),
-        header: a.NW.string(a.t['2l9beX']),
+        header: a.intl.string(a.t['2l9beX']),
         headerClassName: o.header,
-        content: a.NW.string(a.t.gdqdND),
-        buttonCTA: a.NW.string(a.t.RzWDqa),
+        content: a.intl.string(a.t.gdqdND),
+        buttonCTA: a.intl.string(a.t.RzWDqa),
         buttonProps: {
             color: i.Ttl.WHITE,
             innerClassName: o.primaryButton
@@ -72,7 +72,7 @@ function s(e) {
                 };
             });
         },
-        secondaryButtonCTA: a.NW.string(a.t.TulDPj),
+        secondaryButtonCTA: a.intl.string(a.t.TulDPj),
         secondaryButtonProps: {
             look: i.iLD.LINK,
             color: i.Ttl.WHITE

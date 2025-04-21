@@ -38,11 +38,11 @@ let m = Object.freeze({
             renderContent: (e) =>
                 (0, i.jsxs)(l.Fragment, {
                     children: [
-                        (0, i.jsx)(s.OZU, { note: p.NW.string(p.t.Y4vMY2) }),
+                        (0, i.jsx)(s.OZU, { note: p.intl.string(p.t.Y4vMY2) }),
                         (0, i.jsx)(s.zxk, {
                             className: h.button,
                             onClick: e,
-                            children: p.NW.string(p.t.w5uwoK)
+                            children: p.intl.string(p.t.w5uwoK)
                         })
                     ]
                 })
@@ -52,14 +52,14 @@ let m = Object.freeze({
             darkSrc: n(917847),
             width: 421,
             height: 218,
-            renderContent: () => (0, i.jsx)(s.OZU, { note: p.NW.string(p.t.v7HbiY) })
+            renderContent: () => (0, i.jsx)(s.OZU, { note: p.intl.string(p.t.v7HbiY) })
         },
         SECTION_BLOCKED: {
             lightSrc: n(459505),
             darkSrc: n(356634),
             width: 433,
             height: 232,
-            renderContent: () => (0, i.jsx)(s.OZU, { note: p.NW.string(p.t['9xdyWF']) })
+            renderContent: () => (0, i.jsx)(s.OZU, { note: p.intl.string(p.t['9xdyWF']) })
         },
         SECTION_PENDING: {
             lightSrc: n(979770),
@@ -70,7 +70,7 @@ let m = Object.freeze({
                 (0, i.jsxs)('div', {
                     className: h.emptyStateContainer,
                     children: [
-                        (0, i.jsx)(s.OZU, { note: p.NW.string(p.t['aCYQ+P']) }),
+                        (0, i.jsx)(s.OZU, { note: p.intl.string(p.t['aCYQ+P']) }),
                         null != e &&
                             (0, i.jsx)(s.zxk, {
                                 color: s.zxk.Colors.PRIMARY,
@@ -81,7 +81,7 @@ let m = Object.freeze({
                                 children: (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-muted',
-                                    children: t ? p.NW.string(p.t.R40bU1) : p.NW.string(p.t.rXl8fn)
+                                    children: t ? p.intl.string(p.t.R40bU1) : p.intl.string(p.t.rXl8fn)
                                 })
                             })
                     ]
@@ -92,19 +92,19 @@ let m = Object.freeze({
             darkSrc: n(138715),
             width: 415,
             height: 200,
-            renderContent: () => (0, i.jsx)(s.OZU, { note: p.NW.string(p.t['vgI/EB']) })
+            renderContent: () => (0, i.jsx)(s.OZU, { note: p.intl.string(p.t['vgI/EB']) })
         },
         SECTION_NO_RESULTS: {
             lightSrc: n(55346),
             darkSrc: n(917847),
             width: 421,
             height: 218,
-            renderContent: () => (0, i.jsx)(s.OZU, { note: p.NW.string(p.t['7sW4h4']) })
+            renderContent: () => (0, i.jsx)(s.OZU, { note: p.intl.string(p.t['7sW4h4']) })
         }
     }),
     b = (e) => {
         let { theme: t } = e,
-            n = p.NW.string(p.t['oi+B4u']),
+            n = p.intl.string(p.t['oi+B4u']),
             r = m.SECTION_ALL,
             l = (0, c.Q3)('AddFriendEmpty');
         return (0, i.jsxs)(s.ubH, {

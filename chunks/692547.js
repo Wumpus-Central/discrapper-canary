@@ -20,7 +20,7 @@ let { Themes: m } = n(15202).V,
     { Modules: O } = f.V,
     { Layout: I, Space: S } = d.VV,
     T = l()(E, (e) => i()(e)),
-    N = {
+    A = {
         themes: m,
         modules: O,
         colors: l()(g, (e, t) => {
@@ -37,10 +37,10 @@ let { Themes: m } = n(15202).V,
                             let r = null == (s = b[n]) || null == (o = s[e]) ? void 0 : o[t.theme];
                             null != r && ((i = null != (l = r.raw) ? l : i), (a = null != (c = r.opacity) ? c : a));
                         }
-                    if (1 === a) return N.unsafe_rawColors[i].resolve(t);
+                    if (1 === a) return A.unsafe_rawColors[i].resolve(t);
                     {
                         let e = T[i];
-                        return 0 !== e.alpha() && 1 !== a && (e = e.alpha(a)), A(e, t.saturation);
+                        return 0 !== e.alpha() && 1 !== a && (e = e.alpha(a)), N(e, t.saturation);
                     }
                 }
             };
@@ -52,7 +52,7 @@ let { Themes: m } = n(15202).V,
                 css: P(n),
                 resolve(e) {
                     var t;
-                    return A(r, null != (t = null == e ? void 0 : e.saturation) ? t : 1);
+                    return N(r, null != (t = null == e ? void 0 : e.saturation) ? t : 1);
                 }
             };
         }),
@@ -75,7 +75,7 @@ let { Themes: m } = n(15202).V,
             }
         }))
     };
-function A(e, t) {
+function N(e, t) {
     return {
         spring() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -111,4 +111,4 @@ function P(e, t) {
         r = R(e);
     return 'var(--'.concat([n, r].filter(Boolean).join('-'), ')');
 }
-let w = N;
+let w = A;

@@ -4,8 +4,8 @@ var r = n(927923),
 function l(e) {
     switch (e) {
         case r.YE.XBOX:
-            return i.NW.string(i.t.T0uYKy);
+            return i.intl.string(i.t.T0uYKy);
         case r.YE.PLAYSTATION:
-            return i.NW.string(i.t.FWAzS0);
+            return i.intl.string(i.t.FWAzS0);
     }
 }

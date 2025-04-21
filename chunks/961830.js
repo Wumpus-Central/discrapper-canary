@@ -98,7 +98,7 @@ let g = {
     v = {
         key: a.h8.REVIEW,
         renderStep: (e) => (0, r.jsx)(u.l, p({}, e)),
-        options: { useBreadcrumbLabel: () => f.NW.string(f.t.QBnNHh) }
+        options: { useBreadcrumbLabel: () => f.intl.string(f.t.QBnNHh) }
     },
     O = {
         key: a.h8.CONFIRM,

@@ -99,7 +99,7 @@ function O(e) {
             let n = ''.concat(e.seconds()).padStart(2, '0');
             t = ''.concat(e.minutes(), ':').concat(n);
         }
-    } else t = s ? (d ? m.NW.string(m.t['8+NidX']) : m.NW.string(m.t.SSzXvb)) : d ? '' : m.NW.string(m.t.Icu3bW);
+    } else t = s ? (d ? m.intl.string(m.t['8+NidX']) : m.intl.string(m.t.SSzXvb)) : d ? '' : m.intl.string(m.t.Icu3bW);
     return (0, r.jsx)(l.ua7, {
         text: O,
         children: (e) =>

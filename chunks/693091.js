@@ -4,8 +4,8 @@ n.d(t, {
     X4: () => u
 }),
     n(388685);
-var r = n(192379),
-    i = n(481060);
+var i = n(192379),
+    r = n(481060);
 function o(e, t, n) {
     return (
         t in e
@@ -46,11 +46,11 @@ class l {
         this.queuedCompute = !1;
         let t = 0,
             n = 0;
-        for (let r of this.items) {
-            let i = this.listeners.get(r.notification.id);
-            if (null == i) continue;
-            let { offsetHeight: o } = i.element;
-            (i.top !== t || i.height !== o || i.index !== n) && (e = !0), (i.top = t), (i.height = o), (i.index = n), 0 === t && (this.matchHeight !== o && (e = !0), (this.matchHeight = o)), (t += o + 8), n++;
+        for (let i of this.items) {
+            let r = this.listeners.get(i.notification.id);
+            if (null == r) continue;
+            let { offsetHeight: o } = r.element;
+            (r.top !== t || r.height !== o || r.index !== n) && (e = !0), (r.top = t), (r.height = o), (r.index = n), 0 === t && (this.matchHeight !== o && (e = !0), (this.matchHeight = o)), (t += o + 8), n++;
         }
         e && this.broadcastLayoutUpdates();
     }
@@ -68,7 +68,7 @@ class l {
         }
     }
     subscribe(e, t, n) {
-        var r;
+        var i;
         this.listeners.set(e, {
             notificationId: e,
             callback: n,
@@ -77,7 +77,7 @@ class l {
             top: 0,
             index: 0
         }),
-            null == (r = this.resizeObserver) || r.observe(t),
+            null == (i = this.resizeObserver) || i.observe(t),
             this.queueCompute();
     }
     unsubscribe(e) {
@@ -101,7 +101,7 @@ class l {
             (this.locked = e);
     }
 }
-let s = r.createContext(new l(!0));
+let s = i.createContext(new l(!0));
 function c(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
@@ -111,7 +111,7 @@ let a = {
     tension: 320
 };
 function u(e, t, n) {
-    let [o, l] = (0, i.q_F)(
+    let [o, l] = (0, r.q_F)(
             () => ({
                 from: {
                     opacity: 0,
@@ -124,22 +124,22 @@ function u(e, t, n) {
             void 0,
             []
         ),
-        u = r.useRef(l),
-        d = r.useContext(s),
-        h = r.useMemo(() => {
+        u = i.useRef(l),
+        d = i.useContext(s),
+        h = i.useMemo(() => {
             let t = !1;
             return (n) => {
                 null == n
                     ? d.unsubscribe(e)
                     : d.subscribe(e, n, (e) => {
-                          let { locked: n, matchHeight: r, height: i, top: o, index: l } = e,
+                          let { locked: n, matchHeight: i, height: r, top: o, index: l } = e,
                               { current: s } = u,
                               d = {
                                   opacity: n && l > 4 ? 0 : n ? Math.min(1 - l / 4, 1) : 1,
                                   scale: n ? Math.min(1 - l / 4, 1) : 1,
                                   transform: c(l, n, o),
                                   contentOpacity: n && l > 0 ? 0 : 1,
-                                  height: n ? r : i
+                                  height: n ? i : r
                               };
                           s({
                               from: t
@@ -147,9 +147,9 @@ function u(e, t, n) {
                                   : {
                                         opacity: 0,
                                         scale: 1.1,
-                                        transform: -((n ? r : i) * 1),
+                                        transform: -((n ? i : r) * 1),
                                         contentOpacity: 1,
-                                        height: n ? r : i
+                                        height: n ? i : r
                                     },
                               to: d,
                               config: a
@@ -159,8 +159,8 @@ function u(e, t, n) {
             };
         }, [e, d]);
     return (
-        r.useLayoutEffect(() => {
-            if (t === i.pJH.YEETED) {
+        i.useLayoutEffect(() => {
+            if (t === r.pJH.YEETED) {
                 let t = d.getLayoutSpecs(e);
                 if (null == t) return void n();
                 u.current({

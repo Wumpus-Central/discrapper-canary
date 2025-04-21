@@ -22,11 +22,11 @@ class l {
             case 1:
                 return e(this.items[0], '');
             case 2:
-                return r.NW.format(r.t.GENERIC_FORMATTED_LIST_TWO, o(this.items, e));
+                return r.intl.format(r.t.GENERIC_FORMATTED_LIST_TWO, o(this.items, e));
             case 3:
-                return r.NW.format(r.t.GENERIC_FORMATTED_LIST_THREE, o(this.items, e));
+                return r.intl.format(r.t.GENERIC_FORMATTED_LIST_THREE, o(this.items, e));
             default:
-                return r.NW.format(r.t.GENERIC_FORMATTED_LIST_FOUR, o(this.items, e));
+                return r.intl.format(r.t.GENERIC_FORMATTED_LIST_FOUR, o(this.items, e));
         }
     }
     constructor(e) {

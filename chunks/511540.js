@@ -19,7 +19,7 @@ function i(e, t, n) {
                     });
             } catch (e) {
                 var r;
-                d(429 === (r = null == e ? void 0 : e.status) ? l.NW.string(l.t.BPmZvr) : 404 === r || 400 === r ? l.NW.string(l.t.aWa1Pz) : l.NW.string(l.t.JNQRU1)), s(!1), (null == e ? void 0 : e.status) === 401 && n();
+                d(429 === (r = null == e ? void 0 : e.status) ? l.intl.string(l.t.BPmZvr) : 404 === r || 400 === r ? l.intl.string(l.t.aWa1Pz) : l.intl.string(l.t.JNQRU1)), s(!1), (null == e ? void 0 : e.status) === 401 && n();
             }
         }, [e, t, n]);
     return (

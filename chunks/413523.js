@@ -57,7 +57,7 @@ function T(e) {
     }
     return e;
 }
-function N(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,12 +69,12 @@ function N(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -181,7 +181,7 @@ class D {
                                       t && (this.lastSpoke[e] = Date.now()),
                                       this.participantByIndex.set(
                                           n.id,
-                                          A(T({}, n), {
+                                          N(T({}, n), {
                                               speaking: t,
                                               lastSpoke: this.lastSpoke[e],
                                               soundsharing: h.Z.isSoundSharing(e)
@@ -206,7 +206,7 @@ class D {
                                   r.type === v.fO.STREAM
                                       ? (this.participantByIndex.set(
                                             r.id,
-                                            A(T({}, r), {
+                                            N(T({}, r), {
                                                 maxResolution: t,
                                                 maxFrameRate: n
                                             })
@@ -265,15 +265,15 @@ class D {
             O = m.default.getUser(e);
         if (null == O) return y;
         let S = E.Z.getVoiceStateForChannel(this.channelId, e),
-            N = E.Z.getVoicePlatformForChannel(this.channelId, e),
+            A = E.Z.getVoicePlatformForChannel(this.channelId, e),
             C = _.Z.getChannel(this.channelId),
             R = null != (r = (null == (n = this.call) || null == (t = n.ringing) ? void 0 : t.includes(e)) || this.guildRingingUsers.has(e)) && r;
         (null != S || R) &&
-            ((l = A(T({ type: v.fO.USER }, g.Z.getUserStreamData(e, null == C ? void 0 : C.getGuildId())), {
+            ((l = N(T({ type: v.fO.USER }, g.Z.getUserStreamData(e, null == C ? void 0 : C.getGuildId())), {
                 user: O,
                 id: O.id,
                 voiceState: S,
-                voicePlatform: N,
+                voicePlatform: A,
                 speaking: (0, o.O)({
                     userId: e,
                     checkIsMuted: !0
@@ -297,7 +297,7 @@ class D {
                               maxFrameRate: n.maxFrameRate
                           }
                         : null;
-            (f = A(T({}, g.Z.getUserStreamData(e, null == C ? void 0 : C.getGuildId(), I.Yn.STREAM), i), {
+            (f = N(T({}, g.Z.getUserStreamData(e, null == C ? void 0 : C.getGuildId(), I.Yn.STREAM), i), {
                 type: r ? v.fO.HIDDEN_STREAM : v.fO.STREAM,
                 id: t,
                 userVideo: null != (s = null == S ? void 0 : S.selfVideo) && s,

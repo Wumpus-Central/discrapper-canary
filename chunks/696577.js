@@ -17,9 +17,9 @@ var r = n(200651),
     _ = n(417183),
     E = n(170245),
     O = n(981631),
-    N = n(388032),
-    y = n(53487);
-function I(e) {
+    y = n(388032),
+    I = n(53487);
+function v(e) {
     var t;
     let { user: n, applicationId: l, isGameRelationship: s, active: c } = e,
         u = (null == (t = h.default.getCurrentUser()) ? void 0 : t.isStaff()) && (null == n ? void 0 : n.isStaff()),
@@ -45,30 +45,30 @@ function I(e) {
         children: [
             u &&
                 (0, r.jsx)('div', {
-                    className: y.staffIndicator,
+                    className: I.staffIndicator,
                     children: (0, r.jsx)(o.IGR, {
                         color: a.Z.unsafe_rawColors.BRAND_500.css,
-                        text: N.NW.string(N.t.oMx98P)
+                        text: y.intl.string(y.t.oMx98P)
                     })
                 }),
             (0, r.jsx)(b.Z, {
                 icon: o.dz2,
                 actionType: b.Z.ActionTypes.ACCEPT,
-                tooltip: N.NW.string(N.t.ZcibdX),
+                tooltip: y.intl.string(y.t.ZcibdX),
                 onClick: f,
                 shouldHighlight: c
             }),
             (0, r.jsx)(b.Z, {
                 icon: o.Dio,
                 actionType: b.Z.ActionTypes.DENY,
-                tooltip: N.NW.string(N.t.xuio0N),
+                tooltip: y.intl.string(y.t.xuio0N),
                 onClick: g,
                 shouldHighlight: c
             })
         ]
     });
 }
-function v(e) {
+function C(e) {
     let { userId: t, applicationId: n, isGameRelationship: l, active: a } = e,
         { cancelFriendRequest: s } = (0, m.u)({
             userId: t,
@@ -85,17 +85,17 @@ function v(e) {
     return (0, r.jsx)(b.Z, {
         icon: o.Dio,
         actionType: b.Z.ActionTypes.DENY,
-        tooltip: N.NW.string(N.t.eaq81d),
+        tooltip: y.intl.string(y.t.eaq81d),
         onClick: c,
         shouldHighlight: a
     });
 }
-function C(e) {
+function S(e) {
     let { isGameRelationship: t, applicationId: n, userTag: a, isProvisional: s } = e,
-        p = i.useMemo(() => (t ? N.NW.string(N.t['Uv/eT0']) : a), [t, a]),
+        p = i.useMemo(() => (t ? y.intl.string(y.t['Uv/eT0']) : a), [t, a]),
         h = (0, l.e7)([c.Z], () => (null != n ? c.Z.getApplication(n) : null));
     return (0, r.jsxs)('div', {
-        className: y.applicationSublabel,
+        className: I.applicationSublabel,
         children: [
             !s &&
                 (0, r.jsx)(o.Text, {
@@ -125,7 +125,7 @@ function C(e) {
         ]
     });
 }
-function S(e) {
+function N(e) {
     let { user: t, hovered: n, status: i, isGameRelationship: l, applicationId: a } = e,
         o = g.ZP.useUserTag(t);
     return (0, r.jsx)(E.Z, {
@@ -133,7 +133,7 @@ function S(e) {
         hovered: n,
         status: i,
         showAccountIdentifier: !l && !t.isProvisional,
-        subText: (0, r.jsx)(C, {
+        subText: (0, r.jsx)(S, {
             isGameRelationship: l,
             isProvisional: t.isProvisional,
             applicationId: a,
@@ -161,9 +161,9 @@ function T(e) {
         onClick: g,
         children: (e) =>
             (0, r.jsxs)('div', {
-                className: y.listItemContents,
+                className: I.listItemContents,
                 children: [
-                    (0, r.jsx)(S, {
+                    (0, r.jsx)(N, {
                         user: t,
                         hovered: e,
                         status: h,
@@ -171,16 +171,16 @@ function T(e) {
                         applicationId: o
                     }),
                     (0, r.jsx)('div', {
-                        className: y.actions,
+                        className: I.actions,
                         children:
                             n === O.OGo.PENDING_INCOMING
-                                ? (0, r.jsx)(I, {
+                                ? (0, r.jsx)(v, {
                                       user: t,
                                       applicationId: o,
                                       isGameRelationship: c,
                                       active: e
                                   })
-                                : (0, r.jsx)(v, {
+                                : (0, r.jsx)(C, {
                                       userId: t.id,
                                       applicationId: o,
                                       isGameRelationship: c,

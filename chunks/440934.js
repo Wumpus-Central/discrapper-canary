@@ -55,7 +55,7 @@ function u(e) {
                         (0, i.jsx)(o.Wn, {
                             messageType: o.QYI.WARNING,
                             className: d.submissionWarning,
-                            children: _.NW.format(_.t['dSTy//'], { applicationName: f })
+                            children: _.intl.format(_.t['dSTy//'], { applicationName: f })
                         }),
                         (0, i.jsx)(o.hjN, {
                             children: (0, i.jsx)(a.Il, {
@@ -73,13 +73,13 @@ function u(e) {
                             color: o.zxk.Colors.BRAND,
                             size: o.zxk.Sizes.MEDIUM,
                             submitting: m === c.i.IN_FLIGHT,
-                            children: _.NW.string(_.t.geKm7u)
+                            children: _.intl.string(_.t.geKm7u)
                         }),
                         (0, i.jsx)(o.zxk, {
                             look: o.zxk.Looks.LINK,
                             color: o.zxk.Colors.PRIMARY,
                             onClick: n,
-                            children: _.NW.string(_.t['ETE/oK'])
+                            children: _.intl.string(_.t['ETE/oK'])
                         })
                     ]
                 })

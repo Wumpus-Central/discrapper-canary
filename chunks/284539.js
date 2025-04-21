@@ -1,47 +1,47 @@
-n.d(t, { Z: () => l });
-var r = n(192379),
-    i = n(442837),
+n.d(t, { Z: () => a });
+var i = n(192379),
+    r = n(442837),
     s = n(668826),
-    a = n(120421);
-function l(e) {
-    let t = (0, i.e7)([a.Z], () => a.Z.getItemMetadata(e)),
-        n = (0, r.useMemo)(() => (null != t ? t : {}), [t]),
-        l = (0, r.useRef)(n);
-    (0, r.useEffect)(() => {
-        l.current = n;
+    l = n(120421);
+function a(e) {
+    let t = (0, r.e7)([l.Z], () => l.Z.getItemMetadata(e)),
+        n = (0, i.useMemo)(() => (null != t ? t : {}), [t]),
+        a = (0, i.useRef)(n);
+    (0, i.useEffect)(() => {
+        a.current = n;
     }, [n]);
-    let o = (0, r.useCallback)(
+    let o = (0, i.useCallback)(
         (t) => {
             (0, s.cn)(
                 e,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                            i = Object.keys(n);
                         'function' == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
+                            (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 })
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            i.forEach(function (t) {
+                                var i;
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = i);
                             });
                     }
                     return e;
-                })({}, l.current, t)
+                })({}, a.current, t)
             );
         },
         [e]
     );
-    return (0, r.useMemo)(() => [n, o], [n, o]);
+    return (0, i.useMemo)(() => [n, o], [n, o]);
 }

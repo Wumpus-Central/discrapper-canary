@@ -66,7 +66,7 @@ function g(e) {
                     className: h.chatHeaderBarText,
                     variant: 'text-sm/normal',
                     color: 'text-normal',
-                    children: p.NW.string(p.t.iOWmmJ)
+                    children: p.intl.string(p.t.iOWmmJ)
                 }),
                 (0, r.jsxs)(a.zxk, {
                     size: a.zxk.Sizes.TINY,
@@ -90,7 +90,7 @@ function g(e) {
                             width: 14,
                             height: 14
                         }),
-                        p.NW.string(p.t.ZtIlQk)
+                        p.intl.string(p.t.ZtIlQk)
                     ]
                 })
             ]

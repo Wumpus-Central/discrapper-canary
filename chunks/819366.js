@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => N });
 var r = n(200651),
     i = n(192379),
     a = n(873546),
@@ -70,7 +70,7 @@ function T(e, t) {
         e
     );
 }
-function N(e) {
+function A(e) {
     let { userId: t, className: a, children: o } = e,
         l = i.useCallback(() => {
             (0, d.k)({ kind: 'user' });
@@ -92,14 +92,14 @@ function N(e) {
         children: o
     });
 }
-function A(e) {
-    let { className: t, userId: i, channelId: d, parsedUserId: O, content: S, inlinePreview: A = !1, viewingChannelId: C } = e,
+function N(e) {
+    let { className: t, userId: i, channelId: d, parsedUserId: O, content: S, inlinePreview: N = !1, viewingChannelId: C } = e,
         { analyticsLocations: R } = (0, c.ZP)(l.Z.USER_MENTION),
         P = (0, o.e7)([E.default], () => E.default.getUser(i)),
         w = (0, o.e7)([p.Z], () => p.Z.getChannel(d)),
         D = null != w ? w.getGuildId() : null,
         L =
-            A || null == P || null == D || null == d
+            N || null == P || null == D || null == d
                 ? void 0
                 : (e) => {
                       null != w &&
@@ -122,7 +122,7 @@ function A(e) {
         k = m.Z.getGuild(D),
         j = (0, u.Ib)(k, w) && i === v.fL ? v.jM : null;
     if (null == P)
-        return (0, r.jsx)(N, {
+        return (0, r.jsx)(A, {
             userId: O,
             className: t,
             children: S
@@ -142,7 +142,7 @@ function A(e) {
                 { children: '@'.concat(null != M ? M : x) }
             )
         );
-    return A
+    return N
         ? (0, r.jsx)(c.Gt, {
               value: R,
               children: U()

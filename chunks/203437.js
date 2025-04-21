@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(388685);
 var l = n(200651),
     a = n(192379),
-    r = n(120356),
-    i = n.n(r),
+    i = n(120356),
+    r = n.n(i),
     s = n(442837),
     o = n(481060),
     u = n(565138),
@@ -18,25 +18,25 @@ var l = n(200651),
     v = n(710111),
     x = n(981631),
     j = n(388032),
-    N = n(696200);
-function w(e) {
+    w = n(696200);
+function N(e) {
     let { availableSlots: t, className: n } = e;
     return (0, l.jsxs)(o.Text, {
-        className: i()(N.suffixNode, n),
+        className: r()(w.suffixNode, n),
         variant: 'text-sm/medium',
         color: 'text-primary',
         children: [
             (0, l.jsx)(o.gj8, {
                 size: 'md',
                 color: 'currentColor',
-                className: N.speakerIcon
+                className: w.speakerIcon
             }),
-            j.NW.format(j.t['8Dyg1N'], { slots: t })
+            j.intl.format(j.t['8Dyg1N'], { slots: t })
         ]
     });
 }
 function C(e) {
-    let { value: t, className: n, onChange: r } = e,
+    let { value: t, className: n, onChange: i } = e,
         C = (0, s.cj)([m.ZP, f.Z, h.default, d.Z], () => {
             let e = {};
             for (let t of m.ZP.getFlattenedGuildIds()) {
@@ -78,7 +78,7 @@ function C(e) {
                 null == e || '' === e.value
                     ? null
                     : (0, l.jsx)(u.Z, {
-                          className: i()(N.guildSelectOptionIcon, { [N.disabledOption]: e.disabled }),
+                          className: r()(w.guildSelectOptionIcon, { [w.disabledOption]: e.disabled }),
                           guild: C[e.value],
                           size: u.Z.Sizes.SMOL,
                           active: !0
@@ -90,8 +90,8 @@ function C(e) {
                 let t = null == e ? void 0 : e.value;
                 return null == t || '' === t
                     ? null
-                    : (0, l.jsx)(w, {
-                          className: i()({ [N.disabledOption]: null == e ? void 0 : e.disabled }),
+                    : (0, l.jsx)(N, {
+                          className: r()({ [w.disabledOption]: null == e ? void 0 : e.disabled }),
                           availableSlots: S[t]
                       });
             },
@@ -100,16 +100,16 @@ function C(e) {
         k = a.useCallback(
             (e) =>
                 (0, l.jsx)('div', {
-                    className: i()({ [N.disabledOption]: e.disabled }),
+                    className: r()({ [w.disabledOption]: e.disabled }),
                     children: e.label
                 }),
             []
         ),
         Z = a.useCallback(
             (e) => {
-                S[e] <= 0 || r(e);
+                S[e] <= 0 || i(e);
             },
-            [S, r]
+            [S, i]
         ),
         M = (() => {
             let e = S[null != t ? t : x.lds];
@@ -124,6 +124,6 @@ function C(e) {
         renderOptionPrefix: P,
         renderOptionSuffix: E,
         renderOptionLabel: k,
-        placeholder: 0 === O.length ? j.NW.string(j.t.O3i2gY) : j.NW.string(j.t.CunCMD)
+        placeholder: 0 === O.length ? j.intl.string(j.t.O3i2gY) : j.intl.string(j.t.CunCMD)
     });
 }

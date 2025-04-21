@@ -22,11 +22,11 @@ var r = n(200651),
     j = n(346479),
     O = n(592125),
     E = n(934415),
-    N = n(572004),
-    I = n(456269),
-    P = n(109590),
-    S = n(228392),
-    Z = n(981631),
+    I = n(572004),
+    P = n(456269),
+    S = n(109590),
+    Z = n(228392),
+    N = n(981631),
     T = n(388032),
     A = n(184844),
     w = n(92254);
@@ -76,15 +76,15 @@ function k(e, t) {
 function M(e) {
     let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: M } = e,
         { ref: L, width: D } = (0, p.ZP)(),
-        [W, U] = i.useState(3),
-        [B, G] = i.useState(!n),
-        [F, H] = (0, h.Z)(!1, 2000),
-        V = (0, a.e7)([O.Z], () => O.Z.getChannel(t), [t]),
-        { firstMessage: z } = (0, P.cl)(V),
+        [U, B] = i.useState(3),
+        [G, F] = i.useState(!n),
+        [H, V] = (0, h.Z)(!1, 2000),
+        z = (0, a.e7)([O.Z], () => O.Z.getChannel(t), [t]),
+        { firstMessage: W } = (0, S.cl)(z),
         Y = (0, a.e7)([v.Z], () => v.Z.hasJoined(t)),
-        { disableReactionUpdates: q, disableReactionCreates: K, isLurking: X, isGuest: Q, isPendingMember: J } = (0, b.Z)(V),
+        { disableReactionUpdates: q, disableReactionCreates: K, isLurking: X, isGuest: Q, isPendingMember: J } = (0, b.Z)(z),
         $ = (0, a.e7)([O.Z], () => O.Z.getChannel(M)),
-        ee = (0, I.Bs)($),
+        ee = (0, P.Bs)($),
         et = (0, a.e7)([f.Z], () => f.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         en = i.useCallback(
             (e) => {
@@ -92,7 +92,7 @@ function M(e) {
                 if (null != t && n) {
                     let e = t.intersectionRect,
                         n = t.boundingClientRect;
-                    G((e.bottom - e.top) / (n.bottom - n.top) < 1);
+                    F((e.bottom - e.top) / (n.bottom - n.top) < 1);
                 }
             },
             [n]
@@ -111,27 +111,27 @@ function M(e) {
     let [er, ei] = i.useState(!0);
     if (
         (i.useEffect(() => {
-            null != D && (U(Math.floor((D - 280) / 58)), ei(!1));
+            null != D && (B(Math.floor((D - 280) / 58)), ei(!1));
         }, [D]),
-        null == V || null == z)
+        null == z || null == W)
     )
         return null;
-    let el = z.reactions.length > 0,
+    let el = W.reactions.length > 0,
         eo = () => {
-            Y ? j.Z.leaveThread(V, 'Forum Toolbar') : j.Z.joinThread(V, 'Forum Toolbar');
+            Y ? j.Z.leaveThread(z, 'Forum Toolbar') : j.Z.joinThread(z, 'Forum Toolbar');
         },
         ea = () => {
-            (0, S.B)({
-                postId: V.id,
-                location: { section: Z.jXE.CHANNEL_HEADER }
+            (0, Z.B)({
+                postId: z.id,
+                location: { section: N.jXE.CHANNEL_HEADER }
             }),
-                (0, N.JG)((0, E.EO)(V, $)),
-                H(!0);
+                (0, I.JG)((0, E.EO)(z, $)),
+                V(!0);
         },
         es = () => {
             u.Z.jumpToMessage({
-                channelId: V.id,
-                messageId: V.id,
+                channelId: z.id,
+                messageId: z.id,
                 flash: !0,
                 jumpType: d.SR.INSTANT
             });
@@ -140,7 +140,7 @@ function M(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: o()(A.container, { [A.header]: B }),
+                className: o()(A.container, { [A.header]: G }),
                 ref: L,
                 children: [
                     (0, r.jsxs)('div', {
@@ -152,7 +152,7 @@ function M(e) {
                                 (0, r.jsx)('div', {
                                     className: w.reactions,
                                     children: (0, r.jsx)(x.le, {
-                                        message: z,
+                                        message: W,
                                         readOnly: !1,
                                         useChatFontScaling: !1,
                                         isLurking: X,
@@ -169,14 +169,14 @@ function M(e) {
                                     })
                                 }),
                             (0, r.jsx)(C.Z, {
-                                message: z,
-                                channel: V,
+                                message: W,
+                                channel: z,
                                 disableReactionCreates: !0,
                                 disableReactionUpdates: q,
                                 isLurking: X,
                                 isGuest: Q,
                                 isPendingMember: J,
-                                maxReactions: W,
+                                maxReactions: U,
                                 className: A.reactions,
                                 useChatFontScaling: !1,
                                 isForumToolbar: !0,
@@ -185,12 +185,12 @@ function M(e) {
                             !K &&
                                 (0, r.jsx)(_.X, {
                                     type: g.O.NORMAL,
-                                    message: z,
-                                    channel: V,
+                                    message: W,
+                                    channel: z,
                                     useChatFontScaling: !1,
                                     className: o()(A.addReactButton, { [A.hasNoReactions]: !el }),
                                     isForumToolbar: !0,
-                                    children: !el && T.NW.string(T.t.xpOyTE)
+                                    children: !el && T.intl.string(T.t.xpOyTE)
                                 })
                         ]
                     }),
@@ -198,7 +198,7 @@ function M(e) {
                         className: A.buttons,
                         children: [
                             (0, r.jsx)(c.ua7, {
-                                text: T.NW.string(T.t.F7oeDg),
+                                text: T.intl.string(T.t.F7oeDg),
                                 children: (e) =>
                                     (0, r.jsxs)(
                                         c.zxk,
@@ -213,13 +213,13 @@ function M(e) {
                                                     size: 'xs',
                                                     color: 'currentColor'
                                                 }),
-                                                Y ? T.NW.string(T.t['7OkUzs']) : T.NW.string(T.t['3aOv+v'])
+                                                Y ? T.intl.string(T.t['7OkUzs']) : T.intl.string(T.t['3aOv+v'])
                                             ]
                                         })
                                     )
                             }),
                             (0, r.jsx)(c.ua7, {
-                                text: T.NW.string(T.t.WqhZsr),
+                                text: T.intl.string(T.t.WqhZsr),
                                 children: (e) =>
                                     (0, r.jsxs)(
                                         c.zxk,
@@ -230,7 +230,7 @@ function M(e) {
                                             className: A.button,
                                             innerClassName: A.buttonInner,
                                             children: [
-                                                F
+                                                H
                                                     ? (0, r.jsx)(c.dz2, {
                                                           size: 'custom',
                                                           color: 'currentColor',
@@ -243,14 +243,14 @@ function M(e) {
                                                           width: 16,
                                                           height: 16
                                                       }),
-                                                F ? T.NW.string(T.t['t5VZ8/']) : null
+                                                H ? T.intl.string(T.t['t5VZ8/']) : null
                                             ]
                                         })
                                     )
                             }),
                             !n &&
                                 (0, r.jsx)(c.ua7, {
-                                    text: T.NW.string(T.t.nFP4oa),
+                                    text: T.intl.string(T.t.nFP4oa),
                                     children: (e) =>
                                         (0, r.jsx)(
                                             c.zxk,
@@ -275,7 +275,7 @@ function M(e) {
             }),
             et && (0, r.jsx)(m.Z, { threadId: t }),
             (0, r.jsx)(y.Z, {
-                channel: V,
+                channel: z,
                 isLastItem: l
             })
         ]

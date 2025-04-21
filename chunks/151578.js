@@ -12,14 +12,14 @@ function h(t) {
         navId: 'attachment-link-context',
         onClose: c.Zy,
         onSelect: h,
-        'aria-label': r.NW.string(r.t['5oIOLS']),
+        'aria-label': r.intl.string(r.t['5oIOLS']),
         children: (0, i.jsxs)(
             l.kSQ,
             {
                 children: [
                     (0, i.jsx)(l.sNh, {
                         id: 'attachment-link-copy-link',
-                        label: r.NW.string(r.t.WqhZsr),
+                        label: r.intl.string(r.t.WqhZsr),
                         action: async () => {
                             let t = await (0, e.B_)(n);
                             (0, s.JG)(null != t ? t : '');
@@ -27,7 +27,7 @@ function h(t) {
                     }),
                     (0, i.jsx)(l.sNh, {
                         id: 'attachment-link-copy-name',
-                        label: r.NW.string(r.t.JrGD7O),
+                        label: r.intl.string(r.t.JrGD7O),
                         action: () => {
                             (0, s.JG)(null != a ? a : '');
                         }

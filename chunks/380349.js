@@ -22,7 +22,7 @@ function f(e, t, n) {
             {
                 id: 'spotify-play-'.concat(e.session_id),
                 action: () => (0, d.Z)(f, p.kG.USER_ACTIVITY_PLAY, n),
-                label: h.NW.string(h.t.rRffNz),
+                label: h.intl.string(h.t.rRffNz),
                 subtext: g ? (0, s.Z)(f, p.kG.USER_ACTIVITY_PLAY) : void 0,
                 disabled: g
             },
@@ -34,7 +34,7 @@ function f(e, t, n) {
                   {
                       id: 'spotify-sync-'.concat(e.session_id),
                       action: () => (0, u.Z)(f, p.kG.USER_ACTIVITY_SYNC, n),
-                      label: h.NW.string(h.t.eU3inJ),
+                      label: h.intl.string(h.t.eU3inJ),
                       subtext: m ? (0, s.Z)(f, p.kG.USER_ACTIVITY_SYNC) : void 0,
                       disabled: m
                   },

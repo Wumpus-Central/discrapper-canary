@@ -15,7 +15,7 @@ let d = (e) => {
         : (0, r.jsxs)('div', {
               className: a()(u.content, t),
               children: [
-                  (0, r.jsx)(o.vwX, { children: c.NW.string(c.t.xFn72t) }),
+                  (0, r.jsx)(o.vwX, { children: c.intl.string(c.t.xFn72t) }),
                   (0, r.jsxs)('div', {
                       className: u.giftRecipientInfo,
                       children: [

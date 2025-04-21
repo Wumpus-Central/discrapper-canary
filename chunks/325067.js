@@ -1,9 +1,9 @@
 n.d(t, { Z: () => b });
-var r,
-    i,
+var i,
+    r,
     s,
-    a = n(392711),
-    l = n.n(a),
+    l = n(392711),
+    a = n.n(l),
     o = n(213919),
     c = n(442837),
     d = n(570140);
@@ -32,15 +32,15 @@ class f extends (s = c.ZP.Store) {
         return p;
     }
 }
-(i = 'MFAStore'),
-    (r = 'displayName') in f
-        ? Object.defineProperty(f, r, {
-              value: i,
+(r = 'MFAStore'),
+    (i = 'displayName') in f
+        ? Object.defineProperty(f, i, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (f[r] = i);
+        : (f[i] = r);
 let b = new f(d.Z, {
     MFA_ENABLE_SUCCESS: function (e) {
         let { token: t, codes: n } = e;
@@ -61,7 +61,7 @@ let b = new f(d.Z, {
     },
     MFA_VIEW_BACKUP_CODES: function (e) {
         let { codes: t, key: n } = e;
-        (m = l().sortBy(t, 'code')), (g = n);
+        (m = a().sortBy(t, 'code')), (g = n);
     },
     MFA_SEND_VERIFICATION_KEY: function (e) {
         let { nonces: t } = e;

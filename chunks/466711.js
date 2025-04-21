@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(921944),
     S = n(388032),
     T = n(767980),
-    N = n(302195);
-function A(e, t, n) {
+    A = n(302195);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function C(e) {
                 })
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
@@ -77,8 +77,8 @@ function P(e, t) {
 }
 function w(e) {
     return (0, r.jsx)(v.Z, {
-        innerClassName: N.button,
-        'aria-label': S.NW.string(S.t.Z1RnTk),
+        innerClassName: A.button,
+        'aria-label': S.intl.string(S.t.Z1RnTk),
         isActive: !1,
         onClick: e.onClick,
         children: (0, r.jsx)('div', {
@@ -103,8 +103,8 @@ function D(e) {
         P(
             C(
                 {
-                    innerClassName: N.button,
-                    'aria-label': S.NW.string(S.t.Z1RnTk),
+                    innerClassName: A.button,
+                    'aria-label': S.intl.string(S.t.Z1RnTk),
                     isActive: !1,
                     onClick: a
                 },
@@ -143,13 +143,13 @@ function x(e) {
     var t;
     let { giftingPromotionConfig: n, disabled: s, channel: E } = e,
         { analyticsLocations: v } = (0, u.ZP)(c.Z.GIFT_BUTTON),
-        [S, N] = i.useState(!1),
-        A = (0, a.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
+        [S, A] = i.useState(!1),
+        N = (0, a.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
         C = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
         R = null != C ? b.default.age(C.id) : 0,
         { giftBoxAnimation: P, trinketsAnimation: x } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
         M = (0, p.u)(),
-        k = void 0 !== M && !s && A && R >= L,
+        k = void 0 !== M && !s && N && R >= L,
         [j, U] = (0, f.XR)(k ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
         G = null != j,
         B = S || G,
@@ -170,7 +170,7 @@ function x(e) {
             });
         },
         Z = () => {
-            N(!1), U(I.L.TAKE_ACTION), V();
+            A(!1), U(I.L.TAKE_ACTION), V();
         },
         H =
             void 0 !== P
@@ -189,15 +189,15 @@ function x(e) {
     return (0, r.jsx)('div', {
         className: T.container,
         onMouseEnter: () => {
-            S || N(!0);
+            S || A(!0);
         },
         onMouseLeave: () => {
-            N(!1);
+            A(!1);
         },
         children:
             void 0 !== M && G
                 ? (0, r.jsx)(h.Z, {
-                      onComplete: () => N(!1),
+                      onComplete: () => A(!1),
                       onCheckItOutClick: V,
                       markAsDismissed: U,
                       config: M,

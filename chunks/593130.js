@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(200651),
     a = n(192379),
     l = n(120356),
@@ -16,10 +16,10 @@ var r = n(200651),
     j = n(981631),
     v = n(388032),
     Z = n(269932);
-function N(e) {
+function p(e) {
     let { channel: t, className: n, onClose: l } = e,
-        N = (0, i.e7)([c.Z], () => c.Z.can(j.Plq.READ_MESSAGE_HISTORY, t)),
-        b = (0, u.cD)(t),
+        p = (0, i.e7)([c.Z], () => c.Z.can(j.Plq.READ_MESSAGE_HISTORY, t)),
+        N = (0, u.cD)(t),
         T = () => {
             l(), (0, f.R6)(t, void 0, 'Thread Browser Empty State');
         },
@@ -74,14 +74,14 @@ function N(e) {
                         (0, r.jsx)(o.X6q, {
                             variant: 'heading-md/semibold',
                             className: Z.title,
-                            children: v.NW.string(v.t.E3H5lJ)
+                            children: v.intl.string(v.t.E3H5lJ)
                         }),
-                        N
+                        p
                             ? (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)('div', { className: Z.divider }),
                                       (0, r.jsx)(
-                                          p,
+                                          b,
                                           (function (e) {
                                               for (var t = 1; t < arguments.length; t++) {
                                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -112,20 +112,20 @@ function N(e) {
                               })
                             : null,
                         (0, r.jsx)('div', { className: Z.spacer }),
-                        b
+                        N
                             ? (0, r.jsx)(o.zxk, {
                                   size: o.zxk.Sizes.TINY,
                                   className: Z.createButton,
                                   onClick: () => {
                                       l(), (0, f.R6)(t, void 0, 'Thread Browser Toolbar');
                                   },
-                                  children: v.NW.string(v.t.CumH4u)
+                                  children: v.intl.string(v.t.CumH4u)
                               })
                             : null,
                         (0, r.jsx)(o.P3F, {
                             className: Z.closeIcon,
                             onClick: l,
-                            'aria-label': v.NW.string(v.t.cpT0Cg),
+                            'aria-label': v.intl.string(v.t.cpT0Cg),
                             children: (0, r.jsx)(o.Dio, {
                                 size: 'md',
                                 color: 'currentColor'
@@ -149,7 +149,7 @@ function N(e) {
         })
     );
 }
-function p(e) {
+function b(e) {
     let { query: t, setQuery: n, submit: a, isLoading: l } = e;
     return (0, r.jsx)(o.E1j, {
         autoFocus: !0,
@@ -159,7 +159,7 @@ function p(e) {
         onChange: (e) => n(e),
         onClear: () => n(''),
         onKeyDown: (e) => 'Enter' === e.key && a(),
-        placeholder: v.NW.string(v.t.h0JN7e),
-        'aria-label': v.NW.string(v.t.h0JN7e)
+        placeholder: v.intl.string(v.t.h0JN7e),
+        'aria-label': v.intl.string(v.t.h0JN7e)
     });
 }

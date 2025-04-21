@@ -71,7 +71,7 @@ let p = {
                 channelId: t,
                 settings: n
             }),
-            i.uv.announce(_.NW.string(_.t.MlIsJy)),
+            i.uv.announce(_.intl.string(_.t.MlIsJy)),
             (0, c.jz)(e, t, n, l, r, s);
     },
     updateChannelOverrideSettingsBulk(e, t, n, r) {

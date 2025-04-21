@@ -51,9 +51,9 @@ let _ = (e) => {
         ? (0, r.jsx)(a.P3F, {
               onFocus: C,
               onClick: P,
-              'aria-label': h.NW.string(h.t.Mp5k6O),
+              'aria-label': h.intl.string(h.t.Mp5k6O),
               children: (0, r.jsx)(a.ua7, {
-                  text: h.NW.formatToPlainString(h.t['FE++aG'], { user: x }),
+                  text: h.intl.formatToPlainString(h.t['FE++aG'], { user: x }),
                   children: (e) => {
                       var t, n;
                       return (0, r.jsxs)(
@@ -101,7 +101,7 @@ let _ = (e) => {
                                       (0, r.jsx)(a.Text, {
                                           variant: 'text-xs/bold',
                                           color: 'currentColor',
-                                          children: h.NW.string(h.t['8Rrro6'])
+                                          children: h.intl.string(h.t['8Rrro6'])
                                       })
                                   ]
                               }),

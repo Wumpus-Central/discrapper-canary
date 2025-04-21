@@ -136,7 +136,7 @@ class T extends (r = a.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: a, markerPositions: o, closestMarkerIndex: l, newClosestIndex: c, min: d, max: f } = this.state,
-            { disabled: m, stickToMarkers: E, className: y, children: O, barStyles: I, fillStyles: S, mini: T, hideBubble: A, defaultValue: C, orientation: R, onValueRender: P, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: M = {}, markerPosition: k = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
+            { disabled: m, stickToMarkers: E, className: y, children: O, barStyles: I, fillStyles: S, mini: T, hideBubble: N, defaultValue: C, orientation: R, onValueRender: P, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: M = {}, markerPosition: k = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
             F = 0;
         E ? null != o && (null != c ? (F = o[c]) : null != l && (F = o[l])) : (F = this.scaleValue(t));
         let V = ''.concat(F, '%'),
@@ -173,8 +173,8 @@ class T extends (r = a.PureComponent) {
                       })
                     : null,
             H = null != P ? P(t) : ''.concat(F.toFixed(0), '%'),
-            W = null != (e = null == D ? void 0 : D(t)) ? e : void 0;
-        return (0, i.jsx)(N, {
+            Y = null != (e = null == D ? void 0 : D(t)) ? e : void 0;
+        return (0, i.jsx)(A, {
             active: n,
             keyboardFocused: r && h.Z.keyboardModeEnabled,
             children: (e) => {
@@ -198,7 +198,7 @@ class T extends (r = a.PureComponent) {
                         'aria-label': U,
                         'aria-labelledby': G,
                         'aria-describedby': B,
-                        'aria-valuetext': W,
+                        'aria-valuetext': Y,
                         role: 'slider',
                         tabIndex: 0,
                         onKeyDown: this.handleKeyDown,
@@ -231,7 +231,7 @@ class T extends (r = a.PureComponent) {
                                 children: (0, i.jsx)(p.u, {
                                     color: p.u.Colors.GREY,
                                     hideOnClick: !1,
-                                    text: A || E ? null : H,
+                                    text: N || E ? null : H,
                                     forceOpen: n || (r && h.Z.keyboardModeEnabled),
                                     children: (e) =>
                                         (0, i.jsx)(
@@ -413,7 +413,7 @@ class T extends (r = a.PureComponent) {
             ));
     }
 }
-function N(e) {
+function A(e) {
     let { active: t, keyboardFocused: n, children: r } = e,
         i = (0, m.Q3)('Slider'),
         [o, s] = a.useState(!1),

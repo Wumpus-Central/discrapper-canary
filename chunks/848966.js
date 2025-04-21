@@ -15,7 +15,7 @@ function _(e) {
         _ = (0, r.Z)({
             userId: e.user.id,
             section: d.oh.ACTIVITY,
-            label: f.NW.string(f.t.pD1L1t),
+            label: f.intl.string(f.t.pD1L1t),
             onAction: () => (null == t ? void 0 : t({ action: 'PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM' }))
         });
     return [n === d.y0.BITE_SIZE ? _ : null, (0, c.Z)(e), (0, s.ZP)(e), (0, s.uj)(e), (0, u.Z)(e), (0, l.Z)(e), (0, a.Z)(e), (0, o.B)(e)].filter((e) => null != e);

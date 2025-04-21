@@ -18,7 +18,7 @@ function u(e) {
         children: [
             (0, r.jsx)(i.Text, {
                 variant: 'text-xs/normal',
-                children: l.NW.string(l.t.Jr2519)
+                children: l.intl.string(l.t.Jr2519)
             }),
             (0, r.jsx)(i.Exd, {
                 foregroundColor: (0, a.Lq)(d),

@@ -27,16 +27,16 @@ function b(e) {
         let e = x
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      g.NW.string(g.t['+KSnWV']),
+                      g.intl.string(g.t['+KSnWV']),
                       (0, r.jsx)(l.rgF, {
                           size: 'xs',
                           color: c.Z.HEADER_PRIMARY
                       })
                   ]
               })
-            : g.NW.string(g.t.hvVgAQ);
-        (O.message = g.NW.string(g.t.Bt2N7O)),
-            (O.subtitle = g.NW.string(g.t['n/Vzk5'])),
+            : g.intl.string(g.t.hvVgAQ);
+        (O.message = g.intl.string(g.t.Bt2N7O)),
+            (O.subtitle = g.intl.string(g.t['n/Vzk5'])),
             (O.buttonText = e),
             (O.onButtonClick = () => {
                 if (x) {
@@ -52,8 +52,8 @@ function b(e) {
             (O.imageSrc = n(780961));
     } else
         j &&
-            ((O.message = g.NW.string(g.t['9T6N5+'])),
-            (O.buttonText = g.NW.string(g.t.XyHpKC)),
+            ((O.message = g.intl.string(g.t['9T6N5+'])),
+            (O.buttonText = g.intl.string(g.t.XyHpKC)),
             (O.onButtonClick = () => {
                 o.Z.unblockUser(_.getRecipientId());
             }));

@@ -39,12 +39,12 @@ let f = () =>
                               children: [
                                   (0, r.jsx)(o.X6q, {
                                       variant: 'heading-md/semibold',
-                                      children: p.NW.string(p.t.OmBThI)
+                                      children: p.intl.string(p.t.OmBThI)
                                   }),
                                   (0, r.jsx)(o.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
-                                      children: p.NW.string(p.t.zcs5kp)
+                                      children: p.intl.string(p.t.zcs5kp)
                                   })
                               ]
                           })

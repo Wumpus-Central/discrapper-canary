@@ -5,8 +5,8 @@ n.d(e, {
 }),
     n(415506);
 var r = n(544891),
-    o = n(570140),
-    l = n(710845),
+    l = n(570140),
+    o = n(710845),
     a = n(893988),
     s = n(314897),
     c = n(417363),
@@ -16,10 +16,10 @@ var r = n(544891),
     h = n(981631);
 async function f() {
     if (null == i) {
-        if (!(u.isPlatformEmbedded && ((0, u.isMac)() || (0, u.isWindows)()))) return void new l.Z('CloudSyncUtils').warn('CloudSync is not supported on this platform');
+        if (!(u.isPlatformEmbedded && ((0, u.isMac)() || (0, u.isWindows)()))) return void new o.Z('CloudSyncUtils').warn('CloudSync is not supported on this platform');
         await p.ZP.ensureModule('discord_cloudsync'),
             (i = new (p.ZP.getCloudSync())()).on('state', (t) =>
-                o.Z.dispatch({
+                l.Z.dispatch({
                     type: 'GAME_CLOUD_SYNC_UPDATE',
                     state: t
                 })
@@ -28,9 +28,9 @@ async function f() {
 }
 function y(t, e) {
     var n;
-    let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+    let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     if (!c.Z.supportsCloudSync(t, e)) return Promise.resolve({ type: h.QCD.NONE });
-    let l = (function () {
+    let o = (function () {
             if (null == i) throw Error('Initialize cloud sync module before syncing.');
             return i;
         })(),
@@ -43,8 +43,8 @@ function y(t, e) {
     let C = null != u.installPath ? (0, a.Z)(u.installPath) : null;
     if (null == C) throw Error('No install path for '.concat(t, ':').concat(e));
     let O = s.default.getId(),
-        N = {
-            forceHash: o,
+        g = {
+            forceHash: l,
             manifestPath: h.SRg.STORAGE_MANIFEST(C, O),
             roots:
                 null != p.roots
@@ -69,5 +69,5 @@ function y(t, e) {
                 BRANCHID: e
             }
         };
-    return l.sync(f, N);
+    return o.sync(f, g);
 }

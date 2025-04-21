@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(539854);
+n.d(t, { Z: () => N }), n(539854);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -105,7 +105,7 @@ function T() {
         b.pendingUsages
     );
 }
-class N extends (r = o.ZP.PersistedStore) {
+class A extends (r = o.ZP.PersistedStore) {
     initialize(e) {
         null != e && (b = e), this.waitFor(u.ZP), this.syncWith([d.Z], T);
     }
@@ -126,8 +126,8 @@ class N extends (r = o.ZP.PersistedStore) {
         return y.frequently;
     }
 }
-p(N, 'displayName', 'ApplicationFrecencyStore'), p(N, 'persistKey', 'ApplicationFrecency');
-let A = new N(s.Z, {
+p(A, 'displayName', 'ApplicationFrecencyStore'), p(A, 'persistKey', 'ApplicationFrecency');
+let N = new A(s.Z, {
     APPLICATION_COMMAND_USED: O,
     EMBEDDED_ACTIVITY_OPEN: I,
     USER_SETTINGS_PROTO_UPDATE: v

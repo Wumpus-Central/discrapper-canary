@@ -29,14 +29,14 @@ function _(e) {
     let { className: t, style: n, shape: i = s.Dv2.ROUND, look: u = 'RED', size: _ = d.LARGE } = e;
     return 'RED' === u
         ? (0, r.jsx)(s.IGR, {
-              text: l.NW.string(l.t.dI3q4u),
+              text: l.intl.string(l.t.dI3q4u),
               className: a()(t, c.live, _),
               color: o.Z.unsafe_rawColors.RED_400.css,
               shape: f[i],
               style: n
           })
         : (0, r.jsx)(s.IGR, {
-              text: l.NW.string(l.t.dI3q4u),
+              text: l.intl.string(l.t.dI3q4u),
               className: a()(t, c.live, _, c.grey),
               disableColor: !0,
               shape: f[i],

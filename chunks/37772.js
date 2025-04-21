@@ -1,8 +1,8 @@
-n.d(t, { Z: () => F });
+n.d(t, { Z: () => B });
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(442837),
     s = n(481060),
     c = n(25610),
@@ -20,11 +20,11 @@ var r = n(200651),
     v = n(493892),
     E = n(901461),
     O = n(739566),
-    N = n(443877),
-    j = n(492593),
-    C = n(938353),
-    S = n(25015),
-    I = n(689674),
+    j = n(443877),
+    C = n(492593),
+    S = n(938353),
+    I = n(25015),
+    N = n(689674),
     T = n(963550),
     P = n(845080),
     A = n(295790),
@@ -35,7 +35,7 @@ var r = n(200651),
     D = n(388032),
     L = n(758010),
     M = n(30804);
-function W(e) {
+function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function W(e) {
     }
     return e;
 }
-function U(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,10 +78,10 @@ function U(e, t) {
         e
     );
 }
-let F = i.memo(function e(t) {
+let B = i.memo(function e(t) {
     var n, i;
-    let a,
-        { channel: s, message: R, compact: L = !1, className: F, onContextMenu: G, onClick: H, disableInteraction: V = !1, hasThread: z, treatSpam: K } = t,
+    let l,
+        { channel: s, message: R, compact: L = !1, className: B, onContextMenu: H, onClick: V, disableInteraction: z = !1, hasThread: W, treatSpam: K } = t,
         Y = k.OBS.has(R.type) ? R.messageReference : void 0,
         X = (0, o.e7)([f.Z], () => f.Z.getMessageByReference(Y)),
         q = (0, o.e7)([g.Z], () => (R.type === k.uaV.THREAD_STARTER_MESSAGE && X.state === f.Y.LOADED ? g.Z.getChannel(X.message.channel_id) : null)),
@@ -91,21 +91,21 @@ let F = i.memo(function e(t) {
         ee = h.QK.useSetting(),
         et = (0, u.A)((null != (n = R.editedTimestamp) ? n : R.timestamp).valueOf()),
         en = (0, d.Z)(null == s ? void 0 : s.id),
-        { disableReactionCreates: er } = (0, N.Z)(s),
-        { content: ei, hasSpoilerEmbeds: ea } = (0, S.Z)(R, {
+        { disableReactionCreates: er } = (0, j.Z)(s),
+        { content: ei, hasSpoilerEmbeds: el } = (0, I.Z)(R, {
             hideSimpleEmbedContent: J && $,
             allowList: et,
             allowHeading: et,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        el = (0, O.ZP)(R),
+        ea = (0, O.ZP)(R),
         eo = null != (i = R.getGuildId()) ? i : void 0,
-        es = (0, m.Z)(el),
+        es = (0, m.Z)(ea),
         ec = (0, o.e7)([g.Z], () => R.hasFlag(k.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(R.id))),
         eu = R.type === k.uaV.THREAD_STARTER_MESSAGE && X.state === f.Y.LOADED && null != q,
-        ed = !eu && void 0 === a,
-        ep = (0, I.Z)({
+        ed = !eu && void 0 === l,
+        ep = (0, N.Z)({
             message: R,
             channel: s,
             enabled: ed
@@ -116,37 +116,37 @@ let F = i.memo(function e(t) {
     return eu
         ? (0, r.jsx)(
               e,
-              U(W({}, t), {
+              F(U({}, t), {
                   message: X.message,
                   channel: q,
                   hasThread: !1
               })
           )
-        : (_.Z.isBlockedForMessage(R) ? (a = D.t['+FcYMz']) : _.Z.isIgnoredForMessage(R) ? (a = D.t.VFWjc3) : (0, v.DQ)(R) && K && (a = D.t.xfkfTE), void 0 !== a)
-          ? (0, r.jsx)(B, {
-                className: F,
+        : (_.Z.isBlockedForMessage(R) ? (l = D.t['+FcYMz']) : _.Z.isIgnoredForMessage(R) ? (l = D.t.VFWjc3) : (0, v.DQ)(R) && K && (l = D.t.xfkfTE), void 0 !== l)
+          ? (0, r.jsx)(G, {
+                className: B,
                 compact: L,
                 count: 1,
-                collapsedReason: a
+                collapsedReason: l
             })
-          : (0, r.jsx)(j.Z, {
+          : (0, r.jsx)(C.Z, {
                 compact: L,
-                className: l()(F, {
+                className: a()(B, {
                     [M.ephemeral]: (0, y.Pv)(R),
-                    [M.disableInteraction]: V,
+                    [M.disableInteraction]: z,
                     [M.groupStart]: t.isGroupStart
                 }),
                 childrenRepliedMessage: (0, Z.Z)(R, s, Y, X, L),
                 childrenHeader: (0, P.Z)(
-                    U(W({}, t), {
-                        author: el,
+                    F(U({}, t), {
+                        author: ea,
                         guildId: s.guild_id
                     })
                 ),
-                childrenAccessories: (0, r.jsx)(C.BB, {
+                childrenAccessories: (0, r.jsx)(S.BB, {
                     channel: s,
                     message: R,
-                    hasSpoilerEmbeds: ea,
+                    hasSpoilerEmbeds: el,
                     compact: L,
                     canSuppressEmbeds: !1,
                     canDeleteAttachments: !1,
@@ -154,7 +154,7 @@ let F = i.memo(function e(t) {
                     disableReactionCreates: er,
                     disableComponentInteractivity: !0,
                     disableReactionUpdates: !1,
-                    renderThreadAccessory: z,
+                    renderThreadAccessory: W,
                     inlineAttachmentMedia: Q,
                     inlineEmbedMedia: J,
                     renderEmbeds: $,
@@ -169,9 +169,9 @@ let F = i.memo(function e(t) {
                 childrenExecutedCommand: (0, w.Z)(R, s, L),
                 childrenMessageContent: (0, T.Z)(t, ei),
                 childrenSystemMessage: (0, A.Z)(t),
-                onContextMenu: G,
-                onClick: H,
-                hasThread: !1 !== z && null != ec && R.hasFlag(k.iLy.HAS_THREAD),
+                onContextMenu: H,
+                onClick: V,
+                hasThread: !1 !== W && null != ec && R.hasFlag(k.iLy.HAS_THREAD),
                 hasReply: R.type === k.uaV.REPLY,
                 isSystemMessage: (0, E.Z)(R),
                 messageRef: ep,
@@ -179,9 +179,9 @@ let F = i.memo(function e(t) {
                 authorHasGradientRole: es
             });
 });
-function B(e) {
-    let { className: t, count: n, compact: i, collapsedReason: a } = e;
-    return (0, r.jsx)(j.Z, {
+function G(e) {
+    let { className: t, count: n, compact: i, collapsedReason: l } = e;
+    return (0, r.jsx)(C.Z, {
         className: t,
         compact: i,
         role: 'group',
@@ -195,7 +195,7 @@ function B(e) {
             }),
             children: (0, r.jsx)('div', {
                 className: L.blockedMessageText,
-                children: D.NW.format(a, { count: n })
+                children: D.intl.format(l, { count: n })
             })
         })
     });

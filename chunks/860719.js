@@ -1,15 +1,15 @@
-n.d(t, { w: () => a }), n(997841);
+n.d(t, { w: () => i }), n(997841);
 var r = n(85025);
-function a(e) {
+function i(e) {
     let { flags: t } = e,
         n = (0, r.O)(t),
-        a = null != n && ((null == n ? void 0 : n.messageContent) || (null == n ? void 0 : n.messageContentLimited)),
-        i = null != n && ((null == n ? void 0 : n.guildPresences) || (null == n ? void 0 : n.guildPresencesLimited)),
+        i = null != n && ((null == n ? void 0 : n.messageContent) || (null == n ? void 0 : n.messageContentLimited)),
+        a = null != n && ((null == n ? void 0 : n.guildPresences) || (null == n ? void 0 : n.guildPresencesLimited)),
         l = null != n && ((null == n ? void 0 : n.guildMembers) || (null == n ? void 0 : n.guildMembersLimited));
     return {
-        hasMessageContent: a,
-        hasGuildPresences: i,
+        hasMessageContent: i,
+        hasGuildPresences: a,
         hasGuildMembers: l,
-        hasIntents: a || i || l
+        hasIntents: i || a || l
     };
 }

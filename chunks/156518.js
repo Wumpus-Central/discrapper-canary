@@ -38,7 +38,7 @@ function m(e) {
                 navId: 'user-profile-friend-request-buttons',
                 onSelect: void 0,
                 onClose: n,
-                'aria-label': p.NW.string(p.t.Jszi3N),
+                'aria-label': p.intl.string(p.t.Jszi3N),
                 children: t
             });
         },

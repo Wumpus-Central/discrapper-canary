@@ -13,7 +13,7 @@ function l(e) {
               children:
                   !l &&
                   (0, r.jsx)(i.tG, {
-                      text: o.NW.string(o.t.hZkfwc),
+                      text: o.intl.string(o.t.hZkfwc),
                       fullWidth: !0
                   })
           })

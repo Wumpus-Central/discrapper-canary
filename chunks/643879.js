@@ -46,20 +46,20 @@ function _(e) {
     };
 }
 function p(e) {
-    return null == e ? u.NW.string(u.t.lqaIxM) : e.split(',')[0];
+    return null == e ? u.intl.string(u.t.lqaIxM) : e.split(',')[0];
 }
 function h(e) {
     let { filename: t, assetOrigin: n = s.q.NEW_ASSET } = null != e ? e : {};
     if (n === s.q.ARCHIVED_ASSET) return;
-    let r = null != t ? t : u.NW.string(u.t.lqaIxM),
-        i = new Date().toLocaleString(u.NW.currentLocale, {
+    let r = null != t ? t : u.intl.string(u.t.lqaIxM),
+        i = new Date().toLocaleString(u.intl.currentLocale, {
             year: 'numeric',
             day: 'numeric',
             month: 'long',
             hour: 'numeric',
             minute: 'numeric'
         });
-    return u.NW.formatToPlainString(n === s.q.EDITED_ARCHIVED_ASSET ? u.t.eC2sZm : u.t['DYil9/'], {
+    return u.intl.formatToPlainString(n === s.q.EDITED_ARCHIVED_ASSET ? u.t.eC2sZm : u.t['DYil9/'], {
         name: r,
         dateTime: i
     });

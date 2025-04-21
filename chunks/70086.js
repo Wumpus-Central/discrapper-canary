@@ -19,7 +19,7 @@ function E(A) {
                 className: f.premiumUpsellBadge
             }),
             ' ',
-            D.NW.string(D.t['+7XY39'])
+            D.intl.string(D.t['+7XY39'])
         ]
     });
 }

@@ -51,8 +51,8 @@ async function h(e, t, n) {
         (!c.removingChat && !c.removingView) ||
             !!(await p(o, e.id, c)) ||
             (i.Z.show({
-                title: f.NW.string(f.t.ut7sq6),
-                body: f.NW.format(f.t['Zaz+ur'], {
+                title: f.intl.string(f.t.ut7sq6),
+                body: f.intl.format(f.t['Zaz+ur'], {
                     onClick: () => {
                         i.Z.close(), a.Z.open(o, d.pNK.ONBOARDING);
                     }

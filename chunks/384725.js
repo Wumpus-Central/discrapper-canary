@@ -1,15 +1,15 @@
 n.d(t, { Z: () => r });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    l = n(570140);
+var l = n(481060),
+    a = n(570140);
 let r = {
     open(e) {
-        l.Z.dispatch({
+        a.Z.dispatch({
             type: 'SAFETY_HUB_APPEAL_OPEN',
             classificationId: e
         }),
-            (0, a.ZDy)(async () => {
+            (0, l.ZDy)(async () => {
                 let { default: t } = await n.e('65652').then(n.bind(n, 208265));
                 return (n) =>
                     (0, i.jsx)(
@@ -43,6 +43,6 @@ let r = {
             });
     },
     close() {
-        l.Z.dispatch({ type: 'SAFETY_HUB_APPEAL_CLOSE' });
+        a.Z.dispatch({ type: 'SAFETY_HUB_APPEAL_CLOSE' });
     }
 };

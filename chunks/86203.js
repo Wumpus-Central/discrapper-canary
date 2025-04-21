@@ -23,6 +23,6 @@ function c(e) {
         },
         onMouseEnter: h,
         onMouseLeave: f,
-        children: s.NW.string(s.t['+78Pfn'])
+        children: s.intl.string(s.t['+78Pfn'])
     });
 }

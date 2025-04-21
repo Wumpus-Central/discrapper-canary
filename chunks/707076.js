@@ -4,8 +4,8 @@ n.d(t, {
 });
 var l = n(200651);
 n(192379);
-var r = n(120356),
-    i = n.n(r),
+var i = n(120356),
+    r = n.n(i),
     s = n(442837),
     a = n(481060),
     o = n(367907),
@@ -13,10 +13,10 @@ var r = n(120356),
     d = n(721012),
     u = n(869764),
     m = n(150512),
-    N = n(430824),
-    I = n(594174),
-    h = n(626135),
-    g = n(999382),
+    I = n(430824),
+    h = n(594174),
+    g = n(626135),
+    N = n(999382),
     f = n(983135),
     p = n(84658),
     E = n(981631),
@@ -25,20 +25,20 @@ var r = n(120356),
 let x = () => [
         {
             emoji: '\uD83E\uDDD9',
-            emojiDescription: S.NW.string(S.t.Jh9uiY),
-            title: S.NW.string(S.t.ATF45u),
+            emojiDescription: S.intl.string(S.t.Jh9uiY),
+            title: S.intl.string(S.t.ATF45u),
             selected: !0
         },
         {
             emoji: '\uD83C\uDFA4',
-            emojiDescription: S.NW.string(S.t['nGt+MT']),
-            title: S.NW.string(S.t['30uo7O']),
+            emojiDescription: S.intl.string(S.t['nGt+MT']),
+            title: S.intl.string(S.t['30uo7O']),
             selected: !1
         },
         {
             emoji: '\uD83D\uDC40',
-            emojiDescription: S.NW.string(S.t.hOMH5u),
-            title: S.NW.string(S.t['5Z5sgo']),
+            emojiDescription: S.intl.string(S.t.hOMH5u),
+            title: S.intl.string(S.t['5Z5sgo']),
             selected: !1
         }
     ],
@@ -50,7 +50,7 @@ let x = () => [
                     color: 'currentColor',
                     className: T.channelIcon
                 }),
-            channel: S.NW.string(S.t.MXJozM),
+            channel: S.intl.string(S.t.MXJozM),
             selected: !0
         },
         {
@@ -60,7 +60,7 @@ let x = () => [
                     color: 'currentColor',
                     className: T.channelIcon
                 }),
-            channel: S.NW.string(S.t.Pkj0f3),
+            channel: S.intl.string(S.t.Pkj0f3),
             selected: !0
         },
         {
@@ -70,7 +70,7 @@ let x = () => [
                     color: 'currentColor',
                     className: T.channelIcon
                 }),
-            channel: S.NW.string(S.t['imVD+v']),
+            channel: S.intl.string(S.t['imVD+v']),
             selected: !1
         },
         {
@@ -80,7 +80,7 @@ let x = () => [
                     color: 'currentColor',
                     className: T.channelIcon
                 }),
-            channel: S.NW.string(S.t['Pj/Wpq']),
+            channel: S.intl.string(S.t['Pj/Wpq']),
             selected: !0
         }
     ];
@@ -88,41 +88,41 @@ function _(e) {
     let { isTooltip: t = !1 } = e,
         n = x();
     t && n.pop();
-    let r = t
+    let i = t
             ? (0, l.jsx)(a.Text, {
                   variant: 'text-sm/semibold',
                   color: 'header-primary',
-                  children: S.NW.string(S.t.nTI2mZ)
+                  children: S.intl.string(S.t.nTI2mZ)
               })
             : (0, l.jsx)(a.X6q, {
                   variant: 'heading-md/semibold',
-                  children: S.NW.string(S.t.g1OQtr)
+                  children: S.intl.string(S.t.g1OQtr)
               }),
         s = t
             ? (0, l.jsx)(a.Text, {
                   variant: 'text-xxs/normal',
-                  children: S.NW.format(S.t.hGwDPT, {})
+                  children: S.intl.format(S.t.hGwDPT, {})
               })
             : (0, l.jsx)(a.Text, {
                   variant: 'text-xs/normal',
-                  children: S.NW.format(S.t['8XLD3t'], {})
+                  children: S.intl.format(S.t['8XLD3t'], {})
               });
     return (0, l.jsxs)('div', {
-        className: i()(T.upsellPreview, T.spacingLarge, { [T.tooltip]: t }),
+        className: r()(T.upsellPreview, T.spacingLarge, { [T.tooltip]: t }),
         children: [
-            r,
+            i,
             (0, l.jsx)('div', {
                 className: T.spacingSmall,
                 children: n.map((e, t) => {
-                    let { emoji: n, emojiDescription: r, title: s, selected: o } = e;
+                    let { emoji: n, emojiDescription: i, title: s, selected: o } = e;
                     return (0, l.jsxs)(
                         'div',
                         {
-                            className: i()(T.previewListItem, { [T.selected]: o }),
+                            className: r()(T.previewListItem, { [T.selected]: o }),
                             children: [
                                 (0, l.jsx)('span', {
                                     role: 'img',
-                                    'aria-label': r,
+                                    'aria-label': i,
                                     children: n
                                 }),
                                 (0, l.jsx)(a.Text, {
@@ -154,30 +154,30 @@ function j() {
         {
             message: S.t.FUUXXl,
             profilePic: 'https://cdn.discordapp.com/avatars/302407541994946561/bb3fd59e6c2ea0a86a2bdabf5dff7856.webp?size=80',
-            adminTitle: S.NW.string(S.t.RZVpur)
+            adminTitle: S.intl.string(S.t.RZVpur)
         },
         {
             message: S.t.JAXvDQ,
             profilePic: 'https://cdn.discordapp.com/avatars/433499434098229249/b6d433308debef625537e33df04023e5.webp?size=80',
-            adminTitle: S.NW.string(S.t.xyrlg4)
+            adminTitle: S.intl.string(S.t.xyrlg4)
         },
         {
             message: S.t.Wj9Djo,
             profilePic: 'https://cdn.discordapp.com/avatars/555460020494663691/599bfcdb0b0700b415f4c695890f272c.webp?size=80',
-            adminTitle: S.NW.string(S.t['o/LQMj'])
+            adminTitle: S.intl.string(S.t['o/LQMj'])
         },
         {
             message: S.t.ALsMNT,
             profilePic: 'https://cdn.discordapp.com/guilds/936317138904440892/users/125526751064489984/avatars/f35679626acac9943e102533fc170d41.webp?size=80',
-            adminTitle: S.NW.string(S.t['uvM+xc'])
+            adminTitle: S.intl.string(S.t['uvM+xc'])
         }
     ];
     return (0, l.jsx)(d.i, { testimonials: e });
 }
 function b() {
-    let e = (0, s.e7)([g.Z], () => g.Z.getGuildId()),
-        t = (0, s.e7)([N.Z], () => N.Z.getGuild(e)),
-        n = (0, s.e7)([I.default], () => I.default.getCurrentUser());
+    let e = (0, s.e7)([N.Z], () => N.Z.getGuildId()),
+        t = (0, s.e7)([I.Z], () => I.Z.getGuild(e)),
+        n = (0, s.e7)([h.default], () => h.default.getCurrentUser());
     return null == e || null == t || null == n
         ? null
         : (0, l.jsxs)('div', {
@@ -203,11 +203,11 @@ function b() {
                               children: [
                                   (0, l.jsx)(a.X6q, {
                                       variant: 'heading-xl/semibold',
-                                      children: S.NW.string(S.t.GnKOAw)
+                                      children: S.intl.string(S.t.GnKOAw)
                                   }),
                                   (0, l.jsx)(a.Text, {
                                       variant: 'text-md/normal',
-                                      children: S.NW.string(S.t.SJRFJi)
+                                      children: S.intl.string(S.t.SJRFJi)
                                   })
                               ]
                           }),
@@ -217,7 +217,7 @@ function b() {
                                   onClick: function () {
                                       if (null != e) {
                                           var t, n;
-                                          h.default.track(
+                                          g.default.track(
                                               E.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                                               ((t = (function (e) {
                                                   for (var t = 1; t < arguments.length; t++) {
@@ -269,7 +269,7 @@ function b() {
                                   },
                                   color: a.zxk.Colors.BRAND,
                                   disabled: !1,
-                                  children: S.NW.string(S.t.RzWDqa)
+                                  children: S.intl.string(S.t.RzWDqa)
                               })
                           })
                       ]
@@ -289,11 +289,11 @@ function b() {
                                       children: [
                                           (0, l.jsx)(a.X6q, {
                                               variant: 'heading-md/semibold',
-                                              children: S.NW.string(S.t.Z7kqKS)
+                                              children: S.intl.string(S.t.Z7kqKS)
                                           }),
                                           (0, l.jsx)(a.Text, {
                                               variant: 'text-sm/normal',
-                                              children: S.NW.string(S.t.di3UCw)
+                                              children: S.intl.string(S.t.di3UCw)
                                           })
                                       ]
                                   })
@@ -307,34 +307,34 @@ function b() {
                                       children: [
                                           (0, l.jsx)(a.X6q, {
                                               variant: 'heading-md/semibold',
-                                              children: S.NW.string(S.t.O4jYEh)
+                                              children: S.intl.string(S.t.O4jYEh)
                                           }),
                                           (0, l.jsx)(a.Text, {
                                               variant: 'text-sm/normal',
-                                              children: S.NW.string(S.t['l/l/Gx'])
+                                              children: S.intl.string(S.t['l/l/Gx'])
                                           })
                                       ]
                                   }),
                                   (0, l.jsxs)('div', {
-                                      className: i()(T.upsellPreview, T.spacingLarge),
+                                      className: r()(T.upsellPreview, T.spacingLarge),
                                       children: [
                                           (0, l.jsx)(m.Z, {
                                               guildId: e,
                                               welcomeMessage: {
                                                   authorIds: [n.id],
-                                                  message: S.NW.string(S.t.hIWAfn)
+                                                  message: S.intl.string(S.t.hIWAfn)
                                               }
                                           }),
                                           (0, l.jsx)(u.k, {
-                                              title: S.NW.string(S.t['47zu7O']),
-                                              subtitle: S.NW.string(S.t.amoSNz),
+                                              title: S.intl.string(S.t['47zu7O']),
+                                              subtitle: S.intl.string(S.t.amoSNz),
                                               completed: !0,
                                               Icon: a.VL1,
                                               variant: 'static'
                                           }),
                                           (0, l.jsx)(u.k, {
-                                              title: S.NW.string(S.t.EZfTKC),
-                                              subtitle: S.NW.string(S.t['/sYelZ']),
+                                              title: S.intl.string(S.t.EZfTKC),
+                                              subtitle: S.intl.string(S.t['/sYelZ']),
                                               completed: !0,
                                               Icon: a.VL1,
                                               variant: 'static'
@@ -347,13 +347,13 @@ function b() {
                               className: T.valueContainer,
                               children: [
                                   (0, l.jsx)('div', {
-                                      className: i()(T.upsellPreview, T.spacingLarge),
+                                      className: r()(T.upsellPreview, T.spacingLarge),
                                       children: O().map((e, t) => {
-                                          let { channelIcon: n, channel: r, selected: s } = e;
+                                          let { channelIcon: n, channel: i, selected: s } = e;
                                           return (0, l.jsxs)(
                                               'div',
                                               {
-                                                  className: i()(T.previewListItem, T.spaceBetween, { [T.selected]: s }),
+                                                  className: r()(T.previewListItem, T.spaceBetween, { [T.selected]: s }),
                                                   children: [
                                                       (0, l.jsxs)('div', {
                                                           className: T.channel,
@@ -362,12 +362,12 @@ function b() {
                                                               (0, l.jsx)(a.Text, {
                                                                   variant: 'text-md/medium',
                                                                   color: 'header-primary',
-                                                                  children: r
+                                                                  children: i
                                                               })
                                                           ]
                                                       }),
                                                       (0, l.jsx)('div', {
-                                                          className: i()(T.checkbox, { [T.selected]: s }),
+                                                          className: r()(T.checkbox, { [T.selected]: s }),
                                                           children:
                                                               s &&
                                                               (0, l.jsx)(a.dz2, {
@@ -387,11 +387,11 @@ function b() {
                                       children: [
                                           (0, l.jsx)(a.X6q, {
                                               variant: 'heading-md/semibold',
-                                              children: S.NW.string(S.t['3T9aHB'])
+                                              children: S.intl.string(S.t['3T9aHB'])
                                           }),
                                           (0, l.jsx)(a.Text, {
                                               variant: 'text-sm/normal',
-                                              children: S.NW.string(S.t.dA7Cam)
+                                              children: S.intl.string(S.t.dA7Cam)
                                           })
                                       ]
                                   })

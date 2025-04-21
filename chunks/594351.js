@@ -25,7 +25,7 @@ let _ = () => {
         tryItText: (0, r.jsx)(a.Text, {
             variant: 'text-sm/medium',
             color: 'always-white',
-            children: f.NW.string(f.t.Mi3iPD)
+            children: f.intl.string(f.t.Mi3iPD)
         }),
         onTryFeature: () => {
             (0, d.uL)(h.Z5c.COLLECTIBLES_SHOP),
@@ -37,11 +37,11 @@ let _ = () => {
         },
         header: (0, r.jsx)(a.X6q, {
             variant: 'heading-md/extrabold',
-            children: f.NW.string(f.t.FkIdLy)
+            children: f.intl.string(f.t.FkIdLy)
         }),
         body: (0, r.jsx)(a.Text, {
             variant: 'text-sm/medium',
-            children: f.NW.string(f.t.sb8vi4)
+            children: f.intl.string(f.t.sb8vi4)
         }),
         position: 'right',
         align: 'top',

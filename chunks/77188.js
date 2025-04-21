@@ -35,7 +35,7 @@ function T(e, t, n) {
         e
     );
 }
-function N(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function N(e) {
     }
     return e;
 }
-function A(e, t) {
+function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,7 +68,7 @@ function C(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : N(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -86,7 +86,7 @@ function R(e) {
                     focus: S.nO
                 }),
                 P(
-                    C(N({}, e), {
+                    C(A({}, e), {
                         editor: r,
                         windowContext: t,
                         previewMarkdown: n
@@ -114,7 +114,7 @@ function R(e) {
 }
 function P(e) {
     var t, n, r;
-    let { editor: a, chatInputType: o, channel: s, canUseCommands: l, canOnlyUseTextCommands: c, windowContext: u, previewMarkdown: S, forTests: T, onChangeStart: N, onChangeEnd: A, updateState: C } = e,
+    let { editor: a, chatInputType: o, channel: s, canUseCommands: l, canOnlyUseTextCommands: c, windowContext: u, previewMarkdown: S, forTests: T, onChangeStart: A, onChangeEnd: N, updateState: C } = e,
         R = a,
         { onChange: P } = R;
     (R.chatInputType = o),
@@ -137,7 +137,7 @@ function P(e) {
         (R = (0, m.Z)(R)),
         (R = (0, p.Z)(R)),
         (R = (0, v.Z)(R)),
-        (R = (0, I.Z)(R, N, A)),
+        (R = (0, I.Z)(R, A, N)),
         (R = (0, h.Z)(R, (e) => {
             let { newValue: t, newSelection: n } = e;
             return C(R, 'undo', {

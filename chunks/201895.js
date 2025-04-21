@@ -9,8 +9,8 @@ var o = n(933557),
 function c(e) {
     let { isSubscriptionGated: t, needSubscriptionToAccess: n } = e;
     if (t)
-        if (n) return l.NW.string(l.t['oj+HOj']);
-        else return l.NW.string(l.t.xI3TQU);
+        if (n) return l.intl.string(l.t['oj+HOj']);
+        else return l.intl.string(l.t.xI3TQU);
 }
 function u(e) {
     let t,
@@ -33,19 +33,19 @@ function u(e) {
             t = d > 0 ? l.t.sDKIpq : u ? l.t.VM7z8f : l.t.WJ3MPj;
             break;
         case s.d4z.GUILD_VOICE:
-            let g = [l.NW.formatToPlainString(l.t.bkpadH, { channelName: n.name })];
-            if ((d > 0 && g.push(l.NW.formatToPlainString(l.t['3l1GOz'], { mentionCount: d })), u && g.push(l.NW.string(l.t.x5zAGR)), null != f)) {
+            let g = [l.intl.formatToPlainString(l.t.bkpadH, { channelName: n.name })];
+            if ((d > 0 && g.push(l.intl.formatToPlainString(l.t['3l1GOz'], { mentionCount: d })), u && g.push(l.intl.string(l.t.x5zAGR)), null != f)) {
                 let e = n.userLimit;
                 null != e && e > 0
                     ? g.push(
-                          l.NW.formatToPlainString(l.t['6qgTOD'], {
+                          l.intl.formatToPlainString(l.t['6qgTOD'], {
                               userCount: f,
                               limit: e
                           })
                       )
-                    : g.push(l.NW.formatToPlainString(l.t.GNIiAA, { userCount: f }));
+                    : g.push(l.intl.formatToPlainString(l.t.GNIiAA, { userCount: f }));
             }
-            null != _ && _ > 0 && g.push(l.NW.formatToPlainString(l.t.O6PLYW, { activitiesCount: _ }));
+            null != _ && _ > 0 && g.push(l.intl.formatToPlainString(l.t.O6PLYW, { activitiesCount: _ }));
             let E = c({
                 isSubscriptionGated: p,
                 needSubscriptionToAccess: h
@@ -58,7 +58,7 @@ function u(e) {
             t = r.Ec.has(n.type) ? (d > 0 ? l.t['ZL7+Iy'] : u ? l.t.YlVvmZ : l.t['0nZpiI']) : d > 0 ? l.t.g8ONMz : u ? l.t.smf1CQ : l.t.s0JADg;
     }
     let b = [
-            l.NW.formatToPlainString(t, {
+            l.intl.formatToPlainString(t, {
                 channelName: m,
                 mentionCount: d
             })

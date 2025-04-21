@@ -29,11 +29,11 @@ function C(e) {
     let { userId: n, guildId: C, onClose: x, analyticsLocation: v, className: j } = e,
         O = (0, o.e7)([p.ZP], () => p.ZP.getGuildSidebarState(C), [C]),
         E = null != (t = null == O ? void 0 : O.details.modViewPanel) ? t : b.k.INFO,
-        N = (0, c.Z)(n),
-        I = null == E ? null : E === b.k.INFO ? 'backwards' : 'forwards',
-        P = (0, d.Z)(I),
-        { reducedMotion: S } = i.useContext(a.S),
-        Z = i.useCallback(
+        I = (0, c.Z)(n),
+        P = null == E ? null : E === b.k.INFO ? 'backwards' : 'forwards',
+        S = (0, d.Z)(P),
+        { reducedMotion: Z } = i.useContext(a.S),
+        N = i.useCallback(
             (e) => {
                 null != O && (0, h.r)(C, n, O.baseChannelId, { modViewPanel: e });
             },
@@ -44,10 +44,10 @@ function C(e) {
                 [_.EkH.CLOSE_MODAL]: {
                     binds: ['esc'],
                     comboKeysBindGlobal: !0,
-                    action: () => (E === b.k.INFO ? x() : Z(b.k.INFO))
+                    action: () => (E === b.k.INFO ? x() : N(b.k.INFO))
                 }
             }),
-            [x, E, Z]
+            [x, E, N]
         );
     i.useEffect(() => (u.Z.enable(), u.Z.enableTemp(T), () => u.Z.disableTemp()), [T]);
     let A = (0, s.Yzy)(
@@ -58,7 +58,7 @@ function C(e) {
             enter: { value: 0 },
             leave: { value: -1 }
         },
-        N !== n ? 'animate-never' : 'animate-always'
+        I !== n ? 'animate-never' : 'animate-always'
     );
     return (0, r.jsx)(l.animated.div, {
         style: {
@@ -106,11 +106,11 @@ function C(e) {
                             width: '100%',
                             height: '100%'
                         },
-                        S.enabled
+                        Z.enabled
                             ? { opacity: null == (o = e.value) ? void 0 : o.to((e) => 1 - Math.abs(e)) }
                             : {
-                                  left: null == (a = e.value) ? void 0 : a.to(y('left', P)),
-                                  right: null == (s = e.value) ? void 0 : s.to(y('right', P))
+                                  left: null == (a = e.value) ? void 0 : a.to(y('left', S)),
+                                  right: null == (s = e.value) ? void 0 : s.to(y('right', S))
                               }
                     ),
                     children: (function (e) {
@@ -119,21 +119,21 @@ function C(e) {
                                 return (0, r.jsx)(f.Z, {
                                     userId: n,
                                     guildId: C,
-                                    onNavigate: Z,
+                                    onNavigate: N,
                                     className: j
                                 });
                             case b.k.MESSAGE_HISTORY:
                                 return (0, r.jsx)(m.Z, {
                                     userId: n,
                                     guildId: C,
-                                    onNavigate: () => Z(b.k.INFO),
+                                    onNavigate: () => N(b.k.INFO),
                                     className: j
                                 });
                             case b.k.PERMISSIONS:
                                 return (0, r.jsx)(g.Z, {
                                     userId: n,
                                     guildId: C,
-                                    onNavigate: () => Z(b.k.INFO),
+                                    onNavigate: () => N(b.k.INFO),
                                     className: j
                                 });
                             default:

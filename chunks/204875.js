@@ -1,12 +1,12 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(697518);
-function l(e) {
+    l = n(697518);
+function s(e) {
     var t,
         n,
-        { children: l, disabled: a, disabledTooltip: o, id: c } = e,
+        { children: s, disabled: a, disabledTooltip: o, id: c } = e,
         d = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -16,13 +16,13 @@ function l(e) {
                     var n,
                         r,
                         i = {},
-                        s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ['children', 'disabled', 'disabledTooltip', 'id']);
@@ -56,13 +56,13 @@ function l(e) {
                 return e;
             })(
                 {
-                    className: s.tabBarItem,
+                    className: l.tabBarItem,
                     id: c,
                     disabled: a
                 },
                 d
             )),
-            (n = n = { children: l }),
+            (n = n = { children: s }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {

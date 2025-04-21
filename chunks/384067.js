@@ -75,7 +75,7 @@ let h = (e) => {
                                       style: { color: null != (a = h.bannerTextColor) ? a : 'var(--text-normal)' },
                                       lineClamp: 2,
                                       variant: _ === b.AW.ORBS ? 'text-md/medium' : 'text-sm/medium',
-                                      children: _ === b.AW.ORBS ? f.NW.format(f.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(p.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : h.body
+                                      children: _ === b.AW.ORBS ? f.intl.format(f.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(p.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : h.body
                                   })
                               ]
                           })
@@ -85,7 +85,7 @@ let h = (e) => {
                               className: g.wideBannerBlockButton,
                               color: s.Ttl.PRIMARY,
                               onClick: () => m('shop wide banner', y),
-                              children: f.NW.string(f.t.jVcuVV)
+                              children: f.intl.string(f.t.jVcuVV)
                           })
                   ]
               })

@@ -83,26 +83,26 @@ function m(e, t, n) {
     return i.forwardRef(function (u, f) {
         var { children: h, className: m, dir: g = 'ltr', orientation: E = 'vertical', fade: b = !1, customTheme: y = !1, paddingFix: v = !0, style: O, gap: I, experimental_useStack: S } = u,
             T = p(u, ['children', 'className', 'dir', 'orientation', 'fade', 'customTheme', 'paddingFix', 'style', 'gap', 'experimental_useStack']);
-        let { scrollerRef: N, getScrollerState: A } = (0, c.Ke)(),
-            C = (0, c.t2)(N, E);
+        let { scrollerRef: A, getScrollerState: N } = (0, c.Ke)(),
+            C = (0, c.t2)(A, E);
         i.useImperativeHandle(
             f,
             () =>
                 d(
                     {
-                        getScrollerNode: () => N.current,
-                        getScrollerState: A
+                        getScrollerNode: () => A.current,
+                        getScrollerState: N
                     },
-                    (0, c.Ue)(N, A, C, E)
+                    (0, c.Ue)(A, N, C, E)
                 ),
-            [N, A, E, C]
+            [A, N, E, C]
         );
         let R = (0, c.tT)({
             paddingFix: v,
             orientation: E,
             dir: g,
             className: m,
-            scrollerRef: N,
+            scrollerRef: A,
             specs: a
         });
         return S
@@ -112,7 +112,7 @@ function m(e, t, n) {
                       d(
                           {
                               gap: I,
-                              ref: N,
+                              ref: A,
                               className: o()(m, {
                                   [e]: !0,
                                   [t]: b,
@@ -125,7 +125,7 @@ function m(e, t, n) {
                       ),
                       {
                           children: (0, r.jsxs)(s.Jc, {
-                              containerRef: N,
+                              containerRef: A,
                               children: [h, R]
                           })
                       }
@@ -136,7 +136,7 @@ function m(e, t, n) {
                   _(
                       d(
                           {
-                              ref: N,
+                              ref: A,
                               className: o()(m, {
                                   [e]: !0,
                                   [t]: b,
@@ -149,7 +149,7 @@ function m(e, t, n) {
                       ),
                       {
                           children: (0, r.jsxs)(s.Jc, {
-                              containerRef: N,
+                              containerRef: A,
                               children: [h, R]
                           })
                       }

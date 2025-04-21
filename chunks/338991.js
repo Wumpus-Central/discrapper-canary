@@ -15,7 +15,7 @@ function b(e) {
     return (0, n.jsx)(o.v2r, {
         navId: 'user-context',
         onClose: c.Zy,
-        'aria-label': s.NW.string(s.t.liqwPD),
+        'aria-label': s.intl.string(s.t.liqwPD),
         onSelect: r,
         onInteraction: i,
         children: (0, n.jsxs)(o.kSQ, {

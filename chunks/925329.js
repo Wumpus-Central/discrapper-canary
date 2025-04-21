@@ -82,7 +82,7 @@ let m = (e) => {
               })
             : null;
     let v = null == n ? void 0 : n.name,
-        O = null != v && '' !== v ? u.NW.formatToPlainString(u.t.tiKyYm, { applicationName: v }) : u.NW.string(u.t['2B/phI']);
+        O = null != v && '' !== v ? u.intl.formatToPlainString(u.t.tiKyYm, { applicationName: v }) : u.intl.string(u.t['2B/phI']);
     return (0, r.jsx)('img', {
         alt: O,
         src: t,

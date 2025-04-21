@@ -12,7 +12,7 @@ function o(e) {
                 try {
                     return a(null), n(!0), await e(...r);
                 } catch (e) {
-                    e.message !== l.NW.string(l.t.N2yb9f) && a(e instanceof i.Z ? e : new i.Z(e));
+                    e.message !== l.intl.string(l.t.N2yb9f) && a(e instanceof i.Z ? e : new i.Z(e));
                 } finally {
                     n(!1);
                 }

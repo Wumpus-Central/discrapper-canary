@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(415506);
+n.d(t, { Z: () => l }), n(415506);
 var r = n(200651);
 n(192379);
 var i = n(481060),
@@ -29,7 +29,7 @@ function c(e) {
     }
     return e;
 }
-let u = {
+let l = {
     openSecureFramesStreamVerification: function (e, t) {
         (0, i.ZDy)(async () => {
             let i = (await n.e('94904').then(n.bind(n, 660250))).default;
@@ -46,7 +46,7 @@ let u = {
                 );
         });
     },
-    openSecureFramesUserVerificationModal: function (e, t, o, u) {
+    openSecureFramesUserVerificationModal: function (e, t, o, l) {
         o() &&
             (0, i.ZDy)(
                 async () => {
@@ -63,11 +63,11 @@ let u = {
                             )
                         );
                 },
-                { contextKey: u === a.IlC.POPOUT ? i.u1M : i.z1l }
+                { contextKey: l === a.IlC.POPOUT ? i.u1M : i.z1l }
             );
     },
     openSecureFramesUpdateConfirmation: function (e) {
-        let { title: t, subtitle: a, confirmText: u = o.NW.string(o.t['cY+Ooa']), onConfirm: l } = e;
+        let { title: t, subtitle: a, confirmText: l = o.intl.string(o.t['cY+Ooa']), onConfirm: u } = e;
         (0, i.ZDy)(async () => {
             let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
             return (n) => {
@@ -77,9 +77,9 @@ let u = {
                     ((s = c(
                         {
                             header: t,
-                            confirmText: u,
-                            cancelText: o.NW.string(o.t['ETE/oK']),
-                            onConfirm: l
+                            confirmText: l,
+                            cancelText: o.intl.string(o.t['ETE/oK']),
+                            onConfirm: u
                         },
                         n
                     )),

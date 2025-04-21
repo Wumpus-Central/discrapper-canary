@@ -5,12 +5,12 @@ function i(e) {
         n = (0, r.n)((e) => e.listings);
     if (null == t) return !1;
     let i = Object.keys(n),
-        s = t.every((e) => i.includes(e)),
-        l = Object.entries(n)
+        l = t.every((e) => i.includes(e)),
+        s = Object.entries(n)
             .filter((e) => {
                 let [n] = e;
                 return null == t ? void 0 : t.includes(n);
             })
             .flatMap((e) => null == e[1] || Object.values(e[1]).every((e) => null == e || '' === e));
-    return !s || l.includes(!0);
+    return !l || s.includes(!0);
 }

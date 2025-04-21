@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(200100),
-    l = n(722770),
+    l = n(200100),
+    s = n(722770),
     a = n(481060),
     o = n(236413),
     c = n(85960),
@@ -58,59 +58,59 @@ function f(e) {
         f = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
         [x] = i.useState(f),
         [b, j] = i.useState(!1),
-        { editingRule: N, createNewEditingRule: _ } = (0, d.V)(),
-        { getDefaultRuleName: v } = c.I6[n],
-        O = !(0, o.Vb)(N) && (null == N ? void 0 : N.triggerType) === n,
-        [C, y] = i.useState(O ? N : x),
+        { editingRule: _, createNewEditingRule: v } = (0, d.V)(),
+        { getDefaultRuleName: O } = c.I6[n],
+        C = !(0, o.Vb)(_) && (null == _ ? void 0 : _.triggerType) === n,
+        [y, N] = i.useState(C ? _ : x),
         I = (0, a.q_F)({
-            opacity: +!O,
-            pointerEvents: O ? 'none' : 'all',
-            config: h(p({}, s.config.stiff), { clamp: !0 })
+            opacity: +!C,
+            pointerEvents: C ? 'none' : 'all',
+            config: h(p({}, l.config.stiff), { clamp: !0 })
         }),
         E = (0, a.q_F)({
-            opacity: +!!O,
-            pointerEvents: O ? 'all' : 'none',
-            config: h(p({}, s.config.stiff), { clamp: !0 }),
+            opacity: +!!C,
+            pointerEvents: C ? 'all' : 'none',
+            config: h(p({}, l.config.stiff), { clamp: !0 }),
             onStart: () => {
-                y(O ? N : x);
+                N(C ? _ : x);
             },
             onRest: () => {
-                y(O ? N : x), j(O);
+                N(C ? _ : x), j(C);
             }
         });
-    return null == N || O
+    return null == _ || C
         ? (0, r.jsxs)('div', {
               className: g.mainRuleContainer,
-              style: { height: O ? 'auto' : '60px' },
+              style: { height: C ? 'auto' : '60px' },
               children: [
-                  (0, r.jsx)(s.animated.div, {
+                  (0, r.jsx)(l.animated.div, {
                       className: g.animatedRuleCardContainer,
                       style: E,
                       children: (0, r.jsx)(u.Z, {
-                          rule: C,
+                          rule: y,
                           persistEdit: b
                       })
                   }),
-                  (0, r.jsx)(s.animated.div, {
+                  (0, r.jsx)(l.animated.div, {
                       className: g.animatedNewRuleContainer,
                       style: I,
                       children: (0, r.jsxs)(a.P3F, {
                           className: g.addAnotherRuleCardContainer,
                           onClick: () => {
-                              _(t, n);
+                              v(t, n);
                           },
                           children: [
                               (0, r.jsx)(a.oFk, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
-                                  color: l.Z.BLUE_345,
+                                  color: s.Z.BLUE_345,
                                   className: g.plusIcon
                               }),
                               (0, r.jsx)(a.Text, {
                                   variant: 'text-md/semibold',
                                   color: 'text-link',
-                                  children: m.NW.format(m.t.dNjRAQ, { ruleName: v() })
+                                  children: m.intl.format(m.t.dNjRAQ, { ruleName: O() })
                               })
                           ]
                       })

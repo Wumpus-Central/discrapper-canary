@@ -43,17 +43,17 @@ function f(e) {
                     color: 'always-white',
                     variant: 'text-sm/normal',
                     className: p.upsellBody,
-                    children: d.NW.string(d.t['yQ0X+f'])
+                    children: d.intl.string(d.t['yQ0X+f'])
                 }),
                 (0, r.jsx)(i.Text, {
                     color: 'always-white',
                     variant: 'text-sm/normal',
-                    children: d.NW.format(d.t['2Sapx8'], { hcArticleUrl: c.Z.getCreatorSupportArticleURL(u.BhN.MEDIA_CHANNEL) })
+                    children: d.intl.format(d.t['2Sapx8'], { hcArticleUrl: c.Z.getCreatorSupportArticleURL(u.BhN.MEDIA_CHANNEL) })
                 })
             ]
         });
     return (0, r.jsx)(o.ZP, {
-        header: d.NW.string(d.t.fW7UqK),
+        header: d.intl.string(d.t.fW7UqK),
         content: g,
         asset: (0, r.jsx)(a.Z, {
             className: p.video,
@@ -61,7 +61,7 @@ function f(e) {
             autoPlay: !0,
             loop: !0
         }),
-        buttonCTA: d.NW.string(d.t.JzJpg4),
+        buttonCTA: d.intl.string(d.t.JzJpg4),
         onClick: () => {
             s.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, h({}, (0, l.hH)(t))),
                 (0, i.ZDy)(async () => {
@@ -93,7 +93,7 @@ function f(e) {
                     };
                 });
         },
-        secondaryButtonCTA: d.NW.string(d.t.WAI6xs),
+        secondaryButtonCTA: d.intl.string(d.t.WAI6xs),
         markAsDismissed: f
     });
 }

@@ -24,16 +24,16 @@ function C(e) {
         x = (0, i.ZP)(),
         v = (0, l.Z)(),
         { mutualFriendsCount: j, mutualFriends: O, mutualGuilds: E } = (0, u.Z)(t),
-        N = !t.bot && null != j && j > 0,
-        I = null != E && E.length > 0;
-    return N || I
+        I = !t.bot && null != j && j > 0,
+        P = null != E && E.length > 0;
+    return I || P
         ? (0, r.jsxs)(h.Z.Overlay, {
               className: y.overlay,
               children: [
-                  I &&
+                  P &&
                       (0, r.jsx)(b.Z, {
                           section: 'MUTUAL_GUILDS',
-                          header: _.NW.string(_.t['4lTDZm']),
+                          header: _.intl.string(_.t['4lTDZm']),
                           listClassName: y.list,
                           items: E.map((e) => {
                               let { guild: n, nick: i } = e;
@@ -50,11 +50,11 @@ function C(e) {
                               );
                           })
                       }),
-                  I && N && (0, r.jsx)(p.Z, { className: y.divider }),
-                  N &&
+                  P && I && (0, r.jsx)(p.Z, { className: y.divider }),
+                  I &&
                       (0, r.jsx)(b.Z, {
                           section: 'MUTUAL_FRIENDS',
-                          header: _.NW.string(_.t['0mTJ3t']),
+                          header: _.intl.string(_.t['0mTJ3t']),
                           listClassName: y.list,
                           onExpand: () => (0, d.Z)(t.id, v),
                           items:

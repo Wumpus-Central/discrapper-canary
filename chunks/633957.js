@@ -1,8 +1,8 @@
-n.d(t, { Z: () => U }), n(388685), n(539854);
+n.d(t, { Z: () => F }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
-    a = n(252258),
-    l = n(442837),
+    l = n(252258),
+    a = n(442837),
     o = n(846519),
     s = n(481060),
     c = n(2052),
@@ -20,11 +20,11 @@ var r = n(200651),
     v = n(914498),
     E = n(208444),
     O = n(429551),
-    N = n(973616),
-    j = n(314897),
-    C = n(592125),
-    S = n(158776),
-    I = n(594174),
+    j = n(973616),
+    C = n(314897),
+    S = n(592125),
+    I = n(158776),
+    N = n(594174),
     T = n(626135),
     P = n(768581),
     A = n(70956),
@@ -35,12 +35,12 @@ var r = n(200651),
     D = n(701488),
     L = n(388032),
     M = n(484608);
-let W = i.memo((e) => {
+let U = i.memo((e) => {
     let { start: t } = e,
         [n, r] = i.useState(0),
-        a = (0, Z.n)(),
-        s = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        c = !1 === a || s;
+        l = (0, Z.n)(),
+        s = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+        c = !1 === l || s;
     return (
         i.useEffect(() => {
             let e = new o.Xp();
@@ -54,44 +54,44 @@ let W = i.memo((e) => {
         (0, O.m)(n)
     );
 });
-W.displayName = 'ActivityRuntimeCounter';
-let U = i.memo(function (e) {
+U.displayName = 'ActivityRuntimeCounter';
+let F = i.memo(function (e) {
     var t, n, o, u;
     let O,
-        { application: A, channelId: Z, guildId: U } = e,
-        { analyticsLocations: F } = (0, g.ZP)(h.Z.ACTIVITY_INSTANCE_EMBED),
-        B = (0, c.O)(),
-        G = (0, l.e7)([C.Z], () => C.Z.getChannel(Z), [Z]),
-        H = (null == G || null == (t = G.isThread) ? void 0 : t.call(G)) ? (null == G ? void 0 : G.parent_id) : Z,
-        V = (0, l.e7)([j.default], () => j.default.getId()),
+        { application: A, channelId: Z, guildId: F } = e,
+        { analyticsLocations: B } = (0, g.ZP)(h.Z.ACTIVITY_INSTANCE_EMBED),
+        G = (0, c.O)(),
+        H = (0, a.e7)([S.Z], () => S.Z.getChannel(Z), [Z]),
+        V = (null == H || null == (t = H.isThread) ? void 0 : t.call(H)) ? (null == H ? void 0 : H.parent_id) : Z,
+        z = (0, a.e7)([C.default], () => C.default.getId()),
         {
-            embeddedActivity: z,
+            embeddedActivity: W,
             currentEmbeddedActivity: K,
             activityLaunchState: Y
-        } = (0, l.cj)(
+        } = (0, a.cj)(
             [d.ZP],
             () => ({
-                embeddedActivity: d.ZP.getEmbeddedActivitiesForChannel(null != H ? H : '').find((e) => e.applicationId === A.id),
+                embeddedActivity: d.ZP.getEmbeddedActivitiesForChannel(null != V ? V : '').find((e) => e.applicationId === A.id),
                 currentEmbeddedActivity: d.ZP.getCurrentEmbeddedActivity(),
-                activityLaunchState: d.ZP.getLaunchState(A.id, null != H ? H : void 0)
+                activityLaunchState: d.ZP.getLaunchState(A.id, null != V ? V : void 0)
             }),
-            [H, A.id]
+            [V, A.id]
         ),
-        X = null == z ? void 0 : z.userIds,
-        q = (0, l.Wu)(
-            [I.default],
+        X = null == W ? void 0 : W.userIds,
+        q = (0, a.Wu)(
+            [N.default],
             () =>
                 Array.from(null != X ? X : [])
-                    .map((e) => I.default.getUser(e))
+                    .map((e) => N.default.getUser(e))
                     .filter(w.lm),
             [X]
         ),
-        Q = (0, l.e7)(
-            [S.Z],
+        Q = (0, a.e7)(
+            [I.Z],
             () => {
                 if (null == X) return null;
                 for (let e of X) {
-                    let t = S.Z.findActivity(e, (e) => e.application_id === A.id);
+                    let t = I.Z.findActivity(e, (e) => e.application_id === A.id);
                     if (null != t) return t;
                 }
                 return null;
@@ -100,28 +100,28 @@ let U = i.memo(function (e) {
         ),
         J = null == Q ? void 0 : Q.details,
         $ = i.useMemo(() => {
-            let e = new N.ZP(A);
+            let e = new j.ZP(A);
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = D.wT), e;
         }, [A]),
         ee = (0, f.s5)({
-            userId: V,
+            userId: z,
             channelId: Z,
             application: $
         }),
-        et = null == z,
+        et = null == W,
         en = (0, R.NL)({
-            embeddedActivity: z,
+            embeddedActivity: W,
             joinability: ee,
             currentEmbeddedActivity: K,
-            channel: G
+            channel: H
         }),
         er = i.useId(),
         ei = null != Y && Y.isLaunching && Y.componentId === er,
-        ea = async () => {
+        el = async () => {
             T.default.track(k.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: A.id,
                 channel_id: Z,
-                channel_type: null == G ? void 0 : G.type,
+                channel_type: null == H ? void 0 : H.type,
                 is_activity_start: et,
                 cta: 'Play'
             }),
@@ -129,27 +129,27 @@ let U = i.memo(function (e) {
                     ? await (0, m.Z)({
                           targetApplicationId: A.id,
                           channelId: Z,
-                          locationObject: B.location,
-                          analyticsLocations: F,
+                          locationObject: G.location,
+                          analyticsLocations: B,
                           componentId: er,
                           commandOrigin: _.bB.ACTIVITY_INSTANCE_EMBED
                       })
                     : await (0, p.Z)({
-                          applicationId: z.applicationId,
+                          applicationId: W.applicationId,
                           activityChannelId: Z,
-                          locationObject: B.location,
-                          analyticsLocations: F,
+                          locationObject: G.location,
+                          analyticsLocations: B,
                           componentId: er,
-                          instanceId: null == z ? void 0 : z.compositeInstanceId,
-                          isContextlessActivity: (null == z ? void 0 : z.location.kind) === a.E.CONTEXTLESS
+                          instanceId: null == W ? void 0 : W.compositeInstanceId,
+                          isContextlessActivity: (null == W ? void 0 : W.location.kind) === l.E.CONTEXTLESS
                       });
         },
-        el = en.disabled ? L.NW.string(L.t.JBnc7O) : L.NW.string(L.t.cX9uLS),
+        ea = en.disabled ? L.intl.string(L.t.JBnc7O) : L.intl.string(L.t.cX9uLS),
         eo = (0, E.z)($, () => {
             T.default.track(k.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: A.id,
                 channel_id: Z,
-                channel_type: null == G ? void 0 : G.type,
+                channel_type: null == H ? void 0 : H.type,
                 cta: 'View'
             });
         }),
@@ -159,16 +159,16 @@ let U = i.memo(function (e) {
             bot: A.bot
         });
     en.disabled && (O = null != (o = en.tooltip) ? o : en.text);
-    let ec = I.default.getCurrentUser(),
+    let ec = N.default.getCurrentUser(),
         eu = q.length,
         ed = null != (u = null == Q || null == (n = Q.timestamps) ? void 0 : n.start) ? u : null == Q ? void 0 : Q.created_at,
-        ep = et ? el : null != J ? J : L.NW.string(L.t.oQn0h4),
+        ep = et ? ea : null != J ? J : L.intl.string(L.t.oQn0h4),
         em = (0, y.r)(Q),
         ef = [
             {
-                label: et ? L.NW.string(L.t.cnBQPD) : L.NW.string(L.t.VJlc0d),
+                label: et ? L.intl.string(L.t.cnBQPD) : L.intl.string(L.t.VJlc0d),
                 trackingArea: v.j_.PLAY,
-                onClick: ea,
+                onClick: el,
                 disabledReason: O,
                 submitting: ei
             }
@@ -199,14 +199,14 @@ let U = i.memo(function (e) {
                                             size: 'xxs',
                                             color: 'currentColor'
                                         }),
-                                        (0, r.jsx)(W, { start: ed })
+                                        (0, r.jsx)(U, { start: ed })
                                     ]
                                 })
                         }),
                     eu > 0 &&
                         (0, r.jsx)(y.K, {
                             activityUsers: q,
-                            guildId: U,
+                            guildId: F,
                             activityText: em.text
                         })
                 ]

@@ -63,7 +63,7 @@ function c(e) {
                       className: a.closeButton,
                       onClick: p,
                       role: 'button',
-                      'aria-label': o.NW.string(o.t.WAI6xs),
+                      'aria-label': o.intl.string(o.t.WAI6xs),
                       children: (0, r.jsx)(l.Dio, {
                           size: 'md',
                           color: 'currentColor',

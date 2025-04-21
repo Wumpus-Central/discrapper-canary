@@ -55,7 +55,7 @@ class h extends (r = a.PureComponent) {
     }
     render() {
         let e,
-            { text: t = d.NW.string(d.t.OpuAlJ), mode: n, hideMessage: r, className: a, buttonLook: o, supportsCopy: _, disabled: h } = this.props,
+            { text: t = d.intl.string(d.t.OpuAlJ), mode: n, hideMessage: r, className: a, buttonLook: o, supportsCopy: _, disabled: h } = this.props,
             m = null != r;
         switch (n) {
             case p.SUCCESS:

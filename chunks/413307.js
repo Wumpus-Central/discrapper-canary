@@ -16,10 +16,10 @@ let d = (e) => {
         guild: t,
         onDismissed: n,
         onClick: () => o.Z.open(t.id, s.pNK.COMMUNITY),
-        message: c.NW.string(c.t['2klD0d']),
+        message: c.intl.string(c.t['2klD0d']),
         trackingSource: s.PsQ.ENABLE_PUBLIC_GUILD_UPSELL_NOTICE,
         type: s.vID.PUBLIC_UPSELL,
         image: u,
-        cta: c.NW.string(c.t.hvVgAQ)
+        cta: c.intl.string(c.t.hvVgAQ)
     });
 };

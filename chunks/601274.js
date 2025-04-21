@@ -12,7 +12,7 @@ function d(e, t) {
     return (0, i.e7)([a.Z], () => a.Z.can(s.Plq.CONNECT, e), [e]) && e.isGuildVocal()
         ? (0, r.jsx)(l.sNh, {
               id: 'open-chat',
-              label: u.NW.string(u.t.ZXxLQk),
+              label: u.intl.string(u.t.ZXxLQk),
               action: () => {
                   o.Z.updateChatOpen(e.id, !0), (0, c.XU)(t.id, e.id);
               }

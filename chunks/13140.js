@@ -1,7 +1,7 @@
 n.d(t, {
     BB: () => U,
-    C$: () => A,
-    H9: () => N,
+    C$: () => N,
+    H9: () => A,
     Kd: () => j,
     d2: () => k,
     dU: () => S
@@ -123,14 +123,14 @@ function T(e) {
     }
     return null != t ? t : null;
 }
-function N(e) {
+function A(e) {
     let [, t, n] = e,
         r = T(e);
     if (null != r) return I(t, r, n);
     let i = (0, u._v)(t);
     return null != i ? I(i.keyCode, i.key, n) : null;
 }
-function A(e) {
+function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MoX.KEYBOARD_KEY,
         r = R(e, t, n);
@@ -227,12 +227,12 @@ function k(e) {
     return null == e
         ? []
         : e.reduce((e, n) => {
-              let r = N(n),
+              let r = A(n),
                   i = _({}, t);
               if (null == r) return e.push(h(_({}, i), { combo: n })), e;
               if (L.test(r) && x(r)) return (t[M(r)] = !0), e.map((e) => ((e[M(r)] = !0), e));
               {
-                  let t = A(r, d.CgE.BROWSER);
+                  let t = N(r, d.CgE.BROWSER);
                   return null != t && (i.keyCode = t), e.push(i), e;
               }
           }, []);
@@ -247,7 +247,7 @@ function j(e) {
         .split('+')
         .map((e) => e.trim().replace('plus', '+'))
         .reduce((e, r) => {
-            let i = A(D(r), t, n);
+            let i = N(D(r), t, n);
             return null != i && e.push([n, i, t]), e;
         }, []);
 }
@@ -258,7 +258,7 @@ function U(e) {
                 let [t, n, r] = e;
                 if (t === d.MoX.KEYBOARD_KEY || t === d.MoX.KEYBOARD_MODIFIER_KEY) {
                     var i;
-                    return null != (i = N(null != r ? [t, n, r] : [t, n])) ? i : 'UNK'.concat(n);
+                    return null != (i = A(null != r ? [t, n, r] : [t, n])) ? i : 'UNK'.concat(n);
                 }
                 return t === d.MoX.MOUSE_BUTTON ? 'mouse'.concat(n) : t === d.MoX.GAMEPAD_BUTTON ? 'gamepad'.concat(n) : 'dev'.concat(t, ',').concat(n);
             })

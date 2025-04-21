@@ -12,19 +12,19 @@ function u(e) {
     return (0, r.jsx)('div', {
         className: c.container,
         children: (0, r.jsx)(a.ZP, {
-            header: s.NW.string(s.t.gCgirq),
-            content: s.NW.string(s.t.fLMZFx),
+            header: s.intl.string(s.t.gCgirq),
+            content: s.intl.string(s.t.fLMZFx),
             asset: (0, r.jsx)(i.Z, {
                 className: c.video,
                 src: 'https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov',
                 autoPlay: !0,
                 loop: !0
             }),
-            buttonCTA: s.NW.string(s.t.BQq86u),
+            buttonCTA: s.intl.string(s.t.BQq86u),
             onClick: () => {
                 l.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
             },
-            secondaryButtonCTA: s.NW.string(s.t.WAI6xs),
+            secondaryButtonCTA: s.intl.string(s.t.WAI6xs),
             markAsDismissed: n
         })
     });

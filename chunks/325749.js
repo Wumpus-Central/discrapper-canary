@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Y }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(200651),
     o = n(192379),
     i = n(120356),
@@ -26,8 +26,8 @@ var r = n(200651),
     C = n(358085),
     w = n(51144),
     S = n(998502),
-    N = n(228488),
-    T = n(145597),
+    T = n(228488),
+    N = n(145597),
     k = n(214629),
     E = n(317381),
     A = n(884338),
@@ -36,20 +36,20 @@ var r = n(200651),
     B = n(981631),
     R = n(388032),
     L = n(951927);
-let W = A.u.SIZE_24;
-function Y(e) {
+let Y = A.u.SIZE_24;
+function M(e) {
     let { applicationId: t, channelId: n } = e,
         i = (0, a.e7)([d.Z], () => d.Z.getApplication(t)),
-        Y = (0, a.e7)([E.ZP], () => E.ZP.getSelfEmbeddedActivities().get(t)),
-        M = (0, a.e7)([_.Z], () => _.Z.getChannel(n)),
-        z = h.Sb.useSetting(),
+        M = (0, a.e7)([E.ZP], () => E.ZP.getSelfEmbeddedActivities().get(t)),
+        z = (0, a.e7)([_.Z], () => _.Z.getChannel(n)),
+        W = h.Sb.useSetting(),
         K = (0, a.Wu)(
             [I.ZP],
             () => {
                 var e;
-                return null == M || null == Y ? [] : Array.from(null != (e = Y.userIds) ? e : []).map((e) => I.ZP.getMember(M.guild_id, e));
+                return null == z || null == M ? [] : Array.from(null != (e = M.userIds) ? e : []).map((e) => I.ZP.getMember(z.guild_id, e));
             },
-            [Y, M]
+            [M, z]
         ),
         V = o.useMemo(() => {
             let e = new Map();
@@ -74,7 +74,7 @@ function Y(e) {
                         children: (0, r.jsx)(
                             'img',
                             {
-                                src: e.getAvatarURL(null == t ? void 0 : t.guild_id, W),
+                                src: e.getAvatarURL(null == t ? void 0 : t.guild_id, Y),
                                 alt: i,
                                 className: L.avatar
                             },
@@ -86,7 +86,7 @@ function Y(e) {
             },
             [V]
         ),
-        F = null == Y ? void 0 : Y.userIds,
+        F = null == M ? void 0 : M.userIds,
         G = (0, a.Wu)(
             [Z.default],
             () =>
@@ -97,7 +97,7 @@ function Y(e) {
         ),
         H = f.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !0 }).enabled,
         X = o.useCallback(() => {
-            let e = (0, T.getPID)();
+            let e = (0, N.getPID)();
             u.Z.setInputLocked(!m.ZP.isInputLocked(e), e);
         }, []),
         q = (0, k.PR)(),
@@ -124,20 +124,20 @@ function Y(e) {
             let { popoutWindow: e, currentDocument: t, rootNode: n } = (0, D.Z)(),
                 [r, i] = o.useState(!1),
                 l = o.useCallback(() => {
-                    null != n && r && (i(!1), (0, N.Pr)(n, t));
+                    null != n && r && (i(!1), (0, T.Pr)(n, t));
                 }, [n, t, r]),
                 a = o.useCallback(() => {
-                    null != n && (r ? l() : (i(!0), (0, N.Dj)(n)));
+                    null != n && (r ? l() : (i(!0), (0, T.Dj)(n)));
                 }, [n, r, l]),
                 c = o.useCallback(() => {
-                    null != n && !(0, N.rB)(n, t) && r && a();
+                    null != n && !(0, T.rB)(n, t) && r && a();
                 }, [n, t, r, a]);
             return (
                 o.useEffect(
                     () => (
-                        null == t || t.addEventListener(N.NO, c),
+                        null == t || t.addEventListener(T.NO, c),
                         () => {
-                            null == t || t.removeEventListener(N.NO, c);
+                            null == t || t.removeEventListener(T.NO, c);
                         }
                     ),
                     [t, c]
@@ -150,16 +150,16 @@ function Y(e) {
             );
         })(),
         eo = o.useRef(null);
-    if (null == i || null == Y) return null;
+    if (null == i || null == M) return null;
     let ei = (0, r.jsx)(s.Z, {
         application: i,
         size: 24,
         className: L.appIcon
     });
     return (
-        z &&
+        W &&
             (ei = (0, r.jsx)(c.DY3, {
-                text: Y.compositeInstanceId,
+                text: M.compositeInstanceId,
                 position: 'bottom',
                 children: ei
             })),
@@ -190,9 +190,9 @@ function Y(e) {
                                 (0, r.jsx)(A.Z, {
                                     renderIcon: !1,
                                     users: G,
-                                    size: W,
+                                    size: Y,
                                     max: 6,
-                                    renderUser: (e) => J(e, M)
+                                    renderUser: (e) => J(e, z)
                                 })
                             ]
                         }),
@@ -206,19 +206,19 @@ function Y(e) {
                                         (0, r.jsx)(g.Z, {
                                             appContext: B.IlC.POPOUT,
                                             applicationId: t,
-                                            channel: M,
+                                            channel: z,
                                             shouldPrioritizeGroupPlusIcon: !0,
-                                            embeddedActivity: Y,
+                                            embeddedActivity: M,
                                             iconClassName: L.inviteButtonIcon,
                                             look: c.zxk.Looks.FILLED,
                                             size: c.zxk.Sizes.TINY,
-                                            buttonText: R.NW.string(R.t['6F9ivr'])
+                                            buttonText: R.intl.string(R.t['6F9ivr'])
                                         }),
                                         q
                                             ? (0, r.jsx)(x.Z, {
                                                   onClick: X,
                                                   iconComponent: c.epB,
-                                                  label: R.NW.string(R.t.mseZsL)
+                                                  label: R.intl.string(R.t.mseZsL)
                                               })
                                             : null,
                                         $

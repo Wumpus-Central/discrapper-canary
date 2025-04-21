@@ -1,11 +1,11 @@
 t.d(n, {
-    Z: () => v,
+    Z: () => f,
     u: () => _
 });
 var r = t(200651);
 t(192379);
-var o = t(120356),
-    i = t.n(o),
+var i = t(120356),
+    o = t.n(i),
     s = t(481060),
     a = t(477415),
     l = t(690786),
@@ -26,19 +26,19 @@ function x(e) {
             (0, r.jsx)(s.Text, {
                 color: 'status-warning',
                 variant: 'text-sm/bold',
-                children: p.NW.formatToMarkdownString(u.Z['ol/ao6'], { dateString: (0, c.Z)(n) })
+                children: p.intl.formatToMarkdownString(u.default['ol/ao6'], { dateString: (0, c.Z)(n) })
             })
         ]
     });
 }
 function _(e) {
-    let { guildId: n, powerup: t, className: o } = e,
+    let { guildId: n, powerup: t, className: i } = e,
         a = (0, l.Z)(n, t);
     return (0, r.jsxs)('div', {
-        className: i()(m.labelContainer, o),
+        className: o()(m.labelContainer, i),
         children: [
             (0, r.jsxs)('div', {
-                className: i()(m.inline, m.inlineBoost),
+                className: o()(m.inline, m.inlineBoost),
                 children: [
                     (0, r.jsx)(s.$Eu, {
                         size: 'sm',
@@ -64,34 +64,34 @@ function _(e) {
                               (0, r.jsx)(s.Text, {
                                   color: 'text-positive',
                                   variant: 'text-sm/bold',
-                                  children: p.NW.string(u.Z.FFLkm5)
+                                  children: p.intl.string(u.default.FFLkm5)
                               })
                           ]
                       }))
         ]
     });
 }
-function v(e) {
-    let { guildId: n, powerup: t, className: o, onHover: c, children: u } = e,
+function f(e) {
+    let { guildId: n, powerup: t, className: i, onHover: c, children: u } = e,
         p = (0, a.Z)(n, t),
         x = (0, l.Z)(n, t),
         _ = null != x || p,
-        v = (null == x ? void 0 : x.ends_at) != null,
-        { onShowMore: f } = (0, d.ZP)(n, t);
+        f = (null == x ? void 0 : x.ends_at) != null,
+        { onShowMore: v } = (0, d.ZP)(n, t);
     return (0, r.jsx)('div', {
         className: m.parentContainer,
         children: (0, r.jsx)(s.kL8, {
             'aria-label': t.title,
-            onClick: f,
+            onClick: v,
             onMouseOver: () => (null == c ? void 0 : c(!0)),
             onMouseLeave: () => (null == c ? void 0 : c(!1)),
-            className: i()(
+            className: o()(
                 m.container,
                 {
                     [m.active]: _,
-                    [m.warning]: v
+                    [m.warning]: f
                 },
-                o
+                i
             ),
             children: u
         })

@@ -93,7 +93,7 @@ function m(e) {
                                 children: [
                                     (0, r.jsx)('div', {
                                         className: h.header,
-                                        children: p.NW.string(p.t.mY3Y39)
+                                        children: p.intl.string(p.t.mY3Y39)
                                     }),
                                     (0, r.jsx)(a.Text, {
                                         id: 'content-warning-popout-label',
@@ -111,12 +111,12 @@ function m(e) {
                                                         className: h.button,
                                                         color: a.zxk.Colors.PRIMARY,
                                                         onClick: v,
-                                                        children: p.NW.string(p.t.fsBWmZ)
+                                                        children: p.intl.string(p.t.fsBWmZ)
                                                     }),
                                                     (0, r.jsx)(a.Text, {
                                                         variant: 'text-xs/normal',
                                                         className: h.buttonHint,
-                                                        children: p.NW.format(p.t['0LzVPT'], {})
+                                                        children: p.intl.format(p.t['0LzVPT'], {})
                                                     })
                                                 ]
                                             }),
@@ -128,12 +128,12 @@ function m(e) {
                                                         onClick: x,
                                                         type: 'submit',
                                                         autoFocus: !0,
-                                                        children: p.NW.string(p.t.KJnHq6)
+                                                        children: p.intl.string(p.t.KJnHq6)
                                                     }),
                                                     (0, r.jsx)(a.Text, {
                                                         variant: 'text-xs/normal',
                                                         className: h.buttonHint,
-                                                        children: p.NW.format(p.t.khjqdH, {})
+                                                        children: p.intl.format(p.t.khjqdH, {})
                                                     })
                                                 ]
                                             })

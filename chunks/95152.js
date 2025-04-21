@@ -70,8 +70,8 @@ function S(e, t) {
     );
 }
 let T = 104,
-    N = 16;
-function A(e) {
+    A = 16;
+function N(e) {
     var t, n, a;
     let { file: s } = e,
         [l, u] = i.useState(),
@@ -111,7 +111,7 @@ function A(e) {
                 });
         }, []);
     let m = (0, c.Z)(h),
-        g = Math.max(16, (N + T - (null != (t = null == m ? void 0 : m.width) ? t : 0)) / 2);
+        g = Math.max(16, (A + T - (null != (t = null == m ? void 0 : m.width) ? t : 0)) / 2);
     return (0, r.jsx)('img', {
         ref: h,
         src: l,
@@ -130,7 +130,7 @@ function A(e) {
 class C extends i.Component {
     render() {
         var e;
-        return this.props.upload.item.platform !== u.ow.WEB ? null : this.props.upload.isImage ? (0, r.jsx)(A, { file: this.props.upload.item.file }) : (0, r.jsx)('div', { className: o()(b.icon, { [b[null != (e = this.props.upload.classification) ? e : '']]: !0 }) });
+        return this.props.upload.item.platform !== u.ow.WEB ? null : this.props.upload.isImage ? (0, r.jsx)(N, { file: this.props.upload.item.file }) : (0, r.jsx)('div', { className: o()(b.icon, { [b[null != (e = this.props.upload.classification) ? e : '']]: !0 }) });
     }
 }
 class R extends i.Component {
@@ -155,7 +155,7 @@ class R extends i.Component {
         let { upload: e, transitionState: t, messageMaxLength: n, disableSpoiler: a } = this.props,
             { hasSpoiler: l } = this.state;
         return (0, r.jsxs)(s.Y0X, {
-            'aria-label': E.NW.string(E.t['3AS4UF']),
+            'aria-label': E.intl.string(E.t['3AS4UF']),
             size: s.CgR.DYNAMIC,
             transitionState: t,
             className: b.uploadModal,
@@ -172,12 +172,12 @@ class R extends i.Component {
                                     children: [
                                         (0, r.jsx)('div', {
                                             className: b.filename,
-                                            children: e.showLargeMessageDialog ? E.NW.formatToPlainString(E.t.QWQxtL, { maxLength: n }) : e.filename
+                                            children: e.showLargeMessageDialog ? E.intl.formatToPlainString(E.t.QWQxtL, { maxLength: n }) : e.filename
                                         }),
                                         e.showLargeMessageDialog
                                             ? (0, r.jsx)('div', {
                                                   className: b.subtitle,
-                                                  children: E.NW.string(E.t.Plcu09)
+                                                  children: E.intl.string(E.t.Plcu09)
                                               })
                                             : null
                                     ]
@@ -189,7 +189,7 @@ class R extends i.Component {
                             children: [
                                 (0, r.jsx)('div', {
                                     className: b.label,
-                                    children: (0, r.jsx)('span', { children: E.NW.string(E.t.ILJuBg) })
+                                    children: (0, r.jsx)('span', { children: E.intl.string(E.t.ILJuBg) })
                                 }),
                                 (0, r.jsx)(s.oil, {
                                     className: o()(b.channelTextAreaUpload, y.marginTop8),
@@ -204,11 +204,11 @@ class R extends i.Component {
                                           children: [
                                               (0, r.jsx)('div', {
                                                   className: b.label,
-                                                  children: (0, r.jsx)('span', { children: E.NW.string(E.t.eOB2eX) })
+                                                  children: (0, r.jsx)('span', { children: E.intl.string(E.t.eOB2eX) })
                                               }),
                                               (0, r.jsx)(s.oil, {
                                                   className: o()(b.channelTextAreaUpload, y.marginTop8),
-                                                  placeholder: E.NW.string(E.t.RNH1jo),
+                                                  placeholder: E.intl.string(E.t.RNH1jo),
                                                   value: this.state.description,
                                                   onChange: (e) => this.setState({ description: e }),
                                                   onKeyDown: (e) => {
@@ -225,7 +225,7 @@ class R extends i.Component {
                                         onChange: (e, t) => this.setState({ hasSpoiler: t }),
                                         children: (0, r.jsx)(s.Text, {
                                             variant: 'text-sm/normal',
-                                            children: E.NW.string(E.t['gsI+xM'])
+                                            children: E.intl.string(E.t['gsI+xM'])
                                         })
                                     })
                             ]
@@ -242,12 +242,12 @@ class R extends i.Component {
                                 look: s.zxk.Looks.LINK,
                                 color: s.zxk.Colors.PRIMARY,
                                 onClick: this.cancel,
-                                children: (0, r.jsx)('span', { children: E.NW.string(E.t['ETE/oK']) })
+                                children: (0, r.jsx)('span', { children: E.intl.string(E.t['ETE/oK']) })
                             }),
                             (0, r.jsx)(s.zxk, {
                                 type: 'submit',
                                 onClick: this.handleSubmit,
-                                children: (0, r.jsx)('span', { children: E.NW.string(E.t['TY+auL']) })
+                                children: (0, r.jsx)('span', { children: E.intl.string(E.t['TY+auL']) })
                             })
                         ]
                     })

@@ -73,13 +73,13 @@ let v = {
             }, [t, null == C ? void 0 : C.popout]),
             x = (0, a.s9z)(a.JQI),
             E = (0, s.e7)([u.Z], () => u.Z.hasLayers()),
-            [I, N] = i.useState(null),
-            P = null == I ? 'animation' : 'LOOP';
+            [I, P] = i.useState(null),
+            w = null == I ? 'animation' : 'LOOP';
         i.useEffect(() => {
-            (null == C ? void 0 : C.popout) == null && N(null);
+            (null == C ? void 0 : C.popout) == null && P(null);
         }, [null == C ? void 0 : C.popout]);
-        let w = i.useCallback((e) => {
-            N(e);
+        let N = i.useCallback((e) => {
+            P(e);
         }, []);
         return (0, r.jsx)(a.yRy, {
             shouldShow: (null == C ? void 0 : C.popout) != null && !(x || E),
@@ -107,17 +107,17 @@ let v = {
                                 (0, r.jsx)('div', {
                                     className: _.lottieContainer,
                                     children: (0, r.jsx)(a.kci, {
-                                        nextScene: P,
+                                        nextScene: w,
                                         className: _.lottie,
                                         sceneSegments: v,
                                         importData: () => n.e('50821').then(n.t.bind(n, 548421, 19)),
-                                        onScenePlay: w,
+                                        onScenePlay: N,
                                         rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
                                     })
                                 }),
                             text: (0, r.jsx)('span', {
                                 className: o()({ [_.textImportant]: (null == C ? void 0 : C.showUnread) === !0 }),
-                                children: y.NW.string(b.Z.yv3DJC)
+                                children: y.intl.string(b.default.yv3DJC)
                             }),
                             selected: l,
                             onClick: j,

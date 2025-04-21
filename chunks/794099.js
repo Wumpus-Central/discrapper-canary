@@ -1,8 +1,8 @@
-r.d(t, {
+n.d(t, {
     F4: () => i,
     vc: () => s
 });
-let n = (0, r(818083).B)({
+let r = (0, n(818083).B)({
         kind: 'user',
         id: '2023-06_unique_username_registration',
         label: 'Unique Username Registration',
@@ -45,5 +45,5 @@ let n = (0, r(818083).B)({
             }
         ]
     }),
-    i = () => n.useExperiment({ location: '83ca1a_3' }, { autoTrackExposure: !1 }),
-    s = () => n.getCurrentConfig({ location: '83ca1a_4' }, { autoTrackExposure: !1 }).suggestions;
+    i = () => r.useExperiment({ location: '83ca1a_3' }, { autoTrackExposure: !1 }),
+    s = () => r.getCurrentConfig({ location: '83ca1a_4' }, { autoTrackExposure: !1 }).suggestions;

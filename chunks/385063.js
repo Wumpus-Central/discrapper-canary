@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    a = n(481060),
-    l = n(100527),
+    l = n(481060),
+    a = n(100527),
     o = n(641360),
     s = n(769409),
     c = n(592125),
@@ -12,25 +12,25 @@ var i = n(442837),
     p = n(388032),
     m = n(677972);
 function f(e) {
-    let { message: t, usernameHook: a, compact: l, isForumPost: o } = e,
+    let { message: t, usernameHook: l, compact: a, isForumPost: o } = e,
         s = (0, u.ZP)(t),
-        f = a(s);
+        f = l(s);
     return (0, i.e7)([c.Z], () => {
         var e, n;
         return null != (n = null == (e = c.Z.getChannel(t.channel_id)) ? void 0 : e.isGroupDM()) && n;
     })
         ? (0, r.jsx)(h, {
               message: t,
-              usernameHook: a,
-              compact: l,
+              usernameHook: l,
+              compact: a,
               isForumPost: o
           })
         : (0, r.jsx)(d.Z, {
-              compact: l,
+              compact: a,
               className: m.channelNameChange,
               icon: n(819373),
               timestamp: t.timestamp,
-              children: p.NW.format(o ? p.t.SOQ4hI : p.t.oItgEx, {
+              children: p.intl.format(o ? p.t.SOQ4hI : p.t.oItgEx, {
                   username: s.nick,
                   usernameHook: f,
                   channelName: t.content
@@ -49,23 +49,23 @@ function h(e) {
         icon: n(819373),
         timestamp: t.timestamp,
         children: g
-            ? p.NW.format(_, {
+            ? p.intl.format(_, {
                   username: f.nick,
                   usernameHook: h,
                   channelName: t.content,
                   editGroupButton: (0, r.jsx)(
-                      a.Text,
+                      l.Text,
                       {
                           tag: 'span',
                           variant: 'text-md/medium',
                           color: 'text-link',
-                          children: p.NW.string(p.t['5Q9+/P'])
+                          children: p.intl.string(p.t['5Q9+/P'])
                       },
                       'edit-group-button-'.concat(t.id)
                   ),
-                  onEditGroup: () => (0, s.B)(t.channel_id, l.Z.GROUP_DM_SYSTEM_MESSAGE_NAME)
+                  onEditGroup: () => (0, s.B)(t.channel_id, a.Z.GROUP_DM_SYSTEM_MESSAGE_NAME)
               })
-            : p.NW.format(p.t.oItgEx, {
+            : p.intl.format(p.t.oItgEx, {
                   username: f.nick,
                   usernameHook: h,
                   channelName: t.content

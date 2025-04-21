@@ -278,7 +278,7 @@ class P extends i.PureComponent {
                             children: e.decoration
                         }))
                       : null != r && (null == d ? void 0 : d.includes(r)) && !t
-                        ? (j = null != p ? p : (0, n.jsx)(l.IGR, { text: M.NW.string(M.t.y2b7CA) }))
+                        ? (j = null != p ? p : (0, n.jsx)(l.IGR, { text: M.intl.string(M.t.y2b7CA) }))
                         : null != u
                           ? (j = u)
                           : null != b && b > 0 && (j = (0, n.jsx)(l.mAB, { count: b }));

@@ -16,7 +16,7 @@ function c(e) {
                 children: [
                     (0, r.jsx)(i.X6q, {
                         variant: 'heading-lg/normal',
-                        children: a.NW.format(a.t.ilLVLi, {})
+                        children: a.intl.format(a.t.ilLVLi, {})
                     }),
                     (0, r.jsx)(i.zxk, {
                         size: i.zxk.Sizes.LARGE,
@@ -24,7 +24,7 @@ function c(e) {
                         onClick: (e) => {
                             e.stopPropagation(), l.Z.toggleVoiceParticipantsHidden(t, !1);
                         },
-                        children: a.NW.string(a.t.kLQySE)
+                        children: a.intl.string(a.t.kLQySE)
                     })
                 ]
             })

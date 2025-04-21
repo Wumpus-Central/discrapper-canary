@@ -31,7 +31,7 @@ function x(e) {
         null == x || null == j)
     )
         return null;
-    let N = (0, r.jsx)(f.Z, { channel: x });
+    let I = (0, r.jsx)(f.Z, { channel: x });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.Z, {
@@ -39,8 +39,8 @@ function x(e) {
                 draftType: g.d.ChannelMessage
             }),
             (0, r.jsx)(d.ZP, {
-                toolbar: N,
-                'aria-label': y.NW.string(y.t.Pwe8tL),
+                toolbar: I,
+                'aria-label': y.intl.string(y.t.Pwe8tL),
                 children: (0, p.ud)({
                     channel: x,
                     parentChannel: v,

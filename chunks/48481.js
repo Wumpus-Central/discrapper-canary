@@ -6,11 +6,11 @@ n.d(t, {
     i7: () => S,
     kI: () => m,
     re: () => v,
-    tU: () => A,
+    tU: () => N,
     u0: () => I,
     uL: () => T,
     xU: () => y,
-    xt: () => N
+    xt: () => A
 }),
     n(415506),
     n(388685),
@@ -96,7 +96,7 @@ function S(e, t, n, r) {
 function T(e, t, n) {
     return t in e.channels || (e.channels[t] = l.p5.create()), n(e.channels[t]);
 }
-function N(e, t) {
+function A(e, t) {
     null == e.versions && (e.versions = c.L.create());
     let n = 0;
     for (let e of t) {
@@ -125,7 +125,7 @@ function N(e, t) {
         cleanupFuncs: a
     };
 }
-function A(e, t) {
+function N(e, t) {
     let n = Object.entries(e);
     if (n.length > t)
         for (

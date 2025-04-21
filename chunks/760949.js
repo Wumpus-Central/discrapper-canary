@@ -1,55 +1,55 @@
 n.d(e, { default: () => k }), n(388685);
-var s = n(200651),
-    r = n(192379),
+var i = n(200651),
+    s = n(192379),
     a = n(120356),
-    i = n.n(a),
-    o = n(481060),
-    l = n(37234),
+    r = n.n(a),
+    l = n(481060),
+    o = n(37234),
     c = n(479531),
     d = n(703656),
-    x = n(695346),
-    u = n(981631),
+    u = n(695346),
+    x = n(981631),
     h = n(332495),
     b = n(388032),
     m = n(381528),
     g = n(20493);
 function k(t) {
     let { transitionState: e, onClose: n } = t,
-        [a, k] = r.useState(!1),
-        [p, N] = r.useState(null),
+        [a, k] = s.useState(!1),
+        [p, f] = s.useState(null),
         C = async () => {
-            N(null), k(!0);
+            f(null), k(!0);
             try {
-                await x.Ex.updateSetting(!1), (0, d.uL)(u.Z5c.FRIENDS), (0, l.xf)(), n();
+                await u.Ex.updateSetting(!1), (0, d.uL)(x.Z5c.FRIENDS), (0, o.xf)(), n();
             } catch (t) {
-                N(new c.Z(t).getAnyErrorMessage());
+                f(new c.Z(t).getAnyErrorMessage());
             } finally {
                 k(!1);
             }
         },
         j = () => {
-            (0, d.uL)(u.Z5c.SETTINGS('family-center')), n();
+            (0, d.uL)(x.Z5c.SETTINGS('family-center')), n();
         };
-    return (0, s.jsxs)(o.Y0X, {
+    return (0, i.jsxs)(l.Y0X, {
         className: m.root,
         transitionState: e,
         children: [
-            (0, s.jsxs)(o.xBx, {
+            (0, i.jsxs)(l.xBx, {
                 separator: !1,
                 className: m.header,
                 children: [
-                    (0, s.jsx)(o.X6q, {
+                    (0, i.jsx)(l.X6q, {
                         variant: 'heading-lg/semibold',
                         className: m.title,
-                        children: b.NW.string(h.Z.VGB30N)
+                        children: b.intl.string(h.default.VGB30N)
                     }),
-                    (0, s.jsx)(o.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-sm/normal',
                         className: m.subtitle,
-                        children: b.NW.format(h.Z['CrZZ+v'], {
+                        children: b.intl.format(h.default['CrZZ+v'], {
                             openSettingsHook: (t, e) =>
-                                (0, s.jsx)(
-                                    o.eee,
+                                (0, i.jsx)(
+                                    l.eee,
                                     {
                                         onClick: j,
                                         children: t
@@ -60,29 +60,29 @@ function k(t) {
                     })
                 ]
             }),
-            (0, s.jsxs)(o.hzk, {
+            (0, i.jsxs)(l.hzk, {
                 children: [
-                    (0, s.jsxs)('div', {
-                        className: i()(m.buttonContainer, g.marginTop20),
+                    (0, i.jsxs)('div', {
+                        className: r()(m.buttonContainer, g.marginTop20),
                         children: [
-                            (0, s.jsx)(o.zxk, {
+                            (0, i.jsx)(l.zxk, {
                                 type: 'submit',
                                 className: g.marginBottom8,
                                 grow: !0,
-                                color: o.zxk.Colors.RED,
+                                color: l.zxk.Colors.RED,
                                 onClick: C,
                                 submitting: a,
-                                children: b.NW.string(h.Z.cSb7U1)
+                                children: b.intl.string(h.default.cSb7U1)
                             }),
-                            (0, s.jsx)(o.zxk, {
+                            (0, i.jsx)(l.zxk, {
                                 grow: !0,
-                                color: o.zxk.Colors.PRIMARY,
+                                color: l.zxk.Colors.PRIMARY,
                                 onClick: n,
-                                children: b.NW.string(b.t['ETE/oK'])
+                                children: b.intl.string(b.t['ETE/oK'])
                             })
                         ]
                     }),
-                    (0, s.jsx)(o.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-danger',
                         children: p

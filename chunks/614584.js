@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => I });
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -64,7 +64,7 @@ function O(e, t) {
 }
 let E = i.memo(function (e) {
     var t;
-    let { baseMessage: n, referencedMessage: E, channel: N, compact: I = !1, referencedUsernameProfile: P, referencedAvatarProfile: S, setPopout: Z, isReplySpineClickable: T, showReplySpine: A } = e,
+    let { baseMessage: n, referencedMessage: E, channel: I, compact: P = !1, referencedUsernameProfile: S, referencedAvatarProfile: Z, setPopout: N, isReplySpineClickable: T, showReplySpine: A } = e,
         w = E.state === h.Y.LOADED ? E.message : void 0,
         R = (0, b.Uj)(w),
         k = (0, c.p)(),
@@ -73,9 +73,9 @@ let E = i.memo(function (e) {
             if (null == w) return null;
             let e = (0, a.Z)(w);
             if (e.type === x.uaV.USER_JOIN) {
-                let t = m.Z.getWelcomeMessageKind(N.guild_id);
+                let t = m.Z.getWelcomeMessageKind(I.guild_id);
                 return (0, o.Rp)(
-                    v.NW.formatToParts(m.Z.getSystemMessageUserJoin(e.id, t), {
+                    v.intl.formatToParts(m.Z.getSystemMessageUserJoin(e.id, t), {
                         username: null != R ? R.nick : e.author.username,
                         usernameHook: (e) => e
                     })
@@ -85,7 +85,7 @@ let E = i.memo(function (e) {
                 return (0, o.Rp)(
                     (0, s.PA)({
                         username: null != R ? R.nick : e.author.username,
-                        guildId: null == N ? void 0 : N.guild_id,
+                        guildId: null == I ? void 0 : I.guild_id,
                         roleSubscriptionData: e.roleSubscriptionData
                     })
                 );
@@ -110,14 +110,14 @@ let E = i.memo(function (e) {
                         username: null == R ? void 0 : R.nick
                     })
                 );
-            else if (e.type === x.uaV.GUILD_DEADCHAT_REVIVE_PROMPT) return '' !== e.content ? e.content : v.NW.string(v.t.wnn1DQ);
+            else if (e.type === x.uaV.GUILD_DEADCHAT_REVIVE_PROMPT) return '' !== e.content ? e.content : v.intl.string(v.t.wnn1DQ);
             if (null != e.content && '' !== e.content) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
                         shouldFilterKeywords: k
                     },
-                    n = e.isFirstMessageInForumPost(N)
+                    n = e.isFirstMessageInForumPost(I)
                         ? O(j({}, t), {
                               noStyleAndInteraction: !0,
                               allowHeading: !0,
@@ -131,8 +131,8 @@ let E = i.memo(function (e) {
                 return (0, g.ZP)(e, n).content;
             }
             return null;
-        }, [w, R, N, M, k]),
-        { isReplyAuthorBlocked: D, isReplyAuthorIgnored: W } = (0, l.cj)(
+        }, [w, R, I, M, k]),
+        { isReplyAuthorBlocked: D, isReplyAuthorIgnored: U } = (0, l.cj)(
             [f.Z],
             () => ({
                 isReplyAuthorBlocked: null != w && f.Z.isBlockedForMessage(w),
@@ -140,40 +140,40 @@ let E = i.memo(function (e) {
             }),
             [w]
         ),
-        U = (0, C.wq)(null == w ? void 0 : w.author.id, N.id),
-        B = (0, C.$3)(n, w, D, W),
-        G = (0, C.Wl)(w, N, P, Z),
-        F = (0, C.rY)(S, Z),
-        H = i.useCallback(() => {
-            Z({
+        B = (0, C.wq)(null == w ? void 0 : w.author.id, I.id),
+        G = (0, C.$3)(n, w, D, U),
+        F = (0, C.Wl)(w, I, S, N),
+        H = (0, C.rY)(Z, N),
+        V = i.useCallback(() => {
+            N({
                 referencedUsernameProfile: !1,
                 referencedAvatarProfile: !1
             });
-        }, [Z]),
-        V = (0, b.Uj)(n);
+        }, [N]),
+        z = (0, b.Uj)(n);
     return (0, r.jsx)(_.Z, {
         repliedAuthor: R,
         baseMessage: n,
-        channel: N,
-        baseAuthor: V,
+        channel: I,
+        baseAuthor: z,
         referencedMessage: E,
         content: L,
-        compact: I,
+        compact: P,
         isReplyAuthorBlocked: D,
-        isReplyAuthorIgnored: W,
-        showAvatarPopout: S,
-        showUsernamePopout: P,
+        isReplyAuthorIgnored: U,
+        showAvatarPopout: Z,
+        showUsernamePopout: S,
         renderPopout: y.Z,
-        onClickAvatar: F,
-        onClickUsername: G,
-        onClickReply: B,
-        onContextMenu: U,
-        onPopoutRequestClose: H,
+        onClickAvatar: H,
+        onClickUsername: F,
+        onClickReply: G,
+        onContextMenu: B,
+        onPopoutRequestClose: V,
         isReplySpineClickable: T,
         showReplySpine: A
     });
 });
-function N(e) {
+function I(e) {
     let { message: t, channel: n, compact: i, setPopout: l, referencedUsernameProfile: o, referencedAvatarProfile: a, replyReference: s, replyMessage: c, isReplySpineClickable: u, showReplySpine: d = !0 } = e;
     return (
         null != s &&

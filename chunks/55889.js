@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(200651),
     i = n(192379),
-    s = n(481060),
-    l = n(941524),
+    l = n(481060),
+    s = n(941524),
     a = n(563115),
     o = n(388032),
     c = n(85761);
@@ -51,7 +51,7 @@ function u(e, t) {
 }
 let m = i.memo(function (e) {
     let { rule: t, onlyRoles: n = !1, onChangeRule: i } = e,
-        m = (0, r.jsx)(l.Z, {
+        m = (0, r.jsx)(s.Z, {
             guildId: t.guildId,
             selectedChannelIds: t.exemptChannels,
             selectedRoleIds: t.exemptRoles,
@@ -71,17 +71,17 @@ let m = i.memo(function (e) {
                 guildId: t.guildId,
                 selectedRoleIds: t.exemptRoles,
                 onChange: (e) => i(u(d({}, t), { exemptRoles: e })),
-                placeholder: o.NW.string(o.t.aFO1Iy),
+                placeholder: o.intl.string(o.t.aFO1Iy),
                 disableEveryoneRole: !0
             })),
-        (0, r.jsxs)(s.xJW, {
+        (0, r.jsxs)(l.xJW, {
             children: [
                 m,
-                (0, r.jsx)(s.Text, {
+                (0, r.jsx)(l.Text, {
                     color: 'header-secondary',
                     variant: 'text-xs/normal',
                     className: c.exemptionHint,
-                    children: o.NW.string(o.t.GKlYaW)
+                    children: o.intl.string(o.t.GKlYaW)
                 })
             ]
         })

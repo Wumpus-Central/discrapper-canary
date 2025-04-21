@@ -1,4 +1,4 @@
-n.d(t, { default: () => Z });
+n.d(t, { default: () => C });
 var r = n(200651),
     c = n(192379),
     o = n(442837),
@@ -22,11 +22,11 @@ var r = n(200651),
     P = n(688401),
     v = n(609051),
     w = n(411384);
-function Z(e) {
+function C(e) {
     var t,
         n,
-        { analyticsLocations: Z } = e,
-        C = (function (e, t) {
+        { analyticsLocations: C } = e,
+        Z = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -45,19 +45,19 @@ function Z(e) {
             }
             return c;
         })(e, ['analyticsLocations']);
-    let N = (0, o.e7)([O.default], () => O.default.getCurrentUser()),
-        z = (0, s.ZP)(),
-        { analyticsLocations: D } = (0, l.ZP)(Z),
-        E = (0, o.e7)([y.Z], () => y.Z.isRedeemingPrize),
-        S = (0, o.e7)([u.Z], () => u.Z.isFetching),
-        M = (0, p.hv)('ClickerGameRedeemPrizeModal');
+    let z = (0, o.e7)([O.default], () => O.default.getCurrentUser()),
+        D = (0, s.ZP)(),
+        { analyticsLocations: E } = (0, l.ZP)(C),
+        S = (0, o.e7)([y.Z], () => y.Z.isRedeemingPrize),
+        M = (0, o.e7)([u.Z], () => u.Z.isFetching),
+        N = (0, p.hv)('ClickerGameRedeemPrizeModal');
     return (
         (0, c.useEffect)(() => {
-            null != N &&
+            null != z &&
                 (async () => {
-                    await (0, j.YM)(N),
+                    await (0, j.YM)(z),
                         (0, f.qg)({
-                            variantsReturnStyle: M,
+                            variantsReturnStyle: N,
                             location: 'ClickerGameRedeemPrizeModal'
                         });
                 })();
@@ -88,13 +88,13 @@ function Z(e) {
                         });
                 }
                 return e;
-            })({}, C)),
+            })({}, Z)),
             (n = n =
                 {
                     children: [
                         (0, r.jsx)('img', {
                             className: x.decorationBackground,
-                            src: 'light' === z ? v : P,
+                            src: 'light' === D ? v : P,
                             alt: ''
                         }),
                         (0, r.jsxs)(i.hzk, {
@@ -108,11 +108,11 @@ function Z(e) {
                                 (0, r.jsx)(i.X6q, {
                                     className: x.header,
                                     variant: 'heading-md/bold',
-                                    children: k.NW.string(m.Z.B0jZ3t)
+                                    children: k.intl.string(m.default.B0jZ3t)
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-md/normal',
-                                    children: k.NW.string(m.Z.aexiND)
+                                    children: k.intl.string(m.default.aexiND)
                                 })
                             ]
                         }),
@@ -120,10 +120,10 @@ function Z(e) {
                             children: [
                                 (0, r.jsx)(i.zxk, {
                                     onClick: () => {
-                                        C.onClose(),
+                                        Z.onClose(),
                                             (0, d.ps)({
                                                 initialSelectedDecorationId: h.MH,
-                                                analyticsLocations: D,
+                                                analyticsLocations: E,
                                                 onClose: () => {
                                                     let e = g.Z.getAllPending(),
                                                         t = (0, b.ED)(e);
@@ -131,14 +131,14 @@ function Z(e) {
                                                 }
                                             });
                                     },
-                                    submitting: E || S,
-                                    children: k.NW.string(k.t['Tna/TU'])
+                                    submitting: S || M,
+                                    children: k.intl.string(k.t['Tna/TU'])
                                 }),
                                 (0, r.jsx)(i.zxk, {
-                                    onClick: C.onClose,
+                                    onClick: Z.onClose,
                                     look: i.zxk.Looks.LINK,
                                     color: i.zxk.Colors.PRIMARY,
-                                    children: k.NW.string(k.t['ETE/oK'])
+                                    children: k.intl.string(k.t['ETE/oK'])
                                 })
                             ]
                         })

@@ -178,7 +178,7 @@ function g(e) {
     }, [v]);
     if (null == b) return null;
     let g = y(u.gc.LIST),
-        N = y(u.gc.APPLICATION);
+        j = y(u.gc.APPLICATION);
     return (0, i.jsxs)(l.MyZ, {
         activeSlide: b.type,
         width: h.Gy,
@@ -223,12 +223,12 @@ function g(e) {
                     className: _.slideContent,
                     style: x,
                     children:
-                        null != N &&
+                        null != j &&
                         (0, i.jsx)(p.Z, {
                             context: t,
-                            application: N.application,
-                            sectionName: N.sectionName,
-                            showFriendsTab: !!N.showFriendsTab
+                            application: j.application,
+                            sectionName: j.sectionName,
+                            showFriendsTab: !!j.showFriendsTab
                         })
                 })
             })

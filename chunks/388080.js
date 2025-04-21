@@ -42,7 +42,7 @@ class E extends o.PureComponent {
             className: O.footer,
             children: [
                 (0, n.jsx)(c.eee, {
-                    'aria-label': y.NW.string(y.t['/84uiI']),
+                    'aria-label': y.intl.string(y.t['/84uiI']),
                     className: O.socialLink,
                     href: (0, _.Z)(f.RK.TWITTER),
                     target: 'blank',
@@ -52,7 +52,7 @@ class E extends o.PureComponent {
                     })
                 }),
                 (0, n.jsx)(c.eee, {
-                    'aria-label': y.NW.string(y.t['h0or/v']),
+                    'aria-label': y.intl.string(y.t['h0or/v']),
                     className: O.socialLink,
                     href: f.fK7.FACEBOOK_URL,
                     target: 'blank',
@@ -62,7 +62,7 @@ class E extends o.PureComponent {
                     })
                 }),
                 (0, n.jsx)(c.eee, {
-                    'aria-label': y.NW.string(y.t['5uVPyc']),
+                    'aria-label': y.intl.string(y.t['5uVPyc']),
                     className: O.socialLink,
                     href: f.fK7.INSTAGRAM_URL,
                     target: 'blank',
@@ -73,7 +73,7 @@ class E extends o.PureComponent {
                 }),
                 (0, n.jsx)(c.Text, {
                     variant: 'text-xs/normal',
-                    children: y.NW.string(y.t.EjVVIy)
+                    children: y.intl.string(y.t.EjVVIy)
                 })
             ]
         });
@@ -160,7 +160,7 @@ class E extends o.PureComponent {
                     children: (0, n.jsxs)('div', {
                         tabIndex: 0,
                         role: 'region',
-                        'aria-label': y.NW.string(y.t.HzBchI),
+                        'aria-label': y.intl.string(y.t.HzBchI),
                         children: [
                             this.renderVideo(),
                             j(e.body, !1, {
@@ -206,12 +206,12 @@ class E extends o.PureComponent {
                     children: [
                         (0, n.jsx)(c.X6q, {
                             variant: 'heading-lg/semibold',
-                            children: y.NW.string(y.t.LRmNAg)
+                            children: y.intl.string(y.t.LRmNAg)
                         }),
                         (0, n.jsx)(c.Text, {
                             variant: 'text-xs/normal',
                             className: O.date,
-                            children: y.NW.format(y.t.Fb8xx8, { date: null != e.date && '' !== e.date ? l()(e.date).toDate() : new Date() })
+                            children: y.intl.format(y.t.Fb8xx8, { date: null != e.date && '' !== e.date ? l()(e.date).toDate() : new Date() })
                         })
                     ]
                 });

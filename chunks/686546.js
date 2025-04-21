@@ -377,7 +377,7 @@ function T(e) {
         ]
     });
 }
-function N(e) {
+function A(e) {
     let t = 48;
     return (0, r.jsxs)('mask', {
         id: e,
@@ -398,7 +398,7 @@ function N(e) {
         ]
     });
 }
-function A(e) {
+function N(e) {
     let t = e.size,
         n = e.size / (l.z3 + l.o),
         r = n * l.z3,
@@ -440,7 +440,7 @@ function C(e) {
     });
 }
 function R(e, t) {
-    let n = A((0, s.UC)(t));
+    let n = N((0, s.UC)(t));
     return (0, r.jsx)('mask', {
         id: e,
         maskContentUnits: 'objectBoundingBox',
@@ -450,7 +450,7 @@ function R(e, t) {
 }
 function P(e, t) {
     let n = (0, s.UC)(t),
-        i = A(n),
+        i = N(n),
         a = i.totalSize,
         o = n.status / 2;
     return (0, r.jsxs)('mask', {
@@ -470,7 +470,7 @@ function P(e, t) {
 }
 function w(e, t) {
     let n = (0, s.UC)(t),
-        i = A(n),
+        i = N(n),
         a = i.totalSize,
         o = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
         c = n.size - n.status - o - n.offset,
@@ -819,7 +819,7 @@ function H(e) {
         ]
     });
 }
-function W(e) {
+function Y(e) {
     let t = 8;
     return (0, r.jsxs)('mask', {
         id: e,
@@ -845,7 +845,7 @@ function W(e) {
         ]
     });
 }
-function Y(e) {
+function W(e) {
     let t = 8;
     return (0, r.jsx)('mask', {
         id: e,
@@ -1146,7 +1146,7 @@ let es = eo,
                     D('svg-mask-squircle'),
                     S('svg-mask-header-bar-badge-top', 0.25),
                     S('svg-mask-header-bar-badge-bottom', 0.75),
-                    N('svg-mask-voice-user-summary-item'),
+                    A('svg-mask-voice-user-summary-item'),
                     L('svg-mask-vertical-fade'),
                     T('svg-mask-panel-button'),
                     O('svg-mask-channel-call-control-button'),
@@ -1246,8 +1246,8 @@ let es = eo,
                     V('svg-mask-status-idle'),
                     Z('svg-mask-status-dnd'),
                     H('svg-mask-status-offline'),
-                    W('svg-mask-status-streaming'),
-                    Y('svg-mask-status-typing'),
+                    Y('svg-mask-status-streaming'),
+                    W('svg-mask-status-typing'),
                     K('svg-mask-status-screenshare'),
                     y('svg-mask-avatar-voice-call-80'),
                     v('svg-mask-avatar-call-icon', s.EF.SIZE_56, 1),

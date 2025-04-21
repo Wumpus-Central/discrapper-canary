@@ -106,7 +106,7 @@ function E(e) {
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
-                                children: f.NW.format(f.t['LC+S+v'], { membersOnline: t.onlineCount })
+                                children: f.intl.format(f.t['LC+S+v'], { membersOnline: t.onlineCount })
                             })
                         ]
                     }),
@@ -117,7 +117,7 @@ function E(e) {
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
-                                children: f.NW.format(f.t.zRl6XV, { count: t.memberCount })
+                                children: f.intl.format(f.t.zRl6XV, { count: t.memberCount })
                             })
                         ]
                     })
@@ -128,7 +128,7 @@ function E(e) {
                 children: (0, r.jsx)(o.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-secondary',
-                    children: f.NW.format(f.t['zb2Q5+'], { createdAtDate: p })
+                    children: f.intl.format(f.t['zb2Q5+'], { createdAtDate: p })
                 })
             })
         ]

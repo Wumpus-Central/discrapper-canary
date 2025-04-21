@@ -20,7 +20,7 @@ class O extends (n = o.ZP.Store) {
         return [
             {
                 categoryId: c.Hk,
-                name: d.NW.string(d.t.Ym2Ri4)
+                name: d.intl.string(d.t.Ym2Ri4)
             },
             ...e
         ];
@@ -30,7 +30,7 @@ class O extends (n = o.ZP.Store) {
         return [
             {
                 categoryId: c.Hk,
-                name: d.NW.string(d.t.QToH29)
+                name: d.intl.string(d.t.QToH29)
             },
             ...e
         ];
@@ -42,7 +42,7 @@ class O extends (n = o.ZP.Store) {
         return u;
     }
     getCategoryName(e) {
-        return e === c.Hk ? d.NW.string(d.t.Ym2Ri4) : E[e];
+        return e === c.Hk ? d.intl.string(d.t.Ym2Ri4) : E[e];
     }
 }
 (a = 'GuildDiscoveryCategoryStore'),

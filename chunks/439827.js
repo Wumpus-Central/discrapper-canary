@@ -13,8 +13,8 @@ function b(e, t) {
         { canCreateExpressions: b, canManageAllExpressions: p } = (0, i.XJ)(r);
     return null != e && b && p
         ? (0, n.jsx)(c.sNh, {
-              id: s.NW.string(s.t['154/bG']),
-              label: s.NW.string(s.t['154/bG']),
+              id: s.intl.string(s.t['154/bG']),
+              label: s.intl.string(s.t['154/bG']),
               action: () => {
                   l.Z.open(e, u.pNK.SOUNDBOARD), null == t || t();
               }

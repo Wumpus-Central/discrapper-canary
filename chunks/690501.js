@@ -30,8 +30,8 @@ function f(e) {
         ariaLabel: b,
         tooltipText: i.useMemo(() => {
             if (t.length > 0) return (0, r.jsx)(l.k, { applications: E });
-            if (n) return u.NW.string(u.t['0eWeam']);
-            if (f) return u.NW.string(u.t.MCgl9f);
+            if (n) return u.intl.string(u.t['0eWeam']);
+            if (f) return u.intl.string(u.t.MCgl9f);
             throw Error('[GameRelationshipButton] Tooltip text should not be undefined.');
         }, [E, t.length, n, f]),
         icon: i.useMemo(() => {

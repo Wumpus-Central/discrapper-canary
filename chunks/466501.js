@@ -20,7 +20,7 @@ function f() {
                 className: y.eligibilityHeaderText,
                 variant: 'heading-lg/extrabold',
                 color: 'header-primary',
-                children: g.NW.string(g.t['3s47iI'])
+                children: g.intl.string(g.t['3s47iI'])
             }),
             (0, n.jsx)('img', {
                 className: y.eligibilityHeaderImage,

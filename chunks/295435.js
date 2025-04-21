@@ -15,7 +15,7 @@ function b(e) {
         r = e.media;
     if (r.loadingState === s.f.LOADED_NOT_FOUND)
         return (0, n.jsx)(c.u, {
-            text: p.NW.string(p.t.UvDfMz),
+            text: p.intl.string(p.t.UvDfMz),
             position: 'bottom',
             align: 'center',
             targetElementRef: t,

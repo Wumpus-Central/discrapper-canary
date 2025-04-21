@@ -33,7 +33,7 @@ let _ = i.memo(function (e) {
         className: g.membersGroup,
         children: [
             (0, r.jsx)(o.nn4, {
-                children: f.NW.format(f.t.UaqbkZ, {
+                children: f.intl.format(f.t.UaqbkZ, {
                     title: p,
                     count: y
                 })

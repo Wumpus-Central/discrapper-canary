@@ -1,8 +1,8 @@
 l.d(n, { i: () => c });
 var t = l(200651),
     r = l(192379),
-    s = l(512100),
-    i = l(906732),
+    i = l(512100),
+    s = l(906732),
     a = l(626135),
     o = l(981631);
 function c(e) {
@@ -16,17 +16,17 @@ function c(e) {
                     var l,
                         t,
                         r = {},
-                        s = Object.keys(e);
-                    for (t = 0; t < s.length; t++) (l = s[t]), n.indexOf(l) >= 0 || (r[l] = e[l]);
+                        i = Object.keys(e);
+                    for (t = 0; t < i.length; t++) (l = i[t]), n.indexOf(l) >= 0 || (r[l] = e[l]);
                     return r;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (t = 0; t < s.length; t++) (l = s[t]), !(n.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(e, l) && (r[l] = e[l]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (t = 0; t < i.length; t++) (l = i[t]), !(n.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(e, l) && (r[l] = e[l]);
             }
             return r;
         })(e, ['appId', 'skuId']);
-    let { analyticsLocations: d } = (0, i.ZP)();
+    let { analyticsLocations: d } = (0, s.ZP)();
     return (
         r.useEffect(() => {
             a.default.track(o.rMx.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
@@ -36,7 +36,7 @@ function c(e) {
             });
         }, [d, n, l]),
         (0, t.jsx)(
-            s.u,
+            i.u,
             (function (e) {
                 for (var n = 1; n < arguments.length; n++) {
                     var l = null != arguments[n] ? arguments[n] : {},

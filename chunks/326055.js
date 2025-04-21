@@ -2,8 +2,8 @@ r.d(t, { default: () => d }), r(388685), r(953529);
 var n = r(200651),
     o = r(192379),
     a = r(481060),
-    i = r(262212),
-    l = r(795338),
+    l = r(262212),
+    i = r(795338),
     s = r(845602),
     c = r(535396),
     u = r(384732);
@@ -84,7 +84,7 @@ function d(e) {
                             (0, n.jsxs)('div', {
                                 className: u.sidebar,
                                 children: [
-                                    (0, n.jsx)(l.m, {
+                                    (0, n.jsx)(i.m, {
                                         className: u.powerupImage,
                                         powerup: p
                                     }),
@@ -107,7 +107,7 @@ function d(e) {
                                                     variant: 'text-sm/semibold',
                                                     children: g
                                                 }),
-                                            (0, n.jsx)(i.ZP, {
+                                            (0, n.jsx)(l.ZP, {
                                                 className: u.footer,
                                                 guildId: d,
                                                 powerup: p,

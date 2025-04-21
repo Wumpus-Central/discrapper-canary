@@ -62,7 +62,7 @@ function O(e) {
     let { userSettingsProto: t } = e;
     null != t && ((E.proto = t), a()('string' != typeof E.proto, 'UserSettingsProto cannot be a string'));
     let { proto: n, isDirty: r, cleanupFuncs: i } = (0, p.xt)(E.proto, _.Z[h.yP.PRELOADED_USER_SETTINGS]);
-    r && N(E),
+    r && A(E),
         (E.proto = n),
         a()('string' != typeof E.proto, 'UserSettingsProto cannot be a string'),
         (E.editInfo.triggeredMigrations = r),
@@ -90,10 +90,10 @@ function T() {
         }
     });
 }
-function N(e) {
+function A(e) {
     null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, h.JC)());
 }
-function A(e) {
+function N(e) {
     let { userSettingsProto: t } = e;
     (E.proto = (0, p.ac)(t)), a()('string' != typeof E.proto, 'UserSettingsProto cannot be a string');
 }
@@ -106,7 +106,7 @@ function C(e) {
     } = e;
     v = !o;
     let s = y[n];
-    i && N(s), r ? ((s.proto = (0, p.re)(s.ProtoClass, s.proto, t)), a()('string' != typeof s.proto, 'UserSettingsProto cannot be a string')) : ((s.proto = t), a()('string' != typeof s.proto, 'UserSettingsProto cannot be a string'), (s.editInfo.loaded = !0), (s.editInfo.loading = !1));
+    i && A(s), r ? ((s.proto = (0, p.re)(s.ProtoClass, s.proto, t)), a()('string' != typeof s.proto, 'UserSettingsProto cannot be a string')) : ((s.proto = t), a()('string' != typeof s.proto, 'UserSettingsProto cannot be a string'), (s.editInfo.loaded = !0), (s.editInfo.loading = !1));
 }
 function R(e) {
     let {
@@ -205,6 +205,6 @@ let L = new D(f.Z, {
     CONNECTION_OPEN: O,
     CONNECTION_CLOSED: I,
     CONNECTION_RESUMED: I,
-    OVERLAY_INITIALIZE: A,
+    OVERLAY_INITIALIZE: N,
     LOGOUT: S
 });

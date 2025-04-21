@@ -21,16 +21,16 @@ var r,
     I = s.Function,
     S = s.MessageChannel,
     T = s.String,
-    N = 0,
-    A = {},
+    A = 0,
+    N = {},
     C = 'onreadystatechange';
 f(function () {
     r = s.location;
 });
 var R = function (e) {
-        if (d(A, e)) {
-            var t = A[e];
-            delete A[e], t();
+        if (d(N, e)) {
+            var t = N[e];
+            delete N[e], t();
         }
     },
     P = function (e) {
@@ -50,15 +50,15 @@ var R = function (e) {
         var t = u(e) ? e : I(e),
             n = p(arguments, 1);
         return (
-            (A[++N] = function () {
+            (N[++A] = function () {
                 l(t, void 0, n);
             }),
-            i(N),
-            N
+            i(A),
+            A
         );
     }),
     (y = function (e) {
-        delete A[e];
+        delete N[e];
     }),
     E
         ? (i = function (e) {

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => m }), n(953529), n(997841);
-var r = n(314877),
-    i = n(81825),
+var i = n(314877),
+    r = n(81825),
     s = n(630388),
-    a = n(46141),
-    l = n(659181),
+    l = n(46141),
+    a = n(659181),
     o = n(255078),
     c = n(981631),
     d = n(474936);
@@ -20,11 +20,11 @@ function u(e, t, n) {
         e
     );
 }
-class m extends i.Z {
+class m extends r.Z {
     static createFromServer(e) {
-        let t = null != e.payment_source ? a.ZP.createFromServer(e.payment_source) : null,
-            n = null != e.sku ? l.Z.createFromServer(e.sku) : null,
-            r = null != e.subscription ? o.Z.createFromServer(e.subscription) : null;
+        let t = null != e.payment_source ? l.ZP.createFromServer(e.payment_source) : null,
+            n = null != e.sku ? a.Z.createFromServer(e.sku) : null,
+            i = null != e.subscription ? o.Z.createFromServer(e.subscription) : null;
         return new m({
             id: e.id,
             createdAt: new Date(e.created_at),
@@ -40,7 +40,7 @@ class m extends i.Z {
             paymentGateway: e.payment_gateway,
             paymentGatewayPaymentId: e.payment_gateway_payment_id,
             flags: e.flags,
-            subscription: r,
+            subscription: i,
             skuId: e.sku_id,
             skuPrice: e.sku_price,
             sku: n,
@@ -83,7 +83,7 @@ class m extends i.Z {
         return this.isGift && Object.values(d.Si).includes(this.skuId);
     }
     get isGuildProductPurchase() {
-        return null != this.sku && (this.sku.productLine === c.POd.GUILD_PRODUCT || s.yE(this.sku.flags, r.l.GUILD_PRODUCT));
+        return null != this.sku && (this.sku.productLine === c.POd.GUILD_PRODUCT || s.yE(this.sku.flags, i.l.GUILD_PRODUCT));
     }
     get isSoftDeletedProduct() {
         var e;

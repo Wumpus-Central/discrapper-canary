@@ -28,9 +28,9 @@ function j(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
     return (0, r.jsx)(E, {
         asset: (0, r.jsx)(g.g, { className: v.image }),
-        header: O.NW.formatToPlainString(_.Z['Zg/m9P'], { perkName: n.title }),
-        content: O.NW.formatToPlainString(_.Z['1EGXSE'], { perkName: n.title }),
-        buttonCTA: O.NW.string(O.t.RzWDqa),
+        header: O.intl.formatToPlainString(_.default['Zg/m9P'], { perkName: n.title }),
+        content: O.intl.formatToPlainString(_.default['1EGXSE'], { perkName: n.title }),
+        buttonCTA: O.intl.string(O.t.RzWDqa),
         onClick: () => (0, f.Z)(t, n.skuId),
         markAsDismissed: i
     });
@@ -47,9 +47,9 @@ function S(e) {
             src: C.Z,
             className: l()(v.image, v.newPerksImage)
         }),
-        header: O.NW.string(_.Z.xyE2AQ),
-        content: i ? O.NW.formatToPlainString(_.Z.IJP4YG, { perks: s }) : O.NW.formatToPlainString(_.Z['6kywho'], { perks: s }),
-        buttonCTA: O.NW.string(O.t.RzWDqa),
+        header: O.intl.string(_.default.xyE2AQ),
+        content: i ? O.intl.formatToPlainString(_.default.IJP4YG, { perks: s }) : O.intl.formatToPlainString(_.default['6kywho'], { perks: s }),
+        buttonCTA: O.intl.string(O.t.RzWDqa),
         onClick: () =>
             i
                 ? (0, f.Z)(t)
@@ -79,9 +79,9 @@ function x(e) {
                       powerup: n[0]
                   })
                 : (0, r.jsx)(g.g, { className: v.image }),
-        header: O.NW.formatToPlainString(_.Z.LmpChI, { guildName: l }),
-        content: n.length > 1 ? O.NW.formatToPlainString(_.Z.wcQOqK, { perks: a }) : O.NW.formatToPlainString(_.Z.ZF8NT0, { perk: a }),
-        buttonCTA: c ? O.NW.string(_.Z.gSxlHR) : O.NW.string(O.t.RzWDqa),
+        header: O.intl.formatToPlainString(_.default.LmpChI, { guildName: l }),
+        content: n.length > 1 ? O.intl.formatToPlainString(_.default.wcQOqK, { perks: a }) : O.intl.formatToPlainString(_.default.ZF8NT0, { perk: a }),
+        buttonCTA: c ? O.intl.string(_.default.gSxlHR) : O.intl.string(O.t.RzWDqa),
         onClick: (e) => (c ? o(e) : (0, f.Z)(t)),
         markAsDismissed: i
     });

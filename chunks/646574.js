@@ -52,15 +52,15 @@ function y(e) {
     });
 }
 function v(e) {
-    return e ? m.NW.string(m.t['5cRA/f']) : m.NW.string(m.t.buV4am);
+    return e ? m.intl.string(m.t['5cRA/f']) : m.intl.string(m.t.buV4am);
 }
 function O(e) {
     let { checked: t, onClick: n, id: a = 'burst-reaction-toggle-button' } = e,
         O = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         I = _.default.getCurrentUser(),
         S = null == I || (0, p.I5)(I) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [T, N] = (0, f.US)(S),
-        [A, C] = i.useState(!1),
+        [T, A] = (0, f.US)(S),
+        [N, C] = i.useState(!1),
         [R, P] = (0, u.q_F)(() => ({})),
         w = (0, s.animated)(u.Pt5);
     function D() {
@@ -74,10 +74,10 @@ function O(e) {
     }
     i.useEffect(() => {
         let e = T === c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (N(h.L.DISMISS), setTimeout(() => C(e), 200));
-    }, [T, N]);
-    let L = A ? m.NW.string(m.t['Osi/u7']) : v(t),
-        x = A ? m.NW.string(m.t.ORK94u) : void 0;
+        e && (A(h.L.DISMISS), setTimeout(() => C(e), 200));
+    }, [T, A]);
+    let L = N ? m.intl.string(m.t['Osi/u7']) : v(t),
+        x = N ? m.intl.string(m.t.ORK94u) : void 0;
     return (0, r.jsxs)(u.DY3, {
         position: 'top',
         text: (0, r.jsx)(y, {
@@ -86,7 +86,7 @@ function O(e) {
             headingText: x
         }),
         color: u.ua7.Colors.BRAND,
-        forceOpen: A,
+        forceOpen: N,
         'aria-label': L,
         tooltipClassName: g.tooltip,
         children: [
@@ -119,7 +119,7 @@ function O(e) {
                         children: (0, r.jsx)(u.Text, {
                             className: g.visuallyHidden,
                             variant: 'text-sm/semibold',
-                            children: m.NW.string(m.t.buV4am)
+                            children: m.intl.string(m.t.buV4am)
                         })
                     })
                 ]

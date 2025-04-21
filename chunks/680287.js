@@ -61,7 +61,7 @@ function _(e, t) {
 class p extends a.Z {
     async uploadFiles(e, t) {
         let { addFilesTo: n } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        super.upload({ name: c.NW.string(c.t.jfKTen) }, t, e);
+        super.upload({ name: c.intl.string(c.t.jfKTen) }, t, e);
         let r = new AbortController();
         try {
             if (((this.files = e), this._aborted || (this._handleStart(() => r.abort()), !(await this.compressAndCheckFileSize())))) return;

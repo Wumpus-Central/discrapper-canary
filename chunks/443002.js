@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(622535),
@@ -22,9 +22,9 @@ var r = n(200651),
     I = n(981631),
     S = n(388032),
     T = n(871146);
-let N = function (e) {
-    let { analyticsLocation: t, guild: n, onClose: N } = e,
-        [A, C] = i.useState(!0),
+let A = function (e) {
+    let { analyticsLocation: t, guild: n, onClose: A } = e,
+        [N, C] = i.useState(!0),
         R = i.useRef(!1),
         P = (0, l.Z)(() => Date.now()),
         { analyticsLocations: w } = (0, c.ZP)(),
@@ -41,7 +41,7 @@ let N = function (e) {
         }, []),
         k = (0, u.Ek)(n.id, 'GuildBoostingMarketing'),
         j = i.useCallback(() => {
-            null == N || N(),
+            null == A || A(),
                 _.default.track(I.rMx.MODAL_DISMISSED, {
                     type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_stack: w,
@@ -50,7 +50,7 @@ let N = function (e) {
                     guild_id: n.id,
                     duration_open_ms: Date.now() - P
                 });
-        }, [N, t, w, P, n.id]),
+        }, [A, t, w, P, n.id]),
         U = i.useCallback(
             (e) => {
                 e &&
@@ -89,9 +89,9 @@ let N = function (e) {
         }, [j]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                null != N &&
+                null != A &&
                     (0, r.jsx)(o.P3F, {
-                        'aria-label': S.NW.string(S.t.cpT0Cg),
+                        'aria-label': S.intl.string(S.t.cpT0Cg),
                         onClick: j,
                         className: T.closeIconWrapper,
                         children: (0, r.jsx)(s.Z, {
@@ -121,7 +121,7 @@ let N = function (e) {
                                             className: T.heading,
                                             color: 'always-white',
                                             variant: 'display-lg',
-                                            children: S.NW.string(S.t.N4sqzM)
+                                            children: S.intl.string(S.t.N4sqzM)
                                         }),
                                         (0, r.jsx)(h.Z, {
                                             guild: n,
@@ -177,7 +177,7 @@ let N = function (e) {
                 }),
                 (0, r.jsx)(g.Z, {
                     guild: n,
-                    isVisible: !A,
+                    isVisible: !N,
                     closeLayer: j
                 })
             ]

@@ -1,4 +1,4 @@
-t.d(n, { default: () => N });
+t.d(n, { default: () => A });
 var r = t(200651);
 t(192379);
 var i = t(481060),
@@ -67,7 +67,7 @@ function E(e) {
         k = (0, y.Z)(n),
         S = (0, d.Z)({
             id: n.id,
-            label: I.NW.string(I.t.gFHI3t)
+            label: I.intl.string(I.t.gFHI3t)
         }),
         T = (0, l.Z)(n),
         E = (0, j.ZP)(n),
@@ -75,7 +75,7 @@ function E(e) {
     return (0, r.jsxs)(i.v2r, {
         navId: 'channel-context',
         onClose: o.Zy,
-        'aria-label': I.NW.string(I.t.Xm41aW),
+        'aria-label': I.intl.string(I.t.Xm41aW),
         onSelect: t,
         children: [
             (0, r.jsx)(i.kSQ, { children: a }),
@@ -105,10 +105,10 @@ function L(e) {
         T = (0, v.Z)(n, t),
         E = (0, m.Z)(n, t),
         L = (0, g.Z)(n, t),
-        N = (0, C.Z)(n),
-        A = (0, d.Z)({
+        A = (0, C.Z)(n),
+        N = (0, d.Z)({
             id: n.id,
-            label: I.NW.string(I.t.gFHI3t)
+            label: I.intl.string(I.t.gFHI3t)
         }),
         U = (0, l.Z)(n),
         M = (0, P.Z)(n, 'list_text_channel_context_menu'),
@@ -118,7 +118,7 @@ function L(e) {
     return (0, r.jsxs)(i.v2r, {
         navId: 'channel-context',
         onClose: o.Zy,
-        'aria-label': I.NW.string(I.t.Xm41aW),
+        'aria-label': I.intl.string(I.t.Xm41aW),
         onSelect: a,
         children: [
             (0, r.jsxs)(
@@ -145,17 +145,17 @@ function L(e) {
             (0, r.jsxs)(
                 i.kSQ,
                 {
-                    children: [S, E, L, N]
+                    children: [S, E, L, A]
                 },
                 'admin-actions'
             ),
             (0, r.jsx)(i.kSQ, { children: U }),
             (0, r.jsx)(i.kSQ, { children: s }),
-            (0, r.jsx)(i.kSQ, { children: A }, 'developer-actions')
+            (0, r.jsx)(i.kSQ, { children: N }, 'developer-actions')
         ]
     });
 }
-let N = (0, c.Z)(
+let A = (0, c.Z)(
     (0, a.Z)(
         function (e) {
             return (0, _.Z)() ? (0, r.jsx)(E, T({}, e)) : (0, r.jsx)(L, T({}, e));

@@ -17,13 +17,13 @@ var r = n(200651),
     _ = n(984370),
     E = n(626135),
     O = n(823379),
-    N = n(415439),
-    y = n(981631),
-    I = n(388032),
-    v = n(872436),
-    C = n(555614);
-function S() {
-    return (S =
+    y = n(415439),
+    I = n(981631),
+    v = n(388032),
+    C = n(872436),
+    S = n(555614);
+function N() {
+    return (N =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -69,9 +69,9 @@ function P(e) {
             });
         },
         icon: n ? s.BRu : s.qJs,
-        className: v.plusIconContainer,
-        iconClassName: v.plusIcon,
-        tooltip: I.NW.string(I.t.qJvTKS),
+        className: C.plusIconContainer,
+        iconClassName: C.plusIcon,
+        tooltip: v.intl.string(v.t.qJvTKS),
         tooltipPosition: 'top'
     });
 }
@@ -86,22 +86,22 @@ function j(e) {
                 if (h) {
                     let e = p.location;
                     (0, d.Z)('guild_id' in e ? e.guild_id : null, e);
-                } else (0, N.Kt)(t, l, c);
+                } else (0, y.Kt)(t, l, c);
         }, [h, c, t, l, p, m]);
     return (0, r.jsx)(s.P3F, {
-        className: a()(v.clickable, { [v.disabledClickable]: m }),
+        className: a()(C.clickable, { [C.disabledClickable]: m }),
         onClick: b,
-        'aria-label': I.NW.formatToPlainString(I.t['zLhr9/'], {
+        'aria-label': v.intl.formatToPlainString(v.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
         }),
         children: (0, r.jsx)(s.ua7, {
-            tooltipContentClassName: v.tooltipContent,
+            tooltipContentClassName: C.tooltipContent,
             text: t.name,
             children: (e) => {
                 var n,
                     i,
-                    l = S(
+                    l = N(
                         {},
                         (function (e) {
                             if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -110,21 +110,21 @@ function j(e) {
                     );
                 return (0, r.jsxs)(
                     'div',
-                    ((n = T({ className: v.iconContainer }, l)),
+                    ((n = T({ className: C.iconContainer }, l)),
                     (i = i =
                         {
                             children: [
                                 (0, r.jsx)(g.Z, {
                                     application: t,
-                                    className: v.iconCard,
+                                    className: C.iconCard,
                                     'aria-hidden': !0,
                                     rendersPlaceholder: !0
                                 }),
                                 f || h
                                     ? (0, r.jsx)(s.$jN, {
                                           type: s.$jN.Type.PULSING_ELLIPSIS,
-                                          className: v.spinner,
-                                          itemClassName: h ? v.spinnerInnerRunning : void 0
+                                          className: C.spinner,
+                                          itemClassName: h ? C.spinnerInnerRunning : void 0
                                       })
                                     : null
                             ]
@@ -150,7 +150,7 @@ function j(e) {
 function A(e) {
     let { frecentApps: t, loadingAppId: n, setLoadingAppId: i, analyticsLocations: l } = e;
     return (0, r.jsx)('div', {
-        className: v.itemContainer,
+        className: C.itemContainer,
         children: t.map((e) =>
             (0, r.jsx)(
                 j,
@@ -173,7 +173,7 @@ let Z = (e) => {
 };
 function x(e) {
     let { bottomDivider: t } = e,
-        { frecentApps: n } = (0, N.ZC)(),
+        { frecentApps: n } = (0, y.ZC)(),
         [l, o] = i.useState(void 0),
         { analyticsLocations: s } = (0, f.ZP)(h.Z.APP_DMS_QUICK_LAUNCHER_FRECENCY),
         c = i.useRef(!1),
@@ -181,20 +181,20 @@ function x(e) {
     return (
         i.useLayoutEffect(() => {
             var e;
-            c.current || ((c.current = !0), E.default.track(y.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids_frecency_v2: null != (e = u.map((e) => e.id)) ? e : [] }));
+            c.current || ((c.current = !0), E.default.track(I.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids_frecency_v2: null != (e = u.map((e) => e.id)) ? e : [] }));
         }, [u]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
-                    className: v.container,
+                    className: C.container,
                     onContextMenu: Z,
                     children: [
                         (0, r.jsxs)(m.Z, {
-                            className: a()(v.headerContainer, C.privateChannelsHeaderContainer),
+                            className: a()(C.headerContainer, S.privateChannelsHeaderContainer),
                             children: [
                                 (0, r.jsx)('span', {
-                                    className: C.headerText,
-                                    children: I.NW.string(I.t.vayAzs)
+                                    className: S.headerText,
+                                    children: v.intl.string(v.t.vayAzs)
                                 }),
                                 (0, r.jsx)(P, { analyticsLocations: s })
                             ]

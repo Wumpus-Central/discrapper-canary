@@ -32,7 +32,7 @@ class h extends (r = a.Component) {
                 (0, i.jsx)(l.P3F, {
                     className: s()(_.streamerModeEnabledBtn, { [_.disabled]: this.props.disableButton }),
                     onClick: this.handleClick,
-                    children: f.NW.string(f.t.Br1ls7)
+                    children: f.intl.string(f.t.Br1ls7)
                 })
             ]
         });

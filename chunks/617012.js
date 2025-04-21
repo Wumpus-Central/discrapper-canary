@@ -112,7 +112,7 @@ function b(e) {
     let { isSelected: t, itemValue: n, onClick: i } = e,
         l = n ? c.allow : c.deny,
         p = n ? a.dz2 : a.Dio,
-        m = n ? s.NW.string(s.t.RzDfSk) : s.NW.string(s.t['6639Oz']),
+        m = n ? s.intl.string(s.t.RzDfSk) : s.intl.string(s.t['6639Oz']),
         b = (0, a.xUy)({
             isSelected: t,
             label: m

@@ -16,7 +16,7 @@ function h(e) {
         h = (0, i.e7)([c.Z], () => c.Z.getGuildId()),
         f = n === d.ULH.MEMBERS;
     return (0, r.jsx)(u.JO, {
-        tooltip: f ? p.NW.string(p.t.Axvx8f) : p.NW.string(p.t.gxChDw),
+        tooltip: f ? p.intl.string(p.t.Axvx8f) : p.intl.string(p.t.gxChDw),
         icon: l.BFJ,
         onClick: () => {
             a.ZP.trackWithMetadata(d.rMx.MEMBER_LIST_TOGGLED, {

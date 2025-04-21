@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685), n(997841);
+n.d(t, { Z: () => N }), n(388685), n(997841);
 var r,
     i = n(442837),
     a = n(570140),
@@ -95,7 +95,7 @@ function T(e) {
         return n === h && i === m && (g = null != r ? r : null), o !== g && (a = p.delete(f.Yn.DEFAULT) || a), null == r ? (a = n === h && i === m ? p.delete(f.Yn.DEFAULT) || a : b(f.Yn.DEFAULT, n) || a) : n === h && i !== m ? (a = p.delete(f.Yn.DEFAULT) || a) : n !== h && r !== c.Z.getChannelId() && (a = b(f.Yn.DEFAULT, n) || a), a || e;
     }, !1);
 }
-class N extends (r = i.ZP.Store) {
+class A extends (r = i.ZP.Store) {
     initialize() {
         this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(c.Z);
     }
@@ -139,8 +139,8 @@ class N extends (r = i.ZP.Store) {
         return null != h && this.isPrioritySpeaker(h, e) && this.isSpeaking(h, e);
     }
 }
-_(N, 'displayName', 'SpeakingStore');
-let A = new N(a.Z, {
+_(A, 'displayName', 'SpeakingStore');
+let N = new A(a.Z, {
     CONNECTION_OPEN: I,
     OVERLAY_INITIALIZE: I,
     SPEAKING: S,

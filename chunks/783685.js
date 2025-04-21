@@ -27,7 +27,7 @@ function p(e) {
             } catch (e) {}
             clearTimeout(b.current), h(!1);
         }, [t, n, m]),
-        y = a.PM.useExperiment({ location: 'AppTryItOutButton()' }).enabled ? d.NW.string(d.t['e+CzPj']) : d.NW.string(d.t.AUM8hY);
+        y = a.PM.useExperiment({ location: 'AppTryItOutButton()' }).enabled ? d.intl.string(d.t['e+CzPj']) : d.intl.string(d.t.AUM8hY);
     return (0, i.jsx)(l.zxk, {
         type: 'submit',
         size: p,

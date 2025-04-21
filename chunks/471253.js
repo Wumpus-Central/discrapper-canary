@@ -24,8 +24,8 @@ var s = n(911969),
     _ = n(922482),
     I = n(192079),
     O = n(706058),
-    N = n(590415),
-    T = n(981631);
+    T = n(590415),
+    N = n(981631);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,9 +55,9 @@ function p(e, t) {
     let n = e.getGuildId();
     return (
         i()(null != n, 'This channel cannot be guildless.'),
-        t && (0, c.yw)(T.rMx.REQUEST_TO_SPEAK_INITIATED, S({}, (0, I.s$)(e))),
+        t && (0, c.yw)(N.rMx.REQUEST_TO_SPEAK_INITIATED, S({}, (0, I.s$)(e))),
         o.tn.patch({
-            url: T.ANM.UPDATE_VOICE_STATE(n),
+            url: N.ANM.UPDATE_VOICE_STATE(n),
             body: {
                 request_to_speak_timestamp: t ? new Date().toISOString() : null,
                 channel_id: e.id
@@ -71,7 +71,7 @@ function A(e, t) {
     return (
         i()(null != n, 'This channel cannot be guildless.'),
         o.tn.patch({
-            url: T.ANM.UPDATE_VOICE_STATE(n, t),
+            url: N.ANM.UPDATE_VOICE_STATE(n, t),
             body: {
                 suppress: !1,
                 request_to_speak_timestamp: new Date().toISOString(),
@@ -87,9 +87,9 @@ function f(e, t) {
     i()(null != r, 'This channel cannot be guildless.');
     let l = d.Z.getVoiceStateForChannel(e.id);
     return (
-        (0, N.gf)(l) !== N.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK || t || (0, c.yw)(T.rMx.PROMOTED_TO_SPEAKER, S({}, (0, I.s$)(e))),
+        (0, T.gf)(l) !== T.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK || t || (0, c.yw)(N.rMx.PROMOTED_TO_SPEAKER, S({}, (0, I.s$)(e))),
         o.tn.patch({
-            url: T.ANM.UPDATE_VOICE_STATE(r),
+            url: N.ANM.UPDATE_VOICE_STATE(r),
             body: S(
                 {
                     suppress: t,
@@ -107,7 +107,7 @@ function R(e) {
     return (
         i()(null != t, 'This channel cannot be guildless.'),
         o.tn.patch({
-            url: T.ANM.UPDATE_VOICE_STATE(t),
+            url: N.ANM.UPDATE_VOICE_STATE(t),
             body: {
                 suppress: !0,
                 channel_id: e.id,
@@ -123,7 +123,7 @@ function P(e, t, n) {
     return (
         i()(null != r, 'This channel cannot be guildless.'),
         o.tn.patch({
-            url: T.ANM.UPDATE_VOICE_STATE(r, t),
+            url: N.ANM.UPDATE_VOICE_STATE(r, t),
             body: {
                 suppress: n,
                 channel_id: e.id
@@ -139,7 +139,7 @@ function C(e, t) {
         i()(null != n, 'This channel cannot be guildless.'),
         P(t, e.id, !0),
         o.tn.patch({
-            url: T.ANM.UPDATE_VOICE_STATE(n, e.id),
+            url: N.ANM.UPDATE_VOICE_STATE(n, e.id),
             body: {
                 suppress: !0,
                 channel_id: t.id,

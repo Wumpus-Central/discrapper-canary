@@ -109,7 +109,7 @@ function b(e) {
                                 (0, r.jsx)(a.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'currentColor',
-                                    children: l.NW.string(l.t.pCMkDQ)
+                                    children: l.intl.string(l.t.pCMkDQ)
                                 })
                             ]
                         })
@@ -146,28 +146,28 @@ let v = function (e) {
             (0, r.jsx)(a.X6q, {
                 className: u.heading,
                 variant: 'heading-xxl/extrabold',
-                children: l.NW.string(l.t.aGdB3N)
+                children: l.intl.string(l.t.aGdB3N)
             }),
             (0, r.jsxs)('div', {
                 className: u.topPerksCards,
                 children: [
                     (0, r.jsx)(y, {
-                        description: l.NW.string(l.t.wOYbTk),
-                        heading: l.NW.string(l.t.G6jZo6),
+                        description: l.intl.string(l.t.wOYbTk),
+                        heading: l.intl.string(l.t.G6jZo6),
                         imgSrc: n ? f : d,
-                        label: h ? l.NW.string(c.Z.na6fmJ) : void 0
+                        label: h ? l.intl.string(c.default.na6fmJ) : void 0
                     }),
                     (0, r.jsx)(y, {
-                        description: l.NW.string(l.t.HTvLGh),
-                        heading: l.NW.string(l.t.IpRQw8),
+                        description: l.intl.string(l.t.HTvLGh),
+                        heading: l.intl.string(l.t.IpRQw8),
                         imgSrc: _,
-                        label: h ? l.NW.string(c.Z.dyNT9v) : void 0
+                        label: h ? l.intl.string(c.default.dyNT9v) : void 0
                     }),
                     (0, r.jsx)(y, {
-                        description: l.NW.string(l.t.yCjoUF),
-                        heading: l.NW.string(l.t['/bX4Ji']),
+                        description: l.intl.string(l.t.yCjoUF),
+                        heading: l.intl.string(l.t['/bX4Ji']),
                         imgSrc: p,
-                        label: h ? l.NW.string(c.Z['8AEGEx']) : void 0
+                        label: h ? l.intl.string(c.default['8AEGEx']) : void 0
                     })
                 ]
             })

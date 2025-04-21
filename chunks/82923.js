@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r,
     i,
-    s = n(748780);
-function l(e, t, n) {
+    l = n(748780);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
@@ -43,7 +43,7 @@ class o {
         this.animation.stop();
     }
     constructor(e) {
-        l(this, 'animation', void 0), (this.animation = e);
+        s(this, 'animation', void 0), (this.animation = e);
     }
 }
 class c {
@@ -57,7 +57,7 @@ class c {
         this._map((e) => e.stop());
     }
     constructor(e) {
-        l(this, 'animations', void 0), (this.animations = e);
+        s(this, 'animations', void 0), (this.animations = e);
     }
 }
 class d {
@@ -71,21 +71,21 @@ class d {
         (this.stopped = !0), this.animations.map((e) => e.stop());
     }
     constructor(e) {
-        l(this, 'animations', void 0), l(this, 'stopped', !1), (this.animations = e);
+        s(this, 'animations', void 0), s(this, 'stopped', !1), (this.animations = e);
     }
 }
 function u(e, t, n) {
     return new o(n(e, a({}, t)));
 }
 let m =
-    ((r = a({}, s.Z)),
+    ((r = a({}, l.Z)),
     (i = i =
         {
             timing: function (e, t) {
-                return u(e, t, s.Z.timing);
+                return u(e, t, l.Z.timing);
             },
             spring: function (e, t) {
-                return u(e, t, s.Z.spring);
+                return u(e, t, l.Z.spring);
             },
             parallel: function (e) {
                 return new c(e);

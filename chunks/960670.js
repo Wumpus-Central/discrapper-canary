@@ -1,13 +1,13 @@
-r.d(t, { default: () => l }), r(388685);
+r.d(t, { default: () => a }), r(388685);
 var n = r(200651),
     o = r(192379),
     c = r(481060),
     i = r(388032),
-    a = r(277841);
-function l(e) {
+    l = r(277841);
+function a(e) {
     var t,
         r,
-        { header: l, body: s, onSubmit: b } = e,
+        { header: a, body: s, onSubmit: b } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -56,9 +56,9 @@ function l(e) {
             return e;
         })(
             {
-                header: l,
-                confirmText: i.NW.string(i.t['26C4oq']),
-                cancelText: i.NW.string(i.t['ETE/oK']),
+                header: a,
+                confirmText: i.intl.string(i.t['26C4oq']),
+                cancelText: i.intl.string(i.t['ETE/oK']),
                 onConfirm: () => {
                     b(null, p);
                 }
@@ -76,10 +76,10 @@ function l(e) {
                         type: c.XZJ.Types.INVERTED,
                         value: p,
                         onChange: () => f((e) => !e),
-                        className: a.checkbox,
+                        className: l.checkbox,
                         children: (0, n.jsx)(c.Text, {
                             variant: 'text-md/normal',
-                            children: i.NW.string(i.t.bq3JXl)
+                            children: i.intl.string(i.t.bq3JXl)
                         })
                     })
                 ]

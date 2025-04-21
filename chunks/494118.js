@@ -19,7 +19,7 @@ function g(e) {
         children: [
             (0, r.jsx)(l.R94, {
                 type: l.geA.DESCRIPTION,
-                children: u.NW.format(u.t['5u+aV1'], { helpdeskArticle: s.Z.getArticleURL(d.BhN.CHANNEL_FOLLOWING) })
+                children: u.intl.format(u.t['5u+aV1'], { helpdeskArticle: s.Z.getArticleURL(d.BhN.CHANNEL_FOLLOWING) })
             }),
             (0, r.jsx)(l.$i$, { className: p.headerDivider }),
             t.length > 0
@@ -43,12 +43,12 @@ function g(e) {
                               }),
                               (0, r.jsx)(l.X6q, {
                                   variant: 'heading-md/semibold',
-                                  children: u.NW.string(u.t.gzuVHx)
+                                  children: u.intl.string(u.t.gzuVHx)
                               }),
                               (0, r.jsx)(l.zxk, {
                                   className: p.emptyStateButton,
                                   onClick: t,
-                                  children: u.NW.string(u.t['ZwSt+f'])
+                                  children: u.intl.string(u.t['ZwSt+f'])
                               })
                           ]
                       });

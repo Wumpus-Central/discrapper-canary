@@ -70,7 +70,7 @@ function f(e) {
 function g(e) {
     let { channel: t } = e;
     return (0, r.jsx)(f, {
-        tooltipText: h.NW.string(h.t.SMKyio),
+        tooltipText: h.intl.string(h.t.SMKyio),
         onClick: () => {
             if ((0, d.Z)(t)) return void (0, u.Us)(t);
             l.default.disconnect();
@@ -80,7 +80,7 @@ function g(e) {
 function m(e) {
     let { channel: t } = e;
     return (0, r.jsx)(f, {
-        tooltipText: h.NW.string(h.t['6vrfgo']),
+        tooltipText: h.intl.string(h.t['6vrfgo']),
         onClick: () => {
             if ((0, c.Z)(t)) return void (0, s.lC)(t);
             l.default.disconnect();

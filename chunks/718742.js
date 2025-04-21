@@ -68,9 +68,9 @@ function m(e) {
                                             (0, n.jsx)('div', {
                                                 className: f.title,
                                                 'aria-hidden': !0,
-                                                children: null != O ? O : h.NW.string(h.t.FpoiHR)
+                                                children: null != O ? O : h.intl.string(h.t.FpoiHR)
                                             }),
-                                            (0, n.jsx)('div', { children: null != g ? g : h.NW.string(h.t['/CidxM']) }),
+                                            (0, n.jsx)('div', { children: null != g ? g : h.intl.string(h.t['/CidxM']) }),
                                             (0, n.jsxs)('div', {
                                                 className: f.captchaContainer,
                                                 children: [

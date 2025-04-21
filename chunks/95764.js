@@ -36,13 +36,13 @@ function g(e) {
                       children: (0, r.jsx)(l.v2r, {
                           navId: 'exit-options',
                           onSelect: () => {},
-                          'aria-label': m.NW.string(m.t['K6/mk5']),
+                          'aria-label': m.intl.string(m.t['K6/mk5']),
                           onClose: t,
                           children: (0, r.jsx)(l.sNh, {
                               id: 'end-voice-event',
                               color: 'danger',
                               action: v,
-                              label: m.NW.string(m.t.qaYzPD),
+                              label: m.intl.string(m.t.qaYzPD),
                               icon: l.k$p
                           })
                       })
@@ -54,14 +54,14 @@ function g(e) {
               children: (e) => {
                   let { onClick: t } = e;
                   return (0, r.jsx)(c.Z, {
-                      label: m.NW.string(m.t['6vrfgo']),
+                      label: m.intl.string(m.t['6vrfgo']),
                       onClick: x,
                       onPopoutClick: t
                   });
               }
           })
         : (0, r.jsx)(c.Z, {
-              label: m.NW.string(m.t['6vrfgo']),
+              label: m.intl.string(m.t['6vrfgo']),
               onClick: n
           });
 }

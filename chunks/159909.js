@@ -62,7 +62,7 @@ function p() {
                 })({}, a)),
                 (i = i =
                     {
-                        label: u.NW.string(u.t.Cuo44O),
+                        label: u.intl.string(u.t.Cuo44O),
                         isActive: e,
                         iconComponent: l.tEF,
                         onClick: o.LT

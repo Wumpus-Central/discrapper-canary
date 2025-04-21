@@ -1,12 +1,12 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(200651);
 n(192379);
 var i = n(331595),
-    s = n(267843);
-function l(e) {
+    l = n(267843);
+function s(e) {
     var t,
         n,
-        l,
+        s,
         a,
         { size: o = 'sm', color: c = '#FF73FA', width: d, height: u } = e,
         m = (function (e, t) {
@@ -18,18 +18,18 @@ function l(e) {
                     var n,
                         r,
                         i = {},
-                        s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ['size', 'color', 'width', 'height']);
-    let g = (0, s.m)(o),
-        p = null != (l = null == g ? void 0 : g.width) ? l : d,
+    let g = (0, l.m)(o),
+        p = null != (s = null == g ? void 0 : g.width) ? s : d,
         h = null != (a = null == g ? void 0 : g.height) ? a : u;
     return (0, r.jsxs)(
         'svg',

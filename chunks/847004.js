@@ -105,12 +105,12 @@ function _(e) {
                 children: [
                     (0, a.jsx)(s.X6q, {
                         variant: 'heading-md/semibold',
-                        children: m.NW.format(m.t['5WZ9Cg'], { tierName: t.listings[0].name })
+                        children: m.intl.format(m.t['5WZ9Cg'], { tierName: t.listings[0].name })
                     }),
                     (0, a.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         className: x.bodyText,
-                        children: m.NW.format(m.t['5i7UhY'], { price: (0, o.T4)(t.listings[0].price_tier, d.pKx.USD) })
+                        children: m.intl.format(m.t['5i7UhY'], { price: (0, o.T4)(t.listings[0].price_tier, d.pKx.USD) })
                     }),
                     l.map((e, t) =>
                         (0, a.jsx)(
@@ -130,7 +130,7 @@ function _(e) {
                 onClick: () => {
                     n(f(u({}, t), { listings: [f(u({}, t.listings[0]), { price_tier: l[i] })] }));
                 },
-                children: m.NW.string(m.t['1W7mCg'])
+                children: m.intl.string(m.t['1W7mCg'])
             })
         ]
     });

@@ -21,11 +21,11 @@ let g = (e) => {
         g = (0, s.ZP)(n),
         v = null != (t = n.getGuildId()) ? t : void 0,
         j = (0, p.Z)(g),
-        N = (0, i.e7)([b.Z], () => b.Z.getChannel(n.channel_id)),
-        y = l.useMemo(() => (0, o.Z)(n), [n]),
-        { content: O } = (0, x.Z)(y, { hideSimpleEmbedContent: !1 }),
-        Z = l.useCallback(() => {
-            let { leadingIcon: e, trailingIcon: t } = (0, m.f)(n, O, !1, !1, '', {
+        y = (0, i.e7)([b.Z], () => b.Z.getChannel(n.channel_id)),
+        O = l.useMemo(() => (0, o.Z)(n), [n]),
+        { content: Z } = (0, x.Z)(O, { hideSimpleEmbedContent: !1 }),
+        I = l.useCallback(() => {
+            let { leadingIcon: e, trailingIcon: t } = (0, m.f)(n, Z, !1, !1, '', {
                 leadingIconClass: f.attachmentIcon,
                 trailingIconClass: f.attachmentIcon,
                 iconSize: h.WW
@@ -36,13 +36,13 @@ let g = (e) => {
                     e,
                     (0, r.jsx)(d.ZP, {
                         message: n,
-                        content: O
+                        content: Z
                     }),
                     t
                 ]
             });
-        }, [n, O]);
-    return null == N
+        }, [n, Z]);
+    return null == y
         ? null
         : (0, r.jsxs)('div', {
               className: f.container,
@@ -50,17 +50,17 @@ let g = (e) => {
                   (0, r.jsx)(a.X6q, {
                       className: f.header,
                       variant: 'heading-sm/semibold',
-                      children: _.NW.string(_.t.iouM3d)
+                      children: _.intl.string(_.t.iouM3d)
                   }),
                   (0, r.jsx)(a.Ttm, {
                       className: f.messagePreviewContainer,
                       children: (0, r.jsx)(c.Z, {
-                          childrenMessageContent: Z(),
+                          childrenMessageContent: I(),
                           childrenHeader: (0, r.jsx)(u.ZP, {
                               message: n,
-                              channel: N,
+                              channel: y,
                               author: g,
-                              guildId: N.guild_id
+                              guildId: y.guild_id
                           }),
                           disableInteraction: !0,
                           authorHasGradientRole: j,

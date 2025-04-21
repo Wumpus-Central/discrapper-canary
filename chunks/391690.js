@@ -113,12 +113,12 @@ function T(e) {
     let n = new Set(r.installationPaths);
     n.delete(t), (r.installationPaths = n), E(t), y(t);
 }
-function N(e) {
+function A(e) {
     let { path: t, label: n, isDefault: i } = e;
     if (!r.installationPaths.has(t)) return !1;
     null != n && '' !== n && r.pathLabels[t] !== n && b(t, n), i && r.defaultInstallationPath !== t && (r.defaultInstallationPath = t);
 }
-function A(e) {
+function N(e) {
     let { metadataPayload: t } = e;
     for (let e in t) g(e, t[e]);
 }
@@ -156,7 +156,7 @@ class C extends (i = a.ZP.PersistedStore) {
     getLabelFromPath(e) {
         var t, n;
         return e === m
-            ? u.NW.string(u.t.VdDrjo)
+            ? u.intl.string(u.t.VdDrjo)
             : null !=
                 (n =
                     null != (t = s.Z.fileManager.basename(e))
@@ -176,7 +176,7 @@ let R = new C(o.Z, {
     DISPATCH_APPLICATION_CANCEL: O,
     INSTALLATION_LOCATION_ADD: S,
     INSTALLATION_LOCATION_REMOVE: T,
-    INSTALLATION_LOCATION_UPDATE: N,
-    INSTALLATION_LOCATION_FETCH_METADATA: A,
+    INSTALLATION_LOCATION_UPDATE: A,
+    INSTALLATION_LOCATION_FETCH_METADATA: N,
     DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: v
 });

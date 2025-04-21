@@ -1,14 +1,14 @@
 n.d(t, {
-    ED: () => N,
-    fO: () => E,
-    qp: () => j
+    ED: () => x,
+    fO: () => j,
+    qp: () => C
 }),
     n(388685);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(512969),
-    a = n(442837),
-    l = n(704215),
+    l = n(442837),
+    a = n(704215),
     o = n(540059),
     c = n(605236),
     d = n(703656),
@@ -22,110 +22,110 @@ var r = n(200651),
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
 }
-let N = (e) =>
-        (0, r.jsx)(
+let x = (e) =>
+        (0, i.jsx)(
             g.tE,
             _(
                 {
-                    titleText: b.NW.string(b.t.KnWRQU),
-                    descriptionText: b.NW.format(b.t['xYx+WV'], { quantity: 200 }),
-                    ctaText: b.NW.string(b.t.v4HbPz),
+                    titleText: b.intl.string(b.t.KnWRQU),
+                    descriptionText: b.intl.format(b.t['xYx+WV'], { quantity: 200 }),
+                    ctaText: b.intl.string(b.t.v4HbPz),
                     renderTail: !0
                 },
                 e
             )
         ),
-    x = [p.Z5c.ME, p.Z5c.COLLECTIBLES_SHOP, p.Z5c.NITRO_HOME],
-    E = (e) => {
-        var { onClose: t, onCtaClick: n, targetElementRef: l, isGuildBarScrolling: c, children: m } = e,
+    E = [p.Z5c.ME, p.Z5c.COLLECTIBLES_SHOP, p.Z5c.NITRO_HOME],
+    j = (e) => {
+        var { onClose: t, onCtaClick: n, targetElementRef: a, isGuildBarScrolling: c, children: m } = e,
             h = (function (e, t) {
                 if (null == e) return {};
                 var n,
-                    r,
-                    i = (function (e, t) {
+                    i,
+                    r = (function (e, t) {
                         if (null == e) return {};
                         var n,
-                            r,
-                            i = {},
+                            i,
+                            r = {},
                             s = Object.keys(e);
-                        for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                        return i;
+                        for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var s = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
-                return i;
+                return r;
             })(e, ['onClose', 'onCtaClick', 'targetElementRef', 'isGuildBarScrolling', 'children']);
-        let f = i.useRef(null),
-            [b, j] = i.useState(22),
-            C = i.useRef(null),
-            O = (0, o.Q3)('VirtualCurrency: DiscoveryOnboardingCoachmark'),
-            S = i.useCallback(
+        let f = r.useRef(null),
+            [b, C] = r.useState(22),
+            O = r.useRef(null),
+            S = (0, o.Q3)('VirtualCurrency: DiscoveryOnboardingCoachmark'),
+            v = r.useCallback(
                 (e) => {
-                    if (O) {
-                        let t = window.innerHeight - ((0, g.t4)() + E.COACHMARK_VERTICAL_OFFSET);
+                    if (S) {
+                        let t = window.innerHeight - ((0, g.t4)() + j.COACHMARK_VERTICAL_OFFSET);
                         return e.top <= t;
                     }
                     return !0;
                 },
-                [O]
+                [S]
             ),
-            v = (0, a.e7)([u.Z], () => u.Z.getExpandedFolders().size);
-        i.useEffect(() => {
+            T = (0, l.e7)([u.Z], () => u.Z.getExpandedFolders().size);
+        r.useEffect(() => {
             null !== f.current && f.current.updateElementPositionWithPolling();
-        }, [v]),
-            i.useEffect(() => {
+        }, [T]),
+            r.useEffect(() => {
                 null !== f.current && f.current.updateElementPosition();
             }, [c]);
-        let T = (0, s.TH)().pathname,
-            I = i.useCallback(() => {
-                x.includes(T) || (0, d.uL)(p.Z5c.ME), n();
-            }, [T, n]),
-            y = i.useCallback(
+        let I = (0, s.TH)().pathname,
+            N = r.useCallback(() => {
+                E.includes(I) || (0, d.uL)(p.Z5c.ME), n();
+            }, [I, n]),
+            y = r.useCallback(
                 (e) => {
                     let t = Math.floor(e.width / 2) - 2;
-                    b !== t && j(t);
+                    b !== t && C(t);
                 },
                 [b]
             );
-        return (0, r.jsx)(g.WS, {
+        return (0, i.jsx)(g.WS, {
             positionControlRef: f,
-            targetElementRef: l,
-            coachmarkRef: C,
-            calculateVisibility: S,
+            targetElementRef: a,
+            coachmarkRef: O,
+            calculateVisibility: v,
             onGetTargetElementDimensions: y,
             defaultCoachmarkPosition: 'bottom',
-            popoutElement: (0, r.jsx)(
-                N,
+            popoutElement: (0, i.jsx)(
+                x,
                 _(
                     {
                         onClose: t,
-                        onCtaClick: I,
+                        onCtaClick: N,
                         tailLeftOffset: b,
-                        coachmarkRef: C
+                        coachmarkRef: O
                     },
                     h
                 )
@@ -134,24 +134,24 @@ let N = (e) =>
             children: m
         });
     };
-E.COACHMARK_VERTICAL_OFFSET = 10;
-let j = (e) => {
-    let { isVirtualCurrencyEnabled: t, discoveryButtonRef: n, scrollToBottom: r } = e,
+j.COACHMARK_VERTICAL_OFFSET = 10;
+let C = (e) => {
+    let { isVirtualCurrencyEnabled: t, discoveryButtonRef: n, scrollToBottom: i } = e,
         s = (0, o.Q3)('VirtualCurrency: DiscoveryOnboardingCoachmark'),
-        a = i.useCallback(() => {
+        l = r.useCallback(() => {
             if (s && null !== n.current) {
                 let e = (0, g.t4)();
-                n.current.getBoundingClientRect().bottom > window.innerHeight - e && r();
+                n.current.getBoundingClientRect().bottom > window.innerHeight - e && i();
             }
-        }, [s, n, r]),
+        }, [s, n, i]),
         { shouldShow: d, closeCoachmarkIfOpen: u } = (0, g.M)({
             onboardingCoachmarkType: 'discover',
-            onShowCoachmarkHandler: a
+            onShowCoachmarkHandler: l
         }),
-        b = i.useCallback(
+        b = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'CLOSE';
-                (0, c.EW)(l.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
+                (0, c.EW)(a.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
                     dismissAction: h.L.INDIRECT_ACTION,
                     groupName: h.R.VIRTUAL_CURRENCY_ONBOARDING
                 }),
@@ -159,8 +159,8 @@ let j = (e) => {
             },
             [u]
         ),
-        _ = i.useCallback(() => u('CTA_CLICK'), [u]),
-        N = i.useCallback(() => {
+        _ = r.useCallback(() => u('CTA_CLICK'), [u]),
+        x = r.useCallback(() => {
             b('CTA_CLICK'),
                 (0, m.Y)({
                     pageType: p.ZY5.GUILD_LIST,
@@ -175,7 +175,7 @@ let j = (e) => {
               closeCoachmarkIfOpen: u,
               onClose: b,
               onCtaClick: _,
-              onDiscoveryButtonClick: N
+              onDiscoveryButtonClick: x
           }
         : {
               shouldShow: !1,

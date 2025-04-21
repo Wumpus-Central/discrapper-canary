@@ -21,19 +21,19 @@ var r = n(200651),
 function S(e) {
     let { handleStepChange: t, handleClose: n } = e,
         { selectedPlan: l, selectedSkuId: S, step: E } = (0, h.JL)(),
-        { setSelectedGiftingPromotionReward: y, selectedGiftingPromotionReward: I, claimableRewards: N } = (0, x.wD)(),
-        b = (0, o.e7)([p.default], () => p.default.getCurrentUser());
+        { setSelectedGiftingPromotionReward: y, selectedGiftingPromotionReward: I, claimableRewards: b } = (0, x.wD)(),
+        T = (0, o.e7)([p.default], () => p.default.getCurrentUser());
     i.useEffect(() => {
-        let e = null != N && N.length > 0;
-        null == I && e && y(N[0]);
-    }, [N, I, y]);
-    let T = (e) => {
+        let e = null != b && b.length > 0;
+        null == I && e && y(b[0]);
+    }, [b, I, y]);
+    let P = (e) => {
             let t = e.skuId;
             return (0, r.jsx)(
                 d.Z,
                 {
                     skuId: t,
-                    price: L.NW.string(L.t.QQsaCQ),
+                    price: L.intl.string(L.t.QQsaCQ),
                     isSelected: t === (null == I ? void 0 : I.skuId),
                     onSelect: () => y(e),
                     className: g.giftSelectItem
@@ -41,27 +41,27 @@ function S(e) {
                 t
             );
         },
-        P = (0, c.Q3)('PremiumPaymentFreeSKUSelectStep');
+        M = (0, c.Q3)('PremiumPaymentFreeSKUSelectStep');
     s()(null != l, 'Expected plan to selected'), s()(null != S, 'Expected selectedSkuId'), s()(null != E, 'Step should be set');
-    let M = null == N ? void 0 : N.map((e) => T(e)),
-        O =
-            null != I && null != b
+    let O = null == b ? void 0 : b.map((e) => P(e)),
+        Z =
+            null != I && null != T
                 ? (0, r.jsx)(C.Z, {
                       avatarDecorationOverride: { asset: I.assetId },
-                      user: b,
+                      user: T,
                       guildId: null,
                       avatarSize: a.EFr.SIZE_152
                   })
                 : null,
-        Z = (0, r.jsx)(j.O3, {
+        v = (0, r.jsx)(j.O3, {
             children: (0, r.jsx)(a.mzw, {
                 className: g.modalFooter,
                 children: (0, r.jsx)(u.y, {
                     onStepChange: (e) => {
-                        null != b &&
+                        null != T &&
                             null != I &&
                             _.default.track(m.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
-                                user_id: b.id,
+                                user_id: T.id,
                                 reward_sku_id: I.skuId
                             }),
                             t(e);
@@ -74,12 +74,12 @@ function S(e) {
                 })
             })
         }),
-        v = (0, r.jsx)(a.X6q, {
+        N = (0, r.jsx)(a.X6q, {
             variant: 'heading-lg/bold',
             color: 'header-primary',
-            children: L.NW.string(L.t['Rp0+ZG'])
+            children: L.intl.string(L.t['Rp0+ZG'])
         });
-    return P
+    return M
         ? (0, r.jsxs)('div', {
               className: g.container,
               children: [
@@ -88,7 +88,7 @@ function S(e) {
                           direction: 'horizontal',
                           justify: 'space-between',
                           align: 'center',
-                          children: [v, (0, r.jsx)(a.olH, { onClick: n })]
+                          children: [N, (0, r.jsx)(a.olH, { onClick: n })]
                       })
                   }),
                   (0, r.jsx)(a.hzk, {
@@ -97,16 +97,16 @@ function S(e) {
                           align: 'center',
                           padding: { top: 24 },
                           children: [
-                              O,
+                              Z,
                               (0, r.jsx)(a.Kqy, {
                                   gap: 8,
                                   padding: { top: 12 },
-                                  children: M
+                                  children: O
                               })
                           ]
                       })
                   }),
-                  Z
+                  v
               ]
           })
         : (0, r.jsxs)('div', {
@@ -117,9 +117,9 @@ function S(e) {
                       children: [
                           (0, r.jsx)('div', {
                               className: g.header,
-                              children: v
+                              children: N
                           }),
-                          M
+                          O
                       ]
                   }),
                   (0, r.jsx)(a.olH, {
@@ -128,9 +128,9 @@ function S(e) {
                   }),
                   (0, r.jsx)('div', {
                       className: g.bodyColumnRight,
-                      children: O
+                      children: Z
                   }),
-                  Z
+                  v
               ]
           });
 }

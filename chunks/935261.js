@@ -26,7 +26,7 @@ function m(e) {
         u = null != i ? i : c;
     if (null == u || !p.al.has(u)) return null;
     let m = null != n,
-        b = m ? (u === p.YE.XBOX ? h.NW.string(h.t.UjA4HR) : h.NW.string(h.t.QCw1oa)) : u === p.YE.XBOX ? h.NW.format(h.t['ynEs/f'], {}) : h.NW.format(h.t.TZ17Bg, {});
+        b = m ? (u === p.YE.XBOX ? h.intl.string(h.t.UjA4HR) : h.intl.string(h.t.QCw1oa)) : u === p.YE.XBOX ? h.intl.format(h.t['ynEs/f'], {}) : h.intl.format(h.t.TZ17Bg, {});
     return (0, r.jsxs)('div', {
         className: l()(f.root, m ? f.connecting : f.connected),
         children: [

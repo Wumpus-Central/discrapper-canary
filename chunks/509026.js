@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    s = n(481060),
-    l = n(471613),
+    l = n(481060),
+    s = n(471613),
     a = n(29605),
     o = n(345861),
     c = n(723047),
@@ -54,29 +54,29 @@ function g(e, t) {
 }
 function p(e) {
     let { guild: t } = e,
-        p = (0, i.e7)([l.Z], () => l.Z.isUploadingEmoji()),
+        p = (0, i.e7)([s.Z], () => s.Z.isUploadingEmoji()),
         h = (0, d.Z)(t.id),
         f = t.getMaxRoleSubscriptionEmojiSlots() - h.length,
         x = (0, c.mY)();
-    return (0, r.jsxs)(s.hjN, {
-        title: u.NW.string(u.t.LDT0Q0),
+    return (0, r.jsxs)(l.hjN, {
+        title: u.intl.string(u.t.LDT0Q0),
         disabled: x,
         children: [
-            (0, r.jsx)(s.R94, {
-                type: s.R94.Types.DESCRIPTION,
+            (0, r.jsx)(l.R94, {
+                type: l.R94.Types.DESCRIPTION,
                 disabled: x,
-                children: u.NW.format(u.t.H9Jxp6, { maxSlots: t.getMaxRoleSubscriptionEmojiSlots() })
+                children: u.intl.format(u.t.H9Jxp6, { maxSlots: t.getMaxRoleSubscriptionEmojiSlots() })
             }),
-            (0, r.jsx)(s.LZC, { size: 16 }),
+            (0, r.jsx)(l.LZC, { size: 16 }),
             (0, r.jsx)(o.Z, {
                 onChange: (e, i) => {
                     null != e &&
                         null != i &&
-                        (0, s.ZDy)(async () => {
-                            let { CreateEmojiWithRolesModal: s } = await n.e('9007').then(n.bind(n, 604623));
+                        (0, l.ZDy)(async () => {
+                            let { CreateEmojiWithRolesModal: l } = await n.e('9007').then(n.bind(n, 604623));
                             return (n) =>
                                 (0, r.jsx)(
-                                    s,
+                                    l,
                                     g(m({}, n), {
                                         data: e,
                                         file: i,
@@ -85,13 +85,13 @@ function p(e) {
                                 );
                         });
                 },
-                buttonCTA: u.NW.string(u.t.AuPtoq),
+                buttonCTA: u.intl.string(u.t.AuPtoq),
                 submitting: p,
                 disabled: x || p || 0 === f
             }),
-            (0, r.jsx)(s.LZC, { size: 24 }),
+            (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(a.L3, {
-                title: u.NW.string(u.t.lu1ZQ0),
+                title: u.intl.string(u.t.lu1ZQ0),
                 maxSlots: t.getMaxRoleSubscriptionEmojiSlots(),
                 emojiCount: h.length
             }),
@@ -99,7 +99,7 @@ function p(e) {
                 guild: t,
                 emojis: h,
                 onEdit: (e, t) => {
-                    (0, s.ZDy)(async () => {
+                    (0, l.ZDy)(async () => {
                         let { UpdateEmojiRolesModal: i } = await n.e('9007').then(n.bind(n, 604623));
                         return (n) =>
                             (0, r.jsx)(

@@ -19,11 +19,11 @@ var r = n(200651),
     m = n(888496),
     E = n(753194),
     b = n(749681),
-    N = n(258971),
-    A = n(598077),
-    _ = n(671533),
-    f = n(49012),
-    y = n(981631),
+    A = n(258971),
+    _ = n(598077),
+    f = n(671533),
+    y = n(49012),
+    N = n(981631),
     h = n(856651),
     v = n(49898),
     P = n(388032),
@@ -76,32 +76,32 @@ function S(e) {
     let c,
         a,
         u,
-        { connectedAccount: b, theme: N, locale: A, userId: v, className: S, showMetadata: g, showInvisibleIcon: C } = e;
+        { connectedAccount: b, theme: A, locale: _, userId: v, className: S, showMetadata: g, showInvisibleIcon: C } = e;
     null == g && (g = !0);
     let D = null != (n = b.metadata) ? n : {},
-        L = g ? (0, p.FI)(D[h.PC.CREATED_AT], A) : null,
+        L = g ? (0, p.FI)(D[h.PC.CREATED_AT], _) : null,
         R = (0, s.dQu)(o.Z.unsafe_rawColors.TWITTER).hex(),
-        w = P.NW.string(P.t['6H6h1t']);
+        w = P.intl.string(P.t['6H6h1t']);
     if (g)
         switch (b.type) {
-            case y.ABu.REDDIT:
+            case N.ABu.REDDIT:
                 c = (0, m.oP)(D);
                 break;
-            case y.ABu.STEAM:
+            case N.ABu.STEAM:
                 c = (0, m.Dq)(D);
                 break;
-            case y.ABu.BLUESKY:
-            case y.ABu.MASTODON:
-            case y.ABu.TWITTER:
-                (c = (0, m.rJ)(D)), '1' === D[h.PC.TWITTER_VERIFIED] && ((a = R), (w = P.NW.string(P.t.Jebrw8)));
+            case N.ABu.BLUESKY:
+            case N.ABu.MASTODON:
+            case N.ABu.TWITTER:
+                (c = (0, m.rJ)(D)), '1' === D[h.PC.TWITTER_VERIFIED] && ((a = R), (w = P.intl.string(P.t.Jebrw8)));
                 break;
-            case y.ABu.PAYPAL:
+            case N.ABu.PAYPAL:
                 c = (0, m.li)(D);
                 break;
-            case y.ABu.EBAY:
+            case N.ABu.EBAY:
                 c = (0, m.ul)(D);
                 break;
-            case y.ABu.TIKTOK:
+            case N.ABu.TIKTOK:
                 c = (0, m.hf)(D);
         }
     let U = d.Z.get((0, T.rR)(b.type)),
@@ -118,30 +118,30 @@ function S(e) {
               onClick: (e) => {
                   var t;
                   (t = b.type),
-                      (0, O.yw)(y.rMx.CONNECTED_ACCOUNT_VIEWED, {
+                      (0, O.yw)(N.rMx.CONNECTED_ACCOUNT_VIEWED, {
                           platform_type: t,
                           other_user_id: v
                       }),
-                      (0, f.q)(
+                      (0, y.q)(
                           {
                               href: G,
-                              trusted: (null == U ? void 0 : U.type) !== y.ABu.DOMAIN
+                              trusted: (null == U ? void 0 : U.type) !== N.ABu.DOMAIN
                           },
                           e
                       );
               },
-              children: (0, r.jsx)(_.Z, {
+              children: (0, r.jsx)(f.Z, {
                   className: I.connectedAccountOpenIcon,
-                  direction: _.Z.Directions.RIGHT
+                  direction: f.Z.Directions.RIGHT
               })
           }));
-    let W = (0, s.dQu)(o.Z.colors.INTERACTIVE_MUTED).hex(),
-        M = (0, s.dQu)(o.Z.colors.INTERACTIVE_ACTIVE).hex(),
-        k = b.verified
+    let M = (0, s.dQu)(o.Z.colors.INTERACTIVE_MUTED).hex(),
+        k = (0, s.dQu)(o.Z.colors.INTERACTIVE_ACTIVE).hex(),
+        B = b.verified
             ? (0, r.jsx)(E.Z, {
                   className: I.connectedAccountVerifiedIcon,
-                  color: null != a ? a : W,
-                  forcedIconColor: M,
+                  color: null != a ? a : M,
+                  forcedIconColor: k,
                   size: 16,
                   tooltipText: w
               })
@@ -158,9 +158,9 @@ function S(e) {
                             (0, r.jsx)(
                                 'img',
                                 j(x({}, e), {
-                                    alt: P.NW.formatToPlainString(P.t.rtm15O, { name: null == U ? void 0 : U.name }),
+                                    alt: P.intl.formatToPlainString(P.t.rtm15O, { name: null == U ? void 0 : U.name }),
                                     className: I.connectedAccountIcon,
-                                    src: (0, i.wj)(N) ? (null == U ? void 0 : U.icon.darkSVG) : null == U ? void 0 : U.icon.lightSVG
+                                    src: (0, i.wj)(A) ? (null == U ? void 0 : U.icon.darkSVG) : null == U ? void 0 : U.icon.lightSVG
                                 })
                             )
                     }),
@@ -187,7 +187,7 @@ function S(e) {
                                                         })
                                                     )
                                             }),
-                                            k
+                                            B
                                         ]
                                     }),
                                     u
@@ -197,7 +197,7 @@ function S(e) {
                                 ? (0, r.jsx)(s.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',
-                                      children: P.NW.format(P.t['9rfonp'], { date: L })
+                                      children: P.intl.format(P.t['9rfonp'], { date: L })
                                   })
                                 : null
                         ]
@@ -222,7 +222,7 @@ function g(e) {
                     tab: v.GlobalDiscoveryTab.APPS,
                     applicationId: t.application.id,
                     newSessionState: {
-                        entrypoint: { name: N.xF.APPLICATION_DIRECTORY_URL },
+                        entrypoint: { name: A.xF.APPLICATION_DIRECTORY_URL },
                         guildId: o
                     }
                 });
@@ -273,14 +273,14 @@ function g(e) {
                     children: (0, r.jsx)(s.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
-                        children: P.NW.format(P.t.zIT9YG, {
+                        children: P.intl.format(P.t.zIT9YG, {
                             applicationHook: () =>
                                 (0, r.jsxs)('div', {
                                     className: I.connectedAccountPoweredByText,
                                     children: [
                                         null != t.application.bot
                                             ? (0, r.jsx)(u.Z, {
-                                                  user: new A.Z(t.application.bot),
+                                                  user: new _.Z(t.application.bot),
                                                   size: s.EFr.SIZE_16
                                               })
                                             : null,

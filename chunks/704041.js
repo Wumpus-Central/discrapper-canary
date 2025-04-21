@@ -100,7 +100,7 @@ function O(e) {
             (0, r.jsx)(a.X6q, {
                 variant: 'text-xs/normal',
                 className: b.leaderboardTitle,
-                children: E.NW.format(E.t['MlT4+P'], {
+                children: E.intl.format(E.t['MlT4+P'], {
                     leaderboardName: n.name,
                     timeLeft: o,
                     leaderboardNameHook: (e, t) =>
@@ -189,7 +189,7 @@ let I = (e) => {
                                     children: (0, r.jsx)(a.Text, {
                                         variant: 'text-sm/medium',
                                         className: b.exitPreviewModeText,
-                                        children: E.NW.string(E.t.GLeQe3)
+                                        children: E.intl.string(E.t.GLeQe3)
                                     })
                                 })
                             })

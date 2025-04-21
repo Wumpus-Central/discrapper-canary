@@ -17,30 +17,30 @@ let p = function (e) {
         [b, y] = i.useState(!1),
         [v, O] = i.useState(!1),
         [I, S] = i.useState(null),
-        [T, N] = i.useState({}),
-        A = (0, a.useElements)(),
+        [T, A] = i.useState({}),
+        N = (0, a.useElements)(),
         C = i.useCallback(() => {
-            if (null != A)
+            if (null != N)
                 switch (n) {
                     case 'cardNumber': {
-                        let e = A.getElement(a.CardNumberElement);
+                        let e = N.getElement(a.CardNumberElement);
                         if (null == e) return;
                         e.off('change'), e.off('focus'), e.off('blur');
                         break;
                     }
                     case 'cardExpiry': {
-                        let e = A.getElement(a.CardExpiryElement);
+                        let e = N.getElement(a.CardExpiryElement);
                         if (null == e) return;
                         e.off('change'), e.off('focus'), e.off('blur');
                         break;
                     }
                     case 'cardCvc': {
-                        let e = A.getElement(a.CardCvcElement);
+                        let e = N.getElement(a.CardCvcElement);
                         if (null == e) return;
                         e.off('change'), e.off('focus'), e.off('blur');
                     }
                 }
-        }, [A, n]),
+        }, [N, n]),
         R = i.useCallback(
             (e) => {
                 v || e.empty || O(!0), null != p && p(e.complete), null != e.error && y(!1);
@@ -54,39 +54,39 @@ let p = function (e) {
             y(!1), null == m || m();
         }, [m]),
         D = i.useCallback(() => {
-            if (null != A)
+            if (null != N)
                 switch (n) {
                     case 'cardNumber': {
-                        let e = A.getElement(a.CardNumberElement);
+                        let e = N.getElement(a.CardNumberElement);
                         if (null == e) return;
                         e.on('change', (e) => {
-                            g !== e.brand && E(e.brand), e.empty && v ? S(d.NW.string(d.t.eOIfu7)) : null != e.error ? S(d.NW.string(d.t.x4pWtL)) : S(null), R(e);
+                            g !== e.brand && E(e.brand), e.empty && v ? S(d.intl.string(d.t.eOIfu7)) : null != e.error ? S(d.intl.string(d.t.x4pWtL)) : S(null), R(e);
                         }),
                             e.on('focus', P),
                             e.on('blur', w);
                         break;
                     }
                     case 'cardExpiry': {
-                        let e = A.getElement(a.CardExpiryElement);
+                        let e = N.getElement(a.CardExpiryElement);
                         if (null == e) return;
                         e.on('change', (e) => {
-                            null != e.error || (e.empty && v) ? S(d.NW.string(d.t['9/zZdn'])) : S(null), R(e);
+                            null != e.error || (e.empty && v) ? S(d.intl.string(d.t['9/zZdn'])) : S(null), R(e);
                         }),
                             e.on('focus', P),
                             e.on('blur', w);
                         break;
                     }
                     case 'cardCvc': {
-                        let e = A.getElement(a.CardCvcElement);
+                        let e = N.getElement(a.CardCvcElement);
                         if (null == e) return;
                         e.on('change', (e) => {
-                            null != e.error || (e.empty && v) ? S(d.NW.string(d.t.ro4isb)) : S(null), R(e);
+                            null != e.error || (e.empty && v) ? S(d.intl.string(d.t.ro4isb)) : S(null), R(e);
                         }),
                             e.on('focus', P),
                             e.on('blur', w);
                     }
                 }
-        }, [w, R, P, g, A, v, n]);
+        }, [w, R, P, g, N, v, n]);
     i.useEffect(
         () => (
             D(),
@@ -118,7 +118,7 @@ let p = function (e) {
                         (0, r.jsx)(a.CardNumberElement, {
                             options: {
                                 style: T,
-                                placeholder: d.NW.string(d.t.gPRHf3),
+                                placeholder: d.intl.string(d.t.gPRHf3),
                                 disableLink: !1
                             },
                             className: M()
@@ -129,7 +129,7 @@ let p = function (e) {
                 return (0, r.jsx)(a.CardExpiryElement, {
                     options: {
                         style: T,
-                        placeholder: d.NW.string(d.t.xeEWQ0)
+                        placeholder: d.intl.string(d.t.xeEWQ0)
                     },
                     className: M()
                 });
@@ -137,7 +137,7 @@ let p = function (e) {
                 return (0, r.jsx)(a.CardCvcElement, {
                     options: {
                         style: T,
-                        placeholder: d.NW.string(d.t.wZz04O)
+                        placeholder: d.intl.string(d.t.wZz04O)
                     },
                     className: M()
                 });
@@ -149,7 +149,7 @@ let p = function (e) {
             if (null == e) return;
             let n = window.getComputedStyle(e),
                 r = n.getPropertyValue('font-family');
-            N({
+            A({
                 base: {
                     fontFamily: r,
                     fontWeight: n.getPropertyValue('font-weight'),

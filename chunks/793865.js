@@ -26,7 +26,7 @@ function h(e) {
         children: (0, r.jsxs)(s.v2r, {
             onClose: t,
             navId: 'video-device-context',
-            'aria-label': p.NW.string(p.t.F122Gx),
+            'aria-label': p.intl.string(p.t.F122Gx),
             onSelect: n,
             onInteraction: m,
             children: [

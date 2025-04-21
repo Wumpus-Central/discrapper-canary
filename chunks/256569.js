@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685), n(358797);
 var r = n(200651),
     i = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     a = n(481060),
     o = n(110924),
     c = n(347469),
@@ -12,7 +12,7 @@ var r = n(200651),
     g = n(673569);
 function p(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: i } = e,
-        s = (0, c.Z)({
+        l = (0, c.Z)({
             minDimension: u.tq,
             resizableDomNodeRef: t,
             onElementResize: n,
@@ -21,18 +21,18 @@ function p(e) {
             throttleDuration: 16
         });
     return (0, r.jsx)('div', {
-        onMouseDown: s,
+        onMouseDown: l,
         className: g.resizeHandle
     });
 }
 let h = i.forwardRef(function (e, t) {
-    let { children: n, onFocus: s, onBlur: l, onClick: o } = e,
+    let { children: n, onFocus: l, onBlur: s, onClick: o } = e,
         c = i.useRef(null),
         [d, m] = i.useState(u.tq);
     return (0, r.jsxs)(a.P3F, {
         className: g.textArea,
-        onFocus: s,
-        onBlur: l,
+        onFocus: l,
+        onBlur: s,
         onClick: o,
         innerRef: c,
         ignoreKeyPress: !0,
@@ -48,7 +48,7 @@ let h = i.forwardRef(function (e, t) {
                 resizableNode: c,
                 onResize: m,
                 onResizeEnd: (e) => {
-                    m(e), null == s || s();
+                    m(e), null == l || l();
                 }
             })
         ]
@@ -56,50 +56,50 @@ let h = i.forwardRef(function (e, t) {
 });
 function f(e) {
     var t;
-    let { initialValue: n, onChangeTags: s, onChangeNewTagValue: c, tagErrors: u = {}, placeholder: p, className: f, maxTags: x } = e,
+    let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: u = {}, placeholder: p, className: f, maxTags: x } = e,
         b = i.useRef(null),
         j = i.useRef(null),
-        N = i.useRef(null),
-        _ = (0, m.V)(n),
+        _ = i.useRef(null),
+        v = (0, m.V)(n),
         {
-            handlePasteEvent: v,
-            handleInputChange: O,
-            handleKeyDown: C,
-            handleContainerKeyUp: y,
+            handlePasteEvent: O,
+            handleInputChange: C,
+            handleKeyDown: y,
+            handleContainerKeyUp: N,
             handleRemoveTag: I,
             handleTagChangeEvent: E,
             handleSelectTag: S,
             handleUnselectTag: T,
             handleResetTagSelections: P,
             handleInputBlurEvent: w
-        } = (0, m.Q)(_, {
-            scrollerRef: N,
+        } = (0, m.Q)(v, {
+            scrollerRef: _,
             mainInputRef: b,
             mainContainerRef: j
         }),
         {
             state: { value: R, tags: Z, selections: D, isSelecting: A }
-        } = _,
+        } = v,
         k = (0, o.Z)(Z),
-        [W, L] = i.useState(!1),
-        M = i.useCallback(() => {
+        [L, M] = i.useState(!1),
+        G = i.useCallback(() => {
             var e;
-            L(!1), P(), null == (e = b.current) || e.focus({ preventScroll: !0 });
+            M(!1), P(), null == (e = b.current) || e.focus({ preventScroll: !0 });
         }, [P]);
     i.useEffect(() => {
-        k !== Z && s(Z);
-    }, [s, k, Z]),
+        k !== Z && l(Z);
+    }, [l, k, Z]),
         i.useEffect(() => {
-            W || c(R);
-        }, [c, R, W]);
-    let G = i.useCallback(
+            L || c(R);
+        }, [c, R, L]);
+    let U = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                e && M(), L(!1);
+                e && G(), M(!1);
             },
-            [M]
+            [G]
         ),
-        U = i.useCallback(
+        B = i.useCallback(
             (e) => (t) => {
                 if (t) {
                     var n;
@@ -116,19 +116,19 @@ function f(e) {
                                           return null == (e = j.current) ? void 0 : e.focus();
                                       }, 16);
                               }));
-                } else T(e, !0), L(!0);
+                } else T(e, !0), M(!0);
             },
             [S, T, D, Z]
         );
     return (0, r.jsxs)('div', {
-        className: l()(g.mainContainer, f),
+        className: s()(g.mainContainer, f),
         ref: j,
         tabIndex: 0,
-        onKeyUp: y,
+        onKeyUp: N,
         children: [
             (0, r.jsxs)(h, {
-                ref: N,
-                onClick: M,
+                ref: _,
+                onClick: G,
                 children: [
                     Z.map((e, t) =>
                         (0, r.jsx)(
@@ -136,23 +136,23 @@ function f(e) {
                             {
                                 value: e,
                                 onChange: E(t),
-                                onBlur: G,
-                                onFocus: U(t),
+                                onBlur: U,
+                                onFocus: B(t),
                                 onRemove: () => I(t),
                                 isSelected: D.includes(e),
                                 isSelecting: A,
                                 error: u[e],
-                                forceShowErrorTooltip: !W && t === Z.length - 1
+                                forceShowErrorTooltip: !L && t === Z.length - 1
                             },
                             t
                         )
                     ),
                     (0, r.jsx)('input', {
-                        className: l()(g.mainTextInput, { [g.isEditingOtherNodes]: W }),
+                        className: s()(g.mainTextInput, { [g.isEditingOtherNodes]: L }),
                         ref: b,
-                        onChange: O,
-                        onKeyDownCapture: C,
-                        onPaste: v,
+                        onChange: C,
+                        onKeyDownCapture: y,
+                        onPaste: O,
                         onBlur: w,
                         placeholder: 0 === Z.length ? p : void 0,
                         value: R

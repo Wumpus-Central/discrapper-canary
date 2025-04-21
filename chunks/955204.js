@@ -14,22 +14,22 @@ var r,
 let c = {
     0: {
         id: 0,
-        name: () => o.NW.string(o.t.CRLcOz),
-        description: () => o.NW.string(o.t['9+4/CA']),
+        name: () => o.intl.string(o.t.CRLcOz),
+        description: () => o.intl.string(o.t['9+4/CA']),
         rarity: 0,
         hideDescriptionUntilUnlock: !1
     },
     1: {
         id: 1,
-        name: () => o.NW.string(o.t.PlhJTk),
-        description: () => o.NW.string(o.t['+QxFMj']),
+        name: () => o.intl.string(o.t.PlhJTk),
+        description: () => o.intl.string(o.t['+QxFMj']),
         rarity: 1,
         hideDescriptionUntilUnlock: !1
     },
     13: {
         id: 13,
-        name: () => o.NW.string(o.t['+91bDw']),
-        description: () => o.NW.string(o.t['6ZakdX']),
+        name: () => o.intl.string(o.t['+91bDw']),
+        description: () => o.intl.string(o.t['6ZakdX']),
         rarity: 4,
         hideDescriptionUntilUnlock: !0,
         onAction: () => {
@@ -38,132 +38,132 @@ let c = {
     },
     14: {
         id: 14,
-        name: () => o.NW.string(o.t.OdenKS),
-        description: () => o.NW.string(o.t['06/08P']),
+        name: () => o.intl.string(o.t.OdenKS),
+        description: () => o.intl.string(o.t['06/08P']),
         rarity: 0,
         hideDescriptionUntilUnlock: !1
     },
     15: {
         id: 15,
-        name: () => o.NW.string(o.t['C88+vr']),
-        description: () => o.NW.string(o.t.w4SYND),
+        name: () => o.intl.string(o.t['C88+vr']),
+        description: () => o.intl.string(o.t.w4SYND),
         rarity: 1,
         hideDescriptionUntilUnlock: !1
     },
     2: {
         id: 2,
-        name: () => o.NW.string(o.t['7q1avL']),
-        description: () => o.NW.string(o.t.XwAgCA),
+        name: () => o.intl.string(o.t['7q1avL']),
+        description: () => o.intl.string(o.t.XwAgCA),
         rarity: 0,
         hideDescriptionUntilUnlock: !1
     },
     3: {
         id: 3,
-        name: () => o.NW.formatToMarkdownString(o.t.NgKcOj, {}),
-        description: () => o.NW.string(o.t.jmzQrK),
+        name: () => o.intl.formatToMarkdownString(o.t.NgKcOj, {}),
+        description: () => o.intl.string(o.t.jmzQrK),
         rarity: 1,
         hideDescriptionUntilUnlock: !1
     },
     4: {
         id: 4,
-        name: () => o.NW.string(o.t.q3ekQ0),
-        description: () => o.NW.string(o.t.KDk6IC),
+        name: () => o.intl.string(o.t.q3ekQ0),
+        description: () => o.intl.string(o.t.KDk6IC),
         rarity: 0,
         hideDescriptionUntilUnlock: !1,
         checkUnlock: (e) => e.multiplier >= 2
     },
     5: {
         id: 5,
-        name: () => o.NW.string(o.t.k6Nlxc),
-        description: () => o.NW.string(o.t['A4Bi5+']),
+        name: () => o.intl.string(o.t.k6Nlxc),
+        description: () => o.intl.string(o.t['A4Bi5+']),
         rarity: 1,
         hideDescriptionUntilUnlock: !1,
         checkUnlock: (e) => e.multiplier >= 4
     },
     6: {
         id: 6,
-        name: () => o.NW.string(o.t['EPQN5+']),
-        description: () => o.NW.string(o.t['NS/Qvb']),
+        name: () => o.intl.string(o.t['EPQN5+']),
+        description: () => o.intl.string(o.t['NS/Qvb']),
         rarity: 2,
         hideDescriptionUntilUnlock: !1,
         checkUnlock: (e) => e.multiplier >= 5
     },
     7: {
         id: 7,
-        name: () => o.NW.string(o.t['H/xC9v']),
-        description: () => o.NW.string(o.t.NECb4u),
+        name: () => o.intl.string(o.t['H/xC9v']),
+        description: () => o.intl.string(o.t.NECb4u),
         rarity: 2,
         hideDescriptionUntilUnlock: !1,
         checkUnlock: (e) => e.multiplier >= 7
     },
     8: {
         id: 8,
-        name: () => o.NW.string(o.t['24aD8v']),
-        description: () => o.NW.string(o.t.YtKoSU),
+        name: () => o.intl.string(o.t['24aD8v']),
+        description: () => o.intl.string(o.t.YtKoSU),
         rarity: 3,
         hideDescriptionUntilUnlock: !0,
         checkUnlock: (e) => 430 === (0, l.Eo)(e)
     },
     9: {
         id: 9,
-        name: () => o.NW.string(o.t['vZm48/']),
-        description: () => o.NW.string(o.t.QKxjeX),
+        name: () => o.intl.string(o.t['vZm48/']),
+        description: () => o.intl.string(o.t.QKxjeX),
         rarity: 3,
         hideDescriptionUntilUnlock: !0,
         checkUnlock: (e) => 555 === (0, l.Eo)(e)
     },
     10: {
         id: 10,
-        name: () => o.NW.string(o.t.SxLn19),
-        description: () => o.NW.string(o.t['7tuql5']),
+        name: () => o.intl.string(o.t.SxLn19),
+        description: () => o.intl.string(o.t['7tuql5']),
         rarity: 3,
         hideDescriptionUntilUnlock: !0,
         checkUnlock: (e) => 898 === (0, l.Eo)(e)
     },
     11: {
         id: 11,
-        name: () => o.NW.string(o.t.hK1RPj),
-        description: () => o.NW.string(o.t.okzLOT),
+        name: () => o.intl.string(o.t.hK1RPj),
+        description: () => o.intl.string(o.t.okzLOT),
         rarity: 4,
         hideDescriptionUntilUnlock: !0,
         checkUnlock: (e) => 1337 === (0, l.Eo)(e)
     },
     12: {
         id: 12,
-        name: () => o.NW.string(o.t.Pa8olZ),
-        description: () => o.NW.string(o.t.KSzHjo),
+        name: () => o.intl.string(o.t.Pa8olZ),
+        description: () => o.intl.string(o.t.KSzHjo),
         rarity: 4,
         hideDescriptionUntilUnlock: !0,
         checkUnlock: (e) => 2048 === (0, l.Eo)(e)
     },
     16: {
         id: 16,
-        name: () => o.NW.string(o.t.lXhhWV),
-        description: () => o.NW.string(o.t.OxvobG),
+        name: () => o.intl.string(o.t.lXhhWV),
+        description: () => o.intl.string(o.t.OxvobG),
         rarity: 2,
         hideDescriptionUntilUnlock: !0,
         checkUnlock: (e) => 64 === e.value
     },
     17: {
         id: 17,
-        name: () => o.NW.string(o.t.M4ErfH),
-        description: () => o.NW.string(o.t['sjzx+/']),
+        name: () => o.intl.string(o.t.M4ErfH),
+        description: () => o.intl.string(o.t['sjzx+/']),
         rarity: 3,
         hideDescriptionUntilUnlock: !0,
         checkUnlock: (e) => 88 === e.value
     },
     18: {
         id: 18,
-        name: () => o.NW.string(o.t.RawXaG),
-        description: () => o.NW.string(o.t.iOsWLy),
+        name: () => o.intl.string(o.t.RawXaG),
+        description: () => o.intl.string(o.t.iOsWLy),
         rarity: 3,
         hideDescriptionUntilUnlock: !0,
         checkUnlock: (e) => 99 === e.value
     },
     19: {
         id: 19,
-        name: () => o.NW.string(o.t.irv64O),
-        description: () => o.NW.string(o.t.shGZw8),
+        name: () => o.intl.string(o.t.irv64O),
+        description: () => o.intl.string(o.t.shGZw8),
         rarity: 4,
         hideDescriptionUntilUnlock: !0,
         checkUnlock: (e) => 113 === e.value

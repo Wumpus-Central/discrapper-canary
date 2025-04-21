@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => A,
+    Z: () => N,
     d: () => w
 }),
     n(388685);
@@ -92,19 +92,19 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let N = 'https://cdn.discordapp.com/assets/content/3988d11030317ce331a0b327cac18a9c02a693041f9a7695bb13b3d4cb486e11.webm';
-function A(e) {
-    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: a, onMouseLeave: c, onContextMenu: u, className: d, wrapperClassName: f, iconClassName: _, iconColor: p = 'currentColor', iconComponent: h, themeable: g = !1, disabled: E = !1, isActive: y = !1, tooltipPosition: O = 'top', shouldShowTooltip: T = !0, forceTooltipOpen: N = !1, buttonRef: A, grow: C, 'aria-label': R, look: P, buttonText: w, size: D } = e;
+let A = 'https://cdn.discordapp.com/assets/content/3988d11030317ce331a0b327cac18a9c02a693041f9a7695bb13b3d4cb486e11.webm';
+function N(e) {
+    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: a, onMouseLeave: c, onContextMenu: u, className: d, wrapperClassName: f, iconClassName: _, iconColor: p = 'currentColor', iconComponent: h, themeable: g = !1, disabled: E = !1, isActive: y = !1, tooltipPosition: O = 'top', shouldShowTooltip: T = !0, forceTooltipOpen: A = !1, buttonRef: N, grow: C, 'aria-label': R, look: P, buttonText: w, size: D } = e;
     return (0, r.jsx)(m.Z, {
         children: (0, r.jsx)(l.ua7, {
             position: O,
             text: t,
             'aria-label': R,
             shouldShow: T,
-            forceOpen: N,
+            forceOpen: A,
             children: (e) => {
                 var { onClick: t, onContextMenu: m, onMouseEnter: O, onMouseLeave: T } = e,
-                    N = S(e, ['onClick', 'onContextMenu', 'onMouseEnter', 'onMouseLeave']);
+                    A = S(e, ['onClick', 'onContextMenu', 'onMouseEnter', 'onMouseLeave']);
                 return (0, r.jsxs)(
                     l.zxk,
                     I(
@@ -137,11 +137,11 @@ function A(e) {
                                 innerClassName: o()(b.lineHeightReset, { [b.buttonInnerWithText]: null != w }),
                                 className: o()({ [b.active]: y }, d),
                                 wrapperClassName: f,
-                                buttonRef: A,
+                                buttonRef: N,
                                 grow: C,
                                 'aria-label': R
                             },
-                            N
+                            A
                         ),
                         {
                             children: [
@@ -214,15 +214,15 @@ function w(e) {
     }, [F]);
     let Z = (0, _.Z)({ location: 'CenterControlButton' }),
         H = M || Z,
-        W = H ? [b.experimentButton, V ? P[j] : R[j], x && null == T && b.fullRegionButton, V && !x && null != T && b.attachedButton] : [C[j]],
-        Y = null != (t = k.onContextMenu) ? t : T,
+        Y = H ? [b.experimentButton, V ? P[j] : R[j], x && null == T && b.fullRegionButton, V && !x && null != T && b.attachedButton] : [C[j]],
+        W = null != (t = k.onContextMenu) ? t : T,
         K = (0, r.jsx)(
-            A,
+            N,
             I(v({}, k), {
                 grow: !1,
-                onContextMenu: Y,
+                onContextMenu: W,
                 iconClassName: o()(O, b.centerIcon, H && b.experimentControlIcon, H && x && null == T && b.fullRegionIcon),
-                className: o()(G ? y : null, b.staticButton, b.centerButton, s && b.active, ...W)
+                className: o()(G ? y : null, b.staticButton, b.centerButton, s && b.active, ...Y)
             })
         );
     return G
@@ -235,7 +235,7 @@ function w(e) {
                     null != T
                         ? (0, r.jsx)(m.Z, {
                               children: (0, r.jsx)(l.P3F, {
-                                  'aria-label': E.NW.string(E.t.PdRCRk),
+                                  'aria-label': E.intl.string(E.t.PdRCRk),
                                   onClick: D ? void 0 : T,
                                   onContextMenu: D ? void 0 : T,
                                   className: o()(b.contextMenuNubExperiment, V && !x && b.attachedCaret, V ? P[U] : R[U], {
@@ -268,7 +268,7 @@ function w(e) {
                                 autoPlay: !0,
                                 className: b.glowVideo,
                                 children: (0, r.jsx)('source', {
-                                    src: N,
+                                    src: A,
                                     type: 'video/webm'
                                 })
                             })
@@ -276,7 +276,7 @@ function w(e) {
                     null != T
                         ? (0, r.jsx)(m.Z, {
                               children: (0, r.jsx)(l.P3F, {
-                                  'aria-label': E.NW.string(E.t.PdRCRk),
+                                  'aria-label': E.intl.string(E.t.PdRCRk),
                                   onClick: T,
                                   onContextMenu: T,
                                   className: o()(b.contextMenuNub, C[j], { [b.active]: w }),

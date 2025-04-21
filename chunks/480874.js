@@ -17,12 +17,12 @@ var r = n(200651),
     _ = n(488634),
     E = n(727813),
     O = n(355350),
-    N = n(307947),
-    y = n(125855),
-    I = n(687683),
-    v = n(981631),
-    C = n(388032),
-    S = n(39276);
+    y = n(307947),
+    I = n(125855),
+    v = n(687683),
+    C = n(981631),
+    S = n(388032),
+    N = n(39276);
 function T() {
     let e = i.useRef(null),
         t = (0, E.Z)(),
@@ -32,14 +32,14 @@ function T() {
         P = (0, p.Z)('message-requests-spam-list'),
         { channelId: j } = (0, _._)(),
         A = i.useCallback(() => {
-            (0, c.showToast)((0, c.createToast)(C.NW.string(C.t.EDYbS0), c.ToastType.FAILURE));
+            (0, c.showToast)((0, c.createToast)(S.intl.string(S.t.EDYbS0), c.ToastType.FAILURE));
         }, []),
         { rejectAll: Z } = (0, b.m)({ onError: A }),
         x = i.useCallback(() => {
             Z(t.map((e) => e.channel.id));
         }, [t, Z]);
     (0, d.ZP)(() => {
-        g.default.track(v.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), f.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });
+        g.default.track(C.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), f.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });
     });
     let L = i.useCallback(
             (e) => {
@@ -49,12 +49,12 @@ function T() {
                     c = null == (i = t[o + 1]) || null == (n = i.channel) ? void 0 : n.id,
                     u = s.channel.id;
                 return (0, r.jsx)(
-                    y.Z,
+                    I.Z,
                     {
                         index: o,
                         className: a()({
-                            [S.selected]: null != j && j === u,
-                            [S.siblingSelected]: null != j && j === c
+                            [N.selected]: null != j && j === u,
+                            [N.siblingSelected]: null != j && j === c
                         }),
                         channel: s.channel,
                         user: s.user,
@@ -70,14 +70,14 @@ function T() {
                 (0, r.jsxs)(
                     h.Z,
                     {
-                        className: S.sectionTitle,
+                        className: N.sectionTitle,
                         children: [
-                            C.NW.format(C.t.C79Edn, { count: n }),
+                            S.intl.format(S.t.C79Edn, { count: n }),
                             T && n > 0
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(c.Text, {
-                                              className: S.titleDivider,
+                                              className: N.titleDivider,
                                               variant: 'eyebrow',
                                               color: 'header-secondary',
                                               tag: 'span',
@@ -88,9 +88,9 @@ function T() {
                                               look: c.iLD.LINK,
                                               color: c.Ttl.LINK,
                                               size: c.PhG.SMALL,
-                                              className: S.clearAllButton,
-                                              'aria-label': C.NW.string(C.t.p6t7RE),
-                                              children: C.NW.string(C.t.p6t7RE)
+                                              className: N.clearAllButton,
+                                              'aria-label': S.intl.string(S.t.p6t7RE),
+                                              children: S.intl.string(S.t.p6t7RE)
                                           })
                                       ]
                                   })
@@ -102,7 +102,7 @@ function T() {
             [n, x, T]
         );
     return 0 === t.length
-        ? (0, r.jsx)(N.Z, { section: I.pS.SPAM })
+        ? (0, r.jsx)(y.Z, { section: v.pS.SPAM })
         : (0, r.jsx)(o.bG, {
               navigator: P,
               children: (0, r.jsx)(o.SJ, {
@@ -155,17 +155,17 @@ function T() {
                               return e;
                           })(
                               {
-                                  className: S.list,
+                                  className: N.list,
                                   innerRole: l,
-                                  innerAriaLabel: C.NW.string(C.t.e7GWjY),
+                                  innerAriaLabel: S.intl.string(S.t.e7GWjY),
                                   ref: (t) => {
                                       var n;
                                       (e.current = t), (i.current = null != (n = null == t ? void 0 : t.getScrollerNode()) ? n : null);
                                   },
                                   paddingTop: 24,
                                   paddingBottom: 24,
-                                  sectionHeight: I.oi,
-                                  rowHeight: I.WN,
+                                  sectionHeight: v.oi,
+                                  rowHeight: v.WN,
                                   renderSection: w,
                                   renderRow: L,
                                   sections: [t.length],

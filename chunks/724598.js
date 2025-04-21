@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    s = n.n(i),
-    l = n(481060),
+    l = n.n(i),
+    s = n(481060),
     a = n(367907),
     o = n(357352),
     c = n(434404),
@@ -21,7 +21,7 @@ function h(e) {
                 'div',
                 {
                     className: p.pill,
-                    children: (0, r.jsx)(l.Text, {
+                    children: (0, r.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         children: e
                     })
@@ -34,13 +34,13 @@ function h(e) {
 function f(e) {
     let { guildId: t, showCTA: n, responsive: i = !0 } = e,
         f = [
-            [g.NW.string(g.t['73h51N']), g.NW.string(g.t['gbjs//'])],
-            [g.NW.string(g.t.mCoH0d), g.NW.string(g.t['l/BuSE'])],
-            [g.NW.string(g.t.psQktr), g.NW.string(g.t.nMhIZW)],
-            [g.NW.string(g.t['0ItLmJ']), g.NW.string(g.t.yQHqsL)]
+            [g.intl.string(g.t['73h51N']), g.intl.string(g.t['gbjs//'])],
+            [g.intl.string(g.t.mCoH0d), g.intl.string(g.t['l/BuSE'])],
+            [g.intl.string(g.t.psQktr), g.intl.string(g.t.nMhIZW)],
+            [g.intl.string(g.t['0ItLmJ']), g.intl.string(g.t.yQHqsL)]
         ];
     return (0, r.jsx)('div', {
-        className: s()({ [p.responsive]: i }),
+        className: l()({ [p.responsive]: i }),
         children: (0, r.jsxs)('div', {
             className: p.container,
             children: [
@@ -54,17 +54,17 @@ function f(e) {
                         (0, r.jsxs)('div', {
                             className: p.ctaContent,
                             children: [
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: 'text-lg/medium',
                                     color: 'header-primary',
-                                    children: g.NW.string(g.t['67arYG'])
+                                    children: g.intl.string(g.t['67arYG'])
                                 }),
                                 n &&
-                                    (0, r.jsxs)(l.gtL, {
-                                        size: l.zxk.Sizes.MEDIUM,
+                                    (0, r.jsxs)(s.gtL, {
+                                        size: s.zxk.Sizes.MEDIUM,
                                         className: p.getStartedButton,
                                         innerClassName: p.getStartedButtonContents,
-                                        shineSize: l.gtL.ShineSizes.SMALL,
+                                        shineSize: s.gtL.ShineSizes.SMALL,
                                         onClick: () => {
                                             var e, n;
                                             d.default.track(
@@ -112,8 +112,8 @@ function f(e) {
                                                 c.Z.open(t, m.pNK.GUILD_PRODUCTS);
                                         },
                                         children: [
-                                            g.NW.string(g.t.oyzLpK),
-                                            (0, r.jsx)(l.ZSh, {
+                                            g.intl.string(g.t.oyzLpK),
+                                            (0, r.jsx)(s.ZSh, {
                                                 size: 'md',
                                                 color: 'currentColor',
                                                 className: p.getStartedArrow

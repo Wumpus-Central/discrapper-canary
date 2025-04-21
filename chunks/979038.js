@@ -37,7 +37,7 @@ let S = (e) => {
 function T(e) {
     let { user: t, activity: n, onAction: i, onClose: _ } = e;
     return null != n && n.application_id === v.bO
-        ? ((n.buttons = [O.NW.string(I.Z['Fv/2Oz'])]),
+        ? ((n.buttons = [O.intl.string(I.default['Fv/2Oz'])]),
           (n.metadata = { button_urls: [v.U8] }),
           (0, r.jsx)(S, {
               user: t,

@@ -17,5 +17,5 @@ let i = 'SAFETY_WARNING_BANNER_WEB',
     s = 'InappropriateConversationModal-web',
     c = 'PRIVATE_DM_SAFETY_TOOLS_MODAL',
     d = 'SafetyToolsActionSheet-web',
-    u = () => [r.NW.string(r.t['26fDv7']), r.NW.string(r.t.togDfn), r.NW.string(r.t.O4LjcX)],
-    _ = () => [r.NW.string(r.t.bCWw8v), r.NW.string(r.t.mzSuc3), r.NW.string(r.t.ZkmC7u)];
+    u = () => [r.intl.string(r.t['26fDv7']), r.intl.string(r.t.togDfn), r.intl.string(r.t.O4LjcX)],
+    _ = () => [r.intl.string(r.t.bCWw8v), r.intl.string(r.t.mzSuc3), r.intl.string(r.t.ZkmC7u)];

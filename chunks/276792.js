@@ -1,4 +1,4 @@
-n.d(t, { N: () => N });
+n.d(t, { N: () => y });
 var r = n(200651);
 n(192379);
 var i = n(704215),
@@ -59,25 +59,25 @@ function O(e, t) {
         e
     );
 }
-function N(e) {
-    var t, n, N, y;
-    let I,
-        { content: v, renderModalProps: C, analyticsLocations: S, analyticsLocation: T, isLightTheme: P } = e,
-        j = 'AnnouncementModalVariant1_'.concat(i.z[Number(v.dismissKey)]),
-        { onClose: A } = C,
-        Z = null != (y = null == (t = v.button) ? void 0 : t.copy) ? y : m.NW.string(m.t.YScQSE),
-        x = (null == (n = v.button) ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button';
-    switch (null == (N = v.button) ? void 0 : N.buttonAction) {
+function y(e) {
+    var t, n, y, I;
+    let v,
+        { content: C, renderModalProps: S, analyticsLocations: N, analyticsLocation: T, isLightTheme: P } = e,
+        j = 'AnnouncementModalVariant1_'.concat(i.z[Number(C.dismissKey)]),
+        { onClose: A } = S,
+        Z = null != (I = null == (t = C.button) ? void 0 : t.copy) ? I : m.intl.string(m.t.YScQSE),
+        x = (null == (n = C.button) ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button';
+    switch (null == (y = C.button) ? void 0 : y.buttonAction) {
         case l.Wc.OPEN_MARKETING_PAGE:
-            I = () => {
+            v = () => {
                 (0, s.uL)(g.Z5c.APPLICATION_STORE), A();
             };
             break;
         case l.Wc.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER:
-            I = () =>
+            v = () =>
                 (0, o.Z)({
                     subscriptionTier: f.Si.TIER_2,
-                    analyticsLocations: S,
+                    analyticsLocations: N,
                     analyticsObject: O(E({}, T), {
                         object: g.qAy.BUTTON_CTA,
                         objectType: g.Qqv.TIER_2
@@ -90,10 +90,10 @@ function N(e) {
                 });
             break;
         case l.Wc.OPEN_TIER_1_PAYMENT_MODAL:
-            I = () =>
+            v = () =>
                 (0, o.Z)({
                     subscriptionTier: f.Si.TIER_1,
-                    analyticsLocations: S,
+                    analyticsLocations: N,
                     analyticsObject: O(E({}, T), {
                         object: g.qAy.BUTTON_CTA,
                         objectType: g.Qqv.TIER_1
@@ -105,10 +105,10 @@ function N(e) {
             break;
         case l.Wc.OPEN_TIER_2_PAYMENT_MODAL:
         default:
-            I = () =>
+            v = () =>
                 (0, o.Z)({
                     subscriptionTier: f.Si.TIER_2,
-                    analyticsLocations: S,
+                    analyticsLocations: N,
                     analyticsObject: O(E({}, T), {
                         object: g.qAy.BUTTON_CTA,
                         objectType: g.Qqv.TIER_2
@@ -119,53 +119,53 @@ function N(e) {
                 });
     }
     let L =
-            '' !== v.helpArticleId
+            '' !== C.helpArticleId
                 ? () =>
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               '\xA0',
                               (0, r.jsx)(a.eee, {
                                   className: b.termsApplyAnchor,
-                                  href: u.Z.getArticleURL(v.helpArticleId),
-                                  children: m.NW.string(m.t['sBp+u7'])
+                                  href: u.Z.getArticleURL(C.helpArticleId),
+                                  children: m.intl.string(m.t['sBp+u7'])
                               })
                           ]
                       })
                 : void 0,
         w = {
             type: 'video',
-            src: P ? v.heroArtVideoLinkLightTheme : v.videoLink
+            src: P ? C.heroArtVideoLinkLightTheme : C.videoLink
         };
-    null != v.heroArtVideoSubtitles &&
-        (w.subtitles = v.heroArtVideoSubtitles.map((e) => ({
+    null != C.heroArtVideoSubtitles &&
+        (w.subtitles = C.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1
         }))),
-        ('' !== v.heroArtImageLinkDarkTheme || '' !== v.heroArtImageLinkLightTheme) &&
+        ('' !== C.heroArtImageLinkDarkTheme || '' !== C.heroArtImageLinkLightTheme) &&
             (w = {
                 type: 'image',
-                src: P ? v.heroArtImageLinkLightTheme : v.heroArtImageLinkDarkTheme
+                src: P ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme
             });
     let R = P ? d.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : d.VE.PREMIUM_TIER_2_WHITE_FILL,
         D =
-            '' !== v.modalTopPill
+            '' !== C.modalTopPill
                 ? () =>
                       (0, r.jsx)(d.Cy, {
-                          text: v.modalTopPill,
+                          text: C.modalTopPill,
                           className: b.modalTopPill,
                           colorOptions: R
                       })
                 : void 0;
     return {
-        renderModalProps: C,
-        header: v.header,
+        renderModalProps: S,
+        header: C.header,
         modalTopExtra: D,
-        subHeader: v.subheader,
+        subHeader: C.subheader,
         subHeaderExtra: L,
-        body: v.body,
+        body: C.body,
         heroArt: w,
-        featureCards: v.featureCards.map((e) => ({
+        featureCards: C.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
             imageSrc: P ? e.imageLinkLightTheme : e.imageLink,
@@ -186,7 +186,7 @@ function N(e) {
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: j
                     }),
-                        I();
+                        v();
                 },
                 children: [
                     (0, r.jsx)('img', {
@@ -198,6 +198,6 @@ function N(e) {
                 ]
             });
         },
-        modalDismissibleContent: '' !== v.dismissKey ? Number(v.dismissKey) : void 0
+        modalDismissibleContent: '' !== C.dismissKey ? Number(C.dismissKey) : void 0
     };
 }

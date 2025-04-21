@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    a = n(481060),
-    l = n(776568),
+    l = n(481060),
+    a = n(776568),
     o = n(218035),
     s = n(775666),
     c = n(858822),
@@ -17,11 +17,11 @@ function m(e) {
         y = (0, i.e7)([p.Z], () => p.Z.getGuild(t.guild_id)),
         v = (0, c.Z)(y),
         E = (0, u.Mn)('ChannelNotificationSettingsPopoutMenu') && d.$N.has(t.type);
-    return (0, r.jsxs)(a.v2r, {
+    return (0, r.jsxs)(l.v2r, {
         navId: f,
         onClose: n,
         'aria-label': h,
         onSelect: m,
-        children: [(0, r.jsx)(a.kSQ, { children: (0, l.ZP)(t, g) }), _ ? (0, r.jsx)(a.kSQ, { children: v }) : null, E ? x : (0, r.jsx)(a.kSQ, { children: b })]
+        children: [(0, r.jsx)(l.kSQ, { children: (0, a.ZP)(t, g) }), _ ? (0, r.jsx)(l.kSQ, { children: v }) : null, E ? x : (0, r.jsx)(l.kSQ, { children: b })]
     });
 }

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h });
-var r,
-    i = n(442837),
+var i,
+    r = n(442837),
     s = n(570140),
-    a = n(314897),
-    l = n(57562),
+    l = n(314897),
+    a = n(57562),
     o = n(351780),
     c = n(843693);
 function d(e, t, n) {
@@ -22,14 +22,14 @@ function d(e, t, n) {
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
+            i.forEach(function (t) {
                 d(e, t, n[t]);
             });
     }
@@ -37,9 +37,9 @@ function u(e) {
 }
 let m = { unlockedAchievements: {} },
     g = u({}, m);
-class p extends (r = i.ZP.PersistedStore) {
+class p extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(a.default, c.ZP);
+        this.waitFor(l.default, c.ZP);
         let t = null != e ? e : u({}, m);
         for (let e in t) g[e] = t[e];
     }
@@ -75,8 +75,8 @@ let h = new p(s.Z, {
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
+                                  var i = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, i);
                               }
                               return n;
                           })(Object(n)).forEach(function (e) {
@@ -84,7 +84,7 @@ let h = new p(s.Z, {
                           }),
                     (g.unlockedAchievements = t),
                     setTimeout(() => {
-                        (0, l.D)(e, !0);
+                        (0, a.D)(e, !0);
                     }, 2000);
         })(t);
     }

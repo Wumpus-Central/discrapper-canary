@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    s = n(139387),
-    l = n(852860),
+    l = n(139387),
+    s = n(852860),
     a = n(490655),
     o = n(434404),
     c = n(360606),
@@ -17,8 +17,8 @@ function g(e) {
     let { refToScroller: t } = e,
         n = (0, i.e7)([d.Z], () => d.Z.getGuild()),
         {
-            section: s,
-            sectionId: l,
+            section: l,
+            sectionId: s,
             integrations: o,
             editedIntegration: u,
             webhooks: m,
@@ -39,8 +39,8 @@ function g(e) {
         ? null
         : (0, r.jsx)(a.Z, {
               guild: n,
-              section: s,
-              sectionId: l,
+              section: l,
+              sectionId: s,
               integrations: o,
               webhooks: m,
               editedIntegration: u,
@@ -56,20 +56,20 @@ function p() {
         guild: d.Z.getGuild(),
         submitting: d.Z.isSubmitting()
     }));
-    return (0, r.jsx)(l.Z, {
+    return (0, r.jsx)(s.Z, {
         submitting: t,
         onReset: () => {
-            s.Z.init(), u.Ui(), null != e && o.Z.init(e.id);
+            l.Z.init(), u.Ui(), null != e && o.Z.init(e.id);
         },
         onSave: () => {
             if (null != e) {
-                if (null != c.default.editedIntegration) s.Z.saveIntegration(e.id, c.default.editedIntegration);
-                else if (null != c.default.editedWebhook) s.Z.saveWebhook(e.id, c.default.editedWebhook);
+                if (null != c.default.editedIntegration) l.Z.saveIntegration(e.id, c.default.editedIntegration);
+                else if (null != c.default.editedWebhook) l.Z.saveWebhook(e.id, c.default.editedWebhook);
                 else if (null != c.default.editedCommandId) {
                     let t = c.default.getSectionId(),
                         n = m.Z.getEditedApplication();
                     if (null == t || null == n) return;
-                    s.Z.saveApplicationPermissions(t, e.id, Object.values(n));
+                    l.Z.saveApplicationPermissions(t, e.id, Object.values(n));
                 }
                 d.Z.hasChanges() && o.Z.saveGuild(e.id, { features: e.features });
             }

@@ -37,23 +37,23 @@ function d(e) {
 }
 var p = (((r = p || {}).ACTIVITY_FEED = 'ACTIVITY_FEED'), (r.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (r.USER_ACTIVITY = 'USER_ACTIVITY'), (r.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (r.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), r),
     f = (((l = f || {}).START = 'START'), (l.END = 'END'), (l.TIME = 'TIME'), l);
-let m = (e) => (t, n) => (null == n ? '' : c.NW.format(e(), d({ time: t }, n))),
+let m = (e) => (t, n) => (null == n ? '' : c.intl.format(e(), d({ time: t }, n))),
     g = {
         ACTIVITY_FEED: {
             START: {
-                [a.J6.SECONDS]: () => c.NW.string(c.t.ahzZr6),
-                [a.J6.MINUTES]: (e) => c.NW.formatToPlainString(c.t['03mIHR'], { time: e }),
-                [a.J6.HOURS]: (e) => c.NW.formatToPlainString(c.t.eNoooa, { time: e }),
-                [a.J6.DAYS]: (e) => c.NW.formatToPlainString(c.t['2rUo/v'], { time: e })
+                [a.J6.SECONDS]: () => c.intl.string(c.t.ahzZr6),
+                [a.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t['03mIHR'], { time: e }),
+                [a.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t.eNoooa, { time: e }),
+                [a.J6.DAYS]: (e) => c.intl.formatToPlainString(c.t['2rUo/v'], { time: e })
             },
             END: {
-                [a.J6.SECONDS]: () => c.NW.string(c.t.EluAd3),
-                [a.J6.MINUTES]: (e) => c.NW.formatToPlainString(c.t.BZxG8f, { time: e }),
-                [a.J6.HOURS]: (e) => c.NW.formatToPlainString(c.t.cRMUp6, { time: e }),
-                [a.J6.DAYS]: (e) => c.NW.formatToPlainString(c.t['yP1T8/'], { time: e }),
-                [a.J6.WEEKS]: (e) => c.NW.formatToPlainString(c.t.AWkdqa, { time: e }),
-                [a.J6.MONTHS]: (e) => c.NW.formatToPlainString(c.t.upamAw, { time: e }),
-                [a.J6.YEARS]: (e) => c.NW.formatToPlainString(c.t.vfMC2t, { time: e })
+                [a.J6.SECONDS]: () => c.intl.string(c.t.EluAd3),
+                [a.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t.BZxG8f, { time: e }),
+                [a.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t.cRMUp6, { time: e }),
+                [a.J6.DAYS]: (e) => c.intl.formatToPlainString(c.t['yP1T8/'], { time: e }),
+                [a.J6.WEEKS]: (e) => c.intl.formatToPlainString(c.t.AWkdqa, { time: e }),
+                [a.J6.MONTHS]: (e) => c.intl.formatToPlainString(c.t.upamAw, { time: e }),
+                [a.J6.YEARS]: (e) => c.intl.formatToPlainString(c.t.vfMC2t, { time: e })
             }
         },
         ACTIVITY_FEED_NEW: {
@@ -64,47 +64,47 @@ let m = (e) => (t, n) => (null == n ? '' : c.NW.format(e(), d({ time: t }, n))),
                 [a.J6.DAYS]: m(() => c.t.hbUpBA)
             },
             END: {
-                [a.J6.SECONDS]: (e) => c.NW.formatToPlainString(c.t.C3MTOD, { seconds: e }),
-                [a.J6.MINUTES]: (e) => c.NW.formatToPlainString(c.t['GqQ/Y2'], { minutes: e }),
-                [a.J6.HOURS]: (e) => c.NW.formatToPlainString(c.t.c5zfWV, { hours: e }),
-                [a.J6.DAYS]: (e) => c.NW.formatToPlainString(c.t.amjnaG, { days: e })
+                [a.J6.SECONDS]: (e) => c.intl.formatToPlainString(c.t.C3MTOD, { seconds: e }),
+                [a.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t['GqQ/Y2'], { minutes: e }),
+                [a.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t.c5zfWV, { hours: e }),
+                [a.J6.DAYS]: (e) => c.intl.formatToPlainString(c.t.amjnaG, { days: e })
             }
         },
         USER_ACTIVITY: {
             START: {
-                [a.J6.SECONDS]: () => c.NW.string(c.t.ahzZr6),
+                [a.J6.SECONDS]: () => c.intl.string(c.t.ahzZr6),
                 [a.J6.MINUTES]: function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    return n ? c.NW.formatToPlainString(c.t['03mIHR'], { time: e }) : c.NW.formatToPlainString(c.t['vQml+P'], { time: e });
+                    return n ? c.intl.formatToPlainString(c.t['03mIHR'], { time: e }) : c.intl.formatToPlainString(c.t['vQml+P'], { time: e });
                 },
                 [a.J6.HOURS]: function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    return n ? c.NW.formatToPlainString(c.t.eNoooa, { time: e }) : c.NW.formatToPlainString(c.t['4Wq+6+'], { time: e });
+                    return n ? c.intl.formatToPlainString(c.t.eNoooa, { time: e }) : c.intl.formatToPlainString(c.t['4Wq+6+'], { time: e });
                 },
                 [a.J6.DAYS]: function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    return n ? c.NW.formatToPlainString(c.t['2rUo/v'], { time: e }) : c.NW.formatToPlainString(c.t['jN3/fX'], { time: e });
+                    return n ? c.intl.formatToPlainString(c.t['2rUo/v'], { time: e }) : c.intl.formatToPlainString(c.t['jN3/fX'], { time: e });
                 }
             }
         },
         GAME_LIBRARY_TIME_PLAYED: {
             TIME: {
-                [a.J6.NONE]: () => c.NW.string(c.t.LqDiCg),
-                [a.J6.SECONDS]: (e) => c.NW.formatToPlainString(c.t.xDIDBA, { time: e }),
-                [a.J6.MINUTES]: (e) => c.NW.formatToPlainString(c.t.KGqJcX, { time: e }),
-                [a.J6.HOURS]: (e) => c.NW.formatToPlainString(c.t.OLchUF, { time: e })
+                [a.J6.NONE]: () => c.intl.string(c.t.LqDiCg),
+                [a.J6.SECONDS]: (e) => c.intl.formatToPlainString(c.t.xDIDBA, { time: e }),
+                [a.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t.KGqJcX, { time: e }),
+                [a.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t.OLchUF, { time: e })
             }
         },
         GAME_LIBRARY_LAST_PLAYED: {
             END: {
-                [a.J6.NONE]: () => c.NW.string(c.t.EoWLrq),
-                [a.J6.SECONDS]: () => c.NW.string(c.t.QTHa8f),
-                [a.J6.MINUTES]: (e) => c.NW.formatToPlainString(c.t.SVEfcX, { time: e }),
-                [a.J6.HOURS]: (e) => c.NW.formatToPlainString(c.t['0Gbusb'], { time: e }),
-                [a.J6.DAYS]: (e) => c.NW.formatToPlainString(c.t.hnPZZ2, { time: e }),
-                [a.J6.WEEKS]: (e) => c.NW.formatToPlainString(c.t.L3fTpK, { time: e }),
-                [a.J6.MONTHS]: (e) => c.NW.formatToPlainString(c.t.xAFWQU, { time: e }),
-                [a.J6.YEARS]: (e) => c.NW.formatToPlainString(c.t['9Yr3NT'], { time: e })
+                [a.J6.NONE]: () => c.intl.string(c.t.EoWLrq),
+                [a.J6.SECONDS]: () => c.intl.string(c.t.QTHa8f),
+                [a.J6.MINUTES]: (e) => c.intl.formatToPlainString(c.t.SVEfcX, { time: e }),
+                [a.J6.HOURS]: (e) => c.intl.formatToPlainString(c.t['0Gbusb'], { time: e }),
+                [a.J6.DAYS]: (e) => c.intl.formatToPlainString(c.t.hnPZZ2, { time: e }),
+                [a.J6.WEEKS]: (e) => c.intl.formatToPlainString(c.t.L3fTpK, { time: e }),
+                [a.J6.MONTHS]: (e) => c.intl.formatToPlainString(c.t.xAFWQU, { time: e }),
+                [a.J6.YEARS]: (e) => c.intl.formatToPlainString(c.t['9Yr3NT'], { time: e })
             }
         }
     };

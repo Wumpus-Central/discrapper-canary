@@ -1,4 +1,4 @@
-l.d(n, { Z: () => W }), l(388685);
+l.d(n, { Z: () => D }), l(388685);
 var t = l(200651),
     r = l(192379),
     a = l(120356),
@@ -84,40 +84,40 @@ let A = _.q + 300 + 64,
                     'aria-hidden': !0
                 }),
                 (0, t.jsxs)(h.Z.Title, {
-                    children: [(0, t.jsx)(c.nn4, { children: n.name }), P.NW.string(P.t.VbpLyc)]
+                    children: [(0, t.jsx)(c.nn4, { children: n.name }), P.intl.string(P.t.VbpLyc)]
                 })
             ]
         });
     });
-function W(e) {
+function D(e) {
     var n, l;
     let { guild: a, width: h } = e,
         P = (0, s.e7)([g.ZP], () => g.ZP.getSection(O.oC.GUILD_HOME)),
-        [W, D] = r.useState(!1),
-        [T, R] = r.useState(y.$Y6),
-        L = P === y.ULH.SIDEBAR_CHAT,
-        B = (0, c.mFp)(),
-        H = (0, s.e7)([b.Z], () => b.Z.getSettings(a.id)),
-        U = null == H ? void 0 : H.welcomeMessage,
+        [D, T] = r.useState(!1),
+        [R, L] = r.useState(y.$Y6),
+        B = P === y.ULH.SIDEBAR_CHAT,
+        H = (0, c.mFp)(),
+        W = (0, s.e7)([b.Z], () => b.Z.getSettings(a.id)),
+        U = null == W ? void 0 : W.welcomeMessage,
         z = (0, C.Z)(a.id),
-        G = !z && (null != (l = null == H || null == (n = H.resourceChannels) ? void 0 : n.length) ? l : 0) === 0,
+        G = !z && (null != (l = null == W || null == (n = W.resourceChannels) ? void 0 : n.length) ? l : 0) === 0,
         F = (0, d.Z)('(max-width: 1300px)'),
-        q = h - y.PrS - T,
-        V = (L && q < A) || F || G;
+        q = h - y.PrS - R,
+        V = (B && q < A) || F || G;
     return (r.useEffect(() => {
-        if (H === b.P) (0, p.cP)(a.id);
-        else if (null != H) {
+        if (W === b.P) (0, p.cP)(a.id);
+        else if (null != W) {
             var e, n, l, t, r;
             x.default.track(
                 y.rMx.SERVER_GUIDE_VIEWED,
                 k(S({}, (0, u.hH)(a.id)), {
-                    num_member_actions: null != (l = null == (e = H.newMemberActions) ? void 0 : e.length) ? l : 0,
+                    num_member_actions: null != (l = null == (e = W.newMemberActions) ? void 0 : e.length) ? l : 0,
                     num_member_actions_completed: Object.keys(null != (t = j.Z.getCompletedActions(a.id)) ? t : {}).length,
-                    num_resource_channels: null != (r = null == (n = H.resourceChannels) ? void 0 : n.length) ? r : 0
+                    num_resource_channels: null != (r = null == (n = W.resourceChannels) ? void 0 : n.length) ? r : 0
                 })
             );
         }
-    }, [a.id, H]),
+    }, [a.id, W]),
     r.useEffect(
         () => () => {
             f.Z.closeChannelSidebar(O.oC.GUILD_HOME);
@@ -125,22 +125,22 @@ function W(e) {
         []
     ),
     r.useEffect(() => {
-        G && H !== b.P && o.Z.escapeToDefaultChannel(a.id);
-    }, [a.id, G, H]),
+        G && W !== b.P && o.Z.escapeToDefaultChannel(a.id);
+    }, [a.id, G, W]),
     G)
         ? null
         : (0, t.jsxs)(t.Fragment, {
               children: [
                   (0, t.jsxs)('div', {
                       className: i()(E.chat, w.background, {
-                          [E.threadSidebarOpen]: L,
-                          [E.threadSidebarFloating]: L && W
+                          [E.threadSidebarOpen]: B,
+                          [E.threadSidebarFloating]: B && D
                       }),
                       children: [
                           (0, t.jsx)(M, { guild: a }),
                           (0, t.jsx)(
                               c.yWw,
-                              k(S({}, B), {
+                              k(S({}, H), {
                                   children: (0, t.jsxs)('div', {
                                       className: i()(w.homeContainer, { [w.homeContainerCollapsed]: V }),
                                       children: [
@@ -185,11 +185,11 @@ function W(e) {
                           )
                       ]
                   }),
-                  L
+                  B
                       ? (0, t.jsx)(_.Z, {
                             pageWidth: h,
                             onSidebarResize: (e, n) => {
-                                D(n), R(e);
+                                T(n), L(e);
                             }
                         })
                       : null

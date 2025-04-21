@@ -19,15 +19,15 @@ class g extends (a = s.PureComponent) {
         if (429 === e.status)
             switch (t) {
                 case 'SHORT':
-                    return h.NW.string(h.t.T15lqq);
+                    return h.intl.string(h.t.T15lqq);
                 case 'LONG':
-                    return h.NW.string(h.t.XFShdH);
+                    return h.intl.string(h.t.XFShdH);
             }
         switch (t) {
             case 'SHORT':
-                return h.NW.string(h.t['+XstBw']);
+                return h.intl.string(h.t['+XstBw']);
             case 'LONG':
-                return h.NW.string(h.t.epyCur);
+                return h.intl.string(h.t.epyCur);
         }
     }
     componentWillUnmount() {

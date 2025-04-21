@@ -24,10 +24,10 @@ function c(e) {
                             className: u.streamUnavailableText,
                             color: 'always-white',
                             variant: n ? 'text-sm/semibold' : 'text-md/semibold',
-                            children: c ? s.NW.string(s.t.UeEwj4) : s.NW.string(s.t['1i3tSU'])
+                            children: c ? s.intl.string(s.t.UeEwj4) : s.intl.string(s.t['1i3tSU'])
                         }),
                         (0, r.jsx)(a.DY3, {
-                            text: c ? s.NW.string(s.t['ro/HNz']) : s.NW.string(s.t.UPf6ZG),
+                            text: c ? s.intl.string(s.t['ro/HNz']) : s.intl.string(s.t.UPf6ZG),
                             className: u.darkCircle,
                             children: (0, r.jsx)('div', {
                                 children: (0, r.jsx)(a.o8v, {

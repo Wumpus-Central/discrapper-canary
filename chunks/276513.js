@@ -119,7 +119,7 @@ function b(e) {
                                     children: h
                                 }),
                                 null != E && 'end' === b && (0, r.jsx)(I, {}),
-                                y && (0, r.jsx)(l.n, { children: d.NW.string(u.Z.cgdAs7) })
+                                y && (0, r.jsx)(l.n, { children: d.intl.string(u.default.cgdAs7) })
                             ]
                         }
                     )

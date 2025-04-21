@@ -1,8 +1,8 @@
 n.d(t, {
     EO: () => S,
     Fc: () => I,
-    Ft: () => A,
-    W5: () => N,
+    Ft: () => N,
+    W5: () => A,
     ZP: () => C,
     _T: () => E,
     oY: () => g,
@@ -84,24 +84,24 @@ function y(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null == e) return d;
     let r = b(e),
-        i = n ? N(e) : null != (t = e.username) ? t : d;
+        i = n ? A(e) : null != (t = e.username) ? t : d;
     return r === i ? r : null != r ? ''.concat(r, ' (').concat(i, ')') : i;
 }
 function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     switch (e) {
         case o.Skl.ONLINE:
-            return t ? s.NW.string(s.t['9hghLC']) : s.NW.string(s.t.WbGtnJ);
+            return t ? s.intl.string(s.t['9hghLC']) : s.intl.string(s.t.WbGtnJ);
         case o.Skl.OFFLINE:
-            return s.NW.string(s.t.Vv0abG);
+            return s.intl.string(s.t.Vv0abG);
         case o.Skl.IDLE:
-            return s.NW.string(s.t.qWbtVV);
+            return s.intl.string(s.t.qWbtVV);
         case o.Skl.DND:
-            return s.NW.string(s.t.jaNpQE);
+            return s.intl.string(s.t.jaNpQE);
         case o.Skl.INVISIBLE:
-            return s.NW.string(s.t.bg24HB);
+            return s.intl.string(s.t.bg24HB);
         case o.Skl.STREAMING:
-            return s.NW.string(s.t.XKYej4);
+            return s.intl.string(s.t.XKYej4);
         case o.Skl.UNKNOWN:
         default:
             return null;
@@ -128,19 +128,19 @@ function S(e) {
     });
 }
 function T(e, t, n) {
-    if (null == e) return s.NW.string(s.t.sKdZ6e);
+    if (null == e) return s.intl.string(s.t.sKdZ6e);
     if (!h(e.username)) return d;
     let r = n;
     if (('always' === t.identifiable ? (r = !1) : 'never' === t.identifiable && (r = !0), '0' !== e.discriminator && e.discriminator !== o.fo$ && !t.forcePomelo)) return 'username' === t.mode || r ? e.username : ''.concat(e.username, '#').concat(e.discriminator);
     let i = r ? f(e.username) : e.username;
     return 'never' !== t.decoration ? _(i) : i;
 }
-function N(e, t) {
+function A(e, t) {
     let n = c({}, p, t),
         r = 'auto' !== n.identifiable || i.Z.hidePersonalInformation;
     return T(e, n, r);
 }
-function A(e) {
+function N(e) {
     return (0, r.e7)([a.default], () => {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
@@ -149,7 +149,7 @@ let C = {
     getName: g,
     useName: E,
     isNameConcealed: (e) => 4 === e.length && e.endsWith('...'),
-    getUserTag: N,
+    getUserTag: A,
     useUserTag: function (e, t) {
         return T(
             e,
@@ -160,5 +160,5 @@ let C = {
     getFormattedName: y,
     getGlobalName: b,
     humanizeStatus: v,
-    useDirectMessageRecipient: A
+    useDirectMessageRecipient: N
 };

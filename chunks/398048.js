@@ -12,7 +12,7 @@ function u(e, t) {
         ? null
         : (0, r.jsx)(l.sNh, {
               id: 'clone-channel',
-              label: a.NW.string(a.t.dEaPc3),
+              label: a.intl.string(a.t.dEaPc3),
               action: () =>
                   (0, l.ZDy)(async () => {
                       let { default: c } = await Promise.all([n.e('7590'), n.e('45094'), n.e('7911')]).then(n.bind(n, 218613));

@@ -22,8 +22,8 @@ var i = n(512722),
     I = n(65154);
 let S = 300000,
     T = 60000,
-    N = {},
-    A = new f.V7(),
+    A = {},
+    N = new f.V7(),
     C = !1,
     R = window.document.createElement('canvas'),
     P = 512,
@@ -31,7 +31,7 @@ let S = 300000,
 (R.width = 512), (R.height = w);
 let D = R.getContext('2d');
 function L() {
-    A.stop(), null != r && (u.Z.removeSink(r, N), (r = null));
+    N.stop(), null != r && (u.Z.removeSink(r, A), (r = null));
 }
 let x = s().debounce((e, t, n, r) => {
     k(
@@ -94,10 +94,10 @@ async function k(e, t) {
                     rejectWithError: !1
                 });
         } catch (t) {
-            new p.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && A.start(T, n);
+            new p.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && N.start(T, n);
             return;
         }
-    r === e && (C ? A.start(T, n) : A.start(S, n));
+    r === e && (C ? N.start(T, n) : N.start(S, n));
 }
 function j(e, t) {
     let n = 0;
@@ -144,9 +144,9 @@ function G(e, t) {
             ? n.getNextVideoOutputFrame(e).then(s, (t) => {
                   if (r === e) throw t;
               })
-            : u.Z.addSink(e, N, s);
+            : u.Z.addSink(e, A, s);
     }).finally(() => {
-        i || u.Z.removeSink(e, N);
+        i || u.Z.removeSink(e, A);
     });
 }
 let B = {

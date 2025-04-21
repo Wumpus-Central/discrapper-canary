@@ -78,7 +78,7 @@ function v(e) {
                     (0, r.jsx)(l.Text, {
                         className: g.text,
                         variant: 'text-sm/normal',
-                        children: m.NW.format(m.t.BNAIBQ, { onLearnMore: y })
+                        children: m.intl.format(m.t.BNAIBQ, { onLearnMore: y })
                     })
                 ]
             }),
@@ -87,7 +87,7 @@ function v(e) {
                 className: g.iconOnly,
                 onClick: () => y(),
                 children: (0, r.jsx)(l.ua7, {
-                    text: m.NW.string(m.t['+eFIjY']),
+                    text: m.intl.string(m.t['+eFIjY']),
                     position: 'top',
                     children: (e) =>
                         (0, r.jsx)(

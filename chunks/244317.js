@@ -44,16 +44,16 @@ function h(e) {
                   children: [
                       (0, r.jsx)(a.X6q, {
                           variant: 'heading-xxl/bold',
-                          children: d.NW.string(d.t.csrAMD)
+                          children: d.intl.string(d.t.csrAMD)
                       }),
                       (0, r.jsx)(a.Text, {
                           variant: 'text-xs/semibold',
-                          children: d.NW.string(d.t['m1+IBg'])
+                          children: d.intl.string(d.t['m1+IBg'])
                       }),
                       (0, r.jsx)(a.zxk, {
                           onClick: () => f(!0),
                           color: a.zxk.Colors.BRAND,
-                          children: d.NW.string(d.t.fIv16O)
+                          children: d.intl.string(d.t.fIv16O)
                       })
                   ]
               })
@@ -62,7 +62,7 @@ function h(e) {
                   children: [
                       (0, r.jsx)(a.X6q, {
                           variant: 'heading-xxl/bold',
-                          children: d.NW.string(d.t['Z+hCVV'])
+                          children: d.intl.string(d.t['Z+hCVV'])
                       }),
                       (0, r.jsx)(a.$jN, {})
                   ]

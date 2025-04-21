@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(200651),
-    a = n(192379),
-    i = n(481060),
-    l = n(665906),
+    i = n(192379),
+    l = n(481060),
+    a = n(665906),
     s = n(499033),
     o = n(585483),
     c = n(456269),
@@ -13,14 +13,14 @@ var r = n(200651),
 function g(e) {
     let { channelName: t, guildId: g, tagFilter: f, channel: p } = e,
         x = (0, c.r_)(p),
-        b = (0, l.cD)(p),
+        b = (0, a.cD)(p),
         j = p.isMediaChannel(),
-        v = a.useCallback(() => {
+        v = i.useCallback(() => {
             (0, d.qz)(),
-                (0, i.ZDy)(async () => {
+                (0, l.ZDy)(async () => {
                     let { default: e } = await n.e('18417').then(n.bind(n, 740696));
                     return (t) => {
-                        var n, a;
+                        var n, i;
                         return (0, r.jsx)(
                             e,
                             ((n = (function (e) {
@@ -48,9 +48,9 @@ function g(e) {
                                 }
                                 return e;
                             })({}, t)),
-                            (a = a = { guildId: g }),
+                            (i = i = { guildId: g }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
+                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -58,8 +58,8 @@ function g(e) {
                                           n.push.apply(n, r);
                                       }
                                       return n;
-                                  })(Object(a)).forEach(function (e) {
-                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                                  })(Object(i)).forEach(function (e) {
+                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                                   }),
                             n)
                         );
@@ -69,7 +69,7 @@ function g(e) {
         C = f.size > 0,
         _ = b || x,
         y = !C && x && !j,
-        N = a.useCallback(() => (y ? v() : b ? void o.S.dispatch(u.CkL.FOCUS_COMPOSER_TITLE) : (0, u.VqG)()), [v, y, b]);
+        O = i.useCallback(() => (y ? v() : b ? void o.S.dispatch(u.CkL.FOCUS_COMPOSER_TITLE) : (0, u.VqG)()), [v, y, b]);
     return (0, r.jsxs)('div', {
         className: h.container,
         children: [
@@ -78,7 +78,7 @@ function g(e) {
                 children: [
                     (0, r.jsx)('div', {
                         className: h.icon,
-                        children: (0, r.jsx)(i.kBi, {
+                        children: (0, r.jsx)(l.kBi, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 30,
@@ -88,27 +88,27 @@ function g(e) {
                     (0, r.jsx)(s.Z, { className: h.stars })
                 ]
             }),
-            (0, r.jsx)(i.X6q, {
+            (0, r.jsx)(l.X6q, {
                 className: h.header,
                 variant: 'heading-md/semibold',
-                children: C ? m.NW.formatToPlainString(m.t.lvPci4, { numTags: f.size }) : m.NW.string(m.t.PwTMGx)
+                children: C ? m.intl.formatToPlainString(m.t.lvPci4, { numTags: f.size }) : m.intl.string(m.t.PwTMGx)
             }),
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(l.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: C ? m.NW.formatToPlainString(m.t.AAeye3, { numTags: f.size }) : m.NW.formatToPlainString(m.t.YtsXFB, { channelName: t })
+                children: C ? m.intl.formatToPlainString(m.t.AAeye3, { numTags: f.size }) : m.intl.formatToPlainString(m.t.YtsXFB, { channelName: t })
             }),
             _ &&
-                (0, r.jsxs)(i.zxk, {
-                    look: i.zxk.Looks.BLANK,
-                    size: i.zxk.Sizes.MIN,
-                    color: i.zxk.Colors.GREEN,
-                    onClick: N,
+                (0, r.jsxs)(l.zxk, {
+                    look: l.zxk.Looks.BLANK,
+                    size: l.zxk.Sizes.MIN,
+                    color: l.zxk.Colors.GREEN,
+                    onClick: O,
                     className: h.cta,
                     innerClassName: h.button,
                     children: [
-                        y ? m.NW.string(m.t.DgatTU) : m.NW.string(m.t.wOKE8P),
-                        (0, r.jsx)(i.Fbu, {
+                        y ? m.intl.string(m.t.DgatTU) : m.intl.string(m.t.wOKE8P),
+                        (0, r.jsx)(l.Fbu, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 12

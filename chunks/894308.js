@@ -23,7 +23,7 @@ function f(e) {
         (0, r.jsx)(a.Z, {
             withTitleBar: !0,
             windowKey: t,
-            title: d.NW.string(u.Z['7qZdOz']),
+            title: d.intl.string(u.default['7qZdOz']),
             children: (0, r.jsx)(o.f6W, {
                 theme: l.BR.DARK,
                 disableAdaptiveTheme: !0,

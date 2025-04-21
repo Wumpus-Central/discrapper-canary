@@ -20,7 +20,7 @@ let h = function (e) {
                   j &&
                       (0, r.jsx)(o.Ih, {
                           icon: i.b7C,
-                          text: x.NW.string(x.t.v2z4c3),
+                          text: x.intl.string(x.t.v2z4c3),
                           meetsRequirement: !0
                       }),
                   n.map((e, t) =>

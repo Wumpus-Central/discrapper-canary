@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(415506);
+n.d(t, { Z: () => T }), n(415506);
 var r = n(200651);
 n(192379);
 var i = n(990547),
@@ -13,10 +13,10 @@ var i = n(990547),
     _ = n(981631),
     I = n(388032),
     O = n(131715);
-let N = function (e) {
+let T = function (e) {
     var t;
-    let { dismissCurrentNotice: n, subscriptionTier: N } = e,
-        { analyticsLocations: T } = (0, s.ZP)(
+    let { dismissCurrentNotice: n, subscriptionTier: T } = e,
+        { analyticsLocations: N } = (0, s.ZP)(
             (function (e) {
                 switch (e) {
                     case E.Si.TIER_0:
@@ -26,11 +26,11 @@ let N = function (e) {
                     default:
                         throw Error('Unsupported subscription tier: '.concat(e));
                 }
-            })(N)
+            })(T)
         ),
         S = (0, d.N)(),
         p = (0, o.Z)(null != S && null != S.expires_at ? Date.parse(S.expires_at) : 0),
-        A = null == S || (null == (t = S.subscription_trial) ? void 0 : t.sku_id) !== N || null == S.expires_at || Object.values(p).every((e) => 0 === e);
+        A = null == S || (null == (t = S.subscription_trial) ? void 0 : t.sku_id) !== T || null == S.expires_at || Object.values(p).every((e) => 0 === e);
     return ((0, c.Z)(
         {
             type: i.ImpressionTypes.VIEW,
@@ -51,7 +51,7 @@ let N = function (e) {
                       default:
                           throw Error('Unsupported subscription tier: '.concat(e));
                   }
-              })(N),
+              })(T),
               children: [
                   (0, r.jsx)(l.RyX, { onClick: n }),
                   (0, r.jsx)(l.SrA, {
@@ -62,19 +62,19 @@ let N = function (e) {
                   (function (e, t) {
                       switch (e) {
                           case E.Si.TIER_0:
-                              return t.days > 0 ? I.NW.formatToPlainString(I.t.sP5OqK, { days: t.days }) : t.hours > 0 ? I.NW.formatToPlainString(I.t['7Lhfu7'], { hours: t.hours }) : I.NW.formatToPlainString(I.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
+                              return t.days > 0 ? I.intl.formatToPlainString(I.t.sP5OqK, { days: t.days }) : t.hours > 0 ? I.intl.formatToPlainString(I.t['7Lhfu7'], { hours: t.hours }) : I.intl.formatToPlainString(I.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
                           case E.Si.TIER_2:
-                              return t.days > 0 ? I.NW.formatToPlainString(I.t['4prs5e'], { days: t.days }) : t.hours > 0 ? I.NW.formatToPlainString(I.t.OD5nIS, { hours: t.hours }) : I.NW.formatToPlainString(I.t.rvyXjI, { minutes: Math.max(t.minutes, 1) });
+                              return t.days > 0 ? I.intl.formatToPlainString(I.t['4prs5e'], { days: t.days }) : t.hours > 0 ? I.intl.formatToPlainString(I.t.OD5nIS, { hours: t.hours }) : I.intl.formatToPlainString(I.t.rvyXjI, { minutes: Math.max(t.minutes, 1) });
                           default:
                               throw Error('Unsupported subscription tier: '.concat(e));
                       }
-                  })(N, p),
+                  })(T, p),
                   (0, r.jsx)(l.EyT, {
                       onClick: () => {
                           (0, u.Z)({
                               trialId: S.trial_id,
-                              subscriptionTier: N,
-                              analyticsLocations: T,
+                              subscriptionTier: T,
+                              analyticsLocations: N,
                               analyticsObject: {
                                   page: _.ZY5.IN_APP,
                                   section: _.jXE.NOTIFICATION_BAR,
@@ -85,13 +85,13 @@ let N = function (e) {
                       children: (function (e) {
                           switch (e) {
                               case E.Si.TIER_0:
-                                  return I.NW.string(I.t.mCG029);
+                                  return I.intl.string(I.t.mCG029);
                               case E.Si.TIER_2:
-                                  return I.NW.string(I.t['7590PT']);
+                                  return I.intl.string(I.t['7590PT']);
                               default:
                                   throw Error('Unsupported subscription tier: '.concat(e));
                           }
-                      })(N)
+                      })(T)
                   })
               ]
           });

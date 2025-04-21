@@ -30,7 +30,7 @@ let f = (e) => {
                               color: o.Ttl.PRIMARY,
                               look: o.iLD.FILLED,
                               onClick: () => n('shelf block see all', t.categorySkuId),
-                              children: b.NW.formatToPlainString(b.t.bc9RBA, { category_name: t.name })
+                              children: b.intl.formatToPlainString(b.t.bc9RBA, { category_name: t.name })
                           })
                       ]
                   }),

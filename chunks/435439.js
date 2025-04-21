@@ -14,10 +14,10 @@ let d = {
         [s.kG.PLAYSTATION]: i.Z
     },
     p = {
-        [s.kG.SPOTIFY]: () => u.NW.string(u.t['0ZB/XF']),
-        [s.kG.CRUNCHYROLL]: () => u.NW.string(u.t.jdJYX1),
-        [s.kG.XBOX]: () => u.NW.string(u.t['Nfvo7+']),
-        [s.kG.PLAYSTATION]: () => u.NW.string(u.t.fFl4jo)
+        [s.kG.SPOTIFY]: () => u.intl.string(u.t['0ZB/XF']),
+        [s.kG.CRUNCHYROLL]: () => u.intl.string(u.t.jdJYX1),
+        [s.kG.XBOX]: () => u.intl.string(u.t['Nfvo7+']),
+        [s.kG.PLAYSTATION]: () => u.intl.string(u.t.fFl4jo)
     };
 function f(e) {
     var t,

@@ -12,13 +12,13 @@ function c(e) {
         p = o.ZP.canUseFancyVoiceChannelReactions(d),
         h = '';
     return (
-        (h = p ? (t ? s.NW.string(s.t.CfapQU) : s.NW.string(s.t.GB2x0t)) : s.NW.string(s.t.fe05ND)),
+        (h = p ? (t ? s.intl.string(s.t.CfapQU) : s.intl.string(s.t.GB2x0t)) : s.intl.string(s.t.fe05ND)),
         (0, r.jsx)(a.Z, {
             checked: t,
             onChange: c,
             labelText: n,
             tooltipText: h,
-            iconAltText: s.NW.string(s.t.oF6B0N),
+            iconAltText: s.intl.string(s.t.oF6B0N),
             canToggle: p,
             onClick: p ? () => {} : u
         })

@@ -43,11 +43,11 @@ function T(e) {
         r = _.Z.createFromServer(n);
     r.targetType === p.Iq.STREAM && null != r.targetUser ? (null == g[t] && (g[t] = {}), (g[t][String(r.targetUser.id)] = r)) : r.targetType === p.Iq.EMBEDDED_APPLICATION && null != r.targetApplication ? (null == E[t] && (E[t] = {}), (E[t][r.targetApplication.id] = r)) : (m[t] = r);
 }
-function N(e) {
+function A(e) {
     let { channelId: t } = e;
     m[t] = null;
 }
-function A(e) {
+function N(e) {
     let { channelId: t } = e;
     m[t] = null;
 }
@@ -112,8 +112,8 @@ let j = new k(f.Z, {
     FRIEND_INVITE_CREATE_FAILURE: R,
     FRIEND_INVITE_REVOKE_SUCCESS: P,
     INSTANT_INVITE_CREATE_SUCCESS: T,
-    INSTANT_INVITE_CREATE_FAILURE: N,
-    INSTANT_INVITE_REVOKE_SUCCESS: A,
+    INSTANT_INVITE_CREATE_FAILURE: A,
+    INSTANT_INVITE_REVOKE_SUCCESS: N,
     FRIEND_INVITE_REVOKE_REQUEST: w,
     FRIEND_INVITE_CREATE_REQUEST: D,
     FRIEND_INVITES_FETCH_REQUEST: L,

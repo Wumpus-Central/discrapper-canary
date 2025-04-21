@@ -24,7 +24,7 @@ function h(e) {
     if (!y)
         return (0, r.jsx)(a.sNh, {
             id: 'connect-spotify',
-            label: p.NW.formatToPlainString(p.t.XWSHTU, { platform: _.ai }),
+            label: p.intl.formatToPlainString(p.t.XWSHTU, { platform: _.ai }),
             action: () => {
                 null == g || g({ action: 'PRESS_CONNECT_SPOTIFY_MENU_ITEM' }), o.Z.open(f.oAB.CONNECTIONS), null == E || E();
             }
@@ -35,7 +35,7 @@ function h(e) {
         ? null
         : (0, r.jsx)(a.sNh, {
               id: 'play-on-spotify',
-              label: p.NW.string(p.t.rRffNz),
+              label: p.intl.string(p.t.rRffNz),
               action: () => {
                   null == g || g({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, l.o)(_.Hw.TRACK, v.external_id);
               }

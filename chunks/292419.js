@@ -27,7 +27,7 @@ let f = (e, t) => ({
                   })
                 : void 0
     }),
-    _ = (e) => ((null == e ? void 0 : e.errorCode) === 429 ? d.NW.string(d.t.fitPBQ) : d.NW.string(d.t.VCsUJi)),
+    _ = (e) => ((null == e ? void 0 : e.errorCode) === 429 ? d.intl.string(d.t.fitPBQ) : d.intl.string(d.t.VCsUJi)),
     p = (e, t, n) => {
         let r = (null == e ? void 0 : e.data.interactionType) === i.B8.MESSAGE_COMPONENT && (null == e ? void 0 : e.state) === a.F.FAILED ? e.data.componentId : null;
         if (null != (null != r ? E(n, r) : null)) {
@@ -142,7 +142,7 @@ function v(e, t, n) {
                     description: e.description,
                     emoji: null != e.emoji ? f(e.emoji, y) : void 0
                 })),
-                placeholder: null != (a = e.placeholder) ? a : d.NW.string(d.t.Otr6W1),
+                placeholder: null != (a = e.placeholder) ? a : d.intl.string(d.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values
             };
@@ -166,7 +166,7 @@ function v(e, t, n) {
                 id: O(n),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                placeholder: null != (u = e.placeholder) ? u : d.NW.string(d.t.Otr6W1),
+                placeholder: null != (u = e.placeholder) ? u : d.intl.string(d.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
                 defaultValues: e.default_values
@@ -177,7 +177,7 @@ function v(e, t, n) {
                 id: O(n),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                placeholder: null != (_ = e.placeholder) ? _ : d.NW.string(d.t.Otr6W1),
+                placeholder: null != (_ = e.placeholder) ? _ : d.intl.string(d.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
                 defaultValues: e.default_values
@@ -188,7 +188,7 @@ function v(e, t, n) {
                 id: O(n),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                placeholder: null != (p = e.placeholder) ? p : d.NW.string(d.t.Otr6W1),
+                placeholder: null != (p = e.placeholder) ? p : d.intl.string(d.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
                 defaultValues: e.default_values
@@ -199,7 +199,7 @@ function v(e, t, n) {
                 id: O(n),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                placeholder: null != (m = e.placeholder) ? m : d.NW.string(d.t.Otr6W1),
+                placeholder: null != (m = e.placeholder) ? m : d.intl.string(d.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
                 channelTypes: e.channel_types,

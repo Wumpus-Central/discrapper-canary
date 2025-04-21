@@ -65,7 +65,7 @@ function m(e) {
             }
         );
     }, []);
-    let b = p.NW.string(p.t.h850Sk);
+    let b = p.intl.string(p.t.h850Sk);
     return (0, r.jsx)(l.yRy, {
         shouldShow: m,
         animation: l.yRy.Animation.NONE,
@@ -79,7 +79,7 @@ function m(e) {
                 f(h({}, e), {
                     channel: t,
                     navId: 'thread-context',
-                    label: p.NW.string(p.t['1NBjqa'])
+                    label: p.intl.string(p.t['1NBjqa'])
                 })
             ),
         children: (e, t) => {

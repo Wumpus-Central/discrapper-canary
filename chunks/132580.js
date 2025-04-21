@@ -2,13 +2,13 @@ n.d(t, { Z: () => o });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(44315),
-    l = n(981631),
+    l = n(44315),
+    s = n(981631),
     a = n(388032);
 function o(e) {
     var t,
         n,
-        { className: o, color: c = (0, s.Lq)(l.Ilk.BRAND_500) } = e,
+        { className: o, color: c = (0, l.Lq)(s.Ilk.BRAND_500) } = e,
         d = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -18,13 +18,13 @@ function o(e) {
                     var n,
                         r,
                         i = {},
-                        s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ['className', 'color']);
@@ -57,7 +57,7 @@ function o(e) {
         })({}, d)),
         (n = n =
             {
-                text: a.NW.string(a.t.G6GWZ2),
+                text: a.intl.string(a.t.G6GWZ2),
                 color: c,
                 className: o
             }),

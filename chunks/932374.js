@@ -1,103 +1,103 @@
-e.d(s, { default: () => m });
-var n = e(200651),
-    t = e(192379),
-    r = e(481060),
-    a = e(230711),
-    l = e(695346),
-    c = e(626135),
-    o = e(981631),
-    x = e(676654),
-    d = e(388032),
-    h = e(951874);
+n.d(t, { default: () => m });
+var s = n(200651),
+    e = n(192379),
+    l = n(481060),
+    a = n(230711),
+    r = n(695346),
+    c = n(626135),
+    d = n(981631),
+    o = n(676654),
+    x = n(388032),
+    h = n(951874);
 let m = (i) => {
-    let { transitionState: s, onClose: e, onScrollToGuildsSection: m } = i;
+    let { transitionState: t, onClose: n, onScrollToGuildsSection: m } = i;
     return (
-        t.useEffect(() => {
-            c.default.track(o.rMx.OPEN_MODAL, { type: 'Confirm Disable Activity Sharing' });
+        e.useEffect(() => {
+            c.default.track(d.rMx.OPEN_MODAL, { type: 'Confirm Disable Activity Sharing' });
         }, []),
-        (0, n.jsxs)(r.Y0X, {
-            transitionState: s,
+        (0, s.jsxs)(l.Y0X, {
+            transitionState: t,
             'aria-label': '',
             children: [
-                (0, n.jsx)(r.xBx, {
-                    children: (0, n.jsx)(r.X6q, {
+                (0, s.jsx)(l.xBx, {
+                    children: (0, s.jsx)(l.X6q, {
                         variant: 'heading-lg/bold',
-                        children: d.NW.string(d.t['3k4hTU'])
+                        children: x.intl.string(x.t['3k4hTU'])
                     })
                 }),
-                (0, n.jsxs)(r.hzk, {
+                (0, s.jsxs)(l.hzk, {
                     children: [
-                        (0, n.jsx)(r.Text, {
+                        (0, s.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: d.NW.string(x.Z.IR0Bf3)
+                            children: x.intl.string(o.default.IR0Bf3)
                         }),
-                        (0, n.jsx)(r.Text, {
+                        (0, s.jsx)(l.Text, {
                             className: h.otherOptions,
                             variant: 'text-md/normal',
-                            children: d.NW.string(d.t.TpDXm5)
+                            children: x.intl.string(x.t.TpDXm5)
                         }),
-                        (0, n.jsxs)('div', {
+                        (0, s.jsxs)('div', {
                             className: h.linksContainer,
                             children: [
-                                (0, n.jsxs)(r.P3F, {
+                                (0, s.jsxs)(l.P3F, {
                                     onClick: () => {
-                                        e(), m();
+                                        n(), m();
                                     },
                                     className: h.link,
                                     children: [
-                                        (0, n.jsx)(r.Text, {
+                                        (0, s.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: d.NW.string(x.Z['4I+VjI'])
+                                            children: x.intl.string(o.default['4I+VjI'])
                                         }),
-                                        (0, n.jsx)(r.LJT, { size: 'sm' })
+                                        (0, s.jsx)(l.LJT, { size: 'sm' })
                                     ]
                                 }),
-                                (0, n.jsx)(r.$i$, { className: h.linkDivider }),
-                                (0, n.jsxs)(r.P3F, {
+                                (0, s.jsx)(l.$i$, { className: h.linkDivider }),
+                                (0, s.jsxs)(l.P3F, {
                                     onClick: () => {
-                                        e(), a.Z.open(o.oAB.REGISTERED_GAMES);
+                                        n(), a.Z.open(d.oAB.REGISTERED_GAMES);
                                     },
                                     className: h.link,
                                     children: [
-                                        (0, n.jsx)(r.Text, {
+                                        (0, s.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: d.NW.string(x.Z.sbwbEB)
+                                            children: x.intl.string(o.default.sbwbEB)
                                         }),
-                                        (0, n.jsx)(r.LJT, { size: 'sm' })
+                                        (0, s.jsx)(l.LJT, { size: 'sm' })
                                     ]
                                 }),
-                                (0, n.jsx)(r.$i$, { className: h.linkDivider }),
-                                (0, n.jsxs)(r.P3F, {
+                                (0, s.jsx)(l.$i$, { className: h.linkDivider }),
+                                (0, s.jsxs)(l.P3F, {
                                     onClick: () => {
-                                        e(), a.Z.open(o.oAB.CONNECTIONS);
+                                        n(), a.Z.open(d.oAB.CONNECTIONS);
                                     },
                                     className: h.link,
                                     children: [
-                                        (0, n.jsx)(r.Text, {
+                                        (0, s.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: d.NW.string(x.Z.QPiPpa)
+                                            children: x.intl.string(o.default.QPiPpa)
                                         }),
-                                        (0, n.jsx)(r.LJT, { size: 'sm' })
+                                        (0, s.jsx)(l.LJT, { size: 'sm' })
                                     ]
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, n.jsxs)(r.mzw, {
+                (0, s.jsxs)(l.mzw, {
                     className: h.footer,
                     children: [
-                        (0, n.jsx)(r.zxk, {
+                        (0, s.jsx)(l.zxk, {
                             onClick: () => {
-                                l.G6.updateSetting(!1), e();
+                                r.G6.updateSetting(!1), n();
                             },
-                            color: r.Ttl.RED,
-                            children: d.NW.string(d.t.R9GHyc)
+                            color: l.Ttl.RED,
+                            children: x.intl.string(x.t.R9GHyc)
                         }),
-                        (0, n.jsx)(r.zxk, {
-                            onClick: e,
-                            color: r.Ttl.PRIMARY,
-                            children: d.NW.string(d.t['ETE/oK'])
+                        (0, s.jsx)(l.zxk, {
+                            onClick: n,
+                            color: l.Ttl.PRIMARY,
+                            children: x.intl.string(x.t['ETE/oK'])
                         })
                     ]
                 })

@@ -24,9 +24,9 @@ var r = n(200651),
     x = n(835473),
     E = n(413523),
     I = n(933557),
-    N = n(194082),
-    P = n(550532),
-    w = n(436774),
+    P = n(194082),
+    w = n(550532),
+    N = n(436774),
     Z = n(605236),
     T = n(243778),
     A = n(594190),
@@ -38,11 +38,11 @@ var r = n(200651),
     U = n(989941),
     G = n(690221),
     B = n(231664),
-    W = n(759198),
-    V = n(970731),
-    F = n(131704),
-    H = n(199902),
-    z = n(314897),
+    V = n(759198),
+    F = n(970731),
+    H = n(131704),
+    z = n(199902),
+    W = n(314897),
     Y = n(592125),
     K = n(984933),
     q = n(430824),
@@ -154,9 +154,9 @@ class ey extends i.PureComponent {
                           title: l,
                           icon: null == t ? void 0 : t.sourceIcon
                       })
-                    : (0, r.jsx)(N.ZP, {
-                          look: N.ZP.Looks.GRAY,
-                          size: N.ZP.Sizes.SMALL,
+                    : (0, r.jsx)(P.ZP, {
+                          look: P.ZP.Looks.GRAY,
+                          size: P.ZP.Sizes.SMALL,
                           className: ep.liveIndicator
                       }),
                 (0, r.jsxs)('div', {
@@ -169,9 +169,9 @@ class ey extends i.PureComponent {
                                 children: [
                                     (0, r.jsx)(h.SrA, {
                                         size: 'xxs',
-                                        color: w.JX.PREMIUM_TIER_2
+                                        color: N.JX.PREMIUM_TIER_2
                                     }),
-                                    (0, r.jsx)(W.Z, {
+                                    (0, r.jsx)(V.Z, {
                                         className: ep.perksDemoText,
                                         variant: 'text-xxs/semibold',
                                         children: n
@@ -219,7 +219,7 @@ class ey extends i.PureComponent {
                 }),
                 (0, r.jsxs)('div', {
                     className: ep.info,
-                    children: [t, null != l && (0, F.Qm)(l.type) ? b : (0, r.jsx)(eb, { timestamps: f })]
+                    children: [t, null != l && (0, H.Qm)(l.type) ? b : (0, r.jsx)(eb, { timestamps: f })]
                 })
             ]
         });
@@ -230,11 +230,11 @@ class ey extends i.PureComponent {
                   spacing: 16,
                   shouldShow: u,
                   renderPopout: () =>
-                      (0, r.jsx)(V.ZP, {
-                          color: V.BD.PRIMARY,
-                          header: eh.NW.string(eh.t.ON4pBg),
-                          content: eh.NW.string(eh.t['8PAfND']),
-                          buttonCTA: eh.NW.string(eh.t.WAI6xs),
+                      (0, r.jsx)(F.ZP, {
+                          color: F.BD.PRIMARY,
+                          header: eh.intl.string(eh.t.ON4pBg),
+                          content: eh.intl.string(eh.t['8PAfND']),
+                          buttonCTA: eh.intl.string(eh.t.WAI6xs),
                           buttonProps: {
                               color: h.zxk.Colors.PRIMARY,
                               look: h.zxk.Looks.LINK,
@@ -243,7 +243,7 @@ class ey extends i.PureComponent {
                           onClick: () => {
                               d(ed.L.USER_DISMISS);
                           },
-                          caretPosition: V.DF.BOTTOM_CENTER
+                          caretPosition: F.DF.BOTTOM_CENTER
                       }),
                   children: (e) =>
                       (0, r.jsx)(
@@ -287,7 +287,7 @@ class ey extends i.PureComponent {
                     a()(null != n, 'Activity null during navigation click'),
                     g.Z.channelListScrollTo(null != (e = t.guild_id) ? e : ec.ME, t.id),
                     !(0, _.R)({ isContextless: n.location.kind === c.E.CONTEXTLESS }) &&
-                        ((0, F.vd)(t.type) &&
+                        ((0, H.vd)(t.type) &&
                             f.Z.selectParticipant(
                                 t.id,
                                 (0, E.gN)({
@@ -295,7 +295,7 @@ class ey extends i.PureComponent {
                                     instanceId: n.compositeInstanceId
                                 })
                             ),
-                        (0, F.Qm)(t.type) && (0, v.tg)(eu.Ez.PANEL));
+                        (0, H.Qm)(t.type) && (0, v.tg)(eu.Ez.PANEL));
             });
     }
 }
@@ -321,26 +321,26 @@ let e_ = (0, b.Z)(function (e) {
             }
             return i;
         })(e, ['guildId']);
-    let o = (0, u.e7)([z.default], () => z.default.getId()),
+    let o = (0, u.e7)([W.default], () => W.default.getId()),
         s = (0, u.e7)([A.ZP, en.Z], () => (0, U.Z)(A.ZP, en.Z)),
         a = (0, u.e7)([ee.Z, Y.Z], () => Y.Z.getChannel(ee.Z.getVoiceChannelId())),
         h = (0, u.e7)([C.ZP], () => C.ZP.getConnectedActivityChannelId()),
         p = (0, u.e7)([Y.Z], () => Y.Z.getChannel(h)),
         f = (0, u.e7)([q.Z], () => q.Z.getGuild(null == p ? void 0 : p.guild_id)),
-        [g, m] = (0, u.Wu)([H.Z], () => [H.Z.getCurrentUserActiveStream(), H.Z.getStreamerActiveStreamMetadata()]),
+        [g, m] = (0, u.Wu)([z.Z], () => [z.Z.getCurrentUserActiveStream(), z.Z.getStreamerActiveStreamMetadata()]),
         b = (0, u.e7)([y.Z], () => y.Z.useReducedMotion),
         v = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         j = (0, u.e7)([q.Z, X.Z, K.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, X.Z).length > 0)),
         [S] = (0, x.Z)([null != (t = null != m && null != m.id ? m.id : null != s && null != s.id ? s.id : null != v ? v.applicationId : void 0) ? t : '']),
-        E = (0, u.e7)([P.Z], () => P.Z.getFakeGameData()),
-        N = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
-        w = (0, O.Z0)() && null != N && (0, _.R)({ isContextless: N.location.kind === c.E.CONTEXTLESS }),
+        E = (0, u.e7)([w.Z], () => w.Z.getFakeGameData()),
+        P = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
+        N = (0, O.Z0)() && null != P && (0, _.R)({ isContextless: P.location.kind === c.E.CONTEXTLESS }),
         R = (0, u.e7)([Q.Z], () => (0, L.Z)(Q.Z) && (0, ei.isWindows)()),
         k = (0, u.e7)([J.Z], () => (null != o ? J.Z.findActivity(o, (e) => e.type === ec.IIU.PLAYING) : null)),
         M = null != g && g.ownerId === o && g.state !== ec.jm8.ENDED,
         G = (0, u.e7)([et.default, $.Z], () => (null != p ? (0, I.F6)(p, et.default, $.Z) : void 0)),
-        W = (0, B.Z)(),
-        [V, F] = i.useState(!1),
+        V = (0, B.Z)(),
+        [F, H] = i.useState(!1),
         { showsActivityPopoutQuickRefocusNUX: el, markActivityPopoutQuickRefocusNUXAsDismissed: eo } = (function (e) {
             let { embeddedActivity: t } = e,
                 n = [],
@@ -357,7 +357,7 @@ let e_ = (0, b.Z)(function (e) {
         ey,
         em(eg({}, l), {
             guildId: n,
-            canGoLive: R || w || void 0 !== E,
+            canGoLive: R || N || void 0 !== E,
             activity: k,
             embeddedActivity: v,
             userId: o,
@@ -371,9 +371,9 @@ let e_ = (0, b.Z)(function (e) {
             streamMetadata: m,
             channelName: G,
             guildForConnectedChannel: f,
-            streamQualityIndicator: W,
-            isForceShowSharingPopout: V,
-            setIsForceShowSharingPopout: F,
+            streamQualityIndicator: V,
+            isForceShowSharingPopout: F,
+            setIsForceShowSharingPopout: H,
             showsActivityPopoutQuickRefocusNUX: el,
             markActivityPopoutQuickRefocusNUXAsDismissed: eo
         })

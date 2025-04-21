@@ -2,8 +2,8 @@ n.d(t, { Z: () => p }), n(388685), n(35282);
 var r = n(200651);
 n(192379);
 var i = n(990547),
-    a = n(399606),
-    l = n(100527),
+    l = n(399606),
+    a = n(100527),
     o = n(213609),
     s = n(914010),
     c = n(267101),
@@ -13,7 +13,7 @@ function p(e) {
     let { code: t } = e,
         [n, p] = t.split('-'),
         m = (0, c.hO)(n, p),
-        f = (0, a.e7)([s.Z], () => s.Z.getGuildId());
+        f = (0, l.e7)([s.Z], () => s.Z.getGuildId());
     return ((0, o.Z)(
         {
             type: d.n.VIEW,
@@ -30,7 +30,7 @@ function p(e) {
         : (0, r.jsx)(u.H, {
               guildProductListing: m,
               guildId: n,
-              location: l.Z.GUILD_PRODUCT_EMBED_CARD,
+              location: a.Z.GUILD_PRODUCT_EMBED_CARD,
               cardWidth: 390,
               thumbnailHeight: 219
           });

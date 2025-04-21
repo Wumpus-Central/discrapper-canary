@@ -1,30 +1,30 @@
 e.d(c, { default: () => h }), e(953529);
-var a = e(200651);
+var t = e(200651);
 e(192379);
-var o = e(481060),
-    s = e(313201),
-    t = e(471253),
-    l = e(939863),
+var a = e(481060),
+    o = e(313201),
+    l = e(471253),
+    s = e(939863),
     i = e(388032),
     r = e(555501);
 function h(n) {
     let { transitionState: c, onClose: e, channel: h } = n,
-        d = (0, s.Dt)(),
+        d = (0, o.Dt)(),
         f = (n) => {
-            (0, t.RK)(h, n), e();
+            (0, l.RK)(h, n), e();
         };
-    return (0, a.jsx)(o.Y0X, {
-        size: o.CgR.SMALL,
+    return (0, t.jsx)(a.Y0X, {
+        size: a.CgR.SMALL,
         transitionState: c,
         'aria-labelledby': d,
         className: r.container,
-        children: (0, a.jsxs)(o.hzk, {
+        children: (0, t.jsxs)(a.hzk, {
             className: r.content,
             children: [
-                (0, a.jsx)(l.Z, {
-                    children: (0, a.jsx)('div', {
+                (0, t.jsx)(s.Z, {
+                    children: (0, t.jsx)('div', {
                         className: r.iconBackground,
-                        children: (0, a.jsx)(o.S6n, {
+                        children: (0, t.jsx)(a.S6n, {
                             size: 'custom',
                             color: 'currentColor',
                             height: 40,
@@ -33,28 +33,28 @@ function h(n) {
                         })
                     })
                 }),
-                (0, a.jsx)(o.X6q, {
+                (0, t.jsx)(a.X6q, {
                     className: r.header,
                     variant: 'heading-lg/semibold',
-                    children: i.NW.string(i.t.Ul1RJS)
+                    children: i.intl.string(i.t.Ul1RJS)
                 }),
-                (0, a.jsx)(o.Text, {
+                (0, t.jsx)(a.Text, {
                     color: 'header-secondary',
                     className: r.description,
                     variant: 'text-sm/normal',
-                    children: i.NW.format(i.t['Z+3bW1'], {
+                    children: i.intl.format(i.t['Z+3bW1'], {
                         stageChannelHook: () =>
-                            (0, a.jsxs)('div', {
+                            (0, t.jsxs)('div', {
                                 className: r.channel,
                                 children: [
-                                    (0, a.jsx)(o.ewx, {
+                                    (0, t.jsx)(a.ewx, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         height: 14,
                                         width: 14,
                                         className: r.channelIcon
                                     }),
-                                    (0, a.jsx)(o.Text, {
+                                    (0, t.jsx)(a.Text, {
                                         className: r.channelName,
                                         variant: 'text-sm/normal',
                                         children: h.name
@@ -63,26 +63,26 @@ function h(n) {
                             })
                     })
                 }),
-                (0, a.jsx)(o.zxk, {
+                (0, t.jsx)(a.zxk, {
                     fullWidth: !0,
-                    color: o.zxk.Colors.GREEN,
+                    color: a.zxk.Colors.GREEN,
                     onClick: () => f(!1),
                     className: r.button,
-                    children: i.NW.string(i.t.MMlhsr)
+                    children: i.intl.string(i.t.MMlhsr)
                 }),
-                (0, a.jsx)(o.zxk, {
+                (0, t.jsx)(a.zxk, {
                     fullWidth: !0,
-                    color: o.zxk.Colors.RED,
+                    color: a.zxk.Colors.RED,
                     onClick: () => f(!0),
                     className: r.button,
-                    children: i.NW.string(i.t.BVN4pK)
+                    children: i.intl.string(i.t.BVN4pK)
                 }),
-                (0, a.jsx)(o.zxk, {
+                (0, t.jsx)(a.zxk, {
                     fullWidth: !0,
-                    color: o.zxk.Colors.PRIMARY,
-                    look: o.zxk.Looks.LINK,
+                    color: a.zxk.Colors.PRIMARY,
+                    look: a.zxk.Looks.LINK,
                     onClick: e,
-                    children: i.NW.string(i.t.L5eIZ2)
+                    children: i.intl.string(i.t.L5eIZ2)
                 })
             ]
         })

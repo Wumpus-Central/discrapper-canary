@@ -54,9 +54,9 @@ function y(e) {
         y = (0, i.e7)([u.Z], () => u.Z.purchasedItems),
         h = (0, i.e7)([u.Z], () => u.Z.lifetimePoints),
         x = (0, p.w2)(),
-        N = (0, p.r7)(),
-        v = (0, f.eR)(m),
-        O = (0, s.useMemo)(
+        v = (0, p.r7)(),
+        O = (0, f.eR)(m),
+        j = (0, s.useMemo)(
             () =>
                 a()(n)
                     .filter((e) => {
@@ -65,7 +65,7 @@ function y(e) {
                                 return null == y[e.id];
                             case d.h.ITEM_UPGRADE:
                                 var t, n;
-                                let r = N[e.id],
+                                let r = v[e.id],
                                     s = r.itemId,
                                     o = null != y[s],
                                     a = null != (n = null == (t = y[s]) ? void 0 : t.upgrades[e.id]) ? n : 0;
@@ -81,13 +81,13 @@ function y(e) {
                     })
                     .take(null != o ? o : n.length)
                     .value(),
-            [o, h, n, y, N]
+            [o, h, n, y, v]
         );
-    return 0 === O.length
+    return 0 === j.length
         ? null
         : (0, r.jsx)('div', {
               className: t,
-              children: O.map((e) => {
+              children: j.map((e) => {
                   switch (e.type) {
                       case d.h.ITEM:
                           return (0, r.jsx)(
@@ -97,22 +97,22 @@ function y(e) {
                                   item: x[e.id],
                                   currentPoints: l,
                                   PurchasableComponent: c,
-                                  onPurchase: v
+                                  onPurchase: O
                               },
                               'item-'.concat(e.id)
                           );
                       case d.h.ITEM_UPGRADE:
                           var t, n;
-                          let s = null != (n = null == (t = y[N[e.id].itemId]) ? void 0 : t.upgrades[e.id]) ? n : 0;
+                          let s = null != (n = null == (t = y[v[e.id].itemId]) ? void 0 : t.upgrades[e.id]) ? n : 0;
                           return (0, r.jsx)(
                               b,
                               {
                                   upgradeId: e.id,
-                                  upgrade: N[e.id],
+                                  upgrade: v[e.id],
                                   currentPoints: l,
                                   numAlreadyPurchased: s,
                                   PurchasableComponent: c,
-                                  onPurchase: v
+                                  onPurchase: O
                               },
                               'item-upgrade-'.concat(e.id)
                           );

@@ -113,9 +113,9 @@
             I = (d - b) / s,
             S = (-u - E) / o,
             T = (-d - b) / s,
-            N = f(1, 0, O, I),
-            A = f(O, I, S, T);
-        return 0 === a && A > 0 && (A -= tt), 1 === a && A < 0 && (A += tt), [y, v, N, A];
+            A = f(1, 0, O, I),
+            N = f(O, I, S, T);
+        return 0 === a && N > 0 && (N -= tt), 1 === a && N < 0 && (N += tt), [y, v, A, N];
     }
     function p(e, t) {
         var n = (4 / 3) * Math.tan(t / 4),
@@ -207,7 +207,7 @@
     function T(e, t) {
         return t_[e][t];
     }
-    function N(e, t, n) {
+    function A(e, t, n) {
         var r,
             i,
             a,
@@ -218,16 +218,16 @@
             return i;
         }
         for (r = Array(o), a = 0; a < o; a++) r[a] = o * (n[a + 1] - n[a]);
-        return N(e - 1, t, r);
+        return A(e - 1, t, r);
     }
-    function A(e, t, n) {
-        var r = N(1, n, e),
-            i = N(1, n, t);
+    function N(e, t, n) {
+        var r = A(1, n, e),
+            i = A(1, n, t);
         return Math.sqrt(r * r + i * i);
     }
     function C(e, t, n) {
         var r, i, a, o;
-        for (void 0 === n && (n = 1), r = n / 2, i = 0, a = 0; a < 20; a++) (o = r * td[20][a] + r), (i += tf[20][a] * A(e, t, o));
+        for (void 0 === n && (n = 1), r = n / 2, i = 0, a = 0; a < 20; a++) (o = r * td[20][a] + r), (i += tf[20][a] * N(e, t, o));
         return r * i;
     }
     function R(e, t, n, r) {
@@ -253,8 +253,8 @@
             I = (-u - g) / o,
             S = (-d - E) / s,
             T = R(1, 0, v, O),
-            N = R(v, O, I, S);
-        return 0 === a && N > 0 && (N -= tp), 1 === a && N < 0 && (N += tp), [b, y, T, N];
+            A = R(v, O, I, S);
+        return 0 === a && A > 0 && (A -= tp), 1 === a && A < 0 && (A += tp), [b, y, T, A];
     }
     function w(e, t) {
         var n = (4 / 3) * Math.tan(t / 4),
@@ -339,10 +339,10 @@
     function H(e) {
         return 'M' + e.join('L') + 'Z';
     }
-    function W(e) {
+    function Y(e) {
         return Z(V(e));
     }
-    function Y(e, t) {
+    function W(e, t) {
         var n = V(e);
         return K(n) || z(n, t);
     }
@@ -405,7 +405,7 @@
     function J(e, t) {
         var n, r;
         if ('string' == typeof e) {
-            var i = Y(e, t);
+            var i = W(e, t);
             (e = i.ring), (r = i.skipBisect);
         } else if (!Array.isArray(e)) throw TypeError(tb);
         if (!$((n = e.slice(0)))) throw TypeError(tb);
@@ -443,9 +443,9 @@
     }
     function en(e, t, n, r, i) {
         var a, o;
-        if (i === eR(e, t, n, r) > 0) for (a = t; a < n; a += r) o = eN(a, e[a], e[a + 1], o);
-        else for (a = n - r; a >= t; a -= r) o = eN(a, e[a], e[a + 1], o);
-        return o && ey(o, o.next) && (eA(o), (o = o.next)), o;
+        if (i === eR(e, t, n, r) > 0) for (a = t; a < n; a += r) o = eA(a, e[a], e[a + 1], o);
+        else for (a = n - r; a >= t; a -= r) o = eA(a, e[a], e[a + 1], o);
+        return o && ey(o, o.next) && (eN(o), (o = o.next)), o;
     }
     function er(e, t) {
         if (!e) return e;
@@ -455,7 +455,7 @@
         do
             if (((n = !1), r.steiner || (!ey(r, r.next) && 0 !== eb(r.prev, r, r.next)))) r = r.next;
             else {
-                if ((eA(r), (r = t = r.prev) === r.next)) return null;
+                if ((eN(r), (r = t = r.prev) === r.next)) return null;
                 n = !0;
             }
         while (n || r !== t);
@@ -465,7 +465,7 @@
         if (e) {
             !o && a && e_(e, r, i, a);
             for (var s, l, c = e; e.prev !== e.next; )
-                if (((s = e.prev), (l = e.next), a ? eo(e, r, i, a) : ea(e))) t.push(s.i / n), t.push(e.i / n), t.push(l.i / n), eA(e), (e = l.next), (c = l.next);
+                if (((s = e.prev), (l = e.next), a ? eo(e, r, i, a) : ea(e))) t.push(s.i / n), t.push(e.i / n), t.push(l.i / n), eN(e), (e = l.next), (c = l.next);
                 else if ((e = l) === c) {
                     o ? (1 === o ? ei((e = es(e, t, n)), t, n, r, i, a, 2) : 2 === o && el(e, t, n, r, i, a)) : ei(er(e), t, n, r, i, a, 1);
                     break;
@@ -503,7 +503,7 @@
         do {
             var i = r.prev,
                 a = r.next.next;
-            !ey(i, a) && ev(i, r, r.next, a) && eI(i, a) && eI(a, i) && (t.push(i.i / n), t.push(r.i / n), t.push(a.i / n), eA(r), eA(r.next), (r = e = a)), (r = r.next);
+            !ey(i, a) && ev(i, r, r.next, a) && eI(i, a) && eI(a, i) && (t.push(i.i / n), t.push(r.i / n), t.push(a.i / n), eN(r), eN(r.next), (r = e = a)), (r = r.next);
         } while (r !== e);
         return r;
     }
@@ -647,11 +647,11 @@
             a = t.prev;
         return (e.next = t), (t.prev = e), (n.next = i), (i.prev = n), (r.next = n), (n.prev = r), (a.next = r), (r.prev = a), r;
     }
-    function eN(e, t, n, r) {
+    function eA(e, t, n, r) {
         var i = new eC(e, t, n);
         return r ? ((i.next = r.next), (i.prev = r), (r.next.prev = i), (r.next = i)) : ((i.prev = i), (i.next = i)), i;
     }
-    function eA(e) {
+    function eN(e) {
         (e.next.prev = e.prev), (e.prev.next = e.next), e.prevZ && (e.prevZ.nextZ = e.nextZ), e.nextZ && (e.nextZ.prevZ = e.prevZ);
     }
     function eC(e, t, n) {
@@ -691,7 +691,7 @@
         function n(e, t) {
             t.length && t.pop();
             for (var n = c[e < 0 ? ~e : e], r = 0, i = n.length; r < i; ++r) t.push(l(n[r], r));
-            e < 0 && tN(t, i);
+            e < 0 && tA(t, i);
         }
         function r(e) {
             return l(e);
@@ -885,7 +885,7 @@
                 (o.area = t.area + a.area), (o.type = 'Polygon'), (o.arcs = o.arcs[0]), n.splice(i, 1), n.shift(), n.splice(r(n, o.area), 0, o);
             })();
         if (t > n.length) throw RangeError("Can't collapse topology into " + t + ' pieces.');
-        return tA(e, e.objects.triangles).features.map(function (e) {
+        return tN(e, e.objects.triangles).features.map(function (e) {
             return e.geometry.coordinates[0].pop(), e.geometry.coordinates[0];
         });
     }
@@ -1081,17 +1081,17 @@
     function eH(e, t, n, r, i) {
         return ez(eq(e, t, n), r, eJ(e, t, n), 2 * Math.PI * n, i);
     }
-    function eW(e, t, n, r, i) {
+    function eY(e, t, n, r, i) {
         var a = eH(t, n, r, e, i);
         return function (e) {
             return a(1 - e);
         };
     }
-    function eY(e, t, n, r, i, a) {
+    function eW(e, t, n, r, i, a) {
         return ez(eQ(e, t, n, r), i, e$(e, t, n, r), 2 * n + 2 * r, a);
     }
     function eK(e, t, n, r, i, a) {
-        var o = eY(t, n, r, i, e, a);
+        var o = eW(t, n, r, i, e, a);
         return function (e) {
             return o(1 - e);
         };
@@ -1906,10 +1906,10 @@
                 return u;
             };
         },
-        tN = function (e, t) {
+        tA = function (e, t) {
             for (var n, r = e.length, i = r - t; i < --r; ) (n = e[i]), (e[i++] = e[r]), (e[r] = n);
         },
-        tA = function (e, t) {
+        tN = function (e, t) {
             return 'GeometryCollection' === t.type
                 ? {
                       type: 'FeatureCollection',
@@ -2077,5 +2077,5 @@
             });
             return eU(e, t, n);
         };
-    (e.interpolate = tO), (e.separate = eB), (e.combine = eF), (e.interpolateAll = eV), (e.splitPathString = W), (e.toPathString = H), (e.fromCircle = eH), (e.toCircle = eW), (e.fromRect = eY), (e.toRect = eK), Object.defineProperty(e, '__esModule', { value: !0 });
+    (e.interpolate = tO), (e.separate = eB), (e.combine = eF), (e.interpolateAll = eV), (e.splitPathString = Y), (e.toPathString = H), (e.fromCircle = eH), (e.toCircle = eY), (e.fromRect = eW), (e.toRect = eK), Object.defineProperty(e, '__esModule', { value: !0 });
 });

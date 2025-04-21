@@ -77,7 +77,7 @@ let p = (e) => {
                         children: (0, r.jsx)(s.Text, {
                             color: 'always-white',
                             variant: 'text-xs/medium',
-                            children: d.NW.string(d.t['1Wvve3'])
+                            children: d.intl.string(d.t['1Wvve3'])
                         })
                     })
                 ]

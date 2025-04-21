@@ -2,8 +2,8 @@ n.d(t, { j: () => o });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    s = n.n(i),
-    l = n(481060),
+    l = n.n(i),
+    s = n(481060),
     a = n(572590);
 function o(e) {
     let { pills: t, pillClassName: n } = e;
@@ -11,14 +11,14 @@ function o(e) {
         className: a.container,
         children: t.map((e) =>
             (0, r.jsx)(
-                l.ua7,
+                s.ua7,
                 {
                     text: e.tooltipText,
                     shouldShow: null != e.tooltipText,
                     children: (t) => {
                         var i, o;
                         return (0, r.jsx)(
-                            l.P3F,
+                            s.P3F,
                             ((i = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -46,9 +46,9 @@ function o(e) {
                             })({}, t)),
                             (o = o =
                                 {
-                                    className: s()(a.pill, { [a.disabled]: e.disabled }, n),
+                                    className: l()(a.pill, { [a.disabled]: e.disabled }, n),
                                     onClick: e.onClick,
-                                    children: (0, r.jsx)(l.Text, {
+                                    children: (0, r.jsx)(s.Text, {
                                         tag: 'span',
                                         variant: 'text-sm/medium',
                                         color: 'interactive-normal',

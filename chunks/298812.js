@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var i = n(200651),
     s = n(192379),
     l = n(120356),
@@ -12,11 +12,11 @@ var i = n(200651),
     g = n(933557),
     m = n(775666),
     x = n(471445),
-    N = n(592125),
-    p = n(324067),
-    v = n(699516),
-    j = n(9156),
-    S = n(594174),
+    p = n(592125),
+    v = n(324067),
+    j = n(699516),
+    S = n(9156),
+    N = n(594174),
     f = n(823379),
     b = n(621600),
     C = n(423589),
@@ -26,36 +26,36 @@ var i = n(200651),
     _ = n(958648),
     T = n(569658),
     L = n(981631),
-    W = n(388032),
-    y = n(955549);
-let M = s.forwardRef(function (e, t) {
+    y = n(388032),
+    M = n(955549);
+let I = s.forwardRef(function (e, t) {
     let { guildId: n, requestScrollToBottom: s } = e,
-        l = (0, a.Wu)([N.Z, j.ZP], () =>
-            (0, C.OD)(j.ZP.getChannelOverrides(n), {
+        l = (0, a.Wu)([p.Z, S.ZP], () =>
+            (0, C.OD)(S.ZP.getChannelOverrides(n), {
                 ignoreMute: !0,
                 ignoreUnreadSetting: !1,
                 ignoreNotificationSetting: !1
             })
-                .map((e) => N.Z.getChannel(e))
+                .map((e) => p.Z.getChannel(e))
                 .filter(f.lm)
         );
     (0, _.Z)(l, () => s());
-    let r = (0, a.e7)([p.Z], () => p.Z.getCategories(n)),
+    let r = (0, a.e7)([v.Z], () => v.Z.getCategories(n)),
         o = l.map((e, t) =>
             (0, i.jsxs)(
                 'div',
                 {
-                    className: y.channelRow,
+                    className: M.channelRow,
                     children: [
                         (0, i.jsx)(
-                            I,
+                            P,
                             {
                                 channel: e,
                                 categories: r
                             },
                             e.id
                         ),
-                        t < l.length - 1 && (0, i.jsx)('div', { className: y.separator })
+                        t < l.length - 1 && (0, i.jsx)('div', { className: M.separator })
                     ]
                 },
                 e.id
@@ -68,15 +68,15 @@ let M = s.forwardRef(function (e, t) {
                 guildId: n,
                 onSelected: (e) => {
                     if (null != l.find((t) => t.id === e)) return;
-                    let t = N.Z.getChannel(e);
+                    let t = p.Z.getChannel(e);
                     null != t &&
                         u.Z.updateChannelOverrideSettings(
                             n,
                             e,
                             {
                                 muted: !1,
-                                message_notifications: j.ZP.resolvedMessageNotifications(t),
-                                flags: (0, E.pq)(j.ZP.getChannelIdFlags(t.guild_id, t.id), j.ZP.resolveUnreadSetting(t))
+                                message_notifications: S.ZP.resolvedMessageNotifications(t),
+                                flags: (0, E.pq)(S.ZP.getChannelIdFlags(t.guild_id, t.id), S.ZP.resolveUnreadSetting(t))
                             },
                             b.ZB.OverrideCreated
                         );
@@ -84,46 +84,46 @@ let M = s.forwardRef(function (e, t) {
             }),
             o.length > 0 &&
                 (0, i.jsxs)('div', {
-                    className: y.table,
+                    className: M.table,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: y.row,
+                            className: M.row,
                             children: [
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-xs/bold',
                                     color: 'text-muted',
-                                    className: y.rowName,
-                                    children: W.NW.string(W.t.uShwWl)
+                                    className: M.rowName,
+                                    children: y.intl.string(y.t.uShwWl)
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-xs/bold',
                                     color: 'text-muted',
-                                    className: y.rowOption,
-                                    children: W.NW.string(W.t.hZrr6u)
+                                    className: M.rowOption,
+                                    children: y.intl.string(y.t.hZrr6u)
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-xs/bold',
                                     color: 'text-muted',
-                                    className: y.rowOption,
-                                    children: W.NW.string(W.t.y59NJi)
+                                    className: M.rowOption,
+                                    children: y.intl.string(y.t.y59NJi)
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-xs/bold',
                                     color: 'text-muted',
-                                    className: y.rowOption,
-                                    children: W.NW.string(W.t['pGn/bG'])
+                                    className: M.rowOption,
+                                    children: y.intl.string(y.t['pGn/bG'])
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-xs/bold',
                                     color: 'text-muted',
-                                    className: y.rowOption,
-                                    children: W.NW.string(W.t['32yow8'])
+                                    className: M.rowOption,
+                                    children: y.intl.string(y.t['32yow8'])
                                 })
                             ]
                         }),
                         o.length > 0 &&
                             (0, i.jsx)('div', {
-                                className: y.channels,
+                                className: M.channels,
                                 children: o
                             })
                     ]
@@ -131,23 +131,23 @@ let M = s.forwardRef(function (e, t) {
         ]
     });
 });
-function I(e) {
+function P(e) {
     let { channel: t, categories: n } = e,
         l = (0, d.dQu)(o.Z.unsafe_rawColors.GREEN_360).hex(),
-        u = (0, a.e7)([N.Z], () => N.Z.getChannel(null == t ? void 0 : t.parent_id)),
-        p = (0, O.ZA)(t),
-        [j, f] = s.useState(!1);
+        u = (0, a.e7)([p.Z], () => p.Z.getChannel(null == t ? void 0 : t.parent_id)),
+        v = (0, O.ZA)(t),
+        [S, f] = s.useState(!1);
     if (null == t) return null;
-    let b = W.NW.string(W.t.uIzfCA),
+    let b = y.intl.string(y.t.uIzfCA),
         C = (0, x.KS)(t);
-    t.type === L.d4z.GUILD_CATEGORY && null != t.guild_id && '' !== t.guild_id ? (b = W.NW.formatToPlainString(W.t['2KzH8/'], { num: null != n[t.id] ? n[t.id].length : 0 })) : null != u && (b = W.NW.formatToPlainString(W.t.L1zJgY, { categoryName: (0, g.F6)(u, S.default, v.Z) }));
-    let E = j ? Z.s8.CUSTOM : p.preset;
+    t.type === L.d4z.GUILD_CATEGORY && null != t.guild_id && '' !== t.guild_id ? (b = y.intl.formatToPlainString(y.t['2KzH8/'], { num: null != n[t.id] ? n[t.id].length : 0 })) : null != u && (b = y.intl.formatToPlainString(y.t.L1zJgY, { categoryName: (0, g.F6)(u, N.default, j.Z) }));
+    let E = S ? Z.s8.CUSTOM : v.preset;
     return (0, i.jsx)('div', {
         children: (0, i.jsxs)('div', {
-            className: r()(y.row, y.channel),
+            className: r()(M.row, M.channel),
             children: [
                 (0, i.jsxs)('div', {
-                    className: r()(y.rowName, y.modColor),
+                    className: r()(M.rowName, M.modColor),
                     children: [
                         null != C
                             ? (0, i.jsx)(C, {
@@ -155,19 +155,19 @@ function I(e) {
                                   color: 'currentColor',
                                   height: 20,
                                   width: 20,
-                                  className: y.icon
+                                  className: M.icon
                               })
                             : null,
                         (0, i.jsxs)('div', {
                             children: [
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-md/semibold',
-                                    className: y.modColor,
-                                    children: (0, g.F6)(t, S.default, v.Z)
+                                    className: M.modColor,
+                                    children: (0, g.F6)(t, N.default, j.Z)
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-xs/medium',
-                                    className: y.modColor,
+                                    className: M.modColor,
                                     children: b
                                 })
                             ]
@@ -175,7 +175,7 @@ function I(e) {
                     ]
                 }),
                 (0, i.jsx)('div', {
-                    className: y.rowOption,
+                    className: M.rowOption,
                     children: (0, i.jsx)('div', {
                         children: (0, i.jsx)(d.XZJ, {
                             color: l,
@@ -187,7 +187,7 @@ function I(e) {
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: y.rowOption,
+                    className: M.rowOption,
                     children: (0, i.jsx)('div', {
                         children: (0, i.jsx)(d.XZJ, {
                             color: l,
@@ -199,7 +199,7 @@ function I(e) {
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: y.rowOption,
+                    className: M.rowOption,
                     children: (0, i.jsx)('div', {
                         children: (0, i.jsx)(d.XZJ, {
                             color: l,
@@ -211,14 +211,14 @@ function I(e) {
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: y.rowOption,
+                    className: M.rowOption,
                     children: (0, i.jsx)('div', {
                         children: (0, i.jsx)(d.XZJ, {
                             onClick: (e) => {
                                 (0, c.vq)(e, () =>
                                     (0, i.jsx)(d.v2r, {
                                         navId: 'ChannelNotificationCustomSettingsItems',
-                                        'aria-label': W.NW.string(W.t.kMdneX),
+                                        'aria-label': y.intl.string(y.t.kMdneX),
                                         onClose: () => {},
                                         onSelect: () => {},
                                         children: (0, m.T5)(t, () => f(!1))
@@ -235,7 +235,7 @@ function I(e) {
                 }),
                 (0, i.jsx)(h.Z, {
                     onClick: () => (0, O.JK)(t.guild_id, t.id),
-                    className: y.removeButton
+                    className: M.removeButton
                 })
             ]
         })

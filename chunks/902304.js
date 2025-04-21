@@ -34,8 +34,8 @@ function S(e, t, n) {
     );
 }
 let T = new c.Z('GameConsoleManager'),
-    N = 3000,
-    A = 60000,
+    A = 3000,
+    N = 60000,
     C = 180000;
 async function R(e) {
     let t = f.Z.getChannelId();
@@ -88,7 +88,7 @@ class w extends l.Z {
                         selfDeaf: r,
                         selfMute: i
                     }),
-                    this.rollbackCommandTimeout.start(N, () => {
+                    this.rollbackCommandTimeout.start(A, () => {
                         R(s);
                     }));
             }),
@@ -115,11 +115,11 @@ class w extends l.Z {
                 null != e && null == _.Z.getSessionById(e) && (0, m.s6)(), null == e && this.maybeConnect(Object.values(_.Z.getSessions()));
             }),
             S(this, 'handleWaitForRemoteSession', () => {
-                this.awaitRemoteTimeout.start(A, () => {
+                this.awaitRemoteTimeout.start(N, () => {
                     (0, m.s6)(),
                         o.Z.show({
-                            title: I.NW.string(I.t.wGMxr6),
-                            body: I.NW.string(I.t.i5k8b2)
+                            title: I.intl.string(I.t.wGMxr6),
+                            body: I.intl.string(I.t.i5k8b2)
                         });
                 });
             }),
@@ -136,8 +136,8 @@ class w extends l.Z {
                             ? o
                             : {
                                   id: 'id',
-                                  platform: I.NW.string(I.t['UQMV/P']),
-                                  name: I.NW.string(I.t['UQMV/P'])
+                                  platform: I.intl.string(I.t['UQMV/P']),
+                                  name: I.intl.string(I.t['UQMV/P'])
                               },
                         r,
                         i

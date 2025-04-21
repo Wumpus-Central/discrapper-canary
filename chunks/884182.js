@@ -75,7 +75,7 @@ function C(e) {
     if (4 === o) return (0, i.jsx)(P, { itemsForLayout: t });
     let r = o % 3;
     return (0, i.jsxs)(i.Fragment, {
-        children: [1 === r && (0, i.jsx)(v, { itemsForLayout: t.slice(0, r) }), 2 === r && (0, i.jsx)(w, { itemsForLayout: t.slice(0, r) }), 0 === r ? (0, i.jsx)(N, { itemsForLayout: t }) : (0, i.jsx)(N, { itemsForLayout: t.slice(r) })]
+        children: [1 === r && (0, i.jsx)(v, { itemsForLayout: t.slice(0, r) }), 2 === r && (0, i.jsx)(w, { itemsForLayout: t.slice(0, r) }), 0 === r ? (0, i.jsx)(M, { itemsForLayout: t }) : (0, i.jsx)(M, { itemsForLayout: t.slice(r) })]
     });
 }
 function v(e) {
@@ -167,7 +167,7 @@ function P(e) {
         )
     });
 }
-function N(e) {
+function M(e) {
     let { itemsForLayout: t } = e;
     return (0, i.jsx)('div', {
         className: g.threeByThreeGrid,
@@ -184,7 +184,7 @@ function N(e) {
         )
     });
 }
-let M = (e) => ({
+let N = (e) => ({
         className: l()(e, g.itemContentContainer),
         imgContainerClassName: g.lazyImgContainer,
         imgClassName: g.lazyImg
@@ -193,7 +193,7 @@ let M = (e) => ({
 function A(e) {
     let { props: t, maxWidth: n = p.mT, maxHeight: o = p.Jj, useFullWidth: r = !0, isSingleItem: l = !1, footer: s } = e,
         a = t.item.type,
-        u = y(f({}, t, 'IMAGE' === a && M(t.className), 'VIDEO' === a && T(t.className)), {
+        u = y(f({}, t, 'IMAGE' === a && N(t.className), 'VIDEO' === a && T(t.className)), {
             mediaLayoutType: p.hV.MOSAIC,
             maxWidth: n,
             maxHeight: o,

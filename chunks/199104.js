@@ -33,7 +33,7 @@ function _() {
                             variant: 'heading-lg/semibold',
                             className: b.header,
                             id: n,
-                            children: m.NW.string(m.t.F4Zgg4)
+                            children: m.intl.string(m.t.F4Zgg4)
                         }),
                         (0, r.jsx)(d.ZP, {
                             contentTypes: t,

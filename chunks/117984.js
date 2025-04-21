@@ -11,8 +11,8 @@ n.d(t, {
     n(388685);
 var i = n(524437),
     r = n(675478),
-    a = n(592125),
-    l = n(496675),
+    l = n(592125),
+    a = n(496675),
     o = n(709054),
     u = n(853856),
     d = n(231338);
@@ -30,8 +30,8 @@ function s(e) {
             continue;
         }
         if (n.type === i.Dd.CATEGORY) continue;
-        let r = a.Z.getChannel(t);
-        if (null == r || (!r.isPrivate() && !l.Z.can(d.Pl.VIEW_CHANNEL, r))) {
+        let r = l.Z.getChannel(t);
+        if (null == r || (!r.isPrivate() && !a.Z.can(d.Pl.VIEW_CHANNEL, r))) {
             delete e[t];
             continue;
         }

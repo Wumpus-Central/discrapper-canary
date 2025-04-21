@@ -17,12 +17,12 @@ var r = n(200651),
     _ = n(276645),
     E = n(970731),
     O = n(626135),
-    N = n(267642),
-    y = n(337721),
-    I = n(981631),
-    v = n(921944),
-    C = n(30513),
-    S = n(474936),
+    y = n(267642),
+    I = n(337721),
+    v = n(981631),
+    C = n(921944),
+    S = n(30513),
+    N = n(474936),
     T = n(388032),
     P = n(540835),
     j = n(519254),
@@ -31,17 +31,17 @@ var r = n(200651),
     x = n(31932),
     L = n(642301);
 function w(e) {
-    null != e && h.Z.open(e.id, (0, f.r)(e.id), { section: I.jXE.PREMIUM_GUILD_PROGRESS_BAR }, I.KsC.DISPLAY);
+    null != e && h.Z.open(e.id, (0, f.r)(e.id), { section: v.jXE.PREMIUM_GUILD_PROGRESS_BAR }, v.KsC.DISPLAY);
 }
 function R(e, t) {
     null != t &&
-        ((0, N.f2)(t, I.Eu4.TIER_1)
-            ? h.Z.open(t.id, (0, f.r)(t.id), { section: I.jXE.PREMIUM_GUILD_INVITE_SPLASH }, I.KsC.INVITE)
+        ((0, y.f2)(t, v.Eu4.TIER_1)
+            ? h.Z.open(t.id, (0, f.r)(t.id), { section: v.jXE.PREMIUM_GUILD_INVITE_SPLASH }, v.KsC.INVITE)
             : (0, u.Z)({
                   analyticsLocations: e,
-                  analyticsSourceLocation: I.jXE.PREMIUM_GUILD_INVITE_SPLASH,
+                  analyticsSourceLocation: v.jXE.PREMIUM_GUILD_INVITE_SPLASH,
                   guild: t,
-                  perks: (0, C.o9)()
+                  perks: (0, S.o9)()
               }));
 }
 function D(e) {
@@ -63,20 +63,20 @@ let k = i.memo(function (e) {
     let { contentTypes: t, theme: n, guild: i, renderGuildHeaderDropdownButton: o } = e,
         { analyticsLocations: u } = (0, s.ZP)(),
         f = () => {
-            O.default.track(I.rMx.TOOLTIP_VIEWED, {
-                type: S.cd.PREMIUM_PROGRESS_BAR,
-                location: { page: I.ZY5.GUILD_CHANNEL }
+            O.default.track(v.rMx.TOOLTIP_VIEWED, {
+                type: N.cd.PREMIUM_PROGRESS_BAR,
+                location: { page: v.ZY5.GUILD_CHANNEL }
             });
         },
-        C = () => {
-            O.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: S.cd.INVITE_SPLASH_UPSELL,
-                location: { page: I.ZY5.GUILD_CHANNEL },
+        S = () => {
+            O.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: N.cd.INVITE_SPLASH_UPSELL,
+                location: { page: v.ZY5.GUILD_CHANNEL },
                 location_stack: u
             });
         },
         k = (0, a.wj)(n) ? Z : x,
-        [M, U] = (0, c.US)(t, v.R.GUILD_HEADER_TOOLTIPS);
+        [M, U] = (0, c.US)(t, C.R.GUILD_HEADER_TOOLTIPS);
     return (0, r.jsx)(r.Fragment, {
         children: (() => {
             switch (M) {
@@ -100,15 +100,15 @@ let k = i.memo(function (e) {
                     return (0, r.jsx)(D, {
                         renderPopout: (0, r.jsx)(E.ZP, {
                             onComponentMount: f,
-                            header: T.NW.string(T.t.nxtaFx),
+                            header: T.intl.string(T.t.nxtaFx),
                             asset: (0, r.jsx)('img', {
                                 alt: '',
                                 src: k,
                                 className: j.fullWidthImage
                             }),
-                            content: T.NW.format(T.t.ujItEh, {}),
-                            buttonCTA: T.NW.string(T.t.UzVPra),
-                            secondaryButtonCTA: T.NW.string(T.t['KkK/aG']),
+                            content: T.intl.format(T.t.ujItEh, {}),
+                            buttonCTA: T.intl.string(T.t.UzVPra),
+                            secondaryButtonCTA: T.intl.string(T.t['KkK/aG']),
                             onSecondaryClick: () => w(),
                             onClick: () => w(i),
                             markAsDismissed: U
@@ -119,15 +119,15 @@ let k = i.memo(function (e) {
                     return (0, r.jsx)(D, {
                         renderPopout: (0, r.jsx)(E.ZP, {
                             onComponentMount: f,
-                            header: T.NW.string(T.t.KAsfPT),
+                            header: T.intl.string(T.t.KAsfPT),
                             asset: (0, r.jsx)('img', {
                                 alt: '',
                                 src: k,
                                 className: j.fullWidthImage
                             }),
-                            content: T.NW.format(T.t.zK1hpq, {}),
-                            buttonCTA: T.NW.string(T.t.UzVPra),
-                            secondaryButtonCTA: T.NW.string(T.t['KkK/aG']),
+                            content: T.intl.format(T.t.zK1hpq, {}),
+                            buttonCTA: T.intl.string(T.t.UzVPra),
+                            secondaryButtonCTA: T.intl.string(T.t['KkK/aG']),
                             onSecondaryClick: () => w(),
                             onClick: () => w(i),
                             markAsDismissed: U
@@ -144,19 +144,19 @@ let k = i.memo(function (e) {
                     });
                 case l.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
                     return (0, r.jsx)(D, {
-                        renderPopout: (0, r.jsx)(y.Z, {
+                        renderPopout: (0, r.jsx)(I.Z, {
                             guild: i,
                             markAsDismissed: U
                         }),
                         renderGuildHeaderDropdownButton: o
                     });
                 case l.z.GUILD_HEADER_INVITE_SPLASH:
-                    let e = (0, N.f2)(i, I.Eu4.TIER_1) ? T.NW.format(T.t.DDzEVl, {}) : T.NW.formatToPlainString(T.t.pMftkJ, { boostCount: (0, N.KK)(i, I.Eu4.TIER_1) }),
-                        t = (0, N.f2)(i, I.Eu4.TIER_1) ? T.NW.string(T.t.rOFcBg) : T.NW.string(T.t.hvVgAQ);
+                    let e = (0, y.f2)(i, v.Eu4.TIER_1) ? T.intl.format(T.t.DDzEVl, {}) : T.intl.formatToPlainString(T.t.pMftkJ, { boostCount: (0, y.KK)(i, v.Eu4.TIER_1) }),
+                        t = (0, y.f2)(i, v.Eu4.TIER_1) ? T.intl.string(T.t.rOFcBg) : T.intl.string(T.t.hvVgAQ);
                     return (0, r.jsx)(D, {
                         renderPopout: (0, r.jsx)(E.ZP, {
-                            onComponentMount: C,
-                            header: T.NW.string(T.t['36wK8/']),
+                            onComponentMount: S,
+                            header: T.intl.string(T.t['36wK8/']),
                             asset: (0, r.jsx)('img', {
                                 alt: '',
                                 src: A,
@@ -164,7 +164,7 @@ let k = i.memo(function (e) {
                             }),
                             content: e,
                             buttonCTA: t,
-                            secondaryButtonCTA: T.NW.string(T.t.hBIHLS),
+                            secondaryButtonCTA: T.intl.string(T.t.hBIHLS),
                             onSecondaryClick: () => R(u),
                             onClick: () => R(u, i),
                             markAsDismissed: U
@@ -180,10 +180,10 @@ let k = i.memo(function (e) {
                     return (0, r.jsx)(D, {
                         renderPopout: (0, r.jsx)(E.ZP, {
                             className: P.tooltipOverrideColor,
-                            header: T.NW.string(T.t.hLUL3t),
-                            content: T.NW.string(T.t.ahWaPT),
-                            buttonCTA: T.NW.string(T.t['NX+WJC']),
-                            onClick: () => U(v.L.UNKNOWN),
+                            header: T.intl.string(T.t.hLUL3t),
+                            content: T.intl.string(T.t.ahWaPT),
+                            buttonCTA: T.intl.string(T.t['NX+WJC']),
+                            onClick: () => U(C.L.UNKNOWN),
                             markAsDismissed: U
                         }),
                         renderGuildHeaderDropdownButton: o
@@ -191,17 +191,17 @@ let k = i.memo(function (e) {
                 case l.z.GUILD_HEADER_SOUNDBOARD_PERMISSION:
                     return (0, r.jsx)(D, {
                         renderPopout: (0, r.jsx)(E.ZP, {
-                            header: T.NW.string(T.t.PZNQKC),
-                            content: T.NW.string(T.t.jQIyyM),
-                            buttonCTA: T.NW.string(T.t.RzWDqa),
-                            secondaryButtonCTA: T.NW.string(T.t.f3Pet7),
+                            header: T.intl.string(T.t.PZNQKC),
+                            content: T.intl.string(T.t.jQIyyM),
+                            buttonCTA: T.intl.string(T.t.RzWDqa),
+                            secondaryButtonCTA: T.intl.string(T.t.f3Pet7),
                             asset: (0, r.jsx)('img', {
                                 alt: '',
                                 src: L,
                                 className: j.fullWidthImage
                             }),
                             onClick: () => {
-                                h.Z.open(i.id, I.pNK.ROLES), h.Z.selectRole(i.getEveryoneRoleId(), T.NW.string(T.t.Bco7ND));
+                                h.Z.open(i.id, v.pNK.ROLES), h.Z.selectRole(i.getEveryoneRoleId(), T.intl.string(T.t.Bco7ND));
                             },
                             markAsDismissed: U
                         }),

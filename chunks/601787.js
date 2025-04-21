@@ -6,8 +6,8 @@ var o = r(481060),
 function i(e) {
     var t,
         r,
-        { ruleName: i, keyword: a } = e,
-        l = (function (e, t) {
+        { ruleName: i, keyword: l } = e,
+        a = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -26,7 +26,7 @@ function i(e) {
             }
             return o;
         })(e, ['ruleName', 'keyword']);
-    let u = null != i ? i : c.NW.string(c.t.ffR2cH);
+    let u = null != i ? i : c.intl.string(c.t.ffR2cH);
     return (0, n.jsx)(
         o.ConfirmModal,
         ((t = (function (e) {
@@ -53,17 +53,17 @@ function i(e) {
                     });
             }
             return e;
-        })({}, l)),
+        })({}, a)),
         (r = r =
             {
-                header: c.NW.string(c.t['zib/xM']),
-                cancelText: c.NW.string(c.t['ETE/oK']),
-                confirmText: c.NW.string(c.t['cY+Ooa']),
+                header: c.intl.string(c.t['zib/xM']),
+                cancelText: c.intl.string(c.t['ETE/oK']),
+                confirmText: c.intl.string(c.t['cY+Ooa']),
                 children: (0, n.jsx)(o.Text, {
                     variant: 'text-md/normal',
-                    children: c.NW.format(c.t.AxSYKC, {
+                    children: c.intl.format(c.t.AxSYKC, {
                         ruleName: u,
-                        keyword: a
+                        keyword: l
                     })
                 })
             }),

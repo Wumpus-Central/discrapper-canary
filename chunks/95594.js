@@ -69,9 +69,9 @@ function f(e) {
         I = (0, a.Z)(),
         S = (0, r.useRef)(d),
         [T] = (0, r.useState)(() => new i.ZP()),
-        N = p(),
-        A = Math.min(null != h ? h : 1 / 0, N.offsetWidth),
-        C = null != h ? Math.max(0, N.offsetWidth - h) : 0,
+        A = p(),
+        N = Math.min(null != h ? h : 1 / 0, A.offsetWidth),
+        C = null != h ? Math.max(0, A.offsetWidth - h) : 0,
         {
             dirty: R,
             chunkStart: P,
@@ -93,7 +93,7 @@ function f(e) {
                           getItemKey: s,
                           getItemHeight: c,
                           getSectionHeight: f,
-                          bufferWidth: A,
+                          bufferWidth: N,
                           itemGutter: m,
                           removeEdgeItemGutters: g,
                           sectionGutter: E,
@@ -105,7 +105,7 @@ function f(e) {
                       }),
                       T.computeVisibleSections(Math.max(0, P * _), w * _),
                       T.getState()),
-            [R, T, t, n, s, c, f, P, w, _, m, g, E, b, y, v, A, O]
+            [R, T, t, n, s, c, f, P, w, _, m, g, E, b, y, v, N, O]
         )),
         u(l({}, S.current), {
             masonryComputer: T,

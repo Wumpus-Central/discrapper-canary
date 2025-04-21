@@ -36,7 +36,7 @@ let h = (e) => {
                 onClick: (e) => {
                     (0, a.v)(h, a.d.MORE), n(e);
                 },
-                label: p.NW.string(p.t.PdRCRk),
+                label: p.intl.string(p.t.PdRCRk),
                 iconComponent: i.xhG,
                 color: 'primaryDark',
                 isActive: l

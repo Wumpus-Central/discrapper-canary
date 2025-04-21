@@ -14,12 +14,12 @@ let d = (0, l.Z)(
             l = (0, s.Z)(e),
             i = (0, o.Z)({
                 id: e.id,
-                label: u.NW.string(u.t.gFHI3t)
+                label: u.intl.string(u.t.gFHI3t)
             });
         return (0, r.jsxs)(a.v2r, {
             navId: 'channel-context',
             onClose: c.Zy,
-            'aria-label': u.NW.string(u.t.Xm41aW),
+            'aria-label': u.intl.string(u.t.Xm41aW),
             onSelect: t,
             children: [(0, r.jsx)(a.kSQ, { children: l }), (0, r.jsx)(a.kSQ, { children: i })]
         });

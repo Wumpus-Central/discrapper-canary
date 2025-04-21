@@ -1,19 +1,19 @@
-n.d(t, { Z: () => a });
-var r = n(200651),
-    i = n(481060),
+n.d(t, { Z: () => l });
+var i = n(200651),
+    r = n(481060),
     s = n(314130);
-let a = (e) => {
-    let { image: t, cta: n, onClick: a } = e;
-    return (0, r.jsxs)(i.Kqy, {
+let l = (e) => {
+    let { image: t, cta: n, onClick: l } = e;
+    return (0, i.jsxs)(r.Kqy, {
         align: 'stretch',
         children: [
-            (0, r.jsx)('img', {
+            (0, i.jsx)('img', {
                 src: t,
                 alt: '',
                 className: s.image
             }),
-            (0, r.jsx)(i.zxk, {
-                onClick: a,
+            (0, i.jsx)(r.zxk, {
+                onClick: l,
                 children: n
             })
         ]

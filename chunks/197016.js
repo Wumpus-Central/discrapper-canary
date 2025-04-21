@@ -84,7 +84,7 @@ function p(e) {
         h = () => {
             null == n || n(), a.default.disconnect();
         },
-        m = () => s.NW.string(s.t['6vrfgo']),
+        m = () => s.intl.string(s.t['6vrfgo']),
         { Component: g, events: E } = (0, i.K)();
     return (0, r.jsx)(
         p,

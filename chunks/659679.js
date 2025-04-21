@@ -1,8 +1,8 @@
 t.d(n, { Z: () => x });
 var r = t(200651);
 t(192379);
-var o = t(793030),
-    i = t(442837),
+var i = t(793030),
+    o = t(442837),
     s = t(481060),
     a = t(834129),
     l = t(271383),
@@ -17,8 +17,8 @@ function x(e) {
         {
             username: x,
             roleColor: _,
-            roleColorStrings: v
-        } = (0, i.cj)(
+            roleColorStrings: f
+        } = (0, o.cj)(
             [l.ZP],
             () => {
                 var e, t;
@@ -31,7 +31,7 @@ function x(e) {
             },
             [n]
         ),
-        f = (0, d.X)(n.guildId, v);
+        v = (0, d.X)(n.guildId, f);
     return (0, r.jsx)(a.Z, {
         className: m.systemMessageContainer,
         contentClassName: m.systemMessageContent,
@@ -50,19 +50,19 @@ function x(e) {
             children: [
                 (0, r.jsx)(s.PUh, {
                     className: m.boostMessageUser,
-                    name: (0, r.jsx)(o.xv, {
+                    name: (0, r.jsx)(i.xv, {
                         color: 'currentColor',
                         variant: 'text-md/semibold',
                         lineClamp: 1,
                         children: x
                     }),
                     color: null != _ ? _ : void 0,
-                    roleColors: f
+                    roleColors: v
                 }),
-                (0, r.jsx)(o.xv, {
+                (0, r.jsx)(i.xv, {
                     variant: 'text-md/medium',
                     lineClamp: 1,
-                    children: p.NW.string(u.Z.plwH8f)
+                    children: p.intl.string(u.default.plwH8f)
                 })
             ]
         })

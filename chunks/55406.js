@@ -1,8 +1,8 @@
 let r;
 n.r(t),
     n.d(t, {
-        default: () => N,
-        renderChangelogMessageMarkup: () => T
+        default: () => T,
+        renderChangelogMessageMarkup: () => w
     }),
     n(35282),
     n(704826);
@@ -118,12 +118,12 @@ let v = (e) => {
 function P(e) {
     return u({}, j(e));
 }
-let N = {
+let T = {
     getDefaultRules: P,
     getSpecialRules: (e) => u({}, j(e), x(e)),
     getMessageRules: (e) => u({}, C(e))
 };
-function T(e, t, n) {
+function w(e, t, n) {
     return {
         hasSpoilerEmbeds: !1,
         content: c.Z.reactParserFor(P(t))(e.content, !1, null != n ? { changeLog: n } : {})

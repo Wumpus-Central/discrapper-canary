@@ -2,8 +2,8 @@ n.d(t, { H: () => x }), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(399606),
-    a = n(166081),
-    l = n(54797),
+    l = n(166081),
+    a = n(54797),
     o = n(674180),
     s = n(430824),
     c = n(572004),
@@ -17,18 +17,18 @@ var i = n(399606),
     _ = n(226060),
     b = n(981631);
 function x(e) {
-    let { guildProductListing: t, guildId: n, location: x, shouldShowFullDescriptionButton: y = !0, hideRoleTag: v = !1, lineClamp: E = 1, cardWidth: O, cardHeight: N, thumbnailHeight: j, descriptionTextVariant: C = 'text-sm/normal', showOpaqueBackground: S = !1 } = e,
-        I = (0, i.e7)([s.Z], () => s.Z.getGuild(n), [n]),
+    let { guildProductListing: t, guildId: n, location: x, shouldShowFullDescriptionButton: y = !0, hideRoleTag: v = !1, lineClamp: E = 1, cardWidth: O, cardHeight: j, thumbnailHeight: C, descriptionTextVariant: S = 'text-sm/normal', showOpaqueBackground: I = !1 } = e,
+        N = (0, i.e7)([s.Z], () => s.Z.getGuild(n), [n]),
         T = (0, i.e7)([s.Z], () => {
             var e;
             return s.Z.getRole(n, null != (e = null == t ? void 0 : t.role_id) ? e : b.lds);
         }),
-        P = (0, a.U)(t, 600),
+        P = (0, l.U)(t, 600),
         A = (0, f.C)(t),
-        w = (0, u.SO)(I),
+        w = (0, u.SO)(N),
         { shouldHideGuildPurchaseEntryPoints: Z } = (0, o.uP)(n),
         R = (0, f.k)(t);
-    if (null == I || Z) return null;
+    if (null == N || Z) return null;
     let k = () =>
             (0, g.e)({
                 guildId: n,
@@ -46,13 +46,13 @@ function x(e) {
             showReportProduct: !0,
             onEditProduct: w
                 ? () => {
-                      p.h(I.id, t.id);
+                      p.h(N.id, t.id);
                   }
                 : () => {},
             onUnpublishProduct: () => {},
             onDeleteProduct: () => {},
             onReportProduct: () => {
-                (0, l.x)({ listing: t });
+                (0, a.x)({ listing: t });
             },
             onCopyProductLink: () => {
                 (0, c.JG)((0, d.ar)(n, t.id));
@@ -77,13 +77,13 @@ function x(e) {
             onShowFullDescription: k,
             onTapCard: k,
             actionMenu: D,
-            showOpaqueBackground: S,
+            showOpaqueBackground: I,
             hideRoleTag: v,
             lineClamp: E,
             cardWidth: O,
-            cardHeight: N,
-            thumbnailHeight: j,
-            descriptionTextVariant: C,
+            cardHeight: j,
+            thumbnailHeight: C,
+            descriptionTextVariant: S,
             isDraft: !t.published
         },
         t.id

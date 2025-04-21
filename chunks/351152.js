@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(361932), n(187205);
 var r = n(200651);
 n(192379);
-var i = n(120356),
-    l = n.n(i),
+var l = n(120356),
+    i = n.n(l),
     s = n(392711),
     a = n.n(s),
     o = n(442837),
@@ -20,27 +20,27 @@ var i = n(120356),
     v = n(213510);
 function b(e) {
     let { guildId: t, onClick: n } = e,
-        i = (0, o.e7)([f.Z], () => f.Z.getGuild(t)),
-        l = (0, o.e7)([u.ZP, f.Z, m.Z], () =>
+        l = (0, o.e7)([f.Z], () => f.Z.getGuild(t)),
+        i = (0, o.e7)([u.ZP, f.Z, m.Z], () =>
             u.ZP.getChannels(t)[u.Zb].some((e) => {
                 let { channel: t } = e;
                 return (0, p.JL)(t, f.Z, m.Z);
             })
         );
-    return null != i && l
+    return null != l && i
         ? (0, r.jsxs)(c.P3F, {
               onClick: () => n(t),
               className: v.guildRow,
               children: [
                   (0, r.jsx)(d.Z, {
-                      guild: i,
+                      guild: l,
                       size: d.Z.Sizes.SMALL,
                       className: v.guildIcon
                   }),
                   (0, r.jsx)(c.Text, {
                       variant: 'text-md/normal',
                       className: v.guildName,
-                      children: i.toString()
+                      children: l.toString()
                   }),
                   (0, r.jsx)(x.Z, {
                       direction: x.Z.Directions.RIGHT,
@@ -54,8 +54,8 @@ function S(e) {
     let { onSelectGuild: t } = e,
         n = (0, o.e7)([h.ZP], () => h.ZP.getGuildFolders());
     return (0, r.jsx)(g.Z, {
-        title: _.NW.string(_.t.JsqeEh),
-        scrollerClassName: l()(v.guildScroller, j.marginBottom),
+        title: _.intl.string(_.t.JsqeEh),
+        scrollerClassName: i()(v.guildScroller, j.marginBottom),
         children: a().flatMap(n, (e) => {
             let { guildIds: n } = e;
             return n.map((e) =>

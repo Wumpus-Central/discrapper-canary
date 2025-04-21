@@ -13,8 +13,8 @@ var i = n(120356),
     _ = n(246364),
     I = n(983736),
     O = n(937111),
-    N = n(981631),
-    T = n(176505),
+    T = n(981631),
+    N = n(176505),
     S = n(388032),
     p = n(246752),
     A = n(240211);
@@ -49,7 +49,7 @@ let R = () => {
         R = (0, a.e7)([c.Z], () => c.Z.getGuild(i), [i]),
         P = (0, a.e7)([O.Z], () => (null != i ? O.Z.getRequest(i) : null), [i]),
         C = (0, o.TH)(),
-        D = (null == (e = (0, o.LX)(C.pathname, N.Z5c.CHANNEL(null == R ? void 0 : R.id, T.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+        D = (null == (e = (0, o.LX)(C.pathname, T.Z5c.CHANNEL(null == R ? void 0 : R.id, N.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
     if (null == R || !(0, I.Dc)(R) || D) return null;
     let g = null != (t = null == P ? void 0 : P.applicationStatus) ? t : _.wB.STARTED,
         y = null,
@@ -58,8 +58,8 @@ let R = () => {
         b = [p.notice, A.notice];
     switch (g) {
         case _.wB.SUBMITTED:
-            (y = S.NW.string(S.t['5iLvS0'])),
-                (m = S.NW.string(S.t.mqtdmZ)),
+            (y = S.intl.string(S.t['5iLvS0'])),
+                (m = S.intl.string(S.t.mqtdmZ)),
                 (h = () => {
                     (0, s.h7j)((e) => {
                         var t, n;
@@ -67,9 +67,9 @@ let R = () => {
                             s.ConfirmModal,
                             ((t = f(
                                 {
-                                    header: S.NW.string(S.t.aIz1oa),
-                                    confirmText: S.NW.string(S.t['cY+Ooa']),
-                                    cancelText: S.NW.string(S.t['ETE/oK']),
+                                    header: S.intl.string(S.t.aIz1oa),
+                                    confirmText: S.intl.string(S.t['cY+Ooa']),
+                                    cancelText: S.intl.string(S.t['ETE/oK']),
                                     onConfirm: () => d.Z.removeGuildJoinRequest(R.id),
                                     confirmButtonColor: s.zxk.Colors.BRAND
                                 },
@@ -79,7 +79,7 @@ let R = () => {
                                 {
                                     children: (0, r.jsx)(s.Text, {
                                         variant: 'text-md/normal',
-                                        children: S.NW.string(S.t['13tjTU'])
+                                        children: S.intl.string(S.t['13tjTU'])
                                     })
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -100,8 +100,8 @@ let R = () => {
                 });
             break;
         case _.wB.REJECTED:
-            (y = S.NW.string(S.t.lk30cX)),
-                (m = S.NW.string(S.t['8RrsHh'])),
+            (y = S.intl.string(S.t.lk30cX)),
+                (m = S.intl.string(S.t['8RrsHh'])),
                 (h = () => {
                     (0, s.ZDy)(async () => {
                         let { default: e } = await n.e('3378').then(n.bind(n, 76075));
@@ -111,8 +111,8 @@ let R = () => {
                 b.push(p.error);
             break;
         default:
-            (y = S.NW.string(S.t.G5YKXF)),
-                (m = S.NW.string(S.t['r8/DT0'])),
+            (y = S.intl.string(S.t.G5YKXF)),
+                (m = S.intl.string(S.t['r8/DT0'])),
                 (h = () => {
                     (0, E.hk)(R.id);
                 });

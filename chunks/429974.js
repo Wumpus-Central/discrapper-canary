@@ -74,7 +74,7 @@ async function O(e) {
         a,
         o,
         m,
-        { userId: b, section: O, subsection: I, guildId: S, channelId: T, friendToken: N, analyticsLocation: A, showGuildProfile: C = !0, appContext: R, customStatusPrompt: P } = e,
+        { userId: b, section: O, subsection: I, guildId: S, channelId: T, friendToken: A, analyticsLocation: N, showGuildProfile: C = !0, appContext: R, customStatusPrompt: P } = e,
         w = E(e, ['userId', 'section', 'subsection', 'guildId', 'channelId', 'friendToken', 'analyticsLocation', 'showGuildProfile', 'appContext', 'customStatusPrompt']);
     let D = d.default.getUser(b);
     if (null == D) return;
@@ -99,7 +99,7 @@ async function O(e) {
                             user: D,
                             currentUser: L,
                             guildId: S,
-                            friendToken: N,
+                            friendToken: A,
                             initialSection: O,
                             initialSubsection: I,
                             channelId: T,
@@ -137,7 +137,7 @@ async function O(e) {
                     profile_has_nitro_customization: (null == x ? void 0 : x.banner) != null,
                     profile_has_profile_effect: (null == x ? void 0 : x.profileEffectId) != null
                 },
-                null == A ? null : (0, f.expandLocation)(A)
+                null == N ? null : (0, f.expandLocation)(N)
             )
         );
 }

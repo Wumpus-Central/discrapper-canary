@@ -13,7 +13,7 @@ function s() {
     return (0, n.jsx)(o.II_, {
         id: 'user-volume',
         'aria-haspopup': !0,
-        label: u.NW.string(u.t.kbFsAA),
+        label: u.intl.string(u.t.kbFsAA),
         control: (r, c) => {
             var a, s;
             return (0, n.jsx)(
@@ -49,7 +49,7 @@ function s() {
                         value: (0, l.P)(e),
                         maxValue: 100,
                         onChange: (e) => (0, i.xz)((0, l.A)(e), t),
-                        'aria-label': u.NW.string(u.t.kbFsAA)
+                        'aria-label': u.intl.string(u.t.kbFsAA)
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(s))

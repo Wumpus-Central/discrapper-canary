@@ -1,38 +1,38 @@
 n.d(t, { Z: () => u });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
+var r = n(481060),
     s = n(37234),
-    a = n(703656),
-    l = n(981631),
+    l = n(703656),
+    a = n(981631),
     o = n(388032),
     c = n(765058),
     d = n(322221);
 function u() {
-    return (0, r.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: c.emptyState,
         children: [
-            (0, r.jsx)('img', {
+            (0, i.jsx)('img', {
                 src: d,
                 alt: '',
                 className: c.image
             }),
-            (0, r.jsx)(i.X6q, {
+            (0, i.jsx)(r.X6q, {
                 className: c.topSpacing,
                 variant: 'heading-lg/extrabold',
-                children: o.NW.string(o.t.Z1OZCQ)
+                children: o.intl.string(o.t.Z1OZCQ)
             }),
-            (0, r.jsx)(i.Text, {
+            (0, i.jsx)(r.Text, {
                 className: c.topSpacing,
                 variant: 'text-md/normal',
-                children: o.NW.string(o.t.ZSt4Tk)
+                children: o.intl.string(o.t.ZSt4Tk)
             }),
-            (0, r.jsx)(i.zxk, {
+            (0, i.jsx)(r.zxk, {
                 className: c.topSpacing,
                 onClick: () => {
-                    (0, a.uL)(l.Z5c.GUILD_DISCOVERY), s.xf();
+                    (0, l.uL)(a.Z5c.GUILD_DISCOVERY), s.xf();
                 },
-                children: o.NW.string(o.t.jQ3pqq)
+                children: o.intl.string(o.t.jQ3pqq)
             })
         ]
     });

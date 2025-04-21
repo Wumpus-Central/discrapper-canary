@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(481060),
-    l = n(273504),
+    l = n(481060),
+    s = n(273504),
     a = n(388032),
     o = n(274117);
 function c(e) {
@@ -54,14 +54,14 @@ function u(e) {
             let t = null,
                 n = null;
             switch (e) {
-                case l.Ux.PROFANITY:
-                    (t = a.NW.string(a.t['I+BDrK'])), (n = (0, r.jsx)(r.Fragment, { children: a.NW.string(a.t.hISCmp) }));
+                case s.Ux.PROFANITY:
+                    (t = a.intl.string(a.t['I+BDrK'])), (n = (0, r.jsx)(r.Fragment, { children: a.intl.string(a.t.hISCmp) }));
                     break;
-                case l.Ux.SEXUAL_CONTENT:
-                    (t = a.NW.string(a.t.URSMen)), (n = (0, r.jsx)(r.Fragment, { children: a.NW.string(a.t.oRQDBg) }));
+                case s.Ux.SEXUAL_CONTENT:
+                    (t = a.intl.string(a.t.URSMen)), (n = (0, r.jsx)(r.Fragment, { children: a.intl.string(a.t.oRQDBg) }));
                     break;
-                case l.Ux.SLURS:
-                    (t = a.NW.string(a.t.xjK2Mz)), (n = (0, r.jsx)(r.Fragment, { children: a.NW.string(a.t.oJYXBA) }));
+                case s.Ux.SLURS:
+                    (t = a.intl.string(a.t.xjK2Mz)), (n = (0, r.jsx)(r.Fragment, { children: a.intl.string(a.t.oJYXBA) }));
                     break;
                 default:
                     (t = 'Error'), (n = 'Unrecognized list');
@@ -77,20 +77,20 @@ function u(e) {
             (0, r.jsxs)('div', {
                 className: o.keywordListTextContainer,
                 children: [
-                    (0, r.jsx)(s.X6q, {
+                    (0, r.jsx)(l.X6q, {
                         variant: 'heading-sm/semibold',
                         children: c
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(l.Text, {
                         color: 'interactive-normal',
                         variant: 'text-xs/medium',
                         children: d
                     })
                 ]
             }),
-            (0, r.jsx)(s.XZJ, {
+            (0, r.jsx)(l.XZJ, {
                 className: o.toggle,
-                type: s.XZJ.Types.INVERTED,
+                type: l.XZJ.Types.INVERTED,
                 value: n,
                 onChange: () => i(t)
             })
@@ -99,13 +99,13 @@ function u(e) {
 }
 function m(e) {
     var t;
-    let { rule: n, onChangeRule: s } = e,
+    let { rule: n, onChangeRule: l } = e,
         [a, o] = i.useState(new Set(null == n || null == (t = n.triggerMetadata) ? void 0 : t.presets)),
         m = i.useMemo(
             () => (e) => {
-                s(d(c({}, n), { triggerMetadata: d(c({}, n.triggerMetadata), { presets: e }) }));
+                l(d(c({}, n), { triggerMetadata: d(c({}, n.triggerMetadata), { presets: e }) }));
             },
-            [s, n]
+            [l, n]
         ),
         g = (e) => {
             let t = new Set(a);
@@ -114,18 +114,18 @@ function m(e) {
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsx)(u, {
-                preset: l.Ux.PROFANITY,
-                toggled: a.has(l.Ux.PROFANITY),
+                preset: s.Ux.PROFANITY,
+                toggled: a.has(s.Ux.PROFANITY),
                 onToggle: g
             }),
             (0, r.jsx)(u, {
-                preset: l.Ux.SLURS,
-                toggled: a.has(l.Ux.SLURS),
+                preset: s.Ux.SLURS,
+                toggled: a.has(s.Ux.SLURS),
                 onToggle: g
             }),
             (0, r.jsx)(u, {
-                preset: l.Ux.SEXUAL_CONTENT,
-                toggled: a.has(l.Ux.SEXUAL_CONTENT),
+                preset: s.Ux.SEXUAL_CONTENT,
+                toggled: a.has(s.Ux.SEXUAL_CONTENT),
                 onToggle: g
             })
         ]

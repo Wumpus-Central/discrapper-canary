@@ -32,13 +32,13 @@ function u(e) {
                             variant: 'heading-xl/semibold',
                             className: c.title,
                             id: u,
-                            children: s.NW.string(s.t.gUiIGR)
+                            children: s.intl.string(s.t.gUiIGR)
                         }),
                         (0, r.jsx)(l.Text, {
                             color: 'header-secondary',
                             className: c.subtitle,
                             variant: 'text-sm/normal',
-                            children: s.NW.string(s.t.susqq6)
+                            children: s.intl.string(s.t.susqq6)
                         })
                     ]
                 })
@@ -51,7 +51,7 @@ function u(e) {
                         (0, o.qV)();
                     },
                     autoFocus: !0,
-                    children: s.NW.string(s.t.cpT0Cg)
+                    children: s.intl.string(s.t.cpT0Cg)
                 })
             })
         ]

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => y });
-var r = n(200651);
+n.d(t, { Z: () => O });
+var l = n(200651);
 n(192379);
-var l = n(442837),
-    a = n(481060),
-    i = n(264229),
+var r = n(442837),
+    i = n(481060),
+    a = n(264229),
     s = n(366980),
     o = n(603236),
     c = n(939863),
@@ -17,12 +17,12 @@ var l = n(442837),
     f = n(981631),
     p = n(388032),
     j = n(407865);
-let { INVITE_OPTIONS_7_DAYS: N, INVITE_OPTIONS_UNLIMITED: b } = h.ZP;
-function y(e) {
-    var t, n, y;
-    let { onClose: O, event: E } = e,
+let { INVITE_OPTIONS_7_DAYS: b, INVITE_OPTIONS_UNLIMITED: y } = h.ZP;
+function O(e) {
+    var t, n, O;
+    let { onClose: N, event: E } = e,
         C = null == E ? void 0 : E.guild_id,
-        I = (0, l.e7)(
+        I = (0, r.e7)(
             [u.ZP],
             () => {
                 var e;
@@ -30,9 +30,9 @@ function y(e) {
             },
             [C]
         ),
-        S = (0, l.e7)([d.Z], () => d.Z.getGuild(C), [C]),
+        S = (0, r.e7)([d.Z], () => d.Z.getGuild(C), [C]),
         { channel_id: T, id: P } = null != E ? E : {},
-        W = (0, l.e7)(
+        w = (0, r.e7)(
             [m.Z],
             () => {
                 let e = null != T ? T : I;
@@ -40,35 +40,35 @@ function y(e) {
             },
             [T, I]
         );
-    if (null == E) return O(), null;
-    let w = null != (t = null == S ? void 0 : S.vanityURLCode) ? t : null == W ? void 0 : W.code,
-        Z =
-            null != w
-                ? (0, i.tV)({
-                      baseCode: w,
+    if (null == E) return N(), null;
+    let Z = null != (t = null == S ? void 0 : S.vanityURLCode) ? t : null == w ? void 0 : w.code,
+        k =
+            null != Z
+                ? (0, a.tV)({
+                      baseCode: Z,
                       guildScheduledEventId: P
                   })
                 : null,
-        k = null == Z || null == W,
-        _ = (0, s.Z)(null != Z ? Z : ''),
-        D = null != (n = null == W ? void 0 : W.maxAge) ? n : N.value,
-        R = null != (y = null == W ? void 0 : W.maxUses) ? y : b.value;
-    return (0, r.jsxs)('div', {
+        _ = null == k || null == w,
+        D = (0, s.Z)(null != k ? k : ''),
+        R = null != (n = null == w ? void 0 : w.maxAge) ? n : b.value,
+        A = null != (O = null == w ? void 0 : w.maxUses) ? O : y.value;
+    return (0, l.jsxs)('div', {
         className: j.container,
         children: [
-            (0, r.jsx)(a.P3F, {
-                onClick: O,
+            (0, l.jsx)(i.P3F, {
+                onClick: N,
                 className: j.close,
-                'aria-label': p.NW.string(p.t.cpT0Cg),
-                children: (0, r.jsx)(a.Dio, {
+                'aria-label': p.intl.string(p.t.cpT0Cg),
+                children: (0, l.jsx)(i.Dio, {
                     size: 'md',
                     color: 'currentColor'
                 })
             }),
-            (0, r.jsx)(c.Z, {
-                children: (0, r.jsx)('div', {
+            (0, l.jsx)(c.Z, {
+                children: (0, l.jsx)('div', {
                     className: j.iconContainer,
-                    children: (0, r.jsx)(a.Que, {
+                    children: (0, l.jsx)(i.Que, {
                         size: 'custom',
                         color: 'currentColor',
                         height: 30,
@@ -77,25 +77,25 @@ function y(e) {
                     })
                 })
             }),
-            (0, r.jsx)(a.X6q, {
+            (0, l.jsx)(i.X6q, {
                 variant: 'heading-xl/semibold',
                 className: j.header,
-                children: p.NW.string(p.t.UzNv7u)
+                children: p.intl.string(p.t.UzNv7u)
             }),
-            (0, r.jsx)(a.Text, {
+            (0, l.jsx)(i.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: j.body,
-                children: p.NW.string(p.t.UetJjI)
+                children: p.intl.string(p.t.UetJjI)
             }),
-            (0, r.jsxs)('div', {
+            (0, l.jsxs)('div', {
                 className: j.invite,
                 children: [
-                    (0, r.jsx)(o.S, {
-                        value: _,
+                    (0, l.jsx)(o.S, {
+                        value: D,
                         autoFocus: !1,
                         onCopy: (e) => {
-                            if (k) return;
+                            if (_) return;
                             (0, g.JG)(e);
                             let t = (0, v.xC)(E.entity_type);
                             x.default.track(f.rMx.COPY_INSTANT_INVITE, {
@@ -103,17 +103,17 @@ function y(e) {
                                 channel: T,
                                 channel_type: t,
                                 location: f.t4x.GUILD_EVENTS,
-                                code: W.code,
+                                code: w.code,
                                 guild_scheduled_event_id: null == E ? void 0 : E.id
                             });
                         }
                     }),
                     (null == S ? void 0 : S.vanityURLCode) == null &&
-                        (0, r.jsx)(a.Text, {
+                        (0, l.jsx)(i.Text, {
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
                             className: j.inviteDetail,
-                            children: (0, h.Vg)(D, R)
+                            children: (0, h.Vg)(R, A)
                         })
                 ]
             })

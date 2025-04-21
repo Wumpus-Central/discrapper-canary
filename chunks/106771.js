@@ -17,7 +17,7 @@ var i = n(200651),
 function y(e) {
     var t;
     let { command: n, application: y, onClick: x, query: v, searchResultsPosition: C, onClickAppCardFriends: g } = e,
-        N = r.useCallback(
+        j = r.useCallback(
             (e) => {
                 if ((0, u.BQ)(y)) {
                     let t = y instanceof s.ZP ? y : s.ZP.createFromServer(y);
@@ -55,7 +55,7 @@ function y(e) {
             },
             [y]
         ),
-        { iconURL: j, name: P, description: E } = r.useMemo(() => (0, u.sl)(y, { fakeAppIconURL: _ }), [y]),
+        { iconURL: P, name: N, description: E } = r.useMemo(() => (0, u.sl)(y, { fakeAppIconURL: _ }), [y]),
         O = r.useMemo(() => {
             var e;
             let t = null != (e = null == n ? void 0 : n.displayDescription) ? e : E;
@@ -74,12 +74,12 @@ function y(e) {
         className: b.clickable,
         innerRef: (e) => (A.current = e),
         onClick: x,
-        onContextMenu: N,
+        onContextMenu: j,
         children: (0, i.jsxs)(l.Rny, {
             className: b.focusBlock,
             children: [
                 (0, i.jsx)(m.Z, {
-                    src: j,
+                    src: P,
                     className: b.icon,
                     'aria-hidden': !0,
                     rendersPlaceholder: !0
@@ -91,7 +91,7 @@ function y(e) {
                             variant: 'heading-md/semibold',
                             color: 'header-primary',
                             lineClamp: 1,
-                            children: null != (t = null == n ? void 0 : n.displayName) ? t : P
+                            children: null != (t = null == n ? void 0 : n.displayName) ? t : N
                         }),
                         T
                             ? (0, i.jsx)(f.Z, {
@@ -113,7 +113,7 @@ function y(e) {
                           className: b.cmdAppName,
                           variant: 'text-sm/normal',
                           color: 'text-secondary',
-                          children: P
+                          children: N
                       })
                     : null,
                 (0, i.jsx)('div', { className: b.underline })

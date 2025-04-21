@@ -18,7 +18,7 @@ function c(e, t, n) {
         e
     );
 }
-let u = l.NW.currentLocale;
+let u = l.intl.currentLocale;
 function d() {
     var e, t;
     let n = null == (t = s.Z.settings.localization) || null == (e = t.locale) ? void 0 : e.value;
@@ -35,7 +35,7 @@ class _ extends (r = i.ZP.Store) {
         return u;
     }
     get systemLocale() {
-        return l.Kj;
+        return l.systemLocale;
     }
 }
 c(_, 'displayName', 'LocaleStore');

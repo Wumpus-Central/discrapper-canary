@@ -16,7 +16,7 @@ function g() {
         className: o()(p.row, p.rowGuildName),
         children: (0, r.jsx)('span', {
             className: o()(p.guildNameText, p.guildNameTextLimitedSize, h.tooltipText),
-            children: d.NW.string(d.t['4tSWQk'])
+            children: d.intl.string(d.t['4tSWQk'])
         })
     });
 }

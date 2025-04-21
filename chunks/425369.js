@@ -20,7 +20,7 @@ function g() {
                 children: (0, r.jsxs)(a.Z, {
                     page: p.ZY5.LIBRARY_SETTINGS,
                     root: !0,
-                    children: [(0, r.jsx)(s.yY, { subsection: h.NW.string(h.t['3D5yo6']) }), (0, r.jsx)(d.Z, {})]
+                    children: [(0, r.jsx)(s.yY, { subsection: h.intl.string(h.t['3D5yo6']) }), (0, r.jsx)(d.Z, {})]
                 })
             }),
             (0, r.jsx)(o.Z, {
@@ -28,7 +28,7 @@ function g() {
                 children: (0, r.jsxs)(a.Z, {
                     page: p.ZY5.LIBRARY,
                     root: !0,
-                    children: [(0, r.jsx)(s.yY, { subsection: h.NW.string(h.t.p7ARTE) }), (0, r.jsx)(u.Z, {})]
+                    children: [(0, r.jsx)(s.yY, { subsection: h.intl.string(h.t.p7ARTE) }), (0, r.jsx)(u.Z, {})]
                 })
             })
         ]
@@ -41,7 +41,7 @@ let m = i.memo(function () {
         }, []),
         (0, r.jsxs)('div', {
             className: f.container,
-            children: [(0, r.jsx)(s.yY, { location: h.NW.string(h.t.cw57am) }), (0, r.jsx)(g, {})]
+            children: [(0, r.jsx)(s.yY, { location: h.intl.string(h.t.cw57am) }), (0, r.jsx)(g, {})]
         })
     );
 });

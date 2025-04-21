@@ -47,18 +47,18 @@ class p extends a.Z {
                         let e = {
                             application_id: c.bO,
                             type: l.IIU.PLAYING,
-                            name: d.NW.string(u.Z['7qZdOz']),
-                            details: d.NW.formatToPlainString(u.Z['A3tW/f'], { total: Math.round(i.Z.lifetimePoints) }),
+                            name: d.intl.string(u.default['7qZdOz']),
+                            details: d.intl.formatToPlainString(u.default['A3tW/f'], { total: Math.round(i.Z.lifetimePoints) }),
                             state: (function (e) {
-                                if (null == e) return d.NW.string(u.Z.HXxY0N);
-                                if ('purchase-item' === e.type) return d.NW.formatToPlainString(u.Z.QfiQys, { name: (0, c.w2)()[e.id].name });
+                                if (null == e) return d.intl.string(u.default.HXxY0N);
+                                if ('purchase-item' === e.type) return d.intl.formatToPlainString(u.default.QfiQys, { name: (0, c.w2)()[e.id].name });
                                 if ('purchase-item-upgrade' === e.type) {
                                     let t = (0, c.r7)()[e.id],
                                         n = i.Z.getNumPurchasesForItemUpgrade(t.itemId, e.id),
-                                        r = 'string' == typeof t.name ? t.name : d.NW.formatToPlainString(t.name, { numPurchasing: n });
-                                    return d.NW.formatToPlainString(u.Z.GJwbPj, { name: r });
+                                        r = 'string' == typeof t.name ? t.name : d.intl.formatToPlainString(t.name, { numPurchasing: n });
+                                    return d.intl.formatToPlainString(u.default.GJwbPj, { name: r });
                                 }
-                                return 'unlock-achievement' === e.type ? d.NW.formatToPlainString(u.Z.hUterq, { name: (0, c.EC)()[e.id].name }) : d.NW.string(u.Z.HXxY0N);
+                                return 'unlock-achievement' === e.type ? d.intl.formatToPlainString(u.default.hUterq, { name: (0, c.EC)()[e.id].name }) : d.intl.string(u.default.HXxY0N);
                             })(i.Z.getLastAction()),
                             timestamps: { start: this.startingTime }
                         };

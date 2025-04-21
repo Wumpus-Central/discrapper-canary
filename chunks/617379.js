@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(200651),
     i = n(192379),
-    a = n(481060),
-    l = n(110255),
+    l = n(481060),
+    a = n(110255),
     o = n(64247),
     s = n(981631),
     c = n(388032);
@@ -52,10 +52,10 @@ function d(e, t) {
 function p(e) {
     let { channel: t } = e,
         n = i.useRef(null);
-    return (0, r.jsx)(a.yRy, {
+    return (0, r.jsx)(l.yRy, {
         targetElementRef: n,
         align: 'right',
-        animation: a.yRy.Animation.NONE,
+        animation: l.yRy.Animation.NONE,
         position: 'bottom',
         renderPopout: (e) =>
             t.isThread()
@@ -64,26 +64,26 @@ function p(e) {
                       d(u({}, e), {
                           channel: t,
                           navId: 'recents-thread-notifications',
-                          label: c.NW.string(c.t.ljs3OT)
+                          label: c.intl.string(c.t.ljs3OT)
                       })
                   )
                 : (0, r.jsx)(
-                      l.Z,
+                      a.Z,
                       d(u({}, e), {
                           channel: t,
                           navId: 'recents-notifications',
-                          label: c.NW.string(c.t.ljs3OT),
+                          label: c.intl.string(c.t.ljs3OT),
                           location: { section: s.jXE.INBOX },
                           includeGuildMute: !0
                       })
                   ),
         children: (e) => {
             let { onClick: t } = e;
-            return (0, r.jsx)(a.M0o, {
+            return (0, r.jsx)(l.M0o, {
                 ref: n,
-                tooltip: c.NW.string(c.t.h850Sk),
-                color: a.YX$.TERTIARY,
-                icon: (0, r.jsx)(a.Dkj, {
+                tooltip: c.intl.string(c.t.h850Sk),
+                color: l.YX$.TERTIARY,
+                icon: (0, r.jsx)(l.Dkj, {
                     size: 'xs',
                     color: 'currentColor'
                 }),

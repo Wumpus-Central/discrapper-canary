@@ -15,7 +15,7 @@ function o(e) {
                 width: 415,
                 height: 200
             }),
-            (0, r.jsx)(i.OZU, { note: a.NW.format(a.t.Pv8u2t, { onClick: t }) })
+            (0, r.jsx)(i.OZU, { note: a.intl.format(a.t.Pv8u2t, { onClick: t }) })
         ]
     });
 }

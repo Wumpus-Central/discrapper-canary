@@ -17,10 +17,10 @@ var r = n(200651),
     _ = n(482798),
     E = n(167762),
     O = n(151459),
-    N = n(981631),
-    y = n(388032),
-    I = n(398435);
-function v(e) {
+    y = n(981631),
+    I = n(388032),
+    v = n(398435);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function v(e) {
     }
     return e;
 }
-function C(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,11 +63,11 @@ function C(e, t) {
         e
     );
 }
-function S(e) {
+function N(e) {
     let { className: t } = e,
         n = (0, a.e7)([m.Z], () => m.Z.getPendingCount() > 0),
         _ = (0, d.Q3)('FriendsButton'),
-        S = (0, o.dQu)(o.TVs.modules.chat.INPUT_ICON_SIZE),
+        N = (0, o.dQu)(o.TVs.modules.chat.INPUT_ICON_SIZE),
         T = (function () {
             let [e, t] = i.useState(null),
                 { showActivityTicker: n } = (0, O.Z)(),
@@ -102,11 +102,11 @@ function S(e) {
                                     null != i &&
                                     (function (e) {
                                         let t = e.type;
-                                        return (t === N.IIU.PLAYING && null != e.application_id) || t === N.IIU.LISTENING || t === N.IIU.WATCHING;
+                                        return (t === y.IIU.PLAYING && null != e.application_id) || t === y.IIU.LISTENING || t === y.IIU.WATCHING;
                                     })(n)
                                 ) {
                                     let l =
-                                        i === N.IIU.WATCHING || i === N.IIU.LISTENING
+                                        i === y.IIU.WATCHING || i === y.IIU.LISTENING
                                             ? ''
                                                   .concat(i, '-')
                                                   .concat(null != (c = n.name) ? c : '', '-')
@@ -191,7 +191,7 @@ function S(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                className: I.container,
+                className: v.container,
                 children: P((e, t) =>
                     null == t
                         ? null
@@ -203,10 +203,10 @@ function S(e) {
                                   var i;
                                   return (0, r.jsxs)(
                                       l.animated.div,
-                                      C(
-                                          v(
+                                      S(
+                                          C(
                                               {
-                                                  className: I.activityWrapper,
+                                                  className: v.activityWrapper,
                                                   style: e
                                               },
                                               n
@@ -221,12 +221,12 @@ function S(e) {
                                                       ? (0, r.jsx)(u.Z, {
                                                             channel: t.voiceChannel,
                                                             textVariant: 'text-xs/medium',
-                                                            textClassName: I.statusText
+                                                            textClassName: v.statusText
                                                         })
                                                       : (0, r.jsx)(c.Z, {
                                                             activity: t.activity,
                                                             textVariant: 'text-xs/medium',
-                                                            textClassName: I.statusText
+                                                            textClassName: v.statusText
                                                         })
                                               ]
                                           }
@@ -242,13 +242,13 @@ function S(e) {
                 children: (e, i, l) =>
                     (0, r.jsx)(
                         p.JO,
-                        C(v({}, l), {
+                        S(C({}, l), {
                             className: t,
                             onClick: e,
                             icon: o.iFz,
-                            iconSize: _ ? S : void 0,
-                            'aria-label': y.NW.string(y.t.TdEu5e),
-                            tooltip: i ? null : y.NW.string(y.t.TdEu5e),
+                            iconSize: _ ? N : void 0,
+                            'aria-label': I.intl.string(I.t.TdEu5e),
+                            tooltip: i ? null : I.intl.string(I.t.TdEu5e),
                             selected: i,
                             showBadge: n
                         })
@@ -260,5 +260,5 @@ function S(e) {
 function T(e) {
     let { className: t } = e,
         { enabled: n } = (0, _.C)({ location: 'friends-button' });
-    return n ? (0, r.jsx)(S, { className: t }) : null;
+    return n ? (0, r.jsx)(N, { className: t }) : null;
 }

@@ -1,7 +1,7 @@
-e.d(t, { default: () => A });
+e.d(t, { default: () => I });
 var r = e(200651),
-    s = e(192379),
-    n = e(990547),
+    n = e(192379),
+    s = e(990547),
     c = e(481060),
     o = e(37234),
     i = e(809206),
@@ -18,7 +18,7 @@ var r = e(200651),
     h = e(388032),
     m = e(777134),
     p = e(749423);
-function N() {
+function A() {
     let a = (0, f.NZ)({
             avatarDecoration: { asset: 'a_49c479e15533fb4c02eb320c9c137433' },
             canAnimate: !1,
@@ -61,19 +61,19 @@ function N() {
         ]
     });
 }
-function A(a) {
+function I(a) {
     let { transitionState: t, onClose: e, skuId: f } = a,
         p = (0, E.Dt)(),
-        { analyticsLocations: A } = (0, _.ZP)(l.Z.COLLECTIBLES_EXPIRY_MODAL),
-        I = (0, x.Z)({ analyticsLocations: A }),
-        b = s.useRef(null);
+        { analyticsLocations: I } = (0, _.ZP)(l.Z.COLLECTIBLES_EXPIRY_MODAL),
+        b = (0, x.Z)({ analyticsLocations: I }),
+        D = n.useRef(null);
     return (
-        s.useEffect(
+        n.useEffect(
             () => (
                 (0, i.Mn)({ avatarDecoration: null }),
                 () => {
                     k.default.track(L.rMx.COLLECTIBLES_EXPIRY_MODAL_CLOSED, {
-                        reason: b.current,
+                        reason: D.current,
                         sku_id: f
                     });
                 }
@@ -81,10 +81,10 @@ function A(a) {
             [f]
         ),
         (0, d.Z)({
-            type: n.ImpressionTypes.MODAL,
-            name: n.ImpressionNames.COLLECTIBLES_EXPIRY_MODAL,
+            type: s.ImpressionTypes.MODAL,
+            name: s.ImpressionNames.COLLECTIBLES_EXPIRY_MODAL,
             properties: {
-                location_stack: A,
+                location_stack: I,
                 sku_id: f
             }
         }),
@@ -93,10 +93,10 @@ function A(a) {
             'aria-labelledby': p,
             className: m.container,
             children: [
-                (0, r.jsx)(N, {}),
+                (0, r.jsx)(A, {}),
                 (0, r.jsx)(c.olH, {
                     onClick: () => {
-                        (b.current = 'tap_close_button'), e();
+                        (D.current = 'tap_close_button'), e();
                     },
                     className: m.closeButton
                 }),
@@ -106,12 +106,12 @@ function A(a) {
                         (0, r.jsx)(c.X6q, {
                             variant: 'heading-xl/bold',
                             className: m.title,
-                            children: h.NW.string(h.t.xz81o6)
+                            children: h.intl.string(h.t.xz81o6)
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: 'text-sm/medium',
                             className: m.body,
-                            children: h.NW.string(h.t.Vrbnnp)
+                            children: h.intl.string(h.t.Vrbnnp)
                         })
                     ]
                 }),
@@ -122,23 +122,23 @@ function A(a) {
                             look: c.zxk.Looks.LINK,
                             color: c.zxk.Colors.BRAND,
                             onClick: () => {
-                                (b.current = 'change_avatar_decoration'), e(), (0, o.xf)(), I(), (0, u.ps)({ analyticsLocations: A });
+                                (D.current = 'change_avatar_decoration'), e(), (0, o.xf)(), b(), (0, u.ps)({ analyticsLocations: I });
                             },
-                            children: h.NW.string(h.t['x8T+k5'])
+                            children: h.intl.string(h.t['x8T+k5'])
                         }),
                         (0, r.jsx)(c.zxk, {
                             look: c.zxk.Looks.FILLED,
                             color: c.zxk.Colors.BRAND,
                             onClick: () => {
-                                (b.current = 'go_to_shop'),
+                                (D.current = 'go_to_shop'),
                                     e(),
                                     (0, v.mK)({
-                                        analyticsLocations: A,
+                                        analyticsLocations: I,
                                         analyticsSource: l.Z.COLLECTIBLES_EXPIRY_MODAL,
                                         openInLayer: !1
                                     });
                             },
-                            children: h.NW.string(h.t.fmqMER)
+                            children: h.intl.string(h.t.fmqMER)
                         })
                     ]
                 })

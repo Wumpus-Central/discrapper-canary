@@ -17,12 +17,12 @@ var r = n(200651),
     _ = n(213609),
     E = n(415439),
     O = n(143757),
-    N = n(463119),
-    y = n(377171),
-    I = n(540059),
-    v = n(243778),
-    C = n(488634),
-    S = n(899740),
+    y = n(463119),
+    I = n(377171),
+    v = n(540059),
+    C = n(243778),
+    S = n(488634),
+    N = n(899740),
     T = n(28476),
     P = n(880257),
     j = n(631885),
@@ -37,12 +37,12 @@ var r = n(200651),
     M = n(155409),
     U = n(210887),
     G = n(695346),
-    W = n(283595),
-    V = n(923834),
-    B = n(55563),
-    H = n(774343),
-    F = n(626135),
-    z = n(814225),
+    V = n(283595),
+    B = n(923834),
+    H = n(55563),
+    F = n(774343),
+    z = n(626135),
+    W = n(814225),
     Y = n(515753),
     K = n(831218),
     q = n(339149),
@@ -141,13 +141,13 @@ let el = (e) => {
                         en(
                             {
                                 onClick: () => {
-                                    h && (F.default.track(Q.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: J.hX.FRIEND_ANNIVERSARY }), m.Z.setSection(Q.pJs.ALL), (0, x.Gk)());
+                                    h && (z.default.track(Q.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: J.hX.FRIEND_ANNIVERSARY }), m.Z.setSection(Q.pJs.ALL), (0, x.Gk)());
                                 },
                                 interactiveClassName: h ? et.friendsBadge : void 0,
                                 selected: t,
                                 route: Q.Z5c.FRIENDS,
                                 icon: f.iFz,
-                                text: $.NW.string($.t.TdEu5e),
+                                text: $.intl.string($.t.TdEu5e),
                                 onMouseEnter: () => {
                                     E(!0);
                                 },
@@ -198,7 +198,7 @@ let el = (e) => {
                         selected: t,
                         route: Q.Z5c.APPLICATION_LIBRARY,
                         icon: f.vqy,
-                        text: $.NW.string($.t.cw57am)
+                        text: $.intl.string($.t.cw57am)
                     },
                     i,
                     l
@@ -208,13 +208,13 @@ let el = (e) => {
         );
     },
     eo = () => {
-        let e = (0, S.q)();
+        let e = (0, N.q)();
         return e > 0 ? (0, r.jsx)(f.mAB, { count: e }) : null;
     },
     es = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
-            { channelId: i } = (0, C._)();
+            { channelId: i } = (0, S._)();
         if (!(0, T.a)()) return null;
         let l = null == i ? void 0 : () => g.Z.preload(Q.ME, i);
         return (0, r.jsx)(
@@ -225,7 +225,7 @@ let el = (e) => {
                         selected: t,
                         route: Q.Z5c.MESSAGE_REQUESTS,
                         icon: f._XJ,
-                        text: $.NW.string($.t.e7GWjY),
+                        text: $.intl.string($.t.e7GWjY),
                         onClick: l
                     },
                     n
@@ -236,7 +236,7 @@ let el = (e) => {
     },
     ec = (e) => {
         let { selected: t } = e,
-            n = $.NW.string(ee.Z.Rkdixs),
+            n = $.intl.string(ee.default.Rkdixs),
             l = (0, c.JA)('family-center'),
             [a, o] = i.useState(!0);
         return (0, r.jsx)(
@@ -273,21 +273,21 @@ let el = (e) => {
                           return (t) => (0, r.jsx)(e, en({}, t));
                       });
                   },
-                  'aria-label': $.NW.string($.t.cpT0Cg)
+                  'aria-label': $.intl.string($.t.cpT0Cg)
               })
             : i > 0
               ? (0, r.jsx)('div', {
                     className: et.familyCenterPendingBadge,
                     children: (0, r.jsx)(f.mAB, { count: i })
                 })
-              : (0, r.jsx)(v.ZP, {
+              : (0, r.jsx)(C.ZP, {
                     contentTypes: [p.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;
                         return t === p.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, r.jsx)(f.IGR, {
-                                  text: $.NW.string($.t.y2b7CA),
-                                  color: y.Z.BG_BRAND
+                                  text: $.intl.string($.t.y2b7CA),
+                                  color: I.Z.BG_BRAND
                               })
                             : null;
                     }
@@ -312,7 +312,7 @@ let eh = i.memo(function (e) {
         E = i.useRef(null);
     return (0, r.jsxs)('nav', {
         className: et.privateChannels,
-        'aria-label': $.NW.string($.t.ZH9aPz),
+        'aria-label': $.intl.string($.t.ZH9aPz),
         children: [
             (0, r.jsx)(M.Z, {
                 childRef: b,
@@ -329,13 +329,13 @@ let eh = i.memo(function (e) {
                               size: f.zxk.Sizes.SMALL,
                               fullWidth: !0,
                               onClick: ed,
-                              children: $.NW.string($.t.LzcpeX)
+                              children: $.intl.string($.t.LzcpeX)
                           })
                         : (0, r.jsx)('button', {
                               type: 'button',
                               className: a()(et.searchBarComponent, { [et.themedSearchBarMobile]: u.tq }),
                               onClick: ed,
-                              children: $.NW.string($.t.LzcpeX)
+                              children: $.intl.string($.t.LzcpeX)
                           })
                 })
             }),
@@ -377,7 +377,7 @@ let eh = i.memo(function (e) {
                               )
                             : null,
                         (0, r.jsx)(
-                            N.i,
+                            y.i,
                             {
                                 selected: m === Q.Z5c.COLLECTIBLES_SHOP || (null == l ? void 0 : l.startsWith(Q.Z5c.COLLECTIBLES_SHOP)),
                                 listItemRef: _,
@@ -405,15 +405,15 @@ function ef() {
     return (0, r.jsx)('div', { className: et.sectionDivider });
 }
 function eg() {
-    let e = (0, d.e7)([H.Z], () => H.Z.getHomeLink()),
+    let e = (0, d.e7)([F.Z], () => F.Z.getHomeLink()),
         t = (0, d.e7)(
-            [B.Z],
+            [H.Z],
             () => {
                 if (e === Q.Z5c.APPLICATION_STORE) return !0;
-                let t = (0, z.ZK)(e);
+                let t = (0, W.ZK)(e);
                 if (null != t) {
                     var n, r;
-                    return null != (r = null == (n = B.Z.get(t)) ? void 0 : n.premium) && r;
+                    return null != (r = null == (n = H.Z.get(t)) ? void 0 : n.premium) && r;
                 }
                 return !1;
             },
@@ -421,9 +421,9 @@ function eg() {
         ),
         n = !G.bm.useSetting(),
         { theme: i } = (0, d.cj)([U.Z], () => ({ theme: U.Z.theme })),
-        l = (0, d.e7)([W.Z], () => W.Z.hasLibraryApplication()),
-        a = (0, d.e7)([V.Z], () => V.Z.getCurrentPath()),
-        s = (0, I.Q3)('PrivateChannels'),
+        l = (0, d.e7)([V.Z], () => V.Z.hasLibraryApplication()),
+        a = (0, d.e7)([B.Z], () => B.Z.getCurrentPath()),
+        s = (0, v.Q3)('PrivateChannels'),
         [c, u] = (0, k.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];

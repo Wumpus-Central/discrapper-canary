@@ -48,50 +48,50 @@ let c = '1340102344645283891',
     O = () => ({
         [o.oNc.VIDEO_BITRATE_ENHANCED]: {
             perkIcon: i.Ro.STREAM,
-            description: s.NW.string(s.t.y4ft4O)
+            description: s.intl.string(s.t.y4ft4O)
         },
         [o.oNc.AUDIO_BITRATE_128_KBPS]: {
             perkIcon: i.Ro.AUDIO,
-            description: s.NW.formatToPlainString(s.t.zoT1ZG, { bitrate: a.HO[o.Eu4.TIER_1].limits.bitrate / 1000 })
+            description: s.intl.formatToPlainString(s.t.zoT1ZG, { bitrate: a.HO[o.Eu4.TIER_1].limits.bitrate / 1000 })
         },
         [o.oNc.INVITE_SPLASH]: {
             perkIcon: i.Ro.CUSTOMIZATION,
-            description: s.NW.string(s.t.Qwlpoq)
+            description: s.intl.string(s.t.Qwlpoq)
         },
         [o.oNc.ANIMATED_ICON]: {
             perkIcon: i.Ro.ANIMATED,
-            description: s.NW.string(s.t.PbAyub)
+            description: s.intl.string(s.t.PbAyub)
         },
         [o.oNc.AUDIO_BITRATE_256_KBPS]: {
             perkIcon: i.Ro.AUDIO,
-            description: s.NW.formatToPlainString(s.t.zoT1ZG, { bitrate: a.HO[o.Eu4.TIER_2].limits.bitrate / 1000 })
+            description: s.intl.formatToPlainString(s.t.zoT1ZG, { bitrate: a.HO[o.Eu4.TIER_2].limits.bitrate / 1000 })
         },
         [o.oNc.ROLE_ICONS]: {
             perkIcon: i.Ro.CUSTOM_ROLE_ICON,
-            description: s.NW.string(s.t['6PV6QU'])
+            description: s.intl.string(s.t['6PV6QU'])
         },
         [o.oNc.MAX_FILE_SIZE_50_MB]: {
             perkIcon: i.Ro.UPLOAD,
-            description: s.NW.formatToPlainString(s.t['aFRl5+'], { uploadSizeLimit: s.NW.string(s.t.yMOW8P) })
+            description: s.intl.formatToPlainString(s.t['aFRl5+'], { uploadSizeLimit: s.intl.string(s.t.yMOW8P) })
         },
         [o.oNc.BANNER]: {
             perkIcon: i.Ro.CUSTOMIZATION,
-            description: s.NW.string(s.t['1a5rjo'])
+            description: s.intl.string(s.t['1a5rjo'])
         },
         [o.oNc.ANIMATED_BANNER]: {
             perkIcon: i.Ro.ANIMATED,
-            description: s.NW.string(s.t['1+Vmh4'])
+            description: s.intl.string(s.t['1+Vmh4'])
         },
         [o.oNc.AUDIO_BITRATE_384_KBPS]: {
             perkIcon: i.Ro.AUDIO,
-            description: s.NW.formatToPlainString(s.t.zoT1ZG, { bitrate: a.HO[o.Eu4.TIER_3].limits.bitrate / 1000 })
+            description: s.intl.formatToPlainString(s.t.zoT1ZG, { bitrate: a.HO[o.Eu4.TIER_3].limits.bitrate / 1000 })
         },
         [o.oNc.VANITY_URL]: {
             perkIcon: i.Ro.VANITY,
-            description: s.NW.string(s.t.adNGjY)
+            description: s.intl.string(s.t.adNGjY)
         },
         [o.oNc.MAX_FILE_SIZE_100_MB]: {
             perkIcon: i.Ro.UPLOAD,
-            description: s.NW.formatToPlainString(s.t['aFRl5+'], { uploadSizeLimit: s.NW.string(s.t.yMOW8P) })
+            description: s.intl.formatToPlainString(s.t['aFRl5+'], { uploadSizeLimit: s.intl.string(s.t.yMOW8P) })
         }
     });

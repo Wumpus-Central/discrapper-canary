@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j });
 var r = n(200651),
     i = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     a = n(399606),
     o = n(481060),
     c = n(734893),
@@ -58,7 +58,7 @@ function b(e, t) {
 }
 let j = function (e) {
     let { guildId: t } = e,
-        s = (0, a.cj)([g.Z], () => {
+        l = (0, a.cj)([g.Z], () => {
             var e;
             return null != (e = g.Z.getSettings().welcomeMessage) ? e : p.z;
         }),
@@ -71,21 +71,21 @@ let j = function (e) {
                             e,
                             b(x({}, n), {
                                 guildId: t,
-                                welcomeMessage: s,
+                                welcomeMessage: l,
                                 onSave: (e) => (0, m._N)(e)
                             })
                         );
                 }),
-            [t, s]
+            [t, l]
         ),
-        N = (0, a.e7)([u.default], () => u.default.getId());
-    return (0, c.pw)(s)
+        _ = (0, a.e7)([u.default], () => u.default.getId());
+    return (0, c.pw)(l)
         ? (0, r.jsx)(o.zxk, {
               size: o.zxk.Sizes.SMALL,
               onClick: j,
               children: (0, r.jsx)(o.Text, {
                   variant: 'text-sm/medium',
-                  children: h.NW.string(h.t['9Z+aEB'])
+                  children: h.intl.string(h.t['9Z+aEB'])
               })
           })
         : (0, r.jsxs)(o.P3F, {
@@ -95,23 +95,23 @@ let j = function (e) {
                   (0, r.jsx)(d.Z, {
                       guildId: t,
                       welcomeMessage: {
-                          authorIds: s.authorIds.length > 0 ? s.authorIds : [N],
-                          message: s.message
+                          authorIds: l.authorIds.length > 0 ? l.authorIds : [_],
+                          message: l.message
                       }
                   }),
                   (0, r.jsx)(o.ua7, {
-                      text: h.NW.string(h.t.bt75u7),
+                      text: h.intl.string(h.t.bt75u7),
                       children: (e) =>
                           (0, r.jsxs)(
                               'div',
                               b(x({}, e), {
-                                  className: l()(f.actionItemEditButton, f.editWelcomeButton),
+                                  className: s()(f.actionItemEditButton, f.editWelcomeButton),
                                   children: [
                                       (0, r.jsx)(o.vdY, {
                                           size: 'md',
                                           color: 'currentColor'
                                       }),
-                                      (0, r.jsx)(o.nn4, { children: h.NW.string(h.t.bt75u7) })
+                                      (0, r.jsx)(o.nn4, { children: h.intl.string(h.t.bt75u7) })
                                   ]
                               })
                           )

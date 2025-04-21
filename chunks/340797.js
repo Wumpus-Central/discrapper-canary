@@ -29,7 +29,7 @@ function c(e) {
                       onClick: t,
                       tag: 'span',
                       children: (0, r.jsx)(o.ua7, {
-                          text: s.NW.string(s.t['v/OYd3']),
+                          text: s.intl.string(s.t['v/OYd3']),
                           children: (e) => {
                               var t, n;
                               return (0, r.jsx)(

@@ -5,9 +5,9 @@ n.d(t, {
     _3: () => R,
     _F: () => w,
     _b: () => I,
-    dA: () => A,
+    dA: () => N,
     jZ: () => C,
-    mH: () => N,
+    mH: () => A,
     uk: () => S
 }),
     n(388685);
@@ -97,7 +97,7 @@ function T(e, t) {
         client_ad_session_id: (0, i.Gy)(t).uuid
     };
 }
-function N(e, t, n) {
+function A(e, t, n) {
     return {
         content_id: e,
         content_name: I(e),
@@ -105,7 +105,7 @@ function N(e, t, n) {
         row_index: n
     };
 }
-function A(e) {
+function N(e) {
     let { questId: t, event: n, properties: r, trackGuildAndChannelMetadata: i = !1, shouldExtendSession: c = !1 } = e,
         d = u.Z.quests.get(t);
     if (null == d || ((0, _.X7)({ location: h.dr.QUEST_PREVIEW_TOOL }) && s.Z.getLayers().includes(m.S9g.USER_SETTINGS))) return;
@@ -121,10 +121,10 @@ var C = (function (e) {
 function R(e) {
     let { questId: t, questContent: n, questContentCTA: r, questContentPosition: i, questContentRowIndex: a, impressionId: o, trackGuildAndChannelMetadata: s = !1 } = e,
         l = (0, f.qe)(n);
-    A({
+    N({
         questId: t,
         event: m.rMx.QUEST_CONTENT_CLICKED,
-        properties: y(E({}, l, N(n, i, a)), {
+        properties: y(E({}, l, A(n, i, a)), {
             cta_name: r,
             impression_id: o
         }),
@@ -134,10 +134,10 @@ function R(e) {
 }
 function P(e) {
     let { questContent: t, questId: n, mode: r, prevMode: i } = e;
-    A({
+    N({
         questId: n,
         event: m.rMx.QUEST_BAR_MODE_CHANGED,
-        properties: y(E({}, N(t)), {
+        properties: y(E({}, A(t)), {
             mode: r,
             previous_mode: i
         })
@@ -147,7 +147,7 @@ function w() {
     let e = (0, c.WD)();
     function t(t) {
         let { questId: n, event: r, properties: i, trackGuildAndChannelMetadata: a = !1, shouldExtendSession: o = !1 } = t;
-        A({
+        N({
             questId: n,
             event: r,
             properties: y(E({}, i), { impression_id: null == e ? void 0 : e.getId() }),
@@ -166,7 +166,7 @@ function D() {
             e({
                 questId: n,
                 event: m.rMx.QUEST_CONTENT_CLICKED,
-                properties: y(E({}, (0, f.eE)(l), N(r, a, o)), { cta_name: i }),
+                properties: y(E({}, (0, f.eE)(l), A(r, a, o)), { cta_name: i }),
                 trackGuildAndChannelMetadata: s,
                 shouldExtendSession: (0, f.VB)(r)
             });

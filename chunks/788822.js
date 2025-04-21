@@ -45,7 +45,7 @@ let b = (e) => {
                     className: d.featuredBlockButton,
                     color: i.Ttl.WHITE,
                     onClick: () => {},
-                    children: u.NW.string(u.t.jVcuVV)
+                    children: u.intl.string(u.t.jVcuVV)
                 })
             ]
         })

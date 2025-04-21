@@ -1,42 +1,42 @@
 n.d(t, { Z: () => p }), n(35282);
 var l = n(200651),
-    r = n(192379),
-    i = n(120356),
-    s = n.n(i),
+    i = n(192379),
+    r = n(120356),
+    s = n.n(r),
     a = n(399606),
     o = n(481060),
     c = n(749210),
     d = n(607070),
     u = n(903518),
     m = n(484459),
-    N = n(430824),
-    I = n(594174),
-    h = n(5192),
-    g = n(51144),
+    I = n(430824),
+    h = n(594174),
+    g = n(5192),
+    N = n(51144),
     f = n(82778);
 function p(e) {
-    let { guildId: t, welcomeMessage: n, className: i } = e,
-        p = (0, a.e7)([N.Z], () => N.Z.getGuild(t)),
+    let { guildId: t, welcomeMessage: n, className: r } = e,
+        p = (0, a.e7)([I.Z], () => I.Z.getGuild(t)),
         E = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        S = (0, a.e7)([I.default], () => I.default.getUser(null == n ? void 0 : n.authorIds[0])),
-        T = r.useMemo(() => (null != p && null != S && (0, u.Y)(p, S) ? S : null), [p, S]),
-        x = (0, a.e7)([I.default], () => I.default.getCurrentUser()),
-        O = r.useMemo(() => {
+        S = (0, a.e7)([h.default], () => h.default.getUser(null == n ? void 0 : n.authorIds[0])),
+        T = i.useMemo(() => (null != p && null != S && (0, u.Y)(p, S) ? S : null), [p, S]),
+        x = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
+        O = i.useMemo(() => {
             var e;
             return null != (e = null == n ? void 0 : n.authorIds) ? e : [];
         }, [n]);
-    r.useEffect(() => {
+    i.useEffect(() => {
         c.Z.requestMembersById(t, O);
     }, [t, O]),
-        r.useEffect(() => {
+        i.useEffect(() => {
             null != T && (0, m.Z)(T.id, T.getAvatarURL(t, 48), { guildId: t });
         }, [T, t]);
-    let _ = h.ZP.useName(t, null, T),
-        j = (0, g._T)(x);
+    let _ = g.ZP.useName(t, null, T),
+        j = (0, N._T)(x);
     if (null == T || null == x || null == n) return null;
     let b = null != p && p.ownerId === T.id;
     return (0, l.jsxs)(o.Zbd, {
-        className: s()(f.welcomeMessageContainer, i),
+        className: s()(f.welcomeMessageContainer, r),
         children: [
             (0, l.jsx)('div', { className: f.avatarBackground }),
             E
@@ -78,13 +78,13 @@ function p(e) {
                         children: (function (e, t) {
                             let n = e.split(/\[@username\]/g);
                             return (0, l.jsx)('span', {
-                                children: n.map((e, i) =>
+                                children: n.map((e, r) =>
                                     (0, l.jsxs)(
-                                        r.Fragment,
+                                        i.Fragment,
                                         {
                                             children: [
                                                 e,
-                                                i < n.length - 1
+                                                r < n.length - 1
                                                     ? (0, l.jsx)(o.Text, {
                                                           tag: 'span',
                                                           variant: 'text-md/semibold',
@@ -93,7 +93,7 @@ function p(e) {
                                                     : null
                                             ]
                                         },
-                                        'username-'.concat(i)
+                                        'username-'.concat(r)
                                     )
                                 )
                             });

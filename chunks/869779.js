@@ -1,7 +1,7 @@
-n.r(t), n.d(t, { default: () => M });
-var r = n(200651),
-    i = n(192379),
-    l = n(442837),
+n.r(t), n.d(t, { default: () => k });
+var i = n(200651),
+    l = n(192379),
+    r = n(442837),
     s = n(481060),
     a = n(570140),
     o = n(787014),
@@ -16,10 +16,10 @@ var r = n(200651),
     x = n(665906),
     j = n(210887),
     b = n(131704),
-    N = n(533947),
-    v = n(277053),
-    y = n(388610),
-    C = n(592125),
+    v = n(533947),
+    y = n(277053),
+    C = n(388610),
+    N = n(592125),
     S = n(496675),
     w = n(699516),
     Z = n(594174),
@@ -30,9 +30,9 @@ var r = n(200651),
     _ = n(2147),
     I = n(856606),
     P = n(981631),
-    W = n(388032),
-    D = n(511740);
-function L(e) {
+    D = n(388032),
+    L = n(511740);
+function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
     h.ZP.trackWithMetadata(P.rMx.SETTINGS_PANE_VIEWED, {
@@ -42,97 +42,97 @@ function L(e) {
         location: n
     });
 }
-class A extends i.PureComponent {
+class M extends l.PureComponent {
     componentDidMount() {
-        L(this.props.section, null, this.props.analyticsLocation);
+        A(this.props.section, null, this.props.analyticsLocation);
     }
     componentWillUnmount() {
         a.Z.wait(() => (0, o.xv)());
     }
     componentDidUpdate(e) {
         let { formState: t, section: n } = e,
-            { formState: r, section: i, canManageRoles: l, canManageChannels: s, canManageWebhooks: a, canUnlinkChannel: o } = this.props;
-        (s || l || a || o) && (r !== P.QZA.CLOSED || r === t) && (l || i !== P.CoT.PERMISSIONS) && (a || o || i !== P.CoT.INTEGRATIONS) ? i !== n && L(i, n) : (0, c.xf)();
+            { formState: i, section: l, canManageRoles: r, canManageChannels: s, canManageWebhooks: a, canUnlinkChannel: o } = this.props;
+        (s || r || a || o) && (i !== P.QZA.CLOSED || i === t) && (r || l !== P.CoT.PERMISSIONS) && (a || o || l !== P.CoT.INTEGRATIONS) ? l !== n && A(l, n) : (0, c.xf)();
     }
     render() {
-        let { theme: e, sidebarTheme: t, section: n, channel: i, category: l, canManageRoles: a, canManageChannels: h, canDeleteChannels: f, canManageWebhooks: x, canUnlinkChannel: j } = this.props;
-        return null == i
+        let { theme: e, sidebarTheme: t, section: n, channel: l, category: r, canManageRoles: a, canManageChannels: h, canDeleteChannels: f, canManageWebhooks: x, canUnlinkChannel: j } = this.props;
+        return null == l
             ? null
-            : (0, r.jsx)(d.ZP, {
+            : (0, i.jsx)(d.ZP, {
                   theme: e,
                   sidebarTheme: t,
                   section: null != n ? n : P.CoT.OVERVIEW,
                   onSetSection: o.zc,
                   onClose: c.xf,
                   sections: (function (e) {
-                      let { channel: t, category: n, canManageRoles: i, canManageChannels: l, canDeleteChannels: a, canManageWebhooks: d, canUnlinkChannel: h } = e,
+                      let { channel: t, category: n, canManageRoles: l, canManageChannels: r, canDeleteChannels: a, canManageWebhooks: d, canUnlinkChannel: h } = e,
                           f = (0, m.KS)(t),
                           { GUILD_CATEGORY: x } = P.d4z,
                           j = b.Ec.has(t.type),
-                          C = t.type === x ? W.NW.string(W.t.ifbXnJ) : j ? (t.isForumPost() ? W.NW.string(W.t.nEOg1N) : W.NW.string(W.t.H7vTe3)) : W.NW.string(W.t['8D8Rsb']);
+                          N = t.type === x ? D.intl.string(D.t.ifbXnJ) : j ? (t.isForumPost() ? D.intl.string(D.t.nEOg1N) : D.intl.string(D.t.H7vTe3)) : D.intl.string(D.t['8D8Rsb']);
                       return [
                           {
                               section: u.ID.HEADER,
                               label:
                                   null != t
-                                      ? (0, r.jsxs)(r.Fragment, {
+                                      ? (0, i.jsxs)(i.Fragment, {
                                             children: [
                                                 null != f
-                                                    ? (0, r.jsx)(f, {
+                                                    ? (0, i.jsx)(f, {
                                                           size: 'xxs',
                                                           color: 'currentColor',
-                                                          className: D.channelIcon
+                                                          className: L.channelIcon
                                                       })
                                                     : null,
                                                 (0, g.F6)(t, Z.default, w.Z),
                                                 null != n
-                                                    ? (0, r.jsx)(s.Text, {
+                                                    ? (0, i.jsx)(s.Text, {
                                                           tag: 'span',
                                                           variant: 'text-xs/semibold',
                                                           color: 'header-secondary',
                                                           lineClamp: 1,
-                                                          className: D.category,
+                                                          className: L.category,
                                                           children: (0, g.F6)(n, Z.default, w.Z)
                                                       })
                                                     : null
                                             ]
                                         })
-                                      : W.NW.string(W.t.XPDhcX)
+                                      : D.intl.string(D.t.XPDhcX)
                           },
                           {
                               section: P.CoT.OVERVIEW,
-                              label: W.NW.string(W.t['/dp6yc']),
-                              ariaLabel: W.NW.string(W.t['/dp6yc']),
+                              label: D.intl.string(D.t['/dp6yc']),
+                              ariaLabel: D.intl.string(D.t['/dp6yc']),
                               element: _.Z,
                               notice: {
                                   element: _.G,
-                                  stores: [y.Z]
+                                  stores: [C.Z]
                               }
                           },
                           {
                               section: P.CoT.PERMISSIONS,
-                              label: W.NW.string(W.t.xrmhRU),
+                              label: D.intl.string(D.t.xrmhRU),
                               element: p.Z,
                               notice: {
                                   element: I.n,
-                                  stores: [v.Z]
+                                  stores: [y.Z]
                               },
-                              predicate: () => i && !j
+                              predicate: () => l && !j
                           },
                           {
                               section: P.CoT.INSTANT_INVITES,
-                              label: W.NW.string(W.t['9F90iY']),
+                              label: D.intl.string(D.t['9F90iY']),
                               element: R.Z,
                               type: u.bT.CUSTOM,
-                              predicate: () => t.type !== x && l && !j
+                              predicate: () => t.type !== x && r && !j
                           },
                           {
                               section: P.CoT.INTEGRATIONS,
-                              label: W.NW.string(W.t.s69NLC),
-                              ariaLabel: W.NW.string(W.t.s69NLC),
+                              label: D.intl.string(D.t.s69NLC),
+                              ariaLabel: D.intl.string(D.t.s69NLC),
                               element: T.Z,
                               notice: {
-                                  stores: [N.Z],
+                                  stores: [v.Z],
                                   element: T.B
                               },
                               predicate: () => (!!d || !!h) && b.Ti.has(t.type)
@@ -148,9 +148,9 @@ class A extends i.PureComponent {
                                           (0, c.xf)();
                                   });
                               },
-                              label: C,
-                              ariaLabel: C,
-                              icon: (0, r.jsx)(s.XHJ, {
+                              label: N,
+                              ariaLabel: N,
+                              icon: (0, i.jsx)(s.XHJ, {
                                   size: 'xs',
                                   color: 'currentColor'
                               }),
@@ -158,8 +158,8 @@ class A extends i.PureComponent {
                           }
                       ];
                   })({
-                      channel: i,
-                      category: l,
+                      channel: l,
+                      category: r,
                       canManageRoles: a,
                       canManageChannels: h,
                       canDeleteChannels: f,
@@ -169,12 +169,12 @@ class A extends i.PureComponent {
               });
     }
 }
-function M() {
-    let { channel: e, analyticsLocation: t } = (0, l.cj)([y.Z], () => y.Z.getProps()),
-        n = (0, l.e7)([y.Z], () => y.Z.getFormState()),
-        i = (0, l.e7)([y.Z], () => y.Z.getSection()),
-        s = (0, l.e7)([j.Z], () => j.Z.theme),
-        a = (0, l.e7)([j.Z], () => (j.Z.darkSidebar ? P.BRd.DARK : void 0)),
+function k() {
+    let { channel: e, analyticsLocation: t } = (0, r.cj)([C.Z], () => C.Z.getProps()),
+        n = (0, r.e7)([C.Z], () => C.Z.getFormState()),
+        l = (0, r.e7)([C.Z], () => C.Z.getSection()),
+        s = (0, r.e7)([j.Z], () => j.Z.theme),
+        a = (0, r.e7)([j.Z], () => (j.Z.darkSidebar ? P.BRd.DARK : void 0)),
         o = (0, x.C7)(e),
         c = (0, x.Xb)(e),
         {
@@ -182,14 +182,14 @@ function M() {
             canManageRoles: u,
             canManageWebhooks: h,
             canUnlinkChannel: g
-        } = (0, l.cj)([S.Z], () => ({
+        } = (0, r.cj)([S.Z], () => ({
             canManageChannels: S.Z.can(P.Plq.MANAGE_CHANNELS, e),
             canManageRoles: null != e && S.Z.can(P.Plq.MANAGE_ROLES, e),
             canManageWebhooks: null != e && S.Z.can(P.Plq.MANAGE_WEBHOOKS, e),
             canUnlinkChannel: (0, f.C)(e, S.Z)
         })),
-        m = (0, l.e7)([C.Z], () => C.Z.getChannel(null == e ? void 0 : e.parent_id));
-    return (0, r.jsx)(A, {
+        m = (0, r.e7)([N.Z], () => N.Z.getChannel(null == e ? void 0 : e.parent_id));
+    return (0, i.jsx)(M, {
         channel: e,
         category: m,
         canManageChannels: (null == e ? void 0 : e.isThread()) ? o : d,
@@ -200,7 +200,7 @@ function M() {
         formState: n,
         theme: s,
         sidebarTheme: a,
-        section: i,
+        section: l,
         analyticsLocation: t
     });
 }

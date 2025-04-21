@@ -1,19 +1,19 @@
 n.d(t, { Z: () => d }), n(388685);
-var r = n(192379),
-    l = n(442837),
-    a = n(951539),
-    i = n(592125),
+var l = n(192379),
+    r = n(442837),
+    i = n(951539),
+    a = n(592125),
     s = n(356685),
     o = n(75666),
     c = n(981631);
 let u = { can_broadcast: !1 };
 function d(e, t, n) {
-    let [d, m] = r.useState(u),
-        [x, g] = r.useState(!1),
-        h = r.useRef(!1),
+    let [d, m] = l.useState(u),
+        [x, g] = l.useState(!1),
+        h = l.useRef(!1),
         v = null == e ? void 0 : e.id,
         f = null == e ? void 0 : e.hasFeature(c.oNc.HAS_DIRECTORY_ENTRY);
-    r.useEffect(() => {
+    l.useEffect(() => {
         if (!f) return void m(u);
         h.current ||
             null == v ||
@@ -28,12 +28,12 @@ function d(e, t, n) {
                 h.current = !1;
             })();
     }, [v, f, t]),
-        r.useEffect(() => {
+        l.useEffect(() => {
             var e;
             if (!d.can_broadcast) return void g(!1);
             g(null == (e = d.has_broadcast) || e);
         }, [d]);
-    let p = (0, l.e7)([i.Z], () => (0, a.wg)(n, [i.Z]));
+    let p = (0, r.e7)([a.Z], () => (0, i.wg)(n, [a.Z]));
     return {
         broadcastInfo: d,
         broadcastToDirectoryChannels: p && x,

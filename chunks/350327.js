@@ -3,10 +3,10 @@ n.d(t, {
     Cf: () => v,
     ID: () => O,
     Ls: () => g,
-    Xz: () => N,
+    Xz: () => A,
     Z: () => m,
     c_: () => T,
-    f4: () => A,
+    f4: () => N,
     g_: () => y,
     ho: () => b,
     pG: () => E,
@@ -169,14 +169,14 @@ function T(e) {
     }),
         h(f.QP.ANIMATED_AVATAR);
 }
-function N(e) {
+function A(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION',
         avatarDecoration: e
     }),
         h(f.QP.AVATAR_DECORATION);
 }
-function A(e) {
+function N(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER',
         banner: e

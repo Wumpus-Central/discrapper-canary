@@ -46,17 +46,17 @@ let b = function (e) {
         S = i.useCallback(() => {
             (0, c.Hb)(t.id);
         }, [t.id]),
-        T = i.useMemo(() => (null != y && y > 0 ? ((null == b ? void 0 : b.type) === h.qc2.DEVELOPER_GIFT ? m.NW.format(m.t['b+P6ra'], { numPotions: y }) : m.NW.format(m.t.RiQ4cn, { numPotions: y })) : m.NW.string(m.t.hvVgAQ)), [y, b]),
-        [N, A] = i.useState(!1 === s);
+        T = i.useMemo(() => (null != y && y > 0 ? ((null == b ? void 0 : b.type) === h.qc2.DEVELOPER_GIFT ? m.intl.format(m.t['b+P6ra'], { numPotions: y }) : m.intl.format(m.t.RiQ4cn, { numPotions: y })) : m.intl.string(m.t.hvVgAQ)), [y, b]),
+        [A, N] = i.useState(!1 === s);
     i.useEffect(() => {
         !1 === s && O();
     }, [s, O]);
     let C = i.useCallback(() => {
-            A(!1);
+            N(!1);
         }, []),
         R = i.useCallback(
             (e) => {
-                v(e), A(!1);
+                v(e), N(!1);
             },
             [v]
         ),
@@ -73,14 +73,14 @@ let b = function (e) {
         children: [
             (0, r.jsx)(_.Z, {
                 channel: t,
-                shouldShow: N,
+                shouldShow: A,
                 onRequestClose: C,
                 setEmojiConfetti: R,
                 position: 'top',
                 align: 'left',
                 children: () =>
                     (0, r.jsxs)(o.P3F, {
-                        onClick: () => A(!N),
+                        onClick: () => N(!A),
                         className: g.emojiSelectContainer,
                         children: [
                             (0, r.jsx)('div', {
@@ -89,7 +89,7 @@ let b = function (e) {
                             }),
                             (0, r.jsx)(a.xv, {
                                 variant: 'text-sm/medium',
-                                children: null == n ? m.NW.string(m.t.mzfiGR) : m.NW.format(m.t.Hcd9OT, { emojiName: I })
+                                children: null == n ? m.intl.string(m.t.mzfiGR) : m.intl.format(m.t.Hcd9OT, { emojiName: I })
                             })
                         ]
                     })

@@ -1,10 +1,10 @@
 n.d(t, { Z: () => _ });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(399606),
+var r = n(399606),
     s = n(481060),
-    a = n(594174),
-    l = n(785681),
+    l = n(594174),
+    a = n(785681),
     o = n(780985),
     c = n(631885),
     d = n(552045),
@@ -18,41 +18,41 @@ var i = n(399606),
 let _ = () => {
     let e = (0, c.mq)(p.ne.ACTIVE),
         t = (0, o.c)(),
-        n = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
-        _ = (0, l.o)(f.NW.string(h.Z['5RZ8Tk']), f.NW.string(h.Z.bmhCnJ)),
-        N = (0, l.o)(f.NW.string(h.Z.XKnFFh), f.NW.string(h.Z['68zfxM'])),
-        x = (0, l.o)(f.NW.string(h.Z['Rm/6a2']), f.NW.string(h.Z['1xPTwM']));
+        n = (0, r.e7)([l.default], () => l.default.getCurrentUser()),
+        _ = (0, a.o)(f.intl.string(h.default['5RZ8Tk']), f.intl.string(h.default.bmhCnJ)),
+        x = (0, a.o)(f.intl.string(h.default.XKnFFh), f.intl.string(h.default['68zfxM'])),
+        E = (0, a.o)(f.intl.string(h.default['Rm/6a2']), f.intl.string(h.default['1xPTwM']));
     return void 0 === n
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, i.jsxs)('div', {
               className: b.container,
               children: [
-                  (0, r.jsx)('div', {
+                  (0, i.jsx)('div', {
                       className: b.banner,
-                      children: (0, r.jsx)(d.Z, {})
+                      children: (0, i.jsx)(d.Z, {})
                   }),
-                  (0, r.jsxs)('div', {
+                  (0, i.jsxs)('div', {
                       className: b.featureCards,
                       children: [
-                          (0, r.jsx)(g.Z, {
+                          (0, i.jsx)(g.Z, {
                               icon: s.eQA,
-                              header: f.NW.string(h.Z['001l3t']),
+                              header: f.intl.string(h.default['001l3t']),
                               description: _
                           }),
-                          (0, r.jsx)(g.Z, {
+                          (0, i.jsx)(g.Z, {
                               icon: s.tEF,
-                              header: f.NW.string(h.Z.yipAeH),
-                              description: N
-                          }),
-                          (0, r.jsx)(g.Z, {
-                              icon: s.IkH,
-                              header: f.NW.string(h.Z.hhOuMT),
+                              header: f.intl.string(h.default.yipAeH),
                               description: x
+                          }),
+                          (0, i.jsx)(g.Z, {
+                              icon: s.IkH,
+                              header: f.intl.string(h.default.hhOuMT),
+                              description: E
                           })
                       ]
                   }),
-                  0 === e.length ? (0, r.jsx)(m.Z, {}) : null,
-                  void 0 !== t && e.length > 0 ? (0, r.jsx)(u.Z, { user: t }) : null
+                  0 === e.length ? (0, i.jsx)(m.Z, {}) : null,
+                  void 0 !== t && e.length > 0 ? (0, i.jsx)(u.Z, { user: t }) : null
               ]
           });
 };

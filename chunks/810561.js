@@ -18,7 +18,7 @@ function p(e) {
             (0, r.jsx)(s.X6q, {
                 variant: 'heading-sm/medium',
                 className: d.heading,
-                children: a.NW.string(a.t['D/jjoa'])
+                children: a.intl.string(a.t['D/jjoa'])
             }),
             (0, r.jsxs)(s.Ttm, {
                 className: i()(d.scroller, { [d.showScroller]: !b }),
@@ -47,7 +47,7 @@ function p(e) {
                             size: s.zxk.Sizes.MIN,
                             color: s.zxk.Colors.LINK,
                             className: d.button,
-                            children: a.NW.string(a.t['8O7Hp6'])
+                            children: a.intl.string(a.t['8O7Hp6'])
                         })
                 ]
             })

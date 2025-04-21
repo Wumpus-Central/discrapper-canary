@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -44,7 +44,7 @@ function O(e) {
     }
     return e;
 }
-function N(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,18 +62,18 @@ function N(e, t) {
         e
     );
 }
-let y = {
+let I = {
     HOST: 5,
     LISTENER: 4
 };
-class I extends i.PureComponent {
+class v extends i.PureComponent {
     isHost() {
         let { currentUser: e, host: t } = this.props;
         return e.id === (null == t ? void 0 : t.id);
     }
     renderTitle() {
         return (0, r.jsxs)('div', {
-            children: [(0, r.jsx)(g.Z, { children: this.isHost() ? b.NW.formatToPlainString(b.t['6UJ7mp'], { count: this.props.party.length }) : b.NW.string(b.t.RZufbG) }), (0, r.jsx)(f.Z, { children: b.NW.string(b.t['0ZHLIi']) })]
+            children: [(0, r.jsx)(g.Z, { children: this.isHost() ? b.intl.formatToPlainString(b.t['6UJ7mp'], { count: this.props.party.length }) : b.intl.string(b.t.RZufbG) }), (0, r.jsx)(f.Z, { children: b.intl.string(b.t['0ZHLIi']) })]
         });
     }
     renderStopListeningButton() {
@@ -81,7 +81,7 @@ class I extends i.PureComponent {
         return this.isHost()
             ? null
             : (0, r.jsx)(h.Z, {
-                  tooltipText: b.NW.string(b.t.LeZSp6),
+                  tooltipText: b.intl.string(b.t.LeZSp6),
                   onClick: e,
                   icon: o.Dio
               });
@@ -89,7 +89,7 @@ class I extends i.PureComponent {
     renderHelpIcon() {
         return this.isHost()
             ? (0, r.jsx)(h.Z, {
-                  tooltipText: b.NW.string(b.t.U7N2Hh),
+                  tooltipText: b.intl.string(b.t.U7N2Hh),
                   onClick: () => {
                       window.open(p.Z.getArticleURL(m.BhN.SPOTIFY_CONNECTION), '_blank');
                   },
@@ -107,7 +107,7 @@ class I extends i.PureComponent {
                     className: _.party,
                     children: (0, r.jsx)(d.Z, {
                         users: this.props.party,
-                        max: this.isHost() ? y.HOST : y.LISTENER,
+                        max: this.isHost() ? I.HOST : I.LISTENER,
                         renderUser: this.renderPartyMember,
                         renderMoreUsers: this.renderPartyMemberOverflow
                     })
@@ -126,7 +126,7 @@ class I extends i.PureComponent {
                 if (null == e) return null;
                 let { host: l, onUserContextMenu: c } = this.props;
                 return (
-                    (n = (null == l ? void 0 : l.id) === e.id ? b.NW.string(b.t.N9bqDw) : b.NW.string(b.t.Z2Y4c3)),
+                    (n = (null == l ? void 0 : l.id) === e.id ? b.intl.string(b.t.N9bqDw) : b.intl.string(b.t.Z2Y4c3)),
                     (0, r.jsx)(
                         u.Z,
                         {
@@ -142,7 +142,7 @@ class I extends i.PureComponent {
                                         let { onMouseEnter: r, onMouseLeave: s } = n;
                                         return (0, i.createElement)(
                                             o.qEK,
-                                            N(O({}, l), {
+                                            y(O({}, l), {
                                                 key: e.id,
                                                 src: e.getAvatarURL(void 0, 24),
                                                 size: o.EFr.SIZE_24,
@@ -168,8 +168,8 @@ class I extends i.PureComponent {
                         renderPopout: i,
                         children: (n) =>
                             (0, r.jsx)(o.ua7, {
-                                text: b.NW.string(b.t.Zf4NPT),
-                                children: (i) => (0, r.jsx)('div', N(O({ className: a()(_.overflow, t) }, i, n), { children: e }))
+                                text: b.intl.string(b.t.Zf4NPT),
+                                children: (i) => (0, r.jsx)('div', y(O({ className: a()(_.overflow, t) }, i, n), { children: e }))
                             })
                     },
                     n
@@ -177,4 +177,4 @@ class I extends i.PureComponent {
             });
     }
 }
-let v = I;
+let C = v;

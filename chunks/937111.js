@@ -124,11 +124,11 @@ function T(e) {
         };
     }
 }
-function N(e) {
+function A(e) {
     let { guildId: t } = e;
     m(t);
 }
-function A(e) {
+function N(e) {
     let { guildId: t } = e;
     u = t;
 }
@@ -168,8 +168,8 @@ let P = new R(a.Z, {
     USER_JOIN_REQUEST_GUILDS_FETCH: I,
     MEMBER_VERIFICATION_FORM_UPDATE: T,
     INVITE_ACCEPT_SUCCESS: O,
-    ACK_APPROVED_GUILD_JOIN_REQUEST: N,
-    USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW: A,
+    ACK_APPROVED_GUILD_JOIN_REQUEST: A,
+    USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW: N,
     USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: C,
     USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH: S
 });

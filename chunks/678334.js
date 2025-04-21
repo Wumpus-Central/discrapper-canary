@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(512722),
@@ -22,9 +22,9 @@ var r = n(200651),
     I = n(612853),
     S = n(981631),
     T = n(843856);
-function N(e) {
-    let { premiumSubscription: t, setPurchaseState: n, onBack: a, onNext: N, legalTermsNodeRef: A, flashLegalTerms: C, invoiceError: R, planError: P, onPurchaseError: w, baseAnalyticsData: D, flowStartTime: L, trialId: x, planGroup: M, analyticsLocation: k, purchaseTokenAuthState: j, openInvoiceId: U, metadata: G, backButtonEligible: B, disablePurchase: F, isTrial: V = !1 } = e,
-        { selectedPlan: Z, priceOptions: H, setHasAcceptedTerms: W, setPurchaseError: Y, purchaseType: K, paymentSourceId: z, paymentSources: q, selectedSkuId: Q, skusById: X, skuPricePreviewsById: J, referralCode: $, contextMetadata: ee, invoicePreview: et, inReverseTrial: en } = (0, b.JL)(),
+function A(e) {
+    let { premiumSubscription: t, setPurchaseState: n, onBack: a, onNext: A, legalTermsNodeRef: N, flashLegalTerms: C, invoiceError: R, planError: P, onPurchaseError: w, baseAnalyticsData: D, flowStartTime: L, trialId: x, planGroup: M, analyticsLocation: k, purchaseTokenAuthState: j, openInvoiceId: U, metadata: G, backButtonEligible: B, disablePurchase: F, isTrial: V = !1 } = e,
+        { selectedPlan: Z, priceOptions: H, setHasAcceptedTerms: Y, setPurchaseError: W, purchaseType: K, paymentSourceId: z, paymentSources: q, selectedSkuId: Q, skusById: X, skuPricePreviewsById: J, referralCode: $, contextMetadata: ee, invoicePreview: et, inReverseTrial: en } = (0, b.JL)(),
         { isGift: er, selectedGiftStyle: ei, customGiftMessage: ea, emojiConfetti: eo, soundEffect: es, giftRecipient: el, selectedGiftingPromotionReward: ec } = (0, E.wD)(),
         eu = (0, u.a5)(Z),
         ed = (0, m.MY)(el),
@@ -41,20 +41,20 @@ function N(e) {
         eI = ev || ep,
         eS = (0, d.U)(),
         eT = null,
-        eN = null;
+        eA = null;
     if (K === S.GZQ.ONE_TIME) {
-        var eA;
-        o()(null != Q, 'SKU must be selected for one-time purchases'), (eT = null != (eA = X[Q]) ? eA : null), o()(null != eT, 'SKU must exist and be fetched.');
+        var eN;
+        o()(null != Q, 'SKU must be selected for one-time purchases'), (eT = null != (eN = X[Q]) ? eN : null), o()(null != eT, 'SKU must exist and be fetched.');
         let e = J[Q],
             t = null != z ? z : h.c;
-        eN = null != e ? e[t] : null;
+        eA = null != e ? e[t] : null;
     }
     let eC = async () => {
             await (0, y.H)({
                 setPurchaseState: n,
-                setHasAcceptedTerms: W,
+                setHasAcceptedTerms: Y,
                 setIsSubmitting: eE,
-                setPurchaseError: Y,
+                setPurchaseError: W,
                 hasRedirectURL: eb,
                 setHasRedirectURL: ey,
                 isGift: er,
@@ -70,10 +70,10 @@ function N(e) {
                 isPrepaidPaymentPastDue: eS,
                 openInvoiceId: U,
                 premiumSubscription: t,
-                onNext: N,
+                onNext: A,
                 metadata: G,
                 sku: eT,
-                skuPricePreview: eN,
+                skuPricePreview: eA,
                 purchaseType: K,
                 referralCode: $,
                 loadId: ee.loadId,
@@ -85,7 +85,7 @@ function N(e) {
             baseAnalyticsData: D,
             flowStartTime: L,
             makePurchase: eC,
-            onNext: N,
+            onNext: A,
             onPurchaseError: w,
             paymentSource: em,
             paymentSourceId: z,
@@ -107,7 +107,7 @@ function N(e) {
               align: c.Z.Align.CENTER,
               children: [
                   (0, r.jsx)(p.Z, {
-                      legalTermsNodeRef: A,
+                      legalTermsNodeRef: N,
                       invoiceError: R,
                       planError: P,
                       disablePurchase: F,
@@ -120,7 +120,7 @@ function N(e) {
                       isTrial: V,
                       makePurchase: eC,
                       needsPaymentSource: null == em && !eI,
-                      onNext: N,
+                      onNext: A,
                       inReverseTrial: en
                   }),
                   (0, r.jsx)(I.Z, {}),

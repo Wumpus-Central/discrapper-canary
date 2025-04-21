@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
 var l = n(200651),
     a = n(192379),
-    r = n(120356),
-    i = n.n(r),
+    i = n(120356),
+    r = n.n(i),
     s = n(392711),
     o = n(780384),
     u = n(481060),
@@ -13,7 +13,7 @@ var l = n(200651),
     h = n(231338),
     g = n(183519);
 let p = a.memo(function (e) {
-    let { file: t, audio: n, className: r, waveformSettings: p } = e,
+    let { file: t, audio: n, className: i, waveformSettings: p } = e,
         [y, b] = a.useState({
             width: 0,
             height: 0
@@ -56,10 +56,10 @@ let p = a.memo(function (e) {
             );
         }, [n, p]),
         j = (0, f.b1)(t),
-        N = (0, f.NN)(j, v.current, x),
-        w = (0, c.ZP)(),
-        C = (0, d.Sl)((0, o.wj)(w) ? h.Il.PRIMARY_300 : h.Il.PRIMARY_700),
-        S = null == j || null == N,
+        w = (0, f.NN)(j, v.current, x),
+        N = (0, c.ZP)(),
+        C = (0, d.Sl)((0, o.wj)(N) ? h.Il.PRIMARY_300 : h.Il.PRIMARY_700),
+        S = null == j || null == w,
         O = (0 === y.width || 0 === y.height || S) && null != t,
         P = a.useCallback(() => {
             null != v.current &&
@@ -86,20 +86,20 @@ let p = a.memo(function (e) {
                 t = e.getContext('2d');
             if (null == t) return;
             let { width: n, height: l } = e;
-            if (0 !== y.width && 0 !== y.height && null != N && N.length > 0) {
-                let e = n / N.length,
+            if (0 !== y.width && 0 !== y.height && null != w && w.length > 0) {
+                let e = n / w.length,
                     a = -(e * (m.nl.waveformBarWidth - 1));
                 t.clearRect(0, 0, n, l), (t.fillStyle = C.hex);
-                for (let n = 0; n < N.length; n++) {
-                    let r = N[n] * l,
-                        i = n * e + a,
-                        s = l / 2 - r / 2;
-                    t.fillRect(i, s, e - a, r);
+                for (let n = 0; n < w.length; n++) {
+                    let i = w[n] * l,
+                        r = n * e + a,
+                        s = l / 2 - i / 2;
+                    t.fillRect(r, s, e - a, i);
                 }
             }
-        }, [C, y, w, N]),
+        }, [C, y, N, w]),
         (0, l.jsxs)('div', {
-            className: i()(g.container, r),
+            className: r()(g.container, i),
             children: [
                 (0, l.jsx)('canvas', {
                     className: g.waveformCanvas,

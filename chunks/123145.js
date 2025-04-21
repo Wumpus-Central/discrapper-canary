@@ -5,8 +5,8 @@ var r = n(739566),
     o = n(421399),
     i = n(47930);
 function c(e) {
-    var t, n, c, s;
-    let l = (0, r.ZP)(e.message),
+    var t, n, c, l;
+    let s = (0, r.ZP)(e.message),
         u = (0, i.x)({
             message: e.message,
             channel: e.channel,
@@ -44,13 +44,13 @@ function c(e) {
                 }
                 return e;
             })({}, e)),
-            (s = s =
+            (l = l =
                 {
-                    author: l,
+                    author: s,
                     decorations: d
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(s))
+                ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(l))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -58,8 +58,8 @@ function c(e) {
                           n.push.apply(n, a);
                       }
                       return n;
-                  })(Object(s)).forEach(function (e) {
-                      Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(s, e));
+                  })(Object(l)).forEach(function (e) {
+                      Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(l, e));
                   }),
             c)
         )

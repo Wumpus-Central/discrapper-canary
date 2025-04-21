@@ -20,16 +20,16 @@ class a {
     announceDrag(e, t) {
         if (null == e) return;
         let n = this.getName(e, t);
-        this.announce(r.NW.formatToPlainString(r.t['vHD/JS'], { itemName: n }));
+        this.announce(r.intl.formatToPlainString(r.t['vHD/JS'], { itemName: n }));
     }
     announceHover(e, t) {
         null != e && this.announce(this.getName(e, t));
     }
     announceDrop() {
-        this.announce(r.NW.string(r.t.lMkmz8));
+        this.announce(r.intl.string(r.t.lMkmz8));
     }
     announceCancel() {
-        this.announce(r.NW.string(r.t['u4d/eH']));
+        this.announce(r.intl.string(r.t['u4d/eH']));
     }
     clear() {
         this.announcer.clearAnnouncements();

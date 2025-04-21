@@ -3,9 +3,9 @@ var n = r(200651);
 r(192379);
 var i = r(399606),
     o = r(481060),
-    s = r(607070),
-    c = r(357352),
-    l = r(623488),
+    l = r(607070),
+    s = r(357352),
+    c = r(623488),
     a = r(695346),
     d = r(937615),
     u = r(506071),
@@ -17,24 +17,24 @@ var i = r(399606),
 function g() {
     let e = a.QK.useSetting(),
         t = (0, u.n)(),
-        r = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        o = t && e && !r ? (0, c.b)('server_products/storefront/question-mark.gif') : (0, c.b)('server_products/storefront/question-mark.png');
+        r = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
+        o = t && e && !r ? (0, s.b)('server_products/storefront/question-mark.gif') : (0, s.b)('server_products/storefront/question-mark.png');
     return (0, n.jsxs)('div', {
         className: j.previewListingCard,
         children: [
-            (0, n.jsx)(l.Z, {
+            (0, n.jsx)(c.Z, {
                 role: void 0,
                 ctaComponent: null,
-                imageUrl: (0, c.b)('server_products/storefront/preview-thumbnail.png'),
-                name: b.NW.string(b.t.U2hvDg),
-                description: b.NW.string(b.t['w/TNGR']),
+                imageUrl: (0, s.b)('server_products/storefront/preview-thumbnail.png'),
+                name: b.intl.string(b.t.U2hvDg),
+                description: b.intl.string(b.t['w/TNGR']),
                 formattedPrice: (0, d.T4)(0, f.pKx.USD, {
                     localeMatcher: 'best fit',
                     style: 'currency',
                     maximumSignificantDigits: 1
                 }),
                 shouldShowFullDescriptionButton: !1,
-                productType: b.NW.string(b.t.ih4QMT),
+                productType: b.intl.string(b.t.ih4QMT),
                 onTapCard: () => null,
                 hideRoleTag: !0,
                 lineClamp: 3,
@@ -62,7 +62,7 @@ function h() {
             (0, n.jsx)(o.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: b.NW.format(b.t.umfZ8v, { learnMoreLink: p.P4 })
+                children: b.intl.format(b.t.umfZ8v, { learnMoreLink: p.P4 })
             })
         ]
     });

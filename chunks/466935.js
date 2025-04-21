@@ -37,7 +37,7 @@ function _(e) {
                     width: 24,
                     height: 24
                 }),
-            text: y.NW.string(y.t.tcvVXF),
+            text: y.intl.string(y.t.tcvVXF),
             selected: n,
             onClick: () => {
                 (0, s.Q2)({

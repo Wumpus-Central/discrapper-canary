@@ -24,7 +24,7 @@ function _(e) {
         [h, _] = r.useState(!1),
         y = (0, l.e7)([o.ZP], () => o.ZP.getCurrentEmbeddedActivity()),
         C = c ? b.t.cpT0Cg : b.t['0hKkS0'],
-        x = r.useMemo(() => (null != n ? (0, p.XZ)(n.displayName) : b.NW.string(b.t['3xjX0d'])), [n]),
+        x = r.useMemo(() => (null != n ? (0, p.XZ)(n.displayName) : b.intl.string(b.t['3xjX0d'])), [n]),
         v = void 0 !== a.flags && (0, m.yE)(a.flags, g.udG.EMBEDDED),
         j = null != y && y.applicationId === a.id && (y.location.kind === i.E.CONTEXTLESS || (0, s.pY)(y.location) === t.channel.id),
         { analyticsLocations: O } = (0, d.ZP)(u.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
@@ -38,11 +38,11 @@ function _(e) {
                 botUserId: E
             }) && v
                 ? j
-                    ? b.NW.string(b.t['Hi1/aW'])
+                    ? b.intl.string(b.t['Hi1/aW'])
                     : null != x
                       ? x
-                      : b.NW.string(b.t.zKX8Nj)
-                : b.NW.string(C),
+                      : b.intl.string(b.t.zKX8Nj)
+                : b.intl.string(C),
         hasActiveMatchingEmbeddedActivity: j,
         isEmbeddedApp: v,
         currentEmbeddedActivity: y,

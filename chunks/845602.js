@@ -6,8 +6,8 @@ r.d(t, {
 var n = r(200651),
     o = r(192379),
     a = r(120356),
-    i = r.n(a),
-    l = r(866442),
+    l = r.n(a),
+    i = r(866442),
     s = r(481060),
     c = r(957537),
     u = r(839008),
@@ -29,7 +29,7 @@ function C() {
             primary_color: b.tl[t].start,
             secondary_color: b.tl[t].end
         }),
-        u = (0, s.Icv)((0, l.Rf)(r.primary_color), (0, l.Rf)(r.secondary_color), void 0, 'username');
+        u = (0, s.Icv)((0, i.Rf)(r.primary_color), (0, i.Rf)(r.secondary_color), void 0, 'username');
     return (0, n.jsxs)('div', {
         className: O.container,
         children: [
@@ -39,8 +39,8 @@ function C() {
                     avatar: c.Z,
                     username: 'Cherry',
                     usernameStyle: u.text.gradientStyle,
-                    usernameClassName: i()(u.text.gradientClassName, u.gradient.gradientClassName, h.gradientAlwaysAnimate),
-                    message: y.NW.string(j.Z.eTHkQU)
+                    usernameClassName: l()(u.text.gradientClassName, u.gradient.gradientClassName, h.gradientAlwaysAnimate),
+                    message: y.intl.string(j.default.eTHkQU)
                 })
             }),
             (0, n.jsx)(d.default, {
@@ -115,7 +115,7 @@ function x(e) {
                     avatar: u.Z,
                     username: 'Roka',
                     usernameStyle: { color: 'var(--brand-400)' },
-                    message: y.NW.string(j.Z.eTHkQU),
+                    message: y.intl.string(j.default.eTHkQU),
                     decorations: (0, n.jsx)(g.S, {
                         guildId: t,
                         tag: 'GGEZ',

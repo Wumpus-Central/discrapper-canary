@@ -14,7 +14,7 @@
     }
     function d(e, t, n, r) {
         var i = Object.create((t && t.prototype instanceof E ? t : E).prototype);
-        return (i._invoke = A(e, n, new w(r || []))), i;
+        return (i._invoke = N(e, n, new w(r || []))), i;
     }
     function f(e, t, n) {
         try {
@@ -53,7 +53,7 @@
             };
         });
     }
-    function N(e) {
+    function A(e) {
         var t;
         function n(t, r, a, o) {
             var s = f(e[t], e, r);
@@ -90,7 +90,7 @@
         }
         this._invoke = r;
     }
-    function A(e, t, n) {
+    function N(e, t, n) {
         var r = _;
         return function (i, a) {
             if (r === h) throw Error('Generator is already running');
@@ -185,13 +185,13 @@
         (u.awrap = function (e) {
             return { __await: e };
         }),
-        T(N.prototype),
-        (N.prototype[s] = function () {
+        T(A.prototype),
+        (A.prototype[s] = function () {
             return this;
         }),
-        (u.AsyncIterator = N),
+        (u.AsyncIterator = A),
         (u.async = function (e, t, n, r) {
-            var i = new N(d(e, t, n, r));
+            var i = new A(d(e, t, n, r));
             return u.isGeneratorFunction(t)
                 ? i
                 : i.next().then(function (e) {

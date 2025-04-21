@@ -14,11 +14,11 @@ function c(e) {
         m = p.name,
         y = {
             onClick: () => (0, l.o)(o.Hw.TRACK, d.external_id),
-            ariaDescription: a.NW.formatToPlainString(a.t.xTsar6, { itemName: f })
+            ariaDescription: a.intl.formatToPlainString(a.t.xTsar6, { itemName: f })
         },
         j = {
             onClick: () => (0, l.o)(o.Hw.ARTIST, p.external_id),
-            ariaDescription: a.NW.formatToPlainString(a.t.xTsar6, { itemName: m })
+            ariaDescription: a.intl.formatToPlainString(a.t.xTsar6, { itemName: m })
         };
     return (
         b === n.p.SPOTIFY && (c = { type: i.kG.SPOTIFY }),

@@ -3,8 +3,8 @@ n.d(t, {
     A0: () => R,
     Sg: () => T,
     ow: () => y,
-    rQ: () => N,
-    t$: () => A,
+    rQ: () => A,
+    t$: () => N,
     tM: () => O
 }),
     n(388685);
@@ -141,10 +141,10 @@ let S = (e, t, n) => {
             (0, f.yr)(e);
         }
     };
-var N = (function (e) {
+var A = (function (e) {
     return (e[(e.SENDING = 0)] = 'SENDING'), (e[(e.CREATED = 1)] = 'CREATED'), (e[(e.FAILED = 2)] = 'FAILED'), (e[(e.TIMED_OUT = 3)] = 'TIMED_OUT'), (e[(e.EPHEMERAL_SUCCESS = 4)] = 'EPHEMERAL_SUCCESS'), e;
 })({});
-let A = (e, t) => {
+let N = (e, t) => {
     let n = null == t ? void 0 : t.state,
         r = e.state === m.yb.SENT && y(e.id) < Date.now(),
         i = e.state === m.yb.SEND_FAILED && v(e.id) < Date.now(),
@@ -167,30 +167,30 @@ function R(e, t) {
     switch (e) {
         case l.Z.ReasonCodes.TIMEOUT:
             let n = s.Z.getApplication(t);
-            if (null != n) return g.NW.formatToPlainString(g.t.u2D2Ul, { applicationName: n.name });
-            return g.NW.string(g.t['vGU8+v']);
+            if (null != n) return g.intl.formatToPlainString(g.t.u2D2Ul, { applicationName: n.name });
+            return g.intl.string(g.t['vGU8+v']);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_NOT_IN_EXPERIMENT:
-            return g.NW.string(g.t.Gyzcra);
+            return g.intl.string(g.t.Gyzcra);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_VERIFICATION_LEVEL:
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_PERMISSIONS:
-            return g.NW.string(g.t.hHGrW1);
+            return g.intl.string(g.t.hHGrW1);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_UNKNOWN_CHANNEL:
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_UNKNOWN_GUILD:
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_CHANNEL_TYPE:
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_CHANNEL_NO_AFK:
-            return g.NW.string(g.t.j29zCg);
+            return g.intl.string(g.t.j29zCg);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_AGE_GATE:
-            return g.NW.string(g.t['4WuFRE']);
+            return g.intl.string(g.t['4WuFRE']);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_DEV_PREVIEW_GUILD_SIZE:
-            return g.NW.string(g.t.RvkXdX);
+            return g.intl.string(g.t.RvkXdX);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_CONFIGURATION_PLATFORM_NOT_SUPPORTED:
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_CONFIGURATION_PLATFORM_NOT_RELEASED:
-            return g.NW.string(g.t.uGDCc3);
+            return g.intl.string(g.t.uGDCc3);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_NO_ACCESS_TO_ACTIVITY:
-            return g.NW.string(g.t.WjNAAA);
+            return g.intl.string(g.t.WjNAAA);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_LOCATION_TYPE:
-            return g.NW.string(g.t.PtobXV);
+            return g.intl.string(g.t.PtobXV);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION:
-            return g.NW.string(g.t.PrHIMz);
+            return g.intl.string(g.t.PrHIMz);
     }
 }

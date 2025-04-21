@@ -73,10 +73,10 @@ let O = i.memo(function (e) {
             if (n.hasFeature(f.oNc.HUB)) return null;
             return (0, r.jsx)('div', { style: { height: x } });
         case d.p2:
-            return (0, r.jsx)(h.P, { name: v ? g.NW.string(g.t.mlPMCw) : g.NW.string(g.t.k8fFjo) });
+            return (0, r.jsx)(h.P, { name: v ? g.intl.string(g.t.mlPMCw) : g.intl.string(g.t.k8fFjo) });
         case b.recentsSectionNumber:
             return (0, r.jsx)(h.P, {
-                name: g.NW.string(g.t.gKcrqK),
+                name: g.intl.string(g.t.gKcrqK),
                 onDismiss: C
             });
         case b.voiceChannelsSectionNumber: {

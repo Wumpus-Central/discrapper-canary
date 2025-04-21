@@ -9,36 +9,36 @@ n.d(t, {
 });
 var r,
     i,
-    a,
-    l = n(70956),
+    l,
+    a = n(70956),
     o = n(388032);
-let s = 6 * l.Z.Millis.DAYS_30;
+let s = 6 * a.Z.Millis.DAYS_30;
 var c = (((r = {}).TOO_MANY_NOTIFICATIONS = 'too_many_notifications'), (r.TEMPORARY_BREAK = 'temporary_break'), (r.ANNOYING = 'annoying'), (r.UNSAFE = 'unsafe'), (r.SPAM = 'spam'), (r.OTHER = 'other'), r);
 function u() {
     return [
         {
             value: 'too_many_notifications',
-            label: o.NW.string(o.t.bQHhT0)
+            label: o.intl.string(o.t.bQHhT0)
         },
         {
             value: 'temporary_break',
-            label: o.NW.string(o.t.OuPkvL)
+            label: o.intl.string(o.t.OuPkvL)
         },
         {
             value: 'annoying',
-            label: o.NW.string(o.t['3kmAMD'])
+            label: o.intl.string(o.t['3kmAMD'])
         },
         {
             value: 'unsafe',
-            label: o.NW.string(o.t.nmW7jI)
+            label: o.intl.string(o.t.nmW7jI)
         },
         {
             value: 'spam',
-            label: o.NW.string(o.t.cCPYjo)
+            label: o.intl.string(o.t.cCPYjo)
         },
         {
             value: 'other',
-            label: o.NW.string(o.t['7ZIIJy'])
+            label: o.intl.string(o.t['7ZIIJy'])
         }
     ];
 }
@@ -47,40 +47,40 @@ function p() {
     return [
         {
             value: 'confusion',
-            label: o.NW.string(o.t['64Oph4'])
+            label: o.intl.string(o.t['64Oph4'])
         },
         {
             value: 'does_not_achieve_wants',
-            label: o.NW.string(o.t['wH5R/v'])
+            label: o.intl.string(o.t['wH5R/v'])
         },
         {
             value: 'hard_to_access',
-            label: o.NW.string(o.t['4uZBRk'])
+            label: o.intl.string(o.t['4uZBRk'])
         },
         {
             value: 'something_else',
-            label: o.NW.string(o.t.YicFbG)
+            label: o.intl.string(o.t.YicFbG)
         }
     ];
 }
-var m = (((a = {}).CONFUSION = 'confusion'), (a.DOES_NOT_ACHIEVE_WANTS = 'does_not_achieve_wants'), (a.HARD_TO_ACCESS = 'hard_to_access'), (a.SOMETHING_ELSE = 'something_else'), a);
+var m = (((l = {}).CONFUSION = 'confusion'), (l.DOES_NOT_ACHIEVE_WANTS = 'does_not_achieve_wants'), (l.HARD_TO_ACCESS = 'hard_to_access'), (l.SOMETHING_ELSE = 'something_else'), l);
 function f() {
     return [
         {
             value: 'confusion',
-            label: o.NW.string(o.t.IumZmp)
+            label: o.intl.string(o.t.IumZmp)
         },
         {
             value: 'does_not_achieve_wants',
-            label: o.NW.string(o.t.mXkYyc)
+            label: o.intl.string(o.t.mXkYyc)
         },
         {
             value: 'hard_to_access',
-            label: o.NW.string(o.t.eg1hVF)
+            label: o.intl.string(o.t.eg1hVF)
         },
         {
             value: 'something_else',
-            label: o.NW.string(o.t.WAYoT0)
+            label: o.intl.string(o.t.WAYoT0)
         }
     ];
 }

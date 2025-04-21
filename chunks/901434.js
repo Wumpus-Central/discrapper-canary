@@ -27,16 +27,16 @@ let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
                 j ? (0, p.hk)(n.guild_id, () => c.default.selectVoiceChannel(n.id)) : c.default.selectVoiceChannel(n.id);
             }, [n.id, n.guild_id, j]),
             E = t.filter((e) => e.type === _.Ui.VOICE),
-            N = 4 === E.length ? 2 : 3,
-            I = (0, a.Wu)([u.Z], () => E.map((e) => u.Z.getParticipant(n.id, e.id)).filter(g.lm), [n.id, E]);
+            I = 4 === E.length ? 2 : 3,
+            P = (0, a.Wu)([u.Z], () => E.map((e) => u.Z.getParticipant(n.id, e.id)).filter(g.lm), [n.id, E]);
         return (0, r.jsxs)('div', {
             className: x.container,
             children: [
                 b && (0, r.jsx)(m.Z, {}),
                 (0, r.jsx)('div', {
                     className: x.tiles,
-                    style: { maxWidth: 168 * N },
-                    children: I.slice(0, 5).map((e) =>
+                    style: { maxWidth: 168 * I },
+                    children: P.slice(0, 5).map((e) =>
                         (0, r.jsx)(
                             f.ZP,
                             {
@@ -66,16 +66,16 @@ let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
                         variant: b ? 'heading-lg/normal' : 'text-sm/normal',
                         children:
                             0 === E.length
-                                ? C.NW.string(C.t.FUVhyM)
+                                ? C.intl.string(C.t.FUVhyM)
                                 : 1 === E.length
-                                  ? C.NW.formatToPlainString(C.t.EQwZlJ, { a: v(n, E[0]) })
+                                  ? C.intl.formatToPlainString(C.t.EQwZlJ, { a: v(n, E[0]) })
                                   : 2 === E.length
-                                    ? C.NW.formatToPlainString(C.t.zBcKoK, {
+                                    ? C.intl.formatToPlainString(C.t.zBcKoK, {
                                           a: v(n, E[0]),
                                           b: v(n, E[1])
                                       })
                                     : E.length > 2
-                                      ? C.NW.formatToPlainString(C.t['3AqFaG'], {
+                                      ? C.intl.formatToPlainString(C.t['3AqFaG'], {
                                             a: v(n, E[0]),
                                             b: v(n, E[1]),
                                             n: E.length - 2
@@ -92,7 +92,7 @@ let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
                             color: l ? (b ? s.zxk.Colors.WHITE : s.zxk.Colors.GREEN) : s.zxk.Colors.PRIMARY,
                             onClick: O,
                             size: s.zxk.Sizes.MEDIUM,
-                            children: l ? C.NW.string(C.t['7vb2cX']) : C.NW.string(C.t.TVBCKS)
+                            children: l ? C.intl.string(C.t['7vb2cX']) : C.intl.string(C.t.TVBCKS)
                         }),
                         b && (0, r.jsx)(y.e, { channel: n })
                     ]

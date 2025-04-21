@@ -1,6 +1,6 @@
-n.d(t, { M: () => l });
+n.d(t, { M: () => i });
 var r = n(37113),
-    i = n(388032);
-function l(e) {
-    return e === r.LY.RESOLUTION_SOURCE ? i.NW.string(i.t.XjXqzs) : ''.concat(e, 'p');
+    l = n(388032);
+function i(e) {
+    return e === r.LY.RESOLUTION_SOURCE ? l.intl.string(l.t.XjXqzs) : ''.concat(e, 'p');
 }

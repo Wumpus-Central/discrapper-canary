@@ -3,8 +3,8 @@ n.d(t, {
     r: () => _
 });
 var r,
-    a = n(200651),
-    i = n(192379),
+    i = n(200651),
+    a = n(192379),
     l = n(120356),
     s = n.n(l),
     o = n(442837),
@@ -22,22 +22,22 @@ function f(e) {
         v = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         C = (null == v ? void 0 : v.isStaff()) || (null == v ? void 0 : v.isStaffPersonal()),
         { enabled: j } = (0, p.W)({ location: 'global_discovery_header_bar' });
-    return (0, a.jsx)(c.f6W, {
+    return (0, i.jsx)(c.f6W, {
         theme: x,
         children: (e) =>
-            (0, a.jsxs)(u.Z, {
+            (0, i.jsxs)(u.Z, {
                 className: s()(e, g.headerBar),
                 innerClassname: j ? g.headerBarInner : void 0,
-                toolbar: C ? (0, a.jsx)(i.Fragment, {}) : null,
+                toolbar: C ? (0, i.jsx)(a.Fragment, {}) : null,
                 children: [
                     'DEFAULT' === l &&
-                        (0, a.jsxs)(a.Fragment, {
+                        (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, a.jsx)(f, {
+                                (0, i.jsx)(f, {
                                     color: 'currentColor',
                                     size: 'md'
                                 }),
-                                (0, a.jsx)(h.Z, {
+                                (0, i.jsx)(h.Z, {
                                     tabs: r,
                                     selectedTab: t,
                                     onTabSelect: n,
@@ -45,7 +45,7 @@ function f(e) {
                                 })
                             ]
                         }),
-                    (0, a.jsx)('div', {
+                    (0, i.jsx)('div', {
                         className: s()(g.headerBarContent, { [g.headerBarSearchContent]: 'SEARCH' === l }),
                         children: b
                     })

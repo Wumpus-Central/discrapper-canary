@@ -7,8 +7,8 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     o = n(239091),
-    c = n(883385),
-    l = n(108843),
+    l = n(883385),
+    c = n(108843),
     u = n(100527),
     a = n(167675),
     s = n(737013),
@@ -25,16 +25,16 @@ var i = n(481060),
     h = n(981631),
     m = n(388032);
 function S(e) {
-    let { isOwnSettings: t, userId: n, channelId: o, guildId: c, context: l } = e,
+    let { isOwnSettings: t, userId: n, channelId: o, guildId: l, context: c } = e,
         u = (0, v.Z)({
             userId: n,
-            guildId: c,
+            guildId: l,
             channelId: o,
             showGuildProfile: !0,
             icon: (0, r.jsx)(i.tBG, { size: 'sm' }),
-            label: m.NW.string(m.t.iXAna2)
+            label: m.intl.string(m.t.iXAna2)
         }),
-        f = (0, g.Z)(n, l, i.kBi),
+        f = (0, g.Z)(n, c, i.kBi),
         b = (0, Z.Z)(n),
         p = (0, j.Z)(n),
         O = (0, a.Z)(n),
@@ -56,11 +56,11 @@ function P(e, t, n) {
             guildId: n,
             simplified: !0
         }),
-        c = (0, b.Z)({
+        l = (0, b.Z)({
             id: e.id,
-            label: m.NW.string(m.t['/AXYnJ'])
+            label: m.intl.string(m.t['/AXYnJ'])
         }),
-        l = (0, y.Z)({
+        c = (0, y.Z)({
             user: e,
             guildId: n,
             channelId: t,
@@ -73,19 +73,19 @@ function P(e, t, n) {
             location: 'GuildVoiceUserContextMenu'
         }),
         a = (0, r.jsxs)(i.kSQ, {
-            children: [o, c]
+            children: [o, l]
         });
     return [
         (0, r.jsxs)(i.kSQ, {
-            children: [l, u]
+            children: [c, u]
         }),
         a
     ];
 }
-let x = (0, l.Z)(
-    (0, c.Z)(
+let x = (0, c.Z)(
+    (0, l.Z)(
         function (e) {
-            let { user: t, channel: n, onSelect: c, onInteraction: l, context: u } = e,
+            let { user: t, channel: n, onSelect: l, onInteraction: c, context: u } = e,
                 a = n.id,
                 s = t.isNonUserBot(),
                 f = t.id === p.default.getId(),
@@ -98,14 +98,14 @@ let x = (0, l.Z)(
                 O = P(t, a),
                 y = (0, b.Z)({
                     id: t.id,
-                    label: m.NW.string(m.t['/AXYnJ'])
+                    label: m.intl.string(m.t['/AXYnJ'])
                 });
             return (0, r.jsx)(i.v2r, {
                 navId: 'user-context',
                 onClose: o.Zy,
-                'aria-label': m.NW.string(m.t.liqwPD),
-                onSelect: c,
-                onInteraction: l,
+                'aria-label': m.intl.string(m.t.liqwPD),
+                onSelect: l,
+                onInteraction: c,
                 variant: 'fixed',
                 children:
                     !s &&
@@ -116,7 +116,7 @@ let x = (0, l.Z)(
                                 (0, r.jsx)(i.kSQ, {
                                     children: (0, r.jsx)(i.sNh, {
                                         id: 'more-options',
-                                        label: m.NW.string(m.t.PdRCRk),
+                                        label: m.intl.string(m.t.PdRCRk),
                                         children: O
                                     })
                                 }),

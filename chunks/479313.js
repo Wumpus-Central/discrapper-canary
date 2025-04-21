@@ -1,8 +1,8 @@
 n.d(t, {
     $l: () => w,
     G1: () => v,
-    JR: () => N,
-    U$: () => A,
+    JR: () => A,
+    U$: () => N,
     ZP: () => D,
     e7: () => I,
     wv: () => S,
@@ -108,14 +108,14 @@ function T(e, t) {
         summaryId: null != t ? t : null
     });
 }
-function N(e, t) {
+function A(e, t) {
     l.Z.dispatch({
         type: 'UPDATE_VISIBLE_MESSAGES',
         topVisibleMessage: null != e ? e : null,
         bottomVisibleMessage: null != t ? t : null
     });
 }
-function A(e, t) {
+function N(e, t) {
     l.Z.dispatch({
         type: 'SET_SUMMARY_FEEDBACK',
         summary: e,
@@ -230,8 +230,8 @@ async function w(e) {
     }
 }
 let D = {
-    setSummaryFeedback: A,
-    updateVisibleMessages: N,
+    setSummaryFeedback: N,
+    updateVisibleMessages: A,
     setSelectedSummary: S,
     setGravitySelectedSummary: T,
     setHighlightedSummary: O,

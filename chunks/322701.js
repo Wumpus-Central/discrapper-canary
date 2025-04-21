@@ -20,13 +20,13 @@ let h = function (e) {
             async scrollToEnd() {}
         }),
         O = g !== d.pJs.ONLINE && g !== d.pJs.ALL,
-        N = _ || f || O,
-        y = i.useMemo(
+        y = _ || f || O,
+        I = i.useMemo(
             () =>
                 t.map((e, t) =>
                     0 === e.length
                         ? null
-                        : N
+                        : y
                           ? (0, r.jsxs)(
                                 'div',
                                 {
@@ -44,7 +44,7 @@ let h = function (e) {
                                 t
                             )
                 ),
-            [n, h, t, N]
+            [n, h, t, y]
         );
     return (0, r.jsx)(a.bG, {
         navigator: E,
@@ -107,7 +107,7 @@ let h = function (e) {
                     )),
                     (n = n =
                         {
-                            children: [y, m]
+                            children: [I, m]
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

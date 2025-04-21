@@ -22,7 +22,7 @@ function g(e, t) {
         if (!b || null == g) return;
         let [r] = await (0, s.Z)(e);
         if (!r) {
-            if (null == O) return void (0, l.showToast)((0, l.createToast)(m.NW.string(m.t.OKnWyc), l.ToastType.FAILURE));
+            if (null == O) return void (0, l.showToast)((0, l.createToast)(m.intl.string(m.t.OKnWyc), l.ToastType.FAILURE));
             (0, l.ZDy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('46746'), n.e('32087')]).then(n.bind(n, 60594));

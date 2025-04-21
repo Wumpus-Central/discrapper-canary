@@ -61,16 +61,16 @@ let S = (e) => {
 function T(e, t) {
     return S(t) - S(e);
 }
-let N = (e) => +!!(0, u.Z)(e);
-function A(e, t) {
-    return N(t) - N(e);
+let A = (e) => +!!(0, u.Z)(e);
+function N(e, t) {
+    return A(t) - A(e);
 }
 function C(e, t) {
     var n, r;
     return (null != (n = t.created_at) ? n : 0) - (null != (r = e.created_at) ? r : 0);
 }
 function R(e, t) {
-    return T(e, t) || A(e, t) || C(e, t);
+    return T(e, t) || N(e, t) || C(e, t);
 }
 function P(e) {
     if ((delete E[e], delete b[e], delete y[e], delete v[e], null == g[e])) return;
@@ -279,7 +279,7 @@ function H(e) {
         })
         .some((e) => e);
 }
-function W(e) {
+function Y(e) {
     let { guildId: t, members: n } = e;
     n.forEach((e) => {
         null != e.presence &&
@@ -294,7 +294,7 @@ function W(e) {
             });
     });
 }
-function Y(e) {
+function W(e) {
     let { guildId: t, addedMembers: n } = e;
     null == n ||
         n.forEach((e) => {
@@ -411,7 +411,7 @@ let Q = new q(c.Z, {
     PRESENCE_UPDATES: H,
     PRESENCES_REPLACE: B,
     ACTIVITY_METADATA_UPDATE: z,
-    THREAD_MEMBER_LIST_UPDATE: W,
-    THREAD_MEMBERS_UPDATE: Y,
+    THREAD_MEMBER_LIST_UPDATE: Y,
+    THREAD_MEMBERS_UPDATE: W,
     SELF_PRESENCE_STORE_UPDATE: K
 });

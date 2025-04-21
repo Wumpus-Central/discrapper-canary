@@ -42,8 +42,8 @@ function m(e) {
 }
 function g(e, t) {
     let { color: a, useLottieDefaultColors: s, src: h, size: g = 'md', width: E, height: b, className: y, initialAnimation: v, initialFrame: O, markers: I, onBeforeDismount: S } = e,
-        [T, N] = i.useState(null),
-        A = i.useRef(null),
+        [T, A] = i.useState(null),
+        N = i.useRef(null),
         C = i.useRef(null),
         R = i.useRef(null),
         P =
@@ -90,7 +90,7 @@ function g(e, t) {
             [x, w, I, O]
         ),
         i.useEffect(() => {
-            null == T && h().then((e) => N(e.default));
+            null == T && h().then((e) => A(e.default));
         }, [T, h]),
         i.useEffect(
             () => (
@@ -106,9 +106,9 @@ function g(e, t) {
                             let e = I[o];
                             r = [x ? e.start : null != O ? O : e.start, e.start + e.duration];
                         }
-                        null != A.current &&
+                        null != N.current &&
                             (R.current = i.loadAnimation({
-                                container: A.current,
+                                container: N.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !1,
@@ -132,7 +132,7 @@ function g(e, t) {
                 P
             ),
             className: o()(p.lottieIcon, s ? void 0 : p.lottieIconColors, y),
-            ref: A
+            ref: N
         })
     );
 }

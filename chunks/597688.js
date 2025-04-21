@@ -32,8 +32,8 @@ let m = new Map(),
     I = E,
     S = b,
     T = y,
-    N = null,
-    A = !1,
+    A = null,
+    N = !1,
     C = new Set(),
     R = new Map(),
     P = new Map(),
@@ -51,11 +51,11 @@ let m = new Map(),
         O.set(t, n), (C = new Set(C)).delete(t), (R = new Map(R)).delete(t), (P = new Map(P)).delete(t);
     },
     M = (e) => {
-        (A = !0), (r = void 0), (a = void 0), (w = e.options);
+        (N = !0), (r = void 0), (a = void 0), (w = e.options);
     },
     k = (e) => {
         let { error: t } = e;
-        (v = m), (O = g), (T = y), (A = !1), (C = new Set()), (r = t), (a = Date.now());
+        (v = m), (O = g), (T = y), (N = !1), (C = new Set()), (r = t), (a = Date.now());
     },
     j = (e) => {
         if (0 === e.categories.length) (v = m), (O = g);
@@ -69,7 +69,7 @@ let m = new Map(),
                 (O = new Map((0, _.Cs)(v, !0).map((e) => [e.skuId, e]))),
                 (I = new Map((0, _.Cs)(v, !1).map((e) => [e.storeListingId, e])));
         }
-        G(e.categories, O), (i = Date.now()), (A = !1), (r = void 0), (a = void 0);
+        G(e.categories, O), (i = Date.now()), (N = !1), (r = void 0), (a = void 0);
     },
     U = (e) => {
         if (0 === e.shopHome.categories.length) return;
@@ -81,7 +81,7 @@ let m = new Map(),
             T = y;
             return;
         }
-        switch (N) {
+        switch (A) {
             case d.u.POPULAR:
                 T = p.HU;
                 break;
@@ -94,19 +94,19 @@ let m = new Map(),
         }
     },
     B = () => {
-        (v = m), (O = g), (T = y), (i = void 0), (A = !1), (C = new Set()), (r = void 0), (a = void 0), (w = {});
+        (v = m), (O = g), (T = y), (i = void 0), (N = !1), (C = new Set()), (r = void 0), (a = void 0), (w = {});
     },
     F = () => {
         if (!u.Z.hasLoadedExperiments) return;
         let { giftRecommendationAlgorithm: e } = d.G.getCurrentConfig({ location: 'CollectiblesCategoryStore handleExperimentChange' }, { autoTrackExposure: !1 });
-        e !== N && (i = void 0), (N = e);
+        e !== A && (i = void 0), (A = e);
     };
 class V extends (o = l.ZP.Store) {
     initialize() {
         this.syncWith([f.default], B), this.syncWith([u.Z], F);
     }
     get isFetchingCategories() {
-        return A;
+        return N;
     }
     isFetchingProduct(e) {
         return null != e && C.has(e);

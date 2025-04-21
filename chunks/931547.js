@@ -1,40 +1,40 @@
 n.d(t, { Z: () => o });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    s = n.n(i),
-    a = n(481060),
-    l = n(427894);
+var r = n(120356),
+    s = n.n(r),
+    l = n(481060),
+    a = n(427894);
 function o(e) {
-    let { message: t, error: n, onClick: i, submitting: o, className: c, ctaMessage: d } = e;
-    return (0, r.jsxs)('div', {
-        className: s()(l.container, c),
+    let { message: t, error: n, onClick: r, submitting: o, className: c, ctaMessage: d } = e;
+    return (0, i.jsxs)('div', {
+        className: s()(a.container, c),
         children: [
-            (0, r.jsxs)('div', {
-                className: l.textContainer,
+            (0, i.jsxs)('div', {
+                className: a.textContainer,
                 children: [
-                    (0, r.jsx)(a.P4T, {
+                    (0, i.jsx)(l.P4T, {
                         size: 'custom',
                         width: 20,
                         height: 20,
                         color: 'currentColor',
-                        className: l.warningIcon
+                        className: a.warningIcon
                     }),
-                    (0, r.jsx)(a.LZC, {
+                    (0, i.jsx)(l.LZC, {
                         size: 10,
                         horizontal: !0
                     }),
-                    (0, r.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         children: [
-                            (0, r.jsx)(a.LZC, { size: 1 }),
-                            (0, r.jsx)(a.Text, {
-                                className: l.info,
+                            (0, i.jsx)(l.LZC, { size: 1 }),
+                            (0, i.jsx)(l.Text, {
+                                className: a.info,
                                 variant: 'text-sm/normal',
                                 children: t
                             }),
                             null != n &&
-                                (0, r.jsx)(a.Text, {
-                                    className: s()(l.info, l.error),
+                                (0, i.jsx)(l.Text, {
+                                    className: s()(a.info, a.error),
                                     variant: 'text-sm/normal',
                                     children: n
                                 })
@@ -42,16 +42,16 @@ function o(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(a.LZC, {
+            (0, i.jsx)(l.LZC, {
                 size: 16,
                 horizontal: !0
             }),
-            (0, r.jsx)(a.zxk, {
-                className: l.undoButton,
-                color: a.zxk.Colors.LINK,
-                look: a.zxk.Looks.LINK,
-                size: a.zxk.Sizes.ICON,
-                onClick: i,
+            (0, i.jsx)(l.zxk, {
+                className: a.undoButton,
+                color: l.zxk.Colors.LINK,
+                look: l.zxk.Looks.LINK,
+                size: l.zxk.Sizes.ICON,
+                onClick: r,
                 submitting: o,
                 children: d
             })

@@ -26,22 +26,22 @@ var i = n(442837),
     E = n(990252);
 function I(e) {
     var t;
-    let { channel: n, isChannelSelected: I, isChannelCollapsed: N, voiceStates: P, enableConnectedUserLimit: w, enableActivities: Z, isSubscriptionGated: T, needSubscriptionToAccess: A, isNewChannel: R, muted: D, resolvedUnreadSetting: L } = e,
+    let { channel: n, isChannelSelected: I, isChannelCollapsed: P, voiceStates: w, enableConnectedUserLimit: N, enableActivities: Z, isSubscriptionGated: T, needSubscriptionToAccess: A, isNewChannel: R, muted: D, resolvedUnreadSetting: L } = e,
         k = (0, i.e7)([f.ZP], () => f.ZP.getMentionCount(n.id)),
         M = (0, i.e7)([f.ZP], () => f.ZP.getIsMentionLowImportance(n.id)),
         U = (0, s.ZP)(n),
         G = (0, i.e7)([p.Z], () => !p.Z.can(j.Plq.CONNECT, n)),
         B = (0, i.e7)([g.Z], () => g.Z.hasVideo(n.id)),
-        W = (0, u.PK)(n.id) && n.isGuildStageVoice(),
-        V = (0, _.ZP)({
+        V = (0, u.PK)(n.id) && n.isGuildStageVoice(),
+        F = (0, _.ZP)({
             channel: n,
             locked: G,
-            video: B || W,
+            video: B || V,
             selected: I
         }),
-        F = (0, i.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
-        H = (0, a.n2)(n.guild_id, n.id),
-        z = (0, i.e7)([h.Z], () => {
+        H = (0, i.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
+        z = (0, a.n2)(n.guild_id, n.id),
+        W = (0, i.e7)([h.Z], () => {
             var e, t;
             return null != (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.hasFeature(j.oNc.COMMUNITY)) && t;
         });
@@ -53,32 +53,32 @@ function I(e) {
     if ((0, c.O)(T)) return (0, r.jsx)(c.Z, { locked: A });
     if (R)
         return (0, r.jsx)(o.IGR, {
-            text: x.NW.string(x.t.y2b7CA),
+            text: x.intl.string(x.t.y2b7CA),
             color: l.Z.unsafe_rawColors.BRAND_260.css,
             className: E.newChannel
         });
-    if (!D && L === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != F && F > 0)
+    if (!D && L === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != H && H > 0)
         return (0, r.jsx)(o.Text, {
             variant: 'text-xs/semibold',
             color: 'text-brand',
-            children: x.NW.format(x.t.GkAbqa, { count: (0, o.NGo)(F) })
+            children: x.intl.format(x.t.GkAbqa, { count: (0, o.NGo)(H) })
         });
-    if (!D && n.isForumLikeChannel() && null != H && H > 0)
+    if (!D && n.isForumLikeChannel() && null != z && z > 0)
         return (0, r.jsx)(o.Text, {
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: (0, o.NGo)(H)
+            children: (0, o.NGo)(z)
         });
-    let Y = null != (t = null == P ? void 0 : P.length) ? t : 0;
-    return null != w && w && V
+    let Y = null != (t = null == w ? void 0 : w.length) ? t : 0;
+    return null != N && N && F
         ? (0, r.jsx)(v.Z, {
               userCount: Y,
-              video: B || W,
+              video: B || V,
               channel: n
           })
-        : N && (0, m.a)(P) && z
+        : P && (0, m.a)(w) && W
           ? (0, r.jsx)(o.IGR, {
-                text: x.NW.string(x.t.dI3q4u),
+                text: x.intl.string(x.t.dI3q4u),
                 color: l.Z.unsafe_rawColors.RED_400.css
             })
           : null != Z && Z && (0, b.u)(U)

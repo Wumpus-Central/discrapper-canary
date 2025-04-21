@@ -35,10 +35,10 @@ let _ = {
                 I = (0, o.Z)(u),
                 S = I ? ('y' === h ? I.clientHeight || 0 : I.clientWidth || 0) : 0,
                 T = v / 2 - O / 2,
-                N = g[b],
-                A = S - E[m] - g[y],
+                A = g[b],
+                N = S - E[m] - g[y],
                 C = S / 2 - E[m] / 2 + T,
-                R = (0, l.u)(N, C, A),
+                R = (0, l.u)(A, C, N),
                 P = h;
             n.modifiersData[a] = ((t = {}), (t[P] = R), (t.centerOffset = R - C), t);
         }

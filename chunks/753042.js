@@ -27,7 +27,7 @@ function _(e) {
     null == n)
         ? null
         : (0, r.jsx)(o.xJW, {
-              title: g.NW.string(g.t['ldCE/v']),
+              title: g.intl.string(g.t['ldCE/v']),
               titleClassName: b.infoTitle,
               children: (0, r.jsxs)(f.WM, {
                   children: [
@@ -40,7 +40,7 @@ function _(e) {
                           name: (0, r.jsx)(o.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
-                              children: g.NW.string(g.t.nzGai4)
+                              children: g.intl.string(g.t.nzGai4)
                           }),
                           description: _
                               ? (0, r.jsx)(o.sV5, {
@@ -66,7 +66,7 @@ function _(e) {
                               name: (0, r.jsx)(o.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'text-normal',
-                                  children: g.NW.string(g.t['93hqlp'])
+                                  children: g.intl.string(g.t['93hqlp'])
                               }),
                               description:
                                   y === c.qc.AGREED
@@ -93,7 +93,7 @@ function _(e) {
                           name: (0, r.jsx)(o.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
-                              children: g.NW.string(g.t.SaDIpK)
+                              children: g.intl.string(g.t.SaDIpK)
                           }),
                           description: (0, r.jsx)(o.Text, {
                               variant: 'text-sm/medium',
@@ -111,7 +111,7 @@ function _(e) {
                           name: (0, r.jsx)(o.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
-                              children: g.NW.string(g.t['NQJ+WF'])
+                              children: g.intl.string(g.t['NQJ+WF'])
                           }),
                           description: (0, r.jsx)(o.Text, {
                               variant: 'text-sm/medium',
@@ -128,7 +128,7 @@ function _(e) {
                           name: (0, r.jsx)(o.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
-                              children: g.NW.string(g.t['eJOq+f'])
+                              children: g.intl.string(g.t['eJOq+f'])
                           }),
                           description: (0, r.jsx)(o.Text, {
                               variant: 'text-sm/medium',

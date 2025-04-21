@@ -22,8 +22,8 @@ var _ = n(392750),
     y = n(926976),
     C = n(592197),
     O = n(806240),
-    N = n(789654),
-    E = n(719672),
+    E = n(789654),
+    N = n(719672),
     T = n(691867),
     S = n(916790),
     P = n(645973),
@@ -159,7 +159,7 @@ function el(e) {
                     id: 'colors',
                     name: 'Colors',
                     group: Q.v0.UI,
-                    render: () => (0, a.jsx)(N.Z, {})
+                    render: () => (0, a.jsx)(E.Z, {})
                 }),
                 e.push({
                     id: 'design_toggles',
@@ -214,7 +214,7 @@ function el(e) {
                     id: 'dcf',
                     name: 'DCF',
                     group: Q.v0.EXPERIMENTS,
-                    render: () => (0, a.jsx)(E.Z, {})
+                    render: () => (0, a.jsx)(N.Z, {})
                 }),
                 e.push({
                     id: 'perks',
@@ -333,7 +333,7 @@ function el(e) {
                                   }),
                                   (0, a.jsx)(x.ZP.Icon, {
                                       icon: c.Dio,
-                                      tooltip: et.NW.string(et.t.cpT0Cg),
+                                      tooltip: et.intl.string(et.t.cpT0Cg),
                                       onClick: v.SO
                                   })
                               ]

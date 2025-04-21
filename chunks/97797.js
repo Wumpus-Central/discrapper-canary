@@ -3,7 +3,7 @@ var r = n(981631),
     a = n(388032);
 function i(e) {
     let { username: t, usernameOnClickHandler: n = r.dG4, productName: i } = e;
-    return a.NW.formatToParts(a.t.w4iXs7, {
+    return a.intl.formatToParts(a.t.w4iXs7, {
         username: t,
         usernameHook: n,
         productName: i

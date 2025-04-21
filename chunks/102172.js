@@ -29,13 +29,13 @@ function p(e, t, n) {
 function h(e) {
     switch (e) {
         case 0:
-            return _.NW.string(_.t['1i3tSU']);
+            return _.intl.string(_.t['1i3tSU']);
         case 1:
-            return _.NW.string(_.t.elyVbm);
+            return _.intl.string(_.t.elyVbm);
         case 2:
-            return _.NW.string(_.t.pgUTZG);
+            return _.intl.string(_.t.pgUTZG);
         default:
-            return _.NW.string(_.t['7Xq/nZ']);
+            return _.intl.string(_.t['7Xq/nZ']);
     }
 }
 function m(e, t, n, r, a) {

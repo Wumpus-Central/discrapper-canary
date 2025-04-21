@@ -1,11 +1,11 @@
 n.d(t, {
     A2: () => T,
-    BU: () => N,
+    BU: () => A,
     Pz: () => y,
     Qf: () => w,
     X_: () => v,
     ZC: () => R,
-    a0: () => A,
+    a0: () => N,
     kr: () => O,
     t8: () => S,
     tq: () => C
@@ -86,10 +86,10 @@ async function T(e) {
         ).body
     );
 }
-function N(e, t) {
+function A(e, t) {
     return null != t.outboundRedemptionUrlFormat ? t.outboundRedemptionUrlFormat.replace(E, encodeURIComponent(e)) : t.outboundRedemptionPageLink;
 }
-function A() {
+function N() {
     var e, t;
     let n = h.Z.outboundPromotions,
         r = h.Z.consumedInboundPromotionId,
@@ -113,7 +113,7 @@ function A() {
 }
 function C() {
     if ((0, p.A7)('outbound_promotion_notice')) {
-        let e = A();
+        let e = N();
         return null != e && !(0, o.UJ)(i.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, e, { cooldownDurationMs: b });
     }
     {

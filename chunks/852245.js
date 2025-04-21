@@ -1,4 +1,4 @@
-t.d(n, { Z: () => b });
+t.d(e, { Z: () => b });
 var r = t(200651);
 t(192379);
 var l = t(442837),
@@ -8,9 +8,9 @@ var l = t(442837),
     a = t(496675),
     u = t(981631),
     s = t(388032);
-function b(e) {
+function b(n) {
     let {
-        canManageChannels: n,
+        canManageChannels: e,
         canManageRoles: t,
         canManageWebhooks: b,
         canAccessChannel: d,
@@ -18,19 +18,19 @@ function b(e) {
     } = (0, l.cj)(
         [a.Z],
         () => ({
-            canManageChannels: a.Z.can(u.Plq.MANAGE_CHANNELS, e),
-            canManageRoles: a.Z.can(u.Plq.MANAGE_ROLES, e),
-            canManageWebhooks: a.Z.can(u.Plq.MANAGE_WEBHOOKS, e),
-            canAccessChannel: a.Z.can(e.accessPermissions, e),
-            canUnlinkChannel: (0, o.C)(e, a.Z)
+            canManageChannels: a.Z.can(u.Plq.MANAGE_CHANNELS, n),
+            canManageRoles: a.Z.can(u.Plq.MANAGE_ROLES, n),
+            canManageWebhooks: a.Z.can(u.Plq.MANAGE_WEBHOOKS, n),
+            canAccessChannel: a.Z.can(n.accessPermissions, n),
+            canUnlinkChannel: (0, o.C)(n, a.Z)
         }),
-        [e]
+        [n]
     );
-    return !__OVERLAY__ && d && (n || t || b || f)
+    return !__OVERLAY__ && d && (e || t || b || f)
         ? (0, r.jsx)(i.sNh, {
               id: 'edit-channel',
-              label: e.type === u.d4z.GUILD_CATEGORY ? s.NW.string(s.t.zdPFs7) : s.NW.string(s.t['3gUsJS']),
-              action: () => c.ZP.open(e.id)
+              label: n.type === u.d4z.GUILD_CATEGORY ? s.intl.string(s.t.zdPFs7) : s.intl.string(s.t['3gUsJS']),
+              action: () => c.ZP.open(n.id)
           })
         : null;
 }

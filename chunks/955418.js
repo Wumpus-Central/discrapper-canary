@@ -27,7 +27,7 @@ function g(e) {
         className: h.container,
         editorClassName: h.editor,
         type: o.Ie.USER_PROFILE,
-        placeholder: p.NW.formatToPlainString(p.t['0ZQw/f'], { name: u.ZP.getName(n, c, t) }),
+        placeholder: p.intl.formatToPlainString(p.t['0ZQw/f'], { name: u.ZP.getName(n, c, t) }),
         channel: m,
         textValue: b,
         richValue: v,

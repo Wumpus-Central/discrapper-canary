@@ -17,8 +17,8 @@ var l = n(200651),
     p = n(768581),
     g = n(176354),
     f = n(5192),
-    N = n(91047),
-    C = n(79390),
+    C = n(91047),
+    N = n(79390),
     T = n(918088),
     S = n(22864),
     w = n(981631),
@@ -39,10 +39,10 @@ function P() {
                 style: { marginBottom: 10 }
             }),
             (0, l.jsx)(o.OZU, {
-                note: b.NW.string(b.t.bwytdn),
+                note: b.intl.string(b.t.bwytdn),
                 noteClassName: M.emptyText,
                 className: M.emptyTitle,
-                children: b.NW.string(b.t.vhQK3t)
+                children: b.intl.string(b.t.vhQK3t)
             })
         ]
     });
@@ -74,7 +74,7 @@ function y(e) {
     return (0, l.jsx)(o.njP, {
         look: 'custom',
         orientation: 'vertical',
-        'aria-label': b.NW.string(b.t['qbir+/']),
+        'aria-label': b.intl.string(b.t['qbir+/']),
         selectedItem: a,
         onItemSelect: s,
         children: t.answers.map((e) => {
@@ -82,7 +82,7 @@ function y(e) {
             let s = String(e.answer_id),
                 i = null != (t = n[s]) ? t : 0,
                 { emoji: c, text: d } = e.poll_media,
-                u = b.NW.formatToPlainString(b.t.wqBc7O, {
+                u = b.intl.formatToPlainString(b.t.wqBc7O, {
                     numVotes: i,
                     option: d
                 }),
@@ -136,7 +136,7 @@ function E(e) {
         s = f.ZP.useName(n.guild_id, n.id, t);
     return (0, l.jsxs)('div', {
         className: M.voterDefault,
-        onContextMenu: (e) => (0, N.Pv)(e, t, n),
+        onContextMenu: (e) => (0, C.Pv)(e, t, n),
         children: [
             (0, l.jsx)('div', {
                 className: M.voterAvatarContainer,
@@ -260,7 +260,7 @@ function R(e) {
         h = a.useMemo(() => {
             if (null != n.reactions) return (0, T.ef)(n.reactions, u);
         }, [n.reactions, u]),
-        _ = a.useMemo(() => (0, C.cZ)(n.reactions), [n.reactions]),
+        _ = a.useMemo(() => (0, N.cZ)(n.reactions), [n.reactions]),
         x = a.useMemo(
             () =>
                 (function (e) {
@@ -288,14 +288,14 @@ function R(e) {
                 t
             );
         }, [null == (t = n.poll) ? void 0 : t.answers]),
-        g = b.NW.formatToPlainString(b.t.wqBc7O, {
+        g = b.intl.formatToPlainString(b.t.wqBc7O, {
             numVotes: j,
             option: p[u]
         });
     if (null == d) throw Error('PollVotesModal.render: Message does not have a channelId');
     if (null == n.poll) throw Error('PollVotesModal.render: Message does not have a poll');
     return (0, l.jsxs)(o.Y0X, {
-        'aria-label': b.NW.string(b.t.H0lNmp),
+        'aria-label': b.intl.string(b.t.H0lNmp),
         transitionState: c,
         size: o.CgR.MEDIUM,
         children: [
@@ -313,7 +313,7 @@ function R(e) {
                             (0, l.jsx)(o.Text, {
                                 variant: 'text-md/medium',
                                 color: 'text-normal',
-                                children: b.NW.format(b.t.XRkuoa, { count: _.toLocaleString() })
+                                children: b.intl.format(b.t.XRkuoa, { count: _.toLocaleString() })
                             })
                         ]
                     }),

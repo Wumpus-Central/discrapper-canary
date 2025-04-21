@@ -14,9 +14,9 @@ function f(e) {
     let { userId: t, guildId: n } = e,
         f = (0, l.e7)([a.ZP], () => a.ZP.getGuildSidebarState(n), [n]),
         { messagesCount: m, linksCount: g, mediaCount: b } = (0, c.P2)(t, n),
-        _ = new Intl.NumberFormat(p.NW.currentLocale).format(m),
-        y = new Intl.NumberFormat(p.NW.currentLocale).format(g),
-        C = new Intl.NumberFormat(p.NW.currentLocale).format(b),
+        _ = new Intl.NumberFormat(p.intl.currentLocale).format(m),
+        y = new Intl.NumberFormat(p.intl.currentLocale).format(g),
+        C = new Intl.NumberFormat(p.intl.currentLocale).format(b),
         x = i.useCallback(
             async (e) => {
                 if (null == f) return;
@@ -29,7 +29,7 @@ function f(e) {
             [n, f, t]
         );
     return (0, r.jsx)(o.xJW, {
-        title: p.NW.string(p.t.vCn2Tk),
+        title: p.intl.string(p.t.vCn2Tk),
         titleClassName: h.infoTitle,
         children: (0, r.jsxs)(u.WM, {
             children: [
@@ -43,7 +43,7 @@ function f(e) {
                     name: (0, r.jsx)(o.Text, {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
-                        children: p.NW.string(p.t.OIgYlZ)
+                        children: p.intl.string(p.t.OIgYlZ)
                     }),
                     description:
                         m === c.II
@@ -67,7 +67,7 @@ function f(e) {
                     name: (0, r.jsx)(o.Text, {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
-                        children: p.NW.string(p.t.DFSvTk)
+                        children: p.intl.string(p.t.DFSvTk)
                     }),
                     description:
                         g === c.II
@@ -91,7 +91,7 @@ function f(e) {
                     name: (0, r.jsx)(o.Text, {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
-                        children: p.NW.string(p.t['Aw9+/P'])
+                        children: p.intl.string(p.t['Aw9+/P'])
                     }),
                     description:
                         b === c.II

@@ -2,8 +2,8 @@ n.d(t, { V: () => p });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(594174),
-    l = n(78839),
+    l = n(594174),
+    a = n(78839),
     o = n(585483),
     s = n(74538),
     c = n(138464),
@@ -13,13 +13,13 @@ function p(e) {
     let { processedCode: t, channelContext: p, customGiftMessage: m, giftInfo: f } = e,
         h = !1,
         g = null,
-        _ = a.default.getCurrentUser(),
+        _ = l.default.getCurrentUser(),
         b = (0, s.yd)(null == _ ? void 0 : _.premiumType, u.p9.TIER_0);
     (0, i.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e('92446'), n.e('20267')]).then(n.bind(n, 409858));
             return (n) => {
-                var i, a;
+                var i, l;
                 return (0, r.jsx)(
                     e,
                     (function (e) {
@@ -52,9 +52,9 @@ function p(e) {
                             channelContext: p,
                             customGiftMessage: m,
                             emojiName: null == f || null == (i = f.emoji) ? void 0 : i.name,
-                            soundId: null == f || null == (a = f.sound) ? void 0 : a.id,
+                            soundId: null == f || null == (l = f.sound) ? void 0 : l.id,
                             onComplete: (e, t) => {
-                                (g = e), t && ((h = t), e.isSubscription && null == l.ZP.getPremiumSubscription(!1) && (0, c.H)(!0));
+                                (g = e), t && ((h = t), e.isSubscription && null == a.ZP.getPremiumSubscription(!1) && (0, c.H)(!0));
                             }
                         },
                         n

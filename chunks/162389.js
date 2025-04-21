@@ -1,8 +1,8 @@
-n.d(t, { Z: () => v });
-var r = n(200651),
-    i = n(192379),
-    l = n(120356),
-    s = n.n(l),
+n.d(t, { Z: () => y });
+var i = n(200651),
+    l = n(192379),
+    r = n(120356),
+    s = n.n(r),
     a = n(442837),
     o = n(692547),
     c = n(481060),
@@ -18,29 +18,29 @@ var r = n(200651),
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
 }
-function N(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -48,8 +48,8 @@ function N(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -58,36 +58,36 @@ function N(e, t) {
         e
     );
 }
-function v(e) {
+function y(e) {
     let { channel: t } = e,
-        l = (0, a.e7)([g.Z], () => g.Z.can(f.Plq.MANAGE_CHANNELS, t), [t]),
+        r = (0, a.e7)([g.Z], () => g.Z.can(f.Plq.MANAGE_CHANNELS, t), [t]),
         u = t.availableTags.length >= p.pC,
         m = t.availableTags.length > 0,
-        v = i.useCallback(() => {
+        y = l.useCallback(() => {
             let e = t.availableTags.length >= p.pC;
-            l &&
+            r &&
                 !e &&
                 (0, c.ZDy)(async () => {
                     let { default: e } = await n.e('21971').then(n.bind(n, 201049));
                     return (n) =>
-                        (0, r.jsx)(
+                        (0, i.jsx)(
                             e,
-                            N(b({}, n), {
+                            v(b({}, n), {
                                 channelId: t.id,
                                 guildId: t.guild_id
                             })
                         );
                 });
-        }, [t, l]),
-        C = i.useCallback(
+        }, [t, r]),
+        N = l.useCallback(
             (e) => {
-                l &&
+                r &&
                     (0, c.ZDy)(async () => {
-                        let { default: i } = await n.e('21971').then(n.bind(n, 201049));
+                        let { default: l } = await n.e('21971').then(n.bind(n, 201049));
                         return (n) =>
-                            (0, r.jsx)(
-                                i,
-                                N(b({}, n), {
+                            (0, i.jsx)(
+                                l,
+                                v(b({}, n), {
                                     channelId: t.id,
                                     guildId: t.guild_id,
                                     tag: e
@@ -95,7 +95,7 @@ function v(e) {
                             );
                     });
             },
-            [l, t]
+            [r, t]
         ),
         {
             handleDragStart: S,
@@ -104,18 +104,18 @@ function v(e) {
         } = (0, h.Z)(t.availableTags, (e) => {
             (0, d.pW)({ availableTags: e });
         });
-    return (0, r.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: j.tags,
         children: [
             m
                 ? t.availableTags.map((e) =>
-                      (0, r.jsx)(
-                          y,
+                      (0, i.jsx)(
+                          C,
                           {
                               tag: e,
                               availableTags: t.availableTags,
-                              canManageChannels: l,
-                              onTagClick: C,
+                              canManageChannels: r,
+                              onTagClick: N,
                               onDragComplete: Z,
                               onDragReset: w,
                               onDragStart: S
@@ -125,27 +125,27 @@ function v(e) {
                   )
                 : null,
             m
-                ? (0, r.jsx)(c.P3F, {
-                      onClick: v,
-                      className: s()(j.addTags, { [j.disabled]: !l || u }),
-                      children: (0, r.jsx)(c.qJs, {
+                ? (0, i.jsx)(c.P3F, {
+                      onClick: y,
+                      className: s()(j.addTags, { [j.disabled]: !r || u }),
+                      children: (0, i.jsx)(c.qJs, {
                           size: 'custom',
-                          'aria-label': x.NW.string(x.t['/jubeH']),
+                          'aria-label': x.intl.string(x.t['/jubeH']),
                           color: o.Z.unsafe_rawColors.WHITE_500.css,
                           width: 20,
                           height: 20
                       })
                   })
-                : (0, r.jsx)(c.zxk, {
-                      disabled: !l,
-                      onClick: v,
-                      children: x.NW.string(x.t['/jubeH'])
+                : (0, i.jsx)(c.zxk, {
+                      disabled: !r,
+                      onClick: y,
+                      children: x.intl.string(x.t['/jubeH'])
                   })
         ]
     });
 }
-function y(e) {
-    let { tag: t, availableTags: n, canManageChannels: i, onTagClick: l, onDragComplete: a, onDragStart: o, onDragReset: c } = e,
+function C(e) {
+    let { tag: t, availableTags: n, canManageChannels: l, onTagClick: r, onDragComplete: a, onDragStart: o, onDragReset: c } = e,
         d = n.findIndex((e) => e.id === t.id),
         {
             drag: h,
@@ -160,7 +160,7 @@ function y(e) {
             onDragComplete: a,
             onDragReset: c
         });
-    return (0, r.jsx)('div', {
+    return (0, i.jsx)('div', {
         className: s()(j.container, {
             [j.dropIndicatorBefore]: null != g && d < g,
             [j.dropIndicatorAfter]: null != g && d > g
@@ -168,13 +168,13 @@ function y(e) {
         ref: (e) => {
             h(p(e));
         },
-        onMouseEnter: () => f(i),
+        onMouseEnter: () => f(l),
         onMouseLeave: () => f(!1),
-        children: (0, r.jsx)(m.Z, {
+        children: (0, i.jsx)(m.Z, {
             tag: t,
-            disabled: !i,
-            ariaLabel: x.NW.formatToPlainString(x.t.jhSvBw, { name: t.name }),
-            onClick: i ? () => l(t) : void 0
+            disabled: !l,
+            ariaLabel: x.intl.formatToPlainString(x.t.jhSvBw, { name: t.name }),
+            onClick: l ? () => r(t) : void 0
         })
     });
 }

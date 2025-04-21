@@ -8,8 +8,8 @@ var r = n(200651),
     c = n(204922);
 let u = 20,
     d = i.forwardRef(function (e, t) {
-        let { categories: n, store: d, hasSearchResults: f, listPadding: _, renderRow: p, renderSection: h, renderSectionHeader: m, renderSectionFooter: g, renderInspector: E, renderEmptySearchState: b, rowCount: y, rowCountBySection: v, rowHeight: O, sectionHeaderHeight: I, sectionFooterHeight: S, renderUpsell: T, setShowUpsell: N } = e,
-            A = i.useRef(!1),
+        let { categories: n, store: d, hasSearchResults: f, listPadding: _, renderRow: p, renderSection: h, renderSectionHeader: m, renderSectionFooter: g, renderInspector: E, renderEmptySearchState: b, rowCount: y, rowCountBySection: v, rowHeight: O, sectionHeaderHeight: I, sectionFooterHeight: S, renderUpsell: T, setShowUpsell: A } = e,
+            N = i.useRef(!1),
             C = i.useRef(null),
             R = (0, s.Iu)((e) => e.searchQuery),
             P = d.useStore((e) => e.activeCategoryIndex),
@@ -18,11 +18,11 @@ let u = 20,
                 listRef: C,
                 searchQuery: R,
                 nitroLockedSectionStates: w,
-                setShowUpsell: N
+                setShowUpsell: A
             }),
             L = (0, l.Qs)({
                 activeCategoryIndex: P,
-                isScrolling: A,
+                isScrolling: N,
                 listRef: C,
                 onActiveCategoryIndexChange: d.setActiveCategoryIndex,
                 scrollOffset: u,

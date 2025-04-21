@@ -102,7 +102,7 @@ function f(e) {
         (0, n.jsxs)(c.v2r, {
             navId: 'overlay-click-zone-debug-context-menu',
             onClose: i.Zy,
-            'aria-label': l.NW.string(l.t.tPfVWl),
+            'aria-label': l.intl.string(l.t.tPfVWl),
             onSelect: t,
             children: [f, b]
         })

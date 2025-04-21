@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => y });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -70,7 +70,7 @@ class O extends i.Component {
             children: [
                 (0, r.jsx)('div', {
                     className: E.header,
-                    children: _.NW.string(_.t.qABFpa)
+                    children: _.intl.string(_.t.qABFpa)
                 }),
                 this.renderReasons(e, t, i),
                 null != o
@@ -83,7 +83,7 @@ class O extends i.Component {
         });
     }
 }
-let N = o.ZP.connectStores([h.Z, d.default, f.Z, c.Z, p.Z, u.Z], (e) => {
+let y = o.ZP.connectStores([h.Z, d.default, f.Z, c.Z, p.Z, u.Z], (e) => {
     let { sku: t } = e;
     return {
         socialReasons: (0, g.Gg)(t.id, h.Z, d.default, c.Z, p.Z),

@@ -1,4 +1,4 @@
-n.d(e, { default: () => f }), n(388685);
+n.d(e, { default: () => N }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(399606),
@@ -10,25 +10,25 @@ var r = n(200651),
     d = n(981631),
     _ = n(388032),
     p = n(383721),
-    N = n(617921);
-function O(t) {
-    let { onClose: e, source: O = u.I.INAPPROPRIATE_CONVERSATION } = t,
-        f = (0, o.e7)([a.Z], () => a.Z.useReducedMotion),
+    O = n(617921);
+function f(t) {
+    let { onClose: e, source: f = u.I.INAPPROPRIATE_CONVERSATION } = t,
+        N = (0, o.e7)([a.Z], () => a.Z.useReducedMotion),
         [b, I] = i.useState(!1);
     i.useEffect(() => {
         let t = new Date();
         return (
-            s.default.track(d.rMx.VIBING_WUMPUS_VIEWED, { source: O }),
+            s.default.track(d.rMx.VIBING_WUMPUS_VIEWED, { source: f }),
             (0, l.JO)(),
             () => {
                 s.default.track(d.rMx.VIBING_WUMPUS_CLOSED, {
                     duration_open_ms: new Date().getTime() - t.getTime(),
-                    source: O
+                    source: f
                 }),
                     (0, l.zu)();
             }
         );
-    }, [O]);
+    }, [f]);
     let x = () => {
         b ? ((0, l.JO)(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.PLAY })) : ((0, l.hW)(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.PAUSE })), I(!b);
     };
@@ -41,21 +41,21 @@ function O(t) {
             (0, r.jsx)('div', {
                 className: p.ringContainer,
                 children: (0, r.jsx)('img', {
-                    src: N,
+                    src: O,
                     alt: '',
                     className: p.__invalid_ringArt
                 })
             }),
             (0, r.jsx)(c.Fmz, {
                 importData: h,
-                shouldAnimate: !b && !f,
+                shouldAnimate: !b && !N,
                 className: p.wumpus,
-                pauseAtFrame: f ? 200 : void 0
+                pauseAtFrame: N ? 200 : void 0
             }),
             (0, r.jsx)(c.ua7, {
-                text: b ? _.NW.string(_.t.RscU7O) : _.NW.string(_.t.ZcgDJS),
+                text: b ? _.intl.string(_.t.RscU7O) : _.intl.string(_.t.ZcgDJS),
                 position: 'top',
-                'aria-label': b ? _.NW.string(_.t.RscU7O) : _.NW.string(_.t.ZcgDJS),
+                'aria-label': b ? _.intl.string(_.t.RscU7O) : _.intl.string(_.t.ZcgDJS),
                 children: (t) => {
                     var e, n;
                     return (0, r.jsx)(
@@ -125,12 +125,12 @@ function O(t) {
                         (0, r.jsx)(c.X6q, {
                             variant: 'heading-xl/semibold',
                             color: 'header-primary',
-                            children: _.NW.string(_.t.L4ifkZ)
+                            children: _.intl.string(_.t.L4ifkZ)
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: _.NW.string(_.t.R8LCMT)
+                            children: _.intl.string(_.t.R8LCMT)
                         })
                     ]
                 })
@@ -145,17 +145,17 @@ function O(t) {
                         onClick: () => {
                             e(), s.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: u.G.BACK_TO_CONVERSATION });
                         },
-                        children: _.NW.string(_.t['8eKkaW'])
+                        children: _.intl.string(_.t['8eKkaW'])
                     })
                 })
             })
         ]
     });
 }
-let f = (t) => {
+let N = (t) => {
     let { onClose: e, transitionState: n } = t;
     return (0, r.jsx)(c.Y0X, {
         transitionState: n,
-        children: (0, r.jsx)(O, { onClose: e })
+        children: (0, r.jsx)(f, { onClose: e })
     });
 };

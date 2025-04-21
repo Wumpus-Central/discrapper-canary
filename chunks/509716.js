@@ -13,7 +13,7 @@ function l(e) {
         return _
             ? {
                   success: !1,
-                  error: s.NW.string(s.t.JZJQLy)
+                  error: s.intl.string(s.t.JZJQLy)
               }
             : { success: !0 };
     if (p)
@@ -22,7 +22,7 @@ function l(e) {
             : _
               ? {
                     success: !1,
-                    error: s.NW.string(s.t.JZJQLy)
+                    error: s.intl.string(s.t.JZJQLy)
                 }
               : {
                     success: !1,

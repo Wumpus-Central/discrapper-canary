@@ -1,7 +1,7 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r,
-    a,
-    i = n(200651),
+    i,
+    a = n(200651),
     l = n(192379),
     s = n(120356),
     o = n.n(s),
@@ -43,55 +43,55 @@ class y extends (r = l.PureComponent) {
         f.S.unsubscribe(b.CkL.CAROUSEL_PREV, this.handlePrevious), f.S.unsubscribe(b.CkL.CAROUSEL_NEXT, this.handleNext);
     }
     render() {
-        let { current: e, count: t, includeHitboxPadding: n, arrowClassName: r, paginationDotClassName: a, paginationDotSelectedClassName: l, paginationArrowIconType: s = 'arrow' } = this.props,
+        let { current: e, count: t, includeHitboxPadding: n, arrowClassName: r, paginationDotClassName: i, paginationDotSelectedClassName: l, paginationArrowIconType: s = 'arrow' } = this.props,
             c = o()(v.arrowHitbox, { [v.arrowHitboxPadding]: n }, r);
-        return (0, i.jsxs)('div', {
+        return (0, a.jsxs)('div', {
             className: o()(v.controls, this.props.className),
             children: [
-                (0, i.jsx)(p.zxk, {
+                (0, a.jsx)(p.zxk, {
                     look: p.zxk.Looks.BLANK,
                     className: c,
                     onClick: this.handlePrevious,
-                    'aria-label': x.NW.string(x.t.vgfxaG),
+                    'aria-label': x.intl.string(x.t.vgfxaG),
                     children:
                         'caret' === s
-                            ? (0, i.jsx)(_.Z, {
+                            ? (0, a.jsx)(_.Z, {
                                   className: v.arrow,
                                   direction: _.Z.Directions.LEFT
                               })
-                            : (0, i.jsx)(g.Z, {
+                            : (0, a.jsx)(g.Z, {
                                   className: v.arrow,
                                   direction: g.Z.Directions.LEFT
                               })
                 }),
-                (0, i.jsx)('div', {
+                (0, a.jsx)('div', {
                     className: v.dots,
                     children: d().times(t, (t) =>
-                        (0, i.jsx)(
+                        (0, a.jsx)(
                             p.zxk,
                             {
                                 look: p.zxk.Looks.BLANK,
                                 size: p.zxk.Sizes.NONE,
                                 onClick: () => this.handleDotClick(t),
-                                className: t === e ? o()(v.dotSelected, l) : o()(v.dotNormal, a),
-                                'aria-label': x.NW.formatToPlainString(x.t['2SXOrK'], { pageNumber: t + 1 })
+                                className: t === e ? o()(v.dotSelected, l) : o()(v.dotNormal, i),
+                                'aria-label': x.intl.formatToPlainString(x.t['2SXOrK'], { pageNumber: t + 1 })
                             },
                             'dot-'.concat(t)
                         )
                     )
                 }),
-                (0, i.jsx)(p.zxk, {
+                (0, a.jsx)(p.zxk, {
                     look: p.zxk.Looks.BLANK,
                     className: c,
                     onClick: this.handleNext,
-                    'aria-label': x.NW.string(x.t.XiOHRU),
+                    'aria-label': x.intl.string(x.t.XiOHRU),
                     children:
                         'caret' === s
-                            ? (0, i.jsx)(_.Z, {
+                            ? (0, a.jsx)(_.Z, {
                                   className: v.arrow,
                                   direction: _.Z.Directions.RIGHT
                               })
-                            : (0, i.jsx)(g.Z, {
+                            : (0, a.jsx)(g.Z, {
                                   className: v.arrow,
                                   direction: g.Z.Directions.RIGHT
                               })
@@ -118,7 +118,7 @@ class y extends (r = l.PureComponent) {
     }
 }
 C(y, 'defaultProps', { includeHitboxPadding: !0 });
-class I extends (a = l.PureComponent) {
+class I extends (i = l.PureComponent) {
     componentDidMount() {
         m.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocusChange), this.props.initialPaused || this.state.paused || this.startTimer();
     }
@@ -128,11 +128,11 @@ class I extends (a = l.PureComponent) {
     componentDidUpdate(e, t) {
         let n = (e, t) => !e.initialPaused && !t.paused,
             r = n(this.props, this.state),
-            a = n(e, t);
-        r && !a ? this.startTimer() : !r && a && this.stopTimer();
-        let { items: i } = this.props,
+            i = n(e, t);
+        r && !i ? this.startTimer() : !r && i && this.stopTimer();
+        let { items: a } = this.props,
             { visibleIndex: l } = this.state;
-        null == i[l] && this.changeItem(i, 1);
+        null == a[l] && this.changeItem(a, 1);
     }
     startTimer() {
         null != this.props.delay && this.timer.start(this.props.delay, this.nextItem);
@@ -145,40 +145,40 @@ class I extends (a = l.PureComponent) {
         n < 0 ? (n = e.length - 1) : n > e.length - 1 && (n = 0);
         let { onChangeItem: r } = this.props;
         null == r || r(e[n], this.state.visibleIndex, n);
-        let a = t > 0 ? h.n.LEFT : h.n.RIGHT;
+        let i = t > 0 ? h.n.LEFT : h.n.RIGHT;
         return (
             this.setState({
                 visibleIndex: n,
-                direction: a
+                direction: i
             }),
             n
         );
     }
     render() {
-        let { items: e, renderItem: t, className: n, slideAnimatorClassName: r, slideAnimatorSpringSettings: a, slideAnimatorFadeInOut: l, paginationClassName: s, paginationArrowClassName: c, paginationArrowIconType: d, paginationDotClassName: u, paginationDotSelectedClassName: p, themedPagination: m, includeHitboxPadding: g, style: _, aspectRatio: f, children: b } = this.props,
+        let { items: e, renderItem: t, className: n, slideAnimatorClassName: r, slideAnimatorSpringSettings: i, slideAnimatorFadeInOut: l, paginationClassName: s, paginationArrowClassName: c, paginationArrowIconType: d, paginationDotClassName: u, paginationDotSelectedClassName: p, themedPagination: m, includeHitboxPadding: g, style: _, aspectRatio: f, children: b } = this.props,
             { visibleIndex: x } = this.state;
-        return (0, i.jsxs)('div', {
+        return (0, a.jsxs)('div', {
             className: v.root,
             children: [
-                (0, i.jsxs)('div', {
+                (0, a.jsxs)('div', {
                     className: o()(v.carouselContainer, n),
                     style: _,
                     onMouseEnter: this.handleMouseEnter,
                     onMouseLeave: this.handleMouseLeave,
                     children: [
-                        (0, i.jsx)('div', {
+                        (0, a.jsx)('div', {
                             style: { aspectRatio: f },
-                            children: (0, i.jsx)(h.Z, {
+                            children: (0, a.jsx)(h.Z, {
                                 className: o()(v.carousel, r),
                                 step: x,
                                 direction: this.getCurrentDirection(),
-                                springSettings: a,
+                                springSettings: i,
                                 fadeInOut: l,
                                 children: t(e[x], x)
                             })
                         }),
                         e.length > 1 &&
-                            (0, i.jsx)(y, {
+                            (0, a.jsx)(y, {
                                 className: o()(s, m ? v.themedPagination : v.pagination),
                                 arrowClassName: c,
                                 includeHitboxPadding: g,
@@ -229,8 +229,8 @@ class I extends (a = l.PureComponent) {
                 this.setState({ paused: !1 });
             }),
             C(this, 'handleIntentionalChange', (e, t, n) => {
-                let { items: r, onIntentionalChange: a } = this.props;
-                return null == a ? void 0 : a(r[t], e, t, n);
+                let { items: r, onIntentionalChange: i } = this.props;
+                return null == i ? void 0 : i(r[t], e, t, n);
             }),
             (this.state = {
                 visibleIndex: !0 === e.randomize ? d().random(0, e.items.length - 1) : 0,
@@ -240,4 +240,4 @@ class I extends (a = l.PureComponent) {
     }
 }
 C(I, 'defaultProps', { aspectRatio: 16 / 9 });
-let N = I;
+let O = I;

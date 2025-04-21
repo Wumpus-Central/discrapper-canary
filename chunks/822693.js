@@ -1,8 +1,8 @@
 n.d(t, { m: () => j }), n(388685), n(290780);
 var r = n(200651),
     i = n(192379),
-    s = n(149765),
-    l = n(442837),
+    l = n(149765),
+    s = n(442837),
     a = n(481060),
     o = n(933557),
     c = n(984933),
@@ -14,19 +14,19 @@ var r = n(200651),
     h = n(981631),
     f = n(388032);
 let x = 'NO_CHANNEL',
-    b = s.$e(h.Plq.VIEW_CHANNEL, h.Plq.CREATE_INSTANT_INVITE);
+    b = l.$e(h.Plq.VIEW_CHANNEL, h.Plq.CREATE_INSTANT_INVITE);
 function j(e) {
-    let { guildId: t, widgetEnabled: n, widgetChannelId: s, className: h, enableLocalUpdate: j } = e,
-        N = (0, l.e7)([c.ZP], () => c.ZP.getChannels(t)),
-        _ = i.useMemo(() => {
-            let e = [...N[c.sH], ...N[c.Zb]]
+    let { guildId: t, widgetEnabled: n, widgetChannelId: l, className: h, enableLocalUpdate: j } = e,
+        _ = (0, s.e7)([c.ZP], () => c.ZP.getChannels(t)),
+        v = i.useMemo(() => {
+            let e = [..._[c.sH], ..._[c.Zb]]
                 .filter((e) => {
                     let { channel: n } = e;
                     return n.guild_id === t;
                 })
                 .filter((e) => {
                     let { channel: t } = e;
-                    return t.id === s || d.Z.can(b, t);
+                    return t.id === l || d.Z.can(b, t);
                 })
                 .map((e) => {
                     let { channel: t } = e;
@@ -38,21 +38,21 @@ function j(e) {
             return (
                 e.unshift({
                     value: x,
-                    label: f.NW.string(f.t.u197b2)
+                    label: f.intl.string(f.t.u197b2)
                 }),
                 e
             );
-        }, [N, t, s]),
-        v = i.useCallback(
+        }, [_, t, l]),
+        O = i.useCallback(
             (e) => {
                 j ? (0, p.c)(t, n, e !== x ? e : null) : g.Z.updateEmbed(t, n, e !== x ? e : null);
             },
             [t, n, j]
         );
     return (0, r.jsx)(a.q4e, {
-        options: _,
-        value: s,
-        onChange: v,
+        options: v,
+        value: l,
+        onChange: O,
         className: h
     });
 }

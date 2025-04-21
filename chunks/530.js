@@ -27,9 +27,9 @@ function p(e) {
                       children: e
                   }),
         T = null != g && g.length > 0,
-        N = (0, l.D)(t);
+        A = (0, l.D)(t);
     return (0, r.jsxs)('div', {
-        className: a()(_.container, { [_.bot]: null != N }, E),
+        className: a()(_.container, { [_.bot]: null != A }, E),
         children: [
             (0, r.jsxs)('div', {
                 className: _.usernameRow,
@@ -41,9 +41,9 @@ function p(e) {
                             children: h
                         })
                     ),
-                    null != N &&
+                    null != A &&
                         (0, r.jsx)(c.Z, {
-                            type: N,
+                            type: A,
                             verified: t.isVerifiedBot()
                         }),
                     null != m &&
@@ -56,7 +56,7 @@ function p(e) {
             (0, r.jsxs)('div', {
                 className: a()(_.tags, I, {
                     [_.pronouns]: T,
-                    [_.bot]: null != N
+                    [_.bot]: null != A
                 }),
                 children: [
                     !t.isProvisional &&
@@ -81,7 +81,7 @@ function p(e) {
                                 }),
                                 (0, r.jsx)(o.DY3, {
                                     className: _.pronounsTooltip,
-                                    text: f.NW.string(f.t.GI2A8P),
+                                    text: f.intl.string(f.t.GI2A8P),
                                     delay: d.vB,
                                     children: (0, r.jsx)(o.Text, {
                                         variant: O,

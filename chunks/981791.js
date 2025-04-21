@@ -1,16 +1,16 @@
-n.d(t, { A: () => a });
+n.d(t, { A: () => l });
 var r = n(981631),
     i = n(388032);
-function a(e) {
-    let { application: t, username: n, usernameHook: a = r.dG4 } = e;
+function l(e) {
+    let { application: t, username: n, usernameHook: l = r.dG4 } = e;
     return null != t
-        ? i.NW.format(i.t.dXdgnp, {
+        ? i.intl.format(i.t.dXdgnp, {
               username: n,
               applicationName: t.name,
-              usernameHook: a
+              usernameHook: l
           })
-        : i.NW.format(i.t.O829Ul, {
+        : i.intl.format(i.t.O829Ul, {
               username: n,
-              usernameHook: a
+              usernameHook: l
           });
 }

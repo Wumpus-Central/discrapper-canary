@@ -102,10 +102,10 @@ function _(e) {
         E = i.useCallback(() => {
             C(), j(p.NM.USER_BANNER_BLOCK_CONFIRM);
         }, [C, j]),
-        N = i.useCallback(() => {
+        I = i.useCallback(() => {
             C(), j(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
         }, [C, j]),
-        I = i.useCallback(() => {
+        P = i.useCallback(() => {
             (0, a.ZDy)(async () => {
                 let { default: e } = await n.e('19538').then(n.bind(n, 699783));
                 return (n) => {
@@ -113,7 +113,7 @@ function _(e) {
                     return (0, r.jsx)(e, {
                         transitionState: i,
                         onBlock: E,
-                        onBlockAndReport: N,
+                        onBlockAndReport: I,
                         onCancel: () => {
                             null == l || l(), j(p.NM.USER_BANNER_BLOCK_CANCEL);
                         },
@@ -123,18 +123,18 @@ function _(e) {
                     });
                 };
             });
-        }, [E, N, y, t, j]);
+        }, [E, I, y, t, j]);
     return (0, r.jsx)(h.Q, {
         channelId: t,
         warningId: _,
         senderId: y,
         warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
-        header: m.NW.string(m.t.ZzlB5u),
-        description: m.NW.string(m.t['D1aU+v']),
+        header: m.intl.string(m.t.ZzlB5u),
+        description: m.intl.string(m.t['D1aU+v']),
         onDismiss: C,
         buttons: [
             {
-                text: m.NW.string(m.t.Qyu4UF),
+                text: m.intl.string(m.t.Qyu4UF),
                 color: a.zxk.Colors.BRAND,
                 onclick: O
             },
@@ -142,9 +142,9 @@ function _(e) {
                 ? []
                 : [
                       {
-                          text: m.NW.string(m.t['7q0bNT']),
+                          text: m.intl.string(m.t['7q0bNT']),
                           color: a.zxk.Colors.PRIMARY,
-                          onclick: I
+                          onclick: P
                       }
                   ])
         ]

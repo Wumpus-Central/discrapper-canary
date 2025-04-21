@@ -15,7 +15,7 @@ let f = (e) => {
                 ? (0, n.jsx)(c.ua7, {
                       tooltipClassName: u.featuresTooltip,
                       position: 'top',
-                      text: l.NW.string(l.t.W11rMT),
+                      text: l.intl.string(l.t.W11rMT),
                       children: (e) => {
                           var t, r;
                           return (0, n.jsx)(
@@ -96,7 +96,7 @@ let f = (e) => {
                     }),
                 (0, n.jsx)('div', {
                     className: u.count,
-                    children: l.NW.format(l.t['0S3JpK'], { numStickers: r.stickers.length })
+                    children: l.intl.format(l.t['0S3JpK'], { numStickers: r.stickers.length })
                 })
             ]
         });

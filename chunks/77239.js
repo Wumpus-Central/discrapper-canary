@@ -17,8 +17,8 @@ e.exports = function (e, t, n, p, h, m, g, E) {
         I,
         S,
         T,
-        N,
         A,
+        N,
         C = E.bits,
         R = 0,
         P = 0,
@@ -47,8 +47,8 @@ e.exports = function (e, t, n, p, h, m, g, E) {
     for (P = 0; P < p; P++) 0 !== t[n + P] && (g[V[t[n + P]]++] = P);
     if ((e === s ? ((G = Z = g), (S = 19)) : e === l ? ((G = u), (B -= 257), (Z = d), (H -= 257), (S = 256)) : ((G = f), (Z = _), (S = -1)), (U = 0), (P = 0), (R = w), (I = m), (x = L), (M = 0), (v = -1), (O = (j = 1 << L) - 1), (e === l && j > a) || (e === c && j > o))) return 1;
     for (;;) {
-        (T = R - M), g[P] < S ? ((N = 0), (A = g[P])) : g[P] > S ? ((N = Z[H + g[P]]), (A = G[B + g[P]])) : ((N = 96), (A = 0)), (b = 1 << (R - M)), (w = y = 1 << x);
-        do h[I + (U >> M) + (y -= b)] = (T << 24) | (N << 16) | A | 0;
+        (T = R - M), g[P] < S ? ((A = 0), (N = g[P])) : g[P] > S ? ((A = Z[H + g[P]]), (N = G[B + g[P]])) : ((A = 96), (N = 0)), (b = 1 << (R - M)), (w = y = 1 << x);
+        do h[I + (U >> M) + (y -= b)] = (T << 24) | (A << 16) | N | 0;
         while (0 !== y);
         for (b = 1 << (R - 1); U & b; ) b >>= 1;
         if ((0 !== b ? ((U &= b - 1), (U += b)) : (U = 0), P++, 0 == --F[R])) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(544891),
@@ -59,7 +59,7 @@ function E(e, t) {
     );
 }
 let O = 10 * h.Z.Millis.SECOND,
-    N = {
+    y = {
         [b.Etm.VALIDATE_APPLICATION]: {
             scope: m.lH,
             handler(e) {

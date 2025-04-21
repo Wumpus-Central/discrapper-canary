@@ -3,53 +3,53 @@ var r = n(388032);
 function i(e) {
     switch (e) {
         case 'brl':
-            return r.NW.string(r.t.qEyr9v);
+            return r.intl.string(r.t.qEyr9v);
         case 'pln':
-            return r.NW.string(r.t.eAdNmZ);
+            return r.intl.string(r.t.eAdNmZ);
         case 'try':
-            return r.NW.string(r.t.J05KNT);
+            return r.intl.string(r.t.J05KNT);
         case 'usd':
-            return r.NW.string(r.t.kJGVtL);
+            return r.intl.string(r.t.kJGVtL);
         case 'aud':
-            return r.NW.string(r.t.ylmkMz);
+            return r.intl.string(r.t.ylmkMz);
         case 'pen':
-            return r.NW.string(r.t['sKR+OD']);
+            return r.intl.string(r.t['sKR+OD']);
         case 'php':
-            return r.NW.string(r.t['0p6FTk']);
+            return r.intl.string(r.t['0p6FTk']);
         case 'ars':
-            return r.NW.string(r.t.GTI3Bw);
+            return r.intl.string(r.t.GTI3Bw);
         case 'cop':
-            return r.NW.string(r.t['/FnP7O']);
+            return r.intl.string(r.t['/FnP7O']);
         case 'clr':
-            return r.NW.string(r.t['BK/Vam']);
+            return r.intl.string(r.t['BK/Vam']);
         case 'jpy':
-            return r.NW.string(r.t.QKSoIi);
+            return r.intl.string(r.t.QKSoIi);
         case 'idr':
-            return r.NW.string(r.t.UBrRGh);
+            return r.intl.string(r.t.UBrRGh);
         case 'vnd':
-            return r.NW.string(r.t.mEwykp);
+            return r.intl.string(r.t.mEwykp);
         case 'thb':
-            return r.NW.string(r.t['9W3Gub']);
+            return r.intl.string(r.t['9W3Gub']);
         case 'myr':
-            return r.NW.string(r.t.MOaho6);
+            return r.intl.string(r.t.MOaho6);
         case 'krw':
-            return r.NW.string(r.t['20VnAw']);
+            return r.intl.string(r.t['20VnAw']);
         case 'mxn':
-            return r.NW.string(r.t.t2RLnp);
+            return r.intl.string(r.t.t2RLnp);
         case 'bgn':
-            return r.NW.string(r.t.EhetGB);
+            return r.intl.string(r.t.EhetGB);
         case 'czk':
-            return r.NW.string(r.t.dWTAXV);
+            return r.intl.string(r.t.dWTAXV);
         case 'dkk':
-            return r.NW.string(r.t.a9hHzs);
+            return r.intl.string(r.t.a9hHzs);
         case 'huf':
-            return r.NW.string(r.t.abWUUF);
+            return r.intl.string(r.t.abWUUF);
         case 'ron':
-            return r.NW.string(r.t.C7WDXF);
+            return r.intl.string(r.t.C7WDXF);
         case 'sek':
-            return r.NW.string(r.t.Z0oztb);
+            return r.intl.string(r.t.Z0oztb);
         case 'eur':
-            return r.NW.string(r.t['uhxR+f']);
+            return r.intl.string(r.t['uhxR+f']);
         default:
             return '';
     }

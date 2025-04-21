@@ -1,8 +1,8 @@
 n.d(t, { A: () => x }), n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     a = n(793030),
     o = n(442837),
     c = n(481060),
@@ -15,8 +15,8 @@ var r = n(200651),
     f = n(52930);
 function x(e) {
     let { requireTerms: t, rules: n } = e,
-        s = (0, o.e7)([u.Z], () => u.Z.getProps().guild),
-        x = null == s ? void 0 : s.id,
+        l = (0, o.e7)([u.Z], () => u.Z.getProps().guild),
+        x = null == l ? void 0 : l.id,
         b = i.useCallback(
             (e) => {
                 if (null == x || null == n) return null;
@@ -31,9 +31,9 @@ function x(e) {
             },
             [x, t]
         );
-    if (null == s) return null;
+    if (null == l) return null;
     if (null == n) return (0, r.jsx)(c.$jN, {});
-    let N = !s.hasFeature(p.oNc.CLAN);
+    let _ = !l.hasFeature(p.oNc.CLAN);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
@@ -45,27 +45,27 @@ function x(e) {
                             (0, r.jsx)(a.X6, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
-                                children: h.NW.string(h.t.d21uOj)
+                                children: h.intl.string(h.t.d21uOj)
                             }),
                             (0, r.jsx)(a.xv, {
                                 tag: 'p',
                                 variant: 'text-sm/medium',
                                 color: 'text-secondary',
                                 className: f.bodyText,
-                                children: h.NW.string(h.t.SzpUBA)
+                                children: h.intl.string(h.t.SzpUBA)
                             })
                         ]
                     }),
-                    N &&
+                    _ &&
                         (0, r.jsx)(c.rsf, {
                             onChange: b,
                             checked: t
                         })
                 ]
             }),
-            t && (0, r.jsx)(g.c, { guildId: s.id }),
+            t && (0, r.jsx)(g.c, { guildId: l.id }),
             (0, r.jsx)('div', {
-                className: l()(f.rules, { [f.disabled]: !t }),
+                className: s()(f.rules, { [f.disabled]: !t }),
                 children: (0, r.jsxs)('div', {
                     inert: t ? void 0 : '',
                     children: [
@@ -73,10 +73,10 @@ function x(e) {
                             variant: 'text-xs/bold',
                             color: 'text-muted',
                             className: f.rulesHeader,
-                            children: h.NW.string(h.t.XcAzbm)
+                            children: h.intl.string(h.t.XcAzbm)
                         }),
                         (0, r.jsx)(d.k, {
-                            guild: s,
+                            guild: l,
                             rules: n,
                             setRules: j
                         })

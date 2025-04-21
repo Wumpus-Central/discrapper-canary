@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(953529), n(539854);
+n.d(t, { Z: () => v }), n(953529), n(539854);
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -86,7 +86,7 @@ function p(e) {
         })
     );
 }
-function N(e) {
+function v(e) {
     let { guild: t, channel: n, stageData: i, headerId: a, loading: s, onNext: d, onCancel: u, onBack: h } = e;
     return null == t || null == n || null == i
         ? null
@@ -107,13 +107,13 @@ function N(e) {
                                       id: a,
                                       className: b.__invalid_title,
                                       variant: 'heading-xl/semibold',
-                                      children: m.NW.string(m.t.GXpXTE)
+                                      children: m.intl.string(m.t.GXpXTE)
                                   }),
                                   (0, r.jsx)(l.Text, {
                                       className: b.subtitle,
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
-                                      children: m.NW.string(m.t.JaYMvL)
+                                      children: m.intl.string(m.t.JaYMvL)
                                   })
                               ]
                           }),
@@ -122,15 +122,15 @@ function N(e) {
                               children: [
                                   (0, r.jsx)(f, {
                                       icon: (0, r.jsx)(x, { icon: l.Jmo }),
-                                      text: m.NW.string(m.t.u6oOcn)
+                                      text: m.intl.string(m.t.u6oOcn)
                                   }),
                                   (0, r.jsx)(f, {
                                       icon: (0, r.jsx)(x, { icon: l.iFz }),
-                                      text: m.NW.string(m.t.QC8ymZ)
+                                      text: m.intl.string(m.t.QC8ymZ)
                                   }),
                                   (0, r.jsx)(f, {
                                       icon: (0, r.jsx)(x, { icon: l.vdY }),
-                                      text: m.NW.string(m.t.mgGOT0)
+                                      text: m.intl.string(m.t.mgGOT0)
                                   }),
                                   (0, r.jsx)(f, {
                                       icon: (0, r.jsx)(o.Z, {
@@ -139,7 +139,7 @@ function N(e) {
                                           width: 40,
                                           height: 40
                                       }),
-                                      text: m.NW.format(m.t.qLmNLC, { articleURL: c.Z.getArticleURL(g.BhN.STAGE_CHANNEL_GUIDELINES) })
+                                      text: m.intl.format(m.t.qLmNLC, { articleURL: c.Z.getArticleURL(g.BhN.STAGE_CHANNEL_GUIDELINES) })
                                   })
                               ]
                           })
@@ -151,13 +151,13 @@ function N(e) {
                               color: l.zxk.Colors.GREEN,
                               onClick: d,
                               submitting: s,
-                              children: m.NW.string(m.t.s8mM8P)
+                              children: m.intl.string(m.t.s8mM8P)
                           }),
                           (0, r.jsx)(l.zxk, {
                               color: l.zxk.Colors.PRIMARY,
                               className: b.cancelButton,
                               onClick: u,
-                              children: m.NW.string(m.t['ETE/oK'])
+                              children: m.intl.string(m.t['ETE/oK'])
                           }),
                           (0, r.jsx)(l.zxk, {
                               look: l.zxk.Looks.LINK,
@@ -165,7 +165,7 @@ function N(e) {
                               className: b.backButton,
                               onClick: h,
                               size: l.zxk.Sizes.MIN,
-                              children: m.NW.string(m.t['13/7kZ'])
+                              children: m.intl.string(m.t['13/7kZ'])
                           })
                       ]
                   })

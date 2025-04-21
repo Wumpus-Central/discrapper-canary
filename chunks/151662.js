@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
-var r,
-    i = n(442837),
+var i,
+    r = n(442837),
     s = n(570140);
-function a(e, t, n) {
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,48 +15,48 @@ function a(e, t, n) {
         e
     );
 }
-let l = {},
+let a = {},
     o = null;
 function c() {
-    (l = {}), (o = null);
+    (a = {}), (o = null);
 }
-class d extends (r = i.ZP.Store) {
+class d extends (i = r.ZP.Store) {
     getEmailSettings() {
         return {
-            categories: l,
+            categories: a,
             initialized: o
         };
     }
 }
-a(d, 'displayName', 'EmailSettingsStore');
+l(d, 'displayName', 'EmailSettingsStore');
 let u = new d(s.Z, {
     CONNECTION_OPEN: c,
     LOGOUT: c,
     EMAIL_SETTINGS_FETCH_SUCCESS: function (e) {
         let { settings: t } = e;
-        (l = t.categories), (o = t.initialized);
+        (a = t.categories), (o = t.initialized);
     },
     EMAIL_SETTINGS_UPDATE_SUCCESS: function (e) {
         let { settings: t } = e;
-        l = t.categories;
+        a = t.categories;
     },
     EMAIL_SETTINGS_UPDATE: function (e) {
         let { updates: t } = e;
-        l = (function (e) {
+        a = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+                    i = Object.keys(n);
                 'function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
+                    (i = i.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    r.forEach(function (t) {
-                        a(e, t, n[t]);
+                    i.forEach(function (t) {
+                        l(e, t, n[t]);
                     });
             }
             return e;
-        })({}, l, t);
+        })({}, a, t);
     }
 });

@@ -1,14 +1,14 @@
 r.d(t, {
-    P: () => l,
+    P: () => o,
     W: () => i
 }),
     r(415506);
 var n = r(200651),
     A = r(192379),
     a = r(828762);
-let o = A.createContext(void 0);
-function l() {
-    let e = A.useContext(o);
+let l = A.createContext(void 0);
+function o() {
+    let e = A.useContext(l);
     if (null == e) throw Error('No GuildProductAttachmentManagerContextProvider found');
     return e;
 }
@@ -33,9 +33,9 @@ function i(e) {
             }
             return A;
         })(e, ['children', 'guildId']);
-    let l = (0, a.Z)(r, A);
-    return (0, n.jsx)(o.Provider, {
-        value: l,
+    let o = (0, a.Z)(r, A);
+    return (0, n.jsx)(l.Provider, {
+        value: o,
         children: t
     });
 }

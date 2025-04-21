@@ -61,7 +61,7 @@ function d(e) {
             {
                 action: 'SEND_MESSAGE',
                 icon: o.kBi,
-                text: s.NW.string(s.t.zROXER),
+                text: s.intl.string(s.t.zROXER),
                 onClick: () => {
                     i.Z.openPrivateChannel({ recipientIds: n }), null == t || t();
                 }
@@ -79,7 +79,7 @@ function u(e) {
             {
                 action: 'SEND_MESSAGE',
                 icon: o.kBi,
-                tooltipText: s.NW.string(s.t.zROXER),
+                tooltipText: s.intl.string(s.t.zROXER),
                 onClick: () => {
                     i.Z.openPrivateChannel({ recipientIds: n }), null == t || t();
                 }

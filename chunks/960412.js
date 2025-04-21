@@ -3,22 +3,22 @@ n.d(t, {
     oc: () => u,
     pR: () => d
 });
-var r = n(990547),
-    i = n(283693),
+var i = n(990547),
+    r = n(283693),
     s = n(570140),
-    a = n(573261),
-    l = n(930441),
+    l = n(573261),
+    a = n(930441),
     o = n(981631);
 async function c() {
     try {
-        let e = await a.Z.get({
+        let e = await l.Z.get({
             url: o.ANM.EMAIL_SETTINGS,
             trackedActionData: {
-                event: r.NetworkActionNames.EMAIL_SETTINGS_FETCH,
+                event: i.NetworkActionNames.EMAIL_SETTINGS_FETCH,
                 properties: (e) => {
                     var t;
                     let n = null == e || null == (t = e.body) ? void 0 : t.initialized;
-                    return (0, i.iG)({ initialized: n });
+                    return (0, r.iG)({ initialized: n });
                 }
             },
             rejectWithError: !0
@@ -40,11 +40,11 @@ async function d(e, t) {
         updates: { [e]: t }
     });
     try {
-        let n = await a.Z.patch({
+        let n = await l.Z.patch({
             url: o.ANM.EMAIL_SETTINGS,
             body: { settings: { categories: { [e]: t } } },
             trackedActionData: {
-                event: r.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
+                event: i.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
                 properties: {
                     category: e,
                     value: t
@@ -61,46 +61,46 @@ async function d(e, t) {
     }
 }
 async function u() {
-    let e = l.M0.reduce((e, t) => {
-        var n, r;
+    let e = a.M0.reduce((e, t) => {
+        var n, i;
         return (
             (n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        i = Object.keys(n);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        i.forEach(function (t) {
+                            var i;
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: i,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = i);
                         });
                 }
                 return e;
             })({}, e)),
-            (r = r = { [t]: !1 }),
+            (i = i = { [t]: !1 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          var i = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, i);
                       }
                       return n;
-                  })(Object(r)).forEach(function (e) {
-                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                  })(Object(i)).forEach(function (e) {
+                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                   }),
             n
         );
@@ -110,11 +110,11 @@ async function u() {
         updates: e
     });
     try {
-        let t = await a.Z.patch({
+        let t = await l.Z.patch({
             url: o.ANM.EMAIL_SETTINGS,
             body: { settings: { categories: e } },
             trackedActionData: {
-                event: r.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
+                event: i.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
                 properties: {
                     category: 'marketing',
                     value: !1

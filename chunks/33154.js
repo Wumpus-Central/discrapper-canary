@@ -25,13 +25,13 @@ let g = (e) => {
         j && !O && f();
     }, [j, O, f]);
     let y = null,
-        x = p.NW.string(p.t.d7b1p6);
+        x = p.intl.string(p.t.d7b1p6);
     switch (t) {
         case 0:
-            y = p.NW.string(p.t.Xiwf1d);
+            y = p.intl.string(p.t.Xiwf1d);
             break;
         case 1:
-            y = p.NW.string(p.t.GXvlU1);
+            y = p.intl.string(p.t.GXvlU1);
             break;
         default:
             return (0, u.vE)(t);
@@ -74,13 +74,13 @@ let g = (e) => {
                                 buttonRef: g,
                                 onClick: T,
                                 submitting: j,
-                                children: p.NW.string(p.t['9VLmlZ'])
+                                children: p.intl.string(p.t['9VLmlZ'])
                             }),
                             (0, r.jsx)(s.zxk, {
                                 onClick: f,
                                 look: s.zxk.Looks.BLANK,
                                 className: m.cancel,
-                                children: p.NW.string(p.t['2m+Sqq'])
+                                children: p.intl.string(p.t['2m+Sqq'])
                             })
                         ]
                     })

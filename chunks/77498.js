@@ -61,14 +61,14 @@ function T(e) {
         themes: []
     };
 }
-function N(e) {
+function A(e) {
     let t = e instanceof d.ZP ? T(e) : e;
     for (let n of (E.set(e.id, t), (b[e.name.toLowerCase()] = t), e.aliases)) b[n.toLowerCase()] = t;
     if ((0, _.isDesktop)()) for (let n of e.executables) y[n.name] = t;
 }
-function A(e) {
+function N(e) {
     let { detectableApplications: t } = e;
-    for (let e of t) N(e);
+    for (let e of t) A(e);
 }
 function C() {
     r = !0;
@@ -78,13 +78,13 @@ function R() {
 }
 function P(e) {
     let { games: t, etag: n } = e;
-    for (let e of (null != n && O !== n && (O = n), t)) N(S(e));
+    for (let e of (null != n && O !== n && (O = n), t)) A(S(e));
     (r = void 0), (I = Date.now());
 }
 class w extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        null != e && (null != e.detectableGamesEtag && (O = e.detectableGamesEtag), null == (t = e.detectableGames) || t.forEach((e) => N(e)));
+        null != e && (null != e.detectableGamesEtag && (O = e.detectableGamesEtag), null == (t = e.detectableGames) || t.forEach((e) => A(e)));
     }
     getState() {
         return (0, _.isDesktop)()
@@ -176,7 +176,7 @@ p(w, 'displayName', 'GameStore'),
                   }
     ]);
 let D = new w(l.Z, {
-    OVERLAY_INITIALIZE: A,
+    OVERLAY_INITIALIZE: N,
     GAMES_DATABASE_FETCH: C,
     GAMES_DATABASE_FETCH_FAIL: R,
     GAMES_DATABASE_UPDATE: P

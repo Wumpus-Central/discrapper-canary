@@ -3,97 +3,97 @@ n.d(t, {
     r: () => u
 }),
     n(539854);
-var r = n(200651),
-    i = n(192379),
-    a = n(481060),
-    l = n(239091),
+var i = n(200651),
+    r = n(192379),
+    l = n(481060),
+    a = n(239091),
     o = n(324701),
     s = n(550727),
     c = n(388032);
 function u(e) {
     let { createReminder: t } = e,
-        l = i.useCallback(() => {
-            (0, a.ZDy)(async () => {
+        a = r.useCallback(() => {
+            (0, l.ZDy)(async () => {
                 let { default: e } = await n.e('43866').then(n.bind(n, 423639));
                 return (n) => {
-                    var i, a;
-                    return (0, r.jsx)(
+                    var r, l;
+                    return (0, i.jsx)(
                         e,
-                        ((i = (function (e) {
+                        ((r = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
+                                    i = Object.keys(n);
                                 'function' == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
+                                    (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         })
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
+                                    i.forEach(function (t) {
+                                        var i;
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                                      value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
+                                                : (e[t] = i);
                                     });
                             }
                             return e;
                         })({}, n)),
-                        (a = a = { createReminder: t }),
+                        (l = l = { createReminder: t }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
+                                      var i = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, i);
                                   }
                                   return n;
-                              })(Object(a)).forEach(function (e) {
-                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                              })(Object(l)).forEach(function (e) {
+                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
-                        i)
+                        r)
                     );
                 };
             });
         }, [t]);
-    return i.useMemo(() => {
+    return r.useMemo(() => {
         let e = s.B.map((e) => {
-            let { getDueAt: n, getLabel: i } = e;
-            return (0, r.jsx)(
-                a.sNh,
+            let { getDueAt: n, getLabel: r } = e;
+            return (0, i.jsx)(
+                l.sNh,
                 {
-                    id: 'create-reminder-'.concat(i()),
-                    label: i(),
+                    id: 'create-reminder-'.concat(r()),
+                    label: r(),
                     action: () => t(n())
                 },
-                'create-reminder-'.concat(i())
+                'create-reminder-'.concat(r())
             );
         });
         return (
             e.push(
-                (0, r.jsx)(
-                    a.sNh,
+                (0, i.jsx)(
+                    l.sNh,
                     {
                         id: 'create-reminder-custom',
-                        label: c.NW.string(c.t.OLA8Zm),
-                        action: l
+                        label: c.intl.string(c.t.OLA8Zm),
+                        action: a
                     },
                     'custom'
                 )
             ),
             e
         );
-    }, [t, l]);
+    }, [t, a]);
 }
 function d(e) {
     let { message: t, label: n } = e,
-        i = u({
+        r = u({
             createReminder: (e) =>
                 (0, o.z)({
                     channelId: t.channel_id,
@@ -101,14 +101,14 @@ function d(e) {
                     dueAt: e
                 })
         });
-    return (0, r.jsx)(a.v2r, {
+    return (0, i.jsx)(l.v2r, {
         navId: 'message-reminder-create',
-        onClose: l.Zy,
-        'aria-label': c.NW.string(c.t.mJ3P0N),
+        onClose: a.Zy,
+        'aria-label': c.intl.string(c.t.mJ3P0N),
         onSelect: () => null,
-        children: (0, r.jsx)(a.kSQ, {
+        children: (0, i.jsx)(l.kSQ, {
             label: n,
-            children: i
+            children: r
         })
     });
 }

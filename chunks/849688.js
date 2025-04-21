@@ -92,7 +92,7 @@ let f = function (e) {
                                 (0, r.jsx)(o.Text, {
                                     variant: 'text-xs/semibold',
                                     color: 'none',
-                                    children: p.NW.string(p.t.hhKpxs)
+                                    children: p.intl.string(p.t.hhKpxs)
                                 })
                             ]
                         }),
@@ -107,14 +107,14 @@ let f = function (e) {
                             children: (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'none',
-                                children: p.NW.string(p.t.vv0Nsb)
+                                children: p.intl.string(p.t.vv0Nsb)
                             })
                         }),
                         (0, r.jsx)('div', {
                             className: h.dismiss,
                             children: (0, r.jsx)(o.P3F, {
                                 onClick: g,
-                                'aria-label': p.NW.string(p.t.cpT0Cg),
+                                'aria-label': p.intl.string(p.t.cpT0Cg),
                                 children: (0, r.jsx)(o.Dio, {
                                     size: 'xs',
                                     color: 'currentColor'

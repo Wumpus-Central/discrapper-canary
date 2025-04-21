@@ -34,8 +34,8 @@ function T(e, t, n) {
         e
     );
 }
-let N = 'NO_GUILD',
-    A = new c.h(
+let A = 'NO_GUILD',
+    N = new c.h(
         (e) => [P(e)],
         (e) => e.id
     ),
@@ -43,10 +43,10 @@ let N = 'NO_GUILD',
     R = {};
 function P(e) {
     var t;
-    return null != (t = e.getGuildId()) ? t : N;
+    return null != (t = e.getGuildId()) ? t : A;
 }
 function w(e) {
-    return A.values(null != e ? e : void 0, !0).map((e) => {
+    return N.values(null != e ? e : void 0, !0).map((e) => {
         let { id: t } = e;
         return t;
     });
@@ -57,7 +57,7 @@ function D(e) {
         s()(p.Z.getMutableGuildChannelsForGuild(e))
             .values()
             .forEach((e) => {
-                M(e) && A.set(e.id, e);
+                M(e) && N.set(e.id, e);
             }));
 }
 function L(e) {
@@ -75,7 +75,7 @@ function M(e) {
 }
 function k(e, t) {
     let n = p.Z.getChannel(e);
-    return null != n && n.isGuildStageVoice() ? (0 === t.size() ? B(n.id) : null == A.get(n.id) && A.set(n.id, n)) : B(e);
+    return null != n && n.isGuildStageVoice() ? (0 === t.size() ? B(n.id) : null == N.get(n.id) && N.set(n.id, n)) : B(e);
 }
 function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w();
@@ -89,14 +89,14 @@ function U(e) {
     return j((t) => t.updateParticipant(e), t);
 }
 function G(e) {
-    for (let t of A.values(e)) A.delete(t.id), delete R[t.id];
+    for (let t of N.values(e)) N.delete(t.id), delete R[t.id];
     C.delete(e);
 }
 function B(e) {
-    return null != e && (delete R[e], A.delete(e), !0);
+    return null != e && (delete R[e], N.delete(e), !0);
 }
 function F() {
-    C.clear(), A.clear(), (R = {});
+    C.clear(), N.clear(), (R = {});
 }
 function V(e, t, n) {
     if (null == n || e.has(n)) return;
@@ -118,12 +118,12 @@ function H(e) {
     for (let e of t) for (let t of e.members) n = U(t.user.id) || n;
     return n;
 }
-function W(e) {
+function Y(e) {
     let t = !1;
     for (let n of w(e.guildId)) t = x(n).rebuild() || t;
     return t;
 }
-function Y(e) {
+function W(e) {
     let { user: t } = e;
     return U(t.id);
 }
@@ -154,8 +154,8 @@ function J(e) {
     let { channels: t } = e,
         n = t.reduce((e, t) => {
             if (!t.isGuildStageVoice() || !C.has(t.guild_id)) return e;
-            let n = A.get(t.id);
-            return null == n || a()(t.permissionOverwrites, n.permissionOverwrites) || (e.push(t.id), A.set(t.id, t)), e;
+            let n = N.get(t.id);
+            return null == n || a()(t.permissionOverwrites, n.permissionOverwrites) || (e.push(t.id), N.set(t.id, t)), e;
         }, []);
     return j((e) => e.rebuild(), n), n.length > 0;
 }
@@ -189,10 +189,10 @@ class et extends (r = l.ZP.Store) {
         return null != (r = null == (n = L(e)) ? void 0 : n.size(t)) ? r : 0;
     }
     getChannels(e) {
-        return D(null != e ? e : N), A.values(null != e ? e : N);
+        return D(null != e ? e : A), N.values(null != e ? e : A);
     }
     getChannelsVersion() {
-        return A.version;
+        return N.version;
     }
     getParticipant(e, t) {
         var n, r;
@@ -206,9 +206,9 @@ let en = new et(u.Z, {
     VOICE_STATE_UPDATES: Z,
     CHANNEL_DELETE: X,
     GUILD_MEMBERS_CHUNK_BATCH: H,
-    USER_UPDATE: Y,
-    GUILD_MEMBER_REMOVE: Y,
-    GUILD_MEMBER_UPDATE: Y,
+    USER_UPDATE: W,
+    GUILD_MEMBER_REMOVE: W,
+    GUILD_MEMBER_UPDATE: W,
     CHANNEL_UPDATES: J,
     GUILD_ROLE_UPDATE: $,
     RTC_CONNECTION_VIDEO: q,
@@ -219,5 +219,5 @@ let en = new et(u.Z, {
     RELATIONSHIP_UPDATE: K,
     GUILD_CREATE: z,
     GUILD_DELETE: z,
-    PASSIVE_UPDATE_V2: W
+    PASSIVE_UPDATE_V2: Y
 });

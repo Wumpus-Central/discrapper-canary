@@ -13,7 +13,7 @@ n(814059);
 var l = n(388032);
 function c(e) {
     let { value: t, statisticId: n } = e,
-        i = l.NW.formatToPlainString(l.t.yhdo8v, {
+        i = l.intl.formatToPlainString(l.t.yhdo8v, {
             value: t,
             statisticName: (0, s.C)(n)
         });
@@ -23,7 +23,7 @@ function u(e) {
     let { intervalStart: t, intervalEnd: n } = e,
         s = new Date(o.default.extractTimestamp(t)),
         c = new Date(o.default.extractTimestamp(n)),
-        u = new Intl.DateTimeFormat(l.NW.currentLocale, {
+        u = new Intl.DateTimeFormat(l.intl.currentLocale, {
             month: 'numeric',
             day: 'numeric'
         }).formatRange(s, c);

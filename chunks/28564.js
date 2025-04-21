@@ -1,40 +1,40 @@
-s.d(i, { default: () => e });
-var t = s(200651);
-s(192379);
-var n = s(481060),
-    o = s(388032);
-function e(r) {
-    let { onClose: i, onConfirmDelete: s, transitionState: e } = r;
-    return (0, t.jsxs)(n.Y0X, {
-        transitionState: e,
-        'aria-label': o.NW.string(o.t['u/2TkZ']),
+t.d(r, { default: () => o });
+var n = t(200651);
+t(192379);
+var s = t(481060),
+    l = t(388032);
+function o(i) {
+    let { onClose: r, onConfirmDelete: t, transitionState: o } = i;
+    return (0, n.jsxs)(s.Y0X, {
+        transitionState: o,
+        'aria-label': l.intl.string(l.t['u/2TkZ']),
         children: [
-            (0, t.jsx)(n.xBx, {
+            (0, n.jsx)(s.xBx, {
                 separator: !1,
-                children: (0, t.jsx)(n.X6q, {
+                children: (0, n.jsx)(s.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: o.NW.string(o.t['u/2TkZ'])
+                    children: l.intl.string(l.t['u/2TkZ'])
                 })
             }),
-            (0, t.jsx)(n.hzk, {
-                children: (0, t.jsx)(n.Text, {
+            (0, n.jsx)(s.hzk, {
+                children: (0, n.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     color: 'header-primary',
-                    children: o.NW.string(o.t['9sgGbG'])
+                    children: l.intl.string(l.t['9sgGbG'])
                 })
             }),
-            (0, t.jsxs)(n.mzw, {
+            (0, n.jsxs)(s.mzw, {
                 children: [
-                    (0, t.jsx)(n.zxk, {
-                        onClick: s,
-                        color: n.zxk.Colors.RED,
-                        children: o.NW.string(o.t.dO8DLC)
+                    (0, n.jsx)(s.zxk, {
+                        onClick: t,
+                        color: s.zxk.Colors.RED,
+                        children: l.intl.string(l.t.dO8DLC)
                     }),
-                    (0, t.jsx)(n.zxk, {
-                        onClick: i,
-                        look: n.zxk.Looks.LINK,
-                        color: n.zxk.Colors.PRIMARY,
-                        children: o.NW.string(o.t['ETE/oK'])
+                    (0, n.jsx)(s.zxk, {
+                        onClick: r,
+                        look: s.zxk.Looks.LINK,
+                        color: s.zxk.Colors.PRIMARY,
+                        children: l.intl.string(l.t['ETE/oK'])
                     })
                 ]
             })

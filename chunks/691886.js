@@ -1,8 +1,8 @@
-n.d(t, { Z: () => C }), n(539854), n(388685);
+n.d(t, { Z: () => y }), n(539854), n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     a = n(442837),
     o = n(481060),
     c = n(933557),
@@ -18,10 +18,10 @@ var r = n(200651),
 function j(e) {
     return String(e);
 }
-function N(e) {
-    let { icon: t, title: n, subtitle: i, className: s } = e;
+function _(e) {
+    let { icon: t, title: n, subtitle: i, className: l } = e;
     return (0, r.jsxs)('div', {
-        className: l()(b.label, s),
+        className: s()(b.label, l),
         children: [
             t,
             (0, r.jsxs)('div', {
@@ -46,78 +46,78 @@ function N(e) {
         ]
     });
 }
-function _() {
-    return (0, r.jsx)(N, {
+function v() {
+    return (0, r.jsx)(_, {
         icon: (0, r.jsx)(o.qJs, {
             size: 'md',
             color: 'currentColor',
             className: b.labelIcon
         }),
-        title: x.NW.string(x.t.d7YJMD),
+        title: x.intl.string(x.t.d7YJMD),
         className: b.createLabel
     });
 }
-function v(e) {
+function O(e) {
     var t;
     let { channelId: n } = e,
         i = (0, h.m7)(n),
-        s = (0, h.m7)(null != (t = null == i ? void 0 : i.parent_id) ? t : f.lds);
+        l = (0, h.m7)(null != (t = null == i ? void 0 : i.parent_id) ? t : f.lds);
     if (null == i) return null;
-    let l = (0, d.KS)(i),
+    let s = (0, d.KS)(i),
         a = (0, c.F6)(i, p.default, g.Z),
-        o = null != s ? (0, c.F6)(s, p.default, g.Z) : void 0;
-    return (0, r.jsx)(N, {
-        icon: null != l && (0, r.jsx)(l, { className: b.labelIcon }),
+        o = null != l ? (0, c.F6)(l, p.default, g.Z) : void 0;
+    return (0, r.jsx)(_, {
+        icon: null != s && (0, r.jsx)(s, { className: b.labelIcon }),
         title: a,
         subtitle: o
     });
 }
-function O(e) {
-    let { value: t } = e;
-    return null != t ? (0, r.jsx)(v, { channelId: t }) : (0, r.jsx)(_, {});
-}
 function C(e) {
-    let { guildId: t, value: s, initialChannelId: l, omitChannelIds: d, 'aria-labelledby': b, onChange: N } = e,
-        _ = x.NW.string(x.t.d7YJMD),
-        v = (0, a.e7)([m.Z], () => m.Z.getCategories(t), [t]),
-        C = (0, h.m7)(null != s ? s : f.lds),
-        y = i.useMemo(() => {
+    let { value: t } = e;
+    return null != t ? (0, r.jsx)(O, { channelId: t }) : (0, r.jsx)(v, {});
+}
+function y(e) {
+    let { guildId: t, value: l, initialChannelId: s, omitChannelIds: d, 'aria-labelledby': b, onChange: _ } = e,
+        v = x.intl.string(x.t.d7YJMD),
+        O = (0, a.e7)([m.Z], () => m.Z.getCategories(t), [t]),
+        y = (0, h.m7)(null != l ? l : f.lds),
+        N = i.useMemo(() => {
             let e = [
                     {
                         value: null,
-                        label: _
+                        label: v
                     }
                 ],
                 t = !1;
-            for (let n of v._categories)
-                for (let { channel: r } of v[n.channel.id])
+            for (let n of O._categories)
+                for (let { channel: r } of O[n.channel.id])
                     ((0, u.r8)(r.type) || (0, u.bw)(r.type)) &&
-                        ((r.id !== s && (null == d ? void 0 : d.has(r.id)) && (r.id !== l || s === l)) ||
-                            (s === r.id && (t = !0),
+                        ((r.id !== l && (null == d ? void 0 : d.has(r.id)) && (r.id !== s || l === s)) ||
+                            (l === r.id && (t = !0),
                             e.push({
                                 value: r.id,
                                 label: (0, c.F6)(r, p.default, g.Z)
                             })));
             return (
-                null == s ||
+                null == l ||
                     t ||
-                    null == C ||
+                    null == y ||
                     e.push({
-                        value: s,
-                        label: C.name
+                        value: l,
+                        label: y.name
                     }),
                 e
             );
-        }, [_, s, C, v, d, l]);
+        }, [v, l, y, O, d, s]);
     return (0, r.jsx)(o.PhF, {
-        placeholder: x.NW.string(x.t.r2pts7),
-        options: y,
+        placeholder: x.intl.string(x.t.r2pts7),
+        options: N,
         select: function (e) {
             null == e
                 ? (0, o.ZDy)(async () => {
                       let { default: e } = await Promise.all([n.e('7590'), n.e('45094'), n.e('99927')]).then(n.bind(n, 797671));
                       return (n) => {
-                          var i, s;
+                          var i, l;
                           return (0, r.jsx)(
                               e,
                               ((i = (function (e) {
@@ -145,13 +145,13 @@ function C(e) {
                                   }
                                   return e;
                               })({}, n)),
-                              (s = s =
+                              (l = l =
                                   {
                                       guildId: t,
-                                      onSubmit: N
+                                      onSubmit: _
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
@@ -159,21 +159,21 @@ function C(e) {
                                             n.push.apply(n, r);
                                         }
                                         return n;
-                                    })(Object(s)).forEach(function (e) {
-                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                                    })(Object(l)).forEach(function (e) {
+                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
                               i)
                           );
                       };
                   })
-                : N(e);
+                : _(e);
         },
-        isSelected: (e) => null != s && j(e) === j(s),
+        isSelected: (e) => null != l && j(e) === j(l),
         serialize: j,
-        renderOptionLabel: O,
+        renderOptionLabel: C,
         renderOptionValue: (e) => {
             let [t] = e;
-            return O(t);
+            return C(t);
         },
         'aria-labelledby': b
     });

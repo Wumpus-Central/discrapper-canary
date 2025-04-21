@@ -1,5 +1,5 @@
 n.d(t, {
-    A1: () => A,
+    A1: () => N,
     LO: () => y,
     S1: () => E,
     Wx: () => P,
@@ -10,7 +10,7 @@ n.d(t, {
     ob: () => b,
     pC: () => S,
     v4: () => T,
-    wO: () => N,
+    wO: () => A,
     wi: () => R
 }),
     n(415506);
@@ -135,10 +135,10 @@ function S(e, t, n) {
 function T() {
     _.Z.resume();
 }
-function N() {
+function A() {
     _.Z.pause();
 }
-function A(e, t) {
+function N(e, t) {
     i.Z.dispatch({
         type: 'DISPATCH_APPLICATION_MOVE_UP',
         applicationId: e,
@@ -179,8 +179,8 @@ function w(e, t) {
                     let { default: t } = e;
                     t.showNotification(
                         i.getIconURL(g),
-                        m.NW.string(m.t['1wR7yM']),
-                        m.NW.formatToPlainString(m.t['89VAgY'], { name: i.name }),
+                        m.intl.string(m.t['1wR7yM']),
+                        m.intl.formatToPlainString(m.t['89VAgY'], { name: i.name }),
                         { notif_type: 'Game Library Game Installed' },
                         {
                             onClick: () => (0, s.uL)(h.Z5c.APPLICATION_LIBRARY),

@@ -41,11 +41,11 @@ function T(e) {
         a = l.default.getId(),
         o = d.Z.getEnabled();
     if (null != t) {
-        if (o && (0, f.Z)(t.name)) return A(t.name, r, n);
+        if (o && (0, f.Z)(t.name)) return N(t.name, r, n);
         r === a && ((v = [...v, t.name].slice(-1 * E)), i().isEqual(v, g) ? (I.play(), y.stop(), (v = []), (0, u.ME)(!o)) : y.start(p, () => (v = [])));
     }
 }
-function N(e) {
+function A(e) {
     let { completingUserId: t, waitingUserId: n, channelId: r } = e,
         i = b(''.concat(t).concat(n), r, !0);
     (O[i] = new a.sW(m, () => {
@@ -53,7 +53,7 @@ function N(e) {
     })),
         O[i].delay();
 }
-function A(e, t, n) {
+function N(e, t, n) {
     var r;
     let i = b(t, n);
     if (null != d.Z.getWaitingHighFive(n, t)) return;
@@ -82,7 +82,7 @@ class C extends o.Z {
         super(...e),
             _(this, 'actions', {
                 VOICE_CHANNEL_EFFECT_SEND: T,
-                HIGH_FIVE_COMPLETE: N
+                HIGH_FIVE_COMPLETE: A
             });
     }
 }

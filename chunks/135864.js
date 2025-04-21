@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => v });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -17,8 +17,8 @@ var r = n(200651),
     _ = n(49898),
     E = n(46140),
     O = n(388032),
-    N = n(444657);
-function y(e) {
+    y = n(444657);
+function I(e) {
     let { tab: t } = e,
         { enabled: n } = c.c.useExperiment({ location: 'GlobalDiscoverySidebar' }, { autoTrackExposure: !0 }),
         l = g.Z.useField('selectedTab'),
@@ -36,13 +36,13 @@ function y(e) {
                 })(t, n),
             [t, n]
         ),
-        y = i.useMemo(() => (0, m.s)(t), [t]),
-        I = l === t,
-        v = i.useCallback(() => {
+        I = i.useMemo(() => (0, m.s)(t), [t]),
+        v = l === t,
+        C = i.useCallback(() => {
             switch (t) {
                 case _.GlobalDiscoveryTab.QUESTS:
                     return (
-                        I && f.Z.resetState(),
+                        v && f.Z.resetState(),
                         (0, b.transitionToGlobalDiscovery)({
                             tab: _.GlobalDiscoveryTab.QUESTS,
                             location: E.dr.DISCOVERY_SIDEBAR,
@@ -50,7 +50,7 @@ function y(e) {
                         })
                     );
                 case _.GlobalDiscoveryTab.APPS:
-                    if (!I)
+                    if (!v)
                         return (0, b.transitionToGlobalDiscovery)({
                             tab: t,
                             newSessionState: {
@@ -61,43 +61,43 @@ function y(e) {
                     u.Z.resetState(), (0, b.transitionToGlobalDiscovery)({ tab: t });
                     return;
                 case _.GlobalDiscoveryTab.SERVERS:
-                    if (!I) return (0, b.transitionToGlobalDiscovery)({ tab: t });
+                    if (!v) return (0, b.transitionToGlobalDiscovery)({ tab: t });
                     p.Z.resetState(), h.Z.resetState();
                     return;
                 default:
                     return (0, b.transitionToGlobalDiscovery)({ tab: t });
             }
-        }, [t, I]);
+        }, [t, v]);
     return (0, r.jsxs)(s.P3F, {
-        onClick: v,
-        className: a()(N.navItem, { [N.selected]: I }),
+        onClick: C,
+        className: a()(y.navItem, { [y.selected]: v }),
         children: [
             (0, r.jsx)('div', {
-                className: N.navItemIcon,
+                className: y.navItemIcon,
                 children: O
             }),
             (0, r.jsx)(s.Text, {
                 variant: 'text-md/medium',
                 color: 'none',
-                children: y
+                children: I
             })
         ]
     });
 }
-let I = function () {
+let v = function () {
     return (0, r.jsxs)('div', {
-        className: N.container,
+        className: y.container,
         children: [
             (0, r.jsx)('div', {
-                className: N.header,
+                className: y.header,
                 children: (0, r.jsx)(s.X6q, {
                     variant: 'text-lg/semibold',
-                    children: O.NW.string(O.t['1KqYnp'])
+                    children: O.intl.string(O.t['1KqYnp'])
                 })
             }),
             (0, r.jsx)('nav', {
-                className: N.nav,
-                children: _.GLOBAL_DISCOVERY_TABS.map((e) => (0, r.jsx)(y, { tab: e }, e))
+                className: y.nav,
+                children: _.GLOBAL_DISCOVERY_TABS.map((e) => (0, r.jsx)(I, { tab: e }, e))
             })
         ]
     });

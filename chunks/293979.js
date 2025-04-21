@@ -125,7 +125,7 @@ function Z(e, t) {
                 customId: i
             }),
             t()),
-            L === N.i.ERRORED && f(A.NW.string(A.t.uJgdEh));
+            L === N.i.ERRORED && f(A.intl.string(A.t.uJgdEh));
     }, [g, L, t, i]);
     let { applicationIconURL: b, applicationName: P } = R(n);
     return {

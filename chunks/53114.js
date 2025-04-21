@@ -424,7 +424,7 @@ class v extends a.Z {
                 },
                 h
             ),
-            { bytes: b, framesDropped: y, framesCodecError: v, framesCodec: O, framesNetwork: I, packets: S, packetsLost: T, nackCount: N, pliCount: A, qpSum: C, pauseCount: R, freezeCount: P, totalPausesDuration: w, totalFreezesDuration: D, totalFramesDuration: L, keyframes: x, passthroughCount: M, cryptorSuccessCount: k, cryptorFailureCount: j, cryptorDuration: U, cryptorAttempts: G, cryptorMissingKeyCount: B, cryptorInvalidNonceCount: F, qualityDecodeErrors: V, qualityDecoderReboots: Z, qualityScoreErrors: H, qualityFrameDrops: W, qualitySizeMismatches: Y } = e.aggregatedProperties;
+            { bytes: b, framesDropped: y, framesCodecError: v, framesCodec: O, framesNetwork: I, packets: S, packetsLost: T, nackCount: A, pliCount: N, qpSum: C, pauseCount: R, freezeCount: P, totalPausesDuration: w, totalFreezesDuration: D, totalFramesDuration: L, keyframes: x, passthroughCount: M, cryptorSuccessCount: k, cryptorFailureCount: j, cryptorDuration: U, cryptorAttempts: G, cryptorMissingKeyCount: B, cryptorInvalidNonceCount: F, qualityDecodeErrors: V, qualityDecoderReboots: Z, qualityScoreErrors: H, qualityFrameDrops: Y, qualitySizeMismatches: W } = e.aggregatedProperties;
         return (
             e instanceof f.nt ? ((E.sender_freeze_count = P), (E.sender_total_freezes_duration = D), (E.sender_total_frames_duration = L)) : ((E.receiver_freeze_count = P), (E.receiver_total_freezes_duration = D), (E.receiver_total_frames_duration = L), (E.receiver_pause_count = R), (E.receiver_total_pauses_duration = w)),
             m(p({}, E), {
@@ -437,8 +437,8 @@ class v extends a.Z {
                 num_frames_codec_error: v,
                 time_to_first_frame_ms: e.timeToFirstFrame,
                 num_frames_dropped: y,
-                num_nacks: N,
-                num_plis: A,
+                num_nacks: A,
+                num_plis: N,
                 qp_sum: C,
                 num_keyframes: x,
                 cryptor_passthrough_count: M,
@@ -451,8 +451,8 @@ class v extends a.Z {
                 encoder_quality_decode_errors: V,
                 encoder_quality_decoder_reboots: Z,
                 encoder_quality_score_errors: H,
-                encoder_quality_frame_drops: W,
-                encoder_quality_size_mismatches: Y
+                encoder_quality_frame_drops: Y,
+                encoder_quality_size_mismatches: W
             })
         );
     }
@@ -492,8 +492,8 @@ class v extends a.Z {
                         var I = this.connection.getRemoteVideoSinkWants(t);
                         (null == I || 0 === I) && (null == T ? void 0 : T.quality) === _ && (I = this.connection.getRemoteVideoSinkWants('any')), (O = (null != I ? I : 0) > 0);
                     }
-                    let N = this.videoStopped.value || !O;
-                    if ((N !== S.isVideoStopped && S.setVideoStopped(N, f.Mq.SenderStopped), !N)) {
+                    let A = this.videoStopped.value || !O;
+                    if ((A !== S.isVideoStopped && S.setVideoStopped(A, f.Mq.SenderStopped), !A)) {
                         S.appendAndIncrementStats(f.z4.parseOutboundStats(r, e)), S.encoderCodec !== f.u7.UNKNOWN && u.add(S.encoderCodec);
                         let t = null == T ? void 0 : T.maxBitrate;
                         S.appendTargetRates(null == T ? void 0 : T.maxFrameRate, null != (l = r.bitrateTarget) ? l : Math.min(null != (a = s.availableOutgoingBitrate) ? a : 0, null != t ? t : 0), t, s.availableOutgoingBitrate), (S.averageEncodeTime = null != (c = r.averageEncodeTime) ? c : 0), (S.framesDroppedRateLimiter = null != (d = r.framesDroppedRateLimiter) ? d : null), (S.framesDroppedEncoderQueue = null != (p = r.framesDroppedEncoderQueue) ? p : null), (S.framesDroppedCongestionWindow = null != (m = r.framesDroppedCongestionWindow) ? m : null), (S.framesDroppedEncoder = null != (g = r.framesDroppedEncoder) ? g : null), (this.hqSimulcastStreamEncoded.value = null != (E = r.hqSimulcastStreamEncoded) && E), (this.lqSimulcastStreamEncoded.value = null != (b = r.lqSimulcastStreamEncoded) && b), (this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value), (this.bandwidthLimitedResolution.value = null != (y = r.bandwidthLimitedResolution) && y), (this.bandwidthLimitedFramerate.value = null != (v = r.bandwidthLimitedFrameRate) && v);

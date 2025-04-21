@@ -1,13 +1,13 @@
-r.d(t, { default: () => i });
+r.d(t, { default: () => c });
 var n = r(200651);
 r(192379);
 var o = r(481060),
-    c = r(388032);
-function i(e) {
+    i = r(388032);
+function c(e) {
     var t,
         r,
-        { onConfirmUninstall: i, game: a } = e,
-        f = (function (e, t) {
+        { onConfirmUninstall: c, game: a } = e,
+        l = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -16,13 +16,13 @@ function i(e) {
                     var r,
                         n,
                         o = {},
-                        c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++) (r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
         })(e, ['onConfirmUninstall', 'game']);
@@ -54,18 +54,18 @@ function i(e) {
             return e;
         })(
             {
-                header: c.NW.formatToPlainString(c.t['f/BAbG'], { gameName: a.name }),
-                confirmText: c.NW.string(c.t.RVy6Vl),
-                cancelText: c.NW.string(c.t['96dwMT']),
-                onConfirm: i
+                header: i.intl.formatToPlainString(i.t['f/BAbG'], { gameName: a.name }),
+                confirmText: i.intl.string(i.t.RVy6Vl),
+                cancelText: i.intl.string(i.t['96dwMT']),
+                onConfirm: c
             },
-            f
+            l
         )),
         (r = r =
             {
                 children: (0, n.jsx)(o.Text, {
                     variant: 'text-md/normal',
-                    children: c.NW.format(c.t['FP+NKS'], { gameName: a.name })
+                    children: i.intl.format(i.t['FP+NKS'], { gameName: a.name })
                 })
             }),
         Object.getOwnPropertyDescriptors

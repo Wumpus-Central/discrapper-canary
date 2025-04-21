@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => M });
 var r = n(200651);
 n(192379);
 var l = n(442837),
@@ -18,10 +18,10 @@ var l = n(442837),
     _ = n(934415),
     p = n(700785),
     m = n(981631),
-    N = n(388032);
-function j(e, t) {
+    j = n(388032);
+function M(e, t) {
     let n = (0, l.e7)([d.ZP], () => d.ZP.getChannels(t)[d.Zb], [t]),
-        j = (0, l.e7)(
+        M = (0, l.e7)(
             [y.Z, s.Z],
             () => {
                 let n = y.Z.getUserVoiceChannelId(t, e.id);
@@ -29,14 +29,14 @@ function j(e, t) {
             },
             [t, e.id]
         );
-    if ((0, l.e7)([f.ZP], () => f.ZP.isGuestOrLurker(t, e.id), [t, e.id]) || null == j) return null;
-    let M = e.id === c.default.getId();
-    if (!M && !E.Z.can(m.Plq.MOVE_MEMBERS, j)) return null;
-    let P = n.filter((t) => {
+    if ((0, l.e7)([f.ZP], () => f.ZP.isGuestOrLurker(t, e.id), [t, e.id]) || null == M) return null;
+    let P = e.id === c.default.getId();
+    if (!P && !E.Z.can(m.Plq.MOVE_MEMBERS, M)) return null;
+    let S = n.filter((t) => {
         let { channel: n } = t;
         return (
-            n.id !== j.id &&
-            (M
+            n.id !== M.id &&
+            (P
                 ? E.Z.can(m.Plq.CONNECT, n) && !(0, _.rY)(n, y.Z, O.Z)
                 : E.Z.can(m.Plq.MOVE_MEMBERS, n) &&
                   (E.Z.can(m.Plq.CONNECT, n) ||
@@ -48,12 +48,12 @@ function j(e, t) {
                   !(0, _.rY)(n, y.Z, O.Z))
         );
     });
-    return 0 === P.length
+    return 0 === S.length
         ? null
         : (0, r.jsx)(i.sNh, {
               id: 'voice-move',
-              label: N.NW.string(N.t.FAplmp),
-              children: P.map((n) => {
+              label: j.intl.string(j.t.FAplmp),
+              children: S.map((n) => {
                   let { channel: l } = n;
                   return (0, r.jsx)(
                       i.sNh,

@@ -1,8 +1,8 @@
 r.d(t, { Z: () => E }), r(388685);
 var n = r(200651),
-    a = r(192379),
-    i = r(120356),
-    l = r.n(i),
+    i = r(192379),
+    a = r(120356),
+    l = r.n(a),
     s = r(657707),
     o = r(793030),
     c = r(692547),
@@ -15,15 +15,15 @@ var n = r(200651),
     O = r(430871);
 function E(e) {
     let { detectedGame: t, trackAction: r } = e,
-        [i, E] = a.useState((null == t ? void 0 : t.summaryLocalized) != null),
-        [N, h] = a.useState(!0),
-        [x, v] = a.useState(!1),
-        j = a.useRef(null),
-        { width: b, height: I } = (0, d.Z)();
-    return (a.useEffect(() => {
-        let e = j.current;
-        null != e && v(e.scrollHeight - e.clientHeight > 1 || !N);
-    }, [j, b, I, N]),
+        [a, E] = i.useState((null == t ? void 0 : t.summaryLocalized) != null),
+        [h, x] = i.useState(!0),
+        [v, j] = i.useState(!1),
+        b = i.useRef(null),
+        { width: I, height: y } = (0, d.Z)();
+    return (i.useEffect(() => {
+        let e = b.current;
+        null != e && j(e.scrollHeight - e.clientHeight > 1 || !h);
+    }, [b, I, y, h]),
     null == t.summary)
         ? null
         : (0, n.jsxs)('div', {
@@ -40,25 +40,25 @@ function E(e) {
                               (0, n.jsx)(o.xv, {
                                   variant: 'text-xs/medium',
                                   color: 'header-secondary',
-                                  children: i ? f.NW.format(f.t.aZ2iIi, { onShowOriginal: () => E(!1) }) : f.NW.format(f.t['/2ylFx'], { onShowTranslated: () => E(!0) })
+                                  children: a ? f.intl.format(f.t.aZ2iIi, { onShowOriginal: () => E(!1) }) : f.intl.format(f.t['/2ylFx'], { onShowTranslated: () => E(!0) })
                               })
                           ]
                       }),
                   (0, n.jsx)(o.xv, {
-                      ref: j,
-                      lineClamp: N ? 8 : void 0,
+                      ref: b,
+                      lineClamp: h ? 8 : void 0,
                       variant: 'text-sm/normal',
-                      children: i ? t.summaryLocalized : t.summary
+                      children: a ? t.summaryLocalized : t.summary
                   }),
-                  x &&
+                  v &&
                       (0, n.jsx)(u.P3F, {
                           className: p.clickable,
                           onClick: () => {
-                              r(N ? m.as.ShowMore : m.as.ShowLess), h(!N);
+                              r(h ? m.as.ShowMore : m.as.ShowLess), x(!h);
                           },
                           children: (0, n.jsx)(o.xv, {
                               variant: 'text-sm/semibold',
-                              children: N ? f.NW.string(f.t.lBeKY2) : f.NW.string(f.t['6MwJo6'])
+                              children: h ? f.intl.string(f.t.lBeKY2) : f.intl.string(f.t['6MwJo6'])
                           })
                       }),
                   (0, n.jsx)(g.Z, {

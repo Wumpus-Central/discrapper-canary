@@ -4,8 +4,8 @@ var a = n(200651),
     o = n(120356),
     i = n.n(o),
     c = n(466377),
-    s = n(481060),
-    l = n(376641),
+    l = n(481060),
+    s = n(376641),
     u = n(714338),
     d = n(540059),
     p = n(585483),
@@ -52,9 +52,9 @@ function h(e) {
     }, [t]),
         r.useEffect(() => {
             var e, t;
-            E === s.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(l.P)), E === s.Dvm.HIDDEN && (u.Z.disable(), u.Z.enableTemp(l.v));
+            E === l.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(s.P)), E === l.Dvm.HIDDEN && (u.Z.disable(), u.Z.enableTemp(s.v));
             let n = () => {
-                    u.Z.disable(), u.Z.enableTemp(l.P);
+                    u.Z.disable(), u.Z.enableTemp(s.P);
                 },
                 a = () => {
                     u.Z.disableTemp();
@@ -75,17 +75,17 @@ function h(e) {
             () => ({
                 zoomed: j,
                 setZoomed: P,
-                entering: E === s.Dvm.ENTERING || null == E
+                entering: E === l.Dvm.ENTERING || null == E
             }),
             [j, E]
         ),
-        N = n[v];
-    return (0, a.jsx)(s.f6W, {
+        A = n[v];
+    return (0, a.jsx)(l.f6W, {
         theme: M ? y.BRd.MIDNIGHT : y.BRd.DARK,
         children: (e) => {
             var r, o;
             return (0, a.jsx)(
-                s.Y0X,
+                l.Y0X,
                 ((r = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -120,16 +120,16 @@ function h(e) {
                 )),
                 (o = o =
                     {
-                        size: s.CgR.DYNAMIC,
+                        size: l.CgR.DYNAMIC,
                         animation: c.fM.SUBTLE,
                         fullscreenOnMobile: !1,
                         onClick: t,
-                        'aria-label': b.NW.string(b.t.AMTX3t),
+                        'aria-label': b.intl.string(b.t.AMTX3t),
                         children: (0, a.jsxs)(_.z.Provider, {
                             value: D,
                             children: [
                                 (0, a.jsx)(f.Z, {
-                                    item: N,
+                                    item: A,
                                     hideMediaOptions: S,
                                     onClose: t
                                 }),

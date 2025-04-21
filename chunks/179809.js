@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -24,12 +24,12 @@ var r = n(200651),
     x = n(335426);
 let E = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     I = (0, a.animated)(d.Kqy),
-    N = i.memo(function (e) {
-        let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: u, mentionCount: g = 0, isMentionLowImportance: N, unread: P = !1, defaultFolderName: w, useCircleMask: Z = !1, draggable: T = !1, sorting: A = !1, onDragStart: R, onDragEnd: D, onExpandCollapse: L, onContextMenu: k, renderChildNode: M, folderIconContent: U, folderIconContentClassName: G, 'aria-setsize': B, 'aria-posinset': W } = e,
-            { id: V, name: F, children: H } = t,
-            [z, Y] = i.useState(!1),
+    P = i.memo(function (e) {
+        let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: u, mentionCount: g = 0, isMentionLowImportance: P, unread: w = !1, defaultFolderName: N, useCircleMask: Z = !1, draggable: T = !1, sorting: A = !1, onDragStart: R, onDragEnd: D, onExpandCollapse: L, onContextMenu: k, renderChildNode: M, folderIconContent: U, folderIconContentClassName: G, 'aria-setsize': B, 'aria-posinset': V } = e,
+            { id: F, name: H, children: z } = t,
+            [W, Y] = i.useState(!1),
             [K, q] = i.useState(!1),
-            Q = z || K;
+            Q = W || K;
         i.useEffect(() => {
             A && Y(!1);
         }, [A]);
@@ -56,9 +56,9 @@ let E = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 },
                 [L, a]
             ),
-            et = null != F && '' !== F ? F : null != w && '' !== w ? w : j.NW.string(j.t.xV9hVl),
-            en = (0, c.Ie)(''.concat(V)),
-            er = 'folder-items-'.concat(V),
+            et = null != H && '' !== H ? H : null != N && '' !== N ? N : j.intl.string(j.t.xV9hVl),
+            en = (0, c.Ie)(''.concat(F)),
+            er = 'folder-items-'.concat(F),
             ei = (function (e) {
                 let t = (0, d.dQu)(d.TVs.modules.guildbar.AVATAR_SIZE),
                     n = (0, p.Q3)('FolderItem.useHeight'),
@@ -67,21 +67,21 @@ let E = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     l = (0, d.dQu)(d.TVs.modules.guildbar.FOLDER_SIZE),
                     o = n ? r : 8;
                 return e * (t + o) + (n ? (l - i) / 2 - o : 0);
-            })(H.length),
+            })(z.length),
             el = (0, d.Yzy)(!X && a, {
                 from: { height: 0 },
                 enter: { height: 1 },
                 leave: { height: 0 },
                 config: { duration: E }
             }),
-            eo = i.useCallback((e) => (null == n ? void 0 : n(V, e)), [n, V]),
+            eo = i.useCallback((e) => (null == n ? void 0 : n(F, e)), [n, F]),
             es = (0, r.jsxs)(v.H, {
                 children: [
                     (0, r.jsx)(b.Z, {
                         disabled: X || a,
-                        hovered: z,
+                        hovered: W,
                         selected: l,
-                        unread: P,
+                        unread: w,
                         className: x.pill
                     }),
                     (0, r.jsx)(C.Z, {
@@ -106,7 +106,7 @@ let E = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       sorting: A,
                                       mediaState: u,
                                       mentionCount: g,
-                                      isMentionLowImportance: N,
+                                      isMentionLowImportance: P,
                                       tooltipName: et,
                                       folderGroupId: er,
                                       onClick: L,
@@ -117,7 +117,7 @@ let E = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       folderIconContentClassName: G,
                                       folderIconContent: U,
                                       'aria-setsize': B,
-                                      'aria-posinset': W
+                                      'aria-posinset': V
                                   })
                         })
                     }),
@@ -160,7 +160,7 @@ let E = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                 },
                                 role: 'group',
                                 'aria-label': t.name,
-                                children: H.map((t, n) => M(t, n, H.length, e.height))
+                                children: z.map((t, n) => M(t, n, z.length, e.height))
                             },
                             l
                         )

@@ -73,7 +73,7 @@ function O(e) {
         O = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
         I = (0, l.Z)(y, l.a.LONG_TIME_LEFT);
     if (!0 === t || !(0, d.y)('guild_boosting_fractional_premium_pill', O, E)) return null;
-    let S = m.NW.format(m.t['4RgA6O'], { helpCenterLink: p.Z.getArticleURL(h.BhN.FRACTIONAL_PREMIUM_ABOUT) });
+    let S = m.intl.format(m.t['4RgA6O'], { helpCenterLink: p.Z.getArticleURL(h.BhN.FRACTIONAL_PREMIUM_ABOUT) });
     return (0, r.jsx)(u.Z, {
         text: S,
         'aria-label': null == S ? void 0 : S.toString(),
@@ -88,7 +88,7 @@ function O(e) {
                         (0, r.jsx)(s.Text, {
                             variant: 'text-sm/bold',
                             className: g.unavailableCounterPillText,
-                            children: m.NW.string(m.t['5nrJDA']).toUpperCase()
+                            children: m.intl.string(m.t['5nrJDA']).toUpperCase()
                         }),
                         (0, r.jsx)(f.Z, {
                             countdownText: I,

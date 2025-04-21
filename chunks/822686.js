@@ -21,9 +21,9 @@ let x = (e) => {
         }, [t]);
     return null != t && h
         ? (0, r.jsx)(s.ZP, {
-              title: m.NW.string(m.t.c9BHLy),
-              description: m.NW.string(m.t.dK8S09),
-              buttonText: x ? m.NW.string(m.t.f3pnLC) : m.NW.string(m.t.ch2xbm),
+              title: m.intl.string(m.t.c9BHLy),
+              description: m.intl.string(m.t.dK8S09),
+              buttonText: x ? m.intl.string(m.t.f3pnLC) : m.intl.string(m.t.ch2xbm),
               buttonDisabled: x,
               buttonColor: i.zxk.Colors.RED,
               onButtonPress: b

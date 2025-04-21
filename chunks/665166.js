@@ -1,23 +1,23 @@
 n.d(t, { Z: () => d }), n(388685);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(164484),
-    a = n(481060),
-    l = n(267631),
+    l = n(481060),
+    a = n(267631),
     o = n(639618),
     c = n(388032);
 function d() {
-    i.useSyncExternalStore(c.NW.onLocaleChange, () => c.NW.currentLocale);
-    let [, e] = i.useState({});
+    r.useSyncExternalStore(c.intl.onLocaleChange, () => c.intl.currentLocale);
+    let [, e] = r.useState({});
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             (0, s.waitForAllDefaultIntlMessagesLoaded)().then(() => {
                 e({});
             });
         }, []),
-        (0, r.jsxs)(r.Fragment, {
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(a.PhF, {
+                (0, i.jsx)(l.PhF, {
                     options: [
                         {
                             value: 'en-US',
@@ -28,51 +28,51 @@ function d() {
                             label: 'French'
                         }
                     ],
-                    isSelected: (e) => e === c.NW.currentLocale,
-                    select: (e) => c.NW.setLocale(e),
+                    isSelected: (e) => e === c.intl.currentLocale,
+                    select: (e) => c.intl.setLocale(e),
                     serialize: (e) => e
                 }),
-                (0, r.jsx)(a.LZC, { size: 32 }),
-                (0, r.jsxs)(a.hjN, {
-                    tag: a.RB0.H1,
+                (0, i.jsx)(l.LZC, { size: 32 }),
+                (0, i.jsxs)(l.hjN, {
+                    tag: l.RB0.H1,
                     children: [
-                        (0, r.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             tag: 'div',
                             variant: 'heading-lg/bold',
-                            children: c.NW.format(o.Z.JJ0wpK, {})
+                            children: c.intl.format(o.Z.JJ0wpK, {})
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
-                            children: c.NW.format(l.Z.swfLzc, {})
+                            children: c.intl.format(a.Z.swfLzc, {})
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
-                            children: c.NW.format(o.Z['rmps8/'], {})
+                            children: c.intl.format(o.Z['rmps8/'], {})
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
-                            children: c.NW.format(o.Z.uczI4u, { linkTarget: console.log })
+                            children: c.intl.format(o.Z.uczI4u, { linkTarget: console.log })
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
-                            children: c.NW.format(o.Z.rdfRys, {})
+                            children: c.intl.format(o.Z.rdfRys, {})
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
-                            children: c.NW.format(o.Z['Q+eyqq'], { count: 1 })
+                            children: c.intl.format(o.Z['Q+eyqq'], { count: 1 })
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
-                            children: c.NW.format(o.Z.XOdbAw, {
+                            children: c.intl.format(o.Z.XOdbAw, {
                                 username: 'some user',
                                 usernameHook: (e) =>
-                                    (0, r.jsx)('span', {
+                                    (0, i.jsx)('span', {
                                         style: {
                                             backgroundColor: 'green',
                                             color: 'white',

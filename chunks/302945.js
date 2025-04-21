@@ -14,7 +14,7 @@ function f(e) {
         f = i.useMemo(
             () =>
                 t.length > 1
-                    ? u.NW.formatToPlainString(u.t.HaVk0d, {
+                    ? u.intl.formatToPlainString(u.t.HaVk0d, {
                           username: a(t[0]),
                           numFriends: t.length - 1
                       })

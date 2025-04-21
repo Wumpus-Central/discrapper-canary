@@ -34,7 +34,7 @@ function T(e, t, n) {
         e
     );
 }
-function N(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function N(e) {
     }
     return e;
 }
-function A(e, t) {
+function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,7 +67,7 @@ function C(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : N(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -99,7 +99,7 @@ let w = 490,
     x = 200,
     M = 120,
     k = i.forwardRef(function (e, t) {
-        var n, a, T, A, P;
+        var n, a, T, N, P;
         let { channel: k, type: j, editorHeight: U, onVisibilityChange: G } = e,
             B = (0, h.Dt)(),
             F = (0, l.e7)(
@@ -111,8 +111,8 @@ let w = 490,
                 [k.guild_id]
             ),
             V = i.useRef(null),
-            [Z, H, W] = (0, O.Z)(C(N({}, e), { guild: F }), t, V),
-            Y = (null == (n = j.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
+            [Z, H, Y] = (0, O.Z)(C(A({}, e), { guild: F }), t, V),
+            W = (null == (n = j.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
             K = (0, _.DJ)(Z.selectedIndex);
         (0, p.KR)(B, Z.isVisible, K), b.Z.trackExposure({ location: '6e9811_1' });
         let { usePopoutAutocomplete: z } = b.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
@@ -161,7 +161,7 @@ let w = 490,
                 [S.autocompleteTop]: Q
             },
             ee = w;
-        null != q && (ee = (null == (T = j.autocomplete) ? void 0 : T.small) ? x : (null == (A = Z.query) ? void 0 : A.type) === y.eq.EMOJIS_AND_STICKERS ? D : L);
+        null != q && (ee = (null == (T = j.autocomplete) ? void 0 : T.small) ? x : (null == (N = Z.query) ? void 0 : N.type) === y.eq.EMOJIS_AND_STICKERS ? D : L);
         let et = Math.min(0.5 * window.innerHeight, U);
         ee = Math.min(window.innerHeight - M - et, ee);
         let en = (0, r.jsx)(_.ZP, {
@@ -170,7 +170,7 @@ let w = 490,
             innerClassName: S.autocompleteInner,
             onMouseDown: (e) => e.preventDefault(),
             children: (0, r.jsx)(s.bG, {
-                navigator: W,
+                navigator: Y,
                 children: (0, r.jsx)(s.SJ, {
                     children: (e) => {
                         var { ref: t } = e,
@@ -178,7 +178,7 @@ let w = 490,
                         return (0, r.jsx)(
                             c.h21,
                             C(
-                                N(
+                                A(
                                     {
                                         id: B,
                                         ref: (e) => {
@@ -202,7 +202,7 @@ let w = 490,
             })
         });
         return null != q
-            ? (0, r.jsx)(Y, {
+            ? (0, r.jsx)(W, {
                   children: (0, r.jsx)(c.jRF, {
                       targetRef: e.targetRef,
                       overrideTargetRect: q,

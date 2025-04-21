@@ -19,7 +19,7 @@ let d = (e) => {
     else if (0 === g.length) {
         let e =
             null != m
-                ? a.NW.format(a.t.qWFupq, {
+                ? a.intl.format(a.t.qWFupq, {
                       addServerHook: function (e, t) {
                           return (0, r.jsx)(
                               i.eee,
@@ -31,7 +31,7 @@ let d = (e) => {
                           );
                       }
                   })
-                : a.NW.string(a.t.vYyEnp);
+                : a.intl.string(a.t.vYyEnp);
         t = (0, r.jsxs)('div', {
             className: c.emptySearchWrapper,
             children: [
@@ -44,7 +44,7 @@ let d = (e) => {
                     variant: 'heading-xl/semibold',
                     color: 'header-primary',
                     className: c.emptySearchTitle,
-                    children: a.NW.string(a.t['6HXiuL'])
+                    children: a.intl.string(a.t['6HXiuL'])
                 }),
                 (0, r.jsx)(i.Text, {
                     variant: 'text-md/normal',
@@ -78,7 +78,7 @@ let d = (e) => {
                                 (0, r.jsx)(i.X6q, {
                                     variant: 'heading-xl/semibold',
                                     className: c.searchPageTitle,
-                                    children: a.NW.format(a.t.UkOHRU, {
+                                    children: a.intl.format(a.t.UkOHRU, {
                                         numResults: g.length,
                                         query: p
                                     })
@@ -89,12 +89,12 @@ let d = (e) => {
                             searchTerm: n,
                             className: c.searchPageBox,
                             inputClassName: c.searchPageInput,
-                            label: a.NW.string(a.t.nL2wKC),
-                            placeholder: a.NW.string(a.t.nL2wKC),
+                            label: a.intl.string(a.t.nL2wKC),
+                            placeholder: a.intl.string(a.t.nL2wKC),
                             onChange: d,
                             onClear: h,
                             onKeyPress: f,
-                            cta: null != n && n.length > 0 ? a.NW.string(a.t['CU+6oK']) : null
+                            cta: null != n && n.length > 0 ? a.intl.string(a.t['CU+6oK']) : null
                         })
                     ]
                 }),

@@ -46,7 +46,7 @@ e.exports = function (e, t, n) {
     function T() {
         return void 0 === _ ? f : S(i());
     }
-    function N() {
+    function A() {
         var e = i(),
             n = O(e);
         if (((c = arguments), (u = this), (p = e), n)) {
@@ -58,10 +58,10 @@ e.exports = function (e, t, n) {
     return (
         (t = a(t) || 0),
         r(n) && ((m = !!n.leading), (d = (g = 'maxWait' in n) ? s(a(n.maxWait) || 0, t) : d), (E = 'trailing' in n ? !!n.trailing : E)),
-        (N.cancel = function () {
+        (A.cancel = function () {
             void 0 !== _ && clearTimeout(_), (h = 0), (c = p = u = _ = void 0);
         }),
-        (N.flush = T),
-        N
+        (A.flush = T),
+        A
     );
 };

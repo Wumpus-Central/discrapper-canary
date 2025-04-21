@@ -1,9 +1,9 @@
-n.d(t, { Z: () => j }), n(388685);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => C }), n(388685);
+var i = n(200651),
+    r = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(442837),
+    l = n.n(s),
+    a = n(442837),
     o = n(481060),
     c = n(37234),
     d = n(153867),
@@ -15,9 +15,9 @@ var r = n(200651),
     f = n(358085),
     b = n(210887),
     _ = n(981631),
-    N = n(388032),
-    x = n(560030);
-let E = [
+    x = n(388032),
+    E = n(560030);
+let j = [
     {
         label: 'Latin alphabet',
         value: 'aBcDeFgHiJkLmNoPqRsTuVwXyZ'
@@ -47,66 +47,66 @@ let E = [
         value: 'custom'
     }
 ];
-function j() {
-    let [e, t] = i.useState(Math.round((window.outerWidth / window.innerWidth) * 100)),
-        { platformZoom: n, theme: s } = (0, l.cj)([b.Z, g.Z], () => ({
+function C() {
+    let [e, t] = r.useState(Math.round((window.outerWidth / window.innerWidth) * 100)),
+        { platformZoom: n, theme: s } = (0, a.cj)([b.Z, g.Z], () => ({
             theme: b.Z.theme,
             platformZoom: g.Z.zoom
         })),
-        [j, C] = i.useState('upright'),
-        O = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
-        S = new Map([
+        [C, O] = r.useState('upright'),
+        S = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
+        v = new Map([
             ['normal', 400],
             ['medium', 500],
             ['semibold', 600],
             ['bold', 700],
             ['extrabold', 800]
         ]);
-    i.useEffect(() => {
+    r.useEffect(() => {
         f.isPlatformEmbedded ||
             window.addEventListener('resize', () => {
                 t(Math.round((window.outerWidth / window.innerWidth) * 100));
             });
     }, []);
-    let v = f.isPlatformEmbedded ? n : e,
-        T = (0, l.e7)([p.C], () => {
+    let T = f.isPlatformEmbedded ? n : e,
+        I = (0, a.e7)([p.C], () => {
             var e, t;
             return (0, h.fD)() ? (null == (t = p.C.getCurrentBuildOverride()) || null == (e = t.overrides) ? void 0 : e.discord_web) : null;
         }),
-        [I, y] = (0, m.R)('playground-overrideText', null),
-        [A, P] = (0, m.R)('playground-defaultText', E[0].value),
-        R = i.useCallback(
+        [N, y] = (0, m.R)('playground-overrideText', null),
+        [A, P] = (0, m.R)('playground-defaultText', j[0].value),
+        R = r.useCallback(
             (e) => {
-                let t = E.find((t) => {
+                let t = j.find((t) => {
                     let { value: n } = t;
                     return n === e;
                 });
-                '' === e || null == e ? (P(E[0].value), y(null)) : null != t ? P(t.value) : (P('custom'), y(e));
+                '' === e || null == e ? (P(j[0].value), y(null)) : null != t ? P(t.value) : (P('custom'), y(e));
             },
             [y, P]
         );
-    return (0, r.jsx)('div', {
-        className: x.fullscreen,
+    return (0, i.jsx)('div', {
+        className: E.fullscreen,
         style: {
-            '--playground-font-family': 'mono' === j ? 'gg mono' : 'gg sans',
-            '--playground-font-style': 'italic' === j ? 'italic' : 'normal'
+            '--playground-font-family': 'mono' === C ? 'gg mono' : 'gg sans',
+            '--playground-font-style': 'italic' === C ? 'italic' : 'normal'
         },
-        children: (0, r.jsxs)(o.hjN, {
+        children: (0, i.jsxs)(o.hjN, {
             tag: o.RB0.H1,
             children: [
-                (0, r.jsxs)('div', {
-                    className: x.toolbar,
+                (0, i.jsxs)('div', {
+                    className: E.toolbar,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, i.jsxs)('div', {
                             children: [
-                                (0, r.jsxs)(o.Text, {
+                                (0, i.jsxs)(o.Text, {
                                     tag: 'div',
                                     variant: 'heading-lg/bold',
                                     style: { display: 'inline-block' },
-                                    children: ['Zoom: ', v, '%']
+                                    children: ['Zoom: ', T, '%']
                                 }),
-                                null != T
-                                    ? (0, r.jsxs)(o.Text, {
+                                null != I
+                                    ? (0, i.jsxs)(o.Text, {
                                           tag: 'div',
                                           variant: 'heading-lg/bold',
                                           style: {
@@ -114,41 +114,41 @@ function j() {
                                               marginLeft: '1em'
                                           },
                                           color: 'header-secondary',
-                                          children: ['(', T.id, ')']
+                                          children: ['(', I.id, ')']
                                       })
                                     : null
                             ]
                         }),
-                        (0, r.jsx)(o.xJW, {
-                            children: (0, r.jsx)(o.q4e, {
-                                className: x.select,
-                                options: E,
+                        (0, i.jsx)(o.xJW, {
+                            children: (0, i.jsx)(o.q4e, {
+                                className: E.select,
+                                options: j,
                                 onChange: (e) => R(e),
                                 value: A
                             })
                         }),
-                        (0, r.jsx)(o.xJW, {
-                            children: (0, r.jsx)('div', {
-                                className: x.input,
-                                children: (0, r.jsx)(o.oil, {
+                        (0, i.jsx)(o.xJW, {
+                            children: (0, i.jsx)('div', {
+                                className: E.input,
+                                children: (0, i.jsx)(o.oil, {
                                     placeholder: 'Enter custom input...',
-                                    value: null != I ? I : '',
+                                    value: null != N ? N : '',
                                     onChange: R
                                 })
                             })
                         }),
-                        (0, r.jsx)(o.xJW, {
-                            children: (0, r.jsx)(o.FXm, {
+                        (0, i.jsx)(o.xJW, {
+                            children: (0, i.jsx)(o.FXm, {
                                 withTransparentBackground: !0,
-                                className: x.theme,
+                                className: E.theme,
                                 orientation: 'horizontal',
                                 options: [
                                     {
-                                        name: N.NW.string(N.t.b8Cei4),
+                                        name: x.intl.string(x.t.b8Cei4),
                                         value: _.BRd.DARK
                                     },
                                     {
-                                        name: N.NW.string(N.t.K2sFfn),
+                                        name: x.intl.string(x.t.K2sFfn),
                                         value: _.BRd.LIGHT
                                     }
                                 ],
@@ -158,10 +158,10 @@ function j() {
                                 value: s
                             })
                         }),
-                        (0, r.jsx)(o.xJW, {
-                            children: (0, r.jsx)(o.FXm, {
+                        (0, i.jsx)(o.xJW, {
+                            children: (0, i.jsx)(o.FXm, {
                                 withTransparentBackground: !0,
-                                className: x.theme,
+                                className: E.theme,
                                 orientation: 'horizontal',
                                 options: [
                                     {
@@ -178,27 +178,27 @@ function j() {
                                     }
                                 ],
                                 onChange: (e) => {
-                                    C(e.value);
+                                    O(e.value);
                                 },
-                                value: j
+                                value: C
                             })
                         }),
-                        (0, r.jsx)(u.Z, {
+                        (0, i.jsx)(u.Z, {
                             closeAction: c.xf,
                             keybind: 'ESC'
                         })
                     ]
                 }),
-                (0, r.jsxs)('div', {
-                    className: x.textGrid,
+                (0, i.jsxs)('div', {
+                    className: E.textGrid,
                     children: [
-                        (0, r.jsx)('div', {}),
-                        O.map((e) =>
-                            (0, r.jsx)(
+                        (0, i.jsx)('div', {}),
+                        S.map((e) =>
+                            (0, i.jsx)(
                                 'div',
                                 {
-                                    className: x.columnHeading,
-                                    children: (0, r.jsx)(o.X6q, {
+                                    className: E.columnHeading,
+                                    children: (0, i.jsx)(o.X6q, {
                                         variant: 'eyebrow',
                                         children: e
                                     })
@@ -207,53 +207,53 @@ function j() {
                             )
                         ),
                         [10, 12, 14, 15, 16, 18, 20, 24].map((e) =>
-                            (0, r.jsxs)(
-                                i.Fragment,
+                            (0, i.jsxs)(
+                                r.Fragment,
                                 {
                                     children: [
-                                        (0, r.jsxs)(
+                                        (0, i.jsxs)(
                                             'div',
                                             {
-                                                className: x.fontSize,
+                                                className: E.fontSize,
                                                 children: [
-                                                    (0, r.jsxs)(o.X6q, {
+                                                    (0, i.jsxs)(o.X6q, {
                                                         variant: 'eyebrow',
                                                         children: [e, 'px']
                                                     }),
-                                                    100 !== v
-                                                        ? (0, r.jsxs)(o.X6q, {
+                                                    100 !== T
+                                                        ? (0, i.jsxs)(o.X6q, {
                                                               variant: 'eyebrow',
                                                               color: 'text-muted',
-                                                              children: ['(', (e * v) / 100, ')']
+                                                              children: ['(', (e * T) / 100, ')']
                                                           })
                                                         : null
                                                 ]
                                             },
                                             e
                                         ),
-                                        O.map((t) => {
+                                        S.map((t) => {
                                             var n;
-                                            let i = null != (n = 'custom' === A ? I : A) ? n : '';
-                                            return (0, r.jsx)(
+                                            let r = null != (n = 'custom' === A ? N : A) ? n : '';
+                                            return (0, i.jsx)(
                                                 'div',
                                                 {
-                                                    className: x.textSample,
-                                                    children: (0, r.jsxs)('div', {
+                                                    className: E.textSample,
+                                                    children: (0, i.jsxs)('div', {
                                                         title: ''.concat(e, 'px at ').concat(t),
-                                                        className: a()(x.text, { [x.breakAnywhere]: !i.includes(' ') }),
+                                                        className: l()(E.text, { [E.breakAnywhere]: !r.includes(' ') }),
                                                         style: {
                                                             fontSize: e,
-                                                            fontWeight: S.get(t)
+                                                            fontWeight: v.get(t)
                                                         },
                                                         children: [
-                                                            (0, r.jsx)('p', { children: i }),
-                                                            (0, r.jsx)('p', {
+                                                            (0, i.jsx)('p', { children: r }),
+                                                            (0, i.jsx)('p', {
                                                                 style: { textTransform: 'lowercase' },
-                                                                children: i
+                                                                children: r
                                                             }),
-                                                            (0, r.jsx)('p', {
+                                                            (0, i.jsx)('p', {
                                                                 style: { textTransform: 'uppercase' },
-                                                                children: i
+                                                                children: r
                                                             })
                                                         ]
                                                     })

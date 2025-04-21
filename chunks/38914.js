@@ -29,7 +29,7 @@ let c = () => {
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'always-white',
-                                    children: l.NW.string(e)
+                                    children: l.intl.string(e)
                                 })
                             ]
                         },

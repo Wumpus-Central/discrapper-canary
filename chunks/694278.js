@@ -53,7 +53,7 @@ function p(e) {
         })({}, e)),
         (n = n =
             {
-                title: u.NW.string(u.t.DpRdYG),
+                title: u.intl.string(u.t.DpRdYG),
                 errorText: x,
                 onConfirm: C,
                 onCancel: m,
@@ -62,7 +62,7 @@ function p(e) {
                         (0, r.jsx)(o.R94, {
                             type: o.R94.Types.DESCRIPTION,
                             className: b.marginBottom20,
-                            children: u.NW.format(u.t.iuRk2t, {})
+                            children: u.intl.format(u.t.iuRk2t, {})
                         }),
                         (0, r.jsx)(o.FXm, {
                             value: g,

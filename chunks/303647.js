@@ -12,22 +12,22 @@ function h(e) {
     var t, a;
     let { transitionState: h, onClose: m, entry: x } = e,
         [b, p] = n.useState(null != (t = x.description) ? t : ''),
-        [g, N] = n.useState(null != (a = x.primaryCategoryId) ? a : o.AR.UNCATEGORIZED),
-        [I, j] = n.useState(!1),
-        [k, _] = n.useState(null),
+        [g, I] = n.useState(null != (a = x.primaryCategoryId) ? a : o.AR.UNCATEGORIZED),
+        [j, k] = n.useState(!1),
+        [N, _] = n.useState(null),
         f = async () => {
             if ((_(null), b !== x.description || g !== x.primaryCategoryId)) {
-                j(!0);
+                k(!0);
                 try {
-                    await (0, c.Dr)(x.channelId, x.guildId, b, g), j(!1), m();
+                    await (0, c.Dr)(x.channelId, x.guildId, b, g), k(!1), m();
                 } catch (e) {
-                    j(!1), _(new s.Z(e));
+                    k(!1), _(new s.Z(e));
                 }
             }
         };
     return (0, i.jsxs)(l.Y0X, {
         transitionState: h,
-        'aria-label': d.NW.string(d.t.eQ2bLi),
+        'aria-label': d.intl.string(d.t.eQ2bLi),
         children: [
             (0, i.jsxs)(l.xBx, {
                 direction: r.Z.Direction.VERTICAL,
@@ -37,13 +37,13 @@ function h(e) {
                     (0, i.jsx)(l.X6q, {
                         className: u.title,
                         variant: 'heading-xl/semibold',
-                        children: d.NW.format(d.t.w9tsNj, { guildName: x.name })
+                        children: d.intl.format(d.t.w9tsNj, { guildName: x.name })
                     }),
                     (0, i.jsx)(l.Text, {
                         className: u.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: d.NW.string(d.t['vEkX//'])
+                        children: d.intl.string(d.t['vEkX//'])
                     }),
                     null != m &&
                         (0, i.jsx)(l.olH, {
@@ -57,24 +57,24 @@ function h(e) {
                 paddingFix: !1,
                 children: [
                     (0, i.jsx)(l.xJW, {
-                        title: d.NW.string(d.t.FFFAGh),
+                        title: d.intl.string(d.t.FFFAGh),
                         children: (0, i.jsx)(l.Kx8, {
                             value: b,
                             maxLength: 200,
-                            placeholder: d.NW.string(d.t.VzuITE),
+                            placeholder: d.intl.string(d.t.VzuITE),
                             onChange: p,
-                            error: null == k ? void 0 : k.getAnyErrorMessage()
+                            error: null == N ? void 0 : N.getAnyErrorMessage()
                         })
                     }),
                     (0, i.jsx)(l.xJW, {
                         className: u.formItemSpaced,
-                        title: d.NW.string(d.t.Olo8FB),
+                        title: d.intl.string(d.t.Olo8FB),
                         children: (0, i.jsx)(l.q4e, {
-                            placeholder: d.NW.string(d.t.XqMe3N),
+                            placeholder: d.intl.string(d.t.XqMe3N),
                             options: (0, o.b7)(x.channelId),
                             clearable: !1,
                             value: g,
-                            onChange: N,
+                            onChange: I,
                             maxVisibleItems: 4
                         })
                     })
@@ -85,8 +85,8 @@ function h(e) {
                 children: (0, i.jsx)(l.zxk, {
                     color: l.zxk.Colors.BRAND,
                     onClick: f,
-                    submitting: I,
-                    children: d.NW.string(d.t.R3BPHx)
+                    submitting: j,
+                    children: d.intl.string(d.t.R3BPHx)
                 })
             })
         ]

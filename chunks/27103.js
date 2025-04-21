@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    l = n(481060),
+    l = n.n(i),
+    a = n(481060),
     o = n(385499),
     s = n(739566),
     c = n(464891),
@@ -24,26 +24,26 @@ function h(e) {
         onMouseEnter: b,
         onMouseLeave: x,
         children: (0, r.jsx)(d.Z, {
-            className: a()(f.mainContainer, { [f.compact]: n }),
+            className: l()(f.mainContainer, { [f.compact]: n }),
             iconNode: n ? null : (0, r.jsx)(u.S, { src: _ }),
             iconContainerClassName: f.iconContainer,
             compact: n,
             children: (0, r.jsxs)('div', {
-                className: a()(f.content, { [f.compact]: n }),
+                className: l()(f.content, { [f.compact]: n }),
                 children: [
                     (0, r.jsx)(c.nD, {
                         message: t,
                         messageClassname: f.spanCorrection,
-                        className: a()(f.usernameContainer, f.spanCorrection, { [f.compact]: n }),
+                        className: l()(f.usernameContainer, f.spanCorrection, { [f.compact]: n }),
                         username: (0, r.jsxs)('div', {
                             className: f.spanCorrection,
                             children: [
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
                                     className: f.username,
-                                    children: m.NW.string(m.t.hG1StL)
+                                    children: m.intl.string(m.t.hG1StL)
                                 }),
                                 (0, r.jsx)(o.Z, {
                                     type: p.Hb.SYSTEM_DM,
@@ -55,8 +55,8 @@ function h(e) {
                         showTimestamp: !0
                     }),
                     (0, r.jsx)('div', {
-                        className: a()(f.__invalid_messageContent, { [f.compact]: n }),
-                        children: m.NW.format(m.t.qntXNT, {
+                        className: l()(f.__invalid_messageContent, { [f.compact]: n }),
+                        children: m.intl.format(m.t.qntXNT, {
                             username: h.nick,
                             usernameHook: g
                         })

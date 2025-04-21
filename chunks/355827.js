@@ -17,7 +17,7 @@ function d(e) {
             (0, r.jsx)(l.Text, {
                 variant: 'text-xs/bold',
                 className: u.header,
-                children: c.NW.format(c.t.e95u3N, { count: n.length })
+                children: c.intl.format(c.t.e95u3N, { count: n.length })
             }),
             (0, r.jsx)(l.Ttm, {
                 className: u.scroller,

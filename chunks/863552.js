@@ -6,7 +6,7 @@ function i(e) {
     var t,
         r,
         { width: i = 24, height: c = 24, color: s = 'currentColor' } = e,
-        a = (function (e, t) {
+        l = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -51,7 +51,7 @@ function i(e) {
                     });
             }
             return e;
-        })({}, (0, o.Z)(a))),
+        })({}, (0, o.Z)(l))),
         (r = r =
             {
                 width: i,

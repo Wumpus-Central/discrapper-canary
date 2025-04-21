@@ -4,8 +4,8 @@ r.d(t, {
 }),
     r(388685);
 var n,
-    a = r(200651),
-    i = r(192379),
+    i = r(200651),
+    a = r(192379),
     l = r(120356),
     s = r.n(l),
     o = r(793030),
@@ -15,32 +15,32 @@ var n,
 function m(e) {
     var t;
     let { game: r, application: n, size: l, className: d } = e,
-        [m, g] = i.useState(!1),
+        [m, g] = a.useState(!1),
         f = null != (t = null == n ? void 0 : n.name) ? t : r.name,
         p = null != r.firstReleaseDate ? new Date(r.firstReleaseDate) : null;
     return null == r.coverImageUrl || m
-        ? (0, a.jsxs)('div', {
+        ? (0, i.jsxs)('div', {
               className: s()(u.fallback, d),
               children: [
-                  (0, a.jsx)('div', { className: u.spacer }),
-                  (0, a.jsx)(o.xv, {
+                  (0, i.jsx)('div', { className: u.spacer }),
+                  (0, i.jsx)(o.xv, {
                       variant: 1 === l ? 'text-md/medium' : 'text-xs/medium',
                       color: 'always-white',
                       lineClamp: 1 === l ? 4 : 3,
                       children: f
                   }),
-                  (0, a.jsx)('div', { className: u.spacer }),
-                  (0, a.jsx)(o.xv, {
+                  (0, i.jsx)('div', { className: u.spacer }),
+                  (0, i.jsx)(o.xv, {
                       variant: 1 === l ? 'text-sm/normal' : 'text-xxs/normal',
                       color: 'always-white',
                       children: null != p ? '('.concat(null == p ? void 0 : p.getFullYear(), ')') : null
                   })
               ]
           })
-        : (0, a.jsx)('img', {
+        : (0, i.jsx)('img', {
               className: d,
               src: r.coverImageUrl,
-              alt: c.NW.formatToPlainString(c.t['3ev90d'], { game: f }),
+              alt: c.intl.formatToPlainString(c.t['3ev90d'], { game: f }),
               onError: () => {
                   g(!0);
               },

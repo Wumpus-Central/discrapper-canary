@@ -25,7 +25,7 @@ function f() {
                   (0, r.jsx)(l.Text, {
                       variant: 'text-sm/medium',
                       color: 'interactive-active',
-                      children: p.NW.format(p.t.zqv4nZ, {
+                      children: p.intl.format(p.t.zqv4nZ, {
                           hook: (e, t) =>
                               (0, r.jsx)(
                                   l.eee,

@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(581364),
     S = n(56801),
     T = n(342687),
-    N = n(826298),
-    A = n(689079),
+    A = n(826298),
+    N = n(689079),
     C = n(981631),
     R = n(388032),
     P = n(702854),
@@ -45,7 +45,7 @@ let D = 512,
             l = i.useRef(0),
             [F, Z] = i.useState(0),
             H = i.useRef(null),
-            [W, Y] = i.useState(!1),
+            [Y, W] = i.useState(!1),
             K = m.Xn.useStore((e) => e.activeCategoryIndex);
         i.useEffect(() => {
             (0, d.yw)(C.rMx.APPLICATION_COMMAND_BROWSER_OPENED);
@@ -71,7 +71,7 @@ let D = 512,
                 },
                 options: {
                     placeholderCount: L,
-                    limit: A.tn,
+                    limit: N.tn,
                     includeFrecency: !0
                 },
                 allowFetch: !0
@@ -104,8 +104,8 @@ let D = 512,
         let ea = i.useCallback((e) => (e !== q.length - 1 || X ? M : 0), [q.length, X]),
             eo = Q.map((e) => e.data.length);
         i.useEffect(() => {
-            null != H.current && W && null != F && H.current.scrollRowIntoView(F);
-        }, [W, F]),
+            null != H.current && Y && null != F && H.current.scrollRowIntoView(F);
+        }, [Y, F]),
             i.useLayoutEffect(() => {
                 if (null != $) {
                     var e;
@@ -114,7 +114,7 @@ let D = 512,
             }, [J, $]);
         let es = i.useCallback(
                 (e) => {
-                    if (e.id === $ || e.id === A.bi.FRECENCY) {
+                    if (e.id === $ || e.id === N.bi.FRECENCY) {
                         var t;
                         et(null), null == (t = H.current) || t.scrollToSectionTop(0);
                     } else et(e.id);
@@ -155,7 +155,7 @@ let D = 512,
                     let t = X ? L : 0,
                         n = J.length + t,
                         r = null == F ? 0 : F + e;
-                    return r >= n ? (r = n - 1) : r < 0 && (r = 0), Z(r), Y(!0), !0;
+                    return r >= n ? (r = n - 1) : r < 0 && (r = 0), Z(r), W(!0), !0;
                 }
             }),
             [J.length, Q, X, z, el, F]
@@ -164,7 +164,7 @@ let D = 512,
                 (e) => {
                     let t = q[e];
                     if (null == t) return null;
-                    let i = (0, N.ky)(t),
+                    let i = (0, A.ky)(t),
                         a = (0, r.jsx)(i, {
                             channel: n,
                             section: t,
@@ -199,7 +199,7 @@ let D = 512,
                                 t,
                                 0 === a.length &&
                                     (0, r.jsx)(c.Z, {
-                                        message: R.NW.format(R.t.WoQXT0, { applicationName: i.name }),
+                                        message: R.intl.format(R.t.WoQXT0, { applicationName: i.name }),
                                         noResultsImageURL: w,
                                         className: P.noSearchResults
                                     })
@@ -216,7 +216,7 @@ let D = 512,
                     let a = Q[t.sectionIndex],
                         o = a.data[t.sectionRowIndex],
                         s = ''.concat(a.section.id, ':').concat(null != (i = null == o ? void 0 : o.id) ? i : e);
-                    if (null == o || (a.section.id !== o.applicationId && a.section.id !== A.bi.FRECENCY) || o.inputType === O.iw.PLACEHOLDER) return (0, r.jsx)(T.Z, {}, s);
+                    if (null == o || (a.section.id !== o.applicationId && a.section.id !== N.bi.FRECENCY) || o.inputType === O.iw.PLACEHOLDER) return (0, r.jsx)(T.Z, {}, s);
                     let l = z.find((e) => e.id === o.applicationId);
                     return (0, r.jsx)(
                         f.ZP.NewCommand,
@@ -230,7 +230,7 @@ let D = 512,
                             section: l,
                             onClick: () => el(o, l, (0, I.tI)(a.section)),
                             onHover: () => {
-                                Z(null), Y(!1);
+                                Z(null), W(!1);
                             }
                         },
                         s

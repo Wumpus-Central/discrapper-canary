@@ -28,7 +28,7 @@ let s = [
                 }
             ],
             angle: 180,
-            getName: () => o.NW.string(o.t.kCdS4e),
+            getName: () => o.intl.string(o.t.kCdS4e),
             midpointPercentage: 27
         },
         {
@@ -45,7 +45,7 @@ let s = [
                 }
             ],
             angle: 180,
-            getName: () => o.NW.string(o.t.S4UnEx),
+            getName: () => o.intl.string(o.t.S4UnEx),
             midpointPercentage: 27
         },
         {
@@ -70,7 +70,7 @@ let s = [
                 }
             ],
             angle: 148.71,
-            getName: () => o.NW.string(o.t['48xnKS']),
+            getName: () => o.intl.string(o.t['48xnKS']),
             midpointPercentage: 50
         },
         {
@@ -91,7 +91,7 @@ let s = [
                 }
             ],
             angle: 38.08,
-            getName: () => o.NW.string(o.t.G4HsBA),
+            getName: () => o.intl.string(o.t.G4HsBA),
             midpointPercentage: 50
         },
         {
@@ -112,7 +112,7 @@ let s = [
                 }
             ],
             angle: 154.19,
-            getName: () => o.NW.string(o.t['NAt88/']),
+            getName: () => o.intl.string(o.t['NAt88/']),
             midpointPercentage: 50
         },
         {
@@ -129,7 +129,7 @@ let s = [
                 }
             ],
             angle: 180.14,
-            getName: () => o.NW.string(o.t.godtzM),
+            getName: () => o.intl.string(o.t.godtzM),
             midpointPercentage: 50
         },
         {
@@ -154,7 +154,7 @@ let s = [
                 }
             ],
             angle: 179.52,
-            getName: () => o.NW.string(o.t.hlS2xs),
+            getName: () => o.intl.string(o.t.hlS2xs),
             midpointPercentage: 27
         },
         {
@@ -175,7 +175,7 @@ let s = [
                 }
             ],
             angle: 38.99,
-            getName: () => o.NW.string(o.t['abMn9/']),
+            getName: () => o.intl.string(o.t['abMn9/']),
             midpointPercentage: 50
         }
     ],
@@ -195,7 +195,7 @@ let s = [
                 }
             ],
             angle: 141.68,
-            getName: () => o.NW.string(o.t.JKDra2),
+            getName: () => o.intl.string(o.t.JKDra2),
             midpointPercentage: 35
         },
         {
@@ -224,7 +224,7 @@ let s = [
                 }
             ],
             angle: 128.92,
-            getName: () => o.NW.string(o.t.kwc8Ul),
+            getName: () => o.intl.string(o.t.kwc8Ul),
             midpointPercentage: 15
         },
         {
@@ -253,7 +253,7 @@ let s = [
                 }
             ],
             angle: 162.27,
-            getName: () => o.NW.string(o.t['TeA/j4']),
+            getName: () => o.intl.string(o.t['TeA/j4']),
             midpointPercentage: 50
         },
         {
@@ -270,7 +270,7 @@ let s = [
                 }
             ],
             angle: 64.92,
-            getName: () => o.NW.string(o.t.blIucn),
+            getName: () => o.intl.string(o.t.blIucn),
             midpointPercentage: 30
         },
         {
@@ -287,7 +287,7 @@ let s = [
                 }
             ],
             angle: 48.17,
-            getName: () => o.NW.string(o.t.O1yOXF),
+            getName: () => o.intl.string(o.t.O1yOXF),
             midpointPercentage: 24
         },
         {
@@ -304,7 +304,7 @@ let s = [
                 }
             ],
             angle: 170.82,
-            getName: () => o.NW.string(o.t['1swi9v']),
+            getName: () => o.intl.string(o.t['1swi9v']),
             midpointPercentage: 50
         },
         {
@@ -321,7 +321,7 @@ let s = [
                 }
             ],
             angle: 180,
-            getName: () => o.NW.string(o.t.So2Wur),
+            getName: () => o.intl.string(o.t.So2Wur),
             midpointPercentage: 50
         },
         {
@@ -342,7 +342,7 @@ let s = [
                 }
             ],
             angle: 179.14,
-            getName: () => o.NW.string(o.t['a22o4+']),
+            getName: () => o.intl.string(o.t['a22o4+']),
             midpointPercentage: 50
         },
         {
@@ -367,7 +367,7 @@ let s = [
                 }
             ],
             angle: 148.71,
-            getName: () => o.NW.string(o.t.Bf294e),
+            getName: () => o.intl.string(o.t.Bf294e),
             midpointPercentage: 61
         },
         {
@@ -388,7 +388,7 @@ let s = [
                 }
             ],
             angle: 180,
-            getName: () => o.NW.string(o.t['p+XCtb']),
+            getName: () => o.intl.string(o.t['p+XCtb']),
             midpointPercentage: 50
         },
         {
@@ -409,7 +409,7 @@ let s = [
                 }
             ],
             angle: 161.03,
-            getName: () => o.NW.string(o.t['d5Ar+v']),
+            getName: () => o.intl.string(o.t['d5Ar+v']),
             midpointPercentage: 32
         },
         {
@@ -438,7 +438,7 @@ let s = [
                 }
             ],
             angle: 239.16,
-            getName: () => o.NW.string(o.t.Je1FWF),
+            getName: () => o.intl.string(o.t.Je1FWF),
             midpointPercentage: 34
         },
         {
@@ -455,7 +455,7 @@ let s = [
                 }
             ],
             angle: 69.98,
-            getName: () => o.NW.string(o.t['Z+Un4+']),
+            getName: () => o.intl.string(o.t['Z+Un4+']),
             midpointPercentage: 50
         }
     ],
@@ -473,7 +473,7 @@ let s = [
             }
         ],
         angle: 47.61,
-        getName: () => o.NW.string(o.t.Mfoe3t),
+        getName: () => o.intl.string(o.t.Mfoe3t),
         midpointPercentage: 50
     },
     d = {
@@ -490,7 +490,7 @@ let s = [
             }
         ],
         angle: 180,
-        getName: () => o.NW.string(o.t.mFinbW),
+        getName: () => o.intl.string(o.t.mFinbW),
         midpointPercentage: 50
     },
     f = [...s, ...c, u, d],
@@ -498,19 +498,19 @@ let s = [
     p = [
         {
             theme: l,
-            getName: () => o.NW.string(o.t.b8Cei4)
+            getName: () => o.intl.string(o.t.b8Cei4)
         },
         {
             theme: a.BR.LIGHT,
-            getName: () => o.NW.string(o.t.K2sFfn)
+            getName: () => o.intl.string(o.t.K2sFfn)
         },
         {
             theme: a.BR.MIDNIGHT,
-            getName: () => o.NW.string(o.t.pQwSpa)
+            getName: () => o.intl.string(o.t.pQwSpa)
         },
         {
             theme: 'system',
-            getName: () => o.NW.string(o.t.zlvNOj)
+            getName: () => o.intl.string(o.t.zlvNOj)
         }
     ],
     h = (0, r.keyBy)(f, 'id');

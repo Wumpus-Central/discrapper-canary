@@ -81,7 +81,7 @@ function O(e, t, n) {
             let f = {};
             if (l > 0) {
                 let e;
-                (e = c > 0 ? m.NW.formatToPlainString(m.t.BP8N0N, { count: l }) : m.NW.formatToPlainString(m.t.lziVCw, { count: l })), (f['data-trailing-placeholder'] = e);
+                (e = c > 0 ? m.intl.formatToPlainString(m.t.BP8N0N, { count: l }) : m.intl.formatToPlainString(m.t.lziVCw, { count: l })), (f['data-trailing-placeholder'] = e);
             }
             return (0, r.jsx)('div', v(b({ className: g.applicationCommand }, i, f), { children: a }));
         case 'applicationCommandOption':
@@ -112,9 +112,9 @@ let I = (e) => {
             },
             [n, a.optionName]
         ),
-        N = (0, l.e7)([f.Z], () => f.Z.getUpload(n, a.optionName, d.d.SlashCommand), [n, a.optionName]),
-        A = a.children[a.children.length - 1],
-        C = null != A && h.LC.isText(A) && A.text.endsWith('\n'),
+        A = (0, l.e7)([f.Z], () => f.Z.getUpload(n, a.optionName, d.d.SlashCommand), [n, a.optionName]),
+        N = a.children[a.children.length - 1],
+        C = null != N && h.LC.isText(N) && N.text.endsWith('\n'),
         R = o()(g.inlineElement, g.optionPill, {
             [g.selectedPill]: O && y,
             [g.erroredPill]: (!O || !y) && T
@@ -125,16 +125,16 @@ let I = (e) => {
     return (
         (t =
             S === c.jw.ATTACHMENT
-                ? (null == N ? void 0 : N.filename) != null
+                ? (null == A ? void 0 : A.filename) != null
                     ? (0, r.jsxs)('span', {
                           className: o()(g.optionPillValue, g.attachmentFilename),
                           contentEditable: !1,
-                          children: [N.filename, E]
+                          children: [A.filename, E]
                       })
                     : (0, r.jsxs)('span', {
                           className: o()(g.optionPillValue, g.readonlyPillValue),
                           contentEditable: !1,
-                          children: [m.NW.string(m.t.GRdFnp), E]
+                          children: [m.intl.string(m.t.GRdFnp), E]
                       })
                 : (0, r.jsxs)('span', {
                       className: g.optionPillValue,

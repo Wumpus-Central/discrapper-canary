@@ -70,8 +70,8 @@ let v = 'default',
     I = [],
     S = [],
     T = 0,
-    N = null,
     A = null,
+    N = null,
     C = {},
     R = null,
     P = null,
@@ -153,16 +153,16 @@ function F(e) {
     var t, n;
     let { clip: r } = e;
     (T = Math.max(T - 1, 0)),
-        (A = y(
+        (N = y(
             E(
                 {
                     applicationName: r.applicationName,
                     ended: !1
                 },
-                A
+                N
             ),
             {
-                newClipIds: [...(null != (t = null == A ? void 0 : A.newClipIds) ? t : []), r.id]
+                newClipIds: [...(null != (t = null == N ? void 0 : N.newClipIds) ? t : []), r.id]
             }
         )),
         (L = y(E({}, L), {
@@ -188,16 +188,16 @@ function Z(e) {
 }
 function H(e) {
     let { channelId: t } = e;
-    N = t;
-}
-function W(e) {
-    let { channelId: t } = e;
-    t !== N && (N = null);
+    A = t;
 }
 function Y(e) {
+    let { channelId: t } = e;
+    t !== A && (A = null);
+}
+function W(e) {
     let { applicationName: t } = e;
     if (((R = null), !L.clipsSettings.clipsEnabled)) return !1;
-    A = {
+    N = {
         applicationName: t,
         newClipIds: [],
         ended: !1
@@ -217,7 +217,7 @@ function z(e) {
         r = null != (i = null == e ? void 0 : e.name) ? i : r;
     }
     if (null == r || '' === r) return !1;
-    A = {
+    N = {
         applicationName: r,
         newClipIds: [],
         ended: !1
@@ -225,8 +225,8 @@ function z(e) {
 }
 function q(e) {
     let { streamKey: t } = e;
-    if (((P = null), (w[t] = []), null == A || (0, l.my)(t).ownerId !== c.default.getId())) return !1;
-    A = 0 === A.newClipIds.length ? null : y(E({}, A), { ended: !0 });
+    if (((P = null), (w[t] = []), null == N || (0, l.my)(t).ownerId !== c.default.getId())) return !1;
+    N = 0 === N.newClipIds.length ? null : y(E({}, N), { ended: !0 });
 }
 function Q(e) {
     (L.hasClips = e.clips.length > 0), (I = e.clips);
@@ -239,8 +239,8 @@ function X(e) {
         })).length && (L.hasClips = !1);
 }
 function J() {
-    if (null == A) return !1;
-    A = null;
+    if (null == N) return !1;
+    N = null;
 }
 function $() {
     L.newClipIds = [];
@@ -284,10 +284,10 @@ class er extends (r = i.ZP.DeviceSettingsStore) {
         return L.clipsSettings;
     }
     getLastClipsSession() {
-        return A;
+        return N;
     }
     getClipsWarningShown(e) {
-        return N === e;
+        return A === e;
     }
     getActiveAnimation() {
         return P;
@@ -420,9 +420,9 @@ let ei = new er(a.Z, {
         CLIPS_UPDATE_METADATA: k,
         RTC_CONNECTION_FLAGS: ee,
         CLIPS_SHOW_CALL_WARNING: H,
-        VOICE_CHANNEL_SELECT: W,
+        VOICE_CHANNEL_SELECT: Y,
         CLIPS_CLASSIFY_HARDWARE: M,
-        CLIPS_INIT: Y,
+        CLIPS_INIT: W,
         CLIPS_INIT_FAILURE: K,
         CLIPS_DISMISS_EDUCATION: en,
         RUNNING_GAMES_CHANGE: et

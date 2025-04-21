@@ -45,7 +45,7 @@ function b(e) {
     })(e);
     return (0, i.jsx)(a.sNh, {
         id: 'mark-channel-read',
-        label: v.NW.string(v.t.e6RscX),
+        label: v.intl.string(v.t.e6RscX),
         action: function () {
             (0, l.U6)(e);
         },

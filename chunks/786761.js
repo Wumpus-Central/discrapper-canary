@@ -81,13 +81,13 @@ function T(e, t) {
         e
     );
 }
-let N = new f.Z({
+let A = new f.Z({
     id: '???',
     username: '???'
 });
-function A(e) {
+function N(e) {
     var t;
-    return null == e.author ? N : null != e.webhook_id ? new f.Z(e.author) : null != (t = h.default.getUser(e.author.id)) ? t : new f.Z(e.author);
+    return null == e.author ? A : null != e.webhook_id ? new f.Z(e.author) : null != (t = h.default.getUser(e.author.id)) ? t : new f.Z(e.author);
 }
 function C(e) {
     return !1;
@@ -112,10 +112,10 @@ function P(e) {
         { reactions: m, interactionData: y } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         O = R(e),
         S = null != (i = null == (t = e.mentions) ? void 0 : t.map((e) => e.id)) ? i : [],
-        N = null != (o = e.mention_roles) ? o : [],
+        A = null != (o = e.mention_roles) ? o : [],
         P = null != (s = e.mention_channels) ? s : [],
         w = e.message_reference,
-        D = A(e),
+        D = N(e),
         L = null,
         M = null == e ? void 0 : e.gift_info,
         U = e.gifting_prompt,
@@ -139,7 +139,7 @@ function P(e) {
                   ignored: p.Z.isIgnoredForMessage(e) || (null != B && p.Z.isIgnored(B)),
                   mentionEveryone: e.mention_everyone,
                   mentions: S,
-                  mentionRoles: N,
+                  mentionRoles: A,
                   mentionChannels: P,
                   messageReference: w,
                   mentioned: (0, b.Sz)({
@@ -147,7 +147,7 @@ function P(e) {
                       channelId: e.channel_id,
                       mentionEveryone: null != (c = e.mention_everyone) && c,
                       mentionUsers: S,
-                      mentionRoles: N
+                      mentionRoles: A
                   }),
                   giftCodes: (0, g.Fp)(e) ? (0, g.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, g.Q_)(e.content),
                   content: F,

@@ -35,12 +35,12 @@ let x = {
         bottomBar: x
     },
     I = {},
-    N = {};
-function P(e) {
+    P = {};
+function w(e) {
     let t = g.Z.getChannel(e);
     return !(null == t || null == t.getGuildId() || t.isGuildVocal()) && !(t.isThread() ? f.Z.isMuted(t.id) : _.ZP.isChannelMuted(t.getGuildId(), t.id)) && (0, d.d)(t);
 }
-function w(e) {
+function N(e) {
     let t = g.Z.getChannel(e);
     if (null == t) return !1;
     let n = t.getGuildId();
@@ -55,7 +55,7 @@ function Z(e) {
 function T(e) {
     var t, n, r;
     let { guildChannels: i } = C.Z.getGuildWithoutChangingGuildActionRows(e),
-        l = i.getChannels(null != (t = N[e]) ? t : []);
+        l = i.getChannels(null != (t = P[e]) ? t : []);
     if (null == l || 0 === l.length) return !1;
     let o = null,
         s = null,
@@ -69,7 +69,7 @@ function T(e) {
         [m, y, _] = i.getSlicedChannels(l);
     for (let e = 0; e < y.length; e++) {
         let t = y[e];
-        if (((P(t.id) || a().some(t.threadIds, P)) && (h = !1), (w(t.id) || a().some(t.threadIds, w)) && (d = !1), g.includes(t.id) && (p = !0), !h && !d && p)) break;
+        if (((w(t.id) || a().some(t.threadIds, w)) && (h = !1), (N(t.id) || a().some(t.threadIds, N)) && (d = !1), g.includes(t.id) && (p = !0), !h && !d && p)) break;
     }
     let O = 0,
         v = !1,
@@ -78,13 +78,13 @@ function T(e) {
     if (h || d)
         for (let e = m.length - 1; e >= 0; e--) {
             let t = m[e];
-            (P(t.id) || a().some(t.threadIds, P)) && (null == s && (s = t.id), (v = !0)), (w(t.id) || a().some(t.threadIds, w)) && (null == o && (o = t.id), (O += b.ZP.getMentionCount(t.id)), (O += a().sumBy(t.threadIds, b.ZP.getMentionCount)));
+            (w(t.id) || a().some(t.threadIds, w)) && (null == s && (s = t.id), (v = !0)), (N(t.id) || a().some(t.threadIds, N)) && (null == o && (o = t.id), (O += b.ZP.getMentionCount(t.id)), (O += a().sumBy(t.threadIds, b.ZP.getMentionCount)));
         }
     if (h || d)
         for (let e = 0; e < _.length; e++) {
             let t = _[e];
             if (!h && !d) break;
-            (P(t.id) || a().some(t.threadIds, P)) && (null == u && (u = t.id), (S = !0)), (w(t.id) || a().some(t.threadIds, w)) && (null == c && (c = t.id), (j += b.ZP.getMentionCount(t.id)), (j += a().sumBy(t.threadIds, b.ZP.getMentionCount)));
+            (w(t.id) || a().some(t.threadIds, w)) && (null == u && (u = t.id), (S = !0)), (N(t.id) || a().some(t.threadIds, N)) && (null == c && (c = t.id), (j += b.ZP.getMentionCount(t.id)), (j += a().sumBy(t.threadIds, b.ZP.getMentionCount)));
         }
     let E = null,
         T = null,
@@ -184,7 +184,7 @@ let G = new U(u.Z, {
     UPDATE_CHANNEL_LIST_DIMENSIONS: function (e) {
         let { guildId: t, channelIds: n } = e,
             r = m.Z.getGuild(t);
-        return null != r && !!r.hasFeature(j.oNc.COMMUNITY) && null != n && !a().isEqual(N[t], n) && ((N[t] = n), T(t));
+        return null != r && !!r.hasFeature(j.oNc.COMMUNITY) && null != n && !a().isEqual(P[t], n) && ((P[t] = n), T(t));
     },
     BULK_ACK: function (e) {
         let { channels: t } = e,

@@ -80,8 +80,8 @@ function S(e, t) {
 function T(e, t) {
     let { preset: n, resolution: y, fps: O } = (0, a.cj)([u.Z], () => u.Z.getState()),
         T = (0, a.e7)([_.Z], () => _.Z.getGoLiveSource()),
-        N = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
-        A = (0, a.e7)([f.Z], () => {
+        A = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
+        N = (0, a.e7)([f.Z], () => {
             var t;
             return null == (t = f.Z.getGuild(null == e ? void 0 : e.guildId)) ? void 0 : t.premiumTier;
         }),
@@ -126,7 +126,7 @@ function T(e, t) {
     let w = n === g.tI.PRESET_DOCUMENTS ? g.ws.FPS_30 : O,
         D = g.af.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(g.tI.PRESET_CUSTOM, y, t, N, A, R);
+                i = (0, c.Z)(g.tI.PRESET_CUSTOM, y, t, A, N, R);
             return (0, r.jsx)(
                 o.k5B,
                 {
@@ -141,7 +141,7 @@ function T(e, t) {
         }),
         L = g.km.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(g.tI.PRESET_CUSTOM, t, w, N, A, R);
+                i = (0, c.Z)(g.tI.PRESET_CUSTOM, t, w, A, N, R);
             return (0, r.jsx)(
                 o.k5B,
                 {
@@ -157,11 +157,11 @@ function T(e, t) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.kSQ, {
-                label: b.NW.string(b.t.SkkeIi),
+                label: b.intl.string(b.t.SkkeIi),
                 children: D
             }),
             (0, r.jsx)(o.kSQ, {
-                label: b.NW.string(b.t.rHyPXl),
+                label: b.intl.string(b.t.rHyPXl),
                 children: L
             })
         ]

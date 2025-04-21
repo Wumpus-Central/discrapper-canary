@@ -1,8 +1,8 @@
 n.d(t, { P: () => u }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
-    s = n(481060),
-    l = n(63063),
+    l = n(481060),
+    s = n(63063),
     a = n(434404),
     o = n(981631),
     c = n(388032),
@@ -16,31 +16,31 @@ function u(e) {
             },
             [t]
         );
-    return (0, r.jsxs)(s.hjN, {
+    return (0, r.jsxs)(l.hjN, {
         children: [
-            (0, r.jsxs)(s.vwX, {
+            (0, r.jsxs)(l.vwX, {
                 className: d.subtitle,
                 children: [
-                    c.NW.string(c.t.FOYxgo),
-                    (0, r.jsx)(s.IGR, {
-                        text: c.NW.string(c.t.oW0eUV),
-                        color: s.TVs.unsafe_rawColors.BRAND_500.css
+                    c.intl.string(c.t.FOYxgo),
+                    (0, r.jsx)(l.IGR, {
+                        text: c.intl.string(c.t.oW0eUV),
+                        color: l.TVs.unsafe_rawColors.BRAND_500.css
                     })
                 ]
             }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-secondary',
                 className: d.description,
-                children: c.NW.format(c.t['c6Cy/v'], { helpdeskArticle: l.Z.getArticleURL(o.BhN.CONVERSATION_SUMMARIES) })
+                children: c.intl.format(c.t['c6Cy/v'], { helpdeskArticle: s.Z.getArticleURL(o.BhN.CONVERSATION_SUMMARIES) })
             }),
-            (0, r.jsx)(s.j7V, {
+            (0, r.jsx)(l.j7V, {
                 className: d.switch,
                 onChange: u,
                 value: t.has(o.oNc.SUMMARIES_ENABLED_BY_USER),
                 hideBorder: !0,
                 disabled: !n,
-                children: c.NW.string(c.t.vmEDQk)
+                children: c.intl.string(c.t.vmEDQk)
             })
         ]
     });

@@ -2,8 +2,8 @@ n.d(t, { Z: () => p }), n(388685);
 var r = n(200651),
     l = n(192379),
     o = n(399606),
-    a = n(481060),
-    i = n(823596),
+    i = n(481060),
+    a = n(823596),
     s = n(201070),
     c = n(893966),
     u = n(527379),
@@ -60,30 +60,30 @@ function p(e) {
         g = (0, s.$j)(t),
         x = l.useMemo(
             () =>
-                i.LU.map((e) => ({
+                a.LU.map((e) => ({
                     value: e,
                     label: Number(e).toLocaleString()
                 })),
             []
         ),
-        v = new Intl.NumberFormat(d.NW.currentLocale).format(h),
-        O = d.NW.formatToPlainString(d.t.RNDnQ0, { count: g ? '...' : v }),
+        v = new Intl.NumberFormat(d.intl.currentLocale).format(h),
+        O = d.intl.formatToPlainString(d.t.RNDnQ0, { count: g ? '...' : v }),
         y = h > j.pageSize || g,
-        N = h > i.LU['0'];
+        _ = h > a.LU['0'];
     return (0, r.jsxs)('div', {
         className: C.paginationContainer,
         children: [
             (0, r.jsx)('div', {
                 className: C.pageSizeSelection,
-                children: N
+                children: _
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(a.Text, {
+                              (0, r.jsx)(i.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-muted',
-                                  children: d.NW.string(d.t.jNwLu7)
+                                  children: d.intl.string(d.t.jNwLu7)
                               }),
-                              (0, r.jsx)(a.PhF, {
+                              (0, r.jsx)(i.PhF, {
                                   'aria-label': O,
                                   className: C.pageSizeInput,
                                   options: x,
@@ -97,12 +97,12 @@ function p(e) {
                                   popoutPosition: 'top',
                                   popoutWidth: 72
                               }),
-                              (0, r.jsx)(a.ua7, {
-                                  text: d.NW.string(d.t.ZTNur6),
+                              (0, r.jsx)(i.ua7, {
+                                  text: d.intl.string(d.t.ZTNur6),
                                   shouldShow: g,
                                   children: (e) =>
                                       (0, r.jsx)(
-                                          a.Text,
+                                          i.Text,
                                           b(
                                               m(
                                                   {
@@ -118,17 +118,17 @@ function p(e) {
                               })
                           ]
                       })
-                    : (0, r.jsx)(a.Text, {
+                    : (0, r.jsx)(i.Text, {
                           variant: 'text-md/normal',
                           color: 'text-muted',
-                          children: d.NW.format(d.t.GZpwMD, { count: h })
+                          children: d.intl.format(d.t.GZpwMD, { count: h })
                       })
             }),
             (0, r.jsx)('div', {
                 className: C.pagination,
                 children:
                     y &&
-                    (0, r.jsx)(a.DsT, {
+                    (0, r.jsx)(i.DsT, {
                         className: C.paginationInput,
                         totalCount: h,
                         pageSize: j.pageSize,
@@ -143,7 +143,7 @@ function p(e) {
                                     });
                                 });
                         },
-                        maxVisiblePages: i.hW
+                        maxVisiblePages: a.hW
                     })
             })
         ]

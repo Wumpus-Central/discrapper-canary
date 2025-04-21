@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(539854), n(388685), n(467055);
+n.d(t, { Z: () => y }), n(539854), n(388685), n(467055);
 var r = n(192379),
     i = n(512722),
     l = n.n(i),
@@ -41,7 +41,7 @@ function O(e) {
     }
     return e;
 }
-function N(e, t, n) {
+function y(e, t, n) {
     let i = (0, s.e7)([h.Z], () => h.Z.getApplicationPermissions()),
         o = r.useMemo(
             () =>
@@ -68,7 +68,7 @@ function N(e, t, n) {
                 })(e, null != i ? i : {}),
             [i, e]
         ),
-        N = (0, s.e7)(
+        y = (0, s.e7)(
             [h.Z],
             () => {
                 var e;
@@ -78,7 +78,7 @@ function N(e, t, n) {
             },
             [n]
         ),
-        y = (0, s.e7)(
+        v = (0, s.e7)(
             [h.Z],
             () => {
                 var e;
@@ -86,18 +86,18 @@ function N(e, t, n) {
             },
             [n]
         ),
-        v = null != n ? n : t,
-        _ = null != n ? N : o,
-        C = r.useMemo(() => (null != y ? y : O({}, null != _ ? _ : {})), [y, _]),
-        I = r.useMemo(() => Object.keys(C).length, [C]),
-        S = r.useMemo(() => (null == _ || null == C ? null : !a().isEqual(_, C)), [_, C]);
+        _ = null != n ? n : t,
+        C = null != n ? y : o,
+        N = r.useMemo(() => (null != v ? v : O({}, null != C ? C : {})), [v, C]),
+        I = r.useMemo(() => Object.keys(N).length, [N]),
+        S = r.useMemo(() => (null == C || null == N ? null : !a().isEqual(C, N)), [C, N]);
     return (
         r.useEffect(() => {
-            v === t && (S ? c.Z.startEditingCommandPermissions(v) : c.Z.stopEditingCommandPermissions(v));
-        }, [t, S, v]),
+            _ === t && (S ? c.Z.startEditingCommandPermissions(_) : c.Z.stopEditingCommandPermissions(_));
+        }, [t, S, _]),
         {
             originalApplicationPermissions: o,
-            originalCommandPermissions: N,
+            originalCommandPermissions: y,
             editedTargetPermissions: (function (e, t) {
                 let n = (0, s.e7)([m.Z], () => m.Z.getGuild(e), [e]);
                 l()(null != n, 'guild must be present to be editing its integration settings');
@@ -123,7 +123,7 @@ function N(e, t, n) {
                             userIds: r
                         };
                     }, [t]),
-                    N = (0, s.cj)(
+                    y = (0, s.cj)(
                         [p.Z],
                         () =>
                             Object.fromEntries(
@@ -134,7 +134,7 @@ function N(e, t, n) {
                             ),
                         [c]
                     ),
-                    y = (0, s.cj)(
+                    v = (0, s.cj)(
                         [m.Z],
                         () =>
                             Object.fromEntries(
@@ -145,7 +145,7 @@ function N(e, t, n) {
                             ),
                         [h, e]
                     ),
-                    v = (0, s.cj)(
+                    _ = (0, s.cj)(
                         [g.default],
                         () =>
                             Object.fromEntries(
@@ -165,14 +165,14 @@ function N(e, t, n) {
                             c = !1;
                         if (s.type === d.Kw.CHANNEL) {
                             let e = s.id === r,
-                                n = N[s.id];
+                                n = y[s.id];
                             (t = e || b.Z.can(j.Plq.VIEW_CHANNEL, n)), (c = !0);
                         } else if (s.type === d.Kw.ROLE) {
                             let r = s.id === e,
-                                l = y[s.id];
+                                l = v[s.id];
                             (t = r || null != l), (c = a || r || b.Z.isRoleHigher(n, i, l));
                         } else if (s.type === d.Kw.USER) {
-                            let e = v[s.id];
+                            let e = _[s.id];
                             (t = null != e), (c = null != e && (a || b.Z.canManageUser(j.Plq.USE_APPLICATION_COMMANDS, e, n)));
                         }
                         l[o] = (function (e, t) {
@@ -198,8 +198,8 @@ function N(e, t, n) {
                         });
                     }
                     return l;
-                }, [N, n, i, a, t, y, v]);
-            })(e, C),
+                }, [y, n, i, a, t, v, _]);
+            })(e, N),
             hasChanges: S,
             selectedPermissionCount: I
         }

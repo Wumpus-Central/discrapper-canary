@@ -10,21 +10,21 @@ var n = l(200651),
     d = l(910693),
     x = l(594174),
     _ = l(626135),
-    N = l(5192),
-    h = l(590433),
-    m = l(981631),
-    T = l(388032),
-    C = l(454489);
+    h = l(5192),
+    m = l(590433),
+    T = l(981631),
+    C = l(388032),
+    N = l(454489);
 function U(e) {
     return {
         value: e,
         get label() {
             var t;
-            return null == (t = (0, h.L9)(e)) ? void 0 : t.toLocaleUpperCase();
+            return null == (t = (0, m.L9)(e)) ? void 0 : t.toLocaleUpperCase();
         }
     };
 }
-let g = [U(h.UK.DURATION_60_SEC), U(h.UK.DURATION_5_MIN), U(h.UK.DURATION_10_MIN), U(h.UK.DURATION_1_HOUR), U(h.UK.DURATION_1_DAY), U(h.UK.DURATION_1_WEEK)];
+let g = [U(m.UK.DURATION_60_SEC), U(m.UK.DURATION_5_MIN), U(m.UK.DURATION_10_MIN), U(m.UK.DURATION_1_HOUR), U(m.UK.DURATION_1_DAY), U(m.UK.DURATION_1_WEEK)];
 function k(e) {
     var t, l;
     let { guildId: U, userId: k, anaylticsLocations: p, transitionState: I, onClose: S } = e,
@@ -32,20 +32,20 @@ function k(e) {
         { analyticsLocations: j } = (0, i.ZP)(),
         v = null != (l = null != (t = null == p ? void 0 : p[0]) ? t : null == j ? void 0 : j[0]) ? l : null,
         D = (0, o.e7)([x.default], () => x.default.getUser(k), [k]),
-        [b, O] = s.useState(h.UK.DURATION_60_SEC),
+        [b, O] = s.useState(m.UK.DURATION_60_SEC),
         E = (0, d.sE)(U, {
             location: v,
             targetUserId: k
         }),
         [A, R] = s.useState(''),
         [y, B] = s.useState(!1),
-        W = s.useCallback(async () => {
+        K = s.useCallback(async () => {
             if (null != D) {
                 B(!0);
                 try {
-                    await r.Z.setCommunicationDisabledDuration(U, k, b, A, v), E(d.jQ.TIMEOUT), (0, a.showToast)((0, a.createToast)(T.NW.formatToPlainString(T.t.O9C3Nj, { user: N.ZP.getName(U, null, D) }), a.ToastType.SUCCESS)), S();
+                    await r.Z.setCommunicationDisabledDuration(U, k, b, A, v), E(d.jQ.TIMEOUT), (0, a.showToast)((0, a.createToast)(C.intl.formatToPlainString(C.t.O9C3Nj, { user: h.ZP.getName(U, null, D) }), a.ToastType.SUCCESS)), S();
                 } catch (e) {
-                    (0, a.showToast)((0, a.createToast)(T.NW.string(T.t.epyCur), a.ToastType.FAILURE));
+                    (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.epyCur), a.ToastType.FAILURE));
                 } finally {
                     B(!1);
                 }
@@ -53,8 +53,8 @@ function k(e) {
         }, [U, D, k, S, b, A, v, E]);
     return ((0, c.ZP)(() => {
         null != D &&
-            _.default.track(m.rMx.OPEN_MODAL, {
-                type: h.Cl,
+            _.default.track(T.rMx.OPEN_MODAL, {
+                type: m.Cl,
                 guild_id: U,
                 other_user_id: D.id
             });
@@ -69,39 +69,39 @@ function k(e) {
               'aria-labelledby': f,
               children: [
                   (0, n.jsxs)(a.xBx, {
-                      className: C.header,
+                      className: N.header,
                       separator: !1,
                       children: [
                           (0, n.jsx)(a.X6q, {
                               id: f,
                               variant: 'heading-lg/semibold',
-                              children: T.NW.format(T.t.OhsOy8, { user: N.ZP.getName(U, null, D) })
+                              children: C.intl.format(C.t.OhsOy8, { user: h.ZP.getName(U, null, D) })
                           }),
                           (0, n.jsx)(a.P3F, {
                               onClick: S,
-                              className: C.closeButton,
-                              'aria-label': T.NW.string(T.t.cpT0Cg),
+                              className: N.closeButton,
+                              'aria-label': C.intl.string(C.t.cpT0Cg),
                               children: (0, n.jsx)(a.Dio, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: C.closeIcon
+                                  className: N.closeIcon
                               })
                           })
                       ]
                   }),
                   (0, n.jsxs)(a.hzk, {
-                      className: C.contentContainer,
+                      className: N.contentContainer,
                       children: [
                           (0, n.jsx)(a.Text, {
                               variant: 'text-md/normal',
                               color: 'interactive-normal',
-                              children: T.NW.format(T.t.Ns83GR, { helpdeskArticle: h.cu })
+                              children: C.intl.format(C.t.Ns83GR, { helpdeskArticle: m.cu })
                           }),
                           (0, n.jsx)(a.Text, {
-                              className: C.selectorHeader,
+                              className: N.selectorHeader,
                               variant: 'text-xs/semibold',
                               color: 'interactive-normal',
-                              children: T.NW.string(T.t['9XsExs'])
+                              children: C.intl.string(C.t['9XsExs'])
                           }),
                           (0, n.jsx)(a.hE2, {
                               buttons: g.map((e) =>
@@ -110,44 +110,44 @@ function k(e) {
                                       return {
                                           content: (0, n.jsx)(a.Text, {
                                               variant: 'text-xs/normal',
-                                              className: t ? C.selectorTextSelected : C.selectorText,
+                                              className: t ? N.selectorTextSelected : N.selectorText,
                                               children: o
                                           }),
-                                          className: t ? C.selectorButtonSelected : C.selectorButton,
+                                          className: t ? N.selectorButtonSelected : N.selectorButton,
                                           onClick: () => l(s)
                                       };
                                   })(e, e.value === b, O)
                               )
                           }),
                           (0, n.jsx)(a.Text, {
-                              className: C.selectorHeader,
+                              className: N.selectorHeader,
                               variant: 'text-xs/semibold',
                               color: 'interactive-normal',
-                              children: T.NW.string(T.t.ewHW19)
+                              children: C.intl.string(C.t.ewHW19)
                           }),
                           (0, n.jsx)(a.Kx8, {
                               value: A,
                               onChange: (e) => R(e),
-                              placeholder: T.NW.string(T.t.GakiHx),
+                              placeholder: C.intl.string(C.t.GakiHx),
                               rows: 2,
-                              maxLength: h.GN
+                              maxLength: m.GN
                           })
                       ]
                   }),
                   (0, n.jsxs)(a.mzw, {
                       children: [
                           (0, n.jsx)(a.zxk, {
-                              onClick: W,
+                              onClick: K,
                               color: a.zxk.Colors.BRAND,
                               submitting: y,
-                              children: T.NW.string(T.t.MlPTIi)
+                              children: C.intl.string(C.t.MlPTIi)
                           }),
                           (0, n.jsx)(a.zxk, {
                               type: 'button',
                               look: a.zxk.Looks.LINK,
                               color: a.zxk.Colors.PRIMARY,
                               onClick: S,
-                              children: T.NW.string(T.t['ETE/oK'])
+                              children: C.intl.string(C.t['ETE/oK'])
                           })
                       ]
                   })

@@ -75,7 +75,7 @@ function y(e) {
             (0, a.EW)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
     let j = (0, c.ZP)(t.id),
-        S = j.length > 0 ? f.NW.formatToPlainString(f.t.IBdqSk, { number: j.length }) : f.NW.string(f.t.tlopTE);
+        S = j.length > 0 ? f.intl.formatToPlainString(f.t.IBdqSk, { number: j.length }) : f.intl.string(f.t.tlopTE);
     return (0, r.jsx)(h.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>

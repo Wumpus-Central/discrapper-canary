@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(e, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -10,23 +10,23 @@ var i = n(442837),
     s = n(346329),
     d = n(981631),
     b = n(388032);
-function p(e) {
-    let t = (0, i.e7)([c.ZP], () => c.ZP.getRunningVerifiedApplicationIds().includes(e.id), [e.id]),
-        n = (0, i.e7)([u.Z], () => u.Z.isInstalled(e.id, e.branchId), [e.branchId, e.id]),
-        p = (0, i.e7)([o.Z], () => o.Z.getTargetManifests(e.id, e.branchId), [e.branchId, e.id]);
+function p(t) {
+    let e = (0, i.e7)([c.ZP], () => c.ZP.getRunningVerifiedApplicationIds().includes(t.id), [t.id]),
+        n = (0, i.e7)([u.Z], () => u.Z.isInstalled(t.id, t.branchId), [t.branchId, t.id]),
+        p = (0, i.e7)([o.Z], () => o.Z.getTargetManifests(t.id, t.branchId), [t.branchId, t.id]);
     return n
-        ? t
+        ? e
             ? null
             : (0, r.jsx)(l.sNh, {
                   id: 'uninstall',
-                  label: b.NW.string(b.t.DwgfOD),
-                  action: () => (0, a.W)(e.id, e.branchId, d.Sbl.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL)
+                  label: b.intl.string(b.t.DwgfOD),
+                  action: () => (0, a.W)(t.id, t.branchId, d.Sbl.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL)
               })
         : null == p
           ? null
           : (0, r.jsx)(l.sNh, {
                 id: 'install',
-                label: b.NW.string(b.t['N+XVnp']),
-                action: () => s.installApplication(e.id, e.branchId, d.Sbl.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL)
+                label: b.intl.string(b.t['N+XVnp']),
+                action: () => s.installApplication(t.id, t.branchId, d.Sbl.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL)
             });
 }

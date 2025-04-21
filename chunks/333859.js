@@ -1,10 +1,10 @@
-n.d(t, { c: () => E });
-var r = n(200651);
+n.d(t, { c: () => j });
+var i = n(200651);
 n(192379);
-var i = n(442837),
+var r = n(442837),
     s = n(481060),
-    a = n(37234),
-    l = n(493773),
+    l = n(37234),
+    a = n(493773),
     o = n(100527),
     c = n(906732),
     d = n(94795),
@@ -16,13 +16,13 @@ var i = n(442837),
     f = n(981631),
     b = n(474936),
     _ = n(388032),
-    N = n(614467);
-let x = () => {
-        (0, d.nJ)(), (0, a.xf)();
+    x = n(614467);
+let E = () => {
+        (0, d.nJ)(), (0, l.xf)();
     },
-    E = () => {
+    j = () => {
         let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
-            t = (0, i.e7)([u.Z], () => u.Z.isUpsellPreview),
+            t = (0, r.e7)([u.Z], () => u.Z.isUpsellPreview),
             { enabled: n } = g.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceInAppIcon' },
                 {
@@ -31,40 +31,40 @@ let x = () => {
                 }
             );
         return (
-            (0, l.ZP)(() => {
+            (0, a.ZP)(() => {
                 t &&
                     h.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: b.cd.APP_ICON_UPSELL,
                         location_stack: e
                     });
             }),
-            (0, r.jsxs)('div', {
-                className: N.selectionGroup,
+            (0, i.jsxs)('div', {
+                className: x.selectionGroup,
                 children: [
-                    (0, r.jsx)(m.Z, {
+                    (0, i.jsx)(m.Z, {
                         disabled: t && !n,
                         renderCTAButtons: () =>
-                            (0, r.jsxs)('div', {
-                                className: N.tryItOutButtons,
+                            (0, i.jsxs)('div', {
+                                className: x.tryItOutButtons,
                                 children: [
-                                    (0, r.jsx)(s.zxk, {
+                                    (0, i.jsx)(s.zxk, {
                                         size: s.zxk.Sizes.MEDIUM,
                                         color: !n && t ? s.zxk.Colors.PRIMARY : s.zxk.Colors.BRAND,
-                                        onClick: () => x(),
-                                        children: n ? _.NW.string(_.t.SKNnqq) : _.NW.string(_.t['hb/wEx'])
+                                        onClick: () => E(),
+                                        children: n ? _.intl.string(_.t.SKNnqq) : _.intl.string(_.t['hb/wEx'])
                                     }),
                                     t
-                                        ? (0, r.jsx)(p.Z, {
-                                              className: N.tryItOutButton,
+                                        ? (0, i.jsx)(p.Z, {
+                                              className: x.tryItOutButton,
                                               showGradient: n,
                                               subscriptionTier: b.Si.TIER_2,
-                                              buttonText: n ? _.NW.string(_.t.pj0XBA) : _.NW.string(_.t.mr4K7O)
+                                              buttonText: n ? _.intl.string(_.t.pj0XBA) : _.intl.string(_.t.mr4K7O)
                                           })
                                         : null
                                 ]
                             })
                     }),
-                    (0, r.jsx)(s.$i$, { className: N.divider })
+                    (0, i.jsx)(s.$i$, { className: x.divider })
                 ]
             })
         );

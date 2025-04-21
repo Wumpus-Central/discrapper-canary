@@ -13,13 +13,13 @@ function u(e) {
         className: l()(a.container, t),
         children: [
             (0, r.jsx)('img', {
-                alt: o.NW.string(o.t.VoB8OT),
+                alt: o.intl.string(o.t.VoB8OT),
                 src: c,
                 className: l()(a.sparkleIcon, a.sparkleBottom)
             }),
             n,
             (0, r.jsx)('img', {
-                alt: o.NW.string(o.t.VoB8OT),
+                alt: o.intl.string(o.t.VoB8OT),
                 src: s,
                 className: l()(a.sparkleIcon, a.sparkleTop)
             })

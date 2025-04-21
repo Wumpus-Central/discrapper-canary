@@ -102,7 +102,7 @@ let S = async (e) => {
                 body: e,
                 rejectWithError: !1
             }),
-                N(t, n, r, c),
+                A(t, n, r, c),
                 a.Z.dispatch({ type: 'VOICE_CHANNEL_EFFECT_SENT_LOCAL' });
         } catch (e) {
             if (429 === e.status && null != e.body.retry_after) {
@@ -118,7 +118,7 @@ let S = async (e) => {
         [g.q.BASIC]: 'Basic',
         [g.q.PREMIUM]: 'Premium'
     },
-    N = (e, t, n, r) => {
+    A = (e, t, n, r) => {
         let { unicode: i, custom: a, customExternal: o, managed: l, managedExternal: c, animated: u } = (0, _.sp)([t], e.getGuildId()),
             d = T[r];
         s.ZP.trackWithMetadata(E.rMx.VOICE_CHANNEL_EFFECT_SENT, {

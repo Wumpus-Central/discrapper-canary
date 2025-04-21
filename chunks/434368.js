@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var r = n(200651),
     l = n(192379),
     o = n(498607),
-    a = n.n(o),
-    i = n(399606),
+    i = n.n(o),
+    a = n(399606),
     s = n(481060),
     c = n(203893),
     u = n(910693),
@@ -57,7 +57,7 @@ function h(e, t) {
 }
 function j(e) {
     let { guildId: t, onClose: n } = e,
-        o = (0, i.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], a()),
+        o = (0, a.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], i()),
         j = (0, u.dW)(t),
         g = l.useCallback(() => {
             o.requireUnusualDmActivity || j(u.aY.UNUSUAL_DM_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualDmActivity: !o.requireUnusualDmActivity }));
@@ -74,7 +74,7 @@ function j(e) {
     return (0, r.jsx)(s.v2r, {
         navId: 'member-safety-flags',
         onClose: n,
-        'aria-label': b.NW.string(b.t.k9m8Rk),
+        'aria-label': b.intl.string(b.t.k9m8Rk),
         onSelect: m.dG4,
         children: (0, r.jsxs)(s.kSQ, {
             children: [
@@ -90,7 +90,7 @@ function j(e) {
                                 height: 16,
                                 className: p.unusualDMLabelIcon
                             }),
-                            b.NW.string(b.t.ZRnONz)
+                            b.intl.string(b.t.ZRnONz)
                         ]
                     }),
                     action: g,
@@ -108,7 +108,7 @@ function j(e) {
                                 height: 16,
                                 className: p.timeoutLabelIcon
                             }),
-                            b.NW.string(b.t.z3wbj4)
+                            b.intl.string(b.t.z3wbj4)
                         ]
                     }),
                     action: x,
@@ -126,7 +126,7 @@ function j(e) {
                                         height: 16,
                                         className: p.unusualAccountActivityLabelIcon
                                     }),
-                                    b.NW.string(b.t.DIQsDw)
+                                    b.intl.string(b.t.DIQsDw)
                                 ]
                             }),
                             action: v,
@@ -144,7 +144,7 @@ function j(e) {
                                         height: 16,
                                         className: p.quarantinedLabelIcon
                                     }),
-                                    b.NW.string(b.t.Jloklp)
+                                    b.intl.string(b.t.Jloklp)
                                 ]
                             }),
                             action: O,

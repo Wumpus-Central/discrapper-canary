@@ -190,14 +190,14 @@ function T() {
         }),
         (g.sortedVoiceFilters = v(g.voiceFilters));
 }
-function N(e) {
+function A(e) {
     let { modelId: t } = e;
     g.modelState[t] = p(f({}, g.modelState[t]), {
         status: c.L.DOWNLOADING,
         downloadedBytes: 0
     });
 }
-function A(e) {
+function N(e) {
     let { modelId: t, downloadedBytes: n, totalBytes: r } = e;
     g.modelState[t] = p(f({}, g.modelState[t]), {
         downloadedBytes: n,
@@ -231,8 +231,8 @@ function L() {
 }
 d(S, 'displayName', 'VoiceFilterStore');
 let x = new S(l.Z, {
-    VOICE_FILTER_DOWNLOAD_STARTED: N,
-    VOICE_FILTER_DOWNLOAD_PROGRESS: A,
+    VOICE_FILTER_DOWNLOAD_STARTED: A,
+    VOICE_FILTER_DOWNLOAD_PROGRESS: N,
     VOICE_FILTER_DOWNLOAD_FAILED: C,
     VOICE_FILTER_FILE_READY: R,
     VOICE_FILTER_CATALOG_FETCH_SUCCESS: O,

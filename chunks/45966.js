@@ -87,14 +87,14 @@ function T(e, t, n) {
         isNew: null == t[e.id]
     });
 }
-function N(e, t, n) {
+function A(e, t, n) {
     return e.map((e) => T(e, t, n));
 }
-function A(e) {
+function N(e) {
     let { guildId: t, prompts: n, defaultChannelIds: r, enabled: i, responses: a, onboardingPromptsSeen: o, onboardingResponsesSeen: s, mode: l, belowRequirements: c } = e;
     O = !1;
     let u = _.ZP.getOnboardingStatus(t) === _.uX.READY,
-        d = N(n, o, s);
+        d = A(n, o, s);
     (b[t] = {
         enabled: i,
         mode: l,
@@ -117,7 +117,7 @@ function R(e) {
     let { guildId: u, updates: d } = e,
         f = null != (a = null != (i = d.onboardingPromptsSeen) ? i : null == (t = b[u]) ? void 0 : t.onboardingPromptsSeen) ? a : {},
         _ = null != (s = null != (o = d.onboardingResponsesSeen) ? o : null == (n = b[u]) ? void 0 : n.onboardingResponsesSeen) ? s : {},
-        p = N(null != (c = null != (l = d.prompts) ? l : null == (r = b[u]) ? void 0 : r.prompts) ? c : [], f, _);
+        p = A(null != (c = null != (l = d.prompts) ? l : null == (r = b[u]) ? void 0 : r.prompts) ? c : [], f, _);
     b[u] = E(m({}, b[u], d), { prompts: p });
 }
 function P(e) {
@@ -142,7 +142,7 @@ function D(e) {
     w(t, n);
     let a = b[t];
     if (null == a) return !1;
-    let o = N(a.prompts, r, i);
+    let o = A(a.prompts, r, i);
     b[t] = E(m({}, a), {
         prompts: o,
         onboardingPrompts: o.filter((e) => e.inOnboarding),
@@ -252,7 +252,7 @@ h(U, 'displayName', 'GuildOnboardingPromptsStore');
 let G = new U(s.Z, {
     CONNECTION_OPEN: S,
     GUILD_ONBOARDING_PROMPTS_FETCH_START: I,
-    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: A,
+    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: N,
     GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: C,
     GUILD_ONBOARDING_SELECT_OPTION: P,
     GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: D,

@@ -21,12 +21,12 @@ var r = n(200651),
     _ = n(35583),
     E = n(522474),
     O = n(141321),
-    N = n(210887),
-    y = n(592125),
-    I = n(430824),
-    v = n(944486),
-    C = n(914010),
-    S = n(451478),
+    y = n(210887),
+    I = n(592125),
+    v = n(430824),
+    C = n(944486),
+    S = n(914010),
+    N = n(451478),
     T = n(998502),
     P = n(228488),
     j = n(950796),
@@ -82,10 +82,10 @@ let k = (0, a.U)(() => ({ isOpen: !0 }));
 function M() {
     let e,
         t = (0, l.TH)(),
-        n = (0, o.e7)([v.Z], () => v.Z.getChannelId()),
-        i = (0, o.e7)([C.Z], () => C.Z.getGuildId()),
-        a = (0, o.e7)([y.Z], () => y.Z.getChannel(n), [n]),
-        c = I.Z.getGuild(i),
+        n = (0, o.e7)([C.Z], () => C.Z.getChannelId()),
+        i = (0, o.e7)([S.Z], () => S.Z.getGuildId()),
+        a = (0, o.e7)([I.Z], () => I.Z.getChannel(n), [n]),
+        c = v.Z.getGuild(i),
         u = (0, h.Z)(),
         d = null;
     return (
@@ -100,16 +100,16 @@ function M() {
                     })),
               (e = c.name))
             : null != a && (a.isDM() || a.isGroupDM())
-              ? ((e = x.NW.string(x.t.YUU0RE)), (d = (0, r.jsx)(s.gw7, { size: 'xs' })))
+              ? ((e = x.intl.string(x.t.YUU0RE)), (d = (0, r.jsx)(s.gw7, { size: 'xs' })))
               : t.pathname.startsWith(A.Z5c.GLOBAL_DISCOVERY)
-                ? ((e = x.NW.string(x.t['4nEZLi'])), (d = (0, r.jsx)(s.Jmo, { size: 'xs' })))
+                ? ((e = x.intl.string(x.t['4nEZLi'])), (d = (0, r.jsx)(s.Jmo, { size: 'xs' })))
                 : t.pathname.startsWith(A.Z5c.NITRO_HOME)
-                  ? ((e = x.NW.string(x.t.Ipxkoq)), (d = (0, r.jsx)(s.SrA, { size: 'xs' })))
+                  ? ((e = x.intl.string(x.t.Ipxkoq)), (d = (0, r.jsx)(s.SrA, { size: 'xs' })))
                   : t.pathname.startsWith(A.Z5c.COLLECTIBLES_SHOP)
-                    ? ((e = x.NW.string(x.t.pWG4zc)), (d = (0, r.jsx)(s.EOn, { size: 'xs' })))
+                    ? ((e = x.intl.string(x.t.pWG4zc)), (d = (0, r.jsx)(s.EOn, { size: 'xs' })))
                     : t.pathname.startsWith(A.Z5c.FRIENDS)
-                      ? ((e = x.NW.string(x.t.TdEu5e)), (d = (0, r.jsx)(s.iFz, { size: 'xs' })))
-                      : t.pathname.startsWith(A.Z5c.FAMILY_CENTER) && ((e = x.NW.string(L.Z.RZqaJi)), (d = (0, r.jsx)(s.BFJ, { size: 'xs' }))),
+                      ? ((e = x.intl.string(x.t.TdEu5e)), (d = (0, r.jsx)(s.iFz, { size: 'xs' })))
+                      : t.pathname.startsWith(A.Z5c.FAMILY_CENTER) && ((e = x.intl.string(L.default.RZqaJi)), (d = (0, r.jsx)(s.BFJ, { size: 'xs' }))),
         null != e &&
             '' !== e &&
             (0, r.jsxs)('div', {
@@ -135,8 +135,8 @@ let U = i.memo(function () {
     i.useLayoutEffect(() => {
         T.ZP.setMinimumSize(Z.J, Z.N);
     }, []);
-    let l = (0, o.e7)([N.Z], () => (N.Z.darkSidebar ? A.BRd.DARK : void 0));
-    return (0, o.e7)([S.Z, E.Z], () => (0, P.rB)())
+    let l = (0, o.e7)([y.Z], () => (y.Z.darkSidebar ? A.BRd.DARK : void 0));
+    return (0, o.e7)([N.Z, E.Z], () => (0, P.rB)())
         ? null
         : (0, r.jsx)(s.Wdt, {
               children: (e) =>

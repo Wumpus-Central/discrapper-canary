@@ -1,7 +1,7 @@
 n.d(t, { D: () => i });
-var a = n(818083),
-    r = n(355820);
-let l = (0, a.B)({
+var l = n(818083),
+    a = n(355820);
+let r = (0, l.B)({
     kind: 'user',
     id: '2025-01_user_profile_custom_status_edit_preview',
     label: 'User Profile Custom Status Edit Preview',
@@ -30,15 +30,15 @@ let l = (0, a.B)({
 });
 function i(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        a = (0, r.P)({
+        l = (0, a.P)({
             location: t,
             autoTrackExposure: n
         }),
-        { enabledWithStatusSelection: i, enabledWithoutSatusSelection: o } = l.getCurrentConfig(
+        { enabledWithStatusSelection: i, enabledWithoutSatusSelection: o } = r.getCurrentConfig(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: a
+                disable: l
             }
         );
     return i || o;

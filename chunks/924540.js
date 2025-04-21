@@ -108,11 +108,11 @@ function Z(e) {
 }
 function M(e) {
     let { isTabSelected: t, userDiscount: r, includesAmountOff: i } = e,
-        s = p.NW.formatToPlainString(p.t.iiLbvr, { percent: r.discount.amount }),
+        s = p.intl.formatToPlainString(p.t.iiLbvr, { percent: r.discount.amount }),
         o = (0, v.xP)('OfferTabBadge');
     return (0, n.jsx)(g, {
         isTabSelected: t,
-        badgeCopy: i ? s : p.NW.string(p.t['/DTtr6']),
+        badgeCopy: i ? s : p.intl.string(p.t['/DTtr6']),
         offerExpiresAt: r.expires_at,
         className: o ? d.premiumTrialBadgeV2 : d.premiumDiscountUnacknowledgedBadge
     });

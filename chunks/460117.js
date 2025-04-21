@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u });
-var r = n(200651),
-    l = n(192379),
-    i = n(481060),
+var l = n(200651),
+    i = n(192379),
+    r = n(481060),
     o = n(596454),
     s = n(318766),
     a = n(907040),
@@ -9,15 +9,15 @@ var r = n(200651),
     d = n(185923);
 function u(e) {
     let { className: t, emojiClassName: n, emoji: u, setEmoji: m, channel: h } = e,
-        j = l.useRef(null),
+        j = i.useRef(null),
         x = (e) => (t, n) => {
-            var r, l;
+            var l, i;
             null != t &&
                 (null == t.id
-                    ? m({ name: null != (r = t.optionallyDiverseSequence) ? r : '' })
+                    ? m({ name: null != (l = t.optionallyDiverseSequence) ? l : '' })
                     : m({
                           id: t.id,
-                          name: null != (l = t.originalName) ? l : t.name,
+                          name: null != (i = t.originalName) ? i : t.name,
                           animated: t.animated
                       }),
                 n && e());
@@ -27,24 +27,24 @@ function u(e) {
                 ? null
                 : () => {
                       var e;
-                      return (0, r.jsx)(o.Z, {
+                      return (0, l.jsx)(o.Z, {
                           className: n,
                           animated: null != (e = u.animated) && e,
                           emojiId: u.id,
                           emojiName: u.name
                       });
                   };
-    return (0, r.jsx)(c.Z, {
+    return (0, l.jsx)(c.Z, {
         hasSetEmoji: null != u && null != u.name,
         onClick: () => {
             m(null);
         },
-        children: (0, r.jsx)(i.yRy, {
+        children: (0, l.jsx)(r.yRy, {
             targetElementRef: j,
             position: 'bottom',
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(a.Z, {
+                return (0, l.jsx)(a.Z, {
                     closePopout: t,
                     onSelectEmoji: x(t),
                     pickerIntention: d.Hz.COMMUNITY_CONTENT,
@@ -52,36 +52,36 @@ function u(e) {
                 });
             },
             children: (e, n) => {
-                var l, i;
+                var i, r;
                 let { isShown: o } = n;
-                return (0, r.jsx)(
+                return (0, l.jsx)(
                     s.Z,
-                    ((l = (function (e) {
+                    ((i = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
+                                l = Object.keys(n);
                             'function' == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
+                                (l = l.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     })
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
+                                l.forEach(function (t) {
+                                    var l;
+                                    (l = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                                  value: l,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
+                                            : (e[t] = l);
                                 });
                         }
                         return e;
                     })({}, e)),
-                    (i = i =
+                    (r = r =
                         {
                             ref: j,
                             tabIndex: 0,
@@ -90,18 +90,18 @@ function u(e) {
                             renderButtonContents: p
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
+                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
+                                  var l = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, l);
                               }
                               return n;
-                          })(Object(i)).forEach(function (e) {
-                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
+                          })(Object(r)).forEach(function (e) {
+                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(r, e));
                           }),
-                    l)
+                    i)
                 );
             }
         })

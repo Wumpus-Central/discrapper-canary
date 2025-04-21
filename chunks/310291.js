@@ -1,8 +1,8 @@
 n.d(t, { Z: () => o }), n(388685);
 var r = n(192379),
     i = n(392711),
-    s = n.n(i),
-    l = n(232473);
+    l = n.n(i),
+    s = n(232473);
 let a = (e) => {
         let t = {};
         for (let n of e) {
@@ -18,17 +18,17 @@ let a = (e) => {
             let r = t[e];
             (r.amount += n.amount), (r.paymentsCount += n.payments_count), (r.ppgs[n.grouping_id] = n);
         }
-        return s().orderBy(Object.values(t), ['periodStartingAt'], ['desc']);
+        return l().orderBy(Object.values(t), ['periodStartingAt'], ['desc']);
     },
     o = (e, t) => {
         let { groupType: n, teamId: i } = t,
-            [s, o] = r.useState(!0),
+            [l, o] = r.useState(!0),
             [c, d] = r.useState([]),
             u = r.useCallback(async () => {
                 if ((d([]), null == e)) return void o(!1);
                 try {
                     o(!0);
-                    let t = await l.C(e, { grouping_type: n });
+                    let t = await s.C(e, { grouping_type: n });
                     d(t);
                 } catch (e) {
                 } finally {
@@ -41,7 +41,7 @@ let a = (e) => {
             }, [u]),
             {
                 payoutsByPeriod: r.useMemo(() => a(null != i ? c.filter((e) => e.user_id === i) : c), [c, i]),
-                loading: s
+                loading: l
             }
         );
     };

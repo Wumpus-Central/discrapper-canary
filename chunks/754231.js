@@ -171,7 +171,7 @@ function E(e) {
     null != n ? (m = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (m = u.map((e) => e.user.id));
     let E = (0, s.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(b.lm)),
         I = null != n || (0, c.Z)(t),
-        N = i.useMemo(() => {
+        P = i.useMemo(() => {
             let e = new Map();
             return (
                 I &&
@@ -220,7 +220,7 @@ function E(e) {
                                           renderUser: (e) => {
                                               var t;
                                               if (null == e) return null;
-                                              let n = N.get(e.id),
+                                              let n = P.get(e.id),
                                                   i = null != (t = null == n ? void 0 : n.nick) ? t : y.ZP.getName(e);
                                               return (0, r.jsx)(
                                                   a.DY3,

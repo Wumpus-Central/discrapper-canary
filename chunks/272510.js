@@ -98,7 +98,7 @@ function E(e) {
                     analyticsLocations: v
                 })
         }),
-        N = (0, f.Z)({
+        A = (0, f.Z)({
             user: t,
             guildId: n,
             location: O,
@@ -110,12 +110,12 @@ function E(e) {
                     analyticsLocations: v
                 })
         }),
-        A = [
+        N = [
             [m, I],
             [
                 T,
                 S,
-                N,
+                A,
                 (0, f.T)({
                     user: t,
                     guildId: n,
@@ -132,7 +132,7 @@ function E(e) {
             [
                 (0, l.Z)({
                     id: t.id,
-                    label: h.NW.string(h.t['/AXYnJ']),
+                    label: h.intl.string(h.t['/AXYnJ']),
                     onSuccess: () =>
                         y({
                             action: 'COPY_USER_ID',
@@ -141,7 +141,7 @@ function E(e) {
                 })
             ]
         ];
-    return A.every((e) => e.every((e) => null == e))
+    return N.every((e) => e.every((e) => null == e))
         ? null
         : (0, r.jsx)(s.Gt, {
               value: v,
@@ -153,8 +153,8 @@ function E(e) {
                           navId: 'user-profile-overflow-menu',
                           onSelect: void 0,
                           onClose: t,
-                          'aria-label': h.NW.string(h.t.AXIHpa),
-                          children: A.map((e, t) => (0, r.jsx)(a.kSQ, { children: e.map((e) => e) }, t))
+                          'aria-label': h.intl.string(h.t.AXIHpa),
+                          children: N.map((e, t) => (0, r.jsx)(a.kSQ, { children: e.map((e) => e) }, t))
                       });
                   },
                   children: (e) =>
@@ -165,7 +165,7 @@ function E(e) {
                                   ref: b,
                                   action: 'PRESS_OPTIONS',
                                   icon: a.xhG,
-                                  tooltipText: h.NW.string(h.t.UKOtz8)
+                                  tooltipText: h.intl.string(h.t.UKOtz8)
                               },
                               e
                           )

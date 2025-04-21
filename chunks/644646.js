@@ -23,8 +23,8 @@ let O = function (e) {
         { className: n, quest: a, autoplay: O = !0, learnMoreStyle: I = null } = e,
         S = (0, _.O5)(),
         T = (0, l.e7)([f.Z], () => f.Z.isFocused()),
-        N = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        A = i.useMemo(() => (0, h.fh)(a, h.eC.REWARD), [a]),
+        A = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
+        N = i.useMemo(() => (0, h.fh)(a, h.eC.REWARD), [a]),
         C = i.useCallback(
             (t) => {
                 var n;
@@ -49,13 +49,13 @@ let O = function (e) {
     return (
         i.useEffect(() => {
             if (null != R.current) {
-                if (!A.isAnimated || N) {
+                if (!N.isAnimated || A) {
                     (R.current.currentTime = 0), R.current.pause();
                     return;
                 }
                 O && !P.current ? R.current.play() : !O && P.current && ((R.current.currentTime = 0), R.current.pause()), (P.current = O);
             }
-        }, [O, A, N]),
+        }, [O, N, A]),
         (t = w
             ? (0, r.jsx)(E.Fl, {
                   id: 'QuestRewardTile_rewardTileNitro',
@@ -65,7 +65,7 @@ let O = function (e) {
                           className: v.questRewardTileAsset
                       })
               })
-            : A.isAnimated
+            : N.isAnimated
               ? (0, r.jsx)(E.Fl, {
                     id: 'QuestRewardTile_rewardTileAnimated',
                     children: (e) => {
@@ -74,15 +74,15 @@ let O = function (e) {
                             ref: (t) => {
                                 (e.current = t), (R.current = t);
                             },
-                            autoPlay: !N && O,
+                            autoPlay: !A && O,
                             loop: !0,
                             muted: !0,
                             playsInline: !0,
                             className: v.questRewardTileAsset,
                             controls: !1,
                             children: (0, r.jsx)('source', {
-                                src: A.url,
-                                type: null != (t = A.mimetype) ? t : void 0
+                                src: N.url,
+                                type: null != (t = N.mimetype) ? t : void 0
                             })
                         });
                     }
@@ -94,7 +94,7 @@ let O = function (e) {
                             ref: e,
                             alt: m.r.build(a.config).defaultReward.messages.name,
                             className: o()(v.questRewardTileAsset, v.questRewardTileAssetStatic),
-                            src: A.url
+                            src: N.url
                         })
                 })),
         null == I
@@ -110,14 +110,14 @@ let O = function (e) {
                       (0, r.jsx)(c.ZX5, {
                           className: v.shine,
                           shineSize: c.rHe.SMALL,
-                          shinePaused: !T || N
+                          shinePaused: !T || A
                       }),
                       'text' === I &&
                           (0, r.jsx)(c.Text, {
                               color: 'always-white',
                               variant: 'text-xs/normal',
                               className: v.questRewardTileDetailsLearnMore,
-                              children: y.NW.format(y.t.DYAleX, {})
+                              children: y.intl.format(y.t.DYAleX, {})
                           }),
                       'icon' === I &&
                           (0, r.jsx)('div', {

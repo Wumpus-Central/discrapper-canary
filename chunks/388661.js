@@ -1,4 +1,4 @@
-B.d(g, { Z: () => d });
+B.d(g, { Z: () => o });
 var C = B(200651),
     Q = B(120356),
     w = B.n(Q),
@@ -12,35 +12,35 @@ var C = B(200651),
     r = B(981631),
     t = B(817239),
     n = B(388032),
-    o = B(602268);
-let d = function (A) {
-    let { className: g, guildId: B, tag: Q, badge: d, primaryColor: M, secondaryColor: s, isDisabled: L = !1 } = A,
+    d = B(602268);
+let o = function (A) {
+    let { className: g, guildId: B, tag: Q, badge: o, primaryColor: s, secondaryColor: M, isDisabled: L = !1 } = A,
         X = (0, D.e7)([e.Z], () => e.Z.getProps().originalProfile),
         c = null != X && X.tag !== Q;
     return (0, C.jsxs)('div', {
         className: g,
         children: [
             (0, C.jsx)(f.vwX, {
-                className: o.sectionTitle,
-                children: n.NW.string(t.Z['tN+8pK'])
+                className: d.sectionTitle,
+                children: n.intl.string(t.default['tN+8pK'])
             }),
             (0, C.jsxs)('div', {
-                className: o.tagContainer,
+                className: d.tagContainer,
                 children: [
                     (0, C.jsx)('div', {
-                        className: o.tagInputContainer,
+                        className: d.tagInputContainer,
                         children: (0, C.jsx)(f.oil, {
-                            className: o.tagInputWrapper,
-                            inputClassName: w()(o.tagInput, 'heading-sm/semibold'),
+                            className: d.tagInputWrapper,
+                            inputClassName: w()(d.tagInput, 'heading-sm/semibold'),
                             maxLength: 4,
                             autoFocus: !0,
                             placeholder: 'WUMP',
                             prefixElement: (0, C.jsx)(E.A, {
-                                badge: d,
+                                badge: o,
                                 width: 40,
                                 height: 40,
-                                primaryTintColor: M,
-                                secondaryTintColor: s
+                                primaryTintColor: s,
+                                secondaryTintColor: M
                             }),
                             disabled: L,
                             value: null != Q ? Q : '',
@@ -50,21 +50,21 @@ let d = function (A) {
                         })
                     }),
                     (0, C.jsx)('div', {
-                        className: o.tagTooltip,
+                        className: d.tagTooltip,
                         children: (0, C.jsx)(f.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-muted',
-                            children: n.NW.string(t.Z.UbC8y8)
+                            children: n.intl.string(t.default.UbC8y8)
                         })
                     })
                 ]
             }),
             c &&
                 (0, C.jsx)(v.Z, {
-                    className: o.tagChangeInfoBox,
+                    className: d.tagChangeInfoBox,
                     children: (0, C.jsx)(f.Text, {
                         variant: 'text-xs/medium',
-                        children: n.NW.format(t.Z['4ZKDXl'], { articleUrl: I.Z.getArticleURL(r.BhN.SERVER_TAGS) })
+                        children: n.intl.format(t.default['4ZKDXl'], { articleUrl: I.Z.getArticleURL(r.BhN.SERVER_TAGS) })
                     })
                 })
         ]

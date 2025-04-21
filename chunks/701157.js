@@ -1,9 +1,9 @@
 n.d(t, { Z: () => g }), n(539854);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(442837),
-    a = n(481060),
-    l = n(165630),
+    l = n(481060),
+    a = n(165630),
     o = n(771845),
     c = n(11844),
     d = n(300037),
@@ -11,9 +11,9 @@ var r = n(200651),
     m = n(831613);
 let g = function (e) {
     let { canAddBoosts: t, canApplyBoosts: n } = e,
-        g = (0, s.e7)([l.Z], () => l.Z.affinities),
+        g = (0, s.e7)([a.Z], () => a.Z.affinities),
         p = (0, s.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
-        h = i.useMemo(() => {
+        h = r.useMemo(() => {
             let e = g.slice(0, 3).map((e) => e.guildId);
             for (let t = 0; t < p.length && !(e.length >= 3); t++) {
                 let n = p[t];
@@ -23,17 +23,17 @@ let g = function (e) {
         }, [g, p]);
     return 0 === h.length
         ? null
-        : (0, r.jsxs)('div', {
+        : (0, i.jsxs)('div', {
               className: m.wrapper,
               children: [
                   t &&
-                      (0, r.jsx)(a.X6q, {
+                      (0, i.jsx)(l.X6q, {
                           variant: 'heading-lg/semibold',
                           className: m.header,
-                          children: u.NW.string(u.t.r90Wgo)
+                          children: u.intl.string(u.t.r90Wgo)
                       }),
                   h.map((e) =>
-                      (0, r.jsx)(
+                      (0, i.jsx)(
                           d.Z,
                           {
                               className: m.recommendedServerCard,
@@ -43,7 +43,7 @@ let g = function (e) {
                           e
                       )
                   ),
-                  p.length > 3 && n && (0, r.jsx)(c.Z, {})
+                  p.length > 3 && n && (0, i.jsx)(c.Z, {})
               ]
           });
 };

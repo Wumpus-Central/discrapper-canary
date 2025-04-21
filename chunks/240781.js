@@ -65,18 +65,18 @@ let I = [
                     (0, r.jsx)(c.Text, {
                         variant: 'text-xxs/normal',
                         color: 'text-muted',
-                        children: v.NW.format(v.t.Io7ozs, { days: o.days.toString() })
+                        children: v.intl.format(v.t.Io7ozs, { days: o.days.toString() })
                     }),
                 (0, r.jsxs)(c.Text, {
                     variant: 'text-xxs/normal',
                     color: 'text-muted',
                     children: [
-                        a ? v.NW.format(v.t.LFVi6O, { dateAcquired: d }) : v.NW.format(v.t.gW9R4O, { date: d }),
+                        a ? v.intl.format(v.t.LFVi6O, { dateAcquired: d }) : v.intl.format(v.t.gW9R4O, { date: d }),
                         null != t.expiresAt &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)('br', {}),
-                                    v.NW.format(v.t.eZSTa2, {
+                                    v.intl.format(v.t.eZSTa2, {
                                         date: t.expiresAt.toLocaleDateString(i, {
                                             minute: 'numeric',
                                             hour: 'numeric',
@@ -93,7 +93,7 @@ let I = [
                     (0, r.jsx)(c.Text, {
                         variant: 'text-xxs/normal',
                         color: 'text-muted',
-                        children: v.NW.string(v.t.UewH9P)
+                        children: v.intl.string(v.t.UewH9P)
                     })
             ]
         });
@@ -102,25 +102,25 @@ let I = [
         let { user: t, guildId: n, avatarDecorationOverride: a, className: p } = e,
             m = (0, d.P)('AvatarDecorationModalPreview'),
             E = (0, l.e7)([g.Z], () => g.Z.getStatus(t.id)),
-            { product: T, purchase: N } = (0, f.Z)(null == a ? void 0 : a.skuId),
-            A = b.ZP.canUseCollectibles(t),
-            C = (0, u.qS)(N),
+            { product: T, purchase: A } = (0, f.Z)(null == a ? void 0 : a.skuId),
+            N = b.ZP.canUseCollectibles(t),
+            C = (0, u.qS)(A),
             R = (0, u.G1)(T),
-            P = !A && C,
-            w = (0, h.M)(!R || A),
+            P = !N && C,
+            w = (0, h.M)(!R || N),
             D = (0, _.k)(T),
             L = i.useMemo(
                 () =>
                     P
-                        ? v.NW.string(v.t.zrBmQE)
-                        : (0, s.EQ)([R, A, w])
-                              .with([!0, !0, !1], () => v.NW.string(v.t.L5hyz8))
-                              .with([!0, !1, !0], () => v.NW.string(v.t.q0PlFh))
-                              .with([!0, !1, !1], () => v.NW.string(v.t.ucqOV1))
-                              .otherwise(() => v.NW.string(v.t.UROtt7)),
-                [P, R, A, w]
+                        ? v.intl.string(v.t.zrBmQE)
+                        : (0, s.EQ)([R, N, w])
+                              .with([!0, !0, !1], () => v.intl.string(v.t.L5hyz8))
+                              .with([!0, !1, !0], () => v.intl.string(v.t.q0PlFh))
+                              .with([!0, !1, !1], () => v.intl.string(v.t.ucqOV1))
+                              .otherwise(() => v.intl.string(v.t.UROtt7)),
+                [P, R, N, w]
             );
-        return null != T && (null == N || P)
+        return null != T && (null == A || P)
             ? (0, r.jsxs)('div', {
                   className: o()(O.modalPreview, O.shopPreviewContainer, p),
                   children: [
@@ -184,9 +184,9 @@ let I = [
                               })
                           ]
                       }),
-                      null != N &&
+                      null != A &&
                           (0, r.jsx)(S, {
-                              purchase: N,
+                              purchase: A,
                               shouldHideProductDescription: m
                           })
                   ]

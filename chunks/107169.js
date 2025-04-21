@@ -25,7 +25,7 @@ function a(e) {
             }
             return i;
         })(e, ['popoutWindowAlwaysOnTop', 'onToggleStayOnTop']);
-    let s = t ? o.NW.string(o.t.YdyDMz) : o.NW.string(o.t.ZVGHwM),
+    let s = t ? o.intl.string(o.t.YdyDMz) : o.intl.string(o.t.ZVGHwM),
         c = t ? i.QVc : i.k5M;
     return (0, r.jsx)(
         l.Z,

@@ -1,23 +1,23 @@
-r.d(n, {
-    $l: () => o,
-    RI: () => t,
-    Ud: () => c
+t.d(e, {
+    $l: () => c,
+    RI: () => i,
+    Ud: () => s
 });
-var s = r(388032);
-let t = 'https://discord.com/community/securing-your-server',
-    c = ['MESSAGE_SPAM', 'DM_SPAM', 'MENTION_SPAM', 'SUSPICIOUS_USERS', 'SETTINGS_SPAM'],
-    o = (e) => {
-        switch (e) {
+var r = t(388032);
+let i = 'https://discord.com/community/securing-your-server',
+    s = ['MESSAGE_SPAM', 'DM_SPAM', 'MENTION_SPAM', 'SUSPICIOUS_USERS', 'SETTINGS_SPAM'],
+    c = (n) => {
+        switch (n) {
             case 'DM_SPAM':
-                return s.NW.string(s.t['9CYNmZ']);
+                return r.intl.string(r.t['9CYNmZ']);
             case 'MENTION_SPAM':
-                return s.NW.string(s.t['hR/IdH']);
+                return r.intl.string(r.t['hR/IdH']);
             case 'MESSAGE_SPAM':
-                return s.NW.string(s.t.fwloj4);
+                return r.intl.string(r.t.fwloj4);
             case 'SETTINGS_SPAM':
-                return s.NW.string(s.t.ETFVFx);
+                return r.intl.string(r.t.ETFVFx);
             case 'SUSPICIOUS_USERS':
-                return s.NW.string(s.t['lKXu+v']);
+                return r.intl.string(r.t['lKXu+v']);
         }
         return null;
     };

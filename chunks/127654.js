@@ -44,7 +44,7 @@ function C(e, t) {
             attachment_mimetypes: p
         }),
             (0, o.openUploadError)({
-                title: y.NW.string(y.t['/tGlcn']),
+                title: y.intl.string(y.t['/tGlcn']),
                 help: (0, m.BK)(n, r),
                 showPremiumUpsell: !(0, f.M5)(n, _.p9.TIER_2),
                 fileSize: c
@@ -52,8 +52,8 @@ function C(e, t) {
         return;
     }
     (0, o.openUploadError)({
-        title: y.NW.string(y.t['/tGlcn']),
-        help: y.NW.formatToPlainString(y.t.tUOJdH, { maxSize: h.Ng(h.OC()) })
+        title: y.intl.string(y.t['/tGlcn']),
+        help: y.intl.formatToPlainString(y.t.tUOJdH, { maxSize: h.Ng(h.OC()) })
     });
 }
 function x(e, t, n) {
@@ -64,8 +64,8 @@ function x(e, t, n) {
     if ((0, m.Bf)(e, b)) return void C(t, e);
     if (u.Z.getUploadCount(t.id, n) + e.length > g.dN1) {
         (0, o.openUploadError)({
-            title: y.NW.string(y.t.wOr6hI),
-            help: y.NW.formatToPlainString(y.t['qqyp/f'], { limit: g.dN1 })
+            title: y.intl.string(y.t.wOr6hI),
+            help: y.intl.formatToPlainString(y.t['qqyp/f'], { limit: g.dN1 })
         }),
             p.default.track(g.rMx.UPLOAD_FILE_LIMIT_ERROR, {
                 existing_count: u.Z.getUploadCount(t.id, n),

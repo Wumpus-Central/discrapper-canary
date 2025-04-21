@@ -15,8 +15,8 @@ let _ = (e) => {
         I = (null == t ? void 0 : t.metadata.premiumSubscription) != null,
         O = (0, a.n)();
     if (((0, s.U)(c.jXE.NOTIFICATION_BAR, null == O ? void 0 : O.countryCode), null == O)) return null;
-    let N = O.countryCode,
-        T = O.currency,
+    let T = O.countryCode,
+        N = O.currency,
         S = O.paymentSourceTypes.length > 0;
     return (0, r.jsxs)(i.qXd, {
         color: I ? i.DM8.BRAND : i.DM8.PREMIUM_TIER_2,
@@ -31,13 +31,13 @@ let _ = (e) => {
                     color: 'currentColor',
                     className: E.premiumIcon
                 }),
-            (0, o.Gv)(N, T, S, I),
+            (0, o.Gv)(T, N, S, I),
             (0, r.jsx)(i.NoS, {
                 onClick: () => {
                     _(u.L.UNKNOWN), l.Z.open(c.oAB.PREMIUM);
                 },
                 noticeType: n,
-                children: d.NW.string(d.t.hvVgAQ)
+                children: d.intl.string(d.t.hvVgAQ)
             })
         ]
     });

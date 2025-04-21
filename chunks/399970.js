@@ -1,9 +1,9 @@
 n.d(t, { Z: () => b }), n(388685), n(35282);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(442837),
-    a = n(481060),
-    l = n(570140),
+    l = n(481060),
+    a = n(570140),
     o = n(401430),
     c = n(155268),
     d = n(600164),
@@ -18,18 +18,18 @@ function b(e) {
         {
             authorizedApplicationId: b,
             authorizationError: _,
-            authorizing: N
+            authorizing: x
         } = (0, s.cj)([m.Z], () => ({
             authorizedApplicationId: m.Z.testModeApplicationId,
             authorizationError: m.Z.error,
             authorizing: m.Z.isFetchingAuthorization
         })),
-        [x, E] = i.useState(null != b ? b : ''),
-        [j, C] = i.useState('8080'),
-        [O, S] = i.useState('localhost'),
-        v = (0, u.Dt)(),
-        T = f.test(x);
-    async function I() {
+        [E, j] = r.useState(null != b ? b : ''),
+        [C, O] = r.useState('8080'),
+        [S, v] = r.useState('localhost'),
+        T = (0, u.Dt)(),
+        I = f.test(E);
+    async function N() {
         o.q$();
         let e = (function (e, t, n) {
             if (null == e) return null;
@@ -39,112 +39,112 @@ function b(e) {
                 case 'proxy':
                     return (0, c.ZP)(n);
             }
-        })(O, j, x);
-        null != (await o.Wt(x, e)) && t();
+        })(S, C, E);
+        null != (await o.Wt(E, e)) && t();
     }
-    i.useEffect(() => () => l.Z.wait(() => o.q$()), []);
-    let y = null != b && b === x,
+    r.useEffect(() => () => a.Z.wait(() => o.q$()), []);
+    let y = null != b && b === E,
         A = y
             ? function () {
-                  o.mc(), E(''), S(null);
+                  o.mc(), j(''), v(null);
               }
-            : I;
-    return (0, r.jsxs)(a.Y0X, {
-        'aria-labelledby': v,
+            : N;
+    return (0, i.jsxs)(l.Y0X, {
+        'aria-labelledby': T,
         transitionState: n,
         children: [
-            (0, r.jsxs)(a.xBx, {
+            (0, i.jsxs)(l.xBx, {
                 justify: d.Z.Justify.BETWEEN,
                 separator: !1,
                 children: [
-                    (0, r.jsx)(a.vwX, {
-                        id: v,
+                    (0, i.jsx)(l.vwX, {
+                        id: T,
                         tag: 'h1',
                         className: h.marginReset,
-                        children: g.NW.string(g.t.f8fzk5)
+                        children: g.intl.string(g.t.f8fzk5)
                     }),
-                    (0, r.jsx)(a.olH, { onClick: t })
+                    (0, i.jsx)(l.olH, { onClick: t })
                 ]
             }),
-            (0, r.jsxs)(a.hzk, {
+            (0, i.jsxs)(l.hzk, {
                 className: p.modalContent,
                 children: [
-                    (0, r.jsx)(a.R94, {
+                    (0, i.jsx)(l.R94, {
                         className: h.marginBottom20,
-                        type: a.R94.Types.DESCRIPTION,
-                        children: g.NW.string(g.t.a6Vilp)
+                        type: l.R94.Types.DESCRIPTION,
+                        children: g.intl.string(g.t.a6Vilp)
                     }),
                     null == _
                         ? null
-                        : (0, r.jsx)(a.kzN, {
+                        : (0, i.jsx)(l.kzN, {
                               className: h.marginBottom20,
                               children: _
                           }),
-                    (0, r.jsx)('form', {
+                    (0, i.jsx)('form', {
                         onSubmit: (e) => {
                             e.preventDefault(), A();
                         },
-                        children: (0, r.jsxs)(d.Z, {
+                        children: (0, i.jsxs)(d.Z, {
                             direction: d.Z.Direction.VERTICAL,
                             align: d.Z.Align.START,
                             children: [
-                                (0, r.jsx)(a.xJW, {
+                                (0, i.jsx)(l.xJW, {
                                     className: p.inputWrapper,
-                                    title: g.NW.string(g.t.P6TzgI),
+                                    title: g.intl.string(g.t.P6TzgI),
                                     required: !0,
-                                    children: (0, r.jsx)(a.oil, {
-                                        value: x,
+                                    children: (0, i.jsx)(l.oil, {
+                                        value: E,
                                         maxLength: 19,
-                                        error: T ? null : g.NW.string(g.t.gPNgKC),
+                                        error: I ? null : g.intl.string(g.t.gPNgKC),
                                         onChange: function (e) {
-                                            E(e);
+                                            j(e);
                                         },
-                                        disabled: N
+                                        disabled: x
                                     })
                                 }),
-                                (0, r.jsx)(a.xJW, {
+                                (0, i.jsx)(l.xJW, {
                                     className: p.inputWrapper,
-                                    title: g.NW.string(g.t['/GTqXF']),
-                                    children: (0, r.jsx)(a.q4e, {
-                                        isDisabled: !T || '' === x,
-                                        value: O,
+                                    title: g.intl.string(g.t['/GTqXF']),
+                                    children: (0, i.jsx)(l.q4e, {
+                                        isDisabled: !I || '' === E,
+                                        value: S,
                                         options: [
                                             {
                                                 value: 'localhost',
-                                                label: g.NW.string(g.t['+Y9Y6u']),
+                                                label: g.intl.string(g.t['+Y9Y6u']),
                                                 key: 'localhost'
                                             },
                                             {
                                                 value: 'proxy',
-                                                label: g.NW.string(g.t.uaksyc),
+                                                label: g.intl.string(g.t.uaksyc),
                                                 key: 'proxy'
                                             }
                                         ],
                                         onChange: function (e) {
-                                            S(e);
+                                            v(e);
                                         },
                                         placeholder: 'URL Origin Type'
                                     })
                                 }),
-                                'localhost' !== O
+                                'localhost' !== S
                                     ? null
-                                    : (0, r.jsx)(a.xJW, {
+                                    : (0, i.jsx)(l.xJW, {
                                           className: p.inputWrapper,
-                                          title: g.NW.string(g.t.fF4zxs),
+                                          title: g.intl.string(g.t.fF4zxs),
                                           required: !0,
-                                          children: (0, r.jsx)(a.oil, {
-                                              value: j,
+                                          children: (0, i.jsx)(l.oil, {
+                                              value: C,
                                               maxLength: 5,
-                                              onChange: (e) => C(e),
-                                              disabled: N
+                                              onChange: (e) => O(e),
+                                              disabled: x
                                           })
                                       }),
-                                (0, r.jsx)(a.zxk, {
-                                    submitting: N,
+                                (0, i.jsx)(l.zxk, {
+                                    submitting: x,
                                     type: 'submit',
-                                    disabled: !T || 0 === x.length || ('localhost' === O && 0 === j.length),
-                                    color: y ? a.zxk.Colors.RED : a.zxk.Colors.GREEN,
-                                    children: y ? g.NW.string(g.t.d6TR3N) : g.NW.string(g.t.qwuK5O)
+                                    disabled: !I || 0 === E.length || ('localhost' === S && 0 === C.length),
+                                    color: y ? l.zxk.Colors.RED : l.zxk.Colors.GREEN,
+                                    children: y ? g.intl.string(g.t.d6TR3N) : g.intl.string(g.t.qwuK5O)
                                 })
                             ]
                         })

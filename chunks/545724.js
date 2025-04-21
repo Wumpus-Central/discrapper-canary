@@ -53,18 +53,18 @@ function f(e, t) {
     );
 }
 let g = function (e) {
-    let { index: t, children: l, user: g, channel: m, onClick: b, isFocused: _, isActive: E, onOtherHover: O, className: N } = e,
-        [y, I] = i.useState(!1),
-        [v, C] = i.useState(!1),
-        S = () => {
-            I(!0), !_ || E || v || null == O || O();
+    let { index: t, children: l, user: g, channel: m, onClick: b, isFocused: _, isActive: E, onOtherHover: O, className: y } = e,
+        [I, v] = i.useState(!1),
+        [C, S] = i.useState(!1),
+        N = () => {
+            v(!0), !_ || E || C || null == O || O();
         },
         T = () => {
-            I(!1);
+            v(!1);
         },
         P = (e, t) => {
             null != t &&
-                (C(!0),
+                (S(!0),
                 (0, u.jW)(
                     e,
                     async () => {
@@ -73,7 +73,7 @@ let g = function (e) {
                     },
                     {
                         onClose: () => {
-                            C(!1);
+                            S(!1);
                         }
                     }
                 ));
@@ -91,12 +91,12 @@ let g = function (e) {
                     f(
                         h(
                             {
-                                className: a()(p.messageRequestItem, N, {
-                                    [p.active]: E || v,
+                                className: a()(p.messageRequestItem, y, {
+                                    [p.active]: E || C,
                                     [p.firstItem]: 0 === t
                                 }),
                                 onContextMenu: (e) => P(e, g),
-                                onMouseEnter: S,
+                                onMouseEnter: N,
                                 onMouseLeave: T,
                                 onClick: null != b ? b : void 0,
                                 style: {
@@ -106,7 +106,7 @@ let g = function (e) {
                             },
                             e
                         ),
-                        { children: l(y || E || v) }
+                        { children: l(I || E || C) }
                     )
                 )
             })

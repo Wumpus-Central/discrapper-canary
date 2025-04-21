@@ -108,7 +108,7 @@ let g = (e, t) => {
         };
     },
     y = l.memo(function (e) {
-        let { wheelWidth: t, wheelHeight: n, itemWidth: y, itemHeight: O, showDeadZoneIndicator: N, activeItem: b, onItemSelect: v, onItemAction: m, interactive: x = !0, onClose: C, children: E } = e,
+        let { wheelWidth: t, wheelHeight: n, itemWidth: y, itemHeight: O, showDeadZoneIndicator: b, activeItem: v, onItemSelect: m, onItemAction: x, interactive: N = !0, onClose: C, children: E } = e,
             j = l.useRef(null),
             I = l.useRef([]),
             P = l.useRef(!1),
@@ -126,22 +126,22 @@ let g = (e, t) => {
                 },
                 [T]
             ),
-            W = l.useCallback(
+            k = l.useCallback(
                 (e, t) => {
-                    (S.current = t), v(f * e + t);
+                    (S.current = t), m(f * e + t);
                 },
-                [v]
+                [m]
             ),
-            k = l.useCallback(() => {
-                (S.current = null), v(null);
-            }, [v]),
-            M = l.useCallback(
+            M = l.useCallback(() => {
+                (S.current = null), m(null);
+            }, [m]),
+            U = l.useCallback(
                 (e) => {
-                    k(), (P.current = e);
+                    M(), (P.current = e);
                 },
-                [k]
+                [M]
             ),
-            U = l.useCallback((e, t, n) => {
+            L = l.useCallback((e, t, n) => {
                 if (P.current)
                     return void w({
                         x: 0,
@@ -159,13 +159,13 @@ let g = (e, t) => {
                     y: (i ? Math.max(r.y, -o.y) : Math.min(r.y, o.y)) / 2
                 });
             }, []),
-            L = l.useCallback(
+            B = l.useCallback(
                 (e) => {
-                    null != S.current && (e.preventDefault(), e.stopPropagation(), null == m || m(f * T + S.current));
+                    null != S.current && (e.preventDefault(), e.stopPropagation(), null == x || x(f * T + S.current));
                 },
-                [m, T]
+                [x, T]
             ),
-            B = l.useMemo(
+            G = l.useMemo(
                 () =>
                     (0, i.throttle)((e) => {
                         if (null == j.current) return;
@@ -178,8 +178,8 @@ let g = (e, t) => {
                                 x: e.clientX,
                                 y: e.clientY
                             };
-                        if ((U(i, l, Math.max(t, n)), P.current)) {
-                            null != b && k();
+                        if ((L(i, l, Math.max(t, n)), P.current)) {
+                            null != v && M();
                             return;
                         }
                         let o = (0, s.ld)(l, i, Math.max(t, n));
@@ -187,21 +187,21 @@ let g = (e, t) => {
                             let t = I.current[T][e];
                             if (null == t) continue;
                             let n = t.getBoundingClientRect();
-                            if ((0, s.Vr)(l, o, n)) return void W(T, e);
+                            if ((0, s.Vr)(l, o, n)) return void k(T, e);
                         }
-                        k();
+                        M();
                     }, 16),
-                [b, U, k, W, T, n, t]
+                [v, L, M, k, T, n, t]
             ),
-            G = l.useCallback(
+            V = l.useCallback(
                 (e) => {
-                    if (!x) return;
+                    if (!N) return;
                     let t = T + (e.deltaY > 0 ? 1 : -1);
-                    t >= 0 && t < R.length && (null != S.current && (R[t].length > S.current ? W(t, S.current) : k()), Z(t));
+                    t >= 0 && t < R.length && (null != S.current && (R[t].length > S.current ? k(t, S.current) : M()), Z(t));
                 },
-                [x, T, R, W, k]
+                [N, T, R, k, M]
             ),
-            V = l.useMemo(
+            W = l.useMemo(
                 () =>
                     R[T].map((e, l) => {
                         let i = h[l];
@@ -228,9 +228,9 @@ let g = (e, t) => {
             );
         return (0, r.jsx)(a.P3F, {
             className: c.chatWheelMouseInput,
-            onMouseMove: B,
-            onWheel: G,
-            onClick: L,
+            onMouseMove: G,
+            onWheel: V,
+            onClick: B,
             children: (0, r.jsxs)('div', {
                 ref: j,
                 className: c.chatWheel,
@@ -286,11 +286,11 @@ let g = (e, t) => {
                                         r: '103.68',
                                         strokeWidth: '40.32'
                                     }),
-                                    N &&
+                                    b &&
                                         (0, r.jsx)('circle', {
                                             className: c.chatWheelDeadZone,
-                                            onMouseEnter: () => M(!0),
-                                            onMouseLeave: () => M(!1),
+                                            onMouseEnter: () => U(!0),
+                                            onMouseLeave: () => U(!1),
                                             cx: 144,
                                             cy: 144,
                                             r: 28.8
@@ -304,11 +304,11 @@ let g = (e, t) => {
                                         })
                                 ]
                             }),
-                            N &&
+                            b &&
                                 (0, r.jsx)('circle', {
                                     className: c.chatWheelDeadZone,
-                                    onMouseEnter: () => M(!0),
-                                    onMouseLeave: () => M(!1),
+                                    onMouseEnter: () => U(!0),
+                                    onMouseLeave: () => U(!1),
                                     cx: 144,
                                     cy: 144,
                                     r: 28.8,
@@ -319,21 +319,21 @@ let g = (e, t) => {
                     (0, r.jsxs)('div', {
                         className: c.innerContent,
                         children: [
-                            N &&
+                            b &&
                                 (0, r.jsx)(a.P3F, {
                                     className: c.chatWheelDeadZoneIcon,
                                     onClick: C,
                                     children: (0, r.jsx)(d, { className: c.chatWheelDeadZoneIcon })
                                 }),
-                            x && R.length > 1
+                            N && R.length > 1
                                 ? (0, r.jsx)('div', {
                                       className: c.paginationHint,
-                                      children: u.NW.string(u.t['Xy+S09'])
+                                      children: u.intl.string(u.t['Xy+S09'])
                                   })
                                 : null
                         ]
                     }),
-                    V
+                    W
                 ]
             })
         });

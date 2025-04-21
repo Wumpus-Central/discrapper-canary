@@ -24,17 +24,17 @@ e.exports = function (e, t, n) {
         I = n && n.that,
         S = !!(n && n.AS_ENTRIES),
         T = !!(n && n.IS_RECORD),
-        N = !!(n && n.IS_ITERATOR),
-        A = !!(n && n.INTERRUPTED),
+        A = !!(n && n.IS_ITERATOR),
+        N = !!(n && n.INTERRUPTED),
         C = r(t, I),
         R = function (e) {
             return m && f(m, 'normal', e), new p(!0, e);
         },
         P = function (e) {
-            return S ? (a(e), A ? C(e[0], e[1], R) : C(e[0], e[1])) : A ? C(e, R) : C(e);
+            return S ? (a(e), N ? C(e[0], e[1], R) : C(e[0], e[1])) : N ? C(e, R) : C(e);
         };
     if (T) m = e.iterator;
-    else if (N) m = e;
+    else if (A) m = e;
     else {
         if (!(g = d(e))) throw new _(o(e) + ' is not iterable');
         if (s(g)) {

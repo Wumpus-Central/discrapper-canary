@@ -10,7 +10,7 @@ function a(i) {
     return (0, s.jsxs)(c.v2r, {
         navId: 'friends-popout-settings',
         onClose: t,
-        'aria-label': o.NW.string(o.t['3D5yo6']),
+        'aria-label': o.intl.string(o.t['3D5yo6']),
         onSelect: () => {},
         children: [
             (0, s.jsx)(c.S89, {

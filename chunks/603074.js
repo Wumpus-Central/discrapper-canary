@@ -15,7 +15,7 @@ var r = n(200651),
     m = n(526617),
     g = n(268365);
 function E(e) {
-    let { guildId: t, channel: n, containerWidth: a, onClose: E, onSelect: b, analyticsSource: y, suppressPlaySound: v, shouldValidateSelectedSound: O, shouldShowUpsell: I = !0, gridNotice: S, inExpressionPicker: T, soundButtonOverlay: N, listPadding: A, renderHeader: C, defaultSoundsOnly: R } = e,
+    let { guildId: t, channel: n, containerWidth: a, onClose: E, onSelect: b, analyticsSource: y, suppressPlaySound: v, shouldValidateSelectedSound: O, shouldShowUpsell: I = !0, gridNotice: S, inExpressionPicker: T, soundButtonOverlay: A, listPadding: N, renderHeader: C, defaultSoundsOnly: R } = e,
         P = (0, s.e7)([h.Z], () => h.Z.isFetchingSounds() || h.Z.isFetchingDefaultSounds()),
         { analyticsLocations: w } = (0, u.ZP)(c.Z.SOUNDBOARD_POPOUT);
     i.useEffect(() => {
@@ -42,8 +42,8 @@ function E(e) {
                       suppressPlaySound: v,
                       shouldShowUpsell: I,
                       gridNotice: S,
-                      soundButtonOverlay: N,
-                      listPadding: A,
+                      soundButtonOverlay: A,
+                      listPadding: N,
                       renderHeader: C,
                       defaultSoundsOnly: R,
                       inExpressionPicker: T,

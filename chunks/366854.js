@@ -1,77 +1,77 @@
-r.d(t, { default: () => s }), r(388685);
+r.d(e, { default: () => s }), r(388685);
 var n = r(200651),
     o = r(192379),
-    c = r(481060),
-    i = r(668781),
-    a = r(787014),
-    l = r(388032);
-let s = function (e) {
-    var t,
+    i = r(481060),
+    c = r(668781),
+    l = r(787014),
+    a = r(388032);
+let s = function (t) {
+    var e,
         r,
-        { channelId: s, application: p, onClose: b } = e,
-        u = (function (e, t) {
-            if (null == e) return {};
+        { channelId: s, application: p, onClose: b } = t,
+        u = (function (t, e) {
+            if (null == t) return {};
             var r,
                 n,
-                o = (function (e, t) {
-                    if (null == e) return {};
+                o = (function (t, e) {
+                    if (null == t) return {};
                     var r,
                         n,
                         o = {},
-                        c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                        i = Object.keys(t);
+                    for (n = 0; n < i.length; n++) (r = i[n]), e.indexOf(r) >= 0 || (o[r] = t[r]);
                     return o;
-                })(e, t);
+                })(t, e);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++) (r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                var i = Object.getOwnPropertySymbols(t);
+                for (n = 0; n < i.length; n++) (r = i[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]);
             }
             return o;
-        })(e, ['channelId', 'application', 'onClose']);
+        })(t, ['channelId', 'application', 'onClose']);
     let [f, O] = o.useState(!1),
         y = async () => {
             try {
-                O(!0), await a.ZP.removeLinkedLobby(s), b();
-            } catch (e) {
+                O(!0), await l.ZP.removeLinkedLobby(s), b();
+            } catch (t) {
                 O(!1),
-                    i.Z.show({
-                        title: l.NW.string(l.t.vFzPFh),
-                        body: l.NW.string(l.t['6D5WVl'])
+                    c.Z.show({
+                        title: a.intl.string(a.t.vFzPFh),
+                        body: a.intl.string(a.t['6D5WVl'])
                     });
             }
         };
     return (0, n.jsx)(
-        c.ConfirmModal,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
+        i.ConfirmModal,
+        ((e = (function (t) {
+            for (var e = 1; e < arguments.length; e++) {
+                var r = null != arguments[e] ? arguments[e] : {},
                     n = Object.keys(r);
                 'function' == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        Object.getOwnPropertySymbols(r).filter(function (t) {
+                            return Object.getOwnPropertyDescriptor(r, t).enumerable;
                         })
                     )),
-                    n.forEach(function (t) {
+                    n.forEach(function (e) {
                         var n;
-                        (n = r[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
+                        (n = r[e]),
+                            e in t
+                                ? Object.defineProperty(t, e, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = n);
+                                : (t[e] = n);
                     });
             }
-            return e;
+            return t;
         })(
             {
-                header: l.NW.string(l.t.JmUENj),
-                confirmText: l.NW.string(l.t['cY+Ooa']),
-                cancelText: l.NW.string(l.t['ETE/oK']),
-                confirmButtonColor: c.zxk.Colors.BRAND,
+                header: a.intl.string(a.t.JmUENj),
+                confirmText: a.intl.string(a.t['cY+Ooa']),
+                cancelText: a.intl.string(a.t['ETE/oK']),
+                confirmButtonColor: i.zxk.Colors.BRAND,
                 onConfirm: y,
                 loading: f,
                 onClose: b
@@ -80,23 +80,23 @@ let s = function (e) {
         )),
         (r = r =
             {
-                children: (0, n.jsx)(c.Text, {
+                children: (0, n.jsx)(i.Text, {
                     variant: 'text-sm/normal',
-                    children: l.NW.format(l.t['6l2osr'], { applicationName: p.name })
+                    children: a.intl.format(a.t['6l2osr'], { applicationName: p.name })
                 })
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : (function (e, t) {
-                  var r = Object.keys(e);
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+            : (function (t, e) {
+                  var r = Object.keys(t);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
+                      var n = Object.getOwnPropertySymbols(t);
                       r.push.apply(r, n);
                   }
                   return r;
-              })(Object(r)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              })(Object(r)).forEach(function (t) {
+                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
               }),
-        t)
+        e)
     );
 };

@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => W }), n(415506);
+n.d(t, { Z: () => Y }), n(415506);
 var a,
     o = n(442837),
     s = n(570140),
@@ -169,7 +169,7 @@ function T(e, t) {
         a
     );
 }
-function N() {
+function A() {
     if (null == r) return !1;
     (O = r.getDuration()),
         s.Z.dispatch({
@@ -180,18 +180,18 @@ function N() {
         (r = null),
         (v = null);
 }
-function A(e) {
-    return (i = e.sessionId), (b = null), (y = null), N(), !1;
+function N(e) {
+    return (i = e.sessionId), (b = null), (y = null), A(), !1;
 }
 function C() {
-    (i = null), (b = null), (y = null), N();
+    (i = null), (b = null), (y = null), A();
 }
 function R(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         var n, a, o;
         if ((null == v || v.updateVoiceStates(t.userId, t.channelId), (I = I || (null != (n = null == v ? void 0 : v.getStats().max_voice_state_count) ? n : 0) > 1), f.default.getId() !== t.userId)) return !1;
-        if (null != r) t.sessionId === i ? ((null != t.guildId && t.guildId === r.guildId) || (null == t.guildId && t.channelId === r.channelId) ? (null == t.channelId ? N() : (r.channelId = t.channelId)) : ((t.guildId !== r.guildId && null == t.channelId) || N(), null != t.channelId && ((b = null), (y = null), (r = T(t.guildId, t.channelId)), (I = (null != (a = null == v ? void 0 : v.getStats().max_voice_state_count) ? a : 0) > 1)))) : t.guildId === r.guildId && ((null == u.Z.getAwaitingRemoteSessionInfo() || null == u.Z.getRemoteSessionId()) && (b = r.channelId), N());
+        if (null != r) t.sessionId === i ? ((null != t.guildId && t.guildId === r.guildId) || (null == t.guildId && t.channelId === r.channelId) ? (null == t.channelId ? A() : (r.channelId = t.channelId)) : ((t.guildId !== r.guildId && null == t.channelId) || A(), null != t.channelId && ((b = null), (y = null), (r = T(t.guildId, t.channelId)), (I = (null != (a = null == v ? void 0 : v.getStats().max_voice_state_count) ? a : 0) > 1)))) : t.guildId === r.guildId && ((null == u.Z.getAwaitingRemoteSessionInfo() || null == u.Z.getRemoteSessionId()) && (b = r.channelId), A());
         else {
             if (t.sessionId !== i || null == t.channelId) return e;
             (b = null), (y = null), (r = T(t.guildId, t.channelId)), (I = (null != (o = null == v ? void 0 : v.getStats().max_voice_state_count) ? o : 0) > 1);
@@ -212,22 +212,22 @@ function D() {
 function L(e) {
     let { guild: t } = e;
     if (null == r || r.guildId !== t.id) return !1;
-    N();
+    A();
 }
 function x(e) {
     let { channelId: t } = e;
     if (null == r || r.channelId !== t) return !1;
-    N();
+    A();
 }
 function M(e) {
     let { channel: t } = e;
     if (null == r || r.channelId !== t.id) return !1;
-    N();
+    A();
 }
 function k(e) {
     let { channelId: t } = e;
     if (null == r || (null != t && r.channelId === t)) return !1;
-    N();
+    A();
 }
 function j(e) {
     return e.state === p.$7l.ACTIVE && null != r && r.resetBackoff('App state is active'), !1;
@@ -343,7 +343,7 @@ let H = new Z(
     __OVERLAY__
         ? {}
         : {
-              CONNECTION_OPEN: A,
+              CONNECTION_OPEN: N,
               CONNECTION_CLOSED: C,
               RTC_CONNECTION_STATE: U,
               RTC_CONNECTION_PING: G,
@@ -375,4 +375,4 @@ Promise.resolve()
             e.client_rtc_state = H.getState();
         });
     });
-let W = H;
+let Y = H;

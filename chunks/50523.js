@@ -2,8 +2,8 @@ n.d(t, { b: () => v }), n(539854), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    a = n(100527),
-    l = n(906732),
+    l = n(100527),
+    a = n(906732),
     o = n(915346),
     s = n(783097),
     c = n(812236),
@@ -20,16 +20,16 @@ var i = n(442837),
     y = n(388032);
 function v(e) {
     var t, n;
-    let { application: v, customId: E, customLink: O, embedUrl: N, referrerId: j } = e,
-        C = null == v || null == (t = v.bot) ? void 0 : t.id,
-        S = (0, c.ms)({
+    let { application: v, customId: E, customLink: O, embedUrl: j, referrerId: C } = e,
+        S = null == v || null == (t = v.bot) ? void 0 : t.id,
+        I = (0, c.ms)({
             context: { type: 'contextless' },
             applicationId: v.id,
             botUserId: null == v || null == (n = v.bot) ? void 0 : n.id
         }),
-        I = null != v && (0, s.ye)(v),
-        T = null != C && I && S,
-        { analyticsLocations: P } = (0, l.ZP)(a.Z.ACTIVITY_CUSTOM_LINK),
+        N = null != v && (0, s.ye)(v),
+        T = null != S && N && I,
+        { analyticsLocations: P } = (0, a.ZP)(l.Z.ACTIVITY_CUSTOM_LINK),
         A = (0, i.e7)([f.Z], () => f.Z.getChannelId()),
         w = (0, x.KF)(A),
         Z = (0, i.e7)([_.ZP], () => {
@@ -44,7 +44,7 @@ function v(e) {
         M = [];
     D &&
         M.push({
-            label: null == Z ? y.NW.string(y.t.cnBQPD) : y.NW.string(y.t.VJlc0d),
+            label: null == Z ? y.intl.string(y.t.cnBQPD) : y.intl.string(y.t.VJlc0d),
             trackingArea: p.j_.PLAY,
             onClick() {
                 (0, g.G6)({
@@ -54,33 +54,33 @@ function v(e) {
                     instanceId: Z,
                     embeddedActivitiesManager: k,
                     customId: L,
-                    referrerId: j,
+                    referrerId: C,
                     analyticsLocations: P
                 });
             },
-            disabledReason: null != Z && (null == R ? void 0 : R.compositeInstanceId) === Z ? y.NW.string(y.t.wJNK8P) : void 0
+            disabledReason: null != Z && (null == R ? void 0 : R.compositeInstanceId) === Z ? y.intl.string(y.t.wJNK8P) : void 0
         }),
         T &&
             !D &&
             M.push({
-                label: y.NW.string(y.t.JeK1Wl),
+                label: y.intl.string(y.t.JeK1Wl),
                 trackingArea: p.j_.PLAY,
                 onClick() {
                     (0, o.W)({
                         appId: v.id,
-                        botId: C,
+                        botId: S,
                         analyticsLocations: P,
                         customId: L,
-                        referrerId: j
+                        referrerId: C
                     });
                 }
             });
-    let W = (0, m.z)(v);
+    let U = (0, m.z)(v);
     return (
-        null != M && null != W && M.push(W),
+        null != M && null != U && M.push(U),
         (0, r.jsx)(d.W, {
             actions: M,
-            embedUrl: N,
+            embedUrl: j,
             header: v.name,
             iconSrc: h.ZP.getApplicationIconURL({
                 id: v.id,
@@ -93,7 +93,7 @@ function v(e) {
             trackingConfig: {
                 id: v.id,
                 linkType: u.U.CUSTOM_ACTIVITY_LINK,
-                referrerId: j,
+                referrerId: C,
                 activityCustomId: L
             }
         })

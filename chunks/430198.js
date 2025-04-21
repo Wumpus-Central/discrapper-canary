@@ -75,7 +75,7 @@ function T(e, t) {
     }
     return !1;
 }
-function N(e) {
+function A(e) {
     let t = g.Z.getGuild(e);
     if (null == t) return;
     let n = (v[e] = new Set());
@@ -86,7 +86,7 @@ function N(e) {
         T(i, t) && n.add(i.id);
     }
 }
-function A(e, t) {
+function N(e, t) {
     let n = v[e];
     if (null == n) return !1;
     let r = h.Z.getChannel(t);
@@ -110,12 +110,12 @@ function P(e) {
 }
 function w(e) {
     let { channel: t } = e;
-    return null != t.guild_id && A(t.guild_id, t.id);
+    return null != t.guild_id && N(t.guild_id, t.id);
 }
 function D(e) {
     let { channels: t } = e,
         n = !1;
-    for (let e of t) null != e.guild_id && A(e.guild_id, e.id) && (n = !0);
+    for (let e of t) null != e.guild_id && N(e.guild_id, e.id) && (n = !0);
     return n;
 }
 function L(e) {
@@ -133,7 +133,7 @@ class M extends (r = a.ZP.Store) {
     isChannelGated(e, t) {
         if (null == e) return !1;
         let n = v[e];
-        return null == n && (N(e), (n = v[e])), null != n && n.has(t);
+        return null == n && (A(e), (n = v[e])), null != n && n.has(t);
     }
     isChannelGatedAndVisible(e, t) {
         return null != e && this.isChannelGated(e, t) && !O.has(e);

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(442837),
-    l = n(481060),
+    l = n(442837),
+    s = n(481060),
     a = n(497321),
     o = n(484614),
     c = n(246946),
@@ -38,8 +38,8 @@ class x extends i.PureComponent {
     }
     renderChannelSelect(e) {
         let { widgetChannelId: t, widgetEnabled: n } = this.props;
-        return (0, r.jsxs)(l.xJW, {
-            title: p.NW.string(p.t.LUo0Q0),
+        return (0, r.jsxs)(s.xJW, {
+            title: p.intl.string(p.t.LUo0Q0),
             children: [
                 (0, r.jsx)(g.m, {
                     guildId: e.id,
@@ -47,9 +47,9 @@ class x extends i.PureComponent {
                     widgetChannelId: t,
                     className: h.spacing
                 }),
-                (0, r.jsx)(l.R94, {
-                    type: l.geA.DESCRIPTION,
-                    children: p.NW.string(p.t.LxVR9P)
+                (0, r.jsx)(s.R94, {
+                    type: s.geA.DESCRIPTION,
+                    children: p.intl.string(p.t.LxVR9P)
                 })
             ]
         });
@@ -59,13 +59,13 @@ class x extends i.PureComponent {
         return (0, r.jsxs)('div', {
             className: h.infoWrapper,
             children: [
-                (0, r.jsx)(l.xJW, {
-                    title: p.NW.string(p.t.TRyLUl),
+                (0, r.jsx)(s.xJW, {
+                    title: p.intl.string(p.t.TRyLUl),
                     className: h.infoItem,
                     children: (0, r.jsx)(o.Z, { value: e.id })
                 }),
-                (0, r.jsx)(l.xJW, {
-                    title: p.NW.string(p.t.VECJcH),
+                (0, r.jsx)(s.xJW, {
+                    title: p.intl.string(p.t.VECJcH),
                     className: h.infoItem,
                     children: (0, r.jsx)(o.Z, { value: t })
                 })
@@ -78,14 +78,14 @@ class x extends i.PureComponent {
             children: (0, r.jsxs)('div', {
                 className: h.infoWrapper,
                 children: [
-                    (0, r.jsxs)(l.xJW, {
+                    (0, r.jsxs)(s.xJW, {
                         className: h.infoItem,
-                        title: p.NW.string(p.t.XVGbn5),
+                        title: p.intl.string(p.t.XVGbn5),
                         children: [
                             (0, r.jsx)(o.Z, { value: t }),
-                            (0, r.jsx)(l.R94, {
-                                type: l.geA.DESCRIPTION,
-                                children: p.NW.format(p.t['+baN19'], {})
+                            (0, r.jsx)(s.R94, {
+                                type: s.geA.DESCRIPTION,
+                                children: p.intl.format(p.t['+baN19'], {})
                             })
                         ]
                     }),
@@ -105,10 +105,10 @@ class x extends i.PureComponent {
             ? null
             : this.props.hide
               ? (0, r.jsx)(a.Z, {})
-              : (0, r.jsxs)(l.hjN, {
-                    tag: l.RB0.H1,
-                    title: p.NW.string(p.t.qlhNb2),
-                    children: [this.renderToggle(), this.renderChannelSelect(e), (0, r.jsx)(l.$i$, { className: h.divider }), this.renderAPIInfo(e), (0, r.jsx)(l.$i$, { className: h.divider }), this.renderWidget(e)]
+              : (0, r.jsxs)(s.hjN, {
+                    tag: s.RB0.H1,
+                    title: p.intl.string(p.t.qlhNb2),
+                    children: [this.renderToggle(), this.renderChannelSelect(e), (0, r.jsx)(s.$i$, { className: h.divider }), this.renderAPIInfo(e), (0, r.jsx)(s.$i$, { className: h.divider }), this.renderWidget(e)]
                 });
     }
     constructor(...e) {
@@ -118,11 +118,11 @@ class x extends i.PureComponent {
                 widgetEnabledProp: this.props.widgetEnabled
             }),
             f(this, 'renderToggle', () =>
-                (0, r.jsx)(l.j7V, {
+                (0, r.jsx)(s.j7V, {
                     className: h.spacing,
                     value: this.state.internalEnabled,
                     onChange: this.handleToggleWidget,
-                    children: p.NW.string(p.t.NR6hub)
+                    children: p.intl.string(p.t.NR6hub)
                 })
             ),
             f(this, 'handleToggleWidget', (e) => {
@@ -131,7 +131,7 @@ class x extends i.PureComponent {
             });
     }
 }
-let b = s.ZP.connectStores([u.Z, c.Z], () => {
+let b = l.ZP.connectStores([u.Z, c.Z], () => {
     let { guild: e, embedChannelId: t, embedEnabled: n } = u.Z.getProps();
     return {
         guild: e,

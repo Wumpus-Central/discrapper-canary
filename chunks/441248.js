@@ -30,7 +30,7 @@ function f(e) {
 }
 function g(e) {
     let { isStreaming: t, application: n, game: i, onClickNotSharing: l } = e,
-        c = null != n ? n.name : null != i ? i.name : h.NW.string(h.t['UQMV/P']);
+        c = null != n ? n.name : null != i ? i.name : h.intl.string(h.t['UQMV/P']);
     return (0, r.jsxs)('div', {
         className: p.gameWrapper,
         children: [

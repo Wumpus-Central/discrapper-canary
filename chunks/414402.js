@@ -10,7 +10,7 @@ function c(e) {
     let { user: t, activity: n, onAction: c } = e;
     return (0, i.Z)(n, s.xjy.INSTANCE)
         ? (0, r.jsx)(o.tG, {
-              text: l.NW.string(l.t.vwl1PD),
+              text: l.intl.string(l.t.vwl1PD),
               fullWidth: !0,
               onClick: (e) => {
                   e.stopPropagation(), null == c || c({ action: 'PRESS_NOTIFY_BUTTON' }), new a.Z('UserActivityActions').log('notify', t.id, n);

@@ -39,24 +39,24 @@ let c = 10,
     p = 10,
     h = 500;
 function m(e) {
-    if (null != e.choices) return i.NW.string(i.t.xi5aam);
+    if (null != e.choices) return i.intl.string(i.t.xi5aam);
     switch (e.type) {
         case r.jw.BOOLEAN:
-            return i.NW.string(i.t.ATIx6O);
+            return i.intl.string(i.t.ATIx6O);
         case r.jw.CHANNEL:
-            return i.NW.string(i.t.Q0z2Gx);
+            return i.intl.string(i.t.Q0z2Gx);
         case r.jw.INTEGER:
-            return i.NW.string(i.t['d/9Rk5']);
+            return i.intl.string(i.t['d/9Rk5']);
         case r.jw.NUMBER:
-            return i.NW.string(i.t['FDyk/f']);
+            return i.intl.string(i.t['FDyk/f']);
         case r.jw.ROLE:
-            return i.NW.string(i.t.vrRQn5);
+            return i.intl.string(i.t.vrRQn5);
         case r.jw.USER:
-            return i.NW.string(i.t.i2r7j4);
+            return i.intl.string(i.t.i2r7j4);
         case r.jw.MENTIONABLE:
-            return i.NW.string(i.t.I7imeX);
+            return i.intl.string(i.t.I7imeX);
         default:
-            return i.NW.string(i.t.EkDo1t);
+            return i.intl.string(i.t.EkDo1t);
     }
 }
 Object.freeze([]), Object.freeze([]);

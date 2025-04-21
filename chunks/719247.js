@@ -1,6 +1,6 @@
 n.d(t, {
     T: () => b,
-    Z: () => N
+    Z: () => A
 }),
     n(388685);
 var r,
@@ -86,7 +86,7 @@ class T extends (r = l.ZP.Store) {
     }
 }
 m(T, 'displayName', 'ContentInventoryActivityStore');
-let N = new T(c.Z, {
+let A = new T(c.Z, {
     CONNECTION_OPEN: I,
     CONTENT_INVENTORY_SET_FEED: O
 });

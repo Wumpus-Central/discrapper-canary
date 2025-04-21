@@ -94,12 +94,12 @@ function I(e) {
     e.stopPropagation();
 }
 function S(e, t) {
-    let { id: n, channelId: i, className: a, children: m, actions: E, handleEditModal: v, keyboardModeEnabled: O, onKeyDown: S, draftType: T, size: N = 1 } = e,
-        A = (0, s.JA)(n),
-        { onFocus: C } = A,
-        R = y(A, ['onFocus']),
+    let { id: n, channelId: i, className: a, children: m, actions: E, handleEditModal: v, keyboardModeEnabled: O, onKeyDown: S, draftType: T, size: A = 1 } = e,
+        N = (0, s.JA)(n),
+        { onFocus: C } = N,
+        R = y(N, ['onFocus']),
         { handleFocus: P, handleBlur: w } = (0, f.b)(C),
-        D = 0 === N,
+        D = 0 === A,
         L = null != E,
         x = (e) => {
             if (O) {
@@ -128,7 +128,7 @@ function S(e, t) {
                 onFocus: P,
                 onBlur: w,
                 onKeyDown: x,
-                className: o()(h.upload, a, { [h.sizeClip]: 2 === N }),
+                className: o()(h.upload, a, { [h.sizeClip]: 2 === A }),
                 ref: t,
                 children: (0, r.jsxs)('div', {
                     className: h.uploadContainer,
@@ -140,7 +140,7 @@ function S(e, t) {
                                   children: (0, r.jsx)('div', {
                                       className: o()(h.actionBar, { [h.smallActionBar]: D }),
                                       onContextMenu: I,
-                                      'aria-label': p.NW.string(p.t['8Lu3Dg']),
+                                      'aria-label': p.intl.string(p.t['8Lu3Dg']),
                                       children: (0, r.jsx)(u.ZP, {
                                           className: o()({ [h.miniPopover]: D }),
                                           children: E

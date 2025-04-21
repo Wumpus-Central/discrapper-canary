@@ -1,9 +1,9 @@
-n.d(t, { Z: () => x });
-var r,
-    i,
+n.d(t, { Z: () => E });
+var i,
+    r,
     s,
-    a,
     l,
+    a,
     o,
     c = n(442837),
     d = n(570140),
@@ -13,13 +13,13 @@ var r,
     p = n(944486),
     h = n(55589),
     f = n(981631);
-let b = (null != (l = null == (a = window) || null == (s = a.location) ? void 0 : s.pathname) ? l : '').startsWith(f.Z5c.ACTIVITIES) ? f.Z5c.ACTIVITIES : null;
+let b = (null != (a = null == (l = window) || null == (s = l.location) ? void 0 : s.pathname) ? a : '').startsWith(f.Z5c.ACTIVITIES) ? f.Z5c.ACTIVITIES : null;
 function _(e) {
     let { link: t } = e;
     if (b === t) return !1;
     b = t;
 }
-class N extends (o = c.ZP.Store) {
+class x extends (o = c.ZP.Store) {
     initialize() {
         this.waitFor(m.Z, h.Z, p.Z, g.Z, u.Z);
     }
@@ -27,16 +27,16 @@ class N extends (o = c.ZP.Store) {
         return null != b ? b : m.Z.fallbackRoute;
     }
 }
-(i = 'AppViewStore'),
-    (r = 'displayName') in N
-        ? Object.defineProperty(N, r, {
-              value: i,
+(r = 'AppViewStore'),
+    (i = 'displayName') in x
+        ? Object.defineProperty(x, i, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (N[r] = i);
-let x = new N(d.Z, {
+        : (x[i] = r);
+let E = new x(d.Z, {
     OVERLAY_INITIALIZE: function () {
         let e = h.Z.getPrivateChannelIds(),
             t = p.Z.getChannelId(f.ME);

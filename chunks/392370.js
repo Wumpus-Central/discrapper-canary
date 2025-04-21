@@ -27,12 +27,12 @@ var i = n(192379),
     v = n(827498),
     C = n(783097),
     g = n(689079),
-    N = n(761652);
-function j(e, t) {
+    j = n(761652);
+function P(e, t) {
     let n = h.Z.getScoreWithoutLoadingLatest(e.id);
     return h.Z.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function P(e, t) {
+function N(e, t) {
     let n = (0, C.$d)(e),
         i = (0, C.$d)(t);
     return (0, p.un)(n, i);
@@ -42,7 +42,7 @@ function E(e, t) {
 }
 function O(e) {
     let { context: t, query: n, commandLimit: r, applicationLimit: o, searchesCommands: a = !0, searchesBots: s = !0, searchesActivities: h = !0 } = e;
-    n.startsWith(''.concat(N.GI)) && (n = n.substring(1));
+    n.startsWith(''.concat(j.GI)) && (n = n.substring(1));
     let {
             commands: b,
             commandSectionMap: _,
@@ -286,7 +286,7 @@ function O(e) {
                         return null != (n = null == i ? void 0 : i.includes(a.toLocaleLowerCase())) && n;
                     })
                 ],
-                sortComparers: [j, P]
+                sortComparers: [P, N]
             });
         }, [s, h, o, t, n, O, A]),
         L = S.length > 0,
@@ -302,7 +302,7 @@ function O(e) {
 }
 function A(e) {
     let { context: t, query: n, fetches: r = !0, pageLimit: l = 1 / 0, entrypoint: c } = e;
-    n.startsWith(''.concat(N.GI)) && (n = n.substring(1));
+    n.startsWith(''.concat(j.GI)) && (n = n.substring(1));
     let u = c === v._b.VOICE,
         d = 'channel' === t.type ? t.channel.guild_id : void 0,
         [p, m] = i.useState(1),

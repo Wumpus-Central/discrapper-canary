@@ -1,4 +1,4 @@
-t.d(n, { Z: () => N }), t(388685);
+t.d(n, { Z: () => h }), t(388685);
 var i,
     l,
     r,
@@ -49,7 +49,7 @@ class v extends (i = o.ZP.Store) {
               writable: !0
           })
         : (v[l] = r);
-let N = new v(s.Z, {
+let h = new v(s.Z, {
     EVENT_DIRECTORY_FETCH_START: function () {
         g = !0;
     },

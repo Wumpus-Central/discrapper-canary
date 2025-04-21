@@ -12,7 +12,7 @@ class s extends i.PureComponent {
             : (0, r.jsxs)('div', {
                   className: e,
                   children: [
-                      (0, r.jsx)(l.Z, { children: a.NW.string(a.t.m8OiMj) }),
+                      (0, r.jsx)(l.Z, { children: a.intl.string(a.t.m8OiMj) }),
                       (0, r.jsx)('div', {
                           className: o.content,
                           children: t.legalNotice

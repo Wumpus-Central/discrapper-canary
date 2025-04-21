@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(642613);
+n.d(t, { Z: () => C }), n(642613);
 var r = n(200651),
     s = n(192379),
     o = n(120356),
@@ -16,42 +16,42 @@ var r = n(200651),
     y = n(622802),
     h = n(388032),
     x = n(313273),
-    N = n(225893),
-    v = n(35356);
-function O(e) {
+    v = n(225893),
+    O = n(35356);
+function j(e) {
     let { children: t } = e;
     return (0, r.jsx)('td', {
         className: x.statColumn,
         children: t
     });
 }
-function j(e) {
+function N(e) {
     let { name: t, iconSrc: n, valueTotal: s, valuePerSecond: o } = e,
-        i = o >= 0 ? y.Z.QMkrPj : y.Z.VN4aTU;
+        i = o >= 0 ? y.default.QMkrPj : y.default.VN4aTU;
     return (0, r.jsxs)('tr', {
         className: x.statRow,
         children: [
-            (0, r.jsx)(O, {
+            (0, r.jsx)(j, {
                 children: (0, r.jsx)('img', {
                     className: x.statIcon,
                     src: n,
                     alt: ''
                 })
             }),
-            (0, r.jsx)(O, {
+            (0, r.jsx)(j, {
                 children: (0, r.jsx)(p.Z, {
                     variant: 'text-xs/medium',
                     className: x.statName,
                     children: t
                 })
             }),
-            (0, r.jsx)(O, {
+            (0, r.jsx)(j, {
                 children: (0, r.jsxs)('div', {
                     className: x.statValue,
                     children: [
                         (0, r.jsx)('img', {
                             className: x.pointsIcon,
-                            src: N,
+                            src: v,
                             alt: ''
                         }),
                         (0, r.jsx)(c.Text, {
@@ -62,11 +62,11 @@ function j(e) {
                     ]
                 })
             }),
-            (0, r.jsx)(O, {
+            (0, r.jsx)(j, {
                 children: (0, r.jsx)(c.Text, {
                     className: a()(x.statValuePerSecond, x.monospace),
                     variant: 'text-xs/medium',
-                    children: h.NW.format(i, {
+                    children: h.intl.format(i, {
                         points: Math.abs(o),
                         grassIconHook: (e, t, n) => (0, d.Z)(e, t, n, x.pointsIcon)
                     })
@@ -75,7 +75,7 @@ function j(e) {
         ]
     });
 }
-function Z(e) {
+function _(e) {
     let { itemId: t, isPaused: n } = e,
         s = (0, i.e7)([l.Z], () => {
             var e;
@@ -83,14 +83,14 @@ function Z(e) {
         }),
         o = (0, g.w2)()[t],
         a = (0, f.Z)(s, n);
-    return (0, r.jsx)(j, {
+    return (0, r.jsx)(N, {
         name: o.name,
         valueTotal: s,
         valuePerSecond: a,
         iconSrc: o.purchaseIconSrc
     });
 }
-function _(e) {
+function P(e) {
     let { transitionState: t, isPaused: n } = e,
         o = (0, i.e7)([l.Z], () => l.Z.pointsByItem),
         a = (0, i.e7)([l.Z], () => l.Z.lifetimePoints),
@@ -118,12 +118,12 @@ function _(e) {
                         children: [
                             (0, r.jsx)(p.Z, {
                                 variant: 'heading-lg/semibold',
-                                children: h.NW.string(y.Z.bS8cBA)
+                                children: h.intl.string(y.default.bS8cBA)
                             }),
                             (0, r.jsx)(p.Z, {
                                 className: x.subtitle,
                                 variant: 'text-xs/medium',
-                                children: h.NW.string(y.Z.fdvpl5)
+                                children: h.intl.string(y.default.fdvpl5)
                             })
                         ]
                     }),
@@ -132,15 +132,15 @@ function _(e) {
                             className: x.statsTable,
                             children: (0, r.jsxs)('tbody', {
                                 children: [
-                                    (0, r.jsx)(j, {
-                                        name: h.NW.string(y.Z.wAfrVl),
-                                        iconSrc: N,
+                                    (0, r.jsx)(N, {
+                                        name: h.intl.string(y.default.wAfrVl),
+                                        iconSrc: v,
                                         valueTotal: a,
                                         valuePerSecond: u
                                     }),
                                     m.map((e) =>
                                         (0, r.jsx)(
-                                            Z,
+                                            _,
                                             {
                                                 itemId: e,
                                                 isPaused: n
@@ -156,17 +156,17 @@ function _(e) {
             })
     });
 }
-function P(e) {
+function C(e) {
     let { isPaused: t } = e;
     return (0, r.jsx)(m.O, {
-        iconSrc: v,
-        title: h.NW.string(y.Z.bS8cBA),
+        iconSrc: O,
+        title: h.intl.string(y.default.bS8cBA),
         onClick: () => {
             (0, c.ZDy)(() =>
                 Promise.resolve((e) => {
                     var n, s;
                     return (0, r.jsx)(
-                        _,
+                        P,
                         ((n = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},

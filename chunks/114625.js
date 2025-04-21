@@ -1,69 +1,69 @@
 n.d(t, { Z: () => g });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(442837),
+var r = n(442837),
     s = n(481060),
-    a = n(607070),
-    l = n(600164),
+    l = n(607070),
+    a = n(600164),
     o = n(614277),
     c = n(388032),
     d = n(575651),
     u = n(436858),
     m = n(275554);
 function g() {
-    let e = (0, i.e7)([a.Z], () => a.Z.useReducedMotion);
-    return (0, r.jsx)(o.O3, {
-        children: (0, r.jsxs)(s.mzw, {
-            align: l.Z.Align.CENTER,
-            direction: l.Z.Direction.HORIZONTAL,
+    let e = (0, r.e7)([l.Z], () => l.Z.useReducedMotion);
+    return (0, i.jsx)(o.O3, {
+        children: (0, i.jsxs)(s.mzw, {
+            align: a.Z.Align.CENTER,
+            direction: a.Z.Direction.HORIZONTAL,
             className: d.container,
             children: [
-                (0, r.jsxs)(s.Kqy, {
+                (0, i.jsxs)(s.Kqy, {
                     direction: 'horizontal',
                     gap: 8,
                     align: 'center',
                     children: [
-                        (0, r.jsx)('img', {
+                        (0, i.jsx)('img', {
                             alt: '',
                             src: e ? m.Z : u.Z,
                             className: d.image
                         }),
-                        (0, r.jsx)(s.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: 'text-sm/medium',
-                            children: c.NW.string(c.t.n9Tp5O)
+                            children: c.intl.string(c.t.n9Tp5O)
                         })
                     ]
                 }),
-                (0, r.jsx)(s.zxk, {
+                (0, i.jsx)(s.zxk, {
                     look: s.iLD.FILLED,
                     color: s.Ttl.BRAND,
                     onClick: () => {
                         (0, s.ZDy)(async () => {
                             let { default: e } = await n.e('74824').then(n.bind(n, 817357));
                             return (t) =>
-                                (0, r.jsx)(
+                                (0, i.jsx)(
                                     e,
                                     (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
-                                                r = Object.keys(n);
+                                                i = Object.keys(n);
                                             'function' == typeof Object.getOwnPropertySymbols &&
-                                                (r = r.concat(
+                                                (i = i.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                     })
                                                 )),
-                                                r.forEach(function (t) {
-                                                    var r;
-                                                    (r = n[t]),
+                                                i.forEach(function (t) {
+                                                    var i;
+                                                    (i = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
-                                                                  value: r,
+                                                                  value: i,
                                                                   enumerable: !0,
                                                                   configurable: !0,
                                                                   writable: !0
                                                               })
-                                                            : (e[t] = r);
+                                                            : (e[t] = i);
                                                 });
                                         }
                                         return e;
@@ -71,7 +71,7 @@ function g() {
                                 );
                         });
                     },
-                    children: c.NW.string(c.t.PDTjLC)
+                    children: c.intl.string(c.t.PDTjLC)
                 })
             ]
         })

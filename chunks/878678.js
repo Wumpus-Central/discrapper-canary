@@ -44,21 +44,21 @@ function p(e) {
     let t,
         n,
         { header: a, children: f, confirmText: _, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: b, bodyClassName: y, transitionState: v, loading: O = !1, confirmButtonColor: I = s.zx.Colors.RED, focusCancel: S = !1, impression: T } = e,
-        N = i.useRef(null),
-        A = (0, c.Q3)('ConfirmModal');
+        A = i.useRef(null),
+        N = (0, c.Q3)('ConfirmModal');
     return (
         i.useEffect(() => {
             S ||
                 setTimeout(() => {
                     var e;
-                    return null == (e = N.current) ? void 0 : e.focus();
+                    return null == (e = A.current) ? void 0 : e.focus();
                 }, 0);
         }, [S]),
         i.useLayoutEffect(() => () => (null == b ? void 0 : b())),
         null != p &&
             (t = (0, r.jsx)(s.zx, {
                 type: 'button',
-                look: A ? s.zx.Looks.FILLED : s.zx.Looks.LINK,
+                look: N ? s.zx.Looks.FILLED : s.zx.Looks.LINK,
                 color: s.zx.Colors.PRIMARY,
                 className: d.cancelButton,
                 size: s.zx.Sizes.MEDIUM,
@@ -71,7 +71,7 @@ function p(e) {
             })),
         null != _ &&
             (n = (0, r.jsx)(s.zx, {
-                buttonRef: N,
+                buttonRef: A,
                 type: 'submit',
                 size: s.zx.Sizes.MEDIUM,
                 color: I,

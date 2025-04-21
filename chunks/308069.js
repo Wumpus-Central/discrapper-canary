@@ -88,7 +88,7 @@ let j = (e) => {
                             (0, r.jsx)(l.Text, {
                                 color: 'always-white',
                                 variant: 'text-xs/normal',
-                                children: h.NW.string(h.t.o6FLcH)
+                                children: h.intl.string(h.t.o6FLcH)
                             }),
                             (0, r.jsx)(l.idN, {
                                 color: l.TVs.colors.WHITE,
@@ -136,7 +136,7 @@ let j = (e) => {
                                 (n = n =
                                     {
                                         className: b.submenuWrapper,
-                                        'aria-label': h.NW.string(h.t.DEoVWV),
+                                        'aria-label': h.intl.string(h.t.DEoVWV),
                                         children: (0, r.jsx)(l.xhG, {
                                             size: 'md',
                                             color: 'currentColor',

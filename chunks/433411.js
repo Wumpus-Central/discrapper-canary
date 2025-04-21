@@ -1,9 +1,9 @@
 n.d(t, { Z: () => b });
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(481060),
+    l = n.n(s),
+    a = n(481060),
     o = n(906732),
     c = n(864106),
     d = n(1585),
@@ -14,65 +14,65 @@ var r = n(200651),
     h = n(388032),
     f = n(142436);
 function b(e) {
-    let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: b = !1, withTutorial: N = !1, isTryItOutFlow: x = !1 } = e,
-        { analyticsLocations: E } = (0, o.ZP)(),
-        j = null != n,
-        { userAvatarDecoration: C, guildAvatarDecoration: O, pendingAvatarDecoration: S, pendingErrors: v } = (0, g.$U)(t, n),
-        T = (0, u.Z)('enable_avatar_decoration_uploads'),
-        I = i.useCallback(
+    let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: b = !1, withTutorial: x = !1, isTryItOutFlow: E = !1 } = e,
+        { analyticsLocations: j } = (0, o.ZP)(),
+        C = null != n,
+        { userAvatarDecoration: O, guildAvatarDecoration: S, pendingAvatarDecoration: v, pendingErrors: T } = (0, g.$U)(t, n),
+        I = (0, u.Z)('enable_avatar_decoration_uploads'),
+        N = r.useCallback(
             () =>
                 (0, d.ps)({
-                    analyticsLocations: E,
-                    isTryItOutFlow: x,
+                    analyticsLocations: j,
+                    isTryItOutFlow: E,
                     guild: n
                 }),
-            [E, x, n]
+            [j, E, n]
         ),
-        y = x || void 0 !== S ? null != S : (j ? O : C) != null,
-        A = N ? l.gtL : l.zxk;
-    return (0, r.jsxs)(p.Z, {
+        y = E || void 0 !== v ? null != v : (C ? S : O) != null,
+        A = x ? a.gtL : a.zxk;
+    return (0, i.jsxs)(p.Z, {
         className: s,
         forcedDivider: b,
         hasBackground: !0,
         title: m,
-        errors: v,
+        errors: T,
         children: [
-            (0, r.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: f.buttonsContainer,
                 children: [
-                    (0, r.jsx)(A, {
-                        size: l.zxk.Sizes.SMALL,
-                        onClick: I,
-                        className: a()({ [f.buttonHighlighted]: N }),
-                        children: h.NW.string(h.t['Tna/TU'])
+                    (0, i.jsx)(A, {
+                        size: a.zxk.Sizes.SMALL,
+                        onClick: N,
+                        className: l()({ [f.buttonHighlighted]: x }),
+                        children: h.intl.string(h.t['Tna/TU'])
                     }),
                     y &&
-                        (0, r.jsx)(l.zxk, {
+                        (0, i.jsx)(a.zxk, {
                             className: f.removeButton,
-                            color: l.zxk.Colors.PRIMARY,
-                            look: l.zxk.Looks.LINK,
-                            size: l.zxk.Sizes.SMALL,
+                            color: a.zxk.Colors.PRIMARY,
+                            look: a.zxk.Looks.LINK,
+                            size: a.zxk.Sizes.SMALL,
                             onClick: function () {
                                 (0, g.PO)(null == n ? void 0 : n.id, null);
                             },
-                            children: (0, c.ad)(t, n) ? h.NW.string(h.t['GsW4/v']) : h.NW.string(h.t.GReZ6O)
+                            children: (0, c.ad)(t, n) ? h.intl.string(h.t['GsW4/v']) : h.intl.string(h.t.GReZ6O)
                         })
                 ]
             }),
-            t.isStaff() && T && (0, r.jsx)(_, { user: t })
+            t.isStaff() && I && (0, i.jsx)(_, { user: t })
         ]
     });
 }
 let _ = (e) => {
     let { user: t } = e;
-    return (0, r.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: f.overrideButtonsContainer,
         children: [
-            (0, r.jsx)(l.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-xs/bold',
                 children: 'STAFF ONLY and Experimental. Upload a decoration to view throughout the app.'
             }),
-            (0, r.jsx)(m.Z, {
+            (0, i.jsx)(m.Z, {
                 onChange: (e) => {
                     null != e &&
                         (t.avatarDecoration = {

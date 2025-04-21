@@ -1,16 +1,16 @@
 n.d(t, { Z: () => d });
 var r = n(200651),
-    i = n(192379),
-    l = n(120356),
-    s = n.n(l),
+    l = n(192379),
+    i = n(120356),
+    s = n.n(i),
     a = n(442837),
     o = n(607070),
     c = n(843212);
-let d = i.memo(function (e) {
+let d = l.memo(function (e) {
     let { className: t, animated: n = !1 } = e,
-        l = i.useId();
+        i = l.useId();
     function d(e) {
-        return ''.concat(l, '-').concat(e);
+        return ''.concat(i, '-').concat(e);
     }
     function u(e) {
         return 'url(#'.concat(d(e), ')');

@@ -24,8 +24,8 @@ let b = ['#51BC9D'],
             S = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
             P = o.useRef(null),
             E = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
-            N = (0, u.Z)(E),
-            [T, A] = o.useState(null),
+            T = (0, u.Z)(E),
+            [N, A] = o.useState(null),
             [R, B] = o.useState(null),
             k = o.useRef(
                 new i.qA({
@@ -33,7 +33,7 @@ let b = ['#51BC9D'],
                     wind: 0
                 })
             ),
-            q = (0, i.uR)(T, R),
+            q = (0, i.uR)(N, R),
             D = o.useCallback(() => {
                 if (S) return;
                 let e = v.current,
@@ -128,18 +128,18 @@ let b = ['#51BC9D'],
                     );
                 }
             }, [v, P, q, S]),
-            W = (0, u.Z)(y);
+            I = (0, u.Z)(y);
         return (o.useEffect(() => {
-            O && y && !W && (C(), D());
-        }, [y, O, C, D, W]),
+            O && y && !I && (C(), D());
+        }, [y, O, C, D, I]),
         o.useEffect(() => {
             O &&
                 !E &&
-                N &&
+                T &&
                 setTimeout(() => {
                     C(), D();
                 }, 200);
-        }, [O, N, E, C, D]),
+        }, [O, T, E, C, D]),
         o.useEffect(() => {
             q.isReady && (!w.current && O && (C(), D()), (w.current = O));
         }, [O, w, D, C, q]),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var l = n(200651),
     a = n(192379),
-    r = n(481060),
-    i = n(22382),
+    i = n(481060),
+    r = n(22382),
     s = n(747071),
     o = n(586826),
     u = n(174727),
@@ -14,7 +14,7 @@ let m = a.memo(function (e) {
         [h, g] = a.useState(!1),
         p = a.useRef(null),
         { file: y, audio: b, loadAudioFromFile: v } = (0, o.p)(),
-        x = a.useMemo(() => (0, i.Z)(t.soundId), [t]);
+        x = a.useMemo(() => (0, r.Z)(t.soundId), [t]);
     return (
         a.useEffect(() => {
             null == p.current && (p.current = (0, u.XG)(x, t.name).then(v));
@@ -22,21 +22,21 @@ let m = a.memo(function (e) {
         (0, l.jsxs)('div', {
             className: f.previewContainer,
             children: [
-                (0, l.jsx)(r.P3F, {
+                (0, l.jsx)(i.P3F, {
                     onClick: m
                         ? void 0
                         : function () {
                               null != b && (b.paused ? ((b.volume = (0, s.Z)(n)), (b.currentTime = 0), b.play(), g(!0), b.addEventListener('ended', () => g(!1), { once: !0 })) : (b.pause(), g(!1)));
                           },
                     className: f.playButton,
-                    'aria-label': h ? d.NW.string(d.t.hHBkuL) : d.NW.string(d.t.RscU7O),
+                    'aria-label': h ? d.intl.string(d.t.hHBkuL) : d.intl.string(d.t.RscU7O),
                     children: h
-                        ? (0, l.jsx)(r.wNq, {
+                        ? (0, l.jsx)(i.wNq, {
                               size: 'xs',
                               color: 'currentColor',
                               className: f.playIcon
                           })
-                        : (0, l.jsx)(r.o1U, {
+                        : (0, l.jsx)(i.o1U, {
                               size: 'xs',
                               color: 'currentColor',
                               className: f.playIcon

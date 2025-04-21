@@ -1,7 +1,7 @@
 t.d(n, { Z: () => h });
-var r = t(200651);
+var i = t(200651);
 t(192379);
-var i = t(442837),
+var r = t(442837),
     l = t(481060),
     o = t(434404),
     c = t(147754),
@@ -20,7 +20,7 @@ function h(e) {
             },
             { autoTrackExposure: !1 }
         ),
-        f = (0, i.e7)(
+        f = (0, r.e7)(
             [s.Z, u.Z],
             () => {
                 let e = s.Z.getGuild(n);
@@ -28,7 +28,7 @@ function h(e) {
             },
             [n]
         ),
-        v = (0, i.e7)(
+        v = (0, r.e7)(
             [s.Z],
             () => {
                 let e = s.Z.getGuild(n);
@@ -36,13 +36,13 @@ function h(e) {
             },
             [n, h]
         );
-    return (0, r.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: p.container,
         children: [
-            (0, r.jsx)(a.Z, {
-                children: (0, r.jsx)('div', {
+            (0, i.jsx)(a.Z, {
+                children: (0, i.jsx)('div', {
                     className: p.circle,
-                    children: (0, r.jsx)(l.Que, {
+                    children: (0, i.jsx)(l.Que, {
                         size: 'custom',
                         color: 'currentColor',
                         height: 40,
@@ -51,24 +51,24 @@ function h(e) {
                     })
                 })
             }),
-            (0, r.jsx)(l.X6q, {
+            (0, i.jsx)(l.X6q, {
                 color: 'header-primary',
                 variant: 'heading-xl/semibold',
                 className: p.title,
-                children: v ? g.NW.string(g.t.RhXVpa) : g.NW.string(g.t['WgZ+3N'])
+                children: v ? g.intl.string(g.t.RhXVpa) : g.intl.string(g.t['WgZ+3N'])
             }),
-            (0, r.jsx)(l.Text, {
+            (0, i.jsx)(l.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
                 className: p.subtitle,
-                children: v ? g.NW.string(g.t['6hktHB']) : g.NW.string(g.t['v/S/PD'])
+                children: v ? g.intl.string(g.t['6hktHB']) : g.intl.string(g.t['v/S/PD'])
             }),
             f &&
-                (0, r.jsx)(l.Text, {
+                (0, i.jsx)(l.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     className: p.roleTip,
-                    children: g.NW.format(g.t['K+DH2t'], {
+                    children: g.intl.format(g.t['K+DH2t'], {
                         onClick: () => {
                             o.Z.open(n, d.pNK.ROLES), t();
                         }

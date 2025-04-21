@@ -17,8 +17,8 @@ var r = n(200651),
     _ = n(160404),
     I = n(703656),
     O = n(984933),
-    N = n(430824),
-    T = n(626135),
+    T = n(430824),
+    N = n(626135),
     S = n(652515),
     p = n(550951),
     A = n(544978),
@@ -33,7 +33,7 @@ function D() {
 function g(e) {
     var t;
     let { children: n, initialTab: l, guildId: o } = e,
-        D = (0, a.e7)([N.Z], () => N.Z.getGuild(o)),
+        D = (0, a.e7)([T.Z], () => T.Z.getGuild(o)),
         g = (0, a.e7)([_.Z], () => _.Z.isViewingServerShop(o)),
         y = (0, p.g)(D, 'guild_shop_page'),
         m = (0, S.RF)(o, 'guild_shop_page'),
@@ -87,7 +87,7 @@ function g(e) {
                         var n;
                         (0, I.dL)(P.Z5c.CHANNEL(o, null == (n = O.ZP.getDefaultChannel(o)) ? void 0 : n.id)), (t.action_taken = R.mz.DISMISS_FULL_PREVIEW);
                     }
-                    T.default.track(P.rMx.GUILD_SHOP_PREVIEW_CLICK, t);
+                    N.default.track(P.rMx.GUILD_SHOP_PREVIEW_CLICK, t);
                 }
             },
             children: n

@@ -1,8 +1,8 @@
 n.d(t, { default: () => y }), n(388685), n(953529), n(642613);
-var r = n(200651),
-    l = n(192379),
-    i = n(392711),
-    o = n.n(i),
+var l = n(200651),
+    i = n(192379),
+    r = n(392711),
+    o = n.n(r),
     s = n(442837),
     a = n(481060),
     c = n(706371),
@@ -15,133 +15,133 @@ var r = n(200651),
     p = n(402148),
     g = n(570961),
     v = n(208665),
-    N = n(460117),
-    f = n(290511),
-    b = n(388032),
+    f = n(460117),
+    b = n(290511),
+    N = n(388032),
     I = n(663362);
 function y(e) {
-    let { transitionState: t, onClose: n, onSave: i, onDelete: j, option: x, guild: p, prompt: y, index: k } = e,
+    let { transitionState: t, onClose: n, onSave: r, onDelete: j, option: x, guild: p, prompt: y, index: k } = e,
         C = (0, u.Dt)(),
         P = (0, s.e7)([h.ZP], () => h.ZP.getDefaultChannel(p.id)),
-        [S, _] = l.useState(() => {
+        [S, _] = i.useState(() => {
             var e;
             return null != (e = null == x ? void 0 : x.emoji) ? e : null;
         }),
-        [z, w] = l.useState(() => {
+        [z, w] = i.useState(() => {
             var e;
             return null != (e = null == x ? void 0 : x.title) ? e : '';
         }),
-        [W, B] = l.useState(() => {
+        [B, E] = i.useState(() => {
             var e;
             return null != (e = null == x ? void 0 : x.description) ? e : '';
         }),
-        [E, T] = l.useState(() => {
+        [T, R] = i.useState(() => {
             var e;
             return new Set(null != (e = null == x ? void 0 : x.channelIds) ? e : []);
         }),
-        [R, Z] = l.useState(() => {
+        [Z, H] = i.useState(() => {
             var e;
             return new Set(null != (e = null == x ? void 0 : x.roleIds) ? e : []);
         }),
-        [H, L] = l.useState({}),
-        D = l.useRef(null);
+        [L, D] = i.useState({}),
+        M = i.useRef(null);
     return (
-        l.useLayoutEffect(() => {
+        i.useLayoutEffect(() => {
             var e;
-            return null == (e = D.current) ? void 0 : e.focus();
+            return null == (e = M.current) ? void 0 : e.focus();
         }, []),
-        (0, r.jsxs)(a.Y0X, {
+        (0, l.jsxs)(a.Y0X, {
             transitionState: t,
             'aria-labelledby': C,
             children: [
-                (0, r.jsxs)('div', {
+                (0, l.jsxs)('div', {
                     className: I.container,
                     children: [
-                        (0, r.jsx)(a.olH, {
+                        (0, l.jsx)(a.olH, {
                             className: I.closeButton,
                             onClick: n
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, l.jsx)(a.Text, {
                             className: I.questionNumber,
                             variant: 'text-xs/semibold',
                             color: 'text-muted',
-                            children: b.NW.format(b.t.yjS3zs, { index: k + 1 })
+                            children: N.intl.format(N.t.yjS3zs, { index: k + 1 })
                         }),
-                        (0, r.jsx)(a.X6q, {
+                        (0, l.jsx)(a.X6q, {
                             id: C,
                             className: I.header,
                             variant: 'heading-lg/semibold',
-                            children: null != y.title && y.title.length > 0 ? y.title : b.NW.string(b.t.vY91Cw)
+                            children: null != y.title && y.title.length > 0 ? y.title : N.intl.string(N.t.vY91Cw)
                         }),
-                        (0, r.jsx)(a.X6q, {
+                        (0, l.jsx)(a.X6q, {
                             className: I.nameHeader,
                             variant: 'heading-md/semibold',
-                            children: b.NW.string(b.t.VWdcBg)
+                            children: N.intl.string(N.t.VWdcBg)
                         }),
-                        (0, r.jsx)(a.oil, {
-                            inputRef: D,
-                            placeholder: b.NW.string(b.t.EHe6gY),
+                        (0, l.jsx)(a.oil, {
+                            inputRef: M,
+                            placeholder: N.intl.string(N.t.EHe6gY),
                             value: z,
                             onChange: (e) => w(e),
-                            maxLength: f.NE,
+                            maxLength: b.NE,
                             autoFocus: !0
                         }),
-                        (0, r.jsx)(a.pdY, { error: H.title }),
-                        (0, r.jsx)(a.oil, {
+                        (0, l.jsx)(a.pdY, { error: L.title }),
+                        (0, l.jsx)(a.oil, {
                             className: I.descriptionInput,
-                            placeholder: b.NW.string(b.t.mIjgJC),
-                            value: W,
-                            onChange: (e) => B(e),
-                            maxLength: f.NO
+                            placeholder: N.intl.string(N.t.mIjgJC),
+                            value: B,
+                            onChange: (e) => E(e),
+                            maxLength: b.NO
                         }),
-                        (0, r.jsx)(m.Z, { className: I.divider }),
-                        (0, r.jsx)(a.X6q, {
+                        (0, l.jsx)(m.Z, { className: I.divider }),
+                        (0, l.jsx)(a.X6q, {
                             className: I.rolesHeader,
                             variant: 'heading-md/semibold',
-                            children: b.NW.string(b.t.TtIbPD)
+                            children: N.intl.string(N.t.TtIbPD)
                         }),
-                        (0, r.jsx)(c.Z, {
+                        (0, l.jsx)(c.Z, {
                             guildId: p.id,
-                            selectedChannelIds: E,
-                            placeholder: b.NW.string(b.t.vephiI),
-                            onChange: T,
-                            helperText: b.NW.string(b.t.SoT6wc),
+                            selectedChannelIds: T,
+                            placeholder: N.intl.string(N.t.vephiI),
+                            onChange: R,
+                            helperText: N.intl.string(N.t.SoT6wc),
                             className: I.searchInput
                         }),
-                        (0, r.jsx)(d.Z, {
+                        (0, l.jsx)(d.Z, {
                             guildId: p.id,
-                            selectedRoleIds: R,
+                            selectedRoleIds: Z,
                             disableEveryoneRole: !0,
-                            placeholder: b.NW.string(b.t.aFO1Iy),
-                            onChange: Z,
-                            helperText: b.NW.string(b.t.Mbvpv7),
+                            placeholder: N.intl.string(N.t.aFO1Iy),
+                            onChange: H,
+                            helperText: N.intl.string(N.t.Mbvpv7),
                             className: I.searchInput,
                             selectableRoleFilter: (e) => !e.managed
                         }),
-                        null == H.roles ? null : (0, r.jsx)(a.pdY, { error: H.roles }),
-                        (0, r.jsx)(O, {
+                        null == L.roles ? null : (0, l.jsx)(a.pdY, { error: L.roles }),
+                        (0, l.jsx)(O, {
                             guild: p,
-                            roleIds: R
+                            roleIds: Z
                         }),
-                        (0, r.jsx)(m.Z, { className: I.divider }),
-                        (0, r.jsxs)('div', {
+                        (0, l.jsx)(m.Z, { className: I.divider }),
+                        (0, l.jsxs)('div', {
                             className: I.emojiQuestionContainer,
                             children: [
-                                (0, r.jsxs)('div', {
+                                (0, l.jsxs)('div', {
                                     className: I.emojiQuestionText,
                                     children: [
-                                        (0, r.jsx)(a.X6q, {
+                                        (0, l.jsx)(a.X6q, {
                                             variant: 'heading-md/semibold',
-                                            children: b.NW.string(b.t['4ahTBg'])
+                                            children: N.intl.string(N.t['4ahTBg'])
                                         }),
-                                        (0, r.jsx)(a.Text, {
+                                        (0, l.jsx)(a.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-muted',
-                                            children: b.NW.string(b.t.Iv9RGh)
+                                            children: N.intl.string(N.t.Iv9RGh)
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(N.Z, {
+                                (0, l.jsx)(f.Z, {
                                     emoji: S,
                                     setEmoji: _,
                                     channel: P
@@ -150,52 +150,52 @@ function y(e) {
                         })
                     ]
                 }),
-                (0, r.jsx)(a.mzw, {
-                    children: (0, r.jsxs)('div', {
+                (0, l.jsx)(a.mzw, {
+                    children: (0, l.jsxs)('div', {
                         className: I.footerButtons,
                         children: [
-                            (0, r.jsx)('div', {
+                            (0, l.jsx)('div', {
                                 className: I.removeButton,
-                                children: (0, r.jsx)(a.zxk, {
+                                children: (0, l.jsx)(a.zxk, {
                                     size: a.zxk.Sizes.SMALL,
                                     look: a.zxk.Looks.LINK,
                                     color: a.zxk.Colors.RED,
                                     onClick: () => {
                                         j(), n();
                                     },
-                                    children: b.NW.string(b.t.N86XcH)
+                                    children: N.intl.string(N.t.N86XcH)
                                 })
                             }),
-                            (0, r.jsxs)('div', {
+                            (0, l.jsxs)('div', {
                                 className: I.rightButtons,
                                 children: [
-                                    (0, r.jsx)(a.zxk, {
+                                    (0, l.jsx)(a.zxk, {
                                         onClick: n,
                                         size: a.zxk.Sizes.SMALL,
                                         look: a.zxk.Looks.LINK,
                                         color: a.zxk.Colors.PRIMARY,
-                                        children: b.NW.string(b.t['ETE/oK'])
+                                        children: N.intl.string(N.t['ETE/oK'])
                                     }),
-                                    (0, r.jsx)(a.zxk, {
+                                    (0, l.jsx)(a.zxk, {
                                         onClick: () => {
                                             var e;
                                             let t = {
                                                     id: null != (e = null == x ? void 0 : x.id) ? e : ''.concat(Date.now()),
                                                     title: z,
-                                                    description: W,
-                                                    channelIds: Array.from(E).sort(),
-                                                    roleIds: Array.from(R).sort(),
+                                                    description: B,
+                                                    channelIds: Array.from(T).sort(),
+                                                    roleIds: Array.from(Z).sort(),
                                                     emoji: null == S ? void 0 : S
                                                 },
-                                                r = (function (e, t, n, r) {
-                                                    let l = {};
-                                                    r.title.length <= 0 && (l.title = b.NW.string(b.t.p3PKzM));
-                                                    let i = (0, g.en)(e, t, n, r);
-                                                    return null != i && (l.roles = i), l;
+                                                l = (function (e, t, n, l) {
+                                                    let i = {};
+                                                    l.title.length <= 0 && (i.title = N.intl.string(N.t.p3PKzM));
+                                                    let r = (0, g.en)(e, t, n, l);
+                                                    return null != r && (i.roles = r), i;
                                                 })(p, v.Z.editedOnboardingPrompts, y, t);
-                                            L(r), o().isEmpty(r) && (i(t), n());
+                                            D(l), o().isEmpty(l) && (r(t), n());
                                         },
-                                        children: b.NW.string(b.t.R3BPHx)
+                                        children: N.intl.string(N.t.R3BPHx)
                                     })
                                 ]
                             })
@@ -208,28 +208,28 @@ function y(e) {
 }
 function O(e) {
     let { guild: t, roleIds: n } = e,
-        l = (0, s.e7)([j.Z], () => j.Z.getRoles(t.id)),
-        i = Array.from(n)
-            .map((e) => l[e])
+        i = (0, s.e7)([j.Z], () => j.Z.getRoles(t.id)),
+        r = Array.from(n)
+            .map((e) => i[e])
             .filter(x.lm)
             .find(p.F);
-    return null == i
+    return null == r
         ? null
-        : (0, r.jsx)('div', {
+        : (0, l.jsx)('div', {
               className: I.notice,
-              children: (0, r.jsxs)('div', {
+              children: (0, l.jsxs)('div', {
                   className: I.noticeMessage,
                   children: [
-                      (0, r.jsx)(a.P4T, {
+                      (0, l.jsx)(a.P4T, {
                           size: 'custom',
                           width: 20,
                           height: 20,
                           color: 'currentColor',
                           className: I.noticeIcon
                       }),
-                      (0, r.jsx)(a.Text, {
+                      (0, l.jsx)(a.Text, {
                           variant: 'text-sm/normal',
-                          children: b.NW.format(b.t['5zPJER'], { permissions: (0, p.i)(t, i).join(', ') })
+                          children: N.intl.format(N.t['5zPJER'], { permissions: (0, p.i)(t, r).join(', ') })
                       })
                   ]
               })

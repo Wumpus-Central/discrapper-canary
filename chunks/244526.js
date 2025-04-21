@@ -1,9 +1,9 @@
-n.d(t, { Z: () => N }), n(953529);
-var r,
-    i,
+n.d(t, { Z: () => x }), n(953529);
+var i,
+    r,
     s,
-    a = n(200651),
-    l = n(192379),
+    l = n(200651),
+    a = n(192379),
     o = n(120356),
     c = n.n(o),
     d = n(481060),
@@ -15,7 +15,7 @@ var r,
     f = n(624138),
     b = n(388032),
     _ = n(943617);
-class N extends (r = l.PureComponent) {
+class x extends (i = a.PureComponent) {
     get typeString() {
         let { paymentSource: e } = this.props;
         if (e instanceof p.qo) return g.ZP.Types.PAYPAL;
@@ -39,49 +39,49 @@ class N extends (r = l.PureComponent) {
     }
     getLabel(e) {
         return e instanceof p.dm
-            ? b.NW.format(b.t['o/dsrK'], {
+            ? b.intl.format(b.t['o/dsrK'], {
                   brand: (0, f.De)(e.brand),
                   last_4: e.last4
               })
             : e instanceof p.qo
-              ? b.NW.string(b.t['2dgEq6'])
+              ? b.intl.string(b.t['2dgEq6'])
               : e instanceof p.Sf
-                ? b.NW.string(b.t['edKX//'])
+                ? b.intl.string(b.t['edKX//'])
                 : e instanceof p.fv
-                  ? b.NW.string(b.t['y+0MQU'])
+                  ? b.intl.string(b.t['y+0MQU'])
                   : e instanceof p.Vg
-                    ? b.NW.string(b.t.u25uLy)
+                    ? b.intl.string(b.t.u25uLy)
                     : e instanceof p.sn
-                      ? b.NW.string(b.t.boznHB)
+                      ? b.intl.string(b.t.boznHB)
                       : e instanceof p.o_
-                        ? b.NW.string(b.t.PjehcH)
+                        ? b.intl.string(b.t.PjehcH)
                         : e instanceof p.kX
-                          ? b.NW.string(b.t.T5davL)
+                          ? b.intl.string(b.t.T5davL)
                           : e instanceof p.z
-                            ? b.NW.string(b.t.J0A1Vl)
+                            ? b.intl.string(b.t.J0A1Vl)
                             : e instanceof p.Xc
-                              ? b.NW.string(b.t.jYOezc)
+                              ? b.intl.string(b.t.jYOezc)
                               : e instanceof p.Om
-                                ? b.NW.string(b.t.CSVexs)
+                                ? b.intl.string(b.t.CSVexs)
                                 : e instanceof p.JC
-                                  ? b.NW.string(b.t['43J8JC'])
+                                  ? b.intl.string(b.t['43J8JC'])
                                   : e instanceof p.U4
-                                    ? b.NW.string(b.t['1ITkfn'])
+                                    ? b.intl.string(b.t['1ITkfn'])
                                     : e instanceof p.jc
                                       ? null == e.bank
-                                          ? b.NW.string(b.t.nSbwqK)
-                                          : b.NW.format(b.t['9kUlRU'], { bank: (0, u.YE)(e.bank) })
+                                          ? b.intl.string(b.t.nSbwqK)
+                                          : b.intl.format(b.t['9kUlRU'], { bank: (0, u.YE)(e.bank) })
                                       : e instanceof p.D0
-                                        ? b.NW.format(b.t.hSPoZ2, { bank: (0, u.Ul)(e.bank) })
+                                        ? b.intl.format(b.t.hSPoZ2, { bank: (0, u.Ul)(e.bank) })
                                         : e instanceof p.u_
-                                          ? b.NW.string(b.t['+rbTmJ'])
+                                          ? b.intl.string(b.t['+rbTmJ'])
                                           : e instanceof p.$z
-                                            ? b.NW.string(b.t.RFi12t)
-                                            : b.NW.string(b.t.jdPblp);
+                                            ? b.intl.string(b.t.RFi12t)
+                                            : b.intl.string(b.t.jdPblp);
     }
     renderDescription() {
         let { paymentSource: e, descriptionClassName: t } = this.props;
-        return (0, a.jsx)(d.Text, {
+        return (0, l.jsx)(d.Text, {
             className: c()(_.description, t),
             variant: 'text-md/semibold',
             children: this.getLabel(e)
@@ -92,7 +92,7 @@ class N extends (r = l.PureComponent) {
             n = null;
         return (
             e instanceof p.dm
-                ? (n = b.NW.formatToPlainString(b.t['8rTTub'], {
+                ? (n = b.intl.formatToPlainString(b.t['8rTTub'], {
                       month: (0, h.E2)(e.expiresMonth, t),
                       year: e.expiresYear
                   }))
@@ -105,43 +105,43 @@ class N extends (r = l.PureComponent) {
         );
     }
     render() {
-        let { isDefault: e, paymentSource: t, showSubtext: n, isForSubscription: r, showPaymentSourceIcon: i, showLabels: s } = this.props,
-            l = this.renderSubText();
-        return (0, a.jsxs)(m.Z, {
+        let { isDefault: e, paymentSource: t, showSubtext: n, isForSubscription: i, showPaymentSourceIcon: r, showLabels: s } = this.props,
+            a = this.renderSubText();
+        return (0, l.jsxs)(m.Z, {
             children: [
-                i && (0, a.jsx)(g.ZP, { type: this.typeString }),
-                (0, a.jsxs)(m.Z, {
+                r && (0, l.jsx)(g.ZP, { type: this.typeString }),
+                (0, l.jsxs)(m.Z, {
                     direction: m.Z.Direction.VERTICAL,
                     className: _.descriptionWrapper,
                     children: [
-                        (0, a.jsxs)(m.Z, {
+                        (0, l.jsxs)(m.Z, {
                             align: m.Z.Align.CENTER,
                             children: [
                                 this.renderDescription(),
                                 s && e
-                                    ? (0, a.jsx)('div', {
+                                    ? (0, l.jsx)('div', {
                                           className: _.defaultIndicator,
-                                          children: b.NW.string(b.t.bBvAEB)
+                                          children: b.intl.string(b.t.bBvAEB)
                                       })
                                     : null,
-                                r
-                                    ? (0, a.jsx)('div', {
+                                i
+                                    ? (0, l.jsx)('div', {
                                           className: _.premiumIndicator,
-                                          children: b.NW.string(b.t.YCrcPD)
+                                          children: b.intl.string(b.t.YCrcPD)
                                       })
                                     : null,
                                 s && t.invalid
-                                    ? (0, a.jsx)('div', {
+                                    ? (0, l.jsx)('div', {
                                           className: _.invalidIndicator,
-                                          children: b.NW.string(b.t['851k9/'])
+                                          children: b.intl.string(b.t['851k9/'])
                                       })
                                     : null
                             ]
                         }),
-                        n && null != l
-                            ? (0, a.jsx)('div', {
+                        n && null != a
+                            ? (0, l.jsx)('div', {
                                   className: _.subText,
-                                  children: l
+                                  children: a
                               })
                             : null
                     ]
@@ -157,11 +157,11 @@ class N extends (r = l.PureComponent) {
     showPaymentSourceIcon: !1,
     showLabels: !1
 }),
-    (i = 'defaultProps') in N
-        ? Object.defineProperty(N, i, {
+    (r = 'defaultProps') in x
+        ? Object.defineProperty(x, r, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (N[i] = s);
+        : (x[r] = s);

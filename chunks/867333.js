@@ -69,11 +69,11 @@ function v(e) {
     let { color: t = 'default', label: n, checked: a, subtext: g, disabled: b, isFocused: v, menuItemProps: O, action: I } = e,
         { onInteraction: S } = i.useContext(c.p),
         T = i.useRef(null),
-        N = (0, f.Q3)('MenuRadioItem');
+        A = (0, f.Q3)('MenuRadioItem');
     i.useEffect(() => {
         v && (0, u.F)(T);
     }, [v]);
-    let A = i.useCallback(
+    let N = i.useCallback(
         (e) => {
             I(e), null == S || S({ type: c.U.RADIO });
         },
@@ -89,7 +89,7 @@ function v(e) {
                         [m.disabled]: b,
                         [m.focused]: v
                     }),
-                    onClick: b ? void 0 : A
+                    onClick: b ? void 0 : N
                 },
                 O
             ),
@@ -110,7 +110,7 @@ function v(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: m.iconContainer,
-                        children: N
+                        children: A
                             ? (0, r.jsx)(d.Fj9, {
                                   checked: a,
                                   disabled: b,

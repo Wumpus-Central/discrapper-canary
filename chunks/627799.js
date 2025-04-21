@@ -13,39 +13,39 @@ function d(e) {
         { accountScopes: n } = e,
         a = [];
     return (n.includes(i.x.SDK_SOCIAL_LAYER)
-        ? ((t = c.NW.format(c.t.DfBeUl, { learnMoreURL: s.Z.getArticleURL(l.BhN.SOCIAL_LAYER_CONNECTIONS) })),
+        ? ((t = c.intl.format(c.t.DfBeUl, { learnMoreURL: s.Z.getArticleURL(l.BhN.SOCIAL_LAYER_CONNECTIONS) })),
           a.push(
               {
                   icon: o.iFz,
-                  text: c.NW.formatToPlainString(c.t.WNKzo6, { maxFriends: l.L4X })
+                  text: c.intl.formatToPlainString(c.t.WNKzo6, { maxFriends: l.L4X })
               },
               {
                   icon: o.mrm,
-                  text: c.NW.string(c.t.j7peBg)
+                  text: c.intl.string(c.t.j7peBg)
               },
               {
                   icon: o.iWm,
-                  text: c.NW.string(c.t['feD3+v'])
+                  text: c.intl.string(c.t['feD3+v'])
               },
               {
                   icon: o.ewm,
-                  text: c.NW.string(c.t.YFFVMz)
+                  text: c.intl.string(c.t.YFFVMz)
               }
           ))
         : n.includes(i.x.SDK_SOCIAL_LAYER_PRESENCE) &&
-          ((t = c.NW.format(c.t.DfBeUl, { learnMoreURL: s.Z.getArticleURL(l.BhN.SOCIAL_LAYER_CONNECTIONS) })),
+          ((t = c.intl.format(c.t.DfBeUl, { learnMoreURL: s.Z.getArticleURL(l.BhN.SOCIAL_LAYER_CONNECTIONS) })),
           a.push(
               {
                   icon: o.iFz,
-                  text: c.NW.formatToPlainString(c.t.WNKzo6, { maxFriends: l.L4X })
+                  text: c.intl.formatToPlainString(c.t.WNKzo6, { maxFriends: l.L4X })
               },
               {
                   icon: o.iWm,
-                  text: c.NW.string(c.t['feD3+v'])
+                  text: c.intl.string(c.t['feD3+v'])
               },
               {
                   icon: o.ewm,
-                  text: c.NW.string(c.t.YFFVMz)
+                  text: c.intl.string(c.t.YFFVMz)
               }
           )),
     0 === a.length)

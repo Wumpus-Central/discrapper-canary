@@ -1,13 +1,13 @@
-s.d(e, { default: () => i });
+s.d(e, { default: () => r });
 var a = s(200651);
 s(192379);
 var n = s(481060),
-    o = s(388032),
-    r = s(146958);
-function i(t) {
-    let { transitionState: e, onClose: i } = t;
+    i = s(388032),
+    o = s(146958);
+function r(t) {
+    let { transitionState: e, onClose: r } = t;
     return (0, a.jsxs)(n.Y0X, {
-        className: r.modal,
+        className: o.modal,
         transitionState: e,
         size: n.CgR.SMALL,
         children: [
@@ -15,28 +15,28 @@ function i(t) {
                 'aria-hidden': !0,
                 alt: '',
                 src: s(762528),
-                className: r.image
+                className: o.image
             }),
             (0, a.jsxs)(n.hzk, {
-                className: r.content,
+                className: o.content,
                 children: [
                     (0, a.jsx)(n.X6q, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
-                        className: r.text,
-                        children: o.NW.string(o.t.pAzfrq)
+                        className: o.text,
+                        children: i.intl.string(i.t.pAzfrq)
                     }),
                     (0, a.jsx)(n.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        className: r.text,
-                        children: o.NW.string(o.t.oxowND)
+                        className: o.text,
+                        children: i.intl.string(i.t.oxowND)
                     }),
                     (0, a.jsx)(n.zxk, {
-                        onClick: i,
+                        onClick: r,
                         color: n.zxk.Colors.BRAND,
                         look: n.zxk.Looks.FILLED,
-                        children: o.NW.string(o.t.o3ZlOD)
+                        children: i.intl.string(i.t.o3ZlOD)
                     })
                 ]
             })

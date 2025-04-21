@@ -2,8 +2,8 @@ n.d(t, { Z: () => u }), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    s = n.n(i),
-    l = n(481060),
+    l = n.n(i),
+    s = n(481060),
     a = n(709586),
     o = n(267642),
     c = n(388032),
@@ -16,22 +16,22 @@ let u = (e) => {
         x = m.hasFeature(u),
         b = (0, o._p)(u);
     return (x
-        ? (null != b && (i = c.NW.string(c.t.hUgjyM)),
+        ? (null != b && (i = c.intl.string(c.t.hUgjyM)),
           (t = (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(a.Z, { className: d.unlockedIcon }),
-                  (0, r.jsx)(l.X6q, {
+                  (0, r.jsx)(s.X6q, {
                       variant: 'eyebrow',
                       className: d.description,
-                      children: c.NW.string(c.t['0O+87u'])
+                      children: c.intl.string(c.t['0O+87u'])
                   })
               ]
           })))
-        : (null != b && (i = c.NW.string(c.t.L2wYYm)),
+        : (null != b && (i = c.intl.string(c.t.L2wYYm)),
           (t = (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(a.Z, { className: d.icon }),
-                  (0, r.jsx)(l.X6q, {
+                  (0, r.jsx)(s.X6q, {
                       variant: 'eyebrow',
                       className: d.description,
                       children: null != b && (0, o.e9)(b)
@@ -41,10 +41,10 @@ let u = (e) => {
     (n =
         p || null == i
             ? (0, r.jsx)('div', {
-                  className: s()(d.availabilityIndicator, g),
+                  className: l()(d.availabilityIndicator, g),
                   children: t
               })
-            : (0, r.jsx)(l.ua7, {
+            : (0, r.jsx)(s.ua7, {
                   position: h,
                   text: i,
                   children: (e) => {
@@ -78,7 +78,7 @@ let u = (e) => {
                           })({}, e)),
                           (i = i =
                               {
-                                  className: s()(d.availabilityIndicator, g),
+                                  className: l()(d.availabilityIndicator, g),
                                   children: t
                               }),
                           Object.getOwnPropertyDescriptors
@@ -99,7 +99,7 @@ let u = (e) => {
               })),
     null == f || x)
         ? n
-        : (0, r.jsx)(l.P3F, {
+        : (0, r.jsx)(s.P3F, {
               onClick: f,
               className: d.clickable,
               children: n

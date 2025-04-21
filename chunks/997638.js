@@ -112,7 +112,7 @@ class v extends a.PureComponent {
                         (0, o.jsx)(d.zxk, {
                             size: d.PhG.SMALL,
                             onClick: this.handleDismiss,
-                            children: m.NW.string(m.t['+IrDzM'])
+                            children: m.intl.string(m.t['+IrDzM'])
                         }),
                         (0, o.jsx)(d.zxk, {
                             size: d.PhG.SMALL,
@@ -120,7 +120,7 @@ class v extends a.PureComponent {
                             onClick: s,
                             color: (0, u.ap)(a) ? d.zxk.Colors.PRIMARY : d.zxk.Colors.WHITE,
                             className: p ? g.buttonSkipLeftAlign : g.buttonSkipCenterAlign,
-                            children: m.NW.string(m.t['33wtxs'])
+                            children: m.intl.string(m.t['33wtxs'])
                         })
                     ]
                 })

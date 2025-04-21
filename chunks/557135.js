@@ -53,10 +53,10 @@ function v(e) {
 }
 let O = {
     async handleVoiceConnect(e) {
-        let { channel: t, connected: s, needSubscriptionToAccess: b, locked: O = !1, routeDirectlyToChannel: I = !1, bypassChangeModal: S, bypassBlockedWarningModal: T, bypassGuildIdCheck: N = !1 } = e;
+        let { channel: t, connected: s, needSubscriptionToAccess: b, locked: O = !1, routeDirectlyToChannel: I = !1, bypassChangeModal: S, bypassBlockedWarningModal: T, bypassGuildIdCheck: A = !1 } = e;
         t.isThread() && (await d.Z.unarchiveThreadIfNecessary(t.id), u.Z.hasJoined(t.id) || (await d.Z.joinThread(t, 'Join Voice')));
-        let A = o.Z.getRemoteSessionId(),
-            C = p.Z.getVoiceStateForSession(f.default.getId(), A),
+        let N = o.Z.getRemoteSessionId(),
+            C = p.Z.getVoiceStateForSession(f.default.getId(), N),
             R = (null == C ? void 0 : C.channelId) === t.id || _.Z.getChannelId() === p.Z.getCurrentClientVoiceChannelId(t.guild_id),
             P = c.Z.getBlockedUsersForVoiceChannel(t.id),
             w = c.Z.getIgnoredUsersForVoiceChannel(t.id);
@@ -88,7 +88,7 @@ let O = {
                               );
                       });
                   })
-                : (O || s || a.default.selectVoiceChannel(t.id), !__OVERLAY__ && (s || R || b || I) && v(t, N), !0)
+                : (O || s || a.default.selectVoiceChannel(t.id), !__OVERLAY__ && (s || R || b || I) && v(t, A), !0)
             : new Promise((e) => {
                   (0, i.ZDy)(
                       async () => {

@@ -67,7 +67,7 @@ function h() {
                 })({}, a)),
                 (o = o =
                     {
-                        label: d.NW.string(d.t.ZQCf9f),
+                        label: d.intl.string(d.t.ZQCf9f),
                         isActive: t,
                         iconComponent: l.vdY,
                         onClick: n

@@ -22,9 +22,9 @@ let c = (e) => {
         !_)
     )
         return null;
-    let f = o.NW.string(o.t.i4jeWV);
+    let f = o.intl.string(o.t.i4jeWV);
     return (
-        (null == n ? void 0 : n.type) === 'submit' ? ((f = o.NW.string(o.t['G+vU8/'])), (t = i.zxk.Colors.RED)) : (null == n ? void 0 : n.type) === 'next' ? (f = o.NW.string(o.t.PDTjLC)) : (null == n ? void 0 : n.type) === 'cancel' && ((f = o.NW.string(o.t['ETE/oK'])), (t = i.zxk.Colors.TRANSPARENT)),
+        (null == n ? void 0 : n.type) === 'submit' ? ((f = o.intl.string(o.t['G+vU8/'])), (t = i.zxk.Colors.RED)) : (null == n ? void 0 : n.type) === 'next' ? (f = o.intl.string(o.t.PDTjLC)) : (null == n ? void 0 : n.type) === 'cancel' && ((f = o.intl.string(o.t['ETE/oK'])), (t = i.zxk.Colors.TRANSPARENT)),
         (0, r.jsxs)(i.mzw, {
             direction: a.Z.Direction.HORIZONTAL,
             children: [
@@ -33,7 +33,7 @@ let c = (e) => {
                         onClick: x,
                         color: i.zxk.Colors.TRANSPARENT,
                         disabled: c,
-                        children: o.NW.string(o.t['13/7kZ'])
+                        children: o.intl.string(o.t['13/7kZ'])
                     }),
                 b &&
                     (0, r.jsx)(i.zxk, {

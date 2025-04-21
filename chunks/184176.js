@@ -1,25 +1,25 @@
 n.d(t, { Z: () => o });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
+var r = n(481060),
     s = n(823188),
-    a = n(388032),
-    l = n(641089);
+    l = n(388032),
+    a = n(641089);
 let o = () =>
-    (0, r.jsxs)('div', {
-        className: l.banner,
+    (0, i.jsxs)('div', {
+        className: a.banner,
         children: [
-            (0, r.jsx)(s.Cy, {
-                text: a.NW.string(a.t.Y1q7jo),
-                className: l.trialPill,
+            (0, i.jsx)(s.Cy, {
+                text: l.intl.string(l.t.Y1q7jo),
+                className: a.trialPill,
                 colorOptions: s.VE.PREMIUM_TIER_2_WHITE_FILL
             }),
-            (0, r.jsx)('div', {
-                className: l.body,
-                children: (0, r.jsx)(i.Text, {
+            (0, i.jsx)('div', {
+                className: a.body,
+                children: (0, i.jsx)(r.Text, {
                     color: 'always-white',
                     variant: 'text-md/medium',
-                    children: a.NW.format(a.t.kKC2io, { weeks: 1 })
+                    children: l.intl.format(l.t.kKC2io, { weeks: 1 })
                 })
             })
         ]

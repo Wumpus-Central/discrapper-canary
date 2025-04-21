@@ -14,10 +14,10 @@ function d(e) {
         m =
             ((t = n.type),
             d
-                ? c.NW.string(c.t['KUYR+P'])
+                ? c.intl.string(c.t['KUYR+P'])
                 : (0, l.EQ)(t)
-                      .with(s.Z.AVATAR_DECORATION, () => c.NW.string(c.t['7v0T9P']))
-                      .with(s.Z.PROFILE_EFFECT, () => c.NW.string(c.t.wR5wOj))
+                      .with(s.Z.AVATAR_DECORATION, () => c.intl.string(c.t['7v0T9P']))
+                      .with(s.Z.PROFILE_EFFECT, () => c.intl.string(c.t.wR5wOj))
                       .otherwise(() => null));
     return null === m
         ? null

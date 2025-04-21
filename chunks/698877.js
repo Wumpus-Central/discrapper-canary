@@ -31,10 +31,10 @@ function u(e) {
     let { mode: C } = (0, o.ZP)({ location: 'StreamButton' }),
         { squareButtonsEnabled: x, coloredIconsEnabled: v } = (0, a.Z)({ location: 'StreamButton' }),
         j = h ? s.d : s.Z;
-    t = d ? (p ? c.NW.string(c.t.S5anIS) : c.NW.string(c.t.q3O3Jy)) : u ? c.NW.string(c.t.fjBNo6) : c.NW.string(c.t.uQn9Bw);
-    let { Component: O, events: E, play: N } = (0, l.P)(d ? 'disable' : 'enable');
+    t = d ? (p ? c.intl.string(c.t.S5anIS) : c.intl.string(c.t.q3O3Jy)) : u ? c.intl.string(c.t.fjBNo6) : c.intl.string(c.t.uQn9Bw);
+    let { Component: O, events: E, play: I } = (0, l.P)(d ? 'disable' : 'enable');
     return (
-        i.useEffect(() => () => N(), [d, N]),
+        i.useEffect(() => () => I(), [d, I]),
         (0, r.jsx)(
             j,
             (function (e) {

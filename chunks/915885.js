@@ -43,7 +43,7 @@ function y(e) {
                     color: 'currentColor',
                     className: e
                 }),
-            text: b.NW.string(b.t.oclz3d),
+            text: b.intl.string(b.t.oclz3d),
             selected: n,
             onClick: v,
             trailing: O > 0 ? (0, r.jsx)(s.mAB, { count: O }) : null

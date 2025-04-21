@@ -45,9 +45,9 @@ function m(e) {
 function g(e) {
     switch (e) {
         case o.EB.PENDING:
-            return l.NW.string(l.t.jyYgZ2);
+            return l.intl.string(l.t.jyYgZ2);
         case o.EB.REDEEMABLE:
-            return l.NW.string(l.t['+zx47e']);
+            return l.intl.string(l.t['+zx47e']);
         case o.EB.REDEEMED:
         default:
             return null;

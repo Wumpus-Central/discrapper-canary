@@ -22,7 +22,7 @@ var i,
     I = n(412788),
     S = n(981631),
     T = n(723359);
-function N(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function N(e, t, n) {
         e
     );
 }
-let A = new m.Z('AuthenticationStore'),
+let N = new m.Z('AuthenticationStore'),
     C = 'fingerprint',
     R = 'user_id_cache',
     P = null,
@@ -53,21 +53,21 @@ let A = new m.Z('AuthenticationStore'),
     V = null,
     Z = !1,
     H = !1,
-    W = null,
     Y = null,
+    W = null,
     K = !1,
     z = !1;
 function q(e) {
     let t = null != a.getToken(),
         n = null != c.K.get(S.B1h);
-    A.verbose(e, {
+    N.verbose(e, {
         tokenManagerHasToken: t,
         storageHasToken: n
     });
 }
 function Q() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    if (((x = c.K.get(C)), null != W)) return W;
+    if (((x = c.K.get(C)), null != Y)) return Y;
     let t = null != x ? x : a.getToken();
     !(0, g.m1)() || (!e && null != t) || O.Z.isHandoffAvailable() || X({ withGuildExperiments: !0 });
 }
@@ -77,7 +77,7 @@ function X(e) {
         r = b.default.getSuperPropertiesBase64();
     null != r && (n['X-Super-Properties'] = r),
         null != x && (n['X-Fingerprint'] = x),
-        (W = l.tn
+        (Y = l.tn
             .get({
                 url: S.ANM.EXPERIMENTS,
                 query: { with_guild_experiments: t },
@@ -101,11 +101,11 @@ function X(e) {
                             experiments: n,
                             guildExperiments: r
                         }),
-                        (W = null),
+                        (Y = null),
                         (0, f.$L)();
                 },
                 () => {
-                    (W = null), u.Z.dispatch({ type: 'EXPERIMENTS_FETCH_FAILURE' });
+                    (Y = null), u.Z.dispatch({ type: 'EXPERIMENTS_FETCH_FAILURE' });
                 }
             ));
 }
@@ -252,12 +252,12 @@ function eT(e) {
     let { user: t } = e;
     (P = t.id), void 0 !== t.authenticator_types && (G = t.authenticator_types), c.K.set(R, t.id);
 }
-function eN(e) {
+function eA(e) {
     let { suspendedUserToken: t } = e;
-    (K = !1), (Y = t), setImmediate(() => (0, g.uL)(S.Z5c.ACCOUNT_STANDING));
+    (K = !1), (W = t), setImmediate(() => (0, g.uL)(S.Z5c.ACCOUNT_STANDING));
 }
-function eA() {
-    (Y = null), (j = S.u34.NONE), eO(), setImmediate(() => (0, g.uL)(S.Z5c.DEFAULT_LOGGED_OUT));
+function eN() {
+    (W = null), (j = S.u34.NONE), eO(), setImmediate(() => (0, g.uL)(S.Z5c.DEFAULT_LOGGED_OUT));
 }
 class eC extends (i = s.ZP.Store) {
     initialize() {
@@ -322,7 +322,7 @@ class eC extends (i = s.ZP.Store) {
         return !U;
     }
     getSuspendedUserToken() {
-        return Y;
+        return W;
     }
     getIsPasswordlessActive() {
         return K;
@@ -331,7 +331,7 @@ class eC extends (i = s.ZP.Store) {
         return z;
     }
 }
-N(eC, 'displayName', 'AuthenticationStore');
+A(eC, 'displayName', 'AuthenticationStore');
 let eR = new eC(
     u.Z,
     {
@@ -350,7 +350,7 @@ let eR = new eC(
         LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED: e_,
         LOGIN_RESET: en,
         LOGIN_STATUS_RESET: er,
-        LOGIN_SUSPENDED_USER: eN,
+        LOGIN_SUSPENDED_USER: eA,
         LOGOUT: eO,
         FINGERPRINT: ep,
         REGISTER_SUCCESS: eh,
@@ -360,7 +360,7 @@ let eR = new eC(
         EXPERIMENTS_FETCH: X,
         CURRENT_USER_UPDATE: eT,
         AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: ev,
-        CLOSE_SUSPENDED_USER: eA,
+        CLOSE_SUSPENDED_USER: eN,
         PASSWORDLESS_FAILURE: es,
         PASSWORDLESS_START: eo
     },

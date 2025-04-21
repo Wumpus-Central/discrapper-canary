@@ -74,14 +74,14 @@ function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = N(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function N(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -90,7 +90,7 @@ function N(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function A(e) {
+function N(e) {
     let { guild: t, isBannerVisible: n, disableBoostClick: i } = e,
         a = (0, l.Q3)('PremiumGuildBadge'),
         c = (0, o.e7)([m.default, h.ZP], () => {
@@ -112,14 +112,14 @@ function A(e) {
                         }
                     });
         },
-        v = u === E.Eu4.NONE ? b.NW.string(b.t.c2wsn5) : g.nW(u),
+        v = u === E.Eu4.NONE ? b.intl.string(b.t.c2wsn5) : g.nW(u),
         I = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {
                     className: y.tierTooltipTitle,
                     children: v
                 }),
-                (0, r.jsx)('div', { children: b.NW.format(b.t.If4iTU, { subscriberCount: d }) })
+                (0, r.jsx)('div', { children: b.intl.format(b.t.If4iTU, { subscriberCount: d }) })
             ]
         });
     return (0, r.jsx)('div', {
@@ -188,7 +188,7 @@ function R(e) {
                 guild: t,
                 disableColor: !a
             })
-          : (0, r.jsx)(A, {
+          : (0, r.jsx)(N, {
                 guild: t,
                 isBannerVisible: a,
                 disableBoostClick: n

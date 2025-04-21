@@ -1,8 +1,8 @@
-n.d(t, { Z: () => _ }), n(953529), n(35282);
-var r = n(200651);
+n.d(e, { Z: () => w }), n(953529), n(35282);
+var l = n(200651);
 n(192379);
-var l = n(164104),
-    i = n.n(l),
+var r = n(164104),
+    i = n.n(r),
     o = n(913527),
     c = n.n(o),
     a = n(593473),
@@ -17,108 +17,108 @@ var l = n(164104),
     h = n(236373),
     y = n(854698),
     O = n(765305),
-    N = n(981631),
-    j = n(388032);
-let E = 'YYYYMMDDTHHmmss',
-    m = 'YYYY-MM-DDTHH:mm:ss',
-    P = /RRULE:.*/;
-function _(e, t, n, l) {
-    var o, _, w;
-    let T,
-        W = (0, u.e7)([p.ZP], () => p.ZP.isActive(e)),
-        Z = (0, v.zI)(null != e ? e : '', l),
-        S = (0, u.e7)([p.ZP], () => p.ZP.getGuildScheduledEvent(e), [e]),
-        x = (0, u.e7)([f.Z], () => f.Z.getGuild(t), [t]);
-    if (W || null == Z || null == S) return null;
-    T =
-        S.entity_type === O.WX.EXTERNAL
-            ? S.entity_metadata.location
-            : null != n && null != x
-              ? j.NW.formatToPlainString(j.t['2t8L09'], {
+    j = n(981631),
+    E = n(388032);
+let m = 'YYYYMMDDTHHmmss',
+    P = 'YYYY-MM-DDTHH:mm:ss',
+    _ = /RRULE:.*/;
+function w(t, e, n, r) {
+    var o, w, T;
+    let Z,
+        S = (0, u.e7)([p.ZP], () => p.ZP.isActive(t)),
+        x = (0, v.zI)(null != t ? t : '', r),
+        N = (0, u.e7)([p.ZP], () => p.ZP.getGuildScheduledEvent(t), [t]),
+        D = (0, u.e7)([f.Z], () => f.Z.getGuild(e), [e]);
+    if (S || null == x || null == N) return null;
+    Z =
+        N.entity_type === O.WX.EXTERNAL
+            ? N.entity_metadata.location
+            : null != n && null != D
+              ? E.intl.formatToPlainString(E.t['2t8L09'], {
                     channelName: n.name,
-                    guildName: x.name
+                    guildName: D.name
                 })
-              : j.NW.string(j.t.VSgOVl);
-    let D = c()(S.scheduled_start_time),
-        A = null != S.scheduled_end_time ? c()(S.scheduled_end_time) : D,
-        I = null != S.description && '' !== S.description ? g.ZP.unparse(S.description, null != (o = null == n ? void 0 : n.id) ? o : N.lds, !0) : '',
-        C = (0, h.KV)(S.recurrence_rule),
-        R = null != C ? (0, y.Ho)(C) : null,
-        { startTime: M, endTime: k } = Z,
-        G = null != (_ = c()(M)) ? _ : D,
-        U = null != (w = c()(null != k ? k : M)) ? w : D,
+              : E.intl.string(E.t.VSgOVl);
+    let A = c()(N.scheduled_start_time),
+        I = null != N.scheduled_end_time ? c()(N.scheduled_end_time) : A,
+        C = null != N.description && '' !== N.description ? g.ZP.unparse(N.description, null != (o = null == n ? void 0 : n.id) ? o : j.lds, !0) : '',
+        R = (0, h.KV)(N.recurrence_rule),
+        M = null != R ? (0, y.Ho)(R) : null,
+        { startTime: k, endTime: G } = x,
+        U = null != (w = c()(k)) ? w : A,
+        W = null != (T = c()(null != G ? G : k)) ? T : A,
         L = () => {
-            let e = i()();
-            e.createEvent({
-                start: D,
-                end: A,
-                summary: S.name,
-                description: I,
-                location: T,
-                repeating: R
+            let t = i()();
+            t.createEvent({
+                start: A,
+                end: I,
+                summary: N.name,
+                description: C,
+                location: Z,
+                repeating: M
             }),
-                b.isPlatformEmbedded ? d.Z.fileManager.saveWithDialog(e.toString(), 'discord-event.ics') : window.open(e.toURL(), '_blank');
+                b.isPlatformEmbedded ? d.Z.fileManager.saveWithDialog(t.toString(), 'discord-event.ics') : window.open(t.toURL(), '_blank');
         };
-    return (0, r.jsxs)(s.sNh, {
-        id: j.NW.string(j.t.k5pvjo),
-        label: j.NW.string(j.t.k5pvjo),
+    return (0, l.jsxs)(s.sNh, {
+        id: E.intl.string(E.t.k5pvjo),
+        label: E.intl.string(E.t.k5pvjo),
         action: L,
         children: [
-            (0, r.jsx)(s.sNh, {
-                id: j.NW.string(j.t.JKSLRE),
-                label: j.NW.string(j.t.JKSLRE),
+            (0, l.jsx)(s.sNh, {
+                id: E.intl.string(E.t.JKSLRE),
+                label: E.intl.string(E.t.JKSLRE),
                 action: () => {
-                    var e;
-                    let t = null == R ? void 0 : R.toString(),
+                    var t;
+                    let e = null == M ? void 0 : M.toString(),
                         n = {
-                            text: S.name,
-                            dates: ''.concat(D.format(E), '/').concat(A.format(E)),
-                            details: I,
+                            text: N.name,
+                            dates: ''.concat(A.format(m), '/').concat(I.format(m)),
+                            details: C,
                             action: 'TEMPLATE',
-                            location: T,
-                            recur: null != t ? (null == (e = P.exec(t)) ? void 0 : e[0]) : void 0
+                            location: Z,
+                            recur: null != e ? (null == (t = _.exec(e)) ? void 0 : t[0]) : void 0
                         },
-                        r = 'https://calendar.google.com/calendar/render?'.concat((0, a.stringify)(n));
-                    window.open(r, '_blank');
+                        l = 'https://calendar.google.com/calendar/render?'.concat((0, a.stringify)(n));
+                    window.open(l, '_blank');
                 }
             }),
-            (0, r.jsx)(s.sNh, {
-                id: j.NW.string(j.t.nrBYSU),
-                label: j.NW.string(j.t.nrBYSU),
+            (0, l.jsx)(s.sNh, {
+                id: E.intl.string(E.t.nrBYSU),
+                label: E.intl.string(E.t.nrBYSU),
                 action: L
             }),
-            (0, r.jsx)(s.sNh, {
-                id: j.NW.string(j.t.odzaCQ),
-                label: j.NW.string(j.t.odzaCQ),
+            (0, l.jsx)(s.sNh, {
+                id: E.intl.string(E.t.odzaCQ),
+                label: E.intl.string(E.t.odzaCQ),
                 action: () => {
-                    let e = {
+                    let t = {
                             v: 60,
-                            title: S.name,
-                            st: G.format(E),
-                            et: U.format(E),
-                            desc: I,
-                            in_loc: T
+                            title: N.name,
+                            st: U.format(m),
+                            et: W.format(m),
+                            desc: C,
+                            in_loc: Z
                         },
-                        t = 'https://calendar.yahoo.com/?'.concat((0, a.stringify)(e));
-                    window.open(t, '_blank');
+                        e = 'https://calendar.yahoo.com/?'.concat((0, a.stringify)(t));
+                    window.open(e, '_blank');
                 }
             }),
-            (0, r.jsx)(s.sNh, {
-                id: j.NW.string(j.t.rQe8EB),
-                label: j.NW.string(j.t.rQe8EB),
+            (0, l.jsx)(s.sNh, {
+                id: E.intl.string(E.t.rQe8EB),
+                label: E.intl.string(E.t.rQe8EB),
                 action: () => {
-                    let e = {
+                    let t = {
                             path: '/calendar/action/compose',
                             rru: 'addevent',
-                            startdt: G.format(m),
-                            enddt: U.format(m),
-                            subject: S.name,
-                            body: I,
-                            location: T,
+                            startdt: U.format(P),
+                            enddt: W.format(P),
+                            subject: N.name,
+                            body: C,
+                            location: Z,
                             allday: !1
                         },
-                        t = 'https://outlook.live.com/calendar/0/deeplink/compose?'.concat((0, a.stringify)(e));
-                    window.open(t, '_blank');
+                        e = 'https://outlook.live.com/calendar/0/deeplink/compose?'.concat((0, a.stringify)(t));
+                    window.open(e, '_blank');
                 }
             })
         ]

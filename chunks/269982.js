@@ -63,9 +63,9 @@ function _(e) {
         p = i.useMemo(() => {
             switch (null == t ? void 0 : t.type) {
                 case a.Z.AVATAR_DECORATION:
-                    return c.NW.format(c.t['aFR/EB'], { onClick: _ });
+                    return c.intl.format(c.t['aFR/EB'], { onClick: _ });
                 case a.Z.PROFILE_EFFECT:
-                    return c.NW.format(c.t.eWNOND, { onClick: _ });
+                    return c.intl.format(c.t.eWNOND, { onClick: _ });
             }
         }, [null == t ? void 0 : t.type, _]);
     return (0, r.jsxs)('div', {

@@ -76,16 +76,16 @@ function g(e) {
             case f.ABu.REDDIT:
                 switch (n) {
                     case d.PC.CREATED_AT:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.TPbtEh, { days: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.TPbtEh, { days: l }) });
                         break;
                     case d.PC.REDDIT_TOTAL_KARMA:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.P2JAER, { karma: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.P2JAER, { karma: l }) });
                         break;
                     case d.PC.REDDIT_GOLD:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.string(_.t['+/5TCw']) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.string(_.t['+/5TCw']) });
                         break;
                     case d.PC.REDDIT_MOD:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.string(_.t['9rPbEh']) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.string(_.t['9rPbEh']) });
                         break;
                     default:
                         return null;
@@ -94,16 +94,16 @@ function g(e) {
             case f.ABu.STEAM:
                 switch (n) {
                     case d.PC.CREATED_AT:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.TPbtEh, { days: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.TPbtEh, { days: l }) });
                         break;
                     case d.PC.STEAM_GAME_COUNT:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.H9eLoa, { count: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.H9eLoa, { count: l }) });
                         break;
                     case d.PC.STEAM_ITEM_COUNT_TF2:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.MceZJy, { count: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.MceZJy, { count: l }) });
                         break;
                     case d.PC.STEAM_ITEM_COUNT_DOTA2:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.dMnRam, { count: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.dMnRam, { count: l }) });
                         break;
                     default:
                         return null;
@@ -112,16 +112,16 @@ function g(e) {
             case f.ABu.TWITTER:
                 switch (n) {
                     case d.PC.CREATED_AT:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.TPbtEh, { days: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.TPbtEh, { days: l }) });
                         break;
                     case d.PC.TWITTER_VERIFIED:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.string(_.t.xRygZG) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.string(_.t.xRygZG) });
                         break;
                     case d.PC.TWITTER_FOLLOWERS_COUNT:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.bkajam, { count: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.bkajam, { count: l }) });
                         break;
                     case d.PC.TWITTER_STATUSES_COUNT:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.MI7NKi, { count: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.MI7NKi, { count: l }) });
                         break;
                     default:
                         return null;
@@ -130,10 +130,10 @@ function g(e) {
             case f.ABu.PAYPAL:
                 switch (n) {
                     case d.PC.CREATED_AT:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.TPbtEh, { days: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.TPbtEh, { days: l }) });
                         break;
                     case d.PC.PAYPAL_VERIFIED:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.string(_.t.slSQuL) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.string(_.t.slSQuL) });
                         break;
                     default:
                         return null;
@@ -142,19 +142,19 @@ function g(e) {
             case f.ABu.EBAY:
                 switch (n) {
                     case d.PC.CREATED_AT:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.TPbtEh, { days: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.TPbtEh, { days: l }) });
                         break;
                     case d.PC.EBAY_TOP_RATED_SELLER:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.string(_.t.TEEYwc) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.string(_.t.TEEYwc) });
                         break;
                     case d.PC.EBAY_POSITIVE_FEEDBACK_PERCENTAGE:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.rl9Vg4, { value: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.rl9Vg4, { value: l }) });
                         break;
                     case d.PC.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.QP5W1d, { count: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.QP5W1d, { count: l }) });
                         break;
                     case d.PC.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t['6ZFYdH'], { count: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t['6ZFYdH'], { count: l }) });
                         break;
                     default:
                         return null;
@@ -163,16 +163,16 @@ function g(e) {
             case f.ABu.TIKTOK:
                 switch (n) {
                     case d.PC.TIKTOK_VERIFIED:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.string(_.t.uv7et7) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.string(_.t.uv7et7) });
                         break;
                     case d.PC.TIKTOK_FOLLOWER_COUNT:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.qIPDR0, { count: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.qIPDR0, { count: l }) });
                         break;
                     case d.PC.TIKTOK_FOLLOWING_COUNT:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.zRta4e, { count: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.zRta4e, { count: l }) });
                         break;
                     case d.PC.TIKTOK_LIKES_COUNT:
-                        o = _.NW.format(o, { platformQuantityHook: () => _.NW.formatToPlainString(_.t.ar0WW1, { count: l }) });
+                        o = _.intl.format(o, { platformQuantityHook: () => _.intl.formatToPlainString(_.t.ar0WW1, { count: l }) });
                         break;
                     default:
                         return null;

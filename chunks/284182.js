@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h });
 var r = n(200651);
 n(192379);
-var a = n(399606),
-    i = n(481060),
-    l = n(541716),
+var i = n(399606),
+    l = n(481060),
+    a = n(541716),
     s = n(859235),
     o = n(898463),
     c = n(76451),
@@ -12,25 +12,25 @@ var a = n(399606),
     m = n(805313);
 function h(e) {
     let { parentChannel: t } = e,
-        n = (0, a.Wu)([d.Z], () => {
-            let e = d.Z.getUploads(t.id, l.Ie.CREATE_FORUM_POST.drafts.type);
+        n = (0, i.Wu)([d.Z], () => {
+            let e = d.Z.getUploads(t.id, a.Ie.CREATE_FORUM_POST.drafts.type);
             return null == e ? void 0 : e.filter((e) => !0 !== e.isThumbnail);
         });
     return (0, r.jsxs)('div', {
         className: m.container,
         children: [
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-md/semibold',
                 color: 'text-muted',
-                children: u.NW.string(u.t.omKGKi)
+                children: u.intl.string(u.t.omKGKi)
             }),
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: u.NW.string(u.t.zUjLl5)
+                children: u.intl.string(u.t.zUjLl5)
             }),
             (0, r.jsx)('div', {
-                children: (0, r.jsx)(i.zJl, {
+                children: (0, r.jsx)(l.zJl, {
                     className: m.uploadsContainer,
                     orientation: 'horizontal',
                     paddingFix: !1,
@@ -43,7 +43,7 @@ function h(e) {
                                     o.Z,
                                     {
                                         channelId: t.id,
-                                        draftType: l.Ie.CREATE_FORUM_POST.drafts.type,
+                                        draftType: a.Ie.CREATE_FORUM_POST.drafts.type,
                                         upload: e,
                                         keyboardModeEnabled: !0,
                                         hideFileName: !0,

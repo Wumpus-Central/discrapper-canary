@@ -70,9 +70,9 @@ let b = 57.75,
             { analyticsLocations: v } = (0, l.ZP)(),
             [O, I] = i.useState(null),
             [S, T] = i.useState(!1),
-            [N, A] = i.useState(!1),
+            [A, N] = i.useState(!1),
             C = (e) => {
-                null != e && (I(e), T(!N && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > b && A(!0));
+                null != e && (I(e), T(!A && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > b && N(!0));
             },
             R = () => {
                 null == n || n(),
@@ -93,7 +93,7 @@ let b = 57.75,
                   children: [
                       (0, r.jsx)('div', {
                           ref: C,
-                          className: o()(p.descriptionClamp, N && p.maxBioHeight),
+                          className: o()(p.descriptionClamp, A && p.maxBioHeight),
                           onBlur: P,
                           children: (0, r.jsx)(u.Z, {
                               userBio: a,
@@ -101,7 +101,7 @@ let b = 57.75,
                               textColor: 'header-primary'
                           })
                       }),
-                      (S || N) &&
+                      (S || A) &&
                           (0, r.jsx)(s.zxk, {
                               look: s.zxk.Looks.BLANK,
                               size: s.zxk.Sizes.NONE,
@@ -111,7 +111,7 @@ let b = 57.75,
                               children: (0, r.jsx)(s.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'none',
-                                  children: _.NW.string(_.t.YDiPq6)
+                                  children: _.intl.string(_.t.YDiPq6)
                               })
                           })
                   ]

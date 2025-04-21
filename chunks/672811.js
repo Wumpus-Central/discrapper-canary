@@ -1,15 +1,15 @@
 n.d(t, { L: () => s }), n(415506);
 var r = n(37113),
-    i = n(843874),
-    l = n(388032);
+    l = n(843874),
+    i = n(388032);
 function s(e) {
     switch (e) {
         case r.tI.PRESET_CUSTOM:
-            return l.NW.string(l.t['+eOtrK']);
+            return i.intl.string(i.t['+eOtrK']);
         case r.tI.PRESET_DOCUMENTS:
-            return l.NW.string(l.t['rCa/jI']);
+            return i.intl.string(i.t['rCa/jI']);
         case r.tI.PRESET_VIDEO:
-            return l.NW.string(i.Z['G+k1q6']);
+            return i.intl.string(l.default['G+k1q6']);
         default:
             throw Error('Not case implemented for '.concat(e));
     }

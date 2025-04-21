@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(953529), n(388685), n(539854);
+n.d(t, { Z: () => Z }), n(953529), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -22,15 +22,15 @@ var r = n(200651),
     j = n(981631),
     O = n(388032),
     E = n(12740),
-    N = n(444021);
-function I(e) {
+    I = n(444021);
+function P(e) {
     var t, n, l, a;
     let { permission: s, roleIds: g, guild: y, specMap: C, categoryTitle: x, userId: E } = e,
-        I = (0, c.e7)([b.Z], () => b.Z.getRoles(y.id)),
-        P = j.Plq[s],
-        S = null != (l = null == (t = C[P.toString()]) ? void 0 : t.title) ? l : (0, m.wt)(P),
-        Z = null != (a = null == (n = C[P.toString()]) ? void 0 : n.description) ? a : '',
-        T = v._o.has(P),
+        P = (0, c.e7)([b.Z], () => b.Z.getRoles(y.id)),
+        S = j.Plq[s],
+        Z = null != (l = null == (t = C[S.toString()]) ? void 0 : t.title) ? l : (0, m.wt)(S),
+        N = null != (a = null == (n = C[S.toString()]) ? void 0 : n.description) ? a : '',
+        T = v._o.has(S),
         A = v.Qn.includes(s),
         w = g.length,
         R = (0, c.e7)([_.Z], () => _.Z.can(j.Plq.MANAGE_ROLES, y), [y]),
@@ -41,22 +41,22 @@ function I(e) {
             [R, y.id]
         );
     return (0, r.jsxs)('div', {
-        className: o()(N.permissionItemContainer, { [N.elevatedPermission]: T }),
+        className: o()(I.permissionItemContainer, { [I.elevatedPermission]: T }),
         children: [
             (0, r.jsxs)('div', {
-                className: N.permissionItemHeader,
+                className: I.permissionItemHeader,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: N.permissionTitle,
+                        className: I.permissionTitle,
                         children: [
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-primary',
-                                children: S
+                                children: Z
                             }),
                             null != x &&
                                 (0, r.jsxs)('div', {
-                                    className: N.permissionItemSubheader,
+                                    className: I.permissionItemSubheader,
                                     children: [
                                         (0, r.jsx)(u.Text, {
                                             variant: 'text-xs/normal',
@@ -73,7 +73,7 @@ function I(e) {
                                                         color: u.TVs.colors.INTERACTIVE_MUTED.css
                                                     }),
                                                     (0, r.jsx)(u.ua7, {
-                                                        text: O.NW.string(O.t.GZvXuL),
+                                                        text: O.intl.string(O.t.GZvXuL),
                                                         children: (e) => {
                                                             var t, n;
                                                             return (0, r.jsxs)(
@@ -102,7 +102,7 @@ function I(e) {
                                                                             });
                                                                     }
                                                                     return e;
-                                                                })({ className: N.elevatedPermissionContainer }, e)),
+                                                                })({ className: I.elevatedPermissionContainer }, e)),
                                                                 (n = n =
                                                                     {
                                                                         children: [
@@ -115,7 +115,7 @@ function I(e) {
                                                                             (0, r.jsx)(u.Text, {
                                                                                 variant: 'text-xs/normal',
                                                                                 color: 'text-brand',
-                                                                                children: O.NW.string(O.t.k7Kqj4)
+                                                                                children: O.intl.string(O.t.k7Kqj4)
                                                                             })
                                                                         ]
                                                                     }),
@@ -148,11 +148,11 @@ function I(e) {
                                                         color: u.TVs.colors.INTERACTIVE_MUTED.css
                                                     }),
                                                     (0, r.jsx)('div', {
-                                                        className: N.elevatedPermissionContainer,
+                                                        className: I.elevatedPermissionContainer,
                                                         children: (0, r.jsx)(u.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-muted',
-                                                            children: O.NW.string(O.t.IfqUEB)
+                                                            children: O.intl.string(O.t.IfqUEB)
                                                         })
                                                     })
                                                 ]
@@ -164,33 +164,33 @@ function I(e) {
                     (0, r.jsx)(u.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
-                        children: O.NW.format(O.t.KmJI4O, { roleCount: w })
+                        children: O.intl.format(O.t.KmJI4O, { roleCount: w })
                     })
                 ]
             }),
-            null != Z &&
+            null != N &&
                 (0, r.jsx)('div', {
-                    className: N.permissionItemDescription,
+                    className: I.permissionItemDescription,
                     children: (0, r.jsx)(u.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
-                        children: Z
+                        children: N
                     })
                 }),
             (0, r.jsx)('div', {
-                className: N.permissionItemRoleContainer,
+                className: I.permissionItemRoleContainer,
                 children: g.map((e) =>
                     (0, v.Ov)(e, E)
                         ? (0, r.jsx)(
                               'div',
                               {
-                                  className: N.roleTooltipItem,
+                                  className: I.roleTooltipItem,
                                   children: (0, r.jsx)('div', {
-                                      className: N.roleChiplet,
+                                      className: I.roleChiplet,
                                       children: (0, r.jsx)(u.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'text-normal',
-                                          children: O.NW.string(O.t.pclUFB)
+                                          children: O.intl.string(O.t.pclUFB)
                                       })
                                   })
                               },
@@ -199,12 +199,12 @@ function I(e) {
                         : (0, r.jsx)(
                               u.P3F,
                               {
-                                  className: o()(N.roleTooltipItem, { [N.editable]: R && !(0, d.pM)(y.id, e) }),
+                                  className: o()(I.roleTooltipItem, { [I.editable]: R && !(0, d.pM)(y.id, e) }),
                                   onClick: () => k(e),
                                   children: (0, r.jsx)(h.Z, {
-                                      role: I[e],
+                                      role: P[e],
                                       guildId: y.id,
-                                      className: N.roleChiplet
+                                      className: I.roleChiplet
                                   })
                               },
                               e
@@ -214,17 +214,17 @@ function I(e) {
         ]
     });
 }
-function P(e, t) {
+function S(e, t) {
     return t.toLowerCase().includes(e.toLowerCase());
 }
-function S(e) {
+function Z(e) {
     let { userId: t, guildId: n, location: l, className: a, onNavigate: d } = e,
         p = (0, c.e7)([y.default], () => y.default.getUser(t), [t]),
         h = (0, c.e7)([b.Z], () => b.Z.getGuild(n), [n]),
         f = (0, c.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]),
         _ = (0, v.B2)(t, n, v.pd),
-        S = Object.keys(_).length,
-        Z = i.useMemo(() => (null != h ? C.Z.getGuildPermissionSpecMap(h) : null), [h]),
+        Z = Object.keys(_).length,
+        N = i.useMemo(() => (null != h ? C.Z.getGuildPermissionSpecMap(h) : null), [h]),
         T = i.useMemo(() => (null != h ? C.Z.generateGuildPermissionSpec(h) : null), [h]),
         [A, w] = i.useState(''),
         [R, k] = i.useState(''),
@@ -238,12 +238,12 @@ function S(e) {
         D = i.useCallback(() => {
             w(''), k('');
         }, []),
-        W = i.useMemo(() => {
-            if (null == h || null == Z || null == f) return null;
-            if (0 === S)
+        U = i.useMemo(() => {
+            if (null == h || null == N || null == f) return null;
+            if (0 === Z)
                 return (0, r.jsx)(u.Text, {
                     variant: 'text-sm/normal',
-                    children: O.NW.string(O.t.DEBGqK)
+                    children: O.intl.string(O.t.DEBGqK)
                 });
             let e = [];
             return (
@@ -257,26 +257,26 @@ function S(e) {
                             if (null != a) {
                                 if (R.length > 0) {
                                     var s, c, u, d, p;
-                                    let e = null != (d = null == (s = Z[l.toString()]) ? void 0 : s.title) ? d : (0, m.wt)(l),
-                                        t = null != (p = null == (u = Z[l.toString()]) || null == (c = u.description) ? void 0 : c.toString()) ? p : '',
+                                    let e = null != (d = null == (s = N[l.toString()]) ? void 0 : s.title) ? d : (0, m.wt)(l),
+                                        t = null != (p = null == (u = N[l.toString()]) || null == (c = u.description) ? void 0 : c.toString()) ? p : '',
                                         r = n.title,
                                         i = v._o.has(l),
                                         a = v.Qn.includes(o),
-                                        h = i ? O.NW.string(O.t.k7Kqj4) : a ? O.NW.string(O.t.IfqUEB) : null,
-                                        f = P(R, e),
-                                        g = P(R, t),
-                                        b = P(R, r),
-                                        _ = null != h && P(R, h);
+                                        h = i ? O.intl.string(O.t.k7Kqj4) : a ? O.intl.string(O.t.IfqUEB) : null,
+                                        f = S(R, e),
+                                        g = S(R, t),
+                                        b = S(R, r),
+                                        _ = null != h && S(R, h);
                                     if (!f && !g && !b && !_) return;
                                 }
                                 e.push(
                                     (0, r.jsx)(
-                                        I,
+                                        P,
                                         {
                                             permission: o,
                                             roleIds: a,
                                             guild: h,
-                                            specMap: Z,
+                                            specMap: N,
                                             categoryTitle: n.title,
                                             userId: t
                                         },
@@ -288,7 +288,7 @@ function S(e) {
                     }),
                 e
             );
-        }, [h, Z, f, S, T, _, R, t]);
+        }, [h, N, f, Z, T, _, R, t]);
     return null == p || null == f
         ? null
         : (0, r.jsxs)('div', {
@@ -300,16 +300,16 @@ function S(e) {
                       onNavigate: d
                   }),
                   (0, r.jsx)(u.Ttm, {
-                      className: N.permissionsGroupContainer,
+                      className: I.permissionsGroupContainer,
                       children: (0, r.jsx)(u.xJW, {
-                          title: O.NW.string(O.t.BBWnpq),
+                          title: O.intl.string(O.t.BBWnpq),
                           children: (0, r.jsxs)('div', {
-                              className: N.permissionsItemContainer,
+                              className: I.permissionsItemContainer,
                               children: [
                                   (0, r.jsx)(u.E1j, {
-                                      className: N.searchBar,
+                                      className: I.searchBar,
                                       query: A,
-                                      placeholder: O.NW.string(O.t['yD9+dH']),
+                                      placeholder: O.intl.string(O.t['yD9+dH']),
                                       onChange: L,
                                       onClear: D,
                                       autoComplete: 'off',
@@ -319,7 +319,7 @@ function S(e) {
                                           spellCheck: 'false'
                                       }
                                   }),
-                                  W
+                                  U
                               ]
                           })
                       })

@@ -92,7 +92,7 @@ function m(e, t) {
             I = p(t, ['children', 'className', 'onResize', 'contentClassName', 'onScroll', 'dir', 'fade', 'customTheme', 'style']);
         let S = i.useRef(null),
             T = i.useRef(null),
-            [N, A] = i.useState(!1),
+            [A, N] = i.useState(!1),
             { scrollerRef: C, getScrollerState: R } = (0, l.Ke)(),
             P = (0, l.t2)(C);
         i.useImperativeHandle(
@@ -110,9 +110,9 @@ function m(e, t) {
         );
         let w = i.useCallback(
             (e) => {
-                null == S.current ? A(!0) : clearTimeout(S.current),
+                null == S.current ? N(!0) : clearTimeout(S.current),
                     (S.current = setTimeout(() => {
-                        (S.current = null), A(!1);
+                        (S.current = null), N(!1);
                     }, 200)),
                     null != E && E(e);
             },
@@ -145,7 +145,7 @@ function m(e, t) {
                                 [c.customTheme]: v,
                                 [e]: !0,
                                 [c.managedReactiveScroller]: !0,
-                                [c.scrolling]: N && y
+                                [c.scrolling]: A && y
                             }),
                             style: O,
                             dir: b,
@@ -159,7 +159,7 @@ function m(e, t) {
                             children: (0, r.jsxs)('div', {
                                 ref: T,
                                 className: o()(g, c.content),
-                                children: [f, N && (0, r.jsx)('div', { className: c.pointerCover })]
+                                children: [f, A && (0, r.jsx)('div', { className: c.pointerCover })]
                             })
                         })
                     }

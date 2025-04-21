@@ -18,8 +18,8 @@ function c(e) {
             width: 20
         }),
         color: i.Z.unsafe_rawColors.BRAND_500.css,
-        title: s.NW.string(s.t['60lJ0N']),
-        description: s.NW.string(s.t['EYn7//']),
+        title: s.intl.string(s.t['60lJ0N']),
+        description: s.intl.string(s.t['EYn7//']),
         onClick: function () {
             (0, l.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('22347'), n.e('82758'), n.e('58023'), n.e('22754')]).then(n.bind(n, 779250));

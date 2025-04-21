@@ -22,7 +22,7 @@ function _(e) {
         ? null
         : (0, r.jsx)(o.DY, {
               className: f.container,
-              text: d.NW.string(d.t.p3Q9Y2),
+              text: d.intl.string(d.t.p3Q9Y2),
               delay: u.vB,
               children: (0, r.jsx)(s.P4T, {
                   size: 'xs',

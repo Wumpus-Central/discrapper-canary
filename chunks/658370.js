@@ -1,10 +1,10 @@
 n.d(t, { Z: () => b }), n(953529);
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    s = n.n(i),
-    a = n(481060),
-    l = n(74538),
+var r = n(120356),
+    s = n.n(r),
+    l = n(481060),
+    a = n(74538),
     o = n(773104),
     c = n(104494),
     d = n(639119),
@@ -17,48 +17,48 @@ var i = n(120356),
 let b = (e) => {
     var t;
     let n,
-        { title: i, titleClassName: b = '', buttonClassName: _ = '', subtitle: N = '', description: x = '', descriptionCta: E = '', isPremiumGetCta: j, onCtaClick: C, cardVariant: O } = e,
-        S = (0, d.N)(),
-        v = null == S ? void 0 : S.subscription_trial,
-        T = (0, c.Ng)(),
-        I = (0, l.Rt)({
-            intervalType: null == v ? void 0 : v.interval,
-            intervalCount: null == v ? void 0 : v.interval_count
+        { title: r, titleClassName: b = '', buttonClassName: _ = '', subtitle: x = '', description: E = '', descriptionCta: j = '', isPremiumGetCta: C, onCtaClick: O, cardVariant: S } = e,
+        v = (0, d.N)(),
+        T = null == v ? void 0 : v.subscription_trial,
+        I = (0, c.Ng)(),
+        N = (0, a.Rt)({
+            intervalType: null == T ? void 0 : T.interval,
+            intervalCount: null == T ? void 0 : T.interval_count
         }),
         y = (0, o._)({
-            defaultResponse: h.NW.string(h.t['8x0jKS']),
-            onNonTier2Subscriber: h.NW.string(h.t.IJI7ys),
-            onTier2TrialOffer: I,
-            onTier0TrialOffer: I,
-            onDiscountOffer: h.NW.formatToPlainString(h.t.bkQ4bG, { percent: null == T ? void 0 : T.discount.amount })
+            defaultResponse: h.intl.string(h.t['8x0jKS']),
+            onNonTier2Subscriber: h.intl.string(h.t.IJI7ys),
+            onTier2TrialOffer: N,
+            onTier0TrialOffer: N,
+            onDiscountOffer: h.intl.formatToPlainString(h.t.bkQ4bG, { percent: null == I ? void 0 : I.discount.amount })
         }),
-        A = (0, u._)(O);
-    return (0, r.jsxs)('div', {
+        A = (0, u._)(S);
+    return (0, i.jsxs)('div', {
         className: s()(f.cardDescription, null == A || null == (t = A.description) ? void 0 : t.className),
         children: [
-            (0, r.jsx)(m.Z, {
-                title: i,
+            (0, i.jsx)(m.Z, {
+                title: r,
                 cardVariantStyleInfo: A,
                 titleClassName: b,
-                subtitle: N,
-                description: x
+                subtitle: x,
+                description: E
             }),
-            j &&
-                (0, r.jsx)(g.Z, {
+            C &&
+                (0, i.jsx)(g.Z, {
                     className: _,
-                    look: a.zxk.Looks.BLANK,
-                    color: a.zxk.Colors.CUSTOM,
+                    look: l.zxk.Looks.BLANK,
+                    color: l.zxk.Colors.CUSTOM,
                     subscriptionTier: p.Si.TIER_2,
                     buttonText: y,
                     showGradient: !0
                 }),
-            0 !== E.length &&
+            0 !== j.length &&
                 (null == (n = null == A ? void 0 : A.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
-                null != C &&
-                (0, r.jsx)(a.zxk, {
+                null != O &&
+                (0, i.jsx)(l.zxk, {
                     className: _,
-                    onClick: C,
-                    children: E
+                    onClick: O,
+                    children: j
                 })
         ]
     });

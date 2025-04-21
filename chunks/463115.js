@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var l = n(200651);
 n(192379);
-var r = n(120356),
-    i = n.n(r),
+var i = n(120356),
+    r = n.n(i),
     s = n(481060),
     a = n(888592),
     o = n(388032),
@@ -14,9 +14,9 @@ let d = (e) => {
         children: [
             (0, l.jsx)('div', { className: c.topImage }),
             (0, l.jsx)(s.X6q, {
-                className: i()(c.centerText, c.header),
+                className: r()(c.centerText, c.header),
                 variant: 'heading-xl/semibold',
-                children: o.NW.string(o.t.OaloU1)
+                children: o.intl.string(o.t.OaloU1)
             }),
             (0, l.jsx)('div', {
                 className: c.descriptionWidth,
@@ -24,7 +24,7 @@ let d = (e) => {
                     className: c.centerText,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: o.NW.format(o.t.Rs7MXF, { school: t })
+                    children: o.intl.format(o.t.Rs7MXF, { school: t })
                 })
             }),
             (0, l.jsx)(s.zxk, {
@@ -35,7 +35,7 @@ let d = (e) => {
                     n(a.tF.VERIFY_EMAIL);
                 },
                 className: c.__invalid_resendLink,
-                children: o.NW.string(o.t.Zg63h4)
+                children: o.intl.string(o.t.Zg63h4)
             })
         ]
     });

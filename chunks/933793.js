@@ -1,34 +1,34 @@
-n.d(e, { Z: () => g });
-var i = n(200651);
-n(192379);
-var r = n(442837),
-    a = n(481060),
-    l = n(240872),
-    s = n(456269),
-    o = n(346479),
-    d = n(665906),
-    c = n(592125),
-    u = n(176505),
-    h = n(388032);
+e.d(n, { Z: () => g });
+var i = e(200651);
+e(192379);
+var r = e(442837),
+    l = e(481060),
+    a = e(240872),
+    s = e(456269),
+    o = e(346479),
+    d = e(665906),
+    c = e(592125),
+    u = e(176505),
+    h = e(388032);
 function g(t) {
-    let e = (0, r.e7)([c.Z], () => c.Z.getChannel(t.parent_id)),
-        n = (0, d.Xb)(t),
+    let n = (0, r.e7)([c.Z], () => c.Z.getChannel(t.parent_id)),
+        e = (0, d.Xb)(t),
         g = (0, s.kF)(t);
-    return (null == e ? void 0 : e.isForumLikeChannel()) && n
+    return (null == n ? void 0 : n.isForumLikeChannel()) && e
         ? t.hasFlag(u.zZ.PINNED)
-            ? (0, i.jsx)(a.sNh, {
+            ? (0, i.jsx)(l.sNh, {
                   id: 'unpin-thread',
-                  label: h.NW.string(h.t.trD8am),
+                  label: h.intl.string(h.t.trD8am),
                   action: () => o.Z.unpin(t)
               })
-            : (0, i.jsx)(a.sNh, {
+            : (0, i.jsx)(l.sNh, {
                   id: 'pin-thread',
-                  label: h.NW.string(h.t.EnaWho),
+                  label: h.intl.string(h.t.EnaWho),
                   action: function () {
                       null != g
-                          ? l.Z.show({
-                                title: h.NW.string(h.t.IMbjxs),
-                                body: h.NW.string(h.t['mi5+Vl']),
+                          ? a.Z.show({
+                                title: h.intl.string(h.t.IMbjxs),
+                                body: h.intl.string(h.t['mi5+Vl']),
                                 onConfirm: async () => {
                                     await o.Z.unpin(g), o.Z.pin(t);
                                 }

@@ -1,14 +1,14 @@
-n.d(t, { Z: () => o });
-var r = n(626135),
-    a = n(981631);
-function o(e) {
-    let { problem: t, feedback: n, reportType: o, reportId: l = null, rating: s = null, dontShowAgain: c } = e;
-    r.default.track(a.rMx.IAR_FEEDBACK_SUBMITTED, {
+n.d(t, { Z: () => a });
+var l = n(626135),
+    r = n(981631);
+function a(e) {
+    let { problem: t, feedback: n, reportType: a, reportId: o = null, rating: i = null, dontShowAgain: s } = e;
+    l.default.track(r.rMx.IAR_FEEDBACK_SUBMITTED, {
         reason: t,
-        report_type: o,
-        report_id: l,
-        rating: s,
+        report_type: a,
+        report_id: o,
+        rating: i,
         feedback: n,
-        dont_show_again: c
+        dont_show_again: s
     });
 }

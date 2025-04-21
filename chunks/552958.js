@@ -1,16 +1,16 @@
-n.d(t, { Z: () => l }), n(388685);
-var i = n(192379),
-    r = n(460181),
-    s = n(974180);
-function l() {
-    let [e, t] = i.useState(),
-        n = i.useRef(-1);
+n.d(t, { Z: () => a }), n(388685);
+var r = n(192379),
+    i = n(460181),
+    l = n(974180);
+function a() {
+    let [e, t] = r.useState(),
+        n = r.useRef(-1);
     return {
-        playSound: i.useCallback((e) => {
+        playSound: r.useCallback((e) => {
             t(e),
-                r.GN(
-                    s.Ay,
-                    s.yk,
+                i.GN(
+                    l.Ay,
+                    l.yk,
                     () => {
                         clearTimeout(n.current),
                             (n.current = setTimeout(() => {

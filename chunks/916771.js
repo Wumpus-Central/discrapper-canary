@@ -18,15 +18,15 @@ function p(e) {
         b = null == (t = (0, o.hp)(null != h ? h : o.u.STREAM_FAILED_TO_START)) ? void 0 : t.errorCode;
     return (0, r.jsx)(u.Z, {
         artURL: _,
-        header: f.NW.string(f.t.rSlOen),
+        header: f.intl.string(f.t.rSlOen),
         size: (0, u.L)(p),
         noArt: g,
         selected: m,
-        description: f.NW.format(f.t.sXsgsL, { helpUrl: c.Z.getArticleURL(d.BhN.STREAM_FAILED) }),
-        errorCodeMessage: E ? f.NW.formatToPlainString(f.t['ejOT9/'], { errorCode: b }) : void 0,
+        description: f.intl.format(f.t.sXsgsL, { helpUrl: c.Z.getArticleURL(d.BhN.STREAM_FAILED) }),
+        errorCodeMessage: E ? f.intl.formatToPlainString(f.t['ejOT9/'], { errorCode: b }) : void 0,
         onCTAClick: () => {
             (0, a.w)(i.Yn.STREAM, n.ownerId), (0, l.Z)(n);
         },
-        callToAction: f.NW.string(f.t['4EGMWF'])
+        callToAction: f.intl.string(f.t['4EGMWF'])
     });
 }

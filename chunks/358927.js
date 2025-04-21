@@ -4,14 +4,14 @@ r(192379);
 var o = r(481060),
     c = r(63063),
     i = r(937615),
-    a = r(981631),
-    l = r(388032);
+    l = r(981631),
+    a = r(388032);
 let p = (e) => {
     var t, r;
     let { modalProps: p, onConfirm: s, onCancel: u, newInvoice: b } = e,
         f = {
             newCurrencyAndPrice: (0, i.T4)(b.total, b.currency),
-            helpCenterLink: c.Z.getArticleURL(a.BhN.LOCALIZED_PRICING)
+            helpCenterLink: c.Z.getArticleURL(l.BhN.LOCALIZED_PRICING)
         };
     return (0, n.jsx)(
         o.ConfirmModal,
@@ -41,9 +41,9 @@ let p = (e) => {
             return e;
         })(
             {
-                header: l.NW.string(l.t.eZFTbm),
-                confirmText: l.NW.string(l.t.p89ACg),
-                cancelText: l.NW.string(l.t.gm1Ven),
+                header: a.intl.string(a.t.eZFTbm),
+                confirmText: a.intl.string(a.t.p89ACg),
+                cancelText: a.intl.string(a.t.gm1Ven),
                 onConfirm: s,
                 onCancel: u,
                 confirmButtonColor: o.zxk.Colors.BRAND
@@ -54,7 +54,7 @@ let p = (e) => {
             {
                 children: (0, n.jsx)(o.Text, {
                     variant: 'text-md/normal',
-                    children: l.NW.format(l.t.oZBduL, f)
+                    children: a.intl.format(a.t.oZBduL, f)
                 })
             }),
         Object.getOwnPropertyDescriptors

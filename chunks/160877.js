@@ -5,8 +5,8 @@ n.d(t, {
     n(953529);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(470167),
     s = n(481060),
     c = n(572691),
@@ -30,10 +30,10 @@ let b = (e) => {
     },
     x = (e) => {
         var t, n, i;
-        let { embed: a } = e;
-        if (!h.n2.has(a.type)) return null;
-        let l = void 0 !== a.video && a.type !== o.h.GIFV ? a.video.url : null != (i = null == (t = a.thumbnail) ? void 0 : t.url) ? i : null == (n = a.image) ? void 0 : n.url;
-        return null == l ? null : (0, r.jsx)(y, { url: l });
+        let { embed: l } = e;
+        if (!h.n2.has(l.type)) return null;
+        let a = void 0 !== l.video && l.type !== o.h.GIFV ? l.video.url : null != (i = null == (t = l.thumbnail) ? void 0 : t.url) ? i : null == (n = l.image) ? void 0 : n.url;
+        return null == a ? null : (0, r.jsx)(y, { url: a });
     },
     y = (e) => {
         let { url: t, description: n } = e,
@@ -42,12 +42,12 @@ let b = (e) => {
             className: _.mediaContainer,
             children: i
                 ? (0, r.jsx)(d.Z, {
-                      className: l()(_.video, _.media),
+                      className: a()(_.video, _.media),
                       controls: !0,
                       src: t
                   })
                 : (0, r.jsx)('img', {
-                      className: l()(_.image, _.media),
+                      className: a()(_.image, _.media),
                       src: t,
                       alt: n
                   })
@@ -57,40 +57,40 @@ function v(e) {
     c.Z.pop(),
         (0, m.t)({
             id: 'explicit-media-false-positive-modal',
-            text: g.NW.string(g.t.gFsTKi)
+            text: g.intl.string(g.t.gFsTKi)
         }),
         e();
 }
 function E(e) {
-    let { channelId: t, messageId: n, isReportFalsePositiveLoading: a, analyticsContext: l, attachmentPreview: o, embedPreview: c, onConfirmPress: d, transitionState: p, onClose: m } = e,
+    let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: c, onConfirmPress: d, transitionState: p, onClose: m } = e,
         h = (0, u.Dt)(),
         y = i.useCallback(() => {
             (0, f.aP)({
                 action: f.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
                 messageId: n,
-                context: l
+                context: a
             }),
                 m();
-        }, [t, n, l, m]),
+        }, [t, n, a, m]),
         v = i.useCallback(() => {
             null == d || d(),
                 (0, f.aP)({
                     action: f.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                     channelId: t,
                     messageId: n,
-                    context: l
+                    context: a
                 });
-        }, [t, n, l, d]);
+        }, [t, n, a, d]);
     return (
         i.useEffect(() => {
             (0, f.aP)({
                 action: f.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
                 channelId: t,
                 messageId: n,
-                context: l
+                context: a
             });
-        }, [t, n, l]),
+        }, [t, n, a]),
         (0, r.jsxs)(s.Y0X, {
             transitionState: p,
             'aria-labelledby': h,
@@ -107,13 +107,13 @@ function E(e) {
                             variant: 'heading-lg/semibold',
                             color: 'header-primary',
                             className: _.header,
-                            children: g.NW.string(g.t.TPpVkJ)
+                            children: g.intl.string(g.t.TPpVkJ)
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             className: _.subheader,
-                            children: g.NW.string(g.t.gg5Dp6)
+                            children: g.intl.string(g.t.gg5Dp6)
                         }),
                         null != o && (0, r.jsx)(b, { attachment: o }),
                         null != c && (0, r.jsx)(x, { embed: c })
@@ -123,20 +123,20 @@ function E(e) {
                     children: [
                         (0, r.jsx)(s.zxk, {
                             className: _.button,
-                            disabled: a,
-                            submitting: a,
+                            disabled: l,
+                            submitting: l,
                             size: s.zxk.Sizes.MEDIUM,
                             color: s.zxk.Colors.BRAND,
                             onClick: v,
-                            children: g.NW.string(g.t['cY+Ooa'])
+                            children: g.intl.string(g.t['cY+Ooa'])
                         }),
                         (0, r.jsx)(s.zxk, {
                             className: _.button,
-                            disabled: a,
+                            disabled: l,
                             color: s.zxk.Colors.TRANSPARENT,
                             size: s.zxk.Sizes.MEDIUM,
                             onClick: y,
-                            children: g.NW.string(g.t['ETE/oK'])
+                            children: g.intl.string(g.t['ETE/oK'])
                         })
                     ]
                 })

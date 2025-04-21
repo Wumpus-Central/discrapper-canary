@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => h,
-    f: () => N
+    f: () => C
 }),
     n(388685);
 var r,
@@ -64,9 +64,9 @@ function T(e, t) {
 }
 var b = (((r = b || {})[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), r);
 function h(e) {
-    let { tag: t, size: r = 1, disabled: o, className: b, onClick: h, onRemove: N, selected: C, ariaLabel: y } = e,
+    let { tag: t, size: r = 1, disabled: o, className: b, onClick: h, onRemove: C, selected: y, ariaLabel: N } = e,
         { name: P, emojiId: m, emojiName: A } = t,
-        v = null != N,
+        v = null != C,
         [L, j] = l.useState(!1),
         F = (0, c.e7)([f.ZP], () => (null != m ? f.ZP.getUsableCustomEmojiById(m) : null)),
         D = v || null != h,
@@ -120,12 +120,12 @@ function h(e) {
                     [I.disabled]: o,
                     [I.clickable]: D,
                     [I.small]: w,
-                    [I.selected]: C
+                    [I.selected]: y
                 },
                 b
             ),
             onClick: (e) => {
-                null == h || h(e), null == N || N(t), U || null == M.current || M.current.blur();
+                null == h || h(e), null == C || C(t), U || null == M.current || M.current.blur();
             },
             onContextMenu: (e) => G(e),
             onMouseEnter: () => v && j(!0),
@@ -140,9 +140,9 @@ function h(e) {
                       T(g({}, H), {
                           innerRef: M,
                           focusProps: { ringTarget: M },
-                          'aria-label': null != y ? y : O.NW.formatToPlainString(O.t.iyRTLi, { tagName: P }),
+                          'aria-label': null != N ? N : O.intl.formatToPlainString(O.t.iyRTLi, { tagName: P }),
                           role: 'button',
-                          'aria-pressed': C
+                          'aria-pressed': y
                       }),
                       x
                   ),
@@ -151,11 +151,11 @@ function h(e) {
           )
         : (0, i.jsx)('div', T(g({}, x), { children: Z }));
 }
-function N(e) {
+function C(e) {
     let { tags: t, count: n, size: r = 1 } = e,
         l = 0 === r;
     return (0, i.jsx)(s.ua7, {
-        'aria-label': O.NW.string(O.t['P/y+sr']),
+        'aria-label': O.intl.string(O.t['P/y+sr']),
         text: (0, i.jsx)(i.Fragment, {
             children: t.map((e) =>
                 (0, i.jsx)(

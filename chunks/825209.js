@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h }), n(388685), n(539854);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(921738),
-    a = n.n(s),
-    l = n(213005),
+    l = n.n(s),
+    a = n(213005),
     o = n(455279),
     c = n(358085),
     d = n(998502),
@@ -22,7 +22,7 @@ function m(e, t, n) {
     );
 }
 let g = c.isPlatformEmbedded && null != d.ZP.getDiscordUtils().inputCaptureRegisterElement;
-class p extends i.PureComponent {
+class p extends r.PureComponent {
     componentDidMount() {
         this._mounted = !0;
     }
@@ -43,14 +43,14 @@ class p extends i.PureComponent {
     render() {
         let e,
             t,
-            { codes: n, mode: i } = this.state,
+            { codes: n, mode: r } = this.state,
             { disabled: s } = this.props;
         return (
             g ? ((t = d.ZP.getDiscordUtils().inputCaptureRegisterElement), (e = this.handleNativeChange)) : c.isPlatformEmbedded || (e = this.handleComboKeys),
-            (0, r.jsx)(o.Z, {
+            (0, i.jsx)(o.Z, {
                 disabled: s,
                 value: n,
-                mode: i,
+                mode: r,
                 onClick: this.toggleRecordMode,
                 onChange: e,
                 registerNativeRecorder: t,
@@ -64,7 +64,7 @@ class p extends i.PureComponent {
             m(this, 'gs', void 0),
             m(this, '_mounted', !1),
             m(this, 'recordStart', () => {
-                c.isPlatformEmbedded && !g && ((this.gs = new l.Z()), this.gs.on('change', this.handleGSChange)), this.setState({ mode: o.c.RECORDING });
+                c.isPlatformEmbedded && !g && ((this.gs = new a.Z()), this.gs.on('change', this.handleGSChange)), this.setState({ mode: o.c.RECORDING });
             }),
             m(this, 'recordEnd', () => {
                 this.cleanUp(), this.setState({ mode: o.c.DEFAULT });
@@ -74,13 +74,13 @@ class p extends i.PureComponent {
             }),
             m(this, 'handleComboKeys', (e, t, n) => {
                 if ((n.preventDefault(), 'keydown' === n.type)) {
-                    let e = t.map((e) => [u.MoX.KEYBOARD_KEY, a()(e), u.CgE.BROWSER]),
-                        { keyCode: r } = n;
+                    let e = t.map((e) => [u.MoX.KEYBOARD_KEY, l()(e), u.CgE.BROWSER]),
+                        { keyCode: i } = n;
                     null ==
                         e.find((e) => {
                             let [, t] = e;
-                            return r === t;
-                        }) && e.push([u.MoX.KEYBOARD_KEY, r, u.CgE.BROWSER]),
+                            return i === t;
+                        }) && e.push([u.MoX.KEYBOARD_KEY, i, u.CgE.BROWSER]),
                         this.handleComboChange(e);
                 }
             }),

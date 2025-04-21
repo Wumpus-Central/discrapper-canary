@@ -33,10 +33,10 @@ function h(e, t, n) {
     return l.ND.find((r) => (null == r.preset || r.preset === e) && r.resolution === t && r.fps === n);
 }
 function m(e) {
-    return e.type === u.uA.SOURCE ? d.NW.string(d.t.XjXqzs) : d.NW.formatToPlainString(d.t.TEOC0N, { resolution: e.height });
+    return e.type === u.uA.SOURCE ? d.intl.string(d.t.XjXqzs) : d.intl.formatToPlainString(d.t.TEOC0N, { resolution: e.height });
 }
 function g(e) {
-    return d.NW.formatToPlainString(d.t.Qb44XF, { fps: e });
+    return d.intl.formatToPlainString(d.t.Qb44XF, { fps: e });
 }
 function E(e) {
     return null == e.maxResolution || null == e.maxFrameRate

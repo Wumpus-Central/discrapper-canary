@@ -84,10 +84,10 @@ function E(e) {
     var { section: t, isSelected: n, width: a, height: f, className: p, selectable: g = !1, isSquircle: E, onFocus: b, onBlur: y, onMouseOver: v, onMouseLeave: O } = e,
         I = m(e, ['section', 'isSelected', 'width', 'height', 'className', 'selectable', 'isSquircle', 'onFocus', 'onBlur', 'onMouseOver', 'onMouseLeave']);
     let [S, T] = i.useState(!1),
-        N = i.useCallback(() => {
+        A = i.useCallback(() => {
             T(!0), null == b || b();
         }, [b]),
-        A = i.useCallback(() => {
+        N = i.useCallback(() => {
             T(!1), null == y || y();
         }, [y]),
         C = i.useCallback(() => {
@@ -115,8 +115,8 @@ function E(e) {
                 [u.selectable]: g,
                 [u.selected]: g && n
             }),
-            onFocus: N,
-            onBlur: A,
+            onFocus: A,
+            onBlur: N,
             onMouseOver: C,
             onMouseLeave: R,
             children: (0, r.jsx)(s.ZP, {

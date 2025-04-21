@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(45521),
     S = n(285651),
     T = n(217590),
-    N = n(453070),
-    A = n(926491),
+    A = n(453070),
+    N = n(926491),
     C = n(373228),
     R = n(462109),
     P = n(422195),
@@ -89,8 +89,8 @@ function V(e, t) {
 }
 let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     H = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-    W = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-    Y = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+    Y = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+    W = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
     K = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
     z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
     q = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
@@ -114,7 +114,7 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             [ea, eo] = (0, h.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], s.X),
             es = i.useRef('');
         i.useImperativeHandle(t, () => ({ onPickerOpen: ex }));
-        let el = (0, N.Sd)(c),
+        let el = (0, A.Sd)(c),
             ec = 0 === el.filter((e) => e.type !== C.Ih.EMPTY_GUILD_UPSELL).length,
             eu = (0, m.ep)({
                 gridWrapperRef: Q,
@@ -127,9 +127,9 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ef = i.useMemo(() => new Set(ed), [ed]),
             e_ = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
             ep = i.useMemo(() => (0, M.S)(ea, e_, c), [ea, e_, c]),
-            eh = (0, N.RJ)(),
-            em = (0, N.LZ)(),
-            eg = (0, l.cj)([A.Z], () => A.Z.getAllGuildStickers()),
+            eh = (0, A.RJ)(),
+            em = (0, A.LZ)(),
+            eg = (0, l.cj)([N.Z], () => N.Z.getAllGuildStickers()),
             { sendable: eE = [], sendableWithPremium: eb = [] } = null != ep ? ep : {},
             ey = eE.length + eb.length,
             ev = i.useCallback(
@@ -143,15 +143,15 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 rowCount: eI,
                 rowCountBySection: eS,
                 stickersGrid: eT,
-                gutterWidth: eN,
-                columnCounts: eA
-            } = (0, N.el)({
+                gutterWidth: eA,
+                columnCounts: eN
+            } = (0, A.el)({
                 filteredStickers: ep,
                 stickersCategories: el,
                 collapsedStickersCategories: ef,
                 listWidth: eu,
-                listPaddingRight: W,
-                stickerNodeMargin: eO ? Y : K,
+                listPaddingRight: Y,
+                stickerNodeMargin: eO ? W : K,
                 stickerNodeWidth: eO ? X : J
             }),
             eC = i.useCallback(
@@ -181,7 +181,7 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 handleGridContainerKeyDown: eD,
                 isUsingKeyboardNavigation: eL
             } = (0, R.t)({
-                columnCounts: eA,
+                columnCounts: eN,
                 stickersListRef: ee,
                 stickersGrid: eT,
                 onGridItemSelect: eC,
@@ -195,7 +195,7 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 t = [];
             if (null !== e) {
                 var n;
-                t = null != (n = A.Z.getStickersByGuildId(e)) ? n : [];
+                t = null != (n = N.Z.getStickersByGuildId(e)) ? n : [];
             }
             let r = 0;
             null != eg &&
@@ -264,7 +264,7 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                         getStickerItemProps: eR,
                                                         getStickerRowProps: eP,
                                                         gridWidth: eu,
-                                                        gutterWidth: eN,
+                                                        gutterWidth: eA,
                                                         isUsingKeyboardNavigation: eL,
                                                         onSelectSticker: ev,
                                                         rowCount: eI,
@@ -288,7 +288,7 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         });
     }),
     ei = (e, t) => (
-        (0, N.fP)(),
+        (0, A.fP)(),
         (0, r.jsx)('div', {
             className: U.wrapper,
             id: k.nZ,

@@ -47,32 +47,32 @@ let b = function (e) {
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         switch (e) {
             case 1:
-                return c.NW.string(c.t.HumZAg);
+                return c.intl.string(c.t.HumZAg);
             case 2:
-                return c.NW.string(c.t.gmCUFx);
+                return c.intl.string(c.t.gmCUFx);
             case 3:
-                return c.NW.string(c.t['Ql/e9f']);
+                return c.intl.string(c.t['Ql/e9f']);
             case 4:
-                return c.NW.string(c.t.Op8B3N);
+                return c.intl.string(c.t.Op8B3N);
             case 5:
-                return c.NW.string(c.t['/3vIRU']);
+                return c.intl.string(c.t['/3vIRU']);
             case 6:
-                if (null != t && !n) return c.NW.formatToPlainString(c.t.EIUjR0, { vanityUrl: t });
-                return c.NW.string(c.t.dGiD1N);
+                if (null != t && !n) return c.intl.formatToPlainString(c.t.EIUjR0, { vanityUrl: t });
+                return c.intl.string(c.t.dGiD1N);
             case 7:
-                return c.NW.string(c.t.vdu7oa);
+                return c.intl.string(c.t.vdu7oa);
             default:
-                return c.NW.string(c.t.DvMBkZ);
+                return c.intl.string(c.t.DvMBkZ);
         }
     },
     y = (e) => {
         switch (e) {
             case 'twitch':
-                return c.NW.string(c.t.AVGAk5);
+                return c.intl.string(c.t.AVGAk5);
             case 'youtube':
-                return c.NW.string(c.t.PHSAsr);
+                return c.intl.string(c.t.PHSAsr);
             default:
-                return c.NW.string(c.t.gmCUFx);
+                return c.intl.string(c.t.gmCUFx);
         }
     },
     v = (e) => {

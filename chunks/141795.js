@@ -78,8 +78,8 @@ function S(e, t) {
     );
 }
 let T = new s.Z('CloudUpload.tsx'),
-    N = n(224497).Z,
-    A = 'Content-MD5';
+    A = n(224497).Z,
+    N = 'Content-MD5';
 var C = (function (e) {
     return (e.NOT_STARTED = 'NOT_STARTED'), (e.STARTED = 'STARTED'), (e.UPLOADING = 'UPLOADING'), (e.ERROR = 'ERROR'), (e.COMPLETED = 'COMPLETED'), (e.CANCELED = 'CANCELED'), e;
 })({});
@@ -266,7 +266,7 @@ class P extends E.ZP {
             }, 50),
             a = { 'Content-Type': n };
         return (
-            void 0 !== e.md5Hash && (a[A] = e.md5Hash),
+            void 0 !== e.md5Hash && (a[N] = e.md5Hash),
             o.tn.put(
                 S(
                     O(
@@ -308,7 +308,7 @@ class P extends E.ZP {
         var e, t, n, r;
         if ('COMPLETED' === this.status) return;
         if ((this.setStatus('STARTED'), (this.startTime = performance.now()), this.trackUploadStart(), 'CANCELED' === this.status)) return void this.handleComplete(this.id);
-        let i = await N.getUploadPayload(this),
+        let i = await A.getUploadPayload(this),
             a = (0, b.F)(this.item.target);
         if (null == i.filename || '' === i.filename || 0 === this.currentSize) {
             T.error('File does not have a filename or size is 0.', JSON.stringify(i)), this.handleError(y.evJ.INVALID_FILE_ASSET);

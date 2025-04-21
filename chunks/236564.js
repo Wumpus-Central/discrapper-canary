@@ -12,8 +12,8 @@ function s(e) {
         noArt: c,
         size: (0, l.L)(t),
         className: n,
-        callToAction: o.NW.string(o.t.kLQySE),
-        header: o.NW.format(o.t.mAf1OD, {}),
+        callToAction: o.intl.string(o.t.kLQySE),
+        header: o.intl.format(o.t.mAf1OD, {}),
         onCTAClick: () => i.Z.toggleVoiceParticipantsHidden(s, !1)
     });
 }

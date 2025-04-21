@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -22,8 +22,8 @@ var r = n(200651),
     j = n(37113),
     O = n(388032),
     E = n(15322),
-    N = n(574169);
-function I(e) {
+    I = n(574169);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,12 +48,12 @@ function I(e) {
     }
     return e;
 }
-let P = (e) => 1 - Math.pow(1 - e, 3);
-function S(e) {
-    let { channel: t, buyer: l, onClose: a, dismissibleContent: S } = e,
-        Z = (0, u.Wu)([g.Z], () => g.Z.getAllActiveStreams()),
+let S = (e) => 1 - Math.pow(1 - e, 3);
+function Z(e) {
+    let { channel: t, buyer: l, onClose: a, dismissibleContent: Z } = e,
+        N = (0, u.Wu)([g.Z], () => g.Z.getAllActiveStreams()),
         T = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
-        A = null != Z.find((e) => e.ownerId === (null == T ? void 0 : T.id)),
+        A = null != N.find((e) => e.ownerId === (null == T ? void 0 : T.id)),
         w = (0, u.e7)([x.Z], () => x.Z.getPreviousGoLiveSettings()),
         R = A && null != w && w.resolution !== j.LY.RESOLUTION_1440 && w.frameRate !== j.ws.FPS_60,
         [k, M] = (0, i.useState)(!1);
@@ -74,35 +74,35 @@ function S(e) {
             },
             config: {
                 duration: 250,
-                easing: P,
+                easing: S,
                 immediate: !k
             }
         }),
-        { avatarSrc: W, eventHandlers: U } = (0, f.Z)({
+        { avatarSrc: U, eventHandlers: B } = (0, f.Z)({
             user: l,
             size: d.EFr.SIZE_48,
             animateOnHover: !0
         }),
-        B = C.ZP.getName(t.guild_id, t.id, l),
-        G = A && !R,
-        F = t.hdStreamingUntil;
-    if (null == F || null == l || null == T) return null;
-    let H = s()(F).diff(s()(), 'hours'),
-        V = S
-            ? O.NW.format(O.t['6LrV9f'], {
-                  username: B,
-                  num: H,
+        G = C.ZP.getName(t.guild_id, t.id, l),
+        F = A && !R,
+        H = t.hdStreamingUntil;
+    if (null == H || null == l || null == T) return null;
+    let V = s()(H).diff(s()(), 'hours'),
+        z = Z
+            ? O.intl.format(O.t['6LrV9f'], {
+                  username: G,
+                  num: V,
                   helpCenterLink: y.Z.getArticleURL(v.BhN.HD_STREAMING_POTION)
               })
             : l.id === T.id
-              ? O.NW.string(O.t.IjKvNT)
+              ? O.intl.string(O.t.IjKvNT)
               : !0 === A
-                ? O.NW.format(O.t.JkWoqK, {
-                      username: B,
+                ? O.intl.format(O.t.JkWoqK, {
+                      username: G,
                       helpCenterLink: y.Z.getArticleURL(v.BhN.HD_STREAMING_POTION)
                   })
-                : O.NW.formatToPlainString(O.t.vNbVXF, { username: B }),
-        z = R ? O.NW.string(O.t.o7NIjY) : G ? O.NW.string(O.t.r6xhBw) : O.NW.string(O.t.yKw8Dg);
+                : O.intl.formatToPlainString(O.t.vNbVXF, { username: G }),
+        W = R ? O.intl.string(O.t.o7NIjY) : F ? O.intl.string(O.t.r6xhBw) : O.intl.string(O.t.yKw8Dg);
     return null == l || null == T
         ? null
         : (0, r.jsxs)(c.animated.div, {
@@ -113,25 +113,25 @@ function S(e) {
                       children: [
                           (0, r.jsx)(
                               d.qEK,
-                              I(
+                              P(
                                   {
-                                      src: W,
+                                      src: U,
                                       'aria-label': l.username,
                                       size: d.EFr.SIZE_48
                                   },
-                                  U
+                                  B
                               )
                           ),
                           (0, r.jsx)('img', {
                               className: E.potion,
-                              src: N,
+                              src: I,
                               alt: ''
                           })
                       ]
                   }),
                   (0, r.jsx)(d.X6q, {
                       variant: 'heading-sm/medium',
-                      children: V
+                      children: z
                   }),
                   (0, r.jsxs)('div', {
                       className: E.subsection,
@@ -145,17 +145,17 @@ function S(e) {
                                       let n = (0, h.s_)(e.resolution, e.frameRate, t);
                                       return p.Z.setGoLiveSource(n), void a();
                                   }
-                                  if (G) return void a();
+                                  if (F) return void a();
                                   (0, d.ZDy)(async () => {
                                       let { default: e } = await Promise.all([n.e('46746'), n.e('52657')]).then(n.bind(n, 60594));
-                                      return (t) => (0, r.jsx)(e, I({ analyticsLocation: 'HDStreamingPotionBanner' }, t));
+                                      return (t) => (0, r.jsx)(e, P({ analyticsLocation: 'HDStreamingPotionBanner' }, t));
                                   }),
                                       a();
                               },
                               className: o()({ [E.actionButton]: !0 !== A }),
-                              children: z
+                              children: W
                           }),
-                          !G &&
+                          !F &&
                               (0, r.jsx)(d.P3F, {
                                   className: E.x,
                                   onClick: a,

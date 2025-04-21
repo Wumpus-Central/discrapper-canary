@@ -20,8 +20,8 @@ function m(e) {
         I = (0, a.e7)([_.Z], () => (null != O ? _.Z.can(p.Plq.MANAGE_GUILD, O) : null)),
         S = !0,
         T = !0,
-        N = (0, c.LD)(E, T),
-        A = (0, c.PL)(S, T),
+        A = (0, c.LD)(E, T),
+        N = (0, c.PL)(S, T),
         { isUserApp: C, isGuildApp: R } = i.useMemo(() => {
             var e, t, n, r;
             if (null == v)
@@ -29,8 +29,8 @@ function m(e) {
                     isGuildApp: !1,
                     isUserApp: !1
                 };
-            let i = Object.values(null != (n = null == (e = N.result) ? void 0 : e.sections) ? n : {}),
-                a = Object.values(null != (r = null == (t = A.result) ? void 0 : t.sections) ? r : {});
+            let i = Object.values(null != (n = null == (e = A.result) ? void 0 : e.sections) ? n : {}),
+                a = Object.values(null != (r = null == (t = N.result) ? void 0 : t.sections) ? r : {});
             return {
                 isGuildApp: i.some((e) => {
                     var t;
@@ -41,7 +41,7 @@ function m(e) {
                     return (null == (t = e.descriptor.application) ? void 0 : t.id) === v;
                 })
             };
-        }, [N, A, v]);
+        }, [A, N, v]);
     i.useEffect(() => {
         n(360606);
     }, []);
@@ -63,7 +63,7 @@ function m(e) {
                     o.sNh,
                     {
                         id: 'manage-server-integration',
-                        label: h.NW.string(h.t.IuSJT0),
+                        label: h.intl.string(h.t.IuSJT0),
                         action: P
                     },
                     'manage-server-integration'
@@ -75,7 +75,7 @@ function m(e) {
                     o.sNh,
                     {
                         id: 'manage-authorized-app',
-                        label: h.NW.string(h.t.V8ruv7),
+                        label: h.intl.string(h.t.V8ruv7),
                         action: w
                     },
                     'manage-authorized-app'

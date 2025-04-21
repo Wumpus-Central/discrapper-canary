@@ -128,7 +128,7 @@ let p = (e) => {
                       color: i.zxk.Colors.PRIMARY,
                       look: i.zxk.Looks.LINK,
                       onClick: t,
-                      children: null != n ? n : s.NW.string(s.t['13/7kZ'])
+                      children: null != n ? n : s.intl.string(s.t['13/7kZ'])
                   });
     return (0, r.jsxs)(i.mzw, {
         justify: a.Z.Justify.BETWEEN,

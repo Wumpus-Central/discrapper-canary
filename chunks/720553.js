@@ -1,64 +1,64 @@
 n.d(e, { default: () => c }), n(704826), n(35282);
-var a = n(200651);
+var l = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(313201),
-    o = n(988158),
-    s = n(388032),
-    i = n(946555);
+var a = n(481060),
+    i = n(313201),
+    r = n(988158),
+    o = n(388032),
+    s = n(946555);
 function c(t) {
     let { url: e, trustUrl: n, isProtocol: c, onConfirm: x, onCancel: d, onClose: h, transitionState: m } = t,
-        u = (0, r.Dt)(),
+        u = (0, i.Dt)(),
         {
             protocol: k,
             authorityPrefix: C,
             hostname: p,
             theRestOfTheUrl: g,
-            shouldTrustUrl: N,
-            setShouldTrustUrl: b,
-            handleConfirm: j,
-            handleCancel: z
-        } = (0, o.X)({
+            shouldTrustUrl: b,
+            setShouldTrustUrl: j,
+            handleConfirm: z,
+            handleCancel: f
+        } = (0, r.X)({
             url: e,
             trustUrl: n,
             onConfirm: x,
             onCancel: d,
             onClose: h
         });
-    return (0, a.jsxs)(l.Y0X, {
-        size: l.CgR.DYNAMIC,
+    return (0, l.jsxs)(a.Y0X, {
+        size: a.CgR.DYNAMIC,
         transitionState: m,
         'aria-labelledby': u,
         children: [
-            (0, a.jsxs)(l.hzk, {
+            (0, l.jsxs)(a.hzk, {
                 children: [
-                    (0, a.jsx)(l.X6q, {
+                    (0, l.jsx)(a.X6q, {
                         id: u,
                         variant: 'heading-xl/bold',
-                        className: i.title,
-                        children: s.NW.string(s.t['3w1QGh'])
+                        className: s.title,
+                        children: o.intl.string(o.t['3w1QGh'])
                     }),
-                    (0, a.jsx)(l.Text, {
-                        className: i.warningText,
+                    (0, l.jsx)(a.Text, {
+                        className: s.warningText,
                         variant: 'text-md/normal',
-                        children: c ? s.NW.format(s.t.aCYv19, {}) : s.NW.string(s.t.soRxRU)
+                        children: c ? o.intl.format(o.t.aCYv19, {}) : o.intl.string(o.t.soRxRU)
                     }),
-                    (0, a.jsxs)(l.Ttm, {
-                        className: i.linkCalloutContainer,
+                    (0, l.jsxs)(a.Ttm, {
+                        className: s.linkCalloutContainer,
                         children: [
-                            (0, a.jsxs)(l.Text, {
+                            (0, l.jsxs)(a.Text, {
                                 tag: 'span',
                                 variant: c ? 'text-md/semibold' : 'text-md/normal',
                                 color: c ? 'text-normal' : 'text-muted',
                                 children: [k, C]
                             }),
-                            (0, a.jsx)(l.Text, {
+                            (0, l.jsx)(a.Text, {
                                 tag: 'span',
                                 variant: c ? 'text-md/normal' : 'text-md/semibold',
                                 color: c ? 'text-muted' : 'text-normal',
                                 children: p
                             }),
-                            (0, a.jsx)(l.Text, {
+                            (0, l.jsx)(a.Text, {
                                 tag: 'span',
                                 variant: 'text-md/normal',
                                 color: 'text-muted',
@@ -66,34 +66,34 @@ function c(t) {
                             })
                         ]
                     }),
-                    (0, a.jsx)(l.XZJ, {
-                        className: i.checkbox,
-                        type: l.XZJ.Types.INVERTED,
-                        value: N,
-                        onChange: (t, e) => b(e),
-                        children: (0, a.jsx)(l.Text, {
+                    (0, l.jsx)(a.XZJ, {
+                        className: s.checkbox,
+                        type: a.XZJ.Types.INVERTED,
+                        value: b,
+                        onChange: (t, e) => j(e),
+                        children: (0, l.jsx)(a.Text, {
                             variant: 'text-sm/normal',
-                            children: c ? s.NW.format(s.t['haA+X1'], { protocol: k.replace(':', '') }) : s.NW.format(s.t.ZgXDsL, { domain: p })
+                            children: c ? o.intl.format(o.t['haA+X1'], { protocol: k.replace(':', '') }) : o.intl.format(o.t.ZgXDsL, { domain: p })
                         })
                     })
                 ]
             }),
-            (0, a.jsxs)(l.mzw, {
+            (0, l.jsxs)(a.mzw, {
                 children: [
-                    (0, a.jsx)(l.zxk, {
+                    (0, l.jsx)(a.zxk, {
                         type: 'button',
-                        size: l.zxk.Sizes.MEDIUM,
-                        color: l.zxk.Colors.BRAND,
-                        onClick: j,
-                        children: c ? s.NW.string(s.t.COq6kp) : s.NW.string(s.t.NcJfJC)
-                    }),
-                    (0, a.jsx)(l.zxk, {
-                        type: 'button',
-                        size: l.zxk.Sizes.MEDIUM,
-                        color: l.zxk.Colors.PRIMARY,
+                        size: a.zxk.Sizes.MEDIUM,
+                        color: a.zxk.Colors.BRAND,
                         onClick: z,
-                        look: l.iLD.LINK,
-                        children: s.NW.string(s.t['/g10LC'])
+                        children: c ? o.intl.string(o.t.COq6kp) : o.intl.string(o.t.NcJfJC)
+                    }),
+                    (0, l.jsx)(a.zxk, {
+                        type: 'button',
+                        size: a.zxk.Sizes.MEDIUM,
+                        color: a.zxk.Colors.PRIMARY,
+                        onClick: f,
+                        look: a.iLD.LINK,
+                        children: o.intl.string(o.t['/g10LC'])
                     })
                 ]
             })

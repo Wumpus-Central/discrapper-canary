@@ -33,7 +33,7 @@ let u = i.forwardRef(function (e, t) {
                               foreground: c.unreadPillCapStroke,
                               className: c.unreadPillCap
                           }),
-                          l.NW.string(l.t.y2b7CA)
+                          l.intl.string(l.t.y2b7CA)
                       ]
                   })
                 : null

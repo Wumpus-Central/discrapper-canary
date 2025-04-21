@@ -1,8 +1,8 @@
 n.d(e, { a: () => T }), n(953529), n(415506), n(388685);
 var i = n(200651),
     r = n(192379),
-    o = n(913527),
-    l = n.n(o),
+    l = n(913527),
+    o = n.n(l),
     a = n(442837),
     s = n(481060),
     c = n(372123),
@@ -14,8 +14,8 @@ var i = n(200651),
     y = n(981631),
     C = n(388032),
     O = n(50611),
-    N = n(20493);
-function g(t, e, n) {
+    g = n(20493);
+function b(t, e, n) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -28,7 +28,7 @@ function g(t, e, n) {
         t
     );
 }
-function b(t) {
+function m(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             i = Object.keys(n);
@@ -39,12 +39,12 @@ function b(t) {
                 })
             )),
             i.forEach(function (e) {
-                g(t, e, n[e]);
+                b(t, e, n[e]);
             });
     }
     return t;
 }
-class m extends r.PureComponent {
+class N extends r.PureComponent {
     renderConflictButton(t, e, n, r) {
         return (0, i.jsxs)(s.zxk, {
             className: O.conflictButton,
@@ -59,10 +59,10 @@ class m extends r.PureComponent {
                             className: O.conflictTitle,
                             children: t
                         }),
-                        (0, i.jsx)('div', { children: C.NW.string(C.t.gflHOz) }),
+                        (0, i.jsx)('div', { children: C.intl.string(C.t.gflHOz) }),
                         (0, i.jsx)('div', {
                             className: O.timestamp,
-                            children: l()(e).calendar()
+                            children: o()(e).calendar()
                         })
                     ]
                 })
@@ -81,7 +81,7 @@ class m extends r.PureComponent {
                         }),
                         (0, i.jsx)('div', {
                             className: O.description,
-                            children: C.NW.format(C.t.RAaWyc, { applicationName: t.name })
+                            children: C.intl.format(C.t.RAaWyc, { applicationName: t.name })
                         })
                     ]
                 }),
@@ -95,7 +95,7 @@ class m extends r.PureComponent {
                                 look: s.zxk.Looks.LINK,
                                 color: s.zxk.Colors.PRIMARY,
                                 onClick: this.onClose,
-                                children: C.NW.string(C.t['ETE/oK'])
+                                children: C.intl.string(C.t['ETE/oK'])
                             }),
                             (0, i.jsxs)(p.Z, {
                                 direction: p.Z.Direction.HORIZONTAL,
@@ -106,11 +106,11 @@ class m extends r.PureComponent {
                                         color: s.zxk.Colors.PRIMARY,
                                         onClick: () => this.handlePlay(),
                                         className: O.retryButton,
-                                        children: C.NW.string(C.t['5911LS'])
+                                        children: C.intl.string(C.t['5911LS'])
                                     }),
                                     (0, i.jsx)(s.zxk, {
                                         onClick: () => this.handlePlay(!1),
-                                        children: C.NW.string(C.t['359PbW'])
+                                        children: C.intl.string(C.t['359PbW'])
                                     })
                                 ]
                             })
@@ -124,13 +124,13 @@ class m extends r.PureComponent {
         let { application: t, cloudSyncState: e } = this.props;
         if (e.type !== y.TzF.CONFLICT) throw Error('Cannot render conflict for non conflict type');
         return (0, i.jsxs)(s.hzk, {
-            className: N.marginBottom20,
+            className: g.marginBottom20,
             children: [
                 (0, i.jsx)('div', {
                     className: O.description,
-                    children: C.NW.format(C.t.eyXUPz, { applicationName: t.name })
+                    children: C.intl.format(C.t.eyXUPz, { applicationName: t.name })
                 }),
-                this.renderConflictButton(C.NW.string(C.t.AQUmkp), e.remote.timestamp, O.conflictDownloadArt, this.handleChooseDownload),
+                this.renderConflictButton(C.intl.string(C.t.AQUmkp), e.remote.timestamp, O.conflictDownloadArt, this.handleChooseDownload),
                 (0, i.jsxs)(p.Z, {
                     className: O.choiceWrapper,
                     align: p.Z.Align.CENTER,
@@ -138,18 +138,18 @@ class m extends r.PureComponent {
                         (0, i.jsx)('div', { className: O.choiceLine }),
                         (0, i.jsx)('div', {
                             className: O.choiceTitle,
-                            children: C.NW.string(C.t.WUsA2N)
+                            children: C.intl.string(C.t.WUsA2N)
                         }),
                         (0, i.jsx)('div', { className: O.choiceLine })
                     ]
                 }),
-                this.renderConflictButton(C.NW.string(C.t.AXVws7), e.next.timestamp, O.conflictUploadArt, this.handleChooseUpload)
+                this.renderConflictButton(C.intl.string(C.t.AXVws7), e.next.timestamp, O.conflictUploadArt, this.handleChooseUpload)
             ]
         });
     }
     render() {
         let { cloudSyncState: t, transitionState: e } = this.props,
-            n = t.type === y.TzF.CONFLICT ? C.NW.string(C.t.oNbO1d) : C.NW.string(C.t.as4Tgo);
+            n = t.type === y.TzF.CONFLICT ? C.intl.string(C.t.oNbO1d) : C.intl.string(C.t.as4Tgo);
         return (0, i.jsxs)(s.Y0X, {
             transitionState: e,
             className: O.modal,
@@ -164,7 +164,7 @@ class m extends r.PureComponent {
                         }),
                         (0, i.jsx)(s.vwX, {
                             tag: 'h2',
-                            className: N.marginReset,
+                            className: g.marginReset,
                             children: n
                         })
                     ]
@@ -177,10 +177,10 @@ class m extends r.PureComponent {
         var e;
         super(...t),
             (e = this),
-            g(this, 'onClose', () => {
+            b(this, 'onClose', () => {
                 this.props.onClose();
             }),
-            g(this, 'handlePlay', function () {
+            b(this, 'handlePlay', function () {
                 let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                     { libraryApplication: i, analyticsParams: r } = e.props;
@@ -191,11 +191,11 @@ class m extends r.PureComponent {
                         cloudSyncForceHash: n
                     });
             }),
-            g(this, 'handleChooseDownload', () => {
+            b(this, 'handleChooseDownload', () => {
                 let { cloudSyncState: t } = this.props;
                 t.type === y.TzF.CONFLICT && this.handlePlay(!0, t.remote.hash);
             }),
-            g(this, 'handleChooseUpload', () => {
+            b(this, 'handleChooseUpload', () => {
                 let { cloudSyncState: t } = this.props;
                 t.type === y.TzF.CONFLICT && this.handlePlay(!0, t.next.hash);
             });
@@ -207,20 +207,20 @@ let A = a.ZP.connectStores([h.Z, u.Z], (t) => {
         cloudSyncState: h.Z.getState(e.id, n),
         application: u.Z.getApplication(e.id)
     };
-})(m);
+})(N);
 async function T(t, e, n) {
     let r = u.Z.getApplication(t);
     if (null == r) return;
-    let { cloudSync: o = !0, cloudSyncForceHash: l = null, analyticsParams: a } = n;
-    if (o && null != e) {
+    let { cloudSync: l = !0, cloudSyncForceHash: o = null, analyticsParams: a } = n;
+    if (l && null != e) {
         let t = e.branchId;
         try {
-            await c.Z(e.id, t, l);
+            await c.Z(e.id, t, o);
         } catch (n) {
             (0, s.h7j)((n) =>
                 (0, i.jsx)(
                     A,
-                    b(
+                    m(
                         {
                             libraryApplication: e,
                             analyticsParams: a,
@@ -236,7 +236,7 @@ async function T(t, e, n) {
     return (
         f.default.track(
             y.rMx.APPLICATION_OPENED,
-            b(
+            m(
                 {
                     application_id: r.id,
                     application_name: r.name,

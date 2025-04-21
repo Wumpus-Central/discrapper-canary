@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x });
 var r = n(200651),
     i = n(192379),
-    s = n(536982),
-    l = n(456677),
+    l = n(536982),
+    s = n(456677),
     a = n(951665),
     o = n(428760),
     c = n(55889),
@@ -55,61 +55,61 @@ function f(e, t) {
     );
 }
 function x(e) {
-    var t, n, x, b, j, N;
-    let { rule: _, onChangeRule: v } = e,
-        O = i.useCallback(
-            (e) => {
-                v(f(h({}, _), { triggerMetadata: f(h({}, _.triggerMetadata), { keywordFilter: e }) }));
-            },
-            [v, _]
-        ),
+    var t, n, x, b, j, _;
+    let { rule: v, onChangeRule: O } = e,
         C = i.useCallback(
             (e) => {
-                v(f(h({}, _), { triggerMetadata: f(h({}, _.triggerMetadata), { allowList: e }) }));
+                O(f(h({}, v), { triggerMetadata: f(h({}, v.triggerMetadata), { keywordFilter: e }) }));
             },
-            [v, _]
+            [O, v]
+        ),
+        y = i.useCallback(
+            (e) => {
+                O(f(h({}, v), { triggerMetadata: f(h({}, v.triggerMetadata), { allowList: e }) }));
+            },
+            [O, v]
         );
     return (0, r.jsxs)('div', {
         className: p.cardContentsContainer,
         children: [
             (0, r.jsxs)(d.Z, {
                 step: 1,
-                header: g.NW.string(g.t['ue+tnZ']),
+                header: g.intl.string(g.t['ue+tnZ']),
                 children: [
                     (0, r.jsx)(o.Z, {
-                        onChangeText: O,
+                        onChangeText: C,
                         maxWordCount: m.RH,
-                        initialValue: null == (t = _.triggerMetadata) ? void 0 : t.keywordFilter
+                        initialValue: null == (t = v.triggerMetadata) ? void 0 : t.keywordFilter
                     }),
                     (0, r.jsx)(a.Z, {
-                        rule: _,
-                        onChangeRule: v,
-                        collapsed: (null == _ || null == (n = _.triggerMetadata) ? void 0 : n.regexPatterns) == null || (null == _ || null == (x = _.triggerMetadata) ? void 0 : x.regexPatterns.length) === 0
+                        rule: v,
+                        onChangeRule: O,
+                        collapsed: (null == v || null == (n = v.triggerMetadata) ? void 0 : n.regexPatterns) == null || (null == v || null == (x = v.triggerMetadata) ? void 0 : x.regexPatterns.length) === 0
                     }),
-                    (0, r.jsx)(s.Z, {
-                        onChange: C,
-                        initialValue: null == (b = _.triggerMetadata) ? void 0 : b.allowList,
+                    (0, r.jsx)(l.Z, {
+                        onChange: y,
+                        initialValue: null == (b = v.triggerMetadata) ? void 0 : b.allowList,
                         maxWordCount: m.n4,
-                        collapsed: (null == (j = _.triggerMetadata) ? void 0 : j.allowList) == null || (null == (N = _.triggerMetadata) ? void 0 : N.allowList.length) === 0
+                        collapsed: (null == (j = v.triggerMetadata) ? void 0 : j.allowList) == null || (null == (_ = v.triggerMetadata) ? void 0 : _.allowList.length) === 0
                     })
                 ]
             }),
             (0, r.jsx)(u.Z, { type: u.Z.Type.ARROW_DOWN }),
             (0, r.jsx)(d.Z, {
                 step: 2,
-                header: g.NW.string(g.t['18TOiY']),
-                children: (0, r.jsx)(l.Z, {
-                    rule: _,
-                    onChangeRule: v
+                header: g.intl.string(g.t['18TOiY']),
+                children: (0, r.jsx)(s.Z, {
+                    rule: v,
+                    onChangeRule: O
                 })
             }),
             (0, r.jsx)(u.Z, { type: u.Z.Type.CROSS }),
             (0, r.jsx)(d.Z, {
                 step: 3,
-                header: g.NW.string(g.t.u5xPPT),
+                header: g.intl.string(g.t.u5xPPT),
                 children: (0, r.jsx)(c.Z, {
-                    rule: _,
-                    onChangeRule: v,
+                    rule: v,
+                    onChangeRule: O,
                     onlyRoles: !0
                 })
             })

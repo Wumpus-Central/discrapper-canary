@@ -1,7 +1,7 @@
 a.d(t, { default: () => j });
-var r = a(200651),
-    n = a(192379),
-    l = a(442837),
+var n = a(200651),
+    l = a(192379),
+    r = a(442837),
     i = a(481060),
     o = a(239091),
     s = a(765250),
@@ -16,78 +16,78 @@ var r = a(200651),
 let f = () => [
         {
             value: m.ipw.LARGE,
-            name: y.NW.string(y.t.YcOxtr)
+            name: y.intl.string(y.t.YcOxtr)
         },
         {
             value: m.ipw.SMALL,
-            name: y.NW.string(y.t.BKIKq6)
+            name: y.intl.string(y.t.BKIKq6)
         }
     ],
     b = () => [
         {
             value: m.wC$.ALWAYS,
-            name: y.NW.string(y.t.nBmDra)
+            name: y.intl.string(y.t.nBmDra)
         },
         {
             value: m.wC$.ONLY_WHILE_SPEAKING,
-            name: y.NW.string(y.t['2OvIZW'])
+            name: y.intl.string(y.t['2OvIZW'])
         },
         {
             value: m.wC$.NEVER,
-            name: y.NW.string(y.t.ekjlPD)
+            name: y.intl.string(y.t.ekjlPD)
         }
     ],
     O = () => [
         {
             value: m.OYC.ALWAYS,
-            name: y.NW.string(y.t.nBmDra)
+            name: y.intl.string(y.t.nBmDra)
         },
         {
             value: m.OYC.ONLY_WHILE_SPEAKING,
-            name: y.NW.string(y.t['2OvIZW'])
+            name: y.intl.string(y.t['2OvIZW'])
         }
     ];
 function j(e) {
     var t, a;
-    let { onSelect: j, onClose: W } = e,
+    let { onSelect: j, onClose: w } = e,
         {
-            avatarSizeMode: w,
-            displayNameMode: S,
-            displayUserMode: h
-        } = (0, l.cj)([d.default], () => ({
+            avatarSizeMode: S,
+            displayNameMode: h,
+            displayUserMode: k
+        } = (0, r.cj)([d.default], () => ({
             avatarSizeMode: d.default.getAvatarSizeMode(),
             displayNameMode: d.default.getDisplayNameMode(),
             displayUserMode: d.default.getDisplayUserMode()
         })),
-        N = n.useRef(W);
-    n.useEffect(() => {
-        N.current = W;
+        x = l.useRef(w);
+    l.useEffect(() => {
+        x.current = w;
     }),
-        n.useEffect(() => () => N.current(), []);
-    let k = (0, l.e7)([p.ZP, u.Z], () => {
+        l.useEffect(() => () => x.current(), []);
+    let P = (0, r.e7)([p.ZP, u.Z], () => {
             let e = p.ZP.getWidgetByType(m.Odu.VOICE_V3);
             if (null == e) return null;
             let t = u.Z.getWidget(e.id);
             return null != t && (0, v.Aw)(t) ? t : null;
         }),
-        x = null != (a = null == k || null == (t = k.meta) ? void 0 : t.voiceStatesMaxShown) ? a : g.At;
-    function P(e) {
-        null != k && (e < 1 ? (0, s.zG)(k.id, { voiceStatesMaxShown: g.Og }) : (0, s.zG)(k.id, { voiceStatesMaxShown: Math.floor(e) }));
+        M = null != (a = null == P || null == (t = P.meta) ? void 0 : t.voiceStatesMaxShown) ? a : g.At;
+    function A(e) {
+        null != P && (e < 1 ? (0, s.zG)(P.id, { voiceStatesMaxShown: g.Og }) : (0, s.zG)(P.id, { voiceStatesMaxShown: Math.floor(e) }));
     }
-    return (0, r.jsxs)(i.v2r, {
+    return (0, n.jsxs)(i.v2r, {
         navId: 'overlay-voice-widget-context-menu',
         onClose: o.Zy,
-        'aria-label': y.NW.string(y.t.tPfVWl),
+        'aria-label': y.intl.string(y.t.tPfVWl),
         onSelect: j,
         children: [
-            (0, r.jsx)(i.kSQ, {
-                label: y.NW.string(y.t.dnvZSk),
+            (0, n.jsx)(i.kSQ, {
+                label: y.intl.string(y.t.dnvZSk),
                 children: f().map((e) =>
-                    (0, r.jsx)(
+                    (0, n.jsx)(
                         i.k5B,
                         {
                             label: e.name,
-                            checked: w === e.value,
+                            checked: S === e.value,
                             id: 'avatar-size-mode-'.concat(e.value),
                             group: 'avatar-size-mode',
                             action: () => c.Z.setAvatarSizeMode(e.value)
@@ -96,14 +96,14 @@ function j(e) {
                     )
                 )
             }),
-            (0, r.jsx)(i.kSQ, {
-                label: y.NW.string(y.t.J0dpcH),
+            (0, n.jsx)(i.kSQ, {
+                label: y.intl.string(y.t.J0dpcH),
                 children: b().map((e) =>
-                    (0, r.jsx)(
+                    (0, n.jsx)(
                         i.k5B,
                         {
                             label: e.name,
-                            checked: S === e.value,
+                            checked: h === e.value,
                             id: 'display-name-mode-'.concat(e.value),
                             group: 'display-name-mode',
                             action: () => c.Z.setDisplayNameMode(e.value)
@@ -112,14 +112,14 @@ function j(e) {
                     )
                 )
             }),
-            (0, r.jsx)(i.kSQ, {
-                label: y.NW.string(y.t.swsWWF),
+            (0, n.jsx)(i.kSQ, {
+                label: y.intl.string(y.t.swsWWF),
                 children: O().map((e) =>
-                    (0, r.jsx)(
+                    (0, n.jsx)(
                         i.k5B,
                         {
                             label: e.name,
-                            checked: h === e.value,
+                            checked: k === e.value,
                             id: 'display-user-mode-'.concat(e.value),
                             group: 'display-user-mode',
                             action: () => c.Z.setDisplayUserMode(e.value)
@@ -128,60 +128,60 @@ function j(e) {
                     )
                 )
             }),
-            (0, r.jsx)(i.kSQ, {
-                children: (0, r.jsx)(i.II_, {
+            (0, n.jsx)(i.kSQ, {
+                children: (0, n.jsx)(i.II_, {
                     id: 'voice-widget-max-users-displayed',
-                    label: y.NW.string(y.t['X/Uyzc']),
+                    label: y.intl.string(y.t['X/Uyzc']),
                     control: (e, t) => {
-                        var a, n;
-                        return (0, r.jsx)(
+                        var a, l;
+                        return (0, n.jsx)(
                             i._wy,
                             ((a = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var a = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(a);
+                                        n = Object.keys(a);
                                     'function' == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
+                                        (n = n.concat(
                                             Object.getOwnPropertySymbols(a).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(a, e).enumerable;
                                             })
                                         )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = a[t]),
+                                        n.forEach(function (t) {
+                                            var n;
+                                            (n = a[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
-                                                          value: r,
+                                                          value: n,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
+                                                    : (e[t] = n);
                                         });
                                 }
                                 return e;
                             })({}, e)),
-                            (n = n =
+                            (l = l =
                                 {
                                     ref: t,
-                                    value: x,
+                                    value: M,
                                     minValue: 0,
                                     maxValue: g.yC,
-                                    onChange: P,
-                                    renderValue: (e) => (e < 1 ? y.NW.string(y.t.nrUzFB) : ''.concat(Math.floor(e))),
-                                    'aria-label': y.NW.string(y.t['X/Uyzc'])
+                                    onChange: A,
+                                    renderValue: (e) => (e < 1 ? y.intl.string(y.t.nrUzFB) : ''.concat(Math.floor(e))),
+                                    'aria-label': y.intl.string(y.t['X/Uyzc'])
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(n))
+                                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(l))
                                 : (function (e, t) {
                                       var a = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          a.push.apply(a, r);
+                                          var n = Object.getOwnPropertySymbols(e);
+                                          a.push.apply(a, n);
                                       }
                                       return a;
-                                  })(Object(n)).forEach(function (e) {
-                                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(n, e));
+                                  })(Object(l)).forEach(function (e) {
+                                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(l, e));
                                   }),
                             a)
                         );

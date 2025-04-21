@@ -447,19 +447,19 @@ class y {
             I = null != (s = e.hasMoreBefore) && s,
             S = null != (l = e.hasMoreAfter) && l,
             T = null != (u = e.cached) && u,
-            N = i()(b)
+            A = i()(b)
                 .reverse()
                 .map(a.Z.getCurrentConfig({ location: '2ecb25_2' }, { autoTrackExposure: !1 }).enabled ? (e) => (0, c.e5)(e) : (e) => E(this, e))
                 .value(),
-            A = null;
-        if ((y || v) && null == O && this.ready) A = this.merge(N, y, !0);
+            N = null;
+        if ((y || v) && null == O && this.ready) N = this.merge(A, y, !0);
         else {
             let e = this._array.filter((e) => e.state === f.yb.SENDING),
                 t = this._array.filter((e) => e.state === f.yb.SEND_FAILED),
                 n = e.length > 0 || t.length > 0;
-            (A = this.reset(N)), !n || y || v || (null == O ? void 0 : O.messageId) != null || (null == O ? void 0 : O.offset) != null ? h.info('loadComplete: resetting state for channelId='.concat(this.channelId, ', sending.length=').concat(e.length)) : (t.length > 0 && (h.info('loadComplete: merging with SEND_FAILED messages for channelId='.concat(this.channelId)), (A = A.merge(t))), e.length > 0 && (h.info('loadComplete: merging with SENDING messages for channelId='.concat(this.channelId)), (A = A.merge(e))));
+            (N = this.reset(A)), !n || y || v || (null == O ? void 0 : O.messageId) != null || (null == O ? void 0 : O.offset) != null ? h.info('loadComplete: resetting state for channelId='.concat(this.channelId, ', sending.length=').concat(e.length)) : (t.length > 0 && (h.info('loadComplete: merging with SEND_FAILED messages for channelId='.concat(this.channelId)), (N = N.merge(t))), e.length > 0 && (h.info('loadComplete: merging with SENDING messages for channelId='.concat(this.channelId)), (N = N.merge(e))));
         }
-        return A.mutate({
+        return N.mutate({
             ready: !0,
             loadingMore: !1,
             jumpType: null != (d = null == O ? void 0 : O.jumpType) ? d : o.SR.ANIMATED,
@@ -468,10 +468,10 @@ class y {
             jumpedToPresent: null != (p = null == O ? void 0 : O.present) && p,
             jumpTargetId: null != (m = null == O ? void 0 : O.messageId) ? m : null,
             jumpTargetOffset: null != O && null != O.messageId && null != O.offset ? O.offset : 0,
-            jumpSequenceId: null != O ? A.jumpSequenceId + 1 : A.jumpSequenceId,
+            jumpSequenceId: null != O ? N.jumpSequenceId + 1 : N.jumpSequenceId,
             jumpReturnTargetId: null != (g = null == O ? void 0 : O.returnMessageId) ? g : null,
-            hasMoreBefore: null == O && v ? A.hasMoreBefore : I,
-            hasMoreAfter: null == O && y ? A.hasMoreAfter : S,
+            hasMoreBefore: null == O && v ? N.hasMoreBefore : I,
+            hasMoreAfter: null == O && y ? N.hasMoreAfter : S,
             cached: T,
             hasFetched: e.hasFetched,
             error: !1

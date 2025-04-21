@@ -47,7 +47,7 @@ function y(e) {
     let n = null == (t = _.Z.getGuild(e.guild_id)) ? void 0 : t.name;
     E.fileOnly('received deleted guild entities (id: '.concat(e.guild_id, ', name: ').concat(n, ')')),
         a.ZP.Emitter.batched(() => {
-            null != e.channels && N(e.guild_id, new Set(e.channels)), null != e.roles && A(e.guild_id, new Set(e.roles)), null != e.emojis && C(e.guild_id, new Set(e.emojis)), null != e.stickers && R(e.guild_id, new Set(e.stickers));
+            null != e.channels && A(e.guild_id, new Set(e.channels)), null != e.roles && N(e.guild_id, new Set(e.roles)), null != e.emojis && C(e.guild_id, new Set(e.emojis)), null != e.stickers && R(e.guild_id, new Set(e.stickers));
         });
 }
 function v() {
@@ -75,7 +75,7 @@ function S(e) {
 function T(e) {
     return i().v3(e.sort().join(',')).toString();
 }
-function N(e, t) {
+function A(e, t) {
     let n = p.default.keys(f.Z.getMutableBasicGuildChannelsForGuild(e));
     E.fileOnly('syncChannels', {
         channelIdsInMemory: n,
@@ -93,7 +93,7 @@ function N(e, t) {
                 });
         });
 }
-function A(e, t) {
+function N(e, t) {
     p.default.keys(_.Z.getRoles(e)).forEach((n) => {
         t.has(n) ||
             o.Z.dispatch({

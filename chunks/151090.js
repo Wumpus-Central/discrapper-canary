@@ -1,47 +1,47 @@
-s.d(t, { default: () => h });
-var i = s(200651);
-s(192379);
-var l = s(442837),
-    n = s(481060),
-    o = s(239091),
-    a = s(357156),
-    r = s(430824),
-    d = s(496675),
-    c = s(771845),
-    p = s(594174),
-    u = s(388032);
-function h(e) {
-    let { onExportToFile: t, onExportToSoundboard: s, onDelete: h } = e,
-        Z = (0, l.e7)([c.ZP, d.Z, p.default, r.Z], () =>
-            c.ZP.getFlattenedGuildIds().some((e) => {
-                let t = r.Z.getGuild(e);
-                return null != t && (0, a.Gw)(t, d.Z, p.default).canCreateExpressions;
+i.d(e, { default: () => h });
+var l = i(200651);
+i(192379);
+var n = i(442837),
+    s = i(481060),
+    o = i(239091),
+    a = i(357156),
+    r = i(430824),
+    d = i(496675),
+    c = i(771845),
+    p = i(594174),
+    u = i(388032);
+function h(t) {
+    let { onExportToFile: e, onExportToSoundboard: i, onDelete: h } = t,
+        Z = (0, n.e7)([c.ZP, d.Z, p.default, r.Z], () =>
+            c.ZP.getFlattenedGuildIds().some((t) => {
+                let e = r.Z.getGuild(t);
+                return null != e && (0, a.Gw)(e, d.Z, p.default).canCreateExpressions;
             })
         );
-    return (0, i.jsxs)(n.v2r, {
+    return (0, l.jsxs)(s.v2r, {
         navId: 'clips-more-options',
-        'aria-label': u.NW.string(u.t.PdRCRk),
+        'aria-label': u.intl.string(u.t.PdRCRk),
         onClose: o.Zy,
         onSelect: o.Zy,
         children: [
             Z
-                ? (0, i.jsx)(n.sNh, {
-                      icon: n.KY1,
+                ? (0, l.jsx)(s.sNh, {
+                      icon: s.KY1,
                       id: 'clips-export-soundboard',
-                      label: u.NW.string(u.t.HH4Tjo),
-                      action: s
+                      label: u.intl.string(u.t.HH4Tjo),
+                      action: i
                   })
                 : null,
-            (0, i.jsx)(n.sNh, {
-                icon: n._8t,
+            (0, l.jsx)(s.sNh, {
+                icon: s._8t,
                 id: 'clips-export-file',
-                label: u.NW.string(u.t.l9qpzs),
-                action: t
+                label: u.intl.string(u.t.l9qpzs),
+                action: e
             }),
-            (0, i.jsx)(n.sNh, {
-                icon: n.XHJ,
+            (0, l.jsx)(s.sNh, {
+                icon: s.XHJ,
                 id: 'clips-delete',
-                label: u.NW.string(u.t.oyYWHB),
+                label: u.intl.string(u.t.oyYWHB),
                 color: 'danger',
                 action: h
             })

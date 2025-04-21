@@ -27,9 +27,9 @@ let m = (e) => {
     return null == p
         ? null
         : (0, r.jsx)(s.ZP, {
-              title: u.NW.string(u.t.cU96io),
-              description: u.NW.formatToPlainString(u.t['26mR6+'], { guildName: null == p ? void 0 : p.name }),
-              buttonText: m ? u.NW.string(u.t['9Ak99v']) : u.NW.string(u.t.F3qExs),
+              title: u.intl.string(u.t.cU96io),
+              description: u.intl.formatToPlainString(u.t['26mR6+'], { guildName: null == p ? void 0 : p.name }),
+              buttonText: m ? u.intl.string(u.t['9Ak99v']) : u.intl.string(u.t.F3qExs),
               buttonDisabled: m,
               buttonColor: i.zxk.Colors.RED,
               onButtonPress: () => {
@@ -63,9 +63,9 @@ let m = (e) => {
                               return e;
                           })(
                               {
-                                  header: u.NW.formatToPlainString(u.t['1GX6Pz'], { name: p.name }),
-                                  confirmText: u.NW.string(u.t.J2TBi4),
-                                  cancelText: u.NW.string(u.t['ETE/oK']),
+                                  header: u.intl.formatToPlainString(u.t['1GX6Pz'], { name: p.name }),
+                                  confirmText: u.intl.string(u.t.J2TBi4),
+                                  cancelText: u.intl.string(u.t['ETE/oK']),
                                   onConfirm: h
                               },
                               e
@@ -74,7 +74,7 @@ let m = (e) => {
                               {
                                   children: (0, r.jsx)(i.Text, {
                                       variant: 'text-md/normal',
-                                      children: u.NW.format(u.t.ZEXC0t, { name: p.name })
+                                      children: u.intl.format(u.t.ZEXC0t, { name: p.name })
                                   })
                               }),
                           Object.getOwnPropertyDescriptors

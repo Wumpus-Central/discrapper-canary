@@ -4,8 +4,8 @@ n(192379);
 var r = n(13245),
     s = n(864060),
     o = n(371651),
-    a = n(703656),
-    l = n(460181),
+    l = n(703656),
+    a = n(460181),
     c = n(974180),
     d = n(237997),
     u = n(358085),
@@ -35,18 +35,18 @@ function v(e, t, n, v) {
             e
                 ? (0, i.jsx)('div', {
                       style: { textAlign: 'center' },
-                      children: y.NW.string(y.t['+MJm39'])
+                      children: y.intl.string(y.t['+MJm39'])
                   })
                 : null,
         maxBodyLines: 2,
         onNotificationShow: () => {
-            v && (0, l.GN)(c.Ay, c.yk), E();
+            v && (0, a.GN)(c.Ay, c.yk), E();
         },
         onNotificationClick: () => {
             if (o.default.isOverlayOOPEnabledForPid((0, p.getPID)())) {
                 let n = (0, p.getPID)();
-                d.default.isInstanceLocked() ? (S('unlock'), r.Z.setInputLocked(!1, n)) : (S('jump'), (0, a.uL)(g.Z5c.CHANNEL(e.guild_id, e.id, t.id)), u.isPlatformEmbedded && h.ZP.focus());
-            } else (0, a.uL)(g.Z5c.CHANNEL(e.guild_id, e.id)), S('jump'), d.default.isInstanceLocked() && r.Z.setInstanceLocked(!1);
+                d.default.isInstanceLocked() ? (S('unlock'), r.Z.setInputLocked(!1, n)) : (S('jump'), (0, l.uL)(g.Z5c.CHANNEL(e.guild_id, e.id, t.id)), u.isPlatformEmbedded && h.ZP.focus());
+            } else (0, l.uL)(g.Z5c.CHANNEL(e.guild_id, e.id)), S('jump'), d.default.isInstanceLocked() && r.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
             S('dismiss');

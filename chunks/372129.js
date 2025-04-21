@@ -7,8 +7,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(481060),
-    l = n(53281),
+    l = n(481060),
+    s = n(53281),
     a = n(813197),
     o = n(426642),
     c = n(869783);
@@ -68,10 +68,10 @@ async function m(e, t) {
         let i = e[r];
         try {
             let { image: e, dataURI: r } = await u(i),
-                s = i.type === c.m.MP4 ? await t(r, i) : await t(r, i, e);
-            null != s &&
+                l = i.type === c.m.MP4 ? await t(r, i) : await t(r, i, e);
+            null != l &&
                 n.push({
-                    type: s,
+                    type: l,
                     filename: i.name
                 });
         } catch (e) {
@@ -84,7 +84,7 @@ async function m(e, t) {
     n.length > 0 && g(n);
 }
 let g = (e) => {
-        (0, s.ZDy)(async () => {
+        (0, l.ZDy)(async () => {
             let { default: t } = await n.e('68720').then(n.bind(n, 70846));
             return (n) => (0, r.jsx)(t, d({ errors: e }, n));
         });
@@ -93,27 +93,27 @@ let g = (e) => {
         let { onChange: t, multiple: o = !0, disabled: c, className: u, tabIndex: g = -1, 'aria-label': p, filters: h, setLoading: f } = e,
             x = i.createRef(),
             b = i.useRef(null),
-            [j, N] = i.useState(!1);
+            [j, _] = i.useState(!1);
         i.useEffect(() => {
-            j && _();
+            j && v();
         }, [j]);
-        let _ = () => {
-                null !== b.current && ((0, s.Mr3)(b.current), (b.current = null));
-            },
-            v = async (e) => {
-                null == f || f(!0), await m(e, t), N(!0), null == f || f(!1);
+        let v = () => {
+                null !== b.current && ((0, l.Mr3)(b.current), (b.current = null));
             },
             O = async (e) => {
-                var t, i, l;
-                if ((e.stopPropagation(), e.preventDefault(), (null == (t = e.currentTarget) ? void 0 : t.files) == null || (null == (l = e.currentTarget) || null == (i = l.files) ? void 0 : i.length) === 0)) return;
+                null == f || f(!0), await m(e, t), _(!0), null == f || f(!1);
+            },
+            C = async (e) => {
+                var t, i, s;
+                if ((e.stopPropagation(), e.preventDefault(), (null == (t = e.currentTarget) ? void 0 : t.files) == null || (null == (s = e.currentTarget) || null == (i = s.files) ? void 0 : i.length) === 0)) return;
                 let a = e.currentTarget.files;
-                b.current = await (0, s.ZDy)(async () => {
+                b.current = await (0, l.ZDy)(async () => {
                     let { default: e } = await n.e('16169').then(n.bind(n, 935333));
-                    return (t) => (0, r.jsx)(e, d({ processFiles: () => v(a) }, t));
+                    return (t) => (0, r.jsx)(e, d({ processFiles: () => O(a) }, t));
                 });
             };
-        return (0, r.jsx)(l.Z, {
-            onChange: O,
+        return (0, r.jsx)(s.Z, {
+            onChange: C,
             filters: null != h ? h : (0, a.Zj)(),
             multiple: o,
             disabled: c,

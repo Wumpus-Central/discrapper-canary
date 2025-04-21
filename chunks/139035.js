@@ -1,11 +1,11 @@
-n.d(t, { default: () => E });
+n.d(t, { default: () => S });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(239091),
-    c = n(108843),
-    a = n(100527),
-    l = n(299206),
+    l = n(239091),
+    o = n(108843),
+    c = n(100527),
+    a = n(299206),
     s = n(916069),
     u = n(697229),
     d = n(212205),
@@ -20,9 +20,9 @@ var i = n(481060),
     Z = n(218035),
     P = n(775666),
     v = n(442754),
-    N = n(623483),
-    m = n(388032);
-function w(e) {
+    m = n(623483),
+    w = n(388032);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,95 +47,95 @@ function w(e) {
     }
     return e;
 }
-function _(e) {
+function C(e) {
     let { channel: t, onSelect: n } = e,
-        c = (0, j.Z)(t),
-        a = (0, h.ZP)(t),
+        o = (0, j.Z)(t),
+        c = (0, h.ZP)(t),
         s = (0, Z.Z)(t),
         p = (0, O.Z)(t),
         g = (0, f.Z)(t),
         y = (0, d.Z)(t),
         v = (0, u.Z)(t),
-        w = (0, N.Z)(t),
-        _ = (0, l.Z)({
+        _ = (0, m.Z)(t),
+        C = (0, a.Z)({
             id: t.id,
-            label: m.NW.string(m.t['2visCw'])
+            label: w.intl.string(w.t['2visCw'])
         }),
-        C = (0, b.Mn)('ChannelCategoryFavoritesMenu'),
-        E = (0, P.ZP)(t);
+        E = (0, b.Mn)('ChannelCategoryFavoritesMenu'),
+        S = (0, P.ZP)(t);
     return (0, r.jsxs)(i.v2r, {
         navId: 'channel-context',
-        onClose: o.Zy,
-        'aria-label': m.NW.string(m.t.Xm41aW),
+        onClose: l.Zy,
+        'aria-label': w.intl.string(w.t.Xm41aW),
         onSelect: n,
         children: [
             (0, r.jsxs)(i.kSQ, {
-                children: [c, v, y]
+                children: [o, v, y]
             }),
             (0, r.jsxs)(i.kSQ, {
-                children: [a, C ? E : s]
+                children: [c, E ? S : s]
             }),
             (0, r.jsxs)(i.kSQ, {
                 children: [p, g]
             }),
-            (0, r.jsx)(i.kSQ, { children: w }),
-            (0, r.jsx)(i.kSQ, { children: _ })
+            (0, r.jsx)(i.kSQ, { children: _ }),
+            (0, r.jsx)(i.kSQ, { children: C })
         ]
     });
 }
-function C(e) {
-    let { channel: t, guild: n, onSelect: c } = e,
-        a = (0, j.Z)(t),
+function E(e) {
+    let { channel: t, guild: n, onSelect: o } = e,
+        c = (0, j.Z)(t),
         s = (0, h.ZP)(t),
         u = (0, Z.Z)(t),
-        N = (0, O.Z)(t),
-        w = (0, f.Z)(t),
-        _ = (0, y.Z)(t),
-        C = (0, d.Z)(t),
-        E = (0, p.Z)(t, n),
-        S = (0, g.Z)(t),
-        x = (0, l.Z)({
+        m = (0, O.Z)(t),
+        _ = (0, f.Z)(t),
+        C = (0, y.Z)(t),
+        E = (0, d.Z)(t),
+        S = (0, p.Z)(t, n),
+        x = (0, g.Z)(t),
+        N = (0, a.Z)({
             id: t.id,
-            label: m.NW.string(m.t['2visCw'])
+            label: w.intl.string(w.t['2visCw'])
         }),
         k = (0, v.Z)(t),
-        W = (0, b.Mn)('ChannelCategoryNormalMenu'),
-        D = (0, P.ZP)(t);
+        D = (0, b.Mn)('ChannelCategoryNormalMenu'),
+        I = (0, P.ZP)(t);
     return (0, r.jsxs)(i.v2r, {
         navId: 'channel-context',
-        onClose: o.Zy,
-        'aria-label': m.NW.string(m.t.Xm41aW),
-        onSelect: c,
+        onClose: l.Zy,
+        'aria-label': w.intl.string(w.t.Xm41aW),
+        onSelect: o,
         children: [
-            (0, r.jsx)(i.kSQ, { children: a }, 'mark-as-read'),
+            (0, r.jsx)(i.kSQ, { children: c }, 'mark-as-read'),
             (0, r.jsxs)(
                 i.kSQ,
                 {
-                    children: [k, N, w]
+                    children: [k, m, _]
                 },
                 'channel-actions'
             ),
             (0, r.jsxs)(
                 i.kSQ,
                 {
-                    children: [s, W ? D : u]
+                    children: [s, D ? I : u]
                 },
                 'notifications'
             ),
             (0, r.jsxs)(
                 i.kSQ,
                 {
-                    children: [_, C, E, S]
+                    children: [C, E, S, x]
                 },
                 'admin-actions'
             ),
-            (0, r.jsx)(i.kSQ, { children: x }, 'developer-actions')
+            (0, r.jsx)(i.kSQ, { children: N }, 'developer-actions')
         ]
     });
 }
-let E = (0, c.Z)(
+let S = (0, o.Z)(
     function (e) {
-        return (0, s.Z)() ? (0, r.jsx)(_, w({}, e)) : (0, r.jsx)(C, w({}, e));
+        return (0, s.Z)() ? (0, r.jsx)(C, _({}, e)) : (0, r.jsx)(E, _({}, e));
     },
-    [a.Z.CONTEXT_MENU, a.Z.CHANNEL_CATEGORY_MENU]
+    [c.Z.CONTEXT_MENU, c.Z.CHANNEL_CATEGORY_MENU]
 );

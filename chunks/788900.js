@@ -31,23 +31,23 @@ function n(e) {
             k = c(x > 1 ? 32 : 32 * x),
             C = c(x > 1 ? 32 / x : 32),
             Z = new Uint8Array(k * C * 4),
-            W = [],
-            N = [];
+            R = [],
+            _ = [];
         for (let e = 0, t = 0; e < C; e++)
             for (let r = 0; r < k; r++, t += 4) {
                 let n = f,
                     l = p,
                     c = b,
                     s = y;
-                for (let e = 0, t = u(g, v ? 5 : 3); e < t; e++) W[e] = a((o / k) * (r + 0.5) * e);
-                for (let t = 0, r = u(m, v ? 5 : 3); t < r; t++) N[t] = a((o / C) * (e + 0.5) * t);
-                for (let e = 0, t = 0; e < m; e++) for (let r = +!e, l = 2 * N[e]; r * m < g * (m - e); r++, t++) n += S[t] * W[r] * l;
+                for (let e = 0, t = u(g, v ? 5 : 3); e < t; e++) R[e] = a((o / k) * (r + 0.5) * e);
+                for (let t = 0, r = u(m, v ? 5 : 3); t < r; t++) _[t] = a((o / C) * (e + 0.5) * t);
+                for (let e = 0, t = 0; e < m; e++) for (let r = +!e, l = 2 * _[e]; r * m < g * (m - e); r++, t++) n += S[t] * R[r] * l;
                 for (let e = 0, t = 0; e < 3; e++)
-                    for (let r = +!e, n = 2 * N[e]; r < 3 - e; r++, t++) {
-                        let e = W[r] * n;
+                    for (let r = +!e, n = 2 * _[e]; r < 3 - e; r++, t++) {
+                        let e = R[r] * n;
                         (l += E[t] * e), (c += I[t] * e);
                     }
-                if (v) for (let e = 0, t = 0; e < 5; e++) for (let r = +!e, n = 2 * N[e]; r < 5 - e; r++, t++) s += D[t] * W[r] * n;
+                if (v) for (let e = 0, t = 0; e < 5; e++) for (let r = +!e, n = 2 * _[e]; r < 5 - e; r++, t++) s += D[t] * R[r] * n;
                 let d = n - (2 / 3) * l,
                     O = (3 * n - d + c) / 2,
                     h = O - c;

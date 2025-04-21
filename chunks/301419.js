@@ -12,11 +12,11 @@ function c(e) {
         f = s.extra.artist.name,
         b = {
             onClick: () => (0, l.o)(o.Hw.ALBUM, s.extra.media.external_parent_id),
-            ariaDescription: a.NW.formatToPlainString(a.t.xTsar6, { itemName: s.extra.media.parent_title })
+            ariaDescription: a.intl.formatToPlainString(a.t.xTsar6, { itemName: s.extra.media.parent_title })
         },
         O = {
             onClick: () => (0, l.o)(o.Hw.ARTIST, s.extra.artist.external_id),
-            ariaDescription: a.NW.formatToPlainString(a.t.xTsar6, { itemName: f })
+            ariaDescription: a.intl.formatToPlainString(a.t.xTsar6, { itemName: f })
         };
     return (
         d === n.p.SPOTIFY && (c = { type: i.kG.SPOTIFY }),

@@ -74,7 +74,7 @@ function d(e) {
     return (0, o.e7)([i.Z], () => (0, s.kQ)(e, i.Z.getRoles(e.id)), [e])
         ? (0, r.jsx)(a.sNh, {
               id: 'guild-connection-roles',
-              label: l.NW.string(l.t.ghtnsr),
+              label: l.intl.string(l.t.ghtnsr),
               icon: a.xPt,
               action: () => u(e.id)
           })

@@ -189,9 +189,9 @@ function _(e, t) {
         }
     };
 }
-let p = [_(720), _(1080), _(1440), _(0, () => a.NW.string(a.t.XjXqzs))],
+let p = [_(720), _(1080), _(1440), _(0, () => a.intl.string(a.t.XjXqzs))],
     h = [_(720), _(1080), _(1440)],
-    m = (e) => (0 === e ? a.NW.string(a.t.XjXqzs) : a.NW.formatToPlainString(a.t.TEOC0N, { resolution: e })),
+    m = (e) => (0 === e ? a.intl.string(a.t.XjXqzs) : a.intl.formatToPlainString(a.t.TEOC0N, { resolution: e })),
     g = [_(480, () => m(480)), _(720, () => m(720)), _(1080, () => m(1080)), _(1440, () => m(1440)), _(0, () => m(0))],
     E = [_(15), _(30), _(60)],
-    b = [_(15, () => a.NW.formatToPlainString(a.t['bW+JCQ'], { value: 15 })), _(30, () => a.NW.formatToPlainString(a.t['bW+JCQ'], { value: 30 })), _(60, () => a.NW.formatToPlainString(a.t['bW+JCQ'], { value: 60 }))];
+    b = [_(15, () => a.intl.formatToPlainString(a.t['bW+JCQ'], { value: 15 })), _(30, () => a.intl.formatToPlainString(a.t['bW+JCQ'], { value: 30 })), _(60, () => a.intl.formatToPlainString(a.t['bW+JCQ'], { value: 60 }))];

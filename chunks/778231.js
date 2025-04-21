@@ -23,18 +23,18 @@ let _ = (e) => {
         }),
         v = null != (n = _.getIconURL(40)) ? n : h,
         j = (0, d.Z)({ application: _ }),
-        N = l.useRef(!1);
+        y = l.useRef(!1);
     l.useEffect(() => {
-        N.current || (o.Z.fetch(), (N.current = !0));
+        y.current || (o.Z.fetch(), (y.current = !0));
     }, []);
-    let y = null != g ? x.default.extractTimestamp(g.id) : void 0;
+    let O = null != g ? x.default.extractTimestamp(g.id) : void 0;
     return (0, r.jsxs)('div', {
         className: b.container,
         children: [
             (0, r.jsx)(a.X6q, {
                 className: b.header,
                 variant: 'heading-sm/semibold',
-                children: p.NW.string(p.t['aYfK//'])
+                children: p.intl.string(p.t['aYfK//'])
             }),
             (0, r.jsx)('div', {
                 className: b.appContainer,
@@ -82,11 +82,11 @@ let _ = (e) => {
                                                   variant: 'text-md/normal',
                                                   children: null == (t = _.bot) ? void 0 : t.tag
                                               }),
-                                              null != y &&
+                                              null != O &&
                                                   (0, r.jsx)(a.Text, {
                                                       color: 'text-normal',
                                                       variant: 'text-md/normal',
-                                                      children: p.NW.formatToPlainString(p.t.C9rUOz, { authorizedAt: y })
+                                                      children: p.intl.formatToPlainString(p.t.C9rUOz, { authorizedAt: O })
                                                   })
                                           ]
                                       })

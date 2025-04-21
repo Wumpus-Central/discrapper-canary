@@ -28,7 +28,7 @@ function f(e) {
                   invite: g
               })
             : (0, r.jsx)(d.Z, {
-                  tooltip: p.NW.string(p.t.rn9HIS),
+                  tooltip: p.intl.string(p.t.rn9HIS),
                   id: 'guild-hub-button',
                   icon: o.aVH
               })

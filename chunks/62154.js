@@ -20,8 +20,8 @@ var o = t(442837),
     j = t(405666);
 function v(e) {
     var n;
-    let { user: t, currentUser: v, guildId: x, channelId: _, displayProfile: Z, initialSection: O, initialSubsection: N, friendToken: P, onClose: E } = e,
-        { relationshipType: S, originApplicationId: T } = (0, o.cj)([l.Z], () => ({
+    let { user: t, currentUser: v, guildId: x, channelId: _, displayProfile: Z, initialSection: O, initialSubsection: P, friendToken: E, onClose: S } = e,
+        { relationshipType: N, originApplicationId: T } = (0, o.cj)([l.Z], () => ({
             relationshipType: l.Z.getRelationshipType(t.id),
             originApplicationId: l.Z.getOriginApplicationId(t.id)
         })),
@@ -33,7 +33,7 @@ function v(e) {
             user: t,
             currentUser: v,
             guildId: x,
-            initialSubsection: N
+            initialSubsection: P
         });
     return (0, r.jsxs)('div', {
         className: j.body,
@@ -49,10 +49,10 @@ function v(e) {
                 tags: (0, r.jsx)(a.Z, {
                     displayProfile: Z,
                     profileType: y.y0.FULL_SIZE,
-                    onClose: E
+                    onClose: S
                 })
             }),
-            S === I.OGo.PENDING_INCOMING &&
+            N === I.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(b.Z.Overlay, {
                     className: j.bannerContainer,
                     children: (0, r.jsx)(f.Z, {
@@ -60,7 +60,7 @@ function v(e) {
                         applicationId: T,
                         guildId: null != (n = null == Z ? void 0 : Z.guildId) ? n : void 0,
                         channelId: _,
-                        friendToken: P,
+                        friendToken: E,
                         className: j.friendRequestBanner
                     })
                 }),
@@ -88,7 +88,7 @@ function v(e) {
                 (0, r.jsx)(d.Z, {
                     className: j.bannerContainer,
                     isPremiumUser: L,
-                    onInteraction: E
+                    onInteraction: S
                 }),
             (0, r.jsx)(h.Z, {
                 user: t,
@@ -97,8 +97,8 @@ function v(e) {
                 guildId: x,
                 items: R,
                 initialSection: O,
-                initialSubsection: N,
-                onClose: E
+                initialSubsection: P,
+                onClose: S
             })
         ]
     });

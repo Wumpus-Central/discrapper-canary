@@ -32,8 +32,8 @@ var r = n(192379),
     I = n(960048),
     S = n(709054),
     T = n(223683),
-    N = n(630114),
-    A = n(506712),
+    A = n(630114),
+    N = n(506712),
     C = n(468788),
     R = n(789662),
     P = n(981631),
@@ -117,7 +117,7 @@ function U(e, t) {
 }
 function G(e, t) {
     return Object.values(g.Z.getGuilds()).some((n) => {
-        let [r] = p.Z.hasConsented(P.pjP.PERSONALIZATION) ? (0, A.q)(n, R.nf, e, t, !1) : (0, A.A)(n, e);
+        let [r] = p.Z.hasConsented(P.pjP.PERSONALIZATION) ? (0, N.q)(n, R.nf, e, t, !1) : (0, N.A)(n, e);
         return r === R.AR.UseGreyDot;
     });
 }
@@ -129,7 +129,7 @@ function B() {
         let e = null != (r = (null != (n = b.ZP.getAllSettings().userGuildSettings[i.id]) ? n : {}).flags) ? r : 0;
         (e = (0, v.mB)(e, D.vc.UNREADS_ALL_MESSAGES, !0)), (e = (0, v.mB)(e, D.vc.UNREADS_ONLY_MENTIONS, !1)), (t[i.id] = { flags: e });
     }
-    Y(t),
+    W(t),
         y.default.track(P.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
             auto_migrated: !0,
             num_unread_guids_after: e.filter((e) => m.default.hasUnread(e.id)).length
@@ -137,9 +137,9 @@ function B() {
 }
 function F(e, t, n, r, i) {
     var a;
-    let [o, s, l] = p.Z.hasConsented(P.pjP.PERSONALIZATION) ? (0, A.q)(e, t, n, r, !0) : (0, A.A)(e, n),
+    let [o, s, l] = p.Z.hasConsented(P.pjP.PERSONALIZATION) ? (0, N.q)(e, t, n, r, !0) : (0, N.A)(e, n),
         c = null != (a = n.filter((t) => t.guild_id === e.id)[0]) ? a : {},
-        u = (0, N.Z)(e, null != i ? i : o, c, r, t);
+        u = (0, A.Z)(e, null != i ? i : o, c, r, t);
     return {
         guildId: e.id,
         mode: o,
@@ -216,7 +216,7 @@ async function H(e, t) {
             title: 'Info',
             body: 'It looks like you are already using the new notifications system so skipping saving any changes this time because that will almost certainly mess up your account!'
         });
-    let n = W(e);
+    let n = Y(e);
     try {
         let t = {};
         for (let n of Object.values(e)) {
@@ -226,7 +226,7 @@ async function H(e, t) {
             for (let t of n.actions) null == (i = t.apply) || i.call(t, a, e);
             t[n.guildId] = a;
         }
-        await Y(t);
+        await W(t);
         let a = Object.values(e)
             .filter((e) => e.actions.some((e) => e.needsMarkedAsRead))
             .map((e) => e.guildId);
@@ -239,13 +239,13 @@ async function H(e, t) {
     } catch (e) {
         I.Z.captureException(e),
             c.Z.show({
-                title: L.NW.string(L.t.j2d6Ki),
-                body: L.NW.string(L.t.mCjLAQ),
+                title: L.intl.string(L.t.j2d6Ki),
+                body: L.intl.string(L.t.mCjLAQ),
                 onConfirm: t
             });
     }
 }
-function W(e) {
+function Y(e) {
     let t = Object.values(e)
             .filter((e) => {
                 var t;
@@ -284,7 +284,7 @@ function W(e) {
         );
     };
 }
-async function Y(e) {
+async function W(e) {
     await K(() => z()), await K(() => u.Z.setAccountFlag(C.c.USE_NEW_NOTIFICATIONS, !0));
     let t = await K(() => f.Z.saveUserGuildSettingsBulk(e));
     l.Z.dispatch({

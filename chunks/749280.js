@@ -1,8 +1,8 @@
-n.d(t, { w: () => i });
+n.d(t, { w: () => a });
 var r = n(200651),
     l = n(192379),
-    o = n(709014);
-let a = {
+    i = n(709014);
+let o = {
         hover: {
             name: 'hover',
             start: 0,
@@ -14,21 +14,21 @@ let a = {
             duration: 26
         }
     },
-    i = () => {
+    a = () => {
         let e = l.useRef(null),
             t = l.useCallback(() => {
                 null != e.current && e.current.play('click');
             }, []),
-            i = l.useCallback(() => {
+            a = l.useCallback(() => {
                 null != e.current && e.current.play('hover');
             }, []),
             c = l.useCallback(() => {
                 null != e.current && e.current.stopIfPlaying('hover');
             }, []),
             u = l.useCallback((t) => {
-                var l, i;
+                var l, a;
                 return (0, r.jsx)(
-                    o.L,
+                    i.L,
                     ((l = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -54,14 +54,14 @@ let a = {
                         }
                         return e;
                     })({}, t)),
-                    (i = i =
+                    (a = a =
                         {
                             src: () => n.e('56855').then(n.t.bind(n, 206509, 19)),
                             ref: e,
-                            markers: a
+                            markers: o
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
+                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -69,15 +69,15 @@ let a = {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(i)).forEach(function (e) {
-                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
+                          })(Object(a)).forEach(function (e) {
+                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                           }),
                     l)
                 );
             }, []);
         return {
             events: {
-                onMouseEnter: i,
+                onMouseEnter: a,
                 onMouseLeave: c
             },
             play: t,

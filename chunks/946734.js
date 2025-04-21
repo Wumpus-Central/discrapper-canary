@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(392711),
@@ -34,7 +34,7 @@ function E(e, t, n) {
         e
     );
 }
-class N {
+class I {
     updateData(e) {
         let { userId: t, user: n, channelId: r, analyticsLocations: i } = e;
         (this.userId = t), (this.user = n), (this.channelId = r), (this.analyticsLocations = i);
@@ -99,7 +99,7 @@ class N {
                 (0, r.jsx)(
                     s.DY3,
                     {
-                        text: j.NW.string(j.t.UTjREx),
+                        text: j.intl.string(j.t.UTjREx),
                         position: 'bottom',
                         children: (0, r.jsx)(s.P3F, {
                             className: O.moreAvatars,
@@ -129,7 +129,7 @@ class N {
             (this.analyticsLocations = i);
     }
 }
-function I(e) {
+function P(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
         l = (0, h.gc)(n),
@@ -140,7 +140,7 @@ function I(e) {
                 l = (0, a.e7)([b.default], () => b.default.getUser(t), [t]),
                 [o] = i.useState(
                     () =>
-                        new N({
+                        new I({
                             user: l,
                             userId: t,
                             channelId: n,
@@ -168,7 +168,7 @@ function I(e) {
               children: [
                   (0, r.jsx)(C.iz, { className: O.divider }),
                   (0, r.jsx)(s.IGR, {
-                      text: j.NW.string(j.t.l1QVfn),
+                      text: j.intl.string(j.t.l1QVfn),
                       disableColor: !0,
                       className: O.akaBadge
                   }),

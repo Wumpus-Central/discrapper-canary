@@ -55,7 +55,7 @@ class c extends i.PureComponent {
                             look: r.zxk.Looks.LINK,
                             color: r.zxk.Colors.PRIMARY,
                             onClick: this.handleDismiss,
-                            children: a.NW.string(a.t.cpT0Cg)
+                            children: a.intl.string(a.t.cpT0Cg)
                         })
                     ]
                 })

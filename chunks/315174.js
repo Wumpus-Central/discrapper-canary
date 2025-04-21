@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => A,
-    wD: () => P
+    wD: () => w
 }),
     n(388685);
 var r = n(200651),
@@ -109,7 +109,7 @@ function I(e) {
             children:
                 c &&
                 (0, r.jsx)(u.ua7, {
-                    text: C.NW.string(C.t.O8lDIy),
+                    text: C.intl.string(C.t.O8lDIy),
                     position: 'right',
                     children: (e) =>
                         (0, r.jsxs)(
@@ -126,7 +126,7 @@ function I(e) {
                                     (0, r.jsx)(u.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'none',
-                                        children: C.NW.string(C.t['B/vjCg'])
+                                        children: C.intl.string(C.t['B/vjCg'])
                                     })
                                 ]
                             })
@@ -144,7 +144,7 @@ function I(e) {
               children: d
           });
 }
-function N() {
+function P() {
     return (0, r.jsx)(u.r7p, {
         size: 'custom',
         color: 'currentColor',
@@ -153,7 +153,7 @@ function N() {
         width: 20
     });
 }
-let P = (e) => {
+let w = (e) => {
     let { open: t } = e,
         n = t ? u.u04 : u.CJ0;
     return (0, r.jsx)(n, {
@@ -161,7 +161,7 @@ let P = (e) => {
         color: 'currentColor'
     });
 };
-function w(e) {
+function N(e) {
     let { guild: t } = e;
     return (0, r.jsx)(u.X6q, {
         variant: 'text-md/semibold',
@@ -179,8 +179,8 @@ function Z(e) {
                 guild: i,
                 isBannerVisible: n
             }),
-            i.id === v._ && (0, r.jsx)(N, {}),
-            (0, r.jsx)(w, { guild: i }),
+            i.id === v._ && (0, r.jsx)(P, {}),
+            (0, r.jsx)(N, { guild: i }),
             null != l &&
                 (0, r.jsx)(u.P3F, {
                     className: j.headerButton,
@@ -192,7 +192,7 @@ function Z(e) {
                         ringTarget: c,
                         offset: 4
                     },
-                    'aria-label': C.NW.formatToPlainString(C.t.xMXpl5, { guildName: null != (t = null == i ? void 0 : i.toString()) ? t : '' })
+                    'aria-label': C.intl.formatToPlainString(C.t.xMXpl5, { guildName: null != (t = null == i ? void 0 : i.toString()) ? t : '' })
                 }),
             (0, r.jsx)('div', {
                 className: j.headerChildren,
@@ -256,7 +256,7 @@ function T(e) {
                             S(
                                 {
                                     className: j.guildDropdown,
-                                    'aria-label': C.NW.formatToPlainString(C.t.xMXpl5, { guildName: null != (n = null == l ? void 0 : l.toString()) ? n : '' }),
+                                    'aria-label': C.intl.formatToPlainString(C.t.xMXpl5, { guildName: null != (n = null == l ? void 0 : l.toString()) ? n : '' }),
                                     onContextMenu: s
                                 },
                                 e
@@ -274,8 +274,8 @@ function T(e) {
                                                 guild: l,
                                                 isBannerVisible: t
                                             }),
-                                            l.id === v._ && (0, r.jsx)(N, {}),
-                                            (0, r.jsx)(w, { guild: l })
+                                            l.id === v._ && (0, r.jsx)(P, {}),
+                                            (0, r.jsx)(N, { guild: l })
                                         ]
                                     }),
                                     (0, r.jsx)('div', {
@@ -290,7 +290,7 @@ function T(e) {
             }),
             l.id !== v._ &&
                 (0, r.jsx)(u.ua7, {
-                    text: C.NW.string(C.t.Sd8Ix8),
+                    text: C.intl.string(C.t.Sd8Ix8),
                     position: 'bottom',
                     children: (e) =>
                         (0, r.jsx)(
@@ -311,31 +311,31 @@ function T(e) {
     });
 }
 let A = i.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: l, onClick: s, onContextMenu: c, onMouseDown: f, disableBannerAnimation: g, 'aria-expanded': b, 'aria-controls': _, guild: v, guildBanner: C, animationOverlayHeight: N, children: P, headerClassName: w, communityInfoVisible: A, hasSubheader: D } = e,
+    let { bannerVisible: t, controller: n, className: l, onClick: s, onContextMenu: c, onMouseDown: f, disableBannerAnimation: g, 'aria-expanded': b, 'aria-controls': _, guild: v, guildBanner: C, animationOverlayHeight: P, children: w, headerClassName: N, communityInfoVisible: A, hasSubheader: D } = e,
         L = v.hasFeature(O.oNc.ANIMATED_BANNER),
         k = (0, h.Z)(v),
         M = !k && v.hasCommunityInfoSubheader(),
         U = !k && A,
         G = (0, y.xR)(C) && L && !g,
-        [B, W] = i.useState(!1),
-        V = i.useRef(!1),
-        F = i.useRef(null),
-        H = i.useRef(void 0),
-        z = m.QK.getSetting();
+        [B, V] = i.useState(!1),
+        F = i.useRef(!1),
+        H = i.useRef(null),
+        z = i.useRef(void 0),
+        W = m.QK.getSetting();
     i.useEffect(() => {
-        if (G && t && !V.current && z)
+        if (G && t && !F.current && W)
             return (
-                W(!0),
-                (H.current = setTimeout(() => {
-                    W(!1);
+                V(!0),
+                (z.current = setTimeout(() => {
+                    V(!1);
                 }, 5000)),
                 () => {
-                    clearTimeout(H.current);
+                    clearTimeout(z.current);
                 }
             );
-    }, [G, t, z]),
+    }, [G, t, W]),
         i.useEffect(() => {
-            V.current = t;
+            F.current = t;
         }, [t]);
     let Y = () => {
             let { renderBanner: t, guildBanner: n } = e;
@@ -350,7 +350,7 @@ let A = i.memo(function (e) {
             onContextMenu: c,
             ariaControls: _,
             ariaExpanded: b,
-            guildHeaderRef: F
+            guildHeaderRef: H
         };
     return (0, r.jsx)(u.f6W, {
         theme: t ? O.BRd.DARK : void 0,
@@ -358,7 +358,7 @@ let A = i.memo(function (e) {
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)('div', {
-                        ref: F,
+                        ref: H,
                         className: o()(l, {
                             [j.container]: !0,
                             [j.clickable]: !q && null != s,
@@ -374,11 +374,11 @@ let A = i.memo(function (e) {
                         onContextMenu: c,
                         children: [
                             (0, r.jsxs)('header', {
-                                className: o()(j.header, w, { [j.themedHeaderMobile]: a.tq }),
+                                className: o()(j.header, N, { [j.themedHeaderMobile]: a.tq }),
                                 children: [
                                     (0, r.jsx)('div', {
                                         className: o()(j.headerContent, j.primaryInfo),
-                                        children: q ? (0, r.jsx)(T, x(S({}, Q), { children: P })) : (0, r.jsx)(Z, x(S({}, Q), { children: P }))
+                                        children: q ? (0, r.jsx)(T, x(S({}, Q), { children: w })) : (0, r.jsx)(Z, x(S({}, Q), { children: w }))
                                     }),
                                     M &&
                                         (0, r.jsx)(I, {
@@ -405,10 +405,10 @@ let A = i.memo(function (e) {
                         ? (0, r.jsx)('div', {
                               className: j.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  W(!0), clearTimeout(H.current);
+                                  V(!0), clearTimeout(z.current);
                               },
-                              onMouseLeave: () => W(!1),
-                              style: { height: N }
+                              onMouseLeave: () => V(!1),
+                              style: { height: P }
                           })
                         : null
                 ]

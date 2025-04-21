@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685), n(415506), n(49124);
+n.d(t, { Z: () => v }), n(388685), n(415506), n(49124);
 var r = n(413135),
     i = n(836560),
     l = n(392711),
@@ -112,7 +112,7 @@ function O(e) {
     }
     O(e);
 }
-class N extends u.Z {
+class y extends u.Z {
     send(e) {
         f.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(E(g.FRAME, e));
     }
@@ -140,7 +140,7 @@ class N extends u.Z {
             (this.socket = e);
     }
 }
-class y extends i.EventEmitter {
+class I extends i.EventEmitter {
     handleConnection(e) {
         m(e, !1),
             e.pause(),
@@ -162,7 +162,7 @@ class y extends i.EventEmitter {
                     r = t.client_id,
                     i = +t.v;
                 try {
-                    n = new N(e, i, 'json');
+                    n = new y(e, i, 'json');
                 } catch (t) {
                     e.end(
                         E(g.CLOSE, {
@@ -202,4 +202,4 @@ class y extends i.EventEmitter {
             });
     }
 }
-let I = new y();
+let v = new I();

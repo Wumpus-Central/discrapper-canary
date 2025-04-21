@@ -14,7 +14,7 @@ function s(e) {
             (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 className: o.content,
-                children: a.NW.string(a.t.rdzeVF)
+                children: a.intl.string(a.t.rdzeVF)
             }),
             (0, r.jsx)(i.zxk, {
                 color: i.zxk.Colors.BRAND_INVERTED,
@@ -22,7 +22,7 @@ function s(e) {
                 onClick: () => {
                     t(l.L.AUTO);
                 },
-                children: a.NW.string(a.t['NX+WJC'])
+                children: a.intl.string(a.t['NX+WJC'])
             })
         ]
     });

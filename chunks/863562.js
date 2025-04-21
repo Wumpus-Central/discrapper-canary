@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     a = n(481060),
     o = n(700582),
     c = n(330726),
@@ -12,10 +12,10 @@ var r = n(200651),
     g = n(388032),
     p = n(646084);
 let h = (e) => {
-    let { className: t, isDisabled: s, sticker: h, canManageSticker: f } = e,
+    let { className: t, isDisabled: l, sticker: h, canManageSticker: f } = e,
         [x, b] = i.useState(!1),
-        [j, N] = (0, c.Z)(null, 4000),
-        _ = () => {
+        [j, _] = (0, c.Z)(null, 4000),
+        v = () => {
             (0, a.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('93626'), n.e('64386')]).then(n.bind(n, 136735));
                 return (t) =>
@@ -55,25 +55,25 @@ let h = (e) => {
                     );
             });
         },
-        v = async () => {
-            N(null), b(!0);
+        O = async () => {
+            _(null), b(!0);
             try {
                 await (0, u.Um)(h);
             } catch (e) {
-                N(e.body.message), b(!1);
+                _(e.body.message), b(!1);
             }
         },
-        O = d.ZP.useUserTag(h.user);
+        C = d.ZP.useUserTag(h.user);
     return (0, r.jsx)(a.ua7, {
         color: a.ua7.Colors.RED,
         forceOpen: null != j,
         text: j,
         children: () =>
             (0, r.jsxs)('div', {
-                className: l()(p.wrapper, t, { [p.wrapperDisabled]: s }),
+                className: s()(p.wrapper, t, { [p.wrapperDisabled]: l }),
                 children: [
                     (0, r.jsxs)('div', {
-                        className: l()(p.content, { [p.contentRemoving]: x }),
+                        className: s()(p.content, { [p.contentRemoving]: x }),
                         children: [
                             (0, r.jsx)(m.Z, {
                                 className: p.sticker,
@@ -100,7 +100,7 @@ let h = (e) => {
                                                 (0, r.jsx)(a.Text, {
                                                     color: 'header-secondary',
                                                     variant: 'text-xs/normal',
-                                                    children: O
+                                                    children: C
                                                 })
                                             ]
                                         })
@@ -112,8 +112,8 @@ let h = (e) => {
                                       children: [
                                           (0, r.jsx)(a.P3F, {
                                               className: p.action,
-                                              onClick: _,
-                                              'aria-label': g.NW.string(g.t.bt75u7),
+                                              onClick: v,
+                                              'aria-label': g.intl.string(g.t.bt75u7),
                                               children: (0, r.jsx)(a.vdY, {
                                                   size: 'xs',
                                                   color: 'currentColor',
@@ -121,9 +121,9 @@ let h = (e) => {
                                               })
                                           }),
                                           (0, r.jsx)(a.P3F, {
-                                              className: l()(p.action, p.actionRemove),
-                                              onClick: v,
-                                              'aria-label': g.NW.string(g.t.N86XcH),
+                                              className: s()(p.action, p.actionRemove),
+                                              onClick: O,
+                                              'aria-label': g.intl.string(g.t.N86XcH),
                                               children: (0, r.jsx)(a.Dio, {
                                                   size: 'md',
                                                   color: 'currentColor',

@@ -82,7 +82,7 @@ class h extends i.PureComponent {
                       },
                       p
                   )),
-                  (t = t = { children: u.NW.string(u.t.hElye3) }),
+                  (t = t = { children: u.intl.string(u.t.hElye3) }),
                   Object.getOwnPropertyDescriptors
                       ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                       : (function (e, t) {
@@ -116,7 +116,7 @@ class h extends i.PureComponent {
                 return (0, r.jsx)(a.v2r, {
                     onSelect: i,
                     navId: 'test-store-listing',
-                    'aria-label': u.NW.string(u.t.ogxXGh),
+                    'aria-label': u.intl.string(u.t.ogxXGh),
                     onClose: o.Zy,
                     children: l
                 });

@@ -4,11 +4,11 @@ n.d(t, {
     Il: () => T,
     Jf: () => R,
     SA: () => L,
-    Um: () => A,
+    Um: () => N,
     eu: () => P,
     hW: () => x,
     lY: () => C,
-    pk: () => N,
+    pk: () => A,
     qB: () => w
 }),
     n(953529),
@@ -124,7 +124,7 @@ let I = async (e, t) => {
             sticker: t
         });
     },
-    N = async (e) => {
+    A = async (e) => {
         let { body: t } = await a.tn.get({
             url: m.ANM.GUILD_STICKER_PACKS(e),
             rejectWithError: !1
@@ -135,7 +135,7 @@ let I = async (e, t) => {
             stickers: t.map((e) => (null != e.user ? O(y({}, e), { user: new d.Z(e.user) }) : e))
         });
     },
-    A = async (e) => {
+    N = async (e) => {
         await a.tn.del({
             url: m.ANM.GUILD_STICKER(e.guild_id, e.id),
             rejectWithError: !1
@@ -219,8 +219,8 @@ function L(e) {
         (t) =>
             ((t.stickerIds = D(t.stickerIds)), i().size(t.stickerIds) >= g.oX)
                 ? (s.Z.show({
-                      title: E.NW.string(E.t['+XYXtb']),
-                      body: E.NW.formatToPlainString(E.t.JaIyFh, { count: g.oX })
+                      title: E.intl.string(E.t['+XYXtb']),
+                      body: E.intl.formatToPlainString(E.t.JaIyFh, { count: g.oX })
                   }),
                   !1)
                 : !t.stickerIds.includes(e) && void t.stickerIds.push(e),

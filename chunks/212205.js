@@ -15,7 +15,7 @@ function u(e) {
         ? null
         : (0, r.jsx)(l.sNh, {
               id: 'set-channel-nickname',
-              label: d && u ? s.NW.string(s.t.xXYKiI) : s.NW.string(s.t.dilOFx),
+              label: d && u ? s.intl.string(s.t.xXYKiI) : s.intl.string(s.t.dilOFx),
               action: function () {
                   (0, l.ZDy)(async () => {
                       let { default: t } = await n.e('46161').then(n.bind(n, 238716));
@@ -51,8 +51,8 @@ function u(e) {
                               (l = l =
                                   {
                                       channelId: e.id,
-                                      heading: d && u ? s.NW.string(s.t.xXYKiI) : s.NW.string(s.t.dilOFx),
-                                      formTitle: d && u ? s.NW.string(s.t.OCAkGB) : s.NW.string(s.t['621LJC']),
+                                      heading: d && u ? s.intl.string(s.t.xXYKiI) : s.intl.string(s.t.dilOFx),
+                                      formTitle: d && u ? s.intl.string(s.t.OCAkGB) : s.intl.string(s.t['621LJC']),
                                       allowReset: !(d && u)
                                   }),
                               Object.getOwnPropertyDescriptors

@@ -119,7 +119,7 @@ function I(e) {
         null != r.timeout &&
         (clearTimeout(r.timeout),
         (r = null),
-        N({
+        A({
             channelId: t,
             userId: n
         }))
@@ -139,14 +139,14 @@ function T(e) {
         r = p({}, y(t));
     clearTimeout(r[n]), (r[n] = S(t, n)), (E[t] = r);
 }
-function N(e) {
+function A(e) {
     let { channelId: t, userId: n } = e,
         r = E[t];
     if (null == r || null == r[n]) return !1;
     let i = p({}, r);
     clearTimeout(i[n]), delete i[n], (E[t] = i);
 }
-function A(e) {
+function N(e) {
     let {
         channelId: t,
         message: { author: n },
@@ -155,7 +155,7 @@ function A(e) {
     return (
         r && O(t),
         null != n &&
-            N({
+            A({
                 channelId: t,
                 userId: n.id
             })
@@ -179,10 +179,10 @@ class P extends (i = a.ZP.Store) {
 _(P, 'displayName', 'TypingStore');
 let w = new P(s.Z, {
     TYPING_START: T,
-    TYPING_STOP: N,
+    TYPING_STOP: A,
     TYPING_START_LOCAL: v,
     TYPING_STOP_LOCAL: I,
     CONNECTION_OPEN: C,
     OVERLAY_INITIALIZE: C,
-    MESSAGE_CREATE: A
+    MESSAGE_CREATE: N
 });

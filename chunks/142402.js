@@ -16,7 +16,7 @@ var r = n(200651),
     h = n(388032);
 let O = [p.kr.OTHER];
 function g(e) {
-    let { isStreamer: t, stream: g, streamApplication: x, onClose: v, transitionState: N, analyticsData: j } = e;
+    let { isStreamer: t, stream: g, streamApplication: x, onClose: v, transitionState: j, analyticsData: y } = e;
     l.useEffect(() => {
         m.default.track(b.rMx.OPEN_MODAL, {
             type: 'Stream Problem Report',
@@ -27,36 +27,36 @@ function g(e) {
             source: 'Stream End'
         });
     }, [g.ownerId, x]);
-    let { showFormStyleSurvey: y, hideNeutralOption: S, showVibesHoneypot: k } = (0, o.X)({ location: 'StreamFeedback' }),
-        E = y ? h.NW.string(h.t.OR6KNz) : h.NW.string(h.t['5smP3d']),
-        R = y ? void 0 : h.NW.string(h.t['0uxA2d']),
-        w = y ? void 0 : h.NW.string(h.t.CqjnLC),
-        L = S ? [_.aZ.BAD, _.aZ.GOOD] : void 0,
-        P = y
+    let { showFormStyleSurvey: S, hideNeutralOption: k, showVibesHoneypot: E } = (0, o.X)({ location: 'StreamFeedback' }),
+        R = S ? h.intl.string(h.t.OR6KNz) : h.intl.string(h.t['5smP3d']),
+        N = S ? void 0 : h.intl.string(h.t['0uxA2d']),
+        w = S ? void 0 : h.intl.string(h.t.CqjnLC),
+        L = k ? [_.aZ.BAD, _.aZ.GOOD] : void 0,
+        P = S
             ? {
-                  [_.aZ.BAD]: h.NW.string(h.t.ISINlJ),
-                  [_.aZ.GOOD]: h.NW.string(h.t.IySkjY)
+                  [_.aZ.BAD]: h.intl.string(h.t.ISINlJ),
+                  [_.aZ.GOOD]: h.intl.string(h.t.IySkjY)
               }
             : void 0;
     return (0, r.jsx)(s.Z, {
         modalType: 'stream',
-        header: E,
+        header: R,
         impression: {
             impressionName: i.ImpressionNames.STREAM_FEEDBACK_MODAL,
             impressionProperties: {
-                media_session_id: j.media_session_id,
-                rtc_connection_id: j.rtc_connection_id,
-                parent_media_session_id: j.parent_media_session_id
+                media_session_id: y.media_session_id,
+                rtc_connection_id: y.rtc_connection_id,
+                parent_media_session_id: y.parent_media_session_id
             }
         },
-        body: t ? R : w,
+        body: t ? N : w,
         ratingOptions: L,
         ratingTextLabels: P,
-        problemTitle: h.NW.string(h.t['6Y1t5O']),
+        problemTitle: h.intl.string(h.t['6Y1t5O']),
         problems: (0, c.Z)({
             isStreamer: t,
             isEndStream: !0,
-            showVibesHoneypot: k
+            showVibesHoneypot: E
         }),
         freeformNeededProblems: O,
         onSubmit: function (e) {
@@ -69,7 +69,7 @@ function g(e) {
                         stream: g,
                         feedback: s,
                         streamApplication: x,
-                        analyticsData: j,
+                        analyticsData: y,
                         location: 'Stream End',
                         rating: l
                     }),
@@ -103,12 +103,12 @@ function g(e) {
                                                 });
                                         }
                                         return e;
-                                    })({ body: h.NW.string(h.t.mMTVnp) }, t)
+                                    })({ body: h.intl.string(h.t.mMTVnp) }, t)
                                 );
                         }));
         },
         onClose: v,
-        transitionState: N,
+        transitionState: j,
         otherKey: p.kr.OTHER
     });
 }

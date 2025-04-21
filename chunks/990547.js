@@ -19,7 +19,7 @@ n.r(t),
         getOS: () => k,
         getSuperProperties: () => q,
         getSuperPropertiesBase64: () => Q,
-        isThrottled: () => Y,
+        isThrottled: () => W,
         trackMaker: () => z
     }),
     n(35282),
@@ -97,8 +97,8 @@ function S(e, t) {
     );
 }
 let T = 'deviceProperties',
-    N = 'referralProperties',
-    A = {},
+    A = 'referralProperties',
+    N = {},
     C = {},
     R = window.DiscordNative;
 if (null != R) {
@@ -243,10 +243,10 @@ function V(e, t) {
 function Z() {
     let e = p.K.get(T);
     null == e && ((e = G()), p.K.set(T, e));
-    let t = p.K.get(N);
-    null == t && ((t = F()), p.K.set(N, t));
-    let n = h.x.get(N);
-    return null == n && ((n = V(F(), '_current')), h.x.set(N, n)), O({}, e, B(), t, n);
+    let t = p.K.get(A);
+    null == t && ((t = F()), p.K.set(A, t));
+    let n = h.x.get(A);
+    return null == n && ((n = V(F(), '_current')), h.x.set(A, n)), O({}, e, B(), t, n);
 }
 function H() {
     try {
@@ -254,18 +254,18 @@ function H() {
     } catch (e) {}
     return null;
 }
-function W() {
+function Y() {
     var e, t;
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || '' === n.release_channel) && (n.release_channel = r.split('-')[0]);
-    let i = parseInt('391848', 10);
+    let i = parseInt('391927', 10);
     isNaN(i) || (n.client_build_number = i);
     let a = null == R || null == (e = (t = R.remoteApp).getBuildNumber) ? void 0 : e.call(t);
     return isNaN(a) || (n.native_build_number = a), (n.client_event_source = H()), (n.has_client_mods = (0, f.e)()), n;
 }
-function Y(e) {
-    return null != A[e] && A[e] > Date.now();
+function W(e) {
+    return null != N[e] && N[e] > Date.now();
 }
 if (null == r)
     try {
@@ -276,7 +276,7 @@ if (null == r)
 function K(e) {
     (r = O({}, r, e)), (i = (0, g.Z)(r));
 }
-K(W());
+K(Y());
 let z = (e) => {
     let { analyticEventConfigs: t, dispatcher: r, TRACK_ACTION_NAME: i } = e,
         a = (0, m.$)(r, i);
@@ -292,13 +292,13 @@ let z = (e) => {
         if (null != l)
             if ('throttlePeriod' in l) {
                 let t = [e, ...l.throttleKeys(o)].join('_');
-                if (Y(t) || ('number' == typeof l.throttlePercent && Math.random() > l.throttlePercent)) return Promise.resolve();
+                if (W(t) || ('number' == typeof l.throttlePercent && Math.random() > l.throttlePercent)) return Promise.resolve();
                 if (l.deduplicate) {
                     let e = C[t];
                     if (s()(e, o)) return Promise.resolve();
                     C[t] = o;
                 }
-                A[t] = Date.now() + l.throttlePeriod;
+                N[t] = Date.now() + l.throttlePeriod;
             } else if ('throttlePercent' in l) {
                 if (Math.random() > l.throttlePercent) return Promise.resolve();
             } else c()(!1, 'Unsupported analytics event config: '.concat(l));

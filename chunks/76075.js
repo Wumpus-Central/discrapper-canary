@@ -1,8 +1,8 @@
 n.d(t, { default: () => O });
 var r = n(200651);
 n(192379);
-var o = n(442837),
-    i = n(481060),
+var i = n(442837),
+    o = n(481060),
     l = n(100527),
     a = n(970606),
     c = n(313201),
@@ -24,30 +24,30 @@ let O = function (e) {
             if (null == e) return {};
             var n,
                 r,
-                o = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        o = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                    return o;
+                        i = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return o;
+            return i;
         })(e, ['guildId', 'transitionState']);
     let v = (0, c.Dt)(),
-        P = (0, o.e7)([m.Z], () => m.Z.getRequest(O), [O]),
-        y = (0, o.e7)([u.Z], () => u.Z.getGuild(O), [O]),
-        C = (0, o.e7)([d.default], () => {
+        P = (0, i.e7)([m.Z], () => m.Z.getRequest(O), [O]),
+        y = (0, i.e7)([u.Z], () => u.Z.getGuild(O), [O]),
+        C = (0, i.e7)([d.default], () => {
             var e;
             return null == (e = d.default.getCurrentUser()) ? void 0 : e.id;
         }),
-        N = (0, o.e7)([s.ZP], () => (null != C ? s.ZP.getMember(O, C) : null), [C, O]),
-        w = async () => {
+        w = (0, i.e7)([s.ZP], () => (null != C ? s.ZP.getMember(O, C) : null), [C, O]),
+        A = async () => {
             var e;
             if (
                 (null != (e = null == y ? void 0 : y.hasFeature(_.oNc.CLAN)) &&
@@ -56,7 +56,7 @@ let O = function (e) {
                         guildId: O,
                         source: l.Z.CLAN_REAPPLY
                     }),
-                null == N ? void 0 : N.isPending)
+                null == w ? void 0 : w.isPending)
             ) {
                 try {
                     await f.Z.removeGuildJoinRequest(O);
@@ -66,8 +66,8 @@ let O = function (e) {
                 x.onClose(), (0, p.hk)(O);
             } else f.Z.resetGuildJoinRequest(O);
         };
-    return (0, r.jsx)(i.Y0X, {
-        size: i.CgR.DYNAMIC,
+    return (0, r.jsx)(o.Y0X, {
+        size: o.CgR.DYNAMIC,
         transitionState: h,
         'aria-labelledby': v,
         children: (0, r.jsx)(
@@ -100,11 +100,11 @@ let O = function (e) {
             (n = n =
                 {
                     headerId: v,
-                    reapplyText: j.NW.string(j.t.I1LYVl),
-                    onReapply: w,
-                    confirmText: j.NW.string(j.t.BddRzc),
+                    reapplyText: j.intl.string(j.t.I1LYVl),
+                    onReapply: A,
+                    confirmText: j.intl.string(j.t.BddRzc),
                     onWithdrawApplication: () => {
-                        x.onClose(), null == N && (0, g.Z)();
+                        x.onClose(), null == w && (0, g.Z)();
                     },
                     rejectionReason: null == P ? void 0 : P.rejectionReason,
                     guild: y

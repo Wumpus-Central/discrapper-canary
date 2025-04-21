@@ -7,7 +7,7 @@ n.d(t, {
     L1: () => O,
     Od: () => S,
     VQ: () => s,
-    ZY: () => A,
+    ZY: () => N,
     d9: () => v,
     fv: () => h,
     gE: () => T,
@@ -82,11 +82,11 @@ var r = n(686942),
         if (!t) throw Error('Invalid UNTIL value: '.concat(e));
         return new Date(Date.UTC(parseInt(t[1], 10), parseInt(t[2], 10) - 1, parseInt(t[3], 10), parseInt(t[5], 10) || 0, parseInt(t[6], 10) || 0, parseInt(t[7], 10) || 0));
     },
-    N = function (e, t) {
+    A = function (e, t) {
         return e.toLocaleString('sv-SE', { timeZone: t }).replace(' ', 'T') + 'Z';
     },
-    A = function (e, t) {
-        var n = new Date(N(e, Intl.DateTimeFormat().resolvedOptions().timeZone)),
-            r = new Date(N(e, null != t ? t : 'UTC')).getTime() - n.getTime();
+    N = function (e, t) {
+        var n = new Date(A(e, Intl.DateTimeFormat().resolvedOptions().timeZone)),
+            r = new Date(A(e, null != t ? t : 'UTC')).getTime() - n.getTime();
         return new Date(e.getTime() - r);
     };

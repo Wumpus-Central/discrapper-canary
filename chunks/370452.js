@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(953529);
+n.d(t, { Z: () => v }), n(953529);
 var r = n(200651),
     s = n(442837),
     o = n(481060),
@@ -112,12 +112,12 @@ function x(e) {
                             (0, r.jsx)(i.Z, {
                                 variant: 'heading-lg/semibold',
                                 color: 'always-white',
-                                children: p.NW.string(f.Z['236TJC']).toLocaleLowerCase()
+                                children: p.intl.string(f.default['236TJC']).toLocaleLowerCase()
                             }),
                             (0, r.jsx)(i.Z, {
                                 variant: 'text-md/medium',
                                 color: 'text-muted',
-                                children: p.NW.string(f.Z.wgMDm5).toLocaleLowerCase()
+                                children: p.intl.string(f.default.wgMDm5).toLocaleLowerCase()
                             })
                         ]
                     }),
@@ -139,10 +139,10 @@ function x(e) {
             })
     });
 }
-function N() {
+function v() {
     return (0, r.jsx)(c.O, {
         iconSrc: g,
-        title: p.NW.string(f.Z['236TJC']),
+        title: p.intl.string(f.default['236TJC']),
         onClick: () => {
             (0, o.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(x, y({}, e))));
         }

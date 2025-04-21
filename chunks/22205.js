@@ -1,6 +1,6 @@
-n.d(t, { Z: () => R }), n(388685);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => L }), n(388685);
+var i = n(200651),
+    r = n(192379),
     o = n(392711),
     l = n.n(o),
     s = n(200100),
@@ -24,10 +24,10 @@ var r = n(200651),
     P = n(610394),
     k = n(380736),
     E = n(987650),
-    N = n(981631),
-    S = n(388032),
-    Z = n(138134);
-function z(e, t, n) {
+    S = n(981631),
+    Z = n(388032),
+    z = n(138134);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,34 +53,34 @@ let T = l().throttle(
         100,
         { trailing: !1 }
     ),
-    W = 10 * x.Z.Millis.SECOND;
-function D(e) {
+    D = 10 * x.Z.Millis.SECOND;
+function M(e) {
     var t, n;
     let { error: o, onLock: l, onReload: c, onDisable: a, onCrashDisabled: u } = e,
-        p = i.useMemo(() => new s.SpringValue(1), []),
-        b = i.useRef(null),
-        [v, g] = i.useState(!1),
-        [x, C] = i.useState(!1),
+        p = r.useMemo(() => new s.SpringValue(1), []),
+        b = r.useRef(null),
+        [v, g] = r.useState(!1),
+        [x, C] = r.useState(!1),
         j = (0, d.e7)([y.default], () => y.default.getCurrentUser());
     (0, f.ZP)(
         () => (
-            (b.current = setTimeout(w, W)),
-            m.Z.track(N.rMx.NOTIFICATION_VIEWED, { notif_type: E.n0.OverlayCrashed }),
+            (b.current = setTimeout(w, D)),
+            m.Z.track(S.rMx.NOTIFICATION_VIEWED, { notif_type: E.n0.OverlayCrashed }),
             () => {
                 null != b.current && clearTimeout(b.current);
             }
         )
     );
-    let w = i.useCallback(() => {
+    let w = r.useCallback(() => {
             p.set(0), null != b.current && clearTimeout(b.current), (b.current = null), null == l || l(), null == u || u();
         }, [p, l, u]),
-        z = i.useCallback(
+        N = r.useCallback(
             (e) => {
                 x ||
                     (C(!0),
                     null == l || l(),
                     m.Z.track(
-                        N.rMx.NOTIFICATION_CLICKED,
+                        S.rMx.NOTIFICATION_CLICKED,
                         {
                             notif_type: E.n0.OverlayCrashed,
                             action_type: 'reload'
@@ -92,41 +92,41 @@ function D(e) {
             },
             [l, c, x]
         ),
-        T = i.useCallback(
+        T = r.useCallback(
             (e) => {
                 e.stopPropagation(), e.shiftKey ? (g(!0), null != b.current && clearTimeout(b.current)) : g(!1);
             },
             [g]
         ),
-        D = i.useCallback(
+        M = r.useCallback(
             (e) => {
                 e.stopPropagation(), null == l || l(), null == a || a();
             },
             [a, l]
         ),
-        M = (0, d.e7)([P.ZP], () => P.ZP.getFocusedRunningGame()),
-        R = v
-            ? (0, r.jsxs)('div', {
+        R = (0, d.e7)([P.ZP], () => P.ZP.getFocusedRunningGame()),
+        L = v
+            ? (0, i.jsxs)('div', {
                   children: [
-                      (0, r.jsx)(h.Text, {
+                      (0, i.jsx)(h.Text, {
                           variant: 'text-md/semibold',
                           color: 'text-primary',
-                          children: S.NW.string(S.t.mn4eXF)
+                          children: Z.intl.string(Z.t.mn4eXF)
                       }),
-                      (0, r.jsxs)('div', {
-                          className: Z.stackTraceCode,
+                      (0, i.jsxs)('div', {
+                          className: z.stackTraceCode,
                           children: [
-                              (0, r.jsx)(h.Text, {
+                              (0, i.jsx)(h.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'text-secondary',
                                   children: o.message
                               }),
-                              (0, r.jsx)(h.Text, {
+                              (0, i.jsx)(h.Text, {
                                   variant: 'text-xxs/normal',
                                   color: 'text-secondary',
-                                  children: (0, r.jsx)('code', {
-                                      className: Z.code,
-                                      children: (0, r.jsx)('pre', { children: o.stack })
+                                  children: (0, i.jsx)('code', {
+                                      className: z.code,
+                                      children: (0, i.jsx)('pre', { children: o.stack })
                                   })
                               })
                           ]
@@ -134,63 +134,63 @@ function D(e) {
                   ]
               })
             : null,
-        L = v ? null : S.NW.string(S.t.oEJEFh),
-        A = (null != (t = null == j ? void 0 : j.isStaff()) && t) || (null != (n = null == j ? void 0 : j.isStaffPersonal()) && n);
-    return (0, r.jsx)(k.Y, {
-        title: S.NW.string(S.t.U38qZm),
-        body: R,
-        hint: A ? L : void 0,
-        confirmText: S.NW.string(S.t.a3HlgI),
-        cancelText: null != M ? S.NW.string(S.t.qIYnPj) : void 0,
-        icon: (0, r.jsx)(O.Z, {
+        A = v ? null : Z.intl.string(Z.t.oEJEFh),
+        I = (null != (t = null == j ? void 0 : j.isStaff()) && t) || (null != (n = null == j ? void 0 : j.isStaffPersonal()) && n);
+    return (0, i.jsx)(k.Y, {
+        title: Z.intl.string(Z.t.U38qZm),
+        body: L,
+        hint: I ? A : void 0,
+        confirmText: Z.intl.string(Z.t.a3HlgI),
+        cancelText: null != R ? Z.intl.string(Z.t.qIYnPj) : void 0,
+        icon: (0, i.jsx)(O.Z, {
             width: 40,
             height: 40,
-            className: Z.notificationIcon
+            className: z.notificationIcon
         }),
         onNotificationClick: T,
-        onConfirmClick: z,
-        onCancelClick: null != M ? D : void 0,
+        onConfirmClick: N,
+        onCancelClick: null != R ? M : void 0,
         onDismissClick: l,
         expand: !0,
         locked: !0,
         notificationId: 'overlay-crashed',
         index: 0,
-        status: N._1z.ACTIVE,
+        status: S._1z.ACTIVE,
         containerRef: null,
         contentOpacity: p,
-        className: Z.errorNotificationContainer,
-        wrapperClassName: Z.errorNotificationWrapper
+        className: z.errorNotificationContainer,
+        wrapperClassName: z.errorNotificationWrapper
     });
 }
-class M extends i.PureComponent {
+class R extends r.PureComponent {
     componentDidCatch(e, t) {
         let n = (0, g.s1)().location;
         this.setState({
             error: e,
             info: t
         });
-        let r = (0, j.getPID)();
-        m.Z.setOverlayCrashed(r, e), m.Z.setInputLocked(!0, r);
-        let i = C.Z.captureCrash(e, { extra: t });
-        m.Z.track(N.rMx.APP_CRASHED, {
+        let i = (0, j.getPID)();
+        m.Z.setOverlayCrashed(i, e), m.Z.setInputLocked(!0, i);
+        let r = C.Z.captureCrash(e, { extra: t });
+        m.Z.track(S.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
             error_stack: e.stack,
-            sentry_issue_id: i,
+            sentry_issue_id: r,
             error_level: 'fatal'
         }),
             T(),
-            (this.pid = r);
+            (this.pid = i);
     }
     render() {
         let { children: e, className: t } = this.props,
-            { error: n, showError: i } = this.state;
+            { error: n, showError: r } = this.state;
         return null != n
-            ? i
-                ? (0, r.jsx)(w.Z, {
-                      className: Z.errorClickNotification,
-                      children: (0, r.jsx)(D, {
+            ? r
+                ? (0, i.jsx)(w.Z, {
+                      className: z.errorClickNotification,
+                      children: (0, i.jsx)(M, {
                           error: n,
                           onLock: () => {
                               var e;
@@ -212,19 +212,19 @@ class M extends i.PureComponent {
                       })
                   })
                 : null
-            : (0, r.jsx)('div', {
+            : (0, i.jsx)('div', {
                   className: t,
                   children: e
               });
     }
     constructor(...e) {
         super(...e),
-            z(this, 'state', {
+            N(this, 'state', {
                 error: null,
                 showError: !0,
                 info: null
             }),
-            z(this, 'pid', null);
+            N(this, 'pid', null);
     }
 }
-let R = M;
+let L = R;

@@ -1,13 +1,13 @@
 n.d(t, {
-    V9: () => N,
+    V9: () => x,
     ek: () => _
 }),
     n(388685);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(351773),
+    l = n.n(s),
+    a = n(351773),
     o = n(507808),
     c = n(23547),
     d = n(790542),
@@ -22,75 +22,75 @@ let _ = {
         START: b.alignLeft,
         END: b.alignRight
     },
-    N = (e) => {
-        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, analyticsPage: N, isCoachmarkEnabled: x = !0, linkText: E = f.NW.string(f.t.XRdyj4), cardAlignment: j = _.START, className: C } = e,
-            { balance: O } = (0, d.A)(),
-            [S, v] = i.useState(u.b.DEFAULT),
-            [T, I] = i.useState(!1),
-            [y, A] = i.useState(!1),
-            P = i.useRef(null),
+    x = (e) => {
+        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, analyticsPage: x, isCoachmarkEnabled: E = !0, linkText: j = f.intl.string(f.t.XRdyj4), cardAlignment: C = _.START, className: O } = e,
+            { balance: S } = (0, d.A)(),
+            [v, T] = r.useState(u.b.DEFAULT),
+            [I, N] = r.useState(!1),
+            [y, A] = r.useState(!1),
+            P = r.useRef(null),
             { shouldOpen: R } = (0, p.lJ)({ backgroundElementRef: P }),
             { shouldOpen: D } = (0, c.Mm)({
                 backgroundElementRef: P,
-                isCoachmarkEnabled: x,
+                isCoachmarkEnabled: E,
                 onCloseCallback: h.dG4,
                 onClickPill: h.dG4
             }),
             Z = D || R;
-        i.useEffect(() => {
-            if (!x) return;
+        r.useEffect(() => {
+            if (!E) return;
             let e = (0, c.wH)();
-            (0, p.Pe)() || e || Z ? (A(!0), I(!1)) : A(!1);
-        }, [x, Z]);
-        let w = i.useCallback(() => {
-                let e = !T;
+            (0, p.Pe)() || e || Z ? (A(!0), N(!1)) : A(!1);
+        }, [E, Z]);
+        let w = r.useCallback(() => {
+                let e = !I;
                 e &&
-                    null != N &&
+                    null != x &&
                     (0, o.Y)({
-                        pageType: N,
+                        pageType: x,
                         sectionType: h.jXE.ORBS_BALANCE_MENU,
                         ctaObject: h.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL
                     }),
-                    v(e ? u.b.SELECTED : u.b.DEFAULT),
-                    I(e);
-            }, [T, N]),
-            k = i.useCallback(() => {
-                T && w();
-            }, [T, w]),
-            W = (0, l.Z)(null, k);
-        return (0, r.jsxs)('div', {
-            className: a()(b.container, C, {
+                    T(e ? u.b.SELECTED : u.b.DEFAULT),
+                    N(e);
+            }, [I, x]),
+            k = r.useCallback(() => {
+                I && w();
+            }, [I, w]),
+            L = (0, a.Z)(null, k);
+        return (0, i.jsxs)('div', {
+            className: l()(b.container, O, {
                 [b.hidden]: y,
                 [b.visible]: !y
             }),
             children: [
-                (0, r.jsx)(g.A4, {
+                (0, i.jsx)(g.A4, {
                     ref: P,
-                    balance: O,
-                    balanceWidgetMode: Z ? u.b.DEFAULT : S,
+                    balance: S,
+                    balanceWidgetMode: Z ? u.b.DEFAULT : v,
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },
                     onClick: w,
                     showNotificationBadge: t
                 }),
-                T &&
-                    (0, r.jsx)('div', {
-                        className: a()(b.cardContainer, j, {
+                I &&
+                    (0, i.jsx)('div', {
+                        className: l()(b.cardContainer, C, {
                             [b.hidden]: y,
                             [b.visible]: !y
                         }),
-                        ref: W,
-                        children: (0, r.jsx)(m.L, {
-                            analyticsPage: N,
+                        ref: L,
+                        children: (0, i.jsx)(m.L, {
+                            analyticsPage: x,
                             ctaText: n,
                             ctaOnClick: () => {
                                 w(), s();
                             },
-                            linkText: E
+                            linkText: j
                         })
                     })
             ]
         });
     };
-N.CardAlignment = _;
+x.CardAlignment = _;

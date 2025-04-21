@@ -29,7 +29,7 @@ function p(e) {
                             variant: 'heading-xl/semibold',
                             id: p,
                             className: h.header,
-                            children: d.NW.format(d.t.V4fxrq, {
+                            children: d.intl.format(d.t.V4fxrq, {
                                 tab: (e, t) =>
                                     (0, l.jsx)(
                                         c.M2$,
@@ -43,7 +43,7 @@ function p(e) {
                         }),
                         (0, l.jsx)(c.Text, {
                             variant: 'text-md/normal',
-                            children: d.NW.string(d.t['oQA/OD'])
+                            children: d.intl.string(d.t['oQA/OD'])
                         }),
                         (0, l.jsxs)('ul', {
                             className: h.tips,
@@ -53,7 +53,7 @@ function p(e) {
                                         (0, l.jsx)(c.M2$, { shortcut: r._.binds['0'] }),
                                         (0, l.jsx)(c.Text, {
                                             variant: 'text-md/normal',
-                                            children: d.NW.string(d.t['43Qn2t'])
+                                            children: d.intl.string(d.t['43Qn2t'])
                                         })
                                     ]
                                 }),
@@ -62,7 +62,7 @@ function p(e) {
                                         (0, l.jsx)(c.M2$, { shortcut: a.$.binds['0'] }),
                                         (0, l.jsx)(c.Text, {
                                             variant: 'text-md/normal',
-                                            children: d.NW.string(d.t.zJg4FR)
+                                            children: d.intl.string(d.t.zJg4FR)
                                         })
                                     ]
                                 })
@@ -70,7 +70,7 @@ function p(e) {
                         }),
                         (0, l.jsx)(c.Text, {
                             variant: 'text-md/normal',
-                            children: d.NW.format(d.t.EWFVSU, { link: s.Z.getArticleURL(u.BhN.KEYBOARD_NAVIGATION) })
+                            children: d.intl.format(d.t.EWFVSU, { link: s.Z.getArticleURL(u.BhN.KEYBOARD_NAVIGATION) })
                         })
                     ]
                 }),
@@ -80,7 +80,7 @@ function p(e) {
                         color: c.zxk.Colors.BRAND,
                         size: c.zxk.Sizes.SMALL,
                         autoFocus: !0,
-                        children: d.NW.string(d.t.BddRzc)
+                        children: d.intl.string(d.t.BddRzc)
                     })
                 })
             ]

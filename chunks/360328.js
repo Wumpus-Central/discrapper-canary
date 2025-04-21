@@ -12,7 +12,7 @@ function p(e, t, p, h) {
     let [f, m] = i.useState(!1),
         g = (0, l.e7)([s.Z], () => s.Z.getChannel(h)),
         b = i.useCallback(() => {
-            (0, o.showToast)((0, o.createToast)(d.NW.string(d.t.R0RpRU), o.ToastType.FAILURE));
+            (0, o.showToast)((0, o.createToast)(d.intl.string(d.t.R0RpRU), o.ToastType.FAILURE));
         }, []),
         _ = i.useCallback(async () => {
             if (!f && null != e && null != t && null != p) {

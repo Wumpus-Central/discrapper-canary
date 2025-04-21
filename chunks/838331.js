@@ -1,5 +1,5 @@
 n.d(t, {
-    A7: () => N,
+    A7: () => A,
     hQ: () => R,
     lo: () => w
 }),
@@ -96,7 +96,7 @@ let I = 'data-listbox-item-id',
         STANDARD: m.selected,
         BRAND: m.selectedBrand
     });
-function N(e) {
+function A(e) {
     let [t, n] = i.useState(() => new Set(e));
     return [
         t,
@@ -108,17 +108,17 @@ function N(e) {
         }, [])
     ];
 }
-function A(e) {
+function N(e) {
     return String(e);
 }
 let C = i.createContext({
     activeDescendant: null,
     selected: new Set(),
     setSelected: () => null,
-    itemToString: A
+    itemToString: N
 });
 function R(e) {
-    let { placeholder: t, children: n, value: a, onChange: c, className: u, listClassName: g, 'aria-label': b, multiSelect: O = !1, autoFocus: T = !1, maxVisibleItems: N = 5, itemToString: R = A, showScrollbar: P = !1 } = e,
+    let { placeholder: t, children: n, value: a, onChange: c, className: u, listClassName: g, 'aria-label': b, multiSelect: O = !1, autoFocus: T = !1, maxVisibleItems: A = 5, itemToString: R = N, showScrollbar: P = !1 } = e,
         [w, D] = i.useState(''),
         [L] = i.useState(!0),
         [x, M] = i.useState(null),
@@ -169,7 +169,7 @@ function R(e) {
             scrollToEnd: V,
             setFocus: Z
         }),
-        W = P ? d.Tv : d.lW;
+        Y = P ? d.Tv : d.lW;
     return (0, r.jsx)(l.bG, {
         navigator: H,
         children: (0, r.jsx)(l.SJ, {
@@ -210,12 +210,12 @@ function R(e) {
                                           children: [
                                               (0, r.jsx)(p.X6q, {
                                                   variant: 'heading-md/semibold',
-                                                  children: h.NW.string(h.t['4o4z3d'])
+                                                  children: h.intl.string(h.t['4o4z3d'])
                                               }),
                                               (0, r.jsx)(_.x, {
                                                   color: 'text-muted',
                                                   variant: 'text-md/normal',
-                                                  children: h.NW.string(h.t.QwSXv7)
+                                                  children: h.intl.string(h.t.QwSXv7)
                                               })
                                           ]
                                       })
@@ -227,9 +227,9 @@ function R(e) {
                                               itemToString: R
                                           },
                                           children: (0, r.jsx)(
-                                              W,
+                                              Y,
                                               y(E({}, s), {
-                                                  style: { maxHeight: N * (S + 6) },
+                                                  style: { maxHeight: A * (S + 6) },
                                                   'aria-multiselectable': O,
                                                   id: k,
                                                   ref: j,

@@ -27,7 +27,7 @@ let o = (e) => {
                       onClick: () => {
                           n();
                       },
-                      'aria-label': i.NW.string(i.t.WAI6xs),
+                      'aria-label': i.intl.string(i.t.WAI6xs),
                       className: a.closeIcon
                   })
               ]

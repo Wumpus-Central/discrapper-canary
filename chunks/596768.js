@@ -21,7 +21,7 @@ var a = n(200651),
     y = n(388032),
     C = n(459100),
     O = n(616257);
-let N = [
+let E = [
         {
             key: 'id',
             cellClassName: C.eventColumn,
@@ -47,7 +47,7 @@ let N = [
             }
         }
     ],
-    E = [
+    N = [
         {
             id: 'details',
             name: 'Details',
@@ -127,7 +127,7 @@ function T() {
         s = r.useMemo(() => l.filter((t) => 0 === e.length || o()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, d] = r.useState(void 0),
         h = s.find((e) => e.key === c),
-        { TabBar: p, renderSelectedTab: v } = (0, _.ZP)({ tabs: E }, []),
+        { TabBar: p, renderSelectedTab: v } = (0, _.ZP)({ tabs: N }, []),
         T = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
         S = r.useCallback((e) => {
             x.Z.dispatch({
@@ -157,11 +157,11 @@ function T() {
                         size: m.zxk.Sizes.ICON,
                         onClick: f.Zw,
                         children: (0, a.jsx)('span', {
-                            title: y.NW.string(y.t.VkKicX),
+                            title: y.intl.string(y.t.VkKicX),
                             children: (0, a.jsx)(m.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': y.NW.string(y.t.VkKicX)
+                                'aria-label': y.intl.string(y.t.VkKicX)
                             })
                         })
                     }),
@@ -175,7 +175,7 @@ function T() {
                 ]
             }),
             (0, a.jsx)(j.Z, {
-                columns: N,
+                columns: E,
                 data: s,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key)

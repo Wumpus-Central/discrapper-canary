@@ -25,7 +25,7 @@ let p = (e) => {
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
         m = 1 === n ? u.giftModalContainer : u.shopPageContainer,
-        g = 1 === n ? c.NW.string(c.t['+2QBZW']) : c.NW.string(c.t.LuhKs7);
+        g = 1 === n ? c.intl.string(c.t['+2QBZW']) : c.intl.string(c.t.LuhKs7);
     return (0, r.jsxs)('div', {
         className: m,
         children: [
@@ -37,7 +37,7 @@ let p = (e) => {
             (0, r.jsx)(o.X6q, {
                 className: u.heading1,
                 variant: 'heading-xl/semibold',
-                children: c.NW.string(c.t['i5SQ7+'])
+                children: c.intl.string(c.t['i5SQ7+'])
             }),
             (0, r.jsx)(o.Text, {
                 className: u.description,
@@ -55,7 +55,7 @@ let p = (e) => {
                 size: o.zxk.Sizes.MEDIUM,
                 color: o.zxk.Colors.BRAND,
                 onClick: t,
-                children: c.NW.string(c.t['+hivLS'])
+                children: c.intl.string(c.t['+hivLS'])
             })
         ]
     });

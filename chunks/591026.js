@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(481060),
-    l = n(467319),
+    l = n(481060),
+    s = n(467319),
     a = n(456677),
     o = n(55889),
     c = n(300453),
@@ -57,20 +57,20 @@ function f(e) {
     var t, n;
     let { rule: f, onChangeRule: x } = e,
         [b, j] = i.useState(null == (t = f.triggerMetadata) ? void 0 : t.mentionTotalLimit),
-        N = (0, l.a)(f.guildId, !1);
+        _ = (0, s.a)(f.guildId, !1);
     return (0, r.jsxs)('div', {
         className: g.cardContentsContainer,
         children: [
             (0, r.jsxs)(c.Z, {
                 step: 1,
-                header: m.NW.string(m.t.IGfuTU),
+                header: m.intl.string(m.t.IGfuTU),
                 children: [
                     (0, r.jsxs)('div', {
                         className: g.mentionLimitContainer,
                         children: [
                             (0, r.jsx)('div', {
                                 className: g.mentionLimitIconContainer,
-                                children: (0, r.jsx)(s.lOy, {
+                                children: (0, r.jsx)(l.lOy, {
                                     size: 'md',
                                     color: 'currentColor',
                                     className: g.mentionLimitIcon
@@ -79,21 +79,21 @@ function f(e) {
                             (0, r.jsxs)('div', {
                                 className: g.mentionLimitTextContainer,
                                 children: [
-                                    (0, r.jsx)(s.X6q, {
+                                    (0, r.jsx)(l.X6q, {
                                         variant: 'heading-sm/semibold',
-                                        children: m.NW.string(m.t['s/26oa'])
+                                        children: m.intl.string(m.t['s/26oa'])
                                     }),
-                                    (0, r.jsx)(s.Text, {
+                                    (0, r.jsx)(l.Text, {
                                         color: 'interactive-normal',
                                         variant: 'text-xs/medium',
                                         className: g.descriptionHint,
-                                        children: m.NW.string(m.t['8uW4/P'])
+                                        children: m.intl.string(m.t['8uW4/P'])
                                     })
                                 ]
                             }),
                             (0, r.jsx)('div', {
                                 className: g.stepperContainer,
-                                children: (0, r.jsx)(s.FiK, {
+                                children: (0, r.jsx)(l.FiK, {
                                     value: b,
                                     onChange: (e) => {
                                         j(e), x(h(p({}, f), { triggerMetadata: h(p({}, f.triggerMetadata), { mentionTotalLimit: e }) }));
@@ -105,13 +105,13 @@ function f(e) {
                             })
                         ]
                     }),
-                    N
+                    _
                         ? (0, r.jsxs)('div', {
                               className: g.mentionLimitContainer,
                               children: [
                                   (0, r.jsx)('div', {
                                       className: g.mentionLimitIconContainer,
-                                      children: (0, r.jsx)(s.S4f, {
+                                      children: (0, r.jsx)(l.S4f, {
                                           size: 'md',
                                           color: 'currentColor',
                                           className: g.mentionLimitIcon
@@ -120,21 +120,21 @@ function f(e) {
                                   (0, r.jsxs)('div', {
                                       className: g.mentionLimitTextContainer,
                                       children: [
-                                          (0, r.jsx)(s.X6q, {
+                                          (0, r.jsx)(l.X6q, {
                                               variant: 'heading-sm/semibold',
-                                              children: m.NW.string(m.t.XnuC9v)
+                                              children: m.intl.string(m.t.XnuC9v)
                                           }),
-                                          (0, r.jsx)(s.Text, {
+                                          (0, r.jsx)(l.Text, {
                                               color: 'interactive-normal',
                                               variant: 'text-xs/medium',
                                               className: g.descriptionHint,
-                                              children: m.NW.string(m.t.EDBe5u)
+                                              children: m.intl.string(m.t.EDBe5u)
                                           })
                                       ]
                                   }),
                                   (0, r.jsx)('div', {
-                                      children: (0, r.jsx)(s.XZJ, {
-                                          type: s.XZJ.Types.INVERTED,
+                                      children: (0, r.jsx)(l.XZJ, {
+                                          type: l.XZJ.Types.INVERTED,
                                           value: null == (n = f.triggerMetadata) ? void 0 : n.mentionRaidProtectionEnabled,
                                           onChange: (e, t) => {
                                               x(h(p({}, f), { triggerMetadata: h(p({}, f.triggerMetadata), { mentionRaidProtectionEnabled: t }) }));
@@ -150,7 +150,7 @@ function f(e) {
             (0, r.jsx)(d.Z, { type: d.Z.Type.ARROW_DOWN }),
             (0, r.jsx)(c.Z, {
                 step: 2,
-                header: m.NW.string(m.t['18TOiY']),
+                header: m.intl.string(m.t['18TOiY']),
                 children: (0, r.jsx)(a.Z, {
                     rule: f,
                     onChangeRule: x
@@ -159,7 +159,7 @@ function f(e) {
             (0, r.jsx)(d.Z, { type: d.Z.Type.CROSS }),
             (0, r.jsx)(c.Z, {
                 step: 3,
-                header: m.NW.string(m.t.eq3gjo),
+                header: m.intl.string(m.t.eq3gjo),
                 children: (0, r.jsx)(o.Z, {
                     rule: f,
                     onChangeRule: x

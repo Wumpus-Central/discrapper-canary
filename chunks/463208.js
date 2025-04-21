@@ -219,8 +219,8 @@ class S extends (r = a.Component) {
             m(this, 'hasError', () => (null != this.props.error && this.props.error.length > 0) || (!1 !== this.state.dirty && (this.getIsUnderFlowing() || this.getIsOverFlowing()))),
             m(this, 'getError', () => {
                 let { error: e, minLength: t, maxLength: n } = this.props,
-                    r = this.getIsUnderFlowing() ? p.NW.formatToPlainString(p.t['62rk1N'], { minLength: t }) : null,
-                    i = this.getIsOverFlowing() ? p.NW.formatToPlainString(p.t.ICT5S0, { maxLength: n }) : null;
+                    r = this.getIsUnderFlowing() ? p.intl.formatToPlainString(p.t['62rk1N'], { minLength: t }) : null,
+                    i = this.getIsOverFlowing() ? p.intl.formatToPlainString(p.t.ICT5S0, { maxLength: n }) : null;
                 return (null != e && e.length < 1) || null === e ? null : null != e ? e : !1 === this.state.dirty ? null : null != r ? r : i;
             }),
             m(this, 'getIsUnderFlowing', () => {

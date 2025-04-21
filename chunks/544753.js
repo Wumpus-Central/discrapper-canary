@@ -1,13 +1,13 @@
 n.d(t, { Z: () => a });
 var r = n(442837),
-    i = n(592125),
-    l = n(430824),
+    l = n(592125),
+    i = n(430824),
     s = n(944486);
 function a() {
-    let e = (0, r.e7)([s.Z, i.Z], () => i.Z.getChannel(s.Z.getVoiceChannelId())),
+    let e = (0, r.e7)([s.Z, l.Z], () => l.Z.getChannel(s.Z.getVoiceChannelId())),
         t = null == e ? void 0 : e.getGuildId();
-    return (0, r.e7)([l.Z], () => {
+    return (0, r.e7)([i.Z], () => {
         var e;
-        return null != t ? (null == (e = l.Z.getGuild(t)) ? void 0 : e.premiumTier) : null;
+        return null != t ? (null == (e = i.Z.getGuild(t)) ? void 0 : e.premiumTier) : null;
     });
 }

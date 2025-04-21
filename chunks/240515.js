@@ -1,101 +1,101 @@
-r.d(e, { default: () => I });
-var n = r(200651),
-    i = r(192379),
-    o = r(990547),
-    c = r(481060),
-    s = r(194359),
-    a = r(819557),
-    l = r(138201),
-    d = r(626135),
-    u = r(63063),
-    f = r(5192),
-    O = r(478923),
-    m = r(858380),
-    j = r(981631),
-    N = r(388032),
-    p = r(111627);
-function x(t) {
+n.d(e, { default: () => h });
+var r = n(200651),
+    i = n(192379),
+    o = n(990547),
+    l = n(481060),
+    c = n(194359),
+    s = n(819557),
+    a = n(138201),
+    d = n(626135),
+    u = n(63063),
+    f = n(5192),
+    O = n(478923),
+    m = n(858380),
+    j = n(981631),
+    p = n(388032),
+    x = n(111627);
+function g(t) {
     for (var e = 1; e < arguments.length; e++) {
-        var r = null != arguments[e] ? arguments[e] : {},
-            n = Object.keys(r);
+        var n = null != arguments[e] ? arguments[e] : {},
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(r, t).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (t) {
+                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
                 })
             )),
-            n.forEach(function (e) {
-                var n;
-                (n = r[e]),
+            r.forEach(function (e) {
+                var r;
+                (r = n[e]),
                     e in t
                         ? Object.defineProperty(t, e, {
-                              value: n,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = n);
+                        : (t[e] = r);
             });
     }
     return t;
 }
-function g(t, e) {
+function b(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
             : (function (t, e) {
-                  var r = Object.keys(t);
+                  var n = Object.keys(t);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(t);
-                      r.push.apply(r, n);
+                      var r = Object.getOwnPropertySymbols(t);
+                      n.push.apply(n, r);
                   }
-                  return r;
-              })(Object(e)).forEach(function (r) {
-                  Object.defineProperty(t, r, Object.getOwnPropertyDescriptor(e, r));
+                  return n;
+              })(Object(e)).forEach(function (n) {
+                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
               }),
         t
     );
 }
-function b() {
-    return (0, n.jsxs)(a.z, {
+function I() {
+    return (0, r.jsxs)(s.z, {
         children: [
-            (0, n.jsx)(a.q, {
-                title: N.NW.string(N.t.ruhGkp),
-                description: N.NW.string(N.t['/FWKKC']),
-                icon: c.owK
+            (0, r.jsx)(s.q, {
+                title: p.intl.string(p.t.ruhGkp),
+                description: p.intl.string(p.t['/FWKKC']),
+                icon: l.owK
             }),
-            (0, n.jsx)(a.q, {
-                title: N.NW.string(N.t.N9v3en),
-                description: N.NW.string(N.t.ddpuJi),
-                icon: c.owK
+            (0, r.jsx)(s.q, {
+                title: p.intl.string(p.t.N9v3en),
+                description: p.intl.string(p.t.ddpuJi),
+                icon: l.owK
             }),
-            (0, n.jsx)(a.q, {
-                title: N.NW.string(N.t['4ycGEx']),
-                description: N.NW.string(N.t['5yfN+v']),
-                icon: c.d3s
+            (0, r.jsx)(s.q, {
+                title: p.intl.string(p.t['4ycGEx']),
+                description: p.intl.string(p.t['5yfN+v']),
+                icon: l.d3s
             })
         ]
     });
 }
-function I(t) {
-    var { user: e, guildId: r, channelId: a, onIgnore: I, onBlock: h, location: E = 'ContextMenu' } = t,
-        y = (function (t, e) {
+function h(t) {
+    var { user: e, guildId: n, channelId: s, onIgnore: h, onBlock: E, location: y = 'ContextMenu' } = t,
+        N = (function (t, e) {
             if (null == t) return {};
-            var r,
-                n,
+            var n,
+                r,
                 i = (function (t, e) {
                     if (null == t) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         i = {},
                         o = Object.keys(t);
-                    for (n = 0; n < o.length; n++) (r = o[n]), e.indexOf(r) >= 0 || (i[r] = t[r]);
+                    for (r = 0; r < o.length; r++) (n = o[r]), e.indexOf(n) >= 0 || (i[n] = t[n]);
                     return i;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var o = Object.getOwnPropertySymbols(t);
-                for (n = 0; n < o.length; n++) (r = o[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (i[r] = t[r]);
+                for (r = 0; r < o.length; r++) (n = o[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
             }
             return i;
         })(t, ['user', 'guildId', 'channelId', 'onIgnore', 'onBlock', 'location']);
@@ -104,108 +104,108 @@ function I(t) {
             () => () => {
                 d.default.track(j.rMx.USER_REMEDIATION_ACTION, {
                     action: m.l.DISMISS_IGNORE,
-                    location: E
+                    location: y
                 });
             },
-            [E]
+            [y]
         ),
-        (0, n.jsx)(
-            c.ConfirmModal,
-            g(
-                x(
+        (0, r.jsx)(
+            l.ConfirmModal,
+            b(
+                g(
                     {
-                        confirmText: N.NW.string(N.t.ytCpKi),
-                        cancelText: N.NW.string(N.t['ETE/oK']),
+                        confirmText: p.intl.string(p.t.ytCpKi),
+                        cancelText: p.intl.string(p.t['ETE/oK']),
                         onConfirm: () => {
-                            null == I || I(), s.Z.ignoreUser(e.id, E, null != a ? a : void 0), d.default.track(j.rMx.IGNORE_USER_CONFIRMED);
+                            null == h || h(), c.Z.ignoreUser(e.id, y, null != s ? s : void 0), d.default.track(j.rMx.IGNORE_USER_CONFIRMED);
                         },
                         onCancel: () => {
                             d.default.track(j.rMx.USER_REMEDIATION_ACTION, {
                                 action: m.l.CANCEL_IGNORE,
-                                location: E
+                                location: y
                             });
                         },
                         impression: { impressionName: o.ImpressionNames.IGNORE_USER_CONFIRMATION },
-                        confirmButtonColor: c.zxk.Colors.BRAND
+                        confirmButtonColor: l.zxk.Colors.BRAND
                     },
-                    y
+                    N
                 ),
                 {
-                    children: (0, n.jsxs)('div', {
-                        className: p.container,
+                    children: (0, r.jsxs)('div', {
+                        className: x.container,
                         children: [
-                            (0, n.jsxs)('div', {
-                                className: p.confirmationHeader,
+                            (0, r.jsxs)('div', {
+                                className: x.confirmationHeader,
                                 children: [
-                                    (0, n.jsxs)('div', {
-                                        className: p.iconContainer,
+                                    (0, r.jsxs)('div', {
+                                        className: x.iconContainer,
                                         children: [
-                                            (0, n.jsx)(c.qEK, {
-                                                size: c.EFr.SIZE_56,
+                                            (0, r.jsx)(l.qEK, {
+                                                size: l.EFr.SIZE_56,
                                                 src: e.getAvatarURL(void 0, 64),
                                                 'aria-hidden': !0
                                             }),
-                                            (0, n.jsx)('div', {
-                                                className: p.icon,
-                                                children: (0, n.jsx)(c.kZF, {})
+                                            (0, r.jsx)('div', {
+                                                className: x.icon,
+                                                children: (0, r.jsx)(l.kZF, {})
                                             })
                                         ]
                                     }),
-                                    (0, n.jsxs)('div', {
+                                    (0, r.jsxs)('div', {
                                         children: [
-                                            (0, n.jsx)(c.X6q, {
+                                            (0, r.jsx)(l.X6q, {
                                                 variant: 'heading-xl/bold',
                                                 color: 'header-primary',
-                                                children: N.NW.format(N.t['WrQD/f'], { username: f.ZP.getName(r, a, e) })
+                                                children: p.intl.format(p.t['WrQD/f'], { username: f.ZP.getName(n, s, e) })
                                             }),
-                                            (0, n.jsx)(c.Text, {
+                                            (0, r.jsx)(l.Text, {
                                                 variant: 'text-md/medium',
                                                 color: 'header-secondary',
-                                                children: N.NW.string(N.t.JKL1u7)
+                                                children: p.intl.string(p.t.JKL1u7)
                                             })
                                         ]
                                     })
                                 ]
                             }),
-                            (0, n.jsx)(b, {}),
-                            (0, n.jsxs)('div', {
-                                className: p.otherOptions,
+                            (0, r.jsx)(I, {}),
+                            (0, r.jsxs)('div', {
+                                className: x.otherOptions,
                                 children: [
-                                    (0, n.jsx)(l.rT, {
-                                        title: N.NW.string(N.t['1v01go']),
-                                        children: (0, n.jsx)(l.ZP, {
-                                            title: N.NW.string(N.t.bwxY39),
-                                            description: N.NW.string(N.t.NTnf1d),
+                                    (0, r.jsx)(a.rT, {
+                                        title: p.intl.string(p.t['1v01go']),
+                                        children: (0, r.jsx)(a.ZP, {
+                                            title: p.intl.string(p.t.bwxY39),
+                                            description: p.intl.string(p.t.NTnf1d),
                                             titleVariant: 'text-md/medium',
                                             descriptionVariant: 'text-xs/medium',
-                                            buttonText: N.NW.string(N.t.QdfUHB),
-                                            buttonColor: c.Ttl.PRIMARY,
+                                            buttonText: p.intl.string(p.t.QdfUHB),
+                                            buttonColor: l.Ttl.PRIMARY,
                                             onButtonPress: () => {
                                                 d.default.track(j.rMx.USER_REMEDIATION_ACTION, {
                                                     action: m.l.GOTO_BLOCK,
-                                                    location: E
+                                                    location: y
                                                 }),
-                                                    (0, c.pTH)(),
-                                                    (0, c.h7j)((t) =>
-                                                        (0, n.jsx)(
+                                                    (0, l.pTH)(),
+                                                    (0, l.h7j)((t) =>
+                                                        (0, r.jsx)(
                                                             O.default,
-                                                            g(x({}, t), {
+                                                            b(g({}, t), {
                                                                 user: e,
-                                                                guildId: r,
-                                                                channelId: a,
-                                                                onBlock: h,
-                                                                onIgnore: I,
-                                                                location: E
+                                                                guildId: n,
+                                                                channelId: s,
+                                                                onBlock: E,
+                                                                onIgnore: h,
+                                                                location: y
                                                             })
                                                         )
                                                     );
                                             }
                                         })
                                     }),
-                                    (0, n.jsx)(c.Text, {
+                                    (0, r.jsx)(l.Text, {
                                         variant: 'text-sm/medium',
-                                        className: p.featureGuide,
-                                        children: N.NW.format(N.t.Hjvqr6, { articleLink: u.Z.getArticleURL(j.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
+                                        className: x.featureGuide,
+                                        children: p.intl.format(p.t.Hjvqr6, { articleLink: u.Z.getArticleURL(j.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
                                     })
                                 ]
                             })

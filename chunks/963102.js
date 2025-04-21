@@ -39,29 +39,29 @@ function k(e) {
         T = [
             {
                 tab: x.AW.HOME,
-                displayText: j.NW.string(j.t.ijDDw8)
+                displayText: j.intl.string(j.t.ijDDw8)
             },
             {
                 tab: x.AW.CATALOG,
-                displayText: j.NW.string(j.t.xFcotb)
+                displayText: j.intl.string(j.t.xFcotb)
             }
         ];
     I &&
         T.push({
             tab: x.AW.ORBS,
-            displayText: j.NW.string(j.t['KUYR+P'])
+            displayText: j.intl.string(j.t['KUYR+P'])
         });
-    let N = n ? v.DR : a,
-        L = k === x.AW.ORBS ? O.ZY5.SHOP_ORBS_TAB : O.ZY5.COLLECTIBLES_SHOP,
+    let L = n ? v.DR : a,
+        N = k === x.AW.ORBS ? O.ZY5.SHOP_ORBS_TAB : O.ZY5.COLLECTIBLES_SHOP,
         A = l.useCallback(() => {
-            t && (N(), (0, u.Ou)()),
+            t && (L(), (0, u.Ou)()),
                 (0, g.Y)({
-                    pageType: L,
+                    pageType: N,
                     sectionType: O.jXE.ORBS_BALANCE_MENU,
                     ctaObject: O.qAy.CTA_TO_QUEST_HOME
                 }),
                 (0, f.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
-        }, [N, t, L]);
+        }, [L, t, N]);
     return (0, r.jsx)(c.f6W, {
         theme: E,
         children: (e) =>
@@ -71,7 +71,7 @@ function k(e) {
                 toolbar: t || !B ? null : (0, r.jsx)(l.Fragment, {}),
                 children: [
                     (0, r.jsx)(C.Z, { className: y.discordLogo }),
-                    (0, r.jsx)(p.Z.Title, { children: j.NW.string(j.t.pWG4zc) }),
+                    (0, r.jsx)(p.Z.Title, { children: j.intl.string(j.t.pWG4zc) }),
                     (0, r.jsx)('div', {
                         className: y.tabs,
                         children: T.map((e) => {
@@ -94,15 +94,15 @@ function k(e) {
                             children: [
                                 I &&
                                     (0, r.jsx)(m.V9, {
-                                        analyticsPage: L,
+                                        analyticsPage: N,
                                         cardAlignment: m.V9.CardAlignment.END,
-                                        ctaText: j.NW.string(j.t.VC4Mq6),
+                                        ctaText: j.intl.string(j.t.VC4Mq6),
                                         ctaOnClick: A,
                                         className: y.balanceWidgetMenu
                                     }),
                                 t &&
                                     (0, r.jsx)(d.Z, {
-                                        closeAction: N,
+                                        closeAction: L,
                                         keybind: 'ESC'
                                     })
                             ]

@@ -70,10 +70,10 @@ function f(t) {
             {
                 artElement: (0, r.jsx)(b, {}),
                 type: i.cd.FOR_LATER_MODAL_UPSELL,
-                title: l.NW.string(l.t.w4DRbW),
-                body: l.NW.string(l.t.F6u3Ex),
-                glowUp: l.NW.string(l.t.F6u3Ex),
-                secondaryCTA: l.NW.string(l.t.PcTCBw),
+                title: l.intl.string(l.t.w4DRbW),
+                body: l.intl.string(l.t.F6u3Ex),
+                glowUp: l.intl.string(l.t.F6u3Ex),
+                secondaryCTA: l.intl.string(l.t.PcTCBw),
                 onSecondaryClick: function () {
                     c.default.track(s.rMx.PREMIUM_PROMOTION_OPENED, {
                         location_section: s.jXE.PREMIUM_FOR_LATER_UPSELL_MODAL,

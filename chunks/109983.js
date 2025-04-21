@@ -1,31 +1,31 @@
-n.d(t, { Z: () => a });
-var s = n(200651);
-n(192379);
-var i = n(481060),
-    r = n(624516),
-    l = n(216019);
-function a(e) {
-    let { icon: t, message: n, onClick: a, autoFocus: o } = e;
-    return (0, s.jsx)(i.tEY, {
-        children: (0, s.jsxs)('button', {
-            className: r.container,
-            onClick: a,
-            autoFocus: o,
+e.d(n, { Z: () => r });
+var i = e(200651);
+e(192379);
+var l = e(481060),
+    s = e(624516),
+    a = e(216019);
+function r(t) {
+    let { icon: n, message: e, onClick: r, autoFocus: d } = t;
+    return (0, i.jsx)(l.tEY, {
+        children: (0, i.jsxs)('button', {
+            className: s.container,
+            onClick: r,
+            autoFocus: d,
             children: [
-                (0, s.jsx)('img', {
-                    className: r.icon,
+                (0, i.jsx)('img', {
+                    className: s.icon,
                     alt: '',
-                    src: t
+                    src: n
                 }),
-                (0, s.jsx)(i.Text, {
-                    className: r.text,
+                (0, i.jsx)(l.Text, {
+                    className: s.text,
                     variant: 'text-md/bold',
-                    children: n
+                    children: e
                 }),
-                (0, s.jsx)('img', {
-                    className: r.arrow,
+                (0, i.jsx)('img', {
+                    className: s.arrow,
                     alt: '',
-                    src: l
+                    src: a
                 })
             ]
         })

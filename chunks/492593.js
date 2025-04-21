@@ -74,12 +74,12 @@ let g = function (e) {
                 }
             },
             hasThread: P,
-            isSystemMessage: N,
-            hasReply: T,
-            authorHasGradientRole: w = !1,
-            guildId: S
+            isSystemMessage: T,
+            hasReply: w,
+            authorHasGradientRole: S = !1,
+            guildId: I
         } = e,
-        I = (function (e, t) {
+        N = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -98,7 +98,7 @@ let g = function (e) {
             }
             return o;
         })(e, ['className', 'compact', 'contentOnly', 'zalgo', 'preview', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'authorHasGradientRole', 'guildId']);
-    let k = (0, c.Z)(S, 'BaseMessage'),
+    let k = (0, c.Z)(I, 'BaseMessage'),
         M = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         R = (0, r.jsx)(
             i.tEY,
@@ -109,7 +109,7 @@ let g = function (e) {
                         d(
                             {
                                 className: a()(t, {
-                                    [u.gradient]: !!k && w,
+                                    [u.gradient]: !!k && S,
                                     [u.reducedMotion]: M,
                                     [u.wrapper]: !0,
                                     [u.contentOnly]: o,
@@ -118,12 +118,12 @@ let g = function (e) {
                                     [u.cozy]: !n,
                                     [u.zalgo]: g,
                                     [u.hasThread]: P,
-                                    [u.isSystemMessage]: N,
-                                    [u.hasReply]: T
+                                    [u.isSystemMessage]: T,
+                                    [u.hasReply]: w
                                 }),
                                 ref: x
                             },
-                            I
+                            N
                         ),
                         {
                             role: 'article',

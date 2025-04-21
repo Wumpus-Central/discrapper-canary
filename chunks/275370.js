@@ -1,59 +1,59 @@
-t.d(r, { default: () => f }), t(388685);
+t.d(r, { default: () => x }), t(388685);
 var n = t(200651),
     o = t(192379),
-    s = t(512722),
-    c = t.n(s),
+    l = t(512722),
+    s = t.n(l),
     i = t(481060),
-    l = t(51144),
+    c = t(51144),
     a = t(985002),
     d = t(880257),
     u = t(957656),
     b = t(130310),
-    h = t(332495),
-    j = t(388032),
-    x = t(13625);
-let f = (e) => {
-    let { currentUser: r, otherUser: t, transitionState: s, onClose: f } = e,
+    f = t(332495),
+    h = t(388032),
+    j = t(13625);
+let x = (e) => {
+    let { currentUser: r, otherUser: t, transitionState: l, onClose: x } = e,
         p = o.useCallback(() => {
-            f();
-        }, [f]),
+            x();
+        }, [x]),
         m = (0, d.Z)(),
         [y, O] = o.useState(!1),
         g = o.useCallback(() => {
             O(!0);
         }, []),
-        { acceptLinkRequest: N, isAcceptLoading: k } = (0, a.G)({
+        { acceptLinkRequest: k, isAcceptLoading: v } = (0, a.G)({
             onError: g,
             onSuccess: p
         });
     return (
-        c()(!m, 'FamilyCenterAcceptLinkModal should only be rendered for teens.'),
+        s()(!m, 'FamilyCenterAcceptLinkModal should only be rendered for teens.'),
         (0, n.jsxs)(u.Z, {
-            transitionState: s,
-            'aria-label': j.NW.string(h.Z.rlNJwc),
-            className: x.root,
+            transitionState: l,
+            'aria-label': h.intl.string(f.default.rlNJwc),
+            className: j.root,
             children: [
-                (0, n.jsx)(u.Z.Error, { error: y ? j.NW.string(h.Z.pegSMz) : void 0 }),
+                (0, n.jsx)(u.Z.Error, { error: y ? h.intl.string(f.default.pegSMz) : void 0 }),
                 (0, n.jsxs)(i.hzk, {
                     children: [
                         (0, n.jsx)(u.Z.Header, {
                             currentUser: r,
                             otherUser: t,
-                            header: j.NW.string(h.Z.rlNJwc),
+                            header: h.intl.string(f.default.rlNJwc),
                             icon: (0, n.jsx)(i.xPt, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: x.linkIcon
+                                className: j.linkIcon
                             })
                         }),
                         (0, n.jsxs)(u.Z.Content, {
                             children: [
                                 (0, n.jsx)(b.Z, { inModal: !0 }),
                                 (0, n.jsx)(i.Text, {
-                                    className: x.disclaimer,
+                                    className: j.disclaimer,
                                     variant: 'text-xs/normal',
                                     color: 'text-normal',
-                                    children: j.NW.format(h.Z.snlFqa, { username: l.ZP.getName(t) })
+                                    children: h.intl.format(f.default.snlFqa, { username: c.ZP.getName(t) })
                                 })
                             ]
                         })
@@ -62,26 +62,26 @@ let f = (e) => {
                 (0, n.jsx)(i.mzw, {
                     children: (0, n.jsx)('form', {
                         onSubmit: (e) => {
-                            e.preventDefault(), N(t);
+                            e.preventDefault(), k(t);
                         },
                         children: (0, n.jsxs)(u.Z.ButtonFooter, {
                             children: [
                                 (0, n.jsx)(i.zxk, {
                                     type: 'button',
-                                    disabled: k,
+                                    disabled: v,
                                     look: i.zxk.Looks.LINK,
                                     color: i.zxk.Colors.PRIMARY,
-                                    onClick: f,
+                                    onClick: x,
                                     size: i.zxk.Sizes.SMALL,
-                                    children: j.NW.string(j.t['ETE/oK'])
+                                    children: h.intl.string(h.t['ETE/oK'])
                                 }),
                                 (0, n.jsx)(i.zxk, {
                                     type: 'submit',
-                                    disabled: k,
-                                    submitting: k,
+                                    disabled: v,
+                                    submitting: v,
                                     color: i.Ttl.BRAND,
                                     size: i.zxk.Sizes.SMALL,
-                                    children: j.NW.string(h.Z['wI/jo6'])
+                                    children: h.intl.string(f.default['wI/jo6'])
                                 })
                             ]
                         })

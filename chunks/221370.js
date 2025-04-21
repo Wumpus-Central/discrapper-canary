@@ -1,8 +1,8 @@
 r.d(t, { Z: () => O }), r(388685), r(539854);
 var n = r(200651),
-    a = r(192379),
-    i = r(120356),
-    l = r.n(i),
+    i = r(192379),
+    a = r(120356),
+    l = r.n(a),
     s = r(758713),
     o = r(657707),
     c = r(481060),
@@ -40,20 +40,20 @@ function f(e) {
             if (null == e) return {};
             var r,
                 n,
-                a = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        a = {},
-                        i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
-                    return a;
+                        i = {},
+                        a = Object.keys(e);
+                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+                var a = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < a.length; n++) (r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
-            return a;
+            return i;
         })(e, ['platform']);
     switch (t) {
         case s.z.DESKTOP:
@@ -80,25 +80,25 @@ function p(e) {
                     text: (function (e) {
                         switch (e) {
                             case s.z.DESKTOP:
-                                return u.NW.string(u.t.KT6uCA);
+                                return u.intl.string(u.t.KT6uCA);
                             case s.z.XBOX:
-                                return u.NW.string(u.t.DDWUJi);
+                                return u.intl.string(u.t.DDWUJi);
                             case s.z.PLAYSTATION:
-                                return u.NW.string(u.t.fzMz2t);
+                                return u.intl.string(u.t.fzMz2t);
                             case s.z.NINTENDO:
-                                return u.NW.string(u.t.AMW8jY);
+                                return u.intl.string(u.t.AMW8jY);
                             default:
                                 return null;
                         }
                     })(e),
                     children: (t) => {
-                        var r, a;
+                        var r, i;
                         return (0, n.jsx)(
                             f,
                             ((r = m({}, t)),
-                            (a = a = { platform: e }),
+                            (i = i = { platform: e }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
                                 : (function (e, t) {
                                       var r = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -106,8 +106,8 @@ function p(e) {
                                           r.push.apply(r, n);
                                       }
                                       return r;
-                                  })(Object(a)).forEach(function (e) {
-                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                                  })(Object(i)).forEach(function (e) {
+                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
                                   }),
                             r)
                         );
@@ -120,15 +120,15 @@ function p(e) {
 }
 function O(e) {
     let { detectedGame: t, className: r } = e,
-        i = a.useMemo(() => {
+        a = i.useMemo(() => {
             let e = new Set(t.platforms),
                 r = [...e];
             return !e.has(s.z.DESKTOP) && (e.has(s.z.MACOS) || e.has(s.z.LINUX)) && r.push(s.z.DESKTOP), r.filter((e) => g.includes(e));
         }, [t.platforms]);
-    return 0 === i.length
+    return 0 === a.length
         ? null
         : (0, n.jsx)('div', {
               className: l()(d.column, d.gapLg, r),
-              children: i.length > 0 && (0, n.jsx)(p, { platforms: i })
+              children: a.length > 0 && (0, n.jsx)(p, { platforms: a })
           });
 }

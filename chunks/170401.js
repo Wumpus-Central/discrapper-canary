@@ -1,6 +1,6 @@
-n.d(t, { Z: () => a }), n(388685), n(539854);
-var r = n(658722),
-    i = n.n(r);
+n.d(t, { Z: () => l }), n(388685), n(539854);
+var i = n(658722),
+    r = n.n(i);
 function s(e, t, n) {
     return (
         t in e
@@ -14,7 +14,7 @@ function s(e, t, n) {
         e
     );
 }
-class a {
+class l {
     search(e) {
         return new Promise((t) => {
             t(this.getMatchingSettings(e));
@@ -27,10 +27,10 @@ class a {
             let t = [];
             return (
                 this.terms.forEach((n) => {
-                    let [r, s] = n;
+                    let [i, s] = n;
                     for (let n of s)
-                        if (i()(e.toLowerCase(), n.toLowerCase())) {
-                            t.push(r);
+                        if (r()(e.toLowerCase(), n.toLowerCase())) {
+                            t.push(i);
                             break;
                         }
                 }),

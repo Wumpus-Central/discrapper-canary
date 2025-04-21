@@ -46,15 +46,15 @@ function p(e, t, n, r, i) {
     let I = _(O) ? (null != (o = O.packetsSent) ? o : 0) : null != (s = O.packetsReceived) ? s : 0,
         S = _(O) ? (null != (l = O.packetsLost) ? l : 0) : null != (c = O.packetsLost) ? c : 0,
         T = _(O) ? (null != (u = O.frameRateEncode) ? u : 0) : null != (d = O.frameRateDecode) ? d : 0,
-        N = null != (f = null == (a = O.resolution) ? void 0 : a.height) ? f : 0;
-    (n.numDatapoints += 1), (n.frameRateAggregated += T), (n.resolutionAggregated += N);
-    let A = null == i ? void 0 : i.find((e) => 'video' === e.type);
-    if (null != A && t >= n.minVersion) {
+        A = null != (f = null == (a = O.resolution) ? void 0 : a.height) ? f : 0;
+    (n.numDatapoints += 1), (n.frameRateAggregated += T), (n.resolutionAggregated += A);
+    let N = null == i ? void 0 : i.find((e) => 'video' === e.type);
+    if (null != N && t >= n.minVersion) {
         n.numDatapoints -= 1;
-        let e = _(A) ? (null != (h = A.packetsSent) ? h : 0) : null != (m = A.packetsReceived) ? m : 0,
-            t = _(A) ? (null != (g = A.packetsLost) ? g : 0) : null != (E = A.packetsLost) ? E : 0,
-            r = _(A) ? (null != (b = A.frameRateEncode) ? b : 0) : null != (y = A.frameRateDecode) ? y : 0,
-            i = null != (v = null == (p = A.resolution) ? void 0 : p.height) ? v : 0;
+        let e = _(N) ? (null != (h = N.packetsSent) ? h : 0) : null != (m = N.packetsReceived) ? m : 0,
+            t = _(N) ? (null != (g = N.packetsLost) ? g : 0) : null != (E = N.packetsLost) ? E : 0,
+            r = _(N) ? (null != (b = N.frameRateEncode) ? b : 0) : null != (y = N.frameRateDecode) ? y : 0,
+            i = null != (v = null == (p = N.resolution) ? void 0 : p.height) ? v : 0;
         (n.frameRateAggregated -= r), (n.resolutionAggregated -= i), (n.packetsSentOrReceived = I - e), (n.packetsLost = S - t);
     } else (n.packetsSentOrReceived = I), (n.packetsLost = S);
     return (n.frameRate = n.frameRateAggregated / n.numDatapoints), (n.resolution = n.resolutionAggregated / n.numDatapoints), (n.packetLossRate = n.packetsLost / (n.packetsSentOrReceived + n.packetsLost)), n;

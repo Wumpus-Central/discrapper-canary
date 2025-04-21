@@ -1,8 +1,8 @@
 n.d(t, { r: () => h });
 var r = n(933557),
     i = n(356264),
-    a = n(592125),
-    l = n(430824),
+    l = n(592125),
+    a = n(430824),
     o = n(496675),
     s = n(699516),
     c = n(594174),
@@ -33,7 +33,7 @@ function f(e, t) {
             canAnimate: !1
         }),
         timestampLabel: t,
-        accessibilityLabel: p.NW.formatToPlainString(p.t['+l04BA'], {
+        accessibilityLabel: p.intl.formatToPlainString(p.t['+l04BA'], {
             origin: e.name,
             timestamp: t
         })
@@ -42,19 +42,19 @@ function f(e, t) {
 class h {
     getForwardInfo() {
         var e, t, n, u;
-        let m = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a.Z,
+        let m = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z,
             h = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
             g = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Z,
             _ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Z,
-            b = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : l.Z,
+            b = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : a.Z,
             x = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : i.Z,
             { snapshotIndex: y, parentMessage: v, messageSnapshot: E } = this,
             O = (0, d.Xf)(E.message.timestamp),
-            N = m.getChannel(this.parentMessage.channel_id);
-        if (null != N && N.guild_id === (null == (e = v.messageReference) ? void 0 : e.guild_id)) {
+            j = m.getChannel(this.parentMessage.channel_id);
+        if (null != j && j.guild_id === (null == (e = v.messageReference) ? void 0 : e.guild_id)) {
             let e = m.getChannel(null == (n = v.messageReference) ? void 0 : n.channel_id);
             if (null == e) {
-                let e = b.getGuild(N.guild_id);
+                let e = b.getGuild(j.guild_id);
                 return null == e
                     ? { snapshotIndex: y }
                     : {
@@ -69,21 +69,21 @@ class h {
                 footerInfo: {
                     originLabel: t,
                     timestampLabel: O,
-                    accessibilityLabel: p.NW.formatToPlainString(p.t['+l04BA'], {
+                    accessibilityLabel: p.intl.formatToPlainString(p.t['+l04BA'], {
                         origin: t,
                         timestamp: O
                     })
                 }
             };
         }
-        let j = null == (t = v.messageReference) ? void 0 : t.guild_id;
-        if (null == j) return { snapshotIndex: y };
-        let C = null != (u = b.getGuild(j)) ? u : x.getGuild(j);
-        return null == C
+        let C = null == (t = v.messageReference) ? void 0 : t.guild_id;
+        if (null == C) return { snapshotIndex: y };
+        let S = null != (u = b.getGuild(C)) ? u : x.getGuild(C);
+        return null == S
             ? { snapshotIndex: y }
             : {
                   snapshotIndex: y,
-                  footerInfo: f(C, O)
+                  footerInfo: f(S, O)
               };
     }
     constructor(e, t, n) {

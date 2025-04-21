@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(752305),
     S = n(30465),
     T = n(140963),
-    N = n(4484),
-    A = n(925994),
+    A = n(4484),
+    N = n(925994),
     C = n(981631),
     R = n(388032),
     P = n(302195);
@@ -100,7 +100,7 @@ class j extends i.Component {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             var t, n;
             let e;
-            (e = this.props.useSlate ? this.props.textValue : (0, A.sk)(this.props.richValue, { mode: 'plain' })), null == (t = (n = this.props).onChange) || t.call(n, null, e, (0, I.JM)(e));
+            (e = this.props.useSlate ? this.props.textValue : (0, N.sk)(this.props.richValue, { mode: 'plain' })), null == (t = (n = this.props).onChange) || t.call(n, null, e, (0, I.JM)(e));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
@@ -191,11 +191,11 @@ class j extends i.Component {
     }
     getPlaceholder() {
         let { disabled: e, placeholder: t, isPreviewing: n } = this.props;
-        return e && !n ? R.NW.string(R.t.IYKTTU) : t;
+        return e && !n ? R.intl.string(R.t.IYKTTU) : t;
     }
     render() {
         var e, t, n, i, a, s;
-        let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: b, spellcheckEnabled: v, useNewSlashCommands: S, canOnlyUseTextCommands: A, className: R, id: w, required: L, maxCharacterCount: M, allowNewLines: j, 'aria-describedby': U, 'aria-labelledby': G, accessibilityLabel: B } = this.props,
+        let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: b, spellcheckEnabled: v, useNewSlashCommands: S, canOnlyUseTextCommands: N, className: R, id: w, required: L, maxCharacterCount: M, allowNewLines: j, 'aria-describedby': U, 'aria-labelledby': G, accessibilityLabel: B } = this.props,
             { submitting: F, popup: V } = this.state,
             Z = {
                 channel: m,
@@ -245,12 +245,12 @@ class j extends i.Component {
             },
             H = b
                 ? (0, r.jsx)(
-                      N.Z,
+                      A.Z,
                       x(D({ ref: this.ref }, Z), {
                           type: g,
                           value: u ? (0, I.JM)('') : c,
                           canUseCommands: null == (t = g.commands) ? void 0 : t.enabled,
-                          canOnlyUseTextCommands: A
+                          canOnlyUseTextCommands: N
                       })
                   )
                 : (0, r.jsx)(T.Z, x(D({ ref: this.ref }, Z), { value: u ? '' : l }));

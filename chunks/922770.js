@@ -98,7 +98,7 @@ function E(e) {
         h = p(e, ['type', 'animated', 'className', 'itemClassName', 'aria-label']);
     let { reducedMotion: m } = i.useContext(s.S),
         E = m.enabled ? g(t) : t;
-    if (((f = null != f ? f : l.NW.string(l.t.ZTNur6)), 'spinningCircle' === E || 'spinningCircleSimple' === E))
+    if (((f = null != f ? f : l.intl.string(l.t.ZTNur6)), 'spinningCircle' === E || 'spinningCircleSimple' === E))
         return (0, r.jsx)(
             'div',
             _(

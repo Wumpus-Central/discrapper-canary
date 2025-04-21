@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
+var i = n(120356),
+    a = n.n(i),
     l = n(793030),
     s = n(194594),
     o = n(359993),
@@ -13,17 +13,17 @@ var a = n(120356),
     m = n(388032),
     h = n(553094);
 function g(e) {
-    let { className: t, view: n, application: a } = e,
+    let { className: t, view: n, application: i } = e,
         g = 'embedded' === n,
-        _ = (0, o.Z)({ application: a });
+        _ = (0, o.Z)({ application: i });
     return (0, r.jsxs)('div', {
-        className: i()(t, {
+        className: a()(t, {
             [h.sideContainer]: !g,
             [h.gridContainer]: g
         }),
         children: [
             (0, r.jsxs)('div', {
-                className: i()(h.sectionContainer, { [h.reducedGap]: g }),
+                className: a()(h.sectionContainer, { [h.reducedGap]: g }),
                 children: [
                     (0, r.jsxs)('div', {
                         className: h.infoSection,
@@ -31,10 +31,10 @@ function g(e) {
                             (0, r.jsx)(l.X6, {
                                 variant: 'heading-sm/semibold',
                                 color: 'header-primary',
-                                children: m.NW.string(m.t['3NxHCw'])
+                                children: m.intl.string(m.t['3NxHCw'])
                             }),
                             (0, r.jsx)(s.Z, {
-                                application: a,
+                                application: i,
                                 mutualGuilds: _,
                                 mutualGuildShownMax: 3,
                                 className: h.guildCountContainer,
@@ -45,25 +45,25 @@ function g(e) {
                         ]
                     }),
                     (0, r.jsx)(c.Z, {
-                        application: a,
+                        application: i,
                         className: h.infoSection
                     }),
                     (0, r.jsx)(p.Z, {
-                        application: a,
+                        application: i,
                         className: h.infoSection
                     })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: i()(h.sectionContainer, { [h.reducedGap]: g }),
+                className: a()(h.sectionContainer, { [h.reducedGap]: g }),
                 children: [
                     (0, r.jsx)(d.Z, {
-                        application: a,
+                        application: i,
                         className: h.infoSection,
                         innerClassName: g ? h.linkGrid : void 0
                     }),
                     (0, r.jsx)(u.Z, {
-                        application: a,
+                        application: i,
                         className: h.infoSection
                     })
                 ]

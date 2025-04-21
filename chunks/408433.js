@@ -2,9 +2,9 @@ n.d(t, {
     En: () => P,
     dY: () => T,
     eC: () => R,
-    jz: () => A,
+    jz: () => N,
     kC: () => O,
-    l3: () => N,
+    l3: () => A,
     o3: () => S,
     vP: () => C
 }),
@@ -159,10 +159,10 @@ function T(e) {
     let { image: t, video: n, type: r, author: i, rawTitle: a } = e;
     return (null != t || null != n) && (r === u.hBH.GIFV || (r !== u.hBH.RICH && null == i && null == a));
 }
-function N(e) {
+function A(e) {
     return e.type === u.hBH.ARTICLE && null != e.url && (g.test(e.url) || m.test(e.url));
 }
-function A(e) {
+function N(e) {
     return e.type === u.hBH.ARTICLE && null != e.url && E.test(e.url);
 }
 function C(e, t, n) {

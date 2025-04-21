@@ -2,8 +2,8 @@ n.d(t, { E: () => g });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    s = n.n(i),
-    l = n(481060),
+    l = n.n(i),
+    s = n(481060),
     a = n(768581),
     o = n(723047),
     c = n(570533),
@@ -17,27 +17,27 @@ function m(e) {
             size: 32
         });
     return (0, r.jsxs)('div', {
-        className: s()(u.emojiRow, { [u.disabled]: i }),
+        className: l()(u.emojiRow, { [u.disabled]: i }),
         children: [
             (0, r.jsx)('img', {
                 className: u.emojiImage,
                 src: o,
                 alt: t.name
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(s.Text, {
                 color: 'header-primary',
                 variant: 'text-md/medium',
                 className: u.emojiAlias,
                 children: t.name
             }),
-            (0, r.jsx)(l.zxk, {
-                look: l.zxk.Looks.BLANK,
-                size: l.zxk.Sizes.ICON,
+            (0, r.jsx)(s.zxk, {
+                look: s.zxk.Looks.BLANK,
+                size: s.zxk.Sizes.ICON,
                 className: u.deleteButton,
                 onClick: () => n(t),
-                'aria-label': d.NW.string(d.t.dVS92d),
+                'aria-label': d.intl.string(d.t.dVS92d),
                 disabled: i,
-                children: (0, r.jsx)(l.XHJ, {
+                children: (0, r.jsx)(s.XHJ, {
                     size: 'md',
                     color: 'currentColor',
                     className: u.trashIcon
@@ -48,12 +48,12 @@ function m(e) {
 }
 function g(e) {
     let { tierEmojiIds: t, guildId: n, onRemoveEmoji: i } = e,
-        s = (0, c.Z)(n),
-        l = null != t ? s.filter((e) => t.has(e.id)) : [],
+        l = (0, c.Z)(n),
+        s = null != t ? l.filter((e) => t.has(e.id)) : [],
         a = (0, o.mY)();
     return (0, r.jsx)('div', {
         className: u.container,
-        children: l.map((e) =>
+        children: s.map((e) =>
             (0, r.jsx)(
                 m,
                 {

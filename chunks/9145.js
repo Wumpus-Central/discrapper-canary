@@ -1,4 +1,4 @@
-n.d(t, { Z: () => U }), n(388685);
+n.d(t, { Z: () => B }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -22,11 +22,11 @@ var r = n(200651),
     j = n(51144),
     O = n(566620),
     E = n(317381),
-    N = n(619915),
-    I = n(988980),
-    P = n(16609),
-    S = n(952561),
-    Z = n(563218),
+    I = n(619915),
+    P = n(988980),
+    S = n(16609),
+    Z = n(952561),
+    N = n(563218),
     T = n(884338),
     A = n(719296),
     w = n(651612),
@@ -35,20 +35,20 @@ var r = n(200651),
     M = n(388032),
     L = n(199570);
 let D = T.u.SIZE_32,
-    W = {
+    U = {
         [R.MI.NO_CHAT]: L.noChat,
         [R.MI.RESIZABLE]: L.resizable
     };
-function U(e) {
+function B(e) {
     var t, n;
-    let { maxHeight: l, connectedLocation: U, renderExternalHeader: B } = e,
-        G = (0, m.Z)({ location: 'ActivityPanelFocusedView' }),
-        F = (0, S.Z)(),
-        H = (0, a.Wu)([E.ZP], () => E.ZP.getEmbeddedActivitiesForLocation(U), [U]),
-        V = (0, P.pY)(U),
-        z = (0, a.e7)([_.Z], () => _.Z.getChannel(V)),
-        Y = (0, N.gb)(H),
-        q = (0, N.uF)(Y),
+    let { maxHeight: l, connectedLocation: B, renderExternalHeader: G } = e,
+        F = (0, m.Z)({ location: 'ActivityPanelFocusedView' }),
+        H = (0, Z.Z)(),
+        V = (0, a.Wu)([E.ZP], () => E.ZP.getEmbeddedActivitiesForLocation(B), [B]),
+        z = (0, S.pY)(B),
+        W = (0, a.e7)([_.Z], () => _.Z.getChannel(z)),
+        Y = (0, I.gb)(V),
+        q = (0, I.uF)(Y),
         K = i.useCallback(() => {
             (0, O.tg)(R.Ez.PIP);
         }, []),
@@ -78,21 +78,21 @@ function U(e) {
     let el = er.width / Math.max(er.height, 1) < R.I0,
         eo = 0,
         ea = 0,
-        es = (0, I.Z)(null == F ? void 0 : F.id);
+        es = (0, P.Z)(null == H ? void 0 : H.id);
     if (!es) {
         let e = er.width,
             t = er.height;
         el ? ((t = er.width / R.I0) > er.height && (e = (t = er.height) * R.I0), (ea = (er.height - t) / 2)) : ((e = Math.min(er.height * R.I0)) > er.width && (t = (e = er.width) / R.I0), (eo = (er.width - e) / 2));
     }
-    let ec = q.get(null != (n = null == F ? void 0 : F.id) ? n : ''),
+    let ec = q.get(null != (n = null == H ? void 0 : H.id) ? n : ''),
         eu = (0, a.e7)([C.Z], () => C.Z.getChannelId()),
         ed = (0, a.Wu)(
             [y.ZP],
             () => {
                 var e;
-                return null == z ? [] : Array.from(null != (e = null == ec ? void 0 : ec.embeddedActivity.userIds) ? e : []).map((e) => y.ZP.getMember(z.guild_id, e));
+                return null == W ? [] : Array.from(null != (e = null == ec ? void 0 : ec.embeddedActivity.userIds) ? e : []).map((e) => y.ZP.getMember(W.guild_id, e));
             },
-            [ec, z]
+            [ec, W]
         ),
         ep = i.useMemo(() => {
             let e = new Map();
@@ -170,7 +170,7 @@ function U(e) {
                     : l;
             }, [s, e, n, t]);
         })(J, $, l);
-    if (null == F) return null;
+    if (null == H) return null;
     let ef = [];
     null != ec &&
         (ef = Array.from(ec.embeddedActivity.userIds)
@@ -203,11 +203,11 @@ function U(e) {
         theme: k.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)('div', {
-                className: o()(L.wrapper, W[Q], e),
+                className: o()(L.wrapper, U[Q], e),
                 ref: X,
                 style: eh,
                 children: [
-                    null == B ? void 0 : B(),
+                    null == G ? void 0 : G(),
                     (0, r.jsxs)('div', {
                         className: L.activityPanelContainer,
                         children: [
@@ -219,7 +219,7 @@ function U(e) {
                                           color: 'header-primary',
                                           variant: 'text-md/semibold',
                                           className: L.headerTitle,
-                                          children: null == F ? void 0 : F.name
+                                          children: null == H ? void 0 : H.name
                                       })
                                   }),
                             (0, r.jsx)('div', {
@@ -231,9 +231,9 @@ function U(e) {
                                     paddingBottom: ea
                                 },
                                 ref: en,
-                                children: (0, r.jsx)(Z.Z, {
+                                children: (0, r.jsx)(N.Z, {
                                     className: L.iframe,
-                                    embedId: (0, A.Z)(U.id, F.id)
+                                    embedId: (0, A.Z)(B.id, H.id)
                                 })
                             }),
                             null != eu
@@ -246,24 +246,24 @@ function U(e) {
                                               size: D,
                                               max: 6,
                                               className: L.userAvatars,
-                                              renderUser: (e) => em(e, z)
+                                              renderUser: (e) => em(e, W)
                                           }),
                                           (0, r.jsxs)('div', {
                                               className: L.footerButtons,
                                               children: [
-                                                  G
+                                                  F
                                                       ? null
                                                       : (0, r.jsx)(w.Z, {
                                                             channelId: eu,
                                                             className: L.circularButton
                                                         }),
-                                                  G
+                                                  F
                                                       ? (0, r.jsxs)('div', {
                                                             className: L.buttonSection,
                                                             children: [
                                                                 (0, r.jsx)(w.Z, { channelId: eu }),
                                                                 (0, r.jsx)(g.d, {
-                                                                    label: M.NW.string(M.t.brPQ5e),
+                                                                    label: M.intl.string(M.t.brPQ5e),
                                                                     onClick: K,
                                                                     iconComponent: c.dOc,
                                                                     themeable: !0
@@ -274,17 +274,17 @@ function U(e) {
                                                   (0, r.jsx)('div', {
                                                       className: L.leaveButtonContainer,
                                                       children: (0, r.jsx)(b.Z, {
-                                                          applicationId: F.id,
-                                                          location: U,
+                                                          applicationId: H.id,
+                                                          location: B,
                                                           centerButton: !0,
                                                           color: 'disconnect',
-                                                          className: G ? void 0 : L.leaveActivityButton
+                                                          className: F ? void 0 : L.leaveActivityButton
                                                       })
                                                   }),
-                                                  G
+                                                  F
                                                       ? null
                                                       : (0, r.jsx)(g.d, {
-                                                            label: M.NW.string(M.t.brPQ5e),
+                                                            label: M.intl.string(M.t.brPQ5e),
                                                             onClick: K,
                                                             iconComponent: c.dOc,
                                                             themeable: !0,

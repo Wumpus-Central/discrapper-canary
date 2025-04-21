@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(399606),
-    l = n(481060),
+    l = n(399606),
+    s = n(481060),
     a = n(279542),
     o = n(496675),
     c = n(140031),
@@ -12,7 +12,7 @@ var r = n(200651),
 function g(e) {
     let { guild: t } = e,
         n = i.useId(),
-        g = (0, s.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
+        g = (0, l.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
         p = t.hasFeature(d.oNc.COMMUNITY),
         [h, f] = i.useState(t.hasFeature(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         x = i.useCallback(
@@ -33,21 +33,21 @@ function g(e) {
                   (0, r.jsxs)('div', {
                       className: m.headingContainer,
                       children: [
-                          (0, r.jsx)(l.X6q, {
+                          (0, r.jsx)(s.X6q, {
                               variant: 'heading-lg/semibold',
                               color: 'always-white',
-                              children: u.NW.string(u.t.jDarm5)
+                              children: u.intl.string(u.t.jDarm5)
                           }),
-                          (0, r.jsx)(l.Text, {
+                          (0, r.jsx)(s.Text, {
                               variant: 'text-sm/medium',
                               color: 'always-white',
-                              children: u.NW.string(u.t['/ee7yM'])
+                              children: u.intl.string(u.t['/ee7yM'])
                           })
                       ]
                   }),
                   (0, r.jsx)('div', {
                       className: m.buttonContainer,
-                      children: (0, r.jsx)(l.rsf, {
+                      children: (0, r.jsx)(s.rsf, {
                           id: n,
                           checked: h,
                           onChange: x,

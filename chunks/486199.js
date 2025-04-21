@@ -90,7 +90,7 @@ function u(e) {
                                 t,
                                 m &&
                                     (0, r.jsx)(o.ua7, {
-                                        text: c.NW.string(c.t.VFuFur),
+                                        text: c.intl.string(c.t.VFuFur),
                                         children: (e) => {
                                             var t, n;
                                             return (0, r.jsx)(

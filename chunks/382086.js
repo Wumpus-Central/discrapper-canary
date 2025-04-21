@@ -1,115 +1,115 @@
-n.d(t, {
-    Z: () => _,
-    v: () => L
+e.d(n, {
+    Z: () => g,
+    v: () => _
 });
-var i = n(200651);
-n(192379);
-var s = n(481060),
-    a = n(600164),
-    l = n(540059),
-    r = n(626135),
-    d = n(109983),
-    c = n(675999),
-    o = n(981631),
-    C = n(388032),
-    m = n(661711),
-    p = n(43236),
-    N = n(142390);
-let u = 0.5 > Math.random();
-function L(e) {
-    let { onClose: t, onBack: n, onCreationIntentChosen: L, hasFooter: _ = !0 } = e,
-        g = (0, l.Q3)('CreationIntentSlide'),
-        x = (0, i.jsx)(s.zxk, {
+var i = e(200651);
+e(192379);
+var l = e(481060),
+    s = e(600164),
+    a = e(540059),
+    r = e(626135),
+    d = e(109983),
+    c = e(675999),
+    o = e(981631),
+    C = e(388032),
+    m = e(661711),
+    p = e(43236),
+    u = e(142390);
+let L = 0.5 > Math.random();
+function _(t) {
+    let { onClose: n, onBack: e, onCreationIntentChosen: _, hasFooter: g = !0 } = t,
+        x = (0, a.Q3)('CreationIntentSlide'),
+        T = (0, i.jsx)(l.zxk, {
             className: m.backButton,
-            look: s.zxk.Looks.BLANK,
-            size: s.zxk.Sizes.MIN,
-            onClick: n,
-            children: C.NW.string(C.t['13/7kZ'])
+            look: l.zxk.Looks.BLANK,
+            size: l.zxk.Sizes.MIN,
+            onClick: e,
+            children: C.intl.string(C.t['13/7kZ'])
         });
-    function T(e) {
+    function E(t) {
         r.default.track(o.rMx.GUILD_CREATION_INTENT_SELECTED, {
-            skipped: null == e,
-            is_community: e === c.lr.COMMUNITY
+            skipped: null == t,
+            is_community: t === c.lr.COMMUNITY
         }),
-            L(e);
+            _(t);
     }
     return {
         content: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(s.xBx, {
-                    direction: a.Z.Direction.VERTICAL,
+                (0, i.jsxs)(l.xBx, {
+                    direction: s.Z.Direction.VERTICAL,
                     className: m.header,
                     separator: !1,
                     children: [
-                        (0, i.jsx)(s.X6q, {
+                        (0, i.jsx)(l.X6q, {
                             className: m.title,
                             variant: 'heading-xl/semibold',
-                            children: C.NW.string(C.t.f3MvGR)
+                            children: C.intl.string(C.t.f3MvGR)
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(l.Text, {
                             className: m.subtitle,
                             color: 'header-secondary',
                             variant: 'text-md/normal',
-                            children: C.NW.string(C.t['nOzc7+'])
+                            children: C.intl.string(C.t['nOzc7+'])
                         }),
-                        null != t &&
-                            (0, i.jsx)(s.olH, {
+                        null != n &&
+                            (0, i.jsx)(l.olH, {
                                 className: m.closeButton,
-                                onClick: t
+                                onClick: n
                             })
                     ]
                 }),
-                (0, i.jsxs)(s.hzk, {
+                (0, i.jsxs)(l.hzk, {
                     className: m.optionsList,
                     children: [
-                        u
+                        L
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(d.Z, {
-                                          icon: g ? s.Nye : p,
-                                          message: C.NW.string(C.t.uE7zcn),
-                                          onClick: () => T(c.lr.FRIENDS)
+                                          icon: x ? l.Nye : p,
+                                          message: C.intl.string(C.t.uE7zcn),
+                                          onClick: () => E(c.lr.FRIENDS)
                                       }),
                                       (0, i.jsx)(d.Z, {
-                                          icon: g ? s.q3d : N,
-                                          message: C.NW.string(C.t.h9Q1lJ),
-                                          onClick: () => T(c.lr.COMMUNITY)
+                                          icon: x ? l.q3d : u,
+                                          message: C.intl.string(C.t.h9Q1lJ),
+                                          onClick: () => E(c.lr.COMMUNITY)
                                       })
                                   ]
                               })
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(d.Z, {
-                                          icon: g ? s.q3d : N,
-                                          message: C.NW.string(C.t.h9Q1lJ),
-                                          onClick: () => T(c.lr.COMMUNITY)
+                                          icon: x ? l.q3d : u,
+                                          message: C.intl.string(C.t.h9Q1lJ),
+                                          onClick: () => E(c.lr.COMMUNITY)
                                       }),
                                       (0, i.jsx)(d.Z, {
-                                          icon: g ? s.Nye : p,
-                                          message: C.NW.string(C.t.uE7zcn),
-                                          onClick: () => T(c.lr.FRIENDS)
+                                          icon: x ? l.Nye : p,
+                                          message: C.intl.string(C.t.uE7zcn),
+                                          onClick: () => E(c.lr.FRIENDS)
                                       })
                                   ]
                               }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(l.Text, {
                             className: m.skip,
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
-                            children: C.NW.format(C.t['SMc+Gx'], { onSkip: () => T(null) })
+                            children: C.intl.format(C.t['SMc+Gx'], { onSkip: () => E(null) })
                         })
                     ]
                 }),
-                _ &&
-                    (0, i.jsx)(s.mzw, {
-                        justify: a.Z.Justify.BETWEEN,
-                        children: x
+                g &&
+                    (0, i.jsx)(l.mzw, {
+                        justify: s.Z.Justify.BETWEEN,
+                        children: T
                     })
             ]
         }),
-        footer: x
+        footer: T
     };
 }
-function _(e) {
-    let { content: t } = L(e);
-    return t;
+function g(t) {
+    let { content: n } = _(t);
+    return n;
 }

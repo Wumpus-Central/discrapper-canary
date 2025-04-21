@@ -18,7 +18,7 @@ function c(e) {
         ? null
         : (0, r.jsx)(i.v2r, {
               navId: 'guild-settings-role-context',
-              'aria-label': a.NW.string(a.t['337Ja2']),
+              'aria-label': a.intl.string(a.t['337Ja2']),
               onClose: l.Zy,
               onSelect: s,
               children: c

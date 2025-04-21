@@ -21,11 +21,11 @@ function j(e) {
     let { user: n, currentUser: t, displayProfile: j, guildId: v, subsection: x, onClose: _ } = e,
         { trackUserProfileAction: Z } = (0, d.KZ)(),
         O = (0, o.e7)([c.Z], () => c.Z.getGuild(v)),
-        N = (0, o.e7)([u.Z], () => {
+        P = (0, o.e7)([u.Z], () => {
             var e;
             return null == (e = u.Z.getUserProfile(n.id)) ? void 0 : e.application;
         }),
-        P = (0, o.e7)([s.Z, a.Z], () => s.Z.getChannel(a.Z.getChannelId()));
+        E = (0, o.e7)([s.Z, a.Z], () => s.Z.getChannel(a.Z.getChannelId()));
     return (0, r.jsxs)(i.zJl, {
         fade: !0,
         className: I.scroller,
@@ -36,12 +36,12 @@ function j(e) {
                     userBio: j.bio,
                     setLineClamp: !1
                 }),
-            (null == N ? void 0 : N.popularApplicationCommandIds) != null &&
-                null != P &&
+            (null == P ? void 0 : P.popularApplicationCommandIds) != null &&
+                null != E &&
                 (0, r.jsx)(f.Z, {
-                    applicationId: N.id,
-                    commandIds: N.popularApplicationCommandIds,
-                    channel: P,
+                    applicationId: P.id,
+                    commandIds: P.popularApplicationCommandIds,
+                    channel: E,
                     guildId: v,
                     onClick: _
                 }),
@@ -53,7 +53,7 @@ function j(e) {
                     scrollIntoView: x === g.Tb.ROLES
                 }),
             (0, r.jsx)(m.Z, {
-                heading: y.NW.string(y.t['A//N4u']),
+                heading: y.intl.string(y.t['A//N4u']),
                 children: (0, r.jsx)(b.Z, {
                     userId: n.id,
                     guildId: v,
@@ -61,7 +61,7 @@ function j(e) {
                 })
             }),
             (0, r.jsx)(m.Z, {
-                heading: y.NW.string(y.t['mQKv+v']),
+                heading: y.intl.string(y.t['mQKv+v']),
                 scrollIntoView: x === g.Tb.NOTE,
                 children: (0, r.jsx)(l.Z, {
                     userId: n.id,

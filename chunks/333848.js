@@ -17,18 +17,18 @@ let d = {
             guildId: t,
             channelType: l
         });
-        let N = {
+        let C = {
             type: l,
             name: d,
             permission_overwrites: g
         };
-        if ((null != f && f !== p.epw && (N.bitrate = f), null != y && y > 0 && (N.user_limit = y), null != E && (N.parent_id = E), l === p.d4z.GUILD_STORE)) {
+        if ((null != f && f !== p.epw && (C.bitrate = f), null != y && y > 0 && (C.user_limit = y), null != E && (C.parent_id = E), l === p.d4z.GUILD_STORE)) {
             if (null == b) throw Error('Unexpected missing SKU');
-            (N.sku_id = b), (N.branch_id = v);
+            (C.sku_id = b), (C.branch_id = v);
         }
         return u.Z.post({
             url: p.ANM.GUILD_CHANNELS(t),
-            body: N,
+            body: C,
             oldFormErrors: !0,
             trackedActionData: {
                 event: n.NetworkActionNames.CHANNEL_CREATE,

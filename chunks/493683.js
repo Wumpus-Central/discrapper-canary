@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(544891),
     i = n(780384),
     a = n(570140),
@@ -70,7 +70,7 @@ function T(e, t) {
         e
     );
 }
-let N = {
+let A = {
     async openPrivateChannel(e) {
         let { recipientIds: t, joinCall: n = !1, joinCallVideo: i = !1, location: a, onBeforeTransition: o, navigateToChannel: s = !0 } = e,
             l = this._getRecipients(t),
@@ -182,10 +182,10 @@ let N = {
                     rejectWithError: !1
                 })
                 .then(() => {
-                    i.uv.announce(v.NW.string(v.t.nRbucn));
+                    i.uv.announce(v.intl.string(v.t.nRbucn));
                 })
                 .catch(() => {
-                    i.uv.announce(v.NW.string(v.t.ndXVIy));
+                    i.uv.announce(v.intl.string(v.t.ndXVIy));
                 })
         );
     },
@@ -228,8 +228,8 @@ let N = {
                 oldFormErrors: !0,
                 rejectWithError: !0
             })
-            .then((t) => ((i.uv.announce(v.NW.string(v.t.cU0t1N)), null == a || a(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e))
-            .catch(() => (i.uv.announce(v.NW.string(v.t['8GEden'])), e));
+            .then((t) => ((i.uv.announce(v.intl.string(v.t.cU0t1N)), null == a || a(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e))
+            .catch(() => (i.uv.announce(v.intl.string(v.t['8GEden'])), e));
     },
     addRecipients(e, t, n, r) {
         return this.addRecipient(e, t[0], n, r).then((e) => Promise.all(t.slice(1).map((t) => this.addRecipient(e, t, n))).then(() => e));

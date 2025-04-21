@@ -3,16 +3,16 @@ var n = r(200651);
 r(192379);
 var i = r(442837),
     o = r(481060),
-    c = r(223245),
-    a = r(246946),
-    l = r(388032);
+    l = r(223245),
+    c = r(246946),
+    a = r(388032);
 function s() {
-    let e = (0, i.e7)([a.Z], () => a.Z.enabled, []);
+    let e = (0, i.e7)([c.Z], () => c.Z.enabled, []);
     return (0, n.jsx)(o.S89, {
         id: 'streamer-mode-toggle',
-        label: l.NW.string(l.t.p9ZAJS),
+        label: a.intl.string(a.t.p9ZAJS),
         action: () => {
-            c.Z.setEnabled(!e);
+            l.Z.setEnabled(!e);
         },
         checked: e
     });

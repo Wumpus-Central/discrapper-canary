@@ -93,7 +93,7 @@ function S(e) {
 function T(e) {
     b(o.ZP.createFromServer(e));
 }
-function N(e) {
+function A(e) {
     let { userId: t, applicationId: n } = e,
         r = g.botUserIdToAppUsage[t];
     null == r
@@ -114,7 +114,7 @@ function N(e) {
             delete g.botUserIdToAppUsage[t];
         }
 }
-function A(e) {
+function N(e) {
     let { applicationId: t } = e,
         n = m[t];
     return (m[t] = !1), !1 !== n;
@@ -149,7 +149,7 @@ function D(e) {
         { user: n, application: r } = t;
     n.bot &&
         null != r &&
-        N({
+        A({
             userId: n.id,
             applicationId: r.id
         });
@@ -228,18 +228,18 @@ function H(e) {
         b(o.ZP.createFromServer(e.application));
         let t = e.application.bot;
         null != t &&
-            N({
+            A({
                 userId: t.id,
                 applicationId: e.application.id
             });
     });
 }
-function W(e) {
+function Y(e) {
     e.items.forEach((e) => {
         null != e.application && b(o.ZP.createFromServer(e.application));
     });
 }
-class Y extends (r = i.ZP.PersistedStore) {
+class W extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e && 'object' == typeof e.botUserIdToAppUsage)
             for (let t in e.botUserIdToAppUsage) {
@@ -299,13 +299,13 @@ class Y extends (r = i.ZP.PersistedStore) {
         if (null != e) return null == (t = g.botUserIdToAppUsage[e]) ? void 0 : t.applicationId;
     }
 }
-s(Y, 'displayName', 'ApplicationStore'), s(Y, 'persistKey', 'ApplicationStore');
-let K = new Y(a.Z, {
+s(W, 'displayName', 'ApplicationStore'), s(W, 'persistKey', 'ApplicationStore');
+let K = new W(a.Z, {
     LOGOUT: y,
     OVERLAY_INITIALIZE: v,
     APPLICATION_FETCH: O,
     APPLICATION_FETCH_SUCCESS: S,
-    APPLICATION_FETCH_FAIL: A,
+    APPLICATION_FETCH_FAIL: N,
     APPLICATIONS_FETCH: C,
     APPLICATIONS_FETCH_SUCCESS: P,
     APPLICATIONS_FETCH_FAIL: x,
@@ -325,5 +325,5 @@ let K = new Y(a.Z, {
     USER_PROFILE_FETCH_SUCCESS: D,
     APP_DM_OPEN: L,
     USER_AUTHORIZED_APPS_UPDATE: H,
-    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: W
+    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: Y
 });

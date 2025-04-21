@@ -38,8 +38,8 @@ var y = n(807675),
     I = n(591759),
     S = n(960904),
     T = n(981631);
-let N = 10,
-    A = /^\/([a-zA-Z0-9-]+)$/,
+let A = 10,
+    N = /^\/([a-zA-Z0-9-]+)$/,
     C = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
     R = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?\.?$/,
     P = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
@@ -57,9 +57,9 @@ let N = 10,
     V = q(null != (o = window.GLOBAL_ENV.WEBAPP_ENDPOINT) ? o : '//canary.'.concat(T.$R1)),
     Z = q('//canary.'.concat(T.$R1)),
     H = q('//ptb.'.concat(T.$R1)),
-    W = q('discordapp.com'),
-    Y = q('discord.com'),
-    K = [O.Z.escape(null != (s = B.host) ? s : ''), O.Z.escape(null != (l = F.host) ? l : ''), O.Z.escape(null != (c = V.host) ? c : ''), O.Z.escape(null != (u = W.host) ? u : ''), O.Z.escape(null != (d = Y.host) ? d : '')].filter(Boolean),
+    Y = q('discordapp.com'),
+    W = q('discord.com'),
+    K = [O.Z.escape(null != (s = B.host) ? s : ''), O.Z.escape(null != (l = F.host) ? l : ''), O.Z.escape(null != (c = V.host) ? c : ''), O.Z.escape(null != (u = Y.host) ? u : ''), O.Z.escape(null != (d = W.host) ? d : '')].filter(Boolean),
     z = RegExp('((https?://[^ ]*)|^|[^/][^/.])('.concat(K.join('|'), ')'), 'g');
 function q(e) {
     if (null == e)
@@ -94,7 +94,7 @@ function $(e, t) {
 }
 function ee(e) {
     var t, n, r, i;
-    return null != (i = null != (r = null != (n = null != (t = $(V, e)) ? t : $(Z, e)) ? n : $(H, e)) ? r : $(W, e)) ? i : $(Y, e);
+    return null != (i = null != (r = null != (n = null != (t = $(V, e)) ? t : $(Z, e)) ? n : $(H, e)) ? r : $(Y, e)) ? i : $(W, e);
 }
 function et(e) {
     if (null == e) return null;
@@ -119,7 +119,7 @@ function en(e) {
         };
     let o = $(B, a),
         s = $(F, a),
-        l = null != (i = null != (r = null != (n = null != (t = $(V, a)) ? t : $(Z, a)) ? n : $(H, a)) ? r : $(W, a)) ? i : $(Y, a);
+        l = null != (i = null != (r = null != (n = null != (t = $(V, a)) ? t : $(Z, a)) ? n : $(H, a)) ? r : $(Y, a)) ? i : $(W, a);
     return {
         url: a,
         inviteHostRemainingPath: o,
@@ -136,7 +136,7 @@ function er(e) {
     if (null == (r = (null != r ? r : []).concat(null != i ? i : [])) || 0 === r.length) return [];
     for (let e of r) {
         var a, o, s;
-        if (n.length >= N) break;
+        if (n.length >= A) break;
         let { url: r, inviteHostRemainingPath: i, templateHostRemainingPath: l, primaryHostRemainingPath: c } = en(e);
         if (null == r || null == r.pathname) continue;
         let u = (r, i) => {
@@ -148,11 +148,11 @@ function er(e) {
                     url: e
                 }));
         };
-        if ((null == i ? void 0 : i.match(A)) != null && ('https:' === r.protocol || 'http:' === r.protocol)) {
+        if ((null == i ? void 0 : i.match(N)) != null && ('https:' === r.protocol || 'http:' === r.protocol)) {
             let e = (0, b.mb)(i.substring(1), r.search);
             v.Z.getInvite(e), u(S.g.INVITE, e);
         }
-        (null == l ? void 0 : l.match(A)) != null && u(S.g.TEMPLATE, l.substring(1));
+        (null == l ? void 0 : l.match(N)) != null && u(S.g.TEMPLATE, l.substring(1));
         let d = null == c ? void 0 : c.match(R);
         if (null != d) {
             let e = d[1].toUpperCase();

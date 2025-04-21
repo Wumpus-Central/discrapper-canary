@@ -20,10 +20,10 @@ var r = n(200651),
     v = n(626135),
     O = n(823379),
     C = n(709054),
-    N = n(39604),
-    P = n(572720),
-    k = n(981631),
-    w = n(388032),
+    P = n(39604),
+    k = n(572720),
+    w = n(981631),
+    N = n(388032),
     E = n(20484),
     S = n(954292);
 function Z(e) {
@@ -71,8 +71,8 @@ function D(e, t) {
 }
 let L = function (e) {
     var t, n, a;
-    let { clip: o, exporting: s, actionsDisabled: d, isNew: b, onDelete: h, onEdit: x, onShare: N } = e,
-        P = (0, c.Wu)([y.default], () => o.users.map((e) => y.default.getUser(e)).filter(O.lm)),
+    let { clip: o, exporting: s, actionsDisabled: d, isNew: b, onDelete: h, onEdit: x, onShare: P } = e,
+        k = (0, c.Wu)([y.default], () => o.users.map((e) => y.default.getUser(e)).filter(O.lm)),
         { analyticsLocations: S } = (0, f.ZP)(m.Z.CLIPS_GALLERY_ITEM),
         [Z, D] = l.useState(!1),
         L = l.useRef(null),
@@ -105,22 +105,22 @@ let L = function (e) {
             },
             [H]
         ),
-        W = new Date(C.default.extractTimestamp(o.id)),
-        B = W.toLocaleDateString(),
-        F = W.toLocaleTimeString([], {
+        B = new Date(C.default.extractTimestamp(o.id)),
+        F = B.toLocaleDateString(),
+        Y = B.toLocaleTimeString([], {
             hour: '2-digit',
             minute: '2-digit'
         }),
-        Y = ''.concat(B, ' \u2022 ').concat(F);
+        G = ''.concat(F, ' \u2022 ').concat(Y);
     return (0, r.jsx)(f.Gt, {
         value: S,
         children: (0, r.jsxs)(p.kL8, {
             'aria-disabled': d,
-            'aria-label': w.NW.string(w.t.bt75u7),
+            'aria-label': N.intl.string(N.t.bt75u7),
             onClick: d
                 ? void 0
                 : () => {
-                      x(o), v.default.track(k.rMx.CLIP_GALLERY_CARD_CLICKED);
+                      x(o), v.default.track(w.rMx.CLIP_GALLERY_CARD_CLICKED);
                   },
             className: i()(E.clipItem, { [E.disabled]: d }),
             onBlur: V,
@@ -151,14 +151,14 @@ let L = function (e) {
                             className: E.clipMetadata,
                             color: 'text-normal',
                             variant: 'text-md/medium',
-                            children: Y
+                            children: G
                         }),
                         (0, r.jsxs)('div', {
                             className: E.usersAndDelete,
                             children: [
                                 (0, r.jsx)(j.Z, {
                                     maxUsers: 4,
-                                    users: P,
+                                    users: k,
                                     onFocus: (e) => {
                                         var t, n, r, l;
                                         let a = e.relatedTarget,
@@ -174,7 +174,7 @@ let L = function (e) {
                                         onBeforeDelete: R,
                                         onDelete: h,
                                         onEdit: x,
-                                        onShare: N,
+                                        onShare: P,
                                         onBlur: (e) => {
                                             var t;
                                             (null == (t = e.relatedTarget) ? void 0 : t.parentElement) !== e.currentTarget.parentElement && H();
@@ -214,7 +214,7 @@ function I(e) {
                             children: (0, r.jsx)(p.Text, {
                                 variant: 'text-md/medium',
                                 color: 'always-white',
-                                children: w.NW.string(w.t['2Fp7OD'])
+                                children: N.intl.string(N.t['2Fp7OD'])
                             })
                         }),
                     !i &&
@@ -229,7 +229,7 @@ function I(e) {
                                     color: 'currentColor',
                                     className: E.newIcon
                                 }),
-                                w.NW.string(w.t.y2b7CA).toUpperCase()
+                                N.intl.string(N.t.y2b7CA).toUpperCase()
                             ]
                         }),
                     !i &&
@@ -258,7 +258,7 @@ function T(e) {
         [b, g] = l.useState(null != (t = n.name) ? t : ''),
         [j, h] = l.useState(!1),
         y = async () => {
-            h(!0), await (0, N.Tm)(n.id, { name: '' === b ? void 0 : b }), h(!1), f(!1);
+            h(!0), await (0, P.Tm)(n.id, { name: '' === b ? void 0 : b }), h(!1), f(!1);
         };
     return (l.useEffect(() => {
         if (s !== n.name) {
@@ -291,7 +291,7 @@ function T(e) {
                             className: E.clipTitle,
                             color: 'text-muted',
                             variant: 'heading-lg/medium',
-                            children: w.NW.string(w.t['x+/nmJ'])
+                            children: N.intl.string(N.t['x+/nmJ'])
                         })
                       : (0, r.jsx)(p.X6q, {
                             className: E.clipTitle,
@@ -302,7 +302,7 @@ function T(e) {
                   a &&
                       (0, r.jsx)(p.vdY, {
                           size: 'custom',
-                          'aria-label': w.NW.string(w.t.bt75u7),
+                          'aria-label': N.intl.string(N.t.bt75u7),
                           color: p.TVs.colors.TEXT_MUTED,
                           height: d.Z.sm,
                           width: d.Z.sm,
@@ -313,7 +313,7 @@ function T(e) {
 }
 function M(e) {
     let { clip: t, videoRef: n } = e,
-        l = (0, P.l)(t);
+        l = (0, k.l)(t);
     return 0 === t.length
         ? (0, r.jsx)(p.$jN, {
               type: p.RAz.SPINNING_CIRCLE_SIMPLE,
@@ -340,19 +340,19 @@ function _(e) {
         d = (0, h.Z)(),
         m = l.useCallback(
             (e) => {
-                e.stopPropagation(), e.shiftKey ? (i(), (0, N.sS)(t.filepath)) : o(t, i), v.default.track(k.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'delete' });
+                e.stopPropagation(), e.shiftKey ? (i(), (0, P.sS)(t.filepath)) : o(t, i), v.default.track(w.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'delete' });
             },
             [o, i, t]
         ),
         f = l.useCallback(
             (e) => {
-                e.stopPropagation(), s(t), v.default.track(k.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'edit' });
+                e.stopPropagation(), s(t), v.default.track(w.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'edit' });
             },
             [s, t]
         ),
         b = l.useCallback(
             (e) => {
-                e.stopPropagation(), c(t), v.default.track(k.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'share' });
+                e.stopPropagation(), c(t), v.default.track(w.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'share' });
             },
             [c, t]
         );
@@ -361,7 +361,7 @@ function _(e) {
         children: [
             null != o &&
                 (0, r.jsx)(p.ua7, {
-                    text: w.NW.string(w.t.oyYWHB),
+                    text: N.intl.string(N.t.oyYWHB),
                     children: (e) =>
                         (0, r.jsx)(
                             p.zxk,
@@ -381,7 +381,7 @@ function _(e) {
                         )
                 }),
             (0, r.jsx)(p.ua7, {
-                text: w.NW.string(w.t.bt75u7),
+                text: N.intl.string(N.t.bt75u7),
                 children: (e) =>
                     (0, r.jsx)(
                         p.zxk,
@@ -397,7 +397,7 @@ function _(e) {
                     )
             }),
             (0, r.jsx)(p.ua7, {
-                text: w.NW.string(w.t.RDE0SU),
+                text: N.intl.string(N.t.RDE0SU),
                 children: (e) => {
                     var { onBlur: t } = e,
                         l = (function (e, t) {

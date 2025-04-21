@@ -17,14 +17,14 @@ let m = i.forwardRef(function (e, t) {
             O = i.useRef(null),
             I = (0, d.Iu)((e) => e.searchQuery),
             [S, T] = u.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], s.X),
-            N = i.useCallback(
+            A = i.useCallback(
                 (e) => {
                     var t;
                     u.kJ.setActiveCategoryIndex('' === e ? 0 : f.c), u.kJ.setInspectedExpressionPosition(0, 0), u.kJ.setSearchPlaceholder(null), (0, d.ql)(e), null == (t = n.current) || t.scrollTo(0);
                 },
                 [n]
             ),
-            A = i.useCallback(() => {
+            N = i.useCallback(() => {
                 (0, d.ql)('');
             }, []),
             C = (e) => {
@@ -50,13 +50,13 @@ let m = i.forwardRef(function (e, t) {
                 ref: O,
                 size: c.E1j.Sizes.MEDIUM,
                 placeholder: null != T ? T : v,
-                onClear: A,
+                onClear: N,
                 onKeyDown: C,
                 onFocus: E,
-                onChange: N,
+                onChange: A,
                 className: o()(y, { [h.searchBarFullRow]: m }),
                 inputProps: {
-                    'aria-label': p.NW.string(p.t.tCauZW),
+                    'aria-label': p.intl.string(p.t.tCauZW),
                     'aria-haspopup': 'grid',
                     'aria-controls': a,
                     'aria-expanded': !0,

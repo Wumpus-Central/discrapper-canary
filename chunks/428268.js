@@ -78,10 +78,10 @@ let v = function (e) {
         S = g === _.z;
     if ((!S || (null != v && null != O)) && !b) return null;
     let T = s.Z.get(p.ABu.RIOT_GAMES),
-        N = S && null == v && null == O,
-        A = S && null != v && null == O,
+        A = S && null == v && null == O,
+        N = S && null != v && null == O,
         C = S && null == v && null != O,
-        R = A || C;
+        R = N || C;
     function P() {
         null != I &&
             (0, o.ZDy)(async () => {
@@ -97,20 +97,20 @@ let v = function (e) {
             });
     }
     function w() {
-        return N || R ? (0, l.Z)({ platformType: p.ABu.RIOT_GAMES }) : P();
+        return A || R ? (0, l.Z)({ platformType: p.ABu.RIOT_GAMES }) : P();
     }
     function D() {
-        return N ? h.NW.string(h.t.w6VSSE) : R ? h.NW.string(h.t.CHNBdn) : h.NW.string(h.t['0yRXHx']);
+        return A ? h.intl.string(h.t.w6VSSE) : R ? h.intl.string(h.t.CHNBdn) : h.intl.string(h.t['0yRXHx']);
     }
     function L() {
         if (b) return null;
-        let e = N
+        let e = A
                 ? (0, r.jsx)(o.d3s, { className: m.infoMessageIcon })
                 : (0, r.jsx)(o.aNP, {
                       color: a.Z.colors.STATUS_WARNING,
                       className: m.infoMessageIcon
                   }),
-            t = N ? h.NW.string(h.t['Ihg/Dg']) : h.NW.string(h.t['J8U+Iy']);
+            t = A ? h.intl.string(h.t['Ihg/Dg']) : h.intl.string(h.t['J8U+Iy']);
         return (0, r.jsxs)('div', {
             className: m.updateMessage,
             children: [

@@ -70,9 +70,9 @@ function f(e) {
             return e;
         })(
             {
-                header: u.NW.formatToPlainString(u.t['1Ie87u'], { user: b.username }),
-                confirmText: u.NW.string(u.t['3glT6e']),
-                cancelText: u.NW.string(u.t['ETE/oK']),
+                header: u.intl.formatToPlainString(u.t['1Ie87u'], { user: b.username }),
+                confirmText: u.intl.string(u.t['3glT6e']),
+                cancelText: u.intl.string(u.t['ETE/oK']),
                 onConfirm: m
             },
             g
@@ -83,10 +83,10 @@ function f(e) {
                     (0, n.jsx)(c.Text, {
                         variant: 'text-md/normal',
                         className: p.spacing,
-                        children: u.NW.format(u.t['/yH0UV'], { user: '@'.concat(s.ZP.getName(b)) })
+                        children: u.intl.format(u.t['/yH0UV'], { user: '@'.concat(s.ZP.getName(b)) })
                     }),
                     (0, n.jsx)(c.xJW, {
-                        title: u.NW.string(u.t['+2QEPj']),
+                        title: u.intl.string(u.t['+2QEPj']),
                         className: p.spacing,
                         children: (0, n.jsx)(c.Kx8, {
                             maxLength: l.GNZ,

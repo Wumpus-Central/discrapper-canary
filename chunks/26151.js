@@ -35,10 +35,10 @@ let h = {
                             source: 'Call'
                         }),
                             u.Z.show({
-                                title: p.NW.string(p.t.My50nZ),
-                                body: p.NW.format(p.t.IdKo29, { username: null != t ? t.username : '' }),
-                                confirmText: p.NW.string(p.t['PMsq/f']),
-                                cancelText: p.NW.string(p.t.BddRzc),
+                                title: p.intl.string(p.t.My50nZ),
+                                body: p.intl.format(p.t.IdKo29, { username: null != t ? t.username : '' }),
+                                confirmText: p.intl.string(p.t['PMsq/f']),
+                                cancelText: p.intl.string(p.t.BddRzc),
                                 onConfirm() {
                                     d.Z.addRelationship({
                                         userId: i,

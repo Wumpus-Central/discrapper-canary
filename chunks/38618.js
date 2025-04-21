@@ -22,8 +22,8 @@ var r,
     I = n(955132),
     S = n(645436),
     T = n(344651),
-    N = n(981631),
-    A = n(526761);
+    A = n(981631),
+    N = n(526761);
 function C(e, t, n) {
     return (
         t in e
@@ -84,7 +84,7 @@ function V(e) {
             guildId: e.guildId,
             channelId: e.channelId
         }),
-        (0, v.isIOS)() && M === N.$7l.BACKGROUND && (null == e.channelId ? I.Wb.close(!0) : I.Wb.isClosed() && (S.Y(!1), I.Wb.connect())),
+        (0, v.isIOS)() && M === A.$7l.BACKGROUND && (null == e.channelId ? I.Wb.close(!0) : I.Wb.isClosed() && (S.Y(!1), I.Wb.connect())),
         !1
     );
 }
@@ -93,9 +93,9 @@ function Z() {
 }
 function H(e) {
     var t;
-    e.settings.type === A.yP.PRELOADED_USER_SETTINGS && (null == (t = e.settings.proto.clips) ? void 0 : t.allowVoiceRecording) != null && Z();
+    e.settings.type === N.yP.PRELOADED_USER_SETTINGS && (null == (t = e.settings.proto.clips) ? void 0 : t.allowVoiceRecording) != null && Z();
 }
-function W(e) {
+function Y(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         if (f.default.getId() !== t.userId) return e;
@@ -114,7 +114,7 @@ function W(e) {
         return !0;
     }, !1);
 }
-function Y(e) {
+function W(e) {
     e.guild.id === I.GC.guildId &&
         I.GC.setState({
             guildId: null,
@@ -138,11 +138,11 @@ function z(e) {
         });
 }
 function q(e) {
-    if (e.state !== N.hes.DISCONNECTED) return !1;
+    if (e.state !== A.hes.DISCONNECTED) return !1;
     e.willReconnect && (null != e.streamKey ? I.Wb.streamPing(e.streamKey) : I.Wb.voiceServerPing());
 }
 function Q(e) {
-    return (0, v.isIOS)() ? (f.default.isAuthenticated() && (M === N.$7l.INACTIVE && e.state === N.$7l.BACKGROUND && null == I.GC.channelId ? I.Wb.close(!0) : M === N.$7l.BACKGROUND && e.state === N.$7l.ACTIVE && I.Wb.isClosed() && (S.Y(!1), I.Wb.connect())), (M = e.state)) : e.state === N.$7l.ACTIVE && (S.Y(!1), f.default.isAuthenticated() && I.Wb.resetBackoff('App state is active')), !1;
+    return (0, v.isIOS)() ? (f.default.isAuthenticated() && (M === A.$7l.INACTIVE && e.state === A.$7l.BACKGROUND && null == I.GC.channelId ? I.Wb.close(!0) : M === A.$7l.BACKGROUND && e.state === A.$7l.ACTIVE && I.Wb.isClosed() && (S.Y(!1), I.Wb.connect())), (M = e.state)) : e.state === A.$7l.ACTIVE && (S.Y(!1), f.default.isAuthenticated() && I.Wb.resetBackoff('App state is active')), !1;
 }
 function X() {
     return I.GC.update(), !1;
@@ -279,8 +279,8 @@ let eg = new em(s.Z, {
     CONNECTION_CLOSED: B,
     RTC_CONNECTION_STATE: q,
     VOICE_CHANNEL_SELECT: V,
-    VOICE_STATE_UPDATES: W,
-    GUILD_DELETE: Y,
+    VOICE_STATE_UPDATES: Y,
+    GUILD_DELETE: W,
     CHANNEL_DELETE: z,
     CALL_DELETE: K,
     APP_STATE_UPDATE: Q,

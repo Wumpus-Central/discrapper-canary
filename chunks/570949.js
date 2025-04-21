@@ -31,13 +31,13 @@ function h(e) {
         a = s.Sb.useSetting(),
         c = (0, o.Z)({
             id: t.id,
-            label: m.NW.string(m.t['+NP/b2'])
+            label: m.intl.string(m.t['+NP/b2'])
         }),
         u = f({ application: t });
     return (0, i.jsxs)(r.v2r, {
         navId: 'activity-shelf-item-context',
         onClose: l.Zy,
-        'aria-label': m.NW.string(m.t.WkcHT0),
+        'aria-label': m.intl.string(m.t.WkcHT0),
         onSelect: n,
         children: [null != u && (0, i.jsxs)(r.kSQ, { children: [...u] }, 'manage-app-actions'), a && (0, i.jsx)(r.kSQ, { children: c }, 'developer-actions')]
     });

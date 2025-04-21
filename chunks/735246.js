@@ -13,7 +13,7 @@ function d(e) {
         [d, f] = (0, o.R_)((e) => [e.isLoading, e.error], i.X);
     return null != f
         ? (0, r.jsx)(s.Z, {
-              title: c.NW.formatToPlainString(c.t['7basa2'], { locale: n }),
+              title: c.intl.formatToPlainString(c.t['7basa2'], { locale: n }),
               note: (0, r.jsx)('span', { children: f.message })
           })
         : d

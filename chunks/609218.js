@@ -27,15 +27,15 @@ var r = n(200651),
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e;
     })({});
 function S(e) {
-    let { containerContext: t, image: n, title: a, description: I, enableSocialProof: S, analyticsLocationSection: T, upsellViewedTrackingData: N, onClose: A, onDisplay: C, onLearnMore: R } = e,
+    let { containerContext: t, image: n, title: a, description: I, enableSocialProof: S, analyticsLocationSection: T, upsellViewedTrackingData: A, onClose: N, onDisplay: C, onLearnMore: R } = e,
         P = (0, s.e7)([h.Z], () => h.Z.affinities),
         w = (0, s.e7)([h.Z], () => h.Z.hasFetched);
     i.useEffect(() => {
         !w && S && c.MH();
     }, [w, S]),
         i.useEffect(() => {
-            _.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, N), null == C || C();
-        }, [C, N]);
+            _.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, A), null == C || C();
+        }, [C, A]);
     let D = P.length > 1 && S,
         L = () => (2 === t ? O.hasTabParentContainer : 1 === t ? O.hasParentContainer : O.noParentContainer),
         x = () => {
@@ -45,28 +45,28 @@ function S(e) {
             }),
                 null == R || R(),
                 (0, d.Z)(),
-                A(),
+                N(),
                 (0, u.xf)(),
                 (0, f.uL)(y.Z5c.APPLICATION_STORE);
         },
         M = (0, m.N)(),
         k = i.useCallback(() => {
             var e;
-            return null != (e = (0, p.fr)(M)) ? e : v.NW.string(v.t.pj0XBA);
+            return null != (e = (0, p.fr)(M)) ? e : v.intl.string(v.t.pj0XBA);
         }, [M]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.YMn, {
                 backdropStyle: l.fCB.DARK,
-                onClose: A,
-                'aria-label': v.NW.string(v.t.cpT0Cg),
+                onClose: N,
+                'aria-label': v.intl.string(v.t.cpT0Cg),
                 isVisible: !0
             }),
             (0, r.jsxs)('div', {
                 className: o()(O.container, L()),
                 children: [
                     (0, r.jsx)(l.olH, {
-                        onClick: A,
+                        onClick: N,
                         className: O.closeButton
                     }),
                     (0, r.jsxs)('div', {
@@ -101,7 +101,7 @@ function S(e) {
                                 color: l.zxk.Colors.CUSTOM,
                                 look: l.zxk.Looks.LINK,
                                 onClick: x,
-                                children: v.NW.string(v.t.ZnqyZ2)
+                                children: v.intl.string(v.t.ZnqyZ2)
                             }),
                             (0, r.jsx)(g.Z, {
                                 showGradient: !0,
@@ -113,7 +113,7 @@ function S(e) {
                                 size: l.zxk.Sizes.SMALL,
                                 color: l.zxk.Colors.CUSTOM,
                                 onClick: () => {
-                                    A();
+                                    N();
                                 },
                                 buttonText: k()
                             })

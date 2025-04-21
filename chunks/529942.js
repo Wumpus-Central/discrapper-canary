@@ -9,13 +9,13 @@ var r = n(200651),
 let u = ['right', 'left'];
 function d(e) {
     var t;
-    let { className: n, width: o, imageSize: d, minSteps: f = 1, maxSteps: p = 1, minYDistance: m = 0, maxYDistance: g = 0, maxYDelta: b, minSpeed: y, maxSpeed: h, isPaused: x, children: N } = e,
-        [v, O] = (0, s.useState)(0),
-        [j, Z] = (0, s.useState)(null != (t = a().sample(u)) ? t : u[0]),
-        _ = (0, s.useRef)(a().random(y, h)),
-        P = (0, s.useRef)(a().random(f, p)),
-        C = 'right' === j ? -d : o + d,
-        w = 'right' === j ? o + d : -d,
+    let { className: n, width: o, imageSize: d, minSteps: f = 1, maxSteps: p = 1, minYDistance: m = 0, maxYDistance: g = 0, maxYDelta: b, minSpeed: y, maxSpeed: h, isPaused: x, children: v } = e,
+        [O, j] = (0, s.useState)(0),
+        [N, _] = (0, s.useState)(null != (t = a().sample(u)) ? t : u[0]),
+        P = (0, s.useRef)(a().random(y, h)),
+        C = (0, s.useRef)(a().random(f, p)),
+        Z = 'right' === N ? -d : o + d,
+        w = 'right' === N ? o + d : -d,
         [E, S] = (0, l.q_F)(() => ({
             x: a().random(o),
             y: 0,
@@ -27,19 +27,19 @@ function d(e) {
             return (
                 (async () => {
                     var t, n;
-                    let r = (w - C) / P.current,
-                        s = Math.abs((E.x.get() - C) / r),
-                        i = P.current - s;
+                    let r = (w - Z) / C.current,
+                        s = Math.abs((E.x.get() - Z) / r),
+                        i = C.current - s;
                     for (let n = 0; n < i && !e; n++) {
                         let e = E.x.get(),
                             n = E.y.get(),
                             s = ((t = a().random(m, g)), null != b && (n + t > b || n + t < -b) ? (t < 0 ? -b : b) : t),
                             o = E.x.get() + r,
-                            i = 'right' === j ? Math.min(o, w) : Math.max(o, w),
+                            i = 'right' === N ? Math.min(o, w) : Math.max(o, w),
                             l = s - n,
                             u = Math.abs(i - e),
-                            d = (180 / Math.PI) * Math.atan2(l, u) * ('right' === j ? 1 : -1),
-                            f = (Math.sqrt(u ** 2 + l ** 2) / _.current) * 1000;
+                            d = (180 / Math.PI) * Math.atan2(l, u) * ('right' === N ? 1 : -1),
+                            f = (Math.sqrt(u ** 2 + l ** 2) / P.current) * 1000;
                         await S({
                             x: i,
                             y: s,
@@ -51,7 +51,7 @@ function d(e) {
                         });
                     }
                     if (!e) {
-                        (P.current = a().random(f, p)), (_.current = a().random(y, h));
+                        (C.current = a().random(f, p)), (P.current = a().random(y, h));
                         let e = null != (n = a().sample(u)) ? n : u[0],
                             t = 'right' === e ? -d : o + d;
                         await S({
@@ -60,15 +60,15 @@ function d(e) {
                             rotateZ: 0,
                             immediate: !0
                         }),
-                            Z(e);
+                            _(e);
                     }
-                    O(v + 1);
+                    j(O + 1);
                 })(),
                 () => {
                     e = !0;
                 }
             );
-        }, [E.x, E.y, j, w, d, v, h, p, b, g, y, f, m, S, _, C, o]),
+        }, [E.x, E.y, N, w, d, O, h, p, b, g, y, f, m, S, P, Z, o]),
         (0, s.useEffect)(() => {
             try {
                 x ? (E.x.pause(), E.y.pause(), E.rotateZ.pause()) : (E.x.resume(), E.y.resume(), E.rotateZ.resume());
@@ -77,7 +77,7 @@ function d(e) {
         (0, r.jsx)(i.animated.div, {
             style: E,
             className: n,
-            children: N(j)
+            children: v(N)
         })
     );
 }

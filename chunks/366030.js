@@ -22,11 +22,11 @@ var r = n(200651),
     x = n(626135),
     C = n(275759),
     P = n(107484),
-    N = n(977392),
-    T = n(134433),
-    w = n(753194),
-    S = n(458034),
-    I = n(856651),
+    T = n(977392),
+    w = n(134433),
+    S = n(753194),
+    I = n(458034),
+    N = n(856651),
     k = n(981631),
     M = n(228168),
     R = n(388032),
@@ -61,14 +61,14 @@ function A(e) {
         { connectionType: n, connectionMetadataField: o, operator: a, value: i, description: s } = e;
     if (null != s)
         switch (a) {
-            case I.iO.LESS_THAN:
-                t = R.NW.format(R.t['2p7dAw'], {
+            case N.iO.LESS_THAN:
+                t = R.intl.format(R.t['2p7dAw'], {
                     description: s,
                     count: Math.max(0, Number(i) - 1)
                 });
                 break;
-            case I.iO.GREATER_THAN:
-                t = R.NW.format(R.t['2p7dAw'], {
+            case N.iO.GREATER_THAN:
+                t = R.intl.format(R.t['2p7dAw'], {
                     description: s,
                     count: Math.max(0, Number(i) + 1)
                 });
@@ -118,7 +118,7 @@ function D(e) {
                 y = (null == h ? void 0 : h.bot) != null ? new v.Z(h.bot) : null;
             return (
                 C.SJ.includes(null != (t = null == h ? void 0 : h.id) ? t : '')
-                    ? (l = (0, r.jsx)(w.Z, {
+                    ? (l = (0, r.jsx)(S.Z, {
                           className: E.botTag,
                           color: o,
                           size: 16
@@ -210,7 +210,7 @@ function L(e) {
         [d, l]
     );
     return (
-        (t = 1 === i.length && 1 === i[0].length ? R.NW.string(R.t.jDym4O) : 1 === i.length ? R.NW.format(R.t['0eBj39'], {}) : R.NW.format(R.t.D7uftL, {})),
+        (t = 1 === i.length && 1 === i[0].length ? R.intl.string(R.t.jDym4O) : 1 === i.length ? R.intl.format(R.t['0eBj39'], {}) : R.intl.format(R.t.D7uftL, {})),
         (0, r.jsxs)('div', {
             className: E.popout,
             children: [
@@ -235,13 +235,13 @@ function L(e) {
                             : (0, r.jsx)(p.zxk, {
                                   className: E.getRolesButton,
                                   onClick: n,
-                                  children: R.NW.string(R.t.T1t1WV)
+                                  children: R.intl.string(R.t.T1t1WV)
                               }),
                         (0, r.jsx)(p.zxk, {
                             className: E.viewConnectionsButton,
                             color: p.zxk.Colors.PRIMARY,
                             onClick: a,
-                            children: R.NW.string(R.t.hgKDnJ)
+                            children: R.intl.string(R.t.hgKDnJ)
                         })
                     ]
                 })
@@ -252,7 +252,7 @@ function L(e) {
 function B(e) {
     let { userId: t, messageId: n, guild: a, channel: s } = e,
         { analyticsLocations: l } = (0, y.ZP)(),
-        u = (0, N.Z)(a, t, s.id, !0),
+        u = (0, T.Z)(a, t, s.id, !0),
         d = (0, c.e7)([P.Z], () => P.Z.getGuildRoleConnectionEligibility(null == u ? void 0 : u.id)),
         [m, f] = o.useState(null == d);
     if (null == u) return null;
@@ -274,7 +274,7 @@ function B(e) {
                           channelId: s.id,
                           guildId: a.id,
                           onGetRolesClicked: () => {
-                              (0, S.Am)(a.id);
+                              (0, I.Am)(a.id);
                           },
                           onOpenProfile: () => {
                               (0, O.openUserProfileModal)({
@@ -296,7 +296,7 @@ function B(e) {
         nudgeAlignIntoViewport: !0,
         children: (e) =>
             (0, r.jsx)(p.ua7, {
-                text: R.NW.string(R.t.Wpsnam),
+                text: R.intl.string(R.t.Wpsnam),
                 children: (t) => {
                     var n, o;
                     return (0, r.jsxs)(
@@ -305,7 +305,7 @@ function B(e) {
                         (o = o =
                             {
                                 children: [
-                                    (0, r.jsx)(T.Z, {
+                                    (0, r.jsx)(w.Z, {
                                         className: E.badgeVerifiedIcon,
                                         size: 16,
                                         color: u.colorString

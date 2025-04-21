@@ -88,11 +88,11 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let N = 3,
-    A = 80,
+let A = 3,
+    N = 80,
     C = 12,
     R = 16,
-    P = () => A,
+    P = () => N,
     w = (e) => {
         var { children: t, className: n, onSelect: i, isSelected: a = !1 } = e,
             s = S(e, ['children', 'className', 'onSelect', 'isSelected']);
@@ -113,13 +113,13 @@ let N = 3,
             }),
             O = (0, _.Yq)(n.skuId),
             T = p.ZP.canUseCollectibles(t),
-            N = o === m.$0.PREMIUM_PURCHASE && !T,
+            A = o === m.$0.PREMIUM_PURCHASE && !T,
             C = i.useRef(null),
             R = (0, d.Z)(null != a ? a : C),
             { avatarDecorationSrc: P } = (0, g.Z)({
                 user: t,
                 avatarDecorationOverride: n,
-                size: A,
+                size: N,
                 onlyAnimateOnHover: !R
             }),
             D = () =>
@@ -135,7 +135,7 @@ let N = 3,
                                         size: 'xxs',
                                         color: 'currentColor'
                                     }),
-                                    E.NW.string(E.t.y2b7CA)
+                                    E.intl.string(E.t.y2b7CA)
                                 ]
                             })
                         })
@@ -161,7 +161,7 @@ let N = 3,
             I(
                 v(
                     {
-                        className: N ? b.decorationGridItemChurned : void 0,
+                        className: A ? b.decorationGridItemChurned : void 0,
                         innerRef: null != a ? a : C,
                         isSelected: s
                     },
@@ -202,7 +202,7 @@ let N = 3,
                                     (0, r.jsx)(u.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-primary',
-                                        children: (0, h.ad)(t, n) ? E.NW.string(E.t['GsW4/v']) : E.NW.string(E.t.PoWNfX)
+                                        children: (0, h.ad)(t, n) ? E.intl.string(E.t['GsW4/v']) : E.intl.string(E.t.PoWNfX)
                                     })
                                 ]
                             },
@@ -226,7 +226,7 @@ let N = 3,
                                     (0, r.jsx)(u.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-primary',
-                                        children: E.NW.string(E.t.pWG4zc)
+                                        children: E.intl.string(E.t.pWG4zc)
                                     })
                                 ]
                             },
@@ -261,7 +261,7 @@ let N = 3,
         return (0, r.jsx)(u.GMG, {
             fade: !0,
             className: b.list,
-            columns: N,
+            columns: A,
             sections: c.map((e) => {
                 let { items: t } = e;
                 return t.length;

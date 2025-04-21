@@ -2,9 +2,9 @@ n.d(t, { Z: () => a });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    s = n.n(i),
-    o = n(388905),
-    l = n(414718);
+    l = n.n(i),
+    s = n(388905),
+    o = n(414718);
 function a(e) {
     var t,
         n,
@@ -18,19 +18,19 @@ function a(e) {
                     var n,
                         r,
                         i = {},
-                        s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ['children', 'className']);
     let u = i();
     return (0, r.jsx)(
-        o.ZP,
+        s.ZP,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -58,13 +58,13 @@ function a(e) {
         })({}, c)),
         (n = n =
             {
-                className: s()(a, l.container),
-                contentClassName: l.content,
+                className: l()(a, o.container),
+                contentClassName: o.content,
                 children: u.map((e, t) =>
                     (0, r.jsx)(
                         'div',
                         {
-                            className: l.column,
+                            className: o.column,
                             style: { flexBasis: ''.concat(100 / u.length, '%') },
                             children: e
                         },

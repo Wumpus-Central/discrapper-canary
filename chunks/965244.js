@@ -17,7 +17,7 @@ function b(e, t) {
         ? null
         : (0, r.jsx)(i.sNh, {
               id: 'nav-security-actions',
-              label: s.NW.string(s.t.UgXhdn),
+              label: s.intl.string(s.t.UgXhdn),
               action: () => {
                   let t = {
                       source: c.Zu.MESSAGE,

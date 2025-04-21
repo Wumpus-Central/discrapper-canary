@@ -54,8 +54,8 @@ function T(e) {
     }
     return e;
 }
-let N = [d.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'],
-    A = 220,
+let A = [d.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'],
+    N = 220,
     C = 1220,
     R = Array.from({ length: 16 }).map((e, t) => ({
         id: ''.concat(t),
@@ -167,7 +167,7 @@ class j extends i.PureComponent {
             });
         let { format: t, color: n, imagePool: r } = this.props;
         (this.state = {
-            color: null == n ? l().sample(N) : n,
+            color: null == n ? l().sample(A) : n,
             loaded: !1
         }),
             x(t) || ((this._image = r.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src));
@@ -193,7 +193,7 @@ class U extends i.PureComponent {
             });
     }
     getSectionHeight(e) {
-        return 1 === e ? A : 0;
+        return 1 === e ? N : 0;
     }
     renderEmptyFavorite(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -226,7 +226,7 @@ class U extends i.PureComponent {
             fade: !0,
             children: (0, r.jsxs)('div', {
                 className: I.emptyHints,
-                children: [this.renderEmptyFavorite(O.NW.string(O.t['3gyw4e']), !0), this.renderEmptyFavorite(O.NW.string(O.t.yThUi4)), this.renderEmptyFavorite(O.NW.string(O.t.MeP0SE)), Array.from({ length: 15 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(O.NW.string(O.t['5u99XV'])), Array.from({ length: 16 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(O.NW.string(O.t.o6CLLy))]
+                children: [this.renderEmptyFavorite(O.intl.string(O.t['3gyw4e']), !0), this.renderEmptyFavorite(O.intl.string(O.t.yThUi4)), this.renderEmptyFavorite(O.intl.string(O.t.MeP0SE)), Array.from({ length: 15 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(O.intl.string(O.t['5u99XV'])), Array.from({ length: 16 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(O.intl.string(O.t.o6CLLy))]
             })
         });
     }
@@ -236,7 +236,7 @@ class U extends i.PureComponent {
             ? i === v.wI2.FAVORITES
                 ? this.renderEmptyFavorites()
                 : (0, r.jsx)(h.Z, {
-                      message: O.NW.string(O.t['5dX4UF']),
+                      message: O.intl.string(O.t['5dX4UF']),
                       className: I.noResults
                   })
             : (0, r.jsx)(
@@ -335,7 +335,7 @@ class U extends i.PureComponent {
                                             children: [
                                                 (0, r.jsx)('div', {
                                                     className: I.endText,
-                                                    children: O.NW.string(O.t['3JGJo6'])
+                                                    children: O.intl.string(O.t['3JGJo6'])
                                                 }),
                                                 (0, r.jsx)('div', {
                                                     className: I.searchSuggestions,

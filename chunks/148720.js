@@ -25,22 +25,22 @@ function E(e) {
             break;
         case m.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
             i.Z.show({
-                title: g.NW.string(g.t.PtobXV),
-                body: g.NW.string(g.t.UXoQTk),
+                title: g.intl.string(g.t.PtobXV),
+                body: g.intl.string(g.t.UXoQTk),
                 hideActionSheet: !1
             });
             break;
         case m.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
             i.Z.show({
-                title: g.NW.string(g.t.PtobXV),
-                body: g.NW.string(g.t.uGDCc3),
+                title: g.intl.string(g.t.PtobXV),
+                body: g.intl.string(g.t.uGDCc3),
                 hideActionSheet: !1
             });
             break;
         case m.Fw.ACTIVITY_AGE_GATED:
             i.Z.show({
-                title: g.NW.string(g.t.PtobXV),
-                body: g.NW.string(g.t['4WuFRE']),
+                title: g.intl.string(g.t.PtobXV),
+                body: g.intl.string(g.t['4WuFRE']),
                 hideActionSheet: !1
             });
             break;
@@ -49,8 +49,8 @@ function E(e) {
         case m.Fw.NO_CHANNEL:
         case m.Fw.NO_USER:
             i.Z.show({
-                title: g.NW.string(g.t.PtobXV),
-                body: g.NW.string(g.t.FUCQcn),
+                title: g.intl.string(g.t.PtobXV),
+                body: g.intl.string(g.t.FUCQcn),
                 hideActionSheet: !1
             });
     }
@@ -66,7 +66,7 @@ async function b(e) {
     if (null == O || null == I) return;
     let S = d.default.getCurrentUser(),
         T = l.Z.getChannel(t);
-    async function N() {
+    async function A() {
         null != O &&
             (await (0, p.Z)({
                 applicationId: O.applicationId,
@@ -92,6 +92,6 @@ async function b(e) {
             PermissionStore: u.Z,
             GuildStore: c.Z
         }),
-        handleCanJoin: N
+        handleCanJoin: A
     });
 }

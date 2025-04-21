@@ -32,7 +32,7 @@ function b(e) {
             C && s.Z.ackPins(t.id);
         }, [C, t.id]),
         (0, r.jsx)(a.VqE, {
-            'aria-label': m.NW.string(m.t['mp1N//']),
+            'aria-label': m.intl.string(m.t['mp1N//']),
             children: (0, r.jsx)(h.ZP, {
                 onFetch: function () {
                     s.Z.ackPins(t.id), s.Z.fetchPins(t.id);
@@ -46,16 +46,16 @@ function b(e) {
                 },
                 onJump: b,
                 getProTip: function () {
-                    return t.isPrivate() ? m.NW.string(m.t['3dLGAg']) : m.NW.string(m.t.KTbRcn);
+                    return t.isPrivate() ? m.intl.string(m.t['3dLGAg']) : m.intl.string(m.t.KTbRcn);
                 },
                 renderHeader: () =>
                     (0, r.jsx)(h.h4, {
                         icon: a.qQX,
-                        title: m.NW.string(m.t['mp1N//'])
+                        title: m.intl.string(m.t['mp1N//'])
                     }),
                 renderEmptyState: function (e) {
-                    let i = m.NW.string(m.t.fmyaWF);
-                    t.isPrivate() && (i = m.NW.string(m.t.rhqcbG));
+                    let i = m.intl.string(m.t.fmyaWF);
+                    t.isPrivate() && (i = m.intl.string(m.t.rhqcbG));
                     let l = (0, o.ap)(e) ? n(306059) : n(281485);
                     return (0, r.jsx)(
                         h.nH,

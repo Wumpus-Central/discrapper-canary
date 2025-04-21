@@ -22,11 +22,11 @@ var r = n(200651),
     j = n(665149),
     O = n(984370),
     E = n(141321),
-    N = n(221241),
-    I = n(618158),
-    P = n(390322),
-    S = n(616286),
-    Z = n(961048),
+    I = n(221241),
+    P = n(618158),
+    S = n(390322),
+    Z = n(616286),
+    N = n(961048),
     T = n(975146),
     A = n(430824),
     w = n(496675),
@@ -35,14 +35,14 @@ var r = n(200651),
     M = n(501655),
     L = n(200498),
     D = n(146085),
-    W = n(427679),
-    U = n(592473),
-    B = n(831002),
-    G = n(903108),
-    F = n(981631),
-    H = n(354459),
-    V = n(474936),
-    z = n(388032),
+    U = n(427679),
+    B = n(592473),
+    G = n(831002),
+    F = n(903108),
+    H = n(981631),
+    V = n(354459),
+    z = n(474936),
+    W = n(388032),
     Y = n(523335);
 function q(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -101,16 +101,16 @@ function X(e) {
         ),
         w = (0, L.B)(n.id),
         R = (0, k.Rk)(n.id, M.pV.REQUESTED_TO_SPEAK_ONLY),
-        { preventIdle: D, allowIdle: W } = (0, I.Y)('popup'),
-        { hasParticipantsPanel: G } = (0, m.Z)({ location: 'StageChannelCallHeader' }),
-        F = G && A,
-        V = (0, x.Q3)('StageChannelCallHeader'),
-        { simplifiedSettingsEnabled: z } = (0, N.Z)({ location: 'StageChannelCallHeader' });
+        { preventIdle: D, allowIdle: U } = (0, P.Y)('popup'),
+        { hasParticipantsPanel: F } = (0, m.Z)({ location: 'StageChannelCallHeader' }),
+        H = F && A,
+        z = (0, x.Q3)('StageChannelCallHeader'),
+        { simplifiedSettingsEnabled: W } = (0, I.Z)({ location: 'StageChannelCallHeader' });
     return (0, r.jsxs)(h.Gt, {
         value: v,
         children: [
             (0, r.jsx)(C.Z, { channelId: n.id }, 'clips-enabled-indicator'),
-            !z &&
+            !W &&
                 (0, r.jsx)(
                     c.yRy,
                     {
@@ -118,13 +118,13 @@ function X(e) {
                         animation: c.yRy.Animation.NONE,
                         align: 'right',
                         renderPopout: (e) =>
-                            (0, r.jsx)(P.Z, {
+                            (0, r.jsx)(S.Z, {
                                 children: (0, r.jsx)(
-                                    B.ZP,
+                                    G.ZP,
                                     K(q({}, e), {
                                         channelId: n.id,
                                         appContext: _,
-                                        onInteraction: (0, b.u)('StageChannelCallOverflowMenu', j, { entrypoint: H.A5.THREE_DOT })
+                                        onInteraction: (0, b.u)('StageChannelCallOverflowMenu', j, { entrypoint: V.A5.THREE_DOT })
                                     })
                                 )
                             }),
@@ -132,7 +132,7 @@ function X(e) {
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
-                                Z.Z,
+                                N.Z,
                                 K(q({}, e), {
                                     key: 'more-options',
                                     isActive: n,
@@ -144,14 +144,14 @@ function X(e) {
                     },
                     'more-options-popout'
                 ),
-            !V && !t && (0, r.jsx)(y.Z, { className: Y.button }, 'clips'),
-            !z &&
-                !V &&
+            !z && !t && (0, r.jsx)(y.Z, { className: Y.button }, 'clips'),
+            !W &&
+                !z &&
                 (0, r.jsx)(
                     E.Z,
                     {
                         onOpen: D,
-                        onClose: W,
+                        onClose: U,
                         className: Y.button
                     },
                     'recents'
@@ -159,7 +159,7 @@ function X(e) {
             !s && w
                 ? (0, r.jsx)('div', {
                       className: Y.button,
-                      children: (0, r.jsx)(U.Z, {
+                      children: (0, r.jsx)(B.Z, {
                           toggleRequestToSpeakSidebar: () => {
                               O && u.Z.updateChatOpen(n.id, !1), A && u.Z.toggleParticipantsList(n.id, !1), (0, g.v)(j, g.d.OPEN_REQUEST_TO_SPEAK_SIDEBAR), l();
                           },
@@ -169,7 +169,7 @@ function X(e) {
                   })
                 : null,
             !A &&
-                G &&
+                F &&
                 (0, r.jsx)(
                     T.Z,
                     {
@@ -182,8 +182,8 @@ function X(e) {
                 ),
             !O &&
                 (0, r.jsx)('div', {
-                    className: o()(Y.button, { [Y.sidebarOpen]: F || s }),
-                    children: (0, r.jsx)(S.T, {
+                    className: o()(Y.button, { [Y.sidebarOpen]: H || s }),
+                    children: (0, r.jsx)(Z.T, {
                         channelId: n.id,
                         showRequestToSpeakSidebar: s,
                         toggleRequestToSpeakSidebar: l,
@@ -197,46 +197,46 @@ function Q(e) {
     var t;
     let { inPopout: n, channel: l, toggleRequestToSpeakSidebar: d, showRequestToSpeakSidebar: p } = e,
         h = (0, _.ZP)(l),
-        f = (0, a.e7)([W.Z], () => W.Z.getStageInstanceByChannel(l.id)),
+        f = (0, a.e7)([U.Z], () => U.Z.getStageInstanceByChannel(l.id)),
         m = (0, k.Io)(l.id),
         g = (0, k.Rk)(l.id, M.pV.AUDIENCE),
         b = (0, a.e7)([A.Z], () => A.Z.getGuild(l.guild_id), [l.guild_id]),
         y = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
-        C = (null == b ? void 0 : b.isCommunity()) ? y < F.TU7 : (null == b ? void 0 : b.premiumTier) !== F.Eu4.TIER_3 && y <= F.eez,
-        E = (0, G.Z)(l),
-        N = (0, a.e7)([w.Z], () => w.Z.can(D.yP, l)),
-        I = (0, x.Q3)('StageChannelCallHeader'),
-        P = () => {
+        C = (null == b ? void 0 : b.isCommunity()) ? y < H.TU7 : (null == b ? void 0 : b.premiumTier) !== H.Eu4.TIER_3 && y <= H.eez,
+        E = (0, F.Z)(l),
+        I = (0, a.e7)([w.Z], () => w.Z.can(D.yP, l)),
+        P = (0, x.Q3)('StageChannelCallHeader'),
+        S = () => {
             u.Z.updateStageVideoLimitBoostUpsellDismissed(l.id, !0),
-                R.default.track(F.rMx.BOOSTING_UPSELL_CLICKED, {
+                R.default.track(H.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: l.guild_id,
-                    type: V.cd.VIDEO_STAGE_LIMIT,
-                    is_moderator: N,
-                    action: V.T7.DISMISS
+                    type: z.cd.VIDEO_STAGE_LIMIT,
+                    is_moderator: I,
+                    action: z.T7.DISMISS
                 });
         },
-        S = {
-            canModerate: N,
+        Z = {
+            canModerate: I,
             audienceCount: g,
             channel: l,
             speakerCount: m
         },
-        Z = i.useRef(S);
+        N = i.useRef(Z);
     i.useEffect(() => {
-        Z.current = S;
+        N.current = Z;
     }),
         i.useEffect(() => {
-            let { canModerate: e, audienceCount: t, channel: n, speakerCount: r } = Z.current;
+            let { canModerate: e, audienceCount: t, channel: n, speakerCount: r } = N.current;
             E &&
-                R.default.track(F.rMx.BOOSTING_UPSELL_VIEWED, {
+                R.default.track(H.rMx.BOOSTING_UPSELL_VIEWED, {
                     guild_id: n.guild_id,
-                    type: V.cd.VIDEO_STAGE_LIMIT,
+                    type: z.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: e,
                     listener_count: r + t
                 });
         }, [E]);
     let T = (0, r.jsx)(c.f6W, {
-        theme: F.BRd.DARK,
+        theme: H.BRd.DARK,
         children: (e) => {
             var t;
             return (0, r.jsxs)(j.ZP, {
@@ -253,9 +253,9 @@ function Q(e) {
                     (0, r.jsx)(j.ZP.Icon, {
                         icon: c.ewx,
                         disabled: !0,
-                        'aria-label': z.NW.string(z.t.EErMzM),
+                        'aria-label': W.intl.string(W.t.EErMzM),
                         className: Y.icon,
-                        color: null != f ? (I ? s.Z.colors.HEADER_MUTED.css : s.Z.unsafe_rawColors.GREEN_360.css) : void 0
+                        color: null != f ? (P ? s.Z.colors.HEADER_MUTED.css : s.Z.unsafe_rawColors.GREEN_360.css) : void 0
                     }),
                     (0, r.jsx)(j.ZP.Title, {
                         className: Y.channelName,
@@ -267,13 +267,13 @@ function Q(e) {
                         children: [
                             (0, r.jsx)(c.S6n, {
                                 size: 'xs',
-                                color: I ? s.Z.colors.TEXT_LOW_CONTRAST.css : 'currentColor'
+                                color: P ? s.Z.colors.TEXT_LOW_CONTRAST.css : 'currentColor'
                             }),
                             (0, r.jsx)(c.Text, {
-                                variant: I ? 'text-sm/normal' : 'text-xs/medium',
-                                color: I ? 'text-muted' : 'header-secondary',
+                                variant: P ? 'text-sm/normal' : 'text-xs/medium',
+                                color: P ? 'text-muted' : 'header-secondary',
                                 className: Y.speakerCount,
-                                children: z.NW.format(z.t.chmM9P, { count: m })
+                                children: W.intl.format(W.t.chmM9P, { count: m })
                             }),
                             (0, r.jsx)(c.BFJ, {
                                 size: 'xs',
@@ -281,10 +281,10 @@ function Q(e) {
                                 color: 'currentColor'
                             }),
                             (0, r.jsx)(c.Text, {
-                                variant: I ? 'text-sm/normal' : 'text-xs/medium',
-                                color: I ? 'text-muted' : 'header-secondary',
+                                variant: P ? 'text-sm/normal' : 'text-xs/medium',
+                                color: P ? 'text-muted' : 'header-secondary',
                                 className: Y.speakerCount,
-                                children: z.NW.format(z.t['+v2pNz'], { count: g })
+                                children: W.intl.format(W.t['+v2pNz'], { count: g })
                             })
                         ]
                     })
@@ -306,12 +306,12 @@ function Q(e) {
                                   (0, r.jsx)(c.Text, {
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: C ? z.NW.string(z.t['T+zF9P']) : z.NW.string(z.t['IZ+SVl'])
+                                      children: C ? W.intl.string(W.t['T+zF9P']) : W.intl.string(W.t['IZ+SVl'])
                                   }),
                                   (0, r.jsx)(c.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'text-normal',
-                                      children: C ? z.NW.string(z.t.Izgpmp) : z.NW.string(z.t['7FHbPD'])
+                                      children: C ? W.intl.string(W.t.Izgpmp) : W.intl.string(W.t['7FHbPD'])
                                   })
                               ]
                           }),
@@ -322,36 +322,36 @@ function Q(e) {
                                         children: [
                                             (0, r.jsx)(c.zxk, {
                                                 className: Y.notNowButton,
-                                                onClick: P,
+                                                onClick: S,
                                                 look: c.zxk.Looks.BLANK,
                                                 size: c.zxk.Sizes.SMALL,
-                                                children: z.NW.string(z.t.L5eIZ2)
+                                                children: W.intl.string(W.t.L5eIZ2)
                                             }),
                                             (0, r.jsx)(c.gtL, {
                                                 size: c.zxk.Sizes.SMALL,
                                                 onClick: () => {
                                                     (0, v.f)({
                                                         guildId: l.guild_id,
-                                                        location: { section: F.jXE.STAGE_VIDEO_LIMIT }
+                                                        location: { section: H.jXE.STAGE_VIDEO_LIMIT }
                                                     }),
-                                                        R.default.track(F.rMx.BOOSTING_UPSELL_CLICKED, {
+                                                        R.default.track(H.rMx.BOOSTING_UPSELL_CLICKED, {
                                                             guild_id: l.guild_id,
-                                                            type: V.cd.VIDEO_STAGE_LIMIT,
-                                                            is_moderator: N,
-                                                            action: V.T7.BOOST
+                                                            type: z.cd.VIDEO_STAGE_LIMIT,
+                                                            is_moderator: I,
+                                                            action: z.T7.BOOST
                                                         });
                                                 },
                                                 className: Y.boostButton,
-                                                children: z.NW.string(z.t.Uj0md3)
+                                                children: W.intl.string(W.t.Uj0md3)
                                             })
                                         ]
                                     })
                                   : (0, r.jsx)(c.zxk, {
                                         className: Y.notNowButton,
-                                        onClick: P,
+                                        onClick: S,
                                         look: c.zxk.Looks.BLANK,
                                         size: c.zxk.Sizes.SMALL,
-                                        children: z.NW.string(z.t.WAI6xs)
+                                        children: W.intl.string(W.t.WAI6xs)
                                     })
                           })
                       ]

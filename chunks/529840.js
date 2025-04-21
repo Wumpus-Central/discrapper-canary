@@ -1,14 +1,14 @@
 r.d(t, { Z: () => C });
 var a = r(200651);
 r(192379);
-var s = r(120356),
-    i = r.n(s),
+var i = r(120356),
+    s = r.n(i),
     n = r(481060),
     l = r(518950),
     o = r(675465);
 function C(e) {
     var t;
-    let { user: r, checked: s, onChange: C, disabled: d } = e,
+    let { user: r, checked: i, onChange: C, disabled: d } = e,
         { avatarSrc: c, eventHandlers: x } = (0, l.Z)({
             user: r,
             size: n.EFr.SIZE_32
@@ -48,7 +48,7 @@ function C(e) {
                             return e;
                         })(
                             {
-                                className: i()({ [o.muted]: d }),
+                                className: s()({ [o.muted]: d }),
                                 src: c,
                                 'aria-label': f,
                                 size: n.EFr.SIZE_32
@@ -67,7 +67,7 @@ function C(e) {
                 className: o.checkbox,
                 children: (0, a.jsx)(n.XZJ, {
                     disabled: d,
-                    value: s,
+                    value: i,
                     onChange: (e, t) => C(r, t)
                 })
             })

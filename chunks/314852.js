@@ -217,7 +217,7 @@ function T(e) {
     let { guildId: t, enabled: n } = e;
     null != t && n && _.delete(t);
 }
-function N(e) {
+function A(e) {
     var t, n, r;
     let { guild: i } = e,
         a = _.get(i.id);
@@ -230,7 +230,7 @@ function N(e) {
     });
     _.set(i.id, d(c({}, a), { profile: o }));
 }
-class A extends (r = i.ZP.Store) {
+class N extends (r = i.ZP.Store) {
     getProfile(e) {
         var t, n;
         return null == e ? null : null != (n = null == (t = _.get(e)) ? void 0 : t.profile) ? n : null;
@@ -252,8 +252,8 @@ class A extends (r = i.ZP.Store) {
         return null == e ? null : null != (r = null == (n = _.get(e)) || null == (t = n.error) ? void 0 : t.code) ? r : null;
     }
 }
-l(A, 'displayName', 'GuildProfileStore');
-let C = new A(a.Z, {
+l(N, 'displayName', 'GuildProfileStore');
+let C = new N(a.Z, {
     GUILD_PROFILE_FETCH: h,
     GUILD_PROFILE_FETCH_SUCCESS: m,
     GUILD_PROFILE_FETCH_FAILURE: g,
@@ -265,7 +265,7 @@ let C = new A(a.Z, {
     INSTANT_INVITE_CREATE_SUCCESS: I,
     CREATE_CHANNEL_MODAL_SUBMIT: S,
     GUILD_SETTINGS_SET_WIDGET: T,
-    GUILD_UPDATE: N,
+    GUILD_UPDATE: A,
     GUILD_PROFILE_UPDATE_VISIBILITY: E,
     GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: v,
     GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: y

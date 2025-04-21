@@ -19,8 +19,8 @@ let a = function (e) {
     return a || Object.values(h).every((e) => 0 === e)
         ? null
         : h.days > 0
-          ? o.NW.formatToPlainString(o.t.f0QaSU, { days: h.days })
-          : o.NW.formatToPlainString(o.t['3MT4MT'], {
+          ? o.intl.formatToPlainString(o.t.f0QaSU, { days: h.days })
+          : o.intl.formatToPlainString(o.t['3MT4MT'], {
                 hours: l(h.hours),
                 minutes: l(h.minutes),
                 seconds: l(h.seconds)

@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    s = n(481060),
-    l = n(430824),
+    l = n(481060),
+    s = n(430824),
     a = n(496675),
     o = n(556012),
     c = n(273504),
@@ -16,17 +16,17 @@ function p(e) {
     let { action: n, triggerType: p, guildId: h, toggled: f, onToggleAction: x } = e,
         b = (e) => () => x(e),
         j = (0, o.c)(n.type, n, p),
-        N = null == (t = n.metadata) ? void 0 : t.durationSeconds,
-        _ = null != N ? (0, u.L9)(N) : null,
-        v = (0, i.e7)([a.Z, l.Z], () => a.Z.can(d.Plq.MODERATE_MEMBERS, l.Z.getGuild(h)), [h]);
+        _ = null == (t = n.metadata) ? void 0 : t.durationSeconds,
+        v = null != _ ? (0, u.L9)(_) : null,
+        O = (0, i.e7)([a.Z, s.Z], () => a.Z.can(d.Plq.MODERATE_MEMBERS, s.Z.getGuild(h)), [h]);
     if (null == j) return null;
-    let { headerText: O, descriptionText: C, icon: y } = j;
+    let { headerText: C, descriptionText: y, icon: N } = j;
     return (0, r.jsxs)('div', {
         className: g.actionContainer,
         children: [
             (0, r.jsx)('div', {
                 className: g.actionIconContainer,
-                children: (0, r.jsx)(y, {
+                children: (0, r.jsx)(N, {
                     size: 'md',
                     color: 'currentColor',
                     className: g.actionIcon
@@ -35,37 +35,37 @@ function p(e) {
             (0, r.jsxs)('div', {
                 className: g.actionTextContainer,
                 children: [
-                    (0, r.jsx)(s.X6q, {
+                    (0, r.jsx)(l.X6q, {
                         variant: 'heading-sm/semibold',
-                        children: O
-                    }),
-                    (0, r.jsx)(s.Text, {
-                        color: 'interactive-normal',
-                        variant: 'text-xs/medium',
                         children: C
                     }),
+                    (0, r.jsx)(l.Text, {
+                        color: 'interactive-normal',
+                        variant: 'text-xs/medium',
+                        children: y
+                    }),
                     f &&
-                        (0, r.jsxs)(s.Text, {
+                        (0, r.jsxs)(l.Text, {
                             color: 'interactive-normal',
                             variant: 'text-xs/medium',
                             children: [
-                                null === _ ? null : p === c.fX.MENTION_SPAM ? m.NW.format(m.t.i3lsKC, { friendlyDurationString: _ }) : m.NW.format(m.t.mvHxzc, { friendlyDurationString: _ }),
-                                v &&
-                                    (0, r.jsx)(s.P3F, {
+                                null === v ? null : p === c.fX.MENTION_SPAM ? m.intl.format(m.t.i3lsKC, { friendlyDurationString: v }) : m.intl.format(m.t.mvHxzc, { friendlyDurationString: v }),
+                                O &&
+                                    (0, r.jsx)(l.P3F, {
                                         onClick: b(!0),
                                         className: g.editChannel,
                                         tag: 'span',
                                         role: 'link',
-                                        children: m.NW.string(m.t['0B95RE'])
+                                        children: m.intl.string(m.t['0B95RE'])
                                     })
                             ]
                         })
                 ]
             }),
-            (0, r.jsx)(s.ua7, {
-                text: m.NW.format(m.t.wx6Vb2, {}),
-                'aria-label': m.NW.formatToMarkdownString(m.t.wx6Vb2, {}),
-                shouldShow: !v,
+            (0, r.jsx)(l.ua7, {
+                text: m.intl.format(m.t.wx6Vb2, {}),
+                'aria-label': m.intl.formatToMarkdownString(m.t.wx6Vb2, {}),
+                shouldShow: !O,
                 children: (e) => {
                     var t, n;
                     return (0, r.jsx)(
@@ -97,11 +97,11 @@ function p(e) {
                         })({}, e)),
                         (n = n =
                             {
-                                children: (0, r.jsx)(s.XZJ, {
-                                    type: s.XZJ.Types.INVERTED,
+                                children: (0, r.jsx)(l.XZJ, {
+                                    type: l.XZJ.Types.INVERTED,
                                     value: f,
                                     onChange: b(!1),
-                                    disabled: !v,
+                                    disabled: !O,
                                     className: g.__invalid_actionCheckbox
                                 })
                             }),

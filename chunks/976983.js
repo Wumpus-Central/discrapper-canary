@@ -1,15 +1,15 @@
 n.d(t, {
-    B: () => _,
-    Z: () => N
+    B: () => v,
+    Z: () => _
 }),
     n(953529),
     n(388685);
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    s = n.n(i),
-    l = n(392711),
-    a = n.n(l),
+    l = n.n(i),
+    s = n(392711),
+    a = n.n(s),
     o = n(481060),
     c = n(668781),
     d = n(603211),
@@ -63,33 +63,33 @@ function j(e, t) {
         e
     );
 }
-function N(e) {
-    var t, i, l, c;
-    let { guild: u, prompt: N, singleColumn: _, promptIndex: v, option: O, hasError: C, onDragStart: y, onDragComplete: I, onDragReset: E } = e,
+function _(e) {
+    var t, i, s, c;
+    let { guild: u, prompt: _, singleColumn: v, promptIndex: O, option: C, hasError: y, onDragStart: N, onDragComplete: I, onDragReset: E } = e,
         S = null,
-        T = a().findIndex(N.options, (e) => e.id === O.id),
+        T = a().findIndex(_.options, (e) => e.id === C.id),
         {
             drag: P,
             dragSourcePosition: w,
             drop: R,
             setIsDraggable: Z
         } = (0, d.Z)({
-            type: 'ONBOARDING_PROMPT_OPTION_CARD-'.concat(N.id),
+            type: 'ONBOARDING_PROMPT_OPTION_CARD-'.concat(_.id),
             index: T,
-            optionId: O.id,
-            onDragStart: y,
+            optionId: C.id,
+            onDragStart: N,
             onDragComplete: I,
             onDragReset: E
         }),
-        { customEmoji: D, unicodeEmoji: A } = (0, m.Z)(null == (t = O.emoji) ? void 0 : t.id, null == (i = O.emoji) ? void 0 : i.name);
+        { customEmoji: D, unicodeEmoji: A } = (0, m.Z)(null == (t = C.emoji) ? void 0 : t.id, null == (i = C.emoji) ? void 0 : i.name);
     return (
-        (0, h.Oq)(O.emoji) || null != D || null != A || (S = f.NW.string(f.t['61wfmp'])),
+        (0, h.Oq)(C.emoji) || null != D || null != A || (S = f.intl.string(f.t['61wfmp'])),
         (0, r.jsxs)(o.P3F, {
-            className: s()(x.optionCard, {
-                [x.hasError]: C || null != S,
+            className: l()(x.optionCard, {
+                [x.hasError]: y || null != S,
                 [x.dropIndicatorBefore]: null != w && T < w,
                 [x.dropIndicatorAfter]: null != w && T > w,
-                [x.singleColumn]: _
+                [x.singleColumn]: v
             }),
             onClick: () =>
                 (0, o.ZDy)(async () => {
@@ -99,14 +99,14 @@ function N(e) {
                             e,
                             j(b({}, t), {
                                 guild: u,
-                                prompt: N,
-                                option: O,
-                                index: v,
+                                prompt: _,
+                                option: C,
+                                index: O,
                                 onSave: (e) => {
-                                    (0, p.Kk)(u, N.id, { options: N.options.map((t) => (t.id === O.id ? e : t)) });
+                                    (0, p.Kk)(u, _.id, { options: _.options.map((t) => (t.id === C.id ? e : t)) });
                                 },
                                 onDelete: () => {
-                                    (0, p.Kk)(u, N.id, { options: N.options.filter((e) => e.id !== O.id) });
+                                    (0, p.Kk)(u, _.id, { options: _.options.filter((e) => e.id !== C.id) });
                                 }
                             })
                         );
@@ -129,8 +129,8 @@ function N(e) {
                         (0, r.jsx)('div', {
                             className: x.emoji,
                             children: (0, r.jsx)(g.Z, {
-                                emojiId: null == (l = O.emoji) ? void 0 : l.id,
-                                emojiName: null == (c = O.emoji) ? void 0 : c.name,
+                                emojiId: null == (s = C.emoji) ? void 0 : s.id,
+                                emojiName: null == (c = C.emoji) ? void 0 : c.name,
                                 defaultComponent: null
                             })
                         }),
@@ -141,14 +141,14 @@ function N(e) {
                                     variant: 'text-md/medium',
                                     color: 'header-primary',
                                     lineClamp: 1,
-                                    children: O.title
+                                    children: C.title
                                 }),
-                                '' !== O.description &&
+                                '' !== C.description &&
                                     (0, r.jsx)(o.Text, {
                                         className: x.description,
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
-                                        children: O.description
+                                        children: C.description
                                     })
                             ]
                         })
@@ -164,8 +164,8 @@ function N(e) {
         })
     );
 }
-function _(e) {
-    let { guild: t, prompt: i, promptIndex: l, singleColumn: a } = e,
+function v(e) {
+    let { guild: t, prompt: i, promptIndex: s, singleColumn: a } = e,
         { dropdownsAllowed: d } = (0, u.Ug)(t.id),
         m = () => {
             (0, o.ZDy)(async () => {
@@ -181,23 +181,23 @@ function _(e) {
                                     options: [...i.options, e]
                                 }),
                             onDelete: () => {},
-                            index: l
+                            index: s
                         })
                     );
             });
         };
     return (0, r.jsx)(o.P3F, {
-        className: s()(x.optionCard, x.addOptionCard, {
+        className: l()(x.optionCard, x.addOptionCard, {
             [x.addFirstOptionCard]: 0 === i.options.length,
             [x.singleColumn]: a
         }),
         onClick: () => {
             d && i.options.length + 1 === h.fY
                 ? c.Z.show({
-                      title: f.NW.string(f.t.TggC7u),
-                      body: f.NW.formatToPlainString(f.t.kPQKam, { thresholdCount: h.fY }),
-                      confirmText: f.NW.string(f.t.BddRzc),
-                      cancelText: f.NW.string(f.t['ETE/oK']),
+                      title: f.intl.string(f.t.TggC7u),
+                      body: f.intl.formatToPlainString(f.t.kPQKam, { thresholdCount: h.fY }),
+                      confirmText: f.intl.string(f.t.BddRzc),
+                      cancelText: f.intl.string(f.t['ETE/oK']),
                       onConfirm: m
                   })
                 : m();
@@ -213,7 +213,7 @@ function _(e) {
                 (0, r.jsx)(o.Text, {
                     variant: 'text-md/medium',
                     color: 'header-primary',
-                    children: f.NW.string(f.t.Ty3lgo)
+                    children: f.intl.string(f.t.Ty3lgo)
                 })
             ]
         })

@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(570140),
     i = n(668781),
-    s = n(881052),
-    l = n(45966),
+    l = n(881052),
+    s = n(45966),
     a = n(637853),
     o = n(592125),
     c = n(823379),
@@ -31,10 +31,10 @@ async function x(e) {
         [h, f] = (0, a.d9)(e.id, [...t]),
         x = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts),
         b = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts, a.V7);
-    if (l.Z.getEnabled(e.id) && ((!n && (f.length < g.md || h.length < g.X)) || (n && (x.length < g.md || b.length < g.X))))
+    if (s.Z.getEnabled(e.id) && ((!n && (f.length < g.md || h.length < g.X)) || (n && (x.length < g.md || b.length < g.X))))
         return void i.Z.show({
-            title: p.NW.string(p.t.iLdiqa),
-            body: p.NW.string(p.t.JOT74e)
+            title: p.intl.string(p.t.iLdiqa),
+            body: p.intl.string(p.t.JOT74e)
         });
     if (d.Z.hasChanges()) {
         r.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT' });
@@ -47,9 +47,9 @@ async function x(e) {
                 });
         } catch (n) {
             var j;
-            let { fieldName: e, error: t } = null != (j = new s.Hx(n).getAnyErrorMessageAndField()) ? j : {};
+            let { fieldName: e, error: t } = null != (j = new l.Hx(n).getAnyErrorMessageAndField()) ? j : {};
             i.Z.show({
-                title: p.NW.string(p.t.iLdiqa),
+                title: p.intl.string(p.t.iLdiqa),
                 body: [e, t].filter(c.lm).join(': ')
             }),
                 r.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED' });

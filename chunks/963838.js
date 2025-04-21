@@ -29,8 +29,8 @@ var r = n(392711),
     I = n(660020),
     S = n(980084),
     T = n(24688),
-    N = n(200997),
-    A = n(633302),
+    A = n(200997),
+    N = n(633302),
     C = n(134432),
     R = n(594174),
     P = n(768581),
@@ -42,7 +42,7 @@ let x = {
         end: 15
     },
     M = [a],
-    k = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, v, O, I, S, T, N],
+    k = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, v, O, I, S, T, A],
     j = {
         [D.q.BASIC]: M,
         [D.q.PREMIUM]: k
@@ -82,8 +82,8 @@ function B(e) {
             size: t
         });
     }
-    let r = A.ZP.convertSurrogateToName(e.name, !1),
-        i = A.ZP.getByName(r);
+    let r = N.ZP.convertSurrogateToName(e.name, !1),
+        i = N.ZP.getByName(r);
     return null != i ? w.ZP.getURL(i.surrogates) : '';
 }
 function F(e, t) {
@@ -105,17 +105,17 @@ function V(e) {
     return s.length < 1
         ? ''
         : 1 === s.length
-          ? L.NW.formatToPlainString(L.t.yZYxzM, {
+          ? L.intl.formatToPlainString(L.t.yZYxzM, {
                 firstUsername: null == (n = R.default.getUser(s[0])) ? void 0 : n.username,
                 emojiNames: c
             })
           : 2 === s.length
-            ? L.NW.formatToPlainString(L.t['8rmtbW'], {
+            ? L.intl.formatToPlainString(L.t['8rmtbW'], {
                   firstUsername: null == (r = R.default.getUser(s[0])) ? void 0 : r.username,
                   secondUsername: null == (i = R.default.getUser(s[1])) ? void 0 : i.username,
                   emojiNames: c
               })
-            : L.NW.formatToPlainString(L.t['/okjv7'], {
+            : L.intl.formatToPlainString(L.t['/okjv7'], {
                   firstUsername: null == (a = R.default.getUser(s[0])) ? void 0 : a.username,
                   secondUsername: null == (o = R.default.getUser(s[1])) ? void 0 : o.username,
                   count: s.length - 2,

@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(443603),
     S = n(981631),
     T = n(921944),
-    N = n(388032),
-    A = n(870751),
+    A = n(388032),
+    N = n(870751),
     C = n(302195);
 function R(e, t, n) {
     return (
@@ -82,10 +82,10 @@ function x(e) {
     let { animatedIconComponent: t, hovered: i, isCoachmarkDismissed: a } = e,
         s = !a || i;
     return (0, r.jsxs)('div', {
-        className: A.iconContainer,
+        className: N.iconContainer,
         children: [
             (0, r.jsx)('div', {
-                className: o()(A.decorativeLayer, { [A.decorativeLayerActive]: s }),
+                className: o()(N.decorativeLayer, { [N.decorativeLayerActive]: s }),
                 style: { zIndex: 3 },
                 children: (0, r.jsx)(u.Fmz, {
                     shouldAnimate: s,
@@ -93,12 +93,12 @@ function x(e) {
                 })
             }),
             (0, r.jsx)('div', {
-                className: o()(A.giftIconButton, { [A.giftIconButtonActive]: s }),
+                className: o()(N.giftIconButton, { [N.giftIconButtonActive]: s }),
                 style: { zIndex: 2 },
                 children: (0, r.jsx)(t, { color: 'currentColor' })
             }),
             (0, r.jsx)('div', {
-                className: o()(A.decorativeLayer, { [A.decorativeLayerActive]: s }),
+                className: o()(N.decorativeLayer, { [N.decorativeLayerActive]: s }),
                 style: { zIndex: 1 },
                 children: (0, r.jsx)(u.Fmz, {
                     shouldAnimate: s,
@@ -124,11 +124,11 @@ function M(e) {
         F = (0, O.Ft)(n),
         { Component: V, events: Z, play: H } = (0, c.$)();
     if (t) return null;
-    let W = () => {
+    let Y = () => {
         (0, h.Z)({
             isGift: !0,
             giftRecipient: null == F ? void 0 : F,
-            giftMessage: N.NW.string(N.t['rX/m/f']),
+            giftMessage: A.intl.string(A.t['rX/m/f']),
             initialPlanId: null,
             analyticsLocations: a,
             analyticsObject: {
@@ -140,7 +140,7 @@ function M(e) {
         });
     };
     return (0, r.jsxs)('div', {
-        className: A.container,
+        className: N.container,
         onMouseEnter: () => {
             o || u(!0);
         },
@@ -151,7 +151,7 @@ function M(e) {
             B &&
                 (0, r.jsx)(g.Z, {
                     onComplete: () => u(!1),
-                    onCheckItOutClick: W,
+                    onCheckItOutClick: Y,
                     markAsDismissed: G
                 }),
             (0, r.jsx)(
@@ -160,10 +160,10 @@ function M(e) {
                     P(
                         {
                             innerClassName: C.button,
-                            'aria-label': N.NW.string(N.t.Z1RnTk),
+                            'aria-label': A.intl.string(A.t.Z1RnTk),
                             isActive: !1,
                             onClick: () => {
-                                H(), u(!1), (0, _.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: T.L.TAKE_ACTION }), W();
+                                H(), u(!1), (0, _.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: T.L.TAKE_ACTION }), Y();
                             }
                         },
                         Z

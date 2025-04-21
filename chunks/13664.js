@@ -6,7 +6,7 @@ var i = n(481060),
     a = n(865096);
 function o(e) {
     let { sendStartNotification: t, setSendStartNotification: n } = e,
-        o = t ? l.NW.string(l.t.xAT8lJ) : l.NW.string(l.t['Y+18hY']);
+        o = t ? l.intl.string(l.t.xAT8lJ) : l.intl.string(l.t['Y+18hY']);
     return (0, r.jsx)('div', {
         className: a.notificationToggle,
         children: (0, r.jsx)(i.XZJ, {
@@ -23,8 +23,8 @@ function o(e) {
                 children: (0, r.jsx)(i.ua7, {
                     position: 'bottom',
                     tooltipClassName: a.tooltip,
-                    text: l.NW.string(l.t['4A/xnZ']),
-                    'aria-label': l.NW.string(l.t['4A/xnZ']),
+                    text: l.intl.string(l.t['4A/xnZ']),
+                    'aria-label': l.intl.string(l.t['4A/xnZ']),
                     children: (e) => {
                         var t, n;
                         return (0, r.jsx)(

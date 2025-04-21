@@ -18,12 +18,12 @@ var i = n(756647),
     _ = n(962220),
     E = n(69580),
     O = n(703656),
-    N = n(314897),
-    y = n(553795),
-    I = n(594174),
-    v = n(626135),
-    C = n(585483),
-    S = n(591759),
+    y = n(314897),
+    I = n(553795),
+    v = n(594174),
+    C = n(626135),
+    S = n(585483),
+    N = n(591759),
     T = n(998502),
     P = n(996106),
     j = n(186901),
@@ -55,7 +55,7 @@ function Z(e) {
 }
 function x(e, t) {
     null != e &&
-        v.default.track(A.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
+        C.default.track(A.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
             invite_code: null,
             has_auth_token: null,
             is_backgrounded: null,
@@ -73,7 +73,7 @@ let L = {
                 { invite: n } = await p.ZP.resolveInvite(t, 'Desktop Modal');
             if (null == n) throw new P.Z({ errorCode: A.lTL.INVALID_INVITE }, 'Invalid invite id: '.concat(t));
             return (
-                N.default.isAuthenticated()
+                y.default.isAuthenticated()
                     ? a.Z.dispatch({
                           type: 'INVITE_MODAL_OPEN',
                           invite: n,
@@ -94,7 +94,7 @@ let L = {
             let {
                 args: { code: t }
             } = e;
-            if (null == I.default.getCurrentUser()) return;
+            if (null == v.default.getCurrentUser()) return;
             let { guildTemplate: i } = await _.Z.resolveGuildTemplate(t);
             if (null == i) throw new P.Z({ errorCode: A.lTL.INVALID_GUILD_TEMPLATE }, 'Invalid guild template id: '.concat(t));
             return (
@@ -142,7 +142,7 @@ let L = {
                         .then((i) => {
                             let { giftCode: a } = i;
                             T.ZP.focus(),
-                                v.default.track(A.rMx.OPEN_MODAL, {
+                                C.default.track(A.rMx.OPEN_MODAL, {
                                     type: 'gift_accept',
                                     location: A.SaU
                                 }),
@@ -170,7 +170,7 @@ let L = {
                     null != n && ((0, O.dL)(A.Z5c.SETTINGS(n.section, n.subsection)), x(n.fingerprint, (0, j.O)(t)));
                     break;
                 case j.jE.CHANGELOG:
-                    null != n && ((0, O.dL)(S.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), x(n.fingerprint, (0, j.O)(t)));
+                    null != n && ((0, O.dL)(N.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), x(n.fingerprint, (0, j.O)(t)));
                     break;
                 case j.jE.LIBRARY:
                     (0, O.dL)(A.Z5c.APPLICATION_LIBRARY), null != n && x(n.fingerprint, (0, j.O)(t));
@@ -276,10 +276,10 @@ let L = {
             let {
                 args: { providerType: t, code: n, openid_params: r, iss: i, state: l }
             } = e;
-            if (!y.Z.hasPendingAuthorizedState(l)) throw new P.Z({ errorCode: A.lTL.INVALID_CONNECTION_CALLBACK_STATE }, 'Provider authorization did not originate from this discord client');
+            if (!I.Z.hasPendingAuthorizedState(l)) throw new P.Z({ errorCode: A.lTL.INVALID_CONNECTION_CALLBACK_STATE }, 'Provider authorization did not originate from this discord client');
             try {
                 return (
-                    y.Z.deletePendingAuthorizedState(l),
+                    I.Z.deletePendingAuthorizedState(l),
                     await u.Z.callback(t, {
                         code: n,
                         openid_params: r,
@@ -289,7 +289,7 @@ let L = {
                 );
             } catch (e) {
                 if ((null == e ? void 0 : e.status) === 400) throw new P.Z({ errorCode: A.lTL.BAD_REQUEST_FOR_PROVIDER }, 'Bad request for provider');
-                throw (C.S.dispatch(A.CkL.CONNECTIONS_CALLBACK_ERROR), e);
+                throw (S.S.dispatch(A.CkL.CONNECTIONS_CALLBACK_ERROR), e);
             }
         }
     },

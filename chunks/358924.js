@@ -17,12 +17,12 @@ var r,
     _ = n(122810),
     E = n(833664),
     O = n(503438),
-    N = n(420660),
-    y = n(74433),
-    I = n(906732),
-    v = n(812206),
-    C = n(933557),
-    S = n(194082),
+    y = n(420660),
+    I = n(74433),
+    v = n(906732),
+    C = n(812206),
+    S = n(933557),
+    N = n(194082),
     T = n(264165),
     P = n(548816),
     j = n(925329),
@@ -37,12 +37,12 @@ var r,
     M = n(594174),
     U = n(395361),
     G = n(639351),
-    W = n(81063),
-    V = n(823379),
-    B = n(51144),
-    H = n(599706),
-    F = n(981631),
-    z = n(388032),
+    V = n(81063),
+    B = n(823379),
+    H = n(51144),
+    F = n(599706),
+    z = n(981631),
+    W = n(388032),
     Y = n(147049);
 let K = {
         SMALL: 64,
@@ -134,7 +134,7 @@ class ee extends l.Component {
                               })
                           }),
                     (0, i.jsxs)('div', {
-                        children: [Q(null != l && '' !== l ? l : z.NW.string(z.t['2TbM/P'])), null != a ? X(a) : null, this.renderTimePlayed()]
+                        children: [Q(null != l && '' !== l ? l : W.intl.string(W.t['2TbM/P'])), null != a ? X(a) : null, this.renderTimePlayed()]
                     })
                 ]
             })
@@ -324,7 +324,7 @@ let ei = (e) => {
         var t, n;
         let { guild: r, channel: a, partySize: s, members: c, onChannelContextMenu: p } = e,
             h = l.useRef(null),
-            f = (0, C.ZP)(a, !0);
+            f = (0, S.ZP)(a, !0);
         return (0, i.jsx)($, {
             children: (0, i.jsxs)('div', {
                 className: Y.voiceSection,
@@ -373,7 +373,7 @@ let ei = (e) => {
                             children: [Q(r.toString(), Y.voiceSectionText), X(f, Y.voiceSectionText)]
                         })
                     }),
-                    (0, i.jsx)(H.Z, {
+                    (0, i.jsx)(F.Z, {
                         partySize: s,
                         members: c,
                         guildId: r.id
@@ -396,9 +396,9 @@ let ei = (e) => {
                           })
                         : null,
                     (0, i.jsxs)('div', {
-                        children: [Q(n), X(z.NW.formatToPlainString(z.t.C4WXvb, { memberCount: r.totalSize }))]
+                        children: [Q(n), X(W.intl.formatToPlainString(W.t.C4WXvb, { memberCount: r.totalSize }))]
                     }),
-                    (0, i.jsx)(H.Z, {
+                    (0, i.jsx)(F.Z, {
                         partySize: r,
                         members: l
                     })
@@ -416,7 +416,7 @@ let ei = (e) => {
                     (0, i.jsx)(G.Z, { className: Y.xboxSectionIcon }),
                     (0, i.jsxs)('div', {
                         className: Y.__invalid_xboxSectionDetails,
-                        children: [Q(t), X(z.NW.string(z.t['JG9r+/']))]
+                        children: [Q(t), X(W.intl.string(W.t['JG9r+/']))]
                     })
                 ]
             })
@@ -456,7 +456,7 @@ let ei = (e) => {
                     (0, i.jsxs)('div', {
                         children: [null != r ? Q(r) : null, null != l ? X(l) : null]
                     }),
-                    (0, i.jsx)(H.Z, {
+                    (0, i.jsx)(F.Z, {
                         minAvatarsShown: d ? 2 : 1,
                         partySize: s,
                         members: u
@@ -469,7 +469,7 @@ let ei = (e) => {
         let t,
             { activity: r, user: l, getAssetImage: a, guildId: s } = e,
             { name: c, details: d, assets: p, application_id: h } = r;
-        if (null != p && (0, N.Z)(r)) {
+        if (null != p && (0, y.Z)(r)) {
             var g;
             t = (0, i.jsx)(T.Z, {
                 className: Y.twitchSectionPreviewWrapper,
@@ -503,7 +503,7 @@ let ei = (e) => {
                     children: [
                         (0, i.jsx)('img', {
                             alt: '',
-                            src: f.Z.get(F.ABu.TWITCH).icon.lightSVG,
+                            src: f.Z.get(z.ABu.TWITCH).icon.lightSVG,
                             className: Y.twitchSectionIcon
                         }),
                         (0, i.jsxs)('div', {
@@ -544,7 +544,7 @@ let ei = (e) => {
                     })
                 ]
             }),
-            g = null != (n = null == (t = (0, y.Z)(r, a)) ? void 0 : t.activityText) ? n : z.NW.string(z.t.eXan7O);
+            g = null != (n = null == (t = (0, I.Z)(r, a)) ? void 0 : t.activityText) ? n : W.intl.string(W.t.eXan7O);
         return (0, i.jsxs)($, {
             children: [
                 (0, i.jsxs)('div', {
@@ -557,9 +557,9 @@ let ei = (e) => {
                             className: Y.applicationStreamingAvatar
                         }),
                         (0, i.jsxs)('div', {
-                            children: [Q(B.ZP.getName(l)), X(g)]
+                            children: [Q(H.ZP.getName(l)), X(g)]
                         }),
-                        (0, i.jsx)(S.ZP, { size: S.ZP.Sizes.SMALL })
+                        (0, i.jsx)(N.ZP, { size: N.ZP.Sizes.SMALL })
                     ]
                 }),
                 f
@@ -572,7 +572,7 @@ let ei = (e) => {
             d = t.application_id;
         l.useEffect(() => {
             null != d &&
-                (0, W.hR)(d, ['embedded_background']).then((e) => {
+                (0, V.hR)(d, ['embedded_background']).then((e) => {
                     let [t] = e;
                     return c(t);
                 });
@@ -580,15 +580,15 @@ let ei = (e) => {
         let p = (0, s.Wu)([M.default, D.default], () =>
                 Array.from(a)
                     .map((e) => (D.default.getId() === e ? null : M.default.getUser(e)))
-                    .filter(V.lm)
+                    .filter(B.lm)
             ),
             f = (0, h.O)(),
-            { analyticsLocations: m } = (0, I.ZP)();
+            { analyticsLocations: m } = (0, v.ZP)();
         if (null == d) return null;
-        let _ = v.Z.getApplication(d);
+        let _ = C.Z.getApplication(d);
         if (null == _) return null;
         let E = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
-            O = (0, W.xF)(_.id, o, 300);
+            O = (0, V.xF)(_.id, o, 300);
         return (0, i.jsxs)($, {
             children: [
                 (0, i.jsxs)('div', {
@@ -648,10 +648,10 @@ let ei = (e) => {
                                                     locationObject: f.location,
                                                     analyticsLocations: m,
                                                     instanceId: void 0,
-                                                    isContextlessActivity: (0, b.Z)(t, F.xjy.EMBEDDED) && (0, b.Z)(t, F.xjy.CONTEXTLESS)
+                                                    isContextlessActivity: (0, b.Z)(t, z.xjy.EMBEDDED) && (0, b.Z)(t, z.xjy.CONTEXTLESS)
                                                 });
                                         },
-                                        children: z.NW.string(z.t.VJlc0d)
+                                        children: W.intl.string(W.t.VJlc0d)
                                     })
                                 })
                             ]

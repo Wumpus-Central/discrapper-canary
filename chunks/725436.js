@@ -1,8 +1,8 @@
 n.d(t, { m: () => u });
 var r = n(454585),
     l = n(551452),
-    a = n(532901);
-function i(e) {
+    i = n(532901);
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,13 +45,13 @@ function c(e, t) {
         e
     );
 }
-let s = c(i({}, r.Z.guildEventRules.link), {
-        react: (0, a.Z)({
+let s = c(a({}, r.Z.guildEventRules.link), {
+        react: (0, i.Z)({
             enableBuildOverrides: !1,
             mustConfirmExternalLink: !0
         }).react
     }),
-    o = c(i({}, r.Z.guildEventRules.channelMention), {
+    o = c(a({}, r.Z.guildEventRules.channelMention), {
         react: (0, l.Z)({
             enableBuildOverrides: !1,
             shouldCloseDefaultModals: !0,
@@ -59,7 +59,7 @@ let s = c(i({}, r.Z.guildEventRules.link), {
         }).react
     }),
     u = r.Z.reactParserFor(
-        c(i({}, r.Z.guildEventRules), {
+        c(a({}, r.Z.guildEventRules), {
             link: s,
             channelMention: o
         })

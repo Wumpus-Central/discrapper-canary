@@ -61,7 +61,7 @@ function d(e) {
                 onClick: function () {
                     (0, a.v)(p, a.d.FOCUS), l.Z.selectParticipant(t, c.dF.AUTO);
                 },
-                label: u.NW.string(u.t.np22FR),
+                label: u.intl.string(u.t.np22FR),
                 iconComponent: n ? i.dRJ : i.SVt,
                 tooltipPosition: 'bottom'
             },

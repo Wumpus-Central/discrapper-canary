@@ -12,7 +12,7 @@ function d(e) {
     return (0, a.I3)('HeaderBarMaybeClickableGdmIcon', t.id, { autoTrackExposure: d }) && d
         ? (0, r.jsx)(o.ua7, {
               position: 'bottom',
-              text: c.NW.string(c.t['0qPSMT']),
+              text: c.intl.string(c.t['0qPSMT']),
               children: (e) => {
                   var a, c;
                   return (0, r.jsxs)(

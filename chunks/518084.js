@@ -7,9 +7,9 @@ var i,
     r = n(200651),
     s = n(192379),
     o = n(120356),
-    a = n.n(o),
-    l = n(877921),
-    c = n.n(l),
+    l = n.n(o),
+    a = n(877921),
+    c = n.n(a),
     d = n(481060),
     u = n(981631),
     h = n(751234),
@@ -60,7 +60,7 @@ let g = u.t_t.DEFAULT,
                 let { type: s } = e;
                 return (0, r.jsx)(v.Consumer, {
                     children: (e) => {
-                        var o, l;
+                        var o, a;
                         return (0, r.jsx)(
                             'div',
                             ((o = (function (e) {
@@ -80,14 +80,14 @@ let g = u.t_t.DEFAULT,
                                 return e;
                             })(
                                 {
-                                    className: a()(h.bar, h[c()(s)], n),
+                                    className: l()(h.bar, h[c()(s)], n),
                                     style: e
                                 },
                                 i
                             )),
-                            (l = l = { children: t }),
+                            (a = a = { children: t }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(l))
+                                ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -95,8 +95,8 @@ let g = u.t_t.DEFAULT,
                                           n.push.apply(n, i);
                                       }
                                       return n;
-                                  })(Object(l)).forEach(function (e) {
-                                      Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(l, e));
+                                  })(Object(a)).forEach(function (e) {
+                                      Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(a, e));
                                   }),
                             o)
                         );
@@ -112,7 +112,7 @@ class O extends (i = s.PureComponent) {
             children: (i) =>
                 (0, r.jsx)(y.Consumer, {
                     children: (s) => {
-                        let o = a()(h.body, h[c()(s.type)], n);
+                        let o = l()(h.body, h[c()(s.type)], n);
                         return e
                             ? (0, r.jsx)('div', {
                                   className: o,
@@ -131,14 +131,14 @@ class O extends (i = s.PureComponent) {
 }
 f(O, 'defaultProps', { disableScroll: !1 });
 let b = (e) => {
-        let { type: t = g, width: n, height: i, children: s, className: o, opacity: l = m, onClick: d } = e;
+        let { type: t = g, width: n, height: i, children: s, className: o, opacity: a = m, onClick: d } = e;
         return (0, r.jsx)(y.Provider, {
             value: {
                 type: t,
-                opacity: l
+                opacity: a
             },
             children: (0, r.jsx)('div', {
-                className: a()(h.widget, h[c()(t)], o),
+                className: l()(h.widget, h[c()(t)], o),
                 style: {
                     width: n,
                     height: i
@@ -153,7 +153,7 @@ let b = (e) => {
         return (0, r.jsx)(v.Consumer, {
             children: (e) =>
                 (0, r.jsx)('div', {
-                    className: a()(h.content, { [h.staticSize]: !i }, n),
+                    className: l()(h.content, { [h.staticSize]: !i }, n),
                     style: e,
                     children: t
                 })
@@ -166,12 +166,12 @@ let b = (e) => {
     return (0, r.jsx)(y.Consumer, {
         children: (e) => {
             let { opacity: o } = e,
-                a = { backgroundColor: 'rgba(54, 57, 63, '.concat('' + (null != n ? n : o), ')') };
-            if ('string' == typeof t.type) return s.cloneElement(t, { style: a });
+                l = { backgroundColor: 'rgba(54, 57, 63, '.concat('' + (null != n ? n : o), ')') };
+            if ('string' == typeof t.type) return s.cloneElement(t, { style: l });
             {
                 if (i.includes(t.type))
                     return (0, r.jsx)(v.Provider, {
-                        value: a,
+                        value: l,
                         children: t
                     });
                 let e = t.type.displayName;
@@ -183,7 +183,7 @@ let b = (e) => {
     (b.Body = O),
     (b.Content = x),
     (b.Icon = (e) => {
-        let { icon: t, label: n, onClick: i, isActive: s, tooltipPosition: o = 'top', size: l = 20, isTutorial: c = !1 } = e;
+        let { icon: t, label: n, onClick: i, isActive: s, tooltipPosition: o = 'top', size: a = 20, isTutorial: c = !1 } = e;
         return (0, r.jsx)(d.ua7, {
             text: c
                 ? (0, r.jsx)('div', {
@@ -203,14 +203,14 @@ let b = (e) => {
                     onClick: i,
                     onMouseEnter: o,
                     onMouseLeave: c,
-                    className: a()(h.icon, { [h.toggledIconOn]: s }),
+                    className: l()(h.icon, { [h.toggledIconOn]: s }),
                     innerClassName: p.flexCenter,
                     'aria-label': n,
                     children: (0, r.jsx)(t, {
                         color: 'currentColor',
                         size: 'custom',
-                        width: l,
-                        height: l,
+                        width: a,
+                        height: a,
                         role: 'img'
                     })
                 });

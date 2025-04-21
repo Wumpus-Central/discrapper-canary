@@ -8,7 +8,7 @@ var i = n(481060),
     l = n(388032),
     c = n(478474);
 function u(e) {
-    let { giftMessage: t = l.NW.string(l.t.DrgnS0) } = e,
+    let { giftMessage: t = l.intl.string(l.t.DrgnS0) } = e,
         { isGift: n, giftRecipient: u } = (0, s.wD)();
     return !n || (0, o.pO)(u)
         ? null

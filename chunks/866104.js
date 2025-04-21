@@ -1,14 +1,14 @@
 n.d(t, {
-    C: () => I,
-    Z: () => S
+    C: () => N,
+    Z: () => I
 }),
     n(388685),
     n(953529),
     n(781311);
 var r = n(200651),
     i = n(192379),
-    a = n(512722),
-    l = n.n(a),
+    l = n(512722),
+    a = n.n(l),
     o = n(442837),
     s = n(481060),
     c = n(131388),
@@ -26,18 +26,18 @@ var r = n(200651),
     v = n(847033),
     E = n(544978),
     O = n(893182),
-    N = n(388032),
-    j = n(414521);
-function C(e) {
+    j = n(388032),
+    C = n(414521);
+function S(e) {
     let { onClick: t } = e;
     return (0, r.jsxs)(s.P3F, {
         onClick: t,
-        className: j.showMoreButton,
+        className: C.showMoreButton,
         children: [
             (0, r.jsx)(s.Text, {
                 variant: 'text-sm/medium',
                 color: 'header-primary',
-                children: N.NW.string(N.t.J4cw1t)
+                children: j.intl.string(j.t.J4cw1t)
             }),
             (0, r.jsx)(s.LZC, {
                 size: 4,
@@ -45,21 +45,21 @@ function C(e) {
             }),
             (0, r.jsx)(_.Z, {
                 direction: _.Z.Directions.RIGHT,
-                className: j.showMoreArrow
+                className: C.showMoreArrow
             })
         ]
     });
 }
-function S(e) {
+function I(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         i = f.QK.useSetting(),
-        a = (0, x.n)() && i,
-        [l, o] = (0, m.Z)(t, a),
-        s = a
+        l = (0, x.n)() && i,
+        [a, o] = (0, m.Z)(t, l),
+        s = l
             ? (0, r.jsx)(d.Z, {
                   autoPlay: !0,
                   loop: !0,
-                  className: j.coverImage,
+                  className: C.coverImage,
                   width: 655,
                   poster: (0, u.b)('server_products/storefront/default-header.png'),
                   src: (0, u.b)('server_products/storefront/default-header.mov')
@@ -67,31 +67,31 @@ function S(e) {
             : (0, r.jsx)('img', {
                   src: (0, u.b)('server_products/storefront/default-header.png'),
                   alt: '',
-                  className: j.coverImage
+                  className: C.coverImage
               });
     return (0, r.jsx)('div', {
-        ref: l,
-        className: j.coverImageContainer,
+        ref: a,
+        className: C.coverImageContainer,
         children:
             null == o || n
                 ? s
                 : (0, r.jsx)('img', {
                       src: o,
                       alt: '',
-                      className: j.coverImage
+                      className: C.coverImage
                   })
     });
 }
-function I(e) {
+function N(e) {
     var t, n;
-    let { guild: a, subscriptionsSettings: d } = e,
-        m = a.id,
+    let { guild: l, subscriptionsSettings: d } = e,
+        m = l.id,
         { nickname: f, nickcolor: _ } = (0, o.cj)(
             [h.ZP, g.default],
             () => {
                 var e, t;
                 let n = g.default.getCurrentUser();
-                l()(null != n, 'user cannot be null');
+                a()(null != n, 'user cannot be null');
                 let r = h.ZP.getMember(m, n.id);
                 return {
                     nickname: null != (e = null == r ? void 0 : r.nick) ? e : b.ZP.getName(n),
@@ -100,16 +100,16 @@ function I(e) {
             },
             [m]
         ),
-        { isTruncated: x, ExpandableTextContainer: I } = (0, y.s)(),
+        { isTruncated: x, ExpandableTextContainer: N } = (0, y.s)(),
         T = (null != (n = null == d || null == (t = d.description) ? void 0 : t.trim().length) ? n : 0) > 0,
         [P, A] = i.useState(1),
         w = (0, c.Z)('(max-width: 1439px)'),
         { selectedTab: Z, isPhantomPreview: R } = (0, v.m)(),
-        k = Z === E.y.GUILD_PRODUCTS_PREVIEW ? N.NW.string(N.t['LvXy/P']) : N.NW.string(N.t.XyqKh4),
+        k = Z === E.y.GUILD_PRODUCTS_PREVIEW ? j.intl.string(j.t['LvXy/P']) : j.intl.string(j.t.XyqKh4),
         D = T
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(I, {
+                      (0, r.jsx)(N, {
                           lineClamp: w || 2 === P ? 2 : 3,
                           children: (0, r.jsx)(s.Text, {
                               variant: 'text-sm/normal',
@@ -119,26 +119,26 @@ function I(e) {
                       }),
                       x &&
                           (0, r.jsxs)(r.Fragment, {
-                              children: [(0, r.jsx)(s.LZC, { size: 4 }), (0, r.jsx)(C, { onClick: () => (0, O.Z)({ guildId: m }) })]
+                              children: [(0, r.jsx)(s.LZC, { size: 4 }), (0, r.jsx)(S, { onClick: () => (0, O.Z)({ guildId: m }) })]
                           })
                   ]
               })
             : (0, r.jsx)(s.Text, {
                   variant: 'text-sm/normal',
                   color: 'text-normal',
-                  children: R ? k : N.NW.string(N.t['NY/FIS'])
+                  children: R ? k : j.intl.string(j.t['NY/FIS'])
               });
     return (0, r.jsxs)('div', {
-        className: j.container,
+        className: C.container,
         children: [
             (0, r.jsxs)('div', {
-                className: j.infoContainer,
+                className: C.infoContainer,
                 children: [
                     (0, r.jsx)('div', {
                         children: (0, r.jsx)(p.Z, {
-                            guild: a,
+                            guild: l,
                             size: p.Z.Sizes.LARGER,
-                            iconSrc: null == a.icon || R ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
+                            iconSrc: null == l.icon || R ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
                         })
                     }),
                     (0, r.jsx)(s.LZC, {
@@ -155,14 +155,14 @@ function I(e) {
                                     variant: 'heading-xl/semibold',
                                     color: 'header-primary',
                                     lineClamp: 2,
-                                    children: R ? N.NW.string(N.t.rtgp7u) : N.NW.formatToPlainString(N.t.NZeik5, { guildName: a.name })
+                                    children: R ? j.intl.string(j.t.rtgp7u) : j.intl.formatToPlainString(j.t.NZeik5, { guildName: l.name })
                                 })
                             }),
                             (0, r.jsx)(s.LZC, { size: 8 }),
                             (0, r.jsx)(s.Text, {
                                 variant: 'text-md/normal',
                                 color: 'text-normal',
-                                children: N.NW.format(N.t['7JwrlJ'], {
+                                children: j.intl.format(j.t['7JwrlJ'], {
                                     username: f,
                                     usernameHook: function (e, t) {
                                         return (0, r.jsx)(
@@ -182,7 +182,7 @@ function I(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(S, {
+            (0, r.jsx)(I, {
                 coverImageAsset: null == d ? void 0 : d.cover_image_asset,
                 isPreview: R
             })

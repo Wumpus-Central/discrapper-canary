@@ -1,12 +1,12 @@
-n.d(t, { J: () => a });
+n.d(t, { J: () => l });
 var i = n(200651);
 n(192379);
 var r = n(481060);
-function a(e) {
+function l(e) {
     (0, r.ZDy)(async () => {
         let { default: t } = await n.e('9354').then(n.bind(n, 461533));
         return (n) => {
-            var r, a;
+            var r, l;
             return (0, i.jsx)(
                 t,
                 ((r = (function (e) {
@@ -34,9 +34,9 @@ function a(e) {
                     }
                     return e;
                 })({}, n)),
-                (a = a = { guildId: e }),
+                (l = l = { guildId: e }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -44,8 +44,8 @@ function a(e) {
                               n.push.apply(n, i);
                           }
                           return n;
-                      })(Object(a)).forEach(function (e) {
-                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                      })(Object(l)).forEach(function (e) {
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                       }),
                 r)
             );

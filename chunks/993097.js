@@ -1,8 +1,8 @@
 n.d(t, { C: () => g });
 var r = n(200651),
     i = n(192379),
-    s = n(442837),
-    l = n(852860),
+    l = n(442837),
+    s = n(852860),
     a = n(434404),
     o = n(999382),
     c = n(621319),
@@ -14,12 +14,12 @@ function g() {
             vanityURLCode: e,
             hasChanges: t,
             errorDetails: n
-        } = (0, s.cj)([d.Z], () => ({
+        } = (0, l.cj)([d.Z], () => ({
             vanityURLCode: d.Z.vanityURLCode,
             hasChanges: d.Z.hasChanges(),
             errorDetails: d.Z.errorDetails
         })),
-        { guild: g, submitting: p, errors: h, hasChanges: f } = (0, s.cj)([o.Z], () => o.Z.getProps()),
+        { guild: g, submitting: p, errors: h, hasChanges: f } = (0, l.cj)([o.Z], () => o.Z.getProps()),
         x = i.useMemo(() => (null != n ? (0, u.i)(null == n ? void 0 : n.code) : (0, m.LG)(h)), [h, n]),
         b = i.useCallback(async () => {
             if (null != g && (t && (await (0, c.en)(g.id, e, { throwErr: !0 })), f)) {
@@ -34,7 +34,7 @@ function g() {
         j = i.useCallback(() => {
             null != g && (a.Z.init(g.id), (0, c.H7)());
         }, [g]);
-    return (0, r.jsx)(l.Z, {
+    return (0, r.jsx)(s.Z, {
         submitting: p,
         errorMessage: x,
         onSave: b,

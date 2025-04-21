@@ -1,6 +1,6 @@
 n.d(t, {
     E: () => I,
-    Z: () => N
+    Z: () => T
 }),
     n(388685),
     n(642613);
@@ -105,7 +105,7 @@ class O extends i.PureComponent {
                 return (0, r.jsx)(o.v2r, {
                     onSelect: n,
                     navId: 'test-skus',
-                    'aria-label': E.NW.string(E.t.ogxXGh),
+                    'aria-label': E.intl.string(E.t.ogxXGh),
                     onClose: a.Zy,
                     children: e.map((e) =>
                         (0, r.jsx)(
@@ -131,7 +131,7 @@ class O extends i.PureComponent {
             });
     }
 }
-let N = l.ZP.connectStores([u.Z, c.Z], (e) => {
+let T = l.ZP.connectStores([u.Z, c.Z], (e) => {
     var t;
     let { applicationId: n } = e,
         r = (0, d.uF)(n, c.Z, u.Z);

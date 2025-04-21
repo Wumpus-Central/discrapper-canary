@@ -19,7 +19,7 @@ var s,
     I = n(709054),
     S = n(418088),
     T = n(814249);
-function N(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function N(e, t, n) {
         e
     );
 }
-function A(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function A(e) {
                 })
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
@@ -181,7 +181,7 @@ function V(e, t, n, r) {
     let i = null == t || t < n;
     return !(null == e || e > r) && !i;
 }
-N(F, 'persistKey', 'SummaryStore');
+A(F, 'persistKey', 'SummaryStore');
 let Z = new F(d.Z, {
     CONNECTION_OPEN: () => !1,
     CHANNEL_SELECT(e) {
@@ -200,7 +200,7 @@ let Z = new F(d.Z, {
                 a = n.findIndex((t) => t.id === (null == e ? void 0 : e.id));
             a > -1 ? (n[a] = e) : n.push(e), (P[i] = n);
         }
-        let s = R(A({}, null != (n = w[i]) ? n : { fetching: !1 }), {
+        let s = R(N({}, null != (n = w[i]) ? n : { fetching: !1 }), {
             summaryId: void 0,
             summaryIdLastReceivedAt: o,
             summaryIdError: a
@@ -210,7 +210,7 @@ let Z = new F(d.Z, {
     REQUEST_CHANNEL_SUMMARY(e) {
         var t;
         let { channelId: n, summaryId: r, requestedAt: i } = e;
-        w[n] = R(A({}, null != (t = w[n]) ? t : { fetching: !1 }), {
+        w[n] = R(N({}, null != (t = w[n]) ? t : { fetching: !1 }), {
             summaryId: r,
             summaryIdLastRequestedAt: i
         });
@@ -224,7 +224,7 @@ let Z = new F(d.Z, {
             null != e && a.push(e);
         }
         P[n] = (0, l.sortBy)(a, (e) => I.default.extractTimestamp(e.startId)).reverse();
-        let c = R(A({}, w[n]), {
+        let c = R(N({}, w[n]), {
             fetching: !1,
             error: void 0,
             lastReceivedAt: i
@@ -233,7 +233,7 @@ let Z = new F(d.Z, {
     },
     REQUEST_CHANNEL_SUMMARIES(e) {
         var t;
-        w[e.channelId] = R(A({}, null != (t = w[e.channelId]) ? t : {}), {
+        w[e.channelId] = R(N({}, null != (t = w[e.channelId]) ? t : {}), {
             fetching: !0,
             lastRequestedAt: e.requestedAt
         });
@@ -284,7 +284,7 @@ let Z = new F(d.Z, {
         null != n ? (D[t.id] = n) : delete D[t.id];
     },
     REQUEST_CHANNEL_AFFINITIES() {
-        M = R(A({}, M), {
+        M = R(N({}, M), {
             status: 'fetching',
             lastRequest: Date.now()
         });
@@ -295,7 +295,7 @@ let Z = new F(d.Z, {
         if (null != r) {
             (L = []),
                 (x = {}),
-                (M = R(A({}, M), {
+                (M = R(N({}, M), {
                     status: 'error',
                     lastResponse: Date.now()
                 }));
@@ -303,7 +303,7 @@ let Z = new F(d.Z, {
         }
         (L = null != n ? n : []),
             (x = null != (t = null == n ? void 0 : n.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {})) ? t : {}),
-            (M = R(A({}, M), {
+            (M = R(N({}, M), {
                 status: 'ok',
                 lastResponse: Date.now()
             }));
@@ -314,7 +314,7 @@ let Z = new F(d.Z, {
                 var r;
                 let i = null != (r = w[t]) ? r : {};
                 return (
-                    (e[t] = R(A({}, i), {
+                    (e[t] = R(N({}, i), {
                         fetching: !0,
                         lastRequestedAt: n,
                         error: void 0
@@ -322,7 +322,7 @@ let Z = new F(d.Z, {
                     e
                 );
             }, {});
-        w = A({}, w, r);
+        w = N({}, w, r);
     },
     RECEIVE_CHANNEL_SUMMARIES_BULK(e) {
         let {
@@ -351,7 +351,7 @@ let Z = new F(d.Z, {
                         s = a[t];
                     return (
                         null != s && (e.summariesByChannel[t] = s),
-                        (e.summaryFetchStatusByChannel[t] = R(A({}, o), {
+                        (e.summaryFetchStatusByChannel[t] = R(N({}, o), {
                             fetching: !1,
                             error: r,
                             lastReceivedAt: n
@@ -364,7 +364,7 @@ let Z = new F(d.Z, {
                     summaryFetchStatusByChannel: {}
                 }
             );
-        (P = A({}, P, o.summariesByChannel)), (w = A({}, w, o.summaryFetchStatusByChannel));
+        (P = N({}, P, o.summariesByChannel)), (w = N({}, w, o.summaryFetchStatusByChannel));
     },
     CONVERSATION_SUMMARY_UPDATE(e) {
         var t, n, r;
@@ -387,7 +387,7 @@ let Z = new F(d.Z, {
                 .reverse()
                 .value();
         (P[i] = d),
-            (w[i] = R(A({}, w[i]), {
+            (w[i] = R(N({}, w[i]), {
                 error: void 0,
                 fetching: null != (r = null == (t = w[i]) ? void 0 : t.fetching) && r,
                 lastReceivedAt: s

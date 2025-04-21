@@ -1,7 +1,7 @@
 n.d(t, {
     Pe: () => v,
     S6: () => l.S6,
-    lJ: () => N,
+    lJ: () => A,
     vp: () => I
 });
 var r = n(200651),
@@ -104,7 +104,7 @@ let y = 'balance-widget-pill-overlay',
 function T(e) {
     (0, o.ZDy)(async () => (t) => (0, r.jsx)(C, h({ onClick: _.dG4 }, e, t)), S);
 }
-function N(e) {
+function A(e) {
     let { shouldOpen: t } = (0, a.cj)([u.Z], () => ({ shouldOpen: u.Z.balanceWidgetPillIsOverlaid }));
     return (
         (0, i.useEffect)(() => {
@@ -114,7 +114,7 @@ function N(e) {
         { shouldOpen: t }
     );
 }
-let A = {
+let N = {
     getOffsetsRelativeToElement: () => ({
         top: 0,
         right: 0
@@ -150,7 +150,7 @@ function C(e) {
                     backgroundElementRef: t,
                     onGetBoundingRect: _.dG4
                 },
-                A
+                N
             ),
             {
                 children: v

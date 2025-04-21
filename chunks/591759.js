@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(413496), n(433524), n(35282), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { Z: () => A }), n(413496), n(433524), n(35282), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var r = n(628735),
     i = n.n(r),
     a = n(392711),
@@ -39,7 +39,7 @@ function S(e) {
 function T(e) {
     return null != e && I(s.parse(e).protocol);
 }
-let N = {
+let A = {
     URL_REGEX: E,
     isDiscordHostname: O,
     isDiscordLocalhost: function (e, t) {

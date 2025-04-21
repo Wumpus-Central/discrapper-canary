@@ -1,19 +1,19 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(380544);
-function l(e) {
-    let { label: t, sublabel: n, value: l, additionalContent: a, tooltip: o } = e;
+    l = n(380544);
+function s(e) {
+    let { label: t, sublabel: n, value: s, additionalContent: a, tooltip: o } = e;
     return (0, r.jsxs)('div', {
-        className: s.metricCard,
+        className: l.metricCard,
         'aria-label': t,
         children: [
             (0, r.jsxs)('div', {
-                className: s.metricCardLabelContainer,
+                className: l.metricCardLabelContainer,
                 children: [
                     (0, r.jsx)(i.Text, {
-                        className: s.metricCardLabel,
+                        className: l.metricCardLabel,
                         variant: 'text-xs/medium',
                         color: 'interactive-normal',
                         'aria-hidden': !0,
@@ -53,7 +53,7 @@ function l(e) {
                                         {
                                             size: 'xs',
                                             color: 'currentColor',
-                                            className: s.__invalid_labelTooltipIcon
+                                            className: l.__invalid_labelTooltipIcon
                                         },
                                         e
                                     )
@@ -72,7 +72,7 @@ function l(e) {
                 tag: 'span',
                 variant: 'heading-xl/medium',
                 color: 'header-primary',
-                children: l
+                children: s
             }),
             a
         ]

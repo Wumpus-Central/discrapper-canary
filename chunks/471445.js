@@ -15,47 +15,47 @@ var r = n(481060),
     f = n(388032);
 function _(e, t, n, r) {
     if (null == e) return null;
-    if (e.id === (null == t ? void 0 : t.rulesChannelId)) return f.NW.string(f.t['/7EhaW']);
+    if (e.id === (null == t ? void 0 : t.rulesChannelId)) return f.intl.string(f.t['/7EhaW']);
     switch (e.type) {
         case d.d4z.GUILD_TEXT:
-            if (null != e.linkedLobby) return f.NW.string(f.t.Lt3PAA);
-            if (r) return f.NW.string(f.t.LKpYbm);
-            if (e.isNSFW()) return f.NW.string(f.t.vvASTU);
-            if ((0, c.Z)(e)) return f.NW.string(f.t.jQ1plp);
-            return f.NW.string(f.t.t1yj0N);
+            if (null != e.linkedLobby) return f.intl.string(f.t.Lt3PAA);
+            if (r) return f.intl.string(f.t.LKpYbm);
+            if (e.isNSFW()) return f.intl.string(f.t.vvASTU);
+            if ((0, c.Z)(e)) return f.intl.string(f.t.jQ1plp);
+            return f.intl.string(f.t.t1yj0N);
         case d.d4z.GUILD_FORUM:
             let i = e.isMediaChannel();
-            if (e.isNSFW()) return i ? f.NW.string(f.t['pZ/fYW']) : f.NW.string(f.t.ibmpPj);
-            if ((0, c.Z)(e)) return i ? f.NW.string(f.t.gfVCfH) : f.NW.string(f.t.UbLM3N);
-            return i ? f.NW.string(f.t.seKITE) : f.NW.string(f.t['0sDXdn']);
+            if (e.isNSFW()) return i ? f.intl.string(f.t['pZ/fYW']) : f.intl.string(f.t.ibmpPj);
+            if ((0, c.Z)(e)) return i ? f.intl.string(f.t.gfVCfH) : f.intl.string(f.t.UbLM3N);
+            return i ? f.intl.string(f.t.seKITE) : f.intl.string(f.t['0sDXdn']);
         case d.d4z.GUILD_MEDIA:
-            if (e.isNSFW()) return f.NW.string(f.t['pZ/fYW']);
-            if ((0, c.Z)(e)) return f.NW.string(f.t.gfVCfH);
-            return f.NW.string(f.t.seKITE);
+            if (e.isNSFW()) return f.intl.string(f.t['pZ/fYW']);
+            if ((0, c.Z)(e)) return f.intl.string(f.t.gfVCfH);
+            return f.intl.string(f.t.seKITE);
         case d.d4z.GUILD_STAGE_VOICE:
-            if (n) return f.NW.string(f.t.ZjZB3t);
-            if ((0, c.Z)(e)) return f.NW.string(f.t['7pRuCQ']);
-            return f.NW.string(f.t.eJFSiI);
+            if (n) return f.intl.string(f.t.ZjZB3t);
+            if ((0, c.Z)(e)) return f.intl.string(f.t['7pRuCQ']);
+            return f.intl.string(f.t.eJFSiI);
         case d.d4z.GUILD_VOICE:
-            if (n) return f.NW.string(f.t.xY8Wtr);
-            if ((0, c.Z)(e)) return f.NW.string(f.t.qaY8Dg);
-            return f.NW.string(f.t['0kBmo6']);
+            if (n) return f.intl.string(f.t.xY8Wtr);
+            if ((0, c.Z)(e)) return f.intl.string(f.t.qaY8Dg);
+            return f.intl.string(f.t['0kBmo6']);
         case d.d4z.GUILD_ANNOUNCEMENT:
-            if (e.isNSFW()) return f.NW.string(f.t.eRc6o6);
-            if ((0, c.Z)(e)) return f.NW.string(f.t.EHLQws);
-            return f.NW.string(f.t.GtDRi4);
+            if (e.isNSFW()) return f.intl.string(f.t.eRc6o6);
+            if ((0, c.Z)(e)) return f.intl.string(f.t.EHLQws);
+            return f.intl.string(f.t.GtDRi4);
         case d.d4z.GUILD_STORE:
-            return f.NW.string(f.t.Ea4NDA);
+            return f.intl.string(f.t.Ea4NDA);
         case d.d4z.DM:
-            return f.NW.string(f.t.jN2DfX);
+            return f.intl.string(f.t.jN2DfX);
         case d.d4z.GROUP_DM:
-            return f.NW.string(f.t['e5y+go']);
+            return f.intl.string(f.t['e5y+go']);
         case d.d4z.GUILD_DIRECTORY:
-            return f.NW.string(f.t.IzZTIS);
+            return f.intl.string(f.t.IzZTIS);
         case d.d4z.PUBLIC_THREAD:
-            return f.NW.string(f.t['7Xm5QE']);
+            return f.intl.string(f.t['7Xm5QE']);
         case d.d4z.PRIVATE_THREAD:
-            return f.NW.string(f.t.F1zyvb);
+            return f.intl.string(f.t.F1zyvb);
         default:
             return null;
     }

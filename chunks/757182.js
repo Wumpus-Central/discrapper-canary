@@ -96,7 +96,7 @@ function p(e) {
                 },
                 u
             ),
-            { children: s.NW.string(s.t['I6JG4+']) }
+            { children: s.intl.string(s.t['I6JG4+']) }
         ),
         'play-activity'
     );

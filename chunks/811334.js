@@ -59,7 +59,7 @@ function p(e) {
                 label: t,
                 value: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        m ? c.NW.formatToPlainString(c.t.hXcaLS, { price: (0, l.T4)(0, f) }) : n,
+                        m ? c.intl.formatToPlainString(c.t.hXcaLS, { price: (0, l.T4)(0, f) }) : n,
                         null != y
                             ? (0, r.jsxs)('div', {
                                   className: u.rowPercentDiscount,
@@ -74,7 +74,7 @@ function p(e) {
                 (0, r.jsx)(o.Text, {
                     variant: 'text-md/medium',
                     className: u.trialEndPrice,
-                    children: c.NW.format(c.t.v9QeOD, { price: v })
+                    children: c.intl.format(c.t.v9QeOD, { price: v })
                 }),
             null != y
                 ? (0, r.jsxs)('div', {
@@ -85,7 +85,7 @@ function p(e) {
             null != b
                 ? (0, r.jsx)('div', {
                       className: u.entitlementDiscountRow,
-                      children: c.NW.string(c.t.A7Hpfn)
+                      children: c.intl.string(c.t.A7Hpfn)
                   })
                 : null
         ]

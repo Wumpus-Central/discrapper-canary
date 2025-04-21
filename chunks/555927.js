@@ -104,7 +104,7 @@ function h(e) {
             g.push(
                 (0, r.jsx)(l.sNh, {
                     id: 'unknown-members-'.concat(null == a ? void 0 : a.session_id),
-                    render: (e) => (0, r.jsx)(s.Y, p(d({}, e), { label: u.NW.formatToPlainString(u.t['6Kqn9P'], { count: m }) }))
+                    render: (e) => (0, r.jsx)(s.Y, p(d({}, e), { label: u.intl.formatToPlainString(u.t['6Kqn9P'], { count: m }) }))
                 })
             ),
         g
@@ -132,7 +132,7 @@ function f(e) {
     if (o.length <= 1 && 0 === f.length) {
         var g, m;
         return (0, r.jsx)(l.kSQ, {
-            label: n.length > 1 ? u.NW.formatToPlainString(u.t.C4WXvb, { memberCount: n.length }) : void 0,
+            label: n.length > 1 ? u.intl.formatToPlainString(u.t.C4WXvb, { memberCount: n.length }) : void 0,
             children: h({
                 priorityMembers: t,
                 otherMembers: d,
@@ -169,7 +169,7 @@ function f(e) {
     return [
         ...b,
         (0, r.jsx)(l.kSQ, {
-            label: ''.concat(u.NW.string(u.t['mIx+gI']), ' - ').concat(f.length),
+            label: ''.concat(u.intl.string(u.t['mIx+gI']), ' - ').concat(f.length),
             children: h({
                 priorityMembers: t.filter((e) => {
                     let { user: t } = e;

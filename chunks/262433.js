@@ -41,7 +41,7 @@ function h(e) {
     let j = u.Z.getEmojiImage(null != (n = null != (t = a.emojiId) ? t : a.emojiName) ? n : ''),
         Z = (0, d.np)(a.x, v),
         x = (0, d.np)(a.y, S),
-        { outlineColor: N } = (0, d.bg)(a.userId, y, O, b);
+        { outlineColor: w } = (0, d.bg)(a.userId, y, O, b);
     g(a, (e) => {
         (e.x += e.xSpeed * window.devicePixelRatio),
             (e.y += e.ySpeed * window.devicePixelRatio),
@@ -80,7 +80,7 @@ function h(e) {
                     });
                 });
         })(a, Z, x),
-        (0, f.I)(h, Z, x, N, m.q2),
+        (0, f.I)(h, Z, x, w, m.q2),
         (0, f.T)(h, Z, x, a.userId),
         g(a, (e) =>
             (function (e, t, n) {

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j });
 var l = n(200651),
     a = n(192379),
-    r = n(120356),
-    i = n.n(r),
+    i = n(120356),
+    r = n.n(i),
     s = n(442837),
     o = n(481060),
     u = n(596454),
@@ -59,10 +59,10 @@ function x(e, t) {
     );
 }
 function j(e) {
-    let { className: t, guildId: n, error: r, emojiId: j, emojiName: N, isRequiredField: w = !0, shouldUpdateBothEmojiFields: C = !1, setEmojiId: S, setEmojiName: O } = e,
+    let { className: t, guildId: n, error: i, emojiId: j, emojiName: w, isRequiredField: N = !0, shouldUpdateBothEmojiFields: C = !1, setEmojiId: S, setEmojiName: O } = e,
         P = (0, g.Z)({
             emojiId: j,
-            emojiName: N
+            emojiName: w
         }),
         E = (0, s.e7)([h.ZP], () => (null != n ? h.ZP.getDefaultChannel(n) : null)),
         k = a.createRef(),
@@ -79,21 +79,21 @@ function j(e) {
         },
         _ = a.useMemo(() => {
             let e = null != j && '' !== j,
-                t = null != N && '' !== N,
+                t = null != w && '' !== w,
                 n = null != P && '' !== P,
-                l = t && !Number.isNaN(parseInt(N)) && !n && !e;
+                l = t && !Number.isNaN(parseInt(w)) && !n && !e;
             return {
                 hasEmojiId: e,
                 hasEmojiName: t,
                 hasEmojiDisplayName: n,
                 isDeletedCustomEmoji: l
             };
-        }, [j, N, P]);
+        }, [j, w, P]);
     return (0, l.jsx)(o.xJW, {
-        required: w,
-        title: y.NW.string(y.t['3BQmiI']),
-        className: i()(t, b.section),
-        error: r,
+        required: N,
+        title: y.intl.string(y.t['3BQmiI']),
+        className: r()(t, b.section),
+        error: i,
         children: (0, l.jsx)(o.yRy, {
             animation: o.yRy.Animation.NONE,
             position: 'top',
@@ -124,14 +124,14 @@ function j(e) {
                                     !_.isDeletedCustomEmoji && (_.hasEmojiId || _.hasEmojiName)
                                         ? () =>
                                               (0, l.jsx)(u.Z, {
-                                                  emojiName: N,
+                                                  emojiName: w,
                                                   emojiId: j
                                               })
                                         : null
                             }),
                             (0, l.jsx)(o.oil, {
                                 inputClassName: b.emojiText,
-                                placeholder: y.NW.string(y.t.QTK0TE),
+                                placeholder: y.intl.string(y.t.QTK0TE),
                                 value: !_.isDeletedCustomEmoji && _.hasEmojiDisplayName ? ':'.concat(P, ':') : '',
                                 readOnly: !0
                             }),

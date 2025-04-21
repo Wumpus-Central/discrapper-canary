@@ -23,7 +23,7 @@ let f = (0, u.Z)(
                 onClose: () => {
                     (0, o.Zy)(), null == f || f();
                 },
-                'aria-label': _.NW.string(_.t.liqwPD),
+                'aria-label': _.intl.string(_.t.liqwPD),
                 onSelect: u,
                 children: (0, l.jsx)(r.kSQ, { children: g })
             });

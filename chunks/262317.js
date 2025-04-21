@@ -27,11 +27,11 @@ var r = n(200651),
     j = n(314897),
     O = n(430824),
     E = n(496675),
-    N = n(594174),
-    I = n(979651),
-    P = n(927923),
-    S = n(70722),
-    Z = n(388032),
+    I = n(594174),
+    P = n(979651),
+    S = n(927923),
+    Z = n(70722),
+    N = n(388032),
     T = n(587382);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -89,7 +89,7 @@ function R(e) {
 }
 function k(e) {
     let { numAudience: t, collapsed: n } = e,
-        i = n ? t : Z.NW.formatToPlainString(Z.t['+v2pNz'], { count: t });
+        i = n ? t : N.intl.formatToPlainString(N.t['+v2pNz'], { count: t });
     return (0, r.jsxs)('div', {
         className: o()(T.audienceContainer, { [T.audienceContainerCollapsed]: n }),
         children: [
@@ -111,7 +111,7 @@ function k(e) {
 }
 let M = (0, p.$)(function (e) {
     var t;
-    let { collapsed: l, user: p, channel: R, mute: k, localMute: M, localVideoDisabled: L, deaf: D, video: W, embeddedApplication: U, serverMute: B, serverDeaf: G, nick: F, ringing: H, speaking: V, disconnected: z, connectUserDragSource: Y, canDrag: q, isStreaming: K, isWatching: X, isGuest: Q, priority: J, showPreview: $, hidePreview: ee, shouldShowPreview: et, previewIsOpen: en, otherClientSessionType: er, voicePlatform: ei, isSelfOnOtherClient: el = !1, tabIndex: eo, location: ea, isSelf: es, application: ec } = e,
+    let { collapsed: l, user: p, channel: R, mute: k, localMute: M, localVideoDisabled: L, deaf: D, video: U, embeddedApplication: B, serverMute: G, serverDeaf: F, nick: H, ringing: V, speaking: z, disconnected: W, connectUserDragSource: Y, canDrag: q, isStreaming: K, isWatching: X, isGuest: Q, priority: J, showPreview: $, hidePreview: ee, shouldShowPreview: et, previewIsOpen: en, otherClientSessionType: er, voicePlatform: ei, isSelfOnOtherClient: el = !1, tabIndex: eo, location: ea, isSelf: es, application: ec } = e,
         eu = i.useRef(null),
         [ed, ep] = i.useState(!1),
         eh = () => {
@@ -120,11 +120,11 @@ let M = (0, p.$)(function (e) {
         ef = () => {
             K && (null == ee || ee(p.id));
         },
-        em = () => K && (0, _.p9)(R, I.Z, O.Z, E.Z, m.Z)[0],
+        em = () => K && (0, _.p9)(R, P.Z, O.Z, E.Z, m.Z)[0],
         eg = () => {
             if (!em()) return;
             let e = {
-                streamType: S.lo.GUILD,
+                streamType: Z.lo.GUILD,
                 ownerId: p.id,
                 channelId: R.id,
                 guildId: R.guild_id
@@ -157,29 +157,29 @@ let M = (0, p.$)(function (e) {
                 location: ea
             }),
         ey = (e) => {
-            let t = P.al.has(null != er ? er : ''),
+            let t = S.al.has(null != er ? er : ''),
                 n = {
                     user: p,
-                    speaking: V,
-                    disconnected: z,
+                    speaking: z,
+                    disconnected: W,
                     mute: k,
                     localMute: M,
                     localVideoDisabled: L,
                     isStreaming: K,
                     isGuest: Q,
-                    video: W,
+                    video: U,
                     priority: J,
-                    ringing: H,
+                    ringing: V,
                     deaf: D,
-                    nick: F,
+                    nick: H,
                     collapsed: l,
                     overlap: l,
-                    serverMute: B,
-                    serverDeaf: G,
+                    serverMute: G,
+                    serverDeaf: F,
                     tabIndex: eo,
                     otherClientSessionType: er,
                     voicePlatform: ei,
-                    embeddedApplication: U,
+                    embeddedApplication: B,
                     avatarContainerClass: o()({ [T.userAvatar]: !0 }),
                     disabled: el && !t,
                     selected: ed,
@@ -194,7 +194,7 @@ let M = (0, p.$)(function (e) {
             if (el) {
                 var i;
                 return (0, r.jsx)(a.ua7, {
-                    text: null != (i = (0, g.Z)(er)) ? i : Z.NW.string(Z.t.IyYqqa),
+                    text: null != (i = (0, g.Z)(er)) ? i : N.intl.string(N.t.IyYqqa),
                     children: (e) => {
                         var { onClick: t, onContextMenu: i } = e,
                             l = (function (e, t) {
@@ -248,7 +248,7 @@ let M = (0, p.$)(function (e) {
                   },
             onMouseLeave: el ? void 0 : ef,
             children: (0, r.jsx)(x.Z, {
-                clickTrap: (null == p ? void 0 : p.id) === (null == (t = N.default.getCurrentUser()) ? void 0 : t.id) && ed,
+                clickTrap: (null == p ? void 0 : p.id) === (null == (t = I.default.getCurrentUser()) ? void 0 : t.id) && ed,
                 targetElementRef: eu,
                 user: p,
                 guildId: R.guild_id,

@@ -20,9 +20,9 @@ function O(e) {
         { placeholder: _, accessibilityLabel: E } = (0, c.Z)({ channel: O }),
         [x, I] = r.useState(() => (0, d.H2)()),
         { textValue: j, richValue: C } = x,
-        [S, N] = r.useState(!1),
-        Z = r.useCallback(() => N(!0), []),
-        w = r.useCallback(() => N(!1), []);
+        [S, Z] = r.useState(!1),
+        N = r.useCallback(() => Z(!0), []),
+        w = r.useCallback(() => Z(!1), []);
     (0, s.ZP)(() => {
         (0, a.In)(O.id, !0, !0, n, { section: g.jXE.OVERLAY });
     });
@@ -61,7 +61,7 @@ function O(e) {
             type: u.Ie.OVERLAY_INLINE_REPLY,
             allowNewLines: !1,
             onBlur: w,
-            onFocus: Z,
+            onFocus: N,
             focused: S,
             onSubmit: k,
             onKeyDown: T,

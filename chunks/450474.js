@@ -1,14 +1,14 @@
 n.d(t, { Z: () => d });
 var r = n(200651),
     i = n(192379),
-    s = n(442837),
-    l = n(481060),
+    l = n(442837),
+    s = n(481060),
     a = n(456268),
     o = n(526429),
     c = n(203377);
 let d = (e) => {
     let { guild: t, guildMetadata: n, disabled: d } = e,
-        u = (0, s.Wu)([o.Z], () => o.Z.getAllCategories()),
+        u = (0, l.Wu)([o.Z], () => o.Z.getAllCategories()),
         m = i.useMemo(
             () =>
                 u.map((e) => {
@@ -21,8 +21,8 @@ let d = (e) => {
             [u]
         );
     return 0 === m.length
-        ? (0, r.jsx)(l.$jN, {})
-        : (0, r.jsx)(l.VcW, {
+        ? (0, r.jsx)(s.$jN, {})
+        : (0, r.jsx)(s.VcW, {
               value: n.secondaryCategoryIds,
               options: m,
               onChange: (e) => {

@@ -16,7 +16,7 @@ function d(e) {
         t = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('img', {
-                    alt: u.NW.string(u.t.W6HwU1),
+                    alt: u.intl.string(u.t.W6HwU1),
                     src: (0, o._r)({
                         name: f[0],
                         id: null,
@@ -25,7 +25,7 @@ function d(e) {
                     className: i()(c.completeLeft, c.highFive)
                 }),
                 (0, r.jsx)('img', {
-                    alt: u.NW.string(u.t.W6HwU1),
+                    alt: u.intl.string(u.t.W6HwU1),
                     src: (0, o._r)({
                         name: f[1],
                         id: null,
@@ -38,7 +38,7 @@ function d(e) {
     else {
         if (null == d) return null;
         t = (0, r.jsx)('img', {
-            alt: u.NW.string(u.t.W6HwU1),
+            alt: u.intl.string(u.t.W6HwU1),
             src: (0, o._r)({
                 name: d,
                 id: null,

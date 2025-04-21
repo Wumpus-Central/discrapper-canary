@@ -30,10 +30,10 @@ class d extends i.PureComponent {
                 modalType: a.it.NSFW_APP_LISTING,
                 onAgree: this.handleAgree,
                 onDisagree: this.handleDisagree,
-                title: s.NW.formatToPlainString(s.t.n5PGER, { name: e }),
-                description: s.NW.string(s.t['bJx/aG']),
-                agreement: s.NW.string(s.t.odZq8f),
-                disagreement: s.NW.string(s.t.hieTsL)
+                title: s.intl.formatToPlainString(s.t.n5PGER, { name: e }),
+                description: s.intl.string(s.t['bJx/aG']),
+                agreement: s.intl.string(s.t.odZq8f),
+                disagreement: s.intl.string(s.t.hieTsL)
             })
         });
     }

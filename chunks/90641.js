@@ -4,8 +4,8 @@ var r = n(570140),
     a = n(287734),
     o = n(881052),
     c = n(314897),
-    u = n(592125),
-    l = n(979651),
+    l = n(592125),
+    u = n(979651),
     s = n(352954),
     E = n(630759),
     d = n(760373),
@@ -27,8 +27,8 @@ async function S(e, t) {
                 persistentCodesEnabled: !1
             }),
                 i.Z.show({
-                    title: _.NW.string(_.t.R0RpRU),
-                    body: null != (n = e.getAnyErrorMessage()) ? n : _.NW.string(_.t.eAn6z8)
+                    title: _.intl.string(_.t.R0RpRU),
+                    body: null != (n = e.getAnyErrorMessage()) ? n : _.intl.string(_.t.eAn6z8)
                 });
         }
     } else
@@ -44,15 +44,15 @@ let y = {
     },
     updatePersistentCodesEnabled: async function e(e) {
         let t = (function () {
-            let e = l.Z.getVoiceStateForUser(c.default.getId()),
-                t = u.Z.getChannel(null == e ? void 0 : e.channelId);
+            let e = u.Z.getVoiceStateForUser(c.default.getId()),
+                t = l.Z.getChannel(null == e ? void 0 : e.channelId);
             return c.default.getSessionId() === (null == e ? void 0 : e.sessionId) && null != t && t.type !== f.d4z.GUILD_STAGE_VOICE ? t.id : null;
         })();
         null != t
             ? s.Z.openSecureFramesUpdateConfirmation({
-                  title: e ? _.NW.string(_.t.DRFN1N) : _.NW.string(_.t.q29xJy),
-                  subtitle: e ? _.NW.string(_.t.y015ZW) : _.NW.string(_.t.E66FQk),
-                  confirmText: _.NW.string(_.t.aTuFYW),
+                  title: e ? _.intl.string(_.t.DRFN1N) : _.intl.string(_.t.q29xJy),
+                  subtitle: e ? _.intl.string(_.t.y015ZW) : _.intl.string(_.t.E66FQk),
+                  confirmText: _.intl.string(_.t.aTuFYW),
                   onConfirm: async () => {
                       await S(e, () => {
                           a.default.disconnect(), a.default.selectVoiceChannel(t);

@@ -12,6 +12,6 @@ function u(e) {
         u = (0, a.Z)(n, t);
     return (0, r.jsxs)(i.Z, {
         variant: 'text-md/medium',
-        children: [u, ' ', l.NW.string(c.Z.tqTTws)]
+        children: [u, ' ', l.intl.string(c.default.tqTTws)]
     });
 }

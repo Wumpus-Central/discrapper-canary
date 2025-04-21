@@ -1,9 +1,9 @@
 n.d(e, { Z: () => b }), n(388685);
-var r = n(200651),
-    s = n(192379),
-    i = n(481060),
-    o = n(230711),
-    l = n(63063),
+var i = n(200651),
+    r = n(192379),
+    s = n(481060),
+    l = n(230711),
+    o = n(63063),
     a = n(378298),
     c = n(584656),
     u = n(993750),
@@ -13,55 +13,55 @@ var r = n(200651),
     _ = n(621164);
 let b = function (t) {
     let { onClose: e, channelId: n } = t,
-        [b, N] = s.useState(!1),
-        x = s.useCallback(() => {
-            o.Z.open(d.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: T.FY.DM_SAFETY_ALERTS_V2 }), e();
+        [b, x] = r.useState(!1),
+        p = r.useCallback(() => {
+            l.Z.open(d.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: T.FY.DM_SAFETY_ALERTS_V2 }), e();
         }, [e]),
-        p = s.useCallback(() => {
+        O = r.useCallback(() => {
             b ||
-                (N(!0),
+                (x(!0),
                 (0, a.Uj)(n)
                     .then(() => {
                         e(),
                             (0, c.t)({
-                                text: S.NW.string(S.t.FhgVWl),
+                                text: S.intl.string(S.t.FhgVWl),
                                 id: 'safety-tools-report-false-positive'
                             });
                     })
                     .catch(() => {
-                        N(!1), (0, i.showToast)((0, i.createToast)(S.NW.string(S.t.R0RpRU), i.ToastType.FAILURE));
+                        x(!1), (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.R0RpRU), s.ToastType.FAILURE));
                     }));
         }, [n, e, b]);
-    return (0, r.jsxs)(u.Z, {
+    return (0, i.jsxs)(u.Z, {
         style: _.wrapperStyle,
         children: [
-            (0, r.jsx)(i.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: S.NW.format(S.t['njJ/Cg'], { learnMoreLink: l.Z.getArticleURL(d.BhN.SAFETY_ALERTS) })
+                children: S.intl.format(S.t['njJ/Cg'], { learnMoreLink: o.Z.getArticleURL(d.BhN.SAFETY_ALERTS) })
             }),
-            (0, r.jsx)(i.zxk, {
+            (0, i.jsx)(s.zxk, {
                 className: _.settingsButton,
-                onClick: x,
+                onClick: p,
                 fullWidth: !0,
-                children: S.NW.string(S.t.qpWnyM)
+                children: S.intl.string(S.t.qpWnyM)
             }),
-            (0, r.jsx)('div', {
-                children: (0, r.jsx)(i.Text, {
+            (0, i.jsx)('div', {
+                children: (0, i.jsx)(s.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-muted',
                     className: _.reportFalsePositiveText,
-                    children: S.NW.format(S.t['2uYViI'], {
+                    children: S.intl.format(S.t['2uYViI'], {
                         reportFalsePositiveHook: (t, e) =>
-                            (0, r.jsx)(
-                                i.zxk,
+                            (0, i.jsx)(
+                                s.zxk,
                                 {
                                     className: _.reportFalsePositiveButton,
-                                    size: i.zxk.Sizes.NONE,
-                                    color: i.zxk.Colors.LINK,
-                                    look: i.zxk.Looks.LINK,
+                                    size: s.zxk.Sizes.NONE,
+                                    color: s.zxk.Colors.LINK,
+                                    look: s.zxk.Looks.LINK,
                                     disabled: b,
-                                    onClick: p,
+                                    onClick: O,
                                     children: t
                                 },
                                 e

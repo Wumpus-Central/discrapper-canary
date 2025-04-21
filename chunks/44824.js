@@ -41,7 +41,7 @@ function u(e) {
           });
 }
 function d(e) {
-    var { src: l, poster: t, naturalWidth: r, naturalHeight: i, responsive: a, autoPlay: d, className: c, playable: h = !0, renderImageComponent: m, alt: p = o.NW.string(o.t.I5gL2N), sourceMetadata: g } = e,
+    var { src: l, poster: t, naturalWidth: r, naturalHeight: i, responsive: a, autoPlay: d, className: c, playable: h = !0, renderImageComponent: m, alt: p = o.intl.string(o.t.I5gL2N), sourceMetadata: g } = e,
         b = (function (e, l) {
             if (null == e) return {};
             var t,

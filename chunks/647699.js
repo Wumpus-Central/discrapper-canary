@@ -1,12 +1,12 @@
 n.d(t, {
     r: () => s,
-    v: () => a
+    v: () => l
 });
-var r = n(481060),
-    i = n(388032);
+var i = n(481060),
+    r = n(388032);
 function s() {
-    (0, r.showToast)((0, r.createToast)(i.NW.string(i.t['84MExs']), r.ToastType.FAILURE));
+    (0, i.showToast)((0, i.createToast)(r.intl.string(r.t['84MExs']), i.ToastType.FAILURE));
 }
-function a() {
-    (0, r.showToast)((0, r.createToast)(i.NW.string(i.t.s35OuL), r.ToastType.FAILURE));
+function l() {
+    (0, i.showToast)((0, i.createToast)(r.intl.string(r.t.s35OuL), i.ToastType.FAILURE));
 }

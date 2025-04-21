@@ -6,8 +6,8 @@ r.d(t, {
 var n,
     A = r(200651),
     a = r(192379),
-    o = r(481060),
-    l = r(388032),
+    l = r(481060),
+    o = r(388032),
     i = r(683290),
     s = (((n = {}).DANGER = 'danger'), (n.WARNING = 'warning'), n);
 function c(e) {
@@ -21,20 +21,20 @@ function c(e) {
                 p(!1);
             }
         },
-        h = null != n ? n : l.NW.string(l.t.D94rwc);
-    return (0, A.jsxs)(o.Y0X, {
+        h = null != n ? n : o.intl.string(o.t.D94rwc);
+    return (0, A.jsxs)(l.Y0X, {
         className: i.__invalid_container,
-        size: o.CgR.DYNAMIC,
+        size: l.CgR.DYNAMIC,
         transitionState: t,
         'aria-label': h,
         children: [
-            (0, A.jsxs)(o.hzk, {
+            (0, A.jsxs)(l.hzk, {
                 className: i.content,
                 children: [
                     (0, A.jsxs)('div', {
                         className: i.header,
                         children: [
-                            (0, A.jsx)(o.P4T, {
+                            (0, A.jsx)(l.P4T, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 20,
@@ -48,19 +48,19 @@ function c(e) {
                                     }
                                 })(g)
                             }),
-                            (0, A.jsx)(o.LZC, {
+                            (0, A.jsx)(l.LZC, {
                                 size: 8,
                                 horizontal: !0
                             }),
-                            (0, A.jsx)(o.X6q, {
+                            (0, A.jsx)(l.X6q, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
                                 children: h
                             })
                         ]
                     }),
-                    (0, A.jsx)(o.LZC, { size: 12 }),
-                    (0, A.jsx)(o.Text, {
+                    (0, A.jsx)(l.LZC, { size: 12 }),
+                    (0, A.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'text-muted',
                         className: i.__invalid_body,
@@ -68,22 +68,22 @@ function c(e) {
                     })
                 ]
             }),
-            (0, A.jsxs)(o.mzw, {
+            (0, A.jsxs)(l.mzw, {
                 children: [
-                    (0, A.jsx)(o.zxk, {
-                        color: o.zxk.Colors.BRAND,
+                    (0, A.jsx)(l.zxk, {
+                        color: l.zxk.Colors.BRAND,
                         onClick: m,
                         submitting: f,
                         children: c
                     }),
-                    (0, A.jsx)(o.LZC, {
+                    (0, A.jsx)(l.LZC, {
                         size: 12,
                         horizontal: !0
                     }),
                     null != d &&
-                        (0, A.jsx)(o.zxk, {
-                            color: o.zxk.Colors.PRIMARY,
-                            look: o.zxk.Looks.OUTLINED,
+                        (0, A.jsx)(l.zxk, {
+                            color: l.zxk.Colors.PRIMARY,
+                            look: l.zxk.Looks.OUTLINED,
                             onClick: r,
                             children: d
                         })

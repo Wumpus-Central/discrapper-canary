@@ -4,8 +4,8 @@ n(192379);
 var r = n(704215),
     s = n(13245),
     o = n(605236),
-    a = n(593481),
-    l = n(371651),
+    l = n(593481),
+    a = n(371651),
     c = n(237997),
     d = n(145597),
     u = n(312839),
@@ -13,17 +13,17 @@ var r = n(704215),
     p = n(388032);
 let f = () => ({
         icon: n(639525),
-        title: p.NW.string(p.t.r0ObgY),
-        body: p.NW.string(p.t.hc6XFx),
+        title: p.intl.string(p.t.r0ObgY),
+        body: p.intl.string(p.t.hc6XFx),
         hint: g,
         notifType: h.n0.OopWelcomeNudge
     }),
-    g = (e) => (0, a.QR)(e, (0, u.P)(), p.t['z8/sgI']);
+    g = (e) => (0, l.QR)(e, (0, u.P)(), p.t['z8/sgI']);
 function m(e) {
     let { isFirstTimeNux: t } = e,
         {
             icon: n,
-            title: a,
+            title: l,
             body: h,
             hint: g,
             notifType: m
@@ -58,8 +58,8 @@ function m(e) {
                     })({}, e)),
                     (i = i =
                         {
-                            title: p.NW.string(p.t.xxADho),
-                            body: p.NW.string(p.t.GtUrGB)
+                            title: p.intl.string(p.t.xxADho),
+                            body: p.intl.string(p.t.GtUrGB)
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -81,7 +81,7 @@ function m(e) {
         { trackView: y, trackClick: v } = (0, u.R)(m, { notif_type: m });
     return {
         icon: n,
-        title: a,
+        title: l,
         body: h,
         hint: g,
         renderFooter: () =>
@@ -90,9 +90,9 @@ function m(e) {
                     textAlign: 'center',
                     padding: 2
                 },
-                children: p.NW.string(p.t['9MyuT0'])
+                children: p.intl.string(p.t['9MyuT0'])
             }),
-        confirmText: t ? p.NW.string(p.t.TxyTbm) : void 0,
+        confirmText: t ? p.intl.string(p.t.TxyTbm) : void 0,
         onConfirmClick: t
             ? () => {
                   v('unlock'), s.Z.setInputLocked(!1, (0, d.getPID)());
@@ -102,7 +102,7 @@ function m(e) {
             y(), t && (0, o.EW)(r.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX);
         },
         onNotificationClick: (e, t) => {
-            v('unlock'), l.default.isOverlayOOPEnabledForPid((0, d.getPID)()) ? s.Z.setInputLocked(!1, (0, d.getPID)()) : c.default.isInstanceLocked() && s.Z.setInstanceLocked(!1);
+            v('unlock'), a.default.isOverlayOOPEnabledForPid((0, d.getPID)()) ? s.Z.setInputLocked(!1, (0, d.getPID)()) : c.default.isInstanceLocked() && s.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
             v('dismiss');

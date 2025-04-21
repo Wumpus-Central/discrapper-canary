@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(200651),
-    a = n(192379),
-    i = n(120356),
-    l = n.n(i),
+    i = n(192379),
+    a = n(120356),
+    l = n.n(a),
     s = n(21260),
     o = n(780384),
     c = n(481060),
@@ -13,23 +13,23 @@ var r = n(200651),
     h = n(388032),
     g = n(602791);
 function _(e) {
-    let { onTabSelect: t, tabs: n, selectedTab: i } = e,
+    let { onTabSelect: t, tabs: n, selectedTab: a } = e,
         s = (0, u.ZP)(),
         d = (0, o.wj)(s),
         _ = (0, p.Q3)('GlobalDiscoveryHeaderMoreTab'),
-        f = a.useMemo(
+        f = i.useMemo(
             () =>
                 null !=
                 n.find((e) => {
                     let { id: t } = e;
-                    return t === i;
+                    return t === a;
                 }),
-            [i, n]
+            [a, n]
         ),
-        [b, x] = a.useState(!1),
+        [b, x] = i.useState(!1),
         v = (function (e) {
-            let { selected: t, isVisualRefreshEnabled: n, isDarkTheme: r, isHovered: a } = e;
-            return n ? (a ? 'text-primary' : t ? 'text-brand' : 'text-normal') : !t && a ? 'interactive-hover' : t ? 'header-primary' : r ? 'interactive-normal' : 'header-primary';
+            let { selected: t, isVisualRefreshEnabled: n, isDarkTheme: r, isHovered: i } = e;
+            return n ? (i ? 'text-primary' : t ? 'text-brand' : 'text-normal') : !t && i ? 'interactive-hover' : t ? 'header-primary' : r ? 'interactive-normal' : 'header-primary';
         })({
             selected: f,
             isVisualRefreshEnabled: _,
@@ -37,22 +37,22 @@ function _(e) {
             isHovered: b
         }),
         C = (function (e) {
-            let { selected: t, isVisualRefreshEnabled: n, isDarkTheme: r, isHovered: a } = e;
-            return n ? (a ? c.TVs.colors.TEXT_PRIMARY : t ? c.TVs.colors.TEXT_BRAND : c.TVs.colors.INTERACTIVE_NORMAL) : !t && a ? c.TVs.colors.INTERACTIVE_HOVER : t ? c.TVs.colors.HEADER_PRIMARY : r ? c.TVs.colors.TEXT_MUTED : c.TVs.colors.HEADER_PRIMARY;
+            let { selected: t, isVisualRefreshEnabled: n, isDarkTheme: r, isHovered: i } = e;
+            return n ? (i ? c.TVs.colors.TEXT_PRIMARY : t ? c.TVs.colors.TEXT_BRAND : c.TVs.colors.INTERACTIVE_NORMAL) : !t && i ? c.TVs.colors.INTERACTIVE_HOVER : t ? c.TVs.colors.HEADER_PRIMARY : r ? c.TVs.colors.TEXT_MUTED : c.TVs.colors.HEADER_PRIMARY;
         })({
             selected: f,
             isVisualRefreshEnabled: _,
             isDarkTheme: d,
             isHovered: b
         }),
-        j = a.useCallback(() => x(!0), []),
-        y = a.useCallback(() => x(!1), []);
+        j = i.useCallback(() => x(!0), []),
+        y = i.useCallback(() => x(!1), []);
     return (0, r.jsx)(c.yRy, {
         renderPopout: (e) => {
-            let { closePopout: a } = e;
+            let { closePopout: i } = e;
             return (0, r.jsx)(m.Z, {
-                selectedTab: i,
-                onClose: a,
+                selectedTab: a,
+                onClose: i,
                 tabs: n,
                 onTabSelect: t
             });
@@ -60,8 +60,8 @@ function _(e) {
         position: 'bottom',
         align: 'left',
         children: (e, t) => {
-            var n, a;
-            let { isShown: i } = t;
+            var n, i;
+            let { isShown: a } = t;
             return (0, r.jsx)(
                 c.njP.Item,
                 ((n = (function (e) {
@@ -89,13 +89,13 @@ function _(e) {
                     }
                     return e;
                 })({}, e)),
-                (a = a =
+                (i = i =
                     {
                         id: 'more',
                         look: 'brand',
                         selectedItem: _ && f ? 'more' : void 0,
                         className: l()(g.tab, { [g.selected]: !_ && f }),
-                        'aria-label': h.NW.string(h.t.UKOtz8),
+                        'aria-label': h.intl.string(h.t.UKOtz8),
                         children: (0, r.jsxs)('div', {
                             className: g.more,
                             onMouseEnter: j,
@@ -104,9 +104,9 @@ function _(e) {
                                 (0, r.jsx)(c.Text, {
                                     variant: _ ? 'text-sm/semibold' : 'text-md/medium',
                                     color: v,
-                                    children: h.NW.string(h.t.UKOtz8)
+                                    children: h.intl.string(h.t.UKOtz8)
                                 }),
-                                i
+                                a
                                     ? (0, r.jsx)(c.u04, {
                                           size: 'xs',
                                           color: C
@@ -119,7 +119,7 @@ function _(e) {
                         })
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -127,8 +127,8 @@ function _(e) {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(a)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
                 n)
             );
@@ -136,24 +136,24 @@ function _(e) {
     });
 }
 function f(e) {
-    let { className: t, selectedTab: n, tabs: i, onTabSelect: o, onAvailableWidthChange: u } = e,
-        [m, h] = a.useState(0),
-        f = a.useRef(m),
+    let { className: t, selectedTab: n, tabs: a, onTabSelect: o, onAvailableWidthChange: u } = e,
+        [m, h] = i.useState(0),
+        f = i.useRef(m),
         {
             lastVisibleIndex: b,
             onItemLayout: x,
             overflowItemsRef: v,
             itemWidthsRef: C
         } = (0, s.zP)({
-            items: i,
+            items: a,
             itemGapPx: 20,
             maxLines: 1,
             containerWidth: m
         }),
-        j = a.useMemo(() => i.slice(0, b + 1), [b, i]),
-        y = a.useMemo(() => i.slice(b + 1), [b, i]),
-        I = a.useRef(null),
-        N = a.useCallback(
+        j = i.useMemo(() => a.slice(0, b + 1), [b, a]),
+        y = i.useMemo(() => a.slice(b + 1), [b, a]),
+        I = i.useRef(null),
+        O = i.useCallback(
             (e) => {
                 let t = e.contentRect.width;
                 if (null == t || f.current === t) return;
@@ -163,9 +163,9 @@ function f(e) {
             },
             [C, u]
         );
-    (0, d.s)(I, N);
-    let O = 0 !== m,
-        P = (0, p.Q3)('GlobalDiscoveryHeaderTabs');
+    (0, d.s)(I, O);
+    let P = 0 !== m,
+        S = (0, p.Q3)('GlobalDiscoveryHeaderTabs');
     return (0, r.jsxs)('div', {
         className: l()(g.container, t),
         ref: I,
@@ -173,7 +173,7 @@ function f(e) {
             (0, r.jsxs)('div', {
                 className: g.measurements,
                 children: [
-                    i.map((e, t) =>
+                    a.map((e, t) =>
                         (0, r.jsx)(
                             s.AJ,
                             {
@@ -202,7 +202,7 @@ function f(e) {
                     })
                 ]
             }),
-            O &&
+            P &&
                 (0, r.jsxs)(c.njP, {
                     type: 'top',
                     look: 'brand',
@@ -217,7 +217,7 @@ function f(e) {
                                     id: e.id,
                                     look: 'brand',
                                     'aria-label': e.label,
-                                    className: l()(g.tab, { [g.selected]: !P && n === e.id }),
+                                    className: l()(g.tab, { [g.selected]: !S && n === e.id }),
                                     children: e.label
                                 },
                                 e.id

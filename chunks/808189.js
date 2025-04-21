@@ -22,20 +22,20 @@ let m = [
             perks: [
                 {
                     icon: s.EO4,
-                    getCopy: () => p.NW.formatToPlainString(p.t.Tlz0x8, { numEmojiSlots: _.HO[f.Eu4.TIER_1].limits.emoji })
+                    getCopy: () => p.intl.formatToPlainString(p.t.Tlz0x8, { numEmojiSlots: _.HO[f.Eu4.TIER_1].limits.emoji })
                 },
                 {
                     icon: s.KY1,
-                    getCopy: () => p.NW.formatToPlainString(p.t['v+MIfn'], { numSoundboardSlots: _.HO[f.Eu4.TIER_1].limits.soundboardSounds }),
+                    getCopy: () => p.intl.formatToPlainString(p.t['v+MIfn'], { numSoundboardSlots: _.HO[f.Eu4.TIER_1].limits.soundboardSounds }),
                     isNew: !0
                 },
                 {
                     icon: s.OUq,
-                    getCopy: () => p.NW.string(p.t.PbAyub)
+                    getCopy: () => p.intl.string(p.t.PbAyub)
                 },
                 {
                     icon: s.gj8,
-                    getCopy: () => p.NW.string(p.t['WH+OeH'])
+                    getCopy: () => p.intl.string(p.t['WH+OeH'])
                 }
             ]
         },
@@ -44,19 +44,19 @@ let m = [
             perks: [
                 {
                     icon: s.hGI,
-                    getCopy: () => p.NW.string(p.t.y4ft4O)
+                    getCopy: () => p.intl.string(p.t.y4ft4O)
                 },
                 {
                     icon: s.rG2,
-                    getCopy: () => p.NW.formatToPlainString(p.t['aFRl5+'], { uploadSizeLimit: p.NW.string(p.t.M6qV8v) })
+                    getCopy: () => p.intl.formatToPlainString(p.t['aFRl5+'], { uploadSizeLimit: p.intl.string(p.t.M6qV8v) })
                 },
                 {
                     icon: s.EO4,
-                    getCopy: () => p.NW.string(p.t['6PV6QU'])
+                    getCopy: () => p.intl.string(p.t['6PV6QU'])
                 },
                 {
                     icon: s.dRF,
-                    getCopy: () => p.NW.string(p.t['1a5rjo'])
+                    getCopy: () => p.intl.string(p.t['1a5rjo'])
                 }
             ]
         },
@@ -65,23 +65,23 @@ let m = [
             perks: [
                 {
                     icon: s.xPt,
-                    getCopy: () => p.NW.string(p.t.adNGjY)
+                    getCopy: () => p.intl.string(p.t.adNGjY)
                 },
                 {
                     icon: s.rG2,
-                    getCopy: () => p.NW.formatToPlainString(p.t['aFRl5+'], { uploadSizeLimit: p.NW.string(p.t.yMOW8P) })
+                    getCopy: () => p.intl.formatToPlainString(p.t['aFRl5+'], { uploadSizeLimit: p.intl.string(p.t.yMOW8P) })
                 },
                 {
                     icon: s.gj8,
-                    getCopy: () => p.NW.string(p.t.Tsljqq)
+                    getCopy: () => p.intl.string(p.t.Tsljqq)
                 },
                 {
                     icon: s.OUq,
-                    getCopy: () => p.NW.string(p.t.nRKlmJ)
+                    getCopy: () => p.intl.string(p.t.nRKlmJ)
                 },
                 {
                     icon: s.ewx,
-                    getCopy: () => p.NW.formatToPlainString(p.t.hsZ88f, { numStageSeats: f.RcX })
+                    getCopy: () => p.intl.formatToPlainString(p.t.hsZ88f, { numStageSeats: f.RcX })
                 }
             ]
         }
@@ -117,7 +117,7 @@ let m = [
                                     tag: 'div',
                                     variant: 'text-xs/semibold',
                                     color: 'always-white',
-                                    children: p.NW.string(p.t['9JbE3N'])
+                                    children: p.intl.string(p.t['9JbE3N'])
                                 }),
                             (0, r.jsxs)('div', {
                                 className: h.tierCardHeader,
@@ -132,7 +132,7 @@ let m = [
                                         className: h.tierCardBoostRequirement,
                                         variant: 'text-md/normal',
                                         color: 'always-white',
-                                        children: p.NW.format(p.t.vbAsAw, { numBoostsRequired: f.oCV[e.tier] })
+                                        children: p.intl.format(p.t.vbAsAw, { numBoostsRequired: f.oCV[e.tier] })
                                     })
                                 ]
                             }),

@@ -16,8 +16,8 @@ var r = n(200651),
     _ = n(922482),
     I = n(601964),
     O = n(592125),
-    N = n(430824),
-    T = n(15274),
+    T = n(430824),
+    N = n(15274),
     S = n(924301),
     p = n(725436),
     A = n(978227),
@@ -52,15 +52,15 @@ let U = (e, t) => (n) => {
         var t;
         let { guild: n, guildScheduledEvent: l, channel: o, isMember: u } = e,
             _ = (0, a.e7)(
-                [N.Z],
+                [T.Z],
                 () => {
                     var e;
-                    return null == n ? null : null != (e = N.Z.getGuild(n.id)) ? e : new I.ZP(n);
+                    return null == n ? null : null != (e = T.Z.getGuild(n.id)) ? e : new I.ZP(n);
                 },
                 [n]
             ),
             O = (0, g.u)(l, o),
-            T = i.useCallback(
+            N = i.useCallback(
                 (e) => {
                     u && null != l && (e.stopPropagation(), (0, c.Bk)(l));
                 },
@@ -94,7 +94,7 @@ let U = (e, t) => (n) => {
             children: [
                 (0, r.jsx)(E.Z.Icon, {
                     guild: _,
-                    onClick: T
+                    onClick: N
                 }),
                 (0, r.jsxs)('div', {
                     className: b.verticalContainer,
@@ -111,7 +111,7 @@ let U = (e, t) => (n) => {
                                 }),
                                 (0, r.jsx)(s.P3F, {
                                     className: b.guildNameClickable,
-                                    onClick: T,
+                                    onClick: N,
                                     children: (0, r.jsx)(s.X6q, {
                                         className: u ? b.guildNameLinkable : b.guildName,
                                         variant: 'text-sm/medium',
@@ -150,7 +150,7 @@ let U = (e, t) => (n) => {
                           u || I(e);
                       },
                       color: u ? s.zxk.Colors.TRANSPARENT : s.zxk.Colors.GREEN,
-                      children: u ? h.NW.string(h.t.GoCQxc) : h.NW.string(h.t.XpeFYm)
+                      children: u ? h.intl.string(h.t.GoCQxc) : h.intl.string(h.t.XpeFYm)
                   })
                 : o
                   ? (0, r.jsx)(s.zxk, {
@@ -159,7 +159,7 @@ let U = (e, t) => (n) => {
                         disabled: !0,
                         color: s.zxk.Colors.PRIMARY,
                         look: s.zxk.Looks.OUTLINED,
-                        children: h.NW.string(h.t.Pj7Xrq)
+                        children: h.intl.string(h.t.Pj7Xrq)
                     })
                   : (0, r.jsxs)(s.zxk, {
                         className: b.button,
@@ -182,7 +182,7 @@ let U = (e, t) => (n) => {
                                       color: 'currentColor',
                                       className: b.buttonIcon
                                   }),
-                            h.NW.string(h.t.DlcqlZ)
+                            h.intl.string(h.t.DlcqlZ)
                         ]
                     })
             : (0, r.jsx)(s.zxk, {
@@ -190,7 +190,7 @@ let U = (e, t) => (n) => {
                   size: s.zxk.Sizes.SMALL,
                   onClick: I,
                   color: s.zxk.Colors.GREEN,
-                  children: h.NW.string(h.t.XpeFYm)
+                  children: h.intl.string(h.t.XpeFYm)
               });
     }),
     j = i.memo(function (e) {
@@ -198,11 +198,11 @@ let U = (e, t) => (n) => {
         let { guildScheduledEvent: n, guild: l, channel: a, isMember: c, recurrenceId: u, onAcceptInstantInvite: d, onTransitionToInviteChannel: _ } = e,
             I = null != u ? u : null != n ? (0, R.DK)(n) : null,
             O = (null == n ? void 0 : n.recurrence_rule) == null || null == I || (0, R.Rp)((0, f.KV)(null == n ? void 0 : n.recurrence_rule), I),
-            N = (0, A.Z)(n),
+            T = (0, A.Z)(n),
             p = i.useCallback(() => {
                 c &&
                     null != n &&
-                    (0, T.bO)({
+                    (0, N.bO)({
                         eventId: n.id,
                         recurrenceId: I
                     });
@@ -226,7 +226,7 @@ let U = (e, t) => (n) => {
                         description: null != (t = n.description) ? t : void 0,
                         descriptionClassName: b.eventDescription,
                         guildId: n.guild_id,
-                        creator: N,
+                        creator: T,
                         guildEvent: n,
                         eventPreview: n,
                         recurrenceId: I

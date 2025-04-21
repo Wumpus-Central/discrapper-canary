@@ -22,8 +22,8 @@ let y = (0, c.B)(function (e) {
         }),
         E = (0, s.e7)([u.Z], () => u.Z.getChannel(null == x ? void 0 : x.parent_id)),
         I = l === (null == x ? void 0 : x.id),
-        N = (0, s.e7)([h.Z], () => (null != E ? h.Z.can(g.Plq.MANAGE_CHANNELS, E) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
-        P = i.useCallback(
+        P = (0, s.e7)([h.Z], () => (null != E ? h.Z.can(g.Plq.MANAGE_CHANNELS, E) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
+        w = i.useCallback(
             (e) => {
                 null != x &&
                     (0, a.jW)(e, async () => {
@@ -78,10 +78,10 @@ let y = (0, c.B)(function (e) {
             [x]
         );
     if (null == x) return null;
-    let w = (0, p.jo)(c, v),
+    let N = (0, p.jo)(c, v),
         Z = (0, p.CN)(x, _, O),
         T = (0, r.jsx)('div', {
-            className: o()(w, {
+            className: o()(N, {
                 [b.disabled]: Z,
                 [b.selected]: I
             }),
@@ -91,7 +91,7 @@ let y = (0, c.B)(function (e) {
                 channel: x,
                 guild: t,
                 selected: I,
-                onContextMenu: P,
+                onContextMenu: w,
                 forceInteractable: !0,
                 resolvedUnreadSetting: m.i.ONLY_MENTIONS,
                 children: [
@@ -107,5 +107,5 @@ let y = (0, c.B)(function (e) {
                 ]
             })
         });
-    return N && (T = j(C(T))), T;
+    return P && (T = j(C(T))), T;
 });

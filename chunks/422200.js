@@ -1,4 +1,4 @@
-n.d(t, { default: () => E });
+n.d(t, { default: () => C });
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -17,68 +17,68 @@ var r = n(481060),
     g = n(933793),
     Z = n(13736),
     O = n(732393),
-    N = n(214906),
-    _ = n(612856),
-    m = n(137591),
-    y = n(388032);
-let E = (0, l.Z)(
+    _ = n(214906),
+    m = n(612856),
+    y = n(137591),
+    E = n(388032);
+let C = (0, l.Z)(
     function (e) {
         let { channel: t, onSelect: n } = e,
             l = (0, c.Z)(t),
             o = (0, h.Z)(t),
-            E = (0, N.Z)(t),
-            C = (0, s.Z)(t),
-            j = (0, p.Z)(t),
-            A = (0, f.Z)(t),
-            P = (0, d.Z)({
+            C = (0, _.Z)(t),
+            j = (0, s.Z)(t),
+            A = (0, p.Z)(t),
+            P = (0, f.Z)(t),
+            N = (0, d.Z)({
                 id: t.id,
-                label: y.NW.string(y.t.DQ797u)
+                label: E.intl.string(E.t.DQ797u)
             }),
-            W = (0, v.Z)(t, 'Context Menu'),
-            U = (0, g.Z)(t),
-            R = (0, _.Z)(t),
-            S = (0, Z.Z)(t),
-            T = (0, O.Z)(t.id),
-            k = (0, b.Z)(t),
-            x = (0, m.Z)(t),
-            D = (0, u.l)(t),
-            I = (0, u.P)(t);
+            U = (0, v.Z)(t, 'Context Menu'),
+            R = (0, g.Z)(t),
+            S = (0, m.Z)(t),
+            T = (0, Z.Z)(t),
+            k = (0, O.Z)(t.id),
+            x = (0, b.Z)(t),
+            D = (0, y.Z)(t),
+            I = (0, u.l)(t),
+            F = (0, u.P)(t);
         return (0, i.jsxs)(r.v2r, {
             navId: 'thread-context',
             onClose: a.Zy,
-            'aria-label': y.NW.string(y.t['1NBjqa']),
+            'aria-label': E.intl.string(E.t['1NBjqa']),
             onSelect: n,
             children: [
                 (0, i.jsxs)(
                     r.kSQ,
                     {
-                        children: [o, D]
+                        children: [o, I]
                     },
                     'mark-as-read-or-favorite'
                 ),
                 (0, i.jsxs)(
                     r.kSQ,
                     {
-                        children: [W, k, C, j, S, T, l]
+                        children: [U, x, j, A, T, k, l]
                     },
                     'thread-actions'
                 ),
                 (0, i.jsxs)(
                     r.kSQ,
                     {
-                        children: [E, R]
+                        children: [C, S]
                     },
                     'notifications'
                 ),
-                (0, i.jsx)(r.kSQ, { children: I }),
+                (0, i.jsx)(r.kSQ, { children: F }),
                 (0, i.jsxs)(
                     r.kSQ,
                     {
-                        children: [x, U, A]
+                        children: [D, R, P]
                     },
                     'admin-actions'
                 ),
-                (0, i.jsx)(r.kSQ, { children: P }, 'developer-actions')
+                (0, i.jsx)(r.kSQ, { children: N }, 'developer-actions')
             ]
         });
     },

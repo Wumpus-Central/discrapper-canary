@@ -64,7 +64,7 @@ let E = new g(s.Z, {}),
             children: [
                 (0, i.jsx)(o.Text, {
                     variant: 'text-sm/medium',
-                    children: _.NW.string(_.t['2UvR1N'])
+                    children: _.intl.string(_.t['2UvR1N'])
                 }),
                 (0, i.jsx)(l.B, { onClick: y })
             ]

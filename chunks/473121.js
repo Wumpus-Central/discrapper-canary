@@ -75,7 +75,7 @@ let d = (e) => {
             x &&
                 (0, r.jsx)(i.Text, {
                     variant: 'text-sm/normal',
-                    children: s.NW.format(s.t.Q0tSKS, {})
+                    children: s.intl.format(s.t.Q0tSKS, {})
                 })
         ]
     });

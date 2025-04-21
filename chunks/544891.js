@@ -251,14 +251,14 @@ function I(e, t, n) {
 }
 let S = I.bind(null, 'get'),
     T = I.bind(null, 'post'),
-    N = I.bind(null, 'put'),
-    A = I.bind(null, 'patch'),
+    A = I.bind(null, 'put'),
+    N = I.bind(null, 'patch'),
     C = I.bind(null, 'del'),
     R = {
         get: S,
         post: T,
-        put: N,
-        patch: A,
+        put: A,
+        patch: N,
         del: C
     };
 if (n.g.isServerRendering) {
@@ -270,7 +270,7 @@ if (n.g.isServerRendering) {
             body: null,
             text: ''
         });
-    (S = e), (T = e), (N = e), (A = e), (C = e);
+    (S = e), (T = e), (A = e), (N = e), (C = e);
 }
 function P() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

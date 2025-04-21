@@ -52,24 +52,24 @@ function f(e) {
             f &&
                 (0, r.jsx)(u, {
                     icon: l.kBi,
-                    title: a.NW.string(a.t['7Tmhfn']),
-                    description: a.NW.string(a.t['eu5x7+'])
+                    title: a.intl.string(a.t['7Tmhfn']),
+                    description: a.intl.string(a.t['eu5x7+'])
                 }),
             p &&
                 (0, r.jsx)(u, {
                     icon: l.iWm,
-                    title: a.NW.string(a.t.awYSsL),
-                    description: a.NW.string(a.t.TpsXoK)
+                    title: a.intl.string(a.t.awYSsL),
+                    description: a.intl.string(a.t.TpsXoK)
                 }),
             b &&
                 (0, r.jsx)(u, {
                     icon: l.BFJ,
-                    title: a.NW.string(a.t.WuKeSE),
-                    description: a.NW.string(a.t.wOBmtb)
+                    title: a.intl.string(a.t.WuKeSE),
+                    description: a.intl.string(a.t.wOBmtb)
                 }),
             (0, r.jsx)(l.Text, {
                 variant: 'text-xs/normal',
-                children: a.NW.format(a.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
+                children: a.intl.format(a.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
             })
         ]
     });

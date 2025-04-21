@@ -24,12 +24,12 @@ var r = n(200651),
     _ = n(314897),
     E = n(271383),
     O = n(430824),
-    N = n(626135),
-    y = n(63063),
-    I = n(134433),
-    v = n(225104),
-    C = n(981631),
-    S = n(388032),
+    y = n(626135),
+    I = n(63063),
+    v = n(134433),
+    C = n(225104),
+    S = n(981631),
+    N = n(388032),
     T = n(739587),
     P = n(472840);
 function j(e) {
@@ -84,8 +84,8 @@ let Z = function (e) {
     if (
         (i.useEffect(() => {
             0 !== R.length &&
-                N.default.track(
-                    C.rMx.PASSPORT_ENTRY_VIEWED,
+                y.default.track(
+                    S.rMx.PASSPORT_ENTRY_VIEWED,
                     j(
                         {
                             role_ids: R.map((e) => {
@@ -115,14 +115,14 @@ let Z = function (e) {
             (0, r.jsxs)(c.xBx, {
                 separator: !1,
                 children: [
-                    (0, r.jsx)(I.Z, {
+                    (0, r.jsx)(v.Z, {
                         className: T.headerIcon,
                         size: 24
                     }),
                     (0, r.jsx)(c.X6q, {
                         variant: 'text-md/medium',
                         color: 'header-primary',
-                        children: S.NW.string(S.t.ghtnsr)
+                        children: N.intl.string(N.t.ghtnsr)
                     }),
                     (0, r.jsx)(c.olH, {
                         className: T.modalCloseButton,
@@ -136,7 +136,7 @@ let Z = function (e) {
                     (0, r.jsx)(c.X6q, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        children: S.NW.format(S.t['Y+TsER'], { helpdeskArticleUrl: y.Z.getArticleURL(C.BhN.CONNECTION_DETAILS) })
+                        children: N.intl.format(N.t['Y+TsER'], { helpdeskArticleUrl: I.Z.getArticleURL(S.BhN.CONNECTION_DETAILS) })
                     }),
                     (0, r.jsx)('div', {
                         className: T.verifiedRoles,
@@ -225,7 +225,7 @@ let Z = function (e) {
                                                   })
                                               })
                                             : null,
-                                        (0, r.jsx)(v.Z, {
+                                        (0, r.jsx)(C.Z, {
                                             guildId: t,
                                             role: e,
                                             size: 24

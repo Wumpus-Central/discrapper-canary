@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(983135),
-    l = n(388032),
+    l = n(983135),
+    s = n(388032),
     a = n(387708);
 function o() {
     return (0, r.jsxs)('div', {
@@ -18,23 +18,23 @@ function o() {
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
                 className: a.stepHeader,
-                children: l.NW.format(l.t.tCQ3Hx, { number: 1 })
+                children: s.intl.format(s.t.tCQ3Hx, { number: 1 })
             }),
             (0, r.jsx)(i.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
                 className: a.header,
-                children: l.NW.string(l.t.e6spZm)
+                children: s.intl.string(s.t.e6spZm)
             }),
             (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: l.NW.string(l.t['8ega19'])
+                children: s.intl.string(s.t['8ega19'])
             }),
             (0, r.jsx)(i.zxk, {
                 className: a.button,
-                onClick: () => (0, s.Nb)('Safety Check'),
-                children: l.NW.string(l.t.TbzK39)
+                onClick: () => (0, l.Nb)('Safety Check'),
+                children: s.intl.string(s.t.TbzK39)
             })
         ]
     });
@@ -47,23 +47,23 @@ function c() {
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
                 className: a.stepHeader,
-                children: l.NW.format(l.t.tCQ3Hx, { number: 2 })
+                children: s.intl.format(s.t.tCQ3Hx, { number: 2 })
             }),
             (0, r.jsx)(i.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
                 className: a.header,
-                children: l.NW.string(l.t.nRE3tb)
+                children: s.intl.string(s.t.nRE3tb)
             }),
             (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: l.NW.string(l.t.y08PCA)
+                children: s.intl.string(s.t.y08PCA)
             }),
             (0, r.jsx)(i.zxk, {
                 className: a.button,
-                onClick: () => (0, s.Nb)('Default Channels'),
-                children: l.NW.string(l.t.TbzK39)
+                onClick: () => (0, l.Nb)('Default Channels'),
+                children: s.intl.string(s.t.TbzK39)
             })
         ]
     });
@@ -76,23 +76,23 @@ function d() {
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
                 className: a.stepHeader,
-                children: l.NW.format(l.t.tCQ3Hx, { number: 3 })
+                children: s.intl.format(s.t.tCQ3Hx, { number: 3 })
             }),
             (0, r.jsx)(i.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
                 className: a.header,
-                children: l.NW.string(l.t.VkaI6u)
+                children: s.intl.string(s.t.VkaI6u)
             }),
             (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: l.NW.string(l.t.TVGk1d)
+                children: s.intl.string(s.t.TVGk1d)
             }),
             (0, r.jsx)(i.zxk, {
                 className: a.button,
-                onClick: () => (0, s.Nb)('Customization Questions'),
-                children: l.NW.string(l.t.TbzK39)
+                onClick: () => (0, l.Nb)('Customization Questions'),
+                children: s.intl.string(s.t.TbzK39)
             })
         ]
     });
@@ -105,23 +105,23 @@ function u() {
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
                 className: a.stepHeader,
-                children: l.NW.format(l.t.tCQ3Hx, { number: 4 })
+                children: s.intl.format(s.t.tCQ3Hx, { number: 4 })
             }),
             (0, r.jsx)(i.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
                 className: a.header,
-                children: l.NW.string(l.t['3SM68P'])
+                children: s.intl.string(s.t['3SM68P'])
             }),
             (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: l.NW.string(l.t.eamP29)
+                children: s.intl.string(s.t.eamP29)
             }),
             (0, r.jsx)(i.zxk, {
                 className: a.button,
-                onClick: () => (0, s.Nb)('Home Settings'),
-                children: l.NW.string(l.t.TbzK39)
+                onClick: () => (0, l.Nb)('Home Settings'),
+                children: s.intl.string(s.t.TbzK39)
             })
         ]
     });

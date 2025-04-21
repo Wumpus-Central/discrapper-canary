@@ -35,7 +35,7 @@ function f(e) {
             (0, r.jsx)(
                 l.tG,
                 {
-                    text: o ? c.NW.string(c.t['I6JG4+']) : e,
+                    text: o ? c.intl.string(c.t['I6JG4+']) : e,
                     className: u.customButton,
                     fullWidth: !0,
                     onClick: (e) => {

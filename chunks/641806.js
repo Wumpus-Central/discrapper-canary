@@ -1,7 +1,7 @@
-n.d(t, { $: () => s });
+n.d(t, { $: () => l });
 var r = n(970648),
     i = n(981631);
-async function s(e) {
+async function l(e) {
     let t = r.Z.generateNonce();
     try {
         let n = await r.Z.createHandoffToken(t);

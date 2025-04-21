@@ -1,61 +1,61 @@
-s.d(t, { default: () => d }), s(388685);
-var a = s(200651),
-    n = s(192379),
-    r = s(481060),
-    o = s(313201),
-    i = s(273504),
-    c = s(388032),
-    l = s(831242);
+n.d(t, { default: () => d }), n(388685);
+var s = n(200651),
+    a = n(192379),
+    i = n(481060),
+    r = n(313201),
+    o = n(273504),
+    l = n(388032),
+    c = n(831242);
 function d(e) {
-    let { initialCustomMessage: t, onSubmit: s, onClose: d, transitionState: h } = e,
-        x = (0, o.Dt)(),
-        [k, u] = n.useState(t);
-    return (0, a.jsxs)(r.Y0X, {
+    let { initialCustomMessage: t, onSubmit: n, onClose: d, transitionState: h } = e,
+        x = (0, r.Dt)(),
+        [k, u] = a.useState(t);
+    return (0, s.jsxs)(i.Y0X, {
         transitionState: h,
         'aria-labelledby': x,
-        size: r.CgR.SMALL,
+        size: i.CgR.SMALL,
         children: [
-            (0, a.jsxs)(r.hzk, {
-                className: l.actionContentContainer,
+            (0, s.jsxs)(i.hzk, {
+                className: c.actionContentContainer,
                 children: [
-                    (0, a.jsx)(r.X6q, {
+                    (0, s.jsx)(i.X6q, {
                         id: x,
                         color: 'header-primary',
                         variant: 'heading-md/semibold',
-                        className: l.header,
-                        children: c.NW.string(c.t.Df4aUF)
+                        className: c.header,
+                        children: l.intl.string(l.t.Df4aUF)
                     }),
-                    (0, a.jsx)(r.Text, {
+                    (0, s.jsx)(i.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: c.NW.string(c.t.eOWEmJ)
+                        children: l.intl.string(l.t.eOWEmJ)
                     }),
-                    (0, a.jsx)(r.Kx8, {
-                        className: l.customMessageTextArea,
-                        placeholder: c.NW.string(c.t.gDZw7O),
+                    (0, s.jsx)(i.Kx8, {
+                        className: c.customMessageTextArea,
+                        placeholder: l.intl.string(l.t.gDZw7O),
                         value: k,
                         onChange: u,
-                        maxLength: i._6
+                        maxLength: o._6
                     })
                 ]
             }),
-            (0, a.jsxs)(r.mzw, {
+            (0, s.jsxs)(i.mzw, {
                 children: [
-                    (0, a.jsx)(r.zxk, {
+                    (0, s.jsx)(i.zxk, {
                         onClick: () => {
-                            s(k);
+                            n(k);
                         },
-                        color: r.zxk.Colors.BRAND,
-                        size: r.zxk.Sizes.SMALL,
-                        children: c.NW.string(c.t.bt75u7)
+                        color: i.zxk.Colors.BRAND,
+                        size: i.zxk.Sizes.SMALL,
+                        children: l.intl.string(l.t.bt75u7)
                     }),
-                    (0, a.jsx)(r.zxk, {
+                    (0, s.jsx)(i.zxk, {
                         onClick: () => {
                             d();
                         },
-                        color: r.zxk.Colors.TRANSPARENT,
-                        look: r.zxk.Looks.LINK,
-                        children: c.NW.string(c.t['ETE/oK'])
+                        color: i.zxk.Colors.TRANSPARENT,
+                        look: i.zxk.Looks.LINK,
+                        children: l.intl.string(l.t['ETE/oK'])
                     })
                 ]
             })

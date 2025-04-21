@@ -15,7 +15,7 @@ let u = (e) => {
             u
                 ? (0, r.jsx)(a.kzN, {
                       className: c.errorBlock,
-                      children: l.NW.string(l.t['4vnhKS'])
+                      children: l.intl.string(l.t['4vnhKS'])
                   })
                 : null,
             (0, r.jsx)(o.Z, {

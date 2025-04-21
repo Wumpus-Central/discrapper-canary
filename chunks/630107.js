@@ -1,35 +1,35 @@
 a.r(t), a.d(t, { default: () => f }), a(388685), a(35282);
 var n = a(200651),
     s = a(192379),
-    c = a(873546),
-    l = a(442837),
-    i = a(481060),
+    l = a(873546),
+    i = a(442837),
+    c = a(481060),
     r = a(830064),
     d = a(388905),
     o = a(625128),
     g = a(362762),
     u = a(703656),
     _ = a(617136),
-    N = a(272008),
-    E = a(341907),
-    m = a(46140),
+    E = a(272008),
+    m = a(341907),
+    N = a(46140),
     p = a(981631),
     h = a(186901),
     x = a(388032),
     P = a(984214),
     k = a(74830),
     I = a(13299);
-l.ZP.initialize();
-let T = c.tq || c.Em;
+i.ZP.initialize();
+let T = l.tq || l.Em;
 function f(e) {
     let { match: t } = e,
-        a = (0, l.e7)([g.Z], () => g.Z.getState('quests')),
-        c = t.params.questId,
+        a = (0, i.e7)([g.Z], () => g.Z.getState('quests')),
+        l = t.params.questId,
         f = (function (e) {
             let [t, a] = s.useState(null);
             return (
                 s.useEffect(() => {
-                    (0, N.gU)(e)
+                    (0, E.gU)(e)
                         .then((e) =>
                             a({
                                 status: 'ok',
@@ -40,25 +40,25 @@ function f(e) {
                 }, [a, e]),
                 t
             );
-        })(c);
+        })(l);
     s.useEffect(() => {
         T ||
             (null == a
                 ? ((0, _.dA)({
-                      questId: c,
+                      questId: l,
                       event: p.rMx.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT
                   }),
                   o.Z.openNativeAppModal('quests', p.Etm.DEEP_LINK, {
                       type: h.jE.QUEST_HOME,
-                      params: { questId: c }
+                      params: { questId: l }
                   }))
                 : a === p.kEZ.OPEN_FAIL &&
                   (0, u.dL)({
                       pathname: p.Z5c.QUEST_HOME,
-                      hash: c
+                      hash: l
                   }));
-    }, [a, c]);
-    let A = s.useCallback(() => (0, E.openAppWithQuest)(c), [c]);
+    }, [a, l]);
+    let A = s.useCallback(() => (0, m.openAppWithQuest)(l), [l]);
     if (T)
         return (0, n.jsxs)('div', {
             className: P.page,
@@ -85,12 +85,12 @@ function f(e) {
                                         (0, n.jsx)('div', {
                                             className: P.gameTile,
                                             children: (0, n.jsx)('img', {
-                                                src: ''.concat(m.tD).concat(c, '/dark/').concat(f.value.assets.gameTile),
+                                                src: ''.concat(N.tD).concat(l, '/dark/').concat(f.value.assets.gameTile),
                                                 alt: '',
                                                 className: P.gameTileImg
                                             })
                                         }),
-                                        (0, n.jsx)(i.X6q, {
+                                        (0, n.jsx)(c.X6q, {
                                             variant: 'heading-lg/semibold',
                                             color: 'text-normal',
                                             className: P.headingText,
@@ -98,15 +98,15 @@ function f(e) {
                                         })
                                     ]
                                 }),
-                            (0, n.jsx)(i.Text, {
+                            (0, n.jsx)(c.Text, {
                                 variant: 'text-md/normal',
                                 className: P.bodyText,
-                                children: x.NW.string(x.t.NweJIy)
+                                children: x.intl.string(x.t.NweJIy)
                             }),
-                            (0, n.jsx)(i.zxk, {
+                            (0, n.jsx)(c.zxk, {
                                 fullWidth: !0,
                                 onClick: A,
-                                children: x.NW.string(x.t.UQvCf3)
+                                children: x.intl.string(x.t.UQvCf3)
                             })
                         ]
                     })
@@ -124,15 +124,15 @@ function f(e) {
                 children: (0, n.jsx)(d.ZP, {
                     children: O
                         ? (0, n.jsxs)(n.Fragment, {
-                              children: [(0, n.jsx)(d.Dx, { children: x.NW.string(x.t['Z+hCVV']) }), (0, n.jsx)(d.Hh, {})]
+                              children: [(0, n.jsx)(d.Dx, { children: x.intl.string(x.t['Z+hCVV']) }), (0, n.jsx)(d.Hh, {})]
                           })
                         : (0, n.jsxs)(n.Fragment, {
                               children: [
                                   (0, n.jsx)(d.Dx, {
                                       className: P.appOpenedTitle,
-                                      children: x.NW.string(x.t.csrAMD)
+                                      children: x.intl.string(x.t.csrAMD)
                                   }),
-                                  (0, n.jsx)(d.DK, { children: x.NW.string(x.t.ghBJz8) })
+                                  (0, n.jsx)(d.DK, { children: x.intl.string(x.t.ghBJz8) })
                               ]
                           })
                 })

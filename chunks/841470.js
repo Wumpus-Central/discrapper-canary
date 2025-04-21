@@ -2,22 +2,22 @@ n.d(t, { Z: () => c });
 var r = n(200651);
 n(192379);
 var i = n(692547),
-    s = n(481060),
-    l = n(355011),
+    l = n(481060),
+    s = n(355011),
     a = n(388032),
     o = n(193);
 let c = (e) => {
-    let { title: t, subtext: n = a.NW.string(a.t.jHpxws), localizedNumber: c, isTrendingUp: d, isTrendingDown: u, tooltipText: m } = e,
+    let { title: t, subtext: n = a.intl.string(a.t.jHpxws), localizedNumber: c, isTrendingUp: d, isTrendingDown: u, tooltipText: m } = e,
         g =
             null != m
-                ? (0, r.jsx)(s.ua7, {
+                ? (0, r.jsx)(l.ua7, {
                       text: m,
                       position: 'top',
                       'aria-label': 'string' == typeof m ? m : t,
                       children: (e) => {
                           var t, n;
                           return (0, r.jsx)(
-                              s.d3s,
+                              l.d3s,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -70,40 +70,40 @@ let c = (e) => {
     return (0, r.jsxs)('div', {
         className: o.analyticsCard,
         children: [
-            (0, r.jsxs)(s.vwX, {
+            (0, r.jsxs)(l.vwX, {
                 className: o.analyticsCardTitle,
                 children: [t, g]
             }),
             (0, r.jsx)('div', {
                 className: o.analyticsCardContent,
-                children: (0, r.jsx)(s.X6q, {
+                children: (0, r.jsx)(l.X6q, {
                     className: null != c ? o.analyticsCardNumber : o.analyticsCardNumberNotAvailable,
                     variant: 'heading-xl/semibold',
-                    children: null != c ? c : a.NW.string(a.t.jHpxws)
+                    children: null != c ? c : a.intl.string(a.t.jHpxws)
                 })
             }),
             (0, r.jsxs)('div', {
                 className: o.analyticsCardArrowSubText,
                 children: [
                     d
-                        ? (0, r.jsx)(l.Z, {
+                        ? (0, r.jsx)(s.Z, {
                               className: o.trendingArrow,
                               color: i.Z.unsafe_rawColors.GREEN_360.css,
-                              'aria-label': a.NW.string(a.t['8mcccX']),
+                              'aria-label': a.intl.string(a.t['8mcccX']),
                               width: 14,
                               height: 12
                           })
                         : null,
                     u
-                        ? (0, r.jsx)(l.Z, {
+                        ? (0, r.jsx)(s.Z, {
                               className: o.trendingArrowIconDown,
                               color: i.Z.unsafe_rawColors.RED_400.css,
-                              'aria-label': a.NW.string(a.t.NLl6Q0),
+                              'aria-label': a.intl.string(a.t.NLl6Q0),
                               width: 14,
                               height: 12
                           })
                         : null,
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: 'text-xs/normal',
                         children: n
                     })

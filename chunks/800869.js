@@ -1,7 +1,7 @@
 t.d(n, { Z: () => u });
 var r = t(200651),
-    o = t(793030),
-    i = t(481060),
+    i = t(793030),
+    o = t(481060),
     s = t(921944),
     a = t(680278),
     l = t(388032),
@@ -17,17 +17,17 @@ function u(e) {
                 className: c.image,
                 src: d
             }),
-            (0, r.jsx)(o.xv, {
+            (0, r.jsx)(i.xv, {
                 color: 'always-white',
                 variant: 'text-md/semibold',
-                children: l.NW.string(a.Z.diMhWV)
+                children: l.intl.string(a.default.diMhWV)
             }),
-            (0, r.jsx)(o.xv, {
+            (0, r.jsx)(i.xv, {
                 color: 'always-white',
                 variant: 'text-sm/medium',
-                children: l.NW.string(a.Z.pycxTk)
+                children: l.intl.string(a.default.pycxTk)
             }),
-            (0, r.jsx)(i.olH, {
+            (0, r.jsx)(o.olH, {
                 className: c.close,
                 innerClassName: c.innerClose,
                 onClick: () => {

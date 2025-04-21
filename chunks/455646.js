@@ -47,29 +47,29 @@ function O(e) {
 }
 function E(e) {
     let { user: t, channel: n, onHide: E } = e,
-        N = (0, m.ZP)(t.id),
-        I = (0, s.ZP)(),
-        P = (0, o.e7)([d.Z], () => d.Z.isBlocked(t.id)),
-        { analyticsLocations: S } = (0, u.ZP)(P ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
-        Z = (0, h.ZB)({
+        I = (0, m.ZP)(t.id),
+        P = (0, s.ZP)(),
+        S = (0, o.e7)([d.Z], () => d.Z.isBlocked(t.id)),
+        { analyticsLocations: Z } = (0, u.ZP)(S ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
+        N = (0, h.ZB)({
             layout: 'SIDEBAR',
             userId: t.id,
             channelId: n.id
         }),
         T = i.useRef(null);
     return (0, r.jsx)(u.Gt, {
-        value: S,
+        value: Z,
         children: (0, r.jsx)(h.Mt, {
-            value: Z,
-            fetchStartedAt: null == N ? void 0 : N.fetchStartedAt,
-            fetchEndedAt: null == N ? void 0 : N.fetchEndedAt,
-            isLoaded: null == N ? void 0 : N.isLoaded,
+            value: N,
+            fetchStartedAt: null == I ? void 0 : I.fetchStartedAt,
+            fetchEndedAt: null == I ? void 0 : I.fetchEndedAt,
+            isLoaded: null == I ? void 0 : I.isLoaded,
             children: (0, r.jsx)(b.Z, {
                 ref: T,
                 user: t,
-                displayProfile: N,
+                displayProfile: I,
                 profileType: C.y0.PANEL,
-                themeOverride: I,
+                themeOverride: P,
                 children: (0, r.jsx)(l.u2, {
                     children: (0, r.jsxs)('div', {
                         className: v.container,
@@ -89,11 +89,11 @@ function E(e) {
                                             (0, r.jsx)(g.Z, { user: t }),
                                             (0, r.jsx)(a.X6q, {
                                                 variant: 'heading-lg/bold',
-                                                children: x.NW.string(x.t.b33pLC)
+                                                children: x.intl.string(x.t.b33pLC)
                                             }),
                                             (0, r.jsx)(a.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: x.NW.format(P ? x.t['8F+WNz'] : x.t['/cZp5u'], { username: p.ZP.getName(n.guild_id, n.id, t) })
+                                                children: x.intl.format(S ? x.t['8F+WNz'] : x.t['/cZp5u'], { username: p.ZP.getName(n.guild_id, n.id, t) })
                                             })
                                         ]
                                     }),
@@ -101,16 +101,16 @@ function E(e) {
                                         align: 'center',
                                         children: [
                                             (0, r.jsx)(y.Z, {
-                                                isBlocked: P,
+                                                isBlocked: S,
                                                 onClick: () => {
                                                     E(),
                                                         (0, f.pQ)(
                                                             O(
                                                                 {
-                                                                    action: P ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
-                                                                    analyticsLocations: S
+                                                                    action: S ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
+                                                                    analyticsLocations: Z
                                                                 },
-                                                                Z
+                                                                N
                                                             )
                                                         );
                                                 }
@@ -123,9 +123,9 @@ function E(e) {
                                                             O(
                                                                 {
                                                                     action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
-                                                                    analyticsLocations: S
+                                                                    analyticsLocations: Z
                                                                 },
-                                                                Z
+                                                                N
                                                             )
                                                         );
                                                 }

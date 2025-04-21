@@ -27,7 +27,7 @@ function p() {
         (0, r.jsx)(s.Kqy, {
             id: 'guild-list-unread-dms',
             role: 'group',
-            'aria-label': h.NW.string(h.t.YUU0RE),
+            'aria-label': h.intl.string(h.t.YUU0RE),
             gap: 'xs',
             hidden: f.length < 1,
             children: (0, r.jsx)(o.W, {

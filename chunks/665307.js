@@ -17,12 +17,12 @@ var r,
     _ = n(167533),
     E = n(925329),
     O = n(707409),
-    N = n(490983),
-    y = n(799777),
-    I = n(626135),
-    v = n(780570),
-    C = n(624138),
-    S = n(645818),
+    y = n(490983),
+    I = n(799777),
+    v = n(626135),
+    C = n(780570),
+    S = n(624138),
+    N = n(645818),
     T = n(981631),
     P = n(388032),
     j = n(833972);
@@ -73,8 +73,8 @@ function x(e, t) {
         e
     );
 }
-let L = (0, C.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
-    w = (0, C.Mg)(d.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let L = (0, S.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
+    w = (0, S.Mg)(d.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
     R = Object.freeze({
         [T.iEv.PLATFORM]: 'Platform',
         [T.iEv.LAST_PLAYED]: 'Last Played',
@@ -91,7 +91,7 @@ let L = (0, C.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
     k = [
         {
             key: T.iEv.NAME,
-            renderHeader: () => P.NW.string(P.t.dBfWfX),
+            renderHeader: () => P.intl.string(P.t.dBfWfX),
             sort: !0,
             cellClassName: j.nameCell,
             bodyCellClassName: j.nameBodyCell,
@@ -113,7 +113,7 @@ let L = (0, C.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                 }),
                                 e.libraryApplication.hasFlag(T.eHb.PREMIUM)
                                     ? (0, i.jsx)(p.ua7, {
-                                          text: P.NW.string(P.t.tG2SzM),
+                                          text: P.intl.string(P.t.tG2SzM),
                                           children: (e) =>
                                               (0, i.jsx)(
                                                   p.SrA,
@@ -135,7 +135,7 @@ let L = (0, C.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
         },
         {
             key: T.iEv.PLATFORM,
-            renderHeader: () => P.NW.string(P.t.YR4cHB),
+            renderHeader: () => P.intl.string(P.t.YR4cHB),
             sort: !0,
             cellClassName: j.platformCell,
             bodyCellClassName: j.textCell,
@@ -143,13 +143,13 @@ let L = (0, C.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 let t = e.libraryApplication.getDistributor();
                 return (0, i.jsx)(b.Z, {
                     align: b.Z.Align.CENTER,
-                    children: null != t ? T.EOG[t] : P.NW.string(P.t['F+l3Ji'])
+                    children: null != t ? T.EOG[t] : P.intl.string(P.t['F+l3Ji'])
                 });
             }
         },
         {
             key: T.iEv.LAST_PLAYED,
-            renderHeader: () => P.NW.string(P.t.FDDyjY),
+            renderHeader: () => P.intl.string(P.t.FDDyjY),
             sort: !0,
             cellClassName: j.lastPlayedCell,
             bodyCellClassName: j.textCell,
@@ -157,15 +157,15 @@ let L = (0, C.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 let t;
                 return (
                     (t = e.isRunning
-                        ? P.NW.string(P.t.Md326u)
+                        ? P.intl.string(P.t.Md326u)
                         : e.isNew
-                          ? P.NW.string(P.t['+F0Tho'])
+                          ? P.intl.string(P.t['+F0Tho'])
                           : 0 !== e.lastPlayed
                             ? (0, i.jsx)(O.ZP, {
                                   end: e.lastPlayed,
                                   location: O.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
                               })
-                            : P.NW.string(P.t.EoWLrq)),
+                            : P.intl.string(P.t.EoWLrq)),
                     (0, i.jsx)(b.Z, {
                         align: b.Z.Align.CENTER,
                         className: o()({ [j.lastPlayedCellNew]: e.isNew }),
@@ -191,21 +191,21 @@ let L = (0, C.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                     flag: T.eHb.PRIVATE,
                                     item: e,
                                     icon: p.kZF,
-                                    tooltip: P.NW.string(P.t.NozAoq)
+                                    tooltip: P.intl.string(P.t.NozAoq)
                                 }),
                                 (0, i.jsx)(D, {
                                     flag: T.eHb.OVERLAY_DISABLED,
                                     item: e,
                                     icon: p.o8v,
-                                    tooltip: P.NW.string(P.t.Az9eqq)
+                                    tooltip: P.intl.string(P.t.Az9eqq)
                                 }),
-                                (0, i.jsx)(S.Z, {
+                                (0, i.jsx)(N.Z, {
                                     className: o()(j.settingIcon, { [j.hidden]: !e.supportsCloudSync }),
                                     libraryApplication: e.libraryApplication
                                 })
                             ]
                         }),
-                        (0, v.Je)(e.libraryApplication)
+                        (0, C.Je)(e.libraryApplication)
                             ? (0, i.jsx)(m.Z, {
                                   analyticsListSort: ((r = t.sortKey), (a = t.sortDirection), ''.concat(R[r], ' ').concat(a === T.sHY.ASCENDING ? 'ASC' : 'DESC')),
                                   analyticsListIndex: n,
@@ -329,7 +329,7 @@ class U extends (r = l.PureComponent) {
             }
             e.num_applications_total++;
         }
-        I.default.track(T.rMx.LIBRARY_VIEWED, x(Z({}, e), { load_id: t.loadId }));
+        v.default.track(T.rMx.LIBRARY_VIEWED, x(Z({}, e), { load_id: t.loadId }));
     }
     handleSort(e, t) {
         g.fS(e, t);
@@ -340,7 +340,7 @@ class U extends (r = l.PureComponent) {
             r = t.length > 0;
         return r
             ? null
-            : ((e = '' !== n ? P.NW.format(P.t['4Q1TAg'], { query: n }) : P.NW.string(P.t['0Y+0PT'])),
+            : ((e = '' !== n ? P.intl.format(P.t['4Q1TAg'], { query: n }) : P.intl.string(P.t['0Y+0PT'])),
               (0, i.jsxs)('div', {
                   className: r ? j.emptyStateSmall : j.emptyStateLarge,
                   children: [
@@ -354,7 +354,7 @@ class U extends (r = l.PureComponent) {
                               children: [
                                   (0, i.jsx)('div', {
                                       className: j.emptyStateHeader,
-                                      children: P.NW.string(P.t.Lw8X2t)
+                                      children: P.intl.string(P.t.Lw8X2t)
                                   }),
                                   (0, i.jsx)('div', {
                                       className: j.emptyStateDescription,
@@ -455,27 +455,27 @@ class U extends (r = l.PureComponent) {
     }
 }
 function G(e) {
-    let t = l.useContext(I.AnalyticsContext),
+    let t = l.useContext(v.AnalyticsContext),
         n = (0, s.TH)(),
         {
             applicationViewItems: r,
             filterQuery: a,
             fetched: o
-        } = (0, c.cj)([N.Z], () => ({
-            applicationViewItems: N.Z.sortedFilteredLibraryApplicationViewItems,
-            filterQuery: N.Z.applicationFilterQuery,
-            fetched: N.Z.hasFetchedApplications
+        } = (0, c.cj)([y.Z], () => ({
+            applicationViewItems: y.Z.sortedFilteredLibraryApplicationViewItems,
+            filterQuery: y.Z.applicationFilterQuery,
+            fetched: y.Z.hasFetchedApplications
         })),
         {
             sortKey: u,
             sortDirection: d,
             activeRowKey: p,
             isNavigatingByKeyboard: h
-        } = (0, c.cj)([y.Z], () => ({
-            sortKey: y.Z.sortKey,
-            sortDirection: y.Z.sortDirection,
-            activeRowKey: y.Z.activeRowKey,
-            isNavigatingByKeyboard: y.Z.isNavigatingByKeyboard
+        } = (0, c.cj)([I.Z], () => ({
+            sortKey: I.Z.sortKey,
+            sortDirection: I.Z.sortDirection,
+            activeRowKey: I.Z.activeRowKey,
+            isNavigatingByKeyboard: I.Z.isNavigatingByKeyboard
         }));
     return (0, i.jsx)(
         U,

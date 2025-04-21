@@ -60,16 +60,16 @@ let _ = function (e) {
                     variant: 'text-sm/normal',
                     children:
                         0 === _.length
-                            ? g.NW.string(g.t.zSqdra)
+                            ? g.intl.string(g.t.zSqdra)
                             : 1 === _.length
-                              ? g.NW.formatToPlainString(g.t.BUyJIC, { a: (0, p.Z)(n, _[0]) })
+                              ? g.intl.formatToPlainString(g.t.BUyJIC, { a: (0, p.Z)(n, _[0]) })
                               : 2 === _.length
-                                ? g.NW.formatToPlainString(g.t.dcyZf3, {
+                                ? g.intl.formatToPlainString(g.t.dcyZf3, {
                                       a: (0, p.Z)(n, _[0]),
                                       b: (0, p.Z)(n, _[1])
                                   })
                                 : _.length > 2
-                                  ? g.NW.formatToPlainString(g.t['44/Obm'], {
+                                  ? g.intl.formatToPlainString(g.t['44/Obm'], {
                                         a: (0, p.Z)(n, _[0]),
                                         b: (0, p.Z)(n, _[1]),
                                         n: _.length - 2
@@ -83,7 +83,7 @@ let _ = function (e) {
                 color: l ? (x ? a.zxk.Colors.WHITE : a.zxk.Colors.GREEN) : a.zxk.Colors.PRIMARY,
                 onClick: C,
                 size: a.zxk.Sizes.MEDIUM,
-                children: l ? g.NW.string(g.t['96ANUF']) : g.NW.string(g.t.TVBCKS)
+                children: l ? g.intl.string(g.t['96ANUF']) : g.intl.string(g.t.TVBCKS)
             })
         ]
     });

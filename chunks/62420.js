@@ -25,7 +25,7 @@ function s(e) {
         ? null
         : (0, r.jsxs)(i.sNh, {
               id: 'move-to-category',
-              label: c.NW.string(c.t.FAplmp),
+              label: c.intl.string(c.t.FAplmp),
               children: [
                   null != d &&
                       (0, r.jsx)(i.kSQ, {

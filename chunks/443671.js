@@ -25,7 +25,7 @@ function h(e) {
     return 0 === n.length
         ? (0, r.jsx)(o.Z, {
               channel: t,
-              header: d.NW.string(d.t.HgTQ8v),
+              header: d.intl.string(d.t.HgTQ8v),
               startThread: l
           })
         : (0, r.jsx)(i.aVo, {

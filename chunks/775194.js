@@ -3,8 +3,8 @@ var n = r(200651);
 r(192379);
 var a = r(392711),
     i = r.n(a),
-    s = r(481060),
-    l = r(481250),
+    l = r(481060),
+    s = r(481250),
     o = r(513547),
     c = r(388032),
     d = r(442122),
@@ -23,7 +23,7 @@ let m = {
 };
 function p(e) {
     let { clips: t } = e;
-    if (null == t) return (0, n.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE });
+    if (null == t) return (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE });
     let r = i().map(t, (e, t) => {
         if (void 0 !== e && 'buffers' !== t)
             return (0, n.jsx)(
@@ -46,11 +46,11 @@ function p(e) {
                 'framerate'
             )
         ),
-        (0, n.jsxs)(s.hjN, {
-            tag: s.RB0.H2,
-            title: c.NW.string(c.t.MKrFKC),
+        (0, n.jsxs)(l.hjN, {
+            tag: l.RB0.H2,
+            title: c.intl.string(c.t.MKrFKC),
             children: [
-                (0, l.a)(r),
+                (0, s.a)(r),
                 (function (e) {
                     if (null != e.buffers)
                         return e.buffers.map((e) => {
@@ -75,12 +75,12 @@ function p(e) {
                                     );
                             }
                             return (0, n.jsx)(
-                                s.hjN,
+                                l.hjN,
                                 {
                                     className: u.marginBottom40,
                                     title: 'Buffer: '.concat(e.key),
                                     titleClassName: d.title,
-                                    children: (0, l.a)(t)
+                                    children: (0, s.a)(t)
                                 },
                                 'Buffer: '.concat(e.key)
                             );

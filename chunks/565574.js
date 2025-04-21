@@ -1,18 +1,18 @@
 n.d(t, { Z: () => o });
 var r = n(200651);
 n(192379);
-var i = n(481060),
-    l = n(812652),
+var l = n(481060),
+    i = n(812652),
     s = n(388032),
     a = n(79309);
 function o(e) {
     let { align: t = 'left' } = e;
-    return (0, r.jsx)(i.yRy, {
+    return (0, r.jsx)(l.yRy, {
         position: 'top',
         align: t,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(l.Z, {
+            return (0, r.jsx)(i.Z, {
                 onClose: t,
                 onSelect: t
             });
@@ -20,7 +20,7 @@ function o(e) {
         children: (e) => {
             var t, n;
             return (0, r.jsx)(
-                i.zxk,
+                l.zxk,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,16 +47,16 @@ function o(e) {
                     return e;
                 })(
                     {
-                        size: i.zxk.Sizes.ICON,
-                        'aria-label': s.NW.string(s.t['+1H47u']),
-                        color: i.zxk.Colors.PRIMARY,
+                        size: l.zxk.Sizes.ICON,
+                        'aria-label': s.intl.string(s.t['+1H47u']),
+                        color: l.zxk.Colors.PRIMARY,
                         className: a.streamOptionsButton
                     },
                     e
                 )),
                 (n = n =
                     {
-                        children: (0, r.jsx)(i.ewm, {
+                        children: (0, r.jsx)(l.ewm, {
                             className: a.settingsIcon,
                             size: 'refresh_sm',
                             color: 'currentColor'

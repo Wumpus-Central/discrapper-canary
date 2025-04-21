@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h }), n(388685), n(953529), n(539854);
 var r = n(200651),
     i = n(192379),
-    s = n(481060);
+    l = n(481060);
 n(674180);
-var l = n(723047),
+var s = n(723047),
     a = n(727843),
     o = n(290348),
     c = n(764163),
@@ -58,25 +58,25 @@ function h() {
         [n, h] = o.UE(e),
         f = i.useMemo(() => new Set(n.map((e) => e.ref_id)), [n]);
     function x(e, t) {
-        let { channelId: r, description: i, emojiId: s, emojiName: l } = e,
+        let { channelId: r, description: i, emojiId: l, emojiName: s } = e,
             a = [...n],
             o = {
                 name: '',
                 description: i,
-                emoji_id: s,
-                emoji_name: l,
+                emoji_id: l,
+                emoji_name: s,
                 ref_type: u.Qs.CHANNEL,
                 ref_id: r
             };
         null != t ? (a[t] = o) : a.push(o), h(a);
     }
-    let b = (0, l.mY)();
+    let b = (0, s.mY)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d.p, {
                 benefits: n,
                 onEdit: function (e) {
-                    (0, s.h7j)((i) =>
+                    (0, l.h7j)((i) =>
                         (0, r.jsx)(
                             c.x3,
                             p(g({}, i), {
@@ -100,10 +100,10 @@ function h() {
                 },
                 guildId: t
             }),
-            n.length > 0 && (0, r.jsx)(s.LZC, { size: 8 }),
+            n.length > 0 && (0, r.jsx)(l.LZC, { size: 8 }),
             (0, r.jsx)(d.s, {
                 onClick: function () {
-                    (0, s.h7j)((e) =>
+                    (0, l.h7j)((e) =>
                         (0, r.jsx)(
                             c.x3,
                             p(g({}, e), {
@@ -115,7 +115,7 @@ function h() {
                     );
                 },
                 disabled: b,
-                children: m.NW.string(m.t.PLSCUl)
+                children: m.intl.string(m.t.PLSCUl)
             })
         ]
     });

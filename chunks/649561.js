@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     s = n(120356),
     o = n.n(s),
-    a = n(392711),
-    l = n.n(a),
+    l = n(392711),
+    a = n.n(l),
     c = n(818405),
     d = n(587158),
     u = n(286379),
@@ -22,9 +22,9 @@ var i = n(200651),
     E = n(518084),
     S = n(987650),
     C = n(981631),
-    N = n(388032),
-    Z = n(137180);
-function j(e, t, n) {
+    Z = n(388032),
+    j = n(137180);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,8 +37,8 @@ function j(e, t, n) {
         e
     );
 }
-let I = 10 * _.Z.Millis.SECOND;
-function P() {
+let P = 10 * _.Z.Millis.SECOND;
+function N() {
     let e = (0, b.getPID)(),
         t = (0, b.getRPCAuthToken)();
     (0, f.lW)({
@@ -56,7 +56,7 @@ function P() {
 }
 class w extends r.PureComponent {
     componentDidMount() {
-        (this.notificationTimer = setTimeout(this.hideNotification, I)), p.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: S.n0.OverlayCrashed });
+        (this.notificationTimer = setTimeout(this.hideNotification, P)), p.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: S.n0.OverlayCrashed });
     }
     componentWillUnmount() {
         let { notificationTimer: e } = this;
@@ -76,7 +76,7 @@ class w extends r.PureComponent {
                       children: (r) =>
                           (0, i.jsxs)(h.P3F, {
                               innerRef: this.contentDomRef,
-                              className: o()(r, Z.container),
+                              className: o()(r, j.container),
                               onClick: (e) => e.stopPropagation(),
                               children: [
                                   (0, i.jsx)(m.ZP, {
@@ -84,10 +84,10 @@ class w extends r.PureComponent {
                                       icon: (0, i.jsx)(v.Z, {
                                           width: 40,
                                           height: 40,
-                                          className: Z.notificationIcon
+                                          className: j.notificationIcon
                                       }),
-                                      title: N.NW.string(N.t.U38qZm),
-                                      confirmText: N.NW.string(N.t.TzAl1d),
+                                      title: Z.intl.string(Z.t.U38qZm),
+                                      confirmText: Z.intl.string(Z.t.TzAl1d),
                                       onNotificationClick: this.handleNotificationClick,
                                       onConfirmClick: this.handleReload,
                                       onDismissClick: this.hideNotification,
@@ -95,13 +95,13 @@ class w extends r.PureComponent {
                                   }),
                                   n && null != e
                                       ? (0, i.jsxs)(E.ZP, {
-                                            className: Z.stackTrace,
+                                            className: j.stackTrace,
                                             children: [
                                                 (0, i.jsx)(E.ZP.Bar, { children: 'Error Details' }),
                                                 (0, i.jsx)(E.ZP.Content, {
-                                                    className: Z.stackTraceCode,
+                                                    className: j.stackTraceCode,
                                                     children: (0, i.jsx)('code', {
-                                                        className: Z.code,
+                                                        className: j.code,
                                                         children: (0, i.jsx)('pre', { children: t.stack })
                                                     })
                                                 })
@@ -115,20 +115,20 @@ class w extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            j(this, 'state', {
+            I(this, 'state', {
                 showTrace: !1,
                 busy: !1
             }),
-            j(this, 'notificationTimer', void 0),
-            j(this, 'contentDomRef', r.createRef()),
-            j(this, 'hideNotification', () => {
-                P();
+            I(this, 'notificationTimer', void 0),
+            I(this, 'contentDomRef', r.createRef()),
+            I(this, 'hideNotification', () => {
+                N();
                 let { notificationTimer: e } = this;
                 null != e && clearTimeout(e), (this.notificationTimer = null);
             }),
-            j(this, 'handleReload', (e) => {
+            I(this, 'handleReload', (e) => {
                 this.setState({ busy: !0 }),
-                    P(),
+                    N(),
                     p.Z.track(
                         C.rMx.NOTIFICATION_CLICKED,
                         {
@@ -140,14 +140,14 @@ class w extends r.PureComponent {
                     e.stopPropagation(),
                     setTimeout(() => location.reload(!0), 200);
             }),
-            j(this, 'handleNotificationClick', (e) => {
+            I(this, 'handleNotificationClick', (e) => {
                 e.stopPropagation();
                 let { notificationTimer: t } = this;
                 null != t && clearTimeout(t), e.shiftKey && this.setState({ showTrace: !0 });
             });
     }
 }
-let T = l().throttle(
+let T = a().throttle(
     () => {
         g.Z.increment(
             {
@@ -186,7 +186,7 @@ class k extends r.PureComponent {
                 }
             ]
         }),
-            setImmediate(() => window.addEventListener('click', P));
+            setImmediate(() => window.addEventListener('click', N));
         let s = O.Z.captureCrash(e, { extra: t });
         p.Z.track(C.rMx.APP_CRASHED, {
             path: n.pathname,
@@ -213,7 +213,7 @@ class k extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            j(this, 'state', {
+            I(this, 'state', {
                 error: null,
                 info: null
             });

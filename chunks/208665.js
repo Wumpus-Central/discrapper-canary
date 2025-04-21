@@ -1,7 +1,7 @@
 n.d(t, { Z: () => T });
 var l,
-    r,
     i,
+    r,
     s = n(392711),
     a = n.n(s),
     o = n(442837),
@@ -9,47 +9,47 @@ var l,
     d = n(45966),
     u = n(999382),
     m = n(981631),
-    N = n(290511);
-let I = !1,
-    h = null,
-    g = [],
+    I = n(290511);
+let h = !1,
+    g = null,
+    N = [],
     f = !1,
     p = [];
 function E() {
-    (I = !1), (h = null), (p = []), (f = !1), null != (h = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && ((g = d.Z.getOnboardingPrompts(h)), (f = d.Z.isAdvancedMode(h)));
+    (h = !1), (g = null), (p = []), (f = !1), null != (g = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && ((N = d.Z.getOnboardingPrompts(g)), (f = d.Z.isAdvancedMode(g)));
 }
-class S extends (i = o.ZP.Store) {
+class S extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(u.Z, d.Z);
     }
     hasChanges() {
-        return null != h && !a().isEqual(d.Z.getOnboardingPrompts(h), g);
+        return null != g && !a().isEqual(d.Z.getOnboardingPrompts(g), N);
     }
     get guildId() {
-        return h;
+        return g;
     }
     get submitting() {
-        return I;
+        return h;
     }
     get errors() {
         return p;
     }
     get editedOnboardingPrompts() {
-        return g;
+        return N;
     }
     get advancedMode() {
         return f;
     }
 }
-(r = 'GuildSettingsOnboardingPromptsStore'),
+(i = 'GuildSettingsOnboardingPromptsStore'),
     (l = 'displayName') in S
         ? Object.defineProperty(S, l, {
-              value: r,
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (S[l] = r);
+        : (S[l] = i);
 let T = new S(c.Z, {
     GUILD_SETTINGS_INIT: E,
     GUILD_SETTINGS_SET_SECTION: E,
@@ -59,14 +59,14 @@ let T = new S(c.Z, {
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: E,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (e) {
         var t;
-        (p = null != (t = e.errors) ? t : []), (I = !1);
+        (p = null != (t = e.errors) ? t : []), (h = !1);
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (e) {
         let { prompts: t } = e;
-        g = t;
+        N = t;
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
-        (I = !0), (p = []);
+        (h = !0), (p = []);
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (e) {
         var t;
@@ -74,6 +74,6 @@ let T = new S(c.Z, {
     },
     GUILD_SETTINGS_ONBOARDING_SET_MODE: function (e) {
         let { mode: t } = e;
-        f = t === N.Un.ONBOARDING_ADVANCED;
+        f = t === I.Un.ONBOARDING_ADVANCED;
     }
 });

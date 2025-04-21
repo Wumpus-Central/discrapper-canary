@@ -83,7 +83,7 @@ function g(e) {
               text: m(n, c),
               position: 'top',
               tooltipClassName: a.tooltips,
-              'aria-label': u.NW.string(u.t.Ej3B3d),
+              'aria-label': u.intl.string(u.t.Ej3B3d),
               children: (e) =>
                   n && c
                       ? (0, r.jsxs)(
@@ -99,7 +99,7 @@ function g(e) {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    u.NW.string(u.t.RDE0SU)
+                                    u.intl.string(u.t.RDE0SU)
                                 ]
                             })
                         )
@@ -123,7 +123,7 @@ function g(e) {
                                               size: 'xs',
                                               color: 'currentColor'
                                           }),
-                                    g ? u.NW.string(u.t['t5VZ8/']) : u.NW.string(u.t.RDE0SU)
+                                    g ? u.intl.string(u.t['t5VZ8/']) : u.intl.string(u.t.RDE0SU)
                                 ]
                             })
                         )
@@ -171,33 +171,33 @@ function x(e) {
                           size: 'xs',
                           color: 'currentColor'
                       }),
-                u.NW.string(u.t.DlcqlZ)
+                u.intl.string(u.t.DlcqlZ)
             ]
         })
     );
 }
 function f(e) {
     return (0, r.jsx)(s.ua7, {
-        text: u.NW.string(u.t['26dTyc']),
+        text: u.intl.string(u.t['26dTyc']),
         position: 'top',
         tooltipClassName: a.tooltips,
-        'aria-label': u.NW.string(u.t.Ej3B3d),
+        'aria-label': u.intl.string(u.t.Ej3B3d),
         children: (t) => (0, r.jsx)(x, d({}, t, e))
     });
 }
 let j = (e) => null == e || e,
-    m = (e, t) => (j(e) ? u.NW.string(u.t.vk5Xw8) : j(t) ? u.NW.string(u.t.FFLWGR) : u.NW.string(u.t.k9KGYm));
+    m = (e, t) => (j(e) ? u.intl.string(u.t.vk5Xw8) : j(t) ? u.intl.string(u.t.FFLWGR) : u.intl.string(u.t.k9KGYm));
 function h(e) {
-    let { isActive: t, isUserLurking: n, rsvped: l, canInvite: i, isChannelPublic: o = !0, entityType: j, onContextMenu: m, onJoinClick: h, onRsvpClick: O, onStartClick: k, onInviteClick: v, onEndClick: N, isJoined: y = !1 } = e,
-        z = void 0 !== h;
+    let { isActive: t, isUserLurking: n, rsvped: l, canInvite: i, isChannelPublic: o = !0, entityType: j, onContextMenu: m, onJoinClick: h, onRsvpClick: O, onStartClick: k, onInviteClick: v, onEndClick: y, isJoined: z = !1 } = e,
+        C = void 0 !== h;
     return (0, r.jsxs)('div', {
         className: a.container,
         children: [
             null != m
                 ? (0, r.jsx)(s.ua7, {
-                      text: u.NW.string(u.t.UKOtz8),
+                      text: u.intl.string(u.t.UKOtz8),
                       position: 'top',
-                      'aria-label': u.NW.string(u.t.bt75u7),
+                      'aria-label': u.intl.string(u.t.bt75u7),
                       children: (e) =>
                           (0, r.jsx)(
                               s.P3F,
@@ -224,13 +224,13 @@ function h(e) {
                 ? (0, r.jsx)(b, {
                       text: (function (e) {
                           let { isJoined: t, canJoin: n, isVoiceChannel: r } = e;
-                          return n ? (t ? u.NW.string(u.t.aW2YlJ) : r ? u.NW.string(u.t.nxUtoa) : u.NW.string(u.t.ZYO5OD)) : u.NW.string(u.t.TVBCKS);
+                          return n ? (t ? u.intl.string(u.t.aW2YlJ) : r ? u.intl.string(u.t.nxUtoa) : u.intl.string(u.t.ZYO5OD)) : u.intl.string(u.t.TVBCKS);
                       })({
-                          isJoined: y,
-                          canJoin: z,
+                          isJoined: z,
+                          canJoin: C,
                           isVoiceChannel: j === c.WX.VOICE
                       }),
-                      disabled: !z,
+                      disabled: !C,
                       onJoinClick: h
                   })
                 : null,
@@ -256,16 +256,16 @@ function h(e) {
                       size: s.zxk.Sizes.SMALL,
                       onClick: k,
                       color: s.zxk.Colors.GREEN,
-                      children: u.NW.string(u.t.I0v0Qk)
+                      children: u.intl.string(u.t.I0v0Qk)
                   }),
-            t && null != N
+            t && null != y
                 ? (0, r.jsx)(s.zxk, {
                       className: a.__invalid_button,
                       innerClassName: a.innerButton,
                       size: s.zxk.Sizes.SMALL,
-                      onClick: N,
+                      onClick: y,
                       color: s.zxk.Colors.PRIMARY,
-                      children: u.NW.string(u.t.qaYzPD)
+                      children: u.intl.string(u.t.qaYzPD)
                   })
                 : null
         ]

@@ -12,7 +12,7 @@ function o(e) {
             (0, r.jsx)(l.X6q, {
                 className: a.header,
                 variant: 'text-sm/semibold',
-                children: null != n ? n : i.NW.string(i.t['k+QA9P'])
+                children: null != n ? n : i.intl.string(i.t['k+QA9P'])
             }),
             (0, r.jsx)('div', {
                 className: a.upsellsContainer,

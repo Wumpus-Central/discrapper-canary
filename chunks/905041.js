@@ -1,9 +1,9 @@
 n.d(t, { Z: () => p }), n(35282), n(539854), n(388685);
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
-    a = n(378409),
-    l = n(976853),
+var r = n(481060),
+    l = n(378409),
+    a = n(976853),
     o = n(902676),
     s = n(626135),
     c = n(49012),
@@ -15,37 +15,37 @@ var i = n(481060),
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
 }
 let h = /^(tel|sms|mailto):([^?;]+)/;
 function p(e, t, n, p) {
-    let O = (0, l.Z)(null == n ? void 0 : n.getChannelId());
-    if (!u.isPlatformEmbedded || null == e || '' === e || O || (null == p ? void 0 : p.shouldHideMediaOptions) === !0 || !(0, a.Jj)(e)) return null;
+    let O = (0, a.Z)(null == n ? void 0 : n.getChannelId());
+    if (!u.isPlatformEmbedded || null == e || '' === e || O || (null == p ? void 0 : p.shouldHideMediaOptions) === !0 || !(0, l.Jj)(e)) return null;
     let y = (0, o.F)(e),
         E = (e) => {
-            s.default.track(g.rMx.CONTEXT_MENU_LINK_COPIED, b({ hostname: y }, (0, f.v)())), d.ZP.copy(e), (0, i.showToast)((0, i.createToast)(m.NW.string(m.t['L/PwZW']), i.ToastType.SUCCESS));
+            s.default.track(g.rMx.CONTEXT_MENU_LINK_COPIED, b({ hostname: y }, (0, f.v)())), d.ZP.copy(e), (0, r.showToast)((0, r.createToast)(m.intl.string(m.t['L/PwZW']), r.ToastType.SUCCESS));
         },
-        N = (n) => {
+        v = (n) => {
             s.default.track(g.rMx.CONTEXT_MENU_LINK_OPENED, b({ hostname: y }, (0, f.v)())),
                 (0, c.q)(
                     {
@@ -56,18 +56,18 @@ function p(e, t, n, p) {
                     n
                 );
         },
-        v = [],
-        j = e.match(h);
-    if (null != j) {
-        let e = m.NW.string('mailto' === j[1] ? m.t.ZYLVKi : m.t['3zozoa']);
-        v.push(
-            (0, r.jsx)(
-                i.sNh,
+        j = [],
+        S = e.match(h);
+    if (null != S) {
+        let e = m.intl.string('mailto' === S[1] ? m.t.ZYLVKi : m.t['3zozoa']);
+        j.push(
+            (0, i.jsx)(
+                r.sNh,
                 {
                     id: 'copy-native-contact',
                     label: e,
                     action: () => {
-                        E(j[2]);
+                        E(S[2]);
                     }
                 },
                 'copy-native-contact'
@@ -75,24 +75,24 @@ function p(e, t, n, p) {
         );
     }
     return [
-        (0, r.jsx)(
-            i.sNh,
+        (0, i.jsx)(
+            r.sNh,
             {
                 id: 'copy-native-link',
-                label: m.NW.string(m.t.WqhZsr),
+                label: m.intl.string(m.t.WqhZsr),
                 action: () => {
                     E(e);
                 }
             },
             'copy-native-link'
         ),
-        ...v,
-        (0, r.jsx)(
-            i.sNh,
+        ...j,
+        (0, i.jsx)(
+            r.sNh,
             {
                 id: 'open-native-link',
-                label: m.NW.string(m.t.wuRE8P),
-                action: (e) => N(e)
+                label: m.intl.string(m.t.wuRE8P),
+                action: (e) => v(e)
             },
             'open-native-link'
         )

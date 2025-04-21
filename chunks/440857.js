@@ -2,8 +2,8 @@ n.d(t, { Z: () => O }), n(388685);
 var r = n(200651),
     l = n(192379),
     o = n(692547),
-    a = n(215569),
-    i = n(180035),
+    i = n(215569),
+    a = n(180035),
     s = n(481060),
     c = n(749210),
     u = n(852860),
@@ -62,12 +62,12 @@ function v(e, t) {
 function O(e) {
     let { guildId: t } = e,
         O = (0, p.xC)(t),
-        { selectedUserIds: y, clearSelection: N } = (0, f.Z)(t),
-        _ = y.size > 0,
-        H = async (e, t, n, r) => {
+        { selectedUserIds: y, clearSelection: _ } = (0, f.Z)(t),
+        H = y.size > 0,
+        w = async (e, t, n, r) => {
             try {
                 let l = await c.Z.banMultipleUsers(e, t, n, r);
-                (0, s.showToast)((0, s.createToast)(j.NW.string(j.t.AsCe5O), s.ToastType.SUCCESS)),
+                (0, s.showToast)((0, s.createToast)(j.intl.string(j.t.AsCe5O), s.ToastType.SUCCESS)),
                     m.default.track(
                         h.rMx.BULK_MODERATION_ACTION_COMPLETED,
                         v(x({}, (0, d.hH)(e)), {
@@ -79,13 +79,13 @@ function O(e) {
                         })
                     );
             } catch (e) {
-                (0, s.showToast)((0, s.createToast)(j.NW.string(j.t.mICAWV), s.ToastType.FAILURE));
+                (0, s.showToast)((0, s.createToast)(j.intl.string(j.t.mICAWV), s.ToastType.FAILURE));
             }
-            N();
+            _();
         },
-        w = l.useCallback(() => {
-            N();
-        }, [N]),
+        N = l.useCallback(() => {
+            _();
+        }, [_]),
         S = (0, r.jsxs)('span', {
             className: g.messageContainer,
             children: [
@@ -93,19 +93,19 @@ function O(e) {
                     size: 'custom',
                     width: 24,
                     height: 24,
-                    color: (0, i.d)(o.Z.unsafe_rawColors.PRIMARY_500).hex()
+                    color: (0, a.d)(o.Z.unsafe_rawColors.PRIMARY_500).hex()
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: 'heading-md/bold',
                     color: 'text-normal',
-                    children: j.NW.format(j.t.TstoSU, { count: y.size })
+                    children: j.intl.format(j.t.TstoSU, { count: y.size })
                 }),
                 (0, r.jsx)(s.zxk, {
                     color: s.zxk.Colors.LINK,
                     look: s.zxk.Looks.LINK,
-                    onClick: w,
+                    onClick: N,
                     className: g.clearButton,
-                    children: j.NW.string(j.t.yW6ZdH)
+                    children: j.intl.string(j.t.yW6ZdH)
                 })
             ]
         }),
@@ -120,16 +120,16 @@ function O(e) {
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: 'text-sm/semibold',
-                    children: j.NW.string(j.t['2a50fH'])
+                    children: j.intl.string(j.t['2a50fH'])
                 })
             ]
         });
     return O
-        ? (0, r.jsx)(a.W, {
+        ? (0, r.jsx)(i.W, {
               component: 'div',
               className: g.saveNoticeContainer,
               children:
-                  _ &&
+                  H &&
                   (0, r.jsx)(s.oXn, {
                       children: (0, r.jsx)(u.Z, {
                           onSave: () => {
@@ -151,7 +151,7 @@ function O(e) {
                                                   guildId: t,
                                                   canBulkBan: O,
                                                   userIds: y,
-                                                  onBanMultiple: H
+                                                  onBanMultiple: w
                                               })
                                           );
                                   });

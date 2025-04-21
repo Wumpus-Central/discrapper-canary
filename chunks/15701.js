@@ -1,6 +1,6 @@
 n.d(t, { G: () => l });
-var r = n(442837),
-    i = n(333984);
+var i = n(442837),
+    r = n(333984);
 function l(e) {
-    return (0, r.e7)([i.Z], () => i.Z.isSpam(e), [e]);
+    return (0, i.e7)([r.Z], () => r.Z.isSpam(e), [e]);
 }

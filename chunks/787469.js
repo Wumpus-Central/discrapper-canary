@@ -40,7 +40,7 @@ function _(e) {
     return null == n
         ? null
         : (0, r.jsx)(s.xJW, {
-              title: g.NW.string(g.t.LPJmLy),
+              title: g.intl.string(g.t.LPJmLy),
               titleClassName: b.infoTitle,
               children: (0, r.jsx)(f.WM, {
                   children: (0, r.jsx)(f._2, {
@@ -50,9 +50,9 @@ function _(e) {
                                     className: b.roleContainer,
                                     children: [
                                         (0, r.jsx)(s.ua7, {
-                                            'aria-label': g.NW.string(g.t['0g8Xd3']),
+                                            'aria-label': g.intl.string(g.t['0g8Xd3']),
                                             allowOverflow: !0,
-                                            text: g.NW.string(g.t['93S+lJ']),
+                                            text: g.intl.string(g.t['93S+lJ']),
                                             children: (e) => {
                                                 let { onMouseEnter: n, onMouseLeave: i } = e;
                                                 return (0, r.jsx)(s.P3F, {
@@ -79,9 +79,9 @@ function _(e) {
                                         ),
                                         v &&
                                             (0, r.jsx)(s.ua7, {
-                                                'aria-label': g.NW.string(g.t.ljnBlp),
+                                                'aria-label': g.intl.string(g.t.ljnBlp),
                                                 allowOverflow: !0,
-                                                text: g.NW.string(g.t.ljnBlp),
+                                                text: g.intl.string(g.t.ljnBlp),
                                                 children: (e) => {
                                                     let { onMouseEnter: t, onMouseLeave: n } = e;
                                                     return (0, r.jsx)(s.P3F, {
@@ -105,7 +105,7 @@ function _(e) {
                                     className: b.noRoles,
                                     children: (0, r.jsx)(s.Text, {
                                         variant: 'text-sm/normal',
-                                        children: g.NW.string(g.t.nZfHsb)
+                                        children: g.intl.string(g.t.nZfHsb)
                                     })
                                 })
                   })

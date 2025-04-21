@@ -49,7 +49,7 @@ function T(e) {
     }
     return e;
 }
-function N(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,12 +61,12 @@ function N(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -76,9 +76,9 @@ let C = 150;
 function R(e, t) {
     switch (e) {
         case y.fO.ACTIVITY:
-            return O.NW.formatToPlainString(O.t.TCM94e, { numUsers: t });
+            return O.intl.formatToPlainString(O.t.TCM94e, { numUsers: t });
         case y.fO.STREAM:
-            return O.NW.formatToPlainString(O.t.BR7Tnp, { numViewers: t });
+            return O.intl.formatToPlainString(O.t.BR7Tnp, { numViewers: t });
         default:
             throw Error('Unknown participant type.');
     }
@@ -157,7 +157,7 @@ function w(e) {
 let D = [];
 function L(e) {
     let { channelId: t, guildId: a, participant: s, className: h, compact: b = !1, disableInteraction: O = !1, maxVisibleUsers: S = 3 } = e,
-        N = i.useRef(null),
+        A = i.useRef(null),
         R = (0, p.Z)(),
         [L, x] = i.useState(!1),
         M = i.useRef(new u.sW(C, () => x(!1))),
@@ -192,7 +192,7 @@ function L(e) {
                         e,
                         async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('70686')]).then(n.bind(n, 881351));
-                            return (n) => (0, r.jsx)(e, A(T({}, n), { user: t }));
+                            return (n) => (0, r.jsx)(e, N(T({}, n), { user: t }));
                         },
                         { onClose: U }
                     );
@@ -240,7 +240,7 @@ function L(e) {
                 onMouseEnter: j,
                 onMouseLeave: U,
                 children: (0, r.jsx)(d.yRy, {
-                    targetElementRef: N,
+                    targetElementRef: A,
                     renderPopout: () =>
                         (0, r.jsx)(P, {
                             participantType: s.type,
@@ -254,7 +254,7 @@ function L(e) {
                     position: 'top',
                     children: () =>
                         (0, r.jsx)('div', {
-                            ref: N,
+                            ref: A,
                             className: o()(I.viewers, h),
                             children: B
                         })

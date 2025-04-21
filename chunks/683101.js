@@ -107,7 +107,7 @@ class b extends i.PureComponent {
                             children: (0, r.jsx)(s.P3F, {
                                 className: h.button,
                                 onClick: this.jumpTo,
-                                children: p.NW.string(p.t.k5WiPT)
+                                children: p.intl.string(p.t.k5WiPT)
                             })
                         })
                     ]

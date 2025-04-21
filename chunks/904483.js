@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
 var r = n(442837),
-    s = n(481060),
-    l = n(496675),
+    l = n(481060),
+    s = n(496675),
     o = n(981631),
     a = n(647086),
     c = n(388032);
@@ -51,15 +51,15 @@ function d(e, t) {
     );
 }
 function g(e) {
-    let t = (0, r.e7)([l.Z], () => l.Z.can(o.Plq.MANAGE_CHANNELS, e));
+    let t = (0, r.e7)([s.Z], () => s.Z.can(o.Plq.MANAGE_CHANNELS, e));
     return __OVERLAY__
         ? null
         : e.id === a._
-          ? (0, i.jsx)(s.sNh, {
+          ? (0, i.jsx)(l.sNh, {
                 id: 'create-category',
-                label: c.NW.string(c.t['ISN+ND']),
+                label: c.intl.string(c.t['ISN+ND']),
                 action: () =>
-                    (0, s.ZDy)(async () => {
+                    (0, l.ZDy)(async () => {
                         let { default: e } = await n.e('1812').then(n.bind(n, 477782));
                         return (t) => (0, i.jsx)(e, u({}, t));
                     })
@@ -67,12 +67,12 @@ function g(e) {
           : t
             ? [
                   (0, i.jsx)(
-                      s.sNh,
+                      l.sNh,
                       {
                           id: 'create-channel',
-                          label: c.NW.string(c.t['fUYU+v']),
+                          label: c.intl.string(c.t['fUYU+v']),
                           action: () =>
-                              (0, s.ZDy)(async () => {
+                              (0, l.ZDy)(async () => {
                                   let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('7911')]).then(n.bind(n, 218613));
                                   return (n) =>
                                       (0, i.jsx)(
@@ -87,12 +87,12 @@ function g(e) {
                       'create-channel'
                   ),
                   (0, i.jsx)(
-                      s.sNh,
+                      l.sNh,
                       {
                           id: 'create-category',
-                          label: c.NW.string(c.t['ISN+ND']),
+                          label: c.intl.string(c.t['ISN+ND']),
                           action: () =>
-                              (0, s.ZDy)(async () => {
+                              (0, l.ZDy)(async () => {
                                   let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('7911')]).then(n.bind(n, 218613));
                                   return (n) =>
                                       (0, i.jsx)(

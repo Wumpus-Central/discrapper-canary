@@ -1,8 +1,8 @@
 n.d(t, { i: () => u });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(359119),
+var l = n(481060),
+    r = n(359119),
     s = n(832239),
     a = n(237292),
     d = n(100932),
@@ -15,16 +15,16 @@ function u(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             !u &&
-                (0, i.jsx)(r.sNh, {
+                (0, i.jsx)(l.sNh, {
                     id: 'mark-as-tier-1-inappro',
-                    label: o.NW.string(o.t.EuzCER),
-                    action: () => (0, s.KK)(e.id, l.pj.INAPPROPRIATE_CONVERSATION_TIER_1)
+                    label: o.intl.string(o.t.EuzCER),
+                    action: () => (0, s.KK)(e.id, r.pj.INAPPROPRIATE_CONVERSATION_TIER_1)
                 }),
             !c &&
-                (0, i.jsx)(r.sNh, {
+                (0, i.jsx)(l.sNh, {
                     id: 'mark-as-tier-2-inappro',
-                    label: o.NW.string(o.t['tBw/1t']),
-                    action: () => (0, s.KK)(e.id, l.pj.INAPPROPRIATE_CONVERSATION_TIER_2)
+                    label: o.intl.string(o.t['tBw/1t']),
+                    action: () => (0, s.KK)(e.id, r.pj.INAPPROPRIATE_CONVERSATION_TIER_2)
                 })
         ]
     });

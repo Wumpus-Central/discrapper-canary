@@ -1,9 +1,9 @@
 n.d(t, { Z: () => m });
-var r,
-    i = n(200651),
+var i,
+    r = n(200651),
     s = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(600164),
     c = n(559595);
 function d(e, t, n) {
@@ -19,26 +19,26 @@ function d(e, t, n) {
         e
     );
 }
-class u extends (r = s.PureComponent) {
+class u extends (i = s.PureComponent) {
     render() {
-        let { children: e, className: t, onMouseEnter: n, onMouseLeave: r } = this.props;
-        return (0, i.jsx)('div', {
-            className: l()(c.card, t),
+        let { children: e, className: t, onMouseEnter: n, onMouseLeave: i } = this.props;
+        return (0, r.jsx)('div', {
+            className: a()(c.card, t),
             onMouseEnter: n,
-            onMouseLeave: r,
+            onMouseLeave: i,
             children: e
         });
     }
 }
 d(u, 'Header', (e) => {
-    let { children: t, className: n, splashArtURL: r } = e;
-    return (0, i.jsxs)(o.Z, {
-        className: l()(c.header, n),
+    let { children: t, className: n, splashArtURL: i } = e;
+    return (0, r.jsxs)(o.Z, {
+        className: a()(c.header, n),
         align: o.Z.Align.CENTER,
         children: [
-            (0, i.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: c.splashArt,
-                style: null != r ? { backgroundImage: 'url('.concat(r, ')') } : void 0
+                style: null != i ? { backgroundImage: 'url('.concat(i, ')') } : void 0
             }),
             t
         ]
@@ -46,8 +46,8 @@ d(u, 'Header', (e) => {
 }),
     d(u, 'Body', (e) => {
         let { children: t, className: n } = e;
-        return (0, i.jsx)('div', {
-            className: l()(c.body, n),
+        return (0, r.jsx)('div', {
+            className: a()(c.body, n),
             children: t
         });
     });

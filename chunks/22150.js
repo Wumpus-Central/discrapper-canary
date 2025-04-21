@@ -1,71 +1,71 @@
-t.d(s, { Z: () => N }), t(388685), t(953529);
-var n = t(200651),
-    r = t(192379),
-    a = t(442837),
-    l = t(481060),
-    o = t(479531),
-    i = t(393869),
-    c = t(594174),
-    x = t(388032),
-    d = t(652297);
-function N(e) {
-    let { onNext: s, onClose: t } = e,
-        [N, m] = r.useState(!1),
-        u = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
-        _ = async (e) => {
-            e.preventDefault(), m(!0);
+s.d(t, { Z: () => m }), s(388685), s(953529);
+var n = s(200651),
+    r = s(192379),
+    l = s(442837),
+    i = s(481060),
+    a = s(479531),
+    o = s(393869),
+    c = s(594174),
+    x = s(388032),
+    d = s(652297);
+function m(e) {
+    let { onNext: t, onClose: s } = e,
+        [m, u] = r.useState(!1),
+        _ = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
+        E = async (e) => {
+            e.preventDefault(), u(!0);
             try {
-                await (0, i.i)(), s();
-            } catch (s) {
-                let e = new o.Z(s).getAnyErrorMessage();
-                null != e && (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
+                await (0, o.i)(), t();
+            } catch (t) {
+                let e = new a.Z(t).getAnyErrorMessage();
+                null != e && (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE));
             } finally {
-                m(!1);
+                u(!1);
             }
         };
     return (0, n.jsxs)('form', {
-        onSubmit: _,
+        onSubmit: E,
         children: [
-            (0, n.jsxs)(l.xBx, {
+            (0, n.jsxs)(i.xBx, {
                 separator: !1,
                 className: d.header,
                 children: [
-                    (0, n.jsx)(l.X6q, {
+                    (0, n.jsx)(i.X6q, {
                         className: d.title,
                         variant: 'heading-xl/extrabold',
-                        children: x.NW.string(x.t.uFxYq6)
+                        children: x.intl.string(x.t.uFxYq6)
                     }),
-                    (0, n.jsx)(l.olH, {
-                        onClick: t,
+                    (0, n.jsx)(i.olH, {
+                        onClick: s,
                         className: d.modalCloseButton
                     })
                 ]
             }),
-            (0, n.jsx)(l.hzk, {
+            (0, n.jsx)(i.hzk, {
                 className: d.content,
-                children: (0, n.jsx)(l.Text, {
+                children: (0, n.jsx)(i.Text, {
                     className: d.description,
                     variant: 'text-md/normal',
-                    children: x.NW.format(x.t.oMFSgo, { oldEmail: null == u ? void 0 : u.email })
+                    children: x.intl.format(x.t.oMFSgo, { oldEmail: null == _ ? void 0 : _.email })
                 })
             }),
-            (0, n.jsxs)(l.mzw, {
+            (0, n.jsxs)(i.mzw, {
                 className: d.modalFooter,
                 children: [
-                    (0, n.jsx)(l.zxk, {
+                    (0, n.jsx)(i.zxk, {
                         type: 'submit',
-                        color: l.zxk.Colors.BRAND,
-                        size: l.zxk.Sizes.MEDIUM,
-                        submitting: N,
+                        color: i.zxk.Colors.BRAND,
+                        size: i.zxk.Sizes.MEDIUM,
+                        submitting: m,
                         className: d.__invalid_submit,
-                        children: x.NW.string(x.t.rXV81N)
+                        children: x.intl.string(x.t.rXV81N)
                     }),
-                    (0, n.jsx)(l.zxk, {
+                    (0, n.jsx)(i.zxk, {
                         className: d.__invalid_cancel,
-                        look: l.zxk.Looks.LINK,
-                        color: l.zxk.Colors.PRIMARY,
-                        onClick: t,
-                        children: x.NW.string(x.t['ETE/oK'])
+                        look: i.zxk.Looks.LINK,
+                        color: i.zxk.Colors.PRIMARY,
+                        onClick: s,
+                        children: x.intl.string(x.t['ETE/oK'])
                     })
                 ]
             })

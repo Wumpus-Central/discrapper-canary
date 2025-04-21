@@ -65,78 +65,78 @@ let j = {
 function x() {
     return [
         {
-            description: v.NW.string(v.t.bx4Uy8),
+            description: v.intl.string(v.t.bx4Uy8),
             binds: C(O.EkH.SERVER_PREV, O.EkH.SERVER_NEXT)
         },
         {
-            description: v.NW.string(v.t['+Wem6u']),
+            description: v.intl.string(v.t['+Wem6u']),
             binds: C(O.EkH.CHANNEL_PREV, O.EkH.CHANNEL_NEXT)
         },
         {
-            description: v.NW.string(v.t['+2fcd3']),
+            description: v.intl.string(v.t['+2fcd3']),
             binds: C(O.EkH.NAVIGATE_BACK, O.EkH.NAVIGATE_FORWARD)
         },
         {
-            description: v.NW.string(v.t.eVmj1N),
+            description: v.intl.string(v.t.eVmj1N),
             binds: C(O.EkH.UNREAD_PREV, O.EkH.UNREAD_NEXT)
         },
         {
-            description: v.NW.string(v.t.EcqS7e),
+            description: v.intl.string(v.t.EcqS7e),
             binds: C(O.EkH.MENTION_CHANNEL_PREV, O.EkH.MENTION_CHANNEL_NEXT),
             groupEnd: !0
         },
         {
-            description: v.NW.string(v.t['Bqss7+']),
+            description: v.intl.string(v.t['Bqss7+']),
             binds: C(O.EkH.TOGGLE_PREVIOUS_GUILD)
         },
         {
-            description: v.NW.string(v.t.UaXAPz),
+            description: v.intl.string(v.t.UaXAPz),
             binds: C(O.EkH.MARK_SERVER_READ)
         },
         {
-            description: v.NW.string(v.t['5X9vFh']),
+            description: v.intl.string(v.t['5X9vFh']),
             binds: C(O.EkH.MARK_CHANNEL_READ)
         },
         {
-            description: v.NW.string(v.t.JoxNnp),
+            description: v.intl.string(v.t.JoxNnp),
             binds: C(O.EkH.SEARCH_EMOJIS),
             groupEnd: !0
         },
         {
-            description: v.NW.string(v.t.tL6eVV),
+            description: v.intl.string(v.t.tL6eVV),
             binds: C(O.EkH.TOGGLE_MUTE)
         },
         {
-            description: v.NW.string(v.t['QXe/7e']),
+            description: v.intl.string(v.t['QXe/7e']),
             binds: C(O.EkH.TOGGLE_DEAFEN)
         },
         {
-            description: v.NW.string(v.t.d6UIio),
+            description: v.intl.string(v.t.d6UIio),
             binds: C(O.EkH.CALL_ACCEPT)
         },
         {
-            description: v.NW.string(v.t.IcEW09),
+            description: v.intl.string(v.t.IcEW09),
             binds: C(O.EkH.MARK_CHANNEL_READ)
         },
         {
-            description: v.NW.string(v.t.WN2dsb),
+            description: v.intl.string(v.t.WN2dsb),
             binds: C(O.EkH.CALL_START),
             groupEnd: !0
         },
         {
-            description: v.NW.string(v.t.L3RYYG),
+            description: v.intl.string(v.t.L3RYYG),
             binds: C(O.EkH.SCROLL_UP, O.EkH.SCROLL_DOWN)
         },
         {
-            description: v.NW.string(v.t['3HAurK']),
+            description: v.intl.string(v.t['3HAurK']),
             binds: C(O.EkH.JUMP_TO_FIRST_UNREAD)
         },
         {
-            description: v.NW.string(v.t.rrYBEh),
+            description: v.intl.string(v.t.rrYBEh),
             binds: C(O.EkH.TEXTAREA_FOCUS)
         },
         {
-            description: v.NW.string(v.t.yYsRlJ),
+            description: v.intl.string(v.t.yYsRlJ),
             binds: C(O.EkH.QUICKSWITCHER_SHOW)
         }
     ];

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u });
 var r = n(192379),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     i = n(442552),
     s = n(314897),
     o = n(643879),
@@ -9,7 +9,7 @@ var r = n(192379),
 function u(e) {
     let { avatarId: t, storageHash: n, size: u } = e,
         { onMouseEnter: f, onMouseLeave: d, shouldAnimate: p } = (0, i.Z)(),
-        m = (0, a.e7)([s.default], () => s.default.getId());
+        m = (0, l.e7)([s.default], () => s.default.getId());
     return {
         avatarSrc: r.useMemo(
             () =>
@@ -18,7 +18,7 @@ function u(e) {
                     avatarId: t,
                     storageHash: n,
                     canAnimate: p,
-                    size: (0, l.pxk)(null != u ? u : c.m)
+                    size: (0, a.pxk)(null != u ? u : c.m)
                 }),
             [m, t, n, p, u]
         ),

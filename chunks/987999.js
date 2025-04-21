@@ -1,11 +1,11 @@
-r.d(t, { default: () => j });
+r.d(e, { default: () => j });
 var n = r(200651);
 r(192379);
 var i = r(442837),
     o = r(481060),
-    c = r(239091),
-    a = r(100527),
-    l = r(970606),
+    l = r(239091),
+    c = r(100527),
+    a = r(970606),
     s = r(299206),
     u = r(693546),
     p = r(246364),
@@ -14,12 +14,12 @@ var i = r(442837),
     f = r(914010),
     g = r(981631),
     O = r(388032);
-function j(e) {
-    let { guild: t, onSelect: r } = e,
-        j = t.id,
+function j(t) {
+    let { guild: e, onSelect: r } = t,
+        j = e.id,
         y = (0, s.Z)({
-            id: t.id,
-            label: O.NW.string(O.t['94lLDw'])
+            id: e.id,
+            label: O.intl.string(O.t['94lLDw'])
         }),
         h = (0, i.e7)([d.Z], () => d.Z.getRequest(j)),
         w = () => {
@@ -27,19 +27,19 @@ function j(e) {
         };
     return (0, n.jsxs)(o.v2r, {
         navId: 'join-request-guild-context',
-        onClose: c.Zy,
-        'aria-label': O.NW.string(O.t.HpQykZ),
+        onClose: l.Zy,
+        'aria-label': O.intl.string(O.t.HpQykZ),
         onSelect: r,
         children: [
             (null == h ? void 0 : h.applicationStatus) === p.wB.REJECTED &&
                 (0, n.jsx)(o.sNh, {
                     id: 'reapply',
-                    label: O.NW.string(O.t.rpFCLi),
+                    label: O.intl.string(O.t.rpFCLi),
                     action: () => {
-                        t.hasFeature(g.oNc.CLAN) &&
-                            (0, l.Vr)({
+                        e.hasFeature(g.oNc.CLAN) &&
+                            (0, a.Vr)({
                                 guildId: j,
-                                source: a.Z.CLAN_REAPPLY
+                                source: c.Z.CLAN_REAPPLY
                             }),
                             u.Z.resetGuildJoinRequest(j).then(() => {
                                 (0, b.uL)(g.Z5c.GUILD_MEMBER_VERIFICATION(j));
@@ -49,63 +49,63 @@ function j(e) {
                 }),
             (0, n.jsx)(o.sNh, {
                 id: 'withdraw',
-                label: (null == h ? void 0 : h.applicationStatus) === p.wB.STARTED ? O.NW.string(O.t.OQFlFB) : O.NW.string(O.t.mqtdmZ),
+                label: (null == h ? void 0 : h.applicationStatus) === p.wB.STARTED ? O.intl.string(O.t.OQFlFB) : O.intl.string(O.t.mqtdmZ),
                 action: () => {
-                    (0, o.h7j)((e) => {
+                    (0, o.h7j)((t) => {
                         var r, i;
                         return (0, n.jsx)(
                             o.ConfirmModal,
-                            ((r = (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var r = null != arguments[t] ? arguments[t] : {},
+                            ((r = (function (t) {
+                                for (var e = 1; e < arguments.length; e++) {
+                                    var r = null != arguments[e] ? arguments[e] : {},
                                         n = Object.keys(r);
                                     'function' == typeof Object.getOwnPropertySymbols &&
                                         (n = n.concat(
-                                            Object.getOwnPropertySymbols(r).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                            Object.getOwnPropertySymbols(r).filter(function (t) {
+                                                return Object.getOwnPropertyDescriptor(r, t).enumerable;
                                             })
                                         )),
-                                        n.forEach(function (t) {
+                                        n.forEach(function (e) {
                                             var n;
-                                            (n = r[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
+                                            (n = r[e]),
+                                                e in t
+                                                    ? Object.defineProperty(t, e, {
                                                           value: n,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = n);
+                                                    : (t[e] = n);
                                         });
                                 }
-                                return e;
+                                return t;
                             })(
                                 {
-                                    header: O.NW.string(O.t.y0CVen),
-                                    confirmText: O.NW.string(O.t.p89ACg),
-                                    cancelText: O.NW.string(O.t.oEAioK),
+                                    header: O.intl.string(O.t.y0CVen),
+                                    confirmText: O.intl.string(O.t.p89ACg),
+                                    cancelText: O.intl.string(O.t.oEAioK),
                                     onConfirm: w
                                 },
-                                e
+                                t
                             )),
                             (i = i =
                                 {
                                     children: (0, n.jsx)(o.Text, {
                                         variant: 'text-md/normal',
-                                        children: (null == h ? void 0 : h.applicationStatus) === p.wB.STARTED ? O.NW.string(O.t.fJwWVl) : O.NW.format(O.t['9ZezpK'], { name: t.name })
+                                        children: (null == h ? void 0 : h.applicationStatus) === p.wB.STARTED ? O.intl.string(O.t.fJwWVl) : O.intl.format(O.t['9ZezpK'], { name: e.name })
                                     })
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
-                                : (function (e, t) {
-                                      var r = Object.keys(e);
+                                : (function (t, e) {
+                                      var r = Object.keys(t);
                                       if (Object.getOwnPropertySymbols) {
-                                          var n = Object.getOwnPropertySymbols(e);
+                                          var n = Object.getOwnPropertySymbols(t);
                                           r.push.apply(r, n);
                                       }
                                       return r;
-                                  })(Object(i)).forEach(function (e) {
-                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+                                  })(Object(i)).forEach(function (t) {
+                                      Object.defineProperty(r, t, Object.getOwnPropertyDescriptor(i, t));
                                   }),
                             r)
                         );

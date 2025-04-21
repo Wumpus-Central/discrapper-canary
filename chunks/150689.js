@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c }), n(388685), n(781311);
 var r = n(200651),
     i = n(192379),
-    s = n(130341),
-    l = n(34112),
+    l = n(130341),
+    s = n(34112),
     a = n(623691),
     o = n(494831);
 function c(e) {
@@ -10,7 +10,7 @@ function c(e) {
         [m, g] = i.useState(''),
         [p, h] = i.useState(o.Cl),
         f = m.trim(),
-        x = i.useMemo(() => d.filter((e) => (0, s.uo)(e, f)), [d, f]),
+        x = i.useMemo(() => d.filter((e) => (0, l.uo)(e, f)), [d, f]),
         b = i.useCallback(
             () =>
                 (0, r.jsx)(
@@ -28,7 +28,7 @@ function c(e) {
                 ),
             [n, c, x, t, m]
         );
-    return (0, r.jsx)(l.Z, {
+    return (0, r.jsx)(s.Z, {
         setEditRoleId: t,
         guild: n,
         everyoneRole: c,

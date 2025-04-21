@@ -22,14 +22,14 @@ let v = (e) => {
         a = ':'.concat(t.name, ':');
     switch (r) {
         case h.n_.ACTIVITY:
-            let o = b.NW.formatToPlainString(b.t.EUFEJi, { username: n }),
+            let o = b.intl.formatToPlainString(b.t.EUFEJi, { username: n }),
                 s = '\n> '.concat(i);
             return null != i ? ''.concat(_.jd).concat(o, '*').concat(s, '\n').concat(a) : ''.concat(_.jd).concat(o, '*\n').concat(a);
         case h.n_.AVATAR:
-            let l = b.NW.formatToPlainString(b.t.E6H15u, { username: n });
+            let l = b.intl.formatToPlainString(b.t.E6H15u, { username: n });
             return ''.concat(_.jd).concat(l, '*\n').concat(a);
         case h.n_.STATUS:
-            let u = b.NW.formatToPlainString(b.t.XPQgLy, { username: n }),
+            let u = b.intl.formatToPlainString(b.t.XPQgLy, { username: n }),
                 d = '\n> '.concat(i);
             return null != i ? ''.concat(_.jd).concat(u, '*').concat(d, '\n').concat(a) : ''.concat(_.jd).concat(u, '*\n').concat(a);
         default:
@@ -38,10 +38,10 @@ let v = (e) => {
 };
 function O(e) {
     let { user: t, guildId: n, entry: c, sourceType: _, sourceDetails: b, setPopoutRef: O, onAction: I, onClose: S } = e,
-        { resetInteraction: T, setInteractionToast: N } = (0, f.Xo)(),
-        { theme: A } = (0, p.z)(),
+        { resetInteraction: T, setInteractionToast: A } = (0, f.Xo)(),
+        { theme: N } = (0, p.z)(),
         C = (0, a.e7)([l.Z], () => l.Z.theme),
-        R = (0, o.wj)(C) ? !(0, o.wj)(A) : (0, o.wj)(A),
+        R = (0, o.wj)(C) ? !(0, o.wj)(N) : (0, o.wj)(N),
         P = i.useRef(null);
     i.useEffect(() => {
         null == O || O(null == P ? void 0 : P.current);
@@ -66,7 +66,7 @@ function O(e) {
             sourceType: _,
             sourceDetails: b
         });
-        N(null);
+        A(null);
         try {
             await (0, d.Z)({
                 userId: t.id,
@@ -77,7 +77,7 @@ function O(e) {
                 entry: c
             });
         } catch (e) {}
-        N(h.P.REACT);
+        A(h.P.REACT);
     };
     return (0, r.jsx)(s.Z, {
         headerClassName: R ? y.noBoxShadowMargin : void 0,

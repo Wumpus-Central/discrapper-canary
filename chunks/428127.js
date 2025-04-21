@@ -49,7 +49,7 @@ function y(e) {
             (0, r.jsx)(c.Text, {
                 variant: 'text-xs/semibold',
                 className: m.barText,
-                children: g.NW.format(g.t['fDlr+P'], { count: b.length })
+                children: g.intl.format(g.t['fDlr+P'], { count: b.length })
             }),
             (0, r.jsx)(d.Z, {
                 guildId: n.id,
@@ -117,7 +117,7 @@ function _(e) {
                                     variant: 'text-xs/semibold',
                                     color: 'interactive-normal',
                                     className: m.barText,
-                                    children: g.NW.string(g.t.FCRiT0)
+                                    children: g.intl.string(g.t.FCRiT0)
                                 })
                             ]
                         })
@@ -129,7 +129,7 @@ function _(e) {
                                   variant: 'text-xs/semibold',
                                   color: 'status-danger-text',
                                   className: m.barText,
-                                  children: g.NW.format(g.t.EQcLys, { count: C })
+                                  children: g.intl.format(g.t.EQcLys, { count: C })
                               })
                           })
                         : v === f.x.VOICE_CHANNELS

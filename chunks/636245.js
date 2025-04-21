@@ -21,7 +21,7 @@ let u = (e) => {
                 null == p || p(), i.AC(t, n);
             },
             fullWidth: !0,
-            children: s.NW.string(s.t.ZYO5OD)
+            children: s.intl.string(s.t.ZYO5OD)
         },
         'stage'
     );

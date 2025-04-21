@@ -1,7 +1,7 @@
 r.d(t, { default: () => _ }), r(388685);
 var n = r(200651),
-    s = r(192379),
-    i = r(481060),
+    i = r(192379),
+    s = r(481060),
     o = r(816814),
     c = r(600164),
     a = r(198993),
@@ -23,7 +23,7 @@ function p(e, t, r) {
     );
 }
 let g = (e) => {
-    let { image: t, label: r, text: s, children: o } = e;
+    let { image: t, label: r, text: i, children: o } = e;
     return (0, n.jsxs)(c.Z, {
         className: h.spacing,
         children: [
@@ -40,14 +40,14 @@ let g = (e) => {
                 justify: c.Z.Justify.CENTER,
                 children: (0, n.jsxs)('div', {
                     children: [
-                        (0, n.jsx)(i.vwX, {
+                        (0, n.jsx)(s.vwX, {
                             tag: 'h5',
                             className: h.headerSpacing,
                             children: r
                         }),
-                        (0, n.jsx)(i.R94, {
-                            type: i.R94.Types.DESCRIPTION,
-                            children: s
+                        (0, n.jsx)(s.R94, {
+                            type: s.R94.Types.DESCRIPTION,
+                            children: i
                         }),
                         o
                     ]
@@ -56,10 +56,10 @@ let g = (e) => {
         ]
     });
 };
-class f extends s.PureComponent {
+class f extends i.PureComponent {
     render() {
         var e;
-        let { transitionState: t, onClose: s } = this.props,
+        let { transitionState: t, onClose: i } = this.props,
             { totpSecret: o, code: p, isVerifying: f } = this.state,
             _ = null == (e = l.default.getCurrentUser()) ? void 0 : e.email,
             C = (0, d.U0)(null != _ ? _ : '', o),
@@ -69,7 +69,7 @@ class f extends s.PureComponent {
                     className: h.inputContainer,
                     align: c.Z.Align.START,
                     children: [
-                        (0, n.jsx)(i.oil, {
+                        (0, n.jsx)(s.oil, {
                             value: p,
                             className: h.input,
                             placeholder: '000 000',
@@ -82,45 +82,45 @@ class f extends s.PureComponent {
                         (0, n.jsx)(c.Z.Child, {
                             grow: 0,
                             shrink: 0,
-                            children: (0, n.jsx)(i.zxk, {
+                            children: (0, n.jsx)(s.zxk, {
                                 type: 'submit',
                                 submitting: f,
-                                children: u.NW.string(u.t['/a5+YW'])
+                                children: u.intl.string(u.t['/a5+YW'])
                             })
                         })
                     ]
                 })
             });
-        return (0, n.jsxs)(i.Y0X, {
+        return (0, n.jsxs)(s.Y0X, {
             transitionState: t,
-            size: i.CgR.DYNAMIC,
+            size: s.CgR.DYNAMIC,
             className: h.customWidth,
             children: [
-                (0, n.jsxs)(i.xBx, {
+                (0, n.jsxs)(s.xBx, {
                     separator: !1,
                     children: [
                         (0, n.jsxs)(c.Z.Child, {
                             grow: 1,
                             shrink: 1,
                             children: [
-                                (0, n.jsx)(i.X6q, {
+                                (0, n.jsx)(s.X6q, {
                                     variant: 'heading-lg/semibold',
-                                    children: u.NW.string(u.t.cDgKtb)
+                                    children: u.intl.string(u.t.cDgKtb)
                                 }),
-                                (0, n.jsx)(i.Text, {
+                                (0, n.jsx)(s.Text, {
                                     variant: 'text-xs/normal',
                                     className: h.subHeader,
-                                    children: u.NW.string(u.t['7NGwtL'])
+                                    children: u.intl.string(u.t['7NGwtL'])
                                 })
                             ]
                         }),
                         (0, n.jsx)(c.Z.Child, {
                             grow: 0,
-                            children: (0, n.jsx)(i.olH, { onClick: s })
+                            children: (0, n.jsx)(s.olH, { onClick: i })
                         })
                     ]
                 }),
-                (0, n.jsxs)(i.hzk, {
+                (0, n.jsxs)(s.hzk, {
                     children: [
                         (0, n.jsx)(g, {
                             image: (0, n.jsx)('img', {
@@ -129,26 +129,26 @@ class f extends s.PureComponent {
                                 width: 100,
                                 height: 100
                             }),
-                            label: u.NW.string(u.t['9E74Dw']),
-                            text: u.NW.format(u.t.A7Aeh4, {
+                            label: u.intl.string(u.t['9E74Dw']),
+                            text: u.intl.format(u.t.A7Aeh4, {
                                 googleAuthURL: 'https://support.google.com/accounts/answer/1066447?hl=en',
                                 authyURL: 'https://www.authy.com/'
                             })
                         }),
-                        (0, n.jsx)(i.$i$, { className: h.divider }),
+                        (0, n.jsx)(s.$i$, { className: h.divider }),
                         (0, n.jsx)(g, {
                             image: (0, n.jsx)(a.ZP, { text: C }),
-                            label: u.NW.string(u.t['91InFx']),
-                            text: u.NW.string(u.t.hFeBkp),
+                            label: u.intl.string(u.t['91InFx']),
+                            text: u.intl.string(u.t.hFeBkp),
                             children: (0, n.jsxs)('div', {
                                 className: h.topSpacing,
                                 children: [
-                                    (0, n.jsx)(i.vwX, {
+                                    (0, n.jsx)(s.vwX, {
                                         tag: 'h5',
                                         className: h.headerSpacing,
-                                        children: u.NW.string(u.t['76IPws'])
+                                        children: u.intl.string(u.t['76IPws'])
                                     }),
-                                    (0, n.jsx)(i.Text, {
+                                    (0, n.jsx)(s.Text, {
                                         variant: 'text-md/normal',
                                         className: h.secret,
                                         selectable: !0,
@@ -157,14 +157,14 @@ class f extends s.PureComponent {
                                 ]
                             })
                         }),
-                        (0, n.jsx)(i.$i$, { className: h.divider }),
+                        (0, n.jsx)(s.$i$, { className: h.divider }),
                         (0, n.jsx)(g, {
                             image: (0, n.jsx)('img', {
                                 alt: '',
                                 src: r(308777)
                             }),
-                            label: u.NW.string(u.t['SaD/LS']),
-                            text: u.NW.string(u.t.vI1ziY),
+                            label: u.intl.string(u.t['SaD/LS']),
+                            text: u.intl.string(u.t.vI1ziY),
                             children: E
                         })
                     ]

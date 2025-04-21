@@ -17,7 +17,7 @@ var r = n(392711),
     h = n(981631),
     v = n(388032);
 function b(e, t) {
-    return e.type === h.d4z.GROUP_DM ? (t ? v.NW.string(v.t['0BWmSE']) : v.NW.string(v.t.uuVTOD)) : e.type === h.d4z.DM ? (t ? v.NW.string(v.t['2wfKGh']) : v.NW.string(v.t.wPbAsb)) : t ? v.NW.string(v.t.Bou7lZ) : v.NW.string(v.t['4wcdEx']);
+    return e.type === h.d4z.GROUP_DM ? (t ? v.intl.string(v.t['0BWmSE']) : v.intl.string(v.t.uuVTOD)) : e.type === h.d4z.DM ? (t ? v.intl.string(v.t['2wfKGh']) : v.intl.string(v.t.wPbAsb)) : t ? v.intl.string(v.t.Bou7lZ) : v.intl.string(v.t['4wcdEx']);
 }
 function p(e) {
     let t = (0, l.e7)([d.ZP], () => d.ZP.getChannels(h.I_8))[h.d4z.GUILD_CATEGORY],

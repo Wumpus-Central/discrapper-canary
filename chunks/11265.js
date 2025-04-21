@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     a = n(200100),
     o = n(481060),
     c = n(393238),
@@ -10,15 +10,15 @@ var r = n(200651),
     u = n(212787);
 let m = i.memo(function (e) {
     var t, n;
-    let { renderHeader: s, children: m, isExpanded: g, isStuck: p, onExpand: h, disableAnimation: f, disableBackground: x } = e,
+    let { renderHeader: l, children: m, isExpanded: g, isStuck: p, onExpand: h, disableAnimation: f, disableBackground: x } = e,
         [b, j] = i.useState(!0),
-        [N, _] = i.useState(!1),
-        { ref: v, height: O = 0 } = (0, c.ZP)(),
-        { ref: C, height: y = 0 } = (0, c.ZP)(),
+        [_, v] = i.useState(!1),
+        { ref: O, height: C = 0 } = (0, c.ZP)(),
+        { ref: y, height: N = 0 } = (0, c.ZP)(),
         [I, E] = i.useState(g),
         S = (0, o.q_F)(
             {
-                height: I ? y + O : O,
+                height: I ? N + C : C,
                 config:
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -60,17 +60,17 @@ let m = i.memo(function (e) {
                           }),
                     t),
                 onStart: () => {
-                    _(!1);
+                    v(!1);
                 },
                 onRest: () => {
-                    _(!0);
+                    v(!0);
                 }
             },
             b || f ? 'animate-never' : 'respect-motion-settings'
         );
     return (
         i.useLayoutEffect(() => {
-            _(!1), E(g);
+            v(!1), E(g);
         }, [g]),
         i.useLayoutEffect(() => {
             let e = setTimeout(() => {
@@ -79,23 +79,23 @@ let m = i.memo(function (e) {
             return () => clearTimeout(e);
         }, []),
         (0, r.jsx)(o.P3F, {
-            className: l()(u.editCard, {
+            className: s()(u.editCard, {
                 [u.toggled]: g,
                 [u.noBackground]: x
             }),
             children: (0, r.jsxs)(a.animated.div, {
-                className: l()(u.contentExpandContainer, { [u.showOverflow]: g && N }),
+                className: s()(u.contentExpandContainer, { [u.showOverflow]: g && _ }),
                 style: S,
                 children: [
                     (0, r.jsx)(o.P3F, {
-                        innerRef: v,
+                        innerRef: O,
                         onClick: p ? void 0 : h,
-                        className: l()(u.innerHeader, { [u.toggled]: g && p }),
-                        'aria-label': d.NW.string(d.t.dcl9MT),
-                        children: s
+                        className: s()(u.innerHeader, { [u.toggled]: g && p }),
+                        'aria-label': d.intl.string(d.t.dcl9MT),
+                        children: l
                     }),
                     (0, r.jsx)('div', {
-                        ref: C,
+                        ref: y,
                         children: m
                     })
                 ]

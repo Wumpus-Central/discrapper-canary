@@ -1,9 +1,9 @@
 n.d(t, { Z: () => d }), n(388685), n(457542);
 var s,
     i = n(200651),
-    r = n(192379),
-    o = n(481060),
-    l = n(388032),
+    l = n(192379),
+    r = n(481060),
+    o = n(388032),
     a = n(460268);
 function h(e, t, n) {
     return (
@@ -18,42 +18,42 @@ function h(e, t, n) {
         e
     );
 }
-class c extends (s = r.PureComponent) {
+class c extends (s = l.PureComponent) {
     render() {
         let { title: e, actionText: t, children: n, transitionState: s } = this.props,
             { error: h, isLoading: c, value: d } = this.state,
             u =
-                r.Children.count(n) > 0
-                    ? (0, i.jsx)(o.Zbd, {
-                          type: o.Zbd.Types.WARNING,
+                l.Children.count(n) > 0
+                    ? (0, i.jsx)(r.Zbd, {
+                          type: r.Zbd.Types.WARNING,
                           className: a.card,
-                          children: (0, i.jsx)(o.Text, {
+                          children: (0, i.jsx)(r.Text, {
                               className: a.warning,
                               variant: 'text-md/normal',
                               children: n
                           })
                       })
                     : null;
-        return (0, i.jsx)(o.Y0X, {
+        return (0, i.jsx)(r.Y0X, {
             transitionState: s,
             children: (0, i.jsxs)('form', {
                 onSubmit: this.handleSubmit,
                 children: [
-                    (0, i.jsx)(o.xBx, {
+                    (0, i.jsx)(r.xBx, {
                         separator: !1,
-                        children: (0, i.jsx)(o.X6q, {
+                        children: (0, i.jsx)(r.X6q, {
                             variant: 'heading-lg/semibold',
                             children: e
                         })
                     }),
-                    (0, i.jsxs)(o.hzk, {
+                    (0, i.jsxs)(r.hzk, {
                         children: [
                             u,
-                            (0, i.jsxs)(o.xJW, {
-                                title: l.NW.string(l.t['CIGa+/']),
+                            (0, i.jsxs)(r.xJW, {
+                                title: o.intl.string(o.t['CIGa+/']),
                                 className: a.spacing,
                                 children: [
-                                    (0, i.jsx)(o.oil, {
+                                    (0, i.jsx)(r.oil, {
                                         type: 'password',
                                         autoComplete: 'off',
                                         autoFocus: !0,
@@ -61,7 +61,7 @@ class c extends (s = r.PureComponent) {
                                         onChange: this.handlePasswordChange
                                     }),
                                     null != h && '' !== h
-                                        ? (0, i.jsxs)(o.Text, {
+                                        ? (0, i.jsxs)(r.Text, {
                                               variant: 'text-xs/normal',
                                               color: 'text-danger',
                                               className: a.error,
@@ -72,18 +72,18 @@ class c extends (s = r.PureComponent) {
                             })
                         ]
                     }),
-                    (0, i.jsxs)(o.mzw, {
+                    (0, i.jsxs)(r.mzw, {
                         children: [
-                            (0, i.jsx)(o.zxk, {
+                            (0, i.jsx)(r.zxk, {
                                 type: 'submit',
                                 disabled: c || 0 === d.length,
-                                children: null != t ? t : l.NW.string(l.t['cY+Ooa'])
+                                children: null != t ? t : o.intl.string(o.t['cY+Ooa'])
                             }),
-                            (0, i.jsx)(o.zxk, {
+                            (0, i.jsx)(r.zxk, {
                                 onClick: this.handleCancel,
-                                look: o.zxk.Looks.LINK,
-                                color: o.zxk.Colors.PRIMARY,
-                                children: l.NW.string(l.t['ETE/oK'])
+                                look: r.zxk.Looks.LINK,
+                                color: r.zxk.Colors.PRIMARY,
+                                children: o.intl.string(o.t['ETE/oK'])
                             })
                         ]
                     })

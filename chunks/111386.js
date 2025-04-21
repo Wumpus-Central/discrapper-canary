@@ -65,7 +65,7 @@ let h = () =>
             children: [
                 (0, r.jsx)('img', {
                     src: u,
-                    alt: l.NW.string(l.t['9wkT19']),
+                    alt: l.intl.string(l.t['9wkT19']),
                     className: c.coachtipAsset
                 }),
                 (0, r.jsxs)('div', {
@@ -73,12 +73,12 @@ let h = () =>
                     children: [
                         (0, r.jsx)(o.X6q, {
                             variant: 'heading-lg/semibold',
-                            children: l.NW.string(l.t.V5y3qa)
+                            children: l.intl.string(l.t.V5y3qa)
                         }),
                         (0, r.jsx)(o.Text, {
                             variant: 'text-md/normal',
                             color: 'text-secondary',
-                            children: l.NW.string(l.t.eSDHDg)
+                            children: l.intl.string(l.t.eSDHDg)
                         })
                     ]
                 })

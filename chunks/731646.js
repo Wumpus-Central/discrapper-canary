@@ -1,25 +1,25 @@
-n.d(t, { default: () => u });
+n.d(e, { default: () => u });
 var r = n(200651),
     i = n(192379),
     l = n(481060),
     a = n(239091),
     c = n(299206),
     o = n(388032);
-function u(e) {
-    var t;
+function u(t) {
+    var e;
     let n = (0, c.Z)({
-        id: e.id,
-        label: e.label,
-        shiftId: e.shiftId
+        id: t.id,
+        label: t.label,
+        shiftId: t.shiftId
     });
     return (
         i.useEffect(() => {
             null == n && (0, a.Zy)();
         }, [n]),
         (0, r.jsx)(l.v2r, {
-            onSelect: e.onSelect,
+            onSelect: t.onSelect,
             navId: 'dev-context',
-            'aria-label': null != (t = e['aria-label']) ? t : o.NW.string(o.t.ogxXGh),
+            'aria-label': null != (e = t['aria-label']) ? e : o.intl.string(o.t.ogxXGh),
             onClose: a.Zy,
             children: n
         })

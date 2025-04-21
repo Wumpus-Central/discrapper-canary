@@ -20,8 +20,8 @@ var u,
     I = n(131951),
     S = n(914010),
     T = n(981631),
-    N = n(176505);
-function A(e, t, n) {
+    A = n(176505);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function C(e) {
                 })
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
@@ -127,7 +127,7 @@ function Z() {
         t = O.Z.getGuilds();
     return (
         f().each(x, (t, n) => {
-            (null != t && (y.Z.hasChannel(t) || t === a || j.has(t) || (0, N.ME)(t))) || (delete x[n], delete M[n], (e = !0));
+            (null != t && (y.Z.hasChannel(t) || t === a || j.has(t) || (0, A.ME)(t))) || (delete x[n], delete M[n], (e = !0));
         }),
         f().each(k, (t, n) => {
             (null != t && (y.Z.hasChannel(t) || j.has(t))) || (delete k[n], (e = !0));
@@ -143,10 +143,10 @@ function Z() {
 function H(e) {
     (r = e.sessionId), null != s && null == y.Z.getChannel(s) && (s = null), Z() && G();
 }
-function W(e) {
+function Y(e) {
     (r = e.sessionId), (s = e.selectedVoiceChannelId), (x = {}), (M = {}), (a = e.selectedChannelId), (x[e.selectedGuildId] = e.selectedChannelId), F(e.selectedGuildId, a), Z();
 }
-function Y() {
+function W() {
     r = null;
 }
 function K(e) {
@@ -287,11 +287,11 @@ class ei extends (u = _.ZP.Store) {
         return o;
     }
 }
-A(ei, 'displayName', 'SelectedChannelStore');
+N(ei, 'displayName', 'SelectedChannelStore');
 let ea = new ei(h.Z, {
     CONNECTION_OPEN: H,
-    OVERLAY_INITIALIZE: W,
-    CONNECTION_CLOSED: Y,
+    OVERLAY_INITIALIZE: Y,
+    CONNECTION_CLOSED: W,
     CHANNEL_SELECT: K,
     CHANNEL_CREATE: er,
     CHANNEL_DELETE: Q,

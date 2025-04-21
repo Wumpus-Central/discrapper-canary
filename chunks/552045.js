@@ -1,10 +1,10 @@
-n.d(t, { Z: () => x });
-var r = n(200651);
+n.d(t, { Z: () => E });
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    s = n.n(i),
-    a = n(481060),
-    l = n(785681),
+var r = n(120356),
+    s = n.n(r),
+    l = n(481060),
+    a = n(785681),
     o = n(841409),
     c = n(880257),
     d = n(631885),
@@ -16,42 +16,42 @@ var i = n(120356),
     f = n(589608),
     b = n(633488),
     _ = n(361848);
-let N = () => {
+let x = () => {
         let e = (0, d.mq)(m.ne.ACTIVE),
             t = (0, c.Z)(),
             { handleTabChange: n } = (0, o.Z)();
         return (0, d.VM)() || (t && e.length > 0)
             ? null
-            : (0, r.jsx)('div', {
+            : (0, i.jsx)('div', {
                   className: h.button,
                   children: t
-                      ? (0, r.jsx)(a.zxk, {
+                      ? (0, i.jsx)(l.zxk, {
                             fullWidth: !1,
-                            size: a.PhG.LARGE,
+                            size: l.PhG.LARGE,
                             onClick: () => n(m.dG.REQUESTS),
-                            children: p.NW.string(p.t.LhlgY2)
+                            children: p.intl.string(p.t.LhlgY2)
                         })
-                      : (0, r.jsx)(u.Z, {})
+                      : (0, i.jsx)(u.Z, {})
               });
     },
-    x = () => {
+    E = () => {
         let e = (0, c.Z)(),
-            t = (0, l.o)(p.NW.string(g.Z.T7GyW1), p.NW.string(g.Z.goKE2d)),
-            n = (0, l.o)(p.NW.format(g.Z.MXjDSk, { articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), p.NW.format(g.Z.EMCf6u, { articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
-        return (0, r.jsxs)('div', {
+            t = (0, a.o)(p.intl.string(g.default.T7GyW1), p.intl.string(g.default.goKE2d)),
+            n = (0, a.o)(p.intl.format(g.default.MXjDSk, { articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), p.intl.format(g.default.EMCf6u, { articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
+        return (0, i.jsxs)('div', {
             className: s()(h.container, f.box),
             children: [
-                (0, r.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     children: [
-                        (0, r.jsx)('div', {
-                            children: (0, r.jsxs)('div', {
+                        (0, i.jsx)('div', {
+                            children: (0, i.jsxs)('div', {
                                 className: h.headerText,
                                 children: [
-                                    (0, r.jsx)(a.X6q, {
+                                    (0, i.jsx)(l.X6q, {
                                         variant: 'heading-xl/medium',
-                                        children: (0, r.jsx)(a.y5t, { children: t })
+                                        children: (0, i.jsx)(l.y5t, { children: t })
                                     }),
-                                    (0, r.jsx)(a.Text, {
+                                    (0, i.jsx)(l.Text, {
                                         variant: 'text-sm/medium',
                                         color: 'text-muted',
                                         children: n
@@ -59,14 +59,14 @@ let N = () => {
                                 ]
                             })
                         }),
-                        (0, r.jsx)(N, {})
+                        (0, i.jsx)(x, {})
                     ]
                 }),
-                (0, r.jsx)('div', {
+                (0, i.jsx)('div', {
                     className: h.headerImage,
-                    children: (0, r.jsx)('img', {
+                    children: (0, i.jsx)('img', {
                         src: e ? b : _,
-                        alt: p.NW.string(g.Z.ffg6xc)
+                        alt: p.intl.string(g.default.ffg6xc)
                     })
                 })
             ]

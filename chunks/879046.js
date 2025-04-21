@@ -16,7 +16,7 @@ function u(e) {
             onClick: () => {
                 n.__(l._b.TEXT, o.Ie.NORMAL, { applicationId: t.extra.application_id });
             },
-            ariaDescription: s.NW.formatToPlainString(s.t.NTHttL, { title: d })
+            ariaDescription: s.intl.formatToPlainString(s.t.NTHttL, { title: d })
         };
     return {
         thumbnailUrl: u,

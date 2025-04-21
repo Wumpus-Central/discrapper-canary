@@ -1,8 +1,8 @@
-n.d(t, { k: () => S }), n(388685);
+n.d(t, { k: () => I }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(849057),
-    l = n(442837),
+    l = n(849057),
+    a = n(442837),
     o = n(524437),
     s = n(481060),
     c = n(100527),
@@ -20,15 +20,15 @@ var r = n(200651),
     v = n(903672),
     E = n(711165),
     O = n(946443),
-    N = n(264233),
-    j = n(981631),
-    C = n(388032);
-function S(e) {
-    let { onOpen: t, onClose: n, children: S, badgeState: I, popoutPosition: T, popoutAlign: P } = e,
+    j = n(264233),
+    C = n(981631),
+    S = n(388032);
+function I(e) {
+    let { onOpen: t, onClose: n, children: I, badgeState: N, popoutPosition: T, popoutAlign: P } = e,
         { analyticsLocations: A } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
         [w, Z] = i.useState(!1),
         [R, k] = [
-            (0, l.e7)([g.Z], () => {
+            (0, a.e7)([g.Z], () => {
                 var e, t;
                 return null != (t = null == (e = g.Z.settings.inbox) ? void 0 : e.currentTab) ? t : o.X.UNREADS;
             }),
@@ -44,7 +44,7 @@ function S(e) {
             }, [])
         ],
         { showTutorial: D, setSeenTutorial: L } = (function (e) {
-            let t = (0, l.e7)([g.Z], () => {
+            let t = (0, a.e7)([g.Z], () => {
                     var e, t;
                     return null != (t = null == (e = g.Z.settings.inbox) ? void 0 : e.viewedTutorial) && t;
                 }),
@@ -65,18 +65,18 @@ function S(e) {
         M = i.useCallback(() => {
             Z(!1), w && (null == n || n());
         }, [n, w]),
-        W = i.useCallback(() => {
+        U = i.useCallback(() => {
             Z(!w), w ? null == n || n() : null == t || t();
         }, [n, t, w]);
-    i.useEffect(() => (_.S.subscribe(j.CkL.TOGGLE_INBOX, W), () => void _.S.unsubscribe(j.CkL.TOGGLE_INBOX, W)), [W]);
-    let { showReminders: U } = f.Z.useExperiment({ location: 'RecentsPopout' }),
-        { enabled: F, inInbox: B } = p.Z.useExperiment({ location: 'RecentsPopout' }),
-        G = (0, l.e7)([m.Z], () => m.Z.hasOverdueReminder(), []) && F && B,
-        { enabled: H } = d.Z.useExperiment({ location: 'RecentsPopout' });
+    i.useEffect(() => (_.S.subscribe(C.CkL.TOGGLE_INBOX, U), () => void _.S.unsubscribe(C.CkL.TOGGLE_INBOX, U)), [U]);
+    let { showReminders: F } = f.Z.useExperiment({ location: 'RecentsPopout' }),
+        { enabled: B, inInbox: G } = p.Z.useExperiment({ location: 'RecentsPopout' }),
+        H = (0, a.e7)([m.Z], () => m.Z.hasOverdueReminder(), []) && B && G,
+        { enabled: V } = d.Z.useExperiment({ location: 'RecentsPopout' });
     i.useEffect(() => {
-        (((!U || (F && B)) && R === o.X.TODOS) || (R === o.X.BOOKMARKS && !(F || B))) && k(o.X.MENTIONS);
+        (((!F || (B && G)) && R === o.X.TODOS) || (R === o.X.BOOKMARKS && !(B || G))) && k(o.X.MENTIONS);
     });
-    let V = i.useCallback(
+    let z = i.useCallback(
         (e) => {
             e.shiftKey || M();
         },
@@ -93,37 +93,37 @@ function S(e) {
             onRequestClose: M,
             renderPopout: function () {
                 return (0, r.jsx)(s.VqE, {
-                    'aria-label': C.NW.string(C.t.GSmTKC),
+                    'aria-label': S.intl.string(S.t.GSmTKC),
                     children:
                         R === o.X.FOR_YOU
                             ? (0, r.jsx)(x.Z, {
                                   setTab: k,
-                                  badgeState: I,
+                                  badgeState: N,
                                   closePopout: M
                               })
                             : R === o.X.MENTIONS
                               ? (0, r.jsx)(v.Z, {
                                     setTab: k,
-                                    onJump: V,
-                                    badgeState: I,
+                                    onJump: z,
+                                    badgeState: N,
                                     closePopout: M
                                 })
-                              : H && R === o.X.GAME_INVITES
-                                ? (0, r.jsx)(N.Z, {
+                              : V && R === o.X.GAME_INVITES
+                                ? (0, r.jsx)(j.Z, {
                                       setTab: k,
-                                      badgeState: I,
+                                      badgeState: N,
                                       closePopout: M
                                   })
-                                : U && R === o.X.TODOS
+                                : F && R === o.X.TODOS
                                   ? (0, r.jsx)(y.Z, {
                                         setTab: k,
-                                        onJump: V,
+                                        onJump: z,
                                         closePopout: M
                                     })
-                                  : F && B && R === o.X.BOOKMARKS
+                                  : B && G && R === o.X.BOOKMARKS
                                     ? (0, r.jsx)(b.Z, {
                                           setTab: k,
-                                          badgeState: I,
+                                          badgeState: N,
                                           closePopout: M
                                       })
                                     : R === o.X.SCHEDULED
@@ -131,19 +131,19 @@ function S(e) {
                                             setTab: k,
                                             closePopout: M
                                         })
-                                      : (0, r.jsx)(a.SV, {
+                                      : (0, r.jsx)(l.SV, {
                                             fallback: (0, r.jsx)(O.h, {
                                                 setTab: k,
                                                 closePopout: M,
-                                                badgeState: I
+                                                badgeState: N
                                             }),
                                             children: (0, r.jsx)(O.Z, {
                                                 setTab: k,
-                                                onJump: V,
+                                                onJump: z,
                                                 showTutorial: D,
                                                 setSeenTutorial: L,
                                                 closePopout: M,
-                                                badgeState: I
+                                                badgeState: N
                                             })
                                         })
                 });
@@ -152,7 +152,7 @@ function S(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return S(W, n, e, G);
+                return I(U, n, e, H);
             }
         })
     });

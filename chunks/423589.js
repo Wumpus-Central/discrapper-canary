@@ -18,27 +18,27 @@ var a = n(442837),
 function x() {
     return [
         {
-            label: m.NW.string(m.t['8ot6go']),
+            label: m.intl.string(m.t['8ot6go']),
             value: d.Oe.MINUTES_15
         },
         {
-            label: m.NW.string(m.t.UMWBZm),
+            label: m.intl.string(m.t.UMWBZm),
             value: d.Oe.HOURS_1
         },
         {
-            label: m.NW.string(m.t.QmYWtr),
+            label: m.intl.string(m.t.QmYWtr),
             value: d.Oe.HOURS_3
         },
         {
-            label: m.NW.string(m.t.EpAXPD),
+            label: m.intl.string(m.t.EpAXPD),
             value: d.Oe.HOURS_8
         },
         {
-            label: m.NW.string(m.t['755t4u']),
+            label: m.intl.string(m.t['755t4u']),
             value: d.Oe.HOURS_24
         },
         {
-            label: m.NW.string(m.t.r3LawM),
+            label: m.intl.string(m.t.r3LawM),
             value: d.Oe.ALWAYS
         }
     ];

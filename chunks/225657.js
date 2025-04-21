@@ -21,9 +21,9 @@ let f = (e) => {
     return (0, r.jsxs)('div', {
         className: f,
         children: [
-            (0, r.jsx)(a.vwX, { children: d.NW.string(d.t.xFn72t) }),
+            (0, r.jsx)(a.vwX, { children: d.intl.string(d.t.xFn72t) }),
             (0, r.jsx)(a.VcW, {
-                placeholder: d.NW.string(d.t.R0vK0N),
+                placeholder: d.intl.string(d.t.R0vK0N),
                 renderOptionPrefix: (e) =>
                     (null == e ? void 0 : e.value) == null
                         ? null

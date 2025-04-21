@@ -41,7 +41,7 @@ function m(e) {
                                 children: [
                                     (0, c.jsx)(t.Dx, {
                                         className: f.header,
-                                        children: s.NW.string(s.t.UNFvtL)
+                                        children: s.intl.string(s.t.UNFvtL)
                                     }),
                                     m,
                                     h
@@ -56,14 +56,14 @@ function m(e) {
                         (0, c.jsx)(r.zxk, {
                             color: r.zxk.Colors.PRIMARY,
                             onClick: n,
-                            children: s.NW.string(s.t.cpT0Cg)
+                            children: s.intl.string(s.t.cpT0Cg)
                         }),
                         (0, c.jsx)(r.zxk, {
                             color: r.zxk.Colors.GREEN,
                             onClick: async () => {
                                 null != (await p()) && n();
                             },
-                            children: s.NW.string(s.t.CumH4u)
+                            children: s.intl.string(s.t.CumH4u)
                         })
                     ]
                 })

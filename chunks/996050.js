@@ -29,7 +29,7 @@ function c(e, t, n, c, u) {
         onNotificationShow: () => {
             g();
         },
-        confirmText: s.NW.string(s.t.VJlc0d),
+        confirmText: s.intl.string(s.t.VJlc0d),
         onConfirmClick: (o, l) => {
             var a;
             i.Z.join({

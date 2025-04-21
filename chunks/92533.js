@@ -2,8 +2,8 @@ n.d(t, { A: () => m });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(63063),
-    l = n(67734),
+    l = n(63063),
+    s = n(67734),
     a = n(375263),
     o = n(586382),
     c = n(981631),
@@ -19,21 +19,21 @@ function m(e) {
                 children: [
                     (0, r.jsxs)(i.vwX, {
                         className: u.title,
-                        children: [d.NW.string(d.t['0r0AzM']), (0, r.jsx)(o.zA, { guild: t })]
+                        children: [d.intl.string(d.t['0r0AzM']), (0, r.jsx)(o.zA, { guild: t })]
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-secondary',
                         className: u.text,
-                        children: d.NW.string(d.t.UfqmIS)
+                        children: d.intl.string(d.t.UfqmIS)
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-secondary',
                         className: u.text,
-                        children: d.NW.format(d.t.vBcWUl, { articleURL: s.Z.getArticleURL(c.BhN.GUILD_BANNER_SPLASH) })
+                        children: d.intl.format(d.t.vBcWUl, { articleURL: l.Z.getArticleURL(c.BhN.GUILD_BANNER_SPLASH) })
                     }),
-                    (0, r.jsx)(l.F, {
+                    (0, r.jsx)(s.F, {
                         guild: t,
                         canManageGuild: n,
                         buttonClassName: u.button

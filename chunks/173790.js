@@ -19,9 +19,9 @@ var i = n(200651),
     v = n(536650),
     C = n(675993),
     g = n(689079),
-    N = n(388032),
-    j = n(189102),
-    P = n(413097);
+    j = n(388032),
+    P = n(189102),
+    N = n(413097);
 function E(e) {
     var t;
     let { context: n, application: c, sectionName: u, showFriendsTab: E } = e,
@@ -34,41 +34,41 @@ function E(e) {
         { enabled: R } = f.X.useExperiment({ location: 'AppLauncherApplicationViewScreen' }),
         Z = r.useRef(null),
         [k, M] = r.useState(!1),
-        { iconURL: W, name: D } = r.useMemo(
+        { iconURL: D, name: B } = r.useMemo(
             () =>
                 (0, _.sl)(S, {
-                    fakeAppIconURL: P,
+                    fakeAppIconURL: N,
                     size: 84
                 }),
             [S]
         ),
-        B = (0, d.PL)(!0, !0),
-        U = (0, d.LD)(null == A ? void 0 : A.guild_id, !0),
-        H = r.useMemo(() => (0, d.If)(n, S.id), [B, U, n, S.id]),
-        V = !H.isGuildInstalled && !H.isUserInstalled;
+        U = (0, d.PL)(!0, !0),
+        H = (0, d.LD)(null == A ? void 0 : A.guild_id, !0),
+        W = r.useMemo(() => (0, d.If)(n, S.id), [U, H, n, S.id]),
+        V = !W.isGuildInstalled && !W.isUserInstalled;
     return (
         r.useEffect(() => {
             V && d.ZP.queryInstallOnDemandApp(S.id, null == A ? void 0 : A.id);
         }, [S.id, null == A ? void 0 : A.id, V]),
         (0, i.jsxs)(a.u2D, {
-            className: j.container,
+            className: P.container,
             fade: !0,
             ref: Z,
             role: 'region',
-            'aria-label': N.NW.formatToPlainString(N.t['4OP4Ul'], { applicationName: D }),
+            'aria-label': j.intl.formatToPlainString(j.t['4OP4Ul'], { applicationName: B }),
             children: [
                 (0, i.jsx)(v.Z, {
                     application: S,
                     context: n,
-                    name: D,
-                    iconURL: W,
+                    name: B,
+                    iconURL: D,
                     scrollerRef: Z,
                     sectionName: u
                 }),
-                null != W &&
+                null != D &&
                     (0, i.jsx)(y.Z, {
-                        src: W,
-                        className: j.appIcon
+                        src: D,
+                        className: P.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: w.enabled ? 44 : R ? 52 : 54 }),
                 (0, i.jsx)(L, {

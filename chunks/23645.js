@@ -1,9 +1,9 @@
-n.d(t, { Z: () => l }), n(388685);
-var r = n(192379),
-    i = n(817080),
+n.d(t, { Z: () => a }), n(388685);
+var i = n(192379),
+    r = n(817080),
     s = n(579806),
-    a = n(358085);
-class l extends r.Component {
+    l = n(358085);
+class a extends i.Component {
     getFileContents() {
         let { fileContents: e } = this.props;
         return 'function' == typeof e && (e = e()), e;
@@ -13,12 +13,12 @@ class l extends r.Component {
     }
     downloadHtml5(e, t) {
         let n = new Blob([e], { type: this.props.contentType });
-        (0, i.saveAs)(n, t);
+        (0, r.saveAs)(n, t);
     }
     render() {
         let { children: e } = this.props,
-            t = r.Children.only(e);
-        return r.cloneElement(t, { onClick: this.handleFileDownload });
+            t = i.Children.only(e);
+        return i.cloneElement(t, { onClick: this.handleFileDownload });
     }
     constructor(...e) {
         var t, n;
@@ -27,8 +27,8 @@ class l extends r.Component {
             (n = (e) => {
                 e.preventDefault();
                 let t = this.getFileContents(),
-                    { fileName: n, onDownload: r } = this.props;
-                a.isPlatformEmbedded ? this.downloadNative(t, n) : this.downloadHtml5(t, n), null == r || r();
+                    { fileName: n, onDownload: i } = this.props;
+                l.isPlatformEmbedded ? this.downloadNative(t, n) : this.downloadHtml5(t, n), null == i || i();
             }),
             t in this
                 ? Object.defineProperty(this, t, {

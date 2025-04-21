@@ -23,7 +23,7 @@ function p(e) {
             },
             [h, n, p.id]
         ),
-        N = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 h() && (e === (null == n ? void 0 : n.id) ? o.Z.stopEditingIntegration() : o.Z.startEditingIntegration(e));
             },
@@ -50,7 +50,7 @@ function p(e) {
                         isExpanded: (null == n ? void 0 : n.id) === e.id,
                         onEnable: j,
                         onDisable: O,
-                        onToggleExpand: () => N(e.id)
+                        onToggleExpand: () => y(e.id)
                     },
                     e.id
                 )

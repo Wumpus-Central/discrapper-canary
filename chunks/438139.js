@@ -119,7 +119,7 @@ function d(e) {
                     minutes: this.renderTime(a),
                     seconds: this.renderTime(u)
                 };
-            return null != n.end ? (0, r.jsx)(e, c(s({}, l), { message: o.NW.formatToPlainString(o.t['I/J7vL'], d) })) : null != n.start ? (0, r.jsx)(e, c(s({}, l), { message: o.NW.formatToPlainString(o.t.M9Fexc, d) })) : null;
+            return null != n.end ? (0, r.jsx)(e, c(s({}, l), { message: o.intl.formatToPlainString(o.t['I/J7vL'], d) })) : null != n.start ? (0, r.jsx)(e, c(s({}, l), { message: o.intl.formatToPlainString(o.t.M9Fexc, d) })) : null;
         }
         constructor(e) {
             super(e), a(this, '_interval', void 0), (this._interval = new i.Xp()), (this.state = s({}, this.getUpdatedTime()));

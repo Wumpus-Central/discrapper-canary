@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => C });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -18,19 +18,19 @@ var i = n(442837),
     _ = n(332712),
     E = n(81471),
     O = n(388032),
-    N = n(818816);
-let y = (e) => {
+    y = n(818816);
+let I = (e) => {
         let { userId: t } = e,
             n = (0, _.O)(t);
         return null == n || 0 === n.length
             ? (0, r.jsx)(l.Text, {
-                  className: N.mutualGuilds,
+                  className: y.mutualGuilds,
                   variant: 'text-sm/normal',
                   color: 'text-muted',
-                  children: O.NW.string(O.t.jpY0X1)
+                  children: O.intl.string(O.t.jpY0X1)
               })
             : (0, r.jsxs)('div', {
-                  className: N.mutualGuildsContainer,
+                  className: y.mutualGuildsContainer,
                   children: [
                       (0, r.jsx)(h.Z, {
                           guilds: n,
@@ -39,62 +39,62 @@ let y = (e) => {
                           hideOverflowCount: !0
                       }),
                       (0, r.jsx)(l.Text, {
-                          className: N.mutualGuilds,
+                          className: y.mutualGuilds,
                           variant: 'text-sm/normal',
                           color: 'text-muted',
-                          children: O.NW.format(O.t.eE3oen, { count: n.length })
+                          children: O.intl.format(O.t.eE3oen, { count: n.length })
                       })
                   ]
               });
     },
-    I = m.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
-function v(e) {
+    v = m.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
+function C(e) {
     var t;
     let { channel: n, otherUser: c, active: h } = e,
         m = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         _ = (0, i.e7)([f.Z], () => (null == c ? null : f.Z.getNickname(c.id))),
-        v = !m && h,
-        C = (0, b.c)(n),
-        { avatarDecorationSrc: S } = (0, d.Z)({
+        C = !m && h,
+        S = (0, b.c)(n),
+        { avatarDecorationSrc: N } = (0, d.Z)({
             user: c,
             size: (0, u.y9)(l.EFr.SIZE_40),
             onlyAnimateOnHover: !0
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(I, {
-                className: N.avatar,
-                src: (0, p.x)(n, 40, v),
-                avatarDecoration: S,
+            (0, r.jsx)(v, {
+                className: y.avatar,
+                src: (0, p.x)(n, 40, C),
+                avatarDecoration: N,
                 size: l.EFr.SIZE_40,
-                'aria-label': null != (t = null == c ? void 0 : c.username) ? t : O.NW.string(O.t['30mdIy'])
+                'aria-label': null != (t = null == c ? void 0 : c.username) ? t : O.intl.string(O.t['30mdIy'])
             }),
             (0, r.jsxs)('div', {
-                className: N.userPreview,
+                className: y.userPreview,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: N.userContainerWithPreview,
+                        className: y.userContainerWithPreview,
                         children: [
                             (0, r.jsx)(a.Z, {
                                 nick: _,
                                 user: c,
                                 showAccountIdentifier: !0,
-                                className: N.tagContainer,
-                                usernameClass: N.username,
-                                discriminatorClass: null != g.ZP.getGlobalName(c) ? N.globalName : N.discriminator
+                                className: y.tagContainer,
+                                usernameClass: y.username,
+                                discriminatorClass: null != g.ZP.getGlobalName(c) ? y.globalName : y.discriminator
                             }),
                             (0, r.jsx)(l.Text, {
-                                className: N.timestampWithPreview,
+                                className: y.timestampWithPreview,
                                 color: 'text-muted',
                                 variant: 'text-xs/normal',
-                                children: C
+                                children: S
                             })
                         ]
                     }),
                     (0, r.jsx)(s.Z, {
                         hoverText: (0, r.jsx)(E.Z, { channel: n }),
                         forceHover: h,
-                        children: (0, r.jsx)(y, { userId: c.id })
+                        children: (0, r.jsx)(I, { userId: c.id })
                     })
                 ]
             })

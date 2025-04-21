@@ -32,7 +32,7 @@ function h() {
 function m() {
     if (!h()) return;
     let e = c.Z.getCurrentClientVoiceChannelId(null);
-    null != e && (i.Z.sendBotMessage(e, d.NW.formatToPlainString(d.t.XYof5O, { number: _ })), a.default.selectVoiceChannel(null));
+    null != e && (i.Z.sendBotMessage(e, d.intl.formatToPlainString(d.t.XYof5O, { number: _ })), a.default.selectVoiceChannel(null));
 }
 class g extends o.Z {
     constructor(...e) {

@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    s = n(481060),
-    l = n(90815),
+    l = n(481060),
+    s = n(90815),
     a = n(594174),
     o = n(675968);
 function c(e) {
@@ -13,30 +13,30 @@ function c(e) {
             return null != e && (null == t ? void 0 : t.isOwner(e)) === !0;
         }),
         c = () => {
-            (0, l.q)(t.id, { demonetized: !0 });
+            (0, s.q)(t.id, { demonetized: !0 });
         };
     return (0, r.jsxs)('div', {
         className: o.container,
         children: [
-            (0, r.jsx)(s.X6q, {
+            (0, r.jsx)(l.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
                 children: 'Monetization Temporarily Disabled'
             }),
-            (0, r.jsx)(s.LZC, { size: 24 }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(l.LZC, { size: 24 }),
+            (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 children: "This server is overdue for accepting our new terms of service so we've had to temporarily suspend monetization. Don't worry, existing subscribers can still access their benefits and renew their subscription. However, new subscriptions cannot be made until the owner accepts our new terms of service."
             }),
-            (0, r.jsx)(s.LZC, { size: 24 }),
-            (0, r.jsx)(s.ua7, {
+            (0, r.jsx)(l.LZC, { size: 24 }),
+            (0, r.jsx)(l.ua7, {
                 text: 'Only the server owner can accept new terms',
                 shouldShow: !n,
                 children: (e) => {
                     var t, i;
                     return (0, r.jsx)(
-                        s.zxk,
+                        l.zxk,
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},

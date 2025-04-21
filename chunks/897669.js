@@ -21,7 +21,7 @@ function p(e) {
             (0, r.jsx)(c.z, {
                 startTime: p.startTime.toISOString(),
                 status: null != f ? f : t.status,
-                liveText: u.NW.string(u.t.kM6e4O),
+                liveText: u.intl.string(u.t.kM6e4O),
                 className: d.eventSchedule,
                 textVariant: 'text-lg/semibold',
                 eventType: t.entity_type,

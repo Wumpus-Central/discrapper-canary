@@ -1,6 +1,6 @@
 n.d(t, {
     W: () => v,
-    r: () => N
+    r: () => _
 }),
     n(388685);
 var r = n(200651),
@@ -142,7 +142,7 @@ function v(e) {
               ]
           });
 }
-function N(e) {
+function _(e) {
     let t,
         { guildId: n, formFields: o, updateFormFields: a, disableVerification: d } = e,
         m = (0, l.e7)([s.default], () => s.default.getCurrentUser()),

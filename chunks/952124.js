@@ -49,8 +49,8 @@ function O(e) {
     let { user: t, guildId: n, viewProfileItem: y, onCloseProfile: O } = e,
         I = i.useRef(null),
         { trackUserProfileAction: S } = (0, m.KZ)(),
-        { analyticsLocations: T, newestAnalyticsLocation: N } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
-        A = c.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
+        { analyticsLocations: T, newestAnalyticsLocation: A } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
+        N = c.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
         C = (0, a.e7)([g.Z], () => g.Z.getUserProfile(t.id)),
         R = null == C ? void 0 : C.application,
         P = (0, f.Z)({
@@ -68,7 +68,7 @@ function O(e) {
         w = (0, _.Z)({
             user: t,
             guildId: n,
-            location: N,
+            location: A,
             color: 'danger',
             onBlock: () =>
                 S({
@@ -84,7 +84,7 @@ function O(e) {
         D = (0, p.Z)({
             user: t,
             guildId: n,
-            location: N,
+            location: A,
             onIgnore: () =>
                 S({
                     action: 'IGNORE',
@@ -99,7 +99,7 @@ function O(e) {
         L = (0, h.Z)({
             user: t,
             guildId: n,
-            location: N,
+            location: A,
             color: 'danger',
             onAction: () =>
                 S({
@@ -109,7 +109,7 @@ function O(e) {
         }),
         x = (0, d.Z)({
             id: null == R ? void 0 : R.id,
-            label: b.NW.string(b.t['+NP/b2']),
+            label: b.intl.string(b.t['+NP/b2']),
             onSuccess: () =>
                 S({
                     action: 'COPY_APP_ID',
@@ -118,12 +118,12 @@ function O(e) {
         }),
         M = [
             [y],
-            A ? [P] : [],
+            N ? [P] : [],
             [D, w, L],
             [
                 (0, u.Z)({
                     application: R,
-                    label: b.NW.string(b.t.WqhZsr),
+                    label: b.intl.string(b.t.WqhZsr),
                     onSuccess: () =>
                         S({
                             action: 'COPY_APP_LINK',
@@ -143,7 +143,7 @@ function O(e) {
                       navId: 'user-bot-profile-overflow-menu',
                       onSelect: void 0,
                       onClose: t,
-                      'aria-label': b.NW.string(b.t.AXIHpa),
+                      'aria-label': b.intl.string(b.t.AXIHpa),
                       children: M.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t))
                   });
               },
@@ -155,7 +155,7 @@ function O(e) {
                               ref: I,
                               action: 'PRESS_OPTIONS',
                               icon: o.xhG,
-                              tooltipText: b.NW.string(b.t.UKOtz8)
+                              tooltipText: b.intl.string(b.t.UKOtz8)
                           },
                           e
                       )

@@ -79,7 +79,7 @@ function k(e) {
         _ = i.useMemo(() => (0, d.Z)(n), [n]),
         f = (0, u.KS)(n);
     return (0, a.jsx)(s.ua7, {
-        text: E.NW.string(E.t.nHjY9P),
+        text: E.intl.string(E.t.nHjY9P),
         shouldShow: !o && null != t,
         children: (e) =>
             (0, a.jsxs)(
@@ -92,7 +92,7 @@ function k(e) {
                     onClick: t,
                     children: [
                         (0, a.jsx)(s.ua7, {
-                            text: E.NW.string(E.t['48WXaW']),
+                            text: E.intl.string(E.t['48WXaW']),
                             shouldShow: r && _ && o && null != t,
                             children: (e) =>
                                 null != f
@@ -165,14 +165,14 @@ function Z(e) {
             });
 }
 function T(e) {
-    let { className: n, guild: t, channel: r, creator: i, name: o, entityType: c, description: d, imageLocation: u = 0, imageSource: _, isActive: b, isUserLurking: p, isJoined: f = !1, isMember: j = !1, isHub: E = !1, speakers: P, speakerCount: N, rsvped: S, canInvite: k, location: T, truncate: R, onContextMenu: U, onJoinClick: A, onJoinGuildClick: D, onGoToGuildClick: L, onRsvpClick: M, onStartClick: F, onInviteClick: B, onEndClick: H, onClick: G, isNew: z, guildEvent: W, eventPreview: q, recurrenceRule: V, recurrenceId: J } = e,
+    let { className: n, guild: t, channel: r, creator: i, name: o, entityType: c, description: d, imageLocation: u = 0, imageSource: _, isActive: b, isUserLurking: p, isJoined: f = !1, isMember: j = !1, isHub: E = !1, speakers: P, speakerCount: N, rsvped: S, canInvite: k, location: T, truncate: R, onContextMenu: U, onJoinClick: A, onJoinGuildClick: D, onGoToGuildClick: L, onRsvpClick: M, onStartClick: F, onInviteClick: B, onEndClick: H, onClick: G, isNew: z, guildEvent: q, eventPreview: V, recurrenceRule: W, recurrenceId: J } = e,
         X = (0, h.Q)(r, c),
         Y = c === I.WX.EXTERNAL,
         K = Y ? (e) => e.stopPropagation() : void 0,
         Q = [];
-    if (null != V && null != event) {
-        let e = (0, m.Ho)(V);
-        Q = (0, m.PJ)(4, e, new Date(W.scheduled_start_time));
+    if (null != W && null != event) {
+        let e = (0, m.Ho)(W);
+        Q = (0, m.PJ)(4, e, new Date(q.scheduled_start_time));
     }
     let $ = Q.length > 0;
     return (0, a.jsxs)(s.kL8, {
@@ -201,8 +201,8 @@ function T(e) {
                         guildId: null == t ? void 0 : t.id,
                         isHub: E,
                         isNew: z,
-                        guildEvent: W,
-                        eventPreview: q,
+                        guildEvent: q,
+                        eventPreview: V,
                         recurrenceId: J
                     }),
                     b &&
@@ -265,8 +265,8 @@ function T(e) {
             $ &&
                 (0, a.jsx)(C.Z, {
                     guildId: null == t ? void 0 : t.id,
-                    recurrenceRule: V,
-                    guildEventId: W.id,
+                    recurrenceRule: W,
+                    guildEventId: q.id,
                     onRecurrenceClick: G
                 })
         ]

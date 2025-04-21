@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(953529), n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(442837),
-    l = n(481060),
+    l = n(442837),
+    s = n(481060),
     a = n(570140),
     o = n(596454),
     c = n(524329),
@@ -14,39 +14,39 @@ var r = n(200651),
     h = n(62311);
 let f = (e) => {
         let { setWelcomeView: t, setShowCreateModal: i } = e,
-            s = [
+            l = [
                 {
                     emoji: '\uD83D\uDCAC',
-                    description: g.NW.string(g.t['s/ent7']),
-                    name: g.NW.string(g.t['v/gQ4e'])
+                    description: g.intl.string(g.t['s/ent7']),
+                    name: g.intl.string(g.t['v/gQ4e'])
                 },
                 {
                     emoji: '\uD83C\uDFF9',
-                    description: g.NW.string(g.t.Y9So0N),
-                    name: g.NW.string(g.t['7mUf0d'])
+                    description: g.intl.string(g.t.Y9So0N),
+                    name: g.intl.string(g.t['7mUf0d'])
                 },
                 {
                     emoji: '\uD83D\uDDDE',
-                    description: g.NW.string(g.t.wsJcws),
-                    name: g.NW.string(g.t.vrGLjo)
+                    description: g.intl.string(g.t.wsJcws),
+                    name: g.intl.string(g.t.vrGLjo)
                 }
             ];
-        return (0, r.jsxs)(l.hjN, {
-            title: g.NW.string(g.t['2rkmDg']),
+        return (0, r.jsxs)(s.hjN, {
+            title: g.intl.string(g.t['2rkmDg']),
             tag: 'h1',
             children: [
                 (0, r.jsxs)('div', {
                     className: p.welcomeDescription,
                     children: [
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: 'text-sm/normal',
-                            children: g.NW.format(g.t.a59UeH, {})
+                            children: g.intl.format(g.t.a59UeH, {})
                         }),
-                        (0, r.jsx)(l.zxk, {
+                        (0, r.jsx)(s.zxk, {
                             onClick: () => {
                                 i(!0), t(2);
                             },
-                            children: g.NW.string(g.t.RWdjPz)
+                            children: g.intl.string(g.t.RWdjPz)
                         })
                     ]
                 }),
@@ -64,7 +64,7 @@ let f = (e) => {
                                 (0, r.jsx)('div', { className: p.tooltipPointer }),
                                 (0, r.jsx)('div', {
                                     className: p.tooltip,
-                                    children: g.NW.string(g.t.aHNFSE)
+                                    children: g.intl.string(g.t.aHNFSE)
                                 })
                             ]
                         }),
@@ -78,24 +78,24 @@ let f = (e) => {
                                     width: 64,
                                     height: 64
                                 }),
-                                (0, r.jsx)(l.X6q, {
+                                (0, r.jsx)(s.X6q, {
                                     variant: 'heading-xl/semibold',
                                     className: p.header,
-                                    children: g.NW.format(g.t['5NJlXl'], {})
+                                    children: g.intl.format(g.t['5NJlXl'], {})
                                 }),
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
                                     className: h.guildDescription,
-                                    children: g.NW.string(g.t.Xvsuk5)
+                                    children: g.intl.string(g.t.Xvsuk5)
                                 }),
-                                (0, r.jsx)(l.vwX, {
+                                (0, r.jsx)(s.vwX, {
                                     className: h.choiceHeader,
-                                    children: g.NW.string(g.t['haj5+v'])
+                                    children: g.intl.string(g.t['haj5+v'])
                                 }),
                                 (0, r.jsx)('div', {
                                     className: h.options,
-                                    children: s.map((e) =>
+                                    children: l.map((e) =>
                                         (0, r.jsxs)(
                                             'div',
                                             {
@@ -108,12 +108,12 @@ let f = (e) => {
                                                     (0, r.jsxs)('div', {
                                                         className: h.optionTextContainer,
                                                         children: [
-                                                            (0, r.jsx)(l.Text, {
+                                                            (0, r.jsx)(s.Text, {
                                                                 variant: 'text-md/semibold',
                                                                 className: h.channelDescription,
                                                                 children: e.description
                                                             }),
-                                                            (0, r.jsx)(l.Text, {
+                                                            (0, r.jsx)(s.Text, {
                                                                 variant: 'text-xs/normal',
                                                                 color: 'header-secondary',
                                                                 children: '#'.concat(e.name)
@@ -134,7 +134,7 @@ let f = (e) => {
         });
     },
     x = () => {
-        let { guild: e } = (0, s.e7)([u.Z], () => u.Z.getProps()),
+        let { guild: e } = (0, l.e7)([u.Z], () => u.Z.getProps()),
             [t, n] = i.useState(0),
             [o, g] = i.useState(!1);
         switch (
@@ -149,7 +149,7 @@ let f = (e) => {
             t)
         ) {
             case 0:
-                return (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE });
+                return (0, r.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE });
             case 1:
                 return (0, r.jsx)(f, {
                     setWelcomeView: n,

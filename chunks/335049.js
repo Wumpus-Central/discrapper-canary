@@ -17,11 +17,11 @@ var r = n(200651),
     x = n(592125),
     j = n(271383),
     O = n(430824),
-    N = n(246946),
-    y = n(594174),
-    v = n(51144),
-    _ = n(981631),
-    C = n(388032),
+    y = n(246946),
+    v = n(594174),
+    _ = n(51144),
+    C = n(981631),
+    N = n(388032),
     I = n(555781);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -79,7 +79,7 @@ function P(e) {
                         e,
                         E(S({}, t), {
                             id: l,
-                            label: C.NW.string(C.t.oJ1Mu7)
+                            label: N.intl.string(N.t.oJ1Mu7)
                         })
                     );
             });
@@ -125,7 +125,7 @@ function w(e) {
             () => {
                 if (c === n)
                     return {
-                        name: C.NW.string(C.t['7YqSGx']),
+                        name: N.intl.string(N.t['7YqSGx']),
                         icon: u.VL1
                     };
                 let e = x.Z.getChannel(n),
@@ -170,7 +170,7 @@ function w(e) {
                             children: ['(', f, ')']
                         })
                       : null,
-                  l ? (0, r.jsx)(W, { tooltipText: a }) : null
+                  l ? (0, r.jsx)(k, { tooltipText: a }) : null
               ]
           });
 }
@@ -214,7 +214,7 @@ function T(e) {
                             width: 23,
                             height: 23,
                             className: o()(I.shield, I.image),
-                            color: null != (t = b.colorString) ? t : (0, c.Rf)(_.p6O)
+                            color: null != (t = b.colorString) ? t : (0, c.Rf)(C.p6O)
                         }),
                   (0, r.jsx)(u.Text, {
                       className: I.roleName,
@@ -222,13 +222,13 @@ function T(e) {
                       variant: 'text-md/normal',
                       children: b.name
                   }),
-                  s ? (0, r.jsx)(W, { tooltipText: m }) : null
+                  s ? (0, r.jsx)(k, { tooltipText: m }) : null
               ]
           });
 }
 function Z(e) {
     let { guild: t, id: n, isLocked: i, lockTooltipText: l, openEntryContextMenu: o } = e,
-        a = (0, d.e7)([y.default], () => y.default.getUser(n)),
+        a = (0, d.e7)([v.default], () => v.default.getUser(n)),
         s = (0, d.e7)(
             [j.ZP],
             () => {
@@ -237,7 +237,7 @@ function Z(e) {
             },
             [t.id, n]
         ),
-        c = (0, d.e7)([N.Z], () => N.Z.hidePersonalInformation);
+        c = (0, d.e7)([y.Z], () => y.Z.hidePersonalInformation);
     return null == a
         ? null
         : (0, r.jsxs)('div', {
@@ -261,13 +261,13 @@ function Z(e) {
                       : (0, r.jsx)(u.Text, {
                             className: I.tag,
                             variant: 'text-sm/normal',
-                            children: v.ZP.getUserTag(a)
+                            children: _.ZP.getUserTag(a)
                         }),
-                  i ? (0, r.jsx)(W, { tooltipText: l }) : null
+                  i ? (0, r.jsx)(k, { tooltipText: l }) : null
               ]
           });
 }
-function W(e) {
+function k(e) {
     let { tooltipText: t } = e;
     return (0, r.jsx)(u.ua7, {
         text: t,

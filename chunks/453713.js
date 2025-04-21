@@ -97,7 +97,7 @@ let x = s()((e) => {
                 [S, t, a]
             );
         return (0, r.jsx)(b.ua7, {
-            text: h.NW.string(h.t['/bUsx8']),
+            text: h.intl.string(h.t['/bUsx8']),
             'aria-label': !1,
             shouldShow: !O && j,
             children: (e) =>
@@ -200,7 +200,7 @@ let x = s()((e) => {
                                     variant: 'text-xs/medium',
                                     color: 'text-secondary',
                                     className: m.variantLabel,
-                                    children: d ? h.NW.string(h.t.wbgaj4) : E
+                                    children: d ? h.intl.string(h.t.wbgaj4) : E
                                 })
                             ]
                         })

@@ -7,7 +7,7 @@ var i = r(200651),
 function a(n) {
     let { transitionState: e, onClose: r, title: a, body: l, cta: d, closeLabel: h, onConfirm: x, iconVariant: u = 'warning' } = n,
         [g, k] = t.useState(!1),
-        z = null != a ? a : c.NW.string(c.t.HMrgcn);
+        z = null != a ? a : c.intl.string(c.t.HMrgcn);
     return (0, i.jsxs)(s.Y0X, {
         size: s.CgR.DYNAMIC,
         transitionState: e,

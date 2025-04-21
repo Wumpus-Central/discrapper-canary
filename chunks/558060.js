@@ -100,13 +100,13 @@ function h(e) {
                         ? (e) =>
                               (0, r.jsx)(i.Text, {
                                   variant: 'text-xs/medium',
-                                  children: d.NW.format(d.t.Sv8iiY, {
+                                  children: d.intl.format(d.t.Sv8iiY, {
                                       price: e,
                                       subscribeNowHook: (e) => (0, r.jsx)(c.F, { text: e })
                                   })
                               })
                         : x
-                          ? (e) => d.NW.formatToPlainString(d.t.W3gIWF, { price: e })
+                          ? (e) => d.intl.formatToPlainString(d.t.W3gIWF, { price: e })
                           : void 0,
                     className: a()(b.price, {
                         [b.dimmed]: !n,
@@ -114,8 +114,8 @@ function h(e) {
                     }),
                     variant: n ? void 0 : 'text-xs/semibold',
                     icon: (0, r.jsx)(i.ua7, {
-                        text: d.NW.string(d.t.MPFyJy),
-                        'aria-label': d.NW.string(d.t.X3Ekj4),
+                        text: d.intl.string(d.t.MPFyJy),
+                        'aria-label': d.intl.string(d.t.X3Ekj4),
                         children: (e) => {
                             var t = p(
                                 {},

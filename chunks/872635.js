@@ -173,13 +173,13 @@ let b = i.forwardRef(function (e, t) {
                 y: Math.max(v, Math.min(p.y, d.y))
             };
         }, [o, _, a]),
-        [N, A] = i.useState(0),
+        [A, N] = i.useState(0),
         [C, R] = i.useState(0);
     if (
         (i.useLayoutEffect(() => {
             if (null == S || null == T || null == f.current) return;
             let e = f.current.getBoundingClientRect();
-            R(e.width / 2), A(e.height + 12);
+            R(e.width / 2), N(e.height + 12);
         }, [S, T]),
         null == S || null == T)
     )
@@ -193,7 +193,7 @@ let b = i.forwardRef(function (e, t) {
                   ref: f,
                   className: g.toolbar,
                   style: {
-                      top: T - N,
+                      top: T - A,
                       left: S - C
                   },
                   onMouseDown: (e) => {

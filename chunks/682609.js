@@ -4,8 +4,8 @@ n(192379);
 var o = n(98278),
     c = n(790527),
     l = n(474936),
-    a = n(981631),
-    i = n(388032),
+    i = n(981631),
+    a = n(388032),
     u = n(330226);
 function f(e) {
     var { channel: t, onClose: n } = e,
@@ -28,7 +28,7 @@ function f(e) {
             }
             return o;
         })(e, ['channel', 'onClose']);
-    let s = i.NW.format(i.t.AVVUsb, {
+    let s = a.intl.format(a.t.AVVUsb, {
         onLearnMore: function () {
             n(), (0, o.z)(!0);
         }
@@ -63,13 +63,13 @@ function f(e) {
             {
                 artURL: u.Z,
                 type: l.cd.MESSAGE_LENGTH_UPSELL,
-                title: i.NW.string(i.t.SeL3eX),
+                title: a.intl.string(a.t.SeL3eX),
                 body: s,
                 glowUp: s,
-                analyticsSource: { page: (null == t ? void 0 : t.getGuildId()) != null ? a.ZY5.GUILD_CHANNEL : (null == t ? void 0 : t.isGroupDM()) || (null == t ? void 0 : t.isPrivate()) ? a.ZY5.DM_CHANNEL : null },
+                analyticsSource: { page: (null == t ? void 0 : t.getGuildId()) != null ? i.ZY5.GUILD_CHANNEL : (null == t ? void 0 : t.isGroupDM()) || (null == t ? void 0 : t.isPrivate()) ? i.ZY5.DM_CHANNEL : null },
                 analyticsLocation: {
-                    section: a.jXE.MESSAGE_LENGTH_UPSELL_MODAL,
-                    object: a.qAy.BUTTON_CTA
+                    section: i.jXE.MESSAGE_LENGTH_UPSELL_MODAL,
+                    object: i.qAy.BUTTON_CTA
                 },
                 onClose: n
             },

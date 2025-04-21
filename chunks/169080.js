@@ -57,7 +57,7 @@ function E(e) {
                     (0, r.jsx)(l.Text, {
                         className: m.title,
                         variant: 'text-md/semibold',
-                        children: h.NW.format(h.t.tluICw, {
+                        children: h.intl.format(h.t.tluICw, {
                             username: S,
                             rank: O
                         })

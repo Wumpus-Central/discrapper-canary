@@ -28,7 +28,7 @@ var r = n(98405),
     T = l(function () {
         return '"\uDF06\uD834"' !== h('\uDF06\uD834') || '"\uDEAD"' !== h('\uDEAD');
     }),
-    N = function (e, t) {
+    A = function (e, t) {
         var n = d(arguments),
             r = f(t);
         if (!(!c(r) && (void 0 === e || u(e))))
@@ -39,7 +39,7 @@ var r = n(98405),
                 a(h, null, n)
             );
     },
-    A = function (e, t, n) {
+    N = function (e, t, n) {
         var r = g(n, t - 1),
             i = g(n, t + 1);
         return (m(O, e) && !m(I, i)) || (m(I, e) && !m(O, r)) ? '\\u' + y(E(e, 0), 16) : e;
@@ -55,8 +55,8 @@ h &&
         {
             stringify: function (e, t, n) {
                 var r = d(arguments),
-                    i = a(S ? N : h, null, r);
-                return T && 'string' == typeof i ? b(i, v, A) : i;
+                    i = a(S ? A : h, null, r);
+                return T && 'string' == typeof i ? b(i, v, N) : i;
             }
         }
     );

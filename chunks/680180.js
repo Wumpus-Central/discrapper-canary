@@ -1,21 +1,21 @@
 n.d(t, { Z: () => d });
 var r = n(200651),
-    a = n(192379),
-    i = n(120356),
-    l = n.n(i),
+    i = n(192379),
+    a = n(120356),
+    l = n.n(a),
     s = n(481060),
     o = n(49898),
     c = n(109188);
 function d(e) {
-    let { state: t, query: n, placeholder: i, onTextChange: d, onCollapsedClick: u, onClear: p, onBlur: m, onSubmit: h } = e,
-        g = a.useRef(null),
-        _ = a.useCallback(
+    let { state: t, query: n, placeholder: a, onTextChange: d, onCollapsedClick: u, onClear: p, onBlur: m, onSubmit: h } = e,
+        g = i.useRef(null),
+        _ = i.useCallback(
             (e) => {
                 'Enter' === e.key && h();
             },
             [h]
         ),
-        f = a.useCallback(() => {
+        f = i.useCallback(() => {
             u(),
                 setTimeout(() => {
                     var e;
@@ -36,7 +36,7 @@ function d(e) {
               className: l()(c.searchBar, { [c.searchFloating]: t === o.GlobalDiscoverySearchBarState.FLOATING }),
               size: s.E1j.Sizes.MEDIUM,
               query: n,
-              placeholder: i,
+              placeholder: a,
               onChange: d,
               onClear: p,
               onKeyDown: _,

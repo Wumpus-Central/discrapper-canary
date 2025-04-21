@@ -34,10 +34,10 @@ let d = 5,
     I = 0,
     S = !1,
     T = null;
-function N() {
+function A() {
     (f = null), (_ = new Set()), (h = !1), (m = new Set()), (g = new Set()), (E = new Map()), (b = 0), (y = null), (v = []), (O = !1), (I = 0), (S = !1), (T = null), (p = new Map());
 }
-let A = () => !0;
+let N = () => !0;
 function C(e) {
     let {} = e;
     (T = null), (h = !0);
@@ -98,7 +98,7 @@ function V() {
 }
 class Z extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(s.default), this.syncWith([s.default], A);
+        this.waitFor(s.default), this.syncWith([s.default], N);
     }
     checkAndFetchReferralsRemaining() {
         null == f && !h && b < d && (null == y || y < Date.now()) && (0, l.C$)();
@@ -156,5 +156,5 @@ let H = new Z(o.Z, {
     LOAD_MESSAGES_SUCCESS: j,
     MESSAGE_CREATE: k,
     LOAD_MESSAGES_AROUND_SUCCESS: j,
-    LOGOUT: N
+    LOGOUT: A
 });

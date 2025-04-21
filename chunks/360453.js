@@ -25,11 +25,11 @@ let f = (e) => {
               onClick: () => {
                   s.Z.open(n, d.pNK.GUILD_PREMIUM);
               },
-              message: p.NW.string(p.t.uogVVl),
+              message: p.intl.string(p.t.uogVVl),
               trackingSource: d.PsQ.GRACE_PERIOD_NOTICE,
               type: d.vID.GUILD_BOOSTING_GRACE_PERIOD,
               image: h,
-              cta: p.NW.string(p.t['4E1M8P']),
+              cta: p.intl.string(p.t['4E1M8P']),
               ctaColor: l.Ttl.PRIMARY
           });
 };

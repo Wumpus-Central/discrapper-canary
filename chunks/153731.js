@@ -2,8 +2,8 @@ r.d(t, { Z: () => B }), r(539854), r(388685), r(361932), r(187205), r(290780);
 var n = r(200651),
     a = r(192379),
     i = r(392711),
-    s = r.n(i),
-    l = r(442837),
+    l = r.n(i),
+    s = r(442837),
     o = r(481060),
     c = r(304680),
     d = r(503089),
@@ -16,13 +16,13 @@ var n = r(200651),
     f = r(226961),
     v = r(594174),
     D = r(51144),
-    N = r(189648),
-    b = r(775194),
-    E = r(499848),
-    j = r(724392),
-    C = r(442580),
-    Z = r(770800),
-    P = r(981631),
+    b = r(189648),
+    E = r(775194),
+    j = r(499848),
+    C = r(724392),
+    Z = r(442580),
+    P = r(770800),
+    N = r(981631),
     R = r(65154),
     x = r(388032),
     F = r(442122);
@@ -64,31 +64,31 @@ function k(e, t, r, n, a) {
     let i = [];
     if (null == t) return i;
     let {
-        transport: l,
+        transport: s,
         rtp: { inbound: o, outbound: d },
         camera: m
     } = t;
     if (
         (i.push({
             section: u.ID.HEADER,
-            label: x.NW.formatToPlainString(x.t.PK5fOD, { context: e })
+            label: x.intl.formatToPlainString(x.t.PK5fOD, { context: e })
         }),
-        null != l &&
+        null != s &&
             i.push({
-                section: (0, f.J$)(e, P._s_.TRANSPORT, r),
-                label: x.NW.string(x.t.wU9INz),
-                element: Z.Z,
+                section: (0, f.J$)(e, N._s_.TRANSPORT, r),
+                label: x.intl.string(x.t.wU9INz),
+                element: P.Z,
                 elementProps: {
                     context: e,
                     index: r
                 }
             }),
         null == d ||
-            s().isEmpty(d) ||
+            l().isEmpty(d) ||
             i.push({
-                section: (0, f.J$)(e, P._s_.OUTBOUND, r),
-                label: x.NW.string(x.t['3u0gIC']),
-                element: j.Z,
+                section: (0, f.J$)(e, N._s_.OUTBOUND, r),
+                label: x.intl.string(x.t['3u0gIC']),
+                element: C.Z,
                 elementProps: {
                     context: e,
                     index: r
@@ -96,32 +96,32 @@ function k(e, t, r, n, a) {
             }),
         null != m &&
             i.push({
-                section: (0, f.J$)(e, P._s_.CAMERA, r),
-                label: x.NW.string(x.t['2AGBWF']),
-                element: N.Z,
+                section: (0, f.J$)(e, N._s_.CAMERA, r),
+                label: x.intl.string(x.t['2AGBWF']),
+                element: b.Z,
                 elementProps: {
                     context: e,
                     index: r,
                     camera: m
                 }
             }),
-        null != o && !s().isEmpty(o))
+        null != o && !l().isEmpty(o))
     ) {
         let t = [];
         Object.keys(o).forEach((i) => {
-            let s = v.default.getUser(i),
-                l = y.ZP.getNick(a, i),
+            let l = v.default.getUser(i),
+                s = y.ZP.getNick(a, i),
                 d = (0, f.J$)(e, i, r);
             null != o[i] &&
                 o[i].length > 0 &&
                 t.push({
                     section: d,
-                    label: null != s ? S(s, l, a) : I(null != l ? l : i),
-                    ariaLabel: null != s ? s.tag : i,
+                    label: null != l ? S(l, s, a) : I(null != s ? s : i),
+                    ariaLabel: null != l ? l.tag : i,
                     onClick: () => {
                         c.zc(d);
                     },
-                    element: E.Z,
+                    element: j.Z,
                     elementProps: {
                         context: e,
                         index: r,
@@ -132,7 +132,7 @@ function k(e, t, r, n, a) {
             t.length > 0 &&
                 (i.push({
                     section: u.ID.HEADER,
-                    label: x.NW.string(x.t.SJmZam)
+                    label: x.intl.string(x.t.SJmZam)
                 }),
                 i.push(...t));
     }
@@ -140,25 +140,25 @@ function k(e, t, r, n, a) {
 }
 function B() {
     var e, t;
-    let { defaultStats: r, streamStats: i } = (0, l.e7)(
+    let { defaultStats: r, streamStats: i } = (0, s.e7)(
             [f.ZP],
             () => ({
                 defaultStats: f.ZP.getAllStats(R.Yn.DEFAULT),
                 streamStats: f.ZP.getAllStats(R.Yn.STREAM)
             }),
             [],
-            l.pF
+            s.pF
         ),
-        s = (0, l.e7)([g.Z, h.Z], () => h.Z.getChannel(g.Z.getChannelId())),
+        l = (0, s.e7)([g.Z, h.Z], () => h.Z.getChannel(g.Z.getChannelId())),
         m = null == (e = r.concat(i).find((e) => null != e.screenshare)) ? void 0 : e.screenshare,
         y = null == (t = i.find((e) => null != e.clips)) ? void 0 : t.clips,
-        v = (0, l.e7)([p.Z], () => p.Z.theme),
-        D = (0, l.e7)([p.Z], () => (p.Z.darkSidebar ? P.BRd.DARK : void 0)),
-        N = (0, l.e7)([f.ZP], () => f.ZP.getSection()),
-        E = (function (e) {
-            let { defaultStats: t, streamStats: r, videoStreams: a, screenshare: i, clips: s, channel: l, connectionState: c } = e,
-                d = t.flatMap((e, t) => k(R.Yn.DEFAULT, e, t, a, null == l ? void 0 : l.getGuildId())),
-                m = r.flatMap((e, t) => k(R.Yn.STREAM, e, t, a, null == l ? void 0 : l.getGuildId())),
+        v = (0, s.e7)([p.Z], () => p.Z.theme),
+        D = (0, s.e7)([p.Z], () => (p.Z.darkSidebar ? N.BRd.DARK : void 0)),
+        b = (0, s.e7)([f.ZP], () => f.ZP.getSection()),
+        j = (function (e) {
+            let { defaultStats: t, streamStats: r, videoStreams: a, screenshare: i, clips: l, channel: s, connectionState: c } = e,
+                d = t.flatMap((e, t) => k(R.Yn.DEFAULT, e, t, a, null == s ? void 0 : s.getGuildId())),
+                m = r.flatMap((e, t) => k(R.Yn.STREAM, e, t, a, null == s ? void 0 : s.getGuildId())),
                 p = [],
                 h = [],
                 y = { section: u.ID.DIVIDER };
@@ -166,22 +166,22 @@ function B() {
                 null != i &&
                     (p.push(y),
                     p.push({
-                        section: P._s_.SCREENSHARE,
-                        label: x.NW.string(x.t['gWbr/f']),
-                        element: C.Z,
+                        section: N._s_.SCREENSHARE,
+                        label: x.intl.string(x.t['gWbr/f']),
+                        element: Z.Z,
                         elementProps: { screenshare: i }
                     })),
-                null != s &&
+                null != l &&
                     (h.push(y),
                     h.push({
-                        section: P._s_.CLIPS,
-                        label: x.NW.string(x.t.MKrFKC),
-                        element: b.Z,
-                        elementProps: { clips: s }
+                        section: N._s_.CLIPS,
+                        label: x.intl.string(x.t.MKrFKC),
+                        element: E.Z,
+                        elementProps: { clips: l }
                     })),
                 m.length > 0 && m.unshift(y),
                 [
-                    ...(null != l
+                    ...(null != s
                         ? [
                               {
                                   section: u.ID.CUSTOM,
@@ -190,7 +190,7 @@ function B() {
                                       (0, n.jsx)(o.X6q, {
                                           className: F.channelName,
                                           variant: 'heading-lg/semibold',
-                                          children: l.name
+                                          children: s.name
                                       })
                               }
                           ]
@@ -202,7 +202,7 @@ function B() {
                             (0, n.jsx)(o.X6q, {
                                 className: F.channelName,
                                 variant: 'heading-md/normal',
-                                children: c === P.hes.RTC_CONNECTED ? 'Connected' : 'Disconnected'
+                                children: c === N.hes.RTC_CONNECTED ? 'Connected' : 'Disconnected'
                             })
                     },
                     ...d,
@@ -214,11 +214,11 @@ function B() {
         })({
             defaultStats: r,
             streamStats: i,
-            videoStreams: (0, l.e7)([f.ZP], () => f.ZP.getVideoStreams()),
+            videoStreams: (0, s.e7)([f.ZP], () => f.ZP.getVideoStreams()),
             screenshare: m,
             clips: y,
-            channel: s,
-            connectionState: (0, l.e7)([g.Z], () => g.Z.getState())
+            channel: l,
+            connectionState: (0, s.e7)([g.Z], () => g.Z.getState())
         });
     return (
         a.useEffect(
@@ -230,9 +230,9 @@ function B() {
         (0, n.jsx)(d.ZP, {
             theme: v,
             sidebarTheme: D,
-            section: N,
+            section: b,
             onSetSection: c.zc,
-            sections: E
+            sections: j
         })
     );
 }

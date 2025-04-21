@@ -27,7 +27,7 @@ let o = 60,
             p = d(),
             h = (e, t) => {
                 let r = _(e, f, n ? p : void 0);
-                return null == r ? null : 'string' == typeof r ? r : a.NW.formatToPlainString(r, { count: t });
+                return null == r ? null : 'string' == typeof r ? r : a.intl.formatToPlainString(r, { count: t });
             };
         if (r < o) {
             let e = (null == f ? void 0 : f.seconds) != null ? h('seconds', r) : h('minutes', 1);

@@ -20,19 +20,19 @@ var i = n(120356),
     y = n(943549);
 let v = (e) => {
     let { user: t, nameplate: n, nameplateData: i, className: v, isHighlighted: O, showStatus: I, showWumpus: S, isPurchased: T = !1 } = e,
-        N = (0, o.e7)([_.Z], () => (0, s.wj)(_.Z.theme)),
-        A = null != n ? (0, m.EU)(n) : i,
+        A = (0, o.e7)([_.Z], () => (0, s.wj)(_.Z.theme)),
+        N = null != n ? (0, m.EU)(n) : i,
         C = (0, o.e7)([p.Z], () => p.Z.getStatus(t.id)),
-        R = N ? '#706F74' : '#aaaab2';
+        R = A ? '#706F74' : '#aaaab2';
     return (0, r.jsxs)('div', {
         className: a()(v, E.nameplatePreview, { [E.nameplatePurchased]: T && !O }),
-        style: { color: N ? 'white' : 'black' },
+        style: { color: A ? 'white' : 'black' },
         children: [
-            null != A &&
+            null != N &&
                 (0, r.jsx)(
                     f.Z,
                     {
-                        nameplate: A,
+                        nameplate: N,
                         hovered: O,
                         placement: d.i.PREVIEW
                     },
@@ -59,9 +59,9 @@ let v = (e) => {
                         className: a()(E.avatarContainer, S && E.avatarVisible),
                         children: (0, r.jsx)(c.Z, {
                             avatar: (0, r.jsx)(l.qEK, {
-                                src: N ? b : y,
+                                src: A ? b : y,
                                 size: l.EFr.SIZE_32,
-                                'aria-label': g.NW.string(g.t.cqpybG),
+                                'aria-label': g.intl.string(g.t.cqpybG),
                                 status: l.Skl.ONLINE,
                                 statusColor: R
                             }),

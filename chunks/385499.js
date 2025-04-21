@@ -64,30 +64,30 @@ let h = (e) => {
     let t,
         { invertColor: n = !1, type: i = l.Hb.BOT, className: d, verified: _, hideIcon: h = !1, useRemSizes: m = !1, children: g = [] } = e,
         E = null,
-        b = c.NW.string(c.t.g76OcH);
+        b = c.intl.string(c.t.g76OcH);
     switch (i) {
         case l.Hb.SYSTEM_DM:
         case l.Hb.OFFICIAL:
-            (_ = !0), (b = c.NW.string(c.t['7s687u'])), (E = c.NW.string(c.t.lKQ7Wl));
+            (_ = !0), (b = c.intl.string(c.t['7s687u'])), (E = c.intl.string(c.t.lKQ7Wl));
             break;
         case l.Hb.SERVER:
-            E = c.NW.string(c.t.PuJGuL);
+            E = c.intl.string(c.t.PuJGuL);
             break;
         case l.Hb.ORIGINAL_POSTER:
-            E = c.NW.string(c.t.fyE8sL);
+            E = c.intl.string(c.t.fyE8sL);
             break;
         case l.Hb.STAFF_ONLY_DM:
-            E = c.NW.string(c.t.oMx98P);
+            E = c.intl.string(c.t.oMx98P);
             break;
         case l.Hb.AI:
-            (_ = !0), (b = c.NW.string(c.t.d5YwQE)), (E = c.NW.string(c.t.pLTJZG));
+            (_ = !0), (b = c.intl.string(c.t.d5YwQE)), (E = c.intl.string(c.t.pLTJZG));
             break;
         case l.Hb.REMIX:
-            (_ = !1), (E = c.NW.string(c.t.uXDG39));
+            (_ = !1), (E = c.intl.string(c.t.uXDG39));
             break;
         case l.Hb.BOT:
         default:
-            E = c.NW.string(c.t['9RNkeH']);
+            E = c.intl.string(c.t['9RNkeH']);
     }
     let y = i === l.Hb.ORIGINAL_POSTER,
         v = i === l.Hb.REMIX,
@@ -128,13 +128,13 @@ let h = (e) => {
     switch (i) {
         case l.Hb.REMIX:
             return (0, r.jsx)(o.u, {
-                text: c.NW.string(c.t.xb0str),
+                text: c.intl.string(c.t.xb0str),
                 position: 'top',
                 children: (e) => I(e)
             });
         case l.Hb.ORIGINAL_POSTER:
             return (0, r.jsx)(o.u, {
-                text: c.NW.string(c.t.uN6Emp),
+                text: c.intl.string(c.t.uN6Emp),
                 position: 'top',
                 children: (e) => I(e)
             });

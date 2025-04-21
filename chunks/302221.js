@@ -2,7 +2,7 @@ n.d(t, {
     AZ: () => P,
     BM: () => j,
     Cj: () => f,
-    WY: () => A,
+    WY: () => N,
     YD: () => x,
     ZJ: () => m,
     aD: () => p,
@@ -168,45 +168,45 @@ d(
     c(
         {},
         {
-            '#1abc9c': () => s.NW.string(s.t.fBawRk),
-            '#2ecc71': () => s.NW.string(s.t.hvv3QU),
-            '#3498db': () => s.NW.string(s.t.JwX6JS),
-            '#9b59b6': () => s.NW.string(s.t.H3xljo),
-            '#e91e63': () => s.NW.string(s.t.X9izyc),
-            '#11806a': () => s.NW.string(s.t.Kw7K29),
-            '#1f8b4c': () => s.NW.string(s.t.z5AZKS),
-            '#206694': () => s.NW.string(s.t.JqBqKy),
-            '#71368a': () => s.NW.string(s.t.edPgnJ),
-            '#ad1457': () => s.NW.string(s.t.ti7gsb),
-            '#f1c40f': () => s.NW.string(s.t['H9jz+f']),
-            '#e67e22': () => s.NW.string(s.t.UmsfHB),
-            '#e74c3c': () => s.NW.string(s.t.GoDlAA),
-            '#95a5a6': () => s.NW.string(s.t['9GpDYG']),
-            '#607d8b': () => s.NW.string(s.t.lwrNQE),
-            '#c27c0e': () => s.NW.string(s.t.Lf10GB),
-            '#a84300': () => s.NW.string(s.t['H+AjY2']),
-            '#992d22': () => s.NW.string(s.t.XTkde3),
-            '#979c9f': () => s.NW.string(s.t.Ve0Lio),
-            '#546e7a': () => s.NW.string(s.t.BwbOAA),
-            '#99aab5': () => s.NW.string(s.t['/po5rK'])
+            '#1abc9c': () => s.intl.string(s.t.fBawRk),
+            '#2ecc71': () => s.intl.string(s.t.hvv3QU),
+            '#3498db': () => s.intl.string(s.t.JwX6JS),
+            '#9b59b6': () => s.intl.string(s.t.H3xljo),
+            '#e91e63': () => s.intl.string(s.t.X9izyc),
+            '#11806a': () => s.intl.string(s.t.Kw7K29),
+            '#1f8b4c': () => s.intl.string(s.t.z5AZKS),
+            '#206694': () => s.intl.string(s.t.JqBqKy),
+            '#71368a': () => s.intl.string(s.t.edPgnJ),
+            '#ad1457': () => s.intl.string(s.t.ti7gsb),
+            '#f1c40f': () => s.intl.string(s.t['H9jz+f']),
+            '#e67e22': () => s.intl.string(s.t.UmsfHB),
+            '#e74c3c': () => s.intl.string(s.t.GoDlAA),
+            '#95a5a6': () => s.intl.string(s.t['9GpDYG']),
+            '#607d8b': () => s.intl.string(s.t.lwrNQE),
+            '#c27c0e': () => s.intl.string(s.t.Lf10GB),
+            '#a84300': () => s.intl.string(s.t['H+AjY2']),
+            '#992d22': () => s.intl.string(s.t.XTkde3),
+            '#979c9f': () => s.intl.string(s.t.Ve0Lio),
+            '#546e7a': () => s.intl.string(s.t.BwbOAA),
+            '#99aab5': () => s.intl.string(s.t['/po5rK'])
         }
     ),
-    { '#5865f2': () => s.NW.string(s.t['Cn/LJy']) }
+    { '#5865f2': () => s.intl.string(s.t['Cn/LJy']) }
 );
 let v = 30,
     O = 80,
     I = 20,
     S = 30,
     T = 40,
-    N = 15;
-function A(e) {
+    A = 15;
+function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3,
         n = [],
         { h: r, s: i, l: a } = h(e[0], e[1], e[2]),
         o = r,
         s = i,
         l = a;
-    s < v && (s += S), l > O && (l -= T), l < I && (l += N);
+    s < v && (s += S), l > O && (l -= T), l < I && (l += A);
     let c = 360 / (t + 1);
     for (; n.length < t; ) {
         (o -= c) < 0 && (o += 360);

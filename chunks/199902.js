@@ -17,8 +17,8 @@ var c,
     I = n(496675),
     S = n(19780),
     T = n(944486),
-    N = n(979651),
-    A = n(981631),
+    A = n(979651),
+    N = n(981631),
     C = n(70722);
 function R(e, t, n) {
     return (
@@ -80,11 +80,11 @@ function k() {
 }
 function j(e) {
     var t;
-    null == i[e.ownerId] && (i[e.ownerId] = {}), (i[e.ownerId][null != (t = e.guildId) ? t : A.kod] = e);
+    null == i[e.ownerId] && (i[e.ownerId] = {}), (i[e.ownerId][null != (t = e.guildId) ? t : N.kod] = e);
 }
 function U(e, t) {
     var n;
-    let r = null != t ? t : A.kod;
+    let r = null != t ? t : N.kod;
     return (null == (n = i[e]) ? void 0 : n[r]) != null && (delete i[e][r], !0);
 }
 function G(e) {
@@ -126,7 +126,7 @@ function V(e) {
 function Z(e) {
     let { streamKey: t } = e,
         n = (0, p.my)(t);
-    r.delete(t), r.set(t, D(P({}, n), { state: A.jm8.CONNECTING })), n.ownerId === b.default.getId() && (x[n.channelId] = !1);
+    r.delete(t), r.set(t, D(P({}, n), { state: N.jm8.CONNECTING })), n.ownerId === b.default.getId() && (x[n.channelId] = !1);
 }
 function H(e) {
     var t;
@@ -153,10 +153,10 @@ function H(e) {
             guildId: i,
             channelId: a,
             ownerId: b.default.getId(),
-            state: A.jm8.CONNECTING
+            state: N.jm8.CONNECTING
         });
 }
-function W(e) {
+function Y(e) {
     for (let t of e.applications) {
         let e = _.ZP.getGameForPID(t.id);
         if (null != e) return e;
@@ -167,9 +167,9 @@ function W(e) {
             if (null != e) return e;
         }
 }
-function Y(e) {
+function W(e) {
     let { existing: t, content: n } = e;
-    if (null == n || ((s = null == (l = W(n)) ? void 0 : l.pid), !t)) return !1;
+    if (null == n || ((s = null == (l = Y(n)) ? void 0 : l.pid), !t)) return !1;
     let r = (0, g.Z)(n),
         i = {
             pid: s,
@@ -189,7 +189,7 @@ function K(e) {
 }
 function z(e) {
     let { streamKey: t, region: n, viewerIds: i, paused: o } = e;
-    r.set(t, D(P({}, (0, p.my)(t)), { state: o ? A.jm8.PAUSED : A.jm8.ACTIVE })),
+    r.set(t, D(P({}, (0, p.my)(t)), { state: o ? N.jm8.PAUSED : N.jm8.ACTIVE })),
         (a[t] = {
             streamKey: t,
             region: n,
@@ -204,7 +204,7 @@ function Q(e) {
     let { id: t, channelId: n } = e;
     (L = t),
         Array.from(r.values()).forEach((e) => {
-            (0, p.V9)(e) !== L && e.state === A.jm8.ENDED && G((0, p.V9)(e));
+            (0, p.V9)(e) !== L && e.state === N.jm8.ENDED && G((0, p.V9)(e));
         }),
         null != t && (0, p.DB)(t) && t.includes(b.default.getId()) && (x[n] = !1);
 }
@@ -213,10 +213,10 @@ function X(e) {
     delete a[t];
     let s = r.get(t);
     if (null == s) return !1;
-    let l = A.jm8.ENDED;
-    if (i) l = A.jm8.RECONNECTING;
-    else if (o === A.si2.UNAUTHORIZED) l = A.jm8.FAILED;
-    else if (o === A.si2.SAFETY_GUILD_RATE_LIMITED) {
+    let l = N.jm8.ENDED;
+    if (i) l = N.jm8.RECONNECTING;
+    else if (o === N.si2.UNAUTHORIZED) l = N.jm8.FAILED;
+    else if (o === N.si2.SAFETY_GUILD_RATE_LIMITED) {
         let { guildId: e } = (0, p.my)(t);
         n
             .e('76731')
@@ -225,28 +225,28 @@ function X(e) {
                 let { default: n } = t;
                 n(e);
             }),
-            (l = A.jm8.ENDED);
+            (l = N.jm8.ENDED);
     }
-    r.set(t, D(P({}, s), { state: l })), l === A.jm8.ENDED && L !== t && G(t);
+    r.set(t, D(P({}, s), { state: l })), l === N.jm8.ENDED && L !== t && G(t);
 }
 function J(e) {
     let { streamKey: t } = e,
         n = r.get(t);
     if (null == n) return !1;
-    r.set(t, D(P({}, n), { state: A.jm8.FAILED }));
+    r.set(t, D(P({}, n), { state: N.jm8.FAILED }));
 }
 function $(e) {
     let { streamKey: t, state: n } = e;
     if (null == t) return !1;
     let i = r.get(t);
-    if (null == i || i.state === A.jm8.ENDED) return !1;
+    if (null == i || i.state === N.jm8.ENDED) return !1;
     let a = i.state;
     switch (n) {
-        case A.hes.DISCONNECTED:
-            a = A.jm8.RECONNECTING;
+        case N.hes.DISCONNECTED:
+            a = N.jm8.RECONNECTING;
             break;
-        case A.hes.RTC_CONNECTED:
-            a = A.jm8.ACTIVE;
+        case N.hes.RTC_CONNECTED:
+            a = N.jm8.ACTIVE;
     }
     if (a === i.state) return !1;
     r.set(t, D(P({}, i), { state: a }));
@@ -261,12 +261,12 @@ function et(e) {
 }
 function en(e, t) {
     let n = y.Z.getBasicChannel(t);
-    return e === C.lo.CALL || (null != n && I.Z.canBasicChannel(A.S7T.VIEW_CHANNEL, n));
+    return e === C.lo.CALL || (null != n && I.Z.canBasicChannel(N.S7T.VIEW_CHANNEL, n));
 }
 function er(e) {
     if (en(e.streamType, e.channelId)) return !0;
     let t = y.Z.getBasicChannel(e.channelId);
-    return null != t && (0, h.p9)(t, N.Z, v.Z, I.Z, f.Z)[0];
+    return null != t && (0, h.p9)(t, A.Z, v.Z, I.Z, f.Z)[0];
 }
 k();
 class ei extends (c = u.ZP.PersistedStore) {
@@ -342,7 +342,7 @@ class ei extends (c = u.ZP.PersistedStore) {
     getStreamForUser(e, t) {
         var n;
         if (!(0, m.Z)(O.Z)) return null;
-        let r = null == (n = i[e]) ? void 0 : n[null != t ? t : A.kod];
+        let r = null == (n = i[e]) ? void 0 : n[null != t ? t : N.kod];
         return null != r && er(r) ? r : null;
     }
     getRTCStream(e) {
@@ -382,7 +382,7 @@ class ei extends (c = u.ZP.PersistedStore) {
 }
 R(ei, 'displayName', 'ApplicationStreamingStore'), R(ei, 'persistKey', 'ApplicationStreamingStore');
 let ea = new ei(d.Z, {
-    NATIVE_SCREEN_SHARE_PICKER_UPDATE: Y,
+    NATIVE_SCREEN_SHARE_PICKER_UPDATE: W,
     OVERLAY_INITIALIZE: F,
     VOICE_STATE_UPDATES: V,
     STREAM_WATCH: Z,

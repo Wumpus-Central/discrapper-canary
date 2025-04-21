@@ -18,7 +18,7 @@ function E(e, t) {
         b = (0, o.NK)(null != g ? g : null);
     if (null == E || null == g) return null;
     let y = null != b && b.actions.hasOwnProperty(a.d.SET_COMPLETED) ? a.d.UNSET_COMPLETED : a.d.SET_COMPLETED,
-        _ = y === a.d.SET_COMPLETED ? O.NW.string(O.t.VWNyUl) : O.NW.string(O.t.l9GqxM);
+        _ = y === a.d.SET_COMPLETED ? O.intl.string(O.t.VWNyUl) : O.intl.string(O.t.l9GqxM);
     return n && null != t
         ? (0, r.jsx)(
               i.sNh,

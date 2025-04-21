@@ -61,7 +61,7 @@ let _ = (e) => {
             : [
                   {
                       iconPath: c.eF,
-                      text: u.NW.formatToPlainString(u.t.HtifnJ, { count: n })
+                      text: u.intl.formatToPlainString(u.t.HtifnJ, { count: n })
                   }
               ];
     },

@@ -303,7 +303,7 @@
                                     return 'rgba(' + ((16711680 & e) >>> 16) + ',' + ((65280 & e) >>> 8) + ',' + ((255 & e) >>> 0) + ',' + ((4278190080 & e) >>> 24) / 255 + ')';
                                 }
                                 function n() {
-                                    for (let e of (0 < S.length && (u.Qb(I.drawWidth(), I.drawHeight(), S, T, N), (S = []), (N = T = 0), I.reset(512, 512)), O)) {
+                                    for (let e of (0 < S.length && (u.Qb(I.drawWidth(), I.drawHeight(), S, T, A), (S = []), (A = T = 0), I.reset(512, 512)), O)) {
                                         for (let t of e.H) t();
                                         e.H = [];
                                     }
@@ -462,8 +462,8 @@
                                     I = null,
                                     S = [],
                                     T = 0,
-                                    N = 0;
-                                var A = (a.CanvasRenderer = l.extend('Renderer', {
+                                    A = 0;
+                                var N = (a.CanvasRenderer = l.extend('Renderer', {
                                     __construct: function (e) {
                                         this.__parent.__construct.call(this), (this.S = [1, 0, 0, 1, 0, 0]), (this.C = e.getContext('2d')), (this.Ua = e), (this.H = []);
                                     },
@@ -515,12 +515,12 @@
                                             var y = Math.ceil(E * _),
                                                 v = Math.ceil(b * p);
                                             (h = u.hc()), y > h && ((_ *= h / y), (y = h)), v > h && ((p *= h / v), (v = h)), I || (I = new a.DynamicRectanizer(h)).reset(512, 512), 0 > (h = I.addRect(y, v)) && (n(), O.add(this), console.assert(0 <= (h = I.addRect(y, v))));
-                                            var A = 65535 & h,
+                                            var N = 65535 & h,
                                                 C = h >> 16;
                                             S.push({
                                                 ha: this.S.slice(this.S.length - 6),
                                                 image: t,
-                                                Ya: A,
+                                                Ya: N,
                                                 Za: C,
                                                 ic: c,
                                                 jc: d,
@@ -535,13 +535,13 @@
                                                 wb: (t.Ka << 1) | +!!f
                                             }),
                                                 (T += o.length),
-                                                (N += l.length);
+                                                (A += l.length);
                                             var R = this.C,
                                                 P = e(r);
                                             this.H.push(function () {
                                                 R.save(), R.resetTransform(), (R.globalCompositeOperation = P), (R.globalAlpha = i);
                                                 let e = u.canvas();
-                                                e && R.drawImage(e, A, C, y, v, c, d, E, b), R.restore();
+                                                e && R.drawImage(e, N, C, y, v, c, d, E, b), R.restore();
                                             });
                                         }
                                     },
@@ -557,7 +557,7 @@
                                     }
                                 }));
                                 (a.makeRenderer = function (e) {
-                                    let t = new A(e),
+                                    let t = new N(e),
                                         n = t.C;
                                     return new Proxy(t, {
                                         get(e, r) {
@@ -678,8 +678,8 @@
                                 I,
                                 S,
                                 T,
-                                N,
                                 A,
+                                N,
                                 C,
                                 R,
                                 P,
@@ -687,7 +687,7 @@
                                 D = !1;
                             function L() {
                                 var e = O.buffer;
-                                (a.HEAP8 = S = new Int8Array(e)), (a.HEAP16 = N = new Int16Array(e)), (a.HEAP32 = C = new Int32Array(e)), (a.HEAPU8 = T = new Uint8Array(e)), (a.HEAPU16 = A = new Uint16Array(e)), (a.HEAPU32 = R = new Uint32Array(e)), (a.HEAPF32 = P = new Float32Array(e)), (a.HEAPF64 = w = new Float64Array(e));
+                                (a.HEAP8 = S = new Int8Array(e)), (a.HEAP16 = A = new Int16Array(e)), (a.HEAP32 = C = new Int32Array(e)), (a.HEAPU8 = T = new Uint8Array(e)), (a.HEAPU16 = N = new Uint16Array(e)), (a.HEAPU32 = R = new Uint32Array(e)), (a.HEAPF32 = P = new Float32Array(e)), (a.HEAPF64 = w = new Float64Array(e));
                             }
                             var x,
                                 M = [],
@@ -710,12 +710,12 @@
                                 var H = q;
                                 q = a.locateFile ? a.locateFile(H, E) : E + H;
                             }
-                            function W(e) {
+                            function Y(e) {
                                 if (e == q && v) return new Uint8Array(v);
                                 if (_) return _(e);
                                 throw 'both async and sync fetching of the wasm failed';
                             }
-                            function Y(e) {
+                            function W(e) {
                                 if (!v && (m || g)) {
                                     if ('function' == typeof fetch && !e.startsWith('file://'))
                                         return fetch(e, { credentials: 'same-origin' })
@@ -723,16 +723,16 @@
                                                 if (!t.ok) throw "failed to load wasm binary file at '" + e + "'";
                                                 return t.arrayBuffer();
                                             })
-                                            .catch(() => W(e));
+                                            .catch(() => Y(e));
                                     if (f)
                                         return new Promise((t, n) => {
                                             f(e, (e) => t(new Uint8Array(e)), n);
                                         });
                                 }
-                                return Promise.resolve().then(() => W(e));
+                                return Promise.resolve().then(() => Y(e));
                             }
                             function K(e, t, n) {
-                                return Y(e)
+                                return W(e)
                                     .then((e) => WebAssembly.instantiate(e, t))
                                     .then((e) => e)
                                     .then(n, (e) => {
@@ -982,7 +982,7 @@
                                     F: [],
                                     V: t
                                 }),
-                                    eW(e, eh);
+                                    eY(e, eh);
                             }
                             var eh = {
                                     open: function (e) {
@@ -1225,8 +1225,8 @@
                                 eI,
                                 eS,
                                 eT = null,
-                                eN = {},
-                                eA = [],
+                                eA = {},
+                                eN = [],
                                 eC = 1,
                                 eR = null,
                                 eP = !0,
@@ -1294,11 +1294,11 @@
                                     return eG(e, 'wx');
                                 },
                                 eF = () => {
-                                    for (var e = 0; 4096 >= e; e++) if (!eA[e]) return e;
+                                    for (var e = 0; 4096 >= e; e++) if (!eN[e]) return e;
                                     throw new ew(33);
                                 },
                                 eV = (e) => {
-                                    if (!(e = eA[e])) throw new ew(8);
+                                    if (!(e = eN[e])) throw new ew(8);
                                     return e;
                                 },
                                 eZ = (e, t = -1) => (
@@ -1335,20 +1335,20 @@
                                     (e = Object.assign(new eI(), e)),
                                     -1 == t && (t = eF()),
                                     (e.X = t),
-                                    (eA[t] = e)
+                                    (eN[t] = e)
                                 ),
                                 eH = {
                                     open: (e) => {
-                                        (e.m = eN[e.node.za].m), e.m.open && e.m.open(e);
+                                        (e.m = eA[e.node.za].m), e.m.open && e.m.open(e);
                                     },
                                     ba: () => {
                                         throw new ew(70);
                                     }
                                 },
-                                eW = (e, t) => {
-                                    eN[e] = { m: t };
-                                },
                                 eY = (e, t) => {
+                                    eA[e] = { m: t };
+                                },
+                                eW = (e, t) => {
                                     var n = '/' === t,
                                         r = !t;
                                     if (n && eT) throw new ew(10);
@@ -1473,7 +1473,7 @@
                                     var r = ey(!!t, !!n);
                                     eO || (eO = 64);
                                     var i = (eO++ << 8) | 0;
-                                    eW(i, {
+                                    eY(i, {
                                         open: (e) => {
                                             e.seekable = !1;
                                         },
@@ -1631,10 +1631,10 @@
                                     e.pop()(t);
                                 }
                             }
-                            function tN(e) {
+                            function tA(e) {
                                 return this.fromWireType(C[e >> 2]);
                             }
-                            var tA = {},
+                            var tN = {},
                                 tC = {};
                             function tR(e, t, n) {
                                 function r(t) {
@@ -1651,8 +1651,8 @@
                                     td.hasOwnProperty(e)
                                         ? (i[t] = td[e])
                                         : (a.push(e),
-                                          tA.hasOwnProperty(e) || (tA[e] = []),
-                                          tA[e].push(() => {
+                                          tN.hasOwnProperty(e) || (tN[e] = []),
+                                          tN[e].push(() => {
                                               (i[t] = td[e]), ++o === a.length && r(i);
                                           }));
                                 }),
@@ -1678,7 +1678,7 @@
                                     if (n.$b) return;
                                     e9(`Cannot register type '${r}' twice`);
                                 }
-                                (td[e] = t), delete tC[e], tA.hasOwnProperty(e) && ((t = tA[e]), delete tA[e], t.forEach((e) => e()));
+                                (td[e] = t), delete tC[e], tN.hasOwnProperty(e) && ((t = tN[e]), delete tN[e], t.forEach((e) => e()));
                             }
                             function tD(e, t, n = {}) {
                                 if (!('argPackAdvance' in t)) throw TypeError('registerType registeredInstance requires argPackAdvance');
@@ -1755,22 +1755,22 @@
                                 a.hasOwnProperty(e) || tv('Replacing nonexistant public symbol'), void 0 !== a[e].B && void 0 !== n ? (a[e].B[n] = t) : ((a[e] = t), (a[e].ea = n));
                             }
                             var tH = [],
-                                tW = (e) => {
+                                tY = (e) => {
                                     var t = tH[e];
                                     return t || (e >= tH.length && (tH.length = e + 1), (tH[e] = t = x.get(e))), t;
                                 },
-                                tY = (e, t) => {
+                                tW = (e, t) => {
                                     var n = [];
                                     return function () {
                                         if (((n.length = 0), Object.assign(n, arguments), e.includes('j'))) {
                                             var r = a['dynCall_' + e];
                                             r = n && n.length ? r.apply(null, [t].concat(n)) : r.call(null, t);
-                                        } else r = tW(t).apply(null, n);
+                                        } else r = tY(t).apply(null, n);
                                         return r;
                                     };
                                 };
                             function tK(e, t) {
-                                var n = (e = ta(e)).includes('j') ? tY(e, t) : tW(t);
+                                var n = (e = ta(e)).includes('j') ? tW(e, t) : tY(t);
                                 return 'function' != typeof n && e9(`unknown function pointer with signature ${e}: ${t}`), n;
                             }
                             var tz = void 0;
@@ -1830,7 +1830,7 @@
                                         };
                                     case 1:
                                         return function (e) {
-                                            return this.fromWireType((n ? N : A)[e >> 1]);
+                                            return this.fromWireType((n ? A : N)[e >> 1]);
                                         };
                                     case 2:
                                         return function (e) {
@@ -1872,10 +1872,10 @@
                                     case 1:
                                         return n
                                             ? function (e) {
-                                                  return N[e >> 1];
+                                                  return A[e >> 1];
                                               }
                                             : function (e) {
-                                                  return A[e >> 1];
+                                                  return N[e >> 1];
                                               };
                                     case 2:
                                         return n
@@ -1891,10 +1891,10 @@
                             }
                             var t4 = 'undefined' != typeof TextDecoder ? new TextDecoder('utf-16le') : void 0,
                                 t5 = (e, t) => {
-                                    for (var n = e >> 1, r = n + t / 2; !(n >= r) && A[n]; ) ++n;
+                                    for (var n = e >> 1, r = n + t / 2; !(n >= r) && N[n]; ) ++n;
                                     if (32 < (n <<= 1) - e && t4) return t4.decode(T.subarray(e, n));
                                     for (r = 0, n = ''; !(r >= t / 2); ++r) {
-                                        var i = N[(e + 2 * r) >> 1];
+                                        var i = A[(e + 2 * r) >> 1];
                                         if (0 == i) break;
                                         n += String.fromCharCode(i);
                                     }
@@ -1905,8 +1905,8 @@
                                     n -= 2;
                                     var r = t;
                                     n = n < 2 * e.length ? n / 2 : e.length;
-                                    for (var i = 0; i < n; ++i) (N[t >> 1] = e.charCodeAt(i)), (t += 2);
-                                    return (N[t >> 1] = 0), t - r;
+                                    for (var i = 0; i < n; ++i) (A[t >> 1] = e.charCodeAt(i)), (t += 2);
+                                    return (A[t >> 1] = 0), t - r;
                                 },
                                 t8 = (e) => 2 * e.length,
                                 t7 = (e, t) => {
@@ -2141,13 +2141,13 @@
                             }),
                                 e$(),
                                 (eR = Array(4096)),
-                                eY(eb, '/'),
+                                eW(eb, '/'),
                                 eK('/tmp', 16895, 0),
                                 eK('/home', 16895, 0),
                                 eK('/home/web_user', 16895, 0),
                                 (() => {
                                     eK('/dev', 16895, 0),
-                                        eW(259, {
+                                        eY(259, {
                                             read: () => 0,
                                             write: (e, t, n, r) => r
                                         }),
@@ -2165,7 +2165,7 @@
                                     eK('/proc', 16895, 0);
                                     var e = eK('/proc/self', 16895, 0);
                                     eK('/proc/self/fd', 16895, 0),
-                                        eY(
+                                        eW(
                                             {
                                                 U: () => {
                                                     var t = ej(e, 'fd', 16895, 73);
@@ -2289,7 +2289,7 @@
                                     this.W && this.W(e);
                                 }),
                                 (tV.prototype.argPackAdvance = 8),
-                                (tV.prototype.readValueFromPointer = tN),
+                                (tV.prototype.readValueFromPointer = tA),
                                 (tV.prototype.deleteObject = function (e) {
                                     null !== e && e.delete();
                                 }),
@@ -2348,7 +2348,7 @@
                                             case 4:
                                                 return (i = e3()), (r.flags |= i), 0;
                                             case 5:
-                                                return (N[((i = e3()) + 0) >> 1] = 2), 0;
+                                                return (A[((i = e3()) + 0) >> 1] = 2), 0;
                                             case 16:
                                             case 8:
                                             default:
@@ -2398,7 +2398,7 @@
                                                 return r.m.ac(r, t, i);
                                             case 21523:
                                                 if (!r.s) return -59;
-                                                return r.s.V.dc && ((a = [24, 80]), (N[(i = e3()) >> 1] = a[0]), (N[(i + 2) >> 1] = a[1])), 0;
+                                                return r.s.V.dc && ((a = [24, 80]), (A[(i = e3()) >> 1] = a[0]), (A[(i + 2) >> 1] = a[1])), 0;
                                             default:
                                                 return -28;
                                         }
@@ -2497,7 +2497,7 @@
                                                         return null !== e && e.push(r, o), o;
                                                     },
                                                     argPackAdvance: 8,
-                                                    readValueFromPointer: tN,
+                                                    readValueFromPointer: tA,
                                                     K: r
                                                 }
                                             ]
@@ -2518,7 +2518,7 @@
                                         argPackAdvance: 8,
                                         readValueFromPointer: function (e) {
                                             if (1 === n) var r = S;
-                                            else if (2 === n) r = N;
+                                            else if (2 === n) r = A;
                                             else if (4 === n) r = C;
                                             else throw TypeError('Unknown boolean type size: ' + t);
                                             return this.fromWireType(r[e >> a]);
@@ -2724,7 +2724,7 @@
                                             return tt(t);
                                         },
                                         argPackAdvance: 8,
-                                        readValueFromPointer: tN,
+                                        readValueFromPointer: tA,
                                         K: null
                                     });
                                 },
@@ -2871,7 +2871,7 @@
                                             return null !== e && e.push(nb, a), a;
                                         },
                                         argPackAdvance: 8,
-                                        readValueFromPointer: tN,
+                                        readValueFromPointer: tA,
                                         K: function (e) {
                                             nb(e);
                                         }
@@ -2882,7 +2882,7 @@
                                         var r = t5,
                                             i = t6,
                                             a = t8,
-                                            o = () => A,
+                                            o = () => N,
                                             s = 1;
                                     else 4 === t && ((r = t7), (i = t9), (a = ne), (o = () => R), (s = 2));
                                     tD(e, {
@@ -2901,7 +2901,7 @@
                                             return (R[l >> 2] = o >> s), i(r, l + 4, o + t), null !== e && e.push(nb, l), l;
                                         },
                                         argPackAdvance: 8,
-                                        readValueFromPointer: tN,
+                                        readValueFromPointer: tA,
                                         K: function (e) {
                                             nb(e);
                                         }
@@ -3072,7 +3072,7 @@
                                         } catch (e) {
                                             throw e;
                                         } finally {
-                                            eA[t.X] = null;
+                                            eN[t.X] = null;
                                         }
                                         return (t.X = null), 0;
                                     } catch (e) {
@@ -3203,7 +3203,7 @@
                                 nI = (a._ma_device_process_pcm_frames_playback__webaudio = (e, t, n) => (nI = a._ma_device_process_pcm_frames_playback__webaudio = I.ma_device_process_pcm_frames_playback__webaudio)(e, t, n)),
                                 nS = () => (nS = I.__errno_location)(),
                                 nT = (e) => (nT = I.__getTypeName)(e);
-                            function nN() {
+                            function nA() {
                                 function e() {
                                     if (!n && ((n = !0), (a.calledRun = !0), !D)) {
                                         if ((a.noFSInit || ev || ((ev = !0), e$(), (a.stdin = a.stdin), (a.stdout = a.stdout), (a.stderr = a.stderr), a.stdin ? e0('stdin', a.stdin) : eq('/dev/tty', '/dev/stdin'), a.stdout ? e0('stdout', null, a.stdout) : eq('/dev/tty', '/dev/stdout'), a.stderr ? e0('stderr', null, a.stderr) : eq('/dev/tty1', '/dev/stderr'), eX('/dev/stdin', 0), eX('/dev/stdout', 1), eX('/dev/stderr', 1)), (eP = !1), $(k), r(a), a.onRuntimeInitialized && a.onRuntimeInitialized(), a.postRun))
@@ -3241,12 +3241,12 @@
                                 (a.dynCall_iiiiijj = (e, t, n, r, i, o, s, l, c) => (a.dynCall_iiiiijj = I.dynCall_iiiiijj)(e, t, n, r, i, o, s, l, c)),
                                 (a.dynCall_iiiiiijj = (e, t, n, r, i, o, s, l, c, u) => (a.dynCall_iiiiiijj = I.dynCall_iiiiiijj)(e, t, n, r, i, o, s, l, c, u)),
                                 (F = function e() {
-                                    n || nN(), n || (F = e);
+                                    n || nA(), n || (F = e);
                                 }),
                                 a.preInit)
                             )
                                 for ('function' == typeof a.preInit && (a.preInit = [a.preInit]); 0 < a.preInit.length; ) a.preInit.pop()();
-                            return nN(), t.ready;
+                            return nA(), t.ready;
                         };
                     })();
                 },
@@ -3396,8 +3396,8 @@
                                             case 'touchmove':
                                             case 'mouseover':
                                             case 'mousemove':
-                                                for (var N = 0, A = o; N < A.length; N++) {
-                                                    var T = A[N];
+                                                for (var A = 0, N = o; A < N.length; A++) {
+                                                    var T = N[A];
                                                     T.pointerMove(v, O);
                                                 }
                                                 break;
@@ -3508,7 +3508,7 @@
                         RuntimeLoader: () => O,
                         StateMachineInput: () => I,
                         StateMachineInputType: () => i,
-                        Testing: () => Y,
+                        Testing: () => W,
                         ViewModel: () => x,
                         ViewModelInstance: () => k,
                         ViewModelInstanceBoolean: () => B,
@@ -3895,7 +3895,7 @@
                         }
                         return (
                             (e.prototype.add = function (e, t, n) {
-                                if ((void 0 === n && (n = !0), 0 === (e = W(e)).length))
+                                if ((void 0 === n && (n = !0), 0 === (e = Y(e)).length))
                                     this.animations.forEach(function (e) {
                                         return (e.playing = t);
                                     }),
@@ -4050,7 +4050,7 @@
                             }),
                             (e.prototype.stop = function (e) {
                                 var t = this;
-                                e = W(e);
+                                e = Y(e);
                                 var n = [];
                                 if (0 === e.length)
                                     (n = this.animations
@@ -4200,7 +4200,7 @@
                     (function (e) {
                         (e.OneShot = 'oneshot'), (e.Loop = 'loop'), (e.PingPong = 'pingpong');
                     })(s || (s = {}));
-                var N = (function () {
+                var A = (function () {
                         function e(e) {
                             void 0 === e && (e = []), (this.listeners = e);
                         }
@@ -4242,7 +4242,7 @@
                             e
                         );
                     })(),
-                    A = (function () {
+                    N = (function () {
                         function e(e) {
                             (this.eventManager = e), (this.queue = []);
                         }
@@ -4380,7 +4380,7 @@
                             }),
                             t
                         );
-                    })(N))(),
+                    })(A))(),
                     R = (function () {
                         function e() {}
                         return (e.prototype.observe = function () {}), (e.prototype.unobserve = function () {}), (e.prototype.disconnect = function () {}), e;
@@ -4415,7 +4415,7 @@
                     })())(),
                     D = (function () {
                         function e(e) {
-                            (this.enableRiveAssetCDN = !0), (this.referenceCount = 0), (this.destroyed = !1), (this.src = e.src), (this.buffer = e.buffer), e.assetLoader && (this.assetLoader = e.assetLoader), (this.enableRiveAssetCDN = 'boolean' != typeof e.enableRiveAssetCDN || e.enableRiveAssetCDN), (this.eventManager = new N()), e.onLoad && this.on(o.Load, e.onLoad), e.onLoadError && this.on(o.LoadError, e.onLoadError);
+                            (this.enableRiveAssetCDN = !0), (this.referenceCount = 0), (this.destroyed = !1), (this.src = e.src), (this.buffer = e.buffer), e.assetLoader && (this.assetLoader = e.assetLoader), (this.enableRiveAssetCDN = 'boolean' != typeof e.enableRiveAssetCDN || e.enableRiveAssetCDN), (this.eventManager = new A()), e.onLoad && this.on(o.Load, e.onLoad), e.onLoadError && this.on(o.LoadError, e.onLoadError);
                         }
                         return (
                             (e.prototype.initData = function () {
@@ -4537,7 +4537,7 @@
                                 (this.isTouchScrollEnabled = !!e.isTouchScrollEnabled),
                                 (this.automaticallyHandleEvents = !!e.automaticallyHandleEvents),
                                 (this.enableRiveAssetCDN = void 0 === e.enableRiveAssetCDN || e.enableRiveAssetCDN),
-                                (this.eventManager = new N()),
+                                (this.eventManager = new A()),
                                 e.onLoad && this.on(o.Load, e.onLoad),
                                 e.onLoadError && this.on(o.LoadError, e.onLoadError),
                                 e.onPlay && this.on(o.Play, e.onPlay),
@@ -4554,7 +4554,7 @@
                                 e.onloop && !e.onLoop && this.on(o.Loop, e.onloop),
                                 e.onstatechange && !e.onStateChange && this.on(o.StateChange, e.onstatechange),
                                 e.assetLoader && (this.assetLoader = e.assetLoader),
-                                (this.taskQueue = new A(this.eventManager)),
+                                (this.taskQueue = new N(this.eventManager)),
                                 this.init({
                                     src: this.src,
                                     buffer: this.buffer,
@@ -4597,8 +4597,8 @@
                                     p = void 0 !== _ && _;
                                 if (!this.destroyed) {
                                     if (((this.src = r), (this.buffer = i), (this.riveFile = a), !this.src && !this.buffer && !this.riveFile)) throw new b(t.missingErrorMessage);
-                                    var h = W(o),
-                                        m = W(s);
+                                    var h = Y(o),
+                                        m = Y(s);
                                     (this.loaded = !1),
                                         (this.readyForPlaying = !1),
                                         O.awaitInstance()
@@ -4903,7 +4903,7 @@
                             }),
                             (t.prototype.play = function (e, t) {
                                 var n = this;
-                                if (((e = W(e)), !this.readyForPlaying))
+                                if (((e = Y(e)), !this.readyForPlaying))
                                     return void this.taskQueue.add({
                                         action: function () {
                                             return n.play(e, t);
@@ -4913,7 +4913,7 @@
                             }),
                             (t.prototype.pause = function (e) {
                                 var t = this;
-                                if (((e = W(e)), !this.readyForPlaying))
+                                if (((e = Y(e)), !this.readyForPlaying))
                                     return void this.taskQueue.add({
                                         action: function () {
                                             return t.pause(e);
@@ -4923,7 +4923,7 @@
                             }),
                             (t.prototype.scrub = function (e, t) {
                                 var n = this;
-                                if (((e = W(e)), !this.readyForPlaying))
+                                if (((e = Y(e)), !this.readyForPlaying))
                                     return void this.taskQueue.add({
                                         action: function () {
                                             return n.scrub(e, t);
@@ -4933,7 +4933,7 @@
                             }),
                             (t.prototype.stop = function (e) {
                                 var t = this;
-                                if (((e = W(e)), !this.readyForPlaying))
+                                if (((e = Y(e)), !this.readyForPlaying))
                                     return void this.taskQueue.add({
                                         action: function () {
                                             return t.stop(e);
@@ -4945,8 +4945,8 @@
                                 var t,
                                     n,
                                     r = null == e ? void 0 : e.artboard,
-                                    i = W(null == e ? void 0 : e.animations),
-                                    a = W(null == e ? void 0 : e.stateMachines),
+                                    i = Y(null == e ? void 0 : e.animations),
+                                    a = Y(null == e ? void 0 : e.stateMachines),
                                     o = null != (t = null == e ? void 0 : e.autoplay) && t,
                                     s = null != (n = null == e ? void 0 : e.autoBind) && n;
                                 this.cleanupInstances(), this.initArtboard(r, i, a, o, s), this.taskQueue.process();
@@ -5839,12 +5839,12 @@
                             });
                         });
                     },
-                    W = function (e) {
+                    Y = function (e) {
                         return 'string' == typeof e ? [e] : e instanceof Array ? e : [];
                     },
-                    Y = {
-                        EventManager: N,
-                        TaskQueueManager: A
+                    W = {
+                        EventManager: A,
+                        TaskQueueManager: N
                     },
                     K = function (e) {
                         return new Promise(function (t) {

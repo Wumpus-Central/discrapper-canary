@@ -5,9 +5,9 @@ n.d(t, {
     a5: () => x,
     c4: () => L,
     g7: () => w,
-    jZ: () => A,
+    jZ: () => N,
     mE: () => B,
-    oQ: () => N,
+    oQ: () => A,
     rX: () => C,
     rY: () => P,
     rt: () => R,
@@ -65,7 +65,7 @@ function T(e, t, n) {
         }
     );
 }
-function N(e, t, n) {
+function A(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         a = [];
     return (
@@ -76,7 +76,7 @@ function N(e, t, n) {
         a
     );
 }
-function A(e, t) {
+function N(e, t) {
     return T(e, t, i.BN.MEMBER);
 }
 function C(e, t) {
@@ -139,25 +139,25 @@ function x(e) {
     let { type: t } = e;
     switch (t) {
         case g.d4z.DM:
-            return b.NW.string(b.t.jN2DfX);
+            return b.intl.string(b.t.jN2DfX);
         case g.d4z.GROUP_DM:
-            return b.NW.string(b.t['e5y+go']);
+            return b.intl.string(b.t['e5y+go']);
         case g.d4z.GUILD_TEXT:
-            return b.NW.string(b.t.Pnajj4);
+            return b.intl.string(b.t.Pnajj4);
         case g.d4z.GUILD_FORUM:
-            return b.NW.string(b.t.GbryDQ);
+            return b.intl.string(b.t.GbryDQ);
         case g.d4z.GUILD_MEDIA:
-            return b.NW.string(b.t.seKITE);
+            return b.intl.string(b.t.seKITE);
         case g.d4z.GUILD_VOICE:
-            return b.NW.string(b.t.BVZqJi);
+            return b.intl.string(b.t.BVZqJi);
         case g.d4z.GUILD_STAGE_VOICE:
-            return b.NW.string(b.t.EErMzM);
+            return b.intl.string(b.t.EErMzM);
         case g.d4z.GUILD_ANNOUNCEMENT:
-            return b.NW.string(b.t.l1dkSE);
+            return b.intl.string(b.t.l1dkSE);
         case g.d4z.GUILD_STORE:
-            return b.NW.string(b.t['P1/Erq']);
+            return b.intl.string(b.t['P1/Erq']);
         case g.d4z.GUILD_CATEGORY:
-            return b.NW.string(b.t.vHCZws);
+            return b.intl.string(b.t.vHCZws);
         default:
             return null;
     }

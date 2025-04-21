@@ -37,7 +37,7 @@ var r = n(444675),
         n < i;
         s = r[++n]
     )
-        v(s) || !N(s) ? (o += ' ' + s) : (o += ' ' + c(s));
+        v(s) || !A(s) ? (o += ' ' + s) : (o += ' ' + c(s));
     return o;
 }),
     (t.deprecate = function (e, n) {
@@ -110,13 +110,13 @@ function _(e, n, r) {
             return e.stylize('[Function' + c + ']', 'special');
         }
         if (T(n)) return e.stylize(RegExp.prototype.toString.call(n), 'regexp');
-        if (A(n)) return e.stylize(Date.prototype.toString.call(n), 'date');
+        if (N(n)) return e.stylize(Date.prototype.toString.call(n), 'date');
         if (C(n)) return h(n);
     }
     var u = '',
         d = !1,
         y = ['{', '}'];
-    if ((b(n) && ((d = !0), (y = ['[', ']'])), R(n) && (u = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), T(n) && (u = ' ' + RegExp.prototype.toString.call(n)), A(n) && (u = ' ' + Date.prototype.toUTCString.call(n)), C(n) && (u = ' ' + h(n)), 0 === s.length && (!d || 0 == n.length))) return y[0] + u + y[1];
+    if ((b(n) && ((d = !0), (y = ['[', ']'])), R(n) && (u = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), T(n) && (u = ' ' + RegExp.prototype.toString.call(n)), N(n) && (u = ' ' + Date.prototype.toUTCString.call(n)), C(n) && (u = ' ' + h(n)), 0 === s.length && (!d || 0 == n.length))) return y[0] + u + y[1];
     if (r < 0)
         if (T(n)) return e.stylize(RegExp.prototype.toString.call(n), 'regexp');
         else return e.stylize('[Object]', 'special');
@@ -215,16 +215,16 @@ function S(e) {
     return void 0 === e;
 }
 function T(e) {
-    return N(e) && '[object RegExp]' === P(e);
-}
-function N(e) {
-    return 'object' == typeof e && null !== e;
+    return A(e) && '[object RegExp]' === P(e);
 }
 function A(e) {
-    return N(e) && '[object Date]' === P(e);
+    return 'object' == typeof e && null !== e;
+}
+function N(e) {
+    return A(e) && '[object Date]' === P(e);
 }
 function C(e) {
-    return N(e) && ('[object Error]' === P(e) || e instanceof Error);
+    return A(e) && ('[object Error]' === P(e) || e instanceof Error);
 }
 function R(e) {
     return 'function' == typeof e;
@@ -287,9 +287,9 @@ function w(e) {
     (t.isUndefined = S),
     (t.isRegExp = T),
     (t.types.isRegExp = T),
-    (t.isObject = N),
-    (t.isDate = A),
-    (t.types.isDate = A),
+    (t.isObject = A),
+    (t.isDate = N),
+    (t.types.isDate = N),
     (t.isError = C),
     (t.types.isNativeError = C),
     (t.isFunction = R),
@@ -311,7 +311,7 @@ function x(e, t) {
 }),
     (t.inherits = n(689118)),
     (t._extend = function (e, t) {
-        if (!t || !N(t)) return e;
+        if (!t || !A(t)) return e;
         for (var n = Object.keys(t), r = n.length; r--; ) e[n[r]] = t[n[r]];
         return e;
     });

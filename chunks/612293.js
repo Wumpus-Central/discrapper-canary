@@ -79,7 +79,7 @@ function _(e) {
                 children: [
                     (0, n.jsx)(l.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: h.NW.string(h.t.NzNLv7)
+                        children: h.intl.string(h.t.NzNLv7)
                     }),
                     (0, n.jsx)(l.olH, {
                         className: g.closeButton,
@@ -115,7 +115,7 @@ function _(e) {
                               onClick: () => {
                                   (0, d.Wh)(m), u();
                               },
-                              children: h.NW.string(h.t.daaiqK)
+                              children: h.intl.string(h.t.daaiqK)
                           })
                         : (0, n.jsx)(l.zxk, {
                               className: g.goToShopButton,
@@ -124,14 +124,14 @@ function _(e) {
                               children: (0, n.jsx)(l.Text, {
                                   color: 'always-white',
                                   variant: 'text-sm/medium',
-                                  children: h.NW.string(h.t.ABkyQk)
+                                  children: h.intl.string(h.t.ABkyQk)
                               })
                           }),
                     (0, n.jsx)(l.zxk, {
                         look: l.zxk.Looks.LINK,
                         color: l.zxk.Colors.PRIMARY,
                         onClick: u,
-                        children: h.NW.string(h.t.y1MYys)
+                        children: h.intl.string(h.t.y1MYys)
                     })
                 ]
             })

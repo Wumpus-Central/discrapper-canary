@@ -54,12 +54,12 @@ function m(e) {
                 }),
             [v]
         ),
-        N = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(E), [E]),
-        A = p(T, O || 1 === v.length);
-    if (y || 0 === v.length || N === d.OGo.FRIEND) return null;
+        A = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(E), [E]),
+        N = p(T, O || 1 === v.length);
+    if (y || 0 === v.length || A === d.OGo.FRIEND) return null;
     if (1 === v.length) {
         let { applicationId: e } = v[0],
-            n = A.get(e);
+            n = N.get(e);
         return null == n
             ? null
             : (0, r.jsx)(o.sNh, {
@@ -74,7 +74,7 @@ function m(e) {
     let C = [];
     return (v.forEach((e) => {
         let { applicationId: t } = e,
-            n = A.get(t);
+            n = N.get(t);
         null != n &&
             C.push(
                 (0, r.jsx)(

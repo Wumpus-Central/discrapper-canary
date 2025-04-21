@@ -93,7 +93,7 @@ function y(e) {
                 color: 'text-secondary',
                 className: i()(b.truncatedText, b.usersHeader),
                 scaleFontToUserSetting: !0,
-                children: f.NW.format(f.t.rH95Gh, {
+                children: f.intl.format(f.t.rH95Gh, {
                     user0: c.ZP.getName(r.guild_id, r.id, P[0]),
                     user1: c.ZP.getName(r.guild_id, r.id, P[1]),
                     countOthers: h,

@@ -90,9 +90,9 @@ function O(e) {
 let I = (e) => {
     switch (e) {
         case 'explicit_content':
-            return h.NW.string(h.t.SEgHFh);
+            return h.intl.string(h.t.SEgHFh);
         case 'spoiler':
-            return h.NW.string(h.t.XpfDHx);
+            return h.intl.string(h.t.XpfDHx);
         default:
             return;
     }

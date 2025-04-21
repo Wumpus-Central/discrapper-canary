@@ -1,6 +1,6 @@
 i.d(t, { Z: () => v }), i(388685);
-var s,
-    n = i(200651),
+var n,
+    s = i(200651),
     a = i(192379),
     l = i(120356),
     r = i.n(l),
@@ -25,7 +25,7 @@ function f(e, t, i) {
         e
     );
 }
-class C extends (s = a.PureComponent) {
+class C extends (n = a.PureComponent) {
     async componentDidMount() {
         let [e, { default: t }] = await Promise.all([i.e('27526').then(i.t.bind(i, 555589, 19)), Promise.resolve().then(i.t.bind(i, 500923, 23))]);
         null != this._lottieRef &&
@@ -42,25 +42,25 @@ class C extends (s = a.PureComponent) {
     }
     renderInputs() {
         let { emailError: e, passwordError: t, submitting: i } = this.props,
-            { email: s, password: a } = this.state;
-        return (0, n.jsxs)('div', {
+            { email: n, password: a } = this.state;
+        return (0, s.jsxs)('div', {
             className: u.container,
             children: [
-                (0, n.jsx)(d.xJW, {
-                    title: m.NW.string(m.t.dI4d4e),
+                (0, s.jsx)(d.xJW, {
+                    title: m.intl.string(m.t.dI4d4e),
                     className: p.marginBottom20,
-                    children: (0, n.jsx)(d.oil, {
-                        value: s,
+                    children: (0, s.jsx)(d.oil, {
+                        value: n,
                         error: e,
                         onChange: this.handleEmailChange,
                         onKeyPress: this.handleKeyPress,
                         autoFocus: !0
                     })
                 }),
-                (0, n.jsx)(d.xJW, {
-                    title: m.NW.string(m.t['CIGa+/']),
+                (0, s.jsx)(d.xJW, {
+                    title: m.intl.string(m.t['CIGa+/']),
                     className: p.marginBottom40,
-                    children: (0, n.jsx)(d.oil, {
+                    children: (0, s.jsx)(d.oil, {
                         type: 'password',
                         value: a,
                         error: t,
@@ -68,39 +68,39 @@ class C extends (s = a.PureComponent) {
                         onKeyPress: this.handleKeyPress
                     })
                 }),
-                (0, n.jsx)(d.zxk, {
+                (0, s.jsx)(d.zxk, {
                     fullWidth: !0,
                     size: d.zxk.Sizes.LARGE,
                     onClick: this.handleVerify,
                     submitting: i,
-                    disabled: 0 === s.length || 0 === a.length,
-                    children: m.NW.string(m.t.v740sr)
+                    disabled: 0 === n.length || 0 === a.length,
+                    children: m.intl.string(m.t.v740sr)
                 })
             ]
         });
     }
     renderActions() {
         let { canChange: e } = this.props;
-        return (0, n.jsxs)('div', {
+        return (0, s.jsxs)('div', {
             className: u.container,
             children: [
-                (0, n.jsx)(d.zxk, {
+                (0, s.jsx)(d.zxk, {
                     className: p.marginTop20,
                     fullWidth: !0,
                     size: d.zxk.Sizes.LARGE,
                     color: d.Ttl.PRIMARY,
                     onClick: this.handleResendEmail,
-                    children: m.NW.string(m.t.LdUkOz)
+                    children: m.intl.string(m.t.LdUkOz)
                 }),
                 e &&
-                    (0, n.jsx)(d.zxk, {
+                    (0, s.jsx)(d.zxk, {
                         className: p.marginTop20,
                         fullWidth: !0,
                         size: d.zxk.Sizes.MEDIUM,
                         look: d.iLD.LINK,
                         color: d.Ttl.LINK,
                         onClick: this.handleChangeEmailClick,
-                        children: m.NW.string(m.t.oP5zGB)
+                        children: m.intl.string(m.t.oP5zGB)
                     })
             ]
         });
@@ -108,28 +108,28 @@ class C extends (s = a.PureComponent) {
     render() {
         let e,
             { resent: t } = this.state,
-            { email: i, canResend: s, transitionState: a } = this.props;
+            { email: i, canResend: n, transitionState: a } = this.props;
         return (
-            (e = t && null != i ? m.NW.format(m.t.JqLgQE, { email: i }) : s ? m.NW.string(m.t.tSXg8P) : m.NW.string(m.t.KW5DEh)),
-            (0, n.jsxs)(d.Y0X, {
+            (e = t && null != i ? m.intl.format(m.t.JqLgQE, { email: i }) : n ? m.intl.string(m.t.tSXg8P) : m.intl.string(m.t.KW5DEh)),
+            (0, s.jsxs)(d.Y0X, {
                 transitionState: a,
                 'aria-labelledby': this._headerId,
                 className: r()(u.emailVerificationModal, g.vertical, g.alignCenter, g.justifyCenter, p.marginTop60),
                 children: [
-                    (0, n.jsx)('div', {
+                    (0, s.jsx)('div', {
                         className: u.animationContainer,
                         ref: this.setLottieRef
                     }),
-                    (0, n.jsx)('div', {
+                    (0, s.jsx)('div', {
                         id: this._headerId,
                         className: r()(u.title, p.marginBottom8),
-                        children: m.NW.string(m.t['1MPz29'])
+                        children: m.intl.string(m.t['1MPz29'])
                     }),
-                    (0, n.jsx)('div', {
+                    (0, s.jsx)('div', {
                         className: r()(u.body, p.marginBottom20),
                         children: e
                     }),
-                    s ? this.renderActions() : this.renderInputs()
+                    n ? this.renderActions() : this.renderInputs()
                 ]
             })
         );

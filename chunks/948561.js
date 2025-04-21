@@ -26,8 +26,8 @@ var r = n(952639),
     I = n(735020),
     S = n(774863),
     T = n(590773),
-    N = n(799525),
-    A = n(981631),
+    A = n(799525),
+    N = n(981631),
     C = n(526761);
 function R(e, t, n) {
     return (
@@ -250,7 +250,7 @@ function V(e) {
     let n = e.filter((e) => (0, y.OR)(e) && (0, O.HH)(e)),
         r = e
             .map((e) => {
-                if (A.OBS.has(e.type) && null != e.messageReference) {
+                if (N.OBS.has(e.type) && null != e.messageReference) {
                     let t = f.Z.getMessageByReference(e.messageReference);
                     if (t.state === f.Y.LOADED && null != t.message && (0, y.OR)(t.message) && (0, O.HH)(t.message)) return t.message;
                 }
@@ -326,7 +326,7 @@ function H(e) {
         t.length > 0 && (G(t), !0)
     );
 }
-function W(e) {
+function Y(e) {
     var t, n, r, i, a, o;
     let { message: s } = e;
     if (null == s.channel_id || null == s.id || (null == (t = s.author) ? void 0 : t.id) === _.default.getId() || (null == s.embeds && null == s.attachments) || ((null == (n = s.embeds) ? void 0 : n.length) === 0 && (null == (r = s.attachments) ? void 0 : r.length) === 0)) return !1;
@@ -340,7 +340,7 @@ function W(e) {
     let d = m.Z.getMessage(s.channel_id, s.id);
     return null != d && Z([d], { isMessageUpdate: !0 });
 }
-function Y(e) {
+function W(e) {
     var t, n;
     let { channelId: r, message: i, optimistic: a, isPushNotification: o } = e;
     if (a || o || null == r || (null == (t = i.author) ? void 0 : t.id) === _.default.getId()) return !1;
@@ -380,7 +380,7 @@ function X(e) {
 }
 function J(e) {
     let { channelId: t } = e;
-    return (0, N.U)(), null != t && t === g.Z.getChannelId() && et(t);
+    return (0, A.U)(), null != t && t === g.Z.getChannelId() && et(t);
 }
 function $(e) {
     let { settings: t, local: n } = e;
@@ -405,8 +405,8 @@ class en extends c.Z {
                 LOAD_THREADS_SUCCESS: Q,
                 LOAD_ARCHIVED_THREADS_SUCCESS: Q,
                 SIDEBAR_VIEW_CHANNEL: X,
-                MESSAGE_CREATE: Y,
-                MESSAGE_UPDATE: W,
+                MESSAGE_CREATE: W,
+                MESSAGE_UPDATE: Y,
                 LOGOUT: x,
                 SEARCH_FINISH: z,
                 MOD_VIEW_SEARCH_FINISH: z,

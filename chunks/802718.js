@@ -88,7 +88,7 @@ function _(e) {
                 }),
                 (0, r.jsx)(o.Text, {
                     variant: 'text-xs/normal',
-                    children: g.NW.string(g.t.IIbwAg)
+                    children: g.intl.string(g.t.IIbwAg)
                 })
             ]
         }),

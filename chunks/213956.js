@@ -1,8 +1,8 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var r = n(200651),
     i = n(192379),
-    s = n(442837),
-    l = n(704215),
+    l = n(442837),
+    s = n(704215),
     a = n(481060),
     o = n(605236),
     c = n(874993),
@@ -16,35 +16,35 @@ var r = n(200651),
     x = n(733629),
     b = n(598622),
     j = n(921944),
-    N = n(388032),
-    _ = n(296205);
-function v() {
+    _ = n(388032),
+    v = n(296205);
+function O() {
     let e,
-        t = (0, s.e7)([m.Z], () => m.Z.getGuildId()),
-        n = (0, s.e7)([u.Z], () => u.Z.getGuild(t)),
-        v = (0, s.e7)([p.Z], () => p.Z.getCurrentPage());
+        t = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
+        n = (0, l.e7)([u.Z], () => u.Z.getGuild(t)),
+        O = (0, l.e7)([p.Z], () => p.Z.getCurrentPage());
     if (
         (i.useEffect(() => {
-            (0, o.EW)(l.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: j.L.AUTO });
+            (0, o.EW)(s.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: j.L.AUTO });
         }, []),
         null == n)
     )
         return null;
-    let O = (0, b.Q)(n);
-    switch (v) {
+    let C = (0, b.Q)(n);
+    switch (O) {
         case h.u.OVERVIEW:
             e = (0, r.jsx)(f.Z, { guild: n });
             break;
         case h.u.CAPTCHA_AND_RAID_PROTECTION:
             e = (0, r.jsx)(x.Z, {
-                title: N.NW.string(N.t['53eF5u']),
-                settings: O[h.u.CAPTCHA_AND_RAID_PROTECTION]
+                title: _.intl.string(_.t['53eF5u']),
+                settings: C[h.u.CAPTCHA_AND_RAID_PROTECTION]
             });
             break;
         case h.u.DM_AND_SPAM_PROTECTION:
             e = (0, r.jsx)(x.Z, {
-                title: N.NW.string(N.t.O0SfFx),
-                settings: O[h.u.DM_AND_SPAM_PROTECTION]
+                title: _.intl.string(_.t.O0SfFx),
+                settings: C[h.u.DM_AND_SPAM_PROTECTION]
             });
             break;
         case h.u.AUTOMOD:
@@ -52,16 +52,16 @@ function v() {
             break;
         case h.u.PERMISSIONS:
             e = (0, r.jsx)(x.Z, {
-                title: N.NW.string(N.t.BXoNiY),
-                settings: O[h.u.PERMISSIONS]
+                title: _.intl.string(_.t.BXoNiY),
+                settings: C[h.u.PERMISSIONS]
             });
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            v !== h.u.OVERVIEW &&
+            O !== h.u.OVERVIEW &&
                 (0, r.jsxs)(a.zxk, {
-                    className: _.back,
-                    innerClassName: _.backButton,
+                    className: v.back,
+                    innerClassName: v.backButton,
                     look: a.zxk.Looks.BLANK,
                     size: a.zxk.Sizes.MIN,
                     onClick: () => {
@@ -69,13 +69,13 @@ function v() {
                     },
                     children: [
                         (0, r.jsx)(d.Z, {
-                            className: _.__invalid_arrow,
+                            className: v.__invalid_arrow,
                             direction: d.Z.Directions.LEFT
                         }),
                         (0, r.jsx)(a.Text, {
                             variant: 'text-sm/semibold',
                             color: 'interactive-normal',
-                            children: N.NW.string(N.t['13/7kZ'])
+                            children: _.intl.string(_.t['13/7kZ'])
                         })
                     ]
                 }),

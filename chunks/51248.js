@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(215569),
-    s = n(481060),
-    l = n(852860),
+    l = n(481060),
+    s = n(852860),
     a = n(236413),
     o = n(727072),
     c = n(65912),
@@ -14,11 +14,11 @@ function m(e) {
         { cancelEditingRule: m, isLoading: g, hasChanges: p, editingRule: h, errorMessage: f, saveEditingRule: x } = (0, c.w)(),
         { updateRule: b } = (0, o.pH)(t),
         j = null != h,
-        N = j && !(0, a.Vb)(h),
-        _ = j || p || N,
-        v = async () => {
-            if (!p && !N) return m();
-            null == h || N || b(h);
+        _ = j && !(0, a.Vb)(h),
+        v = j || p || _,
+        O = async () => {
+            if (!p && !_) return m();
+            null == h || _ || b(h);
             let e = n.find((e) => {
                 let { id: t } = e;
                 return t === (null == h ? void 0 : h.id);
@@ -30,11 +30,11 @@ function m(e) {
                 null != e && b(e);
             }
         },
-        O = d.NW.string(d.t['ETE/oK']),
-        C = !p && j ? d.NW.formatToPlainString(d.t.nula39, { ruleName: null == h ? void 0 : h.name }) : void 0;
+        C = d.intl.string(d.t['ETE/oK']),
+        y = !p && j ? d.intl.formatToPlainString(d.t.nula39, { ruleName: null == h ? void 0 : h.name }) : void 0;
     return (
         null != f &&
-            (C = (0, r.jsx)(s.Text, {
+            (y = (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'text-danger',
                 className: u.message,
@@ -44,15 +44,15 @@ function m(e) {
             component: 'div',
             className: u.saveNoticeContainer,
             children:
-                _ &&
-                (0, r.jsx)(s.oXn, {
-                    children: (0, r.jsx)(l.Z, {
+                v &&
+                (0, r.jsx)(l.oXn, {
+                    children: (0, r.jsx)(s.Z, {
                         submitting: g,
                         disabled: g,
-                        onSave: v,
+                        onSave: O,
                         onReset: m,
-                        onResetText: O,
-                        message: C
+                        onResetText: C,
+                        message: y
                     })
                 })
         })

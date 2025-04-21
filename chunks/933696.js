@@ -1,15 +1,15 @@
-n.d(t, { default: () => l });
+n.d(t, { default: () => u });
 var r = n(200651);
 n(192379);
 var o = n(98278),
     c = n(790527),
     a = n(474936),
     i = n(981631),
-    f = n(388032),
-    u = n(102525);
-function l(e) {
+    l = n(388032),
+    f = n(102525);
+function u(e) {
     var { onClose: t, source: n } = e,
-        l = (function (e, t) {
+        u = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -28,7 +28,7 @@ function l(e) {
             }
             return o;
         })(e, ['onClose', 'source']);
-    let b = f.NW.format(f.t.WMO9pq, {
+    let b = l.intl.format(l.t.WMO9pq, {
         onAndMore: function () {
             t(), (0, o.z)(!0);
         }
@@ -61,9 +61,9 @@ function l(e) {
             return e;
         })(
             {
-                artURL: u.Z,
+                artURL: f.Z,
                 type: a.cd.PREMIUM_GUILD_IDENTITY_MODAL,
-                title: f.NW.string(f.t.kOEBKC),
+                title: l.intl.string(l.t.kOEBKC),
                 body: b,
                 glowUp: b,
                 analyticsSource: n,
@@ -73,7 +73,7 @@ function l(e) {
                 },
                 onClose: t
             },
-            l
+            u
         )
     );
 }

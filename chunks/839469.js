@@ -1,21 +1,21 @@
 n.d(t, { E: () => o }), n(388685), n(35282), n(781311);
-var r = n(192379),
-    i = n(170401),
+var i = n(192379),
+    r = n(170401),
     s = n(996733),
-    a = n(991346),
-    l = n(726985);
+    l = n(991346),
+    a = n(726985);
 function o() {
     let e = (0, s.Z7)(),
-        t = (0, a.Pt)(),
-        n = r.useRef(new i.Z((0, a.ji)(t))),
-        [o, c] = r.useState(!1),
-        [d, u] = r.useState(l.QF),
-        m = r.useCallback(async (e) => {
+        t = (0, l.Pt)(),
+        n = i.useRef(new r.Z((0, l.ji)(t))),
+        [o, c] = i.useState(!1),
+        [d, u] = i.useState(a.QF),
+        m = i.useCallback(async (e) => {
             u(await n.current.search(e.trim())), c(!0);
         }, []);
     return (
-        r.useEffect(() => {
-            '' === e || e.length < 2 ? (u(l.QF), c(!1)) : m(e);
+        i.useEffect(() => {
+            '' === e || e.length < 2 ? (u(a.QF), c(!1)) : m(e);
         }, [e, m]),
         {
             hasSearchResults: o,

@@ -23,8 +23,8 @@ var d = n(616254),
     I = n(240849),
     S = n(998502),
     T = n(513566),
-    N = n(534713),
-    A = n(358085),
+    A = n(534713),
+    N = n(358085),
     C = n(703656),
     R = n(284737),
     P = n(473159),
@@ -45,11 +45,11 @@ let V = 5 * B.Z.Millis.MINUTE,
     Z = document.getElementById('app-mount');
 _()(null != Z, 'Could not find app-mount'), (Z.className = __OVERLAY__ ? '' : j.appMount);
 let H = (0, d.createRoot)(Z),
-    W = { '/oauth2/authorize': N.Z };
-function Y(e, t, n) {
+    Y = { '/oauth2/authorize': A.Z };
+function W(e, t, n) {
     var r;
     let i = null != n ? new URLSearchParams(n) : null;
-    (null != (r = W[t]) && r.call(W, i)) || (0, C.uL)(t);
+    (null != (r = Y[t]) && r.call(Y, i)) || (0, C.uL)(t);
 }
 let K = (e) => H.render((0, u.jsx)(x.w, { children: (0, u.jsx)(L.Z, { children: (0, u.jsx)(e, {}) }) }));
 if (null != D.Z) {
@@ -80,7 +80,7 @@ if (null != D.Z) {
 if (((0, P.O)(window), __OVERLAY__)) K(p.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) K(p.Z.OutdatedClient);
 else {
-    if ((document.addEventListener('scroll', (e) => e.preventDefault()), A.isPlatformEmbedded)) {
+    if ((document.addEventListener('scroll', (e) => e.preventDefault()), N.isPlatformEmbedded)) {
         (window.onbeforeunload = () => S.ZP.beforeUnload()), S.ZP.on('HELP_OPEN', () => window.open(O.Z.getCommunityURL()));
         let e = new w.sW(V, () => S.ZP.purgeMemory());
         S.ZP.on('MAIN_WINDOW_BLUR', () => {
@@ -89,7 +89,7 @@ else {
             S.ZP.on('MAIN_WINDOW_FOCUS', () => {
                 e.cancel(), S.ZP.setFocused(!0), (0, R.T_)(window, !0);
             }),
-            S.ZP.on('MAIN_WINDOW_PATH', Y),
+            S.ZP.on('MAIN_WINDOW_PATH', W),
             S.ZP.on('MAIN_WINDOW_HIDDEN', () => {
                 (0, R.al)(window);
             });

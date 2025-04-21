@@ -3,9 +3,9 @@ n.d(t, {
     C1: () => H,
     DV: () => B,
     Gn: () => M,
-    IP: () => Y,
+    IP: () => W,
     J1: () => j,
-    MZ: () => W,
+    MZ: () => Y,
     NJ: () => Z,
     Nf: () => U,
     PC: () => w,
@@ -48,8 +48,8 @@ var r = n(192379),
     I = n(149203),
     S = n(981631),
     T = n(185923),
-    N = n(957825),
-    A = n(474936),
+    A = n(957825),
+    N = n(474936),
     C = n(388032);
 let R = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == t ? void 0 : t.getGuildId(),
@@ -68,10 +68,10 @@ let R = function (e, t) {
             });
         u.Xb.useExperiment({ location: 'useEmojiCategories' }, { autoTrackExposure: !0 });
         let S = Z(n),
-            { topEmojis: N, newlyAddedEmojis: A } = (0, O.Z)(n, e),
+            { topEmojis: A, newlyAddedEmojis: N } = (0, O.Z)(n, e),
             { allEmojis: R } = (0, v.Z)({
-                topEmojis: N,
-                newlyAddedEmojis: A
+                topEmojis: A,
+                newlyAddedEmojis: N
             }),
             P = (0, o.e7)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(n), [n]),
             w = (0, o.e7)([p.Z], () => {
@@ -87,7 +87,7 @@ let R = function (e, t) {
                 c = [],
                 u = {
                     type: I.En.SOUNDMOJI,
-                    name: C.NW.string(C.t.f0Ezmp),
+                    name: C.intl.string(C.t.f0Ezmp),
                     id: I.UX.SOUNDMOJI,
                     isNitroLocked: !1
                 },
@@ -127,7 +127,7 @@ let R = function (e, t) {
                             t.push({
                                 type: I.En.TOP_GUILD_EMOJI,
                                 id: r,
-                                name: C.NW.formatToPlainString(C.t.W6Wi1d, { guildName: w }),
+                                name: C.intl.formatToPlainString(C.t.W6Wi1d, { guildName: w }),
                                 isNitroLocked: !1,
                                 emojis: n,
                                 emojisDisabled: e
@@ -138,7 +138,7 @@ let R = function (e, t) {
                             t.push({
                                 type: I.En.RECENT,
                                 id: r,
-                                name: C.NW.string(C.t['5TvaSk']),
+                                name: C.intl.string(C.t['5TvaSk']),
                                 isNitroLocked: !1,
                                 emojis: i,
                                 emojisDisabled: n
@@ -149,7 +149,7 @@ let R = function (e, t) {
                             t.push({
                                 type: I.En.FAVORITES,
                                 id: r,
-                                name: C.NW.string(C.t.y3LQCA),
+                                name: C.intl.string(C.t.y3LQCA),
                                 isNitroLocked: !1,
                                 emojis: n,
                                 emojisDisabled: e
@@ -249,13 +249,13 @@ let R = function (e, t) {
             { emoji: r, location: i, pickerIntention: a, category: o, subCategory: l = I.t0.NONE, position: c, newlyAddedHighlight: u, isBurstReaction: d } = e;
         switch (a) {
             case T.Hz.REACTION:
-                n = d ? A.cd.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : A.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
+                n = d ? N.cd.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : N.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
                 break;
             case T.Hz.STATUS:
-                n = A.cd.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
+                n = N.cd.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
                 break;
             default:
-                n = A.cd.EMOJI_PICKER_EMOJI_CLICKED;
+                n = N.cd.EMOJI_PICKER_EMOJI_CLICKED;
         }
         let f = null != (t = r.uniqueName) ? t : r.name;
         s.ZP.trackWithMetadata(S.rMx.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
@@ -279,7 +279,7 @@ let R = function (e, t) {
             i = null != (t = n.uniqueName) ? t : n.name;
         s.ZP.trackWithMetadata(S.rMx.EXPRESSION_FAVORITED, {
             location: r,
-            expression_type: N.X1.EMOJI,
+            expression_type: A.X1.EMOJI,
             expression_id: n.id,
             expression_name: i,
             expression_guild_id: n.guildId,
@@ -311,31 +311,31 @@ let U = (e, t) => (e.type !== I.En.GUILD ? e.id : null != t ? t.toString() : '')
     G = (e, t) => {
         switch (e) {
             case I.UX.TOP_GUILD_EMOJI:
-                return C.NW.formatToPlainString(C.t.W6Wi1d, { guildName: t });
+                return C.intl.formatToPlainString(C.t.W6Wi1d, { guildName: t });
             case I.UX.RECENT:
-                return C.NW.string(C.t['5TvaSk']);
+                return C.intl.string(C.t['5TvaSk']);
             case I.UX.FAVORITES:
-                return C.NW.string(C.t.y3LQCA);
+                return C.intl.string(C.t.y3LQCA);
             case I.UX.ACTIVITY:
-                return C.NW.string(C.t.O783tb);
+                return C.intl.string(C.t.O783tb);
             case I.UX.FLAGS:
-                return C.NW.string(C.t.vvaizs);
+                return C.intl.string(C.t.vvaizs);
             case I.UX.FOOD:
-                return C.NW.string(C.t.ldm9aW);
+                return C.intl.string(C.t.ldm9aW);
             case I.UX.NATURE:
-                return C.NW.string(C.t.egIBDA);
+                return C.intl.string(C.t.egIBDA);
             case I.UX.OBJECTS:
-                return C.NW.string(C.t.gWm7Mj);
+                return C.intl.string(C.t.gWm7Mj);
             case I.UX.PEOPLE:
-                return C.NW.string(C.t.GX594O);
+                return C.intl.string(C.t.GX594O);
             case I.UX.SYMBOLS:
-                return C.NW.string(C.t.QXMYAQ);
+                return C.intl.string(C.t.QXMYAQ);
             case I.UX.TRAVEL:
-                return C.NW.string(C.t.w33hIC);
+                return C.intl.string(C.t.w33hIC);
             case I.UX.PREMIUM_UPSELL:
-                return C.NW.string(C.t.pAF6xM);
+                return C.intl.string(C.t.pAF6xM);
             case I.UX.SOUNDMOJI:
-                return C.NW.string(C.t.f0Ezmp);
+                return C.intl.string(C.t.f0Ezmp);
             default:
                 return null != t ? t : e;
         }
@@ -395,7 +395,7 @@ function H(e, t) {
         (0, o.e7)([l.ZP], () => null != t && l.ZP.getDisambiguatedEmojiContext(e).isFavoriteEmojiWithoutFetchingLatest(t))
     );
 }
-function W(e) {
+function Y(e) {
     return (
         r.useEffect(() => {
             _.DZ.loadIfNecessary();
@@ -403,7 +403,7 @@ function W(e) {
         (0, o.Wu)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(e).getEmojiInPriorityOrderWithoutFetchingLatest())
     );
 }
-function Y(e, t, n) {
+function W(e, t, n) {
     if (null == n) return I.t0.NONE;
     let r = e.map((e) => {
             var t, n;
@@ -413,5 +413,5 @@ function Y(e, t, n) {
     return r.includes(n) ? I.t0.TOP_GUILD_EMOJI : i.includes(n) ? I.t0.NEWLY_ADDED_EMOJI : I.t0.NONE;
 }
 function K(e, t) {
-    return e === T.Hz.REACTION ? (t ? C.NW.string(C.t['h7ES+v']) : C.NW.string(C.t['6any2N'])) : C.NW.string(C.t.KgK5qq);
+    return e === T.Hz.REACTION ? (t ? C.intl.string(C.t['h7ES+v']) : C.intl.string(C.t['6any2N'])) : C.intl.string(C.t.KgK5qq);
 }

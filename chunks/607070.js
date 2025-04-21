@@ -133,11 +133,11 @@ function T() {
     if (!e && !t) return !1;
     (y = p({}, y)).fontSize !== d.yqN.FONT_SIZE_DEFAULT && (y.fontSize = d.yqN.FONT_SIZE_DEFAULT), y.zoom !== d.yqN.ZOOM_DEFAULT && ((y.zoom = d.yqN.ZOOM_DEFAULT), u.Z.setZoomFactor(y.zoom));
 }
-function N() {
+function A() {
     if (y.keyboardModeEnabled) return !1;
     (y = p({}, y)).keyboardModeEnabled = !0;
 }
-function A() {
+function N() {
     if (!y.keyboardModeEnabled) return !1;
     (y = p({}, y)).keyboardModeEnabled = !1;
 }
@@ -198,11 +198,11 @@ function H(e) {
     let { messageGroupSpacing: t } = e;
     y = m(p({}, y), { messageGroupSpacing: t });
 }
-function W(e) {
+function Y(e) {
     let { contrast: t } = e;
     y = m(p({}, y), { contrast: t });
 }
-function Y(e) {
+function W(e) {
     let { hideTags: t } = e;
     y = m(p({}, y), { hideGuildTags: t });
 }
@@ -388,8 +388,8 @@ let z = new K(s.Z, {
     ACCESSIBILITY_SET_FONT_SIZE: I,
     ACCESSIBILITY_SET_ZOOM: S,
     ACCESSIBILITY_RESET_TO_DEFAULT: T,
-    ACCESSIBILITY_KEYBOARD_MODE_ENABLE: N,
-    ACCESSIBILITY_KEYBOARD_MODE_DISABLE: A,
+    ACCESSIBILITY_KEYBOARD_MODE_ENABLE: A,
+    ACCESSIBILITY_KEYBOARD_MODE_DISABLE: N,
     ACCESSIBILITY_COLORBLIND_TOGGLE: C,
     ACCESSIBILITY_LOW_CONTRAST_TOGGLE: R,
     ACCESSIBILITY_SET_SATURATION: w,
@@ -407,6 +407,6 @@ let z = new K(s.Z, {
     ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: H,
     ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: x,
     ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: M,
-    ACCESSIBILITY_SET_CONTRAST: W,
-    ACCESSIBILITY_SET_HIDE_TAGS: Y
+    ACCESSIBILITY_SET_CONTRAST: Y,
+    ACCESSIBILITY_SET_HIDE_TAGS: W
 });

@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(399606),
-    s = n(481060),
-    l = n(674180),
+    l = n(481060),
+    s = n(674180),
     a = n(267101),
     o = n(430824),
     c = n(584825),
@@ -14,7 +14,7 @@ function m(e) {
         g = (0, i.e7)([o.Z], () => o.Z.getGuild(t)),
         p = (0, c.qi)(t, { includeSoftDeleted: !0 }),
         h = (0, a.ue)(t, { publishedOnly: !1 }),
-        { allowSelfRemoveMonetization: f } = (0, l.gX)(t),
+        { allowSelfRemoveMonetization: f } = (0, s.gX)(t),
         x = m.filter((e) => {
             var t;
             let n = Object.values(null != (t = e.ppgs) ? t : {})[0];
@@ -22,22 +22,22 @@ function m(e) {
         }),
         b = p.length > 0,
         j = h.length > 0,
-        N = x.length > 0;
+        _ = x.length > 0;
     return null == g
         ? null
         : (0, r.jsxs)('div', {
               children: [
-                  (0, r.jsx)(s.R94, {
-                      type: s.R94.Types.DESCRIPTION,
-                      children: u.NW.format(u.t.fvOn6O, { guildName: g.toString() })
+                  (0, r.jsx)(l.R94, {
+                      type: l.R94.Types.DESCRIPTION,
+                      children: u.intl.format(u.t.fvOn6O, { guildName: g.toString() })
                   }),
-                  (0, r.jsx)(s.LZC, { size: 16 }),
-                  (0, r.jsx)(s.zxk, {
-                      disabled: !f || b || j || N,
-                      look: s.zxk.Looks.FILLED,
-                      color: s.zxk.Colors.RED,
+                  (0, r.jsx)(l.LZC, { size: 16 }),
+                  (0, r.jsx)(l.zxk, {
+                      disabled: !f || b || j || _,
+                      look: l.zxk.Looks.FILLED,
+                      color: l.zxk.Colors.RED,
                       onClick: () => {
-                          (0, s.ZDy)(async () => {
+                          (0, l.ZDy)(async () => {
                               let { default: e } = await n.e('35282').then(n.bind(n, 157429));
                               return (t) => {
                                   var n, i;
@@ -86,7 +86,7 @@ function m(e) {
                               };
                           });
                       },
-                      children: u.NW.string(u.t.FrOFSk)
+                      children: u.intl.string(u.t.FrOFSk)
                   })
               ]
           });

@@ -33,8 +33,8 @@ function I(e, t, n) {
 }
 let S = {},
     T = {},
-    N = {},
     A = {},
+    N = {},
     C = {},
     R = O.hVg.THEATRE,
     P = {};
@@ -77,8 +77,8 @@ function M(e) {
             let { analyticsContext: t, isOwner: n } = e;
             t.setActionContext(i), t.setNativePickerStyleUsed(s), n && t.trackStart();
         }),
-        (A[u] = o),
-        (N[u] = a),
+        (N[u] = o),
+        (A[u] = a),
         null != a)
     ) {
         let e = f.ZP.getGameForPID(a);
@@ -99,8 +99,8 @@ function k(e) {
             let { analyticsContext: n, isOwner: r } = e;
             n.setActionContext(t), r && n.trackEnd();
         }),
-        (A[n] = null),
         (N[n] = null),
+        (A[n] = null),
         delete C[n];
 }
 function j(e) {
@@ -108,13 +108,13 @@ function j(e) {
     i = t;
     let o = P[t];
     if (null == o && null != n) {
-        null == N[t] && (T[t] = null);
+        null == A[t] && (T[t] = null);
         let e = (0, p.my)(t);
-        null == T[t] && null == A[t] && (T[t] = (0, h.L2)(e, y.Z));
+        null == T[t] && null == N[t] && (T[t] = (0, h.L2)(e, y.Z));
         let i = new _.A({
             streamRegion: r,
             streamApplication: T[t],
-            streamSourceType: K(A[t]),
+            streamSourceType: K(N[t]),
             actionContext: S[t],
             numViewers: null != a ? a.length : 0,
             goLiveModalDurationMs: C[t]
@@ -165,13 +165,13 @@ function Z() {
 function H(e) {
     return c().some(P, (t) => t === e.connection);
 }
-function W(e) {
+function Y(e) {
     let { userId: t, context: n, quality: r } = e;
     c().forEach(P, (e) => {
         e.setSimulcastDebugOverride(t, n, r);
     });
 }
-function Y(e) {
+function W(e) {
     let { streamId: t, width: n, height: r } = e;
     c().forEach(P, (e) => {
         null == e || e.setVideoSize(t, n, r);
@@ -240,7 +240,7 @@ class z extends (a = u.ZP.Store) {
         return null != t ? t.getMaxViewers() : null;
     }
     getStreamSourceId(e) {
-        return A[e];
+        return N[e];
     }
     getUserIds(e) {
         let t = P[e];
@@ -281,7 +281,7 @@ let q = new z(
               STREAM_DELETE: F,
               MEDIA_ENGINE_CONNECTION_STATS: G,
               STREAM_LAYOUT_UPDATE: V,
-              RTC_DEBUG_SET_SIMULCAST_OVERRIDE: W,
-              VIDEO_SIZE_UPDATE: Y
+              RTC_DEBUG_SET_SIMULCAST_OVERRIDE: Y,
+              VIDEO_SIZE_UPDATE: W
           }
 );

@@ -3,8 +3,8 @@ var n = r(200651);
 r(192379);
 var s = r(481060),
     i = r(600164),
-    a = r(7557),
-    l = r(388905),
+    l = r(7557),
+    a = r(388905),
     o = r(388032),
     c = r(621198),
     u = r(20493);
@@ -13,17 +13,17 @@ function d(e) {
     return (0, n.jsxs)(i.Z, {
         direction: i.Z.Direction.VERTICAL,
         children: [
-            (0, n.jsx)(l.Dx, {
+            (0, n.jsx)(a.Dx, {
                 className: u.marginBottom8,
                 children: t
             }),
-            (0, n.jsx)(l.DK, {
+            (0, n.jsx)(a.DK, {
                 className: c.subTitle,
                 children: r
             }),
             (0, n.jsxs)('div', {
                 children: [
-                    (0, n.jsx)(a.Z, {
+                    (0, n.jsx)(l.Z, {
                         inputClassName: c.codeInput,
                         onSubmit: h
                     }),
@@ -41,7 +41,7 @@ function d(e) {
                     className: c.button,
                     onClick: p,
                     color: s.zxk.Colors.PRIMARY,
-                    children: o.NW.string(o.t['ETE/oK'])
+                    children: o.intl.string(o.t['ETE/oK'])
                 })
         ]
     });

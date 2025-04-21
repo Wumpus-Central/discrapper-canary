@@ -188,34 +188,34 @@ let S = f(
         })
     ),
     T = S,
-    N = (e) =>
+    A = (e) =>
         Object.assign(f(e), {
             startsWith: (t) => {
                 var n;
-                return N(g(e, ((n = t), b((e) => O(e) && e.startsWith(n)))));
+                return A(g(e, ((n = t), b((e) => O(e) && e.startsWith(n)))));
             },
             endsWith: (t) => {
                 var n;
-                return N(g(e, ((n = t), b((e) => O(e) && e.endsWith(n)))));
+                return A(g(e, ((n = t), b((e) => O(e) && e.endsWith(n)))));
             },
             minLength: (t) => {
                 let n;
-                return N(g(e, ((n = t), b((e) => O(e) && e.length >= n))));
+                return A(g(e, ((n = t), b((e) => O(e) && e.length >= n))));
             },
             maxLength: (t) => {
                 let n;
-                return N(g(e, ((n = t), b((e) => O(e) && e.length <= n))));
+                return A(g(e, ((n = t), b((e) => O(e) && e.length <= n))));
             },
             includes: (t) => {
                 var n;
-                return N(g(e, ((n = t), b((e) => O(e) && e.includes(n)))));
+                return A(g(e, ((n = t), b((e) => O(e) && e.includes(n)))));
             },
             regex: (t) => {
                 var n;
-                return N(g(e, ((n = t), b((e) => O(e) && !!e.match(n)))));
+                return A(g(e, ((n = t), b((e) => O(e) && !!e.match(n)))));
             }
         }),
-    A = N(b(O)),
+    N = A(b(O)),
     C = (e, t) => b((n) => v(n) && e <= n && t >= n),
     R = (e) => b((t) => v(t) && t < e),
     P = (e) => b((t) => v(t) && t > e),
@@ -244,18 +244,18 @@ let S = f(
     V = (e) => b((t) => I(t) && t <= e),
     Z = (e) => b((t) => I(t) && t >= e),
     H = () => b((e) => I(e) && e > 0),
-    W = () => b((e) => I(e) && e < 0),
-    Y = (e) =>
+    Y = () => b((e) => I(e) && e < 0),
+    W = (e) =>
         Object.assign(f(e), {
-            between: (t, n) => Y(g(e, G(t, n))),
-            lt: (t) => Y(g(e, B(t))),
-            gt: (t) => Y(g(e, F(t))),
-            lte: (t) => Y(g(e, V(t))),
-            gte: (t) => Y(g(e, Z(t))),
-            positive: () => Y(g(e, H())),
-            negative: () => Y(g(e, W()))
+            between: (t, n) => W(g(e, G(t, n))),
+            lt: (t) => W(g(e, B(t))),
+            gt: (t) => W(g(e, F(t))),
+            lte: (t) => W(g(e, V(t))),
+            gte: (t) => W(g(e, Z(t))),
+            positive: () => W(g(e, H())),
+            negative: () => W(g(e, Y()))
         }),
-    K = Y(b(I)),
+    K = W(b(I)),
     z = f(
         b(function (e) {
             return 'boolean' == typeof e;
@@ -378,7 +378,7 @@ var X = {
     select: y,
     any: S,
     _: T,
-    string: A,
+    string: N,
     between: C,
     lt: R,
     gt: P,
@@ -395,7 +395,7 @@ var X = {
     lteBigInt: V,
     gteBigInt: Z,
     positiveBigInt: H,
-    negativeBigInt: W,
+    negativeBigInt: Y,
     bigint: K,
     boolean: z,
     symbol: q,

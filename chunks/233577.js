@@ -68,7 +68,7 @@ let O = {
                 onHover: a,
                 onClick: o,
                 titleWithQuery: E.t.uferGB,
-                titleWithoutQuery: E.NW.string(E.t['fT+Yjo']),
+                titleWithoutQuery: E.intl.string(E.t['fT+Yjo']),
                 Component: l.ZP.Sticker,
                 getProps: (e) => {
                     let { comparator: t, sticker: n } = e;

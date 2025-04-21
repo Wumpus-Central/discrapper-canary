@@ -1,8 +1,8 @@
-n.d(t, { Z: () => j }), n(388685), n(953529);
+n.d(t, { Z: () => C }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(990547),
     s = n(831209),
     c = n(442837),
@@ -20,14 +20,14 @@ var r = n(200651),
     v = n(886176),
     E = n(981631),
     O = n(388032),
-    N = n(24665);
-function j(e) {
+    j = n(24665);
+function C(e) {
     var t;
     let { guildId: n } = e,
-        a = (0, c.e7)([_.Z], () => _.Z.getGuild(n)),
-        { loading: j, subscriptionsSettings: C } = (0, x.H)(n),
-        { listingsLoaded: S } = (0, f.eD)(n),
-        I = (0, f.ue)(n, { publishedOnly: !0 }),
+        l = (0, c.e7)([_.Z], () => _.Z.getGuild(n)),
+        { loading: C, subscriptionsSettings: S } = (0, x.H)(n),
+        { listingsLoaded: I } = (0, f.eD)(n),
+        N = (0, f.ue)(n, { publishedOnly: !0 }),
         T = i.useCallback(async () => {
             b.default.track(
                 E.rMx.GUILD_SHOP_EMBED_CLICKED,
@@ -64,23 +64,23 @@ function j(e) {
             type: o.ImpressionTypes.VIEW,
             name: o.ImpressionNames.GUILD_SHOP_EMBED
         },
-        { disableTrack: null == a }
+        { disableTrack: null == l }
     );
-    let P = I.length > 0 ? new Date(Math.min(...I.map((e) => Date.parse(e.published_at)))) : void 0;
-    return j || !S
+    let P = N.length > 0 ? new Date(Math.min(...N.map((e) => Date.parse(e.published_at)))) : void 0;
+    return C || !I
         ? (0, r.jsx)('div', {
-              className: l()(N.guildShopEmbed, N.spinnerContainer),
+              className: a()(j.guildShopEmbed, j.spinnerContainer),
               children: (0, r.jsx)(u.$jN, {})
           })
-        : null == a || null == C
+        : null == l || null == S
           ? null
           : (0, r.jsxs)('div', {
-                className: N.guildShopEmbed,
+                className: j.guildShopEmbed,
                 children: [
-                    (0, r.jsx)(y.Z, { coverImageAsset: null != (t = C.cover_image_asset) ? t : null }),
+                    (0, r.jsx)(y.Z, { coverImageAsset: null != (t = S.cover_image_asset) ? t : null }),
                     (0, r.jsx)(u.LZC, { size: 16 }),
                     (0, r.jsxs)('div', {
-                        className: N.serverShopLabel,
+                        className: j.serverShopLabel,
                         children: [
                             (0, r.jsx)(v.Z, {
                                 height: '16px',
@@ -90,8 +90,8 @@ function j(e) {
                             (0, r.jsx)(u.X6q, {
                                 variant: 'heading-sm/semibold',
                                 color: 'interactive-normal',
-                                className: N.serverShopLabelText,
-                                children: O.NW.string(O.t.al5EXF)
+                                className: j.serverShopLabelText,
+                                children: O.intl.string(O.t.al5EXF)
                             })
                         ]
                     }),
@@ -99,30 +99,30 @@ function j(e) {
                     (0, r.jsx)(u.X6q, {
                         variant: 'heading-md/semibold',
                         color: 'text-normal',
-                        children: O.NW.format(O.t.NZeik5, { guildName: a.name })
+                        children: O.intl.format(O.t.NZeik5, { guildName: l.name })
                     }),
                     (0, r.jsx)(u.LZC, { size: 4 }),
                     (0, r.jsx)(u.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         lineClamp: 2,
-                        children: C.description
+                        children: S.description
                     }),
                     (0, r.jsx)(u.LZC, { size: 16 }),
                     (0, r.jsx)(g.Z, {}),
                     (0, r.jsx)(u.LZC, { size: 16 }),
                     (0, r.jsxs)('div', {
-                        className: N.guildShopEmbedFooter,
+                        className: j.guildShopEmbedFooter,
                         children: [
-                            (0, r.jsx)(m.Z, { guild: a }),
+                            (0, r.jsx)(m.Z, { guild: l }),
                             (0, r.jsxs)('ul', {
-                                className: N.guildShopSummary,
+                                className: j.guildShopSummary,
                                 children: [
                                     (0, r.jsx)('li', {
                                         children: (0, r.jsx)(u.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-muted',
-                                            children: O.NW.format(O.t.tKZNlZ, { listingCount: I.length })
+                                            children: O.intl.format(O.t.tKZNlZ, { listingCount: N.length })
                                         })
                                     }),
                                     null != P &&
@@ -130,16 +130,16 @@ function j(e) {
                                             children: (0, r.jsx)(u.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'text-muted',
-                                                children: O.NW.format(O.t['kXr8+f'], { createdYear: P.getFullYear() })
+                                                children: O.intl.format(O.t['kXr8+f'], { createdYear: P.getFullYear() })
                                             })
                                         })
                                 ]
                             }),
                             (0, r.jsx)(u.zxk, {
-                                className: N.guildShopEmbedCta,
+                                className: j.guildShopEmbedCta,
                                 onClick: T,
                                 children: (0, r.jsxs)('div', {
-                                    className: N.guildShopEmbedCtaContent,
+                                    className: j.guildShopEmbedCtaContent,
                                     children: [
                                         (0, r.jsx)(v.Z, {
                                             height: '18px',
@@ -148,7 +148,7 @@ function j(e) {
                                         (0, r.jsx)(u.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: O.NW.string(O.t.jXx1CA)
+                                            children: O.intl.string(O.t.jXx1CA)
                                         })
                                     ]
                                 })

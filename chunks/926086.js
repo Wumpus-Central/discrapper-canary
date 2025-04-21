@@ -61,24 +61,24 @@ function m(e) {
             a(Date.now()), _((e) => e + 1);
         },
         S = o > 0 && m - o < 1000,
-        N = (0, u.Yzy)(y > 0 && y < m && m - y < E, {
+        Z = (0, u.Yzy)(y > 0 && y < m && m - y < E, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
             config: f
         }),
-        [Z, w] = r.useState(!1);
+        [N, w] = r.useState(!1);
     if (
         (r.useEffect(() => {
             b > 10 && w(!0);
         }, [b]),
-        Z)
+        N)
     )
         throw Error('ClickZoneDebugWidget crashed, too many clicks');
     return t && !n
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: N(
+              children: Z(
                   (e, t) =>
                       t &&
                       (0, i.jsx)(c.animated.div, {

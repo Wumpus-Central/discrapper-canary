@@ -2,8 +2,8 @@ n.d(t, { L: () => m });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(962086),
-    l = n(225675),
+    l = n(962086),
+    s = n(225675),
     a = n(671533),
     o = n(434404),
     c = n(981631),
@@ -12,12 +12,12 @@ var i = n(481060),
 function m(e) {
     let { guildId: t, role: n } = e;
     return (0, r.jsxs)(i.xJW, {
-        title: d.NW.string(d.t.arFPfH),
+        title: d.intl.string(d.t.arFPfH),
         className: u.container,
         children: [
             (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
-                children: d.NW.string(d.t['IT/0AA'])
+                children: d.intl.string(d.t['IT/0AA'])
             }),
             (0, r.jsxs)(i.zxk, {
                 className: u.button,
@@ -26,14 +26,14 @@ function m(e) {
                 color: i.zxk.Colors.PRIMARY,
                 onClick: () => {
                     o.Z.close(),
-                        (0, s.iD)(t, {
-                            type: l.z.ROLES,
+                        (0, l.iD)(t, {
+                            type: s.z.ROLES,
                             roles: { [n.id]: n },
                             returnToSection: c.pNK.ROLES
                         });
                 },
                 children: [
-                    d.NW.string(d.t.arFPfH),
+                    d.intl.string(d.t.arFPfH),
                     (0, r.jsx)(a.Z, {
                         width: 16,
                         height: 16,

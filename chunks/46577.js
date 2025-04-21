@@ -1,8 +1,8 @@
-r.d(t, { default: () => m }), r(388685);
+r.d(e, { default: () => m }), r(388685);
 var n = r(200651),
-    o = r(192379),
-    i = r(442837),
-    l = r(481060),
+    i = r(192379),
+    l = r(442837),
+    o = r(481060),
     c = r(239091),
     a = r(410575),
     s = r(881052),
@@ -16,124 +16,124 @@ var n = r(200651),
     j = r(273504),
     O = r(981631),
     h = r(388032);
-function m(e) {
-    let { rule: t, analyticsContext: r, onSelect: m } = e,
-        N = (0, b.Vb)(t),
-        w = (function (e) {
-            let { editingRule: t, setEditingRule: r } = (0, g.V)();
-            return (0, n.jsx)(l.sNh, {
+function m(t) {
+    let { rule: e, analyticsContext: r, onSelect: m } = t,
+        w = (0, b.Vb)(e),
+        x = (function (t) {
+            let { editingRule: e, setEditingRule: r } = (0, g.V)();
+            return (0, n.jsx)(o.sNh, {
                 id: 'edit-automod-rule',
-                label: h.NW.string(h.t.uQq6Pz),
+                label: h.intl.string(h.t.uQq6Pz),
                 action: () => {
-                    r(e);
+                    r(t);
                 },
-                disabled: null != t
+                disabled: null != e
             });
-        })(t),
-        x = (function (e) {
-            let { setEditingRule: t } = (0, g.V)(),
-                [r, c] = o.useState(!1),
-                { removeRule: a } = (0, p.pH)(e.guildId),
-                u = (0, i.e7)([d.Z], () => d.Z.getGuild(e.guildId)),
+        })(e),
+        v = (function (t) {
+            let { setEditingRule: e } = (0, g.V)(),
+                [r, c] = i.useState(!1),
+                { removeRule: a } = (0, p.pH)(t.guildId),
+                u = (0, l.e7)([d.Z], () => d.Z.getGuild(t.guildId)),
                 b = async () => {
-                    if (!r && (await (0, y.gK)(e.name))) {
+                    if (!r && (await (0, y.gK)(t.name))) {
                         c(!0);
                         try {
-                            await (0, f.mm)(e.id, e.guildId), t(null), a(e.id, e.guildId);
-                        } catch (t) {
+                            await (0, f.mm)(t.id, t.guildId), e(null), a(t.id, t.guildId);
+                        } catch (e) {
                             var n;
-                            let e = new s.Hx(t);
-                            (0, l.showToast)((0, l.createToast)(null != (n = e.getAnyErrorMessage()) ? n : h.NW.string(h.t.fEptJC), l.ToastType.FAILURE));
+                            let t = new s.Hx(e);
+                            (0, o.showToast)((0, o.createToast)(null != (n = t.getAnyErrorMessage()) ? n : h.intl.string(h.t.fEptJC), o.ToastType.FAILURE));
                         } finally {
                             c(!1);
                         }
                     }
                 },
-                m = e.triggerType === j.fX.MENTION_SPAM && (null == u ? void 0 : u.features) != null && u.features.has(O.oNc.COMMUNITY);
-            return (0, n.jsx)(l.sNh, {
+                m = t.triggerType === j.fX.MENTION_SPAM && (null == u ? void 0 : u.features) != null && u.features.has(O.oNc.COMMUNITY);
+            return (0, n.jsx)(o.sNh, {
                 id: 'delete-automod-rule',
-                label: h.NW.string(h.t['92m/09']),
+                label: h.intl.string(h.t['92m/09']),
                 action: m
                     ? () => {
-                          (0, l.h7j)((e) => {
-                              var t, r;
+                          (0, o.h7j)((t) => {
+                              var e, r;
                               return (0, n.jsx)(
-                                  l.ConfirmModal,
-                                  ((t = (function (e) {
-                                      for (var t = 1; t < arguments.length; t++) {
-                                          var r = null != arguments[t] ? arguments[t] : {},
+                                  o.ConfirmModal,
+                                  ((e = (function (t) {
+                                      for (var e = 1; e < arguments.length; e++) {
+                                          var r = null != arguments[e] ? arguments[e] : {},
                                               n = Object.keys(r);
                                           'function' == typeof Object.getOwnPropertySymbols &&
                                               (n = n.concat(
-                                                  Object.getOwnPropertySymbols(r).filter(function (e) {
-                                                      return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                                  Object.getOwnPropertySymbols(r).filter(function (t) {
+                                                      return Object.getOwnPropertyDescriptor(r, t).enumerable;
                                                   })
                                               )),
-                                              n.forEach(function (t) {
+                                              n.forEach(function (e) {
                                                   var n;
-                                                  (n = r[t]),
-                                                      t in e
-                                                          ? Object.defineProperty(e, t, {
+                                                  (n = r[e]),
+                                                      e in t
+                                                          ? Object.defineProperty(t, e, {
                                                                 value: n,
                                                                 enumerable: !0,
                                                                 configurable: !0,
                                                                 writable: !0
                                                             })
-                                                          : (e[t] = n);
+                                                          : (t[e] = n);
                                               });
                                       }
-                                      return e;
+                                      return t;
                                   })(
                                       {
-                                          header: h.NW.string(h.t.MmpqMD),
-                                          confirmText: h.NW.string(h.t.BddRzc),
-                                          confirmButtonColor: l.zxk.Colors.BRAND
+                                          header: h.intl.string(h.t.MmpqMD),
+                                          confirmText: h.intl.string(h.t.BddRzc),
+                                          confirmButtonColor: o.zxk.Colors.BRAND
                                       },
-                                      e
+                                      t
                                   )),
                                   (r = r =
                                       {
-                                          children: (0, n.jsx)(l.Text, {
+                                          children: (0, n.jsx)(o.Text, {
                                               variant: 'text-md/normal',
-                                              children: h.NW.string(h.t.XMdBLy)
+                                              children: h.intl.string(h.t.XMdBLy)
                                           })
                                       }),
                                   Object.getOwnPropertyDescriptors
-                                      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-                                      : (function (e, t) {
-                                            var r = Object.keys(e);
+                                      ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+                                      : (function (t, e) {
+                                            var r = Object.keys(t);
                                             if (Object.getOwnPropertySymbols) {
-                                                var n = Object.getOwnPropertySymbols(e);
+                                                var n = Object.getOwnPropertySymbols(t);
                                                 r.push.apply(r, n);
                                             }
                                             return r;
-                                        })(Object(r)).forEach(function (e) {
-                                            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                                        })(Object(r)).forEach(function (t) {
+                                            Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
                                         }),
-                                  t)
+                                  e)
                               );
                           });
                       }
                     : b
             });
-        })(t),
-        v = (0, u.Z)({
-            id: t.id,
-            label: h.NW.string(h.t.F64hjo)
+        })(e),
+        P = (0, u.Z)({
+            id: e.id,
+            label: h.intl.string(h.t.F64hjo)
         });
     return (0, n.jsx)(a.Z, {
         context: r,
         object: O.qAy.CONTEXT_MENU,
-        children: (0, n.jsxs)(l.v2r, {
+        children: (0, n.jsxs)(o.v2r, {
             navId: 'automod-rule-context',
             onClose: c.Zy,
-            'aria-label': h.NW.string(h.t.uT36Sk),
+            'aria-label': h.intl.string(h.t.uT36Sk),
             onSelect: m,
             children: [
-                (0, n.jsxs)(l.kSQ, {
-                    children: [w, N && x]
+                (0, n.jsxs)(o.kSQ, {
+                    children: [x, w && v]
                 }),
-                N && (0, n.jsx)(l.kSQ, { children: v })
+                w && (0, n.jsx)(o.kSQ, { children: P })
             ]
         })
     });

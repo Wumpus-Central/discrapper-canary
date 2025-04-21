@@ -49,7 +49,7 @@ function P(e, t) {
 }
 function A(e) {
     return (0, r.Rp)(
-        v.NW.formatToParts(v.t['ihxM9/'], {
+        v.intl.formatToParts(v.t['ihxM9/'], {
             username: e,
             usernameOnClick: b.dG4
         })
@@ -73,7 +73,7 @@ let w = {
             case b.uaV.RECIPIENT_ADD:
                 if (null == I) return;
                 return (0, r.Rp)(
-                    v.NW.formatToParts(v.t['7/Xl0d'], {
+                    v.intl.formatToParts(v.t['7/Xl0d'], {
                         username: S,
                         usernameOnClick: b.dG4,
                         otherUsername: p.ZP.getName(null, y, I),
@@ -85,13 +85,13 @@ let w = {
                 let E = e.author;
                 if (null == E || E.id === I.id)
                     return (0, r.Rp)(
-                        v.NW.formatToParts(v.t['Qn5+LS'], {
+                        v.intl.formatToParts(v.t['Qn5+LS'], {
                             username: S,
                             usernameOnClick: b.dG4
                         })
                     );
                 return (0, r.Rp)(
-                    v.NW.formatToParts(v.t.QtZ0RE, {
+                    v.intl.formatToParts(v.t.QtZ0RE, {
                         username: S,
                         usernameOnClick: b.dG4,
                         otherUsername: p.ZP.getName(null, y, I),
@@ -102,7 +102,7 @@ let w = {
                 let { call: C } = e;
                 if (null != C && -1 === C.participants.indexOf(_.default.getId()))
                     return (0, r.Rp)(
-                        v.NW.formatToParts(v.t.DbgSAw, {
+                        v.intl.formatToParts(v.t.DbgSAw, {
                             username: S,
                             usernameOnClick: b.dG4
                         })
@@ -110,7 +110,7 @@ let w = {
                 return;
             case b.uaV.CHANNEL_NAME_CHANGE:
                 return (0, r.Rp)(
-                    v.NW.formatToParts(t.isForumPost() ? v.t['qa0e/v'] : v.t.XCPMEB, {
+                    v.intl.formatToParts(t.isForumPost() ? v.t['qa0e/v'] : v.t.XCPMEB, {
                         username: S,
                         usernameOnClick: b.dG4,
                         channelName: e.content
@@ -118,14 +118,14 @@ let w = {
                 );
             case b.uaV.CHANNEL_ICON_CHANGE:
                 return (0, r.Rp)(
-                    v.NW.formatToParts(v.t.wypJZ2, {
+                    v.intl.formatToParts(v.t.wypJZ2, {
                         username: S,
                         usernameOnClick: b.dG4
                     })
                 );
             case b.uaV.CHANNEL_PINNED_MESSAGE:
                 return (0, r.Rp)(
-                    v.NW.formatToParts(v.t['/M60j4'], {
+                    v.intl.formatToParts(v.t['/M60j4'], {
                         username: S,
                         usernameOnClick: b.dG4
                     })
@@ -133,7 +133,7 @@ let w = {
             case b.uaV.USER_JOIN:
                 let O = N(t.guild_id);
                 return (0, r.Rp)(
-                    v.NW.formatToParts(P(e.id, O), {
+                    v.intl.formatToParts(P(e.id, O), {
                         username: S,
                         usernameOnClick: b.dG4
                     })
@@ -147,15 +147,15 @@ let w = {
                 return null == w || null == f.Z.getGuild(w.getGuildId())
                     ? A(S)
                     : (0, r.Rp)(
-                          v.NW.formatToParts(v.t['ihxM9/'], {
+                          v.intl.formatToParts(v.t['ihxM9/'], {
                               username: S,
                               usernameOnClick: b.dG4
                           })
                       );
             case b.uaV.GUILD_INVITE_REMINDER:
-                return v.NW.string(v.t.gxyKvr);
+                return v.intl.string(v.t.gxyKvr);
             case b.uaV.THREAD_STARTER_MESSAGE:
-                return v.NW.formatToPlainString(v.t['B8H+Cg'], {
+                return v.intl.formatToPlainString(v.t['B8H+Cg'], {
                     username: S,
                     threadName: t.name
                 });
@@ -213,7 +213,7 @@ let w = {
                     let e = d.Z.getChannel(y);
                     if (null == e) return null;
                     let t = f.Z.getGuild(e.getGuildId());
-                    return null == t ? null : (0, r.Rp)(v.NW.formatToParts(v.t['a+lJKi'], { guildName: t.name }));
+                    return null == t ? null : (0, r.Rp)(v.intl.formatToParts(v.t['a+lJKi'], { guildName: t.name }));
                 }
                 return e.content;
             case b.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED:
@@ -224,12 +224,12 @@ let w = {
                 return null == j
                     ? null
                     : (0, r.Rp)(
-                          v.NW.formatToParts(v.t.iOuWPj, {
+                          v.intl.formatToParts(v.t.iOuWPj, {
                               username: S,
                               guildName: j.name,
                               time:
                                   '' !== L
-                                      ? new Date(L).toLocaleString(v.NW.currentLocale, {
+                                      ? new Date(L).toLocaleString(v.intl.currentLocale, {
                                             hour: 'numeric',
                                             minute: '2-digit'
                                         })
@@ -243,7 +243,7 @@ let w = {
                 return null == Z
                     ? null
                     : (0, r.Rp)(
-                          v.NW.formatToParts(v.t.axmbpq, {
+                          v.intl.formatToParts(v.t.axmbpq, {
                               username: S,
                               guildName: Z.name
                           })
@@ -259,7 +259,7 @@ let w = {
     },
     getSystemMessageUserJoinMobile: P,
     getSystemMessageBotJoin: function (e) {
-        return null == h[e] ? null : v.NW.format(v.t.xw1Ij4, { learnOnClick: { onClick: () => window.open(h[e]) } });
+        return null == h[e] ? null : v.intl.format(v.t.xw1Ij4, { learnOnClick: { onClick: () => window.open(h[e]) } });
     },
     getWelcomeMessageKind: N
 };

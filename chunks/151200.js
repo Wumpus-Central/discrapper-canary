@@ -135,7 +135,7 @@ function v(e) {
             theme: f.BR.DARK,
             children: (e) =>
                 (0, n.jsxs)('figure', {
-                    'aria-roledescription': b.NW.string(b.t.zFfUhI),
+                    'aria-roledescription': b.intl.string(b.t.zFfUhI),
                     'aria-labelledby': C,
                     'data-disable-adaptive-theme': !0,
                     className: i()(O.container, e),

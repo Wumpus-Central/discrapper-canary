@@ -42,7 +42,7 @@ function f(e) {
                     (0, r.jsx)(i.X6q, {
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        children: b || v ? u.NW.string(u.t.N0bC3N) : u.NW.string(u.t.O1sT5u)
+                        children: b || v ? u.intl.string(u.t.N0bC3N) : u.intl.string(u.t.O1sT5u)
                     })
                 ]
             })

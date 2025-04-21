@@ -79,7 +79,7 @@ function g(e) {
                             e,
                             m(p({}, t), {
                                 id: i,
-                                label: d.NW.string(d.t.oJ1Mu7)
+                                label: d.intl.string(d.t.oJ1Mu7)
                             })
                         );
                 });

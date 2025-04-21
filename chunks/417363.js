@@ -70,8 +70,8 @@ function I(e, t) {
 }
 let S = 200,
     T = 200,
-    N = +_.Z.Millis.MINUTE,
-    A = {},
+    A = +_.Z.Millis.MINUTE,
+    N = {},
     C = 'content',
     R = 'file://',
     P = !1,
@@ -197,9 +197,9 @@ function H(e) {
         ...M
     ]).slice(0, T);
 }
-function W(e) {
+function Y(e) {
     let t = Date.now(),
-        n = t - N;
+        n = t - A;
     x = (x = [
         {
             bytes: e,
@@ -213,7 +213,7 @@ function W(e) {
             return t >= n;
         });
 }
-function Y(e) {
+function W(e) {
     k = (k = [
         {
             bytes: e,
@@ -223,10 +223,10 @@ function Y(e) {
     ]).slice(0, T);
 }
 let K = a().throttle(H, S),
-    z = a().throttle(W, S),
-    q = a().throttle(Y, S);
+    z = a().throttle(Y, S),
+    q = a().throttle(W, S);
 function Q(e, t, n) {
-    let r = n(A[t]),
+    let r = n(N[t]),
         i = n(e[t]);
     return null != r && null != i && 0 !== r ? Math.max(i - r, 0) : 0;
 }
@@ -240,7 +240,7 @@ function X(e) {
     for (let e in r)
         for (let t in r[e]) {
             let o = (0, p.Tu)(e, t);
-            if (((n[o] = B(r[e][t])), null != A[o])) {
+            if (((n[o] = B(r[e][t])), null != N[o])) {
                 let e = Q(n, o, F);
                 e > 0 && K((w += e));
                 let r = Q(n, o, V);
@@ -284,45 +284,45 @@ function X(e) {
                         });
             }
         }
-    a || 'dispatch_application_progress' !== c.Z.taskID || c.Z.clearProgress('dispatch_application_progress'), (A = n), (j = !0);
+    a || 'dispatch_application_progress' !== c.Z.taskID || c.Z.clearProgress('dispatch_application_progress'), (N = n), (j = !0);
 }
 class J extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(u.default);
     }
     getState(e, t) {
-        return A[(0, p.Tu)(e, t)];
+        return N[(0, p.Tu)(e, t)];
     }
     isUpToDate(e, t) {
-        let n = A[(0, p.Tu)(e, t)];
+        let n = N[(0, p.Tu)(e, t)];
         return null != n && n.type === b.vxO.UP_TO_DATE;
     }
     shouldPatch(e, t) {
-        let n = A[(0, p.Tu)(e, t)];
+        let n = N[(0, p.Tu)(e, t)];
         return null != n && !0 === n.shouldPatch;
     }
     isInstalled(e, t) {
-        let n = A[(0, p.Tu)(e, t)];
+        let n = N[(0, p.Tu)(e, t)];
         return null != n ? n.type !== b.vxO.UNINSTALLING : E.Z.shouldBeInstalled(e, t);
     }
     supportsCloudSync(e, t) {
         null == t && (t = e);
-        let n = A[(0, p.Tu)(e, t)];
+        let n = N[(0, p.Tu)(e, t)];
         return null != n && null != n.storage && !!n.storage.sync;
     }
     isLaunchable(e, t) {
         if (!(0, m.Q)()) return !1;
-        let n = A[(0, p.Tu)(e, t)];
+        let n = N[(0, p.Tu)(e, t)];
         return null != n && n.type === b.vxO.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length;
     }
     getDefaultLaunchOption(e, t) {
-        let n = A[(0, p.Tu)(e, t)];
+        let n = N[(0, p.Tu)(e, t)];
         if (null == n) return null;
         let { defaultLaunchOptionId: r, launchOptions: i } = n;
         return null == r || null == i ? null : i[r];
     }
     getLaunchOptions(e, t) {
-        let n = A[(0, p.Tu)(e, t)];
+        let n = N[(0, p.Tu)(e, t)];
         return null == n || null == n.launchOptions ? [] : Object.values(n.launchOptions);
     }
     getHistoricalTotalBytesRead() {

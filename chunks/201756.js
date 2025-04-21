@@ -2,9 +2,9 @@ n.d(t, { Z: () => R }), n(388685);
 var r = n(200651),
     l = n(192379),
     o = n(120356),
-    a = n.n(o),
-    i = n(498607),
-    s = n.n(i),
+    i = n.n(o),
+    a = n(498607),
+    s = n.n(a),
     c = n(399606),
     u = n(433517),
     d = n(481060),
@@ -20,10 +20,10 @@ var r = n(200651),
     v = n(123846),
     O = n(42551),
     y = n(981631),
-    N = n(388032),
-    _ = n(771429),
-    H = n(350381);
-function w(e) {
+    _ = n(388032),
+    H = n(771429),
+    w = n(350381);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -86,19 +86,19 @@ function D(e, t) {
     return l;
 }
 let Z = l.forwardRef(function (e, t) {
-        var { label: n, onFilter: l, isFiltered: o, isSorted: i, className: s } = e,
+        var { label: n, onFilter: l, isFiltered: o, isSorted: a, className: s } = e,
             c = D(e, ['label', 'onFilter', 'isFiltered', 'isSorted', 'className']);
         let u = o ? 'header-primary' : 'header-secondary';
         return (
-            i && (u = 'text-brand'),
+            a && (u = 'text-brand'),
             (0, r.jsx)('th', {
-                className: a()(_.tableHeaderCellContainer, s),
+                className: i()(H.tableHeaderCellContainer, s),
                 children: (0, r.jsxs)(
                     d.P3F,
-                    S(w({}, c), {
+                    S(N({}, c), {
                         innerRef: t,
                         onClick: l,
-                        className: a()(_.tableHeaderCell, { [_.tableHeaderCellWithFilter]: null != l }),
+                        className: i()(H.tableHeaderCell, { [H.tableHeaderCellWithFilter]: null != l }),
                         children: [
                             (0, r.jsx)(d.Text, {
                                 variant: 'eyebrow',
@@ -107,10 +107,10 @@ let Z = l.forwardRef(function (e, t) {
                             }),
                             null != l &&
                                 (0, r.jsx)('div', {
-                                    className: _.filterIconButton,
+                                    className: H.filterIconButton,
                                     children: (0, r.jsx)(d.gXV, {
                                         size: 'custom',
-                                        className: _.filterIcon,
+                                        className: H.filterIcon,
                                         color: o ? d.TVs.colors.CONTROL_BRAND_FOREGROUND.css : d.TVs.colors.TEXT_MUTED.css,
                                         width: 16,
                                         height: 16
@@ -126,7 +126,7 @@ let Z = l.forwardRef(function (e, t) {
 function R(e) {
     let { guildId: t, currentPagedMembers: n } = e,
         o = l.useRef(null),
-        i = l.useRef(null),
+        a = l.useRef(null),
         R = l.useRef(null),
         P = l.useRef(null),
         I = l.useRef(null),
@@ -134,14 +134,14 @@ function R(e) {
         V = (0, c.e7)([m.Z, C.Z], () => m.Z.can(y.Plq.MANAGE_GUILD, C.Z.getGuild(t)), [t]),
         { selectedUserIds: E, addUsers: T, clearSelection: k } = (0, h.Z)(t),
         A = M.requireUnusualDmActivity || M.requireCommunicationDisabled || M.requireUnusualAccountActivity || M.requireUsernameQuarantined,
-        W = M.selectedRoleIds.size > 0,
-        B = null != M.selectedJoinDateOption.afterDate,
-        U = M.selectedSort === b.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
-        F = null != M.selectedAccountAgeOption.afterDate,
-        z = M.selectedSort === b.d$.ORDER_BY_USER_ID_ASC || M.selectedSort === b.d$.ORDER_BY_USER_ID_DESC,
-        q = null != M.selectedSourceInviteCode && '' !== M.selectedSourceInviteCode,
-        G = null != M.selectedJoinSourceType,
-        Y = q || G,
+        B = M.selectedRoleIds.size > 0,
+        U = null != M.selectedJoinDateOption.afterDate,
+        F = M.selectedSort === b.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
+        z = null != M.selectedAccountAgeOption.afterDate,
+        q = M.selectedSort === b.d$.ORDER_BY_USER_ID_ASC || M.selectedSort === b.d$.ORDER_BY_USER_ID_DESC,
+        G = null != M.selectedSourceInviteCode && '' !== M.selectedSourceInviteCode,
+        Y = null != M.selectedJoinSourceType,
+        W = G || Y,
         [X, K] = l.useState(null == u.K.get(L, null)),
         J = l.useCallback(() => {
             u.K.set(L, Date.now()), K(!1);
@@ -155,20 +155,20 @@ function R(e) {
         }, [ee, et, k, T, $]);
     return (0, r.jsx)('thead', {
         children: (0, r.jsxs)('tr', {
-            className: _.tableHeaderRow,
+            className: H.tableHeaderRow,
             children: [
                 Q &&
                     (0, r.jsx)('th', {
-                        className: a()(_.tableHeaderCellContainer, H.xsmallCol),
+                        className: i()(H.tableHeaderCellContainer, w.xsmallCol),
                         children: (0, r.jsx)(d.ua7, {
                             shouldShow: !ee,
-                            text: N.NW.string(N.t.tJEY0N),
+                            text: _.intl.string(_.t.tJEY0N),
                             children: (e) =>
                                 (0, r.jsx)(
                                     d.P3F,
-                                    S(w({}, e), {
+                                    S(N({}, e), {
                                         onClick: en,
-                                        className: _.tableHeaderCell,
+                                        className: H.tableHeaderCell,
                                         children: (0, r.jsx)(d.XZJ, {
                                             type: d.XZJ.Types.INVERTED,
                                             value: et,
@@ -178,7 +178,7 @@ function R(e) {
                                 )
                         })
                     }),
-                (0, r.jsx)(Z, { label: N.NW.string(N.t.Es7n9f) }),
+                (0, r.jsx)(Z, { label: _.intl.string(_.t.Es7n9f) }),
                 V
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
@@ -199,14 +199,14 @@ function R(e) {
                                           n = D(e, ['onClick']);
                                       return (0, r.jsx)(
                                           Z,
-                                          w(
+                                          N(
                                               {
                                                   ref: o,
-                                                  label: N.NW.string(N.t.xcKP1N),
+                                                  label: _.intl.string(_.t.xcKP1N),
                                                   onFilter: t,
-                                                  isFiltered: B,
-                                                  isSorted: U,
-                                                  className: H.smallCol
+                                                  isFiltered: U,
+                                                  isSorted: F,
+                                                  className: w.smallCol
                                               },
                                               n
                                           )
@@ -214,7 +214,7 @@ function R(e) {
                                   }
                               }),
                               (0, r.jsx)(d.yRy, {
-                                  targetElementRef: i,
+                                  targetElementRef: a,
                                   animation: d.yRy.Animation.FADE,
                                   position: 'bottom',
                                   spacing: 4,
@@ -230,14 +230,14 @@ function R(e) {
                                           n = D(e, ['onClick']);
                                       return (0, r.jsx)(
                                           Z,
-                                          w(
+                                          N(
                                               {
-                                                  ref: i,
-                                                  label: N.NW.string(N.t.sPph4O),
+                                                  ref: a,
+                                                  label: _.intl.string(_.t.sPph4O),
                                                   onFilter: t,
-                                                  isFiltered: F,
-                                                  isSorted: z,
-                                                  className: H.smallCol
+                                                  isFiltered: z,
+                                                  isSorted: q,
+                                                  className: w.smallCol
                                               },
                                               n
                                           )
@@ -249,12 +249,12 @@ function R(e) {
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(Z, {
-                                  label: N.NW.string(N.t.xcKP1N),
-                                  className: H.smallCol
+                                  label: _.intl.string(_.t.xcKP1N),
+                                  className: w.smallCol
                               }),
                               (0, r.jsx)(Z, {
-                                  label: N.NW.string(N.t.sPph4O),
-                                  className: H.smallCol
+                                  label: _.intl.string(_.t.sPph4O),
+                                  className: w.smallCol
                               })
                           ]
                       }),
@@ -276,13 +276,13 @@ function R(e) {
                                   n = D(e, ['onClick']);
                               return (0, r.jsx)(
                                   Z,
-                                  w(
+                                  N(
                                       {
                                           ref: R,
-                                          label: N.NW.string(N.t.yn0w19),
+                                          label: _.intl.string(_.t.yn0w19),
                                           onFilter: t,
-                                          isFiltered: Y,
-                                          className: H.smallCol
+                                          isFiltered: W,
+                                          className: w.smallCol
                                       },
                                       n
                                   )
@@ -291,8 +291,8 @@ function R(e) {
                       })
                     : V &&
                       (0, r.jsx)(Z, {
-                          label: N.NW.string(N.t.yn0w19),
-                          className: H.smallCol
+                          label: _.intl.string(_.t.yn0w19),
+                          className: w.smallCol
                       }),
                 (0, r.jsx)(d.yRy, {
                     targetElementRef: P,
@@ -312,13 +312,13 @@ function R(e) {
                             n = D(e, ['onClick']);
                         return (0, r.jsx)(
                             Z,
-                            w(
+                            N(
                                 {
                                     ref: P,
-                                    label: N.NW.string(N.t['2SZsWV']),
+                                    label: _.intl.string(_.t['2SZsWV']),
                                     onFilter: t,
-                                    isFiltered: W,
-                                    className: H.mediumCol
+                                    isFiltered: B,
+                                    className: w.mediumCol
                                 },
                                 n
                             )
@@ -326,7 +326,7 @@ function R(e) {
                     }
                 }),
                 (0, r.jsx)(d.ua7, {
-                    text: N.NW.string(N.t['2cRO3d']),
+                    text: _.intl.string(_.t['2cRO3d']),
                     position: 'top',
                     align: 'left',
                     forceOpen: X,
@@ -350,14 +350,14 @@ function R(e) {
                             children: (t) =>
                                 (0, r.jsx)(Z, {
                                     ref: I,
-                                    label: N.NW.string(N.t['7V375+']),
-                                    'aria-label': N.NW.string(N.t['2cRO3d']),
+                                    label: _.intl.string(_.t['7V375+']),
+                                    'aria-label': _.intl.string(_.t['2cRO3d']),
                                     onFilter: (n) => {
                                         var r, l;
                                         J(), null == (r = t.onClick) || r.call(t, n), null == (l = e.onClick) || l.call(e);
                                     },
                                     isFiltered: A,
-                                    className: H.smallCol,
+                                    className: w.smallCol,
                                     onMouseEnter: () => {
                                         var n, r;
                                         J(), null == (n = e.onMouseEnter) || n.call(e), null == (r = t.onMouseEnter) || r.call(t);
@@ -373,8 +373,8 @@ function R(e) {
                         })
                 }),
                 (0, r.jsx)(Z, {
-                    label: N.NW.string(N.t['5Q9xGh']),
-                    className: H.smallCol
+                    label: _.intl.string(_.t['5Q9xGh']),
+                    className: w.smallCol
                 })
             ]
         })

@@ -1,20 +1,20 @@
 n.d(t, { Z: () => u }), n(388685);
-var r = n(192379),
-    i = n(399606),
+var i = n(192379),
+    r = n(399606),
     s = n(230711),
-    a = n(663389),
-    l = n(981631),
+    l = n(663389),
+    a = n(981631),
     o = n(526761);
 let c = new Set(Object.values(o.NB)),
     d = (e) => null != e && c.has(e),
     u = () => {
-        let e = (0, i.e7)([a.Z], () => {
-                let e = a.Z.getSubsection();
+        let e = (0, r.e7)([l.Z], () => {
+                let e = l.Z.getSubsection();
                 return d(e) ? e : o.NB.USER_PROFILE;
             }),
-            t = r.useCallback(
+            t = i.useCallback(
                 (t) => {
-                    e !== t && s.Z.setSection(l.oAB.PROFILE_CUSTOMIZATION, t);
+                    e !== t && s.Z.setSection(a.oAB.PROFILE_CUSTOMIZATION, t);
                 },
                 [e]
             );

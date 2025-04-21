@@ -22,8 +22,8 @@ var r = n(392711),
     I = n(816436),
     S = n(981631),
     T = n(372897),
-    N = n(490897);
-function A(e, t, n) {
+    A = n(490897);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function C(e) {
                 })
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
@@ -169,8 +169,8 @@ let L = {
             o = v.Z.getEnabled(e) ? v.Z.getDefaultChannelIds(e) : [],
             [c, f] = (0, O.Ee)(e, t, o),
             b = [...a, ...o],
-            A = b.map((e) => _.Z.getChannel(e)).filter(E.lm),
-            R = (0, I.v)(e, new Set(b), A, !0).length,
+            N = b.map((e) => _.Z.getChannel(e)).filter(E.lm),
+            R = (0, I.v)(e, new Set(b), N, !0).length,
             D = null == n ? [] : n.options.map((e) => e.id);
         if (
             (m.default.track(
@@ -188,7 +188,7 @@ let L = {
                     guild_onboarding_uncovered_channel_ids: f.map((e) => e.id)
                 })
             ),
-            (0, s.Ju)(e, N.W.GUILD_ONBOARDING_QUESTION, y.default.fromTimestamp(Date.now())),
+            (0, s.Ju)(e, A.W.GUILD_ONBOARDING_QUESTION, y.default.fromTimestamp(Date.now())),
             w(e, !0),
             d.Z.isFullServerPreview(e))
         ) {

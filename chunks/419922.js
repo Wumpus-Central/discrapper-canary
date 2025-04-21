@@ -27,11 +27,11 @@ let O = (e) => e.preventDefault(),
     I = 0.7,
     S = 33,
     T = 1.55,
-    N = {
+    A = {
         tension: 1100,
         friction: 40
     },
-    A = {
+    N = {
         tension: 1600,
         friction: 60
     };
@@ -43,7 +43,7 @@ function C(e, t) {
 }
 function R(e) {
     let t = 'description' in e && null != e.description ? ''.concat(e.name, ', ').concat(e.description) : e.name;
-    return y.NW.formatToPlainString(y.t.rk6pOz, { stickerName: t });
+    return y.intl.formatToPlainString(y.t.rk6pOz, { stickerName: t });
 }
 let P = (e) => {
         let { children: t, hasError: n, isLoading: i, maskAsset: a, size: s, withLoadingIndicator: l = !0 } = e,
@@ -71,7 +71,7 @@ let P = (e) => {
                                       className: v.errorText,
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
-                                      children: y.NW.string(y.t.tWYWJy)
+                                      children: y.intl.string(y.t.tWYWJy)
                                   })
                           ]
                       })
@@ -86,12 +86,12 @@ let P = (e) => {
             E = i.useRef(null),
             [O, I] = i.useState(!0),
             [S, T] = i.useState(!1),
-            N = i.useRef(!1);
-        N.current = t && u;
-        let A = null == s ? (0, b.Q6)(o) : s;
-        return (l()(null != A, 'Unable to determine sticker asset URL. Sticker ID: '.concat(o.id)),
+            A = i.useRef(!1);
+        A.current = t && u;
+        let N = null == s ? (0, b.Q6)(o) : s;
+        return (l()(null != N, 'Unable to determine sticker asset URL. Sticker ID: '.concat(o.id)),
         i.useEffect(() => {
-            if (null == g.current || null == A) return;
+            if (null == g.current || null == N) return;
             let e = Math.min(2, (0, p.x_)());
             (g.current.width = a * e), (g.current.height = a * e);
             let t = !1;
@@ -102,7 +102,7 @@ let P = (e) => {
                         ((E.current = new e({
                             canvas: g.current,
                             animationId: o.id,
-                            assetUrl: A,
+                            assetUrl: N,
                             assetData: c,
                             onInitialDraw: () => {
                                 t || I(!1);
@@ -111,25 +111,25 @@ let P = (e) => {
                                 t || (I(!1), T(!0), null == m || m());
                             }
                         })),
-                        N.current && E.current.setState(!0));
+                        A.current && E.current.setState(!0));
                 })(),
                 () => {
                     var e;
                     null == (e = E.current) || e.drop(), (E.current = null), (t = !0);
                 }
             );
-        }, [A, a, o.id, c, m]),
+        }, [N, a, o.id, c, m]),
         i.useEffect(() => {
             var e;
             let n;
             t || (n = 0), null == (e = E.current) || e.setState(t && u, n);
         }, [o, t, u]),
-        null == A)
+        null == N)
             ? null
             : (0, r.jsx)('div', {
                   role: 'img',
                   className: d,
-                  'aria-label': S ? y.NW.string(y.t.yEvsKy) : R(o),
+                  'aria-label': S ? y.intl.string(y.t.yEvsKy) : R(o),
                   ref: _,
                   children: (0, r.jsx)(P, {
                       hasError: S,
@@ -154,14 +154,14 @@ let P = (e) => {
             [E, y] = i.useState(!1),
             S = i.useRef(null),
             T = i.useRef(null),
-            N =
+            A =
                 null != _
                     ? _
                     : (0, b.Q6)(n, {
                           isPreview: !t || !p || !a,
                           size: s
                       }),
-            A = i.useCallback(() => {
+            N = i.useCallback(() => {
                 g(!1);
             }, []),
             w = i.useCallback(() => {
@@ -177,7 +177,7 @@ let P = (e) => {
             var e;
             (null == (e = T.current) ? void 0 : e.complete) === !0 && g(!1);
         }, []),
-        null == N)
+        null == A)
             ? null
             : (0, r.jsx)(d.$, {
                   innerRef: u,
@@ -197,10 +197,10 @@ let P = (e) => {
                               (0, r.jsx)('img', {
                                   className: v.pngImage,
                                   alt: R(n),
-                                  src: N,
+                                  src: A,
                                   draggable: !1,
                                   onError: w,
-                                  onLoad: A,
+                                  onLoad: N,
                                   onContextMenu: O,
                                   ref: T
                               }),
@@ -226,7 +226,7 @@ let P = (e) => {
                     opacity: 1
                 },
                 leave: g,
-                config: N
+                config: A
             }),
             b = i.useRef(null),
             y = (0, f.q_F)(
@@ -234,7 +234,7 @@ let P = (e) => {
                     ref: b,
                     transform: o || p ? 'translateY(0)' : 'translateY(-25px)',
                     opacity: +!!o,
-                    config: A
+                    config: N
                 },
                 'animate-always'
             );

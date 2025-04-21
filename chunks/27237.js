@@ -1,8 +1,8 @@
-t.d(n, { ZP: () => N }), t(388685);
+t.d(n, { ZP: () => C }), t(388685);
 var r = t(200651),
-    o = t(192379),
-    i = t(120356),
-    s = t.n(i),
+    i = t(192379),
+    o = t(120356),
+    s = t.n(o),
     a = t(793030),
     l = t(481060),
     c = t(808189),
@@ -12,19 +12,19 @@ var r = t(200651),
     m = t(262212),
     x = t(279604),
     _ = t(981631),
-    v = t(680278),
-    f = t(388032),
+    f = t(680278),
+    v = t(388032),
     g = t(568413),
     j = t(117172);
 function h(e) {
     let n,
-        { active: t, nextActive: o, position: i } = e;
+        { active: t, nextActive: i, position: o } = e;
     return (
-        (n = t && !1 !== o ? 'full' : t && !1 === o ? 'half' : 'none'),
+        (n = t && !1 !== i ? 'full' : t && !1 === i ? 'half' : 'none'),
         (0, r.jsxs)('div', {
             className: g.progressContainer,
             children: [
-                (0, r.jsx)('div', { className: s()(g.progress, g[i], g[n]) }),
+                (0, r.jsx)('div', { className: s()(g.progress, g[o], g[n]) }),
                 (0, r.jsx)('div', {
                     className: s()(g.boostContainer, { [g.boostContainerActive]: t }),
                     children: (0, r.jsx)(l.$Eu, {
@@ -38,7 +38,7 @@ function h(e) {
 }
 function b(e) {
     let { index: n } = e,
-        t = o.useMemo(() => {
+        t = i.useMemo(() => {
             let e = c.C[n];
             if (null == e) return [];
             let t = e.tier === _.Eu4.TIER_3 ? e.perks.slice(0, -1) : e.perks;
@@ -75,23 +75,23 @@ function b(e) {
                 children: (0, r.jsx)(a.xv, {
                     color: 'text-muted',
                     variant: 'text-sm/medium',
-                    children: f.NW.string(v.Z.nIj3LS)
+                    children: v.intl.string(f.default.nIj3LS)
                 })
             })
         ]
     });
 }
-function N(e) {
+function C(e) {
     let n,
-        { guildId: t, index: i, powerup: s, nextPowerup: l } = e,
+        { guildId: t, index: o, powerup: s, nextPowerup: l } = e,
         c = (0, d.Z)(t, s),
         _ = (0, d.Z)(t, l),
-        v = null != (0, u.Z)(t, s) || c,
-        f = null != (0, u.Z)(t, l) || _,
-        [N, Z] = o.useState(void 0);
+        f = null != (0, u.Z)(t, s) || c,
+        v = null != (0, u.Z)(t, l) || _,
+        [C, N] = i.useState(void 0);
     return (
-        (0, x.KT)(N),
-        (n = 0 === i ? 'start' : null == l ? 'end' : 'middle'),
+        (0, x.KT)(C),
+        (n = 0 === o ? 'start' : null == l ? 'end' : 'middle'),
         (0, r.jsxs)(p.Z, {
             guildId: t,
             powerup: s,
@@ -99,8 +99,8 @@ function N(e) {
             children: [
                 (0, r.jsx)(h, {
                     position: n,
-                    active: v,
-                    nextActive: null != l ? f : void 0
+                    active: f,
+                    nextActive: null != l ? v : void 0
                 }),
                 (0, r.jsxs)('div', {
                     className: j.contentContainer,
@@ -109,7 +109,7 @@ function N(e) {
                             variant: 'heading-md/bold',
                             children: s.title
                         }),
-                        (0, r.jsx)(b, { index: i }),
+                        (0, r.jsx)(b, { index: o }),
                         !c &&
                             (0, r.jsx)(p.u, {
                                 className: g.footer,
@@ -124,7 +124,7 @@ function N(e) {
                         children: (0, r.jsx)(m.ZP, {
                             guildId: t,
                             powerup: s,
-                            onError: Z
+                            onError: N
                         })
                     })
             ]

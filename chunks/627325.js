@@ -1,4 +1,4 @@
-n.d(t, { w: () => N });
+n.d(t, { w: () => O });
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -21,12 +21,12 @@ var r = n(200651),
     j = n(92609);
 let C = [51],
     I = [x.t.OpqAoq];
-function N(e) {
+function O(e) {
     let { columns: t, handleScroll: n, voiceListRef: i, showSectionHeaders: a = !1, query: l } = e,
-        s = E(),
+        s = N(),
         c = (0, d.e7)([g.default], () => (0, h.I5)(g.default.getCurrentUser())),
-        N = S(l, c),
-        P = Math.ceil(N.length / t),
+        O = S(l, c),
+        P = Math.ceil(O.length / t),
         {
             isNativeModuleLoaded: w,
             isNativeModuleLoading: T,
@@ -36,7 +36,7 @@ function N(e) {
             isNativeModuleLoading: v.Z.isNativeModuleLoading(),
             catalogLastFetchTime: v.Z.getCatalogLastFetchTime()
         }));
-    return l && 0 === N.length
+    return l && 0 === O.length
         ? (0, r.jsxs)('div', {
               className: j.iconMessage,
               children: [
@@ -49,7 +49,7 @@ function N(e) {
                   (0, r.jsx)(f.X6q, {
                       variant: 'heading-sm/medium',
                       color: 'header-muted',
-                      children: x.NW.string(x.t.ZzukHh)
+                      children: x.intl.string(x.t.ZzukHh)
                   })
               ]
           })
@@ -66,12 +66,12 @@ function N(e) {
                     (0, r.jsx)(f.X6q, {
                         variant: 'heading-md/normal',
                         color: 'header-muted',
-                        children: x.NW.string(x.t.DpZNJy)
+                        children: x.intl.string(x.t.DpZNJy)
                     }),
                     (0, r.jsx)(f.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-muted',
-                        children: x.NW.format(x.t['5afO9f'], { onClick: w ? b.wV : b.r5 })
+                        children: x.intl.format(x.t['5afO9f'], { onClick: w ? b.wV : b.r5 })
                     })
                 ]
             })
@@ -88,9 +88,9 @@ function N(e) {
                   className: o()(j.container, { [j.hasHeaders]: a }),
                   renderRow: (e) => {
                       let n = e * t,
-                          i = N.slice(n, n + t);
+                          i = O.slice(n, n + t);
                       return (0, r.jsx)(
-                          O,
+                          E,
                           {
                               children: i.map((n, i) =>
                                   (0, r.jsx)(
@@ -120,7 +120,7 @@ function N(e) {
                                     variant: 'text-sm/medium',
                                     color: 'header-muted',
                                     className: j.header,
-                                    children: x.NW.string(I[e])
+                                    children: x.intl.string(I[e])
                                 }),
                   sectionHeaderHeight: !1 === a ? void 0 : (e) => C[e],
                   rowCount: P,
@@ -130,7 +130,7 @@ function N(e) {
                   sectionFooterHeight: 40 * !c
               });
 }
-function O(e) {
+function E(e) {
     let { children: t } = e,
         n = i.useRef(null);
     return (0, r.jsx)('div', {
@@ -142,7 +142,7 @@ function O(e) {
         })
     });
 }
-let E = () =>
+let N = () =>
         (0, d.e7)([v.Z], () => {
             var e;
             return !Object.keys(null != (e = v.Z.getVoiceFilterModels()) ? e : {}).length && (v.Z.getCatalogFetchFailed() || v.Z.hasNativeModuleFailed());
@@ -153,7 +153,7 @@ let E = () =>
             ? e
             : e.filter((e) => {
                   let { name: t } = e,
-                      r = (0, c._I)(x.NW.string(t)).toLowerCase();
+                      r = (0, c._I)(x.intl.string(t)).toLowerCase();
                   return s()(n, r);
               });
     },

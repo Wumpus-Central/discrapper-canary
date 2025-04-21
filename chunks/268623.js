@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
-var r = n(200651),
-    i = n(192379),
-    a = n(442837),
-    l = n(481060),
+var i = n(200651),
+    r = n(192379),
+    l = n(442837),
+    a = n(481060),
     o = n(436774),
     s = n(2818),
     c = n(324701),
@@ -16,17 +16,17 @@ var r = n(200651),
 function p(e) {
     let { enabled: t } = s.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
         { showReminders: n } = g.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
-        p = (0, a.e7)([d.Z], () => d.Z.getSavedMessage(e.channel_id, e.id)),
+        p = (0, l.e7)([d.Z], () => d.Z.getSavedMessage(e.channel_id, e.id)),
         O = (function (e) {
             let { message: t, savedMessage: n } = e,
-                [a, o] = i.useState(new Date());
-            i.useEffect(() => {
+                [l, o] = r.useState(new Date());
+            r.useEffect(() => {
                 let e = setInterval(() => o(new Date()), b.Z.Millis.MINUTE);
                 return () => {
                     clearInterval(e);
                 };
             }, []);
-            let s = i.useCallback(
+            let s = r.useCallback(
                     (e) =>
                         (0, c.z)({
                             channelId: t.channel_id,
@@ -39,21 +39,21 @@ function p(e) {
                 d = (0, m.r)({ createReminder: s }),
                 { dueInText: f } = (0, u.AT)({
                     dueAt: null == n ? void 0 : n.saveData.dueAt,
-                    now: a,
+                    now: l,
                     type: u.hQ.LONG
                 });
             return (null == n ? void 0 : n.saveData.dueAt) == null
-                ? (0, r.jsx)(l.kSQ, {
-                      label: h.NW.string(h.t.roMu1N),
+                ? (0, i.jsx)(a.kSQ, {
+                      label: h.intl.string(h.t.roMu1N),
                       children: d
                   })
-                : (0, r.jsxs)(l.kSQ, {
+                : (0, i.jsxs)(a.kSQ, {
                       label: f,
                       children: [
-                          (0, r.jsx)(l.sNh, {
+                          (0, i.jsx)(a.sNh, {
                               id: 'mark-complete',
-                              label: h.NW.string(h.t.yjGtdH),
-                              icon: l.kmB,
+                              label: h.intl.string(h.t.yjGtdH),
+                              icon: a.kmB,
                               action: () =>
                                   (0, c.z)({
                                       channelId: t.channel_id,
@@ -61,9 +61,9 @@ function p(e) {
                                       dueAt: void 0
                                   })
                           }),
-                          (0, r.jsx)(l.sNh, {
+                          (0, i.jsx)(a.sNh, {
                               id: 'edit-reminder',
-                              label: h.NW.string(h.t.vrbqs7),
+                              label: h.intl.string(h.t.vrbqs7),
                               children: d
                           })
                       ]
@@ -74,9 +74,9 @@ function p(e) {
         });
     return t || n
         ? null != p || (0, f.Z)()
-            ? (0, r.jsxs)(l.sNh, {
+            ? (0, i.jsxs)(a.sNh, {
                   id: 'save-for-later',
-                  label: h.NW.string(h.t.tpxJtr),
+                  label: h.intl.string(h.t.tpxJtr),
                   action: () =>
                       null == p
                           ? (0, c.z)({
@@ -92,10 +92,10 @@ function p(e) {
                             }),
                   children: [
                       null != p
-                          ? (0, r.jsx)(l.sNh, {
+                          ? (0, i.jsx)(a.sNh, {
                                 id: 'remove-from-for-later',
-                                label: h.NW.string(h.t.SvXS1d),
-                                icon: l.plf,
+                                label: h.intl.string(h.t.SvXS1d),
+                                icon: a.plf,
                                 action: () =>
                                     (0, c.x)({
                                         channelId: e.channel_id,
@@ -104,10 +104,10 @@ function p(e) {
                                         displayToast: !0
                                     })
                             })
-                          : (0, r.jsx)(l.sNh, {
+                          : (0, i.jsx)(a.sNh, {
                                 id: 'create-bookmark',
-                                label: h.NW.string(h.t['9p3D9v']),
-                                icon: l.gt9,
+                                label: h.intl.string(h.t['9p3D9v']),
+                                icon: a.gt9,
                                 action: () =>
                                     (0, c.z)({
                                         channelId: e.channel_id,
@@ -115,14 +115,14 @@ function p(e) {
                                         displayToast: !0
                                     })
                             }),
-                      (0, r.jsx)(l.Clw, {}),
+                      (0, i.jsx)(a.Clw, {}),
                       O
                   ]
               })
-            : (0, r.jsx)(l.sNh, {
+            : (0, i.jsx)(a.sNh, {
                   id: 'save-for-later-upsell',
-                  label: h.NW.string(h.t.tpxJtr),
-                  icon: l.SrA,
+                  label: h.intl.string(h.t.tpxJtr),
+                  icon: a.SrA,
                   iconProps: { color: o.JX.PREMIUM_TIER_2 },
                   action: () =>
                       (0, c.z)({

@@ -54,7 +54,7 @@ function d(e) {
               onClick: d,
               color: o.zxk.Colors.BRAND,
               look: o.zxk.Looks.FILLED,
-              children: a.NW.string(a.t.ydw5nZ)
+              children: a.intl.string(a.t.ydw5nZ)
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -62,7 +62,7 @@ function d(e) {
                       onClick: d,
                       color: o.zxk.Colors.PRIMARY,
                       look: o.zxk.Looks.LINK,
-                      children: a.NW.string(a.t.Vm8akJ)
+                      children: a.intl.string(a.t.Vm8akJ)
                   }),
                   (0, r.jsx)(l.Z, {
                       color: o.zxk.Colors.BRAND,
@@ -79,7 +79,7 @@ let f = function (e) {
             (0, r.jsx)(o.xBx, {
                 children: (0, r.jsx)(o.vwX, {
                     tag: o.RB0.H4,
-                    children: a.NW.string(a.t.UZLrY2)
+                    children: a.intl.string(a.t.UZLrY2)
                 })
             }),
             (0, r.jsxs)(o.hzk, {
@@ -88,7 +88,7 @@ let f = function (e) {
                     (0, r.jsx)(o.Text, {
                         variant: 'text-md/normal',
                         className: u.message,
-                        children: a.NW.string(a.t['0LgOKC'])
+                        children: a.intl.string(a.t['0LgOKC'])
                     })
                 ]
             }),

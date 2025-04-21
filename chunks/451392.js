@@ -1,10 +1,10 @@
 n.d(t, { Z: () => _ });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    s = n.n(i),
-    a = n(498607),
-    l = n.n(a),
+var r = n(120356),
+    s = n.n(r),
+    l = n(498607),
+    a = n.n(l),
     o = n(692547),
     c = n(481060),
     d = n(220082),
@@ -16,72 +16,72 @@ var i = n(120356),
     f = n(388032),
     b = n(732391);
 function _(e) {
-    let { user: t, pendingAvatarSrc: n, pendingColors: i, onThemeColorsChange: a, preventDisabled: _, guildId: N, className: x, showPremiumIcon: E = !0, showResetThemeButton: j = !1, forcedDivider: C } = e,
-        O = (0, u.ZP)(t.id, N),
-        { primaryColor: S, secondaryColor: v } = (0, m.Z)({
+    let { user: t, pendingAvatarSrc: n, pendingColors: r, onThemeColorsChange: l, preventDisabled: _, guildId: x, className: E, showPremiumIcon: j = !0, showResetThemeButton: C = !1, forcedDivider: O } = e,
+        S = (0, u.ZP)(t.id, x),
+        { primaryColor: v, secondaryColor: T } = (0, m.Z)({
             user: t,
-            displayProfile: O,
-            pendingThemeColors: i,
+            displayProfile: S,
+            pendingThemeColors: r,
             isPreview: !0
         }),
-        T = g.ZP.canUsePremiumProfileCustomization(t),
-        I = null != n ? n : t.getAvatarURL(N, 80),
+        I = g.ZP.canUsePremiumProfileCustomization(t),
+        N = null != n ? n : t.getAvatarURL(x, 80),
         y = (0, c.dQu)(o.Z.unsafe_rawColors.PRIMARY_530).hex(),
-        A = (0, d.Cf)(I, y, !1);
-    if (null == S || null == v) return null;
+        A = (0, d.Cf)(N, y, !1);
+    if (null == v || null == T) return null;
     let P = (e) => {
-        a(l()(e, null == O ? void 0 : O.themeColors) ? void 0 : e);
+        l(a()(e, null == S ? void 0 : S.themeColors) ? void 0 : e);
     };
-    return (0, r.jsx)(h.Z, {
-        title: f.NW.string(f.t.DMeO2d),
-        disabled: !T && !_,
-        className: s()(b.__invalid_profileThemesSection, x),
-        showPremiumIcon: E,
-        forcedDivider: C,
-        children: (0, r.jsxs)('div', {
+    return (0, i.jsx)(h.Z, {
+        title: f.intl.string(f.t.DMeO2d),
+        disabled: !I && !_,
+        className: s()(b.__invalid_profileThemesSection, E),
+        showPremiumIcon: j,
+        forcedDivider: O,
+        children: (0, i.jsxs)('div', {
             className: b.sectionContainer,
             children: [
-                (0, r.jsx)('div', {
+                (0, i.jsx)('div', {
                     className: b.sparkleContainer,
-                    children: (0, r.jsx)(p.Z, {
-                        onChange: (e) => P([e, v]),
-                        color: S,
-                        suggestedColors: A,
-                        showEyeDropper: !0,
-                        label: (0, r.jsx)(c.Text, {
-                            className: b.colorSwatchLabel,
-                            color: 'header-secondary',
-                            variant: 'text-xs/normal',
-                            'aria-hidden': !0,
-                            children: f.NW.string(f.t.C3KTQk)
-                        })
-                    })
-                }),
-                (0, r.jsx)('div', {
-                    className: b.sparkleContainer,
-                    children: (0, r.jsx)(p.Z, {
-                        onChange: (e) => P([S, e]),
+                    children: (0, i.jsx)(p.Z, {
+                        onChange: (e) => P([e, T]),
                         color: v,
                         suggestedColors: A,
                         showEyeDropper: !0,
-                        label: (0, r.jsx)(c.Text, {
+                        label: (0, i.jsx)(c.Text, {
                             className: b.colorSwatchLabel,
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
                             'aria-hidden': !0,
-                            children: f.NW.string(f.t['8elvy8'])
+                            children: f.intl.string(f.t.C3KTQk)
                         })
                     })
                 }),
-                j &&
-                    null != N &&
-                    (0, r.jsx)(c.zxk, {
+                (0, i.jsx)('div', {
+                    className: b.sparkleContainer,
+                    children: (0, i.jsx)(p.Z, {
+                        onChange: (e) => P([v, e]),
+                        color: T,
+                        suggestedColors: A,
+                        showEyeDropper: !0,
+                        label: (0, i.jsx)(c.Text, {
+                            className: b.colorSwatchLabel,
+                            color: 'header-secondary',
+                            variant: 'text-xs/normal',
+                            'aria-hidden': !0,
+                            children: f.intl.string(f.t['8elvy8'])
+                        })
+                    })
+                }),
+                C &&
+                    null != x &&
+                    (0, i.jsx)(c.zxk, {
                         className: b.resetButton,
                         color: c.zxk.Colors.PRIMARY,
                         look: c.zxk.Looks.LINK,
                         size: c.zxk.Sizes.SMALL,
                         onClick: () => P([null, null]),
-                        children: f.NW.string(f.t['L+Gmoa'])
+                        children: f.intl.string(f.t['L+Gmoa'])
                     })
             ]
         })

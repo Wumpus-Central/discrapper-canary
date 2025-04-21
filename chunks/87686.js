@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
 var l = n(200651),
     a = n(192379),
-    r = n(120356),
-    i = n.n(r),
+    i = n(120356),
+    r = n.n(i),
     s = n(481060),
     o = n(70956),
     u = n(747071),
@@ -17,13 +17,13 @@ let g = {
         playheadPositionMs: 0
     },
     p = a.memo(function (e) {
-        let { className: t, volume: n, disabled: r = !1, onChange: p } = e,
+        let { className: t, volume: n, disabled: i = !1, onChange: p } = e,
             { audio: y } = (0, c.p)(),
             [b, v] = a.useState(!1),
             [x, j] = a.useState(g),
-            { playheadPositionMs: N, endPositionMs: w, startPositionMs: C } = x,
+            { playheadPositionMs: w, endPositionMs: N, startPositionMs: C } = x,
             S = null != y,
-            O = w - C,
+            O = N - C,
             P = O > m.YW * o.Z.Millis.SECOND;
         a.useEffect(() => {
             if (null != y)
@@ -47,9 +47,9 @@ let g = {
             k = a.useCallback(() => {
                 if (null != y) {
                     if (b) return void E();
-                    N >= w ? (y.currentTime = (0, f.my)(C)) : (y.currentTime = (0, f.my)(N)), (y.volume = (0, u.Z)(n)), y.play(), v(!0);
+                    w >= N ? (y.currentTime = (0, f.my)(C)) : (y.currentTime = (0, f.my)(w)), (y.volume = (0, u.Z)(n)), y.play(), v(!0);
                 }
-            }, [y, w, E, N, b, C, n]),
+            }, [y, N, E, w, b, C, n]),
             Z = a.useCallback(
                 (e) => {
                     j(e),
@@ -68,11 +68,11 @@ let g = {
                 [y]
             );
         return (0, l.jsxs)('div', {
-            className: i()(
+            className: r()(
                 h.container,
                 {
                     [h.initialized]: S,
-                    [h.disabled]: !S || r
+                    [h.disabled]: !S || i
                 },
                 t
             ),
@@ -111,7 +111,7 @@ let g = {
                     onPlaybackChange: M,
                     onPausePlayback: E,
                     onChangePosition: Z,
-                    disabled: r
+                    disabled: i
                 })
             ]
         });

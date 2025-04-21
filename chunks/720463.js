@@ -18,8 +18,8 @@ var a = n(120356),
     b = n(432792),
     p = n(937860),
     g = n(981631),
-    N = n(388032),
-    C = n(806539),
+    C = n(388032),
+    N = n(806539),
     O = n(293401),
     v = n(447489),
     x = n(484885);
@@ -52,9 +52,9 @@ let j = () => {
         });
     },
     y = (e) => {
-        let { descriptionText: t = N.NW.string(N.t['6If1Cw']), onClose: n = () => {} } = e;
+        let { descriptionText: t = C.intl.string(C.t['6If1Cw']), onClose: n = () => {} } = e;
         return (0, r.jsxs)('div', {
-            className: s()(O.container, C.baseCardOutline),
+            className: s()(O.container, N.baseCardOutline),
             children: [
                 (0, r.jsx)(p.s, { onClick: n }),
                 (0, r.jsx)(b.VK, {
@@ -73,7 +73,7 @@ let j = () => {
                                 variant: 'heading-md/bold',
                                 color: 'header-primary',
                                 className: O.coachmarkTitle,
-                                children: N.NW.string(N.t['D/nzVl'])
+                                children: C.intl.string(C.t['D/nzVl'])
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/medium',

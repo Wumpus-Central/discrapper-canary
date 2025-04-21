@@ -1,8 +1,8 @@
 n.d(t, { l: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(866442),
     s = n(596454),
     c = n(434650),
@@ -15,19 +15,19 @@ var r = n(200651),
 let g = i.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: i, hideEmoji: a, emoji: c, className: g, count: _, me: b, me_burst: x, burst_count: y, burst_colors: v, readOnly: E, isLurking: O, isGuest: N, isPendingMember: j, type: C, emojiSize: S } = e,
-            I = C === p.O.BURST,
-            T = (0, m.y4)(b, x, C),
-            P = (0, d.v)(I && null != v ? v : []),
+            { useChatFontScaling: i, hideEmoji: l, emoji: c, className: g, count: _, me: b, me_burst: x, burst_count: y, burst_colors: v, readOnly: E, isLurking: O, isGuest: j, isPendingMember: C, type: S, emojiSize: I } = e,
+            N = S === p.O.BURST,
+            T = (0, m.y4)(b, x, S),
+            P = (0, d.v)(N && null != v ? v : []),
             A = i ? h : f,
-            w = I ? y : _,
+            w = N ? y : _,
             Z = (0, u.y)(w, m.aO),
             R = {};
-        if (I && null != P) {
+        if (N && null != P) {
             var k;
             let { accentColor: e, backgroundColor: r, opacity: i } = P,
-                a = null != (k = (0, o.wK)(null != r ? r : '', i)) ? k : '';
-            T && (R.borderColor = r), (R.background = a), (t = e), (n = e);
+                l = null != (k = (0, o.wK)(null != r ? r : '', i)) ? k : '';
+            T && (R.borderColor = r), (R.background = l), (t = e), (n = e);
         }
         let D = {
             minWidth: Z,
@@ -35,18 +35,18 @@ let g = i.memo(function (e) {
             borderColor: n
         };
         return (0, r.jsxs)('div', {
-            className: l()(A.reaction, A.reactionInner, g, {
+            className: a()(A.reaction, A.reactionInner, g, {
                 [A.reactionMe]: T,
-                [A.reactionReadOnly]: E && !O && !j && !N
+                [A.reactionReadOnly]: E && !O && !C && !j
             }),
             style: R,
             children: [
                 (0, r.jsx)(s.Z, {
-                    className: l()({ [A.hideEmoji]: a }),
+                    className: a()({ [A.hideEmoji]: l }),
                     emojiId: c.id,
                     emojiName: c.name,
-                    size: S,
-                    animated: I && c.animated
+                    size: I,
+                    animated: N && c.animated
                 }),
                 (0, r.jsx)('div', {
                     className: A.reactionCount,
@@ -57,8 +57,8 @@ let g = i.memo(function (e) {
         });
     }),
     _ = i.memo(function (e) {
-        var { showImmediate: t, reactions: n, emojiSize: a } = e,
-            l = (function (e, t) {
+        var { showImmediate: t, reactions: n, emojiSize: l } = e,
+            a = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -67,13 +67,13 @@ let g = i.memo(function (e) {
                         var n,
                             r,
                             i = {},
-                            a = Object.keys(e);
-                        for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            l = Object.keys(e);
+                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var a = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    var l = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
             })(e, ['showImmediate', 'reactions', 'emojiSize']);
@@ -123,8 +123,8 @@ let g = i.memo(function (e) {
                                     });
                             }
                             return e;
-                        })({}, l, e)),
-                        (n = n = { emojiSize: a }),
+                        })({}, a, e)),
+                        (n = n = { emojiSize: l }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                             : (function (e, t) {

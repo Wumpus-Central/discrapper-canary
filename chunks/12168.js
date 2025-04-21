@@ -53,7 +53,7 @@ function T(e) {
     }
     return e;
 }
-function N(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,12 +65,12 @@ function N(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -132,7 +132,7 @@ function w(e) {
 }
 function D(e) {
     let { channel: t, title: n, closePopout: a, onFocus: l, onSelectEmoji: u, onSelectDisabledEmoji: d, onExpandedToggle: p, emojiSearchProps: m, recentlyUsedEmojis: b, analyticsOverride: S } = e,
-        N = (0, f.Dt)(),
+        A = (0, f.Dt)(),
         [D, L] = i.useState(!1),
         x = (0, _.wC)(t.guild_id),
         M = (0, s.uniqBy)([...x, ...R], 'name')
@@ -157,13 +157,13 @@ function D(e) {
             null != e && e.key !== O.vn.TAB && (e.key !== O.vn.ENTER || e.shiftKey ? k(!0) : k(!D));
         };
     return (0, r.jsxs)(c.VqE, {
-        'aria-labelledby': N,
+        'aria-labelledby': A,
         children: [
             (0, r.jsx)(c.y5t, {
                 forceLevel: 2,
                 children: (0, r.jsx)(c.nn4, {
                     children: (0, r.jsx)(c.H, {
-                        id: N,
+                        id: A,
                         children: n
                     })
                 })
@@ -181,7 +181,7 @@ function D(e) {
                         shouldHidePickerActions: !D,
                         wrapper: 'div',
                         pickerIntention: C,
-                        searchProps: A(T({}, m), {
+                        searchProps: N(T({}, m), {
                             accessory: (0, r.jsx)(w, {
                                 otherAccessories: null == m ? void 0 : m.accessory,
                                 isEmojiPickerExpanded: D,

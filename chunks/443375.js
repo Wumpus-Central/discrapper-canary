@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W });
+n.d(t, { Z: () => Y });
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(232174),
     S = n(510659),
     T = n(287954),
-    N = n(660579),
-    A = n(652853),
+    A = n(660579),
+    N = n(652853),
     C = n(64621),
     R = n(979038),
     P = n(448980),
@@ -68,12 +68,12 @@ function H(e) {
     }
     return e;
 }
-function W(e) {
+function Y(e) {
     var t;
-    let { user: n, currentUser: a, activity: Z, application: W, voiceGuild: Y, voiceChannel: K, profileGuildId: z, className: q, onClose: Q } = e,
+    let { user: n, currentUser: a, activity: Z, application: Y, voiceGuild: W, voiceChannel: K, profileGuildId: z, className: q, onClose: Q } = e,
         X = i.useRef(null),
         { analyticsLocations: J } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { profileType: $ } = (0, A.z)(),
+        { profileType: $ } = (0, N.z)(),
         ee = { [V.fullSize]: $ === U.y0.FULL_SIZE },
         { interactionSource: et, interactionSourceId: en } = (0, S.Xo)(),
         er = (0, m.Z)({
@@ -92,13 +92,13 @@ function W(e) {
             onAction: ei
         }),
         eo = (0, v.Z)(Z),
-        { largeImage: es, smallImage: el } = (0, p.FO)(Z, W),
+        { largeImage: es, smallImage: el } = (0, p.FO)(Z, Y),
         ec = (0, j.Z)({
             location: 'UserProfileActivityCardWithInteractionToolbar',
             user: n,
             currentUser: a,
             activity: Z,
-            application: W,
+            application: Y,
             entry: er,
             onClose: Q
         }),
@@ -150,12 +150,12 @@ function W(e) {
                     });
         },
         ef = () => {
-            if ((0, d.Z)(Z) && null != Y)
+            if ((0, d.Z)(Z) && null != W)
                 return (0, r.jsx)(L.Z, {
                     variant: 'text-xs/normal',
-                    text: F.NW.formatToPlainString(F.t['hq/Qzc'], { guildName: Y.name }),
+                    text: F.intl.formatToPlainString(F.t['hq/Qzc'], { guildName: W.name }),
                     onClick: () => {
-                        (0, g.X)(Y.id), ei({ action: 'OPEN_VOICE_GUILD' }), null == Q || Q();
+                        (0, g.X)(W.id), ei({ action: 'OPEN_VOICE_GUILD' }), null == Q || Q();
                     }
                 });
             if ((0, u.Z)(Z))
@@ -180,7 +180,7 @@ function W(e) {
             if (Z.type === G.IIU.WATCHING) return null;
             if ((0, u.Z)(Z)) return ep();
             if ((0, E.dS)(Z) && (null == (e = Z.party) ? void 0 : e.size) != null && (null == (t = Z.party) ? void 0 : t.size.length) >= 2) {
-                let e = F.NW.formatToPlainString(F.t['JC/3x8'], {
+                let e = F.intl.formatToPlainString(F.t['JC/3x8'], {
                     numSpeakers: null == (i = Z.party) ? void 0 : i.size[0],
                     numListeners: (null == (a = Z.party) ? void 0 : a.size[1]) - (null == (o = Z.party) ? void 0 : o.size[0])
                 });
@@ -206,9 +206,9 @@ function W(e) {
                           }),
                           (0, r.jsx)(L.Z, {
                               variant: 'text-xs/normal',
-                              text: F.NW.formatToPlainString(F.t['u//9Bw'], {
+                              text: F.intl.formatToPlainString(F.t['u//9Bw'], {
                                   count: '0',
-                                  max: null != (i = null == W ? void 0 : W.getMaxParticipants()) ? i : 0
+                                  max: null != (i = null == Y ? void 0 : Y.getMaxParticipants()) ? i : 0
                               })
                           })
                       ]
@@ -225,8 +225,8 @@ function W(e) {
                                 variant: 'text-xs/normal',
                                 text:
                                     0 === Z.party.size[1]
-                                        ? F.NW.formatToPlainString(F.t.IM4J4e, { count: Z.party.size[0] })
-                                        : F.NW.formatToPlainString(F.t['u//9Bw'], {
+                                        ? F.intl.formatToPlainString(F.t.IM4J4e, { count: Z.party.size[0] })
+                                        : F.intl.formatToPlainString(F.t['u//9Bw'], {
                                               count: Z.party.size[0],
                                               max: Z.party.size[1]
                                           })
@@ -261,11 +261,11 @@ function W(e) {
                       children: [ed(), ef(), e_()]
                   }),
         eg = () =>
-            null == Y || null == K
+            null == W || null == K
                 ? null
                 : (0, r.jsx)(x.Z, {
                       user: n,
-                      guild: Y,
+                      guild: W,
                       channel: K,
                       onAction: ei,
                       onClose: Q
@@ -301,7 +301,7 @@ function W(e) {
                 onAction: ei,
                 sourceType: U.n_.ACTIVITY,
                 children: () =>
-                    (0, r.jsx)(N.Z, {
+                    (0, r.jsx)(A.Z, {
                         ref: X,
                         user: n,
                         className: V.toolbarContainer,

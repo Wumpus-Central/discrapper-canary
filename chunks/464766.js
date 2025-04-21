@@ -14,14 +14,14 @@ function u(e) {
         var e, n, t;
         return null == (t = p.current) || null == (n = t.ref) || null == (e = n.blur) ? void 0 : e.call(n);
     }, []);
-    let m = s.NW.formatToPlainString(s.t['ZrTT/P'], { userCount: u }),
+    let m = s.intl.formatToPlainString(s.t['ZrTT/P'], { userCount: u }),
         I = [
             (0, i.jsx)(
                 d.njP.Item,
                 {
                     className: c.tabBarItem,
                     id: o.fL.EVENT_INFO,
-                    children: s.NW.string(s.t.iW6Xur)
+                    children: s.intl.string(s.t.iW6Xur)
                 },
                 'event-details'
             )
@@ -46,7 +46,7 @@ function u(e) {
                     ref: p,
                     onClick: n,
                     className: c.closeButton,
-                    'aria-label': s.NW.string(s.t.cpT0Cg),
+                    'aria-label': s.intl.string(s.t.cpT0Cg),
                     children: (0, i.jsx)(d.Dio, {
                         size: 'md',
                         color: 'currentColor',
@@ -55,7 +55,7 @@ function u(e) {
                 }),
                 (0, i.jsx)(d.njP, {
                     className: c.tabBar,
-                    'aria-label': s.NW.string(s.t['+1H47u']),
+                    'aria-label': s.intl.string(s.t['+1H47u']),
                     selectedItem: t,
                     type: 'top',
                     onItemSelect: r,

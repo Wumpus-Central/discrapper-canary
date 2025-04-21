@@ -37,12 +37,12 @@ function u(e) {
     return e
         ? (0, r.jsx)(a.sNh, {
               id: 'video-devices',
-              label: c.NW.string(c.t.F122Gx),
+              label: c.intl.string(c.t.F122Gx),
               subtext: d,
               children: f
           })
         : (0, r.jsx)(a.kSQ, {
-              label: c.NW.string(c.t.F122Gx),
+              label: c.intl.string(c.t.F122Gx),
               children: f
           });
 }

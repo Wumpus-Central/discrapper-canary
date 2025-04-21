@@ -73,8 +73,8 @@ function S(e) {
     let { user: t, activity: n, onAction: y, onClose: O } = e,
         { newestAnalyticsLocation: S } = (0, c.ZP)(),
         T = (0, o.bp)() === E.IlC.POPOUT,
-        N = (0, i.e7)([h.Z, m.Z], () => h.Z.getChannel(m.Z.getChannelId())),
-        A = (0, p.e)({
+        A = (0, i.e7)([h.Z, m.Z], () => h.Z.getChannel(m.Z.getChannelId())),
+        N = (0, p.e)({
             activity: null != n ? n : void 0,
             embeddedActivity: void 0,
             user: t,
@@ -82,10 +82,10 @@ function S(e) {
         }),
         { enabled: C } = s.c.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
         R = C ? a.iWm : a.jje;
-    if (null == A && null != n && (0, l.Z)(n))
+    if (null == N && null != n && (0, l.Z)(n))
         return (0, r.jsx)(g.tG, {
             icon: R,
-            text: b.NW.string(b.t.RscU7O),
+            text: b.intl.string(b.t.RscU7O),
             color: a.Ttl.BRAND,
             themeColor: 'none',
             fullWidth: !0,
@@ -93,11 +93,11 @@ function S(e) {
                 e.stopPropagation(),
                     null == O || O(),
                     null == y || y({ action: 'PRESS_PLAY_BUTTON' }),
-                    (null == N ? void 0 : N.isVocal())
+                    (null == A ? void 0 : A.isVocal())
                         ? (0, f.Z)({
                               context: {
                                   type: 'channel',
-                                  channel: N
+                                  channel: A
                               },
                               analyticsLocation: S,
                               openInPopout: T
@@ -105,8 +105,8 @@ function S(e) {
                         : (0, u.__)(d._b.TEXT, _.Ie.NORMAL, { applicationId: n.application_id });
             }
         });
-    if (null == A) return null;
-    let { isJoining: P, handleJoinRequest: w, buttonCTA: D, tooltip: L, isEnabled: x, isEmbedded: M } = A;
+    if (null == N) return null;
+    let { isJoining: P, handleJoinRequest: w, buttonCTA: D, tooltip: L, isEnabled: x, isEmbedded: M } = N;
     return M
         ? (0, r.jsx)(a.ua7, {
               text: L,

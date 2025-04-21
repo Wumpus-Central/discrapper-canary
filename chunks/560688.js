@@ -65,9 +65,9 @@ function f(e) {
                   (0, r.jsx)(
                       t,
                       d(c({}, n), {
-                          header: s.NW.string(s.t['8jSzSU']),
-                          body: s.NW.string(s.t.bhqSWl),
-                          confirmText: s.NW.string(s.t.BddRzc),
+                          header: s.intl.string(s.t['8jSzSU']),
+                          body: s.intl.string(s.t.bhqSWl),
+                          confirmText: s.intl.string(s.t.BddRzc),
                           onConfirm: e
                       })
                   );
@@ -78,9 +78,9 @@ function f(e) {
                   (0, r.jsx)(
                       t,
                       d(c({}, a), {
-                          header: s.NW.string(s.t.XLw6FB),
-                          body: s.NW.string(s.t.wVjKGh),
-                          confirmText: s.NW.string(s.t.BK8LKy),
+                          header: s.intl.string(s.t.XLw6FB),
+                          body: s.intl.string(s.t.wVjKGh),
+                          confirmText: s.intl.string(s.t.BK8LKy),
                           onConfirm: () => {
                               null == e || e(),
                                   (0, i.ZDy)(async () => {

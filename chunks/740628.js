@@ -60,7 +60,7 @@ function v(e) {
     let { user: u, currentUser: f, displayProfile: p, guildId: b, items: m, initialSection: v = h.oh.USER_INFO, initialSubsection: x, onClose: _ } = e,
         { trackUserProfileAction: Z } = (0, a.KZ)(),
         O = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        [{ section: N, subsection: P }, E] = o.useState({
+        [{ section: P, subsection: E }, S] = o.useState({
             section:
                 null !=
                 (d =
@@ -78,24 +78,24 @@ function v(e) {
             subsection: x
         });
     o.useEffect(() => {
-        null == m.find((e) => e.section === N) &&
-            E({
+        null == m.find((e) => e.section === P) &&
+            S({
                 section: m[0].section,
                 subsection: void 0
             });
-    }, [m, N]);
-    let S = o.useCallback(
+    }, [m, P]);
+    let N = o.useCallback(
         (e) => {
             Z({
                 action: 'PRESS_SECTION',
                 section: e
             }),
-                E({
+                S({
                     section: e,
                     subsection: void 0
                 });
         },
-        [Z, E]
+        [Z, S]
     );
     return O
         ? (0, r.jsx)('div', {
@@ -106,7 +106,7 @@ function v(e) {
                       (0, r.jsx)('div', { className: y.emptyIconStreamerMode }),
                       (0, r.jsx)('div', {
                           className: y.emptyText,
-                          children: g.NW.string(g.t.Br1ls7)
+                          children: g.intl.string(g.t.Br1ls7)
                       })
                   ]
               })
@@ -117,8 +117,8 @@ function v(e) {
                   (0, r.jsx)(l.n, {
                       className: I.tabBar,
                       type: 'top',
-                      selectedItem: N,
-                      onItemSelect: S,
+                      selectedItem: P,
+                      onItemSelect: N,
                       children: m.map((e) => {
                           let { section: n, text: t } = e;
                           return (0, r.jsx)(
@@ -138,8 +138,8 @@ function v(e) {
                   }),
                   (0, r.jsx)(j, {
                       items: m,
-                      section: N,
-                      subsection: P,
+                      section: P,
+                      subsection: E,
                       user: u,
                       currentUser: f,
                       displayProfile: p,

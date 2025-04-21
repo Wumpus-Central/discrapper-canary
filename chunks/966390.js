@@ -22,8 +22,8 @@ var r = n(481060),
     I = n(576645),
     S = n(317951),
     T = n(287941),
-    N = n(623292),
-    A = n(807092),
+    A = n(623292),
+    N = n(807092),
     C = n(467798),
     R = n(703558),
     P = n(117530),
@@ -89,7 +89,7 @@ async function G(e) {
         { channelId: M, uploads: j, draftType: G, parsedMessage: B, options: F = {}, raiseEndpointErrors: V = !1 } = e,
         Z = new _.Z(L.ANM.MESSAGES(M)),
         H = new D.o(),
-        W = {
+        Y = {
             content: '',
             nonce: '',
             channel_id: M,
@@ -99,22 +99,22 @@ async function G(e) {
             confetti_potion: (0, I.vY)(null == F ? void 0 : F.confettiPotionData),
             scheduled_timestamp: null == F ? void 0 : F.scheduledTimestamp
         };
-    null != B && (W.content = null == B ? void 0 : B.content), null != A.Z.getPendingReply(M) && ((W.type = L.uaV.REPLY), (W.message_reference = F.messageReference), (W.allowed_mentions = F.allowedMentions), (0, N.A6)(M));
-    let [Y, K] = (0, C.Z)(W.content);
-    Y && ((W.content = K), (W.flags = (0, w.pj)(null != (n = W.flags) ? n : 0, L.iLy.SUPPRESS_NOTIFICATIONS)));
+    null != B && (Y.content = null == B ? void 0 : B.content), null != N.Z.getPendingReply(M) && ((Y.type = L.uaV.REPLY), (Y.message_reference = F.messageReference), (Y.allowed_mentions = F.allowedMentions), (0, A.A6)(M));
+    let [W, K] = (0, C.Z)(Y.content);
+    W && ((Y.content = K), (Y.flags = (0, w.pj)(null != (n = Y.flags) ? n : 0, L.iLy.SUPPRESS_NOTIFICATIONS)));
     let z = null != (r = F.nonce) ? r : (0, E.r)(),
         q = (0, g.ZP)({
             channelId: M,
-            content: W.content,
+            content: Y.content,
             tts: null != (d = null == B ? void 0 : B.tts) && d,
-            type: W.type,
-            messageReference: W.message_reference,
-            flags: W.flags,
+            type: Y.type,
+            messageReference: Y.message_reference,
+            flags: Y.flags,
             nonce: z,
             poll: (0, y.x9)(F.poll)
         });
     function Q() {
-        '' !== W.content && '' === R.Z.getDraft(M, G) && a.Z.saveDraft(M, W.content, G),
+        '' !== Y.content && '' === R.Z.getDraft(M, G) && a.Z.saveDraft(M, Y.content, G),
             0 === P.Z.getUploadCount(M, G) &&
                 s.Z.setUploads({
                     channelId: M,
@@ -123,7 +123,7 @@ async function G(e) {
                 });
     }
     return (
-        (W.nonce = z),
+        (Y.nonce = z),
         Z.on('start', (e) => {
             (f = (0, m.e5)(U(k({}, q), { id: e.id }))),
                 i.Z.dispatch({
@@ -170,7 +170,7 @@ async function G(e) {
                                   message: U(k({}, f), { channelId: M })
                               };
                 (0, l.openUploadError)({
-                    title: x.NW.string(x.t.B3vFdX),
+                    title: x.intl.string(x.t.B3vFdX),
                     help: (0, h.uF)(r, e)
                 });
                 return;
@@ -189,8 +189,8 @@ async function G(e) {
                 else {
                     var a;
                     (0, l.openUploadError)({
-                        title: x.NW.string(x.t.B3vFdX),
-                        help: null != (a = null == n ? void 0 : n.message) ? a : x.NW.string(x.t.zMEjJi)
+                        title: x.intl.string(x.t.B3vFdX),
+                        help: null != (a = null == n ? void 0 : n.message) ? a : x.intl.string(x.t.zMEjJi)
                     });
                 }
                 Q();
@@ -218,7 +218,7 @@ async function G(e) {
                 ));
         }),
         null == F || null == (t = F.confettiPotionData) || t.callback(),
-        await Z.uploadFiles(j, W),
+        await Z.uploadFiles(j, Y),
         H.resolve(),
         H.promise
     );
@@ -233,10 +233,10 @@ function B(e) {
         };
     if (null != c) {
         (f.content = c.content), (f.tts = c.tts), (f.channel_id = c.channel_id);
-        let e = A.Z.getPendingReply(t);
+        let e = N.Z.getPendingReply(t);
         if (null != e) {
             let n = o.Z.getSendMessageOptionsForReply(e);
-            (f.type = L.uaV.REPLY), (f.message_reference = n.messageReference), (f.allowed_mentions = n.allowedMentions), (0, N.A6)(t);
+            (f.type = L.uaV.REPLY), (f.message_reference = n.messageReference), (f.allowed_mentions = n.allowedMentions), (0, A.A6)(t);
         }
     }
     let h = new _.Z(L.ANM.MESSAGES(t));
@@ -270,8 +270,8 @@ function B(e) {
             )
                 return void o.Z.sendExplicitMediaClydeError(t, null == d ? void 0 : d.attachments, p.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
             (0, l.openUploadError)({
-                title: x.NW.string(x.t.B3vFdX),
-                help: x.NW.format(x.t.gIlRx8, {
+                title: x.intl.string(x.t.B3vFdX),
+                help: x.intl.format(x.t.gIlRx8, {
                     onClick: () => {
                         (0, r.Mr3)(l.A),
                             B({

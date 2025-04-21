@@ -4,9 +4,9 @@ n.d(t, {
 });
 var r,
     i = n(200651),
-    s = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    s = n(120356),
+    a = n.n(s),
     o = n(748780),
     c = n(215569),
     d = n(65187);
@@ -45,7 +45,7 @@ let p = {
     tension: 40,
     overshootClamping: !0
 };
-class h extends s.PureComponent {
+class h extends l.PureComponent {
     componentWillEnter(e) {
         var t, n;
         null == (t = (n = this.props).onAnimationStart) || t.call(n),
@@ -85,15 +85,15 @@ class h extends s.PureComponent {
     }
 }
 let f = (e) => {
-    let { children: t, step: n, direction: r, className: s, onAnimationStart: l, onAnimationEnd: o } = e;
+    let { children: t, step: n, direction: r, className: l, onAnimationStart: s, onAnimationEnd: o } = e;
     return (0, i.jsx)(c.W, {
         component: 'div',
-        className: a()(d.animator, s),
+        className: a()(d.animator, l),
         children: (0, i.jsx)(
             h,
             {
                 direction: r,
-                onAnimationStart: l,
+                onAnimationStart: s,
                 onAnimationEnd: o,
                 children: t
             },

@@ -84,9 +84,9 @@ function I(e) {
         if (e.pipWindow.component === h.NYg.EMBED_IFRAME && null != b) {
             var t;
             let e = null == (t = u.Z.getApplication(b.applicationId)) ? void 0 : t.name;
-            return null == e ? g.NW.string(g.t['8raC1N']) : g.NW.formatToPlainString(g.t['a9+V+f'], { activityName: e });
+            return null == e ? g.intl.string(g.t['8raC1N']) : g.intl.formatToPlainString(g.t['a9+V+f'], { activityName: e });
         }
-        return null == e.participant || e.participant.type !== m.fO.STREAM ? g.NW.string(g.t['ng/Kws']) : g.NW.formatToPlainString(g.t.sqmFRk, { username: e.participant.userNick });
+        return null == e.participant || e.participant.type !== m.fO.STREAM ? g.intl.string(g.t['ng/Kws']) : g.intl.formatToPlainString(g.t.sqmFRk, { username: e.participant.userNick });
     }
     function T() {
         let e = [],
@@ -107,7 +107,7 @@ function I(e) {
             e
         );
     }
-    function N(e) {
+    function A(e) {
         var t;
         let n = e.pipWindow.id,
             i = null == (t = e.participant) ? void 0 : t.id,
@@ -128,7 +128,7 @@ function I(e) {
         'aria-label': 'switch PIP',
         onClose: t,
         onSelect: E,
-        children: T().map(N)
+        children: T().map(A)
     });
 }
 let S = function (e) {

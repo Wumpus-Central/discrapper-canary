@@ -17,7 +17,7 @@ function g(e) {
         o = (function (e, t, n, r) {
             let l = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t),
                 a = [];
-            return e > 0 && a.push(l(e, d.NW.string(d.t.QJyuxc))), (t > 0 || a.length > 0) && a.push(l(t, d.NW.string(d.t['1LyF1t']))), (n > 0 || a.length > 0) && a.push(l(n, d.NW.string(d.t.n7dksL))), a.push(l(r, d.NW.string(d.t['6m/6nJ']))), a.join(':');
+            return e > 0 && a.push(l(e, d.intl.string(d.t.QJyuxc))), (t > 0 || a.length > 0) && a.push(l(t, d.intl.string(d.t['1LyF1t']))), (n > 0 || a.length > 0) && a.push(l(n, d.intl.string(d.t.n7dksL))), a.push(l(r, d.intl.string(d.t['6m/6nJ']))), a.join(':');
         })(n, l, a, i);
     return (0, r.jsx)(c.Text, {
         variant: 'heading-md/medium',

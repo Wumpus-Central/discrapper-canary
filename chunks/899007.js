@@ -49,7 +49,7 @@ function T(e) {
     }
     return e;
 }
-function N(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,12 +61,12 @@ function N(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -74,7 +74,7 @@ function A(e, t) {
 }
 let C = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
 function R(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: S, animateOnHover: N, onOpenProfile: R, className: P, previewStatus: w } = e,
+    let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: S, animateOnHover: A, onOpenProfile: R, className: P, previewStatus: w } = e,
         { theme: D } = (0, b.z)(),
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: x } = (0, m.KZ)(),
@@ -99,16 +99,16 @@ function R(e) {
         ),
         {
             avatarDecorationSrc: H,
-            avatarSrc: W,
-            eventHandlers: Y
+            avatarSrc: Y,
+            eventHandlers: W
         } = (0, E.Z)({
             user: t,
             guildId: null != n ? n.guildId : a,
             size: V,
-            animateOnHover: N
+            animateOnHover: A
         }),
         K = (0, r.jsx)(C, {
-            src: W,
+            src: Y,
             avatarDecoration: H,
             size: V,
             'aria-label': t.username,
@@ -122,14 +122,14 @@ function R(e) {
     return null == R
         ? (0, r.jsx)(
               'div',
-              A(T({}, Y), {
+              N(T({}, W), {
                   className: Z,
                   children: K
               })
           )
         : (0, r.jsx)(
               l.P3F,
-              A(T({}, Y), {
+              N(T({}, W), {
                   className: o()(Z, I.clickable),
                   focusProps: { ringClassName: I.focusRing },
                   onClick: () => {

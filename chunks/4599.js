@@ -46,7 +46,7 @@ function Z(e) {
     return e;
 }
 function O(e) {
-    let { user: n, guildId: t, channelId: O, messageId: N, roleId: P, transitionState: E, openedAt: S, onHide: T, showGuildProfile: A = !0, sourceAnalyticsLocations: C = [] } = e,
+    let { user: n, guildId: t, channelId: O, messageId: P, roleId: E, transitionState: S, openedAt: N, onHide: T, showGuildProfile: A = !0, sourceAnalyticsLocations: C = [] } = e,
         L = t === j.ME ? void 0 : t,
         w = (0, i.e7)([d.Z], () => d.Z.isBlocked(n.id)),
         { analyticsLocations: R } = (0, c.ZP)([...C, w ? s.Z.BLOCKED_PROFILE_MODAL : s.Z.IGNORED_PROFILE_MODAL]),
@@ -55,18 +55,18 @@ function O(e) {
             userId: n.id,
             guildId: L,
             channelId: O,
-            messageId: N,
-            roleId: P,
+            messageId: P,
+            roleId: E,
             showGuildProfile: A
         }),
         U = [
             {
                 icon: l.owK,
-                description: v.NW.string(v.t.kcuWvb)
+                description: v.intl.string(v.t.kcuWvb)
             },
             {
                 icon: l.owK,
-                description: v.NW.string(w ? v.t.QxrDY2 : v.t.W6fjkZ)
+                description: v.intl.string(w ? v.t.QxrDY2 : v.t.W6fjkZ)
             }
         ],
         B = (0, b.ZP)(n.id, A ? L : void 0),
@@ -75,15 +75,15 @@ function O(e) {
         value: R,
         children: (0, r.jsx)(f.Mt, {
             value: M,
-            openedAt: S,
+            openedAt: N,
             fetchStartedAt: null == B ? void 0 : B.fetchStartedAt,
             fetchEndedAt: null == B ? void 0 : B.fetchEndedAt,
             isLoaded: null == B ? void 0 : B.isLoaded,
             children: (0, r.jsx)(l.Y0X, {
-                transitionState: E,
+                transitionState: S,
                 className: x.root,
                 hideShadow: !0,
-                'aria-label': v.NW.string(v.t['3N/J2t']),
+                'aria-label': v.intl.string(v.t['3N/J2t']),
                 children: (0, r.jsx)(h.Z, {
                     user: n,
                     displayProfile: B,
@@ -111,12 +111,12 @@ function O(e) {
                                             (0, r.jsx)(l.X6q, {
                                                 variant: 'heading-xl/bold',
                                                 color: 'header-primary',
-                                                children: v.NW.string(v.t.b33pLC)
+                                                children: v.intl.string(v.t.b33pLC)
                                             }),
                                             (0, r.jsx)(l.Text, {
                                                 variant: 'text-md/medium',
                                                 color: 'header-primary',
-                                                children: v.NW.format(w ? v.t['8F+WNz'] : v.t['/cZp5u'], { username: u.ZP.getName(L, O, n) })
+                                                children: v.intl.format(w ? v.t['8F+WNz'] : v.t['/cZp5u'], { username: u.ZP.getName(L, O, n) })
                                             })
                                         ]
                                     }),

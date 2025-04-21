@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(392711),
     i = n(106351),
     a = n(904245),
@@ -49,7 +49,7 @@ function I(e) {
 }
 let S = 50,
     T = 1000;
-class N extends o.Z {
+class A extends o.Z {
     isChannelEligible(e, t) {
         switch (e.type) {
             case i.d.DM:
@@ -110,4 +110,4 @@ class N extends o.Z {
             });
     }
 }
-let A = new N();
+let N = new A();

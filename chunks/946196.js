@@ -35,11 +35,11 @@ let _ = (e) => {
         _ = (() => {
             switch (t) {
                 case s.r.ERROR_DOWNLOADING_DEPENDENCY:
-                    return c.NW.string(c.t.D9neaG);
+                    return c.intl.string(c.t.D9neaG);
                 case s.r.ERROR_ACTIVATING_VOICE_FILTER:
-                    return c.NW.string(c.t.mNMZZm);
+                    return c.intl.string(c.t.mNMZZm);
                 default:
-                    return c.NW.string(c.t.F8FvU1);
+                    return c.intl.string(c.t.F8FvU1);
             }
         })();
     return u((e) =>

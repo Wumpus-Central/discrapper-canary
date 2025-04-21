@@ -191,18 +191,18 @@ function S(e) {
                                     children: [
                                         (0, a.jsx)(d.X6q, {
                                             variant: 'heading-xl/semibold',
-                                            children: b.NW.string(b.t['9QQ+i4'])
+                                            children: b.intl.string(b.t['9QQ+i4'])
                                         }),
                                         (0, a.jsx)(d.Text, {
                                             variant: 'text-sm/normal',
                                             className: y.modalBodyText,
-                                            children: b.NW.string(b.t.CvFFOj)
+                                            children: b.intl.string(b.t.CvFFOj)
                                         }),
                                         P &&
                                             (0, a.jsx)(d.Text, {
                                                 variant: 'text-sm/normal',
                                                 className: y.creatorPortalText,
-                                                children: b.NW.format(b.t.iQML2t, { creatorPortalUrl: 'https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons' })
+                                                children: b.intl.format(b.t.iQML2t, { creatorPortalUrl: 'https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons' })
                                             }),
                                         (0, a.jsx)('div', {
                                             className: y.templatesContentContainer,
@@ -220,7 +220,7 @@ function S(e) {
                                 }),
                                 (0, a.jsx)(d.Text, {
                                     variant: 'text-sm/normal',
-                                    children: b.NW.string(b.t.jymUTE)
+                                    children: b.intl.string(b.t.jymUTE)
                                 }),
                                 (0, a.jsxs)(d.zxk, {
                                     size: d.zxk.Sizes.MEDIUM,
@@ -239,7 +239,7 @@ function S(e) {
                                             height: 14,
                                             className: y.editIcon
                                         }),
-                                        b.NW.string(b.t.a3ycUV)
+                                        b.intl.string(b.t.a3ycUV)
                                     ]
                                 })
                             ]

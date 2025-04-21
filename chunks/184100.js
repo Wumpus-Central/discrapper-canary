@@ -42,7 +42,7 @@ function h(e) {
                     className: c.heading,
                     variant: 'heading-xl/semibold',
                     color: 'header-primary',
-                    children: u.NW.format(u.t.pGj5u7, { count: h })
+                    children: u.intl.format(u.t.pGj5u7, { count: h })
                 }),
                 (0, n.jsx)(o.Exd, {
                     foregroundGradientColor: [(0, r.Lq)(d.Ilk.GREEN_300), (0, r.Lq)(d.Ilk.GREEN_230)],

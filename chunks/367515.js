@@ -1,9 +1,9 @@
-n.d(t, { B: () => x });
-var r = n(200651),
-    i = n(192379),
+n.d(t, { B: () => E });
+var i = n(200651),
+    r = n(192379),
     s = n(512722),
-    a = n.n(s),
-    l = n(399606),
+    l = n.n(s),
+    a = n(399606),
     o = n(481060),
     c = n(594174),
     d = n(880257),
@@ -17,29 +17,29 @@ var r = n(200651),
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
 }
-function N(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -47,8 +47,8 @@ function N(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -57,87 +57,87 @@ function N(e, t) {
         e
     );
 }
-function x(e) {
+function E(e) {
     let { user: t } = e,
         s = (0, d.Z)(),
-        x = (0, u.VM)(),
-        E = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        j = i.useCallback(() => {
-            a()(void 0 !== E, 'User must be logged in to accept a link request'),
+        E = (0, u.VM)(),
+        j = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
+        C = r.useCallback(() => {
+            l()(void 0 !== j, 'User must be logged in to accept a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('59716').then(n.bind(n, 275370));
                     return (n) =>
-                        (0, r.jsx)(
+                        (0, i.jsx)(
                             e,
-                            N(_({}, n), {
-                                currentUser: E,
+                            x(_({}, n), {
+                                currentUser: j,
                                 otherUser: t
                             })
                         );
                 });
-        }, [E, t]),
-        C = i.useCallback(() => {
-            a()(void 0 !== E, 'User must be logged in to decline a link request'),
+        }, [j, t]),
+        O = r.useCallback(() => {
+            l()(void 0 !== j, 'User must be logged in to decline a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('958').then(n.bind(n, 4526));
                     return (n) =>
-                        (0, r.jsx)(
+                        (0, i.jsx)(
                             e,
-                            N(_({}, n), {
-                                currentUser: E,
+                            x(_({}, n), {
+                                currentUser: j,
                                 otherUser: t
                             })
                         );
                 });
-        }, [E, t]),
-        O = i.useCallback(() => {
-            a()(void 0 !== E, 'User must be logged in to decline a link request'),
+        }, [j, t]),
+        S = r.useCallback(() => {
+            l()(void 0 !== j, 'User must be logged in to decline a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('69015').then(n.bind(n, 247265));
                     return (n) =>
-                        (0, r.jsx)(
+                        (0, i.jsx)(
                             e,
-                            N(_({}, n), {
-                                currentUser: E,
+                            x(_({}, n), {
+                                currentUser: j,
                                 otherUser: t
                             })
                         );
                 });
-        }, [E, t]);
-    return (0, r.jsxs)('div', {
+        }, [j, t]);
+    return (0, i.jsxs)('div', {
         className: b.container,
         children: [
-            (0, r.jsx)('div', {
+            (0, i.jsx)('div', {
                 className: b.details,
-                children: (0, r.jsx)(g.Z, {
+                children: (0, i.jsx)(g.Z, {
                     otherUser: t,
                     status: p.ne.PENDING
                 })
             }),
-            (0, r.jsx)('div', {
+            (0, i.jsx)('div', {
                 className: b.actions,
                 children: s
-                    ? (0, r.jsx)(m.Z, {
+                    ? (0, i.jsx)(m.Z, {
                           icon: o.Dio,
                           className: b.__invalid_actionDeny,
-                          tooltip: f.NW.string(h.Z.e5iHmZ),
-                          onClick: O
+                          tooltip: f.intl.string(h.default.e5iHmZ),
+                          onClick: S
                       })
-                    : (0, r.jsxs)(r.Fragment, {
+                    : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              x
+                              E
                                   ? null
-                                  : (0, r.jsx)(m.Z, {
+                                  : (0, i.jsx)(m.Z, {
                                         icon: o.dz2,
                                         className: b.__invalid_actionAccept,
-                                        tooltip: f.NW.string(h.Z.krWQZG),
-                                        onClick: j
+                                        tooltip: f.intl.string(h.default.krWQZG),
+                                        onClick: C
                                     }),
-                              (0, r.jsx)(m.Z, {
+                              (0, i.jsx)(m.Z, {
                                   icon: o.Dio,
                                   className: b.__invalid_actionDeny,
-                                  tooltip: f.NW.string(h.Z.bBDeND),
-                                  onClick: C
+                                  tooltip: f.intl.string(h.default.bBDeND),
+                                  onClick: O
                               })
                           ]
                       })

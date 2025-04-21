@@ -70,11 +70,11 @@ let O = 0,
     I = (0, c.O_)('ThemeStore') ? m.K2 : m.o5,
     S = (0, u.Z)(),
     T = I[S];
-function N() {
+function A() {
     return (0, d.Z)(S, I);
 }
-function A() {
-    let e = N();
+function N() {
+    let e = A();
     return e === T || ((T = e), (0, f.Z)(T), !0);
 }
 class C extends (r = i.ZP.PersistedStore) {
@@ -92,7 +92,7 @@ class C extends (r = i.ZP.PersistedStore) {
         return (0, a.ap)(this.theme) && p.ZP.darkSidebar && null == l.Z.gradientPreset;
     }
     get theme() {
-        return N();
+        return A();
     }
     get systemTheme() {
         return S;
@@ -102,20 +102,20 @@ class C extends (r = i.ZP.PersistedStore) {
     }
 }
 function R() {
-    return (0, c.O_)('ThemeStore') && 0 === O && ((I = v(b({}, I), { [m.zd.DARK]: g.BRd.DARKER })), (O = 1)), A();
+    return (0, c.O_)('ThemeStore') && 0 === O && ((I = v(b({}, I), { [m.zd.DARK]: g.BRd.DARKER })), (O = 1)), N();
 }
 function P() {
-    return (0, a.ap)(N());
+    return (0, a.ap)(A());
 }
 function w(e) {
-    return !e.isSwitchingAccount && T !== g.BRd.DARK && ((T = g.BRd.DARK), (0, f.Z)(T), A());
+    return !e.isSwitchingAccount && T !== g.BRd.DARK && ((T = g.BRd.DARK), (0, f.Z)(T), N());
 }
 function D(e) {
     let { systemTheme: t } = e;
-    return (S = t), A();
+    return (S = t), N();
 }
 function L(e) {
-    return (I = b({}, I, e.preferences)), A();
+    return (I = b({}, I, e.preferences)), N();
 }
 E(C, 'displayName', 'ThemeStore'),
     E(C, 'persistKey', 'ThemeStore'),
@@ -127,14 +127,14 @@ E(C, 'displayName', 'ThemeStore'),
         (e) => e
     ]);
 let x = new C(o.Z, {
-    CACHE_LOADED: A,
+    CACHE_LOADED: N,
     CONNECTION_OPEN: R,
     LOGOUT: w,
-    OVERLAY_INITIALIZE: A,
-    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: A,
-    UNSYNCED_USER_SETTINGS_UPDATE: A,
-    USER_SETTINGS_PROTO_UPDATE: A,
-    RESET_PREVIEW_CLIENT_THEME: A,
+    OVERLAY_INITIALIZE: N,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: N,
+    UNSYNCED_USER_SETTINGS_UPDATE: N,
+    USER_SETTINGS_PROTO_UPDATE: N,
+    RESET_PREVIEW_CLIENT_THEME: N,
     SYSTEM_THEME_CHANGE: D,
     ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: P,
     UPDATE_THEME_PREFERENCES: L

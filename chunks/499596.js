@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
-var i = n(120356),
-    l = n.n(i),
+var l = n(120356),
+    i = n.n(l),
     s = n(481060),
     a = n(884338),
     o = n(933557),
@@ -11,7 +11,7 @@ var i = n(120356),
     u = n(388032),
     f = n(304118);
 function m(e) {
-    let { channel: t, users: n, selected: i = !1 } = e,
+    let { channel: t, users: n, selected: l = !1 } = e,
         m = (0, o.ZP)(t),
         h = null;
     null != n &&
@@ -23,11 +23,11 @@ function m(e) {
             renderUser: (e) => {
                 if (null == e) return null;
                 let n = d.ZP.getName(t.guild_id, t.id, e),
-                    i = e.getAvatarURL(t.guild_id, 24);
+                    l = e.getAvatarURL(t.guild_id, 24);
                 return (0, r.jsx)(s.DY3, {
                     text: n,
                     children: (0, r.jsx)('img', {
-                        src: null != i ? i : void 0,
+                        src: null != l ? l : void 0,
                         'aria-label': e.username,
                         alt: '',
                         className: f.avatar
@@ -35,23 +35,23 @@ function m(e) {
                 });
             },
             renderMoreUsers: (e) => {
-                let i = (function (e, t) {
+                let l = (function (e, t) {
                     let n = t.id,
                         r = t.guild_id;
                     return e.length <= 1
                         ? null
                         : 2 === e.length
-                          ? u.NW.formatToPlainString(u.t.MlgLFx, {
+                          ? u.intl.formatToPlainString(u.t.MlgLFx, {
                                 nickname0: d.ZP.getName(r, n, e[0]),
                                 nickname1: d.ZP.getName(r, n, e[1])
                             })
                           : 3 === e.length
-                            ? u.NW.formatToPlainString(u.t.sihix8, {
+                            ? u.intl.formatToPlainString(u.t.sihix8, {
                                   nickname0: d.ZP.getName(r, n, e[0]),
                                   nickname1: d.ZP.getName(r, n, e[1]),
                                   nickname2: d.ZP.getName(r, n, e[2])
                               })
-                            : u.NW.formatToPlainString(u.t['824IXV'], {
+                            : u.intl.formatToPlainString(u.t['824IXV'], {
                                   nickname0: d.ZP.getName(r, n, e[0]),
                                   nickname1: d.ZP.getName(r, n, e[1]),
                                   remainingCount: e.length - 2
@@ -59,7 +59,7 @@ function m(e) {
                 })(n.slice(4), t);
                 return (0, r.jsx)('div', {
                     children: (0, r.jsx)(s.DY3, {
-                        text: i,
+                        text: l,
                         children: (0, r.jsx)('div', {
                             className: f.userListOverflow,
                             children: e
@@ -72,7 +72,7 @@ function m(e) {
         }));
     let x = (0, c.KS)(t);
     return (0, r.jsxs)('div', {
-        className: l()(f.channelInfo, { [f.selected]: i }),
+        className: i()(f.channelInfo, { [f.selected]: l }),
         children: [
             (0, r.jsx)(x, { className: f.channelIcon }),
             (0, r.jsx)('div', {

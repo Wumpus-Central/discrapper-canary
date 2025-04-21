@@ -23,5 +23,5 @@ function d(e) {
                 },
                 t
             );
-    return [d(c.pM4.VOICE_ACTIVITY, u.NW.string(u.t.cHCEOD)), d(c.pM4.PUSH_TO_TALK, t ? u.NW.string(u.t['1AINrK']) : u.NW.string(u.t.Q8gkVF))];
+    return [d(c.pM4.VOICE_ACTIVITY, u.intl.string(u.t.cHCEOD)), d(c.pM4.PUSH_TO_TALK, t ? u.intl.string(u.t['1AINrK']) : u.intl.string(u.t.Q8gkVF))];
 }

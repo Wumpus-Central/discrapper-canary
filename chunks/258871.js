@@ -66,7 +66,7 @@ let y = [
                 }),
             getName: (e) => {
                 let { numEvents: t } = e;
-                return t > 0 ? g.NW.formatToPlainString(g.t.IBdqSk, { number: t }) : g.NW.string(g.t.tlopTE);
+                return t > 0 ? g.intl.formatToPlainString(g.t.IBdqSk, { number: t }) : g.intl.string(g.t.tlopTE);
             },
             handler: (e) =>
                 (0, o.ZDy)(async () => {
@@ -82,7 +82,7 @@ let y = [
                     color: 'currentColor',
                     className: e
                 }),
-            getName: () => g.NW.string(g.t.K50GHR),
+            getName: () => g.intl.string(g.t.K50GHR),
             handler: (e, t) => (0, u.XU)(e.id, t.id)
         },
         {
@@ -93,7 +93,7 @@ let y = [
                     color: 'currentColor',
                     className: e
                 }),
-            getName: () => g.NW.string(g.t.emRpdX),
+            getName: () => g.intl.string(g.t.emRpdX),
             handler: (e, t) =>
                 (0, o.ZDy)(async () => {
                     let { default: i } = await n.e('79764').then(n.bind(n, 533202));
@@ -111,7 +111,7 @@ let y = [
         {
             key: 'INVITE_MEMBERS',
             renderIcon: (e) => (0, r.jsx)(o.ejJ, { className: e }),
-            getName: () => g.NW.string(g.t.MJQOuL),
+            getName: () => g.intl.string(g.t.MJQOuL),
             handler: (e, t) =>
                 (0, o.ZDy)(async () => {
                     let { default: i } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));

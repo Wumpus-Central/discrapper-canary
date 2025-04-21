@@ -4,9 +4,9 @@ var r = n(524437),
     i = n(82554),
     a = n(388032);
 let o = {
-    getTitle: () => a.NW.string(a.t['5Qu1IS']),
-    getDisabledTitle: () => a.NW.string(a.t.YdZZtL),
-    getDescription: () => a.NW.string(a.t.Vzp5BA),
+    getTitle: () => a.intl.string(a.t['5Qu1IS']),
+    getDisabledTitle: () => a.intl.string(a.t.YdZZtL),
+    getDescription: () => a.intl.string(a.t.Vzp5BA),
     eligibleReportSubtypes: [i.i5.SUB_CSAM, i.i5.SUB_LOLI, i.i5.SUB_NCP, i.i5.SUB_SEXUALLY_DEGRADING_CONTENT, i.i5.SUB_UNSOLICITED_PORN],
     onApply: () =>
         (0, l.zj)(

@@ -60,14 +60,14 @@ function m(e) {
                                       (0, u.UT)(n, null), s();
                                   },
                                   className: k.reset,
-                                  children: h.NW.string(h.t.aE02R0)
+                                  children: h.intl.string(h.t.aE02R0)
                               })
                             : null,
                         (0, i.jsx)(o.Text, {
                             className: k.description,
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            children: h.NW.string(h.t['2vyz+P'])
+                            children: h.intl.string(h.t['2vyz+P'])
                         })
                     ]
                 }),
@@ -81,7 +81,7 @@ function m(e) {
                             onClick: s,
                             look: o.zxk.Looks.LINK,
                             color: o.zxk.Colors.PRIMARY,
-                            children: h.NW.string(h.t['ETE/oK'])
+                            children: h.intl.string(h.t['ETE/oK'])
                         })
                     ]
                 })

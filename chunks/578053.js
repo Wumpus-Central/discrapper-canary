@@ -1,12 +1,12 @@
 n.d(t, {
-    g: () => N,
-    u: () => _
+    g: () => _,
+    u: () => v
 }),
     n(290780);
 var r = n(200651),
     i = n(192379),
-    s = n(106351),
-    l = n(442837),
+    l = n(106351),
+    s = n(442837),
     a = n(481060),
     o = n(740504),
     c = n(933557),
@@ -28,23 +28,23 @@ function b(e) {
 }
 function j(e) {
     let { option: t } = e,
-        { label: n, channel: s, category: l } = t,
-        o = i.useMemo(() => (0, d.KS)(s), [s]),
-        u = (0, c.ZP)(s);
+        { label: n, channel: l, category: s } = t,
+        o = i.useMemo(() => (0, d.KS)(l), [l]),
+        u = (0, c.ZP)(l);
     return (0, r.jsx)(a.ZZ$, {
         title: n,
         icon: o,
-        subtitle: null != l ? u : null
+        subtitle: null != s ? u : null
     });
 }
-function N(e) {
+function _(e) {
     let { canManageGuild: t, guildId: n, afkChannelId: a } = e,
-        c = (0, l.e7)([m.Z], () => m.Z.getCategories(n)),
+        c = (0, s.e7)([m.Z], () => m.Z.getCategories(n)),
         d = i.useMemo(() => {
             let e = (0, o.Z)(c._categories, c)
                 .filter((e) => {
                     let { channel: t } = e;
-                    return t.type === s.d.GUILD_VOICE;
+                    return t.type === l.d.GUILD_VOICE;
                 })
                 .map((e) => {
                     let { channel: t } = e;
@@ -53,7 +53,7 @@ function N(e) {
             return (
                 e.unshift({
                     value: x,
-                    label: f.NW.string(f.t.wGiHkJ)
+                    label: f.intl.string(f.t.wGiHkJ)
                 }),
                 e
             );
@@ -62,21 +62,21 @@ function N(e) {
             let t = e === x ? null : e;
             h.Z.updateGuild({ afkChannelId: t });
         }, []);
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(O, {
         value: null != a ? a : x,
         options: d,
         canManageGuild: t,
         onChange: u
     });
 }
-function _(e) {
+function v(e) {
     let { canManageGuild: t, guildId: n, systemChannelId: a } = e,
-        c = (0, l.e7)([m.Z], () => m.Z.getCategories(n)),
+        c = (0, s.e7)([m.Z], () => m.Z.getCategories(n)),
         d = i.useMemo(() => {
             let e = (0, o.Z)(c._categories, c)
                 .filter((e) => {
                     let { channel: t } = e;
-                    return t.type === s.d.GUILD_TEXT;
+                    return t.type === l.d.GUILD_TEXT;
                 })
                 .map((e) => {
                     let { channel: t } = e;
@@ -85,7 +85,7 @@ function _(e) {
             return (
                 e.unshift({
                     value: x,
-                    label: f.NW.string(f.t.ibUhoa)
+                    label: f.intl.string(f.t.ibUhoa)
                 }),
                 e
             );
@@ -94,15 +94,15 @@ function _(e) {
             let t = e === x ? null : e;
             h.Z.updateGuild({ systemChannelId: t });
         }, []);
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(O, {
         value: null != a ? a : x,
         options: d,
         canManageGuild: t,
         onChange: u
     });
 }
-function v(e) {
-    let { value: t, options: n, canManageGuild: s, onChange: l } = e,
+function O(e) {
+    let { value: t, options: n, canManageGuild: l, onChange: s } = e,
         o = i.useCallback((e) => {
             if (null != e) return (0, r.jsx)(j, { option: e });
         }, []),
@@ -110,8 +110,8 @@ function v(e) {
     return (0, r.jsx)(a.q4e, {
         value: t,
         options: n,
-        isDisabled: !s,
-        onChange: l,
+        isDisabled: !l,
+        onChange: s,
         renderOptionLabel: o,
         renderOptionValue: c
     });

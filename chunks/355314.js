@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => A });
 var r = n(200651),
     i = n(192379),
     a = n(442837),
@@ -67,24 +67,24 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function N(e) {
+function A(e) {
     var { onClose: t } = e,
         n = S(e, ['onClose']);
     let O = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         T = (0, a.e7)([c.Z], () => c.Z.theme),
-        N = (0, a.e7)([u.Z], () => u.Z.getGuildId()),
-        A = T === b.BRd.LIGHT ? 'light' : 'dark',
+        A = (0, a.e7)([u.Z], () => u.Z.getGuildId()),
+        N = T === b.BRd.LIGHT ? 'light' : 'dark',
         C = (0, r.jsx)('img', {
             className: v.art,
             alt: 'File Upload Nitro Perk',
-            src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(A, '_v2.png')
+            src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(N, '_v2.png')
         }),
         R = i.useMemo(() => {
             let e = m.ZP.getUserMaxFileSize(O);
             return (0, _.BU)(e / 1024, { useKibibytes: !0 });
         }, [O]),
         P = (0, p.iL)({
-            guildId: N,
+            guildId: A,
             onClick: () => {
                 window.open(h.Z.getArticleURL(b.BhN.NITRO_FAQ), '_blank');
             }
@@ -113,14 +113,14 @@ function N(e) {
                 artContainerClassName: v.artContainer,
                 enableArtBoxShadow: !1,
                 type: E.cd.UPLOAD_ERROR_UPSELL,
-                title: y.NW.string(y.t['9C+41t']),
+                title: y.intl.string(y.t['9C+41t']),
                 body: w,
-                context: y.NW.formatToPlainString(y.t.q5fTZm, { maxSize: R }),
+                context: y.intl.formatToPlainString(y.t.q5fTZm, { maxSize: R }),
                 glowUp: P,
                 analyticsLocation: { section: b.jXE.FILE_UPLOAD_POPOUT },
                 onClose: t,
                 subscriptionTier: E.Si.TIER_2,
-                secondaryCTA: y.NW.string(y.t.ZnqyZ2),
+                secondaryCTA: y.intl.string(y.t.ZnqyZ2),
                 onSecondaryClick: D,
                 showEnhancedUpsell: !0
             },

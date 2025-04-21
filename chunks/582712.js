@@ -1,8 +1,8 @@
 n.d(t, { default: () => x });
 var r = n(200651),
     l = n(192379),
-    a = n(286379),
-    i = n(442837),
+    i = n(286379),
+    a = n(442837),
     s = n(481060),
     o = n(565138),
     c = n(797614),
@@ -17,9 +17,9 @@ var r = n(200651),
     p = n(444812);
 function x(e) {
     let { transitionState: t, guildId: x, onClose: j } = e,
-        _ = (0, i.e7)([b.Z], () => b.Z.getGuild(x));
+        _ = (0, a.e7)([b.Z], () => b.Z.getGuild(x));
     return (l.useEffect(() => {
-        (0, m.Y)(x), (0, g.L)(g.Q.MODAL_VIEWED, x), c.Z.increment({ name: a.V.DM_SETTINGS_UPSELL_VIEW });
+        (0, m.Y)(x), (0, g.L)(g.Q.MODAL_VIEWED, x), c.Z.increment({ name: i.V.DM_SETTINGS_UPSELL_VIEW });
     }, [x]),
     null == _)
         ? null
@@ -30,7 +30,7 @@ function x(e) {
                   onSubmit: (e) => {
                       e.preventDefault();
                       let t = (0, f.YK)();
-                      t.add(x), d.h2.updateSetting(Array.from(t)).then(() => (0, s.showToast)((0, s.createToast)(S.NW.string(S.t.rlYD1d), s.ToastType.SUCCESS))), j(), (0, g.L)(g.Q.MODAL_DISABLED_DMS, x);
+                      t.add(x), d.h2.updateSetting(Array.from(t)).then(() => (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.rlYD1d), s.ToastType.SUCCESS))), j(), (0, g.L)(g.Q.MODAL_DISABLED_DMS, x);
                   },
                   children: [
                       (0, r.jsx)('img', {
@@ -45,13 +45,13 @@ function x(e) {
                               (0, r.jsx)(s.X6q, {
                                   variant: 'heading-lg/bold',
                                   className: h.title,
-                                  children: S.NW.string(S.t.w2BvnJ)
+                                  children: S.intl.string(S.t.w2BvnJ)
                               }),
                               (0, r.jsx)(s.Text, {
                                   variant: 'text-md/normal',
                                   color: 'header-secondary',
                                   className: h.body,
-                                  children: S.NW.format(S.t.Depjkp, { guild_name: _.name })
+                                  children: S.intl.format(S.t.Depjkp, { guild_name: _.name })
                               })
                           ]
                       }),
@@ -61,7 +61,7 @@ function x(e) {
                                   variant: 'eyebrow',
                                   color: 'header-secondary',
                                   className: h.subtitle,
-                                  children: S.NW.string(S.t.KPB2i4)
+                                  children: S.intl.string(S.t.KPB2i4)
                               }),
                               (0, r.jsx)('div', {
                                   className: h.guildContainer,
@@ -88,7 +88,7 @@ function x(e) {
                                           type: 'submit',
                                           color: s.zxk.Colors.BRAND,
                                           size: s.zxk.Sizes.MEDIUM,
-                                          children: S.NW.string(S.t.TD7iU1)
+                                          children: S.intl.string(S.t.TD7iU1)
                                       }),
                                       (0, r.jsx)(s.zxk, {
                                           className: h.button,
@@ -96,13 +96,13 @@ function x(e) {
                                           onClick: () => {
                                               j(), (0, g.L)(g.Q.MODAL_DISMISSED, x);
                                           },
-                                          children: S.NW.string(S.t.PsWbcn)
+                                          children: S.intl.string(S.t.PsWbcn)
                                       }),
                                       (0, r.jsx)(s.Text, {
                                           variant: 'text-xs/normal',
                                           color: 'header-secondary',
                                           className: h.footer,
-                                          children: S.NW.format(S.t.IzZxXV, {
+                                          children: S.intl.format(S.t.IzZxXV, {
                                               onClick: () => {
                                                   j(),
                                                       (0, u.X)(x),

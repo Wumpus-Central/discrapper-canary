@@ -38,13 +38,13 @@ function f(e) {
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
                         className: x.headerTitle,
-                        children: null == i ? b.NW.string(b.t.DDF0cH) : b.NW.string(b.t.YPdQOj)
+                        children: null == i ? b.intl.string(b.t.DDF0cH) : b.intl.string(b.t.YPdQOj)
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         className: x.headerSubtitle,
-                        children: null == i ? b.NW.string(b.t.bqQIwc) : b.NW.string(b.t['I+9bLy'])
+                        children: null == i ? b.intl.string(b.t.bqQIwc) : b.intl.string(b.t['I+9bLy'])
                     })
                 ]
             }),
@@ -84,9 +84,9 @@ function p(e) {
             }
             return i;
         })(e, ['channel', 'onClose', 'transitionState']);
-    let N = (0, o.Dt)(),
-        v = (0, l.e7)([c.Z], () => c.Z.getGuild(d.guild_id)),
-        j = i.useMemo(() => s.Z.getStageInstanceByChannel(d.id), [d.id]),
+    let v = (0, o.Dt)(),
+        j = (0, l.e7)([c.Z], () => c.Z.getGuild(d.guild_id)),
+        N = i.useMemo(() => s.Z.getStageInstanceByChannel(d.id), [d.id]),
         { loading: I, error: O, onSave: y } = (0, g.Z)(d, h),
         {
             modalStep: C,
@@ -97,15 +97,15 @@ function p(e) {
             handleSettingsSave: P,
             handleDelayedSave: k
         } = (0, _.Z)({
-            stageInstance: j,
+            stageInstance: N,
             defaultStep: m.lv.STAGE_CHANNEL_SETTINGS,
             error: O,
             onSave: y
         });
     return (i.useEffect(() => {
-        null == v && h();
-    }, [v, h]),
-    null == v)
+        null == j && h();
+    }, [j, h]),
+    null == j)
         ? null
         : (0, r.jsx)(
               a.Y0X,
@@ -136,7 +136,7 @@ function p(e) {
               })(
                   {
                       transitionState: b,
-                      'aria-labelledby': N
+                      'aria-labelledby': v
                   },
                   p
               )),
@@ -153,10 +153,10 @@ function p(e) {
                                   children: (0, r.jsx)('div', {
                                       className: x.slideContainer,
                                       children: (0, r.jsx)(f, {
-                                          guild: v,
+                                          guild: j,
                                           channel: d,
-                                          stageInstance: j,
-                                          headerId: N,
+                                          stageInstance: N,
+                                          headerId: v,
                                           onClose: h,
                                           loading: I,
                                           error: O,
@@ -171,8 +171,8 @@ function p(e) {
                                   children: (0, r.jsx)('div', {
                                       className: x.slideContainer,
                                       children: (0, r.jsx)(u.Z, {
-                                          headerId: N,
-                                          guild: v,
+                                          headerId: v,
+                                          guild: j,
                                           channel: d,
                                           stageData: w,
                                           loading: I,

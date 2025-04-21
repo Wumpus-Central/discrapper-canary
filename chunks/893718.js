@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(271668),
     S = n(404295),
     T = n(326133),
-    N = n(405701),
-    A = n(570220),
+    A = n(405701),
+    N = n(570220),
     C = n(540059),
     R = n(28546),
     P = n(805680),
@@ -41,8 +41,8 @@ var r = n(200651),
     V = n(665906),
     Z = n(695346),
     H = n(271383),
-    W = n(496675),
-    Y = n(944486),
+    Y = n(496675),
+    W = n(944486),
     K = n(398327),
     z = n(117530),
     q = n(594174),
@@ -120,7 +120,7 @@ function eb(e, t) {
 }
 let ey = 450;
 function ev(e) {
-    return e !== Y.Z.getChannelId();
+    return e !== W.Z.getChannelId();
 }
 function eO(e, t) {
     var n, r;
@@ -201,7 +201,7 @@ function eT(e) {
         [e]
     );
 }
-function eN(e) {
+function eA(e) {
     let { editorRef: t, disabled: n, textValue: r, channelId: a, chatInputType: o, submit: s } = e,
         { analyticsLocations: l } = (0, y.ZP)();
     return i.useCallback(
@@ -228,7 +228,7 @@ function eN(e) {
         [n, r, a, o.drafts.type, t, l, s]
     );
 }
-function eA(e, t) {
+function eN(e, t) {
     return i.useCallback(
         (n, r, i) => {
             let a = e.current;
@@ -328,11 +328,11 @@ function eL(e, t, n, r) {
             return null != (t = null != i && null != n ? (null == (e = H.ZP.getMember(i, n.id)) ? void 0 : e.isPending) : null) && t;
         }),
         s = (0, _.cj)(
-            [W.Z],
+            [Y.Z],
             () => {
                 var i, a;
                 let s = e.isPrivate(),
-                    l = W.Z.computePermissions(e),
+                    l = Y.Z.computePermissions(e),
                     c = f.e$(l, ef.Plq.CREATE_PUBLIC_THREADS) || f.e$(l, ef.Plq.CREATE_PRIVATE_THREADS),
                     u = (!(null == (i = t.permissions) ? void 0 : i.requireCreateTherads) || c) && (!(null == (a = t.permissions) ? void 0 : a.requireSendMessages) || f.e$(l, ef.Plq.SEND_MESSAGES)),
                     d = u && f.e$(l, ef.Plq.ATTACH_FILES),
@@ -412,7 +412,7 @@ function ek(e, t, n, r) {
 }
 function ej(e, t) {
     var n, a, s, l, u, f, h, v, R, w, L, x, j, G, B;
-    let { textValue: F, richValue: V, className: H, innerClassName: W, editorClassName: Y, id: z, required: q, disabled: Q, placeholder: X, accessibilityLabel: J, channel: ea, type: ep, focused: em, renderAttachButton: eg, renderApplicationCommandIcon: eE, renderAppLauncherButton: eb, renderAppCommandButton: ev, renderLeftAccessories: eO, pendingReply: ej, onChange: eU, onResize: eG, onBlur: eB, onFocus: eF, onKeyDown: eV, onSubmit: eZ, promptToUpload: eH, highlighted: eW, canMentionRoles: eY, canMentionChannels: eK, maxCharacterCount: ez, showRemainingCharsAfterCount: eq, allowNewLines: eQ = !0, characterCountClassName: eX, 'aria-describedby': eJ, 'aria-labelledby': e$, setEditorRef: e0, autoCompletePosition: e1, children: e2, disableThemedBackground: e3 = !1, emojiPickerCloseOnModalOuterClick: e4, parentModalKey: e5, onCommandSentinelTyped: e6, pendingScheduledMessage: e8 } = e;
+    let { textValue: F, richValue: V, className: H, innerClassName: Y, editorClassName: W, id: z, required: q, disabled: Q, placeholder: X, accessibilityLabel: J, channel: ea, type: ep, focused: em, renderAttachButton: eg, renderApplicationCommandIcon: eE, renderAppLauncherButton: eb, renderAppCommandButton: ev, renderLeftAccessories: eO, pendingReply: ej, onChange: eU, onResize: eG, onBlur: eB, onFocus: eF, onKeyDown: eV, onSubmit: eZ, promptToUpload: eH, highlighted: eY, canMentionRoles: eW, canMentionChannels: eK, maxCharacterCount: ez, showRemainingCharsAfterCount: eq, allowNewLines: eQ = !0, characterCountClassName: eX, 'aria-describedby': eJ, 'aria-labelledby': e$, setEditorRef: e0, autoCompletePosition: e1, children: e2, disableThemedBackground: e3 = !1, emojiPickerCloseOnModalOuterClick: e4, parentModalKey: e5, onCommandSentinelTyped: e6, pendingScheduledMessage: e8 } = e;
     c()(null != ep, 'chat input type must be set');
     let { analyticsLocations: e7 } = (0, y.ZP)(b.Z.CHANNEL_TEXT_AREA),
         e9 = (0, C.R6)('ChannelTextAreaContainer'),
@@ -449,7 +449,7 @@ function ej(e, t) {
         tS = (0, _.e7)([K.Z], () => K.Z.isEnabled()),
         tT = i.useRef(F);
     tT.current = F;
-    let tN = i.useCallback(
+    let tA = i.useCallback(
         (e, t, n) => {
             var r;
             t === e_.GI && '' === tT.current && (null == (r = ep.commands) ? void 0 : r.enabled) && (null == e6 || e6()), null == eU || eU(e, t, n);
@@ -457,12 +457,12 @@ function ej(e, t) {
         [eU, e6, null == (a = ep.commands) ? void 0 : a.enabled]
     );
     eC(ep, tp);
-    let { eventEmitter: tA, handleEditorSelectionChanged: tC } = eR(tr, F, V),
+    let { eventEmitter: tN, handleEditorSelectionChanged: tC } = eR(tr, F, V),
         { submitting: tR, submit: tP, handleSubmit: tw } = eI(eZ, ep, tr, ea.id),
         { autocompleteRef: tD, handleMaybeShowAutocomplete: tL, handleHideAutocomplete: tx } = eP(),
         tM = eS(tP, ep, tr),
         tk = eT(tr),
-        tj = eN({
+        tj = eA({
             editorRef: tr,
             disabled: tp,
             textValue: F,
@@ -470,15 +470,15 @@ function ej(e, t) {
             chatInputType: ep,
             submit: eZ
         }),
-        tU = eA(tr, ea),
+        tU = eN(tr, ea),
         tG = i.useCallback(() => {
             var e;
             return null == ta || null == (e = ta.current) ? void 0 : e.hide();
         }, []),
         { editorHeight: tB, handleResize: tF } = eD(eG),
         { handleTab: tV, handleEnter: tZ, handleMoveSelection: tH } = eM(tD, tn, ty),
-        { expressionPickerView: tW, shouldHideExpressionPicker: tY, handleAutocompleteVisibilityChange: tK, handleOuterClick: tz } = ex(ep, tA, tr);
-    (0, ee.S)(tA, ea.guild_id, ea.id);
+        { expressionPickerView: tY, shouldHideExpressionPicker: tW, handleAutocompleteVisibilityChange: tK, handleOuterClick: tz } = ex(ep, tN, tr);
+    (0, ee.S)(tN, ea.guild_id, ea.id);
     let tq = null != ej,
         tQ = (tp && !((tf || t_) && tg)) || (tR && (null == (s = ep.submit) ? void 0 : s.useDisabledStylesOnSubmit)),
         tX = null;
@@ -552,8 +552,8 @@ function ej(e, t) {
                       ]
                   })
             : null;
-    return (0, r.jsx)(A.f6, {
-        value: tA,
+    return (0, r.jsx)(N.f6, {
+        value: tN,
         children: (0, r.jsxs)(y.Gt, {
             value: e7,
             children: [
@@ -576,7 +576,7 @@ function ej(e, t) {
                     className: o()(H, {
                         [eh.channelTextArea]: !0,
                         [eh.channelTextAreaDisabled]: tQ,
-                        [eh.highlighted]: eW,
+                        [eh.highlighted]: eY,
                         [eh.textAreaMobileThemed]: d.tq,
                         [eh.inlineContainer]: t6,
                         [eh.flushContainer]: t8
@@ -586,7 +586,7 @@ function ej(e, t) {
                         (0, r.jsxs)('div', {
                             ref: ti,
                             onScroll: tG,
-                            className: o()(W, {
+                            className: o()(Y, {
                                 [eh.scrollableContainer]: !0,
                                 [eh.themedBackground]: !e3,
                                 [eh.hasStackedBar]: t1.stacked.length > 0
@@ -636,7 +636,7 @@ function ej(e, t) {
                                                 maxCharacterCount: null != ez ? ez : tv,
                                                 allowNewLines: eQ,
                                                 'aria-describedby': eJ,
-                                                onChange: tN,
+                                                onChange: tA,
                                                 onResize: tF,
                                                 onBlur: eB,
                                                 onFocus: eF,
@@ -658,7 +658,7 @@ function ej(e, t) {
                                                         [eh.profileBioInput]: ep === et.Ie.PROFILE_BIO_INPUT,
                                                         [eh.overlayInlineReply]: ep === et.Ie.OVERLAY_INLINE_REPLY
                                                     },
-                                                    Y
+                                                    W
                                                 ),
                                                 'aria-labelledby': e$
                                             })
@@ -667,7 +667,7 @@ function ej(e, t) {
                                             ? (0, r.jsxs)('div', {
                                                   className: eh.rightAccessories,
                                                   children: [
-                                                      t4 ? (0, r.jsx)(N.Z, { channel: ea }) : null,
+                                                      t4 ? (0, r.jsx)(A.Z, { channel: ea }) : null,
                                                       null != (x = null == ev ? void 0 : ev()) ? x : null,
                                                       (null == (l = ep.submit) ? void 0 : l.button) != null && ((null == (u = ep.submit) ? void 0 : u.ignorePreference) || tO)
                                                           ? (0, r.jsx)(er.Z, {
@@ -693,7 +693,7 @@ function ej(e, t) {
                         (0, r.jsx)(T.Z, {
                             ref: tD,
                             channel: ea,
-                            canMentionRoles: eY,
+                            canMentionRoles: eW,
                             canMentionChannels: eK,
                             useNewSlashCommands: tb,
                             canOnlyUseTextCommands: tq,
@@ -701,7 +701,7 @@ function ej(e, t) {
                             canSendSoundmoji: null == (h = ep.soundmoji) ? void 0 : h.allowSending,
                             textValue: F,
                             focused: em,
-                            expressionPickerView: tW,
+                            expressionPickerView: tY,
                             type: ep,
                             targetRef: tt,
                             editorRef: tr,
@@ -709,7 +709,7 @@ function ej(e, t) {
                             onSendSticker: tj,
                             onVisibilityChange: tK,
                             editorHeight: tB,
-                            setValue: (e, t) => (null == tN ? void 0 : tN(null, e, t)),
+                            setValue: (e, t) => (null == tA ? void 0 : tA(null, e, t)),
                             position: e1
                         }),
                         (0, r.jsx)(k.Z, {
@@ -731,7 +731,7 @@ function ej(e, t) {
                         e2
                     ]
                 }),
-                tY
+                tW
                     ? null
                     : (0, r.jsx)(P.Z, {
                           positionTargetRef: tt,

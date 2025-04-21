@@ -23,21 +23,21 @@ function h(e) {
         children: [
             (0, i.jsx)(g, {
                 value: n.suppressEveryone,
-                title: c.NW.format(c.t.OWiWAg, {}),
+                title: c.intl.format(c.t.OWiWAg, {}),
                 onChange: (e) => h(t, { suppress_everyone: e }, o.UE.suppressEveryone(e))
             }),
             (0, i.jsx)(g, {
                 value: n.suppressRoles,
-                title: c.NW.string(c.t['O/QdoK']),
+                title: c.intl.string(c.t['O/QdoK']),
                 onChange: (e) => h(t, { suppress_roles: e }, o.UE.suppressRoles(e))
             }),
             (0, i.jsx)(g, {
                 title: (0, i.jsxs)('div', {
                     className: u.advanceSettingTitle,
                     children: [
-                        c.NW.string(c.t.gPuteH),
+                        c.intl.string(c.t.gPuteH),
                         (0, i.jsx)(l.ua7, {
-                            text: c.NW.string(c.t['Vw/Xn5']),
+                            text: c.intl.string(c.t['Vw/Xn5']),
                             children: (e) => {
                                 let { onMouseEnter: t, onMouseLeave: n } = e;
                                 return (0, i.jsx)(l.d3s, {
@@ -58,12 +58,12 @@ function h(e) {
             }),
             (0, i.jsx)(g, {
                 value: n.muteScheduledEvents,
-                title: c.NW.string(c.t.ONG3Y2),
+                title: c.intl.string(c.t.ONG3Y2),
                 onChange: (e) => h(t, { mute_scheduled_events: e }, o.UE.mutedEvents(e))
             }),
             (0, i.jsx)(g, {
                 value: n.mobilePush,
-                title: c.NW.string(c.t['h1DL6+']),
+                title: c.intl.string(c.t['h1DL6+']),
                 onChange: (e) => h(t, { mobile_push: e }, o.UE.mobilePush(e))
             })
         ]

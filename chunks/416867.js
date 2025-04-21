@@ -37,7 +37,7 @@ function c(e) {
                 size: i.zxk.Sizes.MEDIUM,
                 grow: !1,
                 onClick: v,
-                children: l.NW.string(l.t['NX+WJC'])
+                children: l.intl.string(l.t['NX+WJC'])
             })
         ]
     });

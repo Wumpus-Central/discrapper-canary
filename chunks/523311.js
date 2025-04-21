@@ -1,8 +1,8 @@
 n.d(t, { Z: () => o });
 var r = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
+var i = n(120356),
+    a = n.n(i),
     l = n(481060),
     s = n(833829);
 function o(e) {
@@ -20,7 +20,7 @@ function o(e) {
                   })
                 : null,
             (0, r.jsx)('div', {
-                className: i()({ [s.loading]: t }),
+                className: a()({ [s.loading]: t }),
                 children: n
             })
         ]

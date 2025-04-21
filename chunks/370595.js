@@ -24,7 +24,7 @@ function c(e) {
                         }),
                         (0, r.jsx)(i.X6q, {
                             variant: 'heading-md/semibold',
-                            children: o.NW.string(o.t['13/7kZ'])
+                            children: o.intl.string(o.t['13/7kZ'])
                         })
                     ]
                 })

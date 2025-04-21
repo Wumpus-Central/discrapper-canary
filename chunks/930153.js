@@ -37,16 +37,16 @@ function a(e) {
 let o = 1000000,
     s = 1000;
 function l(e) {
-    if (e < o) return r.NW.formatToPlainString(r.t.OiHat7, { value: e });
+    if (e < o) return r.intl.formatToPlainString(r.t.OiHat7, { value: e });
     let t = (e / o).toFixed(1);
-    return r.NW.formatToPlainString(r.t.Iku48P, { value: t });
+    return r.intl.formatToPlainString(r.t.Iku48P, { value: t });
 }
 function c(e, t) {
-    if (e < s) return r.NW.formatToPlainString(r.t.OiHat7, { value: Math.floor(e) });
-    if (e < o) return r.NW.formatToPlainString(r.t['84R4TU'], { value: Math.floor(e / s) });
+    if (e < s) return r.intl.formatToPlainString(r.t.OiHat7, { value: Math.floor(e) });
+    if (e < o) return r.intl.formatToPlainString(r.t['84R4TU'], { value: Math.floor(e / s) });
     let n = Math.floor((10 * e) / o) / 10,
         i = new Intl.NumberFormat(t, { maximumFractionDigits: 1 }).format(n);
-    return r.NW.formatToPlainString(r.t.Iku48P, { value: i });
+    return r.intl.formatToPlainString(r.t.Iku48P, { value: i });
 }
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NaN;

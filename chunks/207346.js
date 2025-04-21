@@ -21,7 +21,7 @@ function u(e) {
             (0, r.jsx)(l.X6q, {
                 className: c.title,
                 variant: 'heading-xxl/bold',
-                children: s.NW.string(s.t.z2jK6e)
+                children: s.intl.string(s.t.z2jK6e)
             }),
             (0, r.jsx)('div', {
                 className: c.betaTag,
@@ -30,23 +30,23 @@ function u(e) {
             (0, r.jsx)(l.E1j, {
                 autoFocus: !0,
                 size: l.E1j.Sizes.MEDIUM,
-                placeholder: s.NW.string(s.t['5h0QOD']),
+                placeholder: s.intl.string(s.t['5h0QOD']),
                 className: c.queryInput,
                 query: t,
                 onChange: n,
                 onClear: () => n('')
             }),
             (0, r.jsx)(l.PhF, {
-                placeholder: s.NW.string(s.t['0XtAW1']),
+                placeholder: s.intl.string(s.t['0XtAW1']),
                 className: c.sortInput,
                 options: [
                     {
                         value: 'descending',
-                        label: s.NW.string(s.t.SCsC5u)
+                        label: s.intl.string(s.t.SCsC5u)
                     },
                     {
                         value: 'ascending',
-                        label: s.NW.string(s.t.fdx7aG)
+                        label: s.intl.string(s.t.fdx7aG)
                     }
                 ],
                 isSelected: (e) => e === d,

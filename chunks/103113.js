@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(544989),
     S = n(171368),
     T = n(228168),
-    N = n(388032),
-    A = n(200669);
+    A = n(388032),
+    N = n(200669);
 function C(e, t, n) {
     return (
         t in e
@@ -87,7 +87,7 @@ function P(e) {
             Z
                 ? (0, r.jsx)(a.sNh, {
                       id: 'view-profile',
-                      label: N.NW.string(N.t['+Xp3ho']),
+                      label: A.intl.string(A.t['+Xp3ho']),
                       action: () => {
                           V(),
                               (0, p.pQ)(
@@ -127,7 +127,7 @@ function P(e) {
                                 })
                             }),
                             (0, r.jsxs)('header', {
-                                className: A.header,
+                                className: N.header,
                                 children: [
                                     (0, r.jsx)(E.Z, {
                                         user: t,
@@ -143,12 +143,12 @@ function P(e) {
                                         profileType: T.y0.BITE_SIZE,
                                         onOpenProfile: Z ? V : void 0
                                     }),
-                                    t.isClyde() && (0, r.jsx)(u.Z, { className: A.headerTag })
+                                    t.isClyde() && (0, r.jsx)(u.Z, { className: N.headerTag })
                                 ]
                             }),
                             (0, r.jsxs)(a.Ttm, {
                                 fade: !0,
-                                className: A.body,
+                                className: N.body,
                                 children: [
                                     (0, r.jsx)(v.Z, {
                                         user: t,
@@ -169,7 +169,7 @@ function P(e) {
                                     })
                                 ]
                             }),
-                            (0, r.jsx)('footer', { className: A.footer })
+                            (0, r.jsx)('footer', { className: N.footer })
                         ]
                     }),
                     (null == j ? void 0 : j.profileEffectId) != null &&

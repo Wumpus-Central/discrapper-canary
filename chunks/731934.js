@@ -1,9 +1,9 @@
-n.d(t, { Z: () => W }), n(953529), n(314940);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => L }), n(953529), n(314940);
+var i = n(200651),
+    r = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(278074),
+    l = n.n(s),
+    a = n(278074),
     o = n(91192),
     c = n(481060),
     d = n(209613),
@@ -15,36 +15,36 @@ var r = n(200651),
     f = n(895328),
     b = n(568671),
     _ = n(419821),
-    N = n(367515),
-    x = n(250285),
-    E = n(292352),
-    j = n(134612),
-    C = n(332495),
-    O = n(388032),
-    S = n(589608),
-    v = n(34997),
-    T = n(20493),
-    I = n(926895);
+    x = n(367515),
+    E = n(250285),
+    j = n(292352),
+    C = n(134612),
+    O = n(332495),
+    S = n(388032),
+    v = n(589608),
+    T = n(34997),
+    I = n(20493),
+    N = n(926895);
 function y(e) {
-    let { header: t, description: n, stepNumber: i } = e;
-    return (0, r.jsxs)('div', {
-        className: v.step,
+    let { header: t, description: n, stepNumber: r } = e;
+    return (0, i.jsxs)('div', {
+        className: T.step,
         children: [
-            (0, r.jsx)('div', {
-                className: v.stepNumber,
-                children: (0, r.jsx)(c.X6q, {
+            (0, i.jsx)('div', {
+                className: T.stepNumber,
+                children: (0, i.jsx)(c.X6q, {
                     variant: 'heading-md/semibold',
                     color: 'text-brand',
-                    children: (0, r.jsx)(c.y5t, { children: i })
+                    children: (0, i.jsx)(c.y5t, { children: r })
                 })
             }),
-            (0, r.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 children: [
-                    (0, r.jsx)(c.X6q, {
+                    (0, i.jsx)(c.X6q, {
                         variant: 'heading-sm/bold',
-                        children: (0, r.jsx)(c.y5t, { children: t })
+                        children: (0, i.jsx)(c.y5t, { children: t })
                     }),
-                    (0, r.jsx)(c.Text, {
+                    (0, i.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
                         children: n
@@ -55,50 +55,50 @@ function y(e) {
     });
 }
 function A() {
-    return (0, r.jsxs)('div', {
-        className: a()(v.box, S.box, v.linkingBanner, v.linkingBannerParent),
+    return (0, i.jsxs)('div', {
+        className: l()(T.box, v.box, T.linkingBanner, T.linkingBannerParent),
         children: [
-            (0, r.jsxs)('div', {
-                className: v.linkingBannerUpper,
+            (0, i.jsxs)('div', {
+                className: T.linkingBannerUpper,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         children: [
-                            (0, r.jsx)(c.X6q, {
-                                className: T.marginBottom8,
+                            (0, i.jsx)(c.X6q, {
+                                className: I.marginBottom8,
                                 variant: 'heading-xl/medium',
-                                children: (0, r.jsx)(c.y5t, { children: O.NW.string(C.Z.pHEnV1) })
+                                children: (0, i.jsx)(c.y5t, { children: S.intl.string(O.default.pHEnV1) })
                             }),
-                            (0, r.jsx)(c.Text, {
+                            (0, i.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-muted',
-                                className: T.marginBottom20,
-                                children: O.NW.string(C.Z['1J/gZ2'])
+                                className: I.marginBottom20,
+                                children: S.intl.string(O.default['1J/gZ2'])
                             })
                         ]
                     }),
-                    (0, r.jsx)('img', {
-                        className: v.bannerArt,
-                        src: I,
-                        alt: O.NW.string(C.Z['r+PDmp'])
+                    (0, i.jsx)('img', {
+                        className: T.bannerArt,
+                        src: N,
+                        alt: S.intl.string(O.default['r+PDmp'])
                     })
                 ]
             }),
-            (0, r.jsxs)('div', {
-                className: v.steps,
+            (0, i.jsxs)('div', {
+                className: T.steps,
                 children: [
-                    (0, r.jsx)(y, {
-                        header: O.NW.string(C.Z['7xxAnp']),
-                        description: O.NW.string(C.Z['1M9So6']),
+                    (0, i.jsx)(y, {
+                        header: S.intl.string(O.default['7xxAnp']),
+                        description: S.intl.string(O.default['1M9So6']),
                         stepNumber: 1
                     }),
-                    (0, r.jsx)(y, {
-                        header: O.NW.string(C.Z['AXgx+f']),
-                        description: O.NW.string(C.Z.GzMFnZ),
+                    (0, i.jsx)(y, {
+                        header: S.intl.string(O.default['AXgx+f']),
+                        description: S.intl.string(O.default.GzMFnZ),
                         stepNumber: 2
                     }),
-                    (0, r.jsx)(y, {
-                        header: O.NW.string(C.Z.MZn1tL),
-                        description: O.NW.string(C.Z['8rLBxM']),
+                    (0, i.jsx)(y, {
+                        header: S.intl.string(O.default.MZn1tL),
+                        description: S.intl.string(O.default['8rLBxM']),
                         stepNumber: 3
                     })
                 ]
@@ -108,64 +108,64 @@ function A() {
 }
 function P() {
     let e = (0, h.VM)();
-    return (0, r.jsxs)('div', {
-        className: a()(v.box, S.box, v.linkingBanner),
+    return (0, i.jsxs)('div', {
+        className: l()(T.box, v.box, T.linkingBanner),
         children: [
-            (0, r.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 children: [
-                    (0, r.jsx)(c.X6q, {
-                        className: T.marginBottom8,
+                    (0, i.jsx)(c.X6q, {
+                        className: I.marginBottom8,
                         variant: 'heading-xl/medium',
-                        children: (0, r.jsx)(c.y5t, { children: O.NW.string(C.Z.zUCWEB) })
+                        children: (0, i.jsx)(c.y5t, { children: S.intl.string(O.default.zUCWEB) })
                     }),
-                    (0, r.jsx)(c.Text, {
+                    (0, i.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
-                        className: T.marginBottom20,
-                        children: O.NW.format(C.Z.yMnoDg, { link: 'https://support.discord.com/hc/articles/14155060633623' })
+                        className: I.marginBottom20,
+                        children: S.intl.format(O.default.yMnoDg, { link: 'https://support.discord.com/hc/articles/14155060633623' })
                     }),
-                    e ? null : (0, r.jsx)(b.Z, {})
+                    e ? null : (0, i.jsx)(b.Z, {})
                 ]
             }),
-            (0, r.jsx)('img', {
-                className: v.bannerArt,
-                src: I,
-                alt: O.NW.string(C.Z['r+PDmp'])
+            (0, i.jsx)('img', {
+                className: T.bannerArt,
+                src: N,
+                alt: S.intl.string(O.default['r+PDmp'])
             })
         ]
     });
 }
 function R(e) {
     let { sectionType: t, sectionTitle: n, requests: s } = e,
-        a = i.useRef(null),
-        l = ''.concat(t, '-list'),
-        m = (0, d.Z)(l),
-        g = i.useCallback(
+        l = r.useRef(null),
+        a = ''.concat(t, '-list'),
+        m = (0, d.Z)(a),
+        g = r.useCallback(
             (e) => {
-                let { row: n, listIndex: i } = e,
-                    a = s[n],
-                    l = i === s.length;
-                return null == a
+                let { row: n, listIndex: r } = e,
+                    l = s[n],
+                    a = r === s.length;
+                return null == l
                     ? null
-                    : (0, r.jsx)(
-                          x.Z,
+                    : (0, i.jsx)(
+                          E.Z,
                           {
-                              userId: a.id,
-                              isLast: l,
-                              children: () => (t === E.ne.ACTIVE ? (0, r.jsx)(_.u, { user: a }) : (0, r.jsx)(N.B, { user: a }))
+                              userId: l.id,
+                              isLast: a,
+                              children: () => (t === j.ne.ACTIVE ? (0, i.jsx)(_.u, { user: l }) : (0, i.jsx)(x.B, { user: l }))
                           },
-                          a.id
+                          l.id
                       );
             },
             [s, t]
         ),
-        p = i.useCallback(
+        p = r.useCallback(
             () =>
-                (0, r.jsx)(
+                (0, i.jsx)(
                     u.Z,
                     {
-                        children: (0, r.jsx)(c.Text, {
-                            className: T.marginBottom8,
+                        children: (0, i.jsx)(c.Text, {
+                            className: I.marginBottom8,
                             variant: 'eyebrow',
                             color: 'header-secondary',
                             children: n
@@ -175,68 +175,68 @@ function R(e) {
                 ),
             [n]
         );
-    return (0, r.jsx)('div', {
-        className: v.section,
-        children: (0, r.jsx)(o.bG, {
+    return (0, i.jsx)('div', {
+        className: T.section,
+        children: (0, i.jsx)(o.bG, {
             navigator: m,
-            children: (0, r.jsx)(o.SJ, {
+            children: (0, i.jsx)(o.SJ, {
                 children: (e) => {
-                    var { ref: t, role: i } = e,
+                    var { ref: t, role: r } = e,
                         o = (function (e, t) {
                             if (null == e) return {};
                             var n,
-                                r,
-                                i = (function (e, t) {
+                                i,
+                                r = (function (e, t) {
                                     if (null == e) return {};
                                     var n,
-                                        r,
-                                        i = {},
+                                        i,
+                                        r = {},
                                         s = Object.keys(e);
-                                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                                    return i;
+                                    for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                                    return r;
                                 })(e, t);
                             if (Object.getOwnPropertySymbols) {
                                 var s = Object.getOwnPropertySymbols(e);
-                                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                             }
-                            return i;
+                            return r;
                         })(e, ['ref', 'role']);
-                    return (0, r.jsx)(
+                    return (0, i.jsx)(
                         c.aVo,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
+                                    i = Object.keys(n);
                                 'function' == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
+                                    (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         })
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
+                                    i.forEach(function (t) {
+                                        var i;
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                                      value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
+                                                : (e[t] = i);
                                     });
                             }
                             return e;
                         })(
                             {
-                                innerRole: i,
+                                innerRole: r,
                                 innerAriaLabel: n,
                                 ref: (e) => {
                                     var n;
-                                    (a.current = e), (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
+                                    (l.current = e), (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
                                 },
-                                sectionHeight: E.zE,
-                                rowHeight: E.ip,
+                                sectionHeight: j.zE,
+                                rowHeight: j.ip,
                                 renderSection: p,
                                 renderRow: g,
                                 sections: [s.length],
@@ -245,7 +245,7 @@ function R(e) {
                             },
                             o
                         ),
-                        l
+                        a
                     );
                 }
             })
@@ -254,43 +254,43 @@ function R(e) {
 }
 let D = () => {
         let e = (0, p.Z)(),
-            t = (0, h.mq)(E.ne.ACTIVE),
-            n = e ? E.AG : E.i0,
-            i = {
+            t = (0, h.mq)(j.ne.ACTIVE),
+            n = e ? j.AG : j.i0,
+            r = {
                 count: t.length,
                 max: n
             },
-            s = (0, m.o)(O.NW.formatToPlainString(C.Z['+tnO39'], i), O.NW.formatToPlainString(C.Z['pu6/U1'], i));
+            s = (0, m.o)(S.intl.formatToPlainString(O.default['+tnO39'], r), S.intl.formatToPlainString(O.default['pu6/U1'], r));
         return t.length > 0
-            ? (0, r.jsx)(R, {
-                  sectionType: E.ne.ACTIVE,
+            ? (0, i.jsx)(R, {
+                  sectionType: j.ne.ACTIVE,
                   sectionTitle: s,
                   requests: t
               })
-            : (0, r.jsxs)('div', {
-                  className: v.section,
+            : (0, i.jsxs)('div', {
+                  className: T.section,
                   children: [
-                      (0, r.jsx)(c.Text, {
-                          className: T.marginBottom8,
+                      (0, i.jsx)(c.Text, {
+                          className: I.marginBottom8,
                           variant: 'eyebrow',
                           color: 'header-secondary',
                           children: s
                       }),
-                      (0, r.jsx)('div', {
-                          className: v.box,
-                          children: (0, r.jsx)(f.Z, { text: O.NW.string(C.Z.C4ScLC) })
+                      (0, i.jsx)('div', {
+                          className: T.box,
+                          children: (0, i.jsx)(f.Z, { text: S.intl.string(O.default.C4ScLC) })
                       })
                   ]
               });
     },
     Z = () => {
         let e = (0, h.VM)(),
-            t = (0, p.Z)() ? E.AG : E.i0,
-            n = (0, m.o)(O.NW.formatToPlainString(C.Z['1/PzIi'], { maxConnections: t }), O.NW.formatToPlainString(C.Z.RcTgiI, { maxConnections: t }));
+            t = (0, p.Z)() ? j.AG : j.i0,
+            n = (0, m.o)(S.intl.formatToPlainString(O.default['1/PzIi'], { maxConnections: t }), S.intl.formatToPlainString(O.default.RcTgiI, { maxConnections: t }));
         return e
-            ? (0, r.jsx)('div', {
-                  className: v.maxConnectionInfo,
-                  children: (0, r.jsx)(c.Text, {
+            ? (0, i.jsx)('div', {
+                  className: T.maxConnectionInfo,
+                  children: (0, i.jsx)(c.Text, {
                       variant: 'text-xxs/medium',
                       color: 'text-muted',
                       children: n
@@ -301,24 +301,24 @@ let D = () => {
     w = () => {
         let e = (0, g.o)(),
             t = (0, g.Q)(),
-            n = (0, l.EQ)({
+            n = (0, a.EQ)({
                 helpline: e,
                 throughline: t
             })
-                .with({ helpline: !0 }, () => O.NW.format(C.Z.KOwsf3, { helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
-                .with({ throughline: !0 }, () => O.NW.format(C.Z['6tsC8v'], { helpLink: j.$l }))
+                .with({ helpline: !0 }, () => S.intl.format(O.default.KOwsf3, { helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
+                .with({ throughline: !0 }, () => S.intl.format(O.default['6tsC8v'], { helpLink: C.$l }))
                 .otherwise(() => null);
         return null == n
             ? null
-            : (0, r.jsxs)('div', {
-                  className: a()(v.__invalid_helpLineInfo, T.marginTop20),
+            : (0, i.jsxs)('div', {
+                  className: l()(T.__invalid_helpLineInfo, I.marginTop20),
                   children: [
-                      (0, r.jsx)(c.X6q, {
-                          className: v.supportHeader,
+                      (0, i.jsx)(c.X6q, {
+                          className: T.supportHeader,
                           variant: 'heading-sm/semibold',
-                          children: (0, r.jsx)(c.y5t, { children: O.NW.string(C.Z['7/tVho']) })
+                          children: (0, i.jsx)(c.y5t, { children: S.intl.string(O.default['7/tVho']) })
                       }),
-                      (0, r.jsx)(c.Text, {
+                      (0, i.jsx)(c.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-muted',
                           children: n
@@ -327,20 +327,20 @@ let D = () => {
               });
     },
     k = () => {
-        let e = (0, h.mq)(E.ne.PENDING),
-            t = (0, m.o)(O.NW.formatToPlainString(C.Z.IkAgkJ, { count: e.length }), O.NW.formatToPlainString(C.Z.Q8XnAQ, { count: e.length }));
+        let e = (0, h.mq)(j.ne.PENDING),
+            t = (0, m.o)(S.intl.formatToPlainString(O.default.IkAgkJ, { count: e.length }), S.intl.formatToPlainString(O.default.Q8XnAQ, { count: e.length }));
         return 0 === e.length
             ? null
-            : (0, r.jsx)(R, {
-                  sectionType: E.ne.PENDING,
+            : (0, i.jsx)(R, {
+                  sectionType: j.ne.PENDING,
                   sectionTitle: t,
                   requests: e
               });
     },
-    W = () => {
+    L = () => {
         let e = (0, p.Z)();
-        return (0, r.jsxs)('div', {
-            className: v.container,
-            children: [e ? (0, r.jsx)(A, {}) : (0, r.jsx)(P, {}), (0, r.jsx)(D, {}), (0, r.jsx)(k, {}), (0, r.jsx)(Z, {}), (0, r.jsx)(w, {})]
+        return (0, i.jsxs)('div', {
+            className: T.container,
+            children: [e ? (0, i.jsx)(A, {}) : (0, i.jsx)(P, {}), (0, i.jsx)(D, {}), (0, i.jsx)(k, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(w, {})]
         });
     };

@@ -1,8 +1,8 @@
 n.d(t, { c: () => f });
 var r = n(200651),
     i = n(192379),
-    s = n(481060),
-    l = n(906732),
+    l = n(481060),
+    s = n(906732),
     a = n(884858),
     o = n(813197),
     c = n(434404),
@@ -14,13 +14,13 @@ var r = n(200651),
     h = n(388032);
 function f(e) {
     let { guild: t, canManageGuild: n, buttonClassName: f } = e,
-        { analyticsLocations: x } = (0, l.ZP)(),
+        { analyticsLocations: x } = (0, s.ZP)(),
         b = t.hasFeature(m.oNc.INVITE_SPLASH),
         j = n && b,
-        N = i.useCallback((e) => {
+        _ = i.useCallback((e) => {
             c.Z.updateGuild({ splash: e });
         }, []),
-        _ = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -35,15 +35,15 @@ function f(e) {
             [x, t]
         );
     return b
-        ? (0, r.jsxs)(s.zxk, {
+        ? (0, r.jsxs)(l.zxk, {
               disabled: !j,
-              color: s.Ttl.BRAND,
+              color: l.Ttl.BRAND,
               className: f,
               children: [
-                  h.NW.string(h.t.yG2pUl),
+                  h.intl.string(h.t.yG2pUl),
                   (0, r.jsx)(o.ZP, {
                       disabled: !j,
-                      onChange: N,
+                      onChange: _,
                       maxFileSizeBytes: p.B,
                       onFileSizeError: () => (0, a.Z)(p.B)
                   })
@@ -51,6 +51,6 @@ function f(e) {
           })
         : (0, r.jsx)(d.P, {
               className: f,
-              onClick: _
+              onClick: v
           });
 }

@@ -60,7 +60,7 @@ function T(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function N(e, t) {
         e
     );
 }
-let A = [],
+let N = [],
     C = {};
 function R() {
     let e = [],
@@ -101,7 +101,7 @@ function R() {
         });
     }
     let I = m.Z.getActivity();
-    null != I && e.push(S({ type: O.IIU.LISTENING }, I)), o()(A, e) || (A = e);
+    null != I && e.push(S({ type: O.IIU.LISTENING }, I)), o()(N, e) || (N = e);
 }
 function P() {
     (C = {}), R();
@@ -126,7 +126,7 @@ function x(e) {
         var r, i;
         let l = null != (i = s.flags) ? i : 0,
             c = (0, f.Ix)(l);
-        'string' == typeof (null == (r = s.metadata) ? void 0 : r.embedded_activity_instance_id) && (c = (0, f.Pu)(c, e, s.metadata.embedded_activity_instance_id)), c !== l ? ((t[a] = [o, N(S({}, s), { flags: c })]), (n = !0)) : (t[a] = [o, s]);
+        'string' == typeof (null == (r = s.metadata) ? void 0 : r.embedded_activity_instance_id) && (c = (0, f.Pu)(c, e, s.metadata.embedded_activity_instance_id)), c !== l ? ((t[a] = [o, A(S({}, s), { flags: c })]), (n = !0)) : (t[a] = [o, s]);
     }
     n && ((C = t), R());
 }
@@ -139,10 +139,10 @@ class k extends (i = c.ZP.Store) {
         this.waitFor(p.ZP, d.ZP, y.Z, b.Z, m.Z, E.Z, v.Z), this.syncWith([h.Z], () => R());
     }
     getActivities() {
-        return A;
+        return N;
     }
     getPrimaryActivity() {
-        return A[0];
+        return N[0];
     }
     getApplicationActivity(e) {
         return this.findActivity((t) => t.application_id === e);
@@ -151,7 +151,7 @@ class k extends (i = c.ZP.Store) {
         return this.findActivity((e) => e.type === O.IIU.CUSTOM_STATUS);
     }
     findActivity(e) {
-        return A.find(e);
+        return N.find(e);
     }
     getApplicationActivities() {
         return C;

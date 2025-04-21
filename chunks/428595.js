@@ -22,8 +22,8 @@ var r = n(392711),
     I = n(594199),
     S = n(97734),
     T = n(303694),
-    N = n(660199),
-    A = n(364458),
+    A = n(660199),
+    N = n(364458),
     C = n(981631),
     R = n(689079),
     P = n(377668),
@@ -246,7 +246,7 @@ let V = (e) => {
                 if (null == p)
                     return {
                         type: 'text',
-                        content: '@'.concat(w.NW.string(w.t['YV4F/v']))
+                        content: '@'.concat(w.intl.string(w.t['YV4F/v']))
                     };
                 let h = (0, c.OC)(null == _ ? void 0 : _.id, 'parse'),
                     m = (null == (r = p.colors) ? void 0 : r.primary_color) === 0 && (null == (i = p.colors) ? void 0 : i.secondary_color) == null && (null == (a = p.colors) ? void 0 : a.tertiary_color) == null;
@@ -304,7 +304,7 @@ let V = (e) => {
                 null == a && '@Clyde' === e[0] && (0, s.gJ)(Z(n), o) && (i = P.fL);
                 let c = e[1],
                     u = null != c && C.Xyh.test(c.trim()),
-                    f = u && n.unknownUserMentionPlaceholder ? '@'.concat(w.NW.string(w.t.sKdZ6e)) : e[0];
+                    f = u && n.unknownUserMentionPlaceholder ? '@'.concat(w.intl.string(w.t.sKdZ6e)) : e[0];
                 return {
                     userId: i,
                     channelId: n.channelId,
@@ -396,10 +396,10 @@ let V = (e) => {
         timestamp: {
             order: I.ZP.order - 1,
             requiredFirstCharacters: ['<'],
-            match: (e) => N.Ay.exec(e),
+            match: (e) => A.Ay.exec(e),
             parse(e) {
                 let [t, n, r] = e,
-                    i = (0, N.ZB)(n, r);
+                    i = (0, A.ZB)(n, r);
                 return null == i
                     ? {
                           type: 'text',
@@ -457,19 +457,19 @@ let V = (e) => {
         list: y.Z,
         subtext: O.Z
     },
-    W = (0, A.Z)([H, S.Z]),
-    Y = i().omit(W, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext', 'soundboard']),
-    K = i().omit(W, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext', 'soundboard']),
-    z = i().omit(W, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext', 'soundboard']),
+    Y = (0, N.Z)([H, S.Z]),
+    W = i().omit(Y, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext', 'soundboard']),
+    K = i().omit(Y, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext', 'soundboard']),
+    z = i().omit(Y, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext', 'soundboard']),
     q = i().omit(
-        (0, A.Z)([
-            W,
+        (0, N.Z)([
+            Y,
             {
                 inlineCode: {
                     match(e, t, n) {
-                        let r = W.codeBlock.match(e, t, n);
+                        let r = Y.codeBlock.match(e, t, n);
                         if (null != r) return r;
-                        let i = W.inlineCode.match(e, t, n);
+                        let i = Y.inlineCode.match(e, t, n);
                         if (null != i) return i;
                     }
                 }
@@ -477,15 +477,15 @@ let V = (e) => {
         ]),
         ['blockQuote', 'codeBlock', 'br']
     ),
-    Q = i().omit(W, ['codeBlock', 'br', 'blockQuote']),
-    X = i().omit(W, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext', 'soundboard']),
-    J = i().omit(W, ['codeBlock', 'blockQuote', 'br']),
-    $ = i().omit(W, ['codeBlock', 'br', 'inlineCode']);
+    Q = i().omit(Y, ['codeBlock', 'br', 'blockQuote']),
+    X = i().omit(Y, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext', 'soundboard']),
+    J = i().omit(Y, ['codeBlock', 'blockQuote', 'br']),
+    $ = i().omit(Y, ['codeBlock', 'br', 'inlineCode']);
 function ee(e, t) {
     return 0 === e.length || 0 === t || '' === e.charAt(t - 1).trim();
 }
 let et = 10,
-    en = (0, A.Z)([
+    en = (0, N.Z)([
         {
             highlightWord: {
                 order: -1,
@@ -519,11 +519,11 @@ let et = 10,
                 }
             }
         },
-        i().omit(W, ['url'])
+        i().omit(Y, ['url'])
     ]),
     er = {
-        RULES: W,
-        CHANNEL_TOPIC_RULES: Y,
+        RULES: Y,
+        CHANNEL_TOPIC_RULES: W,
         VOICE_CHANNEL_STATUS_RULES: K,
         EMBED_TITLE_RULES: z,
         INLINE_REPLY_RULES: q,

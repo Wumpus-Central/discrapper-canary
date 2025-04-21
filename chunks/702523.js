@@ -2,20 +2,20 @@ n.d(e, { L: () => s });
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    o = n(51025),
-    l = n(850840),
+    l = n(51025),
+    o = n(850840),
     a = n(391690);
 function s(t, e, s, c, d) {
     let u = a.Z.getInstallationPath(t.id, e),
-        p = null != t.eulaId && !l.Z.hasAcceptedEULA(t.eulaId);
+        p = null != t.eulaId && !o.Z.hasAcceptedEULA(t.eulaId);
     null == u || p
         ? (0, r.ZDy)(async () => {
               let { default: r } = await n.e('48007').then(n.bind(n, 472064));
               return (n) => {
-                  var o, l;
+                  var l, o;
                   return (0, i.jsx)(
                       r,
-                      ((o = (function (t) {
+                      ((l = (function (t) {
                           for (var e = 1; e < arguments.length; e++) {
                               var n = null != arguments[e] ? arguments[e] : {},
                                   i = Object.keys(n);
@@ -40,14 +40,14 @@ function s(t, e, s, c, d) {
                           }
                           return t;
                       })({}, n)),
-                      (l = l =
+                      (o = o =
                           {
                               applicationId: t.id,
                               branchId: e,
                               analyticsLocation: d
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(l))
+                          ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
                           : (function (t, e) {
                                 var n = Object.keys(t);
                                 if (Object.getOwnPropertySymbols) {
@@ -55,14 +55,14 @@ function s(t, e, s, c, d) {
                                     n.push.apply(n, i);
                                 }
                                 return n;
-                            })(Object(l)).forEach(function (t) {
-                                Object.defineProperty(o, t, Object.getOwnPropertyDescriptor(l, t));
+                            })(Object(o)).forEach(function (t) {
+                                Object.defineProperty(l, t, Object.getOwnPropertyDescriptor(o, t));
                             }),
-                      o)
+                      l)
                   );
               };
           })
-        : (0, o.LO)({
+        : (0, l.LO)({
               application: t,
               branchId: e,
               buildId: s,

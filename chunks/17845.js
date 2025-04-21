@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(953529);
 var r = n(200651),
-    a = n(192379),
-    i = n(120356),
-    l = n.n(i),
+    i = n(192379),
+    a = n(120356),
+    l = n.n(a),
     s = n(780384),
     o = n(481060),
     c = n(410030),
@@ -17,10 +17,10 @@ function u(e) {
     });
 }
 function p(e) {
-    let { title: t, description: n, button: i, className: p, children: m } = e,
+    let { title: t, description: n, button: a, className: p, children: m } = e,
         h = (0, c.ZP)(),
         g = (0, s.wj)(h),
-        _ = a.useMemo(() => (Array.isArray(t) ? t.map((e, t) => (0, r.jsx)(u, { title: e }, t)) : (0, r.jsx)(u, { title: t })), [t]);
+        _ = i.useMemo(() => (Array.isArray(t) ? t.map((e, t) => (0, r.jsx)(u, { title: e }, t)) : (0, r.jsx)(u, { title: t })), [t]);
     return (0, r.jsxs)('div', {
         className: l()(d.container, p),
         children: [
@@ -37,10 +37,10 @@ function p(e) {
                                 color: g ? 'text-muted' : 'header-primary',
                                 children: n
                             }),
-                        null != i &&
+                        null != a &&
                             (0, r.jsx)('div', {
                                 className: d.buttonContainer,
-                                children: i
+                                children: a
                             })
                     ]
                 })

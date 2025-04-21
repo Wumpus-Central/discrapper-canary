@@ -1,5 +1,5 @@
 n.d(t, {
-    DH: () => A,
+    DH: () => N,
     H8: () => T,
     HD: () => d,
     PD: () => C,
@@ -103,13 +103,13 @@ function T(e) {
     let t = o.ZP.getGameForPID(e);
     return null != t && null != t.name && S(t);
 }
-let N = new Set([i.Jx.UNKNOWN, i.Jx.FULLSCREEN]);
-function A(e, t, n) {
+let A = new Set([i.Jx.UNKNOWN, i.Jx.FULLSCREEN]);
+function N(e, t, n) {
     if (e.overlayMethod !== r.gl.OutOfProcess && e.overlayMethod !== r.gl.OutOfProcessLimitedInteraction) return !1;
     if (!n) return !0;
     switch (t) {
         case i.Jx.UNKNOWN:
-            return N.has(e.previousFullscreenType);
+            return A.has(e.previousFullscreenType);
         case i.Jx.FULLSCREEN:
             return !0;
     }

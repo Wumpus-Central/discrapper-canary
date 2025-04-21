@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    l = n(442837),
+    l = n.n(i),
+    a = n(442837),
     o = n(481060),
     s = n(385499),
     c = n(430824),
@@ -17,28 +17,28 @@ var i = n(120356),
 function _(e) {
     var t;
     let { message: n, compact: i, usernameHook: _, channel: b } = e,
-        x = (0, l.e7)([c.Z], () => c.Z.getGuild(b.guild_id)),
+        x = (0, a.e7)([c.Z], () => c.Z.getGuild(b.guild_id)),
         y = (0, u.ZP)(n),
         v = _(y),
         {
             avatarSrc: E,
-            eventHandlers: { onMouseEnter: O, onMouseLeave: N }
+            eventHandlers: { onMouseEnter: O, onMouseLeave: j }
         } = (0, p.m)(!0);
     return (0, r.jsx)('div', {
         onMouseEnter: O,
-        onMouseLeave: N,
+        onMouseLeave: j,
         children: (0, r.jsx)(m.Z, {
-            className: a()(g.mainContainer, { [g.compact]: i }),
+            className: l()(g.mainContainer, { [g.compact]: i }),
             iconNode: i ? null : (0, r.jsx)(p.S, { src: E }),
             iconContainerClassName: g.iconContainer,
             compact: i,
             children: (0, r.jsxs)('div', {
-                className: a()(g.content, { [g.compact]: i }),
+                className: l()(g.content, { [g.compact]: i }),
                 children: [
                     (0, r.jsx)(d.nD, {
                         message: n,
                         messageClassname: g.spanCorrection,
-                        className: a()(g.usernameContainer, g.spanCorrection, { [g.compact]: i }),
+                        className: l()(g.usernameContainer, g.spanCorrection, { [g.compact]: i }),
                         username: (0, r.jsxs)('div', {
                             className: g.spanCorrection,
                             children: [
@@ -47,7 +47,7 @@ function _(e) {
                                     color: 'text-brand',
                                     tag: 'span',
                                     className: g.username,
-                                    children: h.NW.string(h.t.hG1StL)
+                                    children: h.intl.string(h.t.hG1StL)
                                 }),
                                 (0, r.jsx)(s.Z, {
                                     type: f.Hb.SYSTEM_DM,
@@ -59,8 +59,8 @@ function _(e) {
                         showTimestamp: !0
                     }),
                     (0, r.jsx)('div', {
-                        className: a()(g.__invalid_messageContent, { [g.compact]: i }),
-                        children: h.NW.format(h.t.W0UBIy, {
+                        className: l()(g.__invalid_messageContent, { [g.compact]: i }),
+                        children: h.intl.format(h.t.W0UBIy, {
                             username: y.nick,
                             usernameHook: v,
                             guildName: null != (t = null == x ? void 0 : x.name) ? t : ''

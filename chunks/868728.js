@@ -10,13 +10,13 @@ function o(e) {
         children: [
             (0, l.jsx)(s.zxk, {
                 onClick: t,
-                children: a.NW.string(a.t.pz1lRE)
+                children: a.intl.string(a.t.pz1lRE)
             }),
             (0, l.jsx)(s.zxk, {
                 look: s.zxk.Looks.LINK,
                 color: (0, r.ap)(o) ? s.zxk.Colors.PRIMARY : s.zxk.Colors.WHITE,
                 onClick: n,
-                children: a.NW.string(a.t['ETE/oK'])
+                children: a.intl.string(a.t['ETE/oK'])
             })
         ]
     });

@@ -34,7 +34,7 @@ function T(e, t, n) {
         e
     );
 }
-function N() {
+function A() {
     let [e, t] = i.useState(!1);
     if (
         null ==
@@ -56,10 +56,10 @@ function N() {
         onClick: n,
         submitting: e,
         className: S.clearOverrideButton,
-        children: I.NW.string(I.t['/Nz9ra'])
+        children: I.intl.string(I.t['/Nz9ra'])
     });
 }
-let A = o().throttle(
+let N = o().throttle(
     (e) => {
         g.Z.increment(
             {
@@ -93,7 +93,7 @@ class C extends i.PureComponent {
             uses_client_mods: r,
             error_level: 'fatal'
         }),
-            A(r),
+            N(r),
             v.ZP.cleanupDisplaySleep();
     }
     _handleSubmitReport() {
@@ -115,7 +115,7 @@ class C extends i.PureComponent {
         let { children: e, renderCustomMessage: t } = this.props;
         if (null !== this.state.error) {
             let e = (0, r.jsxs)('div', {
-                    children: [(0, r.jsx)('p', { children: I.NW.string(I.t.tx8CkJ) }), (0, r.jsx)('p', { children: I.NW.string(I.t.CvQlAA) })]
+                    children: [(0, r.jsx)('p', { children: I.intl.string(I.t.tx8CkJ) }), (0, r.jsx)('p', { children: I.intl.string(I.t.CvQlAA) })]
                 }),
                 n = (0, r.jsxs)('div', {
                     className: S.buttons,
@@ -123,13 +123,13 @@ class C extends i.PureComponent {
                         (0, r.jsx)(f.zxk, {
                             size: f.PhG.LARGE,
                             onClick: this._handleSubmitReport,
-                            children: I.NW.string(I.t['+hivLS'])
+                            children: I.intl.string(I.t['+hivLS'])
                         }),
-                        (0, r.jsx)(N, {})
+                        (0, r.jsx)(A, {})
                     ]
                 });
             return (0, r.jsx)(m.Z, {
-                title: I.NW.string(I.t['3h+n+/']),
+                title: I.intl.string(I.t['3h+n+/']),
                 note: null != t ? t() : e,
                 action: n,
                 className: S.errorPage

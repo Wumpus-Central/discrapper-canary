@@ -64,15 +64,15 @@ function E(e, t) {
     );
 }
 function b(e) {
-    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: g = 'md', hint: b, subtext: y, subtextLineClamp: v, hasSubmenu: O, disabled: I, isFocused: S, menuItemProps: T, action: N, onClose: A, onFocus: C, className: R, focusedClassName: P, subMenuIconClassName: w, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: L, iconProps: x, sparkle: M } = e,
+    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: g = 'md', hint: b, subtext: y, subtextLineClamp: v, hasSubmenu: O, disabled: I, isFocused: S, menuItemProps: T, action: A, onClose: N, onFocus: C, className: R, focusedClassName: P, subMenuIconClassName: w, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: L, iconProps: x, sparkle: M } = e,
         { onSelect: k, onInteraction: j } = i.useContext(c.p),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
-                if ((null == j || j({ type: c.U.DEFAULT }), null == N)) return !1;
-                (e.shiftKey && D) || L || A(), e.persist(), null == k || k(), requestAnimationFrame(() => N(e));
+                if ((null == j || j({ type: c.U.DEFAULT }), null == A)) return !1;
+                (e.shiftKey && D) || L || N(), e.persist(), null == k || k(), requestAnimationFrame(() => A(e));
             },
-            [N, A, k, D, L, j]
+            [A, N, k, D, L, j]
         );
     return (
         i.useEffect(() => {

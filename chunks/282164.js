@@ -20,7 +20,7 @@ class _ extends i.PureComponent {
         let { braintreeEmail: e, className: t, paypalClient: n } = this.props;
         return (0, r.jsx)(o.hjN, {
             className: t,
-            title: d.NW.string(d.t.QQBAoq),
+            title: d.intl.string(d.t.QQBAoq),
             children: (0, r.jsxs)('div', {
                 className: f.inputWrapper,
                 children: [
@@ -32,7 +32,7 @@ class _ extends i.PureComponent {
                         value: e,
                         editable: !1,
                         readOnly: !0,
-                        placeholder: null == n ? d.NW.string(d.t.dte2Mz) : d.NW.string(d.t.hopw7e),
+                        placeholder: null == n ? d.intl.string(d.t.dte2Mz) : d.intl.string(d.t.hopw7e),
                         inputClassName: f.paypalInput
                     })
                 ]

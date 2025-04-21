@@ -151,8 +151,8 @@ let I = (e) => {
     S = (e) => {
         let { node: t, isInteracting: n, tooltipPosition: a = p.b_.position, enableClick: u = !0, channelId: g, messageId: b } = e,
             [v, I] = i.useState(String(Date.now())),
-            [S, N] = i.useState(!1),
-            [A, C] = i.useState(!1),
+            [S, A] = i.useState(!1),
+            [N, C] = i.useState(!1),
             R = i.useRef(null),
             P = function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -183,9 +183,9 @@ let I = (e) => {
                         ),
                         {
                             position: a,
-                            shouldShow: !A,
+                            shouldShow: !N,
                             onTooltipShow: () => {
-                                N(!0),
+                                A(!0),
                                     u &&
                                         (T({
                                             emojiNode: t,
@@ -206,11 +206,11 @@ let I = (e) => {
                                         onClick: u
                                             ? (t) => {
                                                   var n;
-                                                  N(!1), C(!0), null == e || null == (n = e.onClick) || n.call(e, t);
+                                                  A(!1), C(!0), null == e || null == (n = e.onClick) || n.call(e, t);
                                               }
                                             : void 0,
                                         onMouseLeave: () => {
-                                            S && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), N(!1));
+                                            S && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1));
                                         },
                                         tag: 'span',
                                         className: o()(E.emojiContainer, {
@@ -237,7 +237,7 @@ let I = (e) => {
             animation: l.yRy.Animation.FADE,
             align: 'center',
             onRequestClose: () => {
-                f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), N(!1), C(!1);
+                f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1), C(!1);
             },
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,

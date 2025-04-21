@@ -1,6 +1,6 @@
 n.d(t, {
     T: () => C,
-    v: () => A
+    v: () => N
 }),
     n(361932),
     n(187205),
@@ -196,7 +196,7 @@ function T(e) {
         []
     );
 }
-function N(e, t, n, i) {
+function A(e, t, n, i) {
     let a = 0,
         o = [];
     return e.reduce((e, s, l) => {
@@ -244,7 +244,7 @@ function N(e, t, n, i) {
                                       parentItem: m,
                                       isFocused: p,
                                       menuSubmenuProps: t.getSubmenuProps({ path: _ }),
-                                      rows: N(e, t, _, i),
+                                      rows: A(e, t, _, i),
                                       rowHeight: o,
                                       onScroll: l,
                                       listClassName: u
@@ -260,7 +260,7 @@ function N(e, t, n, i) {
                                       parentItem: m,
                                       isFocused: p,
                                       menuSubmenuProps: t.getSubmenuProps({ path: _ }),
-                                      renderSubmenu: () => N(e, t, _, i)
+                                      renderSubmenu: () => A(e, t, _, i)
                                   }),
                                   ''.concat(s.key, '-submenu')
                               )
@@ -361,14 +361,14 @@ function N(e, t, n, i) {
         return e;
     }, []);
 }
-function A(e) {
+function N(e) {
     var t;
     let { navId: n, variant: a = 'flexible', hideScroller: s = !1, className: f, children: h, onClose: b, onSelect: v, onInteraction: I } = e,
-        A = S(h),
-        C = T(A),
+        N = S(h),
+        C = T(N),
         P = i.useRef([]);
     l()(P.current, C) || (P.current = C);
-    let w = null == (t = A.find((e) => null != e.key)) ? void 0 : t.key,
+    let w = null == (t = N.find((e) => null != e.key)) ? void 0 : t.key,
         D = (0, c.ZP)({
             navId: n,
             items: P.current,
@@ -398,7 +398,7 @@ function A(e) {
                 children: (0, r.jsxs)(x, {
                     className: E.scroller,
                     children: [
-                        0 === A.length &&
+                        0 === N.length &&
                             (0, r.jsx)(g.ck, {
                                 disabled: !0,
                                 label: () => (0, r.jsx)(R, {}),
@@ -407,7 +407,7 @@ function A(e) {
                                 onFocus: () => {},
                                 onClose: b
                             }),
-                        A.length > 0 && N(A, D, [], b)
+                        N.length > 0 && A(N, D, [], b)
                     ]
                 })
             })

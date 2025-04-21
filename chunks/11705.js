@@ -34,7 +34,7 @@ let m = (e) => {
                                 children: [
                                     (0, o.T4)(v.price, v.currency),
                                     ' ',
-                                    u.NW.format(u.t.isLGyc, {
+                                    u.intl.format(u.t.isLGyc, {
                                         period: (0, l.JE)({
                                             interval: v.interval,
                                             interval_count: v.interval_count

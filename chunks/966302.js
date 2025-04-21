@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(898531),
     S = n(923973),
     T = n(82965),
-    N = n(189771),
-    A = n(560688),
+    A = n(189771),
+    N = n(560688),
     C = n(88479),
     R = n(136995),
     P = n(25827),
@@ -41,8 +41,8 @@ var r = n(200651),
     V = n(354459),
     Z = n(981631),
     H = n(65154),
-    W = n(388032),
-    Y = n(138821),
+    Y = n(388032),
+    W = n(138821),
     K = n(744217),
     z = n(20795);
 function q(e, t, n) {
@@ -146,7 +146,7 @@ function ea(e) {
     let { canVideo: t, channel: n, numVideoDevices: a } = e,
         { parentAnalyticsLocation: s } = (0, m.ZP)(),
         { cameraUnavailable: l, enabled: d } = (0, S.Z)(),
-        _ = (0, N.Z)(n),
+        _ = (0, A.Z)(n),
         p = (0, T.Z)({ location: 'CallActionButtons' }),
         g = i.useRef(null),
         E = a > 1;
@@ -155,7 +155,7 @@ function ea(e) {
         children: [
             (0, r.jsx)(C.Z, {
                 iconComponent: c.Dio,
-                label: W.NW.string(W.t.WAI6xs),
+                label: Y.intl.string(Y.t.WAI6xs),
                 className: K.actionButton,
                 fullRegionButton: p,
                 onClick: () => {
@@ -201,7 +201,7 @@ function ea(e) {
                             channel: n,
                             onPopoutClick: E ? i : null,
                             popoutOpen: a,
-                            onCameraUnavailable: A.Z,
+                            onCameraUnavailable: N.Z,
                             onChange: () => {
                                 var e;
                                 (0, B.v)(s, B.d.JOIN_VIDEO_CALL),
@@ -256,9 +256,9 @@ function eo(e) {
                   })
                 : null,
         T = null != (t = (0, g.x)(h, er, !0)) ? t : S,
-        N = (0, E.ZP)(h),
-        [A, C] = (0, l.Wu)([D.Z], () => [D.Z.supports(H.AN.VIDEO), Object.keys(D.Z.getVideoDevices()).length]),
-        R = null != I ? ''.concat(N, ', ').concat(I.name) : N,
+        A = (0, E.ZP)(h),
+        [N, C] = (0, l.Wu)([D.Z], () => [D.Z.supports(H.AN.VIDEO), Object.keys(D.Z.getVideoDevices()).length]),
+        R = null != I ? ''.concat(A, ', ').concat(I.name) : A,
         P = (0, l.e7)([x.Z], () => x.Z.isFocused()),
         L = (0, l.e7)([j.Z], () => j.Z.getMode(h.id)),
         M = i.useCallback((e) => {
@@ -277,12 +277,12 @@ function eo(e) {
         };
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
     }, [h]);
-    let B = L === Z.WtW.VIDEO && A && C > 0,
+    let B = L === Z.WtW.VIDEO && N && C > 0,
         F = (0, r.jsxs)(r.Fragment, {
             children: [
                 null != I && null == S
                     ? (0, r.jsx)('div', {
-                          className: o()(K.icon, Y.wrapper, Y.ringingIncoming),
+                          className: o()(K.icon, W.wrapper, W.ringingIncoming),
                           children: (0, r.jsx)(b.ZP, {
                               className: K.mask,
                               mask: b.QS.AVATAR_DEFAULT,
@@ -317,7 +317,7 @@ function eo(e) {
                             color: 'header-secondary',
                             className: K.subtitle,
                             variant: v ? 'text-sm/normal' : 'text-md/normal',
-                            children: L === Z.WtW.VOICE ? W.NW.string(W.t.Js8cKy) : W.NW.string(W.t.KcnWCA)
+                            children: L === Z.WtW.VOICE ? Y.intl.string(Y.t.Js8cKy) : Y.intl.string(Y.t.KcnWCA)
                         })
                     ]
                 })
@@ -368,7 +368,7 @@ function eo(e) {
                                       color: c.zxk.Colors.PRIMARY,
                                       className: K.previewButton,
                                       onClick: () => O(!0),
-                                      children: W.NW.string(W.t['8B0UDg'])
+                                      children: Y.intl.string(Y.t['8B0UDg'])
                                   })
                                 : null
                         ]

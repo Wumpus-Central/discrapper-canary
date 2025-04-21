@@ -54,7 +54,7 @@ function p(e) {
                         (0, r.jsx)(a.Text, {
                             variant: 'text-xs/normal',
                             className: _.userSubtitle,
-                            children: f.NW.string(f.t['0ScUkZ'])
+                            children: f.intl.string(f.t['0ScUkZ'])
                         })
                     ]
                 })

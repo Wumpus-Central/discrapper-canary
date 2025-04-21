@@ -17,8 +17,8 @@ function u(e) {
             noArt: n,
             selected: i,
             size: (0, o.L)(t),
-            header: s.NW.string(s.t.wxbmeH),
-            description: s.NW.string(s.t.odF9WF)
+            header: s.intl.string(s.t.wxbmeH),
+            description: s.intl.string(s.t.odF9WF)
         })
     });
 }

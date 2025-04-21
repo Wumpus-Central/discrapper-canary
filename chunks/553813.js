@@ -196,10 +196,10 @@ function S(e, t) {
 function T(e, t) {
     return S(t, e);
 }
-function N(e, t) {
+function A(e, t) {
     return new y(e, t).major;
 }
-function A(e, t) {
+function N(e, t) {
     return new y(e, t).minor;
 }
 function C(e, t) {
@@ -285,7 +285,7 @@ function V(e, t) {
     if (!(this instanceof V)) return new V(e, t);
     r('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === Z ? (this.value = '') : (this.value = this.operator + this.semver.version), r('comp', this);
 }
-(t.rcompareIdentifiers = T), (t.major = N), (t.minor = A), (t.patch = C), (t.compare = R), (t.compareLoose = P), (t.compareBuild = w), (t.rcompare = D), (t.sort = L), (t.rsort = x), (t.gt = M), (t.lt = k), (t.eq = j), (t.neq = U), (t.gte = G), (t.lte = B), (t.cmp = F), (t.Comparator = V);
+(t.rcompareIdentifiers = T), (t.major = A), (t.minor = N), (t.patch = C), (t.compare = R), (t.compareLoose = P), (t.compareBuild = w), (t.rcompare = D), (t.sort = L), (t.rsort = x), (t.gt = M), (t.lt = k), (t.eq = j), (t.neq = U), (t.gte = G), (t.lte = B), (t.cmp = F), (t.Comparator = V);
 var Z = {};
 function H(e, t) {
     if (
@@ -318,7 +318,7 @@ function H(e, t) {
         throw TypeError('Invalid SemVer Range: ' + e);
     this.format();
 }
-function W(e, t) {
+function Y(e, t) {
     for (var n = !0, r = e.slice(), i = r.pop(); n && r.length; )
         (n = r.every(function (e) {
             return i.intersects(e, t);
@@ -326,7 +326,7 @@ function W(e, t) {
             (i = r.pop());
     return n;
 }
-function Y(e, t) {
+function W(e, t) {
     return new H(e, t).set.map(function (e) {
         return e
             .map(function (e) {
@@ -618,10 +618,10 @@ function ep(e, t) {
         if (!(e instanceof H)) throw TypeError('a Range is required');
         return this.set.some(function (n) {
             return (
-                W(n, t) &&
+                Y(n, t) &&
                 e.set.some(function (e) {
                     return (
-                        W(e, t) &&
+                        Y(e, t) &&
                         n.every(function (n) {
                             return e.every(function (e) {
                                 return n.intersects(e, t);
@@ -632,7 +632,7 @@ function ep(e, t) {
             );
         });
     }),
-    (t.toComparators = Y),
+    (t.toComparators = W),
     (H.prototype.test = function (e) {
         if (!e) return !1;
         if ('string' == typeof e)

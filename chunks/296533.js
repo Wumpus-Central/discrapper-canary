@@ -1,14 +1,14 @@
 n.d(t, {
     Z: () => y,
-    r: () => I
+    r: () => N
 }),
     n(539854),
     n(388685);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(200100),
-    a = n(399606),
-    l = n(481060),
+    l = n(399606),
+    a = n(481060),
     o = n(607070),
     c = n(975298),
     d = n(280942),
@@ -20,47 +20,47 @@ var r = n(200651),
     f = n(709054),
     b = n(357956),
     _ = n(275909),
-    N = n(300037),
-    x = n(981631),
-    E = n(474936),
-    j = n(388032),
-    C = n(238045);
-function O(e) {
-    let { guildTier: t, guildBoostSlot: n, showAltText: a, isCanceled: o, premiumSubscription: c, fractionalPremiumInfo: d } = e,
-        u = i.useMemo(() => {
+    x = n(300037),
+    E = n(981631),
+    j = n(474936),
+    C = n(388032),
+    O = n(238045);
+function S(e) {
+    let { guildTier: t, guildBoostSlot: n, showAltText: l, isCanceled: o, premiumSubscription: c, fractionalPremiumInfo: d } = e,
+        u = r.useMemo(() => {
             if (o) {
                 let e = c.currentPeriodEnd;
-                return c.isPausedForFractionalPremium && (e = d.endsAt.toDate()), j.NW.format(j.t.Z4ULRE, { date: e });
+                return c.isPausedForFractionalPremium && (e = d.endsAt.toDate()), C.intl.format(C.t.Z4ULRE, { date: e });
             }
             let e = null != n.premiumGuildSubscription ? f.default.extractTimestamp(n.premiumGuildSubscription.id) : 0;
-            return j.NW.formatToPlainString(j.t.lY2Bur, { date: new Date(e) });
+            return C.intl.formatToPlainString(C.t.lY2Bur, { date: new Date(e) });
         }, [n, o, c, d]),
-        m = i.useMemo(
+        m = r.useMemo(
             () =>
                 (function (e) {
-                    if (null == e || e === x.Eu4.NONE) return '';
+                    if (null == e || e === E.Eu4.NONE) return '';
                     let t = [
-                        j.NW.formatToPlainString(j.t.dLlKX1, { numEmojiSlots: E.HO[e].limits.emoji }),
-                        j.NW.formatToPlainString(j.t['+ANIfn'], { numStickerSlots: E.HO[e].limits.stickers }),
-                        j.NW.formatToPlainString(j.t['4gt60d'], { numSoundboardSlots: E.HO[e].limits.soundboardSounds }),
-                        j.NW.formatToPlainString(j.t.XahSjY, {
-                            resolution: E.HO[e].limits.screenShareQualityResolution,
-                            framerate: E.HO[e].limits.screenShareQualityFramerate
+                        C.intl.formatToPlainString(C.t.dLlKX1, { numEmojiSlots: j.HO[e].limits.emoji }),
+                        C.intl.formatToPlainString(C.t['+ANIfn'], { numStickerSlots: j.HO[e].limits.stickers }),
+                        C.intl.formatToPlainString(C.t['4gt60d'], { numSoundboardSlots: j.HO[e].limits.soundboardSounds }),
+                        C.intl.formatToPlainString(C.t.XahSjY, {
+                            resolution: j.HO[e].limits.screenShareQualityResolution,
+                            framerate: j.HO[e].limits.screenShareQualityFramerate
                         }),
-                        j.NW.formatToPlainString(j.t.NbNs7e, { bitrate: E.HO[e].limits.bitrate / 1000 }),
-                        j.NW.formatToPlainString(j.t.VVKcpq, { filesize: E.HO[e].limits.fileSize / 1024 / 1024 }),
-                        j.NW.formatToPlainString(j.t.TbpCvr, { numVideoStageSeats: E.HO[e].limits.stageVideoUsers }),
-                        j.NW.string(j.t.LDyX3t),
-                        j.NW.string(j.t.YtGlPT)
+                        C.intl.formatToPlainString(C.t.NbNs7e, { bitrate: j.HO[e].limits.bitrate / 1000 }),
+                        C.intl.formatToPlainString(C.t.VVKcpq, { filesize: j.HO[e].limits.fileSize / 1024 / 1024 }),
+                        C.intl.formatToPlainString(C.t.TbpCvr, { numVideoStageSeats: j.HO[e].limits.stageVideoUsers }),
+                        C.intl.string(C.t.LDyX3t),
+                        C.intl.string(C.t.YtGlPT)
                     ];
-                    e >= x.Eu4.TIER_2 && (t.push(j.NW.string(j.t.SztbtL)), t.push(j.NW.string(j.t['3GK91t']))), e >= x.Eu4.TIER_3 && t.push(j.NW.string(j.t.XUUJd3));
+                    e >= E.Eu4.TIER_2 && (t.push(C.intl.string(C.t.SztbtL)), t.push(C.intl.string(C.t['3GK91t']))), e >= E.Eu4.TIER_3 && t.push(C.intl.string(C.t.XUUJd3));
                     let n = t[Math.floor(Math.random() * t.length)];
-                    return j.NW.format(j.t['/dOAmZ'], { perk: n });
+                    return C.intl.format(C.t['/dOAmZ'], { perk: n });
                 })(t),
             [t]
         ),
-        g = (0, l.Yzy)(
-            a,
+        g = (0, a.Yzy)(
+            l,
             {
                 from: { opacity: 0 },
                 enter: { opacity: 1 },
@@ -68,20 +68,20 @@ function O(e) {
             },
             'animate-always'
         );
-    return o || t === x.Eu4.NONE
-        ? (0, r.jsx)('div', {
-              className: C.boostDescriptionInnerContainer,
-              children: (0, r.jsx)(l.Text, {
+    return o || t === E.Eu4.NONE
+        ? (0, i.jsx)('div', {
+              className: O.boostDescriptionInnerContainer,
+              children: (0, i.jsx)(a.Text, {
                   variant: 'text-sm/medium',
                   color: 'text-muted',
                   children: u
               })
           })
         : g((e, t) =>
-              (0, r.jsx)(s.animated.div, {
+              (0, i.jsx)(s.animated.div, {
                   style: e,
-                  className: C.boostDescriptionInnerContainer,
-                  children: (0, r.jsx)(l.Text, {
+                  className: O.boostDescriptionInnerContainer,
+                  children: (0, i.jsx)(a.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-muted',
                       children: t ? m : u
@@ -89,90 +89,90 @@ function O(e) {
               })
           );
 }
-function S(e) {
+function v(e) {
     let { guildTier: t, guildBoostSlot: n, premiumSubscription: s, hasCancelableGuildBoostSlot: u, showAltText: m, isLastGuildBoostSlot: h } = e,
-        f = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
-        N = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
-        x = i.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
-        E = i.useMemo(() => null != x && x > new Date(), [x]),
-        S = (0, p.tl)(n),
-        v = (0, c.Z)();
-    return (0, r.jsxs)('div', {
-        className: C.boostContainer,
+        f = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
+        x = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+        E = r.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
+        j = r.useMemo(() => null != E && E > new Date(), [E]),
+        v = (0, p.tl)(n),
+        T = (0, c.Z)();
+    return (0, i.jsxs)('div', {
+        className: O.boostContainer,
         children: [
-            (0, r.jsxs)('div', {
-                className: C.boostInnerContainer,
+            (0, i.jsxs)('div', {
+                className: O.boostInnerContainer,
                 children: [
-                    (0, r.jsx)(_.Z, {
-                        isCanceled: S,
-                        hasCooldown: E,
+                    (0, i.jsx)(_.Z, {
+                        isCanceled: v,
+                        hasCooldown: j,
                         useReducedMotion: f
                     }),
-                    (0, r.jsx)('div', {
-                        className: C.boostDescriptionContainer,
+                    (0, i.jsx)('div', {
+                        className: O.boostDescriptionContainer,
                         children:
-                            null != x && E && !S
-                                ? (0, r.jsx)(b.Z, {
-                                      className: C.boostDescriptionInnerContainer,
-                                      cooldown: x.getTime()
+                            null != E && j && !v
+                                ? (0, i.jsx)(b.Z, {
+                                      className: O.boostDescriptionInnerContainer,
+                                      cooldown: E.getTime()
                                   })
-                                : (0, r.jsx)(O, {
+                                : (0, i.jsx)(S, {
                                       guildTier: t,
                                       guildBoostSlot: n,
                                       showAltText: m,
-                                      isCanceled: S,
+                                      isCanceled: v,
                                       premiumSubscription: s,
-                                      fractionalPremiumInfo: v
+                                      fractionalPremiumInfo: T
                                   })
                     }),
-                    (0, r.jsx)(l.yRy, {
+                    (0, i.jsx)(a.yRy, {
                         renderPopout: function (e) {
                             let { closePopout: t } = e;
-                            return (0, r.jsx)(d.Z, {
+                            return (0, i.jsx)(d.Z, {
                                 onClose: t,
                                 guildBoostSlot: n,
                                 premiumSubscription: s,
                                 hasCancelableGuildBoostSlot: u,
-                                fractionalState: v.fractionalState,
-                                user: N
+                                fractionalState: T.fractionalState,
+                                user: x
                             });
                         },
                         position: 'right',
                         align: 'center',
                         children: (e) => {
                             var t, n;
-                            return (0, r.jsx)(
-                                l.P3F,
+                            return (0, i.jsx)(
+                                a.P3F,
                                 ((t = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
+                                            i = Object.keys(n);
                                         'function' == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
+                                            (i = i.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                 })
                                             )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                (r = n[t]),
+                                            i.forEach(function (t) {
+                                                var i;
+                                                (i = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
-                                                              value: r,
+                                                              value: i,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r);
+                                                        : (e[t] = i);
                                             });
                                     }
                                     return e;
                                 })({}, e)),
                                 (n = n =
                                     {
-                                        'aria-label': j.NW.string(j.t.PdRCRk),
-                                        className: C.boostSlotMenuIcon,
-                                        children: (0, r.jsx)(l.Huf, {
+                                        'aria-label': C.intl.string(C.t.PdRCRk),
+                                        className: O.boostSlotMenuIcon,
+                                        children: (0, i.jsx)(a.Huf, {
                                             size: 'md',
                                             color: 'currentColor'
                                         })
@@ -182,8 +182,8 @@ function S(e) {
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
-                                              var r = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, r);
+                                              var i = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, i);
                                           }
                                           return n;
                                       })(Object(n)).forEach(function (e) {
@@ -195,29 +195,29 @@ function S(e) {
                     })
                 ]
             }),
-            !h && (0, r.jsx)('div', { className: C.boostContainerSeparator })
+            !h && (0, i.jsx)('div', { className: O.boostContainerSeparator })
         ]
     });
 }
-function v(e) {
-    let { guildId: t, guildBoostSlotRecords: n, premiumSubscription: i, hasCancelableGuildBoostSlot: s, showAltText: l } = e,
-        o = (0, a.e7)([m.Z], () => m.Z.getGuild(t), [t]);
-    return (0, r.jsxs)('div', {
-        className: C.appliedBoostContainer,
+function T(e) {
+    let { guildId: t, guildBoostSlotRecords: n, premiumSubscription: r, hasCancelableGuildBoostSlot: s, showAltText: a } = e,
+        o = (0, l.e7)([m.Z], () => m.Z.getGuild(t), [t]);
+    return (0, i.jsxs)('div', {
+        className: O.appliedBoostContainer,
         children: [
-            (0, r.jsx)(N.Z, {
+            (0, i.jsx)(x.Z, {
                 guildId: t,
                 boostingVariant: !1
             }),
             n.map((e, t) =>
-                (0, r.jsx)(
-                    S,
+                (0, i.jsx)(
+                    v,
                     {
                         guildTier: null == o ? void 0 : o.premiumTier,
                         guildBoostSlot: e,
-                        premiumSubscription: i,
+                        premiumSubscription: r,
                         hasCancelableGuildBoostSlot: s,
-                        showAltText: l,
+                        showAltText: a,
                         isLastGuildBoostSlot: t === n.length - 1
                     },
                     e.id
@@ -226,44 +226,44 @@ function v(e) {
         ]
     });
 }
-function T(e) {
-    let { guildId: t, appliedGuildBoosts: n, premiumSubscription: i } = e,
-        s = (0, a.e7)([m.Z], () => m.Z.getGuild(t), [t]),
-        l = f.default.fromTimestamp(Date.now());
+function I(e) {
+    let { guildId: t, appliedGuildBoosts: n, premiumSubscription: r } = e,
+        s = (0, l.e7)([m.Z], () => m.Z.getGuild(t), [t]),
+        a = f.default.fromTimestamp(Date.now());
     if (
         (n.forEach((e) => {
-            (null == l || 0 > f.default.compare(e.id, l)) && (l = e.id);
+            (null == a || 0 > f.default.compare(e.id, a)) && (a = e.id);
         }),
-        null == l)
+        null == a)
     )
         return null;
     let o = u.Z.createFromServer(
         {
             id: f.default.fromTimestamp(Date.now()),
-            subscription_id: i.id,
+            subscription_id: r.id,
             canceled: !1,
             premium_guild_subscription: {
-                id: l,
+                id: a,
                 guild_id: t
             },
             cooldown_ends_at: null
         },
-        i
+        r
     );
-    return (0, r.jsxs)('div', {
-        className: C.appliedBoostContainer,
+    return (0, i.jsxs)('div', {
+        className: O.appliedBoostContainer,
         children: [
-            (0, r.jsx)(N.Z, {
+            (0, i.jsx)(x.Z, {
                 guildId: t,
                 boostingVariant: !1
             }),
             n.map((e, t) =>
-                (0, r.jsx)(
-                    S,
+                (0, i.jsx)(
+                    v,
                     {
                         guildTier: null == s ? void 0 : s.premiumTier,
                         guildBoostSlot: o,
-                        premiumSubscription: i,
+                        premiumSubscription: r,
                         hasCancelableGuildBoostSlot: !1,
                         showAltText: !1,
                         isLastGuildBoostSlot: t === n.length - 1
@@ -274,9 +274,9 @@ function T(e) {
         ]
     });
 }
-function I(e) {
+function N(e) {
     let { appliedGuildBoosts: t, premiumSubscription: n } = e,
-        s = i.useMemo(() => {
+        s = r.useMemo(() => {
             let e = {};
             return (
                 t.forEach((t) => {
@@ -288,14 +288,14 @@ function I(e) {
         }, [t]);
     return null == n || 0 === t.length
         ? null
-        : (0, r.jsxs)('div', {
-              className: C.wrapper,
+        : (0, i.jsxs)('div', {
+              className: O.wrapper,
               children: [
-                  (0, r.jsx)('div', {
-                      className: C.container,
+                  (0, i.jsx)('div', {
+                      className: O.container,
                       children: f.default.keys(s).map((e) =>
-                          (0, r.jsx)(
-                              T,
+                          (0, i.jsx)(
+                              I,
                               {
                                   guildId: e,
                                   premiumSubscription: n,
@@ -305,34 +305,34 @@ function I(e) {
                           )
                       )
                   }),
-                  (0, r.jsx)('div', { className: C.mainSeparator })
+                  (0, i.jsx)('div', { className: O.mainSeparator })
               ]
           });
 }
 function y(e) {
     let { guildBoostSlots: t, premiumSubscription: n } = e,
-        [s, a] = i.useState(!1);
-    i.useEffect(() => {
+        [s, l] = r.useState(!1);
+    r.useEffect(() => {
         let e = -1;
         return (
             null != n &&
                 (e = setInterval(() => {
-                    a((e) => !e);
+                    l((e) => !e);
                 }, 3000)),
             () => {
                 clearInterval(e);
             }
         );
     }, [n]);
-    let { boostsByGuildId: l, numActiveGuildBoostSlots: o } = i.useMemo(() => {
+    let { boostsByGuildId: a, numActiveGuildBoostSlots: o } = r.useMemo(() => {
         let e = 0,
             n = {};
         return (
-            Object.keys(t).forEach((r) => {
-                let i = t[r];
-                if ((!(0, p.tl)(i) && e++, null != i.premiumGuildSubscription)) {
-                    let e = i.premiumGuildSubscription.guildId;
-                    e in n || (n[e] = []), n[e].push(i);
+            Object.keys(t).forEach((i) => {
+                let r = t[i];
+                if ((!(0, p.tl)(r) && e++, null != r.premiumGuildSubscription)) {
+                    let e = r.premiumGuildSubscription.guildId;
+                    e in n || (n[e] = []), n[e].push(r);
                 }
             }),
             {
@@ -341,19 +341,19 @@ function y(e) {
             }
         );
     }, [t]);
-    if (null == n || 0 === Object.keys(l).length) return null;
+    if (null == n || 0 === Object.keys(a).length) return null;
     let c = o > h.ZP.getNumIncludedPremiumGuildSubscriptionSlots(n.planId);
-    return (0, r.jsxs)('div', {
-        className: C.wrapper,
+    return (0, i.jsxs)('div', {
+        className: O.wrapper,
         children: [
-            (0, r.jsx)('div', {
-                className: C.container,
-                children: f.default.keys(l).map((e) =>
-                    (0, r.jsx)(
-                        v,
+            (0, i.jsx)('div', {
+                className: O.container,
+                children: f.default.keys(a).map((e) =>
+                    (0, i.jsx)(
+                        T,
                         {
                             guildId: e,
-                            guildBoostSlotRecords: l[e],
+                            guildBoostSlotRecords: a[e],
                             premiumSubscription: n,
                             hasCancelableGuildBoostSlot: c,
                             showAltText: s
@@ -362,7 +362,7 @@ function y(e) {
                     )
                 )
             }),
-            (0, r.jsx)('div', { className: C.mainSeparator })
+            (0, i.jsx)('div', { className: O.mainSeparator })
         ]
     });
 }

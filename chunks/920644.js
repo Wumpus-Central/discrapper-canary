@@ -38,14 +38,14 @@ function f(e) {
                             variant: 'heading-xl/semibold',
                             className: p.title,
                             id: c,
-                            children: d.NW.string(d.t['NR/zrK'])
+                            children: d.intl.string(d.t['NR/zrK'])
                         }),
                         (0, r.jsx)(l.Text, {
                             color: 'header-secondary',
                             className: p.subtitle,
                             variant: 'text-sm/normal',
-                            children: d.NW.format(d.t.b0QzXV, {
-                                underageMessage: null != t ? t : d.NW.string(d.t.WqEH4O),
+                            children: d.intl.format(d.t.b0QzXV, {
+                                underageMessage: null != t ? t : d.intl.string(d.t.WqEH4O),
                                 helpURL: s.Z.getArticleURL(u.BhN.AGE_GATE)
                             })
                         }),
@@ -53,7 +53,7 @@ function f(e) {
                             color: 'header-secondary',
                             className: p.subtitle,
                             variant: 'text-sm/normal',
-                            children: d.NW.format(d.t['3axQdH'], { days: 30 })
+                            children: d.intl.format(d.t['3axQdH'], { days: 30 })
                         })
                     ]
                 })
@@ -63,7 +63,7 @@ function f(e) {
                     size: l.PhG.SMALL,
                     fullWidth: !0,
                     onClick: h,
-                    children: d.NW.string(d.t.szzQ6O)
+                    children: d.intl.string(d.t.szzQ6O)
                 })
             })
         ]

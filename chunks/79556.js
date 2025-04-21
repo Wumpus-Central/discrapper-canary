@@ -24,9 +24,9 @@ var r = n(200651),
     x = n(594174),
     E = n(109446),
     I = n(98597),
-    N = n(648501),
-    P = n(473403),
-    w = n(304471),
+    P = n(648501),
+    w = n(473403),
+    N = n(304471),
     Z = n(981631),
     T = n(647086),
     A = n(915887);
@@ -97,8 +97,8 @@ class k extends I.ZP {
         let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: m, isSubscriptionGated: y, isFavoriteSuggestion: _, subtitle: O, forceTopLevelThread: v, embeddedApps: C, resolvedUnreadSetting: j, withGuildIcon: S, enableActivities: x } = this.props,
             E = (0, b.jW)({ location: 'text_channel' }).entrypoints,
             I = x && null != C && C.length > 0,
-            N = (0, g.D)(O),
-            w = (0, r.jsx)('li', {
+            P = (0, g.D)(O),
+            N = (0, r.jsx)('li', {
                 className: o()(this.getClassName(), {
                     [A.disabled]: this.isDisabled(),
                     [A.selected]: n
@@ -114,7 +114,7 @@ class k extends I.ZP {
                     onRequestClose: this.handleClosePopout,
                     shouldShow: (c && this.state.shouldShowThreadsPopout) || (I && this.state.shouldShowActivities),
                     children: () =>
-                        (0, r.jsxs)(P.ZP, {
+                        (0, r.jsxs)(w.ZP, {
                             ref: this.channelItemRef,
                             className: A.iconVisibility,
                             channel: e,
@@ -124,8 +124,8 @@ class k extends I.ZP {
                             unread: l,
                             mentionCount: u,
                             hasActiveThreads: s,
-                            subtitle: null == N ? void 0 : N.subtitle,
-                            subtitleColor: null == N ? void 0 : N.color,
+                            subtitle: null == P ? void 0 : P.subtitle,
+                            subtitleColor: null == P ? void 0 : P.color,
                             onMouseDown: this.handleMouseDown,
                             onContextMenu: this.handleContextMenu,
                             connectDragPreview: m ? p : null,
@@ -159,7 +159,7 @@ class k extends I.ZP {
                         })
                 })
             });
-        return m ? d(h(w)) : w;
+        return m ? d(h(N)) : N;
     }
     constructor(...e) {
         super(...e),
@@ -202,7 +202,7 @@ class k extends I.ZP {
                 let { channel: t, sorting: n, embeddedApps: i } = this.props,
                     { shouldShowActivities: l } = this.state;
                 return null != i && i.length > 0 && l && !n
-                    ? (0, r.jsx)(w.Z, {
+                    ? (0, r.jsx)(N.Z, {
                           onAction: this.handleActivitiesPopoutClose,
                           channel: t
                       })
@@ -275,7 +275,7 @@ function U(e) {
         b = (0, s.e7)([y.Z], () => y.Z.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: v, isSubscriptionGated: E } = (0, m.Z)(t.id),
         I = (0, s.e7)([S.ZP], () => S.ZP.isFavorite(n.id, t.id)),
-        P = (0, s.e7)(
+        w = (0, s.e7)(
             [x.default],
             () => {
                 let e = x.default.getCurrentUser();
@@ -283,8 +283,8 @@ function U(e) {
             },
             [t]
         ),
-        w = (0, h.NX)(t.id),
-        A = (0, N.Z)({
+        N = (0, h.NX)(t.id),
+        A = (0, P.Z)({
             channel: t,
             isChannelCollapsed: !1,
             isChannelSelected: a,
@@ -292,7 +292,7 @@ function U(e) {
             needSubscriptionToAccess: v,
             isNewChannel: b,
             muted: o,
-            enableActivities: w,
+            enableActivities: N,
             resolvedUnreadSetting: f
         }),
         R = (0, p.ZP)(t);
@@ -305,12 +305,12 @@ function U(e) {
             needSubscriptionToAccess: v,
             isNewChannel: b && e.canBeNewChannel,
             isFavoriteSuggestion: l && !I,
-            canShowThreadPreviewForUser: P,
+            canShowThreadPreviewForUser: w,
             channelInfo: A,
             embeddedApps: R,
             resolvedUnreadSetting: f,
             hasChannelInfo: null != A,
-            enableActivities: w
+            enableActivities: N
         })
     );
 }

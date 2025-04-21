@@ -1,83 +1,83 @@
-t.d(s, { Z: () => N }), t(388685);
-var n = t(200651),
-    r = t(192379),
-    a = t(442837),
-    l = t(481060),
-    o = t(809206),
-    i = t(25990),
-    c = t(155433),
-    x = t(388032),
-    d = t(652297);
-function N(e) {
-    var s, t;
-    let { emailToken: N, isSlideReady: m, onClose: u, onBack: _, onNext: E } = e,
+s.d(t, { Z: () => m }), s(388685);
+var n = s(200651),
+    r = s(192379),
+    l = s(442837),
+    i = s(481060),
+    a = s(809206),
+    o = s(25990),
+    c = s(155433),
+    x = s(388032),
+    d = s(652297);
+function m(e) {
+    var t, s;
+    let { emailToken: m, isSlideReady: u, onClose: _, onBack: E, onNext: N } = e,
         [A, h] = r.useState(''),
         [C, p] = r.useState(''),
         [j, S] = r.useState(!1),
-        k = (0, a.e7)([i.Z], () => i.Z.getErrors()),
+        k = (0, l.e7)([o.Z], () => o.Z.getErrors()),
         f = r.useRef(null);
     async function g(e) {
         e.preventDefault(), S(!0);
-        let s = await (0, o.Mn)({
+        let t = await (0, a.Mn)({
             email: A,
-            emailToken: N,
+            emailToken: m,
             password: C
         });
-        if ((S(!1), null == s ? void 0 : s.ok)) E(A);
+        if ((S(!1), null == t ? void 0 : t.ok)) N(A);
         else {
-            var t, n;
-            (null == s || null == (t = s.body) ? void 0 : t.username) != null ? (0, c.P)() : (null == s || null == (n = s.body) ? void 0 : n.email_token) != null && (null == _ || _());
+            var s, n;
+            (null == t || null == (s = t.body) ? void 0 : s.username) != null ? (0, c.P)() : (null == t || null == (n = t.body) ? void 0 : n.email_token) != null && (null == E || E());
         }
     }
     return (
         r.useEffect(() => {
-            if (m) {
+            if (u) {
                 var e;
                 null == (e = f.current) || e.focus();
             }
-        }, [m]),
+        }, [u]),
         (0, n.jsxs)('form', {
             onSubmit: g,
             children: [
-                (0, n.jsxs)(l.xBx, {
+                (0, n.jsxs)(i.xBx, {
                     separator: !1,
                     className: d.header,
                     children: [
-                        (0, n.jsx)(l.X6q, {
+                        (0, n.jsx)(i.X6q, {
                             className: d.title,
                             variant: 'heading-xl/extrabold',
-                            children: x.NW.string(x.t.p3280t)
+                            children: x.intl.string(x.t.p3280t)
                         }),
-                        (0, n.jsx)(l.Text, {
+                        (0, n.jsx)(i.Text, {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
                             className: d.subtitle,
-                            children: x.NW.string(x.t['1k44EB'])
+                            children: x.intl.string(x.t['1k44EB'])
                         }),
-                        (0, n.jsx)(l.olH, {
-                            onClick: u,
+                        (0, n.jsx)(i.olH, {
+                            onClick: _,
                             className: d.modalCloseButton
                         })
                     ]
                 }),
-                (0, n.jsxs)(l.hzk, {
+                (0, n.jsxs)(i.hzk, {
                     className: d.content,
                     children: [
-                        (0, n.jsx)(l.xJW, {
-                            title: x.NW.string(x.t['w/qqKC']),
-                            error: null == k || null == (s = k.email) ? void 0 : s[0],
-                            children: (0, n.jsx)(l.oil, {
+                        (0, n.jsx)(i.xJW, {
+                            title: x.intl.string(x.t['w/qqKC']),
+                            error: null == k || null == (t = k.email) ? void 0 : t[0],
+                            children: (0, n.jsx)(i.oil, {
                                 type: 'email',
                                 value: A,
                                 onChange: h,
                                 inputRef: f
                             })
                         }),
-                        (0, n.jsx)(l.xJW, {
+                        (0, n.jsx)(i.xJW, {
                             className: d.password,
-                            title: x.NW.string(x.t.TmdnJy),
-                            error: null == k || null == (t = k.password) ? void 0 : t[0],
-                            children: (0, n.jsx)(l.oil, {
+                            title: x.intl.string(x.t.TmdnJy),
+                            error: null == k || null == (s = k.password) ? void 0 : s[0],
+                            children: (0, n.jsx)(i.oil, {
                                 type: 'password',
                                 value: C,
                                 onChange: p
@@ -85,29 +85,29 @@ function N(e) {
                         })
                     ]
                 }),
-                (0, n.jsxs)(l.mzw, {
+                (0, n.jsxs)(i.mzw, {
                     children: [
-                        (0, n.jsx)(l.zxk, {
+                        (0, n.jsx)(i.zxk, {
                             type: 'submit',
-                            color: l.zxk.Colors.BRAND,
-                            size: l.zxk.Sizes.MEDIUM,
+                            color: i.zxk.Colors.BRAND,
+                            size: i.zxk.Sizes.MEDIUM,
                             submitting: j,
-                            children: x.NW.string(x.t.i4jeWV)
+                            children: x.intl.string(x.t.i4jeWV)
                         }),
-                        null != _
-                            ? (0, n.jsx)(l.zxk, {
+                        null != E
+                            ? (0, n.jsx)(i.zxk, {
                                   className: d.__invalid_cancel,
-                                  look: l.zxk.Looks.LINK,
-                                  color: l.zxk.Colors.PRIMARY,
-                                  onClick: _,
-                                  children: x.NW.string(x.t['13/7kZ'])
+                                  look: i.zxk.Looks.LINK,
+                                  color: i.zxk.Colors.PRIMARY,
+                                  onClick: E,
+                                  children: x.intl.string(x.t['13/7kZ'])
                               })
-                            : (0, n.jsx)(l.zxk, {
+                            : (0, n.jsx)(i.zxk, {
                                   className: d.__invalid_cancel,
-                                  look: l.zxk.Looks.LINK,
-                                  color: l.zxk.Colors.PRIMARY,
-                                  onClick: u,
-                                  children: x.NW.string(x.t['ETE/oK'])
+                                  look: i.zxk.Looks.LINK,
+                                  color: i.zxk.Colors.PRIMARY,
+                                  onClick: _,
+                                  children: x.intl.string(x.t['ETE/oK'])
                               })
                     ]
                 })

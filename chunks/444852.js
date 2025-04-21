@@ -26,8 +26,8 @@ var r = n(392711),
     I = n(756315),
     S = n(569545),
     T = n(297733),
-    N = n(981631),
-    A = n(65154);
+    A = n(981631),
+    N = n(65154);
 function C(e, t, n) {
     return (
         t in e
@@ -195,7 +195,7 @@ class k extends s.Z {
                         )
                     )
                 ),
-                e === N.hes.RTC_CONNECTED)
+                e === A.hes.RTC_CONNECTED)
             ) {
                 var r;
                 null == (r = this._connection) ||
@@ -220,7 +220,7 @@ class k extends s.Z {
                                 w = (null == O || null == (I = O.desktopSource) ? void 0 : I.sourcePid) != null ? _.ZP.getGameForPID(O.desktopSource.sourcePid) : null,
                                 { gameName: D, gameId: L, exe: x, distributor: M } = (0, f.G8)(w);
                             v.default.track(
-                                N.rMx.SCREENSHARE_FINISHED,
+                                A.rMx.SCREENSHARE_FINISHED,
                                 R(
                                     {
                                         screenshare_frames: e,
@@ -239,7 +239,7 @@ class k extends s.Z {
                                         desktop_capturer_type: u,
                                         media_session_id: E,
                                         rtc_connection_id: b,
-                                        context: A.Yn.STREAM,
+                                        context: N.Yn.STREAM,
                                         screens: d,
                                         windows: p,
                                         activity: h,
@@ -302,7 +302,7 @@ class k extends s.Z {
             media_session_id: this.getMediaSessionId(),
             parent_media_session_id: this.parentMediaSessionId,
             sender_user_id: i,
-            context: A.Yn.STREAM,
+            context: N.Yn.STREAM,
             guild_id: a,
             stream_region: e,
             stream_source_type: n,
@@ -321,7 +321,7 @@ class k extends s.Z {
     _trackVideoStartStats() {
         let e = this.isOwner ? (0, T.Z)() : null;
         v.default.track(
-            N.rMx.VIDEO_STREAM_STARTED,
+            A.rMx.VIDEO_STREAM_STARTED,
             w(R({}, this._getStreamAnalyticsProperties(), e), {
                 connection_type: g.Z.getType(),
                 effective_connection_speed: g.Z.getEffectiveConnectionSpeed(),
@@ -353,7 +353,7 @@ class k extends s.Z {
             var r;
             (null != (r = t.num_frames) ? r : 0) > 0 &&
                 v.default.track(
-                    N.rMx.VIDEO_STREAM_ENDED,
+                    A.rMx.VIDEO_STREAM_ENDED,
                     w(R({}, a, i, s, this._videoStreamStats.getStats(), t, this._soundshareStats.getStats(), this._getStreamAnalyticsProperties(), _, p), {
                         app_hardware_acceleration_enabled: O.Z.getAppHardwareAccelerationEnabled(),
                         channel_type: n,
@@ -370,7 +370,7 @@ class k extends s.Z {
                 let l = o.getInboundStats(t);
                 (null != (r = null == l ? void 0 : l.num_frames) ? r : 0) > 0 &&
                     v.default.track(
-                        N.rMx.VIDEO_STREAM_ENDED,
+                        A.rMx.VIDEO_STREAM_ENDED,
                         w(R({}, a, i, s, this._videoStreamStats.getStats(), l, this._soundshareStats.getStats(), this._getStreamAnalyticsProperties(), _, p), {
                             app_hardware_acceleration_enabled: O.Z.getAppHardwareAccelerationEnabled(),
                             channel_type: n,
@@ -394,7 +394,7 @@ class k extends s.Z {
             sessionId: e,
             guildId: u,
             channelId: d,
-            context: A.Yn.STREAM,
+            context: N.Yn.STREAM,
             rtcServerId: n,
             parentMediaSessionId: l
         }),
@@ -422,7 +422,7 @@ class k extends s.Z {
                         streamId: e,
                         rtcServerId: t,
                         mediaEngineConnectionId: this.getMediaEngineConnectionId(),
-                        context: A.Yn.STREAM
+                        context: N.Yn.STREAM
                     })
                 );
             }, 200)),

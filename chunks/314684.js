@@ -1,19 +1,19 @@
 n.d(t, {
     $_: () => Z,
     Er: () => A,
-    FM: () => L,
+    FM: () => B,
     IB: () => w,
     IY: () => k,
-    Kb: () => B,
+    Kb: () => M,
     bq: () => P,
     rM: () => D
 }),
     n(388685);
-var r = n(192379),
-    i = n(913527),
-    s = n.n(i),
-    a = n(442837),
-    l = n(704215),
+var i = n(192379),
+    r = n(913527),
+    s = n.n(r),
+    l = n(442837),
+    a = n(704215),
     o = n(496929),
     c = n(607070),
     d = n(335131),
@@ -25,36 +25,36 @@ var r = n(192379),
     f = n(594174),
     b = n(580130),
     _ = n(626135),
-    N = n(823379),
-    x = n(111361),
-    E = n(595878),
-    j = n(944880),
-    C = n(513785),
-    O = n(106255),
-    S = n(474936),
-    v = n(735825),
-    T = n(981631);
-function I(e) {
+    x = n(823379),
+    E = n(111361),
+    j = n(595878),
+    C = n(944880),
+    O = n(513785),
+    S = n(106255),
+    v = n(474936),
+    T = n(735825),
+    I = n(981631);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
@@ -67,8 +67,8 @@ function y(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -80,95 +80,95 @@ function y(e, t) {
 function A() {
     var e;
     let t = (function () {
-            let e = (0, a.cj)([C.Z], () => C.Z.getState());
-            if (null != e) return e.userTenureRewardStatusByRewardId[v.Ft.FREE_AVATAR_DECO_1_MONTH];
+            let e = (0, l.cj)([O.Z], () => O.Z.getState());
+            if (null != e) return e.userTenureRewardStatusByRewardId[T.Ft.FREE_AVATAR_DECO_1_MONTH];
         })(),
         n = (function () {
-            var e = [v.Ft.FREE_AVATAR_DECO_1_MONTH];
-            let t = (0, a.e7)(
+            var e = [T.Ft.FREE_AVATAR_DECO_1_MONTH];
+            let t = (0, l.e7)(
                     [b.Z],
                     () => {
                         var e;
-                        return null != (e = b.Z.getForApplication(S.CL)) ? e : R;
+                        return null != (e = b.Z.getForApplication(v.CL)) ? e : R;
                     },
                     [],
-                    N.OL
+                    x.OL
                 ),
-                n = (0, a.e7)([f.default], () => {
+                n = (0, l.e7)([f.default], () => {
                     let e = f.default.getCurrentUser();
-                    return null != e && (0, x.M5)(e, S.p9.TIER_2);
+                    return null != e && (0, E.M5)(e, v.p9.TIER_2);
                 });
-            if (null != (0, O.kG)(t) || n) return (0, O.MR)(e, t);
+            if (null != (0, S.kG)(t) || n) return (0, S.MR)(e, t);
         })(),
-        i = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
-        l = null != n,
+        r = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
+        a = null != n,
         o = (function () {
-            let e = (0, a.e7)(
+            let e = (0, l.e7)(
                 [b.Z],
                 () => {
                     var e;
-                    return null != (e = b.Z.getForApplication(T.XAJ)) ? e : R;
+                    return null != (e = b.Z.getForApplication(I.XAJ)) ? e : R;
                 },
                 [],
-                N.OL
+                x.OL
             );
-            return (0, O.Cl)(v.qY, e);
+            return (0, S.Cl)(T.qY, e);
         })(),
-        c = l && null != o && (0, O.C3)(o.skuId, i),
+        c = a && null != o && (0, S.C3)(o.skuId, r),
         d = null != (e = null == t ? void 0 : t.next_tenure_reward_id) ? e : null == n ? void 0 : n.skuId;
-    return r.useMemo(() => {
+    return i.useMemo(() => {
         let e = {
             redeemableAt: null == t ? void 0 : t.redeemable_at,
             tenureRewardStatusId: null == t ? void 0 : t.id,
-            tenureRewardType: (0, O.Xs)(d)
+            tenureRewardType: (0, S.Xs)(d)
         };
         if (c)
-            return y(I({}, e), {
-                nitroTenureStatus: v.EB.REDEEMED,
+            return y(N({}, e), {
+                nitroTenureStatus: T.EB.REDEEMED,
                 tenureRewardSkuId: n.skuId,
                 showNotification: !0,
                 showCard: !0
             });
-        if (l)
-            return y(I({}, e), {
-                nitroTenureStatus: v.EB.REDEEMABLE,
+        if (a)
+            return y(N({}, e), {
+                nitroTenureStatus: T.EB.REDEEMABLE,
                 tenureRewardSkuId: n.skuId,
                 showNotification: !0,
                 showCard: !0
             });
-        if (!(null != t && (0, O.u7)(t))) return null;
+        if (!(null != t && (0, S.u7)(t))) return null;
         {
             if (null == t.redeemable_at || null == t.next_tenure_reward_id) return null;
             let n = s()(t.redeemable_at).diff(s().utc(), 'days'),
-                r = null != t.redeemable_in_ms ? Math.ceil(s().duration(t.redeemable_in_ms).asDays()) : n;
+                i = null != t.redeemable_in_ms ? Math.ceil(s().duration(t.redeemable_in_ms).asDays()) : n;
             if (n < 0) return null;
-            let i = !1,
-                a = !1;
+            let r = !1,
+                l = !1;
             return (
-                t.next_tenure_reward_id === v.Ft.FREE_AVATAR_DECO_1_MONTH && ((a = n <= v.bm), (i = n <= v.dF)),
-                y(I({}, e), {
-                    nitroTenureStatus: v.EB.PENDING,
+                t.next_tenure_reward_id === T.Ft.FREE_AVATAR_DECO_1_MONTH && ((l = n <= T.bm), (r = n <= T.dF)),
+                y(N({}, e), {
+                    nitroTenureStatus: T.EB.PENDING,
                     tenureRewardSkuId: t.next_tenure_reward_id,
-                    redeemableInDays: 0 === r ? 1 : r,
-                    showNotification: a,
-                    showCard: i
+                    redeemableInDays: 0 === i ? 1 : i,
+                    showNotification: l,
+                    showCard: r
                 })
             );
         }
-    }, [t, l, c, n, d]);
+    }, [t, a, c, n, d]);
 }
 function P(e) {
     let { showAnimations: t } = e,
-        n = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
-        r = A();
-    if (null == r) return;
-    let { redeemableInDays: i = 0, tenureRewardSkuId: s } = r,
-        l = v.Ft.FREE_AVATAR_DECO_1_MONTH === s ? v.jW : null;
-    if (null == l) return;
-    let o = Math.min(l, Math.max(l - i, 0)),
-        d = (100 * o) / l;
+        n = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        i = A();
+    if (null == i) return;
+    let { redeemableInDays: r = 0, tenureRewardSkuId: s } = i,
+        a = T.Ft.FREE_AVATAR_DECO_1_MONTH === s ? T.jW : null;
+    if (null == a) return;
+    let o = Math.min(a, Math.max(a - r, 0)),
+        d = (100 * o) / a;
     return {
-        initialPercentage: t && !n ? (100 * Math.max(o - 0.25 * l, 0)) / l : d,
+        initialPercentage: t && !n ? (100 * Math.max(o - 0.25 * a, 0)) / a : d,
         percentage: d
     };
 }
@@ -176,89 +176,89 @@ let R = new Set(),
     D = (e) => {
         if (null == e || (null == e ? void 0 : e.showNotification) === !1) return [];
         switch (e.nitroTenureStatus) {
-            case v.EB.PENDING:
-                return [l.z.TENURE_REWARD_PENDING];
-            case v.EB.REDEEMABLE:
-                return [l.z.TENURE_REWARD_REDEEMABLE];
+            case T.EB.PENDING:
+                return [a.z.TENURE_REWARD_PENDING];
+            case T.EB.REDEEMABLE:
+                return [a.z.TENURE_REWARD_REDEEMABLE];
             default:
                 return [];
         }
     },
     Z = () => {
         let e = A(),
-            [t, n] = r.useState(D(e)),
-            i = (0, E.cG)({ location: 'Home' });
-        r.useEffect(() => {
-            !1 !== i && n(D(e));
-        }, [e, i]);
-        let [s] = (0, h.US)(i ? t : []);
-        return i && null != e && !0 === e.showNotification && (s === l.z.TENURE_REWARD_REDEEMABLE || s === l.z.TENURE_REWARD_PENDING) ? (0, O.Wb)(e.nitroTenureStatus) : null;
+            [t, n] = i.useState(D(e)),
+            r = (0, j.cG)({ location: 'Home' });
+        i.useEffect(() => {
+            !1 !== r && n(D(e));
+        }, [e, r]);
+        let [s] = (0, h.US)(r ? t : []);
+        return r && null != e && !0 === e.showNotification && (s === a.z.TENURE_REWARD_REDEEMABLE || s === a.z.TENURE_REWARD_PENDING) ? (0, S.Wb)(e.nitroTenureStatus) : null;
     },
     w = () => {
         var e;
         let t = null == (e = A()) ? void 0 : e.nitroTenureStatus,
-            n = (0, E.cG)({ location: 'Home' }) && null != t && t === v.EB.REDEEMABLE,
-            [r] = (0, h.US)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
-        return !!n && r === l.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
+            n = (0, j.cG)({ location: 'Home' }) && null != t && t === T.EB.REDEEMABLE,
+            [i] = (0, h.US)(n ? [a.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
+        return !!n && i === a.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
     },
     k = () => {
         let e = A(),
-            t = r.useMemo(() => D(e), [e]),
+            t = i.useMemo(() => D(e), [e]),
             [n] = (0, p.cv)(t),
-            i = r.useRef(!1);
-        return r.useCallback(() => {
+            r = i.useRef(!1);
+        return i.useCallback(() => {
             null != e &&
                 !0 === e.showNotification &&
-                (n === l.z.TENURE_REWARD_REDEEMABLE || n === l.z.TENURE_REWARD_PENDING) &&
+                (n === a.z.TENURE_REWARD_REDEEMABLE || n === a.z.TENURE_REWARD_PENDING) &&
                 ((0, g.EW)(n),
-                n === l.z.TENURE_REWARD_PENDING &&
-                    !1 === i.current &&
-                    (_.default.track(T.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
+                n === a.z.TENURE_REWARD_PENDING &&
+                    !1 === r.current &&
+                    (_.default.track(I.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
                         user_tenure_reward_id: null == e ? void 0 : e.tenureRewardStatusId,
                         tenure_reward_id: e.tenureRewardSkuId,
                         reward_type: null == e ? void 0 : e.tenureRewardType,
                         redeemable_at: null == e ? void 0 : e.redeemableAt
                     }),
-                    (i.current = !0)));
+                    (r.current = !0)));
         }, [e, n]);
     };
-function W() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.CL,
-        t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = (0, a.e7)([b.Z], () => b.Z.isFetchingForApplication(e)),
-        i = (0, a.e7)([f.default], () => {
-            let e = f.default.getCurrentUser();
-            return null != e && (0, x.M5)(e, S.p9.TIER_2);
-        }),
-        s = r.useRef(!1);
-    r.useEffect(() => {
-        !1 === n && !0 === i && !1 === s.current && !0 === t && (o.yD(e), (s.current = !0));
-    }, [n, i, e, t]);
-}
 function L() {
-    var e;
-    let t = (0, E.oY)({ location: 'Home' });
-    W(S.CL), W(T.XAJ, t), B(v.qY);
-    let n = A(),
-        i = null != (e = null == n ? void 0 : n.showCard) && e;
-    r.useEffect(() => {
-        i && j.Z.forceRefreshIfOutdated();
-    }, [i]);
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.CL,
+        t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        n = (0, l.e7)([b.Z], () => b.Z.isFetchingForApplication(e)),
+        r = (0, l.e7)([f.default], () => {
+            let e = f.default.getCurrentUser();
+            return null != e && (0, E.M5)(e, v.p9.TIER_2);
+        }),
+        s = i.useRef(!1);
+    i.useEffect(() => {
+        !1 === n && !0 === r && !1 === s.current && !0 === t && (o.yD(e), (s.current = !0));
+    }, [n, r, e, t]);
 }
-function B(e) {
+function B() {
+    var e;
+    let t = (0, j.oY)({ location: 'Home' });
+    L(v.CL), L(I.XAJ, t), M(T.qY);
+    let n = A(),
+        r = null != (e = null == n ? void 0 : n.showCard) && e;
+    i.useEffect(() => {
+        r && C.Z.forceRefreshIfOutdated();
+    }, [r]);
+}
+function M(e) {
     var t;
-    let n = (0, E.oY)({ location: 'Home' }),
-        i = (0, m.hv)('useCollectiblePurchaseForTenureReward'),
-        [s, l] = (0, a.Wu)([u.Z], () => [u.Z.purchases, u.Z.hasPreviouslyFetched]);
+    let n = (0, j.oY)({ location: 'Home' }),
+        r = (0, m.hv)('useCollectiblePurchaseForTenureReward'),
+        [s, a] = (0, l.Wu)([u.Z], () => [u.Z.purchases, u.Z.hasPreviouslyFetched]);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             n &&
-                !l &&
+                !a &&
                 (0, d.qg)({
-                    variantsReturnStyle: i,
+                    variantsReturnStyle: r,
                     location: 'useCollectiblePurchaseForTenureReward'
                 });
-        }, [s, l, n, i]),
+        }, [s, a, n, r]),
         null != (t = null == s ? void 0 : s.get(e)) ? t : null
     );
 }

@@ -50,7 +50,7 @@ let E = (e) => {
                 },
                 tabIndex: t ? 0 : -1,
                 'aria-hidden': !t,
-                'aria-label': h.NW.string(h.t['78fJND']),
+                'aria-label': h.intl.string(h.t['78fJND']),
                 focusProps: { offset: 4 },
                 children: (0, a.jsxs)('div', {
                     className: d.iconContainer,
@@ -138,16 +138,16 @@ class b extends (n = s.Component) {
             }
     }
     render() {
-        let { autoFocus: e, query: t, placeholder: l = h.NW.string(h.t.LzcpeX), themeOverride: n, disabled: r, onClear: s, size: o, maxHeight: p, tags: f, onActivate: y, className: b, inputProps: v, focusAfterReady: N } = this.props,
-            C = null != t && t.length > 0,
-            m = !1,
-            R = [];
+        let { autoFocus: e, query: t, placeholder: l = h.intl.string(h.t.LzcpeX), themeOverride: n, disabled: r, onClear: s, size: o, maxHeight: p, tags: f, onActivate: y, className: b, inputProps: v, focusAfterReady: C } = this.props,
+            m = null != t && t.length > 0,
+            R = !1,
+            N = [];
         return (
             null != f &&
                 f.length > 0 &&
                 ('string' == typeof f[0]
                     ? f.forEach((e, t) =>
-                          R.push(
+                          N.push(
                               (0, a.jsxs)(
                                   u.eee,
                                   {
@@ -160,7 +160,7 @@ class b extends (n = s.Component) {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: d.close,
-                                              'aria-label': h.NW.string(h.t.N86XcH)
+                                              'aria-label': h.intl.string(h.t.N86XcH)
                                           })
                                       ]
                                   },
@@ -168,9 +168,9 @@ class b extends (n = s.Component) {
                               )
                           )
                       )
-                    : ((m = !0),
+                    : ((R = !0),
                       f.forEach((e, t) =>
-                          R.push(
+                          N.push(
                               (0, a.jsxs)(
                                   u.eee,
                                   {
@@ -205,7 +205,7 @@ class b extends (n = s.Component) {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: d.close,
-                                              'aria-label': h.NW.string(h.t.N86XcH)
+                                              'aria-label': h.intl.string(h.t.N86XcH)
                                           })
                                       ]
                                   },
@@ -226,7 +226,7 @@ class b extends (n = s.Component) {
                                 className: d.inner,
                                 style: { maxHeight: p },
                                 children: [
-                                    R,
+                                    N,
                                     (0, a.jsx)(
                                         'input',
                                         (function (e) {
@@ -246,7 +246,7 @@ class b extends (n = s.Component) {
                                             return e;
                                         })(
                                             {
-                                                className: i()(d.input, { [d.richTagInput]: m }),
+                                                className: i()(d.input, { [d.richTagInput]: R }),
                                                 type: 'text',
                                                 ref: this.ref,
                                                 spellCheck: 'false',
@@ -257,7 +257,7 @@ class b extends (n = s.Component) {
                                                 onFocus: this.handleFocus,
                                                 disabled: r,
                                                 'aria-disabled': r,
-                                                autoFocus: !N && e,
+                                                autoFocus: !C && e,
                                                 onMouseDown: y
                                             },
                                             this.defaultInputProps,
@@ -268,7 +268,7 @@ class b extends (n = s.Component) {
                                         ? (0, a.jsx)(E, {
                                               size: o,
                                               themeOverride: n,
-                                              hasContent: C,
+                                              hasContent: m,
                                               onClear: this.handleClear
                                           })
                                         : null

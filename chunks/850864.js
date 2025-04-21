@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(399606),
-    l = n(780384),
+    l = n(399606),
+    s = n(780384),
     a = n(481060),
     o = n(210887),
     c = n(430824),
@@ -16,28 +16,28 @@ var r = n(200651),
     x = n(387960),
     b = n(806742),
     j = n(388032),
-    N = n(773100),
-    _ = n(91716),
-    v = n(470264),
-    O = n(710043),
-    C = n(847950);
-function y(e) {
+    _ = n(773100),
+    v = n(91716),
+    O = n(470264),
+    C = n(710043),
+    y = n(847950);
+function N(e) {
     let { guild: t, saveOnClose: n } = e,
         [c, d] = i.useState('new'),
-        y = i.useMemo(
+        N = i.useMemo(
             () => [
                 {
                     value: 'new',
-                    name: j.NW.string(j.t['4e5u3t'])
+                    name: j.intl.string(j.t['4e5u3t'])
                 },
                 {
                     value: 'existing',
-                    name: j.NW.string(j.t.cmkOsb)
+                    name: j.intl.string(j.t.cmkOsb)
                 }
             ],
             []
         ),
-        I = (0, s.e7)([o.Z], () => o.Z.theme);
+        I = (0, l.e7)([o.Z], () => o.Z.theme);
     i.useEffect(
         () => () => {
             let e = m.Z.getSettings();
@@ -45,72 +45,72 @@ function y(e) {
         },
         [n, t.id]
     );
-    let E = i.useMemo(() => ((0, l.ap)(I) ? ('existing' === c ? v : C) : 'existing' === c ? _ : O), [c, I]);
+    let E = i.useMemo(() => ((0, s.ap)(I) ? ('existing' === c ? O : y) : 'existing' === c ? v : C), [c, I]);
     return (0, r.jsxs)('div', {
-        className: N.page,
+        className: _.page,
         children: [
             (0, r.jsxs)('div', {
-                className: N.leftColumn,
+                className: _.leftColumn,
                 children: [
                     (0, r.jsx)(a.X6q, {
-                        className: N.header,
+                        className: _.header,
                         variant: 'heading-lg/extrabold',
-                        children: j.NW.string(j.t.tbUZVl)
+                        children: j.intl.string(j.t.tbUZVl)
                     }),
                     (0, r.jsx)('div', {
-                        className: N.descriptionSection,
+                        className: _.descriptionSection,
                         children: (0, r.jsx)(a.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            children: j.NW.string(j.t.DvHCq6)
+                            children: j.intl.string(j.t.DvHCq6)
                         })
                     }),
                     (0, r.jsx)('div', {
-                        className: N.section,
+                        className: _.section,
                         children: (0, r.jsx)(b.Z, { guildId: t.id })
                     }),
-                    (0, r.jsx)('div', { className: N.sectionSeparator }),
+                    (0, r.jsx)('div', { className: _.sectionSeparator }),
                     (0, r.jsx)(a.X6q, {
-                        className: N.header,
+                        className: _.header,
                         variant: 'heading-lg/extrabold',
-                        children: j.NW.string(j.t['roY/ws'])
+                        children: j.intl.string(j.t['roY/ws'])
                     }),
                     (0, r.jsx)('div', {
-                        className: N.descriptionSection,
+                        className: _.descriptionSection,
                         children: (0, r.jsx)(a.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            children: j.NW.format(j.t['/lWYYW'], {})
+                            children: j.intl.format(j.t['/lWYYW'], {})
                         })
                     }),
                     (0, r.jsx)('div', {
-                        className: N.section,
+                        className: _.section,
                         children: (0, r.jsx)(p.Z, {})
                     }),
                     (0, r.jsx)(g.Z, { guildId: t.id }),
-                    (0, r.jsx)('div', { className: N.sectionSeparator }),
+                    (0, r.jsx)('div', { className: _.sectionSeparator }),
                     (0, r.jsx)(a.X6q, {
-                        className: N.header,
+                        className: _.header,
                         variant: 'heading-lg/extrabold',
-                        children: j.NW.string(j.t.hEjHyM)
+                        children: j.intl.string(j.t.hEjHyM)
                     }),
                     (0, r.jsxs)('div', {
-                        className: N.descriptionSection,
+                        className: _.descriptionSection,
                         children: [
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                children: j.NW.string(j.t.YnvKVF)
+                                children: j.intl.string(j.t.YnvKVF)
                             }),
                             (0, r.jsxs)('ul', {
-                                className: N.bulletList,
+                                className: _.bulletList,
                                 children: [
                                     (0, r.jsx)('li', {
                                         children: (0, r.jsx)(a.Text, {
                                             tag: 'span',
                                             variant: 'text-sm/medium',
                                             color: 'header-secondary',
-                                            children: j.NW.string(j.t['6jEvRU'])
+                                            children: j.intl.string(j.t['6jEvRU'])
                                         })
                                     }),
                                     (0, r.jsx)('li', {
@@ -118,7 +118,7 @@ function y(e) {
                                             tag: 'span',
                                             variant: 'text-sm/medium',
                                             color: 'header-secondary',
-                                            children: j.NW.string(j.t['Fq+UsL'])
+                                            children: j.intl.string(j.t['Fq+UsL'])
                                         })
                                     }),
                                     (0, r.jsx)('li', {
@@ -126,7 +126,7 @@ function y(e) {
                                             tag: 'span',
                                             variant: 'text-sm/medium',
                                             color: 'header-secondary',
-                                            children: j.NW.string(j.t.LeEPoK)
+                                            children: j.intl.string(j.t.LeEPoK)
                                         })
                                     })
                                 ]
@@ -134,31 +134,31 @@ function y(e) {
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: N.section,
+                        className: _.section,
                         children: [(0, r.jsx)(x.Z, { guildId: t.id }), (0, r.jsx)(f.Z, { guildId: t.id })]
                     }),
-                    (0, r.jsx)('div', { className: N.sectionSeparator }),
+                    (0, r.jsx)('div', { className: _.sectionSeparator }),
                     (0, r.jsx)(h.Z, { guild: t })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: N.rightColumn,
+                className: _.rightColumn,
                 children: [
                     (0, r.jsx)('div', {
-                        className: N.centeredSection,
+                        className: _.centeredSection,
                         children: (0, r.jsx)(a.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            children: j.NW.string(j.t.EVV6ub)
+                            children: j.intl.string(j.t.EVV6ub)
                         })
                     }),
                     (0, r.jsx)('img', {
-                        className: N.previewImage,
+                        className: _.previewImage,
                         src: E,
-                        alt: j.NW.string(j.t.ST4UOz)
+                        alt: j.intl.string(j.t.ST4UOz)
                     }),
                     (0, r.jsx)(a.sY7, {
-                        options: y,
+                        options: N,
                         value: c,
                         onChange: (e) => d(e.value),
                         look: 'pill'
@@ -170,13 +170,13 @@ function y(e) {
 }
 function I(e) {
     let { saveOnClose: t } = e,
-        n = (0, s.e7)([d.Z, c.Z], () => {
+        n = (0, l.e7)([d.Z, c.Z], () => {
             let e = d.Z.getGuildId();
             return c.Z.getGuild(e);
         });
     return null == n
         ? null
-        : (0, r.jsx)(y, {
+        : (0, r.jsx)(N, {
               guild: n,
               saveOnClose: t
           });

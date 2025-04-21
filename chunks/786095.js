@@ -1,8 +1,8 @@
-n.d(t, { Z: () => v }), n(388685), n(35282);
-var r = n(200651),
-    i = n(192379),
-    a = n(481060),
-    l = n(239091),
+n.d(t, { Z: () => j }), n(388685), n(35282);
+var i = n(200651),
+    r = n(192379),
+    l = n(481060),
+    a = n(239091),
     o = n(236413),
     s = n(727072),
     c = n(85960),
@@ -18,24 +18,24 @@ var r = n(200651),
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
@@ -48,8 +48,8 @@ function E(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -58,34 +58,34 @@ function E(e, t) {
         e
     );
 }
-let N = h.fX.KEYWORD;
-function v(e, t) {
-    let { perGuildMaxCount: n } = c.I6[N],
-        { isLoading: v, saveRule: j, errorMessage: S } = (0, d.w)(),
-        { createNewEditingRule: P } = (0, d.V)(),
-        [_, Z] = i.useState(!1),
+let v = h.fX.KEYWORD;
+function j(e, t) {
+    let { perGuildMaxCount: n } = c.I6[v],
+        { isLoading: j, saveRule: S, errorMessage: P } = (0, d.w)(),
+        { createNewEditingRule: _ } = (0, d.V)(),
+        [Z, N] = r.useState(!1),
         [I, x] = (0, s.I2)(t),
         { rulesByTriggerType: T, updateRule: A } = (0, s.pH)(t),
-        M = i.useMemo(() => {
+        M = r.useMemo(() => {
             var e;
-            return null != (e = T[N]) ? e : [];
+            return null != (e = T[v]) ? e : [];
         }, [T]),
         D = 0 === M.length,
         w = n > M.length && !D;
-    if (!i.useMemo(() => (0, u.ze)(t), [t]) || null == e || 0 === e.length || null == t) return null;
+    if (!r.useMemo(() => (0, u.ze)(t), [t]) || null == e || 0 === e.length || null == t) return null;
     let C = e.split(' '),
-        W = C.length;
+        L = C.length;
     try {
         (0, o.km)(C, h.RH);
     } catch (e) {
         return null;
     }
-    let L = () => {
+    let R = () => {
             null != t &&
-                ((0, l.Zy)(),
+                ((0, a.Zy)(),
                 m.Z.open(t, b.pNK.GUILD_AUTOMOD),
                 setTimeout(() => {
-                    P(t, N, {
+                    _(t, v, {
                         triggerMetadata: {
                             keywordFilter: [e],
                             regexPatterns: [],
@@ -94,47 +94,47 @@ function v(e, t) {
                     });
                 }, 400));
         },
-        R = async (t) => {
-            var n, r;
-            if (((0, l.Zy)(), !(await (0, g.XN)(t.name, e)))) return;
-            let i = E(y({}, t), {
+        k = async (t) => {
+            var n, i;
+            if (((0, a.Zy)(), !(await (0, g.XN)(t.name, e)))) return;
+            let r = E(y({}, t), {
                 triggerMetadata: E(y({}, t.triggerMetadata), {
-                    keywordFilter: [...(null != (r = null == (n = t.triggerMetadata) ? void 0 : n.keywordFilter) ? r : []), e]
+                    keywordFilter: [...(null != (i = null == (n = t.triggerMetadata) ? void 0 : n.keywordFilter) ? i : []), e]
                 })
             });
-            await j(i, M), A(i), null != S ? (0, a.showToast)((0, a.createToast)(p.NW.string(p.t.wH6L0t), a.ToastType.FAILURE)) : (0, a.showToast)((0, a.createToast)(p.NW.string(p.t['0rdYm5']), a.ToastType.SUCCESS));
+            await S(r, M), A(r), null != P ? (0, l.showToast)((0, l.createToast)(p.intl.string(p.t.wH6L0t), l.ToastType.FAILURE)) : (0, l.showToast)((0, l.createToast)(p.intl.string(p.t['0rdYm5']), l.ToastType.SUCCESS));
         },
-        k = (0, r.jsx)(a.sNh, {
+        G = (0, i.jsx)(l.sNh, {
             id: 'automod-rules-loading',
-            label: p.NW.string(p.t.ZTNur6)
+            label: p.intl.string(p.t.ZTNur6)
         });
     return (
         I ||
-            (k = (0, r.jsxs)(r.Fragment, {
+            (G = (0, i.jsxs)(i.Fragment, {
                 children: [
                     D &&
-                        (0, r.jsx)(a.sNh, {
+                        (0, i.jsx)(l.sNh, {
                             id: 'add-first-rule',
-                            label: p.NW.string(p.t.f72Zqa),
-                            action: L,
-                            disabled: v
+                            label: p.intl.string(p.t.f72Zqa),
+                            action: R,
+                            disabled: j
                         }),
                     M.map((e) => {
-                        let t = (0, c.V9)(N).reduce((t, n) => {
-                            let r = e.actions.find((e) => {
+                        let t = (0, c.V9)(v).reduce((t, n) => {
+                            let i = e.actions.find((e) => {
                                 let { type: t } = e;
                                 return n === t;
                             });
-                            if (null == r) return t;
-                            let i = (0, f.c)(n, r);
-                            return t + ', '.concat(null == i ? void 0 : i.headerText);
+                            if (null == i) return t;
+                            let r = (0, f.c)(n, i);
+                            return t + ', '.concat(null == r ? void 0 : r.headerText);
                         }, '');
-                        return (0, r.jsx)(
-                            a.k5B,
+                        return (0, i.jsx)(
+                            l.k5B,
                             {
                                 id: e.id,
                                 label: e.name,
-                                subtext: (0, r.jsx)(a.Text, {
+                                subtext: (0, i.jsx)(l.Text, {
                                     color: 'text-muted',
                                     className: O.actionTextHeader,
                                     variant: 'text-xs/normal',
@@ -142,33 +142,33 @@ function v(e, t) {
                                 }),
                                 group: 'automod-rule-selection',
                                 checked: !1,
-                                disabled: v,
-                                action: () => R(e)
+                                disabled: j,
+                                action: () => k(e)
                             },
                             e.id
                         );
                     }),
                     w &&
-                        (0, r.jsxs)(r.Fragment, {
+                        (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, r.jsx)(a.Clw, {}),
-                                (0, r.jsx)(a.sNh, {
+                                (0, i.jsx)(l.Clw, {}),
+                                (0, i.jsx)(l.sNh, {
                                     id: 'add-another-rule',
-                                    label: p.NW.string(p.t['0K5jDA']),
-                                    action: L,
-                                    disabled: v
+                                    label: p.intl.string(p.t['0K5jDA']),
+                                    action: R,
+                                    disabled: j
                                 })
                             ]
                         })
                 ]
             })),
-        (0, r.jsx)(a.sNh, {
+        (0, i.jsx)(l.sNh, {
             id: 'guild-automod-add-selection',
-            label: p.NW.formatToPlainString(p.t.Kkjv1t, { keywordCount: W }),
+            label: p.intl.formatToPlainString(p.t.Kkjv1t, { keywordCount: L }),
             onFocus: () => {
-                _ || (Z(!0), x());
+                Z || (N(!0), x());
             },
-            children: k
+            children: G
         })
     );
 }

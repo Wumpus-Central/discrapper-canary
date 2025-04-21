@@ -10,32 +10,32 @@ var s = t(200651),
     d = t(23525);
 let f = function (e) {
     let { onClose: o, onComplete: t, onCancel: n, transitionState: f, webviewUrl: u, useV1: x = !1 } = e,
-        N = a.useCallback(() => {
+        h = a.useCallback(() => {
             t(), o();
         }, [t, o]),
-        h = a.useCallback(() => {
-            (0, c.nfh)(i.z) && N();
-        }, [N]);
-    (0, r.F5)(h);
-    let m = a.useCallback(
+        m = a.useCallback(() => {
+            (0, c.nfh)(i.z) && h();
+        }, [h]);
+    (0, r.F5)(m);
+    let z = a.useCallback(
         (e) => {
             if ('' !== u && 'string' == typeof e.data)
                 try {
                     var o = JSON.parse(e.data);
-                    'AGE_CHECK_COMPLETE' === o.status && N();
+                    'AGE_CHECK_COMPLETE' === o.status && h();
                 } catch (e) {}
         },
-        [u, N]
+        [u, h]
     );
     return (
         a.useEffect(
             () => (
-                window.addEventListener('message', m),
+                window.addEventListener('message', z),
                 () => {
-                    window.removeEventListener('message', m);
+                    window.removeEventListener('message', z);
                 }
             ),
-            [m]
+            [z]
         ),
         (0, s.jsxs)(c.Y0X, {
             transitionState: f,
@@ -48,7 +48,7 @@ let f = function (e) {
                         x &&
                             (0, s.jsx)(c.X6q, {
                                 variant: 'heading-xl/bold',
-                                children: k.NW.string(k.t.tYNaXF)
+                                children: k.intl.string(k.t.tYNaXF)
                             }),
                         (0, s.jsx)('iframe', {
                             id: 'frame',
@@ -65,7 +65,7 @@ let f = function (e) {
                               look: c.zxk.Looks.BLANK,
                               onClick: o,
                               className: d.cancelButton,
-                              children: k.NW.string(k.t['4gTnU1'])
+                              children: k.intl.string(k.t['4gTnU1'])
                           })
                         : (0, s.jsxs)('div', {
                               className: d.footer,
@@ -76,7 +76,7 @@ let f = function (e) {
                                       onClick: o,
                                       size: c.zxk.Sizes.SMALL,
                                       className: d.footerButton,
-                                      children: k.NW.string(k.t.fjKFaW)
+                                      children: k.intl.string(k.t.fjKFaW)
                                   }),
                                   (0, s.jsx)(c.zxk, {
                                       color: c.zxk.Colors.TRANSPARENT,
@@ -84,7 +84,7 @@ let f = function (e) {
                                       size: c.zxk.Sizes.SMALL,
                                       onClick: n,
                                       className: d.footerButton,
-                                      children: k.NW.string(k.t['4gTnU1'])
+                                      children: k.intl.string(k.t['4gTnU1'])
                                   })
                               ]
                           })

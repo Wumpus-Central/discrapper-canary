@@ -17,40 +17,40 @@ var r = n(200651),
     x = n(408942);
 function j(e) {
     let t,
-        { guild: n, channel: j, customWebhooks: O, editedWebhook: N, selectableWebhookChannels: y, refToScroller: v, errors: _, canNavigate: C } = e,
+        { guild: n, channel: j, customWebhooks: O, editedWebhook: y, selectableWebhookChannels: v, refToScroller: _, errors: C, canNavigate: N } = e,
         I = (0, d.ZP)(),
         [S, E] = i.useState(null),
         [P, w] = i.useState(null);
     if (null != j) t = j;
     else {
-        let e = Object.values(y);
+        let e = Object.values(v);
         t = e.length > 0 ? e[0] : null;
     }
     let T = i.useCallback(async () => {
-        if (C() && null !== t) {
+        if (N() && null !== t) {
             let e = await s.Z.create(n.id, t.id).catch((e) => {
                 let { body: t, status: n } = e;
                 return (
                     t && t.code === b.evJ.TOO_MANY_WEBHOOKS
                         ? a.Z.show({
-                              title: g.NW.string(g.t.cCqscX),
-                              body: g.NW.string(g.t['w+QZoa'])
+                              title: g.intl.string(g.t.cCqscX),
+                              body: g.intl.string(g.t['w+QZoa'])
                           })
                         : 429 === n
                           ? a.Z.show({
-                                title: g.NW.string(g.t.cCqscX),
-                                body: g.NW.string(g.t['YBM+UV'])
+                                title: g.intl.string(g.t.cCqscX),
+                                body: g.intl.string(g.t['YBM+UV'])
                             })
                           : a.Z.show({
-                                title: g.NW.string(g.t.cCqscX),
-                                body: g.NW.string(g.t['/4TwKS'])
+                                title: g.intl.string(g.t.cCqscX),
+                                body: g.intl.string(g.t['/4TwKS'])
                             }),
                     null
                 );
             });
             null != e && (w(e.id), E(e));
         }
-    }, [C, t, n]);
+    }, [N, t, n]);
     (0, c.ZP)(() => {
         0 === O.length && T();
     });
@@ -59,7 +59,7 @@ function j(e) {
         children: [
             (0, r.jsx)(o.R94, {
                 type: o.geA.DESCRIPTION,
-                children: g.NW.format(g.t.WL0d0d, {
+                children: g.intl.format(g.t.WL0d0d, {
                     helpdeskArticle: p.Z.getArticleURL(b.BhN.WEBHOOKS),
                     developersArticle: b.EYA.API_DOCS_WEBHOOKS
                 })
@@ -73,15 +73,15 @@ function j(e) {
                               size: o.zxk.Sizes.SMALL,
                               disabled: !Z,
                               onClick: T,
-                              children: g.NW.string(g.t['nrO/HB'])
+                              children: g.intl.string(g.t['nrO/HB'])
                           }),
                           (0, r.jsx)(m.Z, {
                               webhooks: O,
-                              editedWebhook: N,
-                              selectableWebhookChannels: y,
+                              editedWebhook: y,
+                              selectableWebhookChannels: v,
                               lastCreatedWebhookId: null == S ? void 0 : S.id,
-                              errors: _,
-                              canNavigate: C
+                              errors: C,
+                              canNavigate: N
                           })
                       ]
                   })
@@ -98,13 +98,13 @@ function j(e) {
                               }),
                               (0, r.jsx)(o.X6q, {
                                   variant: 'heading-md/semibold',
-                                  children: g.NW.string(g.t.LzmsWl)
+                                  children: g.intl.string(g.t.LzmsWl)
                               }),
                               (0, r.jsx)(o.zxk, {
                                   className: f.emptyStateButton,
                                   disabled: !t,
                                   onClick: n,
-                                  children: g.NW.string(g.t.lOQqJC)
+                                  children: g.intl.string(g.t.lOQqJC)
                               })
                           ]
                       });

@@ -1,8 +1,8 @@
 n.d(t, { U: () => s });
-var r = n(585483),
-    i = n(981631);
+var i = n(585483),
+    r = n(981631);
 let s = {
     binds: ['mod+s'],
     comboKeysBindGlobal: !0,
-    action: () => (r.S.dispatchToLastSubscribed(i.CkL.TOGGLE_STICKER_PICKER), !1)
+    action: () => (i.S.dispatchToLastSubscribed(r.CkL.TOGGLE_STICKER_PICKER), !1)
 };

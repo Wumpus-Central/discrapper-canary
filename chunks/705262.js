@@ -1,5 +1,5 @@
 n.d(t, {
-    Yk: () => W,
+    Yk: () => Y,
     ZP: () => ee,
     yH: () => V
 }),
@@ -29,8 +29,8 @@ var r = n(200651),
     I = n(740492),
     S = n(626135),
     T = n(238302),
-    N = n(514361),
-    A = n(583901),
+    A = n(514361),
+    N = n(583901),
     C = n(469115),
     R = n(981631),
     P = n(474936),
@@ -119,7 +119,7 @@ let Z = Object.freeze({
         SETTINGS: D.fy.INFREQUENT_USER_ACTION
     }),
     H = i.createContext({}),
-    W = (e) => {
+    Y = (e) => {
         let { isPersisted: t, themeName: n, analyticsLocations: r } = e;
         S.default.track(R.rMx.CLIENT_THEME_UPDATED, {
             feature_name: P.QP.CLIENT_THEME,
@@ -128,7 +128,7 @@ let Z = Object.freeze({
             location_stack: r
         });
     },
-    Y = (e) => {
+    W = (e) => {
         let { type: t, isPreview: n, isCoachmark: i } = e,
             a = (0, m.Q3)('GradientSelectorsTitle'),
             { enabled: o } = b.Z.useExperiment(
@@ -151,18 +151,18 @@ let Z = Object.freeze({
                         isCoachmark: !0,
                         isPreview: !0
                     },
-                    () => x.NW.string(x.t.D29k19)
+                    () => x.intl.string(x.t.D29k19)
                 )
                 .with(
                     {
                         type: 'EDITOR',
                         isCoachmark: !0
                     },
-                    () => x.NW.string(x.t['8+vbqa'])
+                    () => x.intl.string(x.t['8+vbqa'])
                 )
-                .with({ appearanceUpsellExperimentEnabled: !0 }, () => x.NW.string(x.t.Ksh3io))
-                .with({ isVisualRefreshEnabled: !0 }, () => x.NW.string(x.t.hjV0fX))
-                .otherwise(() => x.NW.string(x.t.OCOOiI));
+                .with({ appearanceUpsellExperimentEnabled: !0 }, () => x.intl.string(x.t.Ksh3io))
+                .with({ isVisualRefreshEnabled: !0 }, () => x.intl.string(x.t.hjV0fX))
+                .otherwise(() => x.intl.string(x.t.OCOOiI));
         return (0, r.jsxs)('div', {
             className: M.title,
             children: [
@@ -198,24 +198,24 @@ let Z = Object.freeze({
                     type: 'EDITOR',
                     isPreview: !0
                 },
-                () => x.NW.format(x.t.G8yQXl, { onPremiumClick: () => g.z })
+                () => x.intl.format(x.t.G8yQXl, { onPremiumClick: () => g.z })
             )
             .with(
                 {
                     type: 'EDITOR',
                     isCoachmark: !0
                 },
-                () => x.NW.string(x.t.jmZiNj)
+                () => x.intl.string(x.t.jmZiNj)
             )
             .with(
                 {
                     type: 'EDITOR',
                     isPreview: !1
                 },
-                () => x.NW.string(x.t.dqDFwc)
+                () => x.intl.string(x.t.dqDFwc)
             )
-            .with({ isPreview: !0 }, () => x.NW.format(x.t.DWIjJy, { onPremiumClick: () => g.z }))
-            .otherwise(() => x.NW.string(x.t['np0X/v']));
+            .with({ isPreview: !0 }, () => x.intl.format(x.t.DWIjJy, { onPremiumClick: () => g.z }))
+            .otherwise(() => x.intl.string(x.t['np0X/v']));
         return c
             ? (0, r.jsxs)('div', {
                   className: M.description,
@@ -227,7 +227,7 @@ let Z = Object.freeze({
                       }),
                       (0, r.jsx)(u.X6q, {
                           variant: 'text-sm/normal',
-                          children: x.NW.format(x.t.x2dQxM, {
+                          children: x.intl.format(x.t.x2dQxM, {
                               onClick: () => {
                                   (0, g.$)();
                               }
@@ -245,13 +245,13 @@ let Z = Object.freeze({
         var t, n;
         let { renderCTAButtons: a, isCoachmark: o } = e,
             { type: s } = i.useContext(H),
-            [c] = (0, l.Wu)([N.Z], () => [N.Z.isPreview]),
+            [c] = (0, l.Wu)([A.Z], () => [A.Z.isPreview]),
             u = (null == (n = (0, E.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === P.Si.TIER_2;
         return 'EDITOR' === s && c && u
             ? (0, r.jsx)(y.ZP, {
                   type: P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                   subscriptionTier: P.Si.TIER_2,
-                  children: x.NW.format(x.t.G8yQXl, { onPremiumClick: () => g.z })
+                  children: x.intl.format(x.t.G8yQXl, { onPremiumClick: () => g.z })
               })
             : (0, r.jsxs)('div', {
                   className: M.header,
@@ -259,7 +259,7 @@ let Z = Object.freeze({
                       (0, r.jsxs)('div', {
                           className: M.headings,
                           children: [
-                              (0, r.jsx)(Y, {
+                              (0, r.jsx)(W, {
                                   type: s,
                                   isPreview: c,
                                   isCoachmark: o
@@ -279,9 +279,9 @@ let Z = Object.freeze({
         let { disabled: t } = e,
             { type: a, delay: o } = i.useContext(H),
             { analyticsLocations: s } = (0, p.ZP)(_.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [h, m] = (0, l.Wu)([N.Z], () => {
+            [h, m] = (0, l.Wu)([A.Z], () => {
                 var e;
-                return [N.Z.isPreview, null == (e = N.Z.gradientPreset) ? void 0 : e.id];
+                return [A.Z.isPreview, null == (e = A.Z.gradientPreset) ? void 0 : e.id];
             }),
             [g, E] = i.useState(!1),
             [y, v] = i.useState(-1),
@@ -293,7 +293,7 @@ let Z = Object.freeze({
             S = (e, t) => {
                 if (
                     ((0, T.zO)(e.id),
-                    W({
+                    Y({
                         isPersisted: !h,
                         analyticsLocations: s,
                         themeName: c.Us[e.id]
@@ -349,7 +349,7 @@ let Z = Object.freeze({
                 return (0, r.jsxs)('div', {
                     className: M.easterEggSelection,
                     children: [
-                        (0, r.jsx)(A.DR, {
+                        (0, r.jsx)(N.DR, {
                             preset: e,
                             isSelected: m === c.Us.EASTER_EGG,
                             onSelect: () => S(e)
@@ -369,7 +369,7 @@ let Z = Object.freeze({
                     return t !== c.Us.EASTER_EGG;
                 }).map((e, n) =>
                     (0, r.jsx)(
-                        A.DR,
+                        N.DR,
                         {
                             preset: e,
                             isSelected: m === e.id,
@@ -406,10 +406,10 @@ let Z = Object.freeze({
         let { systemSelectorFirst: t, hideSystemSelector: n = !1 } = e,
             { delay: a } = i.useContext(H),
             { analyticsLocations: o } = (0, p.ZP)(_.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [s, c, u] = (0, l.Wu)([O.Z, I.ZP, N.Z], () => [O.Z.theme, null == N.Z.gradientPreset, I.ZP.useSystemTheme === w.KW.ON]),
+            [s, c, u] = (0, l.Wu)([O.Z, I.ZP, A.Z], () => [O.Z.theme, null == A.Z.gradientPreset, I.ZP.useSystemTheme === w.KW.ON]),
             f = (e) => {
                 (0, T.xs)(),
-                    W({
+                    Y({
                         isPersisted: !0,
                         analyticsLocations: o,
                         themeName: 'default '.concat(e)
@@ -421,17 +421,17 @@ let Z = Object.freeze({
             children: [
                 !n &&
                     t &&
-                    (0, r.jsx)(A.bD, {
+                    (0, r.jsx)(N.bD, {
                         theme: 'system',
                         isSelected: c && u,
                         onSelect: () => f('system')
                     }),
-                (0, r.jsx)(A.bD, {
+                (0, r.jsx)(N.bD, {
                     theme: L.BR.LIGHT,
                     isSelected: c && !u && s === L.BR.LIGHT,
                     onSelect: () => f(L.BR.LIGHT)
                 }),
-                (0, r.jsx)(A.bD, {
+                (0, r.jsx)(N.bD, {
                     theme: L.BR.DARK,
                     isSelected: c && !u && s === L.BR.DARK,
                     onSelect: () => f(L.BR.DARK)
@@ -439,12 +439,12 @@ let Z = Object.freeze({
                 h &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(A.bD, {
+                            (0, r.jsx)(N.bD, {
                                 theme: L.BR.DARKER,
                                 isSelected: c && !u && s === L.BR.DARKER,
                                 onSelect: () => f(L.BR.DARKER)
                             }),
-                            (0, r.jsx)(A.bD, {
+                            (0, r.jsx)(N.bD, {
                                 theme: L.BR.MIDNIGHT,
                                 isSelected: c && !u && s === L.BR.MIDNIGHT,
                                 onSelect: () => f(L.BR.MIDNIGHT)
@@ -453,7 +453,7 @@ let Z = Object.freeze({
                     }),
                 !n &&
                     !t &&
-                    (0, r.jsx)(A.bD, {
+                    (0, r.jsx)(N.bD, {
                         theme: 'system',
                         isSelected: c && u,
                         onSelect: () => f('system')
@@ -476,7 +476,7 @@ let Z = Object.freeze({
                     (0, r.jsx)(u.X6q, {
                         className: M.upsellText,
                         variant: 'heading-sm/semibold',
-                        children: x.NW.string(x.t.POSLGR)
+                        children: x.intl.string(x.t.POSLGR)
                     }),
                 (0, r.jsxs)('div', {
                     className: o()(M.presets, { [M.presetsJustify]: t }),

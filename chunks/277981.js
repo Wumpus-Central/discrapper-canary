@@ -106,7 +106,7 @@ let S = {
                 s = c.commands === m.L8.OLD_BUILT_INS ? h : null != (I = null == (v = d.Z.getActiveCommand(o.id)) ? void 0 : v.integrationTitle) ? I : h,
                 l =
                     g.length > 0 && null != s
-                        ? b.NW.format(b.t['3njXz8'], {
+                        ? b.intl.format(b.t['3njXz8'], {
                               query: g,
                               command: s
                           })

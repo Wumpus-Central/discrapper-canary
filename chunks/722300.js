@@ -12,7 +12,7 @@ function d(e) {
     let { name: t, onRetry: n } = e,
         d = (0, a.dQu)(i.Z.colors.BG_BASE_TERTIARY),
         f = (0, l.d)(d.hex()),
-        _ = null != t ? t : c.NW.string(c.t.DmIUGB);
+        _ = null != t ? t : c.intl.string(c.t.DmIUGB);
     return (0, r.jsxs)('div', {
         className: u.container,
         children: [
@@ -54,7 +54,7 @@ function d(e) {
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-warning',
-                                children: c.NW.string(c.t.tmGHjY)
+                                children: c.intl.string(c.t.tmGHjY)
                             })
                         ]
                     })

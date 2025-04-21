@@ -18,7 +18,7 @@ function f(e, t) {
     return e.isGuildVocal() && n && null != b && !j
         ? (0, r.jsx)(l.sN, {
               id: 'join-muted-custom-join-sound',
-              label: Z.NW.string(Z.t.saLMWV),
+              label: Z.intl.string(Z.t.saLMWV),
               action: () => {
                   (0, c.Db)(e.id), o.default.selectVoiceChannel(e.id);
               }

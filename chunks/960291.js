@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
-var a = n(120356),
-    l = n.n(a),
+var l = n(120356),
+    a = n.n(l),
     i = n(53691),
     s = n(981631),
     o = n(388032),
@@ -13,20 +13,20 @@ function u(e) {
             if (null == e) return {};
             var n,
                 r,
-                a = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        a = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
-                    return a;
+                        l = {},
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return a;
+            return l;
         })(e, ['className']);
     return (0, r.jsx)(
         i.p,
@@ -56,13 +56,13 @@ function u(e) {
             return e;
         })(
             {
-                text: o.NW.string(o.t['2ZhEh4']),
-                button: o.NW.string(o.t.pj0XBA),
+                text: o.intl.string(o.t['2ZhEh4']),
+                button: o.intl.string(o.t.pj0XBA),
                 buttonAnalyticsObject: {
                     section: s.jXE.USER_PROFILE,
                     object: s.qAy.RECENT_AVATARS_UPSELL
                 },
-                className: l()(c.container, t)
+                className: a()(c.container, t)
             },
             n
         )

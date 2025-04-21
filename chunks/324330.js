@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(392711),
-    s = n(442837),
-    l = n(481060),
+    l = n(442837),
+    s = n(481060),
     a = n(241559),
     o = n(527379),
     c = n(313364),
@@ -17,19 +17,19 @@ var i = n(392711),
     p = n(953592);
 function h() {
     var e;
-    let t = (0, s.e7)([u.Z], () => u.Z.getProps().guild, []),
+    let t = (0, l.e7)([u.Z], () => u.Z.getProps().guild, []),
         n = null != (e = null == t ? void 0 : t.isCommunity()) && e,
         i = null == t ? void 0 : t.hasFeature(m.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         a = n || i;
-    return (0, r.jsxs)(l.P3F, {
+    return (0, r.jsxs)(s.P3F, {
         onClick: (e) => {
             null != t && (a ? (e.preventDefault(), d.Z.close(), (0, o._X)(t.id)) : d.Z.open(t.id, m.pNK.MEMBERS));
         },
         className: p.rowContainer,
         children: [
-            (0, r.jsx)('div', { children: g.NW.string(g.t['9Oq93t']) }),
+            (0, r.jsx)('div', { children: g.intl.string(g.t['9Oq93t']) }),
             a &&
-                (0, r.jsx)(l.rgF, {
+                (0, r.jsx)(s.rgF, {
                     size: 'custom',
                     color: 'currentColor',
                     className: p.linkIcon,
@@ -41,7 +41,7 @@ function h() {
 }
 function f() {
     var e;
-    let { guild: t } = (0, s.e7)([u.Z], () => u.Z.getProps(), [], i.isEqual),
+    let { guild: t } = (0, l.e7)([u.Z], () => u.Z.getProps(), [], i.isEqual),
         n = null != (e = null == t ? void 0 : t.id) ? e : m.lds;
     return (0, a.n2)(n) ? (0, r.jsx)(c.Z, { guildId: n }) : null;
 }

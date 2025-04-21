@@ -1,15 +1,15 @@
-n.d(t, { Z: () => l }), n(388685);
-var r = n(284539),
-    i = n(477839),
+n.d(t, { Z: () => a }), n(388685);
+var i = n(284539),
+    r = n(477839),
     s = n(771382);
-let a = {
-    [i.Vx.DEFAULT]: s.default,
-    [i.Vx.CAT]: s.cat,
-    [i.Vx.SWORD]: s.sword,
-    [i.Vx.PIZZA]: s.pizza
+let l = {
+    [r.Vx.DEFAULT]: s.default,
+    [r.Vx.CAT]: s.cat,
+    [r.Vx.SWORD]: s.sword,
+    [r.Vx.PIZZA]: s.pizza
 };
-function l() {
+function a() {
     var e;
-    let [t] = (0, r.Z)(i.yN.CURSORS);
-    return a[null != (e = t.selectedCursor) ? e : i.Vx.DEFAULT];
+    let [t] = (0, i.Z)(r.yN.CURSORS);
+    return l[null != (e = t.selectedCursor) ? e : r.Vx.DEFAULT];
 }

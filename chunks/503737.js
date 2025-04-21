@@ -53,9 +53,9 @@ class p extends s.Z {
                           o.default,
                           u(
                               {
-                                  title: c.NW.formatToPlainString(c.t['2tN7io'], { name: t.name }),
-                                  body: c.NW.string(c.t.MAxtkp),
-                                  confirmText: c.NW.string(c.t.BddRzc)
+                                  title: c.intl.formatToPlainString(c.t['2tN7io'], { name: t.name }),
+                                  body: c.intl.string(c.t.MAxtkp),
+                                  confirmText: c.intl.string(c.t.BddRzc)
                               },
                               e
                           )

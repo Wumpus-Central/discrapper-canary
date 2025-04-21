@@ -54,8 +54,8 @@ let O = (e) => {
             O = i.useRef(null),
             [I, S] = i.useState([]);
         (0, g.Z)(E);
-        let [T, N] = i.useState(0),
-            [A, C] = i.useState(0),
+        let [T, A] = i.useState(0),
+            [N, C] = i.useState(0),
             { accessibilityLabel: R } = E,
             [P, w] = i.useState(-v),
             {
@@ -79,7 +79,7 @@ let O = (e) => {
                     let r = n.start + n.duration;
                     r > e && (e = r), n.loop && n.start < t && (t = n.start);
                 }),
-                    N(t),
+                    A(t),
                     C(e);
             }, [C, I]);
         let [k, j] = i.useState(!1);
@@ -122,7 +122,7 @@ let O = (e) => {
                                 setHasPlayedThrough: j,
                                 urlQueryString: m,
                                 maxLoops: n,
-                                loopEnd: A,
+                                loopEnd: N,
                                 bannerAdjustment: t
                             },
                             e.src + i

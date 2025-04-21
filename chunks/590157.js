@@ -27,12 +27,12 @@ function g(e) {
                           size: 'md',
                           color: 'currentColor'
                       }),
-                      title: m.NW.string(m.t.RGoJND)
+                      title: m.intl.string(m.t.RGoJND)
                   }),
                   (0, r.jsx)(o.Text, {
                       color: 'text-muted',
                       variant: 'text-sm/normal',
-                      children: m.NW.string(m.t.sCkD3d)
+                      children: m.intl.string(m.t.sCkD3d)
                   }),
                   (0, r.jsx)(f, {
                       guildId: d,

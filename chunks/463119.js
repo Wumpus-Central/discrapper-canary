@@ -17,12 +17,12 @@ var r = n(200651),
     _ = n(856555),
     E = n(153066),
     O = n(335131),
-    N = n(744112),
-    y = n(267097),
-    I = n(364111),
-    v = n(594351),
-    C = n(699733),
-    S = n(681435),
+    y = n(744112),
+    I = n(267097),
+    v = n(364111),
+    C = n(594351),
+    S = n(699733),
+    N = n(681435),
     T = n(81136),
     P = n(302800),
     j = n(215023),
@@ -97,13 +97,13 @@ let k = (e) => {
         return (0, r.jsx)(s.IGR, {
             className: L.newBadge,
             color: null != t ? t : m.Z.STATUS_DANGER_BACKGROUND,
-            text: x.NW.string(x.t.y2b7CA)
+            text: x.intl.string(x.t.y2b7CA)
         });
     },
     M = () => {
         let { noCache: e, includeUnpublished: t } = (0, T.Z)();
         return (
-            (0, I.E)(j.AW.HOME, {
+            (0, v.E)(j.AW.HOME, {
                 noCache: e,
                 includeUnpublished: t,
                 includeBundles: !0
@@ -117,8 +117,8 @@ let k = (e) => {
         let b = (0, l.JA)('shop'),
             _ = h.Z.HOME_PAGE_SHOP_TAB,
             { analyticsLocations: E } = (0, f.ZP)(_),
-            [N, y] = i.useState(!1),
-            I = i.useCallback(() => {
+            [y, I] = i.useState(!1),
+            v = i.useCallback(() => {
                 void 0 !== o && o(),
                     void 0 !== c &&
                         (0, O.mK)({
@@ -127,25 +127,25 @@ let k = (e) => {
                             analyticsLocations: E,
                             analyticsSource: _
                         }),
-                    y(!0),
+                    I(!0),
                     (0, O.Sm)({
                         analyticsSource: _,
                         analyticsLocations: E
                     });
-            }, [_, E, o, y, c]),
-            v = A.Z5c.COLLECTIBLES_SHOP;
+            }, [_, E, o, I, c]),
+            C = A.Z5c.COLLECTIBLES_SHOP;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                N && (0, r.jsx)(M, {}),
+                y && (0, r.jsx)(M, {}),
                 (0, r.jsx)(
                     u.Qj,
                     R(
                         w(
                             {
                                 selected: t,
-                                route: v,
+                                route: C,
                                 icon: null != a ? a : s.EOn,
-                                text: x.NW.string(x.t.pWG4zc),
+                                text: x.intl.string(x.t.pWG4zc),
                                 locationState: n
                             },
                             b,
@@ -154,7 +154,7 @@ let k = (e) => {
                         {
                             onMouseEnter: d,
                             onMouseLeave: p,
-                            onClick: I,
+                            onClick: v,
                             children: g
                         }
                     )
@@ -163,7 +163,7 @@ let k = (e) => {
         });
     },
     G = (e) => (0, r.jsx)(U, R(w({}, e), { children: (0, r.jsx)(k, {}) })),
-    W = i.memo(function (e) {
+    V = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
             a = null != i ? (0, g.Z)(i, s.EFr.SIZE_80, !l) : void 0,
@@ -201,7 +201,7 @@ let k = (e) => {
             ]
         });
     }),
-    V = (e) => {
+    B = (e) => {
         let t, n;
         var l,
             c,
@@ -213,42 +213,42 @@ let k = (e) => {
             b,
             _,
             O,
-            N,
             y,
-            { displayOptions: I } = e,
-            v = D(e, ['displayOptions']);
-        let C = (0, a.e7)([p.Z], () => p.Z.useReducedMotion),
-            [S, T] = i.useState(0),
+            I,
+            { displayOptions: v } = e,
+            C = D(e, ['displayOptions']);
+        let S = (0, a.e7)([p.Z], () => p.Z.useReducedMotion),
+            [N, T] = i.useState(0),
             [P, j] = i.useState(!1),
             A = (0, d.ZP)(),
             Z = (0, o.wj)(A);
-        P ? (Z ? ((t = null == (l = I.entryPointBackgroundAssets) ? void 0 : l.srcDarkHovered), (n = null == (u = I.entrypointBackgroundStyle) || null == (c = u.hovered) ? void 0 : c.dark)) : ((t = null == (h = I.entryPointBackgroundAssets) ? void 0 : h.srcLightHovered), (n = null == (g = I.entrypointBackgroundStyle) || null == (f = g.hovered) ? void 0 : f.light))) : Z ? ((t = null == (m = I.entryPointBackgroundAssets) ? void 0 : m.srcDark), (n = null == (_ = I.entrypointBackgroundStyle) || null == (b = _.resting) ? void 0 : b.dark)) : ((t = null == (O = I.entryPointBackgroundAssets) ? void 0 : O.srcLight), (n = null == (y = I.entrypointBackgroundStyle) || null == (N = y.resting) ? void 0 : N.light));
+        P ? (Z ? ((t = null == (l = v.entryPointBackgroundAssets) ? void 0 : l.srcDarkHovered), (n = null == (u = v.entrypointBackgroundStyle) || null == (c = u.hovered) ? void 0 : c.dark)) : ((t = null == (h = v.entryPointBackgroundAssets) ? void 0 : h.srcLightHovered), (n = null == (g = v.entrypointBackgroundStyle) || null == (f = g.hovered) ? void 0 : f.light))) : Z ? ((t = null == (m = v.entryPointBackgroundAssets) ? void 0 : m.srcDark), (n = null == (_ = v.entrypointBackgroundStyle) || null == (b = _.resting) ? void 0 : b.dark)) : ((t = null == (O = v.entryPointBackgroundAssets) ? void 0 : O.srcLight), (n = null == (I = v.entrypointBackgroundStyle) || null == (y = I.resting) ? void 0 : y.light));
         let M = i.useCallback(
                 (e) => {
-                    T((e) => (e + 1) % I.assetIds.length), j(!0), null == e || e();
+                    T((e) => (e + 1) % v.assetIds.length), j(!0), null == e || e();
                 },
-                [I.assetIds.length]
+                [v.assetIds.length]
             ),
             G = i.useCallback((e) => {
                 j(!1), null == e || e();
             }, []),
-            V = I.title();
+            B = v.title();
         return (0, r.jsx)(s.ua7, {
-            text: (0, r.jsx)(W, {
-                displayOptions: I,
-                assetId: I.assetIds[S],
-                reducedMotion: C
+            text: (0, r.jsx)(V, {
+                displayOptions: v,
+                assetId: v.assetIds[N],
+                reducedMotion: S
             }),
             tooltipClassName: L.marketingBadgeTooltip,
             position: 'right',
             delay: 100,
             allowOverflow: !0,
             hideOnClick: !1,
-            'aria-label': 'string' == typeof V ? V : x.NW.string(x.t.rSXaxc),
+            'aria-label': 'string' == typeof B ? B : x.intl.string(x.t.rSXaxc),
             children: (e) =>
                 (0, r.jsxs)(
                     U,
-                    R(w(R(w({ className: null != I.entryPointClassName ? (0, E.l)(L, I.entryPointClassName) : void 0 }, v), { icon: I.entryPointIcon }), e), {
+                    R(w(R(w({ className: null != v.entryPointClassName ? (0, E.l)(L, v.entryPointClassName) : void 0 }, C), { icon: v.entryPointIcon }), e), {
                         onMouseEnter: () => M(e.onMouseEnter),
                         onMouseLeave: () => G(e.onMouseLeave),
                         children: [
@@ -264,13 +264,13 @@ let k = (e) => {
                                         'aria-hidden': !0
                                     })
                             }),
-                            (0, r.jsx)(k, { color: I.badgeColor })
+                            (0, r.jsx)(k, { color: v.badgeColor })
                         ]
                     })
                 )
         });
     },
-    B = (e) => {
+    H = (e) => {
         var { displayOptions: t } = e,
             n = D(e, ['displayOptions']);
         let l = i.useMemo(() => {
@@ -292,7 +292,7 @@ let k = (e) => {
             children: (e) => (0, r.jsx)(U, R(w({}, n, e), { children: (0, r.jsx)(k, { color: t.badgeColor }) }))
         });
     },
-    H = (e) => {
+    F = (e) => {
         var { listScrollerRef: t } = e,
             n = D(e, ['listScrollerRef']);
         let l = i.useRef(null),
@@ -322,8 +322,8 @@ let k = (e) => {
             )
         );
     },
-    F = (e) => {
-        let { shouldShowCoachmark: t, dismissCoachmark: n } = (0, C.Z)(),
+    z = (e) => {
+        let { shouldShowCoachmark: t, dismissCoachmark: n } = (0, S.Z)(),
             l = i.useRef(0);
         i.useLayoutEffect(() => {
             l.current += 1;
@@ -333,7 +333,7 @@ let k = (e) => {
             n(Z.L.PRIMARY), null == (t = e.onClick) || t.call(e);
         }, [n, e]);
         return (0, r.jsx)(s.yRy, {
-            renderPopout: () => (0, r.jsx)(v.Z, {}),
+            renderPopout: () => (0, r.jsx)(C.Z, {}),
             position: 'right',
             align: 'top',
             shouldShow: t,
@@ -352,13 +352,13 @@ let k = (e) => {
                 )
         });
     },
-    z = () => ((0, y.Z)(), null),
+    W = () => ((0, I.Z)(), null),
     Y = (e) => {
         let { selected: t, onClick: n, locationState: i, listItemRef: l, listScrollerRef: a } = e,
             { shouldShow: o } = (0, _.EQ)({}),
-            { shopButtonDisplayOptions: s, dismissShopButtonDC: c } = (0, S.Z)(),
-            u = (0, N.b)('Collectibles Shop Button'),
-            { shouldShowCoachmark: d } = (0, C.Z)(),
+            { shopButtonDisplayOptions: s, dismissShopButtonDC: c } = (0, N.Z)(),
+            u = (0, y.b)('Collectibles Shop Button'),
+            { shouldShowCoachmark: d } = (0, S.Z)(),
             p = {
                 selected: t,
                 locationState: i,
@@ -367,18 +367,18 @@ let k = (e) => {
                 },
                 listItemRef: l
             };
-        if (o) return (0, r.jsx)(H, R(w({}, p), { listScrollerRef: a }));
-        if (d) return (0, r.jsx)(F, w({}, p));
+        if (o) return (0, r.jsx)(F, R(w({}, p), { listScrollerRef: a }));
+        if (d) return (0, r.jsx)(z, w({}, p));
         if (null != s)
             switch (s.type) {
                 case P.k2.TOOLTIP:
-                    return (0, r.jsx)(B, R(w({}, p), { displayOptions: s }));
+                    return (0, r.jsx)(H, R(w({}, p), { displayOptions: s }));
                 case P.k2.COACHTIP:
-                    return (0, r.jsx)(V, R(w({}, p), { displayOptions: s }));
+                    return (0, r.jsx)(B, R(w({}, p), { displayOptions: s }));
                 case P.k2.BADGE:
                     return (0, r.jsx)(G, w({}, p));
             }
         return (0, r.jsxs)(r.Fragment, {
-            children: [u && (0, r.jsx)(z, {}), (0, r.jsx)(U, w({}, p))]
+            children: [u && (0, r.jsx)(W, {}), (0, r.jsx)(U, w({}, p))]
         });
     };

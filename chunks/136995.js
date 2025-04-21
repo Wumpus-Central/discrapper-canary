@@ -87,7 +87,7 @@ function y(e) {
         m = E(e, ['channel', 'centerButton', 'onCallJoined']);
     let { parentAnalyticsLocation: b } = (0, s.ZP)(),
         y = n ? d.d : d.Z,
-        v = t.isManaged() || !t.isPrivate() ? _.NW.string(_.t.S0W8Z2) : _.NW.string(_.t['0D/6R0']),
+        v = t.isManaged() || !t.isPrivate() ? _.intl.string(_.t.S0W8Z2) : _.intl.string(_.t['0D/6R0']),
         O = (0, c.Z)({ location: 'JoinCallButton' }),
         I = i.useCallback(() => {
             null == p || p(), (0, l.v)(b, l.d.JOIN_CALL), o.default.selectVoiceChannel(t.id);

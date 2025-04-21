@@ -1,41 +1,41 @@
 n.d(t, { a: () => s });
 var r = n(544891),
     l = n(570140),
-    o = n(706454),
-    a = n(70956),
-    i = n(844439),
+    i = n(706454),
+    o = n(70956),
+    a = n(844439),
     c = n(981631);
-let u = 10 * a.Z.Millis.MINUTE;
+let u = 10 * o.Z.Millis.MINUTE;
 async function s(e) {
-    let { channelId: t, location: n, withCommands: a } = e;
+    let { channelId: t, location: n, withCommands: o } = e;
     if (null == t) return;
     let s = Date.now(),
-        d = i.ZP.getFetchState({
+        d = a.ZP.getFetchState({
             location: n,
             channelId: t,
-            withCommands: a
+            withCommands: o
         }),
-        m = i.ZP.getLastFetchTimeMs({
+        m = a.ZP.getLastFetchTimeMs({
             location: n,
             channelId: t,
-            withCommands: a
+            withCommands: o
         });
-    if (d !== i.M.FETCHING && (null == m || !(m + u > s))) {
+    if (d !== a.M.FETCHING && (null == m || !(m + u > s))) {
         l.Z.dispatch({
             type: 'APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS',
             location: n,
             channelId: t,
-            withCommands: a
+            withCommands: o
         });
         try {
             var p;
             let e = await r.tn.get({
                 url: c.ANM.APP_RECOMMENDATIONS,
                 query: {
-                    locale: o.default.locale,
+                    locale: i.default.locale,
                     channel_id: t,
                     location: n,
-                    with_commands: a
+                    with_commands: o
                 },
                 rejectWithError: !1
             });
@@ -44,14 +44,14 @@ async function s(e) {
                 location: n,
                 channelId: t,
                 recommendations: null != (p = e.body) ? p : [],
-                withCommands: a
+                withCommands: o
             });
         } catch (e) {
             l.Z.dispatch({
                 type: 'APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_FAILURE',
                 location: n,
                 channelId: t,
-                withCommands: a
+                withCommands: o
             });
         }
     }

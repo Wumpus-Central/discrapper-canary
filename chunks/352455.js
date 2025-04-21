@@ -19,11 +19,11 @@ function f(e) {
             (0, r.jsx)(a.X6q, {
                 variant: 'heading-md/semibold',
                 className: h.header,
-                children: p.NW.string(p.t.HcbnMD)
+                children: p.intl.string(p.t.HcbnMD)
             }),
             (0, r.jsx)(a.Text, {
                 variant: 'text-sm/normal',
-                children: p.NW.format(p.t.NkFrzM, {
+                children: p.intl.format(p.t.NkFrzM, {
                     onPrivacyClick: () => {
                         s.Z.open(u.oAB.DATA_AND_PRIVACY);
                     }
@@ -35,14 +35,14 @@ function f(e) {
                     (0, r.jsx)(a.zxk, {
                         size: a.zxk.Sizes.SMALL,
                         onClick: () => (0, o.g)([u.pjP.PERSONALIZATION], []),
-                        children: p.NW.string(p.t.ebojgI)
+                        children: p.intl.string(p.t.ebojgI)
                     }),
                     (0, r.jsx)(a.zxk, {
                         color: a.zxk.Colors.PRIMARY,
                         size: a.zxk.Sizes.SMALL,
                         onClick: () => n(d.L.DISMISS),
                         look: a.zxk.Looks.LINK,
-                        children: p.NW.string(p.t.f3Pet7)
+                        children: p.intl.string(p.t.f3Pet7)
                     })
                 ]
             })

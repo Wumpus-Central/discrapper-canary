@@ -16,13 +16,13 @@ function a(e) {
     if (!(e >= 0))
         switch (-e) {
             case i.evJ.ENTITY_TOO_LARGE:
-                return l.NW.string(l.t.YbdEFB);
+                return l.intl.string(l.t.YbdEFB);
             case i.evJ.INVALID_SKU_ATTACHMENT_NO_ARCHIVES:
-                return l.NW.string(l.t.ZaXBoK);
+                return l.intl.string(l.t.ZaXBoK);
             case 1:
-                return l.NW.string(l.t.R0RpRU);
+                return l.intl.string(l.t.R0RpRU);
             default:
-                return l.NW.formatToPlainString(l.t.cYwlp6, { code: -e });
+                return l.intl.formatToPlainString(l.t.cYwlp6, { code: -e });
         }
 }
 function u(e) {
@@ -30,7 +30,7 @@ function u(e) {
     if (null != t && '' === t.name.trim()) {
         var n;
         return (
-            (n = l.NW.string(l.t['V0B/k5'])),
+            (n = l.intl.string(l.t['V0B/k5'])),
             new r.Hx({
                 status: 400,
                 body: {

@@ -161,7 +161,7 @@ function O(e, t, n, a) {
             });
         });
     return i.forwardRef(function (a, p) {
-        var { className: g, onScroll: O, onResize: I = null, onContentResize: S = null, dir: T = 'ltr', sections: N, sectionHeight: A, rowHeight: C, footerHeight: R = 0, sidebarHeight: P, listHeaderHeight: w = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: M, renderListHeader: k, stickyListHeader: j, wrapSection: U, getAnchorId: G, paddingTop: B, paddingBottom: F, fade: V = !1, customTheme: Z = !1, chunkSize: H, style: W, innerId: Y, innerRole: K, innerAriaLabel: z, innerAriaMultiselectable: q, innerAriaOrientation: Q, innerClassName: X, innerTag: J = 'div' } = a,
+        var { className: g, onScroll: O, onResize: I = null, onContentResize: S = null, dir: T = 'ltr', sections: A, sectionHeight: N, rowHeight: C, footerHeight: R = 0, sidebarHeight: P, listHeaderHeight: w = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: M, renderListHeader: k, stickyListHeader: j, wrapSection: U, getAnchorId: G, paddingTop: B, paddingBottom: F, fade: V = !1, customTheme: Z = !1, chunkSize: H, style: Y, innerId: W, innerRole: K, innerAriaLabel: z, innerAriaMultiselectable: q, innerAriaOrientation: Q, innerClassName: X, innerTag: J = 'div' } = a,
             $ = m(a, ['className', 'onScroll', 'onResize', 'onContentResize', 'dir', 'sections', 'sectionHeight', 'rowHeight', 'footerHeight', 'sidebarHeight', 'listHeaderHeight', 'renderSection', 'renderRow', 'renderFooter', 'renderSidebar', 'renderListHeader', 'stickyListHeader', 'wrapSection', 'getAnchorId', 'paddingTop', 'paddingBottom', 'fade', 'customTheme', 'chunkSize', 'style', 'innerId', 'innerRole', 'innerAriaLabel', 'innerAriaMultiselectable', 'innerAriaOrientation', 'innerClassName', 'innerTag']);
         let ee = i.useRef(null),
             et = i.useRef(null),
@@ -183,8 +183,8 @@ function O(e, t, n, a) {
                 forceUpdateOnChunkChange: ef,
                 anchor: e_
             } = (0, u.aU)({
-                sections: N,
-                sectionHeight: A,
+                sections: A,
+                sectionHeight: N,
                 rowHeight: C,
                 footerHeight: R,
                 sidebarHeight: P,
@@ -231,7 +231,7 @@ function O(e, t, n, a) {
                 listenerMap: l
             });
         let eb = E(ec),
-            ey = b(N);
+            ey = b(A);
         i.useImperativeHandle(
             p,
             () =>
@@ -282,7 +282,7 @@ function O(e, t, n, a) {
                                 [n]: Z,
                                 [d.scrolling]: en
                             }),
-                            style: (0, u.uT)(W)
+                            style: (0, u.uT)(Y)
                         },
                         $
                     ),
@@ -291,7 +291,7 @@ function O(e, t, n, a) {
                             i.useMemo(
                                 () =>
                                     (0, r.jsx)(J, {
-                                        id: Y,
+                                        id: W,
                                         role: K,
                                         'aria-label': z,
                                         'aria-multiselectable': q,
@@ -313,7 +313,7 @@ function O(e, t, n, a) {
                                             })
                                         })
                                     }),
-                                [J, Y, K, z, q, Q, el, X, ec, k, j, D, L, x, U, es]
+                                [J, W, K, z, q, Q, el, X, ec, k, j, D, L, x, U, es]
                             ),
                             i.useMemo(
                                 () =>

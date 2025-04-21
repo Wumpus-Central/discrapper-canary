@@ -1,9 +1,9 @@
 n.d(t, { Z: () => p }), n(388685);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(823379),
-    a = n(106976),
-    l = n(270144),
+    l = n(106976),
+    a = n(270144),
     o = n(301935),
     c = n(630656),
     d = n(10970),
@@ -11,24 +11,24 @@ var r = n(200651),
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
@@ -41,8 +41,8 @@ function g(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -53,70 +53,70 @@ function g(e, t) {
 }
 function p(e) {
     let { subscriptions: t, updateHeader: n } = e,
-        [p, h] = i.useState({ route: c.j.HOME }),
+        [p, h] = r.useState({ route: c.j.HOME }),
         { route: f } = p,
         b = () => {
             h({ route: c.j.HOME });
         },
         _ = (e) => {
-            h(m({ route: c.j.SWITCH_APP_PLANS }, e)), n(u.NW.string(u.t.VFqtkJ), b);
+            h(m({ route: c.j.SWITCH_APP_PLANS }, e)), n(u.intl.string(u.t.VFqtkJ), b);
         },
-        [N, x] = i.useState({});
-    i.useEffect(() => {
+        [x, E] = r.useState({});
+    r.useEffect(() => {
         for (let n of t) {
             var e;
             let t = null == (e = n.items[0]) ? void 0 : e.planId;
             null != t &&
-                (x((e) => g(m({}, e), { [n.id]: o.G.LOADING })),
-                (0, a.vY)(t)
+                (E((e) => g(m({}, e), { [n.id]: o.G.LOADING })),
+                (0, l.vY)(t)
                     .then(() => {
-                        x((e) => g(m({}, e), { [n.id]: o.G.DONE }));
+                        E((e) => g(m({}, e), { [n.id]: o.G.DONE }));
                     })
                     .catch(() => {
-                        x((e) => g(m({}, e), { [n.id]: o.G.ERROR }));
+                        E((e) => g(m({}, e), { [n.id]: o.G.ERROR }));
                     }));
         }
     }, [t]);
-    let { loadState: E } = (0, l.qz)(),
-        j = E !== l.jd.LOADED;
+    let { loadState: j } = (0, a.qz)(),
+        C = j !== a.jd.LOADED;
     switch (f) {
         case c.j.HOME:
-            return (0, r.jsx)(r.Fragment, {
+            return (0, i.jsx)(i.Fragment, {
                 children: t.map((e) => {
                     var t;
-                    return (0, r.jsx)(
+                    return (0, i.jsx)(
                         o.Z,
                         {
                             subscription: e,
                             navigateToSwitchPlan: _,
-                            loadingState: j ? o.G.LOADING : null != (t = N[e.id]) ? t : o.G.LOADING
+                            loadingState: C ? o.G.LOADING : null != (t = x[e.id]) ? t : o.G.LOADING
                         },
                         e.id
                     );
                 })
             });
         case c.j.SWITCH_APP_PLANS:
-            let { route: C } = p,
-                O = (function (e, t) {
+            let { route: O } = p,
+                S = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        i = (function (e, t) {
+                        i,
+                        r = (function (e, t) {
                             if (null == e) return {};
                             var n,
-                                r,
-                                i = {},
+                                i,
+                                r = {},
                                 s = Object.keys(e);
-                            for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                            return i;
+                            for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                            return r;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var s = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                        for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                     }
-                    return i;
+                    return r;
                 })(p, ['route']);
-            return (0, r.jsx)(d.Z, g(m({}, O), { navigateToHome: b }));
+            return (0, i.jsx)(d.Z, g(m({}, S), { navigateToHome: b }));
         default:
             (0, s.vE)(f);
     }

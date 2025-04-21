@@ -49,7 +49,7 @@ var r = n(260674),
     },
     h = {},
     m = function e(t, n, a, o, s, c, d, f, m, g, E, b, y, v, O, I, S, T) {
-        for (var N, A = t, C = T, R = 0, P = !1; void 0 !== (C = C.get(h)) && !P; ) {
+        for (var A, N = t, C = T, R = 0, P = !1; void 0 !== (C = C.get(h)) && !P; ) {
             var w = C.get(t);
             if (((R += 1), void 0 !== w))
                 if (w === R) throw RangeError('Cyclic object value');
@@ -58,40 +58,40 @@ var r = n(260674),
         }
         if (
             ('function' == typeof g
-                ? (A = g(n, A))
-                : A instanceof Date
-                  ? (A = y(A))
+                ? (N = g(n, N))
+                : N instanceof Date
+                  ? (N = y(N))
                   : 'comma' === a &&
-                    l(A) &&
-                    (A = i.maybeMap(A, function (e) {
+                    l(N) &&
+                    (N = i.maybeMap(N, function (e) {
                         return e instanceof Date ? y(e) : e;
                     })),
-            null === A)
+            null === N)
         ) {
             if (c) return m && !I ? m(n, _.encoder, S, 'key', v) : n;
-            A = '';
+            N = '';
         }
-        if (p(A) || i.isBuffer(A)) return m ? [O(I ? n : m(n, _.encoder, S, 'key', v)) + '=' + O(m(A, _.encoder, S, 'value', v))] : [O(n) + '=' + O(String(A))];
+        if (p(N) || i.isBuffer(N)) return m ? [O(I ? n : m(n, _.encoder, S, 'key', v)) + '=' + O(m(N, _.encoder, S, 'value', v))] : [O(n) + '=' + O(String(N))];
         var D = [];
-        if (void 0 === A) return D;
-        if ('comma' === a && l(A)) I && m && (A = i.maybeMap(A, m)), (N = [{ value: A.length > 0 ? A.join(',') || null : void 0 }]);
-        else if (l(g)) N = g;
+        if (void 0 === N) return D;
+        if ('comma' === a && l(N)) I && m && (N = i.maybeMap(N, m)), (A = [{ value: N.length > 0 ? N.join(',') || null : void 0 }]);
+        else if (l(g)) A = g;
         else {
-            var L = Object.keys(A);
-            N = E ? L.sort(E) : L;
+            var L = Object.keys(N);
+            A = E ? L.sort(E) : L;
         }
         var x = f ? String(n).replace(/\./g, '%2E') : String(n),
-            M = o && l(A) && 1 === A.length ? x + '[]' : x;
-        if (s && l(A) && 0 === A.length) return M + '[]';
-        for (var k = 0; k < N.length; ++k) {
-            var j = N[k],
-                U = 'object' == typeof j && j && void 0 !== j.value ? j.value : A[j];
+            M = o && l(N) && 1 === N.length ? x + '[]' : x;
+        if (s && l(N) && 0 === N.length) return M + '[]';
+        for (var k = 0; k < A.length; ++k) {
+            var j = A[k],
+                U = 'object' == typeof j && j && void 0 !== j.value ? j.value : N[j];
             if (!d || null !== U) {
                 var G = b && f ? String(j).replace(/\./g, '%2E') : String(j),
-                    B = l(A) ? ('function' == typeof a ? a(M, G) : M) : M + (b ? '.' + G : '[' + G + ']');
+                    B = l(N) ? ('function' == typeof a ? a(M, G) : M) : M + (b ? '.' + G : '[' + G + ']');
                 T.set(t, R);
                 var F = r();
-                F.set(h, T), u(D, e(U, B, a, o, s, c, d, f, 'comma' === a && I && l(A) ? null : m, g, E, b, y, v, O, I, S, F));
+                F.set(h, T), u(D, e(U, B, a, o, s, c, d, f, 'comma' === a && I && l(N) ? null : m, g, E, b, y, v, O, I, S, F));
             }
         }
         return D;

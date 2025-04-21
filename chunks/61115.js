@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => A,
+    C: () => N,
     default: () => T
 }),
     n(388685);
@@ -77,7 +77,7 @@ function T(e) {
     let { questId: t, survey: n, transitionState: a, onClose: o, onSubmit: f } = e,
         p = (0, _.B4)(t),
         [b, v] = i.useState(0),
-        [T, A] = (0, l.q_F)(() => ({
+        [T, N] = (0, l.q_F)(() => ({
             from: { width: '0%' },
             config: { duration: I }
         })),
@@ -94,7 +94,7 @@ function T(e) {
                     );
         },
         P = async (e) => {
-            1 === e && (await A({ width: '100%' }), o());
+            1 === e && (await N({ width: '100%' }), o());
         };
     return (
         (0, c.ZP)(() => {
@@ -142,7 +142,7 @@ function T(e) {
                                 className: g.modalContent,
                                 children: n.choices.map((e) =>
                                     (0, r.jsx)(
-                                        N,
+                                        A,
                                         {
                                             choice: e,
                                             onClick: R
@@ -166,12 +166,12 @@ function T(e) {
                                     }),
                                     (0, r.jsx)(l.X6q, {
                                         variant: 'heading-lg/semibold',
-                                        children: m.NW.string(m.t.KTjjrK)
+                                        children: m.intl.string(m.t.KTjjrK)
                                     }),
                                     (0, r.jsx)(l.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-muted',
-                                        children: m.NW.string(m.t.AvbrEB)
+                                        children: m.intl.string(m.t.AvbrEB)
                                     })
                                 ]
                             }),
@@ -181,7 +181,7 @@ function T(e) {
                                     children: [
                                         (0, r.jsx)(l.zxk, {
                                             onClick: o,
-                                            children: m.NW.string(m.t.cpT0Cg)
+                                            children: m.intl.string(m.t.cpT0Cg)
                                         }),
                                         (0, r.jsx)(s.animated.div, {
                                             className: g.progressOverlay,
@@ -197,7 +197,7 @@ function T(e) {
         })
     );
 }
-function N(e) {
+function A(e) {
     let { className: t, choice: n, onClick: i } = e;
     return (0, r.jsxs)(l.P3F, {
         className: o()(g.choiceContainer, t),
@@ -211,7 +211,7 @@ function N(e) {
         ]
     });
 }
-function A(e) {
+function N(e) {
     let t = !1;
     (0, l.ZDy)(
         async () => {

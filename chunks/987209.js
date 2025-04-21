@@ -26,7 +26,7 @@ function I(e) {
     let { isGift: t = !1, giftRecipient: n, giftMessage: f, giftStyle: h, giftingOrigin: v, children: O } = e,
         { selectedSkuId: I } = (0, p.JL)(),
         [S, T] = i.useState(n),
-        [N, A] = i.useState(),
+        [A, N] = i.useState(),
         [C, R] = i.useState(!1),
         P = (0, _.pO)(S),
         w = (0, l.TX)(),
@@ -36,11 +36,11 @@ function I(e) {
     let [x, M] = i.useState(L),
         k = (0, d.iE)(),
         [j, U] = i.useState(),
-        [G, B] = i.useState(t && (0, _.MY)(S) === _.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == f ? g.NW.string(g.t.ZkOo1d) : f),
+        [G, B] = i.useState(t && (0, _.MY)(S) === _.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == f ? g.intl.string(g.t.ZkOo1d) : f),
         [F, V] = i.useState(void 0),
         [Z, H] = i.useState(void 0),
-        W = (0, _.E5)(I, t),
-        [Y, K] = i.useState(!1),
+        Y = (0, _.E5)(I, t),
+        [W, K] = i.useState(!1),
         [z, q] = i.useState(!1),
         [Q, X] = i.useState(),
         J = i.useCallback(
@@ -48,7 +48,7 @@ function I(e) {
                 let { onSubscriptionConfirmation: t } = e;
                 return (
                     q(!0),
-                    (0, s.YD)(S, W)
+                    (0, s.YD)(S, Y)
                         .then(() => {
                             q(!1), null == t || t(), K(!0);
                         })
@@ -57,19 +57,19 @@ function I(e) {
                         })
                 );
             },
-            [S, W, q, K, X]
+            [S, Y, q, K, X]
         ),
         $ = (0, u.x8)(),
         ee = (0, a.Wu)([o.Z], () => o.Z.recommendedGiftSkuIds);
     return (0, r.jsx)(y.Provider, {
         value: {
             isGift: t,
-            giftCode: W,
+            giftCode: Y,
             giftMessage: f,
             giftRecipient: S,
             setGiftRecipient: T,
-            giftRecipientError: N,
-            setGiftRecipientError: A,
+            giftRecipientError: A,
+            setGiftRecipientError: N,
             validatingGiftRecipient: C,
             setValidatingGiftRecipient: R,
             soundEffect: F,
@@ -81,7 +81,7 @@ function I(e) {
             selectedGiftStyle: x,
             setSelectedGiftStyle: M,
             sendGiftMessage: J,
-            hasSentMessage: Y,
+            hasSentMessage: W,
             isSendingMessage: z,
             giftMessageError: Q,
             alreadyHasHalloweenDeco: $,

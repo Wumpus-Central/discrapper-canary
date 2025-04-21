@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
 var r = n(442837),
-    s = n(481060),
-    l = n(87051),
+    l = n(481060),
+    s = n(87051),
     o = n(778123),
     a = n(122074),
     c = n(9156),
@@ -14,15 +14,15 @@ function b() {
     return [
         {
             setting: d.bL.ALL_MESSAGES,
-            label: g.NW.string(g.t['n/bTaW'])
+            label: g.intl.string(g.t['n/bTaW'])
         },
         {
             setting: d.bL.ONLY_MENTIONS,
-            label: g.NW.format(g.t.L2hmY2, {})
+            label: g.intl.format(g.t.L2hmY2, {})
         },
         {
             setting: d.bL.NO_MESSAGES,
-            label: g.NW.string(g.t.CtVGyc)
+            label: g.intl.string(g.t.CtVGyc)
         }
     ];
 }
@@ -49,16 +49,16 @@ function p(e) {
                 O = f === d.gLR.DISABLED,
                 h = (0, o.Z)(e.id);
             function E(t, n) {
-                l.Z.updateGuildNotificationSettings(e.id, t, n);
+                s.Z.updateGuildNotificationSettings(e.id, t, n);
             }
-            let N = (0, a.ng)(e.id, !0);
+            let y = (0, a.ng)(e.id, !0);
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(s.kSQ, {
+                    (0, i.jsx)(l.kSQ, {
                         children: b().map((e) => {
                             let { setting: t, label: n } = e;
                             return (0, i.jsx)(
-                                s.k5B,
+                                l.k5B,
                                 {
                                     group: 'guild-notifications',
                                     id: ''.concat(t),
@@ -70,24 +70,24 @@ function p(e) {
                             );
                         })
                     }),
-                    null != N && (0, i.jsx)(s.kSQ, { children: N }),
-                    (0, i.jsxs)(s.kSQ, {
+                    null != y && (0, i.jsx)(l.kSQ, { children: y }),
+                    (0, i.jsxs)(l.kSQ, {
                         children: [
-                            (0, i.jsx)(s.S89, {
+                            (0, i.jsx)(l.S89, {
                                 id: 'suppress-everyone',
-                                label: g.NW.format(g.t.OWiWAg, {}),
+                                label: g.intl.format(g.t.OWiWAg, {}),
                                 action: () => E({ suppress_everyone: !t }, u.UE.suppressEveryone(!t)),
                                 checked: t
                             }),
-                            (0, i.jsx)(s.S89, {
+                            (0, i.jsx)(l.S89, {
                                 id: 'suppress-roles',
-                                label: g.NW.string(g.t['O/QdoK']),
+                                label: g.intl.string(g.t['O/QdoK']),
                                 action: () => E({ suppress_roles: !n }, u.UE.suppressRoles(!n)),
                                 checked: n
                             }),
-                            (0, i.jsx)(s.S89, {
+                            (0, i.jsx)(l.S89, {
                                 id: 'suppress-highlights',
-                                label: g.NW.string(g.t.gPuteH),
+                                label: g.intl.string(g.t.gPuteH),
                                 action: () => {
                                     E({ notify_highlights: O ? d.gLR.ENABLED : d.gLR.DISABLED }, u.UE.highlights(O));
                                 },
@@ -96,10 +96,10 @@ function p(e) {
                             h
                         ]
                     }),
-                    (0, i.jsx)(s.kSQ, {
-                        children: (0, i.jsx)(s.S89, {
+                    (0, i.jsx)(l.kSQ, {
+                        children: (0, i.jsx)(l.S89, {
                             id: 'mobile-push',
-                            label: g.NW.string(g.t['h1DL6+']),
+                            label: g.intl.string(g.t['h1DL6+']),
                             action: () => E({ mobile_push: !p }, u.UE.mobilePush(!p)),
                             checked: p
                         })
@@ -119,17 +119,17 @@ function p(e) {
                 : t.label,
         h = (0, a.U)();
     return null != S
-        ? (0, i.jsx)(s.sNh, {
+        ? (0, i.jsx)(l.sNh, {
               id: 'guild-notifications',
               label: (0, i.jsxs)(i.Fragment, {
-                  children: [h, g.NW.string(g.t.h850Sk)]
+                  children: [h, g.intl.string(g.t.h850Sk)]
               }),
               subtext: O,
               action: () =>
-                  (0, s.ZDy)(async () => {
+                  (0, l.ZDy)(async () => {
                       let { default: t } = await Promise.all([n.e('5863'), n.e('99922')]).then(n.bind(n, 751212));
                       return (n) => {
-                          var r, s;
+                          var r, l;
                           return (0, i.jsx)(
                               t,
                               ((r = (function (e) {
@@ -157,9 +157,9 @@ function p(e) {
                                   }
                                   return e;
                               })({}, n)),
-                              (s = s = { guildId: e.id }),
+                              (l = l = { guildId: e.id }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(s))
+                                  ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
@@ -167,8 +167,8 @@ function p(e) {
                                             n.push.apply(n, i);
                                         }
                                         return n;
-                                    })(Object(s)).forEach(function (e) {
-                                        Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(s, e));
+                                    })(Object(l)).forEach(function (e) {
+                                        Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
                               r)
                           );

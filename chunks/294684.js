@@ -22,8 +22,8 @@ var r = n(98405),
     I = n(434431),
     S = n(382698),
     T = n(713411),
-    N = n(530575),
-    A = n(533610),
+    A = n(530575),
+    N = n(533610),
     C = n(800054),
     R = n(682564),
     P = n(338045),
@@ -41,8 +41,8 @@ var r = n(98405),
     V = B && B.prototype,
     Z = F && F.prototype,
     H = i.TypeError,
-    W = i.encodeURIComponent,
-    Y = String.fromCharCode,
+    Y = i.encodeURIComponent,
+    W = String.fromCharCode,
     K = o('String', 'fromCodePoint'),
     z = parseInt,
     q = l(''.charAt),
@@ -97,7 +97,7 @@ var r = n(98405),
                 }
                 r += 2;
                 var o = el(a);
-                if (0 === o) i = Y(a);
+                if (0 === o) i = W(a);
                 else {
                     if (1 === o || o > 4) {
                         (n += ea), r++;
@@ -137,7 +137,7 @@ var r = n(98405),
         return ef[e];
     },
     ep = function (e) {
-        return J(W(e), ed, e_);
+        return J(Y(e), ed, e_);
     },
     eh = h(
         function (e, t) {
@@ -184,8 +184,8 @@ em.prototype = {
             c = this.entries,
             u = C(e);
         if (u)
-            for (n = (t = A(e, u)).next; !(r = s(n, t)).done; ) {
-                if ((o = s((a = (i = A(O(r.value))).next), i)).done || (l = s(a, i)).done || !s(a, i).done) throw new H('Expected sequence with length 2');
+            for (n = (t = N(e, u)).next; !(r = s(n, t)).done; ) {
+                if ((o = s((a = (i = N(O(r.value))).next), i)).done || (l = s(a, i)).done || !s(a, i).done) throw new H('Expected sequence with length 2');
                 X(c, {
                     key: S(o.value),
                     value: S(l.value)
@@ -341,8 +341,8 @@ if (
                     return (
                         eb((t = e.headers ? new F(e.headers) : new F()), 'content-type') || ey(t, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
                         T(e, {
-                            body: N(0, S(n)),
-                            headers: N(0, t)
+                            body: A(0, S(n)),
+                            headers: A(0, t)
                         })
                     );
             }

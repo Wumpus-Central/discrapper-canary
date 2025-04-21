@@ -24,11 +24,11 @@ function b(e) {
         }),
         S = (0, a.e7)([u.Z], () => u.Z.getState().soundshareEnabled),
         T = d.Z.supports(g.AN.DESKTOP_CAPTURE_APPLICATIONS),
-        N = (0, a.e7)([d.Z], () => d.Z.supports(g.AN.SOUNDSHARE)),
-        A = (0, a.e7)([d.Z], () => d.Z.supportsScreenSoundshare()),
+        A = (0, a.e7)([d.Z], () => d.Z.supports(g.AN.SOUNDSHARE)),
+        N = (0, a.e7)([d.Z], () => d.Z.supportsScreenSoundshare()),
         C = (0, p.Z)(t, O),
         R = (0, _.Z)(t, O, m.Vq),
-        P = null != I && N && (!I.startsWith('screen') || A),
+        P = null != I && A && (!I.startsWith('screen') || N),
         w = i.useCallback(() => {
             (null == I ? void 0 : I.startsWith('prepicked:'))
                 ? d.Z.getMediaEngine().eachConnection((e) => {
@@ -62,21 +62,21 @@ function b(e) {
     if (null == t)
         return (0, r.jsx)(o.sNh, {
             id: 'share-your-screen',
-            label: E.NW.string(E.t.fjBNo6),
+            label: E.intl.string(E.t.fjBNo6),
             icon: o.hGI,
             action: n
         });
     let L = f.isPlatformEmbedded
             ? (0, r.jsx)(o.sNh, {
                   id: 'stream-settings',
-                  label: E.NW.string(E.t.ytAD9f),
+                  label: E.intl.string(E.t.ytAD9f),
                   children: C
               })
             : null,
         x = P
             ? (0, r.jsx)(o.S89, {
                   id: 'stream-settings-audio-enable',
-                  label: v ? E.NW.string(E.t.af2Tw8) : E.NW.string(E.t.ZJEHt7),
+                  label: v ? E.intl.string(E.t.af2Tw8) : E.intl.string(E.t.ZJEHt7),
                   checked: S,
                   action: D
               })
@@ -85,14 +85,14 @@ function b(e) {
             T && !y
                 ? (0, r.jsx)(o.sNh, {
                       id: 'change-windows',
-                      label: v ? E.NW.string(E.t.eAktHh) : E.NW.string(E.t.qntSam),
+                      label: v ? E.intl.string(E.t.eAktHh) : E.intl.string(E.t.qntSam),
                       icon: o.hGI,
                       action: w
                   })
                 : null,
         k = (0, r.jsx)(o.sNh, {
             id: 'stop-streaming',
-            label: E.NW.string(E.t.S5anIS),
+            label: E.intl.string(E.t.S5anIS),
             icon: o.g5r,
             action: () => (0, c.Z)(t)
         });

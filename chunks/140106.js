@@ -49,7 +49,7 @@ let p = (e, t) =>
                             onComplete: e,
                             uploadType: u.pC.AVATAR,
                             showUpsellHeader: !1,
-                            modalTitle: d.NW.string(d.t['6yrpFR']),
+                            modalTitle: d.intl.string(d.t['6yrpFR']),
                             analyticsLocation: s.Z.GROUP_DM_ICON_EDITOR,
                             analyticsLocations: t,
                             allowRecentAvatarsSelection: !1
@@ -71,8 +71,8 @@ let p = (e, t) =>
         if ((null == e || null == (t = e.body) ? void 0 : t.retry_after) != null) {
             let t = (0, i.Z)(new Date(), e.body.retry_after);
             o.Z.show({
-                title: d.NW.string(d.t['Whhv4+']),
-                body: d.NW.format(d.t.VIJkAw, {
+                title: d.intl.string(d.t['Whhv4+']),
+                body: d.intl.format(d.t.VIJkAw, {
                     duration: (0, r.jsx)(c.Z, {
                         showUnits: !0,
                         deadline: t

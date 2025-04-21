@@ -1,6 +1,6 @@
 n.d(t, {
-    RM: () => i,
-    Ug: () => r
+    RM: () => r,
+    Ug: () => i
 });
 let l = (0, n(818083).B)({
     kind: 'guild',
@@ -15,7 +15,7 @@ let l = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
+function i(e) {
     return l.useExperiment(
         {
             guildId: e,
@@ -24,7 +24,7 @@ function r(e) {
         { autoTrackExposure: !1 }
     );
 }
-function i(e) {
+function r(e) {
     return l.getCurrentConfig({
         guildId: e,
         location: 'a12ce7_2'

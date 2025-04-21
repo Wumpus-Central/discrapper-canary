@@ -1,6 +1,6 @@
 i.d(t, { default: () => C }), i(388685);
-var s = i(200651),
-    n = i(192379),
+var n = i(200651),
+    s = i(192379),
     a = i(442837),
     l = i(481060),
     r = i(893776),
@@ -19,25 +19,25 @@ let C = (e) => {
         v = (0, a.e7)([m.Z], () => m.Z.getFormState()),
         x = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
         y = (0, a.e7)([c.Z], () => c.Z.getAction()),
-        N = !g.Z.isEmailReverification(y),
-        [R, _] = n.useState(!0),
-        k = v === p.QZA.SUBMITTING;
-    function I(e) {
+        R = !g.Z.isEmailReverification(y),
+        [_, k] = s.useState(!0),
+        I = v === p.QZA.SUBMITTING;
+    function E(e) {
         var t, i;
         return null != (i = null == C || null == (t = C[e]) ? void 0 : t[0]) ? i : '';
     }
-    let E = I('email'),
-        b = I('password');
-    return (0, s.jsx)(h.Z, {
+    let b = E('email'),
+        P = E('password');
+    return (0, n.jsx)(h.Z, {
         transitionState: t,
         email: null == x ? void 0 : x.email,
-        emailError: E,
-        passwordError: b,
-        submitting: k,
-        canResend: R && !k && (null == x ? void 0 : x.email) != null && 0 === E.length && 0 === b.length,
-        canChange: N,
+        emailError: b,
+        passwordError: P,
+        submitting: I,
+        canResend: _ && !I && (null == x ? void 0 : x.email) != null && 0 === b.length && 0 === P.length,
+        canChange: R,
         onChangeEmailClick: function () {
-            _(!1);
+            k(!1);
         },
         onVerify: function (e, t) {
             (0, o.Mn)({
@@ -46,10 +46,10 @@ let C = (e) => {
             }).then((e) => {
                 if (!(null == e ? void 0 : e.ok)) {
                     var t;
-                    (null == e || null == (t = e.body) ? void 0 : t.username) != null ? (0, d.P)() : 0 === b.length && 0 === E.length && (0, l.showToast)((0, l.createToast)(f.NW.string(f.t.R0RpRU), l.ToastType.FAILURE));
+                    (null == e || null == (t = e.body) ? void 0 : t.username) != null ? (0, d.P)() : 0 === P.length && 0 === b.length && (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.R0RpRU), l.ToastType.FAILURE));
                 }
             }),
-                _(!0);
+                k(!0);
         },
         onResend: function () {
             r.Z.verifyResend();

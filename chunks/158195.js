@@ -21,7 +21,7 @@ let O = (0, l.Z)(
             return (0, r.jsxs)(o.v2r, {
                 navId: 'moderation-raid-context',
                 onClose: i.Zy,
-                'aria-label': d.NW.string(d.t.liqwPD),
+                'aria-label': d.intl.string(d.t.liqwPD),
                 onSelect: c,
                 children: [
                     (0, r.jsx)(o.kSQ, { children: u }),

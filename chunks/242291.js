@@ -1,8 +1,8 @@
 n.d(t, {
-    C0: () => A,
+    C0: () => N,
     GN: () => C,
     M2: () => w,
-    Nq: () => N,
+    Nq: () => A,
     SZ: () => x,
     aC: () => L,
     pI: () => S,
@@ -39,11 +39,11 @@ function S() {
 function T(e, t) {
     return (null == t ? void 0 : t.guild_id) == null || f.Z.can(I.Plq.USE_EXTERNAL_SOUNDS, t) || e.guildId === O.X8 || e.guildId === (null == t ? void 0 : t.guild_id);
 }
-function N(e, t, n) {
+function A(e, t, n) {
     let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     return (h.ZP.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === O.X8) && T(t, n) && (!r || t.available);
 }
-function A(e) {
+function N(e) {
     let { mute: t, suppress: n } = (0, c.b)({ channel: e });
     return !t && !n;
 }
@@ -66,7 +66,7 @@ async function w(e) {
     let i = r.guildId === O.hY ? O.X8 : r.guildId,
         o = E.Z.getSound(i, r.soundId);
     if (null != o) {
-        if (!T(o, n) || !N(t, o, n, !0) || !A(n)) return null;
+        if (!T(o, n) || !A(t, o, n, !0) || !N(n)) return null;
         R(o, n.id);
     }
 }

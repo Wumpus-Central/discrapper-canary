@@ -40,7 +40,7 @@ let _ = {
             onHover: a,
             onClick: s,
             titleWithQuery: d.t.o1Nmpa,
-            titleWithoutQuery: d.NW.string(d.t.sMOuub),
+            titleWithoutQuery: d.intl.string(d.t.sMOuub),
             Component: r.ZP.Emoji,
             getProps: (e) => ({
                 emoji: e,

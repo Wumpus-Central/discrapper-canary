@@ -59,15 +59,15 @@ function p(e) {
                   })
                 : null;
         },
-        N = () => (0, r.jsx)('div', { className: a()(u.border, { [u.speaking]: i }) }, 'border'),
-        A = () =>
+        A = () => (0, r.jsx)('div', { className: a()(u.border, { [u.speaking]: i }) }, 'border'),
+        N = () =>
             d && i
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [N(), T()]
+                      children: [A(), T()]
                   })
                 : d || _ || S
                   ? (0, r.jsx)(r.Fragment, { children: T() })
-                  : (0, r.jsx)(r.Fragment, { children: N() }),
+                  : (0, r.jsx)(r.Fragment, { children: A() }),
         C = () => {
             let e = (0, s.pxk)(n),
                 t = (0, r.jsx)('img', {
@@ -89,7 +89,7 @@ function p(e) {
                             mask: i,
                             children: [null == b ? void 0 : b(), t]
                         }),
-                        A()
+                        N()
                     ]
                 })
             );

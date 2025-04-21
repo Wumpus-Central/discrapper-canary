@@ -18,7 +18,7 @@ var l = n(120356),
     _ = (((r = {})[(r.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (r[(r.TRENDING = 1)] = 'TRENDING'), (r[(r.PERSONALIZED = 2)] = 'PERSONALIZED'), (r[(r.USER_GUILDS = 3)] = 'USER_GUILDS'), (r[(r.FRIENDS_GUILDS = 4)] = 'FRIENDS_GUILDS'), (r[(r.INTRO_CARD = 5)] = 'INTRO_CARD'), (r[(r.FEATURED = 6)] = 'FEATURED'), r);
 function m(e) {
     let { guild: t, stageInstance: n, showGuildPopout: r, setShowGuildPopout: l, handleGuildNameClick: _, source: m, speakers: b, speakerCount: x, audienceCount: f, channelName: p } = e,
-        N = t.id;
+        v = t.id;
     return (0, i.jsx)('div', {
         className: g.contentContainer,
         children: (0, i.jsxs)('div', {
@@ -28,7 +28,7 @@ function m(e) {
                     className: g.guildInfoContainer,
                     children: [
                         (0, i.jsx)(d.Z, {
-                            guildId: N,
+                            guildId: v,
                             shouldShow: r,
                             onRequestClose: () => l(!1),
                             children: () =>

@@ -39,7 +39,7 @@ function p(e) {
             }),
             (0, r.jsx)('img', {
                 src: f,
-                alt: u.NW.string(l.Z.BropER)
+                alt: u.intl.string(l.default.BropER)
             })
         ]
     });

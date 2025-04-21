@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(200651),
     l = n(192379),
     o = n(481060),
-    a = n(994463),
-    i = n(472596),
+    i = n(994463),
+    a = n(472596),
     s = n(918192),
     c = n(388032),
     u = n(128863);
@@ -11,16 +11,16 @@ function d(e) {
     let { searchState: t } = e,
         n = l.useMemo(
             () => ({
-                [i.po.LOADING]: null,
-                [i.po.SUCCESS_STILL_INDEXING]: {
-                    icon: (0, r.jsx)(a.Z, {}),
-                    message: c.NW.string(c.t.AXPbZm)
+                [a.po.LOADING]: null,
+                [a.po.SUCCESS_STILL_INDEXING]: {
+                    icon: (0, r.jsx)(i.Z, {}),
+                    message: c.intl.string(c.t.AXPbZm)
                 },
-                [i.po.SUCCESS_EMPTY]: {
+                [a.po.SUCCESS_EMPTY]: {
                     icon: (0, r.jsx)(s.Z, {}),
-                    message: c.NW.string(c.t['wdyR5+'])
+                    message: c.intl.string(c.t['wdyR5+'])
                 },
-                [i.po.SUCCESS_FULL]: null
+                [a.po.SUCCESS_FULL]: null
             }),
             []
         )[t];

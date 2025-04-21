@@ -37,7 +37,7 @@ function P(t) {
     }, [P, m.status]);
     let { subscriptions: L, otps: E } = (0, S.q)(P);
     if (null == b) return null;
-    let y = N.NW.formatToPlainString(N.t.XDRjs7, { appName: b.name });
+    let y = N.intl.formatToPlainString(N.t.XDRjs7, { appName: b.name });
     return (0, n.jsxs)(l.Y0X, {
         transitionState: i,
         'aria-label': y,
@@ -65,10 +65,10 @@ function P(t) {
                                     look: l.iLD.BLANK,
                                     size: l.PhG.ICON,
                                     color: l.Ttl.TRANSPARENT,
-                                    'aria-label': N.NW.string(N.t.WqhZsr),
+                                    'aria-label': N.intl.string(N.t.WqhZsr),
                                     onClick: () => {
                                         let t = ''.concat(location.protocol, '//').concat(location.host).concat(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(P, T.GlobalDiscoveryAppsSections.STORE));
-                                        (0, _.JG)(t, () => (0, l.showToast)((0, l.createToast)(N.NW.string(N.t['L/PwZW']), l.ToastType.SUCCESS))), (0, d.X)(P, d.B.STORE_MODAL);
+                                        (0, _.JG)(t, () => (0, l.showToast)((0, l.createToast)(N.intl.string(N.t['L/PwZW']), l.ToastType.SUCCESS))), (0, d.X)(P, d.B.STORE_MODAL);
                                     },
                                     children: (0, n.jsx)(l.xPt, { size: 'sm' })
                                 }),
@@ -102,7 +102,7 @@ function P(t) {
                                   termsOfServiceUrl: b.termsOfServiceUrl,
                                   privacyPolicyUrl: b.privacyPolicyUrl
                               })
-                            : N.NW.string(N.t['3ZY+0N'])
+                            : N.intl.string(N.t['3ZY+0N'])
                 })
             })
         ]

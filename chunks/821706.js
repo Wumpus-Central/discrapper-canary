@@ -96,7 +96,7 @@ function E(e) {
     return (0, r.jsx)(s.oY, {
         action: 'SEND_FRIEND_REQUEST',
         icon: a.oLu,
-        tooltipText: d.NW.string(d.t.w5uwoK),
+        tooltipText: d.intl.string(d.t.w5uwoK),
         shouldShowTooltip: c,
         onClick: u
     });
@@ -131,11 +131,11 @@ function y(e) {
         c = i.useMemo(() => {
             switch (n) {
                 case u.OGo.FRIEND:
-                    return d.NW.string(d.t.G7jMpa);
+                    return d.intl.string(d.t.G7jMpa);
                 case u.OGo.PENDING_OUTGOING:
-                    return d.NW.string(d.t['s/+byM']);
+                    return d.intl.string(d.t['s/+byM']);
                 case u.OGo.PENDING_INCOMING:
-                    return d.NW.string(d.t['6QQCQ0']);
+                    return d.intl.string(d.t['6QQCQ0']);
             }
         }, [n]);
     return (0, r.jsx)(b, {

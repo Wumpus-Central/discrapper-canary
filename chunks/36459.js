@@ -47,13 +47,13 @@ function O(e) {
         }
     );
 }
-function N(e) {
+function T(e) {
     return {
         type: e.type,
         metadata: (0, d.C)(e.metadata)
     };
 }
-function T(e) {
+function N(e) {
     var t, n, r;
     let i = {
         id: null != (t = e.id) ? t : c.default.fromTimestamp(Date.now()),
@@ -62,7 +62,7 @@ function T(e) {
         eventType: e.event_type,
         triggerType: e.trigger_type,
         triggerMetadata: (0, d.C)(e.trigger_metadata),
-        actions: e.actions.filter(s.lm).map(N),
+        actions: e.actions.filter(s.lm).map(T),
         enabled: e.enabled,
         creatorId: e.creator_id,
         position: e.position,
@@ -84,7 +84,7 @@ async function p(e) {
     let t = O(e);
     return (
         delete t.id,
-        T(
+        N(
             (
                 await r.tn.post({
                     url: _.ANM.GUILD_AUTOMOD_RULES(e.guildId),
@@ -97,7 +97,7 @@ async function p(e) {
 }
 async function A(e) {
     let t = O(e);
-    return T(
+    return N(
         (
             await r.tn.patch({
                 url: _.ANM.GUILD_AUTOMOD_RULE(e.guildId, e.id),
@@ -121,7 +121,7 @@ async function R(e) {
         url: _.ANM.GUILD_AUTOMOD_RULES(e),
         rejectWithError: !1
     });
-    return Array.isArray(t.body) ? t.body.map(T) : [];
+    return Array.isArray(t.body) ? t.body.map(N) : [];
 }
 async function P(e, t, n) {
     a.Z.can(_.Plq.MANAGE_MESSAGES, t) &&

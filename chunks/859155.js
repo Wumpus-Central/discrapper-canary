@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(415506);
 var l = n(991637),
     r = n.n(l),
-    a = n(388123),
-    i = n(904245),
+    i = n(388123),
+    a = n(904245),
     s = n(761080),
     o = n(957730),
     c = n(592125),
@@ -20,7 +20,7 @@ let f = {
                     guild_id: f,
                     channel_id: e.channel_id,
                     message_id: e.id,
-                    type: a.U.FORWARD,
+                    type: i.U.FORWARD,
                     forward_only:
                         (null == n ? void 0 : n.onlyAttachmentIds) != null || (null == n ? void 0 : n.onlyEmbedIndices) != null
                             ? {
@@ -29,11 +29,11 @@ let f = {
                               }
                             : void 0
                 };
-            await i.Z.sendMessage(l.id, h, !1, {
+            await a.Z.sendMessage(l.id, h, !1, {
                 messageReference: _,
                 eagerDispatch: !1
             }),
-                (null == n ? void 0 : n.withMessage) == null || (0, d.pU)(l, u.Z) || (await i.Z.sendMessage(l.id, o.ZP.parse(l, n.withMessage), !1));
+                (null == n ? void 0 : n.withMessage) == null || (0, d.pU)(l, u.Z) || (await a.Z.sendMessage(l.id, o.ZP.parse(l, n.withMessage), !1));
         },
         sendForwards: (e, t, n) => r()(t.map((t) => f.sendForward(e, t, n)))
     },

@@ -18,7 +18,7 @@ function u(e) {
     return (
         (t = null != m ? m : 0.3 > (0, r.Bd)(g) ? i.Z.unsafe_rawColors.PRIMARY_630.css : i.Z.unsafe_rawColors.WHITE_500.css),
         (0, a.jsx)(s.ua7, {
-            text: null != p ? p : d.NW.string(d.t.T3PvV1),
+            text: null != p ? p : d.intl.string(d.t.T3PvV1),
             children: (e) => {
                 var n, r;
                 return (0, a.jsx)(

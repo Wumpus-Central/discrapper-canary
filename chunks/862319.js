@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    s = n.n(i),
-    l = n(481060),
+    l = n.n(i),
+    s = n(481060),
     a = n(259580),
     o = n(73346),
     c = n(817460),
@@ -71,32 +71,32 @@ function f(e) {
                         (0, r.jsx)('img', {
                             alt: '',
                             src: null == e.image_asset ? void 0 : (0, o._W)(e.application_id, e.image_asset, 512),
-                            className: s()(g.rowIcon, g.listingImage)
+                            className: l()(g.rowIcon, g.listingImage)
                         }),
                         (0, r.jsxs)('div', {
                             className: g.rowBody,
                             children: [
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: 'text-md/normal',
                                     color: 'header-primary',
-                                    className: s()(g.rowText, g.listingName),
+                                    className: l()(g.rowText, g.listingName),
                                     children: e.name
                                 }),
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(s.Text, {
                                     color: 'header-secondary',
                                     variant: 'text-sm/normal',
-                                    children: m.NW.format(m.t['QMj+Ii'], {
+                                    children: m.intl.format(m.t['QMj+Ii'], {
                                         channels: e.role_benefits.benefits.filter(c.rC).length,
                                         benefits: e.role_benefits.benefits.filter(c.lL).length
                                     })
                                 })
                             ]
                         }),
-                        (0, r.jsx)(l.zxk, {
-                            look: l.zxk.Looks.OUTLINED,
-                            color: l.zxk.Colors.PRIMARY,
+                        (0, r.jsx)(s.zxk, {
+                            look: s.zxk.Looks.OUTLINED,
+                            color: s.zxk.Colors.PRIMARY,
                             onClick: () => {
-                                (0, l.h7j)((i) =>
+                                (0, s.h7j)((i) =>
                                     (0, r.jsx)(
                                         u.K,
                                         h(p({}, i), {
@@ -109,7 +109,7 @@ function f(e) {
                                 );
                             },
                             disabled: f,
-                            children: m.NW.string(m.t['90bIv7'])
+                            children: m.intl.string(m.t['90bIv7'])
                         })
                     ]
                 },
@@ -120,12 +120,12 @@ function f(e) {
 }
 function x(e) {
     let { guildId: t, onImport: n, disabled: i = !1 } = e;
-    return (0, r.jsxs)(l.P3F, {
-        className: s()(g.importRoleCard, { [g.disabled]: i }),
+    return (0, r.jsxs)(s.P3F, {
+        className: l()(g.importRoleCard, { [g.disabled]: i }),
         onClick: i
             ? void 0
             : function () {
-                  (0, l.h7j)((e) =>
+                  (0, s.h7j)((e) =>
                       (0, r.jsx)(
                           u.C,
                           h(p({}, e), {
@@ -137,18 +137,18 @@ function x(e) {
               },
         'aria-disabled': i,
         children: [
-            (0, r.jsx)(l.lZ8, {
+            (0, r.jsx)(s.lZ8, {
                 size: 'custom',
                 width: 23,
                 height: 23,
                 color: 'currentColor',
                 className: g.rowIcon
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'header-primary',
                 className: g.rowText,
-                children: m.NW.string(m.t.xK9pBA)
+                children: m.intl.string(m.t.xK9pBA)
             }),
             (0, r.jsx)(a.Z, {
                 direction: a.Z.Directions.RIGHT,

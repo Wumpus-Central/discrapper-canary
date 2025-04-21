@@ -17,7 +17,7 @@ function h(e) {
         v = r.useMemo(() => (n === c._b.TEXT ? d.kA : d.qR), [n]);
     return (0, i.jsxs)('section', {
         className: f.container,
-        'aria-label': m.NW.formatToPlainString(m.t.iobNIC, { sectionTitle: l }),
+        'aria-label': m.intl.formatToPlainString(m.t.iobNIC, { sectionTitle: l }),
         children: [
             (0, i.jsxs)('div', {
                 className: f.header,

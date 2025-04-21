@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
-var i = n(442837),
-    l = n(780384),
+var l = n(442837),
+    i = n(780384),
     s = n(481060),
     a = n(210887),
     o = n(475595),
@@ -11,8 +11,8 @@ var i = n(442837),
     u = n(554431);
 let f = function (e) {
     let { quest: t } = e,
-        n = (0, i.e7)([a.Z], () => a.Z.getState().theme),
-        f = (0, l.wj)(n) ? c.BR.DARK : c.BR.LIGHT;
+        n = (0, l.e7)([a.Z], () => a.Z.getState().theme),
+        f = (0, i.wj)(n) ? c.BR.DARK : c.BR.LIGHT;
     return (0, r.jsx)('div', {
         className: u.wrapper,
         children: (0, r.jsxs)('div', {
@@ -29,13 +29,13 @@ let f = function (e) {
                         (0, r.jsx)(s.X6q, {
                             color: 'always-white',
                             variant: 'text-sm/medium',
-                            children: d.NW.format(d.t['5nMfBQ'], { gameTitle: t.config.messages.gameTitle })
+                            children: d.intl.format(d.t['5nMfBQ'], { gameTitle: t.config.messages.gameTitle })
                         }),
                         (0, r.jsx)(s.Text, {
                             className: u.subheading,
                             color: 'always-white',
                             variant: 'text-xs/medium',
-                            children: d.NW.string(d.t.mjbPtb)
+                            children: d.intl.string(d.t.mjbPtb)
                         })
                     ]
                 })

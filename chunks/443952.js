@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685), n(415506), n(997841);
+n.d(t, { Z: () => H }), n(388685), n(415506), n(997841);
 var r = n(200651);
 n(192379);
 var i = n(252258),
@@ -18,12 +18,12 @@ var i = n(252258),
     _ = n(596223),
     E = n(838195),
     O = n(333861),
-    N = n(928518),
-    y = n(23750),
-    I = n(592125),
-    v = n(293273),
-    C = n(158776),
-    S = n(885110),
+    y = n(928518),
+    I = n(23750),
+    v = n(592125),
+    C = n(293273),
+    S = n(158776),
+    N = n(885110),
     T = n(451478),
     P = n(630388),
     j = n(823379),
@@ -38,12 +38,12 @@ var i = n(252258),
     M = n(852926),
     U = n(186901),
     G = n(981631),
-    W = n(701488);
-async function V(e, t, n, r) {
+    V = n(701488);
+async function B(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '',
-        l = v.Z.getApplicationActivity(t);
+        l = C.Z.getApplicationActivity(t);
     if (null == l || null == l.secrets || !(0, w.t9)(r, l.party, l.secrets)) throw new L.Z({ errorCode: G.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
-    let a = (0, _.Z)(l, S.Z);
+    let a = (0, _.Z)(l, N.Z);
     if (a) {
         let { lock: t } = (0, M.jU)(e);
         return (0, c.h7)(l, a).then(() => {
@@ -58,7 +58,7 @@ async function V(e, t, n, r) {
         location: 'In-Game Invite'
     });
 }
-let B = {
+let H = {
     [G.Etm.SEND_ACTIVITY_JOIN_INVITE]: {
         scope: {
             [U.Gp.ANY]: [l.x.RPC, U.lH]
@@ -70,7 +70,7 @@ let B = {
                 } = e,
                 i = t.application.id;
             if (null == i) throw new L.Z({ errorCode: G.lTL.INVALID_COMMAND }, 'No application.');
-            return V(r, i, n, G.mFx.JOIN);
+            return B(r, i, n, G.mFx.JOIN);
         }
     },
     [G.Etm.CLOSE_ACTIVITY_JOIN_REQUEST]: {
@@ -81,7 +81,7 @@ let B = {
             let {
                     args: { user_id: t }
                 } = e,
-                n = I.Z.getDMFromUserId(t);
+                n = v.Z.getDMFromUserId(t);
             null != n && (0, d.In)(n, !0, !0);
         }
     },
@@ -105,7 +105,7 @@ let B = {
                 } = e,
                 a = t.application.id;
             if (null == a) throw new L.Z({ errorCode: G.lTL.INVALID_COMMAND }, 'No application.');
-            return V(l, a, r, n, i);
+            return B(l, a, r, n, i);
         }
     },
     [G.Etm.ACCEPT_ACTIVITY_INVITE]: {
@@ -129,7 +129,7 @@ let B = {
                 } = e,
                 o = t.application.id;
             if (null == o) throw new L.Z({ errorCode: G.lTL.INVALID_COMMAND }, 'No application.');
-            let s = C.Z.findActivity(r, (e) => e.application_id === o && e.session_id === i, null, !0),
+            let s = S.Z.findActivity(r, (e) => e.application_id === o && e.session_id === i, null, !0),
                 c = Promise.resolve(!1);
             return (
                 n === G.mFx.JOIN &&
@@ -158,7 +158,7 @@ let B = {
                     application: t.application,
                     channelId: i.id
                 }),
-                s = null != a ? N.Z.getWindow(a) : void 0;
+                s = null != a ? y.Z.getWindow(a) : void 0;
             (null == s ? void 0 : s.closed) && (s = void 0);
             let c = null != s ? G.IlC.POPOUT : G.IlC.APP;
             (0, x.Pr)({}, null == s ? void 0 : s.document),
@@ -237,7 +237,7 @@ let B = {
                 !(function (e, t) {
                     let n,
                         r = m.ZP.getCurrentEmbeddedActivity();
-                    if ((0, f.R)({ isContextless: (null == r ? void 0 : r.location.kind) === i.E.CONTEXTLESS })) n = N.Z.getWindow(G.KJ3.ACTIVITY_POPOUT);
+                    if ((0, f.R)({ isContextless: (null == r ? void 0 : r.location.kind) === i.E.CONTEXTLESS })) n = y.Z.getWindow(G.KJ3.ACTIVITY_POPOUT);
                     else {
                         var l;
                         let e = T.Z.getLastFocusedWindowId();
@@ -310,7 +310,7 @@ let B = {
                 } = e,
                 d = r.application.id;
             if (null == d) throw new L.Z({ errorCode: G.lTL.INVALID_COMMAND }, 'No application.');
-            if (!W.Cr.includes(d)) throw new L.Z({ errorCode: G.lTL.INVALID_COMMAND }, 'Unsupported application.');
+            if (!V.Cr.includes(d)) throw new L.Z({ errorCode: G.lTL.INVALID_COMMAND }, 'Unsupported application.');
             if (!(0, P.yE)(null != (t = r.application.flags) ? t : 0, G.udG.EMBEDDED)) throw new L.Z({ errorCode: G.lTL.INVALID_COMMAND }, 'This application cannot access this API');
             let p = (0, D.Z)();
             if (null == p && s) throw new L.Z({ errorCode: G.lTL.INVALID_COMMAND }, 'No channel found');
@@ -328,7 +328,7 @@ let B = {
                             width: l.width
                         }
                     ]),
-                    (n = new y.ZP({
+                    (n = new I.ZP({
                         id: A.default.cast(A.default.fromTimestamp(Date.now())),
                         applicationId: d,
                         content: c,
@@ -340,7 +340,7 @@ let B = {
                 let t = !1,
                     r = (0, M.jU)(u),
                     l = o.z1l;
-                (N.Z.getWindowOpen(G.KJ3.ACTIVITY_POPOUT) || r.context === G.IlC.POPOUT) && (l = o.u1M),
+                (y.Z.getWindowOpen(G.KJ3.ACTIVITY_POPOUT) || r.context === G.IlC.POPOUT) && (l = o.u1M),
                     (0, O.M)({
                         applicationId: d,
                         channel: p,

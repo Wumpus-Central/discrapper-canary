@@ -31,15 +31,15 @@ let h = (0, a.Z)(
                     context: g
                 }),
                 [y, I] = (0, E.E)(n, h, u),
-                N = (0, f.Z)(n, u, h),
-                p = (0, c.Z)({
+                p = (0, f.Z)(n, u, h),
+                M = (0, c.Z)({
                     id: n.id,
-                    label: A.NW.string(A.t['/AXYnJ'])
+                    label: A.intl.string(A.t['/AXYnJ'])
                 });
             return (0, l.jsx)(i.v2r, {
                 navId: 'user-context',
                 onClose: r.Zy,
-                'aria-label': A.NW.string(A.t.liqwPD),
+                'aria-label': A.intl.string(A.t.liqwPD),
                 onSelect: a,
                 onInteraction: o,
                 variant: 'fixed',
@@ -55,11 +55,11 @@ let h = (0, a.Z)(
                                 (0, l.jsx)(i.kSQ, {
                                     children: (0, l.jsxs)(i.sNh, {
                                         id: 'more-options',
-                                        label: A.NW.string(A.t.PdRCRk),
-                                        children: [y, (0, l.jsx)(i.kSQ, { children: N }), I]
+                                        label: A.intl.string(A.t.PdRCRk),
+                                        children: [y, (0, l.jsx)(i.kSQ, { children: p }), I]
                                     })
                                 }),
-                            b && (0, l.jsx)(i.kSQ, { children: p })
+                            b && (0, l.jsx)(i.kSQ, { children: M })
                         ]
                     })
             });

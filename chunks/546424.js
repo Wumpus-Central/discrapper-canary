@@ -32,7 +32,7 @@ function E(e) {
                 }),
                 (0, r.jsx)(o.zxk, {
                     className: h.close,
-                    'aria-label': p.NW.string(p.t.cpT0Cg),
+                    'aria-label': p.intl.string(p.t.cpT0Cg),
                     look: o.zxk.Looks.BLANK,
                     size: o.zxk.Sizes.NONE,
                     onClick: () => t(d.L.USER_DISMISS),
@@ -44,9 +44,9 @@ function E(e) {
                 })
             ]
         }),
-        header: p.NW.string(p.t.dDj3ER),
-        content: p.NW.string(p.t['0lZmoa']),
-        buttonCTA: p.NW.string(p.t.RzWDqa),
+        header: p.intl.string(p.t.dDj3ER),
+        content: p.intl.string(p.t['0lZmoa']),
+        buttonCTA: p.intl.string(p.t.RzWDqa),
         buttonProps: { color: o.Ttl.WHITE },
         caretPosition: c.DF.BOTTOM_RIGHT,
         onClick: E,

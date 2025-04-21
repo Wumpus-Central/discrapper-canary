@@ -1,19 +1,19 @@
 n.d(t, { Z: () => c });
 var r = n(200651);
 n(192379);
-var a = n(120356),
-    l = n.n(a),
+var l = n(120356),
+    a = n.n(l),
     i = n(481060),
     s = n(27367),
     o = n(958735);
 function c(e) {
     let { className: t, size: n = s.m } = e,
-        a = (0, i.pxk)(n);
+        l = (0, i.pxk)(n);
     return (0, r.jsx)('svg', {
-        width: a,
-        height: a,
-        viewBox: '0 0 '.concat(a, ' ').concat(a),
-        className: l()(o.placeholderFill, t),
+        width: l,
+        height: l,
+        viewBox: '0 0 '.concat(l, ' ').concat(l),
+        className: a()(o.placeholderFill, t),
         'aria-hidden': !0,
         children: (0, r.jsx)('path', {
             fillRule: 'evenodd',

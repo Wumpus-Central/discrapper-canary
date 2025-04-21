@@ -1,10 +1,10 @@
 n.d(t, { Z: () => h });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    s = n.n(i),
-    a = n(793030),
-    l = n(553896),
+var r = n(120356),
+    s = n.n(r),
+    l = n(793030),
+    a = n(553896),
     o = n(848572),
     c = n(787528),
     d = n(474936),
@@ -12,9 +12,9 @@ var i = n(120356),
     m = n(536564);
 let g = (e, t) =>
         (null == e ? void 0 : e.status) === o.Vq.EARNED
-            ? u.NW.format(u.t.Hu4jfn, { date: null != t ? t : new Date() })
+            ? u.intl.format(u.t.Hu4jfn, { date: null != t ? t : new Date() })
             : (null == e ? void 0 : e.status) === o.Vq.UPCOMING
-              ? u.NW.format(u.t.E85flp, {
+              ? u.intl.format(u.t.E85flp, {
                     date: null != t ? t : new Date(),
                     days: e.daysLeft
                 })
@@ -46,37 +46,37 @@ let g = (e, t) =>
         let t = (0, o.Rw)(),
             n = null != (e = (0, o.GG)()) ? e : new Date();
         if (null == t) return null;
-        let i = (0, c.J)(t.id),
+        let r = (0, c.J)(t.id),
             { id: d, nameUnformatted: h, tenureReqNumMonths: f, hasWideArt: b } = t,
-            _ = u.NW.string(h),
-            N = (0, l.q)(d, f);
-        return (0, r.jsxs)('div', {
+            _ = u.intl.string(h),
+            x = (0, a.q)(d, f);
+        return (0, i.jsxs)('div', {
             className: s()(m.container, p(d)),
             children: [
-                (0, r.jsx)('div', {}),
+                (0, i.jsx)('div', {}),
                 ' ',
-                (0, r.jsx)('img', {
-                    src: i,
+                (0, i.jsx)('img', {
+                    src: r,
                     alt: _,
                     className: s()(m.badgeImage, m.badgeImageV2, {
                         [m.upcomingBadge]: t.status === o.Vq.UPCOMING,
                         [m.wide]: b
                     })
                 }),
-                (0, r.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     className: m.textColumn,
                     children: [
-                        (0, r.jsx)(a.xv, {
+                        (0, i.jsx)(l.xv, {
                             variant: 'text-lg/semibold',
                             className: m.badgeText,
                             children: _
                         }),
-                        (0, r.jsx)(a.xv, {
+                        (0, i.jsx)(l.xv, {
                             variant: 'text-md/normal',
                             className: m.badgeText,
-                            children: N
+                            children: x
                         }),
-                        (0, r.jsx)(a.xv, {
+                        (0, i.jsx)(l.xv, {
                             variant: 'text-xs/normal',
                             children: g(t, n)
                         })

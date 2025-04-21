@@ -36,7 +36,7 @@ var h = (function (e) {
 let m = (e) =>
     e === i.T.TIDE
         ? {
-              label: () => s.NW.string(s.t['h/uBCQ']),
+              label: () => s.intl.string(s.t['h/uBCQ']),
               iconSrc: _.Z,
               style: {
                   background: 'linear-gradient(180deg, #103A8B -7.5%, #3390FD 128.75%)',

@@ -58,12 +58,12 @@ function u(e, t) {
     var n, o, l, u, d, f, _, p, h, m, g, E, b, y, v, O, I, S;
     let T = null == (n = t.powerup_metadata) ? void 0 : n.category_type;
     if (null == T) return;
-    let N = null == (o = t.sku) ? void 0 : o.powerup_metadata;
-    if (null == N) return;
-    let A = {
+    let A = null == (o = t.sku) ? void 0 : o.powerup_metadata;
+    if (null == A) return;
+    let N = {
         title: t.summary,
         skuId: t.sku.id,
-        cost: N.boost_price,
+        cost: A.boost_price,
         dependencies: null != t.sku.dependent_sku_id ? [t.sku.dependent_sku_id] : [],
         animatedImageUrl: null == (l = t.powerup_metadata) ? void 0 : l.animated_image_url,
         staticImageUrl: null == (u = t.powerup_metadata) ? void 0 : u.static_image_url
@@ -89,7 +89,7 @@ function u(e, t) {
                         total_sticker_slots: u
                     })
                 },
-                A
+                N
             );
         }
         case i.Us.PERK:
@@ -98,7 +98,7 @@ function u(e, t) {
                     type: i.Us.PERK,
                     description: null != (S = t.description) ? S : ''
                 },
-                A
+                N
             );
     }
 }

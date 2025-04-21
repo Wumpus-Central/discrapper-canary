@@ -71,7 +71,7 @@ function E(e, t) {
 }
 let b = (0, u.T)({});
 function y(e, t, n) {
-    return n ? p.NW.formatToParts(e, t) : p.NW.formatToPlainString(e, t);
+    return n ? p.intl.formatToParts(e, t) : p.intl.formatToPlainString(e, t);
 }
 function v(e) {
     let t,
@@ -163,7 +163,7 @@ function T(e, t, n, r) {
         r
     );
 }
-function N(e) {
+function A(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
         i = n.targetMinutes,
         a = d.r.build(t.config).defaultReward.messages.nameWithArticle;
@@ -176,7 +176,7 @@ function N(e) {
         r
     );
 }
-function A(e) {
+function N(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
         s = d.r.build(n.config).defaultReward.messages.nameWithArticle,
@@ -218,7 +218,7 @@ function C(e) {
                     i
                 );
             case 2:
-                return p.NW.string(p.t['f/J8v7']);
+                return p.intl.string(p.t['f/J8v7']);
             case 3:
                 let c = d.r.build(t.config).defaultInGameTask;
                 if (null != c) return c.description;
@@ -257,14 +257,14 @@ function C(e) {
         });
     if ((0, l.q8)(t)) return T(t, f, u, i);
     else if ((0, l.pO)(t))
-        return N({
+        return A({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i
         });
     return null != r
         ? r.description
-        : A({
+        : N({
               quest: t,
               taskDetails: n,
               withoutMarkdown: i,
@@ -323,17 +323,17 @@ function x(e) {
         });
     switch (i) {
         case 0:
-            return a ? p.NW.string(p.t.Y7LIPT) : p.NW.string(p.t.l7E81t);
+            return a ? p.intl.string(p.t.Y7LIPT) : p.intl.string(p.t.l7E81t);
         case 1:
-            return a ? p.NW.string(p.t.hyrGU1) : p.NW.string(p.t.l7E81t);
+            return a ? p.intl.string(p.t.hyrGU1) : p.intl.string(p.t.l7E81t);
         case 2:
-            return p.NW.string(p.t.umdNio);
+            return p.intl.string(p.t.umdNio);
         case 3:
-            return t.config.features.includes(f.S7.START_QUEST_CTA) ? p.NW.string(p.t.ToGcxM) : p.NW.string(p.t.l7E81t);
+            return t.config.features.includes(f.S7.START_QUEST_CTA) ? p.intl.string(p.t.ToGcxM) : p.intl.string(p.t.l7E81t);
     }
 }
 function M(e) {
     let t = r.useMemo(() => (0, l.f$)(e), [e]),
         n = r.useMemo(() => (0, l._p)(e), [e]);
-    return t ? (n ? p.NW.string(p.t.hh7Rb2) : p.NW.string(p.t.GYGb3N)) : null;
+    return t ? (n ? p.intl.string(p.t.hh7Rb2) : p.intl.string(p.t.GYGb3N)) : null;
 }

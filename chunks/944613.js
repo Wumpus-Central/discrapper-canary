@@ -26,8 +26,8 @@ let m = function (e) {
         className: t,
         value: new Set(),
         onChange: m,
-        placeholder: p.NW.string(p.t.XPGZXF),
-        'aria-label': p.NW.string(p.t.ljnBlp),
+        placeholder: p.intl.string(p.t.XPGZXF),
+        'aria-label': p.intl.string(p.t.ljnBlp),
         onClose: g,
         children: (e) =>
             y(e).map((e) => {

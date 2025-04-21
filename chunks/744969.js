@@ -95,19 +95,19 @@ function h(e) {
         if (null == e || (null != i && !i.available))
             return {
                 disabled: !0,
-                label: j.NW.string(j.t.CHa0vL)
+                label: j.intl.string(j.t.CHa0vL)
             };
         if (i.type === y.epS.SUBSCRIPTION) {
             if (null == c || 0 === c.length)
                 return {
                     disabled: !0,
-                    label: j.NW.string(j.t.CHa0vL)
+                    label: j.intl.string(j.t.CHa0vL)
                 };
             let e = c[0],
                 t = (0, f.aS)(e.id);
             return {
                 disabled: !1,
-                label: j.NW.formatToPlainString(j.t['c6Q+Bw'], {
+                label: j.intl.formatToPlainString(j.t['c6Q+Bw'], {
                     skuName: i.name,
                     price: (0, b.T4)(t.amount, t.currency)
                 }),
@@ -117,11 +117,11 @@ function h(e) {
         return null == i.price
             ? {
                   disabled: !0,
-                  label: j.NW.string(j.t.CHa0vL)
+                  label: j.intl.string(j.t.CHa0vL)
               }
             : {
                   disabled: !1,
-                  label: j.NW.formatToPlainString(j.t['c6Q+Bw'], {
+                  label: j.intl.formatToPlainString(j.t['c6Q+Bw'], {
                       skuName: i.name,
                       price: (0, b.T4)(i.price.amount, i.price.currency)
                   }),

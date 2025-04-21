@@ -74,7 +74,7 @@ function g(e, t, n) {
     function T(e) {
         return (null == n ? void 0 : n.storedInformation) == null || null == n.storedInformation[e] ? null : n.storedInformation[e];
     }
-    let N = {
+    let A = {
         did_crash: t,
         renderer_crash_reason: null != (u = null == n ? void 0 : n.rendererCrashReason) ? u : null,
         renderer_crash_exit_code: null != (f = null == n ? void 0 : n.rendererCrashExitCode) ? f : null,
@@ -102,19 +102,19 @@ function g(e, t, n) {
                 minidump_exception_module_version: null,
                 minidump_exception_module_code_id: null
             },
-            N
+            A
         );
     console.log('AppCrashedFatalReport lastCrash:', n, e);
-    let A = null == n ? void 0 : n.minidumpInformation;
+    let N = null == n ? void 0 : n.minidumpInformation;
     return d(
         {
             electron_crash_reporter_did_crash: e,
-            minidump_exception_type: null != (b = null == A ? void 0 : A.exceptionString) ? b : null,
-            minidump_exception_module_name: null != (y = null == A ? void 0 : A.exceptionModuleName) ? y : null,
-            minidump_relative_crash_address: null != (v = null == A ? void 0 : A.relativeCrashAddress) ? v : null,
-            minidump_exception_module_version: null != (O = null == A ? void 0 : A.exceptionModuleVersion) ? O : null,
-            minidump_exception_module_code_id: null != (I = null == A ? void 0 : A.exceptionModuleCodeId) ? I : null
+            minidump_exception_type: null != (b = null == N ? void 0 : N.exceptionString) ? b : null,
+            minidump_exception_module_name: null != (y = null == N ? void 0 : N.exceptionModuleName) ? y : null,
+            minidump_relative_crash_address: null != (v = null == N ? void 0 : N.relativeCrashAddress) ? v : null,
+            minidump_exception_module_version: null != (O = null == N ? void 0 : N.exceptionModuleVersion) ? O : null,
+            minidump_exception_module_code_id: null != (I = null == N ? void 0 : N.exceptionModuleCodeId) ? I : null
         },
-        N
+        A
     );
 }

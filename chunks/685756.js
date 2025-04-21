@@ -88,8 +88,8 @@ let b = 20 * c.Z.Millis.SECOND,
     I = 0.1,
     S = 5 * c.Z.Millis.SECOND,
     T = 2,
-    N = 8;
-function A(e) {
+    A = 8;
+function N(e) {
     return e.map((e) => ({
         name: e.name,
         type: e.type,
@@ -365,8 +365,8 @@ class D extends o.Z {
         {
             let t = new Uint8Array(e.data),
                 n = null;
-            this.serverVersion >= N && (n = new DataView(t.buffer).getUint16(0, !1));
-            let r = 2 * (this.serverVersion >= N),
+            this.serverVersion >= A && (n = new DataView(t.buffer).getUint16(0, !1));
+            let r = 2 * (this.serverVersion >= A),
                 i = 1;
             return {
                 op: t[r],
@@ -381,7 +381,7 @@ class D extends o.Z {
     handleHeartbeatAck(e) {
         this.logger.info('Heartbeat ACK received');
         let t = null;
-        (t = this.serverVersion >= N ? e.t : e), this.emit('ping', Date.now() - t), (this.lastHeartbeatAckTime = Date.now()), (this.heartbeatAck = !0), null !== this.expeditedHeartbeatTimeout && (clearTimeout(this.expeditedHeartbeatTimeout), (this.expeditedHeartbeatTimeout = null), this.logger.info('Expedited heartbeat succeeded'));
+        (t = this.serverVersion >= A ? e.t : e), this.emit('ping', Date.now() - t), (this.lastHeartbeatAckTime = Date.now()), (this.heartbeatAck = !0), null !== this.expeditedHeartbeatTimeout && (clearTimeout(this.expeditedHeartbeatTimeout), (this.expeditedHeartbeatTimeout = null), this.logger.info('Expedited heartbeat succeeded'));
     }
     handleHeartbeatTimeout() {
         this.cleanupWebSocket((e) => e.close(4000));
@@ -398,7 +398,7 @@ class D extends o.Z {
             }, this.heartbeatInterval));
     }
     sendHeartbeat() {
-        if (this.serverVersion >= N) {
+        if (this.serverVersion >= A) {
             var e;
             let t = null != (e = this.lastRecvSeqNum) ? e : -1;
             this.logger.info('Sending heartbeat with last received sequence number: '.concat(t)),
@@ -465,7 +465,7 @@ class D extends o.Z {
             : 'sdp' in n && null != n.sdp && '' !== n.sdp
               ? ((i = n.sdp),
                 (a = h(_({}, n), {
-                    codecs: A(n.codecs),
+                    codecs: N(n.codecs),
                     rtc_connection_id: t
                 })))
               : 'address' in n &&
@@ -480,7 +480,7 @@ class D extends o.Z {
                     mode: n.mode
                 }),
                 (a = h(_({}, n), {
-                    codecs: A(n.codecs),
+                    codecs: N(n.codecs),
                     rtc_connection_id: t,
                     experiments: r
                 }))),
@@ -496,7 +496,7 @@ class D extends o.Z {
             );
     }
     updateSession(e) {
-        this.send(14, { codecs: A(e.codecs) });
+        this.send(14, { codecs: N(e.codecs) });
     }
     speaking(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,

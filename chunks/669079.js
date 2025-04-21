@@ -7,10 +7,10 @@ n.d(t, {
     MY: () => k,
     Nz: () => Z,
     Q_: () => V,
-    TO: () => Y,
+    TO: () => W,
     Z0: () => G,
     bT: () => H,
-    dM: () => W,
+    dM: () => Y,
     dQ: () => K,
     e$: () => X,
     iM: () => Q,
@@ -75,15 +75,15 @@ let y = ['discordapp.com/gifts', 'discord.com/gifts'],
     I = RegExp('(?: |^|https?://)(?:'.concat(O, ')/([a-z0-9-]+)'), 'gi'),
     S = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => _.Z.escape(e))].join('|'),
     T = RegExp('(?: |^|https?://)(?:'.concat(S, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
-    N = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789',
-    A = (e, t) =>
+    A = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789',
+    N = (e, t) =>
         Array(t)
             .fill(void 0)
-            .map(() => '['.concat(N, ']{').concat(e, '}'))
+            .map(() => '['.concat(A, ']{').concat(e, '}'))
             .join('-?'),
-    C = A(4, 4),
-    R = A(4, 6),
-    P = A(5, 3),
+    C = N(4, 4),
+    R = N(4, 6),
+    P = N(5, 3),
     w = 'WUMP-?',
     D = [C, R, P, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
     L = new RegExp('^('.concat(w, ')?(').concat(D, ')$')),
@@ -168,38 +168,38 @@ async function H(e) {
         );
     }
 }
-function W(e, t) {
+function Y(e, t) {
     u.default.track(h.rMx.GIFT_CODE_COPIED, b({}, (0, s.Z)(t, !1, !1), e.analyticsData));
 }
-function Y(e, t, n, r, i, a, o) {
+function W(e, t, n, r, i, a, o) {
     return null == n && (r || i || null == e) ? (!o || a || r || i ? (r && (t.isSubscription || null != e) ? h.wZ8.SUCCESS : h.wZ8.CONFIRM) : h.wZ8.OPEN) : h.wZ8.ERROR;
 }
 function K(e, t, n) {
     switch (e) {
         case h.wZ8.ERROR:
-            return g.NW.formatToMarkdownString(g.t.JUvC0t, {});
+            return g.intl.formatToMarkdownString(g.t.JUvC0t, {});
         case h.wZ8.SUCCESS:
-            return t.isSubscription ? g.NW.formatToPlainString(g.t['1C2BGx'], { skuName: n.name }) : g.NW.string(g.t['+BNMcH']);
+            return t.isSubscription ? g.intl.formatToPlainString(g.t['1C2BGx'], { skuName: n.name }) : g.intl.string(g.t['+BNMcH']);
         case h.wZ8.CONFIRM:
         default:
-            return t.isSubscription ? g.NW.formatToPlainString(g.t['2VN4Nz'], { skuName: n.name }) : g.NW.string(g.t.RmamAA);
+            return t.isSubscription ? g.intl.formatToPlainString(g.t['2VN4Nz'], { skuName: n.name }) : g.intl.string(g.t.RmamAA);
     }
 }
 function z(e, t, n) {
     switch (e) {
         case h.wZ8.ERROR:
-            return g.NW.string(g.t.w19zb2);
+            return g.intl.string(g.t.w19zb2);
         case h.wZ8.SUCCESS:
-            if (__OVERLAY__) return g.NW.string(g.t.zW87EB);
-            if (t.isSubscription) return g.NW.string(g.t.ex5TKi);
-            return g.NW.string(g.t.OOkjqq);
+            if (__OVERLAY__) return g.intl.string(g.t.zW87EB);
+            if (t.isSubscription) return g.intl.string(g.t.ex5TKi);
+            return g.intl.string(g.t.OOkjqq);
         case h.wZ8.OPEN:
-            return g.NW.string(g.t.F8ktcn);
+            return g.intl.string(g.t.F8ktcn);
         case h.wZ8.CONFIRM:
         default:
-            if (null != n && n) return g.NW.string(g.t.n6I6k5);
-            if (null != t.giftStyle) return t.isClaimed ? g.NW.string(g.t.OgpR0d) : g.NW.string(g.t['2BWscn']);
-            return t.isSubscription ? g.NW.string(g.t.wQ1FHx) : g.NW.string(g.t.OgpR0d);
+            if (null != n && n) return g.intl.string(g.t.n6I6k5);
+            if (null != t.giftStyle) return t.isClaimed ? g.intl.string(g.t.OgpR0d) : g.intl.string(g.t['2BWscn']);
+            return t.isSubscription ? g.intl.string(g.t.wQ1FHx) : g.intl.string(g.t.OgpR0d);
     }
 }
 function q(e) {
@@ -209,30 +209,30 @@ function q(e) {
                 interval: m.rV.MONTH,
                 premiumSubscriptionType: m.p9.TIER_2
             },
-            () => g.NW.formatToPlainString(g.t['vFfV+P'], { timeInterval: g.NW.string(g.t.FPybU1) })
+            () => g.intl.formatToPlainString(g.t['vFfV+P'], { timeInterval: g.intl.string(g.t.FPybU1) })
         )
         .with(
             {
                 interval: m.rV.YEAR,
                 premiumSubscriptionType: m.p9.TIER_2
             },
-            () => g.NW.formatToPlainString(g.t['vFfV+P'], { timeInterval: g.NW.string(g.t.tfqrho) })
+            () => g.intl.formatToPlainString(g.t['vFfV+P'], { timeInterval: g.intl.string(g.t.tfqrho) })
         )
         .with(
             {
                 interval: m.rV.MONTH,
                 premiumSubscriptionType: m.p9.TIER_1
             },
-            () => g.NW.formatToPlainString(g.t.gjKbFx, { intervalCount: e.intervalCount })
+            () => g.intl.formatToPlainString(g.t.gjKbFx, { intervalCount: e.intervalCount })
         )
         .with(
             {
                 interval: m.rV.YEAR,
                 premiumSubscriptionType: m.p9.TIER_1
             },
-            () => g.NW.formatToPlainString(g.t.GIe7Bw, { intervalCount: e.intervalCount })
+            () => g.intl.formatToPlainString(g.t.GIe7Bw, { intervalCount: e.intervalCount })
         )
-        .otherwise(() => g.NW.string(g.t['5ayf7+']));
+        .otherwise(() => g.intl.string(g.t['5ayf7+']));
 }
 function Q(e) {
     let { step: t, sku: n, libraryApplication: r, error: i, accepted: a, accepting: o, onGoToLibrary: s, subscriptionPlan: l = null } = e;
@@ -241,22 +241,22 @@ function Q(e) {
             return X(r, i, a, o, s);
         case h.wZ8.SUCCESS:
             if (null != l) return q(l);
-            return g.NW.formatToPlainString(g.t['3CPsbm'], { skuName: n.name });
+            return g.intl.formatToPlainString(g.t['3CPsbm'], { skuName: n.name });
         case h.wZ8.CONFIRM:
         default:
             if (null != l) {
                 let e = l.interval === m.rV.MONTH ? g.t.P9eTKi : g.t.d8rUd3;
-                return g.NW.format(e, {
+                return g.intl.format(e, {
                     skuName: n.name,
                     intervalCount: l.intervalCount
                 });
             }
-            return g.NW.formatToPlainString(g.t.l6Ea4e, { skuName: n.name });
+            return g.intl.formatToPlainString(g.t.l6Ea4e, { skuName: n.name });
     }
 }
 function X(e, t, n, r, i) {
     let a = n || r ? void 0 : e,
-        o = g.NW.format(g.t['5zyz9/'], { onGoToLibrary: i });
+        o = g.intl.format(g.t['5zyz9/'], { onGoToLibrary: i });
     return null != a ? o : null == t ? null : et(t, c.default.getCurrentUser());
 }
 function J(e, t, n) {
@@ -280,24 +280,24 @@ let ee = (e, t) =>
 function et(e, t) {
     switch (e.code) {
         case h.evJ.INVALID_GIFT_SELF_REDEMPTION:
-            return g.NW.string(g.t.wa9h7O);
+            return g.intl.string(g.t.wa9h7O);
         case h.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED:
-            return g.NW.string(g.t.Iw2TUV);
+            return g.intl.string(g.t.Iw2TUV);
         case h.evJ.INVALID_GIFT_REDEMPTION_OWNED:
-            return g.NW.string(g.t.mdLtb2);
+            return g.intl.string(g.t.mdLtb2);
         case h.evJ.UNKNOWN_GIFT_CODE:
-            return g.NW.string(g.t.roztIi);
+            return g.intl.string(g.t.roztIi);
         case h.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
-            return g.NW.formatToPlainString(g.t['4YTHKy'], { planName: (0, f.M5)(t, m.p9.TIER_2) ? g.NW.string(g.t['lG6a5+']) : g.NW.string(g.t['FSOz7+']) });
+            return g.intl.formatToPlainString(g.t['4YTHKy'], { planName: (0, f.M5)(t, m.p9.TIER_2) ? g.intl.string(g.t['lG6a5+']) : g.intl.string(g.t['FSOz7+']) });
         case h.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
-            return g.NW.string(g.t['9i1J39']);
+            return g.intl.string(g.t['9i1J39']);
         case h.evJ.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:
-            return g.NW.string(g.t.U26WX1);
+            return g.intl.string(g.t.U26WX1);
         case h.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED:
-            return g.NW.string(g.t.ypuSd3);
+            return g.intl.string(g.t.ypuSd3);
         case h.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE:
-            return g.NW.string(g.t.mXMmWF);
+            return g.intl.string(g.t.mXMmWF);
         default:
-            return g.NW.string(g.t['s9+XlJ']);
+            return g.intl.string(g.t['s9+XlJ']);
     }
 }

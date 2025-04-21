@@ -97,8 +97,8 @@ function S(e, t) {
 var T = (function (e) {
     return (e.PRIMARY = 'primary'), (e.NESTED = 'nested'), (e.BLACK = 'black'), (e.GREY = 'grey'), (e.BRAND = 'brand'), (e.GREEN = 'green'), (e.YELLOW = 'yellow'), (e.RED = 'red'), (e.PREMIUM = 'premium'), e;
 })({});
-let N = 16,
-    A = 10,
+let A = 16,
+    N = 10,
     C = 8,
     R = Object.freeze({}),
     P = Object.freeze({
@@ -125,7 +125,7 @@ function w(e, t, n) {
         o = r ? 'bottom' : 'right',
         s = '50%',
         l = n;
-    return t === a ? ((s = '0%'), (l += N)) : t === o && ((s = '100%'), (l -= A + A)), { [i]: 'calc('.concat(s, ' + ').concat(l, 'px)') };
+    return t === a ? ((s = '0%'), (l += A)) : t === o && ((s = '100%'), (l -= N + N)), { [i]: 'calc('.concat(s, ' + ').concat(l, 'px)') };
 }
 let D = (e) => {
         let { targetElementRef: t, align: n = 'center', position: r, color: a, children: o, onNonAccessibleClick: l, tooltipClassName: u, tooltipStyle: d, tooltipContentClassName: f, spacing: _ = C, animationStyle: p, disableTooltipPointerEvents: h = !1, allowOverflow: m = !1, tooltipPointerClassName: b } = e,

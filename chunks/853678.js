@@ -17,36 +17,36 @@ var r = n(252258),
     _ = n(914946),
     E = n(452426),
     O = n(186901),
-    N = n(981631),
-    y = n(701488),
-    I = n(674563);
-let v = new Set([y.Fu, y.JT]),
-    C = new Set(['www.nytimes.com', 'apps.apple.com', 'play.google.com']),
-    S = new Map([
+    y = n(981631),
+    I = n(701488),
+    v = n(674563);
+let C = new Set([I.Fu, I.JT]),
+    S = new Set(['www.nytimes.com', 'apps.apple.com', 'play.google.com']),
+    N = new Map([
         [
-            I.Vt,
+            v.Vt,
             {
-                trustedHosts: C,
+                trustedHosts: S,
                 trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
             }
         ],
         [
-            I.fd,
+            v.fd,
             {
-                trustedHosts: C,
+                trustedHosts: S,
                 trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
             }
         ],
         [
-            I.He,
+            v.He,
             {
-                trustedHosts: C,
+                trustedHosts: S,
                 trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
             }
         ]
     ]),
     T = {
-        [N.Etm.OPEN_EXTERNAL_LINK]: {
+        [y.Etm.OPEN_EXTERNAL_LINK]: {
             scope: {
                 [O.Gp.ANY]: [O.wE, O.b_]
             },
@@ -62,12 +62,12 @@ let v = new Set([y.Fu, y.JT]),
                     let e = new URL(n),
                         t = e.toString();
                     if (m.isPlatformEmbedded) {
-                        let e = (0, o.R)({ isContextless: (null == i ? void 0 : i.location.kind) === r.E.CONTEXTLESS }) ? N.KJ3.ACTIVITY_POPOUT : null;
+                        let e = (0, o.R)({ isContextless: (null == i ? void 0 : i.location.kind) === r.E.CONTEXTLESS }) ? y.KJ3.ACTIVITY_POPOUT : null;
                         h.Z.focus(e, !0);
                     }
                     let l = p.Z.getApplication(null == i ? void 0 : i.applicationId),
                         s = (0, d.pY)(null == i ? void 0 : i.location),
-                        u = (null == l ? void 0 : l.id) !== void 0 ? S.get(l.id) : void 0;
+                        u = (null == l ? void 0 : l.id) !== void 0 ? N.get(l.id) : void 0;
                     if (void 0 !== u && u.trustedUntilEpochMs >= Date.now() && u.trustedHosts.has(e.host)) return (0, a.Z)(t), Promise.resolve({ opened: !0 });
                     return new Promise((e) =>
                         (0, g.q)(
@@ -90,22 +90,22 @@ let v = new Set([y.Fu, y.JT]),
                         )
                     );
                 } catch (e) {
-                    throw new b.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'Invalid URL: '.concat(n));
+                    throw new b.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'Invalid URL: '.concat(n));
                 }
             }
         },
-        [N.Etm.NAVIGATE_TO_CONNECTIONS]: {
+        [y.Etm.NAVIGATE_TO_CONNECTIONS]: {
             validation: (e) => (0, E.Z)(e),
             scope: { [O.Gp.ANY]: [O.wE] },
             handler(e) {
                 let { socket: t } = e;
                 (0, _.bu)(t.transport);
                 let n = (0, _._f)(t.application);
-                if (!v.has(n)) throw new b.Z({ errorCode: N.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
-                l.Z.open(N.oAB.CONNECTIONS);
+                if (!C.has(n)) throw new b.Z({ errorCode: y.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+                l.Z.open(y.oAB.CONNECTIONS);
             }
         },
-        [N.Etm.SHARE_LINK]: (0, i.S)(N.Etm.SHARE_LINK, {
+        [y.Etm.SHARE_LINK]: (0, i.S)(y.Etm.SHARE_LINK, {
             scope: { [O.Gp.ANY]: [O.wE] },
             handler(e) {
                 var t;
@@ -115,8 +115,8 @@ let v = new Set([y.Fu, y.JT]),
                 } = e;
                 (0, _.bu)(n.transport);
                 let a = (0, _._f)(n.application);
-                if (null == a) throw new b.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'No application.');
-                if (!(0, f.yE)(null != (t = n.application.flags) ? t : 0, N.udG.EMBEDDED)) throw new b.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'This application cannot access this API');
+                if (null == a) throw new b.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'No application.');
+                if (!(0, f.yE)(null != (t = n.application.flags) ? t : 0, y.udG.EMBEDDED)) throw new b.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'This application cannot access this API');
                 return new Promise((e) => {
                     (0, u._)({
                         applicationId: a,

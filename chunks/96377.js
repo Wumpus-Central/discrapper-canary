@@ -29,8 +29,8 @@ let p = {
             I = n.tether,
             S = void 0 === I || I,
             T = n.tetherOffset,
-            N = void 0 === T ? 0 : T,
-            A = (0, u.Z)(t, {
+            A = void 0 === T ? 0 : T,
+            N = (0, u.Z)(t, {
                 boundary: b,
                 rootBoundary: y,
                 padding: O,
@@ -44,7 +44,7 @@ let p = {
             L = t.modifiersData.popperOffsets,
             x = t.rects.reference,
             M = t.rects.popper,
-            k = 'function' == typeof N ? N(Object.assign({}, t.rects, { placement: t.placement })) : N,
+            k = 'function' == typeof A ? A(Object.assign({}, t.rects, { placement: t.placement })) : A,
             j =
                 'number' == typeof k
                     ? {
@@ -70,8 +70,8 @@ let p = {
                     V = 'y' === w ? r.I : r.F2,
                     Z = 'y' === w ? 'height' : 'width',
                     H = L[w],
-                    W = H + A[F],
-                    Y = H - A[V],
+                    Y = H + N[F],
+                    W = H - N[V],
                     K = S ? -M[Z] / 2 : 0,
                     z = R === r.BL ? x[Z] : M[Z],
                     q = R === r.BL ? -M[Z] : -x[Z],
@@ -94,7 +94,7 @@ let p = {
                     eo = null != (B = null == U ? void 0 : U[w]) ? B : 0,
                     es = H + en - eo - ea,
                     el = H + er - eo,
-                    ec = (0, s.u)(S ? (0, _.VV)(W, es) : W, H, S ? (0, _.Fp)(Y, el) : Y);
+                    ec = (0, s.u)(S ? (0, _.VV)(Y, es) : Y, H, S ? (0, _.Fp)(W, el) : W);
                 (L[w] = ec), (G[w] = ec - H);
             }
             if (E) {
@@ -103,8 +103,8 @@ let p = {
                     ef = 'x' === w ? r.I : r.F2,
                     e_ = L[D],
                     ep = 'y' === D ? 'height' : 'width',
-                    eh = e_ + A[ed],
-                    em = e_ - A[ef],
+                    eh = e_ + N[ed],
+                    em = e_ - N[ef],
                     eg = -1 !== [r.we, r.t$].indexOf(C),
                     eE = null != (eu = null == U ? void 0 : U[D]) ? eu : 0,
                     eb = eg ? eh : e_ - x[ep] - M[ep] - eE + j.altAxis,

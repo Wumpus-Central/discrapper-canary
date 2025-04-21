@@ -11,9 +11,9 @@ var i = n(120356),
     c = n(821022),
     g = n(20493);
 let h = (e) => {
-    let { handleDone: t, headerId: n, modalState: i, shouldHideTemporaryInviteToggle: h, onGenerateNewLink: m, onToggleTemporary: p, onSelectMaxAge: v, onSelectMaxUses: x, isGuestInviteCreationToggleEnabled: I, onSetInviteFlags: N } = e,
-        f = (0, a.ZP)(),
-        { maxAge: j, maxUses: _, temporary: S, flags: b } = i;
+    let { handleDone: t, headerId: n, modalState: i, shouldHideTemporaryInviteToggle: h, onGenerateNewLink: m, onToggleTemporary: p, onSelectMaxAge: v, onSelectMaxUses: x, isGuestInviteCreationToggleEnabled: I, onSetInviteFlags: f } = e,
+        j = (0, a.ZP)(),
+        { maxAge: N, maxUses: _, temporary: S, flags: b } = i;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(s.xBx, {
@@ -28,14 +28,14 @@ let h = (e) => {
                             id: n,
                             tag: 'h2',
                             className: r()(g.marginReset, c.headerCloseButtonSpacing, c.headerText),
-                            children: d.NW.string(d.t.Atdlys)
+                            children: d.intl.string(d.t.Atdlys)
                         })
                     })
                 ]
             }),
             (0, l.jsx)(o.Z, {
                 shouldHideTemporaryInviteToggle: h,
-                maxAge: j,
+                maxAge: N,
                 maxUses: _,
                 temporary: S,
                 onToggleTemporary: p,
@@ -43,13 +43,13 @@ let h = (e) => {
                 onSelectMaxUses: x,
                 onGenerateNewLink: m,
                 isGuestInviteCreationToggleEnabled: I,
-                onSetInviteFlags: N,
+                onSetInviteFlags: f,
                 inviteFlags: b
             }),
             (0, l.jsx)(s.mzw, {
                 className: c.settingsFooter,
                 children: (0, l.jsx)(u.Z, {
-                    theme: f,
+                    theme: j,
                     onConfirm: () => {
                         m(), t();
                     },

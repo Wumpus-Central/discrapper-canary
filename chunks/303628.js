@@ -22,7 +22,7 @@ var r = n(200651),
     I = n(981631),
     S = n(650514),
     T = n(283574);
-function N(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function N(e, t, n) {
         e
     );
 }
-function A(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function A(e) {
                 })
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
@@ -98,7 +98,7 @@ let D = [];
 function L(e) {
     let { channelId: t, type: n } = e,
         a = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled),
-        N = (0, p.Z)('attachments', l.hy.HORIZONTAL),
+        A = (0, p.Z)('attachments', l.hy.HORIZONTAL),
         C = (0, c.e7)([b.Z], () => b.Z.getUploads(t, n.drafts.type)),
         {
             isApplicationCommand: w,
@@ -140,8 +140,8 @@ function L(e) {
         return u.Z.subscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e), () => u.Z.unsubscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e);
     }, [t, n]);
     let U = i.useCallback(() => {
-        N.focusFirstVisibleItem();
-    }, [N]);
+        A.focusFirstVisibleItem();
+    }, [A]);
     (0, y.yp)({
         event: I.CkL.FOCUS_ATTACHMENT_AREA,
         handler: U
@@ -174,14 +174,14 @@ function L(e) {
         : (0, r.jsxs)(i.Fragment, {
               children: [
                   (0, r.jsx)(s.bG, {
-                      navigator: N,
+                      navigator: A,
                       children: (0, r.jsx)(s.SJ, {
                           children: (e) => {
                               var { ref: i } = e,
                                   s = P(e, ['ref']);
                               return (0, r.jsx)(
                                   'ul',
-                                  R(A({ ref: i }, s), {
+                                  R(N({ ref: i }, s), {
                                       className: o()(S.channelAttachmentArea, T.scrollbarGhost),
                                       children: w
                                           ? M.map((e) =>

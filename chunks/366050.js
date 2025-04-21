@@ -138,10 +138,10 @@ function T(e) {
         n = p.get(t);
     null != n && (n.component === l.NYg.VIDEO ? (r = t) : n.component === l.NYg.EMBED_IFRAME && (i = t));
 }
-function N() {
+function A() {
     (r = null), (i = null), (p = new Map());
 }
-class A extends (a = o.ZP.PersistedStore) {
+class N extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         if (null == e) {
             (m = l.VD2.BOTTOM_RIGHT),
@@ -185,9 +185,9 @@ class A extends (a = o.ZP.PersistedStore) {
         };
     }
 }
-u(A, 'displayName', 'PictureInPictureStore'),
-    u(A, 'persistKey', 'PictureInPictureStore'),
-    u(A, 'migrations', [
+u(N, 'displayName', 'PictureInPictureStore'),
+    u(N, 'persistKey', 'PictureInPictureStore'),
+    u(N, 'migrations', [
         (e) => {
             var t, n;
             return {
@@ -199,7 +199,7 @@ u(A, 'displayName', 'PictureInPictureStore'),
             };
         }
     ]);
-let C = new A(s.Z, {
+let C = new N(s.Z, {
     PICTURE_IN_PICTURE_OPEN: E,
     PICTURE_IN_PICTURE_CLOSE: b,
     PICTURE_IN_PICTURE_MOVE: y,
@@ -208,5 +208,5 @@ let C = new A(s.Z, {
     PICTURE_IN_PICTURE_SHOW: S,
     PICTURE_IN_PICTURE_UPDATE_RECT: O,
     PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: T,
-    LOGOUT: N
+    LOGOUT: A
 });

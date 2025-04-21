@@ -24,13 +24,13 @@ function p(e) {
     }
     return (0, r.jsx)(u.Z, {
         artURL: _,
-        header: f.NW.string(f.t['z+mxvr']),
+        header: f.intl.string(f.t['z+mxvr']),
         size: (0, u.L)(p),
         noArt: g,
         selected: m,
-        description: f.NW.format(f.t.d486Wl, { helpUrl: c.Z.getArticleURL(d.BhN.VOICE_VIDEO_TROUBLESHOOTING) }),
-        errorCodeMessage: E ? f.NW.formatToPlainString(f.t['ejOT9/'], { errorCode: b }) : void 0,
+        description: f.intl.format(f.t.d486Wl, { helpUrl: c.Z.getArticleURL(d.BhN.VOICE_VIDEO_TROUBLESHOOTING) }),
+        errorCodeMessage: E ? f.intl.formatToPlainString(f.t['ejOT9/'], { errorCode: b }) : void 0,
         onCTAClick: y,
-        callToAction: f.NW.string(f.t['hxmQ/f'])
+        callToAction: f.intl.string(f.t['hxmQ/f'])
     });
 }

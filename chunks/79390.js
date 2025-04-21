@@ -2,7 +2,7 @@ n.d(t, {
     D$: () => D,
     N4: () => U,
     UI: () => P,
-    Uu: () => N,
+    Uu: () => A,
     _N: () => w,
     cS: () => L,
     cZ: () => G,
@@ -87,14 +87,14 @@ function T(e, t) {
         e
     );
 }
-function N() {
+function A() {
     return {
         text: void 0,
         image: void 0,
-        localCreationAnswerId: A()
+        localCreationAnswerId: N()
     };
 }
-function A() {
+function N() {
     return (0, a.Z)();
 }
 function C(e) {
@@ -167,7 +167,7 @@ function j(e, t) {
 function U(e) {
     let t = (0, d.ZH)(e),
         n = j(e, b.Dv);
-    return v.NW.format(v.t.Vn97KS, {
+    return v.intl.format(v.t.Vn97KS, {
         username: t.nick,
         title: n
     });
@@ -198,33 +198,33 @@ function F(e, t) {
     let n = Math.max(0, t - e.length);
     if (1 === e.length)
         if (n > 0)
-            return v.NW.formatToPlainString(v.t['SV/iZm'], {
+            return v.intl.formatToPlainString(v.t['SV/iZm'], {
                 a: e[0],
                 n: n.toLocaleString()
             });
         else return e[0];
     if (2 === e.length)
         if (n > 0)
-            return v.NW.formatToPlainString(v.t.YBnZKy, {
+            return v.intl.formatToPlainString(v.t.YBnZKy, {
                 a: e[0],
                 b: e[1],
                 n: n.toLocaleString()
             });
         else
-            return v.NW.formatToPlainString(v.t['O5+f5e'], {
+            return v.intl.formatToPlainString(v.t['O5+f5e'], {
                 a: e[0],
                 b: e[1]
             });
     return 3 !== e.length
-        ? v.NW.formatToPlainString(v.t.yVX6kJ, { n: n.toLocaleString() })
+        ? v.intl.formatToPlainString(v.t.yVX6kJ, { n: n.toLocaleString() })
         : n > 0
-          ? v.NW.formatToPlainString(v.t['ThXp+P'], {
+          ? v.intl.formatToPlainString(v.t['ThXp+P'], {
                 a: e[0],
                 b: e[1],
                 c: e[2],
                 n: n.toLocaleString()
             })
-          : v.NW.formatToPlainString(v.t['0UzBMz'], {
+          : v.intl.formatToPlainString(v.t['0UzBMz'], {
                 a: e[0],
                 b: e[1],
                 c: e[2]

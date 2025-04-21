@@ -21,11 +21,11 @@ let E = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
             n = null;
         if ((!(0, p.jl)(e) && !(0, p.J8)(e)) || (0, p.J8)(e)) {
             let i = u.Z.getGuild(e.guild_id);
-            null != i && ((t = m.NW.format(m.t.cZOkbm, { source: i.name })), (n = (0, r.jsx)(s.Z, { guild: i })));
+            null != i && ((t = m.intl.format(m.t.cZOkbm, { source: i.name })), (n = (0, r.jsx)(s.Z, { guild: i })));
         } else if ((0, p.jl)(e)) {
             let i = f.Z.getStickerPack(e.pack_id);
             null != i &&
-                ((t = m.NW.format(m.t.cZOkbm, { source: i.name })),
+                ((t = m.intl.format(m.t.cZOkbm, { source: i.name })),
                 (n = (0, r.jsx)(h.Z, {
                     size: b,
                     sticker: (0, p.Zt)(i),

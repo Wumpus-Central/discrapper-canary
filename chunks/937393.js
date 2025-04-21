@@ -1,8 +1,8 @@
-n.d(t, { Z: () => l });
-var i = n(442837),
-    r = n(553795),
-    d = n(823379),
-    a = n(981631);
-function l() {
-    return (0, i.Wu)([r.Z], () => [r.Z.getAccount(null, a.ABu.XBOX), r.Z.getAccount(null, a.ABu.PLAYSTATION), r.Z.getAccount(null, a.ABu.PLAYSTATION_STAGING)].filter(d.lm));
+e.d(n, { Z: () => a });
+var i = e(442837),
+    l = e(553795),
+    r = e(823379),
+    d = e(981631);
+function a() {
+    return (0, i.Wu)([l.Z], () => [l.Z.getAccount(null, d.ABu.XBOX), l.Z.getAccount(null, d.ABu.PLAYSTATION), l.Z.getAccount(null, d.ABu.PLAYSTATION_STAGING)].filter(r.lm));
 }

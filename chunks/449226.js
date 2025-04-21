@@ -2,8 +2,8 @@ n.d(t, { Z: () => o });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    s = n.n(i),
-    l = n(481060),
+    l = n.n(i),
+    s = n(481060),
     a = n(296205);
 function o(e) {
     var t, n;
@@ -12,7 +12,7 @@ function o(e) {
             e.stopPropagation(), e.preventDefault();
         };
     return (0, r.jsx)(
-        l.P3F,
+        s.P3F,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -42,13 +42,13 @@ function o(e) {
                 onClick: m,
                 onMouseDown: m,
                 onMouseUp: m,
-                className: s()(a.switch, d)
+                className: l()(a.switch, d)
             },
             u
         )),
         (n = n =
             {
-                children: (0, r.jsx)(l.rsf, {
+                children: (0, r.jsx)(s.rsf, {
                     checked: i,
                     onChange: o,
                     disabled: c

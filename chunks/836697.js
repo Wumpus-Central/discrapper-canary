@@ -51,12 +51,12 @@ function C(e) {
                                             children: [
                                                 (0, r.jsx)(a.X6q, {
                                                     variant: 'heading-md/medium',
-                                                    children: O.NW.string(O.t['0YV0YG'])
+                                                    children: O.intl.string(O.t['0YV0YG'])
                                                 }),
                                                 (0, r.jsx)(a.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
-                                                    children: O.NW.string(O.t['0UQVDA'])
+                                                    children: O.intl.string(O.t['0UQVDA'])
                                                 })
                                             ]
                                         }),
@@ -65,7 +65,7 @@ function C(e) {
                                             size: a.PhG.SMALL,
                                             color: a.Ttl.BRAND,
                                             onClick: o,
-                                            children: O.NW.string(O.t['4r+amZ'])
+                                            children: O.intl.string(O.t['4r+amZ'])
                                         })
                                     ]
                                 }),
@@ -135,10 +135,10 @@ function j(e) {
         x = (0, s.e7)([p.Z], () => p.Z.hasFetchedRequestToJoinGuilds),
         E = (0, b.Z)(),
         I = (0, c.Z)(S),
-        N = i.useMemo(() => {
+        P = i.useMemo(() => {
             let e = (0, m.qQ)({
                 folderId: g.S.PENDING_JOIN_REQUESTS_FOLDER,
-                folderName: O.NW.string(O.t['scsU+v']),
+                folderName: O.intl.string(O.t['scsU+v']),
                 expanded: l,
                 guildIds: []
             });
@@ -148,10 +148,10 @@ function j(e) {
     i.useEffect(() => {
         l && !x && d.Z.fetchRequestToJoinGuilds();
     }, [l, x]);
-    let P = null != S && E.includes(S);
+    let w = null != S && E.includes(S);
     return (i.useEffect(() => {
-        !l && P && I !== S && j(!0);
-    }, [l, P, I, S]),
+        !l && w && I !== S && j(!0);
+    }, [l, w, I, S]),
     0 === E.length)
         ? null
         : (0, r.jsx)(C, {
@@ -159,10 +159,10 @@ function j(e) {
               children: (0, r.jsx)('div', {
                   className: o()({ [v.folderWrapperCollapsed]: !l }),
                   children: (0, r.jsx)(y.Z, {
-                      folderNode: N,
+                      folderNode: P,
                       expanded: l,
-                      useCircleMask: !l && !P,
-                      selected: P,
+                      useCircleMask: !l && !w,
+                      selected: w,
                       draggable: !1,
                       sorting: !1,
                       onExpandCollapse: () => {

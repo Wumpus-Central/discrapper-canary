@@ -1,4 +1,4 @@
-B.d(g, { Z: () => d }), B(388685);
+B.d(g, { Z: () => o }), B(388685);
 var C = B(200651),
     Q = B(192379),
     w = B(120356),
@@ -12,11 +12,11 @@ var C = B(200651),
     r = B(116175),
     t = B(817239),
     n = B(388032),
-    o = B(602268);
-let d = function (A) {
-    let { className: g, guildId: B, badge: w, primaryColor: d, secondaryColor: M } = A,
-        [s, L] = Q.useState(!1),
-        X = Q.useMemo(() => e.go.every((A) => A.primary !== d || A.secondary !== M), [d, M]);
+    d = B(602268);
+let o = function (A) {
+    let { className: g, guildId: B, badge: w, primaryColor: o, secondaryColor: s } = A,
+        [M, L] = Q.useState(!1),
+        X = Q.useMemo(() => e.go.every((A) => A.primary !== o || A.secondary !== s), [o, s]);
     function c(A) {
         let g = {};
         void 0 !== A.primary && (g.badgeColorPrimary = A.primary), void 0 !== A.secondary && (g.badgeColorSecondary = A.secondary), P.Z.updateGuildProfile(B, g);
@@ -25,17 +25,17 @@ let d = function (A) {
         className: g,
         children: [
             (0, C.jsx)(E.vwX, {
-                className: o.sectionTitle,
-                children: n.NW.string(t.Z.zSbMdX)
+                className: d.sectionTitle,
+                children: n.intl.string(t.default.zSbMdX)
             }),
             (0, C.jsxs)('div', {
-                className: o.pickerGrid,
+                className: d.pickerGrid,
                 children: [
                     e.go.map((A) =>
                         (0, C.jsx)(
                             E.P3F,
                             {
-                                className: D()(o.pickerItem, { [o.pickerItemSelected]: A.primary === d && A.secondary === M }),
+                                className: D()(d.pickerItem, { [d.pickerItemSelected]: A.primary === o && A.secondary === s }),
                                 onClick: () => c(A),
                                 children: (0, C.jsx)(v.A, {
                                     badge: w,
@@ -51,8 +51,8 @@ let d = function (A) {
                     (0, C.jsx)(I.Z, {
                         showSecondaryColor: r.ME[w] >= 2,
                         palette: {
-                            primary: d,
-                            secondary: M
+                            primary: o,
+                            secondary: s
                         },
                         onPrimaryColorChange: (A) => {
                             c({ primary: (0, f.Rf)(A) });
@@ -60,7 +60,7 @@ let d = function (A) {
                         onSecondaryColorChange: (A) => {
                             c({ secondary: (0, f.Rf)(A) });
                         },
-                        shouldShow: s,
+                        shouldShow: M,
                         onRequestClose: () => L(!1),
                         children: (A) => {
                             var g, B;
@@ -96,7 +96,7 @@ let d = function (A) {
                                         onClick: () => {
                                             L((A) => !A);
                                         },
-                                        className: D()(o.pickerItem, { [o.pickerItemSelected]: X }),
+                                        className: D()(d.pickerItem, { [d.pickerItemSelected]: X }),
                                         children: (0, C.jsx)(E.ilE, {
                                             size: 'custom',
                                             width: 20,

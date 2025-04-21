@@ -61,7 +61,7 @@ function h(e) {
             (0, r.jsx)(c.X6q, {
                 variant: 'heading-sm/normal',
                 className: _.sectionLabel,
-                children: f.NW.format(v, { application: null != (t = null == n ? void 0 : n.name) ? t : '' })
+                children: f.intl.format(v, { application: null != (t = null == n ? void 0 : n.name) ? t : '' })
             }),
             i
                 .map((e) =>
@@ -78,7 +78,7 @@ function h(e) {
                     })
                 )
                 .flat(),
-            O && (0, r.jsx)(p, { text: f.NW.string(f.t.Ls2XRk) }),
+            O && (0, r.jsx)(p, { text: f.intl.string(f.t.Ls2XRk) }),
             (0, r.jsx)(p, {
                 text: y,
                 isFake: !0

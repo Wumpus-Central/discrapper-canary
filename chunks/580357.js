@@ -1,20 +1,20 @@
-n.d(l, { Z: () => t });
+n.d(l, { Z: () => s });
 var a = n(200651);
 n(192379);
 var r = n(481060),
-    s = n(388032),
-    o = n(696824);
-function t() {
+    t = n(388032),
+    i = n(696824);
+function s() {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(r.Text, {
-                className: o.marker,
+                className: i.marker,
                 tag: 'span',
                 variant: 'text-md/semibold',
                 color: 'text-danger',
                 children: '*'
             }),
-            (0, a.jsx)(r.nn4, { children: s.NW.string(s.t.EkokLy) })
+            (0, a.jsx)(r.nn4, { children: t.intl.string(t.t.EkokLy) })
         ]
     });
 }

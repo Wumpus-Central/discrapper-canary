@@ -13,9 +13,9 @@ var n = s(200651),
     f = s(382086),
     m = s(996453),
     b = s(446706),
-    N = s(594174),
-    h = s(626135),
-    x = s(179645),
+    h = s(594174),
+    x = s(626135),
+    N = s(179645),
     E = s(436046),
     C = s(963209),
     j = s(436457),
@@ -94,43 +94,43 @@ function k(e) {
         })(e, ['onSlideChange']),
         { onClose: k } = a,
         [D, P] = o.useState(!1),
-        w = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
+        w = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
         G = null != w && null == w.nsfwAllowed,
         [Z, M] = o.useState(G ? g.F.AGE_GATE : g.F.CHOOSE_TEMPLATE),
         [B, R] = o.useState(null);
     o.useEffect(() => {
         s(D ? g.F.COMPLETE : Z);
     }, [s, Z, D]);
-    let [U, W] = o.useState(null),
-        [z, H] = o.useState(null),
+    let [U, z] = o.useState(null),
+        [H, W] = o.useState(null),
         [J, Y] = o.useState(!1),
-        V = (0, l.e7)([x.Z], () => x.Z.getType() === I.M5.INVITE_UNCLAIMED),
+        V = (0, l.e7)([N.Z], () => N.Z.getType() === I.M5.INVITE_UNCLAIMED),
         K = o.useCallback(
             (e) => {
-                H(e),
+                W(e),
                     M(g.F.CREATION_INTENT),
-                    h.default.track(v.rMx.GUILD_TEMPLATE_SELECTED, {
+                    x.default.track(v.rMx.GUILD_TEMPLATE_SELECTED, {
                         template_name: e.label,
                         template_code: e.code
                     });
             },
-            [H, M]
+            [W, M]
         ),
         { content: q, footer: X } = (0, f.v)({
             hasFooter: !1,
             onBack: () => {
-                H(null), M(g.F.CHOOSE_TEMPLATE);
+                W(null), M(g.F.CHOOSE_TEMPLATE);
             },
             onCreationIntentChosen: (e) => {
                 Y(e === A.lr.COMMUNITY), M(g.F.CUSTOMIZE_GUILD);
             }
         }),
         { content: Q, footer: $ } = (0, m.G)({
-            guildTemplate: z,
+            guildTemplate: H,
             titleClassName: y.customizeGuildTitle,
             hasFooter: !1,
             onGuildCreated: (e) => {
-                W(e), (null == z ? void 0 : z.id) === O.l.CREATE ? M(g.F.CHANNEL_PROMPT) : P(!0);
+                z(e), (null == H ? void 0 : H.id) === O.l.CREATE ? M(g.F.CHANNEL_PROMPT) : P(!0);
             },
             onBack: () => {
                 M(g.F.CREATION_INTENT);
@@ -288,7 +288,7 @@ function k(e) {
                                               children: (0, n.jsxs)(c.Text, {
                                                   variant: 'text-sm/medium',
                                                   className: y.joinCTA,
-                                                  children: [F.NW.string(F.t['N+Mi/f']), ' ', F.NW.string(F.t.yRjK4u)]
+                                                  children: [F.intl.string(F.t['N+Mi/f']), ' ', F.intl.string(F.t.yRjK4u)]
                                               })
                                           })
                                       })

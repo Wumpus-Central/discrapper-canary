@@ -38,9 +38,9 @@ function j(e) {
         j = null != b && b.hasFeature(C.oNc.NEWS),
         E = _ && j,
         {
-            editingMessage: N,
-            editingTextValue: I,
-            editingRichValue: P
+            editingMessage: I,
+            editingTextValue: P,
+            editingRichValue: S
         } = (0, l.cj)(
             [p.Z],
             () => ({
@@ -50,15 +50,15 @@ function j(e) {
             }),
             [s]
         ),
-        S = (0, l.e7)([d.default], () => d.default.getId()),
-        Z = i.useCallback(
+        Z = (0, l.e7)([d.default], () => d.default.getId()),
+        N = i.useCallback(
             (e, n, r) => {
                 let { content: i } = r,
                     l = f.Z.can(C.Plq.MANAGE_MESSAGES, t),
-                    s = null != N && null != N.author ? N.author.id : null;
-                return E && (s === S || l) && null != N && (0, g.yE)(N.flags, C.iLy.CROSSPOSTED) ? a.Z.confirmEdit(e, n, i) : o.Z.editMessage(e, n, { content: i }), Promise.resolve();
+                    s = null != I && null != I.author ? I.author.id : null;
+                return E && (s === Z || l) && null != I && (0, g.yE)(I.flags, C.iLy.CROSSPOSTED) ? a.Z.confirmEdit(e, n, i) : o.Z.editMessage(e, n, { content: i }), Promise.resolve();
             },
-            [N, E, S, t]
+            [I, E, Z, t]
         ),
         T = i.useCallback(
             (e) => {
@@ -113,17 +113,17 @@ function j(e) {
             [c]
         ),
         A = (0, u.R6)('EditorWrapper');
-    return null != I && null != P
+    return null != P && null != S
         ? (0, r.jsx)(y.Z, {
               ref: void 0,
               channel: t,
               message: n,
-              textValue: I,
-              richValue: P,
+              textValue: P,
+              richValue: S,
               onCancel: o.Z.endEditMessage,
               onChange: o.Z.updateEditMessage,
               onConfirmDelete: a.Z.confirmDelete,
-              saveMessage: Z,
+              saveMessage: N,
               validateEdit: v,
               isRefreshEnabled: A,
               children: T

@@ -16,22 +16,22 @@ var i = n(200651),
     _ = n(152790),
     y = n(263930);
 let x = (e) => {
-    let { entry: t, onClose: n, onReaction: l, onRequestOpen: x, disableActivityProfileLinks: v, customCTA: C, popoutClassname: g, popoutPosition: N = 'right' } = e,
-        j = r.useRef(null),
-        P = (0, a.e7)([u.Z, c.Z], () => c.Z.getChannel(u.Z.getChannelId())),
+    let { entry: t, onClose: n, onReaction: l, onRequestOpen: x, disableActivityProfileLinks: v, customCTA: C, popoutClassname: g, popoutPosition: j = 'right' } = e,
+        P = r.useRef(null),
+        N = (0, a.e7)([u.Z, c.Z], () => c.Z.getChannel(u.Z.getChannelId())),
         E = (0, a.e7)([d.default], () => d.default.getUser(t.author_id)),
         { nick: O, avatar: A } = r.useMemo(() => {
-            let e = null == E ? void 0 : E.getAvatarURL(null == P ? void 0 : P.guild_id, 48, !1);
+            let e = null == E ? void 0 : E.getAvatarURL(null == N ? void 0 : N.guild_id, 48, !1);
             return {
-                nick: p.ZP.getName(null == P ? void 0 : P.guild_id, null == P ? void 0 : P.id, E),
+                nick: p.ZP.getName(null == N ? void 0 : N.guild_id, null == N ? void 0 : N.id, E),
                 avatar: e
             };
-        }, [E, P]);
+        }, [E, N]);
     return null == E
         ? null
         : (0, i.jsx)(s.yRy, {
-              targetElementRef: j,
-              position: N,
+              targetElementRef: P,
+              position: j,
               renderPopout: (e) => {
                   let { closePopout: r, updatePosition: o } = e;
                   return (0, i.jsx)('div', {
@@ -81,7 +81,7 @@ let x = (e) => {
                                   });
                           }
                           return e;
-                      })({ innerRef: j }, e)),
+                      })({ innerRef: P }, e)),
                       (r = r =
                           {
                               className: _.profileEntryCard,
@@ -97,7 +97,7 @@ let x = (e) => {
                                           (0, i.jsx)('img', {
                                               className: _.avatar,
                                               src: A,
-                                              alt: b.NW.formatToPlainString(b.t.IzVXxc, { userName: O })
+                                              alt: b.intl.formatToPlainString(b.t.IzVXxc, { userName: O })
                                           }),
                                           (0, i.jsx)('div', {
                                               className: _.playerInfo,

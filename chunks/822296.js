@@ -26,7 +26,7 @@ function E(e) {
         (null == b ? void 0 : b.isGuildStageVoice()) && (0, l.aP)((0, d.V9)(t), !1);
     });
     let O = () => (0, l.aP)((0, d.V9)(t)),
-        I = h.NW.string(h.t['4EGMWF']),
+        I = h.intl.string(h.t['4EGMWF']),
         S = v(n);
     return y
         ? (0, r.jsx)(s.f6W, {
@@ -49,7 +49,7 @@ function E(e) {
                                           color: 'none',
                                           variant: 'small' === S ? 'heading-md/normal' : 'heading-lg/normal',
                                           className: m.header,
-                                          children: h.NW.formatToMarkdownString(h.t.Kb4Ukp, {})
+                                          children: h.intl.formatToMarkdownString(h.t.Kb4Ukp, {})
                                       }),
                                       (0, r.jsx)(s.zxk, {
                                           size: 'small' === S ? s.zxk.Sizes.MEDIUM : s.zxk.Sizes.LARGE,
@@ -74,7 +74,7 @@ function E(e) {
               noArt: i,
               selected: E,
               size: (0, _.L)(n),
-              header: h.NW.formatToMarkdownString(h.t['1Ww0Hh'], {}),
+              header: h.intl.formatToMarkdownString(h.t['1Ww0Hh'], {}),
               onCTAClick: O,
               callToAction: I
           });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => N });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -74,14 +74,14 @@ function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = N(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function N(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -90,18 +90,18 @@ function N(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let A = function (e) {
-    var { isGift: t, subscriptionTier: i, onClick: v, size: I, className: N, isTrialCTA: A, buttonText: C, buttonTextClassName: R, subscribeButtonText: P, iconClassName: w, postSuccessGuild: D, onSubscribeModalClose: L, premiumModalAnalyticsLocation: x, showIcon: M = !0, disableShine: k, applicationId: j, giftMessage: U, shinyButtonClassName: G, showGradient: B = !1, confirmationFooter: F, paymentModalBanner: V } = e,
+let N = function (e) {
+    var { isGift: t, subscriptionTier: i, onClick: v, size: I, className: A, isTrialCTA: N, buttonText: C, buttonTextClassName: R, subscribeButtonText: P, iconClassName: w, postSuccessGuild: D, onSubscribeModalClose: L, premiumModalAnalyticsLocation: x, showIcon: M = !0, disableShine: k, applicationId: j, giftMessage: U, shinyButtonClassName: G, showGradient: B = !1, confirmationFooter: F, paymentModalBanner: V } = e,
         Z = T(e, ['isGift', 'subscriptionTier', 'onClick', 'size', 'className', 'isTrialCTA', 'buttonText', 'buttonTextClassName', 'subscribeButtonText', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'giftMessage', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner']);
     let H = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
-        W = (0, o.e7)([h.Z], () => h.Z.isFocused()),
-        Y = (0, o.e7)([p.ZP], () => p.ZP.getPremiumTypeSubscription()),
+        Y = (0, o.e7)([h.Z], () => h.Z.isFocused()),
+        W = (0, o.e7)([p.ZP], () => p.ZP.getPremiumTypeSubscription()),
         { analyticsLocations: K } = (0, c.ZP)(),
         z = (0, g.N)(),
         q = !t && null != z && null != i && E.nG[z.trial_id].skus.includes(i),
         Q = (0, m.Z)({
             subscriptionTier: i,
-            isTrialCTA: A,
+            isTrialCTA: N,
             isGift: t,
             buttonTextOverride: C,
             defaultTextOverride: P
@@ -109,7 +109,7 @@ let A = function (e) {
         X = (e) => {
             var a;
             if ((e.preventDefault(), null == H)) return void (0, f.uL)(b.Z5c.LOGIN, { source: 'premium_subscribe_button' });
-            if ((null == v || v(e), (null == Y ? void 0 : Y.status) === b.O0b.ACCOUNT_HOLD)) {
+            if ((null == v || v(e), (null == W ? void 0 : W.status) === b.O0b.ACCOUNT_HOLD)) {
                 (0, u.A3)(), l.Z.open(b.oAB.PREMIUM), null == L || L(!1);
                 return;
             }
@@ -155,14 +155,14 @@ let A = function (e) {
                     paymentModalBanner: V
                 });
         };
-    if (A)
+    if (N)
         return (0, r.jsxs)(
             s.zxk,
             S(
                 O(
                     {
                         size: I,
-                        className: N,
+                        className: A,
                         innerClassName: y.premiumSubscribeButton,
                         color: s.zxk.Colors.BRAND_INVERTED,
                         onClick: X
@@ -192,7 +192,7 @@ let A = function (e) {
                 O(
                     {
                         size: I,
-                        className: N,
+                        className: A,
                         innerClassName: y.giftButton,
                         color: s.zxk.Colors.PRIMARY,
                         onClick: X
@@ -231,9 +231,9 @@ let A = function (e) {
                                 [y.tier2Gradient]: B && i === E.Si.TIER_2,
                                 [y.tier1Gradient]: B && i === E.Si.TIER_1
                             },
-                            N
+                            A
                         ),
-                        pauseAnimation: !W || k
+                        pauseAnimation: !Y || k
                     },
                     Z,
                     e

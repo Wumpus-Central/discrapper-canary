@@ -26,15 +26,15 @@ function j(e, t, n, i) {
     return e === _.C5.HORIZONTAL ? Math.min(Math.max((t - r) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - r) / i) * 16) / 9, 256));
 }
 function C(e) {
-    let { id: t, size: n, locked: C, padding: S, borderWidth: N, opacity: Z, horizontal: w, pinned: P, anchorTop: T, anchorLeft: k, showEmpty: A = !0 } = e,
-        D = 2 * S + 2 * N,
+    let { id: t, size: n, locked: C, padding: S, borderWidth: Z, opacity: N, horizontal: w, pinned: P, anchorTop: T, anchorLeft: k, showEmpty: A = !0 } = e,
+        D = 2 * S + 2 * Z,
         { width: L, height: R } = {
             width: 'number' == typeof n.width ? n.width : 256,
             height: 'number' == typeof n.height ? n.height : 144
         },
-        W = (0, o.e7)([y.Z], () => y.Z.getVoiceChannelId()),
-        { width: M, height: z, ref: V } = (0, c.ZP)(),
-        U = (0, o.e7)(
+        M = (0, o.e7)([y.Z], () => y.Z.getVoiceChannelId()),
+        { width: z, height: V, ref: U } = (0, c.ZP)(),
+        W = (0, o.e7)(
             [g.Z],
             () => {
                 var e;
@@ -44,7 +44,7 @@ function C(e) {
             [t]
         ),
         G = !w,
-        F = (0, o.e7)([m.Z], () => m.Z.getChannel(W)),
+        F = (0, o.e7)([m.Z], () => m.Z.getChannel(M)),
         B = (0, o.e7)([f.default], () => f.default.getId()),
         H = (T && G) || (k && w),
         Y = (!T && G) || (!k && w),
@@ -55,15 +55,15 @@ function C(e) {
         } = (0, o.cj)(
             [h.Z, d.Z],
             () => {
-                if (null == W)
+                if (null == M)
                     return {
                         streamParticipants: I,
                         participantsVersion: -1,
                         activeStreams: new Set()
                     };
-                let e = new Set(h.Z.getAllActiveStreamsForChannel(W).map((e) => (0, p.V9)(e))),
+                let e = new Set(h.Z.getAllActiveStreamsForChannel(M).map((e) => (0, p.V9)(e))),
                     t = (t) => e.has((0, p.V9)(t.stream)),
-                    n = d.Z.getStreamParticipants(W).filter((e) => e.user.id !== B && (!!U || t(e)));
+                    n = d.Z.getStreamParticipants(M).filter((e) => e.user.id !== B && (!!W || t(e)));
                 return (
                     n.sort((e, n) => {
                         if (H) {
@@ -78,11 +78,11 @@ function C(e) {
                     {
                         streamParticipants: n,
                         activeStreams: e,
-                        participantsVersion: d.Z.getParticipantsVersion(W)
+                        participantsVersion: d.Z.getParticipantsVersion(M)
                     }
                 );
             },
-            [W, B, U, H, Y]
+            [M, B, W, H, Y]
         ),
         J = X.length,
         q = null == F || (0 === K.size && C) || (0 === J && !C),
@@ -112,7 +112,7 @@ function C(e) {
                     tileWidth: c
                 }
             );
-        })(!1, X.length, null != M ? M : L - D, null != z ? z : R - D, $),
+        })(!1, X.length, null != z ? z : L - D, null != V ? V : R - D, $),
         en = {
             id: t,
             width: L,
@@ -222,15 +222,15 @@ function C(e) {
               ? C
                   ? null
                   : (0, i.jsx)(O.E, {
-                        emptyText: E.NW.string(E.t['T6+rX1']),
+                        emptyText: E.intl.string(E.t['T6+rX1']),
                         icon: l.hGI,
                         absolute: !0
                     })
               : null
           : (0, i.jsx)('div', {
                 className: x.goLiveGridContainer,
-                style: { opacity: Z },
-                ref: V,
+                style: { opacity: N },
+                ref: U,
                 children: (0, i.jsx)(v.Z, {
                     widgetId: t,
                     tileWidth: ee,

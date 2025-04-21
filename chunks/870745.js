@@ -15,7 +15,7 @@ function s(e, t, n) {
         : (0, r.jsx)(i.sNh, {
               id: 'report-app',
               color: 'danger',
-              label: u.NW.string(u.t.NgA5vr),
+              label: u.intl.string(u.t.NgA5vr),
               action: () =>
                   (0, a.uu)({
                       application: e,

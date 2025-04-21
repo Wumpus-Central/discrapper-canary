@@ -47,14 +47,14 @@ function d(e) {
                   o.default,
                   u(
                       {
-                          confirmText: l.NW.string(l.t.efSOLC),
-                          secondaryConfirmText: l.NW.string(l.t['JdIQ/f']),
-                          title: l.NW.string(l.t.pVr7Cg),
-                          cancelText: l.NW.string(l.t.EwoEOT),
+                          confirmText: l.intl.string(l.t.efSOLC),
+                          secondaryConfirmText: l.intl.string(l.t['JdIQ/f']),
+                          title: l.intl.string(l.t.pVr7Cg),
+                          cancelText: l.intl.string(l.t.EwoEOT),
                           onConfirm: e,
                           onConfirmSecondary: n,
                           onCancel: t,
-                          body: l.NW.string(l.t.Tfj539)
+                          body: l.intl.string(l.t.Tfj539)
                       },
                       i
                   )

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => C }), n(388685), n(457542);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => O }), n(388685), n(457542);
+var i = n(200651),
+    r = n(192379),
     s = n(442837),
-    a = n(780384),
-    l = n(481060),
+    l = n(780384),
+    a = n(481060),
     o = n(457330),
     c = n(410030),
     d = n(726542),
@@ -15,15 +15,15 @@ var r = n(200651),
     f = n(63063),
     b = n(981631),
     _ = n(856651),
-    N = n(388032),
-    x = n(6318);
-function E(e) {
+    x = n(388032),
+    E = n(6318);
+function j(e) {
     var t;
-    let { account: n, refreshed: a, handleRefresh: o } = e,
-        [c, d] = i.useState(!1),
+    let { account: n, refreshed: l, handleRefresh: o } = e,
+        [c, d] = r.useState(!1),
         m = null != (t = n.metadata) ? t : {},
         h = (0, s.e7)([p.default], () => p.default.locale),
-        E = i.useCallback(async () => {
+        j = r.useCallback(async () => {
             d(!0);
             try {
                 await o(n);
@@ -31,78 +31,78 @@ function E(e) {
                 d(!1);
             }
         }, [n, o]),
-        j = null;
+        C = null;
     switch (n.type) {
         case b.ABu.REDDIT:
-            j = (0, g.oP)(m, x.metadataItem);
+            C = (0, g.oP)(m, E.metadataItem);
             break;
         case b.ABu.STEAM:
-            j = (0, g.Dq)(m, x.metadataItem);
+            C = (0, g.Dq)(m, E.metadataItem);
             break;
         case b.ABu.TWITTER:
-            j = (0, g.rJ)(m, x.metadataItem);
+            C = (0, g.rJ)(m, E.metadataItem);
             break;
         case b.ABu.EBAY:
-            j = (0, g.ul)(m, x.metadataItem);
+            C = (0, g.ul)(m, E.metadataItem);
             break;
         case b.ABu.PAYPAL:
-            j = (0, g.li)(m, x.metadataItem);
+            C = (0, g.li)(m, E.metadataItem);
             break;
         case b.ABu.TIKTOK:
-            j = (0, g.hf)(m, x.metadataItem);
+            C = (0, g.hf)(m, E.metadataItem);
     }
-    let C = (0, u.FI)(m[_.PC.CREATED_AT], h),
-        O = null,
-        S = N.NW.string(N.t.wzzjk5);
+    let O = (0, u.FI)(m[_.PC.CREATED_AT], h),
+        S = null,
+        v = x.intl.string(x.t.wzzjk5);
     return (
-        (null == j || 0 === j.length) &&
-            null == C &&
-            ((O = (0, r.jsx)(
-                l.Text,
+        (null == C || 0 === C.length) &&
+            null == O &&
+            ((S = (0, i.jsx)(
+                a.Text,
                 {
                     variant: 'text-xs/normal',
                     color: 'header-secondary',
-                    children: N.NW.format(N.t.Up2ni4, { helpdeskUrl: f.Z.getArticleURL(b.BhN.CONNECTION_DETAILS) })
+                    children: x.intl.format(x.t.Up2ni4, { helpdeskUrl: f.Z.getArticleURL(b.BhN.CONNECTION_DETAILS) })
                 },
                 'label'
             )),
-            (S = N.NW.string(N.t['LVh3//']))),
-        a && (S = N.NW.string(N.t.i4jeWV)),
-        (0, r.jsxs)('div', {
-            className: x.metadataContainer,
+            (v = x.intl.string(x.t['LVh3//']))),
+        l && (v = x.intl.string(x.t.i4jeWV)),
+        (0, i.jsxs)('div', {
+            className: E.metadataContainer,
             children: [
-                O,
-                null == j
+                S,
+                null == C
                     ? void 0
-                    : j.map((e, t) =>
-                          (0, r.jsxs)(r.Fragment, {
-                              children: [e, t < j.length - 1 ? (0, r.jsx)('span', { className: x.dot }) : null]
+                    : C.map((e, t) =>
+                          (0, i.jsxs)(i.Fragment, {
+                              children: [e, t < C.length - 1 ? (0, i.jsx)('span', { className: E.dot }) : null]
                           })
                       ),
-                null != j && j.length > 0 && null != C ? (0, r.jsx)('div', { className: x.dot }) : null,
-                null != C
-                    ? (0, r.jsx)(
-                          l.Text,
+                null != C && C.length > 0 && null != O ? (0, i.jsx)('div', { className: E.dot }) : null,
+                null != O
+                    ? (0, i.jsx)(
+                          a.Text,
                           {
                               variant: 'text-xs/normal',
                               color: 'header-secondary',
-                              children: N.NW.format(N.t['9rfonp'], { date: C })
+                              children: x.intl.format(x.t['9rfonp'], { date: O })
                           },
                           'member-since'
                       )
                     : null,
-                (0, r.jsx)(
-                    l.zxk,
+                (0, i.jsx)(
+                    a.zxk,
                     {
-                        className: x.metadataRefreshButton,
-                        look: l.zxk.Looks.OUTLINED,
-                        color: a ? l.zxk.Colors.GREEN : l.zxk.Colors.PRIMARY,
-                        size: l.zxk.Sizes.MIN,
+                        className: E.metadataRefreshButton,
+                        look: a.zxk.Looks.OUTLINED,
+                        color: l ? a.zxk.Colors.GREEN : a.zxk.Colors.PRIMARY,
+                        size: a.zxk.Sizes.MIN,
                         submitting: c,
-                        disabled: a,
-                        'aria-label': N.NW.string(N.t.sCkLYG),
-                        onClick: a ? void 0 : E,
-                        children: S
+                        disabled: l,
+                        'aria-label': x.intl.string(x.t.sCkLYG),
+                        onClick: l ? void 0 : j,
+                        children: v
                     },
                     'refresh-button'
                 )
@@ -110,54 +110,54 @@ function E(e) {
         })
     );
 }
-function j(e) {
+function C(e) {
     let { account: t, handleRefresh: n, refreshedAccountIds: s } = e,
-        [u, g] = i.useState(t.visibility),
-        [p, h] = i.useState(t.metadataVisibility),
+        [u, g] = r.useState(t.visibility),
+        [p, h] = r.useState(t.metadataVisibility),
         f = (0, c.ZP)();
-    i.useEffect(() => {
+    r.useEffect(() => {
         g(t.visibility), h(t.metadataVisibility);
     }, [t]);
     let b = d.Z.get(t.type),
         _ = !0 === b.hasMetadata;
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsxs)('div', {
-                className: x.activityRow,
+            (0, i.jsxs)('div', {
+                className: E.activityRow,
                 children: [
-                    (0, r.jsx)('img', {
+                    (0, i.jsx)('img', {
                         alt: b.name,
-                        className: x.connectionIcon,
-                        src: (0, a.wj)(f) ? b.icon.darkSVG : b.icon.lightSVG
+                        className: E.connectionIcon,
+                        src: (0, l.wj)(f) ? b.icon.darkSVG : b.icon.lightSVG
                     }),
-                    (0, r.jsxs)('div', {
-                        className: x.activitySettings,
+                    (0, i.jsxs)('div', {
+                        className: E.activitySettings,
                         children: [
-                            (0, r.jsxs)(l.j7V, {
-                                className: x.visibilitySwitch,
+                            (0, i.jsxs)(a.j7V, {
+                                className: E.visibilitySwitch,
                                 hideBorder: !0,
                                 value: 1 === u,
                                 onChange: function (e) {
                                     let { verified: n } = t,
-                                        r = +!!e;
+                                        i = +!!e;
                                     if (e && !n) {
-                                        g(r),
+                                        g(i),
                                             (0, m.Z)({
                                                 platformType: t.type,
                                                 location: 'User Settings'
                                             });
                                         return;
                                     }
-                                    g(r), o.Z.setVisibility(t.type, t.id, r);
+                                    g(i), o.Z.setVisibility(t.type, t.id, i);
                                 },
                                 children: [
-                                    (0, r.jsx)(l.Text, {
+                                    (0, i.jsx)(a.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
                                         children: b.name
                                     }),
                                     _ &&
-                                        (0, r.jsx)(E, {
+                                        (0, i.jsx)(j, {
                                             account: t,
                                             refreshed: s.includes(t.id),
                                             handleRefresh: n
@@ -165,62 +165,62 @@ function j(e) {
                                 ]
                             }),
                             _ &&
-                                (0, r.jsx)(l.j7V, {
-                                    className: x.additionalDetailsSwitch,
+                                (0, i.jsx)(a.j7V, {
+                                    className: E.additionalDetailsSwitch,
                                     hideBorder: !0,
                                     disabled: 1 !== u || null == t.metadata,
                                     value: 1 === p,
                                     onChange: function (e) {
                                         let { verified: n } = t,
-                                            r = +!!e;
+                                            i = +!!e;
                                         if (e && !n) {
-                                            h(r),
+                                            h(i),
                                                 (0, m.Z)({
                                                     platformType: t.type,
                                                     location: 'User Settings'
                                                 });
                                             return;
                                         }
-                                        h(r), o.Z.setMetadataVisibility(t.type, t.id, r);
+                                        h(i), o.Z.setMetadataVisibility(t.type, t.id, i);
                                     },
-                                    children: (0, r.jsx)(l.Text, {
+                                    children: (0, i.jsx)(a.Text, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
-                                        children: N.NW.string(N.t['3l78ws'])
+                                        children: x.intl.string(x.t['3l78ws'])
                                     })
                                 })
                         ]
                     })
                 ]
             }),
-            (0, r.jsx)('div', { className: x.divider })
+            (0, i.jsx)('div', { className: E.divider })
         ]
     });
 }
-function C() {
+function O() {
     let e = (0, s.e7)([h.Z], () => h.Z.getAccounts()),
-        t = i.useMemo(() => e.filter((e) => d.Z.isSupported(e.type)), [e]),
-        [n, a] = i.useState([]),
-        c = i.useCallback(
+        t = r.useMemo(() => e.filter((e) => d.Z.isSupported(e.type)), [e]),
+        [n, l] = r.useState([]),
+        c = r.useCallback(
             (e) =>
                 o.Z.refresh(e.type, e.id).finally(() => {
-                    a((t) => [...t, e.id]);
+                    l((t) => [...t, e.id]);
                 }),
             []
         );
     return 0 === t.length
         ? null
-        : (0, r.jsxs)(l.hjN, {
-              className: x.container,
+        : (0, i.jsxs)(a.hjN, {
+              className: E.container,
               children: [
-                  (0, r.jsx)(l.vwX, {
-                      tag: l.RB0.H5,
-                      className: x.title,
-                      children: N.NW.string(N.t.aw0GVV)
+                  (0, i.jsx)(a.vwX, {
+                      tag: a.RB0.H5,
+                      className: E.title,
+                      children: x.intl.string(x.t.aw0GVV)
                   }),
                   t.map((e) =>
-                      (0, r.jsx)(
-                          j,
+                      (0, i.jsx)(
+                          C,
                           {
                               account: e,
                               handleRefresh: c,

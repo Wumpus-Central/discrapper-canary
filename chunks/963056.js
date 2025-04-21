@@ -1,10 +1,10 @@
-n.d(t, { Z: () => l });
-var r = n(200651);
+n.d(t, { Z: () => a });
+var i = n(200651);
 n(192379);
-var i = n(200100),
+var r = n(200100),
     s = n(481060),
-    a = n(777742);
-function l(e) {
+    l = n(777742);
+function a(e) {
     let { text: t } = e,
         n = (0, s.Yzy)(t, {
             from: {
@@ -20,11 +20,11 @@ function l(e) {
                 clamp: !0
             }
         });
-    return (0, r.jsx)('div', {
-        className: a.container,
+    return (0, i.jsx)('div', {
+        className: l.container,
         children: n((e, t) =>
-            (0, r.jsx)(i.animated.div, {
-                className: a.animatedText,
+            (0, i.jsx)(r.animated.div, {
+                className: l.animatedText,
                 style: e,
                 children: t
             })

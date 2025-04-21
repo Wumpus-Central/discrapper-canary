@@ -64,9 +64,9 @@ function l(t) {
         })(
             {
                 bodyClassName: s.modalContent,
-                header: c.NW.string(c.t.rfaLTE),
-                confirmText: c.NW.string(c.t.Lh0uy8),
-                cancelText: c.NW.string(c.t['ETE/oK']),
+                header: c.intl.string(c.t.rfaLTE),
+                confirmText: c.intl.string(c.t.Lh0uy8),
+                cancelText: c.intl.string(c.t['ETE/oK']),
                 confirmButtonColor: a.zxk.Colors.RED,
                 loading: d,
                 onConfirm: async () => {
@@ -89,7 +89,7 @@ function l(t) {
                     (0, n.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
-                        children: c.NW.string(c.t.EKmxKS)
+                        children: c.intl.string(c.t.EKmxKS)
                     }),
                     (0, n.jsx)('div', {
                         onMouseEnter: j,
@@ -104,12 +104,12 @@ function l(t) {
                     (0, n.jsx)(a.Text, {
                         variant: 'eyebrow',
                         color: 'text-positive',
-                        children: c.NW.string(c.t['2Ld8DA'])
+                        children: c.intl.string(c.t['2Ld8DA'])
                     }),
                     (0, n.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-secondary',
-                        children: c.NW.string(c.t.Oe0xqq)
+                        children: c.intl.string(c.t.Oe0xqq)
                     })
                 ]
             }),

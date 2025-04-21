@@ -60,10 +60,10 @@ function h(e) {
 function m(e) {
     switch (e) {
         case 0:
-            return d.NW.string(d.t.qJvTKS);
+            return d.intl.string(d.t.qJvTKS);
         case 1:
-            return d.NW.string(d.t.hHGrW1);
+            return d.intl.string(d.t.hHGrW1);
         default:
-            return d.NW.string(d.t.j29zCg);
+            return d.intl.string(d.t.j29zCg);
     }
 }

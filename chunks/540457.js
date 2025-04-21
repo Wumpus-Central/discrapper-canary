@@ -1,10 +1,10 @@
-n.d(t, { A: () => l });
+n.d(t, { A: () => s });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(441012);
-function l(e) {
-    let { text: t, tooltipText: n, onClick: l } = e;
+    l = n(441012);
+function s(e) {
+    let { text: t, tooltipText: n, onClick: s } = e;
     return (0, r.jsx)(i.ua7, {
         text: n,
         shouldShow: null != n,
@@ -39,13 +39,13 @@ function l(e) {
                 })({}, e)),
                 (a = a =
                     {
-                        className: s.container,
-                        onClick: l,
+                        className: l.container,
+                        onClick: s,
                         children: [
                             (0, r.jsx)(i.qJs, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: s.icon
+                                className: l.icon
                             }),
                             (0, r.jsx)(i.Text, {
                                 color: 'interactive-active',

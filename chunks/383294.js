@@ -23,11 +23,11 @@ var r = n(200651),
     S = n(215023),
     w = n(388032),
     _ = n(696693),
-    N = n(557256),
-    P = n(582425),
-    Z = n(345554),
-    k = n(88490),
-    E = n(466674);
+    P = n(557256),
+    Z = n(582425),
+    k = n(345554),
+    E = n(88490),
+    N = n(466674);
 function R() {
     let e = (0, s.e7)([f.Z], () => f.Z.useReducedMotion),
         [t, n] = a.useState(!e),
@@ -35,8 +35,8 @@ function R() {
         b = a.useRef(null),
         m = (0, u.ZP)(),
         y = (0, i.apv)(m),
-        h = y ? Z.Z : P.Z,
-        O = y ? E.Z : k.Z;
+        h = y ? k.Z : Z.Z,
+        O = y ? N.Z : E.Z;
     a.useEffect(() => {
         if (!t && !e) {
             var n;
@@ -113,17 +113,17 @@ function I(e) {
                             (0, r.jsx)(i.X6q, {
                                 variant: 'heading-lg/medium',
                                 className: _.title,
-                                children: w.NW.formatToPlainString(w.t.Kr9pYW, { balance: n })
+                                children: w.intl.formatToPlainString(w.t.Kr9pYW, { balance: n })
                             }),
                             (0, r.jsx)(i.Text, {
                                 variant: 'text-xs/normal',
                                 className: _.subtext,
-                                children: w.NW.string(w.t.EDUOIC)
+                                children: w.intl.string(w.t.EDUOIC)
                             }),
                             (0, r.jsx)(i.zxk, {
                                 className: _.ctaBtn,
                                 onClick: a,
-                                children: w.NW.string(w.t.WYchdX)
+                                children: w.intl.string(w.t.WYchdX)
                             })
                         ]
                     })
@@ -133,7 +133,7 @@ function I(e) {
                             (0, r.jsx)('img', {
                                 alt: '',
                                 className: _.errorImage,
-                                src: N
+                                src: P
                             }),
                             (0, r.jsxs)('div', {
                                 className: _.errorContentContainer,
@@ -141,19 +141,19 @@ function I(e) {
                                     (0, r.jsx)(i.X6q, {
                                         variant: 'heading-xl/medium',
                                         className: _.errorHeader,
-                                        children: w.NW.string(w.t.tWYWJy)
+                                        children: w.intl.string(w.t.tWYWJy)
                                     }),
                                     (0, r.jsx)(i.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-muted',
-                                        children: w.NW.string(w.t.JNQRU1)
+                                        children: w.intl.string(w.t.JNQRU1)
                                     })
                                 ]
                             }),
                             (0, r.jsx)(i.zxk, {
                                 className: _.ctaBtn,
                                 onClick: c,
-                                children: w.NW.string(w.t.cpT0Cg)
+                                children: w.intl.string(w.t.cpT0Cg)
                             })
                         ]
                     })

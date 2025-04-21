@@ -122,16 +122,16 @@ let T = o.forwardRef(function (e, t) {
         b(g({}, i), {
             ref: t,
             role: 'tabpanel',
-            id: N(r),
+            id: A(r),
             tabIndex: -1,
             children: n
         })
     );
 });
-function N(e) {
+function A(e) {
     return ''.concat(e.replace(/\s+/g, '-').toLowerCase(), '-tab');
 }
-function A(e, t) {
+function N(e, t) {
     if (null == e) return;
     let n = {};
     return 'Selected' === t ? ((n.backgroundColor = e), (n.color = d.Z.unsafe_rawColors.WHITE_500.css)) : ('Hover' === t && (n.backgroundColor = (0, u.wK)(e, 0.1)), (n.color = e)), n;
@@ -141,7 +141,7 @@ class C extends (r = o.Component) {
         let { color: e, id: t, selectedItem: n, itemType: r } = this.props,
             { hover: i, active: a } = this.state;
         if (null != e) {
-            if ('side' === r) return (null != t && n === t) || a ? A(e, 'Selected') : i ? A(e, 'Hover') : A(e);
+            if ('side' === r) return (null != t && n === t) || a ? N(e, 'Selected') : i ? N(e, 'Hover') : N(e);
             if ('top' === r)
                 if (n === t)
                     return {
@@ -186,7 +186,7 @@ class C extends (r = o.Component) {
             style: this.getStyle(),
             role: 'tab',
             'aria-selected': p,
-            'aria-controls': p ? N(''.concat(n)) : void 0,
+            'aria-controls': p ? A(''.concat(n)) : void 0,
             'aria-disabled': o,
             tabIndex: p ? 0 : -1,
             onMouseEnter: null != i ? this.handleMouseOver : void 0,

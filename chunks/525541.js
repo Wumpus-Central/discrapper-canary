@@ -25,6 +25,6 @@ function u(e) {
         },
         onMouseEnter: g,
         onMouseLeave: b,
-        children: null != p ? p : c.NW.string(c.t.HHZmDg)
+        children: null != p ? p : c.intl.string(c.t.HHZmDg)
     });
 }

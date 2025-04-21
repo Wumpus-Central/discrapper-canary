@@ -66,12 +66,12 @@ function y(e) {
         event: g.CkL.FOCUS_CHAT_BUTTON,
         handler: E
     });
-    let N = x ? b.NW.string(b.t['5MstTk']) : b.NW.string(b.t.kkKapK),
-        I = [N];
-    O > 0 && I.push(b.NW.formatToPlainString(b.t['3l1GOz'], { mentionCount: O })), j > 0 && I.push(b.NW.string(b.t.x5zAGR));
-    let P = (0, o.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
-        S = O > 0 ? O : j,
-        Z = S > 0;
+    let I = x ? b.intl.string(b.t['5MstTk']) : b.intl.string(b.t.kkKapK),
+        P = [I];
+    O > 0 && P.push(b.intl.formatToPlainString(b.t['3l1GOz'], { mentionCount: O })), j > 0 && P.push(b.intl.string(b.t.x5zAGR));
+    let S = (0, o.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
+        Z = O > 0 ? O : j,
+        N = Z > 0;
     return (0, r.jsxs)('div', {
         className: _.wrapper,
         children: [
@@ -105,20 +105,20 @@ function y(e) {
                     {
                         buttonRef: C,
                         onClick: v,
-                        label: N,
-                        'aria-label': I.join(', '),
+                        label: I,
+                        'aria-label': P.join(', '),
                         tooltipPosition: 'top',
-                        iconComponent: P === m.MI.NO_CHAT ? a.sXD : a.hic,
+                        iconComponent: S === m.MI.NO_CHAT ? a.sXD : a.hic,
                         themeable: !0,
                         className: n
                     },
                     y
                 )
             ),
-            Z
+            N
                 ? (0, r.jsx)(s.Z, {
                       hasMentions: O > 0,
-                      truncatedCount: S > 99 ? '99+' : S,
+                      truncatedCount: Z > 99 ? '99+' : Z,
                       className: _.badge
                   })
                 : null

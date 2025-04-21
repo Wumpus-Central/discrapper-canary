@@ -2,11 +2,11 @@ n.d(t, {
     Z: () => f,
     n: () => g
 });
-var r,
-    i = n(200651),
+var i,
+    r = n(200651),
     s = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(748780),
     c = n(215569),
     d = n(666532);
@@ -26,20 +26,20 @@ function u(e, t, n) {
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
+            i.forEach(function (t) {
                 u(e, t, n[t]);
             });
     }
     return e;
 }
-var g = (((r = {})[(r.RIGHT = -1)] = 'RIGHT'), (r[(r.LEFT = 1)] = 'LEFT'), r);
+var g = (((i = {})[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT'), i);
 let p = {
     friction: 7,
     tension: 40,
@@ -76,7 +76,7 @@ class h extends s.PureComponent {
         );
     }
     render() {
-        return (0, i.jsx)(o.Z.div, {
+        return (0, r.jsx)(o.Z.div, {
             style: this.getStyle(),
             className: d.item,
             children: this.props.children
@@ -87,15 +87,15 @@ class h extends s.PureComponent {
     }
 }
 let f = (e) => {
-    let { children: t, step: n, direction: r, className: s, springSettings: a = p, fadeInOut: o = !1 } = e;
-    return (0, i.jsx)(c.W, {
+    let { children: t, step: n, direction: i, className: s, springSettings: l = p, fadeInOut: o = !1 } = e;
+    return (0, r.jsx)(c.W, {
         component: 'div',
-        className: l()(d.animator, s),
-        children: (0, i.jsx)(
+        className: a()(d.animator, s),
+        children: (0, r.jsx)(
             h,
             {
-                direction: r,
-                springSettings: a,
+                direction: i,
+                springSettings: l,
                 fadeInOut: o,
                 children: t
             },

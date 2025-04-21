@@ -40,7 +40,7 @@ function u() {
             ? r
             : ((r[o.w5] =
                   ((t = s({}, l)),
-                  (n = n = { name: l.disabled ? a.NW.string(a.t['/QIjDA']) : l.name.replace(c, a.NW.string(a.t.bBvAEB)) }),
+                  (n = n = { name: l.disabled ? a.intl.string(a.t['/QIjDA']) : l.name.replace(c, a.intl.string(a.t.bBvAEB)) }),
                   Object.getOwnPropertyDescriptors
                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                       : (function (e, t) {

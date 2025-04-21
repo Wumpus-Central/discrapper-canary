@@ -31,16 +31,16 @@ function x(e) {
                     (0, r.jsx)(c.X6q, {
                         variant: 'heading-xl/extrabold',
                         className: h.text,
-                        children: p.NW.string(p.t.KYPNUl)
+                        children: p.intl.string(p.t.KYPNUl)
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
                         className: h.text,
-                        children: p.NW.string(p.t.xRHk7e)
+                        children: p.intl.string(p.t.xRHk7e)
                     }),
                     (0, r.jsx)(c.oil, {
-                        placeholder: p.NW.formatToPlainString(p.t['0tbz6+'], { number: f.A.USER_CODE_LENGTH }),
+                        placeholder: p.intl.formatToPlainString(p.t['0tbz6+'], { number: f.A.USER_CODE_LENGTH }),
                         maxLength: f.A.USER_CODE_LENGTH,
                         className: h.textInputContainer,
                         inputClassName: l()(h.textInput, { [h.textInputError]: null != _ }),
@@ -60,7 +60,7 @@ function x(e) {
                 disabled: o.length !== f.A.USER_CODE_LENGTH,
                 children: (0, r.jsx)(c.Text, {
                     variant: 'text-md/medium',
-                    children: p.NW.string(p.t['3PatS0'])
+                    children: p.intl.string(p.t['3PatS0'])
                 })
             })
         ]

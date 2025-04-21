@@ -20,8 +20,8 @@ var o,
     I = n(606304),
     S = n(979651),
     T = n(626135),
-    N = n(81063),
-    A = n(70956),
+    A = n(81063),
+    N = n(70956),
     C = n(823379),
     R = n(781518),
     P = n(616922),
@@ -81,16 +81,16 @@ function M(e, t) {
 let k = h.Z.get(w.ABu.SPOTIFY),
     j = 'wss://dealer.spotify.com/?access_token=',
     U = 'hm://pusher/v1/connections/',
-    G = 30 * A.Z.Millis.SECOND,
-    B = 30 * A.Z.Millis.SECOND,
+    G = 30 * N.Z.Millis.SECOND,
+    B = 30 * N.Z.Millis.SECOND,
     F = 100,
-    V = 5 * A.Z.Millis.MINUTE,
-    Z = 5 * A.Z.Millis.SECOND,
-    H = 1.5 * A.Z.Millis.SECOND,
-    W = 'Computer',
-    Y = 5,
-    K = +A.Z.Millis.MINUTE,
-    z = 3 * A.Z.Millis.SECOND,
+    V = 5 * N.Z.Millis.MINUTE,
+    Z = 5 * N.Z.Millis.SECOND,
+    H = 1.5 * N.Z.Millis.SECOND,
+    Y = 'Computer',
+    W = 5,
+    K = +N.Z.Millis.MINUTE,
+    z = 3 * N.Z.Millis.SECOND,
     q = 128,
     Q = {
         MESSAGE: 'message',
@@ -389,11 +389,11 @@ function eT(e) {
     let { accountId: t, devices: n } = e;
     (ea[t] = n), J.info('Devices updated for '.concat(t, ':'), n);
 }
-function eN(e) {
+function eA(e) {
     let { accountId: t, deviceId: n } = e;
     eg(t, n);
 }
-function eA(e) {
+function eN(e) {
     var t;
     let n,
         { activity: r, metadata: a } = e,
@@ -581,7 +581,7 @@ class eU extends (o = u.ZP.Store) {
         for (let t in ei) {
             let n = ei[t];
             if (!n.connected || null == ea[t]) continue;
-            let r = ea[t].find((e) => !e.is_restricted && e.type === W);
+            let r = ea[t].find((e) => !e.is_restricted && e.type === Y);
             null != r &&
                 e.push({
                     socket: n,
@@ -620,7 +620,7 @@ class eU extends (o = u.ZP.Store) {
                 startTime: f,
                 context: _
             } = r,
-            p = a.slice(0, Y);
+            p = a.slice(0, W);
         a.length > 0 &&
             (e = p
                 .map((e) => {
@@ -629,7 +629,7 @@ class eU extends (o = u.ZP.Store) {
                 })
                 .join('; '));
         let h = {},
-            m = null != o.image ? (0, N.f)(w.ABu.SPOTIFY, o.image.url) : null;
+            m = null != o.image ? (0, A.f)(w.ABu.SPOTIFY, o.image.url) : null;
         null != o.image && null != m && (h.large_image = m), o.type !== X.SINGLE && (h.large_text = o.name), null != _ && (t = _.uri), (n = null != i && null != i.partyId ? i.partyId : ''.concat(P.lS).concat(b.default.getId()));
         let g = s.length > q ? s.substring(0, q - 3) + '...' : s,
             E = {
@@ -665,11 +665,11 @@ let eG = new eU(_.Z, {
         SPOTIFY_PROFILE_UPDATE: ex,
         SPOTIFY_PLAYER_STATE: eI,
         SPOTIFY_PLAYER_PLAY: eS,
-        ACTIVITY_PLAY: eA,
+        ACTIVITY_PLAY: eN,
         ACTIVITY_SYNC: eC,
         ACTIVITY_SYNC_STOP: eb,
         SPOTIFY_SET_DEVICES: eT,
-        SPOTIFY_SET_ACTIVE_DEVICE: eN,
+        SPOTIFY_SET_ACTIVE_DEVICE: eA,
         SPEAKING: eD,
         VOICE_STATE_UPDATES: eL,
         MEDIA_ENGINE_SET_GO_LIVE_SOURCE: eM

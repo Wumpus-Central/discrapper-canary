@@ -27,8 +27,8 @@ function p(e) {
                   ref: y,
                   className: f.textarea,
                   disabled: h,
-                  placeholder: h ? u.NW.string(u.t['WLKx//']) : u.NW.string(u.t.VBhOe3),
-                  'aria-label': u.NW.string(u.t.PbMNh4),
+                  placeholder: h ? u.intl.string(u.t['WLKx//']) : u.intl.string(u.t.VBhOe3),
+                  'aria-label': u.intl.string(u.t.PbMNh4),
                   onBlur: (e) => {
                       let n = e.currentTarget.value;
                       (null != g ? g : '') !== n && (null == b || b(), s.Z.updateNote(p, n));

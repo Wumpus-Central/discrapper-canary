@@ -27,7 +27,7 @@ function g() {
                 children: (0, r.jsx)('img', {
                     className: f.icon,
                     src: h ? m : p,
-                    alt: d.NW.string(u.Z['3Kvtn5'])
+                    alt: d.intl.string(u.default['3Kvtn5'])
                 })
             }),
             e || n

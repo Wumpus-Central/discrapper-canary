@@ -74,11 +74,11 @@ let V = () =>
             children: [
                 (0, n.jsx)(l.X6q, {
                     variant: 'heading-sm/bold',
-                    children: g.NW.string(g.t.USo4s7)
+                    children: g.intl.string(g.t.USo4s7)
                 }),
                 (0, n.jsx)(l.Text, {
                     variant: 'text-xs/normal',
-                    children: g.NW.format(g.t.AGKQq6, { numReferrals: 3 })
+                    children: g.intl.format(g.t.AGKQq6, { numReferrals: 3 })
                 })
             ]
         }),
@@ -117,7 +117,7 @@ let V = () =>
         return (0, n.jsx)(l.ua7, {
             text: r,
             position: 'right',
-            'aria-label': g.NW.string(g.t.USo4s7),
+            'aria-label': g.intl.string(g.t.USo4s7),
             tooltipClassName: j.marketingBadgeTooltip,
             allowOverflow: !0,
             tooltipContentClassName: j.tooltipContent,
@@ -130,7 +130,7 @@ let V = () =>
             i.useEffect(() => {
                 t && r();
             }, [t, r]),
-            (0, n.jsx)(d.Z, { copy: g.NW.string(g.t.y2b7CA) })
+            (0, n.jsx)(d.Z, { copy: g.intl.string(g.t.y2b7CA) })
         );
     },
     _ = () => {
@@ -141,7 +141,7 @@ let V = () =>
         return (0, n.jsx)(l.ua7, {
             text: e,
             position: 'top',
-            'aria-label': g.NW.string(g.t.fzn5eH),
+            'aria-label': g.intl.string(g.t.fzn5eH),
             tooltipClassName: null,
             allowOverflow: !0,
             tooltipContentClassName: null,
@@ -150,7 +150,7 @@ let V = () =>
                     'div',
                     H(m({}, e), {
                         children: (0, n.jsx)(b.Z, {
-                            copy: g.NW.string(g.t.OS9KPj),
+                            copy: g.intl.string(g.t.OS9KPj),
                             className: j.greyedOut
                         })
                     })
@@ -184,8 +184,8 @@ let V = () =>
                     position: 'right',
                     align: 'top',
                     isPremiumFeature: !0,
-                    tryItText: g.NW.string(g.t.RzWDqa),
-                    header: g.NW.string(g.t['hJ/u+f']),
+                    tryItText: g.intl.string(g.t.RzWDqa),
+                    header: g.intl.string(g.t['hJ/u+f']),
                     hideDismissButton: !0,
                     art: (0, n.jsx)('img', {
                         src: p,

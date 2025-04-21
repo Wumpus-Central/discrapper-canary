@@ -18,8 +18,8 @@ let g = (e) => {
         g = u.default.getCurrentUser(),
         E = (0, d.yd)(null == g ? void 0 : g.premiumType, p.p9.TIER_2),
         b = (0, f._)({
-            defaultResponse: h.NW.string(h.t['8x0jKS']),
-            onNonTier2Subscriber: h.NW.string(h.t.IJI7ys)
+            defaultResponse: h.intl.string(h.t['8x0jKS']),
+            onNonTier2Subscriber: h.intl.string(h.t.IJI7ys)
         });
     return E
         ? null

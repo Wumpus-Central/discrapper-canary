@@ -70,7 +70,7 @@ function j(e) {
             children: [
                 (0, r.jsx)(a.R94, {
                     type: a.geA.DESCRIPTION,
-                    children: f.NW.format(f.t['9gsSLi'], { helpdeskArticle: m.Z.getArticleURL(g.BhN.LINKED_LOBBIES) })
+                    children: f.intl.format(f.t['9gsSLi'], { helpdeskArticle: m.Z.getArticleURL(g.BhN.LINKED_LOBBIES) })
                 }),
                 (0, r.jsx)(a.$i$, { className: h.headerDivider }),
                 c.map((e) =>

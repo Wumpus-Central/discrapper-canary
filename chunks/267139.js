@@ -50,7 +50,7 @@ var O = Array.isArray,
         __self: !0,
         __source: !0
     };
-function N(e, t, r) {
+function A(e, t, r) {
     var i,
         a = {},
         o = null,
@@ -72,7 +72,7 @@ function N(e, t, r) {
         _owner: S.current
     };
 }
-function A(e, t) {
+function N(e, t) {
     return {
         $$typeof: n,
         type: e.type,
@@ -129,7 +129,7 @@ function D(e, t, i, a, o) {
                   D(o, t, i, '', function (e) {
                       return e;
                   }))
-                : null != o && (C(o) && (o = A(o, i + (!o.key || (l && l.key === o.key) ? '' : ('' + o.key).replace(P, '$&/') + '/') + e)), t.push(o)),
+                : null != o && (C(o) && (o = N(o, i + (!o.key || (l && l.key === o.key) ? '' : ('' + o.key).replace(P, '$&/') + '/') + e)), t.push(o)),
             1
         );
     if (((l = 0), (a = '' === a ? '.' : a + ':'), O(e)))
@@ -262,9 +262,9 @@ function U() {
             (e.Consumer = e)
         );
     }),
-    (t.createElement = N),
+    (t.createElement = A),
     (t.createFactory = function (e) {
-        var t = N.bind(null, e);
+        var t = A.bind(null, e);
         return (t.type = e), t;
     }),
     (t.createRef = function () {

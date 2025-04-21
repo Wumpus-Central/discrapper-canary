@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    s = n.n(i),
-    l = n(186078),
+    l = n.n(i),
+    s = n(186078),
     a = n(137158),
     o = n(664305);
 let c = function (e) {
@@ -21,10 +21,10 @@ let c = function (e) {
         canRemove: g,
         actionsLocation: p,
         fieldStyle: h,
-        children: (0, r.jsx)(l.BO, {
+        children: (0, r.jsx)(s.BO, {
             field: t,
             value: void 0,
-            radioItemClassName: s()(o.fieldBackground, o.multipleChoiceFixedTextColor),
+            radioItemClassName: l()(o.fieldBackground, o.multipleChoiceFixedTextColor),
             disabled: !1
         })
     });

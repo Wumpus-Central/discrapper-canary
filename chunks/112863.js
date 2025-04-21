@@ -1,43 +1,43 @@
 n.d(t, { Z: () => u });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
+var r = n(481060),
     s = n(37234),
-    a = n(703656),
-    l = n(981631),
+    l = n(703656),
+    a = n(981631),
     o = n(388032),
     c = n(791119),
     d = n(286359);
 function u() {
-    return (0, r.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: c.wrapper,
         children: [
-            (0, r.jsx)('img', {
+            (0, i.jsx)('img', {
                 className: c.icon,
                 alt: '',
                 src: d
             }),
-            (0, r.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: c.info,
                 children: [
-                    (0, r.jsx)(i.Text, {
+                    (0, i.jsx)(r.Text, {
                         variant: 'text-lg/bold',
-                        children: o.NW.string(o.t.ZHNSYW)
+                        children: o.intl.string(o.t.ZHNSYW)
                     }),
-                    (0, r.jsx)(i.Text, {
+                    (0, i.jsx)(r.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
-                        children: o.NW.string(o.t.kCj5pq)
+                        children: o.intl.string(o.t.kCj5pq)
                     })
                 ]
             }),
-            (0, r.jsx)(i.zxk, {
-                color: i.zxk.Colors.PRIMARY,
+            (0, i.jsx)(r.zxk, {
+                color: r.zxk.Colors.PRIMARY,
                 onClick: () => {
-                    (0, a.uL)(l.Z5c.GUILD_DISCOVERY), (0, s.xf)();
+                    (0, l.uL)(a.Z5c.GUILD_DISCOVERY), (0, s.xf)();
                 },
-                size: i.zxk.Sizes.LARGE,
-                children: o.NW.string(o.t.JFlifn)
+                size: r.zxk.Sizes.LARGE,
+                children: o.intl.string(o.t.JFlifn)
             })
         ]
     });

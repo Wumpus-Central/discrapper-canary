@@ -13,7 +13,7 @@ function o(e) {
 }
 function l(e) {
     let { interval: t, interval_count: r } = e;
-    return s.NW.format(
+    return s.intl.format(
         (function (e) {
             switch (e) {
                 case i.rV.DAY:
@@ -31,12 +31,12 @@ function a(e) {
     let { interval: t, interval_count: r } = e;
     switch (t) {
         case i.rV.DAY:
-            if (r > 0 && r % 7 == 0) return s.NW.formatToPlainString(s.t.iVZYys, { weeks: r / 7 });
-            return s.NW.formatToPlainString(s.t.jzH70d, { days: r });
+            if (r > 0 && r % 7 == 0) return s.intl.formatToPlainString(s.t.iVZYys, { weeks: r / 7 });
+            return s.intl.formatToPlainString(s.t.jzH70d, { days: r });
         case i.rV.MONTH:
-            return s.NW.formatToPlainString(s.t.erUSmJ, { months: r });
+            return s.intl.formatToPlainString(s.t.erUSmJ, { months: r });
         case i.rV.YEAR:
-            return s.NW.formatToPlainString(s.t.IfYQVF, { years: r });
+            return s.intl.formatToPlainString(s.t.IfYQVF, { years: r });
     }
 }
 function c(e) {

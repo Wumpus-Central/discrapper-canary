@@ -62,18 +62,18 @@ let p = (e) => {
         let { appRecord: t, closePopout: n, showAppReportingOption: s, selectedGuildId: c, selectedChannelId: u, children: d = null } = e,
             f = (0, a.Z)({
                 id: t.id,
-                label: l.NW.string(l.t['+NP/b2'])
+                label: l.intl.string(l.t['+NP/b2'])
             });
         return (0, r.jsxs)(i.v2r, {
             navId: 'authorized-app-action-menu',
             onClose: n,
-            'aria-label': l.NW.string(l.t.tKobzc),
+            'aria-label': l.intl.string(l.t.tKobzc),
             onSelect: void 0,
             children: [
                 s
                     ? (0, r.jsx)(i.sNh, {
                           id: 'report',
-                          label: l.NW.string(l.t['+78Pfn']),
+                          label: l.intl.string(l.t['+78Pfn']),
                           color: 'danger',
                           action: () =>
                               (0, o.uu)({
@@ -135,7 +135,7 @@ let p = (e) => {
                         d(
                             {
                                 className: c.actionMenuButton,
-                                'aria-label': l.NW.string(l.t.UKOtz8)
+                                'aria-label': l.intl.string(l.t.UKOtz8)
                             },
                             e
                         ),

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => C }), n(388685);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => O }), n(388685);
+var i = n(200651),
+    r = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(481060),
+    l = n.n(s),
+    a = n(481060),
     o = n(100527),
     c = n(906732),
     d = n(70097),
@@ -15,63 +15,63 @@ var r = n(200651),
     f = n(474936),
     b = n(869783),
     _ = n(388032),
-    N = n(601060),
-    x = n(839526),
-    E = n(4046),
-    j = n(423741);
-let C = i.forwardRef((e, t) => {
+    x = n(601060),
+    E = n(839526),
+    j = n(4046),
+    C = n(423741);
+let O = r.forwardRef((e, t) => {
     var n, s;
-    let { className: C, isFooterVisible: O, isDarkMode: S, isReducedMotion: v, subscriptionTier: T } = e,
-        { analyticsLocations: I } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
+    let { className: O, isFooterVisible: S, isDarkMode: v, isReducedMotion: T, subscriptionTier: I } = e,
+        { analyticsLocations: N } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
         y = (0, g.Ng)(),
         A = (0, g.Wp)(y, f.Si.TIER_2) ? f.Si.TIER_2 : void 0,
         P = (0, p.N)(),
         R = (0, m.Nx)(),
         D = (0, u.rO)(),
-        Z = i.useRef(null),
-        [w, k] = i.useState(!1);
+        Z = r.useRef(null),
+        [w, k] = r.useState(!1);
     return (
-        i.useEffect(() => {
-            !O || v || w || null == Z.current || Z.current.play();
-        }, [O, v, w]),
-        (0, r.jsx)(c.Gt, {
-            value: I,
-            children: (0, r.jsxs)('div', {
+        r.useEffect(() => {
+            !S || T || w || null == Z.current || Z.current.play();
+        }, [S, T, w]),
+        (0, i.jsx)(c.Gt, {
+            value: N,
+            children: (0, i.jsxs)('div', {
                 ref: t,
-                className: a()(N.container, C),
+                className: l()(x.container, O),
                 children: [
-                    (0, r.jsx)(l.X6q, {
-                        className: N.footerHeader,
+                    (0, i.jsx)(a.X6q, {
+                        className: x.footerHeader,
                         variant: 'display-md',
                         color: 'header-primary',
-                        children: _.NW.string(_.t.lEw32t)
+                        children: _.intl.string(_.t.lEw32t)
                     }),
-                    (0, r.jsx)(h.PK, {
-                        subscriptionTier: null != (s = null != T ? T : null == P || null == (n = P.subscription_trial) ? void 0 : n.sku_id) ? s : A,
+                    (0, i.jsx)(h.PK, {
+                        subscriptionTier: null != (s = null != I ? I : null == P || null == (n = P.subscription_trial) ? void 0 : n.sku_id) ? s : A,
                         inOfferExperience: R,
-                        containerClassName: N.footerCTAContainer,
+                        containerClassName: x.footerCTAContainer,
                         isMarketingPageV2Enabled: !0,
-                        isDarkMode: S
+                        isDarkMode: v
                     }),
-                    (0, r.jsx)('div', {
-                        className: N.footerArtContainer,
-                        children: (0, r.jsx)(d.Z, {
+                    (0, i.jsx)('div', {
+                        className: x.footerArtContainer,
+                        children: (0, i.jsx)(d.Z, {
                             playsInline: !0,
                             preload: 'auto',
-                            poster: E.Z,
-                            className: N.footerArt,
+                            poster: j.Z,
+                            className: x.footerArt,
                             onEnded: () => {
                                 k(!0);
                             },
                             ref: Z,
-                            children: (0, r.jsx)('source', {
-                                src: D ? x.Z : j.Z,
+                            children: (0, i.jsx)('source', {
+                                src: D ? E.Z : C.Z,
                                 type: D ? b.m.MP4 : b.m.WEBM
                             })
                         })
                     }),
-                    (0, r.jsx)('div', { className: N.leftGradient }),
-                    (0, r.jsx)('div', { className: N.rightGradient })
+                    (0, i.jsx)('div', { className: x.leftGradient }),
+                    (0, i.jsx)('div', { className: x.rightGradient })
                 ]
             })
         })

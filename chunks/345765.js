@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(388685);
+n.d(t, { Z: () => Y }), n(388685);
 var r = n(392711),
     i = n(126313),
     a = n(570140),
@@ -34,8 +34,8 @@ let v = 4,
     I = E.YN.GLOBAL_FEED,
     S = 15 * _.Z.Millis.MINUTE,
     T = new Map(),
-    N = new Set(),
-    A = new Map(),
+    A = new Set(),
+    N = new Map(),
     C = null,
     R = (0, r.debounce)(h.yK, 3000, { trailing: !0 });
 function P() {
@@ -50,7 +50,7 @@ function w(e, t) {
     });
 }
 function D(e) {
-    if (N.has(e) || (e === E.YN.GAME_PROFILE_FEED && (!(0, s._J)('ContentInventoryManager') || void 0 !== g.Z.getFeed(e)))) return !1;
+    if (A.has(e) || (e === E.YN.GAME_PROFILE_FEED && (!(0, s._J)('ContentInventoryManager') || void 0 !== g.Z.getFeed(e)))) return !1;
     if (e === I) {
         if (!(0, p.sA)('ContentInventoryManager') || (m.Z.hidden && null != g.Z.getFeed(e)) || !f.Z.isFocused() || !l.Z.isConnected()) return !1;
         let t = d.Z.getIdleSince();
@@ -65,7 +65,7 @@ function L(e) {
 }
 function x() {
     var e;
-    let t = null != (e = A.get(I)) ? e : 0;
+    let t = null != (e = N.get(I)) ? e : 0;
     if ((t > 0 && t <= v) || (L(I), !D(I))) return;
     let n = g.Z.getFeed(I);
     if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null && null == C) return;
@@ -92,7 +92,7 @@ async function M(e) {
     if (D(t) || r)
         try {
             let e = g.Z.getFeed(t);
-            N.add(t), w(t, { loading: !0 });
+            A.add(t), w(t, { loading: !0 });
             let r = await (0, h.mt)({
                 token: null == e ? void 0 : e.refresh_token,
                 feedId: t,
@@ -103,13 +103,13 @@ async function M(e) {
                 feedId: t,
                 feed: r
             }),
-                A.set(t, 0),
-                N.delete(t),
+                N.set(t, 0),
+                A.delete(t),
                 w(t, { loading: !1 }),
                 t === I && ((C = null), x());
         } catch (o) {
             var i;
-            let e = null != (i = A.get(t)) ? i : 0;
+            let e = null != (i = N.get(t)) ? i : 0;
             if (e < v) {
                 let i = _.Z.Millis.MINUTE * Math.pow(2, e) + P(e);
                 T.set(
@@ -124,13 +124,13 @@ async function M(e) {
                         i
                     )
                 ),
-                    A.set(t, e + 1);
+                    N.set(t, e + 1);
             } else
                 a.Z.dispatch({
                     type: 'CONTENT_INVENTORY_CLEAR_FEED',
                     feedId: t
                 });
-            N.delete(t);
+            A.delete(t);
         }
 }
 function k() {
@@ -194,4 +194,4 @@ class H extends o.Z {
             });
     }
 }
-let W = new H();
+let Y = new H();

@@ -36,14 +36,14 @@ let x = (e) => {
                       children: [
                           (0, r.jsx)(s.X6q, {
                               variant: 'heading-lg/semibold',
-                              children: O === _.AW.ORBS ? C.NW.string(C.t.dFgeub) : C.NW.string(C.t.ivaAAw)
+                              children: O === _.AW.ORBS ? C.intl.string(C.t.dFgeub) : C.intl.string(C.t.ivaAAw)
                           }),
                           O === _.AW.HOME &&
                               (0, r.jsx)(s.zxk, {
                                   color: s.Ttl.PRIMARY,
                                   look: s.iLD.FILLED,
                                   onClick: () => a('shop all top'),
-                                  children: C.NW.string(C.t.xFcotb)
+                                  children: C.intl.string(C.t.xFcotb)
                               })
                       ]
                   }),

@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    s = n.n(i),
-    l = n(481060),
+    l = n.n(i),
+    s = n(481060),
     a = n(100527),
     o = n(906732),
     c = n(678558),
@@ -14,12 +14,12 @@ let m = (e) => {
             guild: t,
             analyticsLocation: n,
             className: i,
-            buttonProps: s = {
-                color: l.Ttl.BRAND_INVERTED,
-                text: d.NW.string(d.t.oqweNz)
+            buttonProps: l = {
+                color: s.Ttl.BRAND_INVERTED,
+                text: d.intl.string(d.t.oqweNz)
             }
         } = e,
-        { color: a, text: o } = s,
+        { color: a, text: o } = l,
         u = t.premiumTier + 1;
     return (0, r.jsx)(c.Z, {
         color: a,
@@ -36,7 +36,7 @@ function g(e) {
     return (0, r.jsx)(o.Gt, {
         value: x,
         children: (0, r.jsxs)('div', {
-            className: s()(u.banner, g),
+            className: l()(u.banner, g),
             children: [
                 (0, r.jsx)('img', {
                     className: u.__invalid_headerGraphic,
@@ -46,13 +46,13 @@ function g(e) {
                 (0, r.jsxs)('div', {
                     className: u.content,
                     children: [
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: 'text-lg/semibold',
                             color: null != h ? h : 'always-white',
                             className: u.header,
                             children: t
                         }),
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: null != p ? p : 'always-white',
                             children: i

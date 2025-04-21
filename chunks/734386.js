@@ -22,11 +22,11 @@ var r = n(200651),
     j = n(496675),
     O = n(594174),
     E = n(700785),
-    N = n(51144),
-    I = n(396769),
-    P = n(967128),
-    S = n(318374),
-    Z = n(981631),
+    I = n(51144),
+    P = n(396769),
+    S = n(967128),
+    Z = n(318374),
+    N = n(981631),
     T = n(388032),
     A = n(279078);
 function w(e) {
@@ -58,7 +58,7 @@ function w(e) {
                             forceRoles: { [e.id]: e },
                             context: t
                         });
-                        return c.e$(n, Z.Plq.ADMINISTRATOR) || c.e$(n, Z.Plq.VIEW_CHANNEL);
+                        return c.e$(n, N.Plq.ADMINISTRATOR) || c.e$(n, N.Plq.VIEW_CHANNEL);
                     })
                     .value(),
             [t, w, M]
@@ -76,48 +76,48 @@ function w(e) {
                     .filter((e) => {
                         var n;
                         let r = E.BT({
-                                permission: Z.Plq.ADMINISTRATOR,
+                                permission: N.Plq.ADMINISTRATOR,
                                 user: e,
                                 context: t
                             }),
                             i = null != (n = t.permissionOverwrites[e.id]) ? n : E.Hn,
-                            l = c.e$(i.allow, Z.Plq.VIEW_CHANNEL);
+                            l = c.e$(i.allow, N.Plq.VIEW_CHANNEL);
                         return r || l;
                     })
                     .value();
             },
             [t, k]
         ),
-        W = j.Z.can(Z.Plq.MANAGE_CHANNELS, t) || j.Z.can(Z.Plq.MANAGE_ROLES, t),
-        U = i.useCallback(() => l(!1), []);
-    return (0, r.jsxs)(P.ZP, {
+        U = j.Z.can(N.Plq.MANAGE_CHANNELS, t) || j.Z.can(N.Plq.MANAGE_ROLES, t),
+        B = i.useCallback(() => l(!1), []);
+    return (0, r.jsxs)(S.ZP, {
         channelId: t.id,
         children: [
-            (0, r.jsx)(P.Kq, {
+            (0, r.jsx)(S.Kq, {
                 locked: !0,
                 channelType: t.type
             }),
-            (0, r.jsx)(P.Ot, { children: T.NW.format(T.t.I3R7Vl, { channelName: a }) }),
-            (0, r.jsx)(P.jz, {
-                children: T.NW.format(T.t.QuwqjI, {
+            (0, r.jsx)(S.Ot, { children: T.intl.format(T.t.I3R7Vl, { channelName: a }) }),
+            (0, r.jsx)(S.jz, {
+                children: T.intl.format(T.t.QuwqjI, {
                     channelName: a,
                     topicHook: () => x.Z.parseTopic(t.topic, !0, { channelId: t.id })
                 })
             }),
-            W
+            U
                 ? (0, r.jsxs)('div', {
                       className: A.channelSettingButtons,
                       children: [
-                          (0, r.jsx)(I.Z, {
-                              label: T.NW.string(T.t.dMJ3Y2),
+                          (0, r.jsx)(P.Z, {
+                              label: T.intl.string(T.t.dMJ3Y2),
                               onClick: () => l(!0),
                               icon: (0, r.jsx)(p.BFJ, {
                                   size: 'xs',
                                   color: 'currentColor'
                               })
                           }),
-                          (0, r.jsx)(I.Z, {
-                              label: T.NW.string(T.t['3gUsJS']),
+                          (0, r.jsx)(P.Z, {
+                              label: T.intl.string(T.t['3gUsJS']),
                               onClick: function () {
                                   h.ZP.open(t.id);
                               },
@@ -134,14 +134,14 @@ function w(e) {
                 children: [
                     (function () {
                         if (1 !== D.length || L.length > 0)
-                            return (0, r.jsx)(S.Z, {
+                            return (0, r.jsx)(Z.Z, {
                                 guildId: t.guild_id,
                                 className: A.avatars,
                                 maxUsers: 5,
                                 users: D
                             });
                         let e = D[0],
-                            n = N.ZP.getName(e);
+                            n = I.ZP.getName(e);
                         return (0, r.jsxs)('div', {
                             className: A.avatars,
                             children: [
@@ -161,26 +161,26 @@ function w(e) {
                                     tag: 'span',
                                     variant: 'text-md/normal',
                                     color: 'text-muted',
-                                    children: T.NW.string(T.t.rt0ERU)
+                                    children: T.intl.string(T.t.rt0ERU)
                                 })
                             ]
                         });
                     })(),
                     L.map((e, n) => {
                         var i, l;
-                        let a = null != (l = e.colorString) ? l : (0, u.Rf)(Z.p6O),
+                        let a = null != (l = e.colorString) ? l : (0, u.Rf)(N.p6O),
                             s = (null == (i = e.tags) ? void 0 : i.guild_connections) !== void 0;
-                        return W
+                        return U
                             ? (0, r.jsx)(
                                   _.Z,
                                   {
                                       className: o()(A.role, { [A.last]: n === L.length - 1 }),
                                       roleName: e.name,
                                       roleColor: a,
-                                      disabled: !W,
+                                      disabled: !U,
                                       verified: s,
                                       onClick: () => {
-                                          C.Z.open(t.guild_id, Z.pNK.MEMBERS), C.Z.selectRole(e.id);
+                                          C.Z.open(t.guild_id, N.pNK.MEMBERS), C.Z.selectRole(e.id);
                                       }
                                   },
                                   e.id
@@ -231,7 +231,7 @@ function w(e) {
                               })({}, e)),
                               (i = i =
                                   {
-                                      onClose: () => (U(), e.onClose()),
+                                      onClose: () => (B(), e.onClose()),
                                       channelId: t.id
                                   }),
                               Object.getOwnPropertyDescriptors

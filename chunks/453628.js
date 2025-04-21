@@ -117,13 +117,13 @@ function g(e) {
         { type: l, onSelect: p, isSelected: m } = e;
     switch (l) {
         case 'DENY':
-            (r = s.NW.string(s.t['6639Oz'])), (t = a.Dio), (n = c.deny);
+            (r = s.intl.string(s.t['6639Oz'])), (t = a.Dio), (n = c.deny);
             break;
         case 'ALLOW':
-            (r = s.NW.string(s.t.RzDfSk)), (t = a.dz2), (n = c.allow);
+            (r = s.intl.string(s.t.RzDfSk)), (t = a.dz2), (n = c.allow);
             break;
         default:
-            (r = s.NW.string(s.t.ujC3ZW)), (t = a.XZC), (n = c.passthrough);
+            (r = s.intl.string(s.t.ujC3ZW)), (t = a.XZC), (n = c.passthrough);
     }
     let b = (0, a.xUy)({
         isSelected: m,

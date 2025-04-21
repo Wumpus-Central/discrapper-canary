@@ -99,11 +99,11 @@ function T(e, t) {
     let r = p[t.id];
     null != r && null != h[r.id] && (h[r.id] = l({}, h[r.id], t));
 }
-function N(e) {
+function A(e) {
     let { channelId: t, file: n } = e;
     return b(t, n.id);
 }
-function A(e) {
+function N(e) {
     let { channelId: t, file: n } = e;
     return b(t, n.id);
 }
@@ -156,8 +156,8 @@ let L = new D(a.Z, {
     UPLOAD_START: O,
     UPLOAD_COMPRESSION_PROGRESS: S,
     UPLOAD_PROGRESS: I,
-    UPLOAD_COMPLETE: N,
-    UPLOAD_FAIL: A,
+    UPLOAD_COMPLETE: A,
+    UPLOAD_FAIL: N,
     UPLOAD_CANCEL_REQUEST: C,
     UPLOAD_ITEM_CANCEL_REQUEST: R,
     UPLOAD_FILE_UPDATE: P,

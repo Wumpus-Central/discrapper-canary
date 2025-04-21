@@ -1,6 +1,6 @@
 n.d(t, {
     d: () => _,
-    k: () => j
+    k: () => N
 }),
     n(388685);
 var l = n(200651),
@@ -19,8 +19,8 @@ var l = n(200651),
     v = n(624138),
     x = n(51144),
     I = n(388032),
-    N = n(821022);
-function f(e, t, n) {
+    f = n(821022);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function f(e, t, n) {
         e
     );
 }
-let j = 44;
+let N = 44;
 class _ extends i.Component {
     shouldComponentUpdate(e, t) {
         return this.state.sending !== t.sending || this.state.invited !== t.invited || this.state.hovered !== t.hovered || this.props.user !== e.user || this.props.channel !== e.channel;
@@ -59,7 +59,7 @@ class _ extends i.Component {
             if (null != e)
                 return (0, l.jsx)(s.Text, {
                     variant: 'text-md/medium',
-                    className: N.acronym,
+                    className: f.acronym,
                     'aria-hidden': !0,
                     children: e
                 });
@@ -68,7 +68,7 @@ class _ extends i.Component {
             src: t,
             'aria-label': n,
             size: s.EFr.SIZE_32,
-            className: N.inviteRowAvatar
+            className: f.inviteRowAvatar
         });
     }
     render() {
@@ -82,28 +82,28 @@ class _ extends i.Component {
                       size: s.zxk.Sizes.SMALL,
                       disabled: !0,
                       color: (0, r.wj)(d.Z.theme) ? s.zxk.Colors.WHITE : s.zxk.Colors.BRAND,
-                      children: I.NW.string(I.t['dVT14+'])
+                      children: I.intl.string(I.t['dVT14+'])
                   })
                 : (0, l.jsx)(s.zxk, {
                       color: s.zxk.Colors.GREEN,
                       look: o ? s.zxk.Looks.FILLED : s.zxk.Looks.OUTLINED,
-                      className: N.inviteRowButton,
+                      className: f.inviteRowButton,
                       size: s.zxk.Sizes.SMALL,
                       submitting: i,
                       onClick: this.handleClickInvite,
-                      children: I.NW.string(I.t.jYnGPD)
+                      children: I.intl.string(I.t.jYnGPD)
                   })),
             (0, l.jsxs)('div', {
-                className: N.inviteRow,
+                className: f.inviteRow,
                 onMouseEnter: this.handleMouseEnter,
                 onMouseLeave: this.handleMouseLeave,
                 children: [
                     (0, l.jsxs)('div', {
-                        className: N.inviteRowInfo,
+                        className: f.inviteRowInfo,
                         children: [
                             this.renderUserOrChannel(),
                             (0, l.jsxs)('div', {
-                                className: N.inviteRowName,
+                                className: f.inviteRowName,
                                 children: [x.ZP.getName(t), null != n ? (0, u.F6)(n, m.default, h.Z, !0) : null]
                             })
                         ]
@@ -115,23 +115,23 @@ class _ extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'state', {
+            j(this, 'state', {
                 sending: !1,
                 invited: !1,
                 hovered: !1
             }),
-            f(this, 'handleMouseEnter', () => {
+            j(this, 'handleMouseEnter', () => {
                 this.setState({ hovered: !0 });
             }),
-            f(this, 'handleMouseLeave', () => {
+            j(this, 'handleMouseLeave', () => {
                 this.setState({ hovered: !1 });
             }),
-            f(this, 'getSuggestedProps', () => {
+            j(this, 'getSuggestedProps', () => {
                 var e;
                 let { row: t } = this.props;
                 return null != (e = null != t ? g.Z.getSelectedInviteMetadata(t) : null) ? e : null;
             }),
-            f(this, 'handleClickInvite', () => {
+            j(this, 'handleClickInvite', () => {
                 let { user: e, channel: t, inviteKey: n, location: l } = this.props;
                 null != n &&
                     (null != t

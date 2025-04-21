@@ -32,16 +32,16 @@ r(
                 I,
                 S,
                 T,
-                N,
-                A = o(this),
+                A,
+                N = o(this),
                 C = 0,
                 R = '';
             if (!l(e)) {
                 if ((n = c(e)) && !~E(u(o(f(e))), 'g')) throw new g('`.replaceAll` does not allow non-global regexes');
-                if ((r = d(e, m))) return i(r, e, A, t);
-                if (h && n) return b(u(A), e, t);
+                if ((r = d(e, m))) return i(r, e, N, t);
+                if (h && n) return b(u(N), e, t);
             }
-            for (a = u(A), p = u(e), (O = s(t)) || (t = u(t)), S = v(1, (I = p.length)), T = E(a, p); -1 !== T; ) (N = O ? u(t(p, T, a)) : _(p, a, T, [], void 0, t)), (R += y(a, C, T) + N), (C = T + I), (T = T + S > a.length ? -1 : E(a, p, T + S));
+            for (a = u(N), p = u(e), (O = s(t)) || (t = u(t)), S = v(1, (I = p.length)), T = E(a, p); -1 !== T; ) (A = O ? u(t(p, T, a)) : _(p, a, T, [], void 0, t)), (R += y(a, C, T) + A), (C = T + I), (T = T + S > a.length ? -1 : E(a, p, T + S));
             return C < a.length && (R += y(a, C)), R;
         }
     }

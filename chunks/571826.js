@@ -15,7 +15,7 @@ var r = n(367907),
     a = n(592125),
     o = n(626135),
     c = n(981631);
-function u(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function u(e) {
     }
     return e;
 }
-function l(e) {
+function u(e) {
     var t;
     return null == (t = a.Z.getChannel(e)) ? void 0 : t.guild_id;
 }
@@ -48,7 +48,7 @@ function s(e) {
     let { channelId: t, selectedTab: n } = e;
     r.ZP.trackWithMetadata(c.rMx.RTC_PANEL_VIEWED, {
         channel_id: t,
-        guild_id: l(t),
+        guild_id: u(t),
         selected_tab: n
     });
 }
@@ -56,10 +56,10 @@ function E(e) {
     let { channelId: t, userId: n } = e;
     r.ZP.trackWithMetadata(
         c.rMx.E2EE_USER_VERIFICATION_VIEWED,
-        u(
+        l(
             {
                 channel_id: t,
-                guild_id: l(t)
+                guild_id: u(t)
             },
             (0, i.QN)({ userId: n })
         )
@@ -69,10 +69,10 @@ function d(e) {
     let { channelId: t, userId: n, analyticsLocation: a } = e;
     r.ZP.trackWithMetadata(
         c.rMx.E2EE_USER_VERIFIED,
-        u(
+        l(
             {
                 channel_id: t,
-                guild_id: l(t),
+                guild_id: u(t),
                 location: a
             },
             (0, i.QN)({ userId: n })
@@ -83,10 +83,10 @@ function f(e) {
     let { channelId: t, userId: n, keyVersion: a, reason: o } = e;
     r.ZP.trackWithMetadata(
         c.rMx.E2EE_USER_VERIFICATION_FAILED,
-        u(
+        l(
             {
                 channel_id: t,
-                guild_id: l(t),
+                guild_id: u(t),
                 failure_reason: o,
                 key_version: ''.concat(a)
             },
@@ -98,10 +98,10 @@ function _(e) {
     let { channelId: t, userId: n } = e;
     r.ZP.trackWithMetadata(
         c.rMx.E2EE_USER_VERIFICATION_CODE_COPIED,
-        u(
+        l(
             {
                 channel_id: t,
-                guild_id: l(t)
+                guild_id: u(t)
             },
             (0, i.QN)({ userId: n })
         )
@@ -111,14 +111,14 @@ function S(e) {
     let { channelId: t } = e;
     r.ZP.trackWithMetadata(c.rMx.E2EE_CALL_VERIFICATION_CODE_COPIED, {
         channel_id: t,
-        guild_id: l(t)
+        guild_id: u(t)
     });
 }
 function y(e) {
     let { channelId: t } = e;
     r.ZP.trackWithMetadata(c.rMx.E2EE_STREAM_VERIFICATION_CODE_COPIED, {
         channel_id: t,
-        guild_id: l(t)
+        guild_id: u(t)
     });
 }
 function h() {

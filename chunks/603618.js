@@ -31,8 +31,8 @@ var i = n(200651),
     j = n(225559),
     C = n(703656),
     S = n(93127),
-    N = n(814443),
-    Z = n(752048),
+    Z = n(814443),
+    N = n(752048),
     w = n(409057),
     P = n(199902),
     T = n(592125),
@@ -41,11 +41,11 @@ var i = n(200651),
     D = n(699516),
     L = n(594174),
     R = n(801077),
-    W = n(237997),
-    M = n(630388),
-    z = n(5192),
-    V = n(709054),
-    U = n(444295),
+    M = n(237997),
+    z = n(630388),
+    V = n(5192),
+    U = n(709054),
+    W = n(444295),
     G = n(388627),
     F = n(981631),
     B = n(388032),
@@ -126,12 +126,12 @@ function K(e) {
                             !0 === t.extra.fake_inventory_item
                                 ? await (0, x.k)({
                                       channel: n,
-                                      content: B.NW.formatToPlainString(B.t.UVBA9v, { gameName: t.extra.game_name }),
+                                      content: B.intl.formatToPlainString(B.t.UVBA9v, { gameName: t.extra.game_name }),
                                       whenReady: !0
                                   })
                                 : await (0, x.p)({
                                       channel: n,
-                                      content: B.NW.string(B.t.DwAcMz),
+                                      content: B.intl.string(B.t.DwAcMz),
                                       entry: t,
                                       whenReady: !0
                                   });
@@ -141,9 +141,9 @@ function K(e) {
                         target_content_entry_id: t.id,
                         target_index: o
                     }),
-                        (0, U.Ws)(F.Odu.ACTIVITY, {
-                            type: U.Qu.INVITE,
-                            value: U.bk.INVITE_SENT,
+                        (0, W.Ws)(F.Odu.ACTIVITY, {
+                            type: W.Qu.INVITE,
+                            value: W.bk.INVITE_SENT,
                             userId: a.id
                         }),
                         c('sent');
@@ -160,13 +160,13 @@ function K(e) {
             l()(null != n, 'Send channel must be defined'),
                 (0, C.uL)(F.Z5c.CHANNEL(n.guild_id, n.id)),
                 (0, O.i)(F.IlC.OVERLAY, !0),
-                (0, U.Ws)(F.Odu.ACTIVITY, {
-                    type: U.Qu.REDIRECT,
-                    value: U.bk.CHAT,
+                (0, W.Ws)(F.Odu.ACTIVITY, {
+                    type: W.Qu.REDIRECT,
+                    value: W.bk.CHAT,
                     userId: a.id
                 });
         },
-        E = y ? B.NW.string(B.t['3fRyS0']) : B.NW.string(B.t.XHxDIS),
+        E = y ? B.intl.string(B.t['3fRyS0']) : B.intl.string(B.t.XHxDIS),
         I = y
             ? (0, i.jsx)(d.ejJ, {
                   color: 'currentColor',
@@ -227,9 +227,9 @@ function X(e) {
                             activity: s,
                             location: F.Sbl.UNLOCKED_OVERLAY
                         }),
-                        (0, U.Ws)(F.Odu.ACTIVITY, {
-                            type: U.Qu.INVITE,
-                            value: U.bk.JOIN_REQUEST_SENT,
+                        (0, W.Ws)(F.Odu.ACTIVITY, {
+                            type: W.Qu.INVITE,
+                            value: W.bk.JOIN_REQUEST_SENT,
                             userId: l.id
                         }),
                         h('sent');
@@ -238,7 +238,7 @@ function X(e) {
                 }
             }
         },
-        m = B.NW.string(B.t.OKsSCQ);
+        m = B.intl.string(B.t.OKsSCQ);
     return (0, i.jsx)(d.ua7, {
         text: m,
         'aria-label': m,
@@ -308,7 +308,7 @@ function J(e) {
                                       className: H.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: z.ZP.getName(void 0, void 0, o)
+                                      children: V.ZP.getName(void 0, void 0, o)
                                   }),
                                   null != l && (0, i.jsx)(_.ZP, { className: H.liveIndicator })
                               ]
@@ -338,8 +338,8 @@ function q(e) {
 }
 function $(e) {
     let { entries: t, currentUserActivity: n, className: o, hideHeader: l = !1 } = e,
-        a = (0, U.ee)(() => q(t), [t]),
-        s = (0, U.ee)(
+        a = (0, W.ee)(() => q(t), [t]),
+        s = (0, W.ee)(
             () =>
                 new Set(
                     Array.from(q(t)).filter((e) => {
@@ -358,10 +358,10 @@ function $(e) {
                 ),
             [t]
         ),
-        u = (0, U.ee)(() => new Set(t.map((e) => e.id)), [t]);
+        u = (0, W.ee)(() => new Set(t.map((e) => e.id)), [t]);
     return (r.useEffect(() => {
-        (0, U.zi)(F.Odu.ACTIVITY, {
-            locked: W.default.isInstanceLocked(),
+        (0, W.zi)(F.Odu.ACTIVITY, {
+            locked: M.default.isInstanceLocked(),
             shownUserIds: Array.from(a),
             liveUserIds: Array.from(s),
             contentInventoryIds: Array.from(u)
@@ -379,7 +379,7 @@ function $(e) {
                               variant: 'text-xs/medium',
                               color: 'header-secondary',
                               tag: 'div',
-                              children: B.NW.string(B.t.y9eo7e)
+                              children: B.intl.string(B.t.y9eo7e)
                           })
                       }),
                   t.map((e, t) =>
@@ -404,7 +404,7 @@ function ee(e) {
     });
     let d = (0, u.e7)([k.Z], () => (null == t ? null : k.Z.getApplicationActivity(t)), [t]),
         p = (0, u.Wu)(
-            [R.Z, D.Z, N.Z, Z.Z],
+            [R.Z, D.Z, Z.Z, N.Z],
             () => {
                 if (null == t) return [];
                 let e = R.Z.nowPlayingCards,
@@ -428,7 +428,7 @@ function ee(e) {
                             !!(function (e, t, n) {
                                 let { v1: i } = n;
                                 return null == e ? t : e > i || t;
-                            })(null == (t = N.Z.getUserAffinity(i)) ? void 0 : t.affinity, r, n) ||
+                            })(null == (t = Z.Z.getUserAffinity(i)) ? void 0 : t.affinity, r, n) ||
                             (function (e, t, n) {
                                 let { v2: i } = n;
                                 if (null == e) return t;
@@ -442,7 +442,7 @@ function ee(e) {
                                     default:
                                         return t;
                                 }
-                            })(Z.Z.getUserAffinity(i), r, n)
+                            })(N.Z.getUserAffinity(i), r, n)
                         );
                     });
             },
@@ -459,7 +459,7 @@ function ee(e) {
                                 var t, n, i, r, o, l, u;
                                 let d = null != (o = null == (n = e.activity) || null == (t = n.timestamps) ? void 0 : t.start) ? o : Date.now();
                                 return {
-                                    id: V.default.fromTimestamp(d),
+                                    id: U.default.fromTimestamp(d),
                                     author_id: e.activityUser.id,
                                     extra: {
                                         type: 'played_game_extra',
@@ -495,7 +495,7 @@ function en(e) {
     let { activity: t, currentUser: n, showInviteButton: r = !0 } = e,
         o = null != t && (0, v.Z)(t, F.xjy.JOIN),
         l = (0, b.q)(null == t ? void 0 : t.application_id),
-        a = null != l && (0, M.yE)(l.flags, F.udG.EMBEDDED);
+        a = null != l && (0, z.yE)(l.flags, F.udG.EMBEDDED);
     return null == t || null == n
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -512,14 +512,14 @@ function en(e) {
                             className: H.inviteFriendsButton,
                             onClick: () => {
                                 (0, h.h7)(t, !1, F.IlC.POPOUT),
-                                    (0, U.Ws)(F.Odu.ACTIVITY, {
-                                        type: U.Qu.INVITE,
-                                        value: U.bk.PANEL_OPENED
+                                    (0, W.Ws)(F.Odu.ACTIVITY, {
+                                        type: W.Qu.INVITE,
+                                        value: W.bk.PANEL_OPENED
                                     });
                             },
                             size: d.PhG.SMALL,
                             color: d.Ttl.PRIMARY,
-                            children: B.NW.string(B.t['6Qgren'])
+                            children: B.intl.string(B.t['6Qgren'])
                         })
                       : null
               ]

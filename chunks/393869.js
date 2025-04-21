@@ -1,14 +1,14 @@
-t.d(s, {
-    i: () => l,
-    w: () => o
+s.d(t, {
+    i: () => i,
+    w: () => a
 });
-var n = t(990547),
-    r = t(573261),
-    a = t(981631);
-function l() {
+var n = s(990547),
+    r = s(573261),
+    l = s(981631);
+function i() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return r.Z.put({
-        url: a.ANM.USER_EMAIL,
+        url: l.ANM.USER_EMAIL,
         trackedActionData: {
             event: n.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
             properties: { is_resend: e }
@@ -16,10 +16,10 @@ function l() {
         rejectWithError: !1
     });
 }
-async function o(e) {
+async function a(e) {
     return (
         await r.Z.post({
-            url: a.ANM.USER_EMAIL_VERIFY_CODE,
+            url: l.ANM.USER_EMAIL_VERIFY_CODE,
             body: { code: e },
             trackedActionData: { event: n.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE },
             rejectWithError: !1

@@ -75,7 +75,7 @@ let c = async (e) => {
                 null == n || n();
         } catch (t) {
             var a, o;
-            let e = null != (o = null == t || null == (a = t.body) ? void 0 : a.message) ? o : l.NW.string(l.t.FMbL3t);
+            let e = null != (o = null == t || null == (a = t.body) ? void 0 : a.message) ? o : l.intl.string(l.t.FMbL3t);
             i.Z.dispatch({
                 type: 'CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE',
                 error: e

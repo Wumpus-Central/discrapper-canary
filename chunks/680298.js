@@ -71,7 +71,7 @@ function p(e) {
                             (i = i =
                                 {
                                     id: b.id,
-                                    label: c.NW.string(c.t.oJ1Mu7)
+                                    label: c.intl.string(c.t.oJ1Mu7)
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -121,7 +121,7 @@ function p(e) {
                           children: [
                               (0, r.jsx)(l.Text, {
                                   variant: 'text-md/normal',
-                                  children: c.NW.string(c.t.jH4B9P)
+                                  children: c.intl.string(c.t.jH4B9P)
                               }),
                               (0, r.jsx)(l.d3s, {
                                   size: 'sm',

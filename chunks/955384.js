@@ -27,7 +27,7 @@ class p extends i.PureComponent {
         let { className: e, textValue: t, richValue: n, message: i, channel: l, onCancel: o, children: a, isRefreshEnabled: u } = this.props,
             p = (0, r.jsx)('div', {
                 className: c.operations,
-                children: s.NW.format(s.t.wDsPXl, {
+                children: s.intl.format(s.t.wDsPXl, {
                     onCancel: () => o(l.id),
                     onSave: this.onClickSave
                 })

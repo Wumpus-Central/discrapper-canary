@@ -7,8 +7,8 @@ var n = i(442837),
     a = i(144507),
     d = i(388032);
 let o = {
-    title: () => d.NW.string(d.t['KzCF//']),
-    description: () => d.NW.string(d.t.xMW8FB),
+    title: () => d.intl.string(d.t['KzCF//']),
+    description: () => d.intl.string(d.t.xMW8FB),
     canCreateGuild: !1,
     useIsGuildSupported: () =>
         (0, n.e7)(

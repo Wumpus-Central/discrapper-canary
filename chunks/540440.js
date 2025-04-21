@@ -40,7 +40,7 @@ function d(e) {
     return e;
 }
 function f(e) {
-    return (0, o.dX)(e) ? c.NW.string(c.t['4f8iur']) : (0, o.y0)(e) ? c.NW.string(c.t.yX2hNz) : (0, o.kq)(e) ? c.NW.string(c.t.oSs8en) : c.NW.string(c.t.bK9GT0);
+    return (0, o.dX)(e) ? c.intl.string(c.t['4f8iur']) : (0, o.y0)(e) ? c.intl.string(c.t.yX2hNz) : (0, o.kq)(e) ? c.intl.string(c.t.oSs8en) : c.intl.string(c.t.bK9GT0);
 }
 function _(e) {
     let { user: t, entry: c, display: u, onAction: _, onClose: p } = e,

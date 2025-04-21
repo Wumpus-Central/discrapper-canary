@@ -76,7 +76,7 @@ class p extends (r = a.PureComponent) {
                     }),
                     (0, i.jsx)(l.zxk, {
                         className: d.volumeButton,
-                        'aria-label': u.NW.string(u.t['19lt29']),
+                        'aria-label': u.intl.string(u.t['19lt29']),
                         size: l.zxk.Sizes.NONE,
                         look: l.zxk.Looks.BLANK,
                         onClick: this.handleToggleMute,

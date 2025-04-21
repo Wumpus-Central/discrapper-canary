@@ -1,10 +1,10 @@
-n.d(t, { Z: () => B }), n(388685), n(781311);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => M }), n(388685), n(781311);
+var i = n(200651),
+    r = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(658722),
-    o = n.n(l),
+    l = n.n(s),
+    a = n(658722),
+    o = n.n(a),
     c = n(442837),
     d = n(524437),
     u = n(780384),
@@ -15,192 +15,192 @@ var r = n(200651),
     f = n(116841),
     b = n(295377),
     _ = n(921801),
-    N = n(553795),
-    x = n(430824),
-    E = n(63063),
-    j = n(358085),
-    C = n(709054),
-    O = n(362352),
-    S = n(413182),
-    v = n(695346),
-    T = n(726985),
-    I = n(981631),
+    x = n(553795),
+    E = n(430824),
+    j = n(63063),
+    C = n(358085),
+    O = n(709054),
+    S = n(362352),
+    v = n(413182),
+    T = n(695346),
+    I = n(726985),
+    N = n(981631),
     y = n(388032),
     A = n(187382),
     P = n(20493);
 function R(e) {
     let t = () => {
-        v.SE.updateSetting(e ? C.default.keys(x.Z.getGuilds()) : []);
+        T.SE.updateSetting(e ? O.default.keys(E.Z.getGuilds()) : []);
     };
     (0, m.h7j)((e) => {
-        var n, i;
-        return (0, r.jsx)(
+        var n, r;
+        return (0, i.jsx)(
             m.ConfirmModal,
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        i = Object.keys(n);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        i.forEach(function (t) {
+                            var i;
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: i,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = i);
                         });
                 }
                 return e;
             })(
                 {
-                    header: y.NW.string(y.t['uUr+GR']),
-                    confirmText: y.NW.string(y.t.gm1Ven),
-                    cancelText: y.NW.string(y.t.p89ACg),
+                    header: y.intl.string(y.t['uUr+GR']),
+                    confirmText: y.intl.string(y.t.gm1Ven),
+                    cancelText: y.intl.string(y.t.p89ACg),
                     onCancel: t,
                     confirmButtonColor: m.zxk.Colors.BRAND
                 },
                 e
             )),
-            (i = i =
+            (r = r =
                 {
-                    children: (0, r.jsx)(m.Text, {
+                    children: (0, i.jsx)(m.Text, {
                         variant: 'text-md/normal',
-                        children: y.NW.string(y.t.EFu2Ki)
+                        children: y.intl.string(y.t.EFu2Ki)
                     })
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          var i = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, i);
                       }
                       return n;
-                  })(Object(i)).forEach(function (e) {
-                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                  })(Object(r)).forEach(function (e) {
+                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                   }),
             n)
         );
     });
 }
 function D() {
-    let e = v.G6.useSetting(),
-        t = v.Wz.useSetting(),
-        n = (0, O.Yd)('activity privacy tab'),
-        i = j.isPlatformEmbedded ? y.NW.string(y.t.MznbeH) : y.NW.string(y.t.oKqC4u),
+    let e = T.G6.useSetting(),
+        t = T.Wz.useSetting(),
+        n = (0, S.Yd)('activity privacy tab'),
+        r = C.isPlatformEmbedded ? y.intl.string(y.t.MznbeH) : y.intl.string(y.t.oKqC4u),
         s = (e) => {
-            v.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), R(e);
+            T.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), R(e);
         },
-        l = (e) => {
-            v.Wz.updateSetting(e), R(e !== d.E5.OFF);
+        a = (e) => {
+            T.Wz.updateSetting(e), R(e !== d.E5.OFF);
         },
         o = [
             {
                 value: d.E5.ON,
-                label: y.NW.string(y.t.UzGMHx)
+                label: y.intl.string(y.t.UzGMHx)
             },
             {
                 value: d.E5.ON_FOR_LARGE_GUILDS,
-                label: y.NW.string(y.t.OFqxQU)
+                label: y.intl.string(y.t.OFqxQU)
             },
             {
                 value: d.E5.OFF,
-                label: y.NW.string(y.t.MIgNPD)
+                label: y.intl.string(y.t.MIgNPD)
             }
         ];
-    return (0, r.jsx)(_.F, {
-        setting: T.s6.ACTIVITY_PRIVACY_STATUS,
-        children: (0, r.jsxs)(m.hjN, {
+    return (0, i.jsx)(_.F, {
+        setting: I.s6.ACTIVITY_PRIVACY_STATUS,
+        children: (0, i.jsxs)(m.hjN, {
             children: [
-                (0, r.jsx)(m.vwX, {
+                (0, i.jsx)(m.vwX, {
                     tag: m.RB0.H5,
                     className: P.marginBottom8,
-                    children: y.NW.string(y.t['8ka8lp'])
+                    children: y.intl.string(y.t['8ka8lp'])
                 }),
-                (0, r.jsx)(m.j7V, {
+                (0, i.jsx)(m.j7V, {
                     value: e,
-                    onChange: (e) => v.G6.updateSetting(e),
-                    note: i,
-                    children: y.NW.string(y.t['4q/Ewc'])
+                    onChange: (e) => T.G6.updateSetting(e),
+                    note: r,
+                    children: y.intl.string(y.t['4q/Ewc'])
                 }),
                 n
-                    ? (0, r.jsxs)(m.xJW, {
+                    ? (0, i.jsxs)(m.xJW, {
                           tag: m.RB0.H3,
-                          title: y.NW.string(y.t.ffGYGx),
+                          title: y.intl.string(y.t.ffGYGx),
                           children: [
-                              (0, r.jsx)(m.Text, {
+                              (0, i.jsx)(m.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   className: P.marginBottom8,
-                                  children: y.NW.format(y.t.aUxRra, { helpdeskArticle: E.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS) })
+                                  children: y.intl.format(y.t.aUxRra, { helpdeskArticle: j.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS) })
                               }),
-                              (0, r.jsx)(m.q4e, {
+                              (0, i.jsx)(m.q4e, {
                                   options: o,
                                   value: t,
-                                  onChange: (e) => l(e)
+                                  onChange: (e) => a(e)
                               })
                           ]
                       })
-                    : (0, r.jsx)(m.j7V, {
+                    : (0, i.jsx)(m.j7V, {
                           value: t === d.E5.OFF,
-                          note: y.NW.format(y.t['+5/xu7'], { helpdeskArticle: E.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                          note: y.intl.format(y.t['+5/xu7'], { helpdeskArticle: j.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS) }),
                           onChange: (e) => s(!e),
-                          children: y.NW.string(y.t.D5GXTU)
+                          children: y.intl.string(y.t.D5GXTU)
                       }),
-                (0, r.jsx)(m.$i$, { className: a()(P.marginBottom20, P.marginTop20) })
+                (0, i.jsx)(m.$i$, { className: l()(P.marginBottom20, P.marginTop20) })
             ]
         })
     });
 }
 function Z() {
-    let e = v.cP.useSetting(),
-        t = v.Ou.useSetting();
-    return (0, r.jsx)(_.F, {
-        setting: T.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
-        children: (0, r.jsxs)(m.hjN, {
+    let e = T.cP.useSetting(),
+        t = T.Ou.useSetting();
+    return (0, i.jsx)(_.F, {
+        setting: I.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
+        children: (0, i.jsxs)(m.hjN, {
             className: P.marginBottom40,
             children: [
-                (0, r.jsx)(m.vwX, {
+                (0, i.jsx)(m.vwX, {
                     tag: m.RB0.H5,
                     className: P.marginBottom8,
-                    children: y.NW.string(y.t.VOszPD)
+                    children: y.intl.string(y.t.VOszPD)
                 }),
-                (0, r.jsx)(m.j7V, {
+                (0, i.jsx)(m.j7V, {
                     value: e,
-                    note: y.NW.string(y.t.Hdh7sb),
-                    onChange: (e) => v.cP.updateSetting(e),
-                    children: y.NW.string(y.t.WEWQQk)
+                    note: y.intl.string(y.t.Hdh7sb),
+                    onChange: (e) => T.cP.updateSetting(e),
+                    children: y.intl.string(y.t.WEWQQk)
                 }),
-                (0, r.jsx)(m.j7V, {
+                (0, i.jsx)(m.j7V, {
                     value: t,
-                    note: y.NW.string(y.t.Czr3Bg),
-                    onChange: (e) => v.Ou.updateSetting(e),
-                    children: y.NW.string(y.t.UUvJVl)
+                    note: y.intl.string(y.t.Czr3Bg),
+                    onChange: (e) => T.Ou.updateSetting(e),
+                    children: y.intl.string(y.t.UUvJVl)
                 })
             ]
         })
     });
 }
 function w() {
-    return (0, r.jsx)(_.F, {
-        setting: T.s6.ACTIVITY_PRIVACY_TOS,
-        children: (0, r.jsx)(m.hjN, {
+    return (0, i.jsx)(_.F, {
+        setting: I.s6.ACTIVITY_PRIVACY_TOS,
+        children: (0, i.jsx)(m.hjN, {
             className: P.marginBottom40,
-            children: (0, r.jsx)(m.ToO, {
+            children: (0, i.jsx)(m.ToO, {
                 type: m.ToO.Types.PRIMARY,
-                body: y.NW.format(y.t.xvCsx8, {
-                    termsLink: I.EYA.TERMS,
-                    privacyLink: I.EYA.PRIVACY
+                body: y.intl.format(y.t.xvCsx8, {
+                    termsLink: N.EYA.TERMS,
+                    privacyLink: N.EYA.PRIVACY
                 })
             })
         })
@@ -208,100 +208,100 @@ function w() {
 }
 let k = (e) => {
     switch (e.type) {
-        case I.ABu.SPOTIFY:
-            return y.NW.format(y.t['5sYPnp'], { name: e.name });
-        case I.ABu.CRUNCHYROLL:
-            return y.NW.format(y.t.Ge29Z2, { name: e.name });
+        case N.ABu.SPOTIFY:
+            return y.intl.format(y.t['5sYPnp'], { name: e.name });
+        case N.ABu.CRUNCHYROLL:
+            return y.intl.format(y.t.Ge29Z2, { name: e.name });
         default:
-            return y.NW.format(y.t.nmMsys, { game: e.name });
+            return y.intl.format(y.t.nmMsys, { game: e.name });
     }
 };
-function W(e) {
+function L(e) {
     let { account: t } = e,
-        [n, s] = i.useState(t.showActivity),
-        a = (0, p.ZP)();
-    i.useEffect(() => {
+        [n, s] = r.useState(t.showActivity),
+        l = (0, p.ZP)();
+    r.useEffect(() => {
         s(t.showActivity);
     }, [t]);
-    let l = h.Z.get(t.type);
-    return (0, r.jsxs)(r.Fragment, {
+    let a = h.Z.get(t.type);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(m.j7V, {
+            (0, i.jsx)(m.j7V, {
                 className: A.switchRowContainer,
                 hideBorder: !0,
                 value: n,
                 onChange: function (e) {
                     s(e), g.Z.setShowActivity(t.type, t.id, e);
                 },
-                children: (0, r.jsxs)('div', {
+                children: (0, i.jsxs)('div', {
                     className: A.activitySwitchRow,
                     children: [
-                        (0, r.jsx)('img', {
-                            alt: l.name,
+                        (0, i.jsx)('img', {
+                            alt: a.name,
                             className: A.connectionIcon,
-                            src: (0, u.wj)(a) ? l.icon.darkSVG : l.icon.lightSVG
+                            src: (0, u.wj)(l) ? a.icon.darkSVG : a.icon.lightSVG
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, i.jsxs)('div', {
                             children: [
-                                (0, r.jsx)(m.Text, {
+                                (0, i.jsx)(m.Text, {
                                     variant: 'text-md/semibold',
-                                    children: l.name
+                                    children: a.name
                                 }),
-                                (0, r.jsxs)(m.Text, {
+                                (0, i.jsxs)(m.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-muted',
-                                    children: ['"', k(l), '"']
+                                    children: ['"', k(a), '"']
                                 })
                             ]
                         })
                     ]
                 })
             }),
-            (0, r.jsx)('div', { className: A.divider })
+            (0, i.jsx)('div', { className: A.divider })
         ]
     });
 }
-function L() {
-    let e = (0, c.e7)([N.Z], () => N.Z.getAccounts()),
-        t = i.useMemo(() => e.filter((e) => h.Z.isSupported(e.type) && I.vbS.has(e.type)), [e]),
-        [n, s] = i.useState(''),
-        a = i.useMemo(() => {
+function B() {
+    let e = (0, c.e7)([x.Z], () => x.Z.getAccounts()),
+        t = r.useMemo(() => e.filter((e) => h.Z.isSupported(e.type) && N.vbS.has(e.type)), [e]),
+        [n, s] = r.useState(''),
+        l = r.useMemo(() => {
             let e = n.trim().toLowerCase();
             return '' === e ? t : t.filter((t) => o()(e, h.Z.get(t.type).name.toLowerCase()));
         }, [t, n]);
     return 0 === t.length
         ? null
-        : (0, r.jsx)(_.F, {
-              setting: T.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
-              children: (0, r.jsxs)(m.hjN, {
+        : (0, i.jsx)(_.F, {
+              setting: I.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
+              children: (0, i.jsxs)(m.hjN, {
                   className: P.marginBottom40,
                   children: [
-                      (0, r.jsx)(m.vwX, {
+                      (0, i.jsx)(m.vwX, {
                           tag: m.RB0.H5,
                           className: P.marginBottom8,
-                          children: y.NW.string(y.t['4F2KoK'])
+                          children: y.intl.string(y.t['4F2KoK'])
                       }),
-                      (0, r.jsx)(m.oil, {
+                      (0, i.jsx)(m.oil, {
                           className: A.searchInput,
                           value: n,
                           onChange: s,
-                          placeholder: y.NW.string(y.t.WPrtoa)
+                          placeholder: y.intl.string(y.t.WPrtoa)
                       }),
-                      a.map((e) => (0, r.jsx)(W, { account: e }, e.id))
+                      l.map((e) => (0, i.jsx)(L, { account: e }, e.id))
                   ]
               })
           });
 }
-function B(e) {
+function M(e) {
     let { className: t, showHeader: n = !0 } = e,
-        { showRedesign: i } = S.b.useExperiment({ location: 'activity privacy tab' }),
+        { showRedesign: r } = v.b.useExperiment({ location: 'activity privacy tab' }),
         { showPerGuildActivityStatusSetting: s } = (0, f.c)('activity privacy tab');
     return s
-        ? (0, r.jsx)(b.Z, {})
-        : (0, r.jsxs)(m.hjN, {
+        ? (0, i.jsx)(b.Z, {})
+        : (0, i.jsxs)(m.hjN, {
               className: t,
               tag: m.RB0.H1,
-              title: n ? y.NW.string(y.t.Cq98yM) : null,
-              children: [(0, r.jsx)(D, {}), (0, r.jsx)(Z, {}), (0, r.jsx)(w, {}), i && (0, r.jsx)(L, {})]
+              title: n ? y.intl.string(y.t.Cq98yM) : null,
+              children: [(0, i.jsx)(D, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(w, {}), r && (0, i.jsx)(B, {})]
           });
 }

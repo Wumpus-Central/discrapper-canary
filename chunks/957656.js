@@ -3,15 +3,15 @@ var n = t(200651);
 t(192379);
 var o = t(481060),
     s = t(198952),
-    c = t(329242),
-    i = t(332495),
-    l = t(388032),
+    l = t(329242),
+    c = t(332495),
+    i = t(388032),
     a = t(305623);
 let d = (e) => {
     var r,
         t,
-        { children: s, className: c } = e,
-        i = (function (e, r) {
+        { children: s, className: l } = e,
+        c = (function (e, r) {
             if (null == e) return {};
             var t,
                 n,
@@ -56,7 +56,7 @@ let d = (e) => {
                     });
             }
             return e;
-        })({ className: c }, i)),
+        })({ className: l }, c)),
         (t = t = { children: s }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(t))
@@ -81,13 +81,13 @@ let d = (e) => {
     });
 }),
     (d.Header = (e) => {
-        let { icon: r, currentUser: t, otherUser: i, header: l } = e;
+        let { icon: r, currentUser: t, otherUser: c, header: i } = e;
         return (0, n.jsxs)('div', {
             className: a.header,
             children: [
                 (0, n.jsx)(s.Z, {
                     currentUser: t,
-                    otherUser: i,
+                    otherUser: c,
                     children: r
                 }),
                 (0, n.jsxs)('div', {
@@ -95,9 +95,9 @@ let d = (e) => {
                     children: [
                         (0, n.jsx)(o.X6q, {
                             variant: 'text-lg/bold',
-                            children: l
+                            children: i
                         }),
-                        (0, n.jsx)(c.Z, { user: i })
+                        (0, n.jsx)(l.Z, { user: c })
                     ]
                 })
             ]
@@ -118,7 +118,7 @@ let d = (e) => {
                 (0, n.jsx)(o.Text, {
                     variant: 'eyebrow',
                     color: 'header-primary',
-                    children: l.NW.string(i.Z.cXgKMD)
+                    children: i.intl.string(c.default.cXgKMD)
                 }),
                 (0, n.jsx)(o.Text, {
                     variant: 'text-sm/normal',

@@ -18,7 +18,7 @@ function f() {
             (0, r.jsx)(l.vwX, {
                 tag: e ? 'h1' : 'h2',
                 className: h.title,
-                children: p.NW.string(p.t.w5uwoK)
+                children: p.intl.string(p.t.w5uwoK)
             }),
             (0, r.jsx)(a.Z, {})
         ]

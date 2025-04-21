@@ -1,6 +1,6 @@
 n.d(t, {
     S: () => _,
-    Z: () => N
+    Z: () => A
 }),
     n(388685);
 var r,
@@ -113,7 +113,7 @@ class T extends (r = i.ZP.Store) {
     }
 }
 d(T, 'displayName', 'SlowmodeStore');
-let N = new T(o.Z, {
+let A = new T(o.Z, {
     SLOWMODE_RESET_COOLDOWN: v,
     SLOWMODE_SET_COOLDOWN: O,
     UPLOAD_START: b,

@@ -25,21 +25,21 @@ function b(e) {
         i = (0, r.jsx)(s.P3F, {
             className: o()(p.winButton, p.winButtonClose),
             onClick: () => h(t),
-            'aria-label': _.NW.string(_.t.ZdNUj4),
+            'aria-label': _.intl.string(_.t.ZdNUj4),
             tabIndex: -1,
             children: (0, r.jsx)(l.Z, {})
         }),
         a = (0, r.jsx)(s.P3F, {
             className: o()(p.winButton, p.winButtonMinMax),
             onClick: () => g(t),
-            'aria-label': _.NW.string(_.t.G1u0hI),
+            'aria-label': _.intl.string(_.t.G1u0hI),
             tabIndex: -1,
             children: (0, r.jsx)(c.Z, {})
         }),
         d = (0, r.jsx)(s.P3F, {
             className: o()(p.winButton, p.winButtonMinMax),
             onClick: () => m(t),
-            'aria-label': _.NW.string(_.t.CxOC4e),
+            'aria-label': _.intl.string(_.t.CxOC4e),
             tabIndex: -1,
             children: (0, r.jsx)(u.Z, {})
         });

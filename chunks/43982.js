@@ -19,14 +19,14 @@ function m(e) {
         g = null;
     switch (f) {
         case c.ABu.XBOX:
-            (m = u.NW.string(u.t.soeJqK)), (g = h);
+            (m = u.intl.string(u.t.soeJqK)), (g = h);
             break;
         case c.ABu.PLAYSTATION:
         case c.ABu.PLAYSTATION_STAGING:
-            (m = u.NW.string(u.t.o8gjmJ)), (g = p);
+            (m = u.intl.string(u.t.o8gjmJ)), (g = p);
     }
     return (0, r.jsx)(s.ZP, {
-        header: u.NW.string(u.t.ZagEMT),
+        header: u.intl.string(u.t.ZagEMT),
         content: m,
         asset: (0, r.jsx)('img', {
             src: g,
@@ -36,8 +36,8 @@ function m(e) {
         onClick: n,
         onSecondaryClick: t,
         markAsDismissed: t,
-        buttonCTA: u.NW.string(u.t.HYgaeX),
-        secondaryButtonCTA: u.NW.string(u.t.SlM9wc),
+        buttonCTA: u.intl.string(u.t.HYgaeX),
+        secondaryButtonCTA: u.intl.string(u.t.SlM9wc),
         caretPosition: 'top' === i ? s.DF.BOTTOM_LEFT : s.DF.TOP_LEFT
     });
 }

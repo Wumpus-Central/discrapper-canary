@@ -46,11 +46,11 @@ let f = function (e) {
                                       (0, r.jsx)(o.X6q, {
                                           variant: 'heading-md/semibold',
                                           className: m.header,
-                                          children: g.NW.string(g.t['v/OYd3'])
+                                          children: g.intl.string(g.t['v/OYd3'])
                                       }),
                                       (0, r.jsx)(o.Text, {
                                           variant: 'text-sm/normal',
-                                          children: g.NW.string(g.t.Z85MlJ)
+                                          children: g.intl.string(g.t.Z85MlJ)
                                       })
                                   ]
                               })
@@ -64,7 +64,7 @@ let f = function (e) {
                           onClick: () => {
                               i.ZP.trackWithMetadata(p.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), f(), (0, l.q)(n.author, b.id);
                           },
-                          children: g.NW.format(g.t['+xsVS0'], { username: n.author.username })
+                          children: g.intl.format(g.t['+xsVS0'], { username: n.author.username })
                       })
                   ]
               })

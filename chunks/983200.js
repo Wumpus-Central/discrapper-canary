@@ -1,14 +1,14 @@
 n.d(t, {
-    $x: () => l,
+    $x: () => a,
     GV: () => s,
     S$: () => g,
     Vn: () => o,
     tu: () => m
 });
 var r = n(192379),
-    a = n(31775),
-    i = n.n(a);
-let l = 0,
+    i = n(31775),
+    l = n.n(i);
+let a = 0,
     s = 4,
     o = 4,
     c = 'absolute',
@@ -45,7 +45,7 @@ let l = 0,
         }
         if (3 === n) {
             let n = Math.ceil((e - r) / 2),
-                a = Math.ceil((t - r) / 2);
+                i = Math.ceil((t - r) / 2);
             return [
                 {
                     top: 0,
@@ -59,72 +59,72 @@ let l = 0,
                     left: n + r,
                     position: c,
                     width: n,
-                    height: a
+                    height: i
                 },
                 {
-                    top: a + r,
+                    top: i + r,
                     left: n + r,
                     position: c,
                     width: n,
-                    height: a
+                    height: i
                 }
             ];
         }
         {
             let n = Math.ceil((e - r) / 2),
-                a = Math.ceil((t - r) / 2);
+                i = Math.ceil((t - r) / 2);
             return [
                 {
                     top: 0,
                     left: 0,
                     position: c,
                     width: n,
-                    height: a
+                    height: i
                 },
                 {
-                    top: a + r,
+                    top: i + r,
                     left: 0,
                     position: c,
                     width: n,
-                    height: a
+                    height: i
                 },
                 {
                     top: 0,
                     left: n + r,
                     position: c,
                     width: n,
-                    height: a
+                    height: i
                 },
                 {
-                    top: a + r,
+                    top: i + r,
                     left: n + r,
                     position: c,
                     width: n,
-                    height: a
+                    height: i
                 }
             ];
         }
     },
-    u = new (i())({ max: 100 });
+    u = new (l())({ max: 100 });
 function m(e) {
-    let { numAttachments: t, containerWidth: n, containerHeight: a } = e;
+    let { numAttachments: t, containerWidth: n, containerHeight: i } = e;
     return r.useMemo(
         () =>
             (function (e) {
                 let { numAttachments: t, containerWidth: n, containerHeight: r } = e,
-                    a = ''.concat(t, '-').concat(n, '-').concat(r),
-                    i = u.get(a);
-                if (null != i) return i;
+                    i = ''.concat(t, '-').concat(n, '-').concat(r),
+                    l = u.get(i);
+                if (null != l) return l;
                 {
                     let e = d(n, r, t, 4);
-                    return u.set(a, e), e;
+                    return u.set(i, e), e;
                 }
             })({
                 numAttachments: t,
                 containerWidth: n,
-                containerHeight: a
+                containerHeight: i
             }),
-        [t, n, a]
+        [t, n, i]
     );
 }
 function h(e) {
@@ -136,11 +136,11 @@ function h(e) {
     }));
 }
 function g(e) {
-    let { imageContainerStyles: t, containerWidth: n, containerHeight: a } = e,
-        i = r.useRef(h(t)),
-        l = r.useRef(n),
-        s = r.useRef(a),
-        o = n > l.current + 100,
-        c = a > s.current + 100;
-    return (o || c) && (i.current = h(t)), i.current;
+    let { imageContainerStyles: t, containerWidth: n, containerHeight: i } = e,
+        l = r.useRef(h(t)),
+        a = r.useRef(n),
+        s = r.useRef(i),
+        o = n > a.current + 100,
+        c = i > s.current + 100;
+    return (o || c) && (l.current = h(t)), l.current;
 }

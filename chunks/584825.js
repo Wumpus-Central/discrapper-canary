@@ -1,5 +1,5 @@
 n.d(t, {
-    GG: () => N,
+    GG: () => T,
     HQ: () => f,
     JH: () => C,
     QV: () => P,
@@ -8,7 +8,7 @@ n.d(t, {
     _k: () => I,
     jO: () => O,
     oC: () => D,
-    qi: () => T,
+    qi: () => N,
     r4: () => p,
     sp: () => S
 }),
@@ -62,11 +62,11 @@ let E = [],
         );
     },
     O = (e) => (0, i.e7)([u.Z], () => (null != e ? u.Z.getSubscriptionListing(e) : null)),
-    N = (e) => {
+    T = (e) => {
         let t = (0, s.f)('useGroupListingsForGuild');
         return (0, i.e7)([u.Z], () => (null != e && t ? u.Z.getSubscriptionGroupListingsForGuild(e) : E));
     },
-    T = function (e) {
+    N = function (e) {
         let t =
             arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]

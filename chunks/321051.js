@@ -23,11 +23,11 @@ function f(e) {
                     children: [
                         (0, r.jsx)(o.Text, {
                             variant: 'text-md/bold',
-                            children: c.NW.string(c.t.aThJz8)
+                            children: c.intl.string(c.t.aThJz8)
                         }),
                         (0, r.jsx)(o.Text, {
                             variant: 'text-sm/normal',
-                            children: c.NW.string(c.t.stGFAw)
+                            children: c.intl.string(c.t.stGFAw)
                         })
                     ]
                 }),
@@ -78,7 +78,7 @@ function f(e) {
                                   (0, r.jsx)(o.Text, {
                                       className: u.text,
                                       variant: 'text-sm/semibold',
-                                      children: c.NW.string(c.t.aThJz8)
+                                      children: c.intl.string(c.t.aThJz8)
                                   })
                               ]
                           })

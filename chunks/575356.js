@@ -1,35 +1,35 @@
-let r;
+let i;
 n.d(t, { Z: () => u });
-var i,
+var r,
     s,
-    a,
-    l = n(442837),
+    l,
+    a = n(442837),
     o = n(570140);
 let c = !1;
-class d extends (a = l.ZP.Store) {
+class d extends (l = a.ZP.Store) {
     get harvestType() {
-        return r;
+        return i;
     }
     get requestingHarvest() {
         return c;
     }
 }
 (s = 'DataHarvestStore'),
-    (i = 'displayName') in d
-        ? Object.defineProperty(d, i, {
+    (r = 'displayName') in d
+        ? Object.defineProperty(d, r, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (d[i] = s);
+        : (d[r] = s);
 let u = new d(o.Z, {
     CONNECTION_OPEN: function () {
-        r = void 0;
+        i = void 0;
     },
     UPDATE_DATA_HARVEST_TYPE: function (e) {
         let { harvestType: t } = e;
-        (c = !1), (r = t);
+        (c = !1), (i = t);
     },
     LOAD_DATA_HARVEST_TYPE_START: function () {
         c = !0;
@@ -38,6 +38,6 @@ let u = new d(o.Z, {
         c = !1;
     },
     LOGOUT: function () {
-        (c = !1), (r = null);
+        (c = !1), (i = null);
     }
 });

@@ -4,8 +4,8 @@ var n = t(200651),
     s = t(481060),
     c = t(100527),
     i = t(906732),
-    a = t(563132),
-    l = t(409813),
+    l = t(563132),
+    a = t(409813),
     p = t(185139),
     u = t(263954),
     d = t(267642),
@@ -62,7 +62,7 @@ function k(e) {
     });
 }
 let y = (e) => {
-        let { onClose: r, perks: t, perkIntro: o = h.NW.string(h.t.Dr3Goa), headerProps: c } = e;
+        let { onClose: r, perks: t, perkIntro: o = h.intl.string(h.t.Dr3Goa), headerProps: c } = e;
         return (0, n.jsxs)('div', {
             className: m.wrapper,
             children: [
@@ -104,7 +104,7 @@ let y = (e) => {
                     : (0, n.jsx)('img', {
                           className: m.heroImage,
                           src: t(438471),
-                          alt: h.NW.string(h.t.PkcaAA)
+                          alt: h.intl.string(h.t.PkcaAA)
                       }),
                 (0, n.jsx)(s.Text, {
                     variant: 'text-md/normal',
@@ -131,7 +131,7 @@ let y = (e) => {
                     onClick: () => {
                         o();
                     },
-                    children: h.NW.string(h.t.cpT0Cg)
+                    children: h.intl.string(h.t.cpT0Cg)
                 }),
                 (0, n.jsx)(j.Z, {
                     analyticsLocation: i,
@@ -171,7 +171,7 @@ function P(e) {
     let { analyticsLocations: k } = (0, i.ZP)(c.Z.ACTIVITY_DIRECTORY);
     return (0, n.jsx)(i.Gt, {
         value: k,
-        children: (0, n.jsx)(a.PaymentContextProvider, {
+        children: (0, n.jsx)(l.PaymentContextProvider, {
             activeSubscription: null,
             stepConfigs: [],
             skuIDs: [],
@@ -195,8 +195,8 @@ function P(e) {
                                 onClose: m,
                                 analyticsSourceLocation: o
                             }),
-                            steps: [l.h8.PREMIUM_GUILD_UPSELL],
-                            currentStep: l.h8.PREMIUM_GUILD_UPSELL
+                            steps: [a.h8.PREMIUM_GUILD_UPSELL],
+                            currentStep: a.h8.PREMIUM_GUILD_UPSELL
                         })
                     }),
                 Object.getOwnPropertyDescriptors

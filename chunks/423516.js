@@ -11,7 +11,7 @@ var l = n(120356),
 let d = function (e) {
     let { className: t, hasVideo: n, text: l, hasConnectedChannel: d, textVariant: h = 'text-md/medium' } = e,
         f = (0, s.Q3)('RTCConnectionStatusText'),
-        p = n ? u.NW.string(u.t.IlHdW1) : u.NW.string(u.t.WsOisr);
+        p = n ? u.intl.string(u.t.IlHdW1) : u.intl.string(u.t.WsOisr);
     return (0, r.jsx)(a.Z, {
         className: i()(t, c.hoverableStatus),
         hoverText: d

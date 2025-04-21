@@ -2,8 +2,8 @@ n.d(t, { Z: () => a }), n(415506);
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(981631);
-function l(e) {
+    l = n(981631);
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,24 +39,24 @@ function a(e) {
                     var n,
                         r,
                         i = {},
-                        s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ['tier']);
     switch (t) {
-        case s.Eu4.TIER_1:
-            return (0, r.jsx)(i.XGX, l({}, n));
-        case s.Eu4.TIER_2:
-            return (0, r.jsx)(i.$Eu, l({}, n));
-        case s.Eu4.TIER_3:
-            return (0, r.jsx)(i.iOe, l({}, n));
-        case s.Eu4.NONE:
+        case l.Eu4.TIER_1:
+            return (0, r.jsx)(i.XGX, s({}, n));
+        case l.Eu4.TIER_2:
+            return (0, r.jsx)(i.$Eu, s({}, n));
+        case l.Eu4.TIER_3:
+            return (0, r.jsx)(i.iOe, s({}, n));
+        case l.Eu4.NONE:
             return null;
         default:
             throw Error('Not a valid tier type');

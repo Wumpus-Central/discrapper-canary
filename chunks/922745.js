@@ -90,7 +90,7 @@ function S(e) {
                     (0, r.jsx)(c.whL, {
                         size: 'custom',
                         color: 'currentColor',
-                        'aria-label': E.NW.string(E.t.mSfLs7),
+                        'aria-label': E.intl.string(E.t.mSfLs7),
                         className: b.backButton,
                         width: 20,
                         height: 20
@@ -106,7 +106,7 @@ function S(e) {
             m && null != i
                 ? (0, r.jsx)(g.Z, {
                       onClick: i,
-                      label: E.NW.string(E.t.BEuDEh)
+                      label: E.intl.string(E.t.BEuDEh)
                   })
                 : null,
             _

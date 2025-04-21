@@ -27,7 +27,7 @@ function d(e) {
         null != v &&
             (d = {
                 href: o.Z.format(v),
-                ariaDescription: u.NW.formatToPlainString(u.t.aFFQ3t, { title: y })
+                ariaDescription: u.intl.formatToPlainString(u.t.aFFQ3t, { title: y })
             }),
         (t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {

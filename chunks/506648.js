@@ -13,80 +13,80 @@ var r = n(200651),
 let f = [
         {
             feature: d.Qa3.SINGLE_PLAYER,
-            getText: () => p.NW.string(p.t['V+/FjI']),
-            getTooltip: () => p.NW.string(p.t['w+X9sb']),
+            getText: () => p.intl.string(p.t['V+/FjI']),
+            getTooltip: () => p.intl.string(p.t['w+X9sb']),
             IconComponent: l.tBG
         },
         {
             feature: d.Qa3.LOCAL_MULTIPLAYER,
-            getText: () => p.NW.string(p.t.srnWrq),
-            getTooltip: () => p.NW.string(p.t.sDdLWF),
+            getText: () => p.intl.string(p.t.srnWrq),
+            getTooltip: () => p.intl.string(p.t.sDdLWF),
             IconComponent: l.BFJ
         },
         {
             feature: d.Qa3.ONLINE_MULTIPLAYER,
-            getText: () => p.NW.string(p.t.xPHbgI),
-            getTooltip: () => p.NW.string(p.t.g6kR4O),
+            getText: () => p.intl.string(p.t.xPHbgI),
+            getTooltip: () => p.intl.string(p.t.g6kR4O),
             IconComponent: l.BFJ
         },
         {
             feature: d.Qa3.PVP,
-            getText: () => p.NW.string(p.t.qhgwx8),
-            getTooltip: () => p.NW.string(p.t['5jGrhI']),
+            getText: () => p.intl.string(p.t.qhgwx8),
+            getTooltip: () => p.intl.string(p.t['5jGrhI']),
             IconComponent: l.HI3
         },
         {
             feature: d.Qa3.LOCAL_COOP,
-            getText: () => p.NW.string(p.t.FqbalJ),
-            getTooltip: () => p.NW.string(p.t.vIgDgY),
+            getText: () => p.intl.string(p.t.FqbalJ),
+            getTooltip: () => p.intl.string(p.t.vIgDgY),
             IconComponent: l.BFJ
         },
         {
             feature: d.Qa3.ONLINE_COOP,
-            getText: () => p.NW.string(p.t.lDHO4e),
-            getTooltip: () => p.NW.string(p.t.VXDpho),
+            getText: () => p.intl.string(p.t.lDHO4e),
+            getTooltip: () => p.intl.string(p.t.VXDpho),
             IconComponent: l.BFJ
         },
         {
             feature: d.Qa3.CROSS_PLATFORM,
-            getText: () => p.NW.string(p.t.SWo2HR),
-            getTooltip: () => p.NW.string(p.t.ll2wzc),
+            getText: () => p.intl.string(p.t.SWo2HR),
+            getTooltip: () => p.intl.string(p.t.ll2wzc),
             IconComponent: l.DuK
         },
         {
             feature: d.Qa3.RICH_PRESENCE,
-            getText: () => p.NW.string(p.t.PVSVtL),
-            getTooltip: () => p.NW.string(p.t.O6Yp4e),
+            getText: () => p.intl.string(p.t.PVSVtL),
+            getTooltip: () => p.intl.string(p.t.O6Yp4e),
             IconComponent: c.Z
         },
         {
             feature: d.Qa3.DISCORD_GAME_INVITES,
-            getText: () => p.NW.string(p.t.agm68P),
-            getTooltip: () => p.NW.string(p.t.kS2vFB),
+            getText: () => p.intl.string(p.t.agm68P),
+            getTooltip: () => p.intl.string(p.t.kS2vFB),
             IconComponent: s.Z
         },
         {
             feature: d.Qa3.SPECTATOR_MODE,
-            getText: () => p.NW.string(p.t['ZtiU7+']),
-            getTooltip: () => p.NW.string(p.t.kUtiKS),
+            getText: () => p.intl.string(p.t['ZtiU7+']),
+            getTooltip: () => p.intl.string(p.t.kUtiKS),
             IconComponent: l.Odl
         },
         {
             feature: d.Qa3.CONTROLLER_SUPPORT,
-            getText: () => p.NW.string(p.t.UlBQ8P),
-            getTooltip: () => p.NW.string(p.t.iG00jI),
+            getText: () => p.intl.string(p.t.UlBQ8P),
+            getTooltip: () => p.intl.string(p.t.iG00jI),
             IconComponent: l.xoD
         },
         {
             feature: d.Qa3.CLOUD_SAVES,
-            getText: () => p.NW.string(p.t.rOcNrK),
-            getTooltip: () => p.NW.string(p.t.kvw18P),
+            getText: () => p.intl.string(p.t.rOcNrK),
+            getTooltip: () => p.intl.string(p.t.kvw18P),
             IconComponent: o.Z
         },
         {
             feature: d.Qa3.SECURE_NETWORKING,
-            getText: () => p.NW.string(p.t.GKFWLy),
-            getTooltip: () => p.NW.string(p.t.VudViI),
+            getText: () => p.intl.string(p.t.GKFWLy),
+            getTooltip: () => p.intl.string(p.t.VudViI),
             IconComponent: u.Z
         }
     ],
@@ -163,7 +163,7 @@ class m extends i.PureComponent {
             ? null
             : (0, r.jsxs)('div', {
                   className: h.features,
-                  children: [(0, r.jsx)(a.Z, { children: p.NW.string(p.t.XXENra) }), t]
+                  children: [(0, r.jsx)(a.Z, { children: p.intl.string(p.t.XXENra) }), t]
               });
     }
 }

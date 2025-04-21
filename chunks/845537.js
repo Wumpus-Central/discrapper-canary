@@ -34,8 +34,8 @@ var m = n(592125),
     I = n(377668),
     S = n(388032),
     T = n(576851),
-    N = n(73433);
-function A(e, t, n) {
+    A = n(73433);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -59,7 +59,7 @@ function C(e) {
                 })
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
@@ -180,7 +180,7 @@ function M(e) {
         c = (0, h.X)(n, null == o ? void 0 : o.colorStrings);
     if (null == o)
         return (0, r.jsxs)('span', {
-            children: ['@', S.NW.string(S.t['YV4F/v'])]
+            children: ['@', S.intl.string(S.t['YV4F/v'])]
         });
     let u = null != o.color && 0 !== o.color,
         d = 'dot' === s,
@@ -204,12 +204,12 @@ function M(e) {
 function k(e) {
     let { id: t } = e,
         n = (0, i.e7)([m.Z], () => m.Z.getChannel(t)),
-        a = S.NW.string(S.t.zLZPmp).toLowerCase(),
+        a = S.intl.string(S.t.zLZPmp).toLowerCase(),
         o = 'text',
         s = !0;
     if (null != n) {
         var l;
-        (a = (0, u.YO)(n) ? n.name : S.NW.string(S.t['/YzI6+'])), (o = (0, u.YO)(n) ? (null != (l = (0, y.wl)(n)) ? l : 'text') : 'locked'), (s = (0, d.B)(n.type));
+        (a = (0, u.YO)(n) ? n.name : S.intl.string(S.t['/YzI6+'])), (o = (0, u.YO)(n) ? (null != (l = (0, y.wl)(n)) ? l : 'text') : 'locked'), (s = (0, d.B)(n.type));
     }
     return s
         ? (0, r.jsx)(_.Z, {
@@ -236,7 +236,7 @@ function U(e) {
 function G(e) {
     let { timestamp: t } = e;
     return (0, r.jsx)('span', {
-        className: N.timestamp,
+        className: A.timestamp,
         children: t.formatted
     });
 }

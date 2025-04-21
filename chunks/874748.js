@@ -21,7 +21,7 @@ function _(e) {
     if (null == c) return null;
     let y = (0, l.EY)(c.thumbnail),
         v = !b && c.has_media_attachment,
-        O = b ? d.NW.string(d.t.UsZEBA) : d.NW.string(d.t.ReFzYW),
+        O = b ? d.intl.string(d.t.UsZEBA) : d.intl.string(d.t.ReFzYW),
         I = null != g ? s.ZP.getName(c.guild_id, c.channel_id, g) : void 0,
         S = null == g ? void 0 : g.getAvatarURL(null == _ ? void 0 : _.id, f);
     (null == S || E !== c.guild_id) &&
@@ -32,13 +32,13 @@ function _(e) {
             canAnimate: !1
         }));
     let T = h(c.thumbnail) && !v,
-        N = (null == (t = c.thumbnail) ? void 0 : t.filename) != null && (null == (r = c.thumbnail) || null == (n = r.filename) ? void 0 : n.startsWith(u._j));
+        A = (null == (t = c.thumbnail) ? void 0 : t.filename) != null && (null == (r = c.thumbnail) || null == (n = r.filename) ? void 0 : n.startsWith(u._j));
     return {
         title: null != (i = c.title) ? i : '',
         subtitle: c.description,
         ctaText: O,
         coverImage: y,
-        coverImageOverlayText: v ? d.NW.string(d.t.YonliY) : void 0,
+        coverImageOverlayText: v ? d.intl.string(d.t.YonliY) : void 0,
         parentChannelId: c.parent_channel_id,
         threadId: c.channel_id,
         postThread: m,
@@ -52,7 +52,7 @@ function _(e) {
         avatarUrl: S,
         shouldShowBlurredThumbnailImage: v,
         shouldContainMediaWithBackground: T,
-        shouldSpoiler: N,
+        shouldSpoiler: A,
         obscureAwaitingScan: !1,
         flags: c.flags,
         contentScanVersion: c.content_scan_version

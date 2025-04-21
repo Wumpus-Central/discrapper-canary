@@ -53,7 +53,7 @@ function v(e) {
     if (((p = !1), (h = null), t.status === d.PyE.FAILED)) {
         var r;
         let e = null;
-        (null == (r = t.metadata) ? void 0 : r.billing_error_code) === l.SM.BILLING_INSUFFICIENT_FUNDS && (e = l.SM.BILLING_INSUFFICIENT_FUNDS), (m = new l.ZP(f.NW.string(f.t.khEaRE), e));
+        (null == (r = t.metadata) ? void 0 : r.billing_error_code) === l.SM.BILLING_INSUFFICIENT_FUNDS && (e = l.SM.BILLING_INSUFFICIENT_FUNDS), (m = new l.ZP(f.intl.string(f.t.khEaRE), e));
     } else (m = null), a.Z.wait(o.fw), a.Z.wait(s.pB);
 }
 class O extends (r = i.ZP.Store) {

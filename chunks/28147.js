@@ -19,9 +19,9 @@ var i = n(200651),
     v = n(98880),
     C = n(804307),
     g = n(520315),
-    N = n(532309),
-    j = n(561160),
-    P = n(41558),
+    j = n(532309),
+    P = n(561160),
+    N = n(41558),
     E = n(106771),
     O = n(79984),
     A = n(981631),
@@ -92,7 +92,7 @@ function k(e) {
         s && x === m.M.FETCHED && C();
     }, [C, x, s]);
     let g = null == x || x === m.M.FETCHING,
-        N = r.useMemo(() => {
+        j = r.useMemo(() => {
             let e = b.map((e) => ({
                     application: e,
                     installOnDemand: !0
@@ -117,15 +117,15 @@ function k(e) {
                 )
             ];
         }, [v, b]),
-        P = N.length > 0,
-        E = p && !P && !g;
+        N = j.length > 0,
+        E = p && !N && !g;
     return d
-        ? (0, i.jsx)(U, {})
+        ? (0, i.jsx)(H, {})
         : E
-          ? (0, i.jsx)(j.A, {
+          ? (0, i.jsx)(P.A, {
                 type: _.LG.SEARCH_EMPTY,
                 searchQuery: n,
-                textContent: l === _._b.TEXT ? I.NW.string(I.t.LSNOYW) : I.NW.string(I.t.Clu7Qk)
+                textContent: l === _._b.TEXT ? I.intl.string(I.t.LSNOYW) : I.intl.string(I.t.Clu7Qk)
             })
           : (0, i.jsxs)('div', {
                 children: [
@@ -135,10 +135,10 @@ function k(e) {
                             commandResults: f,
                             query: n
                         }),
-                    (P || g) &&
-                        (0, i.jsx)(D, {
+                    (N || g) &&
+                        (0, i.jsx)(B, {
                             context: t,
-                            applicationResults: N,
+                            applicationResults: j,
                             includePlaceholder: g,
                             query: n,
                             searchesBots: u
@@ -152,8 +152,8 @@ function M(e) {
         m = o.length > 4,
         y = r.useMemo(() => (m ? o.slice(0, 4) : o), [o, m]),
         [v, C] = r.useState(!1),
-        N = null != (t = (0, s.Z)(v)) ? t : v,
-        j = r.useCallback(() => C((e) => !e), []),
+        j = null != (t = (0, s.Z)(v)) ? t : v,
+        P = r.useCallback(() => C((e) => !e), []),
         O = (null != (n = (0, s.Z)(a)) ? n : a)[0] !== a[0],
         T = v && !O;
     r.useLayoutEffect(() => C(!1), [O]);
@@ -168,23 +168,23 @@ function M(e) {
         maxAnimationHeight: (0, x.cr)()
     });
     r.useEffect(() => {
-        !N &&
+        !j &&
             v &&
             (0, c.yw)(A.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                 section_name: _.L3.SEARCH,
                 source: b.Z.entrypoint(),
                 num: o.length
             });
-    }, [o.length, N, v]);
+    }, [o.length, j, v]);
     let Z = T || w,
-        k = T ? P.Z.buttonTypes.VIEW_LESS : P.Z.buttonTypes.VIEW_MORE,
+        k = T ? N.Z.buttonTypes.VIEW_LESS : N.Z.buttonTypes.VIEW_MORE,
         M = Z ? o : y;
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(P.Z, {
-                title: I.NW.string(I.t['0hKkS0']),
+            (0, i.jsx)(N.Z, {
+                title: I.intl.string(I.t['0hKkS0']),
                 buttonType: k,
-                onClickViewButton: m ? j : void 0
+                onClickViewButton: m ? P : void 0
             }),
             (0, i.jsx)('div', {
                 className: S.sectionContentContainer,
@@ -230,9 +230,9 @@ function M(e) {
         ]
     });
 }
-function W(e) {
+function D(e) {
     var t, n;
-    let { trackSearchResultsItemImpressionRef: r } = (0, N.Z)({
+    let { trackSearchResultsItemImpressionRef: r } = (0, j.Z)({
         applicationId: e.application.id,
         query: e.query,
         searchResultsPosition: e.resultsPosition
@@ -266,19 +266,19 @@ function W(e) {
         )
     });
 }
-function D(e) {
+function B(e) {
     let { context: t, applicationResults: n, includePlaceholder: r, query: l, searchesBots: o } = e;
     return o
         ? (0, i.jsxs)('div', {
               children: [
-                  (0, i.jsx)(P.Z, { title: I.NW.string(I.t.PHjkRE) }),
+                  (0, i.jsx)(N.Z, { title: I.intl.string(I.t.PHjkRE) }),
                   (0, i.jsxs)('div', {
                       className: S.sectionContentContainer,
                       children: [
                           n.map((e, n) => {
                               let { application: r, installOnDemand: o } = e;
                               return (0, i.jsx)(
-                                  B,
+                                  U,
                                   {
                                       context: t,
                                       application: r,
@@ -298,14 +298,14 @@ function D(e) {
           })
         : (0, i.jsxs)('div', {
               children: [
-                  (0, i.jsx)(P.Z, { title: I.NW.string(I.t.shUONj) }),
+                  (0, i.jsx)(N.Z, { title: I.intl.string(I.t.shUONj) }),
                   (0, i.jsxs)('div', {
                       className: S.sectionActivitiesContentContainer,
                       children: [
                           n.map((e, n) => {
                               let { application: r, installOnDemand: o } = e;
                               return (0, i.jsx)(
-                                  W,
+                                  D,
                                   {
                                       context: t,
                                       application: r,
@@ -325,7 +325,7 @@ function D(e) {
               ]
           });
 }
-function B(e) {
+function U(e) {
     let { onClickAppCard: t, onClickAppCardFriends: n } = (0, v.cG)(e);
     return (0, i.jsx)(E.Z, {
         application: e.application,
@@ -335,15 +335,15 @@ function B(e) {
         onClickAppCardFriends: n
     });
 }
-function U() {
+function H() {
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(P.Z, { title: I.NW.string(I.t['0hKkS0']) }),
+            (0, i.jsx)(N.Z, { title: I.intl.string(I.t['0hKkS0']) }),
             (0, i.jsx)('div', {
                 className: S.sectionContentContainer,
                 children: L.map((e) => (0, i.jsx)(O.Z, {}, e))
             }),
-            (0, i.jsx)(P.Z, { title: I.NW.string(I.t.PHjkRE) }),
+            (0, i.jsx)(N.Z, { title: I.intl.string(I.t.PHjkRE) }),
             (0, i.jsx)('div', {
                 className: S.sectionContentContainer,
                 children: w.map((e) => (0, i.jsx)(O.Z, {}, e))

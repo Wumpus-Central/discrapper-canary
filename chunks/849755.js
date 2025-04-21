@@ -24,16 +24,16 @@ function O(e) {
         { analyticsLocations: I } = (0, c.ZP)(),
         S = (0, p.W)(t),
         T = (0, u.ZP)(t, !0),
-        N = (0, s.e7)([f.Z], () => f.Z.getChannelStatus(t)),
-        A = i.useMemo(() => (null == N || '' === N ? null : _.Z.parseVoiceChannelStatus(N, !0, { channelId: t.id })), [N, t.id]);
+        A = (0, s.e7)([f.Z], () => f.Z.getChannelStatus(t)),
+        N = i.useMemo(() => (null == A || '' === A ? null : _.Z.parseVoiceChannelStatus(A, !0, { channelId: t.id })), [A, t.id]);
     i.useEffect(() => {
-        null != A &&
+        null != N &&
             h.default.track(b.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                 channel_id: t.id,
                 guild_id: t.guild_id,
                 location_stack: I
             });
-    }, [A, t.id, t.guild_id, I]);
+    }, [N, t.id, t.guild_id, I]);
     let C = (e) => {
         e.stopPropagation(),
             n({ action: 'PRESS_VOICE_CHANNEL_STATUS' }),
@@ -49,7 +49,7 @@ function O(e) {
               onClick: C,
               children: [
                   (0, r.jsx)(g.Z, {
-                      text: null != A ? A : y.NW.string(y.t.Mgpxi4),
+                      text: null != N ? N : y.intl.string(y.t.Mgpxi4),
                       variant: 'text-xs/normal',
                       color: 'text-secondary',
                       className: v.text
@@ -57,14 +57,14 @@ function O(e) {
                   (0, r.jsx)(l.vdY, {
                       color: 'currentColor',
                       size: 'xxs',
-                      className: o()(v.pencilIcon, null != A ? v.hidden : void 0),
-                      'aria-label': y.NW.string(y.t.bt75u7)
+                      className: o()(v.pencilIcon, null != N ? v.hidden : void 0),
+                      'aria-label': y.intl.string(y.t.bt75u7)
                   })
               ]
           })
-        : null != A
+        : null != N
           ? (0, r.jsx)(g.Z, {
-                text: A,
+                text: N,
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
                 className: v.text

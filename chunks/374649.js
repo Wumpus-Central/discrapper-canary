@@ -3,7 +3,7 @@ n.d(t, {
     Ox: () => T,
     hz: () => b,
     o5: () => I,
-    pV: () => N
+    pV: () => A
 }),
     n(388685),
     n(49124);
@@ -244,7 +244,7 @@ function T(e) {
         (0, r.useCallback)(() => v(t.current), [n])
     );
 }
-function N(e) {
+function A(e) {
     let t = e.subscriptionPlanPrice;
     return (
         e.discounts.forEach((n) => {

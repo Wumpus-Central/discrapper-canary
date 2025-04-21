@@ -1,40 +1,40 @@
-t.d(r, { default: () => b }), t(953529), t(388685);
-var n = t(200651);
-t(192379);
-var o = t(481060),
-    s = t(313201),
-    c = t(930180),
-    i = t(320596),
-    l = t(388032),
-    a = t(891430);
+r.d(t, { default: () => b }), r(953529), r(388685);
+var n = r(200651);
+r(192379);
+var o = r(481060),
+    s = r(313201),
+    c = r(930180),
+    i = r(320596),
+    l = r(388032),
+    a = r(891430);
 function d(e) {
-    let { blockedUsersCount: r, ignoredUsersCount: t } = e;
-    return r > 0 && t > 0 ? l.NW.format(l.t.Uzdyho, { number: r + t }) : t > 0 ? l.NW.format(l.t.wvygk5, { number: t }) : l.NW.format(l.t.HviVAw, { number: r });
+    let { blockedUsersCount: t, ignoredUsersCount: r } = e;
+    return t > 0 && r > 0 ? l.intl.format(l.t.Uzdyho, { number: t + r }) : r > 0 ? l.intl.format(l.t.wvygk5, { number: r }) : l.intl.format(l.t.HviVAw, { number: t });
 }
 function u(e) {
-    let { blockedUsersCount: r, ignoredUsersCount: t } = e;
-    return r > 0 && t > 0 ? l.NW.string(l.t['P/KFX1']) : t > 0 ? l.NW.format(l.t.Ri3o39, { number: t }) : l.NW.format(l.t['28qZMT'], { number: r });
+    let { blockedUsersCount: t, ignoredUsersCount: r } = e;
+    return t > 0 && r > 0 ? l.intl.string(l.t['P/KFX1']) : r > 0 ? l.intl.format(l.t.Ri3o39, { number: r }) : l.intl.format(l.t['28qZMT'], { number: t });
 }
 function b(e) {
-    var r,
-        t,
+    var t,
+        r,
         { channel: b, onAccept: m, transitionState: j, onClose: x } = e,
-        f = (function (e, r) {
+        f = (function (e, t) {
             if (null == e) return {};
-            var t,
+            var r,
                 n,
-                o = (function (e, r) {
+                o = (function (e, t) {
                     if (null == e) return {};
-                    var t,
+                    var r,
                         n,
                         o = {},
                         s = Object.keys(e);
-                    for (n = 0; n < s.length; n++) (t = s[n]), r.indexOf(t) >= 0 || (o[t] = e[t]);
+                    for (n = 0; n < s.length; n++) (r = s[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
                     return o;
-                })(e, r);
+                })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < s.length; n++) (t = s[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
+                for (n = 0; n < s.length; n++) (r = s[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
         })(e, ['channel', 'onAccept', 'transitionState', 'onClose']);
@@ -43,27 +43,27 @@ function b(e) {
         g = (0, c.bA)(b.id);
     return (0, n.jsxs)(
         o.Y0X,
-        ((r = (function (e) {
-            for (var r = 1; r < arguments.length; r++) {
-                var t = null != arguments[r] ? arguments[r] : {},
-                    n = Object.keys(t);
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
                 'function' == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
-                        Object.getOwnPropertySymbols(t).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
                         })
                     )),
-                    n.forEach(function (r) {
+                    n.forEach(function (t) {
                         var n;
-                        (n = t[r]),
-                            r in e
-                                ? Object.defineProperty(e, r, {
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[r] = n);
+                                : (e[t] = n);
                     });
             }
             return e;
@@ -74,7 +74,7 @@ function b(e) {
             },
             f
         )),
-        (t = t =
+        (r = r =
             {
                 size: o.CgR.SMALL,
                 children: [
@@ -102,16 +102,16 @@ function b(e) {
                     (0, n.jsx)(o.hzk, {
                         className: a.content,
                         children: [...h, ...g].map((e) => {
-                            let { user: r, id: t, speaker: o } = e;
+                            let { user: t, id: r, speaker: o } = e;
                             return (0, n.jsx)(
                                 i.Ie,
                                 {
-                                    user: r,
+                                    user: t,
                                     speaker: o,
                                     showStatus: !0,
                                     channelId: b.id
                                 },
-                                t
+                                r
                             );
                         })
                     }),
@@ -123,7 +123,7 @@ function b(e) {
                                     m(b), x();
                                 },
                                 color: o.zxk.Colors.BRAND,
-                                children: l.NW.string(l.t.mbD50N)
+                                children: l.intl.string(l.t.mbD50N)
                             }),
                             (0, n.jsx)(o.zxk, {
                                 onClick: () => {
@@ -131,24 +131,24 @@ function b(e) {
                                 },
                                 color: o.zxk.Colors.PRIMARY,
                                 look: o.zxk.Looks.LINK,
-                                children: l.NW.string(l.t.CZGqeX)
+                                children: l.intl.string(l.t.CZGqeX)
                             })
                         ]
                     })
                 ]
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(t))
-            : (function (e, r) {
-                  var t = Object.keys(e);
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
                       var n = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, n);
+                      r.push.apply(r, n);
                   }
-                  return t;
-              })(Object(t)).forEach(function (e) {
-                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(t, e));
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
               }),
-        r)
+        t)
     );
 }

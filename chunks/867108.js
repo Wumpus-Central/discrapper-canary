@@ -16,7 +16,7 @@ function p(e, t) {
               l.sNh,
               {
                   id: 'view-as-role',
-                  label: u.NW.string(u.t.arFPfH),
+                  label: u.intl.string(u.t.arFPfH),
                   icon: l.ZSh,
                   action: () => {
                       o.Z.close(),

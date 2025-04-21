@@ -141,18 +141,18 @@ function p(e) {
             (0, a.jsx)(l.X6q, {
                 variant: 'heading-sm/semibold',
                 className: m.perksHeader,
-                children: d.NW.string(d.t.CjC5XV)
+                children: d.intl.string(d.t.CjC5XV)
             }),
             (0, a.jsx)(l.Text, {
                 variant: 'text-xs/semibold',
                 className: m.benefitTypeHeader,
-                children: d.NW.string(d.t.rI43W1)
+                children: d.intl.string(d.t.rI43W1)
             }),
             t.channels.map((e) => (0, a.jsx)(u, { channel: e }, e.id)),
             (0, a.jsx)(l.Text, {
                 variant: 'text-xs/semibold',
                 className: m.benefitTypeHeader,
-                children: d.NW.string(d.t.XqWRLi)
+                children: d.intl.string(d.t.XqWRLi)
             }),
             t.additional_perks.map((e, t) => (0, a.jsx)(f, { benefit: e.name }, t))
         ]
@@ -174,7 +174,7 @@ function _(e) {
                 onClick: () => {
                     n(t);
                 },
-                children: d.NW.string(d.t['1W7mCg'])
+                children: d.intl.string(d.t['1W7mCg'])
             })
         ]
     });

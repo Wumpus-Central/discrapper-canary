@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
-var i = n(442837),
-    l = n(481060),
+var l = n(442837),
+    i = n(481060),
     s = n(314897),
     a = n(938475),
     o = n(499596),
@@ -11,10 +11,10 @@ var i = n(442837),
     u = n(347226);
 function f(e) {
     let { channel: t } = e,
-        n = (0, i.e7)([s.default], () => s.default.getId()),
-        f = (0, i.e7)([a.ZP], () => a.ZP.getVoiceStatesForChannel(t), [t]);
-    return (0, r.jsx)(l.xJW, {
-        title: d.NW.string(d.t.KPuWsr),
+        n = (0, l.e7)([s.default], () => s.default.getId()),
+        f = (0, l.e7)([a.ZP], () => a.ZP.getVoiceStatesForChannel(t), [t]);
+    return (0, r.jsx)(i.xJW, {
+        title: d.intl.string(d.t.KPuWsr),
         className: u.modalContent,
         titleClassName: u.formItemTitle,
         children: (0, r.jsx)(c.Z, {

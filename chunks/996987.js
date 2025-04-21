@@ -55,7 +55,7 @@ function u(e) {
                         type: i.geA.DESCRIPTION,
                         children: (0, r.jsx)(i.eee, {
                             href: a.Z.getArticleURL(m),
-                            children: c.NW.string(c.t.hvVgAQ)
+                            children: c.intl.string(c.t.hvVgAQ)
                         })
                     })
                 }),

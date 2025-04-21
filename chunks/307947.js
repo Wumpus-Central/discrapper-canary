@@ -22,7 +22,7 @@ function p(e) {
                 lightSrc: d,
                 darkSrc: u
             }),
-            (0, r.jsx)(l.OZU, { note: t === o.pS.SPAM ? s.NW.string(s.t.hasFPT) : s.NW.string(s.t.SXrqTU) })
+            (0, r.jsx)(l.OZU, { note: t === o.pS.SPAM ? s.intl.string(s.t.hasFPT) : s.intl.string(s.t.SXrqTU) })
         ]
     });
 }

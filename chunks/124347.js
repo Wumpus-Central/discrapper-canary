@@ -1,6 +1,6 @@
 n.d(t, {
-    FH: () => A,
-    YG: () => N,
+    FH: () => N,
+    YG: () => A,
     ZP: () => w,
     uo: () => T
 }),
@@ -77,15 +77,15 @@ function S(e, t) {
     );
 }
 let T = /\.gif($|\?|#)/i,
-    N = /\.webp($|\?|#)/i,
-    A = /\.avif($|\?|#)/i,
+    A = /\.webp($|\?|#)/i,
+    N = /\.avif($|\?|#)/i,
     C = /\.png($|\?|#)/i,
     R = 400,
     P = 300;
 class w extends (r = a.Component) {
     static isAnimated(e) {
         let { src: t, original: n, animated: r, srcIsAnimated: i } = e;
-        return r || T.test(null != n && '' !== n ? n : t) || (null != i && i && (N.test(null != n && '' !== n ? n : t) || A.test(null != n && '' !== n ? n : t)));
+        return r || T.test(null != n && '' !== n ? n : t) || (null != i && i && (A.test(null != n && '' !== n ? n : t) || N.test(null != n && '' !== n ? n : t)));
     }
     static isSrcPNG(e) {
         let { src: t } = e;
@@ -93,7 +93,7 @@ class w extends (r = a.Component) {
     }
     static isSrcAVIF(e) {
         let { src: t } = e;
-        return A.test(t);
+        return N.test(t);
     }
     static getFormatQuality(e) {
         let { src: t, original: n, animated: r, srcIsAnimated: i, freeze: a = !1 } = e,
@@ -259,7 +259,7 @@ class w extends (r = a.Component) {
         null != i && this._cancellers.add(i);
     }
     render() {
-        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: a, autoPlay: s, original: l, className: u, imageClassName: d, children: f, animated: _, shouldAnimate: p, width: h, height: m, minWidth: g, minHeight: E, maxWidth: y, maxHeight: v, onClick: I, renderAccessory: S, tabIndex: T, limitResponsiveWidth: N, useFullWidth: A, placeholder: C, placeholderVersion: R, dataSafeSrc: P, srcIsAnimated: D } = this.props,
+        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: a, autoPlay: s, original: l, className: u, imageClassName: d, children: f, animated: _, shouldAnimate: p, width: h, height: m, minWidth: g, minHeight: E, maxWidth: y, maxHeight: v, onClick: I, renderAccessory: S, tabIndex: T, limitResponsiveWidth: A, useFullWidth: N, placeholder: C, placeholderVersion: R, dataSafeSrc: P, srcIsAnimated: D } = this.props,
             { readyState: L, hasMouseOver: x, hasFocus: M } = this.state,
             k = null != n,
             j = this.getRatio(),
@@ -275,8 +275,8 @@ class w extends (r = a.Component) {
                 minWidth: g,
                 minHeight: E,
                 mediaLayoutType: this.getType(),
-                limitResponsiveWidth: N,
-                useFullWidth: A,
+                limitResponsiveWidth: A,
+                useFullWidth: N,
                 tabIndex: T,
                 width: U,
                 height: G,

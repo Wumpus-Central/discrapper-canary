@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(399606),
-    l = n(846519),
+    l = n(399606),
+    a = n(846519),
     o = n(481060),
     s = n(317632),
     c = n(174767),
@@ -12,15 +12,15 @@ var r = n(200651),
 function m(e) {
     let { inboxIconRef: t, recentsPopoutShown: n } = e,
         [m, f] = i.useState(!1),
-        h = (0, a.e7)([s.Z], () => s.Z.getLastUnseenInvite()),
-        g = (0, a.e7)([u.default], () => (null != h ? u.default.getUser(h.inviter_id) : null));
+        h = (0, l.e7)([s.Z], () => s.Z.getLastUnseenInvite()),
+        g = (0, l.e7)([u.default], () => (null != h ? u.default.getUser(h.inviter_id) : null));
     return (i.useEffect(() => {
         n && f(!1);
     }, [n]),
     i.useEffect(() => {
         if (null == h) return void f(!1);
         (0, c.Br)(h), f(!0);
-        let e = new l.V7();
+        let e = new a.V7();
         return (
             e.start(5000, () => {
                 f(!1);
@@ -63,7 +63,7 @@ function m(e) {
                           (0, r.jsx)(o.Text, {
                               className: p.__invalid_title,
                               variant: 'text-xs/semibold',
-                              children: d.NW.format(d.t['8gTZ8v'], { username: g.username })
+                              children: d.intl.format(d.t['8gTZ8v'], { username: g.username })
                           }),
                           (0, r.jsx)(o.Text, {
                               className: p.__invalid_subtitle,

@@ -190,7 +190,7 @@ let j = (e) => {
                             children: [
                                 (0, r.jsx)(s.X6q, {
                                     variant: 'heading-md/semibold',
-                                    children: x.NW.string(x.t.Yr70c3)
+                                    children: x.intl.string(x.t.Yr70c3)
                                 }),
                                 (0, r.jsx)(s.zxk, {
                                     className: O.endOfFeedButton,
@@ -200,7 +200,7 @@ let j = (e) => {
                                     children: (0, r.jsx)(s.Text, {
                                         variant: 'text-md/medium',
                                         color: 'always-white',
-                                        children: x.NW.string(x.t.AfrvRE)
+                                        children: x.intl.string(x.t.AfrvRE)
                                     })
                                 })
                             ]

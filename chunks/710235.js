@@ -24,7 +24,7 @@ let p = function (e) {
                 o = (null == (e = t.userStatus) ? void 0 : e.completedAt) != null;
             return [
                 {
-                    renderContent: () => (0, r.jsx)(c.y3, { children: u.NW.formatToPlainString(u.t['26nQp6'], { gameTitle: n }) }),
+                    renderContent: () => (0, r.jsx)(c.y3, { children: u.intl.formatToPlainString(u.t['26nQp6'], { gameTitle: n }) }),
                     isComplete: p || o
                 },
                 {
@@ -34,7 +34,7 @@ let p = function (e) {
             ];
         }, [m, p, t]);
     return (0, r.jsx)(c.ZP, {
-        heading: u.NW.string(u.t.A03mEh),
+        heading: u.intl.string(u.t.A03mEh),
         steps: g,
         children: f && (0, r.jsx)(c.Om, { quest: t })
     });

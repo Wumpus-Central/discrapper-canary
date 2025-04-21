@@ -95,17 +95,17 @@ class I extends u.Z {
                         {
                             name: b.tS.MUTE,
                             active: t,
-                            tooltip: t ? v.NW.string(v.t.YqAjX1) : v.NW.string(v.t['w4m94+'])
+                            tooltip: t ? v.intl.string(v.t.YqAjX1) : v.intl.string(v.t['w4m94+'])
                         },
                         {
                             name: b.tS.DEAFEN,
                             active: n,
-                            tooltip: n ? v.NW.string(v.t['2US87+']) : v.NW.string(v.t.wjcRFR)
+                            tooltip: n ? v.intl.string(v.t['2US87+']) : v.intl.string(v.t.wjcRFR)
                         },
                         {
                             name: b.tS.DISCONNECT,
                             active: !0,
-                            tooltip: v.NW.string(v.t['6vrfgo'])
+                            tooltip: v.intl.string(v.t['6vrfgo'])
                         }
                     ]);
                 }, 100)

@@ -30,7 +30,7 @@ function f(e) {
                     (0, r.jsx)(i.X6q, {
                         variant: 'text-md/semibold',
                         color: 'text-normal',
-                        children: c.NW.string(c.t.Iyka0d)
+                        children: c.intl.string(c.t.Iyka0d)
                     }),
                     (0, r.jsx)(i.P4T, {
                         size: 'xs',
@@ -54,7 +54,7 @@ function _(e) {
         });
     return (0, r.jsx)(o.Z, {
         headingColor: n,
-        heading: c.NW.string(c.t.Iyka0d),
+        heading: c.intl.string(c.t.Iyka0d),
         headingIcon: i.P4T,
         children: (0, r.jsx)(i.Text, {
             variant: 'text-xs/normal',

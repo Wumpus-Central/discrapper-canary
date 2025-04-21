@@ -26,11 +26,11 @@ function v(e, t) {
         return e.id === y.id
             ? {
                   brand: null,
-                  label: h.NW.string(h.t.eQ2bLi)
+                  label: h.intl.string(h.t.eQ2bLi)
               }
             : {
                   brand: t ? u.ZP.Types.UNKNOWN : e.brand,
-                  label: h.NW.formatToPlainString(h.t.QvBAQk, { last4: t ? E : e.last4 })
+                  label: h.intl.formatToPlainString(h.t.QvBAQk, { last4: t ? E : e.last4 })
               };
     if (e instanceof d.qo)
         return {
@@ -45,7 +45,7 @@ function v(e, t) {
     if (e instanceof d.fv)
         return {
             brand: u.ZP.Types.GIROPAY,
-            label: h.NW.string(h.t['y+0MQU'])
+            label: h.intl.string(h.t['y+0MQU'])
         };
     if (e instanceof d.Vg)
         return {
@@ -55,22 +55,22 @@ function v(e, t) {
     else if (e instanceof d.sn)
         return {
             brand: u.ZP.Types.PAYSAFECARD,
-            label: h.NW.string(h.t.e3APTU)
+            label: h.intl.string(h.t.e3APTU)
         };
     else if (e instanceof d.o_)
         return {
             brand: u.ZP.Types.GCASH,
-            label: h.NW.string(h.t.PjehcH)
+            label: h.intl.string(h.t.PjehcH)
         };
     else if (e instanceof d.kX)
         return {
             brand: u.ZP.Types.GRABPAY,
-            label: h.NW.string(h.t.T5davL)
+            label: h.intl.string(h.t.T5davL)
         };
     else if (e instanceof d.z)
         return {
             brand: u.ZP.Types.MOMO_WALLET,
-            label: h.NW.string(h.t.J0A1Vl)
+            label: h.intl.string(h.t.J0A1Vl)
         };
     else if (e instanceof d.Xc)
         return {
@@ -80,27 +80,27 @@ function v(e, t) {
     else if (e instanceof d.Om)
         return {
             brand: u.ZP.Types.KAKAOPAY,
-            label: h.NW.string(h.t.CSVexs)
+            label: h.intl.string(h.t.CSVexs)
         };
     else if (e instanceof d.JC)
         return {
             brand: u.ZP.Types.GOPAY_WALLET,
-            label: h.NW.string(h.t['43J8JC'])
+            label: h.intl.string(h.t['43J8JC'])
         };
     else if (e instanceof d.U4)
         return {
             brand: u.ZP.Types.BANCONTACT,
-            label: h.NW.string(h.t['1ITkfn'])
+            label: h.intl.string(h.t['1ITkfn'])
         };
     else if (e instanceof d.D0)
         return {
             brand: u.ZP.Types.EPS,
-            label: h.NW.format(h.t.hSPoZ2, { bank: (0, c.Ul)(e.bank) })
+            label: h.intl.format(h.t.hSPoZ2, { bank: (0, c.Ul)(e.bank) })
         };
     else if (e instanceof d.jc)
         return {
             brand: u.ZP.Types.IDEAL,
-            label: null == e.bank ? h.NW.string(h.t.nSbwqK) : h.NW.format(h.t['9kUlRU'], { bank: (0, c.YE)(e.bank) })
+            label: null == e.bank ? h.intl.string(h.t.nSbwqK) : h.intl.format(h.t['9kUlRU'], { bank: (0, c.YE)(e.bank) })
         };
     else if (e instanceof d.u_)
         return {
@@ -111,7 +111,7 @@ function v(e, t) {
 }
 function O(e, t) {
     let n = null;
-    return e && null != t && !t.canRedeemTrial() ? (n = h.NW.string(h.t.SvheW1)) : e && null != t && t.hasFlag(p.Cw.NEW) && (n = h.NW.format(h.t.d7ZLKC, { helpDeskArticle: f.Z.getArticleURL(_.BhN.PAYMENT_AUTHORIZATION_CHARGE) })), n;
+    return e && null != t && !t.canRedeemTrial() ? (n = h.intl.string(h.t.SvheW1)) : e && null != t && t.hasFlag(p.Cw.NEW) && (n = h.intl.format(h.t.d7ZLKC, { helpDeskArticle: f.Z.getArticleURL(_.BhN.PAYMENT_AUTHORIZATION_CHARGE) })), n;
 }
 function I(e) {
     let { selectedPaymentSourceId: t, paymentSources: n, prependOption: a, hidePersonalInformation: c, onChange: f, onPaymentSourceAdd: _, isTrial: p = !1, disabled: g = !1, className: E, optionClassName: b, dropdownLoading: I } = e,
@@ -123,7 +123,7 @@ function I(e) {
                 null != f && f(t);
             }
         },
-        N = [...(null != a ? [a] : []), ...n, y].map((e, t) => {
+        A = [...(null != a ? [a] : []), ...n, y].map((e, t) => {
             if (e instanceof d.ZP) {
                 let { brand: t, label: n } = v(e, c);
                 return {
@@ -149,7 +149,7 @@ function I(e) {
                 })
             };
         }),
-        A = O(
+        N = O(
             p,
             i.useMemo(() => n.find((e) => e.id === t), [n, t])
         );
@@ -160,22 +160,22 @@ function I(e) {
                       color: l.Ttl.BRAND,
                       fullWidth: !0,
                       onClick: _,
-                      children: h.NW.string(h.t.eQ2bLi)
+                      children: h.intl.string(h.t.eQ2bLi)
                   })
                 : (0, r.jsx)(l.q4e, {
-                      options: N,
+                      options: A,
                       value: t,
                       onChange: T,
                       isDisabled: g,
-                      className: o()({ [m.paymentSourceHasWarning]: null != A }, E),
+                      className: o()({ [m.paymentSourceHasWarning]: null != N }, E),
                       optionClassName: b,
-                      placeholder: h.NW.string(h.t['8lqkf3']),
+                      placeholder: h.intl.string(h.t['8lqkf3']),
                       renderOptionValue: (e) => {
                           let [t] = e;
                           return I ? (0, r.jsx)(l.$jN, { type: l.RAz.SPINNING_CIRCLE }) : t.label;
                       }
                   }),
-            null != A
+            null != N
                 ? (0, r.jsxs)('div', {
                       className: m.paymentSourceWarning,
                       children: [
@@ -188,7 +188,7 @@ function I(e) {
                           }),
                           (0, r.jsx)(l.Text, {
                               variant: 'text-xs/normal',
-                              children: A
+                              children: N
                           })
                       ]
                   })

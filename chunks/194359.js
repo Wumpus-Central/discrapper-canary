@@ -57,17 +57,17 @@ function I(e, t, n) {
         case 429:
             0 === t &&
                 v({
-                    title: E.NW.string(E.t['3D5eo6']),
-                    body: E.NW.string(E.t.TuJriI),
-                    confirmText: E.NW.string(E.t.DppXIy)
+                    title: E.intl.string(E.t['3D5eo6']),
+                    body: E.intl.string(E.t.TuJriI),
+                    confirmText: E.intl.string(E.t.DppXIy)
                 });
             break;
         case 403:
             if (a === m.evJ.EMAIL_VERIFICATION_REQUIRED) {
                 v({
-                    title: E.NW.string(E.t.Gqf33N),
-                    body: E.NW.string(E.t.GHOBd3),
-                    confirmText: E.NW.string(E.t.HbTSEx),
+                    title: E.intl.string(E.t.Gqf33N),
+                    body: E.intl.string(E.t.GHOBd3),
+                    confirmText: E.intl.string(E.t.HbTSEx),
                     onConfirm: () => {
                         o.j();
                     }
@@ -79,11 +79,11 @@ function I(e, t, n) {
             else if ((0, u.b)(r, a)) break;
             else if (a === m.evJ.RELATIONSHIP_INVALID_NO_CONFIRMATION) break;
             else if (0 === t) {
-                let e = null != n ? (0, f.NF)(a || 0, n) : E.NW.string(E.t.paDJBA);
+                let e = null != n ? (0, f.NF)(a || 0, n) : E.intl.string(E.t.paDJBA);
                 v({
-                    title: E.NW.string(E.t['6moJ8v']),
+                    title: E.intl.string(E.t['6moJ8v']),
                     body: e,
-                    confirmText: E.NW.string(E.t.BddRzc)
+                    confirmText: E.intl.string(E.t.BddRzc)
                 });
             }
     }
@@ -140,25 +140,25 @@ let S = {
         },
         acceptFriendRequest(e) {
             function t() {
-                i.uv.announce(E.NW.string(E.t['3goNa2']));
+                i.uv.announce(E.intl.string(E.t['3goNa2']));
             }
             return S.addRelationship(e, t);
         },
         cancelFriendRequest(e, t) {
             function n() {
-                i.uv.announce(E.NW.string(E.t.pLUaxc));
+                i.uv.announce(E.intl.string(E.t.pLUaxc));
             }
             return S.removeRelationship(e, t, n);
         },
         removeFriend(e, t) {
             function n() {
-                i.uv.announce(E.NW.string(E.t.vGSLa2));
+                i.uv.announce(E.intl.string(E.t.vGSLa2));
             }
             S.removeRelationship(e, t, n);
         },
         blockUser(e, t) {
             function n() {
-                i.uv.announce(E.NW.string(E.t.mU0Vrq));
+                i.uv.announce(E.intl.string(E.t.mU0Vrq));
             }
             return S.addRelationship(
                 {
@@ -171,7 +171,7 @@ let S = {
         },
         unblockUser(e, t) {
             function n() {
-                i.uv.announce(E.NW.string(E.t['9t1au7']));
+                i.uv.announce(E.intl.string(E.t['9t1au7']));
             }
             return S.removeRelationship(e, t, n);
         },
@@ -187,7 +187,7 @@ let S = {
                     null == n || n();
                 })
                 .catch(() => {
-                    i.uv.announce(E.NW.string(E.t.n6Jo3N));
+                    i.uv.announce(E.intl.string(E.t.n6Jo3N));
                 }),
         updateRelationship: (e, t) =>
             r.tn.patch({
@@ -225,7 +225,7 @@ let S = {
                     a.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
                 })
                 .catch(() => {
-                    i.uv.announce(E.NW.string(E.t.n6Jo3N));
+                    i.uv.announce(E.intl.string(E.t.n6Jo3N));
                 }),
         clearPendingSpamAndIgnored: () =>
             r.tn
@@ -241,7 +241,7 @@ let S = {
                     a.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
                 })
                 .catch(() => {
-                    i.uv.announce(E.NW.string(E.t.n6Jo3N));
+                    i.uv.announce(E.intl.string(E.t.n6Jo3N));
                 }),
         ignoreUser: (e, t, n) =>
             r.tn
@@ -252,7 +252,7 @@ let S = {
                 })
                 .then(() => {
                     c.Z.showIgnoreSuccessToast(e, n),
-                        i.uv.announce(E.NW.string(E.t.Us93CQ)),
+                        i.uv.announce(E.intl.string(E.t.Us93CQ)),
                         a.Z.dispatch({
                             type: 'RELATIONSHIP_IGNORE_USER_SUCCESS',
                             userId: e,
@@ -260,7 +260,7 @@ let S = {
                         });
                 })
                 .catch(() => {
-                    c.Z.showFailedToast(), i.uv.announce(E.NW.string(E.t.n6Jo3N));
+                    c.Z.showFailedToast(), i.uv.announce(E.intl.string(E.t.n6Jo3N));
                 }),
         unignoreUser: (e, t, n) =>
             r.tn
@@ -270,10 +270,10 @@ let S = {
                     rejectWithError: !1
                 })
                 .then(() => {
-                    c.Z.showUnignoreSuccessToast(e, n), i.uv.announce(E.NW.string(E.t.QlH5w8));
+                    c.Z.showUnignoreSuccessToast(e, n), i.uv.announce(E.intl.string(E.t.QlH5w8));
                 })
                 .catch(() => {
-                    c.Z.showFailedToast(), i.uv.announce(E.NW.string(E.t.n6Jo3N));
+                    c.Z.showFailedToast(), i.uv.announce(E.intl.string(E.t.n6Jo3N));
                 })
     },
     T = S;

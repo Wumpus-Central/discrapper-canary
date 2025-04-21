@@ -45,7 +45,7 @@ function h(e) {
                 children: (0, r.jsxs)(s.vwX, {
                     className: f.title,
                     children: [
-                        p.NW.string(p.t.WTozwc),
+                        p.intl.string(p.t.WTozwc),
                         (0, r.jsxs)('div', {
                             className: f.userCountPill,
                             children: [

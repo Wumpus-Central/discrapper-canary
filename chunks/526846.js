@@ -1,4 +1,4 @@
-n.d(t, { m: () => W }), n(997841), n(953529);
+n.d(t, { m: () => U }), n(997841), n(953529);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -22,11 +22,11 @@ var r = n(200651),
     j = n(216780),
     O = n(390322),
     E = n(857192),
-    N = n(626135),
-    I = n(456100),
-    P = n(566620),
-    S = n(127255),
-    Z = n(5200),
+    I = n(626135),
+    P = n(456100),
+    S = n(566620),
+    Z = n(127255),
+    N = n(5200),
     T = n(558317),
     A = n(403404),
     w = n(981631),
@@ -110,13 +110,13 @@ function D(e) {
               ]
           }));
 }
-let W = i.forwardRef(function (e, t) {
+let U = i.forwardRef(function (e, t) {
     var n, l;
     let { channel: a, isHovered: s, closePopout: c, onMouseEnter: u, onMouseLeave: b, onClick: _, className: y } = e,
         x = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
         { id: v, guild_id: j } = a;
     i.useEffect(() => {
-        N.default.track(w.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
+        I.default.track(w.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
             channel_id: v,
             guild_id: j
         });
@@ -126,11 +126,11 @@ let W = i.forwardRef(function (e, t) {
         }, [c, s]);
     let E = (0, h.bp)(),
         { analyticsLocations: M } = (0, g.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
-        W = E === w.IlC.POPOUT,
-        U =
+        U = E === w.IlC.POPOUT,
+        B =
             ((n = a.getGuildId()),
             (l = a),
-            (0, S.Z)({
+            (0, Z.Z)({
                 guildId: n,
                 context: {
                     channel: l,
@@ -138,30 +138,30 @@ let W = i.forwardRef(function (e, t) {
                 }
             }).slice(0, 5));
     i.useEffect(() => {
-        let e = setTimeout(() => P.ux(), 1000);
+        let e = setTimeout(() => S.ux(), 1000);
         return () => clearTimeout(e);
     }, []);
-    let { enabled: B } = I.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
-        G = i.useCallback(() => {
+    let { enabled: G } = P.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
+        F = i.useCallback(() => {
             (0, A.Z)({
                 channel: a,
-                openInPopout: W,
+                openInPopout: U,
                 analyticsLocations: M
             }),
                 b(),
                 _();
-        }, [M, a, _, b, W]),
-        F = i.useCallback(
+        }, [M, a, _, b, U]),
+        H = i.useCallback(
             (e) => {
                 u(),
-                    N.default.track(w.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
+                    I.default.track(w.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
                         channel_id: a.id,
                         guild_id: a.getGuildId()
                     });
             },
             [u, a]
         ),
-        H = B ? p.iWm : p.nG3;
+        V = G ? p.iWm : p.nG3;
     return (0, r.jsx)(g.Gt, {
         value: M,
         children: (0, r.jsx)(O.Z, {
@@ -175,13 +175,13 @@ let W = i.forwardRef(function (e, t) {
                         children: (0, r.jsx)(p.nn4, {
                             children: (0, r.jsx)(p.H, {
                                 id: L,
-                                children: R.NW.string(R.t['2lnYtL'])
+                                children: R.intl.string(R.t['2lnYtL'])
                             })
                         })
                     }),
                     (0, r.jsxs)('div', {
                         className: k.container,
-                        onMouseEnter: F,
+                        onMouseEnter: H,
                         onMouseLeave: b,
                         children: [
                             (0, r.jsxs)('div', {
@@ -190,24 +190,24 @@ let W = i.forwardRef(function (e, t) {
                                     (0, r.jsxs)('div', {
                                         className: k.titleLeft,
                                         children: [
-                                            (0, r.jsx)(H, {
+                                            (0, r.jsx)(V, {
                                                 size: 'md',
                                                 className: k.titleLeftIcon,
                                                 color: 'var(--interactive-active)'
                                             }),
                                             (0, r.jsx)(p.Text, {
                                                 variant: 'eyebrow',
-                                                children: R.NW.string(R.t.f3Cz29)
+                                                children: R.intl.string(R.t.f3Cz29)
                                             })
                                         ]
                                     }),
                                     (0, r.jsxs)(p.P3F, {
                                         className: k.titleRight,
-                                        onClick: G,
+                                        onClick: F,
                                         children: [
                                             (0, r.jsx)(p.Text, {
                                                 variant: 'eyebrow',
-                                                children: R.NW.string(R.t['K8+z4e'])
+                                                children: R.intl.string(R.t['K8+z4e'])
                                             }),
                                             (0, r.jsx)(p.Fbu, {
                                                 size: 'custom',
@@ -221,7 +221,7 @@ let W = i.forwardRef(function (e, t) {
                                 ]
                             }),
                             (0, r.jsx)(D, {
-                                openInPopout: W,
+                                openInPopout: U,
                                 channel: a,
                                 onClick: () => {
                                     _(), c();
@@ -230,9 +230,9 @@ let W = i.forwardRef(function (e, t) {
                             (0, r.jsxs)('div', {
                                 className: k.activityContainer,
                                 children: [
-                                    U.map((e) =>
+                                    B.map((e) =>
                                         (0, r.jsx)(
-                                            Z.Y,
+                                            N.Y,
                                             {
                                                 context: {
                                                     channel: a,
@@ -242,7 +242,7 @@ let W = i.forwardRef(function (e, t) {
                                                 onClick: () => {
                                                     c(), _();
                                                 },
-                                                aspectRatio: Z.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
+                                                aspectRatio: N.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                 animatedDivClass: k.activitySuggestion,
                                                 commandOrigin: C.bB.MINI_SHELF
                                             },

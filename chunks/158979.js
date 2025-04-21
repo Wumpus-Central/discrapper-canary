@@ -4,8 +4,8 @@ n(192379);
 var r = n(481060),
     s = n(13245),
     o = n(371651),
-    a = n(594174),
-    l = n(145597),
+    l = n(594174),
+    a = n(145597),
     c = n(312839),
     d = n(981631),
     u = n(987650),
@@ -61,7 +61,7 @@ function m() {
             color: r.zxk.Colors.GREEN,
             size: r.zxk.Sizes.SMALL,
             className: p.ctaButton,
-            children: h.NW.string(h.t.U76Ft7)
+            children: h.intl.string(h.t.U76Ft7)
         })
     });
 }
@@ -73,7 +73,7 @@ function y(e) {
             return {
                 icon: n(847881),
                 title: null,
-                body: h.NW.formatToPlainString(h.t.z9znpa, {
+                body: h.intl.formatToPlainString(h.t.z9znpa, {
                     game: t.name,
                     server: p.toString()
                 }),
@@ -84,8 +84,8 @@ function y(e) {
                 },
                 onNotificationClick: (e, t) => {
                     v('unlock'), s.Z.updateNotificationStatus(t);
-                    let c = o.default.isOverlayOOPEnabledForPid((0, l.getPID)());
-                    if ((c ? s.Z.setInputLocked(!1, (0, l.getPID)()) : s.Z.setInstanceLocked(!1), null == a.default.getCurrentUser())) return;
+                    let c = o.default.isOverlayOOPEnabledForPid((0, a.getPID)());
+                    if ((c ? s.Z.setInputLocked(!1, (0, a.getPID)()) : s.Z.setInstanceLocked(!1), null == l.default.getCurrentUser())) return;
                     let u = c ? { contextKey: r.u1M } : void 0;
                     (0, r.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
@@ -93,7 +93,7 @@ function y(e) {
                             (0, i.jsx)(
                                 e,
                                 g(f({}, t), {
-                                    sourcePID: (0, l.getPID)(),
+                                    sourcePID: (0, a.getPID)(),
                                     selectSource: !1,
                                     guildId: p.id,
                                     analyticsLocation: d.Sbl.OVERLAY_NUDGE
@@ -108,28 +108,28 @@ function y(e) {
         }
         case u.nc.GO_LIVE_NON_VOICE: {
             let { game: t } = e,
-                { trackView: a, trackClick: p } = (0, c.R)(u.n0.GoLiveNonVoiceNudge, { notif_type: u.n0.GoLiveNonVoiceNudge });
+                { trackView: l, trackClick: p } = (0, c.R)(u.n0.GoLiveNonVoiceNudge, { notif_type: u.n0.GoLiveNonVoiceNudge });
             return {
                 icon: n(847881),
                 title: null,
-                body: h.NW.formatToPlainString(h.t['0SVWgI'], { game: t.name }),
+                body: h.intl.formatToPlainString(h.t['0SVWgI'], { game: t.name }),
                 hint: () => (0, i.jsx)(m, {}),
                 renderFooter: () => (0, i.jsx)(m, {}),
                 onNotificationShow: () => {
-                    a();
+                    l();
                 },
                 onNotificationClick: (e, t) => {
                     p('unlock'), s.Z.updateNotificationStatus(t);
-                    let a = o.default.isOverlayOOPEnabledForPid((0, l.getPID)());
-                    a ? s.Z.setInputLocked(!1, (0, l.getPID)()) : s.Z.setInstanceLocked(!1);
-                    let c = a ? { contextKey: r.u1M } : void 0;
+                    let l = o.default.isOverlayOOPEnabledForPid((0, a.getPID)());
+                    l ? s.Z.setInputLocked(!1, (0, a.getPID)()) : s.Z.setInstanceLocked(!1);
+                    let c = l ? { contextKey: r.u1M } : void 0;
                     (0, r.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
                         return (t) =>
                             (0, i.jsx)(
                                 e,
                                 g(f({}, t), {
-                                    sourcePID: (0, l.getPID)(),
+                                    sourcePID: (0, a.getPID)(),
                                     selectSource: !1,
                                     selectGuild: !0,
                                     analyticsLocation: d.Sbl.OVERLAY_NUDGE

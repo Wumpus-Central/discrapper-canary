@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(539854);
+n.d(t, { Z: () => A }), n(539854);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -124,7 +124,7 @@ class T extends (r = o.ZP.PersistedStore) {
     }
 }
 _(T, 'displayName', 'StickersPersistedStore'), _(T, 'persistKey', 'StickersPersistedStoreV2');
-let N = new T(s.Z, {
+let A = new T(s.Z, {
     STICKER_TRACK_USAGE: v,
     USER_SETTINGS_PROTO_UPDATE: S
 });

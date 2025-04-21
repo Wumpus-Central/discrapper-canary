@@ -1,5 +1,5 @@
-n.d(t, { n: () => l });
-let s = (0, n(818083).B)({
+n.d(t, { n: () => s });
+let l = (0, n(818083).B)({
         kind: 'user',
         id: '2023-06_unique_username_live_check_in_settings',
         label: 'Username Livecheck in Settings',
@@ -12,7 +12,7 @@ let s = (0, n(818083).B)({
             }
         ]
     }),
-    l = () => {
-        let { enabled: e } = s.useExperiment({ location: '7e1108_1' }, { autoTrackExposure: !0 });
+    s = () => {
+        let { enabled: e } = l.useExperiment({ location: '7e1108_1' }, { autoTrackExposure: !0 });
         return e;
     };

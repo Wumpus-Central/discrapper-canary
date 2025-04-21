@@ -3,11 +3,11 @@ n.d(t, {
     __: () => D,
     dm: () => R
 });
-var r,
-    i = n(230711),
+var i,
+    r = n(230711),
     s = n(100527),
-    a = n(906732),
-    l = n(300284),
+    l = n(906732),
+    a = n(300284),
     o = n(526167),
     c = n(63063),
     d = n(981631),
@@ -19,99 +19,99 @@ var r,
     f = n(612253),
     b = n(872532),
     _ = n(91342),
-    N = n(181708),
-    x = n(290650),
-    E = n(751125),
-    j = n(357003),
-    C = n(904505),
-    O = n(712626),
-    S = n(386014),
-    v = n(845571),
-    T = n(220046),
-    I = n(385874),
+    x = n(181708),
+    E = n(290650),
+    j = n(751125),
+    C = n(357003),
+    O = n(904505),
+    S = n(712626),
+    v = n(386014),
+    T = n(845571),
+    I = n(220046),
+    N = n(385874),
     y = n(371000),
     A = n(377679),
     P = n(825087),
-    R = (((r = {}).NEW_APP_STYLES = 'newAppStyles'), (r.REFERRAL_PROGRAM = 'referralProgram'), (r.SERVER_PROFILES = 'serverProfiles'), (r.SHOW_YOUR_STYLE = 'showYourStyle'), (r.YOUR_SPACE = 'yourSpace'), (r.EMOJIS = 'emojis'), (r.NO_LIMITS = 'noLimits'), (r.PERMADECOS = 'permadecos'), r);
+    R = (((i = {}).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits'), (i.PERMADECOS = 'permadecos'), i);
 let D = () => {
         let e = (0, o.rO)();
         return {
             emojis: {
                 name: 'emojis',
-                title: m.NW.string(m.t.zY5PPT),
-                description: m.NW.string(m.t.R5Xag4),
+                title: m.intl.string(m.t.zY5PPT),
+                description: m.intl.string(m.t.R5Xag4),
                 previewImage: g,
-                videoUrl: e ? _.ZP : N.ZP,
+                videoUrl: e ? _.ZP : x.ZP,
                 isCompact: !0
             },
             noLimits: {
                 name: 'noLimits',
-                title: m.NW.string(m.t['6b3ydH']),
-                description: m.NW.string(m.t['Y+IJys']),
+                title: m.intl.string(m.t['6b3ydH']),
+                description: m.intl.string(m.t['Y+IJys']),
                 previewImage: p,
-                videoUrl: e ? x.ZP : E.ZP,
+                videoUrl: e ? E.ZP : j.ZP,
                 isCompact: !0
             }
         };
     },
     Z = (e) => {
-        let { analyticsLocations: t } = (0, a.ZP)(s.Z.PREMIUM_MARKETING_BENTO_BOX),
-            n = (0, l.Z)({
+        let { analyticsLocations: t } = (0, l.ZP)(s.Z.PREMIUM_MARKETING_BENTO_BOX),
+            n = (0, a.Z)({
                 scrollPosition: u.Y_.TRY_IT_OUT,
                 analyticsLocations: t
             }),
-            r = (0, o.rO)(),
+            i = (0, o.rO)(),
             g = c.Z.getArticleURL(d.BhN.REFERRAL_PROGRAM),
             p = {
                 permadecos: {
                     name: 'permadecos',
-                    title: m.NW.string(m.t['57ngoq']),
-                    description: m.NW.string(m.t.piFFjY),
-                    descriptionCta: m.NW.string(m.t.jVcuVV),
-                    previewImage: j.Z,
+                    title: m.intl.string(m.t['57ngoq']),
+                    description: m.intl.string(m.t.piFFjY),
+                    descriptionCta: m.intl.string(m.t.jVcuVV),
+                    previewImage: C.Z,
                     onClick: n,
-                    videoUrl: j.Z
+                    videoUrl: C.Z
                 },
                 serverProfiles: {
                     name: 'serverProfiles',
-                    title: m.NW.string(m.t.I9TYMj),
-                    description: m.NW.string(m.t.HMSHeH),
-                    descriptionCta: m.NW.string(m.t.jVcuVV),
+                    title: m.intl.string(m.t.I9TYMj),
+                    description: m.intl.string(m.t.HMSHeH),
+                    descriptionCta: m.intl.string(m.t.jVcuVV),
                     onClick: n,
                     previewImage: b,
-                    videoUrl: r ? v.ZP : T.ZP
+                    videoUrl: i ? T.ZP : I.ZP
                 },
                 referralProgram: {
                     name: 'referralProgram',
-                    title: m.NW.string(m.t.tPY4o6),
-                    description: m.NW.format(m.t.jRPQUF, { learnMoreLink: g }),
-                    previewImage: O.Z,
-                    videoUrl: r ? C.ZP : S.ZP
+                    title: m.intl.string(m.t.tPY4o6),
+                    description: m.intl.format(m.t.jRPQUF, { learnMoreLink: g }),
+                    previewImage: S.Z,
+                    videoUrl: i ? O.ZP : v.ZP
                 }
             },
             _ = {
                 showYourStyle: {
                     name: 'showYourStyle',
-                    title: m.NW.string(m.t.Ij3Zmp),
-                    description: m.NW.string(m.t.UsOUxc),
-                    descriptionCta: m.NW.string(m.t.jVcuVV),
+                    title: m.intl.string(m.t.Ij3Zmp),
+                    description: m.intl.string(m.t.UsOUxc),
+                    descriptionCta: m.intl.string(m.t.jVcuVV),
                     previewImage: f,
                     onClick: n,
-                    videoUrl: r ? I.Z : y.Z
+                    videoUrl: i ? N.Z : y.Z
                 },
                 yourSpace: {
                     name: 'yourSpace',
-                    title: m.NW.string(m.t.Wme3nZ),
-                    description: m.NW.string(m.t['/aAIqa']),
-                    descriptionCta: m.NW.string(m.t.jVcuVV),
+                    title: m.intl.string(m.t.Wme3nZ),
+                    description: m.intl.string(m.t['/aAIqa']),
+                    descriptionCta: m.intl.string(m.t.jVcuVV),
                     previewImage: h,
                     onClick: () => {
-                        i.Z.open(d.oAB.APPEARANCE, null, {
+                        r.Z.open(d.oAB.APPEARANCE, null, {
                             openWithoutBackstack: !0,
                             analyticsLocations: t
                         });
                     },
-                    videoUrl: r ? A.Z : P.Z
+                    videoUrl: i ? A.Z : P.Z
                 }
             };
         return e ? _ : p;

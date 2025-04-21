@@ -68,9 +68,9 @@ function u() {
             (0, r.jsx)(
                 t,
                 c(s({}, n), {
-                    header: a.NW.string(a.t.GFr0GR),
-                    body: a.NW.string(a.t.QSk6Ex),
-                    confirmText: a.NW.string(a.t.BK8LKy),
+                    header: a.intl.string(a.t.GFr0GR),
+                    body: a.intl.string(a.t.QSk6Ex),
+                    confirmText: a.intl.string(a.t.BK8LKy),
                     onConfirm: e
                 })
             );

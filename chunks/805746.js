@@ -49,9 +49,9 @@ let h = (e) => {
     return null == t
         ? null
         : (0, r.jsx)(u.ZP, {
-              title: b.NW.string(b.t.ygG62N),
-              description: b.NW.string(b.t.S51EKi),
-              buttonText: h ? b.NW.string(b.t.xXpoGR) : b.NW.string(b.t.JsiUnJ),
+              title: b.intl.string(b.t.ygG62N),
+              description: b.intl.string(b.t.S51EKi),
+              buttonText: h ? b.intl.string(b.t.xXpoGR) : b.intl.string(b.t.JsiUnJ),
               buttonDisabled: !h,
               buttonColor: h ? a.zxk.Colors.RED : a.zxk.Colors.WHITE,
               buttonLook: h ? a.zxk.Looks.FILLED : a.zxk.Looks.LINK,

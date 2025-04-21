@@ -66,7 +66,7 @@ function p(e) {
         [a, s]
     );
     return (0, r.jsx)(c.Z, {
-        label: a ? u.NW.string(u.t.QJMRUF) : u.NW.string(u.t.vZiwmJ),
+        label: a ? u.intl.string(u.t.QJMRUF) : u.intl.string(u.t.vZiwmJ),
         className: o()(d.participantsButton, n),
         onClick: h,
         iconComponent: m,

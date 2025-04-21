@@ -23,8 +23,8 @@ var i = n(120356),
     I = n(979038),
     S = n(448980),
     T = n(336383),
-    N = n(194811),
-    A = n(373826),
+    A = n(194811),
+    N = n(373826),
     C = n(315324),
     R = n(262210),
     P = n(670451),
@@ -88,9 +88,9 @@ function B(e, t) {
 }
 function F(e) {
     let { user: t, currentUser: n, activity: i, application: j, voiceGuild: G, voiceChannel: F, className: V, onClose: Z, appContext: H } = e,
-        { analyticsLocations: W } = (0, f.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { profileType: Y } = (0, O.z)(),
-        K = { [k.fullSize]: Y === D.y0.FULL_SIZE },
+        { analyticsLocations: Y } = (0, f.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { profileType: W } = (0, O.z)(),
+        K = { [k.fullSize]: W === D.y0.FULL_SIZE },
         z = (0, h.Z)({
             activity: i,
             user: t
@@ -100,7 +100,7 @@ function F(e) {
             user: t,
             activity: i,
             entry: z,
-            analyticsLocations: W
+            analyticsLocations: Y
         }),
         Q = (0, b.Z)({
             userId: t.id,
@@ -148,44 +148,44 @@ function F(e) {
                               color: o.TVs.colors.TEXT_NORMAL,
                               className: k.voiceIcon
                           }),
-                          (0, r.jsx)(A.Z, {
+                          (0, r.jsx)(N.Z, {
                               variant: 'heading-sm/semibold',
                               text: F.name
                           })
                       ]
                   })
                 : (0, c.Z)(i) || (0, g.dS)(i)
-                  ? (0, r.jsx)(A.Z, {
+                  ? (0, r.jsx)(N.Z, {
                         variant: 'heading-sm/semibold',
                         text: i.name
                     })
-                  : (0, r.jsx)(A.Z, {
+                  : (0, r.jsx)(N.Z, {
                         variant: 'heading-sm/semibold',
                         text: null != (e = i.details) ? e : i.name
                     });
         },
         er = () => {
             if ((0, u.Z)(i) && null != G)
-                return (0, r.jsx)(A.Z, {
+                return (0, r.jsx)(N.Z, {
                     variant: 'text-xs/normal',
-                    text: M.NW.formatToPlainString(M.t['hq/Qzc'], { guildName: G.name }),
+                    text: M.intl.formatToPlainString(M.t['hq/Qzc'], { guildName: G.name }),
                     onClick: () => {
                         (0, m.X)(G.id), q({ action: 'OPEN_VOICE_GUILD' }), null == Z || Z();
                     }
                 });
             if ((0, c.Z)(i))
-                return (0, r.jsx)(A.Z, {
+                return (0, r.jsx)(N.Z, {
                     variant: 'text-xs/normal',
                     text: i.details
                 });
             if ((0, g.dS)(i)) {
                 var e;
-                return (0, r.jsx)(A.Z, {
+                return (0, r.jsx)(N.Z, {
                     variant: 'text-xs/normal',
                     text: null == i || null == (e = i.assets) ? void 0 : e.small_text
                 });
             }
-            return (0, r.jsx)(A.Z, {
+            return (0, r.jsx)(N.Z, {
                 variant: 'text-xs/normal',
                 text: i.state
             });
@@ -195,16 +195,16 @@ function F(e) {
             if (i.type === L.IIU.WATCHING) return null;
             if ((0, c.Z)(i)) return ea();
             if ((0, g.dS)(i) && (null == (e = i.party) ? void 0 : e.size) != null && (null == (t = i.party) ? void 0 : t.size.length) >= 2) {
-                let e = M.NW.formatToPlainString(M.t['JC/3x8'], {
+                let e = M.intl.formatToPlainString(M.t['JC/3x8'], {
                     numSpeakers: null == (a = i.party) ? void 0 : a.size[0],
                     numListeners: (null == (o = i.party) ? void 0 : o.size[1]) - (null == (s = i.party) ? void 0 : s.size[0])
                 });
-                return (0, r.jsx)(A.Z, {
+                return (0, r.jsx)(N.Z, {
                     variant: 'text-xs/normal',
                     text: e
                 });
             }
-            return (0, r.jsx)(A.Z, {
+            return (0, r.jsx)(N.Z, {
                 text: null == (n = i.assets) ? void 0 : n.large_text,
                 variant: 'text-xs/normal'
             });
@@ -215,13 +215,13 @@ function F(e) {
                 ? (0, r.jsxs)('div', {
                       className: k.gameState,
                       children: [
-                          (0, r.jsx)(A.Z, {
+                          (0, r.jsx)(N.Z, {
                               variant: 'text-xs/normal',
                               text: i.state
                           }),
-                          (0, r.jsx)(A.Z, {
+                          (0, r.jsx)(N.Z, {
                               variant: 'text-xs/normal',
-                              text: M.NW.formatToPlainString(M.t['u//9Bw'], {
+                              text: M.intl.formatToPlainString(M.t['u//9Bw'], {
                                   count: '0',
                                   max: null != (a = null == j ? void 0 : j.getMaxParticipants()) ? a : 0
                               })
@@ -232,16 +232,16 @@ function F(e) {
                   ? (0, r.jsxs)('div', {
                         className: k.gameState,
                         children: [
-                            (0, r.jsx)(A.Z, {
+                            (0, r.jsx)(N.Z, {
                                 variant: 'text-xs/normal',
                                 text: i.state
                             }),
-                            (0, r.jsx)(A.Z, {
+                            (0, r.jsx)(N.Z, {
                                 variant: 'text-xs/normal',
                                 text:
                                     0 === i.party.size[1]
-                                        ? M.NW.formatToPlainString(M.t.IM4J4e, { count: i.party.size[0] })
-                                        : M.NW.formatToPlainString(M.t['u//9Bw'], {
+                                        ? M.intl.formatToPlainString(M.t.IM4J4e, { count: i.party.size[0] })
+                                        : M.intl.formatToPlainString(M.t['u//9Bw'], {
                                               count: i.party.size[0],
                                               max: i.party.size[1]
                                           })
@@ -249,7 +249,7 @@ function F(e) {
                         ]
                     })
                   : null == i.party
-                    ? (0, r.jsx)(A.Z, {
+                    ? (0, r.jsx)(N.Z, {
                           variant: 'text-xs/normal',
                           text: i.state
                       })
@@ -298,7 +298,7 @@ function F(e) {
                       })
                   });
     return (0, r.jsx)(f.Gt, {
-        value: W,
+        value: Y,
         children: (0, r.jsxs)(T.Z, {
             ref: Q,
             className: a()(k.card, V),
@@ -306,7 +306,7 @@ function F(e) {
             onClose: Z,
             children: [
                 (0, r.jsx)(
-                    N.Z,
+                    A.Z,
                     B(U({}, X), {
                         contextMenu: (0, r.jsx)(P.Z, {
                             display: 'live',
@@ -338,13 +338,13 @@ function F(e) {
                                         eo()
                                     ]
                                 }),
-                                Y === D.y0.FULL_SIZE && ec()
+                                W === D.y0.FULL_SIZE && ec()
                             ]
                         }),
                         el()
                     ]
                 }),
-                Y !== D.y0.FULL_SIZE && ec()
+                W !== D.y0.FULL_SIZE && ec()
             ]
         })
     });

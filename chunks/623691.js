@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(953529), n(388685);
 var r = n(200651),
     i = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     a = n(481060),
     o = n(749210),
     c = n(63063),
@@ -12,32 +12,32 @@ var r = n(200651),
     g = n(388032),
     p = n(587072);
 function h(e) {
-    let { guild: t, everyoneRole: n, filteredRoles: s, setEditRoleId: l, query: o, setQuery: c, setHeaderHeight: d } = e,
+    let { guild: t, everyoneRole: n, filteredRoles: l, setEditRoleId: s, query: o, setQuery: c, setHeaderHeight: d } = e,
         m = i.useRef(null);
     i.useEffect(() => {
         var e, t;
         d(null != (t = null == (e = m.current) ? void 0 : e.offsetHeight) ? t : u.Cl);
     }, [d]);
     let h = i.useCallback(() => {
-        l(n.id);
-    }, [l, n.id]);
+        s(n.id);
+    }, [s, n.id]);
     return (0, r.jsxs)('div', {
         ref: m,
         children: [
             (0, r.jsx)(a.vwX, {
                 tag: a.RB0.H1,
-                children: g.NW.string(g.t.LPJmLy)
+                children: g.intl.string(g.t.LPJmLy)
             }),
             (0, r.jsx)(a.Text, {
                 className: p.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: g.NW.string(g.t['1ydhVl'])
+                children: g.intl.string(g.t['1ydhVl'])
             }),
             (0, r.jsx)(f, {
                 guild: t,
                 everyoneRole: n,
-                filteredRoles: s,
+                filteredRoles: l,
                 query: o,
                 setQuery: c,
                 onEveryoneRoleClick: h
@@ -46,7 +46,7 @@ function h(e) {
     });
 }
 function f(e) {
-    let { guild: t, everyoneRole: n, filteredRoles: i, query: s, setQuery: o, onEveryoneRoleClick: u } = e;
+    let { guild: t, everyoneRole: n, filteredRoles: i, query: l, setQuery: o, onEveryoneRoleClick: u } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d.Z, {
@@ -55,14 +55,14 @@ function f(e) {
             }),
             (0, r.jsx)(x, {
                 guild: t,
-                query: s,
+                query: l,
                 setQuery: o
             }),
             (0, r.jsx)(a.Text, {
                 className: p.helpText,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: g.NW.format(g.t.xkC3YW, { articleURL: c.Z.getArticleURL(m.BhN.PERMISSIONS_TUTORIAL) })
+                children: g.intl.format(g.t.xkC3YW, { articleURL: c.Z.getArticleURL(m.BhN.PERMISSIONS_TUTORIAL) })
             }),
             (0, r.jsx)('div', {
                 className: p.rolesTable,
@@ -71,14 +71,14 @@ function f(e) {
                     children: [
                         (0, r.jsx)('div', { className: p.dragSpacing }),
                         (0, r.jsx)(a.Text, {
-                            className: l()(p.tableTitle, p.roleNameSpacing),
+                            className: s()(p.tableTitle, p.roleNameSpacing),
                             variant: 'text-sm/normal',
-                            children: g.NW.format(g.t['38N3V1'], { numRoles: String(i.length) })
+                            children: g.intl.format(g.t['38N3V1'], { numRoles: String(i.length) })
                         }),
                         (0, r.jsx)(a.Text, {
-                            className: l()(p.tableTitle, p.memberSpacing),
+                            className: s()(p.tableTitle, p.memberSpacing),
                             variant: 'text-sm/normal',
-                            children: g.NW.string(g.t['9Oq93t'])
+                            children: g.intl.string(g.t['9Oq93t'])
                         }),
                         (0, r.jsx)('div', { className: p.buttonsSpacing })
                     ]
@@ -88,17 +88,17 @@ function f(e) {
     });
 }
 function x(e) {
-    let { guild: t, query: n, setQuery: s } = e,
-        [l, c] = i.useState(!1),
+    let { guild: t, query: n, setQuery: l } = e,
+        [s, c] = i.useState(!1),
         d = i.useCallback(
             (e) => {
-                s(e);
+                l(e);
             },
-            [s]
+            [l]
         ),
         u = i.useCallback(() => {
-            s('');
-        }, [s]),
+            l('');
+        }, [l]),
         m = async () => {
             c(!0), await o.Z.createRole(t.id), c(!1);
         };
@@ -112,15 +112,15 @@ function x(e) {
                     query: n,
                     onChange: d,
                     onClear: u,
-                    placeholder: g.NW.string(g.t.Sojqsr),
-                    'aria-label': g.NW.string(g.t.Sojqsr)
+                    placeholder: g.intl.string(g.t.Sojqsr),
+                    'aria-label': g.intl.string(g.t.Sojqsr)
                 }),
                 (0, r.jsx)(a.zxk, {
                     className: p.createButton,
                     size: a.zxk.Sizes.SMALL,
                     onClick: m,
-                    submitting: l,
-                    children: g.NW.string(g.t.JZZjQE)
+                    submitting: s,
+                    children: g.intl.string(g.t.JZZjQE)
                 })
             ]
         })

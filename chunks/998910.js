@@ -23,7 +23,7 @@ var t = '\uD800-\uDFFF',
     I = '\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])',
     S = y + b + v,
     T = '(?:' + [c, f, _].join('|') + ')' + S,
-    N = RegExp([p + '?' + u + '+' + g + '(?=' + [s, p, '$'].join('|') + ')', m + '+' + E + '(?=' + [s, p + h, '$'].join('|') + ')', p + '?' + h + '+' + g, p + '+' + E, I, O, l, T].join('|'), 'g');
+    A = RegExp([p + '?' + u + '+' + g + '(?=' + [s, p, '$'].join('|') + ')', m + '+' + E + '(?=' + [s, p + h, '$'].join('|') + ')', p + '?' + h + '+' + g, p + '+' + E, I, O, l, T].join('|'), 'g');
 e.exports = function (e) {
-    return e.match(N) || [];
+    return e.match(A) || [];
 };

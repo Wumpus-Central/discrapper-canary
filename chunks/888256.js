@@ -1,46 +1,46 @@
 n.d(t, { Z: () => c }), n(953529);
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
+var r = n(481060),
     s = n(921801),
-    a = n(726985),
-    l = n(388032),
+    l = n(726985),
+    a = n(388032),
     o = n(843120);
 function c(e) {
     let { className: t, currentUser: n, handleDisableAccount: c, handleDeleteAccount: d } = e,
         u = n.isClaimed();
-    return (0, r.jsx)(s.F, {
-        setting: a.s6.ACCOUNT_DISABLE_ACCOUNT,
-        children: (0, r.jsxs)(i.hjN, {
+    return (0, i.jsx)(s.F, {
+        setting: l.s6.ACCOUNT_DISABLE_ACCOUNT,
+        children: (0, i.jsxs)(r.hjN, {
             className: t,
-            title: l.NW.string(l.t.ZKsIkp),
+            title: a.intl.string(a.t.ZKsIkp),
             children: [
-                (0, r.jsx)(i.R94, {
+                (0, i.jsx)(r.R94, {
                     className: o.description,
-                    type: i.R94.Types.DESCRIPTION,
-                    children: u ? l.NW.string(l.t.TIh3Ym) : l.NW.string(l.t.czsGAw)
+                    type: r.R94.Types.DESCRIPTION,
+                    children: u ? a.intl.string(a.t.TIh3Ym) : a.intl.string(a.t.czsGAw)
                 }),
-                (0, r.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     className: o.buttonContainer,
                     children: [
                         u
-                            ? (0, r.jsx)(i.zxk, {
+                            ? (0, i.jsx)(r.zxk, {
                                   className: o.disableButton,
-                                  look: i.iLD.FILLED,
-                                  color: i.Ttl.RED,
-                                  size: i.PhG.SMALL,
+                                  look: r.iLD.FILLED,
+                                  color: r.Ttl.RED,
+                                  size: r.PhG.SMALL,
                                   onClick: c,
-                                  children: l.NW.string(l.t.jf5GGR)
+                                  children: a.intl.string(a.t.jf5GGR)
                               })
                             : null,
-                        (0, r.jsx)(s.F, {
-                            setting: a.s6.ACCOUNT_DELETE_ACCOUNT,
-                            children: (0, r.jsx)(i.zxk, {
-                                look: i.iLD.OUTLINED,
-                                color: i.Ttl.RED,
-                                size: i.PhG.SMALL,
+                        (0, i.jsx)(s.F, {
+                            setting: l.s6.ACCOUNT_DELETE_ACCOUNT,
+                            children: (0, i.jsx)(r.zxk, {
+                                look: r.iLD.OUTLINED,
+                                color: r.Ttl.RED,
+                                size: r.PhG.SMALL,
                                 onClick: d,
-                                children: l.NW.string(l.t['8lQ2ra'])
+                                children: a.intl.string(a.t['8lQ2ra'])
                             })
                         })
                     ]

@@ -18,7 +18,7 @@ function u(e) {
                   onClear: () => g('')
               }),
               inModal: !1,
-              title: c.NW.string(c.t['0hKkS0']),
+              title: c.intl.string(c.t['0hKkS0']),
               children: m.map((e, o) =>
                   (0, r.jsxs)(
                       i.Fragment,
@@ -44,7 +44,7 @@ function u(e) {
               children: (0, r.jsx)(l.Text, {
                   color: 'text-muted',
                   variant: 'text-sm/normal',
-                  children: c.NW.string(c.t['x78c+P'])
+                  children: c.intl.string(c.t['x78c+P'])
               })
           });
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => K,
-    dy: () => N,
+    dy: () => A,
     gw: () => d
 }),
     n(388685),
@@ -47,7 +47,7 @@ function T(e) {
     let t = v[e];
     return null == t ? null : E[t];
 }
-class N {
+class A {
     get names() {
         return this.emojiObject.names;
     }
@@ -110,15 +110,15 @@ class N {
                 let e = E[t];
                 if (null != e.diversity) {
                     let t = e.diversity.join('-');
-                    this.diversityChildren[t] = new N(e);
+                    this.diversityChildren[t] = new A(e);
                 }
             }
     }
 }
-function A(e) {
+function N(e) {
     let t = u.get(e);
     if (null != t) return t;
-    let n = new N(e);
+    let n = new A(e);
     return u.set(e, n), n;
 }
 function C(e) {
@@ -136,14 +136,14 @@ function w() {
 }
 function D(e) {
     let t = S(e);
-    return null != t ? A(t) : null;
+    return null != t ? N(t) : null;
 }
 let L = new Map();
 function x(e) {
     let t = L.get(e);
     if (null == t) {
         let n = b[e];
-        (t = o.ZP.filterUnsupportedEmojis(E.slice(n[0], n[1])).map(A)), L.set(e, t);
+        (t = o.ZP.filterUnsupportedEmojis(E.slice(n[0], n[1])).map(N)), L.set(e, t);
     }
     return t;
 }
@@ -223,16 +223,16 @@ function H(e) {
     let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '';
     return null != (n = null == (t = S(e)) ? void 0 : t.surrogates) ? n : r;
 }
-function W(e) {
+function Y(e) {
     var t, n;
     let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
         a = null != (n = null == (t = T(e)) ? void 0 : t.names[0]) ? n : i;
     return r ? ':'.concat(a, ':') : a;
 }
-function Y(e) {
+function W(e) {
     return D(
-        W(
+        Y(
             d.reduce((e, t) => e.replace(t, ''), e),
             !1
         )
@@ -250,16 +250,16 @@ let K = {
     findInlineEmojisFromSurrogates: F,
     translateSurrogatesToInlineEmoji: V,
     convertNameToSurrogate: H,
-    convertSurrogateToName: W,
+    convertSurrogateToName: Y,
     convertShortcutToName: function e(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
             r = n;
         return Object.prototype.hasOwnProperty.call(p, e) && (r = p[e]), t ? ':'.concat(r, ':') : r;
     },
-    convertSurrogateToBase: Y,
+    convertSurrogateToBase: W,
     forEach: (e) => {
-        for (let t of E) t.hasDiversityParent || t.hasMultiDiversityParent || e(A(t));
+        for (let t of E) t.hasDiversityParent || t.hasMultiDiversityParent || e(N(t));
     },
     numDiversitySprites: O,
     numNonDiversitySprites: I,

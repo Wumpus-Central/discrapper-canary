@@ -84,14 +84,14 @@ function T(e) {
     let r = t.soundId.toString();
     n === h.YQ.SOUNDBOARD && C(r);
 }
-function N(e) {
+function A(e) {
     var t;
     let { soundId: n, userId: r } = e;
     if (!L()) return;
     let i = n.toString();
-    r !== (null == (t = f.default.getCurrentUser()) ? void 0 : t.id) && R(i) && A(i);
+    r !== (null == (t = f.default.getCurrentUser()) ? void 0 : t.id) && R(i) && N(i);
 }
-function A(e) {
+function N(e) {
     I.set(e, e);
 }
 function C(e) {
@@ -160,6 +160,6 @@ class M extends (r = l.ZP.PersistedStore) {
 E(M, 'displayName', 'SoundboardEventStore'), E(M, 'persistKey', 'SoundboardEventStore');
 let k = new M(c.Z, {
     GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: T,
-    GUILD_SOUNDBOARD_SOUND_PLAY_START: N,
+    GUILD_SOUNDBOARD_SOUND_PLAY_START: A,
     USER_SETTINGS_PROTO_UPDATE: D
 });

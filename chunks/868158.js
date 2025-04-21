@@ -97,8 +97,8 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let N = new _.Z('ReadyPayloadUtils'),
-    A = {},
+let A = new _.Z('ReadyPayloadUtils'),
+    N = {},
     C = null,
     R = {};
 function P(e, t) {
@@ -214,11 +214,11 @@ function M(e, t) {
     );
 }
 function k(e) {
-    let t = A[e];
-    return delete A[e], t;
+    let t = N[e];
+    return delete N[e], t;
 }
 function j(e) {
-    null != s.Z.database() && !1 === e.databaseOk && d.Z.replaceDisableAllDatabases('ReadyPayloadUtils: database was not ok'), (A = {});
+    null != s.Z.database() && !1 === e.databaseOk && d.Z.replaceDisableAllDatabases('ReadyPayloadUtils: database was not ok'), (N = {});
     let t = Object.values(g.Z.getGuilds()),
         n = p.ZP.getGuilds(),
         r = h.Z.getRawStickersByGuild(),
@@ -227,7 +227,7 @@ function j(e) {
         var a, o, l;
         s.id in e.guildVersions &&
             e.guildChannels.has(s.id) &&
-            (A[s.id] = {
+            (N[s.id] = {
                 properties: b.tK(s),
                 roles: g.Z.getRoles(s.id),
                 emojis: null != (o = null == (a = n[s.id]) ? void 0 : a.rawEmojis) ? o : null,
@@ -260,7 +260,7 @@ function U(e) {
             version: e.version,
             hasThreadsSubscription: e.has_threads_subscription
         };
-    if (null == _) throw (N.log('no cache entry for partial guild (guild: '.concat(e.id, ', type: ready)')), Error('Guild data was missing from store, but hash was still available.'));
+    if (null == _) throw (A.log('no cache entry for partial guild (guild: '.concat(e.id, ', type: ready)')), Error('Guild data was missing from store, but hash was still available.'));
     return {
         id: e.id,
         dataMode: e.data_mode,
@@ -321,7 +321,7 @@ function G(e, t) {
             version: e.version,
             hasThreadsSubscription: e.has_threads_subscription
         };
-    if (null == t) throw (N.log('no cache entry for partial guild (guild: '.concat(e.id, ', type: post_ready)')), Error('Guild data was missing from store, but hash was still available.'));
+    if (null == t) throw (A.log('no cache entry for partial guild (guild: '.concat(e.id, ', type: post_ready)')), Error('Guild data was missing from store, but hash was still available.'));
     return {
         id: e.id,
         channels: null,

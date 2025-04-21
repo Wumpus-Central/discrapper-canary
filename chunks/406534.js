@@ -22,11 +22,11 @@ var r = n(200651),
     j = n(88101),
     O = n(576954),
     E = n(765104),
-    N = n(122707),
-    I = n(779836),
-    P = n(23750),
-    S = n(496675),
-    Z = n(306680),
+    I = n(122707),
+    P = n(779836),
+    S = n(23750),
+    Z = n(496675),
+    N = n(306680),
     T = n(944486),
     A = n(594174),
     w = n(55935),
@@ -35,14 +35,14 @@ var r = n(200651),
     M = n(534091),
     L = n(900164),
     D = n(554838),
-    W = n(481369),
-    U = n(186877),
-    B = n(294218),
-    G = n(534469),
-    F = n(993397),
-    H = n(511010),
-    V = n(524444),
-    z = n(977391),
+    U = n(481369),
+    B = n(186877),
+    G = n(294218),
+    F = n(534469),
+    H = n(993397),
+    V = n(511010),
+    z = n(524444),
+    W = n(977391),
     Y = n(921235),
     q = n(97352),
     K = n(226027),
@@ -80,11 +80,11 @@ function et(e) {
 }
 let en = i.memo(function (e) {
     let { file: t, channel: n, user: i, isGroupStart: l, compact: o } = e;
-    return (0, r.jsx)(B.Z, {
+    return (0, r.jsx)(G.Z, {
         compact: o,
         isGroupStart: l,
         channel: n,
-        message: new P.ZP({
+        message: new S.ZP({
             id: t.id,
             key: 'pending-upload-'.concat(t.id),
             type: Q.uaV.DEFAULT,
@@ -108,17 +108,17 @@ function er(e) {
     var t, n;
     let i,
         s,
-        { channel: f, messages: B, unreadCount: er, showNewMessagesBar: ei, messageDisplayCompact: el, channelStream: eo, uploads: ea, scrollManager: es, specs: ec, filterAfterTimestamp: eu, showingQuarantineBanner: ed, hideSummaries: ep, jumpBarClassName: eh } = e,
+        { channel: f, messages: G, unreadCount: er, showNewMessagesBar: ei, messageDisplayCompact: el, channelStream: eo, uploads: ea, scrollManager: es, specs: ec, filterAfterTimestamp: eu, showingQuarantineBanner: ed, hideSummaries: ep, jumpBarClassName: eh } = e,
         ef = A.default.getCurrentUser(),
-        em = () => es.isInitialized() || B.ready,
-        eg = (0, U.$)(f),
-        eb = B.length > 0 && (null == (t = B.first()) ? void 0 : t.isFirstMessageInForumPost(f)),
+        em = () => es.isInitialized() || G.ready,
+        eg = (0, B.$)(f),
+        eb = G.length > 0 && (null == (t = G.first()) ? void 0 : t.isFirstMessageInForumPost(f)),
         e_ = (0, c.ts)(f),
         ey = (0, l.e7)([E.Z], () => E.Z.shouldShowTopicsBar() && !ep),
         eC = (0, j.P)(f.id),
         ex = (0, x.z)(f.id, J.zr),
         ev = (0, p.k)(f.id),
-        ej = (0, W.Z)(),
+        ej = (0, U.Z)(),
         eO = (function (e, t) {
             if (e.isDM() && null != t)
                 if (t.type === C.pj.STRANGER_DANGER)
@@ -142,25 +142,25 @@ function er(e) {
             return null;
         })(f, null != (n = null != eC ? eC : ex) ? n : ev),
         eE = f.isForumPost() && !eb ? (0, r.jsx)(g.Z, { postId: f.id }) : null,
-        eN = (0, _.Z)(f.id);
+        eI = (0, _.Z)(f.id);
     (0, q.Z)();
-    let eI = null,
-        eP = [],
-        eS = eo.map((e, t) => {
+    let eP = null,
+        eS = [],
+        eZ = eo.map((e, t) => {
             if (e.type === Q.ys_.DIVIDER) {
                 var n, i;
                 let l = null != e.unreadId;
                 return null != eu
                     ? null
                     : e.isSummaryDivider
-                      ? (0, r.jsx)(I.Z, {
+                      ? (0, r.jsx)(P.Z, {
                             index: t,
                             item: e,
                             channel: f,
                             isBeforeGroup: null == e.content && et(eo[t + 1])
                         })
                       : (0, r.jsx)(
-                            H.Z,
+                            V.Z,
                             {
                                 isUnread: l,
                                 isBeforeGroup: null == e.content && et(eo[t + 1]),
@@ -186,7 +186,7 @@ function er(e) {
                 return (
                     (t = e.type === Q.ys_.MESSAGE_GROUP_BLOCKED ? $.t['+FcYMz'] : e.type === Q.ys_.MESSAGE_GROUP_IGNORED ? $.t.VFWjc3 : $.t.xfkfTE),
                     (0, r.jsx)(
-                        F.Z,
+                        H.Z,
                         {
                             unreadId: X.j1,
                             messages: e,
@@ -199,11 +199,11 @@ function er(e) {
                 );
             }
             if (null != eu && eu > e.content.timestamp.getTime() * R.Z.Millis.SECOND) return;
-            let l = S.Z.can(Q.Plq.CREATE_INSTANT_INVITE, f);
+            let l = Z.Z.can(Q.Plq.CREATE_INSTANT_INVITE, f);
             if ((0, L.Z)(e.content, l)) return;
-            e.type === Q.ys_.MESSAGE && null == eI && (eI = e);
-            let o = e.groupId === (null == eI ? void 0 : eI.groupId) ? eI.content.id : e.groupId,
-                a = e.type === Q.ys_.THREAD_STARTER_MESSAGE ? G.Ru : G.ZP;
+            e.type === Q.ys_.MESSAGE && null == eP && (eP = e);
+            let o = e.groupId === (null == eP ? void 0 : eP.groupId) ? eP.content.id : e.groupId,
+                a = e.type === Q.ys_.THREAD_STARTER_MESSAGE ? F.Ru : F.ZP;
             return (0, r.jsx)(
                 a,
                 {
@@ -214,13 +214,13 @@ function er(e) {
                     flashKey: e.flashKey,
                     id: (0, M.p)(f.id, e.content.id),
                     isLastItem: t >= eo.length - 1,
-                    renderContentOnly: eN
+                    renderContentOnly: eI
                 },
                 e.content.id
             );
         });
-    eP.push(...eS);
-    let eZ = eo[eo.length - 1];
+    eS.push(...eZ);
+    let eN = eo[eo.length - 1];
     if (
         (null != ef &&
             ea.forEach((e, t) => {
@@ -228,13 +228,13 @@ function er(e) {
                     0 === t &&
                     (0, D.J)(
                         f,
-                        eZ,
-                        new P.ZP({
+                        eN,
+                        new S.ZP({
                             type: Q.uaV.DEFAULT,
                             author: ef
                         })
                     );
-                eP.push(
+                eS.push(
                     (0, r.jsx)(
                         en,
                         {
@@ -248,10 +248,10 @@ function er(e) {
                     )
                 );
             }),
-        B.hasMoreBefore && null == eu)
+        G.hasMoreBefore && null == eu)
     ) {
-        B.length > 0 &&
-            eP.unshift(
+        G.length > 0 &&
+            eS.unshift(
                 (0, r.jsx)(
                     'div',
                     {
@@ -264,11 +264,11 @@ function er(e) {
                 )
             );
         let { useReducedMotion: e } = u.Z;
-        ((e && em()) || !e) && eP.unshift((0, r.jsx)(z.ZP, ee({ compact: el }, ec), 'has-more'));
+        ((e && em()) || !e) && eS.unshift((0, r.jsx)(W.ZP, ee({ compact: el }, ec), 'has-more'));
     }
     if (
-        ((B.hasMoreBefore && null == eu) ||
-            eP.unshift(
+        ((G.hasMoreBefore && null == eu) ||
+            eS.unshift(
                 (0, r.jsx)(
                     m.Z,
                     {
@@ -278,18 +278,18 @@ function er(e) {
                     'empty-message'
                 )
             ),
-        B.hasMoreAfter && eP.push((0, r.jsx)(z.ZP, ee({ compact: el }, ec), 'has-more-after')),
-        !ed && eg && em() && eP.push((0, r.jsx)(Y.Z, { channel: f })),
+        G.hasMoreAfter && eS.push((0, r.jsx)(W.ZP, ee({ compact: el }, ec), 'has-more-after')),
+        !ed && eg && em() && eS.push((0, r.jsx)(Y.Z, { channel: f })),
         er > 0 && ei && em())
     ) {
         let e,
             t,
-            n = Z.ZP.getOldestUnreadTimestamp(f.id),
+            n = N.ZP.getOldestUnreadTimestamp(f.id),
             l = 0 !== n ? n : k.default.extractTimestamp(f.id),
             a = (0, w.KC)(new Date(), new Date(l));
-        if ((Z.ZP.isEstimated(f.id) ? ((e = a ? $.t.wvtbbG : $.t.tHqbtr), (t = $.t.vaPWFR)) : ((e = a ? $.t.BctFHx : $.t['3wXb9P']), (t = $.t['4H8ldH'])), e_ && (0, c.tW)(f) && ej.includes(K.E.SUMMARIES))) {
-            let n = Z.ZP.ackMessageId(f.id),
-                a = (0, N.q)(f.id, Z.ZP.getOldestUnreadMessageId(f.id));
+        if ((N.ZP.isEstimated(f.id) ? ((e = a ? $.t.wvtbbG : $.t.tHqbtr), (t = $.t.vaPWFR)) : ((e = a ? $.t.BctFHx : $.t['3wXb9P']), (t = $.t['4H8ldH'])), e_ && (0, c.tW)(f) && ej.includes(K.E.SUMMARIES))) {
+            let n = N.ZP.ackMessageId(f.id),
+                a = (0, I.q)(f.id, N.ZP.getOldestUnreadMessageId(f.id));
             if (
                 ((0, d.yw)(Q.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
                     num_unread_summaries: a,
@@ -301,8 +301,8 @@ function er(e) {
                 (0, c.Lp)(f))
             ) {
                 let n = ey
-                    ? $.NW.format(t, { count: er })
-                    : $.NW.format(e, {
+                    ? $.intl.format(t, { count: er })
+                    : $.intl.format(e, {
                           count: er,
                           timestamp: l
                       });
@@ -314,7 +314,7 @@ function er(e) {
                                       (0, r.jsx)(o.Text, {
                                           variant: 'text-sm/medium',
                                           color: 'currentColor',
-                                          children: $.NW.format(t, { count: er })
+                                          children: $.intl.format(t, { count: er })
                                       }),
                                       (0, r.jsx)(b.Z, {
                                           style: {
@@ -327,7 +327,7 @@ function er(e) {
                                       (0, r.jsx)(o.Text, {
                                           variant: 'text-sm/medium',
                                           color: 'currentColor',
-                                          children: $.NW.format($.t.CBftDQ, { count: a })
+                                          children: $.intl.format($.t.CBftDQ, { count: a })
                                       })
                                   ]
                               })
@@ -336,7 +336,7 @@ function er(e) {
                                   color: 'currentColor',
                                   children: n
                               });
-                    i = (0, r.jsx)(V.G5, {
+                    i = (0, r.jsx)(z.G5, {
                         scrollManager: es,
                         content: e,
                         channel: f
@@ -355,7 +355,7 @@ function er(e) {
                                           (0, r.jsx)(o.Text, {
                                               variant: 'text-sm/medium',
                                               color: 'currentColor',
-                                              children: $.NW.format(t, { count: er })
+                                              children: $.intl.format(t, { count: er })
                                           }),
                                           (0, r.jsx)(b.Z, {
                                               style: {
@@ -368,7 +368,7 @@ function er(e) {
                                           (0, r.jsx)(o.Text, {
                                               variant: 'text-sm/medium',
                                               color: 'currentColor',
-                                              children: $.NW.format($.t.CBftDQ, { count: a })
+                                              children: $.intl.format($.t.CBftDQ, { count: a })
                                           })
                                       ]
                                   })
@@ -378,7 +378,7 @@ function er(e) {
                                       children: n
                                   })
                     });
-                    i = (0, r.jsx)(V.LE, {
+                    i = (0, r.jsx)(z.LE, {
                         content: e,
                         channelId: f.id
                     });
@@ -386,8 +386,8 @@ function er(e) {
             }
         } else
             ej.includes(K.E.NEW_MESSAGES) &&
-                (i = (0, r.jsx)(V.LE, {
-                    content: $.NW.format(e, {
+                (i = (0, r.jsx)(z.LE, {
+                    content: $.intl.format(e, {
                         count: er,
                         timestamp: l
                     }),
@@ -399,14 +399,14 @@ function er(e) {
             (0, c.Lp)(f) &&
             ey &&
             ej.includes(K.E.SUMMARIES) &&
-            (i = (0, r.jsx)(V.BO, {
+            (i = (0, r.jsx)(z.BO, {
                 channel: f,
                 scrollManager: es
             })),
-        B.error)
+        G.error)
     )
-        s = (0, r.jsx)(V.Rp, {
-            loading: B.loadingMore,
+        s = (0, r.jsx)(z.Rp, {
+            loading: G.loadingMore,
             onClick: () => {
                 var e;
                 return (
@@ -420,14 +420,14 @@ function er(e) {
             },
             className: eh
         });
-    else if (B.hasMoreAfter && em()) {
-        let { jumpReturnTargetId: e } = B;
+    else if (G.hasMoreAfter && em()) {
+        let { jumpReturnTargetId: e } = G;
         s =
-            B.loadingMore && B.jumpedToPresent
-                ? (0, r.jsx)(V.DR, { className: eh })
+            G.loadingMore && G.jumpedToPresent
+                ? (0, r.jsx)(z.DR, { className: eh })
                 : null != e
-                  ? (0, r.jsx)(V.DR, {
-                        type: V.A7.REPLY,
+                  ? (0, r.jsx)(z.DR, {
+                        type: z.A7.REPLY,
                         onClick: () => {
                             a.Z.jumpToMessage({
                                 channelId: f.id,
@@ -437,7 +437,7 @@ function er(e) {
                         },
                         className: eh
                     })
-                  : (0, r.jsx)(V.DR, {
+                  : (0, r.jsx)(z.DR, {
                         onClick: () =>
                             (function (e) {
                                 a.Z.jumpToPresent(e.id, Q.AQB);
@@ -448,7 +448,7 @@ function er(e) {
                     });
     }
     return {
-        channelStreamMarkup: eP,
+        channelStreamMarkup: eS,
         newMessagesBar: i,
         jumpToPresentBar: s,
         forumPostActionBar: eE,

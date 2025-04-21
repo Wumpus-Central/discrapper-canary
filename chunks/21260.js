@@ -150,7 +150,7 @@ function b(e) {
                 children: t.map(n)
             }),
             'aria-label': 'overflow',
-            children: (e) => (0, r.jsx)('div', p(f({}, e), { children: n(c.NW.formatToPlainString(c.t.vGclWl, { count: t.length })) }))
+            children: (e) => (0, r.jsx)('div', p(f({}, e), { children: n(c.intl.formatToPlainString(c.t.vGclWl, { count: t.length })) }))
         })
     );
 }
@@ -219,7 +219,7 @@ function O(e) {
                     (0, r.jsx)('div', {
                         className: u.overflowMeasurement,
                         ref: g,
-                        children: a(c.NW.formatToPlainString(c.t.vGclWl, { count: Number('1'.concat(n.length)) }))
+                        children: a(c.intl.formatToPlainString(c.t.vGclWl, { count: Number('1'.concat(n.length)) }))
                     })
                 ]
             }),

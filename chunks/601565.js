@@ -1,15 +1,15 @@
 n.d(t, { Z: () => s }), n(388685), n(35282), n(781311);
 var r = n(192379),
-    i = n(211266),
-    l = n(212819);
+    l = n(211266),
+    i = n(212819);
 function s(e) {
     let { searchOptions: t } = e,
         [n, s] = r.useState({
             results: [],
             query: ''
         }),
-        a = (0, i.Z)(() => {
-            let e = new l.ZP((e, t) => {
+        a = (0, l.Z)(() => {
+            let e = new i.ZP((e, t) => {
                 s({
                     results: e,
                     query: t

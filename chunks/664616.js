@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(200651),
     s = n(192379),
     o = n(120356),
@@ -16,26 +16,26 @@ var r = n(200651),
     y = n(884994),
     h = n(930961),
     x = n(732513),
-    N = n(391291),
-    v = n(895401),
-    O = n(191351),
-    j = n(40050),
-    Z = n(236954);
-let _ = {
+    v = n(391291),
+    O = n(895401),
+    j = n(191351),
+    N = n(40050),
+    _ = n(236954);
+let P = {
         0: [n(617627), n(200445), n(714530), n(9997), n(550796)],
         1: [n(731544), n(904194), n(96599), n(590881)],
-        2: [h, x, N, v],
-        3: [O, j, Z],
+        2: [h, x, v, O],
+        3: [j, N, _],
         4: [m, g, b, y]
     },
-    P = { state: 2 };
-function C(e) {
+    C = { state: 2 };
+function Z(e) {
     var t;
     let { isPaused: n } = e,
         [o, m] = (0, l.Z)(f.yN.PET_WUMPUS),
-        g = null != (t = o.state) ? t : P.state,
+        g = null != (t = o.state) ? t : C.state,
         b = c.Mq[f.yN.PET_WUMPUS],
-        y = _[g],
+        y = P[g],
         h = (0, s.useCallback)(() => {
             0 === g && m({ state: 1 });
         }, [m, g]),

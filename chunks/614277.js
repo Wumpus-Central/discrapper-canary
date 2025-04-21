@@ -51,8 +51,8 @@ function g(e) {
         I(null);
     }, [b, I]),
         l()(null != T, 'Unknown step for current payment flow.');
-    let N = null != (c = null == T || null == (t = T.options) ? void 0 : t.hideSlider) && c,
-        A = null == T || null == (n = T.options) ? void 0 : n.bodyClassName,
+    let A = null != (c = null == T || null == (t = T.options) ? void 0 : t.hideSlider) && c,
+        N = null == T || null == (n = T.options) ? void 0 : n.bodyClassName,
         C = null == T || null == (a = T.options) ? void 0 : a.sliderBodyClassName;
     return (
         void 0 !== g && g && (C = _.sliderBodyLarge),
@@ -60,12 +60,12 @@ function g(e) {
             children: [
                 null == (p = null == T || null == (s = T.options) ? void 0 : s.renderHeader) || p ? h : null,
                 T.renderStep(E),
-                null == b || N
+                null == b || A
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(u.hzk, {
-                                  className: o()(A, _.body, _.noRoundedCorners, { [_.reviewStep]: b === f.h8.REVIEW }),
+                                  className: o()(N, _.body, _.noRoundedCorners, { [_.reviewStep]: b === f.h8.REVIEW }),
                                   children: (0, r.jsx)(u.MyZ, {
                                       activeSlide: b,
                                       centered: !1,

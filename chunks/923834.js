@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c }), n(35282), n(415506);
-var r,
-    i = n(442837),
+var i,
+    r = n(442837),
     s = n(570140);
-function a(e, t, n) {
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,13 +15,13 @@ function a(e, t, n) {
         e
     );
 }
-let l = null;
-class o extends (r = i.ZP.Store) {
+let a = null;
+class o extends (i = r.ZP.Store) {
     getCurrentPath() {
-        return null != l ? l.pathname : null;
+        return null != a ? a.pathname : null;
     }
     getCurrentRoute() {
-        var e = l;
+        var e = a;
         let t = null != e && null != e.search ? e.search : '';
         return null != e ? ''.concat(e.pathname).concat(t) : null;
     }
@@ -29,28 +29,28 @@ class o extends (r = i.ZP.Store) {
         throw Error('Should not reset the store this way outside of a test environment');
     }
 }
-a(o, 'displayName', 'ApplicationStoreLocationStore');
+l(o, 'displayName', 'ApplicationStoreLocationStore');
 let c = new o(s.Z, {
     APPLICATION_STORE_LOCATION_CHANGE: function (e) {
         let { location: t } = e;
-        l = (function (e) {
+        a = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+                    i = Object.keys(n);
                 'function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
+                    (i = i.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    r.forEach(function (t) {
-                        a(e, t, n[t]);
+                    i.forEach(function (t) {
+                        l(e, t, n[t]);
                     });
             }
             return e;
         })({}, t);
     },
     APPLICATION_STORE_RESET_NAVIGATION: function () {
-        l = null;
+        a = null;
     }
 });

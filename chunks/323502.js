@@ -1,11 +1,11 @@
-n.d(t, { S: () => l });
+n.d(t, { S: () => s });
 var r = n(544891),
     i = n(570140),
-    s = n(981631);
-function l(e) {
+    l = n(981631);
+function s(e) {
     return r.tn
         .get({
-            url: s.ANM.GUILD_TOP_READ_CHANNELS(e),
+            url: l.ANM.GUILD_TOP_READ_CHANNELS(e),
             oldFormErrors: !0,
             rejectWithError: !1
         })

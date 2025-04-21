@@ -53,11 +53,11 @@ function S(e) {
 function T() {
     return !1;
 }
-function N(e) {
+function A(e) {
     let { guildId: t, userIds: n } = e;
     return y(t).updateMembersByMemberIds(n);
 }
-function A(e) {
+function N(e) {
     let { chunks: t } = e,
         n = !1;
     for (let e of t) n = y(e.guildId).updateServerMembers(e.members) || n;
@@ -197,11 +197,11 @@ function H(e) {
     let { guildId: t } = e;
     return y(t).initialize();
 }
-function W(e) {
+function Y(e) {
     let { guildId: t } = e;
     return y(t).refreshNewMembersAndSearchResults();
 }
-function Y(e) {
+function W(e) {
     let { guildId: t, pagination: n } = e,
         [r] = y(t).updatePaginationState(n);
     return r;
@@ -332,7 +332,7 @@ let J = new X(a.Z, {
     PASSIVE_UPDATE_V2: Z,
     GUILD_CREATE: I,
     GUILD_DELETE: S,
-    GUILD_MEMBERS_CHUNK_BATCH: A,
+    GUILD_MEMBERS_CHUNK_BATCH: N,
     GUILD_MEMBER_ADD: T,
     GUILD_MEMBER_UPDATE: T,
     GUILD_MEMBER_UPDATE_LOCAL: C,
@@ -347,11 +347,11 @@ let J = new X(a.Z, {
     LOAD_ARCHIVED_THREADS_SUCCESS: x,
     LOAD_FORUM_POSTS: M,
     INITIALIZE_MEMBER_SAFETY_STORE: H,
-    MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH: W,
-    MEMBER_SAFETY_PAGINATION_UPDATE: Y,
+    MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH: Y,
+    MEMBER_SAFETY_PAGINATION_UPDATE: W,
     MEMBER_SAFETY_PAGINATION_TOKEN_UPDATE: K,
     MEMBER_SAFETY_SEARCH_STATE_UPDATE: z,
     FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS: q,
     MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: Q,
-    MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: N
+    MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: A
 });

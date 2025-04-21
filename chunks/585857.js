@@ -101,7 +101,7 @@ function y(e) {
                     (0, r.jsx)(l.Text, {
                         color: 'header-secondary',
                         variant: 'text-xxs/normal',
-                        children: c ? x.NW.string(x.t['u30/ur']) : x.NW.string(x.t.owFNBw)
+                        children: c ? x.intl.string(x.t['u30/ur']) : x.intl.string(x.t.owFNBw)
                     }),
                     (0, r.jsxs)('div', {
                         className: h.inlineConsoleConnectionDetailsIcons,
@@ -134,7 +134,7 @@ function y(e) {
                                         (0, r.jsx)(l.Text, {
                                             color: 'header-secondary',
                                             variant: 'text-xxs/normal',
-                                            children: e.type === g.ABu.XBOX ? x.NW.string(x.t.MEhKlp) : x.NW.string(x.t['74VQCA'])
+                                            children: e.type === g.ABu.XBOX ? x.intl.string(x.t.MEhKlp) : x.intl.string(x.t['74VQCA'])
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             color: 'header-secondary',
@@ -148,7 +148,7 @@ function y(e) {
                         ),
                         a.length > 2 &&
                             (0, r.jsx)(v, {
-                                text: x.NW.string(x.t.o8ZkKS),
+                                text: x.intl.string(x.t.o8ZkKS),
                                 quest: t
                             })
                     ]
@@ -160,7 +160,7 @@ function _(e) {
     let { xboxAndPlaystationAccounts: t, quest: n } = e;
     return t.length > 0
         ? (0, r.jsx)(v, {
-              text: x.NW.string(x.t['qiS+xs']),
+              text: x.intl.string(x.t['qiS+xs']),
               quest: n
           })
         : null;
@@ -172,7 +172,7 @@ function C(e) {
             (0, r.jsx)(l.Text, {
                 color: 'text-muted',
                 variant: 'text-xs/medium',
-                children: x.NW.string(x.t.EJFSvL)
+                children: x.intl.string(x.t.EJFSvL)
             }),
             t ? (0, r.jsx)(y, b({}, e)) : (0, r.jsx)(_, b({}, e))
         ]

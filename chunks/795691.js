@@ -1,14 +1,14 @@
 n.d(t, { Z: () => d }), n(388685), n(457542), n(642613);
 var r = n(200651),
     i = n(192379),
-    s = n(481060),
-    l = n(279881),
+    l = n(481060),
+    s = n(279881),
     a = n(383124),
     o = n(388032),
     c = n(955373);
 function d(e) {
     let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: d, disabled: u } = e,
-        { topGames: m, tryFetchTopGames: g } = (0, l.I)(),
+        { topGames: m, tryFetchTopGames: g } = (0, s.I)(),
         p = m.get(t),
         [h, f] = i.useState(!1);
     i.useEffect(() => {
@@ -33,7 +33,7 @@ function d(e) {
             [d, n]
         );
     return h && null == p
-        ? (0, r.jsx)(s.$jN, {})
+        ? (0, r.jsx)(l.$jN, {})
         : null == x || 0 === x.length
           ? null
           : (0, r.jsxs)(r.Fragment, {
@@ -42,10 +42,10 @@ function d(e) {
                     (0, r.jsxs)('div', {
                         className: c.gamesContainer,
                         children: [
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-xs/semibold',
                                 color: 'text-muted',
-                                children: o.NW.string(o.t.bFGpub)
+                                children: o.intl.string(o.t.bFGpub)
                             }),
                             (0, r.jsx)('div', {
                                 className: c.gamesList,

@@ -1,8 +1,8 @@
-n.d(t, { O: () => v });
+n.d(t, { O: () => O });
 var r = n(200651),
     i = n(192379),
-    s = n(442837),
-    l = n(481060),
+    l = n(442837),
+    s = n(481060),
     a = n(456268),
     o = n(863249),
     c = n(999382),
@@ -16,11 +16,11 @@ var r = n(200651),
     x = n(307375),
     b = n(384632),
     j = n(388032),
-    N = n(162193);
-function _(e) {
+    _ = n(162193);
+function v(e) {
     let { pendingState: t } = e,
         n = i.useRef(!1),
-        s = i.useCallback(
+        l = i.useCallback(
             async (e) => {
                 if (!n.current)
                     try {
@@ -41,16 +41,16 @@ function _(e) {
             return (0, r.jsx)(g.r, { pendingFields: t.pendingVerificationFields });
         case b.A.DISCOVERABLE:
             return (0, r.jsx)(p.c, {
-                fetchDiscoveryData: s,
+                fetchDiscoveryData: l,
                 settingsView: t.settingsView,
                 requireTerms: t.requireTerms,
                 rules: t.termRules
             });
     }
 }
-function v() {
-    let e = (0, s.e7)([c.Z], () => c.Z.getProps().guild),
-        t = (0, s.e7)([f.Z], () => f.Z.pendingState);
+function O() {
+    let e = (0, l.e7)([c.Z], () => c.Z.getProps().guild),
+        t = (0, l.e7)([f.Z], () => f.Z.pendingState);
     i.useEffect(() => {
         (null == e ? void 0 : e.id) != null && o.ZP.fetchVerificationForm(e.id);
     }, [null == e ? void 0 : e.id]);
@@ -62,21 +62,21 @@ function v() {
     );
     if (null == e || null == t) return null;
     let { joinType: a } = t;
-    return (0, r.jsxs)(l.Kqy, {
+    return (0, r.jsxs)(s.Kqy, {
         gap: 32,
         children: [
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(s.X6q, {
                 color: 'header-primary',
                 variant: 'heading-lg/semibold',
-                children: j.NW.string(j.t.YJlvBA)
+                children: j.intl.string(j.t.YJlvBA)
             }),
             (0, r.jsx)(x.h, {
                 onTypePicked: n,
                 activeType: a,
                 guild: e
             }),
-            (0, r.jsx)('div', { className: N.divider }),
-            (0, r.jsx)('div', { children: (0, r.jsx)(_, { pendingState: t }) })
+            (0, r.jsx)('div', { className: _.divider }),
+            (0, r.jsx)('div', { children: (0, r.jsx)(v, { pendingState: t }) })
         ]
     });
 }

@@ -21,7 +21,7 @@ function E(e) {
             icon: E.icon
         }),
         T = u.ZP.getUserAvatarURL(n),
-        N = i.useMemo(
+        A = i.useMemo(
             () =>
                 I.some((e) => (0, _.sg)(e))
                     ? (0, r.jsxs)(r.Fragment, {
@@ -29,7 +29,7 @@ function E(e) {
                               (0, r.jsx)(l.x, {
                                   variant: 'text-lg/normal',
                                   color: 'header-secondary',
-                                  children: m.NW.string(m.t.uT1CPT)
+                                  children: m.intl.string(m.t.uT1CPT)
                               }),
                               (0, r.jsx)(a.X6, {
                                   variant: 'heading-xxl/bold',
@@ -57,12 +57,12 @@ function E(e) {
                                   ? (0, r.jsx)(l.x, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
-                                        children: m.NW.string(m.t.jFbDnJ)
+                                        children: m.intl.string(m.t.jFbDnJ)
                                     })
                                   : (0, r.jsx)(l.x, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
-                                        children: m.NW.string(m.t['X+Fdpq'])
+                                        children: m.intl.string(m.t['X+Fdpq'])
                                     })
                           ]
                       }),
@@ -93,7 +93,7 @@ function E(e) {
                     })
                 ]
             }),
-            N,
+            A,
             v
                 ? (0, r.jsx)('div', {
                       className: g.currentUser,
@@ -101,7 +101,7 @@ function E(e) {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
                           children: [
-                              m.NW.format(m.t.qRvpYW, {
+                              m.intl.format(m.t.qRvpYW, {
                                   userHook: () =>
                                       (0, r.jsxs)(
                                           l.x,
@@ -125,7 +125,7 @@ function E(e) {
                                   tag: 'a',
                                   className: g.logoutLink,
                                   onClick: () => (0, f.c$)(O, 'oauth2_logout'),
-                                  children: m.NW.string(m.t['yV/hjI'])
+                                  children: m.intl.string(m.t['yV/hjI'])
                               })
                           ]
                       })

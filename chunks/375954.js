@@ -22,8 +22,8 @@ var r,
     I = n(796974),
     S = n(984933),
     T = n(271383),
-    N = n(430824),
-    A = n(496675),
+    A = n(430824),
+    N = n(496675),
     C = n(699516),
     R = n(944486),
     P = n(914010),
@@ -113,11 +113,11 @@ function H(e) {
         })
     );
 }
-function W(e) {
+function Y(e) {
     let { message: t } = e;
     null != t.nonce && x.add(t.nonce);
 }
-function Y(e) {
+function W(e) {
     let { channelId: t, messageRecord: n } = e,
         r = null == n ? void 0 : n.nonce;
     if (null != r && x.has(r)) {
@@ -282,13 +282,13 @@ function ep(e) {
 }
 class eh extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(w.default, O.Z, I.Z, T.ZP, E.default, R.Z, P.Z, N.Z, C.Z, S.ZP), this.syncWith([p.Z], () => {});
+        this.waitFor(w.default, O.Z, I.Z, T.ZP, E.default, R.Z, P.Z, A.Z, C.Z, S.ZP), this.syncWith([p.Z], () => {});
     }
     getMessages(e) {
         if (p.Z.hasViewingRoles()) {
             let t = O.Z.getChannel(e),
                 n = null == t ? void 0 : t.getGuildId();
-            if (p.Z.isViewingRoles(n) && !A.Z.can(D.Plq.VIEW_CHANNEL, t)) return new c.Z(e);
+            if (p.Z.isViewingRoles(n) && !N.Z.can(D.Plq.VIEW_CHANNEL, t)) return new c.Z(e);
         }
         return c.Z.getOrCreate(e);
     }
@@ -389,7 +389,7 @@ let em = new eh(s.Z, {
     MESSAGE_REACTION_REMOVE_ALL: ec,
     MESSAGE_REACTION_REMOVE_EMOJI: eu,
     LOGOUT: ed,
-    UPLOAD_START: W,
-    UPLOAD_FAIL: Y,
+    UPLOAD_START: Y,
+    UPLOAD_FAIL: W,
     LOCAL_MESSAGE_CREATE: ep
 });

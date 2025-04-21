@@ -21,7 +21,7 @@ function l(e) {
         user: t,
         gameRelationships: n,
         menuItemId: 'add-game-friend',
-        label: s.NW.string(s.t.X76oLC),
+        label: s.intl.string(s.t.X76oLC),
         onClick: l
     });
 }

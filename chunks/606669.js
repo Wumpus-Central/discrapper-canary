@@ -3,30 +3,30 @@ var n = r(200651);
 r(192379);
 var i = r(442837),
     o = r(481060),
-    c = r(857595),
-    a = r(607070),
-    l = r(388032);
+    l = r(857595),
+    c = r(607070),
+    a = r(388032);
 function s() {
     let {
             saturation: e,
             useReducedMotion: t,
             roleStyle: r
-        } = (0, i.cj)([a.Z], () => ({
-            saturation: a.Z.saturation,
-            useReducedMotion: a.Z.useReducedMotion,
-            roleStyle: a.Z.roleStyle
+        } = (0, i.cj)([c.Z], () => ({
+            saturation: c.Z.saturation,
+            useReducedMotion: c.Z.useReducedMotion,
+            roleStyle: c.Z.roleStyle
         })),
         s = [
             {
-                name: l.NW.string(l.t.YEOEi4),
+                name: a.intl.string(a.t.YEOEi4),
                 value: 'username'
             },
             {
-                name: l.NW.string(l.t.mQaro6),
+                name: a.intl.string(a.t.mQaro6),
                 value: 'dot'
             },
             {
-                name: l.NW.string(l.t.Ji2EVF),
+                name: a.intl.string(a.t.Ji2EVF),
                 value: 'hidden'
             }
         ];
@@ -36,9 +36,9 @@ function s() {
             {
                 children: (0, n.jsx)(o.S89, {
                     id: 'reduced-motion',
-                    label: l.NW.string(l.t.b3XBzs),
+                    label: a.intl.string(a.t.b3XBzs),
                     checked: t,
-                    action: () => (0, c.Zt)(t ? 'no-preference' : 'reduce')
+                    action: () => (0, l.Zt)(t ? 'no-preference' : 'reduce')
                 })
             },
             'reduced-motion'
@@ -48,9 +48,9 @@ function s() {
             {
                 children: (0, n.jsx)(o.II_, {
                     id: 'input',
-                    label: l.NW.string(l.t['5PWWCQ']),
+                    label: a.intl.string(a.t['5PWWCQ']),
                     control: (t, r) => {
-                        var i, a;
+                        var i, c;
                         return (0, n.jsx)(
                             o._wy,
                             ((i = (function (e) {
@@ -78,15 +78,15 @@ function s() {
                                 }
                                 return e;
                             })({}, t)),
-                            (a = a =
+                            (c = c =
                                 {
                                     ref: r,
                                     value: 100 * e,
-                                    onChange: (e) => (0, c.o2)(e / 100),
-                                    'aria-label': l.NW.string(l.t['5PWWCQ'])
+                                    onChange: (e) => (0, l.o2)(e / 100),
+                                    'aria-label': a.intl.string(a.t['5PWWCQ'])
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(c))
                                 : (function (e, t) {
                                       var r = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -94,8 +94,8 @@ function s() {
                                           r.push.apply(r, n);
                                       }
                                       return r;
-                                  })(Object(a)).forEach(function (e) {
-                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                                  })(Object(c)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(c, e));
                                   }),
                             i)
                         );
@@ -109,7 +109,7 @@ function s() {
             {
                 children: (0, n.jsx)(o.sNh, {
                     id: 'role-colors',
-                    label: l.NW.string(l.t.uSOPWl),
+                    label: a.intl.string(a.t.uSOPWl),
                     children: s.map((e) => {
                         let { name: t, value: i } = e;
                         return (0, n.jsx)(
@@ -119,7 +119,7 @@ function s() {
                                 group: 'role-colors',
                                 checked: i === r,
                                 label: t,
-                                action: () => (0, c.u1)(i)
+                                action: () => (0, l.u1)(i)
                             },
                             i
                         );

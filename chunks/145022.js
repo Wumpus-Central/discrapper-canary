@@ -9,14 +9,14 @@ function c(e, t, n) {
     if (null == e || null == t)
         return {
             valid: !1,
-            reason: l.NW.string(l.t.d34xi4)
+            reason: l.intl.string(l.t.d34xi4)
         };
     let { releaseChannel: r, expiresAt: c, validForUserIds: u, allowedVersions: d, targetBuildOverride: f } = e,
         _ = Object.keys(f);
     if (0 === i().intersection(_, t).length)
         return {
             valid: !1,
-            reason: l.NW.formatToPlainString(l.t.wySUzs, {
+            reason: l.intl.formatToPlainString(l.t.wySUzs, {
                 requestedTargets: _.map((e) => {
                     var t;
                     return null != (t = o.o0[e]) ? t : 'unknown';
@@ -27,7 +27,7 @@ function c(e, t, n) {
         let e = r === s.R5N.PTB ? r.toUpperCase() : ''.concat(r.charAt(0).toUpperCase()).concat(r.slice(1));
         return {
             valid: !1,
-            reason: l.NW.formatToPlainString(l.t.GOEF0N, { releaseChannel: e })
+            reason: l.intl.formatToPlainString(l.t.GOEF0N, { releaseChannel: e })
         };
     }
     if (null != d) {
@@ -47,19 +47,19 @@ function c(e, t, n) {
         if (!e)
             return {
                 valid: !1,
-                reason: l.NW.formatToPlainString(l.t.GOEF0N, { releaseChannel: d.join(', ') })
+                reason: l.intl.formatToPlainString(l.t.GOEF0N, { releaseChannel: d.join(', ') })
             };
     }
     let p = null != c ? new Date(c).getTime() : null;
     return null != p && p < Date.now()
         ? {
               valid: !1,
-              reason: l.NW.string(l.t['8eRE6e'])
+              reason: l.intl.string(l.t['8eRE6e'])
           }
         : u.length > 0 && !u.includes(a.default.getId())
           ? {
                 valid: !1,
-                reason: l.NW.string(l.t.qZgV0d)
+                reason: l.intl.string(l.t.qZgV0d)
             }
           : { valid: !0 };
 }

@@ -5,8 +5,8 @@ var r = n(481060),
     i = n(864762),
     s = n(509340),
     a = n(135184),
-    c = n(409553),
-    l = n(494801),
+    l = n(409553),
+    c = n(494801),
     d = n(319392),
     u = n(798930),
     f = n(981631),
@@ -24,14 +24,14 @@ function b(e) {
             children: [
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.LANDING,
-                    children: (0, o.jsx)(c.Z, {
+                    children: (0, o.jsx)(l.Z, {
                         onContinue: g,
                         onClose: n
                     })
                 }),
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.PRE_CONNECT,
-                    children: (0, o.jsx)(l.Z, {
+                    children: (0, o.jsx)(c.Z, {
                         isWaitingForConnection: !1,
                         onWaitingForConnection: h,
                         onAuthToken: _,
@@ -41,7 +41,7 @@ function b(e) {
                 }),
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.PRE_CONNECT_WAITING,
-                    children: (0, o.jsx)(l.Z, {
+                    children: (0, o.jsx)(c.Z, {
                         isWaitingForConnection: !0,
                         expectedCallbackState: m,
                         onAuthToken: _,

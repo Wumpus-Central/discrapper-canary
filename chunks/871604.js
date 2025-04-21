@@ -34,7 +34,7 @@ function T(e, t, n) {
         e
     );
 }
-function N(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function N(e) {
     }
     return e;
 }
-function A(e, t) {
+function N(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -72,7 +72,7 @@ function C(e, t) {
 }
 function R(e) {
     var { user: t, closePopout: n } = e,
-        T = A(e, ['user', 'closePopout']);
+        T = N(e, ['user', 'closePopout']);
     let C = (0, a.e7)([y.Z], () => {
             var e;
             return null == (e = y.Z.getUserProfile(t.id)) ? void 0 : e.application;
@@ -102,9 +102,9 @@ function R(e) {
                         t = p.Z.getChannel(e),
                         r = null != _.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? f.Ie.SIDEBAR : f.Ie.NORMAL;
                     l.__(c._b.TEXT, r, { applicationId: C.id }), (0, o.Mr3)((0, v.z)(x, w)), null == n || n(), m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: C.id });
-                } else (0, b.L)(N({ applicationId: C.id }, C));
+                } else (0, b.L)(A({ applicationId: C.id }, C));
         }, [L, C, x, w, n]),
-        k = L ? S.NW.string(S.t['Cia+Aw']) : S.NW.string(S.t.NgXl3N);
+        k = L ? S.intl.string(S.t['Cia+Aw']) : S.intl.string(S.t.NgXl3N);
     if (null == C || !(0, d.Eb)(C)) return null;
     let { customInstallUrl: j } = C,
         U = null == j || E.Z.isDiscordUrl(j) ? o.qJs : o.Gr1,
@@ -116,12 +116,12 @@ function R(e) {
                   return (0, r.jsx)(o.v2r, {
                       navId: 'user-bot-profile-add-app',
                       onClose: t,
-                      'aria-label': S.NW.string(S.t.dbkxVl),
+                      'aria-label': S.intl.string(S.t.dbkxVl),
                       onSelect: void 0,
                       children: (0, r.jsx)(o.kSQ, {
                           children: (0, r.jsx)(o.sNh, {
                               id: 'copy',
-                              label: S.NW.string(S.t.XWDiho),
+                              label: S.intl.string(S.t.XWDiho),
                               action: () => (0, g.JG)((0, u.J)(C))
                           })
                       })
@@ -129,10 +129,10 @@ function R(e) {
               },
               children: (e) => {
                   var { onClick: t } = e,
-                      n = A(e, ['onClick']);
+                      n = N(e, ['onClick']);
                   return (0, r.jsx)(
                       O.tG,
-                      N(
+                      A(
                           {
                               action: 'PRESS_ADD_APP',
                               text: k,
@@ -148,7 +148,7 @@ function R(e) {
           })
         : (0, r.jsx)(
               O.tG,
-              N(
+              A(
                   {
                       action: 'PRESS_ADD_APP',
                       text: k,

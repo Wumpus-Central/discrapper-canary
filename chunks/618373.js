@@ -25,11 +25,11 @@ function d(e) {
         ? (0, i.jsx)(o.Text, {
               variant: 'text-xxs/semibold',
               color: d ? 'text-warning' : 'text-muted',
-              children: c.NW.string(c.t.PIeSHB)
+              children: c.intl.string(c.t.PIeSHB)
           })
         : p
           ? (0, i.jsx)(i.Fragment, {
-                children: c.NW.format(n, {
+                children: c.intl.format(n, {
                     keybind: t,
                     keybindHook: (e) => (0, i.jsx)(s.Z, { keybind: t }, t.join('+'))
                 })

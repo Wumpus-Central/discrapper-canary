@@ -1,7 +1,7 @@
 r.d(t, { Z: () => d }), r(388685);
 var n = r(200651),
-    a = r(192379),
-    i = r(481060),
+    i = r(192379),
+    a = r(481060),
     l = r(312097),
     s = r(810568),
     o = r(388032),
@@ -9,8 +9,8 @@ var n = r(200651),
     u = r(301736);
 function d(e) {
     let { detectedGame: t, trackAction: r } = e,
-        d = a.useRef(null),
-        m = a.useMemo(() => {
+        d = i.useRef(null),
+        m = i.useMemo(() => {
             let e = t.artwork.map((e) => ({
                 url: e,
                 type: 'IMAGE'
@@ -36,22 +36,22 @@ function d(e) {
         ? null
         : (0, n.jsxs)('div', {
               children: [
-                  (0, n.jsx)(i.X6q, {
+                  (0, n.jsx)(a.X6q, {
                       className: c.sectionHeader,
                       variant: 'text-md/semibold',
                       color: 'header-primary',
-                      children: o.NW.string(o.t['bNdK5+'])
+                      children: o.intl.string(o.t['bNdK5+'])
                   }),
                   (0, n.jsxs)('div', {
                       className: g ? u.gameProfileMediaSmall : u.gameProfileMediaLarge,
                       children: [
-                          (0, n.jsx)(i.xVE, {
+                          (0, n.jsx)(a.xVE, {
                               ref: d,
                               className: u.imageScroller,
                               orientation: 'horizontal',
                               children: m.map((e, t) =>
                                   (0, n.jsx)(
-                                      i.P3F,
+                                      a.P3F,
                                       {
                                           className: u.imageClickable,
                                           focusProps: {
@@ -70,7 +70,7 @@ function d(e) {
                                           children: (0, n.jsx)('img', {
                                               src: e.url,
                                               className: u.gameArtwork,
-                                              alt: o.NW.formatToPlainString(o.t.COYYrq, { game: name })
+                                              alt: o.intl.formatToPlainString(o.t.COYYrq, { game: name })
                                           })
                                       },
                                       t
@@ -82,19 +82,19 @@ function d(e) {
                                   className: u.mediaOverlay,
                                   children: [
                                       (0, n.jsx)('div', { className: u.gradientLeft }),
-                                      (0, n.jsx)(i.P3F, {
+                                      (0, n.jsx)(a.P3F, {
                                           className: u.arrowClickable,
                                           onClick: () => f(-1),
-                                          children: (0, n.jsx)(i.whL, {
+                                          children: (0, n.jsx)(a.whL, {
                                               className: u.arrow,
                                               color: 'currentColor'
                                           })
                                       }),
                                       (0, n.jsx)('div', { className: u.gradientRight }),
-                                      (0, n.jsx)(i.P3F, {
+                                      (0, n.jsx)(a.P3F, {
                                           className: u.arrowClickable,
                                           onClick: () => f(1),
-                                          children: (0, n.jsx)(i.ZSh, {
+                                          children: (0, n.jsx)(a.ZSh, {
                                               className: u.arrow,
                                               color: 'currentColor'
                                           })

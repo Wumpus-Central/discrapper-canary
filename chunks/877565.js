@@ -61,7 +61,7 @@ function u(e, t) {
 }
 function d(e) {
     let { titleWithQuery: t, titleWithoutQuery: n, query: i, getQuery: s, headerClassName: l, headerTrailingContent: c } = e,
-        u = i.length > 0 ? o.NW.formatToPlainString(t, { prefix: s(i) }) : n;
+        u = i.length > 0 ? o.intl.formatToPlainString(t, { prefix: s(i) }) : n;
     return (0, r.jsx)(
         a.ZP.Title,
         {

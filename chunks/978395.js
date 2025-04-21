@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(166584),
     S = n(915014),
     T = n(228168),
-    N = n(981631),
-    A = n(200669);
+    A = n(981631),
+    N = n(200669);
 function C(e) {
     let { user: t, currentUser: n, displayProfile: C, guild: R, isHovering: P, onOpenProfile: w, channelId: D, onClose: L } = e,
         x = u.ZP.useName(null == R ? void 0 : R.id, D, t),
@@ -37,7 +37,7 @@ function C(e) {
         B = (0, d.I5)(n);
     return (0, r.jsxs)(a.Ttm, {
         fade: !0,
-        className: A.body,
+        className: N.body,
         children: [
             (0, r.jsx)(b.Z, {
                 user: t,
@@ -68,7 +68,7 @@ function C(e) {
                     ]
                 })
             }),
-            M === N.OGo.PENDING_INCOMING &&
+            M === A.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(E.Z.Overlay, {
                     children: (0, r.jsx)(m.Z, {
                         user: t,

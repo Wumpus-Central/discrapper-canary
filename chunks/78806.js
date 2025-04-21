@@ -1,29 +1,29 @@
-r.d(t, { Z: () => c });
-var n = r(200651);
-r(192379);
-var l = r(481060),
-    s = r(835473),
-    i = r(833062),
-    a = r(388032);
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var l = n(481060),
+    i = n(835473),
+    s = n(833062),
+    a = n(388032);
 function c(e) {
     let { applicationIds: t } = e,
-        r = (0, s.Z)(t).filter((e) => null != e);
-    if (0 === r.length) return null;
+        n = (0, i.Z)(t).filter((e) => null != e);
+    if (0 === n.length) return null;
     let c = null;
-    if (1 === r.length) c = a.NW.format(a.t.wQ6ur6, { applicationName: () => (0, n.jsx)(i.Z, { application: r[0] }, r[0].id) });
-    else if (2 === r.length)
-        c = a.NW.format(a.t.C98CSE, {
-            applicationName: () => (0, n.jsx)(i.Z, { application: r[0] }, r[0].id),
-            applicationName2: () => (0, n.jsx)(i.Z, { application: r[1] }, r[1].id)
+    if (1 === n.length) c = a.intl.format(a.t.wQ6ur6, { applicationName: () => (0, r.jsx)(s.Z, { application: n[0] }, n[0].id) });
+    else if (2 === n.length)
+        c = a.intl.format(a.t.C98CSE, {
+            applicationName: () => (0, r.jsx)(s.Z, { application: n[0] }, n[0].id),
+            applicationName2: () => (0, r.jsx)(s.Z, { application: n[1] }, n[1].id)
         });
     else {
-        let e = r[r.length - 1],
-            t = r.slice(0, -1);
-        c = a.NW.format(a.t.UxpwAg, {
+        let e = n[n.length - 1],
+            t = n.slice(0, -1);
+        c = a.intl.format(a.t.UxpwAg, {
             applications: () =>
                 t.map((e) =>
-                    (0, n.jsx)(
-                        i.Z,
+                    (0, r.jsx)(
+                        s.Z,
                         {
                             application: e,
                             useComma: !0
@@ -31,10 +31,10 @@ function c(e) {
                         e.id
                     )
                 ),
-            applicationNameLast: () => (0, n.jsx)(i.Z, { application: e }, e.id)
+            applicationNameLast: () => (0, r.jsx)(s.Z, { application: e }, e.id)
         });
     }
-    return (0, n.jsx)(l.Text, {
+    return (0, r.jsx)(l.Text, {
         variant: 'text-sm/normal',
         children: c
     });

@@ -4,7 +4,7 @@ n.d(t, {
     Mg: () => v,
     Nl: () => C,
     Ns: () => b,
-    Rx: () => N,
+    Rx: () => A,
     nX: () => w,
     sc: () => R
 }),
@@ -361,7 +361,7 @@ function T(e) {
         sdp: I(p)
     });
 }
-function N(e) {
+function A(e) {
     let { type: t, baseSDP: n, audioCodec: r, audioPayloadType: i, audioBitRate: a, videoCodec: o, videoPayloadType: s, videoBitRate: l, sendingVideo: c, rtxPayloadType: u, ssrcs: d, extensions: f, enableAudioNack: _ } = e,
         p = [],
         h = 'answer' === t ? 'passive' : 'actpass';
@@ -398,7 +398,7 @@ function N(e) {
         })
     );
 }
-function A(e, t, n, r, i) {
+function N(e, t, n, r, i) {
     let a = e.find((e) => e.codec === r);
     if (null == a) return null;
     let o = t.find((e) => RegExp('^apt='.concat(a.payload)).test(e.config)),
@@ -430,14 +430,14 @@ function C(e) {
             ) {
                 case 'audio':
                     [_.ad.OPUS].forEach((t, n) => {
-                        let a = A(i, o, r, t, n);
+                        let a = N(i, o, r, t, n);
                         null != a && e.codecs.push(a);
                     }),
                         'sendrecv' === s && null != (n = null == a ? void 0 : a.find((e) => 'cname' === e.attribute)) && (e.audioSSRC = n.id);
                     break;
                 case 'video':
                     [_.ad.H264, _.ad.VP8, _.ad.VP9].forEach((t, n) => {
-                        let a = A(i, o, r, t, n);
+                        let a = N(i, o, r, t, n);
                         null != a && e.codecs.push(a);
                     }),
                         'sendrecv' === s && (null != (n = null == a ? void 0 : a.find((e) => 'cname' === e.attribute)) && (e.videoSSRC = n.id), null != (n = null == a ? void 0 : a.findLast((e) => 'cname' === e.attribute)) && (n.id === e.videoSSRC && E.warn('Unable to find a unique rtx SSRC!'), (e.rtxSSRC = n.id)));

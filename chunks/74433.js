@@ -15,11 +15,11 @@ function s(e) {
 function c(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (null != e && e.type === a.IIU.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
-    if (null != t) return null == e || e.type !== a.IIU.PLAYING ? o.NW.string(o.t.eXan7O) : o.NW.format(s(n)[a.IIU.STREAMING], { name: e.name });
+    if (null != t) return null == e || e.type !== a.IIU.PLAYING ? o.intl.string(o.t.eXan7O) : o.intl.format(s(n)[a.IIU.STREAMING], { name: e.name });
     if (null == e || null == e.name) return null;
     if ((0, l.Z)(e)) {
         let t = null != e.details && '' !== e.details ? e.details : e.name;
-        return o.NW.format(s(n)[a.IIU.STREAMING], { name: t });
+        return o.intl.format(s(n)[a.IIU.STREAMING], { name: t });
     }
     return (0, i.Z)(e)
         ? (0, r.Z)(e.name)
@@ -29,13 +29,13 @@ function c(e, t) {
                   case a.IIU.LISTENING:
                   case a.IIU.WATCHING:
                   case a.IIU.COMPETING:
-                      return o.NW.format(r[e], { name: t });
+                      return o.intl.format(r[e], { name: t });
                   case a.IIU.CUSTOM_STATUS:
                   case a.IIU.HANG_STATUS:
                       return null;
                   case a.IIU.PLAYING:
                   default:
-                      return n ? o.NW.formatToPlainString(o.t.Sq9xJy, { game: t }) : o.NW.format(o.t.lFApm5, { game: t });
+                      return n ? o.intl.formatToPlainString(o.t.Sq9xJy, { game: t }) : o.intl.format(o.t.lFApm5, { game: t });
               }
           })(e.type, e.name, n);
 }

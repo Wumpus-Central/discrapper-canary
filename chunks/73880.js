@@ -7,28 +7,28 @@ var r = n(200651);
 n(192379);
 var l = n(120356),
     o = n.n(l),
-    a = n(481060),
-    i = n(489813),
+    i = n(481060),
+    a = n(489813),
     s = n(592286),
     c = n(388032),
     u = n(667084);
 function d(e) {
-    let { value: t, placeholder: n, onChange: l, disabled: i, className: c, autofocus: d } = e;
-    return (0, r.jsx)(a.Kx8, {
+    let { value: t, placeholder: n, onChange: l, disabled: a, className: c, autofocus: d } = e;
+    return (0, r.jsx)(i.Kx8, {
         className: o()(u.paragraphFieldBody, c),
         maxLength: s.RS,
         value: null != t ? t : '',
         placeholder: null != n ? n : '',
         onChange: l,
-        disabled: i,
+        disabled: a,
         autoFocus: d,
         autosize: !0,
-        showRemainingCharacterCount: !i
+        showRemainingCharacterCount: !a
     });
 }
 function C(e) {
     let { formField: t } = e;
-    return (0, r.jsx)(i.CA, {
+    return (0, r.jsx)(a.CA, {
         title: t.label,
         children: (0, r.jsx)(d, {
             className: u.disabledFieldBackground,
@@ -39,13 +39,13 @@ function C(e) {
 }
 function m(e) {
     let { formField: t, autofocus: n, onChange: l } = e;
-    return (0, r.jsx)(i.hK, {
+    return (0, r.jsx)(a.hK, {
         title: t.label,
         children: (0, r.jsx)(d, {
             value: t.response,
             onChange: l,
             autofocus: n,
-            placeholder: c.NW.string(c.t['Sqn+Wl'])
+            placeholder: c.intl.string(c.t['Sqn+Wl'])
         })
     });
 }

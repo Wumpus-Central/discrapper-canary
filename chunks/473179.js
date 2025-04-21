@@ -11,7 +11,7 @@ function c(e) {
         navId: 'activity-popout-overflow-popout',
         onClose: t,
         onSelect: n,
-        'aria-label': a.NW.string(a.t.SS9Y6O),
+        'aria-label': a.intl.string(a.t.SS9Y6O),
         children: s
     });
 }

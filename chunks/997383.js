@@ -49,15 +49,15 @@ function S(e) {
     return e;
 }
 let T = 100,
-    N = 1000,
-    A = 0.2,
+    A = 1000,
+    N = 0.2,
     C = 0.1,
     R = Object.freeze({}),
     P = 300;
 function w() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
         t = arguments.length > 1 ? arguments[1] : void 0;
-    return N * e * (null != t ? t : 1);
+    return A * e * (null != t ? t : 1);
 }
 function D(e, t) {
     var n, r;
@@ -97,7 +97,7 @@ function D(e, t) {
             }
         } else s[n] = 1 + r / a;
     }
-    for (let e of p.Z.getFriendIDs()) s[e] = (null != (n = s[e]) ? n : 1) + A;
+    for (let e of p.Z.getFriendIDs()) s[e] = (null != (n = s[e]) ? n : 1) + N;
     for (let e of d.Z.getDMUserIds()) s[e] = (null != (r = s[e]) ? r : 1) + C;
     return s;
 }

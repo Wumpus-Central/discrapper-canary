@@ -19,7 +19,7 @@ function l(e) {
                 color: 'currentColor',
                 className: s.premiumButtonNitroWheel
             }),
-            null != n ? n : o.NW.string(o.t['8Sh5fn'])
+            null != n ? n : o.intl.string(o.t['8Sh5fn'])
         ]
     });
 }

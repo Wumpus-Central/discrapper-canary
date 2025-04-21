@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685), n(997841), n(539854);
+n.d(t, { Z: () => N }), n(388685), n(997841), n(539854);
 var r,
     i = n(442837),
     a = n(570140),
@@ -113,7 +113,7 @@ function T(e) {
     let { guildId: t } = e;
     g(t);
 }
-class N extends (r = i.ZP.Store) {
+class A extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, u.default);
     }
@@ -125,8 +125,8 @@ class N extends (r = i.ZP.Store) {
         return this.getCheck(e).canChat;
     }
 }
-_(N, 'displayName', 'GuildVerificationStore');
-let A = new N(a.Z, {
+_(A, 'displayName', 'GuildVerificationStore');
+let N = new A(a.Z, {
     CONNECTION_OPEN: b,
     CONNECTION_CLOSED: y,
     CURRENT_USER_UPDATE: S,

@@ -21,27 +21,27 @@ let x = function (e) {
     let { className: t, style: n, channel: x, draftType: v } = e,
         [j, O] = i.useState(!0),
         E = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
-        N = (0, l.e7)([p.Z], () => null != x && p.Z.can(y.Plq.ATTACH_FILES, x), [x]),
-        I = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(x.id)),
-        P = x.getGuildId(),
-        S = v === s.d.FirstThreadMessage,
-        Z = (0, l.e7)([f.default], () => {
+        I = (0, l.e7)([p.Z], () => null != x && p.Z.can(y.Plq.ATTACH_FILES, x), [x]),
+        P = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(x.id)),
+        S = x.getGuildId(),
+        Z = v === s.d.FirstThreadMessage,
+        N = (0, l.e7)([f.default], () => {
             var e;
             return !0 == !(null == (e = f.default.getCurrentUser()) ? void 0 : e.nsfwAllowed);
         }),
-        T = (0, l.e7)([c.Z], () => c.Z.didAgree(P)) && !Z,
-        A = i.useMemo(() => !E && ((x.isPrivate() && !x.isManaged()) || (null != P && (!x.isNSFW() || T) && N && u.Z.canChatInGuild(P))), [N, T, x, P, E]),
-        w = S ? (y.TPd.GUILD_THREADS_ONLY.has(x.type) ? C.NW.string(C.t.RBBLhI) : C.NW.string(C.t.gUx4en)) : j ? C.NW.format(C.t.dYP2FR, { destination: (0, a.F6)(x, f.default, h.Z, !0) }) : C.NW.string(C.t.h76ulJ);
-    return I || !A
+        T = (0, l.e7)([c.Z], () => c.Z.didAgree(S)) && !N,
+        A = i.useMemo(() => !E && ((x.isPrivate() && !x.isManaged()) || (null != S && (!x.isNSFW() || T) && I && u.Z.canChatInGuild(S))), [I, T, x, S, E]),
+        w = Z ? (y.TPd.GUILD_THREADS_ONLY.has(x.type) ? C.intl.string(C.t.RBBLhI) : C.intl.string(C.t.gUx4en)) : j ? C.intl.format(C.t.dYP2FR, { destination: (0, a.F6)(x, f.default, h.Z, !0) }) : C.intl.string(C.t.h76ulJ);
+    return P || !A
         ? null
         : (0, r.jsx)(b.Z, {
               className: t,
               style: n,
               title: w,
-              description: S ? C.NW.string(C.t.lpgkzs) : C.NW.string(C.t.usQh4O),
+              description: Z ? C.intl.string(C.t.lpgkzs) : C.intl.string(C.t.usQh4O),
               icons: _.J6,
               onDrop: (e) => {
-                  if (I) return !1;
+                  if (P) return !1;
                   A &&
                       null != x &&
                       ((0, g.d)(e, x, v, {
@@ -52,8 +52,8 @@ let x = function (e) {
               },
               onDragClear: () => O(!0),
               onDragOver: (e) => {
-                  if (I) return !1;
-                  S || e.shiftKey !== j || O(!e.shiftKey);
+                  if (P) return !1;
+                  Z || e.shiftKey !== j || O(!e.shiftKey);
               }
           });
 };

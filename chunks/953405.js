@@ -10,7 +10,7 @@ var r = n(200651),
 function d(e) {
     var t;
     let { orbPrice: n, isProductDisabled: l, hasSufficientOrbs: o } = e,
-        d = l ? c.NW.string(c.t.wu4gyc) : c.NW.string(c.t.eFNRzc),
+        d = l ? c.intl.string(c.t.wu4gyc) : c.intl.string(c.t.eFNRzc),
         m = l || !o;
     return (0, r.jsxs)('div', {
         className: u.priceLine,

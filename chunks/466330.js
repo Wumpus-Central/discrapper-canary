@@ -44,7 +44,7 @@ function O(e) {
     return p ? f : g;
 }
 function f(e, t) {
-    return (0, o.jW)({ location: 'invite_menu_item' }).entrypoints ? ((null != t && [s.t4x.GUILD_HEADER, s.t4x.GUILD_CONTEXT_MENU].includes(t)) || null == e ? b.NW.string(b.t.Sd8Ix8) : e.type === s.d4z.GUILD_VOICE ? b.NW.string(b.t['EE+P0N']) : b.NW.string(b.t['0jeAXl'])) : b.NW.string(b.t.BN75l5);
+    return (0, o.jW)({ location: 'invite_menu_item' }).entrypoints ? ((null != t && [s.t4x.GUILD_HEADER, s.t4x.GUILD_CONTEXT_MENU].includes(t)) || null == e ? b.intl.string(b.t.Sd8Ix8) : e.type === s.d4z.GUILD_VOICE ? b.intl.string(b.t['EE+P0N']) : b.intl.string(b.t['0jeAXl'])) : b.intl.string(b.t.BN75l5);
 }
 let d = (e, t, i) => {
         if (null == t) return null;

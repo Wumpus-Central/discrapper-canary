@@ -2,9 +2,9 @@ n.d(t, { Z: () => l }), n(539854);
 var r = n(192379),
     o = n(823379),
     a = n(267642),
-    s = n(535396),
-    c = n(680278),
-    i = n(388032);
+    i = n(535396),
+    s = n(680278),
+    c = n(388032);
 function l(e) {
     let {
         includeEmojis: t,
@@ -19,12 +19,12 @@ function l(e) {
           };
     return r.useMemo(() => {
         let r = [],
-            u = (0, s.d5)();
+            u = (0, i.d5)();
         return (
             t &&
                 r.push({
                     perkIcon: a.Ro.EMOJI,
-                    description: i.NW.formatToPlainString(c.Z.NXvV09, {
+                    description: c.intl.formatToPlainString(s.default.NXvV09, {
                         totalEmojis: e.features.total_emoji_slots,
                         additionalEmojis: e.features.additional_emoji_slots
                     })
@@ -32,7 +32,7 @@ function l(e) {
             n &&
                 r.push({
                     perkIcon: a.Ro.STICKER,
-                    description: i.NW.formatToPlainString(c.Z.ZEvvPz, {
+                    description: c.intl.formatToPlainString(s.default.ZEvvPz, {
                         totalStickers: e.features.total_sticker_slots,
                         additionalStickers: e.features.additional_sticker_slots
                     })
@@ -40,7 +40,7 @@ function l(e) {
             l &&
                 r.push({
                     perkIcon: a.Ro.SOUNDBOARD,
-                    description: i.NW.formatToPlainString(c.Z['s9u/Ex'], {
+                    description: c.intl.formatToPlainString(s.default['s9u/Ex'], {
                         totalSoundboards: e.features.total_sound_slots,
                         additionalSoundboards: e.features.additional_sound_slots
                     })

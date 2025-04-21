@@ -34,7 +34,7 @@ let s = (e) => {
         })({}, e)),
         (n = n =
             {
-                'aria-label': l.NW.string(l.t.cpT0Cg),
+                'aria-label': l.intl.string(l.t.cpT0Cg),
                 look: i.zxk.Looks.BLANK,
                 size: i.zxk.Sizes.NONE,
                 wrapperClassName: o.closeButton,

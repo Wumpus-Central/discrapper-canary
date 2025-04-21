@@ -1,15 +1,15 @@
 n.d(t, { E: () => u });
 var r = n(200651),
     i = n(192379),
-    s = n(442837),
-    l = n(481060),
+    l = n(442837),
+    s = n(481060),
     a = n(456268),
     o = n(526429),
     c = n(128449),
     d = n(388032);
 function u(e) {
     let { guildId: t, guildMetadata: n, isDisabled: u, clearable: m = !0 } = e,
-        g = (0, s.Wu)([o.Z], () => o.Z.getPrimaryCategories()),
+        g = (0, l.Wu)([o.Z], () => o.Z.getPrimaryCategories()),
         p = i.useCallback(
             (e) => {
                 (0, a.TA)(t, null != e ? e : c.o3);
@@ -28,12 +28,12 @@ function u(e) {
             [g]
         );
     return 0 === g.length
-        ? (0, r.jsx)(l.$jN, {})
+        ? (0, r.jsx)(s.$jN, {})
         : (0, r.jsx)(
-              l.VcW,
+              s.VcW,
               {
                   value: n.primaryCategoryId === c.o3 ? null : n.primaryCategoryId,
-                  placeholder: d.NW.string(d.t.XqMe3N),
+                  placeholder: d.intl.string(d.t.XqMe3N),
                   options: h,
                   onChange: p,
                   isDisabled: u,

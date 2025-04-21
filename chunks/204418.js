@@ -57,7 +57,7 @@ let u = o.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
                     src: g,
                     size: d,
                     status: l,
-                    'aria-label': f ? void 0 : s.NW.string(s.t.lqaIxM),
+                    'aria-label': f ? void 0 : s.intl.string(s.t.lqaIxM),
                     'aria-hidden': f,
                     className: _
                 },

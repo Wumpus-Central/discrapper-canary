@@ -5,7 +5,7 @@ n.r(t),
         AnalyticsSchema: () => d,
         addExtraAnalyticsDecorator: () => k,
         clearAnalyticsEventsRecording: () => X,
-        debugLogEvent: () => W,
+        debugLogEvent: () => Y,
         default: () => er,
         expandEventProperties: () => H,
         expandLocation: () => U,
@@ -107,8 +107,8 @@ function O(e, t) {
 let I = { location: {} },
     S = r.createContext(I),
     T = {},
-    N = 10000,
-    A = 60000,
+    A = 10000,
+    N = 60000,
     C = 120000,
     R = 300000,
     P = 900000,
@@ -154,7 +154,7 @@ let j = {
         throttleKeys: (e) => [e.server]
     },
     [p.rMx.ACTIVITY_UPDATED]: {
-        throttlePeriod: A,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.application_id],
         deduplicate: !0
     },
@@ -190,7 +190,7 @@ let j = {
         }
     },
     [p.rMx.QUICKSWITCHER_OPENED]: {
-        throttlePeriod: N,
+        throttlePeriod: A,
         throttleKeys: () => []
     },
     [p.rMx.CHAT_INPUT_COMPONENT_VIEWED]: {
@@ -240,11 +240,11 @@ let j = {
         throttleKeys: (e) => [e.banner_type, e.channel_id]
     },
     [p.rMx.PREMIUM_UPSELL_VIEWED]: {
-        throttlePeriod: A,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.type]
     },
     [p.rMx.FORUM_CHANNEL_SEARCHED]: {
-        throttlePeriod: A,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.guild_id, e.channel_id]
     },
     [p.rMx.FORUM_CHANNEL_SCROLLED]: {
@@ -252,11 +252,11 @@ let j = {
         throttleKeys: (e) => [e.guild_id, e.channel_id]
     },
     [p.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED]: {
-        throttlePeriod: A,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.user_id]
     },
     [p.rMx.MEDIA_VIEWER_SESSION_COMPLETED]: {
-        throttlePeriod: A,
+        throttlePeriod: N,
         throttleKeys: () => []
     },
     [p.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
@@ -284,7 +284,7 @@ let j = {
         throttleKeys: (e) => [e.guild_id]
     },
     [p.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: {
-        throttlePeriod: A,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.guild_id, e.channel_id]
     },
     [p.rMx.LIVE_ACTIVITY_SETTINGS_UPDATED]: {
@@ -328,7 +328,7 @@ let j = {
     [p.rMx.OPEN_MODAL]: (e) =>
         e.type === p.jXE.MEDIA_VIEWER
             ? {
-                  throttlePeriod: A,
+                  throttlePeriod: N,
                   throttleKeys: (e) => [e.type]
               }
             : void 0
@@ -378,23 +378,23 @@ function H(e) {
         let { source: e } = a;
         a = E({}, v(a, ['source']), G(e));
     }
-    (a.client_performance_cpu = f.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = f.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = f.Z.getCPUCoreCount()), (a.accessibility_features = B()), (a.rendered_locale = m.NW.currentLocale), (a.uptime_app = Math.floor((performance.now() - x) / 1000));
+    (a.client_performance_cpu = f.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = f.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = f.Z.getCPUCoreCount()), (a.accessibility_features = B()), (a.rendered_locale = m.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - x) / 1000));
     let o = f.Z.getProcessUptime();
     null != o && (a.uptime_process_renderer = Math.floor(o));
     let { utmSource: s, utmMedium: l, utmCampaign: c, utmContent: u } = T;
     return (a.utm_source = null != (t = a.utm_source) ? t : s), (a.utm_medium = null != (n = a.utm_medium) ? n : l), (a.utm_campaign = null != (r = a.utm_campaign) ? r : c), (a.utm_content = null != (i = a.utm_content) ? i : u), M.forEach((e) => e(a)), a;
 }
-function W(e, t) {
+function Y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     u.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? l.Hj('Analytics', e, t) : l.Hj('Analytics', e);
 }
-let Y = !1,
+let W = !1,
     K = {};
 function z() {
-    Y = !0;
+    W = !0;
 }
 function q() {
-    Y = !1;
+    W = !1;
 }
 function Q() {
     return K;
@@ -405,7 +405,7 @@ function X() {
     });
 }
 function J(e, t) {
-    return !!Y && (null != t && (Array.isArray(K[e]) ? K[e].push(t) : (K[e] = [t])), !0);
+    return !!W && (null != t && (Array.isArray(K[e]) ? K[e].push(t) : (K[e] = [t])), !0);
 }
 function $(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
@@ -422,7 +422,7 @@ function $(e, t) {
         return Promise.resolve();
     let i = H(t);
     return (
-        W(r, i, n.logEventProperties),
+        Y(r, i, n.logEventProperties),
         V(e, i, {
             flush: n.flush,
             fingerprint: n.fingerprint
@@ -436,7 +436,7 @@ let ee = (0, a.trackMaker)({
 });
 function et(e, t) {
     let n = H(E({ location: (0, s.k$)() }, t));
-    (0, s.dT)(e, E({ type: 'action' }, t)), W(e, n), ee(e, n);
+    (0, s.dT)(e, E({ type: 'action' }, t)), Y(e, n), ee(e, n);
 }
 function en() {
     return (0, i.Z)();

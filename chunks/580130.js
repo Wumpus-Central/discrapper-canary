@@ -34,10 +34,10 @@ let m = {},
     I = new Set(),
     S = new Set(),
     T = {};
-function N() {
+function A() {
     (m = {}), (E = {}), (b = {}), (y = !1), (v = !1), (O = !1), (I = new Set()), (S = new Set());
 }
-function A(e) {
+function N(e) {
     (m[e.id] = c.Z.createFromServer(e)), null == E[e.sku_id] && (E[e.sku_id] = new Set()), null == b[e.application_id] && (b[e.application_id] = new Set()), null != e.subscription_id && (null == T[e.subscription_id] && (T[e.subscription_id] = new Set()), T[e.subscription_id].add(e.id)), b[e.application_id].add(e.id), E[e.sku_id].add(e.id);
 }
 function C(e) {
@@ -59,7 +59,7 @@ function P(e) {
 }
 function w(e) {
     let { applicationId: t, entitlements: n } = e;
-    for (let e of (I.delete(t), S.add(t), n)) !0 !== e.consumed && A(e);
+    for (let e of (I.delete(t), S.add(t), n)) !0 !== e.consumed && N(e);
 }
 function D(e) {
     let { entitlements: t } = e;
@@ -71,21 +71,21 @@ function x() {
 }
 function M(e) {
     let { entitlements: t, excludeEnded: n } = e;
-    for (let e of ((v = !0), (y = !1), (O = !n), t)) A(e);
+    for (let e of ((v = !0), (y = !1), (O = !n), t)) N(e);
 }
 function k() {
     (v = !1), (y = !1), (O = !1);
 }
 function j(e) {
     let { entitlements: t } = e;
-    for (let e of t) A(e);
+    for (let e of t) N(e);
 }
 function U(e) {
     let { libraryApplications: t } = e;
-    for (let e of t) if (null != e.entitlements) for (let t of e.entitlements) A(t);
+    for (let e of t) if (null != e.entitlements) for (let t of e.entitlements) N(t);
 }
 function G(e) {
-    return A(e.entitlement);
+    return N(e.entitlement);
 }
 function B(e) {
     return R(e.entitlement);
@@ -205,7 +205,7 @@ let V = new F(l.Z, {
     ENTITLEMENT_CREATE: G,
     ENTITLEMENT_UPDATE: G,
     ENTITLEMENT_DELETE: B,
-    LOGOUT: N,
+    LOGOUT: A,
     ENTITLEMENTS_FETCH_FOR_USER_START: x,
     ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
     ENTITLEMENTS_FETCH_FOR_USER_FAIL: k

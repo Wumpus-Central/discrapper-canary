@@ -29,10 +29,10 @@ function m(e) {
     if (f !== a.JS.LEAVE) {
         let e = m instanceof s.ZP ? m.embeddedActivityConfig : m.embedded_activity_config,
             n = (0, o.Z)((0, u.getOS)());
-        null == e || e.supported_platforms.includes(n) ? (null == h ? void 0 : h.isThread()) && ((y = !0), (t = p.NW.string(p.t.ddSR3t))) : ((y = !1), (t = p.NW.string(p.t.z2YTgI)));
+        null == e || e.supported_platforms.includes(n) ? (null == h ? void 0 : h.isThread()) && ((y = !0), (t = p.intl.string(p.t.ddSR3t))) : ((y = !1), (t = p.intl.string(p.t.z2YTgI)));
     }
     return (
-        y && null == t && (t = p.NW.string(p.t.f41E1t)),
+        y && null == t && (t = p.intl.string(p.t.f41E1t)),
         {
             disabled: y,
             reason: t

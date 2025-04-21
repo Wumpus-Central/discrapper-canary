@@ -1,8 +1,8 @@
 n.d(t, { h: () => h });
 var r = n(200651),
     i = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     a = n(442837),
     o = n(481060),
     c = n(496675),
@@ -12,36 +12,36 @@ var r = n(200651),
     g = n(388032),
     p = n(109303);
 function h(e) {
-    let { activeType: t, onTypePicked: n, guild: s } = e,
-        h = s.hasFeature(m.oNc.COMMUNITY),
-        f = (0, a.e7)([c.Z], () => c.Z.can(m.Plq.ADMINISTRATOR, s)),
+    let { activeType: t, onTypePicked: n, guild: l } = e,
+        h = l.hasFeature(m.oNc.COMMUNITY),
+        f = (0, a.e7)([c.Z], () => c.Z.can(m.Plq.ADMINISTRATOR, l)),
         x = i.useMemo(() => {
             let e = t === u.A.DISCOVERABLE && !f,
                 n = h && (t === u.A.DISCOVERABLE || f);
             return [
                 {
                     id: u.A.INVITE,
-                    title: g.NW.string(g.t['HQVS/P']),
-                    body: g.NW.string(g.t.KzXzFR),
+                    title: g.intl.string(g.t['HQVS/P']),
+                    body: g.intl.string(g.t.KzXzFR),
                     icon: o.mBM,
                     enabled: !e,
-                    ineligibleText: g.NW.string(g.t.LIZgwM)
+                    ineligibleText: g.intl.string(g.t.LIZgwM)
                 },
                 {
                     id: u.A.APPLY,
-                    title: g.NW.string(g.t.LrFEYW),
-                    body: g.NW.string(g.t.kJj2oK),
+                    title: g.intl.string(g.t.LrFEYW),
+                    body: g.intl.string(g.t.kJj2oK),
                     icon: o._XJ,
                     enabled: !e,
-                    ineligibleText: g.NW.string(g.t.LIZgwM)
+                    ineligibleText: g.intl.string(g.t.LIZgwM)
                 },
                 {
                     id: u.A.DISCOVERABLE,
-                    title: g.NW.string(g.t.lhOHLy),
-                    body: g.NW.string(g.t.pqQylZ),
+                    title: g.intl.string(g.t.lhOHLy),
+                    body: g.intl.string(g.t.pqQylZ),
                     icon: o.enf,
                     enabled: n,
-                    ineligibleText: h ? g.NW.string(g.t.iBpXPj) : g.NW.string(g.t['5TQ+eH'])
+                    ineligibleText: h ? g.intl.string(g.t.iBpXPj) : g.intl.string(g.t['5TQ+eH'])
                 }
             ];
         }, [t, h, f]);
@@ -50,13 +50,13 @@ function h(e) {
             (0, r.jsx)(o.X6q, {
                 color: 'header-primary',
                 variant: 'text-md/semibold',
-                children: g.NW.string(g.t['N+GnPz'])
+                children: g.intl.string(g.t['N+GnPz'])
             }),
             (0, r.jsx)(o.Text, {
                 color: 'text-secondary',
                 variant: 'text-sm/medium',
                 className: p.bodyText,
-                children: g.NW.format(g.t['Y/jYws'], { helpdeskArticle: d.Z.getArticleURL(m.BhN.MEMBER_APPLICATIONS) })
+                children: g.intl.format(g.t['Y/jYws'], { helpdeskArticle: d.Z.getArticleURL(m.BhN.MEMBER_APPLICATIONS) })
             }),
             (0, r.jsx)(o.njP, {
                 selectedItem: t,
@@ -83,7 +83,7 @@ function h(e) {
                                 className: p.tooltipContainer,
                                 tooltipClassName: p.tooltip,
                                 children: (0, r.jsxs)('div', {
-                                    className: l()(p.joinOptionContent, {
+                                    className: s()(p.joinOptionContent, {
                                         [p.active]: n,
                                         [p.uninteractive]: !e.enabled
                                     }),

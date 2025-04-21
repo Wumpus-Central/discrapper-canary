@@ -3,14 +3,14 @@ n.d(t, {
     M$: () => f,
     NE: () => c,
     NO: () => u,
-    Oq: () => A,
+    Oq: () => N,
     RF: () => v,
     Un: () => y,
     X: () => m,
     YW: () => d,
     ae: () => O,
     b3: () => p,
-    cf: () => N,
+    cf: () => A,
     dr: () => S,
     fY: () => g,
     iU: () => l,
@@ -74,7 +74,7 @@ function v(e) {
 function O() {
     return {
         id: String(Date.now()),
-        title: a.NW.string(a.t.vY91Cw),
+        title: a.intl.string(a.t.vY91Cw),
         options: [],
         singleSelect: !1,
         required: !1,
@@ -140,7 +140,7 @@ function T(e) {
         type: e.type
     };
 }
-function N(e) {
+function A(e) {
     var t, n, r;
     return {
         prompts: e.prompts.map(T),
@@ -153,6 +153,6 @@ function N(e) {
         belowRequirements: e.below_requirements
     };
 }
-function A(e) {
+function N(e) {
     return null == e || (null == e.id && null == e.name);
 }

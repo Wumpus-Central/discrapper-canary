@@ -2,12 +2,12 @@ n.d(t, {
     T: () => o,
     v: () => a
 });
-var r = n(442837),
-    i = n(355298),
+var i = n(442837),
+    r = n(355298),
     l = n(333984);
 function a(e) {
-    return (0, r.e7)([i.Z], () => i.Z.isMessageRequest(e), [e]);
+    return (0, i.e7)([r.Z], () => r.Z.isMessageRequest(e), [e]);
 }
 function o(e) {
-    return (0, r.e7)([i.Z, l.Z], () => null != e && (i.Z.isMessageRequest(e) || l.Z.isSpam(e)));
+    return (0, i.e7)([r.Z, l.Z], () => null != e && (r.Z.isMessageRequest(e) || l.Z.isSpam(e)));
 }

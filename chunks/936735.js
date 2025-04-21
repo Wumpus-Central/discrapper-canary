@@ -1,8 +1,8 @@
 n.d(t, { k: () => m });
 var r = n(200651),
     i = n(192379),
-    s = n(772848),
-    l = n(442837),
+    l = n(772848),
+    s = n(442837),
     a = n(339085),
     o = n(231053),
     c = n(183023),
@@ -11,7 +11,7 @@ var r = n(200651),
 function m(e) {
     let { guild: t, discoverableGuild: n } = e,
         m = null == t ? void 0 : t.id,
-        { memberCount: g, onlineCount: p } = (0, l.cj)(
+        { memberCount: g, onlineCount: p } = (0, s.cj)(
             [d.Z],
             () => {
                 var e, t;
@@ -22,7 +22,7 @@ function m(e) {
             },
             [m]
         ),
-        h = i.useRef((0, s.Z)()),
+        h = i.useRef((0, l.Z)()),
         f = i.useMemo(() => {
             var e, r;
             if (null != n) return o.JO.createFromDiscoverableGuild(n);

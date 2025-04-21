@@ -3,8 +3,8 @@ var i,
     r = n(192379),
     s = n(392711),
     o = n.n(s),
-    a = n(374470),
-    l = n(902704),
+    l = n(374470),
+    a = n(902704),
     c = n(846519),
     d = n(13245),
     u = n(808506),
@@ -38,7 +38,7 @@ function O(e, t) {
     if (null == t) _.delete(e), 0 === _.size && (window.removeEventListener('mousemove', v), (y = !1));
     else {
         let n = _.get(e);
-        if (null != n && (0, l.Z)(n.zone, t.zone)) return;
+        if (null != n && (0, a.Z)(n.zone, t.zone)) return;
         0 === _.size && window.addEventListener('mousemove', v), _.set(e, t);
     }
     if (f.isPlatformEmbedded)
@@ -102,7 +102,7 @@ class x extends (i = r.PureComponent) {
             g(this, 'interval', new c.Xp()),
             g(this, 'updateZone', () => {
                 let e = this.props.contentDomRef.current;
-                if ((0, a.k)(e)) {
+                if ((0, l.k)(e)) {
                     let { left: t, top: n, right: i, bottom: r } = e.getBoundingClientRect();
                     O(this.zone, {
                         instance: this,

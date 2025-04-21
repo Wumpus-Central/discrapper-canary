@@ -15,7 +15,7 @@ function f(e) {
         b = (0, s.ZP)(E);
     if (h && m) return null;
     let y = (null == n ? void 0 : n.name) === '' ? null : null == n ? void 0 : n.name,
-        v = null != y ? d.NW.format(d.t['0wJXSk'], { name: y }) : d.NW.string(d.t.eXan7O);
+        v = null != y ? d.intl.format(d.t['0wJXSk'], { name: y }) : d.intl.string(d.t.eXan7O);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !h &&

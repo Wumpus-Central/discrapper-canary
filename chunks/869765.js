@@ -156,7 +156,7 @@ function T(e) {
     let { message: t } = e;
     return !!d.Z.getMessages(t.channel_id).ready && y(t);
 }
-function N(e) {
+function A(e) {
     let { messageId: t, channelId: n } = e;
     if (!b.has(n, t)) return !1;
     let r = b.get(n, t);
@@ -166,7 +166,7 @@ function N(e) {
         message: (0, l.Cm)(r.message)
     });
 }
-function A(e) {
+function N(e) {
     let { message: t } = e,
         n = t.id,
         r = t.channel_id;
@@ -244,10 +244,10 @@ let U = new j(s.Z, {
     MOD_VIEW_SEARCH_FINISH: S,
     LOAD_THREADS_SUCCESS: M,
     LOAD_ARCHIVED_THREADS_SUCCESS: M,
-    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: N,
+    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: A,
     LOAD_FORUM_POSTS: k,
     MESSAGE_CREATE: T,
-    MESSAGE_UPDATE: A,
+    MESSAGE_UPDATE: N,
     MESSAGE_DELETE: w,
     MESSAGE_DELETE_BULK: D,
     CREATE_PENDING_REPLY: L,

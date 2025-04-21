@@ -192,12 +192,12 @@ function* _(e) {
         I = null != (r = null == (t = b.path) ? void 0 : t[0]) ? r : 0,
         S = null != (i = null == (n = y.path) ? void 0 : n[0]) ? i : v.length - 1,
         T = m ? S : I,
-        N = m ? I : S,
-        A = T;
+        A = m ? I : S,
+        N = T;
     for (;;) {
-        let t = v[A],
-            n = null != (u = A === I ? (null == (o = b.path) ? void 0 : o[1]) : null) ? u : 0,
-            r = null != (d = A === S ? (null == (l = y.path) ? void 0 : l[1]) : null) ? d : t.children.length - 1,
+        let t = v[N],
+            n = null != (u = N === I ? (null == (o = b.path) ? void 0 : o[1]) : null) ? u : 0,
+            r = null != (d = N === S ? (null == (l = y.path) ? void 0 : l[1]) : null) ? d : t.children.length - 1,
             i = m ? r : n,
             p = m ? n : r,
             h = i;
@@ -205,7 +205,7 @@ function* _(e) {
             let n,
                 r,
                 i = t.children[h],
-                o = [A, h];
+                o = [N, h];
             if (((n = a.C0.equals(o, b.path) || a.C0.isAncestor(o, b.path) ? (!m && a.bN.isEnd(e, b, o) ? null : b) : a.bN.start(e, o)), (r = a.C0.equals(o, y.path) || a.C0.isAncestor(o, y.path) ? (m && a.bN.isStart(e, y, o) ? null : y) : a.bN.end(e, o)), null != n && null != r))
                 if (a.LC.isText(i) && 0 === i.text.length) {
                     let e = {
@@ -229,7 +229,7 @@ function* _(e) {
             if (h === p) break;
             h += O;
         }
-        if (A === N) break;
-        A += O;
+        if (N === A) break;
+        N += O;
     }
 }

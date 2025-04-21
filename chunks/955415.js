@@ -23,7 +23,7 @@ let y = (e) => {
             children: [t, n]
         });
     },
-    N = (e) => {
+    O = (e) => {
         let { resolving: t, children: n } = e;
         return (0, l.jsx)('div', {
             className: b.content,
@@ -44,27 +44,27 @@ let y = (e) => {
                 : n
         });
     },
-    O = (e) => {
+    N = (e) => {
         var t;
         let { application: n, guild: r, channel: s, onClick: u, expired: d = !1, user: v, className: g } = e,
             j = null != (t = (0, c.ZP)(s)) ? t : '',
             y = f.QK.useSetting();
         if (d) return (0, l.jsx)('div', { className: b.guildIconExpired });
-        let N = null == r || null != r.icon,
-            O = a()((0, h.l)(b, 'guildIcon', N ? 'Image' : '', null != u ? 'Joined' : ''), g);
+        let O = null == r || null != r.icon,
+            N = a()((0, h.l)(b, 'guildIcon', O ? 'Image' : '', null != u ? 'Joined' : ''), g);
         return null != n
             ? (0, l.jsx)(p.Z, {
                   game: n,
                   onClick: u,
                   size: b.applicationIcon,
-                  className: O
+                  className: N
               })
             : null != r
               ? (0, l.jsx)(m.Z, {
                     onClick: u,
                     active: !0,
                     guild: r,
-                    className: O,
+                    className: N,
                     animate: y
                 })
               : null != s
@@ -72,7 +72,7 @@ let y = (e) => {
                       onClick: u,
                       src: (0, o.x)(s),
                       size: i.EFr.SIZE_56,
-                      className: O,
+                      className: N,
                       'aria-label': j
                   })
                 : null != v
@@ -80,7 +80,7 @@ let y = (e) => {
                         onClick: u,
                         src: v.getAvatarURL(null, 56),
                         size: i.EFr.SIZE_56,
-                        className: O,
+                        className: N,
                         'aria-label': j
                     })
                   : null;
@@ -127,7 +127,7 @@ let y = (e) => {
                                 (0, l.jsx)('i', { className: b.statusOnline }),
                                 (0, l.jsx)('span', {
                                     className: b.count,
-                                    children: j.NW.format(j.t['LC+S+v'], { membersOnline: t })
+                                    children: j.intl.format(j.t['LC+S+v'], { membersOnline: t })
                                 })
                             ]
                         },
@@ -144,7 +144,7 @@ let y = (e) => {
                                 (0, l.jsx)('i', { className: b.statusOffline }),
                                 (0, l.jsx)('span', {
                                     className: b.count,
-                                    children: j.NW.format(j.t.zRl6XV, { count: n })
+                                    children: j.intl.format(j.t.zRl6XV, { count: n })
                                 })
                             ]
                         },
@@ -306,5 +306,5 @@ let S = (e) => {
             })
         });
     };
-(S.Header = y), (S.Body = N), (S.Icon = O), (S.Info = x), (S.Data = E), (S.Channel = w), (S.Button = I), (S.GuildSplash = C), (S.GuildName = P), (S.GuildTemplateName = k), (y.displayName = 'InviteButton.Header'), (N.displayName = 'InviteButton.Body'), (O.displayName = 'InviteButton.Icon'), (x.displayName = 'InviteButton.Info'), (E.displayName = 'InviteButton.Data'), (w.displayName = 'InviteButton.Channel'), (I.displayName = 'InviteButton.Button'), (C.displayName = 'InviteButton.GuildSplash'), (P.displayName = 'InviteButton.GuildName'), (k.displayName = 'InviteButton.GuildTemplateName');
+(S.Header = y), (S.Body = O), (S.Icon = N), (S.Info = x), (S.Data = E), (S.Channel = w), (S.Button = I), (S.GuildSplash = C), (S.GuildName = P), (S.GuildTemplateName = k), (y.displayName = 'InviteButton.Header'), (O.displayName = 'InviteButton.Body'), (N.displayName = 'InviteButton.Icon'), (x.displayName = 'InviteButton.Info'), (E.displayName = 'InviteButton.Data'), (w.displayName = 'InviteButton.Channel'), (I.displayName = 'InviteButton.Button'), (C.displayName = 'InviteButton.GuildSplash'), (P.displayName = 'InviteButton.GuildName'), (k.displayName = 'InviteButton.GuildTemplateName');
 let B = S;

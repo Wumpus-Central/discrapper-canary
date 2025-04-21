@@ -8,7 +8,7 @@ var i = n(692547),
     s = n(538145);
 let c = () =>
     (0, r.jsx)(l.ua7, {
-        text: a.NW.string(a.t.GMZqSk),
+        text: a.intl.string(a.t.GMZqSk),
         children: (e) => {
             var t, n;
             return (0, r.jsx)(

@@ -3,9 +3,9 @@ var n = r(200651);
 r(192379);
 var i = r(692547),
     o = r(780384),
-    s = r(410030),
-    c = r(325767);
-function l(e) {
+    l = r(410030),
+    s = r(325767);
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -69,13 +69,13 @@ function d(e) {
             }
             return i;
         })(e, ['width', 'height', 'color']);
-    let C = (0, s.ZP)(),
+    let C = (0, l.ZP)(),
         p = (0, o.ap)(C);
     return (0, n.jsx)(
         'svg',
         a(
-            l(
-                a(l({}, (0, c.Z)(u)), {
+            c(
+                a(c({}, (0, s.Z)(u)), {
                     width: t,
                     height: r,
                     viewBox: '0 0 '.concat(t, ' ').concat(r),

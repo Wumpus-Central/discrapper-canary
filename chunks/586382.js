@@ -5,15 +5,15 @@ n.d(t, {
 });
 var r = n(200651),
     i = n(192379),
-    s = n(906732),
-    l = n(807582),
+    l = n(906732),
+    s = n(807582),
     a = n(949640),
     o = n(981631),
     c = n(30513),
     d = n(187561);
 function u(e) {
     let { guild: t, guildFeature: n, analyticsSection: o, analyticsObject: c, getPerks: u, targetPremiumGuildTier: m } = e,
-        { analyticsLocations: g } = (0, s.ZP)(),
+        { analyticsLocations: g } = (0, l.ZP)(),
         p = i.useCallback(
             (e) => {
                 e.preventDefault(),
@@ -29,7 +29,7 @@ function u(e) {
             },
             [g, c, o, t, u, m]
         );
-    return (0, r.jsx)(l.Z, {
+    return (0, r.jsx)(s.Z, {
         guild: t,
         guildFeature: n,
         className: d.guildFeatureAvailabilityIndicator,

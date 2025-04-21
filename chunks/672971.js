@@ -55,8 +55,8 @@ class b extends i.Component {
         return (null == e.eulaId || t.hasAcceptedEULA) && (!e.showWithdrawalWaiver || t.hasAcceptedWithdrawalWaiver);
     }
     render() {
-        let { eulaId: e, applicationName: t, hasPreviouslyAcceptedEULA: i, forceShow: a, disabled: s, className: c, checkboxClassname: d, checkboxLabelClassname: g, finePrint: b, showPricingLink: y, showWithdrawalWaiver: v, isTrial: O, inReverseTrial: I, isDiscount: S, subscriptionPlan: T, finePrintClassname: N } = this.props,
-            { hasAcceptedEULA: A, hasAcceptedWithdrawalWaiver: C } = this.state;
+        let { eulaId: e, applicationName: t, hasPreviouslyAcceptedEULA: i, forceShow: a, disabled: s, className: c, checkboxClassname: d, checkboxLabelClassname: g, finePrint: b, showPricingLink: y, showWithdrawalWaiver: v, isTrial: O, inReverseTrial: I, isDiscount: S, subscriptionPlan: T, finePrintClassname: A } = this.props,
+            { hasAcceptedEULA: N, hasAcceptedWithdrawalWaiver: C } = this.state;
         return (l()(!O || null != T, 'subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true'), a || (null != e && !i) || v)
             ? (0, r.jsxs)('div', {
                   className: c,
@@ -64,18 +64,18 @@ class b extends i.Component {
                       v &&
                           (0, r.jsx)(u.vwX, {
                               className: m.formTitle,
-                              children: h.NW.string(h.t.Ogvn5u)
+                              children: h.intl.string(h.t.Ogvn5u)
                           }),
                       null != e && (a || !i)
                           ? (0, r.jsx)(u.XZJ, {
                                 type: u.XZJ.Types.INVERTED,
-                                value: A,
+                                value: N,
                                 onChange: this.handleToggleEULAAcceptance,
                                 disabled: s,
                                 className: m.checkbox,
                                 children: (0, r.jsx)('div', {
                                     className: m.checkboxLabel,
-                                    children: h.NW.format(h.t.IodJKS, {
+                                    children: h.intl.format(h.t.IodJKS, {
                                         applicationName: t,
                                         onClick: (t) => {
                                             (0, u.ZDy)(async () => {
@@ -91,7 +91,7 @@ class b extends i.Component {
                       null == b
                           ? null
                           : (0, r.jsx)('div', {
-                                className: o()(m.finePrint, N),
+                                className: o()(m.finePrint, A),
                                 children: b
                             }),
                       v
@@ -106,12 +106,12 @@ class b extends i.Component {
                                         className: o()(m.checkbox, d),
                                         children: (0, r.jsx)('div', {
                                             className: o()(m.checkboxLabel, g),
-                                            children: h.NW.string(h.t.DFCVNz)
+                                            children: h.intl.string(h.t.DFCVNz)
                                         })
                                     }),
                                     (0, r.jsx)('div', {
                                         className: m.finePrint,
-                                        children: h.NW.string(h.t.jhu6zs)
+                                        children: h.intl.string(h.t.jhu6zs)
                                     })
                                 ]
                             })
@@ -119,14 +119,14 @@ class b extends i.Component {
                       y &&
                           (0, r.jsxs)('div', {
                               className: m.finePrint,
-                              children: ['*', h.NW.format(h.t['5zmY3N'], { documentationLink: f.Z.getArticleURL(p.BhN.LOCALIZED_PRICING) })]
+                              children: ['*', h.intl.format(h.t['5zmY3N'], { documentationLink: f.Z.getArticleURL(p.BhN.LOCALIZED_PRICING) })]
                           }),
                       O &&
                           null != T &&
                           (0, r.jsx)(u.Text, {
                               variant: 'text-xs/medium',
                               color: 'interactive-normal',
-                              children: h.NW.format(h.t['Hvo/Z2'], {
+                              children: h.intl.format(h.t['Hvo/Z2'], {
                                   buttonText: (0, _.W_)(null, T),
                                   interval: _.ZP.formatInterval(null == T ? void 0 : T.interval),
                                   cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
@@ -138,7 +138,7 @@ class b extends i.Component {
                           (0, r.jsx)(u.Text, {
                               variant: 'text-xs/medium',
                               color: 'interactive-normal',
-                              children: h.NW.format(h.t.Oo2FeX, {
+                              children: h.intl.format(h.t.Oo2FeX, {
                                   buttonText: (0, _.W_)(null, T),
                                   interval: _.ZP.formatInterval(null == T ? void 0 : T.interval),
                                   cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
@@ -150,7 +150,7 @@ class b extends i.Component {
                           (0, r.jsx)(u.Text, {
                               variant: 'text-xs/medium',
                               color: 'interactive-normal',
-                              children: h.NW.format(h.t['Z2c+aW'], {
+                              children: h.intl.format(h.t['Z2c+aW'], {
                                   buttonText: (0, _.W_)(null, T),
                                   interval: _.ZP.formatInterval(null == T ? void 0 : T.interval),
                                   cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),

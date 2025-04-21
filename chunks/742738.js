@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => N });
 var r,
     i = n(348327),
     a = n.n(i),
@@ -43,9 +43,9 @@ function O() {
     let I = (0, h.Lw)(y, u),
         S = (null == v || null == (e = v.party) ? void 0 : e.id) === I ? v : null,
         T = _.Z.getMutableParticipants(y.id, p.pV.SPEAKER),
-        N = T.filter((e) => e.type === p.Ui.STREAM).length,
-        A = T.length - N,
-        C = _.Z.getParticipantCount(s) - N,
+        A = T.filter((e) => e.type === p.Ui.STREAM).length,
+        N = T.length - A,
+        C = _.Z.getParticipantCount(s) - A,
         R = (null == S || null == (t = S.party) ? void 0 : t.size) != null ? S.party.size[1] : 0;
     return {
         application_id: E.gD,
@@ -58,7 +58,7 @@ function O() {
         },
         party: {
             id: I,
-            size: [A, Math.max(C, R)]
+            size: [N, Math.max(C, R)]
         }
     };
 }
@@ -78,7 +78,7 @@ function T(e) {
         a = null != (r = null == v || null == (n = v.party) || null == (t = n.size) ? void 0 : t[1]) ? r : 0;
     return i === b.hes.RTC_CONNECTED && !(a > 0) && I();
 }
-class N extends (r = o.ZP.Store) {
+class A extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(l.Z, d.Z, m.Z, u.Z);
     }
@@ -86,8 +86,8 @@ class N extends (r = o.ZP.Store) {
         return v;
     }
 }
-y(N, 'displayName', 'StageChannelSelfRichPresenceStore');
-let A = new N(s.Z, {
+y(A, 'displayName', 'StageChannelSelfRichPresenceStore');
+let N = new A(s.Z, {
     CONNECTION_OPEN: I,
     STAGE_INSTANCE_CREATE: I,
     STAGE_INSTANCE_UPDATE: I,

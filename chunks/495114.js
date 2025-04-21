@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var r = n(200651);
 n(192379);
 var i = n(325767);
-function a(e) {
+function l(e) {
     var t,
         n,
-        { width: a = 14, height: l = 18, color: o = 'currentColor' } = e,
+        { width: l = 14, height: a = 18, color: o = 'currentColor' } = e,
         s = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -15,13 +15,13 @@ function a(e) {
                     var n,
                         r,
                         i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ['width', 'height', 'color']);
@@ -54,8 +54,8 @@ function a(e) {
         })({}, (0, i.Z)(s))),
         (n = n =
             {
-                width: a,
-                height: l,
+                width: l,
+                height: a,
                 viewBox: '0 0 10 14',
                 fill: 'none',
                 children: (0, r.jsx)('path', {

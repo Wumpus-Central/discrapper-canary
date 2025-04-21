@@ -1,8 +1,8 @@
-n.d(t, { M: () => i });
+n.d(t, { M: () => a });
 var r = n(192379),
-    a = n(660384);
-function i() {
-    let e = r.useRef(new a.Z()),
+    i = n(660384);
+function a() {
+    let e = r.useRef(new i.Z()),
         t = r.useCallback((t) => {
             e.current.handleScroll(t);
         }, []);

@@ -1,52 +1,52 @@
-t.d(s, { Z: () => o }), t(953529);
-var n = t(200651);
-t(192379);
-var r = t(481060),
-    a = t(388032),
-    l = t(652297);
-function o(e) {
-    let { email: s, onClose: t } = e;
+s.d(t, { Z: () => a }), s(953529);
+var n = s(200651);
+s(192379);
+var r = s(481060),
+    l = s(388032),
+    i = s(652297);
+function a(e) {
+    let { email: t, onClose: s } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(r.xBx, {
                 separator: !1,
-                className: l.header,
+                className: i.header,
                 children: [
                     (0, n.jsx)(r.X6q, {
-                        className: l.title,
+                        className: i.title,
                         variant: 'heading-xl/semibold',
-                        children: a.NW.string(a.t['8O+nFx'])
+                        children: l.intl.string(l.t['8O+nFx'])
                     }),
                     (0, n.jsx)(r.olH, {
-                        onClick: t,
-                        className: l.modalCloseButton
+                        onClick: s,
+                        className: i.modalCloseButton
                     })
                 ]
             }),
             (0, n.jsx)(r.hzk, {
-                className: l.content,
+                className: i.content,
                 children: (0, n.jsx)(r.Text, {
-                    className: l.description,
+                    className: i.description,
                     variant: 'text-md/normal',
-                    children: a.NW.format(a.t.Zvx0Oz, { email: s })
+                    children: l.intl.format(l.t.Zvx0Oz, { email: t })
                 })
             }),
             (0, n.jsx)(r.hzk, {
-                className: l.content,
+                className: i.content,
                 children: (0, n.jsx)(r.Text, {
-                    className: l.tooltip,
+                    className: i.tooltip,
                     variant: 'text-sm/normal',
-                    children: a.NW.string(a.t.yb7itb)
+                    children: l.intl.string(l.t.yb7itb)
                 })
             }),
             (0, n.jsx)(r.mzw, {
-                className: l.modalFooter,
+                className: i.modalFooter,
                 children: (0, n.jsx)(r.zxk, {
-                    className: l.__invalid_submit,
+                    className: i.__invalid_submit,
                     color: r.zxk.Colors.BRAND,
                     size: r.zxk.Sizes.MEDIUM,
-                    onClick: t,
-                    children: a.NW.string(a.t.BddRzc)
+                    onClick: s,
+                    children: l.intl.string(l.t.BddRzc)
                 })
             })
         ]

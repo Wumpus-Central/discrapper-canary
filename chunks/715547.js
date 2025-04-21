@@ -10,7 +10,7 @@ function l(e) {
         l = (0, i.Z)(t);
     return (0, a.Z)(t) && null != l
         ? (0, r.jsx)(o.tG, {
-              text: s.NW.string(s.t['I6JG4+']),
+              text: s.intl.string(s.t['I6JG4+']),
               fullWidth: !0,
               onClick: (e) => (e.stopPropagation(), null == n || n({ action: 'PRESS_WATCH_BUTTON' }), window.open(l))
           })

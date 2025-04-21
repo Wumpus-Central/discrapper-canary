@@ -75,7 +75,7 @@ function S(e, t) {
             var e, t;
             return y && Object.values(null != (t = null == (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) ? void 0 : e.gifs) ? t : {}).length <= 2;
         }),
-        [T, N, A] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
+        [T, A, N] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
         C = i.useRef(0),
         R = i.useCallback(() => {
             O(!0),
@@ -94,9 +94,9 @@ function S(e, t) {
         { Component: w, events: D, play: L } = (0, c.V)(),
         x = (0, d.Q3)('ChannelGIFPickerButton');
     if (n) return null;
-    let M = T === g.X1.GIF && N === a;
+    let M = T === g.X1.GIF && A === a;
     return (0, r.jsx)(u.ua7, {
-        text: S ? E.NW.string(E.t.mE2e8P) : null,
+        text: S ? E.intl.string(E.t.mE2e8P) : null,
         forceOpen: !0,
         children: (e) =>
             (0, r.jsx)(
@@ -119,10 +119,10 @@ function S(e, t) {
                             },
                             isActive: M,
                             pulse: y,
-                            'aria-label': E.NW.string(E.t.PtVpk5),
+                            'aria-label': E.intl.string(E.t.PtVpk5),
                             'aria-expanded': M,
                             'aria-haspopup': 'dialog',
-                            'aria-controls': A,
+                            'aria-controls': N,
                             children: (0, r.jsx)(w, {
                                 size: x ? 'refresh_sm' : void 0,
                                 color: 'currentColor'

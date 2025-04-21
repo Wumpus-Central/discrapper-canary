@@ -46,7 +46,7 @@ let d = {
                           onHover: s,
                           onClick: c,
                           titleWithQuery: l.t['iO/jnJ'],
-                          titleWithoutQuery: l.NW.string(l.t['7II2Gx']),
+                          titleWithoutQuery: l.intl.string(l.t['7II2Gx']),
                           Component: a.ZP.Generic,
                           getProps: (e, t) => ({
                               key: t.toString(),
@@ -66,7 +66,7 @@ let d = {
                           onHover: s,
                           onClick: c,
                           titleWithQuery: l.t.pg0anJ,
-                          titleWithoutQuery: u.length > 0 ? l.NW.string(l.t.TpDXm5) : l.NW.string(l.t['+1H47u']),
+                          titleWithoutQuery: u.length > 0 ? l.intl.string(l.t.TpDXm5) : l.intl.string(l.t['+1H47u']),
                           Component: a.ZP.Generic,
                           getProps: (e, t) => ({
                               key: t.toString(),

@@ -21,15 +21,15 @@ var r = n(754675),
     I = '[object Uint8Array]',
     S = '[object Uint8ClampedArray]',
     T = '[object Uint16Array]',
-    N = '[object Uint32Array]';
+    A = '[object Uint32Array]';
 e.exports = function (e, t, n) {
-    var A = e.constructor;
+    var N = e.constructor;
     switch (t) {
         case m:
             return r(e);
         case l:
         case c:
-            return new A(+e);
+            return new N(+e);
         case g:
             return i(e, n);
         case E:
@@ -40,17 +40,17 @@ e.exports = function (e, t, n) {
         case I:
         case S:
         case T:
-        case N:
+        case A:
             return s(e, n);
         case u:
-            return new A();
+            return new N();
         case d:
         case p:
-            return new A(e);
+            return new N(e);
         case f:
             return a(e);
         case _:
-            return new A();
+            return new N();
         case h:
             return o(e);
     }

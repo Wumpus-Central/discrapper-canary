@@ -31,8 +31,8 @@ function x(e) {
             wrap: !0
         }),
         O = d.length,
-        N = 0 === O ? j.NW.string(j.t['vR7M+/']) : j.NW.formatToPlainString(j.t.PCs0oq, { numRoles: O }),
-        P = d.map((e) => {
+        P = 0 === O ? j.intl.string(j.t['vR7M+/']) : j.intl.formatToPlainString(j.t.PCs0oq, { numRoles: O }),
+        E = d.map((e) => {
             var o;
             return (0, r.jsx)(
                 h.Z,
@@ -101,7 +101,7 @@ function x(e) {
                     })(
                         {
                             className: v.root,
-                            'aria-label': N,
+                            'aria-label': P,
                             ref: o
                         },
                         i
@@ -109,7 +109,7 @@ function x(e) {
                     (t = t =
                         {
                             children: [
-                                P,
+                                E,
                                 g &&
                                     (0, r.jsx)(y.Z, {
                                         buttonRef: x,
@@ -161,7 +161,7 @@ function _(e) {
         ),
         Z = b.e9(i, t.id),
         [O] = (0, c.Wu)([p.Z], () => [p.Z.can(I.Plq.MANAGE_ROLES, i), null != i ? p.Z.getGuildVersion(i.id) : null]),
-        N = o.useCallback(
+        P = o.useCallback(
             (e) => {
                 var t, r;
                 s({ action: 'REMOVE_ROLE' });
@@ -170,7 +170,7 @@ function _(e) {
             },
             [v, i.id, n.id, s]
         ),
-        P = o.useCallback(
+        E = o.useCallback(
             (e) => {
                 s({ action: 'ADD_ROLE' });
                 let t = null != v ? v : [];
@@ -178,10 +178,10 @@ function _(e) {
             },
             [v, i.id, n.id, s]
         ),
-        E = O && null != h;
-    return 0 !== _.length || E
+        S = O && null != h;
+    return 0 !== _.length || S
         ? (0, r.jsx)(g.Z, {
-              heading: j.NW.string(j.t.LPJmLy),
+              heading: j.intl.string(j.t.LPJmLy),
               scrollIntoView: l,
               children: (0, r.jsx)(x, {
                   user: n,
@@ -191,8 +191,8 @@ function _(e) {
                   roles: _,
                   highestRole: Z,
                   canManageRoles: O,
-                  onAddRole: P,
-                  onRemoveRole: N
+                  onAddRole: E,
+                  onRemoveRole: P
               })
           })
         : null;

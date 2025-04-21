@@ -104,7 +104,7 @@ let m = (e) => {
                           target: h,
                           rel: f,
                           className: n,
-                          'aria-label': c.NW.string(c.t['1WjMbG']),
+                          'aria-label': c.intl.string(c.t['1WjMbG']),
                           focusProps: E
                       },
                       y
@@ -122,7 +122,7 @@ let m = (e) => {
                           target: h,
                           rel: f,
                           className: n,
-                          'aria-label': c.NW.string(c.t['1WjMbG']),
+                          'aria-label': c.intl.string(c.t['1WjMbG']),
                           focusProps: E
                       },
                       y

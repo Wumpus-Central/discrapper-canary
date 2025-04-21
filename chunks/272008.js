@@ -4,7 +4,7 @@ n.d(t, {
     CS: () => v,
     EW: () => L,
     OR: () => x,
-    QB: () => N,
+    QB: () => A,
     T0: () => D,
     Wf: () => P,
     cT: () => U,
@@ -15,7 +15,7 @@ n.d(t, {
     lL: () => G,
     m0: () => S,
     nE: () => R,
-    pf: () => A,
+    pf: () => N,
     qm: () => k,
     w: () => j,
     xw: () => I
@@ -64,13 +64,13 @@ async function v(e) {
                 errorHints: [
                     {
                         type: _.HW.RATE_LIMITED,
-                        message: b.NW.string(b.t['Whhv4+']),
+                        message: b.intl.string(b.t['Whhv4+']),
                         connected_account_id: '',
                         connected_account_type: ''
                     }
                 ]
             };
-        let t = null != (n = e.getAnyErrorMessage()) ? n : b.NW.string(b.t.xSCvBQ);
+        let t = null != (n = e.getAnyErrorMessage()) ? n : b.intl.string(b.t.xSCvBQ);
         return {
             errorHints: [
                 {
@@ -192,7 +192,7 @@ async function T(e, t) {
         }
     }
 }
-async function N(e, t, n) {
+async function A(e, t, n) {
     if (!f.Z.isClaimingReward(e)) {
         a.Z.dispatch({
             type: 'QUESTS_CLAIM_REWARD_BEGIN',
@@ -234,7 +234,7 @@ async function N(e, t, n) {
         }
     }
 }
-async function A(e) {
+async function N(e) {
     if (!f.Z.isFetchingRewardCode(e)) {
         a.Z.dispatch({
             type: 'QUESTS_FETCH_REWARD_CODE_BEGIN',

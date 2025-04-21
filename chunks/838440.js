@@ -47,12 +47,12 @@ function g(e, t) {
             o.default,
             m(
                 {
-                    title: p.NW.string(p.t.l8rYLi),
-                    body: p.NW.formatToPlainString(p.t.FfjF19, {
+                    title: p.intl.string(p.t.l8rYLi),
+                    body: p.intl.formatToPlainString(p.t.FfjF19, {
                         currentLength: e,
                         maxLength: t
                     }),
-                    confirmText: p.NW.string(p.t.BddRzc)
+                    confirmText: p.intl.string(p.t.BddRzc)
                 },
                 n
             )
@@ -118,9 +118,9 @@ function E(e) {
                     o.default,
                     m(
                         {
-                            title: p.NW.string(p.t['7Q4eo6']),
-                            body: p.NW.string(p.t.gi6XHh),
-                            confirmText: p.NW.string(p.t.Z4U1g4)
+                            title: p.intl.string(p.t['7Q4eo6']),
+                            body: p.intl.string(p.t.gi6XHh),
+                            confirmText: p.intl.string(p.t.Z4U1g4)
                         },
                         e
                     )

@@ -1,44 +1,44 @@
-t.d(a, { default: () => i });
-var c = t(200651);
-t(192379);
-var o = t(481060),
-    s = t(388032),
-    n = t(625273),
-    r = t(829863);
+a.d(t, { default: () => i });
+var c = a(200651);
+a(192379);
+var o = a(481060),
+    n = a(388032),
+    s = a(625273),
+    r = a(829863);
 function i(e) {
-    let { transitionState: a, onClose: t } = e;
+    let { transitionState: t, onClose: a } = e;
     return (0, c.jsxs)(o.Y0X, {
-        transitionState: a,
+        transitionState: t,
         size: o.CgR.SMALL,
-        className: n.container,
+        className: s.container,
         children: [
             (0, c.jsx)('div', {
-                className: n.modalImageWrapper,
+                className: s.modalImageWrapper,
                 children: (0, c.jsx)('img', {
                     alt: '',
                     src: r.Z,
-                    className: n.modalImage
+                    className: s.modalImage
                 })
             }),
             (0, c.jsxs)(o.hzk, {
-                className: n.content,
+                className: s.content,
                 children: [
                     (0, c.jsx)(o.X6q, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
-                        className: n.title,
-                        children: s.NW.string(s.t['R/FLOD'])
+                        className: s.title,
+                        children: n.intl.string(n.t['R/FLOD'])
                     }),
                     (0, c.jsx)(o.Text, {
                         variant: 'text-md/medium',
                         color: 'text-normal',
-                        children: s.NW.string(s.t.WF95xs)
+                        children: n.intl.string(n.t.WF95xs)
                     })
                 ]
             }),
             (0, c.jsx)(o.mzw, {
                 children: (0, c.jsxs)('div', {
-                    className: n.footer,
+                    className: s.footer,
                     children: [
                         (0, c.jsx)(o.zxk, {
                             look: o.zxk.Looks.LINK,
@@ -46,15 +46,15 @@ function i(e) {
                             onClick: () => {
                                 (0, o.pTH)();
                             },
-                            children: s.NW.string(s.t.cpT0Cg)
+                            children: n.intl.string(n.t.cpT0Cg)
                         }),
                         (0, c.jsx)(o.zxk, {
                             look: o.zxk.Looks.FILLED,
                             color: o.zxk.Colors.BRAND,
                             onClick: () => {
-                                t();
+                                a();
                             },
-                            children: s.NW.string(s.t['7NqTJi'])
+                            children: n.intl.string(n.t['7NqTJi'])
                         })
                     ]
                 })

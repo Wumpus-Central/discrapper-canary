@@ -22,14 +22,14 @@ var r = n(200651),
     I = n(780748),
     S = n(464581),
     T = n(732659),
-    N = n(86724),
-    A = n(847302),
+    A = n(86724),
+    N = n(847302),
     C = n(657198),
     R = n(321127),
     P = n(981631),
     w = n(117335);
 let D = i.forwardRef(function (e, t) {
-    let { value: n, type: a, channel: D, className: L, id: x, disabled: M, submitting: k, placeholder: j, required: U, textAreaPaddingClassName: G, onChange: B, onPaste: F, onResize: V, onFocus: Z, onBlur: H, onKeyDown: W, onKeyUp: Y, onTab: K, onEnter: z, onSubmit: q, maybeShowAutocomplete: Q, hideAutocomplete: X, moveSelection: J, spellcheckEnabled: $, canUseCommands: ee, canOnlyUseTextCommands: et, disableAutoFocus: en, disableEnterToSubmit: er, allowNewLines: ei, 'aria-owns': ea, 'aria-expanded': eo, 'aria-haspopup': es, 'aria-activedescendant': el, 'aria-controls': ec, 'aria-invalid': eu, 'aria-describedby': ed, 'aria-labelledby': ef, 'aria-autocomplete': e_ } = e,
+    let { value: n, type: a, channel: D, className: L, id: x, disabled: M, submitting: k, placeholder: j, required: U, textAreaPaddingClassName: G, onChange: B, onPaste: F, onResize: V, onFocus: Z, onBlur: H, onKeyDown: Y, onKeyUp: W, onTab: K, onEnter: z, onSubmit: q, maybeShowAutocomplete: Q, hideAutocomplete: X, moveSelection: J, spellcheckEnabled: $, canUseCommands: ee, canOnlyUseTextCommands: et, disableAutoFocus: en, disableEnterToSubmit: er, allowNewLines: ei, 'aria-owns': ea, 'aria-expanded': eo, 'aria-haspopup': es, 'aria-activedescendant': el, 'aria-controls': ec, 'aria-invalid': eu, 'aria-describedby': ed, 'aria-labelledby': ef, 'aria-autocomplete': e_ } = e,
         ep = i.useRef(null),
         eh = i.useRef(null),
         em = i.useRef(!0),
@@ -45,11 +45,11 @@ let D = i.forwardRef(function (e, t) {
                 if (void 0 !== i && i !== o) {
                     if (((e.children = i), 'parent' === t && !e.previewMarkdown && e.chatInputType === _.Ie.EDIT)) {
                         try {
-                            (e.previewMarkdown = !0), (0, A.KH)(e, D.guild_id, D.id);
+                            (e.previewMarkdown = !0), (0, N.KH)(e, D.guild_id, D.id);
                         } finally {
                             e.previewMarkdown = !1;
                         }
-                        (0, A.KH)(e, D.guild_id, D.id), (a = void 0);
+                        (0, N.KH)(e, D.guild_id, D.id), (a = void 0);
                     }
                     'undo' !== t && void 0 !== i && i !== o && h.T.insertEntry(e, 'other', !1, o, s), (l = !0);
                 }
@@ -71,7 +71,7 @@ let D = i.forwardRef(function (e, t) {
                     (null != d &&
                         d[0].command.id !== (null == (r = c.Z.getActiveCommand(D.id)) ? void 0 : r.id) &&
                         h.T.withMergedEntry(e, () => {
-                            (0, N.L)(e, D.id, null, !0);
+                            (0, A.L)(e, D.id, null, !0);
                         }),
                     l)
                 )
@@ -153,12 +153,12 @@ let D = i.forwardRef(function (e, t) {
                 );
         }, [D.id, eO, q, eI, ee]);
     (0, O.Z)(t, eO, D, eS), (0, T.Z)(eO, ep, V);
-    let { handleKeyDown: eT, handleKeyUp: eN } = (0, I.Z)({
+    let { handleKeyDown: eT, handleKeyUp: eA } = (0, I.Z)({
             editor: eO,
             channel: D,
             disableEnterToSubmit: er,
-            onKeyDown: W,
-            onKeyUp: Y,
+            onKeyDown: Y,
+            onKeyUp: W,
             onTab: K,
             onEnter: z,
             allowNewLines: ei,
@@ -166,7 +166,7 @@ let D = i.forwardRef(function (e, t) {
             hideAutocomplete: X,
             moveSelection: J
         }),
-        { handlePaste: eA, handleGlobalPaste: eC } = (0, S.Z)(eO, eE, F),
+        { handlePaste: eN, handleGlobalPaste: eC } = (0, S.Z)(eO, eE, F),
         eR = i.useCallback(
             (e) => {
                 null == Q || Q();
@@ -217,9 +217,9 @@ let D = i.forwardRef(function (e, t) {
                     onFocus: Z,
                     onBlur: H,
                     onClick: eR,
-                    onPaste: eA,
+                    onPaste: eN,
                     onKeyDown: eT,
-                    onKeyUp: eN,
+                    onKeyUp: eA,
                     decorateExtra: ew,
                     renderExtraElement: eD,
                     renderExtraLeaf: eL,

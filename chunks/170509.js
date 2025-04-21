@@ -58,9 +58,9 @@ function a(e) {
             return e;
         })(
             {
-                header: o.NW.string(o.t.YWMtRU),
-                confirmText: o.NW.string(o.t.eW8Gy8),
-                cancelText: o.NW.string(o.t.s4uM3d),
+                header: o.intl.string(o.t.YWMtRU),
+                confirmText: o.intl.string(o.t.eW8Gy8),
+                cancelText: o.intl.string(o.t.s4uM3d),
                 confirmButtonColor: i.zxk.Colors.BRAND
             },
             u
@@ -71,7 +71,7 @@ function a(e) {
                     variant: 'text-md/normal',
                     className: s.message,
                     selectable: !1,
-                    children: o.NW.format(o.t['iKW+jY'], {
+                    children: o.intl.format(o.t['iKW+jY'], {
                         channelName: d,
                         categoryName: h
                     })

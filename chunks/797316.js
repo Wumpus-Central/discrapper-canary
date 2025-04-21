@@ -40,7 +40,7 @@ let T = new c.ZP((e) => {
         subscriptions: e
     });
 });
-function N(e, t) {
+function A(e, t) {
     let n = {};
     T.forEach((i) => {
         var a;
@@ -52,7 +52,7 @@ function N(e, t) {
                 subscriptions: n
             });
 }
-function A(e, t) {
+function N(e, t) {
     return T.subscribeToGuild(e), null != t && p.ZP.getSection(t) === I.ULH.MEMBERS && C(e, t, c.KV);
 }
 function C(e, t, n) {
@@ -64,9 +64,9 @@ function C(e, t, n) {
 }
 function R(e) {
     let { type: t } = e;
-    'CONNECTION_OPEN' === t && N(!0, !1);
+    'CONNECTION_OPEN' === t && A(!0, !1);
     let n = O.Z.getGuildId();
-    null != n && A(n, v.Z.getChannelId(n));
+    null != n && N(n, v.Z.getChannelId(n));
     let r = {};
     T.forEach((e) => {
         null == E.Z.getGuild(e) ? T.clearWithoutFlushing(e, !0) : (r[e] = T.get(e));
@@ -78,12 +78,12 @@ function R(e) {
             });
 }
 function P() {
-    N(!1, !1);
+    A(!1, !1);
 }
 function w(e) {
     let { idle: t } = e;
     if (!t) return !1;
-    N(!1, !0);
+    A(!1, !0);
 }
 function D() {
     T.reset();
@@ -132,24 +132,24 @@ function B(e) {
 }
 function F(e) {
     let { guildId: t, channelId: n } = e;
-    return A(t, n);
+    return N(t, n);
 }
 function V(e) {
     let { guildId: t, channelId: n } = e;
-    return !m.Z.isUnavailable(t) && A(t, n);
+    return !m.Z.isUnavailable(t) && N(t, n);
 }
 function Z() {
-    return A(O.Z.getGuildId(), v.Z.getChannelId());
+    return N(O.Z.getGuildId(), v.Z.getChannelId());
 }
 function H(e) {
     let { channel: t } = e;
     return t.isArchivedThread() ? T.unsubscribeThreadMemberList(t.guild_id, t.id) : !!t.isActiveThread() && v.Z.getChannelId() === t.id && void T.subscribeThreadMemberList(t.guild_id, t.id, v.Z.getChannelId());
 }
-function W(e) {
+function Y(e) {
     let { channel: t } = e;
     return T.unsubscribeThreadMemberList(t.guild_id, t.id);
 }
-function Y() {
+function W() {
     let e = d.Z.getSyncingWith();
     if (null == e) null != r && (T.unsubscribeUser(r.guildId, r.userId), (r = null));
     else {
@@ -173,7 +173,7 @@ function K(e) {
 }
 class z extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, E.Z, O.Z, v.Z, b.Z, f.default, p.ZP, u.Z), this.syncWith([d.Z], Y), this.syncWith([p.ZP], Z);
+        this.waitFor(h.Z, E.Z, O.Z, v.Z, b.Z, f.default, p.ZP, u.Z), this.syncWith([d.Z], W), this.syncWith([p.ZP], Z);
     }
     getSubscribedThreadIds() {
         return T.getSubscribedThreadIds();
@@ -212,6 +212,6 @@ let q = new z(l.Z, {
     CHANNEL_PRELOAD: F,
     INBOX_OPEN: K,
     THREAD_UPDATE: H,
-    THREAD_DELETE: W,
+    THREAD_DELETE: Y,
     THREAD_LIST_SYNC: Z
 });

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => l });
-var i = n(481060),
-    r = n(374129),
-    d = n(639351),
-    a = n(927923);
-function l(e) {
-    return null != e ? (0, i.GSL)(e === a.YE.XBOX ? d.Z : r.Z) : i.U5H;
+e.d(n, { Z: () => a });
+var i = e(481060),
+    l = e(374129),
+    r = e(639351),
+    d = e(927923);
+function a(t) {
+    return null != t ? (0, i.GSL)(t === d.YE.XBOX ? r.Z : l.Z) : i.U5H;
 }

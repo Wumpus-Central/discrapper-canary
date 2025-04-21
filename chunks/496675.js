@@ -34,20 +34,20 @@ function T(e, t, n) {
         e
     );
 }
-let N = {},
-    A = {},
+let A = {},
+    N = {},
     C = {},
     R = 0;
 function P(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = N[e];
+        n = A[e];
     if (null != n) return n;
     let r = O.default.getCurrentUser();
     if (null == r) return E.Hn;
     let i = v.Z.getGuild(e);
     return null == i
         ? E.Hn
-        : (N[e] = E.uB({
+        : (A[e] = E.uB({
               user: r,
               context: i,
               checkElevated: t
@@ -72,8 +72,8 @@ function w(e) {
 }
 function D(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = A[e];
-    return null != n ? n : (A[e] = w(e, t));
+        n = N[e];
+    return null != n ? n : (N[e] = w(e, t));
 }
 function L(e) {
     if (null != e) {
@@ -82,7 +82,7 @@ function L(e) {
     }
 }
 function x() {
-    for (let e in ((N = {}), (A = {}), C)) C[e] += 1;
+    for (let e in ((A = {}), (N = {}), C)) C[e] += 1;
     R += 1;
 }
 function M() {
@@ -111,8 +111,8 @@ function G(e) {
             user: r,
             context: n
         });
-    if (A[n.id] === i) return !1;
-    (A[n.id] = i), (R += 1), L(n.getGuildId());
+    if (N[n.id] === i) return !1;
+    (N[n.id] = i), (R += 1), L(n.getGuildId());
 }
 function B(e) {
     let { channels: t } = e,
@@ -125,7 +125,7 @@ function B(e) {
                 user: r,
                 context: t
             });
-        A[t.id] !== i && ((A[t.id] = i), L(t.getGuildId()), (n = !0));
+        N[t.id] !== i && ((N[t.id] = i), L(t.getGuildId()), (n = !0));
     }
     return !!n && ((R += 1), n);
 }
@@ -143,20 +143,20 @@ function H(e) {
     let { messages: t } = e;
     return t.some((e) => null != e.thread);
 }
-function W(e) {
+function Y(e) {
     let { messages: t, threads: n } = e;
     return n.length > 0 || t.some((e) => e.some((e) => null != e.thread));
 }
-function Y(e) {
+function W(e) {
     let { channel: t } = e;
-    return delete A[t.id], (R += 1), L(t.guild_id), !1;
+    return delete N[t.id], (R += 1), L(t.guild_id), !1;
 }
 function K(e) {
     let { guildId: t } = e;
-    delete N[t];
+    delete A[t];
     let n = b.Z.getMutableBasicGuildChannelsForGuild(t);
     a().forEach(n, (e) => {
-        delete A[e.id];
+        delete N[e.id];
     }),
         (R += 1),
         L(t);
@@ -170,15 +170,15 @@ function z(e) {
             user: r,
             context: n
         });
-    if (i === A[n.id]) return !1;
-    (A[n.id] = i), (R += 1);
+    if (i === N[n.id]) return !1;
+    (N[n.id] = i), (R += 1);
 }
 function q(e) {
     let { guildId: t } = e;
-    delete N[t];
+    delete A[t];
     let n = b.Z.getMutableBasicGuildChannelsForGuild(t);
     a().forEach(n, (e) => {
-        delete A[e.id];
+        delete N[e.id];
     }),
         (R += 1),
         L(t);
@@ -288,7 +288,7 @@ class X extends (r = s.ZP.Store) {
     }
 }
 function J() {
-    (A = {}), (N = {}), (C = {}), (R = 0);
+    (N = {}), (A = {}), (C = {}), (R = 0);
 }
 T(X, 'displayName', 'PermissionStore');
 let $ = new X(l.Z, {
@@ -312,11 +312,11 @@ let $ = new X(l.Z, {
     LOAD_ARCHIVED_THREADS_SUCCESS: F,
     CHANNEL_UPDATES: B,
     LOAD_MESSAGES_SUCCESS: H,
-    SEARCH_FINISH: W,
-    MOD_VIEW_SEARCH_FINISH: W,
+    SEARCH_FINISH: Y,
+    MOD_VIEW_SEARCH_FINISH: Y,
     THREAD_MEMBER_UPDATE: V,
     THREAD_MEMBERS_UPDATE: Z,
-    CHANNEL_DELETE: Y,
+    CHANNEL_DELETE: W,
     GUILD_ROLE_CREATE: K,
     GUILD_ROLE_UPDATE: K,
     GUILD_ROLE_DELETE: K,

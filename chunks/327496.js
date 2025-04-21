@@ -95,25 +95,25 @@ let y = (e) => {
     let t, n;
     var { backgroundStyle: a = 'always', children: d, icon: _, name: m, ariaLabel: g, className: y, style: v, to: O, onClick: I, selected: S = !1 } = e,
         T = h(e, ['backgroundStyle', 'children', 'icon', 'name', 'ariaLabel', 'className', 'style', 'to', 'onClick', 'selected']);
-    let N = (0, s.k6)();
+    let A = (0, s.k6)();
     null == _ && null != m && (n = E((t = (0, c.Zg)(m))));
-    let A = i.useCallback(
+    let N = i.useCallback(
             (e) => {
                 if (null == O);
-                else if ('string' == typeof O) N.push(O);
+                else if ('string' == typeof O) A.push(O);
                 else {
                     let { pathname: e = '', state: t } = O;
-                    N.push(e, t);
+                    A.push(e, t);
                 }
                 null != I && I(e);
             },
-            [N, O, I]
+            [A, O, I]
         ),
         C = (0, l.dQu)(l.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, r.jsxs)(
         l.P3F,
         p(f({}, T), {
-            onClick: A,
+            onClick: N,
             className: o()(y, u.wrapper, { [u.selected]: S }),
             style: p(f({}, v), { fontSize: n }),
             focusProps: { enabled: !1 },

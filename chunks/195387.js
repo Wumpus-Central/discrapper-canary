@@ -26,7 +26,7 @@ function g(e) {
               action: 'PRESS_MOD_VIEW',
               icon: a.HI3,
               shouldShowTooltip: y,
-              tooltipText: m.NW.string(m.t.kj3tz8),
+              tooltipText: m.intl.string(m.t.kj3tz8),
               onClick: () => {
                   u.Z.close(),
                       (0, o.i)(b),

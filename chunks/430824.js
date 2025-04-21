@@ -98,10 +98,10 @@ function S(e) {
 function T(e) {
     for (let t of ((y = {}), (b = {}), (r = 0), e)) r++, (y[t.id] = c.cL(t)), (b[t.id] = t.roles);
 }
-function N(e) {
+function A(e) {
     T(e.guilds);
 }
-function A(e) {
+function N(e) {
     if (0 === e.guilds.length) return !1;
     T(e.guilds);
 }
@@ -209,8 +209,8 @@ let G = new U(s.Z, {
     BACKGROUND_SYNC: S,
     CONNECTION_OPEN: I,
     OVERLAY_INITIALIZE: C,
-    CACHE_LOADED: N,
-    CACHE_LOADED_LAZY: A,
+    CACHE_LOADED: A,
+    CACHE_LOADED_LAZY: N,
     GUILD_CREATE: R,
     GUILD_UPDATE: P,
     GUILD_DELETE: D,

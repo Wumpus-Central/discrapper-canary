@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(990547),
-    s = n(481060),
-    l = n(213609),
+    l = n(481060),
+    s = n(213609),
     a = n(605288),
     o = n(787051),
     c = n(346163),
@@ -23,20 +23,20 @@ function b(e) {
         i = (e) => {
             let { children: t } = e;
             return (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(s.$i$, { className: x.sectionDivider }), t]
+                children: [(0, r.jsx)(l.$i$, { className: x.sectionDivider }), t]
             });
         },
-        l = (0, r.jsx)(i, { children: (0, r.jsx)(p.Z, {}) }, f.q.HOW_IT_WORKS),
+        s = (0, r.jsx)(i, { children: (0, r.jsx)(p.Z, {}) }, f.q.HOW_IT_WORKS),
         a = (0, r.jsx)(i, { children: (0, r.jsx)(m.Z, {}) }, f.q.BENEFITS);
     return null != n || (null == t ? void 0 : t.sections) == null
         ? (0, r.jsxs)(r.Fragment, {
-              children: [l, a]
+              children: [s, a]
           })
         : (0, r.jsx)(r.Fragment, {
               children: t.sections.map((e) => {
                   switch (e.type) {
                       case f.q.HOW_IT_WORKS:
-                          return l;
+                          return s;
                       case f.q.BENEFITS:
                           return a;
                       case f.q.OTHER_CREATORS:
@@ -50,8 +50,8 @@ function j(e) {
         n = (0, c.Z)(t),
         { eligibilityLoading: m, eligibilityError: g, eligibility: p } = n,
         f = (0, a.j)(p),
-        { isLoading: j, error: N, creatorMonetizationOnboardingMarketing: _ } = (0, o.Z)(t.id);
-    return ((0, l.Z)(
+        { isLoading: j, error: _, creatorMonetizationOnboardingMarketing: v } = (0, o.Z)(t.id);
+    return ((0, s.Z)(
         {
             type: i.ImpressionTypes.PANE,
             name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_ACCEPT_TERMS_LANDING,
@@ -65,7 +65,7 @@ function j(e) {
         { disableTrack: null == t.id || null == p }
     ),
     m || null == p || j)
-        ? (0, r.jsx)(s.$jN, {})
+        ? (0, r.jsx)(l.$jN, {})
         : p.actionRequired
           ? (0, r.jsx)(h.Z, { guild: t })
           : null != g
@@ -78,8 +78,8 @@ function j(e) {
                           monetizationEligibility: n
                       }),
                       (0, r.jsx)(b, {
-                          onboardingMarketing: _,
-                          onboardingMarketingError: N
+                          onboardingMarketing: v,
+                          onboardingMarketingError: _
                       })
                   ]
               });

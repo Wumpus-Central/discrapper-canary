@@ -54,7 +54,7 @@ function h(e) {
             }),
             l &&
                 (0, r.jsx)(s.B1, {
-                    label: d.NW.string(d.t['/I8zmJ']),
+                    label: d.intl.string(d.t['/I8zmJ']),
                     value: (0, c.T4)(n.tax, n.currency),
                     className: f.subscriptionCostRow
                 }),
@@ -63,7 +63,7 @@ function h(e) {
                     children: [
                         (0, r.jsx)(s.UN, {}),
                         (0, r.jsx)(s.az, {
-                            label: d.NW.format(d.t['+B5KfH'], {}),
+                            label: d.intl.format(d.t['+B5KfH'], {}),
                             value: (0, c.T4)(n.amount, n.currency),
                             className: f.subscriptionCostRow
                         })

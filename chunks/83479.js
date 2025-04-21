@@ -7,10 +7,10 @@ let s = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (t) {
             var n;
-            return l.NW.formatToPlainString(l.t['/0Yndn'], { num: null == (n = e.bundledProducts) ? void 0 : n.length });
+            return l.intl.formatToPlainString(l.t['/0Yndn'], { num: null == (n = e.bundledProducts) ? void 0 : n.length });
         }
         let [r, i] = null != e.bundledProducts ? e.bundledProducts : [];
-        return l.NW.formatToPlainString(l.t.WQbNhI, {
+        return l.intl.formatToPlainString(l.t.WQbNhI, {
             decoName: r.name,
             pfxName: i.name
         });
@@ -23,11 +23,11 @@ let s = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         switch (null == e ? void 0 : e.type) {
             case i.Z.AVATAR_DECORATION:
-                return l.NW.string(l.t['3lv7q6']);
+                return l.intl.string(l.t['3lv7q6']);
             case i.Z.PROFILE_EFFECT:
-                return l.NW.string(l.t['VhJL7+']);
+                return l.intl.string(l.t['VhJL7+']);
             case i.Z.NAMEPLATE:
-                return l.NW.string(l.t.ik37ER);
+                return l.intl.string(l.t.ik37ER);
             case i.Z.BUNDLE:
                 return s(e, t);
             default:

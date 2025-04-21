@@ -1,96 +1,96 @@
 n.d(e, { default: () => h }), n(388685), n(415506), n(953529);
-var o = n(200651),
-    s = n(192379),
-    r = n(481060),
-    i = n(726542),
-    a = n(600164),
-    c = n(823985),
-    l = n(202120),
+var i = n(200651),
+    o = n(192379),
+    s = n(481060),
+    l = n(726542),
+    r = n(600164),
+    a = n(823985),
+    c = n(202120),
     d = n(388032),
     u = n(712694);
 function h(t) {
     var e, n;
     let { onClose: h, transitionState: x, location: f, successRedirect: m, platformType: p } = t,
-        [N, j] = s.useState(''),
-        [k, _] = s.useState(null),
-        [b, g] = s.useState(!1),
-        S = null != (n = null == (e = i.Z.get(p)) ? void 0 : e.name) ? n : d.NW.string(d.t['bU/GZm']),
+        [j, k] = o.useState(''),
+        [_, b] = o.useState(null),
+        [g, N] = o.useState(!1),
+        S = null != (n = null == (e = l.Z.get(p)) ? void 0 : e.name) ? n : d.intl.string(d.t['bU/GZm']),
         v = async () => {
-            g(!0), _(null);
+            N(!0), b(null);
             try {
-                let t = await (0, l.H)(p, {
+                let t = await (0, c.H)(p, {
                     location: f,
                     successRedirect: m,
-                    handle: N
+                    handle: j
                 });
                 if (null == t) throw Error();
                 h();
             } catch (t) {
-                _(d.NW.string(d.t['7wbPNj'])), g(!1);
+                b(d.intl.string(d.t['7wbPNj'])), N(!1);
             }
         },
-        B = (0, c.r)(p),
-        T = (0, c.j)(N, p);
-    return (0, o.jsxs)(r.Y0X, {
+        B = (0, a.r)(p),
+        T = (0, a.j)(j, p);
+    return (0, i.jsxs)(s.Y0X, {
         transitionState: x,
         className: u.__invalid_modal,
         children: [
-            (0, o.jsxs)(r.xBx, {
-                direction: a.Z.Direction.VERTICAL,
+            (0, i.jsxs)(s.xBx, {
+                direction: r.Z.Direction.VERTICAL,
                 className: u.header,
                 separator: !1,
                 children: [
-                    (0, o.jsx)(r.X6q, {
+                    (0, i.jsx)(s.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: d.NW.formatToPlainString(d.t.ImMhq6, { serviceName: S })
+                        children: d.intl.formatToPlainString(d.t.ImMhq6, { serviceName: S })
                     }),
-                    (0, o.jsx)(r.olH, {
+                    (0, i.jsx)(s.olH, {
                         className: u.closeButton,
                         onClick: h
                     })
                 ]
             }),
-            (0, o.jsxs)('form', {
+            (0, i.jsxs)('form', {
                 onSubmit: (t) => {
                     t.preventDefault(), v();
                 },
                 children: [
-                    (0, o.jsxs)(r.hzk, {
+                    (0, i.jsxs)(s.hzk, {
                         className: u.content,
                         children: [
-                            (0, o.jsx)(r.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-md/normal',
                                 color: 'header-secondary',
                                 className: u.description,
-                                children: d.NW.formatToPlainString(d.t['7TByKi'], { serviceName: S })
+                                children: d.intl.formatToPlainString(d.t['7TByKi'], { serviceName: S })
                             }),
-                            (0, o.jsx)(r.xJW, {
-                                title: d.NW.string(d.t.tZ9QFR),
-                                error: k,
-                                children: (0, o.jsx)(r.oil, {
-                                    onChange: j,
+                            (0, i.jsx)(s.xJW, {
+                                title: d.intl.string(d.t.tZ9QFR),
+                                error: _,
+                                children: (0, i.jsx)(s.oil, {
+                                    onChange: k,
                                     placeholder: B,
-                                    value: N,
-                                    disabled: b,
+                                    value: j,
+                                    disabled: g,
                                     autoFocus: !0
                                 })
                             })
                         ]
                     }),
-                    (0, o.jsxs)(r.mzw, {
+                    (0, i.jsxs)(s.mzw, {
                         className: u.footer,
                         children: [
-                            (0, o.jsx)(r.zxk, {
+                            (0, i.jsx)(s.zxk, {
                                 type: 'submit',
-                                submitting: b,
+                                submitting: g,
                                 disabled: !T,
-                                children: d.NW.string(d.t.PDTjLC)
+                                children: d.intl.string(d.t.PDTjLC)
                             }),
-                            (0, o.jsx)(r.zxk, {
-                                look: r.zxk.Looks.LINK,
-                                color: r.zxk.Colors.PRIMARY,
+                            (0, i.jsx)(s.zxk, {
+                                look: s.zxk.Looks.LINK,
+                                color: s.zxk.Colors.PRIMARY,
                                 onClick: h,
-                                children: d.NW.string(d.t['ETE/oK'])
+                                children: d.intl.string(d.t['ETE/oK'])
                             })
                         ]
                     })

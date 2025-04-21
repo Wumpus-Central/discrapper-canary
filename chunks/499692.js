@@ -1,8 +1,8 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(200651),
-    a = n(192379),
-    i = n(120356),
-    l = n.n(i),
+    i = n(192379),
+    a = n(120356),
+    l = n.n(a),
     s = n(535655),
     o = n(973693),
     c = n(912370),
@@ -21,15 +21,15 @@ var r = n(200651),
     j = n(537833);
 let y = o.Y.APPLICATION_DIRECTORY;
 function I(e) {
-    let { collection: t, index: n, onSelectApplication: i } = e,
+    let { collection: t, index: n, onSelectApplication: a } = e,
         s = (function (e) {
             let { collectionId: t, index: n } = e,
-                [r, i] = a.useState(!1),
+                [r, a] = i.useState(!1),
                 l = (0, m.O)((e) => {
-                    e && i(!0);
+                    e && a(!0);
                 });
             return (
-                a.useEffect(() => {
+                i.useEffect(() => {
                     r &&
                         (0, f.zZ)(C.rMx.APP_DIRECTORY_COLLECTION_VIEWED, {
                             collection_id: t,
@@ -42,7 +42,7 @@ function I(e) {
             collectionId: t.id,
             index: n
         }),
-        o = a.useCallback(
+        o = i.useCallback(
             (e, r) => {
                 (0, f.zZ)(C.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                     collection_id: t.id,
@@ -50,9 +50,9 @@ function I(e) {
                     collection_position: n,
                     application_id: e
                 }),
-                    i(e);
+                    a(e);
             },
-            [t.id, n, i]
+            [t.id, n, a]
         );
     return (0, r.jsxs)('div', {
         ref: s,
@@ -82,10 +82,10 @@ function I(e) {
         ]
     });
 }
-let N = function (e) {
+let O = function (e) {
     let { onSelectApplication: t } = e,
         n = (0, u.e7)([h.default], () => h.default.onlyShowPreviewAppCollections) ? s.E.PREVIEW : s.E.ACTIVE,
-        i = (0, u.e7)([_.Z], () =>
+        a = (0, u.e7)([_.Z], () =>
             _.Z.getFetchState({
                 surface: y,
                 activeState: n
@@ -97,20 +97,20 @@ let N = function (e) {
                 activeState: n
             })
         );
-    a.useEffect(() => {
+    i.useEffect(() => {
         g.XK({
             surface: y,
             activeState: n
         });
     }, [n]);
-    let o = a.useMemo(() => (null == l ? void 0 : l.filter((e) => e.type !== d.o.GALLERY)), [l]);
-    return i === _.M.ERROR
+    let o = i.useMemo(() => (null == l ? void 0 : l.filter((e) => e.type !== d.o.GALLERY)), [l]);
+    return a === _.M.ERROR
         ? (0, r.jsx)('div', {
               className: j.errorContainer,
               children: (0, r.jsx)(v.Z, { className: j.error })
           })
         : (0, r.jsx)(b.Z, {
-              loading: i === _.M.FETCHING,
+              loading: a === _.M.FETCHING,
               children:
                   null == o
                       ? void 0

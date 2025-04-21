@@ -26,7 +26,7 @@ function u(e) {
                 variant: 'text-xs/bold',
                 color: 'text-muted',
                 className: d.eyebrow,
-                children: t ? c.NW.string(c.t.DjWsyc) : c.NW.string(c.t.AmwmLi)
+                children: t ? c.intl.string(c.t.DjWsyc) : c.intl.string(c.t.AmwmLi)
             }),
             (0, r.jsxs)('div', {
                 className: d.inviteButtons,
@@ -37,14 +37,14 @@ function u(e) {
                         look: a.zxk.Looks.OUTLINED,
                         disabled: !m,
                         onClick: u,
-                        children: b ? c.NW.string(c.t['/dbw3N']) : c.NW.string(c.t.Uwsjn5)
+                        children: b ? c.intl.string(c.t['/dbw3N']) : c.intl.string(c.t.Uwsjn5)
                     }),
                     !0 === g
                         ? (0, r.jsx)(a.zxk, {
                               size: a.zxk.Sizes.MEDIUM,
                               color: a.zxk.Colors.BRAND,
                               onClick: p,
-                              children: c.NW.string(c.t.KmK3q6)
+                              children: c.intl.string(c.t.KmK3q6)
                           })
                         : null
                 ]

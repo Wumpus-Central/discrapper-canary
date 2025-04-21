@@ -12,8 +12,8 @@ function o(e, t) {
 function s(e, t) {
     if (null == r.s) return null;
     try {
-        let n = e === a.St,
-            i = null != e && e.split('-')[0] === (null === a.Kj || void 0 === a.Kj ? void 0 : a.Kj.split('-')[0]),
+        let n = e === a.initialLocale,
+            i = null != e && e.split('-')[0] === (null === a.systemLocale || void 0 === a.systemLocale ? void 0 : a.systemLocale.split('-')[0]),
             s = (0, r.s)(n && i ? void 0 : e, t);
         if (null == s) return null;
         let l = null;

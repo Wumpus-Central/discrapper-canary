@@ -21,19 +21,19 @@ function b(e) {
         j = (0, i.e7)([o.Z], () => ((null == x ? void 0 : x.type) === m.fO.ACTIVITY ? o.Z.getApplication(x.applicationId) : void 0)),
         O = (0, c.Z)(t),
         E = (0, d.Z)(),
-        N = (0, u.Z)(t),
-        I = (0, f.Z)(t),
-        P = (0, p.Z)(j, t),
-        S = (0, a.Z)({
+        I = (0, u.Z)(t),
+        P = (0, f.Z)(t),
+        S = (0, p.Z)(j, t),
+        Z = (0, a.Z)({
             id: null == j ? void 0 : j.id,
-            label: g.NW.string(g.t['+NP/b2'])
+            label: g.intl.string(g.t['+NP/b2'])
         });
     return (0, r.jsxs)(l.v2r, {
         navId: 'channel-call-overflow-popout',
         onClose: n,
-        'aria-label': g.NW.string(g.t.pkYeAw),
+        'aria-label': g.intl.string(g.t.pkYeAw),
         onSelect: y,
         onInteraction: C,
-        children: [O, E, N, I, (0, h.Z)(v, b, _), P, (0, r.jsx)(l.kSQ, { children: S })]
+        children: [O, E, I, P, (0, h.Z)(v, b, _), S, (0, r.jsx)(l.kSQ, { children: Z })]
     });
 }

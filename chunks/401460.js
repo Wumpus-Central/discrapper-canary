@@ -65,10 +65,10 @@ function y(e, t) {
         e
     );
 }
-let v = () => [h.NW.string(h.t.EgWTY2), h.NW.string(h.t.umBn5e), h.NW.string(h.t.dG1wDw), h.NW.string(h.t.SesI4e), h.NW.string(h.t.RnMLvr)],
+let v = () => [h.intl.string(h.t.EgWTY2), h.intl.string(h.t.umBn5e), h.intl.string(h.t.dG1wDw), h.intl.string(h.t.SesI4e), h.intl.string(h.t.RnMLvr)],
     O = () => {
         var e;
-        return null != (e = l().sample(v())) ? e : h.NW.string(h.t.EgWTY2);
+        return null != (e = l().sample(v())) ? e : h.intl.string(h.t.EgWTY2);
     };
 function I(e) {
     let { id: t, className: n, onSelect: a, isSelected: s = !1, tabIndex: l, children: f, locked: h = !1 } = e,

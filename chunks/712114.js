@@ -35,13 +35,13 @@ function h(e) {
                       className: p.header,
                       color: 'header-primary',
                       variant: 'heading-md/extrabold',
-                      children: d.NW.format(d.t['+qxkzM'], { count: n.newClipIds.length })
+                      children: d.intl.format(d.t['+qxkzM'], { count: n.newClipIds.length })
                   }),
                   (0, r.jsx)(o.Text, {
                       color: 'text-normal',
                       className: p.__invalid_content,
                       variant: 'text-sm/medium',
-                      children: d.NW.format(d.t['7XX0/f'], { applicationName: n.applicationName })
+                      children: d.intl.format(d.t['7XX0/f'], { applicationName: n.applicationName })
                   }),
                   (0, r.jsxs)('div', {
                       className: p.buttonsContainer,
@@ -52,12 +52,12 @@ function h(e) {
                               onClick: function () {
                                   (0, s.Kw)(s.v6.CLIPS_CHANNEL_ATTACH_REMINDER), h();
                               },
-                              children: d.NW.string(d.t['7r5Z19'])
+                              children: d.intl.string(d.t['7r5Z19'])
                           }),
                           (0, r.jsx)(o.zxk, {
                               color: o.zxk.Colors.BRAND,
                               onClick: t,
-                              children: d.NW.string(d.t.md4qKy)
+                              children: d.intl.string(d.t.md4qKy)
                           })
                       ]
                   })

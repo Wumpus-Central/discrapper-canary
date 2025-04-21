@@ -3,8 +3,8 @@ var i,
     r = n(200651),
     s = n(192379),
     o = n(120356),
-    a = n.n(o),
-    l = n(442837),
+    l = n.n(o),
+    a = n(442837),
     c = n(552062),
     d = n(416568),
     u = n(914010),
@@ -46,14 +46,14 @@ class b extends (i = s.PureComponent) {
                           e
                       )
                     : (0, r.jsx)(m.Z, {
-                          title: y.NW.string(y.t.YUU0RE),
+                          title: y.intl.string(y.t.YUU0RE),
                           renderSettings: O,
                           onDragStart: this.onDragStart,
                           children: (0, r.jsx)(g.Z, {})
                       }),
             o = n ? 'div' : h.ZP;
         return (0, r.jsxs)(o, {
-            className: a()(v.base, { [v.widget]: !n }, i),
+            className: l()(v.base, { [v.widget]: !n }, i),
             children: [
                 (0, r.jsx)(d.Z, {
                     isOverlay: !0,
@@ -73,4 +73,4 @@ class b extends (i = s.PureComponent) {
     }
 }
 _(b, 'defaultProps', { contained: !1 });
-let x = l.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(b);
+let x = a.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(b);

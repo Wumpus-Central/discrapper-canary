@@ -1,18 +1,18 @@
 n.d(t, { Z: () => m }), n(539854), n(388685), n(642613);
-var r,
-    i,
+var i,
+    r,
     s,
-    a = n(442837),
-    l = n(570140),
+    l = n(442837),
+    a = n(570140),
     o = n(461655);
 let c = [];
 function d(e) {
     let { payment: t } = e,
         n = o.Z.createFromServer(t),
-        r = c.findIndex((e) => e.id === t.id);
-    -1 === r ? (c.push(n), c.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (c[r] = n), (c = [...c]);
+        i = c.findIndex((e) => e.id === t.id);
+    -1 === i ? (c.push(n), c.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (c[i] = n), (c = [...c]);
 }
-class u extends (r = a.ZP.Store) {
+class u extends (i = l.ZP.Store) {
     getPayment(e) {
         return c.find((t) => t.id === e);
     }
@@ -21,15 +21,15 @@ class u extends (r = a.ZP.Store) {
     }
 }
 (s = 'PaymentStore'),
-    (i = 'displayName') in u
-        ? Object.defineProperty(u, i, {
+    (r = 'displayName') in u
+        ? Object.defineProperty(u, r, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (u[i] = s);
-let m = new u(l.Z, {
+        : (u[r] = s);
+let m = new u(a.Z, {
     BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
         let { payments: t } = e;
         for (let e of t) {

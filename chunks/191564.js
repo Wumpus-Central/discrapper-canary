@@ -1,8 +1,8 @@
-r.d(t, { default: () => I }), r(388685);
+r.d(t, { default: () => S }), r(388685);
 var n = r(200651),
     i = r(192379),
-    o = r(442837),
-    l = r(481060),
+    l = r(442837),
+    o = r(481060),
     s = r(100527),
     c = r(906732),
     a = r(335131),
@@ -21,38 +21,38 @@ var n = r(200651),
     O = r(981631),
     v = r(474936),
     _ = r(388032),
-    N = r(287975);
-function E(e) {
-    let { user: t, product: r, purchase: i, onApply: o, onClose: s, onOpenShop: c, disableApplyButton: a, canUseCollectibles: d, selectedProfileEffectId: f, selectedProfileEffectItem: h } = e,
+    E = r(287975);
+function C(e) {
+    let { user: t, product: r, purchase: i, onApply: l, onClose: s, onOpenShop: c, disableApplyButton: a, canUseCollectibles: d, selectedProfileEffectId: f, selectedProfileEffectItem: h } = e,
         b = (0, p.M)();
-    return (0, n.jsxs)(l.mzw, {
-        className: N.modalFooter,
+    return (0, n.jsxs)(o.mzw, {
+        className: E.modalFooter,
         children: [
             (0, n.jsxs)('div', {
-                className: N.buttonsRight,
+                className: E.buttonsRight,
                 children: [
                     !b &&
-                        (0, n.jsx)(l.zxk, {
-                            look: l.zxk.Looks.LINK,
-                            color: l.zxk.Colors.PRIMARY,
+                        (0, n.jsx)(o.zxk, {
+                            look: o.zxk.Looks.LINK,
+                            color: o.zxk.Colors.PRIMARY,
                             onClick: s,
-                            children: _.NW.string(_.t['ETE/oK'])
+                            children: _.intl.string(_.t['ETE/oK'])
                         }),
                     (null != i && (!(0, u.qS)(i) || d)) || null === f
-                        ? (0, n.jsx)(l.zxk, {
-                              onClick: o,
+                        ? (0, n.jsx)(o.zxk, {
+                              onClick: l,
                               disabled: a,
-                              children: _.NW.string(_.t.d6sv6u)
+                              children: _.intl.string(_.t.d6sv6u)
                           })
                         : d || !(0, u.G1)(r)
-                          ? (0, n.jsx)(l.zxk, {
+                          ? (0, n.jsx)(o.zxk, {
                                 onClick: () => c(null == h ? void 0 : h.skuId),
-                                children: _.NW.string(_.t.fYfGgI)
+                                children: _.intl.string(_.t.fYfGgI)
                             })
                           : (0, n.jsx)(g.Z, {
                                 subscriptionTier: v.Si.TIER_2,
                                 showGradient: b,
-                                buttonText: x.ZP.isPremium(t) ? _.NW.string(_.t.KXLX7u) : b ? _.NW.string(_.t.pj0XBA) : _.NW.string(_.t.mr4K7O)
+                                buttonText: x.ZP.isPremium(t) ? _.intl.string(_.t.KXLX7u) : b ? _.intl.string(_.t.pj0XBA) : _.intl.string(_.t.mr4K7O)
                             })
                 ]
             }),
@@ -65,29 +65,29 @@ function E(e) {
         ]
     });
 }
-function C(e) {
-    let { user: t, guild: r, categories: o, purchases: c, onClose: f, initialSelectedProfileEffectId: p, currentSavedEffectId: m, analyticsLocations: g } = e,
+function I(e) {
+    let { user: t, guild: r, categories: l, purchases: c, onClose: f, initialSelectedProfileEffectId: p, currentSavedEffectId: m, analyticsLocations: g } = e,
         { pendingProfileEffectId: b } = (0, h.bd)(r),
         [j, O] = i.useMemo(() => {
-            let e = (0, u.bl)(o, c);
+            let e = (0, u.bl)(l, c);
             return [e.purchased, e.shopPreviews];
-        }, [o, c]),
-        [v, C] = i.useState(() => (null != p ? p : void 0 !== b ? b : null == m ? null : null != m ? m : null)),
-        [I, S] = i.useMemo(() => {
+        }, [l, c]),
+        [v, I] = i.useState(() => (null != p ? p : void 0 !== b ? b : null == m ? null : null != m ? m : null)),
+        [S, w] = i.useMemo(() => {
             var e;
             let t = j.find((e) => (null == e ? void 0 : e.id) === v),
                 r = null != t || null === v;
             return [null != (e = null != t ? t : O.find((e) => (null == e ? void 0 : e.id) === v)) ? e : null, r];
         }, [v, j, O]),
-        { product: w, purchase: Z } = (0, d.Z)(null == I ? void 0 : I.skuId),
+        { product: N, purchase: Z } = (0, d.Z)(null == S ? void 0 : S.skuId),
         k = i.useRef(null),
         D = x.ZP.canUseCollectibles(t),
         A = v === (void 0 === b ? (null != m ? m : null) : b),
         T = i.useCallback(
             (e) => {
-                C(e);
+                I(e);
             },
-            [C]
+            [I]
         ),
         B = i.useCallback(
             (e) => {
@@ -102,22 +102,22 @@ function C(e) {
         );
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsxs)(l.xBx, {
+            (0, n.jsxs)(o.xBx, {
                 separator: !1,
-                className: N.modalHeader,
+                className: E.modalHeader,
                 children: [
-                    (0, n.jsx)(l.X6q, {
+                    (0, n.jsx)(o.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: _.NW.string(_.t.t5SVGR)
+                        children: _.intl.string(_.t.t5SVGR)
                     }),
-                    (0, n.jsx)(l.olH, {
-                        className: N.modalCloseButton,
+                    (0, n.jsx)(o.olH, {
+                        className: E.modalCloseButton,
                         onClick: f
                     })
                 ]
             }),
-            (0, n.jsxs)(l.hzk, {
-                className: N.modalContent,
+            (0, n.jsxs)(o.hzk, {
+                className: E.modalContent,
                 children: [
                     (0, n.jsx)(y.Z, {
                         user: t,
@@ -129,36 +129,36 @@ function C(e) {
                     }),
                     (0, n.jsx)(P.Z, {
                         user: t,
-                        canApplySelectedChange: S,
-                        pendingProfileEffectRecord: I,
-                        product: w,
+                        canApplySelectedChange: w,
+                        pendingProfileEffectRecord: S,
+                        product: N,
                         purchase: Z,
                         guild: r
                     })
                 ]
             }),
-            (0, n.jsx)(E, {
+            (0, n.jsx)(C, {
                 user: t,
                 onApply: () => {
                     (0, h.s6)(v, m, null == r ? void 0 : r.id), f();
                 },
                 onClose: f,
                 onOpenShop: B,
-                product: w,
+                product: N,
                 purchase: Z,
                 canUseCollectibles: D,
                 selectedProfileEffectId: v,
-                selectedProfileEffectItem: I,
+                selectedProfileEffectItem: S,
                 disableApplyButton: A,
                 analyticsLocations: g
             })
         ]
     });
 }
-function I(e) {
+function S(e) {
     let { transitionState: t, analyticsLocations: r, initialSelectedEffectId: a, guild: u, onClose: d } = e,
         { isFetching: p, categories: m, purchases: g } = (0, f.Z)('ProfileEffectModal'),
-        x = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
+        x = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
         { analyticsLocations: P } = (0, c.ZP)(r, s.Z.EDIT_PROFILE_EFFECT_MODAL),
         y = (0, h.Kg)(x, u);
     return (
@@ -170,16 +170,16 @@ function I(e) {
         }, [P]),
         (0, n.jsx)(c.Gt, {
             value: P,
-            children: (0, n.jsx)(l.Y0X, {
+            children: (0, n.jsx)(o.Y0X, {
                 transitionState: t,
-                className: N.modal,
-                size: p ? l.CgR.DYNAMIC : l.CgR.MEDIUM,
+                className: E.modal,
+                size: p ? o.CgR.DYNAMIC : o.CgR.MEDIUM,
                 children: p
-                    ? (0, n.jsx)(l.$jN, {
-                          className: N.spinner,
-                          type: l.$jN.Type.SPINNING_CIRCLE
+                    ? (0, n.jsx)(o.$jN, {
+                          className: E.spinner,
+                          type: o.$jN.Type.SPINNING_CIRCLE
                       })
-                    : (0, n.jsx)(C, {
+                    : (0, n.jsx)(I, {
                           user: x,
                           guild: u,
                           categories: m,

@@ -2,8 +2,8 @@ n.d(t, { c: () => p });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(269128),
-    l = n(358555),
+    l = n(269128),
+    s = n(358555),
     a = n(267642),
     o = n(26323),
     c = n(30513),
@@ -18,7 +18,7 @@ function g(e) {
         children: (0, r.jsxs)('div', {
             className: m.guildHeader,
             children: [
-                (0, r.jsx)(l.Z, {
+                (0, r.jsx)(s.Z, {
                     guild: t,
                     isBannerVisible: !0
                 }),
@@ -27,7 +27,7 @@ function g(e) {
                     variant: 'heading-md/semibold',
                     children: t.toString()
                 }),
-                (0, r.jsx)(s.Z, {
+                (0, r.jsx)(l.Z, {
                     className: m.dropdown,
                     open: !1
                 })
@@ -36,25 +36,25 @@ function g(e) {
     });
 }
 function p(e) {
-    let { analyticsLocations: t, analyticsLocation: n, guild: i, isGIF: s, banner: l } = e,
-        m = s ? (0, a._p)(d.oNc.ANIMATED_BANNER) : (0, a._p)(d.oNc.BANNER);
+    let { analyticsLocations: t, analyticsLocation: n, guild: i, isGIF: l, banner: s } = e,
+        m = l ? (0, a._p)(d.oNc.ANIMATED_BANNER) : (0, a._p)(d.oNc.BANNER);
     null != m &&
         (0, o.Z)({
             analyticsLocations: t,
             analyticsSourceLocation: n,
             guild: i,
             headerProps: {
-                title: u.NW.string(u.t['rv2H+/']),
+                title: u.intl.string(u.t['rv2H+/']),
                 subtitle: (function (e, t) {
                     let n = (0, a.nW)(e);
-                    return t ? u.NW.formatToPlainString(u.t['TR/Uys'], { targetLevelOrPlan: n }) : u.NW.formatToPlainString(u.t.B253V1, { targetLevelOrPlan: n });
-                })(m, s),
+                    return t ? u.intl.formatToPlainString(u.t['TR/Uys'], { targetLevelOrPlan: n }) : u.intl.formatToPlainString(u.t.B253V1, { targetLevelOrPlan: n });
+                })(m, l),
                 image: (0, r.jsx)(g, {
                     guild: i,
-                    banner: l
+                    banner: s
                 })
             },
-            perkIntro: u.NW.string(u.t.ZuItcH),
-            perks: s ? (0, c.zC)() : (0, c.XO)()
+            perkIntro: u.intl.string(u.t.ZuItcH),
+            perks: l ? (0, c.zC)() : (0, c.XO)()
         });
 }

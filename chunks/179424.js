@@ -60,7 +60,7 @@ function u(e) {
                 onClick: function () {
                     (0, a.v)(u, a.d.GRID), l.Z.selectParticipant(t, null);
                 },
-                label: c.NW.string(c.t['tyhU+P']),
+                label: c.intl.string(c.t['tyhU+P']),
                 iconComponent: i.rqr,
                 tooltipPosition: 'bottom'
             },

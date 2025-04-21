@@ -79,7 +79,7 @@ function y(e) {
                                 [p.first]: 0 === i,
                                 [p.last]: i === t.length - 1
                             }),
-                            'aria-label': _.NW.formatToPlainString(c, {
+                            'aria-label': _.intl.formatToPlainString(c, {
                                 pageNumber: i + 1,
                                 totalPages: t.length
                             }),

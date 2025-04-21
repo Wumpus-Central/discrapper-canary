@@ -2,12 +2,12 @@ n.d(t, {
     D: () => d,
     T: () => c
 });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
+var r = n(481060),
     s = n(570140),
-    a = n(955204),
-    l = n(510273),
+    l = n(955204),
+    a = n(510273),
     o = n(388032);
 function c(e) {
     s.Z.dispatch({
@@ -16,12 +16,12 @@ function c(e) {
     });
 }
 function d(e, t) {
-    let n = (0, a.oX)(e);
+    let n = (0, l.oX)(e);
     null != n &&
-        (0, i.showToast)(
-            (0, i.createToast)(o.NW.string(o.t.MPpEUF), i.ToastType.CUSTOM, {
-                position: i.ToastPosition.BOTTOM,
-                component: (0, r.jsx)(l.Z, {
+        (0, r.showToast)(
+            (0, r.createToast)(o.intl.string(o.t.MPpEUF), r.ToastType.CUSTOM, {
+                position: r.ToastPosition.BOTTOM,
+                component: (0, i.jsx)(a.Z, {
                     achievement: n,
                     unlocked: t
                 }),

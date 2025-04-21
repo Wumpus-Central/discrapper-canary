@@ -2,24 +2,24 @@ n.d(t, {
     $0: () => d,
     E_: () => c
 });
-var r = n(200651),
-    i = n(120356),
-    s = n.n(i),
-    a = n(481060),
-    l = n(517791);
-let o = () => (0, r.jsx)('hr', { className: l.sectionDivider }),
+var i = n(200651),
+    r = n(120356),
+    s = n.n(r),
+    l = n(481060),
+    a = n(517791);
+let o = () => (0, i.jsx)('hr', { className: a.sectionDivider }),
     c = (e) => {
-        let { label: t, children: n, direction: i = 'horizontal', className: c } = e;
-        return (0, r.jsxs)(r.Fragment, {
+        let { label: t, children: n, direction: r = 'horizontal', className: c } = e;
+        return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(o, {}),
-                (0, r.jsx)(a.Text, {
+                (0, i.jsx)(o, {}),
+                (0, i.jsx)(l.Text, {
                     variant: 'text-md/semibold',
-                    className: l.labelSpacing,
+                    className: a.labelSpacing,
                     children: t
                 }),
-                (0, r.jsx)('div', {
-                    className: s()(l.container, c, { [l.verticalContainer]: 'vertical' === i }),
+                (0, i.jsx)('div', {
+                    className: s()(a.container, c, { [a.verticalContainer]: 'vertical' === r }),
                     children: n
                 })
             ]
@@ -27,8 +27,8 @@ let o = () => (0, r.jsx)('hr', { className: l.sectionDivider }),
     },
     d = (e) => {
         let { children: t } = e;
-        return (0, r.jsx)('div', {
-            className: l.section,
+        return (0, i.jsx)('div', {
+            className: a.section,
             children: t
         });
     };

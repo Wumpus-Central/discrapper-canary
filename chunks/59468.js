@@ -1,15 +1,15 @@
 n.d(t, { t: () => d }), n(35282), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733), n(608445), n(853839), n(570086), n(479048);
 var r = n(788900),
-    i = n(268146),
-    l = n(141038),
+    l = n(268146),
+    i = n(141038),
     s = n(131951),
     a = n(830461),
     o = n(388032);
 let c = ['GQgGHISKZ5aYqYeYhX9isDUHGw', 'bAgKFITWhoVvmHVRuokCdjVQaA', 'XAgGDIJ/ipadd3iCiYUcWpCZBA', 'HRkGDIT5aXRneomGdlvUawB7qA', 'I9gNDISmlqqPmHiKd3isTp/5lg', 'XxgGBIIwT2ZGpneUeZev6fWLXQ', 'KzsKNIZDeYmfd3ihe1bXfr8Jxg', 'J9cRDIJ6iHd/d4h4eIUJf5LyRw', 'DggKFIQwtndKe3hVfXnAWQmddQ', 'WggKDILeh3ePZpd6l4jln1b5SQ', '4PgJJIJVl3eAaod2iJeHj7tE8Q'];
 async function d(e) {
-    let { width: t, height: n, types: d = [i.vA.CAMERA, i.vA.SCREEN, i.vA.WINDOW] } = e,
+    let { width: t, height: n, types: d = [l.vA.CAMERA, l.vA.SCREEN, l.vA.WINDOW] } = e,
         u = s.Z.getVideoDevices(),
-        f = (0, l.Z)(s.Z.getMediaEngine(), d, {
+        f = (0, i.Z)(s.Z.getMediaEngine(), d, {
             width: t,
             height: n
         }),
@@ -17,12 +17,12 @@ async function d(e) {
         h = await m,
         x = await f,
         p = x
-            .filter((e) => e.id.startsWith(i.vA.SCREEN))
+            .filter((e) => e.id.startsWith(l.vA.SCREEN))
             .map((e) => {
                 var t, n;
                 let r = e.name;
                 return (
-                    'Entire screen' === r ? (r = o.NW.string(o.t.R4wpLC)) : /^Screen \d+$/.test(r) && (r = o.NW.formatToPlainString(o.t['y/R7n5'], { index: parseInt(r.split(' ')[1]) })),
+                    'Entire screen' === r ? (r = o.intl.string(o.t.R4wpLC)) : /^Screen \d+$/.test(r) && (r = o.intl.formatToPlainString(o.t['y/R7n5'], { index: parseInt(r.split(' ')[1]) })),
                     (t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -76,25 +76,25 @@ async function d(e) {
                 Object.values(n)
             );
         })(
-            x.filter((e) => e.id.startsWith(i.vA.WINDOW)),
+            x.filter((e) => e.id.startsWith(l.vA.WINDOW)),
             h
         ),
         _ = [];
     return (
-        d.includes(i.vA.CAMERA) &&
+        d.includes(l.vA.CAMERA) &&
             (_ = Object.entries(u)
                 .filter((e) => {
                     let [t, n] = e;
                     return !n.disabled;
                 })
                 .map((e, t) => {
-                    let [n, i] = e,
-                        l = c[t % c.length],
-                        s = Uint8Array.from(atob(l), (e) => e.charCodeAt(0)),
+                    let [n, l] = e,
+                        i = c[t % c.length],
+                        s = Uint8Array.from(atob(i), (e) => e.charCodeAt(0)),
                         a = (0, r.xS)(s);
                     return {
-                        id: 'camera:' + i.id,
-                        name: i.name,
+                        id: 'camera:' + l.id,
+                        name: l.name,
                         url: a
                     };
                 })),

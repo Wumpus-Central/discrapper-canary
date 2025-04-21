@@ -8,11 +8,11 @@ var r = n(823379),
 function a(e) {
     switch (e) {
         case i.GlobalDiscoveryTab.SERVERS:
-            return l.NW.string(l.t['+Anbp6']);
+            return l.intl.string(l.t['+Anbp6']);
         case i.GlobalDiscoveryTab.APPS:
-            return l.NW.string(l.t.bGwCoa);
+            return l.intl.string(l.t.bGwCoa);
         case i.GlobalDiscoveryTab.QUESTS:
-            return l.NW.string(l.t.EcaD4e);
+            return l.intl.string(l.t.EcaD4e);
         default:
             (0, r.vE)(e);
     }

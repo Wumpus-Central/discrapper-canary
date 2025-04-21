@@ -15,7 +15,7 @@ function d(e) {
         children: (0, r.jsx)(o.Z, {
             artURL: u,
             size: (0, o.L)(p),
-            header: s.NW.string(s.t.O4FiWl),
+            header: s.intl.string(s.t.O4FiWl),
             onCTAClick: () =>
                 (0, i.ZDy)(
                     async () => {
@@ -73,7 +73,7 @@ function d(e) {
                     },
                     { contextKey: h ? i.u1M : i.z1l }
                 ),
-            callToAction: s.NW.string(s.t.VINpSE)
+            callToAction: s.intl.string(s.t.VINpSE)
         })
     });
 }

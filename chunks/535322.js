@@ -90,7 +90,7 @@ function m(e) {
                 [u.inheritTextColor]: i,
                 [u.inheritBackgroundColor]: s
             }),
-            text: c.NW.string(c.t.y2b7CA)
+            text: c.intl.string(c.t.y2b7CA)
         })
     });
 }

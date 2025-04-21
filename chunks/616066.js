@@ -84,7 +84,7 @@ let g = u.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK,
                 imageClassName: i ? f.fadeInAvatarImg : void 0,
                 className: a()(f.avatar, { [f.avatarPurchased]: u && !i }),
                 size: _,
-                'aria-label': d.NW.string(d.t.lqaIxM)
+                'aria-label': d.intl.string(d.t.lqaIxM)
             })
         );
     };

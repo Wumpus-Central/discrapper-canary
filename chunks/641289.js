@@ -48,7 +48,7 @@ e.exports = function (e) {
             relevance: 0
         },
         T = u.filter((e) => 'string' == typeof e).concat(['_|0']),
-        N = {
+        A = {
             variants: [
                 {
                     className: 'keyword',
@@ -62,12 +62,12 @@ e.exports = function (e) {
                 }
             ]
         },
-        A = {
+        N = {
             $pattern: a(/\b\w+/, /#\w+/),
             keyword: T.concat(_),
             literal: d
         },
-        C = [E, S, N],
+        C = [E, S, A],
         R = [
             {
                 match: r(/\./, a(...p)),
@@ -159,9 +159,9 @@ e.exports = function (e) {
             scope: 'regexp',
             variants: [Z('###'), Z('##'), Z('#'), V]
         },
-        W = { match: r(/`/, y, /`/) },
-        Y = [
-            W,
+        Y = { match: r(/`/, y, /`/) },
+        W = [
+            Y,
             {
                 className: 'variable',
                 match: /\$\d+/
@@ -225,7 +225,7 @@ e.exports = function (e) {
         q = {
             begin: /</,
             end: />/,
-            keywords: A,
+            keywords: N,
             contains: [...h, ...C, ...K, P, z]
         };
     z.contains.push(q);
@@ -233,7 +233,7 @@ e.exports = function (e) {
             begin: /\(/,
             end: /\)/,
             relevance: 0,
-            keywords: A,
+            keywords: N,
             contains: [
                 'self',
                 {
@@ -248,7 +248,7 @@ e.exports = function (e) {
                 ...w,
                 x,
                 B,
-                ...Y,
+                ...W,
                 ...K,
                 z
             ]
@@ -262,7 +262,7 @@ e.exports = function (e) {
         J = {
             begin: /\(/,
             end: /\)/,
-            keywords: A,
+            keywords: N,
             contains: [
                 {
                     begin: a(n(r(y, /\s*:/)), n(r(y, /\s+/, y, /\s*:/))),
@@ -292,7 +292,7 @@ e.exports = function (e) {
             illegal: /["']/
         },
         $ = {
-            match: [/(func|macro)/, /\s+/, a(W.match, y, g)],
+            match: [/(func|macro)/, /\s+/, a(Y.match, y, g)],
             className: {
                 1: 'keyword',
                 3: 'title.function'
@@ -344,14 +344,14 @@ e.exports = function (e) {
                 1: 'keyword',
                 3: 'title.class'
             },
-            keywords: A,
+            keywords: N,
             contains: [
                 X,
                 ...C,
                 {
                     begin: /:/,
                     end: /\{/,
-                    keywords: A,
+                    keywords: N,
                     contains: [
                         {
                             scope: 'title.class.inherited',
@@ -365,8 +365,8 @@ e.exports = function (e) {
         };
     for (let e of B.variants) {
         let t = e.contains.find((e) => 'interpol' === e.label);
-        t.keywords = A;
-        let n = [...C, ...R, ...w, x, B, ...Y];
+        t.keywords = N;
+        let n = [...C, ...R, ...w, x, B, ...W];
         t.contains = [
             ...n,
             {
@@ -378,7 +378,7 @@ e.exports = function (e) {
     }
     return {
         name: 'Swift',
-        keywords: A,
+        keywords: N,
         contains: [
             ...h,
             $,
@@ -400,7 +400,7 @@ e.exports = function (e) {
             ...w,
             x,
             B,
-            ...Y,
+            ...W,
             ...K,
             z,
             Q

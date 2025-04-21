@@ -1,7 +1,7 @@
-n.d(t, { F: () => a });
-var r = n(818083),
-    i = n(984134);
-let s = (0, r.B)({
+n.d(t, { F: () => l });
+var i = n(818083),
+    r = n(984134);
+let s = (0, i.B)({
     kind: 'user',
     id: '2025-01_voice_and_video_settings_refresh',
     label: 'Voice and Video Settings Refresh',
@@ -14,13 +14,13 @@ let s = (0, r.B)({
         }
     ]
 });
-function a(e) {
+function l(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { isInHoldout: r } = i.h.useExperiment({ location: t }, { autoTrackExposure: n });
+        { isInHoldout: i } = r.h.useExperiment({ location: t }, { autoTrackExposure: n });
     return s.useExperiment(
         { location: t },
         {
-            disable: r,
+            disable: i,
             autoTrackExposure: n
         }
     );

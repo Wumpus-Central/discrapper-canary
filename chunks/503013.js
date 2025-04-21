@@ -23,7 +23,7 @@ class o extends r.Z {
         });
     }
     getName(e) {
-        return null != this.name ? this.name : this.id === e ? i.NW.string(i.t.AHqj6e) : i.NW.string(i.t['62f4nJ']);
+        return null != this.name ? this.name : this.id === e ? i.intl.string(i.t.AHqj6e) : i.intl.string(i.t['62f4nJ']);
     }
     constructor(e) {
         super(), a(this, 'id', void 0), a(this, 'liveBuildId', void 0), a(this, 'name', void 0), (this.id = e.id), (this.liveBuildId = e.liveBuildId), (this.name = e.name);

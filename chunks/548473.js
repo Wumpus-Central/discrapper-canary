@@ -229,7 +229,7 @@ function L(a) {
                                 variant: l ? 'text-lg/normal' : 'text-md/medium',
                                 color: 'always-white',
                                 id: s,
-                                children: F.NW.format(F.t['j59F/f'], { guildName: null == i ? void 0 : i.name })
+                                children: F.intl.format(F.t['j59F/f'], { guildName: null == i ? void 0 : i.name })
                             }),
                             n
                                 ? (0, k.jsx)(e.$jN, { className: g.__invalid_subtitle })
@@ -238,13 +238,13 @@ function L(a) {
                                         className: g.__invalid_subtitle,
                                         variant: l ? 'heading-xxl/normal' : 'heading-xl/semibold',
                                         color: 'always-white',
-                                        children: F.NW.string(F.t.Q5ibtb)
+                                        children: F.intl.string(F.t.Q5ibtb)
                                     })
                                   : (0, k.jsx)(e.X6q, {
                                         className: g.__invalid_subtitle,
                                         variant: l ? 'heading-xxl/normal' : 'heading-xl/semibold',
                                         color: 'always-white',
-                                        children: F.NW.string(F.t['Alcl/f'])
+                                        children: F.intl.string(F.t['Alcl/f'])
                                     })
                         ]
                     })

@@ -42,12 +42,12 @@ let d = (e) => {
             onSelect: () => {},
             navId: 'member-list-settings-menu',
             onClose: null != t ? t : s.dG4,
-            'aria-label': c.NW.string(c.t.w2jvOT),
+            'aria-label': c.intl.string(c.t.w2jvOT),
             children: (0, r.jsxs)(l.kSQ, {
                 children: [
                     (0, r.jsx)(l.sNh, {
                         id: 'about',
-                        label: c.NW.string(c.t.pWLGnJ),
+                        label: c.intl.string(c.t.pWLGnJ),
                         icon: l.d3s,
                         action: () => {
                             (0, l.ZDy)(async () => {
@@ -59,7 +59,7 @@ let d = (e) => {
                     }),
                     (0, r.jsx)(l.S89, {
                         id: 'hide',
-                        label: c.NW.string(c.t.AhNYub),
+                        label: c.intl.string(c.t.AhNYub),
                         checked: d,
                         action: () => {
                             (0, o.lY)(), null == t || t();

@@ -21,12 +21,12 @@ var a = n(200651),
     y = n(681619),
     C = n(621060),
     O = n(388032),
-    N = n(459100),
-    E = n(616257);
+    E = n(459100),
+    N = n(616257);
 let T = [
     {
         key: 'event',
-        cellClassName: N.eventColumn,
+        cellClassName: E.eventColumn,
         render(e) {
             let { event: t } = e;
             return t;
@@ -34,7 +34,7 @@ let T = [
     },
     {
         key: 'location',
-        cellClassName: N.locationColumn,
+        cellClassName: E.locationColumn,
         render(e) {
             let { properties: t } = e;
             return null == t.location ? null : t.location;
@@ -44,7 +44,7 @@ let T = [
 function S(e) {
     let { children: t } = e;
     return (0, a.jsx)(d.zJl, {
-        className: N.customPropertiesContainer,
+        className: E.customPropertiesContainer,
         children: (0, a.jsx)('dl', { children: t })
     });
 }
@@ -59,16 +59,16 @@ function P(e) {
             }
         }, [i]),
         (0, a.jsxs)('div', {
-            className: N.customProperty,
+            className: E.customProperty,
             children: [
                 (0, a.jsx)('dt', {
-                    className: N.customPropertiesName,
+                    className: E.customPropertiesName,
                     children: t
                 }),
                 (0, a.jsx)('dd', { children: n }),
                 (0, a.jsx)(d.P3F, {
                     tag: 'span',
-                    className: N.copyPropertyButton,
+                    className: E.copyPropertyButton,
                     onClick: () => {
                         (0, b.JG)(JSON.stringify(l)), s(!0);
                     },
@@ -101,19 +101,19 @@ let w = [
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)(m.ZP, {
-                            className: i()(E.headerBar, N.subPanelHeaderBar),
+                            className: i()(N.headerBar, E.subPanelHeaderBar),
                             children: [
                                 (0, a.jsx)(m.ZP.Icon, {
                                     icon: d.IeX,
                                     tooltip: t
                                 }),
                                 (0, a.jsxs)(m.ZP.Title, {
-                                    wrapperClassName: N.headerTitle,
+                                    wrapperClassName: E.headerTitle,
                                     children: [
                                         t,
                                         (0, a.jsx)(d.P3F, {
                                             tag: 'span',
-                                            className: N.copyEventButton,
+                                            className: E.copyEventButton,
                                             onClick: () => (0, b.JG)(t),
                                             children: (0, a.jsx)(d.TIy, {
                                                 color: 'currentColor',
@@ -175,7 +175,7 @@ let w = [
                             ]
                         }),
                         (0, a.jsxs)(j.E, {
-                            className: N.commonProperties,
+                            className: E.commonProperties,
                             children: [
                                 (0, a.jsx)(j.Z9, {
                                     name: 'Timestamp (local)',
@@ -211,7 +211,7 @@ let w = [
                                             null != n
                                                 ? (0, a.jsx)('code', { children: JSON.stringify(n) })
                                                 : (0, a.jsx)('code', {
-                                                      className: N.emptyProperty,
+                                                      className: E.emptyProperty,
                                                       children: 'null'
                                                   })
                                     },
@@ -279,34 +279,34 @@ function R() {
         { TabBar: S, renderSelectedTab: P } = (0, C.ZP)({ tabs: w }, []);
     return (0, a.jsxs)('div', {
         ref: e,
-        className: i()(E.panel, N.panel),
+        className: i()(N.panel, E.panel),
         children: [
             (0, a.jsxs)('div', {
-                className: N.toolbar,
+                className: E.toolbar,
                 children: [
                     (0, a.jsx)(d.zxk, {
-                        className: N.toolbarButton,
+                        className: E.toolbarButton,
                         look: d.zxk.Looks.BLANK,
                         size: d.zxk.Sizes.ICON,
                         onClick: g.Zw,
                         children: (0, a.jsx)('span', {
-                            title: O.NW.string(O.t.VkKicX),
+                            title: O.intl.string(O.t.VkKicX),
                             children: (0, a.jsx)(d.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': O.NW.string(O.t.VkKicX)
+                                'aria-label': O.intl.string(O.t.VkKicX)
                             })
                         })
                     }),
-                    (0, a.jsx)('div', { className: N.toolbarDivider }),
+                    (0, a.jsx)('div', { className: E.toolbarDivider }),
                     (0, a.jsx)('div', {
-                        className: N.filters,
+                        className: E.filters,
                         children: Object.entries(k).map((e) => {
                             let [t, n] = e;
                             return (0, a.jsx)(
                                 d.P3F,
                                 {
-                                    className: i()(N.filter, s.includes(t) && N.activeFilter),
+                                    className: i()(E.filter, s.includes(t) && E.activeFilter),
                                     onClick: () => {
                                         o((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
@@ -319,9 +319,9 @@ function R() {
                 ]
             }),
             (0, a.jsx)('div', {
-                className: N.toolbar,
+                className: E.toolbar,
                 children: (0, a.jsx)(d.E1j, {
-                    className: N.searchBar,
+                    className: E.searchBar,
                     query: t,
                     onChange: n,
                     onClear: () => n(''),
@@ -336,7 +336,7 @@ function R() {
             }),
             null != j &&
                 (0, a.jsxs)(_.Z, {
-                    className: N.subPanel,
+                    className: E.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [

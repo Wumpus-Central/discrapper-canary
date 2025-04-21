@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     o = n(668781),
     s = n(431583),
     c = n(91372),
@@ -34,7 +34,7 @@ class g extends i.PureComponent {
             : null;
     }
     handleDownloadApps() {
-        (0, l.h7j)((e) =>
+        (0, a.h7j)((e) =>
             (0, r.jsx)(
                 s.default,
                 (function (e) {
@@ -61,19 +61,19 @@ class g extends i.PureComponent {
             case 'UPDATE_AVAILABLE':
                 return (0, r.jsx)(p.JO, {
                     hideOnClick: !1,
-                    tooltip: m.NW.string(m.t['zp9d//']),
+                    tooltip: m.intl.string(m.t['zp9d//']),
                     foreground: f.downloadArrow,
                     background: f.cloud,
-                    icon: l._8t,
+                    icon: a._8t,
                     className: this.props.className
                 });
             case 'UPDATE_MANUALLY':
             case 'UPDATE_DOWNLOADED':
                 return (0, r.jsx)(p.JO, {
-                    tooltip: m.NW.string(m.t.u18OXF),
+                    tooltip: m.intl.string(m.t.u18OXF),
                     foreground: f.updateIconForeground,
                     onClick: this.handleInstallDownload,
-                    icon: l._8t,
+                    icon: a._8t,
                     className: this.props.className
                 });
             default:
@@ -89,11 +89,11 @@ class g extends i.PureComponent {
             h(this, 'handleInstallDownload', () => {
                 u.Z.isConnected()
                     ? o.Z.show({
-                          title: m.NW.string(m.t.tiu1l5),
-                          body: m.NW.string(m.t['zK+lqa']),
+                          title: m.intl.string(m.t.tiu1l5),
+                          body: m.intl.string(m.t['zK+lqa']),
                           onConfirm: this.doUpdate,
-                          cancelText: m.NW.string(m.t['ETE/oK']),
-                          confirmText: m.NW.string(m.t['QDX/qq'])
+                          cancelText: m.intl.string(m.t['ETE/oK']),
+                          confirmText: m.intl.string(m.t['QDX/qq'])
                       })
                     : this.doUpdate();
             }),
@@ -102,4 +102,4 @@ class g extends i.PureComponent {
             });
     }
 }
-let _ = a.ZP.connectStores([c.Z], () => ({ mode: c.Z.getState() }))(g);
+let _ = l.ZP.connectStores([c.Z], () => ({ mode: c.Z.getState() }))(g);

@@ -5,16 +5,16 @@ n.d(e, {
     n(388685);
 var r,
     s = n(200651),
-    o = n(192379),
-    i = n(481060),
+    i = n(192379),
+    o = n(481060),
     c = n(378298),
     a = n(473092),
     l = n(684471),
     u = n(745982),
     d = n(463439),
-    N = n(388032),
-    E = n(257025);
-function h(t) {
+    E = n(388032),
+    h = n(257025);
+function _(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function h(t) {
     }
     return t;
 }
-function _(t, e) {
+function N(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -60,8 +60,8 @@ function _(t, e) {
 var x = (((r = {})[(r.INTRO = 0)] = 'INTRO'), (r[(r.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (r[(r.TAKE_ACTION = 2)] = 'TAKE_ACTION'), r);
 let b = (t) => {
     let { warningId: e, warningType: n, senderId: r, modalProps: x, channelId: b } = t,
-        [f, p] = o.useState(0),
-        g = o.useMemo(
+        [f, p] = i.useState(0),
+        g = i.useMemo(
             () => ({
                 channelId: b,
                 senderId: r,
@@ -71,32 +71,32 @@ let b = (t) => {
             }),
             [b, r, e, n]
         );
-    o.useEffect(() => {
-        (0, a.KQ)(_(h({}, g), { viewName: a.pb.SAFETY_TAKEOVER_MODAL }));
+    i.useEffect(() => {
+        (0, a.KQ)(N(_({}, g), { viewName: a.pb.SAFETY_TAKEOVER_MODAL }));
     }, [g]);
-    let m = o.useCallback(
+    let m = i.useCallback(
             (t) => {
-                (0, a.qc)(_(h({}, g), { cta: t }));
+                (0, a.qc)(N(_({}, g), { cta: t }));
             },
             [g]
         ),
-        [C, I] = o.useState(!1);
+        [C, I] = i.useState(!1);
     function A(t) {
         p(t);
     }
-    return (0, s.jsxs)(i.Y0X, {
+    return (0, s.jsxs)(o.Y0X, {
         transitionState: x.transitionState,
         children: [
             (0, s.jsx)('div', {
-                className: E.container,
-                children: (0, s.jsxs)(i.MyZ, {
+                className: h.container,
+                children: (0, s.jsxs)(o.MyZ, {
                     width: 440,
                     activeSlide: f,
                     centered: !1,
                     overflow: 'visible',
                     contentDisplay: 'flex',
                     children: [
-                        (0, s.jsx)(i.Mi4, {
+                        (0, s.jsx)(o.Mi4, {
                             id: 0,
                             children: (0, s.jsx)(l.Z, {
                                 warningId: e,
@@ -105,7 +105,7 @@ let b = (t) => {
                                 onNavigate: A
                             })
                         }),
-                        (0, s.jsx)(i.Mi4, {
+                        (0, s.jsx)(o.Mi4, {
                             id: 1,
                             children: (0, s.jsx)(u.Z, {
                                 warningId: e,
@@ -113,7 +113,7 @@ let b = (t) => {
                                 trackAnalyticsEvent: m
                             })
                         }),
-                        (0, s.jsx)(i.Mi4, {
+                        (0, s.jsx)(o.Mi4, {
                             id: 2,
                             children: (0, s.jsx)(d.Z, {
                                 warningId: e,
@@ -129,27 +129,27 @@ let b = (t) => {
                     ]
                 })
             }),
-            (0, s.jsxs)(i.mzw, {
-                className: E.footer,
+            (0, s.jsxs)(o.mzw, {
+                className: h.footer,
                 children: [
-                    (0, s.jsx)(i.zxk, {
-                        className: E.footerButton,
-                        look: i.zxk.Looks.LINK,
-                        color: i.zxk.Colors.CUSTOM,
-                        size: i.zxk.Sizes.MIN,
+                    (0, s.jsx)(o.zxk, {
+                        className: h.footerButton,
+                        look: o.zxk.Looks.LINK,
+                        color: o.zxk.Colors.CUSTOM,
+                        size: o.zxk.Sizes.MIN,
                         onClick: function () {
                             x.onClose(), (0, c.T)(b, [e]), m(a.NM.USER_TAKEOVER_MODAL_DISMISS);
                         },
-                        children: N.NW.string(N.t.cpT0Cg)
+                        children: E.intl.string(E.t.cpT0Cg)
                     }),
                     0 !== f &&
-                        (0, s.jsx)(i.zxk, {
-                            className: E.footerButton,
-                            look: i.zxk.Looks.LINK,
-                            color: i.zxk.Colors.CUSTOM,
-                            size: i.zxk.Sizes.MIN,
+                        (0, s.jsx)(o.zxk, {
+                            className: h.footerButton,
+                            look: o.zxk.Looks.LINK,
+                            color: o.zxk.Colors.CUSTOM,
+                            size: o.zxk.Sizes.MIN,
                             onClick: () => A(0),
-                            children: N.NW.string(N.t['13/7kZ'])
+                            children: E.intl.string(E.t['13/7kZ'])
                         })
                 ]
             })

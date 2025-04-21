@@ -1,8 +1,8 @@
 n.d(t, { Z: () => a }), n(953529);
 var l = n(200651);
 n(192379);
-var r = n(481060),
-    i = n(388032),
+var i = n(481060),
+    r = n(388032),
     s = n(248999);
 let a = () =>
     (0, l.jsxs)('div', {
@@ -12,17 +12,17 @@ let a = () =>
                 className: s.iconContainer,
                 children: (0, l.jsx)('div', { className: s.icon })
             }),
-            (0, l.jsx)(r.Text, {
+            (0, l.jsx)(i.Text, {
                 color: 'header-primary',
                 variant: 'text-lg/semibold',
                 className: s.header,
-                children: i.NW.string(i.t.PAnzbW)
+                children: r.intl.string(r.t.PAnzbW)
             }),
-            (0, l.jsx)(r.Text, {
+            (0, l.jsx)(i.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
                 className: s.description,
-                children: i.NW.format(i.t['8Kp48/'], {})
+                children: r.intl.format(r.t['8Kp48/'], {})
             })
         ]
     });

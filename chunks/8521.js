@@ -15,7 +15,7 @@ let d = (e) => {
     return (0, r.jsx)(o.Z, {
         guild: t,
         onDismissed: n,
-        message: c.NW.format(c.t['+QqO3d'], {
+        message: c.intl.format(c.t['+QqO3d'], {
             maxMemberCount: t.maxMembers,
             maxMembersUrl: a.Z.getArticleURL(s.BhN.MAX_MEMBERS)
         }),

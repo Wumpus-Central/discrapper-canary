@@ -13,6 +13,6 @@ function s(e) {
         _ = (0, o.Z)(s).filter((e) => e.roles.includes(u)).length;
     return r.useMemo(() => {
         let e = [];
-        return !0 === t && e.push(l.NW.string(l.t.EhdV29)), 0 !== c && e.push(l.NW.formatToPlainString(l.t['p/l+BA'], { channelCount: c })), 0 !== d && e.push(l.NW.formatToPlainString(l.t.eXP5vr, { benefitCount: d })), 0 !== _ && e.push(l.NW.formatToPlainString(l.t.YjmQwc, { emojiCount: _ })), new i.Z(e);
+        return !0 === t && e.push(l.intl.string(l.t.EhdV29)), 0 !== c && e.push(l.intl.formatToPlainString(l.t['p/l+BA'], { channelCount: c })), 0 !== d && e.push(l.intl.formatToPlainString(l.t.eXP5vr, { benefitCount: d })), 0 !== _ && e.push(l.intl.formatToPlainString(l.t.YjmQwc, { emojiCount: _ })), new i.Z(e);
     }, [c, d, _, t]);
 }

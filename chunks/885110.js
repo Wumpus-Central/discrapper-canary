@@ -34,8 +34,8 @@ function I(e, t, n) {
 }
 let S = !1,
     T = O.Skl.ONLINE,
-    N = O.Skl.UNKNOWN,
-    A = 0,
+    A = O.Skl.UNKNOWN,
+    N = 0,
     C = [],
     R = !1,
     P = !0,
@@ -66,17 +66,17 @@ function k(e) {
     }
 }
 function j() {
-    (P = !0), (N = T), U();
+    (P = !0), (A = T), U();
 }
 function U() {
     var e;
-    if (((A = null != (e = g.Z.getIdleSince()) ? e : 0), (R = g.Z.isAFK()), P)) T = N;
+    if (((N = null != (e = g.Z.getIdleSince()) ? e : 0), (R = g.Z.isAFK()), P)) T = A;
     else if (S) T = O.Skl.INVISIBLE;
     else {
         let e = f.co.getSetting();
         T = e !== O.Skl.UNKNOWN ? e : O.Skl.ONLINE;
     }
-    T === O.Skl.ONLINE && A > 0 && (T = O.Skl.IDLE);
+    T === O.Skl.ONLINE && N > 0 && (T = O.Skl.IDLE);
     let t = !1,
         n = P || T === O.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(k);
     a()(C, n) || ((C = n), (t = !0));
@@ -96,7 +96,7 @@ function B() {
     return (S = !1), U();
 }
 function F() {
-    (P = !1), (N = O.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(T, L);
+    (P = !1), (A = O.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(T, L);
 }
 function V() {
     F();
@@ -108,7 +108,7 @@ class Z extends (r = l.ZP.Store) {
     getLocalPresence() {
         return {
             status: T,
-            since: A,
+            since: N,
             activities: C,
             afk: R
         };

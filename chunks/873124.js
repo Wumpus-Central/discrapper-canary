@@ -1,11 +1,11 @@
-r.d(t, { Z: () => a }), r(388685), r(457542);
-var n = r(200651),
-    l = r(192379),
-    s = r(481060),
-    i = r(507453),
-    o = r(388032);
+n.d(t, { Z: () => a }), n(388685), n(457542);
+var r = n(200651),
+    l = n(192379),
+    i = n(481060),
+    s = n(507453),
+    o = n(388032);
 function a(e) {
-    let { mfaChallenge: t, finish: r, setSlide: a, onClose: c, isSlideReady: u } = e,
+    let { mfaChallenge: t, finish: n, setSlide: a, onClose: c, isSlideReady: u } = e,
         [d, f] = l.useState(!1),
         [h, m] = l.useState(null),
         [p, g] = l.useState(''),
@@ -17,29 +17,29 @@ function a(e) {
                 null == (e = b.current) || e.focus();
             }
         }, [u]),
-        (0, n.jsxs)('form', {
+        (0, r.jsxs)('form', {
             onSubmit: (e) => {
                 e.preventDefault(),
                     f(!0),
-                    r({
+                    n({
                         mfaType: 'password',
                         data: p
                     })
                         .catch((e) => {
-                            var t, r;
-                            m(null != (r = null == (t = e.body) ? void 0 : t.message) ? r : e.message);
+                            var t, n;
+                            m(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
                         })
                         .finally(() => {
                             f(!1);
                         });
             },
             children: [
-                (0, n.jsx)(i.Z.SlideHeader, { onClose: c }),
-                (0, n.jsx)(i.Z.SlideContent, {
-                    children: (0, n.jsxs)(s.xJW, {
-                        title: o.NW.string(o.t['CIGa+/']),
+                (0, r.jsx)(s.Z.SlideHeader, { onClose: c }),
+                (0, r.jsx)(s.Z.SlideContent, {
+                    children: (0, r.jsxs)(i.xJW, {
+                        title: o.intl.string(o.t['CIGa+/']),
                         children: [
-                            (0, n.jsx)(s.oil, {
+                            (0, r.jsx)(i.oil, {
                                 inputRef: b,
                                 onChange: g,
                                 value: p,
@@ -48,11 +48,11 @@ function a(e) {
                                 spellCheck: 'false',
                                 disabled: d
                             }),
-                            (0, n.jsx)(i.Z.SlideError, { error: h })
+                            (0, r.jsx)(s.Z.SlideError, { error: h })
                         ]
                     })
                 }),
-                (0, n.jsx)(i.Z.SlideFooter, {
+                (0, r.jsx)(s.Z.SlideFooter, {
                     mfaChallenge: t,
                     setSlide: a,
                     showConfirm: !0,

@@ -11,7 +11,7 @@ function u(e) {
     return 'recent' === t && (0, l.Mq)(n)
         ? (0, r.jsx)(i.sNh, {
               id: 'view-activity',
-              label: c.NW.string(c.t.GDWYR0),
+              label: c.intl.string(c.t.GDWYR0),
               action: () => {
                   null == u || u({ action: 'PRESS_VIEW_ACTIVITY_MENU_ITEM' }), null == d || d(), (0, a.__)(o._b.TEXT, s.Ie.NORMAL, { applicationId: n.extra.application_id });
               }

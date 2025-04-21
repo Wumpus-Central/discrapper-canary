@@ -8,7 +8,7 @@ function s(e) {
     return (0, r.jsx)(a.tG, {
         size: s,
         action: t ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
-        text: o.NW.string(o.t['UJKH/v']),
+        text: o.intl.string(o.t['UJKH/v']),
         autoFocus: !0,
         fullWidth: !1,
         onClick: n

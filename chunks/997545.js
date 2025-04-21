@@ -60,7 +60,7 @@ function T(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function N(e, t) {
         e
     );
 }
-let A = 50,
+let N = 50,
     C = 0.9,
     R = 0.1,
     P = 0;
@@ -785,7 +785,7 @@ class L extends _.Z {
             };
             this.experimentFlags.has(v.V8.RESET_DECODER_ON_ERRORS) && (n.params['reset-on-errors'] = '1'), this.experimentFlags.has(v.V8.SOFTWARE_FALLBACK_ON_ERRORS) && (n.params['fallback-after-errors'] = '3'), this.experimentFlags.has(v.V8.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS) && (n.params['fallback-on-consecutive-errors'] = '1'), this.experimentFlags.has(v.V8.SIGNAL_AV1_HARDWARE_DECODE) && (n.params['hardware-av1-decode'] = '1');
             let r = this.hardwareH264 && this.useElectronVideo ? '1' : '0';
-            (n.params['hardware-h264'] = r), u.push(n), s.name === t && ((d = N(S({}, n), { params: this.getCodecParams(s.name, !1) })), this.experimentFlags.has(v.V8.VIDEOTOOLBOX_RATE_CONTROL) && (d.params['fixed-rate-presentation-timestamps'] = '1'), (d.params['hardware-h264'] = r));
+            (n.params['hardware-h264'] = r), u.push(n), s.name === t && ((d = A(S({}, n), { params: this.getCodecParams(s.name, !1) })), this.experimentFlags.has(v.V8.VIDEOTOOLBOX_RATE_CONTROL) && (d.params['fixed-rate-presentation-timestamps'] = '1'), (d.params['hardware-h264'] = r));
         }
         return {
             videoEncoder: d,
@@ -798,7 +798,7 @@ class L extends _.Z {
         return this.keyframeInterval > 0 && this.clipsKeyFrameInterval > 0 ? Math.min(this.keyframeInterval, this.clipsKeyFrameInterval) : Math.max(this.keyframeInterval, this.clipsKeyFrameInterval);
     }
     getConnectionTransportOptions() {
-        let e = N(
+        let e = A(
             S(
                 {
                     selfMute: this.selfMute,
@@ -969,7 +969,7 @@ class L extends _.Z {
                               i.forEach((t, n) => {
                                   if (t.rid === e.rid) {
                                       let r = this.simulcastLQDisabledSsrc !== e.ssrc && e.active;
-                                      i[n] = N(S({}, t), {
+                                      i[n] = A(S({}, t), {
                                           ssrc: e.ssrc,
                                           rtxSsrc: e.rtxSsrc,
                                           active: r
@@ -1047,11 +1047,11 @@ class L extends _.Z {
                         if (null != o && null != s && null != o.framesCaptured && null != s.framesCaptured) {
                             let e = o.framesCaptured - s.framesCaptured,
                                 t = null != o.noiseCancellerFrames ? (null != s.noiseCancellerFrames ? o.noiseCancellerFrames - s.noiseCancellerFrames : 0) : e;
-                            if (this.noiseCancellation && t > A && null != o.noiseCancellerProcessTime && null != s.noiseCancellerProcessTime) {
+                            if (this.noiseCancellation && t > N && null != o.noiseCancellerProcessTime && null != s.noiseCancellerProcessTime) {
                                 let e = o.noiseCancellerProcessTime - s.noiseCancellerProcessTime;
                                 e / t > 8 ? this.emit(m.Sh.NoiseCancellationError, O.H3.CPU_OVERUSE) : 0 === e && this.emit(m.Sh.NoiseCancellationError, O.H3.FAILED);
                             }
-                            this.inputMode === O.pM.VOICE_ACTIVITY && this.vadAutoThreshold && this.vadUseKrisp && e > A && null != o.voiceActivityDetectorProcessTime && null != s.voiceActivityDetectorProcessTime && (o.voiceActivityDetectorProcessTime - s.voiceActivityDetectorProcessTime) / e > 4 && this.emit(m.Sh.VoiceActivityDetectorError, O.H3.VAD_CPU_OVERUSE);
+                            this.inputMode === O.pM.VOICE_ACTIVITY && this.vadAutoThreshold && this.vadUseKrisp && e > N && null != o.voiceActivityDetectorProcessTime && null != s.voiceActivityDetectorProcessTime && (o.voiceActivityDetectorProcessTime - s.voiceActivityDetectorProcessTime) / e > 4 && this.emit(m.Sh.VoiceActivityDetectorError, O.H3.VAD_CPU_OVERUSE);
                         }
                     }
                     this.stats = e;

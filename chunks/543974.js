@@ -55,12 +55,12 @@ function C(e) {
                         className: v.modalHeader,
                         color: 'header-primary',
                         variant: 'heading-xl/bold',
-                        children: p.NW.string(p.t['+d9SHx'])
+                        children: p.intl.string(p.t['+d9SHx'])
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: p.NW.string(p.t['5DtaWl'])
+                        children: p.intl.string(p.t['5DtaWl'])
                     })
                 ]
             }),
@@ -78,7 +78,7 @@ function C(e) {
                             return a(t);
                         }
                     }),
-                    (0, r.jsx)(m.Z, { children: p.NW.string(p.t.dI4HFh) })
+                    (0, r.jsx)(m.Z, { children: p.intl.string(p.t.dI4HFh) })
                 ]
             }),
             (0, r.jsx)(c.mzw, {
@@ -86,7 +86,7 @@ function C(e) {
                     disabled: null == i,
                     submitting: l,
                     onClick: n,
-                    children: p.NW.string(p.t.FJR4bG)
+                    children: p.intl.string(p.t.FJR4bG)
                 })
             })
         ]
@@ -103,12 +103,12 @@ function g() {
                         className: v.modalHeader,
                         color: 'header-primary',
                         variant: 'heading-xl/bold',
-                        children: p.NW.string(p.t.OkJf1d)
+                        children: p.intl.string(p.t.OkJf1d)
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: p.NW.string(p.t['of/l5e'])
+                        children: p.intl.string(p.t['of/l5e'])
                     })
                 ]
             }),
@@ -154,8 +154,8 @@ function b(e) {
         } catch (t) {
             _(!1),
                 d.Z.show({
-                    title: p.NW.string(p.t['QL1y9/']),
-                    body: p.NW.formatToPlainString(p.t['6ZyNHx'], { deviceName: e.name })
+                    title: p.intl.string(p.t['QL1y9/']),
+                    body: p.intl.formatToPlainString(p.t['6ZyNHx'], { deviceName: e.name })
                 });
         }
     };

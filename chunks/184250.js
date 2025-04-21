@@ -3,8 +3,8 @@ var r = n(200651);
 n(192379);
 var o = n(98278),
     c = n(790527),
-    a = n(474936),
-    i = n(388032),
+    i = n(474936),
+    a = n(388032),
     l = n(116909);
 function s(t) {
     var { onClose: e, analyticsSource: n, analyticsLocation: s } = t,
@@ -56,14 +56,14 @@ function s(t) {
         })(
             {
                 artURL: l.Z,
-                type: a.cd.APP_ICON_UPSELL,
-                title: i.NW.string(i.t.TYFwc3),
-                body: i.NW.string(i.t.HDt8io),
-                glowUp: i.NW.string(i.t.HDt8io),
+                type: i.cd.APP_ICON_UPSELL,
+                title: a.intl.string(a.t.TYFwc3),
+                body: a.intl.string(a.t.HDt8io),
+                glowUp: a.intl.string(a.t.HDt8io),
                 onSecondaryClick: () => {
                     (0, o.$)(e);
                 },
-                secondaryCTA: i.NW.string(i.t.PcTCBw),
+                secondaryCTA: a.intl.string(a.t.PcTCBw),
                 analyticsSource: n,
                 analyticsLocation: s,
                 onClose: e,

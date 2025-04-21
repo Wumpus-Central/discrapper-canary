@@ -1,27 +1,27 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var l = n(200651),
-    r = n(192379),
-    i = n(120356),
-    s = n.n(i),
+    i = n(192379),
+    r = n(120356),
+    s = n.n(r),
     a = n(481060),
     o = n(231239),
     c = n(881052),
     d = n(313201),
     u = n(888592),
     m = n(981631),
-    N = n(388032),
-    x = n(257356);
-let h = (0, d.hQ)(),
-    _ = (e) => {
-        let { email: t, setStep: n, onBack: i, school: d, setSchool: _ } = e,
-            [g, f] = r.useState(null),
-            [v, p] = r.useState(!1),
+    x = n(388032),
+    h = n(257356);
+let _ = (0, d.hQ)(),
+    g = (e) => {
+        let { email: t, setStep: n, onBack: r, school: d, setSchool: g } = e,
+            [f, N] = i.useState(null),
+            [v, p] = i.useState(!1),
             E = async () => {
-                f(null), p(!0);
+                N(null), p(!0);
                 try {
                     await o.Z.signup(t, d), n(u.tF.EMAIL_WAITLIST);
                 } catch (e) {
-                    f(new c.Hx(e));
+                    N(new c.Hx(e));
                 } finally {
                     p(!1);
                 }
@@ -30,59 +30,59 @@ let h = (0, d.hQ)(),
                 null != d && '' !== d && e.charCode === m.yXg.ENTER && (await E());
             };
         return (0, l.jsxs)('div', {
-            className: x.container,
+            className: h.container,
             children: [
-                (0, l.jsx)('div', { className: x.__invalid_topImage }),
+                (0, l.jsx)('div', { className: h.__invalid_topImage }),
                 (0, l.jsx)(a.X6q, {
-                    className: s()(x.centerText, x.header),
+                    className: s()(h.centerText, h.header),
                     variant: 'heading-xl/semibold',
-                    children: N.NW.string(N.t['2FNWBA'])
+                    children: x.intl.string(x.t['2FNWBA'])
                 }),
                 (0, l.jsx)('div', {
-                    className: x.descriptionWidth,
+                    className: h.descriptionWidth,
                     children: (0, l.jsx)(a.Text, {
-                        className: x.centerText,
+                        className: h.centerText,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: N.NW.string(N.t['/4y6o6'])
+                        children: x.intl.string(x.t['/4y6o6'])
                     })
                 }),
                 (0, l.jsxs)(a.xJW, {
-                    className: x.formItem,
+                    className: h.formItem,
                     children: [
                         (0, l.jsx)(a.vwX, {
-                            id: h,
-                            children: N.NW.string(N.t['L+AfJi'])
+                            id: _,
+                            children: x.intl.string(x.t['L+AfJi'])
                         }),
                         (0, l.jsx)(a.oil, {
                             onKeyPress: S,
-                            placeholder: N.NW.string(N.t.Y1btJS),
+                            placeholder: x.intl.string(x.t.Y1btJS),
                             onChange: (e) => {
-                                _(e);
+                                g(e);
                             },
-                            error: null == g ? void 0 : g.getAnyErrorMessage(),
-                            'aria-labelledby': h
+                            error: null == f ? void 0 : f.getAnyErrorMessage(),
+                            'aria-labelledby': _
                         })
                     ]
                 }),
                 (0, l.jsxs)('div', {
-                    className: x.footer,
+                    className: h.footer,
                     children: [
                         (0, l.jsx)(a.zxk, {
-                            className: x.backButton,
-                            onClick: i,
+                            className: h.backButton,
+                            onClick: r,
                             look: a.zxk.Looks.LINK,
                             size: a.zxk.Sizes.NONE,
                             color: a.zxk.Colors.PRIMARY,
-                            children: N.NW.string(N.t['13/7kZ'])
+                            children: x.intl.string(x.t['13/7kZ'])
                         }),
                         (0, l.jsx)(a.zxk, {
                             onClick: E,
                             size: a.zxk.Sizes.MEDIUM,
                             color: a.zxk.Colors.BRAND,
-                            className: x.__invalid_submitButton,
+                            className: h.__invalid_submitButton,
                             submitting: v,
-                            children: N.NW.string(N.t.PDsYAg)
+                            children: x.intl.string(x.t.PDsYAg)
                         })
                     ]
                 })

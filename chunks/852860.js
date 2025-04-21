@@ -2,8 +2,8 @@ r.d(t, { Z: () => c }), r(388685);
 var n = r(200651),
     A = r(192379),
     a = r(481060),
-    o = r(585483),
-    l = r(981631),
+    l = r(585483),
+    o = r(981631),
     i = r(388032),
     s = r(744053);
 let c = function (e) {
@@ -17,9 +17,9 @@ let c = function (e) {
                 q(!0), setTimeout(() => q(!1), 1000);
             }
             return (
-                o.S.subscribe(l.CkL.EMPHASIZE_NOTICE, e),
+                l.S.subscribe(o.CkL.EMPHASIZE_NOTICE, e),
                 () => {
-                    o.S.unsubscribe(l.CkL.EMPHASIZE_NOTICE, e);
+                    l.S.unsubscribe(o.CkL.EMPHASIZE_NOTICE, e);
                 }
             );
         }, []),
@@ -36,7 +36,7 @@ let c = function (e) {
                             className: s.shrinkingContainer,
                             children: (0, n.jsx)('div', {
                                 className: s.message,
-                                children: null != (t = null != c ? c : r) ? t : i.NW.string(i.t.GP7JLC)
+                                children: null != (t = null != c ? c : r) ? t : i.intl.string(i.t.GP7JLC)
                             })
                         }),
                         (0, n.jsxs)('div', {
@@ -49,7 +49,7 @@ let c = function (e) {
                                         color: a.zxk.Colors.PRIMARY,
                                         look: a.zxk.Looks.LINK,
                                         onClick: u,
-                                        children: (0, n.jsx)('span', { children: null != p ? p : i.NW.string(i.t.yBZMsb) })
+                                        children: (0, n.jsx)('span', { children: null != p ? p : i.intl.string(i.t.yBZMsb) })
                                     }),
                                 null != g
                                     ? (0, n.jsx)(a.ua7, {
@@ -92,7 +92,7 @@ let c = function (e) {
                                                       },
                                                       e
                                                   )),
-                                                  (r = r = { children: null != f ? f : i.NW.string(i.t.K344S0) }),
+                                                  (r = r = { children: null != f ? f : i.intl.string(i.t.K344S0) }),
                                                   Object.getOwnPropertyDescriptors
                                                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                                                       : (function (e, t) {

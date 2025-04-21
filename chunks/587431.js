@@ -1,11 +1,11 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(696936);
-function l(e) {
+    l = n(696936);
+function s(e) {
     return (0, r.jsx)(
-        s.Z,
+        l.Z,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -32,7 +32,7 @@ function l(e) {
             return e;
         })(
             {
-                color: s.W.RED,
+                color: l.W.RED,
                 icon: i.k$p
             },
             e

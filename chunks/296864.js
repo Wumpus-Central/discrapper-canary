@@ -13,10 +13,10 @@ var t = i(200651),
     m = i(430824),
     x = i(305298),
     g = i(405613),
-    N = i(460838),
-    j = i(765305),
-    p = i(388032),
-    C = i(817576);
+    j = i(460838),
+    p = i(765305),
+    C = i(388032),
+    N = i(817576);
 function y(e) {
     var n;
     let { transitionState: i, event: a, onSuccess: y, onClose: f } = e,
@@ -27,26 +27,26 @@ function y(e) {
         { canManageGuildEvent: Z } = (0, d.XJ)(null != w ? w : I),
         S = Z(a),
         T = (0, s.e7)([u.Z], () => u.Z.isLurking(b), [b]),
-        O = a.entity_type === j.WX.STAGE_INSTANCE,
+        O = a.entity_type === p.WX.STAGE_INSTANCE,
         [_, P] = l.useState(O),
         [A, { loading: G, error: L }] = (0, x.Z)();
     if (!S) return null;
-    let X = E === j.j8.PUBLIC ? p.NW.string(p.t.HhlaLC) : p.NW.string(p.t.GI3xXV),
-        W = () => {
+    let X = E === p.j8.PUBLIC ? C.intl.string(C.t.HhlaLC) : C.intl.string(C.t.GI3xXV),
+        R = () => {
             null == y || y(), f(), (0, h.Ku)(!1);
         },
-        R = async () => {
-            await A(a, _, { onSuccess: W });
+        M = async () => {
+            await A(a, _, { onSuccess: R });
         };
     return (0, t.jsx)(c.Y0X, {
         transitionState: i,
         'aria-labelledby': k,
         children: (0, t.jsxs)(c.hzk, {
-            className: C.content,
+            className: N.content,
             children: [
                 (0, t.jsx)('div', {
-                    className: C.previewCard,
-                    children: (0, t.jsx)(N.Z, {
+                    className: N.previewCard,
+                    children: (0, t.jsx)(j.Z, {
                         guild: I,
                         channel: w,
                         name: a.name,
@@ -62,22 +62,22 @@ function y(e) {
                 }),
                 (0, t.jsx)(c.Text, {
                     color: 'header-secondary',
-                    className: C.privacyLevel,
+                    className: N.privacyLevel,
                     variant: 'text-sm/normal',
-                    children: p.NW.format(p.t.UMajoq, {
+                    children: C.intl.format(C.t.UMajoq, {
                         privacyLevel: X,
                         privacyLevelHook: (e, n) =>
-                            E !== j.j8.PUBLIC
+                            E !== p.j8.PUBLIC
                                 ? null
                                 : (0, t.jsxs)(
                                       'div',
                                       {
-                                          className: C.privacyLevel,
+                                          className: N.privacyLevel,
                                           children: [
                                               (0, t.jsx)(c.enf, {
                                                   size: 'xs',
                                                   color: 'currentColor',
-                                                  className: C.publicIcon
+                                                  className: N.publicIcon
                                               }),
                                               (0, t.jsx)(c.Text, {
                                                   variant: 'text-sm/normal',
@@ -91,12 +91,12 @@ function y(e) {
                 }),
                 (0, t.jsx)(c.X6q, {
                     variant: 'heading-xl/semibold',
-                    className: C.header,
+                    className: N.header,
                     children: a.name
                 }),
                 O &&
                     (0, t.jsx)(c.XZJ, {
-                        className: C.verticalSpacing,
+                        className: N.verticalSpacing,
                         type: c.XZJ.Types.INVERTED,
                         value: _,
                         onChange: (e) => {
@@ -105,26 +105,26 @@ function y(e) {
                         },
                         children: (0, t.jsx)(c.Text, {
                             variant: 'text-sm/normal',
-                            children: p.NW.string(p.t.dGNtgI)
+                            children: C.intl.string(C.t.dGNtgI)
                         })
                     }),
                 (0, t.jsxs)('div', {
-                    className: r()(C.inline, C.buttons, C.verticalSpacing),
+                    className: r()(N.inline, N.buttons, N.verticalSpacing),
                     children: [
                         (0, t.jsx)(c.zxk, {
                             color: c.zxk.Colors.PRIMARY,
                             onClick: () => {
                                 f();
                             },
-                            className: r()(C.button, C.spacing),
-                            children: p.NW.string(p.t.CZGqeX)
+                            className: r()(N.button, N.spacing),
+                            children: C.intl.string(C.t.CZGqeX)
                         }),
                         (0, t.jsx)(c.zxk, {
                             color: c.zxk.Colors.GREEN,
-                            onClick: R,
+                            onClick: M,
                             submitting: G,
-                            className: C.button,
-                            children: p.NW.string(p.t.cK1GGR)
+                            className: N.button,
+                            children: C.intl.string(C.t.cK1GGR)
                         })
                     ]
                 }),
@@ -132,7 +132,7 @@ function y(e) {
                     ? (0, t.jsx)(c.Text, {
                           color: 'text-danger',
                           variant: 'text-sm/normal',
-                          className: C.errorMessage,
+                          className: N.errorMessage,
                           children: L.getAnyErrorMessage()
                       })
                     : null

@@ -26,7 +26,7 @@ let b = (e) => {
         return (null != t && !!h.Z.getSettings().clipsEnabled && !!i) || (null != r && !!h.Z.getSettings().decoupledClipsEnabled && !!b) || c.Z.getParticipants(n).some((e) => e.type === f.fO.USER && h.Z.isClipsEnabledForUser(e.user.id));
     })
         ? (0, r.jsxs)(s.DY3, {
-              text: m.NW.string(m.t.DJXW3N),
+              text: m.intl.string(m.t.DJXW3N),
               color: s.FGA.GREY,
               className: l()(t, g.clipsEnabledIndicator),
               children: [
@@ -37,7 +37,7 @@ let b = (e) => {
                       className: g.clipBadgeIcon
                   }),
                   (0, r.jsx)(s.IGR, {
-                      text: m.NW.string(m.t.pCMkDQ),
+                      text: m.intl.string(m.t.pCMkDQ),
                       shape: s.Dv2.ROUND_RIGHT,
                       color: a.Z.unsafe_rawColors.PRIMARY_500.css,
                       className: g.clipBadgeText

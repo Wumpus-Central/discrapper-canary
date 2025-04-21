@@ -40,7 +40,7 @@ function d(e) {
         className: o()(c.container, n),
         onClick: g,
         children: (0, r.jsx)(a.ua7, {
-            text: f ? u.NW.string(u.t['t5VZ8/']) : u.NW.string(u.t.OpuAlJ),
+            text: f ? u.intl.string(u.t['t5VZ8/']) : u.intl.string(u.t.OpuAlJ),
             children: (e) => {
                 var t, n;
                 return (0, r.jsx)(

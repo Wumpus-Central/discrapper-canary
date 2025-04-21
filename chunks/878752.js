@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(704215),
@@ -22,11 +22,11 @@ var r = n(200651),
     j = n(361057),
     O = n(997614),
     E = n(159909),
-    N = n(531675);
-function I(e) {
-    let { channel: t, hasActiveStream: n, showRightDivider: I, themeable: P = !1 } = e,
-        { analyticsLocations: S } = (0, a.ZP)(o.Z.VOICE_CONTROL_TRAY),
-        Z = (0, b.Z)({ location: 'VoiceEffectsActionBar' }),
+    I = n(531675);
+function P(e) {
+    let { channel: t, hasActiveStream: n, showRightDivider: P, themeable: S = !1 } = e,
+        { analyticsLocations: Z } = (0, a.ZP)(o.Z.VOICE_CONTROL_TRAY),
+        N = (0, b.Z)({ location: 'VoiceEffectsActionBar' }),
         T = (0, h.Ou)(t),
         A = i.useRef(null),
         w = (0, u.Z)(),
@@ -37,46 +37,46 @@ function I(e) {
         { enableViewerClipping: k } = d.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
         M = (0, s.Z)(_.Z),
         L = (0, h.Zm)(t, 'VoiceEffectsActionBar') ? [l.z.CONSUMABLE_HD_POTION_UPSELL] : [],
-        [D, W] = (0, c.US)(L, void 0, !0),
-        U = D === l.z.CONSUMABLE_HD_POTION_UPSELL,
-        B = (0, g.Z)(t);
+        [D, U] = (0, c.US)(L, void 0, !0),
+        B = D === l.z.CONSUMABLE_HD_POTION_UPSELL,
+        G = (0, g.Z)(t);
     if (null == t || null != w) return null;
-    let G = (0, m.Z)(t),
-        F = !Z && G,
-        H = !Z && B,
-        V = k && M,
-        z = R && n;
+    let F = (0, m.Z)(t),
+        H = !N && F,
+        V = !N && G,
+        z = k && M,
+        W = R && n;
     return (0, r.jsxs)(a.Gt, {
-        value: S,
+        value: Z,
         children: [
             (0, r.jsxs)('div', {
-                className: N.voiceEffectsActionBar,
+                className: I.voiceEffectsActionBar,
                 children: [
-                    F &&
+                    H &&
                         (0, r.jsx)(O.Z, {
                             channel: t,
-                            themeable: P
+                            themeable: S
                         }),
-                    H && (0, r.jsx)(v.Z, { channel: t }),
-                    V && (0, r.jsx)(y.Z, { channel: t }),
-                    U &&
+                    V && (0, r.jsx)(v.Z, { channel: t }),
+                    z && (0, r.jsx)(y.Z, { channel: t }),
+                    B &&
                         (0, r.jsx)(p.t, {
                             potionRef: A,
                             channel: t,
-                            markAsDismissed: W
+                            markAsDismissed: U
                         }),
                     T &&
                         (0, r.jsx)(j.Z, {
                             ref: A,
                             channel: t,
-                            glow: U
+                            glow: B
                         }),
-                    z && (0, r.jsx)(C.Z, {}),
-                    z && (0, r.jsx)(x.Z, { channel: t }),
-                    z && (0, r.jsx)(E.Z, {})
+                    W && (0, r.jsx)(C.Z, {}),
+                    W && (0, r.jsx)(x.Z, { channel: t }),
+                    W && (0, r.jsx)(E.Z, {})
                 ]
             }),
-            I && (F || H || V || U || T || z) && (0, r.jsx)('div', { className: N.divider })
+            P && (H || V || z || B || T || W) && (0, r.jsx)('div', { className: I.divider })
         ]
     });
 }

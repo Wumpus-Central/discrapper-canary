@@ -49,25 +49,25 @@ function x(e) {
     let [n, o] = (0, s.useState)(!1),
         x = (0, s.useCallback)((e) => o(e), []);
     (0, f.Z)(x);
-    let { analyticsLocations: N } = (0, u.ZP)(l.Z.CLICKER_GAME),
-        [v] = (0, d.Z)(g.yN.CURSORS),
-        O = null != (t = v.selectedCursor) ? t : g.Vx.DEFAULT,
-        j = (0, c.Yzy)(n, {
+    let { analyticsLocations: v } = (0, u.ZP)(l.Z.CLICKER_GAME),
+        [O] = (0, d.Z)(g.yN.CURSORS),
+        j = null != (t = O.selectedCursor) ? t : g.Vx.DEFAULT,
+        N = (0, c.Yzy)(n, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
             config: i.config.gentle
         });
     return (0, r.jsx)(u.Gt, {
-        value: N,
+        value: v,
         children: (0, r.jsxs)('div', {
-            className: a()(b.container, h[O]),
+            className: a()(b.container, h[j]),
             children: [
                 (0, r.jsx)('div', {
                     className: b.background,
                     children: (0, r.jsx)('div', { className: b.backgroundGradient })
                 }),
-                j((t, n) =>
+                N((t, n) =>
                     (0, r.jsx)(i.animated.div, {
                         style: t,
                         className: b.animationContainer,

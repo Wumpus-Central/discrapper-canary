@@ -25,9 +25,9 @@ var i = n(392711),
     x = n(937579),
     E = n(522558),
     I = n(11352),
-    N = n(474936),
-    P = n(981631),
-    w = n(354459),
+    P = n(474936),
+    w = n(981631),
+    N = n(354459),
     Z = n(37113),
     T = n(388032);
 function A(e, t, n) {
@@ -180,19 +180,19 @@ class L extends a.Z {
                     let l = u.Z.getSelectedParticipant(e),
                         o = (0, S.o)(l, n),
                         { sendNitroMessage: a } = (0, C.TD)(o),
-                        c = null != (i = null == (r = p.Z.getGuild(t)) ? void 0 : r.premiumTier) ? i : P.Eu4.NONE;
-                    if (j.Z.cooldownIsActive() || !a || c >= P.Eu4.TIER_2 || (null == l ? void 0 : l.type) !== w.fO.STREAM || (null == l ? void 0 : l.id) === (null == n ? void 0 : n.id) || null == l.maxResolution || null == l.maxFrameRate) return;
+                        c = null != (i = null == (r = p.Z.getGuild(t)) ? void 0 : r.premiumTier) ? i : w.Eu4.NONE;
+                    if (j.Z.cooldownIsActive() || !a || c >= w.Eu4.TIER_2 || (null == l ? void 0 : l.type) !== N.fO.STREAM || (null == l ? void 0 : l.id) === (null == n ? void 0 : n.id) || null == l.maxResolution || null == l.maxFrameRate) return;
                     v.I();
-                    let d = T.NW.formatToPlainString(T.t.AbyeZG, {
+                    let d = T.intl.formatToPlainString(T.t.AbyeZG, {
                         nickname: l.userNick,
                         resolution: (0, Z.o6)(l.maxResolution.height),
                         fps: (0, y.bp)(l.maxFrameRate)
                     });
                     s.Z.sendNitroSystemMessage(e, d),
-                        m.default.track(P.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
-                            type: N.cd.HD_STREAMING_VIEWER_UPSELL,
-                            location_section: null != t ? P.jXE.TEXT_IN_VOICE : P.jXE.CHANNEL_TEXT_AREA,
-                            location_object: P.qAy.MESSAGE,
+                        m.default.track(w.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
+                            type: P.cd.HD_STREAMING_VIEWER_UPSELL,
+                            location_section: null != t ? w.jXE.TEXT_IN_VOICE : w.jXE.CHANNEL_TEXT_AREA,
+                            location_object: w.qAy.MESSAGE,
                             guild_id: t
                         });
                 }, 200)

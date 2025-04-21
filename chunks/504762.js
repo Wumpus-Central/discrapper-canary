@@ -13,19 +13,19 @@ function s() {
             children: [
                 (0, r.jsx)('img', {
                     src: o,
-                    alt: l.NW.string(l.t.MvLOqq)
+                    alt: l.intl.string(l.t.MvLOqq)
                 }),
                 (0, r.jsx)(i.LZC, { size: 12 }),
                 (0, r.jsx)(i.X6q, {
                     className: a.header,
                     variant: 'heading-lg/semibold',
-                    children: l.NW.string(l.t.t18lFh)
+                    children: l.intl.string(l.t.t18lFh)
                 }),
                 (0, r.jsx)(i.LZC, { size: 8 }),
                 (0, r.jsx)(i.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: l.NW.string(l.t.TvGJgo)
+                    children: l.intl.string(l.t.TvGJgo)
                 })
             ]
         })

@@ -22,7 +22,7 @@ function f(e) {
         y = (0, o.m$)({ channelId: e.channel.id });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(l.nn4, { children: p.NW.string(p.t.EJRzg4) }),
+            (0, r.jsx)(l.nn4, { children: p.intl.string(p.t.EJRzg4) }),
             null != f &&
                 !n &&
                 (0, r.jsx)('div', {
@@ -49,7 +49,7 @@ function f(e) {
                         }),
                         y &&
                             (0, r.jsx)(l.ua7, {
-                                text: p.NW.string(p.t.QyZ4TU),
+                                text: p.intl.string(p.t.QyZ4TU),
                                 children: (e) => {
                                     var t, n;
                                     return (0, r.jsx)(
@@ -82,7 +82,7 @@ function f(e) {
                                         (n = n =
                                             {
                                                 size: 'xs',
-                                                'aria-label': p.NW.string(p.t.VHXh8f),
+                                                'aria-label': p.intl.string(p.t.VHXh8f),
                                                 color: l.TVs.colors.INTERACTIVE_NORMAL,
                                                 className: h.secureFramesIcon
                                             }),

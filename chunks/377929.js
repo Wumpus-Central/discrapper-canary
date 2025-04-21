@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(392711),
@@ -46,7 +46,7 @@ function E(e) {
     }
     return e;
 }
-function N(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,13 +64,13 @@ function N(e, t) {
         e
     );
 }
-function I(e) {
+function P(e) {
     let { channel: t } = e,
         [n, l] = i.useState(!1);
     function o() {
         l((e) => !e);
     }
-    let a = O.NW.string(O.t.UKOtz8);
+    let a = O.intl.string(O.t.UKOtz8);
     return (0, r.jsx)(s.yRy, {
         shouldShow: n,
         animation: s.yRy.Animation.NONE,
@@ -79,13 +79,13 @@ function I(e) {
         autoInvert: !1,
         onRequestClose: () => l(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(P, N(E({}, e), { channel: t }));
+            return (0, r.jsx)(S, I(E({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
                 C.ZP.Icon,
-                N(E({}, e), {
+                I(E({}, e), {
                     onClick: o,
                     tooltip: n ? null : a,
                     icon: s.xhG,
@@ -96,19 +96,19 @@ function I(e) {
         }
     });
 }
-function P(e) {
+function S(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         l = (0, c.Z)(t),
         C = (0, f.Z)(t),
         E = (0, b.Z)(t.id),
-        N = (0, g.Z)(t),
-        I = (0, y.Z)({
+        I = (0, g.Z)(t),
+        P = (0, y.Z)({
             id: t.id,
-            label: O.NW.string(O.t.DQ797u)
+            label: O.intl.string(O.t.DQ797u)
         }),
-        P = (0, u.Z)(t),
-        S = (0, d.Z)(t),
-        Z = (0, p.Z)(t, 'Toolbar Overflow'),
+        S = (0, u.Z)(t),
+        Z = (0, d.Z)(t),
+        N = (0, p.Z)(t, 'Toolbar Overflow'),
         T = (0, m.Z)(t),
         A = (0, h.Z)(t),
         w = (0, _.Z)(t),
@@ -117,21 +117,21 @@ function P(e) {
     return (0, r.jsxs)(s.v2r, {
         navId: 'thread-context',
         onClose: n,
-        'aria-label': O.NW.string(O.t['1NBjqa']),
+        'aria-label': O.intl.string(O.t['1NBjqa']),
         onSelect: i,
         children: [
             (0, r.jsxs)(s.kSQ, {
-                children: [Z, A]
+                children: [N, A]
             }),
             (0, r.jsxs)(s.kSQ, {
                 children: [
-                    N,
+                    I,
                     T,
                     E,
                     R && !k
                         ? (0, r.jsx)(s.sNh, {
                               id: 'open',
-                              label: O.NW.string(O.t.bX7EaG),
+                              label: O.intl.string(O.t.bX7EaG),
                               action: function () {
                                   (0, j.ok)(t);
                               }
@@ -140,10 +140,10 @@ function P(e) {
                 ]
             }),
             (0, r.jsxs)(s.kSQ, {
-                children: [w, l, C, S]
+                children: [w, l, C, Z]
             }),
             (0, r.jsxs)(s.kSQ, {
-                children: [P, I]
+                children: [S, P]
             })
         ]
     });

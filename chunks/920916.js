@@ -27,8 +27,8 @@ var r = n(200651),
     I = n(369111),
     S = n(25990),
     T = n(594174),
-    N = n(960048),
-    A = n(272008),
+    A = n(960048),
+    N = n(272008),
     C = n(113434),
     R = n(497505),
     P = n(918701),
@@ -98,10 +98,10 @@ function H() {
         t = (0, O.ED)(e);
     return (0, d.Mn)(t).finally(d.si);
 }
-function W() {
+function Y() {
     f.Z.open(M.oAB.PREMIUM, null, {});
 }
-function Y(e) {
+function W(e) {
     let { product: t, isFetching: n } = (0, g.T)(e),
         {} = (0, I.Z)({}),
         r = i.useMemo(() => {
@@ -109,7 +109,7 @@ function Y(e) {
             let e = t.items.find((e) => e.type === l.Z.AVATAR_DECORATION);
             return null == e ? null : e;
         }, [t, n]),
-        a = () => (null == r ? (N.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(r), H()));
+        a = () => (null == r ? (A.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(r), H()));
     return [r, a];
 }
 function K(e) {
@@ -121,22 +121,22 @@ function K(e) {
         O = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
         I = (0, c.e7)([T.default], () => T.default.getCurrentUser()),
         S = i.useMemo(() => (0, w.fh)(l, w.eC.HERO), [l]),
-        N = (null == (t = l.userStatus) ? void 0 : t.claimedAt) != null,
-        [C, P] = i.useState(!0 === m || N ? 'claimed' : 'loading');
+        A = (null == (t = l.userStatus) ? void 0 : t.claimedAt) != null,
+        [C, P] = i.useState(!0 === m || A ? 'claimed' : 'loading');
     i.useEffect(() => {
-        N ||
+        A ||
             !0 === m ||
-            (0, A.QB)(l.id, R.y$.CROSS_PLATFORM, d)
+            (0, N.QB)(l.id, R.y$.CROSS_PLATFORM, d)
                 .then(() => P('claimed'))
                 .catch(() => P('error'));
-    }, [l, d, N, m]);
+    }, [l, d, A, m]);
     let D = () => {
             P('applying'), h().finally(a);
         },
         x = !0 === m && null === p && (null == f ? void 0 : f.skuId) !== '',
         M = null == p && !0 !== m,
         j = null == I || M || x || 'loading' === C,
-        U = !O && !N && 'claimed' === C;
+        U = !O && !A && 'claimed' === C;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.O_, {
@@ -252,7 +252,7 @@ function q(e) {
                             variant: 'heading-lg/bold',
                             color: 'header-primary',
                             className: G.heading,
-                            children: U.NW.string(U.t['0/Yz+f'])
+                            children: U.intl.string(U.t['0/Yz+f'])
                         }),
                         (0, r.jsx)(u.Text, {
                             variant: 'text-sm/normal',
@@ -263,15 +263,15 @@ function q(e) {
                         (0, r.jsx)(u.zxk, {
                             submitting: o,
                             onClick: l,
-                            children: U.NW.string(U.t.MAS7uL)
+                            children: U.intl.string(U.t.MAS7uL)
                         }),
                         (0, P.zK)(t, x.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(z, { quest: t }),
                         g &&
                             (0, r.jsx)(v.p, {
                                 className: G.upsell,
-                                upsellText: U.NW.format(U.t.VHXn7O, {
+                                upsellText: U.intl.format(U.t.VHXn7O, {
                                     onNitroClick: () => {
-                                        W(), s();
+                                        Y(), s();
                                     }
                                 }),
                                 buttonAnalyticsObject: { section: M.jXE.PERMADECOS_MARKETING_UPSELL }
@@ -286,7 +286,7 @@ function Q(e) {
     var t, n;
     let { quest: a, location: o, onClose: s, transitionState: l, preview: c } = e,
         u = i.useMemo(() => (0, P.xn)(a.config), [a]),
-        [d, f] = Y(null != (n = null == u ? void 0 : u.skuId) ? n : null);
+        [d, f] = W(null != (n = null == u ? void 0 : u.skuId) ? n : null);
     return null == u
         ? null
         : (null == (t = a.userStatus) ? void 0 : t.claimedAt) != null

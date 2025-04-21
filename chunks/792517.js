@@ -32,7 +32,7 @@ function E(e) {
             noArt: i,
             selected: E,
             size: (0, f.L)(n),
-            header: b ? null : _.NW.string(_.t.epU4ER),
+            header: b ? null : _.intl.string(_.t.epU4ER),
             description: E
                 ? null
                 : (0, r.jsxs)('div', {
@@ -43,13 +43,13 @@ function E(e) {
                               children: (0, r.jsx)(s.Text, {
                                   variant: b ? 'text-sm/semibold' : 'text-md/semibold',
                                   color: 'none',
-                                  children: n < h ? _.NW.string(_.t['I6JG4+']) : _.NW.string(_.t['7Xq/nZ'])
+                                  children: n < h ? _.intl.string(_.t['I6JG4+']) : _.intl.string(_.t['7Xq/nZ'])
                               })
                           }),
                           y
                               ? (0, r.jsx)(d.a, {
                                     className: p.addCTA,
-                                    tooltip: _.NW.string(_.t.wCrzur),
+                                    tooltip: _.intl.string(_.t.wCrzur),
                                     onClick: (e) => {
                                         e.stopPropagation(), (0, l.rn)(t.stream, { forceMultiple: !0 });
                                     },

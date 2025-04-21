@@ -1,4 +1,4 @@
-n.d(t, { default: () => N }), n(388685), n(290780);
+n.d(t, { default: () => g }), n(388685), n(290780);
 var r = n(200651),
     s = n(192379),
     i = n(481060),
@@ -19,15 +19,15 @@ let h = (e) => {
             i = n > 0;
         return s && i
             ? (0, r.jsxs)(r.Fragment, {
-                  children: [E.NW.string(E.t.xbRNIy), (0, r.jsx)('br', {}), E.NW.string(E.t['Bp2/np'])]
+                  children: [E.intl.string(E.t.xbRNIy), (0, r.jsx)('br', {}), E.intl.string(E.t['Bp2/np'])]
               })
             : s
               ? (0, r.jsxs)(r.Fragment, {
-                    children: [E.NW.format(E.t.iKtixc, { n: t }), (0, r.jsx)('br', {}), E.NW.string(E.t.SN1hrq)]
+                    children: [E.intl.format(E.t.iKtixc, { n: t }), (0, r.jsx)('br', {}), E.intl.string(E.t.SN1hrq)]
                 })
               : i
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [E.NW.format(E.t['6IRwub'], { n: n }), (0, r.jsx)('br', {}), E.NW.string(E.t['6AKLRk'])]
+                      children: [E.intl.format(E.t['6IRwub'], { n: n }), (0, r.jsx)('br', {}), E.intl.string(E.t['6AKLRk'])]
                   })
                 : null;
     },
@@ -42,7 +42,7 @@ let h = (e) => {
                         className: I.icon,
                         children: (0, r.jsx)(i.owK, {})
                     }),
-                    text: E.NW.string(E.t['RIMw5+']),
+                    text: E.intl.string(E.t['RIMw5+']),
                     className: I.row
                 },
                 {
@@ -50,7 +50,7 @@ let h = (e) => {
                         className: I.icon,
                         children: (0, r.jsx)(i.d3s, {})
                     }),
-                    text: E.NW.string(E.t.bejNWF),
+                    text: E.intl.string(E.t.bejNWF),
                     className: I.row
                 }
             ];
@@ -82,7 +82,7 @@ let h = (e) => {
         }
         return d;
     };
-function N(e) {
+function g(e) {
     let { channelId: t, blockedUserIds: n, ignoredUserIds: i = [], transitionState: l, onClose: o } = e;
     return (
         s.useEffect(() => {
@@ -94,7 +94,7 @@ function N(e) {
             });
         }, [t, n, i]),
         (0, r.jsx)(d.Z, {
-            headerText: E.NW.string(E.t['mwJJ+f']),
+            headerText: E.intl.string(E.t['mwJJ+f']),
             descriptionText: (0, r.jsx)(h, {
                 numOfBlockedUsers: n.length,
                 numOfIgnoredUsers: i.length
@@ -127,8 +127,8 @@ function N(e) {
                         ignored_user_ids: i
                     });
             },
-            leaveButtonText: E.NW.string(E.t.I4q1kJ),
-            stayButtonText: E.NW.string(E.t.DRJhmZ),
+            leaveButtonText: E.intl.string(E.t.I4q1kJ),
+            stayButtonText: E.intl.string(E.t.DRJhmZ),
             transitionState: l,
             onClose: o
         })

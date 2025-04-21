@@ -21,7 +21,7 @@ function h() {
     if (null == n) return null;
     let h = a.BB(n.shortcut, !0);
     return {
-        title: p.NW.format(p.t.S5uhCA, {
+        title: p.intl.format(p.t.S5uhCA, {
             keybind: h,
             keybindHook: (e, t) => (0, i.jsx)(s.Z, { keybind: h.split('+') }, t)
         }),

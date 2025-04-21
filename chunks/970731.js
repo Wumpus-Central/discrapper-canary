@@ -104,8 +104,8 @@ function y(e) {
         secondaryButtonProps: I = { color: o.zxk.Colors.BRAND_INVERTED },
         onComponentMount: S,
         asset: T,
-        markAsDismissed: N,
-        caretPosition: A = 'caretTopCenter',
+        markAsDismissed: A,
+        caretPosition: N = 'caretTopCenter',
         buttonLayout: C = 0
     } = e;
     (0, s.ZP)(() => {
@@ -113,13 +113,13 @@ function y(e) {
     });
     let R = null != m,
         P = (e) => {
-            y(e), null == N || N(l.L.PRIMARY);
+            y(e), null == A || A(l.L.PRIMARY);
         },
         w = () => {
-            null == v || v(), null == N || N(l.L.SECONDARY);
+            null == v || v(), null == A || A(l.L.SECONDARY);
         };
     return (0, r.jsxs)('div', {
-        className: a()(n, g[t], c.upsellTooltipWrapper, c[A]),
+        className: a()(n, g[t], c.upsellTooltipWrapper, c[N]),
         children: [
             T,
             null == i

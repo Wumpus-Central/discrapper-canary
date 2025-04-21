@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(200651),
     s = n(192379),
     o = n(793030),
@@ -16,183 +16,183 @@ var r = n(200651),
     y = n(737687),
     h = n(358049),
     x = n(294944),
-    N = n(853021),
-    v = n(292337),
-    O = n(225893);
-let j = n(974138),
-    Z = () => [
+    v = n(853021),
+    O = n(292337),
+    j = n(225893);
+let N = n(974138),
+    _ = () => [
         {
-            content: b.NW.string(g.Z.CKPQ6O),
+            content: b.intl.string(g.default.CKPQ6O),
             username: 'BurgerBoi',
             avatar: h,
             responses: [
                 {
-                    content: b.NW.string(g.Z.t8Kroq),
+                    content: b.intl.string(g.default.t8Kroq),
                     responsePoints: 500,
-                    responseMessage: b.NW.string(g.Z.o7Gqi4)
+                    responseMessage: b.intl.string(g.default.o7Gqi4)
                 },
                 {
-                    content: b.NW.string(g.Z.I105xs),
+                    content: b.intl.string(g.default.I105xs),
                     responsePoints: -1000,
-                    responseMessage: b.NW.string(g.Z['+IxWjI'])
+                    responseMessage: b.intl.string(g.default['+IxWjI'])
                 }
             ]
         },
         {
-            content: b.NW.string(g.Z.o9Mmio),
+            content: b.intl.string(g.default.o9Mmio),
             username: 'gaminggamer',
             avatar: x,
             responses: [
                 {
-                    content: b.NW.string(g.Z.eH2eAQ),
+                    content: b.intl.string(g.default.eH2eAQ),
                     responsePoints: 1000,
-                    responseMessage: b.NW.string(g.Z.NX5Sy8)
+                    responseMessage: b.intl.string(g.default.NX5Sy8)
                 },
                 {
-                    content: b.NW.string(g.Z['U/lIpa']),
+                    content: b.intl.string(g.default['U/lIpa']),
                     responsePoints: 100,
-                    responseMessage: b.NW.string(g.Z['3V3mBQ'])
+                    responseMessage: b.intl.string(g.default['3V3mBQ'])
                 }
             ]
         },
         {
-            content: b.NW.string(g.Z['tHj27+']),
+            content: b.intl.string(g.default['tHj27+']),
             username: 'SELLINGEVERYTHING2000',
-            avatar: N,
+            avatar: v,
             responses: [
                 {
-                    content: b.NW.string(g.Z.amDxf3),
+                    content: b.intl.string(g.default.amDxf3),
                     responsePoints: -1000,
-                    responseMessage: b.NW.string(g.Z.FmFP3N)
+                    responseMessage: b.intl.string(g.default.FmFP3N)
                 },
                 {
-                    content: b.NW.string(g.Z.nCOznZ),
+                    content: b.intl.string(g.default.nCOznZ),
                     responsePoints: 1000,
-                    responseMessage: b.NW.string(g.Z.E5wiAw)
+                    responseMessage: b.intl.string(g.default.E5wiAw)
                 }
             ]
         },
         {
-            content: b.NW.string(g.Z.Nlecqq),
+            content: b.intl.string(g.default.Nlecqq),
             username: 'BurgerBoi',
             avatar: h,
             responses: [
                 {
-                    content: b.NW.string(g.Z.WGrc6u),
+                    content: b.intl.string(g.default.WGrc6u),
                     responsePoints: -100,
-                    responseMessage: b.NW.string(g.Z.nUajIy)
+                    responseMessage: b.intl.string(g.default.nUajIy)
                 },
                 {
-                    content: b.NW.string(g.Z.mBzqND),
+                    content: b.intl.string(g.default.mBzqND),
                     responsePoints: -500,
-                    responseMessage: b.NW.string(g.Z.facznJ)
+                    responseMessage: b.intl.string(g.default.facznJ)
                 }
             ]
         },
         {
-            content: b.NW.string(g.Z.tWaTS0),
+            content: b.intl.string(g.default.tWaTS0),
             username: 'gaminggamer',
             avatar: x,
             responses: [
                 {
-                    content: b.NW.string(g.Z.ht6xPD),
+                    content: b.intl.string(g.default.ht6xPD),
                     responsePoints: 2000,
-                    responseMessage: b.NW.string(g.Z['5Gd+Iy'])
+                    responseMessage: b.intl.string(g.default['5Gd+Iy'])
                 },
                 {
-                    content: b.NW.string(g.Z['DFw+2t']),
+                    content: b.intl.string(g.default['DFw+2t']),
                     responsePoints: 100,
-                    responseMessage: b.NW.string(g.Z.VF0jT0)
+                    responseMessage: b.intl.string(g.default.VF0jT0)
                 }
             ]
         },
         {
-            content: b.NW.string(g.Z.WRv94u),
+            content: b.intl.string(g.default.WRv94u),
             username: 'SELLINGEVERYTHING2000',
-            avatar: N,
-            responses: [
-                {
-                    content: b.NW.string(g.Z.DEmfX1),
-                    responsePoints: -1000,
-                    responseMessage: b.NW.string(g.Z.ThkBDQ)
-                },
-                {
-                    content: b.NW.string(g.Z.vUgNQU),
-                    responsePoints: 1000,
-                    responseMessage: b.NW.string(g.Z['/axEMz'])
-                }
-            ]
-        },
-        {
-            content: b.NW.string(g.Z.TTqFZm),
-            username: 'lonelyboi',
             avatar: v,
             responses: [
                 {
-                    content: b.NW.string(g.Z.ysPB4u),
-                    responsePoints: 2000,
-                    responseMessage: b.NW.string(g.Z.osxWvb)
+                    content: b.intl.string(g.default.DEmfX1),
+                    responsePoints: -1000,
+                    responseMessage: b.intl.string(g.default.ThkBDQ)
                 },
                 {
-                    content: b.NW.string(g.Z.oeBsZG),
-                    responsePoints: -2000,
-                    responseMessage: b.NW.string(g.Z.VjMyu7)
+                    content: b.intl.string(g.default.vUgNQU),
+                    responsePoints: 1000,
+                    responseMessage: b.intl.string(g.default['/axEMz'])
                 }
             ]
         },
         {
-            content: b.NW.string(g.Z['ux+uTk']),
+            content: b.intl.string(g.default.TTqFZm),
+            username: 'lonelyboi',
+            avatar: O,
+            responses: [
+                {
+                    content: b.intl.string(g.default.ysPB4u),
+                    responsePoints: 2000,
+                    responseMessage: b.intl.string(g.default.osxWvb)
+                },
+                {
+                    content: b.intl.string(g.default.oeBsZG),
+                    responsePoints: -2000,
+                    responseMessage: b.intl.string(g.default.VjMyu7)
+                }
+            ]
+        },
+        {
+            content: b.intl.string(g.default['ux+uTk']),
             username: 'BurgerBoi',
             avatar: h,
             responses: [
                 {
-                    content: b.NW.string(g.Z['+1Q+Aw']),
+                    content: b.intl.string(g.default['+1Q+Aw']),
                     responsePoints: -1000,
-                    responseMessage: b.NW.string(g.Z.r60B29)
+                    responseMessage: b.intl.string(g.default.r60B29)
                 },
                 {
-                    content: b.NW.string(g.Z['6tqGtb']),
+                    content: b.intl.string(g.default['6tqGtb']),
                     responsePoints: 1000,
-                    responseMessage: b.NW.string(g.Z.K8IDXl)
+                    responseMessage: b.intl.string(g.default.K8IDXl)
                 }
             ]
         },
         {
-            content: b.NW.string(g.Z['/drFws']),
+            content: b.intl.string(g.default['/drFws']),
             username: 'lonelyboi',
+            avatar: O,
+            responses: [
+                {
+                    content: b.intl.string(g.default.ETmJEx),
+                    responsePoints: -500,
+                    responseMessage: b.intl.string(g.default.bITxrq)
+                },
+                {
+                    content: b.intl.string(g.default.XDDUXl),
+                    responsePoints: 1000,
+                    responseMessage: b.intl.string(g.default['dl/VYm'])
+                }
+            ]
+        },
+        {
+            content: b.intl.string(g.default['Mw+9pa']),
+            username: 'SELLINGEVERYTHING2000',
             avatar: v,
             responses: [
                 {
-                    content: b.NW.string(g.Z.ETmJEx),
-                    responsePoints: -500,
-                    responseMessage: b.NW.string(g.Z.bITxrq)
-                },
-                {
-                    content: b.NW.string(g.Z.XDDUXl),
-                    responsePoints: 1000,
-                    responseMessage: b.NW.string(g.Z['dl/VYm'])
-                }
-            ]
-        },
-        {
-            content: b.NW.string(g.Z['Mw+9pa']),
-            username: 'SELLINGEVERYTHING2000',
-            avatar: N,
-            responses: [
-                {
-                    content: b.NW.string(g.Z['AW5f+v']),
+                    content: b.intl.string(g.default['AW5f+v']),
                     responsePoints: 10000,
-                    responseMessage: b.NW.string(g.Z.dbAznJ)
+                    responseMessage: b.intl.string(g.default.dbAznJ)
                 },
                 {
-                    content: b.NW.string(g.Z['LsWI+v']),
+                    content: b.intl.string(g.default['LsWI+v']),
                     responsePoints: -1000,
-                    responseMessage: b.NW.string(g.Z['7zD1nZ'])
+                    responseMessage: b.intl.string(g.default['7zD1nZ'])
                 }
             ]
         }
     ];
-function _(e) {
+function P(e) {
     let { currentMessage: t, response: n, handleResponse: i, index: c, onMount: l } = e;
     return (
         (0, s.useEffect)(() => {
@@ -252,8 +252,8 @@ function _(e) {
                                           children: [n.points > 0 && '+', n.points]
                                       }),
                                       (0, r.jsx)('img', {
-                                          src: O,
-                                          alt: b.NW.string(g.Z.BropER)
+                                          src: j,
+                                          alt: b.intl.string(g.default.BropER)
                                       })
                                   ]
                               })
@@ -278,32 +278,32 @@ function _(e) {
         })
     );
 }
-let P = [m.FK.MESSAGE_1, m.FK.MESSAGE_2, m.FK.MESSAGE_3];
-function C(e) {
+let C = [m.FK.MESSAGE_1, m.FK.MESSAGE_2, m.FK.MESSAGE_3];
+function Z(e) {
     var t;
     let { isPaused: n } = e,
         o = (0, s.useRef)(null),
         a = (0, s.useRef)(-1),
         [u, f] = (0, s.useState)(0),
         [g, b] = (0, s.useState)(null),
-        y = Z()[u],
+        y = _()[u],
         [h, x] = (0, c.Z)(m.yN.MESSAGES),
-        N = null != (t = h.count) ? t : 0;
-    (0, l.Z)(P, N);
-    let v = (0, d.eR)(j),
-        O = (e, t, n) => {
+        v = null != (t = h.count) ? t : 0;
+    (0, l.Z)(C, v);
+    let O = (0, d.eR)(N),
+        j = (e, t, n) => {
             b({
                 points: t,
                 responseMessage: n
             }),
                 (0, i.KH)(m.yN.MESSAGES, t),
-                x({ count: N + 1 }),
+                x({ count: v + 1 }),
                 (a.current = setTimeout(() => {
                     var t;
                     null == (t = o.current) || t.removeDrop(e), f(u + 1), b(null);
                 }, 3000));
         };
-    return ((0, s.useEffect)(() => () => clearTimeout(a.current), []), u >= Z().length)
+    return ((0, s.useEffect)(() => () => clearTimeout(a.current), []), u >= _().length)
         ? null
         : (0, r.jsx)(p.Z, {
               ref: o,
@@ -316,13 +316,13 @@ function C(e) {
               height: 0,
               children: (e) =>
                   (0, r.jsx)(
-                      _,
+                      P,
                       {
                           currentMessage: y,
                           response: g,
-                          handleResponse: O,
+                          handleResponse: j,
                           index: e,
-                          onMount: v
+                          onMount: O
                       },
                       e
                   )

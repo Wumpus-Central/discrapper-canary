@@ -71,27 +71,27 @@ function T(e, t) {
         e
     );
 }
-function N(e) {
+function A(e) {
     if (e > _.Z.Seconds.DAYS_30) {
         let t = Math.round(e / _.Z.Seconds.DAYS_30);
-        return y.NW.formatToPlainString(y.t['HF7p4+'], { count: t });
+        return y.intl.formatToPlainString(y.t['HF7p4+'], { count: t });
     }
     if (e > 2 * _.Z.Seconds.DAY) {
         let t = Math.round(e / _.Z.Seconds.DAY);
-        return y.NW.formatToPlainString(y.t.HkESOj, { count: t });
+        return y.intl.formatToPlainString(y.t.HkESOj, { count: t });
     }
-    if (e > _.Z.Seconds.DAY) return y.NW.string(y.t.gvgh9P);
+    if (e > _.Z.Seconds.DAY) return y.intl.string(y.t.gvgh9P);
     if (e > _.Z.Seconds.HOUR) {
         let t = Math.round(e / _.Z.Seconds.HOUR);
-        return y.NW.formatToPlainString(y.t.mW55WV, { count: t });
+        return y.intl.formatToPlainString(y.t.mW55WV, { count: t });
     }
     {
-        if (!(e > _.Z.Seconds.MINUTE)) return y.NW.string(y.t.tT0mdn);
+        if (!(e > _.Z.Seconds.MINUTE)) return y.intl.string(y.t.tT0mdn);
         let t = Math.round(e / _.Z.Seconds.MINUTE);
-        return y.NW.formatToPlainString(y.t['1mNjX1'], { count: t });
+        return y.intl.formatToPlainString(y.t['1mNjX1'], { count: t });
     }
 }
-function A(e, t) {
+function N(e, t) {
     if (null == e)
         return {
             disabled: !1,
@@ -104,7 +104,7 @@ function A(e, t) {
             subtext: void 0
         };
     let r = null != t ? e.getTime() > t.getTime() && n < _.Z.Seconds.HOUR : n < _.Z.Seconds.HOUR,
-        i = r ? y.NW.string(y.t['3gPhoa']) : N(n);
+        i = r ? y.intl.string(y.t['3gPhoa']) : A(n);
     return {
         disabled: r,
         subtext: i
@@ -114,14 +114,14 @@ function C(e) {
     let { guildId: t, leaderboardId: _ } = e,
         O = (0, a.e7)([l.default], () => l.default.getId()),
         S = (0, a.e7)([c.Z], () => c.Z.getAccount(null, b.ABu.RIOT_GAMES)),
-        N = (0, a.e7)([c.Z], () => c.Z.getAccount(null, b.ABu.LEAGUE_OF_LEGENDS)),
+        A = (0, a.e7)([c.Z], () => c.Z.getAccount(null, b.ABu.LEAGUE_OF_LEGENDS)),
         C = (0, m.Z)({
             guildId: t,
             leaderboardId: _
         }),
         { leaderboardsDisabled: R } = (0, h.O)(t, _),
         P =
-            null != N && null != S
+            null != A && null != S
                 ? () => {
                       f.default.track(b.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
                           leaderboard_id: _,
@@ -129,18 +129,18 @@ function C(e) {
                       }),
                           (0, p._7)({
                               riotConnectionId: S.id,
-                              lolConnectionId: N.id
+                              lolConnectionId: A.id
                           });
                   }
                 : b.dG4,
-        w = null == S || R ? y.NW.string(y.t['0yRXHx']) : y.NW.string(y.t['KWpU6+']),
+        w = null == S || R ? y.intl.string(y.t['0yRXHx']) : y.intl.string(y.t['KWpU6+']),
         { lastUpdateRequested: D, statisticLastUpdatedDate: L } = (0, g.Z)({
             userId: O,
             guildId: t,
             leaderboardId: _,
             statisticId: i.E.LOL_TOTAL_KILLS
         }),
-        { disabled: x, subtext: M } = A(D, L),
+        { disabled: x, subtext: M } = N(D, L),
         k = (0, a.e7)(
             [d.Z, u.Z],
             () => {
@@ -162,7 +162,7 @@ function C(e) {
                       onClose: () => {
                           (0, s.Zy)(), i();
                       },
-                      'aria-label': y.NW.string(y.t.BjCuf3),
+                      'aria-label': y.intl.string(y.t.BjCuf3),
                       onSelect: void 0,
                       children: (0, r.jsxs)(o.kSQ, {
                           children: [
@@ -170,7 +170,7 @@ function C(e) {
                                   null != S &&
                                   (0, r.jsx)(o.sNh, {
                                       id: 'refresh-my-data',
-                                      label: y.NW.string(y.t.iopWUV),
+                                      label: y.intl.string(y.t.iopWUV),
                                       action: P,
                                       disabled: x,
                                       subtext: M
@@ -196,7 +196,7 @@ function C(e) {
                               k
                                   ? (0, r.jsx)(o.sNh, {
                                         id: 'leaderboard-settings-modal',
-                                        label: y.NW.string(y.t['QV4/6u']),
+                                        label: y.intl.string(y.t['QV4/6u']),
                                         action: () => {
                                             (0, o.ZDy)(async () => {
                                                 let { default: e } = await n.e('25526').then(n.bind(n, 262918));
@@ -219,7 +219,7 @@ function C(e) {
               },
               children: (e) =>
                   (0, r.jsx)(o.ua7, {
-                      text: y.NW.string(y.t.UKOtz8),
+                      text: y.intl.string(y.t.UKOtz8),
                       children: (t) =>
                           (0, r.jsx)(
                               o.P3F,

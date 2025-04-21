@@ -112,27 +112,27 @@ let O = function (e) {
     let { id: t, onChange: n, checked: a, disabled: h, className: g, focusProps: y, innerRef: O } = e,
         { reducedMotion: I } = i.useContext(c.S),
         S = i.useRef(null),
-        [T, N] = i.useState(!1),
-        A = (0, _.Q3)('Switch'),
-        C = (0, d.d)(A ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
-        R = (0, d.d)(A ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
+        [T, A] = i.useState(!1),
+        N = (0, _.Q3)('Switch'),
+        C = (0, d.d)(N ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
+        R = (0, d.d)(N ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
         { state: P, opacity: w } = (0, f.q_F)(
             {
                 config: b,
-                opacity: h ? (A ? 0.5 : 0.3) : 1,
+                opacity: h ? (N ? 0.5 : 0.3) : 1,
                 state: T ? (a ? 0.7 : 0.3) : +!!a
             },
             'animate-always'
         );
     function D(e) {
-        N(!1), null == n || n(e.currentTarget.checked, e);
+        A(!1), null == n || n(e.currentTarget.checked, e);
     }
     function L(e) {
-        h || e.repeat || ((' ' === e.key || 'Enter' === e.key) && N(!0));
+        h || e.repeat || ((' ' === e.key || 'Enter' === e.key) && A(!0));
     }
     function x(e) {
         var t;
-        h || !T || e.repeat || (N(!1), 'Enter' === e.key && (null == (t = S.current) || t.click()));
+        h || !T || e.repeat || (A(!1), 'Enter' === e.key && (null == (t = S.current) || t.click()));
     }
     return (0, r.jsx)(
         u.t,
@@ -144,9 +144,9 @@ let O = function (e) {
                     [p.checked]: a,
                     [p.disabled]: h
                 }),
-                onMouseDown: () => !h && N(!0),
-                onMouseUp: () => N(!1),
-                onMouseLeave: () => N(!1),
+                onMouseDown: () => !h && A(!0),
+                onMouseUp: () => A(!1),
+                onMouseLeave: () => A(!1),
                 style: {
                     opacity: w,
                     backgroundColor: P.to({
@@ -161,7 +161,7 @@ let O = function (e) {
                         style: {
                             left: P.to({
                                 range: [0, 0.3, 0.7, 1],
-                                output: [A ? -4 : -3, 1, 8, 12]
+                                output: [N ? -4 : -3, 1, 8, 12]
                             })
                         },
                         'aria-hidden': !0,

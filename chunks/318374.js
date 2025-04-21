@@ -87,7 +87,7 @@ function y() {
     }
 }
 function v(e) {
-    let { users: t, maxUsers: a, guildId: s, channelId: h, className: g, size: v = c.EFr.SIZE_24, overflowCountVariant: O, overflowCountColor: I = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: T = !1, disableUsernameTooltip: N = !1, disableUserPopout: A = !1, onClick: C, onFocus: R, onUserClick: P, onUserPopoutRequestClose: w } = e,
+    let { users: t, maxUsers: a, guildId: s, channelId: h, className: g, size: v = c.EFr.SIZE_24, overflowCountVariant: O, overflowCountColor: I = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: T = !1, disableUsernameTooltip: A = !1, disableUserPopout: N = !1, onClick: C, onFocus: R, onUserClick: P, onUserPopoutRequestClose: w } = e,
         [D, L] = i.useState(!1),
         x = b(v);
     function M() {
@@ -103,7 +103,7 @@ function v(e) {
                             guildId: s,
                             channelId: h,
                             nick: f.ZP.getNickname(s, h, e),
-                            disablePopout: 'function' == typeof A ? A(e.id) : A,
+                            disablePopout: 'function' == typeof N ? N(e.id) : N,
                             onClick: P,
                             onPopoutRequestClose: () => {
                                 L(!1), null == w || w();
@@ -143,7 +143,7 @@ function v(e) {
                     let n = _.ZP.getName(e),
                         a = t === u && !i,
                         l = o()(p.avatar, x, a && p.isLast);
-                    return N
+                    return A
                         ? (0, r.jsx)(
                               'div',
                               {

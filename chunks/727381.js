@@ -29,7 +29,7 @@ function y() {
                     }),
                     (0, r.jsx)(a.X6q, {
                         variant: 'heading-md/semibold',
-                        children: b.NW.string(b.t.kj3tz8)
+                        children: b.intl.string(b.t.kj3tz8)
                     })
                 ]
             }),

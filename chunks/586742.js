@@ -24,8 +24,8 @@ var i = n(200651),
     j = n(981631),
     C = n(65154),
     S = n(388032),
-    N = n(884751);
-function Z(e) {
+    Z = n(884751);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -72,7 +72,7 @@ let P = r.memo(function (e) {
         var t;
         let { participant: n, channel: r, context: o } = e,
             l = null == (t = n.user) ? void 0 : t.id;
-        return (0, a.e7)([y.Z], () => null != n.user && null != o && null != r && y.Z.isLocalVideoDisabled(l, o), [l, n.user, o, r]) ? null : (0, i.jsx)(f.ZP, Z({}, e));
+        return (0, a.e7)([y.Z], () => null != n.user && null != o && null != r && y.Z.isLocalVideoDisabled(l, o), [l, n.user, o, r]) ? null : (0, i.jsx)(f.ZP, N({}, e));
     }),
     T = r.memo(function (e) {
         let { context: t = C.Yn.DEFAULT, participants: o, locked: l, channel: a, width: s, height: u, shouldDisplay: d } = e,
@@ -89,7 +89,7 @@ let P = r.memo(function (e) {
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
-                                    w(Z({}, n), {
+                                    w(N({}, n), {
                                         user: o,
                                         mediaEngineContext: t,
                                         onWatchStream: () => {
@@ -138,7 +138,7 @@ let P = r.memo(function (e) {
                     {
                         participant: e,
                         width: s,
-                        className: N.tile,
+                        className: Z.tile,
                         containerStyle: m,
                         fit: h.L.COVER,
                         channel: a,
@@ -175,9 +175,9 @@ let P = r.memo(function (e) {
             O = r.useMemo(
                 () =>
                     l()({
-                        [N.videoList]: !0,
-                        [N.vertical]: !m,
-                        [N.hidden]: !g && a
+                        [Z.videoList]: !0,
+                        [Z.vertical]: !m,
+                        [Z.hidden]: !g && a
                     }),
                 [m, g, a]
             );
@@ -203,7 +203,7 @@ let P = r.memo(function (e) {
               ? (0, i.jsx)('div', {
                     ref: f,
                     children: (0, i.jsx)(x.E, {
-                        emptyText: S.NW.string(S.t['aTiM4+']),
+                        emptyText: S.intl.string(S.t['aTiM4+']),
                         icon: s.Odl,
                         absolute: !0
                     })
@@ -247,7 +247,7 @@ function A(e) {
         }, [s]),
         (0, i.jsx)(
             k,
-            w(Z({}, e), {
+            w(N({}, e), {
                 channel: t,
                 participants: v,
                 participantsVersion: l,

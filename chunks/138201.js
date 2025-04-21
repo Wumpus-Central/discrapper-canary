@@ -39,8 +39,8 @@ function c(e) {
     });
 }
 function d(e) {
-    let { icon: t, title: n, titleVariant: l = 'text-md/semibold', description: s, descriptionVariant: c = 'text-xs/medium', iconClassName: d, color: u, buttonText: m, buttonColor: x = a.zxk.Colors.PRIMARY, buttonSize: p = a.zxk.Sizes.SMALL, buttonLook: b = a.zxk.Looks.FILLED, buttonDisabled: h, buttonIcon: _, buttonIconColor: f, buttonLoading: g, onButtonPress: v, listType: j = 'icon', index: N } = e,
-        y =
+    let { icon: t, title: n, titleVariant: l = 'text-md/semibold', description: s, descriptionVariant: c = 'text-xs/medium', iconClassName: d, color: u, buttonText: m, buttonColor: x = a.zxk.Colors.PRIMARY, buttonSize: p = a.zxk.Sizes.SMALL, buttonLook: b = a.zxk.Looks.FILLED, buttonDisabled: h, buttonIcon: _, buttonIconColor: f, buttonLoading: g, onButtonPress: v, listType: j = 'icon', index: y } = e,
+        O =
             null != m
                 ? (0, r.jsx)(a.zxk, {
                       className: o.button,
@@ -67,12 +67,12 @@ function d(e) {
     return (0, r.jsxs)('div', {
         className: o.row,
         children: [
-            'numbered' === j && null != N
+            'numbered' === j && null != y
                 ? (0, r.jsx)(a.X6q, {
                       variant: 'heading-md/semibold',
                       color: 'text-brand',
                       className: o.number,
-                      children: N + 1
+                      children: y + 1
                   })
                 : null != t &&
                   (0, r.jsx)('div', {
@@ -98,7 +98,7 @@ function d(e) {
                         })
                 ]
             }),
-            null != y && y
+            null != O && O
         ]
     });
 }

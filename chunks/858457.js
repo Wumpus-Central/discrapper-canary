@@ -7,8 +7,8 @@ n.d(t, {
     n(539854);
 var r = n(192379),
     i = n(392711),
-    s = n(881052),
-    l = n(36459),
+    l = n(881052),
+    s = n(36459),
     a = n(388032);
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -74,10 +74,10 @@ let m = '_errors',
 async function p(e, t) {
     if (null == e.triggerMetadata.regexPatterns || 0 === e.triggerMetadata.regexPatterns.length) return void t([]);
     try {
-        await (0, l.qY)(e), t([]);
+        await (0, s.qY)(e), t([]);
     } catch (i) {
         var n;
-        let e = new s.Hx(i).errors;
+        let e = new l.Hx(i).errors;
         if ('object' != typeof e || (null == e || null == (n = e.trigger_metadata) ? void 0 : n.regex_patterns) == null) return;
         let r = (function (e) {
             var t;
@@ -96,13 +96,13 @@ async function p(e, t) {
                                           var n,
                                               r,
                                               i = {},
-                                              s = Object.keys(e);
-                                          for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                              l = Object.keys(e);
+                                          for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                           return i;
                                       })(e, t);
                                   if (Object.getOwnPropertySymbols) {
-                                      var s = Object.getOwnPropertySymbols(e);
-                                      for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                      var l = Object.getOwnPropertySymbols(e);
+                                      for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                                   }
                                   return i;
                               })(e, [m].map(d))
@@ -110,17 +110,17 @@ async function p(e, t) {
                               var t;
                               let [n, r] = e,
                                   i = r[m],
-                                  { code: s, message: l } =
+                                  { code: l, message: s } =
                                       null != (t = null == i ? void 0 : i[0])
                                           ? t
                                           : {
                                                 code: g,
-                                                message: a.NW.string(a.t.hDPEu7)
+                                                message: a.intl.string(a.t.hDPEu7)
                                             };
                               return {
                                   pattern: n,
-                                  message: l,
-                                  code: s,
+                                  message: s,
+                                  code: l,
                                   description: null == r ? void 0 : r.description,
                                   erroringCharacterLength: null == r ? void 0 : r.erroring_character_length,
                                   erroringCharacterOffset: null == r ? void 0 : r.erroring_character_offset,
@@ -128,11 +128,11 @@ async function p(e, t) {
                               };
                           });
                       if (t.length > 0) {
-                          var r, i, s, l;
+                          var r, i, l, s;
                           n.push({
                               pattern: m,
-                              message: null != (s = null == (r = t[0]) ? void 0 : r.message) ? s : a.NW.string(a.t.hDPEu7),
-                              code: null != (l = null == (i = t[0]) ? void 0 : i.code) ? l : g
+                              message: null != (l = null == (r = t[0]) ? void 0 : r.message) ? l : a.intl.string(a.t.hDPEu7),
+                              code: null != (s = null == (i = t[0]) ? void 0 : i.code) ? s : g
                           });
                       }
                       return n;
@@ -143,10 +143,10 @@ async function p(e, t) {
 }
 let h = (0, i.throttle)(p, 1000, { leading: !1 });
 function f(e, t) {
-    var n, s;
-    let [l, a] = r.useState([]),
+    var n, l;
+    let [s, a] = r.useState([]),
         [d, u] = r.useState(null),
-        [m, g] = r.useState(null != (s = null == e || null == (n = e.triggerMetadata) ? void 0 : n.regexPatterns) ? s : []),
+        [m, g] = r.useState(null != (l = null == e || null == (n = e.triggerMetadata) ? void 0 : n.regexPatterns) ? l : []),
         f = r.useCallback(
             (t) => {
                 t.length < 3 ||
@@ -159,7 +159,7 @@ function f(e, t) {
         );
     return {
         patterns: m,
-        errors: l,
+        errors: s,
         valueError: d,
         validatePatternsChanged: r.useCallback(
             (n, r) => {

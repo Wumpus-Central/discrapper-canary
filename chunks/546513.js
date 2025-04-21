@@ -2,8 +2,8 @@ n.d(t, { Z: () => o });
 var r = n(200651);
 n(192379);
 var i = n(85960),
-    s = n(489776),
-    l = n(252121),
+    l = n(489776),
+    s = n(252121),
     a = n(564488);
 function o(e) {
     let { guildId: t, rules: n, triggerType: o, initWithEdit: c } = e,
@@ -13,7 +13,7 @@ function o(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             u &&
-                (0, r.jsx)(l.Z, {
+                (0, r.jsx)(s.Z, {
                     guildId: t,
                     triggerType: o
                 }),
@@ -28,7 +28,7 @@ function o(e) {
                 )
             ),
             m &&
-                (0, r.jsx)(s.Z, {
+                (0, r.jsx)(l.Z, {
                     guildId: t,
                     triggerType: o
                 })

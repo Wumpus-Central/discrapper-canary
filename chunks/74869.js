@@ -2,9 +2,9 @@ r.d(t, { Z: () => j }), r(388685), r(781311);
 var n = r(200651),
     i = r(192379),
     o = r(348327),
-    c = r.n(o),
-    a = r(658722),
-    l = r.n(a),
+    l = r.n(o),
+    c = r(658722),
+    a = r.n(c),
     s = r(442837),
     u = r(481060),
     d = r(492435),
@@ -64,13 +64,13 @@ function j() {
                 });
             },
             [],
-            c()
+            l()
         ),
         [t, r] = i.useState(''),
-        [o, a] = i.useState([]);
+        [o, c] = i.useState([]);
     i.useEffect(() => {
-        if (0 === t.trim().length) return void a(e);
-        a(e.filter((e) => l()(t, e.experiment.title.toLowerCase())));
+        if (0 === t.trim().length) return void c(e);
+        c(e.filter((e) => a()(t, e.experiment.title.toLowerCase())));
     }, [e, t]);
     let d = i.useMemo(
             () =>
@@ -96,7 +96,7 @@ function j() {
             {
                 id: 'experiments-search',
                 control: (e, i) => {
-                    var o, c;
+                    var o, l;
                     return (0, n.jsx)(
                         u.ne,
                         ((o = (function (e) {
@@ -124,15 +124,15 @@ function j() {
                             }
                             return e;
                         })({}, e)),
-                        (c = c =
+                        (l = l =
                             {
                                 query: t,
                                 onChange: r,
                                 ref: i,
-                                placeholder: g.NW.string(g.t['5h0QOD'])
+                                placeholder: g.intl.string(g.t['5h0QOD'])
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(c))
+                            ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(l))
                             : (function (e, t) {
                                   var r = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -140,8 +140,8 @@ function j() {
                                       r.push.apply(r, n);
                                   }
                                   return r;
-                              })(Object(c)).forEach(function (e) {
-                                  Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(c, e));
+                              })(Object(l)).forEach(function (e) {
+                                  Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
                         o)
                     );

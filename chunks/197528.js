@@ -18,9 +18,9 @@ var r = n(200651),
     _ = n(902928),
     C = n(521937),
     g = n(981631),
-    N = n(350730);
-let y = n(575703);
-function j() {
+    y = n(350730);
+let j = n(575703);
+function N() {
     let e,
         t = (0, l.TH)(),
         [n, d] = a.useState(() => {
@@ -36,10 +36,10 @@ function j() {
                 usePrefilledCode: !0
             };
         }),
-        j = (0, i.e7)([f.Z], () => f.Z.hasLoadedExperiments);
+        N = (0, i.e7)([f.Z], () => f.Z.hasLoadedExperiments);
     a.useEffect(() => {
-        h.default.isAuthenticated() && !j && s.Z.getExperiments();
-    }, [j]),
+        h.default.isAuthenticated() && !N && s.Z.getExperiments();
+    }, [N]),
         (0, c.Z)(),
         (0, x.Y)(n);
     let w = a.useCallback(() => {
@@ -105,27 +105,27 @@ function j() {
             e = null;
     }
     return (0, r.jsxs)('div', {
-        className: N.activatePage,
+        className: y.activatePage,
         children: [
             (0, r.jsx)('img', {
-                className: N.artwork,
-                src: y,
+                className: y.artwork,
+                src: j,
                 alt: ''
             }),
             (0, r.jsx)(u.Z, {
                 show: !0,
-                className: N.logo
+                className: y.logo
             }),
             I
                 ? (0, r.jsx)('div', {
-                      className: N.content,
+                      className: y.content,
                       children: e
                   })
                 : e
         ]
     });
 }
-let w = (0, d.e)(j),
+let w = (0, d.e)(N),
     E = function () {
-        return (0, l.TH)().pathname !== g.Z5c.ACTIVATE_HANDOFF ? (0, r.jsx)(w, {}) : (0, r.jsx)(j, {});
+        return (0, l.TH)().pathname !== g.Z5c.ACTIVATE_HANDOFF ? (0, r.jsx)(w, {}) : (0, r.jsx)(N, {});
     };

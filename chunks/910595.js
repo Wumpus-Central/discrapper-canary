@@ -17,7 +17,7 @@ function u(e) {
                 color: 'currentColor',
                 className: e
             }),
-        text: c.NW.string(c.t.VbpLyc),
+        text: c.intl.string(c.t.VbpLyc),
         selected: n,
         onClick: function () {
             (0, l.uL)(s.Z5c.CHANNEL(t.id, a.oC.GUILD_HOME));

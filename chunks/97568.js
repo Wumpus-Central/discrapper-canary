@@ -1,8 +1,8 @@
 n.d(t, { s: () => s });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    l = n(621145),
+var l = n(481060),
+    a = n(621145),
     r = n(388032),
     o = n(9351);
 let s = (e) => {
@@ -12,12 +12,12 @@ let s = (e) => {
         : (0, i.jsxs)('div', {
               className: o.classificationEvidenceContainer,
               children: [
-                  (0, i.jsx)(a.Text, {
+                  (0, i.jsx)(l.Text, {
                       variant: 'eyebrow',
                       color: 'text-muted',
-                      children: r.NW.string(r.t.s64CMj)
+                      children: r.intl.string(r.t.s64CMj)
                   }),
-                  (0, i.jsx)(l.Z, { flaggedContent: t })
+                  (0, i.jsx)(a.Z, { flaggedContent: t })
               ]
           });
 };

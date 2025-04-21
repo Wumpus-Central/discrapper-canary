@@ -12,11 +12,11 @@ let o = {
         'server-subscriptions-create-tier-from-template': r.Z
     },
     c = {
-        title: () => d.NW.string(d.t.V42OaG),
-        description: () => d.NW.string(d.t['7dJ16e']),
-        selectGuildCta: () => d.NW.string(d.t.LhlgY2),
-        createGuildDescription: () => d.NW.string(d.t.anOis7),
-        createGuildCta: () => d.NW.string(d.t.B44MTk),
+        title: () => d.intl.string(d.t.V42OaG),
+        description: () => d.intl.string(d.t['7dJ16e']),
+        selectGuildCta: () => d.intl.string(d.t.LhlgY2),
+        createGuildDescription: () => d.intl.string(d.t.anOis7),
+        createGuildCta: () => d.intl.string(d.t.B44MTk),
         canCreateGuild: !0,
         useIsGuildSupported: () => (0, l.e7)([a.Z], () => (e) => a.Z.canAccessGuildSettings(e), [], l.pF)
     };

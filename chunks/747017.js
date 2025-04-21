@@ -18,7 +18,7 @@ var r = n(200651),
     b = n(981631),
     y = n(843280);
 function v(e) {
-    let { user: t, activities: n, applicationStream: a, voiceChannel: v, textClassName: O, iconClassName: I, textSize: S = 'xs', animate: T = !0, hasQuest: N = !1, hideEmoji: A = !1, hideTooltip: C = !1 } = e;
+    let { user: t, activities: n, applicationStream: a, voiceChannel: v, textClassName: O, iconClassName: I, textSize: S = 'xs', animate: T = !0, hasQuest: A = !1, hideEmoji: N = !1, hideTooltip: C = !1 } = e;
     (0, u.Z)(null == t ? void 0 : t.id);
     let R = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
         P = i.useMemo(() => {
@@ -84,7 +84,7 @@ function v(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     null != e &&
-                        !A &&
+                        !N &&
                         (0, r.jsx)(f.Z, {
                             emoji: e,
                             animate: T,
@@ -113,7 +113,7 @@ function v(e) {
                 children: E.l
             }),
             x(),
-            N && (0, r.jsx)(_.Z, {})
+            A && (0, r.jsx)(_.Z, {})
         ]
     });
 }

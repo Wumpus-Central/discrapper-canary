@@ -27,7 +27,7 @@ class v extends (n = s.PureComponent) {
         var e, t;
         let { text: r } = this.props,
             { mode: n } = this.state,
-            s = n === l.kO8.Modes.SUCCESS ? c.NW.string(c.t['t5VZ8/']) : r;
+            s = n === l.kO8.Modes.SUCCESS ? c.intl.string(c.t['t5VZ8/']) : r;
         return (0, i.jsx)(
             l.kO8,
             ((e = (function (e) {

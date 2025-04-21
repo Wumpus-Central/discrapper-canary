@@ -26,7 +26,7 @@ function y(e) {
                       size: l.PhG.MEDIUM,
                       onClick: () => (0, h.B)(t.id, a.Z.EMPTY_GROUP_DM),
                       className: _.button,
-                      children: b.NW.string(b.t['5Q9+/P'])
+                      children: b.intl.string(b.t['5Q9+/P'])
                   }),
                   (0, r.jsx)(f.l, {
                       className: _.button,

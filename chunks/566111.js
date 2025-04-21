@@ -1,16 +1,16 @@
 r.d(t, { Z: () => c }), r(388685);
 var n = r(192379),
     i = r(442837),
-    o = r(365943),
-    l = r(25251),
+    l = r(365943),
+    o = r(25251),
     s = r(223143);
 function c(e) {
     var t;
     let { isFetching: r, fetchCategoriesError: c, fetchPurchasesError: a, categories: u, purchases: d } = (0, s.ZP)({ location: e }),
-        [f, p, m] = (0, i.Wu)([l.Z], () => [l.Z.isFetching, l.Z.fetchError, l.Z.profileEffects]);
+        [f, p, m] = (0, i.Wu)([o.Z], () => [o.Z.isFetching, o.Z.fetchError, o.Z.profileEffects]);
     return (
         n.useEffect(() => {
-            (0, o.z)(!0);
+            (0, l.z)(!0);
         }, []),
         {
             isFetching: r || f,

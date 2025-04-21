@@ -3,8 +3,8 @@ n.d(t, {
     Ok: () => C,
     U4: () => T,
     Ye: () => h.Z,
-    ZJ: () => A,
-    q: () => N
+    ZJ: () => N,
+    q: () => A
 }),
     n(997841);
 var r = n(913527),
@@ -105,10 +105,10 @@ function T() {
         location_section: e
     });
 }
-function N() {
+function A() {
     u.default.track(g.rMx.OPEN_POPOUT, { type: 'Active Threads Popout' });
 }
-function A(e, t) {
+function N(e, t) {
     var n, r;
     let i = (0, s.K)(e);
     if (null == i) return;
@@ -121,7 +121,7 @@ function A(e, t) {
         y = p.Z.isMuted(e.id),
         I = (0, f.sK)(p.Z.getMuteConfig(e.id)),
         { can_send_message: S, parent_channel_type: T } = i,
-        N = v(b({}, O(i, ['can_send_message', 'parent_channel_type'])), {
+        A = v(b({}, O(i, ['can_send_message', 'parent_channel_type'])), {
             channel_id: e.id,
             guild_id: a,
             parent_id: o,
@@ -136,7 +136,7 @@ function A(e, t) {
             old_thread_muted_until: I,
             new_thread_muted_until: null != t.mute_config ? (0, f.sK)(t.mute_config) : I
         });
-    u.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, N);
+    u.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, A);
 }
 let C = (e) => {
     var t, n;

@@ -59,7 +59,7 @@ function _(e, t) {
 function p(e) {
     var { popoutOpen: t, onClosePopout: n, onOpenPopout: i } = e,
         u = f(e, ['popoutOpen', 'onClosePopout', 'onOpenPopout']);
-    let _ = t ? l.NW.string(l.t['7Dwcnp']) : l.NW.string(l.t.JzWez8);
+    let _ = t ? l.intl.string(l.t['7Dwcnp']) : l.intl.string(l.t.JzWez8);
     return (0, r.jsx)(
         s.Z,
         d(

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => C }), n(388685), n(539854);
+n.d(t, { Z: () => S }), n(388685), n(539854);
 var r,
     i,
-    a,
-    l = n(392711),
-    o = n.n(l),
+    l,
+    a = n(392711),
+    o = n.n(a),
     s = n(442837),
     c = n(433517),
     u = n(570140),
@@ -20,7 +20,7 @@ let y = 'DetectedOffPlatformPremiumPerksStore',
     v = {},
     E = {},
     O = [];
-function N() {
+function j() {
     let e = !1;
     for (let { skuId: t, applicationId: n } of o().values(E)) {
         if (O.includes(t)) continue;
@@ -44,7 +44,7 @@ function N() {
     }
     return e;
 }
-class j extends (r = s.ZP.Store) {
+class C extends (r = s.ZP.Store) {
     initialize() {
         var e;
         this.waitFor(h.ZP, b.Z, _.Z), (O = null != (e = c.K.get(y)) ? e : O);
@@ -53,23 +53,23 @@ class j extends (r = s.ZP.Store) {
         return o().values(v);
     }
 }
-(a = 'DetectedOffPlatformPremiumPerksStore'),
-    (i = 'displayName') in j
-        ? Object.defineProperty(j, i, {
-              value: a,
+(l = 'DetectedOffPlatformPremiumPerksStore'),
+    (i = 'displayName') in C
+        ? Object.defineProperty(C, i, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (j[i] = a);
-let C = new j(u.Z, {
+        : (C[i] = l);
+let S = new C(u.Z, {
     LOGOUT: function () {
         (v = {}), (E = {});
     },
-    SKU_FETCH_SUCCESS: N,
-    ENTITLEMENT_FETCH_APPLICATION_SUCCESS: N,
-    ENTITLEMENT_CREATE: N,
-    APPLICATION_FETCH_SUCCESS: N,
+    SKU_FETCH_SUCCESS: j,
+    ENTITLEMENT_FETCH_APPLICATION_SUCCESS: j,
+    ENTITLEMENT_CREATE: j,
+    APPLICATION_FETCH_SUCCESS: j,
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
         let { skuId: t } = e;
         if ((delete v[t], O.includes(t))) return !1;
@@ -89,6 +89,6 @@ let C = new j(u.Z, {
                                 applicationId: r
                             }),
                             (e = !0)));
-        return e && N(), e;
+        return e && j(), e;
     }
 });

@@ -5,8 +5,8 @@ n.d(t, {
 var r,
     l = n(200651),
     s = n(120356),
-    a = n.n(s),
-    i = n(468194),
+    i = n.n(s),
+    a = n(468194),
     o = n(471445),
     E = n(686546),
     u = n(292895),
@@ -17,17 +17,17 @@ let _ = { SMALL_32: 24 },
     },
     A = function (e) {
         var t;
-        let { className: n, iconClassName: r, size: s, channel: c, guild: A, locked: T, hasActiveThreads: N } = e;
+        let { className: n, iconClassName: r, size: s, channel: c, guild: A, locked: T, hasActiveThreads: I } = e;
         if (null == A) return null;
-        let I = A.getIconURL(48),
-            O = d[s],
+        let O = A.getIconURL(48),
+            N = d[s],
             R = _[s],
             g = (0, o.KS)(c, A, {
                 locked: T,
-                hasActiveThreads: N
+                hasActiveThreads: I
             });
         if (null == g) return null;
-        let f = (0, i.Zg)(null != (t = null == A ? void 0 : A.toString()) ? t : null);
+        let f = (0, a.Zg)(null != (t = null == A ? void 0 : A.toString()) ? t : null);
         return (0, l.jsxs)('div', {
             role: 'img',
             className: n,
@@ -35,10 +35,10 @@ let _ = { SMALL_32: 24 },
                 (0, l.jsx)(E.ZP, {
                     mask: E.QS.GUILD_ICON_WITH_CHANNEL_TYPE,
                     children:
-                        null != I
+                        null != O
                             ? (0, l.jsx)('img', {
                                   alt: '',
-                                  src: I,
+                                  src: O,
                                   className: u.channelGuildIcon,
                                   style: {
                                       width: R,
@@ -46,9 +46,9 @@ let _ = { SMALL_32: 24 },
                                   }
                               })
                             : (0, l.jsx)('div', {
-                                  className: a()(u.channelGuildIcon, u.acronym),
+                                  className: i()(u.channelGuildIcon, u.acronym),
                                   style: {
-                                      fontSize: f.length - 1 > O.length ? O[O.length - 1] : O[f.length - 1],
+                                      fontSize: f.length - 1 > N.length ? N[N.length - 1] : N[f.length - 1],
                                       width: R,
                                       height: R
                                   },
@@ -56,7 +56,7 @@ let _ = { SMALL_32: 24 },
                               })
                 }),
                 (0, l.jsx)(g, {
-                    className: a()(u.icon, u.iconWithGuildIcon, r),
+                    className: i()(u.icon, u.iconWithGuildIcon, r),
                     color: 'currentColor'
                 })
             ]

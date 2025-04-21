@@ -33,7 +33,7 @@ let p = function (e) {
                                 }),
                                 (0, r.jsx)('div', {
                                     className: d.rate,
-                                    children: (c = (e[e.length - 1] / t) * 1000) > 1000 ? u.NW.formatToPlainString(u.t['WU+gTU'], { size: Math.round(c / 1000) }) : u.NW.formatToPlainString(u.t.wnF6TE, { size: Math.round(c) })
+                                    children: (c = (e[e.length - 1] / t) * 1000) > 1000 ? u.intl.formatToPlainString(u.t['WU+gTU'], { size: Math.round(c / 1000) }) : u.intl.formatToPlainString(u.t.wnF6TE, { size: Math.round(c) })
                                 })
                             ]
                         }),

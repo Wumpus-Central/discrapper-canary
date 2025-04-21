@@ -1,9 +1,9 @@
-n.d(t, { Z: () => N }), n(388685);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => x }), n(388685);
+var i = n(200651),
+    r = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(772848),
+    l = n.n(s),
+    a = n(772848),
     o = n(866442),
     c = n(692547),
     d = n(481060),
@@ -16,24 +16,24 @@ var r = n(200651),
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
@@ -46,8 +46,8 @@ function _(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -56,34 +56,34 @@ function _(e, t) {
         e
     );
 }
-function N(e) {
-    let { onChange: t, onClose: n, color: s, suggestedColors: N, disabled: x, label: E, colorPickerMiddle: j, colorPickerFooter: C, showEyeDropper: O } = e,
-        S = i.useRef(null),
-        v = (0, d.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
-        T = c.Z.colors.BACKGROUND_ACCENT.css,
-        I = (0, g.DP)(s),
+function x(e) {
+    let { onChange: t, onClose: n, color: s, suggestedColors: x, disabled: E, label: j, colorPickerMiddle: C, colorPickerFooter: O, showEyeDropper: S } = e,
+        v = r.useRef(null),
+        T = (0, d.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
+        I = c.Z.colors.BACKGROUND_ACCENT.css,
+        N = (0, g.DP)(s),
         y = (0, o.Rf)(s),
-        A = y === v ? T : y,
-        P = (0, m.Lq)(I ? p.Ilk.WHITE_500 : p.Ilk.PRIMARY_530),
-        R = (0, u.Z)(j),
-        D = (0, u.Z)(C),
-        [Z, w] = i.useState((0, l.Z)());
+        A = y === T ? I : y,
+        P = (0, m.Lq)(N ? p.Ilk.WHITE_500 : p.Ilk.PRIMARY_530),
+        R = (0, u.Z)(C),
+        D = (0, u.Z)(O),
+        [Z, w] = r.useState((0, a.Z)());
     return (
-        i.useEffect(() => {
-            (R !== j || D !== C) && w((0, l.Z)());
-        }, [C, j, D, R]),
-        (0, r.jsx)(d.yRy, {
+        r.useEffect(() => {
+            (R !== C || D !== O) && w((0, a.Z)());
+        }, [O, C, D, R]),
+        (0, i.jsx)(d.yRy, {
             positionKey: Z,
             renderPopout: (e) =>
-                (0, r.jsx)(
+                (0, i.jsx)(
                     d.Z$W,
                     _(b({}, e), {
                         value: s,
                         onChange: t,
-                        suggestedColors: N,
-                        middle: j,
-                        footer: C,
-                        showEyeDropper: O
+                        suggestedColors: x,
+                        middle: C,
+                        footer: O,
+                        showEyeDropper: S
                     })
                 ),
             onRequestClose: n,
@@ -92,39 +92,39 @@ function N(e) {
                     n = (function (e, t) {
                         if (null == e) return {};
                         var n,
-                            r,
-                            i = (function (e, t) {
+                            i,
+                            r = (function (e, t) {
                                 if (null == e) return {};
                                 var n,
-                                    r,
-                                    i = {},
+                                    i,
+                                    r = {},
                                     s = Object.keys(e);
-                                for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                                return i;
+                                for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                                return r;
                             })(e, t);
                         if (Object.getOwnPropertySymbols) {
                             var s = Object.getOwnPropertySymbols(e);
-                            for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                            for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                         }
-                        return i;
+                        return r;
                     })(e, ['onClick']);
-                return (0, r.jsxs)('div', {
-                    ref: S,
-                    className: a()(f.colorSwatch, { [f.disabled]: x }),
+                return (0, i.jsxs)('div', {
+                    ref: v,
+                    className: l()(f.colorSwatch, { [f.disabled]: E }),
                     children: [
-                        (0, r.jsx)(
+                        (0, i.jsx)(
                             d.P3F,
                             _(b({}, n), {
-                                tabIndex: x ? -1 : 0,
-                                onClick: x ? p.dG4 : t,
+                                tabIndex: E ? -1 : 0,
+                                onClick: E ? p.dG4 : t,
                                 style: {
                                     backgroundColor: y,
                                     borderColor: A
                                 },
                                 className: f.swatch,
-                                'aria-label': h.NW.string(h.t.Qp04hI),
-                                focusProps: { ringTarget: S },
-                                children: (0, r.jsx)(d.vdY, {
+                                'aria-label': h.intl.string(h.t.Qp04hI),
+                                focusProps: { ringTarget: v },
+                                children: (0, i.jsx)(d.vdY, {
                                     size: 'custom',
                                     className: f.editPencilIcon,
                                     width: 14,
@@ -133,7 +133,7 @@ function N(e) {
                                 })
                             })
                         ),
-                        E
+                        j
                     ]
                 });
             }

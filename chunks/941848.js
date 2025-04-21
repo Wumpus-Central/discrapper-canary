@@ -1,145 +1,145 @@
-a.d(t, { Z: () => N }), a(388685);
-var n = a(200651),
-    r = a(192379),
-    s = a(481060),
-    i = a(458044),
-    o = a(388032),
-    c = a(895080);
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var a = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(a);
+n.d(e, { Z: () => x }), n(388685);
+var a = n(200651),
+    r = n(192379),
+    i = n(481060),
+    s = n(458044),
+    o = n(388032),
+    l = n(895080);
+function c(t) {
+    for (var e = 1; e < arguments.length; e++) {
+        var n = null != arguments[e] ? arguments[e] : {},
+            a = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(a).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(a, e).enumerable;
+            (a = a.concat(
+                Object.getOwnPropertySymbols(n).filter(function (t) {
+                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
                 })
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = a[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
+            a.forEach(function (e) {
+                var a;
+                (a = n[e]),
+                    e in t
+                        ? Object.defineProperty(t, e, {
+                              value: a,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
+                        : (t[e] = a);
             });
     }
-    return e;
+    return t;
 }
-function d(e, t) {
+function d(t, e) {
     return (
-        (t = null != t ? t : {}),
+        (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var a = Object.keys(e);
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
+            : (function (t, e) {
+                  var n = Object.keys(t);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      a.push.apply(a, n);
+                      var a = Object.getOwnPropertySymbols(t);
+                      n.push.apply(n, a);
                   }
-                  return a;
-              })(Object(t)).forEach(function (a) {
-                  Object.defineProperty(e, a, Object.getOwnPropertyDescriptor(t, a));
+                  return n;
+              })(Object(e)).forEach(function (n) {
+                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
               }),
-        e
+        t
     );
 }
-function m(e) {
-    let { user: t, tagId: a, title: r, messageCount: i, reactionCount: l, activeAgo: d, tags: m, attachment: g } = e,
-        { name: u, avatarSrc: N } = t;
-    return (0, n.jsxs)('div', {
-        className: c.post,
+function m(t) {
+    let { user: e, tagId: n, title: r, messageCount: s, reactionCount: c, activeAgo: d, tags: m, attachment: g } = t,
+        { name: u, avatarSrc: x } = e;
+    return (0, a.jsxs)('div', {
+        className: l.post,
         children: [
-            (0, n.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 children: [
-                    (0, n.jsxs)('div', {
-                        className: c.inline,
+                    (0, a.jsxs)('div', {
+                        className: l.inline,
                         children: [
-                            (0, n.jsxs)(s.Text, {
+                            (0, a.jsxs)(i.Text, {
                                 color: 'header-primary',
                                 variant: 'text-xs/medium',
-                                className: c.inline,
+                                className: l.inline,
                                 children: [
-                                    (0, n.jsx)('img', {
-                                        src: N,
-                                        alt: o.NW.string(o.t.lqaIxM),
+                                    (0, a.jsx)('img', {
+                                        src: x,
+                                        alt: o.intl.string(o.t.lqaIxM),
                                         width: 16,
                                         height: 16
                                     }),
                                     u
                                 ]
                             }),
-                            null != a &&
-                                (0, n.jsxs)(n.Fragment, {
+                            null != n &&
+                                (0, a.jsxs)(a.Fragment, {
                                     children: [
-                                        (0, n.jsx)('span', {
-                                            className: c.bullet,
+                                        (0, a.jsx)('span', {
+                                            className: l.bullet,
                                             children: '\u2022'
                                         }),
-                                        (0, n.jsx)(s.Text, {
+                                        (0, a.jsx)(i.Text, {
                                             color: 'header-primary',
                                             variant: 'text-xxs/medium',
-                                            className: c.inlineTag,
-                                            children: m[a]
+                                            className: l.inlineTag,
+                                            children: m[n]
                                         })
                                     ]
                                 })
                         ]
                     }),
-                    (0, n.jsx)(s.X6q, {
+                    (0, a.jsx)(i.X6q, {
                         color: 'header-primary',
                         variant: 'heading-md/semibold',
-                        className: c.title,
+                        className: l.title,
                         children: r
                     }),
-                    (0, n.jsxs)('div', {
-                        className: c.inline,
+                    (0, a.jsxs)('div', {
+                        className: l.inline,
                         children: [
-                            (0, n.jsxs)(s.Text, {
+                            (0, a.jsxs)(i.Text, {
                                 color: 'header-secondary',
                                 variant: 'text-xs/medium',
-                                className: c.alignCenter,
+                                className: l.alignCenter,
                                 children: [
-                                    (0, n.jsx)(s.kBi, {
+                                    (0, a.jsx)(i.kBi, {
                                         size: 'xs',
                                         color: 'currentColor',
-                                        className: c.icon
+                                        className: l.icon
                                     }),
-                                    i
+                                    s
                                 ]
                             }),
-                            l > 0 &&
-                                (0, n.jsxs)(n.Fragment, {
+                            c > 0 &&
+                                (0, a.jsxs)(a.Fragment, {
                                     children: [
-                                        (0, n.jsx)('span', {
-                                            className: c.bullet,
+                                        (0, a.jsx)('span', {
+                                            className: l.bullet,
                                             children: '\u2022'
                                         }),
-                                        (0, n.jsxs)(s.Text, {
+                                        (0, a.jsxs)(i.Text, {
                                             color: 'header-secondary',
                                             variant: 'text-xs/medium',
-                                            className: c.alignCenter,
+                                            className: l.alignCenter,
                                             children: [
-                                                (0, n.jsx)('span', {
+                                                (0, a.jsx)('span', {
                                                     role: 'img',
-                                                    'aria-label': o.NW.string(o.t.gHp0Cw),
-                                                    className: c.icon,
+                                                    'aria-label': o.intl.string(o.t.gHp0Cw),
+                                                    className: l.icon,
                                                     children: '\u2764️'
                                                 }),
-                                                l
+                                                c
                                             ]
                                         })
                                     ]
                                 }),
-                            (0, n.jsx)('span', {
-                                className: c.bullet,
+                            (0, a.jsx)('span', {
+                                className: l.bullet,
                                 children: '\u2022'
                             }),
-                            (0, n.jsx)(s.Text, {
+                            (0, a.jsx)(i.Text, {
                                 color: 'header-secondary',
                                 variant: 'text-xs/medium',
                                 children: d
@@ -149,178 +149,178 @@ function m(e) {
                 ]
             }),
             null != g &&
-                (0, n.jsx)('img', {
+                (0, a.jsx)('img', {
                     src: g,
-                    alt: o.NW.formatToPlainString(o.t.MJHFt7, { name: r }),
-                    className: c.attachment
+                    alt: o.intl.formatToPlainString(o.t.MJHFt7, { name: r }),
+                    className: l.attachment
                 })
         ]
     });
 }
-function g(e) {
-    let { author: t, content: a } = e,
-        { name: r, isOP: i, avatarSrc: l } = t;
-    return (0, n.jsxs)('div', {
-        className: c.message,
+function g(t) {
+    let { author: e, content: n } = t,
+        { name: r, isOP: s, avatarSrc: c } = e;
+    return (0, a.jsxs)('div', {
+        className: l.message,
         children: [
-            (0, n.jsx)('img', {
-                src: l,
-                alt: o.NW.string(o.t.lqaIxM),
+            (0, a.jsx)('img', {
+                src: c,
+                alt: o.intl.string(o.t.lqaIxM),
                 width: 40,
                 height: 40
             }),
-            (0, n.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 children: [
-                    (0, n.jsxs)('div', {
-                        className: c.inline,
+                    (0, a.jsxs)('div', {
+                        className: l.inline,
                         children: [
-                            (0, n.jsx)(s.Text, {
+                            (0, a.jsx)(i.Text, {
                                 color: 'header-primary',
                                 variant: 'text-sm/semibold',
                                 children: r
                             }),
-                            i &&
-                                (0, n.jsx)('span', {
-                                    className: c.opTag,
-                                    children: o.NW.string(o.t.fyE8sL)
+                            s &&
+                                (0, a.jsx)('span', {
+                                    className: l.opTag,
+                                    children: o.intl.string(o.t.fyE8sL)
                                 })
                         ]
                     }),
-                    (0, n.jsx)(s.Text, {
+                    (0, a.jsx)(i.Text, {
                         color: 'text-normal',
                         variant: 'text-sm/normal',
-                        children: a
+                        children: n
                     })
                 ]
             })
         ]
     });
 }
-function u(e) {
-    let { title: t, messages: a, maxHeight: r } = e;
-    return (0, n.jsx)('div', {
-        className: c.previewContainer,
+function u(t) {
+    let { title: e, messages: n, maxHeight: r } = t;
+    return (0, a.jsx)('div', {
+        className: l.previewContainer,
         style: { maxHeight: r },
         'aria-hidden': !0,
-        children: (0, n.jsxs)('div', {
-            className: c.preview,
+        children: (0, a.jsxs)('div', {
+            className: l.preview,
             children: [
-                (0, n.jsx)(s.kBi, {
+                (0, a.jsx)(i.kBi, {
                     size: 'md',
                     color: 'currentColor',
-                    className: c.forumPostIcon
+                    className: l.forumPostIcon
                 }),
-                (0, n.jsx)(s.X6q, {
+                (0, a.jsx)(i.X6q, {
                     color: 'header-primary',
                     variant: 'heading-lg/semibold',
-                    className: c.header,
-                    children: t
+                    className: l.header,
+                    children: e
                 }),
-                (0, n.jsx)('div', {
-                    className: c.messageContainer,
-                    children: a.map((e, t) =>
-                        (0, n.jsxs)(n.Fragment, {
+                (0, a.jsx)('div', {
+                    className: l.messageContainer,
+                    children: n.map((t, e) =>
+                        (0, a.jsxs)(a.Fragment, {
                             children: [
-                                (0, n.jsx)(g, l({}, e), t),
-                                0 === t &&
-                                    (0, n.jsxs)('div', {
+                                (0, a.jsx)(g, c({}, t), e),
+                                0 === e &&
+                                    (0, a.jsxs)('div', {
                                         children: [
-                                            (0, n.jsx)('hr', { className: c.topSeparator }),
-                                            (0, n.jsxs)('div', {
-                                                className: c.actionBar,
+                                            (0, a.jsx)('hr', { className: l.topSeparator }),
+                                            (0, a.jsxs)('div', {
+                                                className: l.actionBar,
                                                 children: [
-                                                    (0, n.jsxs)(s.Text, {
+                                                    (0, a.jsxs)(i.Text, {
                                                         color: 'text-brand',
                                                         variant: 'text-xs/medium',
-                                                        className: c.fakeReactions,
+                                                        className: l.fakeReactions,
                                                         children: [
-                                                            (0, n.jsx)('span', {
+                                                            (0, a.jsx)('span', {
                                                                 role: 'img',
-                                                                'aria-label': o.NW.string(o.t.gHp0Cw),
-                                                                className: c.icon,
+                                                                'aria-label': o.intl.string(o.t.gHp0Cw),
+                                                                className: l.icon,
                                                                 children: '\u2764️'
                                                             }),
                                                             '17'
                                                         ]
                                                     }),
-                                                    (0, n.jsxs)(s.Text, {
+                                                    (0, a.jsxs)(i.Text, {
                                                         color: 'text-muted',
                                                         variant: 'text-xs/medium',
-                                                        className: c.following,
+                                                        className: l.following,
                                                         children: [
-                                                            (0, n.jsx)(s.Dkj, {
+                                                            (0, a.jsx)(i.Dkj, {
                                                                 size: 'xs',
                                                                 color: 'currentColor'
                                                             }),
-                                                            o.NW.string(o.t['3aOv+v'])
+                                                            o.intl.string(o.t['3aOv+v'])
                                                         ]
                                                     })
                                                 ]
                                             }),
-                                            (0, n.jsx)('hr', { className: c.bottomSeparator })
+                                            (0, a.jsx)('hr', { className: l.bottomSeparator })
                                         ]
                                     })
                             ]
                         })
                     )
                 }),
-                (0, n.jsx)('div', {
-                    className: c.chatInput,
-                    children: (0, n.jsx)(s.Text, {
+                (0, a.jsx)('div', {
+                    className: l.chatInput,
+                    children: (0, a.jsx)(i.Text, {
                         color: 'text-muted',
                         variant: 'text-sm/normal',
-                        children: o.NW.string(o.t.YzpScX)
+                        children: o.intl.string(o.t.YzpScX)
                     })
                 })
             ]
         })
     });
 }
-function N(e) {
-    let { id: t } = e,
-        [a, o] = r.useState(0),
+function x(t) {
+    let { id: e } = t,
+        [n, o] = r.useState(0),
         g = r.useRef(null),
-        { tags: N, posts: x, postPreview: p, ariaLabel: h } = (0, i.Z)(t);
+        { tags: x, posts: p, postPreview: h, ariaLabel: f } = (0, s.Z)(e);
     return (
         r.useEffect(() => {
             o(0);
-        }, [t]),
+        }, [e]),
         r.useEffect(() => {
-            var e;
-            0 === a && (null == g || null == (e = g.current) ? void 0 : e.clientHeight) != null && o(g.current.clientHeight - 40);
-        }, [a]),
-        (0, n.jsxs)('div', {
-            className: c.container,
+            var t;
+            0 === n && (null == g || null == (t = g.current) ? void 0 : t.clientHeight) != null && o(g.current.clientHeight - 40);
+        }, [n]),
+        (0, a.jsxs)('div', {
+            className: l.container,
             role: 'image',
-            'aria-label': h,
+            'aria-label': f,
             children: [
-                (0, n.jsxs)('div', {
+                (0, a.jsxs)('div', {
                     ref: g,
-                    className: c.browser,
+                    className: l.browser,
                     'aria-hidden': !0,
                     children: [
-                        (0, n.jsx)('div', {
-                            className: c.tags,
-                            children: N.map((e, t) =>
-                                (0, n.jsx)(
-                                    s.Text,
+                        (0, a.jsx)('div', {
+                            className: l.tags,
+                            children: x.map((t, e) =>
+                                (0, a.jsx)(
+                                    i.Text,
                                     {
                                         color: 'header-primary',
                                         variant: 'text-xs/medium',
-                                        className: c.tag,
-                                        children: e
+                                        className: l.tag,
+                                        children: t
                                     },
-                                    t
+                                    e
                                 )
                             )
                         }),
-                        (0, n.jsx)('div', {
-                            className: c.posts,
-                            children: x.map((e, t) => (0, n.jsx)(m, d(l({}, e), { tags: N }), t))
+                        (0, a.jsx)('div', {
+                            className: l.posts,
+                            children: p.map((t, e) => (0, a.jsx)(m, d(c({}, t), { tags: x }), e))
                         })
                     ]
                 }),
-                (0, n.jsx)(u, d(l({}, p), { maxHeight: a }))
+                (0, a.jsx)(u, d(c({}, h), { maxHeight: n }))
             ]
         })
     );

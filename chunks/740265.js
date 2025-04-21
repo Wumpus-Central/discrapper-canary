@@ -9,11 +9,11 @@ function a(e) {
     switch (n) {
         case i.M7m.PS4:
         case i.M7m.PS5:
-            return o.NW.formatToPlainString(o.t.A17aMz, { platform: n.toUpperCase() });
+            return o.intl.formatToPlainString(o.t.A17aMz, { platform: n.toUpperCase() });
         case i.M7m.XBOX:
         case i.M7m.SAMSUNG:
-            return o.NW.formatToPlainString(o.t.A17aMz, { platform: r.Z.get(n).name });
+            return o.intl.formatToPlainString(o.t.A17aMz, { platform: r.Z.get(n).name });
         default:
-            return o.NW.string(o.t['2TbM/P']);
+            return o.intl.string(o.t['2TbM/P']);
     }
 }

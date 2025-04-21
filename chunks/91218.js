@@ -13,7 +13,7 @@ let u = i.forwardRef(function (e, t) {
         let e = (0, r.jsx)('img', {
             ref: t,
             alt: '',
-            'aria-label': l.NW.formatToPlainString(l.t['9+YWrK'], { name: u }),
+            'aria-label': l.intl.formatToPlainString(l.t['9+YWrK'], { name: u }),
             className: o()(c.roleIcon, n, { [c.clickable]: null != p }),
             height: _ ? d : void 0,
             src: i,

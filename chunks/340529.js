@@ -3,9 +3,9 @@ var n = r(200651);
 r(192379);
 var i = r(120356),
     o = r.n(i),
-    s = r(399606),
-    c = r(433517),
-    l = r(481060),
+    l = r(399606),
+    s = r(433517),
+    c = r(481060),
     a = r(607070),
     d = r(357352),
     u = r(703656),
@@ -21,14 +21,14 @@ var i = r(120356),
     O = r(388032),
     v = r(953007);
 function y(e) {
-    let { icon: t, title: r, body: i, selected: s, disabled: c = !1, onClick: a, onPreviewDismiss: d, isNew: u = !1 } = e;
-    return (0, n.jsxs)(l.kL8, {
-        onClick: c ? void 0 : a,
-        'aria-disabled': c,
+    let { icon: t, title: r, body: i, selected: l, disabled: s = !1, onClick: a, onPreviewDismiss: d, isNew: u = !1 } = e;
+    return (0, n.jsxs)(c.kL8, {
+        onClick: s ? void 0 : a,
+        'aria-disabled': s,
         className: o()(v.tab, {
-            [v.selected]: s,
-            [v.tabDisabled]: c,
-            [v.preview]: !s && null != d
+            [v.selected]: l,
+            [v.tabDisabled]: s,
+            [v.preview]: !l && null != d
         }),
         'aria-label': r,
         children: [
@@ -36,36 +36,36 @@ function y(e) {
                 className: v.iconContainer,
                 children: t
             }),
-            (0, n.jsx)(l.LZC, {
+            (0, n.jsx)(c.LZC, {
                 size: 8,
                 horizontal: !0
             }),
             (0, n.jsxs)('div', {
                 children: [
-                    (0, n.jsx)(l.Text, {
+                    (0, n.jsx)(c.Text, {
                         variant: 'text-sm/semibold',
-                        color: s ? 'always-white' : 'header-primary',
+                        color: l ? 'always-white' : 'header-primary',
                         children: r
                     }),
-                    (0, n.jsx)(l.Text, {
+                    (0, n.jsx)(c.Text, {
                         variant: 'text-xs/normal',
-                        color: s ? 'always-white' : c ? 'text-muted' : 'header-primary',
+                        color: l ? 'always-white' : s ? 'text-muted' : 'header-primary',
                         children: i
                     })
                 ]
             }),
             u &&
-                (0, n.jsx)(l.IGR, {
-                    color: l.TVs.unsafe_rawColors.BRAND_260.css,
+                (0, n.jsx)(c.IGR, {
+                    color: c.TVs.unsafe_rawColors.BRAND_260.css,
                     className: v.newBadge,
-                    text: O.NW.string(O.t.y2b7CA)
+                    text: O.intl.string(O.t.y2b7CA)
                 }),
             null != d &&
-                (0, n.jsx)(l.P3F, {
+                (0, n.jsx)(c.P3F, {
                     className: v.tabPreviewClose,
                     onClick: d,
-                    'aria-label': O.NW.string(O.t.WAI6xs),
-                    children: (0, n.jsx)(l.k$p, {
+                    'aria-label': O.intl.string(O.t.WAI6xs),
+                    children: (0, n.jsx)(c.k$p, {
                         size: 'xs',
                         color: 'currentColor'
                     })
@@ -77,9 +77,9 @@ function _(e) {
     let { guild: t } = e,
         r = (0, C.RF)(t.id, 'guild_shop_category_selector'),
         { selectedTab: i, setSelectedTab: o, categoryTabs: _, handlePreviewDismiss: w } = (0, p.m)(),
-        P = 'false' === c.K.get(h.Hr, 'false'),
-        N = (0, s.e7)([a.Z], () => a.Z.useReducedMotion),
-        S = _.map((e) => {
+        P = 'false' === s.K.get(h.Hr, 'false'),
+        S = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
+        L = _.map((e) => {
             switch (e) {
                 case f.y.GUILD_PRODUCTS:
                     return (0, n.jsx)(
@@ -89,8 +89,8 @@ function _(e) {
                                 width: 20,
                                 height: 20
                             }),
-                            title: O.NW.string(O.t.odvTUl),
-                            body: O.NW.string(O.t['0JFpRU']),
+                            title: O.intl.string(O.t.odvTUl),
+                            body: O.intl.string(O.t['0JFpRU']),
                             selected: i === f.y.GUILD_PRODUCTS,
                             onClick: () => o(f.y.GUILD_PRODUCTS)
                         },
@@ -104,8 +104,8 @@ function _(e) {
                                 width: 20,
                                 height: 20
                             }),
-                            title: O.NW.string(O.t['KzCF//']),
-                            body: r ? O.NW.string(O.t['jqz+l5']) : O.NW.format(O.t.ycs4oK, { openRoleSubPage: () => (0, u.uL)(m.Z5c.CHANNEL(t.id, x.oC.ROLE_SUBSCRIPTIONS)) }),
+                            title: O.intl.string(O.t['KzCF//']),
+                            body: r ? O.intl.string(O.t['jqz+l5']) : O.intl.format(O.t.ycs4oK, { openRoleSubPage: () => (0, u.uL)(m.Z5c.CHANNEL(t.id, x.oC.ROLE_SUBSCRIPTIONS)) }),
                             disabled: !r,
                             selected: i === f.y.GUILD_ROLE_SUBSCRIPTIONS,
                             onClick: () => o(f.y.GUILD_ROLE_SUBSCRIPTIONS)
@@ -118,21 +118,21 @@ function _(e) {
                         {
                             icon: P
                                 ? (0, n.jsx)('img', {
-                                      src: N ? (0, d.b)('server_products/storefront/question-mark.png') : (0, d.b)('server_products/storefront/question-mark.gif'),
+                                      src: S ? (0, d.b)('server_products/storefront/question-mark.png') : (0, d.b)('server_products/storefront/question-mark.gif'),
                                       className: v.questionMark,
                                       alt: ''
                                   })
-                                : (0, n.jsx)(l.OgN, {
+                                : (0, n.jsx)(c.OgN, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 20,
                                       height: 20
                                   }),
-                            title: O.NW.string(O.t.odvTUl),
-                            body: O.NW.string(O.t['827i8P']),
+                            title: O.intl.string(O.t.odvTUl),
+                            body: O.intl.string(O.t['827i8P']),
                             selected: i === f.y.GUILD_PRODUCTS_PREVIEW,
                             onClick: () => {
-                                o(f.y.GUILD_PRODUCTS_PREVIEW), c.K.set(h.Hr, 'true');
+                                o(f.y.GUILD_PRODUCTS_PREVIEW), s.K.set(h.Hr, 'true');
                             },
                             onPreviewDismiss: w,
                             isNew: P
@@ -146,18 +146,18 @@ function _(e) {
     return (0, n.jsxs)('div', {
         className: v.container,
         children: [
-            (0, n.jsx)(l.X6q, {
+            (0, n.jsx)(c.X6q, {
                 variant: 'heading-sm/bold',
                 className: v.header,
-                children: O.NW.string(O.t.GF433N)
+                children: O.intl.string(O.t.GF433N)
             }),
-            (0, n.jsx)(l.LZC, { size: 12 }),
+            (0, n.jsx)(c.LZC, { size: 12 }),
             (0, n.jsxs)('div', {
                 className: v.filters,
                 children: [
                     (0, n.jsx)('div', {
                         className: v.tabs,
-                        children: S
+                        children: L
                     }),
                     i === f.y.GUILD_PRODUCTS && (0, n.jsx)(g.Z, {})
                 ]

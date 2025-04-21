@@ -75,7 +75,7 @@ function b(e) {
                       left: t.left
                   };
         },
-        N = (e) => {
+        w = (e) => {
             let t = null == O ? void 0 : O.getBoundingClientRect();
             if (((Z.current = t), e.timestamp !== _ || null == t || n)) return g;
             let { top: r, left: l } = t;
@@ -86,23 +86,23 @@ function b(e) {
                 width: 268
             };
         },
-        w = (0, l.useRef)(null),
-        P = (0, s.Yzy)(
+        P = (0, l.useRef)(null),
+        R = (0, s.Yzy)(
             j,
             {
                 keys: (e) => e.timestamp,
-                ref: w,
+                ref: P,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
                 config: h
             },
             'animate-always'
         ),
-        R = (0, l.useRef)(null),
-        A = (0, s.Yzy)(
+        A = (0, l.useRef)(null),
+        C = (0, s.Yzy)(
             j,
             {
-                ref: R,
+                ref: A,
                 keys: (e) => e.timestamp,
                 from: (e) =>
                     E(
@@ -111,7 +111,7 @@ function b(e) {
                             visibility: 'hidden',
                             opacity: 1
                         },
-                        b.enabled ? N(e) : x()
+                        b.enabled ? w(e) : x()
                     ),
                 enter: (e) => [
                     E(
@@ -119,7 +119,7 @@ function b(e) {
                             opacity: 1,
                             visibility: 'visible'
                         },
-                        N(e)
+                        w(e)
                     )
                 ],
                 leave: E(
@@ -147,14 +147,14 @@ function b(e) {
             'animate-always'
         );
     return (
-        (0, i.useChain)([w, R], [0, 0.1], 3000),
+        (0, i.useChain)([P, A], [0, 0.1], 3000),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {
                     className: p.hidden,
                     ref: y
                 }),
-                P(
+                R(
                     (e, t) =>
                         null != t &&
                         (0, r.jsx)(i.animated.div, {
@@ -165,7 +165,7 @@ function b(e) {
                 (0, r.jsx)(m.ZP, {
                     children: (0, r.jsx)('div', {
                         className: p.hidden,
-                        children: A(
+                        children: C(
                             (e, t, n, l) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
                                 (0, r.jsx)(i.animated.img, {

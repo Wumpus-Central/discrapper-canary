@@ -69,7 +69,7 @@ function p(e) {
                             n = !1;
                             break;
                         case 'Something went wrong during customerRequest creation':
-                            (n = !1), (t = d.NW.string(d.t.TJ8dDA));
+                            (n = !1), (t = d.intl.string(d.t.TJ8dDA));
                     }
                     (0, a.SQ)(e.message, n, t);
                 }

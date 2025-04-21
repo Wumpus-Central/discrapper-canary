@@ -1,30 +1,30 @@
 n.d(t, { Z: () => o });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    s = n.n(i),
-    a = n(283029),
-    l = n(60667);
+var r = n(120356),
+    s = n.n(r),
+    l = n(283029),
+    a = n(60667);
 let o = function (e) {
-    let { className: t, hasCooldown: i, isCanceled: o, useReducedMotion: c } = e;
-    return (0, r.jsxs)('div', {
-        className: s()(l.boostIconContainer, t),
+    let { className: t, hasCooldown: r, isCanceled: o, useReducedMotion: c } = e;
+    return (0, i.jsxs)('div', {
+        className: s()(a.boostIconContainer, t),
         children: [
             o
-                ? (0, r.jsx)('img', {
-                      className: s()(l.boostIcon, l.boostIconCanceled),
+                ? (0, i.jsx)('img', {
+                      className: s()(a.boostIcon, a.boostIconCanceled),
                       src: n(457026),
                       alt: ''
                   })
-                : (0, r.jsx)(a.Z, {
-                      className: l.boostIcon,
-                      boostInCooldown: i,
+                : (0, i.jsx)(l.Z, {
+                      className: a.boostIcon,
+                      boostInCooldown: r,
                       useReducedMotion: c
                   }),
             !o &&
-                i &&
-                (0, r.jsx)('img', {
-                    className: l.snowflake,
+                r &&
+                (0, i.jsx)('img', {
+                    className: a.snowflake,
                     src: n(765028),
                     alt: ''
                 })

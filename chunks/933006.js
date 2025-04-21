@@ -39,17 +39,17 @@ function j(t) {
         })(t, ['onClose']);
     let m = (0, c.O)(),
         { analyticsLocations: S } = (0, s.ZP)(),
-        [N, v] = o.useState(!1);
+        [v, x] = o.useState(!1);
     o.useEffect(() => {
-        N ||
+        v ||
             (p.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: b.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
                 location: m.location,
                 location_stack: S
             }),
-            v(!0));
-    }, [m.location, S, N]);
-    let x = (0, d.LB)(!1);
+            x(!0));
+    }, [m.location, S, v]);
+    let P = (0, d.LB)(!1);
     return (0, r.jsx)(
         u.Z,
         ((e = (function (t) {
@@ -81,14 +81,14 @@ function j(t) {
                 type: b.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
                 artContainerClassName: C.image,
                 artURL: n(98165),
-                title: y.NW.string(y.t.c0X1Cw),
-                glowUp: y.NW.string(y.t.c0X1Cw),
-                body: y.NW.string(y.t.SX63mJ),
+                title: y.intl.string(y.t.c0X1Cw),
+                glowUp: y.intl.string(y.t.c0X1Cw),
+                body: y.intl.string(y.t.SX63mJ),
                 showEnhancedUpsell: !0,
                 analyticsLocation: { section: f.jXE.PREMIUM_CUSTOM_NOTIFICATION_SOUND_UPSELL_MODAL },
                 enableArtBoxShadow: !1,
                 onSubscribeClick: l.Z,
-                secondaryCTA: y.NW.string(y.t.PcTCBw),
+                secondaryCTA: y.intl.string(y.t.PcTCBw),
                 onSecondaryClick: () => {
                     _(), a.Z.open(f.oAB.PREMIUM);
                 },
@@ -99,11 +99,11 @@ function j(t) {
         (j = j =
             {
                 children: (0, r.jsx)(i.xJW, {
-                    title: y.NW.string(y.t['K/hjQU']),
+                    title: y.intl.string(y.t['K/hjQU']),
                     className: C.optionsContainerWrapper,
                     children: (0, r.jsx)('div', {
                         className: C.optionsContainer,
-                        children: x.map((t, e) => {
+                        children: P.map((t, e) => {
                             let n = t.value;
                             return n === d.YC.CLASSIC
                                 ? null

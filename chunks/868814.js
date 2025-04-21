@@ -1,13 +1,13 @@
 n.d(t, { Z: () => o }), n(539854), n(642613);
 var r = n(442837),
     i = n(977258),
-    s = n(958832),
-    l = n(592125),
+    l = n(958832),
+    s = n(592125),
     a = n(981631);
 function o(e) {
-    return (0, r.Wu)([s.Z, l.Z], () => {
+    return (0, r.Wu)([l.Z, s.Z], () => {
         var t;
-        let n = (null != (t = s.Z.getTopChannelIds(e.id)) ? t : []).map((e) => l.Z.getChannel(e)).filter((t) => null == t || t.id !== e.rulesChannelId),
+        let n = (null != (t = l.Z.getTopChannelIds(e.id)) ? t : []).map((e) => s.Z.getChannel(e)).filter((t) => null == t || t.id !== e.rulesChannelId),
             r = [],
             o = 0;
         return (

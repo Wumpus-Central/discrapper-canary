@@ -1,5 +1,5 @@
 n.d(t, {
-    Qk: () => A,
+    Qk: () => N,
     WG: () => P,
     ZP: () => w
 }),
@@ -27,8 +27,8 @@ var r = n(200651),
     I = n(549635),
     S = n(981631),
     T = n(388032),
-    N = n(606584);
-function A(e) {
+    A = n(606584);
+function N(e) {
     let { src: t, width: n, height: r, hasMultiple: i = !1, options: a } = e,
         { width: o, height: s } = (0, b.p)(i, {
             width: n,
@@ -67,7 +67,7 @@ function R(e) {
                       onToggleObscurity: u,
                       children: (e) =>
                           (0, r.jsx)('div', {
-                              className: o()(N.obscureWrapper, { [N.obscure]: e }),
+                              className: o()(A.obscureWrapper, { [A.obscure]: e }),
                               children: t(e)
                           })
                   },
@@ -79,7 +79,7 @@ function R(e) {
 function P(e, t) {
     if ('IMAGE' === e.type) {
         if (!(0, m._H)(e)) return void (0, d.po)(e.url);
-        A({
+        N({
             src: (0, p.q)({
                 proxyURL: e.proxyUrl,
                 url: e.url
@@ -95,12 +95,12 @@ function w(e) {
     let { items: t, onIndexChange: n, startIndex: a = 0, shouldRedactExplicitContent: c = !1, shouldHideMediaOptions: d = !1 } = e,
         [f, _] = i.useState(a),
         p = i.useRef(a),
-        { zoomed: m, setZoomed: A } = (0, E.Y)(),
+        { zoomed: m, setZoomed: N } = (0, E.Y)(),
         P = i.useCallback(
             (e) => {
-                _((e = C(e, t.length))), (p.current = e), null == n || n(e), A(!1);
+                _((e = C(e, t.length))), (p.current = e), null == n || n(e), N(!1);
             },
-            [n, t, A]
+            [n, t, N]
         );
     i.useEffect(() => {
         let e = () => P(p.current + 1),
@@ -112,7 +112,7 @@ function w(e) {
                 h.S.unsubscribe(S.CkL.MODAL_CAROUSEL_NEXT, e), h.S.unsubscribe(S.CkL.MODAL_CAROUSEL_PREV, t);
             }
         );
-    }, [P, A]);
+    }, [P, N]);
     let w = t[f],
         D = (0, u.KP)(
             {
@@ -139,16 +139,16 @@ function w(e) {
                                           e.stopPropagation(), h.S.dispatch(S.CkL.MODAL_CAROUSEL_PREV);
                                       },
                                       icon: s.j,
-                                      tooltip: T.NW.string(T.t.vgfxaG),
-                                      className: o()(N.navPrev, e)
+                                      tooltip: T.intl.string(T.t.vgfxaG),
+                                      className: o()(A.navPrev, e)
                                   }),
                                   (0, r.jsx)(O.Z, {
                                       onClick: (e) => {
                                           e.stopPropagation(), h.S.dispatch(S.CkL.MODAL_CAROUSEL_NEXT);
                                       },
                                       icon: l.d4D,
-                                      tooltip: T.NW.string(T.t.XiOHRU),
-                                      className: o()(N.navNext, e)
+                                      tooltip: T.intl.string(T.t.XiOHRU),
+                                      className: o()(A.navNext, e)
                                   })
                               ]
                           })

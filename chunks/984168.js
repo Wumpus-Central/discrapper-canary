@@ -16,24 +16,24 @@ function u(e) {
         className: l()(a.Jh, c.container),
         children: (0, i.jsx)(o.v2r, {
             navId: 'command-list-sort',
-            'aria-label': s.NW.string(s.t.Ugo9ub),
+            'aria-label': s.intl.string(s.t.Ugo9ub),
             hideScroller: !0,
             onClose: r,
             onSelect: r,
             children: (0, i.jsxs)(o.kSQ, {
-                label: s.NW.string(s.t.yeYaHR),
+                label: s.intl.string(s.t.yeYaHR),
                 children: [
                     (0, i.jsx)(o.k5B, {
                         id: 'sort-by-popular',
                         group: 'sort-by',
-                        label: s.NW.string(s.t.SzxiqK),
+                        label: s.intl.string(s.t.SzxiqK),
                         action: () => u(a.bS.POPULAR),
                         checked: t === a.bS.POPULAR
                     }),
                     (0, i.jsx)(o.k5B, {
                         id: 'sort-by-alphabetical',
                         group: 'sort-by',
-                        label: s.NW.string(s.t.m8xstr),
+                        label: s.intl.string(s.t.m8xstr),
                         action: () => u(a.bS.ALPHABETICAL),
                         checked: t === a.bS.ALPHABETICAL
                     })

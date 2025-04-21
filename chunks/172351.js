@@ -77,7 +77,7 @@ function m(e) {
             );
     };
     return (0, r.jsx)(u.Z, {
-        heading: f.NW.string(f.t['0hKkS0']),
+        heading: f.intl.string(f.t['0hKkS0']),
         children: (0, r.jsx)('ul', {
             className: _.list,
             children: v.map((e) =>

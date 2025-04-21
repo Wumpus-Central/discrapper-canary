@@ -74,13 +74,13 @@ function m(e) {
     let [g, h] = r.useState(i.KX.SERIES),
         j = (0, i.X2)(t.id, null),
         b = (null == j ? void 0 : j.response) === o.gv.INTERESTED ? o.gv.UNINTERESTED : o.gv.INTERESTED,
-        y = b === o.gv.INTERESTED ? c.NW.string(c.t.WtOReX) : c.NW.string(c.t['8MPCVl']);
+        y = b === o.gv.INTERESTED ? c.intl.string(c.t.WtOReX) : c.intl.string(c.t['8MPCVl']);
     return (0, l.jsx)(
         s.ConfirmModal,
         p(d({}, f), {
             header: y,
-            confirmText: c.NW.string(c.t.TyCVIi),
-            cancelText: c.NW.string(c.t['ETE/oK']),
+            confirmText: c.intl.string(c.t.TyCVIi),
+            cancelText: c.intl.string(c.t['ETE/oK']),
             onConfirm: () => {
                 g === i.KX.SERIES ? a.Z.updateRsvp(t.id, null, m, b) : a.Z.updateRsvp(t.id, n, m, b), null == v || v(), f.onClose();
             },

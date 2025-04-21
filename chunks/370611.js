@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(473188),
     S = n(169080),
     T = n(986398),
-    N = n(463031),
-    A = n(206583),
+    A = n(463031),
+    N = n(206583),
     C = n(388032),
     R = n(667450);
 function P(e, t, n) {
@@ -122,8 +122,8 @@ function j(e) {
         0 === t.users.length)
     )
         return (0, r.jsx)(U, { leaderboard: t });
-    let { sort_by_statistic_id: N, sort_desc: A } = t.guild_settings,
-        P = t.settings.statistics[N];
+    let { sort_by_statistic_id: A, sort_desc: N } = t.guild_settings,
+        P = t.settings.statistics[A];
     return (0, r.jsxs)('div', {
         className: R.container,
         style: { background: I },
@@ -148,14 +148,14 @@ function j(e) {
                                   (0, r.jsx)(o.Text, {
                                       variant: 'text-xxs/medium',
                                       className: R.headerPlayer,
-                                      children: C.NW.string(C.t['6ii1+/'])
+                                      children: C.intl.string(C.t['6ii1+/'])
                                   }),
                                   (0, r.jsx)(o.Text, {
                                       variant: 'text-xxs/medium',
                                       className: R.headerValue,
                                       children: (0, E.s)({
-                                          statisticId: N,
-                                          sortDesc: A,
+                                          statisticId: A,
+                                          sortDesc: N,
                                           aggregationType: null == P ? void 0 : P.aggregation_type
                                       })
                                   })
@@ -196,7 +196,7 @@ function U(e) {
                     tag: 'span',
                     variant: 'text-lg/normal',
                     className: R.emptyTitle,
-                    children: C.NW.string(C.t.BfRGk5)
+                    children: C.intl.string(C.t.BfRGk5)
                 }),
                 (0, r.jsx)(T.Z, {
                     className: R.emptyWinnerImage,
@@ -214,7 +214,7 @@ function G(e) {
         [O, P] = i.useState('default'),
         D = (0, a.e7)([f.Z], () => {
             let e = f.Z.getPrimaryActivity(t);
-            return (null == e ? void 0 : e.application_id) != null && N.T.includes(e.application_id);
+            return (null == e ? void 0 : e.application_id) != null && A.T.includes(e.application_id);
         }),
         { generatingImage: x, generateImage: M } = (0, s.d)({
             renderComponent: (e) =>
@@ -231,7 +231,7 @@ function G(e) {
         j = async () => {
             try {
                 let e = await M();
-                await g.ZP.copyImageBlob(e, k), P('copied'), null == E || E(A.xP.COPIED_LEADERBOARD_ROW);
+                await g.ZP.copyImageBlob(e, k), P('copied'), null == E || E(N.xP.COPIED_LEADERBOARD_ROW);
             } catch (e) {
                 P('error');
             }
@@ -247,7 +247,7 @@ function G(e) {
                                   size: 'xs',
                                   color: o.TVs.colors.STATUS_POSITIVE
                               }),
-                              C.NW.string(C.t.ZO0ku7)
+                              C.intl.string(C.t.ZO0ku7)
                           ]
                       })
                     : 'error' === O
@@ -257,10 +257,10 @@ function G(e) {
                                     size: 'xs',
                                     color: o.TVs.colors.STATUS_DANGER
                                 }),
-                                C.NW.string(C.t.j2d6Ki)
+                                C.intl.string(C.t.j2d6Ki)
                             ]
                         })
-                      : (0, r.jsx)(r.Fragment, { children: C.NW.string(C.t.mikfoa) })
+                      : (0, r.jsx)(r.Fragment, { children: C.intl.string(C.t.mikfoa) })
         });
     return (0, r.jsxs)('div', {
         className: R.userRow,
@@ -365,7 +365,7 @@ function B(e) {
         children: [
             (0, r.jsx)(o.Text, {
                 variant: 'text-xs/normal',
-                children: C.NW.string(C.t.BfRGk5)
+                children: C.intl.string(C.t.BfRGk5)
             }),
             (0, r.jsx)(T.Z, {
                 className: R.joinLeaderboardCTAWinnerImage,

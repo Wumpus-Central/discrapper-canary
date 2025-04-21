@@ -48,8 +48,8 @@ var s = (function () {
             s = _[I];
             var S = h[I],
                 T = 1 / f[I],
-                N = S + h[I + 1] - s - s;
-            v.push((s - S - N) * T), O.push(N * T * T);
+                A = S + h[I + 1] - s - s;
+            v.push((s - S - A) * T), O.push(A * T * T);
         }
         (this.xs = t), (this.ys = n), (this.c1s = h), (this.c2s = v), (this.c3s = O);
     }

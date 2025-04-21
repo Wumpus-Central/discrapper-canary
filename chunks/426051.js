@@ -17,27 +17,27 @@ function b(e) {
     let { active: t, user: n, channel: b } = e,
         _ = (0, d.V)(),
         E = i.useCallback(() => {
-            (0, a.showToast)((0, a.createToast)(g.NW.string(g.t.pIQ3h4), a.ToastType.FAILURE)), o.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
+            (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)), o.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
         O = i.useCallback(() => {
             c.Z.closeChannelSidebar(u.uZ);
         }, []),
-        N = i.useCallback(() => {
+        y = i.useCallback(() => {
             c.Z.closeChannelSidebar(u.uZ), _ && (0, s.Kh)(b.id);
         }, [b.id, _]),
         {
-            acceptMessageRequest: y,
-            isAcceptLoading: I,
-            isUserProfileLoading: v,
-            isOptimisticAccepted: C
+            acceptMessageRequest: I,
+            isAcceptLoading: v,
+            isUserProfileLoading: C,
+            isOptimisticAccepted: S
         } = (0, p.m)({
             user: n,
-            onAcceptSuccess: N,
+            onAcceptSuccess: y,
             onRejectSuccess: O,
             onError: E
         }),
-        S = I || v,
-        T = S || C;
+        N = v || C,
+        T = N || S;
     return (0, r.jsxs)('div', {
         className: m.container,
         children: [
@@ -54,11 +54,11 @@ function b(e) {
                         color: a.Ttl.PRIMARY,
                         size: a.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            y(b.id), e.stopPropagation();
+                            I(b.id), e.stopPropagation();
                         },
                         disabled: T,
-                        submitting: S,
-                        children: g.NW.string(g.t.vicfl5)
+                        submitting: N,
+                        children: g.intl.string(g.t.vicfl5)
                     }),
                     (0, r.jsx)(f.Z, {
                         className: m.button,

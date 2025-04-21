@@ -35,7 +35,7 @@ let d = (e) => {
                         id: t,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',
-                        children: (null == g ? void 0 : g.name) != null ? c.NW.formatToPlainString(c.t['P+/gzM'], { guildName: g.name }) : c.NW.string(c.t.gBPcuL)
+                        children: (null == g ? void 0 : g.name) != null ? c.intl.formatToPlainString(c.t['P+/gzM'], { guildName: g.name }) : c.intl.string(c.t.gBPcuL)
                     }),
                     null != f && '' !== f
                         ? (0, r.jsxs)(a.Text, {
@@ -44,7 +44,7 @@ let d = (e) => {
                               children: [
                                   (0, r.jsx)('span', {
                                       className: u.rejectionReasonLabel,
-                                      children: c.NW.string(c.t.cf1psb)
+                                      children: c.intl.string(c.t.cf1psb)
                                   }),
                                   (0, r.jsx)('span', { children: f })
                               ]
@@ -57,8 +57,8 @@ let d = (e) => {
                 children: [
                     (0, r.jsx)(a.DY3, {
                         className: u.confirmationButton,
-                        text: b ? c.NW.formatToPlainString(c.t.A0f0Pz, { days: _ }) : null,
-                        'aria-label': b ? c.NW.formatToPlainString(c.t.A0f0Pz, { days: _ }) : void 0,
+                        text: b ? c.intl.formatToPlainString(c.t.A0f0Pz, { days: _ }) : null,
+                        'aria-label': b ? c.intl.formatToPlainString(c.t.A0f0Pz, { days: _ }) : void 0,
                         children: (0, r.jsx)(a.zxk, {
                             className: u.confirmationTooltipContents,
                             onClick: d,

@@ -41,7 +41,7 @@ function _(e, t, n, _) {
                       hideSimpleEmbedContent: !1
                   }).content
                 : j,
-        hint: (e, t) => (e && !t ? null : (0, g.Q)((0, y.P)(), b.t.ykjOAA, b.NW.string(b.t.jZkzVF))),
+        hint: (e, t) => (e && !t ? null : (0, g.Q)((0, y.P)(), b.t.ykjOAA, b.intl.string(b.t.jZkzVF))),
         maxBodyLines: 2,
         renderFooter: (n, r, o) =>
             n && !o

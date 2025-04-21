@@ -22,21 +22,21 @@ class l extends s.Component {
         let { transitionState: e } = this.props;
         return (0, r.jsxs)(c.Z, {
             transitionState: e,
-            'aria-label': o.NW.string(o.t.Nn0Px8),
+            'aria-label': o.intl.string(o.t.Nn0Px8),
             children: [
-                (0, r.jsx)(c.Z.Header, { children: o.NW.string(o.t.Nn0Px8) }),
+                (0, r.jsx)(c.Z.Header, { children: o.intl.string(o.t.Nn0Px8) }),
                 (0, r.jsx)(c.Z.Content, {
                     type: c.Z.Types.UNCLAIMED,
-                    children: o.NW.string(o.t['7btfmJ'])
+                    children: o.intl.string(o.t['7btfmJ'])
                 }),
                 (0, r.jsx)(c.Z.Footer, {
                     secondary: {
                         onClick: this.cancel,
-                        label: o.NW.string(o.t.oEAioK)
+                        label: o.intl.string(o.t.oEAioK)
                     },
                     primary: {
                         onClick: this.claimAccount,
-                        label: o.NW.string(o.t.fiNVio)
+                        label: o.intl.string(o.t.fiNVio)
                     }
                 })
             ]

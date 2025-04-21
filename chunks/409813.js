@@ -23,31 +23,31 @@ let d = new Set(['awaiting_browser_checkout', 'awaiting_browser_checkout_google_
 function _(e) {
     switch (e) {
         case 'plan_select':
-            return l.NW.string(l.t['r+SebW']);
+            return l.intl.string(l.t['r+SebW']);
         case 'payment_type':
         case 'add_payment_steps':
-            return l.NW.string(l.t.Sb6wIy);
+            return l.intl.string(l.t.Sb6wIy);
         case 'awaiting_purchase_token_auth':
         case 'review':
-            return l.NW.string(l.t.QBnNHh);
+            return l.intl.string(l.t.QBnNHh);
         case 'shop':
-            return l.NW.string(l.t.xj9ooa);
+            return l.intl.string(l.t.xj9ooa);
         case 'payment_request_information':
-            return l.NW.string(l.t.DDPRXl);
+            return l.intl.string(l.t.DDPRXl);
         case 'credit_card_information':
-            return l.NW.string(l.t.yMPCXF);
+            return l.intl.string(l.t.yMPCXF);
         case 'address':
-            return l.NW.string(l.t['50Auo6']);
+            return l.intl.string(l.t['50Auo6']);
         case 'paypal_information':
-            return l.NW.string(l.t.RVHDnJ);
+            return l.intl.string(l.t.RVHDnJ);
         case 'venmo_information':
-            return l.NW.string(l.t.bzQdwc);
+            return l.intl.string(l.t.bzQdwc);
         case 'przelewy24_information':
-            return l.NW.string(l.t.BW0R4u);
+            return l.intl.string(l.t.BW0R4u);
         case 'cash_app_information':
-            return l.NW.string(l.t.Gz1fyM);
+            return l.intl.string(l.t.Gz1fyM);
         case 'gift_customization':
-            return l.NW.string(l.t.R0vK0N);
+            return l.intl.string(l.t.R0vK0N);
     }
     throw Error('Unexpected step: '.concat(e));
 }

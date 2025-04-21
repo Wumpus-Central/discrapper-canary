@@ -17,17 +17,17 @@ var r = n(63063),
 function s(e) {
     switch (e) {
         case 60:
-            return a.NW.formatToPlainString(a.t['4zv/jo'], { secs: 60 });
+            return a.intl.formatToPlainString(a.t['4zv/jo'], { secs: 60 });
         case 300:
-            return a.NW.formatToPlainString(a.t.opVZ9v, { mins: 5 });
+            return a.intl.formatToPlainString(a.t.opVZ9v, { mins: 5 });
         case 600:
-            return a.NW.formatToPlainString(a.t.opVZ9v, { mins: 10 });
+            return a.intl.formatToPlainString(a.t.opVZ9v, { mins: 10 });
         case 3600:
-            return a.NW.formatToPlainString(a.t.xCjYxM, { hours: 1 });
+            return a.intl.formatToPlainString(a.t.xCjYxM, { hours: 1 });
         case 86400:
-            return a.NW.formatToPlainString(a.t.k2UNz8, { days: 1 });
+            return a.intl.formatToPlainString(a.t.k2UNz8, { days: 1 });
         case 604800:
-            return a.NW.formatToPlainString(a.t.EmoBDw, { weeks: 1 });
+            return a.intl.formatToPlainString(a.t.EmoBDw, { weeks: 1 });
         default:
             return;
     }

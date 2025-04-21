@@ -1,10 +1,10 @@
 n.d(t, {
-    T: () => a,
+    T: () => l,
     c: () => s
 });
-var r = n(818083),
-    i = n(355820);
-let s = (0, r.B)({
+var i = n(818083),
+    r = n(355820);
+let s = (0, i.B)({
     kind: 'user',
     id: '2025-01_recent_avatars',
     label: 'Recent Avatars',
@@ -17,18 +17,18 @@ let s = (0, r.B)({
         }
     ]
 });
-function a(e) {
+function l(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        r = (0, i.A)({
+        i = (0, r.A)({
             location: t,
             autoTrackExposure: n
         }),
-        { enabled: a } = s.useExperiment(
+        { enabled: l } = s.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: r
+                disable: i
             }
         );
-    return a;
+    return l;
 }

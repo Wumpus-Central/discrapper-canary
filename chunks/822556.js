@@ -11,7 +11,7 @@ function u(e) {
     let { analyticsLocations: t } = (0, a.ZP)();
     return (0, r.jsx)(l.sNh, {
         id: 'voice-settings',
-        label: c.NW.string(c.t.NiTd0d),
+        label: c.intl.string(c.t.NiTd0d),
         action: () => {
             i.Z.open(s.oAB.VOICE, null, {
                 analyticsLocations: t,

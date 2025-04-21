@@ -1,8 +1,8 @@
-n.r(s), n.d(s, { default: () => p });
-var r = n(200651),
-    t = n(192379),
-    l = n(120356),
-    a = n.n(l),
+n.r(s), n.d(s, { default: () => x });
+var t = n(200651),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     o = n(512969),
     i = n(873546),
     c = n(481060),
@@ -13,30 +13,30 @@ var r = n(200651),
     m = n(388032),
     h = n(776699);
 let v = 'https://dis.gd/Amazon-Music-Connection',
-    N = null != window.opener;
-function p() {
+    p = null != window.opener;
+function x() {
     let { type: e } = (0, o.UO)(),
         s = (0, f.vJ)(e),
         n = (0, d.l)().get('error-code'),
-        l = t.useCallback(() => {
+        r = l.useCallback(() => {
             window.close();
         }, []),
-        p = t.useMemo(() => {
+        x = l.useMemo(() => {
             switch (s) {
                 case g.ABu.AMAZON_MUSIC:
-                    return (0, r.jsx)('div', {
+                    return (0, t.jsx)('div', {
                         className: a()(h.message, h.details),
                         children: i.tq
-                            ? m.NW.format(m.t['0EikXl'], {
+                            ? m.intl.format(m.t['0EikXl'], {
                                   link: () =>
-                                      (0, r.jsx)(c.eee, {
+                                      (0, t.jsx)(c.eee, {
                                           href: v,
                                           children: v
                                       })
                               })
-                            : m.NW.format(m.t.hKHZhI, {
+                            : m.intl.format(m.t.hKHZhI, {
                                   link: () =>
-                                      (0, r.jsx)(c.eee, {
+                                      (0, t.jsx)(c.eee, {
                                           href: v,
                                           children: v
                                       })
@@ -44,9 +44,9 @@ function p() {
                     });
                 case g.ABu.YOUTUBE:
                     if (n === g.evJ.UNKNOWN_ACCOUNT.toString())
-                        return (0, r.jsx)('div', {
+                        return (0, t.jsx)('div', {
                             className: a()(h.message, h.details),
-                            children: m.NW.format(m.t.nQPJdH, { link: 'https://support.google.com/youtube/answer/1646861' })
+                            children: m.intl.format(m.t.nQPJdH, { link: 'https://support.google.com/youtube/answer/1646861' })
                         });
                     return null;
                 default:
@@ -54,30 +54,30 @@ function p() {
             }
         }, [n, s]);
     if (null == s) return null;
-    let x = u.Z.get(s);
-    return (0, r.jsxs)(f.UV, {
+    let j = u.Z.get(s);
+    return (0, t.jsxs)(f.UV, {
         platformType: s,
         children: [
-            (0, r.jsx)('div', {
+            (0, t.jsx)('div', {
                 className: a()(h.message, h.error),
-                children: m.NW.format(m.t.E62dXl, { name: x.name })
+                children: m.intl.format(m.t.E62dXl, { name: j.name })
             }),
-            (0, r.jsx)('div', {
+            (0, t.jsx)('div', {
                 className: a()(h.message, h.details),
-                children: m.NW.string(m.t.Ra6lcn)
+                children: m.intl.string(m.t.Ra6lcn)
             }),
-            p,
-            N
-                ? (0, r.jsx)(c.zxk, {
+            x,
+            p
+                ? (0, t.jsx)(c.zxk, {
                       className: h.btn,
-                      onClick: l,
-                      children: m.NW.string(m.t.i4jeWV)
+                      onClick: r,
+                      children: m.intl.string(m.t.i4jeWV)
                   })
                 : null,
             null != n
-                ? (0, r.jsx)('div', {
+                ? (0, t.jsx)('div', {
                       className: a()(h.message, h.errorDetails),
-                      children: m.NW.format(m.t.LElyIC, { errorCode: n })
+                      children: m.intl.format(m.t.LElyIC, { errorCode: n })
                   })
                 : null
         ]

@@ -17,12 +17,12 @@ var r = n(200651),
     _ = n(209613),
     E = n(325708),
     O = n(320149),
-    N = n(82295),
-    y = n(252618),
-    I = n(605236),
-    v = n(243778),
-    C = n(984370),
-    S = n(797614),
+    y = n(82295),
+    I = n(252618),
+    v = n(605236),
+    C = n(243778),
+    S = n(984370),
+    N = n(797614),
     T = n(359110),
     P = n(6025),
     j = n(897473),
@@ -37,12 +37,12 @@ var r = n(200651),
     M = n(385956),
     U = n(610697),
     G = n(26373),
-    W = n(486622),
-    V = n(488634),
-    B = n(899740),
-    H = n(177033),
-    F = n(355350),
-    z = n(307947),
+    V = n(486622),
+    B = n(488634),
+    H = n(899740),
+    F = n(177033),
+    z = n(355350),
+    W = n(307947),
     Y = n(96479),
     K = n(480874),
     q = n(687683),
@@ -54,16 +54,16 @@ var r = n(200651),
     et = n(100658);
 function en() {
     let e = i.useRef(null),
-        t = (0, B.q)(),
-        n = (0, H.Z)(),
+        t = (0, H.q)(),
+        n = (0, F.Z)(),
         l = (0, G.K)(),
         c = (0, g.N)(),
         u = i.useCallback(() => {
-            (0, d.showToast)((0, d.createToast)($.NW.string($.t.EDYbS0), d.ToastType.FAILURE));
+            (0, d.showToast)((0, d.createToast)($.intl.string($.t.EDYbS0), d.ToastType.FAILURE));
         }, []),
-        { rejectAll: p } = (0, W.m)({ onError: u }),
+        { rejectAll: p } = (0, V.m)({ onError: u }),
         h = (0, _.Z)('message-requests-list'),
-        { channelId: f } = (0, V._)(),
+        { channelId: f } = (0, B._)(),
         m = i.useCallback(() => {
             p(n.map((e) => e.channel.id));
         }, [n, p]),
@@ -94,11 +94,11 @@ function en() {
         E = i.useCallback(
             () =>
                 (0, r.jsxs)(
-                    N.Z,
+                    y.Z,
                     {
                         className: ee.sectionTitle,
                         children: [
-                            t > 0 ? $.NW.formatToPlainString($.t.rA4iWV, { count: t }) : $.NW.string($.t.flPU6u),
+                            t > 0 ? $.intl.formatToPlainString($.t.rA4iWV, { count: t }) : $.intl.string($.t.flPU6u),
                             c && t > 0
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
@@ -115,8 +115,8 @@ function en() {
                                               color: d.Ttl.LINK,
                                               size: d.PhG.NONE,
                                               className: ee.clearAllButton,
-                                              'aria-label': $.NW.string($.t.p6t7RE),
-                                              children: $.NW.string($.t.p6t7RE)
+                                              'aria-label': $.intl.string($.t.p6t7RE),
+                                              children: $.intl.string($.t.p6t7RE)
                                           })
                                       ]
                                   })
@@ -127,8 +127,8 @@ function en() {
                 ),
             [t, m, c]
         );
-    return (n.length !== t && S.Z.increment({ name: s.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
-        ? (0, r.jsx)(z.Z, { section: q.pS.REQUESTS })
+    return (n.length !== t && N.Z.increment({ name: s.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
+        ? (0, r.jsx)(W.Z, { section: q.pS.REQUESTS })
         : (0, r.jsx)(o.bG, {
               navigator: h,
               children: (0, r.jsx)(o.SJ, {
@@ -183,7 +183,7 @@ function en() {
                               {
                                   className: ee.list,
                                   innerRole: l,
-                                  innerAriaLabel: $.NW.string($.t.e7GWjY),
+                                  innerAriaLabel: $.intl.string($.t.e7GWjY),
                                   ref: (t) => {
                                       var n;
                                       (e.current = t), (i.current = null != (n = null == t ? void 0 : t.getScrollerNode()) ? n : null);
@@ -225,9 +225,9 @@ function er(e) {
 let ei = function (e) {
         let { markAsDismissed: t } = e;
         return (0, r.jsx)(Z.ZP, {
-            header: $.NW.string($.t.hRT8tb),
-            content: $.NW.string($.t.apPgJC),
-            buttonCTA: $.NW.string($.t.LNoAQU),
+            header: $.intl.string($.t.hRT8tb),
+            content: $.intl.string($.t.apPgJC),
+            buttonCTA: $.intl.string($.t.LNoAQU),
             className: ee.messageRequestCoachmark,
             onClick: () => t(X.L.UNKNOWN),
             markAsDismissed: t,
@@ -241,9 +241,9 @@ let ei = function (e) {
             l = (0, c.e7)([b.Z], () => b.Z.useReducedMotion);
         return (
             i.useEffect(() => {
-                (0, I.kk)(u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+                (0, v.kk)(u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
             }, []),
-            (0, r.jsx)(v.ZP, {
+            (0, r.jsx)(C.ZP, {
                 contentTypes: [u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
                 children: (i) => {
                     let { visibleContent: a, markAsDismissed: o } = i;
@@ -253,10 +253,10 @@ let ei = function (e) {
                                   t
                                       ? (0, r.jsx)(ei, { markAsDismissed: o })
                                       : (0, r.jsx)(Z.ZP, {
-                                            header: $.NW.string($.t.hRT8tb),
-                                            content: $.NW.string($.t['8JWodn']),
-                                            buttonCTA: $.NW.string($.t.JN6EOD),
-                                            secondaryButtonCTA: $.NW.string($.t.LNoAQU),
+                                            header: $.intl.string($.t.hRT8tb),
+                                            content: $.intl.string($.t['8JWodn']),
+                                            buttonCTA: $.intl.string($.t.JN6EOD),
+                                            secondaryButtonCTA: $.intl.string($.t.LNoAQU),
                                             className: ee.messageRequestCoachmark,
                                             onClick: (e) => {
                                                 e.stopPropagation(), h.Z.open(Q.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: J.FY.MESSAGE_REQUESTS_V2 });
@@ -283,12 +283,12 @@ function ea(e) {
 }
 let eo = (0, f.Z)(function (e) {
     let { width: t } = e,
-        n = (0, B.q)();
+        n = (0, H.q)();
     (0, m.ZP)(() => {
-        p.Y(Q.Z5c.MESSAGE_REQUESTS), (0, A.e)('message-requests'), D.default.track(Q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), S.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW });
+        p.Y(Q.Z5c.MESSAGE_REQUESTS), (0, A.e)('message-requests'), D.default.track(Q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), N.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW });
     });
     let l = (0, c.e7)([x.Z], () => x.Z.theme),
-        o = (0, F.w)(),
+        o = (0, z.w)(),
         [u, h] = i.useState(!1),
         f = (0, c.e7)([L.ZP], () => {
             let e = L.ZP.getSidebarState(L.uZ);
@@ -301,12 +301,12 @@ let eo = (0, f.Z)(function (e) {
     i.useEffect(() => {
         null != g && !_ && E && b && ((0, T.Kh)(g), P.Z.closeChannelSidebar(L.uZ));
     }, [g, E, b, _]);
-    let [O, N] = i.useState(q.pS.REQUESTS),
-        I = (e) => {
-            N(e);
+    let [O, y] = i.useState(q.pS.REQUESTS),
+        v = (e) => {
+            y(e);
         };
     return (
-        (0, y.Tt)({ location: $.NW.string($.t.e7GWjY) }),
+        (0, I.Tt)({ location: $.intl.string($.t.e7GWjY) }),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
@@ -318,31 +318,31 @@ let eo = (0, f.Z)(function (e) {
                         (0, r.jsx)(d.f6W, {
                             theme: l,
                             children: (e) =>
-                                (0, r.jsxs)(C.Z, {
+                                (0, r.jsxs)(S.Z, {
                                     className: e,
                                     toolbar: !0,
                                     children: [
-                                        (0, r.jsx)(C.Z.Icon, {
+                                        (0, r.jsx)(S.Z.Icon, {
                                             icon: d._XJ,
                                             'aria-hidden': !0
                                         }),
-                                        (0, r.jsx)(el, { children: (0, r.jsx)(C.Z.Title, { children: $.NW.string($.t.e7GWjY) }) }),
-                                        (0, r.jsx)(C.Z.Divider, {}),
+                                        (0, r.jsx)(el, { children: (0, r.jsx)(S.Z.Title, { children: $.intl.string($.t.e7GWjY) }) }),
+                                        (0, r.jsx)(S.Z.Divider, {}),
                                         (0, r.jsxs)(d.njP, {
-                                            'aria-label': $.NW.string($.t.e7GWjY),
+                                            'aria-label': $.intl.string($.t.e7GWjY),
                                             selectedItem: O,
                                             type: 'top-pill',
-                                            onItemSelect: I,
+                                            onItemSelect: v,
                                             children: [
                                                 (0, r.jsx)(d.njP.Item, {
                                                     id: q.pS.REQUESTS,
                                                     className: ee.item,
-                                                    children: $.NW.string($.t['7RFcXV'])
+                                                    children: $.intl.string($.t['7RFcXV'])
                                                 }),
                                                 (0, r.jsx)(d.njP.Item, {
                                                     id: q.pS.SPAM,
                                                     className: ee.item,
-                                                    children: 0 === o ? $.NW.string($.t.ulKXHh) : $.NW.formatToPlainString($.t['5jtrlZ'], { count: o })
+                                                    children: 0 === o ? $.intl.string($.t.ulKXHh) : $.intl.formatToPlainString($.t['5jtrlZ'], { count: o })
                                                 })
                                             ]
                                         })

@@ -20,17 +20,17 @@ function b(e) {
         onChange: l,
         value: i,
         options: s,
-        placeholder: C.NW.string(C.t.etZ9tb)
+        placeholder: C.intl.string(C.t.etZ9tb)
     });
 }
 function m(e) {
     let { transitionState: t, onClose: i, feature: r, section: g, subsection: C } = e,
         m = (0, a.Dt)(),
-        { canCreateGuild: h, createGuildCta: S, createGuildDescription: Z, selectGuildCta: v, title: f, description: x, isGuildSupported: N } = (0, p.K)(r),
-        [j, O] = l.useState(),
-        [I, k] = l.useState(!1),
-        F = async () => {
-            k(!0);
+        { canCreateGuild: h, createGuildCta: S, createGuildDescription: Z, selectGuildCta: v, title: f, description: x, isGuildSupported: j } = (0, p.K)(r),
+        [O, I] = l.useState(),
+        [k, F] = l.useState(!1),
+        w = async () => {
+            F(!0);
             let e = await new Promise((e) => {
                 d.Z.openCreateGuildModal({ onSuccess: e });
             });
@@ -72,16 +72,16 @@ function m(e) {
                             (0, n.jsx)('div', {
                                 className: G.guildSelectorContainer,
                                 children: (0, n.jsx)(b, {
-                                    guildId: j,
-                                    onChange: O,
-                                    isGuildIncluded: N
+                                    guildId: O,
+                                    onChange: I,
+                                    isGuildIncluded: j
                                 })
                             }),
                             (0, n.jsx)(u.zxk, {
                                 onClick: () => {
-                                    s()(null != j, 'Guild ID must not be null on click'), o.Z.open(j, g, void 0, C), null == i || i();
+                                    s()(null != O, 'Guild ID must not be null on click'), o.Z.open(O, g, void 0, C), null == i || i();
                                 },
-                                disabled: null == j,
+                                disabled: null == O,
                                 children: v
                             })
                         ]
@@ -96,8 +96,8 @@ function m(e) {
                                 }),
                                 (0, n.jsx)(u.LZC, { size: 8 }),
                                 (0, n.jsx)(u.zxk, {
-                                    onClick: F,
-                                    submitting: I,
+                                    onClick: w,
+                                    submitting: k,
                                     children: S
                                 })
                             ]

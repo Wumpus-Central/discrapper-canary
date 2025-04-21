@@ -33,9 +33,9 @@ async function l(e, t) {
 function c(e) {
     switch (e) {
         case i.u$.IP_LOCATION:
-            return o.NW.string(o.t['6wPmjo']);
+            return o.intl.string(o.t['6wPmjo']);
         case i.u$.DISPLAYS_ADVERTISEMENTS:
-            return o.NW.string(o.t['/uOMKS']);
+            return o.intl.string(o.t['/uOMKS']);
         default:
             return null;
     }

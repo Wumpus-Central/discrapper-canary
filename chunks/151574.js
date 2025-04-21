@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(388685);
+n.d(t, { Z: () => Y }), n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(490095),
     S = n(652136),
     T = n(626135),
-    N = n(280930),
-    A = n(606301),
+    A = n(280930),
+    N = n(606301),
     C = n(278754),
     R = n(981631),
     P = n(388032),
@@ -177,7 +177,7 @@ function H(e) {
         { stickersNavigator: _ }
     );
 }
-let W = i.memo(function (e) {
+let Y = i.memo(function (e) {
     var t;
     let { editorRef: n, channel: a, isEditorFocused: l, onSelectSticker: c, stickerIconVisible: u = !1, submitButtonVisible: d = !1 } = e,
         m = i.useContext(h.ZP),
@@ -186,14 +186,14 @@ let W = i.memo(function (e) {
         [j, U] = i.useState(null),
         G = (0, g.Iu)((e) => null != e.activeView),
         B = i.useRef(null),
-        [V, W] = i.useState(''),
-        [Y, K] = i.useState(''),
+        [V, Y] = i.useState(''),
+        [W, K] = i.useState(''),
         [z, q] = i.useState(!1),
         [Q, X] = i.useState(!1),
-        J = (0, N.Z)(V, D, a),
+        J = (0, A.Z)(V, D, a),
         { analyticsLocations: $ } = (0, p.ZP)(_.Z.EXPRESSION_SUGGESTIONS),
-        { handleTextChange: ee, debouncedSetTextInputValue: et } = (0, N.m)({
-            setTextInputValue: W,
+        { handleTextChange: ee, debouncedSetTextInputValue: et } = (0, A.m)({
+            setTextInputValue: Y,
             setHasDismissed: x,
             setHasSelection: X,
             setFocusedSuggestionType: I
@@ -238,18 +238,18 @@ let W = i.memo(function (e) {
             setFocusedSuggestionType: I,
             setHasDismissed: x,
             setFocusedStickerListItem: U,
-            setTextInputValue: W
+            setTextInputValue: Y
         }),
         es = (e, t) => {
             if (ea) {
                 if (
                     (T.default.track(R.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
                         sticker_id: e.id,
-                        suggestion_trigger: Y
+                        suggestion_trigger: W
                     }),
                     t === E.eb.SENDABLE)
                 )
-                    x(!0), c(e, y.V0.EXPRESSION_SUGGESTIONS), et.cancel(), W('');
+                    x(!0), c(e, y.V0.EXPRESSION_SUGGESTIONS), et.cancel(), Y('');
                 else if ((0, v.jl)(e)) {
                     let t = b.Z.getStickerPack(e.pack_id);
                     null != t &&
@@ -264,7 +264,7 @@ let W = i.memo(function (e) {
         el = i.useRef([]),
         ec = i.useRef(!1);
     i.useEffect(() => {
-        ea && (el.current = J), ea !== ec.current && (m.emit(ea ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ea && ((0, A.Tk)(V), K(V))), (ec.current = ea);
+        ea && (el.current = J), ea !== ec.current && (m.emit(ea ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ea && ((0, N.Tk)(V), K(V))), (ec.current = ea);
     }, [m, ea, J, V]);
     let eu = !ea,
         ed = ea ? J : el.current;
@@ -347,8 +347,8 @@ let W = i.memo(function (e) {
                                             variant: 'text-sm/normal',
                                             children:
                                                 null != j
-                                                    ? P.NW.format(P.t['5gglIi'], { stickerName: null == (t = J[+j]) ? void 0 : t.sticker.name })
-                                                    : P.NW.format(P.t['8DjNnJ'], {
+                                                    ? P.intl.format(P.t['5gglIi'], { stickerName: null == (t = J[+j]) ? void 0 : t.sticker.name })
+                                                    : P.intl.format(P.t['8DjNnJ'], {
                                                           upHook: (e, t) =>
                                                               (0, r.jsx)(
                                                                   f.M2$,
@@ -369,7 +369,7 @@ let W = i.memo(function (e) {
                                                     (0, C.AW)(!1);
                                             },
                                             children: (0, r.jsx)(f.ua7, {
-                                                text: P.NW.string(P.t.XNMs5u),
+                                                text: P.intl.string(P.t.XNMs5u),
                                                 children: (e) =>
                                                     (0, r.jsx)(
                                                         f.Dio,

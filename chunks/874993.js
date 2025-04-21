@@ -1,8 +1,8 @@
-n.d(t, { Z: () => C }), n(388685), n(472816), n(794429), n(953529);
+n.d(t, { Z: () => y }), n(388685), n(472816), n(794429), n(953529);
 var r = n(200651),
     i = n(192379),
-    s = n(442837),
-    l = n(692547),
+    l = n(442837),
+    s = n(692547),
     a = n(481060),
     o = n(999382),
     c = n(279542),
@@ -16,22 +16,22 @@ var r = n(200651),
     x = n(51248),
     b = n(546513),
     j = n(572456),
-    N = n(273504),
-    _ = n(981631),
-    v = n(388032),
-    O = n(885655);
-function C(e) {
+    _ = n(273504),
+    v = n(981631),
+    O = n(388032),
+    C = n(885655);
+function y(e) {
     var t, n;
-    let { guildId: C, setPreventNavigation: y = () => {} } = e,
+    let { guildId: y, setPreventNavigation: N = () => {} } = e,
         { editingRule: I, setEditingRule: E } = (0, f.V)(),
-        { guild: S, subsection: T } = (0, s.cj)([o.Z], () => o.Z.getProps()),
-        P = null != (n = null != (t = null == S ? void 0 : S.id) ? t : C) ? n : _.lds,
+        { guild: S, subsection: T } = (0, l.cj)([o.Z], () => o.Z.getProps()),
+        P = null != (n = null != (t = null == S ? void 0 : S.id) ? t : y) ? n : v.lds,
         w = null != I,
         [R] = (0, g.RD)(P),
         { rulesByTriggerType: Z } = (0, g.pH)(P),
         D = {
-            [p.vh.MEMBERS]: v.NW.string(v.t.sx4E5u),
-            [p.vh.CONTENT]: v.NW.string(v.t.fphZb2)
+            [p.vh.MEMBERS]: O.intl.string(O.t.sx4E5u),
+            [p.vh.CONTENT]: O.intl.string(O.t.fphZb2)
         },
         A = i.useMemo(
             () =>
@@ -44,15 +44,15 @@ function C(e) {
             isInEditMode: w,
             setEditingRule: E
         },
-        W = i.useRef(k);
+        L = i.useRef(k);
     i.useEffect(() => {
-        W.current = k;
+        L.current = k;
     }),
         i.useEffect(() => {
-            let { isInEditMode: e, setEditingRule: t } = W.current;
+            let { isInEditMode: e, setEditingRule: t } = L.current;
             e && t(null);
         }, [P]);
-    let L = i.useCallback(
+    let M = i.useCallback(
             (e, t) => {
                 if (null != e) {
                     var n, r;
@@ -72,15 +72,15 @@ function C(e) {
             },
             [A]
         ),
-        M = i.useMemo(() => {
+        G = i.useMemo(() => {
             var e, t;
-            return L(null != (e = null == I ? void 0 : I.id) ? e : null, null != (t = null == I ? void 0 : I.triggerType) ? t : null);
-        }, [L, I]);
+            return M(null != (e = null == I ? void 0 : I.id) ? e : null, null != (t = null == I ? void 0 : I.triggerType) ? t : null);
+        }, [M, I]);
     i.useEffect(() => {
-        y(w, (0, j.af)(M));
-    }, [y, w, M]);
-    let G = (0, p.Z6)(P),
-        U = (e) =>
+        N(w, (0, j.af)(G));
+    }, [N, w, G]);
+    let U = (0, p.Z6)(P),
+        B = (e) =>
             (0, r.jsx)(r.Fragment, {
                 children: e.map((e) => {
                     var t;
@@ -90,62 +90,62 @@ function C(e) {
                             guildId: P,
                             triggerType: e,
                             rules: null != (t = Z[e]) ? t : [],
-                            initWithEdit: T === _.KsC.AUTOMOD_MENTION_SPAM && e === N.fX.MENTION_SPAM
+                            initWithEdit: T === v.KsC.AUTOMOD_MENTION_SPAM && e === _.fX.MENTION_SPAM
                         },
                         e
                     );
                 })
             });
     return (0, r.jsxs)(a.hjN, {
-        title: v.NW.string(v.t.uRelg4),
+        title: O.intl.string(O.t.uRelg4),
         tag: 'h1',
         children: [
             (0, r.jsxs)('div', {
-                className: O.descriptionContainer,
+                className: C.descriptionContainer,
                 children: [
                     (0, r.jsxs)(a.hjN, {
                         tag: 'h3',
-                        className: O.description,
-                        titleClassName: O.descriptionHeader,
+                        className: C.description,
+                        titleClassName: C.descriptionHeader,
                         children: [
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-secondary',
-                                children: v.NW.string(v.t.EwuSCQ)
+                                children: O.intl.string(O.t.EwuSCQ)
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
-                                className: O.helpUrl,
-                                children: v.NW.format(v.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(_.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
+                                className: C.helpUrl,
+                                children: O.intl.format(O.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(v.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
                             })
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: O.descriptionAvatarContainer,
+                        className: C.descriptionAvatarContainer,
                         children: [
                             (0, r.jsx)(a.qEK, {
                                 src: (0, m.j)(),
                                 size: a.EFr.SIZE_80,
-                                'aria-label': v.NW.string(v.t.hG1StL)
+                                'aria-label': O.intl.string(O.t.hG1StL)
                             }),
                             (0, r.jsx)(a.IGR, {
                                 text: (0, r.jsxs)('div', {
-                                    className: O.automodBadgeText,
+                                    className: C.automodBadgeText,
                                     children: [
                                         (0, r.jsx)(a.sV5, {
                                             size: 'xxs',
                                             color: 'currentColor',
-                                            className: O.checkmarkIcon
+                                            className: C.checkmarkIcon
                                         }),
                                         (0, r.jsx)(a.Text, {
                                             variant: 'text-xs/bold',
-                                            className: O.automodText,
-                                            children: v.NW.string(v.t.hG1StL)
+                                            className: C.automodText,
+                                            children: O.intl.string(O.t.hG1StL)
                                         })
                                     ]
                                 }),
-                                color: l.Z.unsafe_rawColors.BRAND_500.css,
-                                className: O.textBadge
+                                color: s.Z.unsafe_rawColors.BRAND_500.css,
+                                className: C.textBadge
                             })
                         ]
                     })
@@ -153,14 +153,14 @@ function C(e) {
             }),
             R
                 ? (0, r.jsx)(h.Z, {})
-                : Object.entries(G).map((e) => {
+                : Object.entries(U).map((e) => {
                       let [t, n] = e;
                       if (0 === n.length) return (0, r.jsx)(i.Fragment, {}, t);
-                      let s =
+                      let l =
                           null != D[t]
                               ? (0, r.jsx)(a.hjN, {
                                     tag: 'h3',
-                                    className: O.categoryHeader,
+                                    className: C.categoryHeader,
                                     children: (0, r.jsx)(a.Text, {
                                         variant: 'text-lg/normal',
                                         color: 'header-primary',
@@ -171,8 +171,8 @@ function C(e) {
                       return (0, r.jsxs)(
                           'div',
                           {
-                              className: O.categoryContainer,
-                              children: [s, U(n)]
+                              className: C.categoryContainer,
+                              children: [l, B(n)]
                           },
                           t
                       );
@@ -181,13 +181,13 @@ function C(e) {
                 (0, r.jsx)(c.k0, {
                     guild: S,
                     withDivider: !1,
-                    className: O.explicitContentFilterSection
+                    className: C.explicitContentFilterSection
                 }),
             (0, r.jsx)(x.Z, {
                 guildId: P,
                 existingRules: A
             }),
-            w && (0, r.jsx)('div', { className: O.endSpacer })
+            w && (0, r.jsx)('div', { className: C.endSpacer })
         ]
     });
 }

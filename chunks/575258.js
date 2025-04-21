@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(953529);
 var r,
     i = n(442837),
-    s = n(570140),
-    l = n(430824),
+    l = n(570140),
+    s = n(430824),
     a = n(981631);
 function o(e, t, n) {
     return (
@@ -28,12 +28,12 @@ let c = {
     g = c;
 function p(e) {
     let { welcomeScreen: t, guildId: n } = e,
-        r = l.Z.getGuild(n);
+        r = s.Z.getGuild(n);
     if (null != t) {
-        var i, s;
+        var i, l;
         g = d = {
             description: null != (i = t.description) ? i : '',
-            channels: null != (s = t.welcome_channels) ? s : [],
+            channels: null != (l = t.welcome_channels) ? l : [],
             enabled: null == r ? void 0 : r.hasFeature(a.oNc.WELCOME_SCREEN_ENABLED)
         };
     } else g = d = c;
@@ -41,7 +41,7 @@ function p(e) {
 }
 class h extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(l.Z);
+        this.waitFor(s.Z);
     }
     get() {
         return g;
@@ -59,7 +59,7 @@ class h extends (r = i.ZP.Store) {
     }
 }
 o(h, 'displayName', 'WelcomeScreenSettingsStore');
-let f = new h(s.Z, {
+let f = new h(l.Z, {
     WELCOME_SCREEN_FETCH_SUCCESS: p,
     WELCOME_SCREEN_UPDATE: p,
     WELCOME_SCREEN_SETTINGS_RESET: function () {

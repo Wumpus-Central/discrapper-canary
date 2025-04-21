@@ -19,7 +19,7 @@ function d(e) {
             return (
                 r.unshift({
                     id: (0, i.bD)(e),
-                    name: c.NW.string(c.t['7YqSGx']),
+                    name: c.intl.string(c.t['7YqSGx']),
                     canManage: !0
                 }),
                 r

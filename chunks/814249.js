@@ -21,27 +21,27 @@ function c() {
     return [
         {
             value: 'DUPLICATED',
-            label: i.NW.string(i.t.wwXl5u)
+            label: i.intl.string(i.t.wwXl5u)
         },
         {
             value: 'TOO_GENERIC',
-            label: i.NW.string(i.t['t+6knp'])
+            label: i.intl.string(i.t['t+6knp'])
         },
         {
             value: 'TOO_MANY',
-            label: i.NW.string(i.t.xnKDnp)
+            label: i.intl.string(i.t.xnKDnp)
         },
         {
             value: 'INACCURATE',
-            label: i.NW.string(i.t.JW5VFh)
+            label: i.intl.string(i.t.JW5VFh)
         },
         {
             value: 'NOT_USEFUL',
-            label: i.NW.string(i.t.ZtCNiY)
+            label: i.intl.string(i.t.ZtCNiY)
         },
         {
             value: 'OTHER',
-            label: i.NW.string(i.t.BufsKi)
+            label: i.intl.string(i.t.BufsKi)
         }
     ];
 }

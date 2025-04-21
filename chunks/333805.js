@@ -10,7 +10,7 @@ function a(e) {
     return e.isGuildStageVoice() && t
         ? (0, r.jsx)(i.sNh, {
               id: 'report-stage',
-              label: c.NW.string(c.t.JGj6Cg),
+              label: c.intl.string(c.t.JGj6Cg),
               action: () => (0, l.ic)(e),
               icon: i.U65,
               color: 'danger'

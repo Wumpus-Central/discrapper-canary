@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(997841), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(533800),
-    l = n(481060),
+    l = n(533800),
+    a = n(481060),
     o = n(447543),
     s = n(100527),
     c = n(906732),
@@ -20,32 +20,32 @@ var r = n(200651),
     v = n(273254);
 function E(e) {
     var t, E, O;
-    let N,
-        j,
+    let j,
         C,
-        { onTransitionToInviteChannel: S, onAcceptInstantInvite: I, guild: T, invite: P, author: A, currentUserId: w } = e,
+        S,
+        { onTransitionToInviteChannel: I, onAcceptInstantInvite: N, guild: T, invite: P, author: A, currentUserId: w } = e,
         Z = w === A.id,
         { channel: R, approximate_member_count: k, approximate_presence_count: D } = P,
         L = P.state === x.r2o.ACCEPTING,
         M = null != R ? (0, f.jD)(R) : null,
-        W = null != T,
-        U = null != M,
-        F = null != M && M.isGuildVocal(),
-        B = null != M && M.isGuildStageVoice(),
-        G = (0, h.yE)(null != (t = P.flags) ? t : 0, a.$.IS_GUEST_INVITE),
-        H = null != (E = null == T ? void 0 : T.hasFeature(x.oNc.HUB)) && E,
-        V = (0, u.h)(),
-        z = null == T ? void 0 : T.id,
+        U = null != T,
+        F = null != M,
+        B = null != M && M.isGuildVocal(),
+        G = null != M && M.isGuildStageVoice(),
+        H = (0, h.yE)(null != (t = P.flags) ? t : 0, l.$.IS_GUEST_INVITE),
+        V = null != (E = null == T ? void 0 : T.hasFeature(x.oNc.HUB)) && E,
+        z = (0, u.h)(),
+        W = null == T ? void 0 : T.id,
         { analyticsLocations: K } = (0, c.ZP)(s.Z.INVITE_EMBED),
         [Y, X] = i.useState(!1),
         q = i.useCallback(() => X(!1), []),
         Q = i.useCallback(() => {
             let e = 'noop';
-            V ? (X(!0), (e = 'show profile')) : W && (S(), (e = 'transition')), (0, o.CB)(z, e, K);
-        }, [z, K, V, W, S]),
+            z ? (X(!0), (e = 'show profile')) : U && (I(), (e = 'transition')), (0, o.CB)(W, e, K);
+        }, [W, K, z, U, I]),
         J = i.useCallback(() => {
             let e = 'noop';
-            W ? (S(), (e = 'transition')) : (I(), (e = 'accept')),
+            U ? (I(), (e = 'transition')) : (N(), (e = 'accept')),
                 (0, o.r$)(
                     {
                         invite: P,
@@ -54,21 +54,21 @@ function E(e) {
                     },
                     K
                 );
-        }, [P, A, K, W, S, I]);
+        }, [P, A, K, U, I, N]);
     if (null == T) {
         if (null == P.guild) return (0, r.jsx)(b.Z, {});
         (T = g.Qs(P.guild)).premiumTier = null != (O = P.guild.premium_tier) ? O : x.Eu4.NONE;
     }
     let $ = (0, _.e)({
-        isVoiceChannel: F,
+        isVoiceChannel: B,
         isOwnInvite: Z,
-        isGuest: G,
-        isHubGuild: H,
-        isStage: B,
+        isGuest: H,
+        isHubGuild: V,
+        isStage: G,
         isStream: !1
     });
     return (
-        (j = (0, r.jsxs)('span', {
+        (C = (0, r.jsxs)('span', {
             className: v.infoTitle,
             children: [
                 (0, r.jsx)(d.Z, {
@@ -88,22 +88,22 @@ function E(e) {
                 })
             ]
         })),
-        G &&
-            (C = (0, r.jsx)(l.DY3, {
+        H &&
+            (S = (0, r.jsx)(a.DY3, {
                 className: v.tooltipContainer,
-                text: y.NW.string(y.t['/FeTKy']),
-                children: (0, r.jsx)(l.d3s, {
+                text: y.intl.string(y.t['/FeTKy']),
+                children: (0, r.jsx)(a.d3s, {
                     size: 'md',
                     color: 'currentColor',
                     className: v.infoIcon
                 })
             })),
-        F
-            ? ((j = (0, r.jsx)(m.Z.Channel, { channel: M })),
-              (N = (0, r.jsxs)('span', {
+        B
+            ? ((C = (0, r.jsx)(m.Z.Channel, { channel: M })),
+              (j = (0, r.jsxs)('span', {
                   className: v.infoTitle,
                   children: [
-                      y.NW.format(y.t['2wimj4'], { guildName: T.name }),
+                      y.intl.format(y.t['2wimj4'], { guildName: T.name }),
                       (0, r.jsx)('span', {
                           className: v.infoBadge,
                           children: (0, r.jsx)(p.Z, {
@@ -114,12 +114,12 @@ function E(e) {
                   ]
               })))
             : (null != k && k >= 5) || (null != D && D > 0)
-              ? (N = (0, r.jsx)(m.Z.Data, {
+              ? (j = (0, r.jsx)(m.Z.Data, {
                     members: k,
                     membersOnline: D
                 }))
-              : U &&
-                (N = (0, r.jsx)(m.Z.Channel, {
+              : F &&
+                (j = (0, r.jsx)(m.Z.Channel, {
                     channel: M,
                     guild: T
                 })),
@@ -128,7 +128,7 @@ function E(e) {
                 (0, r.jsx)(m.Z.GuildSplash, { guild: T }),
                 (0, r.jsx)(m.Z.Header, {
                     text: $,
-                    extra: C
+                    extra: S
                 }),
                 (0, r.jsxs)(m.Z.Body, {
                     children: [
@@ -137,9 +137,9 @@ function E(e) {
                             children: [
                                 (0, r.jsx)(m.Z.Icon, { guild: T }),
                                 (0, r.jsx)(m.Z.Info, {
-                                    title: j,
+                                    title: C,
                                     onClick: Q,
-                                    children: N
+                                    children: j
                                 })
                             ]
                         }),
@@ -147,7 +147,7 @@ function E(e) {
                             onClick: J,
                             submitting: L,
                             color: m.Z.Button.Colors.GREEN,
-                            children: F ? (B ? y.NW.string(y.t['7vb2cX']) : y.NW.string(y.t.gpqgam)) : W ? y.NW.string(y.t.cEnaW1) : y.NW.string(y.t.XpeFYm)
+                            children: B ? (G ? y.intl.string(y.t['7vb2cX']) : y.intl.string(y.t.gpqgam)) : U ? y.intl.string(y.t.cEnaW1) : y.intl.string(y.t.XpeFYm)
                         })
                     ]
                 }),
@@ -155,12 +155,12 @@ function E(e) {
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)('div', { className: v.separator }),
-                            (0, r.jsx)(l.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: y.NW.format(y.t['/o1IfH'], {
+                                children: y.intl.format(y.t['/o1IfH'], {
                                     onClick: () =>
-                                        (0, l.ZDy)(async () => {
+                                        (0, a.ZDy)(async () => {
                                             let { default: e } = await Promise.all([n.e('95468'), n.e('46343')]).then(n.bind(n, 650233));
                                             return (t) =>
                                                 (0, r.jsx)(

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(481060),
@@ -46,7 +46,7 @@ function E(e) {
     }
     return e;
 }
-function N(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,13 +64,13 @@ function N(e, t) {
         e
     );
 }
-function I(e) {
+function P(e) {
     let { channel: t } = e,
         [n, o] = i.useState(!1);
     function a() {
         o((e) => !e);
     }
-    let s = O.NW.string(O.t.UKOtz8);
+    let s = O.intl.string(O.t.UKOtz8);
     return (0, r.jsx)(l.yRy, {
         shouldShow: n,
         animation: l.yRy.Animation.NONE,
@@ -79,13 +79,13 @@ function I(e) {
         autoInvert: !1,
         onRequestClose: () => o(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(P, N(E({}, e), { channel: t }));
+            return (0, r.jsx)(S, I(E({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
                 _.ZP.Icon,
-                N(E({}, e), {
+                I(E({}, e), {
                     onClick: a,
                     tooltip: n ? null : s,
                     icon: l.xhG,
@@ -96,20 +96,20 @@ function I(e) {
         }
     });
 }
-function P(e) {
+function S(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         b = (0, s.Z)(t, 'Sidebar Overflow'),
         _ = (0, u.Z)(t),
         x = (0, h.Z)(t),
         v = (0, f.Z)(t),
         E = (0, o.Z)(t),
-        N = (0, c.Z)(t),
-        I = (0, p.Z)(t.id),
-        P = (0, d.Z)(t),
-        S = (0, a.Z)(t),
-        Z = (0, g.Z)({
+        I = (0, c.Z)(t),
+        P = (0, p.Z)(t.id),
+        S = (0, d.Z)(t),
+        Z = (0, a.Z)(t),
+        N = (0, g.Z)({
             id: t.id,
-            label: O.NW.string(O.t.DQ797u)
+            label: O.intl.string(O.t.DQ797u)
         }),
         T = (0, m.Z)(t);
     function A() {
@@ -118,7 +118,7 @@ function P(e) {
     return (0, r.jsxs)(l.v2r, {
         navId: 'thread-context',
         onClose: n,
-        'aria-label': O.NW.string(O.t['1NBjqa']),
+        'aria-label': O.intl.string(O.t['1NBjqa']),
         onSelect: i,
         children: [
             (0, r.jsxs)(l.kSQ, {
@@ -126,7 +126,7 @@ function P(e) {
                     b,
                     (0, r.jsx)(l.sNh, {
                         id: 'open',
-                        label: O.NW.string(O.t.IxVmZm),
+                        label: O.intl.string(O.t.IxVmZm),
                         action: A
                     })
                 ]
@@ -135,13 +135,13 @@ function P(e) {
                 children: [x, v]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [P, _, I]
+                children: [S, _, P]
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [
                     (0, r.jsx)(l.sNh, {
                         id: 'search',
-                        label: O.NW.string(O.t['5h0QOD']),
+                        label: O.intl.string(O.t['5h0QOD']),
                         icon: l.rgF,
                         action: function () {
                             A(),
@@ -152,7 +152,7 @@ function P(e) {
                     }),
                     (0, r.jsx)(l.sNh, {
                         id: 'pins',
-                        label: O.NW.string(O.t['2BSH7u']),
+                        label: O.intl.string(O.t['2BSH7u']),
                         icon: l.rgF,
                         action: function () {
                             A(), C.S.dispatch(j.CkL.TOGGLE_CHANNEL_PINS);
@@ -161,21 +161,21 @@ function P(e) {
                 ]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [T, E, N, S]
+                children: [T, E, I, Z]
             }),
-            (0, r.jsx)(l.kSQ, { children: Z })
+            (0, r.jsx)(l.kSQ, { children: N })
         ]
     });
 }
-function S(e) {
+function Z(e) {
     let { channel: t, baseChannelId: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t.isForumPost() ? null : (0, r.jsx)(x.Z, { channel: t }),
-            (0, r.jsx)(I, { channel: t }),
+            (0, r.jsx)(P, { channel: t }),
             (0, r.jsx)(_.ZP.Icon, {
                 icon: l.Dio,
-                tooltip: O.NW.string(O.t.cpT0Cg),
+                tooltip: O.intl.string(O.t.cpT0Cg),
                 onClick: () => (0, v.vN)((0, b.e)(t), null != n ? n : t.parent_id)
             })
         ]

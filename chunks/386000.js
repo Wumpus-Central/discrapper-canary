@@ -18,7 +18,7 @@ var r = n(200651),
     y = n(981631);
 function C(e) {
     var { selfMute: t, serverMute: n, suppress: C, centerButton: x = !1, awaitingRemote: v, onMouseEnter: j, onMouseLeave: O, onClick: E } = e,
-        N = (function (e, t) {
+        I = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -37,23 +37,23 @@ function C(e) {
             }
             return i;
         })(e, ['selfMute', 'serverMute', 'suppress', 'centerButton', 'awaitingRemote', 'onMouseEnter', 'onMouseLeave', 'onClick']);
-    let { parentAnalyticsLocation: I } = (0, p.ZP)(),
-        { mode: P } = (0, m.ZP)({ location: 'MicButton' }),
-        { squareButtonsEnabled: S, coloredIconsEnabled: Z } = (0, g.Z)({ location: 'MuteButton' }),
+    let { parentAnalyticsLocation: P } = (0, p.ZP)(),
+        { mode: S } = (0, m.ZP)({ location: 'MicButton' }),
+        { squareButtonsEnabled: Z, coloredIconsEnabled: N } = (0, g.Z)({ location: 'MuteButton' }),
         T = t || n || C,
         A = x ? _.d : _.Z,
-        w = (0, h.Z)(t, n, C, v, P === m.BK.GroupedButtonsRedMic || S),
+        w = (0, h.Z)(t, n, C, v, S === m.BK.GroupedButtonsRedMic || Z),
         R = (0, c.O)(T ? 'unmute' : 'mute'),
         k = (0, u.P)(T ? 'unmute' : 'mute'),
         { activeVoice: M } = (0, b.o)(),
         L = null != M,
         D = L ? k : R,
-        { events: W, play: U } = D;
-    i.useEffect(() => () => U(), [U, T]);
-    let B = D.Component;
-    (0, d.bp)() === y.IlC.POPOUT && (B = L ? (T ? o.T : l.x) : T ? s.n : a.S);
-    let G = (S || P === m.BK.GroupedButtonsRedMic) && T ? 'red' : void 0,
-        F = P !== m.BK.GroupedButtonsRedMic && !S;
+        { events: U, play: B } = D;
+    i.useEffect(() => () => B(), [B, T]);
+    let G = D.Component;
+    (0, d.bp)() === y.IlC.POPOUT && (G = L ? (T ? o.T : l.x) : T ? s.n : a.S);
+    let F = (Z || S === m.BK.GroupedButtonsRedMic) && T ? 'red' : void 0,
+        H = S !== m.BK.GroupedButtonsRedMic && !Z;
     return (0, r.jsx)(
         A,
         (function (e) {
@@ -82,22 +82,22 @@ function C(e) {
             return e;
         })(
             {
-                isActive: !!F && !T,
-                iconComponent: B,
-                caretColor: Z && T ? 'red' : 'primaryDark',
-                color: G,
+                isActive: !!H && !T,
+                iconComponent: G,
+                caretColor: N && T ? 'red' : 'primaryDark',
+                color: F,
                 label: w,
                 onMouseEnter: (e) => {
-                    null == j || j(e), W.onMouseEnter();
+                    null == j || j(e), U.onMouseEnter();
                 },
                 onMouseLeave: (e) => {
-                    null == O || O(e), W.onMouseLeave();
+                    null == O || O(e), U.onMouseLeave();
                 },
                 onClick: (e) => {
-                    null == E || E(e), (0, f.v)(I, f.d.MIC, t);
+                    null == E || E(e), (0, f.v)(P, f.d.MIC, t);
                 }
             },
-            N
+            I
         )
     );
 }

@@ -92,7 +92,7 @@ let v = (e) => {
             className: a()(_.info, u),
             children: [
                 (0, r.jsx)(s.ua7, {
-                    text: f.NW.string(f.t.Br1ls7),
+                    text: f.intl.string(f.t.Br1ls7),
                     shouldShow: E,
                     'aria-label': !!E && void 0,
                     children: (e) =>
@@ -130,9 +130,9 @@ let v = (e) => {
             I = t.isVerifiedBot(),
             S = d.ZP.getName(t),
             T = i ? b : null != n ? n : S,
-            N = t.isPomelo() || l;
-        if (N || T !== b) {
-            let e = T === b && N && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : T,
+            A = t.isPomelo() || l;
+        if (A || T !== b) {
+            let e = T === b && A && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : T,
                 n = a && e !== '@'.concat(b) ? d.ZP.getUserTag(t) : void 0;
             return (0, r.jsx)(
                 v,

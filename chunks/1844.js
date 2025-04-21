@@ -69,13 +69,13 @@ function S() {
 function T() {
     (c = l()), (h = !1), (m = null), (u = !1), (d = null), (g = []);
 }
-function N() {
+function A() {
     var e, t, n;
     E = null != (n = null == (t = o.Z.settings.userContent) || null == (e = t.lastDismissedOutboundPromotionStartDate) ? void 0 : e.value) ? n : null;
 }
-class A extends (r = i.ZP.PersistedStore) {
+class N extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (c = e), this.waitFor(o.Z), this.syncWith([o.Z], N);
+        null != e && (c = e), this.waitFor(o.Z), this.syncWith([o.Z], A);
     }
     get outboundPromotions() {
         return g;
@@ -111,8 +111,8 @@ class A extends (r = i.ZP.PersistedStore) {
         return c;
     }
 }
-s(A, 'displayName', 'PromotionsStore'), s(A, 'persistKey', 'PromotionsPersistedStore');
-let C = new A(a.Z, {
+s(N, 'displayName', 'PromotionsStore'), s(N, 'persistKey', 'PromotionsPersistedStore');
+let C = new N(a.Z, {
     ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: b,
     ACTIVE_OUTBOUND_PROMOTIONS_FETCH: y,
     ACTIVE_OUTBOUND_PROMOTIONS_FETCH_FAIL: v,

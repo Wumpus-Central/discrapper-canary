@@ -19,26 +19,26 @@ function h() {
 }
 function x(e) {
     let { isPaused: t, width: n, height: x } = e,
-        N = (0, s.useRef)(null),
-        v = (0, s.useRef)(-1),
-        [O, j] = (0, s.useState)(!1),
-        Z = (0, s.useRef)(h()),
-        _ = (0, i.eR)(y),
-        P = (e) => {
-            var t;
-            null == (t = N.current) || t.removeDrop(e), (Z.current = h()), j(!1), clearTimeout(v.current);
-        },
+        v = (0, s.useRef)(null),
+        O = (0, s.useRef)(-1),
+        [j, N] = (0, s.useState)(!1),
+        _ = (0, s.useRef)(h()),
+        P = (0, i.eR)(y),
         C = (e) => {
-            j(!0),
-                _(),
-                (0, o.KH)(u.yN.LOOTBOXES, Z.current),
-                (v.current = setTimeout(() => {
-                    P(e);
+            var t;
+            null == (t = v.current) || t.removeDrop(e), (_.current = h()), N(!1), clearTimeout(O.current);
+        },
+        Z = (e) => {
+            N(!0),
+                P(),
+                (0, o.KH)(u.yN.LOOTBOXES, _.current),
+                (O.current = setTimeout(() => {
+                    C(e);
                 }, 1000));
         };
-    (0, s.useEffect)(() => () => clearTimeout(v.current), []);
+    (0, s.useEffect)(() => () => clearTimeout(O.current), []);
     let w = (e) =>
-        O
+        j
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsxs)('div', {
@@ -46,33 +46,33 @@ function x(e) {
                           children: [
                               (0, r.jsxs)(c.Z, {
                                   variant: 'text-lg/normal',
-                                  children: ['+', Z.current]
+                                  children: ['+', _.current]
                               }),
                               (0, r.jsx)('img', {
                                   src: m,
-                                  alt: f.NW.string(d.Z.BropER)
+                                  alt: f.intl.string(d.default.BropER)
                               })
                           ]
                       }),
                       (0, r.jsx)('img', {
                           src: b,
-                          alt: f.NW.string(d.Z.CwZfY2),
+                          alt: f.intl.string(d.default.CwZfY2),
                           width: 100,
                           height: 100
                       })
                   ]
               })
             : (0, r.jsx)(a.Z, {
-                  onClick: () => C(e),
+                  onClick: () => Z(e),
                   children: (0, r.jsx)('img', {
                       src: g,
-                      alt: f.NW.string(d.Z.CwZfY2),
+                      alt: f.intl.string(d.default.CwZfY2),
                       width: 100,
                       height: 100
                   })
               });
     return (0, r.jsx)(l.Z, {
-        ref: N,
+        ref: v,
         isPaused: t,
         itemId: u.yN.LOOTBOXES,
         chance: 0.2,

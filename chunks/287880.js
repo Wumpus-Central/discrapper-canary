@@ -20,19 +20,19 @@ n.d(t, {
     n(704826),
     n(35282),
     n(781311);
-var r,
-    i,
+var i,
+    r,
     s,
-    a = n(943418);
-let l = null != (s = null == (r = window) ? void 0 : r.crypto) ? s : null == (i = window) ? void 0 : i.msCrypto,
+    l = n(943418);
+let a = null != (s = null == (i = window) ? void 0 : i.crypto) ? s : null == (r = window) ? void 0 : r.msCrypto,
     o = 'Uint8Array' in window,
-    c = null != l && 'getRandomValues' in l && o,
+    c = null != a && 'getRandomValues' in a && o,
     d = 'PublicKeyCredential' in window && o;
 function u() {
     var e;
     return (
-        (e = l.getRandomValues(new Uint8Array(20))),
-        a
+        (e = a.getRandomValues(new Uint8Array(20))),
+        l
             .encode(e)
             .toString('utf8')
             .replace(/=/g, '')

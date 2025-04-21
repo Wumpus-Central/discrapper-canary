@@ -74,18 +74,18 @@ let u = (e) => {
             (0, r.jsx)(l.X6q, {
                 className: c.emptyTitle,
                 variant: 'heading-xl/semibold',
-                children: s.NW.format(s.t.vyvrpK, { guildName: t.name })
+                children: s.intl.format(s.t.vyvrpK, { guildName: t.name })
             }),
             (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 className: c.emptySubtitle,
-                children: s.NW.string(s.t.WypE0t)
+                children: s.intl.string(s.t.WypE0t)
             }),
             null != u
                 ? (0, r.jsx)(o.i, {
                       className: c.emptyCTA,
                       iconUrl: n(362827),
-                      header: s.NW.string(s.t.hyK15u),
+                      header: s.intl.string(s.t.hyK15u),
                       completed: !1,
                       onClick: u
                   })
@@ -93,7 +93,7 @@ let u = (e) => {
             (0, r.jsx)(o.i, {
                 className: c.emptyCTA,
                 iconUrl: n(538548),
-                header: s.NW.string(s.t.L4bwJy),
+                header: s.intl.string(s.t.L4bwJy),
                 completed: !1,
                 onClick: d
             })

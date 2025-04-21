@@ -13,8 +13,8 @@ function u(e) {
     return (0, r.jsx)(i.Z, {
         guild: t,
         onDismissed: n,
-        cta: s.NW.string(s.t.RzWDqa),
-        message: s.NW.format(s.t['kQ/MDg'], {}),
+        cta: s.intl.string(s.t.RzWDqa),
+        message: s.intl.format(s.t['kQ/MDg'], {}),
         type: o.vID.COMMANDS_MIGRATION,
         image: c,
         onClick: () => {

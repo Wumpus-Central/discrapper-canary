@@ -1,23 +1,23 @@
 n.d(t, {
-    Gl: () => s,
-    hG: () => i,
-    oI: () => r
+    Gl: () => l,
+    hG: () => a,
+    oI: () => s
 });
-var a = n(570140);
-function i(e, t, n) {
-    a.Z.dispatch({
+var i = n(570140);
+function a(e, t, n) {
+    i.Z.dispatch({
         type: 'CONNECTED_DEVICE_SET',
         displayName: e,
         connectedDevicePreference: t,
         location: n
     });
 }
-function s(e) {
-    a.Z.dispatch({
+function l(e) {
+    i.Z.dispatch({
         type: 'CONNECTED_DEVICE_IGNORE',
         displayName: e
     });
 }
-function r() {
-    a.Z.dispatch({ type: 'CONNECTED_DEVICE_NEVER_SHOW_MODAL' });
+function s() {
+    i.Z.dispatch({ type: 'CONNECTED_DEVICE_NEVER_SHOW_MODAL' });
 }

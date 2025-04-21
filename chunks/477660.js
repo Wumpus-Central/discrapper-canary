@@ -161,10 +161,10 @@
         I = '(?:[*+-]|\\d+\\.)',
         S = '( *)(' + I + ') +',
         T = RegExp('^' + S),
-        N = RegExp(S + '[^\\n]*(?:\\n(?!\\1' + I + ' )[^\\n]*)*(\n|$)', 'gm'),
-        A = /\n{2,}$/,
+        A = RegExp(S + '[^\\n]*(?:\\n(?!\\1' + I + ' )[^\\n]*)*(\n|$)', 'gm'),
+        N = /\n{2,}$/,
         C = /^ (?= *`)|(` *) $/g,
-        R = A,
+        R = N,
         P = / *\n+$/,
         w = RegExp('^( *)(' + I + ') [\\s\\S]+?(?:\n{2,}(?! )(?!\\1' + I + ' )\\n*|\\s*\n*$)'),
         D = /(?:^|\n)( *)$/,
@@ -388,7 +388,7 @@
                     var r = e[2],
                         i = r.length > 1,
                         a = i ? +r : void 0,
-                        o = e[0].replace(R, '\n').match(N),
+                        o = e[0].replace(R, '\n').match(A),
                         s = !1;
                     return {
                         ordered: i,
@@ -854,21 +854,21 @@
                 return s(e, (r = i(t, n)));
             };
         },
-        W = a(B),
-        Y = function (e, t) {
-            return ((t = t || {}).inline = !1), W(e, t);
+        Y = a(B),
+        W = function (e, t) {
+            return ((t = t || {}).inline = !1), Y(e, t);
         },
         K = function (e, t) {
-            return ((t = t || {}).inline = !0), W(e, t);
+            return ((t = t || {}).inline = !0), Y(e, t);
         },
         z = function (e, t) {
-            var n = A.test(e);
-            return ((t = t || {}).inline = !n), W(e, t);
+            var n = N.test(e);
+            return ((t = t || {}).inline = !n), Y(e, t);
         },
         q = H(B, 'react'),
         Q = H(B, 'html'),
         X = function (e, t) {
-            return q(Y(e, t), t);
+            return q(W(e, t), t);
         },
         J = function (e) {
             var t = {};
@@ -886,10 +886,10 @@
         parseBlock: y,
         markdownToReact: X,
         markdownToHtml: function (e, t) {
-            return Q(Y(e, t), t);
+            return Q(W(e, t), t);
         },
         ReactMarkdown: J,
-        defaultBlockParse: Y,
+        defaultBlockParse: W,
         defaultInlineParse: K,
         defaultImplicitParse: z,
         defaultReactOutput: q,
@@ -900,7 +900,7 @@
         unescapeUrl: E,
         htmlTag: d,
         reactElement: u,
-        defaultRawParse: W,
+        defaultRawParse: Y,
         ruleOutput: F,
         reactFor: V,
         htmlFor: Z,

@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => W }), n(539854), n(388685), n(642613), n(415506);
+n.d(t, { Z: () => Y }), n(539854), n(388685), n(642613), n(415506);
 var a,
     o = n(392711),
     s = n.n(o),
@@ -385,7 +385,7 @@ function T(e) {
     if (null != r[t] && r[t].version === a) return !1;
     let s = [];
     n.forEach((e, t) => {
-        let n = N(e.type),
+        let n = A(e.type),
             r = y(E({}, e), { zIndex: t });
         '' === r.id && (r.id = (0, l.Z)()), null != n && ((r.pinned = n.pinned), -1 !== n.anchor.left && (r.anchor = (0, p.jL)(n.anchor, o)), -1 !== n.size.width && (r.size = (0, p.Ox)(n.size, o))), (i = y(E({}, i), { [r.id]: new _.Z(r) })), s.push(r.id);
     }),
@@ -397,7 +397,7 @@ function T(e) {
             })
         }));
 }
-function N(e) {
+function A(e) {
     let t = r[v];
     if (null != t)
         for (let n of t.widgets) {
@@ -406,7 +406,7 @@ function N(e) {
         }
     return null;
 }
-function A(e, t) {
+function N(e, t) {
     let n = i[e];
     if (null == n) return !1;
     let a = r[n.layoutId];
@@ -414,11 +414,11 @@ function A(e, t) {
 }
 function C(e) {
     let { widgetId: t, anchor: n, size: r, opacity: i } = e;
-    return A(t, (e, t) => x(e, n, r, i));
+    return N(t, (e, t) => x(e, n, r, i));
 }
 function R(e) {
     let { widgetId: t } = e;
-    return A(t, (e, t) => P(t, e.id));
+    return N(t, (e, t) => P(t, e.id));
 }
 function P(e, t) {
     let n = B(e);
@@ -431,7 +431,7 @@ function P(e, t) {
 }
 function w(e) {
     let { widgetId: t, meta: n } = e;
-    return A(t, (e, t) => {
+    return N(t, (e, t) => {
         D(e, n);
     });
 }
@@ -441,7 +441,7 @@ function D(e, t) {
 }
 function L(e) {
     let { widgetId: t } = e;
-    return A(t, (e, t) => {
+    return N(t, (e, t) => {
         G(e);
     });
 }
@@ -761,7 +761,7 @@ g(H, 'displayName', 'LayoutStore'),
             };
         }
     ]);
-let W = new H(d.Z, {
+let Y = new H(d.Z, {
     LAYOUT_CREATE: T,
     LAYOUT_SET_PINNED: L,
     LAYOUT_UPDATE_WIDGET: C,

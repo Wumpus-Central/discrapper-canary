@@ -70,7 +70,7 @@ function b(e) {
     let C = (e) => {
             e.shiftKey ? a.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !n }, u.UE.muted(!n)) : y((e) => !e);
         },
-        x = f.NW.string(f.t.h850Sk);
+        x = f.intl.string(f.t.h850Sk);
     return (0, r.jsx)(o.yRy, {
         shouldShow: _,
         animation: o.yRy.Animation.NONE,
@@ -84,7 +84,7 @@ function b(e) {
                 g(m({}, e), {
                     channel: t,
                     navId: 'channel-context',
-                    label: f.NW.string(f.t.Xm41aW)
+                    label: f.intl.string(f.t.Xm41aW)
                 })
             ),
         clickTrap: !0,

@@ -71,7 +71,7 @@ function b(e) {
                     className: f.chatHeaderBarText,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: t.isForumPost() ? h.NW.string(h.t['833FDg']) : h.NW.string(h.t.rEeodH)
+                    children: t.isForumPost() ? h.intl.string(h.t['833FDg']) : h.intl.string(h.t.rEeodH)
                 }),
                 l
                     ? (0, r.jsx)(a.zxk, {
@@ -88,7 +88,7 @@ function b(e) {
                               ),
                                   u.Z.unarchiveThread(t, !1);
                           },
-                          children: h.NW.string(h.t['0dvvEh'])
+                          children: h.intl.string(h.t['0dvvEh'])
                       })
                     : null
             ]
@@ -109,7 +109,7 @@ function _(e) {
                     className: f.chatHeaderBarText,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: t.isForumPost() ? h.NW.string(h.t.E7oO8v) : h.NW.string(h.t['V/JF2N'])
+                    children: t.isForumPost() ? h.intl.string(h.t.E7oO8v) : h.intl.string(h.t['V/JF2N'])
                 }),
                 l
                     ? (0, r.jsx)(a.zxk, {
@@ -126,7 +126,7 @@ function _(e) {
                               ),
                                   u.Z.unlockThread(t);
                           },
-                          children: h.NW.string(h.t.zA9d1N)
+                          children: h.intl.string(h.t.zA9d1N)
                       })
                     : null
             ]

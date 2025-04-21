@@ -22,11 +22,11 @@ var r = n(200651),
     j = n(141321),
     O = n(2818),
     E = n(954551),
-    N = n(221241),
-    I = n(44136),
-    P = n(651183),
-    S = n(618158),
-    Z = n(390322),
+    I = n(221241),
+    P = n(44136),
+    S = n(651183),
+    Z = n(618158),
+    N = n(390322),
     T = n(616286),
     A = n(961048),
     w = n(179424),
@@ -35,14 +35,14 @@ var r = n(200651),
     M = n(991617),
     L = n(597998),
     D = n(606304),
-    W = n(594174),
-    U = n(358221),
-    B = n(887012),
-    G = n(444253),
-    F = n(355827),
-    H = n(185935),
-    V = n(795318),
-    z = n(354459),
+    U = n(594174),
+    B = n(358221),
+    G = n(887012),
+    F = n(444253),
+    H = n(355827),
+    V = n(185935),
+    z = n(795318),
+    W = n(354459),
     Y = n(981631),
     q = n(388032),
     K = n(232989);
@@ -91,11 +91,11 @@ function Q(e, t) {
 }
 function J(e) {
     let { channelId: t, guildId: n } = e,
-        i = (0, c.Wu)([D.Z, U.Z], () => {
+        i = (0, c.Wu)([D.Z, B.Z], () => {
             let e = Date.now();
             return s()(D.Z.getSpeakers())
-                .map((e) => U.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === z.fO.USER && e.speaking && !(0, I.ZP)(e))
+                .map((e) => B.Z.getParticipant(t, e))
+                .filter((e) => null != e && e.type === W.fO.USER && e.speaking && !(0, P.ZP)(e))
                 .sortBy((t) => -D.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -109,7 +109,7 @@ function J(e) {
                       {
                           position: 'bottom',
                           color: u.ua7.Colors.GREY,
-                          text: q.NW.formatToPlainString(q.t.JjdizM, { username: e.user.username }),
+                          text: q.intl.formatToPlainString(q.t.JjdizM, { username: e.user.username }),
                           children: (l) =>
                               (0, r.jsx)(
                                   L.ZP,
@@ -128,11 +128,11 @@ function J(e) {
           });
 }
 function $(e) {
-    let { inPopout: t, channel: n, appContext: l, inCall: a, isChatOpen: s, exitFullScreen: I } = e,
+    let { inPopout: t, channel: n, appContext: l, inCall: a, isChatOpen: s, exitFullScreen: P } = e,
         L = i.useRef(null),
         D = i.useRef(null),
         { analyticsLocations: q, newestAnalyticsLocation: $ } = (0, h.ZP)(p.Z.VOICE_CHANNEL_HEADER),
-        { simplifiedSettingsEnabled: ee } = (0, N.Z)({ location: 'ChannelCallHeaderToolbar' }),
+        { simplifiedSettingsEnabled: ee } = (0, I.Z)({ location: 'ChannelCallHeaderToolbar' }),
         et = n.id,
         {
             voiceParticipantsHidden: en,
@@ -140,29 +140,29 @@ function $(e) {
             userParticipantCount: ei,
             participantsListOpen: el
         } = (0, c.cj)(
-            [U.Z],
+            [B.Z],
             () => ({
-                selectedParticipant: U.Z.getSelectedParticipant(et),
-                voiceParticipantsHidden: U.Z.getVoiceParticipantsHidden(et),
-                userParticipantCount: U.Z.getUserParticipantCount(et),
-                participantsListOpen: U.Z.getParticipantsListOpen(et)
+                selectedParticipant: B.Z.getSelectedParticipant(et),
+                voiceParticipantsHidden: B.Z.getVoiceParticipantsHidden(et),
+                userParticipantCount: B.Z.getUserParticipantCount(et),
+                participantsListOpen: B.Z.getParticipantsListOpen(et)
             }),
             [et]
         ),
-        eo = (0, c.e7)([W.default], () => W.default.getCurrentUser()),
-        ea = (0, B.Z)(n),
+        eo = (0, c.e7)([U.default], () => U.default.getCurrentUser()),
+        ea = (0, G.Z)(n),
         es = (0, v.o)(er, eo),
         ec = (0, x.lL)('CallHeader', !0, eo, es),
         eu = n.isGuildVoice() && !s,
-        { hasParticipantsPanel: ed } = (0, H.Z)({ location: 'ChannelCallHeaderToolbar' }),
+        { hasParticipantsPanel: ed } = (0, V.Z)({ location: 'ChannelCallHeaderToolbar' }),
         ep = !el && ed && (n.isGuildVoice() || n.isGroupDM()),
         { enabled: eh, inInbox: ef } = O.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
         em = (0, b.Q3)('ChannelCallHeaderToolbar'),
-        { preventIdle: eg, allowIdle: eb } = (0, S.Y)('popup'),
+        { preventIdle: eg, allowIdle: eb } = (0, Z.Y)('popup'),
         e_ = [];
     if (ea && !ed && !ee) {
-        let e = (null == er ? void 0 : er.type) === z.fO.STREAM ? (0, _.my)(er.id) : void 0,
-            t = (null == er ? void 0 : er.type) === z.fO.ACTIVITY ? er.applicationId : void 0;
+        let e = (null == er ? void 0 : er.type) === W.fO.STREAM ? (0, _.my)(er.id) : void 0,
+            t = (null == er ? void 0 : er.type) === W.fO.ACTIVITY ? er.applicationId : void 0;
         e_.push(
             (0, r.jsx)(
                 R.Z,
@@ -171,7 +171,7 @@ function $(e) {
                     channel: n,
                     applicationId: t,
                     stream: e,
-                    exitFullScreen: I,
+                    exitFullScreen: P,
                     analyticsLocation: n.type === Y.d4z.GUILD_VOICE ? Y.ZY5.GUILD_CHANNEL : Y.ZY5.DM_CHANNEL,
                     shouldPrioritizeGroupPlusIcon: !0
                 },
@@ -201,10 +201,10 @@ function $(e) {
                 'clips-enabled-indicator'
             )
         ),
-        (null == er ? void 0 : er.type) === z.fO.STREAM &&
+        (null == er ? void 0 : er.type) === W.fO.STREAM &&
             (e_.push(
                 (0, r.jsx)(
-                    P.Z,
+                    S.Z,
                     {
                         className: K.button,
                         participant: er
@@ -233,7 +233,7 @@ function $(e) {
                     {
                         targetElementRef: L,
                         position: 'bottom',
-                        renderPopout: () => (0, r.jsx)(Z.Z, { children: (0, r.jsx)(F.Z, { channel: n }) }),
+                        renderPopout: () => (0, r.jsx)(N.Z, { children: (0, r.jsx)(H.Z, { channel: n }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
@@ -297,13 +297,13 @@ function $(e) {
                         position: 'bottom',
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, r.jsx)(Z.Z, {
-                                children: (0, r.jsx)(G.Z, {
+                            return (0, r.jsx)(N.Z, {
+                                children: (0, r.jsx)(F.Z, {
                                     channelId: et,
                                     onClose: t,
                                     appContext: l,
-                                    exitFullScreen: I,
-                                    onInteraction: (0, V.u)('ChannelCallOverflowMenu', $, { entrypoint: z.A5.THREE_DOT })
+                                    exitFullScreen: P,
+                                    onInteraction: (0, z.u)('ChannelCallOverflowMenu', $, { entrypoint: W.A5.THREE_DOT })
                                 })
                             });
                         },

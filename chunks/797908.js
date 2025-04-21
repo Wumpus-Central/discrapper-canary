@@ -1,7 +1,7 @@
 n.d(t, { Z: () => m }), n(388685), n(953529);
 var r = n(200651),
-    a = n(192379),
-    i = n(622535),
+    i = n(192379),
+    a = n(622535),
     l = n(481060),
     s = n(783097),
     o = n(66637),
@@ -12,17 +12,17 @@ var r = n(200651),
 let m = function (e) {
     var t, n, m;
     let { application: h, onSelectApplication: g, showCategory: _ = !1 } = e,
-        f = a.useRef(null),
+        f = i.useRef(null),
         b = null == (t = h.categories) ? void 0 : t[0],
-        [x, v] = a.useState(!1),
-        C = a.useCallback((e) => {
+        [x, v] = i.useState(!1),
+        C = i.useCallback((e) => {
             e && v(!0);
         }, []),
         j = (0, s.lf)(h),
-        y = a.useCallback(() => {
+        y = i.useCallback(() => {
             g(h.id);
         }, [g, h.id]),
-        I = a.useMemo(
+        I = i.useMemo(
             () =>
                 x
                     ? c.ZP.getApplicationIconURL({
@@ -33,8 +33,8 @@ let m = function (e) {
                     : void 0,
             [x, h]
         ),
-        N = _ && null != b;
-    return (0, r.jsx)(i.$, {
+        O = _ && null != b;
+    return (0, r.jsx)(a.$, {
         innerRef: f,
         onChange: C,
         active: !x,
@@ -45,7 +45,7 @@ let m = function (e) {
                 className: p.card,
                 onClick: y,
                 onContextMenu: () => {},
-                'aria-label': u.NW.string(u.t.np1Wrq),
+                'aria-label': u.intl.string(u.t.np1Wrq),
                 children: [
                     (0, r.jsxs)('div', {
                         className: p.header,
@@ -98,11 +98,11 @@ let m = function (e) {
                                     })
                                 })
                             }),
-                            N || j
+                            O || j
                                 ? (0, r.jsxs)('div', {
                                       className: p.infoContainer,
                                       children: [
-                                          N
+                                          O
                                               ? (0, r.jsx)(l.Text, {
                                                     className: p.appCategory,
                                                     variant: 'text-xs/medium',
@@ -110,7 +110,7 @@ let m = function (e) {
                                                     children: b.name
                                                 })
                                               : null,
-                                          N && j
+                                          O && j
                                               ? (0, r.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
@@ -121,7 +121,7 @@ let m = function (e) {
                                               ? (0, r.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
-                                                    children: u.NW.string(u.t['/eVltr'])
+                                                    children: u.intl.string(u.t['/eVltr'])
                                                 })
                                               : null
                                       ]
@@ -131,7 +131,7 @@ let m = function (e) {
                                 className: p.description,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                lineClamp: N || j ? 2 : 3,
+                                lineClamp: O || j ? 2 : 3,
                                 children: null != (m = null == (n = h.directory_entry) ? void 0 : n.short_description) ? m : h.description
                             })
                         ]

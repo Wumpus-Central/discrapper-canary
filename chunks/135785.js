@@ -1,10 +1,10 @@
 n.d(t, { Z: () => h });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    s = n.n(i),
-    a = n(481060),
-    l = n(230711),
+var r = n(120356),
+    s = n.n(r),
+    l = n(481060),
+    a = n(230711),
     o = n(63063),
     c = n(74538),
     d = n(140465),
@@ -15,40 +15,40 @@ var i = n(120356),
 let h = (e) => {
     let t,
         n,
-        { premiumSubscription: i, className: h, isFullscreen: f = !1, textColor: b } = e,
+        { premiumSubscription: r, className: h, isFullscreen: f = !1, textColor: b } = e,
         _ = (0, d.Nx)();
-    if (null == i) return null;
-    let N = null != i ? c.ZP.getPremiumPlanItem(i) : null;
-    if ((c.ZP.isBoostOnlySubscription(i) ? (t = g.NW.string(g.t.Uj0md3)) : null != N && (t = c.ZP.getDisplayPremiumType(N.planId)), null == t)) return null;
-    let x = () => l.Z.open(m.oAB.SUBSCRIPTIONS),
-        E = (null != N ? c.ZP.getSkuIdForPlan(N.planId) : null) === u.Si.TIER_1;
+    if (null == r) return null;
+    let x = null != r ? c.ZP.getPremiumPlanItem(r) : null;
+    if ((c.ZP.isBoostOnlySubscription(r) ? (t = g.intl.string(g.t.Uj0md3)) : null != x && (t = c.ZP.getDisplayPremiumType(x.planId)), null == t)) return null;
+    let E = () => a.Z.open(m.oAB.SUBSCRIPTIONS),
+        j = (null != x ? c.ZP.getSkuIdForPlan(x.planId) : null) === u.Si.TIER_1;
     return (
         (n = null != b ? b : _ || f ? 'always-white' : 'text-normal'),
-        (0, r.jsxs)(a.Zbd, {
+        (0, i.jsxs)(l.Zbd, {
             className: s()(p.container, h, {
                 [p.lightTextLink]: f,
                 [p.centerText]: _
             }),
-            type: a.Zbd.Types.CUSTOM,
+            type: l.Zbd.Types.CUSTOM,
             children: [
-                (0, r.jsx)(a.P4T, {
+                (0, i.jsx)(l.P4T, {
                     size: 'custom',
                     width: 20,
                     height: 20,
                     color: 'currentColor',
                     className: s()(p.icon, { [p.lightThemeColorOnly]: _ || f })
                 }),
-                (0, r.jsx)(a.Text, {
+                (0, i.jsx)(l.Text, {
                     variant: 'text-sm/medium',
                     color: n,
-                    children: E
-                        ? g.NW.format(g.t['tYuv+f'], {
+                    children: j
+                        ? g.intl.format(g.t['tYuv+f'], {
                               helpdeskArticle: o.Z.getArticleURL(m.BhN.PREMIUM_DETAILS),
-                              onSubscriptionsClick: x
+                              onSubscriptionsClick: E
                           })
-                        : g.NW.format(g.t.xHRgU1, {
+                        : g.intl.format(g.t.xHRgU1, {
                               subscriptionName: t,
-                              onSubscriptionsClick: x
+                              onSubscriptionsClick: E
                           })
                 })
             ]

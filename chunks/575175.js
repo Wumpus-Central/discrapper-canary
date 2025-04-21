@@ -60,8 +60,8 @@ function d(e, t, d) {
                 (0, r.jsx)(
                     o.default,
                     u(c({}, e), {
-                        title: s.NW.string(s.t.FJSZVF),
-                        body: s.NW.string(s.t.etJjgY)
+                        title: s.intl.string(s.t.FJSZVF),
+                        body: s.intl.string(s.t.etJjgY)
                     })
                 )
             )
@@ -70,8 +70,8 @@ function d(e, t, d) {
                   (0, r.jsx)(
                       o.default,
                       u(c({}, e), {
-                          title: s.NW.string(s.t['+JQCa2']),
-                          body: s.NW.string(s.t.hsNm7e)
+                          title: s.intl.string(s.t['+JQCa2']),
+                          body: s.intl.string(s.t.hsNm7e)
                       })
                   )
               )

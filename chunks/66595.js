@@ -1,15 +1,15 @@
 n.d(t, { Z: () => c });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    s = n.n(i),
-    a = n(481060),
-    l = n(388032),
+var r = n(120356),
+    s = n.n(r),
+    l = n(481060),
+    a = n(388032),
     o = n(934323);
 function c(e) {
     let { className: t } = e;
-    return (0, r.jsx)(a.IGR, {
+    return (0, i.jsx)(l.IGR, {
         className: s()(o.tag, t),
-        text: l.NW.string(l.t.EYxi0t)
+        text: a.intl.string(a.t.EYxi0t)
     });
 }

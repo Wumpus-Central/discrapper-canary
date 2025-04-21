@@ -27,8 +27,8 @@ var r = n(913527),
     I = n(474936),
     S = n(981631),
     T = n(388032);
-let N = 10;
-function A(e) {
+let A = 10;
+function N(e) {
     var t, n;
     let { experimentEnabled: r, premiumSubscription: a, mostRecentSubscription: o } = e,
         s = !1,
@@ -37,7 +37,7 @@ function A(e) {
         let e = o.endedAt,
             n = null == (t = (0, f.Af)(o)) ? void 0 : t.planId,
             r = null != n && f.ZP.getPremiumType(n) === I.p9.TIER_2;
-        l = null != e && r && i()().subtract(N, 'days').isAfter(e);
+        l = null != e && r && i()().subtract(A, 'days').isAfter(e);
     }
     if (null != a) {
         let e = null == (n = (0, f.Af)(a)) ? void 0 : n.planId,
@@ -68,7 +68,7 @@ function C() {
         disable: y
     });
     let O =
-            !A({
+            !N({
                 experimentEnabled: r,
                 premiumSubscription: o,
                 mostRecentSubscription: i
@@ -96,7 +96,7 @@ async function R() {
     if (n || r || !i || !a || (d.Z.shouldFetchOffer() && !(0, f.I5)(t) && (await (0, _.T)('BogoPromotionUtils')), d.Z.hasFetchedOffer() && (d.Z.hasAnyUnexpiredOffer() || d.Z.hasAnyUnexpiredDiscountOffer()))) return !1;
     !u.ZP.hasFetchedMostRecentPremiumTypeSubscription() && (null == (e = c.default.getCurrentUser()) ? void 0 : e.hasPurchasedFlag(I.in.PREMIUM_TIER_2)) && (await (0, o.ou)()), u.ZP.hasFetchedSubscriptions() || (await (0, o.jg)());
     let l = u.ZP.getMostRecentPremiumTypeSubscription();
-    return !A({
+    return !N({
         experimentEnabled: i,
         premiumSubscription: u.ZP.getPremiumTypeSubscription(),
         mostRecentSubscription: l
@@ -137,8 +137,8 @@ function D() {
         case 'uk':
         case 'ja':
         case 'ko':
-            return T.NW.string(T.t.OS9KPj);
+            return T.intl.string(T.t.OS9KPj);
         default:
-            return T.NW.string(T.t.VeCPBQ);
+            return T.intl.string(T.t.VeCPBQ);
     }
 }

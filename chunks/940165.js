@@ -12,17 +12,17 @@ var s = n(120356),
     h = n(267129);
 function g(e) {
     let { label: t, className: n, description: s, soundpack: g, location: m } = e,
-        { playSound: x, isPlaying: N } = (0, d.Z)();
+        { playSound: x, isPlaying: p } = (0, d.Z)();
     return (0, i.jsxs)(a.P3F, {
-        'aria-label': u.NW.string(u.t.RscU7O),
-        className: l()(h.container, n, { [h.containerActive]: N }),
+        'aria-label': u.intl.string(u.t.RscU7O),
+        className: l()(h.container, n, { [h.containerActive]: p }),
         onClick: () => {
             (0, c.Z)(g, m), x(g);
         },
         children: [
             (0, i.jsx)(a.g8d, {
                 className: h.playButton,
-                color: N ? a.TVs.colors.INTERACTIVE_ACTIVE : a.TVs.colors.INTERACTIVE_NORMAL
+                color: p ? a.TVs.colors.INTERACTIVE_ACTIVE : a.TVs.colors.INTERACTIVE_NORMAL
             }),
             (0, i.jsxs)('div', {
                 className: h.textContainer,

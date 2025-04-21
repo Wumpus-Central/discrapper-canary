@@ -62,10 +62,10 @@ function p(e) {
         className: u.heading,
         children: p
             ? (0, r.jsxs)(r.Fragment, {
-                  children: [(0, r.jsx)(i.QTo, c(a({}, d), { color: 'currentColor' })), o.NW.string(o.t.XIhSoq)]
+                  children: [(0, r.jsx)(i.QTo, c(a({}, d), { color: 'currentColor' })), o.intl.string(o.t.XIhSoq)]
               })
             : (0, r.jsxs)(r.Fragment, {
-                  children: [(0, r.jsx)(i.tBG, c(a({}, d), { color: 'currentColor' })), o.NW.string(o.t.dxfZpq)]
+                  children: [(0, r.jsx)(i.tBG, c(a({}, d), { color: 'currentColor' })), o.intl.string(o.t.dxfZpq)]
               })
     });
 }

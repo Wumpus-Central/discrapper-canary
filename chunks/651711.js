@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u }), n(539854), n(642613);
 var r = n(192379),
     i = n(782568),
-    s = n(635142),
-    l = n(63063),
+    l = n(635142),
+    s = n(63063),
     a = n(500047),
     o = n(431516),
     c = n(981631),
@@ -22,12 +22,12 @@ function u(e) {
             o = [
                 {
                     key: 'no_violations_requirement',
-                    checkedLabel: d.NW.string(d.t['1lGNPT']),
-                    uncheckedLabel: d.NW.string(d.t['D+gTJi']),
-                    description: d.NW.format(d.t.HFY0m5, { communityGuidelinesUrl: l.Z.getArticleURL(c.BhN.PUBLIC_GUILD_GUILDLINES) }),
+                    checkedLabel: d.intl.string(d.t['1lGNPT']),
+                    uncheckedLabel: d.intl.string(d.t['D+gTJi']),
+                    description: d.intl.format(d.t.HFY0m5, { communityGuidelinesUrl: s.Z.getArticleURL(c.BhN.PUBLIC_GUILD_GUILDLINES) }),
                     checked: e.noRecentViolations,
-                    actionLabel: a ? d.NW.string(d.t.xU2fl5) : void 0,
-                    actionHandler: a ? () => (0, i.Z)(l.Z.getSubmitRequestURL()) : void 0
+                    actionLabel: a ? d.intl.string(d.t.xU2fl5) : void 0,
+                    actionHandler: a ? () => (0, i.Z)(s.Z.getSubmitRequestURL()) : void 0
                 }
             ];
         if (
@@ -35,50 +35,50 @@ function u(e) {
                 null != e.meetsOwnerAgeRequirement &&
                 o.push({
                     key: 'owner_age_requirement',
-                    checkedLabel: d.NW.string(d.t['+F8haG']),
-                    uncheckedLabel: d.NW.string(d.t['5BwC/P']),
-                    description: d.NW.formatToPlainString(d.t.DW1VaW, { minimumOwnerAgeInYears: t }),
+                    checkedLabel: d.intl.string(d.t['+F8haG']),
+                    uncheckedLabel: d.intl.string(d.t['5BwC/P']),
+                    description: d.intl.formatToPlainString(d.t.DW1VaW, { minimumOwnerAgeInYears: t }),
                     checked: e.meetsOwnerAgeRequirement
                 }),
             null != r &&
                 null != e.hasSufficientMembers &&
                 o.push({
                     key: 'member_count_requirement',
-                    checkedLabel: d.NW.string(d.t.j7wXWl),
-                    uncheckedLabel: d.NW.string(d.t.W0suNz),
-                    description: d.NW.formatToPlainString(d.t.up53zc, { minimumSize: r }),
+                    checkedLabel: d.intl.string(d.t.j7wXWl),
+                    uncheckedLabel: d.intl.string(d.t.W0suNz),
+                    description: d.intl.formatToPlainString(d.t.up53zc, { minimumSize: r }),
                     checked: e.hasSufficientMembers
                 }),
             null != e.minimumAgeInDays &&
                 null != e.meetsServerAgeRequirement &&
                 o.push({
                     key: 'server_age_requirement',
-                    checkedLabel: d.NW.string(d.t.mjbvW1),
-                    uncheckedLabel: d.NW.string(d.t['9BV6Ly']),
-                    description: d.NW.formatToPlainString(d.t.Zwv84O, { minimumAge: (0, s.Z)(e.minimumAgeInDays) }),
+                    checkedLabel: d.intl.string(d.t.mjbvW1),
+                    uncheckedLabel: d.intl.string(d.t['9BV6Ly']),
+                    description: d.intl.formatToPlainString(d.t.Zwv84O, { minimumAge: (0, l.Z)(e.minimumAgeInDays) }),
                     checked: e.meetsServerAgeRequirement
                 }),
             null != e.weeklyCommunicators &&
                 o.push({
                     key: 'weekly_communicator_count_requirement',
-                    checkedLabel: d.NW.string(d.t.Qw7qv7),
-                    uncheckedLabel: d.NW.string(d.t.b45kGB),
-                    description: d.NW.string(d.t.NbtjEB),
+                    checkedLabel: d.intl.string(d.t.Qw7qv7),
+                    uncheckedLabel: d.intl.string(d.t.b45kGB),
+                    description: d.intl.string(d.t.NbtjEB),
                     checked: e.weeklyCommunicators
                 }),
             null != e.hasMemberRetention &&
                 o.push({
                     key: 'member_retention_requirement',
-                    checkedLabel: d.NW.string(d.t.Qvq39P),
-                    uncheckedLabel: d.NW.string(d.t.azHboK),
-                    description: d.NW.string(d.t.u4rCYG),
+                    checkedLabel: d.intl.string(d.t.Qvq39P),
+                    uncheckedLabel: d.intl.string(d.t.azHboK),
+                    description: d.intl.string(d.t.u4rCYG),
                     checked: e.hasMemberRetention
                 }),
             o.push({
                 key: 'nsfw_requirement',
-                checkedLabel: d.NW.string(d.t.bymfTU),
-                uncheckedLabel: d.NW.string(d.t['718pRE']),
-                description: d.NW.string(d.t['5ZqX+v']),
+                checkedLabel: d.intl.string(d.t.bymfTU),
+                uncheckedLabel: d.intl.string(d.t['718pRE']),
+                description: d.intl.string(d.t['5ZqX+v']),
                 checked: e.notNSFW
             }),
             null != e.hasEnabled2FA)
@@ -88,11 +88,11 @@ function u(e) {
                 i = t || r;
             o.push({
                 key: '2fa_requirement',
-                checkedLabel: d.NW.string(d.t.NqVyFh),
-                uncheckedLabel: d.NW.string(d.t.VcDNIS),
-                description: d.NW.format(d.t['7NzkfX'], { enableMFAHook: h }),
+                checkedLabel: d.intl.string(d.t.NqVyFh),
+                uncheckedLabel: d.intl.string(d.t.VcDNIS),
+                description: d.intl.format(d.t['7NzkfX'], { enableMFAHook: h }),
                 checked: e.hasEnabled2FA,
-                actionLabel: i ? d.NW.string(d.t.BU4Dio) : void 0,
+                actionLabel: i ? d.intl.string(d.t.BU4Dio) : void 0,
                 actionHandler: i ? p : void 0
             });
         }

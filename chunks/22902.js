@@ -9,7 +9,7 @@ function a(e) {
         var t;
         let r = s.DN.map((e) => ({
                 value: e,
-                label: e.interval === o.rV.DAY && 7 === e.interval_count ? l.NW.formatToPlainString(l.t.XfSsr6, { defaultLimit: (0, i.iG)(e) }) : (0, i.iG)(e),
+                label: e.interval === o.rV.DAY && 7 === e.interval_count ? l.intl.formatToPlainString(l.t.XfSsr6, { defaultLimit: (0, i.iG)(e) }) : (0, i.iG)(e),
                 isDefault: e.interval === o.rV.DAY && 7 === e.interval_count
             })),
             n = null != e ? (null == (t = r.find((t) => null != t.value && t.value.interval === e.interval && t.value.interval_count === e.interval_count)) ? void 0 : t.value) : e;

@@ -67,8 +67,8 @@ function b(e, t) {
 }
 let y = d.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK;
 function v(e) {
-    let { user: t, guild: n, displayProfile: i, canUsePremiumCustomization: d, previewAvatar: m, previewAvatarDecoration: E, previewTheme: v, previewPrimaryColor: O, className: I, disabledInputs: S, isTryItOutFlow: T, onUpsellClick: N } = e,
-        { analyticsLocations: A } = (0, l.ZP)(),
+    let { user: t, guild: n, displayProfile: i, canUsePremiumCustomization: d, previewAvatar: m, previewAvatarDecoration: E, previewTheme: v, previewPrimaryColor: O, className: I, disabledInputs: S, isTryItOutFlow: T, onUpsellClick: A } = e,
+        { analyticsLocations: N } = (0, l.ZP)(),
         C = (0, o.e7)([u.Z], () => u.Z.getStatus(t.id)),
         R = null == n || (null == i ? void 0 : i.canUsePremiumProfileCustomization) || d,
         P = (0, r.jsx)(y, {
@@ -97,7 +97,7 @@ function v(e) {
                         onChangeAvatarDecoration: () => {
                             (0, c.ps)({
                                 guild: null == n ? void 0 : n,
-                                analyticsLocations: A,
+                                analyticsLocations: N,
                                 isTryItOutFlow: T
                             });
                         }
@@ -122,7 +122,7 @@ function v(e) {
                     )
             })
           : (0, r.jsxs)(s.P3F, {
-                onClick: N,
+                onClick: A,
                 className: a()(h.avatar, h.clickable),
                 children: [
                     P,

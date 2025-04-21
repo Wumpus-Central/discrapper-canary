@@ -1,30 +1,30 @@
 n.d(t, { Z: () => u });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    s = n.n(i),
-    a = n(873546),
-    l = n(481060),
+var r = n(120356),
+    s = n.n(r),
+    l = n(873546),
+    a = n(481060),
     o = n(993413),
     c = n(388032),
     d = n(775853);
 function u(e) {
-    let { children: t, className: n, layoutClassName: i, profilePreview: u, previewTitle: m } = e,
+    let { children: t, className: n, layoutClassName: r, profilePreview: u, previewTitle: m } = e,
         g = () =>
-            (0, r.jsx)(o.Z, {
-                title: null != m ? m : c.NW.string(c.t.Zb06yM),
+            (0, i.jsx)(o.Z, {
+                title: null != m ? m : c.intl.string(c.t.Zb06yM),
                 className: d.preview,
                 children: u
             });
-    return (0, r.jsx)('div', {
+    return (0, i.jsx)('div', {
         className: n,
-        children: (0, r.jsxs)(l.hjN, {
+        children: (0, i.jsxs)(a.hjN, {
             className: d.profileCustomizationSection,
             children: [
-                a.tq && g(),
-                (0, r.jsxs)('div', {
-                    className: s()(d.baseLayout, i),
-                    children: [t, !a.tq && g()]
+                l.tq && g(),
+                (0, i.jsxs)('div', {
+                    className: s()(d.baseLayout, r),
+                    children: [t, !l.tq && g()]
                 })
             ]
         })

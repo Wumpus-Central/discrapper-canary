@@ -22,8 +22,8 @@ var i = n(512969),
     I = n(70956),
     S = n(198620),
     T = n(981631),
-    N = n(176505),
-    A = n(388032);
+    A = n(176505),
+    N = n(388032);
 function C(e, t, n) {
     return (
         t in e
@@ -44,7 +44,7 @@ function P(e) {
         l && R.log('Skipping fetch because channelId is null');
         return;
     }
-    if ((0, N.AB)(n)) {
+    if ((0, A.AB)(n)) {
         l && R.log('Skipping fetch because channelId is a static route');
         return;
     }
@@ -236,13 +236,13 @@ function Z(e) {
         let e = t.body.retry_after;
         null != e &&
             l.Z.show({
-                title: A.NW.string(A.t['Whhv4+']),
-                body: A.NW.formatToPlainString(A.t.qoxdQE, { retryAfterMinutes: Math.ceil(e / 60) })
+                title: N.intl.string(N.t['Whhv4+']),
+                body: N.intl.formatToPlainString(N.t.qoxdQE, { retryAfterMinutes: Math.ceil(e / 60) })
             });
     }
 }
 let H = {};
-function W(e) {
+function Y(e) {
     var t;
     let { channelId: n, jump: r, isStale: i, isPreview: a = !1 } = e;
     if (a) return;
@@ -261,7 +261,7 @@ function W(e) {
             jump: r
         });
 }
-function Y(e) {
+function W(e) {
     let { channelId: t, messageRecord: n, reason: r } = e;
     null != n &&
         s.Z.dispatch({
@@ -302,8 +302,8 @@ class z extends d.Z {
                 CHANNEL_PRELOAD: F,
                 GUILD_CREATE: () => M(),
                 MESSAGE_END_EDIT: Z,
-                LOAD_MESSAGES_SUCCESS: W,
-                UPLOAD_FAIL: Y,
+                LOAD_MESSAGES_SUCCESS: Y,
+                UPLOAD_FAIL: W,
                 CHANNEL_DELETE: () => M(),
                 THREAD_DELETE: () => M(),
                 CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE: U

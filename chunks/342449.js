@@ -13,8 +13,8 @@ let g = new Set();
 function m(e) {
     let { channel: t, startThread: n, goToThread: m } = e,
         { joinedThreadIds: x, unjoinedThreadIds: j } = (0, o.FO)(t),
-        { threadIds: v, canLoadMore: Z, loading: N, loadMore: p } = (0, o.qQ)(t, s.z.LATEST_ACTIVITY, g, l.z.MATCH_SOME),
-        b = a.useRef(null);
+        { threadIds: v, canLoadMore: Z, loading: p, loadMore: b } = (0, o.qQ)(t, s.z.LATEST_ACTIVITY, g, l.z.MATCH_SOME),
+        N = a.useRef(null);
     (0, o.r7)();
     let T = a.useCallback(
             (e) => {
@@ -30,17 +30,17 @@ function m(e) {
             },
             [v, x, j, m]
         ),
-        y = a.useCallback((e) => (0 === e.section ? (0, r.jsx)(f, { text: u.NW.formatToPlainString(u.t['4E27f3'], { count: x.length }) }, e.section) : 1 === e.section ? (0, r.jsx)(f, { text: u.NW.formatToPlainString(u.t.csPc4O, { count: j.length }) }, e.section) : (0, r.jsx)(f, { text: u.NW.string(u.t['wUNQ+/']) }, e.section)), [x.length, j.length]),
+        y = a.useCallback((e) => (0 === e.section ? (0, r.jsx)(f, { text: u.intl.formatToPlainString(u.t['4E27f3'], { count: x.length }) }, e.section) : 1 === e.section ? (0, r.jsx)(f, { text: u.intl.formatToPlainString(u.t.csPc4O, { count: j.length }) }, e.section) : (0, r.jsx)(f, { text: u.intl.string(u.t['wUNQ+/']) }, e.section)), [x.length, j.length]),
         P = a.useCallback((e) => ((1 === e && x.length > 0) || (2 === e && (x.length > 0 || j.length > 0)) ? 64 : 32), [x.length, j.length]),
         C = a.useCallback(() => {
             var e;
-            let t = null == (e = b.current) ? void 0 : e.getScrollerState();
+            let t = null == (e = N.current) ? void 0 : e.getScrollerState();
             if (null == t) return;
             let n = t.scrollTop + t.offsetHeight;
-            t.scrollHeight - n < 200 && p();
-        }, [p]);
+            t.scrollHeight - n < 200 && b();
+        }, [b]);
     if (0 === x.length && 0 === j.length && 0 === v.length)
-        if (N)
+        if (p)
             return (0, r.jsx)('div', {
                 className: h.list,
                 children: (0, r.jsx)(i.$jN, { className: h.spinner })
@@ -50,12 +50,12 @@ function m(e) {
                 className: h.list,
                 children: (0, r.jsx)(c.Z, {
                     channel: t,
-                    header: u.NW.string(u.t.HgTQ8v),
+                    header: u.intl.string(u.t.HgTQ8v),
                     startThread: n
                 })
             });
     return (0, r.jsx)(i.aVo, {
-        ref: b,
+        ref: N,
         className: h.list,
         fade: !0,
         sections: [x.length, j.length, v.length],

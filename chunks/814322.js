@@ -16,30 +16,30 @@ var r = n(200651),
     y = n(424984),
     h = n(326955),
     x = n(550688),
-    N = n(190328),
-    v = n(423915),
-    O = n(477839),
-    j = n(981631),
-    Z = n(412190);
-function _() {
+    v = n(190328),
+    O = n(423915),
+    j = n(477839),
+    N = n(981631),
+    _ = n(412190);
+function P() {
     let e = Math.floor((0, i.e7)([p.Z], () => p.Z.currentPoints)),
         t = e.toString().length,
-        n = '0'.repeat(Math.max(0, O.eg - t));
+        n = '0'.repeat(Math.max(0, j.eg - t));
     return (0, r.jsxs)('div', {
-        className: Z.points,
+        className: _.points,
         children: [
             (0, r.jsx)('span', {
-                className: Z.pointsPadding,
+                className: _.pointsPadding,
                 children: n
             }),
             (0, r.jsx)('span', {
-                className: Z.pointsValue,
+                className: _.pointsValue,
                 children: e
             })
         ]
     });
 }
-function P(e) {
+function C(e) {
     let { items: t, width: n, height: s, isPaused: o, windowKey: a } = e,
         c = (0, i.e7)([p.Z], () => p.Z.purchasedItems);
     return null == s || null == n
@@ -61,13 +61,13 @@ function P(e) {
               })
           });
 }
-function C() {
+function Z() {
     return (0, m.f)(), (0, g.Z)(), null;
 }
 function w(e) {
     let { className: t, windowKey: n } = e,
         { ref: o, width: m, height: g } = (0, c.ZP)(),
-        { ref: O, height: w } = (0, c.ZP)(),
+        { ref: j, height: w } = (0, c.ZP)(),
         E = (0, i.e7)([p.Z], () => p.Z.lifetimePoints > 0),
         S = (0, i.e7)([u.Z, l.Z], () => {
             let e = l.Z.getWindow(n);
@@ -75,15 +75,15 @@ function w(e) {
         });
     return (
         (0, s.useEffect)(() => {
-            d.default.track(j.rMx.CLICKER_GAME_LAUNCHED, { launch_type: E ? 'CONTINUE' : 'NEW' });
+            d.default.track(N.rMx.CLICKER_GAME_LAUNCHED, { launch_type: E ? 'CONTINUE' : 'NEW' });
         }, []),
         (0, r.jsxs)('div', {
             ref: o,
-            className: a()(t, Z.container),
+            className: a()(t, _.container),
             children: [
                 (0, r.jsx)('div', {
-                    className: Z.fullscreenItems,
-                    children: (0, r.jsx)(P, {
+                    className: _.fullscreenItems,
+                    children: (0, r.jsx)(C, {
                         items: b.nw,
                         width: m,
                         height: g,
@@ -92,11 +92,11 @@ function w(e) {
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: Z.aboveGround,
+                    className: _.aboveGround,
                     children: [
                         (0, r.jsx)('div', {
-                            className: Z.fullscreenItems,
-                            children: (0, r.jsx)(P, {
+                            className: _.fullscreenItems,
+                            children: (0, r.jsx)(C, {
                                 items: b.uK,
                                 width: m,
                                 height: g,
@@ -105,19 +105,19 @@ function w(e) {
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            className: Z.buttonAndPoints,
+                            className: _.buttonAndPoints,
                             children: [
-                                (0, r.jsx)(P, {
+                                (0, r.jsx)(C, {
                                     items: b.rQ,
                                     width: m,
                                     height: g,
                                     isPaused: S,
                                     windowKey: n
                                 }),
-                                (0, r.jsx)(_, {}),
+                                (0, r.jsx)(P, {}),
                                 (0, r.jsx)('div', {
-                                    className: Z.pointsItems,
-                                    children: (0, r.jsx)(P, {
+                                    className: _.pointsItems,
+                                    children: (0, r.jsx)(C, {
                                         items: b.ci,
                                         width: m,
                                         height: g,
@@ -128,9 +128,9 @@ function w(e) {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: Z.fullscreenItems,
-                            ref: O,
-                            children: (0, r.jsx)(P, {
+                            className: _.fullscreenItems,
+                            ref: j,
+                            children: (0, r.jsx)(C, {
                                 items: b.Ou,
                                 width: m,
                                 height: w,
@@ -140,17 +140,17 @@ function w(e) {
                         })
                     ]
                 }),
-                (0, r.jsx)('div', { className: Z.groundLine }),
+                (0, r.jsx)('div', { className: _.groundLine }),
                 (0, r.jsxs)('div', {
-                    className: Z.mainInteractables,
+                    className: _.mainInteractables,
                     children: [
-                        (0, r.jsx)(x.Z, { className: Z.primaryShop }),
+                        (0, r.jsx)(x.Z, { className: _.primaryShop }),
                         (0, r.jsxs)(y.Z, {
-                            className: Z.toolbar,
+                            className: _.toolbar,
                             children: [
-                                (0, r.jsx)(N.Z, {}),
-                                (0, r.jsx)('div', { className: Z.toolbarSpacer }),
-                                (0, r.jsx)(P, {
+                                (0, r.jsx)(v.Z, {}),
+                                (0, r.jsx)('div', { className: _.toolbarSpacer }),
+                                (0, r.jsx)(C, {
                                     items: b.WY,
                                     width: m,
                                     height: g,
@@ -162,19 +162,19 @@ function w(e) {
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: Z.fullscreenItems,
+                    className: _.fullscreenItems,
                     children: [
-                        (0, r.jsx)(P, {
+                        (0, r.jsx)(C, {
                             items: b.wT,
                             width: m,
                             height: g,
                             isPaused: S,
                             windowKey: n
                         }),
-                        (0, r.jsx)(v.Z, {})
+                        (0, r.jsx)(O.Z, {})
                     ]
                 }),
-                (0, r.jsx)(C, {}),
+                (0, r.jsx)(Z, {}),
                 (0, r.jsx)(h.Z, {})
             ]
         })

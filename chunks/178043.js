@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(200651),
     s = n(192379),
     o = n(120356),
@@ -16,14 +16,14 @@ var r = n(200651),
     y = n(120421),
     h = n(340078),
     x = n(324815),
-    N = n(18582),
-    v = n(3072),
-    O = n(763283),
-    j = n(944548),
-    Z = n(477839),
-    _ = n(622802),
-    P = n(388032),
-    C = n(652202),
+    v = n(18582),
+    O = n(3072),
+    j = n(763283),
+    N = n(944548),
+    _ = n(477839),
+    P = n(622802),
+    C = n(388032),
+    Z = n(652202),
     w = n(300090),
     E = n(965084),
     S = n(702536);
@@ -73,7 +73,7 @@ function k(e, t) {
 function M() {
     let [e, t] = (0, s.useState)(!1);
     return (0, r.jsxs)('svg', {
-        className: C.mainImage,
+        className: Z.mainImage,
         xmlns: 'http://www.w3.org/2000/svg',
         width: '387',
         height: '445',
@@ -213,18 +213,18 @@ function M() {
                 strokeWidth: '3',
                 d: 'M131.172 313.537c-6.693-15.617-6.016-32.592-6.016-49.259 0-1.022-7.03-3.144-8.44-4.136-2.484-1.748-4.92-3-6.016-5.849-.315-.82-1.064-3.962-1.504-4.512-4.034-5.042 2.997-1.761 5.431-.543 2.233 1.116 3.94 2.935 6.142 4.094 3.372 1.775 7.019 2.851 10.278 4.888 1.651 1.032 4.16 3.018 5.389 4.554 1.93 2.413 1.613 4.38 2.841 7.145 1.445 3.25-4.083-1.173-4.512-1.504-2.958-2.286-6.638-3.036-9.609-5.265M2.328 186.372v98.011M1.568 283.623h110.928M58.984 183.333H91.98M336.629 274.506h27.352M363.981 198.529v73.698M2.328 285.903v91.173M3.088 377.076h31.91M34.998 284.383v94.212M53.233 285.903v25.832M34.998 311.735h20.514M362.461 276.026v94.972M337.389 372.517h24.313M332.83 372.517h6.838M332.07 340.607v31.91'
             }),
-            (0, r.jsx)(j.Z, {
+            (0, r.jsx)(N.Z, {
                 borderColor: 'green',
-                text: (0, r.jsx)(O.Z, {
+                text: (0, r.jsx)(j.Z, {
                     variant: 'text-xs/medium',
                     color: 'always-white',
-                    className: C.tooltipText,
-                    children: P.NW.format(_.Z.HB1We3, {
+                    className: Z.tooltipText,
+                    children: C.intl.format(P.default.HB1We3, {
                         thanksHook: (e, t) =>
                             (0, r.jsx)(
-                                N.Z,
+                                v.Z,
                                 {
-                                    className: C.link,
+                                    className: Z.link,
                                     tag: 'a',
                                     href: 'https://neal.fun/',
                                     target: '_blank',
@@ -234,13 +234,13 @@ function M() {
                             )
                     })
                 }),
-                'aria-label': P.NW.formatToPlainString(_.Z.HB1We3, { thanksHook: (e) => e.join() }),
+                'aria-label': C.intl.formatToPlainString(P.default.HB1We3, { thanksHook: (e) => e.join() }),
                 shouldShow: e,
                 forceOpen: e,
                 disableTooltipPointerEvents: !1,
                 children: (n) =>
                     (0, r.jsxs)(
-                        N.Z,
+                        v.Z,
                         k(I({ tag: 'g' }, n), {
                             onClick: () => t(!e),
                             onMouseDown: (e) => e.preventDefault(),
@@ -326,49 +326,49 @@ function M() {
         ]
     });
 }
-let W = (e) => [
+let R = (e) => [
     {
-        string: _.Z.JsWx19,
+        string: P.default.JsWx19,
         value: e.playTime
     },
     {
-        string: _.Z.kJVOLy,
+        string: P.default.kJVOLy,
         value: e.timesClicked
     },
     {
-        string: _.Z.sm0Dw8,
+        string: P.default.sm0Dw8,
         value: e.lifetimePoints
     }
 ];
-function R() {
+function A() {
     let e = (0, c.e7)([p.default], () => p.default.locale),
-        [t, n, s] = (0, c.Wu)([y.Z], () => [(0, f.m)((y.Z.endTime - y.Z.startTime) / 1000), (0, h.u)(y.Z.getContributionsForItem(Z.yN.CLICKER_BUTTON), e), (0, h.u)(Math.floor(y.Z.lifetimePoints), e)], [e]),
-        o = W({
+        [t, n, s] = (0, c.Wu)([y.Z], () => [(0, f.m)((y.Z.endTime - y.Z.startTime) / 1000), (0, h.u)(y.Z.getContributionsForItem(_.yN.CLICKER_BUTTON), e), (0, h.u)(Math.floor(y.Z.lifetimePoints), e)], [e]),
+        o = R({
             playTime: t,
             timesClicked: n,
             lifetimePoints: s
         });
     return (0, r.jsxs)('div', {
-        className: C.stats,
+        className: Z.stats,
         children: [
-            (0, r.jsx)(O.Z, {
-                className: C.statsHeader,
+            (0, r.jsx)(j.Z, {
+                className: Z.statsHeader,
                 variant: 'heading-xxl/medium',
                 color: 'none',
-                children: P.NW.string(_.Z.Z84a2d)
+                children: C.intl.string(P.default.Z84a2d)
             }),
             o.map((e, t) =>
                 (0, r.jsx)(
-                    O.Z,
+                    j.Z,
                     {
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        children: P.NW.format(e.string, {
+                        children: C.intl.format(e.string, {
                             valueHook: (t, n) =>
                                 (0, r.jsx)(
                                     'span',
                                     {
-                                        className: C.statValue,
+                                        className: Z.statValue,
                                         children: e.value
                                     },
                                     n
@@ -381,77 +381,77 @@ function R() {
         ]
     });
 }
-function A(e) {
+function T(e) {
     let { className: t } = e,
         { analyticsLocations: o } = (0, d.ZP)(),
         [f, p] = (0, s.useState)(!1),
         h = (0, c.e7)([y.Z], () => y.Z.isRedeemingPrize),
-        N = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
-        [j, W] = (0, c.Wu)([g.Z], () => [g.Z.isEntitledToSku(N, Z.VU, Z.oK), g.Z.isFetchingForApplication(Z.oK)]);
+        v = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
+        [N, R] = (0, c.Wu)([g.Z], () => [g.Z.isEntitledToSku(v, _.VU, _.oK), g.Z.isFetchingForApplication(_.oK)]);
     return (
-        (0, v.is)(i.Z, !1),
+        (0, O.is)(i.Z, !1),
         (0, s.useEffect)(() => {
-            (0, u.yD)(Z.oK);
+            (0, u.yD)(_.oK);
         }, []),
         (0, r.jsxs)('div', {
-            className: a()(t, C.winScreen),
+            className: a()(t, Z.winScreen),
             children: [
-                (0, r.jsx)(O.Z, {
-                    className: C.header,
+                (0, r.jsx)(j.Z, {
+                    className: Z.header,
                     variant: 'heading-lg/medium',
                     color: 'always-white',
-                    children: P.NW.string(_.Z['4LK+4u'])
+                    children: C.intl.string(P.default['4LK+4u'])
                 }),
                 (0, r.jsxs)('div', {
-                    className: C.ground,
-                    children: [(0, r.jsx)('div', { className: C.groundLeft }), (0, r.jsx)('div', { className: C.groundRight })]
+                    className: Z.ground,
+                    children: [(0, r.jsx)('div', { className: Z.groundLeft }), (0, r.jsx)('div', { className: Z.groundRight })]
                 }),
-                (0, r.jsx)(R, {}),
+                (0, r.jsx)(A, {}),
                 (0, r.jsxs)('div', {
-                    className: C.imagery,
+                    className: Z.imagery,
                     children: [
                         (0, r.jsx)('img', {
-                            className: C.windowImage,
+                            className: Z.windowImage,
                             src: S,
                             alt: ''
                         }),
                         (0, r.jsx)(M, {}),
                         (0, r.jsx)('img', {
-                            className: C.windowImage,
+                            className: Z.windowImage,
                             src: S,
                             alt: ''
                         })
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: C.footer,
+                    className: Z.footer,
                     children: [
                         (0, r.jsx)('img', {
-                            className: f ? C.arrowRightActive : void 0,
+                            className: f ? Z.arrowRightActive : void 0,
                             src: E,
                             alt: ''
                         }),
                         (0, r.jsx)(x.Z, {
-                            disabled: W || h,
+                            disabled: R || h,
                             color: 'green',
                             onMouseEnter: () => p(!0),
                             onMouseLeave: () => p(!1),
                             onClick: () => {
-                                j
+                                N
                                     ? (0, b.yW)()
                                     : (0, l.ZDy)(async () => {
                                           let { default: e } = await n.e('31981').then(n.bind(n, 196742));
                                           return (t) => (0, r.jsx)(e, k(I({}, t), { analyticsLocations: o }));
                                       });
                             },
-                            children: (0, r.jsx)(O.Z, {
+                            children: (0, r.jsx)(j.Z, {
                                 variant: 'text-md/medium',
                                 color: 'currentColor',
-                                children: j ? P.NW.string(_.Z['/A+1UF']) : P.NW.string(_.Z.k3KlbW)
+                                children: N ? C.intl.string(P.default['/A+1UF']) : C.intl.string(P.default.k3KlbW)
                             })
                         }),
                         (0, r.jsx)('img', {
-                            className: f ? C.arrowLeftActive : void 0,
+                            className: f ? Z.arrowLeftActive : void 0,
                             src: w,
                             alt: ''
                         })

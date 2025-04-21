@@ -35,7 +35,7 @@ function g(e) {
                 }
             return Object.values(e).sort((e, t) => e.channel.name.localeCompare(t.channel.name));
         }, [n, t]),
-        N = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 x() && (e === (null == f ? void 0 : f.id) ? o.Z.stopEditingWebhook() : o.Z.startEditingWebhook(e));
             },
@@ -53,7 +53,7 @@ function g(e) {
                         children: [
                             (0, r.jsx)(l.vwX, {
                                 className: b.groupHeader,
-                                children: m.NW.format(m.t.TKDIZm, {
+                                children: m.intl.format(m.t.TKDIZm, {
                                     channelHook: () =>
                                         (0, r.jsx)(
                                             'span',
@@ -106,7 +106,7 @@ function g(e) {
                 lastCreatedWebhookId: g,
                 editedWebhook: f,
                 errors: h,
-                toggleWebhookExpand: N
+                toggleWebhookExpand: y
             });
         })
     });

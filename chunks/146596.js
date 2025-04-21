@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(544891),
     i = n(570140),
-    s = n(981631);
-function l(e, t) {
+    l = n(981631);
+function s(e, t) {
     let n = new Date(),
         i = new Date(n.getTime() - (n.getDay() + 1) * 86400000 - 3628800000);
     return r.tn.get({
@@ -21,7 +21,7 @@ function l(e, t) {
     });
 }
 function a(e) {
-    return l(e, s.ANM.GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW).then(
+    return s(e, l.ANM.GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW).then(
         (t) => {
             let { body: n } = t;
             i.Z.dispatch({
@@ -39,7 +39,7 @@ function a(e) {
     );
 }
 function o(e) {
-    return l(e, s.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW).then(
+    return s(e, l.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW).then(
         (t) => {
             let { body: n } = t;
             i.Z.dispatch({
@@ -57,7 +57,7 @@ function o(e) {
     );
 }
 function c(e) {
-    return l(e, s.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION).then(
+    return s(e, l.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION).then(
         (t) => {
             let { body: n } = t,
                 r = n
@@ -74,13 +74,13 @@ function c(e) {
                                             var n,
                                                 r,
                                                 i = {},
-                                                s = Object.keys(e);
-                                            for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                                l = Object.keys(e);
+                                            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                             return i;
                                         })(e, t);
                                     if (Object.getOwnPropertySymbols) {
-                                        var s = Object.getOwnPropertySymbols(e);
-                                        for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                        var l = Object.getOwnPropertySymbols(e);
+                                        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                                     }
                                 }
                             })(e, ['interval_start_timestamp', 'pct_retained']),

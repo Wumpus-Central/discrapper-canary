@@ -1,4 +1,4 @@
-n.d(t, { y: () => N }), n(388685), n(953529);
+n.d(t, { y: () => O }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -80,13 +80,13 @@ let x = {
         friction: 28,
         tension: 800
     };
-function N(e) {
+function O(e) {
     var t;
     let {} = e,
         { activeVoice: n } = (0, g.o)(),
         a = (0, u.Z)(n),
-        N = (0, p.z)(n),
-        { toggleLoopback: O, isLoopbackEnabled: E } = (function () {
+        O = (0, p.z)(n),
+        { toggleLoopback: E, isLoopbackEnabled: N } = (function () {
             let { activeVoice: e } = (0, g.o)(),
                 t = (0, s.e7)([m.Z], () => m.Z.getVoiceFilterPlaybackEnabled()),
                 n = i.useCallback(() => {
@@ -108,7 +108,7 @@ function N(e) {
                 }
             );
         })(),
-        P = E ? c.Iy5 : c.X_q,
+        P = N ? c.Iy5 : c.X_q,
         S = i.useCallback(() => (0, f.v6)(null), []),
         w = (0, c.dQu)(c.TVs.colors.BACKGROUND_SECONDARY).hex(),
         T = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
@@ -120,25 +120,25 @@ function N(e) {
     let Z = null != n,
         D = !Z,
         A = Z && null != a,
-        W = null == n && null != a,
-        F = (0, c.q_F)(
+        F = null == n && null != a,
+        M = (0, c.q_F)(
             {
                 opacity: +!!Z,
                 height: 72 * !!Z,
                 pointerEvents: Z ? 'auto' : 'none',
-                backgroundColor: null != (t = null == N ? void 0 : N.baseColor) ? t : w,
+                backgroundColor: null != (t = null == O ? void 0 : O.baseColor) ? t : w,
                 config: x,
-                delay: A ? 150 : 100 * !!W
+                delay: A ? 150 : 100 * !!F
             },
             'respect-motion-settings'
         ),
-        M = (0, c.Yzy)(
-            null == N ? void 0 : N.id,
+        R = (0, c.Yzy)(
+            null == O ? void 0 : O.id,
             {
                 key: k,
                 from: {
                     opacity: 0,
-                    background: null == N ? void 0 : N.splashGradient
+                    background: null == O ? void 0 : O.splashGradient
                 },
                 enter: {
                     opacity: 1,
@@ -152,7 +152,7 @@ function N(e) {
             },
             'respect-motion-settings'
         ),
-        [R] = (0, c.bYB)(
+        [B] = (0, c.bYB)(
             3,
             (e) => ({
                 from:
@@ -187,13 +187,13 @@ function N(e) {
                                 }
                             ],
                 config: C,
-                delay: W ? 100 - 50 * e : 150 + 50 * e
+                delay: F ? 100 - 50 * e : 150 + 50 * e
             }),
             'respect-motion-settings',
             [n]
         ),
-        B = (0, c.Yzy)(
-            null == N ? void 0 : N.iconURL,
+        z = (0, c.Yzy)(
+            null == O ? void 0 : O.iconURL,
             {
                 key: k,
                 from: {
@@ -217,8 +217,8 @@ function N(e) {
             },
             'respect-motion-settings'
         ),
-        z = (0, c.Yzy)(
-            null == N ? void 0 : N.name,
+        U = (0, c.Yzy)(
+            null == O ? void 0 : O.name,
             {
                 key: k,
                 from: {
@@ -238,23 +238,23 @@ function N(e) {
                     opacity: 0,
                     translateX: 40 * (null != n),
                     translateY: 16 * (null == n),
-                    delay: W ? 200 : 150,
+                    delay: F ? 200 : 150,
                     config: null == a ? C : j
                 },
                 config: C
             },
             'respect-motion-settings'
         ),
-        U = h.NW.string(E ? h.t.esVyo6 : h.t.UQqFCA);
+        W = h.intl.string(N ? h.t.esVyo6 : h.t.UQqFCA);
     return (0, r.jsxs)(l.animated.div, {
         className: v.voiceFilterHero,
         'aria-hidden': D,
-        style: F,
+        style: M,
         children: [
             (0, r.jsx)('div', {
                 className: o()([v.bgGradient, v.bgGradientHighlight])
             }),
-            M((e) =>
+            R((e) =>
                 (0, r.jsx)(l.animated.div, {
                     className: v.bgGradient,
                     style: e
@@ -262,7 +262,7 @@ function N(e) {
             ),
             (0, r.jsx)('div', {
                 className: v.iconWrapper,
-                children: B((e, t) =>
+                children: z((e, t) =>
                     (0, r.jsx)(
                         l.animated.img,
                         {
@@ -277,7 +277,7 @@ function N(e) {
             }),
             (0, r.jsx)('div', {
                 className: v.descriptionWrapper,
-                children: z((e, t) =>
+                children: U((e, t) =>
                     (0, r.jsxs)(l.animated.div, {
                         className: v.description,
                         style: e,
@@ -286,12 +286,12 @@ function N(e) {
                                 variant: 'text-xs/normal',
                                 color: 'always-white',
                                 className: v.offWhiteText,
-                                children: h.NW.string(h.t.WW5DAA)
+                                children: h.intl.string(h.t.WW5DAA)
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: 'always-white',
-                                children: null != t ? h.NW.string(t) : ''
+                                children: null != t ? h.intl.string(t) : ''
                             })
                         ]
                     })
@@ -301,7 +301,7 @@ function N(e) {
                 className: v.buttonWrapper,
                 children: [
                     (0, r.jsx)(c.ua7, {
-                        'aria-label': U,
+                        'aria-label': W,
                         tooltipClassName: v.tooltip,
                         tooltipContentClassName: v.tooltipContent,
                         shouldShow: Z,
@@ -311,25 +311,25 @@ function N(e) {
                                     variant: 'heading-sm/normal',
                                     color: 'header-primary',
                                     className: v.tooltipHeader,
-                                    children: U
+                                    children: W
                                 }),
                                 (0, r.jsx)(c.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'header-muted',
-                                    children: h.NW.string(E ? h.t.Sg6cfn : h.t.ZKhtw8)
+                                    children: h.intl.string(N ? h.t.Sg6cfn : h.t.ZKhtw8)
                                 })
                             ]
                         }),
                         children: (e) =>
                             (0, r.jsx)(l.animated.div, {
                                 className: v.buttonWrapper,
-                                style: R[0],
+                                style: B[0],
                                 children: (0, r.jsx)(
                                     c.P3F,
                                     y(
                                         b(
                                             {
-                                                className: o()(v.button, { [v.loopbackEnabled]: E }),
+                                                className: o()(v.button, { [v.loopbackEnabled]: N }),
                                                 'aria-hidden': D,
                                                 focusProps: { enabled: Z },
                                                 tabIndex: Z ? 0 : -1
@@ -337,7 +337,7 @@ function N(e) {
                                             e
                                         ),
                                         {
-                                            onClick: () => O(),
+                                            onClick: () => E(),
                                             children: (0, r.jsx)(P, {
                                                 size: 'custom',
                                                 width: 20,
@@ -351,11 +351,11 @@ function N(e) {
                     }),
                     (0, r.jsx)(c.ua7, {
                         shouldShow: Z,
-                        text: h.NW.string(h.t.UvMx7O),
+                        text: h.intl.string(h.t.UvMx7O),
                         children: (e) =>
                             (0, r.jsx)(l.animated.div, {
                                 className: v.buttonWrapper,
-                                style: R[1],
+                                style: B[1],
                                 children: (0, r.jsx)(
                                     c.P3F,
                                     y(

@@ -68,13 +68,13 @@ function S(e) {
                     color: 'header-secondary',
                     className: y.text,
                     variant: 'text-sm/normal',
-                    children: b.NW.format(b.t.B3V0FB, { count: Math.min(O, a + 1) })
+                    children: b.intl.format(b.t.B3V0FB, { count: Math.min(O, a + 1) })
                 }),
                 (0, r.jsx)(l.Text, {
                     color: 'text-link',
                     className: y.createThreadButton,
                     variant: 'text-sm/semibold',
-                    children: b.NW.string(b.t.rBIGBA)
+                    children: b.intl.string(b.t.rBIGBA)
                 })
             ]
         })
@@ -83,8 +83,8 @@ function S(e) {
 function T(e) {
     let { reply: t, chatInputType: n } = e,
         { channel: i, message: a, shouldMention: s, showMentionToggle: c } = t,
-        { guildId: h, nick: m, colorString: O, colorStrings: T, colorRoleName: N } = (0, u.ZP)(a),
-        A = (0, d.X)(h, T),
+        { guildId: h, nick: m, colorString: O, colorStrings: T, colorRoleName: A } = (0, u.ZP)(a),
+        N = (0, d.X)(h, T),
         C = I(i, a),
         R = (0, p.NE)(i, a),
         P = n.showThreadPromptOnReply && C >= v && R,
@@ -117,7 +117,7 @@ function T(e) {
                                 color: 'header-secondary',
                                 className: o()(y.text, y.replyLabel),
                                 variant: 'text-sm/normal',
-                                children: b.NW.format(b.t['8E4Gxc'], {
+                                children: b.intl.format(b.t['8E4Gxc'], {
                                     userHook: (e, t) =>
                                         (0, r.jsx)(
                                             l.PUh,
@@ -125,8 +125,8 @@ function T(e) {
                                                 className: y.name,
                                                 name: m,
                                                 color: O,
-                                                roleName: N,
-                                                roleColors: A
+                                                roleName: A,
+                                                roleColors: N
                                             },
                                             t
                                         )
@@ -140,7 +140,7 @@ function T(e) {
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(l.ua7, {
-                                                text: s ? b.NW.string(b.t.DH2o6e) : b.NW.string(b.t.utGGIS),
+                                                text: s ? b.intl.string(b.t.DH2o6e) : b.intl.string(b.t.utGGIS),
                                                 children: (e) => {
                                                     let { onMouseEnter: t, onMouseLeave: n, onFocus: i, onBlur: a } = e;
                                                     return (0, r.jsx)(l.P3F, {
@@ -159,10 +159,10 @@ function T(e) {
                                                                 (0, r.jsx)(l.lOy, {
                                                                     size: 'md',
                                                                     color: 'currentColor',
-                                                                    'aria-label': b.NW.string(b.t.P8tvKC),
+                                                                    'aria-label': b.intl.string(b.t.P8tvKC),
                                                                     className: y.mentionIcon
                                                                 }),
-                                                                s ? b.NW.string(b.t.p9jC2t) : b.NW.string(b.t.U7f3bG)
+                                                                s ? b.intl.string(b.t.p9jC2t) : b.intl.string(b.t.U7f3bG)
                                                             ]
                                                         })
                                                     });

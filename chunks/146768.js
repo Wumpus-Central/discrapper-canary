@@ -1,6 +1,6 @@
 t.d(n, { Z: () => s });
-var r = t(442837),
-    i = t(431328),
+var i = t(442837),
+    r = t(431328),
     l = t(501655),
     o = t(427679),
     c = t(592125),
@@ -11,7 +11,7 @@ function s(e) {
             data: { guild: t, instance: s, speakers: u, participantCount: d },
             context: g
         } = e,
-        p = (0, r.e7)(
+        p = (0, i.e7)(
             [a.Z, c.Z],
             () => {
                 var e;
@@ -19,9 +19,9 @@ function s(e) {
             },
             [n]
         ),
-        h = (0, r.e7)([o.Z], () => o.Z.getStageInstanceByChannel(n), [n]),
-        f = (0, i.w8)(n, l.pV.SPEAKER),
-        v = (0, i.Rk)(n),
+        h = (0, i.e7)([o.Z], () => o.Z.getStageInstanceByChannel(n), [n]),
+        f = (0, r.w8)(n, l.pV.SPEAKER),
+        v = (0, r.Rk)(n),
         m = null != h ? f : u,
         j = (null != h ? v : d) - m.length;
     return {

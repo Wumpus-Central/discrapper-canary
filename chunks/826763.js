@@ -25,12 +25,12 @@ function p(e) {
                     children: [
                         (0, r.jsx)(i.X6q, {
                             variant: 'heading-xl/semibold',
-                            children: c.NW.string(c.t['8gJGPj'])
+                            children: c.intl.string(c.t['8gJGPj'])
                         }),
                         (0, r.jsx)(i.Text, {
                             variant: 'text-sm/normal',
                             className: u.bodyText,
-                            children: c.NW.string(c.t.GpOWIi)
+                            children: c.intl.string(c.t.GpOWIi)
                         }),
                         (0, r.jsx)(i.zxk, {
                             size: i.zxk.Sizes.MEDIUM,
@@ -38,7 +38,7 @@ function p(e) {
                                 (0, o.mL)(t), l.Z.open(t, s.pNK.ROLE_SUBSCRIPTIONS, void 0, s.KsC.ROLE_SUBSCRIPTION_TIERS), (0, a.GN)(t);
                             },
                             className: u.__invalid_button,
-                            children: c.NW.string(c.t['I/XhUl'])
+                            children: c.intl.string(c.t['I/XhUl'])
                         })
                     ]
                 })

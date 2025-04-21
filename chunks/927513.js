@@ -20,7 +20,7 @@ let u = (e) => {
         children: [
             (0, r.jsx)(i.X6, {
                 variant: 'heading-xl/extrabold',
-                children: l.NW.string(n.nameUnformatted)
+                children: l.intl.string(n.nameUnformatted)
             }),
             (0, r.jsx)(i.xv, {
                 variant: 'text-xs/normal',

@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(594174),
     S = n(566620),
     T = n(317381),
-    N = n(531826),
-    A = n(175894),
+    A = n(531826),
+    N = n(175894),
     C = n(963614),
     R = n(917107),
     P = n(208156),
@@ -87,20 +87,20 @@ function V(e, t) {
 function Z(e) {
     var t, n, a;
     let { channel: _, isLoading: p } = e,
-        [A, G] = i.useState(!1),
+        [N, G] = i.useState(!1),
         B = (0, s.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivityForChannel(_.id)),
         F = (0, s.e7)([T.ZP], () => T.ZP.getActivityPanelMode()),
         V = (0, h.q)(null == B ? void 0 : B.applicationId),
         Z = null == B ? void 0 : B.launchId,
         H = (0, s.e7)([O.Z], () => O.Z.getChannelId() === _.id),
-        { dockedRect: W, isHidden: Y } = (0, s.cj)([v.Z], () => {
+        { dockedRect: Y, isHidden: W } = (0, s.cj)([v.Z], () => {
             let e = v.Z.pipWindow;
             return {
                 dockedRect: null != e ? v.Z.getDockedRect(e.id) : null,
                 isHidden: v.Z.isEmbeddedActivityHidden()
             };
         }),
-        K = (0, N.sU)({ channelId: _.id }),
+        K = (0, A.sU)({ channelId: _.id }),
         {
             activityParticipant: z,
             selectedParticipant: q,
@@ -123,8 +123,8 @@ function Z(e) {
         J = (0, R.Z)(_.id),
         $ = J && (null == q ? void 0 : q.type) !== M.fO.ACTIVITY,
         ee = !J && F === L.Ez.PIP,
-        et = X && ($ || ee) && null == W,
-        en = (!X || et) && !Y,
+        et = X && ($ || ee) && null == Y,
+        en = (!X || et) && !W,
         er = en && null != v.Z.pipVideoWindow && null != v.Z.pipActivityWindow;
     function ei() {
         var e;
@@ -140,7 +140,7 @@ function Z(e) {
         d.Z.channelListScrollTo(t, _.id), (0, E.XU)(t, _.id), null == K && (0, f.Ou)();
     }
     function ea() {
-        G(!A);
+        G(!N);
     }
     function eo(e, t, n, i, a) {
         var o;
@@ -155,7 +155,7 @@ function Z(e) {
                       onMouseMove: e,
                       onMouseLeave: t,
                       onToggleHeight: ea,
-                      isExpanded: A,
+                      isExpanded: N,
                       hideExpandedButton: i,
                       embeddedActivity: B
                   })
@@ -236,9 +236,9 @@ function Z(e) {
                         [k.pipMode]: en,
                         [U.elevationHigh]: en,
                         [j.idle]: i && !(null == (t = B.config) ? void 0 : t.useInteractivePIP),
-                        [k.pipModeShort]: en && !A,
-                        [k.pipModeTall]: en && A,
-                        [k.hidden]: Y,
+                        [k.pipModeShort]: en && !N,
+                        [k.pipModeTall]: en && N,
+                        [k.hidden]: W,
                         [k.multiPIPMode]: er
                     }),
                     noBorder: !en,
@@ -250,8 +250,8 @@ function Z(e) {
                         p
                             ? (0, r.jsx)(l.$jN, {
                                   className: o()(k.iframe, {
-                                      [k.pipModeShort]: en && !A,
-                                      [k.pipModeTall]: en && A
+                                      [k.pipModeShort]: en && !N,
+                                      [k.pipModeTall]: en && N
                                   })
                               })
                             : (0, r.jsx)(P.J, {
@@ -260,8 +260,8 @@ function Z(e) {
                                   url: B.url,
                                   queryParams: el,
                                   className: o()(k.iframe, {
-                                      [k.pipModeShort]: en && !A,
-                                      [k.pipModeTall]: en && A,
+                                      [k.pipModeShort]: en && !N,
+                                      [k.pipModeTall]: en && N,
                                       [k.pipNonInteractive]: en && !(null == (n = B.config) ? void 0 : n.useInteractivePIP)
                                   }),
                                   shouldRefocus: !en && H
@@ -282,7 +282,7 @@ let H = (e) => {
     var { channel: t } = e,
         n = F(e, ['channel']);
     let i = T.ZP.getCurrentEmbeddedActivity();
-    (0, A.Z)({ connectedEmbeddedActivity: i });
+    (0, N.Z)({ connectedEmbeddedActivity: i });
     let { analyticsLocations: a } = (0, p.ZP)(_.Z.ACTIVITY_PIP),
         o = null == i;
     return (0, r.jsx)(p.Gt, {

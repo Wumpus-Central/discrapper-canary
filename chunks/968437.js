@@ -11,19 +11,19 @@ var a = n(70956),
 function l() {
     return [
         {
-            label: s.NW.string(s.t.cs8A1d),
+            label: s.intl.string(s.t.cs8A1d),
             value: a.Z.Minutes.HOUR
         },
         {
-            label: s.NW.string(s.t.zFKbrK),
+            label: s.intl.string(s.t.zFKbrK),
             value: a.Z.Minutes.DAY
         },
         {
-            label: s.NW.string(s.t.TmPIZW),
+            label: s.intl.string(s.t.TmPIZW),
             value: 3 * a.Z.Minutes.DAY
         },
         {
-            label: s.NW.string(s.t['/7i2en']),
+            label: s.intl.string(s.t['/7i2en']),
             value: a.Z.Minutes.WEEK
         }
     ];

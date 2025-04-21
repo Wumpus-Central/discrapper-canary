@@ -2,13 +2,13 @@ n.d(t, {
     B0: () => R,
     Hc: () => L,
     J8: () => x,
-    Q6: () => A,
+    Q6: () => N,
     V9: () => j,
     WD: () => D,
     X_: () => P,
     Zt: () => I,
     Zv: () => T,
-    _V: () => N,
+    _V: () => A,
     cv: () => k,
     gM: () => B,
     jl: () => M,
@@ -72,8 +72,8 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
                 throw Error('Unexpected file type: '.concat(e));
         }
     },
-    N = (e) => (null == e ? null : ''.concat(e.name, '.').concat(S(e.format_type))),
-    A = function (e) {
+    A = (e) => (null == e ? null : ''.concat(e.name, '.').concat(S(e.format_type))),
+    N = function (e) {
         let { isPreview: t = !1, size: n = f.lE } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (null == e.format_type) return null;
         let r = e.format_type;

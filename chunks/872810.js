@@ -37,7 +37,7 @@ var I = n(475179);
 n(287734);
 var S = n(981631),
     T = n(70722);
-function N(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function N(e, t, n) {
         e
     );
 }
-function A(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,7 +61,7 @@ function A(e) {
                 })
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
@@ -69,7 +69,7 @@ function A(e) {
 let C = 2;
 function R(e, t, n) {
     s.Z.dispatch(
-        A(
+        N(
             {
                 type: 'STREAM_START',
                 streamType: null != e ? T.lo.GUILD : T.lo.CALL,
@@ -188,7 +188,7 @@ async function U(e) {
     } catch (e) {}
 }
 function G(e) {
-    (0, v.Ye)(e.preset, e.resolution, e.frameRate), s.Z.dispatch(A({ type: 'STREAM_UPDATE_SETTINGS' }, e));
+    (0, v.Ye)(e.preset, e.resolution, e.frameRate), s.Z.dispatch(N({ type: 'STREAM_UPDATE_SETTINGS' }, e));
 }
 function B(e, t) {
     o.tn.patch({

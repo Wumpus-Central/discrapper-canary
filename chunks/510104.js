@@ -25,10 +25,10 @@ function f(e, t) {
         I = void 0 !== O && O,
         S = n.padding,
         T = void 0 === S ? 0 : S,
-        N = (0, u.Z)('number' != typeof T ? T : (0, d.Z)(T, l.mv)),
-        A = v === l.k5 ? l.YP : l.k5,
+        A = (0, u.Z)('number' != typeof T ? T : (0, d.Z)(T, l.mv)),
+        N = v === l.k5 ? l.YP : l.k5,
         C = e.rects.popper,
-        R = e.elements[I ? A : v],
+        R = e.elements[I ? N : v],
         P = (0, r.Z)((0, c.kK)(R) ? R : R.contextElement || (0, i.Z)(e.elements.popper), g, b, h),
         w = (0, a.Z)(e.elements.reference),
         D = (0, o.Z)({
@@ -40,10 +40,10 @@ function f(e, t) {
         L = (0, s.Z)(Object.assign({}, C, D)),
         x = v === l.k5 ? L : w,
         M = {
-            top: P.top - x.top + N.top,
-            bottom: x.bottom - P.bottom + N.bottom,
-            left: P.left - x.left + N.left,
-            right: x.right - P.right + N.right
+            top: P.top - x.top + A.top,
+            bottom: x.bottom - P.bottom + A.bottom,
+            left: P.left - x.left + A.left,
+            right: x.right - P.right + A.right
         },
         k = e.modifiersData.offset;
     if (v === l.k5 && k) {

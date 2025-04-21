@@ -1,6 +1,6 @@
-n.d(t, { Z: () => i }), n(388685);
+n.d(t, { Z: () => l }), n(388685);
 var r = n(131951);
-function i() {
+function l() {
     return Object.entries(r.Z.getVideoDevices()).map((e) => {
         let [t, n] = e;
         return {

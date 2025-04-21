@@ -1,12 +1,12 @@
 n.d(t, {
-    M: () => Y,
+    M: () => W,
     Z: () => K
 });
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(873546),
+    l = n.n(s),
+    a = n(873546),
     o = n(286379),
     c = n(399606),
     d = n(704215),
@@ -18,16 +18,16 @@ var r = n(200651),
     f = n(906732),
     b = n(252618),
     _ = n(313201),
-    N = n(605236),
-    x = n(984370),
-    E = n(797614),
-    j = n(108427),
-    C = n(210887),
-    O = n(695346),
-    S = n(594174),
-    v = n(626135),
-    T = n(260722),
-    I = n(914788),
+    x = n(605236),
+    E = n(984370),
+    j = n(797614),
+    C = n(108427),
+    O = n(210887),
+    S = n(695346),
+    v = n(594174),
+    T = n(626135),
+    I = n(260722),
+    N = n(914788),
     y = n(841409),
     A = n(652262),
     P = n(880257),
@@ -36,106 +36,106 @@ var r = n(200651),
     Z = n(731934),
     w = n(521450),
     k = n(292352),
-    W = n(981631),
-    L = n(723359),
-    B = n(921944),
-    M = n(332495),
-    U = n(388032),
-    V = n(347362);
-let G = {
-        [k.dG.REQUESTS]: () => (0, r.jsx)(Z.Z, {}),
-        [k.dG.ACTIVITY]: () => (0, r.jsx)(D.Z, {}),
-        [k.dG.SETTINGS]: () => (0, r.jsx)(w.Z, {})
+    L = n(981631),
+    B = n(723359),
+    M = n(921944),
+    U = n(332495),
+    V = n(388032),
+    G = n(347362);
+let F = {
+        [k.dG.REQUESTS]: () => (0, i.jsx)(Z.Z, {}),
+        [k.dG.ACTIVITY]: () => (0, i.jsx)(D.Z, {}),
+        [k.dG.SETTINGS]: () => (0, i.jsx)(w.Z, {})
     },
-    F = {
-        [k.dG.REQUESTS]: () => (0, r.jsx)(Z.Z, {}),
-        [k.dG.ACTIVITY]: () => (0, r.jsx)(D.Z, {})
+    H = {
+        [k.dG.REQUESTS]: () => (0, i.jsx)(Z.Z, {}),
+        [k.dG.ACTIVITY]: () => (0, i.jsx)(D.Z, {})
     };
-function H(e) {
+function z(e) {
     let { section: t, handleItemSelect: n } = e,
-        i = (0, R.gU)(),
+        r = (0, R.gU)(),
         s = (0, P.Z)();
-    return (0, r.jsxs)(u.njP, {
-        className: V.settingsTabBar,
-        'aria-label': U.NW.string(M.Z.RZqaJi),
+    return (0, i.jsxs)(u.njP, {
+        className: G.settingsTabBar,
+        'aria-label': V.intl.string(U.default.RZqaJi),
         selectedItem: t,
         type: 'top',
         look: 'brand',
         onItemSelect: n,
         children: [
-            (0, r.jsx)(u.njP.Item, {
-                className: V.settingsTabBarItem,
+            (0, i.jsx)(u.njP.Item, {
+                className: G.settingsTabBarItem,
                 id: k.dG.ACTIVITY,
-                children: U.NW.string(M.Z.bdBmq6)
+                children: V.intl.string(U.default.bdBmq6)
             }),
-            (0, r.jsxs)(u.njP.Item, {
-                className: V.settingsTabBarItem,
+            (0, i.jsxs)(u.njP.Item, {
+                className: G.settingsTabBarItem,
                 id: k.dG.REQUESTS,
-                'aria-label': U.NW.string(M.Z['gVWG+/']),
+                'aria-label': V.intl.string(U.default['gVWG+/']),
                 children: [
-                    U.NW.string(M.Z['gVWG+/']),
-                    i > 0
-                        ? (0, r.jsx)(u.mAB, {
-                              className: V.badge,
-                              count: i
+                    V.intl.string(U.default['gVWG+/']),
+                    r > 0
+                        ? (0, i.jsx)(u.mAB, {
+                              className: G.badge,
+                              count: r
                           })
                         : null
                 ]
             }),
             s
-                ? (0, r.jsx)(u.njP.Item, {
-                      className: V.settingsTabBarItem,
+                ? (0, i.jsx)(u.njP.Item, {
+                      className: G.settingsTabBarItem,
                       id: k.dG.SETTINGS,
-                      children: U.NW.string(U.t['3D5yo6'])
+                      children: V.intl.string(V.t['3D5yo6'])
                   })
                 : null
         ]
     });
 }
-function z(e) {
-    let { theme: t, section: n, handleItemSelect: i } = e,
+function Y(e) {
+    let { theme: t, section: n, handleItemSelect: r } = e,
         s = (0, _.Dt)(),
         o = (0, R.gU)();
-    return (0, r.jsx)(u.f6W, {
+    return (0, i.jsx)(u.f6W, {
         theme: t,
         children: (e) =>
-            (0, r.jsxs)(x.Z, {
-                className: a()(e, V.sidebarTabBar),
-                scrollable: l.tq,
+            (0, i.jsxs)(E.Z, {
+                className: l()(e, G.sidebarTabBar),
+                scrollable: a.tq,
                 role: 'navigation',
                 'aria-labelledby': s,
                 toolbar: !0,
                 children: [
-                    (0, r.jsx)(x.Z.Icon, {
+                    (0, i.jsx)(E.Z.Icon, {
                         icon: u.BFJ,
                         'aria-hidden': !0
                     }),
-                    (0, r.jsx)(x.Z.Title, {
+                    (0, i.jsx)(E.Z.Title, {
                         id: s,
-                        children: U.NW.string(M.Z.RZqaJi)
+                        children: V.intl.string(U.default.RZqaJi)
                     }),
-                    (0, r.jsx)(x.Z.Divider, {}),
-                    (0, r.jsxs)(u.njP, {
-                        'aria-label': U.NW.string(M.Z.RZqaJi),
+                    (0, i.jsx)(E.Z.Divider, {}),
+                    (0, i.jsxs)(u.njP, {
+                        'aria-label': V.intl.string(U.default.RZqaJi),
                         selectedItem: n,
                         type: 'top-pill',
-                        onItemSelect: i,
-                        className: V.__invalid_tabBar,
+                        onItemSelect: r,
+                        className: G.__invalid_tabBar,
                         children: [
-                            (0, r.jsx)(u.njP.Item, {
+                            (0, i.jsx)(u.njP.Item, {
                                 id: k.dG.ACTIVITY,
-                                className: V.item,
-                                children: U.NW.string(M.Z.bdBmq6)
+                                className: G.item,
+                                children: V.intl.string(U.default.bdBmq6)
                             }),
-                            (0, r.jsxs)(u.njP.Item, {
+                            (0, i.jsxs)(u.njP.Item, {
                                 id: k.dG.REQUESTS,
-                                className: V.item,
-                                'aria-label': U.NW.string(M.Z['gVWG+/']),
+                                className: G.item,
+                                'aria-label': V.intl.string(U.default['gVWG+/']),
                                 children: [
-                                    U.NW.string(M.Z['gVWG+/']),
+                                    V.intl.string(U.default['gVWG+/']),
                                     o > 0
-                                        ? (0, r.jsx)(u.mAB, {
-                                              className: V.badge,
+                                        ? (0, i.jsx)(u.mAB, {
+                                              className: G.badge,
                                               count: o
                                           })
                                         : null
@@ -147,70 +147,70 @@ function z(e) {
             })
     });
 }
-function Y() {
+function W() {
     let e = (0, P.Z)(),
         t = (0, R.M8)(),
-        n = (0, N.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
-        s = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
-        a = (0, A.M)(),
-        { selectedTab: l, handleTabChange: m } = (0, y.Z)(),
+        n = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
+        s = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
+        l = (0, A.M)(),
+        { selectedTab: a, handleTabChange: m } = (0, y.Z)(),
         h = (0, _.Dt)(),
-        f = S.default.getCurrentUser(),
-        x = null != e,
-        C = s && null != f && !x;
+        f = v.default.getCurrentUser(),
+        E = null != e,
+        O = s && null != f && !E;
     (0, g.ZP)(() => {
-        (0, j.e)('family-center'),
-            T.ZP.initialPageLoad(),
+        (0, C.e)('family-center'),
+            I.ZP.initialPageLoad(),
             n ||
-                (0, N.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
-                    dismissAction: B.L.AUTO,
+                (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+                    dismissAction: M.L.AUTO,
                     forceTrack: !0
                 });
     });
-    let O = {
+    let S = {
             isConsideredAdult: e,
             numOfAcceptedRequests: t,
-            selectedTab: l,
-            selectedTeenId: a
+            selectedTab: a,
+            selectedTeenId: l
         },
-        D = i.useRef(O);
-    return (i.useEffect(() => {
-        D.current = O;
+        D = r.useRef(S);
+    return (r.useEffect(() => {
+        D.current = S;
     }),
-    i.useEffect(() => {
-        if (s && x) {
-            let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: r } = D.current;
-            v.default.track(W.rMx.FAMILY_CENTER_VIEWED, {
+    r.useEffect(() => {
+        if (s && E) {
+            let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: i } = D.current;
+            T.default.track(L.rMx.FAMILY_CENTER_VIEWED, {
                 is_considered_adult: e,
                 num_of_accepted_links: t,
-                selected_teen_id: r,
+                selected_teen_id: i,
                 initial_page: k.QH[n],
                 source: k._6[k.Mu.SIDENAV]
             }),
-                E.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
+                j.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
         }
-    }, [s, x]),
-    i.useEffect(() => {
-        C && (0, p.mN)(L.L0.FAMILY_CENTER);
-    }, [C]),
-    C)
+    }, [s, E]),
+    r.useEffect(() => {
+        O && (0, p.mN)(B.L0.FAMILY_CENTER);
+    }, [O]),
+    O)
         ? null
-        : (0, r.jsxs)('main', {
-              className: V.container,
-              'aria-label': U.NW.string(M.Z.RZqaJi),
+        : (0, i.jsxs)('main', {
+              className: G.container,
+              'aria-label': V.intl.string(U.default.RZqaJi),
               children: [
-                  (0, r.jsx)(b.yY, { location: U.NW.string(M.Z.RZqaJi) }),
-                  (0, r.jsx)(H, {
-                      section: l,
+                  (0, i.jsx)(b.yY, { location: V.intl.string(U.default.RZqaJi) }),
+                  (0, i.jsx)(z, {
+                      section: a,
                       handleItemSelect: (e) => {
                           m(e);
                       }
                   }),
-                  (0, r.jsx)(u.njP.Panel, {
-                      id: l,
+                  (0, i.jsx)(u.njP.Panel, {
+                      id: a,
                       'aria-labelledby': h,
-                      className: V.contentPanel,
-                      children: (0, r.jsx)('div', { children: G[l]() })
+                      className: G.contentPanel,
+                      children: (0, i.jsx)('div', { children: F[a]() })
                   })
               ]
           });
@@ -219,22 +219,22 @@ function K() {
     let { analyticsLocations: e } = (0, f.ZP)(h.Z.FAMILY_CENTER),
         t = (0, P.Z)(),
         n = (0, R.M8)(),
-        s = (0, N.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
-        l = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
-        x = (0, A.M)(),
-        D = (0, c.e7)([C.Z], () => C.Z.theme),
+        s = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
+        a = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
+        E = (0, A.M)(),
+        D = (0, c.e7)([O.Z], () => O.Z.theme),
         { selectedTab: Z, handleTabChange: w } = (0, y.Z)(),
-        G = (0, _.Dt)(),
-        H = S.default.getCurrentUser(),
-        Y = null != t,
-        K = l && null != H && !Y;
+        F = (0, _.Dt)(),
+        z = v.default.getCurrentUser(),
+        W = null != t,
+        K = a && null != z && !W;
     (0, g.ZP)(() => {
-        m.Y(W.Z5c.FAMILY_CENTER),
-            (0, j.e)('family-center'),
-            !I.Z.isLoading() && I.Z.canRefetch() && T.ZP.initialPageLoad(),
+        m.Y(L.Z5c.FAMILY_CENTER),
+            (0, C.e)('family-center'),
+            !N.Z.isLoading() && N.Z.canRefetch() && I.ZP.initialPageLoad(),
             s ||
-                (0, N.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
-                    dismissAction: B.L.AUTO,
+                (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+                    dismissAction: M.L.AUTO,
                     forceTrack: !0
                 });
     });
@@ -242,59 +242,59 @@ function K() {
             isConsideredAdult: t,
             numOfAcceptedRequests: n,
             selectedTab: Z,
-            selectedTeenId: x
+            selectedTeenId: E
         },
-        X = i.useRef(q);
+        X = r.useRef(q);
     if (
-        (i.useEffect(() => {
+        (r.useEffect(() => {
             X.current = q;
         }),
-        i.useEffect(() => {
-            if (l && Y) {
-                let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: r } = X.current;
-                v.default.track(W.rMx.FAMILY_CENTER_VIEWED, {
+        r.useEffect(() => {
+            if (a && W) {
+                let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: i } = X.current;
+                T.default.track(L.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: e,
                     num_of_accepted_links: t,
-                    selected_teen_id: r,
+                    selected_teen_id: i,
                     initial_page: k.QH[n],
                     source: k._6[k.Mu.SIDENAV]
                 }),
-                    E.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
+                    j.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
             }
-        }, [l, Y]),
-        i.useEffect(() => {
-            let e = O.Ex.getSetting();
-            l && t && void 0 === e && O.Ex.updateSetting(!0);
-        }, [l, t]),
-        i.useEffect(() => {
-            K && (0, p.mN)(L.L0.FAMILY_CENTER);
+        }, [a, W]),
+        r.useEffect(() => {
+            let e = S.Ex.getSetting();
+            a && t && void 0 === e && S.Ex.updateSetting(!0);
+        }, [a, t]),
+        r.useEffect(() => {
+            K && (0, p.mN)(B.L0.FAMILY_CENTER);
         }, [K]),
         K)
     )
         return null;
     let Q = Z !== k.dG.SETTINGS ? Z : k.dG.ACTIVITY,
-        J = F[Q];
-    return (0, r.jsx)(f.Gt, {
+        J = H[Q];
+    return (0, i.jsx)(f.Gt, {
         value: e,
-        children: (0, r.jsxs)('main', {
-            className: a()(V.container, V.containerSidenav),
-            'aria-label': U.NW.string(M.Z.RZqaJi),
+        children: (0, i.jsxs)('main', {
+            className: l()(G.container, G.containerSidenav),
+            'aria-label': V.intl.string(U.default.RZqaJi),
             children: [
-                (0, r.jsx)(b.yY, { location: U.NW.string(M.Z.RZqaJi) }),
-                (0, r.jsx)(z, {
+                (0, i.jsx)(b.yY, { location: V.intl.string(U.default.RZqaJi) }),
+                (0, i.jsx)(Y, {
                     theme: D,
                     section: Q,
                     handleItemSelect: (e) => {
                         w(e);
                     }
                 }),
-                (0, r.jsx)(u.njP.Panel, {
+                (0, i.jsx)(u.njP.Panel, {
                     id: Q,
-                    'aria-labelledby': G,
-                    className: V.contentPanel,
-                    children: (0, r.jsx)(u.Ttm, {
-                        children: (0, r.jsx)('div', {
-                            className: V.sideNavContent,
+                    'aria-labelledby': F,
+                    className: G.contentPanel,
+                    children: (0, i.jsx)(u.Ttm, {
+                        children: (0, i.jsx)('div', {
+                            className: G.sideNavContent,
                             children: J()
                         })
                     })

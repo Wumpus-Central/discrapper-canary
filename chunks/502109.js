@@ -1,6 +1,6 @@
 n.d(t, {
-    Ch: () => A,
-    Tr: () => N
+    Ch: () => N,
+    Tr: () => A
 }),
     n(642613),
     n(388685);
@@ -212,7 +212,7 @@ class T extends i.Component {
                 (0, r.jsx)(s.Text, {
                     variant: 'text-md/medium',
                     className: m.connectionInstructions,
-                    children: h.NW.string(h.t.f19PPT)
+                    children: h.intl.string(h.t.f19PPT)
                 })
             ]
         });
@@ -222,7 +222,7 @@ class T extends i.Component {
             ? this.renderConnectorView()
             : this.renderButton({
                   iconType: c.ZP.Types.PAYMENT_REQUEST,
-                  buttonText: h.NW.string(h.t.f19PPT),
+                  buttonText: h.intl.string(h.t.f19PPT),
                   submitting: !(0, f.isDesktop)() && this.state.submitting
               });
     }
@@ -293,7 +293,7 @@ class T extends i.Component {
             });
     }
 }
-class N extends T {
+class A extends T {
     isBrowserCompatible() {
         return (0, d.vu)() >= 61;
     }
@@ -346,7 +346,7 @@ class N extends T {
                 (0, r.jsx)(s.Text, {
                     variant: 'text-md/medium',
                     className: m.connectionInstructions,
-                    children: h.NW.string(h.t.ueoGeX)
+                    children: h.intl.string(h.t.ueoGeX)
                 })
             ]
         });
@@ -356,7 +356,7 @@ class N extends T {
             ? this.renderConnectorView()
             : this.renderButton({
                   iconType: c.ZP.Types.G_PAY,
-                  buttonText: h.NW.string(h.t.p2jr2N),
+                  buttonText: h.intl.string(h.t.p2jr2N),
                   submitting: !(0, f.isDesktop)() && this.state.submitting
               });
     }
@@ -364,7 +364,7 @@ class N extends T {
         super(...e), g(this, 'state', E({}, this.initialState)), g(this, 'paymentRequestWallet', 'googlePay');
     }
 }
-class A extends T {
+class N extends T {
     isBrowserCompatible() {
         return (0, d.G6)();
     }
@@ -417,7 +417,7 @@ class A extends T {
                 (0, r.jsx)(s.Text, {
                     variant: 'text-md/medium',
                     className: m.connectionInstructions,
-                    children: h.NW.string(h.t.iv8pQU)
+                    children: h.intl.string(h.t.iv8pQU)
                 })
             ]
         });
@@ -427,7 +427,7 @@ class A extends T {
             ? this.renderConnectorView()
             : this.renderButton({
                   iconType: c.ZP.Types.APPLE_LIGHT,
-                  buttonText: h.NW.string(h.t.xdGS1t),
+                  buttonText: h.intl.string(h.t.xdGS1t),
                   submitting: !(0, f.isDesktop)() && this.state.submitting
               });
     }

@@ -1,21 +1,21 @@
-n.d(e, { Z: () => o });
-var i = n(200651);
-n(192379);
-var r = n(481060),
-    a = n(787014),
-    l = n(665906),
-    s = n(388032);
+e.d(n, { Z: () => o });
+var i = e(200651);
+e(192379);
+var r = e(481060),
+    l = e(787014),
+    a = e(665906),
+    s = e(388032);
 function o(t) {
-    let e = (0, l.C7)(t),
-        n = (0, l.$R)(t),
-        o = (0, l.Gu)(t);
-    return !e || !n || o || __OVERLAY__
+    let n = (0, a.C7)(t),
+        e = (0, a.$R)(t),
+        o = (0, a.Gu)(t);
+    return !n || !e || o || __OVERLAY__
         ? null
         : (0, i.jsx)(r.sNh, {
               id: 'edit-thread',
-              label: t.isForumPost() ? s.NW.string(s.t.NP1yHB) : s.NW.string(s.t['2Mk1TE']),
+              label: t.isForumPost() ? s.intl.string(s.t.NP1yHB) : s.intl.string(s.t['2Mk1TE']),
               action: () => {
-                  (0, r.pTH)(), a.ZP.open(t.id);
+                  (0, r.pTH)(), l.ZP.open(t.id);
               }
           });
 }

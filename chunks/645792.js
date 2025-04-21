@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => r,
-    b: () => i
+    Z: () => i,
+    b: () => r
 });
 let l = (0, n(818083).B)({
         kind: 'user',
@@ -15,7 +15,7 @@ let l = (0, n(818083).B)({
             }
         ]
     }),
-    r = l;
-function i() {
+    i = l;
+function r() {
     return l.getCurrentConfig({ location: '68acbb_1' }, { autoTrackExposure: !1 }).enabled;
 }

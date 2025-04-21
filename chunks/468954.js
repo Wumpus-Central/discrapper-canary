@@ -59,14 +59,14 @@ function _(e, t) {
     );
 }
 function p(e) {
-    let { categories: t, collapsedCategories: n, containerWidth: u, store: f, onSelectItem: p, onSearchExpressions: h, hasSearchResults: m, defaultSearchPlaceholder: g, emptySearchPlaceholder: E, renderEmptyState: b, renderRow: y, renderSection: v, renderSectionHeader: O, renderSectionFooter: I, renderInspector: S, renderEmptySearchState: T, renderCategoryList: N, renderHeaderAccessories: A, rowHeight: C, sectionHeaderHeight: R, sectionFooterHeight: P, itemNodeWidth: w, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: M, gridNotice: k, renderHeader: j, renderUpsell: U, setShowUpsell: G } = e,
+    let { categories: t, collapsedCategories: n, containerWidth: u, store: f, onSelectItem: p, onSearchExpressions: h, hasSearchResults: m, defaultSearchPlaceholder: g, emptySearchPlaceholder: E, renderEmptyState: b, renderRow: y, renderSection: v, renderSectionHeader: O, renderSectionFooter: I, renderInspector: S, renderEmptySearchState: T, renderCategoryList: A, renderHeaderAccessories: N, rowHeight: C, sectionHeaderHeight: R, sectionFooterHeight: P, itemNodeWidth: w, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: M, gridNotice: k, renderHeader: j, renderUpsell: U, setShowUpsell: G } = e,
         B = i.useRef(null),
         F = i.useRef(null),
         V = i.useRef(null),
         Z = 0 === t.length,
         H = (0, a.Iu)((e) => e.searchQuery),
-        W = f.useStore((e) => e.inspectedExpressionPosition),
-        Y = (0, o.ep)({
+        Y = f.useStore((e) => e.inspectedExpressionPosition),
+        W = (0, o.ep)({
             gridWrapperRef: B,
             containerWidth: u,
             showingEmptyState: Z
@@ -80,7 +80,7 @@ function p(e) {
         } = (0, o.yi)({
             categories: t,
             collapsedCategories: n,
-            gridWidth: Y,
+            gridWidth: W,
             listPaddingRight: D,
             itemNodeWidth: w,
             itemNodeMargin: L
@@ -121,8 +121,8 @@ function p(e) {
         eo = i.useCallback((e) => (null == I ? void 0 : I(t[e], e)), [t, I]),
         es = i.useCallback(() => {
             var e;
-            return null == S ? void 0 : S(null == K || null == (e = K[W.rowIndex]) ? void 0 : e[W.columnIndex]);
-        }, [K, W.columnIndex, W.rowIndex, S]);
+            return null == S ? void 0 : S(null == K || null == (e = K[Y.rowIndex]) ? void 0 : e[Y.columnIndex]);
+        }, [K, Y.columnIndex, Y.rowIndex, S]);
     i.useEffect(() => {
         h(H);
     }, [h, H]),
@@ -147,7 +147,7 @@ function p(e) {
                 defaultSearchPlaceholder: g,
                 emptySearchPlaceholder: E
             }),
-            null == A ? void 0 : A()
+            null == N ? void 0 : N()
         ]
     });
     return (0, r.jsxs)(r.Fragment, {
@@ -162,7 +162,7 @@ function p(e) {
                 ? b(c.emptyState)
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          N(F),
+                          A(F),
                           null != k &&
                               (0, r.jsx)('div', {
                                   className: c.gridNoticeWrapper,
@@ -181,7 +181,7 @@ function p(e) {
                                   ),
                                   {
                                       children:
-                                          null != Y
+                                          null != W
                                               ? (0, r.jsx)(s.Z, {
                                                     categories: t,
                                                     ref: F,

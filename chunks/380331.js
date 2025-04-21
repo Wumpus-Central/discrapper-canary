@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(880949),
     S = n(784222),
     T = n(149203),
-    N = n(981631),
-    A = n(957825),
+    A = n(981631),
+    N = n(957825),
     C = n(388032),
     R = n(171166);
 function P(e, t, n) {
@@ -89,8 +89,8 @@ let x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     V = k + M + 2 * U,
     Z = x + M,
     H = Z + (B + 2 * F),
-    W = k + j + 2 * U,
-    Y = 7;
+    Y = k + j + 2 * U,
+    W = 7;
 function K(e) {
     let { activeIndex: t, categoryIndex: n, analyticsContext: a, categories: s, category: l, handleCategorySelect: u, isWindowFocused: d, useReducedMotion: _ } = e,
         p = (0, c.JA)('expression-guild-'.concat(n)),
@@ -109,9 +109,9 @@ function K(e) {
                 }),
                 onClick: () => {
                     null != E &&
-                        b.default.track(N.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                        b.default.track(A.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                             location: null == a ? void 0 : a.location,
-                            tab: A.X1.EMOJI,
+                            tab: N.X1.EMOJI,
                             guild_id: E.id
                         }),
                         u(n);
@@ -162,8 +162,8 @@ let z = (e) => {
         y = (0, _.O)(),
         O = (0, v.kI)(s, c, null == c ? void 0 : c.guild_id, d),
         I = i.useRef(null),
-        N = (0, u.e7)([E.Z], () => E.Z.isFocused()),
-        A = (0, u.e7)([p.Z], () => p.Z.useReducedMotion, []),
+        A = (0, u.e7)([E.Z], () => E.Z.isFocused()),
+        N = (0, u.e7)([p.Z], () => p.Z.useReducedMotion, []),
         P = i.useMemo(
             () =>
                 l().memoize((e, t) => {
@@ -178,13 +178,13 @@ let z = (e) => {
                                 category: n,
                                 categoryIndex: t,
                                 handleCategorySelect: b,
-                                isWindowFocused: N,
-                                useReducedMotion: A
+                                isWindowFocused: A,
+                                useReducedMotion: N
                             },
                             t
                         );
                 }),
-            [g, y, O, b, N, A]
+            [g, y, O, b, A, N]
         ),
         w = i.useMemo(() => [8, 8, 0, 8], []),
         D = i.useCallback(
@@ -195,7 +195,7 @@ let z = (e) => {
                     let e = O[t + 1];
                     return null != e && e.type !== T.En.GUILD ? H : Z;
                 }
-                return W;
+                return Y;
             },
             [O]
         ),
@@ -222,7 +222,7 @@ let z = (e) => {
         }, [O]),
         [q, Q] = i.useState(!0);
     i.useLayoutEffect(() => {
-        Q(L >= Y);
+        Q(L >= W);
     }, [L]);
     let X = i.useCallback(
             (e) => {
@@ -276,12 +276,12 @@ let z = (e) => {
         getScrollOffsetForIndex: $,
         rowCountBySection: z,
         children: (e) =>
-            L >= Y &&
+            L >= W &&
             (0, r.jsx)(
                 f.P3F,
                 {
                     'aria-hidden': !q,
-                    'aria-label': C.NW.string(C.t.dT0ct7),
+                    'aria-label': C.intl.string(C.t.dT0ct7),
                     className: o()(R.unicodeShortcut, { [R.unicodeShortcutInvisible]: !q }),
                     tabIndex: q ? 0 : -1,
                     onClick: () => J(e),

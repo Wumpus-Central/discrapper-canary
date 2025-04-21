@@ -73,7 +73,7 @@ let T = (e) => {
     let t = c.Z.getChannel(e);
     return null == t ? void 0 : t.getGuildId();
 };
-function N(e) {
+function A(e) {
     return {
         type: 'guild',
         guildId: e.id,
@@ -85,7 +85,7 @@ function N(e) {
         })
     };
 }
-function A(e, t) {
+function N(e, t) {
     let n,
         r = D((0, m.aF)(e.name, 32));
     return {
@@ -106,7 +106,7 @@ function A(e, t) {
 function C(e, t) {
     let n = {
         type: 'channel',
-        content: [D(e.roleSubscriptionGated ? e.name : y.NW.string(y.t['/YzI6+']))],
+        content: [D(e.roleSubscriptionGated ? e.name : y.intl.string(y.t['/YzI6+']))],
         channelType: e.roleSubscriptionGated ? e.type : b.d4z.UNKNOWN,
         iconType: 'locked'
     };
@@ -184,12 +184,12 @@ function D(e) {
     };
 }
 function L(e) {
-    return null != e ? w(e) : D('#'.concat(y.NW.string(y.t.J90oLS)));
+    return null != e ? w(e) : D('#'.concat(y.intl.string(y.t.J90oLS)));
 }
 function x() {
-    return A(
+    return N(
         {
-            name: y.NW.string(y.t.zLZPmp).toLowerCase(),
+            name: y.intl.string(y.t.zLZPmp).toLowerCase(),
             type: b.d4z.UNKNOWN,
             iconType: 'text'
         },
@@ -205,13 +205,13 @@ function M(e, t, n, r, i) {
         channelId: t,
         messageId: n,
         originalLink: i,
-        inContent: null == a || o ? null : [N(a)],
+        inContent: null == a || o ? null : [A(a)],
         content: [x()]
     };
 }
 function k(e, t, n, r) {
-    let i = N(e),
-        a = A(t),
+    let i = A(e),
+        a = N(t),
         o = R(t.isForumPost);
     if (n && r) {
         if (t.isForumPost) {
@@ -220,7 +220,7 @@ function k(e, t, n, r) {
                 var s;
                 return {
                     inContent: [
-                        A({
+                        N({
                             name: e.name,
                             type: e.type,
                             iconType: null != (s = (0, h.wl)(e)) ? s : 'forum'
@@ -267,7 +267,7 @@ function j(e, t, n, r) {
         if (e.isDm)
             return S(O({}, i), {
                 guildId: b.ME,
-                inContent: [A(e)],
+                inContent: [N(e)],
                 content: [R(!1)]
             });
         else return L(r);

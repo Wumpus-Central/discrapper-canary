@@ -1,40 +1,40 @@
-t.d(a, { default: () => S }), t(388685), t(539854);
-var n = t(200651),
-    s = t(192379),
-    l = t(658722),
-    i = t.n(l),
-    r = t(392711),
-    o = t(442837),
-    c = t(481060),
-    d = t(224706),
-    m = t(812206),
-    u = t(835473),
-    h = t(206295),
-    g = t(669764),
-    x = t(925329),
-    p = t(77498),
-    N = t(49012),
-    j = t(810568),
-    f = t(701488),
-    v = t(388032),
-    _ = t(271387);
+a.d(t, { default: () => z }), a(388685), a(539854);
+var n = a(200651),
+    l = a(192379),
+    i = a(658722),
+    s = a.n(i),
+    r = a(392711),
+    o = a(442837),
+    c = a(481060),
+    d = a(224706),
+    m = a(812206),
+    u = a(835473),
+    h = a(206295),
+    g = a(669764),
+    x = a(925329),
+    p = a(77498),
+    j = a(49012),
+    f = a(810568),
+    v = a(701488),
+    N = a(388032),
+    _ = a(271387);
 function I(e) {
-    let { showOutdatedInfoOption: a, onChoice: t } = e,
-        s = [
+    let { showOutdatedInfoOption: t, onChoice: a } = e,
+        l = [
             {
-                name: v.NW.string(v.t['o/xUFh']),
+                name: N.intl.string(N.t['o/xUFh']),
                 value: 1
             },
-            ...(a
+            ...(t
                 ? [
                       {
-                          name: v.NW.string(v.t['ry3/tL']),
+                          name: N.intl.string(N.t['ry3/tL']),
                           value: 2
                       }
                   ]
                 : []),
             {
-                name: v.NW.string(v.t.JyZlTk),
+                name: N.intl.string(N.t.JyZlTk),
                 value: 3
             }
         ];
@@ -44,27 +44,27 @@ function I(e) {
             (0, n.jsx)(c.X6q, {
                 variant: 'heading-xl/bold',
                 className: _.header,
-                children: v.NW.string(v.t['8itBsL'])
+                children: N.intl.string(N.t['8itBsL'])
             }),
             (0, n.jsx)(c.Text, {
                 className: _.tip,
                 variant: 'text-md/normal',
-                children: v.NW.string(v.t.X7ab09)
+                children: N.intl.string(N.t.X7ab09)
             }),
             (0, n.jsx)(c.FXm, {
                 className: _.radioGroup,
-                options: s,
+                options: l,
                 onChange: (e) => {
-                    let { value: a } = e;
-                    return t(a);
+                    let { value: t } = e;
+                    return a(t);
                 }
             })
         ]
     });
 }
 function k(e) {
-    let { applicationId: a, onSubmitted: t, viewId: s } = e,
-        l = (0, u.q)(a);
+    let { applicationId: t, onSubmitted: a, viewId: l } = e,
+        i = (0, u.q)(t);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(c.hzk, {
@@ -73,12 +73,12 @@ function k(e) {
                     (0, n.jsx)(c.X6q, {
                         variant: 'heading-xl/bold',
                         className: _.header,
-                        children: v.NW.string(v.t.lWk2u7)
+                        children: N.intl.string(N.t.lWk2u7)
                     }),
                     (0, n.jsx)(c.Text, {
                         className: _.tip,
                         variant: 'text-md/normal',
-                        children: v.NW.string(v.t.ZQfxS0)
+                        children: N.intl.string(N.t.ZQfxS0)
                     })
                 ]
             }),
@@ -87,89 +87,89 @@ function k(e) {
                 children: (0, n.jsx)(c.zxk, {
                     fullWidth: !0,
                     onClick: () => {
-                        (0, N.q)({
-                            href: (null == l ? void 0 : l.name) != null ? ''.concat('https://www.igdb.com/search?utf8=\u2713&q=').concat(encodeURIComponent(l.name)) : 'https://www.igdb.com',
+                        (0, j.q)({
+                            href: (null == i ? void 0 : i.name) != null ? ''.concat('https://www.igdb.com/search?utf8=\u2713&q=').concat(encodeURIComponent(i.name)) : 'https://www.igdb.com',
                             trusted: !0
                         }),
-                            (0, j.MH)({
-                                applicationId: a,
+                            (0, f.MH)({
+                                applicationId: t,
                                 submitted: !0,
-                                viewId: s
+                                viewId: l
                             }),
-                            t();
+                            a();
                     },
-                    children: v.NW.string(v.t.RSATCA)
+                    children: N.intl.string(N.t.RSATCA)
                 })
             })
         ]
     });
 }
-let W = (e) => {
-    let { id: a, name: t, applicationRecord: s } = e;
+let b = (e) => {
+    let { id: t, name: a, applicationRecord: l } = e;
     return (0, n.jsxs)('div', {
         className: _.gameSuggestion,
         children: [
-            null != a
+            null != t
                 ? (0, n.jsx)(x.Z, {
-                      game: s,
+                      game: l,
                       className: _.smolGameIcon
                   })
                 : (0, n.jsx)(c.vdY, {
                       className: _.customGameNameIcon,
                       size: 'sm'
                   }),
-            t
+            a
         ]
     });
 };
-function b(e) {
-    var a, t, l;
-    let { applicationId: x, onSubmitted: N, viewId: I } = e,
-        [k, b] = s.useState(''),
-        w = (0, o.e7)([m.Z], () => m.Z.getApplication(x)),
-        [C, S] = s.useState(''),
-        z = (0, o.e7)([g.Z], () => g.Z.getGame(x)),
-        G = null != (t = null != (a = null == z ? void 0 : z.name) ? a : null == w ? void 0 : w.name) ? t : '',
-        L = null == w ? void 0 : w.getIconURL(f.Si.LARGE),
-        { primaryColor: Z, secondaryColor: X } = (0, h.Z)(L);
-    s.useEffect(() => {
+function w(e) {
+    var t, a, i;
+    let { applicationId: x, onSubmitted: j, viewId: I } = e,
+        [k, w] = l.useState(''),
+        C = (0, o.e7)([m.Z], () => m.Z.getApplication(x)),
+        [S, z] = l.useState(''),
+        G = (0, o.e7)([g.Z], () => g.Z.getGame(x)),
+        L = null != (a = null != (t = null == G ? void 0 : G.name) ? t : null == C ? void 0 : C.name) ? a : '',
+        Z = null == C ? void 0 : C.getIconURL(v.Si.LARGE),
+        { primaryColor: X, secondaryColor: q } = (0, h.Z)(Z);
+    l.useEffect(() => {
         d.Z.getDetectableGames();
     }, []);
-    let q = (0, o.Wu)(
+    let B = (0, o.Wu)(
             [p.Z],
             () => {
-                let e = ((null == k ? void 0 : k.length) > 0 ? k : G).toLowerCase(),
-                    a = null != C ? p.Z.getDetectableGame(C) : void 0;
+                let e = ((null == k ? void 0 : k.length) > 0 ? k : L).toLowerCase(),
+                    t = null != S ? p.Z.getDetectableGame(S) : void 0;
                 return (0, r.chain)(p.Z.games)
-                    .filter((a) => i()(e, a.name.toLowerCase()))
+                    .filter((t) => s()(e, t.name.toLowerCase()))
                     .filter((e) => e.id !== x)
                     .take(4)
-                    .concat(null != a ? [a] : [])
+                    .concat(null != t ? [t] : [])
                     .compact()
                     .uniqBy('id')
                     .value();
             },
-            [x, C, G, k]
+            [x, S, L, k]
         ),
-        B = (0, u.Z)(q.map((e) => e.id)),
-        F = (0, r.chain)(B).compact().keyBy('id').value(),
-        R = k.length > 0 && !q.map((e) => e.name.toLowerCase()).includes(k.toLowerCase()),
-        T = C === x || (null === C && 0 === k.length),
-        y = q.map((e) => {
-            let { name: a, id: t } = e;
+        F = (0, u.Z)(B.map((e) => e.id)),
+        R = (0, r.chain)(F).compact().keyBy('id').value(),
+        T = k.length > 0 && !B.map((e) => e.name.toLowerCase()).includes(k.toLowerCase()),
+        y = S === x || (null === S && 0 === k.length),
+        A = B.map((e) => {
+            let { name: t, id: a } = e;
             return {
-                name: (0, n.jsx)(W, {
-                    name: a,
-                    id: t,
-                    applicationRecord: F[t]
+                name: (0, n.jsx)(b, {
+                    name: t,
+                    id: a,
+                    applicationRecord: R[a]
                 }),
-                value: t
+                value: a
             };
         });
     return (
-        R &&
-            y.push({
-                name: (0, n.jsx)(W, { name: k }),
+        T &&
+            A.push({
+                name: (0, n.jsx)(b, { name: k }),
                 value: ''
             }),
         (0, n.jsxs)(n.Fragment, {
@@ -180,27 +180,27 @@ function b(e) {
                         (0, n.jsx)(c.X6q, {
                             variant: 'heading-xl/bold',
                             className: _.header,
-                            children: v.NW.string(v.t.tJzB6O)
+                            children: N.intl.string(N.t.tJzB6O)
                         }),
                         (0, n.jsx)(c.Text, {
                             className: _.tip,
                             variant: 'text-md/normal',
-                            children: v.NW.string(v.t['44R0Iy'])
+                            children: N.intl.string(N.t['44R0Iy'])
                         }),
                         (0, n.jsxs)('div', {
                             className: _.gameInfoBox,
-                            style: { background: 'linear-gradient(45deg, '.concat(Z, ', ').concat(X, ')') },
+                            style: { background: 'linear-gradient(45deg, '.concat(X, ', ').concat(q, ')') },
                             children: [
-                                null != L &&
+                                null != Z &&
                                     (0, n.jsx)('img', {
                                         className: _.gameIcon,
-                                        src: L,
+                                        src: Z,
                                         alt: ''
                                     }),
                                 (0, n.jsx)(c.X6q, {
                                     variant: 'heading-lg/semibold',
                                     className: _.gameTitle,
-                                    children: null != (l = null == z ? void 0 : z.name) ? l : null == w ? void 0 : w.name
+                                    children: null != (i = null == G ? void 0 : G.name) ? i : null == C ? void 0 : C.name
                                 })
                             ]
                         }),
@@ -211,30 +211,30 @@ function b(e) {
                                     className: _.searchBar,
                                     query: k,
                                     onChange: (e) => {
-                                        if (0 === e.length) null === C && S(x);
+                                        if (0 === e.length) null === S && z(x);
                                         else {
-                                            var a;
-                                            let t = q.find((a) => a.name.toLowerCase() === e.toLowerCase());
-                                            S(null != (a = null == t ? void 0 : t.id) ? a : '');
+                                            var t;
+                                            let a = B.find((t) => t.name.toLowerCase() === e.toLowerCase());
+                                            z(null != (t = null == a ? void 0 : a.id) ? t : '');
                                         }
-                                        b(e);
+                                        w(e);
                                     },
                                     size: c.E1j.Sizes.MEDIUM,
                                     onClear: () => {
-                                        null === C && S(x), b('');
+                                        null === S && z(x), w('');
                                     },
-                                    placeholder: v.NW.string(v.t.UedRLy)
+                                    placeholder: N.intl.string(N.t.UedRLy)
                                 }),
                                 (0, n.jsx)(c.FXm, {
                                     size: c.FXm.Sizes.NONE,
                                     radioPosition: 'right',
                                     withTransparentBackground: !0,
                                     radioItemClassName: _.gameSuggestionRadioItem,
-                                    value: C,
-                                    options: y,
+                                    value: S,
+                                    options: A,
                                     onChange: (e) => {
-                                        let { value: a } = e;
-                                        return S(a);
+                                        let { value: t } = e;
+                                        return z(t);
                                     }
                                 })
                             ]
@@ -246,27 +246,27 @@ function b(e) {
                     children: (0, n.jsx)(c.zxk, {
                         fullWidth: !0,
                         onClick: () => {
-                            let e = null != C && C.length > 0;
-                            (0, j.MH)({
+                            let e = null != S && S.length > 0;
+                            (0, f.MH)({
                                 applicationId: x,
-                                suggestedGameApplicationId: e ? C : void 0,
+                                suggestedGameApplicationId: e ? S : void 0,
                                 suggestedGameName: e ? void 0 : k,
                                 submitted: !0,
                                 viewId: I
                             }),
-                                N();
+                                j();
                         },
-                        disabled: T,
-                        children: v.NW.string(v.t.geKm7u)
+                        disabled: y,
+                        children: N.intl.string(N.t.geKm7u)
                     })
                 })
             ]
         })
     );
 }
-function w(e) {
-    let { applicationId: a, onSubmitted: t, viewId: l } = e,
-        [i, r] = s.useState('');
+function C(e) {
+    let { applicationId: t, onSubmitted: a, viewId: i } = e,
+        [s, r] = l.useState('');
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(c.hzk, {
@@ -275,19 +275,19 @@ function w(e) {
                     (0, n.jsx)(c.X6q, {
                         variant: 'heading-xl/bold',
                         className: _.header,
-                        children: v.NW.string(v.t['/nALeX'])
+                        children: N.intl.string(N.t['/nALeX'])
                     }),
                     (0, n.jsx)(c.Text, {
                         className: _.tip,
                         variant: 'text-md/normal',
-                        children: v.NW.string(v.t.WOuJ8v)
+                        children: N.intl.string(N.t.WOuJ8v)
                     }),
                     (0, n.jsx)('div', {
                         className: _.otherFeedbackInput,
                         children: (0, n.jsx)(c.Kx8, {
-                            value: i,
+                            value: s,
                             onChange: (e) => r(e),
-                            placeholder: v.NW.string(v.t.AHCr5e),
+                            placeholder: N.intl.string(N.t.AHCr5e),
                             maxLength: 300
                         })
                     })
@@ -298,23 +298,23 @@ function w(e) {
                 children: (0, n.jsx)(c.zxk, {
                     fullWidth: !0,
                     onClick: () => {
-                        (0, j.MH)({
-                            applicationId: a,
+                        (0, f.MH)({
+                            applicationId: t,
                             submitted: !0,
-                            feedback: i,
-                            viewId: l
+                            feedback: s,
+                            viewId: i
                         }),
-                            t();
+                            a();
                     },
-                    disabled: 0 === i.length,
-                    children: v.NW.string(v.t.geKm7u)
+                    disabled: 0 === s.length,
+                    children: N.intl.string(N.t.geKm7u)
                 })
             })
         ]
     });
 }
-function C(e) {
-    let { onClose: a } = e;
+function S(e) {
+    let { onClose: t } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(c.hzk, {
@@ -323,12 +323,12 @@ function C(e) {
                     (0, n.jsx)(c.X6q, {
                         variant: 'heading-xl/bold',
                         className: _.header,
-                        children: v.NW.string(v.t['pelg/f'])
+                        children: N.intl.string(N.t['pelg/f'])
                     }),
                     (0, n.jsx)(c.Text, {
                         className: _.tip,
                         variant: 'text-md/normal',
-                        children: v.NW.string(v.t['55S/OD'])
+                        children: N.intl.string(N.t['55S/OD'])
                     })
                 ]
             }),
@@ -336,19 +336,19 @@ function C(e) {
                 className: _.footer,
                 children: (0, n.jsx)(c.zxk, {
                     fullWidth: !0,
-                    onClick: a,
-                    children: v.NW.string(v.t.i4jeWV)
+                    onClick: t,
+                    children: N.intl.string(N.t.i4jeWV)
                 })
             })
         ]
     });
 }
-function S(e) {
-    let { applicationId: a, viewId: t, transitionState: l, onClose: i, showOutdatedInfoOption: r } = e,
-        [o, d] = s.useState(0);
+function z(e) {
+    let { applicationId: t, viewId: a, transitionState: i, onClose: s, showOutdatedInfoOption: r } = e,
+        [o, d] = l.useState(0);
     return (0, n.jsx)(c.Y0X, {
         size: c.CgR.SMALL,
-        transitionState: l,
+        transitionState: i,
         children: (() => {
             switch (o) {
                 case 0:
@@ -357,25 +357,25 @@ function S(e) {
                         onChoice: (e) => d(e)
                     });
                 case 1:
-                    return (0, n.jsx)(b, {
-                        applicationId: a,
-                        viewId: t,
+                    return (0, n.jsx)(w, {
+                        applicationId: t,
+                        viewId: a,
                         onSubmitted: () => d(4)
                     });
                 case 2:
                     return (0, n.jsx)(k, {
-                        applicationId: a,
-                        viewId: t,
-                        onSubmitted: () => i()
+                        applicationId: t,
+                        viewId: a,
+                        onSubmitted: () => s()
                     });
                 case 3:
-                    return (0, n.jsx)(w, {
-                        applicationId: a,
-                        viewId: t,
+                    return (0, n.jsx)(C, {
+                        applicationId: t,
+                        viewId: a,
                         onSubmitted: () => d(4)
                     });
                 case 4:
-                    return (0, n.jsx)(C, { onClose: i });
+                    return (0, n.jsx)(S, { onClose: s });
             }
         })()
     });

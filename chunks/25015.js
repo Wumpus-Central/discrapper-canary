@@ -14,7 +14,7 @@ function d(e, t) {
         if (null != e.customRenderedContent) return e.customRenderedContent;
         if (e.isUnsupported)
             return {
-                content: c.NW.string(c.t.sWi5ER),
+                content: c.intl.string(c.t.sWi5ER),
                 hasSpoilerEmbeds: !1
             };
         if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(l.iLy.LOADING)) return (0, s.Z)(e);

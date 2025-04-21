@@ -1,7 +1,7 @@
-let r, o;
+let r, i;
 n.d(t, { Z: () => D }), n(388685), n(781311), n(35282);
-var i = n(200651),
-    l = n(192379),
+var l = n(200651),
+    o = n(192379),
     a = n(120356),
     s = n.n(a),
     c = n(481060),
@@ -11,45 +11,45 @@ var i = n(200651),
     p = n(313201),
     m = n(703656),
     f = n(782605),
-    N = n(981631),
-    I = n(388032),
+    I = n(981631),
+    N = n(388032),
     T = n(400024),
     E = n(216019),
     S = n(286359);
 let O = 'hTKzmak',
     C = (0, p.hQ)(),
-    b = ((r = window.GLOBAL_ENV.INVITE_HOST), (o = ''), null == r && ((r = location.host), (o = N.Z5c.INVITE(''))), ''.concat(location.protocol, '//').concat(r).concat(o, '/')),
+    b = ((r = window.GLOBAL_ENV.INVITE_HOST), (i = ''), null == r && ((r = location.host), (i = I.Z5c.INVITE(''))), ''.concat(location.protocol, '//').concat(r).concat(i, '/')),
     g = [O, ''.concat(b).concat(O), ''.concat(b).concat('wumpus-friends')],
     L = (e) => {
         let { onClick: t } = e;
-        return (0, i.jsxs)(c.P3F, {
+        return (0, l.jsxs)(c.P3F, {
             className: T.rowContainer,
             onClick: () => {
-                t(), (0, m.uL)(N.Z5c.GUILD_DISCOVERY);
+                t(), (0, m.uL)(I.Z5c.GUILD_DISCOVERY);
             },
             children: [
-                (0, i.jsx)('img', {
+                (0, l.jsx)('img', {
                     width: 40,
                     height: 40,
                     className: T.rowIcon,
                     alt: '',
                     src: S
                 }),
-                (0, i.jsxs)('div', {
+                (0, l.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(c.X6q, {
+                        (0, l.jsx)(c.X6q, {
                             className: T.rowText,
                             variant: 'heading-md/semibold',
-                            children: I.NW.string(I.t.DwDxDQ)
+                            children: N.intl.string(N.t.DwDxDQ)
                         }),
-                        (0, i.jsx)(c.Text, {
+                        (0, l.jsx)(c.Text, {
                             className: T.rowText,
                             variant: 'text-xs/normal',
-                            children: I.NW.string(I.t['5RL4CA'])
+                            children: N.intl.string(N.t['5RL4CA'])
                         })
                     ]
                 }),
-                (0, i.jsx)('img', {
+                (0, l.jsx)('img', {
                     className: T.rowArrow,
                     alt: '',
                     src: E
@@ -59,25 +59,25 @@ let O = 'hTKzmak',
     };
 function D(e) {
     let { onBack: t, onClose: n, isSlideReady: r } = e,
-        [o, a] = l.useState(''),
-        [p, m] = l.useState(!1),
-        [N, E] = l.useState(null),
-        S = l.useRef(null);
-    l.useEffect(() => {
+        [i, a] = o.useState(''),
+        [p, m] = o.useState(!1),
+        [I, E] = o.useState(null),
+        S = o.useRef(null);
+    o.useEffect(() => {
         var e;
         r && (null == (e = S.current) || e.focus());
     }, [r]);
     let D = (e) => {
         e.preventDefault();
-        let t = o.trim();
-        if ('' === t) return void E(I.NW.string(I.t.IRq5am));
+        let t = i.trim();
+        if ('' === t) return void E(N.intl.string(N.t.IRq5am));
         E(null), m(!0);
         let r = t.split('/'),
-            i = r[r.length - 1];
-        u.ZP.resolveInvite(i, 'Join Guild', { inputValue: t }).then(
+            l = r[r.length - 1];
+        u.ZP.resolveInvite(l, 'Join Guild', { inputValue: t }).then(
             (e) => {
                 let { invite: t } = e;
-                if ((m(!1), null == t)) return void E(I.NW.string(I.t['GEYI+f']));
+                if ((m(!1), null == t)) return void E(N.intl.string(N.t['GEYI+f']));
                 if (null != t.channel) {
                     let e = u.ZP.getInviteContext('Join Guild', t);
                     u.ZP.acceptInvite({
@@ -89,7 +89,7 @@ function D(e) {
                     }).then(
                         () => {},
                         (e) => {
-                            e instanceof _.yZ || e instanceof _.Hx ? E((0, f.O)(e.code)) : E(I.NW.string(I.t.dDZRd3));
+                            e instanceof _.yZ || e instanceof _.Hx ? E((0, f.O)(e.code)) : E(N.intl.string(N.t.dDZRd3));
                         }
                     );
                 }
@@ -101,46 +101,46 @@ function D(e) {
             }
         );
     };
-    return (0, i.jsxs)('div', {
+    return (0, l.jsxs)('div', {
         children: [
-            (0, i.jsxs)(c.xBx, {
+            (0, l.jsxs)(c.xBx, {
                 className: T.header,
                 direction: d.Z.Direction.VERTICAL,
                 separator: !1,
                 children: [
-                    (0, i.jsx)(c.X6q, {
+                    (0, l.jsx)(c.X6q, {
                         className: T.title,
                         variant: 'heading-xl/semibold',
-                        children: I.NW.string(I.t.riOUtL)
+                        children: N.intl.string(N.t.riOUtL)
                     }),
-                    (0, i.jsx)(c.Text, {
+                    (0, l.jsx)(c.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: I.NW.string(I.t['7jub2t'])
+                        children: N.intl.string(N.t['7jub2t'])
                     }),
-                    (0, i.jsx)(c.olH, {
+                    (0, l.jsx)(c.olH, {
                         className: T.closeButton,
                         onClick: n
                     })
                 ]
             }),
-            (0, i.jsxs)(c.hzk, {
+            (0, l.jsxs)(c.hzk, {
                 className: T.__invalid_content,
                 children: [
-                    (0, i.jsx)('form', {
+                    (0, l.jsx)('form', {
                         onSubmit: D,
                         className: T.inputForm,
-                        children: (0, i.jsxs)(c.xJW, {
+                        children: (0, l.jsxs)(c.xJW, {
                             children: [
-                                (0, i.jsx)(c.vwX, {
+                                (0, l.jsx)(c.vwX, {
                                     id: C,
-                                    error: N,
-                                    className: s()(T.formTitle, { [T.error]: null != N }),
+                                    error: I,
+                                    className: s()(T.formTitle, { [T.error]: null != I }),
                                     required: !0,
-                                    children: I.NW.string(I.t.qreV29)
+                                    children: N.intl.string(N.t.qreV29)
                                 }),
-                                (0, i.jsx)(c.oil, {
-                                    value: o,
+                                (0, l.jsx)(c.oil, {
+                                    value: i,
                                     onChange: a,
                                     className: T.input,
                                     inputClassName: T.inputInner,
@@ -152,12 +152,12 @@ function D(e) {
                             ]
                         })
                     }),
-                    (0, i.jsx)(c.xJW, {
-                        title: I.NW.string(I.t.Bnq46O),
+                    (0, l.jsx)(c.xJW, {
+                        title: N.intl.string(N.t.Bnq46O),
                         titleClassName: T.formTitle,
                         className: T.examplesForm,
                         children: g.map((e) =>
-                            (0, i.jsx)(
+                            (0, l.jsx)(
                                 c.P3F,
                                 {
                                     className: T.sampleLink,
@@ -168,24 +168,24 @@ function D(e) {
                             )
                         )
                     }),
-                    (0, i.jsx)(L, { onClick: n })
+                    (0, l.jsx)(L, { onClick: n })
                 ]
             }),
-            (0, i.jsxs)(c.mzw, {
+            (0, l.jsxs)(c.mzw, {
                 className: T.footer,
                 children: [
-                    (0, i.jsx)(c.zxk, {
+                    (0, l.jsx)(c.zxk, {
                         color: c.zxk.Colors.BRAND,
                         submitting: p,
                         onClick: D,
-                        children: I.NW.string(I.t['Ts/9AQ'])
+                        children: N.intl.string(N.t['Ts/9AQ'])
                     }),
-                    (0, i.jsx)(c.zxk, {
+                    (0, l.jsx)(c.zxk, {
                         color: c.zxk.Colors.PRIMARY,
                         look: c.zxk.Looks.LINK,
                         size: c.zxk.Sizes.MIN,
                         onClick: t,
-                        children: I.NW.string(I.t['13/7kZ'])
+                        children: N.intl.string(N.t['13/7kZ'])
                     })
                 ]
             })

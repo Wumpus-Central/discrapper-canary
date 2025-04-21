@@ -22,24 +22,24 @@ let O = (e) => {
     let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: O, setTrackedUpsellViewed: I } = e,
         { location: S } = (0, c.O)(),
         { analyticsLocations: T } = (0, d.ZP)(),
-        N = (0, s.e7)([m.Z], () => m.Z.getGuild(n)),
-        { canManageAllExpressions: A } = (0, h.XJ)(N),
-        C = null != N && 0 === (0, g.A3)(N.premiumTier) && !N.hasFeature(E.oNc.MORE_STICKERS);
+        A = (0, s.e7)([m.Z], () => m.Z.getGuild(n)),
+        { canManageAllExpressions: N } = (0, h.XJ)(A),
+        C = null != A && 0 === (0, g.A3)(A.premiumTier) && !A.hasFeature(E.oNc.MORE_STICKERS);
     if (
         (i.useEffect(() => {
-            A &&
+            N &&
                 C &&
                 O &&
                 ((0, u.yw)(E.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
                     location: S,
-                    guild_id: null == N ? void 0 : N.id,
+                    guild_id: null == A ? void 0 : A.id,
                     channel_id: null == a ? void 0 : a.id,
                     type: 'Expression Picker Inline Sticker Upsell',
                     location_stack: T
                 }),
                 I(!0));
-        }, [C, N, a, S, O, I, T, A]),
-        null == N || !A)
+        }, [C, A, a, S, O, I, T, N]),
+        null == A || !N)
     )
         return null;
     if (C) {
@@ -47,7 +47,7 @@ let O = (e) => {
             (0, _.Z)({
                 analyticsLocations: T,
                 analyticsSourceLocation: S,
-                guild: N,
+                guild: A,
                 perks: (0, b.hC)()
             });
         };
@@ -63,13 +63,13 @@ let O = (e) => {
                     color: 'interactive-normal',
                     className: v.body,
                     variant: 'text-sm/normal',
-                    children: y.NW.format(y.t.AXWla2, { count: (0, g.A3)(E.Eu4.TIER_1) })
+                    children: y.intl.format(y.t.AXWla2, { count: (0, g.A3)(E.Eu4.TIER_1) })
                 }),
                 (0, r.jsx)(l.zxk, {
                     look: l.zxk.Looks.LINK,
                     color: l.zxk.Colors.LINK,
                     onClick: e,
-                    children: y.NW.string(y.t['Gb+BJC'])
+                    children: y.intl.string(y.t['Gb+BJC'])
                 })
             ]
         });
@@ -92,13 +92,13 @@ let O = (e) => {
                     color: 'interactive-normal',
                     className: v.body,
                     variant: 'text-sm/normal',
-                    children: y.NW.string(y.t.S83wgo)
+                    children: y.intl.string(y.t.S83wgo)
                 }),
                 (0, r.jsx)(l.zxk, {
                     look: l.zxk.Looks.LINK,
                     color: l.zxk.Colors.LINK,
                     onClick: e,
-                    children: y.NW.string(y.t.bwNjur)
+                    children: y.intl.string(y.t.bwNjur)
                 })
             ]
         });

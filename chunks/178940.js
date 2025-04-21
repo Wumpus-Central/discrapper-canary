@@ -1,5 +1,5 @@
 n.d(t, {
-    F: () => A,
+    F: () => N,
     X: () => T
 }),
     n(583741),
@@ -116,7 +116,7 @@ class T extends (r = a.PureComponent) {
                             }
                         })
                     }),
-                (0, i.jsx)(A, E({}, this.props)),
+                (0, i.jsx)(N, E({}, this.props)),
                 u ? null : g
             ]
         });
@@ -129,7 +129,7 @@ class T extends (r = a.PureComponent) {
             });
     }
 }
-function N(e, t) {
+function A(e, t) {
     var n;
     let { value: r, type: i, color: a } = e,
         o = null != (n = e.style) ? n : {};
@@ -164,10 +164,10 @@ function N(e, t) {
         }
     return o;
 }
-function A(e) {
+function N(e) {
     let t = (0, p.Q3)('Checkbox'),
         { indicatorClassName: n, value: r, size: o, shape: l, checkboxColor: c, type: u, color: f, disabled: _ } = e,
-        h = N(e, t),
+        h = A(e, t),
         g = a.useMemo(() => (r ? (t || 'inverted' === u || 'row' === u ? d.Z.colors.WHITE.css : null != f ? f : d.Z.unsafe_rawColors.BRAND_500.css) : d.Z.unsafe_rawColors.TRANSPARENT.css), [r, u, f, t]);
     return (0, i.jsx)('div', {
         className: s()(m.checkbox, l, n, {

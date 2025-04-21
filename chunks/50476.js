@@ -20,11 +20,11 @@ let l = function (e) {
         children: [
             (0, r.jsxs)(i, {
                 onClick: t,
-                children: [s.NW.string(s.t.QXc019), (0, r.jsx)(o.pzj, { size: 'sm' })]
+                children: [s.intl.string(s.t.QXc019), (0, r.jsx)(o.pzj, { size: 'sm' })]
             }),
             (0, r.jsxs)(i, {
                 onClick: n,
-                children: [s.NW.string(s.t['8lAfuL']), (0, r.jsx)(o.iWm, { size: 'sm' })]
+                children: [s.intl.string(s.t['8lAfuL']), (0, r.jsx)(o.iWm, { size: 'sm' })]
             })
         ]
     });

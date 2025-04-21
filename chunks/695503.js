@@ -9,6 +9,6 @@ let s = function () {
         size: 'md',
         color: 'currentColor',
         className: o.icon,
-        'aria-label': a.NW.string(a.t.BAB0yM)
+        'aria-label': a.intl.string(a.t.BAB0yM)
     });
 };

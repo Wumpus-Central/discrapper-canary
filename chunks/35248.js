@@ -56,7 +56,7 @@ function O(e, t, n, r, i) {
 let I = (e) => {
         let t,
             { step: n, onPurchaseComplete: a, onHandoffFailure: o } = e,
-            { selectedPlan: u, setSelectedPlanId: d, setSelectedSkuId: f, browserCheckoutState: I, browserCheckoutStateLoadId: S, browserCheckoutStateSkuId: T, browserCheckoutStatePlanId: N, contextMetadata: A } = (0, p.JL)(),
+            { selectedPlan: u, setSelectedPlanId: d, setSelectedSkuId: f, browserCheckoutState: I, browserCheckoutStateLoadId: S, browserCheckoutStateSkuId: T, browserCheckoutStatePlanId: A, contextMetadata: N } = (0, p.JL)(),
             { isGift: C } = (0, _.wD)(),
             [R, P] = i.useState(!1);
         switch (n) {
@@ -70,24 +70,24 @@ let I = (e) => {
             i.useEffect(() => {
                 let e = setTimeout(() => {
                     var e;
-                    R || (P(!0), (0, l.r5)(A.loadId), O(null != (e = null == u ? void 0 : u.id) ? e : E.Xh.PREMIUM_MONTH_TIER_2, C, A.loadId, o, t));
+                    R || (P(!0), (0, l.r5)(N.loadId), O(null != (e = null == u ? void 0 : u.id) ? e : E.Xh.PREMIUM_MONTH_TIER_2, C, N.loadId, o, t));
                 }, v);
                 return () => clearTimeout(e);
-            }, [u, C, A, o, P, R, t]),
+            }, [u, C, N, o, P, R, t]),
             i.useEffect(() => {
-                null !== T && (E.YQ.includes(T) && ((0, c.GZ)(T), (0, l.jg)()), f(T)), null !== N && d(N), S === A.loadId && I === m.Y.DONE && a();
-            }, [f, d, I, S, T, N, A, a]),
+                null !== T && (E.YQ.includes(T) && ((0, c.GZ)(T), (0, l.jg)()), f(T)), null !== A && d(A), S === N.loadId && I === m.Y.DONE && a();
+            }, [f, d, I, S, T, A, N, a]),
             (0, r.jsxs)('div', {
                 className: y.body,
                 children: [
                     (0, r.jsx)(s.X6q, {
                         variant: 'heading-xl/bold',
-                        children: b.NW.string(b.t.C4HYf3)
+                        children: b.intl.string(b.t.C4HYf3)
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         className: y.description,
-                        children: b.NW.string(b.t.xfG7Ji)
+                        children: b.intl.string(b.t.xfG7Ji)
                     })
                 ]
             })
@@ -102,7 +102,7 @@ let I = (e) => {
                 children: [
                     (0, r.jsx)(d.y, {
                         onClick: t,
-                        children: b.NW.string(b.t['4Qvmmp'])
+                        children: b.intl.string(b.t['4Qvmmp'])
                     }),
                     (0, r.jsx)(d.Z, { onClick: n })
                 ]

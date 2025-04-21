@@ -54,10 +54,10 @@ let _ = () => {
                               l.default,
                               f(
                                   {
-                                      title: u.NW.string(u.t.dLLxCw),
-                                      body: u.NW.string(u.t['64lmt7']),
+                                      title: u.intl.string(u.t.dLLxCw),
+                                      body: u.intl.string(u.t['64lmt7']),
                                       onConfirm: d,
-                                      confirmText: u.NW.string(u.t.BddRzc)
+                                      confirmText: u.intl.string(u.t.BddRzc)
                                   },
                                   e
                               )

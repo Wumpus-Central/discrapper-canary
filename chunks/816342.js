@@ -27,9 +27,9 @@ let h = (e) => {
                 });
         }, [t, h, n]);
     return (0, r.jsx)(d.ZP, {
-        title: b.NW.formatToPlainString(b.t['Q1o/f3'], { username: v }),
-        description: b.NW.string(b.t.G08MKi),
-        buttonText: f ? b.NW.string(b.t.ot2tSk) : b.NW.string(b.t['l+7PZW']),
+        title: b.intl.formatToPlainString(b.t['Q1o/f3'], { username: v }),
+        description: b.intl.string(b.t.G08MKi),
+        buttonText: f ? b.intl.string(b.t.ot2tSk) : b.intl.string(b.t['l+7PZW']),
         buttonDisabled: f,
         onButtonPress: j,
         buttonColor: 'application' === _.name && f ? a.zxk.Colors.WHITE : a.zxk.Colors.RED,

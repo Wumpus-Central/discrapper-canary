@@ -21,11 +21,11 @@ function u(e) {
                 (0, r.jsx)(o.P3F, {
                     className: s.viewMore,
                     onClick: i,
-                    'aria-label': a.NW.formatToPlainString(a.t['bj/2kZ'], { title: t }),
+                    'aria-label': a.intl.formatToPlainString(a.t['bj/2kZ'], { title: t }),
                     children: (0, r.jsx)(o.Text, {
                         variant: 'text-md/medium',
                         color: 'text-brand',
-                        children: 0 === n ? a.NW.format(a.t.gVw57u, {}) : a.NW.string(a.t.nPGLFR)
+                        children: 0 === n ? a.intl.format(a.t.gVw57u, {}) : a.intl.string(a.t.nPGLFR)
                     })
                 })
         ]

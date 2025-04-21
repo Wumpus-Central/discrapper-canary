@@ -2,8 +2,8 @@ n.d(e, { default: () => p }), n(35282);
 var r = n(200651);
 n(192379);
 var i = n(828214),
-    o = n(481060),
-    l = n(239091),
+    l = n(481060),
+    o = n(239091),
     a = n(299206),
     c = n(519110),
     u = n(695346),
@@ -28,7 +28,7 @@ function p(t) {
             null != O
                 ? (0, r.jsx)(i.sN, {
                       id: 'copy',
-                      label: d.NW.string(d.t.ad58UF),
+                      label: d.intl.string(d.t.ad58UF),
                       action: () => (0, s.JG)(O)
                   })
                 : null,
@@ -41,15 +41,15 @@ function p(t) {
                           .concat(null == f ? void 0 : f.split('~')[0], ':')
                           .concat(g, '>')
                     : void 0,
-            label: p === b.S.STICKER ? d.NW.string(d.t['SJ324+']) : d.NW.string(d.t.Ap2oV1)
+            label: p === b.S.STICKER ? d.intl.string(d.t['SJ324+']) : d.intl.string(d.t.Ap2oV1)
         });
-    return (0, r.jsx)(o.v2r, {
+    return (0, r.jsx)(l.v2r, {
         navId: 'expression-picker',
-        onClose: l.Zy,
-        'aria-label': d.NW.string(d.t.XoasSE),
+        onClose: o.Zy,
+        'aria-label': d.intl.string(d.t.XoasSE),
         onSelect: n,
         className: 'context-menu',
-        children: (0, r.jsxs)(o.kSQ, {
+        children: (0, r.jsxs)(l.kSQ, {
             children: [S, s.wS && j ? (null != v ? v : E) : null]
         })
     });

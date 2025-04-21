@@ -1,15 +1,15 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(192379),
     i = n(584825),
-    s = n(14263);
-function l(e, t) {
+    l = n(14263);
+function s(e, t) {
     let n = (0, i.qi)(e),
-        l = (0, s.Z)(e);
+        s = (0, l.Z)(e);
     return r.useMemo(
         () =>
             n.map((e) => {
                 var n, r, i;
-                let s = null == e ? void 0 : e.role_id;
+                let l = null == e ? void 0 : e.role_id;
                 return (
                     (r = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -40,7 +40,7 @@ function l(e, t) {
                         {
                             key: e.id,
                             subscriptionListing: e,
-                            roleMemberCount: null == s || null == l ? void 0 : l[s]
+                            roleMemberCount: null == l || null == s ? void 0 : s[l]
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -57,6 +57,6 @@ function l(e, t) {
                     r
                 );
             }),
-        [n, null == t ? void 0 : t.ppgs, l]
+        [n, null == t ? void 0 : t.ppgs, s]
     );
 }

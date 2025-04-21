@@ -17,7 +17,7 @@ function u(e) {
                 className: c.info,
                 children: (0, r.jsx)(i.Text, {
                     variant: 'text-sm/medium',
-                    children: s.NW.format(s.t.P6Y2Nz, {})
+                    children: s.intl.format(s.t.P6Y2Nz, {})
                 })
             }),
             (0, r.jsx)('div', {
@@ -32,7 +32,7 @@ function u(e) {
                         (0, o.Z)(t.guild_id, t.id, a.ic.UNREADS_ONLY_MENTIONS), n();
                     },
                     children: [
-                        s.NW.string(s.t.KyUKhY),
+                        s.intl.string(s.t.KyUKhY),
                         (0, r.jsx)(i.UEU, {
                             size: 'xs',
                             color: 'currentColor',

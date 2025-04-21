@@ -53,7 +53,7 @@ function x(t) {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         className: b.__invalid_description,
-                        children: j.NW.format(j.t['6dOuaG'], { count: e.attachments_count })
+                        children: j.intl.format(j.t['6dOuaG'], { count: e.attachments_count })
                     })
                 ]
             }),
@@ -93,7 +93,7 @@ function O(t) {
         className: b.modal,
         size: s.CgR.MEDIUM,
         transitionState: c,
-        'aria-label': j.NW.string(j.t['3jaCaW']),
+        'aria-label': j.intl.string(j.t['3jaCaW']),
         children: [
             (0, r.jsx)(x, {
                 guildId: n,

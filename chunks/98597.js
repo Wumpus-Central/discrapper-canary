@@ -1,9 +1,9 @@
 n.d(t, {
-    CN: () => P,
+    CN: () => w,
     ZP: () => L,
     eP: () => A,
     hR: () => T,
-    jo: () => w
+    jo: () => N
 });
 var r,
     i = n(200651),
@@ -57,7 +57,7 @@ function I(e) {
     }
     return e;
 }
-function N(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,23 +75,23 @@ function N(e, t) {
         e
     );
 }
-function P(e, t, n) {
+function w(e, t, n) {
     return null != t && !!t && !(0, C.ig)(n, e.type);
 }
-function w(e, t) {
+function N(e, t) {
     return null == t ? x.containerDefault : e > t ? x.containerDragAfter : x.containerDragBefore;
 }
 function Z(e) {
     let { tabIndex: t, forceShowButtons: n, hasChannelInfo: r, onContextMenu: l } = e;
     return (0, i.jsx)(c.ua7, {
-        text: S.NW.string(S.t.OBr7Cw),
+        text: S.intl.string(S.t.OBr7Cw),
         children: (e) => {
             let { onMouseEnter: o, onMouseLeave: a, onFocus: u, onBlur: d } = e;
             return (0, i.jsx)(c.P3F, {
                 className: s()(x.iconItem, n ? x.alwaysShown : void 0, r ? x.iconWithChannelInfo : x.iconNoChannelInfo),
                 onClick: l,
                 tabIndex: t,
-                'aria-label': S.NW.string(S.t.OBr7Cw),
+                'aria-label': S.intl.string(S.t.OBr7Cw),
                 onMouseEnter: o,
                 onMouseLeave: a,
                 onFocus: u,
@@ -112,14 +112,14 @@ function T(e) {
         u.ZP.open(t.id);
     }
     return (0, i.jsx)(c.ua7, {
-        text: S.NW.string(S.t['3gUsJS']),
+        text: S.intl.string(S.t['3gUsJS']),
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n, onFocus: a, onBlur: u } = e;
             return (0, i.jsx)(c.P3F, {
                 className: s()(x.iconItem, l ? x.alwaysShown : void 0, o ? x.iconWithChannelInfo : x.iconNoChannelInfo),
                 onClick: d,
                 tabIndex: r,
-                'aria-label': S.NW.string(S.t['3gUsJS']),
+                'aria-label': S.intl.string(S.t['3gUsJS']),
                 onMouseEnter: t,
                 onMouseLeave: n,
                 onFocus: a,
@@ -138,12 +138,12 @@ function A(e) {
         { entrypoints: v } = (0, h._k)({ location: 'channel_base' }),
         C = (0, a.e7)([_.Z], () => _.Z.getGuild(t.getGuildId())),
         E = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
-        P = (0, a.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(t.id), [t.id]),
-        w = (0, a.e7)([O.Z], () => (0, p.b)(O.Z, C, t, E)),
-        Z = (0, a.e7)([O.Z], () => (O.Z.can(j.Plq.CREATE_INSTANT_INVITE, t) ? S.NW.string(S.t.zJrgTE) : S.NW.string(S.t.Sd8Ix8))),
-        T = v ? S.NW.string(S.t['EE+P0N']) : Z,
+        w = (0, a.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(t.id), [t.id]),
+        N = (0, a.e7)([O.Z], () => (0, p.b)(O.Z, C, t, E)),
+        Z = (0, a.e7)([O.Z], () => (O.Z.can(j.Plq.CREATE_INSTANT_INVITE, t) ? S.intl.string(S.t.zJrgTE) : S.intl.string(S.t.Sd8Ix8))),
+        T = v ? S.intl.string(S.t['EE+P0N']) : Z,
         A = l.useRef(null);
-    if (o || !w) return null;
+    if (o || !N) return null;
     function R() {
         if (null != C) {
             let e = y.Z.getAllActiveStreams().filter((e) => e.state !== j.jm8.ENDED && e.channelId === t.id);
@@ -152,12 +152,12 @@ function A(e) {
                 return (n) =>
                     (0, i.jsx)(
                         r,
-                        N(I({}, n), {
+                        P(I({}, n), {
                             guild: C,
                             channel: t,
                             streamUserId: 1 === e.length ? e[0].ownerId : null,
                             source: j.t4x.GUILD_CHANNELS,
-                            guildScheduledEvent: P
+                            guildScheduledEvent: w
                         })
                     );
             });
@@ -186,7 +186,7 @@ function A(e) {
             children: (e) =>
                 (0, i.jsx)(
                     c.P3F,
-                    N(I({ className: s()(x.iconItem, f ? x.alwaysShown : void 0, b ? x.iconWithChannelInfo : x.iconNoChannelInfo) }, e), {
+                    P(I({ className: s()(x.iconItem, f ? x.alwaysShown : void 0, b ? x.iconWithChannelInfo : x.iconNoChannelInfo) }, e), {
                         onClick: R,
                         tabIndex: u,
                         'aria-label': T,
@@ -202,13 +202,13 @@ function R(e) {
             (0, f._U)(t.guild_id, t.id);
         };
     return (0, i.jsx)(c.ua7, {
-        text: S.NW.string(S.t.ROh4T0),
+        text: S.intl.string(S.t.ROh4T0),
         children: (e) =>
             (0, i.jsx)(
                 c.P3F,
-                N(I({ className: x.iconItem }, e), {
+                P(I({ className: x.iconItem }, e), {
                     onClick: n,
-                    'aria-label': S.NW.string(S.t.ROh4T0),
+                    'aria-label': S.intl.string(S.t.ROh4T0),
                     children: (0, i.jsx)(c.Dio, {
                         size: 'xs',
                         color: 'currentColor',
@@ -224,13 +224,13 @@ function D(e) {
             (0, f.dM)(t.guild_id, t.id, !0, { section: j.jXE.CHANNEL_LIST });
         };
     return (0, i.jsx)(c.ua7, {
-        text: S.NW.string(S.t['N2c/Ul']),
+        text: S.intl.string(S.t['N2c/Ul']),
         children: (e) =>
             (0, i.jsx)(
                 c.P3F,
-                N(I({ className: x.iconItem }, e), {
+                P(I({ className: x.iconItem }, e), {
                     onClick: n,
-                    'aria-label': S.NW.string(S.t['N2c/Ul']),
+                    'aria-label': S.intl.string(S.t['N2c/Ul']),
                     children: (0, i.jsx)(c.dz2, {
                         size: 'xs',
                         color: 'currentColor',
@@ -243,7 +243,7 @@ function D(e) {
 class L extends (r = l.PureComponent) {
     renderOptionsButton(e) {
         let { onContextMenu: t } = e;
-        return (0, i.jsx)(Z, N(I({}, this.props), { onContextMenu: t }));
+        return (0, i.jsx)(Z, P(I({}, this.props), { onContextMenu: t }));
     }
     renderEditButton() {
         return (0, i.jsx)(T, I({}, this.props));
@@ -259,11 +259,11 @@ class L extends (r = l.PureComponent) {
     }
     getClassName() {
         let { position: e, sortingPosition: t } = this.props;
-        return w(e, t);
+        return N(e, t);
     }
     isDisabled() {
         let { channel: e, sorting: t, sortingType: n } = this.props;
-        return P(e, t, n);
+        return w(e, t, n);
     }
 }
 E(L, 'defaultProps', { isDefaultChannel: !1 });

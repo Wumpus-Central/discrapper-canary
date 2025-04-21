@@ -63,8 +63,8 @@ function x(e, t) {
 }
 let I = r.memo(function (e) {
     let { widget: t, renderWidget: n, renderTitle: o, renderButtons: I, resizeValidation: j, className: C, dragContainerClassName: S } = e,
-        N = u.Z.getWidgetConfig(t.type),
-        Z = (0, a.e7)([d.default], () => d.default.isLocked((0, f.getPID)())),
+        Z = u.Z.getWidgetConfig(t.type),
+        N = (0, a.e7)([d.default], () => d.default.isLocked((0, f.getPID)())),
         w = (0, v.Z)(),
         P = (0, a.e7)([p.Z], () => p.Z.windowSize((0, m.ZY)(w))),
         T = r.useCallback((e, t, n, i, r) => {
@@ -94,11 +94,11 @@ let I = r.memo(function (e) {
         k = r.useCallback((e) => {
             (0, s.Os)(e);
         }, []),
-        { id: A, pinned: D, zIndex: L, size: R, anchor: W } = t,
-        M = (0, h.w_)(R, P),
-        z = (0, h.KR)(W, P),
-        { minSize: V, resizeX: U, resizeY: G, dragAnywhere: F } = null != N ? N : {},
-        B = D || !Z,
+        { id: A, pinned: D, zIndex: L, size: R, anchor: M } = t,
+        z = (0, h.w_)(R, P),
+        V = (0, h.KR)(M, P),
+        { minSize: U, resizeX: W, resizeY: G, dragAnywhere: F } = null != Z ? Z : {},
+        B = D || !N,
         H = r.useMemo(
             () => ({
                 minX: 0,
@@ -143,23 +143,23 @@ let I = r.memo(function (e) {
             S
         ),
         id: A,
-        size: M,
-        anchor: z,
+        size: z,
+        anchor: V,
         container: H,
         minSize:
-            null != V
-                ? V
+            null != U
+                ? U
                 : {
                       width: 0,
                       height: 0
                   },
         hidden: !B,
-        locked: Z,
-        resizeX: null != U && U,
+        locked: N,
+        resizeX: null != W && W,
         resizeY: null != G && G,
         style: { zIndex: L },
         dragAnywhere: null != F && F,
-        active: !Z,
+        active: !N,
         onUpdate: T,
         onClick: k,
         targetWindow: w,

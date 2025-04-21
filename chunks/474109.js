@@ -60,8 +60,8 @@ let O = (0, p.oH)((e, t, n) => ['null', ...t, ...e, b, f.x8Z.E3_SERVER_DISCOVERY
                     ref: t,
                     items: d,
                     isUnread: y,
-                    textUnread: g.NW.string(g.t.y2b7CA),
-                    textMention: g.NW.string(g.t.y2b7CA),
+                    textUnread: g.intl.string(g.t.y2b7CA),
+                    textMention: g.intl.string(g.t.y2b7CA),
                     isMentioned: _,
                     animate: p,
                     expandedFolders: f

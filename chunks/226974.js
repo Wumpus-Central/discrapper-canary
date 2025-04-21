@@ -73,7 +73,7 @@ function O(e) {
         }
 }
 function I(e, n) {
-    (m = !1), g && ((g = !1), b(N), (N = -1)), (h = !0);
+    (m = !1), g && ((g = !1), b(A), (A = -1)), (h = !0);
     var a = p;
     try {
         for (v(n), _ = r(u); null !== _ && (!(_.expirationTime > n) || (e && !R())); ) {
@@ -98,11 +98,11 @@ function I(e, n) {
 'undefined' != typeof navigator && void 0 !== navigator.scheduling && void 0 !== navigator.scheduling.isInputPending && navigator.scheduling.isInputPending.bind(navigator.scheduling);
 var S = !1,
     T = null,
-    N = -1,
-    A = 5,
+    A = -1,
+    N = 5,
     C = -1;
 function R() {
-    return !(t.unstable_now() - C < A);
+    return !(t.unstable_now() - C < N);
 }
 function P() {
     if (null !== T) {
@@ -135,7 +135,7 @@ function L(e) {
     (T = e), S || ((S = !0), o());
 }
 function x(e, n) {
-    N = E(function () {
+    A = E(function () {
         e(t.unstable_now());
     }, n);
 }
@@ -152,7 +152,7 @@ function x(e, n) {
         m || h || ((m = !0), L(I));
     }),
     (t.unstable_forceFrameRate = function (e) {
-        0 > e || 125 < e ? console.error('forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported') : (A = 0 < e ? Math.floor(1000 / e) : 5);
+        0 > e || 125 < e ? console.error('forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported') : (N = 0 < e ? Math.floor(1000 / e) : 5);
     }),
     (t.unstable_getCurrentPriorityLevel = function () {
         return p;
@@ -227,7 +227,7 @@ function x(e, n) {
                 expirationTime: s,
                 sortIndex: -1
             }),
-            a > o ? ((e.sortIndex = a), n(d, e), null === r(u) && e === r(d) && (g ? (b(N), (N = -1)) : (g = !0), x(O, a - o))) : ((e.sortIndex = s), n(u, e), m || h || ((m = !0), L(I))),
+            a > o ? ((e.sortIndex = a), n(d, e), null === r(u) && e === r(d) && (g ? (b(A), (A = -1)) : (g = !0), x(O, a - o))) : ((e.sortIndex = s), n(u, e), m || h || ((m = !0), L(I))),
             e
         );
     }),

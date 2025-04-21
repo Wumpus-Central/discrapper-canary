@@ -33,7 +33,7 @@ function u(e) {
             fullWidth: !0,
             children: (0, r.jsxs)('div', {
                 className: c.flex,
-                children: [f, s.NW.format(s.t.XWSHTU, { platform: t.name })]
+                children: [f, s.intl.format(s.t.XWSHTU, { platform: t.name })]
             })
         },
         'connect-platform-activity'

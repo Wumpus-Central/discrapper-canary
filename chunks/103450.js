@@ -22,8 +22,8 @@ var r = n(192379),
     I = n(757266),
     S = n(650774),
     T = n(430824),
-    N = n(283595),
-    A = n(496675),
+    A = n(283595),
+    N = n(496675),
     C = n(699516),
     R = n(944486),
     P = n(594174),
@@ -38,8 +38,8 @@ var r = n(192379),
 function G(e) {
     var t, n;
     let G,
-        { activity: B, embeddedActivity: F, user: V, onGameJoin: Z, onClose: H, location: W } = e,
-        { analyticsLocations: Y } = (0, b.ZP)(null != W ? W : []),
+        { activity: B, embeddedActivity: F, user: V, onGameJoin: Z, onClose: H, location: Y } = e,
+        { analyticsLocations: W } = (0, b.ZP)(null != Y ? Y : []),
         [K, z] = r.useState(!1),
         q = null != (t = null == F ? void 0 : F.applicationId) ? t : null == B ? void 0 : B.application_id,
         Q = null != F || (0, g.Z)(B),
@@ -51,12 +51,12 @@ function G(e) {
             activity: B
         }),
         ee = (0, a.e7)(
-            [N.Z, v.Z, L.Z, I.Z],
+            [A.Z, v.Z, L.Z, I.Z],
             () =>
                 Q ||
                 (null != q &&
                     (0, M.t)({
-                        LibraryApplicationStore: N.Z,
+                        LibraryApplicationStore: A.Z,
                         LaunchableGameStore: v.Z,
                         DispatchApplicationStore: L.Z,
                         ConnectedAppsStore: I.Z,
@@ -78,7 +78,7 @@ function G(e) {
             channelId: $,
             application: er
         }),
-        eo = (0, a.e7)([O.Z, T.Z, S.Z, C.Z, R.Z, w.Z, A.Z], () =>
+        eo = (0, a.e7)([O.Z, T.Z, S.Z, C.Z, R.Z, w.Z, N.Z], () =>
             null == F || ei
                 ? (0, f.Z)({
                       user: V,
@@ -93,7 +93,7 @@ function G(e) {
                       RelationshipStore: C.Z,
                       SelectedChannelStore: R.Z,
                       VoiceStateStore: w.Z,
-                      PermissionStore: A.Z
+                      PermissionStore: N.Z
                   })
                 : ea === h.Fw.CAN_JOIN
         ),
@@ -108,7 +108,7 @@ function G(e) {
     if (!((0, m.Z)(B, k.xjy.JOIN) || Q) || null == q) return null;
     let eu = !J || (Q && !es),
         ed = eu && (ec || ee) && !K && !et;
-    eu ? ec || ee || null == B || (G = U.NW.formatToPlainString(U.t.SqJBnJ, { name: B.name })) : (G = U.NW.string(U.t['0OiwfH']));
+    eu ? ec || ee || null == B || (G = U.intl.formatToPlainString(U.t.SqJBnJ, { name: B.name })) : (G = U.intl.string(U.t['0OiwfH']));
     let ef = null != (n = null == F ? void 0 : F.launchId) ? n : null == B ? void 0 : B.session_id,
         e_ = async (e, t) => {
             var n, r;
@@ -126,7 +126,7 @@ function G(e) {
                 embedded: i,
                 partyId: null != t ? (null == t || null == (n = t.party) ? void 0 : n.id) : '',
                 locationObject: el.location,
-                analyticsLocations: Y,
+                analyticsLocations: W,
                 activity: null != t ? t : void 0
             }),
                 i ||
@@ -139,7 +139,7 @@ function G(e) {
                         applicationId: q,
                         partyId: null != t ? (null == t || null == (r = t.party) ? void 0 : r.id) : '',
                         locationObject: el.location,
-                        analyticsLocations: Y
+                        analyticsLocations: W
                     });
         },
         ep = async () => {
@@ -164,7 +164,7 @@ function G(e) {
                         applicationId: q,
                         activityChannelId: $,
                         locationObject: el.location,
-                        analyticsLocations: Y,
+                        analyticsLocations: W,
                         joinUserId: V.id,
                         joinSessionId: null == B ? void 0 : B.session_id,
                         instanceId: null == F ? void 0 : F.compositeInstanceId,
@@ -183,9 +183,9 @@ function G(e) {
                 await t();
             }
         },
-        eh = eo ? U.NW.string(U.t.VJlc0d) : U.NW.string(U.t.OKsSCQ);
+        eh = eo ? U.intl.string(U.t.VJlc0d) : U.intl.string(U.t.OKsSCQ);
     return (
-        es && (eh = U.NW.string(U.t.DPfdsr)),
+        es && (eh = U.intl.string(U.t.DPfdsr)),
         {
             buttonCTA: eh,
             tooltip: G,

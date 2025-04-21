@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => ex,
-    o: () => Y
+    o: () => W
 }),
     n(388685),
     n(825670),
@@ -57,7 +57,7 @@ function T(e) {
     }
     return e;
 }
-function N(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,12 +69,12 @@ function N(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -97,15 +97,15 @@ let C = new h.Z('ChannelStore'),
     V = {},
     Z = 0,
     H = 0,
-    W = !1;
-class Y {
+    Y = !1;
+class W {
     static loadAllMissingChannels() {
         let e = v.Z.getGuildIds().filter((e) => !G.has(e));
         return this.loadGuildIds(e);
     }
     static loadGuildFromChannelId(e) {
         var t;
-        return null == e ? null : Y.loadGuildIds([null == (t = Q(e)) ? void 0 : t.guild_id]);
+        return null == e ? null : W.loadGuildIds([null == (t = Q(e)) ? void 0 : t.guild_id]);
     }
     static loadGuildIds(e) {
         let t = e.filter(E.lm);
@@ -274,7 +274,7 @@ function ed(e) {
     for (let t of ((Z = e.guilds.length), e.channels)) J((0, _.d7)((0, g._H)(t)));
 }
 function ef(e) {
-    for (let [t, n] of ((W = !0), e.guildChannels)) for (let e of (C.fileOnly('Lazy cache contained full guild channels for '.concat(t, ' #:').concat(n.length)), G.add(t), n)) J((0, g._H)(e));
+    for (let [t, n] of ((Y = !0), e.guildChannels)) for (let e of (C.fileOnly('Lazy cache contained full guild channels for '.concat(t, ' #:').concat(n.length)), G.add(t), n)) J((0, g._H)(e));
 }
 function e_(e) {
     J(e.channel);
@@ -285,7 +285,7 @@ function ep(e) {
     if (null == t) t = e.channel;
     else {
         var n;
-        t = t.merge(A(T({}, e.channel.toJS()), { bitrate: null != (n = e.channel.bitrate) ? n : t.bitrate }));
+        t = t.merge(N(T({}, e.channel.toJS()), { bitrate: null != (n = e.channel.bitrate) ? n : t.bitrate }));
     }
     J(t);
 }
@@ -293,7 +293,7 @@ function eh(e) {
     let { channelId: t, overwrite: n } = e,
         r = X(t);
     if (null == r) return !1;
-    J(r.set('permissionOverwrites', A(T({}, r.permissionOverwrites), { [n.id]: n })));
+    J(r.set('permissionOverwrites', N(T({}, r.permissionOverwrites), { [n.id]: n })));
 }
 function em(e) {
     let { channelId: t, overwriteId: n } = e,
@@ -351,11 +351,11 @@ function eT(e) {
         n = y.default.getId();
     return null != t && !!t.isPrivate() && (J(t.addRecipient(e.user.id, e.nick, n)), !0);
 }
-function eN(e) {
+function eA(e) {
     let t = X(e.channelId);
     return null != t && !!t.isPrivate() && (J(t.removeRecipient(e.user.id)), !0);
 }
-function eA(e) {
+function eN(e) {
     let { messages: t } = e;
     for (let e of t) null != e.thread && !(e.thread.id in x) && g.AW.has(e.thread.type) && ee((0, g.q_)(e.thread));
 }
@@ -475,7 +475,7 @@ let ex = new eD(l.Z, {
     CHANNEL_CREATE: e_,
     CHANNEL_DELETE: eO,
     CHANNEL_RECIPIENT_ADD: eT,
-    CHANNEL_RECIPIENT_REMOVE: eN,
+    CHANNEL_RECIPIENT_REMOVE: eA,
     CHANNEL_UPDATES: eg,
     CONNECTION_OPEN_SUPPLEMENTAL: eo,
     CONNECTION_OPEN: ei,
@@ -485,8 +485,8 @@ let ex = new eD(l.Z, {
     GUILD_DELETE: eS,
     LOAD_ARCHIVED_THREADS_SUCCESS: eb,
     LOAD_CHANNELS: el,
-    LOAD_MESSAGES_AROUND_SUCCESS: eA,
-    LOAD_MESSAGES_SUCCESS: eA,
+    LOAD_MESSAGES_AROUND_SUCCESS: eN,
+    LOAD_MESSAGES_SUCCESS: eN,
     LOAD_THREADS_SUCCESS: eb,
     LOGOUT: ew,
     OVERLAY_INITIALIZE: ed,

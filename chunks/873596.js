@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(586646),
     y = n(760373),
     O = n(388032),
-    N = n(935179);
-function b(e) {
+    b = n(935179);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function b(e) {
     }
     return e;
 }
-function v(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function v(e, t) {
         e
     );
 }
-function m(e) {
+function x(e) {
     let { lobbyId: t, connectionTypeText: n, closePopout: l } = e,
         o = (0, i.cj)([c.Z], () => ({
             connectionState: c.Z.getConnectionState(t),
@@ -70,13 +70,13 @@ function m(e) {
         }));
     return (0, r.jsx)(
         p.Z,
-        v(b({}, o), {
+        m(v({}, o), {
             closePopout: l,
             connectionTypeText: n
         })
     );
 }
-function x(e) {
+function N(e) {
     let { closePopout: t, connectionTypeText: n } = e,
         l = (0, i.cj)([s.Z], () => ({
             connectionState: s.Z.getState(),
@@ -88,7 +88,7 @@ function x(e) {
         }));
     return (0, r.jsx)(
         p.Z,
-        v(b({}, l), {
+        m(v({}, l), {
             closePopout: t,
             connectionTypeText: n
         })
@@ -96,14 +96,14 @@ function x(e) {
 }
 function C(e) {
     let { channelId: t, isOverlay: n, lobbyId: l, closePopout: i } = e,
-        o = (0, f.J)({ channelId: t }) ? O.NW.string(O.t['3BogKS']) : O.NW.string(O.t.ETIVvr);
+        o = (0, f.J)({ channelId: t }) ? O.intl.string(O.t['3BogKS']) : O.intl.string(O.t.ETIVvr);
     return n
-        ? (0, r.jsx)(m, {
+        ? (0, r.jsx)(x, {
               lobbyId: l,
               closePopout: i,
               connectionTypeText: o
           })
-        : (0, r.jsx)(x, {
+        : (0, r.jsx)(N, {
               closePopout: i,
               connectionTypeText: o
           });
@@ -115,7 +115,7 @@ function E(e) {
         f = l.useMemo(() => {
             switch (n) {
                 case y.tu.RTC_DEBUG_PANEL:
-                    return (0, r.jsx)(C, b({}, e));
+                    return (0, r.jsx)(C, v({}, e));
                 case y.tu.RTC_SECURE_FRAMES:
                     return (0, r.jsx)(g.Z, { channelId: e.channelId });
             }
@@ -132,16 +132,16 @@ function E(e) {
             p && s(y.tu.RTC_DEBUG_PANEL);
         }, [p]),
         (0, r.jsxs)('div', {
-            className: N.container,
+            className: b.container,
             children: [
                 (0, r.jsx)(o.X6q, {
-                    className: N.title,
+                    className: b.title,
                     variant: 'heading-lg/bold',
                     color: 'header-primary',
-                    children: t ? O.NW.string(O.t.IlHdW1) : O.NW.string(O.t.WsOisr)
+                    children: t ? O.intl.string(O.t.IlHdW1) : O.intl.string(O.t.WsOisr)
                 }),
                 (0, r.jsxs)(o.njP, {
-                    className: N.tabs,
+                    className: b.tabs,
                     selectedItem: n,
                     type: 'top',
                     look: 'brand',
@@ -149,15 +149,15 @@ function E(e) {
                     children: [
                         (0, r.jsx)(o.njP.Item, {
                             id: y.tu.RTC_DEBUG_PANEL,
-                            className: N.tabBarItem,
-                            children: O.NW.string(O.t.MBY1Pj)
+                            className: b.tabBarItem,
+                            children: O.intl.string(O.t.MBY1Pj)
                         }),
                         p
                             ? null
                             : (0, r.jsx)(o.njP.Item, {
                                   id: y.tu.RTC_SECURE_FRAMES,
-                                  className: N.tabBarItem,
-                                  children: O.NW.string(O.t.zC6o3t)
+                                  className: b.tabBarItem,
+                                  children: O.intl.string(O.t.zC6o3t)
                               })
                     ]
                 }),
@@ -172,12 +172,12 @@ function E(e) {
 }
 function j(e) {
     return (0, f.J)({ channelId: e.channelId })
-        ? (0, r.jsx)(E, b({}, e))
+        ? (0, r.jsx)(E, v({}, e))
         : (0, r.jsx)('div', {
-              className: N.debugPanelStandalone,
+              className: b.debugPanelStandalone,
               children: (0, r.jsx)('section', {
-                  className: N.debugPanelSection,
-                  children: (0, r.jsx)(C, b({}, e))
+                  className: b.debugPanelSection,
+                  children: (0, r.jsx)(C, v({}, e))
               })
           });
 }

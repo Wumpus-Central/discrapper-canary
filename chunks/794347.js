@@ -2,11 +2,11 @@ n.d(t, {
     Z: () => _,
     _: () => h
 });
-var r,
-    i = n(200651),
+var i,
+    r = n(200651),
     s = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(692547),
     c = n(477690),
     d = n(393238),
@@ -14,7 +14,7 @@ var r,
     m = n(624138),
     g = n(182323);
 let p = (0, m.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH);
-var h = (((r = {}).BLACK = 'BLACK'), (r.GRAY = 'GRAY'), r);
+var h = (((i = {}).BLACK = 'BLACK'), (i.GRAY = 'GRAY'), i);
 let f = {
     BLACK: g.black,
     GRAY: g.gray
@@ -23,36 +23,36 @@ function b(e) {
     return Math.round(e / p) * p;
 }
 function _(e) {
-    let { notchBackground: t, progress: n, gradientStart: r = o.Z.unsafe_rawColors.YELLOW_260.css, gradientEnd: a = o.Z.unsafe_rawColors.GREEN_360.css, className: c, children: m } = e,
+    let { notchBackground: t, progress: n, gradientStart: i = o.Z.unsafe_rawColors.YELLOW_260.css, gradientEnd: l = o.Z.unsafe_rawColors.GREEN_360.css, className: c, children: m } = e,
         { ref: p, width: h } = (0, d.ZP)(),
         _ = s.useMemo(() => (null != h ? b(h) : 0), [h]),
-        N = s.useMemo(() => {
+        x = s.useMemo(() => {
             let e = Math.abs(b((_ * (100 - Math.max(0, Math.min(100, n)))) / 100) - _);
             return { transform: 'translateX('.concat(e, 'px)') };
         }, [n, _]),
-        x = s.useMemo(
+        E = s.useMemo(
             () => ({
                 width: ''.concat(_, 'px'),
-                background: n <= 0 ? 'none' : 'linear-gradient(to right, '.concat(r, ', ').concat(a, ')')
+                background: n <= 0 ? 'none' : 'linear-gradient(to right, '.concat(i, ', ').concat(l, ')')
             }),
-            [a, r, n, _]
+            [l, i, n, _]
         );
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: g.wrapper,
         ref: p,
         children: [
-            (0, i.jsxs)('div', {
-                className: l()(g.container, c),
-                style: x,
+            (0, r.jsxs)('div', {
+                className: a()(g.container, c),
+                style: E,
                 children: [
-                    (0, i.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: g.progress,
-                        style: N
+                        style: x
                     }),
                     0 !== _ &&
-                        (0, i.jsx)(u.Z, {
+                        (0, r.jsx)(u.Z, {
                             width: _,
-                            className: l()(g.notches, f[t])
+                            className: a()(g.notches, f[t])
                         })
                 ]
             }),

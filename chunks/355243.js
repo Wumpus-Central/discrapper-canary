@@ -19,14 +19,14 @@ function v(e) {
     let { percent: t, animate: n, interactionEnabled: o, backgroundColor: v, preloadedBuffers: g, duration: b, maxSeekableTime: E, onClick: O, onScrubBack: h, onScrubForward: S } = e,
         [C, j] = l.useState(null),
         [y, _] = l.useState(null),
-        [x, N] = l.useState(null),
-        [D, P] = l.useState(!1),
-        T = l.useRef(null),
+        [x, D] = l.useState(null),
+        [P, T] = l.useState(!1),
+        N = l.useRef(null),
         k = (e) => {
-            (T.current = e), j(e);
+            (N.current = e), j(e);
         };
     l.useEffect(() => {
-        null != C && (null == E ? N(null) : N(f(E, b, C)));
+        null != C && (null == E ? D(null) : D(f(E, b, C)));
     }, [C, E, b]);
     let w = (0, c.Z)((e) => {
             k(e.contentRect);
@@ -67,13 +67,13 @@ function v(e) {
                     o && null != O && O(p(e.clientX, e.currentTarget.getBoundingClientRect(), b));
                 },
                 onMouseEnter: (e) => {
-                    o && (null != A.current && k(A.current.getBoundingClientRect()), P(!0), I(e));
+                    o && (null != A.current && k(A.current.getBoundingClientRect()), T(!0), I(e));
                 },
                 onMouseLeave: (e) => {
-                    o && (P(!1), _(null));
+                    o && (T(!1), _(null));
                 },
                 onMouseMove: (e) => {
-                    o && D && I(e);
+                    o && P && I(e);
                 },
                 onKeyDown: L,
                 tabIndex: o ? void 0 : -1,
@@ -90,7 +90,7 @@ function v(e) {
                               (0, r.jsx)(
                                   'div',
                                   {
-                                      className: i()(m.buffer, { [m.bufferHovered]: D }),
+                                      className: i()(m.buffer, { [m.bufferHovered]: P }),
                                       style: {
                                           width: ''.concat(100 * e.size, '%'),
                                           left: ''.concat(100 * e.start, '%')
@@ -114,10 +114,10 @@ function v(e) {
                         percent: t,
                         foregroundColor: '#FFFFFF',
                         backgroundColor: null != v ? v : void 0,
-                        size: D ? a.Exd.Sizes.XSMALL : a.Exd.Sizes.XXSMALL,
+                        size: P ? a.Exd.Sizes.XSMALL : a.Exd.Sizes.XXSMALL,
                         animate: n
                     }),
-                    D &&
+                    P &&
                         null != M &&
                         (0, r.jsx)(a.Text, {
                             className: m.timeDisplay,
@@ -128,7 +128,7 @@ function v(e) {
                             },
                             children: M
                         }),
-                    D &&
+                    P &&
                         o &&
                         null != V &&
                         (0, r.jsx)('div', {

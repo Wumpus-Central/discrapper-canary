@@ -1,10 +1,10 @@
 n.d(t, { Z: () => u }), n(388685);
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(442837),
+var r = n(442837),
     s = n(481060),
-    a = n(607070),
-    l = n(600164),
+    l = n(607070),
+    a = n(600164),
     o = n(122890),
     c = n(110818),
     d = n(523726);
@@ -18,21 +18,21 @@ function u(e) {
             errorScene: c.fe.Scenes.ERROR,
             successScene: c.fe.Scenes.SUCCESS
         }),
-        p = (0, i.e7)([a.Z], () => a.Z.useReducedMotion);
-    return (0, r.jsxs)(s.xBx, {
-        align: l.Z.Align.START,
+        p = (0, r.e7)([l.Z], () => l.Z.useReducedMotion);
+    return (0, i.jsxs)(s.xBx, {
+        align: a.Z.Align.START,
         className: d.header,
         separator: !1,
         children: [
-            (0, r.jsx)(c.fe, {
+            (0, i.jsx)(c.fe, {
                 className: d.animation,
                 nextScene: m,
                 onScenePlay: (e) => g(c.fe.getNextScene(e)),
                 pauseWhileUnfocused: !1,
                 pause: p
             }),
-            (0, r.jsx)('div', { className: d.headerTitle }),
-            (0, r.jsx)(s.olH, {
+            (0, i.jsx)('div', { className: d.headerTitle }),
+            (0, i.jsx)(s.olH, {
                 onClick: u,
                 className: d.closeButton
             })

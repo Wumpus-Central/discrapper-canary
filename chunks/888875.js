@@ -82,18 +82,18 @@ class S extends o.Z {
             b(this, 'actions', {
                 POST_CONNECTION_OPEN: T,
                 CONNECTION_RESUMED: T,
-                CONNECTION_CLOSED: A,
-                APP_STATE_UPDATE: N
+                CONNECTION_CLOSED: N,
+                APP_STATE_UPDATE: A
             });
     }
 }
 function T() {
     (I = !0), R(y, !0);
 }
-function N(e) {
+function A(e) {
     I && 'active' !== e.state && (clearTimeout(O), (O = null), C(!1));
 }
-function A() {
+function N() {
     I && (clearTimeout(O), (O = null), C(!1));
 }
 async function C(e) {

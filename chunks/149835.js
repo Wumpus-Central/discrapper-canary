@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(e, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -10,79 +10,79 @@ var i = n(442837),
     s = n(630388),
     d = n(981631),
     b = n(388032);
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
+function p(t) {
+    for (var e = 1; e < arguments.length; e++) {
+        var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                Object.getOwnPropertySymbols(n).filter(function (t) {
+                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
                 })
             )),
-            r.forEach(function (t) {
+            r.forEach(function (e) {
                 var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
+                (r = n[e]),
+                    e in t
+                        ? Object.defineProperty(t, e, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (t[e] = r);
             });
     }
-    return e;
+    return t;
 }
-function f(e, t) {
-    let n = (0, i.e7)([o.Z], () => o.Z.isInstalled(e.id, e.branchId), [e.branchId, e.id]),
+function f(t, e) {
+    let n = (0, i.e7)([o.Z], () => o.Z.isInstalled(t.id, t.branchId), [t.branchId, t.id]),
         f = (0, i.e7)([c.Z], () => !c.Z.hasRemovedLibraryApplicationThisSession);
-    if (n && !e.isHidden()) return null;
+    if (n && !t.isHidden()) return null;
     function O() {
-        let t = (0, s.x9)(e.getFlags(), d.eHb.HIDDEN);
-        a.h(e.id, e.branchId, t), u.default.track(d.rMx.APPLICATION_SETTINGS_UPDATED, p({ hidden_enabled: (0, s.yE)(t, d.eHb.HIDDEN) }, e.getAnalyticsData()));
+        let e = (0, s.x9)(t.getFlags(), d.eHb.HIDDEN);
+        a.h(t.id, t.branchId, e), u.default.track(d.rMx.APPLICATION_SETTINGS_UPDATED, p({ hidden_enabled: (0, s.yE)(e, d.eHb.HIDDEN) }, t.getAnalyticsData()));
     }
     return (0, r.jsx)(l.sNh, {
         id: 'in-library',
-        label: e.isHidden() ? b.NW.string(b.t['0dnEUF']) : b.NW.string(b.t.TuJXLy),
+        label: t.isHidden() ? b.intl.string(b.t['0dnEUF']) : b.intl.string(b.t.TuJXLy),
         action: function () {
-            null != e &&
-                null != t &&
-                (e.isHidden() || !f
+            null != t &&
+                null != e &&
+                (t.isHidden() || !f
                     ? O()
-                    : (0, l.h7j)((e) => {
+                    : (0, l.h7j)((t) => {
                           var n, i;
                           return (0, r.jsx)(
                               l.ConfirmModal,
                               ((n = p(
                                   {
-                                      header: b.NW.string(b.t.oB7isr),
-                                      confirmText: b.NW.string(b.t.OWjIiY),
-                                      cancelText: b.NW.string(b.t['ETE/oK']),
+                                      header: b.intl.string(b.t.oB7isr),
+                                      confirmText: b.intl.string(b.t.OWjIiY),
+                                      cancelText: b.intl.string(b.t['ETE/oK']),
                                       onConfirm: () => O(),
                                       confirmButtonColor: l.zxk.Colors.BRAND
                                   },
-                                  e
+                                  t
                               )),
                               (i = i =
                                   {
                                       children: (0, r.jsx)(l.Text, {
                                           variant: 'text-md/normal',
-                                          children: b.NW.format(b.t.HXfjKi, { name: t.name })
+                                          children: b.intl.format(b.t.HXfjKi, { name: e.name })
                                       })
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                                  : (function (e, t) {
-                                        var n = Object.keys(e);
+                                  : (function (t, e) {
+                                        var n = Object.keys(t);
                                         if (Object.getOwnPropertySymbols) {
-                                            var r = Object.getOwnPropertySymbols(e);
+                                            var r = Object.getOwnPropertySymbols(t);
                                             n.push.apply(n, r);
                                         }
                                         return n;
-                                    })(Object(i)).forEach(function (e) {
-                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                    })(Object(i)).forEach(function (t) {
+                                        Object.defineProperty(n, t, Object.getOwnPropertyDescriptor(i, t));
                                     }),
                               n)
                           );

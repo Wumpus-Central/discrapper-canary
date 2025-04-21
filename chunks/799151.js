@@ -13,15 +13,15 @@ function _() {
     let e = [
             {
                 keybinds: ['Spacebar', 'Enter'],
-                name: d.NW.string(d.t['cs/HVF'])
+                name: d.intl.string(d.t['cs/HVF'])
             },
             {
                 keybinds: ['up', 'down'],
-                name: d.NW.string(d.t.dmMqa2)
+                name: d.intl.string(d.t.dmMqa2)
             },
             {
                 keybinds: ['ESC'],
-                name: d.NW.string(d.t['1ioMJS'])
+                name: d.intl.string(d.t['1ioMJS'])
             }
         ],
         t = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),

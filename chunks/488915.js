@@ -42,9 +42,9 @@ let T = new s.h(
         (e) => [I(e.applicationId, e.isValid(null, E.Z), e.guildId), g(e.isValid(null, E.Z), e.guildId)],
         (e) => e.id
     ),
-    N = {},
-    C = {};
-function y(e) {
+    C = {},
+    y = {};
+function N(e) {
     var t, n;
     for (let r of (T.set(e.id, e), null != (t = e.subscription_listings) ? t : [])) {
         (n = r), b.set(n.id, n);
@@ -53,7 +53,7 @@ function y(e) {
 class P extends (r = c.yh) {
     getSubscriptionGroupListingsForApplicationFetchState(e) {
         var t;
-        return null != (t = N[e]) ? t : 0;
+        return null != (t = C[e]) ? t : 0;
     }
     getSubscriptionGroupListing(e) {
         return T.get(e);
@@ -70,7 +70,7 @@ class P extends (r = c.yh) {
     }
     getEntitlementsForGuildFetchState(e) {
         var t;
-        return null != (t = C[e]) ? t : 0;
+        return null != (t = y[e]) ? t : 0;
     }
     getSubscriptionListingForPlan(e) {
         let t = b.values(O(e));
@@ -96,29 +96,29 @@ class P extends (r = c.yh) {
         : (P[l] = o);
 let m = new P(d.Z, {
     LOGOUT: function () {
-        T.clear(), b.clear(), h.clear(), (N = {}), (C = {});
+        T.clear(), b.clear(), h.clear(), (C = {}), (y = {});
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS: function (e) {
         let { applicationId: t, groupListingId: n } = e;
-        N[t] = 1;
+        C[t] = 1;
         let r = T.get(n);
         if (null != r) for (let e of r.subscription_listings_ids) b.delete(e);
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (e) {
         let { applicationId: t, groupListing: n } = e;
-        (N[t] = 2), y(n);
+        (C[t] = 2), N(n);
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function (e) {
         let { applicationId: t } = e;
-        N[t] = 2;
+        C[t] = 2;
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS(e) {
         let { guildId: t } = e;
-        C[t] = 1;
+        y[t] = 1;
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS(e) {
         let { guildId: t, entitlements: n } = e;
-        (C[t] = 2),
+        (y[t] = 2),
             n.forEach((e) => {
                 let t = p.Z.createFromServer(e);
                 h.set(t.id, t);
@@ -126,10 +126,10 @@ let m = new P(d.Z, {
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE(e) {
         let { guildId: t } = e;
-        C[t] = 0;
+        y[t] = 0;
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: function (e) {
         let { groupListing: t } = e;
-        y(t);
+        N(t);
     }
 });

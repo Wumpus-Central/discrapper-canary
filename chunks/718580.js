@@ -114,7 +114,7 @@ function T(e) {
         { contentDisplay: g, fadeInOut: y = !1 } = e,
         S = b(e, ['contentDisplay', 'fadeInOut']);
     let T = {},
-        { analyticsLocations: N } = (0, _.ZP)();
+        { analyticsLocations: A } = (0, _.ZP)();
     i.Children.forEach(S.children, (e, t) => {
         T[e.props.id] = {
             children: e.props.children,
@@ -123,20 +123,20 @@ function T(e) {
             index: t
         };
     });
-    let A = S.activeSlide,
+    let N = S.activeSlide,
         C = (0, d.Z)(S.activeSlide),
-        R = null != (t = S.directionOverride) ? t : O(null != C ? T[C] : null, T[A]),
+        R = null != (t = S.directionOverride) ? t : O(null != C ? T[C] : null, T[N]),
         { reducedMotion: P } = i.useContext(l.S),
         w = i.useContext(f.Z),
-        D = T[A].impressionName,
-        L = E(m({}, T[A].impressionProperties), { location_stack: N });
+        D = T[N].impressionName,
+        L = E(m({}, T[N].impressionProperties), { location_stack: A });
     w({
         type: o.ImpressionTypes.MODAL,
         name: D,
         properties: L,
         _stackContext: { isSlide: !0 }
     });
-    let { ref: x, width: M = 0, height: k = 0 } = (0, u.ZP)(A),
+    let { ref: x, width: M = 0, height: k = 0 } = (0, u.ZP)(N),
         j = m({}, v, S.springConfig, P.enabled ? { clamp: !0 } : null),
         U = (0, c.q_F)(
             {
@@ -147,7 +147,7 @@ function T(e) {
             null == C ? 'animate-never' : 'respect-motion-settings'
         ),
         G = (0, c.Yzy)(
-            A,
+            N,
             {
                 value: 0,
                 from: { value: 1 },
@@ -156,7 +156,7 @@ function T(e) {
                 config: j,
                 onRest: (e, t) => {
                     let { item: n } = t;
-                    n === A && null != S.onSlideReady && S.onSlideReady(n);
+                    n === N && null != S.onSlideReady && S.onSlideReady(n);
                 }
             },
             null == C ? 'animate-never' : 'respect-motion-settings'
@@ -165,7 +165,7 @@ function T(e) {
         { width: F, centered: V = !0 } = S,
         Z = s.tq ? '100%' : U.width.to((e) => ('string' == typeof e ? e : Math.round(e))),
         H = s.tq ? '100%' : U.height.to((e) => Math.round(e)),
-        W = s.tq
+        Y = s.tq
             ? {}
             : V
               ? {
@@ -173,7 +173,7 @@ function T(e) {
                     top: '50%'
                 }
               : { transform: 'scale(1.0, 1.0)' },
-        Y = s.tq ? {} : { overflow: null != (h = S.overflow) ? h : 'hidden' };
+        W = s.tq ? {} : { overflow: null != (h = S.overflow) ? h : 'hidden' };
     return (0, r.jsx)(a.animated.div, {
         style: m(
             {
@@ -181,7 +181,7 @@ function T(e) {
                 minWidth: Z,
                 minHeight: H
             },
-            Y
+            W
         ),
         children: G((e, t, n) => {
             let { key: i } = n,
@@ -189,7 +189,7 @@ function T(e) {
             return (0, r.jsx)(
                 a.animated.div,
                 {
-                    ref: t === A ? x : null,
+                    ref: t === N ? x : null,
                     style: m(
                         {
                             position: 'absolute',
@@ -198,7 +198,7 @@ function T(e) {
                             backfaceVisibility: 'hidden',
                             width: s.tq ? '100%' : F
                         },
-                        W,
+                        Y,
                         P.enabled
                             ? o
                             : m(

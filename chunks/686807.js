@@ -12,7 +12,7 @@ var i = r(481060),
 function u(e) {
     let { channelId: t } = e,
         r = (0, a.m7)(t);
-    if (null == r) return '['.concat(h.NW.string(h.t.bz1PZW), ']');
+    if (null == r) return '['.concat(h.intl.string(h.t.bz1PZW), ']');
     let l = r.isMediaChannel() ? i.XBm : (0, o.Th)(r.type);
     return (0, n.jsxs)(n.Fragment, {
         children: [

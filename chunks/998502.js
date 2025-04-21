@@ -79,16 +79,16 @@ function O(e, t) {
 let I = window.DiscordNative,
     S = ['jpg', 'jpeg', 'png'],
     T = null,
-    N = null,
     A = null,
+    N = null,
     C = {};
 null != I &&
     ((T = I.remoteApp
         .getVersion()
         .split('.')
         .map((e) => parseInt(e))),
-    (A = null == (r = (i = I.remoteApp).getModuleVersions) ? void 0 : r.call(i)),
-    (N = null == (a = (o = I.remoteApp).getBuildNumber) ? void 0 : a.call(o)));
+    (N = null == (r = (i = I.remoteApp).getModuleVersions) ? void 0 : r.call(i)),
+    (A = null == (a = (o = I.remoteApp).getBuildNumber) ? void 0 : a.call(o)));
 let R = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
     P = !1,
     w = 'lastImageSaveDirectory';
@@ -290,10 +290,10 @@ let j = {
         return T;
     },
     get buildNumber() {
-        return N;
+        return A;
     },
     get moduleVersions() {
-        return A;
+        return N;
     },
     get parsedOSRelease() {
         if (!h.isPlatformEmbedded) return [];

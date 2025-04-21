@@ -1,9 +1,9 @@
 n.d(t, { Z: () => P }), n(388685);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(442837),
+    l = n.n(s),
+    a = n(442837),
     o = n(481060),
     c = n(596454),
     d = n(906732),
@@ -15,144 +15,144 @@ var r = n(200651),
     f = n(242291),
     b = n(893663),
     _ = n(331642),
-    N = n(63063),
-    x = n(581883),
-    E = n(738486),
-    j = n(918257),
-    C = n(970813),
-    O = n(726985),
-    S = n(981631),
-    v = n(710111),
-    T = n(388032),
-    I = n(576813),
+    x = n(63063),
+    E = n(581883),
+    j = n(738486),
+    C = n(918257),
+    O = n(970813),
+    S = n(726985),
+    v = n(981631),
+    T = n(710111),
+    I = n(388032),
+    N = n(576813),
     y = n(20493);
 function A(e) {
-    return (0, l.e7)([h.Z], () => {
+    return (0, a.e7)([h.Z], () => {
         if (null == e) return null;
         let { guildId: t, soundId: n } = e;
-        return h.Z.getSound(t === v.hY ? v.X8 : t, n);
+        return h.Z.getSound(t === T.hY ? T.X8 : t, n);
     });
 }
 function P(e) {
     let { refreshStyles: t = !1 } = e,
-        n = (0, r.jsxs)(r.Fragment, {
+        n = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsxs)(g.F, {
-                    setting: O.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                    children: [(0, r.jsx)(j.Z, { refreshStyles: t }), (0, r.jsx)(C.Z, { refreshStyles: t })]
+                (0, i.jsxs)(g.F, {
+                    setting: S.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+                    children: [(0, i.jsx)(C.Z, { refreshStyles: t }), (0, i.jsx)(O.Z, { refreshStyles: t })]
                 }),
-                (0, r.jsxs)(g.F, {
-                    setting: O.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
-                    children: [t ? null : (0, r.jsx)(o.$i$, { className: I.callSoundsDivider }), (0, r.jsx)(R, { refreshStyles: t })]
+                (0, i.jsxs)(g.F, {
+                    setting: S.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
+                    children: [t ? null : (0, i.jsx)(o.$i$, { className: N.callSoundsDivider }), (0, i.jsx)(R, { refreshStyles: t })]
                 })
             ]
         });
     return t
         ? n
-        : (0, r.jsx)(o.hjN, {
-              className: I.container,
+        : (0, i.jsx)(o.hjN, {
+              className: N.container,
               tag: o.RB0.H1,
               titleClassName: y.__invalid_marginBottom16,
-              title: T.NW.string(T.t.ABjMWF),
+              title: I.intl.string(I.t.ABjMWF),
               children: n
           });
 }
 function R(e) {
     let { refreshStyles: t } = e,
         { analyticsLocations: n } = (0, d.ZP)(),
-        [s, c] = i.useState(v.hY),
+        [s, c] = r.useState(T.hY),
         g = (0, b.tT)(s),
-        x = A(g),
-        j = (null == g ? void 0 : g.type) === b.zx.GLOBAL,
-        C = (0, l.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != g && null == x;
-    i.useEffect(() => {
-        C && (0, f.tt)({ location: n });
-    }, [C, n]),
-        i.useEffect(() => {
+        E = A(g),
+        C = (null == g ? void 0 : g.type) === b.zx.GLOBAL,
+        O = (0, a.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != g && null == E;
+    r.useEffect(() => {
+        O && (0, f.tt)({ location: n });
+    }, [O, n]),
+        r.useEffect(() => {
             (0, p.w)();
         }, []);
-    let O = i.useCallback((e, t) => {
+    let S = r.useCallback((e, t) => {
             let { inDropdown: n } = t;
-            return null == e ? null : n ? (0, r.jsx)(D, { guildId: e.value }) : null;
+            return null == e ? null : n ? (0, i.jsx)(D, { guildId: e.value }) : null;
         }, []),
-        P = (0, r.jsxs)(r.Fragment, {
+        P = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(o.xJW, {
-                    title: T.NW.string(T.t.nzUc3N),
-                    children: (0, r.jsx)(o.R94, { children: T.NW.format(T.t.u9RWmp, { helpdeskArticle: N.Z.getArticleURL(S.BhN.SOUNDBOARD) }) })
+                (0, i.jsx)(o.xJW, {
+                    title: I.intl.string(I.t.nzUc3N),
+                    children: (0, i.jsx)(o.R94, { children: I.intl.format(I.t.u9RWmp, { helpdeskArticle: x.Z.getArticleURL(v.BhN.SOUNDBOARD) }) })
                 }),
-                (0, r.jsx)(u.Z, {
+                (0, i.jsx)(u.Z, {
                     guildId: s,
-                    className: a()(I.guildSelector, { [I.refreshGuildSelector]: t }),
+                    className: l()(N.guildSelector, { [N.refreshGuildSelector]: t }),
                     globalOption: {
-                        label: T.NW.string(T.t.CpEUPz),
-                        value: v.hY
+                        label: I.intl.string(I.t.CpEUPz),
+                        value: T.hY
                     },
                     onChange: (e) => {
-                        c(null == e ? v.hY : e.id);
+                        c(null == e ? T.hY : e.id);
                     },
-                    renderOptionSuffix: O,
+                    renderOptionSuffix: S,
                     hideDivider: !0
                 }),
-                (0, r.jsxs)(m.Z, {
-                    className: a()({ [y.marginTop20]: !t }),
-                    title: T.NW.format(T.t.I2TsYG, {
+                (0, i.jsxs)(m.Z, {
+                    className: l()({ [y.marginTop20]: !t }),
+                    title: I.intl.format(I.t.I2TsYG, {
                         nitroWheelHook: () =>
-                            (0, r.jsx)(o.SrA, {
+                            (0, i.jsx)(o.SrA, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: I.nitroWheel
+                                className: N.nitroWheel
                             })
                     }),
                     forcedDivider: !t,
                     children: [
-                        (0, r.jsx)(_.Z, {
-                            sound: x,
-                            isGlobal: j,
+                        (0, i.jsx)(_.Z, {
+                            sound: E,
+                            isGlobal: C,
                             onSelect: (e) => {
                                 null == e ? (0, f.aC)(s, n) : (0, f.SZ)(s, e, n);
                             }
                         }),
-                        C &&
-                            (0, r.jsx)(o.Wn, {
-                                className: I.notice,
+                        O &&
+                            (0, i.jsx)(o.Wn, {
+                                className: N.notice,
                                 messageType: o.QYI.WARNING,
-                                children: T.NW.string(T.t.WkPsFR)
+                                children: I.intl.string(I.t.WkPsFR)
                             })
                     ]
                 })
             ]
         });
-    return t ? (0, r.jsx)(E.Z, { children: P }) : P;
+    return t ? (0, i.jsx)(j.Z, { children: P }) : P;
 }
 function D(e) {
     let { guildId: t } = e,
-        n = (0, l.e7)([x.Z], () => {
-            var e, n, r;
-            return null == (r = x.Z.settings.guilds) || null == (n = r.guilds) || null == (e = n[t]) ? void 0 : e.joinSound;
+        n = (0, a.e7)([E.Z], () => {
+            var e, n, i;
+            return null == (i = E.Z.settings.guilds) || null == (n = i.guilds) || null == (e = n[t]) ? void 0 : e.joinSound;
         }),
-        i = A(n);
-    if (null == n || null == i) return null;
-    let { emojiId: s, emojiName: a } = i,
-        d = null != s || null != a;
-    return (0, r.jsxs)('div', {
-        className: I.pill,
+        r = A(n);
+    if (null == n || null == r) return null;
+    let { emojiId: s, emojiName: l } = r,
+        d = null != s || null != l;
+    return (0, i.jsxs)('div', {
+        className: N.pill,
         children: [
             d
-                ? (0, r.jsx)(c.Z, {
+                ? (0, i.jsx)(c.Z, {
                       emojiId: s,
-                      emojiName: a,
-                      className: I.pillIcon
+                      emojiName: l,
+                      className: N.pillIcon
                   })
-                : (0, r.jsx)(o.gj8, {
+                : (0, i.jsx)(o.gj8, {
                       size: 'md',
                       color: 'currentColor',
-                      className: I.pillIcon
+                      className: N.pillIcon
                   }),
-            (0, r.jsx)(o.Text, {
-                className: I.pillText,
+            (0, i.jsx)(o.Text, {
+                className: N.pillText,
                 variant: 'text-xs/medium',
-                children: i.name
+                children: r.name
             })
         ]
     });

@@ -3,8 +3,8 @@ var n = r(200651),
     o = r(192379),
     c = r(481060),
     i = r(153867),
-    s = r(388032),
-    l = r(903463);
+    l = r(388032),
+    s = r(903463);
 function a(e) {
     var t,
         r,
@@ -57,10 +57,10 @@ function a(e) {
             return e;
         })(
             {
-                header: s.NW.string(s.t.HlAPoq),
+                header: l.intl.string(l.t.HlAPoq),
                 confirmButtonColor: c.zxk.Colors.GREEN,
-                confirmText: s.NW.string(s.t.rimG2d),
-                cancelText: s.NW.string(s.t['ETE/oK']),
+                confirmText: l.intl.string(l.t.rimG2d),
+                cancelText: l.intl.string(l.t['ETE/oK']),
                 onConfirm: a,
                 onClose: () => (b && i.ZP.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), u())
             },
@@ -71,16 +71,16 @@ function a(e) {
                 children: [
                     (0, n.jsx)(c.Text, {
                         variant: 'text-md/normal',
-                        children: s.NW.string(s.t.Jz3oqK)
+                        children: l.intl.string(l.t.Jz3oqK)
                     }),
                     (0, n.jsx)(c.XZJ, {
                         type: c.XZJ.Types.INVERTED,
                         value: b,
                         onChange: (e, t) => f(t),
-                        className: l.checkbox,
+                        className: s.checkbox,
                         children: (0, n.jsx)(c.Text, {
                             variant: 'text-md/normal',
-                            children: s.NW.string(s.t['JdIQ/f'])
+                            children: l.intl.string(l.t['JdIQ/f'])
                         })
                     })
                 ]

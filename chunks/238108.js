@@ -1,23 +1,23 @@
-n.d(t, { Z: () => i }), n(388685);
-var r = n(192379);
-let i = function () {
+n.d(t, { Z: () => r }), n(388685);
+var i = n(192379);
+let r = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
-        [t, n] = r.useState(!1),
-        [i, s] = r.useState(0),
-        [a, l] = r.useState(!1),
-        [o, c] = r.useState(0);
+        [t, n] = i.useState(!1),
+        [r, s] = i.useState(0),
+        [l, a] = i.useState(!1),
+        [o, c] = i.useState(0);
     return (
-        r.useEffect(() => {
-            i >= e && (l(!0), c(Math.floor(i / e)));
+        i.useEffect(() => {
+            r >= e && (a(!0), c(Math.floor(r / e)));
             let t = setTimeout(() => {
                 s(0);
             }, 1000);
             return () => clearTimeout(t);
-        }, [i, e]),
-        r.useEffect(() => {
+        }, [r, e]),
+        i.useEffect(() => {
             if (!t) {
                 let e = setTimeout(() => {
-                    l(!1), c(0);
+                    a(!1), c(0);
                 }, 1000);
                 return () => clearTimeout(e);
             }
@@ -30,7 +30,7 @@ let i = function () {
             onUnhover: () => {
                 n(!1);
             },
-            isEasterEggTriggered: a,
+            isEasterEggTriggered: l,
             easterEggLevel: o
         }
     );

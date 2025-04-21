@@ -17,14 +17,14 @@ var C = B(200651),
     r = B(70086),
     t = B(835887),
     n = B(388661),
-    o = B(500230),
-    d = B(742409),
-    M = B(981631),
-    s = B(116175),
+    d = B(500230),
+    o = B(742409),
+    s = B(981631),
+    M = B(116175),
     L = B(817239),
     X = B(388032),
     c = B(602268);
-let H = [s.ZD.LEAF, s.ZD.SWORD, s.ZD.HEART, s.ZD.FIRE, s.ZD.WATER_DROP, s.ZD.SKULL, s.ZD.MOON, s.ZD.LIGHTNING, s.ZD.COMPASS, s.ZD.TOADSTOOL],
+let H = [M.ZD.LEAF, M.ZD.SWORD, M.ZD.HEART, M.ZD.FIRE, M.ZD.WATER_DROP, M.ZD.SKULL, M.ZD.MOON, M.ZD.LIGHTNING, M.ZD.COMPASS, M.ZD.TOADSTOOL],
     b = [
         {
             primary: '#ff1c90',
@@ -80,49 +80,49 @@ let H = [s.ZD.LEAF, s.ZD.SWORD, s.ZD.HEART, s.ZD.FIRE, s.ZD.WATER_DROP, s.ZD.SKU
         }
     ],
     G = function () {
-        var A, g, B, s;
-        (0, X.j1)(L.M);
+        var A, g, B, M;
+        (0, X.useSyncMessages)(L.messagesLoader);
         let G = (0, w.e7)([e.Z], () => e.Z.getGuild()),
             a = (0, w.e7)([e.Z], () => e.Z.getGuildProfile()),
-            { fetchGuildProfile: Y, fetchStatus: F } = (0, v.u)(null == G ? void 0 : G.id);
+            { fetchGuildProfile: Y, fetchStatus: i } = (0, v.u)(null == G ? void 0 : G.id);
         if (
             (Q.useEffect(() => {
-                F === f.a.NOT_FETCHED && Y();
-            }, [Y, F]),
-            F !== f.a.FETCHED)
+                i === f.a.NOT_FETCHED && Y();
+            }, [Y, i]),
+            i !== f.a.FETCHED)
         )
             return (0, C.jsx)('div', {
                 className: c.spinnerContainer,
                 children: (0, C.jsx)(D.$jN, {})
             });
         if (null == G || null == a) return null;
-        let i = (0, E.up)(G),
-            N = !i || (null == a ? void 0 : a.tag) == null,
+        let F = (0, E.up)(G),
+            N = !F || (null == a ? void 0 : a.tag) == null,
             K = null != (A = a.badge) ? A : H[0],
             y = null != (g = a.badgeColorPrimary) ? g : b[0].primary,
-            T = null != (B = a.badgeColorSecondary) ? B : b[0].secondary,
-            O = (0, C.jsxs)(C.Fragment, {
+            u = null != (B = a.badgeColorSecondary) ? B : b[0].secondary,
+            T = (0, C.jsxs)(C.Fragment, {
                 children: [
                     (0, C.jsx)(n.Z, {
                         className: c.section,
                         guildId: G.id,
                         isDisabled: N,
-                        tag: null != (s = a.tag) ? s : '',
+                        tag: null != (M = a.tag) ? M : '',
                         badge: K,
                         primaryColor: y,
-                        secondaryColor: T
+                        secondaryColor: u
                     }),
                     (0, C.jsx)(t.Z, {
                         className: c.section,
                         selectedBadge: K,
                         guildId: G.id
                     }),
-                    (0, C.jsx)(o.Z, {
+                    (0, C.jsx)(d.Z, {
                         className: c.section,
                         guildId: G.id,
                         badge: K,
                         primaryColor: y,
-                        secondaryColor: T
+                        secondaryColor: u
                     })
                 ]
             });
@@ -131,7 +131,7 @@ let H = [s.ZD.LEAF, s.ZD.SWORD, s.ZD.HEART, s.ZD.FIRE, s.ZD.WATER_DROP, s.ZD.SKU
                 (0, C.jsx)(D.X6q, {
                     className: c.title,
                     variant: 'heading-lg/semibold',
-                    children: X.NW.string(L.Z.mf2OwM)
+                    children: X.intl.string(L.default.mf2OwM)
                 }),
                 (0, C.jsxs)('div', {
                     className: c.container,
@@ -143,16 +143,16 @@ let H = [s.ZD.LEAF, s.ZD.SWORD, s.ZD.HEART, s.ZD.FIRE, s.ZD.WATER_DROP, s.ZD.SKU
                                     variant: 'text-sm/medium',
                                     color: 'text-secondary',
                                     className: c.description,
-                                    children: X.NW.format(L.Z['655Un5'], {
+                                    children: X.intl.format(L.default['655Un5'], {
                                         onClickServerProfile: () => {
-                                            P.Z.setSection(M.pNK.PROFILE);
+                                            P.Z.setSection(s.pNK.PROFILE);
                                         },
                                         onClickApplyToJoin: () => {
-                                            P.Z.setSection(M.pNK.ACCESS);
+                                            P.Z.setSection(s.pNK.ACCESS);
                                         }
                                     })
                                 }),
-                                i
+                                F
                                     ? (0, C.jsxs)('div', {
                                           className: c.enableSwitchContainer,
                                           children: [
@@ -161,7 +161,7 @@ let H = [s.ZD.LEAF, s.ZD.SWORD, s.ZD.HEART, s.ZD.FIRE, s.ZD.WATER_DROP, s.ZD.SKU
                                                   children: (0, C.jsx)(D.Text, {
                                                       variant: 'text-md/semibold',
                                                       color: 'header-primary',
-                                                      children: X.NW.string(L.Z['1zams7'])
+                                                      children: X.intl.string(L.default['1zams7'])
                                                   })
                                               }),
                                               (0, C.jsx)(D.rsf, {
@@ -174,7 +174,7 @@ let H = [s.ZD.LEAF, s.ZD.SWORD, s.ZD.HEART, s.ZD.FIRE, s.ZD.WATER_DROP, s.ZD.SKU
                                                               tag: null != (A = a.tag) ? A : '',
                                                               badge: K,
                                                               badgeColorPrimary: y,
-                                                              badgeColorSecondary: T
+                                                              badgeColorSecondary: u
                                                           });
                                                       } else P.Z.updateGuildProfile(G.id, { tag: null });
                                                   }
@@ -193,19 +193,19 @@ let H = [s.ZD.LEAF, s.ZD.SWORD, s.ZD.HEART, s.ZD.FIRE, s.ZD.WATER_DROP, s.ZD.SKU
                                     ? (0, C.jsx)(D.nuw, {
                                           children: (0, C.jsx)('div', {
                                               className: c.disabledForm,
-                                              children: O
+                                              children: T
                                           })
                                       })
-                                    : O
+                                    : T
                             ]
                         }),
                         (0, C.jsx)('div', {
-                            children: (0, C.jsx)(d.Z, {
+                            children: (0, C.jsx)(o.Z, {
                                 guildId: G.id,
                                 tag: a.tag,
                                 badge: K,
                                 primaryColor: y,
-                                secondaryColor: T
+                                secondaryColor: u
                             })
                         })
                     ]

@@ -12,7 +12,7 @@ function u(e, t) {
     return null != t && n
         ? (0, r.jsx)(l.sNh, {
               id: 'end-stage',
-              label: s.NW.string(s.t.saZaRU),
+              label: s.intl.string(s.t.saZaRU),
               color: 'danger',
               action: function () {
                   (0, l.h7j)((t) => {
@@ -46,14 +46,14 @@ function u(e, t) {
                           })({}, t)),
                           (i = i =
                               {
-                                  header: s.NW.string(s.t.gW9je3),
-                                  confirmText: s.NW.string(s.t.saZaRU),
-                                  cancelText: s.NW.string(s.t['ETE/oK']),
+                                  header: s.intl.string(s.t.gW9je3),
+                                  confirmText: s.intl.string(s.t.saZaRU),
+                                  cancelText: s.intl.string(s.t['ETE/oK']),
                                   onConfirm: () => (0, o.NZ)(e),
                                   children: (0, r.jsx)(l.Text, {
                                       variant: 'text-md/normal',
                                       color: 'header-secondary',
-                                      children: s.NW.string(s.t.mT7jwM)
+                                      children: s.intl.string(s.t.mT7jwM)
                                   })
                               }),
                           Object.getOwnPropertyDescriptors

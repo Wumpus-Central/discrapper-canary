@@ -90,7 +90,7 @@ function x(e) {
         return () => clearTimeout(e);
     });
     let E = x ? [s.z.HD_STREAMING_POTION_BANNER] : [],
-        [N, I] = (0, p.US)(E);
+        [I, P] = (0, p.US)(E);
     return null == l
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -100,13 +100,13 @@ function x(e) {
                           buyer: l,
                           onEnd: O
                       }),
-                  (h || N === s.z.HD_STREAMING_POTION_BANNER) &&
+                  (h || I === s.z.HD_STREAMING_POTION_BANNER) &&
                       (0, r.jsx)(m.Z, {
                           channel: t,
                           buyer: l,
                           streaming: !0,
                           onClose: () => {
-                              _(!1), x && I(b.L.DISMISS);
+                              _(!1), x && P(b.L.DISMISS);
                           }
                       })
               ]
@@ -173,12 +173,12 @@ function v(e) {
                             !p &&
                                 (0, r.jsx)(c.Text, {
                                     variant: 'text-sm/normal',
-                                    children: _.NW.string(_.t['i/nliI'])
+                                    children: _.intl.string(_.t['i/nliI'])
                                 }),
                             (0, r.jsx)(c.Text, {
                                 className: y.premium,
                                 variant: 'text-sm/normal',
-                                children: _.NW.string(_.t['Fh/mk5'])
+                                children: _.intl.string(_.t['Fh/mk5'])
                             })
                         ]
                     })

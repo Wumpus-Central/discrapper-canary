@@ -30,12 +30,12 @@ function p(e) {
             (0, r.jsx)(a.X6q, {
                 className: d.header,
                 variant: 'heading-md/bold',
-                children: u.NW.string(u.t['C+tj1d'])
+                children: u.intl.string(u.t['C+tj1d'])
             }),
             (0, r.jsx)(a.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: u.NW.format(u.t['nNHd//'], { onCancel: c.s6 })
+                children: u.intl.format(u.t['nNHd//'], { onCancel: c.s6 })
             })
         ]
     });

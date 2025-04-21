@@ -33,12 +33,12 @@ let p = (e) => {
                     (0, i.jsx)(a.X6q, {
                         variant: 'heading-xl/extrabold',
                         className: c.errorPageTitle,
-                        children: 'guild_not_eligible' === t ? s.NW.string(s.t.atZQVV) : s.NW.string(s.t.gAdWBg)
+                        children: 'guild_not_eligible' === t ? s.intl.string(s.t.atZQVV) : s.intl.string(s.t.gAdWBg)
                     }),
                     (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         className: c.errorPagSubtitle,
-                        children: 'guild_not_eligible' === t ? s.NW.string(s.t.teWe5O) : s.NW.string(s.t['X/yMrK'])
+                        children: 'guild_not_eligible' === t ? s.intl.string(s.t.teWe5O) : s.intl.string(s.t['X/yMrK'])
                     })
                 ]
             })

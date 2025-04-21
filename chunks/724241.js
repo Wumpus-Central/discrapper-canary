@@ -15,8 +15,8 @@ function p(e) {
     var t;
     let { user: n, displayProfile: p, guild: h, pendingAvatar: m, pendingNickname: g, pendingGlobalName: E, pendingBio: b, pendingPronouns: y, isTryItOutFlow: v, hideBioSection: O, pendingBadges: I, shouldOpenBadgeTooltip: S } = e,
         T = (0, i.e7)([c.ZP], () => (null == h ? null : c.ZP.getMember(h.id, n.id))),
-        N = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        A = null == p || null == (t = p.getPreviewBio(b)) ? void 0 : t.value,
+        A = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
+        N = null == p || null == (t = p.getPreviewBio(b)) ? void 0 : t.value,
         C = null != y ? y : null == p ? void 0 : p.pronouns,
         R = (0, d.Ly)({
             pendingNickname: g,
@@ -50,12 +50,12 @@ function p(e) {
                 })
             }),
             !O &&
-                null != A &&
-                '' !== A &&
+                null != N &&
+                '' !== N &&
                 (0, r.jsx)(s.Z, {
                     user: n,
-                    bio: A,
-                    hidePersonalInformation: N,
+                    bio: N,
+                    hidePersonalInformation: A,
                     viewFullBioDisabled: !0
                 })
         ]

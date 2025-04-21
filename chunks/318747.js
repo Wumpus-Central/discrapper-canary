@@ -1,63 +1,63 @@
 n.d(t, { Z: () => g });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    s = n.n(i),
-    a = n(780384),
-    l = n(481060),
+var r = n(120356),
+    s = n.n(r),
+    l = n(780384),
+    a = n(481060),
     o = n(410030),
     c = n(197115),
     d = n(474936),
     u = n(388032),
     m = n(637693);
 let g = (e) => {
-    var { className: t, forceWhite: n, giftMessage: i, subscriptionTier: g } = e,
+    var { className: t, forceWhite: n, giftMessage: r, subscriptionTier: g } = e,
         p = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                i = (function (e, t) {
+                i,
+                r = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        i = {},
+                        i,
+                        r = {},
                         s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
-            return i;
+            return r;
         })(e, ['className', 'forceWhite', 'giftMessage', 'subscriptionTier']);
     let h = (0, o.ZP)(),
-        f = (0, a.wj)(h) || n,
-        b = f ? l.Ttl.WHITE : l.Ttl.BRAND,
-        _ = g === d.Si.TIER_0 ? u.NW.string(u.t.rk4Uu7) : u.NW.string(u.t.Ve9Ge3);
-    return (0, r.jsx)(
+        f = (0, l.wj)(h) || n,
+        b = f ? a.Ttl.WHITE : a.Ttl.BRAND,
+        _ = g === d.Si.TIER_0 ? u.intl.string(u.t.rk4Uu7) : u.intl.string(u.t.Ve9Ge3);
+    return (0, i.jsx)(
         c.Z,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+                    i = Object.keys(n);
                 'function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
+                    (i = i.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
+                    i.forEach(function (t) {
+                        var i;
+                        (i = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: r,
+                                      value: i,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
+                                : (e[t] = i);
                     });
             }
             return e;
@@ -65,9 +65,9 @@ let g = (e) => {
             {
                 isGift: !0,
                 color: b,
-                look: l.iLD.OUTLINED,
+                look: a.iLD.OUTLINED,
                 buttonText: _,
-                giftMessage: i,
+                giftMessage: r,
                 className: s()(t, m.giftButton, f ? m.buttonWhite : m.buttonBrand),
                 subscriptionTier: g
             },

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => f }), n(290780);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(442837),
-    a = n(481060),
-    l = n(565138),
+    l = n(481060),
+    a = n(565138),
     o = n(430824),
     c = n(771845),
     d = n(823379),
@@ -12,7 +12,7 @@ var r = n(200651),
     g = n(388032),
     p = n(867198);
 let h = {
-    label: () => g.NW.string(g.t['32u1Dw']),
+    label: () => g.intl.string(g.t['32u1Dw']),
     value: u.Th
 };
 function f() {
@@ -21,12 +21,12 @@ function f() {
         g = (0, s.e7)([o.Z], () => o.Z.getGuilds()),
         { hideGuildOptions: f, hideGlobalOption: b } = (0, m.b)(),
         _ = n[0];
-    i.useEffect(() => {
+    r.useEffect(() => {
         (b && f) || (e === u.Th && e !== _ && b && t(_), e !== u.Th && f && t(u.Th));
     }, [e, t, b, f, _]);
-    let N = i.useMemo(() => {
+    let x = r.useMemo(() => {
             var e, t;
-            let r = f
+            let i = f
                 ? []
                 : n
                       .map((e) => {
@@ -41,28 +41,28 @@ function f() {
                       .filter(d.lm);
             return (
                 b ||
-                    r.unshift(
+                    i.unshift(
                         ((e = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
+                                    i = Object.keys(n);
                                 'function' == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
+                                    (i = i.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         })
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
+                                    i.forEach(function (t) {
+                                        var i;
+                                        (i = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                                      value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
+                                                : (e[t] = i);
                                     });
                             }
                             return e;
@@ -73,8 +73,8 @@ function f() {
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
+                                      var i = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, i);
                                   }
                                   return n;
                               })(Object(t)).forEach(function (n) {
@@ -82,38 +82,38 @@ function f() {
                               }),
                         e)
                     ),
-                r
+                i
             );
         }, [f, n, b, g]),
-        x = i.useCallback(
+        E = r.useCallback(
             (e) => {
                 let t = (null == e ? void 0 : e.label) === h.label() && (null == e ? void 0 : e.value) === h.value;
                 return null == e || '' === e.value || t
-                    ? (0, r.jsx)('div', {
+                    ? (0, i.jsx)('div', {
                           className: p.clydeIconContainer,
-                          children: (0, r.jsx)(a.gw7, {
+                          children: (0, i.jsx)(l.gw7, {
                               size: 'sm',
                               color: 'white',
                               'aria-hidden': !0,
                               className: p.guildSelectOptionIcon
                           })
                       })
-                    : (0, r.jsx)(l.Z, {
+                    : (0, i.jsx)(a.Z, {
                           className: p.guildSelectOptionIcon,
                           guild: g[e.value],
-                          size: l.Z.Sizes.SMALLER,
+                          size: a.Z.Sizes.SMALLER,
                           active: !0
                       });
             },
             [g]
         );
-    return (0, r.jsx)(a.VcW, {
+    return (0, i.jsx)(l.VcW, {
         wrapperClassName: p.searchableSelect,
         onChange: (e) => {
             t(e);
         },
         value: e,
-        options: N,
-        renderOptionPrefix: x
+        options: x,
+        renderOptionPrefix: E
     });
 }

@@ -10,7 +10,7 @@ function o(e) {
         if (null == e) return;
         let t = null != e.role_id,
             n = e.attachments_count > 0;
-        return t && n ? l.NW.string(l.t.ih4QMT) : t ? l.NW.string(l.t.o9xphY) : n ? l.NW.string(l.t.DWYJub) : void 0;
+        return t && n ? l.intl.string(l.t.ih4QMT) : t ? l.intl.string(l.t.o9xphY) : n ? l.intl.string(l.t.DWYJub) : void 0;
     }, [e]);
 }
 function a(e) {

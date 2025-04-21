@@ -100,14 +100,14 @@ function b(e) {
     if (null == i)
         return (0, r.jsx)(l.f, {
             src: void 0,
-            alt: c.NW.string(c.t['2B/phI']),
+            alt: c.intl.string(c.t['2B/phI']),
             size: v,
             className: a()(u.contentImage, h[null != _ ? _ : 'default'], y),
             constrain: 'width'
         });
     let S = (0, r.jsx)(l.f, {
         src: i.src,
-        alt: null != (n = null != (t = i.alt) ? t : i.text) ? n : c.NW.string(c.t['2B/phI']),
+        alt: null != (n = null != (t = i.alt) ? t : i.text) ? n : c.intl.string(c.t['2B/phI']),
         size: v,
         className: a()(u.contentImage, h[null != _ ? _ : 'default']),
         constrain: 'width'

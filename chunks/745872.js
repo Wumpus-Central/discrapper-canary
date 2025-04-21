@@ -38,19 +38,19 @@ var r,
           })()
         : I,
     T = n(738146)(),
-    N = n(143988),
-    A = n(764459),
+    A = n(143988),
+    N = n(764459),
     C = n(138676),
     R = n(365088),
     P = n(947599),
     w = {},
-    D = 'undefined' != typeof Uint8Array && N ? N(Uint8Array) : r,
+    D = 'undefined' != typeof Uint8Array && A ? A(Uint8Array) : r,
     L = {
         __proto__: null,
         '%AggregateError%': 'undefined' == typeof AggregateError ? r : AggregateError,
         '%Array%': Array,
         '%ArrayBuffer%': 'undefined' == typeof ArrayBuffer ? r : ArrayBuffer,
-        '%ArrayIteratorPrototype%': T && N ? N([][Symbol.iterator]()) : r,
+        '%ArrayIteratorPrototype%': T && A ? A([][Symbol.iterator]()) : r,
         '%AsyncFromSyncIteratorPrototype%': r,
         '%AsyncFunction%': w,
         '%AsyncGenerator%': w,
@@ -81,10 +81,10 @@ var r,
         '%Int32Array%': 'undefined' == typeof Int32Array ? r : Int32Array,
         '%isFinite%': isFinite,
         '%isNaN%': isNaN,
-        '%IteratorPrototype%': T && N ? N(N([][Symbol.iterator]())) : r,
+        '%IteratorPrototype%': T && A ? A(A([][Symbol.iterator]())) : r,
         '%JSON%': 'object' == typeof JSON ? JSON : r,
         '%Map%': 'undefined' == typeof Map ? r : Map,
-        '%MapIteratorPrototype%': 'undefined' != typeof Map && T && N ? N(new Map()[Symbol.iterator]()) : r,
+        '%MapIteratorPrototype%': 'undefined' != typeof Map && T && A ? A(new Map()[Symbol.iterator]()) : r,
         '%Math%': Math,
         '%Number%': Number,
         '%Object%': i,
@@ -98,10 +98,10 @@ var r,
         '%Reflect%': 'undefined' == typeof Reflect ? r : Reflect,
         '%RegExp%': RegExp,
         '%Set%': 'undefined' == typeof Set ? r : Set,
-        '%SetIteratorPrototype%': 'undefined' != typeof Set && T && N ? N(new Set()[Symbol.iterator]()) : r,
+        '%SetIteratorPrototype%': 'undefined' != typeof Set && T && A ? A(new Set()[Symbol.iterator]()) : r,
         '%SharedArrayBuffer%': 'undefined' == typeof SharedArrayBuffer ? r : SharedArrayBuffer,
         '%String%': String,
-        '%StringIteratorPrototype%': T && N ? N(''[Symbol.iterator]()) : r,
+        '%StringIteratorPrototype%': T && A ? A(''[Symbol.iterator]()) : r,
         '%Symbol%': T ? Symbol : r,
         '%SyntaxError%': c,
         '%ThrowTypeError%': S,
@@ -118,7 +118,7 @@ var r,
         '%Function.prototype.call%': P,
         '%Function.prototype.apply%': R,
         '%Object.defineProperty%': O,
-        '%Object.getPrototypeOf%': A,
+        '%Object.getPrototypeOf%': N,
         '%Math.abs%': f,
         '%Math.floor%': _,
         '%Math.max%': p,
@@ -128,11 +128,11 @@ var r,
         '%Math.sign%': E,
         '%Reflect.getPrototypeOf%': C
     };
-if (N)
+if (A)
     try {
         null.error;
     } catch (e) {
-        var x = N(N(e));
+        var x = A(A(e));
         L['%Error.prototype%'] = x;
     }
 var M = function e(t) {
@@ -145,7 +145,7 @@ var M = function e(t) {
             r && (n = r.prototype);
         } else if ('%AsyncIteratorPrototype%' === t) {
             var i = e('%AsyncGenerator%');
-            i && N && (n = N(i.prototype));
+            i && A && (n = A(i.prototype));
         }
         return (L[t] = n), n;
     },
@@ -211,8 +211,8 @@ var M = function e(t) {
     V = j.call(P, String.prototype.slice),
     Z = j.call(P, RegExp.prototype.exec),
     H = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
-    W = /\\(\\)?/g,
-    Y = function (e) {
+    Y = /\\(\\)?/g,
+    W = function (e) {
         var t = V(e, 0, 1),
             n = V(e, -1);
         if ('%' === t && '%' !== n) throw new c('invalid intrinsic syntax, expected closing `%`');
@@ -220,7 +220,7 @@ var M = function e(t) {
         var r = [];
         return (
             F(e, H, function (e, t, n, i) {
-                r[r.length] = n ? F(i, W, '$1') : t || e;
+                r[r.length] = n ? F(i, Y, '$1') : t || e;
             }),
             r
         );
@@ -243,7 +243,7 @@ e.exports = function (e, t) {
     if ('string' != typeof e || 0 === e.length) throw new u('intrinsic name must be a non-empty string');
     if (arguments.length > 1 && 'boolean' != typeof t) throw new u('"allowMissing" argument must be a boolean');
     if (null === Z(/^%?[^%]*%?$/, e)) throw new c('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
-    var n = Y(e),
+    var n = W(e),
         r = n.length > 0 ? n[0] : '',
         i = K('%' + r + '%', t),
         a = i.name,

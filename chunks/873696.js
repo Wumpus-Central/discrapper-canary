@@ -7,7 +7,7 @@ function i(e) {
         case 'event':
             return { subtitle: e.name };
         case 'go-live':
-            return { subtitle: r.NW.string(r.t.Pa817u) };
+            return { subtitle: r.intl.string(r.t.Pa817u) };
     }
     return null;
 }

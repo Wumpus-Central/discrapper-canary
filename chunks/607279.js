@@ -79,7 +79,7 @@ class h extends (r = a.Component) {
                         ? (0, i.jsx)(l.P3F, {
                               onClick: this.handleClear,
                               className: u.clear,
-                              'aria-label': c.NW.string(c.t['78fJND']),
+                              'aria-label': c.intl.string(c.t['78fJND']),
                               children: (0, i.jsx)(l.k$p, {
                                   size: 'md',
                                   color: 'currentColor',
@@ -90,7 +90,7 @@ class h extends (r = a.Component) {
                               size: 'md',
                               color: 'currentColor',
                               className: s()(u.searchIcon, y),
-                              'aria-label': c.NW.string(c.t['5h0QOD'])
+                              'aria-label': c.intl.string(c.t['5h0QOD'])
                           })
                 ]
             })

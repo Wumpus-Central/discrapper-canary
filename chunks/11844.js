@@ -1,9 +1,9 @@
-n.d(t, { Z: () => x });
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => E });
+var i = n(200651),
+    r = n(192379),
     s = n(399606),
-    a = n(481060),
-    l = n(906732),
+    l = n(481060),
+    a = n(906732),
     o = n(975298),
     c = n(125529),
     d = n(879892),
@@ -17,29 +17,29 @@ var r = n(200651),
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
 }
-function N(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -47,8 +47,8 @@ function N(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -57,14 +57,14 @@ function N(e, t) {
         e
     );
 }
-let x = function () {
-    let e = i.useRef(null),
-        { analyticsLocations: t } = (0, l.ZP)(),
-        x = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
-        { fractionalState: E } = (0, o.Z)(),
-        j = (0, u.y)('guild_boosting_boost_cta', x, E);
-    function C(n) {
-        null != e.current && (0, a.Mr3)(e.current),
+let E = function () {
+    let e = r.useRef(null),
+        { analyticsLocations: t } = (0, a.ZP)(),
+        E = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
+        { fractionalState: j } = (0, o.Z)(),
+        C = (0, u.y)('guild_boosting_boost_cta', E, j);
+    function O(n) {
+        null != e.current && (0, l.Mr3)(e.current),
             (0, d.u)({
                 analyticsLocation: {
                     page: h.ZY5.GUILD_BOOSTING_USER_SETTINGS,
@@ -76,58 +76,58 @@ let x = function () {
                 guild: n
             });
     }
-    async function O() {
-        e.current = await (0, a.ZDy)(
+    async function S() {
+        e.current = await (0, l.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
-                return (t) => (0, r.jsx)(e, N(_({}, t), { onSelectGuild: C }));
+                return (t) => (0, i.jsx)(e, x(_({}, t), { onSelectGuild: O }));
             },
             {
                 onCloseRequest: () => {
-                    null != e.current && (0, a.Mr3)(e.current);
+                    null != e.current && (0, l.Mr3)(e.current);
                 }
             }
         );
     }
-    let S = (0, p.aq)({ isBoostManagementDisabledForFractionalPremium: j });
-    return (0, r.jsxs)('div', {
+    let v = (0, p.aq)({ isBoostManagementDisabledForFractionalPremium: C });
+    return (0, i.jsxs)('div', {
         className: b.wrapper,
         children: [
-            (0, r.jsx)(g.Z, {
+            (0, i.jsx)(g.Z, {
                 className: b.boostIcon,
                 width: 16,
                 height: 16
             }),
-            (0, r.jsx)(a.Text, {
+            (0, i.jsx)(l.Text, {
                 className: b.copy,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
-                children: f.NW.format(f.t.kqC5vr, {
+                children: f.intl.format(f.t.kqC5vr, {
                     boostAnyGuildHook: (e, t) => {
-                        let n = null != S,
-                            i = (0, r.jsx)(
-                                a.zxk,
+                        let n = null != v,
+                            r = (0, i.jsx)(
+                                l.zxk,
                                 {
                                     className: b.cta,
                                     disabled: n,
-                                    color: a.zxk.Colors.LINK,
-                                    look: a.zxk.Looks.LINK,
-                                    onClick: n ? void 0 : O,
+                                    color: l.zxk.Colors.LINK,
+                                    look: l.zxk.Looks.LINK,
+                                    onClick: n ? void 0 : S,
                                     children: e
                                 },
                                 t
                             );
                         return n
-                            ? (0, r.jsx)(
+                            ? (0, i.jsx)(
                                   c.Z,
                                   {
-                                      text: S,
-                                      'aria-label': S.toString(),
-                                      children: (e) => (0, r.jsx)('span', N(_({}, e), { children: i }))
+                                      text: v,
+                                      'aria-label': v.toString(),
+                                      children: (e) => (0, i.jsx)('span', x(_({}, e), { children: r }))
                                   },
                                   t
                               )
-                            : i;
+                            : r;
                     }
                 })
             })

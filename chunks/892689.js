@@ -13,7 +13,7 @@ function c(e, t, n) {
 let l = (0, s.forwardRef)(function (e, t) {
     let { isPaused: n, itemId: l, points: u, chance: d, children: f, height: p, width: m, maxDrops: g = 100, dropPadding: b = 0, onPointsAdded: y } = e,
         [h, x] = (0, s.useState)([]),
-        N = (0, s.useCallback)(() => {
+        v = (0, s.useCallback)(() => {
             if (!(h.length >= g) && Math.random() <= d) {
                 let e = [...h],
                     t = c(m, p, b);
@@ -26,7 +26,7 @@ let l = (0, s.forwardRef)(function (e, t) {
             (e.x = t), (e.y = n);
         });
     }, [m, p, b]);
-    let v = (0, s.useCallback)(() => {
+    let O = (0, s.useCallback)(() => {
         0 !== h.length && 0 !== u && ((0, o.KH)(l, h.length * u), null == y || y());
     }, [h.length, u, l, y]);
     (0, s.useImperativeHandle)(t, () => ({
@@ -35,13 +35,13 @@ let l = (0, s.forwardRef)(function (e, t) {
             t.splice(e, 1), x(t);
         }
     }));
-    let O = (0, s.useCallback)(() => {
-        N(), v();
-    }, [N, v]);
+    let j = (0, s.useCallback)(() => {
+        v(), O();
+    }, [v, O]);
     return (
         (0, a.Z)({
             isPaused: n,
-            onInterval: O,
+            onInterval: j,
             interval: 1000
         }),
         (0, r.jsx)('div', {

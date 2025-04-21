@@ -10,7 +10,7 @@ let o = Math.ceil(2 * Math.PI * 20),
             s = Math.max(0, Math.min(1, n / t)),
             c = ''.concat(Math.floor(100 * s), '%');
         return (0, r.jsx)(i.ua7, {
-            text: l.NW.formatToPlainString(l.t['2eoRMj'], { used: c }),
+            text: l.intl.formatToPlainString(l.t['2eoRMj'], { used: c }),
             children: (e) => {
                 var t, n;
                 return (0, r.jsxs)(
@@ -43,7 +43,7 @@ let o = Math.ceil(2 * Math.PI * 20),
                         {
                             className: a.wrapper,
                             role: 'progressbar',
-                            'aria-label': l.NW.formatToPlainString(l.t['2eoRMj'], { used: c })
+                            'aria-label': l.intl.formatToPlainString(l.t['2eoRMj'], { used: c })
                         },
                         e
                     )),

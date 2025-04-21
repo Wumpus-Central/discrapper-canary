@@ -74,7 +74,7 @@ let I = {
                 showEmpty: a
             });
         },
-        renderTitle: () => (0, i.jsx)(y.PI, { children: _.NW.string(_.t.UPvOiY) }),
+        renderTitle: () => (0, i.jsx)(y.PI, { children: _.intl.string(_.t.UPvOiY) }),
         renderButtons: (e, t) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -135,7 +135,7 @@ let I = {
                   })
                 : null;
         },
-        renderTitle: () => (0, i.jsx)(y.PI, { children: _.NW.string(_.t.nFv3GR) }),
+        renderTitle: () => (0, i.jsx)(y.PI, { children: _.intl.string(_.t.nFv3GR) }),
         renderButtons: (e, t) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -222,7 +222,7 @@ let I = {
                   })
                 : null;
         },
-        renderTitle: () => (0, i.jsx)(y.PI, { children: _.NW.string(_.t['386XRk']) }),
+        renderTitle: () => (0, i.jsx)(y.PI, { children: _.intl.string(_.t['386XRk']) }),
         renderButtons(e, t) {
             var o;
             return (0, p.ZL)(e)
@@ -298,7 +298,7 @@ let I = {
                 showEmpty: n
             });
         },
-        renderTitle: () => (0, i.jsx)(y.PI, { children: _.NW.string(_.t.gnKWdX) }),
+        renderTitle: () => (0, i.jsx)(y.PI, { children: _.intl.string(_.t.gnKWdX) }),
         renderButtons: (e, t) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -322,7 +322,7 @@ let I = {
             let { locked: t } = e;
             return (0, i.jsx)(a.ZP, { locked: t });
         },
-        renderTitle: () => (0, i.jsx)(y.PI, { children: _.NW.string(_.t['6gwSFR']) }),
+        renderTitle: () => (0, i.jsx)(y.PI, { children: _.intl.string(_.t['6gwSFR']) }),
         renderButtons: () => null,
         predicate: () => (0, l.Rb)('ActivityPopout').allowActivityWidget && !(0, o.X)('FriendsPopout')
     },
@@ -331,7 +331,7 @@ let I = {
             let { locked: t } = e;
             return (0, i.jsx)(u.Z, { locked: t });
         },
-        renderTitle: () => (0, i.jsx)(y.PI, { children: _.NW.string(_.t.TdEu5e) }),
+        renderTitle: () => (0, i.jsx)(y.PI, { children: _.intl.string(_.t.TdEu5e) }),
         renderButtons: () => null,
         predicate: () => (0, o.X)('FriendsPopout')
     }

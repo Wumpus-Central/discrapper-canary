@@ -17,7 +17,7 @@ function b(e) {
     let { user: t, nickname: n, status: b, isFocused: _ } = e,
         E = i.useContext(u.AnalyticsContext),
         { analyticsLocations: O } = (0, o.ZP)(),
-        N = (e) => {
+        y = (e) => {
             null == e || e.stopPropagation(),
                 a.Z.addRelationship({
                     userId: t.id,
@@ -27,10 +27,10 @@ function b(e) {
                     fromFriendSuggestion: !0
                 });
         },
-        y = (e) => {
+        I = (e) => {
             null == e || e.stopPropagation(), s.Z.ignore(t.id);
         },
-        I = b === f.Skl.OFFLINE ? f.Skl.UNKNOWN : b;
+        v = b === f.Skl.OFFLINE ? f.Skl.UNKNOWN : b;
     return (0, r.jsx)(p.Z, {
         isFocused: _,
         user: t,
@@ -46,15 +46,15 @@ function b(e) {
                     (0, r.jsx)(d.Z, {
                         icon: l.dz2,
                         actionType: d.Z.ActionTypes.ACCEPT,
-                        tooltip: g.NW.string(g.t.ZcibdX),
-                        onClick: N,
+                        tooltip: g.intl.string(g.t.ZcibdX),
+                        onClick: y,
                         shouldHighlight: e
                     }),
                     (0, r.jsx)(d.Z, {
                         icon: l.Dio,
                         actionType: d.Z.ActionTypes.DENY,
-                        tooltip: g.NW.string(g.t.xuio0N),
-                        onClick: y,
+                        tooltip: g.intl.string(g.t.xuio0N),
+                        onClick: I,
                         shouldHighlight: e
                     })
                 ]
@@ -65,7 +65,7 @@ function b(e) {
                     (0, r.jsx)(h.Z, {
                         user: t,
                         hovered: e,
-                        status: I,
+                        status: v,
                         subText: n,
                         className: m.__invalid_userInfo
                     }),

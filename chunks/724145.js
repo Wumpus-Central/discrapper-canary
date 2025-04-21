@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(238302),
     S = n(514361),
     T = n(572397),
-    N = n(705262),
-    A = n(981631),
+    A = n(705262),
+    N = n(981631),
     C = n(921944),
     R = n(474936),
     P = n(388032),
@@ -38,7 +38,7 @@ let D = () =>
                     (0, r.jsx)(u.X6q, {
                         variant: 'heading-md/bold',
                         color: 'always-white',
-                        children: P.NW.string(P.t.POSLGR)
+                        children: P.intl.string(P.t.POSLGR)
                     })
                 ]
             })
@@ -47,7 +47,7 @@ let D = () =>
         let { markAsDismissed: t } = e,
             n = (0, T.q)(),
             i = () => {
-                null != t && t(C.L.DISMISS), n(A.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, I.Mo)();
+                null != t && t(C.L.DISMISS), n(N.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, I.Mo)();
             };
         return (0, r.jsxs)('div', {
             className: w.editorHeader,
@@ -63,7 +63,7 @@ let D = () =>
                 }),
                 (0, r.jsx)(u.X6q, {
                     variant: 'heading-lg/extrabold',
-                    children: P.NW.string(P.t['xSR+a2'])
+                    children: P.intl.string(P.t['xSR+a2'])
                 })
             ]
         });
@@ -83,7 +83,7 @@ let D = () =>
                     (null == a || a(),
                     null != o && o(C.L.PRIMARY),
                     null != f &&
-                        ((0, N.Yk)({
+                        ((0, A.Yk)({
                             isPersisted: !0,
                             themeName: c.Us[f.id],
                             analyticsLocations: s
@@ -95,7 +95,7 @@ let D = () =>
             };
         return (0, r.jsx)(E.Z, {
             size: u.zxk.Sizes.MEDIUM,
-            buttonText: _ ? P.NW.string(P.t.IJI7ys) : (null == p || null == (i = p.subscription_trial) ? void 0 : i.sku_id) === R.Si.TIER_2 ? b : P.NW.string(P.t.mr4K7O),
+            buttonText: _ ? P.intl.string(P.t.IJI7ys) : (null == p || null == (i = p.subscription_trial) ? void 0 : i.sku_id) === R.Si.TIER_2 ? b : P.intl.string(P.t.mr4K7O),
             subscriptionTier: R.Si.TIER_2,
             onSubscribeModalClose: v
         });
@@ -106,16 +106,16 @@ let D = () =>
             [o, c] = i.useState(!1),
             d = (0, T.q)(),
             _ = () => {
-                null != t && t(C.L.DISMISS), d(A.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, I.Mo)(), n || f.Z.open();
+                null != t && t(C.L.DISMISS), d(N.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, I.Mo)(), n || f.Z.open();
             },
             p = (0, s.EQ)({
                 isPreview: a,
                 isCoachmark: n,
                 forceShowCloseButton: o
             })
-                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => P.NW.string(P.t.cpT0Cg))
-                .with({ isPreview: !0 }, () => P.NW.string(P.t['dqH+qq']))
-                .otherwise(() => P.NW.string(P.t.Olc2Ky));
+                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => P.intl.string(P.t.cpT0Cg))
+                .with({ isPreview: !0 }, () => P.intl.string(P.t['dqH+qq']))
+                .otherwise(() => P.intl.string(P.t.Olc2Ky));
         return (0, r.jsxs)('div', {
             className: w.editorFooter,
             children: [
@@ -149,16 +149,16 @@ function k(e) {
             shouldEditorAnimate: n && !p.Z.useReducedMotion
         })),
         f = (0, T.q)();
-    i.useEffect(() => f(A.rMx.CLIENT_THEME_PREVIEW_VIEWED), [f]),
+    i.useEffect(() => f(N.rMx.CLIENT_THEME_PREVIEW_VIEWED), [f]),
         i.useEffect(() => {
             s &&
-                v.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
+                v.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: R.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: a
                 });
         }, [s, a]);
     let g = (0, T.J)(),
-        E = (0, _.Z)(null, s ? g : A.dG4);
+        E = (0, _.Z)(null, s ? g : N.dG4);
     return (
         i.useEffect(() => {
             if (s && !c) return g;
@@ -174,11 +174,11 @@ function k(e) {
                         n ? (0, r.jsx)(D, {}) : (0, r.jsx)(L, { markAsDismissed: t }),
                         (0, r.jsx)(u.Ttm, {
                             className: w.editorBody,
-                            children: (0, r.jsxs)(N.ZP, {
-                                type: N.yH.EDITOR,
+                            children: (0, r.jsxs)(A.ZP, {
+                                type: A.yH.EDITOR,
                                 children: [
-                                    !s && (0, r.jsx)(N.ZP.Basic, { className: w.selectionGroup }),
-                                    (0, r.jsx)(N.ZP.Gradient, {
+                                    !s && (0, r.jsx)(A.ZP.Basic, { className: w.selectionGroup }),
+                                    (0, r.jsx)(A.ZP.Gradient, {
                                         className: w.selectionGroup,
                                         isCoachmark: n
                                     })

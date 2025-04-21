@@ -31,14 +31,14 @@ function f(e, t, n, d) {
                 canSendSoundmojis: p,
                 isDefaultSound: f
             })
-                .with({ canSendSoundmojis: !1 }, () => u.NW.string(u.t.x2kyyM))
-                .with({ isDefaultSound: !0 }, () => u.NW.string(u.t.AabHen))
+                .with({ canSendSoundmojis: !1 }, () => u.intl.string(u.t.x2kyyM))
+                .with({ isDefaultSound: !0 }, () => u.intl.string(u.t.AabHen))
                 .with(
                     {
                         isInGuild: !1,
                         isGuildDiscoverable: !1
                     },
-                    () => u.NW.string(u.t.MRYt09)
+                    () => u.intl.string(u.t.MRYt09)
                 )
                 .with(
                     {
@@ -46,7 +46,7 @@ function f(e, t, n, d) {
                         isInGuild: !0,
                         isSoundFromDifferentGuild: !1
                     },
-                    () => u.NW.string(u.t.p17MQE)
+                    () => u.intl.string(u.t.p17MQE)
                 )
                 .with(
                     {
@@ -54,7 +54,7 @@ function f(e, t, n, d) {
                         isInGuild: !0,
                         isSoundFromDifferentGuild: !0
                     },
-                    () => u.NW.string(u.t.Lkbm5u)
+                    () => u.intl.string(u.t.Lkbm5u)
                 )
                 .with(
                     {
@@ -62,7 +62,7 @@ function f(e, t, n, d) {
                         isInGuild: !1,
                         isGuildDiscoverable: !0
                     },
-                    () => u.NW.string(u.t.GTJmaW)
+                    () => u.intl.string(u.t.GTJmaW)
                 )
                 .with(
                     {
@@ -70,7 +70,7 @@ function f(e, t, n, d) {
                         isInGuild: !0,
                         isSoundFromDifferentGuild: !1
                     },
-                    () => u.NW.string(u.t['sj/imZ'])
+                    () => u.intl.string(u.t['sj/imZ'])
                 )
                 .with(
                     {
@@ -79,7 +79,7 @@ function f(e, t, n, d) {
                         isSoundFromDifferentGuild: !0,
                         canSendSoundmojis: !0
                     },
-                    () => u.NW.string(u.t['3Ru2//'])
+                    () => u.intl.string(u.t['3Ru2//'])
                 )
                 .with(
                     {
@@ -87,7 +87,7 @@ function f(e, t, n, d) {
                         isInGuild: !1,
                         isGuildDiscoverable: !0
                     },
-                    () => u.NW.string(u.t.qRkWhY)
+                    () => u.intl.string(u.t.qRkWhY)
                 )
                 .exhaustive();
         }, [f, d, _, n, h, p])
