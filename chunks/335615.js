@@ -186,14 +186,13 @@ let er = K.ZP.getEnableHardwareAcceleration(),
             spacing: 16,
             onShiftClick: T,
             shouldShowOnHover: E,
-            clickTrap: P,
             shouldShow: P,
             onRequestClose: () => {
                 S(!1);
             },
             children: (e) => {
-                let { onClick: n } = e,
-                    i = en(e, ['onClick']);
+                let { onClick: n, onMouseDown: i } = e,
+                    a = en(e, ['onClick', 'onMouseDown']);
                 return (0, r.jsx)(
                     _.Z,
                     ee(
@@ -222,9 +221,12 @@ let er = K.ZP.getEnableHardwareAcceleration(),
                             nameplate: O,
                             onClick: (e) => {
                                 e.shiftKey ? null == T || T() : S((e) => !e);
+                            },
+                            onMouseDown: (e) => {
+                                P ? e.stopPropagation() : null == i || i(e);
                             }
                         },
-                        i
+                        a
                     )
                 );
             }

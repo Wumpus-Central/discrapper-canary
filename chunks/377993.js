@@ -114,12 +114,11 @@ function R(e) {
         position: l.tq ? 'window_center' : 'left',
         spacing: 16,
         onShiftClick: A,
-        clickTrap: k,
         shouldShow: k,
         onRequestClose: () => M(!1),
         children: (e) => {
-            var { onClick: n } = e,
-                i = (function (e, t) {
+            var { onClick: n, onMouseDown: i } = e,
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
@@ -137,7 +136,7 @@ function R(e) {
                         for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                     }
                     return i;
-                })(e, ['onClick']);
+                })(e, ['onClick', 'onMouseDown']);
             return (0, r.jsx)(
                 P.Z,
                 T(
@@ -159,9 +158,12 @@ function R(e) {
                         nameplate: R,
                         onClick: (e) => {
                             e.shiftKey ? null == A || A() : M((e) => !e);
+                        },
+                        onMouseDown: (e) => {
+                            k ? e.stopPropagation() : null == i || i(e);
                         }
                     },
-                    i
+                    l
                 ),
                 t.id
             );

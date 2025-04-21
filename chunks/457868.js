@@ -166,12 +166,11 @@ let Y = B.ZP.getEnableHardwareAcceleration(),
             position: d.tq ? 'window_center' : 'left',
             spacing: 16,
             onShiftClick: V,
-            clickTrap: K,
             shouldShow: K,
             onRequestClose: () => X(!1),
             children: (e) => {
-                var { onClick: n } = e,
-                    i = (function (e, t) {
+                var { onClick: n, onMouseDown: i } = e,
+                    l = (function (e, t) {
                         if (null == e) return {};
                         var n,
                             r,
@@ -189,7 +188,7 @@ let Y = B.ZP.getEnableHardwareAcceleration(),
                             for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                         }
                         return i;
-                    })(e, ['onClick']);
+                    })(e, ['onClick', 'onMouseDown']);
                 return (0, r.jsx)(
                     G.Z,
                     W(
@@ -218,9 +217,12 @@ let Y = B.ZP.getEnableHardwareAcceleration(),
                             nameplate: q,
                             onClick: (e) => {
                                 e.shiftKey ? null == V || V() : X((e) => !e);
+                            },
+                            onMouseDown: (e) => {
+                                K ? e.stopPropagation() : null == i || i(e);
                             }
                         },
-                        i
+                        l
                     )
                 );
             }
