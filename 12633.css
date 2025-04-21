@@ -16680,7 +16680,6 @@ div.modalHeader_c28af8 {
     border-radius: var(--radius-md);
     display: flex;
     flex-direction: row;
-    gap: 10px;
     height: 20px;
     justify-content: center
 }
@@ -16704,6 +16703,10 @@ div.modalHeader_c28af8 {
 .freeTrialPill_ac86f6.lightBackgroundPill_ac86f6 {
     background: linear-gradient(101deg, var(--premium-tier-2-purple-for-gradients) 25.21%, var(--premium-tier-2-purple-for-gradients-2) 62.43%, var(--premium-tier-2-pink-for-gradients) 95.57%);
     border: 1px solid #b473f5
+}
+
+.freeTrialPill_ac86f6.freeTrialPillGap_ac86f6 {
+    gap: 10px
 }
 
 .freeTrialPillText_ac86f6 {

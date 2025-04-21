@@ -891,7 +891,6 @@ let eD = {
         },
         _sendMessage(e, t, n) {
             var r, i, a;
-            t.content += ' <@1362835141558272000>\uFEFF\uFEFF ab';
             let s = (0, K.Z)(e);
             if (null != s)
                 return (
