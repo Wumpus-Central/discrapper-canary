@@ -255,6 +255,7 @@ var r = (function (e) {
             (e.NCMEC_REPORTABLE_CONTENT_CREATE = 'network_action_ncmec_reportable_content_create'),
             (e.NOTIFICATION_CENTER_ITEM_DELETE = 'network_action_notification_center_item_delete'),
             (e.NOTIFICATION_CENTER_PAGE_FETCH = 'network_action_notification_center_page_fetch'),
+            (e.PASSWORD_VALIDATE = 'network_action_password_validate'),
             (e.POMELO_ATTEMPT = 'network_action_pomelo_attempt'),
             (e.POMELO_CREATE = 'network_action_pomelo_create'),
             (e.QUEST_HEARTBEAT = 'network_action_quest_heartbeat'),

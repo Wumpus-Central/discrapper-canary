@@ -308,6 +308,7 @@ let A = Object.freeze({
         LOGOUT: '/auth/logout',
         REGISTER: '/auth/register',
         REGISTER_PHONE: '/auth/register/phone',
+        SCORE_PASSWORD: '/auth/password/validate',
         MFA_WEBAUTHN_CREDENTIALS: '/users/@me/mfa/webauthn/credentials',
         WEBAUTHN_CONDITIONAL_UI_CHALLENGE: '/auth/conditional/start',
         WEBAUTHN_CONDITIONAL_UI_LOGIN: '/auth/conditional/finish',
