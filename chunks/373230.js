@@ -14,6 +14,11 @@ let s = (0, i.B)({
             id: 1,
             label: 'Allow users to select from recently uploaded avatars',
             config: { enabled: !0 }
+        },
+        {
+            id: 2,
+            label: 'Allow users to select from recently uploaded avatars. These users have always had access to the higher limit regardless of subscription status.',
+            config: { enabled: !0 }
         }
     ]
 });

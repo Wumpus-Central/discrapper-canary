@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(539854), n(388685);
+n.d(t, { Z: () => x }), n(539854), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -6,65 +6,66 @@ var i = n(200651),
     a = n(704215),
     o = n(481060),
     c = n(243778),
-    d = n(643879),
-    u = n(373230),
-    m = n(598989),
-    g = n(87478),
-    p = n(654904),
-    h = n(993413),
-    f = n(921944),
-    b = n(486324),
-    _ = n(388032),
-    x = n(24085);
-let E = [
+    d = n(373230),
+    u = n(654904),
+    m = n(993413),
+    g = n(921944),
+    p = n(486324),
+    h = n(485696),
+    f = n(388032),
+    b = n(24085);
+let _ = [
     {
         name: 'gif',
         extensions: ['gif']
     }
 ];
-function j(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: j, changeAvatarButtonText: C, guildId: O, className: S, disabled: v = !1, isTryItOutFlow: T = !1, forcedDivider: I, withHighlight: N = !1 } = e,
-        y = N ? o.gtL : o.zxk,
-        A = (0, u.T)({ location: 'AvatarSection' }),
-        P = [];
-    A && P.push(a.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE);
-    let [R, D] = (0, c.US)(P),
-        Z = R === a.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE,
-        w = (0, m._)(),
-        { recentAvatarsLimit: k } = (0, d.pC)(w),
-        L = r.useCallback(() => {
-            D(f.L.TAKE_ACTION), (0, p.$r)(b.pC.AVATAR, O, T, T ? E : void 0);
-        }, [O, T, D]);
-    return (0, i.jsx)(h.Z, {
-        className: S,
-        title: j,
-        titleIcon: Z ? (0, i.jsx)(g.Z, { className: x.newBadge }) : void 0,
-        description: A
-            ? _.intl.format(_.t.U4tZfX, {
-                  recentAvatarsLimit: k,
-                  onClick: L
+function x(e) {
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: x, changeAvatarButtonText: E, guildId: j, className: C, disabled: O = !1, isTryItOutFlow: S = !1, forcedDivider: v, withHighlight: T = !1 } = e,
+        I = T ? o.gtL : o.zxk,
+        N = (0, d.T)({ location: 'AvatarSection' }),
+        y = [];
+    N && y.push(a.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE);
+    let [A, P] = (0, c.US)(y),
+        R = A === a.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE,
+        D = r.useCallback(() => {
+            P(g.L.TAKE_ACTION), (0, u.$r)(p.pC.AVATAR, j, S, S ? _ : void 0);
+        }, [j, S, P]);
+    return (0, i.jsx)(m.Z, {
+        className: C,
+        title: x,
+        titleIcon: R
+            ? (0, i.jsx)(o.IGR, {
+                  text: f.intl.string(f.t.y2b7CA),
+                  className: b.newBadge
+              })
+            : void 0,
+        description: N
+            ? f.intl.format(f.t.U4tZfX, {
+                  recentAvatarsLimit: h.iZ,
+                  onClick: D
               })
             : void 0,
         errors: n,
-        disabled: v,
-        forcedDivider: I,
+        disabled: O,
+        forcedDivider: v,
         children: (0, i.jsxs)('div', {
-            className: x.buttonsContainer,
+            className: b.buttonsContainer,
             children: [
-                (0, i.jsx)(y, {
-                    className: l()({ [x.buttonHighlighted]: N }),
+                (0, i.jsx)(I, {
+                    className: l()({ [b.buttonHighlighted]: T }),
                     size: o.zxk.Sizes.SMALL,
-                    onClick: L,
-                    children: null != C ? C : _.intl.string(_.t['4OynCA'])
+                    onClick: D,
+                    children: null != E ? E : f.intl.string(f.t['4OynCA'])
                 }),
                 t &&
                     (0, i.jsx)(o.zxk, {
-                        className: x.removeButton,
+                        className: b.removeButton,
                         color: o.zxk.Colors.PRIMARY,
                         look: o.zxk.Looks.LINK,
                         size: o.zxk.Sizes.SMALL,
                         onClick: () => s(null),
-                        children: null != O ? _.intl.string(_.t.TDjKDg) : _.intl.string(_.t.twB3f3)
+                        children: null != j ? f.intl.string(f.t.TDjKDg) : f.intl.string(f.t.twB3f3)
                     })
             ]
         })

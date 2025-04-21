@@ -1,34 +1,33 @@
 n.d(t, {
-    $0: () => P,
-    AN: () => j,
-    Ct: () => N,
-    DU: () => V,
-    EQ: () => F,
+    $0: () => R,
+    AN: () => k,
+    Ct: () => A,
+    DU: () => F,
+    EQ: () => B,
     Ej: () => S,
     ME: () => m,
     O1: () => O,
-    O8: () => D,
+    O8: () => w,
     Pl: () => I,
-    Ry: () => A,
-    Uw: () => x,
-    ZE: () => k,
+    Uw: () => L,
+    ZE: () => M,
     _G: () => v,
     _O: () => T,
     _y: () => g,
-    do: () => U,
-    g7: () => w,
+    do: () => j,
+    g7: () => P,
     g_: () => p,
     hs: () => b,
-    j4: () => R,
-    ks: () => Y,
+    j4: () => C,
+    ks: () => H,
     lX: () => y,
     m_: () => h,
-    qH: () => L,
+    qH: () => D,
     tj: () => E,
-    uw: () => C,
-    wN: () => B,
-    zZ: () => G,
-    zm: () => M
+    uw: () => N,
+    wN: () => G,
+    zZ: () => U,
+    zm: () => x
 }),
     n(49124);
 var r = n(848246),
@@ -49,7 +48,7 @@ function f(e, t) {
     try {
         let n = d[t.premiumType];
         if (null == n) return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let r = Z[n];
+        let r = V[n];
         if (null == r) return u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, ' and premium type ').concat(t.premiumType)), !1;
         return r.skuFeatures.includes(e);
     } catch (e) {
@@ -75,30 +74,29 @@ let p = new _(r.q.ANIMATED_EMOJIS),
     I = new _('profileBadges'),
     S = new _(r.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
     T = new _('collectibles'),
-    A = new _(r.q.INCREASED_RECENT_AVATARS_LIMIT),
-    N = new _('appIcons'),
-    C = new _(r.q.CLIENT_THEMES),
-    R = new _('boostDiscount'),
-    P = new _('freeBoosts'),
-    w = new _(r.q.STREAM_MID_QUALITY),
-    D = new _(r.q.STREAM_HIGH_QUALITY),
-    L = new _(r.q.CUSTOM_NOTIFICATION_SOUNDS),
-    x = new _('fancyVoiceChannelReactions'),
-    M = new _('installPremiumApplications'),
-    k = new _('redeemPremiumPerks'),
-    j = new _(r.q.VIDEO_FILTER_ASSETS);
+    A = new _('appIcons'),
+    N = new _(r.q.CLIENT_THEMES),
+    C = new _('boostDiscount'),
+    R = new _('freeBoosts'),
+    P = new _(r.q.STREAM_MID_QUALITY),
+    w = new _(r.q.STREAM_HIGH_QUALITY),
+    D = new _(r.q.CUSTOM_NOTIFICATION_SOUNDS),
+    L = new _('fancyVoiceChannelReactions'),
+    x = new _('installPremiumApplications'),
+    M = new _('redeemPremiumPerks'),
+    k = new _(r.q.VIDEO_FILTER_ASSETS);
 new o.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, a.h);
-let U = new _(r.q.INCREASED_GUILD_LIMIT),
-    G = new _(r.q.INCREASED_MESSAGE_LENGTH),
-    B = new _('increasedVideoUploadQuality'),
-    F = new _('uploadLargeFiles'),
-    V = new _(r.q.CHAT_WALLPAPERS),
-    Z = Object.freeze({
-        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, j, B, F, N]),
-        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, v, I, R, w, x, B, F, N]),
-        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, y, v, O, I, S, C, R, P, w, D, x, M, k, j, U, G, B, F, N, T, L, b, A, V])
+let j = new _(r.q.INCREASED_GUILD_LIMIT),
+    U = new _(r.q.INCREASED_MESSAGE_LENGTH),
+    G = new _('increasedVideoUploadQuality'),
+    B = new _('uploadLargeFiles'),
+    F = new _(r.q.CHAT_WALLPAPERS),
+    V = Object.freeze({
+        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, k, G, B, A]),
+        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, v, I, C, P, L, G, B, A]),
+        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, y, v, O, I, S, N, C, R, P, w, L, x, M, k, j, U, G, B, A, T, D, b, F])
     }),
-    H = [R, P];
-function Y(e, t, n) {
-    return !((0, s.U)('canUserUse', t) || (null !== n && n === c.a$.FP_ONLY && H.includes(e))) && e.getFeatureValue(t);
+    Z = [C, R];
+function H(e, t, n) {
+    return !((0, s.U)('canUserUse', t) || (null !== n && n === c.a$.FP_ONLY && Z.includes(e))) && e.getFeatureValue(t);
 }
