@@ -1,48 +1,48 @@
-r.d(t, { m: () => p }), r(388685);
-var n = r(192379),
-    i = r(442837),
-    s = r(594174),
-    o = r(78839),
-    l = r(431),
-    a = r(111361),
-    c = r(74538),
-    h = r(557017),
-    v = r(474936);
-let u = (e) => {
+n.d(t, { m: () => g }), n(388685);
+var r = n(192379),
+    i = n(442837),
+    s = n(594174),
+    o = n(78839),
+    l = n(431),
+    a = n(111361),
+    c = n(74538),
+    u = n(557017),
+    d = n(474936);
+let f = (e) => {
         let t = new Date();
         t.setDate(t.getDate() - 10);
-        let r = e.endedAt;
-        return null != r && r >= t;
+        let n = e.endedAt;
+        return null != n && n >= t;
     },
-    f = (e) => {
+    p = (e) => {
         var t;
-        let r = null == (t = (0, c.Af)(e)) ? void 0 : t.planId;
-        return void 0 === r || c.ZP.getPremiumType(r) !== v.p9.TIER_2;
+        let n = null == (t = (0, c.Af)(e)) ? void 0 : t.planId;
+        return void 0 === n || c.ZP.getPremiumType(n) !== d.p9.TIER_2;
     };
-function p(e) {
+function g(e) {
     let { location: t } = e,
-        [r, c] = n.useState(null),
-        p = h.t.useExperiment({ location: t }),
-        [d, b] = (0, i.Wu)([o.ZP], () => [o.ZP.getMostRecentPremiumTypeSubscription(), o.ZP.getPreviousPremiumTypeSubscription()]),
-        Z = (0, i.e7)([l.Z], () => l.Z.hasFetchedOffer()),
-        [M, g] = (0, i.Wu)([o.ZP], () => [o.ZP.hasFetchedMostRecentPremiumTypeSubscription(), o.ZP.hasFetchedPreviousPremiumTypeSubscription()]),
-        j = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-        O = (null == j ? void 0 : j.hasHadPremium()) && !M && !g,
-        y = !(0, a.I5)(j) && !Z;
+        [n, c] = r.useState(null),
+        g = u.t.useExperiment({ location: t }),
+        [b, m] = (0, i.Wu)([o.ZP], () => [o.ZP.getMostRecentPremiumTypeSubscription(), o.ZP.getPreviousPremiumTypeSubscription()]),
+        h = (0, i.e7)([l.Z], () => l.Z.hasFetchedOffer()),
+        [v, _] = (0, i.Wu)([o.ZP], () => [o.ZP.hasFetchedMostRecentPremiumTypeSubscription(), o.ZP.hasFetchedPreviousPremiumTypeSubscription()]),
+        O = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+        y = (null == O ? void 0 : O.hasHadPremium()) && !v && !_,
+        j = !(0, a.I5)(O) && !h;
     return (
-        n.useEffect(() => {
-            if (!1 === p.enabled) return void c(!1);
-            if (!O && !y) {
-                if (null === d) return void ((0, a.I5)(j, v.p9.TIER_2) ? c(!1) : c(!0));
-                if (d.isPaused) c(!0);
-                else if (d.isEnded) l.Z.hasAnyUnexpiredOffer() || l.Z.hasAnyUnexpiredDiscountOffer() || u(d) ? c(!1) : c(!0);
-                else if (d.isActive) {
-                    let e = f(d),
-                        t = null == b || !u(b);
+        r.useEffect(() => {
+            if (!1 === g.enabled) return void c(!1);
+            if (!y && !j) {
+                if (null === b) return void ((0, a.I5)(O, d.p9.TIER_2) ? c(!1) : c(!0));
+                if (b.isPaused) c(!0);
+                else if (b.isEnded) l.Z.hasAnyUnexpiredOffer() || l.Z.hasAnyUnexpiredDiscountOffer() || f(b) ? c(!1) : c(!0);
+                else if (b.isActive) {
+                    let e = p(b),
+                        t = null == m || !f(m);
                     c(e && t);
                 } else c(!1);
             }
-        }, [p.enabled, d, b, O, y, j]),
-        r
+        }, [g.enabled, b, m, y, j, O]),
+        n
     );
 }

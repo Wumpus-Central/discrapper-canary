@@ -69,7 +69,7 @@ function z(e) {
     }
     return e;
 }
-function Y(e, t) {
+function W(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -87,7 +87,7 @@ function Y(e, t) {
         e
     );
 }
-function W(e) {
+function Y(e) {
     let { label: t, enabled: n, disabled: r, onPreview: s, onChange: l, tooltip: a } = e;
     return (0, i.jsx)(u.j7V, {
         className: G.soundRow,
@@ -261,7 +261,7 @@ function K(e) {
                 m.map((e) => {
                     let { label: r, sound: s, focusModeDisabled: l } = e;
                     return (0, i.jsx)(
-                        W,
+                        Y,
                         {
                             label: r,
                             disabled: n || !0 === l,
@@ -642,7 +642,7 @@ async function ee(e) {
 }
 function et(e) {
     let t = (0, j.p)();
-    return (0, i.jsx)(X, Y(z({}, e), { focusMode: t }));
+    return (0, i.jsx)(X, W(z({}, e), { focusMode: t }));
 }
 function en() {
     let e = (0, c.cj)([A.Z], () => ({
@@ -654,7 +654,7 @@ function en() {
         ttsType: A.Z.getTTSType(),
         notifyMessagesInSelectedChannel: A.Z.getNotifyMessagesInSelectedChannel()
     }));
-    return (0, i.jsx)(et, Y(z({}, e), { afkTimeout: w.CM.useSetting() }));
+    return (0, i.jsx)(et, W(z({}, e), { afkTimeout: w.CM.useSetting() }));
 }
 function ei() {
     let e = w.fz.useSetting(),

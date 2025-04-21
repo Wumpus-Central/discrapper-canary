@@ -1,70 +1,70 @@
-B.d(g, { Z: () => o });
-var C = B(200651),
-    Q = B(120356),
-    w = B.n(Q),
-    D = B(442837),
-    f = B(481060),
-    E = B(550271),
-    v = B(494620),
-    I = B(63063),
-    P = B(434404),
-    e = B(999382),
-    t = B(981631),
-    r = B(817239),
-    n = B(388032),
-    d = B(602268);
-let o = function (A) {
-    let { className: g, guildId: B, tag: Q, badge: o, primaryColor: s, secondaryColor: M, isDisabled: L = !1 } = A,
-        X = (0, D.e7)([e.Z], () => e.Z.getProps().originalProfile),
-        c = null != X && X.tag !== Q;
-    return (0, C.jsxs)('div', {
+v.d(g, { Z: () => M });
+var B = v(200651),
+    t = v(120356),
+    e = v.n(t),
+    f = v(442837),
+    r = v(481060),
+    C = v(550271),
+    h = v(494620),
+    n = v(63063),
+    w = v(434404),
+    Q = v(999382),
+    D = v(981631),
+    o = v(817239),
+    s = v(388032),
+    i = v(602268);
+let M = function (A) {
+    let { className: g, guildId: v, tag: t, badge: M, primaryColor: a, secondaryColor: l, isDisabled: E = !1 } = A,
+        c = (0, f.e7)([Q.Z], () => Q.Z.getProps().originalProfile),
+        P = null != c && c.tag !== t;
+    return (0, B.jsxs)('div', {
         className: g,
         children: [
-            (0, C.jsx)(f.vwX, {
-                className: d.sectionTitle,
-                children: n.intl.string(r.default['tN+8pK'])
+            (0, B.jsx)(r.vwX, {
+                className: i.sectionTitle,
+                children: s.intl.string(o.default['tN+8pK'])
             }),
-            (0, C.jsxs)('div', {
-                className: d.tagContainer,
+            (0, B.jsxs)('div', {
+                className: i.tagContainer,
                 children: [
-                    (0, C.jsx)('div', {
-                        className: d.tagInputContainer,
-                        children: (0, C.jsx)(f.oil, {
-                            className: d.tagInputWrapper,
-                            inputClassName: w()(d.tagInput, 'heading-sm/semibold'),
+                    (0, B.jsx)('div', {
+                        className: i.tagInputContainer,
+                        children: (0, B.jsx)(r.oil, {
+                            className: i.tagInputWrapper,
+                            inputClassName: e()(i.tagInput, 'heading-sm/semibold'),
                             maxLength: 4,
                             autoFocus: !0,
                             placeholder: 'WUMP',
-                            prefixElement: (0, C.jsx)(E.A, {
-                                badge: o,
+                            prefixElement: (0, B.jsx)(C.A, {
+                                badge: M,
                                 width: 40,
                                 height: 40,
-                                primaryTintColor: s,
-                                secondaryTintColor: M
+                                primaryTintColor: a,
+                                secondaryTintColor: l
                             }),
-                            disabled: L,
-                            value: null != Q ? Q : '',
+                            disabled: E,
+                            value: null != t ? t : '',
                             onChange: function (A) {
-                                P.Z.updateGuildProfile(B, { tag: A });
+                                w.Z.updateGuildProfile(v, { tag: A });
                             }
                         })
                     }),
-                    (0, C.jsx)('div', {
-                        className: d.tagTooltip,
-                        children: (0, C.jsx)(f.Text, {
+                    (0, B.jsx)('div', {
+                        className: i.tagTooltip,
+                        children: (0, B.jsx)(r.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-muted',
-                            children: n.intl.string(r.default.UbC8y8)
+                            children: s.intl.string(o.default.UbC8y8)
                         })
                     })
                 ]
             }),
-            c &&
-                (0, C.jsx)(v.Z, {
-                    className: d.tagChangeInfoBox,
-                    children: (0, C.jsx)(f.Text, {
+            P &&
+                (0, B.jsx)(h.Z, {
+                    className: i.tagChangeInfoBox,
+                    children: (0, B.jsx)(r.Text, {
                         variant: 'text-xs/medium',
-                        children: n.intl.format(r.default['4ZKDXl'], { articleUrl: I.Z.getArticleURL(t.BhN.SERVER_TAGS) })
+                        children: s.intl.format(o.default['4ZKDXl'], { articleUrl: n.Z.getArticleURL(D.BhN.SERVER_TAGS) })
                     })
                 })
         ]

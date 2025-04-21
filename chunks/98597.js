@@ -96,7 +96,7 @@ function Z(e) {
                 onMouseLeave: a,
                 onFocus: u,
                 onBlur: d,
-                children: (0, i.jsx)(c.Huf, {
+                children: (0, i.jsx)(c.xhG, {
                     size: 'xs',
                     color: 'currentColor',
                     className: S.actionIcon

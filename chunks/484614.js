@@ -1,47 +1,47 @@
-r.d(t, { Z: () => u });
-var n,
-    i = r(200651),
-    s = r(192379),
-    o = r(846519),
-    l = r(481060),
-    a = r(572004),
-    c = r(388032);
-function h(e, t, r) {
+n.d(t, { Z: () => f });
+var r,
+    i = n(200651),
+    s = n(192379),
+    o = n(846519),
+    l = n(481060),
+    a = n(572004),
+    c = n(388032);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: r,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = r),
+            : (e[t] = n),
         e
     );
 }
-class v extends (n = s.PureComponent) {
+class d extends (r = s.PureComponent) {
     componentWillUnmount() {
         this._timeout.stop();
     }
     render() {
         var e, t;
-        let { text: r } = this.props,
-            { mode: n } = this.state,
-            s = n === l.kO8.Modes.SUCCESS ? c.intl.string(c.t['t5VZ8/']) : r;
+        let { text: n } = this.props,
+            { mode: r } = this.state,
+            s = r === l.kO8.Modes.SUCCESS ? c.intl.string(c.t['t5VZ8/']) : n;
         return (0, i.jsx)(
             l.kO8,
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
-                    var r = null != arguments[t] ? arguments[t] : {},
-                        n = Object.keys(r);
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (n = n.concat(
-                            Object.getOwnPropertySymbols(r).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        n.forEach(function (t) {
-                            h(e, t, r[t]);
+                        r.forEach(function (t) {
+                            u(e, t, n[t]);
                         });
                 }
                 return e;
@@ -49,33 +49,33 @@ class v extends (n = s.PureComponent) {
             (t = t =
                 {
                     onCopy: this.handleCopy,
-                    mode: n,
+                    mode: r,
                     text: s,
                     supportsCopy: a.wS
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                 : (function (e, t) {
-                      var r = Object.keys(e);
+                      var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var n = Object.getOwnPropertySymbols(e);
-                          r.push.apply(r, n);
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
                       }
-                      return r;
-                  })(Object(t)).forEach(function (r) {
-                      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+                      return n;
+                  })(Object(t)).forEach(function (n) {
+                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                   }),
             e)
         );
     }
     handleCopy(e) {
-        let { onCopy: t, delay: r = 1000 } = this.props;
+        let { onCopy: t, delay: n = 1000 } = this.props;
         (0, a.JG)(
             e,
             () => this.setState({ mode: l.kO8.Modes.SUCCESS }),
             () => this.setState({ mode: l.kO8.Modes.ERROR })
         ),
-            this._timeout.start(r, () => this.setState({ mode: l.kO8.Modes.DEFAULT })),
+            this._timeout.start(n, () => this.setState({ mode: l.kO8.Modes.DEFAULT })),
             null == t || t(e);
     }
     getVerticalButtonColor(e) {
@@ -89,8 +89,8 @@ class v extends (n = s.PureComponent) {
         }
     }
     constructor(e) {
-        super(e), h(this, '_timeout', void 0), (this.state = { mode: l.kO8.Modes.DEFAULT }), (this._timeout = new o.V7()), (this.handleCopy = this.handleCopy.bind(this));
+        super(e), u(this, '_timeout', void 0), (this.state = { mode: l.kO8.Modes.DEFAULT }), (this._timeout = new o.V7()), (this.handleCopy = this.handleCopy.bind(this));
     }
 }
-h(v, 'defaultProps', { delay: 1000 });
-let u = v;
+u(d, 'defaultProps', { delay: 1000 });
+let f = d;

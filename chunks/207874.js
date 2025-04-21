@@ -1,47 +1,47 @@
-r.d(t, { Z: () => v });
-var n = r(200651),
-    i = r(192379),
-    s = r(442837),
-    o = r(461745),
-    l = r(663389),
-    a = r(5967),
-    c = r(996733),
-    h = r(388032);
-function v(e) {
+n.d(t, { Z: () => d });
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    o = n(461745),
+    l = n(663389),
+    a = n(5967),
+    c = n(996733),
+    u = n(388032);
+function d(e) {
     let { style: t } = e,
-        r = (0, c.Z7)(),
-        v = i.useCallback((e, t) => {
+        n = (0, c.Z7)(),
+        d = i.useCallback((e, t) => {
             t.stopPropagation(), t.preventDefault(), (0, c.QH)(e);
         }, []),
-        u = i.useCallback(() => {
+        f = i.useCallback(() => {
             (0, c.QH)(!1), (0, c.yN)('');
         }, []),
-        f = i.useRef(null),
-        p = (0, s.e7)([l.Z], () => l.Z.getSection());
+        p = i.useRef(null),
+        g = (0, s.e7)([l.Z], () => l.Z.getSection());
     return (
         i.useEffect(() => {
             let e = (e) => {
                 var t;
-                let r = f.current;
-                (null == (t = (0, a.uB)(e)) ? void 0 : t.activeElement) === document.body && (null == r || r.focus());
+                let n = p.current;
+                (null == (t = (0, a.uB)(e)) ? void 0 : t.activeElement) === document.body && (null == n || n.focus());
             };
             return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
-        }, [p]),
-        (0, n.jsx)('div', {
+        }, [g]),
+        (0, r.jsx)('div', {
             style: { marginBottom: '8px' },
-            children: (0, n.jsx)(o.ZP, {
-                ref: f,
+            children: (0, r.jsx)(o.ZP, {
+                ref: p,
                 size: o.ZP.Sizes.MEDIUM,
-                query: r,
-                onClear: u,
+                query: n,
+                onClear: f,
                 onQueryChange: c.yN,
-                placeholder: h.intl.string(h.t['5h0QOD']),
+                placeholder: u.intl.string(u.t['5h0QOD']),
                 className: t,
                 inputProps: {
-                    'aria-label': h.intl.string(h.t.pk9BWV),
+                    'aria-label': u.intl.string(u.t.pk9BWV),
                     'aria-expanded': !0,
-                    onFocus: (e) => v(!0, e),
-                    onBlur: (e) => v(!1, e)
+                    onFocus: (e) => d(!0, e),
+                    onBlur: (e) => d(!1, e)
                 }
             })
         })

@@ -80,7 +80,7 @@ async function F(e, t, n) {
         m = performance.now(),
         g = S.Z.loadCachedMessages.measureAsyncWithoutNesting(() => G(e, c, u)),
         p = S.Z.fetchGuildCache.measureAsync(() => z(e, n)),
-        h = S.Z.fetchGuildCache.measureAsync(() => Y(e, n)),
+        h = S.Z.fetchGuildCache.measureAsync(() => W(e, n)),
         f = null != e ? l.Z.timeAsync('\uD83D\uDCBE', 'cache: private_channels', () => E.Z.getAsync(e, null)) : Promise.resolve([]),
         j = null == e ? Promise.resolve({}) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => x.Z.getAll(e)),
         C = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => b.Z.getAll(e)),
@@ -154,7 +154,7 @@ async function z(e, t) {
     let s = await (0, u.dI)(() => g.Z.getOneAsync(e, r));
     return null != s ? [s] : [];
 }
-async function Y(e, t) {
+async function W(e, t) {
     if (null == e)
         return Promise.resolve({
             channels: null,
@@ -175,7 +175,7 @@ async function Y(e, t) {
         guildId: n
     };
 }
-async function W(e, t, n, i) {
+async function Y(e, t, n, i) {
     D.verbose('loading late lazy cache');
     let [r, s, o] = await S.Z.fetchLazyCache.measureAsync(() =>
             Promise.all([
@@ -369,7 +369,7 @@ class q extends (i = o.ZP.Store) {
             let t = v.default.getId(),
                 i = j.Z.carefullyOpenDatabase(t),
                 [r, s, l] = await S.Z.loadMiniCache.measureAsync(() => F(i, t, e));
-            r ? (n(), await W(i, t, s, l)) : (n(), await (K(() => d.Z.dispatch({ type: 'CACHE_LOADED_LAZY_NO_CACHE' })), Promise.resolve()));
+            r ? (n(), await Y(i, t, s, l)) : (n(), await (K(() => d.Z.dispatch({ type: 'CACHE_LOADED_LAZY_NO_CACHE' })), Promise.resolve()));
         } catch (e) {
             D.error('clearing cache. exception encountered while loading cache.', e, e.stack),
                 (0, P.Z)('cache:exception'),

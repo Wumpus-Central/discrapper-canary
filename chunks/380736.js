@@ -23,9 +23,9 @@ function y(e) {
     e.currentTarget.scrollTo(0, 0);
 }
 let O = r.memo(function (e) {
-    let { maxBodyLines: t, expand: n = !1, onNotificationShow: o, onDismissClick: u, onConfirmClick: p, onCancelClick: b, onNotificationClick: O, hint: x, cancelText: C, confirmText: j, icon: w, body: P, title: k, renderFooter: E, contentOpacity: S, status: Z, containerRef: z, className: N, wrapperClassName: T } = e,
+    let { maxBodyLines: t, expand: n = !1, onNotificationShow: o, onDismissClick: u, onConfirmClick: p, onCancelClick: b, onNotificationClick: O, hint: x, cancelText: C, confirmText: j, icon: w, body: P, title: k, renderFooter: E, contentOpacity: Z, status: S, containerRef: z, className: N, wrapperClassName: T } = e,
         [D, M] = r.useState(!1),
-        R = n || D || Z === f._1z.FOCUSED,
+        R = n || D || S === f._1z.FOCUSED,
         L = (0, c.e7)([m.ZP], () => m.ZP.isInputLocked((0, d.getPID)()));
     r.useEffect(() => {
         null == o || o();
@@ -72,7 +72,7 @@ let O = r.memo(function (e) {
                             children: [
                                 (0, i.jsxs)(s.animated.div, {
                                     className: g.iconAndDetails,
-                                    style: { opacity: S },
+                                    style: { opacity: Z },
                                     children: [
                                         null == w
                                             ? null
@@ -230,9 +230,9 @@ function j(e) {
             },
             [v, d]
         ),
-        S = r.useCallback((e, t) => (null == g ? void 0 : g(e, d, t)), [g, d]),
+        Z = r.useCallback((e, t) => (null == g ? void 0 : g(e, d, t)), [g, d]),
         {
-            props: { onNotificationShow: Z, onDismissClick: z, renderFooter: N, onNotificationClick: T, onConfirmClick: D, onCancelClick: M, disableClickableRegions: R = !1 },
+            props: { onNotificationShow: S, onDismissClick: z, renderFooter: N, onNotificationClick: T, onConfirmClick: D, onCancelClick: M, disableClickableRegions: R = !1 },
             status: L
         } = o,
         A = (function (e, t) {
@@ -300,7 +300,7 @@ function j(e) {
                         onNotificationClick: null != m ? P : void 0,
                         onConfirmClick: null != f ? k : void 0,
                         onCancelClick: null != v ? E : void 0,
-                        renderFooter: S,
+                        renderFooter: Z,
                         expand: !1,
                         index: l,
                         locked: s,

@@ -1,18 +1,18 @@
-B.d(g, {
-    Eg: () => Q,
-    SK: () => C,
-    tl: () => w
+v.d(g, {
+    Eg: () => t,
+    SK: () => B,
+    tl: () => e
 });
-let C = {
+let B = {
         primary_color: 11127295,
         secondary_color: 16759788,
         tertiary_color: 16761760
     },
-    Q = {
+    t = {
         primary_color: 10382335,
         secondary_color: 10469887
     },
-    w = [
+    e = [
         {
             start: 11156283,
             end: 16730184,

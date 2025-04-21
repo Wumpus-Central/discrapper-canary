@@ -1,88 +1,88 @@
-r.d(t, { Z: () => p });
-var n = r(200651),
-    i = r(192379),
-    s = r(120356),
-    o = r.n(s),
-    l = r(628238),
-    a = r(367814),
-    c = r(492593),
-    h = r(25015),
-    v = r(963550),
-    u = r(845080),
-    f = r(30804);
-let p = i.memo(function (e) {
-    var t, r;
-    let { message: s, channel: p, compact: d, className: b, isGroupStart: Z, hideSimpleEmbedContent: M = !0, disableInteraction: g, previewGuildId: j, preview: O, author: y } = e,
-        m = null != (t = null != j ? j : s.getGuildId()) ? t : void 0,
-        H = (0, a.Z)(y),
-        V = (0, l.A)((null != (r = s.editedTimestamp) ? r : s.timestamp).valueOf()),
-        { content: x } = (0, h.Z)(s, {
-            hideSimpleEmbedContent: M,
-            allowList: V,
-            allowHeading: V,
+n.d(t, { Z: () => g });
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    l = n(628238),
+    a = n(367814),
+    c = n(492593),
+    u = n(25015),
+    d = n(963550),
+    f = n(845080),
+    p = n(30804);
+let g = i.memo(function (e) {
+    var t, n;
+    let { message: s, channel: g, compact: b, className: m, isGroupStart: h, hideSimpleEmbedContent: v = !0, disableInteraction: _, previewGuildId: O, preview: y, author: j } = e,
+        x = null != (t = null != O ? O : s.getGuildId()) ? t : void 0,
+        C = (0, a.Z)(j),
+        S = (0, l.A)((null != (n = s.editedTimestamp) ? n : s.timestamp).valueOf()),
+        { content: P } = (0, u.Z)(s, {
+            hideSimpleEmbedContent: v,
+            allowList: S,
+            allowHeading: S,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        w = i.useMemo(() => {
-            var t, r;
-            return (0, u.Z)(
+        E = i.useMemo(() => {
+            var t, n;
+            return (0, f.Z)(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var r = null != arguments[t] ? arguments[t] : {},
-                            n = Object.keys(r);
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
                         'function' == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(r).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 })
                             )),
-                            n.forEach(function (t) {
-                                var n;
-                                (n = r[t]),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: n,
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = n);
+                                        : (e[t] = r);
                             });
                     }
                     return e;
                 })({}, e)),
-                (r = r =
+                (n = n =
                     {
-                        channel: p,
-                        guildId: m
+                        channel: g,
+                        guildId: x
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
-                          var r = Object.keys(e);
+                          var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var n = Object.getOwnPropertySymbols(e);
-                              r.push.apply(r, n);
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
                           }
-                          return r;
-                      })(Object(r)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
                 t)
             );
-        }, [e, p, m]);
-    return (0, n.jsx)(c.Z, {
-        compact: d,
-        className: o()(b, {
-            [f.message]: !0,
-            [f.cozyMessage]: !d,
-            [f.groupStart]: Z
+        }, [e, g, x]);
+    return (0, r.jsx)(c.Z, {
+        compact: b,
+        className: o()(m, {
+            [p.message]: !0,
+            [p.cozyMessage]: !b,
+            [p.groupStart]: h
         }),
-        childrenHeader: w,
-        childrenMessageContent: (0, v.Z)(e, x),
-        disableInteraction: g,
-        authorHasGradientRole: H,
-        guildId: m,
-        preview: O
+        childrenHeader: E,
+        childrenMessageContent: (0, d.Z)(e, P),
+        disableInteraction: _,
+        authorHasGradientRole: C,
+        guildId: x,
+        preview: y
     });
 });

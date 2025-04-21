@@ -1,61 +1,61 @@
-n.d(t, { Z: () => N });
+n.d(e, { Z: () => h });
 var i = n(200651);
 n(192379);
-var a = n(442837),
-    o = n(481060),
-    l = n(906732),
-    r = n(48217),
+var o = n(442837),
+    r = n(481060),
+    a = n(906732),
+    l = n(48217),
     c = n(26323),
     s = n(430824),
-    d = n(914010),
-    u = n(709586),
-    f = n(981631),
-    _ = n(30513),
-    g = n(388032),
-    p = n(273233);
-function N(e) {
-    let { analyticsSection: t, analyticsPage: n, isGIF: N, banner: m } = e,
-        x = (0, a.e7)([d.Z], () => d.Z.getGuildId()),
-        A = (0, a.e7)([s.Z], () => s.Z.getGuild(x)),
-        { analyticsLocations: h } = (0, l.ZP)();
-    return null == A || A.hasFeature(f.oNc.ANIMATED_BANNER) || (!N && A.hasFeature(f.oNc.BANNER))
+    u = n(914010),
+    d = n(709586),
+    _ = n(981631),
+    g = n(30513),
+    m = n(388032),
+    f = n(273233);
+function h(t) {
+    let { analyticsSection: e, analyticsPage: n, isGIF: h, banner: p } = t,
+        b = (0, o.e7)([u.Z], () => u.Z.getGuildId()),
+        x = (0, o.e7)([s.Z], () => s.Z.getGuild(b)),
+        { analyticsLocations: N } = (0, a.ZP)();
+    return null == x || x.hasFeature(_.oNc.ANIMATED_BANNER) || (!h && x.hasFeature(_.oNc.BANNER))
         ? null
         : (0, i.jsxs)('div', {
-              className: p.container,
+              className: f.container,
               children: [
-                  (0, i.jsx)(u.Z, { className: p.guildBoostingIcon }),
-                  (0, i.jsx)(o.Text, {
+                  (0, i.jsx)(d.Z, { className: f.guildBoostingIcon }),
+                  (0, i.jsx)(r.Text, {
                       color: 'header-primary',
                       variant: 'text-sm/semibold',
-                      children: g.intl.string(g.t['56M7xc'])
+                      children: m.intl.string(m.t['56M7xc'])
                   }),
-                  (0, i.jsx)(o.zxk, {
-                      look: o.zxk.Looks.LINK,
-                      color: o.zxk.Colors.LINK,
-                      className: p.subscribeButton,
+                  (0, i.jsx)(r.zxk, {
+                      look: r.zxk.Looks.LINK,
+                      color: r.zxk.Colors.LINK,
+                      className: f.subscribeButton,
                       onClick: () => {
-                          if (null == A) return;
-                          let e = {
-                              section: t,
+                          if (null == x) return;
+                          let t = {
+                              section: e,
                               page: n,
-                              object: f.qAy.UPSELL_HEADER
+                              object: _.qAy.UPSELL_HEADER
                           };
-                          null != m
-                              ? (0, r.c)({
-                                    analyticsLocations: h,
-                                    analyticsLocation: e,
-                                    guild: A,
-                                    isGIF: N,
-                                    banner: m
+                          null != p
+                              ? (0, l.c)({
+                                    analyticsLocations: N,
+                                    analyticsLocation: t,
+                                    guild: x,
+                                    isGIF: h,
+                                    banner: p
                                 })
                               : (0, c.Z)({
-                                    analyticsLocations: h,
-                                    analyticsSourceLocation: e,
-                                    guild: A,
-                                    perks: N ? (0, _.zC)() : (0, _.XO)()
+                                    analyticsLocations: N,
+                                    analyticsSourceLocation: t,
+                                    guild: x,
+                                    perks: h ? (0, g.zC)() : (0, g.XO)()
                                 });
                       },
-                      children: g.intl.string(g.t.WUHdZW)
+                      children: m.intl.string(m.t.WUHdZW)
                   })
               ]
           });

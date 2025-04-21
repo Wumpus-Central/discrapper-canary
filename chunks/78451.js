@@ -1,15 +1,15 @@
-r.d(t, {
+n.d(t, {
     IF: () => c,
     LJ: () => a,
-    MF: () => h,
-    c7: () => v
+    MF: () => u,
+    c7: () => d
 });
-var n = r(524437),
-    i = r(900089),
-    s = r(2150),
-    o = r(981631);
-r(973005);
-var l = r(388032);
+var r = n(524437),
+    i = n(900089),
+    s = n(2150),
+    o = n(981631);
+n(973005);
+var l = n(388032);
 function a(e) {
     return e.map((e) => ({
         title: e.name,
@@ -71,7 +71,7 @@ function c() {
         }
     ];
 }
-function h() {
+function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return [
         {
@@ -98,24 +98,24 @@ function h() {
         }
     ];
 }
-function v() {
+function d() {
     return [
         {
             name: l.intl.string(l.t['4IaoCA']),
             desc: l.intl.string(l.t.TgipjI),
-            value: n.Xr.FRIENDS_AND_NON_FRIENDS,
+            value: r.Xr.FRIENDS_AND_NON_FRIENDS,
             color: (0, i.Fw)('GREEN_360')
         },
         {
             name: l.intl.string(l.t['6NnX6O']),
             desc: l.intl.string(l.t['+dw1qq']),
-            value: n.Xr.NON_FRIENDS,
+            value: r.Xr.NON_FRIENDS,
             color: (0, i.Fw)('YELLOW_360')
         },
         {
             name: l.intl.string(l.t['1tiAFx']),
             desc: l.intl.string(l.t.LKTyeH),
-            value: n.Xr.DISABLED,
+            value: r.Xr.DISABLED,
             color: (0, i.Fw)('RED_400')
         }
     ];

@@ -130,7 +130,7 @@ function ef(e) {
         eZ = (0, y.q)(null == eC ? void 0 : eC.applicationId),
         [eI, ew] = l.useState(null);
     l.useEffect(() => {
-        (0, v.R)({ isContextless: ey }) &&
+        (0, v.R)() &&
             (async () => {
                 var e;
                 ew(await (null === j.Z || void 0 === j.Z || null == (e = j.Z.window) ? void 0 : e.getMediaSourceId('DISCORD_ACTIVITY_POPOUT')));

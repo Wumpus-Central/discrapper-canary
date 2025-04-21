@@ -2,7 +2,7 @@ n.d(t, {
     Gj: () => G,
     Pt: () => V,
     VO: () => H,
-    ji: () => W,
+    ji: () => Y,
     q8: () => z
 }),
     n(836215),
@@ -112,8 +112,8 @@ function V() {
     let { shouldMergeGameSettings: F } = A.b.useExperiment({ location: 'settings' }),
         H = (0, g.Xo)({ location: 'settings' }),
         z = null != (n = null == (e = y.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
-        Y = (0, O.y0)({ location: 'settings' }),
-        W = (0, C.v4)({ location: 'settings' }),
+        W = (0, O.y0)({ location: 'settings' }),
+        Y = (0, C.v4)({ location: 'settings' }),
         K = (0, o.Q)(),
         q = (0, E.Zy)({ location: B.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         { enabled: X } = b.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
@@ -145,8 +145,8 @@ function V() {
                 shouldMergeGameSettings: F,
                 isKeywordFilteringEnabled: H,
                 isStaff: z,
-                isInappropriateConversationWarningEnabled: Y,
-                isInapproprateConversationsDefaultOn: W,
+                isInappropriateConversationWarningEnabled: W,
+                isInapproprateConversationsDefaultOn: Y,
                 paymentsBlocked: K,
                 isEligibleForQuests: q,
                 showGiftNitro: X,
@@ -162,7 +162,7 @@ function V() {
                 useRefreshedVoiceAndVideo: el,
                 isEligibleForSensitiveContentDefaults: ea
             }),
-        [$, V, er, es, Q, ei, J, et, k, en, q, W, Y, H, M, z, ee, L, K, F, X, P, v, el, ea]
+        [$, V, er, es, Q, ei, J, et, k, en, q, Y, W, H, M, z, ee, L, K, F, X, P, v, el, ea]
     );
 }
 function G(e) {
@@ -219,7 +219,7 @@ function G(e) {
 }
 function F(e, t, n) {
     let i = [],
-        r = Y(t),
+        r = W(t),
         s = (function (e, t) {
             let n = new Map();
             return (
@@ -336,7 +336,7 @@ function z(e) {
         })();
     return i.useMemo(() => F(n, t, new Set(e)), [n, t, e]);
 }
-function Y(e) {
+function W(e) {
     return new Map(
         Object.entries(e).filter((e) => {
             let [t, n] = e;
@@ -344,8 +344,8 @@ function Y(e) {
         })
     );
 }
-function W(e) {
-    return Array.from(Y(e).entries()).map((e) => {
+function Y(e) {
+    return Array.from(W(e).entries()).map((e) => {
         let [t, n] = e;
         return [t, n.searchableTitles];
     });

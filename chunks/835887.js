@@ -1,30 +1,30 @@
-B.d(g, { Z: () => P });
-var C = B(200651),
-    Q = B(192379),
-    w = B(481060),
-    D = B(434404),
-    f = B(755641),
-    E = B(817239),
-    v = B(388032),
-    I = B(602268);
-function P(A) {
-    let { className: g, guildId: B, selectedBadge: P } = A,
-        e = Q.useCallback(
+v.d(g, { Z: () => w });
+var B = v(200651),
+    t = v(192379),
+    e = v(481060),
+    f = v(434404),
+    r = v(755641),
+    C = v(817239),
+    h = v(388032),
+    n = v(602268);
+function w(A) {
+    let { className: g, guildId: v, selectedBadge: w } = A,
+        Q = t.useCallback(
             (A) => {
-                D.Z.updateGuildProfile(B, { badge: A });
+                f.Z.updateGuildProfile(v, { badge: A });
             },
-            [B]
+            [v]
         );
-    return (0, C.jsxs)('div', {
+    return (0, B.jsxs)('div', {
         className: g,
         children: [
-            (0, C.jsx)(w.vwX, {
-                className: I.sectionTitle,
-                children: v.intl.string(E.default.pb7lpK)
+            (0, B.jsx)(e.vwX, {
+                className: n.sectionTitle,
+                children: h.intl.string(C.default.pb7lpK)
             }),
-            (0, C.jsx)(f.g, {
-                onBadgeClicked: e,
-                selectedBadge: P
+            (0, B.jsx)(r.g, {
+                onBadgeClicked: Q,
+                selectedBadge: w
             })
         ]
     });

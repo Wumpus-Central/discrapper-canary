@@ -1,26 +1,26 @@
-r.d(t, { Z: () => v });
-var n = r(200651);
-r(192379);
-var i = r(120356),
-    s = r.n(i),
-    o = r(596454),
-    l = r(377171),
-    a = r(403910),
-    c = r(549631),
-    h = r(366523);
-function v(e) {
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    s = n.n(i),
+    o = n(596454),
+    l = n(377171),
+    a = n(403910),
+    c = n(549631),
+    u = n(366523);
+function d(e) {
     var t;
-    let { guildId: r, emojiId: i, emojiName: v, className: u } = e,
-        f = (0, a.Z)(r, i);
-    return null != f || null != v
-        ? (0, n.jsx)(o.Z, {
-              emojiId: null == f ? void 0 : f.id,
-              emojiName: null != v ? v : null == f ? void 0 : f.name,
-              animated: null != (t = null == f ? void 0 : f.animated) && t,
-              className: s()(h.emojiIcon, u)
+    let { guildId: n, emojiId: i, emojiName: d, className: f } = e,
+        p = (0, a.Z)(n, i);
+    return null != p || null != d
+        ? (0, r.jsx)(o.Z, {
+              emojiId: null == p ? void 0 : p.id,
+              emojiName: null != d ? d : null == p ? void 0 : p.name,
+              animated: null != (t = null == p ? void 0 : p.animated) && t,
+              className: s()(u.emojiIcon, f)
           })
-        : (0, n.jsx)(c.Z, {
-              className: s()(h.emojiIcon, u),
+        : (0, r.jsx)(c.Z, {
+              className: s()(u.emojiIcon, f),
               color: l.Z.CREATOR_REVENUE_LOCKED_CHANNEL_ICON
           });
 }

@@ -1,7 +1,7 @@
 n.d(t, {
     MM: () => F,
-    Yn: () => Y,
-    ZP: () => W,
+    Yn: () => W,
+    ZP: () => Y,
     eS: () => z
 }),
     n(388685);
@@ -324,7 +324,7 @@ function H(e) {
           });
 }
 let z = new Set([Z.O0b.ACTIVE, Z.O0b.PAST_DUE, Z.O0b.CANCELED, Z.O0b.PAUSE_PENDING, Z.O0b.PAUSED]);
-function Y() {
+function W() {
     return (
         r.useEffect(() => {
             S.default.track(Z.rMx.TOOLTIP_VIEWED, { type: 'subscription_settings_duplicate_subscriptions' });
@@ -347,7 +347,7 @@ function Y() {
         })
     );
 }
-function W(e) {
+function Y(e) {
     var t;
     let n,
         { subscription: r, subscriptions: s, paymentSource: l, busy: a, fromStandaloneBillingPage: o = !0, analyticsLocation: c } = e;

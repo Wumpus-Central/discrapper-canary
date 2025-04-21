@@ -1,12 +1,12 @@
-r.d(t, {
+n.d(t, {
     Lk: () => i,
-    Ps: () => n,
+    Ps: () => r,
     We: () => a,
     _H: () => s,
     e: () => o,
     xB: () => l
 });
-let n = 'https://support.discord.com/hc/articles/29488603380887',
+let r = 'https://support.discord.com/hc/articles/29488603380887',
     i = '2025-03-18T23:59:59Z',
     s = '2025-04-17T23:59:59Z',
     o = {

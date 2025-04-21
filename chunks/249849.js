@@ -1,21 +1,21 @@
-r.d(t, { s: () => o });
-var n = r(688619),
-    i = r.n(n);
-function s(e, t, r) {
-    if (!i().valid(t)) return e.map(() => '#000000');
-    let n = i()(t),
-        s = n.luminance();
-    return e.map((e, t) => n.luminance((e * r[t].base + s * r[t].tint) / (r[t].base + r[t].tint)).hex());
+v.d(g, { s: () => f });
+var B = v(688619),
+    t = v.n(B);
+function e(A, g, v) {
+    if (!t().valid(g)) return A.map(() => '#000000');
+    let B = t()(g),
+        e = B.luminance();
+    return A.map((A, g) => B.luminance((A * v[g].base + e * v[g].tint) / (v[g].base + v[g].tint)).hex());
 }
-function o(e) {
-    let { primaryBaseColors: t, primaryTintColor: r, primaryTintLuminances: n, primaryLuminanceWeights: i, secondaryBaseColors: o, secondaryTintColor: l, secondaryTintLuminances: a, secondaryLuminanceWeights: c } = e,
-        h = null != r ? s(n, r, i) : t,
-        v = [];
+function f(A) {
+    let { primaryBaseColors: g, primaryTintColor: v, primaryTintLuminances: B, primaryLuminanceWeights: t, secondaryBaseColors: f, secondaryTintColor: r, secondaryTintLuminances: C, secondaryLuminanceWeights: h } = A,
+        n = null != v ? e(B, v, t) : g,
+        w = [];
     return (
-        null != o && null != a && null != c && (v = null != l ? s(a, l, c) : o),
+        null != f && null != C && null != h && (w = null != r ? e(C, r, h) : f),
         {
-            primaryColorsTransformed: h,
-            secondaryColorsTransformed: v
+            primaryColorsTransformed: n,
+            secondaryColorsTransformed: w
         }
     );
 }

@@ -46,8 +46,8 @@ var i = n(200651),
     F = n(232076),
     H = n(197115),
     z = n(823188),
-    Y = n(504865),
-    W = n(179984),
+    W = n(504865),
+    Y = n(179984),
     K = n(386733),
     q = n(474936),
     X = n(981631),
@@ -101,7 +101,7 @@ function es(e) {
             ]
         });
     }
-    return (0, i.jsx)(Y.Z, {
+    return (0, i.jsx)(W.Z, {
         variant: void 0,
         subscriptionTier: q.Si.TIER_2,
         interval: g.interval
@@ -399,7 +399,7 @@ let ec = function () {
                         (0, i.jsx)(el, {}),
                         P && (0, i.jsx)(K.Z, { isInSettings: !0 }),
                         (0, i.jsx)(eo, {}),
-                        (0, i.jsx)(W.Z, {
+                        (0, i.jsx)(Y.Z, {
                             className: J.__invalid_planComparisonTable,
                             hideCTAs: !0,
                             headingOverride: Q.intl.string(Q.t.dnVvQU),

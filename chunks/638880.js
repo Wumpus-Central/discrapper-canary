@@ -19,7 +19,7 @@ var r = n(252258),
     y = n(197386),
     v = n(701488);
 function O(e) {
-    return (0, c.C)((0, c.R)({ isContextless: e.isContextlessActivity }), () => I(e));
+    return (0, c.C)((0, c.R)(), () => I(e));
 }
 async function I(e) {
     let t,

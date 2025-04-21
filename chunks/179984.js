@@ -155,8 +155,8 @@ let k = () => {
                 location: z + ' auto off',
                 autoTrackExposure: !1
             });
-        let Y = (0, u.ZP)(),
-            W = (0, o.ap)(Y),
+        let W = (0, u.ZP)(),
+            Y = (0, o.ap)(W),
             K = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
             q = (0, _.M5)(K, N.p9.TIER_2),
             X = (0, j.N)(),
@@ -201,7 +201,7 @@ let k = () => {
                                     subscriptionTier: N.Si.TIER_0,
                                     showIcon: !1,
                                     look: c.iLD.OUTLINED,
-                                    color: W ? c.Ttl.BRAND : c.Ttl.WHITE,
+                                    color: Y ? c.Ttl.BRAND : c.Ttl.WHITE,
                                     buttonShineClassName: void 0
                                 })
                               : (0, i.jsx)(I.Z, {
@@ -225,7 +225,7 @@ let k = () => {
                                     subscriptionTier: N.Si.TIER_2,
                                     showIcon: !1,
                                     look: c.iLD.OUTLINED,
-                                    color: W ? c.Ttl.BRAND : c.Ttl.WHITE,
+                                    color: Y ? c.Ttl.BRAND : c.Ttl.WHITE,
                                     buttonShineClassName: void 0
                                 })
                               : (0, i.jsx)(I.Z, {
@@ -252,7 +252,7 @@ let k = () => {
                   ? (0, i.jsx)(S.Cy, {
                         text: null != Q ? y.intl.string(y.t.IBYG5e) : y.intl.string(y.t.ce1v3d),
                         className: A.freeTrialPillWithSparkles,
-                        colorOptions: Q === N.Si.TIER_0 ? (W ? S.VE.PREMIUM_TIER_0_GRADIENT_FILL : S.VE.PREMIUM_TIER_0_WHITE_FILL) : W ? (q ? S.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : S.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : S.VE.PREMIUM_TIER_2_WHITE_FILL
+                        colorOptions: Q === N.Si.TIER_0 ? (Y ? S.VE.PREMIUM_TIER_0_GRADIENT_FILL : S.VE.PREMIUM_TIER_0_WHITE_FILL) : Y ? (q ? S.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : S.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : S.VE.PREMIUM_TIER_2_WHITE_FILL
                     })
                   : ea
                     ? (0, i.jsx)(k, {})
