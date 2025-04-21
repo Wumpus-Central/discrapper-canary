@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var l = n(200651),
     a = n(192379),
     r = n(120356),
@@ -10,8 +10,8 @@ var l = n(200651),
     d = n(493773),
     m = n(100527),
     f = n(318766),
-    h = n(907040),
-    p = n(594174),
+    p = n(907040),
+    h = n(594174),
     b = n(626135),
     S = n(644540),
     j = n(359588),
@@ -31,16 +31,16 @@ var l = n(200651),
     k = n(185923),
     D = n(388032),
     Z = n(782628);
-let L = [w.HO.ADD_STATUS, w.HO.WHATS_ON_YOUR_MIND];
-function B(e) {
+let A = [w.HO.ADD_STATUS, w.HO.WHATS_ON_YOUR_MIND];
+function L(e) {
     var t, n;
-    let { transitionState: r, onClose: B, sourceAnalyticsContext: A, sourceAnalyticsLocations: R, prompt: M = null } = e,
+    let { transitionState: r, onClose: L, sourceAnalyticsContext: B, sourceAnalyticsLocations: R, prompt: M = null } = e,
         U = (0, g.p)({ location: 'CustomStatusModalWithPreview' }),
         z = (0, S.P)({ location: 'CustomStatusModalWithPreview' }),
         F = (0, j.Z)({ location: 'CustomStatusModalWithPreview' }),
-        Y = (0, o.e7)([p.default], () => {
+        Y = (0, o.e7)([h.default], () => {
             var e;
-            return null != (e = p.default.getCurrentUser()) ? e : null;
+            return null != (e = h.default.getCurrentUser()) ? e : null;
         }),
         H = (0, T.a)(),
         [W, K] = a.useState(null != (t = null == H ? void 0 : H.state) ? t : ''),
@@ -99,11 +99,11 @@ function B(e) {
                 text: W,
                 emojiInfo: V,
                 clearAfter: q,
-                analyticsContext: A,
+                analyticsContext: B,
                 prompt: ee,
                 customStatusLabel: en
             }),
-                B();
+                L();
         },
         em = () =>
             null == V
@@ -116,7 +116,7 @@ function B(e) {
                           animated: !!V.animated
                       }),
         ef = U ? D.intl.string(D.t.rp0aho) : D.intl.string(D.t.UcdRn5),
-        eh = 'custom-status-placeholder-text';
+        ep = 'custom-status-placeholder-text';
     return (0, l.jsxs)(s.Y0X, {
         transitionState: r,
         children: [
@@ -133,7 +133,7 @@ function B(e) {
                     }),
                     (0, l.jsx)('div', {
                         className: Z.headerCloseButton,
-                        children: (0, l.jsx)(s.olH, { onClick: B })
+                        children: (0, l.jsx)(s.olH, { onClick: L })
                     })
                 ]
             }),
@@ -187,13 +187,13 @@ function B(e) {
                                             targetElementRef: Q,
                                             renderPopout: (e) => {
                                                 let { closePopout: t } = e;
-                                                return (0, l.jsx)(h.Z, {
+                                                return (0, l.jsx)(p.Z, {
                                                     closePopout: t,
                                                     onSelectEmoji: (e, n) => {
                                                         ec(e), n && t();
                                                     },
                                                     pickerIntention: k.Hz.STATUS,
-                                                    onNavigateAway: B
+                                                    onNavigateAway: L
                                                 });
                                             },
                                             position: 'left',
@@ -258,7 +258,7 @@ function B(e) {
                                         s.Kx8,
                                         {
                                             autosize: !0,
-                                            'aria-describedby': eh,
+                                            'aria-describedby': ep,
                                             value: W,
                                             maxLength: w.s0,
                                             rows: 1,
@@ -281,7 +281,7 @@ function B(e) {
                                             children: (0, l.jsx)(N.Z, { label: en })
                                         }),
                                     (0, l.jsx)(s.nn4, {
-                                        id: eh,
+                                        id: ep,
                                         children: ''.concat(D.intl.string(D.t.EVV6ub), ': ').concat(er)
                                     }),
                                     (W.length > 0 || null != V) &&
@@ -319,7 +319,7 @@ function B(e) {
                                     onClick: ea
                                         ? void 0
                                         : () => {
-                                              let e = (0, y.Z)((null == ee ? void 0 : ee.value) != null ? new Set([ee.value, ...L]) : void 0);
+                                              let e = (0, y.Z)((null == ee ? void 0 : ee.value) != null ? new Set([ee.value, ...A]) : void 0);
                                               b.default.track(E.rMx.CUSTOM_STATUS_RANDOMIZER_CLICKED, {
                                                   previous_prompt_type: null == ee ? void 0 : ee.value,
                                                   new_prompt_type: null == e ? void 0 : e.value,
@@ -356,12 +356,16 @@ function B(e) {
                                     label: (0, _.Z)(e, z)
                                 })),
                                 onChange: (e) => X(e),
+                                optionClassName: Z.clearAfterSelectOption,
                                 renderOptionLabel: (e) => {
                                     let { value: t } = e;
-                                    return (0, O.Z)(t, z);
+                                    return (0, l.jsx)('span', {
+                                        className: Z.clearAfterSelectOptionLabel,
+                                        children: (0, O.Z)(t, z)
+                                    });
                                 },
                                 look: s.qQH.CUSTOM,
-                                popoutWidth: 200,
+                                popoutWidth: 'auto',
                                 popoutPosition: 'right'
                             })
                         }),

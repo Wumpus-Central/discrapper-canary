@@ -18,6 +18,8 @@ e.exports = {
     headerCloseButton: 'headerCloseButton_dbc4b7',
     footer: 'footer_dbc4b7',
     clearAfterSelectContainer: 'clearAfterSelectContainer_dbc4b7',
+    clearAfterSelectOption: 'clearAfterSelectOption_dbc4b7',
+    clearAfterSelectOptionLabel: 'clearAfterSelectOptionLabel_dbc4b7',
     profilePreview: 'profilePreview_dbc4b7',
     needInspiration: 'needInspiration_dbc4b7',
     needInspirationDisabled: 'needInspirationDisabled_dbc4b7',
