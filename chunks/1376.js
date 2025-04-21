@@ -1,5 +1,6 @@
 e.exports = {
     container: 'container__80da8',
+    gameIconWrapper: 'gameIconWrapper__80da8',
     gameIcon: 'gameIcon__80da8',
     gameIconImage: 'gameIconImage__80da8',
     extraGamesContainer: 'extraGamesContainer__80da8',

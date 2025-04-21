@@ -13457,6 +13457,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     width: 100%
 }
 
+.gameIconWrapper__80da8 {
+    cursor: pointer
+}
+
 .gameIcon__80da8 {
     flex-shrink: 0;
     height: 26px;
