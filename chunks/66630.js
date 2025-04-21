@@ -1,8 +1,8 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var l = n(200651),
-    a = n(192379),
-    r = n(120356),
-    i = n.n(r),
+    r = n(192379),
+    a = n(120356),
+    i = n.n(a),
     o = n(442837),
     s = n(481060),
     u = n(596454),
@@ -10,77 +10,73 @@ var l = n(200651),
     d = n(493773),
     m = n(100527),
     f = n(318766),
-    p = n(907040),
-    h = n(594174),
+    h = n(907040),
+    p = n(594174),
     b = n(626135),
     S = n(644540),
     j = n(359588),
     g = n(368326),
     x = n(720449),
-    v = n(684269),
-    _ = n(397416),
-    O = n(745579),
+    O = n(684269),
+    v = n(397416),
+    _ = n(745579),
     C = n(74340),
-    y = n(429467),
-    T = n(676035),
-    N = n(346565),
-    P = n(562577),
-    I = n(926563),
+    y = n(676035),
+    T = n(346565),
+    N = n(562577),
+    P = n(926563),
     w = n(875425),
     E = n(981631),
-    k = n(185923),
-    D = n(388032),
-    Z = n(782628);
-let A = [w.HO.ADD_STATUS, w.HO.WHATS_ON_YOUR_MIND];
-function L(e) {
+    I = n(185923),
+    k = n(388032),
+    D = n(782628);
+function Z(e) {
     var t, n;
-    let { transitionState: r, onClose: L, sourceAnalyticsContext: B, sourceAnalyticsLocations: R, prompt: M = null } = e,
-        U = (0, g.p)({ location: 'CustomStatusModalWithPreview' }),
-        z = (0, S.P)({ location: 'CustomStatusModalWithPreview' }),
-        F = (0, j.Z)({ location: 'CustomStatusModalWithPreview' }),
-        Y = (0, o.e7)([h.default], () => {
+    let { transitionState: a, onClose: Z, sourceAnalyticsContext: L, sourceAnalyticsLocations: A, prompt: B = null } = e,
+        R = (0, g.p)({ location: 'CustomStatusModalWithPreview' }),
+        M = (0, S.P)({ location: 'CustomStatusModalWithPreview' }),
+        U = (0, j.Z)({ location: 'CustomStatusModalWithPreview' }),
+        z = (0, o.e7)([p.default], () => {
             var e;
-            return null != (e = h.default.getCurrentUser()) ? e : null;
+            return null != (e = p.default.getCurrentUser()) ? e : null;
         }),
-        H = (0, T.a)(),
-        [W, K] = a.useState(null != (t = null == H ? void 0 : H.state) ? t : ''),
-        [V, G] = a.useState(null != (n = null == H ? void 0 : H.emoji) ? n : null),
-        [q, X] = a.useState((0, v.Z)()),
-        $ = a.useRef(null),
-        Q = a.useRef(null),
-        J = a.useRef(null),
-        [ee, et] = a.useState(null != M ? M : null),
-        [en, el] = a.useState(null != H && F ? (0, C.Z)(H) : null),
-        ea = W.length > 0 || null != V,
-        er = U && null != ee ? ee.label() : D.intl.string(D.t['xod36+']),
-        [ei, eo] = a.useState(er),
-        { ref: es, width: eu } = (0, c.ZP)(er);
-    a.useEffect(() => {
-        let e = J.current;
-        if (null == eu || null == e) return;
-        let t = eu - 78;
-        e.textContent = er;
+        F = (0, y.a)(),
+        [Y, W] = r.useState(null != (t = null == F ? void 0 : F.state) ? t : ''),
+        [H, K] = r.useState(null != (n = null == F ? void 0 : F.emoji) ? n : null),
+        [V, G] = r.useState((0, O.Z)()),
+        q = r.useRef(null),
+        X = r.useRef(null),
+        $ = r.useRef(null),
+        [Q, J] = r.useState(null != F && U ? (0, C.Z)(F) : null),
+        ee = R && null != B ? B.label() : k.intl.string(k.t['xod36+']),
+        [et, en] = r.useState(ee),
+        { ref: el, width: er } = (0, c.ZP)(ee);
+    r.useEffect(() => {
+        let e = $.current;
+        if (null == er || null == e) return;
+        let t = er - 78;
+        e.textContent = ee;
         let n = e.getBoundingClientRect().width;
-        if (n <= t) eo(er);
+        if (n <= t) en(ee);
         else {
-            let e = n / er.length,
+            let e = n / ee.length,
                 l = Math.floor((t - 3 * e) / e);
-            eo(''.concat(er.substring(0, l)).concat('...'));
+            en(''.concat(ee.substring(0, l)).concat('...'));
         }
-    }, [eu, er]),
-        a.useEffect(() => {
+    }, [er, ee]),
+        r.useEffect(() => {
             b.default.track(E.rMx.OPEN_MODAL, {
                 type: m.Z.CUSTOM_STATUS_MODAL,
-                location_stack: R
+                location_stack: A
             });
-        }, [R]),
+        }, [A]),
         (0, d.ZP)(() => {
             var e, t;
-            null == (e = $.current) || e.focus(), null == (t = $.current) || t.setSelection(W.length, W.length);
+            null == (e = q.current) || e.focus(), null == (t = q.current) || t.setSelection(Y.length, Y.length);
         });
-    let ec = (e) => {
+    let ea = (e) => {
             null != e &&
-                G(
+                K(
                     null != e.id
                         ? {
                               id: e.id,
@@ -94,114 +90,114 @@ function L(e) {
                           }
                 );
         },
-        ed = () => {
+        ei = () => {
             (0, x.Z)({
-                text: W,
-                emojiInfo: V,
-                clearAfter: q,
-                analyticsContext: B,
-                prompt: ee,
-                customStatusLabel: en
+                text: Y,
+                emojiInfo: H,
+                clearAfter: V,
+                prompt: B,
+                customStatusLabel: Q,
+                analyticsContext: L
             }),
-                L();
+                Z();
         },
-        em = () =>
-            null == V
+        eo = () =>
+            null == H
                 ? null
                 : () =>
                       (0, l.jsx)(u.Z, {
-                          className: Z.emoji,
-                          emojiId: V.id,
-                          emojiName: V.name,
-                          animated: !!V.animated
+                          className: D.emoji,
+                          emojiId: H.id,
+                          emojiName: H.name,
+                          animated: !!H.animated
                       }),
-        ef = U ? D.intl.string(D.t.rp0aho) : D.intl.string(D.t.UcdRn5),
-        ep = 'custom-status-placeholder-text';
+        es = R ? k.intl.string(k.t.rp0aho) : k.intl.string(k.t.UcdRn5),
+        eu = 'custom-status-placeholder-text';
     return (0, l.jsxs)(s.Y0X, {
-        transitionState: r,
+        transitionState: a,
         children: [
             (0, l.jsxs)(s.xBx, {
                 separator: !1,
-                className: Z.header,
+                className: D.header,
                 children: [
                     (0, l.jsx)('div', {
-                        className: Z.headerTitle,
+                        className: D.headerTitle,
                         children: (0, l.jsx)(s.X6q, {
                             variant: 'heading-xl/semibold',
-                            children: D.intl.string(D.t.Zx4jzM)
+                            children: k.intl.string(k.t.Zx4jzM)
                         })
                     }),
                     (0, l.jsx)('div', {
-                        className: Z.headerCloseButton,
-                        children: (0, l.jsx)(s.olH, { onClick: L })
+                        className: D.headerCloseButton,
+                        children: (0, l.jsx)(s.olH, { onClick: Z })
                     })
                 ]
             }),
             (0, l.jsxs)(s.hzk, {
                 children: [
-                    null != Y &&
+                    null != z &&
                         (0, l.jsx)('div', {
-                            className: Z.profilePreview,
-                            children: (0, l.jsx)(I.Z, {
-                                user: Y,
-                                previewText: W,
-                                previewEmoji: V,
-                                placeHolderText: er,
-                                transitionState: r,
-                                label: en
+                            className: D.profilePreview,
+                            children: (0, l.jsx)(P.Z, {
+                                user: z,
+                                previewText: Y,
+                                previewEmoji: H,
+                                placeHolderText: ee,
+                                transitionState: a,
+                                label: Q
                             })
                         }),
                     (0, l.jsxs)(s.hjN, {
-                        className: Z.formGroup,
-                        titleClassName: Z.customStatusInputTitle,
-                        title: ef,
+                        className: D.formGroup,
+                        titleClassName: D.customStatusInputTitle,
+                        title: es,
                         children: [
-                            F &&
+                            U &&
                                 (0, l.jsx)('div', {
-                                    className: Z.labelSelectorContainer,
-                                    children: (0, l.jsx)(P.Z, {
-                                        currentValue: en,
+                                    className: D.labelSelectorContainer,
+                                    children: (0, l.jsx)(N.Z, {
+                                        currentValue: Q,
                                         onChange: (e) => {
-                                            let t = e === en ? null : e;
+                                            let t = e === Q ? null : e;
                                             b.default.track(E.rMx.CUSTOM_STATUS_LABEL_CLICKED, {
-                                                previous_label: en,
+                                                previous_label: Q,
                                                 new_label: t,
-                                                location_stack: R
+                                                location_stack: A
                                             }),
-                                                el(t);
+                                                J(t);
                                         }
                                     })
                                 }),
                             (0, l.jsxs)('div', {
-                                className: Z.inputContainer,
-                                ref: es,
+                                className: D.inputContainer,
+                                ref: el,
                                 children: [
                                     (0, l.jsx)('span', {
-                                        ref: J,
-                                        className: Z.hiddenPlaceholder,
+                                        ref: $,
+                                        className: D.hiddenPlaceholder,
                                         'aria-hidden': 'true'
                                     }),
                                     (0, l.jsx)('div', {
-                                        className: i()(Z.emojiButtonContainer, null != en && Z.emojiButtonContainerWithLabel),
+                                        className: i()(D.emojiButtonContainer, null != Q && D.emojiButtonContainerWithLabel),
                                         children: (0, l.jsx)(s.yRy, {
-                                            targetElementRef: Q,
+                                            targetElementRef: X,
                                             renderPopout: (e) => {
                                                 let { closePopout: t } = e;
-                                                return (0, l.jsx)(p.Z, {
+                                                return (0, l.jsx)(h.Z, {
                                                     closePopout: t,
                                                     onSelectEmoji: (e, n) => {
-                                                        ec(e), n && t();
+                                                        ea(e), n && t();
                                                     },
-                                                    pickerIntention: k.Hz.STATUS,
-                                                    onNavigateAway: L
+                                                    pickerIntention: I.Hz.STATUS,
+                                                    onNavigateAway: Z
                                                 });
                                             },
                                             position: 'left',
                                             animation: s.yRy.Animation.NONE,
                                             align: 'top',
                                             children: (e, t) => {
-                                                var n, a;
-                                                let { isShown: r } = t;
+                                                var n, r;
+                                                let { isShown: a } = t;
                                                 return (0, l.jsx)(
                                                     f.Z,
                                                     ((n = (function (e) {
@@ -229,16 +225,16 @@ function L(e) {
                                                         }
                                                         return e;
                                                     })({}, e)),
-                                                    (a = a =
+                                                    (r = r =
                                                         {
-                                                            ref: Q,
-                                                            active: r,
-                                                            className: Z.emojiButton,
+                                                            ref: X,
+                                                            active: a,
+                                                            className: D.emojiButton,
                                                             tabIndex: 0,
-                                                            renderButtonContents: em()
+                                                            renderButtonContents: eo()
                                                         }),
                                                     Object.getOwnPropertyDescriptors
-                                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
+                                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                                         : (function (e, t) {
                                                               var n = Object.keys(e);
                                                               if (Object.getOwnPropertySymbols) {
@@ -246,8 +242,8 @@ function L(e) {
                                                                   n.push.apply(n, l);
                                                               }
                                                               return n;
-                                                          })(Object(a)).forEach(function (e) {
-                                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                                                          })(Object(r)).forEach(function (e) {
+                                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                                                           }),
                                                     n)
                                                 );
@@ -258,35 +254,35 @@ function L(e) {
                                         s.Kx8,
                                         {
                                             autosize: !0,
-                                            'aria-describedby': ep,
-                                            value: W,
+                                            'aria-describedby': eu,
+                                            value: Y,
                                             maxLength: w.s0,
                                             rows: 1,
                                             showRemainingCharacterCount: !1,
-                                            placeholder: ei,
+                                            placeholder: et,
                                             onChange: (e) => {
-                                                K(e);
+                                                W(e);
                                             },
                                             onKeyDown: (e) => {
-                                                'Enter' === e.key && ed();
+                                                'Enter' === e.key && ei();
                                             },
-                                            className: i()(Z.input, null != en && Z.inputWithLabel),
-                                            inputRef: $
+                                            className: i()(D.input, null != Q && D.inputWithLabel),
+                                            inputRef: q
                                         },
-                                        null != en ? 'with-label' : 'without-label'
+                                        null != Q ? 'with-label' : 'without-label'
                                     ),
-                                    null != en &&
+                                    null != Q &&
                                         (0, l.jsx)('div', {
-                                            className: Z.inputCustomStatusLabelRow,
-                                            children: (0, l.jsx)(N.Z, { label: en })
+                                            className: D.inputCustomStatusLabelRow,
+                                            children: (0, l.jsx)(T.Z, { label: Q })
                                         }),
                                     (0, l.jsx)(s.nn4, {
-                                        id: ep,
-                                        children: ''.concat(D.intl.string(D.t.EVV6ub), ': ').concat(er)
+                                        id: eu,
+                                        children: ''.concat(k.intl.string(k.t.EVV6ub), ': ').concat(ee)
                                     }),
-                                    (W.length > 0 || null != V) &&
+                                    (Y.length > 0 || null != H) &&
                                         (0, l.jsx)('div', {
-                                            className: i()(Z.clearButtonWrapper, null != en && Z.buttonContainerWithLabel),
+                                            className: i()(D.clearButtonWrapper, null != Q && D.buttonContainerWithLabel),
                                             children: (0, l.jsx)(s.zxk, {
                                                 focusProps: {
                                                     offset: {
@@ -296,72 +292,46 @@ function L(e) {
                                                         right: -2
                                                     }
                                                 },
-                                                className: Z.clearButton,
+                                                className: D.clearButton,
                                                 onClick: () => {
-                                                    K(''), G(null);
+                                                    W(''), K(null);
                                                 },
                                                 look: s.zxk.Looks.BLANK,
                                                 size: s.zxk.Sizes.NONE,
                                                 children: (0, l.jsx)(s.k$p, {
                                                     size: 'md',
                                                     color: 'currentColor',
-                                                    className: Z.clearIcon
+                                                    className: D.clearIcon
                                                 })
                                             })
                                         })
                                 ]
-                            }),
-                            U &&
-                                (0, l.jsxs)(s.P3F, {
-                                    ignoreKeyPress: ea,
-                                    'aria-disabled': ea,
-                                    className: i()(Z.needInspiration, ea && Z.needInspirationDisabled),
-                                    onClick: ea
-                                        ? void 0
-                                        : () => {
-                                              let e = (0, y.Z)((null == ee ? void 0 : ee.value) != null ? new Set([ee.value, ...A]) : void 0);
-                                              b.default.track(E.rMx.CUSTOM_STATUS_RANDOMIZER_CLICKED, {
-                                                  previous_prompt_type: null == ee ? void 0 : ee.value,
-                                                  new_prompt_type: null == e ? void 0 : e.value,
-                                                  location_stack: R
-                                              }),
-                                                  K(''),
-                                                  et(e),
-                                                  null != e && s.uvj.announce(e.label());
-                                          },
-                                    children: [
-                                        (0, l.jsx)(s.$2U, { size: 'xs' }),
-                                        (0, l.jsx)(s.Text, {
-                                            variant: 'text-xs/medium',
-                                            children: D.intl.string(D.t.UH6ieX)
-                                        })
-                                    ]
-                                })
+                            })
                         ]
                     })
                 ]
             }),
             (0, l.jsx)(s.mzw, {
                 children: (0, l.jsxs)('div', {
-                    className: Z.footer,
+                    className: D.footer,
                     children: [
                         (0, l.jsx)('div', {
-                            className: Z.clearAfterSelectContainer,
+                            className: D.clearAfterSelectContainer,
                             children: (0, l.jsx)(s.q4e, {
                                 maxVisibleItems: w.wS.length,
-                                value: q,
+                                value: V,
                                 options: w.wS.map((e) => ({
                                     value: e,
                                     key: e,
-                                    label: (0, _.Z)(e, z)
+                                    label: (0, v.Z)(e, M)
                                 })),
-                                onChange: (e) => X(e),
-                                optionClassName: Z.clearAfterSelectOption,
+                                onChange: (e) => G(e),
+                                optionClassName: D.clearAfterSelectOption,
                                 renderOptionLabel: (e) => {
                                     let { value: t } = e;
                                     return (0, l.jsx)('span', {
-                                        className: Z.clearAfterSelectOptionLabel,
-                                        children: (0, O.Z)(t, z)
+                                        className: D.clearAfterSelectOptionLabel,
+                                        children: (0, _.Z)(t, M)
                                     });
                                 },
                                 look: s.qQH.CUSTOM,
@@ -373,8 +343,8 @@ function L(e) {
                             type: 'submit',
                             size: s.zxk.Sizes.MEDIUM,
                             color: s.zxk.Colors.BRAND,
-                            onClick: ed,
-                            children: D.intl.string(D.t.R3BPHx)
+                            onClick: ei,
+                            children: k.intl.string(k.t.R3BPHx)
                         })
                     ]
                 })
