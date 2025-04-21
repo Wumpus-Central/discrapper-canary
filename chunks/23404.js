@@ -91,19 +91,20 @@ function L(e) {
     let { nodeRef: _, quest: E } = e,
         O = (0, u.O5)(),
         P = (0, o.e7)([h.Z], () => h.Z.isEnrolling(E.id), [E]),
-        [L, w] = i.useState(!1),
-        R = i.useCallback(() => w(!0), []),
-        D = i.useCallback(() => w(!1), []),
-        k = i.useCallback((e) => {
+        L = (0, o.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil, []),
+        [w, R] = i.useState(!1),
+        D = i.useCallback(() => R(!0), []),
+        k = i.useCallback(() => R(!1), []),
+        M = i.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        M = i.useCallback(() => {
+        U = i.useCallback(() => {
             (0, d.AH)(E.id, {
                 questContent: f.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.ACCEPT_QUEST
             });
         }, [E]),
-        U = i.useCallback(() => {
+        G = i.useCallback(() => {
             null != E &&
                 (O({
                     questId: E.id,
@@ -115,7 +116,7 @@ function L(e) {
                     questId: E.id
                 }));
         }, [E, O]),
-        G = i.useCallback(() => {
+        V = i.useCallback(() => {
             O({
                 questId: E.id,
                 questContent: f.jn.ACTIVITY_PANEL,
@@ -126,41 +127,41 @@ function L(e) {
                     questId: E.id
                 });
         }, [E.id, O]),
-        V = (0, C.hf)({
+        B = (0, C.hf)({
             quest: E,
             location: f.jn.ACTIVITY_PANEL
         }),
-        B = (0, p.tP)(E),
-        H = (null == (t = E.userStatus) ? void 0 : t.enrolledAt) != null,
-        F = (null == (n = E.userStatus) ? void 0 : n.completedAt) != null,
-        z = (null == (l = E.userStatus) ? void 0 : l.claimedAt) != null,
-        W = (null == E ? void 0 : E.userStatus) != null && (0, g.zE)(E.userStatus, f.jn.ACTIVITY_PANEL),
-        Y = (0, p.Rf)(E),
-        K = (0, b.DD)({
+        H = (0, p.tP)(E),
+        F = (null == (t = E.userStatus) ? void 0 : t.enrolledAt) != null,
+        z = (null == (n = E.userStatus) ? void 0 : n.completedAt) != null,
+        W = (null == (l = E.userStatus) ? void 0 : l.claimedAt) != null,
+        Y = (null == E ? void 0 : E.userStatus) != null && (0, g.zE)(E.userStatus, f.jn.ACTIVITY_PANEL),
+        K = (0, p.Rf)(E),
+        q = (0, b.DD)({
             quest: E,
-            taskDetails: Y,
+            taskDetails: K,
             location: T.dr.ACTIVITY_PANEL,
             questContent: f.jn.ACTIVITY_PANEL
         }),
-        q = (0, m.j)({ location: T.dr.QUESTS_BAR_MOBILE });
-    return W || B || z
+        Q = (0, m.j)({ location: T.dr.QUESTS_BAR_MOBILE });
+    return Y || H || W || L
         ? null
         : (0, r.jsxs)('div', {
               ref: (e) => {
                   _.current = e;
               },
-              className: a()(A.wrapper, { [A.wrapperQuestAccepted]: H }),
-              onClick: k,
-              onKeyPress: k,
-              onFocus: R,
-              onMouseEnter: R,
-              onBlur: D,
-              onMouseLeave: D,
+              className: a()(A.wrapper, { [A.wrapperQuestAccepted]: F }),
+              onClick: M,
+              onKeyPress: M,
+              onFocus: D,
+              onMouseEnter: D,
+              onBlur: k,
+              onMouseLeave: k,
               children: [
                   (0, r.jsxs)('div', {
                       className: A.utils,
                       children: [
-                          H ? (0, r.jsx)(x, { quest: E }) : (0, r.jsx)(I.Z, {}),
+                          F ? (0, r.jsx)(x, { quest: E }) : (0, r.jsx)(I.Z, {}),
                           (0, r.jsx)(v.r, {
                               quest: E,
                               questContent: f.jn.ACTIVITY_PANEL,
@@ -198,7 +199,7 @@ function L(e) {
                           })
                       ]
                   }),
-                  !H &&
+                  !F &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(x, { quest: E }),
@@ -208,9 +209,9 @@ function L(e) {
                                       (0, r.jsx)(s.Text, {
                                           variant: 'text-sm/normal',
                                           color: 'text-normal',
-                                          children: K
+                                          children: q
                                       }),
-                                      q &&
+                                      Q &&
                                           (0, r.jsx)(y.Z, {
                                               quest: E,
                                               textColor: 'text-muted',
@@ -220,20 +221,20 @@ function L(e) {
                               })
                           ]
                       }),
-                  H &&
-                      !F &&
+                  F &&
+                      !z &&
                       (0, r.jsx)(S.Z, {
-                          autoplay: L,
+                          autoplay: w,
                           className: A.rewardTileWithInstructions,
                           quest: E,
                           questContent: f.jn.ACTIVITY_PANEL,
                           location: T.dr.ACTIVITY_PANEL,
-                          taskDetails: Y
+                          taskDetails: K
                       }),
                   (0, r.jsxs)('div', {
                       className: A.ctas,
                       children: [
-                          !H &&
+                          !F &&
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)(s.zxk, {
@@ -241,36 +242,36 @@ function L(e) {
                                           color: s.zxk.Colors.PRIMARY,
                                           fullWidth: !0,
                                           size: s.zxk.Sizes.SMALL,
-                                          onClick: G,
+                                          onClick: V,
                                           children: j.intl.string(j.t.LLLLPD)
                                       }),
                                       (0, r.jsx)(s.zxk, {
                                           className: A.cta,
                                           color: s.zxk.Colors.BRAND,
                                           fullWidth: !0,
-                                          onClick: M,
+                                          onClick: U,
                                           size: s.zxk.Sizes.SMALL,
                                           submitting: P,
                                           children: j.intl.string(j.t.l7E81t)
                                       })
                                   ]
                               }),
-                          H &&
-                              !F &&
+                          F &&
+                              !z &&
                               (0, r.jsx)(s.zxk, {
                                   className: A.cta,
                                   color: s.zxk.Colors.BRAND,
                                   fullWidth: !0,
-                                  onClick: U,
+                                  onClick: G,
                                   size: s.zxk.Sizes.SMALL,
                                   children: j.intl.string(j.t.VN1Ajo)
                               }),
-                          F &&
+                          z &&
                               (0, r.jsx)(s.zxk, {
                                   className: A.cta,
                                   color: s.zxk.Colors.BRAND,
                                   fullWidth: !0,
-                                  onClick: V,
+                                  onClick: B,
                                   size: s.zxk.Sizes.SMALL,
                                   children: j.intl.string(j.t.cfY4PD)
                               })
