@@ -3,8 +3,8 @@ var a = n(200651),
     r = n(192379),
     l = n(120356),
     i = n.n(l),
-    s = n(481060),
-    o = n(931240),
+    o = n(481060),
+    s = n(931240),
     c = n(836768),
     d = n(859921),
     u = n(973161),
@@ -15,18 +15,18 @@ function x() {
         ref: e,
         className: i()(m.panel, u.panel),
         children: [
-            (0, a.jsx)(s.zxk, {
-                size: s.zxk.Sizes.SMALL,
-                onClick: o.LX,
+            (0, a.jsx)(o.zxk, {
+                size: o.zxk.Sizes.SMALL,
+                onClick: s.LX,
                 children: 'Reset Every Clan Setup State'
             }),
-            (0, a.jsx)(s.zxk, {
-                size: s.zxk.Sizes.SMALL,
+            (0, a.jsx)(o.zxk, {
+                size: o.zxk.Sizes.SMALL,
                 onClick: c.Z.resetState,
                 children: 'Reset Global Discovery State'
             }),
-            (0, a.jsx)(s.zxk, {
-                size: s.zxk.Sizes.SMALL,
+            (0, a.jsx)(o.zxk, {
+                size: o.zxk.Sizes.SMALL,
                 onClick: d.Z.resetState,
                 children: 'Reset Global Discovery Servers State'
             })

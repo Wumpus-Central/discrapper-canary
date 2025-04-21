@@ -3,8 +3,8 @@ var a = n(200651),
     r = n(192379),
     l = n(481060),
     i = n(511010),
-    s = n(373071),
-    o = n(637443),
+    o = n(373071),
+    s = n(637443),
     c = n(619899),
     d = n(18868),
     u = n(281598),
@@ -54,35 +54,35 @@ let p = [
         value: null
     },
     v = () => {
-        (0, l.nfh)(o.g)
-            ? (0, l.Mr3)(o.g)
+        (0, l.nfh)(s.g)
+            ? (0, l.Mr3)(s.g)
             : (0, l.ZDy)(
                   async () => {
                       let { ShopAssetsPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
                       return (t) => (0, a.jsx)(e, h({}, t));
                   },
                   {
-                      modalKey: o.g,
-                      onCloseRequest: () => (0, l.Mr3)(o.g)
+                      modalKey: s.g,
+                      onCloseRequest: () => (0, l.Mr3)(s.g)
                   }
               );
     },
-    g = () => {
-        (0, l.nfh)(o.c)
-            ? (0, l.Mr3)(o.c)
+    j = () => {
+        (0, l.nfh)(s.c)
+            ? (0, l.Mr3)(s.c)
             : (0, l.ZDy)(
                   async () => {
                       let { ShopPFXPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
                       return (t) => (0, a.jsx)(e, h({}, t));
                   },
                   {
-                      modalKey: o.c,
-                      onCloseRequest: () => (0, l.Mr3)(o.c)
+                      modalKey: s.c,
+                      onCloseRequest: () => (0, l.Mr3)(s.c)
                   }
               );
     },
-    j = () => {
-        let e = (0, s.lb)(),
+    g = () => {
+        let e = (0, o.lb)(),
             { previewProfileEffectId: t, setPreviewProfileEffectId: n } = (0, c.N9)(),
             i = r.useMemo(
                 () => [
@@ -108,7 +108,7 @@ let p = [
                         (0, a.jsx)(l.zxk, {
                             look: l.zxk.Looks.BLANK,
                             size: l.zxk.Sizes.SMALL,
-                            onClick: g,
+                            onClick: j,
                             className: x.instructionsButton,
                             children: (0, a.jsx)(l.idN, { color: l.TVs.colors.BG_BRAND })
                         })
@@ -158,7 +158,7 @@ let p = [
     y = (e) => {
         let { clearAssets: t, clearIgnoredFiles: n } = e,
             { collectionAssets: i } = (0, c.xq)(),
-            { deleteCollectionAsset: s, clearAssets: o } = (0, c.N9)(),
+            { deleteCollectionAsset: o, clearAssets: s } = (0, c.N9)(),
             d = r.useMemo(
                 () =>
                     Object.values(i).map((e) => ({
@@ -167,10 +167,10 @@ let p = [
                     })),
                 [i]
             ),
-            u = r.useCallback((e) => s(e), [s]),
+            u = r.useCallback((e) => o(e), [o]),
             m = r.useCallback(() => {
-                o(), t(), n();
-            }, [o, t, n]);
+                s(), t(), n();
+            }, [s, t, n]);
         return 0 === d.length
             ? null
             : (0, a.jsxs)(a.Fragment, {
@@ -259,10 +259,10 @@ let p = [
               });
     },
     O = () => {
-        let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: i, errors: s } = (0, m.g)(),
-            o = Object.entries(s),
+        let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: i, errors: o } = (0, m.g)(),
+            s = Object.entries(o),
             c = Object.entries(i),
-            u = o.length > 0,
+            u = s.length > 0,
             h = c.length > 0,
             p = r.useCallback(
                 (n) => {
@@ -280,7 +280,7 @@ let p = [
                               (0, a.jsx)(l.Text, {
                                   variant: 'text-md/normal',
                                   color: u ? 'text-danger' : 'text-normal',
-                                  children: ''.concat(o.length, ' errors')
+                                  children: ''.concat(s.length, ' errors')
                               }),
                               (0, a.jsx)(l.Text, {
                                   variant: 'text-md/normal',
@@ -311,7 +311,7 @@ let p = [
                             (0, a.jsx)(l.LZC, { size: 8 }),
                             (0, a.jsx)('ul', {
                                 className: x.validationIssuesList,
-                                children: o.map((e, t) => {
+                                children: s.map((e, t) => {
                                     let [n, r] = e;
                                     return (0, a.jsxs)(
                                         'li',
@@ -398,7 +398,7 @@ let p = [
     },
     E = () => {
         let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, c.N9)(),
-            { ignoredFilenames: i, clearAssets: s, clearIgnoredFilenames: o, processAndUpsertAssets: m } = (0, u.hm)(),
+            { ignoredFilenames: i, clearAssets: o, clearIgnoredFilenames: s, processAndUpsertAssets: m } = (0, u.hm)(),
             h = r.useCallback(
                 (e) => {
                     n(), m(e);
@@ -432,15 +432,15 @@ let p = [
                         })
                     ]
                 }),
-                (0, a.jsx)(j, {}),
+                (0, a.jsx)(g, {}),
                 (0, a.jsx)(_, {}),
                 (0, a.jsx)(y, {
-                    clearAssets: s,
-                    clearIgnoredFiles: o
+                    clearAssets: o,
+                    clearIgnoredFiles: s
                 }),
                 (0, a.jsx)(C, {
                     ignoredFiles: i,
-                    handleClearIgnoredFiles: o
+                    handleClearIgnoredFiles: s
                 })
             ]
         });

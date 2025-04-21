@@ -7,8 +7,8 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     i = n(466377),
-    s = n(481060),
-    o = n(310752),
+    o = n(481060),
+    s = n(310752),
     c = n(731994),
     d = n(792351);
 let u = 'UPLOAD_ERROR_MODAL_KEY',
@@ -22,14 +22,14 @@ let u = 'UPLOAD_ERROR_MODAL_KEY',
                 children: (0, a.jsxs)('div', {
                     className: d.inner,
                     children: [
-                        (0, a.jsx)(o.Z, { icons: c.J6 }),
-                        (0, a.jsx)(s.X6q, {
+                        (0, a.jsx)(s.Z, { icons: c.J6 }),
+                        (0, a.jsx)(o.X6q, {
                             variant: 'heading-lg/bold',
                             children: t
                         }),
                         (0, a.jsx)('div', {
                             className: d.instructions,
-                            children: (0, a.jsx)(s.Text, {
+                            children: (0, a.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 children: n
                             })

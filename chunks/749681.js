@@ -14,7 +14,7 @@ n.r(t),
                                       entrypoint: null != (n = t.entrypoint) ? n : h.Qq.UNKNOWN
                                   })
                                 : l.Z.setState({ entrypoint: null != (p = t.entrypoint) ? p : h.Qq.UNKNOWN }),
-                            (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_SERVERS, t.extra)
+                            (0, o.uL)(m.Z5c.GLOBAL_DISCOVERY_SERVERS, t.extra)
                         );
                     case u.GlobalDiscoveryTab.APPS:
                         if (null != t.newSessionState) {
@@ -31,7 +31,7 @@ n.r(t),
                                     source: null == i ? void 0 : i.name,
                                     session_id: n,
                                     guild_id: l,
-                                    user_id: null == (b = o.default.getCurrentUser()) ? void 0 : b.id
+                                    user_id: null == (b = s.default.getCurrentUser()) ? void 0 : b.id
                                 }),
                                 t.newSessionState.restorePreviousView)
                             )
@@ -66,16 +66,16 @@ n.r(t),
                         }
                         if (null != t.applicationId) {
                             if (t.section === x.GlobalDiscoveryAppsSections.STORE)
-                                if (null != t.skuId) return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.applicationId, t.skuId));
-                                else return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t.applicationId, x.GlobalDiscoveryAppsSections.STORE));
-                            return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t.applicationId));
+                                if (null != t.skuId) return (0, o.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.applicationId, t.skuId));
+                                else return (0, o.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t.applicationId, x.GlobalDiscoveryAppsSections.STORE));
+                            return (0, o.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t.applicationId));
                         }
                         if (null != t.query) {
                             let e = new URLSearchParams();
-                            return '' !== t.query && e.set('q', t.query), null != t.categoryId && e.set('category_id', t.categoryId.toString()), null != t.page && e.set('page', t.page.toString()), (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: e.toString() });
+                            return '' !== t.query && e.set('q', t.query), null != t.categoryId && e.set('category_id', t.categoryId.toString()), null != t.page && e.set('page', t.page.toString()), (0, o.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: e.toString() });
                         }
-                        if (null != t.categoryId) return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t.categoryId.toString()));
-                        else return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS);
+                        if (null != t.categoryId) return (0, o.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t.categoryId.toString()));
+                        else return (0, o.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS);
                     case u.GlobalDiscoveryTab.QUESTS:
                         return (0, i.navigateToQuestHome)({
                             fromContent: t.questContent,
@@ -96,8 +96,8 @@ var a = n(258971),
     r = n(726115),
     l = n(859921),
     i = n(341907),
-    s = n(703656),
-    o = n(594174),
+    o = n(703656),
+    s = n(594174),
     c = n(626135),
     d = n(836768),
     u = n(49898),

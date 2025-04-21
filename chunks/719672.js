@@ -4,8 +4,8 @@ n(192379);
 var r = n(913527),
     l = n.n(r),
     i = n(442837),
-    s = n(704215),
-    o = n(481060),
+    o = n(704215),
+    s = n(481060),
     c = n(713284),
     d = n(883904),
     u = n(211644),
@@ -29,7 +29,7 @@ let p = (e) => {
             key: 'events',
             render(e) {
                 let { event: t, dismissibleContent: n } = e;
-                return ''.concat(t, ' ').concat(s.z[n]);
+                return ''.concat(t, ' ').concat(o.z[n]);
             }
         }
     ],
@@ -38,7 +38,7 @@ let p = (e) => {
             key: 'candidates',
             render(e) {
                 let { dismissibleContent: t } = e;
-                return ''.concat(s.z[t]);
+                return ''.concat(o.z[t]);
             }
         }
     ];
@@ -48,7 +48,7 @@ function v() {
         n = (0, u.ZP)((e) => e.lastWinnerTime),
         r = 0 !== n ? l()(n).fromNow() : 'n/a',
         v = (0, u.ZP)((e) => e.recentlyShown[0]),
-        g = e.map((e) => {
+        j = e.map((e) => {
             let { eventType: t, dismissibleContent: n } = e;
             return {
                 key: p(t) + n.toString(),
@@ -56,7 +56,7 @@ function v() {
                 dismissibleContent: n
             };
         }),
-        j = Array.from(t.keys()).map((e) => ({
+        g = Array.from(t.keys()).map((e) => ({
             key: e.toString(),
             dismissibleContent: e
         }));
@@ -66,17 +66,17 @@ function v() {
             (0, a.jsxs)('div', {
                 className: h.buttonContainer,
                 children: [
-                    (0, a.jsx)(o.zxk, {
+                    (0, a.jsx)(s.zxk, {
                         className: h.button,
                         onClick: () => (0, d.EG)(),
                         children: 'Reset Daily Cap'
                     }),
-                    (0, a.jsx)(o.zxk, {
+                    (0, a.jsx)(s.zxk, {
                         className: h.button,
                         onClick: m.sr,
                         children: 'Clear All Dismissed Contents'
                     }),
-                    (0, a.jsx)(o.zxk, {
+                    (0, a.jsx)(s.zxk, {
                         className: h.button,
                         onClick: m.bE,
                         children: 'Check All Dismissed Contents'
@@ -91,7 +91,7 @@ function v() {
             (0, a.jsx)('br', {}),
             (0, a.jsxs)('div', {
                 className: h.info,
-                children: ['Last winner: ', null != v ? s.z[v] : 'None']
+                children: ['Last winner: ', null != v ? o.z[v] : 'None']
             }),
             (0, a.jsx)('br', {}),
             (0, a.jsx)('div', {
@@ -99,13 +99,13 @@ function v() {
                 children: (0, a.jsx)(x.Z, {
                     className: h.candidatesTable,
                     columns: f,
-                    data: j
+                    data: g
                 })
             }),
             (0, a.jsx)('br', {}),
             (0, a.jsx)(x.Z, {
                 columns: b,
-                data: g
+                data: j
             })
         ]
     });

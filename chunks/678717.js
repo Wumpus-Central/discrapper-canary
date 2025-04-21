@@ -1,10 +1,10 @@
-n.r(t), n.d(t, { default: () => eo }), n(539854), n(388685);
+n.r(t), n.d(t, { default: () => es }), n(539854), n(388685);
 var a = n(200651),
     r = n(192379),
     l = n(120356),
     i = n.n(l),
-    s = n(990547),
-    o = n(442837),
+    o = n(990547),
+    s = n(442837),
     c = n(481060),
     d = n(347469),
     u = n(213609),
@@ -15,8 +15,8 @@ var a = n(200651),
     b = n(906467),
     f = n(259580),
     v = n(31336),
-    g = n(19759),
-    j = n(432877);
+    j = n(19759),
+    g = n(432877);
 n(381996);
 var _ = n(392750),
     y = n(926976),
@@ -58,7 +58,7 @@ var _ = n(392750),
 function er(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: r } = e,
         l = (0, d.Z)({
-            minDimension: g.h,
+            minDimension: j.h,
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: r,
@@ -171,7 +171,7 @@ function el(e) {
                     id: 'overlays',
                     name: 'Dev Overlays',
                     group: Q.v0.DEVELOPMENT,
-                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: j.zU.OVERLAYS })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: g.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -183,7 +183,7 @@ function el(e) {
                     id: 'reporting',
                     name: 'Reporting',
                     group: Q.v0.EXPERIMENTS,
-                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: j.zU.REPORTING })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: g.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -282,12 +282,12 @@ function el(e) {
         }, []),
         {
             TabBar: i,
-            renderSelectedTab: o,
+            renderSelectedTab: s,
             selectedTabId: d
         } = (0, Q.ZP)(
             {
                 tabs: l,
-                initialSelectedTabId: null != (t = g.Z.lastOpenTabId) ? t : void 0,
+                initialSelectedTabId: null != (t = j.Z.lastOpenTabId) ? t : void 0,
                 onChangeTab: (e) => {
                     (0, v.Qh)({ lastOpenTabId: e });
                 }
@@ -296,8 +296,8 @@ function el(e) {
         );
     return (
         (0, u.Z)({
-            type: s.ImpressionTypes.PANE,
-            name: s.ImpressionNames.VIEW_PANEL_DEVTOOLS,
+            type: o.ImpressionTypes.PANE,
+            name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: d }
         }),
         (0, a.jsxs)(A.Gk, {
@@ -319,7 +319,7 @@ function el(e) {
                                                       windowKey: ee.KJ3.DEVTOOLS_POPOUT,
                                                       title: 'DevTools',
                                                       withTitleBar: !0,
-                                                      children: (0, a.jsx)(eo, {
+                                                      children: (0, a.jsx)(es, {
                                                           mobile: !1,
                                                           isPopout: !0
                                                       })
@@ -347,7 +347,7 @@ function el(e) {
                     ]
                 }),
                 (0, a.jsx)(i, {}),
-                o(),
+                s(),
                 (0, a.jsx)(A.Br, { className: en.layerContainer })
             ]
         })
@@ -355,7 +355,7 @@ function el(e) {
 }
 function ei() {
     let e = r.useRef(null),
-        t = (0, o.e7)([g.Z], () => g.Z.sidebarWidth),
+        t = (0, s.e7)([j.Z], () => j.Z.sidebarWidth),
         [n, l] = r.useState(null),
         i = r.useCallback((e) => (0, v.Qh)({ sidebarWidth: e }), []);
     return (r.useEffect(() => {
@@ -367,7 +367,7 @@ function ei() {
               ref: e,
               className: en.container,
               style: {
-                  minWidth: g.h,
+                  minWidth: j.h,
                   width: n
               },
               'data-app-right-panel': !0,
@@ -384,8 +384,8 @@ function ei() {
               ]
           });
 }
-function es() {
-    return (0, o.e7)([g.Z], () => g.Z.displayTools)
+function eo() {
+    return (0, s.e7)([j.Z], () => j.Z.displayTools)
         ? (0, a.jsx)('div', {
               className: i()(en.container, en.mobileContainerExpanded),
               children: (0, a.jsx)('div', {
@@ -411,10 +411,10 @@ function es() {
               })
           });
 }
-function eo(e) {
+function es(e) {
     let { mobile: t, isPopout: n = !1 } = e;
     return t
-        ? (0, a.jsx)(es, {})
+        ? (0, a.jsx)(eo, {})
         : n
           ? (0, a.jsx)('div', {
                 className: en.popoutContainer,

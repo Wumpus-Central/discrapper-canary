@@ -3,8 +3,8 @@ var a = n(200651),
     r = n(192379),
     l = n(120356),
     i = n.n(l),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(665149),
     d = n(428530),
     u = n(484036),
@@ -29,7 +29,7 @@ function f(e) {
                 }
             );
         }, [t, n]),
-        (0, a.jsx)(o.zJl, {
+        (0, a.jsx)(s.zJl, {
             className: p.inspectorContainer,
             children: (0, a.jsx)(d.Z, { data: l })
         })
@@ -45,7 +45,7 @@ let v = [
             }
         }
     ],
-    g = [
+    j = [
         {
             id: 'local',
             name: 'Local Variables',
@@ -76,9 +76,9 @@ let v = [
             }
         }
     ];
-function j(e) {
+function g(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: r, renderSelectedTab: l } = (0, x.ZP)({ tabs: g }, []);
+        { TabBar: r, renderSelectedTab: l } = (0, x.ZP)({ tabs: j }, []);
     return (0, a.jsxs)(u.Z, {
         className: p.subPanel,
         minHeight: 100,
@@ -89,7 +89,7 @@ function j(e) {
                 className: i()(h.headerBar, p.subPanelHeaderBar),
                 children: [
                     (0, a.jsx)(c.ZP.Icon, {
-                        icon: o.lO_,
+                        icon: s.lO_,
                         tooltip: t.getName()
                     }),
                     (0, a.jsx)(c.ZP.Title, { children: t.getName() })
@@ -102,7 +102,7 @@ function j(e) {
 function _() {
     let e = r.useRef(null),
         [t, n] = r.useState(''),
-        l = s.yh.getAll(),
+        l = o.yh.getAll(),
         c = r
             .useMemo(
                 () =>
@@ -128,9 +128,9 @@ function _() {
         children: [
             (0, a.jsx)('div', {
                 className: p.toolbar,
-                children: (0, a.jsx)(o.E1j, {
+                children: (0, a.jsx)(s.E1j, {
                     className: p.searchBar,
-                    size: o.E1j.Sizes.SMALL,
+                    size: s.E1j.Sizes.SMALL,
                     query: t,
                     onChange: n,
                     onClear: () => n(''),
@@ -145,7 +145,7 @@ function _() {
                 onClickRow: (e) => u(e.key)
             }),
             null != x &&
-                (0, a.jsx)(j, {
+                (0, a.jsx)(g, {
                     store: x,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })

@@ -1,75 +1,75 @@
-i.d(t, { Z: () => c });
-var o = i(200651);
-i(192379);
-var n = i(442837),
-    l = i(481060),
-    r = i(596454),
-    a = i(339085),
-    s = i(939790);
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    r = n(481060),
+    s = n(596454),
+    a = n(339085),
+    o = n(939790);
 function c(e) {
     let { reactionEmoji: t } = e,
-        i = (0, n.e7)([a.ZP], () => ((null == t ? void 0 : t.emojiId) != null ? a.ZP.getUsableCustomEmojiById(t.emojiId) : null));
-    return (0, o.jsxs)('div', {
-        className: s.container,
+        n = (0, l.e7)([a.ZP], () => ((null == t ? void 0 : t.emojiId) != null ? a.ZP.getUsableCustomEmojiById(t.emojiId) : null));
+    return (0, i.jsxs)('div', {
+        className: o.container,
         children: [
-            (0, o.jsxs)('div', {
-                className: s.body,
+            (0, i.jsxs)('div', {
+                className: o.body,
                 children: [
-                    (0, o.jsxs)('div', {
-                        className: s.placeholderLines,
+                    (0, i.jsxs)('div', {
+                        className: o.placeholderLines,
                         children: [
-                            (0, o.jsx)(d, {
+                            (0, i.jsx)(d, {
                                 width: '100%',
                                 marginBottom: 8
                             }),
-                            (0, o.jsx)(d, {
+                            (0, i.jsx)(d, {
                                 width: '80%',
                                 marginBottom: 16
                             }),
-                            (0, o.jsx)(d, {
+                            (0, i.jsx)(d, {
                                 width: '50%',
                                 marginBottom: 8
                             }),
-                            (0, o.jsx)(d, {
+                            (0, i.jsx)(d, {
                                 width: '60%',
                                 marginBottom: 16
                             })
                         ]
                     }),
-                    (0, o.jsx)('div', { className: s.placeholderMedia })
+                    (0, i.jsx)('div', { className: o.placeholderMedia })
                 ]
             }),
-            (0, o.jsxs)('div', {
-                className: s.footer,
+            (0, i.jsxs)('div', {
+                className: o.footer,
                 children: [
-                    (0, o.jsxs)('div', {
-                        className: s.reaction,
+                    (0, i.jsxs)('div', {
+                        className: o.reaction,
                         children: [
                             null != t
-                                ? (0, o.jsx)(r.Z, {
-                                      className: s.reactionEmote,
+                                ? (0, i.jsx)(s.Z, {
+                                      className: o.reactionEmote,
                                       emojiId: t.emojiId,
                                       emojiName: t.emojiName,
-                                      animated: !!(null == i ? void 0 : i.animated)
+                                      animated: !!(null == n ? void 0 : n.animated)
                                   })
-                                : (0, o.jsx)(l.EO4, {
+                                : (0, i.jsx)(r.EO4, {
                                       size: 'sm',
                                       color: 'currentColor',
-                                      className: s.reactionEmote
+                                      className: o.reactionEmote
                                   }),
-                            (0, o.jsx)(l.Text, {
+                            (0, i.jsx)(r.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'interactive-normal',
                                 children: 17
                             })
                         ]
                     }),
-                    (0, o.jsx)(d, {
+                    (0, i.jsx)(d, {
                         width: '24px',
                         marginBottom: 0
                     }),
-                    (0, o.jsx)('div', { className: s.dot }),
-                    (0, o.jsx)(d, {
+                    (0, i.jsx)('div', { className: o.dot }),
+                    (0, i.jsx)(d, {
                         width: '24px',
                         marginBottom: 0
                     })
@@ -79,12 +79,12 @@ function c(e) {
     });
 }
 function d(e) {
-    let { width: t, marginBottom: i } = e;
-    return (0, o.jsx)('div', {
-        className: s.placeholderLine,
+    let { width: t, marginBottom: n } = e;
+    return (0, i.jsx)('div', {
+        className: o.placeholderLine,
         style: {
             width: t,
-            marginBottom: i
+            marginBottom: n
         }
     });
 }

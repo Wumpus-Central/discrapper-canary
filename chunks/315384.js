@@ -3,13 +3,13 @@ var a = n(200651),
     r = n(192379),
     l = n(544891),
     i = n(481060),
-    s = n(317951),
-    o = n(959546),
+    o = n(317951),
+    s = n(959546),
     c = n(208220);
 let d = '/users/@me/debug/consumables/',
     u = {
-        [s.FX]: 'HD Streaming Potion',
-        [s.D1]: 'Confetti Potion'
+        [o.FX]: 'HD Streaming Potion',
+        [o.D1]: 'Confetti Potion'
     };
 function m() {
     let e,
@@ -21,7 +21,7 @@ function m() {
             () => (
                 (async () => {
                     try {
-                        let e = (await l.tn.get(d)).body.entitlements.map((e) => o.Z.createFromServer(e));
+                        let e = (await l.tn.get(d)).body.entitlements.map((e) => s.Z.createFromServer(e));
                         n(e);
                     } catch (e) {
                         x('Failed to fetch entitlements');
@@ -50,7 +50,7 @@ function m() {
                                 }),
                                 (0, a.jsx)(i.zxk, {
                                     onClick:
-                                        ((e = s.D1),
+                                        ((e = o.D1),
                                         async () => {
                                             p(!0);
                                             try {
@@ -59,7 +59,7 @@ function m() {
                                                         query: { sku_id: e },
                                                         rejectWithError: !0
                                                     }),
-                                                    r = new o.Z(a.body.entitlement);
+                                                    r = new s.Z(a.body.entitlement);
                                                 n([...t, r]);
                                             } catch (e) {
                                                 x('Failed to create entitlement');

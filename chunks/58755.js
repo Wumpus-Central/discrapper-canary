@@ -1,10 +1,10 @@
-n.d(t, { P: () => g }), n(388685), n(35282), n(49124);
+n.d(t, { P: () => j }), n(388685), n(35282), n(49124);
 var a = n(200651),
     r = n(192379),
     l = n(394900),
     i = n(661105),
-    s = n(609067),
-    o = n(94367),
+    o = n(609067),
+    s = n(94367),
     c = n(203165),
     d = n(481060),
     u = n(789654),
@@ -69,11 +69,11 @@ let f = Object.keys(x.jQ).map((e) => ({
         value: e,
         label: e
     }));
-function g(e) {
+function j(e) {
     let { state: t, setState: n } = e,
         { scales: l } = t,
-        [i, s] = r.useState(null),
-        o = (0, a.jsxs)('div', {
+        [i, o] = r.useState(null),
+        s = (0, a.jsxs)('div', {
             className: h.section,
             children: [
                 (0, a.jsx)(d.VcW, {
@@ -110,7 +110,7 @@ function g(e) {
                             'li',
                             {
                                 children: (0, a.jsx)(d.P3F, {
-                                    onClick: () => s(e.name),
+                                    onClick: () => o(e.name),
                                     style: { cursor: 'pointer' },
                                     children: (0, a.jsx)(_, {
                                         scale: e,
@@ -127,17 +127,17 @@ function g(e) {
         u = l.find((e) => e.name === i),
         f =
             null != u
-                ? (0, a.jsx)(j, {
-                      onClose: () => s(null),
+                ? (0, a.jsx)(g, {
+                      onClose: () => o(null),
                       scale: u,
                       setState: n
                   })
-                : o;
+                : s;
     return (0, a.jsx)('div', { children: f });
 }
-function j(e) {
+function g(e) {
     let { scale: t, setState: n, onClose: r } = e,
-        { name: c, base: p, darkness: b, lightness: v, showColumnarPalettePreview: g, colorSpace: j, easingStrength: _ = 1, useP3ColorSpace: C, steps: O = 26 } = t,
+        { name: c, base: p, darkness: b, lightness: v, showColumnarPalettePreview: j, colorSpace: g, easingStrength: _ = 1, useP3ColorSpace: C, steps: O = 26 } = t,
         E = (0, x.XM)(t),
         N = (0, x.W6)(E, c);
     return (0, a.jsxs)(d.hjN, {
@@ -199,7 +199,7 @@ function j(e) {
                     }),
                     (0, a.jsx)(d.q4e, {
                         options: f,
-                        value: j,
+                        value: g,
                         onChange: (e) => (0, x.t4)(c, e, n),
                         popoutLayerContext: m.O$
                     })
@@ -275,7 +275,7 @@ function j(e) {
                     (0, a.jsx)(d.xJW, {
                         children: (0, a.jsx)(d.j7V, {
                             note: 'Renders the palette preview in a single column, useful for comparing the luminance of each step.',
-                            value: g,
+                            value: j,
                             onChange: (e) => (0, x.KB)(c, e, n),
                             children: 'Show columnar palette preview'
                         })
@@ -304,11 +304,11 @@ function j(e) {
                         title: 'Palette Preview',
                         children: (0, a.jsx)('div', {
                             className: h.paletteOverrides,
-                            'data-columnar': g,
+                            'data-columnar': j,
                             children: Object.entries(E).map((e, n) => {
                                 let [r, c] = e,
                                     u = (0, x.HI)(c),
-                                    m = (0, s.Z)((0, o.Z)('black'), c) > 4.5 ? 'black' : 'white',
+                                    m = (0, o.Z)((0, s.Z)('black'), c) > 4.5 ? 'black' : 'white',
                                     h = N[r];
                                 return (0, a.jsxs)(
                                     'div',
@@ -316,11 +316,11 @@ function j(e) {
                                         style: { backgroundColor: u },
                                         children: [
                                             (0, a.jsxs)(d.Text, {
-                                                variant: g ? 'text-sm/medium' : 'text-xs/medium',
+                                                variant: j ? 'text-sm/medium' : 'text-xs/medium',
                                                 style: { color: m },
-                                                children: [t.name, '.', n + 1, g && null != h ? (0, a.jsx)('strong', { children: ' - '.concat(h) }) : '']
+                                                children: [t.name, '.', n + 1, j && null != h ? (0, a.jsx)('strong', { children: ' - '.concat(h) }) : '']
                                             }),
-                                            g &&
+                                            j &&
                                                 (0, a.jsxs)(d.Text, {
                                                     variant: 'text-xxs/medium',
                                                     style: {
@@ -343,7 +343,7 @@ function j(e) {
 }
 function _(e) {
     let { scale: t, onRemove: n } = e,
-        s = r.useMemo(() => Object.values((0, x.XM)(t)).map((e) => (0, l.Z)((0, i.Z)(e, x.HW.sRGB), { format: 'hex' })), [t]);
+        o = r.useMemo(() => Object.values((0, x.XM)(t)).map((e) => (0, l.Z)((0, i.Z)(e, x.HW.sRGB), { format: 'hex' })), [t]);
     return (0, a.jsxs)('li', {
         className: h.override,
         children: [
@@ -374,7 +374,7 @@ function _(e) {
             }),
             (0, a.jsx)('div', {
                 className: h.palettePreview,
-                children: s.map((e) =>
+                children: o.map((e) =>
                     (0, a.jsx)(
                         'span',
                         {

@@ -13,14 +13,14 @@ var Q = B(120356),
     I = B(685184),
     P = B(369509),
     e = B(817239),
-    r = B(388032),
-    t = B(668271);
+    t = B(388032),
+    r = B(668271);
 function n(A) {
     return (0, C.jsxs)('div', {
-        className: w()(t.messageContainer, A.className),
+        className: w()(r.messageContainer, A.className),
         children: [
             (0, C.jsx)('div', {
-                className: t.avatarContainer,
+                className: r.avatarContainer,
                 children: (0, C.jsx)('img', {
                     src: A.avatar,
                     alt: ''.concat(A.username, ' avatar'),
@@ -29,10 +29,10 @@ function n(A) {
                 })
             }),
             (0, C.jsxs)('div', {
-                className: t.contentContainer,
+                className: r.contentContainer,
                 children: [
                     (0, C.jsxs)('div', {
-                        className: t.usernameContainer,
+                        className: r.usernameContainer,
                         children: [
                             (0, C.jsx)(D.Text, {
                                 'data-text': A.username,
@@ -43,7 +43,7 @@ function n(A) {
                             }),
                             void 0 !== A.decorations &&
                                 (0, C.jsx)('div', {
-                                    className: t.decorationsContainer,
+                                    className: r.decorationsContainer,
                                     children: A.decorations
                                 })
                         ]
@@ -59,27 +59,27 @@ function n(A) {
 }
 let d = function (A) {
     return (0, C.jsxs)('div', {
-        className: t.container,
+        className: r.container,
         children: [
             (0, C.jsx)(n, {
-                className: t.unfocusedMessage,
+                className: r.unfocusedMessage,
                 avatar: f.Z,
                 username: 'Roka',
                 usernameStyle: { color: 'var(--brand-400)' },
-                message: r.intl.string(e.default.bpghV1)
+                message: t.intl.string(e.default.bpghV1)
             }),
             (0, C.jsx)(n, {
-                className: t.unfocusedMessage,
+                className: r.unfocusedMessage,
                 avatar: E.Z,
                 username: 'hongo',
                 usernameStyle: { color: 'var(--green-230)' },
-                message: r.intl.string(e.default['rnpv7+'])
+                message: t.intl.string(e.default['rnpv7+'])
             }),
             (0, C.jsx)(n, {
                 avatar: v.Z,
                 username: 'Lily',
                 usernameStyle: { color: 'var(--orange-300)' },
-                message: r.intl.string(e.default.u7tjsr),
+                message: t.intl.string(e.default.u7tjsr),
                 decorations: (0, C.jsx)(
                     P.S,
                     (function (A) {
@@ -110,18 +110,18 @@ let d = function (A) {
                 )
             }),
             (0, C.jsx)(n, {
-                className: t.unfocusedMessage,
+                className: r.unfocusedMessage,
                 avatar: I.Z,
                 username: 'sharon',
                 usernameStyle: { color: 'var(--brand-400)' },
-                message: r.intl.string(e.default.GlWVJC)
+                message: t.intl.string(e.default.GlWVJC)
             }),
             (0, C.jsx)(n, {
-                className: t.unfocusedMessage,
+                className: r.unfocusedMessage,
                 avatar: v.Z,
                 username: 'Lily',
                 usernameStyle: { color: 'var(--orange-300)' },
-                message: r.intl.string(e.default.AIp9ho)
+                message: t.intl.string(e.default.AIp9ho)
             })
         ]
     });

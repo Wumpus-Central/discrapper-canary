@@ -44,8 +44,8 @@ function i(e, t) {
         e
     );
 }
-let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO_LOGO, r.jE.PDP_BACKGROUND, r.jE.PDP_LOGO, r.jE.COLLECTED_MODAL_BG, r.jE.MOBILE_BANNER, r.jE.MOBILE_BACKGROUND]),
-    o = ['intro', 'idle', 'reduced_motion', 'static', 'thumbnail'],
+let o = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO_LOGO, r.jE.PDP_BACKGROUND, r.jE.PDP_LOGO, r.jE.COLLECTED_MODAL_BG, r.jE.MOBILE_BANNER, r.jE.MOBILE_BACKGROUND]),
+    s = ['intro', 'idle', 'reduced_motion', 'static', 'thumbnail'],
     c = {
         max: 5000000,
         warn: 2000000
@@ -114,11 +114,11 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
             n('Files exceed the recommended size limit - make sure they are optimized!', [''.concat(i, ' (max: ').concat(t, ')')]);
         } else r > e.warn && a("Files are a tad chonky - are you sure they're optimized?", [''.concat(i)]);
     },
-    g = (e, t, n, a) => {
+    j = (e, t, n, a) => {
         let r = h[e];
         if (null != r) for (let e of t) e.name.endsWith('.txt') || v(r, e, n, a);
     },
-    j = (e, t, n) => {
+    g = (e, t, n) => {
         for (let a of e) {
             let e = (0, r.BU)(a),
                 l = null != e ? h[e] : null;
@@ -127,18 +127,18 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
     },
     _ = (e) => {
         let { files: t, addError: n, addWarning: a } = e;
-        j(t.collectionFiles, n, a),
+        g(t.collectionFiles, n, a),
             f({
                 names: t.collectionFiles.map((e) => e.name),
                 addError: n
             });
         let l = new Set(t.collectionFiles.map((e) => e.name)),
-            i = Array.from(s).filter((e) => !l.has(e));
+            i = Array.from(o).filter((e) => !l.has(e));
         i.length > 0 && n('Missing required files', i);
-        let o = Object.values(r.jE)
-            .filter((e) => !s.has(e))
+        let s = Object.values(r.jE)
+            .filter((e) => !o.has(e))
             .filter((e) => !l.has(e));
-        o.length > 0 && a('Missing optional assets', o);
+        s.length > 0 && a('Missing optional assets', s);
     },
     y = (e) => {
         let { files: t, addError: n, addWarning: a } = e;
@@ -156,10 +156,10 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
                     }),
                     addError: n
                 }),
-                    g(r.aB.PROFILE_EFFECT, l, n, a);
-                let s = o.filter((e) => !i.some((t) => t.startsWith(e) && t.endsWith('.png'))).map((e) => ''.concat(t, ' - ').concat(e));
-                s.length > 0 && n('Missing required PFX files with prefix', s), i.some((e) => e.endsWith('.txt')) || n('PFX configs required - please include both exports!', [t]);
-                let c = i.filter((e) => !o.some((t) => e.startsWith(t)) && !e.endsWith('.txt')).map((e) => ''.concat(t, '/').concat(e));
+                    j(r.aB.PROFILE_EFFECT, l, n, a);
+                let o = s.filter((e) => !i.some((t) => t.startsWith(e) && t.endsWith('.png'))).map((e) => ''.concat(t, ' - ').concat(e));
+                o.length > 0 && n('Missing required PFX files with prefix', o), i.some((e) => e.endsWith('.txt')) || n('PFX configs required - please include both exports!', [t]);
+                let c = i.filter((e) => !s.some((t) => e.startsWith(t)) && !e.endsWith('.txt')).map((e) => ''.concat(t, '/').concat(e));
                 c.length > 0 && a('Contains unrecognized files', c);
             });
     },
@@ -169,7 +169,7 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
             names: t.avatarDecorationFiles.map((e) => e.name),
             addError: n
         }),
-            g(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
+            j(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
     },
     O = (e, t, n) => {
         _({
@@ -195,8 +195,8 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
     },
     E = () => {
         let [e, t] = a.useState(!1),
-            [n, s] = a.useState({}),
-            [o, c] = a.useState({}),
+            [n, o] = a.useState({}),
+            [s, c] = a.useState({}),
             d = a.useCallback(function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
                 c((n) => {
@@ -209,7 +209,7 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
             }, []),
             u = a.useCallback(function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-                s((n) => {
+                o((n) => {
                     var a;
                     let r = null != (a = n[e]) ? a : [];
                     return i(l({}, n), {
@@ -218,11 +218,11 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
                 });
             }, []),
             m = a.useCallback(() => {
-                t(!1), c({}), s({});
+                t(!1), c({}), o({});
             }, []);
         return {
             validationComplete: e,
-            errors: o,
+            errors: s,
             warnings: n,
             validateShopAssetPackage: a.useCallback(
                 async (e) => {

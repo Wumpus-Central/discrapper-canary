@@ -1,11 +1,11 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => j });
 var a = n(200651);
 n(192379);
 var r = n(120356),
     l = n.n(r),
     i = n(668757),
-    s = n(481060),
-    o = n(168107),
+    o = n(481060),
+    s = n(168107),
     c = n(480916),
     d = n(963886),
     u = n(110478),
@@ -41,7 +41,7 @@ let v = () => {
             );
         });
 };
-function g() {
+function j() {
     let e = p.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
         n = x.Rt.useSetting();
@@ -53,14 +53,14 @@ function g() {
             }),
             (0, a.jsx)('div', {
                 className: l()(b.buttonsContainer, f.marginBottom20),
-                children: (0, a.jsx)(s.zxk, {
+                children: (0, a.jsx)(o.zxk, {
                     onClick: v,
                     children: 'Launch MFA'
                 })
             }),
             (0, a.jsx)('div', {
                 className: l()(b.buttonsContainer, f.marginBottom20),
-                children: (0, a.jsx)(s.zxk, {
+                children: (0, a.jsx)(o.zxk, {
                     onClick: () => (0, m.Z)(),
                     children: 'Launch Vibing Wumpus'
                 })
@@ -70,35 +70,35 @@ function g() {
                     children: [
                         (0, a.jsx)('div', {
                             className: l()(b.buttonsContainer, f.marginBottom20),
-                            children: (0, a.jsx)(s.zxk, {
+                            children: (0, a.jsx)(o.zxk, {
                                 onClick: () => (0, u.N)(),
                                 children: 'Launch Captcha Test Tool'
                             })
                         }),
                         (0, a.jsx)('div', {
                             className: l()(b.buttonsContainer, f.marginBottom20),
-                            children: (0, a.jsx)(s.zxk, {
+                            children: (0, a.jsx)(o.zxk, {
                                 onClick: () => (0, d.E)(),
                                 children: 'Launch Age Verification Test Tool'
                             })
                         }),
                         (0, a.jsx)('div', {
                             className: l()(b.buttonsContainer, f.marginBottom20),
-                            children: (0, a.jsx)(s.zxk, {
-                                onClick: () => o.Z.showAgeVerificationGetStartedModal(c.cU.DEV_TOOLS_QUICK_ACTIONS),
+                            children: (0, a.jsx)(o.zxk, {
+                                onClick: () => s.Z.showAgeVerificationGetStartedModal(c.cU.DEV_TOOLS_QUICK_ACTIONS),
                                 children: 'Launch Age Verification Modal'
                             })
                         }),
                         (0, a.jsx)('div', {
                             className: l()(b.buttonsContainer, f.marginBottom20),
-                            children: (0, a.jsx)(s.zxk, {
+                            children: (0, a.jsx)(o.zxk, {
                                 onClick: i.$R,
                                 children: 'Force libdiscore Crash'
                             })
                         }),
                         (0, a.jsx)('div', {
                             className: l()(b.buttonsContainer, f.marginBottom20),
-                            children: (0, a.jsx)(s.j7V, {
+                            children: (0, a.jsx)(o.j7V, {
                                 value: n,
                                 onChange: (e) => x.Rt.updateSetting(e),
                                 hideBorder: !0,

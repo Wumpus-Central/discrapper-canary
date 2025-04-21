@@ -1,10 +1,10 @@
-n.d(t, { C: () => s });
+n.d(t, { C: () => o });
 var a = n(200651);
 n(192379);
 var r = n(646466),
     l = n(812381),
     i = n(590824);
-let s = () =>
+let o = () =>
     (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(l.a, {}),

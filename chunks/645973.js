@@ -3,8 +3,8 @@ var a = n(200651),
     r = n(192379),
     l = n(120356),
     i = n.n(l),
-    s = n(481060),
-    o = n(90641),
+    o = n(481060),
+    s = n(90641),
     c = n(355730),
     d = n(616257);
 function u() {
@@ -12,9 +12,9 @@ function u() {
     return (0, a.jsx)('div', {
         ref: e,
         className: i()(d.panel, c.panel),
-        children: (0, a.jsx)(s.zxk, {
-            size: s.zxk.Sizes.SMALL,
-            onClick: o.Z.clearUploadedKeyVersions,
+        children: (0, a.jsx)(o.zxk, {
+            size: o.zxk.Sizes.SMALL,
+            onClick: s.Z.clearUploadedKeyVersions,
             children: 'Reset Uploaded Key Versions Cache'
         })
     });

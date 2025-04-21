@@ -8,8 +8,8 @@ var a = n(200651),
     r = n(192379),
     l = n(120356),
     i = n.n(l),
-    s = n(481060),
-    o = n(572004),
+    o = n(481060),
+    s = n(572004),
     c = n(616257);
 function d(e) {
     let { className: t, children: n } = e;
@@ -39,18 +39,18 @@ let u = (e) => {
                     children: [
                         n,
                         null != l
-                            ? (0, a.jsx)(s.P3F, {
+                            ? (0, a.jsx)(o.P3F, {
                                   tag: 'span',
                                   className: c.copyPropertyButton,
                                   onClick: () => {
-                                      (0, o.JG)(l), d(!0);
+                                      (0, s.JG)(l), d(!0);
                                   },
                                   children: i
-                                      ? (0, a.jsx)(s.kmB, {
+                                      ? (0, a.jsx)(o.kmB, {
                                             color: 'currentColor',
                                             size: 'sm'
                                         })
-                                      : (0, a.jsx)(s.TIy, {
+                                      : (0, a.jsx)(o.TIy, {
                                             color: 'currentColor',
                                             size: 'sm'
                                         })
@@ -64,10 +64,10 @@ let u = (e) => {
 };
 function m(e) {
     let { value: t } = e;
-    return (0, a.jsx)(s.XZJ, {
+    return (0, a.jsx)(o.XZJ, {
         size: 16,
         value: t,
-        shape: s.XZJ.Shapes.SMALL_BOX,
+        shape: o.XZJ.Shapes.SMALL_BOX,
         displayOnly: !0
     });
 }
