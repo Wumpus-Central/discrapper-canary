@@ -47,8 +47,8 @@ var s = n(399606),
     F = n(526761),
     H = n(332325),
     z = n(388032),
-    W = n(344253),
-    Y = n(660372),
+    Y = n(344253),
+    W = n(660372),
     K = n(926433),
     q = n(302036),
     X = n(994554),
@@ -116,10 +116,10 @@ let eT = () => {
                 analyticsLocations: e
             });
         },
-        eW = () => {
+        eY = () => {
             (0, x.uL)(U.Z5c.COLLECTIBLES_SHOP);
         },
-        eY = () => {
+        eW = () => {
             o.Z.open(U.oAB.APPEARANCE, null, { scrollPosition: F.h1.CUSTOM_APP_ICONS });
         },
         eK = {
@@ -290,7 +290,7 @@ let eT = () => {
                       subtitle: z.intl.string(z.t.opgqDQ),
                       description: z.intl.string(z.t['t+QZSU']),
                       descriptionCta: z.intl.string(z.t.dBJVnZ),
-                      onCtaClick: eW,
+                      onCtaClick: eY,
                       perkImage: ea
                   }
                 : eP
@@ -300,7 +300,7 @@ let eT = () => {
                         subtitle: z.intl.string(z.t.opgqDQ),
                         description: z.intl.string(z.t['t+QZSU']),
                         descriptionCta: z.intl.string(z.t.dBJVnZ),
-                        onCtaClick: eW,
+                        onCtaClick: eY,
                         perkImage: eg
                     }
                   : {
@@ -318,7 +318,7 @@ let eT = () => {
                       subtitle: z.intl.string(z.t.opgqDQ),
                       description: z.intl.string(z.t['t+QZSU']),
                       descriptionCta: z.intl.string(z.t.dBJVnZ),
-                      onCtaClick: eW,
+                      onCtaClick: eY,
                       perkImage: ea
                   }
                 : eP
@@ -328,7 +328,7 @@ let eT = () => {
                         subtitle: z.intl.string(z.t.opgqDQ),
                         description: z.intl.string(z.t['t+QZSU']),
                         descriptionCta: z.intl.string(z.t.dBJVnZ),
-                        onCtaClick: eW,
+                        onCtaClick: eY,
                         perkImage: ep
                     }
                   : {
@@ -346,7 +346,7 @@ let eT = () => {
                       subtitle: z.intl.string(z.t.chRZiY),
                       description: z.intl.string(z.t['t+QZSU']),
                       descriptionCta: z.intl.string(z.t.dBJVnZ),
-                      onCtaClick: eW,
+                      onCtaClick: eY,
                       perkImage: ea
                   }
                 : eP
@@ -356,7 +356,7 @@ let eT = () => {
                         subtitle: z.intl.string(z.t.chRZiY),
                         description: z.intl.string(z.t['t+QZSU']),
                         descriptionCta: z.intl.string(z.t.dBJVnZ),
-                        onCtaClick: eW,
+                        onCtaClick: eY,
                         perkImage: eg
                     }
                   : {
@@ -365,7 +365,7 @@ let eT = () => {
                         subtitle: z.intl.string(z.t.chRZiY),
                         description: z.intl.string(z.t['JE/EWV']),
                         descriptionCta: z.intl.string(z.t.dBJVnZ),
-                        onCtaClick: eW,
+                        onCtaClick: eY,
                         perkImage: eg
                     },
             unlimitedSuperReactions: eP
@@ -403,7 +403,7 @@ let eT = () => {
                 name: 'badge',
                 title: z.intl.string(z.t.dcFfSE),
                 subtitle: z.intl.string(z.t['37MFFh']),
-                perkImage: Y,
+                perkImage: W,
                 description: z.intl.string(z.t.T1IS4u)
             },
             greyBadge: {
@@ -421,7 +421,7 @@ let eT = () => {
                 perkImage: et,
                 description: z.intl.string(z.t.e7FKCg),
                 descriptionCta: z.intl.string(z.t.jVcuVV),
-                onCtaClick: eY
+                onCtaClick: eW
             },
             moreEmojiPower: {
                 name: 'moreEmojiPower',
@@ -465,7 +465,7 @@ let eT = () => {
                 description: z.intl.string(z.t.ee7wQ0),
                 descriptionCta: eP || eR ? z.intl.string(z.t.y9TxXV) : z.intl.string(z.t.d8o6lZ),
                 isPremiumGetCta: !(eP || eR),
-                onCtaClick: eP || eR ? eY : void 0,
+                onCtaClick: eP || eR ? eW : void 0,
                 perkImage: eo
             },
             referralProgram: {
@@ -507,7 +507,7 @@ let eT = () => {
                 subtitle: z.intl.string(z.t.t2wcb2),
                 perkImage: ea,
                 descriptionCta: z.intl.string(z.t.jVcuVV),
-                onCtaClick: eW
+                onCtaClick: eY
             }
         };
     if (null != eB) {
@@ -518,7 +518,7 @@ let eT = () => {
             subtitle: n,
             description: i,
             perkComponent: (0, r.jsx)('div', {
-                className: W.cardComponent,
+                className: Y.cardComponent,
                 children: (0, r.jsx)(Z.ZP, {
                     progressCircleVariation: Z.Qo.AVATAR_DECO,
                     avatarDecoAssetId: M.VA,

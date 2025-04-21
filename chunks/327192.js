@@ -146,8 +146,8 @@ function z(e) {
         [N, y] = r.useState(o.showActivity),
         [A, R] = r.useState(null),
         [M, G] = r.useState(null),
-        [z, W] = r.useState(!1),
-        [Y, K] = r.useState([]),
+        [z, Y] = r.useState(!1),
+        [W, K] = r.useState([]),
         q = (0, x.rR)(o.type),
         X = _.Z.get(q);
     r.useEffect(() => {
@@ -346,7 +346,7 @@ function z(e) {
                                 'member-since'
                             )
                         ));
-                let l = Y.includes(e.id),
+                let l = W.includes(e.id),
                     a = U.intl.string(U.t.wzzjk5);
                 if (null == r || 0 === r.length)
                     if (!0 !== _.Z.get(e.type).hasMetadata) return null;
@@ -386,10 +386,10 @@ function z(e) {
                                 onClick: l
                                     ? void 0
                                     : () => {
-                                          W(!0),
+                                          Y(!0),
                                               g.Z.refresh(e.type, e.id).finally(() => {
                                                   setTimeout(() => {
-                                                      Y.push(e.id), K(Y), W(!1);
+                                                      W.push(e.id), K(W), Y(!1);
                                                   }, 2000);
                                               });
                                       },
@@ -523,7 +523,7 @@ function z(e) {
         ]
     });
 }
-function W() {
+function Y() {
     return (
         r.useEffect(
             () => () => {
@@ -550,7 +550,7 @@ function W() {
         })
     );
 }
-function Y(e) {
+function W(e) {
     let t = _.Z.get(e);
     (0, j.Z)({ platformType: t.type }),
         A.default.track(L.rMx.ACCOUNT_LINK_STEP, {
@@ -563,7 +563,7 @@ function K() {
     function e() {
         m.Z.dispatch({
             type: 'CONNECTIONS_GRID_MODAL_SHOW',
-            onComplete: Y
+            onComplete: W
         });
     }
     let t = (0, x.fq)();
@@ -675,7 +675,7 @@ let X = () => {
               tag: u.RB0.H1,
               title: U.intl.string(U.t['3fe7U1']),
               children: [
-                  (0, i.jsx)(W, {}),
+                  (0, i.jsx)(Y, {}),
                   (0, i.jsx)(q, {
                       fetching: t,
                       accounts: n,

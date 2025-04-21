@@ -48,8 +48,8 @@ var i = n(200651),
     F = n(158776),
     H = n(306680),
     z = n(699516),
-    W = n(111583),
-    Y = n(9156),
+    Y = n(111583),
+    W = n(9156),
     K = n(594174),
     q = n(709054),
     X = n(998502),
@@ -228,7 +228,7 @@ let ei = X.ZP.getEnableHardwareAcceleration() ? g.Xo$ : g.qEK,
         });
     };
 function ed(e) {
-    let { channel: t, isGDMFacepileEnabled: s, selected: a = !1, user: u, activities: b, applicationStream: x, voiceChannel: A, isTyping: R, status: w, isMobile: k, nameplate: G, 'aria-posinset': F, 'aria-setsize': W } = e,
+    let { channel: t, isGDMFacepileEnabled: s, selected: a = !1, user: u, activities: b, applicationStream: x, voiceChannel: A, isTyping: R, status: w, isMobile: k, nameplate: G, 'aria-posinset': F, 'aria-setsize': Y } = e,
         [K, q] = r.useState(!1),
         X = r.useRef(null),
         ec = r.useRef(null),
@@ -246,7 +246,7 @@ function ed(e) {
         eh = (0, U.Q)(),
         ef = !eg && !ep && t.type === Q.d4z.DM,
         eb = ef && (null == u ? void 0 : u.primaryGuild) != null,
-        e_ = (0, m.e7)([Y.ZP], () => Y.ZP.isChannelMuted(t.getGuildId(), t.id)),
+        e_ = (0, m.e7)([W.ZP], () => W.ZP.isChannelMuted(t.getGuildId(), t.id)),
         { ignored: ex, blocked: eE } = (0, m.cj)([z.Z], () => ({
             ignored: z.Z.isIgnored(t.getRecipientId()),
             blocked: z.Z.isBlocked(t.getRecipientId())
@@ -432,7 +432,7 @@ function ed(e) {
                 onMouseLeave: eA,
                 onMouseDown: eR,
                 onContextMenu: ew,
-                'aria-setsize': W,
+                'aria-setsize': Y,
                 'aria-posinset': F,
                 children: [
                     eI && eS ? (0, i.jsx)('div', { className: l()($.unreadPill, { [$.muted]: eO }) }) : null,
@@ -541,16 +541,16 @@ let eu =
                       privateChannel: t
                   }),
                   h = (0, m.e7)(
-                      [K.default, W.Z],
+                      [K.default, Y.Z],
                       () => {
                           if (t.isMultiUserDM())
                               if (a)
-                                  return q.default.keys(W.Z.getTypingUsers(t.id)).some((e) => {
+                                  return q.default.keys(Y.Z.getTypingUsers(t.id)).some((e) => {
                                       var t;
                                       return e !== (null == (t = K.default.getCurrentUser()) ? void 0 : t.id);
                                   });
                               else return !1;
-                          return null != s && W.Z.isTyping(t.id, t.getRecipientId());
+                          return null != s && Y.Z.isTyping(t.id, t.getRecipientId());
                       },
                       [t, s, a]
                   );

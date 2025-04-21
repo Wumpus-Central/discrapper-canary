@@ -152,12 +152,12 @@ let C = {
                 effect: t,
                 upsertConfig: s
             },
-            W = r.useRef(z);
+            Y = r.useRef(z);
         return (r.useEffect(() => {
-            W.current = z;
+            Y.current = z;
         }),
         r.useEffect(() => {
-            let { effect: e, upsertConfig: t } = W.current;
+            let { effect: e, upsertConfig: t } = Y.current;
             t({
                 id: e.id,
                 name: L,

@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => z,
-    Z: () => W
+    Z: () => Y
 }),
     n(415506);
 var i = n(200651);
@@ -200,15 +200,15 @@ function z() {
         statusClasses: { [k.tier1]: !0 }
     });
 }
-let W = function (e) {
+let Y = function (e) {
     var t;
     let { subscription: r, renewalInvoicePreview: l, paymentSource: p, busy: R, analyticsLocation: z } = e,
-        W = 'subscription_header',
-        { analyticsLocations: Y } = (0, m.ZP)(u.Z.SUBSCRIPTION_HEADER),
+        Y = 'subscription_header',
+        { analyticsLocations: W } = (0, m.ZP)(u.Z.SUBSCRIPTION_HEADER),
         K = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
         { fractionalState: q } = (0, g.Z)({ forceFetch: !1 }),
         X = q === D.a$.FP_SUB_PAUSED,
-        { enabled: Q } = (0, N.ZP)({ location: W });
+        { enabled: Q } = (0, N.ZP)({ location: Y });
     (D.pj.has(r.planId) && Z.JwP.ALL_PAUSEABLE.has(r.status) && !X) || (Q = !1);
     let J = (0, y.Ng)(),
         $ = null == J || null == (t = J.discount) ? void 0 : t.amount,
@@ -233,7 +233,7 @@ let W = function (e) {
                         B(L({}, n), {
                             premiumSubscription: r,
                             analyticsLocation: z,
-                            analyticsLocations: Y,
+                            analyticsLocations: W,
                             initialStep: e
                         })
                     );
@@ -248,10 +248,10 @@ let W = function (e) {
                     i = !1;
                 1 === t.length && (null == p ? void 0 : p.id) === r.paymentSourceId && (0, O.tD)(e.id, n, null == p ? void 0 : p.id) && (i = !0),
                     i
-                        ? d.O5(r, Y)
+                        ? d.O5(r, W)
                         : (0, h.Z)({
                               initialPlanId: r.premiumPlanIdFromItems,
-                              analyticsLocations: Y,
+                              analyticsLocations: W,
                               analyticsLocation: z,
                               analyticsObject: U,
                               subscription: r
@@ -270,13 +270,13 @@ let W = function (e) {
             r.status === Z.O0b.PAUSED
                 ? (0, h.Z)({
                       initialPlanId: r.premiumPlanIdFromItems,
-                      analyticsLocations: Y,
+                      analyticsLocations: W,
                       analyticsLocation: z,
                       analyticsObject: U,
                       subscription: r,
                       skipConfirm: !0
                   })
-                : d.v4(r, Y);
+                : d.v4(r, W);
         },
         ec = () => {
             r.status === Z.O0b.PAUSED && el(P.R.PAUSE_SELECT);
@@ -356,7 +356,7 @@ let W = function (e) {
                 });
             }
             function t() {
-                let e = C.ZP.isSwitchingPlansDisabled(r) || (0, I.o)(W, K, q),
+                let e = C.ZP.isSwitchingPlansDisabled(r) || (0, I.o)(Y, K, q),
                     t = C.ZP.getSwitchingPlansDisabledMessage(r);
                 return (0, i.jsxs)('div', {
                     className: k.toolsButtons,
@@ -390,7 +390,7 @@ let W = function (e) {
                                         className: k.toolsButton,
                                         onClick: () => {
                                             (0, h.Z)({
-                                                analyticsLocations: Y,
+                                                analyticsLocations: W,
                                                 analyticsLocation: z,
                                                 analyticsObject: U,
                                                 subscription: r
