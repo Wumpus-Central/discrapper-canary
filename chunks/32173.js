@@ -1,14 +1,14 @@
 n.d(t, {
-    Z: () => eO,
-    u: () => eC
+    Z: () => eT,
+    u: () => ev
 }),
     n(953529);
-var r,
-    i = n(200651);
+var i,
+    r = n(200651);
 n(192379);
 var s = n(399606),
-    a = n(704215),
-    l = n(481060),
+    l = n(704215),
+    a = n(481060),
     o = n(230711),
     c = n(410030),
     d = n(607070),
@@ -18,543 +18,584 @@ var s = n(399606),
     p = n(779618),
     h = n(832149),
     f = n(605236),
-    b = n(300284),
-    _ = n(703656),
-    N = n(547972),
-    x = n(131951),
-    E = n(594174),
-    j = n(78839),
-    C = n(424218),
-    O = n(63063),
-    S = n(74538),
-    v = n(715037),
-    T = n(780525),
-    I = n(314684),
-    y = n(687362),
-    A = n(943180),
-    P = n(229555),
-    R = n(768865),
-    D = n(119269),
-    Z = n(740479),
-    w = n(391110),
-    k = n(75077),
-    W = n(474936),
-    L = n(735825),
-    B = n(981631),
-    M = n(215023),
-    U = n(921944),
-    V = n(526761),
-    G = n(332325),
-    F = n(388032),
-    H = n(344253),
-    z = n(660372),
-    Y = n(926433),
-    K = n(302036),
-    q = n(994554),
-    X = n(704565),
-    Q = n(393305),
-    J = n(338879),
-    $ = n(766491),
-    ee = n(193943),
-    et = n(707046),
-    en = n(488459),
+    b = n(442933),
+    _ = n(300284),
+    x = n(703656),
+    E = n(547972),
+    j = n(131951),
+    C = n(594174),
+    O = n(78839),
+    S = n(424218),
+    v = n(63063),
+    T = n(74538),
+    I = n(715037),
+    N = n(780525),
+    y = n(314684),
+    A = n(687362),
+    P = n(943180),
+    R = n(229555),
+    D = n(768865),
+    Z = n(119269),
+    w = n(740479),
+    k = n(391110),
+    L = n(75077),
+    B = n(474936),
+    M = n(735825),
+    U = n(981631),
+    V = n(215023),
+    G = n(921944),
+    F = n(526761),
+    H = n(332325),
+    z = n(388032),
+    Y = n(344253),
+    W = n(660372),
+    K = n(926433),
+    q = n(302036),
+    X = n(994554),
+    Q = n(704565),
+    J = n(393305),
+    $ = n(338879),
+    ee = n(766491),
+    et = n(193943),
+    en = n(707046),
+    ei = n(488459),
     er = n(334347),
-    ei = n(132015),
-    es = n(142416),
-    ea = n(607762),
-    el = n(474106),
-    eo = n(572501),
-    ec = n(755590),
-    ed = n(909910),
-    eu = n(637810),
-    em = n(570423),
-    eg = n(912429),
-    ep = n(91394),
-    eh = n(209672),
-    ef = n(698173),
-    eb = n(926262),
-    e_ = n(482668),
-    eN = n(21504),
-    ex = n(371435),
-    eE = n(83663),
-    ej = n(317194),
-    eC = (((r = {}).CLIENT_THEMES = 'clientThemes'), (r.CLIPS = 'clips'), (r.COLLECTIBLE_DECO = 'collectibleDeco'), (r.EARLY_ACCESS = 'earlyAccess'), (r.ENTRANCE_SOUNDS = 'entranceSounds'), (r.PROFILES = 'profiles'), (r.REMIXING = 'remixing'), (r.SERVER_BOOSTS = 'serverBoosts'), (r.GREY_SERVER_BOOSTS = 'greyServerBoosts'), (r.SPECIAL_MEMBER_PRICING = 'specialMemberPricing'), (r.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant'), (r.SPECIAL_SHOP_PERKS = 'specialShopPerks'), (r.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions'), (r.SUPER_REACTIONS = 'superReactions'), (r.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed'), (r.CUSTOM_APP_ICONS = 'customAppIcons'), (r.MORE_EMOJI_POWER = 'moreEmojiPower'), (r.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere'), (r.SPECIAL_STICKER_ACCESS = 'specialStickerAccess'), (r.LARGE_UPLOADS = 'largeUploads'), (r.HD_VIDEO = 'hdVideo'), (r.BADGE = 'badge'), (r.GREY_BADGE = 'greyBadge'), (r.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation'), (r.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant'), (r.TENURE_REWARD_COLLECTIBLE = 'tenureRewardCollectible'), (r.REFERRAL_PROGRAM = 'referralProgram'), (r.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024'), (r.SERVER_PROFILES = 'serverProfiles'), (r.TENURE_BADGE = 'tenureBadge'), (r.PERMADECOS = 'permadecos'), r);
-let eO = () => {
+    es = n(132015),
+    el = n(142416),
+    ea = n(498730),
+    eo = n(607762),
+    ec = n(474106),
+    ed = n(572501),
+    eu = n(755590),
+    em = n(909910),
+    eg = n(637810),
+    ep = n(570423),
+    eh = n(912429),
+    ef = n(91394),
+    eb = n(209672),
+    e_ = n(698173),
+    ex = n(926262),
+    eE = n(482668),
+    ej = n(21504),
+    eC = n(371435),
+    eO = n(83663),
+    eS = n(317194),
+    ev = (((i = {}).CLIENT_THEMES = 'clientThemes'), (i.CLIPS = 'clips'), (i.COLLECTIBLE_DECO = 'collectibleDeco'), (i.EARLY_ACCESS = 'earlyAccess'), (i.ENTRANCE_SOUNDS = 'entranceSounds'), (i.PROFILES = 'profiles'), (i.REMIXING = 'remixing'), (i.SERVER_BOOSTS = 'serverBoosts'), (i.GREY_SERVER_BOOSTS = 'greyServerBoosts'), (i.SPECIAL_MEMBER_PRICING = 'specialMemberPricing'), (i.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant'), (i.SPECIAL_SHOP_PERKS = 'specialShopPerks'), (i.NAMEPLATES = 'nameplates'), (i.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions'), (i.SUPER_REACTIONS = 'superReactions'), (i.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed'), (i.CUSTOM_APP_ICONS = 'customAppIcons'), (i.MORE_EMOJI_POWER = 'moreEmojiPower'), (i.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere'), (i.SPECIAL_STICKER_ACCESS = 'specialStickerAccess'), (i.LARGE_UPLOADS = 'largeUploads'), (i.HD_VIDEO = 'hdVideo'), (i.BADGE = 'badge'), (i.GREY_BADGE = 'greyBadge'), (i.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation'), (i.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant'), (i.TENURE_REWARD_COLLECTIBLE = 'tenureRewardCollectible'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024'), (i.SERVER_PROFILES = 'serverProfiles'), (i.TENURE_BADGE = 'tenureBadge'), (i.PERMADECOS = 'permadecos'), i);
+let eT = () => {
     let { analyticsLocations: e } = (0, m.ZP)(u.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, c.ZP)(),
-        r = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-        eC = (0, C.BU)(W.Uq / 1024, { useKibibytes: !0 }),
-        { premiumSubscription: eO, isEligibleForReward: eS } = (0, s.cj)([j.ZP], () => ({
-            premiumSubscription: j.ZP.getPremiumTypeSubscription(),
-            isEligibleForReward: j.ZP.getIsSubscriptionEligibleForReward()
+        i = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
+        ev = (0, S.BU)(B.Uq / 1024, { useKibibytes: !0 }),
+        { premiumSubscription: eT, isEligibleForReward: eI } = (0, s.cj)([O.ZP], () => ({
+            premiumSubscription: O.ZP.getPremiumTypeSubscription(),
+            isEligibleForReward: O.ZP.getIsSubscriptionEligibleForReward()
         })),
-        ev = null != eO ? S.ZP.getPremiumPlanItem(eO) : null,
-        eT = (null != ev ? S.ZP.getSkuIdForPlan(ev.planId) : null) === W.Si.TIER_2,
-        eI = E.default.getCurrentUser(),
-        ey = (0, S.I5)(eI, W.p9.TIER_2),
-        eA = (0, S.I5)(eI, W.p9.TIER_0),
-        eP = (0, I.bq)({ showAnimations: !0 }),
-        eR = null != eP ? eP.initialPercentage : void 0,
-        eD = null != eP ? eP.percentage : void 0,
-        eZ = (0, p.Z)(x.Z),
-        ew = (0, y.a)(),
-        ek = (0, I.Kb)(L.qY),
-        { isFractionalPremiumActive: eW } = (0, g.Z)(),
-        eL = null != eO && eO.hasPremiumAtLeast(W.p9.TIER_2),
-        eB = (0, f.wE)(a.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE),
-        { enabled: eM } = v.Z.useExperiment({ location: 'usePerksDiscoverabilityCards' }),
-        eU = (0, b.Z)({
-            scrollPosition: V.Y_.TRY_IT_OUT,
+        eN = null != eT ? T.ZP.getPremiumPlanItem(eT) : null,
+        ey = (null != eN ? T.ZP.getSkuIdForPlan(eN.planId) : null) === B.Si.TIER_2,
+        eA = C.default.getCurrentUser(),
+        eP = (0, T.I5)(eA, B.p9.TIER_2),
+        eR = (0, T.I5)(eA, B.p9.TIER_0),
+        eD = (0, y.bq)({ showAnimations: !0 }),
+        eZ = null != eD ? eD.initialPercentage : void 0,
+        ew = null != eD ? eD.percentage : void 0,
+        ek = (0, p.Z)(j.Z),
+        eL = (0, b.H)('usePerksDiscoverabilityCards'),
+        eB = (0, A.a)(),
+        eM = (0, y.Kb)(M.qY),
+        { isFractionalPremiumActive: eU } = (0, g.Z)(),
+        eV = null != eT && eT.hasPremiumAtLeast(B.p9.TIER_2),
+        eG = (0, f.wE)(l.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE),
+        { enabled: eF } = I.Z.useExperiment({ location: 'usePerksDiscoverabilityCards' }),
+        eH = (0, _.Z)({
+            scrollPosition: F.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
-        eV = () => {
-            o.Z.open(B.oAB.VOICE, V.GA, {
+        ez = () => {
+            o.Z.open(U.oAB.VOICE, F.GA, {
                 openWithoutBackstack: !0,
                 analyticsLocations: e
             });
         },
-        eG = () => {
-            (0, _.uL)(B.Z5c.COLLECTIBLES_SHOP);
+        eY = () => {
+            (0, x.uL)(U.Z5c.COLLECTIBLES_SHOP);
         },
-        eF = () => {
-            o.Z.open(B.oAB.APPEARANCE, null, { scrollPosition: V.h1.CUSTOM_APP_ICONS });
+        eW = () => {
+            o.Z.open(U.oAB.APPEARANCE, null, { scrollPosition: F.h1.CUSTOM_APP_ICONS });
         },
-        eH = {
+        eK = {
             clientThemes: {
                 name: 'clientThemes',
-                title: F.NW.string(F.t.kWM48P),
-                subtitle: F.NW.string(F.t.CjRASE),
-                description: F.NW.string(F.t.jBTTws),
-                descriptionCta: F.NW.string(F.t.jVcuVV),
+                title: z.intl.string(z.t.kWM48P),
+                subtitle: z.intl.string(z.t.CjRASE),
+                description: z.intl.string(z.t.jBTTws),
+                descriptionCta: z.intl.string(z.t.jVcuVV),
                 onCtaClick: () => {
-                    o.Z.open(B.oAB.APPEARANCE, null, {
+                    o.Z.open(U.oAB.APPEARANCE, null, {
                         openWithoutBackstack: !0,
                         analyticsLocations: e
                     });
                 },
-                perkImage: X
+                perkImage: Q
             },
-            clips: ey
+            clips: eP
                 ? {
                       name: 'clips',
-                      title: F.NW.string(F.t.z2jK6e),
-                      subtitle: F.NW.string(F.t['hxy0/f']),
-                      description: F.NW.string(F.t.Z6v86e),
-                      descriptionCta: eZ ? F.NW.string(F.t.jVcuVV) : F.NW.string(F.t.hvVgAQ),
-                      pillText: F.NW.string(F.t.EYxi0t),
-                      onCtaClick: eZ
+                      title: z.intl.string(z.t.z2jK6e),
+                      subtitle: z.intl.string(z.t['hxy0/f']),
+                      description: z.intl.string(z.t.Z6v86e),
+                      descriptionCta: ek ? z.intl.string(z.t.jVcuVV) : z.intl.string(z.t.hvVgAQ),
+                      pillText: z.intl.string(z.t.EYxi0t),
+                      onCtaClick: ek
                           ? () => {
-                                (0, N.Z)(G.Z.CLIPS, {
+                                (0, E.Z)(H.Z.CLIPS, {
                                     openWithoutBackstack: !0,
                                     analyticsLocations: e
                                 });
                             }
                           : () => {
-                                window.open(O.Z.getArticleURL(B.BhN.CLIPS), '_blank');
+                                window.open(v.Z.getArticleURL(U.BhN.CLIPS), '_blank');
                             },
-                      perkImage: $
+                      perkImage: ee
                   }
                 : {
                       name: 'clips',
-                      title: F.NW.string(F.t.z2jK6e),
-                      subtitle: F.NW.string(F.t['hxy0/f']),
-                      description: F.NW.string(F.t.X9IeNz),
-                      pillText: F.NW.string(F.t.EYxi0t),
-                      perkImage: $
+                      title: z.intl.string(z.t.z2jK6e),
+                      subtitle: z.intl.string(z.t['hxy0/f']),
+                      description: z.intl.string(z.t.X9IeNz),
+                      pillText: z.intl.string(z.t.EYxi0t),
+                      perkImage: ee
                   },
-            earlyAccess: ey
+            earlyAccess: eP
                 ? {
                       name: 'earlyAccess',
-                      title: F.NW.string(F.t.UkLVeH),
-                      subtitle: F.NW.string(F.t.xf9ePj),
-                      description: F.NW.string(F.t['+r4vdn']),
-                      perkImage: et
+                      title: z.intl.string(z.t.UkLVeH),
+                      subtitle: z.intl.string(z.t.xf9ePj),
+                      description: z.intl.string(z.t['+r4vdn']),
+                      perkImage: en
                   }
                 : {
                       name: 'earlyAccess',
-                      title: F.NW.string(F.t.UkLVeH),
-                      subtitle: F.NW.string(F.t.xf9ePj),
-                      description: F.NW.string(F.t['6+xTcn']),
+                      title: z.intl.string(z.t.UkLVeH),
+                      subtitle: z.intl.string(z.t.xf9ePj),
+                      description: z.intl.string(z.t['6+xTcn']),
                       isPremiumGetCta: !0,
-                      perkImage: et
+                      perkImage: en
                   },
-            earlyAccessSeeAllVariant: ey
+            earlyAccessSeeAllVariant: eP
                 ? {
                       name: 'earlyAccessSeeAllVariant',
-                      title: F.NW.string(F.t.UkLVeH),
-                      subtitle: F.NW.string(F.t.xf9ePj),
-                      description: F.NW.string(F.t['+r4vdn']),
-                      perkImage: en
+                      title: z.intl.string(z.t.UkLVeH),
+                      subtitle: z.intl.string(z.t.xf9ePj),
+                      description: z.intl.string(z.t['+r4vdn']),
+                      perkImage: ei
                   }
                 : {
                       name: 'earlyAccess',
-                      title: F.NW.string(F.t.UkLVeH),
-                      subtitle: F.NW.string(F.t.xf9ePj),
-                      description: F.NW.string(F.t['6+xTcn']),
+                      title: z.intl.string(z.t.UkLVeH),
+                      subtitle: z.intl.string(z.t.xf9ePj),
+                      description: z.intl.string(z.t['6+xTcn']),
                       isPremiumGetCta: !0,
-                      perkImage: en
-                  },
-            entranceSounds: ey
-                ? {
-                      name: 'entranceSounds',
-                      title: F.NW.string(F.t['f4M+Hx']),
-                      subtitle: F.NW.string(F.t['7ZCYvL']),
-                      description: F.NW.string(F.t.mUT8bG),
-                      descriptionCta: F.NW.string(F.t.jVcuVV),
-                      onCtaClick: eV,
-                      perkImage: ei
-                  }
-                : {
-                      name: 'entranceSounds',
-                      title: F.NW.string(F.t['f4M+Hx']),
-                      subtitle: F.NW.string(F.t['7ZCYvL']),
-                      description: F.NW.string(F.t['3smf/f']),
                       perkImage: ei
                   },
-            entranceSoundsSeeAllVariation: ey
+            entranceSounds: eP
                 ? {
-                      name: 'entranceSoundsSeeAllVariation',
-                      title: F.NW.string(F.t['f4M+Hx']),
-                      subtitle: F.NW.string(F.t['7ZCYvL']),
-                      description: F.NW.string(F.t.mUT8bG),
-                      descriptionCta: F.NW.string(F.t.jVcuVV),
-                      onCtaClick: eV,
+                      name: 'entranceSounds',
+                      title: z.intl.string(z.t['f4M+Hx']),
+                      subtitle: z.intl.string(z.t['7ZCYvL']),
+                      description: z.intl.string(z.t.mUT8bG),
+                      descriptionCta: z.intl.string(z.t.jVcuVV),
+                      onCtaClick: ez,
                       perkImage: es
                   }
                 : {
-                      name: 'entranceSoundsSeeAllVariation',
-                      title: F.NW.string(F.t['f4M+Hx']),
-                      subtitle: F.NW.string(F.t['7ZCYvL']),
-                      description: F.NW.string(F.t['3smf/f']),
+                      name: 'entranceSounds',
+                      title: z.intl.string(z.t['f4M+Hx']),
+                      subtitle: z.intl.string(z.t['7ZCYvL']),
+                      description: z.intl.string(z.t['3smf/f']),
                       perkImage: es
+                  },
+            entranceSoundsSeeAllVariation: eP
+                ? {
+                      name: 'entranceSoundsSeeAllVariation',
+                      title: z.intl.string(z.t['f4M+Hx']),
+                      subtitle: z.intl.string(z.t['7ZCYvL']),
+                      description: z.intl.string(z.t.mUT8bG),
+                      descriptionCta: z.intl.string(z.t.jVcuVV),
+                      onCtaClick: ez,
+                      perkImage: el
+                  }
+                : {
+                      name: 'entranceSoundsSeeAllVariation',
+                      title: z.intl.string(z.t['f4M+Hx']),
+                      subtitle: z.intl.string(z.t['7ZCYvL']),
+                      description: z.intl.string(z.t['3smf/f']),
+                      perkImage: el
                   },
             profiles: {
                 name: 'profiles',
-                title: F.NW.string(F.t.KcyDwM),
-                subtitle: F.NW.string(F.t.Mt3U1d),
-                description: F.NW.string(F.t.kWcDKy),
-                descriptionCta: F.NW.string(F.t.jVcuVV),
-                onCtaClick: eU,
-                perkImage: Q
+                title: z.intl.string(z.t.KcyDwM),
+                subtitle: z.intl.string(z.t.Mt3U1d),
+                description: z.intl.string(z.t.kWcDKy),
+                descriptionCta: z.intl.string(z.t.jVcuVV),
+                onCtaClick: eH,
+                perkImage: J
             },
-            remixing: ey
+            remixing: eP
                 ? {
                       name: 'remixing',
-                      title: F.NW.string(F.t['H+v6eX']),
-                      subtitle: F.NW.string(F.t.wmbOAg),
-                      description: F.NW.string(F.t.gdA9FB),
-                      perkImage: ec,
-                      pillText: F.NW.string(F.t.EYxi0t)
+                      title: z.intl.string(z.t['H+v6eX']),
+                      subtitle: z.intl.string(z.t.wmbOAg),
+                      description: z.intl.string(z.t.gdA9FB),
+                      perkImage: eu,
+                      pillText: z.intl.string(z.t.EYxi0t)
                   }
                 : {
                       name: 'remixing',
-                      title: F.NW.string(F.t['H+v6eX']),
-                      subtitle: F.NW.string(F.t.wmbOAg),
-                      description: F.NW.string(F.t.fiLtJi),
-                      perkImage: ec,
-                      pillText: F.NW.string(F.t.EYxi0t)
+                      title: z.intl.string(z.t['H+v6eX']),
+                      subtitle: z.intl.string(z.t.wmbOAg),
+                      description: z.intl.string(z.t.fiLtJi),
+                      perkImage: eu,
+                      pillText: z.intl.string(z.t.EYxi0t)
                   },
             serverBoosts: {
                 name: 'serverBoosts',
-                title: F.NW.string(F.t['NyDu//']),
-                subtitle: F.NW.string(F.t['4pEwXF']),
-                description: eW ? F.NW.format(F.t.uPiIBQ, { link: 'https://discord.com' }) : F.NW.string(F.t.jsyNHh),
-                descriptionCta: F.NW.string(F.t.jVcuVV),
-                onCtaClick: eW
+                title: z.intl.string(z.t['NyDu//']),
+                subtitle: z.intl.string(z.t['4pEwXF']),
+                description: eU ? z.intl.format(z.t.uPiIBQ, { link: 'https://discord.com' }) : z.intl.string(z.t.jsyNHh),
+                descriptionCta: z.intl.string(z.t.jVcuVV),
+                onCtaClick: eU
                     ? void 0
                     : () => {
-                          o.Z.open(B.oAB.GUILD_BOOSTING, null, {
+                          o.Z.open(U.oAB.GUILD_BOOSTING, null, {
                               openWithoutBackstack: !0,
                               analyticsLocations: e
                           });
                       },
-                perkImage: J,
-                hideOnNarrowScreen: !eW,
-                imageOverlayText: eW ? F.NW.string(F.t.lcYttb) : void 0
+                perkImage: $,
+                hideOnNarrowScreen: !eU,
+                imageOverlayText: eU ? z.intl.string(z.t.lcYttb) : void 0
             },
             greyServerBoosts: {
                 name: 'greyServerBoosts',
-                title: F.NW.string(F.t['NyDu//']),
-                subtitle: F.NW.string(F.t['4pEwXF']),
-                descriptionCta: F.NW.string(F.t.jVcuVV),
-                perkImage: ex.Z,
-                imageOverlayText: F.NW.string(F.t.lcYttb)
+                title: z.intl.string(z.t['NyDu//']),
+                subtitle: z.intl.string(z.t['4pEwXF']),
+                descriptionCta: z.intl.string(z.t.jVcuVV),
+                perkImage: eC.Z,
+                imageOverlayText: z.intl.string(z.t.lcYttb)
             },
-            specialMemberPricing: ey
+            specialMemberPricing: eL
                 ? {
                       name: 'specialMemberPricing',
-                      title: F.NW.string(F.t['0Mykgo']),
-                      subtitle: F.NW.string(F.t.opgqDQ),
-                      description: F.NW.string(F.t['t+QZSU']),
-                      descriptionCta: F.NW.string(F.t.dBJVnZ),
-                      onCtaClick: eG,
-                      perkImage: eu
+                      title: z.intl.string(z.t['0Mykgo']),
+                      subtitle: z.intl.string(z.t.opgqDQ),
+                      description: z.intl.string(z.t['t+QZSU']),
+                      descriptionCta: z.intl.string(z.t.dBJVnZ),
+                      onCtaClick: eY,
+                      perkImage: ea
                   }
-                : {
-                      name: 'specialMemberPricing',
-                      title: F.NW.string(F.t['0Mykgo']),
-                      subtitle: F.NW.string(F.t.opgqDQ),
-                      description: F.NW.string(F.t['JE/EWV']),
-                      isPremiumGetCta: !0,
-                      perkImage: eu
-                  },
-            specialMemberPricingSeeAllVariant: ey
+                : eP
+                  ? {
+                        name: 'specialMemberPricing',
+                        title: z.intl.string(z.t['0Mykgo']),
+                        subtitle: z.intl.string(z.t.opgqDQ),
+                        description: z.intl.string(z.t['t+QZSU']),
+                        descriptionCta: z.intl.string(z.t.dBJVnZ),
+                        onCtaClick: eY,
+                        perkImage: eg
+                    }
+                  : {
+                        name: 'specialMemberPricing',
+                        title: z.intl.string(z.t['0Mykgo']),
+                        subtitle: z.intl.string(z.t.opgqDQ),
+                        description: z.intl.string(z.t['JE/EWV']),
+                        isPremiumGetCta: !0,
+                        perkImage: eg
+                    },
+            specialMemberPricingSeeAllVariant: eL
                 ? {
                       name: 'specialMemberPricingSeeAllVariant',
-                      title: F.NW.string(F.t['0Mykgo']),
-                      subtitle: F.NW.string(F.t.opgqDQ),
-                      description: F.NW.string(F.t['t+QZSU']),
-                      descriptionCta: F.NW.string(F.t.dBJVnZ),
-                      onCtaClick: eG,
-                      perkImage: em
+                      title: z.intl.string(z.t['0Mykgo']),
+                      subtitle: z.intl.string(z.t.opgqDQ),
+                      description: z.intl.string(z.t['t+QZSU']),
+                      descriptionCta: z.intl.string(z.t.dBJVnZ),
+                      onCtaClick: eY,
+                      perkImage: ea
                   }
-                : {
-                      name: 'specialMemberPricingSeeAllVariant',
-                      title: F.NW.string(F.t['0Mykgo']),
-                      subtitle: F.NW.string(F.t.opgqDQ),
-                      description: F.NW.string(F.t['JE/EWV']),
-                      isPremiumGetCta: !0,
-                      perkImage: em
-                  },
-            specialShopPerks: ey
+                : eP
+                  ? {
+                        name: 'specialMemberPricingSeeAllVariant',
+                        title: z.intl.string(z.t['0Mykgo']),
+                        subtitle: z.intl.string(z.t.opgqDQ),
+                        description: z.intl.string(z.t['t+QZSU']),
+                        descriptionCta: z.intl.string(z.t.dBJVnZ),
+                        onCtaClick: eY,
+                        perkImage: ep
+                    }
+                  : {
+                        name: 'specialMemberPricingSeeAllVariant',
+                        title: z.intl.string(z.t['0Mykgo']),
+                        subtitle: z.intl.string(z.t.opgqDQ),
+                        description: z.intl.string(z.t['JE/EWV']),
+                        isPremiumGetCta: !0,
+                        perkImage: ep
+                    },
+            specialShopPerks: eL
                 ? {
                       name: 'specialShopPerks',
-                      title: F.NW.string(F.t.U68LpK),
-                      subtitle: F.NW.string(F.t.chRZiY),
-                      description: F.NW.string(F.t['t+QZSU']),
-                      descriptionCta: F.NW.string(F.t.dBJVnZ),
-                      onCtaClick: eG,
-                      perkImage: eu
+                      title: z.intl.string(z.t.U68LpK),
+                      subtitle: z.intl.string(z.t.chRZiY),
+                      description: z.intl.string(z.t['t+QZSU']),
+                      descriptionCta: z.intl.string(z.t.dBJVnZ),
+                      onCtaClick: eY,
+                      perkImage: ea
                   }
-                : {
-                      name: 'specialShopPerks',
-                      title: F.NW.string(F.t.U68LpK),
-                      subtitle: F.NW.string(F.t.chRZiY),
-                      description: F.NW.string(F.t['JE/EWV']),
-                      descriptionCta: F.NW.string(F.t.dBJVnZ),
-                      onCtaClick: eG,
-                      perkImage: eu
-                  },
-            unlimitedSuperReactions: ey
+                : eP
+                  ? {
+                        name: 'specialShopPerks',
+                        title: z.intl.string(z.t.U68LpK),
+                        subtitle: z.intl.string(z.t.chRZiY),
+                        description: z.intl.string(z.t['t+QZSU']),
+                        descriptionCta: z.intl.string(z.t.dBJVnZ),
+                        onCtaClick: eY,
+                        perkImage: eg
+                    }
+                  : {
+                        name: 'specialShopPerks',
+                        title: z.intl.string(z.t.U68LpK),
+                        subtitle: z.intl.string(z.t.chRZiY),
+                        description: z.intl.string(z.t['JE/EWV']),
+                        descriptionCta: z.intl.string(z.t.dBJVnZ),
+                        onCtaClick: eY,
+                        perkImage: eg
+                    },
+            unlimitedSuperReactions: eP
                 ? {
                       name: 'unlimitedSuperReactions',
-                      title: F.NW.string(F.t.hpgmOz),
-                      subtitle: F.NW.string(F.t.Hxujsr),
-                      description: F.NW.string(F.t['Cn/z6+']),
-                      perkImage: ef,
+                      title: z.intl.string(z.t.hpgmOz),
+                      subtitle: z.intl.string(z.t.Hxujsr),
+                      description: z.intl.string(z.t['Cn/z6+']),
+                      perkImage: e_,
                       hideOnNarrowScreen: !0
                   }
                 : {
                       name: 'unlimitedSuperReactions',
-                      title: F.NW.string(F.t.hpgmOz),
-                      subtitle: F.NW.string(F.t.Hxujsr),
-                      description: F.NW.string(F.t.TF7cPT),
+                      title: z.intl.string(z.t.hpgmOz),
+                      subtitle: z.intl.string(z.t.Hxujsr),
+                      description: z.intl.string(z.t.TF7cPT),
                       isPremiumGetCta: !0,
-                      perkImage: ef,
+                      perkImage: e_,
                       hideOnNarrowScreen: !0
                   },
             superReactions: {
                 name: 'superReactions',
-                title: F.NW.string(F.t['6S7kOz']),
-                subtitle: F.NW.string(F.t.kN1JRE),
-                description: F.NW.string(F.t.e7FKCg),
-                perkImage: eh
+                title: z.intl.string(z.t['6S7kOz']),
+                subtitle: z.intl.string(z.t.kN1JRE),
+                description: z.intl.string(z.t.e7FKCg),
+                perkImage: eb
             },
             upcomingDropUntimed: {
                 name: 'upcomingDropUntimed',
-                title: F.NW.string(F.t.O5R3ho),
-                pillText: F.NW.string(F.t.yhEY5O),
-                backgroundImage: el
+                title: z.intl.string(z.t.O5R3ho),
+                pillText: z.intl.string(z.t.yhEY5O),
+                backgroundImage: ec
             },
             badge: {
                 name: 'badge',
-                title: F.NW.string(F.t.dcFfSE),
-                subtitle: F.NW.string(F.t['37MFFh']),
-                perkImage: z,
-                description: F.NW.string(F.t.T1IS4u)
+                title: z.intl.string(z.t.dcFfSE),
+                subtitle: z.intl.string(z.t['37MFFh']),
+                perkImage: W,
+                description: z.intl.string(z.t.T1IS4u)
             },
             greyBadge: {
                 name: 'greyBadge',
-                title: F.NW.string(F.t.dcFfSE),
-                subtitle: F.NW.string(F.t['37MFFh']),
-                perkImage: eE.Z,
-                description: F.NW.string(F.t.T1IS4u),
-                imageOverlayText: F.NW.string(F.t.lcYttb)
+                title: z.intl.string(z.t.dcFfSE),
+                subtitle: z.intl.string(z.t['37MFFh']),
+                perkImage: eO.Z,
+                description: z.intl.string(z.t.T1IS4u),
+                imageOverlayText: z.intl.string(z.t.lcYttb)
             },
             customAppIcons: {
                 name: 'customAppIcons',
-                title: F.NW.string(F.t.OuItFh),
-                subtitle: F.NW.string(F.t.mPyrEx),
-                perkImage: ee,
-                description: F.NW.string(F.t.e7FKCg),
-                descriptionCta: F.NW.string(F.t.jVcuVV),
-                onCtaClick: eF
+                title: z.intl.string(z.t.OuItFh),
+                subtitle: z.intl.string(z.t.mPyrEx),
+                perkImage: et,
+                description: z.intl.string(z.t.e7FKCg),
+                descriptionCta: z.intl.string(z.t.jVcuVV),
+                onCtaClick: eW
             },
             moreEmojiPower: {
                 name: 'moreEmojiPower',
-                title: F.NW.string(F.t['R2IV/f']),
-                subtitle: F.NW.string(F.t.R5Xag4),
+                title: z.intl.string(z.t['R2IV/f']),
+                subtitle: z.intl.string(z.t.R5Xag4),
                 perkImage: er,
-                description: F.NW.string(F.t['8lsjS0'])
+                description: z.intl.string(z.t['8lsjS0'])
             },
             customSoundsEverywhere: {
                 name: 'customSoundsEverywhere',
-                title: F.NW.string(F.t.LWsAra),
-                subtitle: F.NW.string(F.t.bTzbVl),
-                perkImage: (0, k.gx)(t, Y, K),
-                description: F.NW.string(F.t.JLnOMz)
+                title: z.intl.string(z.t.LWsAra),
+                subtitle: z.intl.string(z.t.bTzbVl),
+                perkImage: (0, L.gx)(t, K, q),
+                description: z.intl.string(z.t.JLnOMz)
             },
             specialStickerAccess: {
                 name: 'specialStickerAccess',
-                title: F.NW.string(F.t.tzdIwM),
-                subtitle: F.NW.string(F.t.FXlU29),
-                perkImage: (0, k.gx)(t, q, eg),
-                description: F.NW.string(F.t.e7FKCg)
+                title: z.intl.string(z.t.tzdIwM),
+                subtitle: z.intl.string(z.t.FXlU29),
+                perkImage: (0, L.gx)(t, X, eh),
+                description: z.intl.string(z.t.e7FKCg)
             },
             largeUploads: {
                 name: 'largeUploads',
-                title: F.NW.formatToPlainString(F.t.jqhAdH, { premiumMaxSize: eC }),
-                subtitle: F.NW.formatToPlainString(F.t['HI+cfn'], { premiumMaxSize: eC }),
-                perkImage: eb,
-                description: F.NW.string(F.t['R0gx+/'])
+                title: z.intl.formatToPlainString(z.t.jqhAdH, { premiumMaxSize: ev }),
+                subtitle: z.intl.formatToPlainString(z.t['HI+cfn'], { premiumMaxSize: ev }),
+                perkImage: ex,
+                description: z.intl.string(z.t['R0gx+/'])
             },
             hdVideo: {
                 name: 'hdVideo',
-                title: F.NW.string(F.t.RSXQYG),
-                subtitle: F.NW.string(F.t.ymCPxs),
-                perkImage: ep,
-                description: F.NW.string(F.t['4WgB//'])
+                title: z.intl.string(z.t.RSXQYG),
+                subtitle: z.intl.string(z.t.ymCPxs),
+                perkImage: ef,
+                description: z.intl.string(z.t['4WgB//'])
             },
             newAppStylesUpdateJune2024: {
                 name: 'newAppStylesUpdateJune2024',
-                title: F.NW.string(F.t.XQCSrq),
-                subtitle: F.NW.string(F.t.HC5wVV),
-                description: F.NW.string(F.t.ee7wQ0),
-                descriptionCta: ey || eA ? F.NW.string(F.t.y9TxXV) : F.NW.string(F.t.d8o6lZ),
-                isPremiumGetCta: !(ey || eA),
-                onCtaClick: ey || eA ? eF : void 0,
-                perkImage: ea
+                title: z.intl.string(z.t.XQCSrq),
+                subtitle: z.intl.string(z.t.HC5wVV),
+                description: z.intl.string(z.t.ee7wQ0),
+                descriptionCta: eP || eR ? z.intl.string(z.t.y9TxXV) : z.intl.string(z.t.d8o6lZ),
+                isPremiumGetCta: !(eP || eR),
+                onCtaClick: eP || eR ? eW : void 0,
+                perkImage: eo
             },
             referralProgram: {
                 name: 'referralProgram',
-                title: F.NW.string(F.t.tPY4o6),
-                subtitle: F.NW.string(F.t.JY0grK),
-                description: F.NW.format(F.t['2JqTFx'], { helpdeskArticle: O.Z.getArticleURL(B.BhN.REFERRAL_PROGRAM) }),
-                descriptionCta: F.NW.string(F.t.JST6jo),
-                isPremiumGetCta: !eT || void 0,
-                perkImage: eo
+                title: z.intl.string(z.t.tPY4o6),
+                subtitle: z.intl.string(z.t.JY0grK),
+                description: z.intl.format(z.t['2JqTFx'], { helpdeskArticle: v.Z.getArticleURL(U.BhN.REFERRAL_PROGRAM) }),
+                descriptionCta: z.intl.string(z.t.JST6jo),
+                isPremiumGetCta: !ey || void 0,
+                perkImage: ed
             },
             serverProfiles: {
                 name: 'serverProfiles',
-                title: F.NW.string(F.t.I9TYMj),
-                subtitle: F.NW.string(F.t.HMSHeH),
-                descriptionCta: ey ? F.NW.string(F.t.jVcuVV) : F.NW.string(F.t.JST6jo),
-                isPremiumGetCta: !ey,
-                onCtaClick: ey ? eU : void 0,
-                perkImage: ed
+                title: z.intl.string(z.t.I9TYMj),
+                subtitle: z.intl.string(z.t.HMSHeH),
+                descriptionCta: eP ? z.intl.string(z.t.jVcuVV) : z.intl.string(z.t.JST6jo),
+                isPremiumGetCta: !eP,
+                onCtaClick: eP ? eH : void 0,
+                perkImage: em
             },
             permadecos: {
                 name: 'permadecos',
-                title: F.NW.string(F.t['57ngoq']),
-                subtitle: F.NW.string(F.t.piFFjY),
-                description: F.NW.format(F.t.Pd7olp, { learnMoreLink: O.Z.getArticleURL(B.BhN.PERMADECOS) }),
-                descriptionCta: ey ? F.NW.string(F.t.jVcuVV) : F.NW.string(F.t.JST6jo),
-                isPremiumGetCta: !ey,
-                onCtaClick: ey
+                title: z.intl.string(z.t['57ngoq']),
+                subtitle: z.intl.string(z.t.piFFjY),
+                description: z.intl.format(z.t.Pd7olp, { learnMoreLink: v.Z.getArticleURL(U.BhN.PERMADECOS) }),
+                descriptionCta: eP ? z.intl.string(z.t.jVcuVV) : z.intl.string(z.t.JST6jo),
+                isPremiumGetCta: !eP,
+                onCtaClick: eP
                     ? () => {
-                          eB || (0, f.EW)(a.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: U.L.TAKE_ACTION }), eU();
+                          eG || (0, f.EW)(l.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: G.L.TAKE_ACTION }), eH();
                       }
                     : void 0,
-                pillText: eB || !ey ? void 0 : F.NW.string(F.t.y2b7CA).toLocaleUpperCase(),
-                perkImage: ej.Z
+                pillText: eG || !eP ? void 0 : z.intl.string(z.t.y2b7CA).toLocaleUpperCase(),
+                perkImage: eS.Z
+            },
+            nameplates: {
+                name: 'nameplates',
+                title: z.intl.string(z.t.rJbHFx),
+                subtitle: z.intl.string(z.t.t2wcb2),
+                perkImage: ea,
+                descriptionCta: z.intl.string(z.t.jVcuVV),
+                onCtaClick: eY
             }
         };
-    if (null != ew) {
-        let { title: t, subtitle: n, description: r, pillText: s, ctaDescription: a, dismissibleContentType: l } = ew;
-        eH.tenureRewardCollectible = {
+    if (null != eB) {
+        let { title: t, subtitle: n, description: i, pillText: s, ctaDescription: l, dismissibleContentType: a } = eB;
+        eK.tenureRewardCollectible = {
             name: 'tenureRewardCollectible',
             title: t,
             subtitle: n,
-            description: r,
-            perkComponent: (0, i.jsx)('div', {
-                className: H.cardComponent,
-                children: (0, i.jsx)(D.ZP, {
-                    progressCircleVariation: D.Qo.AVATAR_DECO,
-                    avatarDecoAssetId: L.VA,
-                    avatarDecoAssetDescription: F.NW.string(F.t['9o4F4+']),
+            description: i,
+            perkComponent: (0, r.jsx)('div', {
+                className: Y.cardComponent,
+                children: (0, r.jsx)(Z.ZP, {
+                    progressCircleVariation: Z.Qo.AVATAR_DECO,
+                    avatarDecoAssetId: M.VA,
+                    avatarDecoAssetDescription: z.intl.string(z.t['9o4F4+']),
                     showAnimations: !0,
-                    percentage: eD,
-                    initialPercentage: eR
+                    percentage: ew,
+                    initialPercentage: eZ
                 })
             }),
-            descriptionCta: a,
+            descriptionCta: l,
             onCtaClick: () => {
-                null != ek &&
+                null != eM &&
                     (0, h.Z)({
-                        product: ek,
-                        overrideTitle: F.NW.string(F.t.wRAXra),
-                        overrideDescription: F.NW.string(F.t.sQX6HR),
+                        product: eM,
+                        overrideTitle: z.intl.string(z.t.wRAXra),
+                        overrideDescription: z.intl.string(z.t.sQX6HR),
                         analyticsLocations: e,
-                        purchaseType: M.o8.TENURE_REWARD
+                        purchaseType: V.o8.TENURE_REWARD
                     });
             },
-            cardVariant: w.zW.REWARD,
+            cardVariant: k.zW.REWARD,
             pillText: s,
-            dismissibleContentType: l
+            dismissibleContentType: a
         };
     }
-    let { enabled: ez } = (0, A.D)();
+    let { enabled: eq } = (0, P.D)();
     return (
-        ez &&
-            ey &&
-            eL &&
-            (eH.tenureBadge = {
+        eq &&
+            eP &&
+            eV &&
+            (eK.tenureBadge = {
                 name: 'tenureBadge',
-                title: F.NW.string(F.t.rnsqpa),
-                pillText: F.NW.string(F.t.jyYgZ2).toLocaleUpperCase(),
-                perkComponent: (0, i.jsx)(P.Z, {}),
-                cardVariant: w.zW.NITRO_GRADIENT_HOVER_BORDER,
-                onClick: () => (0, R.k)({ analyticsLocations: e })
+                title: z.intl.string(z.t.rnsqpa),
+                pillText: z.intl.string(z.t.jyYgZ2).toLocaleUpperCase(),
+                perkComponent: (0, r.jsx)(R.Z, {}),
+                cardVariant: k.zW.NITRO_GRADIENT_HOVER_BORDER,
+                onClick: () => (0, D.k)({ analyticsLocations: e })
             }),
-        eS &&
-            eM &&
-            (eH.collectibleDeco = {
+        eI &&
+            eF &&
+            (eK.collectibleDeco = {
                 name: 'collectibleDeco',
-                title: F.NW.string(F.t.fzn5eH),
-                subtitle: F.NW.format(F.t['8Ud+Qk'], {
-                    date: new Date(T._H),
-                    termsLink: T.Ps
+                title: z.intl.string(z.t.fzn5eH),
+                subtitle: z.intl.format(z.t['8Ud+Qk'], {
+                    date: new Date(N._H),
+                    termsLink: N.Ps
                 }),
-                perkComponent: (0, i.jsx)(Z.Z, {
-                    image: r ? eN.Z : e_.Z,
-                    cta: F.NW.string(F.t.s0w7a2),
+                perkComponent: (0, r.jsx)(w.Z, {
+                    image: i ? ej.Z : eE.Z,
+                    cta: z.intl.string(z.t.s0w7a2),
                     onClick: () => {
-                        (0, l.ZDy)(async () => {
+                        (0, a.ZDy)(async () => {
                             let { default: e } = await n.e('74824').then(n.bind(n, 817357));
                             return (t) =>
-                                (0, i.jsx)(
+                                (0, r.jsx)(
                                     e,
                                     (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
-                                                r = Object.keys(n);
+                                                i = Object.keys(n);
                                             'function' == typeof Object.getOwnPropertySymbols &&
-                                                (r = r.concat(
+                                                (i = i.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                     })
                                                 )),
-                                                r.forEach(function (t) {
-                                                    var r;
-                                                    (r = n[t]),
+                                                i.forEach(function (t) {
+                                                    var i;
+                                                    (i = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
-                                                                  value: r,
+                                                                  value: i,
                                                                   enumerable: !0,
                                                                   configurable: !0,
                                                                   writable: !0
                                                               })
-                                                            : (e[t] = r);
+                                                            : (e[t] = i);
                                                 });
                                         }
                                         return e;
@@ -563,8 +604,8 @@ let eO = () => {
                         });
                     }
                 }),
-                pillText: F.NW.string(F.t.OS9KPj).toLocaleUpperCase()
+                pillText: z.intl.string(z.t.OS9KPj).toLocaleUpperCase()
             }),
-        eH
+        eK
     );
 };
