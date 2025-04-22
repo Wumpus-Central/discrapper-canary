@@ -51,11 +51,11 @@ class _ {
     loadingDone(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = this.search(e);
-        (l(n, f).isLoading = !1), t ? ((l(n, f).fetchFailCounter = 0), (l(n, f).isStale = !1)) : (l(n, f).fetchFailCounter += 1);
+        t ? ((l(n, f).fetchFailCounter = 0), (l(n, f).isStale = !1), (l(n, f).fetchState = 3)) : ((l(n, f).fetchFailCounter += 1), (l(n, f).fetchState = 2));
     }
     loadingStart(e, t) {
         let n = this.search(e);
-        (l(n, f).isLoading = !0), null != t && (l(n, f).controller = t), (l(n, f).error = void 0);
+        (l(n, f).fetchState = 1), null != t && (l(n, f).controller = t), (l(n, f).error = void 0);
     }
     search(e) {
         if (null == e) return new _();
@@ -82,7 +82,7 @@ class _ {
         (l(t, f).isStale = !0), _.resetErrorState(t), n.forEach((e) => e());
     }
     static resetErrorState(e) {
-        (l(e, f).error = void 0), (l(e, f).fetchFailCounter = 0);
+        (l(e, f).error = void 0), (l(e, f).fetchFailCounter = 0), (l(e, f).fetchState = 0);
     }
     constructor() {
         c(this, d, {
@@ -91,7 +91,10 @@ class _ {
         }),
             c(this, f, {
                 writable: !0,
-                value: { fetchFailCounter: 0 }
+                value: {
+                    fetchFailCounter: 0,
+                    fetchState: 0
+                }
             });
     }
 }
@@ -129,46 +132,45 @@ function E(e, t) {
             _ = c(Array.isArray(e) ? e : [e], () => a(...u), u),
             h = p.getState(f),
             E = h.error,
-            b = !0 === h.isLoading,
-            y = (0, r.useRef)(u);
+            b = (0, r.useRef)(u);
         (0, r.useEffect)(() => {
-            y.current = u;
+            b.current = u;
         }, [u]);
-        let v = (0, r.useCallback)(() => {
-                if (null == f || b) return !1;
+        let y = (0, r.useCallback)(() => {
+                if (null == f || 1 === h.fetchState) return !1;
                 let e = !1;
                 c === i.Wu ? _.length > 0 && (e = !0) : null != _ && (e = !0);
                 let t = p.doesDataNeedValidation(f),
                     n = null != E;
                 return t || (!e && !n);
-            }, [_, E, f, b]),
-            O = (0, r.useCallback)(() => {
-                if (null == f || !v()) return;
+            }, [_, h.fetchState, E, f]),
+            v = (0, r.useCallback)(() => {
+                if (null == f || !y()) return;
                 let e = new AbortController();
                 p.loadingStart(f, n ? e : void 0),
-                    o(e.signal, ...y.current)
+                    o(e.signal, ...b.current)
                         .then((e) => (p.loadingDone(f, !0), e))
                         .catch((t) => {
                             if ((p.loadingDone(f), e.signal.aborted)) return;
                             let n = g(t);
                             (!(h.fetchFailCounter >= s) && n instanceof m && (n.status >= 500 || 429 === n.status)) || p.setError(f, n);
                         });
-            }, [h.fetchFailCounter, f, v]);
+            }, [h.fetchFailCounter, f, y]);
         return (
             (0, r.useEffect)(
                 () => (
-                    O(),
-                    p.subscribe(f, O),
+                    v(),
+                    p.subscribe(f, v),
                     () => {
                         p.abort(f), p.subscribe(f, void 0);
                     }
                 ),
-                [f, O]
+                [f, v]
             ),
             {
                 data: _,
                 error: E,
-                isLoading: b || v()
+                isLoading: 0 === h.fetchState ? y() : 1 === h.fetchState
             }
         );
     };
