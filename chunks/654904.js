@@ -48,39 +48,41 @@ function p(e) {
     }
     return e;
 }
-function h(e, t, i, s) {
+function h(e) {
+    let { uploadType: t, guildId: i, analyticsSource: s, filters: l, isTryItOutFlow: _ = !1 } = e;
     (0, a.ZDy)(async () => {
-        let { default: a } = await Promise.all([n.e('91689'), n.e('89289'), n.e('78701')]).then(n.bind(n, 28130));
+        let { default: e } = await Promise.all([n.e('91689'), n.e('89289'), n.e('78701')]).then(n.bind(n, 28130));
         return (n) =>
             (0, r.jsx)(
-                a,
+                e,
                 p(
                     {
-                        filters: s,
+                        filters: l,
                         maxFileSizeBytes: u.B,
-                        imageSpecifications: e === d.pC.BANNER ? f.intl.string(f.t.IhzZlp) : void 0,
-                        onComplete: (n) => {
-                            let { assetOrigin: r, imageUri: a, file: s, originalAsset: l } = n,
-                                u = s.name.replace(/\.[^/.]+$/, ''),
+                        imageSpecifications: t === d.pC.BANNER ? f.intl.string(f.t.IhzZlp) : void 0,
+                        onComplete: (e) => {
+                            let { assetOrigin: n, imageUri: r, file: a, originalAsset: l } = e,
+                                u = a.name.replace(/\.[^/.]+$/, ''),
                                 d = (0, o.Z1)({
                                     filename: u,
-                                    assetOrigin: r
+                                    assetOrigin: n
                                 }),
                                 f = (0, o.cN)({
-                                    assetOrigin: r,
-                                    imageUri: a,
+                                    assetOrigin: n,
+                                    imageUri: r,
                                     description: d,
                                     originalAsset: l
                                 });
                             (0, c.j)({
                                 image: f,
-                                file: s,
-                                uploadType: e,
-                                guildId: t,
-                                isTryItOutFlow: i
+                                file: a,
+                                uploadType: t,
+                                guildId: i,
+                                analyticsSource: s,
+                                isTryItOutFlow: _
                             });
                         },
-                        uploadType: e,
+                        uploadType: t,
                         showUpsellHeader: !0
                     },
                     n

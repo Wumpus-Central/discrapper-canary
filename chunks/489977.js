@@ -10,27 +10,40 @@ var r = n(570140),
     d = n(74538),
     p = n(486324);
 let h = (e) => {
-        let { image: t, file: n, guildId: r, isTryItOutFlow: l } = e;
-        if (l) return void (0, c.c_)(t);
-        let h = u.default.getCurrentUser(),
-            f = null != r ? a.I5 : i.I5,
-            g = d.ZP.canUseAnimatedAvatar(h);
-        if (g || 'image/gif' !== n.type) return void f(t);
-        if (null == h) return;
-        let m = (0, s.SD)({
-            userId: h.id,
+        let { image: t, file: n, guildId: r, analyticsSource: l, isTryItOutFlow: h } = e;
+        if (h) return void (0, c.c_)(t);
+        let f = u.default.getCurrentUser(),
+            g = null != r ? a.I5 : i.I5,
+            m = d.ZP.canUseAnimatedAvatar(f);
+        if (m || 'image/gif' !== n.type) return void g(t);
+        if (null == f) return;
+        let b = (0, s.SD)({
+            userId: f.id,
             image: t
         });
-        if (!g) return void (0, o.s)(p.pC.AVATAR, m);
+        if (!m)
+            return void (0, o.s)({
+                uploadType: p.pC.AVATAR,
+                imageSrc: b,
+                analyticsSource: l
+            });
     },
     f = (e) => {
-        let { image: t, guildId: n, isTryItOutFlow: r } = e,
-            i = t.imageUri;
-        if (r) return void (0, c.f4)(i);
-        let l = u.default.getCurrentUser(),
-            s = null != n ? a.g_ : c.g_,
-            h = d.ZP.canUsePremiumProfileCustomization(l);
-        return d.ZP.canUsePremiumProfileCustomization(l) ? void s(i) : null == l || h ? void 0 : void (0, o.s)(p.pC.BANNER, i);
+        let { image: t, guildId: n, analyticsSource: r, isTryItOutFlow: i } = e,
+            l = t.imageUri;
+        if (i) return void (0, c.f4)(l);
+        let s = u.default.getCurrentUser(),
+            h = null != n ? a.g_ : c.g_,
+            f = d.ZP.canUsePremiumProfileCustomization(s);
+        return d.ZP.canUsePremiumProfileCustomization(s)
+            ? void h(l)
+            : null == s || f
+              ? void 0
+              : void (0, o.s)({
+                    uploadType: p.pC.BANNER,
+                    imageSrc: l,
+                    analyticsSource: r
+                });
     };
 class g extends l.Z {
     _initialize() {

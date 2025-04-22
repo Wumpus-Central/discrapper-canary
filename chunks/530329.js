@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(388032),
     f = n(826756);
 function p(e) {
-    var { uploadType: t, className: n } = e,
-        a = (function (e, t) {
+    var { uploadType: t, analyticsSource: n, className: a } = e,
+        p = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -29,20 +29,23 @@ function p(e) {
                 for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ['uploadType', 'className']);
-    let p = l.useCallback(() => {
-            (0, o.s)(t, void 0);
-        }, [t]),
-        g = l.useMemo(() => {
+        })(e, ['uploadType', 'analyticsSource', 'className']);
+    let g = l.useCallback(() => {
+            (0, o.s)({
+                uploadType: t,
+                analyticsSource: n
+            });
+        }, [t, n]),
+        m = l.useMemo(() => {
             switch (t) {
                 case u.pC.AVATAR:
-                    return d.intl.format(d.t['pvw/HB'], { onClick: p });
+                    return d.intl.format(d.t['pvw/HB'], { onClick: g });
                 case u.pC.BANNER:
-                    return d.intl.format(d.t.aCrz1d, { onClick: p });
+                    return d.intl.format(d.t.aCrz1d, { onClick: g });
                 default:
                     return '';
             }
-        }, [t, p]);
+        }, [t, g]);
     return t !== u.pC.AVATAR && t !== u.pC.BANNER
         ? null
         : (0, r.jsx)(
@@ -73,12 +76,12 @@ function p(e) {
                   return e;
               })(
                   {
-                      text: g,
+                      text: m,
                       button: d.intl.string(d.t.BmJkbW),
                       buttonAnalyticsObject: { section: c.jXE.USER_PROFILE },
-                      className: i()(f.container, n)
+                      className: i()(f.container, a)
                   },
-                  a
+                  p
               )
           );
 }

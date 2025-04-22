@@ -1,4 +1,4 @@
-n.d(e, { default: () => y });
+n.d(e, { default: () => d });
 var r = n(200651);
 n(192379);
 var o = n(442837),
@@ -11,10 +11,10 @@ var o = n(442837),
     f = n(981631),
     p = n(486324),
     b = n(388032),
-    d = n(89671);
-function y(t) {
+    y = n(89671);
+function d(t) {
     var { onClose: e, source: n } = t,
-        y = (function (t, e) {
+        d = (function (t, e) {
             if (null == t) return {};
             var n,
                 r,
@@ -68,13 +68,17 @@ function y(t) {
             return t;
         })(
             {
-                artURL: d.Z,
+                artURL: y.Z,
                 type: s.cd.CUSTOM_PROFILE_UPSELL,
                 title: b.intl.string(b.t.BbsMm5),
                 body: j,
                 glowUp: j,
                 onSecondaryClick: () => {
-                    e(), (0, c.$r)(p.pC.BANNER);
+                    e(),
+                        (0, c.$r)({
+                            uploadType: p.pC.BANNER,
+                            analyticsSource: n
+                        });
                 },
                 secondaryCTA: b.intl.string(b.t.SpAQiY),
                 analyticsSource: n,
@@ -84,7 +88,7 @@ function y(t) {
                 },
                 onClose: e
             },
-            y
+            d
         )
     );
 }

@@ -68,32 +68,38 @@ function b(e, t) {
 let y = d.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK;
 function v(e) {
     let { user: t, guild: n, displayProfile: i, canUsePremiumCustomization: d, previewAvatar: m, previewAvatarDecoration: E, previewTheme: v, previewPrimaryColor: O, className: I, disabledInputs: S, isTryItOutFlow: T, onUpsellClick: A } = e,
-        { analyticsLocations: N } = (0, l.ZP)(),
-        C = (0, o.e7)([u.Z], () => u.Z.getStatus(t.id)),
-        R = null == n || (null == i ? void 0 : i.canUsePremiumProfileCustomization) || d,
-        P = (0, r.jsx)(y, {
+        { analyticsLocations: N, newestAnalyticsLocation: C } = (0, l.ZP)(),
+        R = (0, o.e7)([u.Z], () => u.Z.getStatus(t.id)),
+        P = null == n || (null == i ? void 0 : i.canUsePremiumProfileCustomization) || d,
+        w = (0, r.jsx)(y, {
             src: m,
             avatarDecoration: E,
             imageClassName: a()(I, { [h.overlay]: !S }),
             size: s.EFr.SIZE_80,
             'aria-label': t.username,
-            status: C,
+            status: R,
             statusTooltip: !1,
             statusBackdropColor: null != O ? (0, s.QFD)(v) : void 0
         });
     return S
         ? (0, r.jsx)('div', {
               className: h.avatar,
-              children: P
+              children: w
           })
-        : R
+        : P
           ? (0, r.jsx)(s.yRy, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, r.jsx)(f.Z, {
                         className: h.menu,
                         onClose: t,
-                        onChangeAvatar: () => (0, _.$r)(p.pC.AVATAR, null == n ? void 0 : n.id, T),
+                        onChangeAvatar: () =>
+                            (0, _.$r)({
+                                uploadType: p.pC.AVATAR,
+                                guildId: null == n ? void 0 : n.id,
+                                analyticsSource: C,
+                                isTryItOutFlow: T
+                            }),
                         onChangeAvatarDecoration: () => {
                             (0, c.ps)({
                                 guild: null == n ? void 0 : n,
@@ -109,7 +115,7 @@ function v(e) {
                         b(g({}, e), {
                             className: a()(h.avatar, h.clickable),
                             children: [
-                                P,
+                                w,
                                 (0, r.jsx)(s.vdY, {
                                     size: 'custom',
                                     className: h.overlayIcon,
@@ -125,7 +131,7 @@ function v(e) {
                 onClick: A,
                 className: a()(h.avatar, h.clickable),
                 children: [
-                    P,
+                    w,
                     (0, r.jsx)(s.SrA, {
                         size: 'custom',
                         className: h.overlayIcon,

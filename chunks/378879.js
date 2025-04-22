@@ -1,6 +1,6 @@
 n.d(t, {
-    default: () => Z,
-    s: () => E
+    default: () => g,
+    s: () => Z
 });
 var c = n(200651);
 n(192379);
@@ -42,21 +42,22 @@ function L(e) {
     }
     return e;
 }
-function E(e, t) {
-    let d = r.default.getCurrentUser();
+function Z(e) {
+    let { uploadType: t, imageSrc: d, analyticsSource: o } = e,
+        s = r.default.getCurrentUser();
     return (
-        null != d &&
+        null != s &&
         ((0, a.ZDy)(async () => {
-            let { default: o } = await Promise.resolve().then(n.bind(n, 378879));
+            let { default: e } = await Promise.resolve().then(n.bind(n, 378879));
             return (n) =>
                 (0, c.jsx)(
-                    o,
+                    e,
                     L(
                         {
-                            user: d,
-                            imageSrc: t,
-                            uploadType: e,
-                            analyticsSource: b.Sbl.PROFILE_PANEL,
+                            user: s,
+                            imageSrc: d,
+                            uploadType: t,
+                            analyticsSource: o,
                             analyticsLocation: {
                                 section: b.jXE.USER_PROFILE,
                                 object: b.qAy.BUTTON_CTA
@@ -70,9 +71,9 @@ function E(e, t) {
         !0)
     );
 }
-function Z(e) {
-    var { user: t, uploadType: n, imageSrc: a, onClose: r, analyticsSource: b, analyticsLocation: E, onSecondaryClick: Z } = e,
-        g = (function (e, t) {
+function g(e) {
+    var { user: t, uploadType: n, imageSrc: a, onClose: r, analyticsSource: b, analyticsLocation: Z, onSecondaryClick: g } = e,
+        E = (function (e, t) {
             if (null == e) return {};
             var n,
                 c,
@@ -91,17 +92,17 @@ function Z(e) {
             }
             return a;
         })(e, ['user', 'uploadType', 'imageSrc', 'onClose', 'analyticsSource', 'analyticsLocation', 'onSecondaryClick']);
-    let _ = (0, o.ZP)(t.id),
-        { primaryColor: m, secondaryColor: O } = (0, s.Z)({
+    let m = (0, o.ZP)(t.id),
+        { primaryColor: _, secondaryColor: C } = (0, s.Z)({
             user: t,
-            displayProfile: _,
+            displayProfile: m,
             pendingAvatarSrc: n === l.pC.AVATAR ? a : void 0,
             isPreview: !0
         }),
-        C = n === l.pC.AVATAR || n === l.pC.BANNER,
+        O = n === l.pC.AVATAR || n === l.pC.BANNER,
         h = null != a,
         T = (0, f.Z)(n === l.pC.AVATAR ? A.cd.ANIMATED_AVATAR_MODAL_UPSELL : A.cd.ANIMATED_BANNER_MODAL_UPSELL);
-    return C
+    return O
         ? (0, c.jsx)(
               p.Z,
               L(
@@ -114,13 +115,13 @@ function Z(e) {
                       body: n === l.pC.AVATAR ? u.intl.string(u.t.ifCRdH) : u.intl.string(u.t.yQAnf3),
                       glowUp: n === l.pC.AVATAR ? u.intl.string(u.t.ifCRdH) : u.intl.string(u.t.yQAnf3),
                       onSecondaryClick: () => {
-                          null == Z || Z(), (0, i.$)(r);
+                          null == g || g(), (0, i.$)(r);
                       },
                       secondaryCTA: u.intl.string(u.t.PcTCBw),
                       onClose: r,
                       enableArtBoxShadow: !1,
                       analyticsSource: b,
-                      analyticsLocation: E,
+                      analyticsLocation: Z,
                       hideBackButton: !0,
                       showEnhancedUpsell: !0,
                       LeadingComponent: h
@@ -133,13 +134,13 @@ function Z(e) {
                                     disabledInputs: !0,
                                     pendingAvatar: n === l.pC.AVATAR ? a : void 0,
                                     pendingBanner: n === l.pC.BANNER ? a : void 0,
-                                    pendingThemeColors: [m, O],
+                                    pendingThemeColors: [_, C],
                                     hideExampleButton: !0
                                 })
                             })
                           : void 0
                   },
-                  g
+                  E
               )
           )
         : null;

@@ -1,13 +1,14 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(200651),
     i = n(192379),
     a = n(979554),
     o = n(481060),
-    s = n(436774),
-    l = n(981631),
-    c = n(388032),
-    u = n(717906);
-function d(e, t, n) {
+    s = n(906732),
+    l = n(436774),
+    c = n(981631),
+    u = n(388032),
+    d = n(717906);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,55 +32,56 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e) {
-    let { product: t, onSecondaryClick: d } = e,
-        _ = i.useCallback(() => {
+function p(e) {
+    let { product: t, onSecondaryClick: f } = e,
+        { newestAnalyticsLocation: p } = (0, s.ZP)(),
+        h = i.useCallback(() => {
             null != t &&
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('43360').then(n.bind(n, 73415));
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            f(
+                            _(
                                 {
                                     collectableType: null == t ? void 0 : t.type,
-                                    analyticsSource: l.Sbl.PROFILE_PANEL,
+                                    analyticsSource: p,
                                     analyticsLocation: {
-                                        section: l.jXE.USER_PROFILE,
-                                        object: l.qAy.BUTTON_CTA
+                                        section: c.jXE.USER_PROFILE,
+                                        object: c.qAy.BUTTON_CTA
                                     },
-                                    onSecondaryClick: d
+                                    onSecondaryClick: f
                                 },
                                 n
                             )
                         );
                 });
-        }, [t, d]),
-        p = i.useMemo(() => {
+        }, [t, p, f]),
+        m = i.useMemo(() => {
             switch (null == t ? void 0 : t.type) {
                 case a.Z.AVATAR_DECORATION:
-                    return c.intl.format(c.t['aFR/EB'], { onClick: _ });
+                    return u.intl.format(u.t['aFR/EB'], { onClick: h });
                 case a.Z.PROFILE_EFFECT:
-                    return c.intl.format(c.t.eWNOND, { onClick: _ });
+                    return u.intl.format(u.t.eWNOND, { onClick: h });
             }
-        }, [null == t ? void 0 : t.type, _]);
+        }, [null == t ? void 0 : t.type, h]);
     return (0, r.jsxs)('div', {
-        className: u.nitroUpsellContainer,
+        className: d.nitroUpsellContainer,
         children: [
             (0, r.jsx)(o.SrA, {
-                className: u.nitroWheel,
+                className: d.nitroWheel,
                 size: 'md',
-                color: s.JX.PREMIUM_TIER_2
+                color: l.JX.PREMIUM_TIER_2
             }),
             (0, r.jsx)(o.Text, {
-                className: u.nitroText,
+                className: d.nitroText,
                 variant: 'text-md/medium',
-                children: p
+                children: m
             })
         ]
     });
