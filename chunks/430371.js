@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -64,11 +64,11 @@ function E(e, t) {
     );
 }
 let I = 16 / 9,
-    P = 8 + y.cF;
-function S(e) {
+    S = 8 + y.cF;
+function P(e) {
     var t;
     let n,
-        { onSelectParticipant: l, onContextMenuParticipant: S, onFullscreenParticipant: Z, participants: N, filteredParticipants: T, popoutWindow: A, inCall: w, channel: R, selectedParticipant: k, showParticipants: M = !0, className: L, paused: D, width: U, height: B, layout: G, idle: F } = e,
+        { onSelectParticipant: l, onContextMenuParticipant: P, onFullscreenParticipant: Z, participants: N, filteredParticipants: T, popoutWindow: A, inCall: w, channel: R, selectedParticipant: k, showParticipants: M = !0, className: L, paused: D, width: U, height: B, layout: G, idle: F } = e,
         H = null != A,
         V = h.Z.getVideoComponent(),
         z = p.default.getId(),
@@ -79,7 +79,7 @@ function S(e) {
         $ = k.type === x.fO.ACTIVITY || k.type === x.fO.PRESENCE_EMBEDDED_ACTIVITY,
         ee = (0, u.Z)($ ? k.applicationId : void 0),
         et = !$ && null != k.streamId,
-        en = B <= 2 * P + 144,
+        en = B <= 2 * S + 144,
         er = M && !en,
         ei = (0, c.Z)(er),
         el = G === C.AEg.MINIMUM || G === C.AEg.NORMAL,
@@ -87,12 +87,12 @@ function S(e) {
         ea = (0, m.Z)(eo, 100),
         es = (null != (t = (0, c.Z)(k.id)) ? t : k.id) !== k.id,
         ec = 0;
-    ($ || er) && (ec += 72), $ && !er && (eo ? (ec += 48) : (ec += 8)), er && (ec += 0.5 * P + 8);
+    ($ || er) && (ec += 72), $ && !er && (eo ? (ec += 48) : (ec += 8)), er && (ec += 0.5 * S + 8);
     let eu = i.useMemo(() => ($ && ee ? U / (B - 2 * ec) : et && null != W && W.width > 0 && W.height > 0 ? W.width / W.height : I), [et, W, $, U, B, ec, ee]),
         ed = B - 2 * ec,
         ep = $ && ee ? U : ed * eu,
         eh = Math.floor(Math.min(U, ep) / eu),
-        ef = B > U / eu + 72 + P + 8;
+        ef = B > U / eu + 72 + S + 8;
     (n = er || $ ? (er ? -16 : -8) : 40 + Math.max(0, 72 - (B - eh) / 2)),
         i.useEffect(() => {
             let e = setTimeout(() => {
@@ -164,7 +164,7 @@ function S(e) {
                 children: [
                     (0, r.jsxs)(a.animated.div, {
                         className: j.videoFrame,
-                        style: { top: e_.value.to((e) => (-e * P) / 2) },
+                        style: { top: e_.value.to((e) => (-e * S) / 2) },
                         children: [
                             (0, r.jsx)(a.animated.div, {
                                 style: { width: ey.value },
@@ -191,7 +191,7 @@ function S(e) {
                                                           participant: t,
                                                           onClick: l,
                                                           onDoubleClick: Z,
-                                                          onContextMenu: S,
+                                                          onContextMenu: P,
                                                           onVideoResize: ev,
                                                           inCall: w,
                                                           inPopout: H
@@ -219,14 +219,14 @@ function S(e) {
                     (0, r.jsx)(a.animated.div, {
                         className: j.participantsWrapperAnimated,
                         style: {
-                            translateY: eb.value.to((e) => (e * P) / 2),
+                            translateY: eb.value.to((e) => (e * S) / 2),
                             opacity: eb.value,
                             visibility: eb.value.to((e) => (0 === e ? 'hidden' : 'visible'))
                         },
                         children: (0, r.jsx)(y.ZP, {
                             channel: R,
                             onClick: l,
-                            onContextMenu: S,
+                            onContextMenu: P,
                             onDoubleClick: Z,
                             participants: eO,
                             participantTileWidth: eE,
@@ -240,7 +240,7 @@ function S(e) {
             }),
             ej.length > 0
                 ? (0, r.jsx)(b.Z, {
-                      onContextMenuParticipant: S,
+                      onContextMenuParticipant: P,
                       width: U,
                       height: B,
                       channel: R,

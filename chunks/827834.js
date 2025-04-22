@@ -141,12 +141,12 @@ t.default = (function () {
                 };
             },
             B = 'offset:',
-            F = {
+            V = {
                 type: 'literal',
                 value: 'offset:',
                 description: '"offset:"'
             },
-            V = function (e) {
+            F = function (e) {
                 return e;
             },
             Z = function (e, t) {
@@ -372,7 +372,7 @@ t.default = (function () {
         }
         function eU() {
             var e;
-            return (e = eG()) === i && (e = eB()) === i && (e = eF()) === i && (e = eV()), e;
+            return (e = eG()) === i && (e = eB()) === i && (e = eV()) === i && (e = eF()), e;
         }
         function eG() {
             var e, n, r, a, o, s;
@@ -382,11 +382,11 @@ t.default = (function () {
             var e, n, r, a;
             return (e = ev), t.substr(ev, 6) === C ? ((n = C), (ev += 6)) : ((n = i), 0 === eN && eR(R)), n !== i && ez() !== i ? (44 === t.charCodeAt(ev) ? ((r = m), ev++) : ((r = i), 0 === eN && eR(g)), r !== i && ez() !== i && (a = eW()) !== i ? ((eO = e), (e = n = P(a))) : ((ev = e), (e = l))) : ((ev = e), (e = l)), e;
         }
-        function eF() {
+        function eV() {
             var e, n, r, a;
             return (e = ev), t.substr(ev, 13) === w ? ((n = w), (ev += 13)) : ((n = i), 0 === eN && eR(D)), n !== i && ez() !== i ? (44 === t.charCodeAt(ev) ? ((r = m), ev++) : ((r = i), 0 === eN && eR(g)), r !== i && ez() !== i && (a = eW()) !== i ? ((eO = e), (e = n = L(a))) : ((ev = e), (e = l))) : ((ev = e), (e = l)), e;
         }
-        function eV() {
+        function eF() {
             var e, n, r, a, o;
             if (((e = ev), t.substr(ev, 6) === x ? ((n = x), (ev += 6)) : ((n = i), 0 === eN && eR(M)), n !== i))
                 if (ez() !== i)
@@ -411,7 +411,7 @@ t.default = (function () {
         }
         function eY() {
             var e, n, r;
-            return (e = ev), t.substr(ev, 7) === B ? ((n = B), (ev += 7)) : ((n = i), 0 === eN && eR(F)), n !== i && ez() !== i && (r = eX()) !== i ? ((eO = e), (e = n = V(r))) : ((ev = e), (e = l)), e;
+            return (e = ev), t.substr(ev, 7) === B ? ((n = B), (ev += 7)) : ((n = i), 0 === eN && eR(V)), n !== i && ez() !== i && (r = eX()) !== i ? ((eO = e), (e = n = F(r))) : ((ev = e), (e = l)), e;
         }
         function eW() {
             var e, t, n, r;

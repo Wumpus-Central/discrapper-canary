@@ -73,8 +73,8 @@ function v() {
     r.useEffect(() => {
         v();
     }, []);
-    let g = r.useMemo(() => n.find((e) => e.status === m.O0b.ACTIVE), [n]),
-        j = r.useMemo(() => n.filter((e) => e.status !== m.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [n]),
+    let j = r.useMemo(() => n.find((e) => e.status === m.O0b.ACTIVE), [n]),
+        g = r.useMemo(() => n.filter((e) => e.status !== m.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [n]),
         _ = async () => {
             await o.tn.post({
                 url: '/debug/subscription',
@@ -125,7 +125,7 @@ function v() {
                 (0, a.jsx)('section', {
                     className: i()([p.section, p.buttons]),
                     children:
-                        null == g &&
+                        null == j &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(s.Text, {
@@ -160,7 +160,7 @@ function v() {
                         children: 'End All Subscriptions'
                     })
                 }),
-                null != g &&
+                null != j &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(s.Text, {
@@ -169,12 +169,12 @@ function v() {
                                 children: 'Existing active subscription'
                             }),
                             (0, a.jsx)(u.Z, {
-                                subscription: g,
+                                subscription: j,
                                 onUpdated: v
                             })
                         ]
                     }),
-                j.length > 0 &&
+                g.length > 0 &&
                     (0, a.jsxs)('div', {
                         style: { marginTop: '8px' },
                         children: [
@@ -183,7 +183,7 @@ function v() {
                                 variant: 'text-md/normal',
                                 children: 'Previous subscriptions'
                             }),
-                            j.map((e) =>
+                            g.map((e) =>
                                 (0, a.jsx)(
                                     u.Z,
                                     {

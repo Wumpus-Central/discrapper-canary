@@ -207,14 +207,14 @@ function w(e) {
         U = null != a ? a : j,
         G = (0, c.Z)('(max-width: 456px)'),
         B = i.useRef(null),
-        F = i.useContext(h.h9),
-        { coloredIconsEnabled: V } = (0, f.Z)({ location: 'CenterControlButton' });
+        V = i.useContext(h.h9),
+        { coloredIconsEnabled: F } = (0, f.Z)({ location: 'CenterControlButton' });
     i.useEffect(() => {
-        null != B.current && (F ? B.current.pause() : B.current.play());
-    }, [F]);
+        null != B.current && (V ? B.current.pause() : B.current.play());
+    }, [V]);
     let Z = (0, _.Z)({ location: 'CenterControlButton' }),
         H = M || Z,
-        Y = H ? [b.experimentButton, V ? P[j] : R[j], x && null == T && b.fullRegionButton, V && !x && null != T && b.attachedButton] : [C[j]],
+        Y = H ? [b.experimentButton, F ? P[j] : R[j], x && null == T && b.fullRegionButton, F && !x && null != T && b.attachedButton] : [C[j]],
         W = null != (t = k.onContextMenu) ? t : T,
         K = (0, r.jsx)(
             N,
@@ -229,7 +229,7 @@ function w(e) {
         ? K
         : H
           ? (0, r.jsxs)('div', {
-                className: o()(V ? b.attachedCaretButtonContainer : b.caretButtonContainer, V && w && b.popoutOpen, y, x && null != T && [b.fullRegionDropdownButton, R[j]]),
+                className: o()(F ? b.attachedCaretButtonContainer : b.caretButtonContainer, F && w && b.popoutOpen, y, x && null != T && [b.fullRegionDropdownButton, R[j]]),
                 children: [
                     K,
                     null != T
@@ -238,8 +238,8 @@ function w(e) {
                                   'aria-label': E.intl.string(E.t.PdRCRk),
                                   onClick: D ? void 0 : T,
                                   onContextMenu: D ? void 0 : T,
-                                  className: o()(b.contextMenuNubExperiment, V && !x && b.attachedCaret, V ? P[U] : R[U], {
-                                      [b.popoutOpen]: w && V,
+                                  className: o()(b.contextMenuNubExperiment, F && !x && b.attachedCaret, F ? P[U] : R[U], {
+                                      [b.popoutOpen]: w && F,
                                       [b.active]: w,
                                       [b.disabled]: D
                                   }),

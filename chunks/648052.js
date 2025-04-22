@@ -7,12 +7,12 @@ var r = n(200651),
     l = n(184325),
     c = n(228168);
 let u = {
-    [c.y0.BITE_SIZE]: 12,
-    [c.y0.FULL_SIZE]: 26,
-    [c.y0.PANEL]: 13
+    [c.lY.POPOUT]: 12,
+    [c.lY.MODAL]: 26,
+    [c.lY.SIDEBAR]: 13
 };
 function d(e) {
-    let { displayProfile: t, profileType: n, onClose: c, pendingBadges: d, shouldOpenBadgeTooltip: f } = e,
+    let { displayProfile: t, themeType: n, onClose: c, pendingBadges: d, shouldOpenBadgeTooltip: f } = e,
         _ = (0, o.Z)(t),
         p = i.useMemo(() => {
             if (null == d) return (0, s.w)(_);

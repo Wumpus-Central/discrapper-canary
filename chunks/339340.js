@@ -57,7 +57,7 @@ function N(e) {
             }
             return { hasErrors: !1 };
         },
-        F = async (e) => {
+        V = async (e) => {
             P === C && N(), null == e || e.preventDefault(), M(null), L(!0);
             let n = P.length,
                 r = P.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length,
@@ -83,19 +83,19 @@ function N(e) {
                 L(!1);
             }
         },
-        [V, Z] = i.useState((0, p.JM)(P)),
+        [F, Z] = i.useState((0, p.JM)(P)),
         H = (e, t, n) => {
             w(t), Z(n);
         },
         Y = async () => (
-            j || D || (await F()),
+            j || D || (await V()),
             Promise.resolve({
                 shouldClear: !1,
                 shouldRefocus: !0
             })
         );
     return (0, r.jsx)('form', {
-        onSubmit: F,
+        onSubmit: V,
         className: S.form,
         children: (0, r.jsxs)(c.Y0X, {
             transitionState: n,
@@ -134,7 +134,7 @@ function N(e) {
                                 (0, r.jsx)(h.Z, {
                                     innerClassName: S.textArea,
                                     textValue: P,
-                                    richValue: V,
+                                    richValue: F,
                                     placeholder: I.intl.formatToPlainString(I.t.DUXxBg, { channelName: t.name }),
                                     focused: !0,
                                     channel: t,
@@ -172,7 +172,7 @@ function N(e) {
                             children: I.intl.string(I.t['ETE/oK'])
                         }),
                         (0, r.jsx)(c.zxk, {
-                            onClick: F,
+                            onClick: V,
                             submitting: D,
                             className: S.button,
                             disabled: j,

@@ -144,7 +144,7 @@ function f(e) {
             }
         }, []),
         B = r.useMemo(() => Math.max(...n), [n]),
-        F = r.useCallback(
+        V = r.useCallback(
             () => ({
                 role: 'grid',
                 'aria-rowcount': n.length,
@@ -157,7 +157,7 @@ function f(e) {
             }),
             [n.length, B, S, E, t, j, U, G]
         ),
-        V = r.useCallback(
+        F = r.useCallback(
             (e, n) => {
                 let r = {
                     role: 'gridcell',
@@ -181,11 +181,11 @@ function f(e) {
     return r.useMemo(
         () => ({
             dispatch: g,
-            getContainerProps: F,
-            getItemProps: V,
+            getContainerProps: V,
+            getItemProps: F,
             getRowProps: Z
         }),
-        [g, F, V, Z]
+        [g, V, F, Z]
     );
 }
 function _(e) {

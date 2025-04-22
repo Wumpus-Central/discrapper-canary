@@ -46,8 +46,8 @@ var r = n(200651),
     U = n(881998),
     G = n(592125),
     B = n(944486),
-    F = n(246946),
-    V = n(9156),
+    V = n(246946),
+    F = n(9156),
     Z = n(768581),
     H = n(585483),
     Y = n(630388),
@@ -434,19 +434,19 @@ let e_ = (e) => {
             T = N.w.useExperiment({ location: 'oauth2_authorize' }),
             A = a.bot,
             C = (0, _.e7)([G.Z], () => G.Z.getDMFromUserId(null == A ? void 0 : A.id)),
-            { appDMChannelMuteConfig: P, dmChannelMuted: D } = (0, _.cj)([V.ZP], () =>
+            { appDMChannelMuteConfig: P, dmChannelMuted: D } = (0, _.cj)([F.ZP], () =>
                 null == C
                     ? {
                           appDMChannelMuteConfig: null,
                           dmChannelMuted: !1
                       }
                     : {
-                          appDMChannelMuteConfig: V.ZP.getChannelMuteConfig(null, C),
-                          dmChannelMuted: V.ZP.isChannelMuted(null, C)
+                          appDMChannelMuteConfig: F.ZP.getChannelMuteConfig(null, C),
+                          dmChannelMuted: F.ZP.isChannelMuted(null, C)
                       }
             ),
             [x, U] = i.useState(!1),
-            [B, F] = i.useState(!1),
+            [B, V] = i.useState(!1),
             H = L.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !0 }).enabled,
             W = () => {
                 let e = [];
@@ -492,7 +492,7 @@ let e_ = (e) => {
                                     (0, r.jsxs)(m.P, {
                                         className: ei.appDetailsSectionHeader,
                                         onClick: (e) => {
-                                            F(!B), n(e);
+                                            V(!B), n(e);
                                         },
                                         children: [
                                             (0, r.jsx)(g.X6q, {
@@ -731,7 +731,7 @@ let e_ = (e) => {
     },
     eb = (0, d.U)(() => ({ searchQuery: '' })),
     ey = () => {
-        let e = (0, _.e7)([F.Z], () => F.Z.hidePersonalInformation),
+        let e = (0, _.e7)([V.Z], () => V.Z.hidePersonalInformation),
             t = (0, _.e7)([U.Z], () => U.Z.getApps()),
             a = (0, _.e7)([q.default], () => q.default.locale),
             o = (0, _.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivities()),

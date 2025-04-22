@@ -42,7 +42,7 @@ var i = n(200651),
     F = n(726985),
     H = n(388032),
     z = n(125978);
-function W() {
+function Y() {
     return (0, i.jsx)(o.Zbd, {
         className: z.noItemsCard,
         type: o.Zbd.Types.CUSTOM,
@@ -62,7 +62,7 @@ function W() {
         })
     });
 }
-function Y() {
+function W() {
     let e = (0, a.e7)([P.Z], () => P.Z.getForApplication(U.CL));
     return (
         r.useEffect(() => {
@@ -85,7 +85,7 @@ function Y() {
                           className: z.accountCredit,
                           entitlements: e
                       })
-                    : (0, i.jsx)(W, {})
+                    : (0, i.jsx)(Y, {})
             ]
         })
     );
@@ -112,10 +112,10 @@ let q = function () {
                 .filter((e) => e.type === V.NYc.GUILD)
                 .filter((e) => e.status !== V.O0b.ENDED).length;
         }),
-        W = (0, f.Z)({ forceFetch: !0 }),
+        Y = (0, f.Z)({ forceFetch: !0 }),
         q = (0, w.W)(),
         X = null !== e ? e.currentPeriodEnd : void 0,
-        Q = !q && (W.fractionalState !== U.a$.NONE || W.unactivatedUnits.length > 0);
+        Q = !q && (Y.fractionalState !== U.a$.NONE || Y.unactivatedUnits.length > 0);
     return (r.useEffect(
         () => (
             c.Z.wait(() => {
@@ -163,14 +163,14 @@ let q = function () {
                                           }),
                                           (0, i.jsx)(k.Z, {
                                               className: z.accountCredit,
-                                              fractionalPremiumInfo: W,
+                                              fractionalPremiumInfo: Y,
                                               activationDate: X
                                           })
                                       ]
                                   }),
                               (0, i.jsx)(v.F, {
                                   setting: F.s6.SUBSCRIPTIONS_CREDITS,
-                                  children: (0, i.jsx)(Y, {})
+                                  children: (0, i.jsx)(W, {})
                               }),
                               L > 0 &&
                                   (0, i.jsxs)(i.Fragment, {

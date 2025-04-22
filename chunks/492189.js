@@ -36,9 +36,9 @@ var r = n(98405),
     U = x.enforce,
     G = w.f,
     B = D.f,
-    F = i.RangeError,
-    V = c.ArrayBuffer,
-    Z = V.prototype,
+    V = i.RangeError,
+    F = c.ArrayBuffer,
+    Z = F.prototype,
     H = c.DataView,
     Y = l.NATIVE_ARRAY_BUFFER_VIEWS,
     W = l.TYPED_ARRAY_TAG,
@@ -140,12 +140,12 @@ o
                             (i = t), (d = m(n, o));
                             var f = t.byteLength;
                             if (void 0 === r) {
-                                if (f % o || (s = f - d) < 0) throw new F(X);
-                            } else if ((s = p(r) * o) + d > f) throw new F(X);
+                                if (f % o || (s = f - d) < 0) throw new V(X);
+                            } else if ((s = p(r) * o) + d > f) throw new V(X);
                             l = s / o;
                         } else if (q(t)) return L(E, t);
                         else return a(N, E, t);
-                    else i = new V((s = (l = h(t)) * o));
+                    else i = new F((s = (l = h(t)) * o));
                     for (
                         j(e, {
                             buffer: i,

@@ -49,7 +49,7 @@ function B(e, t, n) {
         e
     );
 }
-function F(e) {
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,7 +65,7 @@ function F(e) {
     }
     return e;
 }
-function V(e, t) {
+function F(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -89,11 +89,11 @@ function H(e) {
     var t, n, a;
     let { channel: p, isLoading: h } = e,
         [C, B] = i.useState(!1),
-        F = (0, l.e7)([A.ZP], () => A.ZP.getCurrentEmbeddedActivity()),
-        V = (null == F ? void 0 : F.location.kind) === s.E.CONTEXTLESS,
+        V = (0, l.e7)([A.ZP], () => A.ZP.getCurrentEmbeddedActivity()),
+        F = (null == V ? void 0 : V.location.kind) === s.E.CONTEXTLESS,
         Z = (0, l.e7)([A.ZP], () => A.ZP.getActivityPanelMode()),
-        H = (0, m.q)(null == F ? void 0 : F.applicationId),
-        Y = null == F ? void 0 : F.launchId,
+        H = (0, m.q)(null == V ? void 0 : V.applicationId),
+        Y = null == V ? void 0 : V.launchId,
         W = (0, l.e7)([I.Z], () => I.Z.getChannelId() === (null == p ? void 0 : p.id)),
         { dockedRect: K, isHidden: z } = (0, l.cj)([O.Z], () => {
             let e = O.Z.pipWindow;
@@ -109,12 +109,12 @@ function H(e) {
             participantsOpen: J
         } = (0, l.cj)([E.Z], () => ({
             activityParticipant:
-                null != F && null != p
+                null != V && null != p
                     ? E.Z.getParticipant(
                           p.id,
                           (0, g.gN)({
-                              applicationId: F.applicationId,
-                              instanceId: F.compositeInstanceId
+                              applicationId: V.applicationId,
+                              instanceId: V.compositeInstanceId
                           })
                       )
                     : null,
@@ -126,17 +126,17 @@ function H(e) {
         et = ee && (null == X ? void 0 : X.type) !== k.fO.ACTIVITY,
         en = !ee && Z === x.Ez.PIP,
         er = $ && (et || en) && null == K,
-        ei = V ? Z === x.Ez.PIP && !z : (!$ || er) && !z,
+        ei = F ? Z === x.Ez.PIP && !z : (!$ || er) && !z,
         ea = ei && null != O.Z.pipVideoWindow && null != O.Z.pipActivityWindow;
     function eo() {
         if (null != p) {
             var e;
-            null != F &&
+            null != V &&
                 d.Z.selectParticipant(
                     p.id,
                     (0, g.gN)({
-                        applicationId: F.applicationId,
-                        instanceId: F.compositeInstanceId
+                        applicationId: V.applicationId,
+                        instanceId: V.compositeInstanceId
                     })
                 );
             let t = null != (e = p.getGuildId()) ? e : M.ME;
@@ -150,11 +150,11 @@ function H(e) {
     function el(e) {
         var t;
         let { onActive: n, onForceIdle: i, idle: a, isActivityInTextChannel: o, users: s, showPIPControlsForContextlessActivity: l } = e;
-        return ei && null != F && (V || (null == Q ? void 0 : Q.type) === k.fO.ACTIVITY || o)
-            ? (null == (t = F.config) ? void 0 : t.useInteractivePIP)
+        return ei && null != V && (F || (null == Q ? void 0 : Q.type) === k.fO.ACTIVITY || o)
+            ? (null == (t = V.config) ? void 0 : t.useInteractivePIP)
                 ? (0, r.jsx)(D.of, {
                       onJumpToChannel: eo,
-                      applicationId: F.applicationId,
+                      applicationId: V.applicationId,
                       channel: p,
                       showControls: !a,
                       onMouseDown: n,
@@ -163,7 +163,7 @@ function H(e) {
                       onToggleHeight: es,
                       isExpanded: C,
                       hideExpandedButton: o,
-                      embeddedActivity: F
+                      embeddedActivity: V
                   })
                 : o || l
                   ? (0, r.jsx)(D.q5, {
@@ -175,9 +175,9 @@ function H(e) {
                             eo(), (0, T.tg)(x.Ez.PANEL);
                         },
                         channel: p,
-                        applicationId: F.applicationId,
+                        applicationId: V.applicationId,
                         users: s,
-                        embeddedActivity: F
+                        embeddedActivity: V
                     })
                   : null == Q
                     ? null
@@ -197,9 +197,9 @@ function H(e) {
                                   onMouseLeave: i,
                                   onJumpToChannel: eo,
                                   channel: p,
-                                  applicationId: F.applicationId,
+                                  applicationId: V.applicationId,
                                   selectedParticipant: Q,
-                                  embeddedActivity: F
+                                  embeddedActivity: V
                               })
                           ]
                       })
@@ -207,28 +207,28 @@ function H(e) {
     }
     if (
         (i.useEffect(() => {
-            if ((null == F ? void 0 : F.applicationId) != null) {
+            if ((null == V ? void 0 : V.applicationId) != null) {
                 let e = ei ? L.cE.PIP : L.cE.FOCUSED;
                 u.Z.dispatch({
                     type: 'ACTIVITY_LAYOUT_MODE_UPDATE',
                     layoutMode: e,
-                    applicationId: F.applicationId
+                    applicationId: V.applicationId
                 });
             }
-        }, [null == F ? void 0 : F.applicationId, ei]),
-        null == F || null == Y || ((0, P.Z)(null == p ? void 0 : p.id) && null == Q) || null == H)
+        }, [null == V ? void 0 : V.applicationId, ei]),
+        null == V || null == Y || ((0, P.Z)(null == p ? void 0 : p.id) && null == Q) || null == H)
     )
         return null;
-    let ec = Array.from(F.userIds)
+    let ec = Array.from(V.userIds)
             .map((e) => S.default.getUser(e))
             .filter((e) => null != e),
         eu = {
-            instance_id: null != (a = null != (n = F.compositeInstanceId) ? n : F.launchId) ? a : '',
+            instance_id: null != (a = null != (n = V.compositeInstanceId) ? n : V.launchId) ? a : '',
             channel_id: null == p ? void 0 : p.id,
-            location_id: null == (t = F.location) ? void 0 : t.id,
-            launch_id: F.launchId,
-            referrer_id: F.referrerId,
-            custom_id: F.customId
+            location_id: null == (t = V.location) ? void 0 : t.id,
+            launch_id: V.launchId,
+            referrer_id: V.referrerId,
+            custom_id: V.customId
         };
     return (
         (null == p ? void 0 : p.guild_id) != null && (null == p ? void 0 : p.guild_id) !== '' && (eu.guild_id = p.guild_id),
@@ -241,7 +241,7 @@ function H(e) {
                     className: o()(j.root, {
                         [j.pipMode]: ei,
                         [G.elevationHigh]: ei,
-                        [U.idle]: i && !(null == (t = F.config) ? void 0 : t.useInteractivePIP),
+                        [U.idle]: i && !(null == (t = V.config) ? void 0 : t.useInteractivePIP),
                         [j.pipModeShort]: ei && !C,
                         [j.pipModeTall]: ei && C,
                         [j.hidden]: z,
@@ -257,7 +257,7 @@ function H(e) {
                                 idle: i,
                                 isActivityInTextChannel: en,
                                 users: ec,
-                                showPIPControlsForContextlessActivity: V && Z === x.Ez.PIP
+                                showPIPControlsForContextlessActivity: F && Z === x.Ez.PIP
                             })
                         }),
                         h
@@ -269,13 +269,13 @@ function H(e) {
                               })
                             : (0, r.jsx)(w.J, {
                                   allowPopups: (0, R.h)(H),
-                                  referrerPolicy: L.um.has(F.applicationId) ? 'no-referrer' : 'origin',
-                                  url: F.url,
+                                  referrerPolicy: L.um.has(V.applicationId) ? 'no-referrer' : 'origin',
+                                  url: V.url,
                                   queryParams: eu,
                                   className: o()(j.iframe, {
                                       [j.pipModeShort]: ei && !C,
                                       [j.pipModeTall]: ei && C,
-                                      [j.pipNonInteractive]: ei && !(null == (n = F.config) ? void 0 : n.useInteractivePIP)
+                                      [j.pipNonInteractive]: ei && !(null == (n = V.config) ? void 0 : n.useInteractivePIP)
                                   }),
                                   shouldRefocus: !ei && W
                               }),
@@ -294,7 +294,7 @@ function H(e) {
 }
 let Y = (e) => {
     var { channel: t } = e,
-        n = V(e, ['channel']);
+        n = F(e, ['channel']);
     let i = A.ZP.getCurrentEmbeddedActivity();
     (0, C.Z)({ connectedEmbeddedActivity: i });
     let { analyticsLocations: a } = (0, h.ZP)(p.Z.ACTIVITY_PIP),
@@ -303,7 +303,7 @@ let Y = (e) => {
         value: a,
         children: (0, r.jsx)(
             H,
-            F(
+            V(
                 {
                     channel: t,
                     isLoading: o

@@ -85,7 +85,7 @@ function U(e, t) {
 }
 let G = new m.Z('GatewaySocket'),
     B = new C.Z();
-function F(e) {
+function V(e) {
     let t,
         { gatewayURL: n, newCallback: r, onOpen: i, onMessage: a, onError: o, onClose: s } = e;
     G.enableNativeLogger(!0);
@@ -103,7 +103,7 @@ function F(e) {
         }
     null == t && ((t = (0, L.Z)(n)).binaryType = 'arraybuffer'), r(t), c && i(u, f), null != d && d.forEach(a), (t.onopen = () => i(u, f)), (t.onmessage = a), (t.onclose = s), (t.onerror = o);
 }
-function V() {}
+function F() {}
 let Z = 4,
     H = 1001,
     Y = 'Stream end encountered',
@@ -168,7 +168,7 @@ class $ extends w.Z {
         i.searchParams.append('encoding', t),
             i.searchParams.append('v', r.toString()),
             null != e && i.searchParams.append('compress', e),
-            F({
+            V({
                 gatewayURL: i.toString(),
                 newCallback: (e) => {
                     (this.webSocket = e), this.compressionHandler.bindWebSocket(e);
@@ -360,7 +360,7 @@ class $ extends w.Z {
     _cleanup(e) {
         c.ZP.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout();
         let t = this.webSocket;
-        (this.webSocket = null), null != t && ((t.onopen = V), (t.onmessage = V), (t.onerror = V), (t.onclose = V), null == e || e(t)), this.gatewayBackoff.cancel(), this.compressionHandler.close(), (this.compressionHandler = (0, N.I)(B));
+        (this.webSocket = null), null != t && ((t.onopen = F), (t.onmessage = F), (t.onerror = F), (t.onclose = F), null == e || e(t)), this.gatewayBackoff.cancel(), this.compressionHandler.close(), (this.compressionHandler = (0, N.I)(B));
     }
     _doResume() {
         var e;

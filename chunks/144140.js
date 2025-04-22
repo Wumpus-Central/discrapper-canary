@@ -165,11 +165,11 @@ function B(e) {
     let { channel: t } = e;
     T(t.id);
 }
-function F(e) {
+function V(e) {
     let { channel: t } = e;
     delete O[t.id];
 }
-function V(e) {
+function F(e) {
     let { message: t, optimistic: n, isPushNotification: r, sendMessageOptions: i } = e;
     if (n || r || null != i) return !1;
     let a = f.Z.getChannel(t.channel_id);
@@ -280,9 +280,9 @@ let Q = new q(s.Z, {
     RELATIONSHIP_REMOVE: z,
     SEARCH_FINISH: G,
     MOD_VIEW_SEARCH_FINISH: G,
-    THREAD_DELETE: F,
+    THREAD_DELETE: V,
     CHANNEL_DELETE: B,
-    MESSAGE_CREATE: V,
+    MESSAGE_CREATE: F,
     MESSAGE_UPDATE: H,
     MESSAGE_DELETE: Y,
     MESSAGE_DELETE_BULK: W,

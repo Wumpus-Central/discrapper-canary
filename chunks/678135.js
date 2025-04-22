@@ -25,7 +25,7 @@ var r = n(200651),
     A = n(388032),
     N = n(997926);
 function C(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: a, pendingBanner: s, pendingAccentColor: c, pendingBio: g, pendingPronouns: E, pendingAvatar: A, pendingAvatarDecoration: C, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, avatarClassName: x, containerClassName: M, isTryItOutFlow: k = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: F = !1, pendingBadges: V, shouldOpenBadgeTooltip: Z, showNameplatePreview: H = !1 } = e,
+    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: a, pendingBanner: s, pendingAccentColor: c, pendingBio: g, pendingPronouns: E, pendingAvatar: A, pendingAvatarDecoration: C, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, avatarClassName: x, containerClassName: M, isTryItOutFlow: k = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: V = !1, pendingBadges: F, shouldOpenBadgeTooltip: Z, showNameplatePreview: H = !1 } = e,
         Y = (0, f.ZP)(t.id, null == n ? void 0 : n.id),
         { avatarSrc: W, avatarDecorationSrc: K } = (0, p.Z)({
             user: t,
@@ -52,7 +52,7 @@ function C(e) {
             (0, r.jsxs)(h.Z, {
                 user: t,
                 displayProfile: Y,
-                profileType: T.y0.BITE_SIZE,
+                themeType: T.lY.POPOUT,
                 pendingThemeColors: D,
                 className: o()(N.container, M),
                 forceShowPremium: i,
@@ -89,7 +89,7 @@ function C(e) {
                                 (0, r.jsx)(m.Z, {
                                     location: 'UserProfilePreview',
                                     user: t,
-                                    profileType: T.y0.BITE_SIZE,
+                                    themeType: T.lY.POPOUT,
                                     disableEdit: j
                                 })
                         ]
@@ -105,13 +105,13 @@ function C(e) {
                         pendingPronouns: E,
                         isTryItOutFlow: k,
                         hideBioSection: G,
-                        pendingBadges: V,
+                        pendingBadges: F,
                         shouldOpenBadgeTooltip: Z
                     }),
                     (0, r.jsx)(I.Z, {
                         user: t,
                         hideMessageInput: B,
-                        hideExampleButton: F
+                        hideExampleButton: V
                     }),
                     null != z && (0, r.jsx)(d.Z, { profileEffectId: z })
                 ]

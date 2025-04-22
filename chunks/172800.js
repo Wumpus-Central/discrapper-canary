@@ -96,7 +96,7 @@ function D(e, t) {
     return i;
 }
 let L = (e) => {
-    let { emojiDescriptors: t, emojiSize: a, onSelect: N, onSelectSoundmoji: R, onInspect: D, surrogateCodePoint: L, getEmojiItemProps: x, getEmojiRowProps: M, isScrolling: k, isUsingKeyboardNavigation: j, rowIndex: U, allowAnimatedEmoji: G, showEmojiFavoriteTooltip: B, channelGuildId: F, category: V, selectedItemClassName: Z, channelId: H, messageId: Y, isBurstReaction: W, inNitroLockedSection: K, handleScrollUpOnSectionCollapse: z } = e,
+    let { emojiDescriptors: t, emojiSize: a, onSelect: N, onSelectSoundmoji: R, onInspect: D, surrogateCodePoint: L, getEmojiItemProps: x, getEmojiRowProps: M, isScrolling: k, isUsingKeyboardNavigation: j, rowIndex: U, allowAnimatedEmoji: G, showEmojiFavoriteTooltip: B, channelGuildId: V, category: F, selectedItemClassName: Z, channelId: H, messageId: Y, isBurstReaction: W, inNitroLockedSection: K, handleScrollUpOnSectionCollapse: z } = e,
         { enabled: q } = y.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
         Q = n(187119),
         X = n(39874),
@@ -235,7 +235,7 @@ let L = (e) => {
                             selectedItemClassName: Z,
                             onSelect: N,
                             onInspect: D,
-                            channelGuildId: F,
+                            channelGuildId: V,
                             getEmojiItemProps: x,
                             isMediumSize: ef,
                             isLargeSize: ed,
@@ -266,7 +266,7 @@ let L = (e) => {
                     children: e.map(e_)
                 })
             );
-    if (V === I.UX.SOUNDMOJI)
+    if (F === I.UX.SOUNDMOJI)
         return (0, r.jsx)('ul', {
             className: A.emojiListRow,
             ref: eu,
@@ -275,7 +275,7 @@ let L = (e) => {
                 onSelectSoundmoji: R
             })
         });
-    if (V !== I.En.TOP_GUILD_EMOJI) return ep(t);
+    if (F !== I.En.TOP_GUILD_EMOJI) return ep(t);
     let eh = t.filter((e) => {
             if (q && e.type === v.ld.CREATE_EMOJI) return !0;
             let t = e;

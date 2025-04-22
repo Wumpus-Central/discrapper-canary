@@ -119,30 +119,30 @@ let N = i.forwardRef(function (e, t) {
             },
             [R.id]
         ),
-        F = (0, d.dQu)(u.Z.unsafe_rawColors.PRIMARY_300).hsl(),
-        V = null != (v = R.colorString) ? v : F,
-        Z = null != (I = (0, l.wK)(V, 0.6)) ? I : void 0,
+        V = (0, d.dQu)(u.Z.unsafe_rawColors.PRIMARY_300).hsl(),
+        F = null != (v = R.colorString) ? v : V,
+        Z = null != (I = (0, l.wK)(F, 0.6)) ? I : void 0,
         H = u.Z.unsafe_rawColors.WHITE_500.css,
-        Y = (0, l._i)(V);
+        Y = (0, l._i)(F);
     null != Y && 0.3 > (0, l.Bd)(Y) && (H = u.Z.unsafe_rawColors.PRIMARY_630.css);
     let W = (0, E.X)(w, R.colorStrings);
     A = G
         ? (0, r.jsx)(p.Z, {
               className: y.roleFlowerStar,
               iconClassName: N ? y.roleVerifiedIcon : void 0,
-              color: V,
+              color: F,
               size: 14
           })
         : 'dot' === U
           ? (0, r.jsx)(d.FhE, {
                 className: y.roleDot,
-                color: V,
+                color: F,
                 background: !1,
                 colors: W,
                 tooltip: !1
             })
           : (0, r.jsx)(d.xko, {
-                color: V,
+                color: F,
                 colors: W,
                 className: y.roleCircle
             });

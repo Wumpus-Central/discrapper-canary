@@ -37,8 +37,8 @@ var r = n(278074),
     U = n(64078),
     G = n(351780),
     B = n(79390),
-    F = n(980463),
-    V = n(328908),
+    V = n(980463),
+    F = n(328908),
     Z = n(992970),
     H = n(576645),
     Y = n(317951),
@@ -760,7 +760,7 @@ let eD = {
                 ? {
                       confettiPotionData: {
                           emoji: o,
-                          callback: () => (0, V.Hb)(t)
+                          callback: () => (0, F.Hb)(t)
                       }
                   }
                 : {};
@@ -980,7 +980,7 @@ let eD = {
                                         });
                                     let r = (0, H.ZC)(s.body);
                                     null != r &&
-                                        ((0, F.gA)(Y.D1),
+                                        ((0, V.gA)(Y.D1),
                                         (0, W.I)(
                                             {
                                                 name: r.name,

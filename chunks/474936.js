@@ -29,15 +29,15 @@ n.d(t, {
     QP: () => ew,
     RQ: () => eY,
     RU: () => eo,
-    Rg: () => F,
+    Rg: () => V,
     Rr: () => P,
     Rt: () => $,
     Se: () => e4,
     Si: () => _,
-    T7: () => eF,
+    T7: () => eV,
     TD: () => eG,
     TL: () => W,
-    Tp: () => eV,
+    Tp: () => eF,
     UA: () => D,
     UD: () => E,
     Ue: () => x,
@@ -72,7 +72,7 @@ n.d(t, {
     h8: () => er,
     hX: () => eq,
     hs: () => ea,
-    i_: () => V,
+    i_: () => F,
     ih: () => eu,
     in: () => eE,
     jy: () => eZ,
@@ -327,8 +327,8 @@ let T = Object.freeze({
     U = '775514091874680832',
     G = '845031178288889946',
     B = 432000000,
-    F = 14,
-    V = '520373071933079552',
+    V = 14,
+    F = '520373071933079552',
     Z = '902329034132684800',
     H = '983601860436819968',
     Y = '983601860436819969',
@@ -342,7 +342,7 @@ let T = Object.freeze({
     $ = '1268347360493174784',
     ee = '1271484512081285191',
     et = '1161363847311785984',
-    en = [V, Z, H, Y, W, K, z, q, Q, X, J, $, ee, et],
+    en = [F, Z, H, Y, W, K, z, q, Q, X, J, $, ee, et],
     er = [X, J, ee],
     ei = [X, ee],
     ea = '1150904354090532864',
@@ -357,8 +357,8 @@ let T = Object.freeze({
     ep = 8,
     eh = 96,
     em = Object.freeze({
-        [V]: {
-            id: V,
+        [F]: {
+            id: F,
             skus: ['521847234246082599']
         },
         [Z]: {
@@ -629,10 +629,10 @@ let eG = Object.freeze({
         1: { fileSize: ev },
         2: { fileSize: eO }
     });
-var eF = (function (e) {
+var eV = (function (e) {
     return (e.BOOST = 'boost'), (e.DISMISS = 'dismiss'), e;
 })({});
-let eV = new Set(['PL', 'TR']),
+let eF = new Set(['PL', 'TR']),
     eZ = [1, 2, 3],
     eH = [4, 5, 7, 6],
     eY = [12, 5, 7, 6],

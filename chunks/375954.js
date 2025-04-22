@@ -78,11 +78,11 @@ function B(e) {
     let i = c.Z.getOrCreate(t);
     (i = i.truncate(n, r)), c.Z.commit(i);
 }
-function F(e) {
+function V(e) {
     let { channelId: t } = e;
     M.log('Clearing messages for '.concat(t)), c.Z.clear(t), x.clear();
 }
-function V(e) {
+function F(e) {
     let { channelId: t, jump: n, focus: r, before: i, after: a, limit: o, truncate: s } = e,
         l = c.Z.getOrCreate(t);
     (null == n ? void 0 : n.present) ? (l = l.jumpToPresent(o)) : (null == r ? void 0 : r.messageId) != null ? (l = l.focusOnMessage(r.messageId)) : (null == n ? void 0 : n.messageId) != null ? (l = l.jumpToMessage(n.messageId, n.flash, n.offset, n.returnMessageId, n.jumpType)) : (null != i || null != a) && (l = l.loadFromCache(null != i, o)), null != s && (null != i || null != a) && (null == i || null == a) && (l = l.truncate(null != i, null != a)), c.Z.commit(l);
@@ -360,11 +360,11 @@ let em = new eh(s.Z, {
     LOAD_MESSAGES: G,
     LOAD_MESSAGES_SUCCESS: Z,
     LOAD_MESSAGES_FAILURE: H,
-    LOAD_MESSAGES_SUCCESS_CACHED: V,
+    LOAD_MESSAGES_SUCCESS_CACHED: F,
     LOCAL_MESSAGES_LOADED: e_,
     LOAD_MESSAGE_INTERACTION_DATA_SUCCESS: $,
     TRUNCATE_MESSAGES: B,
-    CLEAR_MESSAGES: F,
+    CLEAR_MESSAGES: V,
     MESSAGE_CREATE: K,
     MESSAGE_SEND_FAILED: z,
     MESSAGE_SEND_FAILED_AUTOMOD: el,

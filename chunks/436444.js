@@ -145,9 +145,9 @@ let S = {
                         guild: i
                     }));
         }
-        let F = !x && P.fractionalState === h.a$.NONE,
-            V = F ? s.P3F : 'div',
-            Z = F ? { onClick: B } : {};
+        let V = !x && P.fractionalState === h.a$.NONE,
+            F = V ? s.P3F : 'div',
+            Z = V ? { onClick: B } : {};
         return (0, r.jsx)(s.ua7, {
             tooltipClassName: E.tooltip,
             text: x
@@ -161,13 +161,13 @@ let S = {
             shouldShow: A !== p.Eu4.NONE,
             children: (e) =>
                 (0, r.jsxs)(
-                    V,
+                    F,
                     O(
                         y(
                             {
                                 className: a()(E.progressBarMarker, {
                                     [E.progressBarMarkerUnlocked]: x,
-                                    [E.progressBarMarkerLocked]: F,
+                                    [E.progressBarMarkerLocked]: V,
                                     [E.progressBarMarkerLower]: M,
                                     [E.progressBarMarkerCurrent]: k
                                 }),

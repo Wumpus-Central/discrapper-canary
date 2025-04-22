@@ -79,7 +79,7 @@ function S(e) {
                 children: (0, r.jsx)(h.Z, {
                     user: t,
                     displayProfile: x,
-                    profileType: E.y0.BITE_SIZE,
+                    themeType: E.lY.POPOUT,
                     children: (0, r.jsxs)('div', {
                         className: y.container,
                         children: [

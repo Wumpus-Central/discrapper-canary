@@ -37,7 +37,7 @@ var r = n(200651),
     U = n(388032),
     G = n(393040),
     B = n(236691);
-function F(e, t, n) {
+function V(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function F(e, t, n) {
         e
     );
 }
-function V(e) {
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,7 +61,7 @@ function V(e) {
                 })
             )),
             r.forEach(function (t) {
-                F(e, t, n[t]);
+                V(e, t, n[t]);
             });
     }
     return e;
@@ -91,7 +91,7 @@ function H(e, t) {
 }
 function Y(e) {
     let t,
-        { premiumSubscription: n, paymentSources: a, priceOptions: p, onPaymentSourceChange: h, onPaymentSourceAdd: C, planId: w, setHasAcceptedTerms: M, legalTermsNodeRef: k, hasLegalTermsFlash: G, onInvoiceError: F, planGroup: V, currencies: Z, onCurrencyChange: H, hasOpenInvoice: Y, purchaseState: X, handleClose: J } = e,
+        { premiumSubscription: n, paymentSources: a, priceOptions: p, onPaymentSourceChange: h, onPaymentSourceAdd: C, planId: w, setHasAcceptedTerms: M, legalTermsNodeRef: k, hasLegalTermsFlash: G, onInvoiceError: V, planGroup: F, currencies: Z, onCurrencyChange: H, hasOpenInvoice: Y, purchaseState: X, handleClose: J } = e,
         { selectedSkuId: $, defaultPlanId: ee, isPremium: et, startedPaymentFlowWithPaymentSourcesRef: en, hasPaymentSources: er } = (0, E.JL)(),
         { isGift: ei } = (0, g.wD)(),
         ea = p.paymentSourceId,
@@ -126,23 +126,23 @@ function Y(e) {
         (eh = Y
             ? (0, r.jsx)(W, {
                   premiumSubscription: n,
-                  onInvoiceError: F,
+                  onInvoiceError: V,
                   priceOptions: p,
                   preventFetch: !1
               })
             : e_
               ? (0, r.jsx)(q, {
                     premiumSubscription: n,
-                    onInvoiceError: F,
+                    onInvoiceError: V,
                     priceOptions: p,
                     preventFetch: ed
                 })
-              : (0, N.R4)(n, w, V)
+              : (0, N.R4)(n, w, F)
                 ? (0, r.jsx)(K, {
                       premiumSubscription: n,
                       newPlan: es,
-                      onInvoiceError: F,
-                      planGroup: V,
+                      onInvoiceError: V,
+                      planGroup: F,
                       priceOptions: p,
                       fractionalPremiumInfo: ec,
                       preventFetch: ed
@@ -150,7 +150,7 @@ function Y(e) {
                 : (0, r.jsx)(Q, {
                       premiumSubscription: n,
                       newPlan: es,
-                      planGroup: V,
+                      planGroup: F,
                       fractionalPremiumInfo: ec,
                       priceOptions: p,
                       preventFetch: ed
@@ -174,7 +174,7 @@ function Y(e) {
                             planOptions: ep,
                             eligibleForMultiMonthPlans: !1,
                             selectedPlanId: w,
-                            planGroup: V,
+                            planGroup: F,
                             showTotal: !1,
                             handleClose: J
                         }),
@@ -224,12 +224,12 @@ function Y(e) {
                 isActive: G,
                 ref: k,
                 children:
-                    null != n && (0, N.R4)(n, w, V)
+                    null != n && (0, N.R4)(n, w, F)
                         ? (0, r.jsx)(z, {
                               premiumSubscription: n,
                               newPlan: es,
-                              onInvoiceError: F,
-                              planGroup: V,
+                              onInvoiceError: V,
+                              planGroup: F,
                               priceOptions: p,
                               preventFetch: ed,
                               disabled: ed,
@@ -244,7 +244,7 @@ function Y(e) {
                                   paymentSourceType: eo,
                                   basePrice: (0, A.aS)(es.id, !1, ei, p),
                                   currentSubscription: n,
-                                  planGroup: V
+                                  planGroup: F
                               }),
                               forceShow: !0,
                               showPricingLink: es.currency !== j.pKx.USD,
@@ -252,7 +252,7 @@ function Y(e) {
                               disabled: ed,
                               subscriptionPlan: es,
                               currentSubscription: n,
-                              planGroup: V
+                              planGroup: F
                           })
             })
         ]
@@ -523,12 +523,12 @@ let X = (e) => {
             analyticsLocation: p.Z.BILLING_SWITCH_PLAN_IMMEDIATE_PRORATED_INVOICE_PREVIEW
         },
         [s, l] = (0, C.ED)(
-            H(V({}, o), {
+            H(F({}, o), {
                 renewal: !1,
                 applyEntitlements: !0
             })
         ),
-        [c, u] = (0, C.ED)(H(V({}, o), { renewal: !0 }));
+        [c, u] = (0, C.ED)(H(F({}, o), { renewal: !0 }));
     return {
         proratedInvoicePreview: s,
         proratedInvoiceError: l,

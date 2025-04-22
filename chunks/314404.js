@@ -41,8 +41,8 @@ var r = n(200651),
     U = n(311821),
     G = n(459965),
     B = n(811616),
-    F = n(251660),
-    V = n(474936),
+    V = n(251660),
+    F = n(474936),
     Z = n(981631),
     H = n(231338),
     Y = n(388032),
@@ -125,40 +125,40 @@ function ee(e, t) {
         r = Y.intl.string(Y.t.CDa6Dg),
         i = (() => {
             switch (e.interval) {
-                case V.rV.YEAR:
+                case F.rV.YEAR:
                     return n;
-                case V.rV.MONTH:
+                case F.rV.MONTH:
                 default:
                     return r;
             }
         })(),
         a = e.skuId;
     switch (t) {
-        case V.Si.TIER_0:
+        case F.Si.TIER_0:
             switch (a) {
-                case V.Si.TIER_1:
+                case F.Si.TIER_1:
                     return Y.intl.string(Y.t.q6mxDQ);
-                case V.Si.TIER_2:
+                case F.Si.TIER_2:
                     return Y.intl.string(Y.t.seZVS0);
                 default:
                     return i;
             }
-        case V.Si.TIER_1:
+        case F.Si.TIER_1:
             switch (a) {
-                case V.Si.TIER_0:
+                case F.Si.TIER_0:
                     return Y.intl.string(Y.t['7+u2zs']);
-                case V.Si.TIER_2:
+                case F.Si.TIER_2:
                     return Y.intl.string(Y.t.NG2qcX);
                 default:
                     return i;
             }
-        case V.Si.TIER_2:
+        case F.Si.TIER_2:
             switch (a) {
-                case V.Si.TIER_0:
-                case V.Si.TIER_1:
+                case F.Si.TIER_0:
+                case F.Si.TIER_1:
                     return Y.intl.string(Y.t['eB0/w8']);
-                case V.Si.TIER_2:
-                    return e.interval === V.rV.MONTH ? Y.intl.formatToPlainString(Y.t['RqUv8/'], { numFreeGuildSubscriptions: V.cb }) : i;
+                case F.Si.TIER_2:
+                    return e.interval === F.rV.MONTH ? Y.intl.formatToPlainString(Y.t['RqUv8/'], { numFreeGuildSubscriptions: F.cb }) : i;
                 default:
                     return i;
             }
@@ -191,9 +191,9 @@ function et(e) {
         eL = null != Q ? Q : ef;
     l()(null != eL, 'Price option has to be set');
     let ex = (0, _.Z)(),
-        eM = null != eN && V.nG[eN.trial_id].skus.includes(b),
+        eM = null != eN && F.nG[eN.trial_id].skus.includes(b),
         ek = null != eR && $.some((e) => (null == eP ? void 0 : eP.includes(e))) && null != eR.discount,
-        ej = (0, O.aS)(V.Xh.PREMIUM_MONTH_TIER_2, !1, e_, eL);
+        ej = (0, O.aS)(F.Xh.PREMIUM_MONTH_TIER_2, !1, e_, eL);
     i.useEffect(() => {
         et && T.ZP.trackExposure({ location: '5f89bb_1' });
     }, [et]);
@@ -212,15 +212,15 @@ function et(e) {
         }, [eb, ey, eI]);
     let eG = !eO && (e_ || (!eM && !ek)) && eU && ei,
         eB = (0, u.arW)(),
-        { ref: eF } = eB,
-        eV = J(eB, ['ref']),
+        { ref: eV } = eB,
+        eF = J(eB, ['ref']),
         eZ = (null == ew ? void 0 : ew.id) != null ? (0, O.aS)(ew.id, !1, e_, eL) : void 0,
         { ipCountryCode: eH } = (0, R.Z)(),
         eY = 'HR' === eH && null != eZ && eZ.currency === H.pK.EUR,
         eW = (0, O.Ap)(eL.paymentSourceId),
-        eK = i.useMemo(() => ((null == eC ? void 0 : eC.interval) === V.rV.DAY ? ((null == eC ? void 0 : eC.interval_count) > 7 ? Y.intl.string(Y.t.Z1V2cn) : Y.intl.string(Y.t.MI1rHh)) : Y.intl.string(Y.t['+S5lra'])), [eC]),
+        eK = i.useMemo(() => ((null == eC ? void 0 : eC.interval) === F.rV.DAY ? ((null == eC ? void 0 : eC.interval_count) > 7 ? Y.intl.string(Y.t.Z1V2cn) : Y.intl.string(Y.t.MI1rHh)) : Y.intl.string(Y.t['+S5lra'])), [eC]),
         ez = !e_ && (ek || (null != eC && eM && null != er)),
-        eq = null == ea || null == (s = ea.find((e) => e.subscriptionPlanId === V.Xh.PREMIUM_MONTH_TIER_2)) || null == (a = s.discounts) || null == (n = a.find((e) => e.type === f.eW.SUBSCRIPTION_PLAN)) ? void 0 : n.amount,
+        eq = null == ea || null == (s = ea.find((e) => e.subscriptionPlanId === F.Xh.PREMIUM_MONTH_TIER_2)) || null == (a = s.discounts) || null == (n = a.find((e) => e.type === f.eW.SUBSCRIPTION_PLAN)) ? void 0 : n.amount,
         eQ = (e, t, n) => {
             if (eO)
                 return (0, r.jsx)(u.vwX, {
@@ -233,7 +233,7 @@ function et(e) {
                     children: Y.intl.string(Y.t.a19jpa)
                 });
             if (t) {
-                let t = (null == e ? void 0 : e.trial_id) === V.a7;
+                let t = (null == e ? void 0 : e.trial_id) === F.a7;
                 return (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsx)(u.Text, {
@@ -250,7 +250,7 @@ function et(e) {
                     ]
                 });
             }
-            if (n && null != eq && null != ej && U === V.Xh.PREMIUM_MONTH_TIER_2)
+            if (n && null != eq && null != ej && U === F.Xh.PREMIUM_MONTH_TIER_2)
                 return (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsx)(u.Text, {
@@ -278,7 +278,7 @@ function et(e) {
                 });
         },
         { enabled: eJ } = A.G.useExperiment({ location: 'PremiumPlanSelectStep' }, { autoTrackExposure: !1 }),
-        e$ = eE === V.Wt.DM_CHANNEL && eJ,
+        e$ = eE === F.Wt.DM_CHANNEL && eJ,
         e0 = e$ ? K.bodyColumnLeft : K.bodyColumnMiddle,
         e1 = () =>
             eO && null != eh
@@ -292,7 +292,7 @@ function et(e) {
         e2 = () =>
             (0, r.jsx)(
                 'div',
-                X(q({ ref: eF }, eV), {
+                X(q({ ref: eV }, eF), {
                     children: $.map((e) =>
                         (0, r.jsx)(
                             B.Z,
@@ -315,7 +315,7 @@ function et(e) {
         e3 = () => eQ(eN, eM, ek),
         e4 = () => (eY ? (0, r.jsx)(d.Z, { message: Y.intl.formatToPlainString(Y.t['9hnZoK'], { kunaPriceWithCurrency: (0, I.T4)(7.5345 * eZ.amount, H.pK.HRK) }) }) : null),
         e5 = null != g && null != U && (0, S.R4)(g, U, z),
-        e6 = ex.isFractionalPremiumActive && (null == g || e5) && !e_ && null != U && V.dJ.has(U);
+        e6 = ex.isFractionalPremiumActive && (null == g || e5) && !e_ && null != U && F.dJ.has(U);
     return (0, r.jsxs)('div', {
         className: o()(eO ? K.stepBodyCustomGift : K.stepBody, { [K.paddingForHalloweenBanner]: eS }),
         children: [
@@ -335,7 +335,7 @@ function et(e) {
             (0, r.jsxs)('div', {
                 className: eO ? K.bodyColumnRight : void 0,
                 children: [
-                    (0, r.jsx)(F.s, {
+                    (0, r.jsx)(V.s, {
                         className: eo ? K.compactSendGiftToUser : void 0,
                         giftRecipient: ep
                     }),

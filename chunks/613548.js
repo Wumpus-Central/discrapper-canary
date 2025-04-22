@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(221241),
     E = n(44136),
     I = n(651183),
-    P = n(853476),
-    S = n(618158),
+    S = n(853476),
+    P = n(618158),
     Z = n(390322),
     N = n(616286),
     T = n(961048),
@@ -153,7 +153,7 @@ function Q(e) {
         ea = !er && eo && (n.isGuildVoice() || n.isGroupDM()),
         { enabled: es, inInbox: ec } = v.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
         eu = (0, b.Q3)('ChannelCallHeaderToolbar'),
-        { preventIdle: ed, allowIdle: ep } = (0, S.Y)('popup'),
+        { preventIdle: ed, allowIdle: ep } = (0, P.Y)('popup'),
         eh = [];
     if (ei && !eo && !J) {
         let e = (null == et ? void 0 : et.type) === V.fO.STREAM ? (0, _.my)(et.id) : void 0,
@@ -223,7 +223,7 @@ function Q(e) {
         (null == et ? void 0 : et.type) === V.fO.USER &&
             eh.push(
                 (0, r.jsx)(
-                    P.Z,
+                    S.Z,
                     {
                         className: Y.button,
                         userId: et.id

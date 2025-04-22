@@ -22,7 +22,7 @@ n.d(t, {
     hv: () => M,
     iR: () => ea,
     jD: () => eU,
-    kt: () => eF,
+    kt: () => eV,
     mn: () => eD,
     nl: () => eE,
     oj: () => R,
@@ -33,7 +33,7 @@ n.d(t, {
     tx: () => w,
     uC: () => Y,
     vc: () => Z,
-    vd: () => F,
+    vd: () => V,
     vg: () => en,
     xL: () => ee,
     zS: () => q,
@@ -143,12 +143,12 @@ function G(e) {
     return U.has(e);
 }
 let B = new Set([g.d4z.DM, g.d4z.GROUP_DM, g.d4z.GUILD_VOICE, g.d4z.GUILD_STAGE_VOICE, g.d4z.PUBLIC_THREAD, g.d4z.PRIVATE_THREAD]);
-function F(e) {
+function V(e) {
     return B.has(e);
 }
-let V = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.ANNOUNCEMENT_THREAD, g.d4z.PUBLIC_THREAD, g.d4z.PRIVATE_THREAD, g.d4z.GUILD_DIRECTORY, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA, g.d4z.DM, g.d4z.GROUP_DM]);
+let F = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.ANNOUNCEMENT_THREAD, g.d4z.PUBLIC_THREAD, g.d4z.PRIVATE_THREAD, g.d4z.GUILD_DIRECTORY, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA, g.d4z.DM, g.d4z.GROUP_DM]);
 function Z(e) {
-    return V.has(e);
+    return F.has(e);
 }
 let H = new Set([g.d4z.ANNOUNCEMENT_THREAD, g.d4z.PUBLIC_THREAD, g.d4z.PRIVATE_THREAD]),
     Y = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA]);
@@ -320,7 +320,7 @@ class eg extends ep {
         return this.type === g.d4z.GUILD_CATEGORY;
     }
     isVocal() {
-        return F(this.type);
+        return V(this.type);
     }
     isGuildVocal() {
         return D(this.type);
@@ -761,7 +761,7 @@ function ej(e, t) {
     return (null != (r = ek[null != (n = e.type) ? n : g.d4z.GUILD_TEXT]) ? r : eE.fromServer)(e, t);
 }
 function eU(e) {
-    return eF(e);
+    return eV(e);
 }
 let eG = {
     [g.d4z.DM]: eL,
@@ -784,7 +784,7 @@ function eB(e) {
     let r = null != (n = eG[null != (t = e.type) ? t : g.d4z.GUILD_TEXT]) ? n : eE;
     return (0, d.gh)(e, r);
 }
-function eF(e) {
+function eV(e) {
     var t, n;
     return new (null != (n = eG[null != (t = e.type) ? t : g.d4z.GUILD_TEXT]) ? n : eE)(eh(e));
 }

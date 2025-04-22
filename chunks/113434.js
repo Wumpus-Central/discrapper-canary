@@ -98,17 +98,17 @@ function B() {
         }
     );
 }
-function F(e) {
+function V(e) {
     return e.sort((e, t) => {
         var n, r, i, a, o, s;
         let l = !(0, R.zi)(e),
             c = !(0, R.zi)(t),
             u = (null == (n = e.userStatus) ? void 0 : n.enrolledAt) != null,
             d = (null == (r = t.userStatus) ? void 0 : r.enrolledAt) != null;
-        return l !== c ? (l ? U : G) : u !== d ? (u ? U : G) : l && c ? V(null == (o = e.config) ? void 0 : o.expiresAt, null == (s = t.config) ? void 0 : s.expiresAt, 1) : V(null == (i = e.config) ? void 0 : i.expiresAt, null == (a = t.config) ? void 0 : a.expiresAt, 0);
+        return l !== c ? (l ? U : G) : u !== d ? (u ? U : G) : l && c ? F(null == (o = e.config) ? void 0 : o.expiresAt, null == (s = t.config) ? void 0 : s.expiresAt, 1) : F(null == (i = e.config) ? void 0 : i.expiresAt, null == (a = t.config) ? void 0 : a.expiresAt, 0);
     });
 }
-function V(e, t, n) {
+function F(e, t, n) {
     let r = 0 === n ? U : G;
     return e.localeCompare(t) * r;
 }
@@ -117,7 +117,7 @@ function Z(e) {
     return r.useMemo(() => {
         if (0 === e.length) return [];
         if (t.current.length > 0 && t.current.length === e.length) return t.current;
-        let n = F(e).map((e) => e.id);
+        let n = V(e).map((e) => e.id);
         return (t.current = n), n;
     }, [e]);
 }
@@ -140,7 +140,7 @@ function H(e) {
             .sort((e, t) => {
                 var n, r;
                 let i = (null == (n = e.userStatus) ? void 0 : n.claimedAt) == null;
-                return i !== ((null == (r = t.userStatus) ? void 0 : r.claimedAt) == null) ? (i ? U : G) : V(L.r.build(e.config).rewardsExpireAt, L.r.build(t.config).rewardsExpireAt, 0);
+                return i !== ((null == (r = t.userStatus) ? void 0 : r.claimedAt) == null) ? (i ? U : G) : F(L.r.build(e.config).rewardsExpireAt, L.r.build(t.config).rewardsExpireAt, 0);
             })
             .map((e) => e.id);
         return (n.current = e), e;

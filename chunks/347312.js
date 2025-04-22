@@ -123,17 +123,17 @@ function G(e) {
         A = i.useRef(null),
         C = window.devicePixelRatio,
         { lastBackgroundFillColor: R, backgroundFillColor: w, lastActiveFillColor: D, activeFillColor: k, lastInactiveFillColor: G, inactiveFillColor: B } = j(l, d),
-        F = {
+        V = {
             currentTime: a,
             duration: s,
             played: l
         },
-        V = i.useRef(F);
+        F = i.useRef(V);
     i.useEffect(() => {
-        V.current = F;
+        F.current = V;
     }),
         i.useEffect(() => {
-            let { currentTime: e, duration: t, played: n } = V.current,
+            let { currentTime: e, duration: t, played: n } = F.current,
                 r = L({
                     showAll: !n,
                     currentTime: e,

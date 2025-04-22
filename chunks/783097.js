@@ -1,8 +1,8 @@
 n.d(t, {
     $d: () => w,
     BQ: () => P,
-    Cb: () => F,
-    Hu: () => V,
+    Cb: () => V,
+    Hu: () => F,
     L1: () => K,
     Ow: () => W,
     PZ: () => z,
@@ -218,10 +218,10 @@ function B(e) {
               description: O.intl.string(O.t.X9fusr)
           };
 }
-function F(e) {
+function V(e) {
     return !!P(e) && (e instanceof p.ZP ? e.isMonetized : e.is_monetized);
 }
-function V(e) {
+function F(e) {
     let t = U(e);
     return null != t && t.displays_advertisements;
 }

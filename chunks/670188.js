@@ -166,12 +166,12 @@ function A(e) {
         [j, U] = i.useState(!1),
         G = i.useRef(!1),
         B = i.useRef(void 0),
-        F = i.useRef(void 0),
         V = i.useRef(void 0),
+        F = i.useRef(void 0),
         Z = (0, u.Z)(),
         H = (0, l.Z)(Z),
         Y = i.useCallback(() => {
-            clearTimeout(B.current), clearTimeout(F.current), clearTimeout(V.current);
+            clearTimeout(B.current), clearTimeout(V.current), clearTimeout(F.current);
         }, []);
     (0, s.zq)(Y);
     let W = i.useCallback(
@@ -224,14 +224,14 @@ function A(e) {
                                 U(!1);
                             }
                     }, _.a6)),
-                (F.current = setTimeout(() => {
+                (V.current = setTimeout(() => {
                     (0, o.$sL)() || H.current || (G.current && (null == x.current && (x.current = Date.now()), k(!0)));
                 }, _.JX));
         }, [Y, D, W, H]),
         q = i.useCallback(() => {
             Y(),
                 (G.current = !1),
-                (V.current = setTimeout(() => {
+                (F.current = setTimeout(() => {
                     G.current || ((x.current = void 0), k(!1));
                 }, _.Ig));
         }, [Y]);

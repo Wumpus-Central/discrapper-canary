@@ -14,9 +14,9 @@ n.d(t, {
     jA: () => D,
     kI: () => R,
     nV: () => K,
-    q5: () => V,
+    q5: () => F,
     to: () => x,
-    wC: () => F,
+    wC: () => V,
     y$: () => L
 }),
     n(290780),
@@ -56,8 +56,8 @@ let R = function (e, t) {
             i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
         (0, d.O)(n);
         let a = (0, T.Gt)(e),
-            s = F(n),
-            _ = V(n),
+            s = V(n),
+            _ = F(n),
             { canSplitFrecencyList: g } = (0, c.S)({
                 location: 'useEmojiCategories',
                 autoTrackExposure: !0
@@ -363,7 +363,7 @@ function B(e, t, n) {
         o.pF
     );
 }
-function F(e) {
+function V(e) {
     return (
         r.useEffect(() => {
             _.DZ.loadIfNecessary();
@@ -371,7 +371,7 @@ function F(e) {
         (0, o.Wu)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(e).getFrequentlyUsedEmojisWithoutFetchingLatest())
     );
 }
-function V(e) {
+function F(e) {
     return (
         r.useEffect(() => {
             _.DZ.loadIfNecessary();

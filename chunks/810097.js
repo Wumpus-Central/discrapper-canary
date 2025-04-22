@@ -93,26 +93,26 @@ function P(e) {
         w = i.useRef(null),
         D = (0, c.e7)([p.default], () => p.default.getId() === t.id),
         L = (0, h.Z)(t.id),
-        { profileType: x } = (0, E.z)(),
+        { themeType: x } = (0, E.z)(),
         { onInteraction: M, onInteractionPopoutTargetRefChange: k } = (0, g.Xo)(),
         { live: j, stream: U } = (0, m.Z)(t.id),
         G =
             !a &&
-            x !== b.y0.FULL_SIZE &&
+            x !== b.lY.MODAL &&
             (0, l.EQ)(n)
                 .with(b.n_.STATUS, () => 0 === j.length && null == U)
                 .with(b.n_.ACTIVITY, () => !0)
                 .with(b.n_.AVATAR, () => !1)
                 .exhaustive(),
-        [B, F] = i.useState(G);
+        [B, V] = i.useState(G);
     if (
         (i.useEffect(() => {
-            B && !G && F(!1);
+            B && !G && V(!1);
         }, [B, G]),
         t.bot || D || !L)
     )
         return null;
-    let V = () => {
+    let F = () => {
             k(A),
                 n === b.n_.AVATAR ? N({ action: 'PRESS_REACT_AVATAR' }) : n === b.n_.STATUS ? N({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : N({ action: 'PRESS_REACT_ACTIVITY' }),
                 null == M ||
@@ -121,7 +121,7 @@ function P(e) {
                         interactionSource: n,
                         interactionSourceId: S
                     }),
-                x === b.y0.BITE_SIZE && (0, _.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                x === b.lY.POPOUT && (0, _.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
         Z = () => {
             k(A),
@@ -132,10 +132,10 @@ function P(e) {
                         interactionSource: n,
                         interactionSourceId: S
                     }),
-                x === b.y0.BITE_SIZE && (0, _.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                x === b.lY.POPOUT && (0, _.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
         H = (e) => {
-            e.animationName === (0, s.get)(v, 'fadeInAndOut') && F(!1);
+            e.animationName === (0, s.get)(v, 'fadeInAndOut') && V(!1);
         };
     return (0, r.jsxs)(f.ZP, {
         className: o()(v.popover, {
@@ -155,7 +155,7 @@ function P(e) {
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(f.zx, {
-                    onClick: V,
+                    onClick: F,
                     className: v.button,
                     'aria-label': C[n](),
                     'aria-haspopup': 'dialog',

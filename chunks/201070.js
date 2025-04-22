@@ -224,7 +224,7 @@ function B(e) {
         nextPageChunkNumber: G(i, t)
     };
 }
-function F(e, t) {
+function V(e, t) {
     var n;
     let { currentPageChunkNumber: r, previousPageChunkNumber: i, nextPageChunkNumber: a } = B(t),
         { previousPagination: o } = R(S(e)),
@@ -246,9 +246,9 @@ function F(e, t) {
             return 1;
     }
 }
-function V(e, t, n) {
+function F(e, t, n) {
     var r, i, a, o, s, l;
-    let c = F(e, n),
+    let c = V(e, n),
         u = g.Z.getElasticSearchPaginationByGuildId(e),
         f = (0, _.t3)(n);
     switch (c) {
@@ -292,7 +292,7 @@ async function H(e) {
         o = g.Z.getPaginationStateByGuildId(e),
         s = S(e),
         l = R(s),
-        [c, u] = V(e, l, o),
+        [c, u] = F(e, l, o),
         d = U(j(i), u),
         f = null != (t = i.selectedSort) ? t : h.d$.ORDER_BY_GUILD_JOINED_AT_DESC;
     if (Z(s, d) && (0, a.isEqual)(c, l.cursor)) return;

@@ -8,9 +8,9 @@ var a = n(120356),
     c = n(118012),
     s = n(237844);
 function d(e) {
-    let { text: t, textSize: n = c.Z.Sizes.SIZE_12, textColor: a = c.Z.Colors.STANDARD, className: d, button: u, reducedRightPadding: f = !1 } = e;
+    let { text: t, textSize: n = c.Z.Sizes.SIZE_12, textColor: a = c.Z.Colors.STANDARD, className: d, button: u, reducedRightPadding: _ = !1 } = e;
     return (0, i.jsxs)('div', {
-        className: o()(f ? s.noticeWithoutRightPadding : s.noticeWithRightPadding, d),
+        className: o()(_ ? s.noticeWithoutRightPadding : s.noticeWithRightPadding, d),
         children: [
             (0, i.jsxs)('div', {
                 className: s.noticeLeft,

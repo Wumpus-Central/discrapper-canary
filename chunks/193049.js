@@ -16,12 +16,12 @@ var r = n(200651),
     O = n(986197),
     p = n(135200),
     y = n(346585),
-    b = n(347649),
-    S = n(361117),
+    S = n(347649),
+    b = n(361117),
     x = n(108793),
     j = n(635774),
-    N = n(387955),
-    v = n(801461),
+    v = n(387955),
+    N = n(801461),
     T = n(448624),
     P = n(981631),
     _ = n(388032),
@@ -57,7 +57,7 @@ function A(e) {
         [M, L] = i.useState(k ? T.A.SUGGESTIONS : T.A.INFO),
         [R, D] = i.useState(!1),
         [U, Z] = i.useState(null),
-        [G, W] = i.useState(k ? v.Wq.SUGGESTION : v.Wq.NONE),
+        [G, W] = i.useState(k ? N.Wq.SUGGESTION : N.Wq.NONE),
         [q, z] = i.useState(!1),
         [F, H] = i.useState(!1),
         B = i.useRef(null),
@@ -66,10 +66,10 @@ function A(e) {
             let e = f.default.getCurrentUser();
             return o()(null != e, 'PomeloModal: user cannot be undefined'), e;
         }),
-        K = (0, b.CC)(),
-        { usernameSuggestion: Y, usernameSuggestionLoading: Q } = (0, S.G)(k ? v.en : void 0);
+        Y = (0, S.CC)(),
+        { usernameSuggestion: K, usernameSuggestionLoading: Q } = (0, b.G)(k ? N.en : void 0);
     i.useEffect(() => {
-        G === v.Wq.EDIT_USERNAME && H(!0),
+        G === N.Wq.EDIT_USERNAME && H(!0),
             E.default.track(P.rMx.POMELO_EDIT_STEP_VIEWED, {
                 source: n,
                 step: G
@@ -78,13 +78,13 @@ function A(e) {
         i.useEffect(() => {
             F ||
                 q ||
-                null == Y ||
-                !(Y.length > 0) ||
+                null == K ||
+                !(K.length > 0) ||
                 $((e) => {
                     var t, n;
                     return (
                         (t = C({}, e)),
-                        (n = n = { username: Y }),
+                        (n = n = { username: K }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                             : (function (e, t) {
@@ -100,7 +100,7 @@ function A(e) {
                         t
                     );
                 });
-        }, [Y, F, q]);
+        }, [K, F, q]);
     let [J, $] = i.useState({
             username: (0, y.e$)(X),
             globalName: h.ZP.getName(X)
@@ -119,7 +119,7 @@ function A(e) {
                     slideId: T.A.EDIT_SCREEN,
                     next: T.A.FINISH_LATER,
                     back: T.A.INFO,
-                    footerButtons: [G === v.Wq.PREVIEW ? 'GOT_IT' : 'BACK', G === v.Wq.PREVIEW ? 'GOT_IT' : G === v.Wq.EDIT_USERNAME ? 'SUBMIT' : 'NEXT']
+                    footerButtons: [G === N.Wq.PREVIEW ? 'GOT_IT' : 'BACK', G === N.Wq.PREVIEW ? 'GOT_IT' : G === N.Wq.EDIT_USERNAME ? 'SUBMIT' : 'NEXT']
                 },
                 {
                     slideId: T.A.FINISH_LATER,
@@ -127,7 +127,7 @@ function A(e) {
                 },
                 {
                     slideId: T.A.SUGGESTIONS,
-                    footerButtons: [G === v.Wq.PREVIEW ? 'GOT_IT' : 'UPDATE']
+                    footerButtons: [G === N.Wq.PREVIEW ? 'GOT_IT' : 'UPDATE']
                 },
                 { slideId: T.A.FINISH_LATER }
             ],
@@ -148,9 +148,9 @@ function A(e) {
                     });
                 return;
             }
-            if (h.ZP.getGlobalName(X) === J.globalName) return void W(v.Wq.EDIT_USERNAME);
+            if (h.ZP.getGlobalName(X) === J.globalName) return void W(N.Wq.EDIT_USERNAME);
             try {
-                Z(null), D(!0), await (0, d.S2)({ global_name: J.globalName }), W(v.Wq.EDIT_USERNAME);
+                Z(null), D(!0), await (0, d.S2)({ global_name: J.globalName }), W(N.Wq.EDIT_USERNAME);
             } catch (t) {
                 let e = new g.Z(t).getAnyErrorMessage();
                 E.default.track(P.rMx.POMELO_ERRORS, {
@@ -165,7 +165,7 @@ function A(e) {
         }, [X, J]),
         ei = i.useCallback(async () => {
             try {
-                Z(null), D(!0), await O.Z.createPomelo({ username: (0, y.R_)(J.username) }, k), await (0, u.In)(X.id), W(v.Wq.PREVIEW);
+                Z(null), D(!0), await O.Z.createPomelo({ username: (0, y.R_)(J.username) }, k), await (0, u.In)(X.id), W(N.Wq.PREVIEW);
             } catch (n) {
                 let e = new g.Z(n),
                     t = (null == e ? void 0 : e.status) != null && e.status >= 400 && e.status < 500 ? e.getAnyErrorMessage() : _.intl.string(_.t.R0RpRU);
@@ -182,18 +182,18 @@ function A(e) {
         }, [J, X.id, k]),
         es = V || (0, y.NX)(X),
         eo = i.useCallback(() => {
-            W(es ? v.Wq.EDIT_USERNAME : v.Wq.EDIT_DISPLAY_NAME), L(et[Math.min(en - 1, M + 1)].slideId);
+            W(es ? N.Wq.EDIT_USERNAME : N.Wq.EDIT_DISPLAY_NAME), L(et[Math.min(en - 1, M + 1)].slideId);
         }, [M, et, en, es]),
         el = i.useCallback(() => {
-            Z(null), M === T.A.EDIT_SCREEN ? (G === v.Wq.EDIT_USERNAME ? (es ? (W(v.Wq.NONE), L(et[Math.max(0, M - 1)].slideId)) : W(v.Wq.EDIT_DISPLAY_NAME)) : G === v.Wq.EDIT_DISPLAY_NAME ? (W(v.Wq.NONE), L(et[Math.max(0, M - 1)].slideId)) : G === v.Wq.PREVIEW && W(v.Wq.EDIT_USERNAME)) : L(et[Math.max(0, M - 1)].slideId);
+            Z(null), M === T.A.EDIT_SCREEN ? (G === N.Wq.EDIT_USERNAME ? (es ? (W(N.Wq.NONE), L(et[Math.max(0, M - 1)].slideId)) : W(N.Wq.EDIT_DISPLAY_NAME)) : G === N.Wq.EDIT_DISPLAY_NAME ? (W(N.Wq.NONE), L(et[Math.max(0, M - 1)].slideId)) : G === N.Wq.PREVIEW && W(N.Wq.EDIT_USERNAME)) : L(et[Math.max(0, M - 1)].slideId);
         }, [et, M, G, es]),
         ea = i.useCallback(() => {
             L(T.A.FINISH_LATER);
         }, []),
         ec = i.useCallback(() => {
-            k ? (L(T.A.SUGGESTIONS), W(v.Wq.SUGGESTION)) : (L(T.A.INFO), W(v.Wq.NONE));
+            k ? (L(T.A.SUGGESTIONS), W(N.Wq.SUGGESTION)) : (L(T.A.INFO), W(N.Wq.NONE));
         }, [k]),
-        eu = i.useMemo(() => (M === T.A.EDIT_SCREEN && G === v.Wq.EDIT_DISPLAY_NAME ? er : M === T.A.EDIT_SCREEN && G === v.Wq.EDIT_USERNAME ? ei : M === T.A.SUGGESTIONS && G === v.Wq.SUGGESTION ? ei : eo), [M, G, er, ei, eo]),
+        eu = i.useMemo(() => (M === T.A.EDIT_SCREEN && G === N.Wq.EDIT_DISPLAY_NAME ? er : M === T.A.EDIT_SCREEN && G === N.Wq.EDIT_USERNAME ? ei : M === T.A.SUGGESTIONS && G === N.Wq.SUGGESTION ? ei : eo), [M, G, er, ei, eo]),
         ed = i.useMemo(() => {
             var e, t;
             return w(
@@ -217,15 +217,15 @@ function A(e) {
         i.useEffect(() => {
             var e, t;
             switch (G) {
-                case v.Wq.EDIT_DISPLAY_NAME:
+                case N.Wq.EDIT_DISPLAY_NAME:
                     null == (e = B.current) || e.focusDisplayName();
                     break;
-                case v.Wq.EDIT_USERNAME:
-                case v.Wq.SUGGESTION:
+                case N.Wq.EDIT_USERNAME:
+                case N.Wq.SUGGESTION:
                     null == (t = B.current) || t.focusUsername();
             }
         }, [G]),
-        !q && null == U && (G === v.Wq.EDIT_USERNAME ? (t = _.intl.formatToPlainString(_.t.AJh8BQ, { source: X.username })) : G === v.Wq.SUGGESTION && (Q || null != Y) && (t = _.intl.string(_.t['i/2SgI']))),
+        !q && null == U && (G === N.Wq.EDIT_USERNAME ? (t = _.intl.formatToPlainString(_.t.AJh8BQ, { source: X.username })) : G === N.Wq.SUGGESTION && (Q || null != K) && (t = _.intl.string(_.t['i/2SgI']))),
         (0, r.jsxs)(c.Y0X, {
             className: I.modalRoot,
             impression: {
@@ -241,7 +241,7 @@ function A(e) {
             children: [
                 (0, r.jsx)(c.zxk, {
                     onClick: () => {
-                        K && (M === T.A.SUGGESTIONS || M === T.A.EDIT_SCREEN) ? L(T.A.FINISH_LATER) : A();
+                        Y && (M === T.A.SUGGESTIONS || M === T.A.EDIT_SCREEN) ? L(T.A.FINISH_LATER) : A();
                     },
                     size: c.zxk.Sizes.MIN,
                     look: c.zxk.Looks.BLANK,
@@ -263,7 +263,7 @@ function A(e) {
                         children: [
                             (0, r.jsx)(c.Mi4, {
                                 id: T.A.INFO,
-                                children: (0, r.jsx)(N.Z, { user: X })
+                                children: (0, r.jsx)(v.Z, { user: X })
                             }),
                             (0, r.jsx)(c.Mi4, {
                                 id: T.A.EDIT_SCREEN,
@@ -275,8 +275,8 @@ function A(e) {
                                     formValues: J,
                                     footerNotice: t,
                                     onChangeFormValue: ee,
-                                    onFocusUsername: () => W(v.Wq.EDIT_USERNAME),
-                                    onFocusDisplayName: () => W(v.Wq.EDIT_DISPLAY_NAME),
+                                    onFocusUsername: () => W(N.Wq.EDIT_USERNAME),
+                                    onFocusDisplayName: () => W(N.Wq.EDIT_DISPLAY_NAME),
                                     onClose: A
                                 })
                             }),
@@ -297,8 +297,8 @@ function A(e) {
                                     formValues: J,
                                     footerNotice: t,
                                     onChangeFormValue: ee,
-                                    onFocusUsername: () => W(v.Wq.SUGGESTION),
-                                    onFocusDisplayName: () => W(v.Wq.EDIT_DISPLAY_NAME),
+                                    onFocusUsername: () => W(N.Wq.SUGGESTION),
+                                    onFocusDisplayName: () => W(N.Wq.EDIT_DISPLAY_NAME),
                                     onClose: A,
                                     usernameSuggestionLoading: Q,
                                     oneClickFlow: k

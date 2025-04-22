@@ -37,8 +37,8 @@ var r = n(200651),
     U = n(396955),
     G = n(314404),
     B = n(42818),
-    F = n(459965),
-    V = n(251660),
+    V = n(459965),
+    F = n(251660),
     Z = n(474936),
     H = n(981631),
     Y = n(231338),
@@ -89,7 +89,7 @@ function q(e) {
         eU = null != ey ? ey : '',
         eG = (0, l.e7)([A.Z], () => A.Z.get(eU), [eU]),
         eB = null == eG ? void 0 : eG.eligiblePaymentGateways,
-        [eF, eV] = (0, w.ED)({
+        [eV, eF] = (0, w.ED)({
             items: ek,
             renewal: !1,
             preventFetch: eA || eR || ej,
@@ -135,14 +135,14 @@ function q(e) {
         eS(eK);
     }, [eS, eK]);
     let eq = eR && (0, N.pO)(eP),
-        eQ = null != (a = null != (n = null != eV ? eV : eH) ? n : eW) ? a : ez;
+        eQ = null != (a = null != (n = null != eF ? eF : eH) ? n : eW) ? a : ez;
     i.useEffect(() => {
         eN(eQ);
     }, [eQ, eN]);
     let eX = (0, l.e7)([O.Z], () => O.Z.enabled),
         eJ = ee.paymentSourceId,
         e$ = (0, v.$)($, eJ),
-        { hasEntitlements: e0, entitlements: e1 } = (0, F.H)(eM.id, eR),
+        { hasEntitlements: e0, entitlements: e1 } = (0, V.H)(eM.id, eR),
         e2 = (0, C.Ap)(ee.paymentSourceId),
         e3 = (0, b.sE)(el, eJ, X),
         e4 = (0, y.Kp)({
@@ -152,10 +152,10 @@ function q(e) {
             startedPaymentFlowWithPaymentSources: eI.current,
             inReverseTrial: eA
         }),
-        [e5, e6] = i.useState(null == eF ? void 0 : eF.subscriptionPeriodEnd);
+        [e5, e6] = i.useState(null == eV ? void 0 : eV.subscriptionPeriodEnd);
     i.useEffect(() => {
-        null == e5 && e6(null == eF ? void 0 : eF.subscriptionPeriodEnd);
-    }, [null == eF ? void 0 : eF.subscriptionPeriodEnd, e5]);
+        null == e5 && e6(null == eV ? void 0 : eV.subscriptionPeriodEnd);
+    }, [null == eV ? void 0 : eV.subscriptionPeriodEnd, e5]);
     let e8 = (0, h.Z)(),
         e7 = !e4 && e8.isFractionalPremiumActive && Z.dJ.has(X),
         e9 = i.useMemo(
@@ -169,8 +169,8 @@ function q(e) {
                 }),
             [ey, eb, ev, eO]
         ),
-        te = (0, y.$g)(e4, eF, eM),
-        tt = i.useMemo(() => (eh && null != eF ? eF : eA && null != eZ ? eZ : void 0), [eA, eh, eF, eZ]);
+        te = (0, y.$g)(e4, eV, eM),
+        tt = i.useMemo(() => (eh && null != eV ? eV : eA && null != eZ ? eZ : void 0), [eA, eh, eV, eZ]);
     if (null != eQ);
     else if (eR && null != eK)
         Q = (0, r.jsx)(B.e9, {
@@ -217,12 +217,12 @@ function q(e) {
             ]
         });
     else {
-        if (null == eF || null == eZ || te)
+        if (null == eV || null == eZ || te)
             return (0, r.jsx)('div', {
                 className: K.spinnerWrapper,
                 children: (0, r.jsx)(u.$jN, {})
             });
-        eh && eF.subscriptionPeriodEnd !== eZ.subscriptionPeriodEnd && (q = eF.subscriptionPeriodEnd),
+        eh && eV.subscriptionPeriodEnd !== eZ.subscriptionPeriodEnd && (q = eV.subscriptionPeriodEnd),
             (Q = (0, r.jsxs)(r.Fragment, {
                 children: [
                     e7 && (0, r.jsx)(M.n, { fractionalPremiumInfo: e8 }),
@@ -231,7 +231,7 @@ function q(e) {
                         children: [
                             (0, r.jsx)(x.Z9, { children: W.intl.string(W.t['2eh+Cg']) }),
                             (0, r.jsx)(B.Lu, {
-                                invoice: eF,
+                                invoice: eV,
                                 newPlan: eM,
                                 isPrepaidPaymentSource: e2,
                                 referralTrialOfferId: ep
@@ -324,7 +324,7 @@ function q(e) {
                                   shouldAnimate: !0,
                                   className: K.giftMainAnimation
                               }),
-                              (0, r.jsx)(V.s, { giftRecipient: eP })
+                              (0, r.jsx)(F.s, { giftRecipient: eP })
                           ]
                       }),
                   Q,

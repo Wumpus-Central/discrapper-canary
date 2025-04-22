@@ -85,7 +85,7 @@ let k = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     U = /^ *>>> ?/,
     G = /^ *> ?/gm,
     B = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
-function F(e) {
+function V(e) {
     let t = (0, b.yw)(e[1]);
     if (null == t)
         return {
@@ -105,11 +105,11 @@ function F(e) {
         title: void 0
     };
 }
-let V = (e) => {
+let F = (e) => {
         let t = d.Z.getChannel(e);
         return null == t ? void 0 : t.getGuildId();
     },
-    Z = (e) => (null != e.guildId ? f.Z.getGuild(e.guildId) : null != e.channelId ? f.Z.getGuild(V(e.channelId)) : null),
+    Z = (e) => (null != e.guildId ? f.Z.getGuild(e.guildId) : null != e.channelId ? f.Z.getGuild(F(e.channelId)) : null),
     H = {
         newline: o().defaultRules.newline,
         paragraph: o().defaultRules.paragraph,
@@ -148,7 +148,7 @@ let V = (e) => {
             }
         }),
         link: b.ZP,
-        autolink: M(L({}, o().defaultRules.autolink), { parse: F }),
+        autolink: M(L({}, o().defaultRules.autolink), { parse: V }),
         mailto: M(L({}, o().defaultRules.mailto), {
             match: o().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
             requiredFirstCharacters: ['<']
@@ -194,7 +194,7 @@ let V = (e) => {
                 }
                 return n;
             },
-            parse: F
+            parse: V
         }),
         strong: o().defaultRules.strong,
         em: o().defaultRules.em,
@@ -448,7 +448,7 @@ let V = (e) => {
                     itemContent: l(s),
                     itemId: a,
                     id: i,
-                    guildId: V(n.channelId),
+                    guildId: F(n.channelId),
                     channelId: i
                 };
             }

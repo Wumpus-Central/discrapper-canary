@@ -29,18 +29,18 @@ n.d(t, {
     Zx: () => eq,
     _O: () => tI,
     a5: () => eG,
-    aS: () => F,
+    aS: () => V,
     al: () => eK,
     aq: () => J,
     bt: () => eN,
     dn: () => eU,
     eP: () => z,
-    fr: () => eF,
+    fr: () => eV,
     gB: () => eQ,
     gq: () => ee,
     gy: () => eC,
     he: () => e1,
-    if: () => eV,
+    if: () => eF,
     jP: () => X,
     k5: () => e0,
     lY: () => eg,
@@ -175,9 +175,9 @@ function B(e) {
         r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = null != (t = _.Z.defaultPaymentSourceId) ? t : void 0,
         a = h.ZP.getPremiumTypeSubscription();
-    return null != a && null != a.paymentSourceId && (i = a.paymentSourceId), F(e, n, r, { paymentSourceId: i });
+    return null != a && null != a.paymentSourceId && (i = a.paymentSourceId), V(e, n, r, { paymentSourceId: i });
 }
-function F(e) {
+function V(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
@@ -218,7 +218,7 @@ function F(e) {
         o)
     );
 }
-function V(e, t) {
+function F(e, t) {
     let n = p.Z.get(e);
     if (null == n) {
         let n = Error('Plan not found');
@@ -239,7 +239,7 @@ function V(e, t) {
 }
 function Z(e) {
     let { paymentSourceId: t, purchaseType: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { purchaseType: S.tuJ.DEFAULT },
-        r = V(e, n);
+        r = F(e, n);
     if (null != t) {
         let i = r.paymentSourcePrices[t];
         if (null == i) {
@@ -984,7 +984,7 @@ function eN(e) {
 }
 function eC(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        i = null != t ? F(e.id, !1, r, t) : B(e.id, !1, r),
+        i = null != t ? V(e.id, !1, r, t) : B(e.id, !1, r),
         a = (0, I.T4)(i.amount, i.currency);
     return e.currency !== N.pK.USD && !0 === n && (a = a.concat('*')), a;
 }
@@ -1026,7 +1026,7 @@ function ex(e, t, n) {
         }),
         i =
             null == r
-                ? F(n.id, !1, !1, {
+                ? V(n.id, !1, !1, {
                       paymentSourceId: t.paymentSourceId,
                       currency: t.currency
                   }).amount
@@ -1054,7 +1054,7 @@ function eM(e, t, n, r) {
         let t = Error('Unsupported plan');
         throw ((0, m.q2)(t, { tags: { planId: e } }), t);
     }
-    return F(o.id, (0, O.I5)(r), !1, i);
+    return V(o.id, (0, O.I5)(r), !1, i);
 }
 function ek(e) {
     return (
@@ -1151,7 +1151,7 @@ function eB(e) {
             throw Error('Unsupported interval duration.');
     }
 }
-function eF(e) {
+function eV(e) {
     if (null != e && null != e.subscription_trial) {
         let t = e.subscription_trial;
         return eB({
@@ -1161,7 +1161,7 @@ function eF(e) {
     }
     return null;
 }
-function eV(e) {
+function eF(e) {
     let { intervalType: t = A.rV.MONTH, intervalCount: n = 1, capitalize: r = !1 } = e;
     switch (t) {
         case A.rV.DAY:
@@ -1415,7 +1415,7 @@ let tR = Object.freeze({
     isPremium: O.I5,
     isPremiumExactly: O.M5,
     isPremiumEligible: tA,
-    getPrice: F,
+    getPrice: V,
     getDefaultPrice: B,
     getInterval: Y,
     getIntervalString: K,

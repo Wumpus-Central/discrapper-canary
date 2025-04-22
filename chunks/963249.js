@@ -90,7 +90,7 @@ function T(e, t) {
     return i;
 }
 function A(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: y, onComplete: O, onSubscriptionConfirmation: T, analyticsLocations: A, analyticsObject: N, analyticsLocation: C, analyticsSourceLocation: R, confirmationFooter: P, paymentModalBanner: w, isGift: D = !1, giftMessage: L, giftStyle: x, giftingOrigin: M, subscriptionTier: k, trialId: j, postSuccessGuild: U, openInvoiceId: G, applicationId: B, referralTrialOfferId: F, giftRecipient: V, returnRef: Z, subscription: H, skipConfirm: Y, repeatPurchase: W } = null != e ? e : {},
+    let { initialPlanId: t, followupSKUInfo: i, onClose: y, onComplete: O, onSubscriptionConfirmation: T, analyticsLocations: A, analyticsObject: N, analyticsLocation: C, analyticsSourceLocation: R, confirmationFooter: P, paymentModalBanner: w, isGift: D = !1, giftMessage: L, giftStyle: x, giftingOrigin: M, subscriptionTier: k, trialId: j, postSuccessGuild: U, openInvoiceId: G, applicationId: B, referralTrialOfferId: V, giftRecipient: F, returnRef: Z, subscription: H, skipConfirm: Y, repeatPurchase: W } = null != e ? e : {},
         K = !1,
         z = (0, o.Z)(),
         q = p.default.getCurrentUser(),
@@ -113,7 +113,7 @@ function A(e) {
                         giftMessage: L,
                         giftStyle: x,
                         giftingOrigin: M,
-                        giftRecipient: V,
+                        giftRecipient: F,
                         initialPlanId: t,
                         followupSKUInfo: i,
                         onClose: (e, t) => {
@@ -140,7 +140,7 @@ function A(e) {
                         planGroup: b.Y1,
                         openInvoiceId: G,
                         applicationId: B,
-                        referralTrialOfferId: F,
+                        referralTrialOfferId: V,
                         returnRef: Z,
                         subscription: H,
                         skipConfirm: !!Y,

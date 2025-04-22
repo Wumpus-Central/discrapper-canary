@@ -56,8 +56,8 @@ var r = n(200651),
     U = n(217702),
     G = n(981631),
     B = n(420212),
-    F = n(814249),
-    V = n(388032),
+    V = n(814249),
+    F = n(388032),
     Z = n(672);
 function H(e, t, n) {
     return (
@@ -217,7 +217,7 @@ function en(e) {
         E = (e) => {
             let { altText: t } = e;
             return (0, r.jsxs)(d.VqE, {
-                'aria-label': V.intl.string(V.t.fSiQ3N),
+                'aria-label': F.intl.string(F.t.fSiQ3N),
                 className: Z.mediaMosaicAltTextPopout,
                 onKeyDown: (e) => {
                     e.key === B.mR.Escape &&
@@ -229,7 +229,7 @@ function en(e) {
                 children: [
                     (0, r.jsx)('span', {
                         className: Z.mediaMosaicAltTextPopoutTitle,
-                        children: V.intl.string(V.t.fSiQ3N)
+                        children: F.intl.string(F.t.fSiQ3N)
                     }),
                     (0, r.jsx)('span', {
                         className: Z.mediaMosaicAltTextPopoutDescription,
@@ -262,9 +262,9 @@ function en(e) {
                                     K(Y({}, e), {
                                         type: 'button',
                                         ref: b,
-                                        'aria-label': V.intl.string(V.t.fSiQ3N),
+                                        'aria-label': F.intl.string(F.t.fSiQ3N),
                                         className: o()(Z.mediaMosaicAltText, { [Z.reducedSize]: u }),
-                                        children: V.intl.string(V.t.jCV1T0)
+                                        children: F.intl.string(F.t.jCV1T0)
                                     })
                                 )
                             })
@@ -298,9 +298,9 @@ var eo = (function (e) {
 function es(e) {
     switch (e) {
         case 0:
-            return V.intl.string(V.t['4EvBb2']);
+            return F.intl.string(F.t['4EvBb2']);
         case 1:
-            return V.intl.string(V.t['1J6Xq6']);
+            return F.intl.string(F.t['1J6Xq6']);
         default:
             return (0, M.vE)(e);
     }
@@ -308,9 +308,9 @@ function es(e) {
 function el(e) {
     switch (e) {
         case 0:
-            return V.intl.string(V.t.gpoQsL);
+            return F.intl.string(F.t.gpoQsL);
         case 1:
-            return V.intl.string(V.t['k3RM8/']);
+            return F.intl.string(F.t['k3RM8/']);
         default:
             return (0, M.vE)(e);
     }
@@ -375,7 +375,7 @@ let ec = (e) => {
                           children: [
                               (0, r.jsx)('div', {
                                   className: Z.barButtonMain,
-                                  children: V.intl.string(V.t['1zUvl5'])
+                                  children: F.intl.string(F.t['1zUvl5'])
                               }),
                               n
                                   ? (0, r.jsx)(d.$jN, {
@@ -385,7 +385,7 @@ let ec = (e) => {
                                     })
                                   : (0, r.jsx)('div', {
                                         className: Z.barButtonAlt,
-                                        children: V.intl.string(V.t.TdQXAw)
+                                        children: F.intl.string(F.t.TdQXAw)
                                     })
                           ]
                       })
@@ -425,7 +425,7 @@ function ed(e) {
                           type: 'button',
                           className: Z.barButtonMain,
                           onClick: s,
-                          'aria-label': V.intl.string(V.t.z0Mkp6),
+                          'aria-label': F.intl.string(F.t.z0Mkp6),
                           'aria-describedby': a,
                           children: (0, r.jsx)('span', {
                               id: a,
@@ -441,7 +441,7 @@ function ed(e) {
                           onClick: l,
                           className: Z.barButtonAlt,
                           children: [
-                              V.intl.string(V.t.e6RscX),
+                              F.intl.string(F.t.e6RscX),
                               (0, r.jsx)(d.eQA, {
                                   size: 'md',
                                   color: 'currentColor',
@@ -553,7 +553,7 @@ function ef(e) {
         }, [z, P, q, s]),
         X = i.useCallback(
             function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : F.DZ.PILL_DROPDOWN,
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : V.DZ.PILL_DROPDOWN,
                     n = P[e];
                 if (null == n) return;
                 (0, A.wv)(s.id, n.id), (0, A.yK)(s.id, n.id);
@@ -666,9 +666,9 @@ function ef(e) {
         en = i.useCallback(() => {
             (0, _.In)(s.id);
         }, [s.id]),
-        er = V.intl.string(V.t['38qwgI']);
+        er = F.intl.string(F.t['38qwgI']);
     return (
-        P.length > 0 && (er = '' === H || null == H ? V.intl.string(V.t.DwnFuL) : H),
+        P.length > 0 && (er = '' === H || null == H ? F.intl.string(F.t.DwnFuL) : H),
         E
             ? null
             : (0, r.jsxs)('div', {
@@ -679,7 +679,7 @@ function ef(e) {
                           className: Z.newTopicsBarTopicSection,
                           children: (0, r.jsx)(d.P3F, {
                               className: Z.newTopicsBarTextClickable,
-                              'aria-label': V.intl.string(V.t.RT3MPz),
+                              'aria-label': F.intl.string(F.t.RT3MPz),
                               onClick: Q,
                               children: (0, r.jsxs)('div', {
                                   className: o()({
@@ -718,7 +718,7 @@ function ef(e) {
                           children: [
                               (0, r.jsx)('div', {
                                   className: Z.newTopicsBarCompact,
-                                  children: V.intl.string(V.t.e6RscX)
+                                  children: F.intl.string(F.t.e6RscX)
                               }),
                               (0, r.jsx)(d.eQA, {
                                   size: 'md',
@@ -748,13 +748,13 @@ function ef(e) {
                                                       variant: 'heading-md/bold',
                                                       color: 'header-primary',
                                                       lineClamp: 1,
-                                                      children: V.intl.string(V.t.q21fUl)
+                                                      children: F.intl.string(F.t.q21fUl)
                                                   }),
                                                   (0, r.jsx)(O.Z, { className: Z.summariesBetaTag })
                                               ]
                                           }),
                                           (0, r.jsx)(d.P3F, {
-                                              'aria-label': V.intl.string(V.t.cpT0Cg),
+                                              'aria-label': F.intl.string(F.t.cpT0Cg),
                                               onClick: Q,
                                               className: Z.topicsDropdownClose,
                                               children: (0, r.jsx)(d.Dio, {
@@ -884,7 +884,7 @@ function eh(e) {
         }, [W, T, K, s]),
         q = i.useCallback(
             function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : F.DZ.PILL_DROPDOWN,
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : V.DZ.PILL_DROPDOWN,
                     n = T[e];
                 if (null == n) return;
                 (0, A.wv)(s.id, n.id), (0, A.yK)(s.id, n.id);
@@ -915,10 +915,10 @@ function eh(e) {
             [T, s, Y, _]
         ),
         Q = i.useCallback(() => {
-            q(w - 1, F.DZ.PILL_NEXT_ARROW);
+            q(w - 1, V.DZ.PILL_NEXT_ARROW);
         }, [q, w]),
         X = i.useCallback(() => {
-            q(w + 1, F.DZ.PILL_PREVIOUS_ARROW);
+            q(w + 1, V.DZ.PILL_PREVIOUS_ARROW);
         }, [w, q]),
         J = i.useCallback((e) => {
             var t;
@@ -985,9 +985,9 @@ function eh(e) {
         [T, P, q, J, s]
     );
     if (!(0, u.e7)([N.Z], () => N.Z.shouldShowTopicsBar())) return null;
-    let et = V.intl.string(V.t['38qwgI']);
+    let et = F.intl.string(F.t['38qwgI']);
     return (
-        T.length > 0 && (et = '' === k || null == k ? V.intl.string(V.t.DwnFuL) : k),
+        T.length > 0 && (et = '' === k || null == k ? F.intl.string(F.t.DwnFuL) : k),
         p
             ? null
             : (0, r.jsxs)('div', {
@@ -999,7 +999,7 @@ function eh(e) {
                           children: [
                               (0, r.jsx)(d.P3F, {
                                   className: Z.topicsPillText,
-                                  'aria-label': V.intl.string(V.t.RT3MPz),
+                                  'aria-label': F.intl.string(F.t.RT3MPz),
                                   onClick: z,
                                   children: (0, r.jsxs)('div', {
                                       className: o()({
@@ -1030,7 +1030,7 @@ function eh(e) {
                                   className: Z.topicsPillCarets,
                                   children: [
                                       (0, r.jsx)(d.P3F, {
-                                          'aria-label': V.intl.string(V.t['4huCnJ']),
+                                          'aria-label': F.intl.string(F.t['4huCnJ']),
                                           onClick: X,
                                           className: o()(Z.topicsPillCaret, Z.topicsCaretLeft, { [Z.topicsPillCaretDisabled]: null == U }),
                                           children: (0, r.jsx)(L.Z, {
@@ -1040,7 +1040,7 @@ function eh(e) {
                                           })
                                       }),
                                       (0, r.jsx)(d.P3F, {
-                                          'aria-label': V.intl.string(V.t['58KOoK']),
+                                          'aria-label': F.intl.string(F.t['58KOoK']),
                                           onClick: Q,
                                           className: o()(Z.topicsPillCaret, Z.topicsCaretRight, { [Z.topicsPillCaretDisabled]: null == j }),
                                           children: (0, r.jsx)(L.Z, {
@@ -1074,13 +1074,13 @@ function eh(e) {
                                                       variant: 'heading-md/bold',
                                                       color: 'header-primary',
                                                       lineClamp: 1,
-                                                      children: V.intl.string(V.t.q21fUl)
+                                                      children: F.intl.string(F.t.q21fUl)
                                                   }),
                                                   (0, r.jsx)(O.Z, { className: Z.summariesBetaTag })
                                               ]
                                           }),
                                           (0, r.jsx)(d.P3F, {
-                                              'aria-label': V.intl.string(V.t.cpT0Cg),
+                                              'aria-label': F.intl.string(F.t.cpT0Cg),
                                               onClick: z,
                                               className: Z.topicsDropdownClose,
                                               children: (0, r.jsx)(d.Dio, {
@@ -1119,7 +1119,7 @@ let em = function (e) {
                         className: Z.clickCTA,
                         color: 'text-muted',
                         variant: 'text-sm/normal',
-                        children: V.intl.string(V.t['515vjI'])
+                        children: F.intl.string(F.t['515vjI'])
                     })
             ]
         });

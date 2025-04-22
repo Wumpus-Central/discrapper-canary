@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(227832);
 function d(e) {
     let { text: t, tags: n, platformIcon: i, contextMenu: d } = e,
-        { profileType: f } = (0, l.z)();
+        { themeType: f } = (0, l.z)();
     return (null == t || '' === t) && null == d
         ? null
         : null == t || '' === t
@@ -23,7 +23,7 @@ function d(e) {
                 children: [
                     (0, r.jsxs)(o.X6q, {
                         className: u.headerText,
-                        variant: f === c.y0.PANEL ? 'text-xs/semibold' : 'text-xs/medium',
+                        variant: f === c.lY.SIDEBAR ? 'text-xs/semibold' : 'text-xs/medium',
                         color: 'header-primary',
                         children: [
                             (0, r.jsx)(s.Z, { children: t }),

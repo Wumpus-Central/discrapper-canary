@@ -44,8 +44,8 @@ var r = n(525654),
     U = n(430824),
     G = n(607744),
     B = n(341165),
-    F = n(496675),
-    V = n(914010),
+    V = n(496675),
+    F = n(914010),
     Z = n(594174),
     H = n(626135),
     Y = n(70956),
@@ -137,7 +137,7 @@ function ed(e, t, n) {
     if ((null == n ? void 0 : n.targetType) === et.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return $.oC.ROLE_SUBSCRIPTIONS;
     if ((null == n ? void 0 : n.targetType) == null && !L.tx.has(t.type) && (0, O.s)(e)) return $.oC.GUILD_HOME;
     let a = M.Z.getChannel(t.id);
-    return F.Z.can(J.Plq.VIEW_CHANNEL, a) ? t.id : null != (i = null == (r = k.ZP.getDefaultChannel(e, !0, J.Plq.CREATE_INSTANT_INVITE)) ? void 0 : r.id) ? i : t.id;
+    return V.Z.can(J.Plq.VIEW_CHANNEL, a) ? t.id : null != (i = null == (r = k.ZP.getDefaultChannel(e, !0, J.Plq.CREATE_INSTANT_INVITE)) ? void 0 : r.id) ? i : t.id;
 }
 function ef(e, t) {
     let { type: n } = e,
@@ -154,7 +154,7 @@ function e_(e) {
         o = U.Z.getGuild(t),
         s = null == o ? void 0 : o.hasFeature(J.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         { targetUserId: l, targetType: c, targetApplicationId: u, isGuestInvite: f, isApplicationBypassInvite: _ } = null != i ? i : {};
-    if (!f && !_ && !(null == i ? void 0 : i.forceTransition) && s && V.Z.getGuildId() !== t) return;
+    if (!f && !_ && !(null == i ? void 0 : i.forceTransition) && s && F.Z.getGuildId() !== t) return;
     let { type: p } = r,
         E = M.Z.getChannel(r.id),
         O = ed(t, r, i),

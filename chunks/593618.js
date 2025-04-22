@@ -73,14 +73,14 @@ function B(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = F(e, t);
+        i = V(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function F(e, t) {
+function V(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -89,7 +89,7 @@ function F(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function V(e) {
+function F(e) {
     let t = e.id,
         n = (0, c.Wu)(
             [R.ZP, N.Z],
@@ -247,7 +247,7 @@ function W(e) {
     let { guild: t } = e,
         n = t.id,
         { enabled: i } = d.c.useExperiment({ location: 'GuildTooltip' }, { autoTrackExposure: !0 }),
-        { voiceUsersToShow: a, stageSpeakers: s, numStageListeners: l, streamUsersToShow: f, embeddedActivitiesUsers: _ } = V(t),
+        { voiceUsersToShow: a, stageSpeakers: s, numStageListeners: l, streamUsersToShow: f, embeddedActivitiesUsers: _ } = F(t),
         p = Z(u.gj8, a, n),
         h = H(n, s, l),
         m = Z(u.hGI, f, n),

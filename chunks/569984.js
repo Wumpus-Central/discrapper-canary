@@ -69,15 +69,15 @@ let j = new Map(),
 function B() {
     (r = !1), (i = !1), (a = new Map()), (o = new Map()), (s = new Map()), (l = 0), (c = new Set()), (u = new Set()), (d = new Set()), (f = new Set()), (j = new Map()), (p = new Map()), (h = new Map()), (m = new Map()), (g = null), (E = new Map()), (_ = new Set()), (b = new Map()), (y = new Map()), eC(), (v = null);
 }
-function F(e, t) {
+function V(e, t) {
     var n, r, i, a;
     if (null != t.userStatus) for (let o of Object.values(null != (r = null == (n = t.userStatus) ? void 0 : n.progress) ? r : {})) !(0, I.isNil)(o) && S.T.DESKTOP.has(o.eventName) && ((null == (i = o.heartbeat) ? void 0 : i.lastBeatAt) != null ? _.add(e) : (null == (a = o.heartbeat) ? void 0 : a.lastBeatAt) == null && _.delete(e));
 }
-function V(e, t) {
+function F(e, t) {
     let n = (a = new Map(a)).get(e);
     if (null != n) {
         let r = x({}, n, t);
-        F(e, t), a.set(e, r);
+        V(e, t), a.set(e, r);
     }
 }
 function Z(e, t) {
@@ -88,7 +88,7 @@ function H(e, t) {
     Z(e, t);
     let n = a.get(e),
         r = null == n ? void 0 : n.userStatus;
-    null != r && null == r.claimedAt && V(e, { userStatus: k(x({}, r), { claimedAt: t.claimedAt }) });
+    null != r && null == r.claimedAt && F(e, { userStatus: k(x({}, r), { claimedAt: t.claimedAt }) });
 }
 function Y(e) {
     var t;
@@ -105,7 +105,7 @@ function W(e, t) {
         var o;
         let n = Y({ entitlements: t });
         null != n && Z(e, n),
-            V(e, {
+            F(e, {
                 userStatus: k(x({}, i), {
                     claimedAt: t.claimedAt,
                     claimedTier: null != (o = null == n ? void 0 : n.tier) ? o : null
@@ -145,7 +145,7 @@ function ee() {
 }
 function et(e) {
     let { questId: t, streamKey: n, userStatus: r } = e;
-    _.add(t), V(t, { userStatus: r }), null != n && K(n);
+    _.add(t), F(t, { userStatus: r }), null != n && K(n);
 }
 function en(e) {
     let { questId: t, streamKey: n } = e;
@@ -172,7 +172,7 @@ function ea(e) {
 }
 function eo(e) {
     let { enrolledQuestUserStatus: t } = e;
-    V(t.questId, { userStatus: t }), ei(t.questId);
+    F(t.questId, { userStatus: t }), ei(t.questId);
 }
 function es(e) {
     let { questId: t } = e;
@@ -219,7 +219,7 @@ function eh(e) {
 }
 function em(e) {
     let { dismissedQuestUserStatus: t } = e;
-    V(t.questId, { userStatus: t }), ep(t.questId);
+    F(t.questId, { userStatus: t }), ep(t.questId);
 }
 function eg(e) {
     let { questId: t } = e;
@@ -234,7 +234,7 @@ function eb(e) {
         n = (0, w.T)({ location: D.dr.QUESTS_STORE });
     n.log('Received user status update for '.concat(t.quest_id), t);
     let r = (0, R.U3)(t);
-    V(t.quest_id, { userStatus: r });
+    F(t.quest_id, { userStatus: r });
     let i = a.get(t.quest_id);
     if (null != i) {
         let e = (0, R.zi)(i);
@@ -244,7 +244,7 @@ function eb(e) {
 }
 function ey(e) {
     let { previewQuestUserStatus: t } = e;
-    V(t.questId, { userStatus: t }), null == t.claimedAt && (p = new Map(p)).delete(t.questId), null == t.enrolledAt && ((E = new Map(E)).delete(t.questId), P.ZP.getState().resetQuest(t.questId));
+    F(t.questId, { userStatus: t }), null == t.claimedAt && (p = new Map(p)).delete(t.questId), null == t.enrolledAt && ((E = new Map(E)).delete(t.questId), P.ZP.getState().resetQuest(t.questId));
     let n = a.get(t.questId);
     if (null != n) {
         let e = (0, R.zi)(n);

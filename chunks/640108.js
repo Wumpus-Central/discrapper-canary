@@ -91,8 +91,8 @@ function U(e, t) {
 }
 let G = 3000,
     B = 1000,
-    F = '-:--',
-    V = {
+    V = '-:--',
+    F = {
         friction: 14,
         tension: 200
     },
@@ -125,8 +125,8 @@ function W(e) {
 }
 let K = (e) => {
     let { current: t, duration: n } = e,
-        r = null != t ? Y(t) : F,
-        i = null != n ? Y(n) : F;
+        r = null != t ? Y(t) : V,
+        i = null != n ? Y(n) : V;
     return (
         (r = r.padStart(i.length, '0')),
         (0, a.jsxs)('div', {
@@ -164,7 +164,7 @@ class z extends (r = o.Component) {
     }
     animateControls(e, t) {
         let { translateY: n } = this.state;
-        t ? d.Z.spring(n, k({ toValue: e }, V)).start() : n.setValue(e);
+        t ? d.Z.spring(n, k({ toValue: e }, F)).start() : n.setValue(e);
     }
     getAnimatedStyle() {
         let { translateY: e } = this.state;
@@ -368,7 +368,7 @@ class Q extends o.Component {
                                 duration: 200
                             })
                         ]),
-                        d.Z.spring(t, U(k({ toValue: 1.5 }, V), { friction: 80 }))
+                        d.Z.spring(t, U(k({ toValue: 1.5 }, F), { friction: 80 }))
                     ]).start();
             });
     }

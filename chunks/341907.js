@@ -2,9 +2,9 @@ n.r(t),
     n.d(t, {
         loadVideoQuestModal: () => H,
         maybeShowSurveyForQuest: () => Z,
-        navigateToQuestHome: () => V,
+        navigateToQuestHome: () => F,
         openAppWithQuest: () => K,
-        openDisclosureModal: () => F,
+        openDisclosureModal: () => V,
         openQuestInGameRewardModal: () => U,
         openQuestMinorEnrollmentBlockModal: () => B,
         openQuestOrbsRewardModal: () => G,
@@ -167,7 +167,7 @@ function B(e) {
         return (n) => (0, r.jsx)(t, L(w({}, n), { location: e }));
     });
 }
-function F(e, t) {
+function V(e, t) {
     (0, g._3)({
         questId: e.id,
         questContent: t.content,
@@ -187,7 +187,7 @@ function F(e, t) {
                 );
         });
 }
-function V() {
+function F() {
     let { fromContent: e, questId: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     (0, A.Z.getState().setUtmCurrentContext)({
         utmSourceCurrent: M,

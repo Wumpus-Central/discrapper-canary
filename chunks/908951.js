@@ -66,10 +66,10 @@ function y(e) {
             let i = (0, C.DE)(n.id, e.id, !1);
             return i.length > 0 ? i[0] : v.pKx.USD;
         },
-        W = (e) => {
+        Y = (e) => {
             null != e && H(e, z(e), F);
         },
-        Y = (e) => {
+        W = (e) => {
             (0, C.i1)(e.id, (0, O.yb)(t)).then(() => {
                 H(e, z(e), F);
             }),
@@ -108,7 +108,7 @@ function y(e) {
                         })({}, e)),
                         (n = n =
                             {
-                                onAddPaymentSource: Y,
+                                onAddPaymentSource: W,
                                 analyticsLocation: y
                             }),
                         Object.getOwnPropertyDescriptors
@@ -178,7 +178,7 @@ function y(e) {
                         paymentSources: B,
                         hidePersonalInformation: D,
                         selectedPaymentSourceId: e,
-                        onChange: W,
+                        onChange: Y,
                         onPaymentSourceAdd: K,
                         dropdownLoading: M,
                         disabled: R,

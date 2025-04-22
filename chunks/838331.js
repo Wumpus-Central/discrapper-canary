@@ -137,7 +137,7 @@ function R(e) {
     let U = n(w),
         G = 0 === U.length,
         B = i.useId(),
-        F = i.useCallback(
+        V = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = j.current;
@@ -146,7 +146,7 @@ function R(e) {
                 }),
             []
         ),
-        V = i.useCallback(
+        F = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = j.current;
@@ -165,8 +165,8 @@ function R(e) {
             id: B,
             isEnabled: !0,
             useVirtualFocus: !0,
-            scrollToStart: F,
-            scrollToEnd: V,
+            scrollToStart: V,
+            scrollToEnd: F,
             setFocus: Z
         }),
         Y = P ? d.Tv : d.lW;

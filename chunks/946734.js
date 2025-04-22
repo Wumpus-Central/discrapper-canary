@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(392711),
@@ -129,7 +129,7 @@ class I {
             (this.analyticsLocations = i);
     }
 }
-function P(e) {
+function S(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
         l = (0, h.gc)(n),

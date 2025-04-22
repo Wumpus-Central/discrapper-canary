@@ -120,11 +120,11 @@ function G(e, t) {
 function B() {
     O.clear(), I.clear(), N.clear(), C.clear(), w.clear(), D.clear(), L.clear(), (k = !1);
 }
-function F(e) {
+function V(e) {
     let { userId: t } = e;
     I.add(t);
 }
-function V(e) {
+function F(e) {
     let { userId: t } = e;
     I.delete(t);
 }
@@ -145,7 +145,7 @@ function H(e) {
     I.delete(e.userId), w.set(e.userId, Z(e.mutualFriends)), D.set(e.userId, e.mutualFriends.length);
 }
 function Y(e) {
-    var t, n, r, i, s, l, c, d, f, h, g, b, A, M, k, B, F, V, H, Y, K, z, q, Q, X, J, $;
+    var t, n, r, i, s, l, c, d, f, h, g, b, A, M, k, B, V, F, H, Y, K, z, q, Q, X, J, $;
     let { userProfile: ee, fetchStartedAt: et } = e,
         en = null != (k = null == (t = ee.guild_member_profile) ? void 0 : t.guild_id) ? k : v;
     if ((null == (n = O.get(ee.user.id)) || n.delete(en), I.delete(ee.user.id), null != ee.mutual_guilds)) {
@@ -199,8 +199,8 @@ function Y(e) {
             bio: null != (B = null == (c = ee.user_profile) ? void 0 : c.bio) ? B : '',
             profileEffectId: null == (f = ee.user_profile) || null == (d = f.profile_effect) ? void 0 : d.id,
             profileEffectExpiresAt: null == (g = ee.user_profile) || null == (h = g.profile_effect) ? void 0 : h.expires_at,
-            pronouns: null != (F = null == (b = ee.user_profile) ? void 0 : b.pronouns) ? F : '',
-            connectedAccounts: null != (V = ee.connected_accounts.filter((e) => o.Z.isSupported(e.type))) ? V : [],
+            pronouns: null != (V = null == (b = ee.user_profile) ? void 0 : b.pronouns) ? V : '',
+            connectedAccounts: null != (F = ee.connected_accounts.filter((e) => o.Z.isSupported(e.type))) ? F : [],
             applicationRoleConnections: null != (H = ee.application_role_connections) ? H : [],
             premiumSince: er,
             premiumType: ee.premium_type,
@@ -464,9 +464,9 @@ class es extends f.Z {
             USER_PROFILE_UPDATE_SUCCESS: J,
             USER_PROFILE_UPDATE_FAILURE: $,
             USER_PROFILE_PIN_BADGES_ON_CLIENT: ee,
-            MUTUAL_FRIENDS_FETCH_START: F,
+            MUTUAL_FRIENDS_FETCH_START: V,
             MUTUAL_FRIENDS_FETCH_SUCCESS: H,
-            MUTUAL_FRIENDS_FETCH_FAILURE: V,
+            MUTUAL_FRIENDS_FETCH_FAILURE: F,
             USER_UPDATE: et,
             GUILD_MEMBER_UPDATE: et,
             GUILD_JOIN: en,

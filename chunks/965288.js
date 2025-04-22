@@ -26,7 +26,7 @@ var r = n(200651),
     O = n(590415),
     E = n(354459),
     I = n(387147);
-function P(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function P(e) {
     }
     return e;
 }
-function S(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -173,7 +173,7 @@ let Z = i.memo(function (e) {
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
-                                    S(P({}, t), {
+                                    P(S({}, t), {
                                         user: a,
                                         guildId: v,
                                         channel: l,
@@ -200,8 +200,8 @@ let Z = i.memo(function (e) {
             children: (e) =>
                 (0, r.jsx)(
                     p.P3F,
-                    S(
-                        P(
+                    P(
+                        S(
                             {
                                 className: o()(I.tileContainer, {
                                     [I.singleIcon]: T || d,

@@ -45,7 +45,7 @@ let v = [
             }
         }
     ],
-    g = [
+    j = [
         {
             id: 'local',
             name: 'Local Variables',
@@ -76,9 +76,9 @@ let v = [
             }
         }
     ];
-function j(e) {
+function g(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: r, renderSelectedTab: l } = (0, x.ZP)({ tabs: g }, []);
+        { TabBar: r, renderSelectedTab: l } = (0, x.ZP)({ tabs: j }, []);
     return (0, a.jsxs)(u.Z, {
         className: p.subPanel,
         minHeight: 100,
@@ -145,7 +145,7 @@ function _() {
                 onClickRow: (e) => u(e.key)
             }),
             null != x &&
-                (0, a.jsx)(j, {
+                (0, a.jsx)(g, {
                     store: x,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })

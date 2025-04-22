@@ -15,7 +15,7 @@ n.d(t, {
     eg: () => eU,
     h0: () => eR,
     ne: () => eC,
-    oK: () => eF,
+    oK: () => eV,
     r7: () => eN,
     tH: () => ev,
     uv: () => eS,
@@ -60,8 +60,8 @@ var r = n(562858),
     U = n(997278),
     G = n(835613),
     B = n(860300),
-    F = n(90754),
-    V = n(792257),
+    V = n(90754),
+    F = n(792257),
     Z = n(382123),
     H = n(62002),
     Y = n(399027),
@@ -241,7 +241,7 @@ let eT = () => ({
         description: s.intl.string(o.default.hjqDg4),
         pointsDescription: o.default.QMkrPj,
         cost: 20000,
-        purchaseIconSrc: F
+        purchaseIconSrc: V
     },
     19: {
         name: s.intl.string(o.default.WmIwqK),
@@ -269,7 +269,7 @@ let eT = () => ({
         description: s.intl.string(o.default.KJ5fmZ),
         pointsDescription: o.default.C3Yi6u,
         cost: 2150,
-        purchaseIconSrc: V
+        purchaseIconSrc: F
     },
     23: {
         name: s.intl.string(o.default.Bq5anp),
@@ -787,4 +787,4 @@ let ek = () => ({
     eU = 8,
     eG = '1349486948942745695',
     eB = '1349486948942745696',
-    eF = a.XAJ;
+    eV = a.XAJ;

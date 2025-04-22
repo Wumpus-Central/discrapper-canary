@@ -311,9 +311,9 @@
         return 'number' == typeof e && isFinite(e);
     }
     function B(e) {
-        return F(e) ? e1(e) : [(e[0][0] + e[e.length - 1][0]) / 2, (e[0][1] + e[e.length - 1][1]) / 2];
+        return V(e) ? e1(e) : [(e[0][0] + e[e.length - 1][0]) / 2, (e[0][1] + e[e.length - 1][1]) / 2];
     }
-    function F(e) {
+    function V(e) {
         for (var t = 0; t < e.length - 2; t++) {
             var n = e[t],
                 r = e[t + 1],
@@ -322,7 +322,7 @@
         }
         return !1;
     }
-    function V(e) {
+    function F(e) {
         return new ta(e).abs();
     }
     function Z(e) {
@@ -340,10 +340,10 @@
         return 'M' + e.join('L') + 'Z';
     }
     function Y(e) {
-        return Z(V(e));
+        return Z(F(e));
     }
     function W(e, t) {
-        var n = V(e);
+        var n = F(e);
         return K(n) || z(n, t);
     }
     function K(e) {
@@ -959,7 +959,7 @@
             })
         );
     }
-    function eF(e, t, n) {
+    function eV(e, t, n) {
         void 0 === n && (n = {});
         var r = n.maxSegmentLength;
         void 0 === r && (r = 10);
@@ -982,7 +982,7 @@
                   };
               });
     }
-    function eV(e, t, n) {
+    function eF(e, t, n) {
         void 0 === n && (n = {});
         var r = n.maxSegmentLength;
         void 0 === r && (r = 10);
@@ -2077,5 +2077,5 @@
             });
             return eU(e, t, n);
         };
-    (e.interpolate = tO), (e.separate = eB), (e.combine = eF), (e.interpolateAll = eV), (e.splitPathString = Y), (e.toPathString = H), (e.fromCircle = eH), (e.toCircle = eY), (e.fromRect = eW), (e.toRect = eK), Object.defineProperty(e, '__esModule', { value: !0 });
+    (e.interpolate = tO), (e.separate = eB), (e.combine = eV), (e.interpolateAll = eF), (e.splitPathString = Y), (e.toPathString = H), (e.fromCircle = eH), (e.toCircle = eY), (e.fromRect = eW), (e.toRect = eK), Object.defineProperty(e, '__esModule', { value: !0 });
 });

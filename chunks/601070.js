@@ -172,11 +172,11 @@ function B(e) {
         n = !1;
     return null != t.guild_id && null != t.parent_id && (t.guild_id in O && t.parent_id in O[t.guild_id] && (delete O[t.guild_id][t.parent_id], (n = !0)), t.guild_id in I && t.parent_id in I[t.guild_id] && (delete I[t.guild_id][t.parent_id], (n = !0)), t.guild_id in A && t.parent_id in A[t.guild_id] && (_.default.keys(A[t.guild_id][t.parent_id]).forEach(J), delete A[t.guild_id][t.parent_id], (n = !0)), t.guild_id in S && t.parent_id in S[t.guild_id] && (delete S[t.guild_id][t.parent_id], (n = !0)), t.guild_id in T && t.parent_id in T[t.guild_id] && (delete T[t.guild_id][t.parent_id], (n = !0)), n && M(t.guild_id, t.parent_id)), n;
 }
-function F(e) {
+function V(e) {
     let t = c.Z.getChannel(e.id);
     return null != t && !!p.Z.isActive(e.guildId, t.parent_id, e.id) && k(t.guild_id, t.parent_id, t.id);
 }
-function V(e) {
+function F(e) {
     let t = c.Z.getChannel(e.channelId);
     if (null == t) Z();
     else {
@@ -232,7 +232,7 @@ function W(e) {
     return w(t);
 }
 function K(e) {
-    V(e), z();
+    F(e), z();
 }
 function z() {
     let e = C;
@@ -370,15 +370,15 @@ let ec = new el(s.Z, {
     THREAD_DELETE: j,
     CHANNEL_UPDATES: U,
     CHANNEL_DELETE: B,
-    THREAD_MEMBER_UPDATE: F,
-    THREAD_MEMBERS_UPDATE: F,
-    LOAD_MESSAGES_SUCCESS: V,
-    MESSAGE_CREATE: V,
-    MESSAGE_DELETE: V,
-    MESSAGE_DELETE_BULK: V,
-    MESSAGE_ACK: V,
-    CHANNEL_ACK: V,
-    CHANNEL_LOCAL_ACK: V,
+    THREAD_MEMBER_UPDATE: V,
+    THREAD_MEMBERS_UPDATE: V,
+    LOAD_MESSAGES_SUCCESS: F,
+    MESSAGE_CREATE: F,
+    MESSAGE_DELETE: F,
+    MESSAGE_DELETE_BULK: F,
+    MESSAGE_ACK: F,
+    CHANNEL_ACK: F,
+    CHANNEL_LOCAL_ACK: F,
     CHANNEL_SELECT: K,
     PASSIVE_UPDATE_V2: H,
     WINDOW_FOCUS: Z,

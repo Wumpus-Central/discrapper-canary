@@ -120,10 +120,10 @@ function G() {
 function B() {
     O = null;
 }
-function F(e) {
+function V(e) {
     A = e.isGift;
 }
-function V(e) {
+function F(e) {
     let { locked: t } = e;
     if (!t || null == N) return !1;
     (T = !1), (N = null), R();
@@ -182,7 +182,7 @@ let H = new Z(s.Z, {
     SKU_PURCHASE_FAIL: U,
     SKU_PURCHASE_SHOW_CONFIRMATION_STEP: G,
     SKU_PURCHASE_CLEAR_ERROR: B,
-    SKU_PURCHASE_UPDATE_IS_GIFT: F,
-    OVERLAY_SET_INPUT_LOCKED: V,
+    SKU_PURCHASE_UPDATE_IS_GIFT: V,
+    OVERLAY_SET_INPUT_LOCKED: F,
     GIFT_CODE_CREATE: j
 });

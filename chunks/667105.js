@@ -1,11 +1,11 @@
 n.d(t, {
     DH: () => B,
     Ks: () => G,
-    Ws: () => V,
+    Ws: () => F,
     g2: () => k,
     hf: () => x,
     k3: () => j,
-    qN: () => F,
+    qN: () => V,
     tP: () => M
 }),
     n(388685);
@@ -313,7 +313,7 @@ function B() {
         return null != (t = null != (e = b.Z.questDeliveryOverride) ? e : (0, v.PM)(b.Z.quests, b.Z.questToDeliverForPlacement, y.Ok.DESKTOP_ACCOUNT_PANEL_AREA)) ? t : null;
     });
 }
-function F(e) {
+function V(e) {
     var t;
     let { location: n, quest: r } = e,
         i = (0, O.Zy)({ location: n }),
@@ -328,9 +328,9 @@ function F(e) {
         d = !c && null != r.userStatus && (0, v.zE)(r.userStatus, y.jn.QUEST_BAR);
     return i && !d && !u && !a;
 }
-function V(e) {
+function F(e) {
     let { location: t } = e,
-        n = F({
+        n = V({
             location: t,
             quest: B()
         });

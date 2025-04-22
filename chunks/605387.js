@@ -789,27 +789,27 @@ var t = (function () {
                 G = R.rect.height,
                 B = R.img;
             new Uint32Array(B.buffer);
-            var F = 4 * M,
-                V = 4;
+            var V = 4 * M,
+                F = 4;
             if (U <= 256 && !1 == u) {
-                for (var Z = new Uint8Array((F = Math.ceil((p * M) / 8)) * G), H = T[m], Y = 0; Y < G; Y++) {
-                    var y = Y * F,
+                for (var Z = new Uint8Array((V = Math.ceil((p * M) / 8)) * G), H = T[m], Y = 0; Y < G; Y++) {
+                    var y = Y * V,
                         W = Y * M;
                     if (8 == p) for (var K = 0; K < M; K++) Z[y + K] = H[W + K];
                     else if (4 == p) for (var K = 0; K < M; K++) Z[y + (K >> 1)] |= H[W + K] << (4 - (1 & K) * 4);
                     else if (2 == p) for (var K = 0; K < M; K++) Z[y + (K >> 2)] |= H[W + K] << (6 - (3 & K) * 2);
                     else if (1 == p) for (var K = 0; K < M; K++) Z[y + (K >> 3)] |= H[W + K] << (7 - (7 & K) * 1);
                 }
-                (B = Z), (f = 3), (V = 1);
+                (B = Z), (f = 3), (F = 1);
             } else if (!1 == v && 1 == O.length) {
                 for (var Z = new Uint8Array(M * G * 3), z = M * G, y = 0; y < z; y++) {
                     var q = 3 * y,
                         Q = 4 * y;
                     (Z[q] = B[Q]), (Z[q + 1] = B[Q + 1]), (Z[q + 2] = B[Q + 2]);
                 }
-                (B = Z), (f = 2), (V = 3), (F = 3 * M);
+                (B = Z), (f = 2), (F = 3), (V = 3 * M);
             }
-            (R.img = B), (R.bpl = F), (R.bpp = V);
+            (R.img = B), (R.bpl = V), (R.bpp = F);
         }
         return {
             ctype: f,
@@ -882,11 +882,11 @@ var t = (function () {
                     (s[l - 1].dispose = 1), l - 1 != 0 && p(t, n, r, s, l - 1, B, a), p(t, n, r, s, l, B, a);
                 }
             }
-        var F = 0;
+        var V = 0;
         if (1 != t.length)
             for (var w = 0; w < s.length; w++) {
                 var L = s[w];
-                F += L.rect.width * L.rect.height;
+                V += L.rect.width * L.rect.height;
             }
         return s;
     }

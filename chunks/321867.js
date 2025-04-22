@@ -8,8 +8,8 @@ var i = n(200651),
     s = n(118012),
     d = n(411477),
     u = n(197115),
-    f = n(594174),
-    _ = n(626135),
+    _ = n(594174),
+    f = n(626135),
     g = n(74538),
     p = n(981631),
     N = n(486324),
@@ -18,7 +18,7 @@ var i = n(200651),
     A = n(886563);
 function h(e) {
     let { analyticsSection: t, type: n } = e,
-        h = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
+        h = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
         b = g.ZP.canUseAnimatedAvatar(h),
         P = g.ZP.canUsePremiumProfileCustomization(h),
         E = (n === N.pC.BANNER && P) || (n === N.pC.AVATAR && b),
@@ -26,7 +26,7 @@ function h(e) {
     if (
         (a.useEffect(() => {
             E ||
-                _.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
+                f.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: t,
                     location_stack: R
                 });

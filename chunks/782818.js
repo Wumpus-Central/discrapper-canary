@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(953529), n(388685);
+n.d(t, { Z: () => v }), n(953529), n(388685);
 var r = n(200651),
     l = n(192379),
     a = n(120356),
@@ -15,8 +15,8 @@ var r = n(200651),
     h = n(486324),
     b = n(485696),
     j = n(388032),
-    x = n(240639);
-function y(e) {
+    y = n(240639);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -76,33 +76,33 @@ function C(e) {
             orderNumber: n + 1,
             description: h
         }),
-        v = {
+        O = {
             look: o.zxk.Looks.BLANK,
             size: o.zxk.Sizes.NONE,
             color: o.zxk.Colors.TRANSPARENT
         };
     return (0, r.jsxs)('div', {
-        className: x.recentAvatarButtonContainer,
+        className: y.recentAvatarButtonContainer,
         children: [
             (0, r.jsx)(
                 o.zxk,
                 A(
-                    y(
+                    x(
                         {
                             onClick: () => l(t),
                             onMouseEnter: p,
                             onMouseLeave: m,
-                            className: x.recentAvatarButton,
+                            className: y.recentAvatarButton,
                             'aria-label': b,
                             buttonRef: i
                         },
-                        v
+                        O
                     ),
                     {
                         children: (0, r.jsx)('img', {
                             src: d,
                             alt: u,
-                            className: x.recentAvatar
+                            className: y.recentAvatar
                         })
                     }
                 )
@@ -114,20 +114,20 @@ function C(e) {
                     (0, r.jsx)(
                         o.zxk,
                         A(
-                            y(
-                                A(y({}, e), {
+                            x(
+                                A(x({}, e), {
                                     'aria-label': C,
                                     onClick: (e) => a(e, n, s, c, C),
-                                    className: x.deleteButton,
-                                    innerClassName: x.deleteButtonInner
+                                    className: y.deleteButton,
+                                    innerClassName: y.deleteButtonInner
                                 }),
-                                v
+                                O
                             ),
                             {
                                 children: (0, r.jsx)(o.XHJ, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: x.deleteIcon
+                                    className: y.deleteIcon
                                 })
                             }
                         )
@@ -136,12 +136,12 @@ function C(e) {
         ]
     });
 }
-function v(e) {
+function O(e) {
     let { onComplete: t } = e,
         a = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         { avatars: i, loading: g, error: A } = (0, f.S)(),
-        v = l.useRef([]),
-        O = l.useRef(null),
+        O = l.useRef([]),
+        v = l.useRef(null),
         E = l.useRef(i.length),
         N = l.useRef(null),
         [S, T] = l.useState(!1),
@@ -174,7 +174,7 @@ function v(e) {
                             return (n) =>
                                 (0, r.jsx)(
                                     l,
-                                    y(
+                                    x(
                                         {
                                             imageUri: c,
                                             file: new File([a], d, { type: f }),
@@ -200,7 +200,7 @@ function v(e) {
         L = l.useCallback(
             (e, t, l, a, s) => {
                 let c = t + 1 < i.length ? t + 1 : t - 1;
-                (N.current = c >= 0 ? v.current[c] : O.current),
+                (N.current = c >= 0 ? O.current[c] : v.current),
                     e.shiftKey
                         ? (0, d.B)(l)
                         : (P(!0),
@@ -229,7 +229,7 @@ function v(e) {
                                       })(t, ['onClose']);
                                   return (0, r.jsx)(
                                       e,
-                                      y(
+                                      x(
                                           {
                                               avatarId: l,
                                               storageHash: a,
@@ -264,9 +264,9 @@ function v(e) {
             (E.current = i.length));
     }, [i.length, w]),
     g)
-        ? (0, r.jsx)(o.$jN, { className: x.spinner })
+        ? (0, r.jsx)(o.$jN, { className: y.spinner })
         : (0, r.jsxs)('div', {
-              className: x.recentAvatarContainer,
+              className: y.recentAvatarContainer,
               children: [
                   null != F &&
                       !g &&
@@ -276,12 +276,12 @@ function v(e) {
                           children: F
                       }),
                   (0, r.jsxs)('div', {
-                      className: x.recentAvatarSlots,
+                      className: y.recentAvatarSlots,
                       children: [
                           Z > 0 &&
                               (0, r.jsx)('ul', {
                                   'aria-label': j.intl.string(j.t.lsU63N),
-                                  className: x.recentAvatarList,
+                                  className: y.recentAvatarList,
                                   children: i.map((e, t) =>
                                       (0, r.jsx)(
                                           'li',
@@ -292,7 +292,7 @@ function v(e) {
                                                   onSelectRecentAvatar: I,
                                                   onDeleteRecentAvatar: L,
                                                   avatarButtonRef: (e) => {
-                                                      v.current[t] = e;
+                                                      O.current[t] = e;
                                                   }
                                               })
                                           },
@@ -302,9 +302,9 @@ function v(e) {
                               }),
                           k > 0 &&
                               (0, r.jsxs)('div', {
-                                  className: x.emptyAvatarSlots,
+                                  className: y.emptyAvatarSlots,
                                   tabIndex: -1,
-                                  ref: O,
+                                  ref: v,
                                   children: [
                                       (0, r.jsxs)(o.nn4, {
                                           children: [
@@ -315,7 +315,7 @@ function v(e) {
                                               j.intl.format(j.t['8W2HOz'], { numberOfEmptyAvatarSlots: k })
                                           ]
                                       }),
-                                      [...Array(k)].map((e, t) => (0, r.jsx)(p.Z, { className: x.avatarPlaceholder }, t))
+                                      [...Array(k)].map((e, t) => (0, r.jsx)(p.Z, { className: y.avatarPlaceholder }, t))
                                   ]
                               })
                       ]
@@ -323,15 +323,15 @@ function v(e) {
               ]
           });
 }
-function O(e) {
+function v(e) {
     let { className: t, onComplete: n } = e;
     return (0, r.jsxs)('div', {
-        className: i()(x.container, t),
+        className: i()(y.container, t),
         children: [
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsx)(o.vwX, {
-                        className: x.recentAvatarsHeading,
+                        className: y.recentAvatarsHeading,
                         children: j.intl.string(j.t.Bnq9zM)
                     }),
                     (0, r.jsx)(o.Text, {
@@ -341,7 +341,7 @@ function O(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(v, { onComplete: n })
+            (0, r.jsx)(O, { onComplete: n })
         ]
     });
 }

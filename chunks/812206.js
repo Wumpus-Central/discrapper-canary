@@ -207,12 +207,12 @@ function B(e) {
     if (null == t.target_application) return !1;
     b(o.ZP.createFromServer(t.target_application));
 }
-function F(e) {
+function V(e) {
     let { storeListing: t } = e;
     if (null == t.sku.application) return !1;
     b(o.ZP.createFromServer(t.sku.application));
 }
-function V(e) {
+function F(e) {
     let { messages: t } = e;
     t.forEach((e) => Z(e));
 }
@@ -319,8 +319,8 @@ let K = new W(a.Z, {
     INVITE_RESOLVE_SUCCESS: B,
     GIFT_CODE_RESOLVE_SUCCESS: G,
     LIBRARY_FETCH_SUCCESS: R,
-    STORE_LISTING_FETCH_SUCCESS: F,
-    LOAD_MESSAGES_SUCCESS: V,
+    STORE_LISTING_FETCH_SUCCESS: V,
+    LOAD_MESSAGES_SUCCESS: F,
     APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: w,
     USER_PROFILE_FETCH_SUCCESS: D,
     APP_DM_OPEN: L,

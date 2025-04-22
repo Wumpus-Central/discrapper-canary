@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    U: () => F,
+    U: () => V,
     Z: () => X
 }),
     n(388685),
@@ -78,9 +78,9 @@ function B() {
     var e;
     let t = m.Z.getChannelId();
     if (null == t || !(null == (e = p.Z.getChannel(t)) ? void 0 : e.isForumLikeChannel())) return G(), !1;
-    V({ refreshThreadIds: !0 });
+    F({ refreshThreadIds: !0 });
 }
-function F(e) {
+function V(e) {
     let t = p.Z.getChannel(e);
     return null == t
         ? []
@@ -91,7 +91,7 @@ function F(e) {
               })
               .sort(j(T));
 }
-function V(e) {
+function F(e) {
     let t = p.Z.getChannel(I);
     if (null == t) return;
     (null == e ? void 0 : e.refreshThreadIds) &&
@@ -112,17 +112,17 @@ function Z(e) {
     var t;
     let { guildId: n } = e;
     if (null == I || n !== (null == (t = p.Z.getChannel(I)) ? void 0 : t.guild_id)) return !1;
-    V({ refreshThreadIds: !0 });
+    F({ refreshThreadIds: !0 });
 }
 function H(e) {
     let { channel: t } = e;
     if (null == t.parent_id || t.parent_id !== I) return !1;
     let n = (0, b.yv)(t.id),
         r = x.has(t.id);
-    if (n && !r) x.add(t.id), V({ sortThreadIds: !0 });
+    if (n && !r) x.add(t.id), F({ sortThreadIds: !0 });
     else {
         if (n || !r) return !1;
-        x.delete(t.id), V({ sortThreadIds: !0 });
+        x.delete(t.id), F({ sortThreadIds: !0 });
     }
 }
 function Y(e) {
@@ -133,7 +133,7 @@ function Y(e) {
 function W(e) {
     let { channel: t } = e;
     if (null == t.parent_id || t.parent_id !== I) return !1;
-    L.add(t.id), V({ sortThreadIds: !0 });
+    L.add(t.id), F({ sortThreadIds: !0 });
 }
 function K(e) {
     let { channel: t } = e;
@@ -143,7 +143,7 @@ function K(e) {
 function z(e) {
     let { channelId: t } = e;
     if (null == t || t !== I) return !1;
-    V({ refreshThreadIds: !0 });
+    F({ refreshThreadIds: !0 });
 }
 function q(e) {
     let { channelId: t } = e;
@@ -165,7 +165,7 @@ class Q extends (i = c.ZP.Store) {
             a = !(0, g.OL)(n, S),
             o = t !== T,
             s = r !== A;
-        return (I = e), (S = n), (T = t), (A = r), i ? V({ refreshThreadIds: !0 }) : o ? V({ sortThreadIds: !0 }) : (a || s) && V(), C;
+        return (I = e), (S = n), (T = t), (A = r), i ? F({ refreshThreadIds: !0 }) : o ? F({ sortThreadIds: !0 }) : (a || s) && F(), C;
     }
     getCurrentThreadIds() {
         return C;

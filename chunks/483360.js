@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    ZP: () => eF,
+    ZP: () => eV,
     gF: () => eo,
     k1: () => eC
 }),
@@ -50,8 +50,8 @@ var i = n(658722),
     U = n(158776),
     G = n(699516),
     B = n(944486),
-    F = n(914010),
-    V = n(594174),
+    V = n(914010),
+    F = n(594174),
     Z = n(55563),
     H = n(823379),
     Y = n(892880),
@@ -170,8 +170,8 @@ function ew(e) {
 }
 function eD(e) {
     let { query: t, members: n, limit: r, filter: i, allowSnowflake: o } = e,
-        s = V.default.getUsers(),
-        l = F.Z.getGuildId(),
+        s = F.default.getUsers(),
+        l = V.Z.getGuildId(),
         c = t.toLocaleLowerCase(),
         u = (0, q.Fv)(c),
         f = [],
@@ -305,7 +305,7 @@ function eB(e, t) {
         : s()(k.Z.getMessages(e).toArray())
               .reverse()
               .uniqBy((e) => e.author.id)
-              .map((e) => V.default.getUser(e.author.id))
+              .map((e) => F.default.getUser(e.author.id))
               .filter((e) => {
                   if (null == e || e.isNonUserBot()) return !1;
                   let t = n.getGuildId();
@@ -325,13 +325,13 @@ function eB(e, t) {
               .take(t)
               .value();
 }
-let eF = {
+let eV = {
     queryFriends(e) {
         let { query: t, limit: n = 10, _fuzzy: r = !0, filter: i } = e;
         return eD({
             query: t,
             members: G.Z.getFriendIDs()
-                .map((e) => V.default.getUser(e))
+                .map((e) => F.default.getUser(e))
                 .filter(H.lm),
             limit: n,
             filter: i
@@ -342,7 +342,7 @@ let eF = {
         return eD({
             query: t,
             members: w.Z.getDMUserIds()
-                .map((e) => V.default.getUser(e))
+                .map((e) => F.default.getUser(e))
                 .filter(H.lm),
             limit: n,
             filter: r
@@ -364,7 +364,7 @@ let eF = {
                     nick: null != (t = G.Z.getNickname(e)) ? t : null
                 };
             });
-            let e = V.default.getCurrentUser();
+            let e = F.default.getCurrentUser();
             null != e &&
                 t.push({
                     userId: e.id,
@@ -418,7 +418,7 @@ let eF = {
             n && e.length > 0 && Y.Z.requestMembers(null, e, t),
             eD({
                 query: e,
-                members: s()(V.default.getUsers()).values().value(),
+                members: s()(F.default.getUsers()).values().value(),
                 limit: t,
                 filter: r
             })
@@ -463,7 +463,7 @@ let eF = {
                         type: (0, R.bw)(e.type) ? J.h8.VOICE_CHANNEL : J.h8.TEXT_CHANNEL,
                         record: e,
                         score: eN(c, _[e.id]),
-                        comparator: (0, f.F6)(e, V.default, G.Z),
+                        comparator: (0, f.F6)(e, F.default, G.Z),
                         sortable: i
                     }));
             }
@@ -506,7 +506,7 @@ let eF = {
             u = [];
         for (let e of c) {
             if (!e.isMultiUserDM() || !i(e)) continue;
-            let t = (0, f.F6)(e, V.default, G.Z).toLocaleLowerCase(),
+            let t = (0, f.F6)(e, F.default, G.Z).toLocaleLowerCase(),
                 n = (0, q._I)((0, q.Fv)(t)),
                 o = eP(n, l, r);
             o > 0 &&
@@ -514,7 +514,7 @@ let eF = {
                     type: J.h8.GROUP_DM,
                     record: e,
                     score: eN(o, a[e.id]),
-                    comparator: (0, f.F6)(e, V.default, G.Z),
+                    comparator: (0, f.F6)(e, F.default, G.Z),
                     sortable: n
                 });
         }
@@ -857,7 +857,7 @@ let eF = {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [null, ev],
             { stickerMetadata: i } = T.Z,
-            a = V.default.getCurrentUser(),
+            a = F.default.getCurrentUser(),
             o = new Set(),
             l = [];
         for (let s of (C.DZ.loadIfNecessary(), e)) {
@@ -899,7 +899,7 @@ let eF = {
         );
     },
     querySoundmoji(e, t) {
-        let n = V.default.getCurrentUser();
+        let n = F.default.getCurrentUser();
         v.Z.isFetching() || v.Z.hasFetchedAllSounds() || (0, y.w)(), C.DZ.loadIfNecessary();
         let r = Array.from(v.Z.getSounds().values()).reduce(
             (e, n) => (

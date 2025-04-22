@@ -148,7 +148,7 @@ function B(e) {
     let i = (0, l.createRoot)(r.getElementById(w));
     a()(null != i, 'No render target for popout!'), (C[e] = i), i.render(n(e));
 }
-function F(e) {
+function V(e) {
     let { key: t, features: n, render: r } = e;
     if (_.isPlatformEmbedded && !p.ZP.supportsFeature(g.eRX.POPOUT_WINDOWS)) throw Error('Popout windows not supported on this native module version!');
     let i = !0 === n.outOfProcessOverlay,
@@ -177,7 +177,7 @@ function F(e) {
     let E = window.open(g.Z5c.POPOUT_WINDOW, t, (0, m.Z)(d));
     (E.windowKey = t), i ? S.verbose('Opening out of process overlay window', t) : null == E || E.focus(), (N[t] = E), (R[t] = r), _.isPlatformEmbedded && (p.ZP.setAlwaysOnTop(t, f), (A[t] = f), p.ZP.isAlwaysOnTop(t).then((e) => (A[t] = e))), P.add(t);
 }
-function V(e) {
+function F(e) {
     P.has(e) && (B(e), P.delete(e), X.emitChange());
 }
 function Z(e) {
@@ -197,7 +197,7 @@ function H(e) {
     if (null != n.key)
         switch (n.type) {
             case g.l9w.LOADED:
-                return V(n.key);
+                return F(n.key);
             case g.l9w.UNLOADED:
                 return Z(n.key);
         }
@@ -276,7 +276,7 @@ class Q extends (r = c.ZP.PersistedStore) {
 }
 E(Q, 'displayName', 'PopoutWindowStore'), E(Q, 'persistKey', 'PopoutWindowStore');
 let X = new Q(u.Z, {
-        POPOUT_WINDOW_OPEN: F,
+        POPOUT_WINDOW_OPEN: V,
         POPOUT_WINDOW_ADD_STYLESHEET: q,
         POPOUT_WINDOW_CLOSE: W,
         POPOUT_WINDOW_SET_ALWAYS_ON_TOP: z,

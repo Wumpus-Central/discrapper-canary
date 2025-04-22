@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(112724),
     E = n(902840),
     I = n(110924),
-    P = n(317381),
-    S = n(82888),
+    S = n(317381),
+    P = n(82888),
     Z = n(917107),
     N = n(296797),
     T = n(413523),
@@ -77,8 +77,8 @@ var r = n(200651),
     eO = n(657218),
     eE = n(66556),
     eI = n(739830),
-    eP = n(377929),
-    eS = n(900157),
+    eS = n(377929),
+    eP = n(900157),
     eZ = n(108427),
     eN = n(171368),
     eT = n(336724),
@@ -252,7 +252,7 @@ class ti extends i.PureComponent {
             n = this.shouldRenderCall();
         if ((s()(null != e, 'Missing channel in Channel.renderEmbeddedActivityPanel'), n || (null == t ? void 0 : t.location.kind) === p.E.CONTEXTLESS)) return null;
         let i = this.props.height - 200;
-        return (0, r.jsx)(S.Z, {
+        return (0, r.jsx)(P.Z, {
             maxHeight: i,
             renderExternalHeader: this.renderHeaderBar
         });
@@ -391,7 +391,7 @@ class ti extends i.PureComponent {
                     });
                     break;
                 case ex.tI.VIEW_THREAD:
-                    let n = (null == t ? void 0 : t.isForumLikeChannel()) ? F.Z : eS.Z;
+                    let n = (null == t ? void 0 : t.isForumLikeChannel()) ? F.Z : eP.Z;
                     e = (0, r.jsx)(n, { channelId: i.channelId });
                     break;
                 case ex.tI.VIEW_CHANNEL:
@@ -607,7 +607,7 @@ class ti extends i.PureComponent {
                     case e2.d4z.ANNOUNCEMENT_THREAD:
                     case e2.d4z.PRIVATE_THREAD:
                     case e2.d4z.PUBLIC_THREAD:
-                        null == t || t.isForumLikeChannel() || o.push((0, r.jsx)(eE.Z, { channel: t }, 'browser')), e.isVocalThread() && o.push((0, r.jsx)(eu.Z, { channel: e }, 'thread-call')), o.push((0, r.jsx)(eI.Z, { channel: e }, 'notifications')), o.push((0, r.jsx)(et.Z, { channel: e }, 'pins')), e.isArchivedThread() || o.push((0, r.jsx)($.Z, { channelId: e.id }, 'members')), null != t && (0, E.Lp)(e) && o.push((0, r.jsx)(en.Z, { channel: e }, 'summaries')), o.push((0, r.jsx)(eP.Z, { channel: e }, 'threads-overflow'));
+                        null == t || t.isForumLikeChannel() || o.push((0, r.jsx)(eE.Z, { channel: t }, 'browser')), e.isVocalThread() && o.push((0, r.jsx)(eu.Z, { channel: e }, 'thread-call')), o.push((0, r.jsx)(eI.Z, { channel: e }, 'notifications')), o.push((0, r.jsx)(et.Z, { channel: e }, 'pins')), e.isArchivedThread() || o.push((0, r.jsx)($.Z, { channelId: e.id }, 'members')), null != t && (0, E.Lp)(e) && o.push((0, r.jsx)(en.Z, { channel: e }, 'summaries')), o.push((0, r.jsx)(eS.Z, { channel: e }, 'threads-overflow'));
                         break;
                     case e2.d4z.GUILD_ANNOUNCEMENT:
                     case e2.d4z.GUILD_TEXT:
@@ -753,10 +753,10 @@ let tl = (0, O.Z)(ti),
                 var e;
                 return (null != (e = null == v ? void 0 : v.channelId) ? e : eV.Z.getVoiceChannelId()) === (null == c ? void 0 : c.id);
             }),
-            O = (0, h.e7)([P.ZP], () => (null != c ? P.ZP.getSelfEmbeddedActivityForChannel(c.id) : null), [c]),
-            S = (0, h.e7)([eF.Z], () => eF.Z.isConnected()),
-            w = (0, I.Z)(S),
-            R = S && !1 === w;
+            O = (0, h.e7)([S.ZP], () => (null != c ? S.ZP.getSelfEmbeddedActivityForChannel(c.id) : null), [c]),
+            P = (0, h.e7)([eF.Z], () => eF.Z.isConnected()),
+            w = (0, I.Z)(P),
+            R = P && !1 === w;
         i.useEffect(() => {
             j &&
                 R &&
@@ -770,8 +770,8 @@ let tl = (0, O.Z)(ti),
                     })
                 );
         }, [R, c, j, O]);
-        let k = (0, h.e7)([P.ZP], () => P.ZP.getCurrentEmbeddedActivity()),
-            M = (0, h.e7)([P.ZP], () => P.ZP.getActivityPanelMode()),
+        let k = (0, h.e7)([S.ZP], () => S.ZP.getCurrentEmbeddedActivity()),
+            M = (0, h.e7)([S.ZP], () => S.ZP.getActivityPanelMode()),
             L = null != k && !(0, Z.Z)(null == c ? void 0 : c.id) && M === e3.Ez.PANEL,
             U = (0, h.e7)([eY.Z], () => null != c && c.isVocalThread() && !u().isEmpty(eY.Z.getVoiceStatesForChannel(c.id)), [c]),
             G = null != c && c.isPrivate() && !L && x,
@@ -779,7 +779,7 @@ let tl = (0, O.Z)(ti),
             { welcomeModalChannelId: V } = (0, d.TH)(),
             z = (0, h.e7)([ef.Z], () => null != c && ef.Z.isLurking(c.guild_id), [c]),
             W = (0, h.e7)([ew.Z], () => ew.Z.hasSeen(null == c ? void 0 : c.guild_id, z), [c, z]),
-            Y = (0, h.e7)([A.Z, P.ZP], () => (null != P.ZP.getConnectedActivityLocation() && P.ZP.getActivityPanelMode() === e3.Ez.PANEL ? (P.ZP.getFocusedLayout() === e3.MI.NO_CHAT ? e2.AEg.NO_CHAT : e2.AEg.NORMAL) : null != a ? A.Z.getLayout(a) : e2.AEg.NORMAL), [a]),
+            Y = (0, h.e7)([A.Z, S.ZP], () => (null != S.ZP.getConnectedActivityLocation() && S.ZP.getActivityPanelMode() === e3.Ez.PANEL ? (S.ZP.getFocusedLayout() === e3.MI.NO_CHAT ? e2.AEg.NO_CHAT : e2.AEg.NORMAL) : null != a ? A.Z.getLayout(a) : e2.AEg.NORMAL), [a]),
             q = (0, h.e7)([A.Z], () => (null != c ? A.Z.getSelectedParticipant(c.id) : null)),
             X = (0, h.e7)([eW.default], () => eW.default.getCurrentUser()),
             Q = (0, ep.Z)(null == y ? void 0 : y.id),

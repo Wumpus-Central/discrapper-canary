@@ -54,8 +54,8 @@ let u = i.memo(
                 },
                 [b]
             ),
-            F = i.useRef([]),
             V = i.useRef([]),
+            F = i.useRef([]),
             {
                 totalHeight: Z,
                 rowDescriptors: H,
@@ -100,7 +100,7 @@ let u = i.memo(
                     sectionDescriptors: a
                 };
             }, [j, G, U, B, u, m, g, k]);
-        (F.current = Y), (V.current = H);
+        (V.current = Y), (F.current = H);
         let W = i.useCallback(() => {
             var e;
             let t = null == (e = L.current) ? void 0 : e.getScrollerNode();
@@ -151,7 +151,7 @@ let u = i.memo(
                 scrollRowIntoView: function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         { animate: n = !1, offset: r = 0 } = t,
-                        i = V.current[e];
+                        i = F.current[e];
                     null != i &&
                         window.requestAnimationFrame(() => {
                             var t, a;
@@ -183,7 +183,7 @@ let u = i.memo(
                 scrollToSectionTop: function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         { animate: n = !1, offset: r = 0 } = t,
-                        i = F.current[e];
+                        i = V.current[e];
                     null != i &&
                         window.requestAnimationFrame(() => {
                             var t;
@@ -198,8 +198,8 @@ let u = i.memo(
                     height: w,
                     totalHeight: Z
                 }),
-                getSectionDescriptors: () => F.current,
-                getRowDescriptors: () => V.current,
+                getSectionDescriptors: () => V.current,
+                getRowDescriptors: () => F.current,
                 getScrollerNode: () => {
                     var e;
                     return null == (e = L.current) ? void 0 : e.getScrollerNode();

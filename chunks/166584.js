@@ -110,9 +110,9 @@ function L(e) {
         [j, U] = i.useState(!1),
         G = i.useRef(null),
         B = i.useRef(null),
-        F = i.useRef(0);
+        V = i.useRef(0);
     i.useLayoutEffect(() => {
-        F.current = 0;
+        V.current = 0;
     }, [d]),
         i.useLayoutEffect(() => {
             if (j) return;
@@ -126,7 +126,7 @@ function L(e) {
                     let i = d[r],
                         a = T.current[i.id];
                     if (null == a) {
-                        0 === F.current && n.push(i);
+                        0 === V.current && n.push(i);
                         continue;
                     }
                     let o = Math.min(a.getBoundingClientRect().width, t);
@@ -134,11 +134,11 @@ function L(e) {
                     (e += o + R), n.push(i);
                 }
             }
-            x(n.length === L.length ? L : n), k(r), F.current++;
+            x(n.length === L.length ? L : n), k(r), V.current++;
         }, [d, L, j]);
-    let V = i.useMemo(() => 'roles-'.concat((0, a.Z)()), []),
+    let F = i.useMemo(() => 'roles-'.concat((0, a.Z)()), []),
         Z = (0, o.ZP)({
-            id: V,
+            id: F,
             isEnabled: !0,
             scrollToStart: y.Cyb,
             scrollToEnd: y.Cyb,

@@ -81,10 +81,10 @@ function p(e, t) {
 function h(e) {
     var { text: t, onClick: n } = e,
         c = _(e, ['text', 'onClick']);
-    let { profileType: d } = (0, o.z)(),
+    let { themeType: d } = (0, o.z)(),
         p = 'string' == typeof t ? t.trim() : t;
     if (null == p || '' === p) return null;
-    let h = () => (d === s.y0.FULL_SIZE ? (0, r.jsx)(i.Text, f(u({ color: 'text-normal' }, c), { children: p })) : (0, r.jsx)(i.Text, f(u({ color: 'text-normal' }, c), { children: (0, r.jsx)(a.Z, { children: p }) })));
+    let h = () => (d === s.lY.MODAL ? (0, r.jsx)(i.Text, f(u({ color: 'text-normal' }, c), { children: p })) : (0, r.jsx)(i.Text, f(u({ color: 'text-normal' }, c), { children: (0, r.jsx)(a.Z, { children: p }) })));
     return null != n
         ? (0, r.jsx)(i.P3F, {
               onClick: (e) => {

@@ -51,7 +51,7 @@ function j(e) {
 }
 function U(e) {
     let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: a, handlePaymentSourceAdd: m } = e,
-        { application: U, purchaseState: G, paymentSources: B, paymentSourceId: F, setHasAcceptedTerms: V, skusById: Z, skuPricePreviewsById: H, selectedSkuId: Y, isEmbeddedIAP: W, purchaseType: K, purchasePreviewError: z, devShelfFetchState: q, setPurchasePreviewError: Q, hasPaymentSources: X } = (0, R.JL)(),
+        { application: U, purchaseState: G, paymentSources: B, paymentSourceId: V, setHasAcceptedTerms: F, skusById: Z, skuPricePreviewsById: H, selectedSkuId: Y, isEmbeddedIAP: W, purchaseType: K, purchasePreviewError: z, devShelfFetchState: q, setPurchasePreviewError: Q, hasPaymentSources: X } = (0, R.JL)(),
         { isGift: J, giftRecipient: $ } = (0, C.wD)(),
         ee = J && (0, N.pO)($),
         { defaultPaymentSourceId: et, hasFetchedPaymentSources: en } = (0, l.cj)([O.Z], () => ({
@@ -62,18 +62,18 @@ function U(e) {
     let er = Z[Y],
         ei = null == er ? void 0 : er.eligiblePaymentGateways,
         ea = H[Y],
-        eo = null != F ? F : I.c,
+        eo = null != V ? V : I.c,
         es = null != ea ? ea[eo] : null;
     o()(null != er, 'SKU must exist and be fetched.'), o()(null != U, 'Application must exist.');
     let el = (0, l.e7)([h.Z, S.Z], () => S.Z.inTestModeForApplication(U.id) || h.Z.inDevModeForApplication(U.id), [U.id]),
         ec = (0, l.e7)([y.Z], () => y.Z.enabled),
         eu = s.M.EEA_COUNTRIES.has(v.Z.ipCountryCodeWithFallback),
         ed = G === P.A.PURCHASING || G === P.A.COMPLETED,
-        ef = (0, w.m)(B, F),
+        ef = (0, w.m)(B, V),
         e_ = null != ef ? ef.type : null;
     i.useEffect(() => {
         en &&
-            F === et &&
+            V === et &&
             et !== I.c &&
             null == es &&
             (0, u.x2)(er.applicationId, er.id, et, { isGift: J })
@@ -83,8 +83,8 @@ function U(e) {
                 .catch((e) => {
                     Q(e);
                 });
-    }, [et, en, F, er.applicationId, er.id, es, Q, J]);
-    let ep = null != ei && ei.length > 0 && (F === I.c || null === e_) && X ? E.w.SELECT_PAYMENT_METHOD : void 0;
+    }, [et, en, V, er.applicationId, er.id, es, Q, J]);
+    let ep = null != ei && ei.length > 0 && (V === I.c || null === e_) && X ? E.w.SELECT_PAYMENT_METHOD : void 0;
     return (0, r.jsxs)('div', {
         className: k.stepBody,
         children: [
@@ -149,7 +149,7 @@ function U(e) {
                     }),
                     (0, r.jsx)(_.ZP, {
                         paymentSources: Object.values(B),
-                        selectedPaymentSourceId: F,
+                        selectedPaymentSourceId: V,
                         onChange: a,
                         onPaymentSourceAdd: m,
                         hidePersonalInformation: ec,
@@ -161,7 +161,7 @@ function U(e) {
                 isActive: t,
                 ref: n,
                 children: (0, r.jsx)(p.Z, {
-                    onChange: V,
+                    onChange: F,
                     forceShow: !0,
                     showWithdrawalWaiver: eu,
                     disabled: ed,

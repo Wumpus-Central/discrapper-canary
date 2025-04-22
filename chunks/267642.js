@@ -8,8 +8,8 @@ n.d(t, {
     Oe: () => S,
     Qi: () => Y,
     Ro: () => O,
-    Vx: () => F,
-    _k: () => V,
+    Vx: () => V,
+    _k: () => F,
     _p: () => L,
     aq: () => G,
     cP: () => P,
@@ -358,10 +358,10 @@ function G(e) {
 function B(e) {
     return e.sort((e, t) => (null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1));
 }
-function F(e, t) {
-    return V(e, t) > 0;
-}
 function V(e, t) {
+    return F(e, t) > 0;
+}
+function F(e, t) {
     var n;
     if ((null == (n = d.Z.getGuild(t)) ? void 0 : n.hasFeature(E.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0) return 0;
     let r = M(t),
@@ -387,7 +387,7 @@ let Z = [
     }
 ];
 function H(e, t) {
-    let n = V(e, t);
+    let n = F(e, t);
     if (n > 0) {
         let t = B(e).filter((e) => null != e.endsAt);
         return t[t.length - n].endsAt;

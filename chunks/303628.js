@@ -168,7 +168,7 @@ function L(e) {
                     j(i);
             }
         }, [t, M.length, n]);
-    let F = (0, m.Q3)('ChannelAttachmentArea');
+    let V = (0, m.Q3)('ChannelAttachmentArea');
     return (!w && 0 === C.length) || (w && 0 === M.length)
         ? null
         : (0, r.jsxs)(i.Fragment, {
@@ -213,7 +213,7 @@ function L(e) {
                           }
                       })
                   }),
-                  n.drafts.type === E.d.FirstThreadMessage || F ? null : (0, r.jsx)(g.Z, {})
+                  n.drafts.type === E.d.FirstThreadMessage || V ? null : (0, r.jsx)(g.Z, {})
               ]
           });
 }

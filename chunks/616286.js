@@ -71,8 +71,8 @@ function O(e) {
         })(e, ['channelId', 'className', 'showingClassName', 'onClick', 'inPopout', 'showRequestToSpeakSidebar', 'toggleRequestToSpeakSidebar']);
     let { parentAnalyticsLocation: E } = (0, u.ZP)(),
         { disabled: I } = O,
-        P = i.useRef(null),
-        S = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
+        S = i.useRef(null),
+        P = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         {
             isShowing: Z,
             unreadCount: N,
@@ -98,8 +98,8 @@ function O(e) {
             );
         })(n),
         A = i.useCallback(() => {
-            (0, p.v)(E, p.d.CHAT, !S), null == h || h(), !S && m && (null == _ || _()), c.Z.updateChatOpen(n, !S);
-        }, [n, S, h, m, _, E]),
+            (0, p.v)(E, p.d.CHAT, !P), null == h || h(), !P && m && (null == _ || _()), c.Z.updateChatOpen(n, !P);
+        }, [n, P, h, m, _, E]),
         w = i.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -112,7 +112,7 @@ function O(e) {
         ),
         R = i.useCallback(() => {
             var e;
-            null == (e = P.current) || e.focus();
+            null == (e = S.current) || e.focus();
         }, []);
     (0, g.yp)({
         event: C.CkL.FOCUS_CHAT_BUTTON,
@@ -138,7 +138,7 @@ function O(e) {
                 }
             );
         }, [k]);
-    let D = [(t = f && I ? x.intl.string(x.t.DPgc5u) : S ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
+    let D = [(t = f && I ? x.intl.string(x.t.DPgc5u) : P ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
     return (
         T > 0 && D.push(x.intl.formatToPlainString(x.t['3l1GOz'], { mentionCount: T })),
         N > 0 && D.push(x.intl.string(x.t.x5zAGR)),
@@ -170,7 +170,7 @@ function O(e) {
                 return e;
             })(
                 {
-                    buttonRef: P,
+                    buttonRef: S,
                     onClick: A,
                     label: t,
                     'aria-label': D.join(', '),

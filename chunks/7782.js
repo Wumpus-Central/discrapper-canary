@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(377668),
     E = n(228168),
     I = n(388032),
-    P = n(882875);
-let S = (e) => {
+    S = n(882875);
+let P = (e) => {
         let { userId: t, channelId: n } = e,
             l = (0, o.e7)([g.Z], () => g.Z.getMutualGuilds(t), [t]),
             s = i.useMemo(
@@ -49,7 +49,7 @@ let S = (e) => {
                                           {
                                               src: i,
                                               alt: '',
-                                              className: P.avatar
+                                              className: S.avatar
                                           },
                                           t
                                       );
@@ -58,7 +58,7 @@ let S = (e) => {
                                       : (0, r.jsx)(
                                             c.ZP,
                                             {
-                                                className: P.avatarMask,
+                                                className: S.avatarMask,
                                                 mask: c.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
                                                 width: 24,
                                                 height: 24,
@@ -80,7 +80,7 @@ let S = (e) => {
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)('div', {
-                          className: P.avatarContainer,
+                          className: S.avatarContainer,
                           children: s
                       }),
                       (0, r.jsx)(a.P3F, {
@@ -93,7 +93,7 @@ let S = (e) => {
                               });
                           },
                           children: (0, r.jsx)(a.Text, {
-                              className: P.mutualGuilds,
+                              className: S.mutualGuilds,
                               variant: 'text-sm/normal',
                               children: I.intl.format(I.t.eE3oen, { count: l.length })
                           })
@@ -112,7 +112,7 @@ let S = (e) => {
                 });
             },
             d = (0, r.jsx)(a.zxk, {
-                className: P.action,
+                className: S.action,
                 size: a.zxk.Sizes.TINY,
                 color: a.zxk.Colors.PRIMARY,
                 onClick: () => {
@@ -128,7 +128,7 @@ let S = (e) => {
                         !o &&
                             !l &&
                             (0, r.jsx)(a.zxk, {
-                                className: P.action,
+                                className: S.action,
                                 size: a.zxk.Sizes.TINY,
                                 onClick: c,
                                 children: p
@@ -140,7 +140,7 @@ let S = (e) => {
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(a.zxk, {
-                            className: P.action,
+                            className: S.action,
                             size: a.zxk.Sizes.TINY,
                             onClick: () => {
                                 s.Z.removeFriend(i, { location: j.ZY5.DM_CHANNEL });
@@ -153,7 +153,7 @@ let S = (e) => {
                 });
             case j.OGo.BLOCKED:
                 return (0, r.jsx)(a.zxk, {
-                    className: P.action,
+                    className: S.action,
                     size: a.zxk.Sizes.TINY,
                     onClick: () => {
                         s.Z.unblockUser(i, { location: j.ZY5.DM_CHANNEL });
@@ -165,19 +165,19 @@ let S = (e) => {
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(a.Text, {
-                            className: P.action,
+                            className: S.action,
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
                             children: I.intl.string(I.t.c2v5nJ)
                         }),
                         (0, r.jsx)(a.zxk, {
-                            className: P.action,
+                            className: S.action,
                             size: a.zxk.Sizes.TINY,
                             onClick: c,
                             children: I.intl.string(I.t['+WbSn5'])
                         }),
                         (0, r.jsx)(a.zxk, {
-                            className: P.action,
+                            className: S.action,
                             size: a.zxk.Sizes.TINY,
                             color: a.zxk.Colors.PRIMARY,
                             onClick: () => {
@@ -192,7 +192,7 @@ let S = (e) => {
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(a.zxk, {
-                            className: P.action,
+                            className: S.action,
                             size: a.zxk.Sizes.TINY,
                             disabled: !0,
                             children: I.intl.string(I.t.xMH6vL)
@@ -232,7 +232,7 @@ let S = (e) => {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(a.zxk, {
-                    className: P.action,
+                    className: S.action,
                     size: a.zxk.Sizes.TINY,
                     onClick: () => c(t),
                     disabled: b,
@@ -240,7 +240,7 @@ let S = (e) => {
                     children: I.intl.string(I.t.Kz8Pws)
                 }),
                 (0, r.jsx)(a.zxk, {
-                    className: P.action,
+                    className: S.action,
                     size: a.zxk.Sizes.TINY,
                     onClick: () => u(t),
                     color: a.zxk.Colors.PRIMARY,
@@ -287,18 +287,18 @@ let S = (e) => {
                       ]
                   });
         return (0, r.jsxs)('div', {
-            className: m ? P.mobileContainer : P.container,
+            className: m ? S.mobileContainer : S.container,
             children: [
                 (0, r.jsx)('div', {
-                    className: P.inline,
-                    children: (0, r.jsx)(S, {
+                    className: S.inline,
+                    children: (0, r.jsx)(P, {
                         userId: t,
                         channelId: n.id
                     })
                 }),
-                !m && (0, r.jsx)('div', { className: P.divider }),
+                !m && (0, r.jsx)('div', { className: S.divider }),
                 (0, r.jsx)('div', {
-                    className: P.inline,
+                    className: S.inline,
                     children: g
                 })
             ]

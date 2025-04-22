@@ -73,8 +73,8 @@ let x = {
     M = (e) => {
         let { channel: t, entry: n, disableGameProfileLinks: p, onReaction: h, onVoiceChannelPreview: D, onUserPopoutClosed: M, trackRankingItemInteraction: k } = e,
             { largeImage: j } = (0, g.rv)({ entry: n }),
-            { user: U, details: G, appName: B, activity: F } = (0, R.n)(n),
-            { primaryColor: V, secondaryColor: Z } = (0, S.Z)(null == j ? void 0 : j.src),
+            { user: U, details: G, appName: B, activity: V } = (0, R.n)(n),
+            { primaryColor: F, secondaryColor: Z } = (0, S.Z)(null == j ? void 0 : j.src),
             H = (0, o.e7)([_.default], () => _.default.locale),
             { streamPreviewUrl: Y, stream: W } = (0, b.Z)(n),
             { displayParticipants: K, participant1: z, participant2: q, numOtherParticipants: Q } = (0, E.Z)(n, 3),
@@ -100,11 +100,11 @@ let x = {
                         avatarSrcs: K.map((e) => e.getAvatarURL(t.guild_id, 128)),
                         description: r,
                         timestamp: (0, y.yh)(n, H),
-                        colors: [V, Z],
+                        colors: [F, Z],
                         channelId: e
                     });
                 },
-                [null == j ? void 0 : j.src, t, K, n, H, Q, z, q, V, Z, U]
+                [null == j ? void 0 : j.src, t, K, n, H, Q, z, q, F, Z, U]
             );
         if (null == U) return null;
         let en = (0, r.jsx)(A.Gk, {
@@ -144,16 +144,16 @@ let x = {
                           trackRankingItemInteraction: k
                       }),
             ei = [
-                (0, l.Z)(F, P.xjy.JOIN) || (0, c.Z)(F)
+                (0, l.Z)(V, P.xjy.JOIN) || (0, c.Z)(V)
                     ? (0, r.jsx)(d.Z, {
-                          activity: F,
+                          activity: V,
                           user: U,
                           ButtonComponent: (e) => (0, r.jsx)(N.Ll, L({ IconComponent: s.iWm }, e))
                       })
                     : null,
-                (0, u.Z)(F)
+                (0, u.Z)(V)
                     ? (0, r.jsx)(f.Z, {
-                          activity: F,
+                          activity: V,
                           ButtonComponent: (e) => (0, r.jsx)(N.Ll, L({ IconComponent: s.tEF }, e))
                       })
                     : null

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => V,
+    Z: () => F,
     d: () => H
 }),
     n(781311),
@@ -87,7 +87,7 @@ function B(e, t) {
     }
     return n;
 }
-function F(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -98,11 +98,11 @@ function F(e, t) {
         e
     );
 }
-async function V(e) {
+async function F(e) {
     var t, n, r, o, l, u, d, p, h, m, g, E, b, O, S, T, A;
-    let { command: N, optionValues: w, context: k, commandTargetId: j, maxSizeCallback: U, commandOrigin: G = L.bB.CHAT, sectionName: B, interactionLifecycleOptionsFactory: F = K, source: V, clientSupportsContextlessActivityLaunch: H } = e;
+    let { command: N, optionValues: w, context: k, commandTargetId: j, maxSizeCallback: U, commandOrigin: G = L.bB.CHAT, sectionName: B, interactionLifecycleOptionsFactory: V = K, source: F, clientSupportsContextlessActivityLaunch: H } = e;
     if (null == k.channel) return;
-    let W = null != (r = D.Z.getSource(k.channel.id)) ? r : V,
+    let W = null != (r = D.Z.getSource(k.channel.id)) ? r : F,
         q = null != (o = D.Z.getCommandOrigin(k.channel.id)) ? o : G;
     null == k.autocomplete &&
         a.Z.dispatch({
@@ -273,7 +273,7 @@ async function V(e) {
                   analytics_location: z(q),
                   sectionName: B,
                   source: W,
-                  interactionLifecycleOptions: await F(N, k, $)
+                  interactionLifecycleOptions: await V(N, k, $)
               }));
 }
 let Z = (e) => {
@@ -377,7 +377,7 @@ async function K(e, t, n) {
         try {
             await l.PR(i.botId);
         } catch (e) {}
-    let u = F(
+    let u = V(
         G(
             {},
             (0, E.ZP)({

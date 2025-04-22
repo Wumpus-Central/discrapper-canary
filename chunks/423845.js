@@ -36,8 +36,8 @@ var r = n(620014),
     U = '[object RegExp]',
     G = '[object Set]',
     B = '[object String]',
-    F = '[object Symbol]',
-    V = '[object WeakMap]',
+    V = '[object Symbol]',
+    F = '[object WeakMap]',
     Z = '[object ArrayBuffer]',
     H = '[object DataView]',
     Y = '[object Float32Array]',
@@ -62,18 +62,18 @@ function et(e, t, n, R, P, w) {
         if (((D = h(e)), !M)) return c(e, D);
     } else {
         var B = p(e),
-            F = B == L || B == x;
+            V = B == L || B == x;
         if (b(e)) return l(e, M);
-        if (B == j || B == C || (F && !P)) {
-            if (((D = k || F ? {} : g(e)), !M)) return k ? d(e, s(D, e)) : u(e, o(D, e));
+        if (B == j || B == C || (V && !P)) {
+            if (((D = k || V ? {} : g(e)), !M)) return k ? d(e, s(D, e)) : u(e, o(D, e));
         } else {
             if (!ee[B]) return P ? e : {};
             D = m(e, B, M);
         }
     }
     w || (w = new r());
-    var V = w.get(e);
-    if (V) return V;
+    var F = w.get(e);
+    if (F) return F;
     w.set(e, D),
         O(e)
             ? e.forEach(function (r) {
@@ -92,4 +92,4 @@ function et(e, t, n, R, P, w) {
         D
     );
 }
-(ee[C] = ee[R] = ee[Z] = ee[H] = ee[P] = ee[w] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[j] = ee[U] = ee[G] = ee[B] = ee[F] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[D] = ee[L] = ee[V] = !1), (e.exports = et);
+(ee[C] = ee[R] = ee[Z] = ee[H] = ee[P] = ee[w] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[j] = ee[U] = ee[G] = ee[B] = ee[V] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[D] = ee[L] = ee[F] = !1), (e.exports = et);

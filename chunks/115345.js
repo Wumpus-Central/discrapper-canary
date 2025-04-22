@@ -99,7 +99,7 @@ function U(e, t) {
     let l = (0, o.Wu)([g.Z], () => Object.values(g.Z.getGuilds())),
         c = r.useCallback(() => {
             let r = {};
-            for (let i of l) r[i.id] = F(i, n, e, t, a[i.id]);
+            for (let i of l) r[i.id] = V(i, n, e, t, a[i.id]);
             return r;
         }, [l, n, e, t, a]),
         [u, d] = r.useState(() => c());
@@ -111,7 +111,7 @@ function U(e, t) {
                 s((n) => j(M({}, n), { [e]: t }));
             }, []),
             setThresholds: i,
-            getDebug: () => V(Object.values(u), t)
+            getDebug: () => F(Object.values(u), t)
         }
     );
 }
@@ -135,7 +135,7 @@ function B() {
             num_unread_guids_after: e.filter((e) => m.default.hasUnread(e.id)).length
         });
 }
-function F(e, t, n, r, i) {
+function V(e, t, n, r, i) {
     var a;
     let [o, s, l] = p.Z.hasConsented(P.pjP.PERSONALIZATION) ? (0, N.q)(e, t, n, r, !0) : (0, N.A)(e, n),
         c = null != (a = n.filter((t) => t.guild_id === e.id)[0]) ? a : {},
@@ -151,7 +151,7 @@ function F(e, t, n, r, i) {
         muted: b.ZP.isMuted(e.id) && !b.ZP.isTemporarilyMuted(e.id)
     };
 }
-function V(e, t) {
+function F(e, t) {
     let n = t.reduce((e, t) => {
             var n;
             return e + Number(null != (n = t.num_year_opens) ? n : 0);

@@ -121,9 +121,9 @@ function P(e) {
         U = e.gifting_prompt,
         G = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
         B = e.type === v.uaV.THREAD_STARTER_MESSAGE ? (null == (r = e.referenced_message) || null == (n = r.author) ? void 0 : n.id) : void 0,
-        F = e.content;
+        V = e.content;
     return new d.ZP(
-        (e.type === v.uaV.PREMIUM_REFERRAL ? ((f = E.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (F = '')) : e.type === v.uaV.CHAT_WALLPAPER_SET && ((h = (0, a.Z)(e.content)), (F = '')), C(e))
+        (e.type === v.uaV.PREMIUM_REFERRAL ? ((f = E.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (V = '')) : e.type === v.uaV.CHAT_WALLPAPER_SET && ((h = (0, a.Z)(e.content)), (V = '')), C(e))
             ? T(I({}, L), {
                   id: e.id,
                   channel_id: e.channel_id,
@@ -150,7 +150,7 @@ function P(e) {
                       mentionRoles: A
                   }),
                   giftCodes: (0, g.Fp)(e) ? (0, g.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, g.Q_)(e.content),
-                  content: F,
+                  content: V,
                   referralTrialOfferId: f,
                   call: x(e.call, O.timestamp),
                   messageSnapshots: j(e),

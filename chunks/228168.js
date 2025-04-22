@@ -7,10 +7,10 @@ n.d(t, {
     Tg: () => l,
     a6: () => a,
     cm: () => f,
+    lY: () => d,
     n_: () => h,
     oh: () => c,
     vB: () => i,
-    y0: () => d,
     yM: () => _
 });
 var r = n(981631);
@@ -26,7 +26,7 @@ var c = (function (e) {
         return (e.ROLES = 'ROLES'), (e.CONNECTIONS = 'CONNECTIONS'), (e.NOTE = 'NOTE'), (e.RECENT_ACTIVITY = 'RECENT_ACTIVITY'), e;
     })({}),
     d = (function (e) {
-        return (e.BITE_SIZE = 'BITE_SIZE'), (e.FULL_SIZE = 'FULL_SIZE'), (e.PANEL = 'PANEL'), e;
+        return (e.POPOUT = 'POPOUT'), (e.MODAL = 'MODAL'), (e.SIDEBAR = 'SIDEBAR'), e;
     })({}),
     f = (function (e) {
         return (e[(e.NICKNAME = 0)] = 'NICKNAME'), (e[(e.PRONOUNS = 1)] = 'PRONOUNS'), (e[(e.AVATAR = 2)] = 'AVATAR'), (e[(e.ANIMATED_AVATAR = 3)] = 'ANIMATED_AVATAR'), (e[(e.BANNER = 4)] = 'BANNER'), (e[(e.ANIMATED_BANNER = 5)] = 'ANIMATED_BANNER'), (e[(e.BIO = 6)] = 'BIO'), (e[(e.THEME = 7)] = 'THEME'), (e[(e.AVATAR_DECORATION = 8)] = 'AVATAR_DECORATION'), (e[(e.PROFILE_EFFECT = 9)] = 'PROFILE_EFFECT'), e;

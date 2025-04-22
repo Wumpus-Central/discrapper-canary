@@ -15,8 +15,8 @@ var a = n(200651),
     b = n(829907),
     f = n(610394),
     v = n(352527),
-    g = n(355863),
-    j = n(449224),
+    j = n(355863),
+    g = n(449224),
     _ = n(808506),
     y = n(572004),
     C = n(70956),
@@ -87,7 +87,7 @@ let R = {
                             height: 100
                         }
                     },
-                    g.Z.getWidgetDefaultSettings(N.Odu.CLICK_ZONE_DEBUG)
+                    j.Z.getWidgetDefaultSettings(N.Odu.CLICK_ZONE_DEBUG)
                 ),
                 { pinned: !0 }
             ),
@@ -108,7 +108,7 @@ let R = {
                             height: 'auto'
                         }
                     },
-                    g.Z.getWidgetDefaultSettings(N.Odu.PERFORMANCE_DEBUG)
+                    j.Z.getWidgetDefaultSettings(N.Odu.PERFORMANCE_DEBUG)
                 ),
                 { pinned: !0 }
             )
@@ -145,7 +145,7 @@ function L(e) {
 function A(e) {
     let { trackedGame: t } = e,
         n = (0, s.e7)([x.ZP], () => x.ZP.getGameForPID(t.pid)),
-        r = (0, s.e7)([j.Z], () => j.Z.getGameForPID(t.pid));
+        r = (0, s.e7)([g.Z], () => g.Z.getGameForPID(t.pid));
     return (0, a.jsxs)('div', {
         className: P.panelGroup,
         children: [
@@ -316,7 +316,7 @@ function D(e) {
     });
 }
 function z(e) {
-    let t = Z(Object.values((0, s.Wu)([g.Z], () => g.Z.getWidgetsForLayout(T.$))), e);
+    let t = Z(Object.values((0, s.Wu)([j.Z], () => j.Z.getWidgetsForLayout(T.$))), e);
     return [
         t,
         () => {
@@ -334,17 +334,17 @@ function M() {
     var e, t;
     let [n, l] = z(N.Odu.CLICK_ZONE_DEBUG),
         [o, d] = z(N.Odu.PERFORMANCE_DEBUG),
-        g = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.ClickZones)),
-        j = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.WidgetAreas)),
+        j = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.ClickZones)),
+        g = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.WidgetAreas)),
         y = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.DisabledGPUBoost)),
         T = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.ForceGPUBoost)),
         S = (0, s.e7)([p.default], () => p.default.getForcedRenderMode()),
         [R, Z] = r.useState({}),
         [L, M] = r.useState(S),
-        B = (e) => {
+        U = (e) => {
             M(e), u.Z.forceRenderMode(e);
         },
-        U = [
+        B = [
             {
                 label: m.R5.UNSET,
                 value: m.R5.UNSET
@@ -362,8 +362,8 @@ function M() {
                 value: m.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION
             }
         ].map((e) => I(k({}, e), { label: ''.concat(e.label, ' ').concat(S === e.value ? '(current)' : '') })),
-        G = (0, s.cj)([p.default], () => p.default.getTrackedGames()),
-        F = (0, s.e7)([_.default], () => _.default.getFocusedPID()),
+        F = (0, s.cj)([p.default], () => p.default.getTrackedGames()),
+        G = (0, s.e7)([_.default], () => _.default.getFocusedPID()),
         V = (0, s.e7)([_.default], () => _.default.isFocusedPidOutOfProcess()),
         H = (0, O.getPID)(),
         W = (0, s.e7)([p.default], () => p.default.isOverlayOOPEnabledForPid(H), [H]),
@@ -371,10 +371,10 @@ function M() {
         Y = (0, s.e7)([x.ZP], () => x.ZP.getRunningGames());
     r.useEffect(() => {
         Z((e) => {
-            for (let t of Object.keys(G)) e[Number(t)] = G[Number(t)];
+            for (let t of Object.keys(F)) e[Number(t)] = F[Number(t)];
             return e;
         });
-    }, [G]);
+    }, [F]);
     let [J, q] = r.useState({}),
         $ = r.useRef(null);
     r.useEffect(
@@ -436,7 +436,7 @@ function M() {
             var t, n;
             return null != (n = null == (t = R[e]) ? void 0 : t.fullscreenType) ? n : 'Unknown';
         },
-        ei = Y.filter((e) => null == G[e.pid]);
+        ei = Y.filter((e) => null == F[e.pid]);
     return (0, a.jsx)(c.w0Z, {
         children: (0, a.jsxs)('div', {
             className: i()(w.panel, P.panel),
@@ -452,7 +452,7 @@ function M() {
                                     'div',
                                     I(k({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
-                                            value: g,
+                                            value: j,
                                             onChange: () => ee(),
                                             size: 18,
                                             type: c.XZJ.Types.INVERTED,
@@ -475,7 +475,7 @@ function M() {
                                     'div',
                                     I(k({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
-                                            value: j,
+                                            value: g,
                                             onChange: () => et(),
                                             size: 18,
                                             type: c.XZJ.Types.INVERTED,
@@ -596,8 +596,8 @@ function M() {
                                 children: (0, a.jsx)(c.PhF, {
                                     serialize: (e) => e,
                                     isSelected: (e) => e === L,
-                                    options: U,
-                                    select: B,
+                                    options: B,
+                                    select: U,
                                     popoutLayerContext: E.O$
                                 })
                             })
@@ -645,13 +645,13 @@ function M() {
                                 children: (0, a.jsxs)('div', {
                                     className: P.panelGroup,
                                     children: [
-                                        0 === Object.keys(G).length &&
+                                        0 === Object.keys(F).length &&
                                             (0, a.jsx)(c.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'text-normal',
                                                 children: 'No running games'
                                             }),
-                                        Object.values(G).map((e) => (0, a.jsx)(A, { trackedGame: e }, e.pid))
+                                        Object.values(F).map((e) => (0, a.jsx)(A, { trackedGame: e }, e.pid))
                                     ]
                                 })
                             })
@@ -660,19 +660,19 @@ function M() {
                 (0, a.jsxs)('div', {
                     className: P.panelGroup,
                     children: [
-                        0 === Object.keys(G).length &&
+                        0 === Object.keys(F).length &&
                             (0, a.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
                                 children: 'No tracked game times'
                             }),
-                        Object.values(G).map((e) => (0, a.jsx)(D, { pid: e.pid }, e.pid)),
+                        Object.values(F).map((e) => (0, a.jsx)(D, { pid: e.pid }, e.pid)),
                         (0, a.jsxs)('div', {
                             children: [
                                 (0, a.jsxs)(c.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'text-primary',
-                                    children: ['focusedPID: ', null != (e = null == F ? void 0 : F.toString()) ? e : 'null']
+                                    children: ['focusedPID: ', null != (e = null == G ? void 0 : G.toString()) ? e : 'null']
                                 }),
                                 (0, a.jsxs)(c.Text, {
                                     variant: 'text-sm/normal',
@@ -713,13 +713,13 @@ function M() {
                                 children: (0, a.jsxs)('div', {
                                     className: P.panelGroup,
                                     children: [
-                                        0 === Object.keys(G).length &&
+                                        0 === Object.keys(F).length &&
                                             (0, a.jsx)(c.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'text-normal',
                                                 children: 'No recent screen types'
                                             }),
-                                        Object.values(G).map((e) => {
+                                        Object.values(F).map((e) => {
                                             var t;
                                             return (0, a.jsxs)(
                                                 'div',

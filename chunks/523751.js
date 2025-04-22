@@ -224,10 +224,10 @@ function k(e) {
         U = (0, s.e7)([h.Z], () => h.Z.theme),
         G = (0, O.XX)(o),
         B = (0, v.i)(G),
-        F = i.useMemo(() => G.premium && j && !N, [N, G.premium, j]),
-        V = i.useCallback(
+        V = i.useMemo(() => G.premium && j && !N, [N, G.premium, j]),
+        F = i.useCallback(
             (e) => {
-                F &&
+                V &&
                     (e.stopPropagation(),
                     e.preventDefault(),
                     (0, _.f)({
@@ -238,7 +238,7 @@ function k(e) {
                         }
                     }));
             },
-            [F, o.id]
+            [V, o.id]
         );
     if (B === v.Q.NONE) return null;
     let { IconComponent: Z, backgroundDarkColor: H, backgroundLightColor: Y, foregroundDarkColor: W, foregroundLightColor: K, premiumBackgroundColor: z, premiumForegroundColor: q, sizeAdjustment: Q } = L[B];
@@ -259,8 +259,8 @@ function k(e) {
         tooltipContentClassName: A.tooltipRemovePadding,
         children: (e) =>
             (0, r.jsx)(u.P3F, {
-                onClick: V,
-                tabIndex: F ? 0 : -1,
+                onClick: F,
+                tabIndex: V ? 0 : -1,
                 children: (0, r.jsx)(
                     p.Z,
                     P(C({}, e), {

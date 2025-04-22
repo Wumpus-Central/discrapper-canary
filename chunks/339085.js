@@ -1,6 +1,6 @@
 n.d(t, {
     De: () => ef,
-    ZP: () => eF
+    ZP: () => eV
 }),
     n(388685),
     n(825670),
@@ -49,8 +49,8 @@ var r,
     U = n(856985),
     G = n(185923),
     B = n(981631),
-    F = n(149203),
-    V = n(526761);
+    V = n(149203),
+    F = n(526761);
 function Z(e, t, n) {
     return (
         t in e
@@ -104,7 +104,7 @@ function W(e, t) {
     );
 }
 let K = 'original',
-    z = [F.UX.TOP_GUILD_EMOJI.toString(), F.UX.FAVORITES.toString(), F.UX.RECENT.toString(), F.UX.CUSTOM.toString()].concat(k.ZP.getCategories()),
+    z = [V.UX.TOP_GUILD_EMOJI.toString(), V.UX.FAVORITES.toString(), V.UX.RECENT.toString(), V.UX.CUSTOM.toString()].concat(k.ZP.getCategories()),
     q = {
         pendingUsages: [],
         emojiReactionPendingUsages: [],
@@ -204,7 +204,7 @@ function ed(e) {
             return null != (t = k.ZP.getByName(e)) ? t : es(e);
         },
         afterCompute: () => {
-            e(), (et = z.slice(0)), a().some(en, (e) => e.usableEmojis.length > 0) || et.splice(z.indexOf(F.UX.CUSTOM), 1);
+            e(), (et = z.slice(0)), a().some(en, (e) => e.usableEmojis.length > 0) || et.splice(z.indexOf(V.UX.CUSTOM), 1);
         },
         numFrequentlyItems: X
     });
@@ -470,8 +470,8 @@ function eR(e, t) {
             location: 'populateInitialFrecencyData',
             autoTrackExposure: !0
         });
-    if ((M.Xb.trackExposure({ location: 'populateInitialFrecencyData' }), a().isEmpty(e) && a().isEmpty(q.pendingUsages) && O.Z.hasLoaded(V.yP.FRECENCY_AND_FAVORITES_SETTINGS))) for (let e of ['thumbsup', 'thumbsup', 'eyes', 'eyes', 'laughing', 'laughing', 'watermelon', 'fork_and_knife', 'yum', 'weary', 'tired_face', 'poop', '100']) e_.track(e);
-    if ((n || r) && a().isEmpty(t) && a().isEmpty(q.emojiReactionPendingUsages) && O.Z.hasLoaded(V.yP.FRECENCY_AND_FAVORITES_SETTINGS)) for (let e of ['100', '100', 'thumbsup', 'thumbsup', 'thumbsdown', 'thumbsdown', 'heart', 'point_up', 'eyes', 'weary', 'laughing', 'white_check_mark', 'x']) ep.track(e);
+    if ((M.Xb.trackExposure({ location: 'populateInitialFrecencyData' }), a().isEmpty(e) && a().isEmpty(q.pendingUsages) && O.Z.hasLoaded(F.yP.FRECENCY_AND_FAVORITES_SETTINGS))) for (let e of ['thumbsup', 'thumbsup', 'eyes', 'eyes', 'laughing', 'laughing', 'watermelon', 'fork_and_knife', 'yum', 'weary', 'tired_face', 'poop', '100']) e_.track(e);
+    if ((n || r) && a().isEmpty(t) && a().isEmpty(q.emojiReactionPendingUsages) && O.Z.hasLoaded(F.yP.FRECENCY_AND_FAVORITES_SETTINGS)) for (let e of ['100', '100', 'thumbsup', 'thumbsup', 'thumbsdown', 'thumbsdown', 'heart', 'point_up', 'eyes', 'weary', 'laughing', 'white_check_mark', 'x']) ep.track(e);
 }
 function eP() {
     var e, t, n, r, i, o;
@@ -495,7 +495,7 @@ function ew(e) {
         settings: { type: t },
         wasSaved: n
     } = e;
-    if ((h.Z.setEmojiLocale(v.default.locale), t !== V.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
+    if ((h.Z.setEmojiLocale(v.default.locale), t !== F.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
     (q.pendingUsages = []), (q.emojiReactionPendingUsages = []);
 }
 function eD() {
@@ -706,7 +706,7 @@ class eB extends (r = c.ZP.PersistedStore) {
     }
 }
 Z(eB, 'displayName', 'EmojiStore'), Z(eB, 'persistKey', 'EmojiStoreV2'), Z(eB, 'migrations', [(e) => H({}, e)]);
-let eF = new eB(u.Z, {
+let eV = new eB(u.Z, {
     LOGOUT: ev,
     BACKGROUND_SYNC: eO,
     CONNECTION_OPEN: eb,

@@ -83,8 +83,8 @@ let k = h.Z.get(w.ABu.SPOTIFY),
     U = 'hm://pusher/v1/connections/',
     G = 30 * N.Z.Millis.SECOND,
     B = 30 * N.Z.Millis.SECOND,
-    F = 100,
-    V = 5 * N.Z.Millis.MINUTE,
+    V = 100,
+    F = 5 * N.Z.Millis.MINUTE,
     Z = 5 * N.Z.Millis.SECOND,
     H = 1.5 * N.Z.Millis.SECOND,
     Y = 'Computer',
@@ -426,7 +426,7 @@ function eR() {
         t = ef(e);
     if (null == t)
         return (
-            et.start(V, () => {
+            et.start(F, () => {
                 null != i && i.userId === e && (0, m.Z)();
             }),
             !1
@@ -452,7 +452,7 @@ function ew(e) {
                 checkSoundSharing: !0,
                 checkSoundboardSounds: !1
             });
-        t && n && null != r ? ($.start(B, eP, !1), ee.stop()) : ee.start(F, () => $.stop(), !1);
+        t && n && null != r ? ($.start(B, eP, !1), ee.stop()) : ee.start(V, () => $.stop(), !1);
     }
     return !1;
 }

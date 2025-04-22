@@ -87,10 +87,10 @@ function v(e, t) {
 let O = i.forwardRef(function (e, t) {
     var { children: n, className: i, subsection: a, onAction: m, onClose: E } = e,
         v = y(e, ['children', 'className', 'subsection', 'onAction', 'onClose']);
-    let { profileType: O } = (0, d.z)(),
+    let { themeType: O } = (0, d.z)(),
         { analyticsLocations: I } = (0, l.ZP)(),
         { context: S } = (0, c.KZ)();
-    return O === _.y0.FULL_SIZE || (null == S ? void 0 : S.userId) == null
+    return O === _.lY.MODAL || (null == S ? void 0 : S.userId) == null
         ? (0, r.jsx)(
               u.Z.Overlay,
               b(

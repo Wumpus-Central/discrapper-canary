@@ -23,7 +23,7 @@ var i = n(442837),
 let y = 3;
 function v(e) {
     let { user: t, guild: n, channel: v, onAction: O, onClose: I } = e,
-        { profileType: S } = (0, h.z)(),
+        { themeType: S } = (0, h.z)(),
         T = (0, _.Z)(v);
     if (!(0, i.e7)([f.Z], () => f.Z.can(E.Plq.VIEW_CHANNEL, v))) return null;
     let A = (e) => {
@@ -32,8 +32,8 @@ function v(e) {
         N = (e) => {
             e.stopPropagation(), o.default.selectVoiceChannel(v.id), (0, u.Kh)(v.id), null == O || O({ action: 'OPEN_VOICE_CHANNEL' }), null == I || I();
         },
-        C = S === g.y0.FULL_SIZE,
-        R = S === g.y0.PANEL,
+        C = S === g.lY.MODAL,
+        R = S === g.lY.SIDEBAR,
         P = !C && !R;
     return (0, r.jsxs)(r.Fragment, {
         children: [

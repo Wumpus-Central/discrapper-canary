@@ -6,7 +6,7 @@ n.d(t, {
     _N: () => w,
     cS: () => L,
     cZ: () => G,
-    e1: () => V,
+    e1: () => F,
     eQ: () => R,
     fw: () => C,
     uY: () => x,
@@ -194,7 +194,7 @@ function B(e, t) {
         .map((e) => E.ZP.getName(s, null == o ? void 0 : o.id, e))
         .value();
 }
-function F(e, t) {
+function V(e, t) {
     let n = Math.max(0, t - e.length);
     if (1 === e.length)
         if (n > 0)
@@ -230,7 +230,7 @@ function F(e, t) {
                 c: e[2]
             });
 }
-function V(e, t, n) {
+function F(e, t, n) {
     var r, i;
     let a = p.Z.getMessage(t, e);
     if (null == a) return '';
@@ -241,5 +241,5 @@ function V(e, t, n) {
         }),
         s = null != (i = null == o || null == (r = o.count_details) ? void 0 : r.vote) ? i : 0,
         l = B(a, n);
-    return 0 === l.length ? '' : F(l, s);
+    return 0 === l.length ? '' : V(l, s);
 }

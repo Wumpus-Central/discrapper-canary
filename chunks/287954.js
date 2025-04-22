@@ -89,16 +89,16 @@ function m(e, t) {
           }
         : {
               position: 'bottom',
-              align: t === c.y0.FULL_SIZE ? 'center' : 'left',
+              align: t === c.lY.MODAL ? 'center' : 'left',
               animationPosition: 'top',
               spacing: 6
           };
 }
 function g(e) {
-    var { user: t, guildId: n, channelId: u, profileType: f, onClose: h, children: g } = e,
-        E = p(e, ['user', 'guildId', 'channelId', 'profileType', 'onClose', 'children']);
+    var { user: t, guildId: n, channelId: u, themeType: f, onClose: h, children: g } = e,
+        E = p(e, ['user', 'guildId', 'channelId', 'themeType', 'onClose', 'children']);
     let { interactionType: b, interactionSource: y, resetInteraction: v, interactionSourceId: O, interactionPopoutTargetRef: I } = (0, a.Xo)(),
-        S = f === c.y0.FULL_SIZE ? (0, l.z)(t.id, n) : void 0,
+        S = f === c.lY.MODAL ? (0, l.z)(t.id, n) : void 0,
         T = y === E.sourceType && b === c.P.REACT,
         A = y === E.sourceType && b === c.P.REPLY,
         N = (T || A) && O === E.sourceId;
@@ -118,7 +118,7 @@ function g(e) {
                                     user: t,
                                     guildId: n,
                                     channelId: u,
-                                    profileType: f,
+                                    themeType: f,
                                     onClose: h,
                                     modalKey: S,
                                     setPopoutRef: i

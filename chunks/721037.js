@@ -105,17 +105,17 @@ let w = a.ZP.connectStores([p.Z, s.ZP, v.Z, h.Z, E.Z, y.Z, b.Z, f.Z, m.ZP], (e) 
         U = y.Z.getChannelId() === j,
         G = null != j && f.Z.getChatOpen(j),
         B = C || P,
-        F = B && null != _ && (0, l.q)(_.applicationId),
-        V = !B && null != a && U && G;
+        V = B && null != _ && (0, l.q)(_.applicationId),
+        F = !B && null != a && U && G;
     return {
         selectedPIPWindow: a,
         pipWindows: 0 === M.length ? R : M,
         pipWidth: x,
-        maxX: w.width - (V ? k : 0),
+        maxX: w.width - (F ? k : 0),
         maxY: w.height,
         theme: h.Z.theme,
         dockedRect: b.Z.getDockedRect(null != (i = null == a ? void 0 : a.id) ? i : ''),
         appContext: D,
-        roundCorners: !F
+        roundCorners: !V
     };
 })(P);

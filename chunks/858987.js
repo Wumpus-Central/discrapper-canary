@@ -89,7 +89,7 @@ function T(e) {
     var t;
     let { legalTermsNodeRef: n, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: b, isGift: v, planGroup: T, isPrepaid: A, isTrial: N, makePurchase: C, needsPaymentSource: R, inReverseTrial: P, onNext: w, onPaymentSourceAdd: D } = e,
         { application: L, selectedPlan: x, hasAcceptedTerms: M, purchaseType: k, paymentSourceId: j, activeSubscription: U, devShelfFetchState: G, hasPaymentSources: B } = (0, c.JL)(),
-        F = I({
+        V = I({
             purchaseType: k,
             plan: x,
             premiumSubscription: b,
@@ -100,12 +100,12 @@ function T(e) {
             paymentSourceId: j,
             hasPaymentSources: B
         }),
-        { analyticsLocations: V } = (0, l.ZP)();
+        { analyticsLocations: F } = (0, l.ZP)();
     if (null != i || null != a || d)
         return (0, r.jsx)(o.zxk, {
             color: o.zxk.Colors.GREEN,
             disabled: !0,
-            children: F
+            children: V
         });
     if (R && B)
         return (0, r.jsx)(o.ua7, {
@@ -118,7 +118,7 @@ function T(e) {
                         type: 'submit',
                         'data-testid': 'submitButton',
                         onClick: D,
-                        children: F
+                        children: V
                     })
                 )
         });
@@ -133,7 +133,7 @@ function T(e) {
                         type: 'submit',
                         'data-testid': 'submitButton',
                         disabled: !0,
-                        children: F
+                        children: V
                     })
                 )
         });
@@ -148,7 +148,7 @@ function T(e) {
                         type: 'submit',
                         'data-testid': 'submitButton',
                         disabled: !0,
-                        children: F
+                        children: V
                     })
                 )
         });
@@ -165,7 +165,7 @@ function T(e) {
                     className: g.nitroIcon,
                     src: E
                 }),
-                F
+                V
             ]
         });
     else if (!M)
@@ -179,7 +179,7 @@ function T(e) {
                         type: 'submit',
                         onClick: () => S(n, f),
                         'data-testid': 'submitButton',
-                        children: F
+                        children: V
                     })
                 )
         });
@@ -189,8 +189,8 @@ function T(e) {
             onNext: w,
             isSubmitting: h,
             paymentSourceId: j,
-            buttonLabel: F,
-            analyticsLocations: V
+            buttonLabel: V,
+            analyticsLocations: F
         });
     else
         return (0, r.jsx)(o.zxk, {
@@ -198,6 +198,6 @@ function T(e) {
             onClick: C,
             color: o.zxk.Colors.GREEN,
             submitting: h,
-            children: F
+            children: V
         });
 }

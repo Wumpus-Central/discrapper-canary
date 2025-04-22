@@ -380,9 +380,9 @@
         };
     G.propTypes = { children: v.func.isRequired };
     var B = ['on', 'session'],
-        F = t.createContext(null);
-    F.displayName = 'CustomCheckoutSdkContext';
-    var V = function (e, t) {
+        V = t.createContext(null);
+    V.displayName = 'CustomCheckoutSdkContext';
+    var F = function (e, t) {
             if (!e) throw Error('Could not find CustomCheckoutProvider context; You need to wrap the part of your app that '.concat(t, ' in an <CustomCheckoutProvider> provider.'));
             return e;
         },
@@ -491,7 +491,7 @@
                 },
                 [d.customCheckoutSdk, s]
             );
-            return d.customCheckoutSdk ? t.createElement(F.Provider, { value: d }, t.createElement(Z.Provider, { value: g }, i)) : null;
+            return d.customCheckoutSdk ? t.createElement(V.Provider, { value: d }, t.createElement(Z.Provider, { value: g }, i)) : null;
         };
     W.propTypes = {
         stripe: v.any,
@@ -501,13 +501,13 @@
         }).isRequired
     };
     var K = function (e) {
-            return V(t.useContext(F), e);
+            return F(t.useContext(V), e);
         },
         z = function (e) {
-            var n = t.useContext(F),
+            var n = t.useContext(V),
                 r = t.useContext(x);
             if (n && r) throw Error('You cannot wrap the part of your app that '.concat(e, ' in both <CustomCheckoutProvider> and <Elements> providers.'));
-            return n ? V(n, e) : M(r, e);
+            return n ? F(n, e) : M(r, e);
         },
         q = function () {
             K('calls useCustomCheckout()');

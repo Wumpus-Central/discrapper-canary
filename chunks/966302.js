@@ -37,8 +37,8 @@ var r = n(200651),
     U = n(584511),
     G = n(793865),
     B = n(522651),
-    F = n(795318),
-    V = n(354459),
+    V = n(795318),
+    F = n(354459),
     Z = n(981631),
     H = n(65154),
     Y = n(388032),
@@ -180,7 +180,7 @@ function ea(e) {
                         let { closePopout: t } = e;
                         return (0, r.jsx)(G.Z, {
                             onClose: t,
-                            onInteraction: (0, F.u)('VideoDeviceMenu', s, { entrypoint: V.A5.CARET })
+                            onInteraction: (0, V.u)('VideoDeviceMenu', s, { entrypoint: F.A5.CARET })
                         });
                     },
                     position: 'top',
@@ -278,7 +278,7 @@ function eo(e) {
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
     }, [h]);
     let B = L === Z.WtW.VIDEO && N && C > 0,
-        F = (0, r.jsxs)(r.Fragment, {
+        V = (0, r.jsxs)(r.Fragment, {
             children: [
                 null != I && null == S
                     ? (0, r.jsx)('div', {
@@ -323,7 +323,7 @@ function eo(e) {
                 })
             ]
         }),
-        V = B ? $ : ee,
+        F = B ? $ : ee,
         q = (0, l.e7)([x.Z], () => x.Z.windowSize());
     return (0, r.jsx)(m.Gt, {
         value: y,
@@ -344,16 +344,16 @@ function eo(e) {
                     (0, r.jsxs)(s.animated.div, {
                         className: o()(K.root, z.elevationHigh, { [K.previewCamera]: v }, e),
                         style: J(Q({}, n), {
-                            width: G.value.interpolate([0, 1], [V.width, et]),
-                            minHeight: G.value.interpolate([0, 1], [V.height, en]),
-                            translateX: G.value.interpolate([0, 1], [0, (-1 * Math.abs(et - V.width)) / 2])
+                            width: G.value.interpolate([0, 1], [F.width, et]),
+                            minHeight: G.value.interpolate([0, 1], [F.height, en]),
+                            translateX: G.value.interpolate([0, 1], [0, (-1 * Math.abs(et - F.width)) / 2])
                         }),
                         children: [
                             v
-                                ? (0, r.jsx)(ei, { header: F })
+                                ? (0, r.jsx)(ei, { header: V })
                                 : (0, r.jsx)('div', {
                                       className: K.mainChannelInfo,
-                                      children: F
+                                      children: V
                                   }),
                             (0, r.jsx)(ea, {
                                 canVideo: B,

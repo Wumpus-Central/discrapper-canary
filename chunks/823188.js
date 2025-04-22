@@ -48,8 +48,8 @@ var i = n(120356),
     U = n(388032),
     G = n(781793),
     B = n(499317),
-    F = n(476945),
-    V = n(945182),
+    V = n(476945),
+    F = n(945182),
     Z = (function (e) {
         return (e[(e.PREMIUM_TIER_0_WHITE_FILL = 0)] = 'PREMIUM_TIER_0_WHITE_FILL'), (e[(e.PREMIUM_TIER_0_GRADIENT_FILL = 1)] = 'PREMIUM_TIER_0_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_WHITE_FILL = 2)] = 'PREMIUM_TIER_2_WHITE_FILL'), (e[(e.PREMIUM_TIER_2_NEW_GRADIENT_FILL = 3)] = 'PREMIUM_TIER_2_NEW_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_OLD_GRADIENT_FILL = 4)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE = 5)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE'), (e[(e.PREMIUM_TIER_2_GREY_FILL = 6)] = 'PREMIUM_TIER_2_GREY_FILL'), e;
     })({});
@@ -402,7 +402,7 @@ function X(e) {
                 ? (0, r.jsx)('div', {
                       className: G.wumpusImageContainer,
                       children: (0, r.jsx)(d.Eep, {
-                          src: F,
+                          src: V,
                           mediaLayoutType: j.hV.RESPONSIVE,
                           width: 270,
                           height: 242,
@@ -676,7 +676,7 @@ function et(e) {
         L = (0, A.Nx)(),
         M = (0, R.Ng)(),
         B = (0, A.t7)(),
-        F = null != T || null != w ? 0 : null != M || B ? 1 : null,
+        V = null != T || null != w ? 0 : null != M || B ? 1 : null,
         Z = (0, D.Vi)(),
         H = !h && L,
         W = null == (n = (0, N.Z)()) ? void 0 : n.planSelection,
@@ -753,7 +753,7 @@ function et(e) {
                 ? (0, r.jsx)('div', {
                       className: G.wumpusImageContainer,
                       children: (0, r.jsx)(d.Eep, {
-                          src: V,
+                          src: F,
                           mediaLayoutType: j.hV.RESPONSIVE,
                           width: 270,
                           height: 242,
@@ -780,7 +780,7 @@ function et(e) {
                             (0, r.jsx)(z, {
                                 isGift: h,
                                 premiumTier: k.p9.TIER_2,
-                                offerType: F,
+                                offerType: V,
                                 offerTierMatchesCard: T === k.Si.TIER_2 || (0, R.Wp)(M, k.Si.TIER_2),
                                 showYearlyPrice: c,
                                 priceOptions: b

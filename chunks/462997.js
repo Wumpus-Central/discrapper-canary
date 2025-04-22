@@ -2,7 +2,7 @@ n.d(t, { q: () => a });
 var r = n(481060),
     i = n(228168);
 let a = {
-    [i.y0.BITE_SIZE]: {
+    [i.lY.POPOUT]: {
         avatarSize: r.EFr.SIZE_80,
         avatarOffsetX: 10,
         avatarOffsetY: 4,
@@ -10,7 +10,7 @@ let a = {
         bannerHeight: 105,
         themePadding: 4
     },
-    [i.y0.FULL_SIZE]: {
+    [i.lY.MODAL]: {
         avatarSize: r.EFr.SIZE_120,
         avatarOffsetX: 16,
         avatarOffsetY: 5,
@@ -18,7 +18,7 @@ let a = {
         bannerHeight: 210,
         themePadding: 0
     },
-    [i.y0.PANEL]: {
+    [i.lY.SIDEBAR]: {
         avatarSize: r.EFr.SIZE_80,
         avatarOffsetX: 10,
         avatarOffsetY: 8,

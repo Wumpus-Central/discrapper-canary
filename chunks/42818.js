@@ -3,7 +3,7 @@ n.d(t, {
     By: () => j,
     Lu: () => U,
     e9: () => Y,
-    hG: () => F,
+    hG: () => V,
     nd: () => H,
     yT: () => W
 }),
@@ -320,7 +320,7 @@ function B(e) {
         return t !== S.Xh.NONE_MONTH && t !== S.Xh.NONE_YEAR;
     });
 }
-function F(e) {
+function V(e) {
     let { proratedInvoice: t, renewalInvoice: n, overrideRenewalDate: i } = e,
         { intervalType: a, intervalCount: o } = (0, g.dn)(t),
         { intervalType: s, intervalCount: l } = (0, g.dn)(n);
@@ -331,7 +331,7 @@ function F(e) {
         children: A.intl.format(A.t.JWWD4O, { renewalDate: c })
     });
 }
-function V(e) {
+function F(e) {
     let { isUpdate: t, currentInvoice: n, newInvoice: i, inTrialPeriod: a } = e,
         s = null != n ? (0, y.j)(n.invoiceItems) : null,
         l = null != n ? (0, g.dn)(n) : null,
@@ -458,7 +458,7 @@ function H(e) {
                             ]
                         }),
                         v
-                            ? (0, r.jsx)(V, {
+                            ? (0, r.jsx)(F, {
                                   isUpdate: s,
                                   currentInvoice: y,
                                   newInvoice: a,

@@ -9,8 +9,8 @@ var a = n(442837),
     s = n(430824),
     d = n(914010),
     u = n(709586),
-    f = n(981631),
-    _ = n(30513),
+    _ = n(981631),
+    f = n(30513),
     g = n(388032),
     p = n(273233);
 function N(e) {
@@ -18,7 +18,7 @@ function N(e) {
         x = (0, a.e7)([d.Z], () => d.Z.getGuildId()),
         A = (0, a.e7)([s.Z], () => s.Z.getGuild(x)),
         { analyticsLocations: h } = (0, l.ZP)();
-    return null == A || A.hasFeature(f.oNc.ANIMATED_BANNER) || (!N && A.hasFeature(f.oNc.BANNER))
+    return null == A || A.hasFeature(_.oNc.ANIMATED_BANNER) || (!N && A.hasFeature(_.oNc.BANNER))
         ? null
         : (0, i.jsxs)('div', {
               className: p.container,
@@ -38,7 +38,7 @@ function N(e) {
                           let e = {
                               section: t,
                               page: n,
-                              object: f.qAy.UPSELL_HEADER
+                              object: _.qAy.UPSELL_HEADER
                           };
                           null != m
                               ? (0, r.c)({
@@ -52,7 +52,7 @@ function N(e) {
                                     analyticsLocations: h,
                                     analyticsSourceLocation: e,
                                     guild: A,
-                                    perks: N ? (0, _.zC)() : (0, _.XO)()
+                                    perks: N ? (0, f.zC)() : (0, f.XO)()
                                 });
                       },
                       children: g.intl.string(g.t.WUHdZW)

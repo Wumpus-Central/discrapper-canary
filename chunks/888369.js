@@ -109,20 +109,20 @@ function B(e, t) {
     let n = w(e);
     return (n.mentionCounts = A({}, t.mentionCounts)), (n.unreadByType = A({}, t.unreadByType)), n;
 }
-function F(e) {
+function V(e) {
     return (e.unread = Object.values(e.unreadByType).some((e) => e)), e;
 }
-function V(e, t) {}
+function F(e, t) {}
 function Z(e, t, n) {
     return (
-        F(t),
+        V(t),
         (t.lowImportanceMentionCount = 0),
         (t.highImportanceMentionCount = 0),
         f.default.forEach(t.mentionCounts, (e) => {
             let { count: n, isMentionLowImportance: r } = e;
             r ? (t.lowImportanceMentionCount += n) : (t.highImportanceMentionCount += n);
         }),
-        (t.unread !== n.unread || t.lowImportanceMentionCount !== n.lowImportanceMentionCount || t.highImportanceMentionCount !== n.highImportanceMentionCount) && ((C[null != e ? e : N] = t), null != e && (t.unread ? R.add(e) : R.delete(e)), P++, L(null != e ? e : N), V(t, n), !0)
+        (t.unread !== n.unread || t.lowImportanceMentionCount !== n.lowImportanceMentionCount || t.highImportanceMentionCount !== n.highImportanceMentionCount) && ((C[null != e ? e : N] = t), null != e && (t.unread ? R.add(e) : R.delete(e)), P++, L(null != e ? e : N), F(t, n), !0)
     );
 }
 function H(e, t) {
@@ -219,9 +219,9 @@ function W(e, t) {
             }
         !r.unreadByType[S.W.GUILD_EVENT] && G(n, S.W.GUILD_EVENT) && (r.unreadByType[S.W.GUILD_EVENT] = !0);
     }
-    F(r);
+    V(r);
     let f = D(n);
-    return (r.unread !== f.unread || r.highImportanceMentionCount !== f.highImportanceMentionCount || r.lowImportanceMentionCount !== f.lowImportanceMentionCount) && ((C[null != n ? n : N] = r), null != n && (r.unread ? R.add(n) : R.delete(n)), P++, L(null != n ? n : N), V(r, f), !0);
+    return (r.unread !== f.unread || r.highImportanceMentionCount !== f.highImportanceMentionCount || r.lowImportanceMentionCount !== f.lowImportanceMentionCount) && ((C[null != n ? n : N] = r), null != n && (r.unread ? R.add(n) : R.delete(n)), P++, L(null != n ? n : N), F(r, f), !0);
 }
 function K(e) {
     let { guilds: t } = e;

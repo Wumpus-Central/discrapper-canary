@@ -716,7 +716,7 @@ function B(e, t) {
         ]
     });
 }
-function F(e) {
+function V(e) {
     let t = 8,
         n = 8 * s.EW;
     return (0, r.jsxs)('mask', {
@@ -750,7 +750,7 @@ function F(e) {
         ]
     });
 }
-function V(e) {
+function F(e) {
     let t = 8;
     return (0, r.jsxs)('mask', {
         id: e,
@@ -1241,9 +1241,9 @@ let es = eo,
                     R('svg-mask-diagonal-facepile-120', s.EF.SIZE_120),
                     P('svg-mask-diagonal-facepile-status-120', s.EF.SIZE_120),
                     w('svg-mask-diagonal-facepile-typing-120', s.EF.SIZE_120),
-                    F('svg-mask-status-online-mobile'),
+                    V('svg-mask-status-online-mobile'),
                     x('svg-mask-status-online'),
-                    V('svg-mask-status-idle'),
+                    F('svg-mask-status-idle'),
                     Z('svg-mask-status-dnd'),
                     H('svg-mask-status-offline'),
                     Y('svg-mask-status-streaming'),

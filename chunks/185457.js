@@ -1,6 +1,6 @@
-n.d(t, { Z: () => b });
-var l = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => g });
+var i = n(200651),
+    l = n(192379),
     r = n(481060),
     o = n(906732),
     a = n(531301),
@@ -9,30 +9,30 @@ var l = n(200651),
     d = n(246946),
     c = n(626135),
     f = n(981631),
-    g = n(228168),
-    Z = n(388032);
-function b(e) {
-    let { user: t, guildId: n, channelId: b, context: O } = e,
-        { id: m } = t,
-        { loading: h, note: j } = (0, a.Z)(m),
-        E = !h && null != j && j.length > 0,
-        v = O === f.IlC.POPOUT || O === f.IlC.OVERLAY,
-        p = i.useContext(c.AnalyticsContext),
+    Z = n(228168),
+    b = n(388032);
+function g(e) {
+    let { user: t, guildId: n, channelId: g, context: O } = e,
+        { id: v } = t,
+        { loading: p, note: j } = (0, a.Z)(v),
+        m = !p && null != j && j.length > 0,
+        h = O === f.IlC.POPOUT || O === f.IlC.OVERLAY,
+        y = l.useContext(c.AnalyticsContext),
         { analyticsLocations: P } = (0, o.ZP)();
-    return m === u.default.getId() || d.Z.hidePersonalInformation || v
+    return v === u.default.getId() || d.Z.hidePersonalInformation || h
         ? null
-        : (0, l.jsx)(r.sNh, {
+        : (0, i.jsx)(r.sNh, {
               id: 'note',
-              label: h ? Z.intl.string(Z.t['WLKx//']) : E ? Z.intl.string(Z.t['gs+qcH']) : Z.intl.string(Z.t['1ZZttr']),
+              label: p ? b.intl.string(b.t['WLKx//']) : m ? b.intl.string(b.t['gs+qcH']) : b.intl.string(b.t['1ZZttr']),
               action: () => {
                   (0, s.openUserProfileModal)({
                       userId: t.id,
-                      section: g.oh.USER_INFO,
-                      subsection: g.Tb.NOTE,
+                      section: Z.oh.USER_INFO,
+                      subsection: Z.Tb.NOTE,
                       guildId: n,
-                      channelId: b,
+                      channelId: g,
                       sourceAnalyticsLocations: P,
-                      analyticsLocation: p.location,
+                      analyticsLocation: y.location,
                       appContext: O
                   });
               }

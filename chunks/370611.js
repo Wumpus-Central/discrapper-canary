@@ -310,7 +310,7 @@ function G(e) {
                               ]
                           })
                         : null,
-                    v ? (0, r.jsx)(F, { rankChange: u - n }) : null
+                    v ? (0, r.jsx)(V, { rankChange: u - n }) : null
                 ]
             }),
             (0, r.jsxs)('div', {
@@ -374,7 +374,7 @@ function B(e) {
         ]
     });
 }
-function F(e) {
+function V(e) {
     let { rankChange: t } = e;
     return (0, r.jsxs)('div', {
         className: R.rankChangeBadge,

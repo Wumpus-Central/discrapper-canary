@@ -10,7 +10,7 @@ var i = n(442837),
     u = n(228168),
     d = n(981631);
 function f(e) {
-    let { user: t, friendToken: n, profileType: f, shouldShowTooltip: _ = !1 } = e,
+    let { user: t, friendToken: n, themeType: f, shouldShowTooltip: _ = !1 } = e,
         { newestAnalyticsLocation: p } = (0, a.ZP)(),
         h = (0, i.e7)([o.default], () => o.default.getId() === t.id),
         m = (0, i.e7)([s.Z], () => s.Z.getRelationshipType(t.id)),
@@ -18,7 +18,7 @@ function f(e) {
         y = g.length > 0 || E || b;
     if (null == t || t.bot || h || m === d.OGo.BLOCKED) return null;
     if (m === d.OGo.NONE && y)
-        return f === u.y0.FULL_SIZE
+        return f === u.lY.MODAL
             ? null
             : (0, r.jsx)(l.l, {
                   user: t,
@@ -32,7 +32,7 @@ function f(e) {
         case d.OGo.FRIEND:
         case d.OGo.PENDING_INCOMING:
         case d.OGo.PENDING_OUTGOING:
-            if (f === u.y0.FULL_SIZE && m !== d.OGo.FRIEND) return null;
+            if (f === u.lY.MODAL && m !== d.OGo.FRIEND) return null;
             return (0, r.jsx)(l.PE, {
                 user: t,
                 relationshipType: m,
@@ -40,7 +40,7 @@ function f(e) {
                 shouldShowTooltip: _
             });
         default:
-            if (f === u.y0.FULL_SIZE) return null;
+            if (f === u.lY.MODAL) return null;
             return (0, r.jsx)(l.pM, {
                 userId: t.id,
                 shouldShowTooltip: _,

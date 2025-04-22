@@ -196,19 +196,19 @@ class j extends i.Component {
     render() {
         var e, t, n, i, a, s;
         let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: b, spellcheckEnabled: v, useNewSlashCommands: S, canOnlyUseTextCommands: N, className: R, id: w, required: L, maxCharacterCount: M, allowNewLines: j, 'aria-describedby': U, 'aria-labelledby': G, accessibilityLabel: B } = this.props,
-            { submitting: F, popup: V } = this.state,
+            { submitting: V, popup: F } = this.state,
             Z = {
                 channel: m,
                 className: o()(R, P.textArea, {
                     [P.textAreaSlate]: b,
-                    [P.textAreaDisabled]: u || F
+                    [P.textAreaDisabled]: u || V
                 }),
                 id: w,
                 placeholder: this.getPlaceholder(),
                 required: L,
                 accessibilityLabel: B,
                 disabled: u || !1,
-                submitting: F,
+                submitting: V,
                 isEdit: g === O.Ie.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
@@ -234,10 +234,10 @@ class j extends i.Component {
                 useNewSlashCommands: S,
                 disableAutoFocus: f.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
-                'aria-controls': null != (a = V.id) ? a : void 0,
+                'aria-controls': null != (a = F.id) ? a : void 0,
                 'aria-haspopup': 'listbox',
-                'aria-expanded': null !== V.id || void 0,
-                'aria-activedescendant': null != (s = V.activeDescendant) ? s : void 0,
+                'aria-expanded': null !== F.id || void 0,
+                'aria-activedescendant': null != (s = F.activeDescendant) ? s : void 0,
                 'aria-invalid': l.length > M,
                 'aria-describedby': U,
                 'aria-labelledby': G,

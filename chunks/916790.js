@@ -15,8 +15,8 @@ var a = n(200651),
     b = n(572004),
     f = n(55935),
     v = n(428530),
-    g = n(257785),
-    j = n(484036),
+    j = n(257785),
+    g = n(484036),
     _ = n(681619),
     y = n(621060),
     C = n(981631),
@@ -71,10 +71,10 @@ let P = [
                 r = c()(n.createdAt);
             return (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsxs)(g.E, {
+                    (0, a.jsxs)(j.E, {
                         className: O.actionProperties,
                         children: [
-                            (0, a.jsx)(g.Z9, {
+                            (0, a.jsx)(j.Z9, {
                                 name: 'Created at',
                                 children: (0, a.jsx)('time', {
                                     dateTime: null == (t = n.createdAt) ? void 0 : t.toISOString(),
@@ -82,7 +82,7 @@ let P = [
                                     children: (0, f.Y4)(r)
                                 })
                             }),
-                            (0, a.jsxs)(g.Z9, {
+                            (0, a.jsxs)(j.Z9, {
                                 name: 'Total Time',
                                 children: [N(n.totalTime), ' ms']
                             })
@@ -148,7 +148,7 @@ function w(e) {
             [t]
         ),
         { TabBar: o, renderSelectedTab: s } = (0, y.ZP)({ tabs: l }, [l]);
-    return (0, a.jsxs)(j.Z, {
+    return (0, a.jsxs)(g.Z, {
         className: O.subPanel,
         minHeight: 100,
         initialHeight: n,
@@ -256,11 +256,11 @@ function R() {
         [c, m] = r.useState(s),
         [x, p] = r.useState(s),
         [b, f] = r.useState(!1),
-        [v, g] = r.useState(),
-        j = r.useCallback((e) => {
+        [v, j] = r.useState(),
+        g = r.useCallback((e) => {
             p(e);
         }, []);
-    (0, h.BO)(t, b ? c : s, j, I);
+    (0, h.BO)(t, b ? c : s, g, I);
     let y = r.useCallback(
             (e) => {
                 m(s), f(e);
@@ -297,7 +297,7 @@ function R() {
                 columns: k,
                 data: N,
                 selectedRowKey: null == v ? void 0 : v.id.toString(),
-                onClickRow: (e) => g(e.actionLog)
+                onClickRow: (e) => j(e.actionLog)
             }),
             null != v &&
                 (0, a.jsx)(w, {

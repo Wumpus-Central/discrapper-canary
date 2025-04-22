@@ -53,13 +53,13 @@ let A = 10,
     U = /^#itemSkuId=([0-9]+)$/,
     G = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
     B = q(window.GLOBAL_ENV.INVITE_HOST),
-    F = q(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-    V = q(null != (o = window.GLOBAL_ENV.WEBAPP_ENDPOINT) ? o : '//canary.'.concat(T.$R1)),
+    V = q(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
+    F = q(null != (o = window.GLOBAL_ENV.WEBAPP_ENDPOINT) ? o : '//canary.'.concat(T.$R1)),
     Z = q('//canary.'.concat(T.$R1)),
     H = q('//ptb.'.concat(T.$R1)),
     Y = q('discordapp.com'),
     W = q('discord.com'),
-    K = [O.Z.escape(null != (s = B.host) ? s : ''), O.Z.escape(null != (l = F.host) ? l : ''), O.Z.escape(null != (c = V.host) ? c : ''), O.Z.escape(null != (u = Y.host) ? u : ''), O.Z.escape(null != (d = W.host) ? d : '')].filter(Boolean),
+    K = [O.Z.escape(null != (s = B.host) ? s : ''), O.Z.escape(null != (l = V.host) ? l : ''), O.Z.escape(null != (c = F.host) ? c : ''), O.Z.escape(null != (u = Y.host) ? u : ''), O.Z.escape(null != (d = W.host) ? d : '')].filter(Boolean),
     z = RegExp('((https?://[^ ]*)|^|[^/][^/.])('.concat(K.join('|'), ')'), 'g');
 function q(e) {
     if (null == e)
@@ -94,7 +94,7 @@ function $(e, t) {
 }
 function ee(e) {
     var t, n, r, i;
-    return null != (i = null != (r = null != (n = null != (t = $(V, e)) ? t : $(Z, e)) ? n : $(H, e)) ? r : $(Y, e)) ? i : $(W, e);
+    return null != (i = null != (r = null != (n = null != (t = $(F, e)) ? t : $(Z, e)) ? n : $(H, e)) ? r : $(Y, e)) ? i : $(W, e);
 }
 function et(e) {
     if (null == e) return null;
@@ -118,8 +118,8 @@ function en(e) {
             primaryHostRemainingPath: null
         };
     let o = $(B, a),
-        s = $(F, a),
-        l = null != (i = null != (r = null != (n = null != (t = $(V, a)) ? t : $(Z, a)) ? n : $(H, a)) ? r : $(Y, a)) ? i : $(W, a);
+        s = $(V, a),
+        l = null != (i = null != (r = null != (n = null != (t = $(F, a)) ? t : $(Z, a)) ? n : $(H, a)) ? r : $(Y, a)) ? i : $(W, a);
     return {
         url: a,
         inviteHostRemainingPath: o,

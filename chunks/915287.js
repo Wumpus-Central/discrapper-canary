@@ -161,7 +161,7 @@ function O(e, t, n, a) {
             });
         });
     return i.forwardRef(function (a, p) {
-        var { className: g, onScroll: O, onResize: I = null, onContentResize: S = null, dir: T = 'ltr', sections: A, sectionHeight: N, rowHeight: C, footerHeight: R = 0, sidebarHeight: P, listHeaderHeight: w = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: M, renderListHeader: k, stickyListHeader: j, wrapSection: U, getAnchorId: G, paddingTop: B, paddingBottom: F, fade: V = !1, customTheme: Z = !1, chunkSize: H, style: Y, innerId: W, innerRole: K, innerAriaLabel: z, innerAriaMultiselectable: q, innerAriaOrientation: Q, innerClassName: X, innerTag: J = 'div' } = a,
+        var { className: g, onScroll: O, onResize: I = null, onContentResize: S = null, dir: T = 'ltr', sections: A, sectionHeight: N, rowHeight: C, footerHeight: R = 0, sidebarHeight: P, listHeaderHeight: w = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: M, renderListHeader: k, stickyListHeader: j, wrapSection: U, getAnchorId: G, paddingTop: B, paddingBottom: V, fade: F = !1, customTheme: Z = !1, chunkSize: H, style: Y, innerId: W, innerRole: K, innerAriaLabel: z, innerAriaMultiselectable: q, innerAriaOrientation: Q, innerClassName: X, innerTag: J = 'div' } = a,
             $ = m(a, ['className', 'onScroll', 'onResize', 'onContentResize', 'dir', 'sections', 'sectionHeight', 'rowHeight', 'footerHeight', 'sidebarHeight', 'listHeaderHeight', 'renderSection', 'renderRow', 'renderFooter', 'renderSidebar', 'renderListHeader', 'stickyListHeader', 'wrapSection', 'getAnchorId', 'paddingTop', 'paddingBottom', 'fade', 'customTheme', 'chunkSize', 'style', 'innerId', 'innerRole', 'innerAriaLabel', 'innerAriaMultiselectable', 'innerAriaOrientation', 'innerClassName', 'innerTag']);
         let ee = i.useRef(null),
             et = i.useRef(null),
@@ -190,7 +190,7 @@ function O(e, t, n, a) {
                 sidebarHeight: P,
                 listHeaderHeight: w,
                 paddingTop: B,
-                paddingBottom: F,
+                paddingBottom: V,
                 chunkSize: H,
                 getScrollerState: eo,
                 getAnchorId: G
@@ -278,7 +278,7 @@ function O(e, t, n, a) {
                             onScroll: ev,
                             className: o()(g, {
                                 [e]: !0,
-                                [t]: V,
+                                [t]: F,
                                 [n]: Z,
                                 [d.scrolling]: en
                             }),

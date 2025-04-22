@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685), n(997841);
+n.d(t, { Z: () => V }), n(388685), n(997841);
 var r = n(481060),
     i = n(570140),
     a = n(430742),
@@ -86,7 +86,7 @@ function U(e, t) {
 async function G(e) {
     var t, n, r, d;
     let f,
-        { channelId: M, uploads: j, draftType: G, parsedMessage: B, options: F = {}, raiseEndpointErrors: V = !1 } = e,
+        { channelId: M, uploads: j, draftType: G, parsedMessage: B, options: V = {}, raiseEndpointErrors: F = !1 } = e,
         Z = new _.Z(L.ANM.MESSAGES(M)),
         H = new D.o(),
         Y = {
@@ -94,15 +94,15 @@ async function G(e) {
             nonce: '',
             channel_id: M,
             type: L.uaV.DEFAULT,
-            sticker_ids: null == F ? void 0 : F.stickerIds,
-            poll: null == F ? void 0 : F.poll,
-            confetti_potion: (0, I.vY)(null == F ? void 0 : F.confettiPotionData),
-            scheduled_timestamp: null == F ? void 0 : F.scheduledTimestamp
+            sticker_ids: null == V ? void 0 : V.stickerIds,
+            poll: null == V ? void 0 : V.poll,
+            confetti_potion: (0, I.vY)(null == V ? void 0 : V.confettiPotionData),
+            scheduled_timestamp: null == V ? void 0 : V.scheduledTimestamp
         };
-    null != B && (Y.content = null == B ? void 0 : B.content), null != N.Z.getPendingReply(M) && ((Y.type = L.uaV.REPLY), (Y.message_reference = F.messageReference), (Y.allowed_mentions = F.allowedMentions), (0, A.A6)(M));
+    null != B && (Y.content = null == B ? void 0 : B.content), null != N.Z.getPendingReply(M) && ((Y.type = L.uaV.REPLY), (Y.message_reference = V.messageReference), (Y.allowed_mentions = V.allowedMentions), (0, A.A6)(M));
     let [W, K] = (0, C.Z)(Y.content);
     W && ((Y.content = K), (Y.flags = (0, w.pj)(null != (n = Y.flags) ? n : 0, L.iLy.SUPPRESS_NOTIFICATIONS)));
-    let z = null != (r = F.nonce) ? r : (0, E.r)(),
+    let z = null != (r = V.nonce) ? r : (0, E.r)(),
         q = (0, g.ZP)({
             channelId: M,
             content: Y.content,
@@ -111,7 +111,7 @@ async function G(e) {
             messageReference: Y.message_reference,
             flags: Y.flags,
             nonce: z,
-            poll: (0, y.x9)(F.poll)
+            poll: (0, y.x9)(V.poll)
         });
     function Q() {
         '' !== Y.content && '' === R.Z.getDraft(M, G) && a.Z.saveDraft(M, Y.content, G),
@@ -176,7 +176,7 @@ async function G(e) {
                 return;
             }
             if (t !== L.evJ.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS) {
-                if (V)
+                if (F)
                     H.reject(
                         new c.Hx(
                             {
@@ -217,7 +217,7 @@ async function G(e) {
                     O.LL.MessageSent
                 ));
         }),
-        null == F || null == (t = F.confettiPotionData) || t.callback(),
+        null == V || null == (t = V.confettiPotionData) || t.callback(),
         await Z.uploadFiles(j, Y),
         H.resolve(),
         H.promise
@@ -294,7 +294,7 @@ function B(e) {
         }),
         h.upload(n, f);
 }
-let F = {
+let V = {
     instantBatchUpload: function (e) {
         let { channelId: t, files: n, draftType: r, isThumbnail: i = !1, filesMetadata: a = [] } = e,
             o = Array.from(n).map((e, n) => {

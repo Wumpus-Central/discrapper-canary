@@ -36,8 +36,8 @@ var r,
     U = 15,
     G = 16,
     B = 17,
-    F = 18,
-    V = 19,
+    V = 18,
+    F = 19,
     Z = 20,
     H = 21,
     Y = 22,
@@ -293,8 +293,8 @@ function ep(e, t) {
                     (e.msg = 'too many length or distance symbols'), (n.mode = $);
                     break;
                 }
-                (n.have = 0), (n.mode = F);
-            case F:
+                (n.have = 0), (n.mode = V);
+            case V:
                 for (; n.have < n.ncode; ) {
                     for (; es < 3; ) {
                         if (0 === er) break i;
@@ -307,8 +307,8 @@ function ep(e, t) {
                     (e.msg = 'invalid code lengths set'), (n.mode = $);
                     break;
                 }
-                (n.have = 0), (n.mode = V);
-            case V:
+                (n.have = 0), (n.mode = F);
+            case F:
                 for (; n.have < n.nlen + n.ndist; ) {
                     for (; (eh = (eT = n.lencode[eo & ((1 << n.lenbits) - 1)]) >>> 24), (em = (eT >>> 16) & 255), (eg = 65535 & eT), !(eh <= es); ) {
                         if (0 === er) break i;

@@ -91,7 +91,7 @@ function x(e) {
         S,
         { channel: R, entry: x, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
         { largeImage: U } = (0, g.rv)({ entry: x }),
-        { activity: G, currentEntry: B, artist: F, title: V, user: Z } = (0, O.pi)(x),
+        { activity: G, currentEntry: B, artist: V, title: F, user: Z } = (0, O.pi)(x),
         { primaryColor: H, secondaryColor: Y } = (0, v.Z)(null == U ? void 0 : U.src),
         W = (0, y.Z)(A.ABu.SPOTIFY),
         K = (0, o.e7)([u.Z, p.default], () => ((null == G ? void 0 : G.type) === A.IIU.LISTENING && null != Z ? (0, f.Z)(u.Z, p.default, Z, G) : void 0), [G, Z], s.Z),
@@ -104,11 +104,11 @@ function x(e) {
                 user: Z,
                 channel: R,
                 mediaImageSrc: null == U ? void 0 : U.src,
-                artist: F,
+                artist: V,
                 description: D(
                     {
-                        artist: F,
-                        media: V
+                        artist: V,
+                        media: F
                     },
                     R,
                     Z
@@ -116,9 +116,9 @@ function x(e) {
                 colors: [H, Y],
                 badges: (0, b.jE)({ timestamp: n })
             });
-        }, [G, F, R, x, null == U ? void 0 : U.src, H, Y, V, Z]);
+        }, [G, V, R, x, null == U ? void 0 : U.src, H, Y, F, Z]);
     if (null == G || null == B) return null;
-    let q = F,
+    let q = V,
         Q = [];
     if (B.media.provider === a.p.SPOTIFY) {
         (m = () => {
@@ -136,7 +136,7 @@ function x(e) {
         };
         if (
             ((q = (0, r.jsx)(d.Z, {
-                artists: F,
+                artists: V,
                 canOpen: null != G.sync_id,
                 linkClassName: P.popoutTextSecondary,
                 onOpenSpotifyArtist: e
@@ -172,7 +172,7 @@ function x(e) {
                   })
                 : null,
         userDescription: (0, E.kr)(x) ? C.t.Tzx5Dw : C.t.CcVI1d,
-        title: V,
+        title: F,
         onClickTitle: m,
         subtitle: q,
         badges: null,
@@ -188,7 +188,7 @@ function x(e) {
                     user: Z,
                     channel: R,
                     generateReactionImage: z,
-                    reactionImageAltText: w(F, Z),
+                    reactionImageAltText: w(V, Z),
                     entry: x,
                     buttons: Q
                 })

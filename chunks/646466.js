@@ -67,7 +67,7 @@ let p = [
                   }
               );
     },
-    g = () => {
+    j = () => {
         (0, l.nfh)(s.c)
             ? (0, l.Mr3)(s.c)
             : (0, l.ZDy)(
@@ -81,7 +81,7 @@ let p = [
                   }
               );
     },
-    j = () => {
+    g = () => {
         let e = (0, o.lb)(),
             { previewProfileEffectId: t, setPreviewProfileEffectId: n } = (0, c.N9)(),
             i = r.useMemo(
@@ -108,7 +108,7 @@ let p = [
                         (0, a.jsx)(l.zxk, {
                             look: l.zxk.Looks.BLANK,
                             size: l.zxk.Sizes.SMALL,
-                            onClick: g,
+                            onClick: j,
                             className: x.instructionsButton,
                             children: (0, a.jsx)(l.idN, { color: l.TVs.colors.BG_BRAND })
                         })
@@ -432,7 +432,7 @@ let p = [
                         })
                     ]
                 }),
-                (0, a.jsx)(j, {}),
+                (0, a.jsx)(g, {}),
                 (0, a.jsx)(_, {}),
                 (0, a.jsx)(y, {
                     clearAssets: o,

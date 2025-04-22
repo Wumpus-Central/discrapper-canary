@@ -17,13 +17,13 @@ var i = n(657707),
     g = n(388032);
 function E(e) {
     let { channel: t, onAction: n, onClose: E } = e,
-        { profileType: b } = (0, _.z)(),
+        { themeType: b } = (0, _.z)(),
         y = (0, a.e7)([d.Z], () => d.Z.isInChannel(t.id)),
         v = (0, a.e7)([u.Z], () => t.isPrivate() || u.Z.can(m.Plq.CONNECT, t)),
         { chatButtonEnabled: O } = (0, f.s)({ location: 'UserProfileActivityVoiceChannelButtons' });
     if (!v) return null;
-    let I = () => (b === h.y0.FULL_SIZE ? g.intl.string(g.t['3xjX0d']) : t.isDM() || t.isGroupDM() ? g.intl.string(g.t['7hwn2N']) : t.isGuildStageVoice() ? g.intl.string(g.t.Acqcoq) : g.intl.string(g.t.BXxdl5)),
-        S = () => (b === h.y0.FULL_SIZE ? g.intl.string(g.t.VJlc0d) : t.isDM() || t.isGroupDM() ? g.intl.string(g.t.ozoE2N) : t.isGuildStageVoice() ? g.intl.string(g.t['7vb2cX']) : g.intl.string(g.t['96ANUF']));
+    let I = () => (b === h.lY.MODAL ? g.intl.string(g.t['3xjX0d']) : t.isDM() || t.isGroupDM() ? g.intl.string(g.t['7hwn2N']) : t.isGuildStageVoice() ? g.intl.string(g.t.Acqcoq) : g.intl.string(g.t.BXxdl5)),
+        S = () => (b === h.lY.MODAL ? g.intl.string(g.t.VJlc0d) : t.isDM() || t.isGroupDM() ? g.intl.string(g.t.ozoE2N) : t.isGuildStageVoice() ? g.intl.string(g.t['7vb2cX']) : g.intl.string(g.t['96ANUF']));
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(p.tG, {

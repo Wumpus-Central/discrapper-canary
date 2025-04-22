@@ -37,13 +37,13 @@ function C(e) {
             assetNames: b,
             commandOrigin: x
         }),
-        [I, P] = l.useState(!1),
-        S = l.useCallback(() => {
-            P(!0);
-        }, [P]),
+        [I, S] = l.useState(!1),
+        P = l.useCallback(() => {
+            S(!0);
+        }, [S]),
         Z = l.useCallback(() => {
-            P(!1);
-        }, [P]),
+            S(!1);
+        }, [S]),
         N = l.useMemo(
             () =>
                 (0, i.jsx)('div', {
@@ -91,9 +91,9 @@ function C(e) {
         color: 'transparent',
         look: c.zxk.Looks.BLANK,
         size: c.zxk.Sizes.NONE,
-        onFocus: S,
+        onFocus: P,
         onBlur: Z,
-        onMouseEnter: S,
+        onMouseEnter: P,
         onMouseLeave: Z,
         innerClassName: g.activityItemButtonInnerClass,
         children: (0, i.jsx)(c.AMe, {

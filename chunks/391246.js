@@ -36,8 +36,8 @@ var r = n(127849),
     U = j && j[P],
     G = r[R],
     B = G && G[P],
-    F = Object.prototype,
-    V = r.Array,
+    V = Object.prototype,
+    F = r.Array,
     Z = r.RangeError,
     H = i(y),
     Y = i([].reverse),
@@ -104,7 +104,7 @@ if (o) {
           (U.constructor = j),
           I(j, k))
         : er && N && l(k, 'name', C),
-        b && E(B) !== F && b(B, F);
+        b && E(B) !== V && b(B, V);
     var ei = new G(new j(2)),
         ea = i(B.setInt8);
     ei.setInt8(0, 2147483648),
@@ -128,7 +128,7 @@ if (o) {
         var t = h(e);
         M(this, {
             type: C,
-            bytes: H(V(t), 0),
+            bytes: H(F(t), 0),
             byteLength: t
         }),
             a || ((this.byteLength = t), (this.detached = !1));

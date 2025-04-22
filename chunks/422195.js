@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => V }), n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -239,7 +239,7 @@ let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
             )
         };
     },
-    F = (e) => {
+    V = (e) => {
         let { stickersListRef: t, channel: n } = e,
             a = i.useRef(null),
             [s, c] = i.useState(!0),

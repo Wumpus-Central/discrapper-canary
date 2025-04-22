@@ -29,7 +29,7 @@ var r = n(200651),
     P = n(981631),
     w = n(117335);
 let D = i.forwardRef(function (e, t) {
-    let { value: n, type: a, channel: D, className: L, id: x, disabled: M, submitting: k, placeholder: j, required: U, textAreaPaddingClassName: G, onChange: B, onPaste: F, onResize: V, onFocus: Z, onBlur: H, onKeyDown: Y, onKeyUp: W, onTab: K, onEnter: z, onSubmit: q, maybeShowAutocomplete: Q, hideAutocomplete: X, moveSelection: J, spellcheckEnabled: $, canUseCommands: ee, canOnlyUseTextCommands: et, disableAutoFocus: en, disableEnterToSubmit: er, allowNewLines: ei, 'aria-owns': ea, 'aria-expanded': eo, 'aria-haspopup': es, 'aria-activedescendant': el, 'aria-controls': ec, 'aria-invalid': eu, 'aria-describedby': ed, 'aria-labelledby': ef, 'aria-autocomplete': e_ } = e,
+    let { value: n, type: a, channel: D, className: L, id: x, disabled: M, submitting: k, placeholder: j, required: U, textAreaPaddingClassName: G, onChange: B, onPaste: V, onResize: F, onFocus: Z, onBlur: H, onKeyDown: Y, onKeyUp: W, onTab: K, onEnter: z, onSubmit: q, maybeShowAutocomplete: Q, hideAutocomplete: X, moveSelection: J, spellcheckEnabled: $, canUseCommands: ee, canOnlyUseTextCommands: et, disableAutoFocus: en, disableEnterToSubmit: er, allowNewLines: ei, 'aria-owns': ea, 'aria-expanded': eo, 'aria-haspopup': es, 'aria-activedescendant': el, 'aria-controls': ec, 'aria-invalid': eu, 'aria-describedby': ed, 'aria-labelledby': ef, 'aria-autocomplete': e_ } = e,
         ep = i.useRef(null),
         eh = i.useRef(null),
         em = i.useRef(!0),
@@ -152,7 +152,7 @@ let D = i.forwardRef(function (e, t) {
                     e
                 );
         }, [D.id, eO, q, eI, ee]);
-    (0, O.Z)(t, eO, D, eS), (0, T.Z)(eO, ep, V);
+    (0, O.Z)(t, eO, D, eS), (0, T.Z)(eO, ep, F);
     let { handleKeyDown: eT, handleKeyUp: eA } = (0, I.Z)({
             editor: eO,
             channel: D,
@@ -166,7 +166,7 @@ let D = i.forwardRef(function (e, t) {
             hideAutocomplete: X,
             moveSelection: J
         }),
-        { handlePaste: eN, handleGlobalPaste: eC } = (0, S.Z)(eO, eE, F),
+        { handlePaste: eN, handleGlobalPaste: eC } = (0, S.Z)(eO, eE, V),
         eR = i.useCallback(
             (e) => {
                 null == Q || Q();

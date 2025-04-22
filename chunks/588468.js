@@ -1,7 +1,7 @@
 n.d(t, {
     DJ: () => B,
     ZP: () => ea,
-    rp: () => F
+    rp: () => V
 }),
     n(415506),
     n(953529),
@@ -112,10 +112,10 @@ function G(e, t) {
 function B(e) {
     return null != e ? 'autocomplete-'.concat(e) : null;
 }
-function F(e) {
+function V(e) {
     return 'autocomplete-'.concat(e, '-title');
 }
-let V = a.createContext(null);
+let F = a.createContext(null);
 class Z extends a.PureComponent {
     isSelectable() {
         return this.selectable;
@@ -203,11 +203,11 @@ function Y(e) {
 }
 function W(e) {
     let { title: t, className: n, children: r } = e,
-        o = a.useContext(V);
+        o = a.useContext(F);
     return (0, i.jsx)('div', {
         className: L.base,
         children: (0, i.jsxs)(d.X6q, {
-            id: F(o.id),
+            id: V(o.id),
             className: s()(L.contentTitle, n),
             variant: 'heading-deprecated-12/semibold',
             children: [t, r]
@@ -436,7 +436,7 @@ class ei extends (r = a.PureComponent) {
             { children: t, className: n, innerClassName: r, id: o } = e,
             l = U(e, ['children', 'className', 'innerClassName', 'id']);
         return a.Children.count(t) > 0
-            ? (0, i.jsx)(V.Provider, {
+            ? (0, i.jsx)(F.Provider, {
                   value: { id: null != o ? o : '' },
                   children: (0, i.jsx)('div', {
                       className: s()(L.autocomplete, n),

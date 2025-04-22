@@ -119,12 +119,12 @@ let x = (0, h.Un)({
         webpackId: 832462,
         name: 'LinkConnectedAccount'
     }),
-    F = (0, h.Un)({
+    V = (0, h.Un)({
         createPromise: () => n.e('46455').then(n.bind(n, 924339)),
         webpackId: 924339,
         name: 'LinkAuthorize'
     }),
-    V = (0, h.Un)({
+    F = (0, h.Un)({
         createPromise: () => Promise.all([n.e('53419'), n.e('69773')]).then(n.bind(n, 197528)),
         webpackId: 197528,
         name: 'ActivateDevice'
@@ -302,15 +302,15 @@ class er extends i.Component {
                                     }),
                                     (0, r.jsx)(p.Z, {
                                         path: N.Z5c.CONNECTION_LINK_AUTHORIZE(':type'),
-                                        component: F
+                                        component: V
                                     }),
                                     (0, r.jsx)(p.Z, {
                                         path: N.Z5c.ACTIVATE,
-                                        component: V
+                                        component: F
                                     }),
                                     (0, r.jsx)(p.Z, {
                                         path: N.Z5c.ACTIVATE_HANDOFF,
-                                        component: V
+                                        component: F
                                     }),
                                     (0, r.jsx)(p.Z, {
                                         path: N.Z5c.CONNECTIONS_AUTHORIZE_CONTINUE(':type'),

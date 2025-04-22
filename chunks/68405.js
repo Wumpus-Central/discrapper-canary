@@ -1,5 +1,5 @@
 n.d(t, {
-    PF: () => V,
+    PF: () => F,
     R7: () => k,
     Tg: () => U,
     UU: () => G,
@@ -8,7 +8,7 @@ n.d(t, {
     iy: () => B,
     mO: () => x,
     t1: () => R,
-    uL: () => F,
+    uL: () => V,
     v2: () => M,
     yC: () => L
 }),
@@ -304,7 +304,7 @@ function B(e) {
     let t = m.Z.toURLSafe(e);
     return null == t ? e : (0, u.MO)(t) ? (0, u.q5)(t).toString() : e;
 }
-function F(e) {
+function V(e) {
     f.DZ.updateAsync(
         'favoriteGifs',
         (t) => {
@@ -324,7 +324,7 @@ function F(e) {
         b.fy.INFREQUENT_USER_ACTION
     );
 }
-function V(e) {
+function F(e) {
     f.DZ.updateAsync(
         'favoriteGifs',
         (t) => {

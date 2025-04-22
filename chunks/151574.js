@@ -103,8 +103,8 @@ function j(e, t) {
 let U = 4,
     G = (0, u.Mg)(d.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
     B = (0, u.Mg)(d.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
-    F = 2 * B + (0, u.Mg)(d.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * G,
-    V = () => Promise.resolve();
+    V = 2 * B + (0, u.Mg)(d.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * G,
+    F = () => Promise.resolve();
 function Z(e) {
     let { isFocused: t, isHidden: n, sendability: i, listIndex: a, sticker: l, onMouseOver: c, onSelectSticker: u } = e,
         d = (0, s.JA)(''.concat(a)),
@@ -148,8 +148,8 @@ function H(e) {
         _ = (0, l.ZP)({
             id: 'expression-suggestions-stickers',
             isEnabled: !0,
-            scrollToStart: V,
-            scrollToEnd: V,
+            scrollToStart: F,
+            scrollToEnd: F,
             orientation: c.hy.HORIZONTAL,
             setFocus: f,
             useVirtualFocus: !0
@@ -186,11 +186,11 @@ let Y = i.memo(function (e) {
         [j, U] = i.useState(null),
         G = (0, g.Iu)((e) => null != e.activeView),
         B = i.useRef(null),
-        [V, Y] = i.useState(''),
+        [F, Y] = i.useState(''),
         [W, K] = i.useState(''),
         [z, q] = i.useState(!1),
         [Q, X] = i.useState(!1),
-        J = (0, A.Z)(V, D, a),
+        J = (0, A.Z)(F, D, a),
         { analyticsLocations: $ } = (0, p.ZP)(_.Z.EXPRESSION_SUGGESTIONS),
         { handleTextChange: ee, debouncedSetTextInputValue: et } = (0, A.m)({
             setTextInputValue: Y,
@@ -264,8 +264,8 @@ let Y = i.memo(function (e) {
         el = i.useRef([]),
         ec = i.useRef(!1);
     i.useEffect(() => {
-        ea && (el.current = J), ea !== ec.current && (m.emit(ea ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ea && ((0, N.Tk)(V), K(V))), (ec.current = ea);
-    }, [m, ea, J, V]);
+        ea && (el.current = J), ea !== ec.current && (m.emit(ea ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ea && ((0, N.Tk)(F), K(F))), (ec.current = ea);
+    }, [m, ea, J, F]);
     let eu = !ea,
         ed = ea ? J : el.current;
     return (0, r.jsx)(p.Gt, {
@@ -279,7 +279,7 @@ let Y = i.memo(function (e) {
                 [w.stickerIconOffset]: u
             }),
             innerRef: B,
-            style: { minWidth: F },
+            style: { minWidth: V },
             onClick: () => {
                 var e;
                 return null == (e = n.current) ? void 0 : e.focus();
@@ -343,7 +343,7 @@ let Y = i.memo(function (e) {
                                     children: [
                                         (0, r.jsx)(f.Text, {
                                             className: w.descriptionText,
-                                            style: { maxWidth: F },
+                                            style: { maxWidth: V },
                                             variant: 'text-sm/normal',
                                             children:
                                                 null != j

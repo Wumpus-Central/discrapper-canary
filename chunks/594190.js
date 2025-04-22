@@ -97,8 +97,8 @@ function G(e, t) {
     );
 }
 let B = new m.Z('RunningGameStore'),
-    F = 'RunningGameStore',
-    V = !1,
+    V = 'RunningGameStore',
+    F = !1,
     Z = [],
     H = [
         {
@@ -334,8 +334,8 @@ function eE(e) {
     }
     return {
         source: L.d.DEFAULT,
-        enabledOOP: V || o,
-        enabledLegacy: V,
+        enabledOOP: F || o,
+        enabledLegacy: F,
         overlayMethod: o ? f.gl.OutOfProcess : f.gl.Disabled
     };
 }
@@ -354,7 +354,7 @@ function ev(e) {
     return !e.hidden && ey(e);
 }
 function eO() {
-    u.K.set(F, et);
+    u.K.set(V, et);
 }
 function eI(e) {
     let [t, n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [eq, I.Z, S.Z],
@@ -493,7 +493,7 @@ function eG(e) {
 function eB() {
     (eu = null), (ed = null), el.clear();
 }
-function eF(e) {
+function eV(e) {
     let t = e.processes
         .map((e) => {
             var t;
@@ -516,7 +516,7 @@ function eF(e) {
             interval_seconds: ed
         });
 }
-function eV(e) {
+function eF(e) {
     let { game: t, newLegacyOverlayEnabledValue: n, newOverlayV3EnabledValue: r } = e,
         i = n !== et.enableOverlay[eg(t)],
         a = r !== et.enableOverlayV3[eg(t)];
@@ -649,7 +649,7 @@ class ez extends (i = c.ZP.Store) {
     initialize() {
         var e, t, n, r, i;
         let a =
-            null != (e = u.K.get(F))
+            null != (e = u.K.get(V))
                 ? e
                 : {
                       gamesSeen: [],
@@ -778,7 +778,7 @@ let eq = new ez(d.Z, {
         PERMISSION_CLEAR_ELEVATED_PROCESS: ek,
         PERMISSION_CONTINUE_NONELEVATED_PROCESS: eM,
         RUNNING_GAME_ADD_OVERRIDE: ej,
-        RUNNING_GAME_TOGGLE_OVERLAY: eV,
+        RUNNING_GAME_TOGGLE_OVERLAY: eF,
         RUNNING_GAME_TOGGLE_DETECTION: eZ,
         RUNNING_GAME_EDIT_NAME: eH,
         RUNNING_GAME_DELETE_ENTRY: eY,
@@ -787,6 +787,6 @@ let eq = new ez(d.Z, {
         GAME_DETECTION_WATCH_CANDIDATE_GAMES_START: eU,
         GAME_DETECTION_DEBUGGING_START: eG,
         GAME_DETECTION_DEBUGGING_STOP: eB,
-        GAME_DETECTION_DEBUGGING_TICK: eF
+        GAME_DETECTION_DEBUGGING_TICK: eV
     }),
     eQ = eq;

@@ -514,9 +514,9 @@ function B(e, t, n) {
         c = Math.round((s / t) * 100) / 100;
     return 'translate('.concat(l, ', ').concat(c, ')');
 }
-function F(e) {
-    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: y, status: O, statusColor: T, statusTooltip: R = !1, statusTooltipDelay: P, statusBackdropColor: w, 'aria-hidden': D = !1, 'aria-label': L, imageClassName: U, pulseStatusIcon: F } = e,
-        V = (0, u.vj)(O, T),
+function V(e) {
+    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: y, status: O, statusColor: T, statusTooltip: R = !1, statusTooltipDelay: P, statusBackdropColor: w, 'aria-hidden': D = !1, 'aria-label': L, imageClassName: U, pulseStatusIcon: V } = e,
+        F = (0, u.vj)(O, T),
         Z = i.useId(),
         H = i.useId(),
         [Y] = i.useState(() =>
@@ -533,7 +533,7 @@ function F(e) {
         W = i.useMemo(
             () =>
                 v(
-                    { fill: V },
+                    { fill: F },
                     M({
                         size: E,
                         status: O,
@@ -541,7 +541,7 @@ function F(e) {
                         isTyping: _
                     })
                 ),
-            [V, E, O, l, _]
+            [F, E, O, l, _]
         ),
         K = (0, f.q_F)(
             {
@@ -567,10 +567,10 @@ function F(e) {
                     clamp: !0
                 },
                 from: { scale: 1 },
-                to: F ? [{ scale: 0.8 }, { scale: 1.1 }, { scale: 1 }] : []
+                to: V ? [{ scale: 0.8 }, { scale: 1.1 }, { scale: 1 }] : []
             },
             N() ? 'animate-always' : 'animate-never',
-            [F, O]
+            [V, O]
         );
     return (0, r.jsx)(
         k,
@@ -674,7 +674,7 @@ function F(e) {
         })
     );
 }
-function V(e, t, n, r, i) {
+function F(e, t, n, r, i) {
     return null != n && null != t && (!!e || t !== n || (t === m.Skl.ONLINE && r !== i));
 }
 let Z = i.memo(function (e) {
@@ -686,14 +686,14 @@ let Z = i.memo(function (e) {
         d = (0, u.vj)(n, t),
         f = i.useRef(d),
         _ = i.useRef(!1),
-        p = _.current || V(s, n, l.current, o, c.current);
+        p = _.current || F(s, n, l.current, o, c.current);
     return (
         i.useLayoutEffect(() => {
             (_.current = p), (l.current = n), (c.current = o), (f.current = d);
         }, [n, o, d, p]),
         null != n && null != l.current && p
             ? (0, r.jsx)(
-                  F,
+                  V,
                   I(v({}, a), {
                       status: n,
                       statusColor: d,

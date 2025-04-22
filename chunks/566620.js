@@ -53,8 +53,8 @@ var r = n(990547),
     U = n(595519),
     G = n(774226),
     B = n(317381),
-    F = n(882347),
-    V = n(16609),
+    V = n(882347),
+    F = n(16609),
     Z = n(224189),
     H = n(374065),
     Y = n(917107),
@@ -115,7 +115,7 @@ function en(e) {
         let e = null != s ? s : l,
             { channelId: t, guildId: n } =
                 null != e
-                    ? (0, V.dK)(e)
+                    ? (0, F.dK)(e)
                     : {
                           channelId: void 0,
                           guildId: void 0
@@ -299,7 +299,7 @@ async function ea(e) {
         let i = w.default.getCurrentUser();
         if (
             null != i &&
-            !(await (0, F.p)({
+            !(await (0, V.p)({
                 applicationId: t,
                 application: n,
                 channel: I,
@@ -429,7 +429,7 @@ async function eo(e) {
         ((null == O ? void 0 : O.applicationId) != null && (t = g.Z.getApplication(null == O ? void 0 : O.applicationId)),
         !(
             !o ||
-            (await (0, F.p)({
+            (await (0, V.p)({
                 applicationId: n,
                 application: b,
                 channel: y,
@@ -549,7 +549,7 @@ function es(e) {
         instanceId: null == i ? void 0 : i.launchId,
         showFeedback: r
     });
-    let a = (0, V.pY)(t);
+    let a = (0, F.pY)(t);
     if (null != a) {
         var s;
         let e = y.Z.getSelectedParticipantId(a),

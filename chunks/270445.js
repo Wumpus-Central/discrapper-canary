@@ -4,7 +4,7 @@ n.d(t, {
     F3: () => ey,
     UE: () => tk,
     _7: () => eL,
-    mH: () => tV,
+    mH: () => tF,
     vt: () => eY
 });
 var r = n(653603),
@@ -79,8 +79,8 @@ var y = new WeakMap(),
     U = new WeakMap(),
     G = new WeakMap(),
     B = new WeakMap(),
-    F = Symbol('placeholder'),
-    V = Symbol('mark-placeholder'),
+    V = Symbol('placeholder'),
+    F = Symbol('mark-placeholder'),
     Z = globalThis.Text,
     H = (e) => (e && e.ownerDocument && e.ownerDocument.defaultView) || null,
     Y = (e) => K(e) && 8 === e.nodeType,
@@ -463,7 +463,7 @@ var y = new WeakMap(),
     eS = (e, t) => {
         var n = g(e, ev),
             r = g(t, eO);
-        return e[F] === t[F] && eI(n, r);
+        return e[V] === t[V] && eI(n, r);
     },
     eT = (e, t) => {
         if (e.length !== t.length) return !1;
@@ -489,7 +489,7 @@ var y = new WeakMap(),
             a = eL(),
             o = ey.findPath(a, i),
             s = d.y$.parent(o),
-            l = !0 === n[V];
+            l = !0 === n[F];
         return a.isVoid(r)
             ? c.createElement(ew, { length: d.NB.string(r).length })
             : '' !== n.text || r.children[r.children.length - 1] !== i || a.isInline(r) || '' !== d.ML.string(a, s)
@@ -587,7 +587,7 @@ var y = new WeakMap(),
             parent: i,
             text: r
         });
-        if (t[F]) {
+        if (t[V]) {
             var p = {
                 children: t.placeholder,
                 attributes: {
@@ -615,7 +615,7 @@ var y = new WeakMap(),
             text: r
         });
     },
-    eM = c.memo(ex, (e, t) => t.parent === e.parent && t.isLast === e.isLast && t.renderLeaf === e.renderLeaf && t.renderPlaceholder === e.renderPlaceholder && t.text === e.text && d.xv.equals(t.leaf, e.leaf) && t.leaf[F] === e.leaf[F]),
+    eM = c.memo(ex, (e, t) => t.parent === e.parent && t.isLast === e.isLast && t.renderLeaf === e.renderLeaf && t.renderPlaceholder === e.renderPlaceholder && t.text === e.text && d.xv.equals(t.leaf, e.leaf) && t.leaf[V] === e.leaf[V]),
     ek = (e) => {
         var { attributes: t, children: n } = e;
         return c.createElement('span', Object.assign({}, t), n);
@@ -653,7 +653,7 @@ var y = new WeakMap(),
     },
     eU = c.memo(ej, (e, t) => t.parent === e.parent && t.isLast === e.isLast && t.renderLeaf === e.renderLeaf && t.renderPlaceholder === e.renderPlaceholder && t.text === e.text && eA(t.decorations, e.decorations)),
     eG = (e) => {
-        var { decorations: t, element: n, renderElement: r = (e) => c.createElement(eF, Object.assign({}, e)), renderPlaceholder: a, renderLeaf: o, selection: s } = e,
+        var { decorations: t, element: n, renderElement: r = (e) => c.createElement(eV, Object.assign({}, e)), renderPlaceholder: a, renderLeaf: o, selection: s } = e,
             l = eL(),
             u = ez(),
             f = l.isInline(n),
@@ -716,13 +716,13 @@ var y = new WeakMap(),
         });
     },
     eB = c.memo(eG, (e, t) => e.element === t.element && e.renderElement === t.renderElement && e.renderLeaf === t.renderLeaf && e.renderPlaceholder === t.renderPlaceholder && eT(e.decorations, t.decorations) && (e.selection === t.selection || (!!e.selection && !!t.selection && d.e6.equals(e.selection, t.selection)))),
-    eF = (e) => {
+    eV = (e) => {
         var { attributes: t, children: n, element: r } = e,
             i = eL().isInline(r) ? 'span' : 'div';
         return c.createElement(i, Object.assign({}, t, { style: { position: 'relative' } }), n);
     },
-    eV = (0, c.createContext)(() => []),
-    eZ = () => (0, c.useContext)(eV),
+    eF = (0, c.createContext)(() => []),
+    eZ = () => (0, c.useContext)(eF),
     eH = (0, c.createContext)(!1),
     eY = () => (0, c.useContext)(eH),
     eW = (e) => {
@@ -1898,7 +1898,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
         if (f && 1 === C.children.length && 1 === Array.from(d.NB.texts(C)).length && '' === d.NB.string(C) && !L) {
             var en = d.ML.start(C, []);
             et.push({
-                [F]: !0,
+                [V]: !0,
                 placeholder: f,
                 anchor: en,
                 focus: en
@@ -1914,7 +1914,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
                 var ed = Object.fromEntries(Object.keys(es).map((e) => [e, null]));
                 et.push(
                     tN(
-                        tN(tN({ [V]: !0 }, ed), er),
+                        tN(tN({ [F]: !0 }, ed), er),
                         {},
                         {
                             anchor: ei,
@@ -1940,7 +1940,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eW(e)),
             eK.Provider,
             { value: _ },
             c.createElement(
-                eV.Provider,
+                eF.Provider,
                 { value: s },
                 c.createElement(
                     e6,
@@ -2382,10 +2382,10 @@ function tB(e) {
         onChange: r
     };
 }
-var tF = ['editor', 'children', 'onChange', 'value'],
-    tV = (e) => {
+var tV = ['editor', 'children', 'onChange', 'value'],
+    tF = (e) => {
         var { editor: t, children: n, onChange: r, value: i } = e,
-            a = g(e, tF),
+            a = g(e, tV),
             o = (0, c.useRef)(!1),
             [s, l] = c.useState(() => {
                 if (!d.NB.isNodeList(i)) throw Error('[Slate] value is invalid! Expected a list of elements but got: '.concat(d.o4.stringify(i)));

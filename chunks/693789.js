@@ -139,7 +139,7 @@ function I() {
     });
 }
 function S(e) {
-    var { look: t = b.FILLED, color: n = y.BRAND, size: a = v.MEDIUM, fullWidth: s = !1, grow: _ = !0, disabled: h = !1, submitting: E = !1, type: S = 'button', style: T, wrapperClassName: A, className: N, innerClassName: C, onClick: R, onDoubleClick: P, onMouseDown: w, onMouseUp: D, onMouseEnter: L, onMouseLeave: x, onKeyDown: M, children: k, rel: j, buttonRef: U, focusProps: G, 'aria-label': B, submittingStartedLabel: F, submittingFinishedLabel: V } = e,
+    var { look: t = b.FILLED, color: n = y.BRAND, size: a = v.MEDIUM, fullWidth: s = !1, grow: _ = !0, disabled: h = !1, submitting: E = !1, type: S = 'button', style: T, wrapperClassName: A, className: N, innerClassName: C, onClick: R, onDoubleClick: P, onMouseDown: w, onMouseUp: D, onMouseEnter: L, onMouseLeave: x, onKeyDown: M, children: k, rel: j, buttonRef: U, focusProps: G, 'aria-label': B, submittingStartedLabel: V, submittingFinishedLabel: F } = e,
         Z = g(e, ['look', 'color', 'size', 'fullWidth', 'grow', 'disabled', 'submitting', 'type', 'style', 'wrapperClassName', 'className', 'innerClassName', 'onClick', 'onDoubleClick', 'onMouseDown', 'onMouseUp', 'onMouseEnter', 'onMouseLeave', 'onKeyDown', 'children', 'rel', 'buttonRef', 'focusProps', 'aria-label', 'submittingStartedLabel', 'submittingFinishedLabel']);
     let H = h || E,
         Y = H && (null != L || null != x),
@@ -147,8 +147,8 @@ function S(e) {
         K = O(G, t),
         z = i.useRef(!1);
     i.useEffect(() => {
-        !0 === E && ((z.current = !0), l.u.announce(null != F ? F : d.intl.string(d.t.pfChQk))), !1 === E && !0 === z.current && l.u.announce(null != V ? V : d.intl.string(d.t.SVPara));
-    }, [E, F, V]);
+        !0 === E && ((z.current = !0), l.u.announce(null != V ? V : d.intl.string(d.t.pfChQk))), !1 === E && !0 === z.current && l.u.announce(null != F ? F : d.intl.string(d.t.SVPara));
+    }, [E, V, F]);
     let q = (0, r.jsx)(
         c.t,
         m(p({}, G), {

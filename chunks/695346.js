@@ -31,7 +31,7 @@ n.d(t, {
     Xc: () => j,
     Xk: () => w,
     Xr: () => es,
-    YC: () => eF,
+    YC: () => eV,
     Yk: () => eS,
     _O: () => C,
     _j: () => eL,
@@ -70,7 +70,7 @@ n.d(t, {
     x4: () => ep,
     xM: () => er,
     xq: () => z,
-    zA: () => V,
+    zA: () => F,
     zY: () => eM
 }),
     n(388685);
@@ -281,11 +281,11 @@ let I = (0, u.Zc)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    F = [],
-    V = (0, u.Zc)(
+    V = [],
+    F = (0, u.Zc)(
         'privacy',
         'messageRequestRestrictedGuildIds',
-        (e) => (null != e ? e : F),
+        (e) => (null != e ? e : V),
         (e) => e
     ),
     Z = (0, u.Zc)(
@@ -864,7 +864,7 @@ let eG = (0, u.Zc)(
         (e) => null != e && e,
         (e) => e
     ),
-    eF = (0, u.Zc)(
+    eV = (0, u.Zc)(
         'appearance',
         'uiDensity',
         (e) => (e === i.Pi.UNSET_UI_DENSITY ? i.Pi.DEFAULT : null != e ? e : i.Pi.DEFAULT),

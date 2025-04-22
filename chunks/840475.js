@@ -53,20 +53,20 @@ var r,
         var t = f(e);
         return 'DataView' === t || d(U, t) || d(G, t);
     },
-    F = function (e) {
+    V = function (e) {
         var t = E(e);
         if (u(t)) {
             var n = S(t);
-            return n && d(n, M) ? n[M] : F(t);
+            return n && d(n, M) ? n[M] : V(t);
         }
     },
-    V = function (e) {
+    F = function (e) {
         if (!u(e)) return !1;
         var t = f(e);
         return d(U, t) || d(G, t);
     },
     Z = function (e) {
-        if (V(e)) return e;
+        if (F(e)) return e;
         throw new D('Target is not a typed array');
     },
     H = function (e) {
@@ -137,9 +137,9 @@ e.exports = {
     aTypedArrayConstructor: H,
     exportTypedArrayMethod: Y,
     exportTypedArrayStaticMethod: W,
-    getTypedArrayConstructor: F,
+    getTypedArrayConstructor: V,
     isView: B,
-    isTypedArray: V,
+    isTypedArray: F,
     TypedArray: R,
     TypedArrayPrototype: P
 };

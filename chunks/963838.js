@@ -2,7 +2,7 @@ n.d(t, {
     Iu: () => G,
     Jw: () => j,
     _r: () => B,
-    cX: () => V,
+    cX: () => F,
     lv: () => U,
     v: () => x
 });
@@ -86,7 +86,7 @@ function B(e) {
         i = N.ZP.getByName(r);
     return null != i ? w.ZP.getURL(i.surrogates) : '';
 }
-function F(e, t) {
+function V(e, t) {
     return i()(e)
         .map((e) => {
             var n;
@@ -96,11 +96,11 @@ function F(e, t) {
         .uniq()
         .value();
 }
-function V(e) {
+function F(e) {
     var t, n, r, i, a, o;
     if (e.length < 1) return '';
-    let s = F(e, 'userId'),
-        l = F(e, 'emojiName'),
+    let s = V(e, 'userId'),
+        l = V(e, 'emojiName'),
         c = l.length < 2 ? (null != (t = null == l ? void 0 : l[0]) ? t : '') : l.join(', ');
     return s.length < 1
         ? ''

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685), n(539854);
+n.d(t, { Z: () => F }), n(388685), n(539854);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -90,7 +90,7 @@ function G(e) {
 function B(e) {
     return R(e.entitlement);
 }
-class F extends (r = s.yh) {
+class V extends (r = s.yh) {
     initialize() {
         this.syncWith([u.Z], () => !0);
     }
@@ -193,8 +193,8 @@ class F extends (r = s.yh) {
         );
     }
 }
-h(F, 'displayName', 'EntitlementStore');
-let V = new F(l.Z, {
+h(V, 'displayName', 'EntitlementStore');
+let F = new V(l.Z, {
     ENTITLEMENT_FETCH_APPLICATION_START: P,
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: w,
     ENTITLEMENT_FETCH_APPLICATION_FAIL: L,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(415506), n(388685);
+n.d(t, { Z: () => V }), n(415506), n(388685);
 var r,
     i = n(442837),
     a = n(759174),
@@ -229,7 +229,7 @@ class B extends (r = i.ZP.Store) {
     }
 }
 u(B, 'displayName', 'SavedMessagesStore');
-let F = new B(o.Z, {
+let V = new B(o.Z, {
     POST_CONNECTION_OPEN: T,
     LOGOUT: A,
     SAVED_MESSAGES_UPDATE: N,

@@ -95,15 +95,15 @@ function v(e, t) {
             }
         this.hostname.length > d ? (this.hostname = '') : (this.hostname = this.hostname.toLowerCase()), P || (this.hostname = r.toASCII(this.hostname));
         var B = this.port ? ':' + this.port : '',
-            F = this.hostname || '';
-        (this.host = F + B), (this.href += this.host), P && ((this.hostname = this.hostname.substr(1, this.hostname.length - 2)), '/' !== y[0] && (y = '/' + y));
+            V = this.hostname || '';
+        (this.host = V + B), (this.href += this.host), P && ((this.hostname = this.hostname.substr(1, this.hostname.length - 2)), '/' !== y[0] && (y = '/' + y));
     }
     if (!p[I])
         for (var C = 0, D = l.length; C < D; C++) {
-            var V = l[C];
-            if (-1 !== y.indexOf(V)) {
-                var Z = encodeURIComponent(V);
-                Z === V && (Z = escape(V)), (y = y.split(V).join(Z));
+            var F = l[C];
+            if (-1 !== y.indexOf(F)) {
+                var Z = encodeURIComponent(F);
+                Z === F && (Z = escape(F)), (y = y.split(F).join(Z));
             }
         }
     var H = y.indexOf('#');

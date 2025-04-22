@@ -94,14 +94,14 @@ r(
     },
     { DOMException: B ? D : T }
 );
-var F = i(O),
-    V = F.prototype;
-for (var Z in (j && (v || T === F) && u(V, 'toString', h),
+var V = i(O),
+    F = V.prototype;
+for (var Z in (j && (v || T === V) && u(F, 'toString', h),
 U &&
     y &&
-    T === F &&
+    T === V &&
     d(
-        V,
+        F,
         'code',
         x(function () {
             return w(p(this).name);
@@ -112,5 +112,5 @@ g))
         var H = g[Z],
             Y = H.s,
             W = l(6, H.c);
-        f(F, Y) || c(F, Y, W), f(V, Y) || c(V, Y, W);
+        f(V, Y) || c(V, Y, W), f(F, Y) || c(F, Y, W);
     }

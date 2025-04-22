@@ -18,7 +18,7 @@ n.d(t, {
     YQ: () => B,
     Zv: () => Q,
     _H: () => eO,
-    aN: () => F,
+    aN: () => V,
     cQ: () => ee,
     dP: () => eb,
     f0: () => Z,
@@ -29,7 +29,7 @@ n.d(t, {
     lO: () => J,
     lP: () => Y,
     ou: () => ei,
-    pF: () => V,
+    pF: () => F,
     pl: () => eE,
     qu: () => em,
     qv: () => G,
@@ -386,7 +386,7 @@ async function B(e, t, n, r) {
         bank: t
     });
 }
-async function F(e, t, n) {
+async function V(e, t, n) {
     if (null == e) throw U('Stripe not loaded');
     let { email: r, name: i, line1: a, line2: o, city: l, state: c, postalCode: u, country: d } = t;
     if (null == i) throw U('Name required for iDEAL');
@@ -415,7 +415,7 @@ async function F(e, t, n) {
         analyticsLocation: n
     });
 }
-async function V(e, t, n, r) {
+async function F(e, t, n, r) {
     if (null == e) throw U('Stripe not loaded');
     let { email: i, name: a, line1: o, line2: l, city: c, state: u, postalCode: d, country: f } = n;
     if (null == i) throw U('Email required for Przelewy24');

@@ -20,7 +20,7 @@ var r = n(200651),
     v = n(588015);
 function O(e) {
     let { voiceChannel: t, onAction: n, onClose: a } = e,
-        { profileType: O } = (0, m.z)(),
+        { themeType: O } = (0, m.z)(),
         { analyticsLocations: I } = (0, c.ZP)(),
         S = (0, p.W)(t),
         T = (0, u.ZP)(t, !0),
@@ -37,7 +37,7 @@ function O(e) {
     let C = (e) => {
         e.stopPropagation(),
             n({ action: 'PRESS_VOICE_CHANNEL_STATUS' }),
-            O === E.y0.BITE_SIZE && (null == a || a()),
+            O === E.lY.POPOUT && (null == a || a()),
             (0, d.Z)({
                 channel: t,
                 sourceAnalyticsLocations: I

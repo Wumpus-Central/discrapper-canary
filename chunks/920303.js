@@ -124,8 +124,8 @@ function B(e) {
     let { channel: t } = e;
     return T === t.parent_id && !!(0, d.yv)(t.id) && void U(t.id);
 }
-let F = [];
-class V extends (i = c.ZP.Store) {
+let V = [];
+class F extends (i = c.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, E.Z, h.ZP);
     }
@@ -142,11 +142,11 @@ class V extends (i = c.ZP.Store) {
         return T === e && A === t && (0, m.OL)(r, n) && R === i ? v : (P(), !1);
     }
     getThreads(e, t, n, i) {
-        return T === e && A === t && (0, m.OL)(r, n) && R === i ? N : F;
+        return T === e && A === t && (0, m.OL)(r, n) && R === i ? N : V;
     }
 }
-b(V, 'displayName', 'ArchivedThreadsStore');
-let Z = new V(u.Z, {
+b(F, 'displayName', 'ArchivedThreadsStore');
+let Z = new F(u.Z, {
     CONNECTION_OPEN: P,
     THREAD_DELETE: G,
     THREAD_UPDATE: B,

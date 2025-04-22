@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => S });
 var r = n(200651),
     i = n(192379),
     l = n(374470),
@@ -76,7 +76,7 @@ function I(e) {
         initHistory: I
     });
 }
-let P = i.memo(function (e) {
+let S = i.memo(function (e) {
     var { positionTargetRef: t } = e,
         n = (function (e, t) {
             if (null == e) return {};

@@ -179,10 +179,10 @@ function B(e) {
     }
     throw Error('Invalid Dispatch State. state='.concat(e.state.type));
 }
-function F(e) {
+function V(e) {
     return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING ? e.networkProgress : null;
 }
-function V(e) {
+function F(e) {
     return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING ? e.diskProgress : null;
 }
 function Z(e) {
@@ -241,9 +241,9 @@ function X(e) {
         for (let t in r[e]) {
             let o = (0, p.Tu)(e, t);
             if (((n[o] = B(r[e][t])), null != N[o])) {
-                let e = Q(n, o, F);
+                let e = Q(n, o, V);
                 e > 0 && K((w += e));
-                let r = Q(n, o, V);
+                let r = Q(n, o, F);
                 r > 0 && q((D += r));
                 let s = Q(n, o, Z);
                 if ((s > 0 && z((L += s)), i === t)) {

@@ -111,9 +111,9 @@ function C(e) {
             canAnimate: D || !j ? x : k
         }),
         B = (0, u.dQu)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
-        F = n.getAvatarURL(b, (0, u.pxk)(S)),
-        V = (0, s._i)((0, d.ZP)(F, B, !1)),
-        Z = (0, f.Z)(null != (t = null != w ? w : null == a ? void 0 : a.primaryColor) ? t : V).hex,
+        V = n.getAvatarURL(b, (0, u.pxk)(S)),
+        F = (0, s._i)((0, d.ZP)(V, B, !1)),
+        Z = (0, f.Z)(null != (t = null != w ? w : null == a ? void 0 : a.primaryColor) ? t : F).hex,
         H = N(S),
         Y = H + T - P,
         W = R - A - P;
@@ -170,8 +170,8 @@ function C(e) {
     });
 }
 function R(e) {
-    var { profileType: t, displayProfile: n, canUsePremiumProfileCustomization: i = !1 } = e,
-        a = T(e, ['profileType', 'displayProfile', 'canUsePremiumProfileCustomization']);
+    var { themeType: t, displayProfile: n, canUsePremiumProfileCustomization: i = !1 } = e,
+        a = T(e, ['themeType', 'displayProfile', 'canUsePremiumProfileCustomization']);
     let o = b.q[t],
         s = i || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1;
     return (0, r.jsx)(

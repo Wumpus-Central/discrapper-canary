@@ -746,13 +746,13 @@ var w = r.forwardRef(function (e, t) {
                 },
                 [U, c]
             ),
-            F = r.useCallback(
+            V = r.useCallback(
                 function (e) {
                     return U(e, { mouseHandler: u });
                 },
                 [U, u]
             ),
-            V = r.useCallback(
+            F = r.useCallback(
                 function (e) {
                     return U(e, { mouseHandler: d });
                 },
@@ -767,14 +767,14 @@ var w = r.forwardRef(function (e, t) {
                     return (
                         e('click', G, l),
                         e('mousedown', B, c),
-                        e('mousemove', F, u),
-                        e('mouseup', V, d),
+                        e('mousemove', V, u),
+                        e('mouseup', F, d),
                         function () {
-                            window.removeEventListener('click', G), window.removeEventListener('mousedown', B), window.removeEventListener('mousemove', F), window.removeEventListener('mouseup', F);
+                            window.removeEventListener('click', G), window.removeEventListener('mousedown', B), window.removeEventListener('mousemove', V), window.removeEventListener('mouseup', V);
                         }
                     );
                 },
-                [G, B, F, V, l, c, u, d]
+                [G, B, V, F, l, c, u, d]
             ),
             r.useEffect(
                 function () {

@@ -37,7 +37,7 @@ n.d(t, {
     Xv: () => eE,
     ZZ: () => Z,
     Zp: () => tf,
-    _D: () => V,
+    _D: () => F,
     _j: () => tt,
     _p: () => ts,
     b7: () => eW,
@@ -176,15 +176,15 @@ function G(e) {
     }
 }
 let B = (e) => e.application_id === w.Ev || e.platform === P.M7m.XBOX,
-    F = (e) => e.platform === P.M7m.PS4 || e.platform === P.M7m.PS5;
-function V(e, t) {
+    V = (e) => e.platform === P.M7m.PS4 || e.platform === P.M7m.PS5;
+function F(e, t) {
     if (null == e) return !1;
     let n = e.name.toLowerCase(),
         r = N.r.build(t.config).application.name.toLowerCase();
-    return B(e) || F(e) ? n === r : null != e.application_id && H(e.application_id, t);
+    return B(e) || V(e) ? n === r : null != e.application_id && H(e.application_id, t);
 }
 function Z(e, t) {
-    for (let [n, r] of e) if (V(t, r) && !W(r)) return r;
+    for (let [n, r] of e) if (F(t, r) && !W(r)) return r;
 }
 function H(e, t) {
     return null != N.r.build(t.config).application.ids.find((t) => t === e);
@@ -546,14 +546,14 @@ let eM = (e, t) => {
         return l + eU(e, t);
     },
     eB = 0.99,
-    eF = (e, t) => {
+    eV = (e, t) => {
         var n;
         let r = t.target;
         if ((null == (n = e.userStatus) ? void 0 : n.completedAt) != null) return r;
         let a = Math.min(r * eB, eG(e, t));
         return Math.max((0, i.floor)(a, 2), 0);
     },
-    eV = (e) => {
+    eF = (e) => {
         var t, n;
         let { quest: r, taskType: i, includeTaskTypes: a = o.T.ALL } = e,
             s = r.config.taskConfig;
@@ -562,7 +562,7 @@ let eM = (e, t) => {
             c = null != (n = s.tasks[l]) ? n : s.tasks[o.X.STREAM_ON_DESKTOP];
         if (null == c) throw Error('No task with type '.concat(i, ' found for quest ').concat(r.id, '!'));
         let d = c.target,
-            f = eF(r, c);
+            f = eV(r, c);
         return {
             progressSeconds: f,
             targetSeconds: d,
@@ -585,13 +585,13 @@ let eM = (e, t) => {
             .filter(b.lm)) {
             let t = eZ(e.eventName);
             if (null != t && (null == i ? void 0 : i.has(t)))
-                return eV({
+                return eF({
                     quest: r,
                     taskType: t,
                     includeTaskTypes: i
                 });
         }
-        return eV({
+        return eF({
             quest: r,
             includeTaskTypes: i
         });
@@ -611,21 +611,21 @@ let eM = (e, t) => {
                     includeTaskTypes: null != t ? t : e3(e) ? o.T.CONSOLE : o.T.ALL
                 })
               : e0(e)
-                ? eV({
+                ? eF({
                       quest: e,
                       taskType: o.X.WATCH_VIDEO
                   })
                 : eP(e)
-                  ? eV({
+                  ? eF({
                         quest: e,
                         taskType: o.X.PLAY_ON_DESKTOP
                     })
                   : eR(e)
-                    ? eV({
+                    ? eF({
                           quest: e,
                           taskType: o.X.PLAY_ACTIVITY
                       })
-                    : eV({
+                    : eF({
                           quest: e,
                           taskType: o.X.STREAM_ON_DESKTOP
                       });

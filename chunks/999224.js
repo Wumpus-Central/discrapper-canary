@@ -1,4 +1,4 @@
-n.d(t, { x: () => V });
+n.d(t, { x: () => F });
 var r = n(771356),
     i = n(640490),
     a = n(578895),
@@ -37,8 +37,8 @@ var r = n(771356),
     U = n(263984),
     G = n(591501),
     B = n(595867),
-    F = n(345272);
-let V = {
+    V = n(345272);
+let F = {
     skye: {
         name: A.default.tzvUKy,
         iconURL: j.Z,
@@ -129,7 +129,7 @@ let V = {
     },
     villain: {
         name: A.default.kHmvdn,
-        iconURL: F.Z,
+        iconURL: V.Z,
         splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(219, 2, 34, 0.50) 0%, rgba(219, 2, 34, 0.00) 100%)',
         baseColor: '#3D0109',
         styleKey: 'villain',
@@ -160,4 +160,4 @@ let V = {
         previewSoundURLs: [s.Z, l.Z, c.Z]
     }
 };
-(V.rachel = V.skye), (V.alex = V.quinn), (V.elliot = V.axel), (V.sebastian = V.sebastien), (V.justin = V.justus), (V.taylor = V.harper), (V.monique = V.solara);
+(F.rachel = F.skye), (F.alex = F.quinn), (F.elliot = F.axel), (F.sebastian = F.sebastien), (F.justin = F.justus), (F.taylor = F.harper), (F.monique = F.solara);

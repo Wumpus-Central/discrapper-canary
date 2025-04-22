@@ -15,8 +15,8 @@ var a = n(200651),
     b = n(55589),
     f = n(630388),
     v = n(98357),
-    g = n(432877),
-    j = n(246992),
+    j = n(432877),
+    g = n(246992),
     _ = n(750540),
     y = n(616257);
 function C() {
@@ -33,7 +33,7 @@ function C() {
                 };
             })
         })),
-        g = r.useCallback(() => {
+        j = r.useCallback(() => {
             var e;
             if (null == i || !i.isPrivate()) return;
             let t = (0, f.x9)(null != (e = i.recipientFlags) ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
@@ -66,11 +66,11 @@ function C() {
                                       size: c.EFr.SIZE_16
                                   });
                         },
-                        popoutLayerContext: j.O$
+                        popoutLayerContext: g.O$
                     }),
                     (0, a.jsx)(c.zxk, {
                         size: c.zxk.Sizes.SMALL,
-                        onClick: g,
+                        onClick: j,
                         disabled: null == n,
                         children: y ? 'Clear NUX Flag' : 'Set NUX Flag'
                     })
@@ -80,7 +80,7 @@ function C() {
     });
 }
 function O() {
-    let e = g.ZP.allByCategory(g.zU.MESSAGING).map((e) => {
+    let e = j.ZP.allByCategory(j.zU.MESSAGING).map((e) => {
         let [t, n, { label: r }] = e;
         return (0, a.jsx)(
             c.j7V,

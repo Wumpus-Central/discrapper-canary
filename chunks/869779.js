@@ -22,10 +22,10 @@ var i = n(200651),
     N = n(592125),
     S = n(496675),
     w = n(699516),
-    Z = n(594174),
-    O = n(585483),
-    E = n(787263),
-    T = n(975316),
+    O = n(594174),
+    Z = n(585483),
+    T = n(787263),
+    E = n(975316),
     R = n(428813),
     _ = n(2147),
     I = n(856606),
@@ -84,7 +84,7 @@ class M extends l.PureComponent {
                                                           className: L.channelIcon
                                                       })
                                                     : null,
-                                                (0, g.F6)(t, Z.default, w.Z),
+                                                (0, g.F6)(t, O.default, w.Z),
                                                 null != n
                                                     ? (0, i.jsx)(s.Text, {
                                                           tag: 'span',
@@ -92,7 +92,7 @@ class M extends l.PureComponent {
                                                           color: 'header-secondary',
                                                           lineClamp: 1,
                                                           className: L.category,
-                                                          children: (0, g.F6)(n, Z.default, w.Z)
+                                                          children: (0, g.F6)(n, O.default, w.Z)
                                                       })
                                                     : null
                                             ]
@@ -130,10 +130,10 @@ class M extends l.PureComponent {
                               section: P.CoT.INTEGRATIONS,
                               label: D.intl.string(D.t.s69NLC),
                               ariaLabel: D.intl.string(D.t.s69NLC),
-                              element: T.Z,
+                              element: E.Z,
                               notice: {
                                   stores: [v.Z],
-                                  element: T.B
+                                  element: E.B
                               },
                               predicate: () => (!!d || !!h) && b.Ti.has(t.type)
                           },
@@ -141,8 +141,8 @@ class M extends l.PureComponent {
                           {
                               section: P.CoT.DELETE,
                               onClick() {
-                                  (0, E.w)(t, function () {
-                                      O.S.subscribeOnce(P.CkL.LAYER_POP_COMPLETE, () => {
+                                  (0, T.w)(t, function () {
+                                      Z.S.subscribeOnce(P.CkL.LAYER_POP_COMPLETE, () => {
                                           (0, o.zz)(t.id);
                                       }),
                                           (0, c.xf)();

@@ -126,7 +126,7 @@ function M(e) {
             e && E(!0);
         }, []),
         B = (0, d.O)(G),
-        F = (0, v.Z)(n, b);
+        V = (0, v.Z)(n, b);
     return (0, r.jsxs)('div', {
         className: o()(P.topPerksCard, P.animatedTopPerksCard, R.powerupCard, { [P.animate]: g }),
         onMouseEnter: () => y(!0),
@@ -140,7 +140,7 @@ function M(e) {
                 className: P.topPerksCardImageWrapper,
                 children: (0, r.jsx)(s.animated.img, {
                     className: o()(P.topPerksCardImage, R.image),
-                    src: F,
+                    src: V,
                     alt: '',
                     style: k
                 })

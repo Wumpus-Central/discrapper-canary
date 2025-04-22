@@ -23,7 +23,7 @@ let O = 200,
     S = 30;
 function T(e) {
     let { sourceType: t, children: n, user: T, targetElementRef: A } = e,
-        { profileType: N } = (0, h.z)(),
+        { themeType: N } = (0, h.z)(),
         C = (0, p.T)({ location: 'UserProfilePopoutInteractionCoachmark' }),
         R = (0, a.e7)([_.default], () => {
             var e;
@@ -35,7 +35,7 @@ function T(e) {
                 return t === g.IIU.CUSTOM_STATUS;
             })
         ),
-        w = () => !R && N === m.y0.BITE_SIZE && (t === m.n_.AVATAR ? C && null == P : t === m.n_.STATUS ? C : t === m.n_.ACTIVITY && !C),
+        w = () => !R && N === m.lY.POPOUT && (t === m.n_.AVATAR ? C && null == P : t === m.n_.STATUS ? C : t === m.n_.ACTIVITY && !C),
         [D, L] = i.useState(!1);
     (0, l.Z)(() => L(!0), w() ? O : null);
     let {
@@ -65,9 +65,9 @@ function T(e) {
                   spacing: I,
                   dismissibleContentType: o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ACTIVITY
               },
-        F = (0, c.N)(o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
-        V = D && !F ? [B] : [],
-        [Z, H] = (0, u.US)(V);
+        V = (0, c.N)(o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
+        F = D && !V ? [B] : [],
+        [Z, H] = (0, u.US)(F);
     return (0, r.jsx)(s.yRy, {
         targetElementRef: A,
         align: 'center',

@@ -143,7 +143,7 @@ function B(e) {
     if (null == i) return !1;
     null != n && i.analyticsContext.trackViewerCount(n.length), i.streamUpdate(r);
 }
-function F(e) {
+function V(e) {
     let { streamKey: t } = e,
         n = P[t];
     if (null == n) return !1;
@@ -155,7 +155,7 @@ function F(e) {
         n.destroy('stream-end'),
         delete P[t];
 }
-function V(e) {
+function F(e) {
     let { layout: t } = e;
     (R = t), Object.values(P).forEach((e) => e.layoutChange(t));
 }
@@ -278,9 +278,9 @@ let q = new z(
               STREAM_CREATE: j,
               STREAM_SERVER_UPDATE: U,
               STREAM_UPDATE: B,
-              STREAM_DELETE: F,
+              STREAM_DELETE: V,
               MEDIA_ENGINE_CONNECTION_STATS: G,
-              STREAM_LAYOUT_UPDATE: V,
+              STREAM_LAYOUT_UPDATE: F,
               RTC_DEBUG_SET_SIMULCAST_OVERRIDE: Y,
               VIDEO_SIZE_UPDATE: W
           }

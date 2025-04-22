@@ -26,7 +26,7 @@
             c = !1;
         return (
             'string' == typeof e && (e = K(e)),
-            'object' == typeof e && (W(e.r) && W(e.g) && W(e.b) ? ((t = d(e.r, e.g, e.b)), (l = !0), (c = '%' === String(e.r).substr(-1) ? 'prgb' : 'rgb')) : W(e.h) && W(e.s) && W(e.v) ? ((r = V(e.s)), (i = V(e.v)), (t = h(e.h, r, i)), (l = !0), (c = 'hsv')) : W(e.h) && W(e.s) && W(e.l) && ((r = V(e.s)), (a = V(e.l)), (t = _(e.h, r, a)), (l = !0), (c = 'hsl')), e.hasOwnProperty('a') && (n = e.a)),
+            'object' == typeof e && (W(e.r) && W(e.g) && W(e.b) ? ((t = d(e.r, e.g, e.b)), (l = !0), (c = '%' === String(e.r).substr(-1) ? 'prgb' : 'rgb')) : W(e.h) && W(e.s) && W(e.v) ? ((r = F(e.s)), (i = F(e.v)), (t = h(e.h, r, i)), (l = !0), (c = 'hsv')) : W(e.h) && W(e.s) && W(e.l) && ((r = F(e.s)), (a = F(e.l)), (t = _(e.h, r, a)), (l = !0), (c = 'hsl')), e.hasOwnProperty('a') && (n = e.a)),
             (n = M(n)),
             {
                 ok: l,
@@ -133,15 +133,15 @@
         };
     }
     function m(e, t, n, r) {
-        var i = [F(a(e).toString(16)), F(a(t).toString(16)), F(a(n).toString(16))];
+        var i = [V(a(e).toString(16)), V(a(t).toString(16)), V(a(n).toString(16))];
         return r && i[0].charAt(0) == i[0].charAt(1) && i[1].charAt(0) == i[1].charAt(1) && i[2].charAt(0) == i[2].charAt(1) ? i[0].charAt(0) + i[1].charAt(0) + i[2].charAt(0) : i.join('');
     }
     function g(e, t, n, r, i) {
-        var o = [F(a(e).toString(16)), F(a(t).toString(16)), F(a(n).toString(16)), F(Z(r))];
+        var o = [V(a(e).toString(16)), V(a(t).toString(16)), V(a(n).toString(16)), V(Z(r))];
         return i && o[0].charAt(0) == o[0].charAt(1) && o[1].charAt(0) == o[1].charAt(1) && o[2].charAt(0) == o[2].charAt(1) && o[3].charAt(0) == o[3].charAt(1) ? o[0].charAt(0) + o[1].charAt(0) + o[2].charAt(0) + o[3].charAt(0) : o.join('');
     }
     function E(e, t, n, r) {
-        return [F(Z(r)), F(a(e).toString(16)), F(a(t).toString(16)), F(a(n).toString(16))].join('');
+        return [V(Z(r)), V(a(e).toString(16)), V(a(t).toString(16)), V(a(n).toString(16))].join('');
     }
     function b(e, t) {
         t = 0 === t ? 0 : t || 10;
@@ -431,7 +431,7 @@
         (c.fromRatio = function (e, t) {
             if ('object' == typeof e) {
                 var n = {};
-                for (var r in e) e.hasOwnProperty(r) && ('a' === r ? (n[r] = e[r]) : (n[r] = V(e[r])));
+                for (var r in e) e.hasOwnProperty(r) && ('a' === r ? (n[r] = e[r]) : (n[r] = F(e[r])));
                 e = n;
             }
             return c(e, t);
@@ -673,10 +673,10 @@
     function B(e) {
         return 'string' == typeof e && -1 != e.indexOf('%');
     }
-    function F(e) {
+    function V(e) {
         return 1 == e.length ? '0' + e : '' + e;
     }
-    function V(e) {
+    function F(e) {
         return e <= 1 && (e = 100 * e + '%'), e;
     }
     function Z(e) {

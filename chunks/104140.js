@@ -149,13 +149,13 @@ let T = 10800000,
 function B(e, t) {
     let n = ''.concat(e, '-').concat(t);
     if (G.has(n)) return G.get(n);
-    let r = F(e, t);
+    let r = V(e, t);
     return G.set(n, r), r;
 }
-function F(e, t) {
-    return U ? (0, l.interpolate)(j(e), k(t), { maxSegmentLength: 1.5 }) : V;
+function V(e, t) {
+    return U ? (0, l.interpolate)(j(e), k(t), { maxSegmentLength: 1.5 }) : F;
 }
-function V(e) {
+function F(e) {
     return e.toString();
 }
 class Z extends a.Component {

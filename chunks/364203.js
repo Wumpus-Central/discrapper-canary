@@ -85,8 +85,8 @@ function G(e, t) {
     );
 }
 let B = 88,
-    F = 'remove-wallpaper',
-    V = 0.5,
+    V = 'remove-wallpaper',
+    F = 0.5,
     Z = 250;
 function H(e) {
     let { handleClose: t } = e;
@@ -175,7 +175,7 @@ function W(e) {
                         });
                 });
             },
-            { threshold: V }
+            { threshold: F }
         );
         return (
             null != m.current && e.observe(m.current),
@@ -276,7 +276,7 @@ function z(e) {
     return (0, r.jsx)(W, {
         isSelected: t,
         onSelect: n,
-        selectionId: F,
+        selectionId: V,
         tooltipText: x.intl.string(x.t['C/MRFx']),
         label: x.intl.string(x.t['C/MRFx']),
         className: M.wallpaperRemoveSelection,
@@ -369,16 +369,16 @@ let X = function (e) {
     (0, N.W)();
     let G = (0, u.e7)([T.Z], () => T.Z.isFetchingWallpapers),
         B = (0, u.e7)([T.Z], () => T.Z.failedToFetchWallpapers),
-        F = (0, u.e7)([T.Z], () => T.Z.getWallpaperById(null == g ? void 0 : g.wallpaperId)),
-        V = i.useRef(null),
+        V = (0, u.e7)([T.Z], () => T.Z.getWallpaperById(null == g ? void 0 : g.wallpaperId)),
+        F = i.useRef(null),
         Z = i.useRef(null);
     (0, d.Tbt)(Z),
         i.useEffect(() => {
-            Z.current = V.current;
-        }, [V]),
+            Z.current = F.current;
+        }, [F]),
         i.useEffect(() => {
-            null != F && k(F.isBlurred && b);
-        }, [F, b]);
+            null != V && k(V.isBlurred && b);
+        }, [V, b]);
     let W = i.useCallback(() => {
             h();
         }, [h]),
@@ -411,13 +411,13 @@ let X = function (e) {
         }, [c, g, J, y]),
         et = i.useCallback(
             (e) => {
-                if ((null == F ? void 0 : F.designGroupId) != null) {
+                if ((null == V ? void 0 : V.designGroupId) != null) {
                     var t;
-                    let n = U[F.designGroupId].find((t) => t.isBlurred === e);
+                    let n = U[V.designGroupId].find((t) => t.isBlurred === e);
                     m(null != (t = null == n ? void 0 : n.id) ? t : null);
                 } else k(e);
             },
-            [null == F ? void 0 : F.designGroupId, U, m]
+            [null == V ? void 0 : V.designGroupId, U, m]
         ),
         en = i.useCallback(
             (e) => {
@@ -442,7 +442,7 @@ let X = function (e) {
     i.useEffect(() => {
         let e = (e) => {
             var t;
-            Z.current = (null == (t = V.current) ? void 0 : t.contains(e.target)) ? V.current : null;
+            Z.current = (null == (t = F.current) ? void 0 : t.contains(e.target)) ? F.current : null;
         };
         return (
             document.addEventListener('mousedown', e),
@@ -450,7 +450,7 @@ let X = function (e) {
                 document.removeEventListener('mousedown', e);
             }
         );
-    }, [V]);
+    }, [F]);
     let ei = null == c && (null == s ? void 0 : s.pickerType) !== S.j.COACHMARK,
         ea = null;
     return (
@@ -497,7 +497,7 @@ let X = function (e) {
                                         (0, r.jsx)(
                                             K,
                                             {
-                                                isSelected: (null == F ? void 0 : F.designGroupId) === e.designGroupId,
+                                                isSelected: (null == V ? void 0 : V.designGroupId) === e.designGroupId,
                                                 onSelect: en,
                                                 chatWallpaperMetadata: e
                                             },
@@ -526,7 +526,7 @@ let X = function (e) {
                 topOffset: 88,
                 children: (0, r.jsxs)('div', {
                     className: M.container,
-                    ref: V,
+                    ref: F,
                     onKeyDown: er,
                     children: [
                         (null == s ? void 0 : s.pickerType) === S.j.COACHMARK
@@ -540,7 +540,7 @@ let X = function (e) {
                               }),
                         (0, r.jsx)('div', { className: M.divider }),
                         (0, r.jsx)(d.JcV, {
-                            containerRef: V,
+                            containerRef: F,
                             children: ea
                         })
                     ]

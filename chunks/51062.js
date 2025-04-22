@@ -103,8 +103,8 @@ function I(e, t, n) {
             state: P,
             onFocus: (e) => Z.setSelectedIndex(e)
         }),
-        F = null == (b = e.editorRef.current) ? void 0 : b.getCurrentWord(),
-        V = O(y({}, e), {
+        V = null == (b = e.editorRef.current) ? void 0 : b.getCurrentWord(),
+        F = O(y({}, e), {
             navigator: B,
             activeCommand: U,
             activeCommandOption: G,
@@ -114,14 +114,14 @@ function I(e, t, n) {
             hidePersonalInformation: j,
             hideMentionDescription: R === l.Ie.RULES_INPUT,
             emojiIntention: R === l.Ie.RULES_INPUT ? E.Hz.COMMUNITY_CONTENT : E.Hz.CHAT,
-            currentWord: null != (A = null == F ? void 0 : F.word) ? A : '',
-            currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
+            currentWord: null != (A = null == V ? void 0 : V.word) ? A : '',
+            currentWordIsAtStart: (null == V ? void 0 : V.isAtStart) === !0,
             optionText: null != G ? (0, o.KF)({ [G.name]: null != (N = null == (I = e.editorRef.current) ? void 0 : I.getCurrentCommandOptionValue()) ? N : [] }, G.name) : ''
         }),
-        [Z] = r.useState(() => new p.Z(V));
+        [Z] = r.useState(() => new p.Z(F));
     return (
         r.useEffect(() => {
-            Z.updateProps(V);
+            Z.updateProps(F);
         }),
         r.useImperativeHandle(t, () => Z, [Z]),
         r.useEffect(() => {

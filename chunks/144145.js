@@ -128,7 +128,7 @@ function P(e) {
                             type: v.mFx.JOIN_REQUEST,
                             userId: l.id,
                             activity: i,
-                            location: v.Sbl.PROFILE_POPOUT
+                            location: v.Sbl.USER_ACTIVITY_ACTIONS
                         });
                         null != e && s.default.selectPrivateChannel(e.id);
                     }

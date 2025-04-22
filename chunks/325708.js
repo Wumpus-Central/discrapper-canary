@@ -70,11 +70,11 @@ function _(e) {
     l.useEffect(() => {
         null == r || r(E, j);
     }, [E, r, j]);
-    let P = null != p ? p : l.Fragment;
+    let S = null != p ? p : l.Fragment;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             !j && (0, i.jsx)('div', { style: { minWidth: I } }),
-            (0, i.jsx)(P, {
+            (0, i.jsx)(S, {
                 children: (0, i.jsxs)('div', {
                     className: m.chatLayerWrapper,
                     children: [

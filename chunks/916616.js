@@ -121,8 +121,8 @@ let A = i.forwardRef((e, t) => {
             renderAccessory: U,
             onClick: G,
             tabIndex: B,
-            dataSafeSrc: F,
-            useFullWidth: V = !1,
+            dataSafeSrc: V,
+            useFullWidth: F = !1,
             srcIsAnimated: Z
         } = e,
         H = S(e, ['className', 'imageClassName', 'readyState', 'src', 'placeholder', 'placeholderVersion', 'alt', 'width', 'height', 'maxWidth', 'maxHeight', 'minWidth', 'minHeight', 'mediaLayoutType', 'limitResponsiveWidth', 'accessory', 'zoomable', 'original', 'children', 'renderAccessory', 'onClick', 'tabIndex', 'dataSafeSrc', 'useFullWidth', 'srcIsAnimated']);
@@ -181,7 +181,7 @@ let A = i.forwardRef((e, t) => {
                                 },
                                 a
                             ),
-                            style: C(K, L, V, D)
+                            style: C(K, L, F, D)
                         },
                         H
                     ),
@@ -196,7 +196,7 @@ let A = i.forwardRef((e, t) => {
                                     href: k,
                                     ref: Y,
                                     'data-role': 'img',
-                                    'data-safe-src': null != F ? F : f
+                                    'data-safe-src': null != V ? V : f
                                 }),
                             null != G
                                 ? (0, r.jsx)(l.P3F, {

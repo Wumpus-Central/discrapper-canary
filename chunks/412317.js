@@ -1,4 +1,4 @@
-t.d(n, { Z: () => I });
+t.d(n, { Z: () => v });
 var r = t(200651);
 t(192379);
 var o = t(481060),
@@ -11,8 +11,8 @@ var o = t(481060),
     u = t(562831),
     f = t(981631),
     p = t(388032),
-    b = t(940427);
-function m(e) {
+    m = t(940427);
+function b(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -81,13 +81,13 @@ function g(e) {
         analyticsLocation: t
     });
     return 0 === i.length
-        ? (0, r.jsx)(s.ef, h(m({}, o), { disabled: !0 }))
+        ? (0, r.jsx)(s.ef, h(b({}, o), { disabled: !0 }))
         : (0, r.jsx)(a.Z, {
               menuItems: i,
-              children: (e) => (0, r.jsx)('div', h(m({}, e), { children: (0, r.jsx)(s.ef, m({}, o)) }))
+              children: (e) => (0, r.jsx)('div', h(b({}, e), { children: (0, r.jsx)(s.ef, b({}, o)) }))
           });
 }
-function y(e) {
+function j(e) {
     let { gameFriends: n, hasIncomingPendingGameFriends: t, hasOutgoingPendingGameFriends: o, user: i, analyticsLocation: l } = e,
         {
             onMouseEnter: s,
@@ -108,41 +108,41 @@ function y(e) {
         analyticsLocation: l
     });
 }
-function I(e) {
-    let { isCurrentUser: n, user: t, relationshipType: a, friendToken: d, onClose: m } = e,
+function v(e) {
+    let { isCurrentUser: n, user: t, relationshipType: a, friendToken: d, onClose: b } = e,
         { newestAnalyticsLocation: h } = (0, l.ZP)(),
-        { gameFriends: I, hasOutgoingPendingGameFriends: j, hasIncomingPendingGameFriends: v } = (0, u.H)({ userId: t.id }),
-        x = I.length > 0 || j || v;
+        { gameFriends: v, hasOutgoingPendingGameFriends: x, hasIncomingPendingGameFriends: y } = (0, u.H)({ userId: t.id }),
+        I = v.length > 0 || x || y;
     return n || a === f.OGo.BLOCKED
         ? null
         : a === f.OGo.FRIEND || t.bot
           ? (0, r.jsx)('div', {
-                className: b.multipleButtons,
+                className: m.multipleButtons,
                 children: (0, r.jsx)(c.c, {
                     userId: t.id,
-                    onClose: m
+                    onClose: b
                 })
             })
-          : a === f.OGo.NONE && x
+          : a === f.OGo.NONE && I
             ? (0, r.jsxs)('div', {
-                  className: b.multipleButtons,
+                  className: m.multipleButtons,
                   children: [
-                      (0, r.jsx)(y, {
+                      (0, r.jsx)(j, {
                           user: t,
                           analyticsLocation: h,
-                          gameFriends: I,
-                          hasIncomingPendingGameFriends: v,
-                          hasOutgoingPendingGameFriends: j
+                          gameFriends: v,
+                          hasIncomingPendingGameFriends: y,
+                          hasOutgoingPendingGameFriends: x
                       }),
                       (0, r.jsx)(c.c, {
                           userId: t.id,
-                          onClose: m
+                          onClose: b
                       })
                   ]
               })
             : a === f.OGo.PENDING_OUTGOING
               ? (0, r.jsxs)('div', {
-                    className: b.multipleButtons,
+                    className: m.multipleButtons,
                     children: [
                         (0, r.jsx)(g, {
                             icon: o.iHX,
@@ -152,13 +152,13 @@ function I(e) {
                         }),
                         (0, r.jsx)(c.c, {
                             userId: t.id,
-                            onClose: m
+                            onClose: b
                         })
                     ]
                 })
               : a === f.OGo.PENDING_INCOMING
                 ? (0, r.jsxs)('div', {
-                      className: b.multipleButtons,
+                      className: m.multipleButtons,
                       children: [
                           (0, r.jsx)(g, {
                               icon: o.iHX,
@@ -168,16 +168,16 @@ function I(e) {
                           }),
                           (0, r.jsx)(c.c, {
                               userId: t.id,
-                              onClose: m
+                              onClose: b
                           })
                       ]
                   })
                 : (0, r.jsxs)('div', {
-                      className: b.multipleButtons,
+                      className: m.multipleButtons,
                       children: [
                           (0, r.jsx)(c.v, {
                               userId: t.id,
-                              onClose: m
+                              onClose: b
                           }),
                           (0, r.jsx)(s.tG, {
                               action: 'SEND_FRIEND_REQUEST',

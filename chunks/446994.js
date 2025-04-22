@@ -713,7 +713,7 @@
                                                             U = 0,
                                                             G = 0,
                                                             B = 0,
-                                                            F = {
+                                                            V = {
                                                                 mapOutputToInputTime: function (e) {
                                                                     for (var t = L.length - 1; e < L[t].out_time && t > 0; ) t--;
                                                                     var n = L[t];
@@ -725,7 +725,7 @@
                                                                     for (t = 0; t < u.length; t++) u[t] = 0;
                                                                     for (t = 0; t < d.length; t++) d[t] = 0;
                                                                     if (e) {
-                                                                        (D = Math.max(0, D - e)), (w = F.mapOutputToInputTime(D));
+                                                                        (D = Math.max(0, D - e)), (w = V.mapOutputToInputTime(D));
                                                                         for (var r = L.length - 1; D <= L[r].out_time && r >= 0; ) L.pop(), r--;
                                                                         L.push({
                                                                             in_time: w,
@@ -756,8 +756,8 @@
                                                                           });
                                                                 }
                                                             };
-                                                        F.flush(0), F.setTempo(a);
-                                                        var V = function (e, t, n) {
+                                                        V.flush(0), V.setTempo(a);
+                                                        var F = function (e, t, n) {
                                                                 var r = Math.floor(n),
                                                                     i = r % 2 == 1 ? -1 : 1;
                                                                 return Math.atan2(i * (t[r] - t[r + 1]), i * (e[r] - e[r + 1]));
@@ -799,10 +799,10 @@
                                                                         v > 0 && B - f[v - 1] < f[v] - B && (O = v - 1);
                                                                         var I = B * o;
                                                                         if (Math.abs(f[O] - B) < I && u[Math.round(f[O])] > 0.1 * h[Math.round(B)]) {
-                                                                            var w = V(t, n, B),
+                                                                            var w = F(t, n, B),
                                                                                 D = _[O] + p[O] + Z(w, B, _[O], f[O], a) - w;
                                                                             (b[G] = w), (y[G] = D), (R[G] = Math.cos(D)), (P[G] = Math.sin(D));
-                                                                        } else (b[G] = V(t, n, B)), (y[G] = 0), (R[G] = 1), (P[G] = 0);
+                                                                        } else (b[G] = F(t, n, B)), (y[G] = 0), (R[G] = 1), (P[G] = 0);
                                                                     }
                                                                     g[E] = 2 * s;
                                                                     var L = g[(O = 0)],
@@ -818,7 +818,7 @@
                                                                 } else
                                                                     for (var G = 0; G < E; G++) {
                                                                         var B = g[G];
-                                                                        _[G] = p[G] = V(t, n, B);
+                                                                        _[G] = p[G] = F(t, n, B);
                                                                     }
                                                             },
                                                             Y = function () {
@@ -838,7 +838,7 @@
                                                                 return (x += 2), (M = 2 * _ + e);
                                                             };
                                                         return (
-                                                            (F.process = function (e) {
+                                                            (V.process = function (e) {
                                                                 var n = e[0].length,
                                                                     i = e[0];
                                                                 if (e.length > 1) {
@@ -853,7 +853,7 @@
                                                                             var m = r.float_array(p);
                                                                             r.blit(d, 0, m, 0, B), r.blit(u, 0, m, B, G), r.blit(e[l], 0, m, B + G, n), h.push(m);
                                                                         }
-                                                                        F.flush(0), (n = p), (e = h);
+                                                                        V.flush(0), (n = p), (e = h);
                                                                     }
                                                                     return (w += n / t), (D += n / t), e;
                                                                 }
@@ -875,7 +875,7 @@
                                                                 for (l = 0; l < e.length; l++) T.push(b);
                                                                 return T;
                                                             }),
-                                                            F
+                                                            V
                                                         );
                                                     });
                                             },
@@ -1587,7 +1587,7 @@
                         return Object.setPrototypeOf ? Object.setPrototypeOf(e, Object.getPrototypeOf(this)) : (e.__proto__ = this.__proto__), e;
                     }
                     (I = 'undefined' == typeof performance || void 0 === (0, u.default)(performance.now) ? Date.now : performance.now.bind(performance)), (B.prototype = Object.create(HTMLElement.prototype, {}));
-                    var F = (function (e) {
+                    var V = (function (e) {
                         (0, s.default)(n, e);
                         var t = O(n);
                         function n(e) {
@@ -2806,9 +2806,9 @@
                             n
                         );
                     })(B);
-                    (0, m.default)(F, T),
-                        (F.instanceCount = 0),
-                        (F.styleManager = new (function () {
+                    (0, m.default)(V, T),
+                        (V.instanceCount = 0),
+                        (V.styleManager = new (function () {
                             var e = document.createElement('style');
                             (e.type = 'text/css'), (e.textContent = 'ogvjs { display: inline-block; position: relative; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0,0,0,0); '), document.head.appendChild(e);
                             var t = e.sheet;
@@ -2819,7 +2819,7 @@
                                 t.insertRule(a, t.cssRules.length - 1);
                             };
                         })()),
-                        (t.default = F);
+                        (t.default = V);
                 },
                 580: (e, t, n) => {
                     var r = n(318);
