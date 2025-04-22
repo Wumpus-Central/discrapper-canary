@@ -45,8 +45,8 @@ function Z() {
             pendingBio: F,
             pendingPronouns: H,
             pendingAccentColor: z,
-            pendingThemeColors: Y,
-            errors: W
+            pendingThemeColors: W,
+            errors: Y
         } = (0, l.cj)([y.Z], () => {
             var e, t;
             let n = y.Z.getAllPending(),
@@ -112,8 +112,8 @@ function Z() {
         });
     let ee = (0, N.ZP)(B.id),
         et = null == ee ? void 0 : ee.getLegacyUsername(),
-        en = (null != (n = null == (e = W.global_name) ? void 0 : e.length) ? n : 0) > 0 ? W.global_name : null != (r = null == q ? void 0 : q.nick) ? r : [],
-        ei = (null != (Z = null == (t = W.bio) ? void 0 : t.length) ? Z : 0) > 0 ? W.bio : null != (w = null == q ? void 0 : q.bio) ? w : [],
+        en = (null != (n = null == (e = Y.global_name) ? void 0 : e.length) ? n : 0) > 0 ? Y.global_name : null != (r = null == q ? void 0 : q.nick) ? r : [],
+        ei = (null != (Z = null == (t = Y.bio) ? void 0 : t.length) ? Z : 0) > 0 ? Y.bio : null != (w = null == q ? void 0 : q.bio) ? w : [],
         er = (0, c.w)(),
         es = (0, m.H)('DefaultCustomizationSections');
     return (0, i.jsxs)('div', {
@@ -130,7 +130,7 @@ function Z() {
                 S.Z,
                 {
                     sectionTitle: R.intl.string(R.t['+T3RIy']),
-                    errors: W.pronouns,
+                    errors: Y.pronouns,
                     onPronounsChange: T.ID,
                     pendingPronouns: H,
                     currentPronouns: null != (k = null == M ? void 0 : M.pronouns) ? k : ''
@@ -142,7 +142,7 @@ function Z() {
                 {
                     onAvatarChange: a.I5,
                     showRemoveAvatarButton: Q,
-                    errors: W.avatar,
+                    errors: Y.avatar,
                     sectionTitle: R.intl.string(R.t.lqaIxM),
                     forcedDivider: !0
                 },
@@ -172,7 +172,7 @@ function Z() {
                               E.Z,
                               {
                                   showRemoveBannerButton: J,
-                                  errors: W.banner,
+                                  errors: Y.banner,
                                   onBannerChange: T.g_,
                                   forcedDivider: !0
                               },
@@ -181,7 +181,7 @@ function Z() {
                           (0, i.jsx)(O.Z, {
                               user: B,
                               pendingAvatarSrc: K,
-                              pendingColors: Y,
+                              pendingColors: W,
                               onThemeColorsChange: T.z5,
                               forcedDivider: !0
                           })

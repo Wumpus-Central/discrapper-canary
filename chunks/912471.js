@@ -69,8 +69,8 @@ async function S() {
         null != t && (u.client_heartbeat_renderer_memory_used_heap = t);
         let n = h.Z.getMemoryUsageElectronProcessTypeDetails();
         if (null != n) {
-            var p, m, O, y, v, S, N, T, P, j, A, Z, x, L, w, R, D, k, M, U, G, V, B, H;
-            (u.electron_process_memory_private = [null != (x = null == (p = n.unknown) ? void 0 : p.wss_priv_kb) ? x : -1, null != (L = null == (m = n.main) ? void 0 : m.wss_priv_kb) ? L : -1, null != (w = null == (O = n.renderer) ? void 0 : O.wss_priv_kb) ? w : -1, null != (R = null == (y = n.gpu) ? void 0 : y.wss_priv_kb) ? R : -1, null != (D = null == (v = n.crashpad) ? void 0 : v.wss_priv_kb) ? D : -1, null != (k = null == (S = n.utility) ? void 0 : S.wss_priv_kb) ? k : -1]), (u.electron_process_memory_private_and_shared = [null != (M = null == (N = n.unknown) ? void 0 : N.wss_kb) ? M : -1, null != (U = null == (T = n.main) ? void 0 : T.wss_kb) ? U : -1, null != (G = null == (P = n.renderer) ? void 0 : P.wss_kb) ? G : -1, null != (V = null == (j = n.gpu) ? void 0 : j.wss_kb) ? V : -1, null != (B = null == (A = n.crashpad) ? void 0 : A.wss_kb) ? B : -1, null != (H = null == (Z = n.utility) ? void 0 : Z.wss_kb) ? H : -1]);
+            var p, m, O, y, v, S, N, T, P, j, A, Z, x, w, L, R, D, k, M, U, G, V, B, H;
+            (u.electron_process_memory_private = [null != (x = null == (p = n.unknown) ? void 0 : p.wss_priv_kb) ? x : -1, null != (w = null == (m = n.main) ? void 0 : m.wss_priv_kb) ? w : -1, null != (L = null == (O = n.renderer) ? void 0 : O.wss_priv_kb) ? L : -1, null != (R = null == (y = n.gpu) ? void 0 : y.wss_priv_kb) ? R : -1, null != (D = null == (v = n.crashpad) ? void 0 : v.wss_priv_kb) ? D : -1, null != (k = null == (S = n.utility) ? void 0 : S.wss_priv_kb) ? k : -1]), (u.electron_process_memory_private_and_shared = [null != (M = null == (N = n.unknown) ? void 0 : N.wss_kb) ? M : -1, null != (U = null == (T = n.main) ? void 0 : T.wss_kb) ? U : -1, null != (G = null == (P = n.renderer) ? void 0 : P.wss_kb) ? G : -1, null != (V = null == (j = n.gpu) ? void 0 : j.wss_kb) ? V : -1, null != (B = null == (A = n.crashpad) ? void 0 : A.wss_kb) ? B : -1, null != (H = null == (Z = n.utility) ? void 0 : Z.wss_kb) ? H : -1]);
         }
         let i = s.ZP.getCurrentGameForAnalytics();
         null != i && ((u.client_heartbeat_current_game_id = i.id), (u.client_heartbeat_current_game_name = i.name), (u.client_heartbeat_current_game_executable = (0, o.N6)(i.exePath)), (u.client_heartbeat_current_game_distributor = i.distributor), (u.uses_client_mods = (0, r.e)())), c.Z.isNativeModuleLoaded() && (u.voice_filters_native_module_loaded = !0);
@@ -98,7 +98,7 @@ function P() {
             (0, a.Z)());
 }
 function j() {
-    f.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), u.Z.addChangeListener(Z), l.Z.subscribe('WINDOW_FOCUS', x), l.Z.subscribe('APP_STATE_UPDATE', L), l.Z.subscribe('LOGIN_SUCCESS', A), P();
+    f.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), u.Z.addChangeListener(Z), l.Z.subscribe('WINDOW_FOCUS', x), l.Z.subscribe('APP_STATE_UPDATE', w), l.Z.subscribe('LOGIN_SUCCESS', A), P();
 }
 function A() {
     S(!0);
@@ -111,7 +111,7 @@ function x(e) {
     let { focused: t } = e;
     (T = t), P();
 }
-function L(e) {
+function w(e) {
     let { state: t } = e;
     (T = t === b.$7l.ACTIVE), P();
 }

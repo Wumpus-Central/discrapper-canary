@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(294218),
     E = n(913663),
     I = n(268350),
-    P = n(695346),
-    S = n(592125),
+    S = n(695346),
+    P = n(592125),
     Z = n(703558),
     N = n(375954),
     T = n(496675),
@@ -69,7 +69,7 @@ function z(e) {
 let W = g.Ie.THREAD_CREATION;
 function Y(e) {
     let { parentChannelId: t, parentMessageId: n, location: i } = e,
-        l = (0, a.e7)([S.Z], () => S.Z.getChannel(t)),
+        l = (0, a.e7)([P.Z], () => P.Z.getChannel(t)),
         { analyticsLocations: o } = (0, m.ZP)(f.Z.CREATE_THREAD);
     return null == l
         ? null
@@ -182,8 +182,8 @@ function q(e) {
         {
             nameError: j,
             messageError: O,
-            submit: P,
-            submitting: S
+            submit: S,
+            submitting: P
         } = (function (e) {
             let { parentChannel: t, parentMessageId: n, threadSettings: r, privateThreadMode: l, textAreaState: o, location: a } = e,
                 [s, c] = i.useState(null),
@@ -281,7 +281,7 @@ function q(e) {
             className: o()(H.messagesWrapper, 'group-spacing-'.concat(u)),
             children: (0, r.jsxs)('form', {
                 onSubmit: (e) => {
-                    e.preventDefault(), P();
+                    e.preventDefault(), S();
                 },
                 className: H.form,
                 children: [
@@ -304,7 +304,7 @@ function q(e) {
                                             threadSettings: f,
                                             updateThreadSettings: g,
                                             error: j,
-                                            disabled: S
+                                            disabled: P
                                         }),
                                         t.type === G.d4z.GUILD_TEXT
                                             ? (0, r.jsx)(K, {
@@ -330,7 +330,7 @@ function q(e) {
                                 parentChannel: t,
                                 textAreaState: _,
                                 setTextAreaState: y,
-                                submit: P,
+                                submit: S,
                                 error: O,
                                 isRefreshChatInputEnabled: T
                             }),
@@ -487,7 +487,7 @@ function Q(e) {
 function J(e) {
     let { parentChannel: t, parentMessageId: n } = e,
         i = (0, a.e7)([N.Z], () => (null == n ? null : N.Z.getMessage(t.id, n))),
-        l = P.jU.useSetting();
+        l = S.jU.useSetting();
     return null != i
         ? (0, r.jsx)(O.Z, {
               className: H.messagePreview,

@@ -118,7 +118,7 @@ function y(e) {
                     }
                 });
     }
-    let L =
+    let w =
             '' !== C.helpArticleId
                 ? () =>
                       (0, r.jsxs)(r.Fragment, {
@@ -132,18 +132,18 @@ function y(e) {
                           ]
                       })
                 : void 0,
-        w = {
+        L = {
             type: 'video',
             src: P ? C.heroArtVideoLinkLightTheme : C.videoLink
         };
     null != C.heroArtVideoSubtitles &&
-        (w.subtitles = C.heroArtVideoSubtitles.map((e) => ({
+        (L.subtitles = C.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1
         }))),
         ('' !== C.heroArtImageLinkDarkTheme || '' !== C.heroArtImageLinkLightTheme) &&
-            (w = {
+            (L = {
                 type: 'image',
                 src: P ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme
             });
@@ -162,9 +162,9 @@ function y(e) {
         header: C.header,
         modalTopExtra: D,
         subHeader: C.subheader,
-        subHeaderExtra: L,
+        subHeaderExtra: w,
         body: C.body,
-        heroArt: w,
+        heroArt: L,
         featureCards: C.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,

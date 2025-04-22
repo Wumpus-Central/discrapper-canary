@@ -21,13 +21,13 @@ var r = n(200651),
     j = n(687516),
     P = n(718805),
     E = n(871118),
-    Z = n(981631),
-    I = n(388032),
+    I = n(981631),
+    Z = n(388032),
     x = n(768780);
 class C extends l.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
-        v.default.track(Z.rMx.OPEN_POPOUT, {
+        v.default.track(I.rMx.OPEN_POPOUT, {
             type: 'Stream Preview',
             other_user_id: e.id,
             application_id: null != t ? t.id : null,
@@ -83,8 +83,8 @@ class C extends l.PureComponent {
                                             channelId: n.channelId,
                                             analyticsParams: {
                                                 location: {
-                                                    page: Z.ZY5.GO_LIVE_MODAL,
-                                                    section: Z.jXE.STREAM_VIEWER_POPOUT
+                                                    page: I.ZY5.GO_LIVE_MODAL,
+                                                    section: I.jXE.STREAM_VIEWER_POPOUT
                                                 }
                                             },
                                             onAction: i
@@ -103,7 +103,7 @@ class C extends l.PureComponent {
                                       (0, r.jsx)(p.Z, {
                                           type: p.Z.Types.INLINE,
                                           className: x.protip,
-                                          children: __OVERLAY__ ? I.intl.string(I.t['YRdw7+']) : I.intl.string(I.t.CCTgbG)
+                                          children: __OVERLAY__ ? Z.intl.string(Z.t['YRdw7+']) : Z.intl.string(Z.t.CCTgbG)
                                       })
                               ]
                           })
@@ -140,10 +140,10 @@ function T(e) {
         v = (0, a.e7)([m.Z], () => m.Z.getActiveStreamForApplicationStream(p)),
         P = (0, a.e7)([g.default], () => g.default.getId()),
         E = (0, j.Cf)(p),
-        Z = (0, a.e7)([h.Z], () => (0, j.Um)(p, h.Z)),
-        I = l.useMemo(() => ({ [o.guild_id]: [i.id] }), [o.guild_id, i.id]);
+        I = (0, a.e7)([h.Z], () => (0, j.Um)(p, h.Z)),
+        Z = l.useMemo(() => ({ [o.guild_id]: [i.id] }), [o.guild_id, i.id]);
     return (
-        (0, u.$)(I),
+        (0, u.$)(Z),
         (0, r.jsx)(
             C,
             ((t = (function (e) {
@@ -180,7 +180,7 @@ function T(e) {
                     stream: p,
                     activeStream: v,
                     currentUserId: P,
-                    activity: Z
+                    activity: I
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

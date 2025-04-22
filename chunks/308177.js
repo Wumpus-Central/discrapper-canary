@@ -39,7 +39,7 @@ let O = (0, o.Z)((e) => {
         {
             selectedParticipantId: E,
             largeStream: I,
-            chatOpen: P
+            chatOpen: S
         } = (0, l.cj)(
             [a.Z],
             () => ({
@@ -49,14 +49,14 @@ let O = (0, o.Z)((e) => {
             }),
             [o.id]
         ),
-        S = (0, c.Io)(o.id),
+        P = (0, c.Io)(o.id),
         Z = (0, c.Rk)(o.id, u.pV.AUDIENCE),
         N = (0, l.e7)([s.Z], () => (null != E ? s.Z.getParticipant(o.id, E) : null)),
         T = (0, c.w8)(o.id, u.pV.SPEAKER),
         A = T.filter(j),
         w = null != T.find((e) => e.type === u.Ui.STREAM),
         R = v(y),
-        k = x(y, P),
+        k = x(y, S),
         M = {
             [u.pV.SPEAKER]: k,
             [u.pV.AUDIENCE]: R,
@@ -75,12 +75,12 @@ let O = (0, o.Z)((e) => {
         renderSection: (e) => {
             let { section: t } = e;
             return 1 === t
-                ? 0 === S
+                ? 0 === P
                     ? null
                     : (0, r.jsx)(
                           m.Z,
                           {
-                              participantCount: S,
+                              participantCount: P,
                               label: b.intl.string(b.t.CduOk5),
                               className: _.header,
                               onClick: () => W(!z),

@@ -67,11 +67,11 @@ function E(e) {
             return null == (e = h.Z.getSessionById(null != (t = null == _ ? void 0 : _.sessionId) ? t : '')) ? void 0 : e.clientInfo.os;
         }),
         E = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
-        [I, P] = (0, l.Wu)([s.Z], () => [s.Z.getMode(t.id), s.Z.getLayout(t.id)]),
-        S = (0, a.s9z)(a.JQI),
+        [I, S] = (0, l.Wu)([s.Z], () => [s.Z.getMode(t.id), s.Z.getLayout(t.id)]),
+        P = (0, a.s9z)(a.JQI),
         Z = (0, m.Z)().filter((e) => e.twoWayLink),
         [N, T] = i.useState(!1),
-        A = C.WtW.VOICE !== I && [C.AEg.NO_CHAT, C.AEg.FULL_SCREEN].includes(P) ? 'top' : 'bottom',
+        A = C.WtW.VOICE !== I && [C.AEg.NO_CHAT, C.AEg.FULL_SCREEN].includes(S) ? 'top' : 'bottom',
         w = [];
     return (
         Z.length > 0 && w.push(o.z.DONUT_DESKTOP_NUX),
@@ -83,9 +83,9 @@ function E(e) {
                 return (0, r.jsx)(a.yRy, {
                     position: A,
                     spacing: s ? 16 : void 0,
-                    positionKey: ''.concat(I, ':').concat(P),
+                    positionKey: ''.concat(I, ':').concat(S),
                     onRequestClose: () => T(!1),
-                    shouldShow: (s || N) && !E && !S,
+                    shouldShow: (s || N) && !E && !P,
                     renderPopout: (e) => {
                         let { closePopout: n } = e;
                         return (0, r.jsx)(u.Z, {

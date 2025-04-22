@@ -21,7 +21,7 @@ var l = n(990547),
     S = n(388032),
     j = n(292538);
 function P(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: P = !1, renderInputModes: E = !1, renderInputVolume: Z = !1, renderOutputVolume: I = !1, renderDeafen: x = !1, simplified: C = !1, onSelect: T, appContext: N, onInteraction: A } = e,
+    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: P = !1, renderInputModes: E = !1, renderInputVolume: I = !1, renderOutputVolume: Z = !1, renderDeafen: x = !1, simplified: C = !1, onSelect: T, appContext: N, onInteraction: A } = e,
         { analyticsLocations: w } = (0, u.ZP)();
     (0, d.Z)({
         type: l.ImpressionTypes.MENU,
@@ -58,8 +58,8 @@ function P(e) {
                     : null,
                 (0, r.jsxs)(a.kSQ, {
                     children: [
-                        Z ? M : null,
-                        I ? U : null,
+                        I ? M : null,
+                        Z ? U : null,
                         C ? (0, r.jsx)(a.Clw, {}) : null,
                         C && x
                             ? (0, r.jsx)(

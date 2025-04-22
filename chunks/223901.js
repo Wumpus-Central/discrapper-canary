@@ -1,26 +1,26 @@
-a.d(t, { default: () => d });
-var n = a(200651),
-    r = a(192379),
-    c = a(481060),
-    o = a(91159),
-    s = a(593130),
-    _ = a(388032),
-    i = a(137642);
-function d(e) {
-    let { channel: t, onClose: a, transitionState: d } = e;
+e.d(s, { default: () => d });
+var t = e(200651),
+    n = e(192379),
+    r = e(481060),
+    i = e(91159),
+    o = e(593130),
+    c = e(388032),
+    l = e(137642);
+function d(a) {
+    let { channel: s, onClose: e, transitionState: d } = a;
     return (
-        r.useEffect(() => {
-            (0, o.U4)();
+        n.useEffect(() => {
+            (0, i.U4)();
         }, []),
-        (0, n.jsx)(c.Y0X, {
-            className: i.modal,
+        (0, t.jsx)(r.Y0X, {
+            className: l.modal,
             transitionState: d,
-            'aria-label': _.intl.string(_.t.B2panJ),
-            size: c.CgR.DYNAMIC,
-            children: (0, n.jsx)(s.Z, {
-                className: i.browser,
-                channel: t,
-                onClose: a
+            'aria-label': c.intl.string(c.t.B2panJ),
+            size: r.CgR.DYNAMIC,
+            children: (0, t.jsx)(o.Z, {
+                className: l.browser,
+                channel: s,
+                onClose: e
             })
         })
     );

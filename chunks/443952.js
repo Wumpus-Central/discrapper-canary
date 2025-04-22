@@ -30,8 +30,8 @@ var i = n(243814),
     A = n(228488),
     Z = n(996106),
     x = n(914946),
-    L = n(452426),
-    w = n(561205),
+    w = n(452426),
+    L = n(561205),
     R = n(600027),
     D = n(852926),
     k = n(186901),
@@ -88,7 +88,7 @@ let V = {
             [k.Gp.ANY]: [i.x.RPC, k.lH]
         },
         validation: (e) =>
-            (0, L.Z)(e)
+            (0, w.Z)(e)
                 .required()
                 .keys({
                     user_id: e.string().required(),
@@ -111,7 +111,7 @@ let V = {
             [k.Gp.ANY]: [i.x.RPC, k.lH]
         },
         validation: (e) =>
-            (0, L.Z)(e)
+            (0, w.Z)(e)
                 .required()
                 .keys({
                     type: e.number().required().valid([M.mFx.JOIN]),
@@ -235,7 +235,7 @@ let V = {
             let { socket: n } = e,
                 r = n.application.id;
             if (null == r) throw new Z.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
-            let i = null == (t = (0, w.Z)()) ? void 0 : t.id;
+            let i = null == (t = (0, L.Z)()) ? void 0 : t.id;
             if (null == i) throw new Z.Z({ errorCode: M.lTL.UNKNOWN_ERROR }, 'Unable to find selected channel');
             return new Promise((e, t) => {
                 !(function (e, t) {
@@ -290,7 +290,7 @@ let V = {
             let i = n.application.id;
             if (null == i) throw new Z.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
             if (!(0, N.yE)(null != (t = n.application.flags) ? t : 0, M.udG.EMBEDDED)) throw new Z.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'This application cannot access this API');
-            let l = (0, w.Z)();
+            let l = (0, L.Z)();
             if (null == l) throw new Z.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No channel found');
             if (!j.Z.isDiscordCdnUrl(r)) throw new Z.Z({ errorCode: M.lTL.INVALID_PAYLOAD }, 'mediaUrl must be a Discord CDN url');
             (0, b.Z)({
@@ -315,7 +315,7 @@ let V = {
             if (null == d) throw new Z.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
             if (!U.Cr.includes(d)) throw new Z.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'Unsupported application.');
             if (!(0, N.yE)(null != (t = r.application.flags) ? t : 0, M.udG.EMBEDDED)) throw new Z.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'This application cannot access this API');
-            let p = (0, w.Z)();
+            let p = (0, L.Z)();
             if (null == p && s) throw new Z.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No channel found');
             if (null !== l || null !== o || null !== c) {
                 let e = [];

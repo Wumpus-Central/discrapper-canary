@@ -51,8 +51,8 @@ let x = function (e) {
             p.Y(T.Z5c.FRIENDS), (0, y.e)('friends');
         }, []);
     let x = (0, c.e7)([I.Z], () => I.Z.theme),
-        L = (0, C.If)(),
-        { section: w, rows: R } = (0, c.cj)([v.ZP], () => v.ZP.getState()),
+        w = (0, C.If)(),
+        { section: L, rows: R } = (0, c.cj)([v.ZP], () => v.ZP.getState()),
         D = (0, c.e7)([b.Z], () => b.Z.getSuggestionCount()),
         k = i.useMemo(() => R.getRelationshipCounts(), [R]);
     i.useEffect(() => {
@@ -82,14 +82,14 @@ let x = function (e) {
                 content: (0, r.jsxs)(r.Fragment, {
                     children: [
                         j.intl.string(j.t.p6IHGB),
-                        L > 0 &&
+                        w > 0 &&
                             (0, r.jsx)(u.mAB, {
-                                count: L,
+                                count: w,
                                 className: A.badge
                             })
                     ]
                 }),
-                ariaLabel: j.intl.formatToPlainString(j.t.OAC0Z2, { count: L.toString() }),
+                ariaLabel: j.intl.formatToPlainString(j.t.OAC0Z2, { count: w.toString() }),
                 className: A.item
             },
             {
@@ -141,7 +141,7 @@ let x = function (e) {
                             (0, r.jsx)(_.Z.Divider, {}),
                             (0, r.jsx)(u.njP, {
                                 'aria-label': j.intl.string(j.t.TdEu5e),
-                                selectedItem: w,
+                                selectedItem: L,
                                 type: 'top-pill',
                                 onItemSelect: M,
                                 className: A.tabBar,
@@ -165,10 +165,10 @@ let x = function (e) {
                 className: A.tabBody,
                 children: [
                     (0, r.jsx)(u.njP.Panel, {
-                        id: w,
+                        id: L,
                         className: A.peopleColumn,
                         'aria-labelledby': G,
-                        children: w === T.pJs.ADD_FRIEND ? (0, r.jsx)(S.Z, {}) : (0, r.jsx)(N.Z, { titleId: G })
+                        children: L === T.pJs.ADD_FRIEND ? (0, r.jsx)(S.Z, {}) : (0, r.jsx)(N.Z, { titleId: G })
                     }),
                     (0, r.jsx)('div', {
                         className: A.nowPlayingColumn,

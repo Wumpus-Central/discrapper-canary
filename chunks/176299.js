@@ -29,8 +29,8 @@ var r = n(200651),
     A = n(267161),
     Z = n(652515),
     x = n(544978),
-    L = n(540059),
-    w = n(724383),
+    w = n(540059),
+    L = n(724383),
     R = n(135864),
     D = n(372900),
     k = n(6039),
@@ -156,13 +156,13 @@ let eN = (0, u.Un)({
         name: 'GuildOnboardingPage',
         renderLoader: eT
     }),
-    eL = (0, u.Un)({
+    ew = (0, u.Un)({
         createPromise: () => n.e('44799').then(n.bind(n, 393357)),
         webpackId: 393357,
         name: 'GuildPowerupsPage',
         renderLoader: eT
     }),
-    ew = (e) => {
+    eL = (e) => {
         let { match: t } = e,
             n = (0, O.l)(),
             i = (0, h.e7)([en.Z, el.Z], () => {
@@ -220,7 +220,7 @@ let eN = (0, u.Un)({
                 case eE.oC.MEMBER_SAFETY:
                     return (0, r.jsx)(eA, { guildId: l });
                 case eE.oC.GUILD_BOOSTS:
-                    return (0, r.jsx)(eL, {
+                    return (0, r.jsx)(ew, {
                         guildId: l,
                         powerupSkuId: n.get('powerupSkuId')
                     });
@@ -261,8 +261,8 @@ let eN = (0, u.Un)({
                 )
               : (0, r.jsx)(ef.Z, {});
     }),
-    eD = (e) => (0, r.jsx)(ew, eC({}, e)),
-    ek = () => (0, r.jsx)(w.Z, {}),
+    eD = (e) => (0, r.jsx)(eL, eC({}, e)),
+    ek = () => (0, r.jsx)(L.Z, {}),
     eM = (e) => {
         let { match: t } = e;
         return null != t.params.guildId ? (0, r.jsx)(k.Z, { guildId: t.params.guildId }) : null;
@@ -354,8 +354,8 @@ function eQ(e) {
     let u = 'app view user trigger debugging';
     b.R6.useExperiment({ location: u }, { autoTrackExposure: !1 }), b.R6.trackExposure({ location: u });
     let p = (0, h.e7)([N.Z], () => N.Z.isFullscreenInContext()),
-        m = (0, L.TH)('ChannelSidebar'),
-        O = (0, L.Q3)('ChannelSidebar'),
+        m = (0, w.TH)('ChannelSidebar'),
+        O = (0, w.Q3)('ChannelSidebar'),
         y = (0, A.useAppSidebarState)((e) => !e.isOpen) && m;
     i.useLayoutEffect(() => {
         if (m) {
@@ -506,8 +506,8 @@ function eX() {
         m = (null == g || null == (e = g.params) ? void 0 : e.channelId) === eE.oC.GUILD_ONBOARDING,
         b = l || a || o || u || m,
         _ = i.useCallback(() => Y.Z.openSidebar(), []),
-        E = (0, L.Q3)('AppView'),
-        O = (0, L.TH)('AppView'),
+        E = (0, w.Q3)('AppView'),
+        O = (0, w.TH)('AppView'),
         C = E ? 'div' : i.Fragment,
         T = (0, A.useAppSidebarState)((e) => !e.isOpen),
         j = (0, h.e7)([N.Z], () => N.Z.isFullscreenInContext()),

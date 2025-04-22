@@ -73,7 +73,7 @@ let p = i.forwardRef(function (e, t) {
     function I() {
         _ || j();
     }
-    function P(e) {
+    function S(e) {
         O(), y(!_), _ ? null == g || g() : null == m || m(), (!C || _) && e();
     }
     i.useImperativeHandle(
@@ -85,10 +85,10 @@ let p = i.forwardRef(function (e, t) {
         }),
         [x, y]
     );
-    let S = (C && !f) || _;
+    let P = (C && !f) || _;
     return (0, r.jsx)(o.yRy, {
         animation: o.yRy.Animation.FADE,
-        shouldShow: S,
+        shouldShow: P,
         animationPosition: 'top',
         position: 'top',
         align: h,
@@ -102,7 +102,7 @@ let p = i.forwardRef(function (e, t) {
                 d,
                 u(
                     {
-                        isHovered: S,
+                        isHovered: P,
                         onFocus: () => y(!0),
                         onMouseEnter: v,
                         onMouseLeave: I,
@@ -115,9 +115,9 @@ let p = i.forwardRef(function (e, t) {
             let { onClick: t, onKeyDown: n } = e;
             return (0, r.jsx)(r.Fragment, {
                 children: p({
-                    onClick: (e) => P(() => t(e)),
+                    onClick: (e) => S(() => t(e)),
                     onKeyDown: (e) => {
-                        (e.key === s.vn.ENTER || e.key === s.vn.SPACE) && P(() => n(e));
+                        (e.key === s.vn.ENTER || e.key === s.vn.SPACE) && S(() => n(e));
                     },
                     className: c.actionBarButton,
                     onMouseEnter: E,

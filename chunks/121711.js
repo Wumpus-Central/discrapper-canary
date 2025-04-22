@@ -29,8 +29,8 @@ var r = n(200651),
     A = n(833435),
     Z = n(918701),
     x = n(150560),
-    L = n(558652),
-    w = n(736683),
+    w = n(558652),
+    L = n(736683),
     R = n(452081),
     D = n(46140),
     k = n(981631),
@@ -81,7 +81,7 @@ let z = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, R.z)(),
         { onScroll: l, scrollPosition: s } = (0, m.M)(),
         u = x.Z.getState().getUtmCurrentContext(),
-        g = (0, A._)({ location: D.dr.QUEST_HOME_DESKTOP }) ? w.Z : w.j,
+        g = (0, A._)({ location: D.dr.QUEST_HOME_DESKTOP }) ? L.Z : L.j,
         j = i.useRef(u);
     i.useEffect(() => {
         j.current = u;
@@ -149,7 +149,7 @@ let z = function () {
                           className: a()(G.bannerContainer, { [G.orbsContainer]: V }),
                           children: [(0, r.jsx)('div', { className: a()(G.bannerGradient, { [G.orbsGradient]: V }) }), (0, r.jsx)(F, {})]
                       }),
-                      (0, r.jsx)(E.Z, { children: e === P.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(L.Z, {}) })
+                      (0, r.jsx)(E.Z, { children: e === P.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(w.Z, {}) })
                   ]
               })
             : (0, r.jsxs)(r.Fragment, {
@@ -181,7 +181,7 @@ let z = function () {
                                               onTabSelect: t
                                           })
                                       }),
-                                      e === P.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(L.Z, {})
+                                      e === P.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(w.Z, {})
                                   ]
                               })
                           ]

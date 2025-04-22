@@ -48,28 +48,28 @@ function P(e) {
     var t,
         n,
         a,
-        { title: R, type: P, guildBoostProps: w, analyticsSource: D, analyticsLocation: L, body: x, context: M, glowUp: k, modalClassName: j, modalContentClassName: U, artContainerClassName: G, headerClassName: B, bodyClassName: V, transitionState: F, onClose: Z, onSubscribeClick: H, onSubscribeFinish: Y, onSecondaryClick: W, secondaryCTA: K, subscribeButtonText: z, showNewBadge: q = !1, showBetaBadge: Q = !1, enableArtBoxShadow: X = !0, subscriptionTier: J = I.Si.TIER_2, isLoading: $ = !1, hideBackButton: ee, backButtonText: et, showEnhancedUpsell: en, useSubscribeButtonGradient: er, subscribeButtonClassname: ei, hidePremiumOfferUpsell: ea, children: eo, LeadingComponent: es, backgroundElements: el, smallText: ec = !1, footerClassName: eu } = e,
-        ed = C(e, ['title', 'type', 'guildBoostProps', 'analyticsSource', 'analyticsLocation', 'body', 'context', 'glowUp', 'modalClassName', 'modalContentClassName', 'artContainerClassName', 'headerClassName', 'bodyClassName', 'transitionState', 'onClose', 'onSubscribeClick', 'onSubscribeFinish', 'onSecondaryClick', 'secondaryCTA', 'subscribeButtonText', 'showNewBadge', 'showBetaBadge', 'enableArtBoxShadow', 'subscriptionTier', 'isLoading', 'hideBackButton', 'backButtonText', 'showEnhancedUpsell', 'useSubscribeButtonGradient', 'subscribeButtonClassname', 'hidePremiumOfferUpsell', 'children', 'LeadingComponent', 'backgroundElements', 'smallText', 'footerClassName']);
-    let ef = null != w,
-        e_ = (0, E.N)(),
-        ep = (0, g.Ng)(),
-        eh = !ea && ((null == e_ || null == (t = e_.subscription_trial) ? void 0 : t.sku_id) === J || (0, g.Wp)(ep, J)) && !ef,
-        { analyticsLocations: em } = (0, d.ZP)(u.Z.PREMIUM_UPSELL_MODAL),
-        eg = {
+        { title: R, type: P, guildBoostProps: w, analyticsSource: D, analyticsLocation: L, body: x, context: M, glowUp: k, modalClassName: j, modalContentClassName: U, artContainerClassName: G, headerClassName: B, bodyClassName: V, transitionState: F, onClose: Z, onSubscribeClick: H, onSubscribeFinish: Y, onSecondaryClick: W, secondaryCTA: K, secondaryCTAClassName: z, subscribeButtonText: q, showNewBadge: Q = !1, showBetaBadge: X = !1, enableArtBoxShadow: J = !0, subscriptionTier: $ = I.Si.TIER_2, isLoading: ee = !1, hideBackButton: et, backButtonText: en, showEnhancedUpsell: er, useSubscribeButtonGradient: ei, subscribeButtonClassname: ea, hidePremiumOfferUpsell: eo, children: es, LeadingComponent: el, backgroundElements: ec, smallText: eu = !1, footerClassName: ed } = e,
+        ef = C(e, ['title', 'type', 'guildBoostProps', 'analyticsSource', 'analyticsLocation', 'body', 'context', 'glowUp', 'modalClassName', 'modalContentClassName', 'artContainerClassName', 'headerClassName', 'bodyClassName', 'transitionState', 'onClose', 'onSubscribeClick', 'onSubscribeFinish', 'onSecondaryClick', 'secondaryCTA', 'secondaryCTAClassName', 'subscribeButtonText', 'showNewBadge', 'showBetaBadge', 'enableArtBoxShadow', 'subscriptionTier', 'isLoading', 'hideBackButton', 'backButtonText', 'showEnhancedUpsell', 'useSubscribeButtonGradient', 'subscribeButtonClassname', 'hidePremiumOfferUpsell', 'children', 'LeadingComponent', 'backgroundElements', 'smallText', 'footerClassName']);
+    let e_ = null != w,
+        ep = (0, E.N)(),
+        eh = (0, g.Ng)(),
+        em = !eo && ((null == ep || null == (t = ep.subscription_trial) ? void 0 : t.sku_id) === $ || (0, g.Wp)(eh, $)) && !e_,
+        { analyticsLocations: eg } = (0, d.ZP)(u.Z.PREMIUM_UPSELL_MODAL),
+        eE = {
             analyticsLocation: L,
-            analyticsLocations: em,
+            analyticsLocations: eg,
             analyticsSource: D,
             guildBoostProps: w,
             type: P
         },
-        eE = i.useRef(eg);
+        eb = i.useRef(eE);
     i.useEffect(() => {
-        eE.current = eg;
+        eb.current = eE;
     }),
         i.useEffect(() => {
-            if ($) return;
-            let { analyticsLocation: e, analyticsLocations: t, analyticsSource: n, guildBoostProps: r, type: i } = eE.current;
-            ef
+            if (ee) return;
+            let { analyticsLocation: e, analyticsLocations: t, analyticsSource: n, guildBoostProps: r, type: i } = eb.current;
+            e_
                 ? p.default.track(S.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
                       type: ''.concat(i, ' - Tier ').concat(null == r ? void 0 : r.boostedGuildTier),
                       guild_id: null == r ? void 0 : r.guild.id,
@@ -82,66 +82,66 @@ function P(e) {
                       source: n,
                       location: e,
                       location_stack: t,
-                      sku_id: (0, h.Wz)(J)
+                      sku_id: (0, h.Wz)($)
                   });
-        }, [ef, J, $]);
-    let eb = (0, s.e7)([m.Z], () => m.Z.affinities),
-        ey = eb.length > 1 && (0, O.Y)(P),
-        ev = (0, s.e7)([m.Z], () => m.Z.hasFetched);
+        }, [e_, $, ee]);
+    let ey = (0, s.e7)([m.Z], () => m.Z.affinities),
+        ev = ey.length > 1 && (0, O.Y)(P),
+        eO = (0, s.e7)([m.Z], () => m.Z.hasFetched);
     i.useEffect(() => {
-        ev || c.MH();
-    }, [ev]);
-    let eO = () => {
-            if (ef)
+        eO || c.MH();
+    }, [eO]);
+    let eI = () => {
+            if (e_)
                 return (0, r.jsx)(_.Z, {
                     analyticsLocation: L,
                     guild: w.guild,
                     onClose: Z
                 });
-            let e = en ? T.intl.string(T.t.pj0XBA) : void 0;
-            if (eh)
-                if (null != e_) {
+            let e = er ? T.intl.string(T.t.pj0XBA) : void 0;
+            if (em)
+                if (null != ep) {
                     var t, n;
                     e = (0, h.Rt)({
-                        intervalType: null == e_ || null == (t = e_.subscription_trial) ? void 0 : t.interval,
-                        intervalCount: null == e_ || null == (n = e_.subscription_trial) ? void 0 : n.interval_count
+                        intervalType: null == ep || null == (t = ep.subscription_trial) ? void 0 : t.interval,
+                        intervalCount: null == ep || null == (n = ep.subscription_trial) ? void 0 : n.interval_count
                     });
-                } else null != ep && (e = T.intl.formatToPlainString(T.t.bkQ4bG, { percent: ep.discount.amount }));
+                } else null != eh && (e = T.intl.formatToPlainString(T.t.bkQ4bG, { percent: eh.discount.amount }));
             return (0, r.jsx)(y.Z, {
-                className: ei,
-                showGradient: en || er,
+                className: ea,
+                showGradient: er || ei,
                 premiumModalAnalyticsLocation: L,
-                subscriptionTier: J,
+                subscriptionTier: $,
                 size: l.zxk.Sizes.SMALL,
-                color: en || er ? l.zxk.Colors.CUSTOM : l.zxk.Colors.GREEN,
+                color: er || ei ? l.zxk.Colors.CUSTOM : l.zxk.Colors.GREEN,
                 onClick: () => {
                     null == H || H(), Z();
                 },
                 onSubscribeModalClose: Y,
-                buttonText: null != z ? z : e
+                buttonText: null != q ? q : e
             });
         },
-        eI = X ? o()(A.artContainer, A.artContainerBoxShadow, G) : o()(A.artContainer, G),
-        eS = null;
+        eS = J ? o()(A.artContainer, A.artContainerBoxShadow, G) : o()(A.artContainer, G),
+        eT = null;
     return (
-        null != ed.artURL
-            ? (eS = (0, r.jsx)('img', {
+        null != ef.artURL
+            ? (eT = (0, r.jsx)('img', {
                   className: A.art,
                   alt: '',
-                  src: ed.artURL
+                  src: ef.artURL
               }))
-            : null != ed.artElement && (eS = ed.artElement),
+            : null != ef.artElement && (eT = ef.artElement),
         (0, r.jsxs)(l.Y0X, {
-            className: o()(A.root, !eh && j),
+            className: o()(A.root, !em && j),
             'aria-label': R,
             transitionState: F,
             children: [
-                null != eS &&
+                null != eT &&
                     (0, r.jsxs)('div', {
-                        className: eI,
+                        className: eS,
                         children: [
-                            eS,
-                            q
+                            eT,
+                            Q
                                 ? (0, r.jsx)('img', {
                                       className: A.sparkleBadge,
                                       alt: '',
@@ -152,37 +152,37 @@ function P(e) {
                     }),
                 (0, r.jsx)(l.hzk, {
                     scrollbarType: 'none',
-                    className: o()(en ? A.enhancedContent : A.content, !eh && U),
-                    children: $
+                    className: o()(er ? A.enhancedContent : A.content, !em && U),
+                    children: ee
                         ? (0, r.jsx)(l.$jN, {})
-                        : eh
+                        : em
                           ? (0, r.jsx)(b.ZP, {
                                 onClose: Z,
                                 type: P,
-                                subscriptionTier: null != (a = null == e_ || null == (n = e_.subscription_trial) ? void 0 : n.sku_id) ? a : I.Si.TIER_2,
+                                subscriptionTier: null != (a = null == ep || null == (n = ep.subscription_trial) ? void 0 : n.sku_id) ? a : I.Si.TIER_2,
                                 headingText: R,
                                 context: M,
                                 analyticsLocationObject: L,
-                                discountOffer: ep,
-                                trialOffer: e_,
+                                discountOffer: eh,
+                                trialOffer: ep,
                                 children: k
                             })
                           : (0, r.jsxs)('div', {
                                 className: A.contentContainer,
                                 children: [
-                                    es,
+                                    el,
                                     (0, r.jsxs)('div', {
                                         className: A.bodyContent,
                                         children: [
                                             (0, r.jsxs)(l.X6q, {
-                                                className: o()(A.header, { [A.enhancedHeader]: en }, B),
+                                                className: o()(A.header, { [A.enhancedHeader]: er }, B),
                                                 variant: 'heading-xl/bold',
-                                                children: [R, Q ? (0, r.jsx)(f.Z, { className: A.betaTag }) : null]
+                                                children: [R, X ? (0, r.jsx)(f.Z, { className: A.betaTag }) : null]
                                             }),
-                                            ey ? (0, r.jsx)(v.Z, { affinities: eb }) : void 0,
-                                            eo,
+                                            ev ? (0, r.jsx)(v.Z, { affinities: ey }) : void 0,
+                                            es,
                                             (0, r.jsx)(l.Text, {
-                                                variant: ec ? 'text-sm/normal' : 'text-md/normal',
+                                                variant: eu ? 'text-sm/normal' : 'text-md/normal',
                                                 className: o()(V, A.subHeader),
                                                 children: x
                                             })
@@ -192,42 +192,42 @@ function P(e) {
                             })
                 }),
                 (0, r.jsxs)(l.mzw, {
-                    className: o()(A.footer, eu, { [A.enhancedFooter]: en }),
+                    className: o()(A.footer, ed, { [A.enhancedFooter]: er }),
                     children: [
                         (0, r.jsxs)('div', {
-                            className: o()(A.primaryActions, { [A.enhancedPrimaryActions]: en }),
+                            className: o()(A.primaryActions, { [A.enhancedPrimaryActions]: er }),
                             children: [
                                 null != K
                                     ? (0, r.jsx)(l.zxk, {
-                                          className: o()(A.secondaryAction, { [A.enhancedSecondaryAction]: en }),
+                                          className: o()(A.secondaryAction, z, { [A.enhancedSecondaryAction]: er }),
                                           onClick: W,
                                           size: l.zxk.Sizes.SMALL,
-                                          color: en ? l.zxk.Colors.CUSTOM : l.zxk.Colors.PRIMARY,
+                                          color: er ? l.zxk.Colors.CUSTOM : l.zxk.Colors.PRIMARY,
                                           look: l.zxk.Looks.LINK,
                                           children: K
                                       })
                                     : null,
-                                eO()
+                                eI()
                             ]
                         }),
-                        !ee &&
-                            !en &&
+                        !et &&
+                            !er &&
                             (0, r.jsx)(l.zxk, {
                                 onClick: Z,
                                 size: l.zxk.Sizes.SMALL,
                                 color: l.zxk.Colors.PRIMARY,
                                 look: l.zxk.Looks.LINK,
-                                children: null != et ? et : T.intl.string(T.t['13/7kZ'])
+                                children: null != en ? en : T.intl.string(T.t['13/7kZ'])
                             })
                     ]
                 }),
-                en
+                er
                     ? (0, r.jsx)(l.olH, {
                           onClick: Z,
                           className: A.closeButton
                       })
                     : null,
-                el
+                ec
             ]
         })
     );

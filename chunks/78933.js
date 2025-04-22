@@ -42,8 +42,8 @@ var i = n(200651),
     F = n(587243),
     H = n(383832),
     z = n(981631),
-    Y = n(228168),
-    W = n(388032),
+    W = n(228168),
+    Y = n(388032),
     K = n(404255),
     q = n(200669);
 function X(e) {
@@ -127,7 +127,7 @@ function Q(e) {
                     className: K.themeContainer,
                     user: t,
                     displayProfile: et,
-                    themeType: Y.lY.POPOUT,
+                    themeType: W.lY.POPOUT,
                     children: [
                         (0, i.jsxs)('header', {
                             className: q.header,
@@ -135,18 +135,18 @@ function Q(e) {
                                 (0, i.jsx)(C.Z, {
                                     user: t,
                                     displayProfile: et,
-                                    themeType: Y.lY.POPOUT
+                                    themeType: W.lY.POPOUT
                                 }),
                                 (0, i.jsx)(E.Z, {
                                     user: t,
                                     displayProfile: et,
-                                    themeType: Y.lY.POPOUT,
+                                    themeType: W.lY.POPOUT,
                                     onOpenProfile: ee ? void 0 : ex
                                 }),
                                 (0, i.jsx)(A.Z, {
                                     location: 'UserProfileAccountPopout',
                                     user: t,
-                                    themeType: Y.lY.POPOUT,
+                                    themeType: W.lY.POPOUT,
                                     onCloseProfile: n,
                                     prompt: eb ? e_ : null
                                 })
@@ -168,7 +168,7 @@ function Q(e) {
                                     pronouns: null == et ? void 0 : et.pronouns,
                                     tags: (0, i.jsx)(j.Z, {
                                         displayProfile: et,
-                                        themeType: Y.lY.POPOUT,
+                                        themeType: W.lY.POPOUT,
                                         onClose: n,
                                         shouldOpenBadgeTooltip: null != J ? (e) => e === J : void 0
                                     }),
@@ -209,7 +209,7 @@ function Q(e) {
                                                     (0, i.jsx)(V.V4, {
                                                         id: 'edit-profile',
                                                         action: 'EDIT_PROFILE',
-                                                        label: W.intl.string(W.t.s5vZlZ),
+                                                        label: Y.intl.string(Y.t.s5vZlZ),
                                                         icon: a.vdY,
                                                         onClick: () => {
                                                             eh(), n();
@@ -241,7 +241,7 @@ function Q(e) {
                                                                   return (0, i.jsx)(V.gp, {
                                                                       navId: 'set-status-submenu',
                                                                       className: K.statusPickerModalMenu,
-                                                                      'aria-label': W.intl.string(W.t.E13trK),
+                                                                      'aria-label': Y.intl.string(Y.t.E13trK),
                                                                       onClose: t,
                                                                       children: eg
                                                                   });
@@ -281,12 +281,12 @@ function Q(e) {
                                                                                           (n = n =
                                                                                               {
                                                                                                   size: a.CgR.SMALL,
-                                                                                                  'aria-label': W.intl.string(W.t['3Uj+2t']),
+                                                                                                  'aria-label': Y.intl.string(Y.t['3Uj+2t']),
                                                                                                   className: K.statusPickerModal,
                                                                                                   children: (0, i.jsx)(a.v2r, {
                                                                                                       navId: 'set-status-submenu-mobile-web',
                                                                                                       variant: 'fixed',
-                                                                                                      'aria-label': W.intl.string(W.t.E13trK),
+                                                                                                      'aria-label': Y.intl.string(Y.t.E13trK),
                                                                                                       className: K.statusPickerModalMenu,
                                                                                                       hideScroller: !0,
                                                                                                       onClose: r,
@@ -326,7 +326,7 @@ function Q(e) {
                                                         id: 'switch-accounts',
                                                         action: 'PRESS_SWITCH_ACCOUNTS',
                                                         icon: a.lMe,
-                                                        label: W.intl.string(W.t.oMNyYG),
+                                                        label: Y.intl.string(Y.t.oMNyYG),
                                                         onClick: () => {
                                                             n(), (0, H.Z)();
                                                         },
@@ -334,7 +334,7 @@ function Q(e) {
                                                             let { closePopout: t } = e;
                                                             return (0, i.jsx)(V.gp, {
                                                                 navId: 'switch-accounts-submenu',
-                                                                'aria-label': W.intl.string(W.t.wFhVqK),
+                                                                'aria-label': Y.intl.string(Y.t.wFhVqK),
                                                                 onClose: t,
                                                                 children: ep
                                                             });
@@ -350,7 +350,7 @@ function Q(e) {
                                                                     id: 'copy-user-id',
                                                                     action: 'COPY_USER_ID',
                                                                     icon: a.VuL,
-                                                                    label: W.intl.string(W.t['/AXYnJ']),
+                                                                    label: Y.intl.string(Y.t['/AXYnJ']),
                                                                     onClick: () => {
                                                                         (0, k.JG)(t.id), n();
                                                                     }

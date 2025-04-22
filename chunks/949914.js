@@ -183,7 +183,7 @@ let L = (e) => {
                     S(!1);
                 }
             },
-            { isCancelled: z, isPastDue: Y, subscriptionPrice: W, memberSince: K, nextRenewalDate: q, nextRenewalLabel: X, isTrial: Q } = j,
+            { isCancelled: z, isPastDue: W, subscriptionPrice: Y, memberSince: K, nextRenewalDate: q, nextRenewalLabel: X, isTrial: Q } = j,
             J = n.soft_deleted || null == o || F,
             $ = () =>
                 z
@@ -193,7 +193,7 @@ let L = (e) => {
                             text: D.intl.string(D.t['6antoq']),
                             color: a.Z.BRAND_500
                         })
-                      : Y
+                      : W
                         ? (0, i.jsx)(c.ua7, {
                               text: D.intl.string(D.t.eSuJEx),
                               children: (e) =>
@@ -298,7 +298,7 @@ let L = (e) => {
                                       }),
                                       (0, i.jsx)(L, {
                                           label: D.intl.string(D.t.dltUMD),
-                                          value: W,
+                                          value: Y,
                                           showInfoIcon: Q,
                                           infoIconTooltipText: Q ? D.intl.string(D.t['/q6fpa']) : void 0
                                       }),

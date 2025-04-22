@@ -84,11 +84,11 @@ let R = {
             V = (0, b.Er)(),
             G = (0, b.IB)(),
             [F, H] = r.useState(!1),
-            [z, Y] = r.useState(t === j.u.TENURE_REWARD_COLLECTIBLE && G && (null == V ? void 0 : V.nitroTenureStatus) === v.EB.REDEEMABLE);
+            [z, W] = r.useState(t === j.u.TENURE_REWARD_COLLECTIBLE && G && (null == V ? void 0 : V.nitroTenureStatus) === v.EB.REDEEMABLE);
         r.useEffect(() => {
-            t === j.u.TENURE_REWARD_COLLECTIBLE && G && (null == V ? void 0 : V.nitroTenureStatus) === v.EB.REDEEMABLE && Y(!0);
+            t === j.u.TENURE_REWARD_COLLECTIBLE && G && (null == V ? void 0 : V.nitroTenureStatus) === v.EB.REDEEMABLE && W(!0);
         }, [G, t, V]);
-        let W = r.useCallback(() => {
+        let Y = r.useCallback(() => {
                 H(!0);
             }, []),
             K = O === C.R0.CARD_CAROUSEL_FIRST_ROW || O === C.R0.CARD_CAROUSEL_SECOND_ROW || O === C.R0.CARD_CAROUSEL_THIRD_ROW,
@@ -204,7 +204,7 @@ let R = {
                                         offsetYPercentageMin: 20,
                                         customConfettiCanvas: S,
                                         dragCoefficientValue: 0.0166,
-                                        onAnimationEnd: W
+                                        onAnimationEnd: Y
                                     })
                             ]
                         })

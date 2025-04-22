@@ -1,5 +1,5 @@
 n.d(t, {
-    M: () => W,
+    M: () => Y,
     Z: () => K
 });
 var i = n(200651),
@@ -92,7 +92,7 @@ function z(e) {
         ]
     });
 }
-function Y(e) {
+function W(e) {
     let { theme: t, section: n, handleItemSelect: r } = e,
         s = (0, _.Dt)(),
         o = (0, R.gU)();
@@ -147,7 +147,7 @@ function Y(e) {
             })
     });
 }
-function W() {
+function Y() {
     let e = (0, P.Z)(),
         t = (0, R.M8)(),
         n = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
@@ -226,8 +226,8 @@ function K() {
         { selectedTab: Z, handleTabChange: w } = (0, y.Z)(),
         F = (0, _.Dt)(),
         z = v.default.getCurrentUser(),
-        W = null != t,
-        K = a && null != z && !W;
+        Y = null != t,
+        K = a && null != z && !Y;
     (0, g.ZP)(() => {
         m.Y(L.Z5c.FAMILY_CENTER),
             (0, C.e)('family-center'),
@@ -250,7 +250,7 @@ function K() {
             X.current = q;
         }),
         r.useEffect(() => {
-            if (a && W) {
+            if (a && Y) {
                 let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: i } = X.current;
                 T.default.track(L.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: e,
@@ -261,7 +261,7 @@ function K() {
                 }),
                     j.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
             }
-        }, [a, W]),
+        }, [a, Y]),
         r.useEffect(() => {
             let e = S.Ex.getSetting();
             a && t && void 0 === e && S.Ex.updateSetting(!0);
@@ -281,7 +281,7 @@ function K() {
             'aria-label': V.intl.string(U.default.RZqaJi),
             children: [
                 (0, i.jsx)(b.yY, { location: V.intl.string(U.default.RZqaJi) }),
-                (0, i.jsx)(Y, {
+                (0, i.jsx)(W, {
                     theme: D,
                     section: Q,
                     handleItemSelect: (e) => {

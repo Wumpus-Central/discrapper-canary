@@ -22,8 +22,8 @@ var l = n(120356),
     j = n(606925),
     P = n(719216),
     E = n(429589),
-    Z = n(636245),
-    I = n(697761),
+    I = n(636245),
+    Z = n(697761),
     x = n(611459),
     C = n(544671),
     T = n(757182),
@@ -182,7 +182,7 @@ let k = (e) => {
                     return null == e
                         ? null
                         : (0, r.jsx)(
-                              Z.Z,
+                              I.Z,
                               {
                                   guildId: e.guildId,
                                   channelId: e.channelId,
@@ -230,7 +230,7 @@ let k = (e) => {
                                   'join-activity-button'
                               ),
                               (0, r.jsx)(
-                                  I.Z,
+                                  Z.Z,
                                   {
                                       activity: t,
                                       user: l,

@@ -64,7 +64,7 @@ function O(e, t) {
 }
 let E = i.memo(function (e) {
     var t;
-    let { baseMessage: n, referencedMessage: E, channel: I, compact: P = !1, referencedUsernameProfile: S, referencedAvatarProfile: Z, setPopout: N, isReplySpineClickable: T, showReplySpine: A } = e,
+    let { baseMessage: n, referencedMessage: E, channel: I, compact: S = !1, referencedUsernameProfile: P, referencedAvatarProfile: Z, setPopout: N, isReplySpineClickable: T, showReplySpine: A } = e,
         w = E.state === h.Y.LOADED ? E.message : void 0,
         R = (0, b.Uj)(w),
         k = (0, c.p)(),
@@ -140,7 +140,7 @@ let E = i.memo(function (e) {
         ),
         B = (0, C.wq)(null == w ? void 0 : w.author.id, I.id),
         G = (0, C.$3)(n, w, D, U),
-        F = (0, C.Wl)(w, I, S, N),
+        F = (0, C.Wl)(w, I, P, N),
         H = (0, C.rY)(Z, N),
         V = i.useCallback(() => {
             N({
@@ -156,11 +156,11 @@ let E = i.memo(function (e) {
         baseAuthor: z,
         referencedMessage: E,
         content: L,
-        compact: P,
+        compact: S,
         isReplyAuthorBlocked: D,
         isReplyAuthorIgnored: U,
         showAvatarPopout: Z,
-        showUsernamePopout: S,
+        showUsernamePopout: P,
         renderPopout: y.Z,
         onClickAvatar: H,
         onClickUsername: F,

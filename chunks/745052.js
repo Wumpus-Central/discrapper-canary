@@ -29,8 +29,8 @@ var r = n(200651),
     A = n(108427),
     Z = n(970731),
     x = n(210887),
-    L = n(433355),
-    w = n(592125),
+    w = n(433355),
+    L = n(592125),
     R = n(819640),
     D = n(626135),
     k = n(647090),
@@ -208,8 +208,8 @@ function en() {
 }
 function er(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
-        i = (0, c.e7)([L.ZP], () => L.ZP.getSidebarState(L.uZ)),
-        l = (0, c.e7)([w.Z], () => w.Z.getChannel(null == i ? void 0 : i.channelId));
+        i = (0, c.e7)([w.ZP], () => w.ZP.getSidebarState(w.uZ)),
+        l = (0, c.e7)([L.Z], () => L.Z.getChannel(null == i ? void 0 : i.channelId));
     if (null == i || i.type !== j.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
     let a = t - Q.R7I;
     return (0, r.jsx)(E.Z, {
@@ -218,7 +218,7 @@ function er(e) {
         onWidthChange: n,
         children: (0, r.jsx)(O.Z, {
             channel: l,
-            baseChannelId: L.uZ
+            baseChannelId: w.uZ
         })
     });
 }
@@ -290,8 +290,8 @@ let eo = (0, f.Z)(function (e) {
     let l = (0, c.e7)([x.Z], () => x.Z.theme),
         o = (0, z.w)(),
         [u, h] = i.useState(!1),
-        f = (0, c.e7)([L.ZP], () => {
-            let e = L.ZP.getSidebarState(L.uZ);
+        f = (0, c.e7)([w.ZP], () => {
+            let e = w.ZP.getSidebarState(w.uZ);
             return null != e && e.type === j.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
         g = null == f ? void 0 : f.channelId,
@@ -299,7 +299,7 @@ let eo = (0, f.Z)(function (e) {
         _ = (0, M.T)(g),
         E = (0, k.J)(g);
     i.useEffect(() => {
-        null != g && !_ && E && b && ((0, T.Kh)(g), P.Z.closeChannelSidebar(L.uZ));
+        null != g && !_ && E && b && ((0, T.Kh)(g), P.Z.closeChannelSidebar(w.uZ));
     }, [g, E, b, _]);
     let [O, y] = i.useState(q.pS.REQUESTS),
         v = (e) => {

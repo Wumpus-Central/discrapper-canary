@@ -20,7 +20,7 @@ function b(e) {
         [x, v] = r.useState(!1),
         [j, O] = r.useState(!1),
         [E, I] = r.useState(!1),
-        [P, S] = r.useState(!1),
+        [S, P] = r.useState(!1),
         Z = y || x || j,
         N = r.useCallback(
             async (e) => {
@@ -43,7 +43,7 @@ function b(e) {
                 if (!Z) {
                     v(!0);
                     try {
-                        await (0, p.gN)(e), S(!0), null == i || i();
+                        await (0, p.gN)(e), P(!0), null == i || i();
                     } catch (t) {
                         let e = new o.Hx(t);
                         null == b || b(e);
@@ -61,7 +61,7 @@ function b(e) {
                 let t = l()(e, m.t$);
                 try {
                     for (let e of t) await (0, p.r_)(e);
-                    S(!0), null == i || i();
+                    P(!0), null == i || i();
                 } catch (t) {
                     let e = new o.Hx(t);
                     null == b || b(e);
@@ -153,6 +153,6 @@ function b(e) {
         isRejectLoading: x,
         isUserProfileLoading: j,
         isOptimisticAccepted: E,
-        isOptimisticRejected: P
+        isOptimisticRejected: S
     };
 }

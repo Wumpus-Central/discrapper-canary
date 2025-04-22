@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(594174),
     E = n(979651),
     I = n(585483),
-    P = n(63063),
-    S = n(665149),
+    S = n(63063),
+    P = n(665149),
     Z = n(981631),
     N = n(921944),
     T = n(65154),
@@ -60,7 +60,7 @@ class k extends i.PureComponent {
             h = !1;
         return (
             u ? ((h = !0), (p = A.intl.string(A.t.izMR7u)), (e = a.ua7.Colors.RED)) : v.Z.supports(T.AN.VIDEO) ? (o ? ((p = A.intl.string(A.t.PHzjvb)), (e = a.ua7.Colors.RED), (h = !0)) : i && c === Z.WtW.VIDEO ? ((t = this.handleJoinVideoCall), (p = d ? A.intl.string(A.t.S0W8Z2) : A.intl.string(A.t.W68MhI))) : ((t = this.handleStartVideoCall), (p = d ? A.intl.string(A.t.S0W8Z2) : A.intl.string(A.t.oCqlGB)))) : ((h = !0), (t = this.handleBrowserNotSupported), (p = A.intl.string(A.t.UVpg3d))),
-            (0, r.jsx)(S.ZP.Icon, {
+            (0, r.jsx)(P.ZP.Icon, {
                 icon: a.Odl,
                 onClick: t,
                 disabled: h || l,
@@ -77,7 +77,7 @@ class k extends i.PureComponent {
         let f = u.isManaged(),
             g = !1;
         h ? ((g = !0), (e = A.intl.string(A.t.izMR7u)), (t = a.ua7.Colors.RED)) : s ? ((e = f ? A.intl.string(A.t.LW2Gho) : A.intl.string(A.t.rF7lNz)), (t = a.ua7.Colors.RED), (g = !0)) : c ? ((e = A.intl.string(A.t.PHzjvb)), (t = a.ua7.Colors.RED), (g = !0)) : (e = l ? (f ? A.intl.string(A.t.S0W8Z2) : A.intl.string(A.t.fdEeb2)) : f ? A.intl.string(A.t.S0W8Z2) : A.intl.string(A.t.focH1t));
-        let _ = (0, r.jsx)(S.ZP.Icon, {
+        let _ = (0, r.jsx)(P.ZP.Icon, {
             icon: a.Csw,
             onClick: this.handleVoiceClick,
             disabled: g,
@@ -110,7 +110,7 @@ class k extends i.PureComponent {
                                               children: A.intl.string(A.t.xAW71d)
                                           }),
                                           (0, r.jsx)(a.eee, {
-                                              href: P.Z.getArticleURL(Z.BhN.ACTIVITIES),
+                                              href: S.Z.getArticleURL(Z.BhN.ACTIVITIES),
                                               children: A.intl.string(A.t.hvVgAQ)
                                           })
                                       ]
@@ -179,11 +179,11 @@ function M(e) {
             isBlocked: n.type === Z.d4z.DM && null != _ && j.Z.isBlocked(_)
         })),
         I = (0, l.e7)([O.default], () => O.default.getUser(_)),
-        P = (0, u.bp)(),
-        S = [],
+        S = (0, u.bp)(),
+        P = [],
         N = (0, p.Z)(n.id),
         T = (0, l.e7)([x.Z], () => x.Z.hasLayers());
-    N && !T && S.push(o.z.ACTIVITY_GDM_CALL_TOOLTIP);
+    N && !T && P.push(o.z.ACTIVITY_GDM_CALL_TOOLTIP);
     let [A, w] = i.useState(!1);
     return (i.useEffect(() => {
         let e = setTimeout(() => {
@@ -202,10 +202,10 @@ function M(e) {
               callUnavailable: b,
               notFriend: y,
               isBlocked: v,
-              appContext: P,
+              appContext: S,
               canShowTooltip: A,
               canShowActivityGdmTooltip: N,
-              dismissibleContentTypes: S,
+              dismissibleContentTypes: P,
               useReducedMotion: f
           });
 }

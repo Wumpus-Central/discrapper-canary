@@ -47,7 +47,7 @@ function j(e) {
         { guildIds: s, loading: h, searchResultsQuery: v, loadMore: j, searchCategoryId: A } = (0, b.f)({ loadId: t }),
         Z = 0 === s.length && !h,
         x = i.useContext(d.AnalyticsContext),
-        [L, w] = i.useState((0, m.PM)()),
+        [w, L] = i.useState((0, m.PM)()),
         [R, D] = i.useState(!0),
         k = i.useRef(R),
         [M, U] = i.useState(3),
@@ -73,18 +73,18 @@ function j(e) {
         ),
         F = (0, u.y)(H, [R, B]);
     i.useEffect(() => {
-        w((0, m.PM)());
+        L((0, m.PM)());
     }, [v]),
         i.useEffect(() => {
             P({
                 loadId: t,
-                searchId: L,
+                searchId: w,
                 query: v,
                 guildResults: s.map(f.Z.getGuild).filter(p.lm),
                 analyticsContext: x,
                 categoryId: A
             });
-        }, [x, s, t, A, L, v]);
+        }, [x, s, t, A, w, v]);
     let z = i.useCallback((e) => n(e, A), [n, A]),
         W = i.useMemo(() => (h ? [s.length, 0] : [s.length]), [s.length, h]),
         Y = i.useCallback(

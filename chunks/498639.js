@@ -109,7 +109,7 @@ let Z = function () {
         G = 'true' !== U.gift && null != Z,
         [F, H] = r.useState(w.length > 0 ? w[0].value : null),
         { analyticsLocations: z } = (0, m.ZP)(u.Z.PAYMENT_FLOW_TEST_PAGE),
-        [Y, W] = r.useState(''),
+        [W, Y] = r.useState(''),
         [K, q] = r.useState(N.lds),
         { balance: X, isFetching: Q, error: J } = (0, S.A)(),
         { isSubmitting: $, responseMessage: ee, redeemVirtualCurrency: et } = (0, S.f)(),
@@ -389,8 +389,8 @@ let Z = function () {
                     children: [
                         (0, i.jsx)(a.oil, {
                             placeholder: 'Application Id',
-                            value: Y,
-                            onChange: W
+                            value: W,
+                            onChange: Y
                         }),
                         (0, i.jsx)(a.oil, {
                             placeholder: 'Sku Id',
@@ -400,7 +400,7 @@ let Z = function () {
                         (0, i.jsx)(a.zxk, {
                             onClick: () =>
                                 (0, d.S)({
-                                    applicationId: Y,
+                                    applicationId: W,
                                     skuId: K,
                                     openPremiumPaymentModal: () => !0,
                                     analyticsLocations: [],

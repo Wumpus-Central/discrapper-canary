@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(965376),
     E = n(159299),
     I = n(823415),
-    P = n(670188),
-    S = n(199902),
+    S = n(670188),
+    P = n(199902),
     Z = n(271383),
     N = n(430824),
     T = n(158776),
@@ -87,7 +87,7 @@ let Y = B.ZP.getEnableHardwareAcceleration(),
             y = (0, p.e7)([T.Z, A.Z], () => (_ ? A.Z.getStatus() : T.Z.getStatus(o, t.guild_id))),
             C = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(o)),
             v = (0, p.e7)([T.Z, A.Z], () => (_ ? A.Z.getActivities() : T.Z.getActivities(o, t.guild_id))),
-            O = (0, p.e7)([S.Z], () => S.Z.getAnyStreamForUser(o)),
+            O = (0, p.e7)([P.Z], () => P.Z.getAnyStreamForUser(o)),
             k = (0, c.JA)(o),
             M = (0, p.e7)([E.Z], () => E.Z.canUserViewChannel(t.id, l, o)),
             D = (null == g ? void 0 : g.id) != null && g.id === a,
@@ -158,7 +158,7 @@ let Y = B.ZP.getEnableHardwareAcceleration(),
             Q = (0, I.ic)({ location: 'PrivateChannelRecipients' });
         if (null == g) return null;
         let J = null == u ? void 0 : u.premiumSince;
-        return (0, r.jsx)(P.Z, {
+        return (0, r.jsx)(S.Z, {
             user: g,
             guildId: t.guild_id,
             channelId: t.id,

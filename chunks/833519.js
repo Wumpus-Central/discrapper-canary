@@ -80,7 +80,7 @@ function H(e) {
     );
 }
 function z(e) {
-    let { participant: t, selected: n, onVideoResize: i, paused: m, fit: p, inPopout: S, inOverlayPopout: y = !1, width: M, focused: L, wrapperClassName: H } = e,
+    let { participant: t, selected: n, onVideoResize: i, fit: m, inPopout: p, inOverlayPopout: S = !1, width: y, focused: M, wrapperClassName: L, paused: H = !1 } = e,
         z = P.Z.getVideoComponent(),
         G = (0, o.e7)([I.default], () => I.default.getId()),
         K = (0, g.Z)(),
@@ -90,9 +90,9 @@ function z(e) {
         $ = (0, o.e7)([j.Z], () => j.Z.getAllActiveStreams().length > 0),
         ee = (0, o.e7)([x.Z], () => x.Z.isFocused()),
         et = (null == Q ? void 0 : Q.ownerId) === G,
-        en = et && !ee && !S,
+        en = et && !ee && !p,
         er = null != Q ? (0, v.Z)(Q, q, q.id === G, en) : null,
-        el = M < 195;
+        el = y < 195;
     (0, d.ZP)(() => {
         !$ && (null == X ? void 0 : X.isGuildStageVoice()) && !et && ((0, c.rn)(B), u.Z.updateStageStreamSize(B.channelId, !1));
     });
@@ -119,20 +119,20 @@ function z(e) {
         return (0, r.jsx)(N.Z, {
             selected: n,
             stream: Q,
-            width: M
+            width: y
         });
     if (null != ei || (null == Q ? void 0 : Q.state) === k.jm8.FAILED)
         return (0, r.jsx)(C.Z, {
             avError: ei,
             selected: n,
             stream: t.stream,
-            width: M
+            width: y
         });
     if (t.type === U.fO.HIDDEN_STREAM)
         return (0, r.jsx)(T.Z, {
             selected: n,
             participant: t,
-            width: M
+            width: y
         });
     if (!(null != Q && !n && null != z && P.Z.supports(V.AN.VIDEO)))
         return (0, r.jsxs)('div', {
@@ -153,7 +153,7 @@ function z(e) {
                                   children: (0, r.jsx)(s.Text, {
                                       variant: el ? 'text-sm/semibold' : 'text-md/semibold',
                                       color: 'none',
-                                      children: M < 175 ? F.intl.string(F.t['I6JG4+']) : F.intl.string(F.t['7Xq/nZ'])
+                                      children: y < 175 ? F.intl.string(F.t['I6JG4+']) : F.intl.string(F.t['7Xq/nZ'])
                                   })
                               }),
                               $
@@ -180,7 +180,7 @@ function z(e) {
             children: [
                 null != X
                     ? (0, r.jsx)(O.Z, {
-                          focused: L,
+                          focused: M,
                           channelId: X.id,
                           guildId: X.guild_id,
                           streamerId: q.id,
@@ -192,12 +192,12 @@ function z(e) {
                     b.Z,
                     {
                         onResize: i,
-                        wrapperClassName: a()(W.videoWrapper, H),
+                        wrapperClassName: a()(W.videoWrapper, L),
                         className: W.content,
                         streamId: J,
                         videoComponent: z,
-                        fit: p,
-                        paused: m || en,
+                        fit: m,
+                        paused: H || (null == Q ? void 0 : Q.state) === k.jm8.PAUSED || en,
                         videoSpinnerContext: et ? f.m.SELF_STREAM : f.m.REMOTE_STREAM,
                         userId: q.id,
                         streamKey: t.id
@@ -231,12 +231,12 @@ function z(e) {
                                       });
                               }
                               return e;
-                          })({ size: (0, A.L)(M) }, er)
+                          })({ size: (0, A.L)(y) }, er)
                       )
                     : null,
                 (0, r.jsx)(R.Z, {
                     stream: B,
-                    inPopout: S
+                    inPopout: p
                 })
             ]
         });

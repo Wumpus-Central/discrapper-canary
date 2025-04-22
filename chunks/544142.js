@@ -84,7 +84,7 @@ function j(e) {
         });
     }
     let I = null != (i = null != (t = null == j ? void 0 : j.nick) ? t : g.ZP.getName(y)) ? i : '???',
-        P = null == j ? void 0 : j.colorString;
+        S = null == j ? void 0 : j.colorString;
     return null == y
         ? (0, r.jsx)('span', {
               className: l()(C.threadCreatorName, C.unknownCreatorName),
@@ -107,7 +107,7 @@ function j(e) {
                               onContextMenu: E,
                               children: (0, r.jsx)(a.PUh, {
                                   name: I,
-                                  color: null != P ? P : void 0,
+                                  color: null != S ? S : void 0,
                                   roleColors: O
                               })
                           })

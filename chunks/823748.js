@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(112724),
     E = n(902840),
     I = n(110924),
-    P = n(317381),
-    S = n(82888),
+    S = n(317381),
+    P = n(82888),
     Z = n(917107),
     N = n(296797),
     T = n(100527),
@@ -77,8 +77,8 @@ var r = n(200651),
     eO = n(856393),
     eE = n(657218),
     eI = n(66556),
-    eP = n(739830),
-    eS = n(377929),
+    eS = n(739830),
+    eP = n(377929),
     eZ = n(900157),
     eN = n(108427),
     eT = n(171368),
@@ -253,7 +253,7 @@ class tl extends i.PureComponent {
             n = this.shouldRenderCall();
         if ((s()(null != e, 'Missing channel in Channel.renderEmbeddedActivityPanel'), n || (null == t ? void 0 : t.location.kind) === p.E.CONTEXTLESS)) return null;
         let i = this.props.height - 200;
-        return (0, r.jsx)(S.Z, {
+        return (0, r.jsx)(P.Z, {
             maxHeight: i,
             renderExternalHeader: this.renderHeaderBar
         });
@@ -608,7 +608,7 @@ class tl extends i.PureComponent {
                     case e3.d4z.ANNOUNCEMENT_THREAD:
                     case e3.d4z.PRIVATE_THREAD:
                     case e3.d4z.PUBLIC_THREAD:
-                        null == t || t.isForumLikeChannel() || o.push((0, r.jsx)(eI.Z, { channel: t }, 'browser')), e.isVocalThread() && o.push((0, r.jsx)(ed.Z, { channel: e }, 'thread-call')), o.push((0, r.jsx)(eP.Z, { channel: e }, 'notifications')), o.push((0, r.jsx)(en.Z, { channel: e }, 'pins')), e.isArchivedThread() || o.push((0, r.jsx)(ee.Z, { channelId: e.id }, 'members')), null != t && (0, E.Lp)(e) && o.push((0, r.jsx)(er.Z, { channel: e }, 'summaries')), o.push((0, r.jsx)(eS.Z, { channel: e }, 'threads-overflow'));
+                        null == t || t.isForumLikeChannel() || o.push((0, r.jsx)(eI.Z, { channel: t }, 'browser')), e.isVocalThread() && o.push((0, r.jsx)(ed.Z, { channel: e }, 'thread-call')), o.push((0, r.jsx)(eS.Z, { channel: e }, 'notifications')), o.push((0, r.jsx)(en.Z, { channel: e }, 'pins')), e.isArchivedThread() || o.push((0, r.jsx)(ee.Z, { channelId: e.id }, 'members')), null != t && (0, E.Lp)(e) && o.push((0, r.jsx)(er.Z, { channel: e }, 'summaries')), o.push((0, r.jsx)(eP.Z, { channel: e }, 'threads-overflow'));
                         break;
                     case e3.d4z.GUILD_ANNOUNCEMENT:
                     case e3.d4z.GUILD_TEXT:
@@ -754,10 +754,10 @@ let to = (0, O.Z)(tl),
                 var e;
                 return (null != (e = null == v ? void 0 : v.channelId) ? e : ez.Z.getVoiceChannelId()) === (null == c ? void 0 : c.id);
             }),
-            O = (0, h.e7)([P.ZP], () => (null != c ? P.ZP.getSelfEmbeddedActivityForChannel(c.id) : null), [c]),
-            S = (0, h.e7)([eH.Z], () => eH.Z.isConnected()),
-            T = (0, I.Z)(S),
-            R = S && !1 === T;
+            O = (0, h.e7)([S.ZP], () => (null != c ? S.ZP.getSelfEmbeddedActivityForChannel(c.id) : null), [c]),
+            P = (0, h.e7)([eH.Z], () => eH.Z.isConnected()),
+            T = (0, I.Z)(P),
+            R = P && !1 === T;
         i.useEffect(() => {
             j &&
                 R &&
@@ -771,8 +771,8 @@ let to = (0, O.Z)(tl),
                     })
                 );
         }, [R, c, j, O]);
-        let k = (0, h.e7)([P.ZP], () => P.ZP.getCurrentEmbeddedActivity()),
-            M = (0, h.e7)([P.ZP], () => P.ZP.getActivityPanelMode()),
+        let k = (0, h.e7)([S.ZP], () => S.ZP.getCurrentEmbeddedActivity()),
+            M = (0, h.e7)([S.ZP], () => S.ZP.getActivityPanelMode()),
             L = null != k && !(0, Z.Z)(null == c ? void 0 : c.id) && M === e7.Ez.PANEL,
             D = (0, h.e7)([eq.Z], () => null != c && c.isVocalThread() && !u().isEmpty(eq.Z.getVoiceStatesForChannel(c.id)), [c]),
             B = null != c && c.isPrivate() && !L && x,
@@ -780,7 +780,7 @@ let to = (0, O.Z)(tl),
             { welcomeModalChannelId: H } = (0, d.TH)(),
             z = (0, h.e7)([em.Z], () => null != c && em.Z.isLurking(c.guild_id), [c]),
             W = (0, h.e7)([eR.Z], () => eR.Z.hasSeen(null == c ? void 0 : c.guild_id, z), [c, z]),
-            Y = (0, h.e7)([w.Z, P.ZP], () => (null != P.ZP.getConnectedActivityLocation() && P.ZP.getActivityPanelMode() === e7.Ez.PANEL ? (P.ZP.getFocusedLayout() === e7.MI.NO_CHAT ? e3.AEg.NO_CHAT : e3.AEg.NORMAL) : null != a ? w.Z.getLayout(a) : e3.AEg.NORMAL), [a]),
+            Y = (0, h.e7)([w.Z, S.ZP], () => (null != S.ZP.getConnectedActivityLocation() && S.ZP.getActivityPanelMode() === e7.Ez.PANEL ? (S.ZP.getFocusedLayout() === e7.MI.NO_CHAT ? e3.AEg.NO_CHAT : e3.AEg.NORMAL) : null != a ? w.Z.getLayout(a) : e3.AEg.NORMAL), [a]),
             q = (0, h.e7)([w.Z], () => (null != c ? w.Z.getSelectedParticipant(c.id) : null)),
             K = (0, h.e7)([eY.default], () => eY.default.getCurrentUser()),
             Q = (0, eh.Z)(null == y ? void 0 : y.id),

@@ -23,7 +23,7 @@ var r = n(200651),
     O = n(388032),
     E = n(15322),
     I = n(574169);
-function P(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function P(e) {
     }
     return e;
 }
-let S = (e) => 1 - Math.pow(1 - e, 3);
+let P = (e) => 1 - Math.pow(1 - e, 3);
 function Z(e) {
     let { channel: t, buyer: l, onClose: a, dismissibleContent: Z } = e,
         N = (0, u.Wu)([g.Z], () => g.Z.getAllActiveStreams()),
@@ -74,7 +74,7 @@ function Z(e) {
             },
             config: {
                 duration: 250,
-                easing: S,
+                easing: P,
                 immediate: !k
             }
         }),
@@ -113,7 +113,7 @@ function Z(e) {
                       children: [
                           (0, r.jsx)(
                               d.qEK,
-                              P(
+                              S(
                                   {
                                       src: U,
                                       'aria-label': l.username,
@@ -148,7 +148,7 @@ function Z(e) {
                                   if (F) return void a();
                                   (0, d.ZDy)(async () => {
                                       let { default: e } = await Promise.all([n.e('46746'), n.e('52657')]).then(n.bind(n, 60594));
-                                      return (t) => (0, r.jsx)(e, P({ analyticsLocation: 'HDStreamingPotionBanner' }, t));
+                                      return (t) => (0, r.jsx)(e, S({ analyticsLocation: 'HDStreamingPotionBanner' }, t));
                                   }),
                                       a();
                               },

@@ -70,10 +70,10 @@ function Z(e, t) {
     );
 }
 let x = [];
-function L() {
+function w() {
     c.Z.setSection(T.pJs.ADD_FRIEND);
 }
-function w() {
+function L() {
     (0, s.ZDy)(async () => {
         let { default: e } = await n.e('36312').then(n.bind(n, 153932));
         return (t) => (0, r.jsx)(e, A({}, t));
@@ -81,7 +81,7 @@ function w() {
 }
 function R(e) {
     let { section: t, showSpamCta: n } = e,
-        l = i.useMemo(() => (n ? w : t !== T.pJs.PENDING ? L : void 0), [n, t]);
+        l = i.useMemo(() => (n ? L : t !== T.pJs.PENDING ? w : void 0), [n, t]);
     return (0, r.jsx)('div', {
         className: j.emptyStateContainer,
         children: (0, r.jsx)(
@@ -98,7 +98,7 @@ let D = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, h.ZP)(p.Z.FRIENDS_LIST),
         { rows: l, section: c } = (0, o.cj)([b.ZP], () => b.ZP.getState()),
-        L = (0, o.e7)([_.Z], () => _.Z.isFocused()),
+        w = (0, o.e7)([_.Z], () => _.Z.isFocused()),
         { relationshipCount: D, hasBlockedOrIgnored: k } = (0, o.cj)([m.Z], () => ({
             relationshipCount: m.Z.getRelationshipCount(),
             hasBlockedOrIgnored: m.Z.getBlockedOrIgnoredIDs().length > 0
@@ -132,16 +132,16 @@ let D = function (e) {
                     })(e, ['key']);
                 switch (c) {
                     case T.pJs.PENDING:
-                        return (0, r.jsx)(y.Z, Z(A({}, n), { isFocused: L }), t);
+                        return (0, r.jsx)(y.Z, Z(A({}, n), { isFocused: w }), t);
                     case T.pJs.SUGGESTIONS:
-                        return (0, r.jsx)(S.Z, Z(A({}, n), { isFocused: L }), t);
+                        return (0, r.jsx)(S.Z, Z(A({}, n), { isFocused: w }), t);
                     case T.pJs.ONLINE:
                     case T.pJs.ALL:
                     default:
-                        return (0, r.jsx)(E.Z, Z(A({}, n), { isFocused: L }), t);
+                        return (0, r.jsx)(E.Z, Z(A({}, n), { isFocused: w }), t);
                 }
             },
-            [L, c]
+            [w, c]
         ),
         V = i.useCallback(
             (e) => {
@@ -280,7 +280,7 @@ let D = function (e) {
                                   look: s.zxk.Looks.LINK,
                                   color: j.viewSpamButtonColor,
                                   className: j.viewSpamButton,
-                                  onClick: w,
+                                  onClick: L,
                                   size: s.PhG.TINY,
                                   children: (0, r.jsx)(s.Text, {
                                       variant: 'text-xs/medium',

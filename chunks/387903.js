@@ -26,8 +26,8 @@ var r,
     j = n(565138),
     P = n(707409),
     E = n(424678),
-    Z = n(750154),
-    I = n(81063),
+    I = n(750154),
+    Z = n(81063),
     x = n(768581),
     C = n(630388),
     T = n(153066),
@@ -182,7 +182,7 @@ class H extends (r = o.PureComponent) {
                 null != u.large_image
                     ? (0, i.jsx)('img', {
                           alt: null != (t = u.large_text) ? t : '',
-                          src: (0, I.xF)(d, u.large_image, null != l ? l : [M.Si.LARGE, M.Si.LARGE]),
+                          src: (0, Z.xF)(d, u.large_image, null != l ? l : [M.Si.LARGE, M.Si.LARGE]),
                           className: s()(this.getTypeClass('assetsLargeImage', this.isStreamerOnTypeActivityFeed() ? U.ABu.TWITCH : ''), {
                               [null != (n = this.getTypeClass('assetsLargeMask')) ? n : '']: null != u.small_image,
                               [V.assetsLargeImageSpotify]: f
@@ -194,8 +194,8 @@ class H extends (r = o.PureComponent) {
                 onClick: this.handleOpenSpotifyAlbum,
                 children: m
             });
-        else if ((0, Z.dS)(e)) {
-            let t = (0, Z.rq)(e);
+        else if ((0, I.dS)(e)) {
+            let t = (0, I.rq)(e);
             if (null == t) return null;
             m = (0, i.jsx)(O.ZP, {
                 mask: O.ZP.Masks.SQUIRCLE,
@@ -242,7 +242,7 @@ class H extends (r = o.PureComponent) {
                     })
                 ]
             })),
-        (0, Z.dS)(e) ||
+        (0, I.dS)(e) ||
             null == u.small_image ||
             (a = (0, i.jsx)(p.ua7, {
                 text: '' !== u.small_text ? u.small_text : null,
@@ -254,7 +254,7 @@ class H extends (r = o.PureComponent) {
                         Y(
                             {
                                 alt: null != (t = u.small_text) ? t : '',
-                                src: (0, I.xF)(d, u.small_image, [M.Si.SMALL, M.Si.SMALL]),
+                                src: (0, Z.xF)(d, u.small_image, [M.Si.SMALL, M.Si.SMALL]),
                                 className: this.getTypeClass('assetsSmallImage', null == m ? 'WithoutLargeImage' : void 0)
                             },
                             e
@@ -320,7 +320,7 @@ class H extends (r = o.PureComponent) {
                         onClick: this.handleOpenSpotifyTrack,
                         children: l
                     }))
-                  : (0, Z.dS)(e) && (u = e.name)),
+                  : (0, I.dS)(e) && (u = e.name)),
         null == u)
             ? null
             : (0, i.jsx)(p.Text, {
@@ -352,7 +352,7 @@ class H extends (r = o.PureComponent) {
                             n
                         )
                 });
-            else if ((0, Z.dS)(e)) {
+            else if ((0, I.dS)(e)) {
                 var a;
                 l = null == (a = e.assets) ? void 0 : a.small_text;
             }
@@ -464,13 +464,13 @@ class H extends (r = o.PureComponent) {
                               )
                             : u
                 }))),
-        (null != c && '' !== c && e.type !== U.IIU.CUSTOM_STATUS) || (0, Z.dS)(e))
+        (null != c && '' !== c && e.type !== U.IIU.CUSTOM_STATUS) || (0, I.dS)(e))
             ? ((null == a ? void 0 : a.size) == null && [M.Zc].includes(null != (n = e.application_id) ? n : '')
                   ? (l = R.intl.formatToPlainString(R.t['u//9Bw'], {
                         count: '0',
                         max: null != (r = null == t ? void 0 : t.getMaxParticipants()) ? r : 0
                     }))
-                  : (0, Z.dS)(e) && (null == a ? void 0 : a.size) != null
+                  : (0, I.dS)(e) && (null == a ? void 0 : a.size) != null
                     ? (l = R.intl.formatToPlainString(R.t['JC/3x8'], {
                           numSpeakers: a.size[0],
                           numListeners: a.size[1] - a.size[0]

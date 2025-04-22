@@ -30,8 +30,8 @@ let T = {
 function P(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: P } = e,
         { analyticsLocations: j } = (0, d.ZP)(),
-        { isHovered: A, setIsHovered: Z, onMouseEnter: x, onMouseLeave: L } = (0, f.Z)(200, 300),
-        { enableEmojiCTA: w } = _.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
+        { isHovered: A, setIsHovered: Z, onMouseEnter: x, onMouseLeave: w } = (0, f.Z)(200, 300),
+        { enableEmojiCTA: L } = _.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     i.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
         (0, p.h)({
@@ -74,7 +74,7 @@ function P(e) {
         k = () => (n === I.hX.FRIEND_ANNIVERSARY ? C.intl.formatToPlainString(C.t['L2s/Nz'], { numberOfYears: E.Z.getFriendAnniversaryYears(t.id) }) : (0, b.Ou)(n)),
         M = () => (n === I.hX.FRIEND_ANNIVERSARY ? C.intl.string(C.t['4LohBA']) : (0, b.Ou)(n)),
         U = () =>
-            w
+            L
                 ? (0, r.jsx)(u.P3F, {
                       'aria-label': M(),
                       onClick: D,
@@ -83,7 +83,7 @@ function P(e) {
                           [N.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: R,
-                      onMouseLeave: L,
+                      onMouseLeave: w,
                       children: (0, r.jsx)(o.animated.div, {
                           className: S.spriteContainer,
                           children: (0, r.jsx)('div', { className: S.sprite })
@@ -92,7 +92,7 @@ function P(e) {
                 : (0, r.jsx)(u.zxk, {
                       onClick: D,
                       onMouseEnter: R,
-                      onMouseLeave: L,
+                      onMouseLeave: w,
                       children: (0, r.jsxs)('div', {
                           className: S.pillContentContainer,
                           children: [
@@ -128,7 +128,7 @@ function P(e) {
                 premiumGiftIntentCardType: y.U.COACHMARK,
                 recipientUser: t,
                 onMouseEnter: x,
-                onMouseLeave: L,
+                onMouseLeave: w,
                 popoutPosition: e.position,
                 analyticsPage: l,
                 analyticsSection: v.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,

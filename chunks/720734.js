@@ -47,8 +47,8 @@ var i = n(200651),
     F = n(64220),
     H = n(359588),
     z = n(459115),
-    Y = n(427217),
-    W = n(132750),
+    W = n(427217),
+    Y = n(132750),
     K = n(526031),
     q = n(540059),
     X = n(605236),
@@ -101,8 +101,8 @@ var i = n(200651),
     eF = n(626135),
     eH = n(768581),
     ez = n(572004),
-    eY = n(585483),
-    eW = n(70956),
+    eW = n(585483),
+    eY = n(70956),
     eK = n(74538),
     eq = n(374023),
     eX = n(51144),
@@ -163,9 +163,9 @@ function e5(e, t) {
     );
 }
 let e7 = eQ.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK,
-    te = 2 * eW.Z.Millis.MINUTE,
-    tt = 3 * eW.Z.Millis.SECOND,
-    tn = 30 * eW.Z.Millis.DAY;
+    te = 2 * eY.Z.Millis.MINUTE,
+    tt = 3 * eY.Z.Millis.SECOND,
+    tn = 30 * eY.Z.Millis.DAY;
 function ti(e) {
     let { speaking: t, streaming: n, currentUser: s, status: a, handleClick: o, handleMouseLeave: c, renderNameTag: d, nameplate: u, 'data-jump-section': m } = e,
         g = r.useRef(null),
@@ -199,9 +199,9 @@ function ti(e) {
                         null != r && i(r), null == (n = e.current) || n.call(e);
                     };
                     return (
-                        eY.S.subscribe(e1.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, t),
+                        eW.S.subscribe(e1.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, t),
                         () => {
-                            eY.S.unsubscribe(e1.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, t);
+                            eW.S.unsubscribe(e1.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, t);
                         }
                     );
                 }),
@@ -316,7 +316,7 @@ class tr extends r.PureComponent {
             { activities: t, applicationStream: n, currentUser: r, status: s, userTag: l, voiceActivityStatusEnabled: a, voiceChannel: o, customStatusRTCEntrypointEnabled: c } = this.props;
         if (null == r) return null;
         if (c)
-            return (0, i.jsx)(W.Z, {
+            return (0, i.jsx)(Y.Z, {
                 user: r,
                 applicationStream: n,
                 voiceChannel: a ? o : void 0,
@@ -354,7 +354,7 @@ class tr extends r.PureComponent {
             ? (0, i.jsx)(y.Z, {
                   hoverText: l,
                   forceHover: e,
-                  children: (0, i.jsx)(Y.Z, {
+                  children: (0, i.jsx)(W.Z, {
                       activity: d,
                       emojiClassName: e8.emoji,
                       className: e8.customStatus
@@ -740,8 +740,8 @@ function tl() {
         V = (null == t || null == (e = t.avatarDecoration) ? void 0 : e.skuId) === e2.rL,
         { voiceActivityStatusEnabled: G } = (0, v.U)({ location: 'Account' }),
         { simplifiedSettingsEnabled: F } = (0, eO.Z)({ location: 'Account' }),
-        Y = (0, en.m)(),
-        [W, K] = (0, ee.G)(null != L ? L : null),
+        W = (0, en.m)(),
+        [Y, K] = (0, ee.G)(null != L ? L : null),
         { enabled: q } = (0, z.Z)({ location: 'Account' }),
         Q = 'account';
     (0, C.j)({
@@ -786,7 +786,7 @@ function tl() {
             settings: []
         };
     return (
-        !R && (et && eo.settings.push(c.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), B && (1 === M ? eo.settings.push(c.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eo.settings.push(c.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), $ && eo.settings.push(c.z.SOUNDBOARD_VOLUME_EDUCATION), U && eo.settings.push(c.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), V && eo.avatar.push(c.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP), Y && eo.avatar.push(c.z.EXPIRING_STATUS_COACHMARK), ea && eo.avatar.push(c.z.CUSTOM_STATUS_PROMPTS_COACHMARK)),
+        !R && (et && eo.settings.push(c.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), B && (1 === M ? eo.settings.push(c.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eo.settings.push(c.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), $ && eo.settings.push(c.z.SOUNDBOARD_VOLUME_EDUCATION), U && eo.settings.push(c.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), V && eo.avatar.push(c.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP), W && eo.avatar.push(c.z.EXPIRING_STATUS_COACHMARK), ea && eo.avatar.push(c.z.CUSTOM_STATUS_PROMPTS_COACHMARK)),
         (0, i.jsx)(P.Gt, {
             value: ei,
             children: (0, i.jsx)(tr, {
@@ -795,7 +795,7 @@ function tl() {
                 applicationStream: d,
                 voiceChannel: p,
                 dismissibleContents: eo,
-                visibleRecurringAvatarDc: W,
+                visibleRecurringAvatarDc: Y,
                 markRecurringAvatarDcAsDismissed: K,
                 userTag: m,
                 hidePrivateData: g,
@@ -887,11 +887,11 @@ function to(e) {
             },
             [j, F]
         ),
-        [Y, W] = r.useState(!1),
+        [W, Y] = r.useState(!1),
         K = r.useCallback((e) => {
             var t;
             if ((0, a.k)(null == e ? void 0 : e.target, Node) && (null == (t = v.current) ? void 0 : t.contains(e.target))) return h.F;
-            W(!1);
+            Y(!1);
         }, []),
         [q, X] = r.useState(!1);
     return (
@@ -953,7 +953,7 @@ function to(e) {
                             ignoreModalClicks: !0,
                             onRequestOpen: ey.r5,
                             onRequestClose: K,
-                            shouldShow: Y,
+                            shouldShow: W,
                             renderPopout: (e) => {
                                 let { closePopout: t } = e;
                                 return (0, i.jsx)(eP.l, { onSettingsButtonClick: t });
@@ -984,7 +984,7 @@ function to(e) {
                                 return (0, i.jsx)('div', {
                                     children: (0, i.jsx)(eA.B, {
                                         targetElementRef: T,
-                                        onCTA: () => W(!0),
+                                        onCTA: () => Y(!0),
                                         canBeShown: !s,
                                         children: (e, t) =>
                                             (0, i.jsx)(
@@ -1025,7 +1025,7 @@ function to(e) {
                                                         'aria-label': e6.intl.string(e6.t.Hapb4O),
                                                         disabled: c,
                                                         onClick: (e) => {
-                                                            null == t || t(), n(e), W(!Y);
+                                                            null == t || t(), n(e), Y(!W);
                                                         }
                                                     },
                                                     r

@@ -93,7 +93,7 @@ function T(e) {
         : (0, r.jsx)(P.Z, { userId: n.user.id });
 }
 function D(e) {
-    let { participant: t, channel: n, inCall: i, width: s, paused: S, selected: P, fit: T, onVideoResize: D, blocked: M, ignored: L, noVideoRender: k = !1, pulseSpeakingIndicator: U = !1, inOverlayPopout: V = !1 } = e,
+    let { participant: t, channel: n, inCall: i, width: s, selected: S, fit: P, onVideoResize: T, blocked: D, ignored: M, noVideoRender: L = !1, pulseSpeakingIndicator: k = !1, inOverlayPopout: U = !1, paused: V = !1 } = e,
         F = O.Z.getVideoComponent(),
         W = (0, o.e7)([b.default], () => b.default.getId()),
         { user: Y, streamId: H, speaking: z } = t,
@@ -128,39 +128,39 @@ function D(e) {
         let { channel: e, selectedParticipant: t, user: n } = eo.current;
         e.isGuildStageVoice() && !K && (null == t ? void 0 : t.id) === n.id && u.Z.selectParticipant(e.id, null);
     }, [K]),
-    i && !J && !k && K && !P && null != F && O.Z.supports(w.AN.VIDEO))
+    i && !J && !L && K && !S && null != F && O.Z.supports(w.AN.VIDEO))
         ? null != el && null == ei
             ? (0, r.jsx)(_.Z, {
                   avError: el,
                   userId: t.id,
                   width: s,
-                  selected: P
+                  selected: S
               })
             : (0, r.jsx)(
                   g.Z,
                   {
-                      onResize: D,
+                      onResize: T,
                       wrapperClassName: R.videoWrapper,
                       className: R.content,
                       mirror: G,
                       streamId: H,
                       videoComponent: F,
-                      fit: T,
-                      paused: S,
+                      fit: P,
                       videoSpinnerContext: Y.id === W ? c.m.SELF_VIDEO : c.m.REMOTE_VIDEO,
+                      paused: V,
                       userId: Y.id
                   },
                   H
               )
         : (0, r.jsx)('div', {
-              className: a()(R.content, { [R.blockedAvatar]: M || L }),
+              className: a()(R.content, { [R.blockedAvatar]: D || M }),
               children: (0, r.jsx)(E.Z, {
                   'aria-label': Q,
                   src: et,
                   avatarDecoration: en,
                   backgroundSrc: Y.getAvatarURL(n.guild_id, 80),
                   size: ee,
-                  pulseSpeakingIndicator: U,
+                  pulseSpeakingIndicator: k,
                   speaking: z,
                   userId: Y.id
               })

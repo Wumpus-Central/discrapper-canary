@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => S });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -75,14 +75,14 @@ function I(e) {
         ]
     });
 }
-function P(e) {
+function S(e) {
     let { channel: t, onContinueClick: n } = e,
         l = (0, a.e7)([_.Z], () => _.Z.can(y.yP, t), [t]),
         s = (0, d.Q3)('StartStageChannelCallView'),
         u = t.guild_id,
         { canCreateGuildEvent: p } = (0, g.XJ)(t),
-        P = (0, x.Z)(t.id),
-        { usersInSummary: S } = (0, C.Z)(t.id),
+        S = (0, x.Z)(t.id),
+        { usersInSummary: P } = (0, C.Z)(t.id),
         Z = (0, c._q$)('StartStageChannelCallView'),
         N = i.useRef(null);
     return (0, r.jsxs)('div', {
@@ -123,7 +123,7 @@ function P(e) {
                             })
                         ]
                     }),
-                    P ? null : (0, r.jsx)(f.Z, { channelId: t.id }),
+                    S ? null : (0, r.jsx)(f.Z, { channelId: t.id }),
                     l
                         ? (0, r.jsx)(m.Z, {
                               className: O.eventPrompt,
@@ -136,7 +136,7 @@ function P(e) {
                               guildId: u
                           })
                         : null,
-                    (l || S.length > 0) && !s && (0, r.jsx)('hr', { className: O.separator }),
+                    (l || P.length > 0) && !s && (0, r.jsx)('hr', { className: O.separator }),
                     l
                         ? (0, r.jsx)(E, {
                               className: o()({ [O.eventPrompt]: s }),

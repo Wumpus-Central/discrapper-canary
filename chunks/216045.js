@@ -48,7 +48,7 @@ function F() {
         s = (0, a.e7)([A.Z], () => A.Z.hidePersonalInformation),
         F = (0, a.cj)([P.Z], () => P.Z.getAllPending()),
         { pendingBio: H, pendingAvatar: z } = F,
-        Y = (function (e, t) {
+        W = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -67,7 +67,7 @@ function F() {
             }
             return r;
         })(F, ['pendingBio', 'pendingAvatar']),
-        W = (0, N.SD)({
+        Y = (0, N.SD)({
             userId: n.id,
             image: z
         }),
@@ -141,11 +141,11 @@ function F() {
                                   onUpsellClick: L.Z,
                                   pendingBio: q
                               },
-                              Y
+                              W
                           )),
                           (t = t =
                               {
-                                  pendingAvatar: W,
+                                  pendingAvatar: Y,
                                   showNameplatePreview: !0
                               }),
                           Object.getOwnPropertyDescriptors

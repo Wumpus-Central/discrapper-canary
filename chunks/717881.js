@@ -108,8 +108,8 @@ let S = a.Z.Types,
                 var e, r;
                 return (0, o.Z)(t, b.xjy.EMBEDDED) ? f.Z.getGuild(null == (e = p.Z.getChannel(null == (r = m.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) ? void 0 : r.channelId)) ? void 0 : e.getGuildId()) : null;
             }),
-            Z = (0, l.e7)([f.Z], () => (null != P ? f.Z.getGuild(P.guildId) : null)),
-            I = (0, l.e7)([c.Z], () => {
+            I = (0, l.e7)([f.Z], () => (null != P ? f.Z.getGuild(P.guildId) : null)),
+            Z = (0, l.e7)([c.Z], () => {
                 if (null != t)
                     if (null != t.application_id) return c.Z.getApplication(t.application_id);
                     else return c.Z.getApplicationByName(t.name);
@@ -122,9 +122,9 @@ let S = a.Z.Types,
                   y(h({}, S), {
                       activity: t,
                       user: n,
-                      application: I,
+                      application: Z,
                       hideHeader: g,
-                      activityGuild: null != E ? E : Z,
+                      activityGuild: null != E ? E : I,
                       showChannelDetails: O,
                       channel: O ? j : void 0,
                       renderActions: s
