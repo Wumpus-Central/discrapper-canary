@@ -265,8 +265,15 @@ class q extends Z {
             l = 'username' === f.Z.roleStyle && (null != r || null != a),
             c = (0, b.OC)(n, 'AutocompleteRow') && null != a && null != a.primaryColor && null != a.secondaryColor,
             u = c && l,
-            { text: _, gradient: p } = (0, d.JUn)(null == a ? void 0 : a.primaryColor, null == a ? void 0 : a.secondaryColor, null == a ? void 0 : a.tertiaryColor, f.Z.useReducedMotion, 'username'),
-            h = l ? M({}, u ? _.gradientStyle : { color: null != r ? r : void 0 }) : void 0;
+            { gradientStyle: _, gradientClassname: p } = (0, d.JUn)({
+                primaryColor: null == a ? void 0 : a.primaryColor,
+                secondaryColor: null == a ? void 0 : a.secondaryColor,
+                tertiaryColor: null == a ? void 0 : a.tertiaryColor,
+                useReducedMotion: f.Z.useReducedMotion,
+                roleStyle: 'username',
+                includeConvenienceGlow: !0
+            }),
+            h = l ? M({}, u ? _ : { color: null != r ? r : void 0 }) : void 0;
         return (0, i.jsxs)(R.RX, {
             children: [
                 (0, i.jsx)(R.z5, {
@@ -280,10 +287,7 @@ class q extends Z {
                                     tooltip: !1
                                 }),
                             (0, i.jsxs)('span', {
-                                className: s()({
-                                    [p.gradientClassName]: u,
-                                    [_.gradientClassName]: u
-                                }),
+                                className: s()({ [p]: u }),
                                 style: h,
                                 'data-text': u ? '@'.concat(e.name) : void 0,
                                 children: ['@', e.name]

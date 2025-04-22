@@ -1,14 +1,12 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var o = n(120356),
     a = n.n(o),
     i = n(481060),
-    s = n(442837),
-    l = n(607070),
-    c = n(477747),
-    u = n(848697);
-function d(e) {
+    s = n(477747),
+    l = n(848697);
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +31,7 @@ function d(e) {
     }
     return e;
 }
-function p(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,35 +49,35 @@ function p(e, t) {
         e
     );
 }
-let g = function (e) {
+let d = function (e) {
     var {
             className: t,
             compact: n = !1,
             contentOnly: o = !1,
-            zalgo: g = !0,
-            preview: m = !1,
-            disableInteraction: f = !1,
-            childrenRepliedMessage: b,
-            childrenExecutedCommand: h,
-            childrenHeader: y,
-            childrenSystemMessage: _,
-            childrenButtons: O,
-            childrenMessageContent: v,
-            childrenAccessories: j,
-            messageRef: x,
-            focusProps: C = {
+            zalgo: d = !0,
+            preview: p = !1,
+            disableInteraction: g = !1,
+            childrenRepliedMessage: m,
+            childrenExecutedCommand: f,
+            childrenHeader: b,
+            childrenSystemMessage: h,
+            childrenButtons: y,
+            childrenMessageContent: _,
+            childrenAccessories: O,
+            messageRef: v,
+            focusProps: j = {
                 offset: {
                     left: 4,
                     right: 4
                 }
             },
-            hasThread: P,
-            isSystemMessage: T,
-            hasReply: w,
-            authorHasGradientRole: S = !1,
-            guildId: I
+            hasThread: x,
+            isSystemMessage: P,
+            hasReply: C,
+            authorHasGradientRole: T = !1,
+            guildId: w
         } = e,
-        N = (function (e, t) {
+        S = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -98,47 +96,45 @@ let g = function (e) {
             }
             return o;
         })(e, ['className', 'compact', 'contentOnly', 'zalgo', 'preview', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'authorHasGradientRole', 'guildId']);
-    let k = (0, c.Z)(I, 'BaseMessage'),
-        M = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-        R = (0, r.jsx)(
+    let I = (0, s.Z)(w, 'BaseMessage'),
+        N = (0, r.jsx)(
             i.tEY,
-            p(d({}, C), {
+            u(c({}, j), {
                 children: (0, r.jsxs)(
                     'div',
-                    p(
-                        d(
+                    u(
+                        c(
                             {
                                 className: a()(t, {
-                                    [u.gradient]: !!k && S,
-                                    [u.reducedMotion]: M,
-                                    [u.wrapper]: !0,
-                                    [u.contentOnly]: o,
-                                    [u.compact]: n,
-                                    [u.preview]: m,
-                                    [u.cozy]: !n,
-                                    [u.zalgo]: g,
-                                    [u.hasThread]: P,
-                                    [u.isSystemMessage]: T,
-                                    [u.hasReply]: w
+                                    [l.gradient]: !!I && T,
+                                    [l.wrapper]: !0,
+                                    [l.contentOnly]: o,
+                                    [l.compact]: n,
+                                    [l.preview]: p,
+                                    [l.cozy]: !n,
+                                    [l.zalgo]: d,
+                                    [l.hasThread]: x,
+                                    [l.isSystemMessage]: P,
+                                    [l.hasReply]: C
                                 }),
-                                ref: x
+                                ref: v
                             },
-                            N
+                            S
                         ),
                         {
                             role: 'article',
                             children: [
-                                b,
-                                h,
+                                m,
+                                f,
                                 (0, r.jsxs)('div', {
-                                    className: u.contents,
-                                    children: [_, y, null == _ && v]
+                                    className: l.contents,
+                                    children: [h, b, null == h && _]
                                 }),
-                                j,
-                                null != O
+                                O,
+                                null != y
                                     ? (0, r.jsx)('div', {
-                                          className: u.buttonContainer,
-                                          children: O
+                                          className: l.buttonContainer,
+                                          children: y
                                       })
                                     : null
                             ]
@@ -147,5 +143,5 @@ let g = function (e) {
                 )
             })
         );
-    return f ? (0, r.jsx)(i.Rny, { children: R }) : R;
+    return g ? (0, r.jsx)(i.Rny, { children: N }) : N;
 };

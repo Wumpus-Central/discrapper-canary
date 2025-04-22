@@ -90,8 +90,17 @@ function E(e) {
         h = 'dot' === t,
         m = null != s && null != s.primaryColor && null != s.secondaryColor,
         g = p && m,
-        { text: E, gradient: b } = (0, c.I)(null == s ? void 0 : s.primaryColor, null == s ? void 0 : s.secondaryColor, null == s ? void 0 : s.tertiaryColor, 'username'),
-        y = h
+        {
+            gradientStyle: E,
+            gradientClassname: b,
+            gradientGlowClassname: y
+        } = (0, c.I)({
+            primaryColor: null == s ? void 0 : s.primaryColor,
+            secondaryColor: null == s ? void 0 : s.secondaryColor,
+            tertiaryColor: null == s ? void 0 : s.tertiaryColor,
+            roleStyle: 'username'
+        }),
+        v = h
             ? (0, r.jsx)(u.F, {
                   color: i,
                   colors: m ? s : null,
@@ -100,14 +109,30 @@ function E(e) {
               })
             : null;
     return (0, r.jsxs)('span', {
-        style: _({ color: p && !m && null != i ? i : void 0 }, g ? E.gradientStyle : {}),
-        'data-text': g ? n : '',
-        className: a()(f, {
-            [d.username]: p,
-            [E.gradientClassName]: g,
-            [b.gradientClassName]: g
-        }),
-        children: ['left' === l && y, n, 'right' === l && y]
+        className: a()(f, d.container),
+        children: [
+            'left' === l && v,
+            (0, r.jsxs)('span', {
+                className: d.nameContainer,
+                style: _({ color: p && !m && null != i ? i : void 0 }, g ? E : {}),
+                children: [
+                    (0, r.jsx)('span', {
+                        className: a()(d.name, {
+                            [d.username]: p,
+                            [b]: g
+                        }),
+                        children: n
+                    }),
+                    g &&
+                        (0, r.jsx)('span', {
+                            'aria-hidden': !0,
+                            className: a()(d.nameGlow, y),
+                            children: n
+                        })
+                ]
+            }),
+            'right' === l && v
+        ]
     });
 }
 function b(e) {

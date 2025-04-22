@@ -192,12 +192,17 @@ function m(e) {
 }
 function g(e) {
     let { color: t, colors: n, className: i } = e,
-        { text: a, gradient: s } = (0, l.I)(null == n ? void 0 : n.primaryColor, null == n ? void 0 : n.secondaryColor, null == n ? void 0 : n.tertiaryColor, 'dot');
+        { gradientStyle: a, gradientClassname: s } = (0, l.I)({
+            primaryColor: null == n ? void 0 : n.primaryColor,
+            secondaryColor: null == n ? void 0 : n.secondaryColor,
+            tertiaryColor: null == n ? void 0 : n.tertiaryColor,
+            roleStyle: 'dot'
+        });
     if (null == t && null == n) return null;
     let u = null != n && null != n.primaryColor && null != n.secondaryColor,
-        f = d({}, u ? a.gradientStyle : { backgroundColor: t });
+        f = d({}, u ? a : { backgroundColor: t });
     return (0, r.jsx)('span', {
-        className: o()(c.roleCircle, i, { [s.gradientClassName]: u }),
+        className: o()(c.roleCircle, i, { [s]: u }),
         style: f
     });
 }

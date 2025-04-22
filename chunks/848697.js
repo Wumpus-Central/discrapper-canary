@@ -78,6 +78,5 @@ e.exports = {
     communicationDisabled: 'communicationDisabled_c19a55',
     compactCommunicationDisabled: 'compactCommunicationDisabled_c19a55',
     communicationDisabledOpacity: 'communicationDisabledOpacity_c19a55',
-    badgesContainer: 'badgesContainer_c19a55',
-    reducedMotion: 'reducedMotion_c19a55'
+    badgesContainer: 'badgesContainer_c19a55'
 };

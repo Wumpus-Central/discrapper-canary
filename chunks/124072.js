@@ -83,7 +83,12 @@ let g = (e) => {
     var { children: t, className: n, color: a, roleColors: d, iconType: _, onMouseEnter: m, onMouseLeave: g } = e,
         E = h(e, ['children', 'className', 'color', 'roleColors', 'iconType', 'onMouseEnter', 'onMouseLeave']);
     let [b, y] = i.useState(!1),
-        { text: v, gradient: O } = (0, l.Icv)(null == d ? void 0 : d.primaryColor, null == d ? void 0 : d.secondaryColor, null == d ? void 0 : d.tertiaryColor, 'username'),
+        { gradientStyle: v, gradientClassname: O } = (0, l.Icv)({
+            primaryColor: null == d ? void 0 : d.primaryColor,
+            secondaryColor: null == d ? void 0 : d.secondaryColor,
+            tertiaryColor: null == d ? void 0 : d.tertiaryColor,
+            roleStyle: 'username'
+        }),
         I = i.useCallback(
             (e) => {
                 y(!0), null == m || m(e);
@@ -123,8 +128,8 @@ let g = (e) => {
                           })
                         : null != d
                           ? (0, r.jsx)('span', {
-                                style: f({}, v.gradientStyle),
-                                className: O.gradientClassName,
+                                style: f({}, v),
+                                className: O,
                                 children: t
                             })
                           : t

@@ -71,11 +71,11 @@ function q(e) {
     }
     return e;
 }
-let J = (0, b.Un)({
+let Q = (0, b.Un)({
         createPromise: () => n.e('4848').then(n.bind(n, 797967)),
         webpackId: 797967
     }),
-    Q = o().debounce((e, t) => (0, Z.Uv)(e, t), 200);
+    J = o().debounce((e, t) => (0, Z.Uv)(e, t), 200);
 function $(e) {
     let { role: t, disabled: n } = e,
         [l, s] = i.useState(t.name);
@@ -91,7 +91,7 @@ function $(e) {
                 value: l,
                 maxLength: B.VKK,
                 onChange: function (e) {
-                    s(e), Q(t.id, e);
+                    s(e), J(t.id, e);
                 },
                 disabled: n
             })
@@ -243,11 +243,18 @@ function et(e) {
 }
 function en() {
     let e = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
-        { text: t, gradient: n } = (0, g.JUn)((0, c.Rf)(F.SK.primary_color), (0, c.Rf)(F.SK.secondary_color), (0, c.Rf)(F.SK.tertiary_color), e, 'username');
+        { gradientStyle: t, gradientClassname: n } = (0, g.JUn)({
+            primaryColor: (0, c.Rf)(F.SK.primary_color),
+            secondaryColor: (0, c.Rf)(F.SK.secondary_color),
+            tertiaryColor: (0, c.Rf)(F.SK.tertiary_color),
+            useReducedMotion: e,
+            roleStyle: 'username',
+            includeConvenienceGlow: !0
+        });
     return (0, r.jsx)('span', {
-        style: q({}, t.gradientStyle),
-        className: s()(n.gradientClassName, t.gradientClassName),
-        'data-text': 'magical',
+        style: q({}, t),
+        className: n,
+        'data-text': z.intl.string(H.default['+/IHLi']),
         children: z.intl.string(H.default['+/IHLi'])
     });
 }
@@ -263,7 +270,7 @@ function er(e) {
                 className: V.colorDescription,
                 children: z.intl.string(z.t['9UCxlZ'])
             }),
-            (0, r.jsx)(J, {
+            (0, r.jsx)(Q, {
                 defaultColor: B.p6O,
                 colors: s === D.g.GRADIENT && a ? F.tl : B.pmI,
                 value: i.color,
