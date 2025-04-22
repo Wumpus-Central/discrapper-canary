@@ -98,11 +98,11 @@ let D = {
     U = new Map(),
     G = new Map(),
     B = new Map(),
-    F = 'contextless-faux-channel-id';
-function V(e, t) {
+    V = 'contextless-faux-channel-id';
+function F(e, t) {
     var n, r;
     let i = e;
-    return (i = (0, m.yE)(null != (r = null == (n = u.Z.getApplication(t)) ? void 0 : n.flags) ? r : 0, N.udG.CONTEXTLESS_ACTIVITY) && (0, b.sq)() ? F : i), ''.concat(t, ':').concat(i);
+    return (i = (0, m.yE)(null != (r = null == (n = u.Z.getApplication(t)) ? void 0 : n.flags) ? r : 0, N.udG.CONTEXTLESS_ACTIVITY) && (0, b.sq)() ? V : i), ''.concat(t, ':').concat(i);
 }
 let Z = new Map(),
     H = new Map(),
@@ -135,7 +135,7 @@ function en(e) {
         N = null == (t = p.find((e) => e.userId === T)) ? void 0 : t.sessionId,
         C = p.some((e) => (0, v.J)(e)),
         P = k.get(u),
-        w = Z.get(V(null != m ? m : null, u)),
+        w = Z.get(F(null != m ? m : null, u)),
         D = null == w ? void 0 : w.launchParams,
         x = {
             applicationId: u,
@@ -171,8 +171,8 @@ function en(e) {
               channelId: null != m ? m : null,
               applicationId: u
           }));
-    let F = b.filter((e) => e.applicationId !== u);
-    S.length > 0 && F.push(x), B.set(c.id, F);
+    let V = b.filter((e) => e.applicationId !== u);
+    S.length > 0 && V.push(x), B.set(c.id, V);
     let H = (0, O.wq)(c);
     if (null != H) {
         let e = (null != (o = G.get(H)) ? o : []).filter((e) => e.location.id !== c.id);
@@ -281,7 +281,11 @@ function ec(e) {
               s.Z.wait(() => {
                   s.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
               }))
-            : (J = P !== _.Z.getChannelId() || (0, S.Z)(P) ? (c.kind === a.E.CONTEXTLESS ? A.Ez.PANEL : A.Ez.PIP) : A.Ez.PANEL),
+            : P !== _.Z.getChannelId() || (0, S.Z)(P)
+              ? c.kind === a.E.CONTEXTLESS
+                  ? ((J = A.Ez.PANEL), ($ = A.MI.NO_CHAT))
+                  : (J = A.Ez.PIP)
+              : (J = A.Ez.PANEL),
         X.set(eC(c.id, i), Date.now());
 }
 function eu(e) {
@@ -372,7 +376,7 @@ let eE = () => {
 };
 function eb(e) {
     let { applicationId: t, componentId: n, commandOrigin: r, launchParams: i, channelId: a, inviterUserId: o } = e;
-    Z.set(V(a, t), {
+    Z.set(F(a, t), {
         isLaunching: !0,
         componentId: n,
         inviterUserId: o,
@@ -393,7 +397,7 @@ function ev(e) {
 }
 function eO(e) {
     let { applicationId: t, channelId: n } = e;
-    Z.delete(V(n, t));
+    Z.delete(F(n, t));
 }
 function eI(e) {
     let { applicationId: t, lockState: n, pictureInPictureLockState: r, gridLockState: i } = e;
@@ -542,7 +546,7 @@ class eP extends (i = o.ZP.PersistedStore) {
         return D.everLaunchedActivities.has(e);
     }
     getLaunchState(e, t) {
-        if (null != e) return Z.get(V(null != t ? t : null, e));
+        if (null != e) return Z.get(F(null != t ? t : null, e));
     }
     getLaunchStates() {
         return Z;

@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(51144),
     E = n(566620),
     I = n(317381),
-    P = n(619915),
-    S = n(988980),
+    S = n(619915),
+    P = n(988980),
     Z = n(16609),
     N = n(952561),
     T = n(563218),
@@ -48,8 +48,8 @@ function G(e) {
         W = (0, s.Wu)([I.ZP], () => I.ZP.getEmbeddedActivitiesForLocation(F), [F]),
         Y = (0, Z.pY)(F),
         q = (0, s.e7)([y.Z], () => y.Z.getChannel(Y)),
-        K = (0, P.gb)(W),
-        X = (0, P.uF)(K),
+        K = (0, S.gb)(W),
+        X = (0, S.uF)(K),
         Q = i.useCallback(() => {
             (0, E.tg)(k.Ez.PIP);
         }, []),
@@ -79,7 +79,7 @@ function G(e) {
     let ea = el.width / Math.max(el.height, 1) < k.I0,
         es = 0,
         ec = 0,
-        eu = (0, S.Z)(null == z ? void 0 : z.id);
+        eu = (0, P.Z)(null == z ? void 0 : z.id);
     if (!eu) {
         let e = el.width,
             t = el.height;
@@ -104,77 +104,74 @@ function G(e) {
                 }),
                 e
             );
-        }, [ef]);
-    i.useEffect(() => {
-        ep && (0, E.gC)(k.MI.NO_CHAT);
-    }, [ep]);
-    let eg = (function (e, t, n) {
-        let r = (0, p.Z)(e),
-            l = e !== r,
-            [o, a] = i.useState(!1);
-        i.useEffect(() => {
-            a(!0);
-            let e = setTimeout(() => a(!1), 50);
-            return () => clearTimeout(e);
-        }, [e]);
-        let s = !h.Z.useReducedMotion && (l || o);
-        return i.useMemo(() => {
-            var r, i;
-            let l = s
-                ? {
-                      transitionProperty: 'height, max-height',
-                      transitionDuration: ''.concat(50, 'ms'),
-                      transitionTimingFunction: 'ease-in-out'
-                  }
-                : void 0;
-            return e && null != t && null != n
-                ? ((r = (function (e) {
-                      for (var t = 1; t < arguments.length; t++) {
-                          var n = null != arguments[t] ? arguments[t] : {},
-                              r = Object.keys(n);
-                          'function' == typeof Object.getOwnPropertySymbols &&
-                              (r = r.concat(
-                                  Object.getOwnPropertySymbols(n).filter(function (e) {
-                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                  })
-                              )),
-                              r.forEach(function (t) {
-                                  var r;
-                                  (r = n[t]),
-                                      t in e
-                                          ? Object.defineProperty(e, t, {
-                                                value: r,
-                                                enumerable: !0,
-                                                configurable: !0,
-                                                writable: !0
-                                            })
-                                          : (e[t] = r);
-                              });
+        }, [ef]),
+        eg = (function (e, t, n) {
+            let r = (0, p.Z)(e),
+                l = e !== r,
+                [o, a] = i.useState(!1);
+            i.useEffect(() => {
+                a(!0);
+                let e = setTimeout(() => a(!1), 50);
+                return () => clearTimeout(e);
+            }, [e]);
+            let s = !h.Z.useReducedMotion && (l || o);
+            return i.useMemo(() => {
+                var r, i;
+                let l = s
+                    ? {
+                          transitionProperty: 'height, max-height',
+                          transitionDuration: ''.concat(50, 'ms'),
+                          transitionTimingFunction: 'ease-in-out'
                       }
-                      return e;
-                  })({}, l)),
-                  (i = i =
-                      {
-                          minHeight: 200,
-                          maxHeight: n,
-                          height: t
-                      }),
-                  Object.getOwnPropertyDescriptors
-                      ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
-                      : (function (e, t) {
-                            var n = Object.keys(e);
-                            if (Object.getOwnPropertySymbols) {
-                                var r = Object.getOwnPropertySymbols(e);
-                                n.push.apply(n, r);
-                            }
-                            return n;
-                        })(Object(i)).forEach(function (e) {
-                            Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
-                        }),
-                  r)
-                : l;
-        }, [s, e, n, t]);
-    })(ee, et, G);
+                    : void 0;
+                return e && null != t && null != n
+                    ? ((r = (function (e) {
+                          for (var t = 1; t < arguments.length; t++) {
+                              var n = null != arguments[t] ? arguments[t] : {},
+                                  r = Object.keys(n);
+                              'function' == typeof Object.getOwnPropertySymbols &&
+                                  (r = r.concat(
+                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                      })
+                                  )),
+                                  r.forEach(function (t) {
+                                      var r;
+                                      (r = n[t]),
+                                          t in e
+                                              ? Object.defineProperty(e, t, {
+                                                    value: r,
+                                                    enumerable: !0,
+                                                    configurable: !0,
+                                                    writable: !0
+                                                })
+                                              : (e[t] = r);
+                                  });
+                          }
+                          return e;
+                      })({}, l)),
+                      (i = i =
+                          {
+                              minHeight: 200,
+                              maxHeight: n,
+                              height: t
+                          }),
+                      Object.getOwnPropertyDescriptors
+                          ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+                          : (function (e, t) {
+                                var n = Object.keys(e);
+                                if (Object.getOwnPropertySymbols) {
+                                    var r = Object.getOwnPropertySymbols(e);
+                                    n.push.apply(n, r);
+                                }
+                                return n;
+                            })(Object(i)).forEach(function (e) {
+                                Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+                            }),
+                      r)
+                    : l;
+            }, [s, e, n, t]);
+        })(ee, et, G);
     if (null == z) return null;
     let eb = [];
     null != ed &&
