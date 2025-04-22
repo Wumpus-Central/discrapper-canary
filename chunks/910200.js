@@ -1,49 +1,48 @@
 n.d(t, {
-    N3: () => b,
-    Z7: () => E,
-    ZP: () => y
+    N3: () => E,
+    Z7: () => g,
+    ZP: () => b
 }),
     n(953529);
 var r = n(200651);
 n(192379);
 var i = n(120356),
     a = n.n(i),
-    o = n(692547),
-    s = n(481060),
-    l = n(114487),
-    c = n(686546),
-    u = n(813197),
-    d = n(15210),
-    f = n(464647),
-    _ = n(43542),
-    p = n(723776),
-    h = n(686369),
-    m = n(248217);
-function g(e, t) {
-    let n = (0, h.q)(e, t);
+    o = n(481060),
+    s = n(114487),
+    l = n(686546),
+    c = n(813197),
+    u = n(15210),
+    d = n(464647),
+    f = n(43542),
+    _ = n(723776),
+    p = n(686369),
+    h = n(248217);
+function m(e, t) {
+    let n = (0, p.qw)(e, t);
     return null != e.brandColorPrimary ? e.brandColorPrimary : n;
 }
-function E(e) {
+function g(e) {
     let { profile: t, className: n } = e,
-        i = g(t, (0, s.dQu)(o.Z.colors.BG_BASE_TERTIARY).hex()),
-        l = (0, h.d)(i, t);
+        i = m(t, (0, p.nv)().hex()),
+        o = (0, p.dG)(i, t);
     return (0, r.jsx)('div', {
-        className: a()(n, m.banner),
-        style: { background: l }
+        className: a()(n, h.banner),
+        style: { background: o }
     });
 }
-function b(e) {
+function E(e) {
     let { profile: t, onIconChange: n } = e;
     return null == n
         ? (0, r.jsx)('div', {
-              className: m.avatarContainer,
-              children: (0, r.jsx)(c.ZP, {
-                  mask: c.QS.CLAN_ICON,
+              className: h.avatarContainer,
+              children: (0, r.jsx)(l.ZP, {
+                  mask: l.QS.CLAN_ICON,
                   width: 70,
                   height: 70,
                   children: (0, r.jsx)('div', {
-                      className: m.avatarWrapper,
-                      children: (0, r.jsx)(l.b, {
+                      className: h.avatarWrapper,
+                      children: (0, r.jsx)(s.b, {
                           guildId: t.id,
                           guildName: t.name,
                           guildIcon: t.icon,
@@ -53,31 +52,31 @@ function b(e) {
               })
           })
         : (0, r.jsx)('div', {
-              className: m.avatarContainer,
-              children: (0, r.jsx)(s.tEY, {
+              className: h.avatarContainer,
+              children: (0, r.jsx)(o.tEY, {
                   within: !0,
-                  children: (0, r.jsx)(c.ZP, {
-                      mask: c.QS.CLAN_ICON,
+                  children: (0, r.jsx)(l.ZP, {
+                      mask: l.QS.CLAN_ICON,
                       width: 70,
                       height: 70,
                       children: (0, r.jsxs)('div', {
-                          className: a()(m.avatarWrapper, m.clickable),
+                          className: a()(h.avatarWrapper, h.clickable),
                           children: [
-                              (0, r.jsx)(l.b, {
+                              (0, r.jsx)(s.b, {
                                   guildId: t.id,
                                   guildName: t.name,
                                   guildIcon: t.icon,
                                   iconSize: 64
                               }),
-                              (0, r.jsx)('div', { className: m.overlay }),
-                              (0, r.jsx)(s.vdY, {
+                              (0, r.jsx)('div', { className: h.overlay }),
+                              (0, r.jsx)(o.vdY, {
                                   size: 'custom',
-                                  className: m.overlayIcon,
+                                  className: h.overlayIcon,
                                   width: 20,
                                   height: 20,
                                   color: 'white'
                               }),
-                              (0, r.jsx)(u.ZP, {
+                              (0, r.jsx)(c.ZP, {
                                   tabIndex: 0,
                                   onChange: n
                               })
@@ -87,42 +86,42 @@ function b(e) {
               })
           });
 }
-function y(e) {
-    let { profile: t, onIconChange: n, className: i, disableCTA: o, CTAOverride: l, onClose: c } = e,
-        u = null;
+function b(e) {
+    let { profile: t, onIconChange: n, className: i, disableCTA: s, CTAOverride: l, onClose: c } = e,
+        p = null;
     return (
         null != l
-            ? (u = l)
-            : o ||
-              (u = (0, r.jsx)(d.Z, {
+            ? (p = l)
+            : s ||
+              (p = (0, r.jsx)(u.Z, {
                   profile: t,
                   onComplete: c
               })),
         (0, r.jsxs)('div', {
-            className: a()(m.container, i),
+            className: a()(h.container, i),
             children: [
-                (0, r.jsx)(E, { profile: t }),
-                (0, r.jsx)(b, {
+                (0, r.jsx)(g, { profile: t }),
+                (0, r.jsx)(E, {
                     onIconChange: n,
                     profile: t
                 }),
-                (0, r.jsx)(_.Z, { profile: t }),
+                (0, r.jsx)(f.Z, { profile: t }),
                 (0, r.jsxs)('div', {
-                    className: m.body,
+                    className: h.body,
                     children: [
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             children: t.description
                         }),
-                        (0, r.jsx)(f.Z, { profile: t }),
-                        (0, r.jsx)(p.F, { profile: t })
+                        (0, r.jsx)(d.Z, { profile: t }),
+                        (0, r.jsx)(_.F, { profile: t })
                     ]
                 }),
-                null != u &&
+                null != p &&
                     (0, r.jsx)('div', {
-                        className: m.buttonContainer,
-                        children: u
+                        className: h.buttonContainer,
+                        children: p
                     })
             ]
         })
