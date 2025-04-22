@@ -1,8 +1,8 @@
-n.d(l, { H: () => o });
+n.d(l, { H: () => r });
 var t = n(200651),
     a = n(426642),
-    r = n(839388);
-let o = (e) => {
+    i = n(839388);
+let r = (e) => {
     let { error: l, uploadErrorCode: n } = e;
     return null == l && null == n
         ? null
@@ -14,7 +14,7 @@ let o = (e) => {
                 }
             })
           : (0, t.jsx)('div', {
-                className: r.errorBanner,
+                className: i.errorBanner,
                 children: (0, t.jsx)('p', { children: l })
             });
 };

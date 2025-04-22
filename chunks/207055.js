@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(797258),
     E = n(606304),
     I = n(979651),
-    S = n(51144),
-    P = n(649739),
+    P = n(51144),
+    S = n(649739),
     Z = n(262317),
     N = n(981631),
     T = n(524484),
@@ -52,13 +52,13 @@ let w = i.memo((e) => {
             [w, g.id]
         ),
         H = (0, p.Z)(null != F ? [F.applicationId] : []),
-        V = (0, P.Hr)('voice_users_eligibility_check', !1),
+        V = (0, S.Hr)('voice_users_eligibility_check', !1),
         z = (0, a.e7)([v.Z, j.Z], () => (R ? j.Z.getActivities() : v.Z.getActivities(w, g.guild_id))).find((e) => null != e.application_id && e.type === N.IIU.PLAYING),
         W = (0, a.e7)([d.Z], () => ((null == z ? void 0 : z.application_id) != null ? d.Z.getApplication(null == z ? void 0 : z.application_id) : void 0));
-    null != W && P.ZP.trackExposure({ location: 'voice_users' });
+    null != W && S.ZP.trackExposure({ location: 'voice_users' });
     let [Y, q] = (0, a.Wu)([b.Z], () => [b.Z.getStreamForUser(w, g.getGuildId()), b.Z.getActiveStreamForUser(w, g.getGuildId())], [g, w]),
         K = (0, a.e7)([O.Z], () => O.Z.getSessionById(x)),
-        X = S.ZP.useName(s),
+        X = P.ZP.useName(s),
         Q = (0, a.e7)([I.Z], () => I.Z.getVoicePlatformForChannel(g.id, w), [g.id, w]),
         J = (0, m.Eu)(g.id, w);
     return (0, r.jsx)(f.Z, {
@@ -133,12 +133,12 @@ let R = [],
     k = function (e) {
         let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: h, location: f, numAudience: b, withGuildIcon: y = !1, className: C, children: j } = e,
             [O, E] = i.useState(null),
-            [I, S] = i.useState(!1),
-            P = i.useRef(null),
+            [I, P] = i.useState(!1),
+            S = i.useRef(null),
             T = (0, m.Es)(l.id, null != c ? c : R),
             k = i.useRef(
                 new s.sW(50, () => {
-                    E(P.current), (P.current = null);
+                    E(S.current), (S.current = null);
                 })
             ),
             M = i.useRef(
@@ -148,13 +148,13 @@ let R = [],
             ),
             L = i.useCallback(
                 (e) => {
-                    t && (S(!0), M.current.cancel(), (P.current = e), k.current.delay());
+                    t && (P(!0), M.current.cancel(), (S.current = e), k.current.delay());
                 },
                 [t]
             ),
             D = i.useCallback(
                 (e) => {
-                    t && (k.current.cancel(), O === e && (S(!1), M.current.delay()));
+                    t && (k.current.cancel(), O === e && (P(!1), M.current.delay()));
                 },
                 [t, O]
             ),

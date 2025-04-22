@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(284851),
     j = n(46140),
     v = n(388032),
-    y = n(142468);
-let _ = [
+    _ = n(142468);
+let y = [
     {
         value: j.cd.DESKTOP,
         get label() {
@@ -47,7 +47,7 @@ function C(e) {
             return null;
     }
     return (0, r.jsxs)('div', {
-        className: y.platformSelectorPrimaryLabel,
+        className: _.platformSelectorPrimaryLabel,
         children: [n, t]
     });
 }
@@ -79,8 +79,8 @@ function O(e) {
         Q = (0, g.iQ)(w),
         U = !(0, g.zi)(w),
         H = (0, p._Q)(w),
-        z = (0, g.Xv)(w.config),
-        F = (0, g.q8)(w),
+        F = (0, g.Xv)(w.config),
+        z = (0, g.q8)(w),
         X = (0, g.Vl)(w),
         K = (0, p.Rf)(w),
         [Y, G, J] = (0, p.me)(w, K),
@@ -97,11 +97,11 @@ function O(e) {
             progressState: H,
             quest: w,
             location: S,
-            isCollectibleQuest: z,
+            isCollectibleQuest: F,
             questContentPosition: E,
             questContentRowIndex: T,
             inGiftInventory: !0,
-            isVideoQuest: F,
+            isVideoQuest: z,
             inGameQuest: X
         }),
         { startingConsoleQuest: es, startConsoleQuest: ea } = (0, p.GI)({
@@ -127,26 +127,26 @@ function O(e) {
               color: l.Ttl.BRAND,
               submitting: I,
               onClick: null != eo ? eo : void 0,
-              className: y.button,
+              className: _.button,
               children: er
           }))
         : W
-          ? (el = F
+          ? (el = z
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.zxk, {
                               color: l.Ttl.PRIMARY,
-                              className: y.button,
+                              className: _.button,
                               style: { flex: 1 },
                               onClick: () => {
                                   (0, h.openVideoQuestModal)(w);
                               },
                               children: (0, r.jsxs)('div', {
-                                  className: y.ctaInner,
+                                  className: _.ctaInner,
                                   children: [
                                       (0, r.jsx)(l.Oe7, {
                                           color: N ? void 0 : l.TVs.colors.WHITE,
-                                          className: y.videoQuestPlayIcon
+                                          className: _.videoQuestPlayIcon
                                       }),
                                       (0, r.jsx)('span', { children: v.intl.string(v.t.YsCuyM) })
                                   ]
@@ -154,7 +154,7 @@ function O(e) {
                           }),
                           (0, r.jsx)(l.zxk, {
                               color: l.Ttl.BRAND,
-                              className: y.button,
+                              className: _.button,
                               onClick: null != eo ? eo : void 0,
                               children: er
                           })
@@ -162,7 +162,7 @@ function O(e) {
                   })
                 : (0, r.jsx)(l.zxk, {
                       color: l.Ttl.BRAND,
-                      className: y.button,
+                      className: _.button,
                       onClick: null != eo ? eo : void 0,
                       children: er
                   }))
@@ -172,15 +172,15 @@ function O(e) {
                       color: l.Ttl.BRAND,
                       submitting: I,
                       onClick: null != eo ? eo : void 0,
-                      className: y.button,
+                      className: _.button,
                       children: er
                   }))
                 : U && Z && !ei
                   ? (el = ee
                         ? (0, r.jsx)(l.PhF, {
-                              className: y.platformSelectorPrimary,
+                              className: _.platformSelectorPrimary,
                               isSelected: () => !1,
-                              options: _,
+                              options: y,
                               placeholder: v.intl.string(v.t.drVw4e),
                               renderOptionLabel: C,
                               select: en,
@@ -197,7 +197,7 @@ function O(e) {
                           ? k
                               ? (0, r.jsx)(l.zxk, {
                                     color: l.Ttl.PRIMARY,
-                                    className: y.button,
+                                    className: _.button,
                                     onClick: null != eo ? eo : void 0,
                                     children: er
                                 })
@@ -205,23 +205,23 @@ function O(e) {
                                     color: l.Ttl.PRIMARY,
                                     onClick: ea,
                                     disabled: es,
-                                    className: y.button,
+                                    className: _.button,
                                     children: (0, r.jsxs)('div', {
-                                        className: y.ctaInner,
+                                        className: _.ctaInner,
                                         children: [R.render(), v.intl.string(v.t.nPThNT)]
                                     })
                                 })
-                          : F || (X && w.config.features.includes(j.S7.START_QUEST_CTA))
+                          : z || (X && w.config.features.includes(j.S7.START_QUEST_CTA))
                             ? (0, r.jsx)(l.zxk, {
                                   color: l.Ttl.BRAND,
                                   onClick: null != eo ? eo : void 0,
-                                  className: y.button,
+                                  className: _.button,
                                   children: er
                               })
                             : (0, r.jsx)(l.zxk, {
                                   color: l.Ttl.PRIMARY,
                                   disabled: !0,
-                                  className: y.button,
+                                  className: _.button,
                                   children: v.intl.string(v.t['9KoPyM'])
                               }))
                   : U &&
@@ -231,13 +231,13 @@ function O(e) {
                               children: [
                                   (0, r.jsx)(l.zxk, {
                                       color: l.Ttl.PRIMARY,
-                                      className: y.button,
+                                      className: _.button,
                                       disabled: !0,
                                       children: v.intl.string(v.t.V293qq)
                                   }),
                                   (0, r.jsx)(l.zxk, {
                                       color: l.Ttl.BRAND,
-                                      className: y.button,
+                                      className: _.button,
                                       onClick: () => (0, h.openQuestMinorEnrollmentBlockModal)(S),
                                       children: v.intl.string(v.t.vY9GgI)
                                   })
@@ -247,19 +247,19 @@ function O(e) {
                               submitting: M,
                               color: l.Ttl.BRAND,
                               onClick: null != eo ? eo : void 0,
-                              className: y.button,
+                              className: _.button,
                               children: er
                           }))
             : (el = (0, r.jsx)(l.zxk, {
                   color: l.Ttl.PRIMARY,
                   disabled: !0,
-                  className: y.button,
+                  className: _.button,
                   children: v.intl.format(v.t['14o6QU'], { expiryDate: D })
               })),
     null == el)
         ? null
         : (0, r.jsxs)('div', {
-              className: y.container,
+              className: _.container,
               children: [
                   el,
                   et &&
@@ -297,7 +297,7 @@ function O(e) {
                                       return e;
                                   })(
                                       {
-                                          className: a()(y.button, y.platformSelectorSecondary),
+                                          className: a()(_.button, _.platformSelectorSecondary),
                                           color: l.Ttl.PRIMARY
                                       },
                                       e
@@ -305,7 +305,7 @@ function O(e) {
                                   (n = n =
                                       {
                                           children: (0, r.jsxs)('div', {
-                                              className: y.platformSelectorSecondaryContent,
+                                              className: _.platformSelectorSecondaryContent,
                                               children: [
                                                   (function (e) {
                                                       switch (e) {
@@ -318,7 +318,7 @@ function O(e) {
                                                       }
                                                   })(Y),
                                                   (0, r.jsx)(l.CJ0, {
-                                                      className: y.platformSelectorSecondaryChevron,
+                                                      className: _.platformSelectorSecondaryChevron,
                                                       color: 'currentColor'
                                                   })
                                               ]

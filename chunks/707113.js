@@ -32,20 +32,20 @@ function p(e) {
     let { guild: t, className: n, onPageChange: i, onMemberSelect: s } = e,
         p = t.id,
         g = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(p), [p]),
-        _ = (0, d.$j)(p),
-        v = (0, d.M3)(p),
+        v = (0, d.$j)(p),
+        _ = (0, d.M3)(p),
         C = l.useCallback(
             (e) => {
                 null != e && (null == s || s(e));
             },
             [s]
         ),
-        T = (0, m.xb)(v, _, g),
-        N = l.useRef(null),
+        N = (0, m.xb)(_, v, g),
+        T = l.useRef(null),
         E = l.useRef(null),
-        I = l.useCallback(() => {
+        S = l.useCallback(() => {
             var e;
-            null == (e = N.current) || e.resetSearchText();
+            null == (e = T.current) || e.resetSearchText();
         }, []);
     return (0, r.jsx)('div', {
         className: a()(b.mainTableContainer, n),
@@ -56,16 +56,16 @@ function p(e) {
             children: [
                 (0, r.jsx)(j.Z, {
                     guild: t,
-                    ref: N
+                    ref: T
                 }),
                 (0, r.jsx)(f, { guild: t }),
                 (0, r.jsx)(x.Z, {
                     guild: t,
                     onSelectRow: C,
-                    searchState: T,
-                    onResetForNewMembers: I
+                    searchState: N,
+                    onResetForNewMembers: S
                 }),
-                T !== m.po.SUCCESS_STILL_INDEXING &&
+                N !== m.po.SUCCESS_STILL_INDEXING &&
                     (0, r.jsx)(h.Z, {
                         guildId: t.id,
                         onPageChange: i

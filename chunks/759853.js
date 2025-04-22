@@ -17,8 +17,8 @@ var r = n(200651),
 let b = ['#51BC9D'],
     j = (e) => {
         var t;
-        let { expansionSpring: n, overlayRef: s, quest: j, progressBarRef: v, isExpanded: y } = e,
-            { completionSpring: _, startCompletionAnimation: C } = (0, f.G)(),
+        let { expansionSpring: n, overlayRef: s, quest: j, progressBarRef: v, isExpanded: _ } = e,
+            { completionSpring: y, startCompletionAnimation: C } = (0, f.G)(),
             O = (null == (t = j.userStatus) ? void 0 : t.completedAt) != null,
             w = o.useRef(!1),
             S = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
@@ -128,10 +128,10 @@ let b = ['#51BC9D'],
                     );
                 }
             }, [v, P, q, S]),
-            I = (0, u.Z)(y);
+            I = (0, u.Z)(_);
         return (o.useEffect(() => {
-            O && y && !I && (C(), D());
-        }, [y, O, C, D, I]),
+            O && _ && !I && (C(), D());
+        }, [_, O, C, D, I]),
         o.useEffect(() => {
             O &&
                 !E &&
@@ -152,11 +152,11 @@ let b = ['#51BC9D'],
                   children: [
                       (0, r.jsx)(c.animated.div, {
                           className: x.background,
-                          style: { opacity: _ }
+                          style: { opacity: y }
                       }),
                       (0, r.jsx)(c.animated.div, {
                           className: a()(x.borders, x.bordersTopLeft),
-                          style: { opacity: _ }
+                          style: { opacity: y }
                       }),
                       (0, r.jsxs)(c.animated.div, {
                           className: x.confettiWrapper,
@@ -185,7 +185,7 @@ let b = ['#51BC9D'],
                                   (0, l.createPortal)(
                                       (0, r.jsx)(c.animated.div, {
                                           className: a()(x.borders, x.bordersBottom),
-                                          style: { opacity: _ }
+                                          style: { opacity: y }
                                       }),
                                       s.current
                                   )

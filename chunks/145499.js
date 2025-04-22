@@ -208,18 +208,18 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                     X = H ? Math.min(5 - ((U.length + 0) % 5), K) : 0,
                     q = [];
                 for (let e = 0; e < X; e++) q.push((0, r.jsx)(D, {}, 'placeholder-'.concat(e)));
-                let J = t.premiumTier < u.tier && j >= I.oCV[u.tier],
-                    Q = S.intl.string(S.t.dtFw5e),
+                let Q = t.premiumTier < u.tier && j >= I.oCV[u.tier],
+                    J = S.intl.string(S.t.dtFw5e),
                     $ = () => G(Math.max(1, I.oCV[u.tier] - j), u.tier),
                     ee = !1;
                 L &&
-                    J &&
+                    Q &&
                     (M
                         ? (($ = () => {
                               let e = E.Cp[u.tier];
                               null != e && (0, h.H6)(t.id, e);
                           }),
-                          (Q = S.intl.string(S.t.g7lkra)),
+                          (J = S.intl.string(S.t.g7lkra)),
                           t.premiumTier + 1 !== u.tier && ((ee = !0), (i = S.intl.string(S.t.mTMkY2))))
                         : ((ee = !0), (i = S.intl.string(S.t.hwPEJS))));
                 let et = z === f + 1 && z > Z,
@@ -318,7 +318,7 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                                                                 color: o.zxk.Colors.GREEN,
                                                                 disabled: ee,
                                                                 onClick: $,
-                                                                children: Q
+                                                                children: J
                                                             }),
                                                         Object.getOwnPropertyDescriptors
                                                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

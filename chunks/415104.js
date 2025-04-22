@@ -16,8 +16,8 @@ var r = n(200651),
 function h(e) {
     let { quest: t, className: n, questContent: s, contentPosition: c, rowIndex: u, impressionRef: h } = e,
         [b, j] = o.useState(!1),
-        [v, y] = o.useState([]),
-        _ = (0, l.qb)(t),
+        [v, _] = o.useState([]),
+        y = (0, l.qb)(t),
         C = o.useMemo(() => (0, d.q8)(t), [t]),
         O = (0, i._F)(),
         w = o.useCallback(() => {
@@ -52,7 +52,7 @@ function h(e) {
                 quest: t,
                 isHovering: b,
                 errorHints: v,
-                warningHints: _
+                warningHints: y
             }),
             (0, r.jsx)(f.Z, {
                 quest: t,
@@ -60,7 +60,7 @@ function h(e) {
                 isHovering: b,
                 contentPosition: c,
                 rowIndex: u,
-                onReceiveErrorHints: y
+                onReceiveErrorHints: _
             })
         ]
     });

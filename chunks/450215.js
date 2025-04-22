@@ -40,9 +40,9 @@ function y(e) {
         W = '' !== F ? F : O.intl.string(O.t.QWhe9P),
         Y = '' !== F && null != V && '' !== H && null != z && !B,
         K = b.rU(P),
-        { loading: X, error: q, handleCreateOrUpdateFromEditState: J } = b.Xo(),
-        { submitting: Q, error: $, publishSubscriptionListing: ee } = (0, p.HQ)(),
-        et = X || Q;
+        { loading: X, error: q, handleCreateOrUpdateFromEditState: Q } = b.Xo(),
+        { submitting: J, error: $, publishSubscriptionListing: ee } = (0, p.HQ)(),
+        et = X || J;
     return (0, r.jsxs)('div', {
         className: C.container,
         children: [
@@ -116,7 +116,7 @@ function y(e) {
                                   }),
                                   (0, r.jsx)(d.zxk, {
                                       onClick: () =>
-                                          J({
+                                          Q({
                                               guildId: l,
                                               editStateId: P,
                                               groupListingId: E,

@@ -47,8 +47,8 @@ var r = n(200651),
     K = n(497666),
     X = n(324330),
     q = n(495300),
-    J = n(312397),
-    Q = n(651780),
+    Q = n(312397),
+    J = n(651780),
     $ = n(279542),
     ee = n(413335),
     et = n(665324),
@@ -208,10 +208,10 @@ let eI = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_OVERVIEW,
                     label: eO.intl.string(eO.t['/dp6yc']),
                     ariaLabel: eO.intl.string(eO.t['/dp6yc']),
-                    element: J.Z,
+                    element: Q.Z,
                     notice: {
                         stores: [R.Z],
-                        element: J.O
+                        element: Q.O
                     }
                 };
             case ej.pNK.ROLES:
@@ -494,7 +494,7 @@ let eI = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_BOOST_STATUS,
                     label: eO.intl.string(eO.t['8+VX4+']),
                     ariaLabel: eO.intl.string(eO.t['8+VX4+']),
-                    element: Q.Z,
+                    element: J.Z,
                     className: eC.serverBoostTabItem,
                     icon: (0, r.jsx)(ee.Z, { className: eC.icon })
                 };

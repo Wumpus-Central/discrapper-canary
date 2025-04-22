@@ -84,18 +84,18 @@ let u = o.createContext({
                     }
                 );
             }, [c, d, f, g]);
-        let y = o.useCallback(
+        let _ = o.useCallback(
             (e) => {
                 let { height: t } = e;
                 v.current !== t && (m(), (v.current = t));
             },
             [m]
         );
-        (0, i.PM)(b, y);
-        let _ = null == (n = h.get(c)) ? void 0 : n.current,
+        (0, i.PM)(b, _);
+        let y = null == (n = h.get(c)) ? void 0 : n.current,
             C = null;
         return (
-            null == _
+            null == y
                 ? (C = null)
                 : p && null != x
                   ? (C = (0, r.jsxs)(r.Fragment, {
@@ -112,7 +112,7 @@ let u = o.createContext({
                                         },
                                         children: l(j)
                                     }),
-                                    _
+                                    y
                                 ),
                             'expanded' === d &&
                                 (0, s.createPortal)(
@@ -126,13 +126,13 @@ let u = o.createContext({
                                         },
                                         children: l(j)
                                     }),
-                                    _
+                                    y
                                 )
                         ]
                     }))
-                  : 'collapsed' === d && (C = (0, s.createPortal)(l(j), _)),
+                  : 'collapsed' === d && (C = (0, s.createPortal)(l(j), y)),
             (0, r.jsxs)('div', {
-                style: { opacity: +((null == C && 'collapsed' === d) || null == _) },
+                style: { opacity: +((null == C && 'collapsed' === d) || null == y) },
                 ref: t,
                 children: [l(b), C]
             })

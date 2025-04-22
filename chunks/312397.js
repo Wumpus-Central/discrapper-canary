@@ -1,5 +1,5 @@
 n.d(t, {
-    O: () => Q,
+    O: () => J,
     Z: () => ee
 }),
     n(953529),
@@ -64,7 +64,7 @@ function q(e, t, n) {
         e
     );
 }
-function J(e) {
+function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -80,7 +80,7 @@ function J(e) {
     }
     return e;
 }
-let Q = () => {
+let J = () => {
     let { guild: e, originalGuild: t, submitting: n, errors: l, profile: s, originalProfile: a } = (0, d.cj)([Z.Z], () => Z.Z.getProps()),
         o = (0, d.e7)([Z.Z], () => Z.Z.getProfileError()),
         c = i.useMemo(() => {
@@ -553,7 +553,7 @@ class $ extends i.PureComponent {
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            J(
+                            Q(
                                 {
                                     onCrop: (e) => {
                                         let { imageUri: t } = e;
@@ -574,7 +574,7 @@ class $ extends i.PureComponent {
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            J(
+                            Q(
                                 {
                                     imageUri: e,
                                     file: t,

@@ -1,29 +1,29 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
-var r = n(442837),
-    l = n(481060),
-    o = n(475179),
-    s = n(358221),
-    a = n(979651),
-    d = n(981631),
-    c = n(388032);
-function u(e, t) {
-    let n = (0, r.e7)([s.Z], () => e === s.Z.getSelectedParticipantId(t), [t, e]);
-    return (0, r.e7)(
-        [s.Z, a.Z],
+var l = n(442837),
+    r = n(481060),
+    a = n(475179),
+    o = n(358221),
+    s = n(979651),
+    u = n(981631),
+    d = n(388032);
+function c(e, t) {
+    let n = (0, l.e7)([o.Z], () => e === o.Z.getSelectedParticipantId(t), [t, e]);
+    return (0, l.e7)(
+        [o.Z, s.Z],
         () => {
-            let n = a.Z.isInChannel(t, e) && a.Z.hasVideo(t),
-                i = s.Z.getLayout(t),
-                r = i === d.AEg.MINIMUM || i === d.AEg.NORMAL;
-            return !n || r;
+            let n = s.Z.isInChannel(t, e) && s.Z.hasVideo(t),
+                i = o.Z.getLayout(t),
+                l = i === u.AEg.MINIMUM || i === u.AEg.NORMAL;
+            return !n || l;
         },
         [t, e]
     )
         ? null
-        : (0, i.jsx)(l.sNh, {
+        : (0, i.jsx)(r.sNh, {
               id: 'focus-video',
-              label: n ? c.intl.string(c.t.KJPKUV) : c.intl.string(c.t['77cRNz']),
-              action: () => o.Z.selectParticipant(t, n ? null : e)
+              label: n ? d.intl.string(d.t.KJPKUV) : d.intl.string(d.t['77cRNz']),
+              action: () => a.Z.selectParticipant(t, n ? null : e)
           });
 }

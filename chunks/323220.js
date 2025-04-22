@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(248217);
 function u(e) {
     let { guildId: t, name: n } = e,
-        u = (0, i.dQu)(i.TVs.colors.BG_BASE_TERTIARY),
-        d = (0, s.d)(u.hex());
+        u = (0, s.nv)(),
+        d = (0, s.dG)(u.hex());
     return (0, r.jsxs)('div', {
         className: c.container,
         children: [

@@ -28,7 +28,7 @@ let _ = (e) => {
             let t = l.default.getUser(j.used_by);
             return null != (e = (0, u.y)(null == v ? void 0 : v.getGuildId(), null == v ? void 0 : v.id, t)) ? e : null == t ? void 0 : t.globalName;
         }, [j, v]),
-        C = o.useCallback(() => {
+        P = o.useCallback(() => {
             if (null != _.current && (0, f.Uw)(n)) {
                 let { x: e, y: t, width: r, height: o } = _.current.getBoundingClientRect();
                 (0, g.Z)(
@@ -44,13 +44,13 @@ let _ = (e) => {
                 );
             }
         }, [n]),
-        P = o.useCallback(() => {
+        C = o.useCallback(() => {
             (0, i.Z)(c.Z.getArticleURL(b.BhN.CONFETTI_POTION));
         }, []);
     return O && null != x && (null == j ? void 0 : j.type) === m.B.CONFETTI
         ? (0, r.jsx)(a.P3F, {
-              onFocus: C,
-              onClick: P,
+              onFocus: P,
+              onClick: C,
               'aria-label': h.intl.string(h.t.Mp5k6O),
               children: (0, r.jsx)(a.ua7, {
                   text: h.intl.formatToPlainString(h.t['FE++aG'], { user: x }),

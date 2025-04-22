@@ -369,13 +369,13 @@ let z = d().throttle(h.OQ, 1000),
             q = () => {
                 null !== w.current && ((0, g.Mr3)(w.current), (w.current = null));
             },
-            J = async (e) => {
+            Q = async (e) => {
                 w.current = await (0, g.ZDy)(async () => {
                     let { default: t } = await n.e('16169').then(n.bind(n, 935333));
                     return (n) => (0, r.jsx)(t, F({ processFiles: () => X(e) }, n));
                 });
             },
-            Q = (0, _.l)(e),
+            J = (0, _.l)(e),
             $ =
                 (0, v.h)({
                     location: 'guild_settings',
@@ -388,7 +388,7 @@ let z = d().throttle(h.OQ, 1000),
                     ? null
                     : (0, r.jsx)(b.Z, {
                           className: U.emojiUploadContainer,
-                          onDrop: J
+                          onDrop: Q
                       }),
                 (0, r.jsxs)(g.hjN, {
                     tag: g.RB0.H1,
@@ -406,7 +406,7 @@ let z = d().throttle(h.OQ, 1000),
                                     type: g.geA.DESCRIPTION,
                                     children: G.intl.format(G.t.TA1BR0, { count: H })
                                 }),
-                                Q &&
+                                J &&
                                     (0, r.jsx)(g.R94, {
                                         type: g.geA.DESCRIPTION,
                                         children: G.intl.format(G.t.uMkfTk, { onClick: () => D.Z.open(e.id, L.pNK.ROLE_SUBSCRIPTIONS, void 0, L.KsC.ROLE_SUBSCRIPTION_EMOJI) })

@@ -16,7 +16,7 @@ var r = n(200651),
     h = n(388032),
     b = n(74783);
 let j = (e) => {
-    let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: j, onCtxMenuClose: v, useReducedMotion: y, isExpanded: _, isExpansionAnimationComplete: C } = e,
+    let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: j, onCtxMenuClose: v, useReducedMotion: _, isExpanded: y, isExpansionAnimationComplete: C } = e,
         O = (0, d.aM)(),
         w = o.useCallback(() => {
             (0, g.openDisclosureModal)(t, {
@@ -31,7 +31,7 @@ let j = (e) => {
                 impressionId: O
             });
         }, [O, t]),
-        P = _ && C,
+        P = y && C,
         E = (0, r.jsx)(l.P3F, {
             onClick: S,
             className: a()(b.clickable, { [b.logo]: P }),
@@ -70,7 +70,7 @@ let j = (e) => {
                 expansionSpring: n,
                 isFullyExpanded: P,
                 partnerBranding: E,
-                useReducedMotion: y
+                useReducedMotion: _
             }),
             (0, r.jsxs)(i.animated.div, {
                 className: b.promotedBadgeWrapper,

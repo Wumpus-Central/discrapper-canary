@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => z,
+    Z: () => F,
     b: () => Z
 }),
     n(388685),
@@ -22,8 +22,8 @@ var r = n(200651),
     b = n(415104),
     j = n(78826),
     v = n(37303),
-    y = n(134483),
-    _ = n(683650),
+    _ = n(134483),
+    y = n(683650),
     C = n(920916),
     O = n(341907),
     w = n(478977),
@@ -184,7 +184,7 @@ let V = '1193992107035983872',
         targetedContent: []
     };
 function U() {
-    var e, t, s, d, u, k, Z, V, U, H, z, F, X, K;
+    var e, t, s, d, u, k, Z, V, U, H, F, z, X, K;
     let [Y, G] = o.useState(Q),
         J = o.useCallback((e) => {
             G(D(q({}, e), { preview: !0 }));
@@ -404,7 +404,7 @@ function U() {
                             assetKey: 'heroVideo',
                             onFileChange: el,
                             filters: L,
-                            initialValue: null != (F = Y.config.assets.heroVideo) ? F : void 0
+                            initialValue: null != (z = Y.config.assets.heroVideo) ? z : void 0
                         }),
                         (0, r.jsx)(P.Z, {
                             title: 'Quest Bar Hero',
@@ -706,7 +706,7 @@ function U() {
                             withBorder: !0,
                             children: [
                                 (0, r.jsx)(p.vwX, { children: 'Channel Call Header' }),
-                                (null == (z = Y.userStatus) ? void 0 : z.claimedAt) != null &&
+                                (null == (F = Y.userStatus) ? void 0 : F.claimedAt) != null &&
                                     (0, r.jsx)(p.Text, {
                                         color: 'text-secondary',
                                         variant: 'text-sm/normal',
@@ -720,7 +720,7 @@ function U() {
                                         questId: '0',
                                         children: (0, r.jsx)('div', {
                                             className: B.questChannelCallHeaderPreview,
-                                            children: (0, r.jsx)(y.Z, {
+                                            children: (0, r.jsx)(_.Z, {
                                                 channelId: '123',
                                                 previewQuest: Y,
                                                 isParticipatingOverride: et
@@ -748,7 +748,7 @@ function U() {
                             children: [
                                 (0, r.jsx)(p.vwX, { children: 'Quest Card Embed' }),
                                 er
-                                    ? (0, r.jsx)(_.o, { questId: Y.id })
+                                    ? (0, r.jsx)(y.o, { questId: Y.id })
                                     : (0, r.jsx)(
                                           v.Z,
                                           {
@@ -851,4 +851,4 @@ class H extends o.Component {
             });
     }
 }
-let z = H;
+let F = H;

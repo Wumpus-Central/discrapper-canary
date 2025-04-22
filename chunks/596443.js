@@ -23,14 +23,14 @@ var r = n(200651),
     O = n(388032),
     E = n(12740),
     I = n(444021);
-function S(e) {
+function P(e) {
     var t, n, l, a;
     let { permission: s, roleIds: g, guild: y, specMap: C, categoryTitle: x, userId: E } = e,
-        S = (0, c.e7)([b.Z], () => b.Z.getRoles(y.id)),
-        P = j.Plq[s],
-        Z = null != (l = null == (t = C[P.toString()]) ? void 0 : t.title) ? l : (0, m.wt)(P),
-        N = null != (a = null == (n = C[P.toString()]) ? void 0 : n.description) ? a : '',
-        T = v._o.has(P),
+        P = (0, c.e7)([b.Z], () => b.Z.getRoles(y.id)),
+        S = j.Plq[s],
+        Z = null != (l = null == (t = C[S.toString()]) ? void 0 : t.title) ? l : (0, m.wt)(S),
+        N = null != (a = null == (n = C[S.toString()]) ? void 0 : n.description) ? a : '',
+        T = v._o.has(S),
         A = v.Qn.includes(s),
         w = g.length,
         R = (0, c.e7)([_.Z], () => _.Z.can(j.Plq.MANAGE_ROLES, y), [y]),
@@ -202,7 +202,7 @@ function S(e) {
                                   className: o()(I.roleTooltipItem, { [I.editable]: R && !(0, d.pM)(y.id, e) }),
                                   onClick: () => k(e),
                                   children: (0, r.jsx)(h.Z, {
-                                      role: S[e],
+                                      role: P[e],
                                       guildId: y.id,
                                       className: I.roleChiplet
                                   })
@@ -214,7 +214,7 @@ function S(e) {
         ]
     });
 }
-function P(e, t) {
+function S(e, t) {
     return t.toLowerCase().includes(e.toLowerCase());
 }
 function Z(e) {
@@ -263,15 +263,15 @@ function Z(e) {
                                         i = v._o.has(l),
                                         a = v.Qn.includes(o),
                                         h = i ? O.intl.string(O.t.k7Kqj4) : a ? O.intl.string(O.t.IfqUEB) : null,
-                                        f = P(R, e),
-                                        g = P(R, t),
-                                        b = P(R, r),
-                                        _ = null != h && P(R, h);
+                                        f = S(R, e),
+                                        g = S(R, t),
+                                        b = S(R, r),
+                                        _ = null != h && S(R, h);
                                     if (!f && !g && !b && !_) return;
                                 }
                                 e.push(
                                     (0, r.jsx)(
-                                        S,
+                                        P,
                                         {
                                             permission: o,
                                             roleIds: a,

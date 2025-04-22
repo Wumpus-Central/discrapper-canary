@@ -134,8 +134,8 @@ function M(e) {
         else if (b === I.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(P.Zm, {});
         else if (b === I.PG.HOME_SETTINGS) return (0, r.jsx)(w.Z, {});
     }
-    let J = b === I.xh[I.xh.length - 1],
-        Q = async () => {
+    let Q = b === I.xh[I.xh.length - 1],
+        J = async () => {
             let e = y.Z.advancedMode;
             if (M)
                 try {
@@ -160,7 +160,7 @@ function M(e) {
                 })
             ),
                 (0, _.Nb)((0, I.lg)(b)),
-                (await Q()) && (0, _.IG)(l, b);
+                (await J()) && (0, _.IG)(l, b);
         },
         ee = async () => {
             f.default.track(
@@ -171,7 +171,7 @@ function M(e) {
                     skip: !1
                 })
             ),
-                (await Q()) && (0, _.Wy)(l, b);
+                (await J()) && (0, _.Wy)(l, b);
         },
         et = null;
     B && (b === I.PG.SAFETY_CHECK ? (et = (0, r.jsx)(S.j7, {})) : b === I.PG.DEFAULT_CHANNELS ? (et = (0, r.jsx)(S.Io, {})) : b === I.PG.CUSTOMIZATION_QUESTIONS ? (et = (0, r.jsx)(S.cZ, {})) : b === I.PG.HOME_SETTINGS && (et = (0, r.jsx)(S.g6, {})));
@@ -255,7 +255,7 @@ function M(e) {
                                                       children: Z.intl.string(Z.t.DhYsPD)
                                                   })
                                                 : null,
-                                            J ? null : er
+                                            Q ? null : er
                                         ]
                                     })
                                 ]

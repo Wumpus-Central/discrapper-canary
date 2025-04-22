@@ -26,7 +26,7 @@ let f = {
             switch (f.kind) {
                 case l.E.GUILD_CHANNEL:
                 case l.E.GUILD_CHANNEL_MESSAGE:
-                    t = (0, d.T)().channel;
+                    t = (0, d.T)(n.application).channel;
                     break;
                 case l.E.PRIVATE_CHANNEL:
                 case l.E.PRIVATE_CHANNEL_MESSAGE:

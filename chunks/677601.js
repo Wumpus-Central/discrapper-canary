@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(110924),
     E = n(40851),
     I = n(636449),
-    S = n(115130),
-    P = n(317381),
+    P = n(115130),
+    S = n(317381),
     Z = n(596040),
     N = n(349619),
     T = n(100527),
@@ -77,8 +77,8 @@ var r = n(200651),
     eO = n(998502),
     eE = n(228488),
     eI = n(358221),
-    eS = n(414910),
-    eP = n(887012),
+    eP = n(414910),
+    eS = n(887012),
     eZ = n(909820),
     eN = n(493010),
     eT = n(742603),
@@ -477,7 +477,7 @@ class eK extends i.PureComponent {
                                     return (0, b.jW)(
                                         t,
                                         async () => {
-                                            let { default: t } = await Promise.all([n.e('79695'), n.e('20875'), n.e('70205'), n.e('4040'), n.e('53912'), n.e('56826'), n.e('31084')]).then(n.bind(n, 131404));
+                                            let { default: t } = await Promise.all([n.e('79695'), n.e('20875'), n.e('70205'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('31084')]).then(n.bind(n, 131404));
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     t,
@@ -497,7 +497,7 @@ class eK extends i.PureComponent {
                                     return (0, b.jW)(
                                         t,
                                         async () => {
-                                            let { default: t } = await Promise.all([n.e('79695'), n.e('4040'), n.e('60677'), n.e('40835')]).then(n.bind(n, 354589));
+                                            let { default: t } = await Promise.all([n.e('79695'), n.e('98783'), n.e('14126')]).then(n.bind(n, 354589));
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     t,
@@ -523,7 +523,7 @@ class eK extends i.PureComponent {
                                         (0, b.jW)(
                                             t,
                                             async () => {
-                                                let { default: t } = await Promise.all([n.e('79695'), n.e('4040'), n.e('98693'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
+                                                let { default: t } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
                                                 return (n) =>
                                                     (0, r.jsx)(
                                                         t,
@@ -686,7 +686,7 @@ class eK extends i.PureComponent {
                     children: [
                         null != i && i.type !== eB.fO.ACTIVITY && i.user.id !== n
                             ? (0, r.jsx)(es.Z, {
-                                  context: (0, eS.Z)(i.type),
+                                  context: (0, eP.Z)(i.type),
                                   userId: i.user.id,
                                   currentWindow: this.inPopout ? (null != e ? e : void 0) : window,
                                   sliderClassName: eH.volumeSlider,
@@ -841,12 +841,12 @@ let eX = function (e) {
         }, []),
         el = null != (t = null == W ? void 0 : W.id) ? t : null,
         eo = (0, Z.Z)(el, n.id),
-        ea = (0, u.e7)([S.Z], () => S.Z.getFetchState(), []),
+        ea = (0, u.e7)([P.Z], () => P.Z.getFetchState(), []),
         es = (0, O.Z)(ea);
     i.useEffect(() => {
-        ea === S.O.ERROR && es !== S.O.ERROR && (0, f.showToast)((0, f.createToast)(eF.intl.string(eF.t.AlJyIy), f.ToastType.FAILURE));
+        ea === P.O.ERROR && es !== P.O.ERROR && (0, f.showToast)((0, f.createToast)(eF.intl.string(eF.t.AlJyIy), f.ToastType.FAILURE));
     }, [ea, es]);
-    let ec = (0, u.e7)([P.ZP], () => P.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
+    let ec = (0, u.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     i.useEffect(() => {
         let e = !1,
             t = null;
@@ -860,13 +860,13 @@ let eX = function (e) {
         );
     }, [_, N]);
     let e_ = (0, B.S)(),
-        ey = (0, eP.Z)(n, !0),
+        ey = (0, eS.Z)(n, !0),
         { hasParticipantsPanel: eC } = (0, eR.Z)({ location: 'ChannelCall' }),
         { simplifiedSettingsEnabled: ex } = (0, K.Z)({ location: 'ChannelCall' }),
         ev = (0, L.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: ej } = (0, w.ZP)(T.Z.CHANNEL_CALL),
-        eE = P.ZP.getEmbeddedActivitiesForChannel(n.id),
-        { theme: eS } = (0, f.TCT)(),
+        eE = S.ZP.getEmbeddedActivitiesForChannel(n.id),
+        { theme: eP } = (0, f.TCT)(),
         eN = (0, M.Q3)('ChannelCall');
     return (0, r.jsx)(w.Gt, {
         value: ej,
@@ -919,7 +919,7 @@ let eX = function (e) {
                             forceShowControls: ev,
                             awaitingRemoteSessionInfo: en,
                             currentChannelActivities: eE,
-                            theme: eS,
+                            theme: eP,
                             isRefreshEnabled: eN
                         }),
                         !n.isPrivate() && (0, r.jsx)(eM.YR, {}),

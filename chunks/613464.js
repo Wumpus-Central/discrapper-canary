@@ -22,8 +22,8 @@ var r = n(200651),
     j = n(327250),
     O = n(50767);
 function E(e) {
-    let { userId: t, guildId: n, onClose: l, className: E, infoPanelClassName: I, style: S } = e,
-        P = (0, x.m)(n),
+    let { userId: t, guildId: n, onClose: l, className: E, infoPanelClassName: I, style: P } = e,
+        S = (0, x.m)(n),
         Z = (0, a.e7)([C.default], () => C.default.getUser(t), [t]),
         N = (0, a.e7)([y.ZP], () => y.ZP.getMember(n, t), [n, t]),
         [T, A] = i.useState(null == Z || null == N),
@@ -33,8 +33,8 @@ function E(e) {
         M = (0, g.ZP)(t, n),
         L = (0, d.ZP)();
     return (i.useEffect(() => {
-        P || l();
-    }, [P, l]),
+        S || l();
+    }, [S, l]),
     i.useEffect(() => {
         null == w || null != N || T || l();
     }, [T, N, l, w]),
@@ -64,11 +64,11 @@ function E(e) {
             await Promise.all(e), A(!1);
         })();
     }, [n, t]),
-    P)
+    S)
         ? T || null == Z || null == N
             ? (0, r.jsx)('div', {
                   className: o()(O.sidebarContainer, O.loadingContainer, E),
-                  style: S,
+                  style: P,
                   children: (0, r.jsx)(s.$jN, {
                       animated: !0,
                       type: T ? s.$jN.Type.SPINNING_CIRCLE : s.$jN.Type.CHASING_DOTS
@@ -78,7 +78,7 @@ function E(e) {
                   value: k,
                   children: (0, r.jsx)('div', {
                       className: o()(O.sidebarContainer, E),
-                      style: S,
+                      style: P,
                       children: (0, r.jsx)(_.Z, {
                           user: Z,
                           displayProfile: M,

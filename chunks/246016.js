@@ -1,15 +1,15 @@
 n.d(t, { Y: () => o });
 var r = n(192379),
     l = n(442837),
-    i = n(699516),
-    s = n(594174),
+    s = n(699516),
+    i = n(594174),
     a = n(320582);
 let c = [];
 function o(e) {
     let { userId: t } = e,
-        n = (0, l.e7)([i.Z, s.default], () => {
+        n = (0, l.e7)([s.Z, i.default], () => {
             var e;
-            return i.Z.isFriend(t) || (null == (e = s.default.getUser(t)) ? void 0 : e.isProvisional);
+            return s.Z.isFriend(t) || (null == (e = i.default.getUser(t)) ? void 0 : e.isProvisional);
         }),
         o = (0, a.ML)(t);
     return r.useMemo(

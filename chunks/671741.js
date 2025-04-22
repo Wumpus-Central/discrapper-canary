@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(481932),
     E = n(272510),
     I = n(4517),
-    S = n(171368),
-    P = n(854935),
+    P = n(171368),
+    S = n(854935),
     Z = n(397110),
     N = n(228168),
     T = n(388032),
@@ -74,7 +74,7 @@ function R(e) {
             config: { duration: 150 }
         }),
         z = (e) => {
-            (0, S.openUserProfileModal)(
+            (0, P.openUserProfileModal)(
                 w(
                     {
                         sourceAnalyticsLocations: U,
@@ -150,7 +150,7 @@ function R(e) {
                                         t.isClyde() && (0, r.jsx)(p.Z, { className: A.headerTag })
                                     ]
                                 }),
-                                (0, r.jsx)(P.Z, {
+                                (0, r.jsx)(S.Z, {
                                     user: t,
                                     currentUser: n,
                                     displayProfile: M,

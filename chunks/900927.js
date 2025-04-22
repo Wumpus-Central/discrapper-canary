@@ -2,8 +2,8 @@ n.d(t, { Z: () => b });
 var r = n(200651);
 n(192379);
 var l = n(399606),
-    i = n(481060),
-    s = n(275759),
+    s = n(481060),
+    i = n(275759),
     a = n(565138),
     c = n(706454),
     o = n(271383),
@@ -59,10 +59,10 @@ function b(e) {
         v = (0, l.e7)([c.default], () => c.default.locale),
         g = (0, l.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
         h = (0, l.e7)([o.ZP], () => (null != n ? o.ZP.getMember(n, t) : null)),
-        y = (0, s.FI)(d.default.extractTimestamp(t), v),
-        O = (0, s.FI)(null == h ? void 0 : h.joinedAt, v);
+        y = (0, i.FI)(d.default.extractTimestamp(t), v),
+        O = (0, i.FI)(null == h ? void 0 : h.joinedAt, v);
     return null == g || null == h
-        ? (0, r.jsx)(i.Text, {
+        ? (0, r.jsx)(s.Text, {
               variant: 'text-sm/normal',
               className: b,
               children: y
@@ -73,12 +73,12 @@ function b(e) {
                   (0, r.jsxs)('div', {
                       className: p.memberSince,
                       children: [
-                          (0, r.jsx)(i.ua7, {
+                          (0, r.jsx)(s.ua7, {
                               text: m.intl.string(m.t.uvGmCw),
                               delay: x,
                               children: (e) =>
                                   (0, r.jsx)(
-                                      i.gw7,
+                                      s.gw7,
                                       j(
                                           f(
                                               {
@@ -93,7 +93,7 @@ function b(e) {
                                       )
                                   )
                           }),
-                          (0, r.jsx)(i.Text, {
+                          (0, r.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               className: b,
                               children: y
@@ -104,7 +104,7 @@ function b(e) {
                   (0, r.jsxs)('div', {
                       className: p.memberSince,
                       children: [
-                          (0, r.jsx)(i.ua7, {
+                          (0, r.jsx)(s.ua7, {
                               text: g.name,
                               delay: x,
                               children: (e) =>
@@ -116,7 +116,7 @@ function b(e) {
                                       })
                                   )
                           }),
-                          (0, r.jsx)(i.Text, {
+                          (0, r.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               className: b,
                               children: O

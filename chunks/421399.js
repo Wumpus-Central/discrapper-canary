@@ -4,9 +4,9 @@ r.d(t, {
 });
 var n,
     l = r(200651),
-    i = r(192379),
-    o = r(120356),
-    a = r.n(o),
+    o = r(192379),
+    i = r(120356),
+    a = r.n(i),
     c = r(873546),
     s = r(442837),
     u = r(481060),
@@ -16,8 +16,8 @@ var n,
     f = r(385499),
     b = r(979264),
     y = r(372900),
-    g = r(477747),
-    O = r(477734),
+    O = r(477747),
+    g = r(477734),
     j = r(670188),
     v = r(768581),
     h = r(463396),
@@ -77,38 +77,38 @@ function R(e) {
 }
 function T(e) {
     var t;
-    let { author: r, message: n, channel: o, userOverride: f, compact: w = !1, withMentionPrefix: T = !1, showPopout: C = !1, className: E, onClick: Z, onContextMenu: k, onPopoutRequestClose: I, renderPopout: A, renderRemixTag: D = !1, decorations: M, previewGuildId: _ } = e,
-        F = i.useRef(null),
-        L = i.useContext(y.Z),
-        G = null != (t = null == o ? void 0 : o.guild_id) ? t : L,
+    let { author: r, message: n, channel: i, userOverride: f, compact: w = !1, withMentionPrefix: T = !1, showPopout: C = !1, className: E, onClick: Z, onContextMenu: k, onPopoutRequestClose: I, renderPopout: A, renderRemixTag: D = !1, decorations: M, previewGuildId: _ } = e,
+        F = o.useRef(null),
+        L = o.useContext(y.Z),
+        G = null != (t = null == i ? void 0 : i.guild_id) ? t : L,
         { analyticsLocations: B } = (0, d.ZP)(p.Z.USERNAME),
         z = T ? '@' : '',
         { nick: U, colorString: H, colorStrings: J, colorRoleName: V } = r,
         X = (0, s.e7)([m.Z], () => m.Z.roleStyle),
         Y = 'username' === X,
-        W = (0, O.X$)(),
-        $ = (0, g.Z)(null != _ ? _ : G, 'BaseUsername'),
+        W = (0, g.X$)(),
+        $ = (0, O.Z)(null != _ ? _ : G, 'BaseUsername'),
         q = (0, x.Z)(n),
         Q = $ && null != J && null != J.primaryColor && null != J.secondaryColor,
         K = Y && Q,
-        ee = (0, u.Icv)(null == J ? void 0 : J.primaryColor, null == J ? void 0 : J.secondaryColor, null == J ? void 0 : J.tertiaryColor, 'username'),
-        { text: et, gradient: er } = K
-            ? ee
-            : {
-                  text: {},
-                  gradient: {}
-              },
-        en = {
-            className: a()([P.username, K && et.gradientClassName, K && er.gradientClassName]),
+        { gradientStyle: ee, gradientClassname: et } = (0, u.Icv)({
+            primaryColor: null == J ? void 0 : J.primaryColor,
+            secondaryColor: null == J ? void 0 : J.secondaryColor,
+            tertiaryColor: null == J ? void 0 : J.tertiaryColor,
+            roleStyle: 'username',
+            includeConvenienceGlow: !0
+        }),
+        er = {
+            className: a()([P.username, K && et]),
             style: (() => {
-                if (Y) return K && null != J ? N(S({}, et.gradientStyle), { textDecorationColor: null == J ? void 0 : J.primaryColor }) : null != H ? { color: H } : void 0;
+                if (Y) return K && null != J ? N(S({}, ee), { textDecorationColor: null == J ? void 0 : J.primaryColor }) : null != H ? { color: H } : void 0;
             })(),
             onClick: Z,
             onContextMenu: k,
             children: z + U,
             'data-text': z + U
         },
-        el = i.useMemo(
+        en = o.useMemo(
             () =>
                 w
                     ? (0, l.jsx)(b.ZP, {
@@ -120,12 +120,12 @@ function T(e) {
                     : null,
             [w, r.primaryGuild, G, n.author.id]
         ),
-        ei = null != f ? f : n.author,
+        el = null != f ? f : n.author,
         eo =
             null != A && null != C
                 ? (0, l.jsx)(j.Z, {
                       targetElementRef: F,
-                      user: ei,
+                      user: el,
                       renderPopout: A,
                       shouldShow: C,
                       shouldPreload: q,
@@ -134,7 +134,7 @@ function T(e) {
                           null != r.guildMemberAvatar && null != G
                               ? (0, v.JM)({
                                     guildId: G,
-                                    userId: ei.id,
+                                    userId: el.id,
                                     avatar: r.guildMemberAvatar,
                                     size: 80
                                 })
@@ -152,13 +152,13 @@ function T(e) {
                                           var r,
                                               n,
                                               l = {},
-                                              i = Object.keys(e);
-                                          for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                                              o = Object.keys(e);
+                                          for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
                                           return l;
                                       })(e, t);
                                   if (Object.getOwnPropertySymbols) {
-                                      var i = Object.getOwnPropertySymbols(e);
-                                      for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                                      var o = Object.getOwnPropertySymbols(e);
+                                      for (n = 0; n < o.length; n++) (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
                                   }
                                   return l;
                               })(e, ['onClick']);
@@ -173,27 +173,27 @@ function T(e) {
                                                   innerRef: F
                                               },
                                               r,
-                                              en
+                                              er
                                           ),
-                                          { className: a()(en.className, P.clickable, E) }
+                                          { className: a()(er.className, P.clickable, E) }
                                       )
                                   ),
-                                  el
+                                  en
                               ]
                           });
                       }
                   })
                 : (0, l.jsxs)(l.Fragment, {
-                      children: [(0, l.jsx)(u.P3F, N(S({}, en), { className: a()(en.className, E) })), el]
+                      children: [(0, l.jsx)(u.P3F, N(S({}, er), { className: a()(er.className, E) })), en]
                   }),
-        ea = null != M ? M[0] : null,
-        ec = null != M ? M[1] : null;
+        ei = null != M ? M[0] : null,
+        ea = null != M ? M[1] : null;
     return (0, l.jsxs)(d.Gt, {
         value: B,
         children: [
-            null != ea && w
+            null != ei && w
                 ? (0, l.jsxs)(l.Fragment, {
-                      children: [' ', ea, ' ']
+                      children: [' ', ei, ' ']
                   })
                 : null,
             'dot' === X
@@ -212,8 +212,8 @@ function T(e) {
                     contextGuildId: G,
                     className: P.clanTagChiplet
                 }),
-            null != ec ? ec : null,
-            null == ea || w ? null : ea,
+            null != ea ? ea : null,
+            null == ei || w ? null : ei,
             null != n && (0, h.f)(n) && W && D ? (0, l.jsx)(R, {}) : null
         ]
     });

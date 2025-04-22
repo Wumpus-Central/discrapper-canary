@@ -108,24 +108,24 @@ let v = (e) => {
             paragraph: u({}, y, 'function' == typeof r.customRules.paragraph ? r.customRules.paragraph(e) : r.customRules.paragraph)
         }),
     x = (e) => ({ lheading: u(d(u({}, p), { parse: v({ transformUpperCase: !1 }) }), 'function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading) }),
-    C = (e) =>
+    P = (e) =>
         d(u({}, j(e)), {
             newline: u({}, a().defaultRules.newline),
             text: l.ZP,
             list: i.Z,
             subtext: s.Z
         });
-function P(e) {
+function C(e) {
     return u({}, j(e));
 }
 let T = {
-    getDefaultRules: P,
+    getDefaultRules: C,
     getSpecialRules: (e) => u({}, j(e), x(e)),
-    getMessageRules: (e) => u({}, C(e))
+    getMessageRules: (e) => u({}, P(e))
 };
 function w(e, t, n) {
     return {
         hasSpoilerEmbeds: !1,
-        content: c.Z.reactParserFor(P(t))(e.content, !1, null != n ? { changeLog: n } : {})
+        content: c.Z.reactParserFor(C(t))(e.content, !1, null != n ? { changeLog: n } : {})
     };
 }

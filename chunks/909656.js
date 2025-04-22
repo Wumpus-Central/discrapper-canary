@@ -149,11 +149,11 @@ function k(e) {
     function q(e, t) {
         o()(null != e, 'Null value not allowed'), null != t && W(t.name), k(e);
     }
-    let J = i.useMemo(() => {
+    let Q = i.useMemo(() => {
             var e;
             return (null != f && f !== (null != (e = null == a ? void 0 : a.description) ? e : '')) || (null == D ? void 0 : D.startsWith('data:')) === !0 || m !== s || (null == a ? void 0 : a.store_page_guild_products_default_sort) !== L || (null == a ? void 0 : a.server_shop_tab_order) !== G;
         }, [D, s, f, a, m, L, G]),
-        Q = null != f && '' !== f && null != D;
+        J = null != f && '' !== f && null != D;
     i.useEffect(() => {
         var e;
         (null == a || null == (e = a.cover_image_asset) ? void 0 : e.application_id) != null && k((0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, Z));
@@ -337,11 +337,11 @@ function k(e) {
                 component: 'div',
                 className: P.contentRegion,
                 children:
-                    J &&
+                    Q &&
                     (0, r.jsx)(g.oXn, {
                         children: (0, r.jsx)(p.Z, {
                             submitting: B,
-                            disabled: !Q,
+                            disabled: !J,
                             onReset: () => {
                                 var e;
                                 h(s), v(null != (e = null == a ? void 0 : a.description) ? e : ''), k(c), M(null == a ? void 0 : a.store_page_guild_products_default_sort), U(null == a ? void 0 : a.server_shop_tab_order);
@@ -351,7 +351,7 @@ function k(e) {
                                 let e = {};
                                 f !== a.description && (e.description = f), null != D && D.startsWith('data:') && (e.cover_image = D), m !== s && (e.full_server_gate = m === E.e3.ALL_CHANNELS), L !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = L), G !== a.server_shop_tab_order && (e.server_shop_tab_order = G), d().isEmpty(e) || z(n.id, e);
                             },
-                            saveButtonTooltip: Q ? void 0 : T.intl.string(T.t['6HRvio'])
+                            saveButtonTooltip: J ? void 0 : T.intl.string(T.t['6HRvio'])
                         })
                     })
             })

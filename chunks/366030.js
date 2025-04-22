@@ -14,8 +14,8 @@ var r = n(200651),
     f = n(410030),
     b = n(726542),
     h = n(367907),
-    _ = n(906732),
-    y = n(385499),
+    y = n(906732),
+    _ = n(385499),
     O = n(171368),
     v = n(598077),
     j = n(271383),
@@ -28,10 +28,10 @@ var r = n(200651),
     I = n(458034),
     N = n(856651),
     k = n(981631),
-    M = n(228168),
-    R = n(388032),
-    Z = n(933466);
-function E(e) {
+    R = n(228168),
+    M = n(388032),
+    E = n(933466);
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,13 +62,13 @@ function A(e) {
     if (null != s)
         switch (a) {
             case N.iO.LESS_THAN:
-                t = R.intl.format(R.t['2p7dAw'], {
+                t = M.intl.format(M.t['2p7dAw'], {
                     description: s,
                     count: Math.max(0, Number(i) - 1)
                 });
                 break;
             case N.iO.GREATER_THAN:
-                t = R.intl.format(R.t['2p7dAw'], {
+                t = M.intl.format(M.t['2p7dAw'], {
                     description: s,
                     count: Math.max(0, Number(i) + 1)
                 });
@@ -86,12 +86,12 @@ function A(e) {
     return null == t
         ? null
         : (0, r.jsxs)('div', {
-              className: Z.popoutCheck,
+              className: E.popoutCheck,
               children: [
                   (0, r.jsx)(p.dz2, {
                       size: 'md',
                       color: 'currentColor',
-                      className: Z.popoutCheckIcon
+                      className: E.popoutCheckIcon
                   }),
                   (0, r.jsx)(p.Text, {
                       variant: 'text-xs/medium',
@@ -115,39 +115,39 @@ function D(e) {
                 g = c.find((e) => null != e.application),
                 f = b.Z.get(e),
                 h = null == g ? void 0 : g.application,
-                _ = (null == h ? void 0 : h.bot) != null ? new v.Z(h.bot) : null;
+                y = (null == h ? void 0 : h.bot) != null ? new v.Z(h.bot) : null;
             return (
                 P.SJ.includes(null != (t = null == h ? void 0 : h.id) ? t : '')
                     ? (l = (0, r.jsx)(S.Z, {
-                          className: Z.botTag,
+                          className: E.botTag,
                           color: o,
                           size: 16
                       }))
-                    : null != _ &&
-                      (l = (0, r.jsx)(y.Z, {
-                          className: Z.botTag,
-                          verified: _.isVerifiedBot()
+                    : null != y &&
+                      (l = (0, r.jsx)(_.Z, {
+                          className: E.botTag,
+                          verified: y.isVerifiedBot()
                       })),
                 (0, r.jsxs)(
                     'div',
                     {
-                        className: Z.popoutChecksGroup,
+                        className: E.popoutChecksGroup,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: Z.popoutCheckGroupName,
+                                className: E.popoutCheckGroupName,
                                 children: [
                                     null != f
                                         ? (0, r.jsx)('img', {
                                               src: (0, d.wj)(n) ? f.icon.darkSVG : f.icon.lightSVG,
                                               alt: '',
-                                              className: Z.popoutCheckGroupPlatformIcon
+                                              className: E.popoutCheckGroupPlatformIcon
                                           })
                                         : null,
-                                    null != _
+                                    null != y
                                         ? (0, r.jsx)(m.Z, {
-                                              user: _,
+                                              user: y,
                                               size: p.EFr.SIZE_20,
-                                              className: Z.popoutCheckGroupPlatformIcon
+                                              className: E.popoutCheckGroupPlatformIcon
                                           })
                                         : null,
                                     (0, r.jsx)(p.Text, {
@@ -191,7 +191,7 @@ function B(e) {
     o.useEffect(() => {
         x.default.track(
             k.rMx.PASSPORT_ROLE_POPOUT_VIEWED,
-            E(
+            Z(
                 {
                     other_user_id: s,
                     role_id: l
@@ -210,38 +210,38 @@ function B(e) {
         [d, l]
     );
     return (
-        (t = 1 === i.length && 1 === i[0].length ? R.intl.string(R.t.jDym4O) : 1 === i.length ? R.intl.format(R.t['0eBj39'], {}) : R.intl.format(R.t.D7uftL, {})),
+        (t = 1 === i.length && 1 === i[0].length ? M.intl.string(M.t.jDym4O) : 1 === i.length ? M.intl.format(M.t['0eBj39'], {}) : M.intl.format(M.t.D7uftL, {})),
         (0, r.jsxs)('div', {
-            className: Z.popout,
+            className: E.popout,
             children: [
                 (0, r.jsx)('div', {
-                    className: Z.popoutHeaderContainer,
+                    className: E.popoutHeaderContainer,
                     children: (0, r.jsx)(p.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-normal',
-                        className: Z.popoutHeaderText,
+                        className: E.popoutHeaderText,
                         children: t
                     })
                 }),
                 (0, r.jsx)('div', {
-                    className: Z.popoutChecks,
+                    className: E.popoutChecks,
                     children: (0, r.jsx)(D, { eligibilityStates: i.flat() })
                 }),
                 (0, r.jsxs)('div', {
-                    className: Z.buttonContainer,
+                    className: E.buttonContainer,
                     children: [
                         g
                             ? null
                             : (0, r.jsx)(p.zxk, {
-                                  className: Z.getRolesButton,
+                                  className: E.getRolesButton,
                                   onClick: n,
-                                  children: R.intl.string(R.t.T1t1WV)
+                                  children: M.intl.string(M.t.T1t1WV)
                               }),
                         (0, r.jsx)(p.zxk, {
-                            className: Z.viewConnectionsButton,
+                            className: E.viewConnectionsButton,
                             color: p.zxk.Colors.PRIMARY,
                             onClick: a,
-                            children: R.intl.string(R.t.hgKDnJ)
+                            children: M.intl.string(M.t.hgKDnJ)
                         })
                     ]
                 })
@@ -251,7 +251,7 @@ function B(e) {
 }
 function L(e) {
     let { userId: t, messageId: n, guild: a, channel: s } = e,
-        { analyticsLocations: l } = (0, _.ZP)(),
+        { analyticsLocations: l } = (0, y.ZP)(),
         u = (0, T.Z)(a, t, s.id, !0),
         d = (0, c.e7)([C.Z], () => C.Z.getGuildRoleConnectionEligibility(null == u ? void 0 : u.id)),
         [m, f] = o.useState(null == d);
@@ -283,7 +283,7 @@ function L(e) {
                                   guildId: a.id,
                                   channelId: s.id,
                                   roleId: u.id,
-                                  subsection: M.Tb.CONNECTIONS,
+                                  subsection: R.Tb.CONNECTIONS,
                                   sourceAnalyticsLocations: l
                               }),
                                   o();
@@ -295,24 +295,24 @@ function L(e) {
         nudgeAlignIntoViewport: !0,
         children: (e) =>
             (0, r.jsx)(p.ua7, {
-                text: R.intl.string(R.t.Wpsnam),
+                text: M.intl.string(M.t.Wpsnam),
                 children: (t) => {
                     var n, o;
                     return (0, r.jsxs)(
                         'div',
-                        ((n = E({ className: Z.badge }, t, e)),
+                        ((n = Z({ className: E.badge }, t, e)),
                         (o = o =
                             {
                                 children: [
                                     (0, r.jsx)(w.Z, {
-                                        className: Z.badgeVerifiedIcon,
+                                        className: E.badgeVerifiedIcon,
                                         size: 16,
                                         color: u.colorString
                                     }),
                                     (0, r.jsx)(p.Text, {
                                         variant: 'text-xs/bold',
                                         color: 'header-primary',
-                                        className: Z.roleName,
+                                        className: E.roleName,
                                         children: u.name
                                     })
                                 ]

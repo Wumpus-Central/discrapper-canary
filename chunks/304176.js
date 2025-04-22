@@ -21,7 +21,7 @@ var o = n(442837),
     v = n(176505),
     j = n(388032),
     x = n(854422);
-function C(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function C(e) {
     }
     return e;
 }
-function P(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,7 +70,7 @@ let T = (e) => {
     (0, i.ZP)(() => {
         y.default.track(
             O.rMx.OPEN_POPOUT,
-            C(
+            P(
                 {
                     type: 'Role Icon Popout',
                     guild_id: n.id
@@ -82,7 +82,7 @@ let T = (e) => {
     let w = (0, o.e7)([f.Z], () => (null != t.roleId ? f.Z.getRole(n.id, t.roleId) : void 0)),
         S = (0, p.Z)(w),
         I = S ? j.intl.formatToPlainString(j.t.t0928f, { name: T }) : j.intl.formatToPlainString(j.t.UDDkGx, { name: T }),
-        N = P(C({}, t), {
+        N = C(P({}, t), {
             src: null == t.src ? t.src : (0, u.o)(t.src, 40),
             size: 40
         }),
@@ -108,7 +108,7 @@ let T = (e) => {
                                 className: x.roleIconContainer,
                                 children: (0, r.jsx)(
                                     c.Z,
-                                    P(C({}, N), {
+                                    C(P({}, N), {
                                         enableTooltip: !1,
                                         className: x.__invalid_roleIcon,
                                         enableHeight: !1

@@ -49,16 +49,16 @@ function h(e) {
                 n = f.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
             return x(i.id, n);
         }, [i]),
-        y = (null == (t = i.userStatus) ? void 0 : t.enrolledAt) != null,
-        _ = !l && g;
+        _ = (null == (t = i.userStatus) ? void 0 : t.enrolledAt) != null,
+        y = !l && g;
     o.useEffect(() => {
         var e, t, n, r;
-        g ? _ && (null == (r = h.current) || null == (n = r.animation) || n.play()) : null == (t = h.current) || null == (e = t.animation) || e.goToAndStop(0, !0);
-    }, [_, g]);
+        g ? y && (null == (r = h.current) || null == (n = r.animation) || n.play()) : null == (t = h.current) || null == (e = t.animation) || e.goToAndStop(0, !0);
+    }, [y, g]);
     let C = o.useCallback(() => {
         j(!0);
     }, []);
-    return null == v || y
+    return null == v || _
         ? (0, r.jsx)('div', {
               className: m.backgroundFallback,
               style: { backgroundImage: 'linear-gradient(90deg, '.concat(i.config.colors.primary, ', ').concat(i.config.colors.secondary, ')') }
@@ -71,7 +71,7 @@ function h(e) {
                       ref: h,
                       onComplete: C,
                       importData: () => v,
-                      shouldAnimate: !b && _,
+                      shouldAnimate: !b && y,
                       className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),
                       loop: 0,
                       rendererSettings: { preserveAspectRatio: 'none' }

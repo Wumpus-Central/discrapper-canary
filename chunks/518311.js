@@ -32,8 +32,8 @@ var r,
     O = n(40851),
     E = n(100527),
     I = n(367907),
-    S = n(906732),
-    P = n(43267),
+    P = n(906732),
+    S = n(43267),
     Z = n(933557),
     N = n(600164),
     T = n(313201),
@@ -159,7 +159,7 @@ let eh = (e) => {
                 className: ei.confirmChannelItemContainer,
                 children: [
                     (0, i.jsx)(f.qEK, {
-                        src: (0, P.x)(n),
+                        src: (0, S.x)(n),
                         size: f.EFr.SIZE_24,
                         'aria-label': l
                     }),
@@ -788,7 +788,7 @@ class em extends (r = l.PureComponent) {
 }
 function eg(e) {
     let { selectedUsers: t, channelName: n, previewIcon: r, onIconChange: l, onIconRemove: o, onChange: a } = e,
-        { analyticsLocations: s } = (0, S.ZP)(E.Z.NEW_GROUP_DM_INVITE_MODAL);
+        { analyticsLocations: s } = (0, P.ZP)(E.Z.NEW_GROUP_DM_INVITE_MODAL);
     if (!(0, A.a)(E.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
     let c = (0, Z.pT)(Array.from(t), W.default, V.Z);
     return (0, i.jsxs)('div', {

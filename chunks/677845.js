@@ -23,43 +23,43 @@ var r = n(200651),
     O = n(981631),
     E = n(600295);
 function I(e) {
-    let { participants: t, onClick: n, onDoubleClick: I, onContextMenu: S, channel: P, className: Z, inCall: N, totalNumberOfParticipants: T, paused: A = !1 } = e,
+    let { participants: t, onClick: n, onDoubleClick: I, onContextMenu: P, channel: S, className: Z, inCall: N, totalNumberOfParticipants: T, paused: A = !1 } = e,
         w = (0, c.bp)() === O.IlC.POPOUT,
-        R = (0, a.e7)([_.Z], () => _.Z.getGuild(P.guild_id), [P.guild_id]),
+        R = (0, a.e7)([_.Z], () => _.Z.getGuild(S.guild_id), [S.guild_id]),
         { dismissedActivityEntryPointTileChannel: k } = (0, v.d)(),
-        M = (0, a.e7)([h.Z], () => h.Z.getUserParticipantCount(P.id), [P]),
-        L = (0, b.bt)(P.id, t),
+        M = (0, a.e7)([h.Z], () => h.Z.getUserParticipantCount(S.id), [S]),
+        L = (0, b.bt)(S.id, t),
         D = i.useCallback(() => {
             (0, o.j)(() => {
-                v.d.setState({ dismissedActivityEntryPointTileChannel: P.id });
+                v.d.setState({ dismissedActivityEntryPointTileChannel: S.id });
             });
-        }, [P.id]);
+        }, [S.id]);
     i.useEffect(() => {
         null != k &&
-            P.id !== k &&
+            S.id !== k &&
             (0, o.j)(() => {
                 v.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
-    }, [P.id, k]);
-    let U = (0, a.e7)([y.Z], () => P.isPrivate() || (0, m.b)(y.Z, R, P), [R, P]),
-        B = (null == R ? void 0 : R.afkChannelId) === P.id,
-        G = P.userLimit <= 0 || P.userLimit > 1,
-        F = (0, a.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(P.id).length <= 0),
+    }, [S.id, k]);
+    let U = (0, a.e7)([y.Z], () => S.isPrivate() || (0, m.b)(y.Z, R, S), [R, S]),
+        B = (null == R ? void 0 : R.afkChannelId) === S.id,
+        G = S.userLimit <= 0 || S.userLimit > 1,
+        F = (0, a.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(S.id).length <= 0),
         H = (0, f.N)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
-        V = (0, d.KF)(P.id) !== d.jy.CAN_LAUNCH,
-        z = null != k && k === P.id,
+        V = (0, d.KF)(S.id) !== d.jy.CAN_LAUNCH,
+        z = null != k && k === S.id,
         W = L.map(
             (e) => (t) =>
                 (0, r.jsx)(
                     x.ZP,
                     {
                         participant: e,
-                        channel: P,
+                        channel: S,
                         className: E.tile,
                         paused: A,
                         onClick: n,
                         onDoubleClick: I,
-                        onContextMenu: S,
+                        onContextMenu: P,
                         inCall: N,
                         width: t,
                         inPopout: w
@@ -75,7 +75,7 @@ function I(e) {
                 total_participants: T,
                 can_invite: U,
                 is_afk_channel: B,
-                channel_user_limit: P.userLimit
+                channel_user_limit: S.userLimit
             }
         },
         { trackOnInitialLoad: !0 },
@@ -90,7 +90,7 @@ function I(e) {
                   (F && !V
                       ? W.push((e) =>
                             (0, r.jsx)(C.h, {
-                                channel: P,
+                                channel: S,
                                 guild: R,
                                 width: e,
                                 inPopout: w,
@@ -101,14 +101,14 @@ function I(e) {
                       : W.push((e) =>
                             (0, r.jsx)(j.Z, {
                                 width: e,
-                                channel: P,
+                                channel: S,
                                 guild: R,
                                 inPopout: w
                             })
                         ))
                 : W.push((e) =>
                       (0, r.jsx)(C.h, {
-                          channel: P,
+                          channel: S,
                           guild: R,
                           width: e,
                           inPopout: w,

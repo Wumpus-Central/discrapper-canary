@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(51144),
     E = n(566620),
     I = n(317381),
-    S = n(619915),
-    P = n(988980),
+    P = n(619915),
+    S = n(988980),
     Z = n(16609),
     N = n(952561),
     T = n(563218),
@@ -48,8 +48,8 @@ function G(e) {
         W = (0, s.Wu)([I.ZP], () => I.ZP.getEmbeddedActivitiesForLocation(F), [F]),
         Y = (0, Z.pY)(F),
         q = (0, s.e7)([y.Z], () => y.Z.getChannel(Y)),
-        K = (0, S.gb)(W),
-        X = (0, S.uF)(K),
+        K = (0, P.gb)(W),
+        X = (0, P.uF)(K),
         Q = i.useCallback(() => {
             (0, E.tg)(k.Ez.PIP);
         }, []),
@@ -79,7 +79,7 @@ function G(e) {
     let ea = el.width / Math.max(el.height, 1) < k.I0,
         es = 0,
         ec = 0,
-        eu = (0, P.Z)(null == z ? void 0 : z.id);
+        eu = (0, S.Z)(null == z ? void 0 : z.id);
     if (!eu) {
         let e = el.width,
             t = el.height;
@@ -178,21 +178,21 @@ function G(e) {
         (eb = Array.from(ed.embeddedActivity.userIds)
             .map((e) => v.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
-    let e_ = (e, t) => {
-        var n;
-        if (null == e || void 0 === e || void 0 === t) return null;
-        let i = em.get(e.id),
-            l = null != (n = null == i ? void 0 : i.nick) ? n : O.ZP.getName(e);
+    let e_ = (e) => {
+        var t;
+        if (null == e || void 0 === e) return null;
+        let n = em.get(e.id),
+            i = null != (t = null == n ? void 0 : n.nick) ? t : O.ZP.getName(e);
         return (0, r.jsx)(
             u.DY3,
             {
-                text: l,
+                text: i,
                 position: 'bottom',
                 children: (0, r.jsx)(
                     'img',
                     {
-                        src: e.getAvatarURL(t.guild_id, U),
-                        alt: l,
+                        src: e.getAvatarURL(null == q ? void 0 : q.guild_id, U),
+                        alt: i,
                         className: D.avatar
                     },
                     e.id
@@ -248,7 +248,7 @@ function G(e) {
                                               size: U,
                                               max: 6,
                                               className: D.userAvatars,
-                                              renderUser: (e) => e_(e, q)
+                                              renderUser: e_
                                           }),
                                           (0, r.jsxs)('div', {
                                               className: D.footerButtons,

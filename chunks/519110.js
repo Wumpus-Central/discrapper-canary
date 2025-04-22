@@ -78,7 +78,7 @@ function S(e) {
                 }
             }
         }),
-        A = (0, c.C1)(null, T);
+        M = (0, c.C1)(null, T);
     return null != I && t === f.S.STICKER
         ? (0, p.J8)(I) && !(0, p.V9)(I)
             ? null
@@ -100,7 +100,7 @@ function S(e) {
                     label: y.intl.string(y.t.kWmiPT)
                 })
         : null != T && t === f.S.EMOJI
-          ? A
+          ? M
               ? (0, i.jsx)(a.sNh, {
                     id: 'unfavorite',
                     action: () => (0, o.Xe)(T),

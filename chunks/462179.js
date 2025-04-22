@@ -17,15 +17,15 @@ var l = t(442837),
     f = t(572004),
     v = t(482241),
     h = t(951539),
-    E = t(894017),
-    C = t(274311),
+    C = t(894017),
+    E = t(274311),
     b = t(854698),
     x = t(118998),
     T = t(139712),
     y = t(765305),
     L = t(981631),
-    N = t(388032);
-function j(e) {
+    j = t(388032);
+function N(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             i = Object.keys(t);
@@ -69,18 +69,18 @@ function S(e, n) {
     );
 }
 function D(e) {
-    let { guild: n, channel: D, guildScheduledEvent: O, isActive: U, recurrenceId: G, onActionTaken: Z } = e,
+    let { guild: n, channel: D, guildScheduledEvent: O, isActive: U, recurrenceId: Z, onActionTaken: G } = e,
         { scheduled_start_time: P, id: z, entity_type: k, guild_id: A } = O,
         { canManageGuildEvent: R } = (0, c.XJ)(null != D ? D : n),
         B = R(O),
         w = (0, h.ZP)(O),
-        H = (0, C.T)(null == D ? void 0 : D.id, O.id),
+        H = (0, E.T)(null == D ? void 0 : D.id, O.id),
         { withinStartWindow: M } = (0, b.ub)(P),
         X = (0, l.e7)([m.Z], () => null == D || !D.isGuildVocal() || m.Z.can(L.Plq.CONNECT, D), [D]),
         V = (0, s.J)(A),
-        F = (0, E.Z)(G, z);
+        F = (0, C.Z)(Z, z);
     function Y(e) {
-        e.stopPropagation(), (0, T.Z)(z, G, A);
+        e.stopPropagation(), (0, T.Z)(z, Z, A);
     }
     async function W(e) {
         e.stopPropagation(), await d.Z.joinGuild(A), p.Z.addConditionalChangeListener(() => null == p.Z.getGuild(A) || (U || Y(e), q(e), !1));
@@ -99,14 +99,14 @@ function D(e) {
                           (0, r.h7j)((e) =>
                               (0, i.jsx)(
                                   r.ConfirmModal,
-                                  S(j({}, e), {
-                                      header: N.intl.string(N.t.R5bpio),
-                                      confirmText: N.intl.string(N.t.oyYWHB),
-                                      cancelText: N.intl.string(N.t['ETE/oK']),
+                                  S(N({}, e), {
+                                      header: j.intl.string(j.t.R5bpio),
+                                      confirmText: j.intl.string(j.t.oyYWHB),
+                                      cancelText: j.intl.string(j.t['ETE/oK']),
                                       onConfirm: () => v.Z.deleteGuildEvent(z, A),
                                       children: (0, i.jsx)(r.Text, {
                                           variant: 'text-md/normal',
-                                          children: N.intl.string(N.t.v2GWNT)
+                                          children: j.intl.string(j.t.v2GWNT)
                                       })
                                   })
                               )
@@ -121,10 +121,10 @@ function D(e) {
                         return (t) =>
                             (0, i.jsx)(
                                 e,
-                                j(
+                                N(
                                     {
                                         guildEventId: z,
-                                        recurrenceId: G,
+                                        recurrenceId: Z,
                                         channel: D,
                                         guild: n
                                     },
@@ -137,10 +137,10 @@ function D(e) {
             X || V
                 ? function (e) {
                       if ((e.stopPropagation(), V)) {
-                          null == Z || Z(), (0, o.hk)(A);
+                          null == G || G(), (0, o.hk)(A);
                           return;
                       }
-                      (null == D ? void 0 : D.isGuildStageVoice()) ? ((0, _.Cq)(D), null == Z || Z()) : (null == D ? void 0 : D.isGuildVoice()) && (v.Z.joinVoiceEvent(D.guild_id, D.id), null == Z || Z());
+                      (null == D ? void 0 : D.isGuildStageVoice()) ? ((0, _.Cq)(D), null == G || G()) : (null == D ? void 0 : D.isGuildVoice()) && (v.Z.joinVoiceEvent(D.guild_id, D.id), null == G || G());
                   }
                 : void 0,
         onRsvpClick: Y,
@@ -153,9 +153,9 @@ function D(e) {
                               return (n) =>
                                   (0, i.jsx)(
                                       e,
-                                      S(j({}, n), {
+                                      S(N({}, n), {
                                           event: O,
-                                          onSuccess: Z
+                                          onSuccess: G
                                       })
                                   );
                           });
@@ -180,7 +180,7 @@ function D(e) {
                     return (t) =>
                         (0, i.jsx)(
                             e,
-                            S(j({}, t), {
+                            S(N({}, t), {
                                 guild: n,
                                 channel: D,
                                 guildScheduledEvent: O,
@@ -200,14 +200,14 @@ function D(e) {
                       (0, r.h7j)((e) =>
                           (0, i.jsx)(
                               r.ConfirmModal,
-                              S(j({}, e), {
-                                  header: N.intl.string(N.t.qaYzPD),
-                                  confirmText: N.intl.string(N.t.mjB9pa),
-                                  cancelText: N.intl.string(N.t['ETE/oK']),
+                              S(N({}, e), {
+                                  header: j.intl.string(j.t.qaYzPD),
+                                  confirmText: j.intl.string(j.t.mjB9pa),
+                                  cancelText: j.intl.string(j.t['ETE/oK']),
                                   onConfirm: n,
                                   children: (0, i.jsx)(r.Text, {
                                       variant: 'text-md/normal',
-                                      children: N.intl.string(N.t.bnDQ7O)
+                                      children: j.intl.string(j.t.bnDQ7O)
                                   })
                               })
                           )

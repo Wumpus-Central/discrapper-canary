@@ -59,8 +59,8 @@ function b(e) {
             }
         ),
         I = E.commands.filter((e) => e.type === o.yU.PRIMARY_ENTRY_POINT && e.applicationId === O)[0],
-        S = E.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
-        P = E.loading,
+        P = E.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
+        S = E.loading,
         Z =
             null ==
             (t = E.descriptors.find((e) => {
@@ -72,7 +72,7 @@ function b(e) {
         N = r.useMemo(() => (null != Z ? h.ZP.createFromServer(Z) : void 0), [Z]),
         T = (0, u.q)(null == N ? O : void 0),
         A = null != (n = null != N ? N : T) ? n : void 0,
-        w = null == A || (P && 0 === S.length);
+        w = null == A || (S && 0 === P.length);
     return {
         application: A,
         isInitialLoading: w,
@@ -81,6 +81,6 @@ function b(e) {
         wasProfileFetching: null != x ? x : null,
         applicationId: O,
         channelId: _.id,
-        commands: S
+        commands: P
     };
 }

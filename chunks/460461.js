@@ -195,7 +195,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                     i = e;
                 0 === r.length && i.length > 1 && !1 === RegExp('^https?:').test(i) && (i = 'https://' + i), /\.(zip|exe|pdf|dmg|msi|apk|rar|7z|tar|gz|iso|docx?|xlsx?|pptx?|mp4|mp3)$/i.test(i) || ((n[t] = i), (0, g.t$)(d.id, n));
             },
-            J = (e) => {
+            Q = (e) => {
                 let t = [...U];
                 t.splice(e, 1), B(t);
                 let n = [...k];
@@ -205,7 +205,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                 let i = [...D.socialLinks];
                 i.splice(e, 1), (0, g.t$)(d.id, i);
             },
-            Q = (e) => {
+            J = (e) => {
                 let { reason: t = '', emoji_name: n = '' } = e;
                 return null !== t && t.length >= 10 && t.length <= 128 && null !== n;
             },
@@ -231,7 +231,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                         },
                         {
                             description: E.intl.string(E.t.qpx5MD),
-                            completed: null !== D.reasonsToJoin && D.reasonsToJoin.every((e) => $(e) || Q(e)) && D.reasonsToJoin.filter(Q).length >= 2
+                            completed: null !== D.reasonsToJoin && D.reasonsToJoin.every((e) => $(e) || J(e)) && D.reasonsToJoin.filter(J).length >= 2
                         }
                     ]
                 }
@@ -573,7 +573,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                             o.Z,
                                                                             {
                                                                                 className: U[t] ? (D.isPublished ? S.deleteButtonMax : S.deleteButtonMin) : D.isPublished ? S.deleteButtonHiddenMax : S.deleteButtonHiddenMin,
-                                                                                onClick: () => J(t)
+                                                                                onClick: () => Q(t)
                                                                             },
                                                                             'delete-button-' + t
                                                                         )

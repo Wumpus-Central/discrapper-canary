@@ -71,7 +71,7 @@ function j(e) {
     function E(e) {
         if (null == y) return null;
         (0, s.jW)(e, async () => {
-            let { default: e } = await Promise.all([n.e('79695'), n.e('4040'), n.e('78180')]).then(n.bind(n, 654663));
+            let { default: e } = await Promise.all([n.e('79695'), n.e('70675')]).then(n.bind(n, 654663));
             return (t) =>
                 (0, r.jsx)(
                     e,
@@ -84,7 +84,7 @@ function j(e) {
         });
     }
     let I = null != (i = null != (t = null == j ? void 0 : j.nick) ? t : g.ZP.getName(y)) ? i : '???',
-        S = null == j ? void 0 : j.colorString;
+        P = null == j ? void 0 : j.colorString;
     return null == y
         ? (0, r.jsx)('span', {
               className: l()(C.threadCreatorName, C.unknownCreatorName),
@@ -107,7 +107,7 @@ function j(e) {
                               onContextMenu: E,
                               children: (0, r.jsx)(a.PUh, {
                                   name: I,
-                                  color: null != S ? S : void 0,
+                                  color: null != P ? P : void 0,
                                   roleColors: O
                               })
                           })

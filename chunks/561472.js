@@ -22,17 +22,17 @@ let x = function (e) {
         [j, O] = i.useState(!0),
         E = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
         I = (0, l.e7)([p.Z], () => null != x && p.Z.can(y.Plq.ATTACH_FILES, x), [x]),
-        S = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(x.id)),
-        P = x.getGuildId(),
+        P = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(x.id)),
+        S = x.getGuildId(),
         Z = v === s.d.FirstThreadMessage,
         N = (0, l.e7)([f.default], () => {
             var e;
             return !0 == !(null == (e = f.default.getCurrentUser()) ? void 0 : e.nsfwAllowed);
         }),
-        T = (0, l.e7)([c.Z], () => c.Z.didAgree(P)) && !N,
-        A = i.useMemo(() => !E && ((x.isPrivate() && !x.isManaged()) || (null != P && (!x.isNSFW() || T) && I && u.Z.canChatInGuild(P))), [I, T, x, P, E]),
+        T = (0, l.e7)([c.Z], () => c.Z.didAgree(S)) && !N,
+        A = i.useMemo(() => !E && ((x.isPrivate() && !x.isManaged()) || (null != S && (!x.isNSFW() || T) && I && u.Z.canChatInGuild(S))), [I, T, x, S, E]),
         w = Z ? (y.TPd.GUILD_THREADS_ONLY.has(x.type) ? C.intl.string(C.t.RBBLhI) : C.intl.string(C.t.gUx4en)) : j ? C.intl.format(C.t.dYP2FR, { destination: (0, a.F6)(x, f.default, h.Z, !0) }) : C.intl.string(C.t.h76ulJ);
-    return S || !A
+    return P || !A
         ? null
         : (0, r.jsx)(b.Z, {
               className: t,
@@ -41,7 +41,7 @@ let x = function (e) {
               description: Z ? C.intl.string(C.t.lpgkzs) : C.intl.string(C.t.usQh4O),
               icons: _.J6,
               onDrop: (e) => {
-                  if (S) return !1;
+                  if (P) return !1;
                   A &&
                       null != x &&
                       ((0, g.d)(e, x, v, {
@@ -52,7 +52,7 @@ let x = function (e) {
               },
               onDragClear: () => O(!0),
               onDragOver: (e) => {
-                  if (S) return !1;
+                  if (P) return !1;
                   Z || e.shiftKey !== j || O(!e.shiftKey);
               }
           });

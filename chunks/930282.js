@@ -33,10 +33,10 @@ let y = o.memo(function (e) {
         v = a.state === p.yb.SENDING,
         j = a.isCommandType(),
         x = null == (t = a.editedTimestamp) ? void 0 : t.toString(),
-        C = o.useRef(!1);
+        P = o.useRef(!1);
     return (
         o.useLayoutEffect(() => {
-            C.current ? null != h && h() : (C.current = !0);
+            P.current ? null != h && h() : (P.current = !0);
         }, [h, a.content, c, x, s]),
         (0, r.jsxs)('div', {
             id: (0, u.ut)(a),

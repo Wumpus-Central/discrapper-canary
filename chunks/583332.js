@@ -1,20 +1,20 @@
-n.d(t, { g: () => u });
-var i = n(200651);
-n(192379);
-var l = n(442837),
-    r = n(481060),
-    s = n(378298),
-    a = n(88101),
-    d = n(594174),
-    o = n(388032);
-function u(e) {
-    let t = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-        n = (0, a.P)(e.id);
-    return (null == t ? void 0 : t.isStaff()) === !0 && e.isDM() && null == n
+e.d(t, { g: () => o });
+var i = e(200651);
+e(192379);
+var l = e(442837),
+    r = e(481060),
+    d = e(378298),
+    s = e(88101),
+    a = e(594174),
+    u = e(388032);
+function o(n) {
+    let t = (0, l.e7)([a.default], () => a.default.getCurrentUser()),
+        e = (0, s.P)(n.id);
+    return (null == t ? void 0 : t.isStaff()) === !0 && n.isDM() && null == e
         ? (0, i.jsx)(r.sNh, {
               id: 'mark-as-stranger-danger',
-              label: o.intl.string(o.t.CgWmmZ),
-              action: () => (0, s.Dl)(e.id)
+              label: u.intl.string(u.t.CgWmmZ),
+              action: () => (0, d.Dl)(n.id)
           })
         : null;
 }

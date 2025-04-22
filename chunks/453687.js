@@ -45,20 +45,20 @@ function p(e, t, n) {
         v = !O && (null == n ? void 0 : n.hasTimestamp) !== !1,
         j = l(e, t),
         x = s(e),
-        C = O ? '' : ''.concat(u ? x : j, ' ').concat(r.Z0);
+        P = O ? '' : ''.concat(u ? x : j, ' ').concat(r.Z0);
     if (_) {
         let t = i(e);
-        C += ' '.concat(t);
+        P += ' '.concat(t);
     }
     if (h) {
         let t = d(e);
-        C += ' '.concat(t);
+        P += ' '.concat(t);
     }
     if (v) {
         let t = c(e);
-        C += ' '.concat(r.fy, ' ').concat(t);
+        P += ' '.concat(r.fy, ' ').concat(t);
     }
-    return C.trim();
+    return P.trim();
 }
 function g(e) {
     if (0 === e.reactions.length) return;

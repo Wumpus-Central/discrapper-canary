@@ -47,7 +47,7 @@ function g(e) {
     let { withMutualFriendsCount: x } = (0, s.j)({ location: 'UserProfileSidebarRenderer' });
     return (i.useEffect(() => {
         (0, d.Z)(null != g ? g : n, {
-            type: 'panel',
+            type: 'sidebar',
             withMutualFriendsCount: (null == g ? void 0 : g.bot) !== !0 && x,
             withMutualFriends: (null == g ? void 0 : g.bot) !== !0 && !x,
             withMutualGuilds: !0,

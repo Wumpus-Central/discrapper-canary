@@ -15,12 +15,12 @@ var r = n(200651),
     s = n(200100),
     l = n(990547),
     c = n(748780),
-    u = n(143450),
-    d = n(186325),
-    f = n(693789),
-    _ = n(507274),
-    p = n(84735),
-    h = n(261833),
+    u = n(197723),
+    d = n(143450),
+    f = n(186325),
+    _ = n(693789),
+    p = n(507274),
+    h = n(84735),
     m = n(742746),
     g = n(147479),
     E = n(481060),
@@ -115,11 +115,11 @@ var D = (function (e) {
 })({});
 function L(e) {
     var t,
-        { transitionState: n, children: a, size: f = 'small', role: h = 'dialog', className: m, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: b = v.dG, returnRef: O, animation: S = 'default' } = e,
+        { transitionState: n, children: a, size: u = 'small', role: _ = 'dialog', className: m, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: b = v.dG, returnRef: O, animation: S = 'default' } = e,
         A = C(e, ['transitionState', 'children', 'size', 'role', 'className', 'fullscreenOnMobile', 'hideShadow', 'onAnimationEnd', 'returnRef', 'animation']);
     let R = n === y.Dv.ENTERING || n === y.Dv.ENTERED,
-        { reducedMotion: P } = i.useContext(d.S),
-        D = (0, u.q)(
+        { reducedMotion: P } = i.useContext(f.S),
+        D = (0, d.q)(
             {
                 opacity: +!!R,
                 transform: R || P.enabled || 'subtle' === S ? 'scale(1)' : 'scale(0.7)',
@@ -147,12 +147,12 @@ function L(e) {
     return (0, r.jsx)(y.zM.Provider, {
         value: U,
         children: (0, r.jsx)(
-            _.V,
+            p.V,
             N(
                 T(
                     {
                         className: I.focusLock,
-                        role: h,
+                        role: _,
                         returnRef: O,
                         impressionType: l.ImpressionTypes.MODAL,
                         'aria-labelledby': x ? void 0 : U.headerId
@@ -161,13 +161,13 @@ function L(e) {
                 ),
                 {
                     children: (0, r.jsx)(s.animated.div, {
-                        className: o()(m, I.root, w[f], {
+                        className: o()(m, I.root, w[u], {
                             [I.fullscreenOnMobile]: g,
                             [I.rootWithShadow]: !E
                         }),
                         ref: L,
                         style: D,
-                        children: (0, r.jsx)(p.J, {
+                        children: (0, r.jsx)(h.J, {
                             containerRef: L,
                             children: a
                         })
@@ -234,18 +234,18 @@ function j(e) {
     });
 }
 function U(e) {
-    return (0, r.jsx)(f.zx, {
+    return (0, r.jsx)(_.zx, {
         focusProps: e.focusProps,
         'aria-label': O.intl.string(O.t.cpT0Cg),
-        look: f.zx.Looks.BLANK,
-        size: f.zx.Sizes.NONE,
+        look: _.zx.Looks.BLANK,
+        size: _.zx.Sizes.NONE,
         onClick: e.onClick,
         innerClassName: o()(e.innerClassName, { [I.closeWithCircleBackground]: e.withCircleBackground }),
         className: o()(e.className, {
             [I.hideOnFullscreen]: e.hideOnFullscreen,
             [I.close]: !e.withCircleBackground
         }),
-        children: (0, r.jsx)(h.D, {
+        children: (0, r.jsx)(u.D, {
             size: 'md',
             color: 'currentColor',
             className: o()(e.innerClassName, I.closeIcon)

@@ -28,8 +28,8 @@ var r = n(200651),
     O = n(887012),
     E = n(659580),
     I = n(793865),
-    S = n(575175),
-    P = n(522651),
+    P = n(575175),
+    S = n(522651),
     Z = n(795318),
     N = n(997614),
     T = n(243778),
@@ -92,7 +92,7 @@ function eI() {
             return e;
         }).apply(this, arguments);
 }
-function eS(e) {
+function eP(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -117,7 +117,7 @@ function eS(e) {
     }
     return e;
 }
-function eP(e, t) {
+function eS(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -138,7 +138,7 @@ function eP(e, t) {
 function eZ(e, t) {
     if (er.Z.isVideoEnabled() === e) return;
     let n = () => h.Z.setVideoEnabled(e);
-    (0, P.v)(x.Z.VOICE_CONTROL_TRAY, P.d.CAMERA, e), e ? (0, ex.Z)(n, t) : n();
+    (0, S.v)(x.Z.VOICE_CONTROL_TRAY, S.d.CAMERA, e), e ? (0, ex.Z)(n, t) : n();
 }
 function eN(e) {
     let { channel: t, currentUser: n, exitFullScreen: l, canGoLive: o, hasPermission: a, disabled: s } = e,
@@ -156,21 +156,21 @@ function eN(e) {
         x = (0, G.B4)(),
         [j, O] = i.useState(!1),
         E = (0, B.bK)(),
-        [I, S] = i.useState(!1);
+        [I, P] = i.useState(!1);
     i.useEffect(() => {
-        if ((S(t.isHDStreamSplashed && null == g && !E), t.isHDStreamSplashed)) {
+        if ((P(t.isHDStreamSplashed && null == g && !E), t.isHDStreamSplashed)) {
             let e = setTimeout(() => {
-                S(!1);
+                P(!1);
             }, 300000);
             return () => clearTimeout(e);
         }
     }, [t.isHDStreamSplashed, g, E]);
     let Z = () => {
-            if (((0, P.v)(c, P.d.STREAM, !0), o)) return void C();
+            if (((0, S.v)(c, S.d.STREAM, !0), o)) return void C();
             (0, ey.Z)();
         },
         N = () => {
-            (0, P.v)(c, P.d.STREAM, !1), (0, M.Z)(g);
+            (0, S.v)(c, S.d.STREAM, !1), (0, M.Z)(g);
         },
         A = (e, t) => {
             let n = null != e ? e : { onClick: void 0 },
@@ -197,7 +197,7 @@ function eN(e) {
                 o = null != g;
             return (0, r.jsx)(
                 Q.O,
-                eP(eS({}, l), {
+                eS(eP({}, l), {
                     centerButton: !0,
                     disabled: s || !a,
                     className: h ? void 0 : eE.controlButton,
@@ -310,7 +310,7 @@ let eA = i.memo(function (e) {
         x = (0, L.qY)(l.id),
         O = i.useCallback(() => ((null == s ? void 0 : s.type) === ej.fO.ACTIVITY && s.applicationId === (null == o ? void 0 : o.applicationId) ? 'ACTIVITY' : y ? 'STREAM' : null != x ? 'EVENT' : 'CALL'), [s, null == o ? void 0 : o.applicationId, y, x]),
         [E, I] = i.useState(O()),
-        S = (0, ed.Z)({ location: 'DisconnectButton' }),
+        P = (0, ed.Z)({ location: 'DisconnectButton' }),
         Z = (0, p.q_F)(
             {
                 opacity: h ? 0.2 : 1,
@@ -336,7 +336,7 @@ let eA = i.memo(function (e) {
             else for (let e of C) (0, g.g)((0, R.V9)(e));
         }, [C, _]),
         T = (e, i) => {
-            let c = S
+            let c = P
                 ? {
                       fullRegionButton: !0,
                       centerButton: !0,
@@ -352,7 +352,7 @@ let eA = i.memo(function (e) {
                     if (null == s || null == t || s.type !== ej.fO.ACTIVITY || null == o) return;
                     return (0, r.jsx)(
                         q.Z,
-                        eP(eS({}, c), {
+                        eS(eP({}, c), {
                             applicationId: s.applicationId,
                             color: 'disconnect',
                             location: o.location,
@@ -362,12 +362,12 @@ let eA = i.memo(function (e) {
                 case 'STREAM':
                     return (0, r.jsx)(
                         Q.O,
-                        eP(eS({}, c), {
+                        eS(eP({}, c), {
                             hasPermission: !0,
                             streamActive: !0,
                             color: 'disconnect',
                             onClick: () => {
-                                (0, P.v)(a, P.d.STOP_WATCHING), N();
+                                (0, S.v)(a, S.d.STOP_WATCHING), N();
                             },
                             onPopoutClick: C.length > 1 ? i : null,
                             isSelfStream: !1
@@ -376,10 +376,10 @@ let eA = i.memo(function (e) {
                 case 'CALL':
                     return (0, r.jsx)(
                         K.Z,
-                        eP(eS({}, c), {
+                        eS(eP({}, c), {
                             color: 'disconnect',
                             onClick: () => {
-                                (0, P.v)(a, P.d.DISCONNECT), null == n || n();
+                                (0, S.v)(a, S.d.DISCONNECT), null == n || n();
                             },
                             onPopoutClick: C.length > 0 ? i : null
                         })
@@ -388,7 +388,7 @@ let eA = i.memo(function (e) {
                     return (0, r.jsx)(D.Z, {
                         channelId: l.id,
                         onClick: () => {
-                            (0, P.v)(a, P.d.DISCONNECT), m.default.disconnect(), null == n || n();
+                            (0, S.v)(a, S.d.DISCONNECT), m.default.disconnect(), null == n || n();
                         }
                     });
             }
@@ -425,7 +425,7 @@ function ew(e) {
         { parentAnalyticsLocation: s } = (0, v.ZP)(),
         { reachedLimit: c, limit: d } = (0, eu.Z)(t),
         p = i.useCallback(() => {
-            (0, P.v)(s, P.d.JOIN_VIDEO_CALL), (0, ex.Z)(() => m.default.selectVoiceChannel(t.id, !0), a);
+            (0, S.v)(s, S.d.JOIN_VIDEO_CALL), (0, ex.Z)(() => m.default.selectVoiceChannel(t.id, !0), a);
         }, [t.id, a, s]),
         h = i.useCallback(() => {
             n ? (0, e_.Z)() : p();
@@ -479,7 +479,7 @@ let ek = function (e) {
         g = (0, ed.Z)({ location: 'CenterControlTray' }),
         _ = i.useRef(null),
         { coloredIconsEnabled: C, simplifiedSettingsEnabled: j } = (0, ea.Z)({ location: 'CenterControlTray' }),
-        [P, Z] = i.useState(void 0),
+        [S, Z] = i.useState(void 0),
         T = (0, u.e7)([el.default], () => {
             let e = el.default.getCurrentUser();
             return s()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
@@ -592,7 +592,7 @@ let ek = function (e) {
                                                   suppress: D,
                                                   popoutOpen: i,
                                                   awaitingRemote: W,
-                                                  onClick: () => (0, S.Z)(G, D, ev.jXE.VOICE_CONTROL_TRAY),
+                                                  onClick: () => (0, P.Z)(G, D, ev.jXE.VOICE_CONTROL_TRAY),
                                                   onContextMenu: ej
                                               });
                                           }
@@ -647,27 +647,27 @@ let ek = function (e) {
                                           (0, r.jsx)(eT, {
                                               channel: l,
                                               idle: null == (t = null == h ? void 0 : h.idle) || t,
-                                              whichPopoutIsOpen: P,
+                                              whichPopoutIsOpen: S,
                                               setWhichPopoutIsOpen: Z
                                           }),
                                       ex &&
                                           (0, r.jsx)(N.Z, {
                                               channel: l,
                                               themeable: !0,
-                                              whichPopoutIsOpen: P,
+                                              whichPopoutIsOpen: S,
                                               setWhichPopoutIsOpen: Z
                                           }),
                                       eb &&
                                           !Y &&
                                           (0, r.jsx)(em.Z, {
                                               channel: l,
-                                              whichPopoutIsOpen: P,
+                                              whichPopoutIsOpen: S,
                                               setWhichPopoutIsOpen: Z
                                           }),
                                       j &&
                                           (0, r.jsx)(eg.Z, {
                                               channel: l,
-                                              whichPopoutIsOpen: P,
+                                              whichPopoutIsOpen: S,
                                               setWhichPopoutIsOpen: Z,
                                               remoteMode: Y
                                           })
@@ -732,7 +732,7 @@ let ek = function (e) {
                                                 suppress: D,
                                                 popoutOpen: i,
                                                 awaitingRemote: W,
-                                                onClick: () => (0, S.Z)(G, D, ev.jXE.VOICE_CONTROL_TRAY),
+                                                onClick: () => (0, P.Z)(G, D, ev.jXE.VOICE_CONTROL_TRAY),
                                                 onContextMenu: ej
                                             });
                                         }
@@ -819,7 +819,7 @@ let ek = function (e) {
                                                 suppress: D,
                                                 popoutOpen: i,
                                                 awaitingRemote: W,
-                                                onClick: () => (0, S.Z)(G, D, ev.jXE.VOICE_CONTROL_TRAY),
+                                                onClick: () => (0, P.Z)(G, D, ev.jXE.VOICE_CONTROL_TRAY),
                                                 onContextMenu: ej
                                             });
                                         }
