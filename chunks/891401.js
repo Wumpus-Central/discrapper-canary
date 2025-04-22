@@ -69,11 +69,11 @@ function _() {
         n = null == t ? void 0 : t.wallpaperId,
         l = (0, c.e7)([m.Z], () => {
             var e, t;
-            return null != (t = null == (e = m.Z.getWallpaperById(n)) ? void 0 : e.primaryColor) ? t : '#000000';
+            return null != (t = null == (e = m.Z.getWallpaperById(n)) ? void 0 : e.default.primary_color) ? t : '#000000';
         }),
         o = (0, c.e7)([m.Z], () => {
             var e, t;
-            return null != (t = null == (e = m.Z.getWallpaperById(n)) ? void 0 : e.secondaryColor) ? t : '#000000';
+            return null != (t = null == (e = m.Z.getWallpaperById(n)) ? void 0 : e.default.secondary_color) ? t : '#000000';
         }),
         j = r.useCallback(
             (e) => {

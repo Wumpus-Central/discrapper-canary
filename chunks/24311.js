@@ -1,7 +1,7 @@
-n.d(t, { Z: () => g });
-var i = n(200651);
+n.d(t, { Z: () => b });
+var l = n(200651);
 n(192379);
-var l = n(442837),
+var i = n(442837),
     r = n(481060),
     o = n(493683),
     a = n(40851),
@@ -10,65 +10,65 @@ var l = n(442837),
     d = n(592125),
     c = n(699516),
     f = n(944486),
-    Z = n(981631),
-    b = n(388032);
-function g(e) {
-    let { user: t, context: g, label: O, joinCallVideo: v, id: p, onCall: j } = e,
-        m = (0, a.Aq)(),
-        h = (0, l.e7)([u.default], () => u.default.getId() === t.id),
-        y = (0, l.e7)([c.Z], () => c.Z.isBlocked(t.id)),
-        P = (0, l.e7)([f.Z, d.Z], () => f.Z.getVoiceChannelId() === d.Z.getDMFromUserId(t.id));
-    if (h || g === Z.IlC.POPOUT || P || t.bot || t.isProvisional) return null;
-    let x = () => {
+    g = n(981631),
+    Z = n(388032);
+function b(e) {
+    let { user: t, context: b, label: O, joinCallVideo: m, id: h, onCall: j } = e,
+        E = (0, a.Aq)(),
+        v = (0, i.e7)([u.default], () => u.default.getId() === t.id),
+        p = (0, i.e7)([c.Z], () => c.Z.isBlocked(t.id)),
+        P = (0, i.e7)([f.Z, d.Z], () => f.Z.getVoiceChannelId() === d.Z.getDMFromUserId(t.id));
+    if (v || b === g.IlC.POPOUT || P || t.bot || t.isProvisional) return null;
+    let y = () => {
             null == j || j(),
                 o.Z.openPrivateChannel({
                     recipientIds: t.id,
                     joinCall: !0,
-                    joinCallVideo: v
+                    joinCallVideo: m
                 }),
-                m.dispatch(Z.CkL.POPOUT_CLOSE),
+                E.dispatch(g.CkL.POPOUT_CLOSE),
                 (0, r.pTH)();
         },
         S = !s.ZP.disableCallUserConfirmationPrompt;
-    return (0, i.jsx)(r.sNh, {
-        id: null != p ? p : 'call',
-        label: null != O ? O : b.intl.string(b.t.JJogjo),
+    return (0, l.jsx)(r.sNh, {
+        id: null != h ? h : 'call',
+        label: null != O ? O : Z.intl.string(Z.t.JJogjo),
         action: S
             ? () => {
                   (0, r.ZDy)(async () => {
                       let { default: e } = await n.e('27157').then(n.bind(n, 736454));
                       return (t) =>
-                          (0, i.jsx)(
+                          (0, l.jsx)(
                               e,
                               (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
-                                          i = Object.keys(n);
+                                          l = Object.keys(n);
                                       'function' == typeof Object.getOwnPropertySymbols &&
-                                          (i = i.concat(
+                                          (l = l.concat(
                                               Object.getOwnPropertySymbols(n).filter(function (e) {
                                                   return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                               })
                                           )),
-                                          i.forEach(function (t) {
-                                              var i;
-                                              (i = n[t]),
+                                          l.forEach(function (t) {
+                                              var l;
+                                              (l = n[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
-                                                            value: i,
+                                                            value: l,
                                                             enumerable: !0,
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = i);
+                                                      : (e[t] = l);
                                           });
                                   }
                                   return e;
-                              })({ onSubmit: x }, t)
+                              })({ onSubmit: y }, t)
                           );
                   });
               }
-            : x,
-        disabled: y
+            : y,
+        disabled: p
     });
 }

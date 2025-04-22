@@ -1,5 +1,5 @@
 var r = n(970711);
-e.exports = n.v(t, e.id, '54c9241a0fac5a89', {
+e.exports = n.v(t, e.id, 'fd28430004f129b9', {
     './libdiscore_wasm_bg.js': {
         __wbg_warn_2159aed0435b2f46: r.fw,
         __wbindgen_is_undefined: r.XP,
@@ -75,9 +75,9 @@ e.exports = n.v(t, e.id, '54c9241a0fac5a89', {
         __wbindgen_debug_string: r.fY,
         __wbindgen_throw: r.Or,
         __wbindgen_memory: r.oH,
-        __wbindgen_closure_wrapper520: r.I$,
-        __wbindgen_closure_wrapper545: r.eF,
-        __wbindgen_closure_wrapper1231: r.ZC,
+        __wbindgen_closure_wrapper559: r.rY,
+        __wbindgen_closure_wrapper584: r.nI,
+        __wbindgen_closure_wrapper1271: r.Vo,
         __wbindgen_init_externref_table: r.xQ
     }
 });

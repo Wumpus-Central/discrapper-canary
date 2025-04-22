@@ -4,10 +4,10 @@ var r = n(200651),
     l = n(442837),
     a = n(481060),
     o = n(668781),
-    s = n(431583),
-    c = n(91372),
-    u = n(19780),
-    d = n(35818),
+    s = n(549388),
+    c = n(431583),
+    u = n(91372),
+    d = n(19780),
     p = n(665149),
     m = n(388032),
     f = n(220705);
@@ -36,7 +36,7 @@ class g extends i.PureComponent {
     handleDownloadApps() {
         (0, a.h7j)((e) =>
             (0, r.jsx)(
-                s.default,
+                c.default,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,7 +87,7 @@ class g extends i.PureComponent {
                 clicked: !1
             }),
             h(this, 'handleInstallDownload', () => {
-                u.Z.isConnected()
+                d.Z.isConnected()
                     ? o.Z.show({
                           title: m.intl.string(m.t.tiu1l5),
                           body: m.intl.string(m.t['zK+lqa']),
@@ -98,8 +98,8 @@ class g extends i.PureComponent {
                     : this.doUpdate();
             }),
             h(this, 'doUpdate', () => {
-                this.state.clicked || (this.setState({ clicked: !0 }), (0, d.Q)());
+                this.state.clicked || (this.setState({ clicked: !0 }), (0, s.Q)());
             });
     }
 }
-let _ = l.ZP.connectStores([c.Z], () => ({ mode: c.Z.getState() }))(g);
+let _ = l.ZP.connectStores([u.Z], () => ({ mode: u.Z.getState() }))(g);

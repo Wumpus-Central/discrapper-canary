@@ -58,8 +58,8 @@ let C = {
                 );
             case b.uaV.RECIPIENT_REMOVE:
                 if (null == I) return;
-                let P = e.author;
-                if (null == P || P.id === I.id)
+                let O = e.author;
+                if (null == O || O.id === I.id)
                     return (0, r.Rp)(
                         v.intl.formatToParts(v.t['Qn5+LS'], {
                             username: C,
@@ -75,8 +75,8 @@ let C = {
                     })
                 );
             case b.uaV.CALL:
-                let { call: O } = e;
-                if (null != O && -1 === O.participants.indexOf(_.default.getId()))
+                let { call: P } = e;
+                if (null != P && -1 === P.participants.indexOf(_.default.getId()))
                     return (0, r.Rp)(
                         v.intl.formatToParts(v.t.DbgSAw, {
                             username: C,

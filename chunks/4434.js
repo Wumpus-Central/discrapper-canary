@@ -463,7 +463,7 @@ function ea(e) {
                         ? null != O
                             ? (0, i.jsx)(m.DY3, {
                                   text: $.intl.string($.t.XiuuV1),
-                                  children: (0, i.jsx)(P.Z, {
+                                  children: (0, i.jsx)(P.ZP, {
                                       paymentSources: [O],
                                       selectedPaymentSourceId: O.id,
                                       hidePersonalInformation: E,
@@ -471,7 +471,7 @@ function ea(e) {
                                   })
                               })
                             : (0, i.jsx)('div', { children: (0, i.jsx)(m.$jN, {}) })
-                        : (0, i.jsx)(P.Z, {
+                        : (0, i.jsx)(P.ZP, {
                               paymentSources: Object.values(l),
                               selectedPaymentSourceId: N,
                               onChange: I,
