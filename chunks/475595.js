@@ -23,7 +23,7 @@ var r = n(887003),
 let s = /\.([a-zA-Z0-9]+)$/,
     l = ['video/mp4', 'video/webm'];
 var c = (function (e) {
-    return (e.HERO = 'hero'), (e.QUEST_BAR_HERO = 'quest_bar_hero'), (e.REWARD = 'reward'), (e.GAME_TILE = 'game_tile'), (e.LOGO_TYPE = 'logo_type'), e;
+    return (e.HERO = 'hero'), (e.HERO_IMAGE = 'hero_image'), (e.QUEST_BAR_HERO = 'quest_bar_hero'), (e.REWARD = 'reward'), (e.GAME_TILE = 'game_tile'), (e.LOGO_TYPE = 'logo_type'), e;
 })({});
 function u(e, t, n) {
     let r = p(e, t, n),
@@ -43,6 +43,9 @@ function f(e, t, n) {
     switch (t) {
         case 'hero':
             s = d(e.config.assets.heroVideo, e.config.assets.hero);
+            break;
+        case 'hero_image':
+            s = e.config.assets.hero;
             break;
         case 'quest_bar_hero':
             s = d(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
