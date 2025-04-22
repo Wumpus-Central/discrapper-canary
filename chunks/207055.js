@@ -131,39 +131,39 @@ let w = i.memo((e) => {
 w.displayName = 'ConnectedVoiceUser';
 let R = [],
     k = function (e) {
-        let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: h, location: f, numAudience: b, withGuildIcon: y = !1, className: C, children: j } = e,
-            [O, E] = i.useState(null),
-            [I, P] = i.useState(!1),
-            S = i.useRef(null),
-            T = (0, m.Es)(l.id, null != c ? c : R),
-            k = i.useRef(
-                new s.sW(50, () => {
-                    E(S.current), (S.current = null);
-                })
-            ),
+        let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: f, location: b, numAudience: y, withGuildIcon: C = !1, className: j, children: O } = e,
+            [E, I] = i.useState(null),
+            [P, S] = i.useState(!1),
+            T = i.useRef(null),
+            k = (0, m.Es)(l.id, null != c ? c : R),
             M = i.useRef(
-                new s.sW(175, () => {
-                    E(null);
+                new s.sW(50, () => {
+                    I(T.current), (T.current = null);
                 })
             ),
-            L = i.useCallback(
-                (e) => {
-                    t && (P(!0), M.current.cancel(), (S.current = e), k.current.delay());
-                },
-                [t]
+            L = i.useRef(
+                new s.sW(175, () => {
+                    I(null);
+                })
             ),
             D = i.useCallback(
                 (e) => {
-                    t && (k.current.cancel(), O === e && (P(!1), M.current.delay()));
+                    t && (S(!0), L.current.cancel(), (T.current = e), M.current.delay());
                 },
-                [t, O]
+                [t]
             ),
-            U = (0, a.Wu)([v.Z], () => {
+            U = i.useCallback(
+                (e) => {
+                    t && (M.current.cancel(), E === e && (S(!1), L.current.delay()));
+                },
+                [t, E]
+            ),
+            B = (0, a.Wu)([v.Z], () => {
                 if (u) return [];
                 let e = new Set();
                 return (
-                    null == T ||
-                        T.forEach((t) => {
+                    null == k ||
+                        k.forEach((t) => {
                             let { user: n } = t;
                             v.Z.getActivities(n.id, l.guild_id).forEach((t) => {
                                 null != t.application_id && e.add(t.application_id);
@@ -172,57 +172,60 @@ let R = [],
                     Array.from(e)
                 );
             });
-        (0, p.Z)(U);
-        let B = (() => {
-            if (null == T || 0 === T.length) return null;
-            let e = (u && T.length > d + 1 ? T.slice(0, d) : T).map((e) => {
-                var t;
-                let { user: i, nick: o, voiceState: a } = e;
-                return (0, r.jsx)(
-                    w,
-                    {
-                        user: i,
-                        nick: o,
-                        isSelfOnOtherClient: _.default.getId() === i.id && a.sessionId !== _.default.getSessionId(),
-                        mute: a.isVoiceMuted(),
-                        deaf: a.isVoiceDeafened(),
-                        video: a.selfVideo,
-                        serverMute: a.mute,
-                        serverDeaf: a.deaf,
-                        sessionId: null != (t = a.sessionId) ? t : '',
-                        channel: l,
-                        collapsed: u,
-                        canDrag: n && x.Z.can(N.Plq.MOVE_MEMBERS, l),
-                        showPreview: L,
-                        hidePreview: D,
-                        previewIsOpen: I,
-                        shouldShowPreview: O === i.id,
-                        tabIndex: h,
-                        location: f
-                    },
-                    i.id
-                );
-            });
+        (0, p.Z)(B);
+        let G = (() => {
+            if (null == k || 0 === k.length) return null;
+            let e = u && k.length > d + 1 ? k.slice(0, d) : k,
+                t = h.Z.getGuildRingingUsers(l.id),
+                i = e.map((e) => {
+                    var i;
+                    let { user: o, nick: a, voiceState: s } = e,
+                        c = t.has(o.id);
+                    return (0, r.jsx)(
+                        w,
+                        {
+                            user: o,
+                            nick: a,
+                            isSelfOnOtherClient: _.default.getId() === o.id && s.sessionId !== _.default.getSessionId(),
+                            mute: s.isVoiceMuted(),
+                            deaf: s.isVoiceDeafened(),
+                            video: s.selfVideo,
+                            serverMute: s.mute,
+                            serverDeaf: s.deaf,
+                            sessionId: null != (i = s.sessionId) ? i : '',
+                            channel: l,
+                            collapsed: u,
+                            canDrag: n && x.Z.can(N.Plq.MOVE_MEMBERS, l),
+                            showPreview: D,
+                            hidePreview: U,
+                            previewIsOpen: P,
+                            shouldShowPreview: E === o.id,
+                            tabIndex: f,
+                            location: b
+                        },
+                        'voice-user-'.concat(o.id, '-').concat(c)
+                    );
+                });
             return (
-                null != b && b > 0
-                    ? e.push(
+                null != y && y > 0
+                    ? i.push(
                           (0, r.jsx)(Z.ul, {
                               collapsed: u,
-                              numAudience: b
+                              numAudience: y
                           })
                       )
-                    : u && T.length > d + 1 && e.push((0, r.jsx)(Z.XX, { numUsers: T.length - d })),
-                e
+                    : u && k.length > d + 1 && i.push((0, r.jsx)(Z.XX, { numUsers: k.length - d })),
+                i
             );
         })();
-        return null == B && null == j
+        return null == G && null == O
             ? null
             : (0, r.jsxs)(g.eJ, {
-                  className: o()(C, A.list, {
+                  className: o()(j, A.list, {
                       [A.collapsed]: u,
-                      [A.withGuildIcon]: y
+                      [A.withGuildIcon]: C
                   }),
                   collapsed: u,
-                  children: [B, j]
+                  children: [G, O]
               });
     };

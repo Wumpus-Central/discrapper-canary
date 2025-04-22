@@ -43,20 +43,32 @@ function O(e, t) {
                 let r = [],
                     i = new Set();
                 for (let e of t) r.push(e), i.add(e.user.id);
-                return (null == e ||
-                    e.forEach((e) => {
-                        r.splice(
-                            (0, l.sortedIndexBy)(r, e, (e) => {
-                                let { comparator: t } = e;
-                                return t;
-                            }),
-                            0,
-                            e
-                        );
-                    }),
-                n.length > 0)
-                    ? [...r, ...n]
-                    : r;
+                return (
+                    null == e ||
+                        e.forEach((e) => {
+                            r.splice(
+                                (0, l.sortedIndexBy)(r, e, (e) => {
+                                    let { comparator: t } = e;
+                                    return t;
+                                }),
+                                0,
+                                e
+                            );
+                        }),
+                    n.length > 0 &&
+                        n.forEach((e) => {
+                            i.has(e.user.id) ||
+                                r.splice(
+                                    (0, l.sortedIndexBy)(r, e, (e) => {
+                                        let { comparator: t } = e;
+                                        return t;
+                                    }),
+                                    0,
+                                    e
+                                );
+                        }),
+                    r
+                );
             })(n, t, O),
         [n, t, O]
     );
