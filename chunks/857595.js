@@ -1,7 +1,6 @@
 n.d(t, {
     Ej: () => O,
     Nc: () => E,
-    Nv: () => C,
     Qj: () => _,
     TX: () => I,
     Uv: () => N,
@@ -132,10 +131,4 @@ function A() {
 }
 function N() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE' });
-}
-function C(e) {
-    r.Z.dispatch({
-        type: 'ACCESSIBILITY_SET_HIDE_TAGS',
-        hideTags: e
-    });
 }
