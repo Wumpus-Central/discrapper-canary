@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(392711),
@@ -17,11 +17,10 @@ var r = n(200651),
     _ = n(251625),
     y = n(823379),
     C = n(665149),
-    x = n(981631),
-    v = n(228168),
-    j = n(388032),
-    O = n(479367);
-function E(e, t, n) {
+    x = n(228168),
+    v = n(388032),
+    j = n(479367);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +33,7 @@ function E(e, t, n) {
         e
     );
 }
-class I {
+class E {
     updateData(e) {
         let { userId: t, user: n, channelId: r, analyticsLocations: i } = e;
         (this.userId = t), (this.user = n), (this.channelId = r), (this.analyticsLocations = i);
@@ -53,7 +52,7 @@ class I {
             return (
                 l.length > 0 &&
                     (o = (0, r.jsx)(s.DY3, {
-                        className: O.tooltip,
+                        className: j.tooltip,
                         text: l.join(', '),
                         position: 'bottom',
                         children: o
@@ -69,11 +68,11 @@ class I {
         });
     }
     constructor({ userId: e, user: t, channelId: n, analyticsLocations: i }) {
-        E(this, 'userId', void 0),
-            E(this, 'user', void 0),
-            E(this, 'channelId', void 0),
-            E(this, 'analyticsLocations', void 0),
-            E(
+        O(this, 'userId', void 0),
+            O(this, 'user', void 0),
+            O(this, 'channelId', void 0),
+            O(this, 'analyticsLocations', void 0),
+            O(
                 this,
                 'generateNicknameGuildPairs',
                 (0, _.oH)((e) => {
@@ -95,32 +94,31 @@ class I {
                         .value();
                 })
             ),
-            E(this, 'renderMoreAvatars', () =>
+            O(this, 'renderMoreAvatars', () =>
                 (0, r.jsx)(
                     s.DY3,
                     {
-                        text: j.intl.string(j.t.UTjREx),
+                        text: v.intl.string(v.t.UTjREx),
                         position: 'bottom',
                         children: (0, r.jsx)(s.P3F, {
-                            className: O.moreAvatars,
+                            className: j.moreAvatars,
                             onClick: this.handleClick,
                             children: (0, r.jsx)(s.oFk, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: O.plusIcon
+                                className: j.plusIcon
                             })
                         })
                     },
                     'more-avatars'
                 )
             ),
-            E(this, 'handleClick', () => {
+            O(this, 'handleClick', () => {
                 (0, f.openUserProfileModal)({
                     userId: this.userId,
                     channelId: this.channelId,
                     sourceAnalyticsLocations: this.analyticsLocations,
-                    section: v.oh.MUTUAL_GUILDS,
-                    analyticsLocation: { section: x.jXE.CHANNEL_HEADER }
+                    section: x.oh.MUTUAL_GUILDS
                 });
             }),
             (this.userId = e),
@@ -129,7 +127,7 @@ class I {
             (this.analyticsLocations = i);
     }
 }
-function S(e) {
+function I(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
         l = (0, h.gc)(n),
@@ -140,7 +138,7 @@ function S(e) {
                 l = (0, a.e7)([b.default], () => b.default.getUser(t), [t]),
                 [o] = i.useState(
                     () =>
-                        new I({
+                        new E({
                             user: l,
                             userId: t,
                             channelId: n,
@@ -162,15 +160,15 @@ function S(e) {
             channelId: t.id
         });
     return 0 === m.getNicknameGuildPairs().length && 0 === l.length
-        ? (0, r.jsx)('div', { className: O.spacer })
+        ? (0, r.jsx)('div', { className: j.spacer })
         : (0, r.jsxs)(d.Gt, {
               value: f,
               children: [
-                  (0, r.jsx)(C.iz, { className: O.divider }),
+                  (0, r.jsx)(C.iz, { className: j.divider }),
                   (0, r.jsx)(s.IGR, {
-                      text: j.intl.string(j.t.l1QVfn),
+                      text: v.intl.string(v.t.l1QVfn),
                       disableColor: !0,
-                      className: O.akaBadge
+                      className: j.akaBadge
                   }),
                   l.length > 0
                       ? (0, r.jsx)(c.Z, {
@@ -190,7 +188,7 @@ function S(e) {
                                               position: 'bottom',
                                               children: (0, r.jsx)('img', {
                                                   alt: '',
-                                                  className: O.avatar,
+                                                  className: j.avatar,
                                                   onClick: m.handleClick,
                                                   src: o.getAvatarURL(a, 16),
                                                   'aria-hidden': !0
@@ -202,13 +200,13 @@ function S(e) {
                             renderMoreUsers: m.renderMoreAvatars,
                             guildId: void 0,
                             max: 3,
-                            className: O.avatars
+                            className: j.avatars
                         })
                       : null,
                   m.getNicknameGuildPairs().length > 0
                       ? (0, r.jsx)(p.Z, {
                             position: 'bottom',
-                            className: O.nicknames,
+                            className: j.nicknames,
                             children: m.renderNicknamePairs()
                         })
                       : null

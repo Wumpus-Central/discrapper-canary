@@ -149,8 +149,7 @@ let M = i.memo(function (e) {
                             (0, m.openUserProfileModal)({
                                 userId: t[1],
                                 messageId: null == (e = l.message) ? void 0 : e.id,
-                                sourceAnalyticsLocations: c,
-                                analyticsLocation: { section: T.jXE.NOTIFICATION_CENTER }
+                                sourceAnalyticsLocations: c
                             });
                         } else await (0, u.Z)(r);
                     }

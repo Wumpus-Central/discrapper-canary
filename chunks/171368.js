@@ -26,25 +26,25 @@ let _ = (0, i.pxk)(i.EFr.SIZE_120),
             }
     };
 async function m(e) {
-    let { userId: t, guildId: n, channelId: r, messageId: i, roleId: s, sessionId: l, joinRequestId: u, section: p, subsection: m, friendToken: g, showGuildProfile: E, hideRestrictedProfile: b, analyticsLocation: y, sourceAnalyticsLocations: v, appContext: O, customStatusPrompt: I = null } = e,
-        S = c.default.getUser(t);
+    let { userId: t, guildId: n, channelId: r, messageId: i, roleId: s, sessionId: l, joinRequestId: u, section: p, subsection: m, friendToken: g, showGuildProfile: E, hideRestrictedProfile: b, sourceAnalyticsLocations: y, appContext: v, customStatusPrompt: O = null } = e,
+        I = c.default.getUser(t);
     h(t);
-    let { withMutualFriendsCount: T } = (0, d.R)({ location: 'openUserProfileModal' });
-    null == S
+    let { withMutualFriendsCount: S } = (0, d.R)({ location: 'openUserProfileModal' });
+    null == I
         ? await (0, o.In)(t, {
               type: 'modal',
               guildId: E && null != n ? n : void 0,
-              withMutualFriendsCount: T,
-              withMutualFriends: !T,
+              withMutualFriendsCount: S,
+              withMutualFriends: !S,
               withMutualGuilds: !0,
               friendToken: g,
               joinRequestId: u
           })
-        : (0, f.Z)(S.id, S.getAvatarURL(void 0, _), {
+        : (0, f.Z)(I.id, I.getAvatarURL(void 0, _), {
               type: 'modal',
               guildId: E && null != n ? n : void 0,
-              withMutualFriendsCount: !S.bot && T,
-              withMutualFriends: !S.bot && !T,
+              withMutualFriendsCount: !I.bot && S,
+              withMutualFriends: !I.bot && !S,
               withMutualGuilds: !0,
               friendToken: g,
               joinRequestId: u
@@ -58,15 +58,14 @@ async function m(e) {
             roleId: null != s ? s : void 0,
             sessionId: null != l ? l : void 0,
             openedAt: Date.now(),
-            customStatusPrompt: I,
+            customStatusPrompt: O,
             section: p,
             subsection: m,
             friendToken: g,
             showGuildProfile: E,
             hideRestrictedProfile: b,
-            analyticsLocation: y,
-            sourceAnalyticsLocations: v,
-            appContext: O
+            sourceAnalyticsLocations: y,
+            appContext: v
         });
 }
 function g() {

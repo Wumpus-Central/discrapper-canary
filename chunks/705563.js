@@ -110,11 +110,7 @@ function _(e) {
                           onClick: () => {
                               (0, a.openUserProfileModal)({
                                   userId: C.userId,
-                                  guildId: C.guildId,
-                                  analyticsLocation: {
-                                      section: m.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-                                      object: m.qAy.JOIN_REQUEST
-                                  }
+                                  guildId: C.guildId
                               });
                           },
                           size: l.PhG.SMALL,

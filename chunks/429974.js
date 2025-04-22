@@ -1,22 +1,15 @@
 n.d(t, {
-    Z: () => T,
-    z: () => v
+    Z: () => E,
+    z: () => p
 });
 var r = n(200651);
 n(192379);
 var i = n(481060),
     a = n(570140),
     o = n(317770),
-    s = n(603113),
-    l = n(812206),
-    c = n(158776),
-    u = n(699516),
-    d = n(594174),
-    f = n(626135),
-    _ = n(621853),
-    p = n(981631),
-    h = n(616922);
-function m(e, t, n) {
+    s = n(594174),
+    l = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +22,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,23 +33,23 @@ function g(e) {
                 })
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = b(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function b(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -65,91 +58,55 @@ function b(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let y = null;
-function v(e, t) {
+let _ = null;
+function p(e, t) {
     return 'USER_PROFILE_MODAL_KEY:'.concat(e, ':').concat(null == t ? '' : t);
 }
-async function O(e) {
-    var t,
-        a,
-        o,
-        m,
-        { userId: b, section: O, subsection: I, guildId: S, channelId: T, friendToken: A, analyticsLocation: N, showGuildProfile: C = !0, appContext: R, customStatusPrompt: P } = e,
-        w = E(e, ['userId', 'section', 'subsection', 'guildId', 'channelId', 'friendToken', 'analyticsLocation', 'showGuildProfile', 'appContext', 'customStatusPrompt']);
-    let D = d.default.getUser(b);
-    if (null == D) return;
-    let L = d.default.getCurrentUser();
-    if (null == L) return;
-    let x = _.Z.getUserProfile(b),
-        M = c.Z.getPrimaryActivity(b),
-        k = c.Z.getStatus(b),
-        j = c.Z.isMobileOnline(b),
-        { party: U, assets: G, application_id: B } = null != M ? M : {},
-        V = null != B ? l.Z.getApplication(B) : null,
-        F = j ? p.j28.ONLINE_MOBILE : p.j28.ONLINE_DESKTOP,
-        Z = k === p.Skl.ONLINE ? F : k;
-    (y = await (0, i.ZDy)(
-        async () => {
-            let { default: e } = await Promise.all([n.e('94989'), n.e('82412'), n.e('62880'), n.e('54636')]).then(n.bind(n, 678780));
-            return (t) =>
-                (0, r.jsx)(
-                    e,
-                    g(
-                        {
-                            user: D,
-                            currentUser: L,
-                            guildId: S,
-                            friendToken: A,
-                            initialSection: O,
-                            initialSubsection: I,
-                            channelId: T,
-                            showGuildProfile: C,
-                            customStatusPrompt: P
-                        },
-                        t,
-                        w
-                    )
-                );
-        },
-        {
-            modalKey: v(b, C ? S : void 0),
-            contextKey: (0, i.VnL)(null != R ? R : p.IlC.APP)
-        }
-    )),
-        f.default.track(
-            p.rMx.OPEN_MODAL,
-            g(
-                {
-                    type: 'Profile Modal',
-                    guild_id: S,
-                    channel_id: T,
-                    other_user_id: b,
-                    application_id: null != (a = null == M ? void 0 : M.application_id) ? a : null,
-                    application_name: null == M ? void 0 : M.name,
-                    sku_id: null != (o = null == V ? void 0 : V.primarySkuId) ? o : null,
-                    is_friend: u.Z.isFriend(b),
-                    has_images: !!(null != (m = null == G ? void 0 : G.large_image) ? m : null == G ? void 0 : G.small_image),
-                    party_max: null == U || null == (t = U.size) ? void 0 : t[1],
-                    party_id: null == U ? void 0 : U.id,
-                    party_platform: (0, h.Ps)(null == U ? void 0 : U.id) ? p.ABu.SPOTIFY : null,
-                    game_platform: (0, s.Z)(M),
-                    profile_user_status: Z,
-                    profile_has_nitro_customization: (null == x ? void 0 : x.banner) != null,
-                    profile_has_profile_effect: (null == x ? void 0 : x.profileEffectId) != null
-                },
-                null == N ? null : (0, f.expandLocation)(N)
-            )
-        );
+async function h(e) {
+    var { userId: t, section: a, subsection: o, guildId: c, channelId: f, friendToken: h, showGuildProfile: m = !0, appContext: g, customStatusPrompt: E } = e,
+        b = d(e, ['userId', 'section', 'subsection', 'guildId', 'channelId', 'friendToken', 'showGuildProfile', 'appContext', 'customStatusPrompt']);
+    let y = s.default.getUser(t);
+    if (null == y) return;
+    let v = s.default.getCurrentUser();
+    null != v &&
+        (_ = await (0, i.ZDy)(
+            async () => {
+                let { default: e } = await Promise.all([n.e('94989'), n.e('82412'), n.e('62880'), n.e('54636')]).then(n.bind(n, 678780));
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        u(
+                            {
+                                user: y,
+                                currentUser: v,
+                                guildId: c,
+                                friendToken: h,
+                                initialSection: a,
+                                initialSubsection: o,
+                                channelId: f,
+                                showGuildProfile: m,
+                                customStatusPrompt: E
+                            },
+                            t,
+                            b
+                        )
+                    );
+            },
+            {
+                modalKey: p(t, m ? c : void 0),
+                contextKey: (0, i.VnL)(null != g ? g : l.IlC.APP)
+            }
+        ));
 }
-function I() {
-    null != y && (0, i.Mr3)(y), (y = null);
+function m() {
+    null != _ && (0, i.Mr3)(_), (_ = null);
 }
-class S extends o.Z {
+class g extends o.Z {
     _initialize() {
-        a.Z.subscribe('USER_PROFILE_MODAL_OPEN', O), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', I);
+        a.Z.subscribe('USER_PROFILE_MODAL_OPEN', h), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', m);
     }
     _terminate() {
-        a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', O), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', I);
+        a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', h), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', m);
     }
 }
-let T = new S();
+let E = new g();

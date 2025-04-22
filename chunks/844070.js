@@ -1,17 +1,18 @@
 n.d(t, {
-    T: () => d,
-    z: () => f
+    T: () => f,
+    z: () => _
 });
 var r = n(493683),
     i = n(529103),
     a = n(292556),
-    o = n(703656),
-    s = n(768581),
-    l = n(981631),
-    c = n(388032);
-function u(e, t, n) {
+    o = n(100527),
+    s = n(703656),
+    l = n(768581),
+    c = n(981631),
+    u = n(388032);
+function d(e, t, n) {
     a.default.showNotification(
-        s.ZP.getUserAvatarURL(e),
+        l.ZP.getUserAvatarURL(e),
         e.username,
         t,
         {},
@@ -24,17 +25,20 @@ function u(e, t, n) {
         }
     );
 }
-function d(e) {
-    u(e, c.intl.string(c.t['t3+Af3']), () => {
+function f(e) {
+    d(e, u.intl.string(u.t['t3+Af3']), () => {
         {
             let { openUserProfileModal: t } = n(171368);
-            t({ userId: e.id });
+            t({
+                userId: e.id,
+                sourceAnalyticsLocations: [o.Z.FRIEND_REQUEST_NOTIFICATION]
+            });
         }
-        (0, o.uL)(l.Z5c.FRIENDS), i.Z.setSection(l.pJs.PENDING);
+        (0, s.uL)(c.Z5c.FRIENDS), i.Z.setSection(c.pJs.PENDING);
     });
 }
-function f(e) {
-    u(e, c.intl.string(c.t.MYr3KS), () => {
+function _(e) {
+    d(e, u.intl.string(u.t.MYr3KS), () => {
         r.Z.openPrivateChannel({ recipientIds: e.id });
     });
 }

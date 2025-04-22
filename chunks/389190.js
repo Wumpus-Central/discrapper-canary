@@ -1,11 +1,11 @@
 n.d(t, {
-    T: () => O,
-    Z: () => P
+    T: () => y,
+    Z: () => O
 });
 var r = n(200651),
     l = n(192379),
-    i = n(442837),
-    s = n(481060),
+    s = n(442837),
+    i = n(481060),
     a = n(239091),
     c = n(129861),
     o = n(81897),
@@ -15,10 +15,9 @@ var r = n(200651),
     p = n(806729),
     f = n(857302),
     j = n(171368),
-    b = n(981631),
-    x = n(388032),
-    v = n(301150);
-function g(e) {
+    b = n(388032),
+    x = n(301150);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +42,7 @@ function g(e) {
     }
     return e;
 }
-function h(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,85 +60,84 @@ function h(e, t) {
         e
     );
 }
-let y = (0, s.pxk)(s.EFr.SIZE_40);
-function O(e) {
+let h = (0, i.pxk)(i.EFr.SIZE_40);
+function y(e) {
     let { user: t, status: l, onSelect: o } = e,
-        u = (0, i.e7)([d.Z], () => d.Z.isMobileOnline(t.id));
-    return (0, r.jsxs)(s.P3F, {
+        u = (0, s.e7)([d.Z], () => d.Z.isMobileOnline(t.id));
+    return (0, r.jsxs)(i.P3F, {
         focusProps: { offset: { right: 8 } },
-        className: v.listRow,
+        className: x.listRow,
         onClick: o,
         onContextMenu: (e) => {
             (0, a.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('70686')]).then(n.bind(n, 881351));
-                return (n) => (0, r.jsx)(e, h(g({}, n), { user: t }));
+                return (n) => (0, r.jsx)(e, g(v({}, n), { user: t }));
             });
         },
         children: [
-            (0, r.jsx)(s.qEK, {
-                src: t.getAvatarURL(void 0, y),
+            (0, r.jsx)(i.qEK, {
+                src: t.getAvatarURL(void 0, h),
                 'aria-label': t.username,
-                size: s.EFr.SIZE_40,
+                size: i.EFr.SIZE_40,
                 status: l,
                 isMobile: u,
-                className: v.listAvatar
+                className: x.listAvatar
             }),
             (0, r.jsx)(c.Z, {
                 user: t,
-                className: v.listName,
-                discriminatorClass: v.listDiscriminator
+                className: x.listName,
+                discriminatorClass: x.listDiscriminator
             })
         ]
     });
 }
-function P(e) {
+function O(e) {
     let { user: t, onClose: n } = e,
-        { mutualFriends: i } = (0, p.Z)(t),
+        { mutualFriends: s } = (0, p.Z)(t),
         { analyticsLocations: a } = (0, u.ZP)(),
         { context: c, trackUserProfileAction: d } = (0, m.KZ)(),
-        y = (0, o.Z)();
+        h = (0, o.Z)();
     l.useEffect(() => {
-        (0, f.Z)(t.id, y);
-    }, [t.id, y]);
-    let P = (e) => {
+        (0, f.Z)(t.id, h);
+    }, [t.id, h]);
+    let O = (e) => {
         n(),
             (0, j.openUserProfileModal)(
-                h(g({}, c), {
+                g(v({}, c), {
                     userId: e,
-                    sourceAnalyticsLocations: a,
-                    analyticsLocation: { section: b.jXE.USER_PROFILE_MUTUAL_FRIENDS }
+                    sourceAnalyticsLocations: a
                 })
             );
     };
-    return (0, r.jsx)(s.zJl, {
-        className: v.listScroller,
+    return (0, r.jsx)(i.zJl, {
+        className: x.listScroller,
         fade: !0,
         children:
-            null == i
+            null == s
                 ? (0, r.jsx)('div', {
-                      className: v.empty,
-                      children: (0, r.jsx)(s.$jN, {})
+                      className: x.empty,
+                      children: (0, r.jsx)(i.$jN, {})
                   })
-                : 0 === i.length
+                : 0 === s.length
                   ? (0, r.jsxs)('div', {
-                        className: v.empty,
+                        className: x.empty,
                         children: [
-                            (0, r.jsx)('div', { className: v.emptyIconFriends }),
+                            (0, r.jsx)('div', { className: x.emptyIconFriends }),
                             (0, r.jsx)('div', {
-                                className: v.emptyText,
-                                children: x.intl.string(x.t['/5p4g4'])
+                                className: x.emptyText,
+                                children: b.intl.string(b.t['/5p4g4'])
                             })
                         ]
                     })
-                  : i.map((e) => {
+                  : s.map((e) => {
                         let { key: t, user: n, status: l } = e;
                         return (0, r.jsx)(
-                            O,
+                            y,
                             {
                                 user: n,
                                 status: l,
                                 onSelect: () => {
-                                    d({ action: 'PRESS_MUTUAL_FRIEND' }), P(n.id);
+                                    d({ action: 'PRESS_MUTUAL_FRIEND' }), O(n.id);
                                 }
                             },
                             t

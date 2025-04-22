@@ -1,4 +1,4 @@
-t.d(n, { Z: () => P }), t(953529);
+t.d(n, { Z: () => G }), t(953529);
 var i = t(200651),
     l = t(192379),
     r = t(120356),
@@ -16,37 +16,36 @@ var i = t(200651),
     f = t(51144),
     v = t(897285),
     h = t(978227),
-    E = t(894017),
-    C = t(79874),
+    C = t(894017),
+    E = t(79874),
     b = t(315416),
     x = t(236373),
     T = t(854698),
     y = t(391174),
     L = t(810561),
-    N = t(390966),
-    j = t(390072),
-    S = t(981631),
-    D = t(388032),
-    O = t(244231);
-function U(e) {
+    j = t(390966),
+    N = t(390072),
+    S = t(388032),
+    D = t(244231);
+function O(e) {
     var n;
     let { creator: t, guildId: l, channelId: r } = e,
         { analyticsLocations: a } = (0, c.ZP)(),
         s = (0, d.e7)([m.ZP], () => m.ZP.getMember(l, t.id), [t, l]),
         u = (0, g.X)(null == s ? void 0 : s.guildId, null == s ? void 0 : s.colorStrings);
     return (0, i.jsxs)('div', {
-        className: O.row,
+        className: D.row,
         children: [
             (0, i.jsx)(o.qEK, {
                 size: o.EFr.SIZE_20,
                 src: t.getAvatarURL(l, 20),
                 'aria-label': null != (n = null == s ? void 0 : s.nick) ? n : f.ZP.getName(t),
-                className: O.icon
+                className: D.icon
             }),
             (0, i.jsx)(o.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: D.intl.format(D.t['66DLFh'], {
+                children: S.intl.format(S.t['66DLFh'], {
                     usernameHook: function () {
                         var e, n;
                         return (0, i.jsx)(
@@ -58,10 +57,9 @@ function U(e) {
                                         channelId: r,
                                         userId: t.id,
                                         roleId: null == s ? void 0 : s.colorRoleId,
-                                        sourceAnalyticsLocations: a,
-                                        analyticsLocation: { section: S.jXE.SCHEDULED_GUILD_EVENT_INFORMATION_DIALOG }
+                                        sourceAnalyticsLocations: a
                                     }),
-                                className: O.creator,
+                                className: D.creator,
                                 tag: 'span',
                                 role: 'link',
                                 children: (0, i.jsx)(o.PUh, {
@@ -78,7 +76,7 @@ function U(e) {
         ]
     });
 }
-function G(e) {
+function U(e) {
     let { guild: n, onClick: t, onClose: r } = e,
         d = l.useCallback(
             (e) => {
@@ -92,30 +90,30 @@ function G(e) {
                     guild: n,
                     size: u.Z.Sizes.MINI,
                     active: !0,
-                    className: a()(O.guildIcon, O.icon)
+                    className: a()(D.guildIcon, D.icon)
                 }),
                 (0, i.jsx)(_.Z, {
                     guild: n,
                     tooltipPosition: 'top',
                     tooltipColor: o.ua7.Colors.PRIMARY,
                     size: 16,
-                    className: O.guildBadge
+                    className: D.guildBadge
                 }),
                 (0, i.jsx)(o.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    className: O.linkText,
+                    className: D.linkText,
                     children: n.name
                 })
             ]
         });
     return (0, i.jsx)('div', {
-        className: O.row,
+        className: D.row,
         children:
             null != t
                 ? (0, i.jsx)(o.P3F, {
                       onClick: d,
-                      className: O.clickable,
+                      className: D.clickable,
                       role: 'link',
                       children: s
                   })
@@ -125,31 +123,31 @@ function G(e) {
 function Z(e) {
     let { userCount: n, onClick: t } = e;
     return (0, i.jsxs)('div', {
-        className: O.row,
+        className: D.row,
         children: [
             (0, i.jsx)(o.BFJ, {
                 size: 'custom',
                 color: 'currentColor',
                 width: 20,
                 height: 20,
-                className: O.icon
+                className: D.icon
             }),
             (0, i.jsx)(o.P3F, {
                 onClick: t,
-                className: O.interestedCount,
+                className: D.interestedCount,
                 children: (0, i.jsx)(o.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: D.intl.format(D.t['+DLsDw'], { count: n })
+                    children: S.intl.format(S.t['+DLsDw'], { count: n })
                 })
             })
         ]
     });
 }
-function P(e) {
+function G(e) {
     let { guildEvent: n, guild: t, channel: r, headerId: a, onClose: c, onClickInterestedCount: u, isHub: _ = !1, containerRef: g, recurrenceId: p, setRecurrenceId: m } = e,
         f = (0, d.e7)([I.Z], () => null != I.Z.getGuild(t.id), [t.id]),
-        { startTime: S, endTime: D } = (0, C.ZP)(n, p),
+        { startTime: S, endTime: G } = (0, E.ZP)(n, p),
         P = (0, b.Z)(n.guild_id, n.id, p),
         z = l.useCallback(
             (e) => {
@@ -157,7 +155,7 @@ function P(e) {
             },
             [n]
         ),
-        k = (0, E.Z)(p, n.id),
+        k = (0, C.Z)(p, n.id),
         A = (0, h.Z)(n);
     l.useEffect(() => {
         v.Z.getGuildEventUserCounts(t.id, n.id, null != p ? [p] : []), v.Z.getGuildEventsForCurrentUser(t.id);
@@ -168,11 +166,11 @@ function P(e) {
         ref: g,
         children: [
             (0, i.jsxs)('div', {
-                className: O.header,
+                className: D.header,
                 children: [
-                    (0, i.jsx)(N.z, {
+                    (0, i.jsx)(j.z, {
                         startTime: S.toISOString(),
-                        endTime: null == D ? void 0 : D.toISOString(),
+                        endTime: null == G ? void 0 : G.toISOString(),
                         status: null != B ? B : n.status,
                         eventType: n.entity_type,
                         guildEventId: n.id,
@@ -182,20 +180,20 @@ function P(e) {
                         id: a,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',
-                        className: O.title,
+                        className: D.title,
                         children: n.name
                     })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: O.body,
+                className: D.body,
                 children: [
-                    (0, i.jsx)(G, {
+                    (0, i.jsx)(U, {
                         guild: t,
                         onClick: f ? z : void 0,
                         onClose: c
                     }),
-                    (0, i.jsx)(j.Z, {
+                    (0, i.jsx)(N.Z, {
                         guildScheduledEvent: n,
                         channel: r,
                         onClose: c
@@ -208,7 +206,7 @@ function P(e) {
                     !_ &&
                         null != A &&
                         (0, i.jsx)(
-                            U,
+                            O,
                             {
                                 creator: A,
                                 guildId: t.id,
@@ -218,7 +216,7 @@ function P(e) {
                         ),
                     null != n.description &&
                         (0, i.jsx)('div', {
-                            className: O.description,
+                            className: D.description,
                             children: (0, i.jsx)(y.Z, {
                                 description: n.description,
                                 truncate: !1,
@@ -227,7 +225,7 @@ function P(e) {
                         })
                 ]
             }),
-            null != R && (0, i.jsx)('hr', { className: O.divider }),
+            null != R && (0, i.jsx)('hr', { className: D.divider }),
             null != R &&
                 (0, i.jsx)(L.Z, {
                     guildId: t.id,

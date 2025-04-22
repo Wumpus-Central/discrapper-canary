@@ -1,25 +1,23 @@
-n.d(t, { Z: () => b });
-var r = n(200651),
-    i = n(192379),
-    l = n(481060),
-    a = n(194359),
-    o = n(906732),
-    s = n(388380),
-    c = n(171368),
-    u = n(626135),
-    d = n(321488),
-    p = n(417183),
-    h = n(170245),
-    f = n(981631),
-    g = n(388032),
-    m = n(292568);
-function b(e) {
-    let { user: t, nickname: n, status: b, isFocused: _ } = e,
-        E = i.useContext(u.AnalyticsContext),
-        { analyticsLocations: O } = (0, o.ZP)(),
-        y = (e) => {
+n.d(t, { Z: () => g });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(194359),
+    a = n(906732),
+    o = n(388380),
+    s = n(171368),
+    c = n(321488),
+    u = n(417183),
+    d = n(170245),
+    p = n(981631),
+    h = n(388032),
+    f = n(292568);
+function g(e) {
+    let { user: t, nickname: n, status: g, isFocused: m } = e,
+        { analyticsLocations: b } = (0, a.ZP)(),
+        _ = (e) => {
             null == e || e.stopPropagation(),
-                a.Z.addRelationship({
+                l.Z.addRelationship({
                     userId: t.id,
                     context: { location: 'Friends' },
                     type: void 0,
@@ -27,51 +25,50 @@ function b(e) {
                     fromFriendSuggestion: !0
                 });
         },
-        I = (e) => {
-            null == e || e.stopPropagation(), s.Z.ignore(t.id);
+        E = (e) => {
+            null == e || e.stopPropagation(), o.Z.ignore(t.id);
         },
-        v = b === f.Skl.OFFLINE ? f.Skl.UNKNOWN : b;
-    return (0, r.jsx)(p.Z, {
-        isFocused: _,
+        O = g === p.Skl.OFFLINE ? p.Skl.UNKNOWN : g;
+    return (0, r.jsx)(u.Z, {
+        isFocused: m,
         user: t,
         onClick: () =>
-            (0, c.openUserProfileModal)({
+            (0, s.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: O,
-                analyticsLocation: E.location
+                sourceAnalyticsLocations: b
             }),
         children: (e) => {
-            let i = (0, r.jsxs)(r.Fragment, {
+            let l = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(d.Z, {
-                        icon: l.dz2,
-                        actionType: d.Z.ActionTypes.ACCEPT,
-                        tooltip: g.intl.string(g.t.ZcibdX),
-                        onClick: y,
+                    (0, r.jsx)(c.Z, {
+                        icon: i.dz2,
+                        actionType: c.Z.ActionTypes.ACCEPT,
+                        tooltip: h.intl.string(h.t.ZcibdX),
+                        onClick: _,
                         shouldHighlight: e
                     }),
-                    (0, r.jsx)(d.Z, {
-                        icon: l.Dio,
-                        actionType: d.Z.ActionTypes.DENY,
-                        tooltip: g.intl.string(g.t.xuio0N),
-                        onClick: I,
+                    (0, r.jsx)(c.Z, {
+                        icon: i.Dio,
+                        actionType: c.Z.ActionTypes.DENY,
+                        tooltip: h.intl.string(h.t.xuio0N),
+                        onClick: E,
                         shouldHighlight: e
                     })
                 ]
             });
             return (0, r.jsxs)('div', {
-                className: m.listItemContents,
+                className: f.listItemContents,
                 children: [
-                    (0, r.jsx)(h.Z, {
+                    (0, r.jsx)(d.Z, {
                         user: t,
                         hovered: e,
-                        status: v,
+                        status: O,
                         subText: n,
-                        className: m.__invalid_userInfo
+                        className: f.__invalid_userInfo
                     }),
                     (0, r.jsx)('div', {
-                        className: m.actions,
-                        children: i
+                        className: f.actions,
+                        children: l
                     })
                 ]
             });

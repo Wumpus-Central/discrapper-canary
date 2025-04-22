@@ -16,20 +16,20 @@ var r = n(200651),
     f = n(666233),
     p = n(360328),
     g = n(171368),
-    _ = n(598077),
-    v = n(430824),
+    v = n(598077),
+    _ = n(430824),
     C = n(709054),
-    T = n(51144),
-    N = n(981631),
+    N = n(51144),
+    T = n(981631),
     E = n(308083),
-    I = n(388032),
-    S = n(145870),
+    S = n(388032),
+    I = n(145870),
     P = n(157092);
 function O(e) {
     let { icon: t, label: n, onClick: l, disabled: i } = e;
     return (0, r.jsxs)(d.P3F, {
-        className: a()(S.actionButton, { [S.disabled]: i }),
-        onClick: i ? N.dG4 : l,
+        className: a()(I.actionButton, { [I.disabled]: i }),
+        onClick: i ? T.dG4 : l,
         'aria-label': n,
         children: [
             (0, r.jsx)(t, {
@@ -53,22 +53,18 @@ function R(e) {
             (0, g.openUserProfileModal)({
                 userId: t.id,
                 joinRequestId: l.joinRequestId,
-                sourceAnalyticsLocations: i,
-                analyticsLocation: {
-                    section: N.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-                    object: N.qAy.JOIN_REQUEST
-                }
+                sourceAnalyticsLocations: i
             });
         };
     return (0, r.jsxs)('div', {
-        className: S.infoContainer,
+        className: I.infoContainer,
         children: [
             (0, r.jsxs)('div', {
                 className: P.memberNameContainer,
                 children: [
                     (0, r.jsx)(d.P3F, {
                         onClick: s,
-                        className: a()(S.clickable, P.memberAvatar),
+                        className: a()(I.clickable, P.memberAvatar),
                         children: (0, r.jsx)(d.qEK, {
                             src: t.getAvatarURL(n, 48),
                             'aria-label': t.username,
@@ -83,7 +79,7 @@ function R(e) {
                                 children: [
                                     (0, r.jsx)(d.P3F, {
                                         onClick: s,
-                                        className: S.clickable,
+                                        className: I.clickable,
                                         children: (0, r.jsx)(d.Text, {
                                             variant: 'text-lg/medium',
                                             children: null == t ? void 0 : t.globalName
@@ -102,11 +98,11 @@ function R(e) {
                             }),
                             (0, r.jsx)(d.P3F, {
                                 onClick: s,
-                                className: S.clickable,
+                                className: I.clickable,
                                 children: (0, r.jsx)(d.Text, {
                                     variant: 'text-md/medium',
                                     color: 'text-normal',
-                                    children: T.ZP.getUserTag(t)
+                                    children: N.ZP.getUserTag(t)
                                 })
                             })
                         ]
@@ -128,35 +124,35 @@ function y(e) {
     let { user: t, guildId: n, joinRequest: l } = e,
         { approveRequest: i, rejectRequest: a, handleOpenInterview: s, submitting: o } = (0, p.s)(n, t.id, l.joinRequestId, l.interviewChannelId);
     return (0, r.jsxs)('div', {
-        className: S.actionRow,
+        className: I.actionRow,
         children: [
             (0, r.jsx)(O, {
                 icon: d.owK,
-                label: I.intl.string(I.t.BzjDQE),
+                label: S.intl.string(S.t.BzjDQE),
                 onClick: i,
                 disabled: o
             }),
             (0, r.jsx)(O, {
                 icon: d.k$p,
-                label: I.intl.string(I.t.hDtbs7),
+                label: S.intl.string(S.t.hDtbs7),
                 onClick: a,
                 disabled: o
             }),
             (0, r.jsx)(O, {
                 icon: d.kBi,
-                label: I.intl.string(I.t.KQeYoK),
+                label: S.intl.string(S.t.KQeYoK),
                 onClick: s,
                 disabled: o
             })
         ]
     });
 }
-function A(e) {
+function w(e) {
     var t;
     let { joinRequest: n } = e,
         { actionedAt: l, actionedByUser: i, rejectionReason: a } = n;
     return (0, r.jsxs)('div', {
-        className: S.actionContainer,
+        className: I.actionContainer,
         children: [
             (0, r.jsx)(d.k$p, {
                 size: 'lg',
@@ -168,18 +164,18 @@ function A(e) {
                     (0, r.jsx)(d.Text, {
                         variant: 'text-md/medium',
                         color: 'header-primary',
-                        children: I.intl.string(I.t.bSZklZ)
+                        children: S.intl.string(S.t.bSZklZ)
                     }),
                     null != i && null != l
                         ? (0, r.jsxs)('div', {
-                              className: S.actionedInfo,
+                              className: I.actionedInfo,
                               children: [
                                   (0, r.jsx)(d.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'text-muted',
-                                      children: I.intl.formatToPlainString(I.t.qnimbG, { username: null != (t = i.global_name) ? t : i.username })
+                                      children: S.intl.formatToPlainString(S.t.qnimbG, { username: null != (t = i.global_name) ? t : i.username })
                                   }),
-                                  (0, r.jsx)('div', { className: S.dot }),
+                                  (0, r.jsx)('div', { className: I.dot }),
                                   (0, r.jsx)(d.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'text-muted',
@@ -192,19 +188,19 @@ function A(e) {
                         (0, r.jsx)(d.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
-                            children: I.intl.formatToPlainString(I.t.fU5PPD, { rejectionReason: a })
+                            children: S.intl.formatToPlainString(S.t.fU5PPD, { rejectionReason: a })
                         })
                 ]
             })
         ]
     });
 }
-function w(e) {
+function A(e) {
     var t;
     let { joinRequest: n } = e,
         { actionedAt: l, actionedByUser: i } = n;
     return (0, r.jsxs)('div', {
-        className: S.actionContainer,
+        className: I.actionContainer,
         children: [
             (0, r.jsx)(d.owK, {
                 size: 'lg',
@@ -216,18 +212,18 @@ function w(e) {
                     (0, r.jsx)(d.Text, {
                         variant: 'text-md/medium',
                         color: 'header-primary',
-                        children: I.intl.string(I.t.aURgY2)
+                        children: S.intl.string(S.t.aURgY2)
                     }),
                     null != i && null != l
                         ? (0, r.jsxs)('div', {
-                              className: S.actionedInfo,
+                              className: I.actionedInfo,
                               children: [
                                   (0, r.jsx)(d.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'text-muted',
-                                      children: I.intl.formatToPlainString(I.t.qnimbG, { username: null != (t = i.global_name) ? t : i.username })
+                                      children: S.intl.formatToPlainString(S.t.qnimbG, { username: null != (t = i.global_name) ? t : i.username })
                                   }),
-                                  (0, r.jsx)('div', { className: S.dot }),
+                                  (0, r.jsx)('div', { className: I.dot }),
                                   (0, r.jsx)(d.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'text-muted',
@@ -246,21 +242,21 @@ function M(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d.Text, {
-                className: S.accountLabel,
+                className: I.accountLabel,
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                children: I.intl.string(I.t['ldCE/v'])
+                children: S.intl.string(S.t['ldCE/v'])
             }),
             (0, r.jsxs)('div', {
-                className: S.userInfoContainer,
+                className: I.userInfoContainer,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: S.infoRow,
+                        className: I.infoRow,
                         children: [
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
-                                children: I.intl.string(I.t.SaDIpK)
+                                children: S.intl.string(S.t.SaDIpK)
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
@@ -270,12 +266,12 @@ function M(e) {
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: S.infoRow,
+                        className: I.infoRow,
                         children: [
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
-                                children: I.intl.string(I.t.Vt4cn5)
+                                children: S.intl.string(S.t.Vt4cn5)
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
@@ -297,22 +293,22 @@ function Z(e) {
             var e;
             return null != (e = null == n ? void 0 : n.formResponses) ? e : [];
         }, [null == n ? void 0 : n.formResponses]),
-        o = l.useMemo(() => (null != i ? new _.Z(i) : null), [i]),
-        u = (0, c.e7)([v.Z], () => v.Z.getGuild(t), [t]);
+        o = l.useMemo(() => (null != i ? new v.Z(i) : null), [i]),
+        u = (0, c.e7)([_.Z], () => _.Z.getGuild(t), [t]);
     return ((0, x.Tt)({
-        subsection: I.intl.string(I.t.nqrK8f),
+        subsection: S.intl.string(S.t.nqrK8f),
         location: null == u ? void 0 : u.name
     }),
     null == n || null == u || null == o || null == i)
         ? null
         : (0, r.jsx)('section', {
-              className: S.sidebar,
+              className: I.sidebar,
               children: (0, r.jsx)(d.Ttm, {
                   children: (0, r.jsxs)('div', {
-                      className: S.innerContainer,
+                      className: I.innerContainer,
                       children: [
                           (0, r.jsxs)('div', {
-                              className: S.cardContainer,
+                              className: I.cardContainer,
                               children: [
                                   (0, r.jsx)(R, {
                                       user: o,
@@ -325,12 +321,12 @@ function Z(e) {
                                           guildId: t,
                                           joinRequest: n
                                       }),
-                                  n.applicationStatus === j.wB.REJECTED && (0, r.jsx)(A, { joinRequest: n }),
-                                  n.applicationStatus === j.wB.APPROVED && (0, r.jsx)(w, { joinRequest: n })
+                                  n.applicationStatus === j.wB.REJECTED && (0, r.jsx)(w, { joinRequest: n }),
+                                  n.applicationStatus === j.wB.APPROVED && (0, r.jsx)(A, { joinRequest: n })
                               ]
                           }),
                           (0, r.jsxs)('div', {
-                              className: a()(S.cardContainer, S.responsesContainer),
+                              className: a()(I.cardContainer, I.responsesContainer),
                               children: [
                                   (0, r.jsx)(f.Z, {
                                       guildId: u.id,

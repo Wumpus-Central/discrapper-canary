@@ -1,10 +1,10 @@
 n.d(t, {
-    RE: () => _,
-    RN: () => A,
-    po: () => I,
-    vN: () => d,
-    xb: () => O,
-    zq: () => T
+    RE: () => c,
+    RN: () => d,
+    po: () => T,
+    vN: () => _,
+    xb: () => I,
+    zq: () => A
 });
 var r,
     l = n(192379),
@@ -13,22 +13,17 @@ var r,
     a = n(171368),
     o = n(430824),
     E = n(594174),
-    u = n(91047),
-    c = n(981631);
-let _ = (e, t) => {
+    u = n(91047);
+let c = (e, t) => {
     let { guildId: n, userId: r, colorRoleId: l } = e;
     (0, a.openUserProfileModal)({
         userId: r,
         guildId: n,
         sourceAnalyticsLocations: t,
-        roleId: l,
-        analyticsLocation: {
-            section: c.jXE.MEMBER_SAFETY_PAGE,
-            object: c.qAy.ACTIONED_BY_USER
-        }
+        roleId: l
     });
 };
-function d(e, t, n, r) {
+function _(e, t, n, r) {
     let { analyticsLocations: s } = (0, i.ZP)();
     return l.useCallback(
         (l) => {
@@ -47,7 +42,7 @@ function d(e, t, n, r) {
         [e, s, r, n, t]
     );
 }
-function A(e, t, n) {
+function d(e, t, n) {
     let { analyticsLocations: r } = (0, i.ZP)();
     return l.useCallback(
         (l) => {
@@ -66,7 +61,7 @@ function A(e, t, n) {
         [e, n, r, t]
     );
 }
-function T(e) {
+function A(e) {
     return (0, s.e7)(
         [o.Z],
         () => {
@@ -78,7 +73,7 @@ function T(e) {
         [e]
     );
 }
-var I = (((r = {})[(r.LOADING = 0)] = 'LOADING'), (r[(r.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (r[(r.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (r[(r.SUCCESS_FULL = 3)] = 'SUCCESS_FULL'), r);
-function O(e, t, n) {
+var T = (((r = {})[(r.LOADING = 0)] = 'LOADING'), (r[(r.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (r[(r.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (r[(r.SUCCESS_FULL = 3)] = 'SUCCESS_FULL'), r);
+function I(e, t, n) {
     return t ? 0 : e ? 1 : n <= 0 ? 2 : 3;
 }

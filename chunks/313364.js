@@ -36,8 +36,7 @@ function S(e) {
                     (0, m.openUserProfileModal)({
                         userId: e.userId,
                         guildId: e.guildId,
-                        sourceAnalyticsLocations: l,
-                        analyticsLocation: { section: y.jXE.GUILD_SETTINGS_MEMBERS }
+                        sourceAnalyticsLocations: l
                     });
             },
             [l]
