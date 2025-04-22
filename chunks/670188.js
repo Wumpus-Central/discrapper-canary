@@ -1,4 +1,8 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, {
+    I: () => O,
+    Z: () => C
+}),
+    n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(442837),
@@ -105,6 +109,7 @@ function T(e) {
                 null != v
                     ? v()
                     : (0, d.Z)(n.id, null != E ? E : n.getAvatarURL(s, O), {
+                          type: 'popout',
                           withMutualGuilds: n.id !== a.id,
                           withMutualFriends: !n.bot && n.id !== a.id,
                           guildId: s,
@@ -179,6 +184,7 @@ function A(e) {
                 null != A
                     ? A()
                     : (0, d.Z)(n.id, null != T ? T : n.getAvatarURL(c, O), {
+                          type: 'popout',
                           withMutualGuilds: n.id !== a.id,
                           withMutualFriends: !n.bot && n.id !== a.id,
                           guildId: c,

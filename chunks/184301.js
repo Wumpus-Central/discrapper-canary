@@ -46,7 +46,6 @@ async function l() {
         t,
         s(
             {
-                type: 'popout',
                 withMutualFriends: !0,
                 withMutualGuilds: !0,
                 waitForRefetch: f
