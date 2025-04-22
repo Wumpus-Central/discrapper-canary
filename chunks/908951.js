@@ -166,7 +166,7 @@ function y(e) {
             children: [
                 (() => {
                     let e = t.paymentSourceId;
-                    return (0, i.jsx)(h.Z, {
+                    return (0, i.jsx)(h.ZP, {
                         prependOption:
                             null == e
                                 ? {
@@ -181,7 +181,8 @@ function y(e) {
                         onChange: W,
                         onPaymentSourceAdd: K,
                         dropdownLoading: M,
-                        disabled: R
+                        disabled: R,
+                        paymentGatewayRestrictions: t.eligiblePaymentGateways
                     });
                 })(),
                 null != t.paymentSourceId

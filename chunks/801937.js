@@ -160,23 +160,25 @@ class M extends i.PureComponent {
     }
     createPaymentButtons(e) {
         return e.map((e) => {
-            var t;
-            let n = N[e],
-                i = h.Wo[e](),
-                a = null == (t = this.props.localizedPromo) ? void 0 : t.paymentSourceTypes.includes(e);
+            var t, n;
+            let i = N[e],
+                a = h.Wo[e](),
+                s = null == (t = this.props.localizedPromo) ? void 0 : t.paymentSourceTypes.includes(e),
+                c = null == this.props.paymentSourceTypeRestrictions || (null == (n = this.props.paymentSourceTypeRestrictions) ? void 0 : n.includes(e));
             return (0, r.jsx)(
                 l.zxk,
                 {
                     onClick: () => this.props.onChooseType(e),
+                    disabled: !c,
                     children: (0, r.jsxs)('div', {
                         className: o()(v.flex, v.alignCenter),
                         children: [
                             (0, r.jsx)(p.ZP, {
                                 className: y.buttonIcon,
-                                type: n
+                                type: i
                             }),
-                            i,
-                            a &&
+                            a,
+                            s &&
                                 (0, r.jsx)(l.IGR, {
                                     text: b.intl.string(b.t.y2b7CA),
                                     className: y.newPaymentBadge,

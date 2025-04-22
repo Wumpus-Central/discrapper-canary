@@ -8,6 +8,7 @@ e.exports = {
     open: 'open__3f413',
     selectPositionTop: 'selectPositionTop__3f413',
     disabled: 'disabled__3f413',
+    optionDisabled: 'optionDisabled__3f413',
     iconsContainer: 'iconsContainer__3f413',
     iconsCenter: 'iconsCenter__3f413',
     placeholder: 'placeholder__3f413',

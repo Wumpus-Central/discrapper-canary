@@ -80,7 +80,10 @@ function L(e) {
         eV = eF || (eB ? eG && ec : ec),
         eZ = (0, c.id)(et, em, eb),
         eH = i.useCallback(() => (eB ? void L(E.h8.SKU_SELECT) : eZ ? void L(E.h8.SELECT_FREE_SKU) : eF ? L(E.h8.GIFT_CUSTOMIZATION) : L(E.h8.PLAN_SELECT)), [L, eB, eF, eZ]),
-        eY = !1;
+        eY = !1,
+        eW = () => {
+            L(E.h8.ADD_PAYMENT_STEPS);
+        };
     return (
         ed === P.GZ.ONE_TIME
             ? ((eY = null != $),
@@ -122,9 +125,7 @@ function L(e) {
                         onPaymentSourceChange: (e) => {
                             ei(null != e ? e.id : null);
                         },
-                        onPaymentSourceAdd: () => {
-                            L(E.h8.ADD_PAYMENT_STEPS);
-                        },
+                        onPaymentSourceAdd: eW,
                         planId: et.id,
                         setHasAcceptedTerms: eu,
                         legalTermsNodeRef: eD,
@@ -165,7 +166,8 @@ function L(e) {
                         backButtonEligible: eV,
                         metadata: eC,
                         isTrial: eM,
-                        disablePurchase: eY
+                        disablePurchase: eY,
+                        onPaymentSourceAdd: eW
                     })
                 })
             ]
