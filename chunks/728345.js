@@ -218,9 +218,12 @@ let E = {
                         e)
                     );
                 }
+                let t = new Set(e.body.map((e) => e.id)),
+                    r = n.filter((e) => !t.has(e));
                 a.Z.dispatch({
                     type: 'APPLICATIONS_FETCH_SUCCESS',
-                    applications: e.body
+                    applications: e.body,
+                    unknownApplicationIds: r
                 });
             }
         },
