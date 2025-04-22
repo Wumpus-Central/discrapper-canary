@@ -28,7 +28,7 @@ let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
             }, [n.id, n.guild_id, j]),
             E = t.filter((e) => e.type === _.Ui.VOICE),
             I = 4 === E.length ? 2 : 3,
-            P = (0, a.Wu)([u.Z], () => E.map((e) => u.Z.getParticipant(n.id, e.id)).filter(g.lm), [n.id, E]);
+            S = (0, a.Wu)([u.Z], () => E.map((e) => u.Z.getParticipant(n.id, e.id)).filter(g.lm), [n.id, E]);
         return (0, r.jsxs)('div', {
             className: x.container,
             children: [
@@ -36,14 +36,13 @@ let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
                 (0, r.jsx)('div', {
                     className: x.tiles,
                     style: { maxWidth: 168 * I },
-                    children: P.slice(0, 5).map((e) =>
+                    children: S.slice(0, 5).map((e) =>
                         (0, r.jsx)(
                             f.ZP,
                             {
                                 participant: e,
                                 channel: n,
                                 className: x.tile,
-                                paused: !0,
                                 inCall: !0,
                                 noVideoRender: !0,
                                 inPopout: !1,

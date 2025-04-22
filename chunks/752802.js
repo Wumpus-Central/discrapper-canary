@@ -320,7 +320,6 @@ let M = new Set([N.jm8.ENDED, N.jm8.FAILED, N.jm8.PAUSED]),
                                         fit: null != y ? y : v.L.CONTAIN,
                                         inPopout: !0,
                                         focused: !r,
-                                        paused: !1,
                                         selected: !1,
                                         wrapperClassName: r ? P.streamTileWrapper : void 0,
                                         inOverlayPopout: !0

@@ -19,36 +19,36 @@ var r = n(200651),
     C = n(354459),
     x = n(363987);
 let v = (0, a.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: a, layout: v, onSelectParticipant: j, onContextMenuParticipant: O, onFullscreenParticipant: E, channel: I, hasConnectPermission: P, className: S, inCall: Z, showParticipants: N = !0, paused: T = !1, width: A, height: w, idle: R, mode: k, popoutWindow: M, awaitingRemoteSessionInfo: L, callContainerDimensions: D } = e;
+    let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: a, layout: v, onSelectParticipant: j, onContextMenuParticipant: O, onFullscreenParticipant: E, channel: I, hasConnectPermission: S, className: P, inCall: Z, showParticipants: N = !0, width: T, height: A, idle: w, mode: R, popoutWindow: k, awaitingRemoteSessionInfo: M, callContainerDimensions: L } = e;
     i.useEffect(() => {
         p.S.dispatch(y.CkL.REMEASURE_TARGET);
-    }, [A, w, D.width, D.height]);
-    let U = (0, d.Q3)('ChannelCallContent'),
-        B = i.useMemo(() => n.filter((e) => e.type !== C.fO.ACTIVITY || !e.participants.some((e) => (0, s.J)(e))), [n, a]);
-    return (null == L ? void 0 : L.channelId) === I.id
-        ? (0, r.jsx)(f.Z, { height: w })
+    }, [T, A, L.width, L.height]);
+    let D = (0, d.Q3)('ChannelCallContent'),
+        U = i.useMemo(() => n.filter((e) => e.type !== C.fO.ACTIVITY || !e.participants.some((e) => (0, s.J)(e))), [n, a]);
+    return (null == M ? void 0 : M.channelId) === I.id
+        ? (0, r.jsx)(f.Z, { height: A })
         : (null == I ? void 0 : I.isGuildVocal()) && !Z
           ? (0, r.jsx)(h.Z, {
                 channel: I,
                 participants: t,
-                hasConnectPermission: P
+                hasConnectPermission: S
             })
-          : k === y.WtW.VOICE
+          : R === y.WtW.VOICE
             ? (0, r.jsx)(c.Z, {
                   guildId: I.guild_id,
-                  width: A,
+                  width: T,
                   className: x.voiceCallWrapper,
                   participants: t,
                   onContextMenu: O
               })
             : ((n = Z ? n : t), null == l)
               ? 0 === n.length
-                  ? U
+                  ? D
                       ? (0, r.jsx)(_.Z, { channelId: I.id })
                       : (0, r.jsx)(b.Z, {
                             className: o()(x.videoGrid, x.hiddenParticipants),
                             channelId: I.id,
-                            width: A
+                            width: T
                         })
                   : (0, r.jsx)(u.Z, {
                         className: x.videoGridWrapper,
@@ -57,12 +57,11 @@ let v = (0, a.Z)((e) => {
                         children: (0, r.jsx)(m.Z, {
                             channel: I,
                             className: x.videoGrid,
-                            participants: B,
+                            participants: U,
                             totalNumberOfParticipants: t.length,
                             onClick: j,
                             onDoubleClick: E,
                             onContextMenu: O,
-                            paused: T,
                             inCall: Z
                         })
                     })
@@ -71,13 +70,13 @@ let v = (0, a.Z)((e) => {
                     onContextMenuParticipant: O,
                     onSelectParticipant: j,
                     selectedParticipant: l,
-                    filteredParticipants: B,
+                    filteredParticipants: U,
                     participants: t,
-                    popoutWindow: M,
-                    className: S,
-                    idle: R,
-                    height: w,
-                    width: A,
+                    popoutWindow: k,
+                    className: P,
+                    idle: w,
+                    height: A,
+                    width: T,
                     layout: v,
                     inCall: Z,
                     channel: I,

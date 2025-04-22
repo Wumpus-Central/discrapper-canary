@@ -38,7 +38,6 @@ let _ = function (e) {
                             participant: e,
                             channel: n,
                             className: b.tile,
-                            paused: !0,
                             inCall: !0,
                             noVideoRender: !0,
                             inPopout: !1,
