@@ -1,4 +1,4 @@
-n.d(t, { c: () => p }), n(539854);
+n.d(t, { c: () => h }), n(539854);
 var r = n(358221),
     i = n(569545),
     a = n(199902),
@@ -7,8 +7,9 @@ var r = n(358221),
     l = n(557457),
     c = n(458725),
     u = n(442741),
-    d = n(150457);
-function f(e, t, n) {
+    d = n(150457),
+    f = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,24 +33,24 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-let p = {
+let h = {
     getActiveErrors: () =>
         (0, d.LN)()
             ? a.Z.getAllActiveStreams().reduce((e, t) => {
                   var n;
                   let a = null == (n = s.Z.getRTCConnection((0, i.V9)(t))) ? void 0 : n.getMediaEngineConnectionId();
-                  if (null == a || t.ownerId === o.default.getId()) return e;
-                  let f = (0, d.hj)(a, t.ownerId);
-                  if (null == f) return e;
-                  let p = r.Z.getParticipant(t.channelId, (0, i.V9)(t));
-                  if (null == p) return e;
-                  let h = (0, l.Wc)(p);
-                  return null == h || ((f.short.frameRate < (0, d.dj)(h.maxFrameRate) || f.long.frameRate < (0, d.dj)(h.maxFrameRate)) && e.push(_({ type: c.u.STREAM_VIEW_LOW_FPS }, (0, u.rT)((0, i.V9)(t))))), e;
+                  if (null == a || t.ownerId === o.default.getId() || t.state === f.jm8.PAUSED) return e;
+                  let _ = (0, d.hj)(a, t.ownerId);
+                  if (null == _) return e;
+                  let h = r.Z.getParticipant(t.channelId, (0, i.V9)(t));
+                  if (null == h) return e;
+                  let m = (0, l.Wc)(h);
+                  return null == m || ((_.short.frameRate < (0, d.dj)(m.maxFrameRate) || _.long.frameRate < (0, d.dj)(m.maxFrameRate)) && e.push(p({ type: c.u.STREAM_VIEW_LOW_FPS }, (0, u.rT)((0, i.V9)(t))))), e;
               }, [])
             : null,
     makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
