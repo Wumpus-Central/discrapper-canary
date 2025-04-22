@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     modalRoot: 'modalRoot_db78b7',
     modalContent: 'modalContent_db78b7',
     left: 'left_db78b7',

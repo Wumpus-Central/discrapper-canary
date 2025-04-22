@@ -9,23 +9,23 @@ function a(e) {
         p = d.current[t.id],
         E = (e) => p + e.deltaTime,
         g = (e) => E(e) + 1500 >= Date.now(),
-        h = (e) => E(e) <= Date.now() && g(e),
-        v = m.find(h);
-    if (null == v) {
+        v = (e) => E(e) <= Date.now() && g(e),
+        h = m.find(v);
+    if (null == h) {
         g(t.points[t.points.length - 1]) || f.push(t);
         return;
     }
     let S = (e, t) => {
             let r = null;
-            (n.lineWidth = t * window.devicePixelRatio), (n.strokeStyle = e), n.beginPath(), n.moveTo(v.x, v.y);
+            (n.lineWidth = t * window.devicePixelRatio), (n.strokeStyle = e), n.beginPath(), n.moveTo(h.x, h.y);
             for (let e = 1; e < m.length; e++) {
                 let t = m[e];
-                h(t) && (n.lineTo(t.x, t.y), (r = t));
+                v(t) && (n.lineTo(t.x, t.y), (r = t));
             }
             return n.stroke(), r;
         },
         { fillColor: b, outlineColor: y } = (0, r.bg)(t.userId, u, c, s),
         O = S(y, 6 + i.q2),
-        Z = null != O && h(O);
+        Z = null != O && v(O);
     Z && (0, l.I)(n, O.x, O.y, y, i.q2), S(b, 6), Z && (0, l.T)(n, O.x, O.y, t.userId);
 }

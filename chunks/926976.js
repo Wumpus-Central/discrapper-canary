@@ -15,8 +15,8 @@ var a = n(200651),
     b = n(572004),
     f = n(55935),
     v = n(120816),
-    j = n(31336),
-    g = n(257785),
+    g = n(31336),
+    j = n(257785),
     _ = n(484036),
     y = n(681619),
     C = n(621060),
@@ -174,10 +174,10 @@ let w = [
                                 })
                             ]
                         }),
-                        (0, a.jsxs)(g.E, {
+                        (0, a.jsxs)(j.E, {
                             className: E.commonProperties,
                             children: [
-                                (0, a.jsx)(g.Z9, {
+                                (0, a.jsx)(j.Z9, {
                                     name: 'Timestamp (local)',
                                     copyValue: r.toISOString(),
                                     children: (0, a.jsxs)('time', {
@@ -187,12 +187,12 @@ let w = [
                                     })
                                 }),
                                 null != c &&
-                                    (0, a.jsx)(g.Z9, {
+                                    (0, a.jsx)(j.Z9, {
                                         name: 'User',
                                         copyValue: c.id,
                                         children: (0, a.jsx)(u.Z, { user: c })
                                     }),
-                                (0, a.jsx)(g.Z9, {
+                                (0, a.jsx)(j.Z9, {
                                     name: 'Fingerprint',
                                     copyValue: l,
                                     children: (0, a.jsx)('code', { children: l })
@@ -275,7 +275,7 @@ function R() {
             return !1;
         }),
         [b, f] = r.useState(void 0),
-        g = p.find((e) => e.key === b),
+        j = p.find((e) => e.key === b),
         { TabBar: S, renderSelectedTab: P } = (0, C.ZP)({ tabs: w }, []);
     return (0, a.jsxs)('div', {
         ref: e,
@@ -288,7 +288,7 @@ function R() {
                         className: E.toolbarButton,
                         look: d.zxk.Looks.BLANK,
                         size: d.zxk.Sizes.ICON,
-                        onClick: j.Zw,
+                        onClick: g.Zw,
                         children: (0, a.jsx)('span', {
                             title: O.intl.string(O.t.VkKicX),
                             children: (0, a.jsx)(d.XHJ, {
@@ -334,7 +334,7 @@ function R() {
                 selectedRowKey: b,
                 onClickRow: (e) => f(e.key)
             }),
-            null != g &&
+            null != j &&
                 (0, a.jsxs)(_.Z, {
                     className: E.subPanel,
                     minHeight: 100,
@@ -342,7 +342,7 @@ function R() {
                     children: [
                         (0, a.jsx)(S, {}),
                         P({
-                            loggedEvent: g,
+                            loggedEvent: j,
                             onClose: () => f(void 0)
                         })
                     ]

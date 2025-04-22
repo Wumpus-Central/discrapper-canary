@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => g });
 var a = n(200651);
 n(192379);
 var r = n(120356),
@@ -41,7 +41,7 @@ let v = () => {
             );
         });
 };
-function j() {
+function g() {
     let e = p.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
         n = x.Rt.useSetting();

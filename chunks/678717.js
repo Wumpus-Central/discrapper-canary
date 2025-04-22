@@ -15,8 +15,8 @@ var a = n(200651),
     b = n(906467),
     f = n(259580),
     v = n(31336),
-    j = n(19759),
-    g = n(432877);
+    g = n(19759),
+    j = n(432877);
 n(381996);
 var _ = n(392750),
     y = n(926976),
@@ -58,7 +58,7 @@ var _ = n(392750),
 function er(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: r } = e,
         l = (0, d.Z)({
-            minDimension: j.h,
+            minDimension: g.h,
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: r,
@@ -171,7 +171,7 @@ function el(e) {
                     id: 'overlays',
                     name: 'Dev Overlays',
                     group: Q.v0.DEVELOPMENT,
-                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: g.zU.OVERLAYS })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: j.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -183,7 +183,7 @@ function el(e) {
                     id: 'reporting',
                     name: 'Reporting',
                     group: Q.v0.EXPERIMENTS,
-                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: g.zU.REPORTING })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: j.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -287,7 +287,7 @@ function el(e) {
         } = (0, Q.ZP)(
             {
                 tabs: l,
-                initialSelectedTabId: null != (t = j.Z.lastOpenTabId) ? t : void 0,
+                initialSelectedTabId: null != (t = g.Z.lastOpenTabId) ? t : void 0,
                 onChangeTab: (e) => {
                     (0, v.Qh)({ lastOpenTabId: e });
                 }
@@ -355,7 +355,7 @@ function el(e) {
 }
 function ei() {
     let e = r.useRef(null),
-        t = (0, s.e7)([j.Z], () => j.Z.sidebarWidth),
+        t = (0, s.e7)([g.Z], () => g.Z.sidebarWidth),
         [n, l] = r.useState(null),
         i = r.useCallback((e) => (0, v.Qh)({ sidebarWidth: e }), []);
     return (r.useEffect(() => {
@@ -367,7 +367,7 @@ function ei() {
               ref: e,
               className: en.container,
               style: {
-                  minWidth: j.h,
+                  minWidth: g.h,
                   width: n
               },
               'data-app-right-panel': !0,
@@ -385,7 +385,7 @@ function ei() {
           });
 }
 function eo() {
-    return (0, s.e7)([j.Z], () => j.Z.displayTools)
+    return (0, s.e7)([g.Z], () => g.Z.displayTools)
         ? (0, a.jsx)('div', {
               className: i()(en.container, en.mobileContainerExpanded),
               children: (0, a.jsx)('div', {

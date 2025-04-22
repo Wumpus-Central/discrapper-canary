@@ -32,11 +32,11 @@ function h() {
         [n, h] = r.useState(0),
         [p, b] = r.useState(1000),
         [f, v] = r.useState(0),
-        j = (0, l.e7)([c.Z], () => {
+        g = (0, l.e7)([c.Z], () => {
             var t;
             return null === e ? null : null != (t = c.Z.getFeedbackConfig(e)) ? t : s.R[e];
         }),
-        g = Object.keys(s.R).map((e) => ({
+        j = Object.keys(s.R).map((e) => ({
             label: e,
             value: e
         })),
@@ -49,7 +49,7 @@ function h() {
                 className: m.formElement,
                 tag: i.RB0.H3,
                 children: (0, a.jsx)(i.q4e, {
-                    options: g,
+                    options: j,
                     value: e,
                     onChange: (e) => {
                         t(e);
@@ -63,7 +63,7 @@ function h() {
                 className: m.formElement,
                 tag: i.RB0.H3,
                 children: [
-                    null != j &&
+                    null != g &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(d.Z, {
@@ -75,19 +75,19 @@ function h() {
                                 }),
                                 (0, a.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(j.cooldown / 1000, ' second(s) or')
+                                    children: ''.concat(g.cooldown / 1000, ' second(s) or')
                                 }),
                                 (0, a.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(j.cooldown / 60000, ' minute(s) or')
+                                    children: ''.concat(g.cooldown / 60000, ' minute(s) or')
                                 }),
                                 (0, a.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(j.cooldown / 3600000, ' hour(s) or')
+                                    children: ''.concat(g.cooldown / 3600000, ' hour(s) or')
                                 }),
                                 (0, a.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(j.cooldown / 86400000, ' day(s)')
+                                    children: ''.concat(g.cooldown / 86400000, ' day(s)')
                                 })
                             ]
                         }),
@@ -125,7 +125,7 @@ function h() {
                 className: m.formElement,
                 tag: i.RB0.H3,
                 children: [
-                    null != j &&
+                    null != g &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(d.Z, {
@@ -137,7 +137,7 @@ function h() {
                                 }),
                                 (0, a.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(100 * j.chance, '%')
+                                    children: ''.concat(100 * g.chance, '%')
                                 })
                             ]
                         }),

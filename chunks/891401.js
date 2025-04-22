@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(49124);
+n.d(t, { Z: () => j }), n(49124);
 var a = n(200651),
     r = n(192379),
     l = n(120356),
@@ -39,7 +39,7 @@ function v(e) {
     }
     return e;
 }
-function j(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function j(e, t) {
         e
     );
 }
-function g() {
+function j() {
     return (0, a.jsx)('div', {
         className: f.container,
         children: (0, a.jsx)(_, {})
@@ -75,7 +75,7 @@ function _() {
             var e, t;
             return null != (t = null == (e = m.Z.getWallpaperById(n)) ? void 0 : e.secondaryColor) ? t : '#000000';
         }),
-        g = r.useCallback(
+        j = r.useCallback(
             (e) => {
                 y(null == t ? void 0 : t.wallpaperId, e.target.value);
             },
@@ -117,7 +117,7 @@ function _() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     s.X6,
-                                    j(
+                                    g(
                                         v(
                                             {
                                                 className: i()(f.subheader, f.hasTooltip),
@@ -135,7 +135,7 @@ function _() {
                                 (0, a.jsx)('input', {
                                     type: 'color',
                                     value: l,
-                                    onChange: g
+                                    onChange: j
                                 }),
                                 (0, a.jsx)(d.M0, {
                                     size: d.tT.SIZE_24,
@@ -151,7 +151,7 @@ function _() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     s.X6,
-                                    j(
+                                    g(
                                         v(
                                             {
                                                 className: i()(f.subheader, f.hasTooltip),

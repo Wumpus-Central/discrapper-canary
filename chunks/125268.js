@@ -3,7 +3,7 @@ n.d(t, {
     BR: () => d,
     Bo: () => g,
     Df: () => f,
-    LT: () => h,
+    LT: () => v,
     ZZ: () => m,
     cV: () => c,
     fW: () => E,
@@ -88,6 +88,6 @@ function g(e) {
         drawMode: e
     });
 }
-function h() {
+function v() {
     i.Z.dispatch({ type: 'TOGGLE_OVERLAY_CANVAS' });
 }

@@ -89,7 +89,7 @@ function p(e, t, n) {
             },
             [e, t, n, p]
         ),
-        h = r.useCallback(
+        v = r.useCallback(
             (r, a, o) => {
                 m.cancel(),
                     (0, s.Df)(t, n, l.current),
@@ -109,14 +109,14 @@ function p(e, t, n) {
             },
             [t, n, e]
         ),
-        v = r.useCallback((e, t, n) => g(e, t, n), [g]);
+        h = r.useCallback((e, t, n) => g(e, t, n), [g]);
     return r.useMemo(
         () => ({
             handleMouseDown: E,
             handleMouseMove: g,
-            handleMouseUp: h,
-            handleMouseEnter: v
+            handleMouseUp: v,
+            handleMouseEnter: h
         }),
-        [E, v, g, h]
+        [E, h, g, v]
     );
 }

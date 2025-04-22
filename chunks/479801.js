@@ -60,44 +60,44 @@ function _(e, t) {
 }
 let p = 600000,
     h = 600000;
-function m(e, t) {
-    let n = 'useMaybeFetchCollectiblesCategories';
+function m(e, t, n) {
+    let u = 'useMaybeFetchCollectiblesCategories';
     (0, a.j)({
-        location: n + ' auto on',
+        location: u + ' auto on',
         autoTrackExposure: !0
     }),
         (0, a.j)({
-            location: n + ' auto off',
+            location: u + ' auto off',
             autoTrackExposure: !1
         });
-    let u = (0, i.e7)([o.Z], () => o.Z.hasLoadedExperiments),
-        f = null == e ? void 0 : e.includeBundles,
-        m = (0, c.hv)('useMaybeFetchCollectiblesCategoriesShared'),
-        [g, E, b, y, v, O] = (0, i.Wu)([l.Z], () => {
+    let f = (0, i.e7)([o.Z], () => o.Z.hasLoadedExperiments),
+        m = null == e ? void 0 : e.includeBundles,
+        g = (0, c.hv)('useMaybeFetchCollectiblesCategoriesShared'),
+        [E, b, y, v, O, I] = (0, i.Wu)([l.Z], () => {
             var e, t;
             return [l.Z.isFetchingCategories, l.Z.lastFetchOptions, l.Z.error, null != (e = l.Z.lastErrorTimestamp) ? e : 0, null != (t = l.Z.lastSuccessfulFetch) ? t : 0, l.Z.categories];
         });
     return (
         (0, r.useEffect)(() => {
-            if (!u || g) return;
-            let n = Date.now() - y < h;
-            if (b && n) return;
-            let r = _(d({}, e), {
-                    includeBundles: f,
-                    variantsReturnStyle: m
+            if (!f || E) return;
+            let r = Date.now() - v < h;
+            if (y && r) return;
+            let i = _(d({}, e), {
+                    includeBundles: m,
+                    variantsReturnStyle: g
                 }),
-                i = !(0, s.oc)(E, r),
-                a = Date.now() - v < p;
-            (i || !a) && (0, s.F$)(r, t);
-        }, [u, g, E, v, e, b, f, y, m, t]),
+                a = !(0, s.oc)(b, i),
+                o = Date.now() - O < p;
+            (a || !o) && (0, s.F$)(i, t, n);
+        }, [f, E, b, O, e, y, m, v, g, t, n]),
         {
-            isFetching: g,
-            categories: O,
-            fetchCategoriesError: b,
+            isFetching: E,
+            categories: I,
+            fetchCategoriesError: y,
             refreshCategories: (0, r.useCallback)(() => {
-                let t = _(d({}, e), { includeBundles: f });
-                (0, s.F$)(t);
-            }, [e, f])
+                let t = _(d({}, e), { includeBundles: m });
+                (0, s.F$)(t, void 0, n);
+            }, [e, m, n])
         }
     );
 }

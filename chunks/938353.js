@@ -271,7 +271,7 @@ class e1 extends (r = l.Component) {
                                 eA.Z,
                                 {
                                     code: r,
-                                    author: e.author,
+                                    message: e,
                                     getAcceptInviteContext: this.getAcceptInviteContext
                                 },
                                 r
@@ -284,7 +284,7 @@ class e1 extends (r = l.Component) {
                           eI.Z,
                           {
                               code: r,
-                              messageData: e
+                              message: e
                           },
                           r
                       );

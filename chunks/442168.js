@@ -37,11 +37,11 @@ function E(e) {
     return e;
 }
 let g = { visibility: 'hidden' },
-    h = {
+    v = {
         precision: 0.0001,
         duration: 300
     },
-    v = {
+    h = {
         tension: 150,
         friction: 20,
         precision: 0.0001,
@@ -94,7 +94,7 @@ function b(e) {
                 ref: w,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
-                config: h
+                config: v
             },
             'animate-always'
         ),
@@ -139,7 +139,7 @@ function b(e) {
                             })()
                         )
                 ),
-                config: b.enabled ? S : v,
+                config: b.enabled ? S : h,
                 onRest: (e, t) => {
                     null != t.item && null != I.find((e) => e.timestamp === t.item.timestamp) && (0, c.Gh)(Z, t.item.timestamp);
                 }

@@ -15,8 +15,8 @@ var a = n(200651),
     b = n(829907),
     f = n(610394),
     v = n(352527),
-    j = n(355863),
-    g = n(449224),
+    g = n(355863),
+    j = n(449224),
     _ = n(808506),
     y = n(572004),
     C = n(70956),
@@ -87,7 +87,7 @@ let R = {
                             height: 100
                         }
                     },
-                    j.Z.getWidgetDefaultSettings(N.Odu.CLICK_ZONE_DEBUG)
+                    g.Z.getWidgetDefaultSettings(N.Odu.CLICK_ZONE_DEBUG)
                 ),
                 { pinned: !0 }
             ),
@@ -108,7 +108,7 @@ let R = {
                             height: 'auto'
                         }
                     },
-                    j.Z.getWidgetDefaultSettings(N.Odu.PERFORMANCE_DEBUG)
+                    g.Z.getWidgetDefaultSettings(N.Odu.PERFORMANCE_DEBUG)
                 ),
                 { pinned: !0 }
             )
@@ -145,7 +145,7 @@ function L(e) {
 function A(e) {
     let { trackedGame: t } = e,
         n = (0, s.e7)([x.ZP], () => x.ZP.getGameForPID(t.pid)),
-        r = (0, s.e7)([g.Z], () => g.Z.getGameForPID(t.pid));
+        r = (0, s.e7)([j.Z], () => j.Z.getGameForPID(t.pid));
     return (0, a.jsxs)('div', {
         className: P.panelGroup,
         children: [
@@ -316,7 +316,7 @@ function D(e) {
     });
 }
 function z(e) {
-    let t = Z(Object.values((0, s.Wu)([j.Z], () => j.Z.getWidgetsForLayout(T.$))), e);
+    let t = Z(Object.values((0, s.Wu)([g.Z], () => g.Z.getWidgetsForLayout(T.$))), e);
     return [
         t,
         () => {
@@ -334,8 +334,8 @@ function M() {
     var e, t;
     let [n, l] = z(N.Odu.CLICK_ZONE_DEBUG),
         [o, d] = z(N.Odu.PERFORMANCE_DEBUG),
-        j = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.ClickZones)),
-        g = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.WidgetAreas)),
+        g = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.ClickZones)),
+        j = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.WidgetAreas)),
         y = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.DisabledGPUBoost)),
         T = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.ForceGPUBoost)),
         S = (0, s.e7)([p.default], () => p.default.getForcedRenderMode()),
@@ -452,7 +452,7 @@ function M() {
                                     'div',
                                     I(k({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
-                                            value: j,
+                                            value: g,
                                             onChange: () => ee(),
                                             size: 18,
                                             type: c.XZJ.Types.INVERTED,
@@ -475,7 +475,7 @@ function M() {
                                     'div',
                                     I(k({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
-                                            value: g,
+                                            value: j,
                                             onChange: () => et(),
                                             size: 18,
                                             type: c.XZJ.Types.INVERTED,

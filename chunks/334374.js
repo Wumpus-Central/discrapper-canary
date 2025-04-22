@@ -12,18 +12,18 @@ function s(e) {
         [m, p] = l.useState(),
         E = n.id.split(':').at(-1),
         g = t === E,
-        h = l.useCallback((e, t, n) => {
+        v = l.useCallback((e, t, n) => {
             var r, l, i;
             let o = n ? a.ZP.getOutboundStats(t) : a.ZP.getInboundStats(e, t);
             c(null != (r = null == o ? void 0 : o.codec) ? r : 'unknown'), f(void 0 === (l = null == o ? void 0 : o.resolution) || (0 === l.width && 0 === l.height) ? 'unknown' : l.width + ' x ' + l.height), p((null == o ? void 0 : o.bitrateEstimate) !== void 0 ? ((i = o.bitrateEstimate), ''.concat((i / 1000).toFixed(2), ' Kbps')) : 'unknown');
         }, []);
     return (
         l.useEffect(() => {
-            let e = () => h(E, s, g);
+            let e = () => v(E, s, g);
             e();
             let t = setInterval(e, 1000);
             return () => clearInterval(t);
-        }, [g, E, s, h]),
+        }, [g, E, s, v]),
         (0, r.jsxs)('div', {
             className: o.streamInfoContainer,
             children: [

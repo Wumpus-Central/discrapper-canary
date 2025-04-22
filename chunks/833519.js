@@ -17,8 +17,8 @@ var r = n(200651),
     p = n(710845),
     E = n(965048),
     g = n(590293),
-    h = n(863908),
-    v = n(871118),
+    v = n(863908),
+    h = n(871118),
     S = n(517525),
     b = n(352978),
     y = n(576645),
@@ -91,7 +91,7 @@ function z(e) {
         ee = (0, o.e7)([x.Z], () => x.Z.isFocused()),
         et = (null == Q ? void 0 : Q.ownerId) === G,
         en = et && !ee && !S,
-        er = null != Q ? (0, h.Z)(Q, q, q.id === G, en) : null,
+        er = null != Q ? (0, v.Z)(Q, q, q.id === G, en) : null,
         el = M < 195;
     (0, d.ZP)(() => {
         !$ && (null == X ? void 0 : X.isGuildStageVoice()) && !et && ((0, c.rn)(B), u.Z.updateStageStreamSize(B.channelId, !1));
@@ -138,7 +138,7 @@ function z(e) {
         return (0, r.jsxs)('div', {
             className: a()(W.content, W.streamPreview, { [W.small]: el }),
             children: [
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(h.Z, {
                     noImage: !0,
                     noText: !0,
                     className: a()(W.absoluteFill, { [W.streamPreviewOpacity]: null == Q }),

@@ -7,7 +7,7 @@ var i = n(592125),
     o = n(983436),
     s = n(981631);
 function c(e) {
-    let { code: t, messageData: n } = e,
+    let { code: t, message: n } = e,
         [c, u] = t.split('/'),
         d = i.Z.getChannel(u),
         p = l.Z.getGuild(c);
@@ -15,7 +15,7 @@ function c(e) {
         ? (0, r.jsx)(o.Z, {
               guild: p,
               channel: d,
-              messageData: n
+              message: n
           })
         : null;
 }

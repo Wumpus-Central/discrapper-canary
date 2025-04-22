@@ -15,7 +15,7 @@ var r = n(200651),
 function g(e) {
     let { errorMessage: t, className: n, avError: i } = e,
         g = '',
-        { text: h, node: v } = (function (e) {
+        { text: v, node: h } = (function (e) {
             var t;
             if (null == e)
                 return {
@@ -38,7 +38,7 @@ function g(e) {
                     : i
             };
         })(i);
-    null != t && null != h ? (g = ''.concat(t, ' ').concat(h)) : null != t && (g = t);
+    null != t && null != v ? (g = ''.concat(t, ' ').concat(v)) : null != t && (g = t);
     let [S] = l.useState(new o.V7()),
         [b, y] = l.useState(!1);
     function O() {
@@ -58,12 +58,12 @@ function g(e) {
                 onMouseLeave: O,
                 children: [
                     t,
-                    null != v &&
+                    null != h &&
                         (0, r.jsx)(s.Text, {
                             variant: 'text-sm/semibold',
                             color: 'text-muted',
                             className: E.errorCodeMessage,
-                            children: v
+                            children: h
                         })
                 ]
             })

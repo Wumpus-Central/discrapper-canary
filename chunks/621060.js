@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => j,
+    ZP: () => g,
     v0: () => p
 }),
     n(388685),
@@ -33,16 +33,16 @@ function v(e) {
     let { tabs: t, selectedTabId: n, onSelectTab: a } = e,
         i = l.useRef(new Map()),
         [o, p] = l.useState(() => new Set()),
-        { ref: v, width: j } = (0, d.ZP)();
+        { ref: v, width: g } = (0, d.ZP)();
     l.useEffect(() => {
         var e, a, r, l;
-        if (null == j) return;
+        if (null == g) return;
         let o = new Set(),
-            s = null != j ? j : 0;
+            s = null != g ? g : 0;
         for (let c of ((s -= null != (a = null == (e = i.current.get(n)) ? void 0 : e.getBoundingClientRect().width) ? a : 0), t)) c.id !== n && (s -= null != (l = null == (r = i.current.get(c.id)) ? void 0 : r.getBoundingClientRect().width) ? l : 0) < 0 && o.add(c.id);
         p(o);
-    }, [t, j, v, n]);
-    let g = l.useCallback(
+    }, [t, g, v, n]);
+    let j = l.useCallback(
         (e) => {
             var n, l, i;
             let { closePopout: o } = e,
@@ -150,7 +150,7 @@ function v(e) {
                     o.size > 0 &&
                     (0, r.jsx)(c.yRy, {
                         layerContext: x.O$,
-                        renderPopout: g,
+                        renderPopout: j,
                         position: 'bottom',
                         align: 'right',
                         spacing: 0,
@@ -214,7 +214,7 @@ function v(e) {
         ]
     });
 }
-function j(e, t) {
+function g(e, t) {
     var n, a, i;
     let { tabs: o, initialSelectedTabId: s, onChangeTab: c } = e,
         [d, u] = l.useState(null != s ? s : null == (n = o[0]) ? void 0 : n.id);

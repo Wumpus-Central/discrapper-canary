@@ -23,8 +23,8 @@ var r,
     p = n(413458),
     E = n(16609),
     g = n(527805),
-    h = n(716600),
-    v = n(778569),
+    v = n(716600),
+    h = n(778569),
     S = n(563218),
     b = n(318891),
     y = n(884338),
@@ -95,9 +95,9 @@ function W(e) {
 }
 function Y(e) {
     var t, n;
-    let { participants: r, application: a, channel: E, width: h } = e,
-        v = U(h),
-        [S] = V(h),
+    let { participants: r, application: a, channel: E, width: v } = e,
+        h = U(v),
+        [S] = V(v),
         b = (0, u.Wu)([R.default, w.default], () =>
             Array.from(r)
                 .map((e) => ((0, p.J)(e, w.default) ? null : R.default.getUser(e.userId)))
@@ -142,8 +142,8 @@ function Y(e) {
             }),
             (0, l.jsx)(c.Text, {
                 className: o()(D.subheader, {
-                    [D.small]: 0 === v,
-                    [D.medium]: 1 === v
+                    [D.small]: 0 === h,
+                    [D.medium]: 1 === h
                 }),
                 variant: 'text-sm/normal',
                 children:
@@ -156,8 +156,8 @@ function Y(e) {
             }),
             (0, l.jsx)(c.Text, {
                 className: o()(D.header, {
-                    [D.small]: 0 === v,
-                    [D.medium]: 1 === v
+                    [D.small]: 0 === h,
+                    [D.medium]: 1 === h
                 }),
                 variant: 'text-sm/normal',
                 children: a.name
@@ -180,7 +180,7 @@ function Y(e) {
                                       });
                           },
                           submitting: k,
-                          size: W(v),
+                          size: W(h),
                           className: D.button,
                           look: c.iLD.FILLED,
                           color: c.zxk.Colors.WHITE,
@@ -195,10 +195,10 @@ function H(e) {
     let { participant: t, width: n, selected: r, interactible: a, channel: o } = e,
         { analyticsLocations: s } = (0, I.ZP)(j.Z.ACTIVITY_TILE),
         { applicationId: c } = t,
-        d = (0, h.Z)(),
+        d = (0, v.Z)(),
         f = null != d && (0, E.pY)(d.location) === o.id && d.applicationId === c,
         [m] = (0, P.Z)([c]),
-        { url: p } = (0, v.Z)({
+        { url: p } = (0, h.Z)({
             applicationId: c,
             names: k,
             size: L

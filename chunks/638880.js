@@ -38,7 +38,7 @@ async function I(e) {
     let Z = await (0, m.Z)(n, c),
         H = (0, u.Kb)(Z);
     if (
-        (L && (H ? ((c = void 0), (j = void 0)) : (L = !1)),
+        (L && (H ? (j = void 0) : (L = !1)),
         !(await (0, p.p)({
             applicationId: n,
             application: Z,
