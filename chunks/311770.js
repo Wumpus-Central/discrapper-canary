@@ -5,10 +5,10 @@ var t = n(200651),
     r = n(442837),
     o = n(481060),
     s = n(730089),
-    d = n(999382),
-    u = n(372129),
-    c = n(430824),
-    m = n(496675),
+    d = n(372129),
+    u = n(430824),
+    c = n(496675),
+    m = n(914010),
     h = n(375727),
     x = n(841776),
     f = n(981631),
@@ -106,10 +106,11 @@ let b = (e) => {
         });
     },
     _ = () => ({
-        guilds: (0, r.Wu)([c.Z, m.Z], () => Object.values(c.Z.getGuilds()).filter((e) => m.Z.can(f.Plq.CREATE_GUILD_EXPRESSIONS, e))),
-        currentGuildId: (0, r.e7)([d.Z, m.Z], () => {
-            let e = d.Z.getGuild();
-            return m.Z.can(f.Plq.CREATE_GUILD_EXPRESSIONS, e) && null != e ? e.id : null;
+        guilds: (0, r.Wu)([u.Z, c.Z], () => Object.values(u.Z.getGuilds()).filter((e) => c.Z.can(f.Plq.CREATE_GUILD_EXPRESSIONS, e))),
+        currentGuildId: (0, r.e7)([u.Z, m.Z, c.Z], () => {
+            let e = m.Z.getGuildId(),
+                l = u.Z.getGuild(e);
+            return c.Z.can(f.Plq.CREATE_GUILD_EXPRESSIONS, l) && null != l ? l.id : null;
         })
     }),
     v = (e) => {
@@ -123,7 +124,7 @@ let b = (e) => {
             focusProps: { within: !0 },
             children: [
                 'Select an image',
-                (0, t.jsx)(u.Z, {
+                (0, t.jsx)(d.Z, {
                     disabled: n,
                     tabIndex: 0,
                     onChange: (e, n, t) => (
