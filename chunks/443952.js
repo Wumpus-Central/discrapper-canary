@@ -151,23 +151,29 @@ let V = {
         },
         handler(e) {
             let { socket: t } = e,
-                { channel: i, guild: l } = (0, R.T)(),
-                o = (0, g.ZP)({
+                i = t.application;
+            if (null == i.id) throw new Z.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
+            let { channel: l, guild: o, contextless: c } = (0, R.T)(i),
+                u = (0, g.ZP)({
                     application: t.application,
-                    channelId: i.id
+                    channelId: null == l ? void 0 : l.id
                 }),
-                s = null != o ? E.Z.getWindow(o) : void 0;
-            (null == s ? void 0 : s.closed) && (s = void 0);
-            let c = null != s ? M.IlC.POPOUT : M.IlC.APP;
-            (0, A.Pr)({}, null == s ? void 0 : s.document),
+                d = null != u ? E.Z.getWindow(u) : void 0;
+            (null == d ? void 0 : d.closed) && (d = void 0);
+            let p = null != d ? M.IlC.POPOUT : M.IlC.APP;
+            if (((0, A.Pr)({}, null == d ? void 0 : d.document), c)) {
+                let e = I.Z.getApplicationActivity(i.id);
+                if (null != e) (0, s.h7)(e, !1, p);
+                else throw new Z.Z({ errorCode: M.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity was set using setActivity.');
+            } else
                 (0, a.ZDy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
-                        return (n) => {
-                            var a, o;
+                        return (t) => {
+                            var n, a;
                             return (0, r.jsx)(
                                 e,
-                                ((a = (function (e) {
+                                ((n = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
@@ -191,17 +197,17 @@ let V = {
                                             });
                                     }
                                     return e;
-                                })({}, n)),
-                                (o = o =
+                                })({}, t)),
+                                (a = a =
                                     {
-                                        guild: l,
-                                        channel: i,
-                                        applicationId: t.application.id,
+                                        guild: o,
+                                        channel: l,
+                                        applicationId: i.id,
                                         analyticsLocation: M.Sbl.ACTIVITY_RPC,
                                         source: M.t4x.ACTIVITY_INVITE
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(o))
+                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -209,14 +215,14 @@ let V = {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(o)).forEach(function (e) {
-                                          Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(o, e));
+                                      })(Object(a)).forEach(function (e) {
+                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
                                       }),
-                                a)
+                                n)
                             );
                         };
                     },
-                    { contextKey: c === M.IlC.POPOUT ? a.u1M : a.z1l }
+                    { contextKey: p === M.IlC.POPOUT ? a.u1M : a.z1l }
                 );
         }
     },
