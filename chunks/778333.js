@@ -17,7 +17,7 @@ var r = n(200651),
     b = n(273254);
 function x(e) {
     var t;
-    let { invite: n, author: x, getAcceptInviteContext: y } = e,
+    let { invite: n, message: x, getAcceptInviteContext: y } = e,
         E = (0, l.e7)([p.default], () => p.default.getId()),
         v = (null == (t = n.inviter) ? void 0 : t.id) === E,
         O = n.state === g.r2o.ACCEPTING,
@@ -33,7 +33,8 @@ function x(e) {
                     {
                         invite: n,
                         action: e,
-                        inviter_id: x.id
+                        inviter_id: x.author.id,
+                        invite_message_id: x.id
                     },
                     j
                 );
@@ -43,7 +44,8 @@ function x(e) {
                 {
                     invite: n,
                     action: 'accept',
-                    inviter_id: x.id
+                    inviter_id: x.author.id,
+                    invite_message_id: x.id
                 },
                 j
             );

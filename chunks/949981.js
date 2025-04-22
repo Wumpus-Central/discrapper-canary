@@ -18,8 +18,8 @@ var r = n(200651),
     x = n(273254);
 function y(e) {
     let t,
-        { invite: n, author: l, currentUserId: y, onTransitionToInviteChannel: E, onAcceptInstantInvite: v } = e,
-        O = y === l.id,
+        { invite: n, message: l, currentUserId: y, onTransitionToInviteChannel: E, onAcceptInstantInvite: v } = e,
+        O = y === l.author.id,
         j = n.state === _.r2o.ACCEPTING,
         C = (0, o.e7)([m.Z], () => (null != n.channel ? m.Z.getChannel(n.channel.id) : null), [n]);
     a()(null == C || C.isPrivate(), 'must be a private channel');
@@ -32,7 +32,8 @@ function y(e) {
                     {
                         invite: n,
                         action: e,
-                        inviter_id: l.id
+                        inviter_id: l.author.id,
+                        invite_message_id: l.id
                     },
                     S
                 );

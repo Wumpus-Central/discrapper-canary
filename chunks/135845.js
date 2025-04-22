@@ -21,7 +21,7 @@ function E(e) {
     let t,
         n,
         l,
-        { invite: E, currentUserId: v, guild: O, inviterId: j, onTransitionToInviteChannel: C, onAcceptInstantInvite: S } = e,
+        { invite: E, currentUserId: v, guild: O, message: j, onTransitionToInviteChannel: C, onAcceptInstantInvite: S } = e,
         I = null == O ? void 0 : O.id,
         N = (0, o.e7)([h.Z], () => h.Z.getGuildId()),
         T = (0, o.e7)([f.Z], () => (null != E && null != E.target_user ? f.Z.getActiveStreamForUser(E.target_user.id, I) : null), [E, I]),
@@ -41,7 +41,8 @@ function E(e) {
                     {
                         invite: E,
                         action: e,
-                        inviter_id: j
+                        inviter_id: j.author.id,
+                        invite_message_id: j.id
                     },
                     A
                 );

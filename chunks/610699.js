@@ -123,7 +123,7 @@ function D(e) {
 function L(e) {
     var t, n;
     let l,
-        { invite: a, getAcceptInviteContext: o, inviterId: u } = e,
+        { invite: a, message: o, getAcceptInviteContext: u } = e,
         { approximate_member_count: h, approximate_presence_count: g, target_type: _, target_application: b } = a;
     s()(_ === w.Iq.EMBEDDED_APPLICATION && null != b, 'invalid application invite');
     let x = i.useCallback(() => {
@@ -165,16 +165,17 @@ function L(e) {
                 {
                     invite: a,
                     action: 'accept',
-                    inviter_id: u
+                    inviter_id: o.author.id,
+                    invite_message_id: o.id
                 },
                 L
             ),
                 d.ZP.acceptInviteAndTransitionToInviteChannel({
                     inviteKey: a.code,
-                    context: o('Invite Button Embed'),
+                    context: u('Invite Button Embed'),
                     analyticsLocations: L
                 });
-        }, [a, u, L, o]),
+        }, [a, o, L, u]),
         G = a.state === A.r2o.ACCEPTING,
         H = null != E;
     if (null == E) {

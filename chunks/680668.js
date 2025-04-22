@@ -23,8 +23,8 @@ function v(e) {
     let j,
         C,
         S,
-        { onTransitionToInviteChannel: I, onAcceptInstantInvite: N, guild: T, invite: P, author: A, currentUserId: w } = e,
-        Z = w === A.id,
+        { onTransitionToInviteChannel: I, onAcceptInstantInvite: N, guild: T, invite: P, message: A, currentUserId: w } = e,
+        Z = w === A.author.id,
         { channel: R, approximate_member_count: k, approximate_presence_count: D } = P,
         L = P.state === x.r2o.ACCEPTING,
         M = null != R ? (0, f.jD)(R) : null,
@@ -50,7 +50,8 @@ function v(e) {
                     {
                         invite: P,
                         action: e,
-                        inviter_id: A.id
+                        inviter_id: A.author.id,
+                        invite_message_id: A.id
                     },
                     K
                 );

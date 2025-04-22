@@ -21,7 +21,7 @@ var r = n(200651),
     v = n(388032),
     O = n(583136);
 function j(e) {
-    let { invite: t, isMemberOfGuild: n, inviterId: l, onTransitionToInviteChannel: c, onAcceptInstantInvite: d } = e,
+    let { invite: t, isMemberOfGuild: n, message: l, onTransitionToInviteChannel: c, onAcceptInstantInvite: d } = e,
         p = i.useRef(null),
         [f, h] = i.useState(!0),
         [j, S] = i.useState(!1),
@@ -107,7 +107,7 @@ function j(e) {
                                           invite: t,
                                           profile: T,
                                           isMemberOfGuild: n,
-                                          inviterId: l,
+                                          message: l,
                                           submitting: I,
                                           onTransitionToInviteChannel: c,
                                           onAcceptInstantInvite: d
@@ -121,7 +121,7 @@ function j(e) {
           });
 }
 function C(e) {
-    let { invite: t, profile: n, isMemberOfGuild: l, inviterId: a, submitting: o, onTransitionToInviteChannel: s, onAcceptInstantInvite: u } = e,
+    let { invite: t, profile: n, isMemberOfGuild: l, message: a, submitting: o, onTransitionToInviteChannel: s, onAcceptInstantInvite: u } = e,
         { guildId: m, ctaType: g } = (0, f.ZP)(n, f.F3.INVITE),
         { analyticsLocations: _ } = (0, p.ZP)(d.Z.INVITE_EMBED),
         b = i.useCallback(() => {
@@ -130,7 +130,8 @@ function C(e) {
                 {
                     invite: t,
                     action: e,
-                    inviter_id: a
+                    inviter_id: a.author.id,
+                    invite_message_id: a.id
                 },
                 _
             );
