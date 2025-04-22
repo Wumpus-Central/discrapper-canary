@@ -23,6 +23,7 @@ async function m(e) {
             nonce: '',
             applicationId: t,
             channelId: null != n ? n : null,
+            guildId: null != o ? o : null,
             error: new a.Hx(l),
             locationKind: e
         });

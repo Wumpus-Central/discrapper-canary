@@ -157,6 +157,7 @@ function G(e) {
                     null != e && l.default.selectPrivateChannel(e.id);
             }
             if (Q) {
+                var n;
                 if (null == q) return;
                 if (!eo) return t();
                 if (
@@ -168,6 +169,7 @@ function G(e) {
                         joinUserId: V.id,
                         joinSessionId: null == B ? void 0 : B.session_id,
                         instanceId: null == F ? void 0 : F.compositeInstanceId,
+                        partyId: null == B || null == (n = B.party) ? void 0 : n.id,
                         isContextlessActivity: ei
                     }))
                 ) {

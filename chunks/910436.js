@@ -113,6 +113,7 @@ function E(e) {
                             g.Z.EmbeddedActivitySection,
                             {
                                 activity: j,
+                                activityUser: x,
                                 participants: e,
                                 channel: t,
                                 guildId: t.guild_id

@@ -567,35 +567,35 @@ let ei = (e) => {
         });
     }),
     (ei.EmbeddedActivitySection = (e) => {
-        let { activity: t, channel: n, guildId: r, participants: a } = e,
-            [o, c] = l.useState(null),
-            d = t.application_id;
+        let { activity: t, channel: n, guildId: r, participants: a, activityUser: o } = e,
+            [c, d] = l.useState(null),
+            p = t.application_id;
         l.useEffect(() => {
-            null != d &&
-                (0, V.hR)(d, ['embedded_background']).then((e) => {
+            null != p &&
+                (0, V.hR)(p, ['embedded_background']).then((e) => {
                     let [t] = e;
-                    return c(t);
+                    return d(t);
                 });
-        }, [d]);
-        let p = (0, s.Wu)([M.default, D.default], () =>
+        }, [p]);
+        let f = (0, s.Wu)([M.default, D.default], () =>
                 Array.from(a)
                     .map((e) => (D.default.getId() === e ? null : M.default.getUser(e)))
                     .filter(B.lm)
             ),
-            f = (0, h.O)(),
-            { analyticsLocations: m } = (0, v.ZP)();
-        if (null == d) return null;
-        let _ = C.Z.getApplication(d);
-        if (null == _) return null;
-        let E = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
-            O = (0, V.xF)(_.id, o, 300);
+            m = (0, h.O)(),
+            { analyticsLocations: _ } = (0, v.ZP)();
+        if (null == p) return null;
+        let E = C.Z.getApplication(p);
+        if (null == E) return null;
+        let O = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
+            y = (0, V.xF)(E.id, c, 300);
         return (0, i.jsxs)($, {
             children: [
                 (0, i.jsxs)('div', {
                     className: Y.embeddedActivityTopRow,
                     children: [
                         (0, i.jsx)(j.Z, {
-                            game: _,
+                            game: E,
                             size: j.Z.Sizes.XSMALL,
                             className: Y.embeddedActivityIcon
                         }),
@@ -603,16 +603,16 @@ let ei = (e) => {
                             className: Y.embeddedActivityName,
                             children: (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/semibold',
-                                children: _.name
+                                children: E.name
                             })
                         }),
-                        null != E
+                        null != O
                             ? (0, i.jsx)('div', {
                                   className: Y.embeddedActivityTimeElapsed,
                                   children: (0, i.jsx)(u.Text, {
                                       color: 'text-muted',
                                       variant: 'text-sm/normal',
-                                      children: (0, i.jsx)(J, { timestamps: E })
+                                      children: (0, i.jsx)(J, { timestamps: O })
                                   })
                               })
                             : null
@@ -621,10 +621,10 @@ let ei = (e) => {
                 (0, i.jsxs)('div', {
                     className: Y.embeddedActivityPlayerContainer,
                     children: [
-                        null != O
+                        null != y
                             ? (0, i.jsx)('img', {
-                                  src: O,
-                                  alt: _.name,
+                                  src: y,
+                                  alt: E.name,
                                   className: Y.embeddedActivityImage
                               })
                             : null,
@@ -632,7 +632,7 @@ let ei = (e) => {
                             className: Y.embeddedActivityImageOverlay,
                             children: [
                                 (0, i.jsx)(R.OV, {
-                                    users: p,
+                                    users: f,
                                     guildId: r,
                                     channelId: n.id
                                 }),
@@ -641,14 +641,18 @@ let ei = (e) => {
                                     children: (0, i.jsx)(u.zxk, {
                                         size: u.zxk.Sizes.SMALL,
                                         onClick: (e) => {
+                                            var r;
                                             e.stopPropagation(),
                                                 (0, g.Z)({
-                                                    applicationId: d,
+                                                    applicationId: p,
                                                     activityChannelId: n.id,
-                                                    locationObject: f.location,
-                                                    analyticsLocations: m,
+                                                    locationObject: m.location,
+                                                    analyticsLocations: _,
                                                     instanceId: void 0,
-                                                    isContextlessActivity: (0, b.Z)(t, z.xjy.EMBEDDED) && (0, b.Z)(t, z.xjy.CONTEXTLESS)
+                                                    isContextlessActivity: (0, b.Z)(t, z.xjy.EMBEDDED) && (0, b.Z)(t, z.xjy.CONTEXTLESS),
+                                                    partyId: null == (r = t.party) ? void 0 : r.id,
+                                                    joinUserId: o.id,
+                                                    joinSessionId: t.session_id
                                                 });
                                         },
                                         children: W.intl.string(W.t.VJlc0d)
