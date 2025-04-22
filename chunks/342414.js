@@ -132,23 +132,29 @@ let Z = (e) => {
                     alt: '',
                     className: P.headerArtV2
                 }),
-                (0, i.jsx)('div', {
+                (0, i.jsxs)('div', {
                     className: P.reverseContainer,
                     'data-testid': 'subscriber-nitro-home-hero-header',
-                    children: (0, i.jsxs)('div', {
-                        className: P.contentV2,
-                        children: [
-                            (0, i.jsx)('div', {
-                                className: P.reverseTrialHomeHeader,
-                                children: (0, i.jsx)(a.X6q, {
-                                    variant: 'display-lg',
-                                    color: 'always-white',
-                                    children: e
-                                })
-                            }),
-                            (0, i.jsx)(v.Z, {})
-                        ]
-                    })
+                    children: [
+                        (0, i.jsx)('div', {
+                            className: P.reverseTrialHomeHeader,
+                            children: (0, i.jsx)(a.X6q, {
+                                variant: 'display-lg',
+                                color: 'always-white',
+                                children: e
+                            })
+                        }),
+                        (0, i.jsx)('div', {
+                            className: P.buttonContainer,
+                            children: (0, i.jsx)(O.Z, {
+                                color: a.Ttl.BRAND,
+                                buttonText: A.intl.string(A.t['3KomGR']),
+                                className: P.button,
+                                isGift: !0
+                            })
+                        }),
+                        (0, i.jsx)(v.Z, {})
+                    ]
                 })
             ]
         });

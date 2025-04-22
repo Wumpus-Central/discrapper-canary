@@ -117,7 +117,7 @@ function el() {
         o = (0, B.W)(),
         d = null !== s && null !== s.planIdFromItems;
     if (!d && !a.isFractionalPremiumActive) return null;
-    let g = a.isFractionalPremiumActive && !o,
+    let g = a.isFractionalPremiumActive,
         p = null !== s && s.hasActiveTrial;
     return (0, i.jsxs)('div', {
         className: l()(J.tierCard, { [J.withTier2Rim]: t || p }),
@@ -166,12 +166,12 @@ function el() {
                                   ]
                               })
                             : null,
-                    (0, i.jsx)(z.nT, { featureSet: g ? z.uZ.FRACTIONAL_PREMIUM : z.uZ.DEFAULT }),
+                    (0, i.jsx)(z.nT, { featureSet: g && !o ? z.uZ.FRACTIONAL_PREMIUM : z.uZ.DEFAULT }),
                     g && !d && (0, M.C)('nitro-settings-hero', e)
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(H.Z, {
-                                      buttonText: Q.intl.string(Q.t['0b3YRk']),
+                                      buttonText: o ? Q.intl.string(Q.t.YScQSE) : Q.intl.string(Q.t['0b3YRk']),
                                       buttonTextClassName: J.tierCardButtonCTA,
                                       className: J.tierCardButton,
                                       color: m.zxk.Colors.WHITE,
@@ -194,7 +194,7 @@ function el() {
                                           className: J.__invalid_managePlanButtonCTA,
                                           variant: 'text-sm/medium',
                                           color: 'always-white',
-                                          children: Q.intl.string(Q.t.T1aUAQ)
+                                          children: o ? Q.intl.string(Q.t.VR2iVF) : Q.intl.string(Q.t.T1aUAQ)
                                       })
                                   })
                               ]
@@ -218,25 +218,24 @@ function el() {
                                           children: Q.intl.string(Q.t.VR2iVF)
                                       })
                                   }),
-                                  !o &&
-                                      (0, i.jsx)(m.zxk, {
-                                          className: J.managePlanButton,
-                                          look: m.zxk.Looks.OUTLINED,
-                                          color: m.zxk.Colors.WHITE,
-                                          onClick: () => {
-                                              Z.default.track(X.rMx.PREMIUM_SETTINGS_INTERACTED, {
-                                                  cta_type: 'to_subscriptions_button',
-                                                  target: 'subscriptions settings'
-                                              }),
-                                                  b.Z.open(X.oAB.SUBSCRIPTIONS);
-                                          },
-                                          children: (0, i.jsx)(m.Text, {
-                                              className: J.__invalid_managePlanButtonCTA,
-                                              variant: 'text-sm/medium',
-                                              color: 'always-white',
-                                              children: Q.intl.string(Q.t['9uDy6O'])
-                                          })
+                                  (0, i.jsx)(m.zxk, {
+                                      className: J.managePlanButton,
+                                      look: m.zxk.Looks.OUTLINED,
+                                      color: m.zxk.Colors.WHITE,
+                                      onClick: () => {
+                                          Z.default.track(X.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                              cta_type: 'to_subscriptions_button',
+                                              target: 'subscriptions settings'
+                                          }),
+                                              b.Z.open(X.oAB.SUBSCRIPTIONS);
+                                      },
+                                      children: (0, i.jsx)(m.Text, {
+                                          className: J.__invalid_managePlanButtonCTA,
+                                          variant: 'text-sm/medium',
+                                          color: 'always-white',
+                                          children: Q.intl.string(Q.t['9uDy6O'])
                                       })
+                                  })
                               ]
                           })
                 ]

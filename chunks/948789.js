@@ -1,10 +1,20 @@
-a.d(t, { fQ: () => l }), a(539854), a(704826), a(35282);
-var n = a(539528),
-    r = a(33382),
-    s = a.n(r);
-function l(e) {
+let n;
+a.d(t, {
+    fQ: () => o,
+    uL: () => i
+}),
+    a(539854),
+    a(704826),
+    a(35282);
+var r = a(539528),
+    s = a(33382),
+    l = a.n(s);
+function i(e) {
+    n.push(e);
+}
+function o(e) {
     return (t) => {
-        if (null != e) return null != s()(t, { end: !1 }).exec(e.history.location.pathname);
+        if (null != e) return null != l()(t, { end: !1 }).exec(e.history.location.pathname);
     };
 }
-(0, n.lX)();
+n = (0, r.lX)();
