@@ -10,7 +10,6 @@ e.exports = {
     details: 'details__39ec2',
     platformIcon: 'platformIcon__39ec2',
     toolbarContainer: 'toolbarContainer__39ec2',
-    fullSize: 'fullSize__39ec2',
     actions: 'actions__39ec2',
     primaryButton: 'primaryButton__39ec2',
     customButton: 'customButton__39ec2',

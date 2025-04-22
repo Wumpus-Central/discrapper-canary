@@ -56,7 +56,7 @@ function R(e) {
 function P(e) {
     let { user: t, guildId: n, channelId: C, messageId: P, roleId: w, openedAt: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: M = __OVERLAY__, newAnalyticsLocations: k = [] } = e,
         j = (0, h.ZP)(t.id, n),
-        { analyticsLocations: U } = (0, l.ZP)([...k, s.Z.BITE_SIZE_PROFILE_POPOUT]),
+        { analyticsLocations: U } = (0, l.ZP)([...k, s.Z.USER_PROFILE_POPOUT]),
         G = (0, _.ZB)({
             layout: 'POPOUT',
             userId: t.id,
@@ -66,11 +66,11 @@ function P(e) {
             roleId: w
         }),
         B = i.useRef(null),
-        F = (0, o.Z)(B);
+        V = (0, o.Z)(B);
     i.useEffect(() => {
         null == L || L(null == B ? void 0 : B.current);
     }, [B, L]);
-    let V = () => {
+    let F = () => {
             null == x || x(),
                 (0, S.openUserProfileModal)(
                     R(
@@ -89,7 +89,7 @@ function P(e) {
                       id: 'view-profile',
                       label: A.intl.string(A.t['+Xp3ho']),
                       action: () => {
-                          V(),
+                          F(),
                               (0, p.pQ)(
                                   R(
                                       {
@@ -117,10 +117,9 @@ function P(e) {
                     (0, r.jsxs)(y.Z, {
                         user: t,
                         displayProfile: j,
-                        profileType: T.y0.BITE_SIZE,
+                        themeType: T.lY.POPOUT,
                         children: [
                             (0, r.jsx)(I.Z, {
-                                profileType: T.y0.BITE_SIZE,
                                 children: (0, r.jsx)(O.Z, {
                                     user: t,
                                     viewProfileItem: H()
@@ -133,15 +132,15 @@ function P(e) {
                                         user: t,
                                         displayProfile: j,
                                         guildId: n,
-                                        profileType: T.y0.BITE_SIZE
+                                        themeType: T.lY.POPOUT
                                     }),
                                     (0, r.jsx)(m.Z, {
                                         user: t,
                                         displayProfile: j,
                                         guildId: n,
                                         channelId: C,
-                                        profileType: T.y0.BITE_SIZE,
-                                        onOpenProfile: Z ? V : void 0
+                                        themeType: T.lY.POPOUT,
+                                        onOpenProfile: Z ? F : void 0
                                     }),
                                     t.isClyde() && (0, r.jsx)(u.Z, { className: N.headerTag })
                                 ]
@@ -152,12 +151,11 @@ function P(e) {
                                 children: [
                                     (0, r.jsx)(v.Z, {
                                         user: t,
-                                        profileType: T.y0.BITE_SIZE,
                                         nickname: f.ZP.getName(n, C, t),
-                                        onOpenProfile: Z ? V : void 0,
+                                        onOpenProfile: Z ? F : void 0,
                                         tags: (0, r.jsx)(g.Z, {
                                             displayProfile: j,
-                                            profileType: T.y0.BITE_SIZE,
+                                            themeType: T.lY.POPOUT,
                                             onClose: x
                                         })
                                     }),
@@ -175,7 +173,7 @@ function P(e) {
                     (null == j ? void 0 : j.profileEffectId) != null &&
                         (0, r.jsx)(d.Z, {
                             profileEffectId: null == j ? void 0 : j.profileEffectId,
-                            isHovering: F
+                            isHovering: V
                         })
                 ]
             })

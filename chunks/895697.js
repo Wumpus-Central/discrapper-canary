@@ -39,13 +39,12 @@ function N(e) {
         children: [
             (0, r.jsx)(m.Z, {
                 user: t,
-                profileType: I.y0.BITE_SIZE,
                 onOpenProfile: P,
                 nickname: L,
                 pronouns: null == N ? void 0 : N.pronouns,
                 tags: (0, r.jsx)(f.Z, {
                     displayProfile: N,
-                    profileType: I.y0.BITE_SIZE,
+                    themeType: I.lY.POPOUT,
                     onClose: D
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {

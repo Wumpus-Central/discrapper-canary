@@ -85,15 +85,15 @@ function G(e, t) {
     );
 }
 function B(e) {
-    let { user: t, currentUser: n, guildId: k, channelId: U, messageId: B, roleId: F, openedAt: V, closePopout: Z, setPopoutRef: H, disableUserProfileLink: Y = __OVERLAY__, newAnalyticsLocations: W = [], appContext: K = L.IlC.APP } = e,
-        { analyticsLocations: z } = (0, d.ZP)([...W, u.Z.BITE_SIZE_PROFILE_POPOUT]),
+    let { user: t, currentUser: n, guildId: k, channelId: U, messageId: B, roleId: V, openedAt: F, closePopout: Z, setPopoutRef: H, disableUserProfileLink: Y = __OVERLAY__, newAnalyticsLocations: W = [], appContext: K = L.IlC.APP } = e,
+        { analyticsLocations: z } = (0, d.ZP)([...W, u.Z.USER_PROFILE_POPOUT]),
         q = (0, m.ZB)({
             layout: 'POPOUT',
             userId: t.id,
             guildId: k,
             channelId: U,
             messageId: B,
-            roleId: F
+            roleId: V
         }),
         Q = (0, o.e7)([h.Z], () => (null != k ? h.Z.getGuild(k) : null)),
         X = i.useMemo(() => (null != k ? { [k]: [t.id] } : {}), [k, t.id]);
@@ -151,7 +151,7 @@ function B(e) {
         value: z,
         children: (0, r.jsx)(m.Mt, {
             value: q,
-            openedAt: V,
+            openedAt: F,
             fetchStartedAt: null == $ ? void 0 : $.fetchStartedAt,
             fetchEndedAt: null == $ ? void 0 : $.fetchEndedAt,
             isLoaded: null == $ ? void 0 : $.isLoaded,
@@ -164,7 +164,7 @@ function B(e) {
                         (0, r.jsxs)(I.Z, {
                             user: t,
                             displayProfile: $,
-                            profileType: D.y0.BITE_SIZE,
+                            themeType: D.lY.POPOUT,
                             children: [
                                 null != et.interactionType &&
                                     (0, r.jsx)(a.animated.div, {
@@ -172,7 +172,6 @@ function B(e) {
                                         className: M.backdrop
                                     }),
                                 (0, r.jsxs)(S.Z, {
-                                    profileType: D.y0.BITE_SIZE,
                                     children: [
                                         (0, r.jsx)(A.Z, {
                                             shouldShowTooltip: null === et.interactionType,
@@ -184,7 +183,7 @@ function B(e) {
                                         }),
                                         (0, r.jsx)(T.Z, {
                                             shouldShowTooltip: null === et.interactionType,
-                                            profileType: D.y0.BITE_SIZE,
+                                            themeType: D.lY.POPOUT,
                                             user: t
                                         }),
                                         t.id !== n.id &&
@@ -203,7 +202,7 @@ function B(e) {
                                             user: t,
                                             displayProfile: $,
                                             guildId: k,
-                                            profileType: D.y0.BITE_SIZE
+                                            themeType: D.lY.POPOUT
                                         }),
                                         (0, r.jsx)(O.Z, {
                                             userId: t.id,
@@ -216,7 +215,7 @@ function B(e) {
                                             displayProfile: $,
                                             guildId: k,
                                             channelId: U,
-                                            profileType: D.y0.BITE_SIZE,
+                                            themeType: D.lY.POPOUT,
                                             onOpenProfile: Y ? void 0 : ea
                                         }),
                                         (0, r.jsx)(C.Z, {
@@ -224,7 +223,7 @@ function B(e) {
                                             user: t,
                                             guildId: k,
                                             channelId: U,
-                                            profileType: D.y0.BITE_SIZE,
+                                            themeType: D.lY.POPOUT,
                                             onCloseProfile: Z,
                                             prompt: er ? ei : null
                                         })

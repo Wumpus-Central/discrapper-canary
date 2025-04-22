@@ -55,32 +55,32 @@ let S = (0, f.kt)({
         }
     };
 function N(e) {
-    let { user: t, guildId: n, channelId: a, profileType: s, sourceType: f, sourceDetails: _, setPopoutRef: E, modalKey: N, onAction: C, onClose: R, entry: P } = e,
-        { resetInteraction: w, setInteractionToast: D } = (0, g.Xo)(),
-        { primaryColor: L } = (0, b.z)(),
-        [x, M] = i.useState(''),
-        [k, j] = i.useState((0, u.JM)(x)),
-        U = i.useRef(!1),
-        G = i.useRef(null),
-        B = i.useCallback(
+    let { user: t, guildId: n, channelId: a, sourceType: s, sourceDetails: f, setPopoutRef: _, modalKey: E, onAction: N, onClose: C, entry: R } = e,
+        { resetInteraction: P, setInteractionToast: w } = (0, g.Xo)(),
+        { primaryColor: D } = (0, b.z)(),
+        [L, x] = i.useState(''),
+        [M, k] = i.useState((0, u.JM)(L)),
+        j = i.useRef(!1),
+        U = i.useRef(null),
+        G = i.useCallback(
             (e) => {
-                e.key === v.vn.ESCAPE && (e.stopPropagation(), w());
+                e.key === v.vn.ESCAPE && (e.stopPropagation(), P());
             },
-            [w]
+            [P]
         );
     i.useEffect(() => {
-        null == E || E(null == G ? void 0 : G.current);
-    }, [G, E]);
-    let F = async (e) => {
+        null == _ || _(null == U ? void 0 : U.current);
+    }, [U, _]);
+    let B = async (e) => {
             if (null == e) return;
-            f === y.n_.AVATAR ? C({ action: 'SEND_REPLY_AVATAR' }) : f === y.n_.STATUS ? C({ action: 'SEND_REPLY_CUSTOM_STATUS' }) : C({ action: 'SEND_REPLY_ACTIVITY' });
+            s === y.n_.AVATAR ? N({ action: 'SEND_REPLY_AVATAR' }) : s === y.n_.STATUS ? N({ action: 'SEND_REPLY_CUSTOM_STATUS' }) : N({ action: 'SEND_REPLY_ACTIVITY' });
             let n = T({
                 input: e,
                 username: h.ZP.getName(t),
-                sourceType: f,
-                sourceDetails: _
+                sourceType: s,
+                sourceDetails: f
             });
-            D(null);
+            w(null);
             try {
                 await (0, m.Z)({
                     userId: t.id,
@@ -88,43 +88,38 @@ function N(e) {
                     location: 'UserProfileReplyPopout',
                     openChannel: !1,
                     whenReady: !1,
-                    entry: P
+                    entry: R
                 });
             } catch (e) {}
-            D(y.P.REPLY);
+            w(y.P.REPLY);
         },
         V = {
-            [I.biteSize]: s === y.y0.BITE_SIZE,
-            [I.panel]: s === y.y0.PANEL,
-            [I.fullSize]: s === y.y0.FULL_SIZE
-        },
-        Z = {
-            [I.status]: f === y.n_.STATUS,
-            [I.avatar]: f === y.n_.AVATAR,
-            [I.activity]: f === y.n_.ACTIVITY
+            [I.status]: s === y.n_.STATUS,
+            [I.avatar]: s === y.n_.AVATAR,
+            [I.activity]: s === y.n_.ACTIVITY
         };
     return (0, r.jsx)(l.V, {
-        ref: G,
-        onKeyDown: B,
+        ref: U,
+        onKeyDown: G,
         children: (0, r.jsx)('div', {
-            className: o()(I.container, V, Z, { [I.customProfileTheme]: null != L }),
+            className: o()(I.container, V, { [I.customProfileTheme]: null != D }),
             children: (0, r.jsx)(d.Z, {
-                parentModalKey: N,
+                parentModalKey: E,
                 emojiPickerCloseOnModalOuterClick: !0,
                 className: I.input,
                 innerClassName: I.inputInner,
                 editorClassName: I.editor,
                 type: c.Ie.USER_PROFILE_REPLY,
-                placeholder: O.intl.formatToPlainString(A(f), { username: p.ZP.getName(n, a, t) }),
+                placeholder: O.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, a, t) }),
                 channel: S,
-                textValue: x,
-                richValue: k,
+                textValue: L,
+                richValue: M,
                 onChange: (e, t, n) => {
-                    t !== x && (M(t), j(n));
+                    t !== L && (x(t), k(n));
                 },
-                focused: U.current,
+                focused: j.current,
                 onFocus: () => {
-                    U.current = !0;
+                    j.current = !0;
                 },
                 onSubmit: async (e) => {
                     let { value: t } = e,
@@ -136,9 +131,9 @@ function N(e) {
                         };
                     try {
                         return (
-                            await F(n),
-                            w(),
-                            null == R || R(),
+                            await B(n),
+                            P(),
+                            null == C || C(),
                             {
                                 shouldClear: !0,
                                 shouldRefocus: !1

@@ -53,7 +53,7 @@ function N(e) {
 }
 function C(e) {
     let { user: t, currentUser: n, guildId: A, channelId: C, messageId: R, roleId: P, openedAt: w, closePopout: D, setPopoutRef: L, disableUserProfileLink: x = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
-        { analyticsLocations: k } = (0, c.ZP)([...M, l.Z.BITE_SIZE_PROFILE_POPOUT]),
+        { analyticsLocations: k } = (0, c.ZP)([...M, l.Z.USER_PROFILE_POPOUT]),
         j = (0, d.ZB)({
             layout: 'POPOUT',
             userId: t.id,
@@ -65,11 +65,11 @@ function C(e) {
         U = (0, _.ZP)(t.id, A),
         G = (0, a.e7)([u.Z], () => (null != A ? u.Z.getGuild(A) : null)),
         B = i.useRef(null),
-        F = (0, s.Z)(B);
+        V = (0, s.Z)(B);
     i.useEffect(() => {
         null == L || L(null == B ? void 0 : B.current);
     }, [B, L]);
-    let V = (e) => {
+    let F = (e) => {
             null == D || D(),
                 (0, y.openUserProfileModal)(
                     N(
@@ -89,7 +89,7 @@ function C(e) {
                       id: 'view-profile',
                       label: S.intl.string(S.t['+Xp3ho']),
                       action: () => {
-                          V(),
+                          F(),
                               (0, f.pQ)(
                                   N(
                                       {
@@ -115,10 +115,9 @@ function C(e) {
                 children: (0, r.jsxs)(m.Z, {
                     user: t,
                     displayProfile: U,
-                    profileType: I.y0.BITE_SIZE,
+                    themeType: I.lY.POPOUT,
                     children: [
                         (0, r.jsx)(E.Z, {
-                            profileType: I.y0.BITE_SIZE,
                             children: (0, r.jsx)(g.Z, {
                                 user: t,
                                 guildId: A,
@@ -133,20 +132,20 @@ function C(e) {
                                     user: t,
                                     displayProfile: U,
                                     guildId: A,
-                                    profileType: I.y0.BITE_SIZE
+                                    themeType: I.lY.POPOUT
                                 }),
                                 (0, r.jsx)(p.Z, {
                                     user: t,
                                     displayProfile: U,
                                     guildId: A,
                                     channelId: C,
-                                    profileType: I.y0.BITE_SIZE,
-                                    onOpenProfile: x ? void 0 : V
+                                    themeType: I.lY.POPOUT,
+                                    onOpenProfile: x ? void 0 : F
                                 }),
                                 (0, r.jsx)(b.Z, {
                                     location: 'BotUserProfilePopout',
                                     user: t,
-                                    profileType: I.y0.BITE_SIZE,
+                                    themeType: I.lY.POPOUT,
                                     onCloseProfile: D
                                 })
                             ]
@@ -156,8 +155,8 @@ function C(e) {
                             currentUser: n,
                             displayProfile: U,
                             guild: G,
-                            isHovering: F,
-                            onOpenProfile: x ? void 0 : V,
+                            isHovering: V,
+                            onOpenProfile: x ? void 0 : F,
                             channelId: C,
                             onClose: D
                         }),

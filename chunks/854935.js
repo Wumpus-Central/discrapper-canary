@@ -24,8 +24,8 @@ var i = n(442837),
     O = n(827313),
     E = n(228168),
     I = n(981631),
-    P = n(388032),
-    S = n(420890);
+    S = n(388032),
+    P = n(420890);
 function Z(e) {
     let { user: t, currentUser: n, displayProfile: Z, channel: N, isHovering: T, onOpenProfile: A } = e,
         { relationshipType: w, originApplicationId: R } = (0, i.cj)([s.Z], () => ({
@@ -40,17 +40,16 @@ function Z(e) {
             return null == (e = d.Z.getUserProfile(t.id)) ? void 0 : e.application;
         });
     return (0, r.jsxs)('div', {
-        className: S.body,
+        className: P.body,
         children: [
             (0, r.jsx)(j.Z, {
                 user: t,
-                profileType: E.y0.PANEL,
                 nickname: u.ZP.getName(null, N.id, t),
                 pronouns: null == Z ? void 0 : Z.pronouns,
                 onOpenProfile: A,
                 tags: (0, r.jsx)(h.Z, {
                     displayProfile: Z,
-                    profileType: E.y0.PANEL
+                    themeType: E.lY.SIDEBAR
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -88,7 +87,7 @@ function Z(e) {
             ),
             (0, r.jsx)(C.Z, {
                 user: t,
-                className: S.card
+                className: P.card
             }),
             t.isProvisional &&
                 (0, r.jsx)(a.wQ, {
@@ -99,16 +98,16 @@ function Z(e) {
                 user: t,
                 currentUser: n,
                 displayProfile: Z,
-                className: S.card
+                className: P.card
             }),
             (0, r.jsxs)(v.Z.Overlay, {
-                className: S.overlay,
+                className: P.overlay,
                 children: [
                     !L &&
                         (null == Z ? void 0 : Z.bio) != null &&
                         (null == Z ? void 0 : Z.bio) !== '' &&
                         (0, r.jsx)(x.Z, {
-                            heading: P.intl.string(P.t['61W33d']),
+                            heading: S.intl.string(S.t['61W33d']),
                             headingColor: 'header-primary',
                             children: (0, r.jsx)(f.Z, {
                                 userBio: Z.bio,
@@ -125,12 +124,12 @@ function Z(e) {
                         }),
                     M.length > 0 &&
                         (0, r.jsx)(x.Z, {
-                            heading: P.intl.string(P.t['Uv/eT0']),
+                            heading: S.intl.string(S.t['Uv/eT0']),
                             headingColor: 'header-primary',
                             children: (0, r.jsx)(b.Z, { applicationIds: M })
                         }),
                     (0, r.jsx)(x.Z, {
-                        heading: t.bot ? P.intl.string(P.t['A//N4u']) : P.intl.string(P.t.a6XYDw),
+                        heading: t.bot ? S.intl.string(S.t['A//N4u']) : S.intl.string(S.t.a6XYDw),
                         headingColor: 'header-primary',
                         children: (0, r.jsx)(y.Z, { userId: t.id })
                     })

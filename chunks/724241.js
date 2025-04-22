@@ -37,14 +37,13 @@ function p(e) {
         children: [
             (0, r.jsx)(o.Z, {
                 user: n,
-                profileType: f.y0.BITE_SIZE,
                 usernameIcon: P(),
                 nickname: R,
                 pronouns: C,
                 isTryItOut: v,
                 tags: (0, r.jsx)(a.Z, {
                     displayProfile: p,
-                    profileType: f.y0.BITE_SIZE,
+                    themeType: f.lY.POPOUT,
                     pendingBadges: I,
                     shouldOpenBadgeTooltip: S
                 })

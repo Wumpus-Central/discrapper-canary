@@ -84,18 +84,13 @@ function y(e, t) {
     return i;
 }
 function v(e) {
-    var { user: t, profileType: n, animateOnHover: a, onOpenProfile: h } = e,
-        g = b(e, ['user', 'profileType', 'animateOnHover', 'onOpenProfile']);
+    var { user: t, themeType: n, animateOnHover: a, onOpenProfile: h } = e,
+        g = b(e, ['user', 'themeType', 'animateOnHover', 'onOpenProfile']);
     let y = i.useRef(null),
         v = _.n_.AVATAR,
         { trackUserProfileAction: O } = (0, s.KZ)(),
         { interactionSource: I } = (0, l.Xo)(),
-        S = o()(p.avatar, {
-            [p.hoisted]: I === _.n_.AVATAR || I === _.n_.STATUS,
-            [p.biteSize]: n === _.y0.BITE_SIZE,
-            [p.fullSize]: n === _.y0.FULL_SIZE,
-            [p.panel]: n === _.y0.PANEL
-        });
+        S = o()(p.avatar, { [p.hoisted]: I === _.n_.AVATAR || I === _.n_.STATUS });
     return (0, r.jsx)(f.Z, {
         targetElementRef: y,
         sourceType: _.n_.AVATAR,
@@ -107,7 +102,7 @@ function v(e) {
                     {
                         user: t,
                         className: S,
-                        profileType: n,
+                        themeType: n,
                         sourceType: v,
                         onAction: O
                     },
@@ -128,7 +123,7 @@ function v(e) {
                                         user: t,
                                         animateOnHover: a,
                                         onOpenProfile: h,
-                                        profileType: n,
+                                        themeType: n,
                                         className: p.withReactReply
                                     },
                                     g

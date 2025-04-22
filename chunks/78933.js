@@ -42,8 +42,8 @@ var i = n(200651),
     F = n(587243),
     H = n(383832),
     z = n(981631),
-    W = n(228168),
-    Y = n(388032),
+    Y = n(228168),
+    W = n(388032),
     K = n(404255),
     q = n(200669);
 function X(e) {
@@ -75,7 +75,7 @@ function Q(e) {
     let { currentUser: t, onClose: n, setPopoutRef: Q, highlightBadge: J, openedAt: $ } = e,
         ee = __OVERLAY__,
         et = (0, x.ZP)(t.id),
-        { analyticsLocations: en } = (0, u.ZP)(d.Z.ACCOUNT_PROFILE_POPOUT),
+        { analyticsLocations: en } = (0, u.ZP)(d.Z.USER_PROFILE_ACCOUNT_POPOUT),
         ei = (0, _.ZB)({
             layout: 'ACCOUNT_POPOUT',
             userId: t.id
@@ -127,7 +127,7 @@ function Q(e) {
                     className: K.themeContainer,
                     user: t,
                     displayProfile: et,
-                    profileType: W.y0.BITE_SIZE,
+                    themeType: Y.lY.POPOUT,
                     children: [
                         (0, i.jsxs)('header', {
                             className: q.header,
@@ -135,18 +135,18 @@ function Q(e) {
                                 (0, i.jsx)(C.Z, {
                                     user: t,
                                     displayProfile: et,
-                                    profileType: W.y0.BITE_SIZE
+                                    themeType: Y.lY.POPOUT
                                 }),
                                 (0, i.jsx)(E.Z, {
                                     user: t,
                                     displayProfile: et,
-                                    profileType: W.y0.BITE_SIZE,
+                                    themeType: Y.lY.POPOUT,
                                     onOpenProfile: ee ? void 0 : ex
                                 }),
                                 (0, i.jsx)(A.Z, {
                                     location: 'UserProfileAccountPopout',
                                     user: t,
-                                    profileType: W.y0.BITE_SIZE,
+                                    themeType: Y.lY.POPOUT,
                                     onCloseProfile: n,
                                     prompt: eb ? e_ : null
                                 })
@@ -163,13 +163,12 @@ function Q(e) {
                                 (0, i.jsx)(N.Z, {
                                     user: t,
                                     className: K.username,
-                                    profileType: W.y0.BITE_SIZE,
                                     nickname: L.ZP.getName(null, null, t),
                                     onOpenProfile: ee ? void 0 : ex,
                                     pronouns: null == et ? void 0 : et.pronouns,
                                     tags: (0, i.jsx)(j.Z, {
                                         displayProfile: et,
-                                        profileType: W.y0.BITE_SIZE,
+                                        themeType: Y.lY.POPOUT,
                                         onClose: n,
                                         shouldOpenBadgeTooltip: null != J ? (e) => e === J : void 0
                                     }),
@@ -210,7 +209,7 @@ function Q(e) {
                                                     (0, i.jsx)(V.V4, {
                                                         id: 'edit-profile',
                                                         action: 'EDIT_PROFILE',
-                                                        label: Y.intl.string(Y.t.s5vZlZ),
+                                                        label: W.intl.string(W.t.s5vZlZ),
                                                         icon: a.vdY,
                                                         onClick: () => {
                                                             eh(), n();
@@ -242,7 +241,7 @@ function Q(e) {
                                                                   return (0, i.jsx)(V.gp, {
                                                                       navId: 'set-status-submenu',
                                                                       className: K.statusPickerModalMenu,
-                                                                      'aria-label': Y.intl.string(Y.t.E13trK),
+                                                                      'aria-label': W.intl.string(W.t.E13trK),
                                                                       onClose: t,
                                                                       children: eg
                                                                   });
@@ -282,12 +281,12 @@ function Q(e) {
                                                                                           (n = n =
                                                                                               {
                                                                                                   size: a.CgR.SMALL,
-                                                                                                  'aria-label': Y.intl.string(Y.t['3Uj+2t']),
+                                                                                                  'aria-label': W.intl.string(W.t['3Uj+2t']),
                                                                                                   className: K.statusPickerModal,
                                                                                                   children: (0, i.jsx)(a.v2r, {
                                                                                                       navId: 'set-status-submenu-mobile-web',
                                                                                                       variant: 'fixed',
-                                                                                                      'aria-label': Y.intl.string(Y.t.E13trK),
+                                                                                                      'aria-label': W.intl.string(W.t.E13trK),
                                                                                                       className: K.statusPickerModalMenu,
                                                                                                       hideScroller: !0,
                                                                                                       onClose: r,
@@ -327,7 +326,7 @@ function Q(e) {
                                                         id: 'switch-accounts',
                                                         action: 'PRESS_SWITCH_ACCOUNTS',
                                                         icon: a.lMe,
-                                                        label: Y.intl.string(Y.t.oMNyYG),
+                                                        label: W.intl.string(W.t.oMNyYG),
                                                         onClick: () => {
                                                             n(), (0, H.Z)();
                                                         },
@@ -335,7 +334,7 @@ function Q(e) {
                                                             let { closePopout: t } = e;
                                                             return (0, i.jsx)(V.gp, {
                                                                 navId: 'switch-accounts-submenu',
-                                                                'aria-label': Y.intl.string(Y.t.wFhVqK),
+                                                                'aria-label': W.intl.string(W.t.wFhVqK),
                                                                 onClose: t,
                                                                 children: ep
                                                             });
@@ -351,7 +350,7 @@ function Q(e) {
                                                                     id: 'copy-user-id',
                                                                     action: 'COPY_USER_ID',
                                                                     icon: a.VuL,
-                                                                    label: Y.intl.string(Y.t['/AXYnJ']),
+                                                                    label: W.intl.string(W.t['/AXYnJ']),
                                                                     onClick: () => {
                                                                         (0, k.JG)(t.id), n();
                                                                     }

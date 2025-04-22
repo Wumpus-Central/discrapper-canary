@@ -74,7 +74,7 @@ function N(e, t) {
 }
 let C = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
 function R(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: S, animateOnHover: A, onOpenProfile: R, className: P, previewStatus: w } = e,
+    let { user: t, displayProfile: n, guildId: a, channelId: h, themeType: S, animateOnHover: A, onOpenProfile: R, className: P, previewStatus: w } = e,
         { theme: D } = (0, b.z)(),
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: x } = (0, m.KZ)(),
@@ -86,17 +86,9 @@ function R(e) {
             status: (0, c.Z)(U) ? v.Skl.STREAMING : _.Z.getStatus(t.id),
             isMobileOnline: _.Z.isMobileOnline(t.id)
         })),
-        F = void 0 !== w ? w : G,
-        V = S === y.y0.FULL_SIZE ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
-        Z = o()(
-            I.avatar,
-            {
-                [I.biteSize]: S === y.y0.BITE_SIZE,
-                [I.fullSize]: S === y.y0.FULL_SIZE,
-                [I.panel]: S === y.y0.PANEL
-            },
-            P
-        ),
+        V = void 0 !== w ? w : G,
+        F = S === y.lY.MODAL ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
+        Z = o()(I.avatar, P),
         {
             avatarDecorationSrc: H,
             avatarSrc: Y,
@@ -104,16 +96,16 @@ function R(e) {
         } = (0, E.Z)({
             user: t,
             guildId: null != n ? n.guildId : a,
-            size: V,
+            size: F,
             animateOnHover: A
         }),
         K = (0, r.jsx)(C, {
             src: Y,
             avatarDecoration: H,
-            size: V,
+            size: F,
             'aria-label': t.username,
             imageClassName: null != R ? I.overlay : void 0,
-            status: k ? v.Skl.UNKNOWN : F,
+            status: k ? v.Skl.UNKNOWN : V,
             statusBackdropColor: M && !k ? (0, l.QFD)(D) : void 0,
             isMobile: B,
             statusTooltip: !0,

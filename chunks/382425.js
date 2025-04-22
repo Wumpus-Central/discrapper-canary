@@ -37,8 +37,8 @@ var r = n(200651),
     U = n(315324),
     G = n(788858),
     B = n(384298),
-    F = n(386019),
-    V = n(228168),
+    V = n(386019),
+    F = n(228168),
     Z = n(981631),
     H = n(388032),
     Y = n(227832),
@@ -48,94 +48,89 @@ var r = n(200651),
 function q(e) {
     let { user: t, currentUser: n, stream: a, className: q, onClose: Q, profileGuildId: X } = e,
         J = i.useRef(null),
-        { profileType: $, theme: ee } = (0, L.z)(),
+        { themeType: $, theme: ee } = (0, L.z)(),
         { interactionSource: et, interactionSourceId: en } = (0, P.Xo)(),
-        er = {
-            [W.fullSize]: $ === V.y0.FULL_SIZE,
-            [Y.fullSize]: $ === V.y0.FULL_SIZE
-        },
-        ei = (0, s.e7)([S.Z], () => S.Z.getGuild(null == a ? void 0 : a.guildId)),
-        ea = (0, s.e7)([I.Z], () => I.Z.getChannel(null == a ? void 0 : a.channelId)),
-        eo = (0, s.Wu)([N.ZP], () =>
-            null != ea
-                ? N.ZP.getVoiceStatesForChannel(ea).map((e) => {
+        er = (0, s.e7)([S.Z], () => S.Z.getGuild(null == a ? void 0 : a.guildId)),
+        ei = (0, s.e7)([I.Z], () => I.Z.getChannel(null == a ? void 0 : a.channelId)),
+        ea = (0, s.Wu)([N.ZP], () =>
+            null != ei
+                ? N.ZP.getVoiceStatesForChannel(ei).map((e) => {
                       let { user: t } = e;
                       return t;
                   })
                 : []
         ),
-        es = (0, s.e7)([A.Z], () => A.Z.findActivity(t.id, (e) => (0, f.Z)(e) && !(0, _.Z)(e))),
-        { analyticsLocations: el } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        ec = (0, C.Z)({
+        eo = (0, s.e7)([A.Z], () => A.Z.findActivity(t.id, (e) => (0, f.Z)(e) && !(0, _.Z)(e))),
+        { analyticsLocations: es } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        el = (0, C.Z)({
             display: 'live',
-            voiceChannelId: null == ea ? void 0 : ea.id,
+            voiceChannelId: null == ei ? void 0 : ei.id,
             user: t,
             stream: a,
-            analyticsLocations: el
+            analyticsLocations: es
         }),
-        eu = (0, R.Z)({
+        ec = (0, R.Z)({
             userId: t.id,
-            onAction: ec
+            onAction: el
         }),
-        [ed, ef] = (0, b.wq)(ea),
-        { previewUrl: e_, isLoading: ep } = (0, E.Z)(a.guildId, a.channelId, a.ownerId),
-        eh = (0, s.e7)([T.Z], () => null != ea && T.Z.canBasicChannel(Z.S7T.CONNECT, ea)),
-        em = (0, d.Z)(ep ? null : e_),
-        eg = ep || null == e_ ? em : e_;
-    if (null == ei || null == ea || !1 === a.discoverable || null === $) return null;
-    let eE = () => {
-            let e = o()(W.preview, er),
-                t = (e) => {
-                    e.stopPropagation(), ec({ action: 'PRESS_IMAGE' }), c.default.selectVoiceChannel(a.channelId), (0, u.iV)(a), null == Q || Q();
-                };
-            return null == eg && ep
+        [eu, ed] = (0, b.wq)(ei),
+        { previewUrl: ef, isLoading: e_ } = (0, E.Z)(a.guildId, a.channelId, a.ownerId),
+        ep = (0, s.e7)([T.Z], () => null != ei && T.Z.canBasicChannel(Z.S7T.CONNECT, ei)),
+        eh = (0, d.Z)(e_ ? null : ef),
+        em = e_ || null == ef ? eh : ef;
+    if (null == er || null == ei || !1 === a.discoverable || null === $) return null;
+    let eg = () => {
+            let e = (e) => {
+                e.stopPropagation(), el({ action: 'PRESS_IMAGE' }), c.default.selectVoiceChannel(a.channelId), (0, u.iV)(a), null == Q || Q();
+            };
+            return null == em && e_
                 ? (0, r.jsx)('div', {
-                      className: e,
+                      className: W.preview,
                       children: (0, r.jsx)(l.$jN, {})
                   })
-                : null == eg
+                : null == em
                   ? (0, r.jsxs)(l.P3F, {
-                        className: o()(e, W.overlay, { [W.clickable]: ed }),
-                        onClick: ed ? t : void 0,
+                        className: o()(W.preview, W.overlay, { [W.clickable]: eu }),
+                        onClick: eu ? e : void 0,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
                                 src: ee === Z.BRd.LIGHT ? z : K
                             }),
-                            $ !== V.y0.FULL_SIZE &&
+                            $ !== F.lY.MODAL &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
                                             className: W.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: (0, b.P9)(ef)
+                                            children: (0, b.P9)(ed)
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: eh ? H.intl.string(H.t.uQZTBQ) : H.intl.string(H.t.pgUTZG)
+                                            children: ep ? H.intl.string(H.t.uQZTBQ) : H.intl.string(H.t.pgUTZG)
                                         })
                                     ]
                                 })
                         ]
                     })
                   : (0, r.jsxs)(l.P3F, {
-                        className: o()(e, W.overlay, { [W.clickable]: ed }),
-                        onClick: ed ? t : void 0,
+                        className: o()(W.preview, W.overlay, { [W.clickable]: eu }),
+                        onClick: eu ? e : void 0,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: eg,
+                                src: em,
                                 className: W.image
                             }),
-                            $ !== V.y0.FULL_SIZE &&
+                            $ !== F.lY.MODAL &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
                                             className: W.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: (0, b.P9)(ef)
+                                            children: (0, b.P9)(ed)
                                         }),
                                         (0, r.jsx)(l.gw7, {
                                             size: 'xs',
@@ -147,13 +142,13 @@ function q(e) {
                         ]
                     });
         },
-        eb = () => {
-            if ($ !== V.y0.FULL_SIZE) return null;
+        eE = () => {
+            if ($ !== F.lY.MODAL) return null;
             let e = (e) => {
-                    e.stopPropagation(), null == ec || ec({ action: 'OPEN_VOICE_CHANNEL' }), ea.isGuildStageVoice() ? (0, O.Cq)(ea) : (c.default.selectVoiceChannel(ea.id), (0, y.Kh)(ea.id)), null == Q || Q();
+                    e.stopPropagation(), null == el || el({ action: 'OPEN_VOICE_CHANNEL' }), ei.isGuildStageVoice() ? (0, O.Cq)(ei) : (c.default.selectVoiceChannel(ei.id), (0, y.Kh)(ei.id)), null == Q || Q();
                 },
                 n = (e) => {
-                    e.stopPropagation(), ec({ action: 'OPEN_VOICE_GUILD' }), (0, v.X)(ei.id), null == Q || Q();
+                    e.stopPropagation(), el({ action: 'OPEN_VOICE_GUILD' }), (0, v.X)(er.id), null == Q || Q();
                 };
             return (0, r.jsxs)('div', {
                 className: Y.details,
@@ -166,7 +161,7 @@ function q(e) {
                                 className: Y.voiceChannelHeading,
                                 children: [
                                     (0, r.jsx)(G.Z, {
-                                        channel: ea,
+                                        channel: ei,
                                         size: 'xxs',
                                         color: l.TVs.colors.TEXT_NORMAL,
                                         className: Y.voiceIcon
@@ -174,25 +169,25 @@ function q(e) {
                                     (0, r.jsx)(l.P3F, {
                                         className: o()(Y.clickableText, Y.inline),
                                         onClick: e,
-                                        children: ea.name
+                                        children: ei.name
                                     })
                                 ]
                             }),
                             (0, r.jsx)(j.Z, {
                                 variant: 'text-xs/normal',
-                                text: H.intl.formatToPlainString(H.t['hq/Qzc'], { guildName: ei.name }),
+                                text: H.intl.formatToPlainString(H.t['hq/Qzc'], { guildName: er.name }),
                                 onClick: n
                             })
                         ]
                     }),
                     (0, r.jsx)(g.Z, {
-                        users: eo,
-                        guildId: ei.id,
-                        channelId: ea.id,
+                        users: ea,
+                        guildId: er.id,
+                        channelId: ei.id,
                         maxUsers: U.W,
                         size: l.EFr.SIZE_16,
                         onClick: (e) => {
-                            null == e || e.stopPropagation(), null == ec || ec({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
+                            null == e || e.stopPropagation(), null == el || el({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
                         },
                         onUserClick: (e) => e.stopPropagation(),
                         disableUserPopout: (e) => e === t.id,
@@ -201,81 +196,81 @@ function q(e) {
                 ]
             });
         },
-        ey = () =>
-            $ === V.y0.FULL_SIZE
+        eb = () =>
+            $ === F.lY.MODAL
                 ? null
                 : (0, r.jsx)(U.Z, {
                       user: t,
-                      guild: ei,
-                      channel: ea,
-                      onAction: ec,
+                      guild: er,
+                      channel: ei,
+                      onAction: el,
                       onClose: Q
                   }),
-        ev = () =>
+        ey = () =>
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: o()(Y.actions, er),
+                      className: Y.actions,
                       children: (0, r.jsx)(B.Z, {
-                          channel: ea,
-                          onAction: ec,
+                          channel: ei,
+                          onAction: el,
                           onClose: Q
                       })
                   }),
-        eO = e_,
-        eI = et === V.n_.ACTIVITY && en === eO,
-        eS = null != es ? H.intl.formatToPlainString(H.t['4CQq9f'], { name: es.name }) : H.intl.string(H.t['Jpkr/v']);
+        ev = ef,
+        eO = et === F.n_.ACTIVITY && en === ev,
+        eI = null != eo ? H.intl.formatToPlainString(H.t['4CQq9f'], { name: eo.name }) : H.intl.string(H.t['Jpkr/v']);
     return (0, r.jsx)(h.Gt, {
-        value: el,
+        value: es,
         children: (0, r.jsx)(x.Z, {
             targetElementRef: J,
-            sourceType: V.n_.ACTIVITY,
+            sourceType: F.n_.ACTIVITY,
             user: t,
             children: (0, r.jsx)(w.Z, {
                 user: t,
                 guildId: X,
-                profileType: $,
-                sourceId: eO,
-                sourceDetails: eS,
-                sourceType: V.n_.ACTIVITY,
-                onAction: ec,
+                themeType: $,
+                sourceId: ev,
+                sourceDetails: eI,
+                sourceType: F.n_.ACTIVITY,
+                onAction: el,
                 children: () =>
                     (0, r.jsx)(D.Z, {
                         ref: J,
                         user: t,
                         className: Y.toolbarContainer,
-                        interactionSourceId: eO,
-                        sourceType: V.n_.ACTIVITY,
-                        onAction: ec,
-                        onShowToolbar: () => ec({ action: 'HOVER_ACTIVITY_CARD' }),
+                        interactionSourceId: ev,
+                        sourceType: F.n_.ACTIVITY,
+                        onAction: el,
+                        onShowToolbar: () => el({ action: 'HOVER_ACTIVITY_CARD' }),
                         renderMoreButtonPopout: (e) =>
-                            (0, r.jsx)(F.Z, {
+                            (0, r.jsx)(V.Z, {
                                 display: 'live',
                                 user: t,
                                 onClose: Q,
                                 children: e
                             }),
                         children: (0, r.jsxs)(M.Z, {
-                            ref: eu,
-                            className: o()(q, { [Y.hoisted]: eI }),
-                            onAction: ec,
+                            ref: ec,
+                            className: o()(q, { [Y.hoisted]: eO }),
+                            onAction: el,
                             onClose: Q,
                             children: [
                                 (0, r.jsx)(k.Z, {
-                                    text: eS,
+                                    text: eI,
                                     tags: (0, r.jsx)(m.ZP, { size: m.OH.SMALL })
                                 }),
                                 (0, r.jsxs)('div', {
                                     className: Y.body,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: o()(Y.content, er),
-                                            children: [eE(), eb(), $ === V.y0.FULL_SIZE && ev()]
+                                            className: Y.content,
+                                            children: [eg(), eE(), $ === F.lY.MODAL && ey()]
                                         }),
-                                        ey()
+                                        eb()
                                     ]
                                 }),
-                                $ !== V.y0.FULL_SIZE && ev()
+                                $ !== F.lY.MODAL && ey()
                             ]
                         })
                     })

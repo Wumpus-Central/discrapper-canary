@@ -41,7 +41,6 @@ function C(e) {
         children: [
             (0, r.jsx)(b.Z, {
                 user: t,
-                profileType: T.y0.BITE_SIZE,
                 onOpenProfile: w,
                 onClose: L,
                 usernameIcon:
@@ -54,7 +53,7 @@ function C(e) {
                 pronouns: null == C ? void 0 : C.pronouns,
                 tags: (0, r.jsx)(f.Z, {
                     displayProfile: C,
-                    profileType: T.y0.BITE_SIZE,
+                    themeType: T.lY.POPOUT,
                     onClose: L
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
