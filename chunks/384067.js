@@ -35,59 +35,55 @@ let h = (e) => {
     let y = null != C ? C : '',
         { handleCardVisibilityChange: S } = (0, d.E)(y, 'home', 'marketing wide banner'),
         k = h.bannerUrl;
-    return null == k
-        ? null
-        : (0, r.jsx)(o.$, {
-              innerRef: v,
-              onChange: S,
-              threshold: 0,
-              children: (0, r.jsxs)('div', {
-                  ref: v,
-                  className: i()(g.row, g.between, g.bannerBlockContainer, g.centeredSection),
-                  children: [
-                      (0, r.jsx)('div', {
-                          className: g.wideBannerBackgroundImg,
-                          children: (0, r.jsx)('img', {
-                              ref: x,
-                              src: k,
-                              alt: h.title,
-                              style: {
-                                  width: '100%',
-                                  height: null != O ? ''.concat(O, 'px') : 'auto',
-                                  objectFit: 'cover',
-                                  objectPosition: 'left center',
-                                  display: 'block'
-                              }
-                          })
-                      }),
-                      (0, r.jsx)('div', {
-                          className: g.wideBannerContentContainer,
-                          style: { maxHeight: null != O ? ''.concat(O, 'px') : 'auto' },
-                          children: (0, r.jsxs)('div', {
-                              className: g.wideBannerTextContainer,
-                              children: [
-                                  (0, r.jsx)(s.X6q, {
-                                      style: { color: null != (n = h.bannerTextColor) ? n : 'var(--text-normal)' },
-                                      variant: _ === b.AW.ORBS ? 'heading-xl/bold' : 'heading-lg/semibold',
-                                      children: h.title
-                                  }),
-                                  (0, r.jsx)(s.Text, {
-                                      style: { color: null != (a = h.bannerTextColor) ? a : 'var(--text-normal)' },
-                                      lineClamp: 2,
-                                      variant: _ === b.AW.ORBS ? 'text-md/medium' : 'text-sm/medium',
-                                      children: _ === b.AW.ORBS ? f.intl.format(f.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(p.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : h.body
-                                  })
-                              ]
-                          })
-                      }),
-                      !0 !== h.disableCta &&
-                          (0, r.jsx)(s.zxk, {
-                              className: g.wideBannerBlockButton,
-                              color: s.Ttl.PRIMARY,
-                              onClick: () => m('shop wide banner', y),
-                              children: f.intl.string(f.t.jVcuVV)
-                          })
-                  ]
-              })
-          });
+    if (null == k) return null;
+    let P = _ === b.AW.ORBS;
+    return (0, r.jsx)(o.$, {
+        innerRef: v,
+        onChange: S,
+        threshold: 0,
+        children: (0, r.jsxs)('div', {
+            ref: v,
+            className: i()(g.row, g.between, g.bannerBlockContainer, g.centeredSection, { [g.extraRounded]: P }),
+            children: [
+                (0, r.jsx)('div', {
+                    className: i()(g.wideBannerBackgroundImg, { [g.extraRounded]: P }),
+                    children: (0, r.jsx)('img', {
+                        ref: x,
+                        src: k,
+                        alt: h.title,
+                        className: i()(g.wideBannerArt, { [g.wideBannerArtOrbs]: P }),
+                        style: { height: null != O ? ''.concat(O, 'px') : 'auto' }
+                    })
+                }),
+                (0, r.jsx)('div', {
+                    className: g.wideBannerContentContainer,
+                    style: { maxHeight: null != O ? ''.concat(O, 'px') : 'auto' },
+                    children: (0, r.jsxs)('div', {
+                        className: g.wideBannerTextContainer,
+                        children: [
+                            (0, r.jsx)(s.X6q, {
+                                style: { color: null != (n = h.bannerTextColor) ? n : 'var(--header-primary)' },
+                                className: P ? g.wideBannerOrbsHeading : void 0,
+                                variant: P ? 'heading-xl/bold' : 'heading-lg/semibold',
+                                children: h.title
+                            }),
+                            (0, r.jsx)(s.Text, {
+                                style: { color: null != (a = h.bannerTextColor) ? a : 'var(--text-muted)' },
+                                lineClamp: 2,
+                                variant: P ? 'text-md/medium' : 'text-sm/medium',
+                                children: P ? f.intl.format(f.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(p.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : h.body
+                            })
+                        ]
+                    })
+                }),
+                !0 !== h.disableCta &&
+                    (0, r.jsx)(s.zxk, {
+                        className: g.wideBannerBlockButton,
+                        color: s.Ttl.PRIMARY,
+                        onClick: () => m('shop wide banner', y),
+                        children: f.intl.string(f.t.jVcuVV)
+                    })
+            ]
+        })
+    });
 };
