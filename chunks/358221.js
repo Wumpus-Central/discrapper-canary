@@ -165,7 +165,8 @@ function en(e) {
     else if (1 === n.size(T.sI.VIDEO)) {
         let [e] = n.toArray(T.sI.VIDEO);
         r = e.id;
-    } else {
+    } else if (n.size(T.sI.ACTIVITY) > 0) r = A.dF.NONE;
+    else {
         var o;
         let e = n.toArray().find((e) => e.type === A.fO.USER && e.id !== t && !e.ringing);
         r = null != (o = null == e ? void 0 : e.id) ? o : t;

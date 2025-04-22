@@ -8,6 +8,10 @@ let i = {
         actions: ['POST_CONNECTION_OPEN', 'AUDIO_SET_LOCAL_VOLUME', 'AUDIO_TOGGLE_LOCAL_MUTE', 'AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE'],
         inlineRequire: () => n(345953).Z
     },
+    AutoUpdateManager: {
+        actions: ['POST_CONNECTION_OPEN', 'AUTO_UPDATER_QUIT_AND_INSTALL'],
+        inlineRequire: () => n(802104).Z
+    },
     AgeVerificationManager: {
         actions: ['MESSAGE_CREATE'],
         inlineRequire: () => n(225415).Z,
