@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => F,
-    u: () => Y
+    Z: () => V,
+    u: () => q
 }),
     n(388685),
     n(953529);
@@ -13,37 +13,36 @@ var i = n(200651),
     c = n(392711),
     u = n.n(c),
     d = n(442837),
-    p = n(882485),
-    m = n(481060),
-    f = n(115130),
-    h = n(723163),
-    b = n(147865),
-    _ = n(427996),
-    y = n(906732),
-    x = n(706302),
-    C = n(812236),
-    v = n(835473),
-    g = n(146282),
-    j = n(26033),
-    P = n(70097),
-    N = n(240991),
-    E = n(973616),
-    O = n(626135),
-    A = n(424602),
-    I = n(573188),
-    S = n(783097),
-    T = n(695676),
-    L = n(886792),
-    w = n(635753),
-    R = n(520315),
-    Z = n(29380),
-    k = n(783685),
-    M = n(981631),
-    D = n(206583),
-    B = n(388032),
-    U = n(449549),
-    H = n(73433);
-function W(e) {
+    p = n(481060),
+    m = n(115130),
+    f = n(723163),
+    h = n(147865),
+    b = n(427996),
+    _ = n(906732),
+    y = n(706302),
+    x = n(812236),
+    C = n(835473),
+    v = n(146282),
+    g = n(26033),
+    j = n(70097),
+    P = n(240991),
+    N = n(973616),
+    E = n(626135),
+    O = n(424602),
+    A = n(573188),
+    I = n(783097),
+    S = n(695676),
+    T = n(886792),
+    L = n(635753),
+    w = n(520315),
+    R = n(29380),
+    Z = n(783685),
+    k = n(981631),
+    M = n(206583),
+    D = n(388032),
+    B = n(449549),
+    U = n(73433);
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -68,7 +67,7 @@ function W(e) {
     }
     return e;
 }
-function V(e, t) {
+function W(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -86,33 +85,33 @@ function V(e, t) {
         e
     );
 }
-function F(e) {
+function V(e) {
     var t;
-    let { context: n, application: l, videoUrl: a, imageCoverUrl: c, sectionName: p, hasCommands: b, showFriendsTab: y } = e,
+    let { context: n, application: l, videoUrl: a, imageCoverUrl: c, sectionName: h, hasCommands: _, showFriendsTab: y } = e,
         x = r.useMemo(() => {
             var e;
-            return null != (e = (0, S.jD)(l)) ? e : '';
+            return null != (e = (0, I.jD)(l)) ? e : '';
         }, [l]),
-        C = (0, d.e7)([f.Z], () => f.Z.inDevModeForApplication(l.id)),
-        { isSlideReady: v } = (0, T.hH)(),
+        C = (0, d.e7)([m.Z], () => m.Z.inDevModeForApplication(l.id)),
+        { isSlideReady: P } = (0, S.hH)(),
         [N, E] = r.useState(!1);
     r.useEffect(() => {
-        v && E(!0);
-    }, [v]);
-    let O = null != a,
-        R = A.PM.useExperiment({ location: 'AppLauncherProfile' }),
-        { enabled: Z } = I.X.useExperiment({ location: 'AppLauncherProfile' }),
-        [k, M] = r.useState(y),
-        { friends: H, friendsLastPlayed: F } = (0, h.Z)(l),
-        q =
-            ((t = H),
+        P && E(!0);
+    }, [P]);
+    let w = null != a,
+        R = O.PM.useExperiment({ location: 'AppLauncherProfile' }),
+        { enabled: Z } = A.X.useExperiment({ location: 'AppLauncherProfile' }),
+        [k, U] = r.useState(y),
+        { friends: V, friendsLastPlayed: X } = (0, f.Z)(l),
+        K =
+            ((t = V),
             r.useMemo(() => {
                 var e, n, i, r;
                 if (0 === t.length) return '';
-                let l = u().sample(1 === t.length ? J : K);
+                let l = u().sample(1 === t.length ? Q : J);
                 return (
                     s()(l, 'intl message arrays should not be empty'),
-                    B.intl.format(l, {
+                    D.intl.format(l, {
                         friendCount: t.length,
                         count: t.length,
                         friendCountMinusOne: t.length - 1,
@@ -123,19 +122,19 @@ function F(e) {
                     })
                 );
             }, [t])),
-        $ = (0, d.e7)([g.Z], () => g.Z.getFeed(D.YN.GLOBAL_FEED)),
+        $ = (0, d.e7)([v.Z], () => v.Z.getFeed(M.YN.GLOBAL_FEED)),
         ee = r
             .useMemo(() => {
                 if (null == $) return [];
-                let e = $.entries.reduce((e, t) => V(W({}, e), { [t.content.id]: t.content }), {});
-                return H.reduce((t, n) => {
-                    let i = e[F[n.id]];
-                    return null != i && (0, j.Mq)(i) ? [...t, i] : t;
+                let e = $.entries.reduce((e, t) => W(H({}, e), { [t.content.id]: t.content }), {});
+                return V.reduce((t, n) => {
+                    let i = e[X[n.id]];
+                    return null != i && (0, g.Mq)(i) ? [...t, i] : t;
                 }, []);
-            }, [$, H, F])
+            }, [$, V, X])
             .map((e) =>
                 (0, i.jsx)(
-                    L.Z,
+                    T.Z,
                     {
                         entry: e,
                         onClose: async () => {},
@@ -147,39 +146,39 @@ function F(e) {
     return (0, i.jsxs)('div', {
         className: o()(
             {
-                [U.experimentLayout]: R.enabled,
-                [U.altLayout]: R.altLayout,
-                [U.fixedHeight]: k && H.length > 1 && H.length <= 3,
-                [U.friendsWhoPlay]: Z
+                [B.experimentLayout]: R.enabled,
+                [B.altLayout]: R.altLayout,
+                [B.fixedHeight]: k && V.length > 1 && V.length <= 3,
+                [B.friendsWhoPlay]: Z
             },
-            U.container
+            B.container
         ),
         children: [
             R.enabled || Z
                 ? (0, i.jsxs)('div', {
-                      className: U.experimentTitleContainer,
-                      children: [(0, i.jsx)(G, { application: l }), R.enabled ? (0, i.jsx)(z, { application: l }) : null]
+                      className: B.experimentTitleContainer,
+                      children: [(0, i.jsx)(z, { application: l }), R.enabled ? (0, i.jsx)(F, { application: l }) : null]
                   })
                 : null,
-            Z && 0 !== H.length
-                ? (0, i.jsxs)(m.njP, {
-                      className: U.tabBar,
+            Z && 0 !== V.length
+                ? (0, i.jsxs)(p.njP, {
+                      className: B.tabBar,
                       selectedItem: k ? 'friends' : 'overview',
                       onItemSelect: (e) => {
-                          'friends' === e ? M(!0) : M(!1);
+                          'friends' === e ? U(!0) : U(!1);
                       },
                       type: 'top',
                       children: [
-                          (0, i.jsx)(m.njP.Item, {
+                          (0, i.jsx)(p.njP.Item, {
                               id: 'overview',
-                              className: U.tabItem,
-                              children: B.intl.string(B.t['/dp6yc'])
+                              className: B.tabItem,
+                              children: D.intl.string(D.t['/dp6yc'])
                           }),
-                          (0, i.jsx)(m.njP.Item, {
+                          (0, i.jsx)(p.njP.Item, {
                               id: 'friends',
-                              'aria-label': (0, w.d)(!1, H).toString(),
-                              children: (0, i.jsx)(w.Z, {
-                                  friends: H,
+                              'aria-label': (0, L.d)(!1, V).toString(),
+                              children: (0, i.jsx)(L.Z, {
+                                  friends: V,
                                   shortText: !1
                               })
                           })
@@ -188,26 +187,26 @@ function F(e) {
                 : null,
             k
                 ? (0, i.jsxs)('div', {
-                      className: U.friendsContainer,
+                      className: B.friendsContainer,
                       children: [
                           (0, i.jsx)('div', { children: ee }),
-                          (0, i.jsx)(m.Text, {
-                              className: U.friendsMotivationText,
+                          (0, i.jsx)(p.Text, {
+                              className: B.friendsMotivationText,
                               variant: 'text-md/normal',
                               color: 'text-secondary',
-                              children: q
+                              children: K
                           })
                       ]
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          O
+                          w
                               ? (0, i.jsxs)('div', {
-                                    className: U.videoContainer,
+                                    className: B.videoContainer,
                                     children: [
                                         N
-                                            ? (0, i.jsx)(P.Z, {
-                                                  className: o()(U.videoCover, U.video),
+                                            ? (0, i.jsx)(j.Z, {
+                                                  className: o()(B.videoCover, B.video),
                                                   loop: !0,
                                                   muted: !0,
                                                   autoPlay: !0,
@@ -216,81 +215,81 @@ function F(e) {
                                               })
                                             : null,
                                         (0, i.jsx)('img', {
-                                            className: U.videoCover,
+                                            className: B.videoCover,
                                             src: c,
-                                            'aria-label': B.intl.string(B.t.X4IxWF)
+                                            'aria-label': D.intl.string(D.t.X4IxWF)
                                         })
                                     ]
                                 })
                               : null,
                           (0, i.jsxs)('div', {
-                              className: O ? U.overviewContainerWithVideo : U.overviewContainerNoVideo,
+                              className: w ? B.overviewContainerWithVideo : B.overviewContainerNoVideo,
                               children: [
-                                  R.enabled || Z ? null : (0, i.jsx)(G, { application: l }),
-                                  (0, i.jsx)(X, { application: l }),
-                                  x.length > 0 ? (0, i.jsx)(Q, { description: x }) : null,
+                                  R.enabled || Z ? null : (0, i.jsx)(z, { application: l }),
+                                  (0, i.jsx)(G, { application: l }),
+                                  x.length > 0 ? (0, i.jsx)(Y, { description: x }) : null,
                                   C
                                       ? (0, i.jsx)('div', {
-                                            className: U.developerShelfControlsContainer,
-                                            children: (0, i.jsx)(_.W, {
+                                            className: B.developerShelfControlsContainer,
+                                            children: (0, i.jsx)(b.W, {
                                                 hideSearch: !0,
-                                                className: U.developerShelfControls
+                                                className: B.developerShelfControls
                                             })
                                         })
                                       : null,
                                   R.enabled || Z
                                       ? null
-                                      : (0, i.jsx)(Y, {
+                                      : (0, i.jsx)(q, {
                                             context: n,
                                             application: l,
-                                            sectionName: p,
+                                            sectionName: h,
                                             isDeveloperOfThisApp: C,
-                                            hasCommands: b
+                                            hasCommands: _
                                         })
                               ]
                           }),
-                          R.enabled || Z ? null : (0, i.jsx)(z, { application: l })
+                          R.enabled || Z ? null : (0, i.jsx)(F, { application: l })
                       ]
                   })
         ]
     });
 }
-function z(e) {
+function F(e) {
     let { application: t } = e,
-        n = (0, S.Cb)(t),
-        r = (0, S.Hu)(t);
+        n = (0, I.Cb)(t),
+        r = (0, I.Hu)(t);
     return n || r
         ? (0, i.jsxs)('div', {
-              className: U.monetizationDisclosureContainerStyle,
+              className: B.monetizationDisclosureContainerStyle,
               children: [
                   n
                       ? (0, i.jsxs)('div', {
-                            className: U.monetizationDisclosureStyle,
+                            className: B.monetizationDisclosureStyle,
                             children: [
-                                (0, i.jsx)(m.EOn, {
+                                (0, i.jsx)(p.EOn, {
                                     size: 'sm',
-                                    color: m.TVs.colors.INTERACTIVE_MUTED
+                                    color: p.TVs.colors.INTERACTIVE_MUTED
                                 }),
-                                (0, i.jsx)(m.Text, {
+                                (0, i.jsx)(p.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: B.intl.string(B.t['8z5B2d'])
+                                    children: D.intl.string(D.t['8z5B2d'])
                                 })
                             ]
                         })
                       : null,
                   r
                       ? (0, i.jsxs)('div', {
-                            className: U.monetizationDisclosureStyle,
+                            className: B.monetizationDisclosureStyle,
                             children: [
-                                (0, i.jsx)(m.uMN, {
+                                (0, i.jsx)(p.uMN, {
                                     size: 'sm',
-                                    color: m.TVs.colors.INTERACTIVE_MUTED
+                                    color: p.TVs.colors.INTERACTIVE_MUTED
                                 }),
-                                (0, i.jsx)(m.Text, {
+                                (0, i.jsx)(p.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: B.intl.string(B.t['5khEk5'])
+                                    children: D.intl.string(D.t['5khEk5'])
                                 })
                             ]
                         })
@@ -299,49 +298,49 @@ function z(e) {
           })
         : null;
 }
-function G(e) {
+function z(e) {
     var t;
     let { application: n } = e,
-        r = (0, S.BQ)(n) ? n.name : null != (t = (0, S.$d)(n)) ? t : '',
-        l = (0, S.vJ)(n);
+        r = (0, I.BQ)(n) ? n.name : null != (t = (0, I.$d)(n)) ? t : '',
+        l = (0, I.vJ)(n);
     return (0, i.jsxs)('div', {
-        className: U.titleContainer,
+        className: B.titleContainer,
         children: [
-            (0, i.jsx)(m.X6q, {
+            (0, i.jsx)(p.X6q, {
                 variant: 'heading-xl/extrabold',
                 lineClamp: 1,
                 children: r
             }),
             l
                 ? (0, i.jsx)('div', {
-                      className: U.partnerLabelContainer,
-                      children: (0, i.jsx)(m.Text, {
+                      className: B.partnerLabelContainer,
+                      children: (0, i.jsx)(p.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
-                          children: B.intl.string(B.t.LO4f0N)
+                          children: D.intl.string(D.t.LO4f0N)
                       })
                   })
                 : null
         ]
     });
 }
-function X(e) {
+function G(e) {
     let { application: t } = e,
         n = r.useMemo(() => {
             var e;
-            return (0, S.BQ)(t) && null != (e = null == t ? void 0 : t.tags) ? e : [];
+            return (0, I.BQ)(t) && null != (e = null == t ? void 0 : t.tags) ? e : [];
         }, [t]);
-    return (0, S.ye)(t)
+    return (0, I.ye)(t)
         ? (0, i.jsxs)('div', {
-              className: U.tagsContainer,
+              className: B.tagsContainer,
               children: [
-                  (0, i.jsx)(q, { application: t }),
+                  (0, i.jsx)(X, { application: t }),
                   n.map((e, t) =>
                       (0, i.jsx)(
                           'div',
                           {
-                              className: U.tagContainer,
-                              children: (0, i.jsx)(m.Text, {
+                              className: B.tagContainer,
+                              children: (0, i.jsx)(p.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'interactive-normal',
                                   children: e
@@ -354,102 +353,102 @@ function X(e) {
           })
         : null;
 }
-function q(e) {
+function X(e) {
     var t;
     let { application: n } = e;
-    if (!(0, S.ye)(n)) return null;
-    let r = null != (t = (0, S.BQ)(n) ? (n instanceof E.ZP ? n.maxParticipants : n.max_participants) : 0) ? t : 0;
+    if (!(0, I.ye)(n)) return null;
+    let r = null != (t = (0, I.BQ)(n) ? (n instanceof N.ZP ? n.maxParticipants : n.max_participants) : 0) ? t : 0;
     return (0, i.jsxs)('div', {
-        className: U.tagContainer,
+        className: B.tagContainer,
         children: [
-            (0, i.jsx)(m.BFJ, {
+            (0, i.jsx)(p.BFJ, {
                 size: 'xs',
-                color: m.TVs.colors.INTERACTIVE_NORMAL
+                color: p.TVs.colors.INTERACTIVE_NORMAL
             }),
-            (0, i.jsx)(m.Text, {
+            (0, i.jsx)(p.Text, {
                 variant: 'text-sm/semibold',
                 color: 'interactive-normal',
-                children: (0, b.lY)(r)
+                children: (0, h.lY)(r)
             })
         ]
     });
 }
-function Y(e) {
+function q(e) {
     var t;
     let { context: n, application: l, sectionName: a, hasCommands: s, isDeveloperOfThisApp: c } = e,
-        u = (0, C.Fs)(n, l.id),
-        d = (0, v.q)(l.id),
-        f = null == d || null == (t = d.bot) ? void 0 : t.id,
-        h = (0, x.Z)({
+        u = (0, x.Fs)(n, l.id),
+        d = (0, C.q)(l.id),
+        m = null == d || null == (t = d.bot) ? void 0 : t.id,
+        f = (0, y.Z)({
             context: n,
             application: l,
-            botUserId: f
+            botUserId: m
         }),
-        { analyticsLocations: b } = (0, y.ZP)(),
-        [_, g] = r.useState(!1),
-        j = A.PM.useExperiment({ location: 'AppLauncherAppProfile.PrimaryEntryPointArea()' }),
-        { enabled: P } = I.X.useExperiment({ location: 'AppLauncherProfile.PrimaryEntryPointArea()' });
+        { analyticsLocations: h } = (0, _.ZP)(),
+        [b, v] = r.useState(!1),
+        g = O.PM.useExperiment({ location: 'AppLauncherAppProfile.PrimaryEntryPointArea()' }),
+        { enabled: j } = A.X.useExperiment({ location: 'AppLauncherProfile.PrimaryEntryPointArea()' });
     if (
         (r.useEffect(() => {
-            if (!(0, S.BQ)(l) || !(0, S.ye)(l)) return;
+            if (!(0, I.BQ)(l) || !(0, I.ye)(l)) return;
             let e = setTimeout(() => {
-                (null == u || null == f) &&
-                    O.default.track(M.rMx.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED, {
+                (null == u || null == m) &&
+                    E.default.track(k.rMx.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED, {
                         application_id: l.id,
                         is_primary_entry_point_command_non_null: null != u,
-                        is_bot_user_id_non_null: null != f,
-                        show_try_it_out_button: h
+                        is_bot_user_id_non_null: null != m,
+                        show_try_it_out_button: f
                     });
             }, 2000);
             return () => clearTimeout(e);
-        }, [l, u, f, h]),
-        !(0, S.BQ)(l) || !(0, S.ye)(l))
+        }, [l, u, m, f]),
+        !(0, I.BQ)(l) || !(0, I.ye)(l))
     )
         return null;
-    let N = m.PhG.MAX;
-    return null != u && null != f
+    let P = p.PhG.MAX;
+    return null != u && null != m
         ? (0, i.jsxs)('div', {
-              className: P ? U.friendsWhoPlayPEP : void 0,
+              className: j ? B.friendsWhoPlayPEP : void 0,
               children: [
                   (0, i.jsxs)('div', {
                       className: o()(
                           {
-                              [U.experimentLayout]: j.enabled,
-                              [U.altLayout]: j.altLayout,
-                              [U.noShowTryItOutButton]: !h
+                              [B.experimentLayout]: g.enabled,
+                              [B.altLayout]: g.altLayout,
+                              [B.noShowTryItOutButton]: !f
                           },
-                          U.entrypointContainer
+                          B.entrypointContainer
                       ),
                       children: [
                           (0, i.jsx)('div', {
-                              className: U.entryPointContainerFlexChild,
-                              children: (0, i.jsx)(Z.Z, {
+                              className: B.entryPointContainerFlexChild,
+                              children: (0, i.jsx)(R.Z, {
                                   context: n,
                                   application: l,
                                   sectionName: a,
                                   primaryEntryPointCommand: u,
-                                  buttonSize: N,
-                                  playSolo: _
+                                  buttonSize: P,
+                                  playSolo: b
                               })
                           }),
-                          h && null != f
-                              ? j.altLayout
+                          f && null != m
+                              ? g.altLayout
                                   ? (0, i.jsx)('div', {
-                                        className: U.altLayout,
+                                        className: B.altLayout,
                                         children: (0, i.jsx)('div', {
-                                            className: U.entryPointContainerFlexChild,
-                                            children: (0, i.jsx)(m.XZJ, {
-                                                className: U.entryPointCheckbox,
-                                                value: _,
-                                                onChange: () => g(!_),
-                                                children: (0, i.jsxs)(m.Text, {
+                                            className: B.entryPointContainerFlexChild,
+                                            children: (0, i.jsx)(p.XZJ, {
+                                                className: B.entryPointCheckbox,
+                                                value: b,
+                                                onChange: () => v(!b),
+                                                children: (0, i.jsxs)(p.Text, {
                                                     variant: 'text-sm/medium',
-                                                    className: U.entryPointCheckboxLabel,
+                                                    className: B.entryPointCheckboxLabel,
                                                     children: [
-                                                        B.intl.string(B.t['e+CzPj']),
-                                                        (0, i.jsx)(m.ua7, {
-                                                            text: B.intl.string(B.t.QOZI8f),
-                                                            children: (e) => (0, i.jsx)(p.d, V(W({}, e), { size: 'xs' }))
+                                                        D.intl.string(D.t['e+CzPj']),
+                                                        (0, i.jsx)(p.ua7, {
+                                                            text: D.intl.string(D.t.QOZI8f),
+                                                            children: (e) => (0, i.jsx)(p.d3s, W(H({}, e), { size: 'xs' }))
                                                         })
                                                     ]
                                                 })
@@ -457,34 +456,34 @@ function Y(e) {
                                         })
                                     })
                                   : (0, i.jsx)('div', {
-                                        className: U.entryPointContainerFlexChild,
-                                        children: (0, i.jsx)(k.Z, {
-                                            botUserId: f,
+                                        className: B.entryPointContainerFlexChild,
+                                        children: (0, i.jsx)(Z.Z, {
+                                            botUserId: m,
                                             applicationId: l.id,
-                                            buttonSize: N,
-                                            analyticsLocations: b
+                                            buttonSize: P,
+                                            analyticsLocations: h
                                         })
                                     })
                               : null
                       ]
                   }),
-                  P ? (0, i.jsx)(z, { application: l }) : null
+                  j ? (0, i.jsx)(F, { application: l }) : null
               ]
           })
-        : c && !s && (0, S.ye)(l)
-          ? (0, i.jsx)(m.Wn, {
-                className: U.primaryEntryPointWarningMessage,
-                messageType: m.QYI.WARNING,
-                children: B.intl.format(B.t['s/3hjI'], {})
+        : c && !s && (0, I.ye)(l)
+          ? (0, i.jsx)(p.Wn, {
+                className: B.primaryEntryPointWarningMessage,
+                messageType: p.QYI.WARNING,
+                children: D.intl.format(D.t['s/3hjI'], {})
             })
           : null;
 }
-function Q(e) {
+function Y(e) {
     let { description: t } = e,
-        n = A.PM.useExperiment({ location: 'AppLauncherProfile.Description()' }),
+        n = O.PM.useExperiment({ location: 'AppLauncherProfile.Description()' }),
         [l, o] = r.useState(!0);
     r.useLayoutEffect(() => o(n.enabled), [n]);
-    let a = r.useMemo(() => (0, N.parseBioReact)(t), [t]),
+    let a = r.useMemo(() => (0, P.parseBioReact)(t), [t]),
         {
             ref: s,
             lineHeight: c,
@@ -516,18 +515,18 @@ function Q(e) {
                 maxHeightOverride: e
             };
         }, [u, c]),
-        { ref: p, isTransitioning: f, onTransitionEnd: h } = (0, R.Z)(W({ isExpanded: l }, d)),
+        { ref: m, isTransitioning: f, onTransitionEnd: h } = (0, w.Z)(H({ isExpanded: l }, d)),
         b = l || f;
     return (0, i.jsxs)('div', {
-        className: U.descriptionContainer,
+        className: B.descriptionContainer,
         children: [
             (0, i.jsx)('div', {
-                ref: p,
-                className: U.overflowHidden,
+                ref: m,
+                className: B.overflowHidden,
                 onTransitionEnd: h,
-                children: (0, i.jsx)(m.Text, {
+                children: (0, i.jsx)(p.Text, {
                     ref: s,
-                    className: H.markup,
+                    className: U.markup,
                     variant: 'text-sm/medium',
                     lineClamp: b ? void 0 : 1,
                     style: { maxHeight: b ? void 0 : d.minHeightOverride },
@@ -535,23 +534,23 @@ function Q(e) {
                 })
             }),
             null != u && u > 1 && !n.enabled
-                ? (0, i.jsxs)(m.P3F, {
-                      className: U.expandableDescriptionClickable,
+                ? (0, i.jsxs)(p.P3F, {
+                      className: B.expandableDescriptionClickable,
                       onClick: () => o((e) => !e),
                       children: [
-                          (0, i.jsx)(m.Text, {
+                          (0, i.jsx)(p.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: b ? B.intl.string(B.t.u4YJ8v) : B.intl.string(B.t['N/tajI'])
+                              children: b ? D.intl.string(D.t.u4YJ8v) : D.intl.string(D.t['N/tajI'])
                           }),
                           b
-                              ? (0, i.jsx)(m.u04, {
+                              ? (0, i.jsx)(p.u04, {
                                     size: 'sm',
-                                    color: m.TVs.colors.TEXT_BRAND
+                                    color: p.TVs.colors.TEXT_BRAND
                                 })
-                              : (0, i.jsx)(m.CJ0, {
+                              : (0, i.jsx)(p.CJ0, {
                                     size: 'sm',
-                                    color: m.TVs.colors.TEXT_BRAND
+                                    color: p.TVs.colors.TEXT_BRAND
                                 })
                       ]
                   })
@@ -559,5 +558,5 @@ function Q(e) {
         ]
     });
 }
-let J = [B.t.eCLLn5, B.t.d8pkUF],
-    K = [B.t.d8pkUF, B.t.MbWAxs, B.t['8kiRMT'], B.t.GRL3Nj];
+let Q = [D.t.eCLLn5, D.t.d8pkUF],
+    J = [D.t.d8pkUF, D.t.MbWAxs, D.t['8kiRMT'], D.t.GRL3Nj];

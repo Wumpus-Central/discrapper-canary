@@ -1,39 +1,36 @@
-n.d(e, { default: () => f });
+n.d(e, { default: () => s });
 var r = n(200651);
 n(192379);
-var o = n(834345),
-    i = n(115850),
-    l = n(480743),
-    c = n(481060),
-    s = n(388032),
-    a = n(853639);
-function u() {
+var o = n(481060),
+    i = n(388032),
+    l = n(853639);
+function c() {
     return [
         {
-            icon: i.e,
-            text: s.intl.string(s.t.OYu45e)
+            icon: o.ejJ,
+            text: i.intl.string(i.t.OYu45e)
         },
         {
-            icon: l.k,
-            text: s.intl.string(s.t['5a8g/f'])
+            icon: o.k5M,
+            text: i.intl.string(i.t['5a8g/f'])
         },
         {
-            icon: o.N,
-            text: s.intl.string(s.t.k6sOl5)
+            icon: o.NpZ,
+            text: i.intl.string(i.t.k6sOl5)
         }
     ].map((t, e) => {
-        let { icon: n, text: o } = t;
+        let { icon: n, text: i } = t;
         return (0, r.jsxs)(
             'div',
             {
-                className: a.bulletPointRow,
+                className: l.bulletPointRow,
                 children: [
                     (0, r.jsx)(n, {}),
-                    (0, r.jsx)(c.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-primary',
-                        className: a.bulletPointText,
-                        children: o
+                        className: l.bulletPointText,
+                        children: i
                     })
                 ]
             },
@@ -41,11 +38,11 @@ function u() {
         );
     });
 }
-let f = function (t) {
+let s = function (t) {
     var e,
         n,
-        { onClickButton: o } = t,
-        i = (function (t, e) {
+        { onClickButton: s } = t,
+        a = (function (t, e) {
             if (null == t) return {};
             var n,
                 r,
@@ -65,7 +62,7 @@ let f = function (t) {
             return o;
         })(t, ['onClickButton']);
     return (0, r.jsxs)(
-        c.Y0X,
+        o.Y0X,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var n = null != arguments[e] ? arguments[e] : {},
@@ -90,39 +87,39 @@ let f = function (t) {
                     });
             }
             return t;
-        })({ size: c.CgR.SMALL }, i)),
+        })({ size: o.CgR.SMALL }, a)),
         (n = n =
             {
-                className: a.modalRoot,
+                className: l.modalRoot,
                 children: [
-                    (0, r.jsx)(c.xBx, {
-                        children: (0, r.jsx)(c.X6q, {
+                    (0, r.jsx)(o.xBx, {
+                        children: (0, r.jsx)(o.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: a.heading,
-                            children: s.intl.string(s.t.WkhDVF)
+                            className: l.heading,
+                            children: i.intl.string(i.t.WkhDVF)
                         })
                     }),
-                    (0, r.jsxs)(c.hzk, {
+                    (0, r.jsxs)(o.hzk, {
                         scrollbarType: 'none',
                         children: [
-                            (0, r.jsx)(c.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
-                                className: a.contentText,
-                                children: s.intl.string(s.t.wN9nIC)
+                                className: l.contentText,
+                                children: i.intl.string(i.t.wN9nIC)
                             }),
                             (0, r.jsx)('div', {
-                                className: a.bulletPointsContainer,
-                                children: (0, r.jsx)(u, {})
+                                className: l.bulletPointsContainer,
+                                children: (0, r.jsx)(c, {})
                             })
                         ]
                     }),
-                    (0, r.jsx)(c.mzw, {
-                        className: a.modalFooter,
-                        children: (0, r.jsx)(c.zxk, {
+                    (0, r.jsx)(o.mzw, {
+                        className: l.modalFooter,
+                        children: (0, r.jsx)(o.zxk, {
                             fullWidth: !0,
-                            onClick: o,
-                            children: s.intl.string(s.t.RscU7O)
+                            onClick: s,
+                            children: i.intl.string(i.t.RscU7O)
                         })
                     })
                 ]

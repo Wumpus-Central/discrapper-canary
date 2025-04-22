@@ -1,14 +1,13 @@
-n.d(t, { Z: () => p }), n(997841);
+n.d(t, { Z: () => _ }), n(997841);
 var r = n(200651),
-    i = n(117447),
-    a = n(481060),
-    o = n(783097),
-    s = n(594174),
-    l = n(572004),
-    c = n(630388),
-    u = n(311819),
-    d = n(981631);
-function f(e, t, n) {
+    i = n(481060),
+    a = n(783097),
+    o = n(594174),
+    s = n(572004),
+    l = n(630388),
+    c = n(311819),
+    u = n(981631);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +20,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,38 +31,38 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e) {
-    let { application: t, label: n, onSuccess: f, showIconFirst: p, focusedClassName: h } = e;
-    if (__OVERLAY__ || !l.wS || null == t) return null;
-    let m = s.default.getCurrentUser(),
-        g = (0, o.Ow)(t);
-    function E() {
+function _(e) {
+    let { application: t, label: n, onSuccess: d, showIconFirst: _, focusedClassName: p } = e;
+    if (__OVERLAY__ || !s.wS || null == t) return null;
+    let h = o.default.getCurrentUser(),
+        m = (0, a.Ow)(t);
+    function g() {
         var e;
         if (null == t) return;
-        let n = (0, c.yE)(null != (e = t.flags) ? e : 0, d.udG.EMBEDDED)
-            ? (0, u.H)({
+        let n = (0, l.yE)(null != (e = t.flags) ? e : 0, u.udG.EMBEDDED)
+            ? (0, c.H)({
                   applicationId: t.id,
-                  referrerId: null == m ? void 0 : m.id
+                  referrerId: null == h ? void 0 : h.id
               })
-            : (0, u.J)(_({ id: t.id }, g));
-        null != n && (0, l.JG)(n, f);
+            : (0, c.J)(f({ id: t.id }, m));
+        null != n && (0, s.JG)(n, d);
     }
-    let b = 'copy-app-link-'.concat(t.id);
+    let E = 'copy-app-link-'.concat(t.id);
     return (0, r.jsx)(
-        a.sNh,
+        i.sNh,
         {
-            id: b,
+            id: E,
             label: n,
-            action: E,
-            icon: p ? void 0 : i.x,
-            iconLeft: p ? i.x : void 0,
-            focusedClassName: h
+            action: g,
+            icon: _ ? void 0 : i.xPt,
+            iconLeft: _ ? i.xPt : void 0,
+            focusedClassName: p
         },
-        b
+        E
     );
 }

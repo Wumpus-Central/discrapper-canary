@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -8,20 +8,19 @@ var r = n(200651),
     c = n(442837),
     u = n(377108),
     d = n(692547),
-    f = n(552075),
-    _ = n(481060),
-    p = n(68405),
-    h = n(527429),
-    m = n(656733),
-    g = n(251625),
-    E = n(985375),
-    b = n(132748),
-    y = n(353903),
-    v = n(215016),
-    O = n(981631),
-    I = n(388032),
-    S = n(49633);
-function T(e, t, n) {
+    f = n(481060),
+    _ = n(68405),
+    p = n(527429),
+    h = n(656733),
+    m = n(251625),
+    g = n(985375),
+    E = n(132748),
+    b = n(353903),
+    y = n(215016),
+    v = n(981631),
+    O = n(388032),
+    I = n(49633);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +33,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,12 +44,12 @@ function A(e) {
                 })
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
 }
-function N(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,32 +61,32 @@ function N(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let R = (e, t) => (0, r.jsx)(y.G0, { columns: e }, t);
-function P(e) {
+let C = (e, t) => (0, r.jsx)(b.G0, { columns: e }, t);
+function R(e) {
     var t;
     let n = l().sample(l().values(e));
     return {
-        type: O.wI2.FAVORITES,
-        name: I.intl.string(I.t.y3LQCA),
-        icon: _.r7p,
+        type: v.wI2.FAVORITES,
+        name: O.intl.string(O.t.y3LQCA),
+        icon: f.r7p,
         src: null != n ? n.src : 'https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif',
         format: null != (t = null == n ? void 0 : n.format) ? t : u.EO.IMAGE
     };
 }
-class w extends i.PureComponent {
+class P extends i.PureComponent {
     componentDidMount() {
-        0 === this.props.trendingCategories.length && (0, p.Tg)();
+        0 === this.props.trendingCategories.length && (0, _.Tg)();
     }
     getData() {
         return this.memoizedData(this.state.favoritesTile, this.props.trendingCategories, this.props.hideFavoritesTile);
@@ -96,18 +95,18 @@ class w extends i.PureComponent {
         let { name: t, type: n } = e;
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)('div', { className: n === O.wI2.FAVORITES ? S.categoryFadeBlurple : S.categoryFade }),
+                (0, r.jsx)('div', { className: n === v.wI2.FAVORITES ? I.categoryFadeBlurple : I.categoryFade }),
                 (0, r.jsxs)('div', {
-                    className: S.categoryText,
+                    className: I.categoryText,
                     children: [
-                        n === O.wI2.TRENDING_GIFS
-                            ? (0, r.jsx)(f.I, {
-                                  className: S.categoryIcon,
+                        n === v.wI2.TRENDING_GIFS
+                            ? (0, r.jsx)(f.IeX, {
+                                  className: I.categoryIcon,
                                   color: 'currentColor'
                               })
                             : null,
                         (0, r.jsx)('span', {
-                            className: S.categoryName,
+                            className: I.categoryName,
                             children: t
                         })
                     ]
@@ -116,12 +115,12 @@ class w extends i.PureComponent {
         });
     }
     render() {
-        return (0, r.jsx)(h.Z, {
+        return (0, r.jsx)(p.Z, {
             getItemGrid: this.getItemGrid,
             getCoordsMap: this.getCoordsMap,
             onFocus: this.handleFocus,
             onSelect: this.handleSelect,
-            children: (0, r.jsx)(b.Z, {
+            children: (0, r.jsx)(E.Z, {
                 desiredItemWidth: 200,
                 maxColumns: 6,
                 children: this.renderContent
@@ -130,16 +129,16 @@ class w extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            T(this, '_masonryRef', i.createRef()),
-            T(this, 'state', {
-                favoritesTile: P(this.props.favorites),
+            S(this, '_masonryRef', i.createRef()),
+            S(this, 'state', {
+                favoritesTile: R(this.props.favorites),
                 selectedIndex: {
                     column: 0,
                     row: 0
                 },
                 focusedId: null
             }),
-            T(this, 'handleFocus', (e) => {
+            S(this, 'handleFocus', (e) => {
                 let { current: t } = this._masonryRef;
                 if (null == t) return;
                 let n = t.getCoordsMap()[e];
@@ -150,32 +149,32 @@ class w extends i.PureComponent {
                     }),
                     this.setState({ focusedId: e }));
             }),
-            T(this, 'handleSelect', (e) => {
+            S(this, 'handleSelect', (e) => {
                 let { onSelectItem: t } = this.props,
                     n = this.getData().find((t) => t.name === e);
                 null != n && null != t && t(n.type, n.name);
             }),
-            T(this, 'getItemKey', (e, t) => {
+            S(this, 'getItemKey', (e, t) => {
                 if (e > 0) return null;
                 let n = this.getData()[t];
                 return null != n ? n.name : null;
             }),
-            T(
+            S(
                 this,
                 'memoizedData',
-                (0, g.oH)(function (e, t) {
+                (0, m.oH)(function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                     return n ? [...t] : [e, ...t];
                 })
             ),
-            T(this, 'renderItem', (e, t, n, i) => {
+            S(this, 'renderItem', (e, t, n, i) => {
                 if (e > 0) return null;
                 let a = this.getData()[t];
                 if (null == a) return;
                 let { onSelectItem: o, imagePool: s, videoPool: l } = this.props,
                     { focusedId: c } = this.state;
                 return (0, r.jsx)(
-                    v.iR,
+                    y.iR,
                     {
                         format: a.format,
                         color: d.Z.unsafe_rawColors.PRIMARY_800.css,
@@ -192,18 +191,18 @@ class w extends i.PureComponent {
                     i
                 );
             }),
-            T(this, 'renderContent', (e, t, n) => {
+            S(this, 'renderContent', (e, t, n) => {
                 let { className: i, trendingCategories: a } = this.props;
                 return 0 === a.length
-                    ? (0, r.jsx)(y.u$, {
+                    ? (0, r.jsx)(b.u$, {
                           columns: e,
                           width: t,
-                          renderColumn: R
+                          renderColumn: C
                       })
-                    : (0, r.jsx)(_.GMG, {
+                    : (0, r.jsx)(f.GMG, {
                           ref: this._masonryRef,
                           fade: !0,
-                          className: o()(S.container, i),
+                          className: o()(I.container, i),
                           itemGutter: 12,
                           getItemKey: this.getItemKey,
                           columns: e,
@@ -213,23 +212,23 @@ class w extends i.PureComponent {
                           chunkSize: 50
                       });
             }),
-            T(this, 'getItemGrid', () => {
+            S(this, 'getItemGrid', () => {
                 let { current: e } = this._masonryRef;
                 return null != e ? e.getItemGrid() : [];
             }),
-            T(this, 'getCoordsMap', () => {
+            S(this, 'getCoordsMap', () => {
                 let { current: e } = this._masonryRef;
                 return null != e ? e.getCoordsMap() : {};
             });
     }
 }
-function D(e) {
-    let t = (0, c.e7)([m.Z], () => m.Z.getTrendingCategories()),
-        n = (0, E.gG)(),
-        i = (0, v.PY)();
+function w(e) {
+    let t = (0, c.e7)([h.Z], () => h.Z.getTrendingCategories()),
+        n = (0, g.gG)(),
+        i = (0, y.PY)();
     return (0, r.jsx)(
-        w,
-        C(A({}, e, i), {
+        P,
+        N(T({}, e, i), {
             trendingCategories: t,
             favorites: n
         })
