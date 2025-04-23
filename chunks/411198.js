@@ -1,12 +1,12 @@
 n.d(t, {
-    $5: () => g,
-    EO: () => y,
-    Qs: () => m,
-    cL: () => b,
+    $5: () => E,
+    EO: () => v,
+    Qs: () => g,
+    cL: () => y,
     di: () => p,
     rk: () => f,
     sp: () => _,
-    tK: () => E,
+    tK: () => b,
     wD: () => d
 }),
     n(953529),
@@ -47,24 +47,24 @@ function u(e) {
     return e;
 }
 function d(e, t) {
-    var n, r, s, c, u, d, f, _, p, m, g, E, b;
-    let y = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
-        v = null != (n = e.premium_subscription_count) ? n : 0;
+    var n, r, s, c, u, d, f, _, p, g, E, b, y;
+    let v = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
+        O = null != (n = e.premium_subscription_count) ? n : 0;
     if (null == e.properties) {
         i()(null != t, 'If guild.properties is null, existingGuild must be passed in');
         let e = t.joinedAt instanceof Date ? t.joinedAt.getTime() : t.joinedAt,
-            n = y instanceof Date ? y.getTime() : y;
-        return v === t.premiumSubscriberCount && e === n
+            n = v instanceof Date ? v.getTime() : v;
+        return O === t.premiumSubscriberCount && e === n
             ? t
             : t.merge({
-                  joinedAt: y,
-                  premiumSubscriberCount: v
+                  joinedAt: v,
+                  premiumSubscriberCount: O
               });
     }
-    let O = {
+    let I = {
         id: e.id,
-        joinedAt: y,
-        premiumSubscriberCount: v,
+        joinedAt: v,
+        premiumSubscriberCount: O,
         name: null != (r = e.properties.name) ? r : '',
         description: e.properties.description,
         icon: e.properties.icon,
@@ -90,23 +90,24 @@ function d(e, t) {
         rulesChannelId: e.properties.rules_channel_id,
         safetyAlertsChannelId: e.properties.safety_alerts_channel_id,
         publicUpdatesChannelId: e.properties.public_updates_channel_id,
-        maxStageVideoChannelUsers: null != (m = e.properties.max_stage_video_channel_users) ? m : -1,
-        maxVideoChannelUsers: null != (g = e.properties.max_video_channel_users) ? g : -1,
-        maxMembers: null != (E = e.properties.max_members) ? E : -1,
-        nsfwLevel: null != (b = e.properties.nsfw_level) ? b : l.V_K.DEFAULT,
+        maxStageVideoChannelUsers: null != (g = e.properties.max_stage_video_channel_users) ? g : -1,
+        maxVideoChannelUsers: null != (E = e.properties.max_video_channel_users) ? E : -1,
+        maxMembers: null != (b = e.properties.max_members) ? b : -1,
+        nsfwLevel: null != (y = e.properties.nsfw_level) ? y : l.V_K.DEFAULT,
         hubType: e.properties.hub_type,
         latestOnboardingQuestionId: e.properties.latest_onboarding_question_id,
         profile: e.properties.profile,
-        premiumFeatures: null != e.properties.premium_features ? h(e.properties.premium_features) : null
+        premiumFeatures: null != e.properties.premium_features ? h(e.properties.premium_features) : null,
+        moderatorReporting: null != e.properties.moderator_reporting ? m(e.properties.moderator_reporting) : null
     };
-    return null == t ? (0, a.gh)(O, o.ZP) : t.merge(O);
+    return null == t ? (0, a.gh)(I, o.ZP) : t.merge(I);
 }
 function f(e, t) {
     return new o.Bg(u({}, e, t));
 }
 function _(e, t) {
     var n, r, i, a, o, s, c, u, d, f, _, p, h;
-    let m = null != (n = e.properties) ? n : E(t),
+    let m = null != (n = e.properties) ? n : b(t),
         g = {
             id: e.id,
             name: null != (r = m.name) ? r : '',
@@ -182,7 +183,8 @@ function p(e, t) {
         hubType: e.hub_type,
         latestOnboardingQuestionId: e.latest_onboarding_question_id,
         profile: e.profile,
-        premiumFeatures: null != e.premium_features ? h(e.premium_features) : null
+        premiumFeatures: null != e.premium_features ? h(e.premium_features) : null,
+        moderatorReporting: null != e.moderator_reporting ? m(e.moderator_reporting) : null
     };
     return null == t ? new o.ZP(n) : t.merge(n);
 }
@@ -195,6 +197,13 @@ function h(e) {
     };
 }
 function m(e) {
+    var t;
+    return {
+        moderatorReportingEnabled: e.moderator_reporting_enabled,
+        moderatorReportChannelId: null != (t = e.moderator_report_channel_id) ? t : null
+    };
+}
+function g(e) {
     let t = {
         id: e.id,
         name: e.name,
@@ -212,7 +221,7 @@ function m(e) {
     };
     return new o.ZP(t);
 }
-function g(e) {
+function E(e) {
     let t = {
         id: e.id,
         name: e.name,
@@ -224,7 +233,7 @@ function g(e) {
     };
     return new o.ZP(t);
 }
-function E(e) {
+function b(e) {
     return {
         id: e.id,
         name: e.name,
@@ -262,12 +271,12 @@ function E(e) {
         profile: e.profile
     };
 }
-function b(e) {
+function y(e) {
     var t;
     for (let n in (null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), (e.features = new Set(null != (t = e.features) ? t : [])), e.roles)) (0, s.cf)(e.roles[n]);
     return (0, a.gh)(e, o.ZP);
 }
-function y(e, t, n, r) {
+function v(e, t, n, r) {
     let i = (null != r && r.length > 0) || (null != n && n.length > 0);
     if ((i && (t = u({}, t)), null != r)) for (let e of r) delete t[e];
     if (null != n && n.length > 0) for (let e of n) t[e.id] = (0, s.CL)(e);
