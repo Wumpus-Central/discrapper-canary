@@ -62,6 +62,7 @@ function _(e) {
     return (0, r.jsx)(
         o.Z,
         f(u({}, e), {
+            targetElementRef: t,
             children: (e) =>
                 (0, r.jsx)(a.ua7, {
                     targetElementRef: t,

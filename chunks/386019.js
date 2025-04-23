@@ -11,36 +11,37 @@ var r = n(200651),
     f = n(388032);
 function _(e) {
     var t;
-    let { children: n, user: _, activity: p, entry: h, display: m, onSelect: g, onClose: E, appContext: b } = e,
-        [y, v] = i.useState(!1),
-        { analyticsLocations: O } = (0, s.ZP)(o.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        I = (0, c.Z)({
+    let { children: n, user: _, activity: p, entry: h, display: m, onSelect: g, onClose: E, appContext: b, targetElementRef: y } = e,
+        [v, O] = i.useState(!1),
+        { analyticsLocations: I } = (0, s.ZP)(o.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        S = (0, c.Z)({
             display: m,
             user: _,
             activity: p,
             entry: h,
-            analyticsLocations: O
+            analyticsLocations: I
         }),
-        S = (0, u.yi)(),
-        T = (0, d.Z)({
+        T = (0, u.yi)(),
+        A = null != (t = null == T ? void 0 : T.interactionPopoutTargetRef) ? t : void 0,
+        N = (0, d.Z)({
             entry: h,
             activity: p,
             user: _,
             display: m,
             onClose: E,
-            onAction: I,
-            isMenuOpen: y,
+            onAction: S,
+            isMenuOpen: v,
             appContext: b
         });
-    return 0 === T.length || _.bot
+    return 0 === N.length || _.bot
         ? null
         : (0, r.jsx)(a.yRy, {
-              targetElementRef: null != (t = null == S ? void 0 : S.interactionPopoutTargetRef) ? t : void 0,
+              targetElementRef: null != y ? y : A,
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  I({ action: 'OPEN_MENU' }), v(!0);
+                  S({ action: 'OPEN_MENU' }), O(!0);
               },
               renderPopout: (e) => {
                   let { closePopout: t } = e;
@@ -49,11 +50,11 @@ function _(e) {
                       children: (0, r.jsx)(a.v2r, {
                           navId: l.N,
                           onClose: () => {
-                              t(), v(!1);
+                              t(), O(!1);
                           },
                           'aria-label': f.intl.string(f.t.PlAQz8),
                           onSelect: g,
-                          children: (0, r.jsx)(a.kSQ, { children: T })
+                          children: (0, r.jsx)(a.kSQ, { children: N })
                       })
                   });
               },
