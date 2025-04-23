@@ -1,41 +1,46 @@
 n.r(t),
     n.d(t, {
-        default: () => U,
-        useAppSidebarState: () => k
+        default: () => F,
+        useAppSidebarState: () => B
     });
 var r = n(200651),
     i = n(192379),
     l = n(512969),
     a = n(290486),
-    o = n(442837),
-    s = n(481060),
-    c = n(230711),
-    u = n(174556),
-    d = n(320007),
-    p = n(540059),
-    h = n(916069),
-    f = n(111666),
-    g = n(565138),
-    m = n(300986),
-    b = n(314451),
-    _ = n(35583),
-    E = n(522474),
-    O = n(141321),
-    y = n(210887),
-    I = n(592125),
-    v = n(430824),
-    C = n(944486),
-    S = n(914010),
-    N = n(451478),
-    T = n(998502),
-    P = n(228488),
-    j = n(950796),
-    A = n(981631),
-    Z = n(741764),
-    x = n(388032),
-    w = n(332495),
-    L = n(103609);
-function R(e) {
+    o = n(252258),
+    s = n(442837),
+    c = n(481060),
+    u = n(230711),
+    d = n(317381),
+    p = n(812206),
+    h = n(174556),
+    f = n(320007),
+    g = n(540059),
+    m = n(916069),
+    b = n(111666),
+    _ = n(565138),
+    E = n(300986),
+    O = n(314451),
+    y = n(35583),
+    I = n(522474),
+    v = n(141321),
+    C = n(210887),
+    S = n(592125),
+    N = n(430824),
+    T = n(944486),
+    P = n(914010),
+    j = n(451478),
+    A = n(768581),
+    Z = n(998502),
+    x = n(228488),
+    w = n(950796),
+    L = n(981631),
+    R = n(918559),
+    D = n(741764),
+    k = n(388032),
+    M = n(332495),
+    U = n(103609);
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +65,7 @@ function R(e) {
     }
     return e;
 }
-function D(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,45 +83,74 @@ function D(e, t) {
         e
     );
 }
-let k = (0, a.U)(() => ({ isOpen: !0 }));
-function M() {
+let B = (0, a.U)(() => ({ isOpen: !0 }));
+function H() {
     let e,
         t = (0, l.TH)(),
-        n = (0, o.e7)([C.Z], () => C.Z.getChannelId()),
-        i = (0, o.e7)([S.Z], () => S.Z.getGuildId()),
-        a = (0, o.e7)([I.Z], () => I.Z.getChannel(n), [n]),
-        c = v.Z.getGuild(i),
-        u = (0, h.Z)(),
-        d = null;
+        n = (0, s.e7)([T.Z], () => T.Z.getChannelId()),
+        i = (0, s.e7)([P.Z], () => P.Z.getGuildId()),
+        a = (0, s.e7)([S.Z], () => S.Z.getChannel(n), [n]),
+        u = N.Z.getGuild(i),
+        h = (0, m.Z)(),
+        {
+            application: f,
+            isContextlessActivity: g,
+            isActivityPanelMode: b
+        } = (0, s.cj)([d.ZP, p.Z], () => {
+            let e = d.ZP.getCurrentEmbeddedActivity();
+            return {
+                application: p.Z.getApplication(null == e ? void 0 : e.applicationId),
+                isContextlessActivity: (null == e ? void 0 : e.location.kind) === o.E.CONTEXTLESS,
+                isActivityPanelMode: d.ZP.getActivityPanelMode() === R.Ez.PANEL
+            };
+        }),
+        E =
+            null != f
+                ? A.ZP.getApplicationIconURL({
+                      id: f.id,
+                      icon: f.icon,
+                      bot: f.bot
+                  })
+                : void 0,
+        O = null;
     return (
-        null != c
-            ? ((d = u
-                  ? (0, r.jsx)(s.r7p, { size: 'xs' })
-                  : (0, r.jsx)(g.Z, {
-                        guild: c,
-                        size: g.Z.Sizes.MINI,
-                        active: !0,
-                        className: L.guildIcon
-                    })),
-              (e = c.name))
-            : null != a && (a.isDM() || a.isGroupDM())
-              ? ((e = x.intl.string(x.t.YUU0RE)), (d = (0, r.jsx)(s.gw7, { size: 'xs' })))
-              : t.pathname.startsWith(A.Z5c.GLOBAL_DISCOVERY)
-                ? ((e = x.intl.string(x.t['4nEZLi'])), (d = (0, r.jsx)(s.Jmo, { size: 'xs' })))
-                : t.pathname.startsWith(A.Z5c.NITRO_HOME)
-                  ? ((e = x.intl.string(x.t.Ipxkoq)), (d = (0, r.jsx)(s.SrA, { size: 'xs' })))
-                  : t.pathname.startsWith(A.Z5c.COLLECTIBLES_SHOP)
-                    ? ((e = x.intl.string(x.t.pWG4zc)), (d = (0, r.jsx)(s.EOn, { size: 'xs' })))
-                    : t.pathname.startsWith(A.Z5c.FRIENDS)
-                      ? ((e = x.intl.string(x.t.TdEu5e)), (d = (0, r.jsx)(s.iFz, { size: 'xs' })))
-                      : t.pathname.startsWith(A.Z5c.FAMILY_CENTER) && ((e = x.intl.string(w.default.RZqaJi)), (d = (0, r.jsx)(s.BFJ, { size: 'xs' }))),
+        null != f && g && b
+            ? ((e = f.name),
+              (O = (0, r.jsx)('img', {
+                  className: U.appIcon,
+                  alt: k.intl.string(k.t.X4IxWF),
+                  src: E,
+                  'aria-hidden': !0,
+                  draggable: !1
+              })))
+            : null != u
+              ? ((O = h
+                    ? (0, r.jsx)(c.r7p, { size: 'xs' })
+                    : (0, r.jsx)(_.Z, {
+                          guild: u,
+                          size: _.Z.Sizes.MINI,
+                          active: !0,
+                          className: U.guildIcon
+                      })),
+                (e = u.name))
+              : null != a && (a.isDM() || a.isGroupDM())
+                ? ((e = k.intl.string(k.t.YUU0RE)), (O = (0, r.jsx)(c.gw7, { size: 'xs' })))
+                : t.pathname.startsWith(L.Z5c.GLOBAL_DISCOVERY)
+                  ? ((e = k.intl.string(k.t['4nEZLi'])), (O = (0, r.jsx)(c.Jmo, { size: 'xs' })))
+                  : t.pathname.startsWith(L.Z5c.NITRO_HOME)
+                    ? ((e = k.intl.string(k.t.Ipxkoq)), (O = (0, r.jsx)(c.SrA, { size: 'xs' })))
+                    : t.pathname.startsWith(L.Z5c.COLLECTIBLES_SHOP)
+                      ? ((e = k.intl.string(k.t.pWG4zc)), (O = (0, r.jsx)(c.EOn, { size: 'xs' })))
+                      : t.pathname.startsWith(L.Z5c.FRIENDS)
+                        ? ((e = k.intl.string(k.t.TdEu5e)), (O = (0, r.jsx)(c.iFz, { size: 'xs' })))
+                        : t.pathname.startsWith(L.Z5c.FAMILY_CENTER) && ((e = k.intl.string(M.default.RZqaJi)), (O = (0, r.jsx)(c.BFJ, { size: 'xs' }))),
         null != e &&
             '' !== e &&
             (0, r.jsxs)('div', {
-                className: L.title,
+                className: U.title,
                 children: [
-                    d,
-                    (0, r.jsx)(s.Text, {
+                    O,
+                    (0, r.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         lineClamp: 1,
                         children: e
@@ -125,73 +159,73 @@ function M() {
             })
     );
 }
-let U = i.memo(function () {
+let F = i.memo(function () {
     i.useLayoutEffect(() => {
-        T.ZP.setMinimumSize(Z.J, Z.N);
+        Z.ZP.setMinimumSize(D.J, D.N);
     }, []);
-    let e = (0, p.TH)('AppTitleBar'),
-        t = !k((e) => e.isOpen) && e,
-        { hasBugReporterAccess: n } = u.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
+    let e = (0, g.TH)('AppTitleBar'),
+        t = !B((e) => e.isOpen) && e,
+        { hasBugReporterAccess: n } = h.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     i.useLayoutEffect(() => {
-        T.ZP.setMinimumSize(Z.J, Z.N);
+        Z.ZP.setMinimumSize(D.J, D.N);
     }, []);
-    let l = (0, o.e7)([y.Z], () => (y.Z.darkSidebar ? A.BRd.DARK : void 0));
-    return (0, o.e7)([N.Z, E.Z], () => (0, P.rB)())
+    let l = (0, s.e7)([C.Z], () => (C.Z.darkSidebar ? L.BRd.DARK : void 0));
+    return (0, s.e7)([j.Z, I.Z], () => (0, x.rB)())
         ? null
-        : (0, r.jsx)(s.Wdt, {
+        : (0, r.jsx)(c.Wdt, {
               children: (e) =>
-                  (0, r.jsx)(s.f6W, {
+                  (0, r.jsx)(c.f6W, {
                       theme: l,
                       children: (i) =>
-                          (0, r.jsx)(j.T, {
+                          (0, r.jsx)(w.T, {
                               className: i,
                               leading:
                                   t &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(
-                                              s.P3F,
-                                              D(R({}, e), {
-                                                  className: L.button,
+                                              c.P3F,
+                                              V(G({}, e), {
+                                                  className: U.button,
                                                   onClick: () => {
-                                                      k.setState({ isOpen: !k.getState().isOpen });
+                                                      B.setState({ isOpen: !B.getState().isOpen });
                                                   },
-                                                  children: (0, r.jsx)(G, {})
+                                                  children: (0, r.jsx)(z, {})
                                               })
                                           ),
-                                          (0, r.jsx)(s.P3F, {
-                                              className: L.button,
+                                          (0, r.jsx)(c.P3F, {
+                                              className: U.button,
                                               onClick: () => {
-                                                  c.Z.open(A.oAB.ACCOUNT);
+                                                  u.Z.open(L.oAB.ACCOUNT);
                                               },
-                                              children: (0, r.jsx)(s.ewm, {
+                                              children: (0, r.jsx)(c.ewm, {
                                                   size: 'xs',
                                                   color: 'currentColor'
                                               })
                                           })
                                       ]
                                   }),
-                              title: (0, r.jsx)(M, {}),
+                              title: (0, r.jsx)(H, {}),
                               trailing: (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, r.jsx)(f.Z, { className: L.button }),
-                                      (0, r.jsx)(d.Z, {
+                                      (0, r.jsx)(b.Z, { className: U.button }),
+                                      (0, r.jsx)(f.Z, {
                                           canShowReminder: !0,
-                                          className: L.button
+                                          className: U.button
                                       }),
-                                      (0, r.jsx)(O.Z, D(R({}, t ? {} : e), { className: L.button })),
-                                      n ? (0, r.jsx)(b.Z, { className: L.button }) : (0, r.jsx)(m.Z, { className: L.button }),
-                                      (0, r.jsx)(_.Z, { className: L.button })
+                                      (0, r.jsx)(v.Z, V(G({}, t ? {} : e), { className: U.button })),
+                                      n ? (0, r.jsx)(O.Z, { className: U.button }) : (0, r.jsx)(E.Z, { className: U.button }),
+                                      (0, r.jsx)(y.Z, { className: U.button })
                                   ]
                               })
                           })
                   })
           });
 });
-function G() {
+function z() {
     return (0, r.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: L.icon,
+        className: U.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',
