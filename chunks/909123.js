@@ -1,11 +1,12 @@
-n.d(t, { Z: () => d }), n(388685);
-var r = n(147913),
-    i = n(430824),
-    a = n(914010),
-    o = n(713081),
-    s = n(905128),
-    l = n(50101);
-function c(e, t, n) {
+n.d(t, { Z: () => f }), n(388685);
+var r = n(179360),
+    i = n(147913),
+    a = n(430824),
+    o = n(914010),
+    s = n(713081),
+    l = n(905128),
+    c = n(50101);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,29 +19,29 @@ function c(e, t, n) {
         e
     );
 }
-class u extends r.Z {
+class d extends i.Z {
     handleSelectedGuildChange() {
-        let e = a.Z.getGuildId();
+        let e = o.Z.getGuildId();
         if (null == e) return;
-        let t = i.Z.getGuild(e);
+        let t = a.Z.getGuild(e);
         null != t &&
-            (l.ZP.trackExposure({
+            (c.ZP.trackExposure({
                 guildId: t.id,
                 location: 'GuildPowerupsManager'
             }),
-            (0, l.gV)(t.id, 'GuildPowerupsManager') && (s.Z.shouldFetchCatalogForGuild(e) && (0, o.Sn)(e), s.Z.shouldFetchPowerupsForGuild(e) && (0, o.Fm)(e)));
+            (0, c.gV)(t.id, 'GuildPowerupsManager') && (l.Z.shouldFetchCatalogForGuild(e) && (0, s.Sn)(e), l.Z.shouldFetchPowerupsForGuild(e) && (0, s.Fm)(e)));
     }
     handleEntitlementUpdate(e) {
         let { guildId: t } = e;
-        (0, l.gV)(t, 'GuildPowerupsManager') && (0, o.Fm)(t);
+        (0, c.gV)(t, 'GuildPowerupsManager') && ((0, s.Fm)(t), (0, r.C0)(t));
     }
     constructor(...e) {
         super(...e),
-            c(this, 'stores', new Map().set(a.Z, this.handleSelectedGuildChange)),
-            c(this, 'actions', {
+            u(this, 'stores', new Map().set(o.Z, this.handleSelectedGuildChange)),
+            u(this, 'actions', {
                 GUILD_POWERUP_ENTITLEMENTS_CREATE: this.handleEntitlementUpdate,
                 GUILD_POWERUP_ENTITLEMENTS_DELETE: this.handleEntitlementUpdate
             });
     }
 }
-let d = new u();
+let f = new d();
