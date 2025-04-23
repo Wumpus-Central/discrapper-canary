@@ -1,74 +1,96 @@
-e.d(n, { default: () => k });
-var i = e(200651),
-    c = e(192379),
-    s = e(481060),
-    a = e(313201),
-    o = e(434404),
-    l = e(703656),
-    r = e(981631),
-    x = e(176505),
-    d = e(388032),
-    h = e(367503);
+n.d(i, { default: () => k });
+var e = n(200651),
+    s = n(192379),
+    a = n(481060),
+    l = n(313201),
+    o = n(434404),
+    c = n(703656),
+    r = n(392576),
+    d = n(246364),
+    x = n(981631),
+    m = n(176505),
+    p = n(388032),
+    b = n(367503);
 let k = function (t) {
-    let { guildId: n, submittedGuildJoinRequestsCount: e, onClose: k, transitionState: m, onConfirm: u } = t,
-        f = (0, a.Dt)(),
-        b = c.useCallback(() => {
-            k(), u();
-        }, [k, u]),
-        z = c.useCallback(() => {
-            k(), o.Z.close(), (0, l.uL)(r.Z5c.CHANNEL(n, x.oC.MEMBER_SAFETY));
-        }, [n, k]);
-    return (0, i.jsxs)(s.Y0X, {
-        className: h.container,
-        transitionState: m,
-        'aria-labelledby': f,
+    let { guildId: i, submittedGuildJoinRequestsCount: n, onClose: k, transitionState: f, onConfirm: h } = t,
+        u = (0, l.Dt)(),
+        z = s.useCallback(
+            (t) => {
+                k(), h(t);
+            },
+            [k, h]
+        ),
+        C = s.useCallback(() => {
+            k(), o.Z.close(), (0, c.uL)(x.Z5c.CHANNEL(i, m.oC.MEMBER_SAFETY));
+        }, [i, k]),
+        { disableMassApproval: v } = r.Z.useExperiment({
+            guildId: i,
+            location: 'PendingJoinRequestsWarningModal'
+        }),
+        E = v && n > 200;
+    return (0, e.jsxs)(a.Y0X, {
+        className: b.container,
+        transitionState: f,
+        'aria-labelledby': u,
         children: [
-            (0, i.jsxs)(s.hzk, {
-                className: h.content,
+            (0, e.jsxs)(a.hzk, {
+                className: b.content,
                 children: [
-                    (0, i.jsx)(s.X6q, {
+                    (0, e.jsx)(a.X6q, {
                         variant: 'heading-md/semibold',
-                        id: f,
-                        children: d.intl.format(d.t.chV4JS, { count: e })
+                        id: u,
+                        children: p.intl.format(p.t.chV4JS, { count: n })
                     }),
-                    (0, i.jsx)(s.Text, {
-                        className: h.descriptionText,
+                    (0, e.jsx)(a.Text, {
+                        className: b.descriptionText,
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: d.intl.string(d.t.GPGPDw)
+                        children: E ? p.intl.string(p.t.EPoNRk) : p.intl.string(p.t['8+nq/P'])
                     }),
-                    (0, i.jsx)(s.P3F, {
-                        className: h.actionText,
-                        onClick: z,
-                        children: (0, i.jsx)(s.Text, {
+                    (0, e.jsx)(a.P3F, {
+                        className: b.actionText,
+                        onClick: C,
+                        children: (0, e.jsx)(a.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: d.intl.string(d.t.szESVF)
+                            children: p.intl.string(p.t.szESVF)
                         })
                     })
                 ]
             }),
-            (0, i.jsxs)(s.mzw, {
+            (0, e.jsxs)(a.mzw, {
                 children: [
-                    (0, i.jsx)(s.zxk, {
-                        className: h.actionButton,
-                        color: s.zxk.Colors.BRAND,
-                        onClick: b,
-                        size: s.zxk.Sizes.SMALL,
-                        children: (0, i.jsx)(s.Text, {
+                    (0, e.jsx)(a.zxk, {
+                        color: a.zxk.Colors.PRIMARY,
+                        onClick: k,
+                        size: a.zxk.Sizes.SMALL,
+                        children: (0, e.jsx)(a.Text, {
                             variant: 'text-sm/semibold',
-                            children: d.intl.string(d.t['3PatS0'])
+                            children: p.intl.string(p.t['ETE/oK'])
                         })
                     }),
-                    (0, i.jsx)(s.zxk, {
-                        color: s.zxk.Colors.PRIMARY,
-                        onClick: k,
-                        size: s.zxk.Sizes.SMALL,
-                        children: (0, i.jsx)(s.Text, {
-                            variant: 'text-sm/semibold',
-                            children: d.intl.string(d.t['ETE/oK'])
+                    v &&
+                        (0, e.jsx)(a.zxk, {
+                            className: b.actionButton,
+                            color: a.zxk.Colors.RED,
+                            onClick: () => z(d.wB.REJECTED),
+                            size: a.zxk.Sizes.SMALL,
+                            children: (0, e.jsx)(a.Text, {
+                                variant: 'text-sm/semibold',
+                                children: p.intl.string(p.t.Gfg0ra)
+                            })
+                        }),
+                    !E &&
+                        (0, e.jsx)(a.zxk, {
+                            className: b.actionButton,
+                            color: a.zxk.Colors.BRAND,
+                            onClick: () => z(d.wB.APPROVED),
+                            size: a.zxk.Sizes.SMALL,
+                            children: (0, e.jsx)(a.Text, {
+                                variant: 'text-sm/semibold',
+                                children: p.intl.string(p.t.VWqCvL)
+                            })
                         })
-                    })
                 ]
             })
         ]

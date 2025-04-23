@@ -92,9 +92,9 @@ function I(e) {
             [T]
         ),
         G = i.useCallback(
-            async (e, t) => {
+            async (e, t, n) => {
                 try {
-                    await u.ZP.updateVerificationForm(T, e, t);
+                    await u.ZP.updateVerificationForm(T, e, t, n);
                 } catch (e) {
                     throw (Z(new o.Hx(e).getAnyErrorMessage()), e);
                 }
@@ -102,8 +102,8 @@ function I(e) {
             [T]
         ),
         U = i.useCallback(
-            async (e, t) => {
-                let n =
+            async (e, t, n) => {
+                let r =
                     t.length > 0
                         ? [
                               {
@@ -114,55 +114,58 @@ function I(e) {
                               }
                           ]
                         : [];
-                await G(n, e);
+                await G(r, e, n);
             },
             [G]
         ),
-        B = i.useCallback(() => {
-            if (l.joinType === j.A.INVITE) {
-                let { requireTerms: e, termRules: t = [] } = l,
-                    n = t.map((e) => e.value.trim()).filter((e) => '' !== e);
-                L(async () => {
-                    if (I.hasFeature(v.oNc.DISCOVERABLE)) {
-                        let e = new Set(I.features);
-                        e.delete(v.oNc.DISCOVERABLE), await M({ features: e });
-                    }
-                    h.verificationDirty && (await U(e, n));
-                });
-            } else if (l.joinType === j.A.APPLY) {
-                let { pendingVerificationFields: e } = l;
-                if (null == e) return;
-                L(async () => {
-                    if (I.hasFeature(v.oNc.DISCOVERABLE)) {
-                        let e = new Set(I.features);
-                        e.delete(v.oNc.DISCOVERABLE), await M({ features: e });
-                    }
-                    h.verificationDirty && (await G([...e], !0)), h.profileDirty && null != S && (await (0, p.pV)(I.id, { visibility: S.visibility }));
-                });
-            } else if (l.joinType === j.A.DISCOVERABLE) {
-                let { requireTerms: e, termRules: t = [] } = l,
-                    n = t.map((e) => e.value.trim()).filter((e) => '' !== e);
-                L(async () => {
-                    if ((h.verificationDirty && (await U(e, n)), h.guildDirty)) {
-                        (0, x.UA)(I, b);
-                        let e = new Set(I.features);
-                        e.add(v.oNc.DISCOVERABLE),
-                            e.delete(v.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
-                            await M({
-                                features: e,
-                                discoverySplash: I.discoverySplash,
-                                description: I.description,
-                                preferredLocale: I.preferredLocale
-                            });
-                        try {
-                            await (0, c.Vv)(y({ guildId: I.id }, E));
-                        } catch (e) {
-                            throw (Z(new o.Hx(e).getAnyErrorMessage()), e);
+        B = i.useCallback(
+            (e) => {
+                if (l.joinType === j.A.INVITE) {
+                    let { requireTerms: t, termRules: n = [] } = l,
+                        r = n.map((e) => e.value.trim()).filter((e) => '' !== e);
+                    L(async () => {
+                        if (I.hasFeature(v.oNc.DISCOVERABLE)) {
+                            let e = new Set(I.features);
+                            e.delete(v.oNc.DISCOVERABLE), await M({ features: e });
                         }
-                    }
-                });
-            }
-        }, [l, L, I, h, M, U, S, G, b, E]),
+                        h.verificationDirty && (await U(t, r, e));
+                    });
+                } else if (l.joinType === j.A.APPLY) {
+                    let { pendingVerificationFields: t } = l;
+                    if (null == t) return;
+                    L(async () => {
+                        if (I.hasFeature(v.oNc.DISCOVERABLE)) {
+                            let e = new Set(I.features);
+                            e.delete(v.oNc.DISCOVERABLE), await M({ features: e });
+                        }
+                        h.verificationDirty && (await G([...t], !0, e)), h.profileDirty && null != S && (await (0, p.pV)(I.id, { visibility: S.visibility }));
+                    });
+                } else if (l.joinType === j.A.DISCOVERABLE) {
+                    let { requireTerms: t, termRules: n = [] } = l,
+                        r = n.map((e) => e.value.trim()).filter((e) => '' !== e);
+                    L(async () => {
+                        if ((h.verificationDirty && (await U(t, r, e)), h.guildDirty)) {
+                            (0, x.UA)(I, b);
+                            let e = new Set(I.features);
+                            e.add(v.oNc.DISCOVERABLE),
+                                e.delete(v.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
+                                await M({
+                                    features: e,
+                                    discoverySplash: I.discoverySplash,
+                                    description: I.description,
+                                    preferredLocale: I.preferredLocale
+                                });
+                            try {
+                                await (0, c.Vv)(y({ guildId: I.id }, E));
+                            } catch (e) {
+                                throw (Z(new o.Hx(e).getAnyErrorMessage()), e);
+                            }
+                        }
+                    });
+                }
+            },
+            [l, L, I, h, M, U, S, G, b, E]
+        ),
         F = i.useCallback(() => {
             var e;
             let t = (e) => {
@@ -201,7 +204,7 @@ function I(e) {
                 if (t.map((e) => e.value.trim()).filter((e) => '' !== e).length < 1 && e) return void Z(C.intl.string(C.t.TCHkcX));
             }
             if (l.joinType === j.A.APPLY && !(null == (e = l.pendingVerificationFields) ? void 0 : e.some((e) => (0, m._C)(e)))) return void Z(C.intl.string(C.t.HGVrIy));
-            i(() => t(B));
+            i((e) => t(() => B(e)));
         }, [D, B, l, T, k]),
         z = l.joinType === j.A.DISCOVERABLE && l.settingsView === _.U.ELIGIBLE_DISABLED,
         H = null != I.description && E.primaryCategoryId !== O.o3 && E.keywords.length > 0;
