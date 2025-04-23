@@ -13341,24 +13341,9 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     }
 }
 
-.fadeOut__4bbc6 {
-    animation: fadeOut__4bbc6 .15s forwards
-}
-
-@keyframes fadeOut__4bbc6 {
-    0% {
-        opacity: 1
-    }
-
-    to {
-        opacity: 0
-    }
-}
-
 .img__4bbc6 {
     height: 100%;
     object-position: right;
-    opacity: .5;
     pointer-events: none;
     position: absolute;
     right: 0;
@@ -13366,48 +13351,20 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     width: auto
 }
 
+.img__4bbc6,
 .img__4bbc6.hover__4bbc6 {
-    opacity: .8
-}
-
-.img__4bbc6.selected__4bbc6 {
-    opacity: 1
-}
-
-.theme-light .img__4bbc6:not(.updated__4bbc6) {
-    opacity: .8
-}
-
-.theme-light .img__4bbc6.hover__4bbc6:not(.updated__4bbc6) {
-    opacity: .9
-}
-
-.theme-light .img__4bbc6.selected__4bbc6:not(.updated__4bbc6) {
-    opacity: 1
-}
-
-.theme-light .img__4bbc6.account__4bbc6 {
-    opacity: .4
-}
-
-.theme-light .img__4bbc6.account__4bbc6.hover__4bbc6 {
-    opacity: .4
-}
-
-.img__4bbc6.updated__4bbc6,
-.img__4bbc6.updated__4bbc6.hover__4bbc6 {
     opacity: .6
 }
 
-.img__4bbc6.updated__4bbc6.selected__4bbc6 {
+.img__4bbc6.selected__4bbc6 {
     opacity: .9
 }
 
-.img__4bbc6.updated__4bbc6.channel__4bbc6.hover__4bbc6 {
+.img__4bbc6.channel__4bbc6.hover__4bbc6 {
     opacity: .4
 }
 
-.img__4bbc6.updated__4bbc6.channel__4bbc6.selected__4bbc6 {
+.img__4bbc6.channel__4bbc6.selected__4bbc6 {
     opacity: .9
 }
 
