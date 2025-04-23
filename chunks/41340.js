@@ -74,8 +74,8 @@ function _(e) {
     var t, n, l;
     let { subscription: h, onUpdated: _ } = e,
         [y, C] = r.useState(!1),
-        [O, E] = r.useState(!1),
-        [N, T] = r.useState(null),
+        [O, N] = r.useState(!1),
+        [E, T] = r.useState(null),
         S = (e) => ((null == e && (e = h.status), e in v) ? v[e] : 'Unknown status '.concat(e)),
         P = (e) => {
             let t = new Date(e);
@@ -231,7 +231,7 @@ function _(e) {
                 children: [
                     (0, a.jsxs)(s.P3F, {
                         onClick: () => {
-                            E(!O);
+                            N(!O);
                         },
                         className: b.collapsablePaneHeader,
                         children: [
@@ -269,11 +269,11 @@ function _(e) {
                                             onClick: (e) => k(),
                                             children: 'Renew Subscription'
                                         }),
-                                        null !== N &&
+                                        null !== E &&
                                             (0, a.jsx)(s.kzN, {
                                                 className: b.error,
                                                 onDismiss: () => T(null),
-                                                children: N
+                                                children: E
                                             })
                                     ]
                                 }),

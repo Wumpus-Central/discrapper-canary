@@ -58,11 +58,11 @@ let k = (e) => {
             }),
             B = V === S.Y.STREAM_PREVIEW || null != o,
             G = (0, y.Z)(t),
-            W = G || B ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL;
+            z = G || B ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL;
         if ((null == t ? void 0 : t.application_id) === w.bO) {
-            var z, H;
+            var W, H;
             return (
-                (z = (function (e) {
+                (W = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
@@ -93,7 +93,7 @@ let k = (e) => {
                         metadata: { button_urls: [w.U8] }
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(z, Object.getOwnPropertyDescriptors(H))
+                    ? Object.defineProperties(W, Object.getOwnPropertyDescriptors(H))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -102,9 +102,9 @@ let k = (e) => {
                           }
                           return n;
                       })(Object(H)).forEach(function (e) {
-                          Object.defineProperty(z, e, Object.getOwnPropertyDescriptor(H, e));
+                          Object.defineProperty(W, e, Object.getOwnPropertyDescriptor(H, e));
                       }),
-                (t = z),
+                (t = W),
                 (0, r.jsx)(k, {
                     user: l,
                     color: U,
@@ -114,11 +114,11 @@ let k = (e) => {
                 })
             );
         }
-        let J = W === f.Z.Direction.VERTICAL;
+        let J = z === f.Z.Direction.VERTICAL;
         return (0, r.jsx)(f.Z, {
             grow: 0,
             align: f.Z.Align.STRETCH,
-            direction: W,
+            direction: z,
             wrap: J ? f.Z.Wrap.WRAP : f.Z.Wrap.NO_WRAP,
             className: i()(u, L.buttonsWrapper, J ? L.vertical : L.horizontal),
             children: (() => {

@@ -248,7 +248,7 @@ let U = l.forwardRef(function (e, t) {
             }
             return l;
         })(e, ['avatarContainerClass', 'userNameClassName', 'size', 'selected', 'disabled', 'isOverlay']);
-    let { onClick: Z, onKeyDown: x, onDoubleClick: C, onContextMenu: w, onMouseLeave: k, onMouseDown: U, priority: R, speaking: V, collapsed: F, mute: Y, serverMute: B, guildId: G, nick: W, isGuest: z, flipped: H, className: J, overlap: X, 'aria-label': K, ringing: q, user: Q, channelId: $ } = h,
+    let { onClick: Z, onKeyDown: x, onDoubleClick: C, onContextMenu: w, onMouseLeave: k, onMouseDown: U, priority: R, speaking: V, collapsed: F, mute: Y, serverMute: B, guildId: G, nick: z, isGuest: W, flipped: H, className: J, overlap: X, 'aria-label': K, ringing: q, user: Q, channelId: $ } = h,
         { parentAnalyticsLocation: ee } = (0, m.ZP)(),
         et = (0, u.bp)(),
         en = null != $ ? P.Z.getChannel($) : null,
@@ -291,7 +291,7 @@ let U = l.forwardRef(function (e, t) {
                 null == U || U(e, Q);
             },
             onKeyDown: x,
-            'aria-label': null != (n = null != K ? K : W) ? n : Q.username,
+            'aria-label': null != (n = null != K ? K : z) ? n : Q.username,
             focusProps: { offset: { right: 4 } },
             children: (0, r.jsxs)('div', {
                 className: o()(_.content, { [_.flipped]: H }),
@@ -318,8 +318,8 @@ let U = l.forwardRef(function (e, t) {
                                     [_.usernameSpeaking]: !Y && !B && V
                                 }),
                                 children: [
-                                    null != W ? W : T.ZP.getName(Q),
-                                    z
+                                    null != z ? z : T.ZP.getName(Q),
+                                    W
                                         ? (0, r.jsxs)('span', {
                                               className: _.guestSuffix,
                                               children: ['\xA0', D.intl.string(D.t['pFO/Pj'])]

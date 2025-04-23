@@ -205,11 +205,11 @@ let ec = [ee.fO.ACTIVITY, ee.fO.PRESENCE_EMBEDDED_ACTIVITY],
                 userId: eB,
                 channelId: em.id
             }),
-            e8 = (0, P.zU)({
+            e7 = (0, P.zU)({
                 streamKey: U.type === ee.fO.STREAM ? U.id : null,
                 channelId: em.id
             }),
-            e7 = i.useMemo(() => (U.type === ee.fO.STREAM ? null != e8 && e8 : U.type === ee.fO.USER && null != e5 && e5), [e8, e5, U.type]);
+            e8 = i.useMemo(() => (U.type === ee.fO.STREAM ? null != e7 && e7 : U.type === ee.fO.USER && null != e5 && e5), [e7, e5, U.type]);
         i.useEffect(() => {
             eR(ex);
         }, [ex]);
@@ -429,7 +429,7 @@ let ec = [ee.fO.ACTIVITY, ee.fO.PRESENCE_EMBEDDED_ACTIVITY],
                                                           onToggleMute: tn,
                                                           participantUserId: eB,
                                                           application: e6,
-                                                          secureFramesVerified: e7,
+                                                          secureFramesVerified: e8,
                                                           isHovered: ek
                                                       }
                                                   )

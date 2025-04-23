@@ -21,8 +21,8 @@ var a = n(200651),
     y = n(572004),
     C = n(70956),
     O = n(145597),
-    E = n(246992),
-    N = n(981631),
+    N = n(246992),
+    E = n(981631),
     T = n(757744),
     S = n(388032),
     P = n(931207),
@@ -71,11 +71,11 @@ function I(e, t) {
     );
 }
 let R = {
-        [N.Odu.CLICK_ZONE_DEBUG]: (e) =>
+        [E.Odu.CLICK_ZONE_DEBUG]: (e) =>
             I(
                 k(
                     {
-                        type: N.Odu.CLICK_ZONE_DEBUG,
+                        type: E.Odu.CLICK_ZONE_DEBUG,
                         id: (0, o.Z)(),
                         layoutId: e,
                         anchor: {
@@ -87,15 +87,15 @@ let R = {
                             height: 100
                         }
                     },
-                    j.Z.getWidgetDefaultSettings(N.Odu.CLICK_ZONE_DEBUG)
+                    j.Z.getWidgetDefaultSettings(E.Odu.CLICK_ZONE_DEBUG)
                 ),
                 { pinned: !0 }
             ),
-        [N.Odu.PERFORMANCE_DEBUG]: (e) =>
+        [E.Odu.PERFORMANCE_DEBUG]: (e) =>
             I(
                 k(
                     {
-                        type: N.Odu.PERFORMANCE_DEBUG,
+                        type: E.Odu.PERFORMANCE_DEBUG,
                         id: (0, o.Z)(),
                         layoutId: e,
                         anchor: {
@@ -108,7 +108,7 @@ let R = {
                             height: 'auto'
                         }
                     },
-                    j.Z.getWidgetDefaultSettings(N.Odu.PERFORMANCE_DEBUG)
+                    j.Z.getWidgetDefaultSettings(E.Odu.PERFORMANCE_DEBUG)
                 ),
                 { pinned: !0 }
             )
@@ -332,8 +332,8 @@ function z(e) {
 }
 function M() {
     var e, t;
-    let [n, l] = z(N.Odu.CLICK_ZONE_DEBUG),
-        [o, d] = z(N.Odu.PERFORMANCE_DEBUG),
+    let [n, l] = z(E.Odu.CLICK_ZONE_DEBUG),
+        [o, d] = z(E.Odu.PERFORMANCE_DEBUG),
         j = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.ClickZones)),
         g = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.WidgetAreas)),
         y = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.DisabledGPUBoost)),
@@ -598,7 +598,7 @@ function M() {
                                     isSelected: (e) => e === L,
                                     options: B,
                                     select: U,
-                                    popoutLayerContext: E.O$
+                                    popoutLayerContext: N.O$
                                 })
                             })
                         )

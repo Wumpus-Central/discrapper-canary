@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733);
+n.d(t, { Z: () => E }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733);
 var a = n(200651),
     r = n(913527),
     l = n.n(r),
@@ -38,7 +38,7 @@ function O(e) {
             return 'ADOPT_CLAN_IDENTITY_NOTICE';
     }
 }
-async function E(e, t, n) {
+async function N(e, t, n) {
     await Promise.all(
         t.map((e) =>
             o.tn.patch({
@@ -51,7 +51,7 @@ async function E(e, t, n) {
         (0, d.C0)(e),
         (0, x.Fm)(e, !0);
 }
-function N() {
+function E() {
     var e;
     let t = (0, i.e7)([v.Z], () => v.Z.getGuildId()),
         n = (0, i.e7)([f.Z], () => {
@@ -109,13 +109,13 @@ function N() {
                             children: [
                                 (0, a.jsx)(c.zxk, {
                                     onClick: () => {
-                                        E(t, o.slice(Math.floor(o.length / 2)), !1);
+                                        N(t, o.slice(Math.floor(o.length / 2)), !1);
                                     },
                                     children: 'Set Half Boosts expiring in 1 day'
                                 }),
                                 (0, a.jsx)(c.zxk, {
                                     onClick: () => {
-                                        E(t, o, !0);
+                                        N(t, o, !0);
                                     },
                                     children: 'Reset End Date'
                                 })
