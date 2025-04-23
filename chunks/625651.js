@@ -3,21 +3,22 @@ var r = n(200651),
     o = n(192379),
     a = n(442837),
     i = n(481060),
-    c = n(14263),
-    s = n(650774),
+    s = n(14263),
+    c = n(650774),
     l = n(430824),
-    u = n(795338),
-    d = n(17622),
-    m = n(279604),
+    u = n(870246),
+    d = n(795338),
+    m = n(17622),
+    f = n(279604),
     b = n(535396),
-    f = n(680278),
-    p = n(388032),
-    x = n(340114);
+    p = n(680278),
+    x = n(388032),
+    k = n(340114);
 function g(e) {
     var t,
         n,
         { guildId: g, powerup: j } = e,
-        k = (function (e, t) {
+        _ = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -36,9 +37,9 @@ function g(e) {
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let { onDeactivate: v, error: O, isLoading: _ } = (0, m.ZP)(g, j),
-        { onClose: h } = k,
-        I = o.useCallback(
+    let { onDeactivate: v, error: I, isLoading: O } = (0, f.ZP)(g, j),
+        { onClose: h } = _,
+        C = o.useCallback(
             (e) => {
                 v(e).then(() => {
                     null == h || h();
@@ -46,9 +47,9 @@ function g(e) {
             },
             [h, v]
         ),
-        C = (function (e, t) {
-            let n = (0, a.e7)([s.Z], () => s.Z.getMemberCount(e)),
-                u = (0, c.Z)(e),
+        T = (function (e, t) {
+            let n = (0, a.e7)([c.Z], () => c.Z.getMemberCount(e)),
+                u = (0, s.Z)(e),
                 d = (0, a.e7)([l.Z], () => {
                     var t;
                     return (null == (t = l.Z.getGuild(e)) ? void 0 : t.vanityURLCode) != null;
@@ -75,12 +76,12 @@ function g(e) {
                     (e =
                         t.skuId === b.If
                             ? m > 0
-                                ? p.intl.formatToPlainString(f.default['4jSvr6'], {
+                                ? x.intl.formatToPlainString(p.default['4jSvr6'], {
                                       perk: t.title,
                                       memberCount: m
                                   })
-                                : p.intl.formatToPlainString(f.default.cavtEh, { perk: t.title })
-                            : p.intl.formatToPlainString(f.default['4jSvr6'], {
+                                : x.intl.formatToPlainString(p.default.cavtEh, { perk: t.title })
+                            : x.intl.formatToPlainString(p.default['4jSvr6'], {
                                   perk: t.title,
                                   memberCount: n
                               })),
@@ -92,7 +93,7 @@ function g(e) {
                                 (0, r.jsx)(i.Text, {
                                     color: 'text-danger',
                                     variant: 'text-sm/semibold',
-                                    children: p.intl.string(f.default.M4XL5u)
+                                    children: x.intl.string(p.default.M4XL5u)
                                 })
                             ]
                         })),
@@ -100,133 +101,136 @@ function g(e) {
                 );
             }, [t, m, n, d]);
         })(g, j);
-    return (0, r.jsxs)(
-        i.Y0X,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
-                    )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: r,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = r);
-                    });
-            }
-            return e;
-        })(
-            {
-                className: x.modal,
-                size: j.type === b.Us.LEVEL ? i.CgR.MEDIUM : i.CgR.SMALL
-            },
-            k
-        )),
-        (n = n =
-            {
-                children: [
-                    (0, r.jsxs)(i.hzk, {
-                        className: x.modalContentContainer,
-                        scrollbarType: 'none',
-                        children: [
-                            (0, r.jsxs)('div', {
-                                className: x.headerContainer,
-                                children: [
-                                    (0, r.jsxs)('div', {
-                                        className: x.header,
-                                        children: [
-                                            (0, r.jsx)(i.X6q, {
-                                                variant: 'heading-md/semibold',
-                                                children: p.intl.formatToPlainString(f.default.iEBw1N, { perk: j.title })
-                                            }),
-                                            (0, r.jsx)(i.Text, {
-                                                variant: 'text-sm/medium',
-                                                children: p.intl.formatToPlainString(f.default['7o0K+/'], { perk: j.title })
-                                            })
-                                        ]
-                                    }),
-                                    (0, r.jsx)(i.olH, { onClick: k.onClose })
-                                ]
-                            }),
-                            (() => {
-                                switch (j.type) {
-                                    case b.Us.LEVEL:
-                                        return (0, r.jsx)(d.Z, { powerup: j });
-                                    case b.Us.PERK:
-                                        return (0, r.jsx)(u.m, {
-                                            className: x.image,
-                                            powerup: j
-                                        });
-                                }
-                            })(),
-                            (0, r.jsxs)('div', {
-                                className: x.warningContainer,
-                                children: [
-                                    (0, r.jsx)(i.Text, {
-                                        color: 'text-danger',
-                                        variant: 'eyebrow',
-                                        children: p.intl.string(f.default.OVt5CA)
-                                    }),
-                                    (0, r.jsx)(i.Text, {
-                                        className: x.warningText,
-                                        tag: 'span',
-                                        variant: 'text-sm/medium',
-                                        children: C
-                                    })
-                                ]
-                            }),
-                            null != O &&
-                                (0, r.jsx)(i.Text, {
-                                    className: x.errorText,
-                                    color: 'text-danger',
-                                    variant: 'text-sm/semibold',
-                                    children: O
-                                })
-                        ]
-                    }),
-                    (0, r.jsxs)(i.mzw, {
-                        className: x.footer,
-                        children: [
-                            (0, r.jsx)(i.zxk, {
-                                submitting: _,
-                                color: i.Ttl.RED,
-                                className: x.button,
-                                onClick: I,
-                                children: p.intl.string(f.default.PYPdl5)
-                            }),
-                            (0, r.jsx)(i.zxk, {
-                                color: i.Ttl.PRIMARY,
-                                className: x.button,
-                                onClick: k.onClose,
-                                children: p.intl.string(p.t['ETE/oK'])
+    return (
+        (0, u.$)(g, j, u.w.DEACTIVATE),
+        (0, r.jsxs)(
+            i.Y0X,
+            ((t = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
-                        ]
-                    })
-                ]
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-              }),
-        t)
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })(
+                {
+                    className: k.modal,
+                    size: j.type === b.Us.LEVEL ? i.CgR.MEDIUM : i.CgR.SMALL
+                },
+                _
+            )),
+            (n = n =
+                {
+                    children: [
+                        (0, r.jsxs)(i.hzk, {
+                            className: k.modalContentContainer,
+                            scrollbarType: 'none',
+                            children: [
+                                (0, r.jsxs)('div', {
+                                    className: k.headerContainer,
+                                    children: [
+                                        (0, r.jsxs)('div', {
+                                            className: k.header,
+                                            children: [
+                                                (0, r.jsx)(i.X6q, {
+                                                    variant: 'heading-md/semibold',
+                                                    children: x.intl.formatToPlainString(p.default.iEBw1N, { perk: j.title })
+                                                }),
+                                                (0, r.jsx)(i.Text, {
+                                                    variant: 'text-sm/medium',
+                                                    children: x.intl.formatToPlainString(p.default['7o0K+/'], { perk: j.title })
+                                                })
+                                            ]
+                                        }),
+                                        (0, r.jsx)(i.olH, { onClick: _.onClose })
+                                    ]
+                                }),
+                                (() => {
+                                    switch (j.type) {
+                                        case b.Us.LEVEL:
+                                            return (0, r.jsx)(m.Z, { powerup: j });
+                                        case b.Us.PERK:
+                                            return (0, r.jsx)(d.m, {
+                                                className: k.image,
+                                                powerup: j
+                                            });
+                                    }
+                                })(),
+                                (0, r.jsxs)('div', {
+                                    className: k.warningContainer,
+                                    children: [
+                                        (0, r.jsx)(i.Text, {
+                                            color: 'text-danger',
+                                            variant: 'eyebrow',
+                                            children: x.intl.string(p.default.OVt5CA)
+                                        }),
+                                        (0, r.jsx)(i.Text, {
+                                            className: k.warningText,
+                                            tag: 'span',
+                                            variant: 'text-sm/medium',
+                                            children: T
+                                        })
+                                    ]
+                                }),
+                                null != I &&
+                                    (0, r.jsx)(i.Text, {
+                                        className: k.errorText,
+                                        color: 'text-danger',
+                                        variant: 'text-sm/semibold',
+                                        children: I
+                                    })
+                            ]
+                        }),
+                        (0, r.jsxs)(i.mzw, {
+                            className: k.footer,
+                            children: [
+                                (0, r.jsx)(i.zxk, {
+                                    submitting: O,
+                                    color: i.Ttl.RED,
+                                    className: k.button,
+                                    onClick: C,
+                                    children: x.intl.string(p.default.PYPdl5)
+                                }),
+                                (0, r.jsx)(i.zxk, {
+                                    color: i.Ttl.PRIMARY,
+                                    className: k.button,
+                                    onClick: _.onClose,
+                                    children: x.intl.string(x.t['ETE/oK'])
+                                })
+                            ]
+                        })
+                    ]
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(n)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  }),
+            t)
+        )
     );
 }
