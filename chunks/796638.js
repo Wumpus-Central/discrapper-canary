@@ -102,11 +102,11 @@ function v(e, t) {
             }
             let P = _.filter(u.lm);
             S.current = (0, i.keyBy)((0, i.range)(P.length), (e) => P[e].id);
-            let x = [...j, ...P];
+            let w = [...j, ...P];
             return (
-                null != h && (f && x.length >= y ? (x[Math.max(0, x.length - 1)] = h) : x.push(h)),
+                null != h && (f && w.length >= y ? (w[Math.max(0, w.length - 1)] = h) : w.push(h)),
                 {
-                    visibleParticipants: x,
+                    visibleParticipants: w,
                     participantTileWidth: O
                 }
             );

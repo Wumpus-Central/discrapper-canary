@@ -34,8 +34,8 @@ var r,
     I = n(906732),
     _ = n(890280),
     P = n(835473),
-    x = n(522474),
-    w = n(314897),
+    w = n(522474),
+    x = n(314897),
     A = n(819640),
     R = n(594174),
     N = n(823379),
@@ -98,9 +98,9 @@ function Y(e) {
     let { participants: r, application: a, channel: E, width: v } = e,
         h = U(v),
         [S] = V(v),
-        b = (0, u.Wu)([R.default, w.default], () =>
+        b = (0, u.Wu)([R.default, x.default], () =>
             Array.from(r)
-                .map((e) => ((0, p.J)(e, w.default) ? null : R.default.getUser(e.userId)))
+                .map((e) => ((0, p.J)(e, x.default) ? null : R.default.getUser(e.userId)))
                 .filter(N.lm)
         ),
         y = (0, u.e7)([f.ZP], () => {
@@ -116,7 +116,7 @@ function Y(e) {
                 channelId: E.id,
                 application: a
             }) === g.Fw.CAN_JOIN,
-        x = null != (n = E.getGuildId()) ? n : void 0,
+        w = null != (n = E.getGuildId()) ? n : void 0,
         A = i.useId(),
         M = a.id,
         L = i.useMemo(
@@ -136,7 +136,7 @@ function Y(e) {
         children: [
             (0, l.jsx)(F, {
                 avatarSize: S,
-                guildId: x,
+                guildId: w,
                 channelId: E.id,
                 users: b
             }),
@@ -206,19 +206,19 @@ function H(e) {
         g = !r && f,
         y = !f,
         _ = !f && !r,
-        w = (0, u.e7)([A.Z, x.Z], () =>
+        x = (0, u.e7)([A.Z, w.Z], () =>
             (0, Z.Z)({
                 LayerStore: A.Z,
-                PopoutWindowStore: x.Z
+                PopoutWindowStore: w.Z
             })
         );
     return (
         i.useEffect(() => {
-            if (g && null != d && !w) {
+            if (g && null != d && !x) {
                 let e = (0, O.Z)(d.location.id, d.applicationId);
                 (0, b.jy)(e);
             }
-        }, [g, d, w]),
+        }, [g, d, x]),
         (0, l.jsx)(I.Gt, {
             value: s,
             children: (0, l.jsxs)('div', {

@@ -155,13 +155,13 @@ function _(e) {
                 end: null != j ? j : c.p6O
             });
     }, [a, h, j]);
-    let R = o.useCallback(
+    let D = o.useCallback(
             (e) => {
                 null == l || l(e), w(null);
             },
             [l, w]
         ),
-        D = o.useCallback(
+        R = o.useCallback(
             (e) => {
                 null == l || l(e), w(e);
             },
@@ -180,7 +180,7 @@ function _(e) {
         B = o.useCallback((e, t) => {
             E((r) => b(f({}, r), { [e]: t }));
         }, []),
-        Z = o.useCallback(() => {
+        T = o.useCallback(() => {
             var e, t, r, o, a;
             let l = { background: 'linear-gradient(90deg, '.concat((0, i.Rf)(null != (e = k.start) ? e : c.p6O), ' 0%, ').concat((0, i.Rf)(k.end), ' 100%)') },
                 s = (0, n.jsxs)('div', {
@@ -239,22 +239,22 @@ function _(e) {
                       ]
                   });
         }, [_, d, k, I, N, B]),
-        T = o.useCallback(
+        Z = o.useCallback(
             () =>
                 (0, n.jsx)(s.Z$W, {
-                    onChange: D,
+                    onChange: R,
                     value: P
                 }),
-            [D, P]
+            [R, P]
         ),
-        G = o.useCallback(
+        A = o.useCallback(
             (e) => {
                 let t = (0, n.jsx)(s.jHW, b(f({}, e), { 'aria-label': u.intl.string(u.t['FHBa//']) }));
                 return d
                     ? t
                     : (0, n.jsx)(s.yRy, {
                           targetElementRef: C,
-                          renderPopout: T,
+                          renderPopout: Z,
                           position: _,
                           children: (e) =>
                               (0, n.jsx)(s.ua7, {
@@ -265,9 +265,9 @@ function _(e) {
                               })
                       });
             },
-            [_, d, T]
+            [_, d, Z]
         ),
-        W = o.useCallback(
+        G = o.useCallback(
             (e) => {
                 let t = (0, n.jsx)(s.AGO, f({}, e));
                 return d
@@ -283,12 +283,12 @@ function _(e) {
     return (0, n.jsx)(
         s.zH8,
         b(f({}, e), {
-            renderDefaultButton: W,
-            renderCustomButton: G,
-            renderGradientCustomButton: Z,
+            renderDefaultButton: G,
+            renderCustomButton: A,
+            renderGradientCustomButton: T,
             isGradient: O,
             customColor: P,
-            onChange: O ? N : R
+            onChange: O ? N : D
         })
     );
 }
