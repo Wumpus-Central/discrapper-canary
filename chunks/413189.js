@@ -27,41 +27,42 @@ function O(e) {
         { message: N, channel: T, compact: P } = e,
         A = null == (t = N.chatWallpaperInfo) ? void 0 : t.wallpaperId,
         { enabled: w } = (0, m.sX)({ location: 'ChatWallpaperSetSystemMessage' }),
-        Z = (0, s.ZP)(N),
-        R = (0, a.wjy)((0, o.ZP)()),
+        Z = m.qM.useExperiment({ location: 'ChatWallpaperSetSystemMessage' }).lightMode,
+        R = (0, s.ZP)(N),
+        k = (0, a.wjy)((0, o.ZP)()),
         {
-            chatWallpaper: k,
-            isUpdatingChatWallpaperFlag: D,
-            lastSetMessageId: L
+            chatWallpaper: D,
+            isUpdatingChatWallpaperFlag: L,
+            lastSetMessageId: M
         } = (0, l.cj)([f.Z], () => ({
             chatWallpaper: f.Z.getWallpaperById(A),
             isUpdatingChatWallpaperFlag: f.Z.isUpdatingChatWallpaperFlagForChannel(T.id),
             lastSetMessageId: f.Z.getLastSetWallpaperMessageIdForChannel(T.id)
         })),
-        M = (0, _.Z)(T.id),
-        U = L === N.id,
-        F = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-        B = (null == F ? void 0 : F.id) === N.author.id,
-        G = (0, c.m)(y.p9.TIER_2),
-        H = h.t(T);
+        U = (0, _.Z)(T.id),
+        F = M === N.id,
+        B = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        G = (null == B ? void 0 : B.id) === N.author.id,
+        H = (0, c.m)(y.p9.TIER_2),
+        V = h.t(T);
     return (i.useEffect(() => {
-        null == k && f.Z.shouldFetchWallpapers && g.k9();
-    }, [k]),
+        null == D && f.Z.shouldFetchWallpapers && g.k9();
+    }, [D]),
     null == A)
         ? null
-        : ((C = B
-              ? E.intl.format(E.t.z847Tk, { wallpaper_name: null != (n = null == k ? void 0 : k.label) ? n : E.intl.string(E.t['UQMV/P']) })
+        : ((C = G
+              ? E.intl.format(E.t.z847Tk, { wallpaper_name: null != (n = null == D ? void 0 : D.label) ? n : E.intl.string(E.t['UQMV/P']) })
               : E.intl.format(E.t['+lKndX'], {
-                    username: null == Z ? void 0 : Z.nick,
-                    wallpaper_name: null != (O = null == k ? void 0 : k.label) ? O : E.intl.string(E.t['UQMV/P'])
+                    username: null == R ? void 0 : R.nick,
+                    wallpaper_name: null != (O = null == D ? void 0 : D.label) ? O : E.intl.string(E.t['UQMV/P'])
                 })),
           w
-              ? R
-                  ? H && U
-                      ? (S = E.intl.formatToPlainString(E.t.PzTpVV, { wallpaperName: null != (j = null == k ? void 0 : k.label) ? j : E.intl.string(E.t['UQMV/P']) }))
-                      : B ||
-                        G ||
-                        !U ||
+              ? k || Z
+                  ? V && F
+                      ? (S = E.intl.formatToPlainString(E.t.PzTpVV, { wallpaperName: null != (j = null == D ? void 0 : D.label) ? j : E.intl.string(E.t['UQMV/P']) }))
+                      : G ||
+                        H ||
+                        !F ||
                         (S = E.intl.format(E.t.JwUhHh, {
                             onClickNitro: () => {
                                 (0, u.uL)(x.Z5c.NITRO_HOME);
@@ -69,21 +70,21 @@ function O(e) {
                         }))
                   : (S = E.intl.format(E.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(x.BhN.DM_WALLPAPERS) }))
               : (S = E.intl.string(E.t['6JSOu7'])),
-          (null == M ? void 0 : M.isViewable) &&
-              U &&
-              !B &&
+          (null == U ? void 0 : U.isViewable) &&
+              F &&
+              !G &&
               (I = (0, r.jsx)(a.zxk, {
                   className: v.action,
                   onClick: () => {
                       g.X(T, A, {
-                          shouldClear: !H,
+                          shouldClear: !V,
                           onError: () => {
                               (0, a.showToast)((0, a.createToast)(E.intl.string(E.t.F8FvU1), a.ToastType.FAILURE));
                           }
                       });
                   },
-                  submitting: D,
-                  children: E.intl.string(H ? E.t.o6850d : E.t['/ubFp6'])
+                  submitting: L,
+                  children: E.intl.string(V ? E.t.o6850d : E.t['/ubFp6'])
               })),
           (0, r.jsx)(b.Z, {
               channel: T,

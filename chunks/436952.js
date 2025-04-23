@@ -1,6 +1,7 @@
 n.d(t, {
     FN: () => a,
     ld: () => o,
+    qM: () => u,
     rr: () => l,
     sQ: () => c,
     sX: () => s
@@ -57,3 +58,25 @@ function c(e) {
     let { location: t } = e;
     return l.useExperiment({ location: t }).enabled;
 }
+let u = (0, r.B)({
+    id: '2025-04_dm_chat_wallpapers_theming',
+    kind: 'user',
+    label: 'DM Chat Wallpapers Theming',
+    defaultConfig: { enabled: !1 },
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    treatments: [
+        {
+            id: 1,
+            label: 'Enables new theming customizations on DM chat wallpapers',
+            config: { enabled: !0 }
+        },
+        {
+            id: 2,
+            label: 'Enables new theming customizations and light mode on DM chat wallpapers',
+            config: {
+                enabled: !0,
+                lightMode: !0
+            }
+        }
+    ]
+});

@@ -1,10 +1,11 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r,
-    i = n(442837),
-    a = n(570140),
-    o = n(709054),
-    s = n(981631);
-function l(e, t, n) {
+    i = n(392711),
+    a = n(442837),
+    o = n(570140),
+    s = n(709054),
+    l = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +18,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,119 +29,94 @@ function c(e) {
                 })
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
+let d = {},
+    f = 0,
+    _ = new Set(),
+    p = {},
+    h = {};
+function m() {
+    f = 1;
 }
-function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let f = {},
-    _ = 0,
-    p = new Set(),
-    h = {},
-    m = {};
-function g() {
-    _ = 1;
-}
-function E(e) {
+function g(e) {
     let { wallpapers: t } = e;
-    (_ = 2),
+    (f = 2),
         t.forEach((e) => {
-            f[e.id] = e;
+            d[e.id] = e;
         });
 }
-function b() {
-    _ = 3;
+function E() {
+    f = 3;
 }
-function y() {
-    (f = {}), (_ = 0);
+function b() {
+    (d = {}), (f = 0);
+}
+function y(e) {
+    let { channelId: t } = e,
+        n = new Set(_);
+    n.add(t), (_ = n);
 }
 function v(e) {
     let { channelId: t } = e,
-        n = new Set(p);
-    n.add(t), (p = n);
+        n = new Set(_);
+    n.delete(t), (_ = n);
 }
 function O(e) {
-    let { channelId: t } = e,
-        n = new Set(p);
-    n.delete(t), (p = n);
+    let { wallpaperId: t, overrides: n } = e;
+    if (null == d[t] || null == n) return void delete h[t];
+    null == h[t] && (h[t] = (0, i.cloneDeep)(d[t])), (h[t].default = u({}, h[t].default, n));
 }
 function I(e) {
-    let { wallpaperId: t, overrides: n } = e;
-    if (null == f[t]) return;
-    if (null == n) return void delete m[t];
-    let r = d(c({}, f[t]), { default: c({}, f[t].default, m[t], n) });
-    f[t] = r;
+    let { channelId: t, message: n } = e;
+    if (n.type !== l.uaV.CHAT_WALLPAPER_SET) return !1;
+    s.default.compare(n.id, p[t]) > 0 && (p[t] = n.id);
 }
 function S(e) {
-    let { channelId: t, message: n } = e;
-    if (n.type !== s.uaV.CHAT_WALLPAPER_SET) return !1;
-    o.default.compare(n.id, h[t]) > 0 && (h[t] = n.id);
-}
-function T(e) {
     let { channelId: t, messages: n } = e,
-        r = n.find((e) => e.type === s.uaV.CHAT_WALLPAPER_SET);
+        r = n.find((e) => e.type === l.uaV.CHAT_WALLPAPER_SET);
     if (null == r) return !1;
-    h[t] = r.id;
+    p[t] = r.id;
 }
-class A extends (r = i.ZP.Store) {
+class T extends (r = a.ZP.Store) {
     get isFetchingWallpapers() {
-        return 1 === _;
+        return 1 === f;
     }
     get shouldFetchWallpapers() {
-        return 0 === _;
+        return 0 === f;
     }
     get hasFetchedWallpapers() {
-        return 2 === _;
+        return 2 === f;
     }
     get failedToFetchWallpapers() {
-        return 3 === _;
+        return 3 === f;
     }
     get wallpapers() {
-        return Object.values(f);
+        return Object.values(d);
     }
     getWallpaperById(e) {
         var t;
-        if (null != e && null != f[e]) return null != (t = m[e]) ? t : f[e];
+        if (null != e && null != d[e]) return null != (t = h[e]) ? t : d[e];
     }
     isUpdatingChatWallpaperFlagForChannel(e) {
-        return p.has(e);
+        return _.has(e);
     }
     getLastSetWallpaperMessageIdForChannel(e) {
-        return h[e];
+        return p[e];
     }
 }
-l(A, 'displayName', 'ChatWallpaperStore');
-let N = new A(a.Z, {
-    FETCH_CHAT_WALLPAPERS_START: g,
-    FETCH_CHAT_WALLPAPERS_SUCCESS: E,
-    FETCH_CHAT_WALLPAPERS_FAILURE: b,
-    LOAD_MESSAGES_SUCCESS: T,
-    MESSAGE_CREATE: S,
-    UPDATE_CHAT_WALLPAPER_FLAG_START: v,
-    UPDATE_CHAT_WALLPAPER_FLAG_COMPLETE: O,
-    UPDATE_CHAT_WALLPAPER_OVERRIDES: I,
-    LOGOUT: y
+c(T, 'displayName', 'ChatWallpaperStore');
+let A = new T(o.Z, {
+    FETCH_CHAT_WALLPAPERS_START: m,
+    FETCH_CHAT_WALLPAPERS_SUCCESS: g,
+    FETCH_CHAT_WALLPAPERS_FAILURE: E,
+    LOAD_MESSAGES_SUCCESS: S,
+    MESSAGE_CREATE: I,
+    UPDATE_CHAT_WALLPAPER_FLAG_START: y,
+    UPDATE_CHAT_WALLPAPER_FLAG_COMPLETE: v,
+    UPDATE_CHAT_WALLPAPER_OVERRIDES: O,
+    LOGOUT: b
 });
