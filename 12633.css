@@ -13393,6 +13393,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     width: 70px
 }
 
+.avatarWrapper__86ab2 .acronymText__86ab2 {
+    font-size: 22px
+}
+
 .body__86ab2 {
     flex-direction: column;
     gap: 16px;

@@ -28,9 +28,10 @@ function u(e) {
                         className: c.avatarWrapper,
                         children: (0, r.jsx)(a.b, {
                             guildId: t,
-                            guildName: null != n ? n : l.intl.string(l.t.wZmuen),
+                            guildName: null != n ? n : '?',
                             guildIcon: null,
-                            iconSize: 64
+                            iconSize: 64,
+                            acronymClassName: c.acronymText
                         })
                     })
                 })
