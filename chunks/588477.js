@@ -1,4 +1,4 @@
-t.exports = {
+n.exports = {
     container: 'container__710ee',
     circle: 'circle__710ee',
     icon: 'icon__710ee',

@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(797258),
     E = n(606304),
     I = n(979651),
-    S = n(51144),
-    P = n(649739),
+    P = n(51144),
+    S = n(649739),
     Z = n(262317),
     N = n(981631),
     T = n(524484),
@@ -52,13 +52,13 @@ let w = i.memo((e) => {
             [w, g.id]
         ),
         H = (0, p.Z)(null != F ? [F.applicationId] : []),
-        V = (0, P.Hr)('voice_users_eligibility_check', !1),
+        V = (0, S.Hr)('voice_users_eligibility_check', !1),
         z = (0, a.e7)([v.Z, j.Z], () => (R ? j.Z.getActivities() : v.Z.getActivities(w, g.guild_id))).find((e) => null != e.application_id && e.type === N.IIU.PLAYING),
         W = (0, a.e7)([d.Z], () => ((null == z ? void 0 : z.application_id) != null ? d.Z.getApplication(null == z ? void 0 : z.application_id) : void 0));
-    null != W && P.ZP.trackExposure({ location: 'voice_users' });
+    null != W && S.ZP.trackExposure({ location: 'voice_users' });
     let [Y, q] = (0, a.Wu)([b.Z], () => [b.Z.getStreamForUser(w, g.getGuildId()), b.Z.getActiveStreamForUser(w, g.getGuildId())], [g, w]),
         K = (0, a.e7)([O.Z], () => O.Z.getSessionById(x)),
-        X = S.ZP.useName(s),
+        X = P.ZP.useName(s),
         Q = (0, a.e7)([I.Z], () => I.Z.getVoicePlatformForChannel(g.id, w), [g.id, w]),
         J = (0, m.Eu)(g.id, w);
     return (0, r.jsx)(f.Z, {
@@ -133,7 +133,7 @@ let R = [],
     k = function (e) {
         let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: f, location: b, numAudience: y, withGuildIcon: C = !1, className: j, children: O } = e,
             [E, I] = i.useState(null),
-            [S, P] = i.useState(!1),
+            [P, S] = i.useState(!1),
             T = i.useRef(null),
             k = (0, m.Es)(l.id, null != c ? c : R),
             M = i.useRef(
@@ -148,13 +148,13 @@ let R = [],
             ),
             D = i.useCallback(
                 (e) => {
-                    t && (P(!0), L.current.cancel(), (T.current = e), M.current.delay());
+                    t && (S(!0), L.current.cancel(), (T.current = e), M.current.delay());
                 },
                 [t]
             ),
             U = i.useCallback(
                 (e) => {
-                    t && (M.current.cancel(), E === e && (P(!1), L.current.delay()));
+                    t && (M.current.cancel(), E === e && (S(!1), L.current.delay()));
                 },
                 [t, E]
             ),
@@ -198,7 +198,7 @@ let R = [],
                             canDrag: n && x.Z.can(N.Plq.MOVE_MEMBERS, l),
                             showPreview: D,
                             hidePreview: U,
-                            previewIsOpen: S,
+                            previewIsOpen: P,
                             shouldShowPreview: E === o.id,
                             tabIndex: f,
                             location: b

@@ -9,7 +9,7 @@ function s(e) {
         return null == t
             ? []
             : Array.from(o.KW.values())
-                  .map((e) => t.powerups.get(e))
+                  .map((e) => t.allPowerups[e])
                   .filter(i.lm);
     });
 }

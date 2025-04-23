@@ -1,25 +1,25 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
-var i = n(442837),
+var c = n(442837),
     l = n(481060),
-    o = n(496675),
-    c = n(981631),
+    i = n(496675),
+    o = n(981631),
     a = n(388032);
-function s(e, t) {
-    let s = (0, i.e7)([o.Z], () => o.Z.can(c.Plq.MANAGE_CHANNELS, e), [e]);
-    return __OVERLAY__ || !s
+function u(e, t) {
+    let u = (0, c.e7)([i.Z], () => i.Z.can(o.Plq.MANAGE_CHANNELS, e), [e]);
+    return __OVERLAY__ || !u
         ? null
         : (0, r.jsx)(l.sNh, {
               id: 'clone-channel',
               label: a.intl.string(a.t.dEaPc3),
               action: () =>
                   (0, l.ZDy)(async () => {
-                      let { default: i } = await Promise.all([n.e('7590'), n.e('45094'), n.e('7911')]).then(n.bind(n, 218613));
+                      let { default: c } = await Promise.all([n.e('7590'), n.e('45094'), n.e('7911')]).then(n.bind(n, 218613));
                       return (n) => {
-                          var l, o;
+                          var l, i;
                           return (0, r.jsx)(
-                              i,
+                              c,
                               ((l = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -45,7 +45,7 @@ function s(e, t) {
                                   }
                                   return e;
                               })({}, n)),
-                              (o = o =
+                              (i = i =
                                   {
                                       channelType: e.type,
                                       guildId: t.id,
@@ -53,7 +53,7 @@ function s(e, t) {
                                       cloneChannelId: e.id
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                                  ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
@@ -61,8 +61,8 @@ function s(e, t) {
                                             n.push.apply(n, r);
                                         }
                                         return n;
-                                    })(Object(o)).forEach(function (e) {
-                                        Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                                    })(Object(i)).forEach(function (e) {
+                                        Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
                                     }),
                               l)
                           );

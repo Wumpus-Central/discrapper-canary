@@ -24,8 +24,8 @@ var i = n(120356),
     x = n(176505),
     S = n(629481),
     E = n(388032),
-    I = n(664832);
-function P(e) {
+    P = n(664832);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -77,39 +77,39 @@ function N(e) {
         Z = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, r.jsx)(C.m, {
         id: 'shop-'.concat(t),
-        className: l()(I.previewChannelRow, {
-            [I.selected]: n,
-            [I.phantomPreview]: N
+        className: l()(P.previewChannelRow, {
+            [P.selected]: n,
+            [P.phantomPreview]: N
         }),
-        innerClassName: I.previewChannelRowContent,
+        innerClassName: P.previewChannelRowContent,
         renderIcon: (e) =>
             (0, r.jsx)(m.Z, {
                 width: 20,
                 height: 20,
-                className: l()([e, I.shopIcon])
+                className: l()([e, P.shopIcon])
             }),
         text: E.intl.string(E.t.al5EXF),
         selected: n,
         onClick: i,
         trailing: (0, r.jsxs)('div', {
-            className: I.gifSection,
+            className: P.gifSection,
             children: [
                 Z
                     ? (0, r.jsx)(c.IGR, {
                           color: c.TVs.unsafe_rawColors.BRAND_260.css,
                           text: E.intl.string(E.t.y2b7CA),
-                          className: I.newBadge
+                          className: P.newBadge
                       })
                     : (0, r.jsx)('img', {
                           src: (0, p.b)('server_products/storefront/money.gif'),
-                          className: I.money,
+                          className: P.money,
                           alt: ''
                       }),
                 n &&
                     (0, r.jsx)(c.P3F, {
-                        className: I.closeButton,
+                        className: P.closeButton,
                         onClick: (e) => {
-                            if ((e.stopPropagation(), (0, b.EW)(s.z.SERVER_SHOP_PHANTOM_PREVIEW), v.default.track(j.rMx.GUILD_SHOP_PREVIEW_CLICK, w(P({}, (0, h.hH)(t)), { action_taken: S.mz.DISMISS_CHANNEL_ROW })), !u || !x)) {
+                            if ((e.stopPropagation(), (0, b.EW)(s.z.SERVER_SHOP_PHANTOM_PREVIEW), v.default.track(j.rMx.GUILD_SHOP_PREVIEW_CLICK, w(I({}, (0, h.hH)(t)), { action_taken: S.mz.DISMISS_CHANNEL_ROW })), !u || !x)) {
                                 var n;
                                 (0, y.dL)(j.Z5c.CHANNEL(t, null == (n = _.ZP.getDefaultChannel(t)) ? void 0 : n.id));
                             }
@@ -151,7 +151,7 @@ function Z(e) {
                   null != t &&
                       (0, u.jW)(e, async () => {
                           let { default: e } = await n.e('66050').then(n.bind(n, 376573));
-                          return (n) => (0, r.jsx)(e, w(P({}, n), { guild: t }));
+                          return (n) => (0, r.jsx)(e, w(I({}, n), { guild: t }));
                       });
               }
           });

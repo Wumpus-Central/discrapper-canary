@@ -39,8 +39,8 @@ function j(e) {
         E = _ && j,
         {
             editingMessage: I,
-            editingTextValue: S,
-            editingRichValue: P
+            editingTextValue: P,
+            editingRichValue: S
         } = (0, l.cj)(
             [p.Z],
             () => ({
@@ -113,13 +113,13 @@ function j(e) {
             [c]
         ),
         A = (0, u.R6)('EditorWrapper');
-    return null != S && null != P
+    return null != P && null != S
         ? (0, r.jsx)(y.Z, {
               ref: void 0,
               channel: t,
               message: n,
-              textValue: S,
-              richValue: P,
+              textValue: P,
+              richValue: S,
               onCancel: o.Z.endEditMessage,
               onChange: o.Z.updateEditMessage,
               onConfirmDelete: a.Z.confirmDelete,

@@ -29,8 +29,8 @@ var r,
     x = n(216306),
     S = n(398758),
     E = n(486311),
-    I = n(220444),
-    P = n(31022),
+    P = n(220444),
+    I = n(31022),
     w = n(10401),
     N = n(131704),
     Z = n(592125),
@@ -189,7 +189,7 @@ class ep extends (r = l.PureComponent) {
                 let l = e.getChannelFromSectionRow(r, i);
                 if (null == l) return !1;
                 let { channel: o, category: s } = l;
-                return !!(0, N.vc)(o.record.type) && (!s.isCollapsed || !s.isMuted) && !o.isMuted && !!t.isItemVisible(r, i, !0) && (0, I.d)(o.record);
+                return !!(0, N.vc)(o.record.type) && (!s.isCollapsed || !s.isMuted) && !o.isMuted && !!t.isItemVisible(r, i, !0) && (0, P.d)(o.record);
             })
         );
     }
@@ -673,7 +673,7 @@ class ep extends (r = l.PureComponent) {
                             x
                         );
                     case ei.d4z.GUILD_STAGE_VOICE:
-                        var S, I;
+                        var S, P;
                         return (0, i.jsx)(
                             q.Z,
                             {
@@ -684,7 +684,7 @@ class ep extends (r = l.PureComponent) {
                                 connected: c === y.id,
                                 collapsed: y.isCollapsed || b.isCollapsed,
                                 voiceStates: null != (S = d[y.id]) ? S : [],
-                                speakerVoiceStates: null != (I = p[y.id]) ? I : [],
+                                speakerVoiceStates: null != (P = p[y.id]) ? P : [],
                                 disableManageChannels: h,
                                 isFavoriteCategory: _
                             },
@@ -840,7 +840,7 @@ let ef = (e) => {
     l.useEffect(() => {
         null != n && E(n);
     }, [n, E]);
-    let I = (0, P.Z)(t),
+    let P = (0, I.Z)(t),
         w = (0, _.Q3)('NavigableChannels');
     return (0, i.jsx)(b.Gt, {
         value: s,
@@ -855,7 +855,7 @@ let ef = (e) => {
                         ref: O,
                         selectedChannel: d,
                         selectedVoiceChannel: h,
-                        stageChannelSpeakerVoiceStates: I,
+                        stageChannelSpeakerVoiceStates: P,
                         selectedGuildId: p,
                         optInEnabled: y,
                         isRefreshEnabled: w

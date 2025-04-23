@@ -1,5 +1,5 @@
 n.d(t, {
-    E: () => P,
+    E: () => I,
     Z: () => w
 }),
     n(388685),
@@ -146,7 +146,7 @@ class E extends l.PureComponent {
             });
     }
 }
-class I extends (r = l.PureComponent) {
+class P extends (r = l.PureComponent) {
     componentWillAppear(e) {
         this.state.animationScale.setValue(1), e();
     }
@@ -226,17 +226,17 @@ class I extends (r = l.PureComponent) {
             });
     }
 }
-function P(e, t) {
+function I(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: r, branchId: i } = n,
             l = t.getState(r, i);
         return null != l && e.push(l), e;
     }, []);
 }
-j(I, 'defaultProps', { strokeSize: h._3P.StrokeSizes.MEDIUM });
+j(P, 'defaultProps', { strokeSize: h._3P.StrokeSizes.MEDIUM });
 let w = c.ZP.connectStores([b.Z, m.Z, p.Z], () => {
     let e = b.Z.activeItems,
-        t = P(e, m.Z),
+        t = I(e, m.Z),
         { total: n, progress: r } = y.lK(t);
     return {
         percent: y.xI(r, n),
@@ -268,7 +268,7 @@ let w = c.ZP.connectStores([b.Z, m.Z, p.Z], () => {
     return t
         ? (0, i.jsx)(d.W, {
               component: l.Fragment,
-              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(I, x({}, n)) : null
+              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(P, x({}, n)) : null
           })
-        : (0, i.jsx)(I, x({}, n));
+        : (0, i.jsx)(P, x({}, n));
 });

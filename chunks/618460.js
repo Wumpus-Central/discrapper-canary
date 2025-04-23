@@ -8,9 +8,9 @@ function l(e) {
     let n = (0, i.e7)([s.Z], () => s.Z.getStateForGuild(e));
     return r.useMemo(() => {
         if (null == n) return [];
-        let { powerups: e, unlocked: t } = n;
+        let { allPowerups: e, unlockedPowerups: t } = n;
         return (0, a.h)(t)
-            .map((n) => e.get(n.sku_id))
+            .map((n) => e[n.sku_id])
             .filter(o.lm);
     }, [n]);
 }

@@ -112,7 +112,7 @@ function y(e, t) {
             },
             [e, t.skuId]
         ),
-        I = i.useCallback(
+        P = i.useCallback(
             (e) => {
                 if ((e.stopPropagation(), null != x))
                     return S < t.cost
@@ -162,12 +162,12 @@ function y(e, t) {
             },
             [E, t, S, y, x]
         ),
-        P = i.useCallback((e) => (e.stopPropagation(), E(!1)), [E]);
+        I = i.useCallback((e) => (e.stopPropagation(), E(!1)), [E]);
     return {
         isLoading: _,
         error: v,
-        onActivate: I,
-        onDeactivate: P,
+        onActivate: P,
+        onDeactivate: I,
         onShowDeactivate: i.useCallback(
             (i) => {
                 i.stopPropagation(),

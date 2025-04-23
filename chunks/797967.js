@@ -34,7 +34,7 @@ function f(e) {
     }
     return e;
 }
-function g(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,7 +52,7 @@ function g(e, t) {
         e
     );
 }
-let b = (e) => {
+let g = (e) => {
         var { position: t, color: r, disabled: o } = e,
             a = (function (e, t) {
                 if (null == e) return {};
@@ -76,7 +76,7 @@ let b = (e) => {
         let u = (0, i.Bd)(null != r ? r : c.p6O) > 0.1;
         return (0, n.jsx)(
             'div',
-            g(f({}, a), {
+            b(f({}, a), {
                 className: l()('left' === t ? p.colorPickerDropperLeft : p.colorPickerDropperRight, u ? p.lightRing : p.darkRing, { [p.disabled]: o }),
                 children: (0, n.jsx)('div', {
                     className: p.colorPickerDropperInner,
@@ -109,7 +109,7 @@ let b = (e) => {
                         ref: r,
                         children: (0, n.jsx)(
                             s.P3F,
-                            g(f({}, e), {
+                            b(f({}, e), {
                                 className: p.colorSelectorPopoutContainer,
                                 onClick: c,
                                 'data-position': t ? 'left' : 'right',
@@ -119,8 +119,8 @@ let b = (e) => {
                                     position: 'bottom',
                                     children: (e) =>
                                         (0, n.jsx)(
-                                            b,
-                                            g(f({}, e), {
+                                            g,
+                                            b(f({}, e), {
                                                 position: t ? 'left' : 'right',
                                                 color: null != o ? o : 0,
                                                 disabled: _
@@ -178,7 +178,7 @@ function _(e) {
             [y]
         ),
         B = o.useCallback((e, t) => {
-            E((r) => g(f({}, r), { [e]: t }));
+            E((r) => b(f({}, r), { [e]: t }));
         }, []),
         Z = o.useCallback(() => {
             var e, t, r, o, a;
@@ -190,12 +190,12 @@ function _(e) {
                             className: p.gradientSwatch,
                             style: l
                         }),
-                        (0, n.jsx)(b, {
+                        (0, n.jsx)(g, {
                             position: 'left',
                             color: null != (t = k.start) ? t : c.p6O,
                             disabled: d
                         }),
-                        (0, n.jsx)(b, {
+                        (0, n.jsx)(g, {
                             position: 'right',
                             color: null != (r = k.end) ? r : 0,
                             disabled: d
@@ -249,7 +249,7 @@ function _(e) {
         ),
         G = o.useCallback(
             (e) => {
-                let t = (0, n.jsx)(s.jHW, g(f({}, e), { 'aria-label': u.intl.string(u.t['FHBa//']) }));
+                let t = (0, n.jsx)(s.jHW, b(f({}, e), { 'aria-label': u.intl.string(u.t['FHBa//']) }));
                 return d
                     ? t
                     : (0, n.jsx)(s.yRy, {
@@ -261,7 +261,7 @@ function _(e) {
                                   targetElementRef: C,
                                   text: u.intl.string(u.t['FHBa//']),
                                   position: 'bottom',
-                                  children: (r) => (0, n.jsx)('div', g(f({ ref: C }, r, e), { children: t }))
+                                  children: (r) => (0, n.jsx)('div', b(f({ ref: C }, r, e), { children: t }))
                               })
                       });
             },
@@ -275,14 +275,14 @@ function _(e) {
                     : (0, n.jsx)(s.ua7, {
                           text: u.intl.string(u.t.bBvAEB),
                           position: 'bottom',
-                          children: (e) => (0, n.jsx)('div', g(f({}, e), { children: t }))
+                          children: (e) => (0, n.jsx)('div', b(f({}, e), { children: t }))
                       });
             },
             [d]
         );
     return (0, n.jsx)(
         s.zH8,
-        g(f({}, e), {
+        b(f({}, e), {
             renderDefaultButton: W,
             renderCustomButton: G,
             renderGradientCustomButton: Z,

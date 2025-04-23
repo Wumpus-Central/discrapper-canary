@@ -23,8 +23,8 @@ var r = n(200651),
     x = n(66999),
     S = n(554747),
     E = n(378844),
-    I = n(340541),
-    P = n(335353),
+    P = n(340541),
+    I = n(335353),
     w = n(896835),
     N = n(359110),
     Z = n(155409),
@@ -181,7 +181,7 @@ class en extends F.ZP {
     render() {
         let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: s, locked: a, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: y, canMoveMembers: _, showTutorial: O, hasActiveEvent: v, embeddedApps: C, isSubscriptionGated: j, isFavoriteSuggestion: x, withGuildIcon: S } = this.props,
             { shouldShowActivities: E, shouldShowGuildVerificationPopout: w } = this.state,
-            N = (0, I.jW)({ location: 'voice_channel' }).entrypoints,
+            N = (0, P.jW)({ location: 'voice_channel' }).entrypoints,
             T = this.getVoiceStatesCount(),
             A = (0, r.jsxs)('li', {
                 ref: this.ref,
@@ -222,7 +222,7 @@ class en extends F.ZP {
                                                 }
                                                 return i;
                                             })(c, ['onClick', 'onContextMenu']);
-                                        return (0, r.jsx)(P.Z, {
+                                        return (0, r.jsx)(I.Z, {
                                             channel: e,
                                             children: (0, r.jsxs)(
                                                 z.ZP,
@@ -449,7 +449,7 @@ function ei(e) {
         C = (0, v.Z)(),
         j = (0, s.e7)([U.ZP], () => U.ZP.isFavorite(t.id, n.id)),
         E = e.connected || (null == C ? void 0 : C.channelId) === n.id,
-        I = (0, H.Z)({
+        P = (0, H.Z)({
             channel: n,
             isChannelSelected: o,
             isChannelCollapsed: a,
@@ -459,7 +459,7 @@ function ei(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0
         }),
-        P = E && null == I;
+        I = E && null == P;
     return (0, r.jsx)(
         er,
         et(
@@ -480,8 +480,8 @@ function ei(e) {
             {
                 connected: E,
                 isFavoriteSuggestion: l && !j,
-                forceShowButtons: P,
-                channelInfo: I,
+                forceShowButtons: I,
+                channelInfo: P,
                 resolvedUnreadSetting: d
             }
         )

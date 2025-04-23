@@ -23,8 +23,8 @@ var r,
     x = n(682662),
     S = n(662146),
     E = n(674552),
-    I = n(981631),
-    P = n(388032),
+    P = n(981631),
+    I = n(388032),
     w = n(223203);
 function N(e, t, n) {
     return (
@@ -145,7 +145,7 @@ class D extends (r = l.PureComponent) {
     }
     getChannelIcon() {
         let { channel: e } = this.props,
-            t = e.type === I.d4z.DM ? v.default.getUser(e.getRecipientId()) : null;
+            t = e.type === P.d4z.DM ? v.default.getUser(e.getRecipientId()) : null;
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
@@ -180,13 +180,13 @@ class D extends (r = l.PureComponent) {
                                 c.LYs,
                                 Z(
                                     {
-                                        to: I.Z5c.CHANNEL(I.ME, e.id),
+                                        to: P.Z5c.CHANNEL(P.ME, e.id),
                                         onMouseEnter: () => this.setState({ hovered: !0 }),
                                         onMouseLeave: () => this.setState({ hovered: !1 }),
                                         selected: n || g,
                                         ariaLabel:
                                             null != t
-                                                ? P.intl.formatToPlainString(P.t.hKarnZ, {
+                                                ? I.intl.formatToPlainString(I.t.hKarnZ, {
                                                       mentions: r,
                                                       name: t
                                                   })
@@ -227,7 +227,7 @@ class D extends (r = l.PureComponent) {
             }),
             N(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    r = t.type === I.d4z.DM ? v.default.getUser(t.getRecipientId()) : null;
+                    r = t.type === P.d4z.DM ? v.default.getUser(t.getRecipientId()) : null;
                 null != r
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('45903')]).then(n.bind(n, 131404));
@@ -265,7 +265,7 @@ let L = l.forwardRef(function (e, t) {
         r = (0, p.ZP)(e.channel),
         l = (0, s.Ie)(n, 2),
         o = (0, a.e7)([y.Z], () => y.Z.getChannelId(), []),
-        u = (0, a.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : I.WtW.VOICE), [o]),
+        u = (0, a.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : P.WtW.VOICE), [o]),
         h = (0, a.e7)([b.Z], () => b.Z.getAllApplicationStreamsForChannel(n).length > 0),
         m = (0, a.e7)([O.Z], () => O.Z.getChannelId(), []),
         v = (0, a.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
@@ -273,9 +273,9 @@ let L = l.forwardRef(function (e, t) {
         j = o === n,
         x = !1,
         S = !1;
-    j && ((x = u === I.WtW.VOICE), (S = u === I.WtW.VIDEO));
+    j && ((x = u === P.WtW.VOICE), (S = u === P.WtW.VIDEO));
     let E = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE),
-        P = (0, f.Q3)('DirectMessage');
+        I = (0, f.Q3)('DirectMessage');
     return (0, i.jsx)(
         D,
         T(Z({}, e), {
@@ -289,8 +289,8 @@ let L = l.forwardRef(function (e, t) {
             stream: h,
             isCurrentUserInThisDMCall: j,
             isGDMFacepileEnabled: C,
-            size: P ? E : 56,
-            isVisualRefreshEnabled: P,
+            size: I ? E : 56,
+            isVisualRefreshEnabled: I,
             treeItemProps: l
         })
     );

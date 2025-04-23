@@ -170,11 +170,11 @@ function E(e) {
         m = [];
     null != n ? (m = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (m = u.map((e) => e.user.id));
     let E = (0, s.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(b.lm)),
-        I = null != n || (0, c.Z)(t),
-        P = i.useMemo(() => {
+        P = null != n || (0, c.Z)(t),
+        I = i.useMemo(() => {
             let e = new Map();
             return (
-                I &&
+                P &&
                     null != u &&
                     u.forEach((t) => {
                         let n = t.member;
@@ -182,8 +182,8 @@ function E(e) {
                     }),
                 e
             );
-        }, [u, I]);
-    return I
+        }, [u, P]);
+    return P
         ? (0, r.jsxs)('div', {
               className: _.flexColumn,
               children: [
@@ -220,7 +220,7 @@ function E(e) {
                                           renderUser: (e) => {
                                               var t;
                                               if (null == e) return null;
-                                              let n = P.get(e.id),
+                                              let n = I.get(e.id),
                                                   i = null != (t = null == n ? void 0 : n.nick) ? t : y.ZP.getName(e);
                                               return (0, r.jsx)(
                                                   a.DY3,

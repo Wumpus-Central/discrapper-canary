@@ -23,8 +23,8 @@ var r,
     x = n(518311),
     S = n(355298),
     E = n(869404),
-    I = n(333984),
-    P = n(210887),
+    P = n(333984),
+    I = n(210887),
     w = n(592125),
     N = n(158776),
     Z = n(55589),
@@ -473,16 +473,16 @@ let B = (e) => {
         m = w.Z.getMutablePrivateChannels(),
         b = (0, E.k1)(m),
         y = (0, u.Wu)(
-            [Z.Z, S.Z, I.Z],
+            [Z.Z, S.Z, P.Z],
             () => {
                 let e = Z.Z.getPrivateChannelIds();
-                return (0, E.tU)(e, [S.Z, I.Z]);
+                return (0, E.tU)(e, [S.Z, P.Z]);
             },
             []
         );
     (0, j.z)(C.R);
-    let _ = (0, u.cj)([f.Z, P.Z, w.Z], () => ({
-            theme: P.Z.darkSidebar ? A.BRd.DARK : s,
+    let _ = (0, u.cj)([f.Z, I.Z, w.Z], () => ({
+            theme: I.Z.darkSidebar ? A.BRd.DARK : s,
             keyboardModeEnabled: f.Z.keyboardModeEnabled,
             version: null != o ? ''.concat(o, ':').concat(w.Z.getPrivateChannelsVersion()) : w.Z.getPrivateChannelsVersion()
         })),

@@ -41,7 +41,7 @@ function E(e, t, n) {
         e
     );
 }
-function I(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function I(e) {
     }
     return e;
 }
-function P(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -152,7 +152,7 @@ function A(e) {
                 return (n) =>
                     (0, i.jsx)(
                         r,
-                        P(I({}, n), {
+                        I(P({}, n), {
                             guild: C,
                             channel: t,
                             streamUserId: 1 === e.length ? e[0].ownerId : null,
@@ -186,7 +186,7 @@ function A(e) {
             children: (e) =>
                 (0, i.jsx)(
                     c.P3F,
-                    P(I({ className: s()(S.iconItem, f ? S.alwaysShown : void 0, b ? S.iconWithChannelInfo : S.iconNoChannelInfo) }, e), {
+                    I(P({ className: s()(S.iconItem, f ? S.alwaysShown : void 0, b ? S.iconWithChannelInfo : S.iconNoChannelInfo) }, e), {
                         onClick: R,
                         tabIndex: u,
                         'aria-label': T,
@@ -206,7 +206,7 @@ function R(e) {
         children: (e) =>
             (0, i.jsx)(
                 c.P3F,
-                P(I({ className: S.iconItem }, e), {
+                I(P({ className: S.iconItem }, e), {
                     onClick: n,
                     'aria-label': x.intl.string(x.t.ROh4T0),
                     children: (0, i.jsx)(c.Dio, {
@@ -228,7 +228,7 @@ function D(e) {
         children: (e) =>
             (0, i.jsx)(
                 c.P3F,
-                P(I({ className: S.iconItem }, e), {
+                I(P({ className: S.iconItem }, e), {
                     onClick: n,
                     'aria-label': x.intl.string(x.t['N2c/Ul']),
                     children: (0, i.jsx)(c.dz2, {
@@ -243,19 +243,19 @@ function D(e) {
 class L extends (r = l.PureComponent) {
     renderOptionsButton(e) {
         let { onContextMenu: t } = e;
-        return (0, i.jsx)(Z, P(I({}, this.props), { onContextMenu: t }));
+        return (0, i.jsx)(Z, I(P({}, this.props), { onContextMenu: t }));
     }
     renderEditButton() {
-        return (0, i.jsx)(T, I({}, this.props));
+        return (0, i.jsx)(T, P({}, this.props));
     }
     renderInviteButton() {
-        return (0, i.jsx)(A, I({}, this.props));
+        return (0, i.jsx)(A, P({}, this.props));
     }
     renderRemoveSuggestionButton() {
-        return (0, i.jsx)(R, I({}, this.props));
+        return (0, i.jsx)(R, P({}, this.props));
     }
     renderAcceptSuggestionButton() {
-        return (0, i.jsx)(D, I({}, this.props));
+        return (0, i.jsx)(D, P({}, this.props));
     }
     getClassName() {
         let { position: e, sortingPosition: t } = this.props;

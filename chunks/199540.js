@@ -52,10 +52,10 @@ function S(e) {
         b = f.map((e) => e.id),
         [_, j] = i.useState(!1),
         [S, E] = i.useState(c),
-        I = u ? (c ? 22 : -11) : c ? 0 : -C,
-        P = (0, d.q_F)(
+        P = u ? (c ? 22 : -11) : c ? 0 : -C,
+        I = (0, d.q_F)(
             {
-                transform: 'translate3d(0, '.concat(I, 'px, 0)'),
+                transform: 'translate3d(0, '.concat(P, 'px, 0)'),
                 config: { duration: v },
                 onStart() {
                     j(!0), E(c);
@@ -66,7 +66,7 @@ function S(e) {
             },
             'animate-always'
         ),
-        w = _ ? P : void 0;
+        w = _ ? I : void 0;
     (_ || S) &&
         (t = (0, r.jsx)(s.animated.div, {
             style: w,
@@ -118,8 +118,8 @@ function E(e) {
             onClick: j,
             onContextMenu: x,
             onHoverChange: E,
-            onKeyDown: I,
-            treeItemProps: { onFocus: P },
+            onKeyDown: P,
+            treeItemProps: { onFocus: I },
             'aria-setsize': w,
             'aria-posinset': N
         } = e,
@@ -198,8 +198,8 @@ function E(e) {
                     onContextMenu: x,
                     onMouseEnter: R,
                     onMouseLeave: D,
-                    onKeyDown: I,
-                    onFocus: P,
+                    onKeyDown: P,
+                    onFocus: I,
                     'aria-expanded': a,
                     'aria-owns': y,
                     focusProps: { enabled: !1 }

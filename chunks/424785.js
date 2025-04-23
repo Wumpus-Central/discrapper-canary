@@ -24,8 +24,8 @@ var i = n(120356),
     x = n(201469),
     S = n(680089),
     E = n(592125),
-    I = n(430824),
-    P = n(607744),
+    P = n(430824),
+    I = n(607744),
     w = n(496675),
     N = n(306680),
     Z = n(9156),
@@ -95,7 +95,7 @@ class W extends R.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, A.rY)(e, T.Z, I.Z);
+        return (0, A.rY)(e, T.Z, P.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -221,7 +221,7 @@ class W extends R.ZP {
             }),
             F(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    i = I.Z.getGuild(t.getGuildId());
+                    i = P.Z.getGuild(t.getGuildId());
                 null != i &&
                     (0, c.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331'), n.e('81070')]).then(n.bind(n, 213202));
@@ -291,9 +291,9 @@ function K(e) {
             mentionCount: N.ZP.getMentionCount(n.id)
         })),
         u = (0, o.e7)([Z.ZP], () => Z.ZP.resolveUnreadSetting(n)),
-        d = (0, o.cj)([E.Z, P.Z, w.Z], () => {
+        d = (0, o.cj)([E.Z, I.Z, w.Z], () => {
             let e = E.Z.getChannel(n.parent_id),
-                r = P.Z.getCheck(n.guild_id);
+                r = I.Z.getCheck(n.guild_id);
             return {
                 canManageChannel: null != t && w.Z.can(M.Plq.MANAGE_CHANNELS, n),
                 canReorderChannel: !0 !== i && (t.id === U._ || (null != e ? w.Z.can(M.Plq.MANAGE_CHANNELS, e) : w.Z.can(M.Plq.MANAGE_CHANNELS, t))),
@@ -309,7 +309,7 @@ function K(e) {
         g = (0, O.Rk)(n.id, v.pV.AUDIENCE),
         { isSubscriptionGated: b, needSubscriptionToAccess: y } = (0, m.Z)(n.id),
         _ = (0, o.e7)([Z.ZP], () => Z.ZP.isFavorite(t.id, n.id)),
-        I = (0, j.xJ)(n.id),
+        P = (0, j.xJ)(n.id),
         T = (0, D.Z)({
             channel: n,
             isChannelSelected: !1,
@@ -317,7 +317,7 @@ function K(e) {
             voiceStates: a,
             isSubscriptionGated: b,
             needSubscriptionToAccess: y,
-            enableConnectedUserLimit: I || (n.userLimit > 0 && n.userLimit < M.xGv)
+            enableConnectedUserLimit: P || (n.userLimit > 0 && n.userLimit < M.xGv)
         }),
         A = e.connected && null == T;
     return (0, r.jsx)(

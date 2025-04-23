@@ -23,16 +23,16 @@ var r = n(200651),
     O = n(388032),
     E = n(54433),
     I = n(44946),
-    S = n(12740);
-function P(e) {
+    P = n(12740);
+function S(e) {
     var t;
     let { log: n, member: l, guild: a } = e,
         { analyticsLocations: d } = (0, p.ZP)(),
         m = g.nm(n),
         C = g.QM(n),
         v = null == (t = g.V$(j.zUn.REASON, n)) ? void 0 : t.newValue,
-        S = g.J5(n),
-        P = (0, h.LJ)(n.id),
+        P = g.J5(n),
+        S = (0, h.LJ)(n.id),
         Z = (0, c.e7)([y.ZP], () => (null != n.userId ? y.ZP.getMember(l.guildId, n.userId) : null), [l.guildId, n.userId]),
         N = (0, _.X)(null == Z ? void 0 : Z.guildId, null == Z ? void 0 : Z.colorStrings),
         T = i.useCallback(
@@ -101,7 +101,7 @@ function P(e) {
                         children: (0, r.jsx)(u.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-primary',
-                            children: P
+                            children: S
                         })
                     })
                 ]
@@ -123,7 +123,7 @@ function P(e) {
                     })
                 }),
             null == v &&
-                null != S &&
+                null != P &&
                 (0, r.jsx)('div', {
                     className: E.auditLogSecondaryContainer,
                     children: (0, r.jsxs)('div', {
@@ -134,13 +134,13 @@ function P(e) {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
                                 tag: 'span',
-                                children: S
+                                children: P
                             })
                         ]
                     })
                 }),
             null == v &&
-                null == S &&
+                null == P &&
                 (0, r.jsx)('div', {
                     className: E.auditLogSecondaryContainer,
                     children: (0, r.jsx)('div', {
@@ -181,13 +181,13 @@ function Z(e) {
         ? null
         : (0, r.jsx)(u.xJW, {
               title: O.intl.string(O.t.flCxLi),
-              titleClassName: S.infoTitle,
+              titleClassName: P.infoTitle,
               children:
                   l.length > 0
                       ? (0, r.jsx)(v.WM, {
                             children: l.map((e) =>
                                 (0, r.jsx)(
-                                    P,
+                                    S,
                                     {
                                         log: e,
                                         member: t,

@@ -33,7 +33,7 @@ function v(e) {
                         trailing: void 0,
                         showUnread: !1
                     };
-                let { unlocked: c } = t,
+                let { unlockedPowerups: c } = t,
                     u = (0, y.h)(c),
                     d = null != (i = null == n ? void 0 : n.lastSeenWarningNotification) ? i : Date.now(),
                     h = new Date(null == (e = u[u.length - 1]) ? void 0 : e.ends_at).getTime(),
@@ -68,14 +68,14 @@ function v(e) {
                     let r = (function (e, t) {
                         let n = h.Oe.find((e) => {
                             let n = _.Cp[e],
-                                r = null != n ? t.unlocked.get(n) : void 0;
+                                r = null != n ? t.unlockedPowerups[n] : void 0;
                             return null != r && r.user_id !== _.Fq;
                         });
                         if (null == n) return;
                         let r = _.Q1[n];
                         if (null == r || (0, u.OY)(r, e)) return;
                         let i = _.Cp[n],
-                            l = null != i ? t.powerups.get(i) : void 0;
+                            l = null != i ? t.allPowerups[i] : void 0;
                         if (null != l)
                             return {
                                 type: m.J.LEVEL_REACHED,
@@ -89,7 +89,7 @@ function v(e) {
                     let i = (function (e, t, n) {
                         let r = Array.from(_.KW.values())
                             .map((e) => {
-                                if (null == t.unlocked.get(e)) return t.powerups.get(e);
+                                if (null == t.unlockedPowerups[e]) return t.allPowerups[e];
                             })
                             .filter(d.lm);
                         if (0 !== r.length) {
@@ -196,7 +196,7 @@ function C(e) {
             null != t &&
                 h.Oe.forEach((n) => {
                     let r = _.Cp[n];
-                    if (null == r || !t.unlocked.has(r)) return;
+                    if (null == r || null == t.unlockedPowerups[r]) return;
                     let i = _.Q1[n];
                     null != i && (0, u.Qd)(i, e, !1, O.L.AUTO_DISMISS);
                 });

@@ -24,8 +24,8 @@ var i = n(120356),
     O = n(210975),
     E = n(809244),
     I = n(618158),
-    S = n(358221),
-    P = n(362721),
+    P = n(358221),
+    S = n(362721),
     Z = n(887012),
     N = n(613548),
     T = n(221888),
@@ -82,7 +82,7 @@ function B(e, t) {
 function G(e) {
     let { focusedParticipant: t, channel: n } = e,
         i = (0, c.bp)(),
-        l = (0, o.e7)([S.Z], () => S.Z.getLayout(n.id, i));
+        l = (0, o.e7)([P.Z], () => P.Z.getLayout(n.id, i));
     return (0, r.jsx)(I.Z, {
         children: (0, r.jsx)(T.Z, {
             className: L.participants,
@@ -178,10 +178,10 @@ function H(e) {
 function V(e) {
     let { channel: t, guild: i, appContext: s, inCall: c, isChatOpen: u, exitFullScreen: m } = e,
         { focusedParticipant: g } = (0, o.cj)(
-            [S.Z],
+            [P.Z],
             () => ({
-                focusedParticipant: S.Z.getSelectedParticipant(t.id),
-                participantsOpen: S.Z.getParticipantsOpen(t.id)
+                focusedParticipant: P.Z.getSelectedParticipant(t.id),
+                participantsOpen: P.Z.getParticipantsOpen(t.id)
             }),
             [t.id]
         ),
@@ -192,7 +192,7 @@ function V(e) {
     t.isDM() ? (I = M.intl.string(M.t.jN2DfX)) : t.isGroupDM() && (I = M.intl.string(M.t['e5y+go']));
     let Z = (0, o.e7)([p.Z], () => p.Z.getChannelStatus(t)),
         T = t.isGuildVoice() && c && null != Z && Z.length > 0,
-        G = (0, P.ZP)(t),
+        G = (0, S.ZP)(t),
         F = T
             ? (0, r.jsx)(a.ua7, {
                   text: M.intl.string(M.t.Mgpxi4),

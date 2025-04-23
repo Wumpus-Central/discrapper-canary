@@ -14,8 +14,8 @@ var n = r(200651),
     d = r(797967),
     p = r(755641),
     f = r(742409),
-    g = r(369509),
-    b = r(141006),
+    b = r(369509),
+    g = r(141006),
     m = r(981631),
     _ = r(116175),
     j = r(680278),
@@ -24,10 +24,10 @@ var n = r(200651),
     h = r(183375);
 function C() {
     var e;
-    let t = o.useMemo(() => Math.floor(Math.random() * b.tl.length), []),
+    let t = o.useMemo(() => Math.floor(Math.random() * g.tl.length), []),
         [r, a] = o.useState({
-            primary_color: b.tl[t].start,
-            secondary_color: b.tl[t].end
+            primary_color: g.tl[t].start,
+            secondary_color: g.tl[t].end
         }),
         { gradientStyle: u, gradientClassname: p } = (0, s.Icv)({
             primaryColor: (0, i.Rf)(r.primary_color),
@@ -51,7 +51,7 @@ function C() {
             }),
             (0, n.jsx)(d.default, {
                 defaultColor: m.p6O,
-                colors: b.tl,
+                colors: g.tl,
                 value: r.primary_color,
                 secondaryValue: null != (e = r.secondary_color) ? e : void 0,
                 onChange: (e) => {
@@ -122,7 +122,7 @@ function x(e) {
                     username: 'Roka',
                     usernameStyle: { color: 'var(--brand-400)' },
                     message: y.intl.string(j.default.eTHkQU),
-                    decorations: (0, n.jsx)(g.S, {
+                    decorations: (0, n.jsx)(b.S, {
                         guildId: t,
                         tag: 'GGEZ',
                         badge: r

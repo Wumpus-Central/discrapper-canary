@@ -23,8 +23,8 @@ var r = n(200651),
     x = n(276952),
     S = n(249792),
     E = n(40153),
-    I = n(593618),
-    P = n(252686),
+    P = n(593618),
+    I = n(252686),
     w = n(682662),
     N = n(674552),
     Z = n(981631),
@@ -134,7 +134,7 @@ let M = i.memo(function (e) {
             },
             [H, J, eS]
         ),
-        eI = i.useCallback(
+        eP = i.useCallback(
             (e) => {
                 if ('ArrowLeft' === e.key && null != es) {
                     var t;
@@ -143,7 +143,7 @@ let M = i.memo(function (e) {
             },
             [es]
         ),
-        eP = i.useCallback(
+        eI = i.useCallback(
             (e) => {
                 if (e) return void eC.delay();
                 eC.cancel(), ev(!1);
@@ -190,7 +190,7 @@ let M = i.memo(function (e) {
                                   },
                                   onMouseDown: ex,
                                   onContextMenu: eE,
-                                  onKeyDown: eI,
+                                  onKeyDown: eP,
                                   icon: H.getIconURL(2 * eN, eb && z, ea),
                                   selected: W || eb
                               },
@@ -204,7 +204,7 @@ let M = i.memo(function (e) {
                       )
                   ),
         eT = eh
-            ? (0, r.jsx)(E.OG, { children: (0, r.jsx)(P.Z, {}) })
+            ? (0, r.jsx)(E.OG, { children: (0, r.jsx)(I.Z, {}) })
             : (0, r.jsx)(a.animated.div, {
                   ref: $
                       ? (e) => {
@@ -236,7 +236,7 @@ let M = i.memo(function (e) {
                 unread: !eh && Y,
                 className: A.pill
             }),
-            (0, r.jsx)(I.Z, {
+            (0, r.jsx)(P.Z, {
                 guild: H,
                 disabled: ee,
                 isDragging: eh,
@@ -246,7 +246,7 @@ let M = i.memo(function (e) {
                 ? (0, r.jsx)(E.ZP, {
                       name: H.name,
                       targetNode: U,
-                      onDragOverChanged: eP
+                      onDragOverChanged: eI
                   })
                 : null
         ]

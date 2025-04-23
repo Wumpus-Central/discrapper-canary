@@ -3,8 +3,8 @@ var r = n(200651),
     s = n(192379),
     i = n(120356),
     o = n.n(i),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     c = n(607070),
     u = n(706454),
     d = n(63063),
@@ -77,21 +77,21 @@ let A = (e, t, n) => ((0, S.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg'
 function Z(e) {
     let { containerSize: t, onClick: n, children: s, tabIndex: i } = e;
     return 'xs' === t
-        ? (0, r.jsx)(a.P3F, {
+        ? (0, r.jsx)(l.P3F, {
               tabIndex: i,
               className: I.learnMoreLink,
               tag: 'span',
               onClick: n,
-              children: (0, r.jsx)(a.Text, {
+              children: (0, r.jsx)(l.Text, {
                   variant: 'text-sm/medium',
                   color: 'text-link',
                   children: s
               })
           })
-        : (0, r.jsx)(a.zxk, {
+        : (0, r.jsx)(l.zxk, {
               tabIndex: i,
               wrapperClassName: I.ctaButtonWrapper,
-              color: a.Ttl.PRIMARY,
+              color: l.Ttl.PRIMARY,
               onClick: n,
               children: s
           });
@@ -99,8 +99,8 @@ function Z(e) {
 function k(e) {
     let { quest: t, progressState: n, isCollectibleQuest: s, location: i, questContentPosition: o, inGiftInventory: u } = e,
         d = n >= x.OH.COMPLETED,
-        m = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        p = (0, l.e7)([g.Z], () => g.Z.isEnrolling(t.id)),
+        m = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
+        p = (0, a.e7)([g.Z], () => g.Z.isEnrolling(t.id)),
         h = (0, f.q8)(t),
         j = (0, f.Vl)(t),
         b = (0, E.Ks)({
@@ -113,9 +113,9 @@ function k(e) {
             isVideoQuest: h,
             inGameQuest: j
         }),
-        C = d && !m ? a.gtL : a.zxk;
+        C = d && !m ? l.gtL : l.zxk;
     return (0, r.jsx)(
-        a.ua7,
+        l.ua7,
         {
             text: b.tooltipText,
             tooltipContentClassName: I.ctaTooltipText,
@@ -125,7 +125,7 @@ function k(e) {
                     C,
                     M(D({}, e), {
                         wrapperClassName: I.ctaButtonWrapper,
-                        color: a.Ttl.BRAND,
+                        color: l.Ttl.BRAND,
                         disabled: null == b.onClick,
                         submitting: p,
                         onClick: null != (t = b.onClick) ? t : () => {},
@@ -149,8 +149,8 @@ let L = (e) => {
         G = (0, f.Xv)(t.config),
         H = (0, S.uq)(n),
         X = n === h.jn.QUESTS_EMBED,
-        V = L || B,
-        Y = W && !F && H,
+        Y = L || B,
+        V = W && !F && H,
         K = (0, x.t5)(t, w.dr.QUESTS_CARD, n),
         { xboxAndPlaystationAccounts: J } = (0, x.z6)(),
         $ = (0, p.O5)(),
@@ -163,11 +163,11 @@ let L = (e) => {
             location: w.dr.QUESTS_CARD,
             questContent: h.jn.QUESTS_EMBED
         }),
-        es = (0, l.e7)([g.Z], () => null != g.Z.questEnrollmentBlockedUntil, []),
-        ei = (0, l.e7)([u.default], () => u.default.locale),
+        es = (0, a.e7)([g.Z], () => null != g.Z.questEnrollmentBlockedUntil, []),
+        ei = (0, a.e7)([u.default], () => u.default.locale),
         eo = (0, x.z)(t),
-        el = H && G,
-        ea = E && !z,
+        ea = H && G,
+        el = E && !z,
         ec = J.length > 0 && H && (0, f.$J)(t) && W && !z && !eo,
         eu = (0, r.jsx)(O.Z, {
             autoplay: c,
@@ -190,15 +190,15 @@ let L = (e) => {
                 className: o()(I.outerContainer, {
                     [I.outerContainerSm]: 'sm' === i,
                     [I.outerContainerXs]: 'xs' === i,
-                    [I.outerContainerNoProgress]: !Y
+                    [I.outerContainerNoProgress]: !V
                 }),
-                style: { visibility: V ? 'inherit' : 'hidden' },
-                'aria-hidden': !V,
+                style: { visibility: Y ? 'inherit' : 'hidden' },
+                'aria-hidden': !Y,
                 children: [
-                    (0, r.jsx)(a.ua7, {
-                        text: ea ? _.intl.string(_.t['04MTGR']) : null,
+                    (0, r.jsx)(l.ua7, {
+                        text: el ? _.intl.string(_.t['04MTGR']) : null,
                         tooltipContentClassName: I.rewardTileExpirationTooltip,
-                        shouldShow: ea,
+                        shouldShow: el,
                         children: (e) =>
                             (0, r.jsxs)(
                                 'div',
@@ -207,9 +207,9 @@ let L = (e) => {
                                         E &&
                                             (0, r.jsx)('div', {
                                                 className: I.rewardTileExpired,
-                                                children: (0, r.jsx)(a.P4T, { color: a.TVs.colors.WHITE })
+                                                children: (0, r.jsx)(l.P4T, { color: l.TVs.colors.WHITE })
                                             }),
-                                        el
+                                        ea
                                             ? (0, r.jsx)(P.Z, {
                                                   questConfig: t.config,
                                                   fallback: eu,
@@ -223,7 +223,7 @@ let L = (e) => {
                     (0, r.jsxs)('div', {
                         className: o()(I.gridText, I.taskDetails),
                         children: [
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: A(n, i, W),
                                 className: I.taskInstructions,
                                 children: E ? _.intl.formatToPlainString(_.t['ge+AJi'], { questName: t.config.messages.questName }) : K
@@ -234,31 +234,31 @@ let L = (e) => {
                                       quest: t,
                                       withRewardName: !0
                                   })
-                                : (0, r.jsx)(a.Text, {
+                                : (0, r.jsx)(l.Text, {
                                       variant: 'lg' === i ? 'text-sm/medium' : 'text-xs/medium',
                                       color: 'text-muted',
                                       children: (function (e) {
                                           var t, n, r, s, i, o;
-                                          let { quest: l, locale: a, isQuestExpired: c, sharedQuestFields: u, withCopySimplification: p, collectibleQuestRewardDescription: g } = e,
-                                              h = (null == (t = l.userStatus) ? void 0 : t.completedAt) != null,
-                                              j = h && (null == (n = l.userStatus) ? void 0 : n.claimedAt) != null,
-                                              C = (0, x.B6)(null == (r = l.userStatus) ? void 0 : r.completedAt, {
+                                          let { quest: a, locale: l, isQuestExpired: c, sharedQuestFields: u, withCopySimplification: p, collectibleQuestRewardDescription: g } = e,
+                                              h = (null == (t = a.userStatus) ? void 0 : t.completedAt) != null,
+                                              j = h && (null == (n = a.userStatus) ? void 0 : n.claimedAt) != null,
+                                              C = (0, x.B6)(null == (r = a.userStatus) ? void 0 : r.completedAt, {
                                                   year: 'numeric',
                                                   month: 'long',
                                                   day: 'numeric'
                                               }),
-                                              v = (0, f.oo)({ quest: l }),
+                                              v = (0, f.oo)({ quest: a }),
                                               y = u.defaultReward.messages.nameWithArticle,
                                               T = u.defaultReward.messages.nameWithArticle,
                                               O = p ? T : y,
-                                              E = (0, f.Kr)(l.config),
-                                              N = (0, f.b7)(l),
+                                              E = (0, f.Kr)(a.config),
+                                              N = (0, f.b7)(a),
                                               q = (0, b.U)();
                                           if (j) {
                                               let e = v
                                                       ? (0, f.o9)({
-                                                            quest: l,
-                                                            idx: null == (s = l.userStatus) ? void 0 : s.claimedTier
+                                                            quest: a,
+                                                            idx: null == (s = a.userStatus) ? void 0 : s.claimedTier
                                                         })
                                                       : null,
                                                   t = null != (i = null == e ? void 0 : e.messages.nameWithArticle) ? i : null;
@@ -281,7 +281,7 @@ let L = (e) => {
                                                     });
                                           let S = v
                                               ? (0, f.o9)({
-                                                    quest: l,
+                                                    quest: a,
                                                     idx: 0
                                                 })
                                               : null;
@@ -290,7 +290,7 @@ let L = (e) => {
                                               : null != S && null != S.approximateCount
                                                 ? _.intl.format(_.t['4bMK19'], {
                                                       maxReward: S.messages.nameWithArticle,
-                                                      maxRewardCount: (0, m.Bs)(S.approximateCount, a),
+                                                      maxRewardCount: (0, m.Bs)(S.approximateCount, l),
                                                       helpCenterLink: d.Z.getArticleURL(R.BhN.QUESTS_LEARN_MORE)
                                                   })
                                                 : q
@@ -318,13 +318,13 @@ let L = (e) => {
                         ? (0, r.jsxs)('div', {
                               className: o()(I.ctaButtonContainer, I.gridCtaButtons),
                               children: [
-                                  (0, r.jsx)(a.zxk, {
-                                      color: a.Ttl.PRIMARY,
+                                  (0, r.jsx)(l.zxk, {
+                                      color: l.Ttl.PRIMARY,
                                       disabled: !0,
                                       children: _.intl.string(_.t.V293qq)
                                   }),
-                                  (0, r.jsx)(a.zxk, {
-                                      color: a.Ttl.BRAND,
+                                  (0, r.jsx)(l.zxk, {
+                                      color: l.Ttl.BRAND,
                                       onClick: () => (0, N.openQuestMinorEnrollmentBlockModal)(n),
                                       children: _.intl.string(_.t.vY9GgI)
                                   })
@@ -361,10 +361,10 @@ let L = (e) => {
                                         })
                               ]
                           }),
-                    Y &&
+                    V &&
                         (0, r.jsx)(T.Z, {
                             className: I.gridProgressBar,
-                            color: z ? a.TVs.colors.TEXT_POSITIVE : a.TVs.colors.BG_BRAND,
+                            color: z ? l.TVs.colors.TEXT_POSITIVE : l.TVs.colors.BG_BRAND,
                             quest: t,
                             isInventory: H
                         })

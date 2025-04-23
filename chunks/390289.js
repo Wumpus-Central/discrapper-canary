@@ -56,19 +56,19 @@ let y = [
     O = null,
     E = 0,
     I = 0;
-function S() {
+function P() {
     if (null == O || !N(O)) return !1;
     let e = Z(O);
     if (e.lastActionTime > Date.now() - d.Z.Millis.DAY && e.viewDuration > C) return !1;
     let t = Date.now();
     (e.lastActionTime = t), (e.viewDuration += t - E), (E = t);
 }
-function P() {
+function S() {
     return (
         0 !== I && (clearInterval(I), (I = 0)),
         u.ZP.useNewNotifications &&
             (I = setInterval(() => {
-                S() && w.emitChange();
+                P() && w.emitChange();
             }, 15 * d.Z.Millis.SECOND)),
         !1
     );
@@ -98,7 +98,7 @@ function T(e, t) {
 }
 class A extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (v.channels = e.channels), this.syncWith([u.ZP], P), this.waitFor(u.ZP, c.Z, a.Z);
+        null != e && (v.channels = e.channels), this.syncWith([u.ZP], S), this.waitFor(u.ZP, c.Z, a.Z);
     }
     getState() {
         return v;
@@ -130,11 +130,11 @@ class A extends (r = i.ZP.PersistedStore) {
 _(A, 'displayName', 'UnreadSettingNoticeStore2'), _(A, 'persistKey', 'UnreadSettingNoticeStore2');
 let w = new A(l.Z, {
         CHANNEL_SELECT: function () {
-            let e = S();
+            let e = P();
             return (O = c.Z.getChannelId()), (E = Date.now()), e;
         },
         CONNECTION_OPEN: function () {
-            (O = c.Z.getChannelId()), (E = Date.now()), P();
+            (O = c.Z.getChannelId()), (E = Date.now()), S();
             let e = Date.now() - x;
             h.default.forEach(v.channels, (t, n) => {
                 let { lastActionTime: r } = t;

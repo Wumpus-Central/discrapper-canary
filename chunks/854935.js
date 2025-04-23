@@ -24,8 +24,8 @@ var i = n(442837),
     O = n(827313),
     E = n(228168),
     I = n(981631),
-    S = n(388032),
-    P = n(420890);
+    P = n(388032),
+    S = n(420890);
 function Z(e) {
     let { user: t, currentUser: n, displayProfile: Z, channel: N, isHovering: T, onOpenProfile: A } = e,
         { relationshipType: w, originApplicationId: R } = (0, i.cj)([s.Z], () => ({
@@ -40,7 +40,7 @@ function Z(e) {
             return null == (e = d.Z.getUserProfile(t.id)) ? void 0 : e.application;
         });
     return (0, r.jsxs)('div', {
-        className: P.body,
+        className: S.body,
         children: [
             (0, r.jsx)(j.Z, {
                 user: t,
@@ -87,7 +87,7 @@ function Z(e) {
             ),
             (0, r.jsx)(C.Z, {
                 user: t,
-                className: P.card
+                className: S.card
             }),
             t.isProvisional &&
                 (0, r.jsx)(a.wQ, {
@@ -98,16 +98,16 @@ function Z(e) {
                 user: t,
                 currentUser: n,
                 displayProfile: Z,
-                className: P.card
+                className: S.card
             }),
             (0, r.jsxs)(v.Z.Overlay, {
-                className: P.overlay,
+                className: S.overlay,
                 children: [
                     !L &&
                         (null == Z ? void 0 : Z.bio) != null &&
                         (null == Z ? void 0 : Z.bio) !== '' &&
                         (0, r.jsx)(x.Z, {
-                            heading: S.intl.string(S.t['61W33d']),
+                            heading: P.intl.string(P.t['61W33d']),
                             headingColor: 'header-primary',
                             children: (0, r.jsx)(f.Z, {
                                 userBio: Z.bio,
@@ -124,12 +124,12 @@ function Z(e) {
                         }),
                     M.length > 0 &&
                         (0, r.jsx)(x.Z, {
-                            heading: S.intl.string(S.t['Uv/eT0']),
+                            heading: P.intl.string(P.t['Uv/eT0']),
                             headingColor: 'header-primary',
                             children: (0, r.jsx)(b.Z, { applicationIds: M })
                         }),
                     (0, r.jsx)(x.Z, {
-                        heading: t.bot ? S.intl.string(S.t['A//N4u']) : S.intl.string(S.t.a6XYDw),
+                        heading: t.bot ? P.intl.string(P.t['A//N4u']) : P.intl.string(P.t.a6XYDw),
                         headingColor: 'header-primary',
                         children: (0, r.jsx)(y.Z, { userId: t.id })
                     })

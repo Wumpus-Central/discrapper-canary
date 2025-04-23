@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(357156),
     E = n(221241),
     I = n(923973),
-    S = n(829750),
-    P = n(82965),
+    P = n(829750),
+    S = n(82965),
     Z = n(189771),
     N = n(294629),
     T = n(793319),
@@ -65,7 +65,7 @@ function ec(e) {
         i = (0, en.Z)(t.id),
         [l, o] = (0, ei.Z)(t),
         c = (0, a.e7)([G.Z], () => G.Z.can(el.Plq.REQUEST_TO_SPEAK, t)),
-        u = (0, P.Z)({ location: 'AudienceRaiseHandButton' }),
+        u = (0, S.Z)({ location: 'AudienceRaiseHandButton' }),
         { coloredIconsEnabled: d } = (0, E.Z)({ location: 'AudienceRaiseHandButton' });
     return i
         ? null
@@ -84,7 +84,7 @@ function ec(e) {
 let eu = i.memo(function (e) {
     let { channel: t } = e,
         n = (0, a.e7)([F.Z], () => F.Z.getVoiceChannelId() === t.id, [t.id]),
-        i = (0, P.Z)({ location: 'AudienceControlTray' }),
+        i = (0, S.Z)({ location: 'AudienceControlTray' }),
         { coloredIconsEnabled: l, simplifiedSettingsEnabled: s } = (0, E.Z)({ location: 'AudienceControlTray' });
     return i
         ? (0, r.jsxs)('div', {
@@ -105,7 +105,7 @@ let eu = i.memo(function (e) {
 function ed(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, p.ZP)(),
-        i = (0, P.Z)({ location: 'MakeMeASpeakerButton' }),
+        i = (0, S.Z)({ location: 'MakeMeASpeakerButton' }),
         l = () => {
             (0, z.RK)(t, !1), (0, b.v)(n, b.d.SPEAK_ON_STAGE);
         };
@@ -150,15 +150,15 @@ function ep(e) {
         v = K.ZP.isModerator(y, t.id),
         j = (0, Y.B)(t.id),
         E = l(f),
-        I = (0, P.Z)({ location: 'ExitStageButton' }),
-        { parentAnalyticsLocation: S } = (0, p.ZP)();
+        I = (0, S.Z)({ location: 'ExitStageButton' }),
+        { parentAnalyticsLocation: P } = (0, p.ZP)();
     if (!m)
         return (0, r.jsx)(s.zxk, {
             size: s.zxk.Sizes.MEDIUM,
             color: s.zxk.Colors.GREEN,
             className: o()(es.buttonSpacing, es.buttonWithTextButton),
             onClick: () => {
-                (0, b.v)(S, b.d.JOIN_STAGE), (0, W.TM)(t);
+                (0, b.v)(P, b.d.JOIN_STAGE), (0, W.TM)(t);
             },
             children: (0, r.jsxs)('div', {
                 className: es.buttonWithTextInnerContainer,
@@ -195,7 +195,7 @@ function ep(e) {
                           'aria-label': ea.intl.string(ea.t['3Uj+2t']),
                           onClose: l,
                           onSelect: n,
-                          onInteraction: (0, _.u)('End Stage', S, { entrypoint: eo.A5.CARET }),
+                          onInteraction: (0, _.u)('End Stage', P, { entrypoint: eo.A5.CARET }),
                           children: (0, r.jsx)(s.sNh, {
                               id: 'end-stage',
                               color: 'danger',
@@ -259,7 +259,7 @@ function ep(e) {
 function eh(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, p.ZP)(),
-        i = (0, P.Z)({ location: 'MoveToAudienceButton' }),
+        i = (0, S.Z)({ location: 'MoveToAudienceButton' }),
         l = () => {
             (0, b.v)(n, b.d.MOVE_TO_AUDIENCE), (0, z.yi)(t);
         };
@@ -326,7 +326,7 @@ let em = i.memo(function (e) {
         d = (0, a.e7)([y.Z], () => null != y.Z.getAwaitingRemoteSessionInfo()),
         { cameraUnavailable: b, enabled: x } = (0, I.Z)(),
         v = (0, Z.Z)(t),
-        { limit: j, reachedLimit: O } = (0, S.Z)(t),
+        { limit: j, reachedLimit: O } = (0, P.Z)(t),
         k = (0, a.e7)([H.default], () => H.default.getCurrentUser()),
         M = (0, a.e7)([B.Z], () => (0, C.Z)(B.Z)),
         U = (0, a.e7)([F.Z], () => F.Z.getVoiceChannelId() === t.id, [t.id]),
@@ -334,7 +334,7 @@ let em = i.memo(function (e) {
         V = (0, Q.PK)(t.id),
         z = j > 0,
         W = (O && !V) || (null != G && G.user.id !== (null == k ? void 0 : k.id)),
-        q = (0, P.Z)({ location: 'SpeakerControlTray' }),
+        q = (0, S.Z)({ location: 'SpeakerControlTray' }),
         { coloredIconsEnabled: K, simplifiedSettingsEnabled: X } = (0, E.Z)({ location: 'SpeakerControlTray' }),
         J = (0, _.u)('AudioDeviceMenu', n, { entrypoint: eo.A5.CARET });
     if (null == k) return null;
@@ -506,7 +506,7 @@ let em = i.memo(function (e) {
 });
 function eg(e) {
     let { channel: t } = e,
-        n = (0, P.Z)({ location: 'StartStageControlTray' }),
+        n = (0, S.Z)({ location: 'StartStageControlTray' }),
         { coloredIconsEnabled: i } = (0, E.Z)({ location: 'StartStageControlTray' });
     return n
         ? (0, r.jsxs)('div', {

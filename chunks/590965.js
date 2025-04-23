@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => I }), n(388685), n(539854);
+n.d(t, { Z: () => P }), n(388685), n(539854);
 var i,
     l = n(442837),
     o = n(570140),
@@ -68,7 +68,7 @@ class E extends (i = l.ZP.Store) {
     }
 }
 _(E, 'displayName', 'InviteModalStore');
-let I = new E(o.Z, {
+let P = new E(o.Z, {
     OVERLAY_INITIALIZE: S,
     CONNECTION_OPEN: S,
     CONNECTION_CLOSED: function () {

@@ -32,7 +32,7 @@ let E = i.memo(function (e) {
         l,
         u,
         E,
-        { stream: I, canGoLive: P, guildId: w, isStreaming: N, channel: Z, canStream: T, runningGame: A, embeddedActivity: R, activity: D, application: L, analyticsContext: k } = e,
+        { stream: P, canGoLive: I, guildId: w, isStreaming: N, channel: Z, canStream: T, runningGame: A, embeddedActivity: R, activity: D, application: L, analyticsContext: k } = e,
         { skipModalForGame: M, showRefreshedGoLiveModal: U } = (0, g.a)({
             location: 'Activity Panel',
             autoTrackExposure: !1
@@ -61,8 +61,8 @@ let E = i.memo(function (e) {
             [G]
         ),
         H = i.useCallback(() => {
-            (0, b.Z)(I);
-        }, [I]),
+            (0, b.Z)(P);
+        }, [P]),
         z = i.useCallback(() => {
             let e = null != Z && (0, y.vd)(Z.type) ? Z : null,
                 t = null != e ? e.getGuildId() : w;
@@ -126,7 +126,7 @@ let E = i.memo(function (e) {
             });
         }, [Z, w, A, U, M]),
         W =
-            (null != A || null == R || (0, c.R)()) && (N || P)
+            (null != A || null == R || (0, c.R)()) && (N || I)
                 ? (N
                       ? ((t = !1),
                         (l = () => {
@@ -168,7 +168,7 @@ let E = i.memo(function (e) {
                       onClick: F(R.applicationId, R.location),
                       icon: s.PBZ
                   }),
-        q = null == I ? null : (0, r.jsx)(f.Z, {});
+        q = null == P ? null : (0, r.jsx)(f.Z, {});
     return null == W && null == Y && null == K
         ? null
         : (0, r.jsxs)('div', {

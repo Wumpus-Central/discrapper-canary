@@ -4,14 +4,14 @@ n(192379);
 var s = n(442837),
     i = n(481060),
     o = n(204418),
-    l = n(594174),
-    a = n(113434),
+    a = n(594174),
+    l = n(113434),
     c = n(182294),
     u = n(723781);
 let d = (e) => {
         let { questConfig: t, fallback: n, isFocused: d } = e,
-            m = (0, s.e7)([l.default], () => l.default.getCurrentUser()),
-            { avatarDecoration: p, isFetching: x } = (0, a.DU)(t);
+            m = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
+            { avatarDecoration: p, isFetching: x } = (0, l.DU)(t);
         return x
             ? (0, r.jsx)('div', {
                   className: u.questsCollectibleReward,

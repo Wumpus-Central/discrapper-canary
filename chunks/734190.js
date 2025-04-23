@@ -23,8 +23,8 @@ var r = n(200651),
     x = n(981631),
     S = n(124368),
     E = n(388032),
-    I = n(915887),
-    P = n(768107),
+    P = n(915887),
+    I = n(768107),
     w = n(995453);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -227,7 +227,7 @@ let R = i.memo(function (e) {
         X = (0, p.Q3)('GuildSidebarThreadListEntry') ? T : A;
     return (0, r.jsxs)('li', {
         role: Y,
-        className: o()(I.containerDefault, { [I.selected]: l }),
+        className: o()(P.containerDefault, { [P.selected]: l }),
         children: [
             (0, r.jsx)(X, { withGuildIcon: D }),
             R
@@ -246,34 +246,34 @@ let R = i.memo(function (e) {
                     right: 4
                 },
                 children: (0, r.jsxs)('div', {
-                    className: o()(I.iconVisibility, P.wrapper, P.typeThread, {
-                        [P.modeSelected]: l,
-                        [P.modeMuted]: !l && B,
-                        [P.modeUnreadImportant]: !B && !l && M,
-                        [P.withGuildIcon]: D
+                    className: o()(P.iconVisibility, I.wrapper, I.typeThread, {
+                        [I.modeSelected]: l,
+                        [I.modeMuted]: !l && B,
+                        [I.modeUnreadImportant]: !B && !l && M,
+                        [I.withGuildIcon]: D
                     }),
                     onMouseDown: F,
                     onContextMenu: H,
                     children: [
-                        !M || B || l ? null : (0, r.jsx)('div', { className: o()(P.unread, P.unreadImportant) }),
+                        !M || B || l ? null : (0, r.jsx)('div', { className: o()(I.unread, I.unreadImportant) }),
                         (0, r.jsx)(
                             c.P3F,
                             Z(N({}, K), {
                                 innerRef: q,
-                                className: P.link,
+                                className: I.link,
                                 onClick: V,
                                 'aria-label': Q,
                                 focusProps: { enabled: !1 },
                                 children: (0, r.jsxs)('div', {
-                                    className: o()(P.linkTop, P.__invalid_threadMainContent),
+                                    className: o()(I.linkTop, I.__invalid_threadMainContent),
                                     children: [
                                         (0, r.jsx)(h.Z, {
-                                            className: P.name,
+                                            className: I.name,
                                             'aria-hidden': !0,
                                             children: t.name
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: P.children,
+                                            className: I.children,
                                             children: [
                                                 z > 0 && t.userLimit > 0
                                                     ? (0, r.jsx)(v.Z, {

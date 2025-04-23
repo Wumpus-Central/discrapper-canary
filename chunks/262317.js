@@ -28,8 +28,8 @@ var r = n(200651),
     O = n(430824),
     E = n(496675),
     I = n(594174),
-    S = n(979651),
-    P = n(927923),
+    P = n(979651),
+    S = n(927923),
     Z = n(70722),
     N = n(388032),
     T = n(587382);
@@ -120,7 +120,7 @@ let M = (0, p.$)(function (e) {
         ef = () => {
             K && (null == ee || ee(p.id));
         },
-        em = () => K && (0, _.p9)(R, S.Z, O.Z, E.Z, m.Z)[0],
+        em = () => K && (0, _.p9)(R, P.Z, O.Z, E.Z, m.Z)[0],
         eg = () => {
             if (!em()) return;
             let e = {
@@ -157,7 +157,7 @@ let M = (0, p.$)(function (e) {
                 location: ea
             }),
         ey = (e) => {
-            let t = P.al.has(null != er ? er : ''),
+            let t = S.al.has(null != er ? er : ''),
                 n = {
                     user: p,
                     speaking: z,

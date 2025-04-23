@@ -47,7 +47,7 @@ let h = new d(l.Z, {
         let { guildId: h } = e,
             p = null != (n = null == (t = o.Z.getGuild(h)) ? void 0 : t.premiumSubscriberCount) ? n : 0,
             f = s.Z.getStateForGuild(h),
-            g = (0, a.h)(null != (r = null == f ? void 0 : f.unlocked) ? r : new Map());
+            g = (0, a.h)(null != (r = null == f ? void 0 : f.unlockedPowerups) ? r : {});
         (l = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

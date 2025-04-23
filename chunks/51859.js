@@ -6,13 +6,13 @@ var r = t(200651),
     a = t(838968),
     l = t(262212),
     c = t(795338),
-    d = t(279604),
-    u = t(388032),
+    u = t(279604),
+    d = t(388032),
     p = t(117172);
 function m(e) {
     let { guildId: n, powerup: t } = e,
         [m, x] = i.useState(void 0);
-    (0, d.KT)(m);
+    (0, u.KT)(m);
     let [_, f] = i.useState(!1);
     return (0, r.jsxs)(a.Z, {
         onHover: (e) => f(e),
@@ -55,7 +55,7 @@ function m(e) {
             }),
             (0, r.jsx)(s.IGR, {
                 className: p.new,
-                text: u.intl.string(u.t.y2b7CA)
+                text: d.intl.string(d.t.y2b7CA)
             })
         ]
     });

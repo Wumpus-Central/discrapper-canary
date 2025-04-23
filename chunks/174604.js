@@ -79,7 +79,7 @@ function O(e) {
         g = (0, f.Ek)(t.id, 'GuildBoostingMarketing'),
         b = (0, c.e7)([d.Z], () => {
             var e, n;
-            return null == (n = d.Z.getStateForGuild(t.id)) || null == (e = n.catalog) ? void 0 : e.get(_.Us.PERK);
+            return null == (n = d.Z.getStateForGuild(t.id)) || null == (e = n.powerupCatalog) ? void 0 : e[_.Us.PERK];
         }),
         [O, I] = i.useState(!1),
         [S, T] = (0, u.q_F)(() => ({

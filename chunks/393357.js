@@ -6,19 +6,19 @@ var r = t(200651),
     a = t(443002),
     l = t(430824),
     c = t(50101),
-    d = t(639777),
-    u = t(504392),
+    u = t(639777),
+    d = t(504392),
     p = t(981631);
 function m(e) {
     let { guildId: n, powerupSkuId: t } = e,
         m = (0, o.e7)([l.Z], () => l.Z.getGuild(n)),
         x = (0, o.e7)([s.Z], () => s.Z.hasLoadedExperiments),
-        _ = (0, d.Z)(n),
+        _ = (0, u.Z)(n),
         f = (0, c.Ek)(n, 'GuildPowerupsPage');
     return x && null != _ && null != m
         ? f
             ? _
-                ? (0, r.jsx)(u.Z, {
+                ? (0, r.jsx)(d.Z, {
                       guildId: n,
                       powerupSkuId: t
                   })

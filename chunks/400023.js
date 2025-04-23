@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(607744),
     E = n(375954),
     I = n(496675),
-    S = n(306680),
-    P = n(62817),
+    P = n(306680),
+    S = n(62817),
     Z = n(594174),
     N = n(459273),
     T = n(255269),
@@ -102,7 +102,7 @@ function H(e, t) {
 let V = i.memo(
         function (e) {
             var t;
-            let { className: n, messageGroupSpacing: l, scrollerClassName: d, channel: f, messages: m, unreadCount: g, showNewMessagesBar: b, messageDisplayCompact: _, channelStream: C, uploads: x, hasUnreads: v, editingMessageId: j, fontSize: O, keyboardModeEnabled: E, filterAfterTimestamp: S, showingQuarantineBanner: P, hideSummaries: Z = !1, jumpBarClassName: T } = e,
+            let { className: n, messageGroupSpacing: l, scrollerClassName: d, channel: f, messages: m, unreadCount: g, showNewMessagesBar: b, messageDisplayCompact: _, channelStream: C, uploads: x, hasUnreads: v, editingMessageId: j, fontSize: O, keyboardModeEnabled: E, filterAfterTimestamp: P, showingQuarantineBanner: S, hideSummaries: Z = !1, jumpBarClassName: T } = e,
                 [A, R] = i.useState(!1),
                 V = i.useMemo(
                     () =>
@@ -132,7 +132,7 @@ let V = i.memo(
                     hasUnreads: v,
                     focusId: j,
                     placeholderHeight: V.totalHeight,
-                    canLoadMore: null == S,
+                    canLoadMore: null == P,
                     handleScrollToBottom: i.useCallback(() => R(!0), [R]),
                     handleScrollFromBottom: i.useCallback(() => R(!1), [R])
                 }),
@@ -160,8 +160,8 @@ let V = i.memo(
                     loadMore: z.loadMore,
                     scrollManager: z,
                     specs: V,
-                    filterAfterTimestamp: null != S ? S : Y,
-                    showingQuarantineBanner: P,
+                    filterAfterTimestamp: null != P ? P : Y,
+                    showingQuarantineBanner: S,
                     hideSummaries: Z,
                     isAtBottom: A,
                     jumpToPresent: () => {
@@ -256,7 +256,7 @@ let V = i.memo(
                                                             q,
                                                             (0, r.jsx)('div', {
                                                                 className: o()({
-                                                                    [B.scrollerSpacer]: !P,
+                                                                    [B.scrollerSpacer]: !S,
                                                                     [B.empty]: 0 === m.length && !m.loadingMore,
                                                                     [B.emptyForum]: 1 === m.length && !m.loadingMore && f.isForumPost() && (null == (t = m.first()) ? void 0 : t.isFirstMessageInForumPost(f))
                                                                 })
@@ -339,10 +339,10 @@ let V = i.memo(
                 var t, n;
                 let r = (0, s.e7)([E.Z], () => E.Z.getMessages(e.id), [e.id]),
                     l = (0, s.e7)(
-                        [S.ZP],
+                        [P.ZP],
                         () => {
                             var t;
-                            return null != (t = S.ZP.getOldestUnreadMessageId(e.id)) ? t : null;
+                            return null != (t = P.ZP.getOldestUnreadMessageId(e.id)) ? t : null;
                         },
                         [e.id]
                     ),
@@ -407,8 +407,8 @@ let V = i.memo(
                         messages: U,
                         channelStream: B,
                         permissionVersion: p,
-                        uploads: (0, s.e7)([P.Z], () => P.Z.getFiles(t.id), [t]),
-                        unreadCount: (0, s.e7)([S.ZP], () => S.ZP.getUnreadCount(t.id), [t]),
+                        uploads: (0, s.e7)([S.Z], () => S.Z.getFiles(t.id), [t]),
+                        unreadCount: (0, s.e7)([P.ZP], () => P.ZP.getUnreadCount(t.id), [t]),
                         hasUnreads: null != z,
                         canChat: y,
                         editingMessageId: W,

@@ -25,8 +25,8 @@ let b = i.memo(function (e) {
         S = (0, f.Z)(_),
         {
             badge: E,
-            unread: I,
-            isMentionLowImportance: P
+            unread: P,
+            isMentionLowImportance: I
         } = (0, l.cj)([d.default], () => ({
             badge: d.default.getMentionCount(_),
             isMentionLowImportance: d.default.getIsMentionLowImportance(_),
@@ -85,9 +85,9 @@ let b = i.memo(function (e) {
                 animatable: C,
                 selected: x === _,
                 badge: E,
-                isMentionLowImportance: P,
+                isMentionLowImportance: I,
                 lowerBadge: N,
-                unread: I,
+                unread: P,
                 mediaState: S,
                 guildJoinRequestStatus: v
             }),

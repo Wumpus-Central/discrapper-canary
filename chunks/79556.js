@@ -23,8 +23,8 @@ var r = n(200651),
     x = n(9156),
     S = n(594174),
     E = n(109446),
-    I = n(98597),
-    P = n(648501),
+    P = n(98597),
+    I = n(648501),
     w = n(473403),
     N = n(304471),
     Z = n(981631),
@@ -77,7 +77,7 @@ function L(e, t) {
         e
     );
 }
-class k extends I.ZP {
+class k extends P.ZP {
     componentWillUnmount() {
         this.resetTextChannelPopoutTimers();
     }
@@ -96,23 +96,23 @@ class k extends I.ZP {
     render() {
         let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: m, isSubscriptionGated: y, isFavoriteSuggestion: _, subtitle: O, forceTopLevelThread: v, embeddedApps: C, resolvedUnreadSetting: j, withGuildIcon: x, enableActivities: S } = this.props,
             E = (0, b.jW)({ location: 'text_channel' }).entrypoints,
-            I = S && null != C && C.length > 0,
-            P = (0, g.D)(O),
+            P = S && null != C && C.length > 0,
+            I = (0, g.D)(O),
             N = (0, r.jsx)('li', {
                 className: o()(this.getClassName(), {
                     [A.disabled]: this.isDisabled(),
                     [A.selected]: n
                 }),
                 'data-dnd-name': e.name,
-                onMouseEnter: c || I ? this.handleMouseEnter : void 0,
-                onMouseLeave: c || I ? this.handleMouseLeave : void 0,
+                onMouseEnter: c || P ? this.handleMouseEnter : void 0,
+                onMouseLeave: c || P ? this.handleMouseLeave : void 0,
                 children: (0, r.jsx)(a.yRy, {
                     targetElementRef: this.channelItemRef,
                     position: 'right',
                     renderPopout: this.renderPopout,
                     spacing: 0,
                     onRequestClose: this.handleClosePopout,
-                    shouldShow: (c && this.state.shouldShowThreadsPopout) || (I && this.state.shouldShowActivities),
+                    shouldShow: (c && this.state.shouldShowThreadsPopout) || (P && this.state.shouldShowActivities),
                     children: () =>
                         (0, r.jsxs)(w.ZP, {
                             ref: this.channelItemRef,
@@ -124,8 +124,8 @@ class k extends I.ZP {
                             unread: l,
                             mentionCount: u,
                             hasActiveThreads: s,
-                            subtitle: null == P ? void 0 : P.subtitle,
-                            subtitleColor: null == P ? void 0 : P.color,
+                            subtitle: null == I ? void 0 : I.subtitle,
+                            subtitleColor: null == I ? void 0 : I.color,
                             onMouseDown: this.handleMouseDown,
                             onContextMenu: this.handleContextMenu,
                             connectDragPreview: m ? p : null,
@@ -274,7 +274,7 @@ function U(e) {
         }),
         b = (0, s.e7)([y.Z], () => y.Z.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: v, isSubscriptionGated: E } = (0, m.Z)(t.id),
-        I = (0, s.e7)([x.ZP], () => x.ZP.isFavorite(n.id, t.id)),
+        P = (0, s.e7)([x.ZP], () => x.ZP.isFavorite(n.id, t.id)),
         w = (0, s.e7)(
             [S.default],
             () => {
@@ -284,7 +284,7 @@ function U(e) {
             [t]
         ),
         N = (0, h.NX)(t.id),
-        A = (0, P.Z)({
+        A = (0, I.Z)({
             channel: t,
             isChannelCollapsed: !1,
             isChannelSelected: a,
@@ -304,7 +304,7 @@ function U(e) {
             isSubscriptionGated: E,
             needSubscriptionToAccess: v,
             isNewChannel: b && e.canBeNewChannel,
-            isFavoriteSuggestion: l && !I,
+            isFavoriteSuggestion: l && !P,
             canShowThreadPreviewForUser: w,
             channelInfo: A,
             embeddedApps: R,

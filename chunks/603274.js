@@ -24,7 +24,7 @@ var i = n(120356),
     x = n(388032),
     S = n(714509),
     E = n(375613);
-function I(e, t) {
+function P(e, t) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
@@ -42,7 +42,7 @@ function I(e, t) {
               ]
           });
 }
-function P() {
+function I() {
     let e = (0, a.Wu)([C.Z, b.Z], () =>
             v.default
                 .keys(C.Z.getFavoriteChannels())
@@ -99,9 +99,9 @@ function P() {
             },
             [t]
         ),
-        P = (0, a.Wu)([y.default], () => E.map((e) => y.default.getUser(e)), [E]),
+        I = (0, a.Wu)([y.default], () => E.map((e) => y.default.getUser(e)), [E]),
         w = (0, a.Wu)([y.default], () => x.map((e) => y.default.getUser(e)), [x]),
-        N = I(
+        N = P(
             c.gj8,
             l.filter((e) => !x.includes(e.id) && !E.includes(e.id))
         ),
@@ -138,12 +138,12 @@ function P() {
                           })
                       ]
                   }),
-        T = I(
+        T = P(
             c.hGI,
             w.filter((e) => null != e && !E.includes(e.id))
         ),
         { enabled: A } = u.c.useExperiment({ location: 'FavoritesTooltip' }, { autoTrackExposure: !0 }),
-        R = I(A ? c.iWm : c.nG3, P);
+        R = P(A ? c.iWm : c.nG3, I);
     return (0, r.jsxs)(r.Fragment, {
         children: [Z, N, T, R]
     });
@@ -158,7 +158,7 @@ function w() {
                     children: x.intl.string(x.t.wMWycn)
                 })
             }),
-            (0, r.jsx)(P, {})
+            (0, r.jsx)(I, {})
         ]
     });
 }

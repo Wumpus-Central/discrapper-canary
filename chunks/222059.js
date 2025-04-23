@@ -23,8 +23,8 @@ var r = n(200651),
     x = n(278464),
     S = n(276952),
     E = n(682662),
-    I = n(662146),
-    P = n(674552),
+    P = n(662146),
+    I = n(674552),
     w = n(981631),
     N = n(474936),
     Z = n(871465),
@@ -68,7 +68,7 @@ function D(e) {
     let F = p || v || O,
         H = (0, r.jsx)(a.aRk, {
             selected: U || F,
-            lowerBadge: b > 0 ? (0, P.Ne)(b) : null,
+            lowerBadge: b > 0 ? (0, I.Ne)(b) : null,
             upperBadge: V,
             lowerBadgeSize: { width: (0, a.OVM)(b) },
             children: (0, r.jsx)(
@@ -163,7 +163,7 @@ function D(e) {
                         hovered: v,
                         className: A.pill
                     }),
-                    (0, r.jsx)(I.Z, {
+                    (0, r.jsx)(P.Z, {
                         color: a.ua7.Colors.PRIMARY,
                         hideOnClick: !0,
                         text: B,

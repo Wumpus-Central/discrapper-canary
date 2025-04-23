@@ -7,8 +7,8 @@ var i = t(793030),
     a = t(834129),
     l = t(271383),
     c = t(709054),
-    d = t(884902),
-    u = t(680278),
+    u = t(884902),
+    d = t(680278),
     p = t(388032),
     m = t(326319);
 function x(e) {
@@ -31,7 +31,7 @@ function x(e) {
             },
             [n]
         ),
-        v = (0, d.X)(n.guildId, f);
+        v = (0, u.X)(n.guildId, f);
     return (0, r.jsx)(a.Z, {
         className: m.systemMessageContainer,
         contentClassName: m.systemMessageContent,
@@ -62,7 +62,7 @@ function x(e) {
                 (0, r.jsx)(i.xv, {
                     variant: 'text-md/medium',
                     lineClamp: 1,
-                    children: p.intl.string(u.default.plwH8f)
+                    children: p.intl.string(d.default.plwH8f)
                 })
             ]
         })

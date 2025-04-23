@@ -194,7 +194,7 @@ let k = i.forwardRef((e, t) => {
         s && ((0, E.Sn)(a.id), (0, E.Fm)(a.id));
     }, [s, a.id]);
     let d = (0, c.e7)([b.Z], () => b.Z.getStateForGuild(a.id)),
-        f = null != (n = null == d ? void 0 : d.catalog.get(T.Us.PERK)) ? n : [];
+        f = null != (n = null == d ? void 0 : d.powerupCatalog[T.Us.PERK]) ? n : [];
     return s && 0 !== f.length
         ? (0, r.jsxs)('div', {
               ref: t,

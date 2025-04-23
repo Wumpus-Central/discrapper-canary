@@ -21,8 +21,8 @@ let y = (0, c.B)(function (e) {
             return 0 === e.length ? null : u.Z.getChannel(e[0]);
         }),
         E = (0, s.e7)([u.Z], () => u.Z.getChannel(null == S ? void 0 : S.parent_id)),
-        I = l === (null == S ? void 0 : S.id),
-        P = (0, s.e7)([h.Z], () => (null != E ? h.Z.can(g.Plq.MANAGE_CHANNELS, E) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
+        P = l === (null == S ? void 0 : S.id),
+        I = (0, s.e7)([h.Z], () => (null != E ? h.Z.can(g.Plq.MANAGE_CHANNELS, E) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
         w = i.useCallback(
             (e) => {
                 null != S &&
@@ -83,14 +83,14 @@ let y = (0, c.B)(function (e) {
         T = (0, r.jsx)('div', {
             className: o()(N, {
                 [b.disabled]: Z,
-                [b.selected]: I
+                [b.selected]: P
             }),
             'data-dnd-name': S.name,
             children: (0, r.jsxs)(f.ZP, {
                 className: b.iconVisibility,
                 channel: S,
                 guild: t,
-                selected: I,
+                selected: P,
                 onContextMenu: w,
                 forceInteractable: !0,
                 resolvedUnreadSetting: m.i.ONLY_MENTIONS,
@@ -107,5 +107,5 @@ let y = (0, c.B)(function (e) {
                 ]
             })
         });
-    return P && (T = j(C(T))), T;
+    return I && (T = j(C(T))), T;
 });

@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(41776),
     E = n(980463),
     I = n(328908),
-    S = n(992970),
-    P = n(135793),
+    P = n(992970),
+    S = n(135793),
     Z = n(576645),
     N = n(84040),
     T = n(222677),
@@ -218,8 +218,8 @@ function ef(e) {
                 j = (0, L.NE)(t, n),
                 E = (0, L.Ek)(n),
                 I = (0, c.e7)([O.Z], () => null != t.guild_id && O.Z.isLurking(t.guild_id), [t]),
-                S = (0, c.e7)([G.ZP], () => null != t.guild_id && G.ZP.isCurrentUserGuest(t.guild_id), [t]),
-                P = s.id === d,
+                P = (0, c.e7)([G.ZP], () => null != t.guild_id && G.ZP.isCurrentUserGuest(t.guild_id), [t]),
+                S = s.id === d,
                 Z = (y || n.canDeleteOwnMessage(d)) && p && !ei.V$x.UNDELETABLE.has(n.type);
             n.type === ei.uaV.AUTO_MODERATION_ACTION && (Z = Z && y);
             let N = (0, K.a4)(n),
@@ -231,10 +231,10 @@ function ef(e) {
                     renderReactions: g,
                     canAddNewReactions: x,
                     isLurking: I,
-                    isGuest: S,
+                    isGuest: P,
                     isActiveChannelOrUnarchivableThread: p
                 }),
-                B = t.type === ei.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(ei.oNc.NEWS) && (P || y) && (0, f.Z)(n),
+                B = t.type === ei.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(ei.oNc.NEWS) && (S || y) && (0, f.Z)(n),
                 z = t.getGuildId(),
                 Y = null != z && (n.type === ei.uaV.USER_JOIN || n.type === ei.uaV.GUILD_INVITE_REMINDER) && V.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: z }),
                 q = (0, C.a)(n),
@@ -292,13 +292,13 @@ function ef(e) {
         eI = i.useCallback(() => {
             eO(!1);
         }, []),
-        eS = i.useCallback(
+        eP = i.useCallback(
             (e, t) => {
                 ex(el.L.TAKE_ACTION), (0, ee.ts)(e, t);
             },
             [ex]
         ),
-        { canShowReactionsOnMessageHover: eP } = b.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
+        { canShowReactionsOnMessageHover: eS } = b.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
     b.Xb.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
     let eZ = (0, N.Z)(t, n),
         eN = (0, Z.Nt)(),
@@ -412,7 +412,7 @@ function ef(e) {
             _ && !eu
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          eP && !w
+                          eS && !w
                               ? (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(eh, {
@@ -438,13 +438,13 @@ function ef(e) {
                                         label: ea.intl.string(ea.t.icaJW1),
                                         icon: d.l22,
                                         onClick: () => {
-                                            z.default.track(ei.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: S.MG.MessageExpandingButtons }),
-                                                (0, P.s)({
+                                            z.default.track(ei.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: P.MG.MessageExpandingButtons }),
+                                                (0, S.s)({
                                                     channelId: t.id,
                                                     message: n,
                                                     onRedeem: eA,
                                                     onClose: I.Qy,
-                                                    source: S.YD.MessageExpandingButtons
+                                                    source: P.YD.MessageExpandingButtons
                                                 });
                                         }
                                     },
@@ -482,7 +482,7 @@ function ef(e) {
                       {
                           label: ea.intl.string(ea.t.I3ltXF),
                           icon: x.Z,
-                          onClick: () => eS(t, n),
+                          onClick: () => eP(t, n),
                           onTooltipShow: eE,
                           onTooltipHide: eI,
                           showNewBadge: !ej && ev

@@ -100,7 +100,7 @@ function E(e) {
         })
     });
 }
-function I(e) {
+function P(e) {
     let { guild: t, controller: n, hasBanner: i, hasSubheader: l } = e,
         { value: a } = n.springs,
         c = t.hasFeature(O.oNc.DISCOVERABLE),
@@ -144,7 +144,7 @@ function I(e) {
               children: d
           });
 }
-function P() {
+function I() {
     return (0, r.jsx)(u.r7p, {
         size: 'custom',
         color: 'currentColor',
@@ -179,7 +179,7 @@ function Z(e) {
                 guild: i,
                 isBannerVisible: n
             }),
-            i.id === v._ && (0, r.jsx)(P, {}),
+            i.id === v._ && (0, r.jsx)(I, {}),
             (0, r.jsx)(N, { guild: i }),
             null != l &&
                 (0, r.jsx)(u.P3F, {
@@ -274,7 +274,7 @@ function T(e) {
                                                 guild: l,
                                                 isBannerVisible: t
                                             }),
-                                            l.id === v._ && (0, r.jsx)(P, {}),
+                                            l.id === v._ && (0, r.jsx)(I, {}),
                                             (0, r.jsx)(N, { guild: l })
                                         ]
                                     }),
@@ -311,7 +311,7 @@ function T(e) {
     });
 }
 let A = i.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: l, onClick: s, onContextMenu: c, onMouseDown: f, disableBannerAnimation: g, 'aria-expanded': b, 'aria-controls': _, guild: v, guildBanner: C, animationOverlayHeight: P, children: w, headerClassName: N, communityInfoVisible: A, hasSubheader: D } = e,
+    let { bannerVisible: t, controller: n, className: l, onClick: s, onContextMenu: c, onMouseDown: f, disableBannerAnimation: g, 'aria-expanded': b, 'aria-controls': _, guild: v, guildBanner: C, animationOverlayHeight: I, children: w, headerClassName: N, communityInfoVisible: A, hasSubheader: D } = e,
         L = v.hasFeature(O.oNc.ANIMATED_BANNER),
         k = (0, h.Z)(v),
         M = !k && v.hasCommunityInfoSubheader(),
@@ -381,7 +381,7 @@ let A = i.memo(function (e) {
                                         children: q ? (0, r.jsx)(T, S(x({}, Q), { children: w })) : (0, r.jsx)(Z, S(x({}, Q), { children: w }))
                                     }),
                                     M &&
-                                        (0, r.jsx)(I, {
+                                        (0, r.jsx)(P, {
                                             guild: v,
                                             controller: n,
                                             hasBanner: null != C,
@@ -408,7 +408,7 @@ let A = i.memo(function (e) {
                                   V(!0), clearTimeout(z.current);
                               },
                               onMouseLeave: () => V(!1),
-                              style: { height: P }
+                              style: { height: I }
                           })
                         : null
                 ]
