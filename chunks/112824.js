@@ -10,13 +10,13 @@ var i = n(120356),
     a = n(442837),
     o = n(481060),
     c = n(430824),
-    d = n(496675),
-    u = n(700785),
+    u = n(496675),
+    d = n(700785),
     m = n(647086),
     g = n(135899),
     p = n(388032),
-    h = n(296205);
-function f(e) {
+    f = n(296205);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,18 +60,18 @@ function x(e, t) {
     );
 }
 function b(e) {
-    return g.$X.filter((t) => (null == e ? void 0 : e.id) !== m._ && u.oz(t, e));
+    return g.$X.filter((t) => (null == e ? void 0 : e.id) !== m._ && d.oz(t, e));
 }
 function j(e) {
     let { guild: t } = e,
         i = (0, a.e7)([c.Z], () => c.Z.getRole(t.id, t.getEveryoneRoleId())),
-        u = b(t),
-        m = u.length > 0,
-        j = g.$X.some((e) => !d.Z.can(e, t, null, { [i.id]: x(f({}, i), { permissions: s.Od(i.permissions, e) }) })),
+        d = b(t),
+        m = d.length > 0,
+        j = g.$X.some((e) => !u.Z.can(e, t, null, { [i.id]: x(h({}, i), { permissions: s.Od(i.permissions, e) }) })),
         _ = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
-                    className: h.itemContent,
+                    className: f.itemContent,
                     children: [
                         (0, r.jsx)(o.X6q, {
                             variant: 'text-md/semibold',
@@ -81,7 +81,7 @@ function j(e) {
                         (0, r.jsx)(o.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            children: p.intl.format(p.t.RXAtdH, { numPerms: u.length })
+                            children: p.intl.format(p.t.RXAtdH, { numPerms: d.length })
                         })
                     ]
                 }),
@@ -91,7 +91,7 @@ function j(e) {
                           color: 'currentColor',
                           height: 24,
                           width: 24,
-                          className: h.warning,
+                          className: f.warning,
                           'aria-label': p.intl.string(p.t.bG7Gu7)
                       })
                     : (0, r.jsx)(o.owK, {
@@ -99,7 +99,7 @@ function j(e) {
                           color: 'currentColor',
                           height: 24,
                           width: 24,
-                          className: h.check,
+                          className: f.check,
                           'aria-label': p.intl.string(p.t['YQix8/'])
                       })
             ]
@@ -108,20 +108,20 @@ function j(e) {
         ? j
             ? (0, r.jsx)(o.ua7, {
                   text: p.intl.string(p.t['E5v/a2']),
-                  children: (e) => (0, r.jsx)('div', x(f({ className: l()(h.simpleItemWrapper, h.disabled) }, e), { children: _ }))
+                  children: (e) => (0, r.jsx)('div', x(h({ className: l()(f.simpleItemWrapper, f.disabled) }, e), { children: _ }))
               })
             : (0, r.jsx)(o.P3F, {
                   onClick: () => {
                       (0, o.ZDy)(async () => {
                           let { default: e } = await n.e('39627').then(n.bind(n, 193845));
-                          return (n) => (0, r.jsx)(e, f({ guild: t }, n));
+                          return (n) => (0, r.jsx)(e, h({ guild: t }, n));
                       });
                   },
-                  className: l()(h.simpleItemWrapper, h.clickable),
+                  className: l()(f.simpleItemWrapper, f.clickable),
                   children: _
               })
         : (0, r.jsx)('div', {
-              className: h.simpleItemWrapper,
+              className: f.simpleItemWrapper,
               children: _
           });
 }

@@ -14,8 +14,8 @@ var n,
     p = r(100527),
     d = r(906732),
     f = r(385499),
-    b = r(979264),
-    y = r(372900),
+    b = r(372900),
+    y = r(172751),
     O = r(477747),
     g = r(477734),
     j = r(670188),
@@ -79,7 +79,7 @@ function T(e) {
     var t;
     let { author: r, message: n, channel: i, userOverride: f, compact: w = !1, withMentionPrefix: T = !1, showPopout: C = !1, className: E, onClick: Z, onContextMenu: k, onPopoutRequestClose: I, renderPopout: A, renderRemixTag: D = !1, decorations: M, previewGuildId: _ } = e,
         F = o.useRef(null),
-        L = o.useContext(y.Z),
+        L = o.useContext(b.Z),
         G = null != (t = null == i ? void 0 : i.guild_id) ? t : L,
         { analyticsLocations: B } = (0, d.ZP)(p.Z.USERNAME),
         z = T ? '@' : '',
@@ -111,7 +111,7 @@ function T(e) {
         en = o.useMemo(
             () =>
                 w
-                    ? (0, l.jsx)(b.ZP, {
+                    ? (0, l.jsx)(y.ZP, {
                           primaryGuild: r.primaryGuild,
                           userId: n.author.id,
                           contextGuildId: G,
@@ -206,7 +206,7 @@ function T(e) {
                 : null,
             eo,
             !w &&
-                (0, l.jsx)(b.ZP, {
+                (0, l.jsx)(y.ZP, {
                     primaryGuild: r.primaryGuild,
                     userId: n.author.id,
                     contextGuildId: G,

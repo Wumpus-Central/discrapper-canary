@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => u,
+    Z: () => d,
     e: () => m
 });
 var r = n(200651);
@@ -52,8 +52,8 @@ function c(e, t) {
     }
     return i;
 }
-let d = (0, i.Mg)(l.Z.ASPECT_STABLE_IMAGE_CONTAINER_PADDING);
-function u(e) {
+let u = (0, i.Mg)(l.Z.ASPECT_STABLE_IMAGE_CONTAINER_PADDING);
+function d(e) {
     var { listing: t, imageSize: n, alt: i } = e,
         l = c(e, ['listing', 'imageSize', 'alt']);
     let a = (0, s.U)(t, n);
@@ -71,9 +71,9 @@ function u(e) {
 function m(e) {
     var { listing: t, aspectRatio: n = 16 / 9, height: i } = e,
         l = c(e, ['listing', 'aspectRatio', 'height']);
-    let u = (i - 2 * d) * n,
-        m = (0, s.U)(t, u),
-        g = (0, s.U)(t, u, { shouldAnimate: !1 });
+    let d = (i - 2 * u) * n,
+        m = (0, s.U)(t, d),
+        g = (0, s.U)(t, d, { shouldAnimate: !1 });
     return (0, r.jsx)(
         a.Z,
         o(

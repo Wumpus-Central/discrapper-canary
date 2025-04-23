@@ -42,7 +42,7 @@ var u = n(623292),
     S = n(981631);
 function P(e) {
     let t = e.getGuildId();
-    null != t && s.Z.open(t, (0, c.r)(t));
+    null != t && s.Z.open(t, (0, c.r)());
 }
 function _(e, t, n) {
     (0, p.JG)(n.shiftKey ? ''.concat(t.channel_id, '-').concat(t.id) : t.id);

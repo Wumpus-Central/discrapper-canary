@@ -13,13 +13,13 @@ var r = n(200651),
     a = n(149765),
     o = n(866442),
     c = n(442837),
-    d = n(902704),
-    u = n(477690),
+    u = n(902704),
+    d = n(477690),
     m = n(481060),
     g = n(596454),
     p = n(211266),
-    h = n(471445),
-    f = n(605436),
+    f = n(471445),
+    h = n(605436),
     x = n(91218),
     b = n(313201),
     j = n(339085),
@@ -38,8 +38,8 @@ var r = n(200651),
     R = n(818771);
 let Z = (0, b.hQ)(),
     D = (0, b.hQ)(),
-    A = (0, N.Mg)(u.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
-function k(e) {
+    k = (0, N.Mg)(d.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
+function A(e) {
     var t;
     let { emojiId: n, emojiName: i, className: l } = e,
         s = (0, c.e7)([j.ZP], () => (null != n ? j.ZP.getCustomEmojiById(n) : void 0));
@@ -129,7 +129,7 @@ function M(e) {
                           (0, r.jsxs)(
                               L,
                               {
-                                  icon: (0, r.jsx)(k, {
+                                  icon: (0, r.jsx)(A, {
                                       emojiId: e.emoji_id,
                                       emojiName: e.emoji_name,
                                       className: R.rowIcon
@@ -161,12 +161,12 @@ function M(e) {
 function G(e) {
     let { transitionState: t, fromSubscriptionListing: n, existingChannelBenefits: l, existingIntangibleBenefits: s, onSubmit: a, onClose: o } = e,
         c = n.role_benefits.benefits,
-        [u, g] = i.useState(() => new Set(c)),
+        [d, g] = i.useState(() => new Set(c)),
         p = i.useMemo(() => c.filter(I.rC), [c]),
-        h = (0, S.Z)(p),
-        f = i.useMemo(() => c.filter(I.lL), [c]),
-        x = i.useMemo(() => new Set(h.filter((e) => l.some((t) => t.ref_id === e.ref_id))), [h, l]),
-        j = i.useMemo(() => new Set(f.filter((e) => s.some((t) => (0, d.Z)(e, t)))), [s, f]),
+        f = (0, S.Z)(p),
+        h = i.useMemo(() => c.filter(I.lL), [c]),
+        x = i.useMemo(() => new Set(f.filter((e) => l.some((t) => t.ref_id === e.ref_id))), [f, l]),
+        j = i.useMemo(() => new Set(h.filter((e) => s.some((t) => (0, u.Z)(e, t)))), [s, h]),
         _ = (0, b.Dt)();
     function v(e, t) {
         g((n) => {
@@ -177,7 +177,7 @@ function G(e) {
     return (0, r.jsx)('form', {
         onSubmit: function (e) {
             e.preventDefault();
-            let t = c.filter((e) => u.has(e));
+            let t = c.filter((e) => d.has(e));
             a(
                 t.filter(I.rC).filter((e) => !x.has(e)),
                 t.filter(I.lL).filter((e) => !j.has(e))
@@ -207,17 +207,17 @@ function G(e) {
                         (0, r.jsx)(M, {
                             title: w.intl.string(w.t.S2kKzM),
                             selectAllText: w.intl.string(w.t['5Q/fLC']),
-                            benefits: h,
+                            benefits: f,
                             dupeBenefits: x,
-                            selectedBenefits: u,
+                            selectedBenefits: d,
                             onToggleBenefit: v
                         }),
                         (0, r.jsx)(M, {
                             title: w.intl.string(w.t.RdwKw8),
                             selectAllText: w.intl.string(w.t.aJPLVF),
-                            benefits: f,
+                            benefits: h,
                             dupeBenefits: j,
-                            selectedBenefits: u,
+                            selectedBenefits: d,
                             onToggleBenefit: v
                         })
                     ]
@@ -246,7 +246,7 @@ function U(e) {
         a = (0, _.p9)({
             guildId: n,
             roleId: i.id,
-            size: A
+            size: k
         });
     return (0, r.jsxs)(m.P3F, {
         className: R.roleRow,
@@ -334,11 +334,11 @@ function B(e) {
                 ),
             [s]
         ),
-        d = i.useMemo(
+        u = i.useMemo(
             () =>
                 Object.values(l).flatMap((e) => {
                     var n;
-                    if ((0, f.pM)(t.id, e.id) || (null == (n = e.tags) ? void 0 : n.subscription_listing_id) != null || a.Db(e.permissions, P.TC2)) return [];
+                    if ((0, h.pM)(t.id, e.id) || (null == (n = e.tags) ? void 0 : n.subscription_listing_id) != null || a.Db(e.permissions, P.TC2)) return [];
                     let r = (0, E.Z)(o, e).length;
                     return r > 0
                         ? {
@@ -349,10 +349,10 @@ function B(e) {
                 }),
             [t, l, o]
         );
-    return d.length > 0
+    return u.length > 0
         ? (0, r.jsx)('div', {
               className: R.list,
-              children: d.map((e) =>
+              children: u.map((e) =>
                   (0, r.jsx)(
                       U,
                       {
@@ -405,7 +405,7 @@ function z(e) {
         o = i.useRef(l);
     null != l && (o.current = l);
     let c = null != l ? l : o.current,
-        d = (0, p.Z)(() => {
+        u = (0, p.Z)(() => {
             let e = O.Z.getCategories(n);
             return e._categories.flatMap((t) =>
                 e[t.channel.id]
@@ -419,17 +419,17 @@ function z(e) {
                     })
             );
         }),
-        u = i.useMemo(() => (0, E.Z)(d, c), [d, c]),
-        [g, f] = i.useState(() => new Set(u.map((e) => e.id)));
+        d = i.useMemo(() => (0, E.Z)(u, c), [u, c]),
+        [g, h] = i.useState(() => new Set(d.map((e) => e.id)));
     function x(e, t) {
-        f((n) => {
+        h((n) => {
             let r = new Set(n);
             return t ? r.add(e) : r.delete(e), r;
         });
     }
     return (0, r.jsxs)('form', {
         onSubmit: function (e) {
-            e.preventDefault(), a(u.map((e) => e.id).filter((e) => g.has(e))), t();
+            e.preventDefault(), a(d.map((e) => e.id).filter((e) => g.has(e))), t();
         },
         className: R.slideForm,
         children: [
@@ -449,7 +449,7 @@ function z(e) {
             (0, r.jsxs)(m.hzk, {
                 className: R.modalContent,
                 children: [
-                    u.length > 1 &&
+                    d.length > 1 &&
                         (0, r.jsx)('div', {
                             className: R.list,
                             children: (0, r.jsx)(L, {
@@ -457,9 +457,9 @@ function z(e) {
                                     size: 'md',
                                     color: 'currentColor'
                                 }),
-                                checked: g.size === u.length,
+                                checked: g.size === d.length,
                                 onChange: function (e) {
-                                    for (let t of u) x(t.id, e);
+                                    for (let t of d) x(t.id, e);
                                 },
                                 children: (0, r.jsx)(m.Text, {
                                     color: 'header-primary',
@@ -470,9 +470,9 @@ function z(e) {
                         }),
                     (0, r.jsx)('div', {
                         className: R.list,
-                        children: u.map((e) => {
+                        children: d.map((e) => {
                             var t;
-                            let n = null != (t = (0, h.Th)(e.type)) ? t : m.VL1;
+                            let n = null != (t = (0, f.Th)(e.type)) ? t : m.VL1;
                             return (0, r.jsx)(
                                 L,
                                 {

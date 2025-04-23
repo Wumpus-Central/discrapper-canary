@@ -7,7 +7,7 @@ var i = n(120356),
     a = n(296205);
 function o(e) {
     var t, n;
-    let { checked: i, onChange: o, disabled: c, className: d, tooltipProps: u } = e,
+    let { checked: i, onChange: o, disabled: c, className: u, tooltipProps: d } = e,
         m = (e) => {
             e.stopPropagation(), e.preventDefault();
         };
@@ -42,9 +42,9 @@ function o(e) {
                 onClick: m,
                 onMouseDown: m,
                 onMouseUp: m,
-                className: l()(a.switch, d)
+                className: l()(a.switch, u)
             },
-            u
+            d
         )),
         (n = n =
             {

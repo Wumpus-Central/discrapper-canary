@@ -9,16 +9,16 @@ function a(e) {
 function o(e) {
     let { onEnableMFAClick: t, onMFAEnabled: n } = e,
         { isUserMFAEnabled: o, isModerationMFAEnabled: c } = (0, s.N)(),
-        d = i.useCallback(async () => {
+        u = i.useCallback(async () => {
             await t(), null == n || n();
         }, [t, n]),
-        u = i.useCallback(
+        d = i.useCallback(
             (e) =>
                 (0, r.jsx)(l.Z, {
-                    onClick: d,
+                    onClick: u,
                     children: e
                 }),
-            [d]
+            [u]
         );
-    return o && c ? a : u;
+    return o && c ? a : d;
 }

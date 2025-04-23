@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(481060),
     o = n(510231),
     c = n(434404),
-    d = n(383124),
-    u = n(795691),
+    u = n(383124),
+    d = n(795691),
     m = n(388032),
     g = n(210530),
     p = n(381109);
-let h = () => null;
-function f(e) {
+let f = () => null;
+function h(e) {
     let { gameApplicationIds: t, handleChange: n, disabled: i } = e,
         { options: l, matchSorterOptions: s } = (0, o.h)();
     return (0, r.jsx)(a.VcW, {
@@ -27,7 +27,7 @@ function f(e) {
         matchSorterOptions: s,
         clearQueryOnSelect: !0,
         customPillContainerClassName: g.pills,
-        renderCustomPill: h
+        renderCustomPill: f
     });
 }
 function x(e) {
@@ -38,7 +38,7 @@ function x(e) {
               className: g.selectedGames,
               children: t.map((e) =>
                   (0, r.jsx)(
-                      d.Z,
+                      u.Z,
                       {
                           applicationId: e,
                           selected: !0,
@@ -55,8 +55,8 @@ function j(e) {
     var t;
     let { profile: n, canManageGuild: l } = e,
         o = n.id,
-        d = null != (t = null == n ? void 0 : n.gameApplicationIds) ? t : b,
-        h = i.useCallback(
+        u = null != (t = null == n ? void 0 : n.gameApplicationIds) ? t : b,
+        f = i.useCallback(
             (e) => {
                 c.Z.updateGuildProfile(o, { gameApplicationIds: e });
             },
@@ -64,13 +64,13 @@ function j(e) {
         ),
         j = i.useCallback(
             (e) => {
-                let t = d.filter((t) => t !== e);
+                let t = u.filter((t) => t !== e);
                 c.Z.updateGuildProfile(o, { gameApplicationIds: t });
             },
-            [o, d]
+            [o, u]
         ),
-        _ = i.useRef(d),
-        v = i.useMemo(() => (s().isEqual(new Set(d), new Set(_.current)) || (_.current = [...d]), _.current), [d]);
+        _ = i.useRef(u),
+        v = i.useMemo(() => (s().isEqual(new Set(u), new Set(_.current)) || (_.current = [...u]), _.current), [u]);
     return (0, r.jsxs)(a.hjN, {
         className: p.section,
         children: [
@@ -87,9 +87,9 @@ function j(e) {
             (0, r.jsxs)('div', {
                 className: g.sectionBody,
                 children: [
-                    (0, r.jsx)(f, {
-                        gameApplicationIds: d,
-                        handleChange: h,
+                    (0, r.jsx)(h, {
+                        gameApplicationIds: u,
+                        handleChange: f,
                         disabled: !l
                     }),
                     (0, r.jsx)(x, {
@@ -97,10 +97,10 @@ function j(e) {
                         onRemoveGame: j,
                         disabled: !l
                     }),
-                    (0, r.jsx)(u.Z, {
+                    (0, r.jsx)(d.Z, {
                         guildId: o,
-                        selectedGameApplicationIds: d,
-                        onUpdateGames: h,
+                        selectedGameApplicationIds: u,
+                        onUpdateGames: f,
                         disabled: !l
                     })
                 ]

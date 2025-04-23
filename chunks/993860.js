@@ -55,7 +55,7 @@ function E(e, t) {
             if (y) {
                 let r = null == b ? void 0 : b.primaryGuild,
                     i = (null == r ? void 0 : r.identityGuildId) === n && (null == r ? void 0 : r.identityEnabled) === !0;
-                return 'INVITE' !== t && null != e.tag && !i && null != E && (0, o.u)(E) ? 1 : 0;
+                return 'INVITE' !== t && null != e.tag && !i && null != E && (0, o.up)(E) ? 1 : 0;
             }
             return I.includes(n) ? 2 : (null == m ? void 0 : m.includes(h.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && (null == m ? void 0 : m.includes(h.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) && (null != v || e.visibility === p.k.PUBLIC_WITH_RECRUITMENT) && !O ? 3 : null != v ? 5 : (null == m ? void 0 : m.includes(h.oNc.DISCOVERABLE)) ? 4 : null;
         }, [y, I, n, m, v, e.visibility, e.tag, O, null == b ? void 0 : b.primaryGuild, t, E]);

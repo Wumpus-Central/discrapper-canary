@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(361932), n(187205), n(953529);
+n.d(t, { Z: () => f }), n(388685), n(361932), n(187205), n(953529);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -6,8 +6,8 @@ var r = n(200651),
     a = n(200100),
     o = n(692547),
     c = n(481060),
-    d = n(259580),
-    u = n(293810),
+    u = n(259580),
+    d = n(293810),
     m = n(388032),
     g = n(218801);
 function p(e) {
@@ -32,19 +32,19 @@ function p(e) {
         ]
     });
 }
-function h(e) {
+function f(e) {
     let { children: t } = e,
         [n, l] = i.useState(!1),
         s = t.flatMap((e) => e.items.map((e) => e.completed)),
         o = s.filter((e) => e).length / s.length,
-        h = 1 === o,
-        f = (0, c.q_F)({ width: ''.concat(100 * o, '%') }),
-        x = [m.intl.format(m.t.wtQtXl, { promoPageGuideUrl: u.iv.PROMO_PAGE_GUIDE }), m.intl.format(m.t['0Fo0wc'], { caseStudiesUrl: u.iv.CASE_STUDIES }), m.intl.format(m.t['7JdzjI'], { subscriptionOfferingGuideUrl: u.iv.SUBSCRIPTION_OFFERING_GUIDE }), m.intl.format(m.t.zkXN6O, { tierStructureGuideUrl: u.iv.TIER_STRUCTURE_GUIDE })],
+        f = 1 === o,
+        h = (0, c.q_F)({ width: ''.concat(100 * o, '%') }),
+        x = [m.intl.format(m.t.wtQtXl, { promoPageGuideUrl: d.iv.PROMO_PAGE_GUIDE }), m.intl.format(m.t['0Fo0wc'], { caseStudiesUrl: d.iv.CASE_STUDIES }), m.intl.format(m.t['7JdzjI'], { subscriptionOfferingGuideUrl: d.iv.SUBSCRIPTION_OFFERING_GUIDE }), m.intl.format(m.t.zkXN6O, { tierStructureGuideUrl: d.iv.TIER_STRUCTURE_GUIDE })],
         b = n
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      !h &&
+                      !f &&
                           t.map((e, t) => {
                               let { title: n, items: l } = e;
                               return (0, r.jsxs)(
@@ -105,18 +105,18 @@ function h(e) {
                             className: g.headerText,
                             children: m.intl.string(m.t['2Xbd/P'])
                         }),
-                        (0, r.jsx)(d.Z, {
-                            direction: n ? d.Z.Directions.DOWN : d.Z.Directions.UP,
+                        (0, r.jsx)(u.Z, {
+                            direction: n ? u.Z.Directions.DOWN : u.Z.Directions.UP,
                             className: g.headerCaret
                         })
                     ]
                 }),
-                !h &&
+                !f &&
                     (0, r.jsx)('div', {
                         className: g.progressBarOuter,
                         children: (0, r.jsx)(a.animated.div, {
                             className: g.progressBarInner,
-                            style: f
+                            style: h
                         })
                     }),
                 b

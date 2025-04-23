@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(498607),
     o = n.n(a),
     c = n(913527),
-    d = n.n(c),
-    u = n(442837),
+    u = n.n(c),
+    d = n(442837),
     m = n(692547),
     g = n(481060),
     p = n(984933),
-    h = n(63063),
-    f = n(709054),
+    f = n(63063),
+    h = n(709054),
     x = n(434404),
     b = n(118215),
     j = n(981631),
@@ -64,40 +64,40 @@ function C(e, t) {
 let y = (e) => {
     let { name: t, failingName: n, description: i, checked: l, pending: s, pendingDescription: a, failingDescription: o } = e,
         c = t,
-        d = null,
-        u = null;
+        u = null,
+        d = null;
     return (
         s
-            ? ((d = (0, r.jsx)(g.P4T, {
+            ? ((u = (0, r.jsx)(g.P4T, {
                   size: 'custom',
                   color: m.Z.unsafe_rawColors.YELLOW_300.css,
                   width: 20,
                   height: 20
               })),
-              (u = null != a ? a : i))
+              (d = null != a ? a : i))
             : l
-              ? ((d = (0, r.jsx)(g.XZJ, {
+              ? ((u = (0, r.jsx)(g.XZJ, {
                     readOnly: !0,
                     shape: g.XZJ.Shapes.ROUND,
                     size: 20,
                     type: g.XZJ.Types.INVERTED,
                     value: !0
                 })),
-                (u = i))
-              : ((d = (0, r.jsx)(g.k$p, {
+                (d = i))
+              : ((u = (0, r.jsx)(g.k$p, {
                     size: 'custom',
                     color: m.Z.unsafe_rawColors.RED_400.css,
                     width: 20,
                     height: 20
                 })),
                 (c = null != n ? n : t),
-                (u = null != o ? o : i)),
+                (d = null != o ? o : i)),
         (0, r.jsxs)('div', {
             className: v.checklistItem,
             children: [
                 (0, r.jsx)('div', {
                     className: v.checklistIcon,
-                    children: d
+                    children: u
                 }),
                 (0, r.jsxs)('div', {
                     className: v.checklistText,
@@ -109,7 +109,7 @@ let y = (e) => {
                         (0, r.jsx)(g.Text, {
                             color: 'text-muted',
                             variant: 'text-sm/normal',
-                            children: u
+                            children: d
                         })
                     ]
                 })
@@ -135,11 +135,11 @@ function N(e, t) {
 }
 let I = (e) => {
     let { guild: t, guildId: l, className: a, headerContent: o, failedItemsOnly: c = !1 } = e,
-        [m, I] = (0, u.Wu)([b.ZP], () => [b.ZP.getDiscoveryChecklist(l), b.ZP.isLoading()], [l]),
+        [m, I] = (0, d.Wu)([b.ZP], () => [b.ZP.getDiscoveryChecklist(l), b.ZP.isLoading()], [l]),
         { nsfwProperties: E } = null != m ? m : {},
         S = null == t ? void 0 : t.hasFeature(j.oNc.PARTNERED),
         T = null == E ? void 0 : E.channels_banned_keywords,
-        P = (0, u.e7)(
+        P = (0, d.e7)(
             [p.ZP],
             () => {
                 var e, n, r;
@@ -177,7 +177,7 @@ let I = (e) => {
                 description: _.intl.string(_.t.hSLSMz),
                 failingDescription: _.intl.format(_.t.odsGg4, {
                     termsURL: j.EYA.TERMS,
-                    guidelinesURL: h.Z.getArticleURL(j.BhN.PUBLIC_GUILD_GUILDLINES)
+                    guidelinesURL: f.Z.getArticleURL(j.BhN.PUBLIC_GUILD_GUILDLINES)
                 }),
                 checked: null == m ? void 0 : m.safeEnvironment
             },
@@ -194,7 +194,7 @@ let I = (e) => {
                 description: _.intl.formatToPlainString(_.t.VT0bQE, { minimumGuildAge: Math.ceil(m.minimumGuildAge / 7) }),
                 failingDescription: _.intl.formatToPlainString(_.t.jYwM1d, {
                     minimumGuildAge: Math.ceil(m.minimumGuildAge / 7),
-                    passDate: d()(f.default.extractTimestamp(l)).add(m.minimumGuildAge, 'days').format('LL')
+                    passDate: u()(h.default.extractTimestamp(l)).add(m.minimumGuildAge, 'days').format('LL')
                 }),
                 checked: null == m ? void 0 : m.age
             },

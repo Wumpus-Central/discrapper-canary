@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+n.d(t, { Z: () => u }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -6,8 +6,8 @@ var r = n(200651),
     a = n(481060),
     o = n(717251),
     c = n(313795);
-function d(e) {
-    var { action: t, children: n, className: l, onExpandChange: d, loading: u } = e,
+function u(e) {
+    var { action: t, children: n, className: l, onExpandChange: u, loading: d } = e,
         m = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -28,8 +28,8 @@ function d(e) {
             return i;
         })(e, ['action', 'children', 'className', 'onExpandChange', 'loading']);
     let [g, p] = i.useState(!1),
-        h = (e) => {
-            p(e), null == d || d(e);
+        f = (e) => {
+            p(e), null == u || u(e);
         };
     return (0, r.jsx)(a.zF9, {
         className: s()(c.groupContainer, l),
@@ -71,9 +71,9 @@ function d(e) {
                 (i = i =
                     {
                         className: c.groupHeaderRow,
-                        action: u ? (0, r.jsx)(a.$jN, { type: a.$jN.Type.PULSING_ELLIPSIS }) : t,
+                        action: d ? (0, r.jsx)(a.$jN, { type: a.$jN.Type.PULSING_ELLIPSIS }) : t,
                         onClick: (e) => {
-                            h(!g), l(e);
+                            f(!g), l(e);
                         }
                     }),
                 Object.getOwnPropertyDescriptors

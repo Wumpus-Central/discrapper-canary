@@ -64,7 +64,7 @@ function _(e) {
 function x(e) {
     let t = (0, r.e7)([d.Z], () => d.Z.getGuild(e.guildId)),
         n = (0, u.S3)(e.guildId);
-    return null != t && (0, m.j)(t) && null !== n
+    return null != t && (0, m.jq)(t) && null !== n
         ? 'changed' === n
             ? (0, i.jsx)(b, {
                   guild: t,

@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(481060),
     o = n(596454),
     c = n(225433),
-    d = n(318766),
-    u = n(907040),
+    u = n(318766),
+    d = n(907040),
     m = n(273039),
     g = n(176354),
     p = n(434404),
-    h = n(185923),
-    f = n(388032),
+    f = n(185923),
+    h = n(388032),
     x = n(186667),
     b = n(381109);
 function j(e) {
@@ -44,7 +44,7 @@ let _ = { label: '' };
 function v(e) {
     let { emoji: t, disabled: n, handleClearEmoji: l, handleSelectEmoji: s } = e,
         p = i.useRef(null),
-        f = i.useMemo(
+        h = i.useMemo(
             () =>
                 null == t || null == t.name
                     ? null
@@ -60,10 +60,10 @@ function v(e) {
             [t]
         );
     return n
-        ? (0, r.jsx)(d.Z, {
+        ? (0, r.jsx)(u.Z, {
               tabIndex: -1,
               active: !1,
-              renderButtonContents: f
+              renderButtonContents: h
           })
         : (0, r.jsx)(m.Z, {
               className: x.emojiWrapper,
@@ -76,24 +76,24 @@ function v(e) {
                   position: 'bottom',
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
-                      return (0, r.jsx)(u.Z, {
+                      return (0, r.jsx)(d.Z, {
                           closePopout: t,
                           onSelectEmoji: s(t),
-                          pickerIntention: h.Hz.GUILD_PROFILE
+                          pickerIntention: f.Hz.GUILD_PROFILE
                       });
                   },
                   children: (e, t) => {
                       var n, i;
                       let { isShown: l } = t;
                       return (0, r.jsx)(
-                          d.Z,
+                          u.Z,
                           ((n = j({}, e)),
                           (i = i =
                               {
                                   ref: p,
                                   tabIndex: 0,
                                   active: l,
-                                  renderButtonContents: f
+                                  renderButtonContents: h
                               }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -115,10 +115,10 @@ function v(e) {
 }
 function O(e) {
     let { guildId: t, trait: n, index: l, onTraitUpdate: o, disabled: c } = e,
-        d = i.useCallback(() => {
+        u = i.useCallback(() => {
             o(t, l, { emoji: void 0 });
         }, [t, l, o]),
-        u = i.useCallback(
+        d = i.useCallback(
             (e) => (n, r) => {
                 o(t, l, { emoji: null != n ? n : void 0 }), r && e();
             },
@@ -126,8 +126,8 @@ function O(e) {
         ),
         [m, g] = i.useState(!1),
         p = i.useCallback(() => g(!0), []),
-        h = i.useCallback(() => g(!1), []),
-        f = i.useCallback(
+        f = i.useCallback(() => g(!1), []),
+        h = i.useCallback(
             (e) => {
                 o(t, l, { label: e });
             },
@@ -138,18 +138,18 @@ function O(e) {
         'aria-disabled': c,
         disabled: c,
         value: n.label,
-        onChange: f,
+        onChange: h,
         maxLength: 24,
         prefixElement: (0, r.jsx)(v, {
             emoji: b,
             disabled: c,
-            handleClearEmoji: d,
-            handleSelectEmoji: u
+            handleClearEmoji: u,
+            handleSelectEmoji: d
         }),
         className: s()(x.traitContainer, { [x.traitContainerFocused]: m }),
         inputClassName: x.traitInput,
         onFocus: p,
-        onBlur: h
+        onBlur: f
     });
 }
 let C = [0, 1, 2, 3, 4];
@@ -169,10 +169,10 @@ function y(e) {
             (0, r.jsxs)('div', {
                 className: b.sectionHeader,
                 children: [
-                    (0, r.jsx)(a.vwX, { children: f.intl.string(f.t.S6JNrq) }),
+                    (0, r.jsx)(a.vwX, { children: h.intl.string(h.t.S6JNrq) }),
                     (0, r.jsx)(a.R94, {
                         type: 'description',
-                        children: f.intl.string(f.t.l7Ig5e)
+                        children: h.intl.string(h.t.l7Ig5e)
                     })
                 ]
             }),

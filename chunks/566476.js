@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -7,32 +7,32 @@ var i = n(120356),
     a = n(481060),
     o = n(385499),
     c = n(246946),
-    d = n(790162);
-function u(e) {
-    let { className: t, avatarURL: n, name: i, bot: u, verifiedBot: m, userTag: g } = e,
+    u = n(790162);
+function d(e) {
+    let { className: t, avatarURL: n, name: i, bot: d, verifiedBot: m, userTag: g } = e,
         p = (0, s.e7)([c.Z], () => c.Z.hidePersonalInformation);
     return (0, r.jsxs)('div', {
-        className: l()(d.container, t),
+        className: l()(u.container, t),
         children: [
             (0, r.jsx)(a.qEK, {
-                className: d.avatar,
+                className: u.avatar,
                 src: n,
                 size: a.EFr.SIZE_24,
                 'aria-label': i
             }),
             (0, r.jsxs)('div', {
-                className: d.textContainer,
+                className: u.textContainer,
                 children: [
                     (0, r.jsx)(a.Text, {
                         tag: 'span',
-                        className: d.name,
+                        className: u.name,
                         color: 'header-primary',
                         variant: 'text-sm/semibold',
                         children: i
                     }),
-                    u
+                    d
                         ? (0, r.jsx)(o.Z, {
-                              className: d.botTag,
+                              className: u.botTag,
                               verified: m
                           })
                         : null,
@@ -41,7 +41,7 @@ function u(e) {
                         : (0, r.jsx)(a.Text, {
                               tag: 'span',
                               color: 'interactive-normal',
-                              className: d.userTag,
+                              className: u.userTag,
                               variant: 'text-sm/normal',
                               children: g
                           })

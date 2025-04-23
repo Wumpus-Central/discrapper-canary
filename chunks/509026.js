@@ -7,8 +7,8 @@ var i = n(442837),
     a = n(29605),
     o = n(345861),
     c = n(723047),
-    d = n(796814),
-    u = n(388032);
+    u = n(796814),
+    d = n(388032);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,17 +55,17 @@ function g(e, t) {
 function p(e) {
     let { guild: t } = e,
         p = (0, i.e7)([s.Z], () => s.Z.isUploadingEmoji()),
-        h = (0, d.Z)(t.id),
-        f = t.getMaxRoleSubscriptionEmojiSlots() - h.length,
+        f = (0, u.Z)(t.id),
+        h = t.getMaxRoleSubscriptionEmojiSlots() - f.length,
         x = (0, c.mY)();
     return (0, r.jsxs)(l.hjN, {
-        title: u.intl.string(u.t.LDT0Q0),
+        title: d.intl.string(d.t.LDT0Q0),
         disabled: x,
         children: [
             (0, r.jsx)(l.R94, {
                 type: l.R94.Types.DESCRIPTION,
                 disabled: x,
-                children: u.intl.format(u.t.H9Jxp6, { maxSlots: t.getMaxRoleSubscriptionEmojiSlots() })
+                children: d.intl.format(d.t.H9Jxp6, { maxSlots: t.getMaxRoleSubscriptionEmojiSlots() })
             }),
             (0, r.jsx)(l.LZC, { size: 16 }),
             (0, r.jsx)(o.Z, {
@@ -85,19 +85,19 @@ function p(e) {
                                 );
                         });
                 },
-                buttonCTA: u.intl.string(u.t.AuPtoq),
+                buttonCTA: d.intl.string(d.t.AuPtoq),
                 submitting: p,
-                disabled: x || p || 0 === f
+                disabled: x || p || 0 === h
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(a.L3, {
-                title: u.intl.string(u.t.lu1ZQ0),
+                title: d.intl.string(d.t.lu1ZQ0),
                 maxSlots: t.getMaxRoleSubscriptionEmojiSlots(),
-                emojiCount: h.length
+                emojiCount: f.length
             }),
             (0, r.jsx)(a.FT, {
                 guild: t,
-                emojis: h,
+                emojis: f,
                 onEdit: (e, t) => {
                     (0, l.ZDy)(async () => {
                         let { UpdateEmojiRolesModal: i } = await n.e('9007').then(n.bind(n, 604623));

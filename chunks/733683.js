@@ -10,13 +10,13 @@ var r,
     a = n.n(s),
     o = n(200100),
     c = n(772848),
-    d = n(374470),
-    u = n(477690),
+    u = n(374470),
+    d = n(477690),
     m = n(481060),
     g = n(624138),
     p = n(981631),
-    h = n(680278),
-    f = n(388032),
+    f = n(680278),
+    h = n(388032),
     x = n(354444);
 function b(e, t, n) {
     return (
@@ -32,8 +32,8 @@ function b(e, t, n) {
     );
 }
 let j = -1,
-    _ = (0, g.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
-    v = (0, g.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
+    _ = (0, g.Mg)(d.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
+    v = (0, g.Mg)(d.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
     O = {
         tension: 140,
         friction: 30
@@ -88,11 +88,11 @@ class y extends (r = l.Component) {
                 color: m.ua7.Colors.BLACK,
                 tooltipClassName: x.foregroundTooltip,
                 children: [
-                    (0, i.jsx)('div', { children: f.intl.format(f.t.gDsyBw, { numSubscriptions: e }) }),
+                    (0, i.jsx)('div', { children: h.intl.format(h.t.gDsyBw, { numSubscriptions: e }) }),
                     null != a && a > 0 && null != l
                         ? (0, i.jsx)('div', {
                               className: x.tooltipMuted,
-                              children: f.intl.format(f.t['2U9MDg'], {
+                              children: h.intl.format(h.t['2U9MDg'], {
                                   number: a,
                                   tier: l.name
                               })
@@ -109,12 +109,12 @@ class y extends (r = l.Component) {
         let n = Math.min(t, e.numRequired);
         return (0, i.jsx)('div', {
             children: this.getTierDisabled(e)
-                ? (0, i.jsx)('div', { children: f.intl.formatToPlainString(h.default['9CtPjo'], { perk: e.name }) })
+                ? (0, i.jsx)('div', { children: h.intl.formatToPlainString(f.default['9CtPjo'], { perk: e.name }) })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)('div', { children: e.name }),
                           (0, i.jsx)('div', {
-                              children: f.intl.format(f.t.AkLa6u, {
+                              children: h.intl.format(h.t.AkLa6u, {
                                   subscribers: n,
                                   numRequired: e.numRequired
                               })
@@ -128,14 +128,14 @@ class y extends (r = l.Component) {
         let l,
             { progress: s, tiers: a } = this.props,
             c = a[n],
-            d = s >= e.numRequired,
-            u = null != c && e.key === c.key,
+            u = s >= e.numRequired,
+            d = null != c && e.key === c.key,
             g = e.key === a[0].key,
             p = this.getTierDisabled(e);
-        l = g ? x.tierFirst : p ? x.tierInProgress : u ? x.tierCurrent : d ? x.tierAccomplished : x.tierInProgress;
-        let h = e.y - (g ? 0 : v / 2),
-            f = this.state.tierMarkerActive >= t,
-            j = !g && u && f;
+        l = g ? x.tierFirst : p ? x.tierInProgress : d ? x.tierCurrent : u ? x.tierAccomplished : x.tierInProgress;
+        let f = e.y - (g ? 0 : v / 2),
+            h = this.state.tierMarkerActive >= t,
+            j = !g && d && h;
         return (0, i.jsx)(
             m.ua7,
             {
@@ -171,7 +171,7 @@ class y extends (r = l.Component) {
                                     {
                                         className: l,
                                         style: {
-                                            top: h,
+                                            top: f,
                                             transform: t.scale.interpolate((e) => 'scale('.concat(e, ')'))
                                         },
                                         children:
@@ -298,7 +298,7 @@ class y extends (r = l.Component) {
                 this.setState({ showForegroundTooltip: !0 }), this.handleForegroundMouseMove(e);
             }),
             b(this, 'handleForegroundMouseMove', (e) => {
-                if (!(0, d.k)(e.target)) return;
+                if (!(0, u.k)(e.target)) return;
                 let t = e.target.getBoundingClientRect(),
                     n = e.clientY - t.top;
                 n !== this.state.foregroundTooltipY && this.setState({ foregroundTooltipY: n });

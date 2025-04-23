@@ -17,9 +17,9 @@ var r = n(200651),
     p = n(747017),
     h = n(385499),
     m = n(693728),
-    g = n(979264),
-    E = n(554300),
-    b = n(558602),
+    g = n(554300),
+    E = n(558602),
+    b = n(172751),
     y = n(736144),
     v = n(884902),
     O = n(113434),
@@ -164,7 +164,7 @@ let G = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                     roleColors: a
                 }),
                 !o &&
-                    (0, r.jsx)(g.ZP, {
+                    (0, r.jsx)(b.ZP, {
                         primaryGuild: null == s ? void 0 : s.primaryGuild,
                         userId: null == s ? void 0 : s.id,
                         contextGuildId: l,
@@ -220,7 +220,7 @@ let G = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             ),
             h = i.useMemo(
                 () =>
-                    !(0, b.Z)({
+                    !(0, E.Z)({
                         activity:
                             null == n
                                 ? void 0
@@ -247,7 +247,7 @@ let G = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
     }),
     z = i.memo(function (e) {
         var t;
-        let { selected: n = !1, colorString: a, colorStrings: l, colorRoleName: u, isOwner: f, ownerTooltipText: p, lostPermissionTooltipText: h, isTyping: g = !1, nick: b, user: y, currentUser: N, activities: C, applicationStream: w, status: D, shouldAnimateStatus: L = !1, isMobile: M, premiumSince: j, channel: G, guildId: V, className: F, nameplate: Z, hideClanTag: z = !1, hideSubtext: q = !1, onMouseDown: Q, onKeyDown: X, onClick: J, onContextMenu: $, onClickPremiumGuildIcon: ee, onFocus: et, 'aria-controls': en, 'aria-expanded': er, 'aria-posinset': ei, 'aria-setsize': ea, id: eo, tabIndex: es, itemProps: el } = e,
+        let { selected: n = !1, colorString: a, colorStrings: l, colorRoleName: u, isOwner: f, ownerTooltipText: p, lostPermissionTooltipText: h, isTyping: E = !1, nick: b, user: y, currentUser: N, activities: C, applicationStream: w, status: D, shouldAnimateStatus: L = !1, isMobile: M, premiumSince: j, channel: G, guildId: V, className: F, nameplate: Z, hideClanTag: z = !1, hideSubtext: q = !1, onMouseDown: Q, onKeyDown: X, onClick: J, onContextMenu: $, onClickPremiumGuildIcon: ee, onFocus: et, 'aria-controls': en, 'aria-expanded': er, 'aria-posinset': ei, 'aria-setsize': ea, id: eo, tabIndex: es, itemProps: el } = e,
             ec = null == y ? void 0 : y.id,
             eu = R.ZP.useName(y),
             ed = (null == (t = A.default.getCurrentUser()) ? void 0 : t.id) === ec,
@@ -322,7 +322,7 @@ let G = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   spacing: -B,
                   children: () =>
                       (0, r.jsx)(
-                          E.Z,
+                          g.Z,
                           k(
                               {
                                   ref: ef,
@@ -380,7 +380,7 @@ let G = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       eventHandlers: eO,
                                       avatarSrc: ev,
                                       isMobile: M,
-                                      isTyping: g,
+                                      isTyping: E,
                                       avatarDecorationSrc: ey,
                                       handleSetTypingRef: ew,
                                       typingRef: eh,

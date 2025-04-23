@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(200651),
     i = n(192379),
     l = n(481060),
@@ -6,10 +6,10 @@ var r = n(200651),
     a = n(8426),
     o = n(388032),
     c = n(773100);
-let d = function (e) {
+let u = function (e) {
     var t;
-    let { channel: n, end: d } = e,
-        u = i.useCallback(() => {
+    let { channel: n, end: u } = e,
+        d = i.useCallback(() => {
             (0, a.r2)({
                 channelId: n.id,
                 title: n.name,
@@ -33,7 +33,7 @@ let d = function (e) {
                     (0, r.jsx)(l.zxk, {
                         className: c.suggestedChannelButton,
                         size: l.zxk.Sizes.MIN,
-                        onClick: u,
+                        onClick: d,
                         children: (0, r.jsx)(l.Text, {
                             variant: 'text-sm/semibold',
                             color: 'always-white',
@@ -42,7 +42,7 @@ let d = function (e) {
                     })
                 ]
             }),
-            d && (0, r.jsx)('div', { className: c.suggestedSeparator })
+            u && (0, r.jsx)('div', { className: c.suggestedSeparator })
         ]
     });
 };

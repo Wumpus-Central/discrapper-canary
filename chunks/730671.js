@@ -7,7 +7,7 @@ function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         n = arguments.length > 2 ? arguments[2] : void 0,
         [a, o] = r.useState((0, s.se)(t)),
-        { errorMessage: c, handleValidateKeywords: d } = (function (e) {
+        { errorMessage: c, handleValidateKeywords: u } = (function (e) {
             let [t, n] = r.useState(null),
                 s = r.useRef(null);
             return {
@@ -36,18 +36,18 @@ function a(e) {
                 )
             };
         })(n),
-        u = r.useCallback((e) => (0 !== e.length && (0, s.kU)(e) ? (0, s.se)((0, s.Ac)(e)) : e), []);
+        d = r.useCallback((e) => (0 !== e.length && (0, s.kU)(e) ? (0, s.se)((0, s.Ac)(e)) : e), []);
     return {
         value: a,
         errorMessage: c,
         onChange: r.useCallback(
             (t) => {
                 let n = t.currentTarget.value;
-                'insertFromPaste' === t.nativeEvent.inputType && (n = u(n));
+                'insertFromPaste' === t.nativeEvent.inputType && (n = d(n));
                 let r = (0, s.Ac)(n);
-                o(n), e(r), d()(r);
+                o(n), e(r), u()(r);
             },
-            [d, u, e]
+            [u, d, e]
         )
     };
 }

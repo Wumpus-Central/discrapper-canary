@@ -6,8 +6,8 @@ var r = n(200651),
     a = n(710344),
     o = n(734893),
     c = n(8426),
-    d = n(969632),
-    u = n(430677),
+    u = n(969632),
+    d = n(430677),
     m = n(388032),
     g = n(773100);
 function p(e) {
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,7 +53,7 @@ function h(e, t) {
         e
     );
 }
-let f = [];
+let h = [];
 function x() {
     return (0, r.jsx)('div', {
         className: g.actionItemContainer,
@@ -90,7 +90,7 @@ function b(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            h(p({}, n), {
+                            f(p({}, n), {
                                 guildId: t,
                                 onSave: l
                             })
@@ -115,14 +115,14 @@ function b(e) {
 }
 let j = function (e) {
     let { guildId: t } = e,
-        n = (0, l.Wu)([d.Z], () => {
+        n = (0, l.Wu)([u.Z], () => {
             var e;
-            return null != (e = d.Z.getSettings().newMemberActions) ? e : f;
+            return null != (e = u.Z.getSettings().newMemberActions) ? e : h;
         }),
         s = i.useCallback(
             (e, n) => {
                 (0, c.vR)(e);
-                let r = d.Z.getSettings();
+                let r = u.Z.getSettings();
                 if (null == r) return;
                 let { channelId: i } = e;
                 (0, c.oo)(t, r, !0).then(() => {
@@ -136,7 +136,7 @@ let j = function (e) {
                 var s;
                 let a = null == (s = n[e]) ? void 0 : s.channelId;
                 if (null == a) return;
-                let o = d.Z.getSettings();
+                let o = u.Z.getSettings();
                 null != o &&
                     ((0, c.el)(a, r),
                     (0, c.oo)(t, o, !0).then(() => {
@@ -151,16 +151,16 @@ let j = function (e) {
                 let i = null == (r = n[e]) ? void 0 : r.channelId;
                 if (null == i) return;
                 (0, c.Hr)(i);
-                let l = d.Z.getSettings();
+                let l = u.Z.getSettings();
                 (0, c.oo)(t, l, !0);
             },
             [n, t]
         ),
-        _ = n.map((e) => h(p({}, e), { id: e.channelId })),
+        _ = n.map((e) => f(p({}, e), { id: e.channelId })),
         v = i.useCallback(
             (e) => {
                 (0, c.hS)(e);
-                let n = d.Z.getSettings();
+                let n = u.Z.getSettings();
                 null != n && (0, c.oo)(t, n, !0);
             },
             [t]
@@ -171,7 +171,7 @@ let j = function (e) {
         children: [
             n.map((e, n) =>
                 (0, r.jsx)(
-                    u.Z,
+                    d.Z,
                     {
                         guildId: t,
                         action: e,

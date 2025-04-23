@@ -6,7 +6,7 @@ var r = n(200651),
     a = n(311173),
     o = n(388032),
     c = n(320705);
-function d(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,7 +31,7 @@ function d(e) {
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,13 +52,13 @@ function u(e, t) {
 function m(e) {
     var t;
     let { rule: n, onChangeRule: m, collapsed: g = !1 } = e,
-        [p, h] = i.useState(!g),
-        f = i.useCallback(() => {
-            h(!p);
-        }, [p, h]),
+        [p, f] = i.useState(!g),
+        h = i.useCallback(() => {
+            f(!p);
+        }, [p, f]),
         x = i.useCallback(
             (e) => {
-                m(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
+                m(d(u({}, n), { triggerMetadata: d(u({}, n.triggerMetadata), { regexPatterns: e }) }));
             },
             [m, n]
         );
@@ -76,7 +76,7 @@ function m(e) {
                   let { onClick: t } = e;
                   return (0, r.jsx)(l.P3F, {
                       onClick: (e) => {
-                          f(), t(e);
+                          h(), t(e);
                       },
                       children: (0, r.jsxs)('div', {
                           className: c.header,

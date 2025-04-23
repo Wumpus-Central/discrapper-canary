@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(392711),
     o = n.n(a),
     c = n(442837),
-    d = n(481060),
-    u = n(570140),
+    u = n(481060),
+    d = n(570140),
     m = n(275759),
     g = n(313201),
     p = n(63063),
-    h = n(243730),
-    f = n(764260),
+    f = n(243730),
+    h = n(764260),
     x = n(946724),
     b = n(95242),
     j = n(530198),
@@ -57,22 +57,22 @@ function P(e) {
     return (0, r.jsxs)('div', {
         className: N.headerNoConfigContainer,
         children: [
-            (0, r.jsx)(d.X6q, {
+            (0, r.jsx)(u.X6q, {
                 className: N.headerHeading,
                 variant: 'eyebrow',
                 children: y.intl.string(y.t.nMir29)
             }),
-            (0, r.jsx)(d.Text, {
+            (0, r.jsx)(u.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
                 children: y.intl.format(y.t.q5f7tL, { helpdeskArticleUrl: p.Z.getArticleURL(O.BhN.CONNECTION_DETAILS_ADMIN) })
             }),
-            (0, r.jsx)(d.zxk, {
+            (0, r.jsx)(u.zxk, {
                 disabled: n,
                 className: N.addVerificationButton,
-                size: d.zxk.Sizes.MEDIUM,
-                look: d.zxk.Looks.FILLED,
-                color: d.zxk.Colors.BRAND,
+                size: u.zxk.Sizes.MEDIUM,
+                look: u.zxk.Looks.FILLED,
+                color: u.zxk.Colors.BRAND,
                 onClick: t,
                 children: y.intl.string(y.t['OSvW5+'])
             })
@@ -84,19 +84,19 @@ function w(e) {
         { headerHeight: g, headerRef: w } = (0, b.Z)(0),
         { scrolledToTop: R, handleScroll: Z } = (0, _.V)(),
         D = (0, c.e7)(
-            [h.Z],
+            [f.Z],
             () => {
                 var e;
-                return null == (e = h.Z.getRoleMemberCount(t.id)) ? void 0 : e[n.id];
+                return null == (e = f.Z.getRoleMemberCount(t.id)) ? void 0 : e[n.id];
             },
             [n.id, t.id]
         ),
-        A = (0, c.Wu)([x.Z], () => {
+        k = (0, c.Wu)([x.Z], () => {
             var e;
             return null != (e = x.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
         }),
-        k = A.length > 1 ? m.O1.OR : m.O1.AND,
-        L = i.useMemo(() => (k === m.O1.OR ? A.flat() : null != A && A.length > 0 ? A[0] : []), [k, A]),
+        A = k.length > 1 ? m.O1.OR : m.O1.AND,
+        L = i.useMemo(() => (A === m.O1.OR ? k.flat() : null != k && k.length > 0 ? k[0] : []), [A, k]),
         M = i.useMemo(() => new Set(L.map((e) => e.connectionType)), [L]);
     function G(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
@@ -108,10 +108,10 @@ function w(e) {
             operator: void 0,
             value: void 0
         }),
-            (0, f.d_)(n.id, T(r, k));
+            (0, h.d_)(n.id, T(r, A));
     }
     function U() {
-        u.Z.dispatch({
+        d.Z.dispatch({
             type: 'CONNECTIONS_GRID_MODAL_SHOW',
             onComplete: (e) => G(e),
             excludedPlatformTypes: M,
@@ -129,17 +129,17 @@ function w(e) {
         var F;
         let e = null;
         L.length < 10 &&
-            (e = (0, r.jsx)(d.zxk, {
+            (e = (0, r.jsx)(u.zxk, {
                 className: s()(N.addVerificationButton, N.addVerificationButtonAppend),
-                size: d.zxk.Sizes.LARGE,
-                look: d.zxk.Looks.BLANK,
-                color: d.zxk.Colors.LINK,
+                size: u.zxk.Sizes.LARGE,
+                look: u.zxk.Looks.BLANK,
+                color: u.zxk.Colors.LINK,
                 onClick: U,
                 disabled: l,
                 children: (0, r.jsxs)('div', {
                     className: N.addVerificationButtonAppendTextContainer,
                     children: [
-                        (0, r.jsx)(d.oFk, {
+                        (0, r.jsx)(u.oFk, {
                             size: 'xs',
                             color: 'currentColor'
                         }),
@@ -149,7 +149,7 @@ function w(e) {
             })),
             (B = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    ((F = () => (0, f.d_)(n.id, [])),
+                    ((F = () => (0, h.d_)(n.id, [])),
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsxs)('div', {
@@ -157,23 +157,23 @@ function w(e) {
                                 children: [
                                     (0, r.jsx)('div', {
                                         className: N.headerTitleTextContainer,
-                                        children: (0, r.jsx)(d.X6q, {
+                                        children: (0, r.jsx)(u.X6q, {
                                             variant: 'eyebrow',
                                             children: y.intl.string(y.t.nMir29)
                                         })
                                     }),
-                                    (0, r.jsx)(d.zxk, {
+                                    (0, r.jsx)(u.zxk, {
                                         className: N.headerTitleButton,
-                                        size: d.zxk.Sizes.TINY,
-                                        look: d.zxk.Looks.LINK,
-                                        color: d.zxk.Colors.LINK,
+                                        size: u.zxk.Sizes.TINY,
+                                        look: u.zxk.Looks.LINK,
+                                        color: u.zxk.Colors.LINK,
                                         onClick: F,
                                         disabled: l,
                                         children: y.intl.string(y.t.ntW1cX)
                                     })
                                 ]
                             }),
-                            (0, r.jsx)(d.Text, {
+                            (0, r.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 children: y.intl.format(y.t.q5f7tL, { helpdeskArticleUrl: p.Z.getArticleURL(O.BhN.CONNECTION_DETAILS_ADMIN) })
                             })
@@ -181,10 +181,10 @@ function w(e) {
                     })),
                     (function (e, t, n, i, l) {
                         let s = T(i, m.O1.OR);
-                        return (0, r.jsx)(d.xJW, {
+                        return (0, r.jsx)(u.xJW, {
                             className: N.operatorContainer,
                             title: y.intl.string(y.t.Xs7PHR),
-                            children: (0, r.jsx)(d.FXm, {
+                            children: (0, r.jsx)(u.FXm, {
                                 options: [
                                     {
                                         name: y.intl.string(y.t['W3iY5+']),
@@ -201,7 +201,7 @@ function w(e) {
                                 'aria-labelledby': S
                             })
                         });
-                    })(l, n.id, k, L, (e, t) => (0, f.d_)(n.id, T(e, t))),
+                    })(l, n.id, A, L, (e, t) => (0, h.d_)(n.id, T(e, t))),
                     (function (e, t, n, i, l) {
                         function s(n, r) {
                             let i = [];
@@ -281,12 +281,12 @@ function w(e) {
                                 )
                             )
                         });
-                    })(L, (e) => (0, f.d_)(n.id, T(e, k)), l, n.id, o),
+                    })(L, (e) => (0, h.d_)(n.id, T(e, A)), l, n.id, o),
                     e
                 ]
             }));
     }
-    return (0, r.jsx)(d.yWw, {
+    return (0, r.jsx)(u.yWw, {
         className: N.scroller,
         style: { scrollPaddingTop: g },
         onScroll: Z,
@@ -307,14 +307,14 @@ function w(e) {
                     ? (0, r.jsxs)('div', {
                           className: N.warningContainer,
                           children: [
-                              (0, r.jsx)(d.P4T, {
+                              (0, r.jsx)(u.P4T, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
                                   color: 'currentColor',
                                   className: N.warningIcon
                               }),
-                              (0, r.jsx)(d.Text, {
+                              (0, r.jsx)(u.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'text-normal',
                                   children: y.intl.string(y.t['2aFeeX'])

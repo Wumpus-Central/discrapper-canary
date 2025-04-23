@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+n.d(t, { Z: () => d }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(481060),
@@ -6,14 +6,14 @@ var r = n(200651),
     a = n(981631),
     o = n(388032),
     c = n(957270),
-    d = n(282338);
-function u(e) {
+    u = n(282338);
+function d(e) {
     let { rule: t, onChangeRule: n } = e,
-        [u, m] = i.useState(t.name);
+        [d, m] = i.useState(t.name);
     return (0, r.jsxs)(l.xJW, {
         children: [
             (0, r.jsx)(l.Text, {
-                className: d.triggerHeader,
+                className: u.triggerHeader,
                 variant: 'text-sm/semibold',
                 children: o.intl.string(o.t.WVAHxM)
             }),
@@ -70,7 +70,7 @@ function u(e) {
                 },
                 placeholder: o.intl.string(o.t['5AO43N']),
                 maxLength: s.OU,
-                value: u
+                value: d
             })
         ]
     });

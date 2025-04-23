@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(580685),
     o = n(442837),
     c = n(481060),
-    d = n(314852),
-    u = n(330705),
+    u = n(314852),
+    d = n(330705),
     m = n(323220),
     g = n(434404),
     p = n(436879),
-    h = n(981631),
-    f = n(388032),
+    f = n(981631),
+    h = n(388032),
     x = n(951767);
 function b(e) {
     var t;
@@ -20,22 +20,22 @@ function b(e) {
         b = n.id,
         j = a.Y.VISIBLE.has(n.visibility),
         _ = (0, o.e7)(
-            [d.Z],
+            [u.Z],
             () => {
                 var e;
-                return (null == (e = d.Z.getProfile(b)) ? void 0 : e.visibility) === u.k.PUBLIC_WITH_RECRUITMENT;
+                return (null == (e = u.Z.getProfile(b)) ? void 0 : e.visibility) === d.k.PUBLIC_WITH_RECRUITMENT;
             },
             [b]
         ),
         v = i.useRef(null);
-    (0, p.Z)(v, h.KsC.PROFILE_VISIBILITY);
+    (0, p.Z)(v, f.KsC.PROFILE_VISIBILITY);
     let O = i.useCallback(() => {
-            j ? g.Z.updateGuildProfile(b, { visibility: u.k.RESTRICTED }) : g.Z.updateGuildProfile(b, { visibility: _ ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
+            j ? g.Z.updateGuildProfile(b, { visibility: d.k.RESTRICTED }) : g.Z.updateGuildProfile(b, { visibility: _ ? d.k.PUBLIC_WITH_RECRUITMENT : d.k.PUBLIC });
         }, [b, _, j]),
         C = i.useCallback(() => {
-            g.Z.setSection(h.pNK.ACCESS, h.KsC.ACCESS_DISCOVERABLE);
+            g.Z.setSection(f.pNK.ACCESS, f.KsC.ACCESS_DISCOVERABLE);
         }, []),
-        y = null == (t = n.features) ? void 0 : t.includes(h.oNc.DISCOVERABLE);
+        y = null == (t = n.features) ? void 0 : t.includes(f.oNc.DISCOVERABLE);
     return (0, r.jsxs)(c.hjN, {
         className: x.twoColumnContainer,
         ref: v,
@@ -48,18 +48,18 @@ function b(e) {
                         value: !j,
                         hideBorder: !0,
                         disabled: y || !l,
-                        children: f.intl.string(f.t.fjHWen)
+                        children: h.intl.string(h.t.fjHWen)
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
-                        children: f.intl.string(f.t.J1YOV1)
+                        children: h.intl.string(h.t.J1YOV1)
                     }),
                     y &&
                         (0, r.jsx)(c.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-muted',
-                            children: f.intl.format(f.t.R8jY9v, {
+                            children: h.intl.format(h.t.R8jY9v, {
                                 accessLink: (e, t) =>
                                     (0, r.jsx)(
                                         c.eee,

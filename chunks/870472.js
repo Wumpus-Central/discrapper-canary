@@ -49,15 +49,15 @@ function o(e) {
 function c(e, t) {
     let { scrollerRef: n, mainInputRef: i, mainContainerRef: l } = t,
         {
-            state: { value: o, tags: c, selections: d },
-            setState: u,
+            state: { value: o, tags: c, selections: u },
+            setState: d,
             goBack: m,
             goForward: g
         } = e;
     r.useLayoutEffect(() => {
         let e = (e) => (t) => {
                 ('Meta' === t.key || 'Control' === t.key) &&
-                    u((t) => {
+                    d((t) => {
                         var n, r;
                         return (
                             (n = (function (e) {
@@ -111,7 +111,7 @@ function c(e, t) {
                 document.removeEventListener('keydown', t), document.removeEventListener('keyup', n);
             }
         );
-    }, [u]);
+    }, [d]);
     let p = r.useCallback(
             (e) => {
                 var t, r;
@@ -121,7 +121,7 @@ function c(e, t) {
                     .filter((e) => e.length > 0);
                 i.length <= 1 ||
                     ((0, s.flushSync)(() => {
-                        u((e) => {
+                        d((e) => {
                             let { tags: t, value: n } = e;
                             return {
                                 value: n,
@@ -135,11 +135,11 @@ function c(e, t) {
                     e.stopPropagation(),
                     null == (t = n.current) || t.scrollToBottom());
             },
-            [u, n]
+            [d, n]
         ),
-        h = r.useCallback(
+        f = r.useCallback(
             (e) => {
-                u((t) => {
+                d((t) => {
                     let { tags: n, value: r } = t;
                     return {
                         value: r,
@@ -149,11 +149,11 @@ function c(e, t) {
                     };
                 });
             },
-            [u]
+            [d]
         ),
-        f = r.useCallback(
+        h = r.useCallback(
             (e) => (t) => {
-                u((n) => {
+                d((n) => {
                     let { tags: r, value: i } = n,
                         l = [...r];
                     return (
@@ -167,11 +167,11 @@ function c(e, t) {
                     );
                 });
             },
-            [u]
+            [d]
         ),
         x = r.useCallback(
             (e) => {
-                u((t) => {
+                d((t) => {
                     let { tags: n, value: r, selections: i, isSelecting: l } = t;
                     return {
                         value: r,
@@ -181,12 +181,12 @@ function c(e, t) {
                     };
                 });
             },
-            [u]
+            [d]
         ),
         b = r.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                u((n) => {
+                d((n) => {
                     let { tags: r, value: i, selections: l, isSelecting: s } = n;
                     return {
                         value: i,
@@ -196,12 +196,12 @@ function c(e, t) {
                     };
                 });
             },
-            [u]
+            [d]
         ),
         j = r.useCallback(
             (e) => {
                 var t;
-                u((e) => {
+                d((e) => {
                     let { tags: t, value: n } = e;
                     return {
                         value: n,
@@ -213,11 +213,11 @@ function c(e, t) {
                     null != e && (e.preventDefault(), e.stopPropagation()),
                     null == (t = i.current) || t.focus();
             },
-            [i, u]
+            [i, d]
         ),
         _ = r.useCallback(
             (e) => {
-                u((t) => {
+                d((t) => {
                     let { tags: n } = t;
                     return {
                         value: e.target.value,
@@ -227,7 +227,7 @@ function c(e, t) {
                     };
                 });
             },
-            [u]
+            [d]
         ),
         v = r.useCallback(
             function (e) {
@@ -235,7 +235,7 @@ function c(e, t) {
                     r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
                 !(o.trim().length <= 0) &&
                     ((0, s.flushSync)(() => {
-                        u((e) => {
+                        d((e) => {
                             let { tags: t } = e;
                             return {
                                 value: '',
@@ -248,15 +248,15 @@ function c(e, t) {
                     r && null != n.current && n.current.scrollToBottom(),
                     t && (e.preventDefault(), e.stopPropagation()));
             },
-            [n, u, o]
+            [n, d, o]
         ),
         O = r.useCallback(
             (e) => {
                 let t = o.trim().length <= 0;
-                if (d.length > 0) {
+                if (u.length > 0) {
                     var n;
                     (0, s.flushSync)(() => {
-                        u((e) => {
+                        d((e) => {
                             let { tags: t, value: n, selections: r } = e;
                             return {
                                 value: n,
@@ -272,7 +272,7 @@ function c(e, t) {
                 } else
                     t &&
                         ((0, s.flushSync)(() => {
-                            u((e) => {
+                            d((e) => {
                                 let { tags: t } = e,
                                     n = [...t],
                                     r = n.pop();
@@ -287,7 +287,7 @@ function c(e, t) {
                         e.preventDefault(),
                         e.stopPropagation());
             },
-            [i, d.length, u, o]
+            [i, u.length, d, o]
         ),
         C = r.useCallback(
             (e) => {
@@ -305,7 +305,7 @@ function c(e, t) {
                 0 === c.length ||
                     (n && r === a) ||
                     ((0, s.flushSync)(() => {
-                        u((e) => {
+                        d((e) => {
                             let { tags: t, value: n } = e;
                             return {
                                 value: n,
@@ -326,7 +326,7 @@ function c(e, t) {
                     e.preventDefault(),
                     e.stopPropagation());
             },
-            [l, i, u, c.length, o]
+            [l, i, d, c.length, o]
         ),
         N = r.useCallback(
             (e) => {
@@ -352,8 +352,8 @@ function c(e, t) {
             },
             [C, O, y, j, l]
         ),
-        handleRemoveTag: h,
-        handleTagChangeEvent: f,
+        handleRemoveTag: f,
+        handleTagChangeEvent: h,
         handleSelectTag: x,
         handleUnselectTag: b,
         handleResetTagSelections: j,

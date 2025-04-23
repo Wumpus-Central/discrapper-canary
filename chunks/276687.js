@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -7,7 +7,7 @@ var i = n(442837),
     a = n(524329),
     o = n(575258),
     c = n(388032);
-let d = () => {
+let u = () => {
     let { guild: e } = (0, i.e7)([s.Z], () => s.Z.getProps()),
         { submitting: t, welcomeSettings: n } = (0, i.e7)([o.Z], () => o.Z.getSettingsProps());
     return null == e

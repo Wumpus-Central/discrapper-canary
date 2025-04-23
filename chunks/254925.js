@@ -8,8 +8,8 @@ var B = v(200651),
     e = v(442837),
     f = v(481060),
     r = v(314852),
-    C = v(997431),
-    h = v(65361),
+    C = v(65361),
+    h = v(731722),
     n = v(441536),
     w = v(494620),
     Q = v(434404),
@@ -20,11 +20,11 @@ var B = v(200651),
     M = v(500230),
     a = v(742409),
     l = v(981631),
-    E = v(116175),
+    E = v(131085),
     c = v(817239),
     P = v(388032),
     d = v(602268);
-let H = [E.ZD.LEAF, E.ZD.SWORD, E.ZD.HEART, E.ZD.FIRE, E.ZD.WATER_DROP, E.ZD.SKULL, E.ZD.MOON, E.ZD.LIGHTNING, E.ZD.COMPASS, E.ZD.TOADSTOOL],
+let H = [E.x_.LEAF, E.x_.SWORD, E.x_.HEART, E.x_.FIRE, E.x_.WATER_DROP, E.x_.SKULL, E.x_.MOON, E.x_.LIGHTNING, E.x_.COMPASS, E.x_.TOADSTOOL],
     I = [
         {
             primary: '#ff1c90',
@@ -84,7 +84,7 @@ let H = [E.ZD.LEAF, E.ZD.SWORD, E.ZD.HEART, E.ZD.FIRE, E.ZD.WATER_DROP, E.ZD.SKU
         (0, P.useSyncMessages)(c.messagesLoader);
         let b = (0, e.e7)([D.Z], () => D.Z.getGuild()),
             p = (0, e.e7)([D.Z], () => D.Z.getGuildProfile()),
-            { fetchGuildProfile: y, fetchStatus: Z } = (0, h.u)(null == b ? void 0 : b.id);
+            { fetchGuildProfile: y, fetchStatus: Z } = (0, C.u)(null == b ? void 0 : b.id);
         if (
             (t.useEffect(() => {
                 Z === r.a.NOT_FETCHED && y();
@@ -96,7 +96,7 @@ let H = [E.ZD.LEAF, E.ZD.SWORD, E.ZD.HEART, E.ZD.FIRE, E.ZD.WATER_DROP, E.ZD.SKU
                 children: (0, B.jsx)(f.$jN, {})
             });
         if (null == b || null == p) return null;
-        let u = (0, C.up)(b),
+        let u = (0, h.up)(b),
             O = !u || (null == p ? void 0 : p.tag) == null,
             V = null != (A = p.badge) ? A : H[0],
             j = null != (g = p.badgeColorPrimary) ? g : I[0].primary,

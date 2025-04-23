@@ -7,8 +7,8 @@ var i = n(740903),
     a = n(181339),
     o = n(195189),
     c = n(3896),
-    d = n(981631),
-    u = n(388032);
+    u = n(981631),
+    d = n(388032);
 let m = (e) => {
     let t = [
         {
@@ -20,8 +20,8 @@ let m = (e) => {
                 (0, r.jsx)(
                     o.Z,
                     {
-                        title: u.intl.string(u.t.QiONLy),
-                        details: u.intl.string(u.t.dSRTMD)
+                        title: d.intl.string(d.t.QiONLy),
+                        details: d.intl.string(d.t.dSRTMD)
                     },
                     'hide-suspicious-dms'
                 ),
@@ -32,19 +32,19 @@ let m = (e) => {
                 (0, r.jsx)(
                     o.Z,
                     {
-                        title: u.intl.string(u.t['f+8F8P']),
-                        details: u.intl.string(u.t.qChrIy)
+                        title: d.intl.string(d.t['f+8F8P']),
+                        details: d.intl.string(d.t.qChrIy)
                     },
                     'filter-unknown-dms'
                 ),
             enabled: !0
         },
         {
-            renderComponent: () => (0, r.jsx)(o.Z, { title: u.intl.string(u.t.EkSAHR) }, 'outbound-links-warn'),
+            renderComponent: () => (0, r.jsx)(o.Z, { title: d.intl.string(d.t.EkSAHR) }, 'outbound-links-warn'),
             enabled: !0
         },
         {
-            renderComponent: () => (0, r.jsx)(o.Z, { title: u.intl.string(u.t['7cAQmp']) }, 'delete-spam'),
+            renderComponent: () => (0, r.jsx)(o.Z, { title: d.intl.string(d.t['7cAQmp']) }, 'delete-spam'),
             enabled: !0
         }
     ].filter((e) => null != e);
@@ -52,14 +52,14 @@ let m = (e) => {
         [i.u.CAPTCHA_AND_RAID_PROTECTION]: [
             {
                 renderComponent: () => (0, r.jsx)(a.Z, { guild: e }, 'raid-alerts'),
-                enabled: !e.hasFeature(d.oNc.RAID_ALERTS_DISABLED)
+                enabled: !e.hasFeature(u.oNc.RAID_ALERTS_DISABLED)
             },
             {
-                renderComponent: () => (0, r.jsx)(o.Z, { title: u.intl.string(u.t.gOkFfH) }, 'captcha-suspicious-joins'),
+                renderComponent: () => (0, r.jsx)(o.Z, { title: d.intl.string(d.t.gOkFfH) }, 'captcha-suspicious-joins'),
                 enabled: !0
             },
             {
-                renderComponent: () => (0, r.jsx)(o.Z, { title: u.intl.string(u.t.r3esyM) }, 'captcha-raid-joins'),
+                renderComponent: () => (0, r.jsx)(o.Z, { title: d.intl.string(d.t.r3esyM) }, 'captcha-raid-joins'),
                 enabled: !0
             }
         ],
@@ -67,7 +67,7 @@ let m = (e) => {
         [i.u.PERMISSIONS]: [
             {
                 renderComponent: () => (0, r.jsx)(l.Z, { guild: e }, 'guild-mfa'),
-                enabled: e.mfaLevel === d.BpS.ELEVATED
+                enabled: e.mfaLevel === u.BpS.ELEVATED
             },
             {
                 renderComponent: () => (0, r.jsx)(s.Z, { guild: e }, 'disable-risky-perms'),

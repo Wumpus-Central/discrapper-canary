@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685), n(781311);
+n.d(t, { Z: () => d }), n(388685), n(781311);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -6,11 +6,11 @@ var r = n(200651),
     a = n(481060),
     o = n(981631),
     c = n(388032),
-    d = n(306447);
-let u = (e) => {
+    u = n(306447);
+let d = (e) => {
     var t,
         n,
-        { className: l, tags: u, value: m, onRemoveTag: g, onAddTag: p, onAddTagError: h, maxTaxLength: f, maxTags: x, disabled: b, placeholder: j } = e,
+        { className: l, tags: d, value: m, onRemoveTag: g, onAddTag: p, onAddTagError: f, maxTaxLength: h, maxTags: x, disabled: b, placeholder: j } = e,
         _ = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -31,21 +31,21 @@ let u = (e) => {
             return i;
         })(e, ['className', 'tags', 'value', 'onRemoveTag', 'onAddTag', 'onAddTagError', 'maxTaxLength', 'maxTags', 'disabled', 'placeholder']);
     let [v, O] = i.useState(null != m ? m : ''),
-        C = u.map((e, t) =>
+        C = d.map((e, t) =>
             (0, r.jsxs)(
                 'span',
                 {
-                    className: d.tag,
+                    className: u.tag,
                     children: [
                         e,
                         !b &&
                             (0, r.jsx)(a.P3F, {
-                                className: d.closeWrapper,
+                                className: u.closeWrapper,
                                 onClick: () => g(t),
                                 children: (0, r.jsx)(a.Dio, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: d.close
+                                    className: u.close
                                 })
                             })
                     ]
@@ -56,18 +56,18 @@ let u = (e) => {
         y = i.useCallback(() => {
             let e = v.trim();
             if (0 !== e.length) {
-                if (null != x && u.length >= x) {
-                    null == h || h(c.intl.string(c.t.Xx7XeH));
+                if (null != x && d.length >= x) {
+                    null == f || f(c.intl.string(c.t.Xx7XeH));
                     return;
                 }
                 p(e), O('');
             }
-        }, [v, x, p, h, u.length]),
+        }, [v, x, p, f, d.length]),
         N = i.useCallback(
             (e) => {
                 switch (e.keyCode) {
                     case o.yXg.BACKSPACE:
-                        0 === v.length && u.length > 0 && (e.preventDefault(), e.stopPropagation(), g(u.length - 1));
+                        0 === v.length && d.length > 0 && (e.preventDefault(), e.stopPropagation(), g(d.length - 1));
                         break;
                     case o.yXg.ENTER:
                     case o.yXg.TAB:
@@ -75,10 +75,10 @@ let u = (e) => {
                         e.preventDefault(), e.stopPropagation(), y();
                 }
             },
-            [y, v.length, g, u.length]
+            [y, v.length, g, d.length]
         );
     return (0, r.jsxs)('div', {
-        className: s()(l, d.inputWrapper, { [d.disabled]: b }),
+        className: s()(l, u.inputWrapper, { [u.disabled]: b }),
         children: [
             C,
             (0, r.jsx)(
@@ -109,8 +109,8 @@ let u = (e) => {
                     return e;
                 })(
                     {
-                        className: d.inputOuter,
-                        inputClassName: d.inputInner
+                        className: u.inputOuter,
+                        inputClassName: u.inputInner
                     },
                     _
                 )),
@@ -119,7 +119,7 @@ let u = (e) => {
                         value: v,
                         onKeyDown: N,
                         onChange: O,
-                        maxLength: f,
+                        maxLength: h,
                         disabled: b,
                         onBlur: y,
                         placeholder: j

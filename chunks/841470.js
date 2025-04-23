@@ -7,7 +7,7 @@ var i = n(692547),
     a = n(388032),
     o = n(193);
 let c = (e) => {
-    let { title: t, subtext: n = a.intl.string(a.t.jHpxws), localizedNumber: c, isTrendingUp: d, isTrendingDown: u, tooltipText: m } = e,
+    let { title: t, subtext: n = a.intl.string(a.t.jHpxws), localizedNumber: c, isTrendingUp: u, isTrendingDown: d, tooltipText: m } = e,
         g =
             null != m
                 ? (0, r.jsx)(l.ua7, {
@@ -85,7 +85,7 @@ let c = (e) => {
             (0, r.jsxs)('div', {
                 className: o.analyticsCardArrowSubText,
                 children: [
-                    d
+                    u
                         ? (0, r.jsx)(s.Z, {
                               className: o.trendingArrow,
                               color: i.Z.unsafe_rawColors.GREEN_360.css,
@@ -94,7 +94,7 @@ let c = (e) => {
                               height: 12
                           })
                         : null,
-                    u
+                    d
                         ? (0, r.jsx)(s.Z, {
                               className: o.trendingArrowIconDown,
                               color: i.Z.unsafe_rawColors.RED_400.css,

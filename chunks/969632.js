@@ -6,7 +6,7 @@ var r,
     a = n(570140),
     o = n(563534),
     c = n(999382);
-function d(e, t, n) {
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function d(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,7 +30,7 @@ function u(e) {
                 })
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
@@ -38,32 +38,32 @@ function u(e) {
 let m = { enabled: !1 },
     g = null,
     p = Object.assign({}, m),
-    h = !1,
-    f = {};
+    f = !1,
+    h = {};
 function x() {
-    (g = null), (p = Object.assign({}, m)), (h = !1), (g = c.Z.getGuildId()), (p = l().cloneDeep(Object.assign({}, o.Z.getSettings(g))));
+    (g = null), (p = Object.assign({}, m)), (f = !1), (g = c.Z.getGuildId()), (p = l().cloneDeep(Object.assign({}, o.Z.getSettings(g))));
 }
 function b(e, t) {
     if (null == p.newMemberActions) return !1;
     let n = p.newMemberActions.findIndex((t) => t.channelId === e);
     if (n < 0) return !1;
-    (p.newMemberActions[n] = u({}, t)), (p.newMemberActions = [...p.newMemberActions]);
+    (p.newMemberActions[n] = d({}, t)), (p.newMemberActions = [...p.newMemberActions]);
 }
 function j(e, t) {
     if (null == p.resourceChannels) return !1;
     let n = p.resourceChannels.findIndex((t) => t.channelId === e);
     if (n < 0) return !1;
-    (p.resourceChannels[n] = u({}, t)), (p.resourceChannels = [...p.resourceChannels]);
+    (p.resourceChannels[n] = d({}, t)), (p.resourceChannels = [...p.resourceChannels]);
 }
 function _() {
-    (h = !1), (p = l().cloneDeep(Object.assign({}, o.Z.getSettings(g))));
+    (f = !1), (p = l().cloneDeep(Object.assign({}, o.Z.getSettings(g))));
 }
 class v extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (f = e.dismissedSuggestedChannelIdsByGuildId), this.waitFor(c.Z, o.Z);
+        null != e && (h = e.dismissedSuggestedChannelIdsByGuildId), this.waitFor(c.Z, o.Z);
     }
     getState() {
-        return { dismissedSuggestedChannelIdsByGuildId: f };
+        return { dismissedSuggestedChannelIdsByGuildId: h };
     }
     getSettings() {
         return null != p ? p : m;
@@ -72,11 +72,11 @@ class v extends (r = s.ZP.PersistedStore) {
         return null != g && !l().isEqual(l().omit(p, 'newMemberActions'), l().omit(o.Z.getSettings(g), 'newMemberActions'));
     }
     getSubmitting() {
-        return h;
+        return f;
     }
     getDismissedSuggestedChannelIds(e) {
         var t;
-        return null == e ? [] : null != (t = f[e]) ? t : [];
+        return null == e ? [] : null != (t = h[e]) ? t : [];
     }
     getResourceChannel(e) {
         var t;
@@ -91,7 +91,7 @@ class v extends (r = s.ZP.PersistedStore) {
         return null == n ? null : n;
     }
 }
-d(v, 'displayName', 'GuildSettingsOnboardingHomeSettingsStore'), d(v, 'persistKey', 'GuildSettingsOnboardingHomeSettingsStore');
+u(v, 'displayName', 'GuildSettingsOnboardingHomeSettingsStore'), u(v, 'persistKey', 'GuildSettingsOnboardingHomeSettingsStore');
 let O = new v(a.Z, {
     GUILD_SETTINGS_INIT: x,
     GUILD_SETTINGS_SET_SECTION: x,
@@ -100,7 +100,7 @@ let O = new v(a.Z, {
         p = l().cloneDeep(Object.assign({}, o.Z.getSettings(g)));
     },
     GUILD_HOME_SETTINGS_UPDATE_START: function () {
-        h = !0;
+        f = !0;
     },
     GUILD_HOME_SETTINGS_UPDATE_SUCCESS: _,
     GUILD_HOME_SETTINGS_UPDATE_FAIL: _,
@@ -162,6 +162,6 @@ let O = new v(a.Z, {
     GUILD_SETTINGS_ONBOARDING_DISMISS_RESOURCE_CHANNEL_SUGGESTION: function (e) {
         var t;
         let { guildId: n, channelIds: r } = e;
-        f[n] = [...(null != (t = f[n]) ? t : []), ...r];
+        h[n] = [...(null != (t = h[n]) ? t : []), ...r];
     }
 });

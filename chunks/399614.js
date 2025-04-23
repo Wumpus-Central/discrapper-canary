@@ -6,8 +6,8 @@ var r = n(200651),
     a = n(710344),
     o = n(734893),
     c = n(8426),
-    d = n(969632),
-    u = n(922112),
+    u = n(969632),
+    d = n(922112),
     m = n(388032),
     g = n(773100);
 function p(e) {
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,18 +53,18 @@ function h(e, t) {
         e
     );
 }
-let f = [],
+let h = [],
     x = function (e) {
         let { guildId: t } = e,
-            x = (0, l.Wu)([d.Z], () => {
+            x = (0, l.Wu)([u.Z], () => {
                 var e;
-                return null != (e = d.Z.getSettings().resourceChannels) ? e : f;
+                return null != (e = u.Z.getSettings().resourceChannels) ? e : h;
             }),
-            b = i.useMemo(() => x.map((e) => h(p({}, e), { id: e.channelId })), [x]),
+            b = i.useMemo(() => x.map((e) => f(p({}, e), { id: e.channelId })), [x]),
             { handleDragStart: j, handleDragReset: _, handleDragComplete: v } = (0, a.Z)(b, c.lq),
             O = i.useCallback(
                 (e, n) => {
-                    let r = d.Z.getSettings();
+                    let r = u.Z.getSettings();
                     null != r &&
                         ((0, c.r2)(e),
                         (0, c.oo)(t, r).then(() => {
@@ -80,7 +80,7 @@ let f = [],
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                h(p({}, n), {
+                                f(p({}, n), {
                                     guildId: t,
                                     onSave: c.r2,
                                     onIconUpload: O
@@ -93,7 +93,7 @@ let f = [],
             children: [
                 x.map((e, n) =>
                     (0, r.jsx)(
-                        u.Z,
+                        d.Z,
                         {
                             guildId: t,
                             resourceChannel: e,

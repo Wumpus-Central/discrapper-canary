@@ -21,9 +21,9 @@ var i = n(200651),
     C = n(388610),
     N = n(592125),
     S = n(496675),
-    w = n(699516),
-    O = n(594174),
-    Z = n(585483),
+    O = n(699516),
+    Z = n(594174),
+    w = n(585483),
     T = n(787263),
     E = n(975316),
     R = n(428813),
@@ -84,7 +84,7 @@ class M extends l.PureComponent {
                                                           className: L.channelIcon
                                                       })
                                                     : null,
-                                                (0, g.F6)(t, O.default, w.Z),
+                                                (0, g.F6)(t, Z.default, O.Z),
                                                 null != n
                                                     ? (0, i.jsx)(s.Text, {
                                                           tag: 'span',
@@ -92,7 +92,7 @@ class M extends l.PureComponent {
                                                           color: 'header-secondary',
                                                           lineClamp: 1,
                                                           className: L.category,
-                                                          children: (0, g.F6)(n, O.default, w.Z)
+                                                          children: (0, g.F6)(n, Z.default, O.Z)
                                                       })
                                                     : null
                                             ]
@@ -142,7 +142,7 @@ class M extends l.PureComponent {
                               section: P.CoT.DELETE,
                               onClick() {
                                   (0, T.w)(t, function () {
-                                      Z.S.subscribeOnce(P.CkL.LAYER_POP_COMPLETE, () => {
+                                      w.S.subscribeOnce(P.CkL.LAYER_POP_COMPLETE, () => {
                                           (0, o.zz)(t.id);
                                       }),
                                           (0, c.xf)();

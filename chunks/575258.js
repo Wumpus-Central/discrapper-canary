@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(953529);
+n.d(t, { Z: () => h }), n(953529);
 var r,
     i = n(442837),
     l = n(570140),
@@ -22,8 +22,8 @@ let c = {
         channels: [],
         enabled: !1
     },
-    d = c,
-    u = !1,
+    u = c,
+    d = !1,
     m = !1,
     g = c;
 function p(e) {
@@ -31,15 +31,15 @@ function p(e) {
         r = s.Z.getGuild(n);
     if (null != t) {
         var i, l;
-        g = d = {
+        g = u = {
             description: null != (i = t.description) ? i : '',
             channels: null != (l = t.welcome_channels) ? l : [],
             enabled: null == r ? void 0 : r.hasFeature(a.oNc.WELCOME_SCREEN_ENABLED)
         };
-    } else g = d = c;
+    } else g = u = c;
     m = !1;
 }
-class h extends (r = i.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.Z);
     }
@@ -51,22 +51,22 @@ class h extends (r = i.ZP.Store) {
     }
     getSettingsProps() {
         return {
-            submitting: u,
+            submitting: d,
             hasErrors: m,
             welcomeSettings: g,
-            originalWelcomeSettings: d
+            originalWelcomeSettings: u
         };
     }
 }
-o(h, 'displayName', 'WelcomeScreenSettingsStore');
-let f = new h(l.Z, {
+o(f, 'displayName', 'WelcomeScreenSettingsStore');
+let h = new f(l.Z, {
     WELCOME_SCREEN_FETCH_SUCCESS: p,
     WELCOME_SCREEN_UPDATE: p,
     WELCOME_SCREEN_SETTINGS_RESET: function () {
-        (g = d), (m = !1);
+        (g = u), (m = !1);
     },
     WELCOME_SCREEN_SETTINGS_CLEAR: function () {
-        (g = c), (d = c);
+        (g = c), (u = c);
     },
     WELCOME_SCREEN_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e;
@@ -88,12 +88,12 @@ let f = new h(l.Z, {
         })({}, g, t);
     },
     WELCOME_SCREEN_SUBMIT: function () {
-        u = !0;
+        d = !0;
     },
     WELCOME_SCREEN_SUBMIT_SUCCESS: function (e) {
-        p(e), (u = !1);
+        p(e), (d = !1);
     },
     WELCOME_SCREEN_SUBMIT_FAILURE: function () {
-        (m = !0), (u = !1);
+        (m = !0), (d = !1);
     }
 });

@@ -19,8 +19,8 @@ var r = n(200651),
     v = n(223312),
     _ = n(571728),
     C = n(473403),
-    N = n(984370),
-    T = n(703656),
+    T = n(984370),
+    N = n(703656),
     E = n(171368),
     S = n(433355),
     I = n(592125),
@@ -53,7 +53,7 @@ function Y(e) {
             location: t.name,
             subsection: c
         }),
-        (0, r.jsxs)(N.Z, {
+        (0, r.jsxs)(T.Z, {
             className: V.header,
             innerClassname: V.__invalid_innerHeader,
             channelId: F.oC.MEMBER_SAFETY,
@@ -67,7 +67,7 @@ function Y(e) {
                           look: o.zxk.Looks.OUTLINED,
                           color: o.zxk.Colors.PRIMARY,
                           onClick: () => {
-                              null != n && (0, T.XU)(t.id, n.id);
+                              null != n && (0, N.XU)(t.id, n.id);
                           },
                           children: (0, r.jsx)(o.Text, {
                               className: V.returnButtonText,
@@ -102,11 +102,11 @@ function Y(e) {
                       })
                     : (0, r.jsx)('div', {}),
             children: [
-                (0, r.jsx)(N.Z.Icon, {
+                (0, r.jsx)(T.Z.Icon, {
                     icon: o.BFJ,
                     'aria-hidden': !0
                 }),
-                (0, r.jsx)(N.Z.Title, { children: d }),
+                (0, r.jsx)(T.Z.Title, { children: d }),
                 s &&
                     (0, r.jsx)(D.Z, {
                         guildId: t.id,
@@ -124,11 +124,11 @@ function K(e) {
         [u, m] = l.useState(i > 0 ? y.e.PENDING : y.e.ALL_MEMBERS),
         f = (0, s.e7)([O.Z], () => O.Z.getGuild(n)),
         { analyticsLocations: C } = (0, d.ZP)(c.Z.MEMBER_SAFETY_PAGE),
-        N = (0, g.C)({ guildId: n }),
+        T = (0, g.C)({ guildId: n }),
         { guildJoinRequests: D } = (0, v.j)({
             guildId: n,
             applicationStatus: 'ALL_MEMBERS' === u ? b.wB.SUBMITTED : u,
-            sortOrder: N
+            sortOrder: T
         });
     l.useEffect(() => {
         (null == f ? void 0 : f.hasFeature(z.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) || m(y.e.ALL_MEMBERS);
@@ -147,19 +147,19 @@ function K(e) {
             var e;
             if (u === y.e.ALL_MEMBERS) return;
             let t = null == (e = X.current) ? void 0 : e.getScrollerState();
-            null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 200 && (await Q(N, u));
-        }, [u, u, N, Q]),
+            null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 200 && (await Q(T, u));
+        }, [u, u, T, Q]),
         ee = l.useCallback(
             async (e) => {
-                u !== e && (m(e), j.Z.setSelectedGuildJoinRequest(n, null), 'ALL_MEMBERS' !== e && (await Q(N, e)));
+                u !== e && (m(e), j.Z.setSelectedGuildJoinRequest(n, null), 'ALL_MEMBERS' !== e && (await Q(T, e)));
             },
-            [u, n, Q, N]
+            [u, n, Q, T]
         );
     l.useEffect(() => {
         if (!q && null != f) {
             var e;
             let t = null == (e = P.ZP.getDefaultChannel(f.id)) ? void 0 : e.id;
-            (0, T.XU)(f.id, t);
+            (0, N.XU)(f.id, t);
         }
     }, [f, q]);
     let et = (0, s.e7)([S.ZP], () => null != S.ZP.getGuildSidebarState(n), [n]),

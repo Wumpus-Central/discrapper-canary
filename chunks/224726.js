@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(224706),
     o = n(100527),
     c = n(906732),
-    d = n(314852),
-    u = n(65361),
+    u = n(314852),
+    d = n(65361),
     m = n(910200),
     g = n(496675),
     p = n(434404),
-    h = n(999382),
-    f = n(12078),
+    f = n(999382),
+    h = n(12078),
     x = n(934638),
     b = n(566036),
     j = n(979664),
@@ -25,10 +25,10 @@ var r = n(200651),
     I = n(83951);
 let E = function () {
     let { analyticsLocations: e } = (0, c.ZP)(o.Z.GUILD_SETTINGS_PROFILE_PAGE),
-        t = (0, l.e7)([h.Z], () => h.Z.getGuild(), []),
+        t = (0, l.e7)([f.Z], () => f.Z.getGuild(), []),
         n = null == t ? void 0 : t.id,
-        { fetchGuildProfile: E, fetchStatus: S } = (0, u.u)(null == t ? void 0 : t.id),
-        T = (0, l.e7)([h.Z], () => h.Z.getGuildProfile(), []),
+        { fetchGuildProfile: E, fetchStatus: S } = (0, d.u)(null == t ? void 0 : t.id),
+        T = (0, l.e7)([f.Z], () => f.Z.getGuildProfile(), []),
         P = (0, l.e7)([g.Z], () => g.Z.can(y.Plq.MANAGE_GUILD, t)),
         w = i.useCallback(
             (e) => {
@@ -51,9 +51,9 @@ let E = function () {
     return (i.useEffect(() => {
         a.Z.getDetectableGames();
     }, []),
-    S === d.a.FETCHED && null == T)
+    S === u.a.FETCHED && null == T)
         ? (0, r.jsx)(v.g, { forceFetchGuildProfile: Z })
-        : S === d.a.NOT_FETCHED || S === d.a.FETCHING
+        : S === u.a.NOT_FETCHED || S === u.a.FETCHING
           ? (0, r.jsx)('main', {
                 className: I.spinner,
                 children: (0, r.jsx)(s.$jN, {})
@@ -94,7 +94,7 @@ let E = function () {
                                       onIconChange: w
                                   }),
                                   (0, r.jsx)('div', { className: I.divider }),
-                                  (0, r.jsx)(f.Z, {
+                                  (0, r.jsx)(h.Z, {
                                       profile: T,
                                       onCustomBannerChange: R,
                                       canManageGuild: P

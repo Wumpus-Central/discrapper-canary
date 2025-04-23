@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(807582),
     o = n(26323),
     c = n(516129),
-    d = n(345861),
-    u = n(709586),
+    u = n(345861),
+    d = n(709586),
     m = n(768581),
     g = n(434404),
     p = n(981631),
-    h = n(30513),
-    f = n(486324),
+    f = n(30513),
+    h = n(486324),
     x = n(200299),
     b = n(388032),
     j = n(773100);
@@ -59,7 +59,7 @@ let _ = function (e) {
                                         let { imageUri: n } = e;
                                         return g.Z.saveGuild(t.id, { homeHeader: n });
                                     },
-                                    uploadType: f.pC.HOME_HEADER
+                                    uploadType: h.pC.HOME_HEADER
                                 },
                                 n
                             )
@@ -88,7 +88,7 @@ let _ = function (e) {
                             page: p.ZY5.GUILD_SETTINGS
                         },
                         guild: t,
-                        perks: (0, h.XO)()
+                        perks: (0, f.XO)()
                     });
             },
             [t]
@@ -138,7 +138,7 @@ let _ = function (e) {
                                       color: 'header-secondary',
                                       children: b.intl.string(b.t.Vwintr)
                                   }),
-                                  (0, r.jsx)(d.Z, {
+                                  (0, r.jsx)(u.Z, {
                                       color: l.Ttl.BRAND,
                                       className: j.uploadButton,
                                       buttonCTA: b.intl.string(b.t.yG2pUl),
@@ -187,7 +187,7 @@ let _ = function (e) {
                                       color: l.zxk.Colors.GREEN,
                                       onClick: O,
                                       children: [
-                                          (0, r.jsx)(u.Z, {
+                                          (0, r.jsx)(d.Z, {
                                               height: 16,
                                               width: 16
                                           }),

@@ -10,17 +10,17 @@ var r = n(200651),
     u = n(239091),
     m = n(700582),
     x = n(906732),
-    h = n(979264),
-    j = n(693546),
-    b = n(826581),
-    f = n(246364),
-    p = n(98493),
-    g = n(328977),
-    v = n(412222),
-    _ = n(223312),
+    h = n(693546),
+    j = n(826581),
+    b = n(246364),
+    f = n(98493),
+    p = n(328977),
+    g = n(412222),
+    v = n(223312),
+    _ = n(172751),
     C = n(768762),
-    N = n(171368),
-    T = n(598077),
+    T = n(171368),
+    N = n(598077),
     E = n(430824),
     S = n(51144),
     I = n(388032),
@@ -33,10 +33,10 @@ function w(e) {
         n,
         { status: l } = e;
     switch (l) {
-        case f.wB.REJECTED:
+        case b.wB.REJECTED:
             (t = I.t['7YSJ6e']), (n = I.t.i05OUV);
             break;
-        case f.wB.APPROVED:
+        case b.wB.APPROVED:
             (t = I.t.bv82GR), (n = I.t.D4OUHR);
             break;
         default:
@@ -87,7 +87,7 @@ function A(e) {
                                 color: 'interactive-normal',
                                 children: I.intl.string(I.t.EZ5QWF)
                             }),
-                            t === f.Nw.TIMESTAMP_ASC
+                            t === b.Nw.TIMESTAMP_ASC
                                 ? (0, r.jsx)(C.Z, {
                                       className: P.sortIcon,
                                       direction: C.Z.Directions.UP
@@ -119,7 +119,7 @@ let M = l.memo(function (e) {
                 (e) => {
                     e.stopPropagation(),
                         e.preventDefault(),
-                        (0, N.openUserProfileModal)({
+                        (0, T.openUserProfileModal)({
                             userId: n.id,
                             joinRequestId: i,
                             sourceAnalyticsLocations: s
@@ -144,7 +144,7 @@ let M = l.memo(function (e) {
                             className: y.nameContainer,
                             children: [
                                 n.globalName,
-                                (0, r.jsx)(h.ZP, {
+                                (0, r.jsx)(_.ZP, {
                                     primaryGuild: null == n ? void 0 : n.primaryGuild,
                                     userId: null == n ? void 0 : n.id,
                                     contextGuildId: a,
@@ -173,10 +173,10 @@ let M = l.memo(function (e) {
     Z = l.memo(function (e) {
         let { joinRequest: t, onSelect: i } = e,
             { guildId: s, createdAt: m, applicationStatus: x } = t,
-            h = l.useMemo(() => new T.Z(t.user), [t.user]),
-            j = (0, g.L)({ guildId: s }),
-            b = (0, c.e7)([E.Z], () => E.Z.getGuild(s)),
-            p = x === f.wB.SUBMITTED,
+            h = l.useMemo(() => new N.Z(t.user), [t.user]),
+            j = (0, p.L)({ guildId: s }),
+            f = (0, c.e7)([E.Z], () => E.Z.getGuild(s)),
+            g = x === b.wB.SUBMITTED,
             v = (e) => {
                 (0, u.jW)(
                     e,
@@ -213,7 +213,7 @@ let M = l.memo(function (e) {
                                 })({}, t)),
                                 (l = l =
                                     {
-                                        guild: b,
+                                        guild: f,
                                         user: h
                                     }),
                                 Object.getOwnPropertyDescriptors
@@ -261,7 +261,7 @@ let M = l.memo(function (e) {
                       (0, r.jsx)('td', {
                           className: P.moreOptionsCol,
                           children:
-                              p &&
+                              g &&
                               (0, r.jsx)(d.ua7, {
                                   text: I.intl.string(I.t.x8Nn4O),
                                   children: (e) => {
@@ -328,20 +328,20 @@ function D(e) {
     let { guildId: t, currentTab: n } = e,
         i = l.useRef(null),
         a = (0, c.e7)([E.Z], () => E.Z.getGuild(t)),
-        s = (0, v.C)({ guildId: t }),
-        o = (0, c.e7)([b.Z], () => b.Z.isFetching()),
-        { guildJoinRequests: u } = (0, _.j)({
+        s = (0, g.C)({ guildId: t }),
+        o = (0, c.e7)([j.Z], () => j.Z.isFetching()),
+        { guildJoinRequests: u } = (0, v.j)({
             guildId: t,
             applicationStatus: n,
             sortOrder: s
         }),
-        { fetchNextPage: m } = (0, p.m)({
+        { fetchNextPage: m } = (0, f.m)({
             guildId: t,
             guildJoinRequests: u
         }),
         x = l.useCallback(async () => {
-            let e = s === f.Nw.TIMESTAMP_ASC ? f.Nw.TIMESTAMP_DESC : f.Nw.TIMESTAMP_ASC;
-            j.Z.setSelectedSortOrder(t, e), await m(e, n);
+            let e = s === b.Nw.TIMESTAMP_ASC ? b.Nw.TIMESTAMP_DESC : b.Nw.TIMESTAMP_ASC;
+            h.Z.setSelectedSortOrder(t, e), await m(e, n);
         }, [s, t, m, n]);
     return null == a
         ? null
@@ -371,7 +371,7 @@ function D(e) {
                                               Z,
                                               {
                                                   joinRequest: e,
-                                                  onSelect: () => j.Z.setSelectedGuildJoinRequest(t, e)
+                                                  onSelect: () => h.Z.setSelectedGuildJoinRequest(t, e)
                                               },
                                               e.joinRequestId
                                           )

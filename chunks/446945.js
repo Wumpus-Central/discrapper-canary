@@ -7,41 +7,41 @@ var i = n(481060),
     a = n(246364),
     o = n(540457),
     c = n(700833),
-    d = n(388032),
-    u = n(999384);
+    u = n(388032),
+    d = n(999384);
 function m(e) {
     let { addFormField: t, onSelect: n, guild: o, allowTerms: m } = e;
     return (0, r.jsx)(i.v2r, {
         navId: 'add-questions',
-        className: u.menu,
+        className: d.menu,
         onClose: l.Zy,
-        'aria-label': d.intl.string(d.t.liqwPD),
+        'aria-label': u.intl.string(u.t.liqwPD),
         onSelect: n,
         children: (0, r.jsxs)(i.kSQ, {
             children: [
                 (0, r.jsx)(i.sNh, {
                     id: 'text-input',
                     icon: (0, i.GSL)(s.Z),
-                    label: d.intl.string(d.t.w6Q9w8),
+                    label: u.intl.string(u.t.w6Q9w8),
                     action: () => (0, c.Md)(a.QJ.TEXT_INPUT, t, o)
                 }),
                 (0, r.jsx)(i.sNh, {
                     id: 'paragraph',
                     icon: i.OvV,
-                    label: d.intl.string(d.t.gG0JBA),
+                    label: u.intl.string(u.t.gG0JBA),
                     action: () => (0, c.Md)(a.QJ.PARAGRAPH, t, o)
                 }),
                 (0, r.jsx)(i.sNh, {
                     id: 'multiple-choice',
                     icon: i.jE$,
-                    label: d.intl.string(d.t.ooKh3t),
+                    label: u.intl.string(u.t.ooKh3t),
                     action: () => (0, c.Md)(a.QJ.MULTIPLE_CHOICE, t, o)
                 }),
                 m &&
                     (0, r.jsx)(i.sNh, {
                         id: 'terms',
                         icon: i.snC,
-                        label: d.intl.string(d.t['3pz9t7']),
+                        label: u.intl.string(u.t['3pz9t7']),
                         action: () => (0, c.Md)(a.QJ.TERMS, t, o)
                     })
             ]
@@ -51,8 +51,8 @@ function m(e) {
 let g = function (e) {
     let { addFormField: t, guild: n, allowTerms: i } = e;
     return (0, r.jsx)(o.A, {
-        text: d.intl.string(d.t.CoHdoK),
-        tooltipText: d.intl.string(d.t.nsI4dX),
+        text: u.intl.string(u.t.CoHdoK),
+        tooltipText: u.intl.string(u.t.nsI4dX),
         onClick: (e) => {
             (0, l.vq)(
                 e,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -6,24 +6,24 @@ var r = n(200651),
     a = n(481060),
     o = n(730671),
     c = n(388032),
-    d = n(886678);
-function u(e) {
-    let { onChangeText: t, maxWordCount: n, className: l, textAreaClassName: u, subtitleText: m, initialValue: g } = e,
+    u = n(886678);
+function d(e) {
+    let { onChangeText: t, maxWordCount: n, className: l, textAreaClassName: d, subtitleText: m, initialValue: g } = e,
         p = i.useMemo(() => (null != g ? g : []), [g]),
-        { value: h, onChange: f, errorMessage: x } = (0, o.Z)(t, g, n);
+        { value: f, onChange: h, errorMessage: x } = (0, o.Z)(t, g, n);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: s()(d.keywordsContainer, l),
+                className: s()(u.keywordsContainer, l),
                 children: [
                     (0, r.jsx)(a.lcI, {
-                        className: s()(d.keywordsTextArea, u),
-                        value: h,
-                        onChange: f,
+                        className: s()(u.keywordsTextArea, d),
+                        value: f,
+                        onChange: h,
                         placeholder: c.intl.string(c.t.UyaxJy)
                     }),
                     (0, r.jsx)(a.Text, {
-                        className: d.keywordsCounter,
+                        className: u.keywordsCounter,
                         variant: 'text-xs/normal',
                         color: 'text-muted',
                         children: ''.concat(p.length, ' / ').concat(n)
@@ -32,13 +32,13 @@ function u(e) {
             }),
             null != x
                 ? (0, r.jsx)(a.Text, {
-                      className: s()(d.paddingTop, d.errorText),
+                      className: s()(u.paddingTop, u.errorText),
                       variant: 'text-xs/medium',
                       color: 'text-danger',
                       children: x
                   })
                 : (0, r.jsx)(a.Text, {
-                      className: d.paddingTop,
+                      className: u.paddingTop,
                       variant: 'text-xs/normal',
                       color: 'header-secondary',
                       children: null != m ? m : c.intl.string(c.t['Gm6G5+'])

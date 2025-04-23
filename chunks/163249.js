@@ -6,12 +6,12 @@ var r = n(200651),
     a = n(481060),
     o = n(749210),
     c = n(493544),
-    d = n(607070),
-    u = n(714939),
+    u = n(607070),
+    d = n(714939),
     m = n(981631),
     g = n(388032),
     p = n(406116);
-function h(e) {
+function f(e) {
     let { color: t, children: n } = e;
     return (0, r.jsxs)('div', {
         className: p.roleTag,
@@ -27,7 +27,7 @@ function h(e) {
         ]
     });
 }
-function f(e) {
+function h(e) {
     let { guild: t, display: n } = e;
     return (0, r.jsxs)('div', {
         className: s()(p.banner, t.backgroundClass, { [p.bannerOut]: !n }),
@@ -41,7 +41,7 @@ function f(e) {
                             className: p.rolesRow,
                             children: e.map((e) =>
                                 (0, r.jsx)(
-                                    h,
+                                    f,
                                     {
                                         color: e.color,
                                         children: e.name
@@ -195,7 +195,7 @@ function x() {
             s.current = e;
         }),
         i.useEffect(() => {
-            if (d.Z.useReducedMotion) return;
+            if (u.Z.useReducedMotion) return;
             let e = setTimeout(() => l((t + 1) % s.current.length), 6332);
             return () => clearTimeout(e);
         }, [t]),
@@ -204,7 +204,7 @@ function x() {
             'aria-hidden': !0,
             children: e.map((e, n) =>
                 (0, r.jsx)(
-                    f,
+                    h,
                     {
                         guild: e,
                         display: n === t
@@ -217,11 +217,11 @@ function x() {
 }
 function b(e) {
     let { guild: t, everyoneRole: n, setEditRoleId: l } = e,
-        [s, d] = i.useState(!1),
+        [s, u] = i.useState(!1),
         m = async () => {
-            d(!0), await o.Z.createRole(t.id), d(!1);
+            u(!0), await o.Z.createRole(t.id), u(!1);
         },
-        h = i.useCallback(() => {
+        f = i.useCallback(() => {
             l(n.id);
         }, [l, n.id]);
     return (0, r.jsx)(c.NM, {
@@ -254,9 +254,9 @@ function b(e) {
                     ]
                 }),
                 (0, r.jsx)(a.$i$, { className: p.divider }),
-                (0, r.jsx)(u.Z, {
+                (0, r.jsx)(d.Z, {
                     role: n,
-                    onClick: h
+                    onClick: f
                 })
             ]
         })

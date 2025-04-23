@@ -5,12 +5,12 @@ var i = n(512508),
     l = n(706371),
     s = n(563115);
 function a(e) {
-    let { guildId: t, selectedChannelIds: n, selectedRoleIds: a, onChange: o, placeholder: c, disableEveryoneRole: d, includeRoleRestrictedPrivateChannels: u = !1, includeStageVoiceChannels: m = !1, helperText: g, className: p } = e,
-        h = (0, l.r)(t, n, u, m),
-        f = (0, s.h)(t, a, d);
+    let { guildId: t, selectedChannelIds: n, selectedRoleIds: a, onChange: o, placeholder: c, disableEveryoneRole: u, includeRoleRestrictedPrivateChannels: d = !1, includeStageVoiceChannels: m = !1, helperText: g, className: p } = e,
+        f = (0, l.r)(t, n, d, m),
+        h = (0, s.h)(t, a, u);
     return (0, r.jsx)(i.ZP, {
-        channelRows: h,
-        roleRows: f,
+        channelRows: f,
+        roleRows: h,
         guildId: t,
         selectedChannelIds: n,
         selectedRoleIds: a,

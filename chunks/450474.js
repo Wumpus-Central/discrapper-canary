@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -6,19 +6,19 @@ var r = n(200651),
     a = n(456268),
     o = n(526429),
     c = n(203377);
-let d = (e) => {
-    let { guild: t, guildMetadata: n, disabled: d } = e,
-        u = (0, l.Wu)([o.Z], () => o.Z.getAllCategories()),
+let u = (e) => {
+    let { guild: t, guildMetadata: n, disabled: u } = e,
+        d = (0, l.Wu)([o.Z], () => o.Z.getAllCategories()),
         m = i.useMemo(
             () =>
-                u.map((e) => {
+                d.map((e) => {
                     let { categoryId: t, name: n } = e;
                     return {
                         value: t,
                         label: n
                     };
                 }),
-            [u]
+            [d]
         );
     return 0 === m.length
         ? (0, r.jsx)(s.$jN, {})
@@ -33,7 +33,7 @@ let d = (e) => {
                       e.filter((e) => !r.includes(e)).forEach((e) => (0, a.Kq)(t.id, e));
                   }
               },
-              isDisabled: d,
+              isDisabled: u,
               multi: !0
           });
 };

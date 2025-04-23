@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(990547),
@@ -7,8 +7,8 @@ var i = n(990547),
     a = n(787051),
     o = n(696936),
     c = n(539290),
-    d = n(975464),
-    u = n(388032),
+    u = n(975464),
+    d = n(388032),
     m = n(900388),
     g = n(270395);
 function p(e) {
@@ -20,7 +20,7 @@ function p(e) {
             (0, r.jsx)('img', {
                 className: m.__invalid_heroBanner,
                 src: g,
-                alt: u.intl.string(u.t.Af4klJ)
+                alt: d.intl.string(d.t.Af4klJ)
             }),
             (0, r.jsxs)('div', {
                 className: m.__invalid_ctaContent,
@@ -28,13 +28,13 @@ function p(e) {
                     (0, r.jsx)(l.X6q, {
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        children: u.intl.string(u.t.PqYfh4)
+                        children: d.intl.string(d.t.PqYfh4)
                     }),
                     (0, r.jsx)(l.LZC, { size: 12 }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: u.intl.string(u.t['41wkMT'])
+                        children: d.intl.string(d.t['41wkMT'])
                     }),
                     (0, r.jsx)(l.LZC, { size: 24 }),
                     (0, r.jsx)(c.Z, {
@@ -52,9 +52,9 @@ function p(e) {
         ]
     });
 }
-function h(e) {
+function f(e) {
     let { guild: t, config: n } = e,
-        { isLoading: o, error: c, creatorMonetizationOnboardingMarketing: u } = (0, a.Z)(t.id);
+        { isLoading: o, error: c, creatorMonetizationOnboardingMarketing: d } = (0, a.Z)(t.id);
     return ((0, s.Z)({
         type: i.ImpressionTypes.PANE,
         name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
@@ -66,8 +66,8 @@ function h(e) {
               className: m.__invalid_container,
               children: [
                   (0, r.jsx)(p, { config: n }),
-                  (0, r.jsx)(d.C, {
-                      onboardingMarketing: u,
+                  (0, r.jsx)(u.C, {
+                      onboardingMarketing: d,
                       onboardingMarketingError: c
                   })
               ]

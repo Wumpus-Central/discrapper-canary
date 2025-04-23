@@ -9,7 +9,7 @@ function o(e) {
     var t,
         n,
         { className: o, color: c = (0, l.Lq)(s.Ilk.BRAND_500) } = e,
-        d = (function (e, t) {
+        u = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -54,7 +54,7 @@ function o(e) {
                     });
             }
             return e;
-        })({}, d)),
+        })({}, u)),
         (n = n =
             {
                 text: a.intl.string(a.t.G6GWZ2),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(539854);
+n.d(t, { Z: () => A }), n(539854);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(442837),
     o = n(481060),
     c = n(274136),
-    d = n(2052),
-    u = n(906732),
+    u = n(2052),
+    d = n(906732),
     m = n(678558),
     g = n(852679),
     p = n(357156),
-    h = n(713081),
-    f = n(50101),
+    f = n(713081),
+    h = n(50101),
     x = n(151494),
     b = n(639777),
     j = n(626135),
@@ -90,9 +90,9 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                 src: n(872732)
             })
         }),
-    A = (e) => {
+    k = (e) => {
         let { guild: t } = e,
-            { location: n } = (0, d.O)(),
+            { location: n } = (0, u.O)(),
             { canCreateExpressions: i } = (0, p.XJ)(t);
         return (0, r.jsx)(o.zxk, {
             size: o.zxk.Sizes.SMALL,
@@ -108,7 +108,7 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
             children: S.intl.string(S.t.O1REe3)
         });
     },
-    k = (e) => {
+    A = (e) => {
         let { guild: t } = e,
             { isLoading: l } = (0, O.Z)(t.id),
             c = (0, a.e7)(
@@ -119,11 +119,11 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                 },
                 [t]
             ),
-            { analyticsLocations: d } = (0, u.ZP)(),
+            { analyticsLocations: u } = (0, d.ZP)(),
             j = (0, x.Z)(t.id),
             Z = t.hasFeature(I.oNc.MORE_STICKERS) ? I.Eu4.TIER_3 : t.premiumTier,
-            k = t.hasFeature(I.oNc.MORE_STICKERS) ? I.oCV[I.Eu4.TIER_3] : j,
-            L = (0, f.Ek)(t.id, 'GuildStickersTiers'),
+            A = t.hasFeature(I.oNc.MORE_STICKERS) ? I.oCV[I.Eu4.TIER_3] : j,
+            L = (0, h.Ek)(t.id, 'GuildStickersTiers'),
             M = (0, b.Z)(t.id);
         if (
             (i.useEffect(() => {
@@ -136,7 +136,7 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                 let r = null;
                 n === I.Eu4.TIER_1 ? (r = I.Qqv.TIER_1) : n === I.Eu4.TIER_2 ? (r = I.Qqv.TIER_2) : n === I.Eu4.TIER_3 && (r = I.Qqv.TIER_3),
                     (0, g.Z)({
-                        analyticsLocations: d,
+                        analyticsLocations: u,
                         analyticsLocation: {
                             page: I.ZY5.GUILD_SETTINGS,
                             section: I.jXE.GUILD_SETTINGS_STICKERS,
@@ -190,40 +190,40 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
             renderTier: (e) => {
                 let i,
                     l,
-                    { isAnimatedTo: a, onSetRef: d, tier: u, tiers: g, tierIndex: f } = e,
+                    { isAnimatedTo: a, onSetRef: u, tier: d, tiers: g, tierIndex: h } = e,
                     { canCreateExpressions: x, canManageGuildExpression: b } = (0, p.Gw)(t),
-                    v = g[f - 1],
+                    v = g[h - 1],
                     O = null != v ? (0, _.A3)(v.tier) : 0,
-                    C = (0, _.A3)(u.tier, t),
-                    R = (0, _.ig)(u.tier),
+                    C = (0, _.A3)(d.tier, t),
+                    R = (0, _.ig)(d.tier),
                     U = c.slice(O, C),
                     B = U.length > 0,
-                    F = Z < u.tier,
+                    F = Z < d.tier,
                     z = w(c.length, t),
-                    H = x && !F && z === u.tier && C !== U.length,
-                    V = H || U.length > 0,
-                    W = C - O,
+                    H = x && !F && z === d.tier && C !== U.length,
+                    W = H || U.length > 0,
+                    V = C - O,
                     Y = n(872732),
                     K = R - U.length,
                     X = H ? Math.min(5 - ((U.length + 0) % 5), K) : 0,
                     q = [];
                 for (let e = 0; e < X; e++) q.push((0, r.jsx)(D, {}, 'placeholder-'.concat(e)));
-                let Q = t.premiumTier < u.tier && j >= I.oCV[u.tier],
+                let Q = t.premiumTier < d.tier && j >= I.oCV[d.tier],
                     J = S.intl.string(S.t.dtFw5e),
-                    $ = () => G(Math.max(1, I.oCV[u.tier] - j), u.tier),
+                    $ = () => G(Math.max(1, I.oCV[d.tier] - j), d.tier),
                     ee = !1;
                 L &&
                     Q &&
                     (M
                         ? (($ = () => {
-                              let e = E.Cp[u.tier];
-                              null != e && (0, h.H6)(t.id, e);
+                              let e = E.Cp[d.tier];
+                              null != e && (0, f.H6)(t.id, e);
                           }),
                           (J = S.intl.string(S.t.g7lkra)),
-                          t.premiumTier + 1 !== u.tier && ((ee = !0), (i = S.intl.string(S.t.mTMkY2))))
+                          t.premiumTier + 1 !== d.tier && ((ee = !0), (i = S.intl.string(S.t.mTMkY2))))
                         : ((ee = !0), (i = S.intl.string(S.t.hwPEJS))));
-                let et = z === f + 1 && z > Z,
-                    en = H || et || f > Z;
+                let et = z === h + 1 && z > Z,
+                    en = H || et || h > Z;
                 return (
                     et
                         ? (l = (0, r.jsx)(m.Z, {
@@ -236,24 +236,24 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                                   page: I.ZY5.GUILD_SETTINGS,
                                   section: I.jXE.GUILD_SETTINGS_STICKERS,
                                   object: I.qAy.BOOST_UPSELL_NEXT_LEVEL_HEADER,
-                                  objectType: (0, _.ge)(u.tier)
+                                  objectType: (0, _.ge)(d.tier)
                               }
                           }))
-                        : H && (l = (0, r.jsx)(A, { guild: t })),
+                        : H && (l = (0, r.jsx)(k, { guild: t })),
                     (0, r.jsxs)(
                         y.Z,
                         {
-                            subscriptionCount: k,
-                            tier: u,
-                            onSetRef: d,
+                            subscriptionCount: A,
+                            tier: d,
+                            onSetRef: u,
                             isAnimatedTo: a,
-                            hasBottomMargin: f !== g.length - 1,
-                            withCardBody: !V,
+                            hasBottomMargin: h !== g.length - 1,
+                            withCardBody: !W,
                             headerButton: l,
                             showHeaderLockStatus: en,
                             guildId: t.id,
                             children: [
-                                V &&
+                                W &&
                                     (0, r.jsxs)('div', {
                                         className: T.grid,
                                         children: [
@@ -297,10 +297,10 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                                                 variant: 'text-md/normal',
                                                 color: 'header-secondary',
                                                 children:
-                                                    u.tier === I.Eu4.TIER_1
-                                                        ? S.intl.formatToPlainString(S.t.psMYu7, { numAdditional: W })
+                                                    d.tier === I.Eu4.TIER_1
+                                                        ? S.intl.formatToPlainString(S.t.psMYu7, { numAdditional: V })
                                                         : S.intl.formatToPlainString(S.t.bLykER, {
-                                                              numAdditional: W,
+                                                              numAdditional: V,
                                                               numTotal: C
                                                           })
                                             }),
@@ -340,7 +340,7 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                                     })
                             ]
                         },
-                        u.tier
+                        d.tier
                     )
                 );
             }

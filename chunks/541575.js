@@ -7,13 +7,13 @@ var i = n(780384),
     a = n(367907),
     o = n(906732),
     c = n(91218),
-    d = n(807582),
-    u = n(518738),
+    u = n(807582),
+    d = n(518738),
     m = n(26323),
     g = n(764260),
     p = n(981631),
-    h = n(30513),
-    f = n(388032),
+    f = n(30513),
+    h = n(388032),
     x = n(18346);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -61,7 +61,7 @@ function j(e, t) {
 let _ = function (e) {
     let { guild: t, disabled: _, role: v } = e,
         O = (0, s.ZP)(),
-        C = (0, u.oC)(t.id, v),
+        C = (0, d.oC)(t.id, v),
         { analyticsLocations: y } = (0, o.ZP)(),
         N = () => {
             (0, l.ZDy)(async () => {
@@ -93,10 +93,10 @@ let _ = function (e) {
                         object: p.qAy.BADGE
                     },
                     guild: t,
-                    perks: (0, h.Yp)()
+                    perks: (0, f.Yp)()
                 }));
         },
-        S = (0, r.jsx)(d.Z, {
+        S = (0, r.jsx)(u.Z, {
             className: x.availabilityIndicator,
             guild: t,
             guildFeature: p.oNc.ROLE_ICONS,
@@ -113,11 +113,11 @@ let _ = function (e) {
         children: [
             (0, r.jsxs)(l.vwX, {
                 className: x.formTitle,
-                children: [(0, r.jsx)('div', { children: f.intl.string(f.t.B9grJy) }), S]
+                children: [(0, r.jsx)('div', { children: h.intl.string(h.t.B9grJy) }), S]
             }),
             (0, r.jsx)(l.R94, {
                 className: x.description,
-                children: f.intl.string(f.t.I3YQeX)
+                children: h.intl.string(h.t.I3YQeX)
             }),
             (0, r.jsxs)('div', {
                 className: x.rolePreviewArea,
@@ -147,7 +147,7 @@ let _ = function (e) {
                         look: l.zxk.Looks.OUTLINED,
                         onClick: () => (t.hasFeature(p.oNc.ROLE_ICONS) ? N() : E({ object: p.qAy.UPLOAD_IMAGE })),
                         disabled: _,
-                        children: f.intl.string(f.t.mD1oGB)
+                        children: h.intl.string(h.t.mD1oGB)
                     }),
                     null != C
                         ? (0, r.jsx)(l.zxk, {
@@ -158,7 +158,7 @@ let _ = function (e) {
                                   (0, g._l)(v.id, null, null);
                               },
                               disabled: _,
-                              children: f.intl.string(f.t['uY+Nk5'])
+                              children: h.intl.string(h.t['uY+Nk5'])
                           })
                         : null
                 ]

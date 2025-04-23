@@ -170,7 +170,7 @@ function R(e) {
                             message: n
                         })),
                         F &&
-                            (0, p.lc)(M) &&
+                            (0, p.l)(M) &&
                             (W = (0, r.jsx)(I.Z, {
                                 onTransitionToInviteChannel: V,
                                 onAcceptInstantInvite: z,

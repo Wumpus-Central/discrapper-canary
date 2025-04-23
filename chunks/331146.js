@@ -7,8 +7,8 @@ var i = n(120356),
     a = n(768581),
     o = n(723047),
     c = n(570533),
-    d = n(388032),
-    u = n(294916);
+    u = n(388032),
+    d = n(294916);
 function m(e) {
     let { emoji: t, onRemoveEmoji: n, disabled: i = !1 } = e,
         o = a.ZP.getEmojiURL({
@@ -17,30 +17,30 @@ function m(e) {
             size: 32
         });
     return (0, r.jsxs)('div', {
-        className: l()(u.emojiRow, { [u.disabled]: i }),
+        className: l()(d.emojiRow, { [d.disabled]: i }),
         children: [
             (0, r.jsx)('img', {
-                className: u.emojiImage,
+                className: d.emojiImage,
                 src: o,
                 alt: t.name
             }),
             (0, r.jsx)(s.Text, {
                 color: 'header-primary',
                 variant: 'text-md/medium',
-                className: u.emojiAlias,
+                className: d.emojiAlias,
                 children: t.name
             }),
             (0, r.jsx)(s.zxk, {
                 look: s.zxk.Looks.BLANK,
                 size: s.zxk.Sizes.ICON,
-                className: u.deleteButton,
+                className: d.deleteButton,
                 onClick: () => n(t),
-                'aria-label': d.intl.string(d.t.dVS92d),
+                'aria-label': u.intl.string(u.t.dVS92d),
                 disabled: i,
                 children: (0, r.jsx)(s.XHJ, {
                     size: 'md',
                     color: 'currentColor',
-                    className: u.trashIcon
+                    className: d.trashIcon
                 })
             })
         ]
@@ -52,7 +52,7 @@ function g(e) {
         s = null != t ? l.filter((e) => t.has(e.id)) : [],
         a = (0, o.mY)();
     return (0, r.jsx)('div', {
-        className: u.container,
+        className: d.container,
         children: s.map((e) =>
             (0, r.jsx)(
                 m,

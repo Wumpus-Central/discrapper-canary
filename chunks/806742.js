@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(399606),
     o = n(481060),
     c = n(734893),
-    d = n(150512),
-    u = n(314897),
+    u = n(150512),
+    d = n(314897),
     m = n(8426),
     g = n(969632),
     p = n(535907),
-    h = n(388032),
-    f = n(773100);
+    f = n(388032),
+    h = n(773100);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -78,21 +78,21 @@ let j = function (e) {
                 }),
             [t, l]
         ),
-        _ = (0, a.e7)([u.default], () => u.default.getId());
+        _ = (0, a.e7)([d.default], () => d.default.getId());
     return (0, c.pw)(l)
         ? (0, r.jsx)(o.zxk, {
               size: o.zxk.Sizes.SMALL,
               onClick: j,
               children: (0, r.jsx)(o.Text, {
                   variant: 'text-sm/medium',
-                  children: h.intl.string(h.t['9Z+aEB'])
+                  children: f.intl.string(f.t['9Z+aEB'])
               })
           })
         : (0, r.jsxs)(o.P3F, {
-              className: f.editWelcomeSection,
+              className: h.editWelcomeSection,
               onClick: j,
               children: [
-                  (0, r.jsx)(d.Z, {
+                  (0, r.jsx)(u.Z, {
                       guildId: t,
                       welcomeMessage: {
                           authorIds: l.authorIds.length > 0 ? l.authorIds : [_],
@@ -100,18 +100,18 @@ let j = function (e) {
                       }
                   }),
                   (0, r.jsx)(o.ua7, {
-                      text: h.intl.string(h.t.bt75u7),
+                      text: f.intl.string(f.t.bt75u7),
                       children: (e) =>
                           (0, r.jsxs)(
                               'div',
                               b(x({}, e), {
-                                  className: s()(f.actionItemEditButton, f.editWelcomeButton),
+                                  className: s()(h.actionItemEditButton, h.editWelcomeButton),
                                   children: [
                                       (0, r.jsx)(o.vdY, {
                                           size: 'md',
                                           color: 'currentColor'
                                       }),
-                                      (0, r.jsx)(o.nn4, { children: h.intl.string(h.t.bt75u7) })
+                                      (0, r.jsx)(o.nn4, { children: f.intl.string(f.t.bt75u7) })
                                   ]
                               })
                           )

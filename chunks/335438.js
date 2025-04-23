@@ -1,4 +1,4 @@
-n.d(t, { l: () => d }), n(953529);
+n.d(t, { l: () => u }), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(793030),
@@ -7,7 +7,7 @@ var i = n(793030),
     a = n(715224),
     o = n(388032),
     c = n(713811);
-function d(e) {
+function u(e) {
     let { canManageGuild: t, guild: n } = e;
     return (0, r.jsxs)(l.hjN, {
         title: o.intl.string(o.t.Cv6ANz),

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => f,
+    Z: () => h,
     n: () => g
 });
 var r,
@@ -9,8 +9,8 @@ var r,
     a = n.n(s),
     o = n(748780),
     c = n(215569),
-    d = n(65187);
-function u(e, t, n) {
+    u = n(65187);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function m(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
@@ -45,7 +45,7 @@ let p = {
     tension: 40,
     overshootClamping: !0
 };
-class h extends l.PureComponent {
+class f extends l.PureComponent {
     componentWillEnter(e) {
         var t, n;
         null == (t = (n = this.props).onAnimationStart) || t.call(n),
@@ -76,21 +76,21 @@ class h extends l.PureComponent {
     render() {
         return (0, i.jsx)(o.Z.div, {
             style: this.getStyle(),
-            className: d.item,
+            className: u.item,
             children: this.props.children
         });
     }
     constructor(e) {
-        super(e), u(this, '_animated', void 0), (this._animated = new o.Z.Value(-1 * e.direction));
+        super(e), d(this, '_animated', void 0), (this._animated = new o.Z.Value(-1 * e.direction));
     }
 }
-let f = (e) => {
+let h = (e) => {
     let { children: t, step: n, direction: r, className: l, onAnimationStart: s, onAnimationEnd: o } = e;
     return (0, i.jsx)(c.W, {
         component: 'div',
-        className: a()(d.animator, l),
+        className: a()(u.animator, l),
         children: (0, i.jsx)(
-            h,
+            f,
             {
                 direction: r,
                 onAnimationStart: s,

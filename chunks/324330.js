@@ -1,6 +1,6 @@
 n.d(t, {
-    $: () => h,
-    Z: () => f
+    $: () => f,
+    Z: () => h
 });
 var r = n(200651);
 n(192379);
@@ -10,20 +10,20 @@ var i = n(392711),
     a = n(241559),
     o = n(527379),
     c = n(313364),
-    d = n(434404),
-    u = n(999382),
+    u = n(434404),
+    d = n(999382),
     m = n(981631),
     g = n(388032),
     p = n(953592);
-function h() {
+function f() {
     var e;
-    let t = (0, l.e7)([u.Z], () => u.Z.getProps().guild, []),
+    let t = (0, l.e7)([d.Z], () => d.Z.getProps().guild, []),
         n = null != (e = null == t ? void 0 : t.isCommunity()) && e,
         i = null == t ? void 0 : t.hasFeature(m.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         a = n || i;
     return (0, r.jsxs)(s.P3F, {
         onClick: (e) => {
-            null != t && (a ? (e.preventDefault(), d.Z.close(), (0, o._X)(t.id)) : d.Z.open(t.id, m.pNK.MEMBERS));
+            null != t && (a ? (e.preventDefault(), u.Z.close(), (0, o._X)(t.id)) : u.Z.open(t.id, m.pNK.MEMBERS));
         },
         className: p.rowContainer,
         children: [
@@ -39,9 +39,9 @@ function h() {
         ]
     });
 }
-function f() {
+function h() {
     var e;
-    let { guild: t } = (0, l.e7)([u.Z], () => u.Z.getProps(), [], i.isEqual),
+    let { guild: t } = (0, l.e7)([d.Z], () => d.Z.getProps(), [], i.isEqual),
         n = null != (e = null == t ? void 0 : t.id) ? e : m.lds;
     return (0, a.n2)(n) ? (0, r.jsx)(c.Z, { guildId: n }) : null;
 }

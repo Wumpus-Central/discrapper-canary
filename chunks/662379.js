@@ -7,8 +7,8 @@ var i = n(481060),
     a = n(14920),
     o = n(961618),
     c = n(217684),
-    d = n(174618);
-function u(e) {
+    u = n(174618);
+function d(e) {
     let { imageSrc: t, description: n } = e;
     return (0, r.jsxs)('div', {
         className: a.howItWorksCard,
@@ -35,7 +35,7 @@ function u(e) {
 function m() {
     let e = [
         {
-            imageSrc: d,
+            imageSrc: u,
             description: s.intl.string(s.t.lT0ZNT)
         },
         {
@@ -59,7 +59,7 @@ function m() {
                 className: a.howItWorksContainer,
                 children: e.map((e) =>
                     (0, r.jsx)(
-                        u,
+                        d,
                         {
                             imageSrc: e.imageSrc,
                             description: e.description

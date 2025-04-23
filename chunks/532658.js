@@ -20,8 +20,8 @@ var r = n(200651),
     m = n(493773),
     b = n(607070),
     y = n(415635),
-    v = n(979264),
-    h = n(701362),
+    v = n(701362),
+    h = n(172751),
     j = n(670188),
     P = n(597998),
     S = n(199902),
@@ -286,7 +286,7 @@ let F = i.memo(function (e) {
             }, [_, A, eo]),
             es = i.useCallback(
                 () =>
-                    (0, r.jsx)(h.Z, {
+                    (0, r.jsx)(v.Z, {
                         user: a,
                         channel: t,
                         onWatch: () => {
@@ -363,7 +363,7 @@ let F = i.memo(function (e) {
                                                   disabled: !1
                                               }),
                                               !C &&
-                                                  (0, r.jsx)(v.ZP, {
+                                                  (0, r.jsx)(h.ZP, {
                                                       primaryGuild: a.primaryGuild,
                                                       userId: a.id,
                                                       contextGuildId: x,
@@ -451,7 +451,7 @@ let F = i.memo(function (e) {
                                                   children: u
                                               }),
                                               !C &&
-                                                  (0, r.jsx)(v.ZP, {
+                                                  (0, r.jsx)(h.ZP, {
                                                       primaryGuild: a.primaryGuild,
                                                       userId: a.id,
                                                       contextGuildId: x,

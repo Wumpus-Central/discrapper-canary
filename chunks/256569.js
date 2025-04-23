@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(358797);
+n.d(t, { Z: () => h }), n(388685), n(358797);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -6,14 +6,14 @@ var r = n(200651),
     a = n(481060),
     o = n(110924),
     c = n(347469),
-    d = n(853276),
-    u = n(596390),
+    u = n(853276),
+    d = n(596390),
     m = n(870472),
     g = n(673569);
 function p(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: i } = e,
         l = (0, c.Z)({
-            minDimension: u.tq,
+            minDimension: d.tq,
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: i,
@@ -25,10 +25,10 @@ function p(e) {
         className: g.resizeHandle
     });
 }
-let h = i.forwardRef(function (e, t) {
+let f = i.forwardRef(function (e, t) {
     let { children: n, onFocus: l, onBlur: s, onClick: o } = e,
         c = i.useRef(null),
-        [d, m] = i.useState(u.tq);
+        [u, m] = i.useState(d.tq);
     return (0, r.jsxs)(a.P3F, {
         className: g.textArea,
         onFocus: l,
@@ -36,11 +36,11 @@ let h = i.forwardRef(function (e, t) {
         onClick: o,
         innerRef: c,
         ignoreKeyPress: !0,
-        style: { minHeight: d },
+        style: { minHeight: u },
         children: [
             (0, r.jsx)(a.Den, {
                 className: g.innerScroller,
-                style: { minHeight: d - 2 },
+                style: { minHeight: u - 2 },
                 ref: t,
                 children: n
             }),
@@ -54,9 +54,9 @@ let h = i.forwardRef(function (e, t) {
         ]
     });
 });
-function f(e) {
+function h(e) {
     var t;
-    let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: u = {}, placeholder: p, className: f, maxTags: x } = e,
+    let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: d = {}, placeholder: p, className: h, maxTags: x } = e,
         b = i.useRef(null),
         j = i.useRef(null),
         _ = i.useRef(null),
@@ -78,17 +78,17 @@ function f(e) {
             mainContainerRef: j
         }),
         {
-            state: { value: R, tags: Z, selections: D, isSelecting: A }
+            state: { value: R, tags: Z, selections: D, isSelecting: k }
         } = v,
-        k = (0, o.Z)(Z),
+        A = (0, o.Z)(Z),
         [L, M] = i.useState(!1),
         G = i.useCallback(() => {
             var e;
             M(!1), P(), null == (e = b.current) || e.focus({ preventScroll: !0 });
         }, [P]);
     i.useEffect(() => {
-        k !== Z && l(Z);
-    }, [l, k, Z]),
+        A !== Z && l(Z);
+    }, [l, A, Z]),
         i.useEffect(() => {
             L || c(R);
         }, [c, R, L]);
@@ -121,18 +121,18 @@ function f(e) {
             [S, T, D, Z]
         );
     return (0, r.jsxs)('div', {
-        className: s()(g.mainContainer, f),
+        className: s()(g.mainContainer, h),
         ref: j,
         tabIndex: 0,
         onKeyUp: N,
         children: [
-            (0, r.jsxs)(h, {
+            (0, r.jsxs)(f, {
                 ref: _,
                 onClick: G,
                 children: [
                     Z.map((e, t) =>
                         (0, r.jsx)(
-                            d.Z,
+                            u.Z,
                             {
                                 value: e,
                                 onChange: E(t),
@@ -140,8 +140,8 @@ function f(e) {
                                 onFocus: B(t),
                                 onRemove: () => I(t),
                                 isSelected: D.includes(e),
-                                isSelecting: A,
-                                error: u[e],
+                                isSelecting: k,
+                                error: d[e],
                                 forceShowErrorTooltip: !L && t === Z.length - 1
                             },
                             t

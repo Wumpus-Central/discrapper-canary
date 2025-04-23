@@ -6,39 +6,39 @@ var r = n(200651),
     a = n(139387),
     o = n(726542),
     c = n(690221),
-    d = n(434404),
-    u = n(999382),
+    u = n(434404),
+    d = n(999382),
     m = n(981631),
     g = n(388032);
 function p(e) {
-    let t = (0, s.e7)([u.Z], () => u.Z.getProps().integrations);
+    let t = (0, s.e7)([d.Z], () => d.Z.getProps().integrations);
     return i.useMemo(
         () =>
             (function (e, t) {
-                var n, i, s, u;
+                var n, i, s, d;
                 let p;
                 if (!e.managed) return null;
-                let h = null == (n = e.tags) ? void 0 : n.bot_id,
-                    f = null == (i = e.tags) ? void 0 : i.integration_id,
+                let f = null == (n = e.tags) ? void 0 : n.bot_id,
+                    h = null == (i = e.tags) ? void 0 : i.integration_id,
                     x = (null == (s = e.tags) ? void 0 : s.premium_subscriber) !== void 0,
-                    b = (null == (u = e.tags) ? void 0 : u.guild_connections) !== void 0;
+                    b = (null == (d = e.tags) ? void 0 : d.guild_connections) !== void 0;
                 if (
-                    (null != h
+                    (null != f
                         ? (p =
                               null == t
                                   ? void 0
                                   : t.find((e) => {
                                         var t;
                                         let { application: n } = e;
-                                        return (null == n || null == (t = n.bot) ? void 0 : t.id) === h;
+                                        return (null == n || null == (t = n.bot) ? void 0 : t.id) === f;
                                     }))
-                        : null != f &&
+                        : null != h &&
                           (p =
                               null == t
                                   ? void 0
                                   : t.find((e) => {
                                         let { id: t } = e;
-                                        return t === f;
+                                        return t === h;
                                     })),
                     null != p && null != p.application && null != p.name)
                 ) {
@@ -46,7 +46,7 @@ function p(e) {
                         t = p.name;
                     [l.b.TWITCH, l.b.YOUTUBE].includes(p.type) && (t = ''.concat(o.Z.get(p.type).name, ' - ').concat(t));
                     let n = () => {
-                        d.Z.setSection(m.pNK.INTEGRATIONS), a.Z.setSection(m.b4C.APPLICATION, e);
+                        u.Z.setSection(m.pNK.INTEGRATIONS), a.Z.setSection(m.b4C.APPLICATION, e);
                     };
                     return g.intl.format(g.t.FuXsWl, {
                         name: t,

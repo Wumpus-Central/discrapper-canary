@@ -3,7 +3,7 @@ n.d(t, {
     Hz: () => C,
     To: () => E,
     XG: () => O,
-    _N: () => h,
+    _N: () => f,
     ad: () => _,
     bj: () => P,
     el: () => x,
@@ -13,7 +13,7 @@ n.d(t, {
     oo: () => I,
     q6: () => T,
     r2: () => v,
-    vR: () => f
+    vR: () => h
 }),
     n(361932),
     n(187205);
@@ -24,18 +24,18 @@ var r = n(392711),
     a = n(668781),
     o = n(563534),
     c = n(734893),
-    d = n(626135),
-    u = n(960048),
+    u = n(626135),
+    d = n(960048),
     m = n(969632),
     g = n(981631),
     p = n(388032);
-function h(e) {
+function f(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_UPDATE_WELCOME_MESSAGE',
         welcomeMessage: e
     });
 }
-function f(e) {
+function h(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_ADD_NEW_MEMBER_ACTION',
         action: e
@@ -86,7 +86,7 @@ async function _(e, t, n, r) {
                 title: p.intl.string(p.t['6nCZyM']),
                 body: p.intl.format(p.t.dYCPDw, { errorMessage: e.join(', ') })
             }),
-            u.Z.addBreadcrumb({ message: 'Error updating new member action icon' }),
+            d.Z.addBreadcrumb({ message: 'Error updating new member action icon' }),
             Promise.reject()
         );
     }
@@ -150,7 +150,7 @@ function I(e, t) {
                   title: p.intl.string(p.t['6nCZyM']),
                   body: p.intl.string(p.t.JuhUTU)
               }),
-              u.Z.addBreadcrumb({ message: 'Error saving home settings' }),
+              d.Z.addBreadcrumb({ message: 'Error saving home settings' }),
               Promise.reject())
             : S(e, t)
         : Promise.resolve();
@@ -212,7 +212,7 @@ function E(e, t) {
           ));
 }
 async function S(e, t) {
-    var n, r, o, u, m, h, f, x, b;
+    var n, r, o, d, m, f, h, x, b;
     s.Z.dispatch({ type: 'GUILD_HOME_SETTINGS_UPDATE_START' });
     try {
         let i = await l.tn.put({
@@ -228,12 +228,12 @@ async function S(e, t) {
                 guildId: e,
                 homeSettings: a
             }),
-            d.default.track(g.rMx.GUILD_SETTINGS_GUIDE_UPDATED, {
+            u.default.track(g.rMx.GUILD_SETTINGS_GUIDE_UPDATED, {
                 guild_id: e,
-                welcome_message_author_id: (null != (u = null == a || null == (n = a.welcomeMessage) ? void 0 : n.authorIds) ? u : [])[0],
+                welcome_message_author_id: (null != (d = null == a || null == (n = a.welcomeMessage) ? void 0 : n.authorIds) ? d : [])[0],
                 welcome_message_length: null != (m = null == a || null == (o = a.welcomeMessage) || null == (r = o.message) ? void 0 : r.length) ? m : 0,
-                member_action_channel_ids: (null != (h = null == a ? void 0 : a.newMemberActions) ? h : []).map((e) => e.channelId),
-                member_action_channel_actions: (null != (f = null == a ? void 0 : a.newMemberActions) ? f : []).map((e) => e.actionType),
+                member_action_channel_ids: (null != (f = null == a ? void 0 : a.newMemberActions) ? f : []).map((e) => e.channelId),
+                member_action_channel_actions: (null != (h = null == a ? void 0 : a.newMemberActions) ? h : []).map((e) => e.actionType),
                 resource_channel_ids: (null != (x = null == a ? void 0 : a.resourceChannels) ? x : []).map((e) => e.channelId),
                 enabled: null == a ? void 0 : a.enabled
             }),

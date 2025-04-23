@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(723047),
     o = n(727843),
     c = n(290348),
-    d = n(164000),
-    u = n(783454),
+    u = n(164000),
+    d = n(783454),
     m = n(862319),
     g = n(140285),
     p = n(390583),
-    h = n(641249),
-    f = n(574085),
+    f = n(641249),
+    h = n(574085),
     x = n(293810),
     b = n(388032),
     j = n(301849);
@@ -22,10 +22,10 @@ function _(e) {
         [v, O] = c.UE(n),
         [C, y] = c.R7(n),
         N = i.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
-        { isFullServerGating: I } = (0, d.Z)(_),
+        { isFullServerGating: I } = (0, u.Z)(_),
         E = (0, s.Dt)(),
         S = (0, a.mY)();
-    return (0, r.jsxs)(u.Z, {
+    return (0, r.jsxs)(d.Z, {
         title: b.intl.string(b.t.YNw2Sk),
         description: b.intl.string(b.t.zMW5r6),
         children: [
@@ -109,11 +109,11 @@ function _(e) {
                         disabled: S,
                         children: b.intl.string(b.t.zAww7e)
                     }),
-                    (0, r.jsx)(f.Z, {})
+                    (0, r.jsx)(h.Z, {})
                 ]
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
-            (0, r.jsx)(h.Z, {})
+            (0, r.jsx)(f.Z, {})
         ]
     });
 }

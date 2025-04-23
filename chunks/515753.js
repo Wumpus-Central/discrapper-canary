@@ -29,13 +29,13 @@ var i = n(200651),
     S = n(201895),
     v = n(43267),
     T = n(933557),
-    I = n(979264),
-    N = n(163889),
-    y = n(111028),
-    A = n(540059),
-    P = n(853856),
-    R = n(93687),
-    D = n(785232),
+    I = n(163889),
+    N = n(111028),
+    y = n(540059),
+    A = n(853856),
+    P = n(93687),
+    R = n(785232),
+    D = n(172751),
     Z = n(598062),
     w = n(850020),
     k = n(379839),
@@ -181,8 +181,8 @@ let ei = X.ZP.getEnableHardwareAcceleration() ? g.Xo$ : g.qEK,
     ec = (e) => {
         var { route: t, selected: n, icon: r, iconClassName: s, avatarWithTextClassName: a, interactiveClassName: o, text: d, children: m, locationState: p, onClick: h, className: f, role: b, 'aria-posinset': _, 'aria-setsize': x, listItemRef: E } = e,
             j = en(e, ['route', 'selected', 'icon', 'iconClassName', 'avatarWithTextClassName', 'interactiveClassName', 'text', 'children', 'locationState', 'onClick', 'className', 'role', 'aria-posinset', 'aria-setsize', 'listItemRef']);
-        let O = (0, A.Q3)('PrivateChannelLinkButton');
-        return (0, i.jsx)(N.Z, {
+        let O = (0, y.Q3)('PrivateChannelLinkButton');
+        return (0, i.jsx)(I.Z, {
             className: l()($.channel, { [$.fullWidth]: u.tq }, f),
             onClick: h,
             role: b,
@@ -228,7 +228,7 @@ let ei = X.ZP.getEnableHardwareAcceleration() ? g.Xo$ : g.qEK,
         });
     };
 function ed(e) {
-    let { channel: t, isGDMFacepileEnabled: s, selected: a = !1, user: u, activities: b, applicationStream: x, voiceChannel: A, isTyping: R, status: w, isMobile: k, nameplate: G, 'aria-posinset': F, 'aria-setsize': W } = e,
+    let { channel: t, isGDMFacepileEnabled: s, selected: a = !1, user: u, activities: b, applicationStream: x, voiceChannel: y, isTyping: P, status: w, isMobile: k, nameplate: G, 'aria-posinset': F, 'aria-setsize': W } = e,
         [K, q] = r.useState(!1),
         X = r.useRef(null),
         ec = r.useRef(null),
@@ -256,7 +256,7 @@ function ed(e) {
         eO = (e_ || ej || eC) && !(a || K),
         eS = (0, m.e7)([H.ZP], () => H.ZP.getMentionCount(t.id) > 0),
         ev = (0, T.ZP)(t),
-        eT = (0, m.e7)([P.Z], () => P.Z.isFavorite(t.id)),
+        eT = (0, m.e7)([A.Z], () => A.Z.isFavorite(t.id)),
         eI = (0, M.L)('PrivateChannel'),
         eN = (0, Z.AK)('PrivateChannel') ? null != G && (a || K) : null != G,
         ey = () => {
@@ -347,12 +347,12 @@ function ed(e) {
                           activities: b,
                           status: w,
                           applicationStream: x,
-                          voiceChannel: A
+                          voiceChannel: y
                       })
                     ? (0, i.jsx)(E.Z, {
                           user: u,
                           activities: b,
-                          voiceChannel: A,
+                          voiceChannel: y,
                           applicationStream: x,
                           animate: K,
                           textClassName: $.activityStatusText,
@@ -363,11 +363,11 @@ function ed(e) {
             let e = g.EFr.SIZE_32;
             if (t.isMultiUserDM())
                 if (t.recipients.length >= 2 && s && null == t.icon)
-                    return (0, i.jsx)(D.Z, {
+                    return (0, i.jsx)(R.Z, {
                         'aria-hidden': !0,
                         recipients: t.recipients,
                         size: e,
-                        isTyping: R,
+                        isTyping: P,
                         status: w
                     });
                 else
@@ -377,8 +377,8 @@ function ed(e) {
                             src: (0, v.x)(t),
                             'aria-hidden': !0,
                             size: e,
-                            status: R ? Q.Skl.ONLINE : w,
-                            isTyping: R
+                            status: P ? Q.Skl.ONLINE : w,
+                            isTyping: P
                         })
                     );
             o()(null != u, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
@@ -393,7 +393,7 @@ function ed(e) {
                         avatarDecoration: eu,
                         status: n,
                         isMobile: k,
-                        isTyping: R,
+                        isTyping: P,
                         'aria-label': u.username,
                         statusTooltip: !0
                     })
@@ -404,7 +404,7 @@ function ed(e) {
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       ev,
-                      (0, i.jsx)(I.ZP, {
+                      (0, i.jsx)(D.ZP, {
                           primaryGuild: null == u ? void 0 : u.primaryGuild,
                           userId: null == u ? void 0 : u.id,
                           inline: !0,
@@ -420,7 +420,7 @@ function ed(e) {
         children: (e) => {
             var { role: n } = e,
                 r = en(e, ['role']);
-            return (0, i.jsxs)(N.Z, {
+            return (0, i.jsxs)(I.Z, {
                 className: l()($.channel, $.dm),
                 role: n,
                 focusProps: et(ee({}, er), {
@@ -475,7 +475,7 @@ function ed(e) {
                                             highlighted: eS && !(eI && eO),
                                             muted: eO,
                                             subText: eL(),
-                                            name: (0, i.jsx)(y.Z, {
+                                            name: (0, i.jsx)(N.Z, {
                                                 tooltipClassName: $.overflowTooltip,
                                                 children: eM
                                             }),
@@ -512,7 +512,7 @@ let eu =
               var { channel: t, selected: n } = e,
                   r = en(e, ['channel', 'selected']);
               let s = (0, m.e7)([K.default], () => K.default.getUser(t.getRecipientId())),
-                  { isStatusIndicatorEnabled: l, isTypingIndicatorEnabled: a, isFacepileEnabled: o } = R.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
+                  { isStatusIndicatorEnabled: l, isTypingIndicatorEnabled: a, isFacepileEnabled: o } = P.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
                   c = null == s ? void 0 : s.id,
                   d = (0, m.cj)(
                       [F.Z, G.Z],

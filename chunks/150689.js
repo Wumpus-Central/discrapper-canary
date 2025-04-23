@@ -6,11 +6,11 @@ var r = n(200651),
     a = n(623691),
     o = n(494831);
 function c(e) {
-    let { setEditRoleId: t, guild: n, everyoneRole: c, otherRoles: d, setSelectedSection: u } = e,
+    let { setEditRoleId: t, guild: n, everyoneRole: c, otherRoles: u, setSelectedSection: d } = e,
         [m, g] = i.useState(''),
-        [p, h] = i.useState(o.Cl),
-        f = m.trim(),
-        x = i.useMemo(() => d.filter((e) => (0, l.uo)(e, f)), [d, f]),
+        [p, f] = i.useState(o.Cl),
+        h = m.trim(),
+        x = i.useMemo(() => u.filter((e) => (0, l.uo)(e, h)), [u, h]),
         b = i.useCallback(
             () =>
                 (0, r.jsx)(
@@ -22,7 +22,7 @@ function c(e) {
                         setEditRoleId: t,
                         query: m,
                         setQuery: g,
-                        setHeaderHeight: h
+                        setHeaderHeight: f
                     },
                     'header'
                 ),
@@ -32,8 +32,8 @@ function c(e) {
         setEditRoleId: t,
         guild: n,
         everyoneRole: c,
-        otherRoles: d,
-        setSelectedSection: u,
+        otherRoles: u,
+        setSelectedSection: d,
         renderHeader: b,
         headerHeight: p,
         query: m

@@ -28,13 +28,13 @@ function b() {
 }
 function p(e) {
     var t, p;
-    let S = (function (e) {
+    let f = (function (e) {
             let {
                     suppressEveryone: t,
                     suppressRoles: n,
                     mobilePush: p,
-                    messageNotifications: S,
-                    notifyHighlights: f
+                    messageNotifications: f,
+                    notifyHighlights: S
                 } = (0, r.cj)(
                     [c.ZP],
                     () => ({
@@ -46,7 +46,7 @@ function p(e) {
                     }),
                     [e.id]
                 ),
-                O = f === d.gLR.DISABLED,
+                O = S === d.gLR.DISABLED,
                 h = (0, o.Z)(e.id);
             function E(t, n) {
                 s.Z.updateGuildNotificationSettings(e.id, t, n);
@@ -64,7 +64,7 @@ function p(e) {
                                     id: ''.concat(t),
                                     label: n,
                                     action: () => E({ message_notifications: t }, u.UE.notifications(t)),
-                                    checked: t === S
+                                    checked: t === f
                                 },
                                 t
                             );
@@ -107,18 +107,18 @@ function p(e) {
                 ]
             });
         })(e),
-        f = (0, r.e7)([c.ZP], () => c.ZP.getMessageNotifications(e.id), [e.id]),
+        S = (0, r.e7)([c.ZP], () => c.ZP.getMessageNotifications(e.id), [e.id]),
         O =
             null == (p = b()) ||
             null ==
                 (t = p.find((e) => {
                     let { setting: t } = e;
-                    return t === f;
+                    return t === S;
                 }))
                 ? void 0
                 : t.label,
         h = (0, a.U)();
-    return null != S
+    return null != f
         ? (0, i.jsx)(l.sNh, {
               id: 'guild-notifications',
               label: (0, i.jsxs)(i.Fragment, {
@@ -174,7 +174,7 @@ function p(e) {
                           );
                       };
                   }),
-              children: S
+              children: f
           })
         : null;
 }

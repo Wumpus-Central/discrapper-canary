@@ -228,7 +228,7 @@ let Q = r.memo(function (e) {
                                         label: M.intl.string(M.t['154/bG']),
                                         icon: s.ewm,
                                         action: () => {
-                                            x.Z.open(t.id, (0, S.r)(t.id));
+                                            x.Z.open(t.id, (0, S.r)());
                                         }
                                     })
                                   : null,
@@ -308,7 +308,7 @@ let Q = r.memo(function (e) {
                                         label: M.intl.string(M.t['154/bG']),
                                         icon: s.ewm,
                                         action: () => {
-                                            x.Z.open(t.id, (0, S.r)(t.id));
+                                            x.Z.open(t.id, (0, S.r)());
                                         }
                                     })
                                   : null,

@@ -7,18 +7,18 @@ var i = n(442837),
     a = n(496675),
     o = n(556012),
     c = n(273504),
-    d = n(981631),
-    u = n(590433),
+    u = n(981631),
+    d = n(590433),
     m = n(388032),
     g = n(467397);
 function p(e) {
     var t;
-    let { action: n, triggerType: p, guildId: h, toggled: f, onToggleAction: x } = e,
+    let { action: n, triggerType: p, guildId: f, toggled: h, onToggleAction: x } = e,
         b = (e) => () => x(e),
         j = (0, o.c)(n.type, n, p),
         _ = null == (t = n.metadata) ? void 0 : t.durationSeconds,
-        v = null != _ ? (0, u.L9)(_) : null,
-        O = (0, i.e7)([a.Z, s.Z], () => a.Z.can(d.Plq.MODERATE_MEMBERS, s.Z.getGuild(h)), [h]);
+        v = null != _ ? (0, d.L9)(_) : null,
+        O = (0, i.e7)([a.Z, s.Z], () => a.Z.can(u.Plq.MODERATE_MEMBERS, s.Z.getGuild(f)), [f]);
     if (null == j) return null;
     let { headerText: C, descriptionText: y, icon: N } = j;
     return (0, r.jsxs)('div', {
@@ -44,7 +44,7 @@ function p(e) {
                         variant: 'text-xs/medium',
                         children: y
                     }),
-                    f &&
+                    h &&
                         (0, r.jsxs)(l.Text, {
                             color: 'interactive-normal',
                             variant: 'text-xs/medium',
@@ -99,7 +99,7 @@ function p(e) {
                             {
                                 children: (0, r.jsx)(l.XZJ, {
                                     type: l.XZJ.Types.INVERTED,
-                                    value: f,
+                                    value: h,
                                     onChange: b(!1),
                                     disabled: !O,
                                     className: g.__invalid_actionCheckbox

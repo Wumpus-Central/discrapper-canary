@@ -40,12 +40,12 @@ function p(e) {
             },
             [s]
         ),
-        N = (0, m.xb)(_, v, g),
-        T = l.useRef(null),
+        T = (0, m.xb)(_, v, g),
+        N = l.useRef(null),
         E = l.useRef(null),
         S = l.useCallback(() => {
             var e;
-            null == (e = T.current) || e.resetSearchText();
+            null == (e = N.current) || e.resetSearchText();
         }, []);
     return (0, r.jsx)('div', {
         className: a()(b.mainTableContainer, n),
@@ -56,16 +56,16 @@ function p(e) {
             children: [
                 (0, r.jsx)(j.Z, {
                     guild: t,
-                    ref: T
+                    ref: N
                 }),
                 (0, r.jsx)(f, { guild: t }),
                 (0, r.jsx)(x.Z, {
                     guild: t,
                     onSelectRow: C,
-                    searchState: N,
+                    searchState: T,
                     onResetForNewMembers: S
                 }),
-                N !== m.po.SUCCESS_STILL_INDEXING &&
+                T !== m.po.SUCCESS_STILL_INDEXING &&
                     (0, r.jsx)(h.Z, {
                         guildId: t.id,
                         onPageChange: i

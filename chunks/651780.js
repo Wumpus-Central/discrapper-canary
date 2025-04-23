@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(570140),
     o = n(355467),
     c = n(37234),
-    d = n(821849),
-    u = n(774078),
+    u = n(821849),
+    d = n(774078),
     m = n(15640),
     g = n(774380),
     p = n(404270),
-    h = n(441536),
-    f = n(174604),
+    f = n(441536),
+    h = n(174604),
     x = n(386937),
     b = n(316350),
     j = n(899667),
@@ -25,7 +25,7 @@ var r = n(200651),
     I = n(351325);
 function E(e) {
     let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: r } = e,
-        { days: i, hours: l } = (0, u.Z)(t);
+        { days: i, hours: l } = (0, d.Z)(t);
     return n <= 0
         ? null
         : 0 === i && 0 === l
@@ -79,7 +79,7 @@ let T = (e) => {
 function P() {
     i.useEffect(() => {
         a.Z.wait(() => {
-            (0, o.tZ)(), (0, d.Y2)();
+            (0, o.tZ)(), (0, u.Y2)();
         });
     }, []);
     let e = (0, l.e7)([C.Z], () => C.Z.getGuild()),
@@ -107,10 +107,10 @@ function P() {
                 ]
             }),
             null != e &&
-                (0, r.jsx)(f.Z, {
+                (0, r.jsx)(h.Z, {
                     guild: e,
                     onButtonClick: function () {
-                        null != e && ((0, c.xf)(), (0, h.Z)(e.id));
+                        null != e && ((0, c.xf)(), (0, f.Z)(e.id));
                     }
                 }),
             (0, r.jsx)(x.Z, {

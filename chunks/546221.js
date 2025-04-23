@@ -7,13 +7,13 @@ var i = n(481060),
     a = n(730647),
     o = n(584825),
     c = n(723047),
-    d = n(997519),
-    u = n(146710),
+    u = n(997519),
+    d = n(146710),
     m = n(146610),
     g = n(67152),
     p = n(791382),
-    h = n(277369),
-    f = n(215124),
+    f = n(277369),
+    h = n(215124),
     x = n(981631),
     b = n(388032),
     j = n(264054);
@@ -50,8 +50,8 @@ function v(e) {
 let O = (e) => {
     var t, n;
     let { guildId: a, application: o } = e,
-        { loading: m, team: g, currentPeriod: O, allPeriods: C, metrics: y } = (0, d.Z)(a, o),
-        N = (0, u.u)(a),
+        { loading: m, team: g, currentPeriod: O, allPeriods: C, metrics: y } = (0, u.Z)(a, o),
+        N = (0, d.u)(a),
         I = (0, c.mY)();
     return m
         ? (0, r.jsx)(i.$jN, {})
@@ -113,7 +113,7 @@ let O = (e) => {
                       title: b.intl.string(b.t.O8cDAA),
                       disabled: I,
                       className: j.formSection,
-                      children: (0, r.jsx)(h.Z, {
+                      children: (0, r.jsx)(f.Z, {
                           guildId: a,
                           application: o
                       })
@@ -121,7 +121,7 @@ let O = (e) => {
                   (0, r.jsx)(i.hjN, {
                       title: b.intl.string(b.t['0n7R2d']),
                       className: j.formSection,
-                      children: (0, r.jsx)(f.Z, {
+                      children: (0, r.jsx)(h.Z, {
                           guildId: a,
                           allPeriods: C
                       })

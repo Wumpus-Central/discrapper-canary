@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(442837),
     o = n(692547),
     c = n(481060),
-    d = n(142497),
-    u = n(338327),
+    u = n(142497),
+    d = n(338327),
     m = n(496675),
     g = n(63063),
     p = n(981631),
-    h = n(190378),
-    f = n(388032),
+    f = n(190378),
+    h = n(388032),
     x = n(239721),
     b = n(438825),
     j = n(236140),
@@ -69,8 +69,8 @@ let S = () => [
         {
             icon: c.IeX,
             color: o.Z.unsafe_rawColors.GREEN_360.css,
-            header: f.intl.string(f.t.oVQF29),
-            body: f.intl.format(f.t.A6G7am, {
+            header: h.intl.string(h.t.oVQF29),
+            body: h.intl.format(h.t.A6G7am, {
                 featureHook: (e, t) =>
                     (0, r.jsx)(
                         'strong',
@@ -85,12 +85,12 @@ let S = () => [
         {
             icon: c.IeX,
             color: o.Z.unsafe_rawColors.PARTNER.css,
-            header: f.intl.string(f.t['0rJl9/']),
-            body: f.intl.format(f.t.XsCNk5, {
+            header: h.intl.string(h.t['0rJl9/']),
+            body: h.intl.format(h.t.XsCNk5, {
                 infoHook: () =>
                     (0, r.jsx)(c.ua7, {
-                        text: f.intl.string(f.t.kPJlTk),
-                        'aria-label': f.intl.string(f.t.kPJlTk),
+                        text: h.intl.string(h.t.kPJlTk),
+                        'aria-label': h.intl.string(h.t.kPJlTk),
                         children: (e) =>
                             (0, r.jsx)(
                                 c.d3s,
@@ -118,8 +118,8 @@ let S = () => [
         {
             icon: c.d3s,
             color: o.Z.unsafe_rawColors.RED_360.css,
-            header: f.intl.string(f.t.W2kLJC),
-            body: f.intl.string(f.t.hyNkHx)
+            header: h.intl.string(h.t.W2kLJC),
+            body: h.intl.string(h.t.hyNkHx)
         }
     ],
     T = [
@@ -189,13 +189,13 @@ let S = () => [
     },
     w = (e) => {
         let { iconSrc: t, name: n, position: i, faded: l, rightAlign: a, imageCoordinates: o } = e,
-            d = {
+            u = {
                 [a ? 'right' : 'left']: o[0] + i[0],
                 top: o[1] + i[1]
             };
         return (0, r.jsxs)('div', {
             className: s()(x.guildDetails, { [x.faded]: l }),
-            style: d,
+            style: u,
             children: [
                 (0, r.jsx)('div', {
                     className: x.guildIcon,
@@ -225,10 +225,10 @@ let S = () => [
             null != C && l(C / 2), null != y && o(y / 2);
         }, [C, y, l, o]),
             i.useEffect(() => {
-                (0, d.Kw)(h.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
+                (0, u.Kw)(f.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
             }, []);
         let N = () => {
-            u.Z.open();
+            d.Z.open();
         };
         return (0, r.jsxs)('div', {
             className: x.container,
@@ -261,17 +261,17 @@ let S = () => [
                 }),
                 (0, r.jsx)(c.X6q, {
                     variant: 'heading-xl/semibold',
-                    children: f.intl.string(f.t['M/gBcH'])
+                    children: h.intl.string(h.t['M/gBcH'])
                 }),
                 (0, r.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-md/normal',
                     className: x.body,
-                    children: f.intl.format(f.t['52EgsL'], { helpdeskArticle: g.Z.getArticleURL(p.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
+                    children: h.intl.format(h.t['52EgsL'], { helpdeskArticle: g.Z.getArticleURL(p.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
                 }),
                 (0, r.jsx)(c.ua7, {
-                    text: O ? null : f.intl.string(f.t['pjG+T0']),
-                    'aria-label': O ? void 0 : f.intl.string(f.t['pjG+T0']),
+                    text: O ? null : h.intl.string(h.t['pjG+T0']),
+                    'aria-label': O ? void 0 : h.intl.string(h.t['pjG+T0']),
                     children: (e) =>
                         (0, r.jsx)(
                             c.zxk,
@@ -284,7 +284,7 @@ let S = () => [
                                     },
                                     e
                                 ),
-                                { children: f.intl.string(f.t.LhlgY2) }
+                                { children: h.intl.string(h.t.LhlgY2) }
                             )
                         )
                 }),
@@ -292,13 +292,13 @@ let S = () => [
                 (0, r.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: f.intl.string(f.t.OzLWLC)
+                    children: h.intl.string(h.t.OzLWLC)
                 }),
                 (0, r.jsx)(c.Text, {
                     color: 'header-secondary',
                     className: x.body,
                     variant: 'text-sm/normal',
-                    children: f.intl.format(f.t.rjhrqK, { helpdeskArticle: g.Z.getArticleURL(p.BhN.GUILD_COMMUNITY_FEATURE) })
+                    children: h.intl.format(h.t.rjhrqK, { helpdeskArticle: g.Z.getArticleURL(p.BhN.GUILD_COMMUNITY_FEATURE) })
                 }),
                 (0, r.jsx)('div', {
                     className: x.features,

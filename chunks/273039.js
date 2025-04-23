@@ -6,7 +6,7 @@ var r = n(200651),
     a = n(225433),
     o = n(872194);
 function c(e) {
-    let { hasSetEmoji: t, onClick: n, children: l, className: c, buttonClassName: d, look: u } = e,
+    let { hasSetEmoji: t, onClick: n, children: l, className: c, buttonClassName: u, look: d } = e,
         [m, g] = i.useState(!1),
         p = i.useCallback(() => {
             n(), g(!1);
@@ -25,8 +25,8 @@ function c(e) {
             t && m
                 ? (0, r.jsx)(a.Z, {
                       onClick: p,
-                      className: s()(o.removeButton, d),
-                      look: u
+                      className: s()(o.removeButton, u),
+                      look: d
                   })
                 : null
         ]

@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(399606),
     o = n(481060),
     c = n(239091),
-    d = n(749210),
-    u = n(479531),
+    u = n(749210),
+    d = n(479531),
     m = n(110924),
     g = n(410030),
     p = n(367907),
-    h = n(906732),
-    f = n(118012),
+    f = n(906732),
+    h = n(118012),
     x = n(218867),
     b = n(733026),
     j = n(246946),
@@ -79,13 +79,13 @@ function D(e) {
     let { transitionState: n, guild: l, user: s, ban: a, hideDiscriminator: c, onClose: m } = e,
         [g, x] = i.useState(!1),
         [b, j] = i.useState(null),
-        { analyticsLocations: _ } = (0, h.ZP)(),
+        { analyticsLocations: _ } = (0, f.ZP)(),
         O = null != (t = null == _ ? void 0 : _[0]) ? t : null;
     async function y() {
         if (null != l) {
             j(null), x(!0);
             try {
-                await d.Z.unbanUser(l.id, s.id),
+                await u.Z.unbanUser(l.id, s.id),
                     m(),
                     v.default.track(
                         S.rMx.GUILD_BAN_REMOVED,
@@ -96,7 +96,7 @@ function D(e) {
                         })
                     );
             } catch (e) {
-                j(new u.Z(e)), x(!1);
+                j(new d.Z(e)), x(!1);
             }
         }
     }
@@ -108,8 +108,8 @@ function D(e) {
                 className: P.header,
                 separator: !1,
                 children: [
-                    (0, r.jsx)(f.Z, {
-                        size: f.Z.Sizes.SIZE_24,
+                    (0, r.jsx)(h.Z, {
+                        size: h.Z.Sizes.SIZE_24,
                         className: P.userUsername,
                         children: C.ZP.getUserTag(s, {
                             mode: 'username',
@@ -118,8 +118,8 @@ function D(e) {
                     }),
                     c || s.isPomelo()
                         ? null
-                        : (0, r.jsxs)(f.Z, {
-                              size: f.Z.Sizes.SIZE_24,
+                        : (0, r.jsxs)(h.Z, {
+                              size: h.Z.Sizes.SIZE_24,
                               className: P.userDiscrim,
                               children: ['#', s.discriminator]
                           })
@@ -167,7 +167,7 @@ function D(e) {
         ]
     });
 }
-class A extends i.PureComponent {
+class k extends i.PureComponent {
     render() {
         var e;
         let { user: t, guild: n } = this.props;
@@ -224,10 +224,10 @@ class A extends i.PureComponent {
             });
     }
 }
-let k = i.forwardRef(function (e, t) {
+let A = i.forwardRef(function (e, t) {
     let { guild: n, sortedBans: l, bans: s } = e,
         c = (0, a.e7)([j.Z], () => j.Z.hidePersonalInformation, []),
-        d = i.useCallback(
+        u = i.useCallback(
             (e) => {
                 var t;
                 if (null == s && 0 === e) return 60;
@@ -237,7 +237,7 @@ let k = i.forwardRef(function (e, t) {
             },
             [s, l]
         ),
-        u = i.useCallback(
+        d = i.useCallback(
             (e) => {
                 var t;
                 if (null == s && 0 === e)
@@ -253,7 +253,7 @@ let k = i.forwardRef(function (e, t) {
                     a = null == s ? void 0 : s.get(null != (t = null == i ? void 0 : i.id) ? t : '');
                 if (null != i && null != a)
                     return (0, r.jsx)(
-                        A,
+                        k,
                         {
                             user: i,
                             ban: a,
@@ -269,8 +269,8 @@ let k = i.forwardRef(function (e, t) {
         role: 'listbox',
         listPadding: [8, 8, 8, 8],
         rowCount: l.length,
-        rowHeight: d,
-        renderRow: u,
+        rowHeight: u,
+        renderRow: d,
         ref: t
     });
 });
@@ -278,7 +278,7 @@ function L(e) {
     let { guildId: t, storedSearchQuery: n } = e,
         [l, s] = i.useState(null != n ? n : ''),
         [a, c] = i.useState(!1),
-        u = i.useCallback(() => {
+        d = i.useCallback(() => {
             y.Z.setSection(S.pNK.SAFETY), (0, I.K)(E.u.DM_AND_SPAM_PROTECTION);
         }, []),
         m = i.useCallback((e) => {
@@ -297,12 +297,12 @@ function L(e) {
                     c(!0);
                     let [e, n] = (0, b.C)(l),
                         r = e[0];
-                    y.Z.setSearchQuery(l), await d.Z.searchGuildBans(t, r, n), c(!1);
+                    y.Z.setSearchQuery(l), await u.Z.searchGuildBans(t, r, n), c(!1);
                 } catch (e) {
                     c(!1);
                 }
         }, [t, a, l]),
-        h = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 'Enter' === e.key && (e.preventDefault(), e.stopPropagation(), p());
             },
@@ -319,7 +319,7 @@ function L(e) {
                     children: (0, r.jsx)(o.R94, {
                         type: o.geA.DESCRIPTION,
                         className: P.description,
-                        children: T.intl.format(T.t.JcZ36u, { onModerationClick: u })
+                        children: T.intl.format(T.t.JcZ36u, { onModerationClick: d })
                     })
                 }),
                 (0, r.jsxs)('div', {
@@ -331,7 +331,7 @@ function L(e) {
                             placeholder: T.intl.string(T.t.MiqUmZ),
                             'aria-label': T.intl.string(T.t.MiqUmZ),
                             onChange: m,
-                            onKeyDown: h,
+                            onKeyDown: f,
                             onClear: g,
                             size: o.E1j.Sizes.MEDIUM,
                             isLoading: a
@@ -354,10 +354,10 @@ function L(e) {
 }
 function M() {
     var e, t;
-    let { guild: c, searchQuery: u } = (0, a.e7)([N.Z], () => N.Z.getProps(), [], l.isEqual),
-        p = null != u && u.trim().length > 0,
-        h = (0, m.Z)(p),
-        f = p !== h,
+    let { guild: c, searchQuery: d } = (0, a.e7)([N.Z], () => N.Z.getProps(), [], l.isEqual),
+        p = null != d && d.trim().length > 0,
+        f = (0, m.Z)(p),
+        h = p !== f,
         [x] = (0, a.e7)([N.Z], () => N.Z.getBans(), [], O.Q),
         j = null != (e = null == x ? void 0 : x.size) ? e : 0,
         v = (0, g.ZP)(),
@@ -386,20 +386,20 @@ function M() {
             },
             [I]
         ),
-        w = i.useMemo(() => E(x, u, j), [x, E, u, j]),
+        w = i.useMemo(() => E(x, d, j), [x, E, d, j]),
         D = null != x,
-        A = w.length % 1000 == 0 && w.length > 0 && D,
+        k = w.length % 1000 == 0 && w.length > 0 && D,
         M = 0 === w.length,
         [G, U] = i.useState({
             currentPage: 1,
             pageSize: 100
         });
     i.useEffect(() => {
-        f && 1 !== G.currentPage && U((e) => Z(R({}, e), { currentPage: 1 }));
-    }, [f, G.currentPage]);
+        h && 1 !== G.currentPage && U((e) => Z(R({}, e), { currentPage: 1 }));
+    }, [h, G.currentPage]);
     let B = i.useCallback(
             (e) => {
-                d.Z.fetchGuildBansBatch(C, 1000, e);
+                u.Z.fetchGuildBansBatch(C, 1000, e);
             },
             [C]
         ),
@@ -407,15 +407,15 @@ function M() {
         z = i.useCallback(
             (e) => {
                 var t, n, r;
-                null == (t = y.current) || t.scrollToSectionTop(0), (e + 1) * G.pageSize > w.length && A && !p && ((H.current = null != (r = null == (n = w[w.length - 1]) ? void 0 : n.id) ? r : null), B(H.current)), (null != F[e - 1] || A) && U((t) => Z(R({}, t), { currentPage: e }));
+                null == (t = y.current) || t.scrollToSectionTop(0), (e + 1) * G.pageSize > w.length && k && !p && ((H.current = null != (r = null == (n = w[w.length - 1]) ? void 0 : n.id) ? r : null), B(H.current)), (null != F[e - 1] || k) && U((t) => Z(R({}, t), { currentPage: e }));
             },
-            [G.pageSize, w, A, F, B, p]
+            [G.pageSize, w, k, F, B, p]
         ),
         H = i.useRef(null);
     i.useEffect(() => {
         B(H.current);
     }, [B]);
-    let V = i.useMemo(() => {
+    let W = i.useMemo(() => {
         var e;
         return null != (e = F[G.currentPage - 1]) ? e : [];
     }, [F, G.currentPage]);
@@ -426,19 +426,19 @@ function M() {
               children: [
                   (0, r.jsx)(L, {
                       guildId: C,
-                      storedSearchQuery: u
+                      storedSearchQuery: d
                   }),
                   (0, r.jsxs)('div', {
                       className: P.scrollerContainer,
                       children: [
                           !M &&
-                              (0, r.jsx)(k, {
+                              (0, r.jsx)(A, {
                                   guild: c,
                                   bans: x,
-                                  sortedBans: V,
+                                  sortedBans: W,
                                   ref: y
                               }),
-                          !A &&
+                          !k &&
                               M &&
                               (0, r.jsxs)(o.ubH, {
                                   theme: v,
@@ -463,7 +463,7 @@ function M() {
                       className: P.__invalid_paginationContainer,
                       children: (0, r.jsx)(o.DsT, {
                           className: P.paginationInput,
-                          totalCount: w.length + (A ? G.pageSize : 0),
+                          totalCount: w.length + (k ? G.pageSize : 0),
                           pageSize: G.pageSize,
                           currentPage: G.currentPage,
                           onPageChange: z,

@@ -7,7 +7,7 @@ var i = n(120356),
     a = n(388032),
     o = n(53134);
 function c(e) {
-    let { className: t, enabled: n, previewCTA: i, onPreview: c, onToggle: d, animateStatus: u, firstLine: m, secondLine: g, disabled: p } = e;
+    let { className: t, enabled: n, previewCTA: i, onPreview: c, onToggle: u, animateStatus: d, firstLine: m, secondLine: g, disabled: p } = e;
     return (0, r.jsxs)('div', {
         className: l()(t, o.enableContainer),
         children: [
@@ -17,14 +17,14 @@ function c(e) {
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: l()(o.activeCircle, { [o.animate]: u })
+                      className: l()(o.activeCircle, { [o.animate]: d })
                   })
                 : (0, r.jsx)(s.vdY, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: l()(o.editCircle, { [o.animate]: u })
+                      className: l()(o.editCircle, { [o.animate]: d })
                   }),
             (0, r.jsxs)('div', {
                 className: o.enableDescription,
@@ -54,10 +54,10 @@ function c(e) {
                               children: null != i ? i : a.intl.string(a.t['5U0kLy'])
                           }),
                     (0, r.jsx)(s.zxk, {
-                        disabled: null == d || p,
+                        disabled: null == u || p,
                         size: s.zxk.Sizes.SMALL,
                         color: n ? s.zxk.Colors.RED : s.zxk.Colors.BRAND,
-                        onClick: d,
+                        onClick: u,
                         children: n ? a.intl.string(a.t.R9GHyc) : a.intl.string(a.t.JFfinp)
                     })
                 ]

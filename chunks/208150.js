@@ -7,13 +7,13 @@ var i = n(442837),
     a = n(906732),
     o = n(623624),
     c = n(372444),
-    d = n(852679),
-    u = n(317169),
+    u = n(852679),
+    d = n(317169),
     m = n(926491),
     g = n(145499),
     p = n(424218),
-    h = n(267642),
-    f = n(63063),
+    f = n(267642),
+    h = n(63063),
     x = n(999382),
     b = n(981631),
     j = n(611480),
@@ -27,7 +27,7 @@ let O = {
     C = (e) => {
         let { guild: t } = e,
             { analyticsLocations: n } = (0, a.ZP)(),
-            i = (0, u.Z)(t.id).available,
+            i = (0, d.Z)(t.id).available,
             s = b.oCV[b.Eu4.TIER_1] - i;
         return (0, r.jsxs)('div', {
             className: v.upsellContainer,
@@ -50,7 +50,7 @@ let O = {
                             innerClassName: v.upsellButton,
                             color: l.zxk.Colors.WHITE,
                             onClick: () =>
-                                (0, d.Z)({
+                                (0, u.Z)({
                                     analyticsLocations: n,
                                     analyticsLocation: O,
                                     guildId: t.id,
@@ -83,7 +83,7 @@ let O = {
                 }),
                 (0, r.jsx)(l.R94, {
                     type: l.geA.DESCRIPTION,
-                    children: _.intl.format(_.t.UBj0aW, { articleUrl: f.Z.getArticleURL(b.BhN.STICKERS_UPLOAD) })
+                    children: _.intl.format(_.t.UBj0aW, { articleUrl: h.Z.getArticleURL(b.BhN.STICKERS_UPLOAD) })
                 })
             ]
         }),
@@ -93,18 +93,18 @@ let O = {
             i,
             { guild: l, guildStickers: s } = e,
             a = l.premiumTier,
-            o = (0, h.Qi)(s, a),
-            d = (0, h.FZ)(a),
-            u = (0, h.A3)(a),
+            o = (0, f.Qi)(s, a),
+            u = (0, f.FZ)(a),
+            d = (0, f.A3)(a),
             m = s.length;
-        return null == d || a === b.Eu4.TIER_3 || o > 0
+        return null == u || a === b.Eu4.TIER_3 || o > 0
             ? null
-            : (m > u
-                  ? ((t = _.intl.formatToPlainString(_.t.ZtAY1d, { level: d })), (n = _.intl.formatToPlainString(_.t['13hOWl'], { level: d })), (i = b.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
+            : (m > d
+                  ? ((t = _.intl.formatToPlainString(_.t.ZtAY1d, { level: u })), (n = _.intl.formatToPlainString(_.t['13hOWl'], { level: u })), (i = b.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
                   : ((t = _.intl.string(_.t.zT9Sxc)),
                     (n = _.intl.formatToPlainString(_.t.YaW9wM, {
-                        level: d,
-                        numAdditional: (0, h.ig)(d)
+                        level: u,
+                        numAdditional: (0, f.ig)(u)
                     })),
                     (i = b.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
               (0, r.jsx)(c.Z, {
@@ -115,7 +115,7 @@ let O = {
                       page: b.ZY5.GUILD_SETTINGS,
                       section: b.jXE.GUILD_SETTINGS_STICKERS,
                       object: i,
-                      objectType: (0, h.ge)(d)
+                      objectType: (0, f.ge)(u)
                   }
               }));
     },

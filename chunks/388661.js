@@ -4,7 +4,7 @@ var B = v(200651),
     e = v.n(t),
     f = v(442837),
     r = v(481060),
-    C = v(550271),
+    C = v(510918),
     h = v(494620),
     n = v(63063),
     w = v(434404),
@@ -35,7 +35,7 @@ let M = function (A) {
                             maxLength: 4,
                             autoFocus: !0,
                             placeholder: 'WUMP',
-                            prefixElement: (0, B.jsx)(C.A, {
+                            prefixElement: (0, B.jsx)(C.v, {
                                 badge: M,
                                 width: 40,
                                 height: 40,

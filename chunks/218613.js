@@ -41,12 +41,12 @@ var s = n(200651),
     z = n(388131),
     G = n(131704),
     P = n(592125),
-    M = n(271383),
-    R = n(430824),
+    R = n(271383),
+    M = n(430824),
     w = n(496675),
     Z = n(699516),
-    k = n(594174),
-    B = n(934415),
+    B = n(594174),
+    k = n(934415),
     F = n(823379),
     V = n(63063),
     H = n(981631),
@@ -119,7 +119,7 @@ function ee(e) {
 function et(e) {
     let { onChange: t, guildId: n, channelType: l, description: r } = e,
         [a, o] = i.useState({}),
-        d = (0, p.e7)([R.Z], () => R.Z.getGuild(n)),
+        d = (0, p.e7)([M.Z], () => M.Z.getGuild(n)),
         c = l === H.d4z.GUILD_STAGE_VOICE;
     return (i.useEffect(() => {
         t(a);
@@ -239,7 +239,7 @@ class en extends i.PureComponent {
                     ? (0, s.jsx)(m.R94, {
                           className: K.channelNameNote,
                           type: m.R94.Types.DESCRIPTION,
-                          children: q.intl.format(q.t.s2ZzZW, { name: (0, b.F6)(t, k.default, Z.Z, !0) })
+                          children: q.intl.format(q.t.s2ZzZW, { name: (0, b.F6)(t, B.default, Z.Z, !0) })
                       })
                     : r === H.d4z.GUILD_FORUM
                       ? (0, s.jsx)(m.R94, {
@@ -784,12 +784,12 @@ class en extends i.PureComponent {
             }),
             J(this, 'handleNameChange', (e) => {
                 let { channelType: t } = this.state;
-                G.xL.has(t) && (e = (0, B.Nj)(e)), this.setState({ name: e });
+                G.xL.has(t) && (e = (0, k.Nj)(e)), this.setState({ name: e });
             }),
             J(this, 'handleTypeChange', (e) => {
                 let { value: t } = e,
                     { name: n } = this.state;
-                G.xL.has(t) && (n = (0, B.Nj)(n)),
+                G.xL.has(t) && (n = (0, k.Nj)(n)),
                     t === H.d4z.GUILD_STAGE_VOICE && this.setState({ isPrivate: !1 }),
                     this.setState({
                         channelType: t,
@@ -825,14 +825,14 @@ class en extends i.PureComponent {
                     E = this.getGuildId();
                 if (null != E) {
                     if (null != i) (t = c().values(i.permissionOverwrites)), (n = i.bitrate), (s = i.userLimit);
-                    else if (m === H.d4z.GUILD_ANNOUNCEMENT) t = (0, B.rt)(E);
+                    else if (m === H.d4z.GUILD_ANNOUNCEMENT) t = (0, k.rt)(E);
                     else {
                         if (x) {
-                            t = (0, B.oQ)(E, m, [], !0);
+                            t = (0, k.oQ)(E, m, [], !0);
                             let e = (0, f.Tj)(p, m);
                             e.length > 0 && (t = t.concat(e));
                             let n = null != h && r.id === h.id;
-                            t.some((e) => a.has(e.id)) || o || n || t.push((0, B.jZ)(r.id, m));
+                            t.some((e) => a.has(e.id)) || o || n || t.push((0, k.jZ)(r.id, m));
                         }
                         m === H.d4z.GUILD_STAGE_VOICE &&
                             ((t = []),
@@ -865,7 +865,7 @@ class en extends i.PureComponent {
         let { channelType: t, cloneChannel: n, prefillChannelName: s } = e;
         (this.state = {
             channelType: null != t ? t : H.d4z.GUILD_TEXT,
-            name: null != n ? (0, b.F6)(n, k.default, Z.Z) : null != s ? s : '',
+            name: null != n ? (0, b.F6)(n, B.default, Z.Z) : null != s ? s : '',
             pendingPermissionOverwrites: {},
             isPrivate: !1,
             prevGuildId: e.guildId,
@@ -882,12 +882,12 @@ class en extends i.PureComponent {
 }
 let es = i.forwardRef(function (e, t) {
     let { channelType: n, guildId: i, cloneChannelId: l } = e,
-        r = (0, p.cj)([R.Z, k.default, w.Z, P.Z, M.ZP], () => {
+        r = (0, p.cj)([M.Z, B.default, w.Z, P.Z, R.ZP], () => {
             var e, t, s;
-            let r = R.Z.getGuild(i),
-                a = k.default.getCurrentUser();
+            let r = M.Z.getGuild(i),
+                a = B.default.getCurrentUser();
             o()(null != a, 'CreateChannel: user cannot be undefined');
-            let d = null != r && null != r.ownerId ? k.default.getUser(r.ownerId) : null,
+            let d = null != r && null != r.ownerId ? B.default.getUser(r.ownerId) : null,
                 c = w.Z.can(H.Plq.ADMINISTRATOR, r),
                 h = P.Z.getChannel(l);
             return {
@@ -896,7 +896,7 @@ let es = i.forwardRef(function (e, t) {
                 canCreateAnnouncementChannel: null != r && r.hasFeature(H.oNc.NEWS),
                 user: a,
                 owner: d,
-                memberRoles: null != (t = null == (e = M.ZP.getMember(i, a.id)) ? void 0 : e.roles) ? t : [],
+                memberRoles: null != (t = null == (e = R.ZP.getMember(i, a.id)) ? void 0 : e.roles) ? t : [],
                 canViewChannels: w.Z.can(H.Plq.VIEW_CHANNEL, r),
                 canConnect: w.Z.can(H.Plq.CONNECT, r),
                 isAdmin: c,

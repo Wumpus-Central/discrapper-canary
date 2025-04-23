@@ -3,7 +3,7 @@ var B = v(200651),
     t = v(120356),
     e = v.n(t),
     f = v(481060),
-    r = v(550271),
+    r = v(510918),
     C = v(254925),
     h = v(602268);
 function n(A) {
@@ -16,7 +16,7 @@ function n(A) {
                 {
                     className: e()(h.pickerItem, { [h.pickerItemSelected]: A === g }),
                     onClick: () => (null == v ? void 0 : v(A)),
-                    children: (0, B.jsx)(r.A, {
+                    children: (0, B.jsx)(r.v, {
                         badge: A,
                         width: 32,
                         height: 32

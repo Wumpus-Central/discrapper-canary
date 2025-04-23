@@ -13,11 +13,11 @@ let s = new Map(),
                 return null != (o = r.get(n)) ? o : {};
             }
             let c = await (0, l.MA)(n),
-                d = new Map(r);
+                u = new Map(r);
             return (
-                d.set(n, c),
+                u.set(n, c),
                 (0, i.j)(() => {
-                    e({ topGames: d });
+                    e({ topGames: u });
                 }),
                 s.set(n, Date.now()),
                 c

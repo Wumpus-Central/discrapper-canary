@@ -30,7 +30,7 @@ function c(e) {
     }
     return e;
 }
-function d(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -48,9 +48,9 @@ function d(e, t) {
         e
     );
 }
-function u(e) {
+function d(e) {
     let { preset: t, toggled: n, onToggle: i } = e,
-        { headerText: c, subtitleText: d } = (function (e) {
+        { headerText: c, subtitleText: u } = (function (e) {
             let t = null,
                 n = null;
             switch (e) {
@@ -84,7 +84,7 @@ function u(e) {
                     (0, r.jsx)(l.Text, {
                         color: 'interactive-normal',
                         variant: 'text-xs/medium',
-                        children: d
+                        children: u
                     })
                 ]
             }),
@@ -103,7 +103,7 @@ function m(e) {
         [a, o] = i.useState(new Set(null == n || null == (t = n.triggerMetadata) ? void 0 : t.presets)),
         m = i.useMemo(
             () => (e) => {
-                l(d(c({}, n), { triggerMetadata: d(c({}, n.triggerMetadata), { presets: e }) }));
+                l(u(c({}, n), { triggerMetadata: u(c({}, n.triggerMetadata), { presets: e }) }));
             },
             [l, n]
         ),
@@ -113,17 +113,17 @@ function m(e) {
         };
     return (0, r.jsxs)('div', {
         children: [
-            (0, r.jsx)(u, {
+            (0, r.jsx)(d, {
                 preset: s.Ux.PROFANITY,
                 toggled: a.has(s.Ux.PROFANITY),
                 onToggle: g
             }),
-            (0, r.jsx)(u, {
+            (0, r.jsx)(d, {
                 preset: s.Ux.SLURS,
                 toggled: a.has(s.Ux.SLURS),
                 onToggle: g
             }),
-            (0, r.jsx)(u, {
+            (0, r.jsx)(d, {
                 preset: s.Ux.SEXUAL_CONTENT,
                 toggled: a.has(s.Ux.SEXUAL_CONTENT),
                 onToggle: g

@@ -7,7 +7,7 @@ function s(e) {
     var t,
         n,
         { children: s, disabled: a, disabledTooltip: o, id: c } = e,
-        d = (function (e, t) {
+        u = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -60,7 +60,7 @@ function s(e) {
                     id: c,
                     disabled: a
                 },
-                d
+                u
             )),
             (n = n = { children: s }),
             Object.getOwnPropertyDescriptors

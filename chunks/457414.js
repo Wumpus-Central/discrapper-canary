@@ -1,6 +1,6 @@
 n.d(t, {
     S: () => c,
-    w: () => f
+    w: () => h
 });
 var r = n(481060),
     i = n(925221),
@@ -17,7 +17,7 @@ let c = (e) => {
                 return !1;
         }
     },
-    d = (e) => {
+    u = (e) => {
         switch (e) {
             case a.fX.KEYWORD:
             case a.fX.ML_SPAM:
@@ -30,7 +30,7 @@ let c = (e) => {
                 return !1;
         }
     },
-    u = (e, t) => {
+    d = (e, t) => {
         var n;
         return null != (n = null == t ? void 0 : t.name) ? n : s.I6[e].getDefaultRuleName();
     },
@@ -62,7 +62,7 @@ let c = (e) => {
     p = (e) => {
         if (e === a.fX.KEYWORD) return o.intl.formatToPlainString(o.t.yNec2t, {});
     },
-    h = (e) => {
+    f = (e) => {
         switch (e) {
             case a.fX.MENTION_SPAM:
                 return r.lOy;
@@ -75,15 +75,15 @@ let c = (e) => {
                 return r.Oqj;
         }
     };
-function f(e, t) {
+function h(e, t) {
     var n, i, l, s, a;
-    return null != e && d(e)
+    return null != e && u(e)
         ? {
-              headerText: null != (n = u(e, t)) ? n : '',
+              headerText: null != (n = d(e, t)) ? n : '',
               headerSubtext: null != (i = m(e, t)) ? i : '',
               descriptionText: null != (l = g(e)) ? l : '',
               descriptionSubtext: null != (s = p(e)) ? s : '',
-              icon: null != (a = h(e)) ? a : r.xPt
+              icon: null != (a = f(e)) ? a : r.xPt
           }
         : null;
 }

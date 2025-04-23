@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(522651),
     b = n(795318),
     O = n(194082),
-    h = n(282256),
-    y = n(925329),
+    h = n(925329),
+    y = n(340044),
     v = n(880395),
     S = n(221241),
     j = n(314897),
@@ -229,7 +229,7 @@ function M(e) {
 let U = l.forwardRef(function (e, t) {
     var n,
         { avatarContainerClass: i = _.avatarContainer, userNameClassName: c = _.usernameFont, size: d = N.ipw.SMALL, selected: p = !1, disabled: f = !1, isOverlay: O = !1 } = e,
-        y = (function (e, t) {
+        h = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -248,7 +248,7 @@ let U = l.forwardRef(function (e, t) {
             }
             return l;
         })(e, ['avatarContainerClass', 'userNameClassName', 'size', 'selected', 'disabled', 'isOverlay']);
-    let { onClick: Z, onKeyDown: x, onDoubleClick: C, onContextMenu: w, onMouseLeave: k, onMouseDown: U, priority: R, speaking: V, collapsed: F, mute: Y, serverMute: B, guildId: G, nick: W, isGuest: z, flipped: H, className: J, overlap: X, 'aria-label': K, ringing: q, user: Q, channelId: $ } = y,
+    let { onClick: Z, onKeyDown: x, onDoubleClick: C, onContextMenu: w, onMouseLeave: k, onMouseDown: U, priority: R, speaking: V, collapsed: F, mute: Y, serverMute: B, guildId: G, nick: W, isGuest: z, flipped: H, className: J, overlap: X, 'aria-label': K, ringing: q, user: Q, channelId: $ } = h,
         { parentAnalyticsLocation: ee } = (0, m.ZP)(),
         et = (0, u.bp)(),
         en = null != $ ? P.Z.getChannel($) : null,
@@ -338,7 +338,7 @@ let U = l.forwardRef(function (e, t) {
                             };
                         return !F || O
                             ? (0, r.jsx)(
-                                  h.Z,
+                                  y.Z,
                                   ((e = L({}, l)),
                                   (t = t = { children: n }),
                                   Object.getOwnPropertyDescriptors
@@ -357,7 +357,7 @@ let U = l.forwardRef(function (e, t) {
                               )
                             : null;
                     })(),
-                    (0, r.jsx)(M, L({ disabled: f }, y)),
+                    (0, r.jsx)(M, L({ disabled: f }, h)),
                     er &&
                         (!F && el
                             ? (0, r.jsx)(s.DY3, {
@@ -411,10 +411,10 @@ function R(e) {
             className: _.iconSpacing,
             children: (0, r.jsx)('div', {
                 ref: m,
-                children: (0, r.jsx)(y.Z, {
+                children: (0, r.jsx)(h.Z, {
                     className: o()(_.icon, n),
                     game: t,
-                    size: y.Z.Sizes.XSMALL,
+                    size: h.Z.Sizes.XSMALL,
                     onMouseEnter: () => {
                         f.ZP.trackWithMetadata(N.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
                             channel_id: a,

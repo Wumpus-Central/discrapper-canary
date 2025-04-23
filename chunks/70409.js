@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var i = n(481060),
@@ -7,14 +7,14 @@ var i = n(481060),
     a = n(981631),
     o = n(474936),
     c = n(388032),
-    d = n(109626);
-function u(e) {
-    let { guild: t, numSounds: n, isOutOfSlots: u } = e,
+    u = n(109626);
+function d(e) {
+    let { guild: t, numSounds: n, isOutOfSlots: d } = e,
         m = t.premiumTier,
         g = (0, s.FZ)(m),
         p = o._k[m] - 2;
     if (null == g || m === a.Eu4.TIER_3 || n < p) return null;
-    let h = u
+    let f = d
         ? {
               color: i.Ttl.GREEN,
               look: i.iLD.FILLED,
@@ -29,7 +29,7 @@ function u(e) {
         }),
         headerColor: 'header-primary',
         textColor: 'text-normal',
-        buttonProps: h,
+        buttonProps: f,
         guild: t,
         analyticsLocation: {
             page: a.ZY5.GUILD_SETTINGS,
@@ -37,6 +37,6 @@ function u(e) {
             object: a.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL,
             objectType: (0, s.ge)(g)
         },
-        className: d.container
+        className: u.container
     });
 }

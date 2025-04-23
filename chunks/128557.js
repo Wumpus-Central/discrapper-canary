@@ -172,7 +172,7 @@ function B(e) {
                         setup_type: Z.Ft.CHANNEL_WELCOME,
                         action: Z.j7.PERSONALIZE_SERVER
                     }),
-                        null != e && g.Z.open(e.id, (0, _.r)(e.id), { section: S.jXE.CHANNEL_WELCOME_CTA });
+                        null != e && g.Z.open(e.id, (0, _.r)(), { section: S.jXE.CHANNEL_WELCOME_CTA });
                 }, [e]);
             return {
                 handleInvite: t,

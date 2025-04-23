@@ -60,7 +60,7 @@ class c {
         s(this, 'animations', void 0), (this.animations = e);
     }
 }
-class d {
+class u {
     async start() {
         for (let e of ((this.stopped = !1), this.animations)) {
             if (this.stopped) return;
@@ -74,7 +74,7 @@ class d {
         s(this, 'animations', void 0), s(this, 'stopped', !1), (this.animations = e);
     }
 }
-function u(e, t, n) {
+function d(e, t, n) {
     return new o(n(e, a({}, t)));
 }
 let m =
@@ -82,16 +82,16 @@ let m =
     (i = i =
         {
             timing: function (e, t) {
-                return u(e, t, l.Z.timing);
+                return d(e, t, l.Z.timing);
             },
             spring: function (e, t) {
-                return u(e, t, l.Z.spring);
+                return d(e, t, l.Z.spring);
             },
             parallel: function (e) {
                 return new c(e);
             },
             sequence: function (e) {
-                return new d(e);
+                return new u(e);
             }
         }),
     Object.getOwnPropertyDescriptors

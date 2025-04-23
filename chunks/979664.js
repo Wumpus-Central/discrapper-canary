@@ -6,19 +6,19 @@ var r = n(200651),
     a = n(813197),
     o = n(999382),
     c = n(388032),
-    d = n(137991),
-    u = n(381109);
+    u = n(137991),
+    d = n(381109);
 function m(e) {
     let { profile: t, handleIconChange: n, canManageGuild: l } = e,
         o = i.useCallback(() => {
             n(null);
         }, [n]),
-        u = i.useMemo(() => ({ within: !0 }), []);
+        d = i.useMemo(() => ({ within: !0 }), []);
     return (0, r.jsxs)('div', {
-        className: d.buttons,
+        className: u.buttons,
         children: [
             (0, r.jsxs)(s.zxk, {
-                focusProps: u,
+                focusProps: d,
                 tabIndex: -1,
                 size: s.zxk.Sizes.SMALL,
                 color: s.zxk.Colors.BRAND,
@@ -48,13 +48,13 @@ function g(e) {
     let { profile: t, canManageGuild: n, onIconChange: i } = e,
         a = (0, l.e7)([o.Z], () => o.Z.getError('icon'));
     return (0, r.jsxs)('section', {
-        className: d.container,
+        className: u.container,
         children: [
             (0, r.jsxs)(s.hjN, {
-                className: u.section,
+                className: d.section,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: u.sectionHeader,
+                        className: d.sectionHeader,
                         children: [
                             (0, r.jsx)(s.vwX, { children: c.intl.string(c.t.FkQnxM) }),
                             (0, r.jsx)(s.R94, {
@@ -72,7 +72,7 @@ function g(e) {
             }),
             null != a
                 ? (0, r.jsx)('div', {
-                      className: d.iconError,
+                      className: u.iconError,
                       children: a
                   })
                 : null

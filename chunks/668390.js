@@ -88,7 +88,7 @@ function x(e) {
         : null;
 }
 function j(e) {
-    let { color: t, id: r, role: s, guild: d, children: j, isDragging: b, selectedItem: v, onItemSelect: y, itemType: C, locked: N, lockTooltip: S, showContextMenu: w, theme: O, roleStyle: Z, 'aria-label': T } = e,
+    let { color: t, id: r, role: s, guild: d, children: j, isDragging: b, selectedItem: v, onItemSelect: y, itemType: C, locked: N, lockTooltip: S, showContextMenu: O, theme: Z, roleStyle: w, 'aria-label': T } = e,
         E = (0, h.X)(d.id, null == s ? void 0 : s.colorStrings),
         R = l.useCallback(
             (e) => {
@@ -118,7 +118,7 @@ function j(e) {
               children: (0, i.jsxs)('div', {
                   className: m.roleContent,
                   children: [
-                      'dot' === Z
+                      'dot' === w
                           ? (0, i.jsx)(o.FhE, {
                                 color: null != t ? t : void 0,
                                 colors: E,
@@ -133,7 +133,7 @@ function j(e) {
                             }),
                       (function () {
                           if (!N) return null;
-                          let e = (0, a.wj)(O) ? n(27377) : n(514811);
+                          let e = (0, a.wj)(Z) ? n(27377) : n(514811);
                           return (0, i.jsx)(o.ua7, {
                               text: S,
                               color: o.ua7.Colors.RED,
@@ -155,7 +155,7 @@ function j(e) {
                           onContextMenu: R,
                           children: j
                       }),
-                      w && null != s
+                      O && null != s
                           ? (0, i.jsx)(x, {
                                 guild: d,
                                 role: s

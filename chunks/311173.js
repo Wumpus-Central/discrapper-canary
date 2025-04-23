@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(481060),
     o = n(63063),
     c = n(256569),
-    d = n(858457),
-    u = n(273504),
+    u = n(858457),
+    d = n(273504),
     m = n(981631),
     g = n(388032),
     p = n(409866);
-let h = o.Z.getArticleURL(m.BhN.GUILD_AUTOMOD_REGEX);
-function f(e) {
+let f = o.Z.getArticleURL(m.BhN.GUILD_AUTOMOD_REGEX);
+function h(e) {
     let { hasErrors: t, text: n, errorText: i } = e;
     return t
         ? (0, r.jsx)('div', {
@@ -21,7 +21,7 @@ function f(e) {
                   className: p.errorSpan,
                   variant: 'text-xs/medium',
                   color: 'text-danger',
-                  children: null != i ? i : g.intl.format(g.t.jKYAPj, { helpArticle: h })
+                  children: null != i ? i : g.intl.format(g.t.jKYAPj, { helpArticle: f })
               })
           })
         : (0, r.jsx)(a.Text, {
@@ -34,7 +34,7 @@ function f(e) {
 function x(e) {
     var t, n;
     let { rule: l, onChangeText: a, className: o } = e,
-        { patterns: m, valueError: x, errors: b, validatePatternsChanged: j, validateEditingValueChanged: _ } = (0, d.Z)(l, a),
+        { patterns: m, valueError: x, errors: b, validatePatternsChanged: j, validateEditingValueChanged: _ } = (0, u.Z)(l, a),
         [v] = i.useState(() => ({
             tags: m,
             value: '',
@@ -79,10 +79,10 @@ function x(e) {
                 onChangeTags: C,
                 onChangeNewTagValue: y,
                 tagErrors: O,
-                maxTags: u.VW
+                maxTags: d.VW
             }),
-            (0, r.jsx)(f, {
-                text: g.intl.format(g.t['PGC/AA'], { helpArticle: h }),
+            (0, r.jsx)(h, {
+                text: g.intl.format(g.t['PGC/AA'], { helpArticle: f }),
                 hasErrors: b.length > 0 || null != x,
                 errorText:
                     null !=
@@ -90,7 +90,7 @@ function x(e) {
                         null ==
                         (t = b.find((e) => {
                             let { pattern: t } = e;
-                            return t === d.r;
+                            return t === u.r;
                         }))
                             ? void 0
                             : t.message)

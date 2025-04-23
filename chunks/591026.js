@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(481060),
@@ -6,8 +6,8 @@ var r = n(200651),
     a = n(456677),
     o = n(55889),
     c = n(300453),
-    d = n(620436),
-    u = n(273504),
+    u = n(620436),
+    d = n(273504),
     m = n(388032),
     g = n(694705);
 function p(e) {
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,11 +53,11 @@ function h(e, t) {
         e
     );
 }
-function f(e) {
+function h(e) {
     var t, n;
-    let { rule: f, onChangeRule: x } = e,
-        [b, j] = i.useState(null == (t = f.triggerMetadata) ? void 0 : t.mentionTotalLimit),
-        _ = (0, s.a)(f.guildId, !1);
+    let { rule: h, onChangeRule: x } = e,
+        [b, j] = i.useState(null == (t = h.triggerMetadata) ? void 0 : t.mentionTotalLimit),
+        _ = (0, s.a)(h.guildId, !1);
     return (0, r.jsxs)('div', {
         className: g.cardContentsContainer,
         children: [
@@ -96,10 +96,10 @@ function f(e) {
                                 children: (0, r.jsx)(l.FiK, {
                                     value: b,
                                     onChange: (e) => {
-                                        j(e), x(h(p({}, f), { triggerMetadata: h(p({}, f.triggerMetadata), { mentionTotalLimit: e }) }));
+                                        j(e), x(f(p({}, h), { triggerMetadata: f(p({}, h.triggerMetadata), { mentionTotalLimit: e }) }));
                                     },
-                                    minValue: u.Vg,
-                                    maxValue: u.Lg,
+                                    minValue: d.Vg,
+                                    maxValue: d.Lg,
                                     className: g.stepper
                                 })
                             })
@@ -135,9 +135,9 @@ function f(e) {
                                   (0, r.jsx)('div', {
                                       children: (0, r.jsx)(l.XZJ, {
                                           type: l.XZJ.Types.INVERTED,
-                                          value: null == (n = f.triggerMetadata) ? void 0 : n.mentionRaidProtectionEnabled,
+                                          value: null == (n = h.triggerMetadata) ? void 0 : n.mentionRaidProtectionEnabled,
                                           onChange: (e, t) => {
-                                              x(h(p({}, f), { triggerMetadata: h(p({}, f.triggerMetadata), { mentionRaidProtectionEnabled: t }) }));
+                                              x(f(p({}, h), { triggerMetadata: f(p({}, h.triggerMetadata), { mentionRaidProtectionEnabled: t }) }));
                                           },
                                           className: g.__invalid_actionCheckbox
                                       })
@@ -147,21 +147,21 @@ function f(e) {
                         : null
                 ]
             }),
-            (0, r.jsx)(d.Z, { type: d.Z.Type.ARROW_DOWN }),
+            (0, r.jsx)(u.Z, { type: u.Z.Type.ARROW_DOWN }),
             (0, r.jsx)(c.Z, {
                 step: 2,
                 header: m.intl.string(m.t['18TOiY']),
                 children: (0, r.jsx)(a.Z, {
-                    rule: f,
+                    rule: h,
                     onChangeRule: x
                 })
             }),
-            (0, r.jsx)(d.Z, { type: d.Z.Type.CROSS }),
+            (0, r.jsx)(u.Z, { type: u.Z.Type.CROSS }),
             (0, r.jsx)(c.Z, {
                 step: 3,
                 header: m.intl.string(m.t.eq3gjo),
                 children: (0, r.jsx)(o.Z, {
-                    rule: f,
+                    rule: h,
                     onChangeRule: x
                 })
             })

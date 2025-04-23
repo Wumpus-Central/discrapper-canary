@@ -1,4 +1,4 @@
-n.d(t, { h: () => u }), n(583741);
+n.d(t, { h: () => d }), n(583741);
 var r = n(192379),
     i = n(392711),
     l = n.n(i),
@@ -6,11 +6,11 @@ var r = n(192379),
     a = n(189451),
     o = n(77498),
     c = n(570911);
-function d(e) {
+function u(e) {
     var t;
     return null != (t = c.gQ.get(e)) ? t : 0;
 }
-function u() {
+function d() {
     let e = (0, s.e7)([o.Z], () => o.Z.games),
         t = r.useMemo(
             () =>
@@ -22,13 +22,13 @@ function u() {
                     }))
                     .sortBy((e) => {
                         let { value: t } = e;
-                        return d(t);
+                        return u(t);
                     })
                     .reverse()
                     .value(),
             [e]
         ),
-        n = r.useCallback((e, t) => d(t.item.value) - d(e.item.value), []);
+        n = r.useCallback((e, t) => u(t.item.value) - u(e.item.value), []);
     return {
         options: t,
         matchSorterOptions: r.useMemo(

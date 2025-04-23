@@ -1,4 +1,4 @@
-n.d(t, { q: () => d }), n(388685), n(953529);
+n.d(t, { q: () => u }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
     l = n(481060),
@@ -6,14 +6,14 @@ var r = n(200651),
     a = n(981631),
     o = n(388032),
     c = n(837188);
-function d(e) {
-    let { isInventoryFeedEnabled: t, canManageGuild: n, features: d } = e,
-        u = i.useCallback(
+function u(e) {
+    let { isInventoryFeedEnabled: t, canManageGuild: n, features: u } = e,
+        d = i.useCallback(
             (e) => {
-                let t = new Set(d);
+                let t = new Set(u);
                 e ? (t.add(a.oNc.ACTIVITY_FEED_ENABLED_BY_USER), t.delete(a.oNc.ACTIVITY_FEED_DISABLED_BY_USER)) : (t.add(a.oNc.ACTIVITY_FEED_DISABLED_BY_USER), t.delete(a.oNc.ACTIVITY_FEED_ENABLED_BY_USER)), s.Z.updateGuild({ features: t });
             },
-            [d]
+            [u]
         );
     return (0, r.jsxs)(l.hjN, {
         title: o.intl.string(o.t['oQ/7BQ']),
@@ -29,7 +29,7 @@ function d(e) {
                 className: c.switch,
                 hideBorder: !0,
                 disabled: !n,
-                onChange: u,
+                onChange: d,
                 children: o.intl.string(o.t.WompT0)
             })
         ]

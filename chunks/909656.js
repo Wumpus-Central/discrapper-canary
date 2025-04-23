@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(953529);
+n.d(t, { Z: () => A }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(512722),
     o = n.n(a),
     c = n(392711),
-    d = n.n(c),
-    u = n(215569),
+    u = n.n(c),
+    d = n(215569),
     m = n(477690),
     g = n(481060),
     p = n(852860),
-    h = n(393238),
-    f = n(211266),
+    f = n(393238),
+    h = n(211266),
     x = n(313201),
     b = n(345861),
     j = n(208567),
@@ -87,13 +87,13 @@ function D() {
         }
     ];
 }
-function A(e) {
+function k(e) {
     let { value: t, 'aria-labelledby': n, onChange: l, disabled: a = !1 } = e,
-        { ref: o, width: c } = (0, h.ZP)(),
-        d = (0, f.Z)(D),
-        u = i.useMemo(
+        { ref: o, width: c } = (0, f.ZP)(),
+        u = (0, h.Z)(D),
+        d = i.useMemo(
             () =>
-                d.map((e) =>
+                u.map((e) =>
                     R(w({}, e), {
                         icon: function () {
                             let { icon: t } = e;
@@ -106,13 +106,13 @@ function A(e) {
                         radioItemIconClassName: P.formatOptionRadioItemIcon
                     })
                 ),
-            [d]
+            [u]
         ),
         m = null != c && c >= 400;
     return (0, r.jsx)('div', {
         ref: o,
         children: (0, r.jsx)(g.FXm, {
-            options: u,
+            options: d,
             value: t,
             orientation: m ? 'horizontal' : 'vertical',
             size: g.FXm.Sizes.NONE,
@@ -127,7 +127,7 @@ function A(e) {
         })
     });
 }
-function k(e) {
+function A(e) {
     var t;
     let { guild: n, isGuildProducts: l = !1 } = e,
         { format: s } = (0, N.Z)(n.id),
@@ -136,27 +136,27 @@ function k(e) {
             var e;
             return (null == a || null == (e = a.cover_image_asset) ? void 0 : e.application_id) == null ? null : (0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, Z);
         }, [a]),
-        [m, h] = i.useState(s),
-        [f, v] = i.useState(null != (t = null == a ? void 0 : a.description) ? t : ''),
-        [D, k] = i.useState(c),
+        [m, f] = i.useState(s),
+        [h, v] = i.useState(null != (t = null == a ? void 0 : a.description) ? t : ''),
+        [D, A] = i.useState(c),
         [L, M] = i.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
         [G, U] = i.useState(null == a ? void 0 : a.server_shop_tab_order),
         { loading: B, error: F, updateSubscriptionsSettings: z } = (0, O.QV)(),
-        { imageCTA: H, imageAriaLabel: V, setFilename: W } = (0, y.Z)(null == a ? void 0 : a.cover_image_asset),
+        { imageCTA: H, imageAriaLabel: W, setFilename: V } = (0, y.Z)(null == a ? void 0 : a.cover_image_asset),
         Y = (0, x.Dt)(),
         K = (0, x.Dt)(),
         X = (0, x.Dt)();
     function q(e, t) {
-        o()(null != e, 'Null value not allowed'), null != t && W(t.name), k(e);
+        o()(null != e, 'Null value not allowed'), null != t && V(t.name), A(e);
     }
     let Q = i.useMemo(() => {
             var e;
-            return (null != f && f !== (null != (e = null == a ? void 0 : a.description) ? e : '')) || (null == D ? void 0 : D.startsWith('data:')) === !0 || m !== s || (null == a ? void 0 : a.store_page_guild_products_default_sort) !== L || (null == a ? void 0 : a.server_shop_tab_order) !== G;
-        }, [D, s, f, a, m, L, G]),
-        J = null != f && '' !== f && null != D;
+            return (null != h && h !== (null != (e = null == a ? void 0 : a.description) ? e : '')) || (null == D ? void 0 : D.startsWith('data:')) === !0 || m !== s || (null == a ? void 0 : a.store_page_guild_products_default_sort) !== L || (null == a ? void 0 : a.server_shop_tab_order) !== G;
+        }, [D, s, h, a, m, L, G]),
+        J = null != h && '' !== h && null != D;
     i.useEffect(() => {
         var e;
-        (null == a || null == (e = a.cover_image_asset) ? void 0 : e.application_id) != null && k((0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, Z));
+        (null == a || null == (e = a.cover_image_asset) ? void 0 : e.application_id) != null && A((0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, Z));
     }, [null == a ? void 0 : a.cover_image_asset]);
     let $ = (0, C.mY)(),
         ee = i.useMemo(
@@ -202,7 +202,7 @@ function k(e) {
                                       disabled: $,
                                       children: T.intl.string(T.t.x87YqK)
                                   }),
-                                  (0, r.jsx)(A, {
+                                  (0, r.jsx)(k, {
                                       value: m,
                                       onChange: (e) => {
                                           s !== e &&
@@ -221,7 +221,7 @@ function k(e) {
                                                       })
                                                   )
                                               ),
-                                              h(e);
+                                              f(e);
                                       },
                                       'aria-labelledby': Y,
                                       disabled: $
@@ -238,7 +238,7 @@ function k(e) {
                 children: (0, r.jsx)(g.Kx8, {
                     placeholder: l ? T.intl.string(T.t.SD6LRU) : T.intl.string(T.t['aVhW/f']),
                     maxLength: 1500,
-                    value: f,
+                    value: h,
                     rows: 2,
                     autosize: !0,
                     onChange: v,
@@ -268,14 +268,14 @@ function k(e) {
                         imageClassName: P.coverImageUploaderInner,
                         iconClassName: P.coverImageUploaderIcon,
                         onChange: q,
-                        'aria-label': V,
+                        'aria-label': W,
                         disabled: $
                     }),
                     (0, r.jsx)(g.LZC, { size: 16 }),
                     (0, r.jsx)(b.Z, {
                         onChange: q,
                         buttonCTA: H,
-                        'aria-label': V,
+                        'aria-label': W,
                         disabled: $,
                         look: g.zxk.Looks.OUTLINED,
                         color: g.zxk.Colors.PRIMARY
@@ -333,7 +333,7 @@ function k(e) {
                         })
                     ]
                 }),
-            (0, r.jsx)(u.W, {
+            (0, r.jsx)(d.W, {
                 component: 'div',
                 className: P.contentRegion,
                 children:
@@ -344,12 +344,12 @@ function k(e) {
                             disabled: !J,
                             onReset: () => {
                                 var e;
-                                h(s), v(null != (e = null == a ? void 0 : a.description) ? e : ''), k(c), M(null == a ? void 0 : a.store_page_guild_products_default_sort), U(null == a ? void 0 : a.server_shop_tab_order);
+                                f(s), v(null != (e = null == a ? void 0 : a.description) ? e : ''), A(c), M(null == a ? void 0 : a.store_page_guild_products_default_sort), U(null == a ? void 0 : a.server_shop_tab_order);
                             },
                             onSave: () => {
                                 o()(null != a, 'Settings must be defined');
                                 let e = {};
-                                f !== a.description && (e.description = f), null != D && D.startsWith('data:') && (e.cover_image = D), m !== s && (e.full_server_gate = m === E.e3.ALL_CHANNELS), L !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = L), G !== a.server_shop_tab_order && (e.server_shop_tab_order = G), d().isEmpty(e) || z(n.id, e);
+                                h !== a.description && (e.description = h), null != D && D.startsWith('data:') && (e.cover_image = D), m !== s && (e.full_server_gate = m === E.e3.ALL_CHANNELS), L !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = L), G !== a.server_shop_tab_order && (e.server_shop_tab_order = G), u().isEmpty(e) || z(n.id, e);
                             },
                             saveButtonTooltip: J ? void 0 : T.intl.string(T.t['6HRvio'])
                         })

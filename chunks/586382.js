@@ -10,9 +10,9 @@ var r = n(200651),
     a = n(949640),
     o = n(981631),
     c = n(30513),
-    d = n(187561);
-function u(e) {
-    let { guild: t, guildFeature: n, analyticsSection: o, analyticsObject: c, getPerks: u, targetPremiumGuildTier: m } = e,
+    u = n(187561);
+function d(e) {
+    let { guild: t, guildFeature: n, analyticsSection: o, analyticsObject: c, getPerks: d, targetPremiumGuildTier: m } = e,
         { analyticsLocations: g } = (0, l.ZP)(),
         p = i.useCallback(
             (e) => {
@@ -23,22 +23,22 @@ function u(e) {
                         analyticsLocations: g,
                         analyticsSection: o,
                         analyticsObject: c,
-                        perks: u(),
+                        perks: d(),
                         targetPremiumGuildTier: m
                     });
             },
-            [g, c, o, t, u, m]
+            [g, c, o, t, d, m]
         );
     return (0, r.jsx)(s.Z, {
         guild: t,
         guildFeature: n,
-        className: d.guildFeatureAvailabilityIndicator,
+        className: u.guildFeatureAvailabilityIndicator,
         onClick: p
     });
 }
 function m(e) {
     let { guild: t } = e;
-    return (0, r.jsx)(u, {
+    return (0, r.jsx)(d, {
         guild: t,
         guildFeature: o.oNc.BANNER,
         analyticsSection: o.jXE.GUILD_BANNER,
@@ -48,7 +48,7 @@ function m(e) {
 }
 function g(e) {
     let { guild: t } = e;
-    return (0, r.jsx)(u, {
+    return (0, r.jsx)(d, {
         guild: t,
         guildFeature: o.oNc.INVITE_SPLASH,
         analyticsSection: o.jXE.GUILD_INVITE_BACKGROUND,
@@ -58,7 +58,7 @@ function g(e) {
 }
 function p(e) {
     let { guild: t } = e;
-    return (0, r.jsx)(u, {
+    return (0, r.jsx)(d, {
         guild: t,
         guildFeature: o.oNc.VANITY_URL,
         analyticsSection: o.jXE.GUILD_SETTINGS_VANITY_URL,

@@ -1,6 +1,6 @@
 n.d(t, {
     T: () => c,
-    Z: () => d
+    Z: () => u
 });
 var r = n(200651),
     i = n(192379),
@@ -12,7 +12,7 @@ function c(e, t, n) {
     let r = (0, l.e7)([a.Z], () => !a.Z.isRoleHigher(e, t, n), [e, t, n]);
     return i.useMemo(() => r && n.id === (null == t ? void 0 : t.id), [r, n, t]) ? o.intl.string(o.t.PQylOT) : r ? o.intl.string(o.t.UGIjx8) : null;
 }
-function d(e) {
+function u(e) {
     let { className: t, tooltipText: n, width: i = 16, height: l = 16 } = e;
     return (0, r.jsx)(s.ua7, {
         text: n,

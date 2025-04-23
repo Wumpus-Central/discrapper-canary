@@ -1,4 +1,4 @@
-n.d(t, { b: () => d }), n(388685);
+n.d(t, { b: () => u }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(481060),
@@ -12,7 +12,7 @@ let c = async (e, t, n) => {
             image: n
         });
     },
-    d = () => {
+    u = () => {
         let [e, t] = i.useState(!1);
         return (0, r.jsxs)(l.zxk, {
             tabIndex: -1,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(399606),
@@ -7,13 +7,13 @@ var i = n(399606),
     a = n(594174),
     o = n(723047),
     c = n(388032);
-function d(e) {
-    let { guildId: t, application: d } = e,
-        u = (0, i.e7)([s.Z], () => s.Z.getGuild(t)),
+function u(e) {
+    let { guildId: t, application: u } = e,
+        d = (0, i.e7)([s.Z], () => s.Z.getGuild(t)),
         m = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
         g = (0, o.mY)();
-    if (null == u || !u.isOwner(m)) return null;
-    let p = d.team;
+    if (null == d || !d.isOwner(m)) return null;
+    let p = u.team;
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsx)(l.R94, {
@@ -57,7 +57,7 @@ function d(e) {
                                     }
                                     return e;
                                 })({}, t)),
-                                (i = i = { application: d }),
+                                (i = i = { application: u }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                     : (function (e, t) {

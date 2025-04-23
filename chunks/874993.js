@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(481060),
     o = n(999382),
     c = n(279542),
-    d = n(823379),
-    u = n(63063),
+    u = n(823379),
+    d = n(63063),
     m = n(426563),
     g = n(727072),
     p = n(85960),
-    h = n(577330),
-    f = n(65912),
+    f = n(577330),
+    h = n(65912),
     x = n(51248),
     b = n(546513),
     j = n(572456),
@@ -23,7 +23,7 @@ var r = n(200651),
 function y(e) {
     var t, n;
     let { guildId: y, setPreventNavigation: N = () => {} } = e,
-        { editingRule: I, setEditingRule: E } = (0, f.V)(),
+        { editingRule: I, setEditingRule: E } = (0, h.V)(),
         { guild: S, subsection: T } = (0, l.cj)([o.Z], () => o.Z.getProps()),
         P = null != (n = null != (t = null == S ? void 0 : S.id) ? t : y) ? n : v.lds,
         w = null != I,
@@ -33,20 +33,20 @@ function y(e) {
             [p.vh.MEMBERS]: O.intl.string(O.t.sx4E5u),
             [p.vh.CONTENT]: O.intl.string(O.t.fphZb2)
         },
-        A = i.useMemo(
+        k = i.useMemo(
             () =>
                 Object.values(null != Z ? Z : {})
                     .flat()
-                    .filter(d.lm),
+                    .filter(u.lm),
             [Z]
         ),
-        k = {
+        A = {
             isInEditMode: w,
             setEditingRule: E
         },
-        L = i.useRef(k);
+        L = i.useRef(A);
     i.useEffect(() => {
-        L.current = k;
+        L.current = A;
     }),
         i.useEffect(() => {
             let { isInEditMode: e, setEditingRule: t } = L.current;
@@ -59,7 +59,7 @@ function y(e) {
                     return null !=
                         (r =
                             null ==
-                            (n = A.find((t) => {
+                            (n = k.find((t) => {
                                 let { id: n } = t;
                                 return n === e;
                             }))
@@ -70,7 +70,7 @@ function y(e) {
                 }
                 return null != t ? p.I6[t].getDefaultRuleName() : null;
             },
-            [A]
+            [k]
         ),
         G = i.useMemo(() => {
             var e, t;
@@ -116,7 +116,7 @@ function y(e) {
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
                                 className: C.helpUrl,
-                                children: O.intl.format(O.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(v.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
+                                children: O.intl.format(O.t['B+sgGh'], { helpUrl: d.Z.getArticleURL(v.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
                             })
                         ]
                     }),
@@ -152,7 +152,7 @@ function y(e) {
                 ]
             }),
             R
-                ? (0, r.jsx)(h.Z, {})
+                ? (0, r.jsx)(f.Z, {})
                 : Object.entries(U).map((e) => {
                       let [t, n] = e;
                       if (0 === n.length) return (0, r.jsx)(i.Fragment, {}, t);
@@ -185,7 +185,7 @@ function y(e) {
                 }),
             (0, r.jsx)(x.Z, {
                 guildId: P,
-                existingRules: A
+                existingRules: k
             }),
             w && (0, r.jsx)('div', { className: C.endSpacer })
         ]

@@ -16,8 +16,8 @@ var i = n(200651),
     g = n(74538),
     b = n(759198),
     p = n(11352),
-    S = n(213931),
-    f = n(767157),
+    f = n(213931),
+    S = n(767157),
     O = n(112440),
     h = n(671105),
     E = n(552958),
@@ -56,8 +56,8 @@ function A(e, t, s, v) {
         D = g.ZP.canUseCustomNotificationSounds(I),
         M = D ? (null != L ? L : A) : _.YC.CLASSIC,
         T = p.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }).enabled,
-        [w, G] = r.useState(!1),
-        { playSound: k } = (0, E.Z)(),
+        [w, k] = r.useState(!1),
+        { playSound: G } = (0, E.Z)(),
         [U, C] = (0, c.cv)([s]),
         R = U === s;
     if (
@@ -71,11 +71,11 @@ function A(e, t, s, v) {
     )
         return null;
     let B = (n) => {
-            if ((k(n), C(j.L.TAKE_ACTION), !D && n !== _.YC.CLASSIC)) {
-                (0, f.Z)(n, 'contextMenu'), (0, O.Z)();
+            if ((G(n), C(j.L.TAKE_ACTION), !D && n !== _.YC.CLASSIC)) {
+                (0, S.Z)(n, 'contextMenu'), (0, O.Z)();
                 return;
             }
-            null != t ? (0, S.M)(e, t, M, n, 'contextMenu') : (0, S.t)(e, M, n, 'contextMenu');
+            null != t ? (0, f.M)(e, t, M, n, 'contextMenu') : (0, f.t)(e, M, n, 'contextMenu');
         },
         Y = D ? o.Text : b.Z,
         Q = (0, _.LB)(),
@@ -89,7 +89,7 @@ function A(e, t, s, v) {
         label: (e) => {
             let { isFocused: t } = e;
             return (
-                t && G(t),
+                t && k(t),
                 (0, i.jsxs)('div', {
                     className: P.rootContainer,
                     children: [

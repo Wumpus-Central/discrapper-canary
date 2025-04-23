@@ -6,8 +6,8 @@ var r = n(200651),
     a = n(481060),
     o = n(434404),
     c = n(999382),
-    d = n(388032),
-    u = n(381109);
+    u = n(388032),
+    d = n(381109);
 function m(e) {
     let { profile: t, canManageGuild: n } = e,
         m = t.id,
@@ -19,21 +19,21 @@ function m(e) {
         ),
         p = (0, s.e7)([c.Z], () => c.Z.getError('description'));
     return (0, r.jsxs)(a.hjN, {
-        className: u.section,
+        className: d.section,
         children: [
             (0, r.jsxs)('div', {
-                className: u.sectionHeader,
+                className: d.sectionHeader,
                 children: [
-                    (0, r.jsx)(a.vwX, { children: d.intl.string(d.t.Z27SCQ) }),
+                    (0, r.jsx)(a.vwX, { children: u.intl.string(u.t.Z27SCQ) }),
                     (0, r.jsx)(a.R94, {
                         type: a.geA.DESCRIPTION,
-                        children: d.intl.string(d.t.pw0MIi)
+                        children: u.intl.string(u.t.pw0MIi)
                     })
                 ]
             }),
             (0, r.jsx)(a.Kx8, {
                 value: t.description,
-                placeholder: d.intl.string(d.t.Nvfows),
+                placeholder: u.intl.string(u.t.Nvfows),
                 onChange: g,
                 maxLength: l.Us,
                 disabled: !n,

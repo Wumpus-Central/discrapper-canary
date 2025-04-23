@@ -7,13 +7,13 @@ var i = n(442837),
     a = n(715796),
     o = n(434404),
     c = n(999382),
-    d = n(962086),
-    u = n(225675),
+    u = n(962086),
+    d = n(225675),
     m = n(703656),
     g = n(577275),
     p = n(430824),
-    h = n(594174),
-    f = n(823379),
+    f = n(594174),
+    h = n(823379),
     x = n(730647),
     b = n(584825),
     j = n(723047),
@@ -32,22 +32,22 @@ var i = n(442837),
     R = n(829857),
     Z = n(388032),
     D = n(173409);
-function A(e) {
+function k(e) {
     let { application: t, guild: n } = e,
         l = (0, b.YB)(n.id),
         s = (0, b.qi)(n.id),
         a = s.some((e) => null != e.name && null != e.subscription_plans[0] && null != e.description && null != e.image_asset),
         o = (0, i.e7)([p.Z], () => p.Z.getRoles(n.id)),
         c = s.map((e) => o[e.role_id]).some((e) => null != e && 0 !== e.color),
-        d = s.some((e) => e.role_benefits.benefits.length > 0),
-        u = null != t && n.hasFeature(P.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
+        u = s.some((e) => e.role_benefits.benefits.length > 0),
+        d = null != t && n.hasFeature(P.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
         m = [
             {
                 title: Z.intl.string(Z.t.p2Rsdn),
                 items: [
                     {
                         description: Z.intl.string(Z.t.zbO7fX),
-                        completed: u
+                        completed: d
                     }
                 ]
             },
@@ -81,14 +81,14 @@ function A(e) {
                     },
                     {
                         description: Z.intl.string(Z.t['/P03Cw']),
-                        completed: d
+                        completed: u
                     }
                 ]
             }
         ];
     return (0, r.jsx)(I.Z, { children: m });
 }
-function k(e) {
+function A(e) {
     let { application: t } = e,
         { teams: n } = (0, g.Z)({ refreshOnDepChange: !1 }),
         i = n.find((e) => {
@@ -132,7 +132,7 @@ function M(e) {
         c = null != a && n.hasFeature(P.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
         { currentTab: g, setCurrentTab: b } = (0, S.dw)(),
         j = (0, x.f)(),
-        C = (0, i.e7)([h.default], () => h.default.getCurrentUser()),
+        C = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
         I = (0, v.Z)(n.id),
         R = n.isOwner(C),
         L = () => {
@@ -140,8 +140,8 @@ function M(e) {
             if (null == e) return;
             o.Z.close();
             let t = { [e.id]: e };
-            (0, d.iD)(n.id, {
-                type: u.z.SERVER_SHOP,
+            (0, u.iD)(n.id, {
+                type: d.z.SERVER_SHOP,
                 roles: t,
                 initialTab: 'role_subscriptions',
                 returnToSection: P.pNK.ROLE_SUBSCRIPTIONS
@@ -164,7 +164,7 @@ function M(e) {
             t = (0, r.jsx)(T.Z, { guild: n });
             break;
         default:
-            (0, f.vE)(g);
+            (0, h.vE)(g);
     }
     return (0, r.jsxs)('div', {
         className: D.container,
@@ -181,7 +181,7 @@ function M(e) {
                         children: Z.intl.string(Z.t.KyGv0t)
                     }),
                     (0, r.jsx)(O.Z, { guild: n }),
-                    c && (0, r.jsx)(k, { application: a }),
+                    c && (0, r.jsx)(A, { application: a }),
                     (0, r.jsxs)('div', {
                         className: D.tabBarContainer,
                         children: [
@@ -247,7 +247,7 @@ function M(e) {
                     t
                 ]
             }),
-            (0, r.jsx)(A, {
+            (0, r.jsx)(k, {
                 application: a,
                 guild: n
             })

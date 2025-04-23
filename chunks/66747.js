@@ -12,11 +12,11 @@ var r = n(200651),
     m = n(700582),
     b = n(745735),
     p = n(906732),
-    f = n(979264),
-    h = n(346486),
-    j = n(715903),
-    g = n(69882),
-    x = n(189357),
+    f = n(346486),
+    h = n(715903),
+    j = n(69882),
+    g = n(189357),
+    x = n(172751),
     v = n(493892),
     O = n(884902),
     y = n(433355),
@@ -85,7 +85,7 @@ function q(e, t) {
 }
 let G = l.memo(function (e) {
         let { member: t } = e,
-            n = l.useMemo(() => (0, g.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
+            n = l.useMemo(() => (0, j.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
             o = l.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
         return (0, r.jsxs)('div', {
             className: F.flagContainer,
@@ -113,7 +113,7 @@ let G = l.memo(function (e) {
                             className: F.communicationDisabledTooltip,
                             children: [
                                 (0, r.jsx)('div', { children: U.intl.string(U.t['xfJP+v']) }),
-                                (0, r.jsx)(h.Z, {
+                                (0, r.jsx)(f.Z, {
                                     deadline: o,
                                     showUnits: !0,
                                     stopAtOneSec: !0
@@ -146,7 +146,7 @@ let G = l.memo(function (e) {
                             });
                         }
                     }),
-                (0, j.EY)(t) &&
+                (0, h.EY)(t) &&
                     (0, r.jsx)(C.ua7, {
                         text: U.intl.string(U.t.qOVbaW),
                         children: (e) => {
@@ -265,7 +265,7 @@ let G = l.memo(function (e) {
                                           roleColors: s,
                                           className: F.memberNameText
                                       }),
-                                      (0, r.jsx)(f.ZP, {
+                                      (0, r.jsx)(x.ZP, {
                                           primaryGuild: null == o ? void 0 : o.primaryGuild,
                                           userId: null == o ? void 0 : o.id,
                                           contextGuildId: n.guildId,
@@ -370,8 +370,8 @@ let J = l.memo(function (e) {
             b = (0, u.e7)([H.Z, _.Z], () => H.Z.can(B.Plq.MANAGE_GUILD, _.Z.getGuild(t.guildId)), [t.guildId]),
             { selectedUserIds: p, addUsers: f, removeUser: h } = (0, T.Z)(t.guildId),
             j = (0, I.xC)(t.guildId),
-            g = (0, I.hB)(t.guildId, j, t.userId),
-            v = (0, x.m)(t.guildId),
+            x = (0, I.hB)(t.guildId, j, t.userId),
+            v = (0, g.m)(t.guildId),
             O = (0, u.e7)(
                 [M.Z],
                 () => {
@@ -383,9 +383,9 @@ let J = l.memo(function (e) {
             ),
             y = l.useCallback(
                 (e) => {
-                    e.stopPropagation(), e.preventDefault(), null != t && g && (p.has(t.userId) ? h(t.userId) : f([t.userId]));
+                    e.stopPropagation(), e.preventDefault(), null != t && x && (p.has(t.userId) ? h(t.userId) : f([t.userId]));
                 },
-                [f, g, t, h, p]
+                [f, x, t, h, p]
             ),
             w = O === P.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
             N = O === P.d$.ORDER_BY_USER_ID_ASC || O === P.d$.ORDER_BY_USER_ID_DESC;
@@ -394,7 +394,7 @@ let J = l.memo(function (e) {
                 j &&
                     (0, r.jsx)(C.ua7, {
                         tooltipClassName: F.disabledActionTooltip,
-                        shouldShow: !g,
+                        shouldShow: !x,
                         text: U.intl.string(U.t['Se4c7+']),
                         children: (e) =>
                             (0, r.jsx)(
@@ -407,7 +407,7 @@ let J = l.memo(function (e) {
                                             children: (0, r.jsx)(C.XZJ, {
                                                 type: C.XZJ.Types.INVERTED,
                                                 value: p.has(t.userId),
-                                                disabled: !g
+                                                disabled: !x
                                             })
                                         })
                                     })

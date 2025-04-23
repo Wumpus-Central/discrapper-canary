@@ -1,4 +1,4 @@
-n.d(t, { R: () => u }), n(388685);
+n.d(t, { R: () => d }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -6,10 +6,10 @@ var r = n(200651),
     a = n(823379),
     o = n(434404),
     c = n(999382),
-    d = n(203377);
-function u() {
-    let { guild: e, originalGuild: t, submitting: n, errors: u } = (0, l.cj)([c.Z], () => c.Z.getProps()),
-        m = i.useMemo(() => (0, d.LG)(u), [u]),
+    u = n(203377);
+function d() {
+    let { guild: e, originalGuild: t, submitting: n, errors: d } = (0, l.cj)([c.Z], () => c.Z.getProps()),
+        m = i.useMemo(() => (0, u.LG)(d), [d]),
         g = i.useCallback(async () => {
             if (null == e) return Promise.resolve();
             let n = {

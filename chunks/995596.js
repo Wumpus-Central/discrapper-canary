@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(200651),
     l = n(192379),
     i = n(120356),
@@ -64,7 +64,7 @@ let _ = (e) => [
             )
         });
     };
-function N(e) {
+function T(e) {
     let { onTabSelect: t, tabs: n, selectedTab: i } = e,
         s = (0, x.ZP)(),
         o = (0, c.wj)(s),
@@ -161,13 +161,13 @@ function N(e) {
         }
     });
 }
-function T(e) {
+function N(e) {
     let { guildId: t, currentTab: n, onTabSelect: i } = e,
         [a, c] = l.useState(0),
         x = l.useRef(null),
         C = l.useRef(a),
-        T = (0, j.A)({ guildId: t }),
-        E = _(null != T ? T : 0),
+        N = (0, j.A)({ guildId: t }),
+        E = _(null != N ? N : 0),
         {
             lastVisibleIndex: S,
             onItemLayout: I,
@@ -216,7 +216,7 @@ function T(e) {
                                 ),
                                 (0, r.jsx)('div', {
                                     ref: P,
-                                    children: (0, r.jsx)(N, {
+                                    children: (0, r.jsx)(T, {
                                         tabs: A,
                                         onTabSelect: i,
                                         selectedTab: n
@@ -242,7 +242,7 @@ function T(e) {
                                     )
                                 ),
                                 0 !== A.length
-                                    ? (0, r.jsx)(N, {
+                                    ? (0, r.jsx)(T, {
                                           tabs: A,
                                           onTabSelect: i,
                                           selectedTab: n

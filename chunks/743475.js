@@ -1,7 +1,7 @@
 n.d(t, {
-    BG: () => h,
+    BG: () => f,
     DO: () => x,
-    pt: () => f
+    pt: () => h
 }),
     n(388685);
 var r = n(570140),
@@ -11,35 +11,35 @@ var r = n(570140),
     a = n(637853),
     o = n(592125),
     c = n(823379),
-    d = n(889369),
-    u = n(570961),
+    u = n(889369),
+    d = n(570961),
     m = n(208665),
     g = n(290511),
     p = n(388032);
-function h() {
+function f() {
     r.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_RESET' });
 }
-function f(e) {
+function h(e) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE',
         channelId: e
     });
 }
 async function x(e) {
-    let t = Array.from(d.Z.editedDefaultChannelIds).filter((e) => null != o.Z.getChannel(e)),
+    let t = Array.from(u.Z.editedDefaultChannelIds).filter((e) => null != o.Z.getChannel(e)),
         n = m.Z.advancedMode,
-        [h, f] = (0, a.d9)(e.id, [...t]),
+        [f, h] = (0, a.d9)(e.id, [...t]),
         x = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts),
         b = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts, a.V7);
-    if (s.Z.getEnabled(e.id) && ((!n && (f.length < g.md || h.length < g.X)) || (n && (x.length < g.md || b.length < g.X))))
+    if (s.Z.getEnabled(e.id) && ((!n && (h.length < g.md || f.length < g.X)) || (n && (x.length < g.md || b.length < g.X))))
         return void i.Z.show({
             title: p.intl.string(p.t.iLdiqa),
             body: p.intl.string(p.t.JOT74e)
         });
-    if (d.Z.hasChanges()) {
+    if (u.Z.hasChanges()) {
         r.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT' });
         try {
-            await (0, u.n_)(e.id, { default_channel_ids: t }),
+            await (0, d.n_)(e.id, { default_channel_ids: t }),
                 r.Z.dispatch({
                     type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS',
                     guildId: e.id,

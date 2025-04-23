@@ -5,8 +5,8 @@ var r = n(192379),
     s = n(981631);
 function a(e, t, n) {
     var a, o;
-    let { isLoading: c, error: d, highlightedCreatorDetails: u } = (0, l.Z)(e),
-        m = null == u ? void 0 : u.store_page,
+    let { isLoading: c, error: u, highlightedCreatorDetails: d } = (0, l.Z)(e),
+        m = null == d ? void 0 : d.store_page,
         g = r.useMemo(() => {
             var e, t;
             let n = (function (e) {
@@ -27,18 +27,18 @@ function a(e, t, n) {
             return null == r ? void 0 : r.filter((e) => e.roles.some((e) => n.has(e)));
         }, [null == m ? void 0 : m.role_subscription]),
         p = null == m ? void 0 : m.guild.icon_hash,
-        h = i.ZP.getGuildIconURL({
+        f = i.ZP.getGuildIconURL({
             id: e,
             icon: p,
             size: n
         }),
-        f = r.useMemo(() => (null != g && g.length > t ? g.slice(0, t) : g), [g, t]),
+        h = r.useMemo(() => (null != g && g.length > t ? g.slice(0, t) : g), [g, t]),
         x = null != g && g.length > t ? g.length - t : null,
-        b = null == u ? void 0 : u.slug,
+        b = null == d ? void 0 : d.slug,
         j = null != b ? s.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(b) : void 0,
         _ = null == m || null == (a = m.guild) ? void 0 : a.name,
         v = null == m || null == (o = m.role_subscription) ? void 0 : o.subscriber_count,
-        O = !c && null != _ && null != p && null != h;
+        O = !c && null != _ && null != p && null != f;
     return O
         ? {
               hasAllImperativeDetails: O,
@@ -46,16 +46,16 @@ function a(e, t, n) {
               details: {
                   guildName: _,
                   guildIcon: p,
-                  guildAvatarUrl: h,
+                  guildAvatarUrl: f,
                   storePageUrl: j,
                   subscriberCount: v,
-                  emojisToShow: f,
+                  emojisToShow: h,
                   notShownEmojiCount: x
               }
           }
         : {
               hasAllImperativeDetails: O,
               isLoading: c,
-              error: d
+              error: u
           };
 }

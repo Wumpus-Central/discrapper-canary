@@ -7,21 +7,21 @@ var i = n(399606),
     a = n(267101),
     o = n(430824),
     c = n(584825),
-    d = n(198139),
-    u = n(388032);
+    u = n(198139),
+    d = n(388032);
 function m(e) {
     let { guildId: t, allPeriods: m } = e,
         g = (0, i.e7)([o.Z], () => o.Z.getGuild(t)),
         p = (0, c.qi)(t, { includeSoftDeleted: !0 }),
-        h = (0, a.ue)(t, { publishedOnly: !1 }),
-        { allowSelfRemoveMonetization: f } = (0, s.gX)(t),
+        f = (0, a.ue)(t, { publishedOnly: !1 }),
+        { allowSelfRemoveMonetization: h } = (0, s.gX)(t),
         x = m.filter((e) => {
             var t;
             let n = Object.values(null != (t = e.ppgs) ? t : {})[0];
-            return (null == n ? void 0 : n.status) === d.x_.OPEN || (null == n ? void 0 : n.status) === d.x_.PAYOUT_DEFERRED;
+            return (null == n ? void 0 : n.status) === u.x_.OPEN || (null == n ? void 0 : n.status) === u.x_.PAYOUT_DEFERRED;
         }),
         b = p.length > 0,
-        j = h.length > 0,
+        j = f.length > 0,
         _ = x.length > 0;
     return null == g
         ? null
@@ -29,11 +29,11 @@ function m(e) {
               children: [
                   (0, r.jsx)(l.R94, {
                       type: l.R94.Types.DESCRIPTION,
-                      children: u.intl.format(u.t.fvOn6O, { guildName: g.toString() })
+                      children: d.intl.format(d.t.fvOn6O, { guildName: g.toString() })
                   }),
                   (0, r.jsx)(l.LZC, { size: 16 }),
                   (0, r.jsx)(l.zxk, {
-                      disabled: !f || b || j || _,
+                      disabled: !h || b || j || _,
                       look: l.zxk.Looks.FILLED,
                       color: l.zxk.Colors.RED,
                       onClick: () => {
@@ -86,7 +86,7 @@ function m(e) {
                               };
                           });
                       },
-                      children: u.intl.string(u.t.FrOFSk)
+                      children: d.intl.string(d.t.FrOFSk)
                   })
               ]
           });

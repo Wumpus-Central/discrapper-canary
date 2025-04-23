@@ -1,6 +1,6 @@
 n.d(t, {
     X: () => R,
-    Z: () => A
+    Z: () => k
 }),
     n(953529),
     n(388685),
@@ -12,13 +12,13 @@ var r = n(200651),
     a = n(442837),
     o = n(544891),
     c = n(433517),
-    d = n(481060),
-    u = n(852860),
+    u = n(481060),
+    d = n(852860),
     m = n(493773),
     g = n(933557),
     p = n(769654),
-    h = n(984933),
-    f = n(650774),
+    f = n(984933),
+    h = n(650774),
     x = n(430824),
     b = n(496675),
     j = n(699516),
@@ -90,7 +90,7 @@ let w = 'dismissedCommunityFeaturesUpsell',
             s = l.length > 0 ? l[0] : null;
         return (
             (e = 'rules_channel_id' === s ? I.intl.string(I.t['7IrBYm']) : null != s ? i[s] : void 0),
-            (0, r.jsx)(u.Z, {
+            (0, r.jsx)(d.Z, {
                 submitting: n,
                 onReset: () => {
                     null != t && v.Z.init(t.id);
@@ -112,12 +112,12 @@ let w = 'dismissedCommunityFeaturesUpsell',
     },
     Z = (e) => {
         let { discoveryEnabled: t, onboardingEnabled: n, guild: l } = e,
-            [s, u] = i.useState(!0 === c.K.get(w)),
-            g = (0, a.e7)([f.Z], () => {
+            [s, d] = i.useState(!0 === c.K.get(w)),
+            g = (0, a.e7)([h.Z], () => {
                 var e;
-                return null != (e = f.Z.getMemberCount(l.id)) ? e : 0;
+                return null != (e = h.Z.getMemberCount(l.id)) ? e : 0;
             }),
-            [h, b] = i.useState(!1);
+            [f, b] = i.useState(!1);
         (0, m.ZP)(() => {
             o.tn
                 .get({
@@ -130,7 +130,7 @@ let w = 'dismissedCommunityFeaturesUpsell',
                 .catch(() => b(!1));
         });
         let j = (0, a.e7)([x.Z], () => x.Z.getGuild('942897714956472401')),
-            _ = l.isCommunity() && g >= 1000 && h && null == j;
+            _ = l.isCommunity() && g >= 1000 && f && null == j;
         if (t && n && !_) return null;
         let O = async () => {
             try {
@@ -158,12 +158,12 @@ let w = 'dismissedCommunityFeaturesUpsell',
                               }),
                               (0, r.jsxs)('div', {
                                   children: [
-                                      (0, r.jsx)(d.X6q, {
+                                      (0, r.jsx)(u.X6q, {
                                           variant: 'heading-md/semibold',
                                           className: E.upsellHeader,
                                           children: I.intl.string(I.t['pR/BgY'])
                                       }),
-                                      (0, r.jsx)(d.Text, {
+                                      (0, r.jsx)(u.Text, {
                                           variant: 'text-sm/normal',
                                           children: I.intl.string(I.t['V+Yo1t'])
                                       })
@@ -171,15 +171,15 @@ let w = 'dismissedCommunityFeaturesUpsell',
                               })
                           ]
                       }),
-                      (0, r.jsx)(d.zxk, {
+                      (0, r.jsx)(u.zxk, {
                           'aria-label': I.intl.string(I.t.cpT0Cg),
-                          look: d.zxk.Looks.BLANK,
-                          size: d.zxk.Sizes.NONE,
+                          look: u.zxk.Looks.BLANK,
+                          size: u.zxk.Sizes.NONE,
                           className: E.upsellClose,
                           onClick: () => {
-                              c.K.set(w, !0), u(!0);
+                              c.K.set(w, !0), d(!0);
                           },
-                          children: (0, r.jsx)(d.Dio, {
+                          children: (0, r.jsx)(u.Dio, {
                               size: 'md',
                               color: 'currentColor'
                           })
@@ -188,16 +188,16 @@ let w = 'dismissedCommunityFeaturesUpsell',
                           className: E.upsellFooter,
                           children: [
                               _ &&
-                                  (0, r.jsx)(d.zxk, {
-                                      size: d.zxk.Sizes.SMALL,
+                                  (0, r.jsx)(u.zxk, {
+                                      size: u.zxk.Sizes.SMALL,
                                       onClick: O,
                                       className: E.upsellButton,
                                       children: I.intl.string(I.t.iF1Asr)
                                   }),
                               n
                                   ? null
-                                  : (0, r.jsx)(d.zxk, {
-                                        size: d.zxk.Sizes.SMALL,
+                                  : (0, r.jsx)(u.zxk, {
+                                        size: u.zxk.Sizes.SMALL,
                                         onClick: () => {
                                             v.Z.setSection(N.pNK.ONBOARDING);
                                         },
@@ -206,22 +206,22 @@ let w = 'dismissedCommunityFeaturesUpsell',
                                     }),
                               t
                                   ? null
-                                  : (0, r.jsx)(d.zxk, {
-                                        size: d.zxk.Sizes.SMALL,
+                                  : (0, r.jsx)(u.zxk, {
+                                        size: u.zxk.Sizes.SMALL,
                                         onClick: () => {
                                             v.Z.setSection(N.pNK.ACCESS, N.KsC.ACCESS_DISCOVERABLE);
                                         },
                                         className: E.upsellButton,
-                                        color: d.zxk.Colors.PRIMARY,
+                                        color: u.zxk.Colors.PRIMARY,
                                         children: I.intl.string(I.t['0kmJd3'])
                                     }),
-                              (0, r.jsx)(d.zxk, {
-                                  size: d.zxk.Sizes.SMALL,
+                              (0, r.jsx)(u.zxk, {
+                                  size: u.zxk.Sizes.SMALL,
                                   onClick: () => {
                                       v.Z.setSection(N.pNK.ANALYTICS);
                                   },
                                   className: E.upsellButton,
-                                  color: d.zxk.Colors.PRIMARY,
+                                  color: u.zxk.Colors.PRIMARY,
                                   children: I.intl.string(I.t.BQIYTU)
                               })
                           ]
@@ -235,13 +235,13 @@ let w = 'dismissedCommunityFeaturesUpsell',
                 canManageGuild: b.Z.can(N.Plq.MANAGE_GUILD, e),
                 isGuildAdmin: b.Z.can(N.Plq.ADMINISTRATOR, e)
             })),
-            l = (0, a.e7)([h.ZP], () => (null != e ? h.ZP.getChannels(e.id) : null)),
+            l = (0, a.e7)([f.ZP], () => (null != e ? f.ZP.getChannels(e.id) : null)),
             o = i.useMemo(y.jb, []),
-            u = !0 !== c.K.get(w);
+            d = !0 !== c.K.get(w);
         if (null == e) return null;
         let m = [];
         null != l &&
-            l[h.sH].forEach((e) => {
+            l[f.sH].forEach((e) => {
                 let { channel: t } = e;
                 t.type === N.d4z.GUILD_TEXT &&
                     m.push({
@@ -261,20 +261,20 @@ let w = 'dismissedCommunityFeaturesUpsell',
                         publicUpdatesChannelId: null
                     });
             },
-            f = (e) => {
+            h = (e) => {
                 v.Z.updateGuild({ description: e });
             },
             x = () => {
                 e.features.has(N.oNc.DISCOVERABLE) && e.features.has(N.oNc.PARTNERED)
-                    ? (0, d.h7j)((e) =>
+                    ? (0, u.h7j)((e) =>
                           (0, r.jsx)(
-                              d.ConfirmModal,
+                              u.ConfirmModal,
                               P(T({}, e), {
                                   header: I.intl.string(I.t.iBnVHR),
                                   confirmText: I.intl.string(I.t['cY+Ooa']),
                                   cancelText: I.intl.string(I.t.oEAioK),
                                   onConfirm: p,
-                                  children: (0, r.jsx)(d.Text, {
+                                  children: (0, r.jsx)(u.Text, {
                                       variant: 'text-sm/normal',
                                       children: I.intl.string(I.t['P+Sh8f'])
                                   })
@@ -282,15 +282,15 @@ let w = 'dismissedCommunityFeaturesUpsell',
                           )
                       )
                     : e.features.has(N.oNc.DISCOVERABLE)
-                      ? (0, d.h7j)((e) =>
+                      ? (0, u.h7j)((e) =>
                             (0, r.jsx)(
-                                d.ConfirmModal,
+                                u.ConfirmModal,
                                 P(T({}, e), {
                                     header: I.intl.string(I.t.iBnVHR),
                                     confirmText: I.intl.string(I.t['cY+Ooa']),
                                     cancelText: I.intl.string(I.t.oEAioK),
                                     onConfirm: p,
-                                    children: (0, r.jsx)(d.Text, {
+                                    children: (0, r.jsx)(u.Text, {
                                         variant: 'text-sm/normal',
                                         children: I.intl.string(I.t['eMx/ub'])
                                     })
@@ -298,15 +298,15 @@ let w = 'dismissedCommunityFeaturesUpsell',
                             )
                         )
                       : e.features.has(N.oNc.PARTNERED)
-                        ? (0, d.h7j)((e) =>
+                        ? (0, u.h7j)((e) =>
                               (0, r.jsx)(
-                                  d.ConfirmModal,
+                                  u.ConfirmModal,
                                   P(T({}, e), {
                                       header: I.intl.string(I.t.iBnVHR),
                                       confirmText: I.intl.string(I.t['cY+Ooa']),
                                       cancelText: I.intl.string(I.t.oEAioK),
                                       onConfirm: p,
-                                      children: (0, r.jsx)(d.Text, {
+                                      children: (0, r.jsx)(u.Text, {
                                           variant: 'text-sm/normal',
                                           children: I.intl.string(I.t.l1wLeX)
                                       })
@@ -315,29 +315,29 @@ let w = 'dismissedCommunityFeaturesUpsell',
                           )
                         : p();
             };
-        return (0, r.jsxs)(d.hjN, {
+        return (0, r.jsxs)(u.hjN, {
             title: I.intl.string(I.t.nRtNqq),
-            tag: d.RB0.H1,
+            tag: u.RB0.H1,
             children: [
-                u
+                d
                     ? (0, r.jsx)(Z, {
                           discoveryEnabled: e.features.has(N.oNc.DISCOVERABLE),
                           onboardingEnabled: e.features.has(N.oNc.GUILD_ONBOARDING),
                           guild: e
                       })
                     : null,
-                (0, r.jsxs)(d.hjN, {
+                (0, r.jsxs)(u.hjN, {
                     className: s()(E.twoColumnFormSection, E.firstSection),
                     children: [
                         (0, r.jsxs)('div', {
                             className: E.descriptionColumn,
                             children: [
-                                (0, r.jsx)(d.vwX, {
+                                (0, r.jsx)(u.vwX, {
                                     className: E.formTitle,
                                     children: I.intl.string(I.t.otcXPz)
                                 }),
-                                (0, r.jsx)(d.R94, {
-                                    type: d.geA.DESCRIPTION,
+                                (0, r.jsx)(u.R94, {
+                                    type: u.geA.DESCRIPTION,
                                     className: E.__invalid_formDescription,
                                     children: I.intl.string(I.t.BtwmYG)
                                 })
@@ -345,7 +345,7 @@ let w = 'dismissedCommunityFeaturesUpsell',
                         }),
                         (0, r.jsx)('div', {
                             className: E.selectColumn,
-                            children: (0, r.jsx)(d.VcW, {
+                            children: (0, r.jsx)(u.VcW, {
                                 value: e.rulesChannelId,
                                 options: m,
                                 onChange: (e) => {
@@ -356,19 +356,19 @@ let w = 'dismissedCommunityFeaturesUpsell',
                         })
                     ]
                 }),
-                (0, r.jsx)(d.$i$, { className: E.divider }),
-                (0, r.jsxs)(d.hjN, {
+                (0, r.jsx)(u.$i$, { className: E.divider }),
+                (0, r.jsxs)(u.hjN, {
                     className: s()(E.twoColumnFormSection, E.firstSection),
                     children: [
                         (0, r.jsxs)('div', {
                             className: E.descriptionColumn,
                             children: [
-                                (0, r.jsx)(d.vwX, {
+                                (0, r.jsx)(u.vwX, {
                                     className: E.formTitle,
                                     children: I.intl.string(I.t.vAyDGR)
                                 }),
-                                (0, r.jsx)(d.R94, {
-                                    type: d.geA.DESCRIPTION,
+                                (0, r.jsx)(u.R94, {
+                                    type: u.geA.DESCRIPTION,
                                     className: E.__invalid_formDescription,
                                     children: I.intl.string(I.t.ZFeonp)
                                 })
@@ -376,7 +376,7 @@ let w = 'dismissedCommunityFeaturesUpsell',
                         }),
                         (0, r.jsx)('div', {
                             className: E.selectColumn,
-                            children: (0, r.jsx)(d.VcW, {
+                            children: (0, r.jsx)(u.VcW, {
                                 value: e.publicUpdatesChannelId,
                                 options: m,
                                 onChange: (e) => {
@@ -387,19 +387,19 @@ let w = 'dismissedCommunityFeaturesUpsell',
                         })
                     ]
                 }),
-                (0, r.jsx)(d.$i$, { className: E.divider }),
-                (0, r.jsxs)(d.hjN, {
+                (0, r.jsx)(u.$i$, { className: E.divider }),
+                (0, r.jsxs)(u.hjN, {
                     className: s()(E.twoColumnFormSection, E.firstSection),
                     children: [
                         (0, r.jsxs)('div', {
                             className: E.descriptionColumn,
                             children: [
-                                (0, r.jsx)(d.vwX, {
+                                (0, r.jsx)(u.vwX, {
                                     className: E.formTitle,
                                     children: I.intl.string(I.t.sMkYEx)
                                 }),
-                                (0, r.jsx)(d.R94, {
-                                    type: d.geA.DESCRIPTION,
+                                (0, r.jsx)(u.R94, {
+                                    type: u.geA.DESCRIPTION,
                                     className: E.__invalid_formDescription,
                                     children: I.intl.string(I.t.htioQk)
                                 })
@@ -407,7 +407,7 @@ let w = 'dismissedCommunityFeaturesUpsell',
                         }),
                         (0, r.jsx)('div', {
                             className: E.selectColumn,
-                            children: (0, r.jsx)(d.VcW, {
+                            children: (0, r.jsx)(u.VcW, {
                                 value: e.safetyAlertsChannelId,
                                 options: m,
                                 onChange: (e) => {
@@ -418,19 +418,19 @@ let w = 'dismissedCommunityFeaturesUpsell',
                         })
                     ]
                 }),
-                (0, r.jsx)(d.$i$, { className: E.divider }),
-                (0, r.jsxs)(d.hjN, {
+                (0, r.jsx)(u.$i$, { className: E.divider }),
+                (0, r.jsxs)(u.hjN, {
                     className: E.twoColumnFormSection,
                     children: [
                         (0, r.jsxs)('div', {
                             className: E.descriptionColumn,
                             children: [
-                                (0, r.jsx)(d.vwX, {
+                                (0, r.jsx)(u.vwX, {
                                     className: E.formTitle,
                                     children: I.intl.string(I.t.pO60f3)
                                 }),
-                                (0, r.jsx)(d.R94, {
-                                    type: d.geA.DESCRIPTION,
+                                (0, r.jsx)(u.R94, {
+                                    type: u.geA.DESCRIPTION,
                                     className: E.__invalid_formDescription,
                                     children: I.intl.string(I.t.aIR73d)
                                 })
@@ -438,7 +438,7 @@ let w = 'dismissedCommunityFeaturesUpsell',
                         }),
                         (0, r.jsx)('div', {
                             className: E.selectColumn,
-                            children: (0, r.jsx)(d.VcW, {
+                            children: (0, r.jsx)(u.VcW, {
                                 value: e.preferredLocale,
                                 options: o,
                                 onChange: (e) => {
@@ -449,61 +449,61 @@ let w = 'dismissedCommunityFeaturesUpsell',
                         })
                     ]
                 }),
-                (0, r.jsx)(d.$i$, { className: E.divider }),
+                (0, r.jsx)(u.$i$, { className: E.divider }),
                 (() => {
                     var n;
                     if (null != e)
-                        return (0, r.jsxs)(d.hjN, {
+                        return (0, r.jsxs)(u.hjN, {
                             children: [
-                                (0, r.jsx)(d.vwX, {
+                                (0, r.jsx)(u.vwX, {
                                     className: E.formTitle,
                                     children: I.intl.string(I.t['RSfm+v'])
                                 }),
-                                (0, r.jsx)(d.R94, {
+                                (0, r.jsx)(u.R94, {
                                     className: E.description,
-                                    type: d.geA.DESCRIPTION,
+                                    type: u.geA.DESCRIPTION,
                                     children: I.intl.string(I.t['/B6PR0'])
                                 }),
-                                (0, r.jsx)(d.Kx8, {
+                                (0, r.jsx)(u.Kx8, {
                                     value: null != (n = e.description) ? n : '',
                                     placeholder: I.intl.string(I.t.Nvfows),
-                                    onChange: f,
+                                    onChange: h,
                                     maxLength: 120,
                                     disabled: !t
                                 })
                             ]
                         });
                 })(),
-                (0, r.jsx)(d.$i$, { className: E.divider }),
-                (0, r.jsxs)(d.hjN, {
+                (0, r.jsx)(u.$i$, { className: E.divider }),
+                (0, r.jsxs)(u.hjN, {
                     className: E.twoColumnFormSection,
                     children: [
                         (0, r.jsxs)('div', {
                             className: E.descriptionColumn,
                             children: [
-                                (0, r.jsx)(d.vwX, {
+                                (0, r.jsx)(u.vwX, {
                                     className: E.formTitle,
                                     children: I.intl.string(I.t.c1BmbG)
                                 }),
-                                (0, r.jsx)(d.R94, {
-                                    type: d.geA.DESCRIPTION,
+                                (0, r.jsx)(u.R94, {
+                                    type: u.geA.DESCRIPTION,
                                     className: E.__invalid_formDescription,
                                     children: I.intl.string(I.t.aQzVFx)
                                 })
                             ]
                         }),
-                        (0, r.jsx)(d.ua7, {
+                        (0, r.jsx)(u.ua7, {
                             text: n ? null : I.intl.string(I.t['pjG+T0']),
                             'aria-label': n ? void 0 : I.intl.string(I.t['pjG+T0']),
                             children: (e) =>
                                 (0, r.jsx)(
-                                    d.zxk,
+                                    u.zxk,
                                     P(
                                         T(
                                             {
-                                                size: d.zxk.Sizes.SMALL,
+                                                size: u.zxk.Sizes.SMALL,
                                                 onClick: x,
-                                                color: d.zxk.Colors.RED,
+                                                color: u.zxk.Colors.RED,
                                                 disabled: !n
                                             },
                                             e
@@ -517,7 +517,7 @@ let w = 'dismissedCommunityFeaturesUpsell',
             ]
         });
     },
-    A = () => {
+    k = () => {
         let e = (0, a.e7)([O.Z], () => O.Z.getGuild());
         return null == e ? null : e.features.has(N.oNc.COMMUNITY) ? (0, r.jsx)(D, {}) : (0, r.jsx)(C.Z, { guild: e });
     };

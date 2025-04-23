@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(200651),
     i = n(192379),
     l = n(536982),
@@ -6,8 +6,8 @@ var r = n(200651),
     a = n(456677),
     o = n(55889),
     c = n(300453),
-    d = n(620436),
-    u = n(273504),
+    u = n(620436),
+    d = n(273504),
     m = n(388032),
     g = n(461367);
 function p(e) {
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,12 +53,12 @@ function h(e, t) {
         e
     );
 }
-function f(e) {
-    var t, n, f;
+function h(e) {
+    var t, n, h;
     let { rule: x, onChangeRule: b } = e,
         j = i.useCallback(
             (e) => {
-                b(h(p({}, x), { triggerMetadata: h(p({}, x.triggerMetadata), { allowList: e }) }));
+                b(f(p({}, x), { triggerMetadata: f(p({}, x.triggerMetadata), { allowList: e }) }));
             },
             [b, x]
         );
@@ -76,12 +76,12 @@ function f(e) {
                     (0, r.jsx)(l.Z, {
                         onChange: j,
                         initialValue: null == (t = x.triggerMetadata) ? void 0 : t.allowList,
-                        maxWordCount: u.I3,
-                        collapsed: (null == (n = x.triggerMetadata) ? void 0 : n.allowList) == null || (null == (f = x.triggerMetadata) ? void 0 : f.allowList.length) === 0
+                        maxWordCount: d.I3,
+                        collapsed: (null == (n = x.triggerMetadata) ? void 0 : n.allowList) == null || (null == (h = x.triggerMetadata) ? void 0 : h.allowList.length) === 0
                     })
                 ]
             }),
-            (0, r.jsx)(d.Z, { type: d.Z.Type.ARROW_DOWN }),
+            (0, r.jsx)(u.Z, { type: u.Z.Type.ARROW_DOWN }),
             (0, r.jsx)(c.Z, {
                 step: 2,
                 header: m.intl.string(m.t['18TOiY']),
@@ -90,7 +90,7 @@ function f(e) {
                     onChangeRule: b
                 })
             }),
-            (0, r.jsx)(d.Z, { type: d.Z.Type.CROSS }),
+            (0, r.jsx)(u.Z, { type: u.Z.Type.CROSS }),
             (0, r.jsx)(c.Z, {
                 step: 3,
                 header: m.intl.string(m.t.eq3gjo),

@@ -7,12 +7,12 @@ var i = n(120356),
     a = n(481060),
     s = n(493683),
     c = n(906732),
-    u = n(979264),
-    d = n(69882),
-    p = n(251794),
-    h = n(386696),
-    f = n(946273),
-    m = n(910693),
+    u = n(69882),
+    d = n(251794),
+    p = n(386696),
+    h = n(946273),
+    f = n(910693),
+    m = n(172751),
     g = n(314897),
     b = n(271383),
     _ = n(430824),
@@ -23,7 +23,7 @@ var i = n(120356),
     j = n(572004),
     O = n(5192),
     E = n(51144),
-    I = n(308083),
+    I = n(131085),
     P = n(388032),
     S = n(157092);
 function Z(e) {
@@ -101,11 +101,11 @@ function T(e) {
                                             color: a.TVs.colors.HEADER_PRIMARY.css
                                         })
                                     }),
-                                    (0, r.jsx)(u.ZP, {
+                                    (0, r.jsx)(m.ZP, {
                                         primaryGuild: null == t ? void 0 : t.primaryGuild,
                                         userId: null == t ? void 0 : t.id,
                                         contextGuildId: n,
-                                        badgeSize: I.NC.SIZE_16,
+                                        badgeSize: I.Gg.SIZE_16,
                                         textVariant: 'heading-md/semibold',
                                         className: S.memberClanTag,
                                         containerClassName: S.memberClanTagContainer
@@ -177,7 +177,7 @@ function A(e) {
 }
 function w(e) {
     let { user: t, member: i, guildId: l } = e,
-        u = (0, o.e7)([_.Z], () => _.Z.getGuild(l)),
+        m = (0, o.e7)([_.Z], () => _.Z.getGuild(l)),
         {
             canKickUser: b,
             canBanUser: C,
@@ -185,15 +185,15 @@ function w(e) {
         } = (0, o.cj)(
             [y.Z, v.default, _.Z],
             () => ({
-                canKickUser: (0, f.BK)(t, u),
-                canBanUser: (0, f.mm)(t, u),
-                canModerateMembers: null != u && (0, h.F)(u.id, t.id, [v.default, _.Z, y.Z])
+                canKickUser: (0, h.BK)(t, m),
+                canBanUser: (0, h.mm)(t, m),
+                canModerateMembers: null != m && (0, p.F)(m.id, t.id, [v.default, _.Z, y.Z])
             }),
-            [t, u]
+            [t, m]
         ),
-        O = (0, d.b)(i),
+        O = (0, u.b)(i),
         { analyticsLocations: E, newestAnalyticsLocation: I } = (0, c.ZP)(),
-        T = (0, m.sE)(l, {
+        T = (0, f.sE)(l, {
             targetUserId: t.id,
             location: I,
             locations: E
@@ -268,12 +268,12 @@ function w(e) {
                 text: O ? P.intl.string(P.t.N86XcH) : P.intl.string(P.t.kTlLr6),
                 onClick: () => {
                     O
-                        ? (0, p.q)({
+                        ? (0, d.q)({
                               guildId: i.guildId,
                               userId: i.userId,
                               anaylticsLocations: E
                           })
-                        : (0, p.z)({
+                        : (0, d.z)({
                               guildId: i.guildId,
                               userId: i.userId,
                               anaylticsLocations: E
@@ -289,7 +289,7 @@ function w(e) {
             (0, r.jsx)(A, {
                 text: P.intl.string(P.t.IHTjzM),
                 onClick: () => {
-                    T(m.jQ.COPY_ID), (0, j.JG)(t.id);
+                    T(f.jQ.COPY_ID), (0, j.JG)(t.id);
                 },
                 disabled: !j.wS,
                 children: (0, r.jsx)(a.VuL, {

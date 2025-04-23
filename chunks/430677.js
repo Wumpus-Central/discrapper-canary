@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(399606),
     o = n(481060),
     c = n(471445),
-    d = n(603211),
-    u = n(307707),
+    u = n(603211),
+    d = n(307707),
     m = n(734893),
     g = n(216701),
     p = n(592125),
-    h = n(430824),
-    f = n(768581),
+    f = n(430824),
+    h = n(768581),
     x = n(388032),
     b = n(773100);
 function j(e) {
@@ -62,21 +62,21 @@ let v = function (e) {
     var t, l, v, O, C;
     let { guildId: y, action: N, actionIndex: I, onChange: E, onDelete: S, onDragStart: T, onDragComplete: P, onDragReset: w } = e,
         R = (0, a.e7)([p.Z], () => p.Z.getChannel(N.channelId)),
-        Z = (0, a.e7)([h.Z], () => h.Z.getGuild(y)),
-        { customEmoji: D, unicodeEmoji: A } = (0, u.Z)(null == (t = N.emoji) ? void 0 : t.id, null == (l = N.emoji) ? void 0 : l.name),
-        k = null == N.emoji || null != D || null != A,
-        L = f.ZP.getNewMemberActionIconURL({
+        Z = (0, a.e7)([f.Z], () => f.Z.getGuild(y)),
+        { customEmoji: D, unicodeEmoji: k } = (0, d.Z)(null == (t = N.emoji) ? void 0 : t.id, null == (l = N.emoji) ? void 0 : l.name),
+        A = null == N.emoji || null != D || null != k,
+        L = h.ZP.getNewMemberActionIconURL({
             channelId: N.channelId,
             icon: N.icon
         }),
         M = null;
-    null != R && (0, m.kb)(R) ? k || (M = x.intl.string(x.t.wAkIZW)) : (M = x.intl.string(x.t.CbTEKC));
+    null != R && (0, m.kb)(R) ? A || (M = x.intl.string(x.t.wAkIZW)) : (M = x.intl.string(x.t.CbTEKC));
     let {
             drag: G,
             dragSourcePosition: U,
             drop: B,
             setIsDraggable: F
-        } = (0, d.Z)({
+        } = (0, u.Z)({
             type: 'NEW_MEMBER_ACTION',
             index: I,
             optionId: N.channelId,

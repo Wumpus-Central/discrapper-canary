@@ -3,9 +3,9 @@ var r = n(200651);
 n(192379);
 var i = n(442837),
     l = n(481060),
-    o = n(805519),
-    a = n(565138),
-    s = n(246364),
+    o = n(565138),
+    a = n(246364),
+    s = n(602606),
     c = n(705563),
     u = n(594174),
     d = n(967128),
@@ -13,7 +13,7 @@ var i = n(442837),
     h = n(156292);
 function f(e) {
     var t;
-    let { joinRequest: n, guild: o } = e,
+    let { joinRequest: n, guild: s } = e,
         c = (0, i.e7)([u.default], () => u.default.getUser(n.userId));
     return (0, r.jsxs)('div', {
         className: h.summaryContainer,
@@ -21,20 +21,20 @@ function f(e) {
             (0, r.jsxs)('div', {
                 className: h.summaryHeader,
                 children: [
-                    null != o &&
+                    null != s &&
                         (0, r.jsxs)('div', {
                             className: h.summaryHeaderClanInfo,
                             children: [
-                                (0, r.jsx)(a.Z, {
-                                    guild: o,
+                                (0, r.jsx)(o.Z, {
+                                    guild: s,
                                     active: !0,
-                                    size: a.Z.Sizes.SMOL,
+                                    size: o.Z.Sizes.SMOL,
                                     className: h.guildIcon
                                 }),
                                 (0, r.jsx)(l.X6q, {
                                     variant: 'heading-sm/semibold',
                                     color: 'header-primary',
-                                    children: o.name
+                                    children: s.name
                                 })
                             ]
                         }),
@@ -49,9 +49,9 @@ function f(e) {
             null == (t = n.formResponses)
                 ? void 0
                 : t
-                      .filter((e) => e.field_type !== s.QJ.TERMS)
+                      .filter((e) => e.field_type !== a.QJ.TERMS)
                       .map((e) => {
-                          let t = e.field_type === s.QJ.MULTIPLE_CHOICE && null != e.response ? e.choices[e.response] : e.response;
+                          let t = e.field_type === a.QJ.MULTIPLE_CHOICE && null != e.response ? e.choices[e.response] : e.response;
                           return (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)('hr', { className: h.summarySeparator }),
@@ -78,7 +78,7 @@ function f(e) {
 }
 function m(e) {
     let { channel: t } = e,
-        { loading: n, joinRequest: i, joinRequestGuild: a } = (0, o.Z)(t.id);
+        { loading: n, joinRequest: i, joinRequestGuild: o } = (0, s.Z)(t.id);
     return (0, r.jsx)(d.ZP, {
         channelId: t.id,
         className: h.container,
@@ -89,7 +89,7 @@ function m(e) {
                       children: [
                           (0, r.jsx)('div', {
                               children: (0, r.jsx)(f, {
-                                  guild: a,
+                                  guild: o,
                                   joinRequest: i
                               })
                           }),

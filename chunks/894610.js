@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(200651),
     i = n(192379),
     l = n(755930),
@@ -36,11 +36,11 @@ let c = (0, l.Yn)([
         })
     })
 ]);
-function d(e) {
+function u(e) {
     let { earningsData: t, guildId: n } = e,
         a = (0, s.ue)(n, { publishedOnly: !1 }),
         o = t.currentPeriod,
-        d = i.useMemo(
+        u = i.useMemo(
             () =>
                 a
                     .map((e) => {
@@ -100,7 +100,7 @@ function d(e) {
         ? null
         : (0, r.jsx)(l.ZP, {
               columns: c,
-              data: d,
+              data: u,
               initialSortKey: 'LISTING_NAME'
           });
 }

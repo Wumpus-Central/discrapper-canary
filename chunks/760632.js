@@ -6,8 +6,8 @@ var r = n(200651),
     a = n(388032);
 let o = ''.concat(60),
     c = ''.concat(300),
-    d = ''.concat(900),
-    u = ''.concat(1800),
+    u = ''.concat(900),
+    d = ''.concat(1800),
     m = ''.concat(3600);
 function g(e) {
     let { canManageGuild: t, afkTimeout: n, afkChannelId: g } = e,
@@ -22,11 +22,11 @@ function g(e) {
                     label: a.intl.formatToPlainString(a.t.iXLF9f, { minutes: 5 })
                 },
                 {
-                    value: d,
+                    value: u,
                     label: a.intl.formatToPlainString(a.t.iXLF9f, { minutes: 15 })
                 },
                 {
-                    value: u,
+                    value: d,
                     label: a.intl.formatToPlainString(a.t.iXLF9f, { minutes: 30 })
                 },
                 {
@@ -36,13 +36,13 @@ function g(e) {
             ],
             []
         ),
-        h = i.useCallback((e) => {
+        f = i.useCallback((e) => {
             s.Z.updateGuild({ afkTimeout: parseInt(e, 10) });
         }, []);
     return (0, r.jsx)(l.q4e, {
         value: null == n ? null : ''.concat(n),
         options: p,
         isDisabled: null == g || !t,
-        onChange: h
+        onChange: f
     });
 }

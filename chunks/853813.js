@@ -6,13 +6,13 @@ var r = n(200651),
     a = n(442837),
     o = n(481060),
     c = n(367907),
-    d = n(605436),
-    u = n(228643),
+    u = n(605436),
+    d = n(228643),
     m = n(496675),
     g = n(626135),
     p = n(823379),
-    h = n(243730),
-    f = n(946724),
+    f = n(243730),
+    h = n(946724),
     x = n(999382),
     b = n(130341),
     j = n(981975),
@@ -26,13 +26,13 @@ var r = n(200651),
 function E(e) {
     let t,
         { editRoleId: n, setEditRoleId: l, selectedSection: E, setSelectedSection: S } = e,
-        T = (0, a.e7)([f.Z], () => f.Z.guild, []);
+        T = (0, a.e7)([h.Z], () => h.Z.guild, []);
     s()(null != T, 'guildId cannot be null here');
     let { role: P, permissionSearchQuery: w } = (0, a.cj)(
-        [f.Z],
+        [h.Z],
         () => ({
-            role: f.Z.getRole(n),
-            permissionSearchQuery: f.Z.getPermissionSearchQuery()
+            role: h.Z.getRole(n),
+            permissionSearchQuery: h.Z.getPermissionSearchQuery()
         }),
         [n]
     );
@@ -42,21 +42,21 @@ function E(e) {
     let R = (0, a.e7)([m.Z], () => m.Z.getHighestRole(T), [T]),
         Z = (0, a.e7)([m.Z], () => !m.Z.isRoleHigher(T, R, P)),
         D = i.useRef(null),
-        A = (0, a.e7)([x.Z], () => x.Z.getProps().integrations),
-        k = {
+        k = (0, a.e7)([x.Z], () => x.Z.getProps().integrations),
+        A = {
             role: P,
             editRoleId: n
         },
-        L = i.useRef(k);
+        L = i.useRef(A);
     if (
         (i.useEffect(() => {
-            L.current = k;
+            L.current = A;
         }),
         i.useEffect(() => {
             var e, t;
             let { role: n, editRoleId: r } = L.current,
                 i = (0, b.UT)(E),
-                l = null != (t = null == (e = h.Z.getRoleMemberCount(T.id)) ? void 0 : e[r]) ? t : 0;
+                l = null != (t = null == (e = f.Z.getRoleMemberCount(T.id)) ? void 0 : e[r]) ? t : 0;
             g.default.track(
                 N.rMx.ROLE_PAGE_VIEWED,
                 (function (e) {
@@ -86,7 +86,7 @@ function E(e) {
                 })(
                     {
                         tab_opened: i,
-                        is_everyone: (0, d.pM)(T.id, r),
+                        is_everyone: (0, u.pM)(T.id, r),
                         role_id: r,
                         role_mentionable: null == n ? void 0 : n.mentionable,
                         role_hoist: null == n ? void 0 : n.hoist,
@@ -98,7 +98,7 @@ function E(e) {
             );
         }, [E, T.id, null == P ? void 0 : P.id]),
         i.useEffect(() => {
-            (null == P ? void 0 : P.id) != null && (0, u.sE)(T.id, P.id);
+            (null == P ? void 0 : P.id) != null && (0, d.sE)(T.id, P.id);
         }, [T.id, null == P ? void 0 : P.id]),
         null == P)
     )
@@ -128,7 +128,7 @@ function E(e) {
                 role: P,
                 locked: Z,
                 setSelectedSection: S,
-                integrations: null != A ? A : void 0
+                integrations: null != k ? k : void 0
             });
             break;
         case y.ZI.MEMBERS:

@@ -7,41 +7,41 @@ var i = n(481060),
     a = n(375263),
     o = n(586382),
     c = n(981631),
-    d = n(388032),
-    u = n(563772);
+    u = n(388032),
+    d = n(563772);
 function m(e) {
     let { guild: t, canManageGuild: n } = e;
     return (0, r.jsxs)(i.hjN, {
-        className: u.container,
+        className: d.container,
         children: [
             (0, r.jsxs)('div', {
-                className: u.column,
+                className: d.column,
                 children: [
                     (0, r.jsxs)(i.vwX, {
-                        className: u.title,
-                        children: [d.intl.string(d.t['0r0AzM']), (0, r.jsx)(o.zA, { guild: t })]
+                        className: d.title,
+                        children: [u.intl.string(u.t['0r0AzM']), (0, r.jsx)(o.zA, { guild: t })]
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-secondary',
-                        className: u.text,
-                        children: d.intl.string(d.t.UfqmIS)
+                        className: d.text,
+                        children: u.intl.string(u.t.UfqmIS)
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-secondary',
-                        className: u.text,
-                        children: d.intl.format(d.t.vBcWUl, { articleURL: l.Z.getArticleURL(c.BhN.GUILD_BANNER_SPLASH) })
+                        className: d.text,
+                        children: u.intl.format(u.t.vBcWUl, { articleURL: l.Z.getArticleURL(c.BhN.GUILD_BANNER_SPLASH) })
                     }),
                     (0, r.jsx)(s.F, {
                         guild: t,
                         canManageGuild: n,
-                        buttonClassName: u.button
+                        buttonClassName: d.button
                     })
                 ]
             }),
             (0, r.jsx)('div', {
-                className: u.column,
+                className: d.column,
                 children: (0, r.jsx)(a.O, {
                     guild: t,
                     canManageGuild: n

@@ -3,16 +3,16 @@ var i = n(200651),
     r = n(192379),
     s = n(481060),
     l = n(931240),
-    a = n(353093),
-    o = n(979264),
-    c = n(300284),
-    d = n(308083),
+    a = n(300284),
+    o = n(731722),
+    c = n(172751),
+    d = n(131085),
     u = n(526761),
     m = n(388032),
     g = n(729495);
 let p = r.memo(function (e) {
     let { guildId: t, guildProfile: n, title: p, description: h, onClose: f } = e,
-        b = (0, c.Z)({ scrollPosition: u.Y_.GUILD_TAG }),
+        b = (0, a.Z)({ scrollPosition: u.Y_.GUILD_TAG }),
         [_, x] = r.useState(!1);
     async function E() {
         x(!0), await (0, l.nE)(t, !0), x(!1), null == f || f();
@@ -30,10 +30,10 @@ let p = r.memo(function (e) {
                     className: g.tag,
                     children: [
                         null != n.badge &&
-                            (0, i.jsx)(o.KQ, {
-                                src: (0, a.ky)(t, n.badge, d.NC.SIZE_36),
+                            (0, i.jsx)(c.eI, {
+                                src: (0, o.Ic)(t, n.badge, d.Gg.SIZE_36),
                                 tag: n.tag,
-                                size: d.NC.SIZE_36,
+                                size: d.Gg.SIZE_36,
                                 className: g.badge
                             }),
                         (0, i.jsx)(s.Text, {

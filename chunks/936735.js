@@ -6,24 +6,24 @@ var r = n(200651),
     a = n(339085),
     o = n(231053),
     c = n(183023),
-    d = n(650774),
-    u = n(231338);
+    u = n(650774),
+    d = n(231338);
 function m(e) {
     let { guild: t, discoverableGuild: n } = e,
         m = null == t ? void 0 : t.id,
         { memberCount: g, onlineCount: p } = (0, s.cj)(
-            [d.Z],
+            [u.Z],
             () => {
                 var e, t;
                 return {
-                    memberCount: null != (e = d.Z.getMemberCount(m)) ? e : 1234,
-                    onlineCount: null != (t = d.Z.getOnlineCount(m)) ? t : 1234
+                    memberCount: null != (e = u.Z.getMemberCount(m)) ? e : 1234,
+                    onlineCount: null != (t = u.Z.getOnlineCount(m)) ? t : 1234
                 };
             },
             [m]
         ),
-        h = i.useRef((0, l.Z)()),
-        f = i.useMemo(() => {
+        f = i.useRef((0, l.Z)()),
+        h = i.useMemo(() => {
             var e, r;
             if (null != n) return o.JO.createFromDiscoverableGuild(n);
             if (null == t) return null;
@@ -79,7 +79,7 @@ function m(e) {
         }, [n, t, g, p]),
         x = i.useMemo(() => {
             var e;
-            let t = null == f || null == (e = f.emojis) ? void 0 : e[0];
+            let t = null == h || null == (e = h.emojis) ? void 0 : e[0];
             return null != t
                 ? {
                       name: t.require_colons ? ':'.concat(t.name, ':') : t.name,
@@ -88,15 +88,15 @@ function m(e) {
                       jumboable: !0
                   }
                 : {};
-        }, [null == f ? void 0 : f.emojis]);
-    return null != f && f.isDiscoverable()
+        }, [null == h ? void 0 : h.emojis]);
+    return null != h && h.isDiscoverable()
         ? (0, r.jsx)(c.UA, {
               sourceType: o.w6.GUILD,
               expressionSourceApplication: null,
-              expressionSourceGuild: f,
+              expressionSourceGuild: h,
               node: x,
-              closePopout: u.dG,
-              nonce: h.current,
+              closePopout: d.dG,
+              nonce: f.current,
               demoMode: !0
           })
         : null;
