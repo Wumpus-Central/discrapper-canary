@@ -1,6 +1,6 @@
 n.d(t, {
     Bz: () => eg,
-    Cb: () => H,
+    Cb: () => F,
     Fq: () => z,
     PB: () => K,
     VR: () => er,
@@ -102,8 +102,8 @@ function V(e, t) {
         e
     );
 }
-let F = 'placeholder-channel-id',
-    H = 2,
+let H = 'placeholder-channel-id',
+    F = 2,
     z = 0,
     W = 1,
     Y = 2,
@@ -231,7 +231,7 @@ class $ {
               };
     }
     isPlaceholderRow(e, t) {
-        return i()(e > W, 'Invalid section'), e !== this.recentsSectionNumber && this.getRows()[e][t] === F;
+        return i()(e > W, 'Invalid section'), e !== this.recentsSectionNumber && this.getRows()[e][t] === H;
     }
     getFirstVoiceChannel(e) {
         if (void 0 === this.firstVoiceChannel) {
@@ -413,7 +413,7 @@ class ee {
     }
     getRows() {
         let e = this.getShownChannelIds();
-        return 0 === e.length && this.shouldShowEmptyCategory() ? [F] : e;
+        return 0 === e.length && this.shouldShowEmptyCategory() ? [H] : e;
     }
     shouldShowEmptyCategory() {
         return o().some(this.channels, (e) => e.renderLevel >= 3);
@@ -657,7 +657,7 @@ class eo extends ee {
     getRows() {
         if (!this.guild.optInEnabled) return [];
         let e = this.getShownChannelIds();
-        return 0 === e.length && this.getHiddenChannelIds().length > 0 ? [F] : e;
+        return 0 === e.length && this.getHiddenChannelIds().length > 0 ? [H] : e;
     }
     getShownChannelIds() {
         if (!this.guild.optInEnabled) return [];
@@ -945,7 +945,7 @@ function ey(e, t) {
     for (let t in r[e.id]) if (P.ZP.getMentionCount(t) > 0) return !0;
     if (null != n && (n.id === e.id || (n.isThread() && n.parent_id === e.id))) return !0;
     let i = y.Z.getNewChannelIds(e.category.guild.id);
-    if (i.size > H);
+    if (i.size > F);
     else if (i.has(e.id)) return !0;
     return !1;
 }
@@ -955,7 +955,7 @@ function e_(e, t, n) {
     if ((null != r && (r.id === t.id || (r.isThread() && r.parent_id === t.id))) || P.ZP.getMentionCount(t.id) > 0) return !0;
     let l = y.Z.getNewChannelIds(e.id),
         o = Array.from(l).sort((e, t) => A.default.compare(t, e));
-    if (l.has(t.id) && o.indexOf(t.id) < H) return !0;
+    if (l.has(t.id) && o.indexOf(t.id) < F) return !0;
     for (let e in i[t.id]) if (P.ZP.getMentionCount(e) > 0 || P.ZP.hasUnread(e) || P.ZP.hasRecentlyVisitedAndRead(e)) return !0;
     return !(e.mutedChannelIds.has(t.id) || (null != t.parent_id && e.mutedChannelIds.has(t.parent_id))) && !!P.ZP.hasRecentlyVisitedAndRead(t.id);
 }

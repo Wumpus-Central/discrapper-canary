@@ -10,8 +10,8 @@ var r = t(200651),
     d = t(713081),
     p = t(905128),
     m = t(27237),
-    x = t(51859),
-    _ = t(953478),
+    _ = t(51859),
+    x = t(953478),
     f = t(460608),
     v = t(279604),
     g = t(332538),
@@ -123,7 +123,7 @@ function Z(e) {
                                                               );
                                                           case j.Us.PERK:
                                                               return (0, r.jsx)(
-                                                                  x.Z,
+                                                                  _.Z,
                                                                   {
                                                                       guildId: n,
                                                                       powerup: e
@@ -141,7 +141,7 @@ function Z(e) {
                           }),
                           (0, r.jsxs)('div', {
                               className: C.sidebarContainer,
-                              children: [(0, r.jsx)(_.Z, { guildId: n }), (0, r.jsx)(f.Z, { guildId: n })]
+                              children: [(0, r.jsx)(x.Z, { guildId: n }), (0, r.jsx)(f.Z, { guildId: n })]
                           })
                       ]
                   })

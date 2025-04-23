@@ -28,7 +28,7 @@ function d(e, t, n) {
 function f(e) {
     d(e, u.intl.string(u.t['t3+Af3']), () => {
         {
-            let { openUserProfileModal: t } = n(171368);
+            let { openUserProfileModal: t } = n(892001);
             t({
                 userId: e.id,
                 sourceAnalyticsLocations: [o.Z.FRIEND_REQUEST_NOTIFICATION]

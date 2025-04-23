@@ -39,8 +39,8 @@ function d() {
             try {
                 e = T.getScopeData().contexts.profile.profile_id;
             } catch (t) {}
-            let v = (0, c.Rt)(l.target),
-                C = (0, s.Jr)({
+            let C = (0, c.Rt)(l.target),
+                v = (0, s.Jr)({
                     release: f.release,
                     environment: f.environment,
                     transaction: D,
@@ -52,9 +52,9 @@ function d() {
                     'user_agent.original': E.m.navigator && E.m.navigator.userAgent
                 }),
                 S = (0, o.qp)({
-                    name: v,
+                    name: C,
                     op: `ui.interaction.${d}`,
-                    attributes: C,
+                    attributes: v,
                     startTime: p,
                     experimental: { standalone: !0 }
                 });

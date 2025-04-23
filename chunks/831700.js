@@ -39,8 +39,8 @@ var r = n(200651),
     G = n(979651),
     B = n(934415),
     V = n(63063),
-    F = n(98597),
-    H = n(648501),
+    H = n(98597),
+    F = n(648501),
     z = n(473403),
     W = n(830993),
     Y = n(653577),
@@ -96,7 +96,7 @@ function et(e, t) {
         e
     );
 }
-class en extends F.ZP {
+class en extends H.ZP {
     componentWillUnmount() {
         this.activitiesHideTimeout.stop();
     }
@@ -449,7 +449,7 @@ function ei(e) {
         C = (0, v.Z)(),
         j = (0, s.e7)([U.ZP], () => U.ZP.isFavorite(t.id, n.id)),
         E = e.connected || (null == C ? void 0 : C.channelId) === n.id,
-        P = (0, H.Z)({
+        P = (0, F.Z)({
             channel: n,
             isChannelSelected: o,
             isChannelCollapsed: a,

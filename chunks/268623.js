@@ -11,8 +11,8 @@ var i = n(200651),
     f = n(175006),
     g = n(742989),
     m = n(898150),
-    b = n(70956),
-    h = n(388032);
+    h = n(70956),
+    b = n(388032);
 function p(e) {
     let { enabled: t } = s.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
         { showReminders: n } = g.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
@@ -21,7 +21,7 @@ function p(e) {
             let { message: t, savedMessage: n } = e,
                 [l, o] = r.useState(new Date());
             r.useEffect(() => {
-                let e = setInterval(() => o(new Date()), b.Z.Millis.MINUTE);
+                let e = setInterval(() => o(new Date()), h.Z.Millis.MINUTE);
                 return () => {
                     clearInterval(e);
                 };
@@ -44,7 +44,7 @@ function p(e) {
                 });
             return (null == n ? void 0 : n.saveData.dueAt) == null
                 ? (0, i.jsx)(a.kSQ, {
-                      label: h.intl.string(h.t.roMu1N),
+                      label: b.intl.string(b.t.roMu1N),
                       children: d
                   })
                 : (0, i.jsxs)(a.kSQ, {
@@ -52,7 +52,7 @@ function p(e) {
                       children: [
                           (0, i.jsx)(a.sNh, {
                               id: 'mark-complete',
-                              label: h.intl.string(h.t.yjGtdH),
+                              label: b.intl.string(b.t.yjGtdH),
                               icon: a.kmB,
                               action: () =>
                                   (0, c.z)({
@@ -63,7 +63,7 @@ function p(e) {
                           }),
                           (0, i.jsx)(a.sNh, {
                               id: 'edit-reminder',
-                              label: h.intl.string(h.t.vrbqs7),
+                              label: b.intl.string(b.t.vrbqs7),
                               children: d
                           })
                       ]
@@ -76,7 +76,7 @@ function p(e) {
         ? null != p || (0, f.Z)()
             ? (0, i.jsxs)(a.sNh, {
                   id: 'save-for-later',
-                  label: h.intl.string(h.t.tpxJtr),
+                  label: b.intl.string(b.t.tpxJtr),
                   action: () =>
                       null == p
                           ? (0, c.z)({
@@ -94,7 +94,7 @@ function p(e) {
                       null != p
                           ? (0, i.jsx)(a.sNh, {
                                 id: 'remove-from-for-later',
-                                label: h.intl.string(h.t.SvXS1d),
+                                label: b.intl.string(b.t.SvXS1d),
                                 icon: a.plf,
                                 action: () =>
                                     (0, c.x)({
@@ -106,7 +106,7 @@ function p(e) {
                             })
                           : (0, i.jsx)(a.sNh, {
                                 id: 'create-bookmark',
-                                label: h.intl.string(h.t['9p3D9v']),
+                                label: b.intl.string(b.t['9p3D9v']),
                                 icon: a.gt9,
                                 action: () =>
                                     (0, c.z)({
@@ -121,7 +121,7 @@ function p(e) {
               })
             : (0, i.jsx)(a.sNh, {
                   id: 'save-for-later-upsell',
-                  label: h.intl.string(h.t.tpxJtr),
+                  label: b.intl.string(b.t.tpxJtr),
                   icon: a.SrA,
                   iconProps: { color: o.JX.PREMIUM_TIER_2 },
                   action: () =>

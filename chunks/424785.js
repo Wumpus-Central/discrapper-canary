@@ -40,7 +40,7 @@ var i = n(120356),
     G = n(388032),
     B = n(915887),
     V = n(185346);
-function F(e, t, n) {
+function H(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,7 +53,7 @@ function F(e, t, n) {
         e
     );
 }
-function H(e) {
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,7 +64,7 @@ function H(e) {
                 })
             )),
             r.forEach(function (t) {
-                F(e, t, n[t]);
+                H(e, t, n[t]);
             });
     }
     return e;
@@ -160,7 +160,7 @@ class W extends R.ZP {
                                     return (0, r.jsxs)(
                                         L.ZP,
                                         z(
-                                            H(
+                                            F(
                                                 {
                                                     className: B.iconVisibility,
                                                     iconClassName: l()({ [V.iconLive]: null != f }),
@@ -206,20 +206,20 @@ class W extends R.ZP {
     }
     constructor(...e) {
         super(...e),
-            F(this, 'state', { shouldShowGuildVerificationPopout: !1 }),
-            F(this, 'closeGuildVerificationPopout', () => {
+            H(this, 'state', { shouldShowGuildVerificationPopout: !1 }),
+            H(this, 'closeGuildVerificationPopout', () => {
                 this.setState({ shouldShowGuildVerificationPopout: !1 });
             }),
-            F(this, 'handleClick', () => {
+            H(this, 'handleClick', () => {
                 let { channel: e, locked: t, connected: n, unverifiedAccount: r } = this.props,
                     i = e.getGuildId();
                 null != i && (0, g.n)(i) && (0, f.hk)(i), r && this.setState({ shouldShowGuildVerificationPopout: !0 }), t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, _.Cq)(e), __OVERLAY__ || (0, y.Kh)(e.id);
             }),
-            F(this, 'handleClickChat', () => {
+            H(this, 'handleClickChat', () => {
                 let { channel: e, locked: t } = this.props;
                 __OVERLAY__ || t || (0, y.Kh)(e.id);
             }),
-            F(this, 'handleContextMenu', (e) => {
+            H(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     i = P.Z.getGuild(t.getGuildId());
                 null != i &&
@@ -228,14 +228,14 @@ class W extends R.ZP {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                z(H({}, n), {
+                                z(F({}, n), {
                                     channel: t,
                                     guild: i
                                 })
                             );
                     });
             }),
-            F(this, 'renderPopout', () => {
+            H(this, 'renderPopout', () => {
                 let { channel: e } = this.props,
                     { shouldShowGuildVerificationPopout: t } = this.state;
                 if (t)
@@ -246,7 +246,7 @@ class W extends R.ZP {
                     });
                 throw Error('VoiceChannel.renderPopout: There must always be something to render');
             }),
-            F(this, 'renderOpenChatButton', () => {
+            H(this, 'renderOpenChatButton', () => {
                 let { channel: e, locked: t, forceShowButtons: n } = this.props;
                 if (!t)
                     return (0, r.jsx)(s.ua7, {
@@ -272,11 +272,11 @@ class W extends R.ZP {
                         }
                     });
             }),
-            F(this, 'getTooltipText', () => {
+            H(this, 'getTooltipText', () => {
                 let { connected: e } = this.props;
                 return this.isFull() && !e ? G.intl.string(G.t.rZfiNj) : null;
             }),
-            F(this, 'renderSubtitle', () => {
+            H(this, 'renderSubtitle', () => {
                 var e;
                 let t = null == (e = this.props.stageInstance) ? void 0 : e.topic;
                 return null == t ? null : (0, r.jsx)(p.Z, { children: t });
@@ -323,7 +323,7 @@ function K(e) {
     return (0, r.jsx)(
         Y,
         z(
-            H(
+            F(
                 {
                     categoryCollapsed: h,
                     connectAction: p,

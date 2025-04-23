@@ -10,8 +10,8 @@ var r = t(200651),
     d = t(690786),
     p = t(838968),
     m = t(262212),
-    x = t(279604),
-    _ = t(981631),
+    _ = t(279604),
+    x = t(981631),
     f = t(680278),
     v = t(388032),
     g = t(568413),
@@ -41,7 +41,7 @@ function h(e) {
         t = i.useMemo(() => {
             let e = c.C[n];
             if (null == e) return [];
-            let t = e.tier === _.Eu4.TIER_3 ? e.perks.slice(0, -1) : e.perks;
+            let t = e.tier === x.Eu4.TIER_3 ? e.perks.slice(0, -1) : e.perks;
             return null == t
                 ? void 0
                 : t.map((e, t) =>
@@ -85,12 +85,12 @@ function C(e) {
     let n,
         { guildId: t, index: o, powerup: s, nextPowerup: l } = e,
         c = (0, u.Z)(t, s),
-        _ = (0, u.Z)(t, l),
+        x = (0, u.Z)(t, l),
         f = null != (0, d.Z)(t, s) || c,
-        v = null != (0, d.Z)(t, l) || _,
+        v = null != (0, d.Z)(t, l) || x,
         [C, N] = i.useState(void 0);
     return (
-        (0, x.KT)(C),
+        (0, _.KT)(C),
         (n = 0 === o ? 'start' : null == l ? 'end' : 'middle'),
         (0, r.jsxs)(p.Z, {
             guildId: t,

@@ -318,12 +318,12 @@ let A = i.memo(function (e) {
         U = !k && A,
         G = (0, y.xR)(C) && L && !g,
         [B, V] = i.useState(!1),
-        F = i.useRef(!1),
-        H = i.useRef(null),
+        H = i.useRef(!1),
+        F = i.useRef(null),
         z = i.useRef(void 0),
         W = m.QK.getSetting();
     i.useEffect(() => {
-        if (G && t && !F.current && W)
+        if (G && t && !H.current && W)
             return (
                 V(!0),
                 (z.current = setTimeout(() => {
@@ -335,7 +335,7 @@ let A = i.memo(function (e) {
             );
     }, [G, t, W]),
         i.useEffect(() => {
-            F.current = t;
+            H.current = t;
         }, [t]);
     let Y = () => {
             let { renderBanner: t, guildBanner: n } = e;
@@ -350,7 +350,7 @@ let A = i.memo(function (e) {
             onContextMenu: c,
             ariaControls: _,
             ariaExpanded: b,
-            guildHeaderRef: H
+            guildHeaderRef: F
         };
     return (0, r.jsx)(u.f6W, {
         theme: t ? O.BRd.DARK : void 0,
@@ -358,7 +358,7 @@ let A = i.memo(function (e) {
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)('div', {
-                        ref: H,
+                        ref: F,
                         className: o()(l, {
                             [j.container]: !0,
                             [j.clickable]: !q && null != s,

@@ -29,7 +29,7 @@ let h = '__SENTRY_SUPPRESS_TRACING__';
 function O(t, e) {
     let a = S();
     if (a.startSpan) return a.startSpan(t, e);
-    let r = C(t),
+    let r = v(t),
         { forceTransaction: n, parentSpan: _ } = t;
     return (0, i.$e)(t.scope, () =>
         b(_)(() => {
@@ -38,7 +38,7 @@ function O(t, e) {
                 o =
                     t.onlyIfParent && !_
                         ? new p.b()
-                        : v({
+                        : C({
                               parentSpan: _,
                               spanArguments: r,
                               forceTransaction: n,
@@ -66,7 +66,7 @@ function O(t, e) {
 function D(t, e) {
     let a = S();
     if (a.startSpanManual) return a.startSpanManual(t, e);
-    let r = C(t),
+    let r = v(t),
         { forceTransaction: n, parentSpan: _ } = t;
     return (0, i.$e)(t.scope, () =>
         b(_)(() => {
@@ -75,7 +75,7 @@ function D(t, e) {
                 o =
                     t.onlyIfParent && !_
                         ? new p.b()
-                        : v({
+                        : C({
                               parentSpan: _,
                               spanArguments: r,
                               forceTransaction: n,
@@ -105,14 +105,14 @@ function D(t, e) {
 function g(t) {
     let e = S();
     if (e.startInactiveSpan) return e.startInactiveSpan(t);
-    let a = C(t),
+    let a = v(t),
         { forceTransaction: r, parentSpan: n } = t;
     return (t.scope ? (e) => (0, i.$e)(t.scope, e) : void 0 !== n ? (t) => m(n, t) : (t) => t())(() => {
         let e = (0, i.nZ)(),
             n = M(e);
         return t.onlyIfParent && !n
             ? new p.b()
-            : v({
+            : C({
                   parentSpan: n,
                   spanArguments: a,
                   forceTransaction: r,
@@ -132,7 +132,7 @@ function m(t, e) {
 function y(t) {
     return (0, i.$e)((e) => (e.setPropagationContext((0, n.Q)()), s.X && _.kg.info(`Starting a new trace with id ${e.getPropagationContext().traceId}`), m(null, t)));
 }
-function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
+function C({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
     let n;
     if (!(0, u.z)()) return new p.b();
     let _ = (0, i.aF)();
@@ -190,7 +190,7 @@ function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
     }
     return (0, A.Z)(n), (0, L.YJ)(n, r, _), n;
 }
-function C(t) {
+function v(t) {
     let e = {
         isStandalone: (t.experimental || {}).standalone,
         ...t

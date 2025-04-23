@@ -178,10 +178,10 @@ let R = i.memo(function (e) {
             },
             [t]
         ),
-        F = i.useCallback(() => {
+        H = i.useCallback(() => {
             u.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
-        H = i.useCallback(
+        F = i.useCallback(
             (e) => {
                 let i = m.Z.getChannel(t.id);
                 null != i &&
@@ -252,8 +252,8 @@ let R = i.memo(function (e) {
                         [I.modeUnreadImportant]: !B && !l && M,
                         [I.withGuildIcon]: D
                     }),
-                    onMouseDown: F,
-                    onContextMenu: H,
+                    onMouseDown: H,
+                    onContextMenu: F,
                     children: [
                         !M || B || l ? null : (0, r.jsx)('div', { className: o()(I.unread, I.unreadImportant) }),
                         (0, r.jsx)(

@@ -2,7 +2,7 @@ a.d(e, {
     $k: () => p,
     Dp: () => m,
     Gx: () => y,
-    HN: () => v,
+    HN: () => C,
     HR: () => d,
     Hb: () => f,
     Tt: () => L,
@@ -13,7 +13,7 @@ a.d(e, {
     j5: () => g,
     ve: () => I,
     wy: () => A,
-    yc: () => C
+    yc: () => v
 });
 var r = a(370336),
     n = a(370541),
@@ -117,12 +117,12 @@ function m(t) {
 function y(t) {
     return t[D] || t;
 }
-function v() {
+function C() {
     let t = (0, i.c)(),
         e = (0, o.G)(t);
     return e.getActiveSpan ? e.getActiveSpan() : (0, u.Y)((0, c.nZ)());
 }
-function C(t, e, a, r, n, _) {
-    let o = v();
+function v(t, e, a, r, n, _) {
+    let o = C();
     o && (0, s.V)(o, t, e, a, r, n, _);
 }

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => x });
+t.d(n, { Z: () => _ });
 var r = t(200651);
 t(192379);
 var i = t(793030),
@@ -11,12 +11,12 @@ var i = t(793030),
     d = t(680278),
     p = t(388032),
     m = t(326319);
-function x(e) {
+function _(e) {
     let { boost: n } = e,
         t = new Date(c.default.extractTimestamp(n.id)),
         {
-            username: x,
-            roleColor: _,
+            username: _,
+            roleColor: x,
             roleColorStrings: f
         } = (0, o.cj)(
             [l.ZP],
@@ -54,9 +54,9 @@ function x(e) {
                         color: 'currentColor',
                         variant: 'text-md/semibold',
                         lineClamp: 1,
-                        children: x
+                        children: _
                     }),
-                    color: null != _ ? _ : void 0,
+                    color: null != x ? x : void 0,
                     roleColors: v
                 }),
                 (0, r.jsx)(i.xv, {

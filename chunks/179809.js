@@ -26,7 +26,7 @@ let E = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     P = (0, a.animated)(d.Kqy),
     I = i.memo(function (e) {
         let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: u, mentionCount: g = 0, isMentionLowImportance: I, unread: w = !1, defaultFolderName: N, useCircleMask: Z = !1, draggable: T = !1, sorting: A = !1, onDragStart: R, onDragEnd: D, onExpandCollapse: L, onContextMenu: k, renderChildNode: M, folderIconContent: U, folderIconContentClassName: G, 'aria-setsize': B, 'aria-posinset': V } = e,
-            { id: F, name: H, children: z } = t,
+            { id: H, name: F, children: z } = t,
             [W, Y] = i.useState(!1),
             [K, q] = i.useState(!1),
             Q = W || K;
@@ -56,9 +56,9 @@ let E = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 },
                 [L, a]
             ),
-            et = null != H && '' !== H ? H : null != N && '' !== N ? N : j.intl.string(j.t.xV9hVl),
-            en = (0, c.Ie)(''.concat(F)),
-            er = 'folder-items-'.concat(F),
+            et = null != F && '' !== F ? F : null != N && '' !== N ? N : j.intl.string(j.t.xV9hVl),
+            en = (0, c.Ie)(''.concat(H)),
+            er = 'folder-items-'.concat(H),
             ei = (function (e) {
                 let t = (0, d.dQu)(d.TVs.modules.guildbar.AVATAR_SIZE),
                     n = (0, p.Q3)('FolderItem.useHeight'),
@@ -74,7 +74,7 @@ let E = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 leave: { height: 0 },
                 config: { duration: E }
             }),
-            eo = i.useCallback((e) => (null == n ? void 0 : n(F, e)), [n, F]),
+            eo = i.useCallback((e) => (null == n ? void 0 : n(H, e)), [n, H]),
             es = (0, r.jsxs)(v.H, {
                 children: [
                     (0, r.jsx)(b.Z, {

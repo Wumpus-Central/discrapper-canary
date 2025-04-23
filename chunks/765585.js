@@ -15,7 +15,7 @@ let f = i.forwardRef(function (e, t) {
         M = x ? s.zxk.Sizes.LARGE : s.zxk.Sizes.MAX,
         [U, G] = i.useState(!1),
         { ref: B, width: V } = (0, a.ZP)();
-    function F(e) {
+    function H(e) {
         (0, c.EW)(E, { dismissAction: e });
     }
     return (
@@ -104,7 +104,7 @@ let f = i.forwardRef(function (e, t) {
                                               className: p.button,
                                               size: M,
                                               onClick: (e) => {
-                                                  null == O || O(e), _(e), F(d.L.PRIMARY);
+                                                  null == O || O(e), _(e), H(d.L.PRIMARY);
                                               },
                                               color: null != k ? k : j || N ? s.zxk.Colors.BRAND_INVERTED : s.zxk.Colors.WHITE,
                                               children: null != b ? b : h.intl.string(h.t.IHf1RE)
@@ -114,7 +114,7 @@ let f = i.forwardRef(function (e, t) {
                                                   className: p.button,
                                                   size: M,
                                                   onClick: (e) => {
-                                                      null == O || O(e), F(d.L.DISMISS);
+                                                      null == O || O(e), H(d.L.DISMISS);
                                                   },
                                                   color: j || N ? s.zxk.Colors.WHITE : s.zxk.Colors.BRAND,
                                                   look: j || N ? s.zxk.Looks.LINK : s.zxk.Looks.FILLED,
@@ -126,7 +126,7 @@ let f = i.forwardRef(function (e, t) {
                                       className: p.button,
                                       size: s.zxk.Sizes.MAX,
                                       onClick: (e) => {
-                                          null == O || O(e), F(d.L.PRIMARY);
+                                          null == O || O(e), H(d.L.PRIMARY);
                                       },
                                       color: s.zxk.Colors.WHITE,
                                       children: h.intl.string(h.t.HU2IR0)

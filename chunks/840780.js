@@ -39,8 +39,8 @@ var r = n(200651),
     G = n(690221),
     B = n(231664),
     V = n(759198),
-    F = n(970731),
-    H = n(131704),
+    H = n(970731),
+    F = n(131704),
     z = n(199902),
     W = n(314897),
     Y = n(592125),
@@ -219,7 +219,7 @@ class ey extends i.PureComponent {
                 }),
                 (0, r.jsxs)('div', {
                     className: ep.info,
-                    children: [t, null != l && (0, H.Qm)(l.type) ? m : (0, r.jsx)(eb, { timestamps: d })]
+                    children: [t, null != l && (0, F.Qm)(l.type) ? m : (0, r.jsx)(eb, { timestamps: d })]
                 })
             ]
         });
@@ -230,8 +230,8 @@ class ey extends i.PureComponent {
                   spacing: 16,
                   shouldShow: c,
                   renderPopout: () =>
-                      (0, r.jsx)(F.ZP, {
-                          color: F.BD.PRIMARY,
+                      (0, r.jsx)(H.ZP, {
+                          color: H.BD.PRIMARY,
                           header: eh.intl.string(eh.t.ON4pBg),
                           content: eh.intl.string(eh.t['8PAfND']),
                           buttonCTA: eh.intl.string(eh.t.WAI6xs),
@@ -243,7 +243,7 @@ class ey extends i.PureComponent {
                           onClick: () => {
                               u(ed.L.USER_DISMISS);
                           },
-                          caretPosition: F.DF.BOTTOM_CENTER
+                          caretPosition: H.DF.BOTTOM_CENTER
                       }),
                   children: (e) =>
                       (0, r.jsx)(
@@ -289,7 +289,7 @@ class ey extends i.PureComponent {
                 a()(null != t, 'Channel cannot be null during navigation click'),
                     g.Z.channelListScrollTo(null != (e = t.guild_id) ? e : ec.ME, t.id),
                     !(0, _.R)() &&
-                        ((0, H.vd)(t.type) &&
+                        ((0, F.vd)(t.type) &&
                             f.Z.selectParticipant(
                                 t.id,
                                 (0, E.gN)({
@@ -297,7 +297,7 @@ class ey extends i.PureComponent {
                                     instanceId: n.compositeInstanceId
                                 })
                             ),
-                        (0, H.Qm)(t.type) && (0, v.tg)(eu.Ez.PANEL));
+                        (0, F.Qm)(t.type) && (0, v.tg)(eu.Ez.PANEL));
             });
     }
 }
@@ -342,8 +342,8 @@ let e_ = (0, b.Z)(function (e) {
         k = null != f && f.ownerId === o && f.state !== ec.jm8.ENDED,
         M = (0, u.e7)([et.default, $.Z], () => (null != h ? (0, P.F6)(h, et.default, $.Z) : void 0)),
         G = (0, B.Z)(),
-        [V, F] = i.useState(!1),
-        { showsActivityPopoutQuickRefocusNUX: H, markActivityPopoutQuickRefocusNUXAsDismissed: el } = (function () {
+        [V, H] = i.useState(!1),
+        { showsActivityPopoutQuickRefocusNUX: F, markActivityPopoutQuickRefocusNUXAsDismissed: el } = (function () {
             let e = [],
                 t = (0, Z.wE)(d.z.ACTIVITY_POPOUT_NUX_MODAL),
                 n = (0, u.e7)([er.Z], () => er.Z.isFocused());
@@ -374,8 +374,8 @@ let e_ = (0, b.Z)(function (e) {
             guildForConnectedChannel: p,
             streamQualityIndicator: G,
             isForceShowSharingPopout: V,
-            setIsForceShowSharingPopout: F,
-            showsActivityPopoutQuickRefocusNUX: H,
+            setIsForceShowSharingPopout: H,
+            showsActivityPopoutQuickRefocusNUX: F,
             markActivityPopoutQuickRefocusNUXAsDismissed: el
         })
     );

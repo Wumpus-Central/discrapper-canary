@@ -233,7 +233,7 @@ var r = (function (t) {
         var e = t.abs();
         return !e.isUnit() && (!!(e.equals(2) || e.equals(3) || e.equals(5)) || (!(e.isEven() || e.isDivisibleBy(3) || e.isDivisibleBy(5)) && (!!e.lesser(49) || void 0)));
     }
-    function v(t, e) {
+    function C(t, e) {
         for (var a, n, _, o = t.prev(), i = o, c = 0; i.isEven(); ) (i = i.divide(2)), c++;
         t: for (n = 0; n < e.length; n++)
             if (!t.lesser(e[n]) && !((_ = r(e[n]).modPow(i, t)).isUnit() || _.equals(o))) {
@@ -566,16 +566,16 @@ var r = (function (t) {
             if (void 0 !== e) return e;
             var a = this.abs(),
                 n = a.bitLength();
-            if (n <= 64) return v(a, [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]);
+            if (n <= 64) return C(a, [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]);
             for (var _ = Math.log(2) * n.toJSNumber(), o = Math.ceil(!0 === t ? 2 * Math.pow(_, 2) : _), i = [], c = 0; c < o; c++) i.push(r(c + 2));
-            return v(a, i);
+            return C(a, i);
         }),
         (c.prototype.isPrime = i.prototype.isPrime = o.prototype.isPrime),
         (o.prototype.isProbablePrime = function (e, a) {
             var n = y(this);
             if (void 0 !== n) return n;
             for (var _ = this.abs(), o = t === e ? 5 : e, i = [], c = 0; c < o; c++) i.push(r.randBetween(2, _.minus(2), a));
-            return v(_, i);
+            return C(_, i);
         }),
         (c.prototype.isProbablePrime = i.prototype.isProbablePrime = o.prototype.isProbablePrime),
         (o.prototype.modInv = function (t) {
@@ -606,9 +606,9 @@ var r = (function (t) {
         (c.prototype.prev = function () {
             return new c(this.value - BigInt(1));
         });
-    for (var C = [1]; 2 * C[C.length - 1] <= 10000000; ) C.push(2 * C[C.length - 1]);
-    var S = C.length,
-        G = C[S - 1];
+    for (var v = [1]; 2 * v[v.length - 1] <= 10000000; ) v.push(2 * v[v.length - 1]);
+    var S = v.length,
+        G = v[S - 1];
     function M(t) {
         return 10000000 >= Math.abs(t);
     }
@@ -625,7 +625,7 @@ var r = (function (t) {
         var a = this;
         if (a.isZero()) return a;
         for (; e >= S; ) (a = a.multiply(G)), (e -= S - 1);
-        return a.multiply(C[e]);
+        return a.multiply(v[e]);
     }),
         (c.prototype.shiftLeft = i.prototype.shiftLeft = o.prototype.shiftLeft),
         (o.prototype.shiftRight = function (t) {
@@ -637,7 +637,7 @@ var r = (function (t) {
                 if (r.isZero() || (r.isNegative() && r.isUnit())) return r;
                 (r = (e = P(r, G))[1].isNegative() ? e[0].prev() : e[0]), (a -= S - 1);
             }
-            return (e = P(r, C[a]))[1].isNegative() ? e[0].prev() : e[0];
+            return (e = P(r, v[a]))[1].isNegative() ? e[0].prev() : e[0];
         }),
         (c.prototype.shiftRight = i.prototype.shiftRight = o.prototype.shiftRight),
         (o.prototype.not = function () {

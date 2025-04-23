@@ -1,102 +1,102 @@
 t.d(n, { Z: () => y });
-var r = t(200651);
+var l = t(200651);
 t(192379);
-var o = t(442837),
+var r = t(442837),
     i = t(320582),
-    l = t(699516),
+    o = t(699516),
     s = t(5192),
-    c = t(111361),
+    u = t(111361),
     a = t(648052),
-    d = t(537006),
-    u = t(681837),
+    c = t(537006),
+    d = t(681837),
     f = t(91433),
     p = t(944043),
-    m = t(502762),
+    g = t(502762),
     b = t(530),
-    h = t(740628),
-    g = t(643518),
+    v = t(740628),
+    h = t(643518),
     j = t(228168),
-    v = t(981631),
-    x = t(405666);
+    m = t(981631),
+    O = t(405666);
 function y(e) {
     var n;
-    let { user: t, currentUser: y, guildId: I, channelId: O, displayProfile: Z, initialSection: _, initialSubsection: P, friendToken: E, onClose: N } = e,
-        { relationshipType: A, originApplicationId: T } = (0, o.cj)([l.Z], () => ({
-            relationshipType: l.Z.getRelationshipType(t.id),
-            originApplicationId: l.Z.getOriginApplicationId(t.id)
+    let { user: t, currentUser: y, guildId: Z, channelId: I, displayProfile: x, initialSection: P, initialSubsection: E, friendToken: T, onClose: N } = e,
+        { relationshipType: S, originApplicationId: C } = (0, r.cj)([o.Z], () => ({
+            relationshipType: o.Z.getRelationshipType(t.id),
+            originApplicationId: o.Z.getOriginApplicationId(t.id)
         })),
-        C = (0, i.vh)(t.id),
-        S = t.id === y.id,
-        w = (0, c.I5)(y),
-        M = s.ZP.useName(null == Z ? void 0 : Z.guildId, O, t),
-        R = (0, g.Z)({
+        w = (0, i.vh)(t.id),
+        A = t.id === y.id,
+        R = (0, u.I5)(y),
+        _ = s.ZP.useName(null == x ? void 0 : x.guildId, I, t),
+        M = (0, h.Z)({
             user: t,
             currentUser: y,
-            guildId: I,
-            initialSubsection: P
+            guildId: Z,
+            initialSubsection: E
         });
-    return (0, r.jsxs)('div', {
-        className: x.body,
+    return (0, l.jsxs)('div', {
+        className: O.body,
         children: [
-            (0, r.jsx)(b.Z, {
-                className: x.username,
+            (0, l.jsx)(b.Z, {
+                className: O.username,
                 user: t,
-                nickname: M,
-                pronouns: null == Z ? void 0 : Z.pronouns,
+                nickname: _,
+                pronouns: null == x ? void 0 : x.pronouns,
                 nicknameVariant: 'heading-xl/bold',
-                nicknameIcons: (0, r.jsx)(u.Z, { userId: t.id }),
-                tags: (0, r.jsx)(a.Z, {
-                    displayProfile: Z,
+                nicknameIcons: (0, l.jsx)(d.Z, { userId: t.id }),
+                tags: (0, l.jsx)(a.Z, {
+                    displayProfile: x,
                     themeType: j.lY.MODAL,
                     onClose: N
                 })
             }),
-            A === v.OGo.PENDING_INCOMING &&
-                (0, r.jsx)(m.Z.Overlay, {
-                    className: x.bannerContainer,
-                    children: (0, r.jsx)(f.Z, {
+            S === m.OGo.PENDING_INCOMING &&
+                (0, l.jsx)(g.Z.Overlay, {
+                    className: O.bannerContainer,
+                    children: (0, l.jsx)(f.Z, {
                         user: t,
-                        applicationId: T,
-                        guildId: null != (n = null == Z ? void 0 : Z.guildId) ? n : void 0,
-                        channelId: O,
-                        friendToken: E,
-                        className: x.friendRequestBanner
+                        applicationId: C,
+                        guildId: null != (n = null == x ? void 0 : x.guildId) ? n : void 0,
+                        channelId: I,
+                        friendToken: T,
+                        className: O.friendRequestBanner
                     })
                 }),
-            C.map((e) =>
-                (0, r.jsx)(
-                    m.Z.Overlay,
+            w.map((e) =>
+                (0, l.jsx)(
+                    g.Z.Overlay,
                     {
-                        className: x.bannerContainer,
-                        children: (0, r.jsx)(f.Z, {
+                        className: O.bannerContainer,
+                        children: (0, l.jsx)(f.Z, {
                             user: t,
-                            channelId: O,
+                            channelId: I,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
-                            className: x.friendRequestBanner
+                            className: O.friendRequestBanner
                         })
                     },
                     e.applicationId
                 )
             ),
-            (0, r.jsx)(p.Z, {
+            (0, l.jsx)(p.Z, {
                 user: t,
-                className: x.bannerContainer
+                className: O.bannerContainer
             }),
-            S &&
-                (0, r.jsx)(d.Z, {
-                    className: x.bannerContainer,
-                    isPremiumUser: w,
+            A &&
+                (0, l.jsx)(c.Z, {
+                    className: O.bannerContainer,
+                    isPremiumUser: R,
                     onInteraction: N
                 }),
-            (0, r.jsx)(h.Z, {
+            (0, l.jsx)(v.Z, {
                 user: t,
                 currentUser: y,
-                displayProfile: Z,
-                guildId: I,
-                items: R,
-                initialSection: _,
-                initialSubsection: P,
+                displayProfile: x,
+                guildId: Z,
+                items: M,
+                initialSection: P,
+                initialSubsection: E,
                 onClose: N
             })
         ]

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => h });
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -11,10 +11,10 @@ var i = n(200651),
     f = n(626135),
     g = n(981631),
     m = n(388032);
-function b(e, t) {
+function h(e, t) {
     let n = (0, d.Z)(t, e),
-        b = e.hasPotions(),
-        h = (0, u.Nt)(),
+        h = e.hasPotions(),
+        b = (0, u.Nt)(),
         p = r.useCallback(
             (n) => {
                 try {
@@ -35,7 +35,7 @@ function b(e, t) {
                     source: s.YD.MessageContextMenu
                 });
         }, [t.id, e, p]);
-    return n && !b && h
+    return n && !h && b
         ? (0, i.jsx)(l.sNh, {
               id: 'add-confetti-potion',
               label: m.intl.string(m.t.icaJW1),

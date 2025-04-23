@@ -10,13 +10,13 @@ var r = n(200651),
     d = n(785717),
     f = n(221292),
     _ = n(687158),
-    p = n(899007),
-    h = n(867176),
-    m = n(502762),
-    g = n(952124),
-    E = n(544989),
-    b = n(4517),
-    y = n(171368),
+    p = n(892001),
+    h = n(899007),
+    m = n(867176),
+    g = n(502762),
+    E = n(952124),
+    b = n(544989),
+    y = n(4517),
     v = n(895697),
     O = n(161572),
     I = n(228168),
@@ -71,7 +71,7 @@ function C(e) {
     }, [B, L]);
     let F = (e) => {
             null == D || D(),
-                (0, y.openUserProfileModal)(
+                (0, p.openUserProfileModal)(
                     N(
                         {
                             sourceAnalyticsLocations: k,
@@ -112,13 +112,13 @@ function C(e) {
             children: (0, r.jsx)(o.VqE, {
                 ref: B,
                 'aria-label': t.username,
-                children: (0, r.jsxs)(m.Z, {
+                children: (0, r.jsxs)(g.Z, {
                     user: t,
                     displayProfile: U,
                     themeType: I.lY.POPOUT,
                     children: [
-                        (0, r.jsx)(E.Z, {
-                            children: (0, r.jsx)(g.Z, {
+                        (0, r.jsx)(b.Z, {
+                            children: (0, r.jsx)(E.Z, {
                                 user: t,
                                 guildId: A,
                                 viewProfileItem: Z(),
@@ -128,13 +128,13 @@ function C(e) {
                         (0, r.jsxs)('header', {
                             className: T.header,
                             children: [
-                                (0, r.jsx)(h.Z, {
+                                (0, r.jsx)(m.Z, {
                                     user: t,
                                     displayProfile: U,
                                     guildId: A,
                                     themeType: I.lY.POPOUT
                                 }),
-                                (0, r.jsx)(p.Z, {
+                                (0, r.jsx)(h.Z, {
                                     user: t,
                                     displayProfile: U,
                                     guildId: A,
@@ -142,7 +142,7 @@ function C(e) {
                                     themeType: I.lY.POPOUT,
                                     onOpenProfile: x ? void 0 : F
                                 }),
-                                (0, r.jsx)(b.Z, {
+                                (0, r.jsx)(y.Z, {
                                     location: 'BotUserProfilePopout',
                                     user: t,
                                     themeType: I.lY.POPOUT,

@@ -45,8 +45,8 @@ var r,
     G = n(906817),
     B = n(429122),
     V = n(285573),
-    F = n(995993),
-    H = n(910595),
+    H = n(995993),
+    F = n(910595),
     z = n(120818),
     W = n(61642),
     Y = n(848442),
@@ -552,7 +552,7 @@ class ep extends (r = l.PureComponent) {
                             );
                         case en.z.GUILD_HOME:
                             return (0, i.jsx)(
-                                H.Z,
+                                F.Z,
                                 {
                                     guild: r,
                                     selected: s === el.oC.GUILD_HOME
@@ -590,7 +590,7 @@ class ep extends (r = l.PureComponent) {
                             return (0, i.jsx)(z.T, { guild: r });
                         case en.z.CHANNELS_AND_ROLES:
                             return (0, i.jsx)(
-                                F.m,
+                                H.m,
                                 {
                                     guild: r,
                                     selected: s === el.oC.CHANNEL_BROWSER || s === el.oC.CUSTOMIZE_COMMUNITY

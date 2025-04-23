@@ -39,8 +39,8 @@ var r = n(200651),
     G = n(257351),
     B = n(474109),
     V = n(741616),
-    F = n(187835),
-    H = n(118122),
+    H = n(187835),
+    F = n(118122),
     z = n(193154),
     W = n(602147),
     Y = n(222059),
@@ -270,12 +270,12 @@ function ed(e) {
             (0, r.jsx)(Q.Z, {}),
             i
                 ? null
-                : (0, r.jsx)(H.Z, {
+                : (0, r.jsx)(F.Z, {
                       disableTooltip: o.length > 0,
                       lastTargetNode: a[a.length - 1]
                   }),
             i ? null : t,
-            n ? null : (0, r.jsx)(F.Z, {})
+            n ? null : (0, r.jsx)(H.Z, {})
         ]
     });
 }
@@ -294,8 +294,8 @@ function eh(e) {
         A = i.useCallback(() => S(!1), []),
         R = i.useRef(!1),
         [k] = i.useState(() => new f.V7()),
-        F = i.useRef(null),
         H = i.useRef(null),
+        F = i.useRef(null),
         z = (0, u.OP)(),
         { ref: Y } = z,
         K = es(z, ['ref']),
@@ -312,7 +312,7 @@ function eh(e) {
                     eh,
                     () => {
                         var e, t;
-                        null == (e = F.current) || e.calculateState(), null == (t = H.current) || t.calculateState();
+                        null == (e = H.current) || e.calculateState(), null == (t = F.current) || t.calculateState();
                     },
                     (function (e, t, n) {
                         let r = t ? n : 8,
@@ -445,7 +445,7 @@ function eh(e) {
               )
             : ew,
         eZ = (0, r.jsx)(B.Z, {
-            ref: F,
+            ref: H,
             isVisible: eg.isItemVisible,
             onJumpTo: eg.handleJumpToGuild,
             className: er.unreadMentionsIndicatorTop,
@@ -539,7 +539,7 @@ function eh(e) {
                         ),
                         (0, r.jsx)(B.Z, {
                             reverse: !0,
-                            ref: H,
+                            ref: F,
                             isVisible: eg.isItemVisible,
                             onJumpTo: eg.handleJumpToGuild,
                             className: o()(er.unreadMentionsIndicatorBottom, { [er.unreadMentionsFixedFooter]: !n }),

@@ -132,8 +132,8 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 'respect-motion-settings',
                 [M, C, B, G]
             ),
-            F = t.premiumTier < L && M >= P.oCV[L],
-            H = () => {
+            H = t.premiumTier < L && M >= P.oCV[L],
+            F = () => {
                 (0, f.yw)(P.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: { section: P.jXE.PREMIUM_GUILD_PROGRESS_BAR },
                     guild_id: t.id,
@@ -160,7 +160,7 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         let Y = (0, a.JA)('boosts-'.concat(t.id));
         return (0, r.jsx)('li', {
             children: (0, r.jsx)(d.ua7, {
-                text: F ? I.intl.formatToPlainString(w.default['9CtPjo'], { perk: (0, v.nW)(L) }) : D ? I.intl.string(I.t['Y+V9go']) : I.intl.formatToPlainString(I.t.UyDKl5, { levelName: (0, v.nW)(L) }),
+                text: H ? I.intl.formatToPlainString(w.default['9CtPjo'], { perk: (0, v.nW)(L) }) : D ? I.intl.string(I.t['Y+V9go']) : I.intl.formatToPlainString(I.t.UyDKl5, { levelName: (0, v.nW)(L) }),
                 color: d.ua7.Colors.BLACK,
                 position: 'top',
                 delay: 200,
@@ -177,7 +177,7 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                     right: 4
                                 }
                             },
-                            onClick: H,
+                            onClick: F,
                             className: o()(N.container, { [N.containerWithMargin]: n }),
                             onContextMenu: (e) => {
                                 U && (0, h.vq)(e, (e) => (0, r.jsx)(R, T(Z({}, e), { guild: t })));

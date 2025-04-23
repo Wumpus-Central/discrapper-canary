@@ -1,37 +1,37 @@
-n.d(t, { Z: () => b });
-var r = n(200651);
-n(192379);
-var l = n(399606),
-    s = n(481060),
-    i = n(275759),
-    a = n(565138),
-    c = n(706454),
-    o = n(271383),
-    u = n(430824),
-    d = n(709054),
-    m = n(388032),
-    p = n(209643);
-function f(e) {
+r.d(t, { Z: () => b });
+var n = r(200651);
+r(192379);
+var i = r(399606),
+    s = r(481060),
+    l = r(275759),
+    a = r(565138),
+    c = r(706454),
+    o = r(271383),
+    u = r(430824),
+    d = r(709054),
+    p = r(388032),
+    f = r(209643);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = n);
             });
     }
     return e;
@@ -42,45 +42,45 @@ function j(e, t) {
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var n = Object.keys(e);
+                  var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
                   }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
               }),
         e
     );
 }
 function b(e) {
-    let { userId: t, guildId: n, textClassName: b, tooltipDelay: x } = e,
-        v = (0, l.e7)([c.default], () => c.default.locale),
-        g = (0, l.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
-        h = (0, l.e7)([o.ZP], () => (null != n ? o.ZP.getMember(n, t) : null)),
-        y = (0, i.FI)(d.default.extractTimestamp(t), v),
-        O = (0, i.FI)(null == h ? void 0 : h.joinedAt, v);
-    return null == g || null == h
-        ? (0, r.jsx)(s.Text, {
+    let { userId: t, guildId: r, textClassName: b, tooltipDelay: g } = e,
+        v = (0, i.e7)([c.default], () => c.default.locale),
+        x = (0, i.e7)([u.Z], () => (null != r ? u.Z.getGuild(r) : null)),
+        y = (0, i.e7)([o.ZP], () => (null != r ? o.ZP.getMember(r, t) : null)),
+        O = (0, l.FI)(d.default.extractTimestamp(t), v),
+        h = (0, l.FI)(null == y ? void 0 : y.joinedAt, v);
+    return null == x || null == y
+        ? (0, n.jsx)(s.Text, {
               variant: 'text-sm/normal',
               className: b,
-              children: y
+              children: O
           })
-        : (0, r.jsxs)('div', {
-              className: p.memberSinceWrapper,
+        : (0, n.jsxs)('div', {
+              className: f.memberSinceWrapper,
               children: [
-                  (0, r.jsxs)('div', {
-                      className: p.memberSince,
+                  (0, n.jsxs)('div', {
+                      className: f.memberSince,
                       children: [
-                          (0, r.jsx)(s.ua7, {
-                              text: m.intl.string(m.t.uvGmCw),
-                              delay: x,
+                          (0, n.jsx)(s.ua7, {
+                              text: p.intl.string(p.t.uvGmCw),
+                              delay: g,
                               children: (e) =>
-                                  (0, r.jsx)(
+                                  (0, n.jsx)(
                                       s.gw7,
                                       j(
-                                          f(
+                                          m(
                                               {
                                                   size: 'custom',
                                                   width: 28,
@@ -89,37 +89,37 @@ function b(e) {
                                               },
                                               e
                                           ),
-                                          { className: p.discordIcon }
+                                          { className: f.discordIcon }
                                       )
                                   )
                           }),
-                          (0, r.jsx)(s.Text, {
+                          (0, n.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               className: b,
-                              children: y
+                              children: O
                           })
                       ]
                   }),
-                  (0, r.jsx)('div', { className: p.divider }),
-                  (0, r.jsxs)('div', {
-                      className: p.memberSince,
+                  (0, n.jsx)('div', { className: f.divider }),
+                  (0, n.jsxs)('div', {
+                      className: f.memberSince,
                       children: [
-                          (0, r.jsx)(s.ua7, {
-                              text: g.name,
-                              delay: x,
+                          (0, n.jsx)(s.ua7, {
+                              text: x.name,
+                              delay: g,
                               children: (e) =>
-                                  (0, r.jsx)(
+                                  (0, n.jsx)(
                                       a.Z,
-                                      j(f({}, e), {
-                                          guild: g,
+                                      j(m({}, e), {
+                                          guild: x,
                                           size: a.Z.Sizes.SMOL
                                       })
                                   )
                           }),
-                          (0, r.jsx)(s.Text, {
+                          (0, n.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               className: b,
-                              children: O
+                              children: h
                           })
                       ]
                   })

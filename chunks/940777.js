@@ -72,8 +72,8 @@ function D() {
         })),
         B = (0, a.e7)([C.Z], () => C.Z.getChannelId(N.I_8)),
         V = (0, a.e7)([v.Z], () => v.Z.getChannel(B)),
-        F = (0, _.Z)((e) => e.guildId) === N.I_8,
-        { badge: H, unread: z } = (0, P.Z)(G),
+        H = (0, _.Z)((e) => e.guildId) === N.I_8,
+        { badge: F, unread: z } = (0, P.Z)(G),
         W = (function (e) {
             let t = (0, a.e7)([C.Z], () => C.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -109,7 +109,7 @@ function D() {
                 })
             );
         })(G),
-        Y = H > 0 ? (0, y.N)(H) : null,
+        Y = F > 0 ? (0, y.N)(F) : null,
         K = (0, f.Q3)('FavoritesButton'),
         q = i.useCallback(() => {
             L();
@@ -117,7 +117,7 @@ function D() {
     return (0, r.jsxs)(m.H, {
         children: [
             (0, r.jsx)(g.Z, {
-                selected: F,
+                selected: H,
                 hovered: k,
                 unread: z && !U,
                 className: T.pill
@@ -126,7 +126,7 @@ function D() {
                 onShow: q,
                 children: (0, r.jsx)(I.S, {
                     children: (0, r.jsx)(c.aRk, {
-                        selected: K || F || k,
+                        selected: K || H || k,
                         upperBadge: W,
                         lowerBadge: Y,
                         children: (0, r.jsx)(
@@ -136,14 +136,14 @@ function D() {
                                 {
                                     ariaLabel: Z.intl.formatToPlainString(Z.t['/uzRsr'], {
                                         guildName: Z.intl.string(Z.t.wMWycn),
-                                        mentions: H
+                                        mentions: F
                                     }),
-                                    'aria-selected': F,
+                                    'aria-selected': H,
                                     to: {
                                         pathname: N.Z5c.CHANNEL(N.I_8, B),
                                         state: R
                                     },
-                                    selected: F || k,
+                                    selected: H || k,
                                     onMouseEnter: () => M(!0),
                                     onMouseLeave: () => M(!1),
                                     onMouseDown: function () {

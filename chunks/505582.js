@@ -14,17 +14,17 @@ var r = n(200651),
     m = n(785717),
     g = n(221292),
     b = n(687158),
-    _ = n(899007),
-    y = n(648052),
-    C = n(867176),
-    x = n(280885),
-    v = n(900927),
-    j = n(678738),
-    O = n(502762),
-    E = n(530),
-    I = n(679332),
-    P = n(544989),
-    S = n(171368),
+    _ = n(892001),
+    y = n(899007),
+    C = n(648052),
+    x = n(867176),
+    v = n(280885),
+    j = n(900927),
+    O = n(678738),
+    E = n(502762),
+    I = n(530),
+    P = n(679332),
+    S = n(544989),
     Z = n(228168),
     N = n(388032),
     T = n(149385),
@@ -69,7 +69,7 @@ function R(e) {
         B = i.useRef(null),
         G = (0, a.Z)(B),
         F = (e) => {
-            (0, S.openUserProfileModal)(
+            (0, _.openUserProfileModal)(
                 w(
                     {
                         sourceAnalyticsLocations: D,
@@ -88,7 +88,7 @@ function R(e) {
             fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
             fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
             isLoaded: null == k ? void 0 : k.isLoaded,
-            children: (0, r.jsxs)(O.Z, {
+            children: (0, r.jsxs)(E.Z, {
                 ref: B,
                 user: t,
                 displayProfile: k,
@@ -97,17 +97,17 @@ function R(e) {
                 children: [
                     (0, r.jsxs)(l.u2, {
                         children: [
-                            (0, r.jsx)(P.Z, { children: (0, r.jsx)(I.Z, { user: t }) }),
+                            (0, r.jsx)(S.Z, { children: (0, r.jsx)(P.Z, { user: t }) }),
                             (0, r.jsxs)('header', {
                                 className: T.header,
                                 children: [
-                                    (0, r.jsx)(C.Z, {
+                                    (0, r.jsx)(x.Z, {
                                         user: t,
                                         displayProfile: k,
                                         themeType: Z.lY.SIDEBAR,
                                         animateOnHover: !G
                                     }),
-                                    (0, r.jsx)(_.Z, {
+                                    (0, r.jsx)(y.Z, {
                                         user: t,
                                         displayProfile: k,
                                         channelId: n.id,
@@ -120,33 +120,33 @@ function R(e) {
                             (0, r.jsxs)('div', {
                                 className: A.body,
                                 children: [
-                                    (0, r.jsx)(E.Z, {
+                                    (0, r.jsx)(I.Z, {
                                         user: t,
                                         nickname: f.ZP.getName(null, n.id, t),
                                         pronouns: null == k ? void 0 : k.pronouns,
                                         onOpenProfile: R ? void 0 : F,
-                                        tags: (0, r.jsx)(y.Z, {
+                                        tags: (0, r.jsx)(C.Z, {
                                             displayProfile: k,
                                             themeType: Z.lY.SIDEBAR
                                         })
                                     }),
-                                    (0, r.jsxs)(O.Z.Overlay, {
+                                    (0, r.jsxs)(E.Z.Overlay, {
                                         className: A.overlay,
                                         children: [
-                                            (0, r.jsx)(j.Z, {
+                                            (0, r.jsx)(O.Z, {
                                                 heading: N.intl.string(N.t['61W33d']),
                                                 headingColor: 'header-primary',
-                                                children: (0, r.jsx)(x.Z, {
+                                                children: (0, r.jsx)(v.Z, {
                                                     userBio: null == k ? void 0 : k.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,
                                                     isHovering: G
                                                 })
                                             }),
-                                            (0, r.jsx)(j.Z, {
+                                            (0, r.jsx)(O.Z, {
                                                 heading: N.intl.string(N.t['A//N4u']),
                                                 headingColor: 'header-primary',
-                                                children: (0, r.jsx)(v.Z, { userId: t.id })
+                                                children: (0, r.jsx)(j.Z, { userId: t.id })
                                             })
                                         ]
                                     })

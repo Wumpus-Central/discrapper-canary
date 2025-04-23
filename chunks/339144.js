@@ -49,7 +49,7 @@ let E = i.memo(function (e) {
                 }),
                 (0, a.h7)(D, !1);
         }, [D, k, G]),
-        F = i.useCallback(
+        H = i.useCallback(
             (e, t) => () => {
                 (0, p.v)(G, p.d.LEAVE_ACTIVITY),
                     d.Z.leaveActivity({
@@ -60,7 +60,7 @@ let E = i.memo(function (e) {
             },
             [G]
         ),
-        H = i.useCallback(() => {
+        F = i.useCallback(() => {
             (0, b.Z)(P);
         }, [P]),
         z = i.useCallback(() => {
@@ -130,7 +130,7 @@ let E = i.memo(function (e) {
                 ? (N
                       ? ((t = !1),
                         (l = () => {
-                            H(), (0, p.v)(G, p.d.STREAM, !1);
+                            F(), (0, p.v)(G, p.d.STREAM, !1);
                         }),
                         (u = s.g5r),
                         (E = j.intl.string(j.t.S5anIS)))
@@ -165,7 +165,7 @@ let E = i.memo(function (e) {
                 ? null
                 : (0, r.jsx)(v.Z, {
                       tooltipText: j.intl.string(j.t['R/FK4O']),
-                      onClick: F(R.applicationId, R.location),
+                      onClick: H(R.applicationId, R.location),
                       icon: s.PBZ
                   }),
         q = null == P ? null : (0, r.jsx)(f.Z, {});
