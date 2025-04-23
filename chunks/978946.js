@@ -1,13 +1,5 @@
-n.d(t, { r: () => a });
-var r = n(600553),
-    i = n(981631);
-function a(e) {
-    return null == e
-        ? i.pNK.OVERVIEW
-        : (0, r.i1)({
-                guildId: e,
-                location: 'getDefaultGuildSettingsSection'
-            })
-          ? i.pNK.PROFILE
-          : i.pNK.OVERVIEW;
+n.d(t, { r: () => i });
+var r = n(981631);
+function i() {
+    return r.pNK.PROFILE;
 }

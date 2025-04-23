@@ -141,7 +141,7 @@ function em(e) {
         (f = null),
         (ei = d),
         eb({
-            section: null != (t = null != i ? i : r) ? t : (0, x.r)(n),
+            section: null != (t = null != i ? i : r) ? t : (0, x.r)(),
             subsection: null != a ? a : null
         });
 }
@@ -174,7 +174,6 @@ function eb(e) {
                     invites: e.body
                 });
             });
-    else if (r === M.pNK.WIDGET) (0, D.R)(s.id);
     else if (r === M.pNK.INTEGRATIONS || r === M.pNK.ROLES) {
         if (((u = null), t !== e.section)) return eK(e);
     } else
@@ -205,7 +204,7 @@ function eI() {
 }
 function eS(e) {
     var t;
-    (K = M.QZA.OPEN), (r = null != r ? r : (0, x.r)(null == s ? void 0 : s.id)), (i = null), (z = null != (t = e.errors) ? t : {});
+    (K = M.QZA.OPEN), (r = null != r ? r : (0, x.r)()), (i = null), (z = null != (t = e.errors) ? t : {});
 }
 function eT() {
     if (null == s) return !1;

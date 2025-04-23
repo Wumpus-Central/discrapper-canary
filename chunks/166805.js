@@ -1,4 +1,4 @@
-n.d(t, { P: () => C }), n(388685), n(953529);
+n.d(t, { P: () => O }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
     l = n(580685),
@@ -6,26 +6,25 @@ var r = n(200651),
     a = n(442837),
     o = n(481060),
     c = n(497321),
-    d = n(484614),
-    u = n(314852),
+    u = n(484614),
+    d = n(314852),
     m = n(65361),
     g = n(246946),
     p = n(330010),
-    h = n(600553),
     f = n(999382),
-    x = n(800223),
-    b = n(24318),
-    j = n(822693),
-    _ = n(388032),
-    v = n(832721);
-function O(e) {
+    h = n(800223),
+    x = n(24318),
+    b = n(822693),
+    j = n(388032),
+    _ = n(832721);
+function v(e) {
     let { guildId: t } = e,
-        { guildProfile: c, fetchGuildProfile: g, fetchStatus: O } = (0, m.u)(t),
-        C = O !== u.a.FETCHED,
+        { guildProfile: c, fetchGuildProfile: g, fetchStatus: v } = (0, m.u)(t),
+        O = v !== d.a.FETCHED,
         {
-            fetchedEmbed: y,
-            embedEnabled: N,
-            embedChannelId: I
+            fetchedEmbed: C,
+            embedEnabled: y,
+            embedChannelId: N
         } = (0, a.cj)([f.Z], () => {
             let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = f.Z.getProps();
             return {
@@ -34,94 +33,90 @@ function O(e) {
                 embedChannelId: n
             };
         }),
-        E = i.useMemo(() => (0, b.S)(t), [t]),
-        S = i.useMemo(() => (0, b.a)(t), [t]),
-        [T, P] = i.useState(!1),
-        w = null != c && l.Y.VISIBLE.has(c.visibility),
-        R = !C && !w && !N,
-        Z = (0, h.Dj)({
-            guildId: t,
-            location: 'widget settings'
-        });
+        I = i.useMemo(() => (0, x.S)(t), [t]),
+        E = i.useMemo(() => (0, x.a)(t), [t]),
+        [S, T] = i.useState(!1),
+        P = null != c && l.Y.VISIBLE.has(c.visibility),
+        w = !O && !P && !y;
     i.useEffect(() => {
-        y || (0, p.R)(t);
-    }, [y, t]),
+        C || (0, p.R)(t);
+    }, [C, t]),
         i.useEffect(() => {
             g();
         }, [t, g]);
-    let D = i.useCallback(
+    let R = i.useCallback(
         async (e) => {
-            P(!0), await (0, x.c)(t, e, I), P(!1);
+            T(!0), await (0, h.c)(t, e, N), T(!1);
         },
-        [I, t]
+        [N, t]
     );
-    return y
+    return C
         ? (0, r.jsxs)('div', {
               children: [
                   (0, r.jsx)(o.j7V, {
-                      disabled: T,
-                      value: N,
+                      disabled: S,
+                      value: y,
                       hideBorder: !0,
-                      onChange: D,
-                      children: _.intl.string(_.t.NR6hub)
+                      onChange: R,
+                      children: j.intl.string(j.t.NR6hub)
                   }),
-                  R
+                  w
                       ? (0, r.jsx)(s.xv, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
-                            className: v.subtext,
-                            children: Z ? _.intl.string(_.t.zCGuJy) : _.intl.string(_.t.yInR2t)
+                            className: _.subtext,
+                            children: j.intl.string(j.t.zCGuJy)
                         })
                       : null,
-                  N
+                  y
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)('div', { className: v.divider }),
-                                (0, r.jsx)(o.vwX, { children: _.intl.string(_.t.LUo0Q0) }),
-                                (0, r.jsx)(j.m, {
+                                (0, r.jsx)('div', { className: _.divider }),
+                                (0, r.jsx)(o.vwX, { children: j.intl.string(j.t.LUo0Q0) }),
+                                (0, r.jsx)(b.m, {
                                     guildId: t,
-                                    widgetEnabled: N,
-                                    widgetChannelId: I,
+                                    widgetEnabled: y,
+                                    widgetChannelId: N,
                                     enableLocalUpdate: !0
                                 }),
                                 (0, r.jsx)(s.xv, {
                                     variant: 'text-sm/medium',
                                     color: 'text-secondary',
-                                    className: v.subtext,
-                                    children: _.intl.string(_.t.LxVR9P)
+                                    className: _.subtext,
+                                    children: j.intl.string(j.t.LxVR9P)
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: v.twoColumns,
+                                    className: _.twoColumns,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: v.column,
-                                            children: [(0, r.jsx)(o.vwX, { children: _.intl.string(_.t.TRyLUl) }), (0, r.jsx)(d.Z, { value: t })]
+                                            className: _.column,
+                                            children: [(0, r.jsx)(o.vwX, { children: j.intl.string(j.t.TRyLUl) }), (0, r.jsx)(u.Z, { value: t })]
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: v.column,
-                                            children: [(0, r.jsx)(o.vwX, { children: _.intl.string(_.t.VECJcH) }), (0, r.jsx)(d.Z, { value: E })]
+                                            className: _.column,
+                                            children: [(0, r.jsx)(o.vwX, { children: j.intl.string(j.t.VECJcH) }), (0, r.jsx)(u.Z, { value: I })]
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)('div', { className: v.divider }),
+                                (0, r.jsx)('div', { className: _.divider }),
                                 (0, r.jsxs)('div', {
-                                    className: v.twoColumns,
+                                    className: _.twoColumns,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: v.column,
+                                            className: _.column,
                                             children: [
-                                                (0, r.jsx)(o.vwX, { children: _.intl.string(_.t.XVGbn5) }),
-                                                (0, r.jsx)(d.Z, { value: S }),
+                                                (0, r.jsx)(o.vwX, { children: j.intl.string(j.t.XVGbn5) }),
+                                                (0, r.jsx)(u.Z, { value: E }),
                                                 (0, r.jsx)(s.xv, {
                                                     variant: 'text-sm/medium',
                                                     color: 'text-secondary',
-                                                    className: v.subtext,
-                                                    children: _.intl.string(_.t['+baN19'])
+                                                    className: _.subtext,
+                                                    children: j.intl.string(j.t['+baN19'])
                                                 })
                                             ]
                                         }),
                                         (0, r.jsx)('img', {
-                                            className: v.column,
+                                            className: _.column,
                                             'data-accessibility': 'desaturate',
                                             alt: '',
                                             src: n(329488)
@@ -135,19 +130,19 @@ function O(e) {
           })
         : (0, r.jsx)(o.$jN, {});
 }
-function C(e) {
+function O(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([g.Z], () => g.Z.enabled);
     return (0, r.jsxs)(o.hjN, {
-        title: _.intl.string(_.t.qlhNb2),
+        title: j.intl.string(j.t.qlhNb2),
         children: [
             (0, r.jsx)(s.xv, {
                 variant: 'text-sm/medium',
                 color: 'text-secondary',
-                className: v.description,
-                children: _.intl.string(_.t['dNn/1t'])
+                className: _.description,
+                children: j.intl.string(j.t['dNn/1t'])
             }),
-            n ? (0, r.jsx)(c.Z, {}) : (0, r.jsx)(O, { guildId: t })
+            n ? (0, r.jsx)(c.Z, {}) : (0, r.jsx)(v, { guildId: t })
         ]
     });
 }

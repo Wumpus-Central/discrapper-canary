@@ -1,9 +1,8 @@
 n.d(t, {
     CR: () => p,
-    MA: () => g,
+    MA: () => m,
     pV: () => h,
-    vb: () => E,
-    xV: () => m
+    vb: () => g
 });
 var r = n(544891),
     i = n(570140),
@@ -97,51 +96,14 @@ function h(e, t) {
                   );
               }));
 }
-function m(e, t) {
-    return u.Z.getIsUpdating(e)
-        ? Promise.resolve(null)
-        : (i.Z.dispatch({
-              type: 'GUILD_PROFILE_UPDATE_VISIBILITY',
-              guildId: e,
-              visibility: t
-          }),
-          r.tn
-              .put({
-                  url: d.ANM.GUILD_PROFILE_VISIBILITY(e),
-                  body: { visibility: t },
-                  rejectWithError: !1
-              })
-              .then((t) => {
-                  let n = t.body.visibility;
-                  return (
-                      i.Z.dispatch({
-                          type: 'GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS',
-                          guildId: e,
-                          visibility: n
-                      }),
-                      n
-                  );
-              })
-              .catch((t) => {
-                  let n = new a.Hx(t);
-                  throw (
-                      (i.Z.dispatch({
-                          type: 'GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE',
-                          guildId: e,
-                          error: n
-                      }),
-                      n)
-                  );
-              }));
-}
-async function g(e) {
+async function m(e) {
     let t = await r.tn.get({
         url: d.ANM.GUILD_TOP_GAMES(e),
         rejectWithError: !1
     });
     return (0, c.o_)(t.body.top_games);
 }
-function E(e, t) {
+function g(e, t) {
     let n = null != s.ZP.getSelfMember(e),
         r = null != o.Z.getRequest(e);
     l.default.track(d.rMx.GUILD_PROFILE_VIEWED, {
