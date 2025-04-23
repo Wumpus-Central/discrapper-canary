@@ -1,31 +1,32 @@
 v.d(g, {
-    QV: () => H,
-    ZP: () => b,
-    go: () => I
+    QV: () => I,
+    ZP: () => p,
+    go: () => b
 });
 var B = v(200651),
     t = v(192379),
     e = v(442837),
     f = v(481060),
-    r = v(314852),
-    C = v(65361),
-    h = v(731722),
-    n = v(441536),
-    w = v(494620),
-    Q = v(434404),
-    D = v(999382),
-    o = v(70086),
-    s = v(835887),
-    i = v(388661),
-    M = v(500230),
-    a = v(742409),
-    l = v(981631),
-    E = v(131085),
-    c = v(817239),
-    P = v(388032),
-    d = v(602268);
-let H = [E.x_.LEAF, E.x_.SWORD, E.x_.HEART, E.x_.FIRE, E.x_.WATER_DROP, E.x_.SKULL, E.x_.MOON, E.x_.LIGHTNING, E.x_.COMPASS, E.x_.TOADSTOOL],
-    I = [
+    r = v(100527),
+    C = v(314852),
+    h = v(65361),
+    n = v(731722),
+    w = v(441536),
+    Q = v(494620),
+    D = v(434404),
+    o = v(999382),
+    s = v(70086),
+    i = v(835887),
+    M = v(388661),
+    a = v(500230),
+    l = v(742409),
+    E = v(981631),
+    c = v(131085),
+    P = v(817239),
+    d = v(388032),
+    H = v(602268);
+let I = [c.x_.LEAF, c.x_.SWORD, c.x_.HEART, c.x_.FIRE, c.x_.WATER_DROP, c.x_.SKULL, c.x_.MOON, c.x_.LIGHTNING, c.x_.COMPASS, c.x_.TOADSTOOL],
+    b = [
         {
             primary: '#ff1c90',
             secondary: '#ff7fc0'
@@ -79,144 +80,144 @@ let H = [E.x_.LEAF, E.x_.SWORD, E.x_.HEART, E.x_.FIRE, E.x_.WATER_DROP, E.x_.SKU
             secondary: '#cccccc'
         }
     ],
-    b = function () {
-        var A, g, v, E;
-        (0, P.useSyncMessages)(c.messagesLoader);
-        let b = (0, e.e7)([D.Z], () => D.Z.getGuild()),
-            p = (0, e.e7)([D.Z], () => D.Z.getGuildProfile()),
-            { fetchGuildProfile: y, fetchStatus: Z } = (0, C.u)(null == b ? void 0 : b.id);
+    p = function () {
+        var A, g, v, c;
+        (0, d.useSyncMessages)(P.messagesLoader);
+        let p = (0, e.e7)([o.Z], () => o.Z.getGuild()),
+            y = (0, e.e7)([o.Z], () => o.Z.getGuildProfile()),
+            { fetchGuildProfile: Z, fetchStatus: u } = (0, h.u)(null == p ? void 0 : p.id);
         if (
             (t.useEffect(() => {
-                Z === r.a.NOT_FETCHED && y();
-            }, [y, Z]),
-            Z !== r.a.FETCHED)
+                u === C.a.NOT_FETCHED && Z();
+            }, [Z, u]),
+            u !== C.a.FETCHED)
         )
             return (0, B.jsx)('div', {
-                className: d.spinnerContainer,
+                className: H.spinnerContainer,
                 children: (0, B.jsx)(f.$jN, {})
             });
-        if (null == b || null == p) return null;
-        let u = (0, h.up)(b),
-            O = !u || (null == p ? void 0 : p.tag) == null,
-            V = null != (A = p.badge) ? A : H[0],
-            j = null != (g = p.badgeColorPrimary) ? g : I[0].primary,
-            L = null != (v = p.badgeColorSecondary) ? v : I[0].secondary,
-            X = (0, B.jsxs)(B.Fragment, {
+        if (null == p || null == y) return null;
+        let O = (0, n.up)(p),
+            V = !O || (null == y ? void 0 : y.tag) == null,
+            j = null != (A = y.badge) ? A : I[0],
+            L = null != (g = y.badgeColorPrimary) ? g : b[0].primary,
+            X = null != (v = y.badgeColorSecondary) ? v : b[0].secondary,
+            x = (0, B.jsxs)(B.Fragment, {
                 children: [
-                    (0, B.jsx)(i.Z, {
-                        className: d.section,
-                        guildId: b.id,
-                        isDisabled: O,
-                        tag: null != (E = p.tag) ? E : '',
-                        badge: V,
-                        primaryColor: j,
-                        secondaryColor: L
-                    }),
-                    (0, B.jsx)(s.Z, {
-                        className: d.section,
-                        selectedBadge: V,
-                        guildId: b.id
-                    }),
                     (0, B.jsx)(M.Z, {
-                        className: d.section,
-                        guildId: b.id,
-                        badge: V,
-                        primaryColor: j,
-                        secondaryColor: L
+                        className: H.section,
+                        guildId: p.id,
+                        isDisabled: V,
+                        tag: null != (c = y.tag) ? c : '',
+                        badge: j,
+                        primaryColor: L,
+                        secondaryColor: X
+                    }),
+                    (0, B.jsx)(i.Z, {
+                        className: H.section,
+                        selectedBadge: j,
+                        guildId: p.id
+                    }),
+                    (0, B.jsx)(a.Z, {
+                        className: H.section,
+                        guildId: p.id,
+                        badge: j,
+                        primaryColor: L,
+                        secondaryColor: X
                     })
                 ]
             });
         return (0, B.jsxs)('div', {
             children: [
                 (0, B.jsx)(f.X6q, {
-                    className: d.title,
+                    className: H.title,
                     variant: 'heading-lg/semibold',
-                    children: P.intl.string(c.default.mf2OwM)
+                    children: d.intl.string(P.default.mf2OwM)
                 }),
                 (0, B.jsxs)('div', {
-                    className: d.container,
+                    className: H.container,
                     children: [
                         (0, B.jsxs)('div', {
-                            className: d.leftContent,
+                            className: H.leftContent,
                             children: [
                                 (0, B.jsxs)('div', {
-                                    className: d.descriptionContainer,
+                                    className: H.descriptionContainer,
                                     children: [
                                         (0, B.jsx)(f.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'text-secondary',
-                                            children: P.intl.format(c.default['655Un5'], {
+                                            children: d.intl.format(P.default['655Un5'], {
                                                 onClickServerProfile: () => {
-                                                    Q.Z.setSection(l.pNK.PROFILE);
+                                                    D.Z.setSection(E.pNK.PROFILE);
                                                 },
                                                 onClickApplyToJoin: () => {
-                                                    Q.Z.setSection(l.pNK.ACCESS);
+                                                    D.Z.setSection(E.pNK.ACCESS);
                                                 }
                                             })
                                         }),
-                                        (0, B.jsx)(w.Z, {
-                                            className: d.privateProfileWarning,
+                                        (0, B.jsx)(Q.Z, {
+                                            className: H.privateProfileWarning,
                                             children: (0, B.jsx)(f.Text, {
                                                 variant: 'text-xs/medium',
-                                                children: P.intl.format(c.default.CRbkIy, { onClickEditSetting: () => Q.Z.setSection(l.pNK.PROFILE, l.KsC.PROFILE_VISIBILITY) })
+                                                children: d.intl.format(P.default.CRbkIy, { onClickEditSetting: () => D.Z.setSection(E.pNK.PROFILE, E.KsC.PROFILE_VISIBILITY) })
                                             })
                                         })
                                     ]
                                 }),
-                                u
+                                O
                                     ? (0, B.jsxs)('div', {
-                                          className: d.enableSwitchContainer,
+                                          className: H.enableSwitchContainer,
                                           children: [
                                               (0, B.jsx)('label', {
                                                   htmlFor: 'enable-server-tag',
                                                   children: (0, B.jsx)(f.Text, {
                                                       variant: 'text-md/semibold',
                                                       color: 'header-primary',
-                                                      children: P.intl.string(c.default['1zams7'])
+                                                      children: d.intl.string(P.default['1zams7'])
                                                   })
                                               }),
                                               (0, B.jsx)(f.rsf, {
                                                   id: 'enable-server-tag',
-                                                  checked: !O,
+                                                  checked: !V,
                                                   onChange: () => {
-                                                      if (O) {
+                                                      if (V) {
                                                           var A;
-                                                          Q.Z.updateGuildProfile(b.id, {
-                                                              tag: null != (A = p.tag) ? A : '',
-                                                              badge: V,
-                                                              badgeColorPrimary: j,
-                                                              badgeColorSecondary: L
+                                                          D.Z.updateGuildProfile(p.id, {
+                                                              tag: null != (A = y.tag) ? A : '',
+                                                              badge: j,
+                                                              badgeColorPrimary: L,
+                                                              badgeColorSecondary: X
                                                           });
-                                                      } else Q.Z.updateGuildProfile(b.id, { tag: null });
+                                                      } else D.Z.updateGuildProfile(p.id, { tag: null });
                                                   }
                                               })
                                           ]
                                       })
                                     : (0, B.jsx)('div', {
-                                          className: d.boostingLinkContainer,
-                                          children: (0, B.jsx)(o.P, {
+                                          className: H.boostingLinkContainer,
+                                          children: (0, B.jsx)(s.P, {
                                               onClick: () => {
-                                                  (0, n.Z)(b.id), Q.Z.close();
+                                                  (0, w.Z)(p.id, r.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), D.Z.close();
                                               }
                                           })
                                       }),
-                                O
+                                V
                                     ? (0, B.jsx)(f.nuw, {
                                           children: (0, B.jsx)('div', {
-                                              className: d.disabledForm,
-                                              children: X
+                                              className: H.disabledForm,
+                                              children: x
                                           })
                                       })
-                                    : X
+                                    : x
                             ]
                         }),
                         (0, B.jsx)('div', {
-                            children: (0, B.jsx)(a.Z, {
-                                guildId: b.id,
-                                tag: p.tag,
-                                badge: V,
-                                primaryColor: j,
-                                secondaryColor: L
+                            children: (0, B.jsx)(l.Z, {
+                                guildId: p.id,
+                                tag: y.tag,
+                                badge: j,
+                                primaryColor: L,
+                                secondaryColor: X
                             })
                         })
                     ]

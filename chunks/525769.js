@@ -34,6 +34,7 @@ var r = (function (e) {
             (e.AUDIO_DEVICE_MENU = 'impression_audio_device_menu'),
             (e.AVATAR_UPLOAD = 'impression_avatar_upload'),
             (e.BLOCK_USER_CONFIRMATION = 'impression_block_user_confirmation'),
+            (e.BOOST_SHOP_OPENED = 'impression_boost_shop_opened'),
             (e.CALL_TILE_CONTEXT_MENU = 'impression_call_tile_context_menu'),
             (e.CHANNEL_ADD_INFO = 'impression_channel_add_info'),
             (e.CHANNEL_ADD_MEMBERS = 'impression_channel_add_members'),
