@@ -6,12 +6,26 @@ let r = (0, n(818083).B)({
     kind: 'user',
     id: '2025-03_friends_popout',
     label: 'Friends Popout',
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enableTopNavButton: !1,
+        enableOverlayWidget: !1
+    },
     treatments: [
         {
             id: 1,
-            label: 'Enabled',
-            config: { enabled: !0 }
+            label: 'All Enabled',
+            config: {
+                enableTopNavButton: !0,
+                enableOverlayWidget: !0
+            }
+        },
+        {
+            id: 2,
+            label: 'Top Nav Only',
+            config: {
+                enableTopNavButton: !0,
+                enableOverlayWidget: !1
+            }
         }
     ]
 });
@@ -21,5 +35,5 @@ function i(e) {
 }
 function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return r.getCurrentConfig({ location: e }, { autoTrackExposure: t }).enabled;
+    return r.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
