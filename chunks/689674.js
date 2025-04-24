@@ -25,7 +25,7 @@ function d(e) {
         b = h && null != d.messageReference ? d.messageReference.message_id : d.id,
         x = h && null != d.messageReference ? d.messageReference.channel_id : p.id,
         y = h && (null == (n = d.messageReference) ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : p.guild_id,
-        E = r.useCallback(
+        v = r.useCallback(
             (e) => {
                 e
                     ? c.Z.handleMessageBecameVisible({
@@ -39,14 +39,14 @@ function d(e) {
             },
             [b, p.id, p.guild_id, x, y]
         ),
-        v = s.Z.useExperiment(
+        E = s.Z.useExperiment(
             { location: '836a4b_1' },
             {
                 disable: !_ || !m,
                 autoTrackExposure: !0
             }
         ).enabled,
-        O = (0, a.O)(E, 0, v);
+        O = (0, a.O)(v, 0, E);
     return (
         r.useEffect(
             () => () => {

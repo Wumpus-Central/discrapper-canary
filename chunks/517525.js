@@ -128,7 +128,7 @@ let w = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             null == N)
         )
             return null;
-        let V = (0, r.jsx)(f.ua7, {
+        let F = (0, r.jsx)(f.ua7, {
             text: T ? j.intl.string(j.t.q8TiVl) : D ? j.intl.string(j.t.IHgpEh) : j.intl.string(j.t.vLb0VV),
             position: 'bottom',
             color: f.ua7.Colors.GREY,
@@ -156,7 +156,7 @@ let w = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 )
         });
         return (0, r.jsx)(f.IGR, {
-            text: V,
+            text: F,
             className: a()(A, I.qualityIndicatorBadge, { [I.qualityIndicatorBadgePremium]: D && R }),
             color: c.Z.unsafe_rawColors.PRIMARY_500.css,
             shape: d

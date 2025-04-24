@@ -1,6 +1,6 @@
 n.d(t, {
     SI: () => c,
-    hZ: () => E
+    hZ: () => d
 });
 var r = n(913527),
     i = n.n(r),
@@ -19,7 +19,7 @@ let c = (e) => {
         return c;
     },
     u = (e) => null != e && Date.now() - e.createdAt.getTime() > 2592000000,
-    E = () => {
+    d = () => {
         let e = l.E.now();
         o.hW.updateAsync(
             'userContent',

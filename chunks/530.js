@@ -12,12 +12,12 @@ var i = n(120356),
     f = n(388032),
     _ = n(438361);
 function p(e) {
-    let { user: t, usernameIcon: n, tags: i, nickname: p, nicknameIcons: h, pronouns: m, className: g, isTryItOut: E, onOpenProfile: b, onClose: y, nicknameVariant: v = 'heading-lg/bold', pronounsVariant: O = 'text-sm/medium' } = e,
+    let { user: t, usernameIcon: n, tags: i, nickname: p, nicknameIcons: h, pronouns: m, className: g, tagClassName: E, isTryItOut: b, onOpenProfile: y, onClose: v, nicknameVariant: O = 'heading-lg/bold' } = e,
         I = (e) =>
-            null == b
+            null == y
                 ? e
                 : (0, r.jsx)(o.P3F, {
-                      onClick: b,
+                      onClick: y,
                       className: _.clickableUsername,
                       children: e
                   }),
@@ -32,7 +32,7 @@ function p(e) {
                     I(
                         (0, r.jsx)(o.X6q, {
                             className: _.nickname,
-                            variant: v,
+                            variant: O,
                             children: p
                         })
                     ),
@@ -60,8 +60,8 @@ function p(e) {
                                 user: t,
                                 usernameIcon: n,
                                 forceUsername: !0,
-                                forcePomelo: E,
-                                className: _.userTag,
+                                forcePomelo: b,
+                                className: a()(_.userTag, E),
                                 usernameClass: _.userTagUsername,
                                 discriminatorClass: _.userTagDiscriminator,
                                 hideBotTag: !0
@@ -79,8 +79,8 @@ function p(e) {
                                     text: f.intl.string(f.t.GI2A8P),
                                     delay: d.vB,
                                     children: (0, r.jsx)(o.Text, {
-                                        variant: O,
-                                        className: _.pronounsText,
+                                        className: a()(_.pronounsText, E),
+                                        variant: 'text-sm/medium',
                                         color: 'header-primary',
                                         children: m
                                     })
@@ -89,7 +89,7 @@ function p(e) {
                         }),
                     (0, r.jsx)(u.ZP, {
                         userId: t.id,
-                        onClose: y
+                        onClose: v
                     }),
                     i
                 ]

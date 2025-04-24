@@ -1,14 +1,14 @@
 r.r(t),
     r.d(t, {
-        CaptchaError: () => o,
-        emitCaptchaDistributionMetric: () => u,
-        extractCaptchaPropsFromResponse: () => i
+        CaptchaError: () => c,
+        emitCaptchaDistributionMetric: () => s,
+        extractCaptchaPropsFromResponse: () => o
     });
-var c,
-    n = r(644947),
-    a = r(234888),
-    o = (((c = {}).CANCEL = 'cancel'), (c.ERROR = 'error'), (c.EXPIRED = 'expired'), c);
-function i(e) {
+var n,
+    a = r(644947),
+    i = r(234888),
+    c = (((n = {}).CANCEL = 'cancel'), (n.ERROR = 'error'), (n.EXPIRED = 'expired'), n);
+function o(e) {
     var t;
     return {
         captchaService: e.captcha_service,
@@ -21,6 +21,6 @@ function i(e) {
         }
     };
 }
-function u(e) {
-    (0, n._8)() && setTimeout(() => (0, n.Zq)(), a.i), (0, n.s$)(e);
+function s(e) {
+    (0, a._8)() && setTimeout(() => (0, a.Zq)(), i.i), (0, a.s$)(e);
 }

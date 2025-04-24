@@ -93,8 +93,8 @@ function T(e) {
         : (0, r.jsx)(P.Z, { userId: n.user.id });
 }
 function D(e) {
-    let { participant: t, channel: n, inCall: i, width: s, selected: S, fit: P, onVideoResize: T, blocked: D, ignored: M, noVideoRender: L = !1, pulseSpeakingIndicator: k = !1, inOverlayPopout: U = !1, paused: V = !1 } = e,
-        F = O.Z.getVideoComponent(),
+    let { participant: t, channel: n, inCall: i, width: s, selected: S, fit: P, onVideoResize: T, blocked: D, ignored: M, noVideoRender: L = !1, pulseSpeakingIndicator: k = !1, inOverlayPopout: U = !1, paused: F = !1 } = e,
+        V = O.Z.getVideoComponent(),
         W = (0, o.e7)([b.default], () => b.default.getId()),
         { user: Y, streamId: H, speaking: z } = t,
         G = Y.id === W,
@@ -128,7 +128,7 @@ function D(e) {
         let { channel: e, selectedParticipant: t, user: n } = eo.current;
         e.isGuildStageVoice() && !K && (null == t ? void 0 : t.id) === n.id && u.Z.selectParticipant(e.id, null);
     }, [K]),
-    i && !J && !L && K && !S && null != F && O.Z.supports(x.AN.VIDEO))
+    i && !J && !L && K && !S && null != V && O.Z.supports(x.AN.VIDEO))
         ? null != el && null == ei
             ? (0, r.jsx)(_.Z, {
                   avError: el,
@@ -144,10 +144,10 @@ function D(e) {
                       className: R.content,
                       mirror: G,
                       streamId: H,
-                      videoComponent: F,
+                      videoComponent: V,
                       fit: P,
                       videoSpinnerContext: Y.id === W ? c.m.SELF_VIDEO : c.m.REMOTE_VIDEO,
-                      paused: V,
+                      paused: F,
                       userId: Y.id
                   },
                   H

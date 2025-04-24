@@ -1,25 +1,25 @@
-r.d(t, { Y: () => o });
-var n = r(192379),
-    i = r(442837),
-    s = r(699516),
-    l = r(594174),
-    a = r(320582);
+n.d(t, { Y: () => o });
+var r = n(192379),
+    l = n(442837),
+    s = n(699516),
+    i = n(594174),
+    a = n(320582);
 let c = [];
 function o(e) {
     let { userId: t } = e,
-        r = (0, i.e7)([s.Z, l.default], () => {
+        n = (0, l.e7)([s.Z, i.default], () => {
             var e;
-            return s.Z.isFriend(t) || (null == (e = l.default.getUser(t)) ? void 0 : e.isProvisional);
+            return s.Z.isFriend(t) || (null == (e = i.default.getUser(t)) ? void 0 : e.isProvisional);
         }),
         o = (0, a.ML)(t);
-    return n.useMemo(
+    return r.useMemo(
         () =>
-            r
+            n
                 ? c
                 : o.map((e) => {
                       let { applicationId: t } = e;
                       return t;
                   }),
-        [o, r]
+        [o, n]
     );
 }

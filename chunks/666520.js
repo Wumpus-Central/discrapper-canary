@@ -1,48 +1,48 @@
-t.d(n, { Z: () => p }), t(35282);
-var l = t(200651),
-    r = t(192379),
-    i = t(442837),
-    o = t(481060),
-    s = t(34854),
-    u = t(531301),
-    a = t(246946),
-    c = t(981631),
-    d = t(388032),
-    f = t(343074);
-function p(e) {
-    let { autoFocus: n = !1, className: t, userId: p, onUpdate: g } = e,
-        b = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
-        { loading: v, note: h } = (0, u.Z)(p),
-        j = r.useRef(null);
-    return (r.useEffect(() => {
-        if (!n || b) return;
+n.d(t, { Z: () => b }), n(35282);
+var r = n(200651),
+    o = n(192379),
+    l = n(442837),
+    i = n(481060),
+    c = n(34854),
+    u = n(531301),
+    s = n(246946),
+    a = n(981631),
+    d = n(388032),
+    f = n(343074);
+function b(e) {
+    let { autoFocus: t = !1, className: n, userId: b, onUpdate: p } = e,
+        O = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
+        { loading: g, note: y } = (0, u.Z)(b),
+        j = o.useRef(null);
+    return (o.useEffect(() => {
+        if (!t || O) return;
         let e = j.current;
         (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [n, b]),
-    b)
+    }, [t, O]),
+    O)
         ? null
-        : (0, l.jsx)('div', {
-              className: t,
-              children: (0, l.jsx)(o.lcI, {
+        : (0, r.jsx)('div', {
+              className: n,
+              children: (0, r.jsx)(i.lcI, {
                   ref: j,
                   className: f.textarea,
-                  disabled: v,
-                  placeholder: v ? d.intl.string(d.t['WLKx//']) : d.intl.string(d.t.VBhOe3),
+                  disabled: g,
+                  placeholder: g ? d.intl.string(d.t['WLKx//']) : d.intl.string(d.t.VBhOe3),
                   'aria-label': d.intl.string(d.t.PbMNh4),
                   onBlur: (e) => {
-                      let n = e.currentTarget.value;
-                      (null != h ? h : '') !== n && (null == g || g(), s.Z.updateNote(p, n));
+                      let t = e.currentTarget.value;
+                      (null != y ? y : '') !== t && (null == p || p(), c.Z.updateNote(b, t));
                   },
                   onKeyPress: (e) => {
                       if (13 === e.which)
                           if (e.shiftKey) {
-                              var n;
-                              (null != (n = e.currentTarget.value.match(/\n/g)) ? n : []).length >= 5 && e.preventDefault();
+                              var t;
+                              (null != (t = e.currentTarget.value.match(/\n/g)) ? t : []).length >= 5 && e.preventDefault();
                           } else e.preventDefault(), e.currentTarget.blur();
-                      else e.which === c.yXg.SPACE && e.stopPropagation();
+                      else e.which === a.yXg.SPACE && e.stopPropagation();
                   },
-                  defaultValue: null != h ? h : void 0,
-                  maxLength: c.vuo
+                  defaultValue: null != y ? y : void 0,
+                  maxLength: a.vuo
               })
           });
 }

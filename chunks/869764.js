@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => D,
-    k: () => b
+    k: () => v
 }),
     n(997841);
 var l = n(200651),
@@ -18,15 +18,15 @@ var l = n(200651),
     g = n(186523),
     N = n(768581),
     f = n(630388),
-    p = n(526120),
+    S = n(526120),
     E = n(563534),
-    S = n(846121),
+    p = n(846121),
     T = n(216701),
     x = n(981631),
     O = n(372897),
     _ = n(388032),
     j = n(411114);
-function b(e) {
+function v(e) {
     var { title: t, emojiId: n, emojiName: i, icon: r, completed: a, Icon: c, onClick: d } = e,
         u = (function (e, t) {
             if (null == e) return {};
@@ -113,24 +113,24 @@ function b(e) {
         ]
     });
 }
-function v(e) {
+function b(e) {
     var t;
     let { action: n, completed: r } = e,
         { channelId: s, title: m, emoji: I, icon: g } = n,
         { id: N, name: f } = null != I ? I : {},
         E = (0, a.e7)([u.Z], () => u.Z.getChannel(s)),
-        S = (0, c.ZP)(E, !0),
+        p = (0, c.ZP)(E, !0),
         T = (0, a.e7)([h.Z], () => h.Z.can(x.Plq.VIEW_CHANNEL, E)),
         O = i.useMemo(() => {
-            if (null != E) return () => (0, p.gp)(E.guild_id, E.id);
+            if (null != E) return () => (0, S.gp)(E.guild_id, E.id);
         }, [E]);
     if (null == E || !T) return null;
     let _ = null != (t = (0, d.KS)(E)) ? t : o.VL1;
-    return (0, l.jsx)(b, {
+    return (0, l.jsx)(v, {
         variant: 'channel',
         channelId: s,
         title: m,
-        channelName: S,
+        channelName: p,
         emojiId: N,
         emojiName: f,
         icon: g,
@@ -142,15 +142,15 @@ function v(e) {
 function D(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([E.Z], () => E.Z.getNewMemberActions(t), [t]),
-        r = (0, a.e7)([S.Z], () => S.Z.getCompletedActions(t)),
+        r = (0, a.e7)([p.Z], () => p.Z.getCompletedActions(t)),
         c = (0, a.e7)([m.ZP], () => m.ZP.getSelfMember(t)),
         d = (0, a.e7)([I.Z], () => I.Z.getGuild(t));
     i.useEffect(() => {
         var e;
-        null == r && (null == c ? void 0 : c.flags) != null && (0, f.yE)(null != (e = c.flags) ? e : 0, O.q.STARTED_HOME_ACTIONS) && (0, p.Fg)(t);
+        null == r && (null == c ? void 0 : c.flags) != null && (0, f.yE)(null != (e = c.flags) ? e : 0, O.q.STARTED_HOME_ACTIONS) && (0, S.Fg)(t);
     }, [r, t, null == c ? void 0 : c.flags]);
     let u = i.useCallback(() => {
-        null != d && null != d.rulesChannelId && (0, p.gp)(d.id, d.rulesChannelId);
+        null != d && null != d.rulesChannelId && (0, S.gp)(d.id, d.rulesChannelId);
     }, [d]);
     return null == c || null == n || 0 === n.length
         ? null
@@ -164,7 +164,7 @@ function D(e) {
                   }),
                   n.map((e) =>
                       (0, l.jsx)(
-                          v,
+                          b,
                           {
                               action: e,
                               completed: (null == r ? void 0 : r[e.channelId]) === !0,

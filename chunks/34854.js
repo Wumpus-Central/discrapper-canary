@@ -1,11 +1,11 @@
-t.d(n, { Z: () => i });
-var l = t(544891),
-    r = t(981631);
-let i = {
-    updateNote(e, n) {
-        l.tn.put({
-            url: r.ANM.NOTE(e),
-            body: { note: n },
+n.d(t, { Z: () => l });
+var r = n(544891),
+    o = n(981631);
+let l = {
+    updateNote(e, t) {
+        r.tn.put({
+            url: o.ANM.NOTE(e),
+            body: { note: t },
             oldFormErrors: !0,
             rejectWithError: !0
         });

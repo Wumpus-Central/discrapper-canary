@@ -17,13 +17,13 @@ var r = n(200651),
     b = n(709054),
     x = n(791914),
     y = n(981631),
-    E = n(388032),
-    v = n(929968),
+    v = n(388032),
+    E = n(929968),
     O = n(413813);
 function j(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(c.M0o, {
-        tooltip: E.intl.string(E.t['8k+6QU']),
+        tooltip: v.intl.string(v.t['8k+6QU']),
         color: c.YX$.TERTIARY,
         icon: (0, r.jsx)(c.W6s, {
             size: 'xs',
@@ -35,11 +35,11 @@ function j(e) {
 }
 function C(e) {
     let { setTab: t, badgeState: n, closePopout: l } = e,
-        { initialized: c, items: E, loading: O, loadMore: C } = (0, m.y6)(),
+        { initialized: c, items: v, loading: O, loadMore: C } = (0, m.y6)(),
         S = (0, o.e7)([u.Z], () => u.Z.localItems),
         I = (0, h.Us)({ location: 'ForYou' }),
-        N = i.useMemo(() => [...[...E, ...S].sort((e, t) => -1 * b.default.compare(e.id, t.id))], [E, S]),
-        T = E.length > 0 ? E[0] : null,
+        N = i.useMemo(() => [...[...v, ...S].sort((e, t) => -1 * b.default.compare(e.id, t.id))], [v, S]),
+        T = v.length > 0 ? v[0] : null,
         P = g.d$.useSetting(),
         A = i.useMemo(() => {
             if (null != T && 0 >= b.default.compare(T.id, P)) return !1;
@@ -50,7 +50,7 @@ function C(e) {
             return !1;
         }, [T, P, N]);
     return (0, r.jsxs)('div', {
-        className: a()(v.container, { [v.widerInbox]: I }),
+        className: a()(E.container, { [E.widerInbox]: I }),
         children: [
             (0, r.jsx)(x.Z, {
                 tab: s.X.FOR_YOU,

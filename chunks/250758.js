@@ -17,14 +17,14 @@ var r,
     b = n(981631);
 let x = {},
     y = {};
-function E(e) {
+function v(e) {
     let { searchId: t, query: n, mode: r, tokens: i, cursorScope: l, autocompletes: a } = e,
         o = y[t];
     return (
         null == o &&
             ((o = {
                 results: [],
-                context: c.Z.getSearchContext(v.bind(null, t))
+                context: c.Z.getSearchContext(E.bind(null, t))
             }),
             (y[t] = o)),
         {
@@ -43,7 +43,7 @@ function E(e) {
         }
     );
 }
-function v(e, t) {
+function E(e, t) {
     let { results: n } = t,
         r = y[e],
         i = x[e];
@@ -73,7 +73,7 @@ function v(e, t) {
     let { query: s, mode: c, tokens: u, cursorScope: d } = i,
         { autocompletes: p } = i;
     (p = C(e, c)),
-        (x[e] = E({
+        (x[e] = v({
             searchId: e,
             query: s,
             mode: c,
@@ -210,7 +210,7 @@ function I(e) {
     let t = x[e];
     if (null == t) return;
     let { query: n, mode: r, tokens: i, cursorScope: l, autocompletes: a } = t;
-    x[e] = E({
+    x[e] = v({
         searchId: e,
         query: n,
         mode: r,
@@ -223,7 +223,7 @@ function N() {
     let e = h.Z.getCurrentSearchId();
     if (null == e || null == x[e]) return;
     let { query: t, mode: n, tokens: r, cursorScope: i } = x[e];
-    x[e] = E({
+    x[e] = v({
         searchId: e,
         query: t,
         mode: n,
@@ -238,7 +238,7 @@ class T extends (r = a.ZP.Store) {
     }
     getState(e) {
         var t;
-        return null != (t = x[e]) ? t : E({ searchId: e });
+        return null != (t = x[e]) ? t : v({ searchId: e });
     }
 }
 (l = 'SearchAutocompleteStore'),
@@ -267,7 +267,7 @@ let P = new T(o.Z, {
                 null != e && e.getFullMatch().trim().length > 0 ? (d.Z.requestMembers(r, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: r }), (n = s.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = C(r, o)));
             }
             return (
-                (x[r] = E({
+                (x[r] = v({
                     searchId: r,
                     query: a,
                     mode: o,

@@ -1,9 +1,9 @@
 n.d(t, {
     $K: () => O,
-    IG: () => b,
+    IG: () => v,
     Nb: () => _,
     Ts: () => j,
-    Wy: () => v,
+    Wy: () => b,
     di: () => D
 }),
     n(388685);
@@ -22,9 +22,9 @@ var l = n(570140),
     g = n(823379),
     N = n(434404),
     f = n(889369),
-    p = n(570961),
+    S = n(570961),
     E = n(84658),
-    S = n(176505),
+    p = n(176505),
     T = n(290511),
     x = n(388032);
 function O(e) {
@@ -50,7 +50,7 @@ async function j(e, t) {
             body: x.intl.string(x.t.JOT74e)
         });
     try {
-        await (0, p.n_)(e, { mode: t });
+        await (0, S.n_)(e, { mode: t });
     } catch (n) {
         var u;
         let { fieldName: e, error: t } = null != (u = new r.Z(n).getAnyErrorMessageAndField()) ? u : {};
@@ -65,11 +65,11 @@ async function j(e, t) {
         mode: t
     });
 }
-function b(e, t) {
+function v(e, t) {
     let n = E.xh.findIndex((e) => e === t);
     -1 !== n && n !== E.xh.length - 1 && O(E.xh[n + 1]);
 }
-function v(e, t) {
+function b(e, t) {
     let n = E.xh.findIndex((e) => e === t);
     -1 !== n && 0 !== n && O(E.xh[n - 1]);
 }
@@ -94,6 +94,6 @@ async function D(e) {
         await (0, d.default)({
             guildId: t.id,
             isPreview: !0,
-            returnChannelId: S.oC.GUILD_HOME
+            returnChannelId: p.oC.GUILD_HOME
         }));
 }

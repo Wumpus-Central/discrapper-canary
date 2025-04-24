@@ -13,16 +13,16 @@ function s(e) {
             analyticsLocation: s,
             openWithoutBackstack: !0
         }),
-        E = u ? o.intl.string(o.t['6ndMcn']) : o.intl.string(o.t['0eiu6O']),
-        d = u ? o.intl.string(o.t.S09nw8) : o.intl.string(o.t.tEttXV);
+        d = u ? o.intl.string(o.t['6ndMcn']) : o.intl.string(o.t['0eiu6O']),
+        E = u ? o.intl.string(o.t.S09nw8) : o.intl.string(o.t.tEttXV);
     return (0, r.jsxs)(i.qXd, {
         color: i.DM8.CUSTOM,
         className: a.quarantineNotice,
         children: [
-            E,
+            d,
             (0, r.jsx)(i.EyT, {
                 onClick: c,
-                children: d
+                children: E
             })
         ]
     });

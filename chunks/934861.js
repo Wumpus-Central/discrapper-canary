@@ -1,90 +1,90 @@
-t.d(n, {
-    c: () => c,
+n.d(t, {
+    c: () => a,
     v: () => d
 });
-var l = t(200651);
-t(192379);
-var r = t(481060),
-    i = t(493683),
-    o = t(475413),
-    s = t(388032);
+var r = n(200651);
+n(192379);
+var o = n(481060),
+    l = n(493683),
+    i = n(475413),
+    c = n(388032);
 function u(e) {
-    for (var n = 1; n < arguments.length; n++) {
-        var t = null != arguments[n] ? arguments[n] : {},
-            l = Object.keys(t);
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(t).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            l.forEach(function (n) {
-                var l;
-                (l = t[n]),
-                    n in e
-                        ? Object.defineProperty(e, n, {
-                              value: l,
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = l);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function a(e, n) {
+function s(e, t) {
     if (null == e) return {};
-    var t,
-        l,
-        r = (function (e, n) {
+    var n,
+        r,
+        o = (function (e, t) {
             if (null == e) return {};
-            var t,
-                l,
-                r = {},
-                i = Object.keys(e);
-            for (l = 0; l < i.length; l++) (t = i[l]), n.indexOf(t) >= 0 || (r[t] = e[t]);
-            return r;
-        })(e, n);
+            var n,
+                r,
+                o = {},
+                l = Object.keys(e);
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+            return o;
+        })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var i = Object.getOwnPropertySymbols(e);
-        for (l = 0; l < i.length; l++) (t = i[l]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
+        var l = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
     }
-    return r;
+    return o;
 }
-function c(e) {
-    var { userId: n, onClose: t } = e,
-        c = a(e, ['userId', 'onClose']);
-    return (0, l.jsx)(
-        o.tG,
+function a(e) {
+    var { userId: t, onClose: n } = e,
+        a = s(e, ['userId', 'onClose']);
+    return (0, r.jsx)(
+        i.tG,
         u(
             {
                 action: 'SEND_MESSAGE',
-                icon: r.kBi,
-                text: s.intl.string(s.t.zROXER),
+                icon: o.kBi,
+                text: c.intl.string(c.t.zROXER),
                 onClick: () => {
-                    i.Z.openPrivateChannel({ recipientIds: n }), null == t || t();
+                    l.Z.openPrivateChannel({ recipientIds: t }), null == n || n();
                 }
             },
-            c
+            a
         )
     );
 }
 function d(e) {
-    var { userId: n, onClose: t } = e,
-        c = a(e, ['userId', 'onClose']);
-    return (0, l.jsx)(
-        o.ef,
+    var { userId: t, onClose: n } = e,
+        a = s(e, ['userId', 'onClose']);
+    return (0, r.jsx)(
+        i.ef,
         u(
             {
                 action: 'SEND_MESSAGE',
-                icon: r.kBi,
-                tooltipText: s.intl.string(s.t.zROXER),
+                icon: o.kBi,
+                tooltipText: c.intl.string(c.t.zROXER),
                 onClick: () => {
-                    i.Z.openPrivateChannel({ recipientIds: n }), null == t || t();
+                    l.Z.openPrivateChannel({ recipientIds: t }), null == n || n();
                 }
             },
-            c
+            a
         )
     );
 }

@@ -1,5 +1,5 @@
 n.d(t, {
-    E: () => I,
+    E: () => O,
     Z: () => T
 }),
     n(388685),
@@ -12,8 +12,8 @@ var r = n(200651),
     s = n(585237),
     c = n(812206),
     u = n(55563),
-    E = n(73346),
-    d = n(388032);
+    d = n(73346),
+    E = n(388032);
 function _(e, t, n) {
     return (
         t in e
@@ -27,13 +27,13 @@ function _(e, t, n) {
         e
     );
 }
-let I = {
+let O = {
     DropdownSizes: s.Z.DropdownSizes,
     Sizes: s.Z.Sizes,
     Colors: s.Z.Colors,
     Looks: s.Z.Looks
 };
-class O extends i.PureComponent {
+class I extends i.PureComponent {
     render() {
         var e, t;
         let n = this.props,
@@ -105,7 +105,7 @@ class O extends i.PureComponent {
                 return (0, r.jsx)(o.v2r, {
                     onSelect: n,
                     navId: 'test-skus',
-                    'aria-label': d.intl.string(d.t.ogxXGh),
+                    'aria-label': E.intl.string(E.t.ogxXGh),
                     onClose: a.Zy,
                     children: e.map((e) =>
                         (0, r.jsx)(
@@ -134,9 +134,9 @@ class O extends i.PureComponent {
 let T = l.ZP.connectStores([u.Z, c.Z], (e) => {
     var t;
     let { applicationId: n } = e,
-        r = (0, E.uF)(n, c.Z, u.Z);
+        r = (0, d.uF)(n, c.Z, u.Z);
     return {
         skus: (null != (t = u.Z.getForApplication(n)) ? t : []).sort((e, t) => (null != r && e.id === r.id ? -1 : null != r && t.id === r.id ? 1 : e.name >= t.name ? -1 : 1)),
         primarySKU: r
     };
-})(O);
+})(I);

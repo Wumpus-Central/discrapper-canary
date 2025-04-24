@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685), n(642613);
+n.d(t, { Z: () => S }), n(388685), n(642613);
 var l,
     i,
     r,
@@ -44,7 +44,7 @@ class f extends (l = o.ZP.Store) {
               writable: !0
           })
         : (f[i] = r);
-let p = new f(c.Z, {
+let S = new f(c.Z, {
     GUILD_SETTINGS_INIT: N,
     GUILD_SETTINGS_SET_SECTION: N,
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: N,

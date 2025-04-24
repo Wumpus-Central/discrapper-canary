@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(430824),
     E = n(914010),
     _ = n(900849),
-    I = n(981631),
-    O = n(388032),
+    O = n(981631),
+    I = n(388032),
     T = n(8940),
     N = n(240211);
 let S = () => {
@@ -22,7 +22,7 @@ let S = () => {
     let S = async () => {
         l(!0);
         try {
-            _.mT(t.id), await c.Z.joinGuild(t.id, { source: I.vtS.NOTICE_BAR });
+            _.mT(t.id), await c.Z.joinGuild(t.id, { source: O.vtS.NOTICE_BAR });
         } catch (e) {
             l(!1);
         }
@@ -45,13 +45,13 @@ let S = () => {
                         color: 'currentColor',
                         className: T.arrow
                     }),
-                    O.intl.string(O.t['13/7kZ'])
+                    I.intl.string(I.t['13/7kZ'])
                 ]
             }),
             (0, r.jsx)(s.Text, {
                 className: T.header,
                 variant: 'text-sm/normal',
-                children: O.intl.string(O.t['N/y2WF'])
+                children: I.intl.string(I.t['N/y2WF'])
             }),
             (0, r.jsx)(s.zxk, {
                 className: T.button,
@@ -60,7 +60,7 @@ let S = () => {
                 size: s.zxk.Sizes.NONE,
                 submitting: n,
                 onClick: S,
-                children: O.intl.format(O.t.uHN7n5, { guild: t.name })
+                children: I.intl.format(I.t.uHN7n5, { guild: t.name })
             })
         ]
     });

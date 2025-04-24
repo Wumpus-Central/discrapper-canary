@@ -490,7 +490,7 @@ function ec(e) {
                 case M.h8.CONFIRM:
                     let c = Z.Z.getGuild(ec),
                         u = (0, k.$)(eM, ek),
-                        d = (0, H.qH)(e_.current);
+                        d = (0, H.qH)(e_.current) && null != ef && !$.F$.has(ef.id);
                     e = (0, r.jsx)(X.R7, {
                         guild: c,
                         guildBoostQuantity: ew + eO.length,

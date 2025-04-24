@@ -12,8 +12,8 @@ var o,
     I = n(442837),
     p = n(570140),
     m = n(904245),
-    S = n(911969),
-    f = n(603721),
+    f = n(911969),
+    S = n(603721),
     C = n(70956),
     _ = (((o = {})[(o.IN_FLIGHT = 0)] = 'IN_FLIGHT'), (o[(o.ERRORED = 1)] = 'ERRORED'), (o[(o.SUCCEEDED = 2)] = 'SUCCEEDED'), o);
 class g extends (s = I.ZP.Store) {
@@ -45,15 +45,15 @@ let N = new g(p.Z, {
     INTERACTION_QUEUE: function (e) {
         let { messageId: t, nonce: n, data: o } = e;
         switch (o.interactionType) {
-            case S.B8.APPLICATION_COMMAND:
+            case f.B8.APPLICATION_COMMAND:
                 return (u = t), (a = o.channelId), (r = n), !1;
-            case S.B8.MODAL_SUBMIT:
+            case f.B8.MODAL_SUBMIT:
                 return (
                     T()(null == l || 1 === i || 2 === i, 'cannot submit multiple modals at once'),
                     (l = n),
                     (i = 0),
                     setTimeout(() => {
-                        l === n && 0 === i && (0, f.yr)(n);
+                        l === n && 0 === i && (0, S.yr)(n);
                     }, 10 * C.Z.Millis.SECOND),
                     !0
                 );

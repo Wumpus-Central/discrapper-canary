@@ -1,39 +1,39 @@
-n.d(e, { Z: () => b }), n(953529);
-var r = n(200651);
+n.d(t, { Z: () => g }), n(953529);
+var i = n(200651);
 n(192379);
-var o = n(120356),
-    i = n.n(o),
-    a = n(793030),
-    c = n(481060),
-    s = n(759198),
-    l = n(552958),
-    p = n(767157),
+var s = n(120356),
+    l = n.n(s),
+    r = n(793030),
+    a = n(481060),
+    o = n(759198),
+    d = n(552958),
+    c = n(767157),
     u = n(388032),
-    O = n(267129);
-function b(t) {
-    let { label: e, className: n, description: o, soundpack: b, location: f } = t,
-        { playSound: d, isPlaying: y } = (0, l.Z)();
-    return (0, r.jsxs)(c.P3F, {
+    h = n(267129);
+function g(e) {
+    let { label: t, className: n, description: s, soundpack: g, location: m } = e,
+        { playSound: x, isPlaying: p } = (0, d.Z)();
+    return (0, i.jsxs)(a.P3F, {
         'aria-label': u.intl.string(u.t.RscU7O),
-        className: i()(O.container, n, { [O.containerActive]: y }),
+        className: l()(h.container, n, { [h.containerActive]: p }),
         onClick: () => {
-            (0, p.Z)(b, f), d(b);
+            (0, c.Z)(g, m), x(g);
         },
         children: [
-            (0, r.jsx)(c.g8d, {
-                className: O.playButton,
-                color: y ? c.TVs.colors.INTERACTIVE_ACTIVE : c.TVs.colors.INTERACTIVE_NORMAL
+            (0, i.jsx)(a.g8d, {
+                className: h.playButton,
+                color: p ? a.TVs.colors.INTERACTIVE_ACTIVE : a.TVs.colors.INTERACTIVE_NORMAL
             }),
-            (0, r.jsxs)('div', {
-                className: O.textContainer,
+            (0, i.jsxs)('div', {
+                className: h.textContainer,
                 children: [
-                    (0, r.jsx)(s.Z, {
+                    (0, i.jsx)(o.Z, {
                         variant: 'text-md/medium',
-                        children: e
+                        children: t
                     }),
-                    (0, r.jsx)(a.xv, {
+                    (0, i.jsx)(r.xv, {
                         variant: 'text-sm/normal',
-                        children: o
+                        children: s
                     })
                 ]
             })

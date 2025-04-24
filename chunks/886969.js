@@ -21,6 +21,6 @@ function o(e) {
 }
 function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = e;
-    return t && (n = e.subtract(a, 'milliseconds')), o((0, r.Z)(n.toDate(), i));
+        n = e.clone();
+    return t && (n = n.subtract(a, 'milliseconds')), o((0, r.Z)(n.toDate(), i));
 }

@@ -8,26 +8,26 @@ var i = n(704215),
     s = n(286961),
     c = n(644916),
     u = n(243778),
-    E = n(921944),
-    d = n(131715);
+    d = n(921944),
+    E = n(131715);
 let _ = (e) => {
     let { dismissibleContent: t, noticeType: n } = e,
         { analyticsLocations: _ } = (0, o.ZP)(),
-        I = (0, s.Z)();
+        O = (0, s.Z)();
     return (0, r.jsx)(u.Xf, {
         contentType: t,
         latestVersion: (0, c.t)(t),
-        groupName: E.R.NOTICE_BAR,
+        groupName: d.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: o } = e;
             if (t === i.z.GIFTING_PROMOTION_REMINDER) {
-                let e = null == I ? void 0 : I.reminderNagbar;
+                let e = null == O ? void 0 : O.reminderNagbar;
                 return (0, r.jsxs)(l.qXd, {
                     color: l.DM8.PREMIUM_TIER_2,
                     children: [
                         (0, r.jsx)(l.RyX, {
-                            onClick: () => o(E.L.USER_DISMISS),
+                            onClick: () => o(d.L.USER_DISMISS),
                             noticeType: n
                         }),
                         (0, r.jsx)(l.OgN, {
@@ -35,7 +35,7 @@ let _ = (e) => {
                             width: 20,
                             height: 20,
                             color: 'currentColor',
-                            className: d.giftIcon
+                            className: E.giftIcon
                         }),
                         null == e ? void 0 : e.description(),
                         (0, r.jsx)(l.NoS, {

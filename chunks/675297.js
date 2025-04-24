@@ -17,7 +17,7 @@ var i = n(399606),
     _ = n(226060),
     b = n(981631);
 function x(e) {
-    let { guildProductListing: t, guildId: n, location: x, shouldShowFullDescriptionButton: y = !0, hideRoleTag: E = !1, lineClamp: v = 1, cardWidth: O, cardHeight: j, thumbnailHeight: C, descriptionTextVariant: S = 'text-sm/normal', showOpaqueBackground: I = !1 } = e,
+    let { guildProductListing: t, guildId: n, location: x, shouldShowFullDescriptionButton: y = !0, hideRoleTag: v = !1, lineClamp: E = 1, cardWidth: O, cardHeight: j, thumbnailHeight: C, descriptionTextVariant: S = 'text-sm/normal', showOpaqueBackground: I = !1 } = e,
         N = (0, i.e7)([s.Z], () => s.Z.getGuild(n), [n]),
         T = (0, i.e7)([s.Z], () => {
             var e;
@@ -78,8 +78,8 @@ function x(e) {
             onTapCard: k,
             actionMenu: D,
             showOpaqueBackground: I,
-            hideRoleTag: E,
-            lineClamp: v,
+            hideRoleTag: v,
+            lineClamp: E,
             cardWidth: O,
             cardHeight: j,
             thumbnailHeight: C,

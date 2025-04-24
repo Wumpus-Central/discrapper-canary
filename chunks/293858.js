@@ -21,7 +21,7 @@ var r = n(200651),
 function S(e) {
     let t,
         { handleClose: n, planGroup: l, onSubscriptionConfirmation: S, renderPurchaseConfirmation: E, postSuccessGuild: y, followupSKUInfo: I, continueSessionToInitialStep: b } = e,
-        { activeSubscription: T, paymentSources: P, paymentSourceId: M, selectedPlan: O, selectedSkuId: Z, step: v, updatedSubscription: N, startingPremiumSubscriptionPlanIdRef: A, startingFractionalPremiumEndsAtRef: k } = (0, x.JL)(),
+        { activeSubscription: T, paymentSources: P, paymentSourceId: M, selectedPlan: O, selectedSkuId: Z, step: v, updatedSubscription: N, startingPremiumSubscriptionPlanIdRef: k, startingFractionalPremiumEndsAtRef: A } = (0, x.JL)(),
         { isGift: U, giftRecipient: w, giftCode: R, hasSentMessage: F, isSendingMessage: B, sendGiftMessage: H, claimableRewards: G, selectedGiftingPromotionReward: D } = (0, _.wD)(),
         { confirmationFooter: Y } = (0, h.zb)(),
         W = null != Y,
@@ -52,24 +52,24 @@ function S(e) {
                           planId: O.id,
                           onClose: J
                       })
-                    : A.current === O.id
+                    : k.current === O.id
                       ? (0, r.jsx)(c.ZP, {
                             planId: O.id,
                             postSuccessGuild: y,
                             onClose: J,
                             paymentSourceType: Q,
                             hideClose: W,
-                            startingFractionalPremiumEndsAt: k.current
+                            startingFractionalPremiumEndsAt: A.current
                         })
                       : (0, r.jsx)(c.ZP, {
                             followupSKUInfo: I,
-                            startingPremiumSubscriptionPlanId: A.current,
+                            startingPremiumSubscriptionPlanId: k.current,
                             planId: O.id,
                             onClose: J,
                             isDowngrade: null != T && (0, p.GY)(T, O.id, l),
                             paymentSourceType: Q,
                             hideClose: W,
-                            startingFractionalPremiumEndsAt: k.current
+                            startingFractionalPremiumEndsAt: A.current
                         })),
         (0, r.jsxs)(r.Fragment, {
             children: [

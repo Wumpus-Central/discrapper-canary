@@ -40,8 +40,8 @@ var r = n(200651),
     L = n(623825),
     k = n(981631),
     U = n(354459),
-    V = n(65154),
-    F = n(388032),
+    F = n(65154),
+    V = n(388032),
     W = n(519417);
 let Y = new p.Z('StreamTile');
 function H(e) {
@@ -96,7 +96,7 @@ function z(e) {
     (0, d.ZP)(() => {
         !$ && (null == X ? void 0 : X.isGuildStageVoice()) && !et && ((0, c.rn)(B), u.Z.updateStageStreamSize(B.channelId, !1));
     });
-    let ei = (0, E.Z)(V.Yn.STREAM, t.user.id);
+    let ei = (0, E.Z)(F.Yn.STREAM, t.user.id);
     if (
         (l.useEffect(() => {
             Y.info(
@@ -104,7 +104,7 @@ function z(e) {
                     .concat(null != Q, ' | selected: ')
                     .concat(n, ' | Video: ')
                     .concat(null != z, ' | MediaEngine: ')
-                    .concat(P.Z.supports(V.AN.VIDEO))
+                    .concat(P.Z.supports(F.AN.VIDEO))
             );
         }, [z, Q, n]),
         K)
@@ -134,7 +134,7 @@ function z(e) {
             participant: t,
             width: y
         });
-    if (!(null != Q && !n && null != z && P.Z.supports(V.AN.VIDEO)))
+    if (!(null != Q && !n && null != z && P.Z.supports(F.AN.VIDEO)))
         return (0, r.jsxs)('div', {
             className: a()(W.content, W.streamPreview, { [W.small]: el }),
             children: [
@@ -153,13 +153,13 @@ function z(e) {
                                   children: (0, r.jsx)(s.Text, {
                                       variant: el ? 'text-sm/semibold' : 'text-md/semibold',
                                       color: 'none',
-                                      children: y < 175 ? F.intl.string(F.t['I6JG4+']) : F.intl.string(F.t['7Xq/nZ'])
+                                      children: y < 175 ? V.intl.string(V.t['I6JG4+']) : V.intl.string(V.t['7Xq/nZ'])
                                   })
                               }),
                               $
                                   ? (0, r.jsx)(x.a, {
                                         className: W.addCTA,
-                                        tooltip: F.intl.string(F.t.wCrzur),
+                                        tooltip: V.intl.string(V.t.wCrzur),
                                         onClick: (e) => {
                                             e.stopPropagation(), (0, c.rn)(B, { forceMultiple: !0 });
                                         },

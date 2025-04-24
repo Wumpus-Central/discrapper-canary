@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => b,
+    Z: () => v,
     j: () => _
 });
 var l = n(200651);
@@ -18,27 +18,27 @@ var i = n(120356),
     g = n(626135),
     N = n(999382),
     f = n(983135),
-    p = n(84658),
+    S = n(84658),
     E = n(981631),
-    S = n(388032),
+    p = n(388032),
     T = n(568614);
 let x = () => [
         {
             emoji: '\uD83E\uDDD9',
-            emojiDescription: S.intl.string(S.t.Jh9uiY),
-            title: S.intl.string(S.t.ATF45u),
+            emojiDescription: p.intl.string(p.t.Jh9uiY),
+            title: p.intl.string(p.t.ATF45u),
             selected: !0
         },
         {
             emoji: '\uD83C\uDFA4',
-            emojiDescription: S.intl.string(S.t['nGt+MT']),
-            title: S.intl.string(S.t['30uo7O']),
+            emojiDescription: p.intl.string(p.t['nGt+MT']),
+            title: p.intl.string(p.t['30uo7O']),
             selected: !1
         },
         {
             emoji: '\uD83D\uDC40',
-            emojiDescription: S.intl.string(S.t.hOMH5u),
-            title: S.intl.string(S.t['5Z5sgo']),
+            emojiDescription: p.intl.string(p.t.hOMH5u),
+            title: p.intl.string(p.t['5Z5sgo']),
             selected: !1
         }
     ],
@@ -50,7 +50,7 @@ let x = () => [
                     color: 'currentColor',
                     className: T.channelIcon
                 }),
-            channel: S.intl.string(S.t.MXJozM),
+            channel: p.intl.string(p.t.MXJozM),
             selected: !0
         },
         {
@@ -60,7 +60,7 @@ let x = () => [
                     color: 'currentColor',
                     className: T.channelIcon
                 }),
-            channel: S.intl.string(S.t.Pkj0f3),
+            channel: p.intl.string(p.t.Pkj0f3),
             selected: !0
         },
         {
@@ -70,7 +70,7 @@ let x = () => [
                     color: 'currentColor',
                     className: T.channelIcon
                 }),
-            channel: S.intl.string(S.t['imVD+v']),
+            channel: p.intl.string(p.t['imVD+v']),
             selected: !1
         },
         {
@@ -80,7 +80,7 @@ let x = () => [
                     color: 'currentColor',
                     className: T.channelIcon
                 }),
-            channel: S.intl.string(S.t['Pj/Wpq']),
+            channel: p.intl.string(p.t['Pj/Wpq']),
             selected: !0
         }
     ];
@@ -92,20 +92,20 @@ function _(e) {
             ? (0, l.jsx)(a.Text, {
                   variant: 'text-sm/semibold',
                   color: 'header-primary',
-                  children: S.intl.string(S.t.nTI2mZ)
+                  children: p.intl.string(p.t.nTI2mZ)
               })
             : (0, l.jsx)(a.X6q, {
                   variant: 'heading-md/semibold',
-                  children: S.intl.string(S.t.g1OQtr)
+                  children: p.intl.string(p.t.g1OQtr)
               }),
         s = t
             ? (0, l.jsx)(a.Text, {
                   variant: 'text-xxs/normal',
-                  children: S.intl.format(S.t.hGwDPT, {})
+                  children: p.intl.format(p.t.hGwDPT, {})
               })
             : (0, l.jsx)(a.Text, {
                   variant: 'text-xs/normal',
-                  children: S.intl.format(S.t['8XLD3t'], {})
+                  children: p.intl.format(p.t['8XLD3t'], {})
               });
     return (0, l.jsxs)('div', {
         className: r()(T.upsellPreview, T.spacingLarge, { [T.tooltip]: t }),
@@ -152,29 +152,29 @@ function _(e) {
 function j() {
     let e = [
         {
-            message: S.t.FUUXXl,
+            message: p.t.FUUXXl,
             profilePic: 'https://cdn.discordapp.com/avatars/302407541994946561/bb3fd59e6c2ea0a86a2bdabf5dff7856.webp?size=80',
-            adminTitle: S.intl.string(S.t.RZVpur)
+            adminTitle: p.intl.string(p.t.RZVpur)
         },
         {
-            message: S.t.JAXvDQ,
+            message: p.t.JAXvDQ,
             profilePic: 'https://cdn.discordapp.com/avatars/433499434098229249/b6d433308debef625537e33df04023e5.webp?size=80',
-            adminTitle: S.intl.string(S.t.xyrlg4)
+            adminTitle: p.intl.string(p.t.xyrlg4)
         },
         {
-            message: S.t.Wj9Djo,
+            message: p.t.Wj9Djo,
             profilePic: 'https://cdn.discordapp.com/avatars/555460020494663691/599bfcdb0b0700b415f4c695890f272c.webp?size=80',
-            adminTitle: S.intl.string(S.t['o/LQMj'])
+            adminTitle: p.intl.string(p.t['o/LQMj'])
         },
         {
-            message: S.t.ALsMNT,
+            message: p.t.ALsMNT,
             profilePic: 'https://cdn.discordapp.com/guilds/936317138904440892/users/125526751064489984/avatars/f35679626acac9943e102533fc170d41.webp?size=80',
-            adminTitle: S.intl.string(S.t['uvM+xc'])
+            adminTitle: p.intl.string(p.t['uvM+xc'])
         }
     ];
     return (0, l.jsx)(d.i, { testimonials: e });
 }
-function b() {
+function v() {
     let e = (0, s.e7)([N.Z], () => N.Z.getGuildId()),
         t = (0, s.e7)([I.Z], () => I.Z.getGuild(e)),
         n = (0, s.e7)([h.default], () => h.default.getCurrentUser());
@@ -203,11 +203,11 @@ function b() {
                               children: [
                                   (0, l.jsx)(a.X6q, {
                                       variant: 'heading-xl/semibold',
-                                      children: S.intl.string(S.t.GnKOAw)
+                                      children: p.intl.string(p.t.GnKOAw)
                                   }),
                                   (0, l.jsx)(a.Text, {
                                       variant: 'text-md/normal',
-                                      children: S.intl.string(S.t.SJRFJi)
+                                      children: p.intl.string(p.t.SJRFJi)
                                   })
                               ]
                           }),
@@ -246,7 +246,7 @@ function b() {
                                               })({}, (0, o.hH)(e))),
                                               (n = n =
                                                   {
-                                                      step: p.PG[p.PG.LANDING],
+                                                      step: S.PG[S.PG.LANDING],
                                                       back: !1,
                                                       skip: !1
                                                   }),
@@ -264,12 +264,12 @@ function b() {
                                                     }),
                                               t)
                                           ),
-                                              (0, f.IG)(e, p.PG.LANDING);
+                                              (0, f.IG)(e, S.PG.LANDING);
                                       }
                                   },
                                   color: a.zxk.Colors.BRAND,
                                   disabled: !1,
-                                  children: S.intl.string(S.t.RzWDqa)
+                                  children: p.intl.string(p.t.RzWDqa)
                               })
                           })
                       ]
@@ -289,11 +289,11 @@ function b() {
                                       children: [
                                           (0, l.jsx)(a.X6q, {
                                               variant: 'heading-md/semibold',
-                                              children: S.intl.string(S.t.Z7kqKS)
+                                              children: p.intl.string(p.t.Z7kqKS)
                                           }),
                                           (0, l.jsx)(a.Text, {
                                               variant: 'text-sm/normal',
-                                              children: S.intl.string(S.t.di3UCw)
+                                              children: p.intl.string(p.t.di3UCw)
                                           })
                                       ]
                                   })
@@ -307,11 +307,11 @@ function b() {
                                       children: [
                                           (0, l.jsx)(a.X6q, {
                                               variant: 'heading-md/semibold',
-                                              children: S.intl.string(S.t.O4jYEh)
+                                              children: p.intl.string(p.t.O4jYEh)
                                           }),
                                           (0, l.jsx)(a.Text, {
                                               variant: 'text-sm/normal',
-                                              children: S.intl.string(S.t['l/l/Gx'])
+                                              children: p.intl.string(p.t['l/l/Gx'])
                                           })
                                       ]
                                   }),
@@ -322,19 +322,19 @@ function b() {
                                               guildId: e,
                                               welcomeMessage: {
                                                   authorIds: [n.id],
-                                                  message: S.intl.string(S.t.hIWAfn)
+                                                  message: p.intl.string(p.t.hIWAfn)
                                               }
                                           }),
                                           (0, l.jsx)(u.k, {
-                                              title: S.intl.string(S.t['47zu7O']),
-                                              subtitle: S.intl.string(S.t.amoSNz),
+                                              title: p.intl.string(p.t['47zu7O']),
+                                              subtitle: p.intl.string(p.t.amoSNz),
                                               completed: !0,
                                               Icon: a.VL1,
                                               variant: 'static'
                                           }),
                                           (0, l.jsx)(u.k, {
-                                              title: S.intl.string(S.t.EZfTKC),
-                                              subtitle: S.intl.string(S.t['/sYelZ']),
+                                              title: p.intl.string(p.t.EZfTKC),
+                                              subtitle: p.intl.string(p.t['/sYelZ']),
                                               completed: !0,
                                               Icon: a.VL1,
                                               variant: 'static'
@@ -387,11 +387,11 @@ function b() {
                                       children: [
                                           (0, l.jsx)(a.X6q, {
                                               variant: 'heading-md/semibold',
-                                              children: S.intl.string(S.t['3T9aHB'])
+                                              children: p.intl.string(p.t['3T9aHB'])
                                           }),
                                           (0, l.jsx)(a.Text, {
                                               variant: 'text-sm/normal',
-                                              children: S.intl.string(S.t.dA7Cam)
+                                              children: p.intl.string(p.t.dA7Cam)
                                           })
                                       ]
                                   })

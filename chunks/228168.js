@@ -20,13 +20,13 @@ let i = 300,
     s = 100,
     l = 'user-profile-popout';
 var c = (function (e) {
-        return (e.USER_INFO = 'USER_INFO'), (e.BOT_INFO = 'BOT_INFO'), (e.ACTIVITY = 'ACTIVITY'), (e.MUTUAL_GUILDS = 'MUTUAL_GUILDS'), (e.MUTUAL_FRIENDS = 'MUTUAL_FRIENDS'), (e.BOT_DATA_ACCESS = 'BOT_DATA_ACCESS'), e;
+        return (e.FEATURED = 'FEATURED'), (e.USER_INFO = 'USER_INFO'), (e.BOT_INFO = 'BOT_INFO'), (e.ACTIVITY = 'ACTIVITY'), (e.MUTUALS = 'MUTUALS'), (e.MUTUAL_GUILDS = 'MUTUAL_GUILDS'), (e.MUTUAL_FRIENDS = 'MUTUAL_FRIENDS'), (e.BOT_DATA_ACCESS = 'BOT_DATA_ACCESS'), e;
     })({}),
     u = (function (e) {
         return (e.ROLES = 'ROLES'), (e.CONNECTIONS = 'CONNECTIONS'), (e.NOTE = 'NOTE'), (e.RECENT_ACTIVITY = 'RECENT_ACTIVITY'), e;
     })({}),
     d = (function (e) {
-        return (e.POPOUT = 'POPOUT'), (e.MODAL = 'MODAL'), (e.SIDEBAR = 'SIDEBAR'), e;
+        return (e.POPOUT = 'POPOUT'), (e.MODAL = 'MODAL'), (e.MODAL_V2 = 'MODAL_V2'), (e.SIDEBAR = 'SIDEBAR'), e;
     })({}),
     f = (function (e) {
         return (e[(e.NICKNAME = 0)] = 'NICKNAME'), (e[(e.PRONOUNS = 1)] = 'PRONOUNS'), (e[(e.AVATAR = 2)] = 'AVATAR'), (e[(e.ANIMATED_AVATAR = 3)] = 'ANIMATED_AVATAR'), (e[(e.BANNER = 4)] = 'BANNER'), (e[(e.ANIMATED_BANNER = 5)] = 'ANIMATED_BANNER'), (e[(e.BIO = 6)] = 'BIO'), (e[(e.THEME = 7)] = 'THEME'), (e[(e.AVATAR_DECORATION = 8)] = 'AVATAR_DECORATION'), (e[(e.PROFILE_EFFECT = 9)] = 'PROFILE_EFFECT'), e;

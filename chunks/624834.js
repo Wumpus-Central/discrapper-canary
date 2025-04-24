@@ -125,7 +125,7 @@ function I(e) {
                           [Z.medium]: I === b.nR.MEDIUM
                       }),
                       variant: 'text-sm/normal',
-                      children: O.intl.formatToPlainString(O.t['7Uuia2'], { username: A.username })
+                      children: x.length > 1 ? O.intl.formatToPlainString(O.t.vYZFzc, { count: x.length }) : O.intl.formatToPlainString(O.t['7Uuia2'], { username: A.username })
                   }),
                   (0, r.jsx)(s.Text, {
                       className: a()(Z.header, {
