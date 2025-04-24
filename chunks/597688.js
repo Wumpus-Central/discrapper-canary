@@ -1,5 +1,5 @@
 let r, i, a;
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => Y }), n(388685);
 var o,
     s = n(392711),
     l = n(442837),
@@ -38,26 +38,27 @@ let m = new Map(),
     R = new Map(),
     P = new Map(),
     w = {},
-    D = (e) => {
+    D = 0,
+    L = (e) => {
         let { skuId: t } = e;
         (C = new Set(C)).add(t), (R = new Map(R)).delete(t), (P = new Map(P)).delete(t);
     },
-    L = (e) => {
+    x = (e) => {
         let { skuId: t, error: n } = e;
         (C = new Set(C)).delete(t), (R = new Map(R)).set(t, n), (P = new Map(P)).set(t, Date.now());
     },
-    x = (e) => {
+    M = (e) => {
         let { skuId: t, product: n } = e;
         O.set(t, n), (C = new Set(C)).delete(t), (R = new Map(R)).delete(t), (P = new Map(P)).delete(t);
     },
-    M = (e) => {
+    k = (e) => {
         (N = !0), (r = void 0), (a = void 0), (w = e.options);
     },
-    k = (e) => {
+    j = (e) => {
         let { error: t } = e;
         (v = m), (O = g), (T = y), (N = !1), (C = new Set()), (r = t), (a = Date.now());
     },
-    j = (e) => {
+    U = (e) => {
         if (0 === e.categories.length) (v = m), (O = g);
         else if (!(0, s.isEqual)([...v.values()], e.categories) && !e.noOp) {
             let t = new Map(e.categories.map((e) => [e.skuId, e])),
@@ -69,14 +70,14 @@ let m = new Map(),
                 (O = new Map((0, _.Cs)(v, !0).map((e) => [e.skuId, e]))),
                 (I = new Map((0, _.Cs)(v, !1).map((e) => [e.storeListingId, e])));
         }
-        G(e.categories, O), (i = Date.now()), (N = !1), (r = void 0), (a = void 0);
+        B(e.categories, O), (i = Date.now()), (N = !1), (r = void 0), (a = void 0);
     },
-    U = (e) => {
+    G = (e) => {
         if (0 === e.shopHome.categories.length) return;
         let t = new Map(e.shopHome.categories.map((e) => [e.skuId, e]));
         (v = new Map([...v, ...t])), (O = new Map((0, _.Cs)(v, !0).map((e) => [e.skuId, e])));
     },
-    G = (e, t) => {
+    B = (e, t) => {
         if (0 === e.length) {
             T = y;
             return;
@@ -93,17 +94,20 @@ let m = new Map(),
                 T = y;
         }
     },
-    B = () => {
-        (v = m), (O = g), (T = y), (i = void 0), (N = !1), (C = new Set()), (r = void 0), (a = void 0), (w = {});
-    },
     V = () => {
+        (v = m), (O = g), (T = y), (i = void 0), (N = !1), (C = new Set()), (r = void 0), (a = void 0), (w = {}), (D = 0);
+    },
+    F = () => {
         if (!u.Z.hasLoadedExperiments) return;
         let { giftRecommendationAlgorithm: e } = d.G.getCurrentConfig({ location: 'CollectiblesCategoryStore handleExperimentChange' }, { autoTrackExposure: !1 });
         e !== A && (i = void 0), (A = e);
+    },
+    Z = (e) => {
+        D = e.skipNumCategories;
     };
-class F extends (o = l.ZP.Store) {
+class H extends (o = l.ZP.Store) {
     initialize() {
-        this.syncWith([f.default], B), this.syncWith([u.Z], V);
+        this.syncWith([f.default], V), this.syncWith([u.Z], F);
     }
     get isFetchingCategories() {
         return N;
@@ -132,6 +136,9 @@ class F extends (o = l.ZP.Store) {
     get recommendedGiftSkuIds() {
         return T;
     }
+    get skipNumCategories() {
+        return D;
+    }
     getCategory(e) {
         return null != e ? v.get(e) : void 0;
     }
@@ -155,14 +162,15 @@ class F extends (o = l.ZP.Store) {
         return this.getCategory(null == t ? void 0 : t.categorySkuId);
     }
 }
-h(F, 'displayName', 'CollectiblesCategoryStore');
-let Z = new F(c.Z, {
-    COLLECTIBLES_CATEGORIES_FETCH: M,
-    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: j,
-    COLLECTIBLES_CATEGORIES_FETCH_FAILURE: k,
-    COLLECTIBLES_PRODUCT_FETCH: D,
-    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: x,
-    COLLECTIBLES_PRODUCT_FETCH_FAILURE: L,
-    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: U,
-    LOGOUT: B
+h(H, 'displayName', 'CollectiblesCategoryStore');
+let Y = new H(c.Z, {
+    COLLECTIBLES_CATEGORIES_FETCH: k,
+    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: U,
+    COLLECTIBLES_CATEGORIES_FETCH_FAILURE: j,
+    COLLECTIBLES_PRODUCT_FETCH: L,
+    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: M,
+    COLLECTIBLES_PRODUCT_FETCH_FAILURE: x,
+    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: G,
+    COLLECTIBLES_SKIP_NUM_CATEGORIES: Z,
+    LOGOUT: V
 });
