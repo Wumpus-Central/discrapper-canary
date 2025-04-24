@@ -22,6 +22,7 @@ n.d(t, {
     KM: () => ew,
     Kr: () => eh,
     LM: () => ev,
+    MM: () => tO,
     Nj: () => eN,
     OG: () => e9,
     PM: () => el,
@@ -859,4 +860,12 @@ function ty(e) {
     var t, n;
     let r = null != (n = null == (t = e.userStatus) ? void 0 : t.claimedTier) ? n : 0;
     return 'rewardsConfig' in e.config ? e.config.rewardsConfig.rewards[r] : e.config.rewards[r];
+}
+function tv(e) {
+    return new Set(e.config.taskConfig.type === u.L.FIRST_PARTY ? Object.keys(e.config.taskConfig.tasks) : [o.X.ACHIEVEMENT_IN_ACTIVITY]);
+}
+function tO(e, t) {
+    let n = new Map();
+    for (let [r, i] of e) tv(i).intersection(t).size > 0 && n.set(r, i);
+    return n;
 }
