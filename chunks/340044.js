@@ -89,7 +89,8 @@ let h = i.memo(function (e) {
                         (n = n =
                             {
                                 contextGuildId: p,
-                                className: o()(f.className, h && d.isOverlayTag)
+                                className: o()(f.className, h && d.isOverlayTag),
+                                disableGuildProfile: !0
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
