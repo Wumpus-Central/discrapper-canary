@@ -1,6 +1,6 @@
 n.d(t, {
-    F: () => m,
-    x: () => g
+    F: () => h,
+    x: () => m
 }),
     n(388685);
 var r = n(200651),
@@ -62,50 +62,26 @@ function _(e, t) {
         e
     );
 }
-function p(e, t, n) {
-    return i.useMemo(() => {
-        let i = [e, t, n].filter((e) => null != e),
-            a = i.length >= 2,
-            o = i.length > 1 ? 100 / (i.length - 1) : 0,
-            s = i.map((e, t) =>
-                (0, r.jsx)(
-                    'stop',
-                    {
-                        offset: ''.concat(t * o, '%'),
-                        style: { stopColor: e }
-                    },
-                    t
-                )
-            ),
-            l = i.join('');
-        return {
-            hasGradient: a,
-            stops: s,
-            gradientId: 'dotGradient-'.concat(l),
-            animatedGradientId: 'dotAnimatedGradient-'.concat(l)
-        };
-    }, [e, t, n]);
-}
-function h(e) {
+function p(e) {
     var t;
-    let { color: n, colors: a, className: s, background: l = !0 } = e,
-        [u, d] = i.useState(!1),
-        f = null != (t = null == a ? void 0 : a.primaryColor) ? t : n,
-        { hasGradient: _, stops: h, gradientId: m, animatedGradientId: g } = p(f, null == a ? void 0 : a.secondaryColor, null == a ? void 0 : a.tertiaryColor);
-    return null == f
+    let { color: n, colors: a, className: s, background: u = !0 } = e,
+        [d, f] = i.useState(!1),
+        _ = null != (t = null == a ? void 0 : a.primaryColor) ? t : n,
+        { hasGradient: p, stops: h, gradientId: m, animatedGradientId: g } = (0, l.De)(_, null == a ? void 0 : a.secondaryColor, null == a ? void 0 : a.tertiaryColor);
+    return null == _
         ? null
         : (0, r.jsxs)('svg', {
               className: o()(c.svg, s),
               viewBox: '0 0 20 20',
               fill: 'none',
               onMouseEnter: () => {
-                  d(!0);
+                  f(!0);
               },
               onMouseLeave: () => {
-                  d(!1);
+                  f(!1);
               },
               children: [
-                  _ &&
+                  p &&
                       (0, r.jsxs)('defs', {
                           children: [
                               (0, r.jsx)('linearGradient', {
@@ -144,7 +120,7 @@ function h(e) {
                               })
                           ]
                       }),
-                  l &&
+                  u &&
                       (0, r.jsx)('path', {
                           className: c.background,
                           d: 'M0 4C0 1.79086 1.79086 0 4 0H16C18.2091 0 20 1.79086 20 4V16C20 18.2091 18.2091 20 16 20H4C1.79086 20 0 18.2091 0 16V4Z'
@@ -160,19 +136,19 @@ function h(e) {
                       cx: '10',
                       cy: '10',
                       r: '6',
-                      fill: _ ? 'url(#'.concat(m, ')') : f
+                      fill: p ? 'url(#'.concat(m, ')') : _
                   }),
                   (0, r.jsx)('circle', {
                       className: c.dot,
                       cx: '10',
                       cy: '10',
                       r: '5',
-                      fill: _ ? 'url(#'.concat(u ? g : m, ')') : f
+                      fill: p ? 'url(#'.concat(d ? g : m, ')') : _
                   })
               ]
           });
 }
-function m(e) {
+function h(e) {
     let { color: t, colors: n, name: i, tooltip: a = !0 } = e;
     return null == t && null == n
         ? null
@@ -184,15 +160,15 @@ function m(e) {
                         'span',
                         _(d({}, t), {
                             'aria-hidden': !0,
-                            children: (0, r.jsx)(h, d({}, e))
+                            children: (0, r.jsx)(p, d({}, e))
                         })
                     )
             })
-          : (0, r.jsx)(h, d({}, e));
+          : (0, r.jsx)(p, d({}, e));
 }
-function g(e) {
+function m(e) {
     let { color: t, colors: n, className: i } = e,
-        { gradientStyle: a, gradientClassname: s } = (0, l.I)({
+        { gradientStyle: a, gradientClassname: s } = (0, l.Ic)({
             primaryColor: null == n ? void 0 : n.primaryColor,
             secondaryColor: null == n ? void 0 : n.secondaryColor,
             tertiaryColor: null == n ? void 0 : n.tertiaryColor,
